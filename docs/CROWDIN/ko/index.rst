@@ -23,7 +23,7 @@ Getting started
    Safety first <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
    
    
 What do I need 
@@ -33,6 +33,7 @@ What do I need
    :glob:
    
    Module <./Module/module.rst>
+   Sample Setup <./Getting-Started/Sample-Setup.md>
 
    
 AndroidAPS 설치하기
@@ -113,7 +114,7 @@ AndroidAPS for children
    SMS commands <./Children/SMS-Commands.rst>
    
 
-Troubleshooting
+문제해결
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
@@ -148,7 +149,7 @@ FAQ
 
    시작하기 전에 보면 좋은 유용한 자료들 <./Where-To-Go-For-Help/Background-reading.md>
    도움을 구할 곳들 <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 
 For Clinicians
 --------------------------------------------------
@@ -166,8 +167,8 @@ For Clinicians
    :glob:
 
    도움주기
-   How to translate the app and wiki <./translations.md>
-   wiki 수정하는 방법
+   How to translate the app and docs <./translations.md>
+   How to edit the docs <./make-a-PR>
 
 
 .. note:: 

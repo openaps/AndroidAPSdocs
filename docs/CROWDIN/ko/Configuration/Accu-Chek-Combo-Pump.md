@@ -19,8 +19,8 @@
 - 현재는 Basal양이 0.05 ~ 10 U/h 범위에서만 지원됩니다. 이는 프로파일을 수정할 때, 적용됩니다. 예를 들면 200%로 증가할 경우, 최대 Basal양은 두배가되는 5 U/h를 넘지 않아야 합니다. 유사하게, 50% 줄일 경우에는 최소 Basal양이 최소한 0.10 U/h는 되어야합니다.
 - Loop가 실행중인 TBR을 취소할 것을 요청할 경우, Combo는 TBR을 15분동안 90% 또는 110%로 설정할 것입니다. 이는 TBR을 취소하는 것은 펌프의 경고를 야기하게 되고 이는 많은 변화를 야기하게 되기 때문입니다.
 - 가끔씩 (이틀에 한번정도) AAPS는 자동으로 TBR CANCELLED경고 메세지를 자동으로 취소하는 것에 실패할 수도 있습니다. 이 때는 사용자는 경고메세지를 AAPS를 전송하기 위해서 AAPS에서 Refresh버튼을 누르든가 펌프에서 경고 메세지를 확인할 수도 있습니다. 
-- 블루투스 연결의 안정성은 휴대폰에 따라서 달라지게 됩니다. 이 때, "Pump Unreachable"메세지가 나타나게 되며, 이는 펌프가 연결되지 않았거나, 더이상 연결할 수 없을 경우에 나타납니다. 에러가 발생할 경우, 블루투스 장치가 활성화 되어있는지 확인하고, 콤보 탭에서 Refresh버튼을 누르세요. 이는 간헐적 통신오류가 있다느가, 연결이 되지 않았는지를 확인할 수 있게 합니다. 휴대폰을 리부팅하면 통상 이 문제는 해결되게 됩니다. 재시작이 도움이 되지 않을 경우에는 다른 문제가 있을 수 있습니다. 펌프가 휴대폰으로부터의 재연결을 허락하기 전, 펌프의 버튼이 눌러져야하며, 이는 펌프의 블루투스 기능을 재설정하게 됩니다. 이 시점에서의 이런 문제는 극히 일부분 발생하게 됩니다. 혹 이런 문제가 발생하게 된다면, 대개의 경우, 유일한 방법은 안드로이드 APS가 Combo와 잘작동하는 다른 휴대폰을 사용하게 되면 해결 될 수 있습니다. (위 참조)
-- 펌프에서 Bolus를 입력하는 것은 항상 제때에 확인되지는 않습니다. AAPS가 펌프와 연결될때마다 확인하시기 바랍니다. 그리고 이는 최대 20분가량 소요될 수도 있습니다. 펌프에서의 Bolus는 최대 TBR이전 또는 AAPS의 제약에 의해 입력된 Bolus를 확인하게 됩니다. 이 때에는 유효하지 않은 전제에 의해 계산되어진 TBR/Bolus을 설정하는 것을 거절하게 됩니다. (-> 펌프로부터 Bolus를 사용하지 마세요. *Usage*)를 참고하세요. 
+- Bluetooth connection stability varies with different phones, causing "pump unreachable" alerts, where no connection to the pump is established anymore. 에러가 발생할 경우, 블루투스 장치가 활성화 되어있는지 확인하고, 콤보 탭에서 Refresh버튼을 누르세요. 이는 간헐적 통신오류가 있다느가, 연결이 되지 않았는지를 확인할 수 있게 합니다. 휴대폰을 리부팅하면 통상 이 문제는 해결되게 됩니다. 재시작이 도움이 되지 않을 경우에는 다른 문제가 있을 수 있습니다. 펌프가 휴대폰으로부터의 재연결을 허락하기 전, 펌프의 버튼이 눌러져야하며, 이는 펌프의 블루투스 기능을 재설정하게 됩니다. 이 시점에서의 이런 문제는 극히 일부분 발생하게 됩니다. 혹 이런 문제가 발생하게 된다면, 대개의 경우, 유일한 방법은 안드로이드 APS가 Combo와 잘작동하는 다른 휴대폰을 사용하게 되면 해결 될 수 있습니다. (위 참조)
+- Issuing a bolus from the pump will not always be detected in time (checked for whenever AAPS connects to the pump), and might take up to 20 minutes in the worst case. 펌프에서의 Bolus는 최대 TBR이전 또는 AAPS의 제약에 의해 입력된 Bolus를 확인하게 됩니다. 이 때에는 유효하지 않은 전제에 의해 계산되어진 TBR/Bolus을 설정하는 것을 거절하게 됩니다. (-> 펌프로부터 Bolus를 사용하지 마세요. *Usage*)를 참고하세요. 
 - Loop가 TBR 설정을 가정하기 때문에, 펌프에서 TBR를 설정하는 것은 피해야합니다. 펌프에서 새로운 TBR을 인지하는 데에는 20분까지도 걸릴 수 있습니다. TBR의 효과는 새로운 TBR이 인지될 때, 유효하게 됩니다. 따라서 최대 20분정도 IOP에서 TBR이 적용되지 않을 수 있습니다. 
 
 ## 설정
@@ -60,7 +60,7 @@
 
 ## 왜 Ruffy APP과 함께 펌프페어링 사용될 수 없을까요?
 
-여기에는 몇가지의 이유가 있을 수 있습니다. 아래의 단계를 따라해 보세요.
+There are several possible reasons. 아래의 단계를 따라해 보세요.
 
 1. 펌프에 **fresh or full battery**를 확인하세요.. 상세한 것은 배터리 섹션을 참고하세요. 펌프가 스마트폰과 가까이 있는지 확인하세요.
 
@@ -72,21 +72,16 @@
       
 
 4. Settings / Bluetooth에 남아있는 휴대폰과 이미 연결된 펌프기록을 삭제하세요. "**SpiritCombo**"에 남아있는 동기화된 장치를 삭제하세요. 
-5. Loop의 배경에서 AAPS가 작동되지 않도록 확인하세요. AAPS에서 LOOP를 비활성화 하세요.
+5. Loop의 배경에서 AAPS가 작동되지 않도록 확인하세요. Disable Loop in AAPS.
 6. 이제 스마트폰에서 Ruffy를 시작하세요. Reset 버튼을 누르시면 됩니다. 그리고 이전의 연결기록을 삭제하세요. 그리고 Connect를 누르세요.
-7. 펌프의 블루투스메뉴에서, **ADD DEVICE / ADD CONNECTION**로 가세요. *CONNECT!**를 누르고 * Step 5 와 6를 신속히 설정하세요.
-8.     페어링을 선택하기 위해서 펌프에 스마트폰의 BT 이름을 보여질겁니다.  펌프에서 Select버튼을 선택하기 전에 최소한 5초정도 기다려야 됩니다. 그렇지 않을 경우, 펌프는 휴대폰으로 페어링 요청을 보내지 않게 됩니다. 
-      
-      만약 Combo펌프가 스크린시간 초과가 5초로 설정되어 있다면, 최초 설정인 40초로 테스트해야 될 수도 있습니다. 경험상 펌프가 휴대폰에 표시되기까지 대략 5~10초 정도 소요됩니다. 페어링 전에 시간초과가 되는 것이 일반적인 경우입니다. 이 경우, 추후에 AAPS Combo세팅과 동일하게 맞추기 위해 다시 5초로 변경해야 됩니다.
-      펌프에서 휴대폰이 보여지지 않는다면, 사용자의 스마트폰 블루투스 기능이 펌프와 호환되지 않는 경우일 수 있습니다. **LineageOS ≥ 14.1** 또는 **Android ≥ 8.1 (Oreo)**가 작동되고 있는지 확인하세요. 만약 가능하다면, 다른 스마트폰을 사용해 보세요. [AAPS Phones]에서 이미 성공한 스마트폰 내역을 확인할 수 있습니다.
-      (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
-      
+7. 펌프의 블루투스메뉴에서, **ADD DEVICE / ADD CONNECTION**로 가세요. Press *CONNECT!** * Step 5 and 6 have to be done in a short timing.
+8. Now the Pump should show up the BT Name of phone to select for pairing. Here it is important to wait at least 5s before you hit the select button on Pump. Otherwise the Pump will not send the Pairing request to the Phone properly.
 
-9.     다음으로, 펌프가 10자리 보안코드를 보여지게 됩니다. Ruffy에서 입력합니다. Ruffy에서 입력하면, 사용준비가 완료되게 됩니다.
-      
+* If Combo Pump is set to 5s Screen timeout, you may test it with 40s (original setting). From experience the time between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out without successfully Pair. Later you should set it back to 5s, to meet AAPS Combo settings. * If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If possible, try another smartphone. You can find a list of already successfully used smartphones under \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435).
 
-10. 스마트폰을 다시 시작하세요.
-11. 이제 AAPS Loop를 재시작하세요.
+9. At next Pump should show up a 10 digit security code. And Ruffy a screen to enter it. So enter it in Ruffy and you should be ready to go.
+10. Reboot the phone.
+11. Now you can restart AAPS loop.
 
 ## 사용.
 
@@ -98,7 +93,7 @@
 - 펌프에서 TBR 설정이나 취소를 하시면 안됩니다. Loop는 TBR을 통제한다는 가정하에 사용되어지며, 그렇지 않을경우 안전하게 작동하지 않을 것입니다. 사용자가 펌프에 입력하는 TBR 시작시간을 Loop가 결정할 수 없습니다.
 - 펌프의 첫번째 Basal양 프로파일은 애플리케이션 시작에서 보여지며, AAPS에 의해서 업데이트 됩니다. Basal양은 펌프에서 수동으로 변경되어야 합니다. 하지만 이것은 Safety Measure에서 수정되고 확인되어집니다. Safety Measure를 기본으로 설정하는 것을 권장하지 않습니다. 이는 펌프에서 원치않게 수정되는 것을 검출하는 것을 의미합니다.
 - 펌프에서 키잠금기능을 활성화하는 것이 권장되어지며, 펌프에서 Bolus가 입력되는 것을 방지하기 위함입니다. 펌프가 이전에 사용되거나 Quick Bolus기능을 사용하는 것은 습관적이게 됩니다. 또한 키잠금기능의 활성화는 원치않게 펌프에서 키가 눌러질 때에도, AAPS와 펌프가 연동하는 것을 방해하지 않을 것입니다.
-- Bolus주입이나 TBR세팅시에 BOLUS/TBR CANCELLED경고가 펌프에 표시될 때, 이는 펌프와 휴대폰 연결이 끊겼을 때 발생합니다. 또한 이는 가끔씩 발생하는 현상입니다. AAPS는 다시 연결하도록 시도되며, 경고메세지를 재확인하게 됩니다. 또한 최종 기능을 다시 시작하게 될 것입니다. 하지만 Bolus는 안전을 위하여 재시도되지 않습니다. 따라서, 그러한 경고는 무시되어도 됩니다. AAPS는 자동으로 그것을 확인하게 되며, 대게는 30초 이내에 이루어지게 됩니다. 취소하는 것은 문제가 되지는 않지만, 현재 활성화된 기능을 펌프의 디스플레이가 꺼지고 펌프에 재연결이 될때까지 기다려야 합니다. 펌프의 경고메세지가 지속되게 되면, 자동 확인기능이 실패한 것입니다. 이 경우, 사용자가 경고메세지를 수동으로 확인하여야 합니다.
+- Bolus주입이나 TBR세팅시에 BOLUS/TBR CANCELLED경고가 펌프에 표시될 때, 이는 펌프와 휴대폰 연결이 끊겼을 때 발생합니다. 또한 이는 가끔씩 발생하는 현상입니다. AAPS는 다시 연결하도록 시도되며, 경고메세지를 재확인하게 됩니다. 또한 최종 기능을 다시 시작하게 될 것입니다. 하지만 Bolus는 안전을 위하여 재시도되지 않습니다. 따라서, 그러한 경고는 무시되어도 됩니다. AAPS는 자동으로 그것을 확인하게 되며, 대게는 30초 이내에 이루어지게 됩니다. 취소하는 것은 문제가 되지는 않지만, 현재 활성화된 기능을 펌프의 디스플레이가 꺼지고 펌프에 재연결이 될때까지 기다려야 합니다. If the pump's alarm continues, automatic confirmation failed, in which case the user needs to confirm the alarm manually.
 - Bolus주입시 Low cartridge나 배터리 경고가 발생하게 되면, AAPS에서 알려줍니다. 만약 펌프에 연결되지 않을 경우 발생한다면, Combo탭에서 Refresh버튼을 누르세요. 그러면 AAPS에서 알림메세지가 뜨며, 그것을 확인할 것입니다.
 - TBR CANCELLED경고를 AAPS에서 알리지 못할 경우 또는 다른이유에서 경고가 발생하게 될 때, Combo탭에서 Refresh버튼을 누름으로 연결을 재설정하게 됩니다. 이러면 AAPS에서 알림이 보여지며, 경고사항을 확인하게 됩니다. 그러한 경고가 시작될 때, 이것이 안전하게 적용될 것입니다. 그리고 적절한 TBR이 다음 Loop시작시에 다시 설정되게 됩니다.
 - 펌프에서 알려지는 모든 다른 경고 메세지는 펌프와 연결할 경우, Combo탭에서 경고메세지를 보여줄 겁니다. 예를 들면 "State:E4:Occlusion"이 메인스크린에서 보여집니다. 긴급한 알림사항에 대해서는 에러가 발생하게 됩니다. AAPS는 절대 펌프의 심각한 에러에 대해서 확인하지 않습니다. 하지만 펌프가 진동하게하여 사용자가 펌프에 심각한 문제가 있고 즉각적인 조치가 필요함을 알려줍니다.

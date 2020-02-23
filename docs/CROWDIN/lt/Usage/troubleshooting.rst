@@ -43,7 +43,7 @@ Pumps
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html#insight-specific-errors>`_
 * `Medtronic + RileyLink <../Configuration/MedtronicPump.html#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump>`_
 
-Phones
+Telefonai
 ==================================================
 * `Jelly <../Usage/jelly.html>`_
 * `Huawei bluetooth & battery optimization <../Usage/huawei.html>`_

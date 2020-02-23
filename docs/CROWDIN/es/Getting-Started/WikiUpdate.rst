@@ -1,5 +1,9 @@
-Actualizaciones y cambios de Wiki
+Docs updates & changes
 **************************************************
+January 2020
+==================================================
+* `Manual carb correction <../Getting-Started/Screenshots.html#carb-correction>`_ for faulty carb entries
+* `Image size <../make-a-PR.html#image-size>`_ when editing docs
 Diciembre 2019
 ==================================================
 * `Android auto <../Usage/Android-auto.html>`_ - setup with screenshots
@@ -22,7 +26,7 @@ Noviembre 2019
 * `Resolución de problemas de Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>` _
 * `Resolución de problemas - colección de enlaces <../Usage/troubleshooting.html>`_
 * 'Actualización - de paseo a través de la experiencia de los usuarios <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
-* Wiki - actualizar `edit <../make-a-PR.md#code-syntax>`_ y `translation <../translations.html#translate-wiki-pages>`_.
+* Docs - update `edit <../make-a-PR.md#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
 
 Octubre 2019
 ==================================================

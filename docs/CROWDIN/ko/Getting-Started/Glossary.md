@@ -1,7 +1,7 @@
 # 용어<table style="width:100%" border=1>
 <tr>
  <th>Term</th>
- <th>Description</th>
+ <th>상세설명</th>
  <th>see also</th>
  <th>more details @</th>
 </tr>
@@ -90,7 +90,7 @@
 </tr>
 <tr>
  <td>BR</td>
- <td>basal rate</td>
+ <td>basal양</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -299,7 +299,7 @@
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
 </tr>
 <tr>
- <td>Profile switch</td>
+ <td>프로파일 변경</td>
  <td>(temporary) change of profile used or percentual increase/decrease</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
@@ -389,7 +389,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>Wallpaper</td>
+ <td>배경화면</td>
  <td>AndroidAPS background image</td>
  <td></td>
  <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>

@@ -8,7 +8,7 @@ Podczas korzystania z aplikacji Dexcom G5 (patched) twoje dane BG są gładkie i
 
 ## xDrip+ z Dexcom G5
 
-Odpowiednio wygładzone dane są dostarczane tylko wtedy, gdy korzystasz z xDrip G5 "OB1 collector in native mode".
+Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
 ## xDrip + z Freestyle Libre
 

@@ -8,7 +8,7 @@ When using Dexcom G5 App (patched) your BG data is smooth and consistent. There 
 
 ## xDrip+ with Dexcom G5
 
-Smooth enough data is only delivered if you use xDrip G5 'OB1 collector in native mode'.
+Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
 ## xDrip+ with Freestyle Libre
 

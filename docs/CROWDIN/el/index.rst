@@ -23,7 +23,7 @@ AndroidAPS είναι ένα open source εφαρμογή για τους ανθ
    Πρώτα η ασφάλεια <./Getting-Started/Safety-first.rst>
    Τι είναι ένα κλειστό σύστημα κυκλώματος <./Getting-Started/ClosedLoop.rst>
    Τι είναι ένα κλειστό σύστημα κυκλώματος με AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Wiki ενημερώσεις και αλλαγές <./Getting-Started/WikiUpdate.rst>
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
    
    
 * `Τι χρειάζομαι 
@@ -33,6 +33,7 @@ AndroidAPS είναι ένα open source εφαρμογή για τους ανθ
    :glob:
    
    Module <./Module/module.rst>
+   Sample Setup <./Getting-Started/Sample-Setup.md>
 
    
 Πώς να Εγκαταστήσετε AndroidAPS
@@ -148,7 +149,7 @@ AndroidAPS για τα παιδιά
 
    Χρήσιμους πόρους για να διαβάσετε πριν ξεκινήσετε <./Where-To-Go-For-Help/Background-reading.md>
    Πού να πάτε για βοήθεια <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Wiki ενημερώσεις και αλλαγές <./Getting-Started/WikiUpdate.rst>
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 
 Για Τους Κλινικούς Ιατρούς
 --------------------------------------------------
@@ -166,8 +167,8 @@ AndroidAPS για τα παιδιά
    :glob:
 
    Πώς να βοηθήσετε <./Getting-Started/How-can-I-help.md>
-   Πώς να μεταφράσει το app και το wiki <./μεταφράσεις.md>
-   Πώς να επεξεργαστείτε το wiki <./make-a-PR>
+   How to translate the app and docs <./translations.md>
+   How to edit the docs <./make-a-PR>
 
 
 .. σημείωση:: 

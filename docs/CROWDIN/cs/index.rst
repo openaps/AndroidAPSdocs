@@ -23,7 +23,7 @@ Začínáme
    Bezpečnost především <./Getting-Started/Safety-first.rst>
    Co je systém uzavřené smyčky <./Getting-Started/ClosedLoop.rst>
    Co je systém uzavřené smyčky s AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Aktualizace wiki a změny <./Getting-Started/WikiUpdate.rst>
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
    
    
 Co potřebuji 
@@ -33,6 +33,7 @@ Co potřebuji
    :glob:
    
    Modul <./Module/module.rst>
+   Sample Setup <./Getting-Started/Sample-Setup.md>
 
    
 Jak nainstalovat AndroidAPS
@@ -148,7 +149,7 @@ Kam pro pomoc
 
    Užitečné zdroje informací než začnete <./Where-To-Go-For-Help/Background-reading.md>
    Kam jít pro pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Aktualizace wiki a změny <./Getting-Started/WikiUpdate.rst>
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 
 Pro lékaře
 --------------------------------------------------
@@ -166,8 +167,8 @@ Jak pomoci
    :glob:
 
    Jak mohu pomoci <./Getting-Started/How-can-I-help.md>
-   Jak pomoci s překladem aplikace a wiki <./translations.md>
-   Jak editovat wiki <./make-a-PR>
+   How to translate the app and docs <./translations.md>
+   How to edit the docs <./make-a-PR>
 
 
 .. poznámka:: 

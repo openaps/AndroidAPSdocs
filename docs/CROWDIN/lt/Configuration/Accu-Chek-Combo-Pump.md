@@ -75,15 +75,11 @@ Gali būti keletas priežasčių. Pabandykite šiuos žingsnius:
 5. Įsitikinkite, kad AAPS nepaleido Ciklo foniniame režime. Deaktyvuokite Ciklą AAPS programoje.
 6. Dabar įjunkite Ruffy telefone. Paspauskite mygtuką ATNAUJINTI! ir pašalinkite seną suporavimą. Tada paspauskite Prisijungti!.
 7. Pompos "Bluetooth" meniu, eikite į **PRIDĖTI ĮRENGINĮ / PRIDĖTI RYŠĮ**. Paspauskite *PRISIJUNGTI!** * 5 ir 6 žingsniai turi būti atlikti greitai.
-8.     Dabar pompoje turi pasirodyti telefono pavadinimas, kurį reikia pasirinkti suporavimui. Svarbu palaukti bent 5 sek prieš paspaudžiant SELECT mygtuką pompoje. Kitu atveju, pompa nenusiųs korektiškos suporavimo užklausos į telefoną.
-      
-      * Jei Combo pompoje yra nustatytas ekrano rodymo laikas 5 sek, galite bandyti pakeisti jį į 40 sek (originalus nustatymas). Pastebėta, kad laikas tarp pompoje parodyto telefono pavadinimo iki telefono pasirinkimo yra apie 5-10 sek. Dažniausiai viršijus šį laiką suporavimas nepavyksta. Vėliau galite vėl grąžinti 5 sek ekrano laiką, kad atitiktų AAPS Combo nustatymus.
-      * Jei pompa visai nerodo telefono,  gali būti, kad telefono Bluetooth nėra suderinamas su pompa. Įsitikinkite, kad naudojate naują **LinageOS ≥ 14.1** ar **Android ≥ 8.1 (Oreo)**. Jei turite, bandykite kitą išmanųjį telefoną. Čia galite rasti jau sėkmingai naudotų išmaniųjų telefonų sąrašą [AAPS Phones (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
-      
+8. Dabar pompoje turi pasirodyti telefono pavadinimas, kurį reikia pasirinkti suporavimui. Svarbu palaukti bent 5 sek prieš paspaudžiant Pasirinkti mygtuką pompoje. Kitu atveju, pompa nenusiųs korektiškos suporavimo užklausos į telefoną.
 
-9.     Toliau pompa parodys iki 10 ženklų saugos kodą. Ir Ruffy programos ekraną, kad jį įvestumėte. Įveskite kodą į Ruffy, ir viskas bus tvarkoje.
-      
+* Jei Combo pompoje yra nustatytas ekrano rodymo laikas 5 sek, galite bandyti pakeisti jį į 40 sek (originalus nustatymas). Pastebėta, kad laikas tarp telefono pavadinimo pompoje parodymo iki telefono pasirinkimo yra apie 5-10 sek. Dažniausiai viršijus šį laiką suporavimas nepavyksta. Vėliau galite vėl grąžinti 5 sek ekrano laiką, kad atitiktų AAPS Combo nustatymus. * Jei pompa visai nerodo telefono, gali būti, kad telefono Bluetooth nėra suderinamas su pompa. Įsitikinkite, kad naudojate naują **LineageOS ≥ 14.1** arba **Android ≥ 8.1 (Oreo)**. Jei turite, bandykite kitą išmanųjį telefoną. Čia galite rasti jau sėkmingai naudotų išmaniųjų telefonų sąrašą \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435).
 
+9. Toliau pompa parodys iki 10 ženklų saugos kodą. Ir Ruffy programos ekraną, kad jį įvestumėte. Įveskite kodą į Ruffy, ir viskas bus tvarkoje.
 10. Perkraukite telefoną.
 11. Dabar galite perkrauti AAPS Ciklą.
 

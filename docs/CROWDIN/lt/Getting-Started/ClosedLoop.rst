@@ -1,55 +1,55 @@
-What is a Closed Loop System?
+Kas yra uždaro ciklo sistema?
 **************************************************
 
-.. image:: ../images/autopilot.png
-  :alt: AAPS is like an autopilot
+.. nuotrauka:: ../images/autopilot.png
+  :alt: AAPS yra tarsi autopilotas
 
-An artificial pancreas closed loop system combines different components in order to make diabetes management easier for you. 
-In her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an `"autopilot for your diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. But what does that mean?
+Dirbtinės kasos uždaro ciklo sistema sujungia įvairius komponentus, kad būtų lengviau valdyti diabetą. 
+Dana M. Lewis, viena iš atvirojo kodo uždaro ciklo judėjimo įkūrėjų, savo puikioje knygoje „Automatizuotas insulino suleidimas“, <https://www.artificialpancreasbook.com/>`, vadina ją „jūsų diabeto autopilotu" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>. Bet ką tai reiškia?
 
-**Autopilot in an aircraft**
+**Autopilotas lėktuve**
 
-The autopilot does not do the complete job and does not give the possibility to the pilot to sleep throughout the entire flight. It facilitates the work of the pilots. It relieves them of the burden of permanently monitoring the aircraft and the flight attitude. This allows the pilot to concentrate on monitoring the airspace and controlling the autopilot's functions.
+Autopilotas neatlieka viso darbo, todėl nesuteikia pilotui galimybės miegoti viso skrydžio metu. Jis palengvina pilotų darbą. Jis atleidžia juos nuo nuolatinio orlaivio ir skrydžio stebėjimo naštos. Tai leidžia pilotui sutelkti dėmesį į oro erdvės stebėjimą ir autopiloto funkcijų valdymą.
 
-The autopilot receives signals from various sensors, a computer evaluates them together with the pilot's specifications and then makes the necessary adjustments. The pilot no longer has to worry about the constant adjustments.
+Autopilotas priima signalus iš įvairių jutiklių, kompiuteris juos įvertina kartu su piloto specifikacijomis, tada atlieka reikiamus pakeitimus. Pilotui nebereikia jaudintis dėl nuolatinio reguliavimo.
 
-**Closed Loop System**
+**Uždaro Ciklo Sistema**
 
-The same applies to an artificial pancreas closed loop system. It does not do the whole job, you still have to take care of your diabetes. A closed loop system combines the sensor data from a CGM/FGM with your diabetes management specifications such as basal rate, insulin sensitivity factor and carb ratio. From this it calculates treatment suggestions and implements these permanent small adjustments in order to keep your diabetes within the target range and to relieve you. This leaves more time for your life "next to" diabetes.
+Tas pats pasakytina ir apie dirbtinę kasos sistemą. Ji neatlieka visų darbų, vis tiek turite kontroliuoti savo diabetą. Uždaro ciklo sistema sujungia stebėjimo sensoriaus duomenis su diabeto valdymo parametrais, tokiais kaip valandinė bazė, jautrumo insulinui faktorius ir angliavandenių santykis. Remdamasi tuo, ji apskaičiuoja terapijos pasiūlymus ir atlieka nuolatinius mažus koregavimus, kad diabetas išliktų tiksliniame diapazone ir išgelbėtų jus nuo šios priežiūros. Tai palieka daugiau laiko GYVENTI sergant diabetu.
 
-Just as you don't want to get on a plane where only the autopilot flies without human supervision, a closed loop system helps you with your diabetes management, but always needs your support! **Even with a closed loop you can't just forget your diabetes!**
+Lygiai taip pat, kaip niekas nenori patekti į lėktuvą, kurį valdo tik autopilotas be žmogaus kontrolės, uždaro ciklo sistema padeda mums valdyti diabetą, tačiau visada reikia mūsų palaikymo! ** Net ir uždaro ciklo režime jūs negalite tiesiog pamiršti savo diabeto! **
 
-Just as the autopilot depends on the sensor values as well as the pilot's specifications, a closed loop system needs appropriate input such as basal rates, ISF and carb ratio to support you successfully.
+Panašiai, kaip autopilotas priklauso nuo jutiklių ir pilotų nustatytų parametrų, norint sėkmingai palaikyti jūsų kūną, uždaro ciklo sistemai reikalingi atitinkami įvesties duomenys, tokie kaip valandinė bazė, jautrumo insulinui faktorius ir angliavandenių santykis.
 
 
-Open Source Artificial Pancreas Closed Loop Systems
+Atvirojo kodo Dirbtinės kasos Uždaro ciklo sistemos
 ==================================================
-At present there are three major open source closed loop systems available:
+Šiuo metu yra trys pagrindinės atvirojo kodo uždaro ciklo sistemos:
 
 AndroidAPS (AAPS)
 --------------------------------------------------
-AndroidAPS is described in detail in `this documentation <./WhatisAndroidAPS.html>`_. It uses an Android Smartphone for calculation and control of your insulin pump. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+AndroidAPS yra išsamiai aprašyta šioje dokumentacijoje <./WhatisAndroidAPS.html>`_. Insulino pompai valdyti bei skaičiavimams atlikti naudojamas Android išmanusis telefonas. Jis sukurtas glaudžiai bendradarbiaujant su OpenAPS (t. y. jie dalijasi algoritmais).
 
-Compatible `pumps <../Hardware/pumps.html>`_ are:
+Suderinamos pompos <../Hardware/pumps.html>`_ yra:
 
 * DanaR / DanaRS
 * Accu-Chek Combo
 * Accu-Chek Insight
-* some old Medtronic pumps (as of version 2.4)
+* kai kurios senos Medtronic pompos (versija 2.4)
 
 OpenAPS
 --------------------------------------------------
-`OpenAPS <https://openaps.readthedocs.io>`_ was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison.
+OpenAPS <https://openaps.readthedocs.io>`_ buvo pirmoji Atvirojo kodo Uždaro Ciklo Sistema. Ji naudoja mažąjį kompiuterį, tokį kaip Raspberry Pi ar Intel Edison.
 
-Compatible pumps are:
+Suderinamos pompos yra:
 
-* some old Medtronic pumps
+* kai kurios senosios Medtronic pompos
 
-Loop for iOS
+Loop - iOS sistemai
 --------------------------------------------------
-`Loop for iOS <https://loopkit.github.io/loopdocs/>`_ is the Open Source Closed Loop System to be used with Apple iPhones.
+Loop iOS sistemai <https://loopkit.github.io/loopdocs/>`_ yra Atvirojo kodo Uždaro Ciklo Sistema, naudojama su Apple iPhone telefonais.
 
-Compatible pumps are:
+Suderinamos pompos yra:
 
 * Omnipod
-* some old Medtronic pumps
+* kai kurios senosios Medtronic pompos

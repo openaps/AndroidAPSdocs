@@ -55,7 +55,7 @@ Remarque : Il n'y aura pas de connexion permanente entre la pompe et le téléph
 
 Vous **ne devez pas activer 'Utiliser toujours les valeurs absolues du basal'** avec la pompe Insight. Dans AAPS, allez dans Préférences > NSClient > Paramètres Avancés et assurez-vous que 'Utiliser toujours utiliser les valeurs absolues du basal' est désactivé. Cela conduirait à de mauvais réglages des DBT dans la pompe Insight.
 
-Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune.
+Si vous avez besoin d'utiliser autotune, la seule solution pour le moment est de **désactiver la synchronisation** avec Nightscout. Dans AAPS, allez dans Paramètres / NSClient / Paramètres Avancés et activez ‘Remonter uniquement vers NS (sync désactivée)‘.
 
 ![Copie d'écran paramètres Insight](../images/Insight_pairing_V2_5.png)
 

@@ -1,5 +1,15 @@
 # OpenAPS functies
 
+## Gevoeligheidsdetectie (Autosens)
+
+* De Gevoeligheidsdetectie is een algoritme dat kijkt naar de afwijkingen in jouw bloedglucose (positief/negatief/neutraal).
+* Op basis van deze afwijkingen, bepaalt het algoritme hoe insulinegevoelig/resistent je bent.
+* De oref-implementatie in **OpenAPS** gebruikt een combinatie van 24 en 8 uur aan gegevens. Welk van die twee hegt meest gevoelig is, wordt gebruikt.
+* AndroidAPS gebruikt slechts 8 (om UAM mogelijk te maken) of 24 uur, in te stellen door de gebruiker.
+* Het plaatsen van een nieuw infuus of het doen van een profielwissel (zonder tijdsduur) zal de Gevoeligheidsdetectie ratio terugzetten naar 0%.
+* Gevoeligheidsdetectie past jouw basaal en ISF aan (daarmee bootst het na wat een profielwissel doet).
+* Wanneer je gedurende een langere tijd telkens koolhydraten eet, dan zal de Gevoeligheidsdetectie minder goed zijn werk kunnen doen, omdat periodes met COB worden uitgesloten van BG delta berekeningen.
+
 ## Super Micro Bolus (SMB)
 
 SMB, de afkorting van 'super micro bolus', is de nieuwste OpenAPS functie (uit 2018) van het Oref1-algoritme. In tegenstelling tot AMA (geavanceerde maaltijdhulp), gebruikt SMB geen tijdelijke basaalstanden, maar vooral **kleine super microbolussen**. In gevallen waar AMA 1,0 Eenheid extra insuline zou geven door middel van een tijdelijke basaalstand, geeft SMB verschillende super microbolussen in kleine stapjes met **5 minuten ertussen**, bijvoorbeeld 0,4 E; 0,3 E; 0,2 E en 0,1 E. Tegelijkertijd wordt (uit veiligheidsredenen) de basaalstand op dat moment naar 0 E/uur gezet om een overdosis te voorkomen, dit heet **'zero-temp'**. Op deze manier kan het systeem je bloedsuikers sneller laten zakken dan met de tijdelijk hogere basaalstand die AMA gebruikt.
@@ -18,7 +28,7 @@ De SMB-functie heeft een aantal veiligheidsmaatregelen:
 
 3. Allerlei berekeningen om het verloop van je glucosewaardes te kunnen voorspellen, bijv. met UAM (onaangekondigde maaltijden, unannounced meals). Zelfs zonder dat jij als gebruiker handmatig je koolhydraten invoert, zal UAM een sterke stijging van jouw glucosewaardes opmerken. Een stijging door maaltijden, adrenaline of andere invloeden. Vervolgens zal het systeem jouw waardes proberen te verlagen met SMB. Andersom werkt dit ook: om veilig te kunnen werken zal het systeem eerder stoppen met het geven van SMB als het merkt dat jouw glucosewaarde plotseling daalt. Daarom moet je UAM altijd ingeschakeld hebben wanneer je SMB gebruikt.
 
-**Je moet [leerdoel 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) hebben voltooid om SMB te kunnen gebruiken.**
+**Je moet [leerdoel 10](../Usage/Objectives#doel-10-activeren-van-extra-functies-overdag-zoals-smb-super-micro-bolus) hebben voltooid om SMB te kunnen gebruiken.**
 
 Zie ook: [OpenAPS documentatie voor oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) en [Tim's info over SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
@@ -131,7 +141,7 @@ Standaardwaarde: 4 (mag niet worden gewijzigd, tenzij je het echt wilt en weet w
 
 AMA (Advanced Meal Assist), oftewel "geavanceerde maaltijdhulp" is een OpenAPS functie uit 2017 (oref0). Dankzij AMA kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd.
 
-**Je moet [leerdoel 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) hebben voltooid om AMA te kunnen gebruiken.**
+**Je moet [leerdoel 9](../Usage/Objectives#doel-9-activeren-van-extra-functies-overdag-zoals-ama-geavanceerde-maaltijdhulp-advanced-meal-assist) hebben voltooid om AMA te kunnen gebruiken.**
 
 Meer informatie vind je in de [documentatie van OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 

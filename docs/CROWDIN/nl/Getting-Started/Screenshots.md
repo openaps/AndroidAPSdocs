@@ -27,7 +27,7 @@ Aanpassingen maak je door een veld lang ingedrukt te houden. Houd bijvoorbeeld d
 * Insuline aan boord (IOB)
 * koolhydraten aan boord (Carbs On Board, COB)
 
-De optionele [statusindicatoren](../Configuration/Preferences#overview) (CAN | INS | RES | SEN | BAT) geeft een visuele waarschuwing voor laag reservoir, batterij bijna leeg, en infuuswissel.
+De optionele [statusindicatoren](../Configuration/Preferences#statusindicatoren) (CAN | INS | RES | SEN | BAT) geeft een visuele waarschuwing voor laag reservoir, batterij bijna leeg, en infuuswissel.
 
 De nog werkzame insuline (IOB) staat op nul als de loop in de afgelopen tijd jouw ingestelde basaalstand heeft afgegeven en er geen insuline meer over is van een eerdere bolus. De getallen binnen de haakjes is hoeveel insuline er nog werkzaam is van een eerdere bolus, en hoeveel verschil er zit tussen de door jou ingestelde basaalstanden en de tijdelijke basaalstanden (TBRs, temporary basal rates) die AndroidAPS heeft gegeven. Dat tweede getal zal negatief zijn, als je afgelopen tijd lagere tijdelijke basaalstanden hebt gehad.
 
@@ -46,7 +46,7 @@ De verlengde lijnen zijn de voorspelde BG waardes en trends - wanneer je die heb
 * ** Oranje ** lijn: [COB](../Usage/COB-calculation.rst) (kleur wordt gebruikt om COB en koolhydraten weer te geven)
 * ** Donker blauwe ** lijn: IOB (kleur wordt gebruikt om IOB en insuline weer te geven)
 * **Licht blauwe** lijn: zero-temp (voorspelde BG als tijdelijke basaalstand op 0% zou worden ingesteld)
-* **Donker gele** lijn: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals, onaangekondigde maaltijden)
+* **Donker gele** lijn: [UAM](../Configuration/Sensitivity-detection-and-COB#gevoeligheid-oref1) (un-announced meals, onaangekondigde maaltijden)
 
 Deze lijnen laten voorspellingen zien aan de hand van verschillende scenario's. Dit zijn theoretische scenario's, gebaseerd op gegevens van dit moment. Omdat het systeem continu aanpassingen maakt, zullen de voorspellingen ook steeds worden aangepast. Dit betekent ook dat de kans klein is dat één van de voorspellingslijnen die je op een willekeurig moment ziet, ook het daadwerkelijke verloop zal zijn van je toekomstige bloedsuiker. De scenario's zijn: Eentje waarbij rekening wordt gehouden met de huidige absorptie van koolhydraten (COB). Eentje waarbij alleen met insuline rekening wordt gehouden (IOB). Eentje die laat zien wat er gebeurt als er vanaf nu een tijdelijke basaalstand van nul (zero-temp) wordt gegeven zonder verder rekening te houden met BG afwijkingen. En eentje waarbij het systeem een BG stijging heeft opgemerkt en ervan uitgaat dat je koolhydraten hebt gegeten zonder die ingevoerd te hebben (UAM, unannounced meal).
 
@@ -64,12 +64,12 @@ De weergave kun je aanpassen met de opties uit sectie D.
    * **GRIJZE** balken zijn een afwijking door koolhydraten. 
    * **GROEN** is wanneer de BG hoger is dan het algoritme verwacht. 
    * **ROOD** is wanneer de BG lager is dan het algoritme verwacht.
-* ** Gevoeligheid ** (witte lijn): Toont de insuline gevoeligheid die Autosense heeft gedetecteerd. Berekent veranderingen aan jouw insuline gevoeligheid veroorzaakt door sporten, hormonen, etc.
+* **Gevoeligheid** (witte lijn): Toont de gevoeligheid die [Autosens](../Usage/Open-APS-features#gevoeligheidsdetectie_autosens) gedetecteerd heeft. Berekent veranderingen aan jouw insuline gevoeligheid veroorzaakt door sporten, hormonen, etc.
 * ** Insuline activiteit ** (gele lijn): Toont de insuine activiteit, berekend aan de hand van het door jou gekozen insuline-profiel (het wordt niet afgeleid van IOB). De waarde is hoger wanneer het werkingsprofiel van jouw insuline dichter bij zijn piektijd zit. Wanneer de IOB afneemt dan wordt de waarde negatief. 
 
 ### Sectie G
 
-Met deze knoppen kun je een bolus geven (zonder de bolus calculator te gebruiken), of een BG calibratie (met vingerprik) toevoegen. Je kunt hier ook een Quick Wizzard-knop laten weergeven als je dat hebt ingesteld in de [ Configurator](../Configuration/Config-Builder#quickwizard-settings).
+Met deze knoppen kun je een bolus geven (zonder de bolus calculator te gebruiken), of een BG calibratie (met vingerprik) toevoegen. Je kunt hier ook een Vaste Maaltijd-knop laten weergeven als je dat hebt ingesteld in de [ Configurator](../Configuration/Config-Builder#vaste-maaltijd-instellingen).
 
 ## Boluscalcuator
 
@@ -105,7 +105,7 @@ Wanneer je een bolus wilt geven voor extra koolhydraten, vlak na een maaltijdbol
 
 ![Langzame koolhydraat absorptie](../images/Calculator_SlowCarbAbsorbtion.png)
 
-Als je de waarschuwing hierboven ziet na het gebruik van de boluswizard, dan heeft AndroidAPS vastgesteld dat de berekende COB-waarde misschien onjuist is. Dit betekent dat, als je weer wilt bolussen na een vorige maaltijd met COB, je dan moet waken voor overdosering. Zie voor meer informatie de [COB Berekening](../Usage/COB-calculation#detection-of-wrong-cob-values) pagina.
+Als je de waarschuwing hierboven ziet na het gebruik van de boluswizard, dan heeft AndroidAPS vastgesteld dat de berekende COB-waarde misschien onjuist is. Dit betekent dat, als je weer wilt bolussen en je hebt nog COB van een vorige maaltijd, je moet uitkijken voor overdosering! Zie voor meer informatie de [COB Berekening](../Usage/COB-calculation#detectie-van-verkeerde-cob-waarden) pagina.
 
 ## Insuline curve
 
@@ -131,7 +131,29 @@ Hier zie je de status van je insulinepomp - in dit geval een Accu-Check Combo. D
 
 ![Care Portal](../images/Screenshot_care_portal.png)
 
-Wat je hier ziet, is hetzelfde als wat je in Nightscout ziet wanneer je daar op het "+" symbool klikt. Je kunt dit gebruiken om notities te maken. Deze knoppen, zoals infuus wissel of insuline ampul wissel, spreken voor zich. LET OP! Met deze knoppen stuur je je pomp niet aan. Dus als je via de Care Portal een bolus toevoegt, dan krijg je alleen een notitie van de bolus op je Nightscout grafiek. De pomp zelf zal géén bolus geven.
+Wat je hier ziet, is hetzelfde als wat je in Nightscout ziet wanneer je daar op het "+" symbool klikt. Je kunt dit gebruiken om notities te maken. Deze knoppen, zoals infuus wissel of insuline ampul wissel, spreken voor zich.
+
+**MAAR dit gedeelte geeft geen opdrachten aan de pomp!** Dus als je een bolus toevoegt met behulp van dit scherm dan wordt dit als notitie toegevoegd in Nightscout, maar de pomp zal geen bolus afleveren.
+
+### Koolhydraten correctie
+
+De Careportal kan worden gebruikt om foutieve koolhydraat-invoer te corrigeren, bijvoorbeeld als je de hoeveelheid koolhydraten hebt onderschat, of juist minder hebt gegeten dan gepland.
+
+1. Bekijk en onthoud de werkelijke COB en IOB op Overzichtscherm.
+2. Afhankelijk van de pomp op het behandelingen-tabblad kunnen koolhydraten samen met insuline op één regel staan, of als een aparte regel (dit laatste is zo bij de DanaRS).
+   
+   ![Behandeling in 1 of 2 regels](../images/Treatment_1or2_lines.png)
+
+3. Verwijder de regel met de foutieve koolhydraten-invoer.
+
+4. Controleer op het Overzicht scherm of de koolhydraten inderdaad zijn verwijderd, het aantal COB zou moeten zijn aangepast.
+5. Doe hetzelfde voor de IOB als er slechts één regel is op het Behandelingen-tabblad voor koolhydraten en insuline.
+   
+   -> Als koolhydraten per ongeluk niet waren verwijderd maar je voegt vervolgens wel extra koolhydraten toe zoals uitgelegd bij 6., zal COB te hoog zijn en dat kan leiden tot een te hoge dosis insuline. Let dus op wat er gebeurt!
+
+6. Voer de juiste hoeveelheid koolhydraten in via de Careportal, zorg ervoor dat je het tijdstip aanpast naar het moment dat de koolhydraten daadwerkelijk zijn gegeten.
+
+7. Als er op jouw Behandelingen-tabblad één regel wordt gebruikt voor koolhydraten en insuline, moet je ook de hoeveelheid insuline weer toevoegen. Doe dit ook via de Careportal en zorg er ook hierbij voor dat je het tijdstip aanpast naar het moment dat de insuline was toegediend. Controleer tenslotte op het Overzichtscherm of de IOB is meeveranderd.
 
 ## Loop, MA, AMA, SMB
 
@@ -161,7 +183,7 @@ Hier kun je de geschiedenis terugkijken van behandelingen (bolussen en koolhydra
 
 ![Configurator](../images/Screenshot_config_builder.png)
 
-Op deze plek kun je jouw systeem instellen. In dit screenshot bestaat het systeem uit een Combo pomp, een Dexcom G5 CGM die zijn waardes doorgeeft via xDrip+, de insuline is NovoRapid met een Oref profiel en alle gegevens worden geupload naar Nightscout.
+Op deze plek kun je jouw AndroidAPS systeem instellen. In dit screenshot bestaat het systeem uit een Combo pomp, een Dexcom G5 CGM die zijn waardes doorgeeft via xDrip+, de insuline is NovoRapid met een Oref profiel en alle gegevens worden geupload naar Nightscout.
 
 Als er in de kolom aan de rechterkant een vinkje staat, dan betekent dit dat die module wordt weergegeven als een tabje in de bovenste regel (zie sectie A in het screenshot met het Overzicht-scherm). Tikken op het tandwiel-symbooltje aan de rechterkant brengt je naar een scherm met verdere instellingen voor die module, als die er zijn.
 

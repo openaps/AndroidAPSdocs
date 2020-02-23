@@ -20,7 +20,7 @@ Pour éviter cela, il y a deux possibilités :
    * Sélectionnez "Changement de profil"
    * Définissez le 'Décalage horaire' en fonction de votre destination.
    
-   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
+   ![Changement de profil avec décalage horaire](../images/ProfileSwitchTimeShift2.png)
    
    * par ex. Vienne -> New York : Changement de profil +6 heures
    * par ex. Vienne -> Sydney : Changement de profil -8 heures
@@ -53,20 +53,20 @@ L'utilisateur Insight n'a donc pas à s'inquiéter des changements de fuseau hor
 
 # Changements heure d'été / heure d'hiver
 
-Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
+En fonction de la pompe et de la configuration de MGC, les changements d'heure peuvent entraîner des problèmes. Avec la Combo par ex., l'historique de la pompe est lu à nouveau et cela conduirait à des entrées dupliquées. Donc veuillez faire l'ajustement pendant que vous êtes éveillé et non pendant la nuit.
 
-If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+Si vous faites un bolus avec la calculatrice, veuillez désactiver les GA et IA à moins que vous ne soyez sûr qu'ils sont absolument corrects - mieux vaut ne pas les utiliser pendant quelques heures après le changement d'heure.
 
 ## Accu-Check Combo
 
-AndroidAPS will issue an alarm if time between pump and phone differs to much. In case of DST time adjustment this would be in the middle of the night. To prevent this and enjoy your sleep instead follow these steps:
+AndroidAPS émettra une alarme si l'heure entre la pompe et le téléphone est très différent. En cas de changement d'heure (été ou hiver), cela arrive au milieu de la nuit. Pour éviter cela et profiter de votre sommeil, suivez ces étapes :
 
-1) Switch off automatic time zone in your phone. 2) Find a time zone that has the target time but doesn't use DST. For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo. 3) In AndroidAPS refresh you pump. 4) Check the Treatments tab... If you see duplicate treatments:
+1) Désactiver l'option 'Date et heure automatiques' dans les paramètres de votre téléphone (changement de fuseau horaire manuel). 2) Trouver un fuseau horaire qui est l'heure cible, mais qui ne fait pas de changement d'heure. Pour l'Europe Centrale (CET), cela pourrait être "Brazzaville" (Kongo). Changez le fuseau horaire de votre téléphone à Kongo. 3) Dans AndroidAPS actualisez votre pompe. 4) Vérifiez l'onglet Traitements... Si vous voyez des traitements en doublon :
 
-* DON'T press "delete future treatments"
-* Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore. 5) If the state is unclear - please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.
+* NE PAS appuyer sur "Supprimer les futurs traitements"
+* Appuyez sur "supprimer" sur tous les traitements futurs et les doublons. Cela devrait invalider les traitements plutôt que de les enlever, donc ils ne seront plus pris en compte pour l'IA. 5) Si la situation n'est pas claire - veuillez désactiver la boucle pour au moins une DAI ou la durée d'absorpsion max des glucides - (le plus grand des deux).
 
-A good time to make this switch would be with low IOB. E.g. an hour before a meal.
+Un bon moment pour faire ce changement serait avec des IA faibles. Par ex., une heure avant un repas.
 
 ## Accu-Chek Insight
 
@@ -76,5 +76,5 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 
 **Vous devez mettre à jour AAPS pour utiliser cette fonctionnalité !**
 
-* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
-* You will receive a notification on the main screen 24 hours prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* Pour éviter toute difficulté, la boucle sera désactivée pendant 3 heures APRES le changement d'heure. Ceci est fait pour des raisons de sécurité (IA trop élevée à cause d'un bolus dupliqué avant le changement d'heure).
+* Vous recevrez une notification sur l'écran principal 24 heures avant le changement d'heure pour vous informer que la boucle sera temporairement désactivée. Ce message apparaîtra sans bip, vibration ou quoi que ce soit.

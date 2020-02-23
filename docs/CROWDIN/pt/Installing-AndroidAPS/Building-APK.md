@@ -135,7 +135,7 @@ Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
 ![Captura de ecrã 17](../images/Installation_Screenshot_17.png)
 
 * Excellent, you have your own copy of the source code and are ready to start the build.
-* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
+* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this. (In case you do not receive the error message shown in next screenshot try closing and restarting Android Studio.)
 
 Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
 
@@ -287,9 +287,9 @@ The last step is to press on the APK file I got via Gmail and install the app. I
 
 Yeah, you got it and can now start with configuring AndroidAPS for your use (CGMS, insulin pump) etc.
 
-## Identify receiver if using xDrip
+## Identify receiver if using xDrip+
 
-[See xDrip page](../Configuration/xdrip#identify-receiver)
+[See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
 ## Resolução de Problemas
 

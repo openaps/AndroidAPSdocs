@@ -135,7 +135,7 @@ Lies und schließe den “Tip of the Day” von Android Studio, indem du auf “
 ![Screenshot 17](../images/Installation_Screenshot_17.png)
 
 * Perfekt, du hast jetzt deine eigene Kopie des Quellcodes erstellt und kannst mit dem Kompilieren beginnen.
-* Als nächstes erwartet uns die erste Fehlermeldung. Glücklicherweise schlägt Android Studio gleich die Lösung vor.
+* Als nächstes erwartet uns die erste Fehlermeldung. Glücklicherweise schlägt Android Studio gleich die Lösung vor. (Falls keine Fehlermeldung angezeigt wird, schließe Android Studio und starte es neu.)
 
 Klicke auf “Install missing platform(s) and sync project”, da Android Studios noch einige Komponenten installieren muss.
 
@@ -287,9 +287,9 @@ Der letzte Schritt ist es, auf die APK Datei zu klicken und die App zu installie
 
 Herzlichen Glückwunsch, du hast es geschafft! Nun kannst du AndroidAPS starten und einrichten.
 
-## Identifiziere den Empfänger falls Du xDrip verwendest
+## Identifiziere den Empfänger falls Du xDrip verwendest+
 
-[Siehe xDrip Seite](../Configuration/xdrip#identify-receiver)
+[Siehe xDrip+ Seite](../Configuration/xdrip#identify-receiver)
 
 ## Problembehandlung
 

@@ -23,7 +23,7 @@ Getting started
    Safety first <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
    
    
 What do I need 
@@ -33,6 +33,7 @@ What do I need
    :glob:
    
    Module <./Module/module.rst>
+   Sample Setup <./Getting-Started/Sample-Setup.md>
 
    
 How to Install AndroidAPS
@@ -148,7 +149,7 @@ Where to go for help
 
    Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 
 For Clinicians
 --------------------------------------------------
@@ -166,8 +167,8 @@ How to help
    :glob:
 
    How to help <./Getting-Started/How-can-I-help.md>
-   How to translate the app and wiki <./translations.md>
-   How to edit the wiki <./make-a-PR>
+   How to translate the app and docs <./translations.md>
+   How to edit the docs <./make-a-PR>
 
 
 .. pastaba:: 

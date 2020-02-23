@@ -2,7 +2,7 @@
 
 Open preferences by clicking three-dot-menu on top right side of homescreen:
 
-![How to open Preferences](../images/PreferencesOpen.png)
+![Como abrir as Preferências](../images/PreferencesOpen.png)
 
 ## Password para definições
 
@@ -32,7 +32,7 @@ There are safety limits in place based on age you selected in this setting. Se c
 
 * Option to enable [superbolus](../Getting-Started/Screenshots#section-a) in bolus wizard.
 
-### Status lights
+### Luzes de Estado
 
 * Status lights give a visual warning for low reservoir and battery level as well as overdue site change. Extended version shows elapsed time / battery percentage.
     
@@ -102,8 +102,8 @@ If you have selected to use AMA Autosens then you will be able to enter your max
 
 The options here will vary depending on which pump driver you have selected in 'Config Builder'. Pair and set your pump up according to the pump related instructions:
 
-* [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) 
-* [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) 
+* [Bomba de Insulina DanaR](../Configuration/DanaR-Insulin-Pump.md) 
+* [Bomba de Insulina DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Bomba de Insulina Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
 * [Bomba Medtronic](..//Configuration/MedtronicPump.md)
 
@@ -114,7 +114,7 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 * Set your 'nightscout URL' here (https://yourwebsitename.herokuapp.com or https://yourwebsitename.azurewebsites.net), and the 'API secret' (a 12 character password recorded in your heroku or azure variables). This enables data to be read and written between both the nightscout website and AndroidAPS. Double check for typos here if you are stuck in Objective 1.
 * **Make sure that the URL is WITHOUT /api/v1/ at the end.**
     
-    ![NSClient URL](../images/NSClientURL.png)
+    ![URL NSCliente](../images/NSClientURL.png)
 
 * 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. The app should not be needing to start more than once a day; more frequently than this suggests a problem.
 
