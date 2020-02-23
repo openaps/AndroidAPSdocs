@@ -69,7 +69,7 @@ L'Assistance Améliorée Repas (AAR) de OpenAPS permet au système de reagir plu
 
 ### Max. U/hr pour le débit de basal temp
 
-Ce paramètre existe comme une limite de sécurité pour empêcher AAPS d'être capable d'administrer un dosage Basal dangereusement élevé. La valeur est definie en Unités d'insuline par heure (U/h). Il est conseillé de definir cette valuer de facon raisonnable et sensée. Une bonne recommandation est de prendre le **plus haut dosage Basal** de votre profil et de le **multiplier par 4**. Par exemple, si le dosage basal le plus élevé dans votre profil a été 0.5 U/hr, vous qui pourriez le multiplier par 4 pour obtenir la valeur de 2 U/h.
+Ce paramètre existe comme une limite de sécurité pour empêcher AAPS d'être capable d'administrer un dosage Basal dangereusement élevé. La valeur est definie en Unités d'insuline par heure (U/h). Il est conseillé de definir cette valeur de facon raisonnable et sensée. Une bonne recommandation est de prendre le **plus haut dosage Basal** de votre profil et de le **multiplier par 4**. Par exemple, si le dosage basal le plus élevé dans votre profil a été 0.5 U/hr, vous qui pourriez le multiplier par 4 pour obtenir la valeur de 2 U/h.
 
 ### L'IA basal maximum que l'OpenAPS pourra délivrer [U]
 
