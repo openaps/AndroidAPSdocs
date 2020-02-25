@@ -20,19 +20,19 @@
 
 * * *
 
-### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
+### Insulet Omnipod (со старыми pod-блоками Eros) ([Домашняя страница](https://www.myomnipod.com/en-gb/about/how-to-use))
 
 **Статус взаимодействия с ИПЖ:** В настоящее время нативно не поддерживается в среде AAPS. Завершено декодирование протокола Omnipod- [OpenOmni](http://www.openomni.org/) и [OmniAPS Slack](https://omniaps.slack.com/)
 
 **Другие решения:**
 
-- Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink, and specially modified AndroidAPS) 
+- Omnipy для AndroidAPS (стабильно в тестировании, требует Raspberry Pi, а также RileyLink, и специально модифицированного AndroidAPS) Omnipy 
 - OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project).
-- [iOS Loop](https://loopkit.github.io/loopdocs/) (stable, released, requires RileyLink).
+- [ Loop ](https://loopkit.github.io/loopdocs/) iOS (стабильная версия, требует RileyLink).
 
 **Реализации на Java:** Пока нет.
 
-**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version is expected to be released around January 2020.
+** Состояние реализации AAPS: ** Работа над собственным драйвером Java для Omnipod на AAPS выполняется в [ AAPS-Omnipod/AndroidAPS ](https://github.com/AAPS-Omnipod/AndroidAPS) (ветвь omnpod_eros). Не требует Raspberry Pi. Вы можете следить за ходом выполнения [ OmniAPS Slack ](https://omniaps.slack.com/) на канале android-driver. Ожидается, что первая общедоступная тестовая версия будет выпущена примерно в январе 2020 года.
 
 **Требование к оборудованию для AAPS:** RileyLink с прошивкой Omnipod (2.x) и антенной 433 МГц.
 
