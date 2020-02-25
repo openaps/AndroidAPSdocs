@@ -27,7 +27,7 @@
 **Другие решения:**
 
 - Omnipy для AndroidAPS (стабильно в тестировании, требует Raspberry Pi, а также RileyLink, и специально модифицированного AndroidAPS) Omnipy 
-- OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project).
+- OmniCore для AndroidAPS (еще не выпущен, нативный код C# работает на Android, нуждается только в RileyLink и специально модифицированном AndroidAPS - следующая версия проекта Omnipy).
 - [ Loop ](https://loopkit.github.io/loopdocs/) iOS (стабильная версия, требует RileyLink).
 
 **Реализации на Java:** Пока нет.
