@@ -160,21 +160,21 @@
    * В текстовом поле впечатайте "enable Engineering mode" 
    * нажмите "Готово"
    * Если включен Google Speak, вы можете дать голосовую команду: "enable engineering mode" ("включить инженерный режим"). 
-* Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
-* Use the voice command: “hard reset transmitter”
-* The voice command will be executed with the next data receipt of the transmitter
-* Look at the system status (Hamburger menu -> system status) and see what happens
-* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
+* Зайти в настройки отладки G5 и убедитесь что `использовать OB1 коллектор` включен.
+* Дайте голосовую команду: “hard reset transmitter”(«жесткий сброс трансмиттера»)
+* Голосовая команда будет выполнена при следующем получении данных трансмиттера
+* Посмотрите на статус системы (сэндвич-меню -> системный статус) и убедитесь в результате
+* Если вы видите сообщение "Состояние телефона: жесткий сброс возможно не произошел", просто перезапустите датчик на втором экране состояния системы и это сообщение должно исчезнуть.
    
    ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
 
-* Transmitter days will be set to 0 after successful extension and start of sensor.
+* Срок работы трансмиттера будет сброшен до 0 в случае успеха.
 
 ### Замена трансмиттера
 
 Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81) пользуйтесь версией [ master ](https://jamorham.github.io/#xdrip-plus).
 
-Если серийный номер трансмиттера Dexcom G6 is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Если серийный номер трансмиттера Dexcom G6 начинается с 8G, 8H или 8J, пользуйтесь одной из [новых ночных сборок](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Выключите оригинальный ресивер Dexcom (если используете).
 * Остановить сенсор (только при смене сенсора)
