@@ -75,13 +75,13 @@
 
 Оригинальное приложение Dexcom из Google Play Store не будет работать, так как оно не передает данные другим приложениям. Поэтому требуется немного модифицированная версия от нашего сообщества. Только это измененное приложение Dexcom может общаться с AAPS. Кроме того, модифицированное приложение Dexcom может работать со всеми смартфонами Android, а не только находящимися в списке совместимости [Dexcom](https://www.dexcom.com/dexcom-international-compatibility).
 
-A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 [app for your region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app).
+Версия в mmol/l и версия в mg/dl измененного приложения Dexcom G6 доступны на [ https://github.com/dexcomapp/dexcomapp/tree/master/2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4). Необходимо выбрать приложение G6 [ для своего региона ](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app).
 
-To do this perform the following steps on your smartphone:
+Для этого выполните следующие шаги на вашем смартфоне:
 
 1. Если оригинальное приложение Dexcom уже установлено: 
     * Остановить сенсор
-    * Uninstall app via Menu > Settings > Apps > Dexcom G6 Mobile > Uninstall
+    * Удалить приложения через меню > Настройки > Приложения > Dexcom G6 Mobile > Удалить
 2. Download modified Dexcom app (check unit mg/dl or mmol/l and [region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) according to your needs): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
 3. Install modified Dexcom G6 app on your smartphone (= select the downloaded APK file)
 4. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
