@@ -24,7 +24,7 @@
 
 * Отключите `Загружать назначения` и `Восполнять пропущенные данные`.
    
-   **Safety warning : You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.**
+   **Предупреждение безопасности: Следует деактивировать "Загружать лечение/назначения" с xDrip, иначе в AAPS эти величины удвоятся, что приведет к неверному количеству активных углеводов COB и активного инсулина IOB.**
 
 * Опция `Оповещение о сбоях` также должна быть отключена. Иначе вы будете получать сигнал каждые 5 минут если wifi/мобильная сеть слабые или сервер недоступен.
    
@@ -55,8 +55,8 @@
 
 ### Версия xDrip+ в зависимости от серии трансмиттера G6.
 
-* Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus). 
-* Если серийный номер трансмиттера Dexcom G6 is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+* Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81) пользуйтесь версией [ master ](https://jamorham.github.io/#xdrip-plus). 
+* Если серийный номер трансмиттера Dexcom G6 начинается с 8G и 8Н попробуйте [ночные сборки от 2019/07/28 или позднее](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ### Настройки для работы с Dexcom
 
@@ -76,7 +76,7 @@
 
 ### Упреждающие перезапуски не рекомендуются
 
-**With Dexcom transmitters whos serial no. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
+**With Dexcom transmitters whos serial no. начинается с 8G, 8H, или 8J упреждающие перезапуски не работают и могут полностью убить сенсор!**
 
 The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
@@ -96,9 +96,9 @@ To learn more about the details and reasons for these recommendations read the [
 
 **For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
 
-Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
+Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81) пользуйтесь версией [ master ](https://jamorham.github.io/#xdrip-plus).
 
-Если серийный номер трансмиттера Dexcom G6 is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+Если серийный номер трансмиттера Dexcom G6 начинается с 8G и 8Н попробуйте [ночные сборки от 2019/07/28 или позднее](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Выключите оригинальный ресивер Dexcom (если используете).
 * Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
@@ -172,7 +172,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Замена трансмиттера
 
-Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
+Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81) пользуйтесь версией [ master ](https://jamorham.github.io/#xdrip-plus).
 
 Если серийный номер трансмиттера Dexcom G6 is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
