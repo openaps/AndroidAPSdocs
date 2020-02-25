@@ -78,7 +78,7 @@
 
 **With Dexcom transmitters whos serial no. начинается с 8G, 8H, или 8J упреждающие перезапуски не работают и могут полностью убить сенсор!**
 
-The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
+Автоматическое продление работы сенсоров Dexcom (`упреждающие перезапуски, preemtive restarts`) не рекомендуется, так как может привести к скачкам значений ГК на 9 день после перезапуска.
 
 ![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
@@ -90,15 +90,15 @@ The automatic extension of Dexcom sensors (`preemptive restarts`) is not recomme
 * "Предварительное погружение" (установка сенсора намного раньше его старта в приложении) G6 с заводской калибровкой приведет к отклонениям в данных. Если вы все же делаете "предварительное погружение", то для получения лучших результатов вам, вероятно, придется калибровать сенсор.
 * Если вы не планируете отслеживать все возможные изменения, то лучше вернуться к традиционному режиму калибровки и использовать систему, как G5.
 
-To learn more about the details and reasons for these recommendations read the [complete article](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](http://www.diabettech.com).
+Подробнее о деталях и причинах этих рекомендаций читайте [полную статью](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) опубликованную в Tim Street на [www.diabettech.com](http://www.diabettech.com).
 
 ### Первое подключение трансмиттера G6
 
-**For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
+**Для второго и следующего трансмиттера смотрите [Продление срока работы трансмиттера](../Configuration/xdrip#extend-transmitter-life) ниже.**
 
 Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81) пользуйтесь версией [ master ](https://jamorham.github.io/#xdrip-plus).
 
-Если серийный номер трансмиттера Dexcom G6 начинается с 8G и 8Н попробуйте [ночные сборки от 2019/07/28 или позднее](https://github.com/NightscoutFoundation/xDrip/releases).
+Если серийный номер трансмиттера Dexcom G6 начинается с 8G, 8Н bkb 8J попробуйте [ночные сборки от 2019/07/28 или позднее](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Выключите оригинальный ресивер Dexcom (если используете).
 * Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
@@ -124,7 +124,7 @@ To learn more about the details and reasons for these recommendations read the [
    
    -> В нижней части экрана через несколько минут появится предупреждение о прогреве сенсора `Осталось x,x часов`.
 
--> If your transmitter serial no. does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
+-> Если серийный номер трансмиттера не начинается с 8G, 8H или 8J и в течение нескольких минут не появляется никаких указаний о времени прогрева сенсора, остановите и перезапустите сенсор.
 
 * Перезапустите коллектор (состояние системы - если не заменяете сенсор}
 * Не включайте оригинальный ресивер Dexcom (если им пользуетесь) до появления первых данных в xDrip+.
@@ -150,16 +150,16 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Увеличение срока работы трансмиттера
 
-* Пока что не найдено способа продлить жизнь трансмиттеров, чей серийный номер starts with 8G, 8H or 8J.
+* Пока что не найдено способа продлить жизнь трансмиттеров, чей серийный номер начинается с 8G, 8H или 8J.
 * Для предотвращения трудностей при запуске сенсоров настоятельно рекомендуется продлить срок действия трансмиттера до 100-го дня первого использования.
 * При продлении срока действия трансмиттера работа сенсора будет остановлена. Поэтому проводить эту манипуляцию следует перед заменой сенсора или быть готовыми к тому, что состоится двухчасовая фаза его прогрева.
-* Stop sensor manually via hamburger menu.
-* Switch to the `engineering mode`: 
-   * tap on the character on the right of the xDrip+ start screen that represents a syringe
-   * then tap on the microphone icon in the lower right corner
-   * In the text box that opens type "enable engineering mode" 
-   * click "Done"
-   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
+* Остановите сенсор вручную через сэндвич-меню.
+* Переключитесь в `инженерный режим`: 
+   * нажмите на пиктограмму шприца на главном экране xDrip+ справа
+   * затем нажмите на значок микрофона в нижнем правом углу
+   * В текстовом поле впечатайте "enable Engineering mode" 
+   * нажмите "Готово"
+   * Если включен Google Speak, вы можете дать голосовую команду: "enable engineering mode" ("включить инженерный режим"). 
 * Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
 * Use the voice command: “hard reset transmitter”
 * The voice command will be executed with the next data receipt of the transmitter
