@@ -43,7 +43,7 @@
 ### Идентификатор ресивера
 
 * Если вы обнаружили проблемы с локальной трансляцией (AAPS не получает значения ГК из xDrip +), перейдите в Параметры > Взаимодействие приложений > Идентификация получателя и введите ` info.nightscout.androidaps `.
-* Внимание: Автокоррекция, как правило, меняет i на прописную букву. **Необходимо использовать только строчные буквы ** при вводе ` info.nightscout.androidaps `. Capital I would prevent AAPS from receiving BG values from xDrip+.
+* Внимание: Автокоррекция, как правило, меняет i на прописную букву. **Необходимо использовать только строчные буквы ** при вводе ` info.nightscout.androidaps `. Прописная I не позволит AAPS получать данные ГК из xDrip+.
    
    ![xDrip+ Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
@@ -76,11 +76,11 @@
 
 ### Упреждающие перезапуски не рекомендуются
 
-**With Dexcom transmitters whos serial no. начинается с 8G, 8H, или 8J упреждающие перезапуски не работают и могут полностью убить сенсор!**
+**В трансмиттерах Dexcom с серийным номером начинается с 8G, 8H, или 8J упреждающие перезапуски не работают и могут полностью убить сенсор!**
 
 Автоматическое продление работы сенсоров Dexcom (`упреждающие перезапуски, preemtive restarts`) не рекомендуется, так как может привести к скачкам значений ГК на 9 день после перезапуска.
 
-![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ после превентивного перезапуска](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Применение G6 немного сложнее, чем казалось раньше. Для правильного применения необходимо иметь в виду следующие моменты:
 
@@ -118,7 +118,7 @@
    * С трансмиттерами, серийный номер которых начинается с 80 или 81: "Got data hh:mm" (напр. "Got data 19:04 ")
    * С трансмиттерами, серийный номер которых начинается с 8G, 8H или 8J: "Got glucose hh:mm" (напр. "Got glucose 19:04 ") или "Got no raw hh:mm" (i.e. "Got no raw 19:04")
    
-   ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
+   ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
 * Нажмите старт сенсора (только при смене сенсора)
    
@@ -166,7 +166,7 @@
 * Посмотрите на статус системы (сэндвич-меню -> системный статус) и убедитесь в результате
 * Если вы видите сообщение "Состояние телефона: жесткий сброс возможно не произошел", просто перезапустите датчик на втором экране состояния системы и это сообщение должно исчезнуть.
    
-   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
+   ![xDrip+ Жесткий сброс возможно не произошел](../images/xDrip_HardResetMaybeFailed.png)
 
 * Срок работы трансмиттера будет сброшен до 0 в случае успеха.
 
@@ -191,7 +191,7 @@
    
    ![xDrip+ Остановка сенсора Dexcom 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Forget device in xDrip+ system status AND in smartphone’s BT settings (Will be shown as Dexcom?? где ?? последние две цифры серийного № трансмиттера
+* Забудьте устройство в системном состоянии XDrip и в настройках BT смартфона (показывается как Dexcom?? где ?? последние две цифры серийного № трансмиттера
    
    ![xDrip+ забыть устройство](../images/xDrip_Dexcom_ForgetDevice.png)
 
@@ -205,12 +205,12 @@
 * Введите серийный номер нового трансмиттера. Будьте внимательны и не перепутайте 0 (ноль) и O (заглавная буква o).
 * Вставьте новый сенсор (только при замене).
 * Поместите трансмиттер на сенсор - ** не запускайте сенсор немедленно!**
-* Новые "Трансмиттеры Firefly" (серийный номер starting with 8G, 8H or 8J) can only be used in native mode.
-* Следующие опции не должны быть активированы для новых трансмиттеров "Firefly" (серийный номер starting with 8G, 8H or 8J):
+* Новые "Трансмиттеры Firefly" (серийный номер начинающиеся с 8G, 8H или 8J) можно использовать только в нативном режиме.
+* Следующие опции не должны быть активированы для новых трансмиттеров "Firefly" (серийный номер которых начинается с 8G, 8H или 8J):
    
    * Упреждающий перезапуск (отключить!)
    * Перезапуск сенсора (отключить!)
-   * Fallback to xDrip+ (disable!)
+   * Возврат к xDrip (отключить!)
    
    ![Параметры для трансмиттеров "Firefly"](../images/xDrip_Dexcom_FireflySettings.png)
 
@@ -219,7 +219,7 @@
    * С трансмиттерами, серийный номер которых начинается с 80 или 81: "Got data hh:mm" (напр. "Got data 19:04 ")
    * С трансмиттерами, серийный номер которых начинается с 8G, 8H или 8J: "Got glucose hh:mm" (напр. "Got glucose 19:04 ") или "Got no raw hh:mm" (i.e. "Got no raw 19:04")
    
-   ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
+   ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
 * Подождите 15 минут, так как трансмиттер должен соединиться несколько раз с xDrip до запуска нового сенсора. Данные батареи будут показаны ниже информации о прошивке.
    
@@ -262,7 +262,7 @@
 
 * Запустите сенсор
    
-   ** Для новых трансмиттеров Firefly ** (серийный номер starting with 8G, 8H or 8J) **it is mandatory, for all other transmitters it is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen). НЕ НАСТРАИВАЙТЕ ЗАДНИМ ЧИСЛОМ!**
+   ** Для новых трансмиттеров Firefly ** (серийный номер начинается с 8G, 8H или 8J) ** это обязательно, для всех остальных трансмиттеров рекомендуется ждать около 15 минут между остановкой и запуском нового сенсора (до тех пор пока ` Sensor Status: Stopped ` не появится на втором экране состояния системы). НЕ НАСТРАИВАЙТЕ ЗАДНИМ ЧИСЛОМ!**
 
 * Введите время установки
    
@@ -305,7 +305,7 @@
 
 ### Проблемы при запуске нового сенсора
 
-Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J.
+Обратите внимание, что следующий метод, скорее всего, не работает, если серийный номер передатчика Dexcom G6 которых начинается с 8G, 8H или 8J.
 
 * Запуск сенсора сопровождается сообщением: "ОШИБКА: Сенсор не удалось запустить"
 * Остановить сенсор
@@ -315,7 +315,7 @@ Please note that the following method might likely not work if your Dexcom G6 tr
 * Остановить сенсор
 * Запустить датчик с "реальным" кодом (напечатан на клеящемся протекторе)
 
-Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
+Проверьте журнал xDrip+, начат ли в xDrip+ отсчет "Duration: 1 минута" (и так далее). Только в логах xdrip+ вы можете обнаружить на раннем этапе, остановлен ли сенсор. Более поздний статус статус не всегда отображается правильно внизу начального экрана.
 
 ## xDrip+ & Libre Freestyle
 
@@ -337,8 +337,8 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
 
 ### Подключите трансмиттер Libre и запустите сенсор
 
-![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ запуск трансмиттера Libre & Сенсор 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ запуск трансмиттера Libre & Сенсор 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ запуск трансмиттера Libre & Сенсор 3](../images/xDrip_Libre_Transmitter03.png)
