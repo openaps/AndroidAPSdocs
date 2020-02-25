@@ -4,7 +4,7 @@
 
 ## Описание
 
-В этой комбинации смартфон Samsung Galaxy S7 используется в качестве центра управления циклом. The slightly modified Dexcom App reads glucose values from the Dexcom G6 CGM. AndroidAPS is used to control the Dana RS insulin pump from Korean manufacturer SOOIL via bluetooth. Дополнительные устройства не требуются.
+В этой комбинации смартфон Samsung Galaxy S7 используется в качестве центра управления циклом. Слегка модифицированное приложение Dexcom считывает значения ГК из CGM Dexcom G6. AndroidAPS управляет помпой Dana R корейского производителя SOOIL через Bluetooth. Дополнительные устройства не требуются.
 
 Поскольку приложение Dexcom предлагает ограниченные параметры оповещений, приложение с открытым исходным кодом xDrip+ настраивается не только на высокие и низкие значения но и на другие оповещения под индивидуальные потребности.
 
@@ -26,8 +26,8 @@
     * [Помпа Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
     * [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
     * [DanaR](../Configuration/DanaR-Insulin-Pump.md)
-    * [Some old Medtronic pumps (additionally needed: RileyLink/Gnarl hardware, Android Phone with bluetooth low energy / BLE-chipset)](../Configuration/MedtronicPump.md)
-    * Other pumps might be available in the future, see [future possible pump drivers](Future-possible-Pump-Drivers.md) for details.
+    * [Некоторые старые помпы Medtronic (дополнительно требуются аппаратная часть: RileyLink/Gnarl, телефон Android с чипом bluetooth low Energy/BLE-chipset)](../Configuration/MedtronicPump.md)
+    * В будущем возможны другие помпы, см. подробнее в [возможные будущие драйверы помп](Future-possible-Pump-Drivers.md).
 
 3. [Dexcom G6](https://dexcom.com)
     
@@ -35,7 +35,7 @@
 
 4. Дополнительно: Sony Smartwatch 3 (SWR50)
     
-    * Alternatives: All [watches with Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) should work fine, for details see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS (OS must be Android Wear)
+    * Альтернативы: Все [ часы с Google Wear OS ](https://wearos.google.com/intl/de_de/#find-your-watch) должны работать, см. [ список проверенных телефонов и часов ](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) для AndroidAPS (OS должна быть Android Wear)
 
 ## Настройки Nightscout
 
