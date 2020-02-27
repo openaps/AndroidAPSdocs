@@ -55,26 +55,26 @@ Taigi Insight pompos naudotojai neturėtų nerimauti dėl laiko juostų ir laiko
 
 Priklausomai nuo pompos ir sensoriaus (NGJ) nustatymų, laiko pasikeitimas gali sukelti problemų. Pvz. su Combo, pompos istorija nuskaitoma dar kartą ir įrašai dubliuojasi. Taigi prašome pakeitimus daryti kol esate atsibudęs ir ne nakties metu.
 
-If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+Jeigu leidžiate bolusą naudodamiesi skaičiuokle, nenaudokite AAO ir AIO kol būsite įsitikinę, kad jie yra teisingi - geriausia būtų nenaudoti jų bent keletą valandų po VL persukimo.
 
 ## Accu-Chek Combo
 
-AndroidAPS will issue an alarm if time between pump and phone differs to much. In case of DST time adjustment this would be in the middle of the night. To prevent this and enjoy your sleep instead follow these steps:
+AndroidAPS duos signalą, jeigu pompos ir telefono laikas skirsis per daug. VL persukimo atveju, tai vyks nakties metu. Kad išvengti to ir mėgautis miegu, atlikite šiuos veiksmus:
 
-1) Switch off automatic time zone in your phone. 2) Find a time zone that has the target time but doesn't use DST. For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo. 3) In AndroidAPS refresh you pump. 4) Check the Treatments tab... If you see duplicate treatments:
+1) Išjunkite automatinį laiko nustatymą telefone. 2) Raskite planuojamo laiko juostą, kuri nenaudoja VL persukimo. Pagal Vidurio Europos laiką (GMT) tai galėtų būti Zimbabvė. Telefone pakeiskite laiko juostą į Zimbabvę. 3) AndroidAPS atnaujinkite pompos duomenis. 4) Patikrinkite "Terapijos" skirtuką ir... Jeigu matote susidubliavusios įrašus:
 
-* DON'T press "delete future treatments"
-* Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore. 5) If the state is unclear - please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.
+* Nespauskite "Ištrinti" būsimus terapijos duomenis
+* Spauskite "Anuliuoti" visus būsimus ir dubliuojamus terapijos įrašus. Šie terapijos duomenys turėtų būti anuliuojami, ne ištrinami, kad toliau neįtakotų AIO duomenų. 5) Jeigu vis tik įrašų būklė yra neaiški, sustabdykite ciklą bent visai insulino veikimo trukmei arba angliavandenių įsisavinimo laikui - pagal tai, kuris ilgesnis.
 
-A good time to make this switch would be with low IOB. E.g. an hour before a meal.
+Geriausias laikas šiam perjungimui yra tada, kai yra žemas AIO. Pvz., valanda prieš valgį.
 
 ## Accu-Chek Insight
 
-* Change to DST is done automatically. No action required.
+* VL persukimas vyksta automatiškai. Nereikia imtis jokių veiksmų. 
 
-## Other pumps - new as of AAPS version 2.2
+## Kitos pompos - AAPS versija aukštesnė nei 2.2
 
-**You have to update AAPS to use this feature!**
+**Turite atnaujinti AAPS, kad galėtumėte naudotis šiomis funkcijomis!**
 
-* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
-* You will receive a notification on the main screen 24 hours prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* Siekiant išvengti sunkumų, ciklas bus išjungtas 3 valandas po VL persukimo. Tai daroma dėl Jūsų saugumo - AIO yra per didelis dėl susidubliavusių duomenų, lyginant su duomenimis prieš VL persukimą.
+* 24 valandos prieš VL persukimą, Jūs gausite pranešimą ekrane, kad ciklas bus laikinai sustabdytas. Šis pranešimas bus rodomas be garso signalo, vibracijos ar pan.
