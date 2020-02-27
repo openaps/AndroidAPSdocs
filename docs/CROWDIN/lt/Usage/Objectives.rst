@@ -56,7 +56,7 @@ Reduce number of notifications
      
 * Also, you do not need to act every 5 minutes on all suggestions...
 
-Objective 5: Understanding your open loop, including its temp basal recommendations
+Tikslas 5: perpraskite atvirojo ciklo veikimą bei laikinos bazės rekomendacijas
 ====================================================================================================
 * Start to understand the thinking behind the temp basal recommendations by looking at the `determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ and both the `forecast line in AndroidAPS homescreen <../Getting-Started/Screenshots.html#section-e>`_/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
  
