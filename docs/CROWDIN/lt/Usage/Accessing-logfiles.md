@@ -1,8 +1,8 @@
-# Accessing logfiles
+# Žurnalų failų gavimas
 
-* Connect phone to a computer in file transfer mode
-* Locate log files in this directory or similiar (may little bit vary on different phones)
+* Prijunkite telefoną prie kompiuterio failų persiuntimo režimu
+* Ieškokite žurnalo failų šiame ar panašiame kataloge (gali skirtis skirtinguose išmaniuosiuose telefonuose)
 
-![logs](../images/aapslog.png)
+![įvykių žurnalas](../images/aapslog.png)
 
-* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) in Android Studio, Log Viewer android app, or simply plain text. Previous log files are zipped and stored in folders in date/time order. If sharing your log in [gitter](https://gitter.im/MilosKozak/AndroidAPS) when talking about a potential bug then unzip and upload the folder dated before the error occurred.
+* Dabartinis žurnalo failas yra failas su plėtiniu .log, kurį galima rodyti įvairiais būdais, pvz., [LogCat](https://developer.android.com/studio/debug/am-logcat.html) Android Studio, Android programų žurnalų peržiūros priemonė arba tiesiog kaip įprastą tekstą. Senesni žurnalo failai yra suglaudinami kaip ZIP failai ir išsaugomi kataloguose, kurie rūšiuojami pagal datą / laiką. Jei norite dalintis savo žurnalo failais [ gitter](https://gitter.im/MilosKozak/AndroidAPS) ir pranešti apie galimą problemą, išpakuokite jį ir įkelkite katalogą, kurio data atitinka klaidos atsiradimą.
