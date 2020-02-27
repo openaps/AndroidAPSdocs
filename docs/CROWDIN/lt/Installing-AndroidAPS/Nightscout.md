@@ -1,61 +1,61 @@
 # Nightscout
 
-## Security considerations
+## Saugumo svarba
 
-Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
+Be ataskaitų, Nightscout taip pat gali būti naudojamas kontroliuoti AAPS. T.y. galite nustatyti laikinus tikslus ar pridėti būsimus angliavandenius. Ši informacija bus įkelta į AAPS ir ši veiks atitinkamai. Todėl yra verta pagalvoti kaip apsaugoti savo Nightscout svetainę.
 
 ### Nightscout parametrai
 
-You can deny public access to your Nightscout site by using [authentication roles](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
+Galite uždrausti viešą prieigą prie jūsų Nightscout svetainės, naudodami [atpažinimo vaidmenis](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
 
 ### AndroidAPS parametrai
 
-There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs. If you are using [NS profile](../Configuration/Config-Builder#ns-profile) the profiles will be synced between AAPS and Nightscout despite the setting "upload only".
+Taip pat NS turi tik įkėlimo (ne sinchronizavimo) funkciją AAPS nustatymuose. Ją pasirinkus, AAPS neįkels pakeitimų, atliktų Nightscout, tokių kaip laikini tikslai ar būsimi angliavandeniai. Jei naudojate [NS profilį](../Configuration/Config-Builder#ns-profile), profiliai bus sinchronizuojami tarp AAPS ir Nightscout nepaisant nustatymo "įkelti tik".
 
-* Tap 3-dot menu on top right corner on your AAPS homescreen.
-* Select "Preferences".
-* Scroll down and tap "Advanced settings".
-* Activate "NS upload only
+* Bakstelėkite 3-taškų meniu viršutiniame dešiniajame kampe savo AAPS pradžios ekrane.
+* Pasirinkite "Nustatymai".
+* Slinkite žemyn ir bakstelėkite "Išplėstiniai nustatymai".
+* Aktyvuokite "Įkelti tik į NS"
 
 ![Nightscout upload only](../images/NSsafety.png)
 
-### Further security settings
+### Tolimesni saugumo nustatymai
 
-Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.rst).
+Nuolat atnaujinkite savo telefoną, kaip aprašyta [Pirmiausia saugumas](../Getting-Started/Safety-first.rst).
 
-## Manual Nightscout setup
+## Rankinis Nightscout diegimas
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
+Manoma, kad jūs jau turite Nightscout svetainę, jei ne, apsilankykite [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) puslapyje gauti visas diegimo instrukcijas, instrukcijos žemiau reikalingos pridėti nustatymus į jūsų Nightscout puslapį. Jūsų Nightscout svetainė turi būti bent versijos 10 (ekrane rodoma 0.10...), todėl prašome patikrinti, ar turite [naujausią versiją](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie), priešingu atveju gausite klaidos pranešimą, jūsų AAPS programoje. Kai kurie žmonės mano, kad uždaras ciklas išnaudoja daugiau vietos, nei azure suteikiama nemokama kvota, todėl heroku laiko geresniu pasirinkimu.
 
-* Go to https://herokuapp.com/
+* Eikite į https://herokuapp.com/
 
-* Click your App Service name.
+* Spustelėkite jūsų Programos Paslaugos pavadinimą.
 
-* Click Application settings (azure) or Settings > "Reveal Config Variables (heroku)
+* Spustelėkite taikomosios programos nustatymus (azure), arba Parametrai > "Atskleisti konfigūracijos kintamuosius (heroku)
 
-* Add or edit the variables as follows:
+* Pridėti arba redaguoti kintamuosius taip:
   
   * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
   * `DEVICESTATUS_ADVANCED` = `true`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
+  * Įvairius aliarmus galima nustatyti [pompos stebėsena](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), baterijos % ypač rekomenduojami: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
-  * Optional: The following 'timers' can be set for the coloring in the AAPS careportal: 
-    * `BAGE_WARN` = `480` (Warning after x hours since last Battery Changed Event in Careportal)
-  * `BAGE_URGENT` = `504` (Urgent warning after x hours since last Battery Changed Event in Careportal)
-  * `CAGE_WARN` = `40` (Warning after x hours since last Cannula Changed Event in Careportal)
-  * `CAGE_URGENT` = `48` (Urgent warning after x hours since last Cannula Changed Event in Careportal)
-  * `IAGE_WARN` = `144` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
-  * `IAGE_URGENT` = `192` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
-  * `SAGE_WARN` = `160` (Warning after x hours since the last CGM Sensor Insert Event in Careportal)
-  * `SAGE_URGENT` = `168` (Urgent Warning after x hours since the last CGM Sensor Insert Event in Careportal)
+  * Papildomai: šie "laikmačiai" gali būti nustatyti panaudojant spalvas AAPS priežiūroje: 
+    * `BAGE_WARN` = `480` (Įspėjimas po x valandų nuo paskutinio Baterijos Pakeitimo Įvykio Priežiūroje)
+  * `BAGE_URGENT` = `504` (Skubus įspėjimo po x valandų nuo paskutinio Baterijos Pakeitimo Įvykio Priežiūroje)
+  * `CAGE_WARN` = `40` (Įspėjimas po x valandų nuo paskutinio Kateterio Pakeitimo Įvykio Priežiūroje)
+  * `CAGE_URGENT` = `48` (Skubus įspėjimo po x valandų nuo paskutinio Kateterio Pakeitimo Įvykio Priežiūroje)
+  * `IAGE_WARN` = `144` (Įspėjimas po x valandų nuo paskutinio Insulino rezervuaro Pakeitimo Įvykio Priežiūroje)
+  * `IAGE_URGENT` = `192` (Įspėjimas po x valandų nuo paskutinio Insulino rezervuaro Pakeitimo Įvykio Priežiūroje)
+  * `SAGE_WARN` = `160` (Įspėjimas po x valandų nuo paskutinio NGJ Pakeitimo Įvykio Priežiūroje)
+  * `SAGE_URGENT` = `168` (Skubus įspėjimo po x valandų nuo paskutinio NGJ Pakeitimo Įvykio Priežiūroje)
 
 ![Azure](../../images/nightscout1.png)
 
-* Click "Save" at the top of the panel.
+* Spustelėkite "Išsaugoti" skydelio viršuje.
 
-## Semi-automated Nightscout setup
+## Pusiau automatinis Nightscout diegimas
 
 This service is offered by fellow looper Martin Schiftan free of charge at the moment. If you like the service you can consider sending him a small donation (link in the navigation on the left side).
 
