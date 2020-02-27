@@ -82,12 +82,12 @@ Nerekomenduojama automatiškai pratęsti Dexcom jutiklio veikimo (`Pakartotinis 
 
 ![xDrip+ šuolis po paleidimo iš naujo](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
+Naudoti G6 yra šiek tiek sudėtingiau, nei atrodė anksčiau. Norint jį naudoti saugiai, yra keletas niuansų, kuriuos reikia žinoti:
 
 * Jei xDrip ar Spike naudojate natyvinius duomenis su kalibravimo kodu, saugumo sumetimais neturėtumėte leisti pakartotinio paleidimo iš naujo.
 * Jei vis dėlto naudojatės pakartotiniu paleidimu, tada jis turėtų būti daromas tokiu metu, kai galima stebėti pokyčius ir prireikus kalibruoti. 
 * Jei iš naujo paleisite sensorių, atlikite tai be gamyklinio kalibravimo, kad rezultatai būtų saugūs 11-ą ir 12-ą dieną, arba būkite pasirengę kalibruoti ir stebėti pokyčius.
-* „Išankstinis įmirkymas“ (sensoriaus įvedimas daug anksčiau nei jo pradžia programoje) G6 su gamykliniu kalibravimu gali sukelti duomenų nukrypimus. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
+* „Išankstinis įmirkymas“ (sensoriaus įvedimas daug anksčiau nei jo pradžia programoje) G6 su gamykliniu kalibravimu gali sukelti duomenų nukrypimus. Jei sensorių įvedate anksčiau, nei jį startuojate, gali reikėti jį kalibruoti, kad gautumėte geriausius rezultatus.
 * Jei neplanuojate sekti visų galimų nukrypimų, geriau grįžti į tradicinį kalibravimo režimą ir naudoti sistemą kaip G5.
 
 Norėdami gauti daugiau informacijos ir šių rekomendacijų priežastis, skaitykite Tim Street [visą straipsnį](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) svetainėje [www.diabettech.com](http://www.diabettech.com).
@@ -197,35 +197,35 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. pradedant nuo 8G, 8H ar 8J, naudokite
 
 * Nuimti siųstuvą (ir sensorių, jei keičiamas sensorius)
 
-* Patraukite seną siųstuvą kuo toliau, kad jis nebūtų vėl prijungtas. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% no one is turning the microwave on.
+* Patraukite seną siųstuvą kuo toliau, kad jis nebūtų vėl prijungtas. Mikrobangų krosnelė yra tobulas Faraday skydas, atjunkite maitinimo laidą, kad būtumėte 100% tikri, kad ja niekas tuo metu nesinaudoja.
 * Ilgai spauskite kraujo lašo piktogramą pagrindiniame xDrip+ ekrane, kad suaktyvintumėte `Glikemijos šaltinio parinkimo vedlys (Source Wizard Button)` mygtuką.
 * Naudokite mygtuką Glikemijos šaltinio parinkimo vedlys. Tai užtikrins, kad naudosite numatytuosius nustatymus, įskaitant OB1 & natyvinį režimą 
    * Vedlys leis atlikti pradinę sąranką.
    * Jums reikės siųstuvo serijos numerio, jei jį naudojate pirmą kartą.
 * Įveskite naujo siųstuvo serijos nr. Nesupainiokite 0 (nulis) ir O (didžiosios raidės o).
 * Įdėkite naują sensorių (tik keičiant).
-* Put transmitter into sensor - **Do not start sensor immediately!**
-* New "Firefly Transmitters" (serial no. starting with 8G, 8H or 8J) can only be used in native mode.
-* The following options must not be activated for new "Firefly Transmitters" (serial no. starting with 8G, 8H or 8J):
+* Uždėkite siųstuvą ant sensoriaus - **Nestartuokite sensoriaus tuoj pat!**
+* Naujasis Firefly siųstuvas (serijos nr. prasidedantis 8G, 8H ar 8J) gali būti naudojami tik natyviniu (native) režimu.
+* Šias parinktis NEGALIMA suaktyvinti naujam „Firefly“ siųstuvui (serijos Nr. prasideda 8G, 8H ar 8J):
    
-   * Preemptive Restart (disable!)
-   * Restart sensor (disable!)
-   * Fallback to xDrip+ (disable!)
+   * Preemptive Restart (išjunkite!)
+   * Restart sensor (išjunkite!)
+   * Fallback to xDrip+ (išjunkite!)
    
-   ![Settings for Firefly transmitters](../images/xDrip_Dexcom_FireflySettings.png)
+   ![Nustatymai Firefly siųstuvams](../images/xDrip_Dexcom_FireflySettings.png)
 
-* Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following informations is displayed:
+* Patikrinkite, ar klasikinės būsenos puslapyje -> G5/G6 būsena -> PhoneServiceState rodoma ši informacija:
    
    * Siųstuvo serijos numeris prasideda 80 arba 81: „Got data hh:mm“ (pvz., „Got data 19:04“)
    * Siųstuvo serijos numeris prasideda 8G, 8H arba 8J: „Got glucose hh:mm“ (pvz., „Got glucose 19:04“) arba „Got no raw hh:mm“ (pvz., „Got now raw 19:04“)
    
    ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Wait 15 minutes as the transmitter should communicate several times with xDrip before new sensor is started. Battery data will be shown below Firmware information.
+* Palaukite 15 minučių. Prieš paleisdami naują sensorių, siųstuvas turėtų keletą kartų susisiekti su xDrip+. Baterijos duomenys bus rodomi žemiau programinės įrangos informacijos, kai tik ateis laikas.
    
-   ![Firefly transmitter battery data](../images/xDrip_Dexcom_FireflyBattery.png)
+   ![Firefly siųstuvo baterijos duomenys](../images/xDrip_Dexcom_FireflyBattery.png)
 
-* Start sensor and DO NOT BACKDATE! Always select "Yes, today"!
+* Startuokite sensorių ir NEĮVESKITE savo datos! Visada pasirinkite "Taip, šiandien"!
 
 * Paleiskite kolektorių iš naujo (sistemos būsena - jei nekeičiamas sensorius)
 * Neįjunkite originalaus Dexcom imtuvo (jei jį naudojate), kol xDrip+ nepasirodys pirmieji duomenys.
@@ -262,12 +262,12 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. pradedant nuo 8G, 8H ar 8J, naudokite
 
 * Startuoti sensorių
    
-   **For new Firefly transmitters** (serial no. starting with 8G, 8H or 8J) **it is mandatory, for all other transmitters it is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen). DO NOT BACKDATE!**
+   **Naujiems Firefly siųstuvams** (serijos nr. prasideda nuo 8G, 8H arba 8J) **tarp senojo sensoriaus sustabdymo ir naujojo sensoriaus startavimo privalote palaukti bent 15 minučių (kol antrame sistemos būsenos ekrane pasirodys `Sensor Status: Stopped`). Kitiems siųstuvams laukti yra tik rekomenduojama. NEĮVESKITE SAVO DATOS!**
 
 * Nustatyti įvedimo laiką
    
    * Norint naudoti natyvinį G6 režimą, reikia palaukti 2 valandas, kol jis "įšils" (warm-up) (t.y. įvedimo laikas - dabar).
-   * Jei naudojate xDrip+ algoritmą, galite nustatyti įvedimo laiką daugiau nei prieš 2 valandas, kad išvengtumėte įšilimo (warm-up) etapo. Duomenys gali būti labai netolygūs ir netikslūs. Therefore, this is not recommended.
+   * Jei naudojate xDrip+ algoritmą, galite nustatyti įvedimo laiką daugiau nei prieš 2 valandas, kad išvengtumėte įšilimo (warm-up) etapo. Duomenys gali būti labai netolygūs ir netikslūs. Todėl tai nėra rekomenduojama.
 * Įveskite sensoriaus kodą (ant nuimamos sensoriaus folijos) 
    * Išsaugokite kodą, jei įdiegsite iš naujo (pvz, naujas startas pašalinus siųstuvą)
    * Kodą taip pat galima rasti [xDrip+ žurnaluose](../Configuration/xdrip#retrieve-sensor-code): pagrindiniame xDrip+ ekrane spustelėkite 3 taškų meniu ir pasirinkite `Peržiūrėti įvykių žurnalus (View Event Logs)`.
@@ -298,14 +298,14 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. pradedant nuo 8G, 8H ar 8J, naudokite
 
 * Siųstuvas turėtų būti matomas jūsų išmaniojo telefono Bluetooth nustatymuose.
 * Ar siųstuvas bus matomas kaip Dexcom?? kur?? ar yra paskutiniai du siųstuvo serijos numerio skaitmenys). (t. y. DexcomHY).
-* Open system status in xDrip+ (hamburger menu on top left side of home screen).
+* Atidarykite sistemos būseną xDrip+ (pagrindinio ekrano viršuje, kairėje esančiame trijų linijų meniu).
 * Patikrinkite, ar siųstuvas matomas pirmame sistemos būsenos puslapyje (klasikinis sistemos būsenos puslapis).
 * Jei ne: pašalinkite įrenginį iš savo išmaniojo telefono Bluetooth nustatymų.
 * Palaukite apie 5 min. kol Dexcom siųstuvas pakartotinai prisijungs automatiškai.
 
 ### Problemos paleidžiant naują sensorių
 
-Atminkite, kad šis metodas gali neveikti, jei jūsų siųstuvo serijos Nr. is starting with 8G, 8H or 8J.
+Atminkite, kad šis metodas gali neveikti, jei jūsų siųstuvo serijos Nr. prasideda 8G, 8H ar 8J.
 
 * Natyvinis sensorius pažymimas kaip: „KLAIDA: Sensoriaus nepavyko startuoti“
 * Sustabdykite sensorių
@@ -315,7 +315,7 @@ Atminkite, kad šis metodas gali neveikti, jei jūsų siųstuvo serijos Nr. is s
 * Sustabdykite sensorių
 * Startuokite sensorių su tikru kodu (atspausdintu ant apsauginės plėvelės)
 
-Patikrinkite xDrip+ žurnalus, ar xDrip+ pradeda skaičiuoti „Trukmė: 1 minutė“ (ir pan.). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Pradinio ekrano apačioje vėliausia būsena ne visada rodoma teisingai.
+Patikrinkite xDrip+ žurnalus, ar xDrip+ pradeda skaičiuoti „Trukmė: 1 minutė“ (ir pan.). Tik xDrip+ žurnaluose galite iš anksto nustatyti, ar xDrip+ sustabdė sensorių. Pradinio ekrano apačioje vėliausia būsena ne visada rodoma teisingai.
 
 ## xDrip+ & Freestyle Libre
 
