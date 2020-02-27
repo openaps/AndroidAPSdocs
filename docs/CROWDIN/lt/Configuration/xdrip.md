@@ -2,13 +2,13 @@
 
 Jei dar jo nenustatėte, atsisiųskite [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
-**This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
+**Šios instrukcijos yra skirtos tik xDrip+ Android sistemai.** Yra programa „xDrip for iOS“, kuri neturi nieko bendra su originalia xDrip+ Android sistemai.
 
-Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
+Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. prasideda 80 arba 81), jums reikia bent [xDrip+ pagrindinės](https://jamorham.github.io/#xdrip-plus) programos versijos.
 
-Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G..., 8H... or 8J... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Jei jūsų Dexcom G6 siųstuvo serijos nr. pradeda su 8G..., 8H... ar 8J... naudokite vieną iš [naujausių nightly versijų](https://github.com/NightscoutFoundation/xDrip/releases).
 
-If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+Jei naudojate Android 10 ir kyla problemų dėl xDrip+ pagrindinės versijos, galite išbandyti [nightly 2019/12/31 versiją ar vėlesnę](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Pagrindiniai visų stebėjimo sistemų nustatymai
 
@@ -43,20 +43,20 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 ### Nustatyti gavėjus
 
 * Jei aptikote problemų su lokaliu duomenų perdavimu (AAPS negauna KG iš xDrip+), eikite į Nustatymai > Vidiniai nustatymai > Identifikuoti siųstuvą ir spauskite `info.nightscout.androidaps`.
-* Pay attention: Auto-correction sometimes tend to change i to capital letter. You **must use only lowercase letters** when typing `info.nightscout.androidaps`. Capital I would prevent AAPS from receiving BG values from xDrip+.
+* Dėmesio: automatinis taisymas kartais keičia raidę i iš mažosios į didžiąją I raidę. Turite naudoti tik **mažąsias raides**, jei įvedate `info.nightscout.androidaps`. Didžioji I raidė neleidžia AAPS gauti glikemijos reikšmes iš xDrip+.
    
    ![xDrip+ Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
 ## xDrip+ & Dexcom G6
 
-* The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-* When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
-* If you need Clarity and want to profit from xDrip+ alarms use the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) with local broadcast to xDrip+.
+* Dexcom G6 siųstuvą galima vienu metu sujungti su Dexcom imtuvu (arba alternatyviai su t:slim pompa) ir mobiliojo telefono programa.
+* Jei naudojate xDrip+ glikemijos duomenims gauti, pirmiausia pašalinkite Dexcom programą. **Negalite vienu metu prijungti xDrip+ ir Dexcom programos prie vieno siųstuvo!**
+* Jei jums reikia Clarity programos ir vis tiek norite naudotis xDrip+ aliarmais, jums reikia [modifikuotos Dexcom programos](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) su įjungta lokalaus duomenų perdavimo funkcija į xDrip+.
 
 ### xDrip+ versija, priklausomai nuo to G6 siųstuvo serijos nr.
 
-* Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus). 
-* Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+* Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. prasideda 80 arba 81), jums reikia bent [xDrip+ pagrindinės](https://jamorham.github.io/#xdrip-plus) programos versijos. 
+* Jei jūsų Dexcom G6 siųstuvo serijos nr. pradedant nuo 8G, 8H ar 8J, naudokite vieną iš paskutinių [nightly versijų, pvz., 2019/07/28 ar vėlesnę](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ### Dexcom specialūs nustatymai
 
@@ -76,9 +76,9 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### Pakartoninis paleidimas nerekomenduojamas
 
-**Su Dexcom siųstuvais, kurių serijos nr. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
+**Su Dexcom siųstuvais, kurių serijos nr. pradeda su 8G, 8H ar 8J, pakartotinis paleidimas iš naujo neveikia ir gali sugadinti jutiklį visiškai!**
 
-The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
+Nerekomenduojama automatiškai pratęsti Dexcom jutiklio veikimo (`Pakartotinis paleidimas (preemptive restarts)`), nes tai gali sukelti glikemijų reikšmių šuolius 9 dieną po pakartotinio paleidimo.
 
 ![xDrip+ šuolis po paleidimo iš naujo](../images/xDrip_Dexcom_PreemptiveJump.png)
 
@@ -96,9 +96,9 @@ Norėdami gauti daugiau informacijos ir šių rekomendacijų priežastis, skaity
 
 **Apie antrą ir kitus siųstuvus skaitykite žemiau [Siųstuvo veikimo trukmės pratęsimas ](../Configuration/xdrip#extend-transmitter-life).**
 
-Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
+Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. prasideda 80 arba 81), jums reikia bent [xDrip+ pagrindinės](https://jamorham.github.io/#xdrip-plus) programos versijos.
 
-Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+Jei jūsų Dexcom G6 siųstuvo serijos nr. pradedant nuo 8G, 8H ar 8J, naudokite vieną iš paskutinių [nightly versijų, pvz., 2019/07/28 ar vėlesnę](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Išjunkite originalų „Dexcom“ imtuvą (jei naudojate).
 * Ilgai spauskite kraujo lašo piktogramą pagrindiniame xDrip+ ekrane, kad suaktyvintumėte `Glikemijos šaltinio parinkimo vedlys (Source Wizard Button)` mygtuką.
@@ -113,10 +113,10 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G, 8H or 8J try [ni
 * Įdėkite naują sensorių (tik keičiant)
 
 * Uždėkite siųstuvą ant sensoriaus
-* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+* * NESTARTUOKITE naujo jutiklio, kol klasikinės būsenos puslapyje -> G5/G6 būsena -> PhoneServiceState nebus rodoma ši informacija:
    
-   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+   * Siųstuvo serijos numeris prasideda 80 arba 81: „Got data hh:mm“ (pvz., „Got data 19:04“)
+   * Siųstuvo serijos numeris prasideda 8G, 8H arba 8J: „Got glucose hh:mm“ (pvz., „Got glucose 19:04“) arba „Got no raw hh:mm“ (pvz., „Got now raw 19:04“)
    
    ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
@@ -124,7 +124,7 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G, 8H or 8J try [ni
    
    -> Po kelių minučių ekrano apačioje pasirodys `Warm Up x, liko x valandų`.
 
--> Jei jūsų siųstuvo serijos nr. does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
+-> Jei jūsų siųstuvo serijos nr. neprasideda reikšme 8G, 8H ar 8J ir po keleto minučių nerodo sensoriaus įšilimo (warm-up) laiko, sustabdykite ir paleiskite sensorių iš naujo.
 
 * Paleiskite kolektorių iš naujo (sistemos būsena - jei nekeičiamas sensorius}
 * Neįjunkite originalaus Dexcom imtuvo (jei jį naudojate), kol xDrip+ nepasirodys pirmieji duomenys.
@@ -150,40 +150,40 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G, 8H or 8J try [ni
 
 ### Pailginkite siųstuvo veikimo laiką
 
-* Kol kas nerastas būdas prailginti tarnavimo laiką siųstuvų, kurių serijos nr. starts with 8G, 8H or 8J.
+* Kol kas nerastas būdas prailginti tarnavimo laiką siųstuvų, kurių serijos nr. prasideda 8G, 8H ar 8J.
 * Norint išvengti sunkumų paleidžiant sensorius, ypač rekomenduojama, kad siųstuvas veiktų iki 100-osios pirmojo naudojimo dienos.
-* Veikiančio sensoriaus seansas bus sustabdytas, jei tuo metu prailginsite siųstuvo veikimo laiką. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
-* Stop sensor manually via hamburger menu.
-* Switch to the `engineering mode`: 
-   * tap on the character on the right of the xDrip+ start screen that represents a syringe
-   * then tap on the microphone icon in the lower right corner
-   * In the text box that opens type "enable engineering mode" 
-   * click "Done"
-   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
-* Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
-* Use the voice command: “hard reset transmitter”
-* The voice command will be executed with the next data receipt of the transmitter
-* Look at the system status (Hamburger menu -> system status) and see what happens
-* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
+* Veikiančio sensoriaus seansas bus sustabdytas, jei tuo metu prailginsite siųstuvo veikimo laiką. Todėl šį manipuliavimą reikėtų atlikti prieš keičiant sensorių arba būti pasirengusiam dėl to, kad įsijungs dviejų valandų jo įšilimo (warm-up) fazė.
+* Rankiniu būdu sustabdykite sensorių per trijų linijų meniu.
+* Įjunkite `Inžinieriaus režimą`: 
+   * pagrindiniame xDrip+ ekrane dešinėje spustelėkite švirkšto piktogramą
+   * tada spustelėkite mikrofono piktogramą apatiniame dešiniajame kampe
+   * Įveskite „enable engineering mode“ teksto laukelyje 
+   * spauskite Atlikta
+   * Jei įgalinta Google Speak, galite duoti balso komandą angliškai: „enable engineering mode“. 
+* Eikite į G5 derinimo nustatymus ir įsitikinkite, kad įjungta `Naudokite OB1 kolektorių` funkcija.
+* Duokite balso komandą angliškai: „hard reset transmitter“ (kietas perkrovimas iš naujo)
+* Balso komanda bus įvykdyta su kitų siųstuvo duomenų gavimu
+* Pažvelkite į sistemos būseną (trijų linijų meniu -> sistemos būsena) ir pamatysite rezultatą
+* Jei matote pranešimą „Telefono būsena: Hard Reset maybe failed (Kietas perkrovimas iš naujo neįvyko)“, tiesiog paleiskite sensorių antrame sistemos būsenos ekrane ir šis pranešimas turėtų išnykti.
    
    ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
 
-* Transmitter days will be set to 0 after successful extension and start of sensor.
+* Sėkmės atveju siųstuvo veikimo laikas bus nustatytas iš naujo į 0.
 
 ### Siųstuvo pakeitimas
 
-Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
+Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. prasideda 80 arba 81), jums reikia bent [xDrip+ pagrindinės](https://jamorham.github.io/#xdrip-plus) programos versijos.
 
-Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Jei jūsų Dexcom G6 siųstuvo serijos nr. pradedant nuo 8G, 8H ar 8J, naudokite vieną iš paskutinių [nightly versijų](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Išjunkite originalų „Dexcom“ imtuvą (jei naudojate).
 * Sustabdykite sensorių (tik keičiant sensorių)
    
    Įsitikinkite, kad jis tikrai yra sustabdytas:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
+   Kitame G5/G6 Būsenos ekrane raskite `eilės elementus (Queue Items)` - ten pasirodys kažkas panašaus į `(1) Stop Sensor`
    
-   Palaukite, kol tai įvyks - paprastai per kelias minutes. Sensor Status must be "Stopped" (see screenshot).
+   Palaukite, kol tai įvyks - paprastai per kelias minutes. Sensoriaus būsena turi būti "Stopped" (žr. Ekrano kopiją).
    
    -> Kaip nuimti siųstuvą nesustabdžius sensoriaus, žiūrėkite vaizdo įrašą<https://youtu.be/AAhBVsc6NZo>.
    
@@ -191,13 +191,13 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G, 8H or 8Juse one 
    
    ![xDrip+ Sustabdyti Dexcom Sensorių 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Forget device in xDrip+ system status AND in smartphone’s BT settings (Will be shown as Dexcom?? kur?? ar yra paskutiniai du siųstuvo serijos numerio skaitmenys)
+* Ištrinkite įrenginį išmaniojo telefono xDrip+ IR Bluetooth nustatymuose (rodomas kaip Dexcom?? kur?? ar yra paskutiniai du siųstuvo serijos numerio skaitmenys)
    
    ![xDrip+ pamiršti prietaisą](../images/xDrip_Dexcom_ForgetDevice.png)
 
 * Nuimti siųstuvą (ir sensorių, jei keičiamas sensorius)
 
-* Put the old transmitter far away to prevent reconnection. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% no one is turning the microwave on.
+* Patraukite seną siųstuvą kuo toliau, kad jis nebūtų vėl prijungtas. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% no one is turning the microwave on.
 * Ilgai spauskite kraujo lašo piktogramą pagrindiniame xDrip+ ekrane, kad suaktyvintumėte `Glikemijos šaltinio parinkimo vedlys (Source Wizard Button)` mygtuką.
 * Naudokite mygtuką Glikemijos šaltinio parinkimo vedlys. Tai užtikrins, kad naudosite numatytuosius nustatymus, įskaitant OB1 & natyvinį režimą 
    * Vedlys leis atlikti pradinę sąranką.
@@ -216,8 +216,8 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G, 8H or 8Juse one 
 
 * Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following informations is displayed:
    
-   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+   * Siųstuvo serijos numeris prasideda 80 arba 81: „Got data hh:mm“ (pvz., „Got data 19:04“)
+   * Siųstuvo serijos numeris prasideda 8G, 8H arba 8J: „Got glucose hh:mm“ (pvz., „Got glucose 19:04“) arba „Got no raw hh:mm“ (pvz., „Got now raw 19:04“)
    
    ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
@@ -246,7 +246,7 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G, 8H or 8Juse one 
    
    Įsitikinkite, kad jis tikrai yra sustabdytas:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
+   Kitame G5/G6 Būsenos ekrane raskite `eilės elementus (Queue Items)` - ten pasirodys kažkas panašaus į `(1) Stop Sensor`
    
    Palaukite, kol tai įvyks - paprastai per kelias minutes.
    
