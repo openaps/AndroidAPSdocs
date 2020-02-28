@@ -5,7 +5,7 @@ AndroidAPS has a series of Objectives that need to be completed to walk you thro
 
 If you are **upgrading phones** then you can `export your settings <../Usage/ExportImportSettings.html>`_ to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to `backup your settings <../Usage/ExportImportSettings.html>`_ frequently just in case.
 
-If you want to go back in objectives see `explenation below <../Usage/Objectives.html#go-back-in-objectives>`_.
+If you want to go back in objectives see `explanation below <../Usage/Objectives.html#go-back-in-objectives>`_.
  
 Objective 1: Setting up visualization and monitoring, analysing basals and ratios
 ====================================================================================================
@@ -26,7 +26,7 @@ Objective 2: Learn how to control AndroidAPS
    .. image:: ../images/Objective2_V2_5.png
      :alt: Screenshot objective 2
 
-Objective 3: Prove your knowledge
+Objective 3: Proof your knowledge
 ==================================================
 * Pass a multiple-choice exam testing your AndroidAPS knowledge.
 * Click on the orange text "Not completed yet" to access the page with the question and answering options.
@@ -128,7 +128,7 @@ Objective 10: Enabling additional oref1 features for daytime use, such as super 
 ====================================================================================================
 * You must read the `SMB chapter in this wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ and `chapter oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ to understand how SMB works, especially what's the idea behind zero-temping.
 * Then you ought to `rise maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see `objective 7 <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_ for an illustration)
-* min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manualy
+* min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually.
 
 Go back in objectives
 ====================================================================================================
