@@ -11,7 +11,7 @@
 
 ### Jautrumo nustatymo algoritmas Oref0
 
-Jautrumas apskaičiuojamas pagal praėjusių 24 valandų duomenis, o į neįsisavintus angliavandenius (jei tokių yra) po nustatymuose nurodyto laiko neatsižvelgiama. The algorithm is similiar to OpenAPS Oref0, described in [OpenAPS Oref0 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Jautrumas apskaičiuojamas pagal praėjusių 24 valandų duomenis, o į neįsisavintus angliavandenius (jei tokių yra) po nustatymuose nurodyto laiko neatsižvelgiama. Algoritmas yra panašus į OpenAPS Oref0, aprašytą [OpenAPS Oref0 dokumentacijoje](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 ### Jautrumo nustatymo algoritmas AAPS
 
@@ -23,7 +23,7 @@ Jautrumas apskaičiuojamas kaip svertinis nuokrypių vidurkis. Jūs galite nurod
 
 ### Jautrumo nustatymo algoritmas Oref1
 
-Jautrumas apskaičiuojamas remiantis praėjusių 8 valandų arba paskutinio kateterio pakeitimo duomenimis, jei jis keistas mažiau nei prieš 8 valandas. Į angliavandenius (jei neįsisavinti) neatsižvelgiama po nustatymuose nustatyto laiko. Tik Oref1 algoritmas palaiko nedeklaruoto maisto NDM aptikimą. Tai reiškia, kad nedeklaruotas maistas neįtraukiamas į jautrumo skaičiavimus. Taigi, jei su NDM aptikimo metodu naudojate SMB, turite pasirinkti Oref1 algoritmą, kad SMB tinkamai veiktų. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
+Jautrumas apskaičiuojamas remiantis praėjusių 8 valandų arba paskutinio kateterio pakeitimo duomenimis, jei jis keistas mažiau nei prieš 8 valandas. Į angliavandenius (jei neįsisavinti) neatsižvelgiama po nustatymuose nustatyto laiko. Tik Oref1 algoritmas palaiko nedeklaruoto maisto NDM aptikimą. Tai reiškia, kad nedeklaruotas maistas neįtraukiamas į jautrumo skaičiavimus. Taigi, jei su NDM aptikimo metodu naudojate SMB, turite pasirinkti Oref1 algoritmą, kad SMB tinkamai veiktų. Norėdami gauti daugiau informacijos, skaitykite [OpenAPS Oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) dokumentaciją.
 
 ## Vienu metu gaunami angliavandeniai
 

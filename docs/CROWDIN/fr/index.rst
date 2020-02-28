@@ -33,6 +33,7 @@ Ce dont j'ai besoin
    :glob:
    
    Module <./Module/module.rst>
+   Exemple de configuration <./Getting-Started/Sample-Setup.md>
 
    
 Comment installer AndroidAPS
@@ -60,7 +61,7 @@ Configuration des composants
    Pompes à insuline <./Hardware/pumps.rst>
    Smartphones <./Hardware/Phoneconfig.rst>
    Paramètres Nightscout <./Installing-AndroidAPS/Nightscout.md>
-   Montre connectée  <./Hardware/Smartwatch.rst>
+   Montres connectées  <./Hardware/Smartwatch.rst>
    
 
 Générateur de configuration 

@@ -2,8 +2,8 @@ SMS Komandos
 **************************************************
 Saugumas - svarbiausia
 ==================================================
-* AndroidAPS leidžia jums kontroliuoti vaiko telefoną nuotoliniu būdu per tekstinį pranešimą. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code.
-* AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
+* AndroidAPS leidžia jums kontroliuoti vaiko telefoną nuotoliniu būdu per tekstinį pranešimą. Jei įgalinate šį SMS komunikatorių, visada prisiminkite, kad telefonas, duodantis nuotolinio valdymo komandas, gali būti pavogtas. Todėl visada jį apsaugokite bent PIN kodu.
+* AndroidAPS teikia grįžtamąjį ryšį Sms žinute, jei jūsų nuotolinės komandos, tokios kaip buvo atliktas boluso suleidimas ar profilio keitimas, buvo patvirtintos. Patartina tai nustatyti taip, kad patvirtinimo tekstai būtų siunčiami bent dviem skirtingais telefono numeriais, jei pavogtas vienas iš priimančių telefonų.
 * **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 
 How it works
@@ -46,8 +46,8 @@ Ciklas
    * Response: Loop has been enabled
 * LOOP STATUS
    * Response depends on actual status
-      * Loop is disabled
-      * Loop is enabled
+      * Ciklas išjungtas
+      * Ciklas įjungtas
       * Suspended (10 min)
 * LOOP SUSPEND 20
    * Response: Loop suspended for 20 minutes
@@ -75,7 +75,7 @@ Basal
 * BASAL 30% 50
    * Response: To start basal 30% for 50 min reply with code Swe
 
-Bolus
+Bolusas
 --------------------------------------------------
 Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
 
@@ -127,6 +127,14 @@ Kiti
 
 Troubleshooting
 ==================================================
+Multiple SMS
+--------------------------------------------------
+If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not uploads treatments to NS. 
+
+If the other app is installed on multiple phones make sure to deactive upload on all of them.
+
+SMS commands not working on Samsung phones
+--------------------------------------------------
 There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
 
 .. image:: ../images/SMSdisableChat.png

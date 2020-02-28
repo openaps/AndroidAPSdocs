@@ -1,4 +1,4 @@
-# AkkuChek Combo typy pro základní využití
+# Accu-Chek Combo Tips for basic usage
 
 ## Jak zajistit bezproblémové používaní
 
@@ -13,7 +13,7 @@
 ### Nastavte si alarm při nedostupnosti pumpy
 
 * V AndroidAPS, běžte do **Nastavení / Místní výstrahy** a zapněte **Výstraha při nedostupné pumpě**, nastavte **Limit při nedostupnosti pumpy [Min]** na **31** minutes. 
-* Toto nastavení dává dostatek času, aby se alarm nespustil hned, když odběhnete z místnosti, ve které necháte telefon. Ale je dostatečně krátký, když je pumpa nedostupná po době, která překročí běžný čas dočasného bazálu.
+* This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
 
 ### Obnovení komunikace s pumpou
 
@@ -41,12 +41,12 @@
 * Když pumpa zahlásí alarm **docházející baterie**, vyměňte baterii co možná nejdříve. Je to důležité proto, aby pumpa měla dost energie pro Bluetooth komunikaci, když telefon bude ve větší vzdálenosti od pumpy.
 * I po alarmu **low battery** lze pumpu ještě nějaký čas používat. Nicméně je doporučeno mít sebou vždy náhradní baterii, aby mohla být vyměněna hned.
 * Chcete-li vyměnit baterii, dlouze přidržte **Uzavřená smyčka** na hlavní obrazovce a zvolte **Pozastavit smyčku na 1 h**. 
-* Počkejte po dobu, co AndroidAPS komunikuje s pumpou. Poznáte to podle loga bluetooth na obrazovce pumpy.
+* Wait for the pump to communicate with the phone and the Bluetooth logo on the pump has faded.
 
 ![Bluetooth povoleno](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/Compo.png?raw=true)
 
 * Odemkněte pumpu, přepněte pumpu do režimu STOP, potvrďte případný alarm konce dočasné bazální dávky a vyměňte baterii.
-* Zvolte typ baterie, podle druhu použité baterie. Potom opět spusťte pumpu. Na základní obrazovce AndroidAPS dlouze přidržte **Pozastaveno** a zvolte **Uvolnit**.
+* Then put the pump back in run mode select **Resume** when long-pressing on **Suspended** on the main screen.
 * AndroidAPS nastaví všechny potřebné dočasné bazály, jakmile obdrží další glykemii. 
 
 ### Typy baterií a důvody krátké výdrže
@@ -61,9 +61,9 @@ Typická doba výdrže baterie dle typu:
 * **Power One Alkaline** (Varta) ze servisního balíčku: 2 až 4 týdny
 * **Eneloop NiMH** (BK-3MCCE): 1 až 3 týdny
 
-Jestliže vaše baterie vydrží výrazně méně, než je uvedeno výše, zkontrolujte níže uvedené důvody:
+If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
 
-* Poslední verze (březen 2018) aplikace [Ruffy](https://github.com/MilosKozak/ruffy) výrazně zlepšila výdrž baterie pumpy. Používejte tuto verzi, pokud máte problémy s výdrží baterie.
+* The latest version (March 2018) of the [ruffy App](https://github.com/MilosKozak/ruffy) significantly improved pump battery lifetime. Používejte tuto verzi, pokud máte problémy s výdrží baterie.
 * Některá šroubovací „víčka“ baterie pumpy způsobovala rychlé vybíjení baterie (docházelo ke krátkým zkratům). Víčka, která tento problém nezpůsobují, poznáte podle toho, že jejich kontakty jsou pozlacené.
 * Pokud hodiny pumpy „nepřežijí“ krátkou výměnu baterie, je pravděpodobné, že kondenzátor, který udržuje hodiny běžící během krátkého výpadku proudu, je rozbitý. V takovém případě Vám může pomoci pouze výměna pumpy firmou Roche, což během záruční doby není problém. 
 * Hardware a software telefonu (operační systém Android a bluetooth stack) také ovlivňují životnost baterie pumpy, i když ještě nejsou zcela známy přesné faktory. Máte-li příležitost, vyzkoušejte jiný smartphone a porovnejte baterie.
@@ -78,15 +78,15 @@ Jestliže vaše baterie vydrží výrazně méně, než je uvedeno výše, zkont
 
 Algoritmus OpenAPS nepodporuje paralelní rozložený bolus nebo kombinovaný bolus. Podobné léčby však lze dosáhnout touto alternativou:
 
-* Zadání sacharidů, ale ne bolusu pro ně. Algoritmus smyčky bude reagovat více agresivně. V případě potřeby použijte **eCarbs** (rozložené sacharidy).
+* Zadání sacharidů, ale ne bolusu pro ně. The loop algorithm will react more aggressively. V případě potřeby použijte **eCarbs** (rozložené sacharidy).
 
-* Pokud jste v pokušení použít rozložený nebo kombinovaný bolus přímo na pumpě, AndroidAPS zareaguje vypnutím uzavřené smyčky na dalších šest hodin, aby se zajistilo, že žádná další dávka inzulínu nebude aktivní.
+* If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
 
 ![Zakázaná smyčka po kombinovaném bolusu](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
 
 ## Poplachy při bolusu
 
-* Pokud AndroidAPS zjistí, že identický bolus byl úspěšně dodán ve stejné minutě, může být zabráněno bolusu se stejnou velikostí. Pokud opravdu chcete poslat stejný bolus dvakrát v krátké době po sobě, stačí počkat dvě minuty a pak podat bolus znovu. Jestliže byl první bolus přerušen z jiných důvodů, můžete od AAPS 2.0 podat bolus ihned.
+* If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical number of insulin units. If you really want to bolus the same insulin twice in short succession, just wait two more minutes and then deliver the bolus again. If the first bolus has been interrupted or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
 * Na pozadí je bezpečnostní mechanismus, který čte bolusovou historii pumpy před posláním nového bolusu, aby se správně spočítalo IOB, a to i tehdy, je-li bolus podán přímo z pumpy. Musí být zabráněno nerozpoznatelným položkám.
 
 ![Dvojitý bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/Doppelbolus.png)

@@ -287,9 +287,9 @@ El último paso es presionar en el archivo APK que tengo a través de Gmail e in
 
 Sí, ya lo tienes y ahora puedes empezar con la configuración de AndroidAPS para tu uso (MCG, bomba de insulina), etc.
 
-## Identificar receptor si se utiliza xDrip
+## Identify receiver if using xDrip+
 
-[Consulte la página xDrip](../Configuration/xdrip#identify-receiver)
+[See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
 ## Solución de problemas
 

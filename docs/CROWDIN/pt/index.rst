@@ -23,7 +23,7 @@ Guia de Introdução
    Segurança primeiro <./Getting-Started/Safety-first.rst>
    O que é um sistema Closed Loop (Fechado) <./Getting-Started/ClosedLoop.rst>
    O que é um sistema de Closed Loop (Fechado) com AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
    
    
 O que é preciso 
@@ -33,6 +33,7 @@ O que é preciso
    :glob:
    
    Módulo <./Module/module.rst>
+   Sample Setup <./Getting-Started/Sample-Setup.md>
 
    
 Como Instalar AndroidAPS
@@ -148,7 +149,7 @@ Onde ir para obter ajuda
 
    Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 
 For Clinicians
 --------------------------------------------------
@@ -166,8 +167,8 @@ Como ajudar
    :glob:
 
    Como ajudar <./Getting-Started/How-can-help.md>
-   How to translate the app and wiki <./translations.md>
-   Como editar a wiki <./make-a-PR>
+   How to translate the app and docs <./translations.md>
+   How to edit the docs <./make-a-PR>
 
 
 .. nota:: 

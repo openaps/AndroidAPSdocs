@@ -120,12 +120,12 @@ Select the pump you are using.
 - MDI (receive AAPS suggestions for your multiple daily injections therapy)
 - Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
-Use <b>Advanced settings</b> to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+For dana pumps, use <b>Advanced settings</b> to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
 
 ## Sensitivity Detection
 Select the type of sensitivity detection.  This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual.  Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).  
 
-You can view your sensitivity on the homescreen by selecting SEN and watching the white line.  Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to use Sensitivity Detection/autosens.
+You can view your sensitivity on the homescreen by selecting SEN and watching the white line.  Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to use Sensitivity Detection/[Autosens](../Usage/Open-APS-features.html#autosens).
 
 ### Absorption settings
 If you use Oref1 with SMB you must change <b>min_5m_carbimpact</b> to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when carb absorption can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
@@ -133,7 +133,7 @@ If you use Oref1 with SMB you must change <b>min_5m_carbimpact</b> to 8. The val
 ## APS
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 - OpenAPS MA (meal assist, state of the algorithm in 2016)
-- OpenAPS AMA (advanced meal assist, state of the algorithm in 2016)  
+- OpenAPS AMA (advanced meal assist, state of the algorithm in 2017)  
 More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
 Note you need to be in [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) in order to use OpenAPS AMA.
 - [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
@@ -193,22 +193,23 @@ Some buttons to quickly access common features:
 * Temporary targets
 * Set / cancel temp. basal rate
 * Extended bolus (DanaR/RS or Combo pump only)
-* Prime / fill (DanaR/RS or Combo pump only)
+
+#### Careportal
+Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
+* BG check
+* Prime / fill - record pump site change and prime (if not done on pump)
+* CGM sensor insert
+* Pump battery change
+* Note
+* Exercise
+
+#### Tools
 * History browser
 * TDD (Total daily dose = bolus + basal per day)
 
 Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
-
-### Careportal
-Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
-
-Note: <b>No insulin</b> will be given if entered via careportal (i.e. meal bolus, correction bolus...)
-
-Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
-
-![Careportal tab](../images/ConfBuild_CarePortal.png)
+![Actions tab](../images/ConfBuild_ConfBuild_Actions_a.png)
 
 ### SMS Communicator
 Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.

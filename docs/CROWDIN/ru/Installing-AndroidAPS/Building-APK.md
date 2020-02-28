@@ -135,7 +135,7 @@ Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
 ![Screenshot 17](../images/Installation_Screenshot_17.png)
 
 * Excellent, you have your own copy of the source code and are ready to start the build.
-* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
+* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this. (In case you do not receive the error message shown in next screenshot try closing and restarting Android Studio.)
 
 Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
 
@@ -287,9 +287,9 @@ In this example Gmail is used as it is fairly simple. To install the self-signed
 
 Да, все получилось, теперь можно начать настройку AndroidAPS (CGMS, помпа) и т. д.
 
-## Identify receiver if using xDrip
+## Identify receiver if using xDrip+
 
-[See xDrip page](../Configuration/xdrip#identify-receiver)
+[See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
 ## Устранение неполадок
 

@@ -42,7 +42,7 @@ Please be aware that this is not complete list and reflects personal user experi
 - Occasionally (every couple of days or so) AAPS might fail to automatically cancel
   a TBR CANCELLED alert, which the user then needs to deal with (by pressing the refresh button in AAPS
   to transfer the warning to AAPS or confirming the alert on the pump).
-- Bluetooth connection stability varies with different phones, causing "pump unrechable" alerts, 
+- Bluetooth connection stability varies with different phones, causing "pump unreachable" alerts, 
   where no connection to the pump is established anymore. If that error occurs, make sure Bluetooth 
   is enabled, press the Refresh button in the Combo tab to see if this was caused by an intermitted 
   issue and if still no connection is established, reboot the phone which should usually fix this. 
@@ -51,7 +51,7 @@ Please be aware that this is not complete list and reflects personal user experi
   little that can be done to remedy either of those issues at this point. So if you see those errors 
   frequently your only option at this time is to get another phone that's known to work well with 
   AndroidAPS and the Combo (see above).
-- Issuing a bolus from the pump will be not always be detected in time (checked for whenever AAPS connects to the pump), and might take up to 20 minutes in the worst case. Boluses on the pump are always checked before a high TBR or a bolus issued by AAPS but due to the limitations AAPS will then refuse to issue the TBR/Bolus as it was calculated under false premises. (-> Don't bolus from the Pump! See chapter *Usage*)
+- Issuing a bolus from the pump will not always be detected in time (checked for whenever AAPS connects to the pump), and might take up to 20 minutes in the worst case. Boluses on the pump are always checked before a high TBR or a bolus issued by AAPS but due to the limitations AAPS will then refuse to issue the TBR/Bolus as it was calculated under false premises. (-> Don't bolus from the Pump! See chapter *Usage*)
 - Setting a TBR on the pump is to be avoided since the loop assumes control of TBRs. Detecting a new TBR on the pump might take up to 20 minutes and the TBR's effect will only be accounted from the moment it is detected, so in the worst case there might be 20 minutes of a TBR that is not reflected in IOB. 
 
 ## Setup
@@ -108,7 +108,7 @@ Please be aware that this is not complete list and reflects personal user experi
 - To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
 
 ## Why does pairing with the pump does not work with the app "ruffy"?
-There are serveral possible reasons. Try the following steps:
+There are several possible reasons. Try the following steps:
 1.  Insert a **fresh or full battery** into the pump. Look at the battery section for details. Make sure that the pump is very close to the smartphone.
 
 ![Combo should be next to phone](../images/Combo_next_to_Phone.png)
@@ -119,21 +119,20 @@ There are serveral possible reasons. Try the following steps:
     **NO DEVICE** is shown.
 4.  Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device 
     "**SpiritCombo**"
-5.  Make sure, that AAPS not running in background the loop. Deaktivate Loop in AAPS.
+5.  Make sure, that AAPS not running in background the loop. Disable Loop in AAPS.
 6.  Now start ruffy on the phone. You may press Reset! and remove old Bonding. Then hit Connect!.
 7.  In the Bluetooth menu of the pump, go to **ADD DEVICE / ADD CONNECTION**. Press *CONNECT!** 
-    * Step 5 and 6 have to be in a short timing.
-8.  Now the Pump should show up the BT Name of phone to select for pairing. Here it is importand to whait at least 5s 
-    bevore you hit the select button on Pump. Otherwise the Pumpe will not send the Paring request to the Phone proberly.
- 
-    * If Combo Pump is set to 5s Screentime out, you may test it with 40s (original setting). From experiance the time 
+    * Step 5 and 6 have to be done in a short timing.
+8.  Now the Pump should show up the BT Name of phone to select for pairing. Here it is important to wait at least 5s 
+    before you hit the select button on Pump. Otherwise the Pump will not send the Pairing request to the Phone properly.
+* If Combo Pump is set to 5s Screen timeout, you may test it with 40s (original setting). From experience the time 
       between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out 
       without successfully Pair. Later you should set it back to 5s, to meet AAPS Combo settings.
     * If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not 
       compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If 
       possible, try another smartphone. You can find a list of already successfully used smartphones under [AAPS Phones] 
       (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
-
+    
 9.  At next Pump should show up a 10 digit security code. And Ruffy a screen to enter it. So enter it in Ruffy and you 
     should be ready to go.
 10.  Reboot the phone.
@@ -173,7 +172,7 @@ There are serveral possible reasons. Try the following steps:
   and then retry the last action (boluses are NOT retried for safety reasons). Therefore,
   such an alarm can be ignored as AAPS will confirm it automatically, usually within 30s (cancelling it is not problem, but will lead to the currently
   active action to have to wait till the pump's display turns off before it can reconnect to the
-  pump). If the pump's alarm continues, automatic corfirmation failed, in which case the user
+  pump). If the pump's alarm continues, automatic confirmation failed, in which case the user
   needs to confirm the alarm manually.
 - When a low cartridge or low battery alarm is raised during a bolus, they are confirmed and shown
   as a notification in AAPS. If they occur while no connection is open to the pump, going to the

@@ -110,50 +110,50 @@ Je-li vybrán ovladač Medtronic, lze na kartu Akce přidat 3 možné akce:
 
 When you start using AndroidAPS, primary controller is AndroidAPS and all commands should go through it. Sending boluses should go through AAPS and not be done on pump. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arrise, especially if you use the "setup" as it was not intended to be used). Since I started using AndroidAPS with my pump, I haven't touched the pump, except when I have to change the reservoir, and this is the way that AndroidAPS should be used.
 
-### Logging
+### Logování
 
-Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
+Vzhledem k tomu, že ovladač Medtronic je velmi nový, musíte povolit protokolování, abychom mohli ladit a opravit problémy, pokud nastanou. Klepněte na ikonu v levém horním rohu, vyberte volbu Údržba a Nastavení logování. Volby Pump, PumpComm, PumpBTComm musí být zašktnuté.
 
 ### RileyLink/GNARL
 
-When you restart RileyLink or GNARL, you need to either do new TuneUp (action "Wake and Tune Up") or resend communication parameters (action "Reset RileyLink Config"), or else communication will fail.
+Když restartujete RileyLink nebo GNARL, musíte buď provést nové ladění (akce „Probudit a naladit“), nebo znovu odeslat komunikační parametry (akce „Reset RieyLink konfigurace“), jinak komunikace selže.
 
-### CGMS
+### CGM
 
-Medtronic CGMS is currently NOT supported.
+Medtronic CGM v současné době NENÍ podporován.
 
-### Manual use of pump
+### Ruční použití pumpy
 
-You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
+Měli byste se vyhnout manuálním zásahům ve své pumpě. Všechny příkazy (bolus, TBR) by měly projít přes AndroidAPS, ale pokud se stane, že provedete ruční příkazy, NEspouštějte příkazy s frekvencí méně než 3 minuty (takže pokud provedete 2× bolus (z jakéhokoli důvodu), druhý by měl být spuštěn nejméně 3 minuty po prvním).
 
 ## Změna časového pásma a letní čas (Letní čas) nebo Cestování s Medtronic pumpou a AndroidAPS
 
-Important thing to remember is that you should never disable loop when you are traveling (unless your CGMS can't do offline mode). AAPS will automatically detect Timezone changes and will send command to Pump to change time, when time on Phone is changed.
+Důležité je, abyste nezapomínali, že byste nikdy neměli zakazovat smyčku, když cestujete (kromě případu, že vaše CGM nemůže pracovat v offline režimu). AAPS automaticky zjistí změny v časovém pásmu a jakmile se čas v telefonu změní, odešle příkaz do pumpy, aby se změnil čas v pumpě.
 
-Now if you travel to East and your TZ changes with adding hours (ex. from GMT+0 to GMT+2), pump history won't have problem and you don't have to worry... but if you travel to West and your TZ changes by removing hours (GMT+2 to GMT-0), then sychronization might be little iffy. In clear text, that means that for next x hours you will have to be careful, because your IOB, might be little weird.
+Nyní, pokud cestujete na východ a časové pásmo se mění do plusu (např. z GMT+0 na GMT+2), nebude problém s historíí pumpy a nemusíte se obávat…, ale pokud cestujete na západ a vaše časové pásmo se mění do mínusu (GMT+2 na GMT+0), pak může být synchronizace trochu ošemetná. Konkrétně to znamená, že na dalších x hodin budete muset být opatrní, protože vaše hodnota IOB by nemusela tak úplně souhlasit.
 
-We are aware of this problem, and we are already looking into possible solution (see https://github.com/andyrozman/RileyLinkAAPS/issues/145), but for now, have that info in mind when traveling.
+Jsme si vědomi tohoto problému a již hledáme možné řešení (viz https://github.com/andyrozman/RileyLinkAAPS/issues/145), ale prozatím je nutné při cestování vést tento problém v patrnosti.
 
 ## Nejčastější dotazy
 
-### Can I see the power of RileyLink/GNARL?
+### Můžu se podívat na stav baterie RileyLink/GNARL?
 
-Ne. At the moment none of this devices support this and it probably won't even in the future.
+Ne. V současné době žádné z těchto zařízení toto nepodporuje a pravděpodobně nebude ani v budoucnu.
 
-### Is GNARL full replacement for RileyLink?
+### Je GNARL úplná náhrada za RileyLink?
 
-Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
+Ano. Autor GNARL přidal všechny funkce používané ovladačem Medtronic. Veškerá komunikace je podporována (v době vzniku tohoto textu – červen 2019). GNARL nemůže být použit pro komunikaci s Omnipodem. Nevýhodou GNARL je, že si jej musíte postavit sami a musíte mít kompatibilní verzi hardwaru.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+**Poznámka od autora:** Všimněte si prosím, že software GNARL je stále experimentální, není dostatečně otestovaný a neměl by být považován za bezpečný pro použití jako RileyLink.
 
-### Where can I get RileyLink or GNARL?
+### Kde získám RileyLink nebo GNARL?
 
-Like mentioned before you can get devices here:
+Jak je uvedeno výše, zařízení můžete získat zde:
 
 - RileyLink - Je možné získat zde - [getrileylink.org](https://getrileylink.org/).
 - GNARL - Zde můžete získat informace, ale zařízení je třeba objednat jinde ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
 
-### What to do if I loose connection to RileyLink and/or pump?
+### Co mám dělat, když ztratím spojení s RileyLink a/nebo pumpou?
 
 1. Spusťte akci „Probouzení a ladění“. AAPS se pokusí najít správnou frekvenci pro komunikaci s pumpou.
 2. Vypněte Bluetooth, počkejte 10 s a znovu zapněte. To vynutí opětovné připojení k RileyLinku.
@@ -161,11 +161,11 @@ Like mentioned before you can get devices here:
 4. Zkuste body 3 a 2 dohromady.
 5. Resetujte RileyLink a resetujte telefon.
 
-### How to determine what Frequency my pump uses
+### Jak určit, jakou frekvenci má moje pumpa používat
 
-![Pump Model](../images/Medtronic06.png)
+![Model pumpy](../images/Medtronic06.png)
 
-If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
+Pokud zapnete pumpu, vpravo na prvním řádku uvidíte speciální 3písmenný kód. První dvě písmena určují typ frekvence a poslední z nich určuje barvu. Zde jsou možné hodnoty pro frekvence:
 
 - NA - Severní Amerika (ve výběru frekvencí je třeba vybrat „US & Kanada (916 MHz)“)
 - CA - Kanada (ve výběru frekvence je třeba vybrat „US & Kanada (916 MHz)“)

@@ -59,12 +59,16 @@ PS: dein Fork und Branch befinden sich nach wie vor auf deinem persönlichen Git
 
 ## Code-Syntax
 
-Momentan werden im Wiki zwei Code-Sprachen eingesetzt:
+Momentan werden in den Docs zwei Code-Sprachen eingesetzt:
 
-* Markdown (.md) - die ursprünglich für Wiki-Seiten verwendete Markup-Sprache
+* Markdown (.md) - die ursprünglich für Docs-Seiten verwendete Markup-Sprache
 * reStructuredText (.rst) - die neue Markup-Sprache
 
-Wir werden schrittweise alle Wiki-Seiten auf reStructuredText umstellen. In der Zwischenzeit ist es wichtig, dass Du beim Formatieren von Text oder dem Setzen von Links den richtigen Syntax verwendest. Wenn Du Dir nicht sicher bist, schaue einfach bei existierenden Seiten wie dort formatiert bzw. die Links gesetzt wurden.
+Wir werden schrittweise alle Docs-Seiten auf reStructuredText umstellen. In der Zwischenzeit ist es wichtig, dass Du beim Formatieren von Text oder dem Setzen von Links den richtigen Syntax verwendest. Wenn Du Dir nicht sicher bist, schaue einfach bei existierenden Seiten wie dort formatiert bzw. die Links gesetzt wurden.
+
+### Bildgröße
+
+Nutze bei der Verwendung von Bildern bitte angemessene Größen. Screenshots sollten **250 Pixels breit** sein.
 
 ### .md Dateien
 
@@ -148,8 +152,8 @@ Wenn du einen internen Link in die AndroidAPS Dokumentation einfügen willst, be
 
 Wenn du vor hast viele Änderungen zu machen, die auch das Hinzufügen von Bildern beinhalten, um Teile der Dokumentation zu illustrieren (Danke!), könnte dir folgende Möglichkeit helfen:
 
-* Wenn du Screenshots speicherst, benenne diese mit einem beschreibenden Namen - aber vermeide Leerzeichen, da dies GitHubs Syntax verwirrt. Verwende stattdessen Unterstriche. Z.B. Example_batch_images_upload.png statt "Example batch images upload.png".
-
+* Wenn du Screenshots speicherst, benenne diese mit einem beschreibenden Namen - aber vermeide Leerzeichen, da dies GitHubs Syntax verwirrt. Verwende stattdessen Unterstriche. Z.B. Example_batch_images_upload.png statt "Example batch images upload.png". 
+* Bitte verwende angemessene Größen. Screenshots sollten **250 Pixels breit** sein.
 * Mehrere Bilder kannst du auf diese Art leicht hochladen:
   
   1. Navigiere zu dem Bilder Verzeichnis (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images) - aber vergewissere dich, dass du dich in deinem Fork / deiner Kopie des Bilderverzeichnisses befindest (ersetze "openaps" in der URL mit deinem GitHub Benutzernamen).

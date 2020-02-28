@@ -10,17 +10,17 @@ This page will show where you can find the functions previously available in car
 
 Activity & feedback
 ==============================
-.. image:: ../images/Careportal_25_26_1.png
+.. image:: ../images/Careportal_25_26_1_IIb.png
   :alt: Careportal activity & feedback
   
 * Age information was moved to actions tab / menu.
 * BG check was moved to actions tab / menu.
 * Temporary target was moved to actions tab / menu.
-* Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section `carbs & bolus <#carbs-bolus>`_ on this page).
+* Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section `carbs & bolus <#carbs--bolus>`_ on this page).
 
 Carbs & bolus
 ==============================
-.. image:: ../images/Careportal_25_26_2.png
+.. image:: ../images/Careportal_25_26_2_IIa.png
   :alt: Careportal carbs & bolus
   
 * To note a bolus - no matter if for snack, meal or correction - use the insulin button on the homescreen **and make sure to tick "Do not bolus, record only"!**
@@ -29,7 +29,7 @@ Carbs & bolus
 
 CGM & OpenAPS
 ==============================
-.. image:: ../images/Careportal_25_26_3.png
+.. image:: ../images/Careportal_25_26_3_IIa.png
   :alt: Careportal CGM & OpenAPS
   
 * CGM sensor insert can now be found in the actions tab / menu.
@@ -37,7 +37,7 @@ CGM & OpenAPS
 
 Pump
 ==============================
-.. image:: ../images/Careportal_25_26_4.png
+.. image:: ../images/Careportal_25_26_4_IIb.png
   :alt: Careportal Pump
 
 * Pump site and insulin cartridge change can be reach by using the button "prime/fill" in actions tab / menu.

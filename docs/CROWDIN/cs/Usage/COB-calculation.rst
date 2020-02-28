@@ -9,7 +9,7 @@ Oref0 / Oref1
 
 Nestrávené sacharidy jsou odříznuty po určené době
 
-.. image:: ../images/cob_oref0_orange.png
+.. image:: ../images/cob_oref0_orange_II.png
   :alt: Oref0 / Oref1
 
 AAPS, Vážený průměr
@@ -17,7 +17,7 @@ AAPS, Vážený průměr
 
 absorpce je vypočtena tak, aby bylo "COB == 0" po stanoveném čase
 
-.. image:: ../images/cob_aaps2_orange.png
+.. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, Vážený průměr
 
 Jestliže je použitá minimální absorpce sacharidů (min_5m_carbimpact) namísto hodnoty vypočtené z odchylek, tak se v COB grafu objeví oranžová tečka.
@@ -52,3 +52,7 @@ Proč algoritmus nedetekuje COB správně?
 - Aktivita / cvičení po předchozím jídle
 - Inzulínovosacharidový poměr vyžaduje úpravu
 - Hodnota pro min_5m_carbimpact je chybná (doporučeno je 8 s SMB, 3 s AMA)
+
+Manual correction of carbs entered
+==================================================
+If you over- or underestimated carbs you can correct this though treatments tab and care portal as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.

@@ -1,5 +1,15 @@
 # OpenAPS features
 
+## Autosens
+
+* Autosens is a algorithm which looks at blood glucose deviations (positive/negative/neutral).
+* It will try and figure out how sensitive/resistant you are based on these deviations.
+* The oref implementation in **OpenAPS** runs off a combination of 24 and 8 hours worth of data. It uses either one which is more sensitive.
+* AndroidAPS only runs off 8 (to enable UAM) or 24 hour as a user option.
+* Changing a cannula or changing a profile will reset Autosens ratio back to 0%.
+* Autosens adjusts your basal and ISF for you (i.e.: mimicking what a Profile shift does).
+* If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
+
 ## Super Micro Bolus (SMB)
 
 SMB, the shortform of 'super micro bolus', is the latest OpenAPS feature (from 2018) within the Oref1 algorithm. In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly **small super microboluses**. In situations where AMA would add 1.0 IU insulin using a temporary basal rate, SMB delivers several super microboluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. At the same time (for safety reasons) the actual basal rate is set to 0 IU/h for a certain period to prevent overdose (**'zero-temping'**). This allows the system adjust the blood glucose faster than with the temporary basal rate increase in AMA.
@@ -10,7 +20,7 @@ The SMB feature contains some safety mechanisms:
 
 1. The largest single SMB dose can only be the smallest value off:
     
-    * value corresponding to the current basal rate (as adjusted by autotune/autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
+    * value corresponding to the current basal rate (as adjusted by autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
     * half the amount of insulin currently required, or
     * the remaining portion of your maxIOB value in the settings.
 
@@ -18,7 +28,7 @@ The SMB feature contains some safety mechanisms:
 
 3. Additional calculations to predict the course of glucose, e.g. by UAM (un-announced meals). Even without manual carbohydrate input from the user, UAM can automatically detect a significant increase in glucose levels due to meals, adrenaline or other influences and try to adjust this with SMB. To be on the safe side this also works the other way round and can stop the SMB earlier if an unexpectedly rapid drop in glucose occurs. That's why UAM should always be active at SMB.
 
-**You must have completed [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
+**You must have started [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
 
 See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) and [Tim's info on SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
@@ -34,10 +44,10 @@ But you cannot choose any value. AAPS limits the value as a 'hard limit' accordi
 
 AndroidAPS limits the value as follows:
 
-* Criança: 2
+* Child: 2
 * Adolescente: 5
-* Adulto: 10
-* Adulto insulino-resistente: 12
+* Adult: 10
+* Insulin-resistant adult: 12
 
 ### Maximum total IOB OpenAPS can’t go over (OpenAPS "max-iob")
 
@@ -50,10 +60,10 @@ Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In
 
 Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in AMA.
 
-* Criança: 3
-* Adolescente: 7
-* Adulto: 12
-* Adulto insulino-resistente: 25
+* Child: 3
+* Teenage: 7
+* Adult: 12
+* Insulin resistant adult: 25
 
 See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
 
@@ -131,7 +141,7 @@ Default value: 4 (shouldn’t be changed unless you really need to and know, wha
 
 AMA, the shortform of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
 
-**You will need to have completed [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature**
+**You will need to have started [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature**
 
 You can find more information in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
@@ -143,9 +153,9 @@ You cannot chose any value: For safety reason, there is a 'hard limit', which de
 
 The hardcoded parameters in AndroidAPS are:
 
-* Criança: 2
+* Child: 2
 * Adolescente: 5
-* Adulto: 10
+* Adult: 10
 * Adulto insulino-resistente: 12
 
 ### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
@@ -154,9 +164,9 @@ This parameter limits the maximum of basal IOB where AndroidAPS still works. If 
 
 The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
-* Criança: 3
+* Child: 3
 * Adolescente: 5
-* Adulto: 7
+* Adult: 7
 * Adulto insulino-resistente: 12
 
 ### Enable AMA Autosense
@@ -171,11 +181,11 @@ If you have this option enabled, autosense can adjust targets (next to basal, IS
 
 **Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
 
-**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump, or, if enabled, determined by autotune. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then AndroidAPS can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then AndroidAPS can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
 
 Default value: 3 (shouldn’t be changed unless you really need to and know, what you are doing)
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump, or, if enabled, determined by autotune.
+**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.
 
 Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing)
 
@@ -195,9 +205,9 @@ You cannot chose any value: For safety reason, there is a 'hard limit', which de
 
 The hardcoded parameters in AndroidAPS are:
 
-* Criança: 2
+* Child: 2
 * Adolescente: 5
-* Adulto: 10
+* Adult: 10
 * Adulto insulino-resistente: 12
 
 ### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
@@ -206,9 +216,9 @@ This parameter limits the maximum of basal IOB where AndroidAPS still works. If 
 
 The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in MA than in SMB.
 
-* Criança: 3
+* Child: 3
 * Adolescente: 5
-* Adulto: 7
+* Adult: 7
 * Adulto insulino-resistente: 12
 
 ### Configurações Avançadas

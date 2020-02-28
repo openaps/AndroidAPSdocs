@@ -144,6 +144,6 @@ If you build the app successfully, transferred it to your phone and installed it
 ==================================================
 Σε περίπτωση που ακόμη και η οικοδόμηση της εφαρμογής από το μηδέν δεν λύσει το πρόβλημά σας ίσως να θέλετε να προσπαθήσετε να απεγκαταστήσετε πλήρως το Android Studio. Μερικοί χρήστες ανέφεραν ότι αυτό λύνει το πρόβλημά τους.
 
-Βεβαιωθείτε ότι έχετε καταργήσει την εγκατάσταση όλων των αρχείων που σχετίζονται με το Android Studio. Manuals can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
+**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
 
 Install Android Studio from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#install-android-studio>`_ and **do not update gradle**.

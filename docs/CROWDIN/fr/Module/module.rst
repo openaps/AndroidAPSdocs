@@ -61,45 +61,45 @@ La Combo, l'Insight et les anciennes Medtronics sont des pompes solides et boucl
 
 Les avantages de la DanaR/RS vs. la Combo comme choix de pompe de choix sont :
 
-- The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... ce n'est pas aussi facile avec la Combo. (Cela pourrait changer à l'avenir quand Android 8.1 sera plus populaire)
-- Initial pairing is simpler with the Dana* RS. Mais en général, vous ne le faites qu'une seule fois, cela n'a d'impact que si vous voulez tester une nouvelle fonctionnalité avec des pompes différentes.
-- Jusqu'à présent, le Combo fonctionne avec l'écran en veille. En général, cela fonctionne bien, mais c'est lent. Pour le bouclage, cela n'a pas d'importance car tout fonctionne en arrière-plan. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking. 
-- The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. La nuit, vous êtes susceptibles de plus utiliser les DBT que les SMB.  Le Dana * RS est configurable pour ne pas émettre de bip ni vibrer.
+- La pompe Dana *R/RS se connecte à presque tous les téléphones avec Android >= 5.1 sans avoir besoin de flasher le Lineage OS. Si votre téléphone se casse, vous pouvez trouver facilement en remplacement n'importe quel téléphone qui fonctionne avec les pompes DanaR/RS... ce n'est pas aussi facile avec la Combo. (Cela pourrait changer à l'avenir quand Android 8.1 sera plus populaire)
+- L'appairement initial est plus simple avec la Dana* RS. Mais en général, vous ne le faites qu'une seule fois, cela n'a d'impact que si vous voulez tester une nouvelle fonctionnalité avec des pompes différentes.
+- Jusqu'à présent, le Combo fonctionne avec l'écran en veille. En général, cela fonctionne bien, mais c'est lent. Pour le bouclage, cela n'a pas d'importance car tout fonctionne en arrière-plan. Il y a beaucoup plus de connections BT, donc plus de risques où la connexion BT pourrait se rompre, ce qui n'est pas si facile si vous vous éloignez de votre téléphone par ex. en faisant votre bolus tout en cuisinant. 
+- La Combo vibre à la fin des DBTs (Basal Temporaire), la Dana* R vibre (ou bips) sur les SMB. La nuit, vous êtes susceptibles de plus utiliser les DBT que les SMB.  Le Dana * RS est configurable pour ne pas émettre de bip ni vibrer.
 - La lecture de l'historique sur le RS en quelques secondes avec des glucides permet de changer facilement de téléphone en mode hors connexion et de poursuivre la boucle dès que des valeurs de MGC sont lues.
-- All pumps AndroidAPS can talk with are waterproof on delivery. Seules les pompes Dana sont également "étanches par garantie" en raison du compartiment de batteries scellées et du système de remplissage du réservoir. 
+- Toutes les pompes avec lesquelles AndroidAPS peut parler sont étanches à la livraison. Seules les pompes Dana sont également "étanches par garantie" en raison du compartiment de batteries scellées et du système de remplissage du réservoir. 
 
 Source GLY
 --------------------------------------------------
-This is just a short overview of all compatible CGMs/FGM with AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`_. Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
+Voici un bref aperçu de tous les MGC/MGF compatibles avec AndroidAPS. Pour plus de détails, consultez `ceci <../Configuration/BG-Source.html>`_. Juste une petite astuce : si vous voulez afficher vos glycémies dans l'application xDrip+ ou dans le site web Nightscout, vous pouvez choisir xDrip+ (ou Nightscout avec connexion web) comme source de glycémie dans AAPS.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or patched Dexcom app
-* `Dexcom G5 <../Hardware/DexcomG5.html>`_: It works with xDrip+ app or patched Dexcom app
-* `Dexcom G4 <../Hardware/DexcomG4.html>`_: These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
-* `Libre 2 <../Hardware/Libre2.html>`_: It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
-* `Libre 1 <../Hardware/Libre1.html>`_: You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
-* `Eversense <../Hardware/Eversense.html>`_: It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
-* `Enlite <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_ : Il fonctionne avec l'application xDrip+ ou l'application Dexcom patchée
+* `Dexcom G5 <../Hardware/DexcomG5.html>`_ : Il fonctionne avec l'application xDrip+ ou l'application Dexcom patchée
+* `Dexcom G4 <../Hardware/DexcomG4.html>`_ : Ces capteurs sont assez anciens, mais vous pouvez trouver les instructions sur la façon de les utiliser avec l'application xDrip+
+* `Libre 2 <../Hardware/Libre2.html>`_ : Il fonctioinne avec xDrip+ (pas besoin de transmetteur), mais vous devez compiler votre propre application patchée
+* `Libre 1 <../Hardware/Libre1.html>`_ : Vous avez besoin d'un transmetteur comme le Bluecon ou le MiaoMiao pour lui (acheté ou fabriqué) et l'application xDrip+
+* `Eversense <../Hardware/Eversense.html>`_ : Il ne marche pour l'instant qu'avec l'application ESEL et une application Eversense patchée (il ne marche pas avec DanaRS et un LineageOS, mais DanaRS et Android ou Combo et Lineage OS marchent bien)
+* `Enlite <../Hardware/MM640g.html>`_ : assez compliqué avec pas mal de choses supplémentaires à faire
 
 
 Nightscout
 --------------------------------------------------
-Nightscout is a open source web application that can log and display your CGM data and AndroidAPS data and creates reports. You can find more information on the `website of the Nightscout project <http://www.nightscout.info/>`_. You can create your own Nightscout website `using Heroko <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
+Nightscout est une application Web open source qui peut enregistrer et afficher vos données MGC / AndroidAPS et créer des rapports. Vous pouvez trouver plus d'informations sur le `site web du projet Nightscout <http://www.nightscout.info/>`_. Vous pouvez créer votre propre site web Nightscout `en utilisant Heroku <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, utilisez la configuration semi-automatisée Nightscout sur `zehn.be <https://ns.10be.de/en/index.html>`_ ou l'héberger sur votre propre serveur (c'est pour les experts en informatique).
 
-Nightscout is independent of the other modules. You will need it to fulfill Objective 1.
+Nightscout est indépendant des autres modules. Vous en aurez besoin pour réaliser l'objectif 1.
 
-Additional information on how to configure Nightscout for use with AndroidAPS can be found `here <../Installing-AndroidAPS/Nightscout.html>`_.
+Des informations supplémentaires sur la configuration de Nightscout pour l'utiliser avec AndroidAPS peuvent être trouvées `ici <../Installing-AndroidAPS/Nightscout.html>`_.
 
-AAPS-.apk file
+Fichier apk de AAPS
 --------------------------------------------------
-The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`_.  
+Le composant de base du système. Avant d'installer l'application, vous devez d'abord construire le fichier apk (qui est l'extension pour une application Android). Les instructions sont `ici <../Installing-AndroidAPS/Building-APK.html>`_.  
 
-Optional Modules
+Modules optionnels
 ==================================================
-Smartwatch
+Montres connectées
 --------------------------------------------------
-You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear a Sony Smartwatch 3 (SWR50) as it is the only watch that can get readings from Dexcom G5/G5 when phone is out of range. Some other watches can be patched to work as a standalone receiver as well (see `this documentation <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ for more details).
+Vous pouvez choisir n'importe quelle montre connectée avec Android Wear 1.x et plus. La plupart des boucleurs portent une montre Sony Smartwatch 3 (SWR50) car c'est la seule montre qui peut obtenir des lectures de Dexcom G5/G6 quand le téléphone est hors de portée. D'autres montres peuvent également être patchées pour fonctionner comme récepteur indépendant (voir `cette documentation <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ pour plus de détails).
 
-Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`_.
+Les utilisateurs sont en train de créer une `liste des téléphones et des montres testées <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. Ils y a plusieurs cadrans disponibles pour AndroidAPS que vous pouvez trouver `ici <../Configuration/Watchfaces.html>`_.
 
 Pour enregistrer un téléphone ou une montre qui n'est pas déjà dans la feuille de calcul, veuillez remplir le `formulaire <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
@@ -107,24 +107,24 @@ En cas de problème avec la feuille de calcul, merci d'envoyer un mail à `hardw
 
 xDrip+
 --------------------------------------------------
-Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`_. Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
+Même si vous n'avez pas besoin d'avoir l'application xDrip+ en tant que Source GLY, vous pouvez toujours l'utiliser par ex. pour les alertes ou pour un bon affichage des glycémies. Vous pouvez avoir autant d'alarmes que vous le souhaitez, spécifier l'heure à laquelle l'alarme doit être active, si elle peut remplacer le mode silencieux, etc. Certaines informations xDrip+ peuvent être trouvées `ici <../Configuration/xdrip.html>`_. Veuillez noter que les documentations de cette application ne sont pas toujours à jour car leur progression est assez rapide.
 
 Exemple de configuration
 ==================================================
-If you want to get a step by step example, you might want to look at a sample setup. The first sample setup is quite old, but should be still up-to-date.
+Si vous souhaitez obtenir un exemple d'étape par étape, vous pouvez consulter un exemple de configuration. Le premier exemple de configuration est assez ancien, mais il doit être encore à jour.
 
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Sample Setup <../Getting-Started/Sample-Setup.rst>
+   Exemple de configuration <../Getting-Started/Sample-Setup.rst>
  
   
-What to do while waiting for modules
+Que faire en attendant les modules
 ==================================================
-It sometimes takes a while to get all modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is NECESSARY to check and (where approporiate) adapt basal rates (BR), insulin-carbration (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with AndroidAPS. Using this mode, AndroidAPS gives treatment advices you can manually execute.
+Il faut parfois un certain temps pour pouvoir activer tous les modules pour fermer la boucle. Mais pas de soucis, il y a beaucoup de choses que vous pouvez faire en attendant. Il est NECESSAIRE de vérifier et (le cas échéant) adapter les débits de basal (DB), ratio Glucide/Insulin (G/I), la sensibilité à l'insulin (SI) etc. Et la boucle ouverte peut être un bon moyen pour tester le système, et se familiariser avec AndroidAPS. En utilisant ce mode, AndroidAPS donne des conseils de traitement que vous pouvez exécuter manuellement.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+Vous pouvez continuer à lire la documentation ici présente, entrer en contact avec d'autres boucleurs en ligne ou hors ligne, `lire les documentations <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ ou ce que d'autres boucleurs ont écrits (vous devez toutefois rester prudent, tout n'est pas correct ou adapté à votre situation).
 
-**Done?**
-If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the `Objective description <../Usage/Objectives.html>`_ before each new Objective and setup up your `hardware <../index.html#component-setup>`_.
+**Fini ?**
+Si vous avez tous vos composants AAPS ensemble (bravo !) ou au moins suffisamment pour pouvoir démarrer en mode Boucle Ouverte, vous devez d'abord lire la page `Objectifs <../Usage/Objectives.html>`_ avant chaque nouvel objectif et configurer vos `composants <../index.html#configuration-des-composants>`_.

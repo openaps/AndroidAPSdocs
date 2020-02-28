@@ -59,12 +59,16 @@ PS: Your fork and branch will still be sitting on your own personal GitHub accou
 
 ## Code syntax
 
-At the moment there are two languages used for wiki pages:
+At the moment there are two languages used for docs pages:
 
-* Markdown (.md) - the markup language originally used for wiki pages
+* Markdown (.md) - the markup language originally used for docs pages
 * reStructuredText (.rst) - the new markup language
 
-We will change all wiki pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
+We will change all docs pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
+
+### Image size
+
+If using images please use reasonable sizes. Screenshot images should be **250 pixels wide**.
 
 ### .md files
 
@@ -124,7 +128,7 @@ We will change all wiki pages from Markdown to reStructuredText bit by bit. In t
 
 ### Internal links
 
-Pokud chcete nastavit vnitřní odkaz v dokumentaci AndroidAPS, použijte pouze **relativní odkazy**. Only this will make the link work in the other languages (Czech, German...) as well.
+If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages (Czech, German...) as well.
 
 #### V souborech končících na **.md**:
 
@@ -146,28 +150,28 @@ Pokud chcete nastavit vnitřní odkaz v dokumentaci AndroidAPS, použijte pouze 
 
 ## Adding multiple images to documentation
 
-Pokud plánujete provést mnoho editací včetně přidání obrázků, které by pomohly vylepšit části dokumentace (děkujeme Vám!), můžete použít následující postup:
+If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
 
-* Postupně uložte screenshoty, přejmenujte je na popisný název – ale nepoužívejte mezery, protože to GitHub mate. Naopak používejte podtržítka. Jako např. Example_batch_images_upload.png místo "Example batch images upload.png".
-
-* Můžete snadno nahrát obrázky v dávkách:
+* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png". 
+* Please use reasonable sizes. Screenshot images should be **250 pixels wide**.
+* You can upload images in batches easily by:
   
-  1. Přejděte do složky obrázků (https: //github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images – ale ujistěte se, že jste ve svém forku/kopii složky Images, abyste mohli tuto akci provést (nahraďte "openaps" v URL svým jménem na Github)).
+  1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your github username)).
   
-  2. Klepněte na pravý horní roh, kde se nachází "Upload files"
+  2. Click in the upper right corner where it says "Upload files"
   
-  3. Přetáhěte snímky na obrazovku pomocí myši
+  3. Drag and drop your images into the screen
   
-  4. Potvrďte (Commit) tyto informace
+  4. Commit these to your branch
   
-  5. Nyní můžete vyhledat adresu URL a relativní cestu ke každému souboru a použít je při přidávání obrázků do stránky v dokumentaci.
+  5. Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
   
-  6. Chcete-li zobrazit příklady, jak přidat obrázky, můžete se podívat na "zdrojový" kód stránky a podívat se na příklad ze stránky, která již má obrázky vložené úspěšně. Make sure you use the [correct code](./make-a-PR#code-syntax) for the page type you are on (.md or .rst). The main thing is to have a plain text description, followed by a link with a relative path to the image, like this:
+  6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR#code-syntax) for the page type you are on (.md or .rst). The main thing is to have a plain text description, followed by a link with a relative path to the image, like this:
     
     * For .md pages: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)` (That code is exactly how the image below is embedded to be displayed.)
     * For .rst pages: `.. image:: ../images/Example_batch_images_upload.png`  
       `:alt: Example of uploading images in batches`
 
-![Příklad přenosu obrázků v dávkách](./images/Example_batch_images_upload.png)
+![Example of uploading images in batches](./images/Example_batch_images_upload.png)
 
 7. Po přidání obrázků nebo provedení úprav můžete odeslat PR (Pull request) do hlavní větve AndroidAPSdocs.

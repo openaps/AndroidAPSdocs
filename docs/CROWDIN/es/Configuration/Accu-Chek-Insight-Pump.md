@@ -53,9 +53,9 @@ Nota: No habrá una conexión permanente entre la bomba y el teléfono. Sólo se
 
 ## Valores en AAPS
 
-Usted **no debe utilizar 'Siempre usar valores basales absolutos'** con la bomba Insight. En AAPS vaya a Preferencias > Nightscout-Client > Configuración Avanzada y asegúrese de que 'Siempre usar valores basales absolutos' está deshabilitado. Esto conduciría a valores de TBR falsos en la bomba Insight.
+Usted **no debe utilizar 'Siempre usar valores basales absolutos'** con la bomba Insight. In AAPS go to Preferences > NSClient > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. Esto conduciría a valores de TBR falsos en la bomba Insight.
 
-Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune.
+Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune. In AAPS go to Preferences > NSClient > Advanced Settings and Enable ‘NS upload only (disabled sync)‘.
 
 ![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
 

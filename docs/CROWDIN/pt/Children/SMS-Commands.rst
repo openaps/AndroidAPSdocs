@@ -2,132 +2,141 @@ Comandos SMS
 **************************************************
 Segurança Em Primeiro Lugar
 ==================================================
-* AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code.
-* AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
-* **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
+* O AndroidAPS permite que você controle um telefone remotamente através de SMS. Se os comandos por SMS estiverem ativos, lembre-se sempre de que o telemóvel configurado para estes comandos remotos pode ser roubado. Então, proteja-o sempre pelo menos através de um código PIN.
+* O AndroidAPS responderá com uma mensagem de texto se os comandos remotos - como um bolus ou uma mudança de perfil - foram corretamente realizados.0//0. É aconselhável ao configurar que textos sejam enviados para, pelo menos, dois números de telefone distintos, para o caso de um dos telefones ser roubado.
+* ** Se o bolus for realizado através de Comandos SMS os hidratos de carbono (carbs) devem ser introduzidos através do Nightscout (NSClient, Website ...)! ** Se não o fizer a insulina ativa (IOB) seria correlacionada com hidratos restantes (COB) muito baixos, podendo levar o AAPS a não realizar um bolus de correção por assumir que insulina ativa (IOB) está demasiado elevada.
 
 Como funciona
 ==================================================
 * A maioria dos ajustes de alvos temporários, de acordo com AAPS etc. pode ser feito na ` app NSclient <../Children/Children.html> ` _ num telefone Android com ligação à internet.
-* Boluses can't be given through Nightscout, but you can use SMS commands.
-* If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
+* Os Bólus não podem ser enviados através do Nightscout, mas pode usar comandos SMS.
+* Se utiliza um iPhone como seguidor não conseguirá utilizar o NSclient.Temcomandos adicionais de SMS disponíveis.
 
-* In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
-* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
-* If you want to use more than one number:
+* Na configuração do seu smartphone Android vá a: Aplicações > AndroidAPS > Permissões e habilite SMS
+* No AndroidAPS vá a Preferências> Comunicador de SMS e introduza o numero de telefone que quer permitir que envie os comandos SMS .
+* Se quiser usar mais de um número:
 
-  * Enter just one number.
-  * Make that single number work by sending and confirming a SMS command.
-  * Enter additional number(s) separated by semicolon, no space.
+  * Insira inicialmente apenas um número.
+  * Teste o número enviando e confirmando um comando SMS.
+  * Insira o(s) número(s) adicional(es) separados por ponto e vírgula, sem espaço.
   
     .. image:: ../images/SMSCommandsSetupSpace.png
-      :alt: SMS Commands Setup
+      :alt: Configuração de Comandos SMS
 
 
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Confirm command by sending the code provided in SMS from AndroidAPS phone where neccessary.
+* Envie um SMS para o telemóvel com o AndroidAPS a partir do seu número de telefone(s) aprovado, usando qualquer um dos comandos abaixo, o telemóvel responderá com uma SMS para confirmar o sucesso do comando ou status solicitado. Confirme o comando enviando uma SMS com código enviado do smartphone com o AAPS (quando pedido).
 
-**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
+**Dica**: Pode ser útil ter SMS ilimitados em ambos os telefones se um número elevado de SMS for enviado.
 
-Commands
+Comandos
 ==================================================
 
-Upper and lower case is irrelevant when sending commands.
+É indiferente enviar os comandos em maiúsculas ou minúsculas.
 
-Commands must be send in English, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Os comandos têm de ser enviados em inglês, a resposta será no idioma selecionado se a tradução já tiver sido realizada <../traduções.html#traduzir-cordas-de-androidaps-app>`_.
 
 .. image:: ../images/SMSCommands.png
-  :alt: SMS Commands Example
+  :alt: Exemplo de comandos SMS
 
 Loop
 --------------------------------------------------
 * LOOP STOP/DISABLE
-   * Response: Loop has been disabled
+   * Resposta: Loop foi desativado
 * LOOP START/ENABLE
-   * Response: Loop has been enabled
+   * Resposta: Loop foi ativado
 * LOOP STATUS
-   * Response depends on actual status
+   * Resposta depende do status atual
       * Loop desactivado
       * Loop activado
-      * Suspended (10 min)
+      * Suspenso (10 min)
 * LOOP SUSPEND 20
-   * Response: Loop suspended for 20 minutes
+   * Resposta: Loop suspenso por 20 minutes
 * LOOP RESUME
-   * Response: Loop resumed
+   * Resposta: Loop foi retomado
 
-CGM data
+Dados do CGM (Monitor Contínuo de Glicemia)
 --------------------------------------------------
 * GLIC
-   * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+   * Resposta: Última BG: 5,6 há 4 min, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
-   * Response: To send calibration 5.6 reply with code Rrt
-   * Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
+   * Resposta: Para enviar calibração 5,6 responda com Rrt
+   * Resposta após o código correto ter sido recebido: Calibração enviada (**Se xDrip estiver instalado. Aceitar calibração deve estar habilitado no xDrip+**)
 
 Basal
 --------------------------------------------------
 * BASAL STOP/CANCEL
-   * Response: To stop temp basal reply with code EmF [Note: Code EmF is just an example]
+   * Resposta: Para parar a basal temporária responda com o código EmF [Nota: o código EmF é apenas um exemplo]
 * BASAL 0.3
-   * Response: To start basal 0.3U/h for 30 min reply with code Swe
+   * Resposta: Para iniciar a basal 0.3U/h por 30 min responda com o código Swe
 * BASAL 0.3 20
-   * Response: To start basal 0.3U/h for 20 min reply with code Swe
+   * Resposta: Para iniciar basal 0.3U/h por 20 minutos responda com o código Swe
 * BASAL 30%
-   * Response: To start basal 30% for 30 min reply with code Swe
+   * Resposta: Para iniciar a basal 30% por 30 min responda com o código Swe
 * BASAL 30% 50
-   * Response: To start basal 30% for 50 min reply with code Swe
+   * Resposta: Para iniciar a basal 30U/h por 50 minutos responda com o código Swe
 
 Bólus
 --------------------------------------------------
-Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
+Bolus remoto não permitido durante 15 min após último comando bolus ou outros comandos remotos! Portanto, a resposta depende da altura em que foi dado o último bolus.
 
 * BOLUS 1.2
-   * Response A: To deliver bolus 1.2U reply with code Rrt
-   * Response B: Remote bolus not available. Try again later.
+   * Resposta A: Para dar bolus de 1.2U responda com código Rrt
+   * Resposta B: Bolus remoto não disponível. Volte a tentar mais tarde.
 * BOLUS 0.60 MEAL
-   * If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins).
-   * Response A: To deliver meal bolus 0.60U reply with code Rrt
-   * Response B: Remote bolus not available. 
+   * Se você especificar o parâmetro opcional MEAL (Refeição), este configura um objetivo temporário para Refeições (os valores padrão são: 90 mg/dL, 5,0 mmol / l para 45 mins).
+   * Resposta A: Para dar bolus de 0.60U responda com código Rrt
+   * Resposta B: Bolus remoto não disponível. 
 * CARBS 5
-   * Response: To enter 5g at 12:45 reply with code EmF
+   * Resposta: Para inserir 5g às 12:45 responda com código EmF
+(Nota 12:45 são as horas de envio da mensagem)
 * CARBS 5 17:35/5:35PM
-   * Response: To enter 5g at 17:35 reply with code EmF
+   * Resposta: Para inserir 5g às 17:35 responda com código EmF
 * EXTENDED STOP/CANCEL
-   * Response: To stop extended bolus reply with code EmF
+   * Resposta: Para parar o bolus estendido responda com código EmF
 * EXTENDED 2 120
-   * Response: To start extended bolus 2U for 120 min reply with code EmF
+   * Resposta: Para iniciar o bolus estendido 2U para 120 min resposta com código EmF
 
 Perfil
 --------------------------------------------------
 * PROFILE STATUS
-   * Response: Profile1
+   * Resposta: Perfil1
 * PROFILE LIST
-   * Response: 1.`Profile1` 2.`Profile2`
+   * Resposta: 1.`Perfil1` 2.`Perfil2`
 * PROFILE 1
-   * Response: To switch profile to Profile1 100% reply with code Any
+   * Resposta: Para mudar o perfil para Perfil1 100% responda com código Any
 * PROFILE 2 30
-   * Response: To switch profile to Profile2 30% reply with code Any
+   * Resposta: Para mudar o perfil para Perfil2 30% responda com código Any
 
 Outro
 --------------------------------------------------
 * TREATMENTS REFRESH
-   * Response: Refresh treatments from NS
+   * Resposta: Atualizar tratamentos do NS
 * NSCLIENT RESTART
-   * Response: NSCLIENT RESTART 1 receivers
+   * Resposta: NSCLIENT REINICIAR 1 receptores
 * BOMBA
-   * Response: Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+   * Resposta: Última ligação: 1 min atrás Temp: 0.00 U/h @11:38 5/30min IOB: 0.5 U Reserv: 34U Batt: 100
 * SMS DISABLE/STOP
-   * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+   * Resposta: Para desativar o Serviço de Comandos SMS responda com código Any. Atenção que apenas o poderá reativar somente a partir do telemóvel que corre o AAPS.
 * TARGET MEAL/ACTIVITY/HYPO   
-   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code Any
+   * Resposta: Para definir os objetivos temporários para REFEIÇÃO/ATIVIDADE/HYPO responda com o código Any
 * TARGET STOP/CANCEL   
-   * Response: To cancel Temp Target reply with code Any
+   * Resposta: Cancelar o objetivo Temp responder com código Any
 * HELP
-   * Response: BG, LOOP, TREATMENTS, .....
+   * Resposta: GLICEMIA, LOOP, TRATAMENTOS,.....
 * HELP BOLUS
-   * Response: BOLUS 1.2 BOLUS 1.2 MEAL
+   * Resposta: BOLUS 1.2 BOLUS 1.2 REFEIÇÃO
 
 Resolução de Problemas
 ==================================================
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+Múltiplos SMS
+--------------------------------------------------
+Caso receba repetidamente a mesma mensagem, provavelmente foi configurada um circulo entre aplicações. Como por exemplo o xDrip+, Assim por favor assegure-se que o xDrip+ ou outra app para além do AAPS não está a enviar informação para o NS. 
+
+Se a app que causa o circulo estiver instalada em múltiplos telemoveis, certifique-se que a definição foi desativada.
+
+Problemas com comandos SMS em telemóveis Samsung
+--------------------------------------------------
+Uma atualização ao Samsung S10 em alguns casos provocou erros com os Comandos SMS. Estes podem ser resolvidos desabilitando a opção 'enviar como mensagem de chat'.
 
 .. image:: ../images/SMSdisableChat.png
-  :alt: Disable SMS as chat message
+  :alt: Desativar o SMS como mensagens de chat
