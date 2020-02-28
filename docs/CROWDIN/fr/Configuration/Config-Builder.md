@@ -18,7 +18,7 @@ Avec la case à cocher sous le symbole de l'oeil, vous pouvez décider comment o
 
 ![Onglet ou menu hamburger](../images/ConfBuild_TabOrHH.png)
 
-## Profil
+## Profile
 
 Sélectionnez le profil de basal que vous souhaitez utiliser. Voir la page [Profils](../Usage/Profiles.md) pour plus d'informations sur la configuration.
 
@@ -99,7 +99,7 @@ Le [graphique de courbe d'insuline](../Getting-Started/Screenshots#profil-d-insu
 ### Insuline Ultra Rapide Oref
 
 * recommendé pour FIASP
-* DAI = au moins 5.0h
+* DIA = at least 5.0h
 * Pic maxi = 55 minutes après l'injection (fixe, non réglable)
 
 Pour beaucoup de personnes, il n'y a pratiquement pas d'effet notable de FIASP après 3-4 heures tout au plus, même si 0.0 xx unités sont disponibles en tant que règle. Cette quantité résiduelle peut encore être perceptible pendant le sport, par exemple. Par conséquent, AndroidAPS utilise au moins 5h comme DAI.
@@ -258,7 +258,7 @@ Remarque : Les entrées ne peuvent pas être utilisées dans la calculatrice And
 
 Contrôler et contrôler AAPS à l'aide de votre montre Android Wear (voir la page [AAPS sur montres Wear OS](../Configuration/Watchfaces.md)). Utilisez les paramètres (roue crantée) pour définir quelles variables doivent être prises en compte lors du calcul du bolus donné par votre montre (par ex. tendance de 15min, GA...).
 
-Si vous voulez commander AAPS depuis la montre (bolus etc) alors dans les "Paramètres Wear" vous devez activer "Commandes depuis la montre".
+Si vous voulez commander AAPS depuis la montre (bolus etc) from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
 ![Paramètres Wear](../images/ConfBuild_Wear.png)
 
@@ -297,7 +297,7 @@ Si vous souhaitez utiliser uniquement un réseau WiFi spécifique, vous pouvez e
 
 ![Paramètres de connexion Nighscout](../images/ConfBuild_ConnectionSettings.png)
 
-#### Paramètres Avancés
+#### Advanced settings
 
 * Remplissage automatique des glycémies manquantes en utilisant NS
 * Créer des messages d'erreurs Créer une annonce Nightscout pour les messages d'erreur et les alertes locales (également visible dans la section Careportal de l'onglet traitements)
