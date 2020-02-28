@@ -15,34 +15,34 @@ Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln,
 
 Version 2.6
 ==============
-Release date: 29-02-2020
+Erscheinungsdatum: 29.02.2020
 
 Wichtige neue Funktionen
 -----
-* Small design changes (startpage...)
-* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`_
-* New `LocalProfile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* Kleinere Designänderungen (Startseite...)
+* Careportal Tab / Menü entfernt - weitere Details dazu `hier <../Usage/CPbefore26.html>`_
+* Neues `Plugin Lokales Profil <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_
 
-  * Local profile can hold more than 1 profile
-  * Profiles can be cloned and edited
-  * Ability of upload profiles to NS
-  * Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
-  * Veritical NumberPicker for targets
-* SimpleProfile is removed
-* MDT plugin: Fixed bug with duplicated entries
-* Units are not specified in profile but it's global setting
-* Added new settings to startup wizard
-* Different UI and internal improvements
-* `Wear complications <../Configuration/Watchfaces.html>`_
-* New `SMS commands <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
-* Fixed language support
-* Objectives: `Allow to go back <../Usage/Objectives.html#go-back-in-objectives>`_, Time fetching dialog
-* Automation: `allow sorting <../Usage/Automation.html#sort-automation-rules>`_
-* Automation: fixed bug when automation was running with disabled loop
-* New status line for Combo
-* GlucoseStatus improvement
-* Fixed TempTarget NS sync
-* Tons on new translations
+  * Im lokalen Profil können mehrere Profile gespeichert werden.
+  * Profile können geklont und bearbeitet werden.
+  * Lokale Profile können zu Nightscout hochgeladen werden.
+  * Profilwechsel können in ein neues lokales Profil geklont werden (Zeitverschiebung und Prozentsatz werden berücksichtigt).
+  * Neue Eingabemöglichkeit für Zielwerte
+* Einfaches Profil wurde entfernt.
+* Medtronic Pumpe: Fehler mit doppelten Einträgen behoben
+* Maßeinheiten (mmol / mg/dl) werden nicht mehr im Profil angegeben, sondern als globale Einstellung.
+* Neue Einstellungen zum Einrichtungsassistenten hinzugefügt.
+* Verbesserungen an der Benutzerschnittstelle und programmintern.
+* `Wear Komplikationen <../Configuration/Watchfaces.html>`_ für Smartwatches
+* Neue `SMS-Befehle <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
+* Korrektur Sprachauswahl
+* Objectives (Ziele) `neu starten <../Usage/Objectives.html#objective-ziel-neu-starten>`_
+* Automation: `Regeln sortieren <../Usage/Automation.html#automation-regeln-sortieren>`_
+* Automatisierung: Fehlerbeseitigung - Regeln wurden bei pausiertem Loop ausgeführt
+* Neue Statuszeile für Combo
+* Verbesserung des Glukosestatus
+* Fehlerbehebung: TempTarget NS-Synchronisation
+* Viele neue Übersetzungen
 
 Version 2.5.1
 ==================================================
@@ -100,7 +100,7 @@ Wichtige neue Funktionen
 * Sprach-Updates
 * Überprüfung git und Warnung bei gradle Upgrade
 * Zusätzliche automatische Tests
-* Bugfix eines potentieller Absturzes des Alarm Sound Dienstes (Danke @lee-b!)
+* Bugfix eines potentiellen Absturzes des Alarm Sound Dienstes (Danke @lee-b!)
 * Bugfix BG-Broadcast (funktioniert nun unabhängig von den SMS-Berechtigungen!)
 * Neuer Versionscheck
 
