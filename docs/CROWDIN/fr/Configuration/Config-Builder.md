@@ -47,7 +47,7 @@ Vous pouvez facilement créer un profil local à partir d'un changement de profi
 
 Si vous souhaitez passer du profil Nightscout au profil local, faites simplement un changement de profil sur votre profil NS et clonez le changement de profil comme décrit ci-dessus.
 
-#### Remonter les profils locaux sur Nightscout
+#### Upload local profiles to Nightscout
 
 Les profils locaux peuvent également être téléchargés sur Nightscout. Les paramètres se trouvent dans les préférences NS Client.
 
@@ -183,7 +183,7 @@ Voir la page [Objectifs](../Usage/Objectives.rst) pour plus d'informations.
 
 ## Traitements
 
-Si vous affichez l'onglet Traitements (TRAIT), vous pouvez voir les traitements qui ont été téléchargés dans Nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the carbs button on the home screen.
+Si vous affichez l'onglet Traitements (TRAIT), vous pouvez voir les traitements qui ont été téléchargés dans Nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
 
 ## Généralités
 
@@ -228,95 +228,90 @@ Quelques boutons pour accéder rapidement aux fonctions communes:
 * Cibles temporaires
 * Définir/Annuler des Débit de Base
 * Bolus étendu (pompe DanaR/RS ou Combo uniquement)
+* Record for any specific care entries
+    
+    * BG check
+    * Prime / fill - record pump site change and prime (if not done on pump)
+    * CGM sensor insert
+    * Pump battery change
+    * Note
+    * Exercise
+* View the current sensor, insulin, canula and pump battery ages
+* History browser
+* TDD (Total daily dose = bolus + basal per day)
 
-#### Careportal
+Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
-Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
-
-* Contrôle de la glycémie
-* Amorcer/Remplir - enregistrement d'un changement de site et d'un changement de cartouche (si pas fait sur la pompe)
-* Pose du capteur MGC
-* Changement de la pile de pompe
-* Remarque
-* Activité Physique
-
-#### Outils
-
-* Historique
-* DTI (Dosage Total d'Insuline quotidien = bolus + basale par jour)
-
-Certains médecins utilisent - en particulier pour les nouveaux utilisateurs de pompes - une proportion basal-bolus de 50:50. Par conséquent, le rapport est calculé ainsi DTI/(2*DTB) (Dose Totale de Basale = somme des débits de basal en 24 heures). D'autres préfèrent une fourchette allant de 32% à 37% de DTI pour DTB. Comme la plupart de ces règles empiriques, leur validité réelle est limitée. Remarque : Votre diabète peut varier!
-
-![Onglet Actions](../images/ConfBuild_ConfBuild_Actions_a.png)
+![Actions tab](../images/ConfBuild_ConfBuild_Actions_b.png)
 
 ### Communicateur SMS
 
-Permet aux aidants à distance de contrôler certaines fonctionnalités d'AndroidAPS via SMS, voir [Commandes SMS](../Children/SMS-Commands.rst) pour plus d'informations sur la configuration.
+Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
 
 ### Aliments
 
-Affiche les préréglages alimentaires définis dans la base de données Nightscout, voir [Nightscout Lisez-moi](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) pour plus d'informations sur la configuration.
+Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-Remarque : Les entrées ne peuvent pas être utilisées dans la calculatrice AndroidAPS. (Affichage uniquement)
+Note: Entries cannot be used in the AndroidAPS calculator. (View only)
 
 ### Wear
 
-Contrôler et contrôler AAPS à l'aide de votre montre Android Wear (voir la page [AAPS sur montres Wear OS](../Configuration/Watchfaces.md)). Utilisez les paramètres (roue crantée) pour définir quelles variables doivent être prises en compte lors du calcul du bolus donné par votre montre (par ex. tendance de 15min, GA...).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
 Si vous voulez commander AAPS depuis la montre (bolus etc) alors dans les "Paramètres Wear" vous devez activer "Commandes depuis la montre".
 
-![Paramètres Wear](../images/ConfBuild_Wear.png)
+![Wear settings](../images/ConfBuild_Wear.png)
 
-Via l'onglet Wear ou le menu hamburger (en haut à gauche de l'écran, si l'onglet n'est pas affiché), vous pouvez
+Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
-* Renvoyer toutes les données. Cela peut être utile si la montre n'est pas connectée pendant un certain temps et que vous voulez envoyer toutes les informations à la montre.
-* Ouvrez le menu Paramètres de votre montre directement depuis votre téléphone.
+* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
+* Open settings on your watch directly from your phone.
 
 ### Barre d'état pour xDrip (Montre)
 
-Affiche les informations de la boucle sur votre cadran xDrip+ (si vous n'utilisez pas les cadrans AAPS/[cadran AAPSv2](../Configuration/Watchfaces.md)
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
 ### Notification en cours
 
-Affiche un récapitulatif des Gly, delta, %DBT actif, basale u/h et profil actif, IA décomposée en IA bolus et IA basal sur l'écran de veille et l'écran de verrouillage du téléphone.
+Displays a summary of current BG, delta, active TBR%, active basal u/h and profile, IOB and split into bolus IOB and basal IOB on the phones's dropdown screen and phone's lock screen.
 
-![Widget AAPS](../images/ConfBuild_Widget.png)
+![AAPS widget](../images/ConfBuild_Widget.png)
 
 ### NS Client
 
-Configurer la synchronisation de vos données AndroidAPS avec Nightscout.
+Setup sync of your AndroidAPS data with Nightscout.
 
-Si **Démarrage AAPS entré dans NS** est activé chaque lancement de AndroidAPS sera visible dans Nightscout. Peut être utile pour détecter des problèmes avec l'application (par ex. si l'optimisation de la batterie n'a pas été désactivée pour l'AAPS), mais peut saturer le graphique Nightscout avec les entrées.
+If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimization not disabled for AAPS) but can flood the Nightscout graph with entries.
 
-#### Options d'alarme
+#### Alarm options
 
-Activez/désactivez les alarmes AndroidAPS
+Activate/deactivate AndroidAPS alarms
 
-![Options d'alarme](../images/ConfBuild_NSClient_Alarms.png)
+![Alarm options](../images/ConfBuild_NSClient_Alarms.png)
 
-#### Paramètres de connexion
+#### Connection settings
 
-Bloucler hors connexion, désactiver l'itinérance...
+Offline looping, disable roaming...
 
-Si vous souhaitez utiliser uniquement un réseau WiFi spécifique, vous pouvez entrer son **SSID**. Plusieurs SSID peuvent être séparés par un point-virgule. Pour supprimer tous les SSID, entrez un espace dans la zone.
+If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
 
-![Paramètres de connexion Nighscout](../images/ConfBuild_ConnectionSettings.png)
+![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
 
 #### Paramètres Avancés
 
-* Remplissage automatique des glycémies manquantes en utilisant NS
-* Créer des messages d'erreurs Créer une annonce Nightscout pour les messages d'erreur et les alertes locales (également visible dans la section Careportal de l'onglet traitements)
-* Activer la diffusion locale vers d'autres applications telles que xDrip +
-* Remonter uniquement vers NS (synchronisation désactivée)
-* Pas de téléchargement vers NS
-* Utiliser toujours les valeurs absolues du basal -> Doit être activé si vous voulez utiliser [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) correctement.
+* Auto backfill missing BGs from Nightscout
+* Create announcement from errors Create Nightscout announcement for error dialogs and local alerts (also viewable in careportal in treatments section)
+* Enable local broadcast to other apps like xDrip+
+* NS upload only (sync disabled)
+* No upload to NS
+* Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
 
-![Paramètres avancés Nightscout](../images/ConfBuild_NSClient_Advanced.png)
+![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
 
 ### Maintenance
 
-E-mail et le nombre de journaux à envoyer. Normalement pas de changement nécessaire.
+Email and number of logs to be send. Normally no change necessary.
 
 ### Générateur de configuration
 
-Utilisez l'onglet pour le générateur de configuration au lieu du menu hamburger.
+Use tab for config builder instead of hamburger menu.
