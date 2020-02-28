@@ -236,7 +236,7 @@ Quelques boutons pour accéder rapidement aux fonctions communes:
     * Changement de la pile de pompe
     * Remarque
     * Activité Physique
-* Affichage des informations capteur, insuline, cannule et age de la pile de pompe
+* Affichage des informations capteur, insuline, canule et age de la pile de pompe
 * Historique
 * DTI (Dosage Total d'Insuline quotidien = bolus + basale par jour)
 
