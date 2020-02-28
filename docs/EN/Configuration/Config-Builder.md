@@ -157,7 +157,7 @@ You should [export your settings](../Usage/ExportImportSettings.rst) (including 
 See [Objectives](../Usage/Objectives.rst) page for more information.
 
 ## Treatments
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout.  Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the Careportal (CP) tab.
+If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout.  Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the carbs button on the home screen.
 
 ## General
 ### Overview
