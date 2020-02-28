@@ -131,7 +131,25 @@ Nous voyons ici l'état de la pompe à insuline - dans ce cas, un Accu-Chek Comb
 
 Careportal reproduit les fonctions que vous trouverez sur votre écran Nightscout sous le signe "+" qui vous permet d'ajouter des notes à vos enregistrements.
 
-Le code utilisé à l'origine pour ajouter le support hors ligne de Careportal n'a pas été harmonisé avec le développement de AAPS et était vraiment bloquant pour les développements supplémentaires. Par conséquent, la décision a été prise de supprimer Careportal dans la version 2.6 de AAPS. Voir la [page Careportal](../Usage/CPbefore26.rst) pour plus de détails.
+### Carb correction
+
+Care portal can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+
+1. Check and remember actual COB and IOB on homescreen.
+2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
+   
+   ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+
+3. Remove the entry with the faulty carb amount.
+
+4. Make sure carbs are removed successfully by checking COB on homescreen again.
+5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
+   
+   -> If carbs are not removed as intended and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+
+6. Enter correct carb amount through care portal and make sure to set the correct event time.
+
+7. If there is just one line in treatment tab including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
 
 ## Boucle, AR, AAR, SMB
 
