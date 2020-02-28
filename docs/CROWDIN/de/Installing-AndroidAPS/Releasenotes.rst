@@ -29,7 +29,7 @@ Wichtige neue Funktionen
   * Profilwechsel können in ein neues lokales Profil geklont werden (Zeitverschiebung und Prozentsatz werden berücksichtigt).
   * Neue Eingabemöglichkeit für Zielwerte
 * Einfaches Profil wurde entfernt.
-* `Erweiterter Bolus <../Usage/Extended-Carbs.html#option-fur-erweiterten-bolus-in-aaps>`_ Funktion - der Closed Loop wird vorübergehend deaktiviert
+* `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
 * Medtronic Pumpe: Fehler mit doppelten Einträgen behoben
 * Maßeinheiten (mmol / mg/dl) werden nicht mehr im Profil angegeben, sondern als globale Einstellung.
 * Neue Einstellungen zum Einrichtungsassistenten hinzugefügt.
