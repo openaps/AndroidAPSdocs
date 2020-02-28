@@ -131,25 +131,25 @@ Nous voyons ici l'état de la pompe à insuline - dans ce cas, un Accu-Chek Comb
 
 Careportal reproduit les fonctions que vous trouverez sur votre écran Nightscout sous le signe "+" qui vous permet d'ajouter des notes à vos enregistrements.
 
-### Carb correction
+### Correction de Glucides
 
-Care portal can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
 
-1. Check and remember actual COB and IOB on homescreen.
-2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
+1. Vérifiez et mémorisez les GA et IA actuels sur l'écran d'accueil.
+2. Selon la pompe, dans l'onglet Traitement, les glucides peuvent être affichés avec l'insuline sur une seule ligne ou dans deux lignes séparées (par ex. avec Dana RS).
    
-   ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+   ![Traitement en 1 ou 2 lignes](../images/Treatment_1or2_lines.png)
 
-3. Remove the entry with the faulty carb amount.
+3. Supprimez l'entrée qui a la mauvaise quantité de glucides.
 
-4. Make sure carbs are removed successfully by checking COB on homescreen again.
-5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
+4. Assurez-vous que les glucides ont bien été enlevés en vérifiant à nouveau les GA sur l'écran d'accueil.
+5. Vérifiez également l'IA s'il n'y a qu'une seule ligne dans l'onglet de Traitement contenant les glucides et l'insuline.
    
-   -> If carbs are not removed as intended and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+   -> Si les glucides ne sont pas enlevés comme prévu et que vous ajoutez des glucides supplémentaires comme expliqué ci-dessous (6.), les GA seront trop élevés et cela pourrait conduire à un surdosage d'insuline.
 
-6. Enter correct carb amount through care portal and make sure to set the correct event time.
+6. Enter correct carb amount through carbs button on homescreen and make sure to set the correct event time.
 
-7. If there is just one line in treatment tab including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
+7. S'il n'y a qu'une seule ligne dans l'onglet Traitement, contenant les glucides et l'insuline, vous devez remettre la quantité d'insuline qui a été injectée. Assurez-vous de régler correctement l'heure de l'événement et vérifiez bien l'IA sur l'écran d'accueil après avoir confirmé la nouvelle entrée.
 
 ## Boucle, AR, AAR, SMB
 
