@@ -15,35 +15,35 @@ Veuillez comprendre que cette modification n'a pas pour but de vous corriger mai
 
 Version 2.6
 ==============
-Release date: 29-02-2020
+Date de sortie : 29-02-2020
 
 Nouvelles fonctionnalités majeures
 -----
-* Small design changes (startpage...)
-* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`_
-* New `LocalProfile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* Petites modifications de l'affichage (page d'accueil...)
+* Onglet/Menu Careportal supprimé - plus de détails `ici <../Usage/CPbefore26.html>`_
+* Nouveau `plugin Profil Local <../Configuration/Config-Builder.html#profil-local-recommande>`_
 
-  * Local profile can hold more than 1 profile
-  * Profiles can be cloned and edited
-  * Ability of upload profiles to NS
-  * Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
-  * Veritical NumberPicker for targets
-* SimpleProfile is removed
-* `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
-* MDT plugin: Fixed bug with duplicated entries
-* Units are not specified in profile but it's global setting
-* Added new settings to startup wizard
-* Different UI and internal improvements
-* `Wear complications <../Configuration/Watchfaces.html>`_
-* New `SMS commands <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
-* Fixed language support
-* Objectives: `Allow to go back <../Usage/Objectives.html#go-back-in-objectives>`_, Time fetching dialog
-* Automation: `allow sorting <../Usage/Automation.html#sort-automation-rules>`_
-* Automation: fixed bug when automation was running with disabled loop
-* New status line for Combo
-* GlucoseStatus improvement
-* Fixed TempTarget NS sync
-* Tons on new translations
+  * Le profil local peut contenir plusieurs profils
+  * Les profils peuvent être dupliqués et modifiés
+  * Possibilité de télécharger les profils vers NS
+  * Les anciens changements de profil peuvent être dupliqués veres un nouveau profil local (décalage horaire et pourcentage appliqués)
+  * Sélecteur pour les cibles temps
+* Le Profil Simple est supprimé
+* La fonction `Bolus étendus <../Usage/Extended-Carbs.html#bolus-etendu>`_ désactive la boucle fermée
+* Plugin MDT : Correction du bug entrées dupliquées
+* Les unités ne sont pas définies dans le profil mais c'est un paramètre global
+* Ajout de nouveaux paramètres à l'assistant de démarrage
+* Diverses améliorations internes et de l'interface
+* `Complications pour la montre <../Configuration/Watchfaces.html>`_
+* Nouvelles `commandes SMS <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
+* Correction de la prise en charge des langues
+* Objectifs : `Possibilité de faire un retour arrière <../Usage/Objectives.html#retour-arriere-dans-les-objectifs>`_, Time fetching dialog
+* Automatisation : `Possibilité de trier <../Usage/Automation.html#tri-des-regles-d-automatisation>`_
+* Automatisation : correction de bug quand l'automatisation fonctionnait avec une boucle désactivée
+* Nouvelle ligne d'état pour la Combo
+* Amélioration de l'état des Glucides
+* Correction synchronisation Cibles Temp avect NS
+* Des tonnes de nouvelles traductions
 
 Version 2.5.1
 ==================================================
@@ -62,7 +62,7 @@ Remarques importantes
 * Veuillez utiliser `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ ou plus récent pour `construire l'apk <../Installing-AndroidAPS/Building-APK.html>`_ ou le `mettre à jour <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Si vous utilisez xDrip `identify receiver <../Configuration/xdrip.html#identifier-le-recepteur>`_ doit être défini.
 * Si vous utilisez Dexcom G6 avec l'application `Dexcom patchée <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ vous aurez besoin de la version du `Dossier 2.4<https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
-* Glimp is supported from version 4.15.57 and newer.
+* Glimp est pris en charge à partir de la version 4.15.57 et plus récente.
 
 Cette mise à jour est-elle pour moi? N'est actuellement PAS pris en charge
 --------------------------------------------------
