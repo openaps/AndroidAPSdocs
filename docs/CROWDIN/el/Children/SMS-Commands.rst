@@ -127,6 +127,14 @@ Remote bolus not allowed within 15 min -value editable only if 2 phone numbers a
 
 Αντιμετώπιση προβλημάτων
 ==================================================
+Multiple SMS
+--------------------------------------------------
+If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not uploads treatments to NS. 
+
+If the other app is installed on multiple phones make sure to deactive upload on all of them.
+
+SMS commands not working on Samsung phones
+--------------------------------------------------
 Υπήρξε μια αναφορά σχετικά με τις εντολές SMS που σταματούν μετά από μια ενημέρωση στο τηλέφωνο Galaxy S10. Θα μπορούσε να λυθεί με απενεργοποίηση "αποστολή ως μήνυμα chat'.
 
 .. image:: ../images/SMSdisableChat.png

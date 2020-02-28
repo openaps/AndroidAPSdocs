@@ -10,7 +10,7 @@ Génération et mise à jour
 -----
 * `Certificats perdus <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
 * `Dépannage AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
-Settings
+Paramètres
 --------------------------------------------------
 * `Profils <../Usage/Profiles.html#troubleshooting-profile-errors>`_
 

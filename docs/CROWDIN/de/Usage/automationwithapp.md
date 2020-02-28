@@ -20,17 +20,19 @@ Bis jetzt ist es **notwendig, mit Nightscout Profilen**zu loopen, da Automate di
 
 Lade Android Automate im Google Play Store oder unter <https://llamalab.com/automate/> herunter und installiere es auf demselben Smartphone wie AndroidAPS.
 
-Gehe im Smartphone auf Systemeinstellungen > Apps > Automate > tippe auf das Zahnrad am rechten oberen Bildschirmrand > wähle 'Run on system startup' aus. Dadurch werden deine Workflows automatisch nach dem Systemstart ausgeführt.
+Tippe in Automate auf das Hamburger Menü am Bildschirm oben links > Settings > Wähle 'Run on system startup'. Dadurch werden deine Workflows automatisch nach dem Systemstart ausgeführt.
 
 ![Automate HTTP request](../images/automate-app2.png)
 
 #### AndroidAPS
 
-Tippe im AndroidAPS Nightscout-Client auf das Zahnrad am oberen rechten Bildschirmrand und gehe auf Verbindungs-Einstellungen > deaktiviere "Benutze nur WLAN-Verbindung" und "Nur während des Ladens", da automatische Behandlungen nur funktionieren, wenn AndroidAPS eine Verbindung zu Nightscout Verbindung hat.
+Tippe in AndroidAPS auf das Drei-Punkte-Menü am oberen rechten Bildschirmrand und gehe auf Einstellungen > Nightscout-Client > Verbindungs-Einstellungen > deaktiviere "Benutze nur WLAN-Verbindung" und "Nur während des Ladens", da automatische Behandlungen nur funktionieren, wenn AndroidAPS eine Verbindung zu Nightscout hat.
 
 ![Nightscout connection preferences](../images/automate-aaps1.jpg)
 
-Tippe im AndroidAPS Nightscout-Client auf das Zahnrad am oberen rechten Bildschirmrand und gehe zu Erweiterte Einstellungen > Deaktiviere "Zu Nightscout nur hochladen" und "Kein Upload zu Nightscout"
+Tippe in AndroidAPS auf das Drei-Punkte-Menü am oberen rechten Bildschirmrand und gehe auf Einstellungen > Nightscout-Client > Erweiterte Einstellungen und deaktivere 'Zu Nightscout nur hochladen (keine Synchronisation)' und 'kein Upload zu Nightscout'.
+
+Beachte die [Sicherheitsüberlegungen](../Installing-AndroidAPS/Nightscout#sicherheitsuberlegungen) und sei besonders vorsichtig, wenn Du eine [Insight Pumpe](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps) verwendest.
 
 ![Nightscout download preferences](../images/automate-aaps2.jpg)
 

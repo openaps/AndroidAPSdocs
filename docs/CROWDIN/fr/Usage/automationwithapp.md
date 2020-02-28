@@ -1,124 +1,126 @@
-# Automation with third party Android Automate App
+# Automatisation avec une application Android Automate tierce
 
-**This article has been written before AndroidAPS version 2.5. There is an [automation plugin in AndroidAPS](./Automation.rst) itself with AndroidAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
+**Cet article a été écrit avant la version 2.5 d'AndroidAPS. Il existe un plug-in d'automatisation [dans AndroidAPS](./Automation.rst) lui-même à partir de la version 2.5. Pour certains, ceci peut être encore utile, mais ne doit être utilisé que par les utilisateurs avancés.**
 
-As AndroidAPS is a hybrid closed loop system, some user interaction is necessary though (e.g. tell the loop that you are walking, eating soon, lying on the sofa...). Frequent manual user inputs can be automated via external tools like Automate or IFTTT to extend the recent AndroidAPS functionality.
+Comme AndroidAPS est un système à boucle fermée hybride, une certaine interaction avec l'utilisateur est nécessaire (par ex. dites à la boucle si vous marchez, mangez bientôt, restez couché sur le canapé...). Les entrées manuelles fréquentes peuvent être automatisées via des outils externes tels que Automate ou IFTTT pour étendre la fonctionnalité récente d'AndroidAPS.
 
-## Android Automate App
+## Application Android Automate
 
-The free Android™ application Automate lets you automate various tasks on your smartphone. Create your automations with flowscharts, make your device automatically change settings like Bluetooth, Wi-Fi, NFC or perform actions like sending SMS, e-mail, based on your location, the time of day, or any other “event trigger”. You can automate almost everything on your device, Automate even support plug-ins made for Tasker and Locale.
+L'application gratuite Android™ Automate vous permet d'automatiser diverses tâches sur votre smartphone. Créez vos automatisations avec des diagrammes, faites que votre appareil change automatiquement les paramètres tels que Bluetooth, Wifi, NFC ou exécute des actions comme l'envoi de SMS, d'e-mail, en fonction de votre localisation, de l'heure du jour, ou de tout autre "déclencheur d'événement". Vous pouvez automatiser presque tout sur votre appareil, Automate même en charge les plug-ins conçus pour Tasker et Locale.
 
-Using this tool you can easily create workflows to auto-treat your diabetes based on several conditions according to the principle of 'if this... and this... not this..., then do that... and that...'. There are thousands of possibilities you can configure.
+A l'aide de cet outil vous pouvez facilement créer des workflows pour traiter votre diabète à l'aide de plusieurs conditions selon le principe de 'si ... et ... et pas ..., alors fait ... et ...'. Il y a des milliers de possibilités que vous pouvez configurer.
 
-Until now it is **necessary to loop via Nightscout Profile**, as Automate executes the commands via HTTP-request directly in your nightscout website that subsequently syncs it to your AndroidAPS app.
+Jusqu'à présent, il est **nécessaire de boucler via un profil Nightscout**, car Automate exécute les commandes via des requêtes HTTP directement dans votre site Web nightscout qui le synchronise ensuite avec votre application AndroidAPS.
 
-**Offline looping (direct communication between Automate and AnroidAPS app) is not supported yet**, but technologically possible. Maybe there will be a solution in future. If you have figured out a way to do this, please add it to this documentation or contact a developer.
+**La boucle hors ligne (communication directe entre Automate et AndroidAPS) n'est pas encore prise en charge**, mais est techniquement possible. Il y aura peut-être une solution à l'avenir. Si vous avez trouvé un moyen de le faire, veuillez l'ajouter à cette documentation ou contacter un développeur.
 
-### Basic requirements
+### Exigences de base
 
-#### Automate App
+#### Application Automate
 
-Download Android Automate in Google Play Store or at <https://llamalab.com/automate/> and install it on your smartphone where AndroidAPS runs.
+Téléchargez Android Automate dans Google Play Store ou sur <https://llamalab.com/automate/> et installez la sur votre smartphone où AndroidAPS s'exécute.
 
-Go to smartphone system settings > Apps > Automate > Tap on the gear on the upper right of the screen > Check 'Run on system startup'. This will automatically run your workflows on system startup.
+Dans Automate, appuyez sur le menu hamburger en haut à gauche de l'écran > Settings > Cochez 'Run on system startup'. Cela exécutera automatiquement vos Workflows au démarrage du système.
 
-![Automate HTTP request](../images/automate-app2.png)
+![Automatiser requête HTTP](../images/automate-app2.png)
 
 #### AndroidAPS
 
-In AndroidAPS NSClient, tap on the gear at the upper right screen and go to Connection settings > Uncheck 'Use WiFi connection only' and 'Only if charging' as the automated treating does only work when AndroidAPS has an actual nightscout connection.
+Dans AndroidAPS appuyez sur le menu trois points en haut à droite de l'écran et accédez à Paramètres > NSClient > Paramètres de connexion > Décochez la case "Utiliser uniquement la connexion WiFi" et "Uniquement si en charge" comme Automate ne fonctionne que lorsque AndroidAPS a une connexion avec Nightscout.
 
-![Nightscout connection preferences](../images/automate-aaps1.jpg)
+![Paramètres de connexion Nighscout](../images/automate-aaps1.jpg)
 
-In AndroidAPS NSClient, tap on the gear at the upper right screen and go to Advanced Settings > Uncheck 'NS upload only (dosable sync)' and 'No upload to NS'
+Dans AndroidAPS appuyez sur le menu trois points en haut à droite de l'écran et accédez à Paramètres > NSClient > Paramètres avancés > Décochez 'Remonter uniquement vers NS (sync désactivée)' et 'Pas de téléchargement vers NS'.
 
-![Nightscout download preferences](../images/automate-aaps2.jpg)
+Soyez conscient des [problèmes de sécurité](../Installing-AndroidAPS/Nightscout#security-considerations) qui pourraient se produire et soyez très prudent si vous utilisez une [pompe Insight](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
 
-### Workflow examples
+![Paramètres de téléchargement Nighscout](../images/automate-aaps2.jpg)
 
-#### Example 1: If activity (e.g. walking or running) is detected, then set a high TT. And if activity ends, then wait 20 minutes and then cancel TT
+### Exemples de Scripts
 
-This workflow will listen to the smartphone sensors (pedometer, gravity sensor...) that detect the activity behavior. If there is recent activity like walking, running or riding a bycicle present, then Automate will set a user specified high temprorary target for the user specified time. If activity ends, your smartphone will detect this, wait for 20 minutes and then set the target back to normal profile value.
+#### Exemple 1: Si une activité (par ex. marche ou course) est détectée, définir une CT élevée. Et si l'activité se termine, attendre 20 minutes puis annuler la CT
 
-Download the Automate script <https://llamalab.com/automate/community/flows/27808>.
+Ce script écoutera les capteurs du smartphone (pédomètre, capteur de gravité...) qui détecteront le comportement de l'activité. Si une activité récente comme la marche, la course ou du vélo est détectée, alors Automate définira une cible temp élevée d'une durée spécifiée par l'utilisateur. Si l'activité se termine, votre smartphone le détectera, il attendra 20 minutes, puis il fixera la cible à la valeur normale du profil.
 
-Edit the sling by tapping on the edit pencil > Flowchart
+Téléchargez le script Automate <https://llamalab.com/automate/community/flows/27808>.
 
-![Automate sling](../images/automate-app3.png)
+Éditez le script en appuyant sur le crayon > Script
 
-Customize the workflow according to your wishes as follows:
+![Script Automate](../images/automate-app3.png)
 
-![Automate sling](../images/automate-app6.png)
+Personnaliser le script en fonction de vos souhaits comme ceci :
 
-1. = Set high TT
-2. = Go back to normal target 20 minutes after the end of acitivity
+![Script Automate](../images/automate-app6.png)
 
-1 ![Automate sling](../images/automate-app1.png)
+1. = Définir CT élevée
+2. = Revenir à la cible normale 20 minutes après la fin de l'activité
 
-2 ![Automate sling](../images/automate-app5.png)
+1 ![Script Automate](../images/automate-app1.png)
 
-Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+2 ![Script Automate](../images/automate-app5.png)
 
-Request content:
+URL de la requête : Votre URL-NS se terminant par /api/v1/treatments.json (par ex. https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
-* targetTop / targetBottom: The high TT value (top and bottom should be the same value)
-* duration: The duration of the high TT (after time it will fallback to regular profile target unless activity goes on). 
-* secret: Your API SHA1 hash. It is NOT your api key! You can convert your API key to SHA1 format at <http://www.sha1-online.com/>
+Contenu de la requête :
 
-Save: Tap on 'Done' and on the hook
+* targetTop / targetBottom: La valeur de la CT haute (la valeur haute et basse doivent être les mêmes)
+* duration: La durée de la CT haute (Après cette durée, il reviendra à la cible du profil standard sauf si l'activité se poursuit). 
+* secret : votre hachage SHA1 de l'API. Ce n'est PAS votre clé api ! Vouc pouvez convertir votre clé API au format SHA1 sur <http://www.sha1-online.com/>
 
-Start sling: Tap on Play button
+Sauvegarde : Appuyez sur 'Save' après chaque modification de bloc puis sur le flèche de retour arrière
 
-#### Example 2: If xDrip+ alerts a BG high alarm, then set a low TT for ... minutes.
+Démarrer le script : Cliquez sur le bouton Start
 
-This workflow will listen to the xDrip+ notification channel. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temprorary target for the user specified time. After time, another possibly alert will extend the duration of the low TT.
+#### Exemple 2 : Si xDrip+ envoie une alerte glycémie haute, alors définir une CT basse pendant xxx minutes.
+
+Ce script va écouter le canal de notification xDrip+. Si une alerte glycémie haute spécifiée par l'utilisateur est déclenchée, alors Automate définira une cible temp basse ayant un niveau et une durée spécifiée par l'utilisateur. Après un certain temps, une autre alerte prolongera si nécessaire la durée de la CT faible.
 
 ##### xDrip+
 
-First, you must add a BG high alert in xDrip+ as follows:
+Vous devez d'abord ajouter une alerte haute dans xDrip + comme ceci :
 
-![xDrip+ alert settings](../images/automate-xdrip1.png)
+![Réglages d'alerte xDrip+](../images/automate-xdrip1.png)
 
-Alert name: (Pay attention on it!) This name is essential for fireing the trigger. It should be unmistakeable and not similar to other alert names. Example: '180alarm' should not exist next to '80alarm'.
+Nom de l'alerte : (Faire attention à lui !) Ce nom est essentiel pour déclencher le script. Il doit être clair et ne pas être similaire à tous les autres noms d'alertes. Par exemple : '180alarm' ne doit pas exister à côté d'une alerte '80alarm'.
 
-Threshold: BG value that should fire the high alert.
+Seuil : valeur GLY qui doit déclencher l'alerte élevé.
 
-Default Snooze: Insert the duration you are planning to set for your low TT here, as the alert will come up again and maybe extend the duration of the low TT.
+Snooze par défaut : renseignez la durée souhaitée de votre CT ici, comme cela si après cette durée l'alerte revient à nouveau, cela prolongera peut-être la durée du CT faible.
 
-![xDrip+ alert settings](../images/automate-xdrip2.png)
+![Réglages d'alerte xDrip+](../images/automate-xdrip2.png)
 
 ##### Automate
 
-Secondly, download the Automate script <https://llamalab.com/automate/community/flows/27809>.
+Ensuite, téléchargez le script d'automatisation <https://llamalab.com/automate/community/flows/27809>.
 
-Edit the sling by tapping on the edit pencil > Flowchart
+Éditez le script en appuyant sur le crayon > Script
 
-![Automate sling](../images/automate-app3.png)
+![Script Automate](../images/automate-app3.png)
 
-Customize the workflow according to your wishes as follows:
+Personnaliser le script en fonction de vos souhaits comme ceci :
 
-Within the 'Notification posted?' trigger, you have to set the 'TITLE' to the name of your xDrip+ alert that should fire the trigger and add a * variable before and after that name.
+Dans le déclencheur 'Notification posted?', vous devez mettre dans 'Title' le nom de l'alerte xDrip+ qui doit déclencher le script et ajouter un caractère * avant et après ce nom.
 
-![Automate sling](../images/automate-app7.png)
+![Script Automate](../images/automate-app7.png)
 
-![Automate sling](../images/automate-app4.png)
+![Script Automate](../images/automate-app4.png)
 
-Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+URL de la requête : Votre URL-NS se terminant par /api/v1/treatments.json (par ex. https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
-Request content:
+Contenu de la requête :
 
-* targetTop / targetBottom: The low TT value (top and bottom should be the same value)
-* duration: The duration of the low TT (after time it will fallback to regular profile target). It is recommended that you use the same duration as in xDrip+ alert 'Standard snooze'
-* secret: Your API SHA1 hash. It is NOT your api key! You can convert your API key to SHA1 format at <http://www.sha1-online.com/>
+* targetTop / targetBottom : la valeur de la CT faible (les 2 doivent avoir la même valeur)
+* duration : la durée de votre CT faible (après cette durée AAPS reviendra à la cible standard de votre profil). Il est recommandé de mettre la même valeur que 'Snooze par défaut' de l'alerte xDrip+
+* secret : votre hachage SHA1 de l'API. Ce n'est PAS votre clé api ! Vouc pouvez convertir votre clé API au format SHA1 sur <http://www.sha1-online.com/>
 
-Save: Tap on 'Done' and on the hook
+Sauvegarde : Appuyez sur 'Save' après chaque modification de bloc puis sur le flèche de retour arrière
 
-Start sling: Tap on Play button
+Démarrer le script : Cliquez sur le bouton Start
 
-#### Example 3: To be added by you!!!
+#### Exemple 3: À vous de l'ajouter !!!
 
-Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSdocs repository](../make-a-PR.md).
+Veuillez ajouter d'autres scripts en remontant vos fichiers .flo file dans la communauté Automate (sous le mot clé 'Nightscout') et décrivez les ici en faisant un [Pull Request sur le répertoire AndroidAPSdocs](../make-a-PR.md).
 
-## If this, then that (IFTTT)
+## IF This, Then That (IFTTT)
 
-Feel free to add a Howto by PR...
+N'hésitez pas à ajouter une aide sur comment faire avec un PR...

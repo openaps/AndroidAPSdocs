@@ -135,7 +135,7 @@ Přečtěte si okno „Tip of Day“ a kliknutím na „Close“ je zavřete.
 ![Snímek 17](../images/Installation_Screenshot_17.png)
 
 * Super, máte vlastní kopii zdrojového kódu a jste připraveni na vytvoření Apk.
-* Nyní se blížíme k první chybové zprávě. Naštěstí nám Android Studio nabídne její řešení.
+* Nyní se blížíme k první chybové zprávě. Naštěstí nám Android Studio nabídne její řešení. (In case you do not receive the error message shown in next screenshot try closing and restarting Android Studio.)
 
 Klikněte na „Install missing platform(s) and sync project“, protože Android Studio potřebuje doinstalovat chybějící platformu.
 
@@ -287,9 +287,9 @@ Posledním krokem je klepnout na soubor APK, který jsem přijal přes Gmail, a 
 
 Ano, máte to a můžete začít s úvodní konfigurací AndroidAPS (CGM, inzulínová pumpa) atd.
 
-## Identify receiver if using xDrip
+## Identify receiver if using xDrip+
 
-[See xDrip page](../Configuration/xdrip#identify-receiver)
+[See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
 ## Poradce při potížích
 

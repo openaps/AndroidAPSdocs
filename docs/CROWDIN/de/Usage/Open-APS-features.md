@@ -1,5 +1,15 @@
 # OpenAPS Funktionen
 
+## Autosens
+
+* Autosens ist ein Algorithmus, der Blutzuckerabweichungen (positiv/negativ/neutral) untersucht.
+* Er versucht herauszufinden, wie empfindlich/resistent Du aufgrund dieser Abweichungen bist.
+* Die oref-Implementierung in **OpenAPS** läuft mit einer Kombination von Daten aus 24 und 8 Stunden. Es wird das "empfindlichere" Ergebnis der beiden Berechnungen verwendet.
+* AndroidAPS läuft nur mit 8 (um UAM zu aktivieren) oder 24 Stunden auf Wahl des Benutzers.
+* Das Wechseln einer Kanüle oder ein Profilwechsel setzt Autosens wieder auf 0 zurück.
+* Autosens passt Deine Basalrate und den ISF für Dich an (d.h. Nachahmen der Effekte einer Profilverschiebung).
+* Wenn Du über einen längeren Zeitraum kontinuierlich Kohlenhydrate zu Dir nimmst, ist Autosens während dieses Zeitraums weniger effektiv, da Kohlenhydrate aus den Berechnungen der BZ-Abweichungen ausgenommen werden.
+
 ## Super Micro Bolus (SMB)
 
 SMB steht für “super micro bolus” und ist die neueste OpenAPS-Funktion (aus 2018) im Rahmen des Oref1-Algorithmus. Im Gegensatz zu AMA arbeitet SMB nicht so stark mit temporären Basalraten, sondern hauptsächlich mit **kleinen Supermicroboli**. In Situationen, in denen AMA 1.0 IE Insulin über eine temporäre Basalrate zugeben würde, gibt SMB im **5-Minutentakt** mehrere Supermicroboli in kleinen Schritten ab, z.B. 0.4 IE, 0.3 IE, 0.2 IE und 0.1 IE. Gleichzeitig wird die laufende Basalrate aus Sicherheitsgründen für eine bestimmte Dauer auf 0 IE/h gesetzt, damit keine Überdosierung erfolgt (**“zero-temping”**). So kann das System den BZ schneller abfangen als mit der temporären Basalratenerhöhung bei AMA.
@@ -10,7 +20,7 @@ Die SMB-Funktion arbeitet mit einigen Sicherheitsmechanismen:
 
 1. Die größte einzelne SMB-Dosis kann nur der kleinste Wert sein aus:
     
-    * Wert, der der aktuellen Basalrate (wie sie autotune/autosens angepasst haben) für die unter “SMB-Basal-Limit in Minuten” voreingestellte Dauer entspricht, z.B. Basalmenge der kommenden 30 Minuten, oder
+    * Wert, der der aktuellen Basalrate (wie sie autosens angepasst haben) für die unter “SMB-Basal-Limit in Minuten” voreingestellte Dauer entspricht, z.B. Basalmenge der kommenden 30 Minuten, oder
     * die Hälfte der aktuell benötigten Insulinmenge oder
     * der verbleibende Anteil deines maxIOB-Wertes in den Einstellungen.
 
@@ -18,7 +28,7 @@ Die SMB-Funktion arbeitet mit einigen Sicherheitsmechanismen:
 
 3. Zusätzliche Berechnungen zur Vorhersage des Glukoseverlaufs, z.B. durch UAM (un-announced meals). UAM kann auch ohne manuelle Kohlenhydrat-Eingaben des Nutzers automatisch erkennen, dass die Glukosewerte auf Grund von Mahlzeiten, Adrenalin oder anderen Einflüssen siginifikant steigen und versuchen, dies mit SMB abzufangen. Dies funktioniert aber zur Sicherheit auch andersherum und kann bei unvorhergesehen schnellem Glukoseabfall den SMB früher stoppen. Deshalb sollte UAM bei SMB auch immer aktiv sein.
 
-**Du musst [Ziel (objective) 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) abgeschlossen haben, um SMB nutzen zu können.**
+**Du musst [Ziel (objective) 10](../Usage/Objectives#ziel-10-aktiviere-zusatzliche-oref1-funktionen-zum-taglichen-gebrauch-wie-z-b-den-super-micro-bolus-smb) begonnen haben, um SMB nutzen zu können.**
 
 Siehe dazu auch (beides in Englisch): [OpenAPS Dokumentation zu oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) und [Tim's Info zu SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
@@ -101,7 +111,7 @@ Standardwert: 30 Min.
 
 ### Aktiviere UAM
 
-Wenn du diese Option aktivierst, dann kann der SMB unangekündigte Mahlzeiten erkennen. Das ist besonders dann hilfreich, wenn du vergisst sie in AndroidAPS einzugeben, dich verschätzt und eine zu geringe KH-Menge eingegeben hast oder wenn eine fett-eiweisslastige Mahlzeit länger wirkt als gedacht. UAM kann also auch ohne manuelle Kohlenhydrat-Eingaben des Nutzers automatisch erkennen, dass die Glukosewerte auf Grund von Mahlzeiten, Adrenalin oder anderen Einflüssen siginifikant steigen und versuchen, dies mit SMB abzufangen. Dies funktioniert aber auch andersherum: wenn der Glukosewert schnell sinkt, wird der SMB früher gestoppt.
+Wenn du diese Option aktivierst, dann kann der SMB unangekündigte Mahlzeiten erkennen. Das ist besonders dann hilfreich, wenn du vergisst sie in AndroidAPS einzugeben, dich verschätzt und eine zu geringe KH-Menge eingegeben hast oder wenn eine fett-eiweisslastige Mahlzeit länger wirkt als gedacht. UAM kann also auch ohne manuelle Kohlenhydrat-Eingaben des Nutzers automatisch erkennen, dass die Glukosewerte auf Grund von Mahlzeiten, Adrenalin oder anderen Einflüssen signifikant steigen und versuchen, dies mit SMB abzufangen. Dies funktioniert aber auch andersherum: wenn der Glukosewert schnell sinkt, wird der SMB früher gestoppt.
 
 **Deshalb sollte UAM bei SMB auch immer aktiv sein.**
 
@@ -131,7 +141,7 @@ Standardwert: 4 (sollte nur in Ausnahmefällen geändert werden und wenn du weis
 
 AMA steht für “advanced meal assist” und ist eine OpenAPS-Funktion aus 2017 (Oref0). Nachdem du dir einen Bolus gegeben hast, darf AMA schneller eine höhere temporäre Basalrate wählen, vorausgesetzt du gibst die Kohlenhydrate verlässlich ein.
 
-**Du musst das [Ziel (objective) 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) abgeschlossen haben, um dieses Feature nutzen zu können.**
+**Du musst das [Ziel (objective) 9](../Usage/Objectives#ziel-9-aktiviere-zusatzliche-oref0-funktionen-zum-taglichen-gebrauch-wie-z-b-den-advanced-meal-assist-ama) begonnen haben, um dieses Feature nutzen zu können.**
 
 Siehe auch: [OpenAPS-Dokumentation (englisch)](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
@@ -139,7 +149,7 @@ Siehe auch: [OpenAPS-Dokumentation (englisch)](http://openaps.readthedocs.io/en/
 
 Diese Sicherheitseinstellung hindert AndroidAPS daran, jemals eine gefährlich hohe Basalrate zu setzen und begrenzt die temporäre Basalrate auf x IE/h. Es wird empfohlen, hier etwas vernünftiges einzugeben. Eine gute Empfehlung ist, den höchsten stündlichen Basalratenwert in deinem Profil zu verwenden und diesen mit 4 oder mindestens mit 3 zu multiplizieren. Beispiel: wenn der höchste stündliche Basalratenwert in deinem Profil 1.0 IE/h ist, kannst du diesen mit 4 multiplizieren, wodurch du einen Wert von 4 IE/h erhältst, so dass du "4" als Sicherheitseinstellung setzen kannst.
 
-Du kannst aber keinen beliebigen Wert wählen: AAPS begrenzt als “hard limit” den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Das "hard limit" für maxIOB ist bei AMA niederiger als bei SMB. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höchsten.
+Du kannst aber keinen beliebigen Wert wählen: AAPS begrenzt als “hard limit” den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Das "hard limit" für maxIOB ist bei AMA niedriger als bei SMB. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höchsten.
 
 AndroidAPS hat folgende "hard limits":
 
@@ -152,7 +162,7 @@ AndroidAPS hat folgende "hard limits":
 
 Dieser Parameter begrenzt das maximale Basal-IOB, bis zu dem AndroidAPS noch funktioniert. Wenn dieses IOB höher ist, dann wird kein weiteres Basalinsulin mehr abgegeben, bis das Basal-IOB wieder unter dem Grenzwert liegt.
 
-Der Standardwert ist 2, aber du solltest diesen Parameter in kleinen Schritten erhöhen um zu sehen, wie stark sich das bei dir auswirkt und welcher Wert am besten passt. Das ist sehr individuell und hängt stark vom durchschnittlichen Gesamtinsulinbedarf ab (total daily dose = TDD). Zur Sicherheit gibt es ein Limit, das auf dem Patientenalter basiert. Das "hard limit" für maxIOB ist bei AMA niederiger als bei SMB.
+Der Standardwert ist 2, aber du solltest diesen Parameter in kleinen Schritten erhöhen um zu sehen, wie stark sich das bei dir auswirkt und welcher Wert am besten passt. Das ist sehr individuell und hängt stark vom durchschnittlichen Gesamtinsulinbedarf ab (total daily dose = TDD). Zur Sicherheit gibt es ein Limit, das auf dem Patientenalter basiert. Das "hard limit" für maxIOB ist bei AMA niedriger als bei SMB.
 
 * Kind: 3
 * Teenager: 5
@@ -171,13 +181,13 @@ Wenn du diese Option aktivierst, dann kann Autosense auch Ziele anpassen (neben 
 
 **Verwende immer das kurze durchschnittliche Delta statt einfacher Werte.** Wenn du dies aktivierst, dann verwendet AndroidAPS für die Berechnungen statt des aktuellen Glukosewertes den durchschnittlichen Glukosewert der letzten 15 Minuten (= kurzes durchschnittliches Delta), was normalerweise dem Durchschnittswert der letzten drei Werte entspricht. Dies hilft AndroidAPS dabei, mit Werten aus verrauschten Quellen wie xDrip+ und Libre stabiler zu arbeiten.
 
-**Max daily safety multiplier** Dies ist eine wichtige Sicherheitseinstellung. Der voreingestellte Wert (der nur in Ausnahmefällen geändert werden muss) ist 3. Das bedeutet, dass AndroidAPS daran gehindert wird, eine temporäre Basalrate zu setzen, die mehr als dem dreifachen Wert der höchsten stündlichen Rate entspricht, die in der Pumpe gesetzt ist. Wenn es aktiviert ist, wird der Wert von Autotune ermittelt. Beispiel: Wenn die höchste stündliche Basalrate 1.0 U/h ist und der Sicherheitsmultiplikator des Basalhöchstwertes auf 3 gesetzt ist, dann kann AndroidAPS die temporäre Basalrate höchstens auf einen Wert von 3.0 IE setzen.
+**Max daily safety multiplier** Dies ist eine wichtige Sicherheitseinstellung. Der voreingestellte Wert (der nur in Ausnahmefällen geändert werden muss) ist 3. Das bedeutet, dass AndroidAPS daran gehindert wird, eine temporäre Basalrate zu setzen, die mehr als dem dreifachen Wert der höchsten stündlichen Rate entspricht, die in der Pumpe gesetzt ist. Beispiel: Wenn die höchste stündliche Basalrate 1.0 U/h ist und der Sicherheitsmultiplikator des Basalhöchstwertes auf 3 gesetzt ist, dann kann AndroidAPS die temporäre Basalrate höchstens auf einen Wert von 3.0 IE setzen.
 
-Standardwert: 3 (sollte nur in Ausnahmefällen geändert werden und wenn du weisst, was das bedeutet)
+Standardwert: 3 (sollte nur in Ausnahmefällen geändert werden und wenn du weißt, was das bedeutet)
 
-**Current Basal safety multiplier** Dies ist eine weitere wichtige Sicherheitseinstellung. Der voreingestellte Wert (der nur in Ausnahmefällen geändert werden muss) ist 4. Das bedeutet, dass AndroidAPS daran gehindert wird, eine temporäre Basalrate zu setzen, die mehr als dem vierfachen Wert der aktuellen stündlichen Rate entspricht, die in der Pumpe gesetzt ist. Wenn es aktiviert ist, wird der Wert von Autotune ermittelt.
+**Current Basal safety multiplier** Dies ist eine weitere wichtige Sicherheitseinstellung. Der voreingestellte Wert (der nur in Ausnahmefällen geändert werden muss) ist 4. Das bedeutet, dass AndroidAPS daran gehindert wird, eine temporäre Basalrate zu setzen, die mehr als dem vierfachen Wert der aktuellen stündlichen Basalrate entspricht, die in der Pumpe gesetzt ist.
 
-Standardwert: 4 (sollte nur in Ausnahmefällen geändert werden und wenn du weisst, was das bedeutet)
+Standardwert: 4 (sollte nur in Ausnahmefällen geändert werden und wenn du weißt, was das bedeutet)
 
 **Bolus snooze dia divisor** Die Funktion “Bolus snooze” wird dann aktiviert, wenn du einen Essensbolus gegeben hast. AAPS reagiert nach den Mahlzeiten für die Dauer des DIA geteilt durch den "bolus-snooze" Parameter nicht mit einer niedrigen temporären Basalrate. Der Standardwert ist 2. Dies bedeutet: Bei einem DIA von 5 Stunden wird der “Bolus snooze” über 5 : 2 = 2,5 Stunden geradlinig auslaufen.
 
@@ -191,7 +201,7 @@ Standardwert: 2
 
 Diese Sicherheitseinstellung hindert AndroidAPS daran, jemals eine gefährlich hohe Basalrate zu setzen und begrenzt die temporäre Basalrate auf x IE/h. Es wird empfohlen, hier etwas vernünftiges einzugeben. Eine gute Empfehlung ist, den höchsten stündlichen Basalratenwert in deinem Profil zu verwenden und diesen mit 4 oder mindestens mit 3 zu multiplizieren. Beispiel: wenn der höchste stündliche Basalratenwert in deinem Profil 1.0 IE/h ist, kannst du diesen mit 4 multiplizieren, wodurch du einen Wert von 4 IE/h erhältst, so dass du "4" als Sicherheitseinstellung setzen kannst.
 
-Du kannst aber keinen beliebigen Wert wählen: AAPS begrenzt als “hard limit” den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Das "hard limit" für maxIOB ist bei MA niederiger als bei SMB. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höchsten.
+Du kannst aber keinen beliebigen Wert wählen: AAPS begrenzt als “hard limit” den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Das "hard limit" für maxIOB ist bei MA niedriger als bei SMB. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höchsten.
 
 AndroidAPS hat folgende "hard limits":
 
@@ -204,7 +214,7 @@ AndroidAPS hat folgende "hard limits":
 
 Dieser Parameter begrenzt das maximale Basal-IOB, bis zu dem AndroidAPS noch funktioniert. Wenn dieses IOB höher ist, dann wird kein weiteres Basalinsulin mehr abgegeben, bis das Basal-IOB wieder unter dem Grenzwert liegt.
 
-Der Standardwert ist 2, aber du solltest diesen Parameter in kleinen Schritten erhöhen um zu sehen, wie stark sich das bei dir auswirkt und welcher Wert am besten passt. Das ist sehr individuell und hängt stark vom durchschnittlichen Gesamtinsulinbedarf ab (total daily dose = TDD). Zur Sicherheit gibt es ein Limit, das auf dem Patientenalter basiert. Das "hard limit" für maxIOB ist bei MA niederiger als bei SMB.
+Der Standardwert ist 2, aber du solltest diesen Parameter in kleinen Schritten erhöhen um zu sehen, wie stark sich das bei dir auswirkt und welcher Wert am besten passt. Das ist sehr individuell und hängt stark vom durchschnittlichen Gesamtinsulinbedarf ab (total daily dose = TDD). Zur Sicherheit gibt es ein Limit, das auf dem Patientenalter basiert. Das "hard limit" für maxIOB ist bei MA niedriger als bei SMB.
 
 * Kind: 3
 * Teenager: 5

@@ -6,7 +6,7 @@
 
 * In AndroidAPS go to Config Builder and select 'DanaRS'
 
-* 오른쪽 상단에 있는 점 3개를 눌러 메뉴를 선택하세요. 설정을 선택하세요.
+* Select Menu by tapping the 3 dots in the top right. Select Preferences.
 
 * Select DanaRS Pair New Pump, and click your DanaRS serial number.
   
@@ -25,7 +25,7 @@
 
 * Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
 
-* 펌프에서 확장Bolus를 활성화하세요.
+* Enable extended boluses on pump
 
 ## Dana RS specific errors
 

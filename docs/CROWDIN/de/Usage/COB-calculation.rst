@@ -9,7 +9,7 @@ Oref0 / Oref1
 
 Nicht absorbierte Kohlenhydrate werden nach der eingestellten Zeit verworfen, werden also bei Berechnungen nicht mehr berücksichtigt
 
-.. image:: ../images/cob_oref0_orange.png
+.. image:: ../images/cob_oref0_orange_II.png
   :alt: Oref0 / Oref1
 
 AAPS, WeightedAverage
@@ -17,7 +17,7 @@ AAPS, WeightedAverage
 
 Die Kohlenhydratresorption wird auf Basis der angegebenen Zeit berechnet, so dass nach deren Ablauf  `COB = 0` gilt.
 
-.. image:: ../images/cob_aaps2_orange.png
+.. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, WeightedAverage
 
 Falls die minimale Kohlenhydrat-Resorption (min_5m_carbimpact) statt einem aus den Entwicklungen des BZ berechneten Wert genutzt wird, wird in der COB-Kurve ein orangener Punkt angezeigt.
@@ -52,3 +52,7 @@ Warum erkennt der Algorithmus COB nicht richtig?
 - Sportliche Aktivität oder Bewegung nach der vorangegangenen Mahlzeit.
 - Deine I:C-Einstellung ("BE-Faktor") sollte angepasst werden.
 - Dein Wert für min_5m_carbimpact ist falsch (für SMB wird 8 empfohlen, 3 für AMA).
+
+Manuelle Korrektur der eingegebenen Kohlenhydrate
+==================================================
+Wenn Du die Menge der Kohlenhydrate über- oder unterschätzt hast, kannst Du diese über den Behandlungs-Tab und das Careportal wie `hier beschrieben <../Getting-Started/Screenshots.html#kohlenhydrat-korrektur>`_korrigieren.

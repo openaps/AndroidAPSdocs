@@ -33,10 +33,10 @@ Word lid van de belangrijkste [AndroidAPS Facebook groep](https://www.facebook.c
 
 ### Duitsland
 
-* [Looped-DE](https://www.facebook.com/groups/loopedDE/): Duits sprekende gebruikers van OpenAPS, Loop en AndroidAPS
-* [Freestyle Libre Freaks](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre als CGM/FGM
-* [NightscoutDE](https://www.facebook.com/groups/nightscoutDE/)
-* [Looper bijeenkomsten Duitsland & Oostenrijk](http://loopertreffen.androidaps.de)
+* [Open Source Looper Community](https://de.loopercommunity.org/): German looper community for Open Source Loop, diabetes in general, communication, support and local meet-up
+* [Looper Meetings Germany, Austria & Switzerland](http://loopertreffen.androidaps.de)
+* [Freestyle Libre Freaks Facebook group](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
+* [NightscoutDE Facebook group](https://www.facebook.com/groups/nightscoutDE/)
 
 ### Netherlands
 

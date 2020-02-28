@@ -1,5 +1,15 @@
 # Funkce OpenAPS
 
+## Autosens
+
+* Autosens is a algorithm which looks at blood glucose deviations (positive/negative/neutral).
+* It will try and figure out how sensitive/resistant you are based on these deviations.
+* The oref implementation in **OpenAPS** runs off a combination of 24 and 8 hours worth of data. It uses either one which is more sensitive.
+* AndroidAPS only runs off 8 (to enable UAM) or 24 hour as a user option.
+* Changing a cannula or changing a profile will reset Autosens ratio back to 0%.
+* Autosens adjusts your basal and ISF for you (i.e.: mimicking what a Profile shift does).
+* If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
+
 ## Super Micro Bolus (SMB)
 
 SMB je zkratka Super Micro Bolus a jde o nejnovější funkci OpenAPS (od r. 2018) pracující s algoritmem Oref1. V porovnání se starší funkcí označovanou jako AMA je hlavní rozdíl v tom, že při řízení hodnoty glykémie pomocí dávkování inzulínu nepoužívá změny bazálního inzulínu, ale především velmi malé bolusové dávky (mikrobolusy). V situaci, kdy by AMA přidala 1 U inzulínu jako dočasné zvýšení bazální dávky, SMB aplikuje jednotlivě několik mikrobolusů v **5minutových intervalech**, např. 0,4 U, 0,3 U, 0,2 U a 0,1 U. Z bezpečnostních důvodů pak ve stejném okamžiku SMB nastaví na určitou dobu dočasný bazál na 0 U/h jako prevenci proti nadměrné dávce inzulínu. Tento postup umožňuje ovlivnit hodnotu glykémie rychleji než při změně dávkování bazálního inzulínu, kterou používá AMA.
@@ -10,7 +20,7 @@ SMB zahrnuje určité bezpečnostní mechanismy:
 
 1. Největší jednotlivý mikrobolus může být pouze nejmenší hodnota z:
     
-    * hodnota aktuálního bazálního inzulínu (upravená pomocí autotune a/nebo automatické detekce citlivosti) pro dobu přednastavenou ve volbě „Maximální počet minut bazálu, ke kterým se limituje SMB“, např. bazální dávka inzulínu pro následujících 30 minut, nebo
+    * value corresponding to the current basal rate (as adjusted by autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
     * polovina aktuálně požadované dávky inzulínu, nebo
     * zbývající část nastavené hodnoty maxIOB.
 
@@ -18,7 +28,7 @@ SMB zahrnuje určité bezpečnostní mechanismy:
 
 3. Dodatečné kalkulace zaměřené na odhad vývoje glykémie pomocí funkce UAM (detekce neoznámených jídel). I bez zadání hodnoty sacharidů do systému detekuje UAM automaticky výrazný vzestup glykémie způsobené jídlem, adrenalinem nebo jinými vlivy a pomocí SMB na ně reaguje. V zájmu zachování bezpečnosti to funguje i opačně a deaktivuje SMB dříve, pokud dojde k neočekávanému poklesu glykémie. To je důvod, proč by funkce UAM měla být při používání SMB vždy aktivní.
 
-**You must have completed [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
+**You must have started [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
 
 Viz také: [Dokumentace k OpenAPS pro oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) a [Timovy informace o SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
@@ -34,10 +44,10 @@ Není však možné nastavit jakoukoliv hodnotu. AAPS stanovuje pevný limit vyc
 
 Limity jsou nastaveny takto:
 
-* Děti: 2
+* Child: 2
 * Dospívající: 5
-* Dospělí: 10
-* Dospělí s vyšší rezistencí na inzulín: 12
+* Adult: 10
+* Insulin-resistant adult: 12
 
 ### Nastavenou maximální hodnotu IOB nelze překročit (OpenAPS "max-iob")
 
@@ -50,10 +60,10 @@ Při použití OpenAPS SMB se maximální IOB počítá jinak než s OpenAPS AMA
 
 Při hledání ideálního nastavení buďte opatrní a trpěliví a hodnoty měňte postupně. Nastavení je individuální a mj. vychází i z výše celkové denní dávky inzulínu. Z bezpečnostních důvodů jsou nastaveny limity vycházející z věku pacienta. Pevný limit pro maximální IOB je u SMB v porovnání s AMA vyšší.
 
-* Děti: 3
-* Dospívající: 7
-* Dospělí: 12
-* Dospělí s vyšší rezistencí na inzulín: 25
+* Child: 3
+* Teenage: 7
+* Adult: 12
+* Insulin resistant adult: 25
 
 Viz také [Dokumentace k OpenAPS SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
 
@@ -131,7 +141,7 @@ Výchozí hodnota: 4 (neměňte, pokud si opravdu nejste jisti tím, co děláte
 
 AMA je zkratka pro "advanced meal assist", což je funkce OpenAPS od roku 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) umožňuje systému rychleji reagovat po bolusu na jídlo, pokud zadáte sacharidy správně.
 
-**You will need to have completed [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature**
+**You will need to have started [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature**
 
 Více informací najdete v [dokumentaci k OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
@@ -143,9 +153,9 @@ Nemůžete si vybrat libovolnou hodnotu: Z bezpečnostních důvodů je tato hod
 
 Pevně zadané parametry v AndroidAPS jsou:
 
-* Děti: 2
+* Child: 2
 * Dospívající: 5
-* Dospělí: 10
+* Adult: 10
 * Dospělí s vyšší rezistencí na inzulín: 12
 
 ### Maximální hodnota IOB, kterou OpenAPS může vydat \[U\] (OpenAPS "max-iob")
@@ -154,9 +164,9 @@ Tento parametr omezuje maximální bazální IOB, kde AndroidAPS stále funguje.
 
 Výchozí hodnota je 2, tento parametr byste však měli měnit postupně, abyste viděli, jak velký má efekt a která hodnota se hodí nejlépe. Nastavení je individuální a mj. vychází i z výše celkové denní dávky inzulínu. Z bezpečnostních důvodů jsou nastaveny limity vycházející z věku pacienta. 'Pevný limit' pro maxIOB jev algoritmu AMA nižší než v SMB.
 
-* Děti: 3
+* Child: 3
 * Dospívající: 5
-* Dospělí: 7
+* Adult: 7
 * Dospělí s vyšší rezistencí na inzulín: 12
 
 ### Povolit AMA Autosense
@@ -171,11 +181,11 @@ Pokud máte tuto možnost povolenou, může autosense upravovat i dočasné cíl
 
 **Vždy používat krátkodobý průměrný rozdíl glykémií místo rozdílu posledních 2 hodnot** Jestliže povolíte tuto funkci, AndroidAPS bude používat krátkodobý průměrný rozdíl (delta) glykémií za posledních 15 minut, což je obvykle průměr z posledních tří hodnot. AndroidAPS tak bude moci pracovat stabilněji při použití zarušených zdrojů glykémie, jako např. xDrip+ nebo Libre.
 
-**Max. násobitel denního nejvyššího bazálu** Toto je důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně nebude potřeba upravovat) je 3. To znamená, že AndroidAPS nikdy nebude moci nastavit dočasnou bazální dávku, která je vyšší než 3x nejvyšší bazální dávka ve vašem profilu naprogramovaném v pumpě nebo, je-li tato možnost povolena, která je určena pomocí autotune. Příklad: jestliže vaše nejvyšší bazální dávka v profilu je 1,0 U/h a max. násobitel denního nejvyššího bazálu je 3, pak může AndroidAPS nastavit maximální dočasný bazál 3,0 U/h (= 3 x 1,0 U/h).
+**Max. násobitel denního nejvyššího bazálu** Toto je důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně nebude potřeba upravovat) je 3. To znamená, že AndroidAPS nikdy nebude moci nastavit dočasnou bazální dávku, která je vyšší než 3x nejvyšší bazální dávka ve vašem profilu naprogramovaném v pumpě. Příklad: jestliže vaše nejvyšší bazální dávka v profilu je 1,0 U/h a max. násobitel denního nejvyššího bazálu je 3, pak může AndroidAPS nastavit maximální dočasný bazál 3,0 U/h (= 3 x 1,0 U/h).
 
 Výchozí hodnota: 3 (neměňte, pokud si opravdu nejste jisti tím, co děláte)
 
-**Max. násobitel současného bazálu** Toto je další důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně také nebude potřeba upravovat) je 4. To znamená, že AndroidAPS nikdy nebude moci nastavit dočasnou bazální dávku, která je vyšší než 4x aktuální bazální dávka ve vašem profilu naprogramovaném v pumpě nebo, je-li tato možnost povolena, která je určena pomocí autotune.
+**Max. násobitel současného bazálu** Toto je další důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně také nebude potřeba upravovat) je 4. To znamená, že AndroidAPS nikdy nebude moci nastavit dočasnou bazální dávku, která je vyšší než 4x aktuální bazální dávka ve vašem profilu naprogramovaném v pumpě.
 
 Výchozí hodnota: 4 (neměňte, pokud si opravdu nejste jisti tím, co děláte)
 
@@ -195,9 +205,9 @@ Nemůžete si vybrat libovolnou hodnotu: Z bezpečnostních důvodů je tato hod
 
 Pevně zadané parametry v AndroidAPS jsou:
 
-* Děti: 2
+* Child: 2
 * Dospívající: 5
-* Dospělí: 10
+* Adult: 10
 * Dospělí s vyšší rezistencí na inzulín: 12
 
 ### Maximální hodnota IOB, kterou OpenAPS může vydat \[U\] (OpenAPS "max-iob")
@@ -206,9 +216,9 @@ Tento parametr omezuje maximální bazální IOB, kde AndroidAPS stále funguje.
 
 Výchozí hodnota je 2, tento parametr byste však měli měnit postupně, abyste viděli, jak velký má efekt a která hodnota se hodí nejlépe. Nastavení je individuální a mj. vychází i z výše celkové denní dávky inzulínu. Z bezpečnostních důvodů jsou nastaveny limity vycházející z věku pacienta. 'Pevný limit' pro maxIOB jev algoritmu MA nižší než v SMB.
 
-* Děti: 3
+* Child: 3
 * Dospívající: 5
-* Dospělí: 7
+* Adult: 7
 * Dospělí s vyšší rezistencí na inzulín: 12
 
 ### Rozšířené nastavení

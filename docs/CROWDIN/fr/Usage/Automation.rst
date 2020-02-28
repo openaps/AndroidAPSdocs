@@ -77,10 +77,23 @@ Après avoir ajouté votre action, **n'oubliez pas de modifier les valeurs par d
 .. image:: ../images/Automation_Default_V2_5.png
   :alt: Automatisation defaut vs. choisir valeur
 
-Bonnes pratiques
+Bonnes pratiques et avertissements
 ==================================================
 * Lorsque vous commencez à utiliser l'automatisation ou que vous créez une nouvelle règle, ajoutez une notification jusqu'à ce que vous soyez certain que la règle fonctionne correctement.
 * Observez les résultats de la règle.
+* Essayez de ne pas rendre les conditions trop faciles (par ex.: SI Glycémie > 80 mg/dl ET Glycémie < 180 mg/dl)
+
+    **C'est doublement important si l'action est un changement de profil!**
+ 
+* Essayez et privilégiez l'utilisation de Cibles Temp. plutôt que des Changements de Profil. Les Cibles temporaires ne réinitialisent pas `Autosens <../Usage/Open-APS-features.html#autosens>`_ à 0.
+* Assurez-vous que les cchangements de profil sont faits avec parcimonie et de préférence en dernier recours.
+
+    * Les changements de profil rendent `Autosens <../Usage/Open-APS-features.html#autosens>`_ inutilisable pendant au minimum 6 heures.
+
+* Un changement de profil ne remettra pas le profil standard initial
+
+    * Vous devez faire une autre règle pour remettre le profil initial ou le faire manuellement !
+    * Il y a un risque d'hypoglycémie plus élevé si le changement de profil n'expire pas ou si le profil standard n'est pas remis en place.
 
 Exemples
 ==================================================

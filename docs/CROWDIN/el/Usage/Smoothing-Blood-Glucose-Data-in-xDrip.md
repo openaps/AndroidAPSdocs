@@ -8,7 +8,7 @@
 
 ## xDrip+ με Dexcom G5
 
-Τα αρκετά καλά δεδομένα παρέχονται μόνο αν χρησιμοποιείτε συλλέκτη xDrip G5 'OB1 σε μητρική λειτουργία'.
+Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
 ## xDrip+ με Freestyle Libre
 

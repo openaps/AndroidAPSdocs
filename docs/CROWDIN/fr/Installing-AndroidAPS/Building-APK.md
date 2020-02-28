@@ -135,7 +135,7 @@ Lisez et fermez l'écran "Tip of Day" d'Android Studio en appuyant sur "Close".
 ![Capture d'écran 17](../images/Installation_Screenshot_17.png)
 
 * Excellent, vous avez votre propre copie du code source et êtes prêt à démarrer la compilation.
-* Maintenant, nous approchons de notre premier message d'erreur. Heureusement, Android Studio nous donnera directement la solution pour cela.
+* Maintenant, nous approchons de notre premier message d'erreur. Heureusement, Android Studio nous donnera directement la solution pour cela. (Dans le cas où vous ne recevez pas le message d'erreur affiché dans la prochaine capture d'écran, essayez de fermer et redémarrer Android Studio.)
 
 Cliquez sur "Install missing platform(s) and sync project" car Android Studio a besoin d'installer une plateforme manquante.
 
@@ -287,9 +287,9 @@ La dernière étape consiste à cliquer sur le fichier APK obtenu via Gmail et i
 
 Yes, vous l'avez et pouvez maintenant commencer à configurer AndroidAPS pour votre utilisation (MGC, pompe à insuline), etc.
 
-## Identifier le récepteur si vous utilisez xDrip
+## Identifier le récepteur si vous utilisez xDrip+
 
-[Voir la page xDrip](../Configuration/xdrip#identify-receiver)
+[Voir la page xDrip+](../Configuration/xdrip#identifier-le-recepteur)
 
 ## Dépannage
 

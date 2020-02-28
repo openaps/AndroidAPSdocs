@@ -6,11 +6,12 @@
 
 ## Důležité poznámky
 
-* U verze 2.3 je potřeba pro aktualizaci použít git. Aktualizace pomocí zip souboru již nefunguje.
-* Chcete-li sestavit apk, použijte [ Android Studio verze 3.5.1 ](https://developer.android.com/studio/) nebo novější.
+* Please update as soon as possible after a new release is available. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes.html#release-notes) about the new version.
+* As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
+* Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
 * [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.5.1.
-* Používáte-li xDrip, ujistěte se, že máte zapnutou volbu [identifikovat příjemce ](../Configuration/xdrip#identify-receiver).
-* Používáte-li Dexcom G6 [ s upravenou Dexcom aplikací ](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app), musíte si stáhnout verzi z adresáře [ 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
+* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Rychlý postup pro pokročilé uživatele
 

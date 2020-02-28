@@ -8,7 +8,7 @@ Cuando se utiliza Dexcom G5 App (parcheado), los datos de BG son fluidos y consi
 
 ## xDrip+ con Dexcom G5
 
-Los datos suavizados suficientes sólo se entregan si usa xDrip G5 'OB1 colector en modo nativo'.
+Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
 ## xDrip+ con Freestyle Libre
 

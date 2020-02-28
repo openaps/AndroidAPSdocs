@@ -1,4 +1,4 @@
-# Συμβουλές για βασική χρήση της AccuChek Combo
+# Accu-Chek Combo Tips for basic usage
 
 ## Πώς να εξασφαλίσετε ομαλές λειτουργίες
 
@@ -13,7 +13,7 @@
 ### Ενεργοποιήστε τον συναγερμό μη προσιτής αντλίας
 
 * Στο AndroidAPS, μεταβείτε στο ** Ρυθμίσεις / Τοπικοί **συναγερμοί και ενεργοποιήστε** το συναγερμό όταν η αντλία **δεν είναι προσβάσιμη ορίστε το όριο [Min] **για 31 ** λεπτά. 
-* Αυτό θα σας δώσει αρκετό χρόνο για να μην ενεργοποιείται ο συναγερμός όταν βγαίνετε από το δωμάτιο, ενώ το τηλέφωνό σας παραμένει στο γραφείο, αλλά σας ενημερώνει εάν δεν είναι δυνατή η πρόσβαση στην αντλία για διάστημα που υπερβαίνει τη διάρκεια ενός προσωρινού βασικού ρυθμού.
+* This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
 
 ### Επαναφέρετε την προσβασιμότητα της αντλίας
 
@@ -41,12 +41,12 @@
 * Μετά από συναγερμό ** χαμηλής μπαταρίας **, η μπαταρία θα πρέπει να αλλάξει το συντομότερο δυνατόν ώστε να έχει πάντα αρκετή ενέργεια για αξιόπιστη επικοινωνία Bluetooth με το smartphone, ακόμα και αν το τηλέφωνο βρίσκεται σε ευρύτερη απόσταση από την αντλία.
 * Ακόμα και μετά από συναγερμό ** χαμηλής μπαταρίας **, η μπαταρία μπορεί να χρησιμοποιηθεί για μεγάλο χρονικό διάστημα. Ωστόσο, συνιστάται να έχετε πάντα μαζί σας μια νέα μπαταρία μετά από ένα συναγερμό χαμηλής μπαταρίας.
 * Για να το κάνετε αυτό, πατήστε παρατεταμένα το ** Κλειστό κύκλωμα ** στην κύρια οθόνη και επιλέξτε **κύκλωμα αναστελμένο για 1 ώρα **. 
-* Περιμένετε να επικοινωνήσει η αντλία με το AndroidAPS και το λογότυπο Bluetooth στην αντλία να έχει ξεθωριάσει.
+* Wait for the pump to communicate with the phone and the Bluetooth logo on the pump has faded.
 
 ![Η δυνατότητα Bluetooth είναι ενεργοποιημένη](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/Compo.png?raw=true)
 
 * Απελευθερώστε το κλείδωμα πλήκτρων στην αντλία, θέστε την αντλία σε λειτουργία διακοπής, επιβεβαιώστε πιθανώς ακυρωμένο προσωρινό βασικό ρυθμό και αλλάξτε την μπαταρία.
-* Στη συνέχεια, τοποθετήστε την αντλία πίσω στη λειτουργία λειτουργίας, επιλέξτε ** Συνέχιση ** όταν πιέσετε την ** Αναστολή** στην κύρια οθόνη.
+* Then put the pump back in run mode select **Resume** when long-pressing on **Suspended** on the main screen.
 * Το AndroidAPS θα επαναφέρει τον απαραίτητο προσωρινό βασικό ρυθμό με την άφιξη της επόμενης τιμής σακχάρου στο αίμα. 
 
 ### Τύπος μπαταρίας και αιτίες βραχείας διάρκειας ζωής της μπαταρίας
@@ -61,9 +61,9 @@
 * **Power One Alkaline** (Varta) από το πακέτο υπηρεσιών: 2 έως 4 εβδομάδες
 * **Eneloop rechargable** μπαταρίες (BK-3MCCE): 1 έως 3 εβδομάδες
 
-Εάν η διάρκεια ζωής της μπαταρίας σας είναι σημαντικά μικρότερη από τις περιοχές που αναφέρονται παραπάνω, ελέγξτε τις ακόλουθες πιθανές αιτίες:
+If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
 
-* Η πιο πρόσφατη έκδοση (Μάρτιος 2018) της [ εφαρμογής ruffy](https://github.com/MilosKozak/ruffy) βελτίωσε σημαντικά τη διάρκεια ζωής της μπαταρίας της αντλίας. Βεβαιωθείτε ότι βρίσκεστε σε αυτή την έκδοση αν έχετε προβλήματα με μικρή διάρκεια ζωής της μπαταρίας.
+* The latest version (March 2018) of the [ruffy App](https://github.com/MilosKozak/ruffy) significantly improved pump battery lifetime. Βεβαιωθείτε ότι βρίσκεστε σε αυτή την έκδοση αν έχετε προβλήματα με μικρή διάρκεια ζωής της μπαταρίας.
 * Υπάρχουν ορισμένες παραλλαγές του καπακιού μπαταρίας της αντλίας Combo, το οποίο βραχυκυκλώνει εν μέρει τις μπαταρίες και τις αποστραγγίζει γρήγορα. Τα καπάκια χωρίς αυτό το πρόβλημα μπορούν να αναγνωριστούν από τις χρυσές μεταλλικές επαφές.
 * Εάν το ρολόι της αντλίας δεν «επιβιώσει» από μια μικρή αλλαγή μπαταρίας, είναι πιθανό να σπάσει ο πυκνωτής ο οποίος κρατάει το ρολόι σε λειτουργία κατά τη διάρκεια μιας σύντομης διακοπής ρεύματος. Σε αυτή την περίπτωση, μόνο η αντικατάσταση της αντλίας από τη Roche θα βοηθήσει, πράγμα που δεν αποτελεί πρόβλημα κατά τη διάρκεια της περιόδου εγγύησης. 
 * Το υλικό και το λογισμικό smartphone (λειτουργικό σύστημα Android και στοίβα bluetooth) επηρεάζουν επίσης τη διάρκεια ζωής της μπαταρίας της αντλίας, παρόλο που οι ακριβείς παράγοντες δεν είναι ακόμη πλήρως γνωστοί. Εάν έχετε την ευκαιρία, δοκιμάστε ένα άλλο smartphone και συγκρίνετε τη διάρκεια ζωής της μπαταρίας.
@@ -78,15 +78,15 @@
 
 Ο αλγόριθμος OpenAPS δεν υποστηρίζει έναν παράλληλο εκτεταμένο bolus ή πολλαπλό bolus. Αλλά μια παρόμοια θεραπεία μπορεί να επιτευχθεί με την ακόλουθη εναλλακτική λύση:
 
-* Εισάγετε τους υδατάνθρακες, αλλά μην κάνετε bolus για αυτό. Ο αλγόριθμος του κυκλώματος θα αντιδράσει πιο επιθετικά. Αν χρειαστεί, χρησιμοποιήστε **eCarbs**(εκτεταμένοι υδατάνθρακες).
+* Εισάγετε τους υδατάνθρακες, αλλά μην κάνετε bolus για αυτό. The loop algorithm will react more aggressively. Αν χρειαστεί, χρησιμοποιήστε **eCarbs**(εκτεταμένοι υδατάνθρακες).
 
-* Εάν μπείτε στον πειρασμό να χρησιμοποιήσετε απλώς τον εκτεταμένο ή πολλαπλό bolus απευθείας στην αντλία, το AndroidAPS θα σας τιμωρήσει με την απενεργοποίηση του κλειστού βρόχου για τις επόμενες έξι ώρες για να βεβαιωθεί ότι δεν υπολογίζεται η υπέρμετρη δόση ινσουλίνης.
+* If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
 
 ![Απενεργοποιημένο κύκλωμα μετά από πολλαπλό bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
 
 ## Συναγερμοί κατά την χορήγηση bolus
 
-* If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical numer of insulin units. If you really want to bolus the same inuslin twice in short succession, just wait two more minutes and then deliver the bolus again. If the first bolus has been interruped or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
+* If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical number of insulin units. If you really want to bolus the same insulin twice in short succession, just wait two more minutes and then deliver the bolus again. If the first bolus has been interrupted or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
 * Background is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Εδώ πρέπει να αποφευχθούν οι δυσδιάκριτες καταχωρήσεις.
 
 ![Διπλό bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/Doppelbolus.png)

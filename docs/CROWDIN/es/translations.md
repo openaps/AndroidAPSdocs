@@ -2,7 +2,7 @@
 
 * Vaya a <https://translations.androidaps.org> o <https://wikitranslations.androidaps.org> e inicie sesión utilizando su cuenta de Github
 
-* Envíe una solicitud de unión al equipo de Wiki. Para ello, haz clic en la bandera del idioma deseado y luego el botón "Únete" en la esquina superior derecha de la siguiente página. Especifique un idioma, dé alguna información acerca de usted y su experiencia AAPS y si desea ser un traductor o un corrector de pruebas (sólo personas habilitadas para traducir + avanzados usuarios AndroidAPS).
+* Send a join request to the docs team. Para ello, haz clic en la bandera del idioma deseado y luego el botón "Únete" en la esquina superior derecha de la siguiente página. Especifique un idioma, dé alguna información acerca de usted y su experiencia AAPS y si desea ser un traductor o un corrector de pruebas (sólo personas habilitadas para traducir + avanzados usuarios AndroidAPS).
 
 * Cuando se apruebe, haga clic en la bandera ![Cuando se apruebe, haga clic en la bandera](./images/translation_flags2019.png)
 
@@ -26,11 +26,11 @@
 
 Cuando un lector de pruebas aprueba una traducción, se agregará a la siguiente versión de AndroidAPS. En el principio sería bueno también repasar las traducciones existentes que aún no están aprobadas y comprobar si hay errores o aprobarlas si son correctas.
 
-## Traducción de páginas de wiki
+## Translate docs pages
 
-* Pulse el nombre de la página de wiki que desea traducir
+* Click the name of the docs page you want to translate
     
-    ![Editar página wiki](./images/translation_WikiPage.png)
+    ![Click docs page](./images/translation_WikiPage.png)
 
 * Traducir oración por oración
     
@@ -42,9 +42,9 @@ Cuando un lector de pruebas aprueba una traducción, se agregará a la siguiente
     
     4 Pulse Guardar
     
-    ![Traducción de la wiki](./images/translation_WikiTranslate.png)
+    ![Translation docs](./images/translation_WikiTranslate.png)
 
-* La traducción de su página no va a ser publicado en la wiki antes de que la traducción sea revisada.
+* A translated page will not be published in docs before the translation is proofread.
 
 ### Traducir enlaces de títulos
 
@@ -55,14 +55,14 @@ Cuando un lector de pruebas aprueba una traducción, se agregará a la siguiente
     Aquí tienes algunos ejemplos:
     
     * Was ist ein Closed Loop System mit AndroidAPS? \---> #was-ist-ein-closed-loop-system-mit-androidaps
-    * Wiki Updates & Änderungen \---> #wiki-updates-anderungen
+    * Docs Updates & Änderungen \---> #docs-updates-anderungen
     * AAPS-.apk Datei \---> #aaps-apk-datei
 
 * Compruebe el enlace si está trabajando como estaba previsto. Si está enlazando con un nuevo titular traducido, es posible que tenga que esperar hasta la próxima compilación para poder comprobar la sintaxis correcta del enlace. En este caso no te olvides de hacer un recordatorio en tu calendario/aplicación de tareas pendientes.
 
 #### Traducción de enlaces en archivos Markdown (.md)
 
-En este momento se utilizan dos lenguajes de marcación [](./make-a-PR#code-syntax) en el wiki. Mientras que los archivos escritos en la sintaxis de reStructuredText (.rst) siempre muestran la dirección de enlace en Crowdin, para los archivos de la sintaxis de Markdown (.md), es posible que tenga que activar la visualización de códigos HTML con el fin de traducir la dirección de enlace.
+At the moment two [markup languages](./make-a-PR#code-syntax) are used in docs. Mientras que los archivos escritos en la sintaxis de reStructuredText (.rst) siempre muestran la dirección de enlace en Crowdin, para los archivos de la sintaxis de Markdown (.md), es posible que tenga que activar la visualización de códigos HTML con el fin de traducir la dirección de enlace.
 
 Si se visualizan enlaces como este en Crowdin
 
@@ -80,10 +80,10 @@ A continuación, los enlaces se mostrarán en formato HTML estándar y se pueden
 
 * Los revisores tienen que cambiar al modo de revisión
     
-    ![Wiki modo revisión](./images/translation_WikiProofreading.png)
+    ![Proofreading mode docs](./images/translation_WikiProofreading.png)
     
     y aprobar los textos traducidos
     
     ![aprobar texto](./images/translations-proofreading.png)
 
-* Cuando un corrector aprueba una traducción será añadido a la siguiente construcción de wiki. Para acelerar el proceso, puede informar al equipo de wiki sobre las nuevas traducciones.
+* When a proofreader approves a translation it will be added to the next docs build. To speed process you can inform docs team about new translations.

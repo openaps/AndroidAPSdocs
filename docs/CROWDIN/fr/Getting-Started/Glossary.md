@@ -95,7 +95,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>AgeC</td>
+ <td>CAGE</td>
  <td>Age Canule - affiché dans Nightscout si l'information a été renseignée dans l'onglet Careportal de AAPS ou par l'intermédiaire de l'action 'AMORCER/REMPLIR" de l'onglet ACT</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
@@ -317,7 +317,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>AgeC</td>
+ <td>SAGE</td>
  <td>âge du capteur - affiché dans Nightscout si l'information a été renseignée dans l'onglet Careportal de AAPS</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>

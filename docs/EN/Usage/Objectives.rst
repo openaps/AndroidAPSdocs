@@ -35,7 +35,11 @@ Objective 3: Prove your knowledge
      :alt: Screenshot objective 3
 
 * Links will be provided to guide you in case you are unsure about the correct answers yet.
+
+Skip objectives
+--------------------------------------------------
 * Only if you have been closed looping with another system (i.e. OpenAPS, iOS Loop) before and can proof this (i.e. at least 3 months of looping data in Nightscout), you can send an email to `objectives@androidaps.org <mailto:objectives@androidaps.org>`_ with your NS address and request code to bypass the rest of objectives.
+* Please note that no support is provided through this mail account. Refer to the `support resources <../Where-To-Go-For-Help/Connect-with-other-users.html>`_ mentioned in this documentation.
 
 Objective 4: Starting on an open loop
 ==================================================
@@ -50,7 +54,7 @@ Reduce number of notifications
 * In Preferences you can set a minimum percentage for suggestion of basal rate change.
 
    .. image:: ../images/OpenLoop_MinimalRequestChange2.png
-     :alt: Open Loop minimal reqeust change
+     :alt: Open Loop minimal request change
      
 * Also, you do not need to act every 5 minutes on all suggestions...
 
@@ -66,7 +70,7 @@ You will want to set your target higher than usual until you are confident in th
 
 The target is the value that calculations are based on, and not the same as where you aim to keep your blood glucose values within.  If your target is very wide (say, 3 or more mmol [50 mg/dl or more] wide), you will often find little AAPS action. This is because blood glucose is eventually predicted to be somewhere in that wide range and therefore not many fluctuating temporary basal rates are suggested. 
 
-You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol [20 mg/dl or less] wide), and observe how the behavior of your system changes as a result.  
+You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol [20 mg/dl or less] wide) and observe how the behavior of your system changes as a result.  
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in `Preferences <../Configuration/Preferences.html>`_ > Range for Visualisation.
  
@@ -108,8 +112,8 @@ Objective 7: Tuning the closed loop, raising max IOB above 0 and gradually lower
 
 Objective 8: Adjust basals and ratios if needed, and then enable autosens
 ====================================================================================================
-* You can use `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ as a one off to check your basals remain accurate, or do a traditional basal test.
-* Enable `autosens <../Usage/Open-APS-features.html>`_ over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc, and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
+* You can use `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ as a one off to check your basals remain accurate or do a traditional basal test.
+* Enable `autosens <../Usage/Open-APS-features.html>`_ over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
 
 *Don’t forget to record your looping in `this form <http://bit.ly/nowlooping>`_ logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
 

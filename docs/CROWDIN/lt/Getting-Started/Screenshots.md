@@ -64,7 +64,7 @@ Jei pasirinkote, taip pat matysite gliukozės kitimo prognozės kreives.
    * **PILKI** stulpeliai rodo glikemijos svyravimus (nuokrypius arba deviacijas), kuriuos sukelia angliavandeniai. 
    * **ŽALI** stulpeliai rodo, kad glikemija yra didesnė, nei algoritmas apskaičiavo. 
    * **RAUDONI** stulpeliai rodo, kad glikemija yra mažesnė, nei algoritmas apskaičiavo.
-* **Jautrumas** (balta linija): tai jautrumas insulinui, kurį apskaičiavo Autosense funkcija. Tai jautrumo insulinui faktoriaus pokyčiai dėl fizinio aktyvumo, hormonų ir pan.
+* **Sensitivity** (white line): It shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. Tai jautrumo insulinui faktoriaus pokyčiai dėl fizinio aktyvumo, hormonų ir pan.
 * **Aktyvumas** (geltona linija): tai insulino aktyvumas, apskaičiuotas pagal insulino profilio nustatymus (jis nėra išskaičiuotas iš AIO). Kreivė tuo aukštesnė, kuo insulino aktyvumo pikas arčiau. AIO mažėjant, aktyvumas gali tapti neigiamas. 
 
 ### Sritis G
@@ -105,7 +105,7 @@ Jei norite suleisti bolusą papildomam maistui, kurį valgėte tuoj po jau įves
 
 ![Lėtas angliavandenių įsisavinimas](../images/Calculator_SlowCarbAbsorbtion.png)
 
-Jei pasinaudoję skaičiuotuvu matote tokį perspėjimą, reiškia sistema nustatė galimai klaidingą AAO kiekį. Todėl suleisdami papildomą bolusą rizikuojate perdozuoti! Išsamesnės informacijos ieškokite [AAO apskaičiavimo puslapyje](../Usage/COB-calculation#detection-of-wrong-cob-values).
+Jei pasinaudoję skaičiuotuvu matote tokį perspėjimą, reiškia sistema nustatė galimai klaidingą AAO kiekį. Todėl suleisdami papildomą bolusą po paskutinio valgymo rizikuojate perdozuoti! Išsamesnės informacijos ieškokite [AAO apskaičiavimo puslapyje](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
 ## Insulino profilis
 
@@ -131,40 +131,62 @@ Ir dar daugiau čia: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/20
 
 ![Priežiūra](../images/Screenshot_care_portal.png)
 
-Čia rasite tas pačias funkcijas, kaip Jūsų Nightscout puslapyje po "+" simboliu, ir galėsite pridėti pastabų prie savo duomenų. Pavyzdžiui, galėsite pažymėti, kada keitėte kateterį ar insulino rezervuarą. DĖMESIO - tai tik įrašai, ne komandos pompai! Taigi, jei čia įrašysite bolusą, tai bus tik įrašas Nightscout ataskaitoje, tačiau pompa jokio boluso nesuleis.
+Čia rasite tas pačias funkcijas, kaip Jūsų Nightscout puslapyje po "+" simboliu, ir galėsite pridėti pastabų prie savo duomenų. Functions such as recording when you change a pump site, or insulin cartridge should be self-explanatory.
+
+**BUT this section does not issue any commands to your pump!** So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus.
+
+### Carb correction
+
+Care portal can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+
+1. Check and remember actual COB and IOB on homescreen.
+2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
+   
+   ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+
+3. Remove the entry with the faulty carb amount.
+
+4. Make sure carbs are removed successfully by checking COB on homescreen again.
+5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
+   
+   -> If carbs are not removed as intended and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+
+6. Enter correct carb amount through care portal and make sure to set the correct event time.
+
+7. If there is just one line in treatment tab including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
 
 ## LOOP, MA, AMA, SMB
 
-Įprastai Jums nereikėtų rūpintis šių langų įrašais - tai tik OpenAPS algoritmo skaičiavimų rezultatai, besikeičiantys kaskart atsinaujinus sensoriaus duomenims. Jie aptariami kitose instrukcijose.
+You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
 
 ## Profilis
 
 ![Profilis](../images/Screenshot_profile.png)
 
-AndroidAPS gali veikti įvairių profilių nustatymų pagrindu. Dažnai (kaip parodyta pavyzdyje) naudojamas Nightscout profilis, kuris įkeliamas per Nightscout client įskiepį ir čia tik rodomas, bet negali būti keičiamas. Jei norite atlikti pakeitimus, darykite tai savo Nightscout puslapyje ir tada AndroidAPS atlikite [profilio perjungimą](../Usage/Profiles.md), kad aktyvuotumėte pakeitimus. Tokie duomenys, kaip bazės pakeitimas ir pan., po to bus automatiškai nukopijuoti į pompą.
+AndroidAPS can run using a number of different profile configurations. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nightscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a [Profile Switch](../Usage/Profiles.md) in AndroidAPS to activate the changes. Data such as the basal profile would then be automatically copied over to your pump.
 
-**IVT:** insulino veikimo trukmė, kaip aprašyta skyrelyje "Insulino profilis".
+**DIA:** stands for Duration of Insulin Action and it is discussed above in the section on insulin profiles.
 
-**IA:** insulino ir angliavandenių santykis. Gali būti nustatomi skirtingi IA skirtingu paros metu.
+**IC:** is Insulin to Carb ratio. This profile has a number of different values set for different times of day.
 
-**JIF:** jautrumo insulinui faktorius - tai skaičius, kuris parodo, kiek mmol/l sumažina kraujo gliukozę suleistas 1 V insulino.
+**ISF:** is Insulin Sensitivity Factor - the amount by which one unit of insulin will reduce your blood glucose assuming that nothing else changes.
 
-**Valandinė bazė:** tai bazės profilis Jūsų pompoje.
+**Basal:** is the basal profile programmed into your pump.
 
-**Tikslas:** tai glikemijos vertė, kurios algoritmas sieks visą laiką. Jūs galite nustatyti skirtingus tikslus skirtingiems paros laikotarpiams. Jūs taip pat galite nustatyti tikslinį diapazoną, tačiau tada algoritmas atliks pakeitimus tik tada, kai prognozė rodys, kad glikemija "išeis" iš numatytų ribų. Tokiu atveju sistema reaguos žymiai vangiau ir Jums bus sunkiau pasiekti stabilią glikemiją.
+**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for different times of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
 
 ## Terapija, xDrip, NSClient
 
-Čia rasite paprastus įrašus apie terapiją (bolusus ir angliavandenius), xDrip žinutes ir pranešimus, nusiųstus į Nightscout per įdiegtą Nightscout Client. Įprastai Jūs neturėtumėte rūpintis šiais įrašais, nebent iškyla nenumatyta problema.
+These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
 
 ## Konfigūracija
 
 ![Konfigūracija](../images/Screenshot_config_builder.png)
 
-Čia Jūs konfigūruosite savo AndroidAPS. Pavyzdyje matote įprastą derinį, kai naudojama Combo pompa, Dexcom G5 su xDrip+, NovoRapid insulinas su Oref profiliu ir duomenų perdavimas į Nightscout debesijos serverį.
+This is where you will set up the configuration of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
 
-Pažymėti laukeliai dešinėje reiškia, kad tam tikras modulis bus rodomas viršutinėje meniu eilutėje (žr. Pradžios ekrano A sritis), o dantračio simbolis leidžia patekti į konkretaus modulio nustatymus, jei tokie yra.
+The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
 
 ## Parametrai ir Nustatymai
 
-Dešiniajame viršutiniame kampe rasite tris vertikalius taškus. Paspaudę pateksite į programos parametrų, istorijos peržiūros, sąrankos vedlio, programos informacijos pasirinkimus bei rasite mygtuką "išeiti", kuris uždaro AAPS programą.
+At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
