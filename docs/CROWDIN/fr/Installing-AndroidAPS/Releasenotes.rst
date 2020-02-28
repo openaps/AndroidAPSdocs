@@ -29,7 +29,7 @@ Nouvelles fonctionnalités majeures
   * Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
   * Veritical NumberPicker for targets
 * SimpleProfile is removed
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-option-in-aaps>`_ feature - closed loop will be disabled
+* `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
 * MDT plugin: Fixed bug with duplicated entries
 * Units are not specified in profile but it's global setting
 * Added new settings to startup wizard
