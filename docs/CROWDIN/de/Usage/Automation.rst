@@ -77,6 +77,20 @@ Nachdem du deine Aktionen hinzugefügt hast, **vergesse nicht die Standard-Werte
 .. image:: ../images/Automation_Default_V2_5.png
   :alt: Automation Standard-Werte vs.  eigene Werte
 
+Sort automation rules
+-----
+To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
+
+.. image:: ../images/Automation_Sort.png
+  :alt: Sort automation rules
+  
+Delete automation rules
+-----
+To delete an automation rule just swipe it left or right.
+
+.. image:: ../images/Automation_Delete.png
+  :alt: Delete automation rule
+
 Empfehlungen und Vorbehalte
 ==================================================
 * Wenn Du Automation zum ersten Mal nutzt oder eine neue Regel erstellst, solltest Du zusätzlich eine Benachrichtigung erstellen bis Du sicher bist, dass die Regel so funktioniert, wie beabsichtigt.
