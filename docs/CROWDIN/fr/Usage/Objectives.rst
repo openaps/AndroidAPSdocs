@@ -5,7 +5,7 @@ AndroidAPS a une série d'objectifs qui doivent être complétés pour vous guid
 
 Si vous **mettez à jour les téléphones** alors vous pouvez `exporter vos paramètres <../Usage/ExportImportSettings.html>`_ pour garder votre progression à travers les objectifs. Non seulement vos progrès à travers les objectifs de l'être sauvés, mais également vos paramètres de sécurité, tels que max bolus etc.  Si vous n'exportez pas et n'importez pas vos paramètres, vous devrez recommencer les objectifs depuis le début.  C'est une bonne idée de `sauvegarder vos paramètres <../Usage/ExportImportSettings.html>`_ souvent juste au cas où.
 
-If you want to go back in objectives see `explenation below <../Usage/Objectives.html#go-back-in-objectives>`_.
+If you want to go back in objectives see `explanation below <../Usage/Objectives.html#go-back-in-objectives>`_.
  
 Objectif 1 : Paramétrage de la visualisation et la surveillance des données, analyse des débits Basal et des ratios
 ====================================================================================================
@@ -26,7 +26,7 @@ Objectif 2 : Apprendre comment contrôler AndroidAPS
    .. image:: ../images/Objective2_V2_5.png
      :alt: Screenshot objective 2
 
-Objectif 3 : Prouver ses connaissances
+Objective 3: Proof your knowledge
 ==================================================
 * Passez un examen à choix multiples pour tester vos connaissances d'AndroidAPS.
 * Cliquez sur le texte orange "Pas encore terminé" pour accéder à la page avec la question et répondre aux options.
@@ -128,7 +128,7 @@ Objectif 10 : Activation de fonctionnalités supplémentaires pour l'utilisation
 ====================================================================================================
 * Vous devez lire le `chapitre SMB dans ce wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ et le `chapitre oref1 dans la documentation openAPS <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ pour comprendre comment les SMB fonctionnent, en particulier ce qu'il y a derrière le zéro-temp.
 * Puis vous devez `augmenter le maxIA <../Usage/Open-APS-features.html#ia-totale-maximale-pour-openaps-u-openaps-max-ia>`_ pour que les SMB marchent correctement. maxIA inclu maintenant toutes les IA, pas seulement la basale ajoutée. Autrement dit, si vous faites un bolus de 8 U pour un repas et que maxIA est à 7 U, aucun SMB ne sera délivré jusqu'à ce que l'IA redescende en dessous de 7 U. Un bon début est maxIA = bolus moyen des repas + 3 x basale max quotidienne (basale max quotidienne = débit horaire max de basale sur n'importe quelle période de la journée - voir `Objectif 7 <../Usage/Objectives.html#objectif-7-reglage-de-la-boucle-fermee-augmentation-de-l-ia-insuline-active-maximale-au-dessus-de-0-et-abaissement-progressif-des-cibles-glycemiques>`_ pour une illustration)
-* la valeur par défaut de min_5m_carbimpact est passée de 3 à 8 entre AMA et SMB. Si vous effectuez une mise à niveau depuis AMA vers SMB, vous devez la modifier manuellement
+* la valeur par défaut de min_5m_carbimpact est passée de 3 à 8 entre AMA et SMB. If you are upgrading from AMA to SMB, you have to change it manually.
 
 Go back in objectives
 ====================================================================================================
