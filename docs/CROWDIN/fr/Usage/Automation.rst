@@ -77,19 +77,19 @@ Après avoir ajouté votre action, **n'oubliez pas de modifier les valeurs par d
 .. image:: ../images/Automation_Default_V2_5.png
   :alt: Automatisation defaut vs. choisir valeur
 
-Sort automation rules
+Tri des règles d'automatisation
 -----
-To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
+Pour trier les règles d'automatisation, cliquez et maintenez l'icone sur la droite d'une règle (4 lignes) et déplacez-la vers le haut ou vers le bas.
 
 .. image:: ../images/Automation_Sort.png
-  :alt: Sort automation rules
+  :alt: Tri des règles d'automatisation
   
-Delete automation rules
+Suppression des règles d'automatisation
 -----
-To delete an automation rule just swipe it left or right.
+Pour supprimer une règle d'automatisation, faites-la glisser vers la gauche ou vers la droite.
 
 .. image:: ../images/Automation_Delete.png
-  :alt: Delete automation rule
+  :alt: Suppression des règles d'automatisation
 
 Bonnes pratiques et avertissements
 ==================================================
