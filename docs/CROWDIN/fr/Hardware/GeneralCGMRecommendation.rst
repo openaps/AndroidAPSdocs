@@ -42,4 +42,4 @@ Vous pouvez essayer de modifier les paramètres de blocage du bruit dans xdrip (
 .. image:: ../images/Troubleshooting_SensorAge.png
   :alt: Negative sensor age
 
-This occurs if there is either a double "CGM Sensor Insert" entry in `actions tab / menu <../Configuration/Config-Builder.html#actions>`_ or a sensor insert with wrong date. Allez dans l'onglet Traitements > Careportal et supprimez la mauvaise entrée.
+Cela se produit s'il y a soit une double entrée "Insertion Capteur MGC" dans `l'onglet/menu Actions <../Configuration/Config-Builder.html#actions>`_, soit un capteur inséré avec une mauvaise date. Allez dans l'onglet Traitements > Careportal et supprimez la mauvaise entrée.
