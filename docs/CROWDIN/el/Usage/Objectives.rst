@@ -4,6 +4,8 @@
 Το AndroidAPS διαθέτει μια σειρά στόχων που πρέπει να ολοκληρωθούν για να σας καθοδηγήσουν στα χαρακτηριστικά και τις ρυθμίσεις του ασφαλούς κυκλώματος.  Εξασφαλίζουν ότι έχετε ρυθμίσει σωστά όλες τις λεπτομέριες στις παραπάνω ενότητες και ότι καταλαβαίνετε τι κάνει το σύστημά και γιατί μπορείτε να το εμπιστευτείτε.
 
 If you are **upgrading phones** then you can `export your settings <../Usage/ExportImportSettings.html>`_ to keep your progress through the objectives. Όχι μόνο θα αποθηκευτεί η πρόοδός σας μέσω των στόχων, αλλά και οι ρυθμίσεις ασφαλείας σας όπως το μέγιστο bolus κ. λπ.  Αν δεν εξάγετε και δεν εισάγετε τις ρυθμίσεις σας, θα χρειαστεί να ξεκινήσετε πάλι τους στόχους από την αρχή.  It is a good idea to `backup your settings <../Usage/ExportImportSettings.html>`_ frequently just in case.
+
+If you want to go back in objectives see `explenation below <../Usage/Objectives.html#go-back-in-objectives>`_.
  
 Στόχος 1: Δημιουργία οπτικοποίησης και παρακολούθησης, ανάλυση βασικού δεδομένων και αναλογιών
 ====================================================================================================
@@ -88,7 +90,6 @@ Objective 6: Starting to close the loop with Low Glucose Suspend
   
 Closed loop will not correct high bg values in objective 6 as it is limited to low glucose suspend. Οι υψηλές τιμές BG πρέπει να διορθωθούν χειροκίνητα από εσάς!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 * Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`_ or by pressing and holding the Open Loop button in the top left of the home screen.
 * Set your target range slightly higher than you usually aim for, just to be safe.
 * Watch  how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
@@ -127,4 +128,11 @@ Objective 10: Enabling additional oref1 features for daytime use, such as super 
 ====================================================================================================
 * You must read the `SMB chapter in this wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ and `chapter oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ to understand how SMB works, especially what's the idea behind zero-temping.
 * Then you ought to `rise maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ to get SMBs working fine. η μέγιστη IOB περιλαμβάνει τώρα όλα τα IOB, όχι μόνο βασικά. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see `objective 7 <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_ for an illustration)
-* min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually.
+* min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. Εάν κάνετε αναβάθμιση από AMA σε SMB, πρέπει να το αλλάξετε χειροκίνητα
+
+Go back in objectives
+====================================================================================================
+If you want to go back in objectives for whatever reason you can do so by clicking at "clear finished".
+
+   .. image:: ../images/Objective_ClearFinished.png
+     :alt: Go back in objectives
