@@ -77,6 +77,20 @@ Après avoir ajouté votre action, **n'oubliez pas de modifier les valeurs par d
 .. image:: ../images/Automation_Default_V2_5.png
   :alt: Automatisation defaut vs. choisir valeur
 
+Sort automation rules
+-----
+To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
+
+.. image:: ../images/Automation_Sort.png
+  :alt: Sort automation rules
+  
+Delete automation rules
+-----
+To delete an automation rule just swipe it left or right.
+
+.. image:: ../images/Automation_Delete.png
+  :alt: Delete automation rule
+
 Bonnes pratiques et avertissements
 ==================================================
 * Lorsque vous commencez à utiliser l'automatisation ou que vous créez une nouvelle règle, ajoutez une notification jusqu'à ce que vous soyez certain que la règle fonctionne correctement.
