@@ -129,42 +129,42 @@ Nous voyons ici l'état de la pompe à insuline - dans ce cas, un Accu-Chek Comb
 
 ## Careportal
 
-Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
+Careportal reproduit les fonctions que vous trouverez sur votre écran Nightscout sous le signe "+" qui vous permet d'ajouter des notes à vos enregistrements.
 
-The code originally used to add offline support for careportal did not harmonize with the development of AAPS and was really blocking further coding. Therefore, decision was made to remove careportal in AAPS version 2.6. See the [careportal page](../Usage/CPbefore26.rst) for details.
+Le code utilisé à l'origine pour ajouter le support hors ligne de Careportal n'a pas été harmonisé avec le développement de AAPS et était vraiment bloquant pour les développements supplémentaires. Par conséquent, la décision a été prise de supprimer Careportal dans la version 2.6 de AAPS. Voir la [page Careportal](../Usage/CPbefore26.rst) pour plus de détails.
 
 ## Boucle, AR, AAR, SMB
 
-You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
+Vous n'avez pas besoin de vous en inquiéter, ils montrent les résultats de l'algorithme OpenAPS qui s'exécute chaque fois que le système obtient une nouvelle lecture de la MGC. Ces fonctions sont expliquées ailleurs.
 
 ## Profil
 
 ![Profil](../images/Screenshot_profile.png)
 
-AndroidAPS can run using a number of different profile configurations. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nightscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a [Profile Switch](../Usage/Profiles.md) in AndroidAPS to activate the changes. Data such as the basal profile would then be automatically copied over to your pump.
+AndroidAPS peut être exécuté avec un certain nombre de configurations de profil différentes. Typiquement - comme ici - le profil Nightscout a été téléchargé via le Client Nightscout intégré et il est présenté ici en lecture seule. Si vous souhaitez effectuer des modifications, vous pouvez le faire à partir de votre interface utilisateur Nightscout, puis faire un [Changement de Profil](../Usage/Profiles.md) dans AndroidAPS pour activer les modifications. Les données telles que les débits de base du profil seront automatiquement copiés sur votre pompe.
 
-**DIA:** stands for Duration of Insulin Action and it is discussed above in the section on insulin profiles.
+** DAI : ** représente la Durée d'Action de l'Insulin et il est détaillé plus haut dans la section sur les profils d'insuline.
 
-**IC:** is Insulin to Carb ratio. This profile has a number of different values set for different times of day.
+** G/I : ** est le rapport quantité de glucides divisé par le nombre d'unité d'insuline. Ce profil comporte un certain nombre de valeurs différentes définies pour différentes périodes de la journée.
 
-**ISF:** is Insulin Sensitivity Factor - the amount by which one unit of insulin will reduce your blood glucose assuming that nothing else changes.
+** SI :** est la Sensibilité à l'Insuline, elle correspond à la réduction de glycémie que permettra d'obtenir une unité d'insuline en supposant que rien d'autre ne change par ailleurs.
 
-**Basal:** is the basal profile programmed into your pump.
+**Basal : ** est le profil de basal programmé dans votre pompe.
 
-**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for different times of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
+**Cible :** est l'objectif glycémique que vous souhaitez atteindre. Si vous le souhaitez, vous pouvez définir différents niveaux pour différentes heures de la journée. Vous pouvez même définir des limites supérieures et inférieures afin que le l'algorithme ne commence à faire des changements que lorsque la glycémie sort de la plage, mais si vous le faites, la boucle réagira moins vite et il est peu probable que vous obteniez une glycémie aussi stable.
 
 ## Traitement, xDrip, NSClient
 
-These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
+Il s'agit simplement des journaux de traitements (bolus et glucides), des messages xDrip et des messages envoyés à Nightscout via le client intégré Nightscout. Vous n'avez normalement pas besoin de vous en inquiéter à moins qu'il y ait un problème.
 
 ## Générateur de configuration
 
 ![Générateur de configuration](../images/Screenshot_config_builder.png)
 
-This is where you will set up the configuration of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
+C'est ici que vous allez paramétrer la configuration de votre plate-forme AndroidAPS. Cette capture d'écran montre une configuration typique utilisant une pompe Combo, un capteur MGC Dexcom G5 géré par xDrip+ et fonctionnant avec de l'insuline NovoRapid sur un profil Oref et connecté à un serveur Nightscout hébergé sur le cloud.
 
-The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
+La case à cocher à droite détermine si ce module sera affiché dans la barre de menu en haut (voir la section A dans Ecran d'accueil) et la roue crantée permet d'accèder aux paramètres du module, s'il y en a.
 
 ## Réglages et Préférences
 
-At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
+En haut à droite de la barre de navigation, vous trouverez trois petits points verticaux. En appuyant dessus, vous aurez accès aux préférences de l'application, préférences des plugins, l'historique, l'assistant de configuration, les informations de l'application (à propos de) et le bouton quitter pour fermer AAPS.
