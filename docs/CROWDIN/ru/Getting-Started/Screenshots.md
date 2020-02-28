@@ -129,31 +129,9 @@ SUPER BOLUS - это когда базальный инсулин следующ
 
 ## Портал лечения/назначений
 
-![Портал лечения/назначений](../images/Screenshot_care_portal.png)
+Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
 
-Здесь повторяются функции, которые вы найдете на экране Nightscout под символом "+", который позволяет добавлять заметки к лечению/назначениям. Functions such as recording when you change a pump site, or insulin cartridge should be self-explanatory.
-
-**BUT this section does not issue any commands to your pump!** So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus.
-
-### Carb correction
-
-Care portal can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
-
-1. Check and remember actual COB and IOB on homescreen.
-2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-   
-   ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
-
-3. Remove the entry with the faulty carb amount.
-
-4. Make sure carbs are removed successfully by checking COB on homescreen again.
-5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
-   
-   -> If carbs are not removed as intended and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
-
-6. Enter correct carb amount through care portal and make sure to set the correct event time.
-
-7. If there is just one line in treatment tab including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
+The code originally used to add offline support for careportal did not harmonize with the development of AAPS and was really blocking further coding. Therefore, decision was made to remove careportal in AAPS version 2.6. See the [careportal page](../Usage/CPbefore26.rst) for details.
 
 ## Состояние цикла/Loop, МА, АМА, SMB
 
