@@ -42,7 +42,7 @@ You can easily create a new local profile from a profile switch. In this case ti
 
 If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
 
-#### Upload loacal profiles to Nightscout
+#### Upload local profiles to Nightscout
 Local profiles can also be uploaded to Nightscout. The settings can be found in NS Client preferences.
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
@@ -193,23 +193,21 @@ Some buttons to quickly access common features:
 * Temporary targets
 * Set / cancel temp. basal rate
 * Extended bolus (DanaR/RS or Combo pump only)
+* Record for any specific care entries 
 
-#### Careportal
-Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
-* BG check
-* Prime / fill - record pump site change and prime (if not done on pump)
-* CGM sensor insert
-* Pump battery change
-* Note
-* Exercise
-
-#### Tools
+   * BG check
+   * Prime / fill - record pump site change and prime (if not done on pump)
+   * CGM sensor insert
+   * Pump battery change
+   * Note
+   * Exercise
+* View the current sensor, insulin, canula and pump battery ages
 * History browser
 * TDD (Total daily dose = bolus + basal per day)
 
 Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions_a.png)
+![Actions tab](../images/ConfBuild_ConfBuild_Actions_b.png)
 
 ### SMS Communicator
 Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
