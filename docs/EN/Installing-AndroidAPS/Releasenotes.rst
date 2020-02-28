@@ -14,8 +14,8 @@ If you do not update for another 30 days (90 days from new release date) AAPS wi
 Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
 
 Version 2.6
-=====
-Release date: ?
+==============
+Release date: 29-02-2020
 
 Major new features
 -----
