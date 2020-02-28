@@ -1,45 +1,45 @@
-Careportal (discontinued)
+Careportal (arrêté)
 *******************************
-Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records. But careportal did not issue any commands to the pump! So, if a bolus was added using this screen it simply made a note of this on your Nightscout record, the pump wasn’t instructed to deliver a bolus. This led to a lot of misunderstandings.
+Careportal reproduisait les fonctions que vous pouvez trouver dans Nightscout sous le symbole “+” et qui vous permet d'ajouter des remarques à vos enregistrements. Mais Careportal n'envoyait aucune commande vers la pompe ! Donc, si vous ajoutiez un bolus à l'aide de cet écran, cela ajoutait simplement une information dans Nightscout, la pompe ne recevait pas de demande de bolus. Cela a provoqué de nombreuses incompréhensions.
 
-The code originally used to add offline support for careportal did not harmonize with the development of AAPS and was really blocking further coding. **Therefore, decision was made to remove careportal in AAPS version 2.6.**
+Le code utilisé à l'origine pour ajouter le support hors ligne de Careportal n'a pas été harmonisé avec le développement de AAPS et était vraiment bloquant pour les développements supplémentaires. **Par conséquent, la décision a été prise de supprimer Careportal dans la version 2.6 de AAPS.**
 
-Most functions of careportal can still be found either in actions or the start screen. The actions can be reached either via actions tab or hamburger menu - depending on your settings in `config builder <../Configuration/Config-Builder.html>`_.
+La plupart des fonctions de Careportal sont encore disponibles dans les Actions ou dans l'écran d'accueil. Ces actions peuvent être effectuées soit via l'onglet Actions soit via le menu hamburger, selon vos paramètres dans le `générateur de configuration <../Configuration/Config-Builder.html>`_.
 
-This page will show where you can find the functions previously available in careportal.
+Cette page indique où retrouver les fonctions précédemment disponibles dans Careportal.
 
-Activity & feedback
+Activité & Feedback
 ==============================
 .. image:: ../images/Careportal_25_26_1_IIb.png
-  :alt: Careportal activity & feedback
+  :alt: Careportal activité & feedback
   
-* Age information was moved to actions tab / menu.
-* BG check was moved to actions tab / menu.
-* Temporary target was moved to actions tab / menu.
-* Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section `carbs & bolus <#carbs--bolus>`_ on this page).
+* Les information d'âge ont été déplacées dans l'onglet/menu Actions.
+* La vérification de glycémie a été déplacée dans l'onglet/menu Actions.
+* Cible temporaire a été déplacée dans l'onglet/menu Actions.
+* Exercice n'est plus disponible, mais vous pouvez utiliser le champ Notes dans les boîtes de dialogue lorsque vous entrez des bolus, insuline etc. (voir la copie d'écran dans la section `Glucides et bolus <#glucides-et-bolus>`_ de cette page).
 
-Carbs & bolus
+Glucides et bolus
 ==============================
 .. image:: ../images/Careportal_25_26_2_IIa.png
-  :alt: Careportal carbs & bolus
+  :alt: Careportal Glucides et bolus
   
-* To note a bolus - no matter if for snack, meal or correction - use the insulin button on the homescreen **and make sure to tick "Do not bolus, record only"!**
-* For carbs correction use the carbs button on the homescreen.
-* Temporary basal rates can be started and stopped through the button in actions tab / menu. Please note that the button changes from "TEMPBASAL" to "CANCEL x%" when a temporary basal rate is set.
+* Pour renseigner un bolus - peu importe si c'est pour une collation, un repas ou une correction - utilisez le bouton Insuline sur l'écran d'accueil **et assurez vous de cocher "Ne pas administrer de bolus, enregistrer uniquement"!**
+* Pour la correction des glucides, utilisez le bouton "Glucides" sur l'écran d'accueil.
+* Les débits de base temporaire peuvent être démarrés et arrêtés via le bouton de l'onglet/menu Actions. Veuillez noter que le bouton passe de "BASAL TEMPORAIRE" à "ANNULER x%" lorsqu'un débit de base temporaire est défini.
 
-CGM & OpenAPS
+MGC et OpenAPS
 ==============================
 .. image:: ../images/Careportal_25_26_3_IIa.png
-  :alt: Careportal CGM & OpenAPS
+  :alt: Careportal MGC et OpenAPS
   
-* CGM sensor insert can now be found in the actions tab / menu.
-* All other functions from this section have been removed. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section `carbs & bolus <#carbs-bolus>`_ on this page).
+* L'insertion d'un capteur MGC est maintenant dans l'onglet/menu Actions.
+* Toutes les autres fonctions de cette section ont été supprimées. Vous pouvez utiliser le champ Notes dans les boîtes de dialogue lorsque vous entrez des bolus, insuline etc. (voir la copie d'écran dans la section `Glucides et bolus <#glucides-et-bolus>`_ de cette page).
 
-Pump
+Pompe
 ==============================
 .. image:: ../images/Careportal_25_26_4_IIb.png
-  :alt: Careportal Pump
+  :alt: Careportal Pompe
 
-* Pump site and insulin cartridge change can be reach by using the button "prime/fill" in actions tab / menu.
-* Profile switch was moved to actions tab / menu.
-* Pump battery change was moved to actions tab / menu.
+* Le changement de Canule et de la cartouche de la pompe est possible en utilisant le bouton Amorcer/Remplir dans l'onglet/menu Actions.
+* Le changement de Profil a été déplacé vers l'onglet/menu Actions.
+* Le changement de la pile de pompe a été déplacé vers l'onglet/menu Actions.
