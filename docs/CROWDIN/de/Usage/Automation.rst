@@ -77,19 +77,19 @@ Nachdem du deine Aktionen hinzugefügt hast, **vergesse nicht die Standard-Werte
 .. image:: ../images/Automation_Default_V2_5.png
   :alt: Automation Standard-Werte vs.  eigene Werte
 
-Sort automation rules
+Automation-Regeln sortieren
 -----
-To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
+Zum Sortieren von Automation-Regeln klicke und halte die Schaltfläche mit den vier Linien auf der rechten Seite des Bildschirms und bewege sie nach oben oder unten.
 
 .. image:: ../images/Automation_Sort.png
-  :alt: Sort automation rules
+  :alt: Automation-Regeln sortieren
   
-Delete automation rules
+Automation-Regeln löschen
 -----
-To delete an automation rule just swipe it left or right.
+Zum Löschen die Regel einfach nach links oder rechts wegwischen.
 
 .. image:: ../images/Automation_Delete.png
-  :alt: Delete automation rule
+  :alt: Automation-Regeln löschen
 
 Empfehlungen und Vorbehalte
 ==================================================
