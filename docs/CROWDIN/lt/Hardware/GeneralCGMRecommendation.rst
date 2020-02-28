@@ -42,5 +42,4 @@ Neigiamas sensoriaus amžius
 .. nuotrauka:: ../images/Troubleshooting_SensorAge.png
   :alt: Neigiamas jutiklis amžius
 
-Taip gali nutikti, jei Priežiūros skirtuke yra dvigubas įrašas „CGM sensoriaus įvedimas“ arba neteisinga šio įrašo data. Eikite į terapijos nustatymus > priežiūra ir ištrinkite klaidingą įrašą.
-
+This occurs if there is either a double "CGM Sensor Insert" entry in `actions tab / menu <../Configuration/Config-Builder.html#actions>`_ or a sensor insert with wrong date. Eikite į terapijos nustatymus > priežiūra ir ištrinkite klaidingą įrašą.
