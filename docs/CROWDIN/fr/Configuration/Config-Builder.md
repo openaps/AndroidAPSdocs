@@ -26,12 +26,12 @@ Sélectionnez le profil de basal que vous souhaitez utiliser. Voir la page [Prof
 
 Le profil local utilise le profil de basal entré manuellement sur le téléphone. Dès qu'il est sélectionné, un nouvel onglet apparaît dans AAPS, où vous pouvez modifier les données de profil lues à partir de la pompe si nécessaire. Avec le changement de profil suivant, les données sont ensuite écrites dans la pompe dans le profil 1. Ce profil est recommandé car il ne dépend pas de la connectivité Internet.
 
-![Local Profile settings](../images/LocalProfile_Settings.png)
+![Paramètres profil local](../images/LocalProfile_Settings.png)
 
-Buttons:
+Boutons :
 
-* green plus: add
-* red X: delete
+* Plus vert : ajouter
+* X rouge : supprimer
 * blue arrow: duplicate
 
 #### Clone profile switch
