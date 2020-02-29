@@ -6,11 +6,12 @@
 
 ## Notas importantes
 
-* A partir de la versión 2.3, debe utilizar git para actualizar. La actualización a través del archivo zip ya no funciona.
-* Utilice [Android Studio Versión 3.5.1](https://developer.android.com/studio/) o más reciente para crear el apk.
+* Please update as soon as possible after a new release is available. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes.html#release-notes) about the new version.
+* As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
+* Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
 * [Windows 10 sistemas de 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) no son compatibles con Android Studio 3.5.1.
-* Si está utilizando xDrip, asegúrese de que [identifique el receptor](../Configuration/xdrip#identify-receiver).
-* Si utiliza Dexcom G6 con el [parcheado de la aplicación Dexcom](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) necesitará la versión de la carpeta [carpeta 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
+* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Rápido acceso a los usuarios experimentados
 
