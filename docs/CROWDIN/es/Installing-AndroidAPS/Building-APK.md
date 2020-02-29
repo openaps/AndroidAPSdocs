@@ -135,7 +135,7 @@ Lea y cierre la pantalla "Tip of Day" de Android Studio pulsando "Close".
 ![Captura de Pantalla 17](../images/Installation_Screenshot_17.png)
 
 * Excelente, tiene su propia copia del código fuente y está listo para iniciar la construcción.
-* Ahora nos estamos acercando a nuestro primer mensaje de error. Afortunadamente, Android Studio nos dará directamente la solución para esto.
+* Ahora nos estamos acercando a nuestro primer mensaje de error. Afortunadamente, Android Studio nos dará directamente la solución para esto. (In case you do not receive the error message shown in next screenshot try closing and restarting Android Studio.)
 
 Pulse "Instalar la plataforma(s) y el proyecto de sincronización que falta", ya que Android Studio necesita instalar una plataforma que falta.
 
