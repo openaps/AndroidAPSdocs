@@ -21,7 +21,7 @@ Wichtige neue Funktionen
 -----
 * Kleinere Designänderungen (Startseite...)
 * Careportal Tab / Menü entfernt - weitere Details dazu `hier <../Usage/CPbefore26.html>`_
-* Neues `Plugin Lokales Profil <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
 
   * Im lokalen Profil können mehrere Profile gespeichert werden.
   * Profile können geklont und bearbeitet werden.
