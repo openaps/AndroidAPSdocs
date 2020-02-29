@@ -64,17 +64,25 @@ Cuando un lector de pruebas aprueba una traducción, se agregará a la siguiente
 
 At the moment two [markup languages](./make-a-PR#code-syntax) are used in docs. Mientras que los archivos escritos en la sintaxis de reStructuredText (.rst) siempre muestran la dirección de enlace en Crowdin, para los archivos de la sintaxis de Markdown (.md), es posible que tenga que activar la visualización de códigos HTML con el fin de traducir la dirección de enlace.
 
-Si se visualizan enlaces como este en Crowdin
+* * *
 
-![Crowdin - no se visualiza ningún código HTML](./images/CrowdinShowURL1.png)
+**Make sure not to use space character at within HTML tags at the beginning or the end!**
 
-haga clic en la rueda dentada para abrir la configuración, seleccione "Show" y haga clic en "Save".
+![Crodwin - HTML tag without space character](./images/Crowdin_HTMLtag.png)
 
-![Crowdin - mostrar la etiqueta HTML](./images/CrowdinShowURL2.png)
+* * *
 
-A continuación, los enlaces se mostrarán en formato HTML estándar y se pueden traducir teniendo en cuenta las reglas mencionadas [arriba](./translations#translate-headline-links).
+If links are displayed like this in Crowdin
 
-![Crowdin - mostrar la etiqueta HTML](./images/CrowdinShowURL3.png)
+![Crowdin - no HTML tag display](./images/CrowdinShowURL1.png)
+
+click on the cogwheel to open settings, select "Show" and click "Save".
+
+![Crowdin - show HTML tag display](./images/CrowdinShowURL2.png)
+
+Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations#translate-headline-links).
+
+![Crowdin - HTML tag display](./images/CrowdinShowURL3.png)
 
 ## Revisores
 
