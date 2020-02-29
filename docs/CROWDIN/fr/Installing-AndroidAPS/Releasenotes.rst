@@ -21,7 +21,7 @@ Nouvelles fonctionnalités majeures
 -----
 * Petites modifications de l'affichage (page d'accueil...)
 * Onglet/Menu Careportal supprimé - plus de détails `ici <../Usage/CPbefore26.html>`_
-* Nouveau `plugin Profil Local <../Configuration/Config-Builder.html#profil-local-recommande>`_
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
 
   * Le profil local peut contenir plusieurs profils
   * Les profils peuvent être dupliqués et modifiés
