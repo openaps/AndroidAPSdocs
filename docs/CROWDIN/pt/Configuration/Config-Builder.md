@@ -26,76 +26,101 @@ Selecione o perfil basal que prefere usar. Ver a página [Perfis](../Usage/Profi
 
 O perfil local usa o perfil basal inserido manualmente no telefone. Assim que é selecionado, aparece um novo separador em AAPS, onde é possivel alterar os dados do perfil lidos da bomba se necessário. Com o próximo interruptor de perfil eles são então escritos na bomba em perfil 1. Este perfil é recomendado pois não depende de ligação à internet.
 
-Vantagens:
+![Local Profile settings](../images/LocalProfile_Settings.png)
 
-* nenhuma conexão de internet necessária para alterar configurações de perfil
-* mudanças de perfil podem ser feitas diretamente no telefone
+Buttons:
 
-Desvantagens:
+* green plus: add
+* red X: delete
+* blue arrow: duplicate
 
-* apenas um perfil
+#### Clone profile switch
+
+You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+
+1. Go to treatments tab.
+2. Select ProfileSwitch.
+3. Press "Clone".
+4. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
+
+![Clone profile switch](../images/LocalProfile_ClonePS.png)
+
+If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
+
+#### Upload local profiles to Nightscout
+
+Local profiles can also be uploaded to Nightscout. The settings can be found in NS Client preferences.
+
+![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
+
+Advantage:
+
+* no internet connection necessary to change profile settings
+* profile changes can be made directly on the phone
+* new profile can be created from profile switch
+* local profiles can be uploaded to Nightscout
+
+Disadvantage:
+
+* none
 
 ### Perfil NS
 
-Perfil NS usa os perfis que guardou na sua página NightScout (https://[yournightscoutsiteaddress]/profile). Pode usar o [Profile Switch](../Usage/Profiles.md) para mudar qual desses perfis está ativo, este grava o perfil para a bomba em caso de falha de AndroidAPS. Isso permite facilmente criar vários perfis no Nightscout (i.e.. trabalho, casa, desportos, férias, etc.). Logo após clicar em "Save" serão transferidos para AAPS se seu smartphone estiver online. Mesmo sem uma ligação à Internet ou sem uma ligação de Nightscout, os perfis de Nightscout estão disponíveis na AAPS uma vez que tenham sido sincronizados.
+NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
 
-Fazer um **interruptor de perfil** para ativar um perfil de Nightscout. Pressione e segure o perfil atual na ecrã principal AAPS no topo (campo cinzento entre o campo de "Open/Closed Loop" azul claro e o campo da área alvo azul escuro) > Alterar perfil > Selecionar perfil > OK. AAPS também escreve o perfil selecionado a bomba após a mudança de perfil, para que ele esteja disponível sem AAPS numa emergência e continue a ser executado.
+Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
-Vantagens:
+Advantage:
 
-* múltiplos perfis
-* fácil editar via PC ou tablet
+* multiple profiles
+* easy to edit via PC or tablet
 
-Desvantagens:
+Disadvantage:
 
-* nenhuma alteração local para configurações de perfil
-* perfil não pode ser alterado diretamente no telefone
-
-### Perfil simples
-
-Perfil simples apenas com um bloco de tempo para DIA, IC, ISF, taxa basal e intervalo alvo (ou seja, sem mudanças na taxa basal durante o dia). Provavelmente mais usado para eveitos de teste a menos que tenha os mesmos fatores ao longo de 24 horas. Uma vez selecionado "Perfil Simples", aparecerá um novo separador em AAPS onde é possível inserir os dados do perfil.
+* no local changes to profile settings
+* profile cannot be changed directly on the phone
 
 ## Insulina
 
-Selecione o tipo de curva de insulina que está a utilizar. As opções 'Oref Ação-Rápida','Oref Ultra-Rápida' e 'Oref Pico-Livre' têm todas uma forma exponencial. É listada mais informação no [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), as curvas irão variar com base no DIA e a hora de pico.
+Select the type of insulin curve you are using. The options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak.
 
-A Duração de Ação da Insulina (DIA) varia de pessoa para pessoa. É por isso que você tem que experimentar e descobrir o seu. Mas deve ser sempre pelo menos 5 horas. Pode ler mais sobre isto na seção Perfil de Insulina de [esta página ](../Getting-Started/Screenshots#insulin-profile).
+The DIA is not the same for each person. That's why you have to test it for yourself. But it must always be at least 5 hours. You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page.
 
-Para ação rápida e ultra-rápida, o DIA é a única variável que pode ajustar por si mesmo, a hora de pico é fixa. O Pico Livre permite que ajustar tanto o DIA como o tempo para pico, e deve ser usado apenas por utilizadores avançados que conhecem os efeitos destas configurações.
+For Rapid-Acting and Ultra-Rapid, the DIA is the only variable you can adjust by yourself, the time to peak is fixed. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings.
 
-O gráfico da [curva de insulina](../Getting-Started/Screenshots#insulin-profile) ajuda a entender as diferentes curvas. Pode vê-lo ativando a caixa de seleção para mostrá-la como um separador, caso contrário estará no menu hamburger.
+The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
 
-### Oref Acção Rápida
+### Rapid-Acting Oref
 
-* recomendado para Humalog, Novolog e Novorapid
+* recommended for Humalog, Novolog and Novorapid
 * DIA = pelo menos 5.0h
-* Máx. pico = 75 minutos após a injeção (fixo, não ajustável)
+* Máx. peak = 75 minutes after injection (fixed, not adjustable)
 
-### Oref Ultra-Rápida
+### Ultra-Rapid Oref
 
-* recomendado para FIASP
+* recommended for FIASP
 * DIA = pelo menos 5.0h
-* Máx. pico = 55 minutos após a injeção (fixo, não ajustável)
+* Máx. peak = 55 minutes after injection (fixed, not adjustable)
 
-Para muitas pessoas não há já praticamente nenhum efeito visível do FIASP após 3-4 horas, mesmo que estejam disponíveis 0.0xx unidades como regra então. Este valor residual ainda pode ser visível durante o desporto, por exemplo. Por isso o AndroidAPS usa um DIA mínimo de 5h.
+For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
 
 ![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
 
-### Oref Pico-Livre
+### Free Peak Oref
 
-Com o perfil "Pico Livre 0ref" pode digitar-se individualmente o tempo do pico. O DIA é definido automaticamente para 5 horas se estiver especificado mais alto no perfil.
+With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 
-Este perfil de efeito é recomendado se é utilizada uma insulina não instalada ou uma mistura de diferentes insulinas.
+This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
 ## Fonte de Glic.
 
-Selecione a fonte de glicose de sangue que utiliza - ver [Fonte de BG](BG-Source.rst) para mais informações de configuração.
+Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
-* Glic NSCliente
+* NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - apenas a versão 4.15.57 ou mais recente são suportados
-* [App Dexcom (corrigida)](https://github.com/dexcomapp/dexcomapp/) - Selecione 'Enviar dados BG para xDrip+' se quiser usar alarmes xDrip+.
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
+* [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
     
     ![Config Builder BG source](../images/ConfBuild_BGSource.png)
 
@@ -103,132 +128,131 @@ Selecione a fonte de glicose de sangue que utiliza - ver [Fonte de BG](BG-Source
 
 ## Bomba
 
-Selecione a bomba que está a utilizar.
+Select the pump you are using.
 
 * [Dana R](DanaR-Insulin-Pump.md)
-* DanaR Coreana (para bombas domésticas DanaR)
-* Dana Rv2 (Bomba de DanaR com upgrade de firmware)
+* Dana R Korean (for domestic DanaR pump)
+* Dana Rv2 (DanaR pump with firmware upgrade)
 * [Dana RS](DanaRS-Insulin-Pump.md)
-* [Bomba Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requer instalação de ruffy)
-* MDI (recebe sugestões AAPS para a terapia de múltiplas injecções diárias)
-* Bomba Virtual (loop aberto para uma bomba que nao tenha ainda nenhum driver - apenas sugestões AAPS)
+* [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* MDI (receive AAPS suggestions for your multiple daily injections therapy)
+* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
-Usar **Configurações avançadas** para ativar o BT watchdog se necessário. Este Desliga o bluetooth por um segundo caso não seja possível uma ligação à bomba. Isto pode ajudar em alguns telefones onde a pilha bluetooth congela.
+For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
 
 ## Detecção de Sensibilidade
 
-Selecione o tipo de deteção de sensibilidade. Os dados históricos serão analisados frequentemente e serão feitos ajustes se reconhecer se está mais sensível (ou inversamente, mais resistente) à insulina do que o habitual. Detalhes sobre o algoritmo de Oref0 de sensibilidade podem ser lido em [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Select the type of sensitivity detection. This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
-Pode ver a sua sensibilidade no ecrã inicial selecionando SEN e observando a linha branca. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to use Sensitivity Detection/[Autosens](../Usage/Open-APS-features.html#autosens).
+You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to use Sensitivity Detection/[Autosens](../Usage/Open-APS-features.html#autosens).
 
-### Configurações de absorção
+### Absorption settings
 
-Se utilizar o Oref1 com SMB, deverá alterar **min_5m_carbimpact** para 8. O valor só é usado durante lacunas nas leituras da CGM ou quando a atividade física "usa" todo o aumento de glicose no sangue que, de outra forma faria com que o AAPS decaísse as COB. Nos momentos em que a absorção dos carbs não pode funcionar dinamicamente com base nas medições de BG o AAPS insere um decaimento padrão dos carbs. Basicamente, é uma proteção de falhas.
+If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when carb absorption can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
 
 ## APS
 
-Selecione o algoritmo APS desejado para ajustes de terapia. Você pode exibir o active os detalhes do algoritmo escolhido no OpenAPS(OAPS) tab.
+Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
-* OpenAPS MA (assistência à refeição - algoritmo de 2016)
-* OpenAPS AMA (Assistente Avançado de Refeição - algoritmo de 2017)   
-    Mais detalhes sobre o OpenAPS AMA podem ser encontrados em [ OpenAPS docs ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Basicamente, os benefícios são depois de dar o bolus referente à refeição. O sistema pode dar temporais mais elevadas mais rapidamente SE os hidratos (carbs) forem corretamente indicados. 0/> Atenção que é necessário estar em [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) para poder usar o OpenAPS AMA.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (Super Micro Bolus, o algoritmo mais recente para usuários experientes)  
-    Atenção que é necessário estar no [Objetivo 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) para usar OpenAPS SMB e min_5m_carbimpact deve ser definido para 8 no Configurador > Sensibilidade de detecção > Configurações Sensibilidade Oref1.
+* OpenAPS MA (meal assist, state of the algorithm in 2016)
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017)  
+    More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
+    Note you need to be in [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) in order to use OpenAPS AMA.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
+    Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Loop
 
-Defina se deseja permitir controlos automáticos do AAPS ou não.
+Define whether you want to allow AAPS automatic controls or not.
 
 ### Open Loop
 
-O AAPS avalia continuamente todos os dados disponíveis (IOB, COB, BG ...) e se necessário faz sugestões de tratamento sobre como ajustar a sua terapia. As sugestões não serão executadas automaticamente (como em closed loop), têm que ser introduzidas manualmente na bomba ou usando um botão no caso de estar a usar uma bomba compatível (Dana R/RS ou Accu Chek Combo). Esta opção é para conhecer como funciona o AndroidAPS ou se está a usar uma bomba não suportada.
+AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
 
 ### Closed Loop
 
-O AAPS avalia continuamente todos os dados disponíveis (IOB, COB, BG...) e, se necessário, ajusta automaticamente o tratamento (ou seja, sem intervenção por si) para alcançar o intervalo ou valor alvo definido (bóus, taxa basal temporária, corte da insulina para evitar hipo etc.). O Loop funciona dentro de inúmeros limites de segurança, que podem ser configurados individualmente. O Loop Fechado só é possível se estiver no [ Objective 6 ](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) ou superior e use uma bomba suportada.
+AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). The Closed Loop works within numerous safety limits, which you can be set individually. Closed Loop is only possible if you are in [Objective 6](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
 
 ## Objectivos (programa de aprendizagem)
 
-AndroidAPS tem um conjunto de objectivos que você tem que cumprir passo a passo. Isto deve guiá-lo com segurança, criando um sistema de loop fechado. Assim é garantido que se tenha configurado tudo de forma correcta e que se compreende exactamente o que o sistema faz. É a maneira de poder confiar no sistema.
+AndroidAPS has a number of objectives that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
-Deve [exportar suas configurações](../Usage/ExportImportSettings.rst) (incluindo o progresso dos objetivos) regularmente. Caso tenha que substituir seu smartphone depois (novo Telemovel, danos no ecrã, etc.) pode-se simplesmente importar essas configurações (convém também manter uma copia fora do telemóvel).
+You should [export your settings](../Usage/ExportImportSettings.rst) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
-Consulte a pagina [Objetivos](../Usage/Objectives.rst) para mais informações.
+See [Objectives](../Usage/Objectives.rst) page for more information.
 
 ## Tratamentos
 
-Se procurar o separador dos Tratamentos, poderá ver os tratamentos que foram enviados para nightscout. Caso deseje editar ou apagar uma entrada (por exemplo, caso tenha comido menos hidratos do que esperava) e então selecione 'Remover' e digite o novo valor (mude o hora se necessário) através do separador Careportal (CP).
+If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
 
 ## Geral
 
 ### Visão Geral
 
-Exibe o estado atual do seu loop e botões para a maioria das ações mais comuns (ver seção [ Ecrã Inicial ](../Getting-Started/Screenshots.md) para mais detalhes). Chega-se às configurações clicando no ícone de engrenagem.
+Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
 
-#### Manter ecrã ligado
+#### Keep screen on
 
-Opção 'Manter ecrã ligado' irá forçar o Android a manter o ecrã sempre ligado. Isto é útil para apresentações, etc. , mas consome muita bateria. Portanto, é recomendável conectar o telemóvel ao carregador sempre que este parâmetro esteja selecionado.
+Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
-#### Botões
+#### Buttons
 
-Defina quais botões são mostrados no ecrã inicial.
+Define which Buttons are shown on the home screen.
 
 * Tratamentos
 * Calculadora
 * Insulina
-* Hidratos
-* CGM (abre xDrip+)
-* Calibração
+* Carbs
+* CGM (opens xDrip+)
+* Calibration
 
-Além disso pode definir atalhos para os incrementos de insulina e carbs e decidir se o campo de notas deve ser mostrado nos diálogos de tratamento.
+Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
 
-#### Definições do Assistente Rápido
+#### QuickWizard settings
 
-Crie um botão para uma determinada refeição padrão (carbs e método de cálculo para o bolus) que será exibida no ecrã inicial. Use para refeições padrão que come frequentemente. Se ao longo do dia for variando o padrão, pode definir padrões adequados a cada hora e o botão estará configurado para o calculo associado a essa hora.
+Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
 
-Observação: O botão não será visível se fora do intervalo de tempo especificado ou se você tiver IOB suficiente para cobrir os caras definidos no botão Assistente Rápido.
+Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
 
-![Botão do Assistente Rápido](../images/ConfBuild_QuickWizard.png)
+![QuickWizard button](../images/ConfBuild_QuickWizard.png)
 
-#### Configurações Avançadas
+#### Advanced settings
 
-Ative a funcionalidade super bolus no assistente. Use com cuidado e não ative até que compreenda o que realmente faz. Basicamente, a basal para as próximas duas horas é adicionado para o bolus e nessas duas horas a basal temporaria será de 0. As funções de looping do AAPS ** serão desativadas, portanto use com cuidado! Se você usar Super Micro Bolus (SMB) as funções de loop serão desativadas de acordo com as suas definições em ["Max minutos de basal para limitar o SMB para"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), o valor que está predefinido é de duas horas.** Detalhes sobre o SMB podem ser encontrados [aqui](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Ações
 
-Alguns botões para aceder rapidamente a funções comuns:
+Some buttons to quickly access common features:
 
-* Mudar perfil (ver [Página de perfis](../Usage/Profiles.md) para obter mais informações de configuração)
-* Alvos temporário
-* Definir / cancelar temp. taxa basal
-* Bólus Estendido (somente Bomba Combo ou DanaR/RS)
-* Prime / Enchimento (Canula) (suportado por bomba DanaR/RS, Combo e Insight)
-* Navegador do histórico
-* DDT (Dose Diaria Total = bolus + insulina basal por dia)
+* Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
+* Temporary targets
+* Set / cancel temp. taxa basal
+* Extended bolus (DanaR/RS or Combo pump only)
+* Record for any specific care entries
+    
+    * BG check
+    * Prime / fill - record pump site change and prime (if not done on pump)
+    * CGM sensor insert
+    * Pump battery change
+    * Note
+    * Exercise
+* View the current sensor, insulin, canula and pump battery ages
+* History browser
+* TDD (Total daily dose = bolus + basal per day)
 
-Alguns médicos usam - no inicio do uso de bomba - um rácio basal:bolus de 50:50. Portanto, o rácio é calculada como TDD / 2 = TBB (TBB (Total de Basal Base) = soma de taxa basal em 24 horas). Outros preferem uma rácio de 32% a 37% de DDT para TBB. Como a maioria regras padrão tem uma validade real limitada. Nota: Sua diabetes pode variar!
+Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
-![Aba Accões](../images/ConfBuild_ConfBuild_Actions.png)
-
-### Careportal
-
-Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
-
-Note: **No insulin** will be given if entered via careportal (i.e. meal bolus, correction bolus...)
-
-Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
-
-![Aba Careportal](../images/ConfBuild_CarePortal.png)
+![Actions tab](../images/ConfBuild_ConfBuild_Actions_b.png)
 
 ### Comunicador SMS
 
 Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
 
-### Alimentos
+### Food
 
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (Ver somente)
+Note: Entries cannot be used in the AndroidAPS calculator. (View only)
 
 ### Wear
 
@@ -236,22 +260,22 @@ Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](..
 
 If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-![Definições Wear](../images/ConfBuild_Wear.png)
+![Wear settings](../images/ConfBuild_Wear.png)
 
 Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
-* Reenviar Todos os Dados. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
+* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
 * Open settings on your watch directly from your phone.
 
-### Linha estado xDrip (relógio)
+### xDrip Statusline (watch)
 
 Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
-### Notificação em curso
+### Ongoing Notification
 
 Displays a summary of current BG, delta, active TBR%, active basal u/h and profile, IOB and split into bolus IOB and basal IOB on the phones's dropdown screen and phone's lock screen.
 
-![Widget AAPS](../images/ConfBuild_Widget.png)
+![AAPS widget](../images/ConfBuild_Widget.png)
 
 ### Cliente NS
 
@@ -259,30 +283,30 @@ Setup sync of your AndroidAPS data with Nightscout.
 
 If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimization not disabled for AAPS) but can flood the Nightscout graph with entries.
 
-#### Opções Alarme
+#### Alarm options
 
-Activar/desactivar alarmes AndroidAPS
+Activate/deactivate AndroidAPS alarms
 
-![Opções Alarme](../images/ConfBuild_NSClient_Alarms.png)
+![Alarm options](../images/ConfBuild_NSClient_Alarms.png)
 
-#### Definições de ligação
+#### Connection settings
 
 Offline looping, disable roaming...
 
 If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
 
-![Configurações ligação do Nightscout](../images/ConfBuild_ConnectionSettings.png)
+![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
 
-#### Configurações Avançadas
+#### Advanced settings
 
 * Auto backfill missing BGs from Nightscout
 * Create announcement from errors Create Nightscout announcement for error dialogs and local alerts (also viewable in careportal in treatments section)
 * Enable local broadcast to other apps like xDrip+
-* Envio apenas para NS (sincronização desactivada)
-* Sem envio para NS
+* NS upload only (sync disabled)
+* No upload to NS
 * Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
 
-![Configurações avançadas do Nightscout](../images/ConfBuild_NSClient_Advanced.png)
+![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
 
 ### Manutenção
 

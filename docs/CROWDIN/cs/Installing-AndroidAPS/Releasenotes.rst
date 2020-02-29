@@ -13,6 +13,38 @@ Pokud neaktualizujete do dalších 30 dní (90 dní od nového vydání) přejde
 
 Prosím pochopte, že tato změna není určena, aby vás otravovala, ale je to kvůli bezpečnostním důvodům. Nové verze AndroidAPS neposkytují pouze nové funkce, ale také důležité bezpečnostní opravy. Proto je důležité, aby každý uživatel aktualizoval co nejdříve.. Bohužel stále existují hlášení o chybách z velmi starých verzí, takže se jedná o pokus zlepšit bezpečnost pro každého uživatele a celou komunitu DIY. Děkujeme za pochopení.
 
+Version 2.6
+==============
+Release date: 29-02-2020
+
+Hlavní nové funkce
+-----
+* Small design changes (startpage...)
+* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`_
+* New `LocalProfile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
+
+  * Local profile can hold more than 1 profile
+  * Profiles can be cloned and edited
+  * Ability of upload profiles to NS
+  * Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
+  * Veritical NumberPicker for targets
+* SimpleProfile is removed
+* `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
+* MDT plugin: Fixed bug with duplicated entries
+* Units are not specified in profile but it's global setting
+* Added new settings to startup wizard
+* Different UI and internal improvements
+* `Wear complications <../Configuration/Watchfaces.html>`_
+* New `SMS commands <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
+* Fixed language support
+* Objectives: `Allow to go back <../Usage/Objectives.html#go-back-in-objectives>`_, Time fetching dialog
+* Automation: `allow sorting <../Usage/Automation.html#sort-automation-rules>`_
+* Automation: fixed bug when automation was running with disabled loop
+* New status line for Combo
+* GlucoseStatus improvement
+* Fixed TempTarget NS sync
+* Tons on new translations
+
 Verze 2.5.1
 ==================================================
 Datum vydání: 31. 10. 2019
@@ -30,14 +62,13 @@ Důležité poznámky
 * Please use `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ or newer to `build the apk <../Installing-AndroidAPS/Building-APK.html>`_ or `update <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * If you are using xDrip `identify receiver <../Configuration/xdrip.html#identify-receiver>`_ must be set.
 * If you are using Dexcom G6 with the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Glimp is supported from version 4.15.57 and newer.
 
 Je tato aktualizace pro mě? Aktuálně NENÍ podporováno
 --------------------------------------------------
 * Android 5 and lower
 * Poctech
 * 600SeriesUploader
-* Glimp
-   Glimp stopps working when offline. Glimp developer must update app to use SDK28 broadcast.
 * Upravené Dexcom aplikace z adresáře 2.3
 
 Hlavní nové funkce

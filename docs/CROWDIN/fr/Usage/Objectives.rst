@@ -4,6 +4,8 @@ Objectifs
 AndroidAPS a une série d'objectifs qui doivent être complétés pour vous guider à travers les fonctionnalités et les paramètres de la boucle sécurisée.  Ils s'assurent que vous avez correctement configuré tout ce qui est détaillé dans les sections ci-dessus, et que vous comprenez ce que votre système fait et pourquoi vous pouvez lui faire confiance.
 
 Si vous **mettez à jour les téléphones** alors vous pouvez `exporter vos paramètres <../Usage/ExportImportSettings.html>`_ pour garder votre progression à travers les objectifs. Non seulement vos progrès à travers les objectifs de l'être sauvés, mais également vos paramètres de sécurité, tels que max bolus etc.  Si vous n'exportez pas et n'importez pas vos paramètres, vous devrez recommencer les objectifs depuis le début.  C'est une bonne idée de `sauvegarder vos paramètres <../Usage/ExportImportSettings.html>`_ souvent juste au cas où.
+
+Si vous voulez revenir en arrière sur les objectifs terminés voir les `explications ci-dessous <../Usage/Objectives.html#retour-arriere-dans-les-objectifs>`_.
  
 Objectif 1 : Paramétrage de la visualisation et la surveillance des données, analyse des débits Basal et des ratios
 ====================================================================================================
@@ -88,7 +90,6 @@ Objectif 6 : Démarrage de la boucle fermée avec le système AGB ( Arrêt pour 
   
 La boucle fermée ne corrigera pas les valeurs de glycémies élevées dans l'objectif 6, car elle est limitée à la suspension glycémie basse. Les hyperglycémies doivent être corrigées manuellement par vous !
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 * Sélectionnez Boucle Fermée soit dans `Préférences <../Configuration/Preferences.html>`_ soit en faisant un appui long sur le bouton Boucle Ouverte en haut à gauche de l'écran d'accueil.
 * Définissez votre plage cible légèrement au dessus de ce que vous visez habituellement, juste pour être en sécurité.
 * Surveillez comment les basales temporaires sont actives en regardant le texte bleu de la basale sur l'écran d'accueil, ou le rendu de la basale en bleu sur le graphique de l'écran d'accueil.
@@ -128,3 +129,10 @@ Objectif 10 : Activation de fonctionnalités supplémentaires pour l'utilisation
 * Vous devez lire le `chapitre SMB dans ce wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ et le `chapitre oref1 dans la documentation openAPS <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ pour comprendre comment les SMB fonctionnent, en particulier ce qu'il y a derrière le zéro-temp.
 * Puis vous devez `augmenter le maxIA <../Usage/Open-APS-features.html#ia-totale-maximale-pour-openaps-u-openaps-max-ia>`_ pour que les SMB marchent correctement. maxIA inclu maintenant toutes les IA, pas seulement la basale ajoutée. Autrement dit, si vous faites un bolus de 8 U pour un repas et que maxIA est à 7 U, aucun SMB ne sera délivré jusqu'à ce que l'IA redescende en dessous de 7 U. Un bon début est maxIA = bolus moyen des repas + 3 x basale max quotidienne (basale max quotidienne = débit horaire max de basale sur n'importe quelle période de la journée - voir `Objectif 7 <../Usage/Objectives.html#objectif-7-reglage-de-la-boucle-fermee-augmentation-de-l-ia-insuline-active-maximale-au-dessus-de-0-et-abaissement-progressif-des-cibles-glycemiques>`_ pour une illustration)
 * la valeur par défaut de min_5m_carbimpact est passée de 3 à 8 entre AMA et SMB. Si vous passez de AMA vers SMB, vous devez la modifier manuellement.
+
+Retour arrière dans les Objectifs
+====================================================================================================
+Si vous voulez revenir en arrière sur les objectifs terminés pour quelque raison que ce soit, vous pouvez le faire en cliquant sur "Refaire l'objectif".
+
+   .. image:: ../images/Objective_ClearFinished.png
+     :alt: Retour arrières objectifs

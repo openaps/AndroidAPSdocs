@@ -13,6 +13,38 @@ Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à par
 
 Veuillez comprendre que cette modification n'a pas pour but de vous corriger mais est due à des raisons de sécurité. Les nouvelles versions d'AndroidAPS fournissent non seulement de nouvelles fonctionnalités, mais aussi d'importants correctifs de sécurité. Il est donc nécessaire que chaque utilisateur mette à jour a.s.a.p.. Malheureusement, il y a toujours des remontés de bug provenant de très anciennes versions, donc il s'agit d'une tentative d'améliorer la sécurité pour chaque utilisateur et toute la communauté DIY. Merci pour votre compréhension.
 
+Version 2.6
+==============
+Date de sortie : 29-02-2020
+
+Nouvelles fonctionnalités majeures
+-----
+* Petites modifications de l'affichage (page d'accueil...)
+* Onglet/Menu Careportal supprimé - plus de détails `ici <../Usage/CPbefore26.html>`_
+* Nouveau `plugin Profil Local <../Configuration/Config-Builder.html#profil-local-recommande>`_
+
+  * Le profil local peut contenir plusieurs profils
+  * Les profils peuvent être dupliqués et modifiés
+  * Possibilité de télécharger les profils vers NS
+  * Les anciens changements de profil peuvent être dupliqués veres un nouveau profil local (décalage horaire et pourcentage appliqués)
+  * Sélecteur pour les cibles temps
+* Le Profil Simple est supprimé
+* La fonction `Bolus étendus <../Usage/Extended-Carbs.html#id1>`_ désactive la boucle fermée
+* Plugin MDT : Correction du bug entrées dupliquées
+* Les unités ne sont pas définies dans le profil mais c'est un paramètre global
+* Ajout de nouveaux paramètres à l'assistant de démarrage
+* Diverses améliorations internes et de l'interface
+* `Complications pour la montre <../Configuration/Watchfaces.html>`_
+* Nouvelles `commandes SMS <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
+* Correction de la prise en charge des langues
+* Objectifs : `Possibilité de faire un retour arrière <../Usage/Objectives.html#retour-arriere-dans-les-objectifs>`_, Time fetching dialog
+* Automatisation : `Possibilité de trier <../Usage/Automation.html#tri-des-regles-d-automatisation>`_
+* Automatisation : correction de bug quand l'automatisation fonctionnait avec une boucle désactivée
+* Nouvelle ligne d'état pour la Combo
+* Amélioration de l'état des Glucides
+* Correction synchronisation Cibles Temp avect NS
+* Des tonnes de nouvelles traductions
+
 Version 2.5.1
 ==================================================
 Date de sortie : 31-10-2019
@@ -30,14 +62,13 @@ Remarques importantes
 * Veuillez utiliser `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ ou plus récent pour `construire l'apk <../Installing-AndroidAPS/Building-APK.html>`_ ou le `mettre à jour <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Si vous utilisez xDrip `identify receiver <../Configuration/xdrip.html#identifier-le-recepteur>`_ doit être défini.
 * Si vous utilisez Dexcom G6 avec l'application `Dexcom patchée <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ vous aurez besoin de la version du `Dossier 2.4<https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Glimp est pris en charge à partir de la version 4.15.57 et plus récente.
 
 Cette mise à jour est-elle pour moi? N'est actuellement PAS pris en charge
 --------------------------------------------------
 * Android 5 and inférieurs
 * Poctech
 * 600SeriesUploader
-* Glimp
-   Glimp cesse de fonctionner lorsque vous êtes hors ligne. Le développeur de Glimp doit mettre à jour l'application pour utiliser la diffusion SDK28 .
 * Dexcom patchés présents dans le répertoire 2.3
 
 Nouvelles fonctionnalités majeures

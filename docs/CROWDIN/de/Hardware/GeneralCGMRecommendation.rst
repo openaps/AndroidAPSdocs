@@ -42,5 +42,4 @@ Negatives Sensor-Alter
 .. image:: ../images/Troubleshooting_SensorAge.png
   :alt: Negatives Sensor-Alter
 
-Dies kann auftreten, wenn es entweder einen Doppeleintrag "CGM-Sensor gesetzt" im Careportal oder ein falsches Datum bei diesem Eintrag gibt. Wechsle zur Registerkarte "Behandlungen" > "Careportal" und lösche den falschen Eintrag.
-
+Dies tritt dann auf, wenn im `Aktionen Tab / Menü <../Configuration/Config-Builder.html#aktionen>`_ ein doppelter Eintrag "CGM-Sensor gesetzt" oder bei einem einzelnen Eintrag ein falsches Datum verwendet wurde. Wechsle zur Registerkarte "Behandlungen" > "Careportal" und lösche den falschen Eintrag.
