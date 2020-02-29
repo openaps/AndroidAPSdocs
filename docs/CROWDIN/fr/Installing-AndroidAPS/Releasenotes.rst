@@ -29,7 +29,7 @@ Nouvelles fonctionnalités majeures
   * Les anciens changements de profil peuvent être dupliqués veres un nouveau profil local (décalage horaire et pourcentage appliqués)
   * Sélecteur pour les cibles temps
 * Le Profil Simple est supprimé
-* La fonction `Bolus étendus <../Usage/Extended-Carbs.html#bolus-etendu>`_ désactive la boucle fermée
+* La fonction `Bolus étendus <../Usage/Extended-Carbs.html#id1>`_ désactive la boucle fermée
 * Plugin MDT : Correction du bug entrées dupliquées
 * Les unités ne sont pas définies dans le profil mais c'est un paramètre global
 * Ajout de nouveaux paramètres à l'assistant de démarrage
