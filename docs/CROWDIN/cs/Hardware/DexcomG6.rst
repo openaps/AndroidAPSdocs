@@ -19,11 +19,11 @@ Použití G6 může být o něco složitější, než se na první pohled zdá. 
 
 Chcete-li se dozvědět další informace o podrobnostech a důvodech pro tato doporučení, přečtěte si `kompletní článek <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ který sepsal Tim Street na adrese `www.diabettech.com <http://www.diabettech.com>`_.
 
-If using G6 with xDrip+
+Používáte-li G6 s aplikací xDrip+
 ==================================================
-* The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-* When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
-* If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
+* Vysílač Dexcom G6 může být připojen současně k přijímači Dexcom (nebo pumpě t:slim) a zároveň k vašemu telefonu.
+* Pokud používáte xDrip+ jako přijímač, nejprve odinstalujte aplikaci Dexcom. **K vysílači se nelze připojit prostřednictvím obou aplikací xDrip+ a Dexcom současně!**
+* Jestliže potřebujete službu Clarity, a chcete zároveň využívat výhod výstrah xDripu+, použijte upravenou aplikaci Dexcom </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ a funkci místního odesílání do xDripu+.
 * Pokud jste ještě nic nenastavovali, tak stáhněte `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ a postupujte podle instrukcí na Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * V průvodci nastavení (v AndroidAPS) vyberte xDrip.
 * Nastavte xDrip+ podle popisu konfigurace na stránce <../Configuration/xdrip.html>`_
@@ -52,7 +52,7 @@ Dexcom G6 konkrétní řešení problémů
 --------------------------------------------------
 * Vysílače se sériovým číslem začínajícím na 80 nebo 81 potřebují minimálně poslední stabilní xDrip verzi z května 2019 nebo novější noční sestavení.
 * Vysílače se sériovým číslem začínajícím na 8G potřebuje minimálně noční sestavení z 25. července 2019 nebo novější.
-* xDrip+ and Dexcom app cannot be connected with the transmitter at the same time.
+* K vysílači nelze připojit aplikaci xDrip+ i Dexcom současně.
 * Vyčkejte nejméně 15 minut. mezi zastavením a spuštěním senzoru.
 * Nepoužívejte zadání dřívějšího času. Odpovězte na otázku "Byl senzor zaveden dnes?" vždy "Ano, dnes".
 * Nepovolujte "restartování senzoru" při nastavení nového senzoru

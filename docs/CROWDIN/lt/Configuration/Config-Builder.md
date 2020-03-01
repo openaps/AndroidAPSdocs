@@ -26,6 +26,8 @@ Pasirinkite bazės profilį, kurį norite naudoti. Papildomos informacijos apie 
 
 Vietinis profilis yra pagrindinis profilis, rankiniu būdu įvestas į telefoną. Pasirinkus vietinį profilį, pasirodo naujas skirtukas, kuriame prireikus galite pakeisti iš pompos nuskaitytus profilio duomenis. Kito prijungimo prie profilio metu jie bus įrašyti į pompos profilį Nr. 1. Mes rekomenduojame šį profilį, nes jis nepriklauso nuo jūsų interneto ryšio.
 
+Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). So make sure to have a backup in a safe place.
+
 ![Local Profile settings](../images/LocalProfile_Settings.png)
 
 Buttons:

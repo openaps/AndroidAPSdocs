@@ -34,7 +34,7 @@ Windows
 4. Prüfe die Einstellungen in Android Studio
 --------------------------------------------------
 * Öffne das Terminal-Fenster in Android Studio
-* Gib "git --version" (ohne Anführungszeiten!) ein und drücke Return
+* Gib "git --version" (ohne Anführungszeichen und zwei Minus-Zeichen vor version! - siehe Screenshot) ein und drücke Return
 
   .. image:: ../images/AndroidStudio_gitversion1.png
     :alt: git --version

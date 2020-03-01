@@ -1,8 +1,8 @@
 # Nastavení
 
-Open preferences by clicking three-dot-menu on top right side of homescreen:
+Otevřete nastavení klepnutím na tři tečky v pravém horním rohu hlavní obrazovky:
 
-![How to open Preferences](../images/PreferencesOpen.png)
+![Jak otevřít Nastavení](../images/PreferencesOpen.png)
 
 ## Heslo do nastavení
 
@@ -24,30 +24,30 @@ V tomto nastavení jsou stanoveny bezpečnostní limity v závislosti na vámi z
 
 ### Rozšířená nastavení
 
-![Preferences - Overview - Advanced Settings](../images/PreferencesOverviewAdvanced_V2_5.png)
+![Nastavení - Přehled - Rozšířená nastavení](../images/PreferencesOverviewAdvanced_V2_5.png)
 
-* General setting to deliver only part of bolus wizard result. Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. The percentage is shown in bolus wizard.
+* Obecné nastavení umožňující zvolit, že bude vydána jen určitá část z vypočteného bolusu. Při použití bolusové kalkulačky bude vydána pouze zadaná procentuální část (musíte zadat hodnotu mezi 10 a 100). Procentuální hodnota je zobrazena v kalkulačce.
     
-    ![Bolus Wizard 80%](../images/BolusWizardPartDelivery.png)
+    ![Bolusová kalkulačka 80%](../images/BolusWizardPartDelivery.png)
 
-* Option to enable [superbolus](../Getting-Started/Screenshots#section-a) in bolus wizard.
+* Možnost povolit [superbolus](../Getting-Started/Screenshots#section-a) v bolusové kalkulačce.
 
-### Status lights
+### Stavové indikátory
 
-* Stavové indikátory vizuálně upozorňují na nízkou hladinu inzulínu a baterie a také na včasnou výměnu kanyly. Extended version shows elapsed time / battery percentage.
+* Stavové indikátory vizuálně upozorňují na nízkou hladinu inzulínu a baterie a také na včasnou výměnu kanyly. Rozšířená verze ukazuje čas/procento baterie.
     
     ![Stavové indikátory – detail](../images/StatusLights_V2_5.png)
     
-    Settings for status lights must be made in Nightscout settings. Set the following variables:
+    Nastavení stavových indikátorů je třeba provést v nastavení Nightscoutu. Viz následující proměnné:
     
-    * Cannula age: CAGE_WARN and CAGE_URGENT (standard 48 and 72 hours)
-    * Insulin age (reservoir): IAGE_WARN and IAGE_URGENT (standard 72 and 96 hours)
-    * Sensor age: SAGE_WARN and SAGE_URGENT (standard 164 and 166 hours)
-    * Battery age: BAGE_WARN and BAGE_URGENT (standard 240 and 360 hours)
+    * Stáří kanyly: CAGE_WARN a CAGE_URGENT (standardně 48 a 72 hodin)
+    * Stáří inzulinu (zásobníku): IAGE_WARN a IAGE_URGENT (standardně 72 a 96 hodin)
+    * Stáří senzoru: SAGE_WARN a SAGE_URGENT (standardně 164 a 166 hodin)
+    * Stáří baterie: BAGE_WARN a BAGE_URGENT (standardně 240 a 360 hodin)
 
-* Treshold for warning reservoir level and critical reservoir level.
+* Prahová hodnota pro varování a kritické varování týkající se stavu zásobníku.
 
-* Treshold for warning battery level and critical battery level.
+* Prahová hodnota pro varování a kritické varování týkající se stavu baterie.
 
 ## Bezpečnost zadání ošetření
 
@@ -65,7 +65,7 @@ Zde můžete přepínat mezi otevřenou a uzavřenou smyčkou. Otevřená smyčk
 
 ## OpenAPS AMA
 
-OpenAPS Advanced Meal Assist (AMA) umožňuje systému rychleji reagovat po bolusu na jídlo, pokud zadáte sacharidy správně. Turn it on in the Config tab to view the safety settings here, you will need to have completed [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature. O tomto nastavení a [ o Autosens si můžete přečíst více v dokumentaci k OpenAPS ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+OpenAPS Advanced Meal Assist (AMA) umožňuje systému rychleji reagovat po bolusu na jídlo, pokud zadáte sacharidy správně. Zapněte tuto funkci na kartě Konfigurace a podívejte se na její bezpečnostní nastavení. Abyste mohli tuto funkci využívat, musíte splnit [9. cíl](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama). O tomto nastavení a [ o Autosens si můžete přečíst více v dokumentaci k OpenAPS ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 ### Maximální povolený bazál [U/h]
 
@@ -76,7 +76,7 @@ Toto nastavení existuje jako bezpečnostní limit, aby se zabránilo AndroidAPS
 Množství dodatečného bazálního inzulínu (v jednotkách), který je povolený, aby se nahromadil v těle navíc oproti Vašemu normálnímu bazálu. Jakmile je tato hodnota dosažena, AAPS zastaví přidávání dodatečného bazálu, dokud hodnota inzulínu v těle (IOB) opět neklesne pod tuto hodnotu.
 
 * Tato hodnota nebere v úvahu bolusový IOB, pouze IOB z bazálu.
-* This value is calculated and monitored independently of your normal basal rate. V úvahu je brán pouze dodatečný bazální inzulín převyšující normální bazál.
+* Tato hodnota je počítána a monitorována nezávisle na vašem normálním bazálu. V úvahu je brán pouze dodatečný bazální inzulín převyšující normální bazál.
 * Hodnota se udává v inzulínových jednotkách (U).
 
 Když začínáte se smyčkou, ** je doporučováno nastavit si na nějaký čas maximální bazální IOB na 0**, než si na systém zvyknete. Toto zabrání AndroidAPS v tom, aby přidal jakýkoliv bazální inzulín. Během této doby bude AndoidAPS pořád schopen omezit či vypnout Váš bazální inzulín, aby pomohl předejít hypoglykémii.
@@ -100,10 +100,10 @@ Pokud jste si zvolili použití AMA Autosense, pak si budete moct zadat maximál
 
 ## Nastavení pumpy
 
-V závislosti na ovladači pumpy vybraném v konfiguraci se zde mohou vyskytovat i jiné volby. Pair and set your pump up according to the pump related instructions:
+V závislosti na ovladači pumpy vybraném v konfiguraci se zde mohou vyskytovat i jiné volby. Spárujte a nastavte svou pumpu podle pokynů pro jednotlivé pumpy:
 
-* [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) 
-* [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) 
+* [Inzulinová pumpa DanaR](../Configuration/DanaR-Insulin-Pump.md) 
+* [Inzulinová pumpa DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Accu Chek Combo Pump](../Configuration/Accu-Chek-Combo-Pump.md) 
 * [Pumpa Medtronic](..//Configuration/MedtronicPump.md)
 
@@ -122,7 +122,7 @@ Používáte-li AndroidAPS pouze jako otevřenou smyčku, vyberte v nastavení V
 * „Povolit lokální odesílání“ zpřístupní odesílání dat i jiným aplikacím v telefonu, např. xDrip+.
 * Chcete-li používat autotune, musíte mít vybráno „Vždy používat absolutní hodnoty bazálu“.
     
-    **Do not activate this when using [Insight pump](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** It would lead to false TBR settings in Insight pump.
+    **Nepovolujte tuto volbu, pokud používáte [pumpu Insight](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** Vedlo by to k nastavení falešných TBR v pumpě Insight.
 
 ## SMS komunikátor
 

@@ -14,6 +14,18 @@ Auf einem Windows 10 PC sieht es in etwa so aus:
   .. image:: ../images/SmartphoneRootLevelWin10.png
     :alt: AndroidAPS Preferences Datei - Smartphone mit PC verbunden
 
+Exportierte Einstellungen
+==================================================
+Neben anderen werden folgende Einstellungen exportiert:
+
+* `Automation <../Usage/Automation.html>`_ Regeln
+* Einstellungen des `Konfigurations-Generators <../Configuration/Config-Builder.html>`_
+* Einstellungen der `lokalen Profile <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_
+* Status der `Ziele (Objectives) <../Usage/Objectives.html>`_ inkl. `Ergebnisse der Multiple-Choice-Fragen <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_
+* `Einstellungen im 3-Punkte-Menü <../Configuration/Preferences.html>`_ inkl. `NS Client Einstellungen <../Configuration/Preferences.html#nightscout-client>`_
+
+
+
 
 Exportieren der Einstellungen
 ==================================================

@@ -26,6 +26,8 @@ Vyberte bazální profil, který chcete použít. Další informace viz stránka
 
 Místní profil používá bazální profil zapsaný přímo do telefonu. Po jeho vybrání se v AAPS objeví nová záložka, kde si můžete profil upravovat. Ten je pak v případě potřeby načten pumpou. Při přepnutí profilu je uložen do pumpy – v profilu 1. Tento profil je doporučen, protože nevyžaduje připojení k internetu.
 
+Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). So make sure to have a backup in a safe place.
+
 ![Local Profile settings](../images/LocalProfile_Settings.png)
 
 Buttons:

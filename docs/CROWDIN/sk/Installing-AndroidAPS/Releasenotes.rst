@@ -13,7 +13,7 @@ If you do not update for another 30 days (90 days from new release date) AAPS wi
 
 Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
 
-Version 2.6
+Version 2.6.0
 ==============
 Release date: 29-02-2020
 
@@ -21,7 +21,7 @@ Major new features
 -----
 * Small design changes (startpage...)
 * Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`_
-* New `LocalProfile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
 
   * Local profile can hold more than 1 profile
   * Profiles can be cloned and edited
@@ -43,6 +43,9 @@ Major new features
 * New status line for Combo
 * GlucoseStatus improvement
 * Fixed TempTarget NS sync
+* New statistics activity
+* Allow Extended bolus in open loop mode
+* Android 10 alarm support
 * Tons on new translations
 
 Version 2.5.1

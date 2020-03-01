@@ -13,6 +13,41 @@ Si no se actualiza durante otros 30 días (90 días a partir de la fecha de la n
 
 Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Por lo tanto, son necesarias que todas las actualizaciones de usuario a.s.a.p. (Lo antes posible).. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
 
+Version 2.6.0
+==============
+Release date: 29-02-2020
+
+Nuevas características importantes
+-----
+* Small design changes (startpage...)
+* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`_
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
+
+  * Local profile can hold more than 1 profile
+  * Profiles can be cloned and edited
+  * Ability of upload profiles to NS
+  * Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
+  * Veritical NumberPicker for targets
+* SimpleProfile is removed
+* `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
+* MDT plugin: Fixed bug with duplicated entries
+* Units are not specified in profile but it's global setting
+* Added new settings to startup wizard
+* Different UI and internal improvements
+* `Wear complications <../Configuration/Watchfaces.html>`_
+* New `SMS commands <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
+* Fixed language support
+* Objectives: `Allow to go back <../Usage/Objectives.html#go-back-in-objectives>`_, Time fetching dialog
+* Automation: `allow sorting <../Usage/Automation.html#sort-automation-rules>`_
+* Automation: fixed bug when automation was running with disabled loop
+* New status line for Combo
+* GlucoseStatus improvement
+* Fixed TempTarget NS sync
+* New statistics activity
+* Allow Extended bolus in open loop mode
+* Android 10 alarm support
+* Tons on new translations
+
 Versión 2.5.1
 ==================================================
 Fecha de lanzamiento: 31-10-2019
@@ -30,14 +65,13 @@ Notas importantes
 * Utilice `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ o más reciente para `crear el apk <../Installing-AndroidAPS/Building-APK.html>` _ o `actualización <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Si está utilizando xDrip `identificar el receptor <../Configuration/xdrip.html#identify-receiver>`_ debe establecerse.
 * Si utiliza Dexcom G6 con el `la app Dexcom parchada <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>` _ necesitará la versión de la `carpeta 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Glimp is supported from version 4.15.57 and newer.
 
 ¿Es esta actualización para mí? Actualmente NO es soportado
 --------------------------------------------------
 * Android 5 e inferiores
 * Poctech
 * 600SeriesUploader
-* Glimp
-   Glimp se detiene cuando está offline. El desarrollador de Glimp debe actualizar la aplicación para utilizar la difusión SDK28.
 * Dexcom Parchado desde el directorio 2.3
 
 Nuevas características importantes

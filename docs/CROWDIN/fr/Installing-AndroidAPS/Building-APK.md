@@ -4,7 +4,7 @@
 
 **AndroidAPS n'est pas disponible en téléchargement en raison de la réglementation concernant les dispositifs médicaux. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes ! Voir la [page FAQ](../Getting-Started/FAQ.md) pour plus de détails.**
 
-## ## Remarques importantes
+## Remarques importantes
 
 * Utilisez **[Android Studio Version 3.5.1](https://developer.android.com/studio/)** ou une version plus récente pour construire l'apk.
 * [Les systèmes d'exploitation Windows 10 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) ne sont pas pris en charge par Android Studio 3.5.1.
@@ -54,19 +54,19 @@ Sélectionnez "Ne pas importer les paramètres" car vous n'avez pas eu d'utilisa
 
 ![Capture d'écran 1](../images/Installation_Screenshot_01.png)
 
-Cliquez sur "Suivant".
+Cliquez sur "Next".
 
 ![Capture d'écran 2](../images/Installation_Screenshot_02.png)
 
-Sélectionnez l'installation "Standard" et cliquez sur "Suivant".
+Sélectionnez l'installation "Standard" et cliquez sur "Next".
 
 ![Capture d'écran 3](../images/Installation_Screenshot_03.png)
 
-Sélectionnez le thème de l'interface utilisateur que vous souhaitez. (Dans ce manuel, nous avons utilisé "Intellij". Puis cliquez sur "Suivant". C'est juste le jeu de couleurs. Vous pouvez choisir n'importe quel type (par ex. "Darcula" pour le mode sombre). Cette sélection n'a aucune influence sur la construction de l'APK.
+Sélectionnez le thème de l'interface utilisateur que vous souhaitez. (Dans ce manuel, nous avons utilisé "Intellij". Puis cliquez sur "Next". C'est juste le jeu de couleurs. Vous pouvez choisir n'importe quel type (par ex. "Darcula" pour le mode sombre). Cette sélection n'a aucune influence sur la construction de l'APK.
 
 ![Capture d'écran 4](../images/Installation_Screenshot_04.png)
 
-Cliquez sur "Suivant" dans la boîte de dialogue "Vérifier les paramètres".
+Cliquez sur "Next" dans la boîte de dialogue "Vérify Settings".
 
 ![Capture d'écran 5](../images/Installation_Screenshot_05.png)
 
@@ -90,7 +90,7 @@ Une fois les téléchargements terminés, cliquez sur le bouton "Finish".
 
 ### Windows
 
-* Donnez l'information à Studio où git.exe est situé : Fichier - Paramètres
+* Donnez l'information à Studio où git.exe est situé : File - Settings...
   
   ![Android Studio - ouvrir les paramètres](../images/Update_GitSettings1.png)
 
@@ -98,7 +98,7 @@ Une fois les téléchargements terminés, cliquez sur le bouton "Finish".
 
 * Choisissez le chemin correct : .../Git<font color="#FF0000"><b>/bin</b></font>
 
-* Assurez-vous que la méthode de mise à jour "Fusion" (merge) est sélectionnée.
+* Assurez-vous que la méthode de mise à jour (Update method) "Merge" est sélectionnée.
   
   ![Android Studio - chemin GIT](../images/Update_GitSettings2a.png)
 
@@ -114,7 +114,7 @@ Une fois les téléchargements terminés, cliquez sur le bouton "Finish".
 
 ![Version_Control_Git](../images/Version_Control_Git.png)
 
-Renseignez l'URL vers l'adresse de base d'AndroidAPS ("https: //github.com/MilosKozak/AndroidAPS ") Et cliquez sur "clone".
+Renseignez l'URL vers l'adresse de base d'AndroidAPS ("https: //github.com/MilosKozak/AndroidAPS") Et cliquez sur "Clone".
 
 ![Capture d'écran 13](../images/Installation_Screenshot_13.png)
 

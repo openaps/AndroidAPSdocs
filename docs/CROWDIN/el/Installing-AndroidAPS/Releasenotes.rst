@@ -13,7 +13,7 @@ You will receive the following information as soon as a new update is available:
 
 Σας παρακαλούμε να καταλάβετε ότι αυτή η αλλαγή δεν έχει σκοπό να σας δυσκολέψει, αλλά γίνετε για λόγους ασφαλείας. Οι νέες εκδόσεις του AndroidAPS δεν παρέχουν μόνο νέες λειτουργίες αλλά και σημαντικές διορθώσεις ασφαλείας. Ως εκ τούτου, είναι απαραίτητο κάθε χρήστης να ενημερώνει όσων το δυνατό πιο γρήγορα.. Δυστυχώς υπάρχουν ακόμα αναφορές σφαλμάτων από πολύ παλιές εκδόσεις, γι 'αυτό προσπαθείστε να βελτιώσετε την ασφάλεια για κάθε χρήστη και ολόκληρη την κοινότητα του DIY. Ευχαριστώ για την κατανόηση.
 
-Version 2.6
+Version 2.6.0
 ==============
 Release date: 29-02-2020
 
@@ -21,7 +21,7 @@ Release date: 29-02-2020
 -----
 * Small design changes (startpage...)
 * Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`_
-* New `LocalProfile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
 
   * Local profile can hold more than 1 profile
   * Profiles can be cloned and edited
@@ -43,6 +43,9 @@ Release date: 29-02-2020
 * New status line for Combo
 * GlucoseStatus improvement
 * Fixed TempTarget NS sync
+* New statistics activity
+* Allow Extended bolus in open loop mode
+* Android 10 alarm support
 * Tons on new translations
 
 Version 2.5.1

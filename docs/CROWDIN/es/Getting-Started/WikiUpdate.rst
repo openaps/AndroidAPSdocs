@@ -1,5 +1,16 @@
 Docs updates & changes
 **************************************************
+
+February 2020
+==================================================
+* `Automation caveats <../Usage/Automation.html#good-practice--caveats>`_
+* `Autosens <../Usage/Open-APS-features.html#autosens>`_ - short explanation
+* `Careportal alternatives <../Usage/CPbefore26.html>`_
+* `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* `Sample Setup <../Getting-Started/Sample-Setup.html>`_ - update Dexcom G6
+* `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - major new features
+* `Wear complications <../Configuration/Watchfaces.html>`_
 January 2020
 ==================================================
 * `Manual carb correction <../Getting-Started/Screenshots.html#carb-correction>`_ for faulty carb entries

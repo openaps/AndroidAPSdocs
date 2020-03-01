@@ -11,7 +11,7 @@ V současné době máme 4 modely pro detekci citlivosti:
 
 ### Citlivost Oref0
 
-Citlivost je počítaná za posledních 24 hodin. Trávení sacharidů (pokud nejsou absorbované) se v simulaci zařezává na mezní dobu, která je uvedená v nastavení. The algorithm is similiar to OpenAPS Oref0, described in [OpenAPS Oref0 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Citlivost je počítaná za posledních 24 hodin. Trávení sacharidů (pokud nejsou absorbované) se v simulaci zařezává na mezní dobu, která je uvedená v nastavení. Tento model pracuje obdobně jako OpenAPS Oref0, popsaný v [OpenAPS Oref0 dokumentaci](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 ### Citlivost AAPS
 
@@ -19,7 +19,7 @@ Citlivost se počítá stejným způsobem jako v Oref0 variantě, ale můžete z
 
 ### Citlivost váženým průměrem
 
-Citlivost je vypočítaná jako vážený průměr z odchylek. You can specify time to the past. Novější odchylky mají větší váhu. Minimální absorpce sacharidů se počítá z maximální doby trávení sacharidů z nastavení. Tento algoritmus nejrychleji reaguje na změny citlivosti.
+Citlivost je vypočítaná jako vážený průměr z odchylek. Můžete zadat čas do minulosti. Novější odchylky mají větší váhu. Minimální absorpce sacharidů se počítá z maximální doby trávení sacharidů z nastavení. Tento algoritmus nejrychleji reaguje na změny citlivosti.
 
 ### Citlivost Oref1
 
