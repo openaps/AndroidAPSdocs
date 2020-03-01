@@ -5,11 +5,11 @@ Février 2020
 ==================================================
 * `Avertissement pour l'automatisation <../Usage/Automation.html#bonnes-pratiques-et-avertissements>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - courte explication
-* `Careportal alternatives <../Usage/CPbefore26.html>`_
+* `Alternatives à Careportal <../Usage/CPbefore26.html>`_
 * La fonction `Bolus étendus <../Usage/Extended-Carbs.html#bolus-etendu>`_ désactive la boucle fermée
 * Nouveau `plugin Profil Local <../Configuration/Config-Builder.html#profil-local-recommande>`_
 * `Exemple de configuration <../Getting-Started/Sample-Setup.html>`_ - mise à jour Dexcom G6
-* `Version 2.6 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - major new features
+* `Version 2.6 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - Nouvelles fonctionnalités majeures
 * `Complications pour la montre <../Configuration/Watchfaces.html>`_
 Janvier 2020
 ==================================================
