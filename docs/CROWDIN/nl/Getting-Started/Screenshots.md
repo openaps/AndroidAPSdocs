@@ -129,7 +129,7 @@ Hier zie je de status van je insulinepomp - in dit geval een Accu-Check Combo. D
 
 ## Care Portal
 
-Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
+De Careportal had dezelfde functies als wat je in Nightscout ziet wanneer je daar op het "+" symbool klikt. Je kon de Careportal gebruiken om dingen in te noteren.
 
 ### Carb correction
 
