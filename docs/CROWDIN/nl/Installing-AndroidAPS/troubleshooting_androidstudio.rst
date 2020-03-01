@@ -142,7 +142,7 @@ Als geen van de bovenstaande tips je geholpen heeft, dan zou je de de app helema
 
 In het ergste geval
 ==================================================
-In het geval dat zelfs het bouwen van de app vanaf nul niet jouw probleem oplost, zou je kunnen proberen om Android Studio volledig te verwijderen. Sommige gebruikers hebben gemeld dat dit hun probleem heeft opgelost.
+Mocht zelfs het weer vanaf het begin bouwen van de app niet de oplossing zijn voor jouw probleem, dan zou je kunnen overwegen om Android Studio volledig van je computer te verwijderen en helemaal overnieuw te beginnen. Sommige gebruikers hebben gemeld dat dit hun probleem heeft opgelost.
 
 **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
 
