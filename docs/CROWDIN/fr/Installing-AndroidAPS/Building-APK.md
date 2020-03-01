@@ -54,19 +54,19 @@ Sélectionnez "Ne pas importer les paramètres" car vous n'avez pas eu d'utilisa
 
 ![Capture d'écran 1](../images/Installation_Screenshot_01.png)
 
-Cliquez sur "Suivant".
+Cliquez sur "Next".
 
 ![Capture d'écran 2](../images/Installation_Screenshot_02.png)
 
-Sélectionnez l'installation "Standard" et cliquez sur "Suivant".
+Sélectionnez l'installation "Standard" et cliquez sur "Next".
 
 ![Capture d'écran 3](../images/Installation_Screenshot_03.png)
 
-Sélectionnez le thème de l'interface utilisateur que vous souhaitez. (Dans ce manuel, nous avons utilisé "Intellij". Puis cliquez sur "Suivant". C'est juste le jeu de couleurs. Vous pouvez choisir n'importe quel type (par ex. "Darcula" pour le mode sombre). Cette sélection n'a aucune influence sur la construction de l'APK.
+Sélectionnez le thème de l'interface utilisateur que vous souhaitez. (Dans ce manuel, nous avons utilisé "Intellij". Puis cliquez sur "Next". C'est juste le jeu de couleurs. Vous pouvez choisir n'importe quel type (par ex. "Darcula" pour le mode sombre). Cette sélection n'a aucune influence sur la construction de l'APK.
 
 ![Capture d'écran 4](../images/Installation_Screenshot_04.png)
 
-Cliquez sur "Suivant" dans la boîte de dialogue "Vérifier les paramètres".
+Cliquez sur "Next" dans la boîte de dialogue "Vérify Settings".
 
 ![Capture d'écran 5](../images/Installation_Screenshot_05.png)
 
@@ -90,7 +90,7 @@ Une fois les téléchargements terminés, cliquez sur le bouton "Finish".
 
 ### Windows
 
-* Donnez l'information à Studio où git.exe est situé : Fichier - Paramètres
+* Donnez l'information à Studio où git.exe est situé : File - Settings...
   
   ![Android Studio - ouvrir les paramètres](../images/Update_GitSettings1.png)
 
@@ -98,7 +98,7 @@ Une fois les téléchargements terminés, cliquez sur le bouton "Finish".
 
 * Choisissez le chemin correct : .../Git<font color="#FF0000"><b>/bin</b></font>
 
-* Assurez-vous que la méthode de mise à jour "Fusion" (merge) est sélectionnée.
+* Assurez-vous que la méthode de mise à jour (Update method) "Merge" est sélectionnée.
   
   ![Android Studio - chemin GIT](../images/Update_GitSettings2a.png)
 
