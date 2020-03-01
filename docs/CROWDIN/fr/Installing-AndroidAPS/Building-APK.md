@@ -4,7 +4,7 @@
 
 **AndroidAPS n'est pas disponible en téléchargement en raison de la réglementation concernant les dispositifs médicaux. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes ! Voir la [page FAQ](../Getting-Started/FAQ.md) pour plus de détails.**
 
-## ## Remarques importantes
+## Remarques importantes
 
 * Utilisez **[Android Studio Version 3.5.1](https://developer.android.com/studio/)** ou une version plus récente pour construire l'apk.
 * [Les systèmes d'exploitation Windows 10 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) ne sont pas pris en charge par Android Studio 3.5.1.
