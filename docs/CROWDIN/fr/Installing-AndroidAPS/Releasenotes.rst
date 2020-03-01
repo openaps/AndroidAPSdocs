@@ -43,9 +43,9 @@ Nouvelles fonctionnalités majeures
 * Nouvelle ligne d'état pour la Combo
 * Amélioration de l'état des Glucides
 * Correction synchronisation Cibles Temp avect NS
-* New statistics activity
-* Allow Extended bolus in open loop mode
-* Android 10 alarm support
+* Nouvelle activité Statistiques
+* Bolus étendus autorisés en mode boucle ouverte
+* Support des alarmes Android 10
 * Des tonnes de nouvelles traductions
 
 Version 2.5.1
