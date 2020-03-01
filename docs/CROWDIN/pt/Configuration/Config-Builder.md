@@ -26,6 +26,8 @@ Selecione o perfil basal que prefere usar. Ver a página [Perfis](../Usage/Profi
 
 O perfil local usa o perfil basal inserido manualmente no telefone. Assim que é selecionado, aparece um novo separador em AAPS, onde é possivel alterar os dados do perfil lidos da bomba se necessário. Com o próximo interruptor de perfil eles são então escritos na bomba em perfil 1. Este perfil é recomendado pois não depende de ligação à internet.
 
+Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). So make sure to have a backup in a safe place.
+
 ![Local Profile settings](../images/LocalProfile_Settings.png)
 
 Buttons:
