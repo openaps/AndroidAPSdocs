@@ -58,7 +58,7 @@
 - Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump. Then activate the Combo plugin. Press the *Refresh* button on the Combo tab to initialize the pump.
 - To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
 
-## Why does pairing with the pump does not work with the app "ruffy"?
+## Waarom werkt de koppeling met de pomp niet met de app "ruffy"?
 
 There are several possible reasons. Try the following steps:
 
