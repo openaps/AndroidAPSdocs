@@ -1,6 +1,6 @@
 De verschillende onderdelen 
 **************************************************
-AndroidAPS is meer dan de (zelfgebouwde) app alleen, er zijn ook andere onderdelen nodig om jouw closed loop systeem aan de praat te krijgen. Voordat je kiest welke onderdelen je wilt gebruiken, is het goed om eens te kijken naar de `Wat heb ik nodig <https://androidaps.readthedocs.io/en/latest/CROWDIN/nl/index.html#wat-heb-ik-nodig>`_sectie.
+AndroidAPS is meer dan de (zelfgebouwde) app alleen, er zijn ook andere onderdelen nodig om jouw closed loop systeem aan de praat te krijgen. Voordat je kiest welke onderdelen je wilt gebruiken, is het goed om eens te kijken naar de `Wat heb ik nodig <https://androidaps.readthedocs.io/en/latest/CROWDIN/nl/index.html#wat-heb-ik-nodig>`_ sectie.
    
 .. image:: ../images/modules.png
   :alt: Wat heb ik nodig
