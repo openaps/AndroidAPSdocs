@@ -14,6 +14,18 @@ Sur un ordinateur Windows 10, cela ressemble à ceci :
   .. image:: ../images/SmartphoneRootLevelWin10.png
     :alt: AndroidAPS Préférences téléphone connecté à l'ordinateur
 
+Exported information
+==================================================
+Among others the following information is part of the settings export:
+
+* `Automation <../Usage/Automation.html>`_ events
+* `Config builder <../Configuration/Config-Builder.html>`_ settings
+* `Local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ settings
+* `Objectives <../Usage/Objectives.html>`_ status incl. `exam results <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
+* `Preferences <../Configuration/Preferences.html>`_ incl. `NS Client settings <../Configuration/Preferences.html#ns-client>`_
+
+
+
 
 Comment exporter les paramètres
 ==================================================
