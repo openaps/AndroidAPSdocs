@@ -17,6 +17,8 @@ Verze 2.6.0
 ==============
 Datum vydání: 29. 02. 2020
 
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
 Hlavní nové funkce
 -----
 * Drobné úpravy vzhledu (úvodní obrazovka...)
