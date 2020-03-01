@@ -13,7 +13,7 @@ Pokud neaktualizujete do dalších 30 dní (90 dní od nového vydání) přejde
 
 Prosím pochopte, že tato změna není určena, aby vás otravovala, ale je to kvůli bezpečnostním důvodům. Nové verze AndroidAPS neposkytují pouze nové funkce, ale také důležité bezpečnostní opravy. Proto je důležité, aby každý uživatel aktualizoval co nejdříve.. Bohužel stále existují hlášení o chybách z velmi starých verzí, takže se jedná o pokus zlepšit bezpečnost pro každého uživatele a celou komunitu DIY. Děkujeme za pochopení.
 
-Version 2.6
+Version 2.6.0
 ==============
 Release date: 29-02-2020
 
@@ -43,6 +43,9 @@ Hlavní nové funkce
 * New status line for Combo
 * GlucoseStatus improvement
 * Fixed TempTarget NS sync
+* New statistics activity
+* Allow Extended bolus in open loop mode
+* Android 10 alarm support
 * Tons on new translations
 
 Verze 2.5.1
