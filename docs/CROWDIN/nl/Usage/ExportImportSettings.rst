@@ -17,7 +17,7 @@ Op een Windows-10 computer ziet het er zo uit:
 
 Instellingen exporteren
 ==================================================
-* **Exporteer instellingen op je oude telefoon
+* **Exporteer instellingen** op je oude telefoon
 
   * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
   * Onderhoud
@@ -31,8 +31,8 @@ Instellingen exporteren
 
   Het geëxporteerde bestand heet "AndroidAPSPreferences" en moet in de hoofdmap van de hoofdmap van de telefoon staan (net als C: op je computer).
   
-* **Installeer AndroidAPS op je nieuwe telefoon.
-* **Importeer instellingen op je nieuwe telefoon
+* **Installeer AndroidAPS** op je nieuwe telefoon.
+* **Importeer instellingen** op je nieuwe telefoon
 
   * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
   * Onderhoud
@@ -40,4 +40,4 @@ Instellingen exporteren
 
 * **Tip voor Dana RS gebruikers:**
 
-  * Omdat ook de instellingen voor het verbinden met je pomp zijn mee-geïmporteerd, zal jouw nieuwe telefoon denken dat hij de pomp al "kent" en dus geen Bluetooth verbindingsverzoek doen. Daarom moet je handmatig een Bluetooth verbinding maken tussen jouw nieuwe telefoon en je pomp.
+  * Omdat ook de instellingen voor het verbinden met je pomp zijn mee-geïmporteerd, zal jouw nieuwe telefoon denken dat hij de pomp al "kent" en dus geen Bluetooth verbindingsverzoek doen. Daarom moet je handmatig een Bluetooth verbinding maken tussen jouw nieuwe telefoon en je pomp (via Instellingen-menu van jouw telefoon).
