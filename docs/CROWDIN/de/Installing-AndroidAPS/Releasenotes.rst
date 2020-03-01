@@ -21,7 +21,7 @@ Wichtige neue Funktionen
 -----
 * Kleinere Designänderungen (Startseite...)
 * Careportal Tab / Menü entfernt - weitere Details dazu `hier <../Usage/CPbefore26.html>`_
-* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* Neues `Plugin Lokales Profil <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_
 
   * Im lokalen Profil können mehrere Profile gespeichert werden.
   * Profile können geklont und bearbeitet werden.
@@ -43,9 +43,9 @@ Wichtige neue Funktionen
 * Neue Statuszeile für Combo
 * Verbesserung des Glukosestatus
 * Fehlerbehebung: TempTarget NS-Synchronisation
-* New statistics activity
-* Allow Extended bolus in open loop mode
-* Android 10 alarm support
+* Neue Aktivitätsstatistik
+* Verzögerter Bolus im Open Loop verfügbar
+* Android 10 Alarmunterstützung
 * Viele neue Übersetzungen
 
 Version 2.5.1
