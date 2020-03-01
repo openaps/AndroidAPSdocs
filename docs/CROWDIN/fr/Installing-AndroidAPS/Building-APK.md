@@ -114,7 +114,7 @@ Une fois les téléchargements terminés, cliquez sur le bouton "Finish".
 
 ![Version_Control_Git](../images/Version_Control_Git.png)
 
-Renseignez l'URL vers l'adresse de base d'AndroidAPS ("https: //github.com/MilosKozak/AndroidAPS ") Et cliquez sur "clone".
+Renseignez l'URL vers l'adresse de base d'AndroidAPS ("https: //github.com/MilosKozak/AndroidAPS") Et cliquez sur "Clone".
 
 ![Capture d'écran 13](../images/Installation_Screenshot_13.png)
 
