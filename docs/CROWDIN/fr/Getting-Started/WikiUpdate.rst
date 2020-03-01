@@ -9,7 +9,7 @@ Février 2020
 * La fonction `Bolus étendus <../Usage/Extended-Carbs.html#bolus-etendu>`_ désactive la boucle fermée
 * Nouveau `plugin Profil Local <../Configuration/Config-Builder.html#profil-local-recommande>`_
 * `Exemple de configuration <../Getting-Started/Sample-Setup.html>`_ - mise à jour Dexcom G6
-* `Version 2.6 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - Nouvelles fonctionnalités majeures
+* `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - major new features
 * `Complications pour la montre <../Configuration/Watchfaces.html>`_
 Janvier 2020
 ==================================================
