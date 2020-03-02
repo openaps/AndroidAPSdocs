@@ -29,27 +29,27 @@ To avoid this there are two possibilities:
 
 * Turn off 'Automatic date and time' in your phone settings (manual time zone change)
 
-When get out of plane:
+Po wyjściu z samolotu:
 
-* turn off pump
-* change timezone on phone
-* turn off phone, turn on pump
-* clear history in pump
-* change time in pump
-* turn on phone
-* let phone connect to the pump and fine-tune time
+* wyłącz pompę
+* zmień strefę czasową w telefonie
+* wyłącz telefon, włącz pompę
+* wyczyść historię w pompie
+* zmień czas w pompie
+* włącz telefon
+* pozwól telefonowi połączyć się z pompą i dostosować czas
 
 ## Combo
 
 ## Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Sterownik automatycznie dostosowuje czas pompy do czasu telefonu.
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
+Insight rejestruje również wpisy historii, w którym momencie zmieniono czas i od którego (starego) czasu, do którego (nowego) czasu. Tak więc poprawny czas można określić w AAPS pomimo zmiany czasu.
 
-It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
+Może to powodować niedokładności w TDD. Ale to nie powinno być problemem.
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skiped in calculation in AAPS as the correct time cannot be identified properly.
+Użytkownik Insight nie musi się martwić o zmiany strefy czasowej i zmiany czasu. Jest jeden wyjątek od tej reguły: pompa Insight ma małą wewnętrzną baterię do zasilania, itp. podczas zmiany głównej baterii. Jeśli wymiana baterii trwa zbyt długo, bateria wewnętrzna może się wyczerpać, zegar zostanie zresetowany, a po włożeniu nowej baterii zostaniesz poproszony o wprowadzenie nowej godziny i daty. W takim przypadku wszystkie wpisy przed wymianą baterii są pomijane w obliczeniach w APPS, ponieważ prawidłowy czas nie może być prawidłowo zidentyfikowany.
 
 # Zmiana czasu z i na czas letni (DST)
 
