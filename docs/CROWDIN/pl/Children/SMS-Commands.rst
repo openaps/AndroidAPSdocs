@@ -1,18 +1,18 @@
 Komunikator SMS
 **************************************************
 Bezpieczeństwo
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 * AndroidAPS umożliwia zdalne sterowanie telefonem dziecka za pomocą wiadomości tekstowej. Jeśli włączysz ten komunikator SMS, zawsze pamiętaj, że telefon skonfigurowany do wydawania poleceń zdalnych może zostać skradziony. Dlatego zawsze chroń go przynajmniej kodem PIN.
 * AndroidAPS poinformuje Cię również Sms-em, jeśli Twoje polecenia zdalne, takie jak zmiana bolusa lub profilu, zostały wykonane. Zaleca się takie ustawienie funkcji sterowania pompą poprzez sms, aby teksty potwierdzające były wysyłane na co najmniej dwa różne numery telefonów, w przypadku kradzieży jednego z telefonów odbierających drugi telefon odbierze informację o zmianach.
 * **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 
 Jak to działa
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 * Most of the adjustments of temp targets, following AAPS etc. can be done on `NSclient app <../Children/Children.html>`_ on an Android phone with an internet connection.
 * Boluses can't be given through Nightscout, but you can use SMS commands.
 * If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
 
-* In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+* W ustawieniach swojego telefonu z systemem Android wybierz Aplikacje > AndroidAPS > Uprawnienia i włącz SMS-y
 * In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
 * If you want to use more than one number:
 
@@ -29,7 +29,7 @@ Jak to działa
 **Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
 
 Polecenia
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 
 Upper and lower case is irrelevant when sending commands.
 
@@ -44,11 +44,11 @@ Loop
    * Response: Loop has been disabled
 * LOOP START/ENABLE
    * Response: Loop has been enabled
-* LOOP STATUS
-   * Response depends on actual status
-      * Loop is disabled
-      * Loop is enabled
-      * Suspended (10 min)
+* LOOP START/ENABLE
+   * Odpowiedź zależy od rzeczywistego statusu
+      * Pętla (Loop) jest wyłączona
+      * Pętla (Loop) jest włączona
+      * Wstrzymana (10 min)
 * LOOP SUSPEND 20
    * Response: Loop suspended for 20 minutes
 * LOOP RESUME
@@ -70,16 +70,16 @@ Basal
    * Response: To start basal 0.3U/h for 30 min reply with code Swe
 * BASAL 0.3 20
    * Response: To start basal 0.3U/h for 20 min reply with code Swe
-* BASAL 30%
+* Baza 30%
    * Response: To start basal 30% for 30 min reply with code Swe
-* BASAL 30% 50
+* Baza 30% 50
    * Response: To start basal 30% for 50 min reply with code Swe
 
 Bolus
 --------------------------------------------------
 Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
 
-* BOLUS 1.2
+* Bolus 1.2
    * Response A: To deliver bolus 1.2U reply with code Rrt
    * Response B: Remote bolus not available. Try again later.
 * BOLUS 0.60 MEAL
@@ -126,7 +126,7 @@ Other
    * Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
 Rozwiązywanie problemów
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Multiple SMS
 --------------------------------------------------
 If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not uploads treatments to NS. 
