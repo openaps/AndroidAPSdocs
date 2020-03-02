@@ -38,7 +38,7 @@ With low carb, high fat/protein meals it may be enough to only use eCarbs withou
 When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
 
 Bolus Przedłużony
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 As mentioned above extended or multiwave boluses do not really work in a closed loop environment. Therefore there is no option to issue an extended bolus in AndroidAPS. Here's why:
 
 1. The loop determines that now 1.55U/h is to be delivered. Whether this is delivered as an extended bolus or TBR does not matter to the algorithm. In fact, some of the pumps use the extended bolus. What should happen then? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
