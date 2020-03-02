@@ -85,7 +85,7 @@ You can tape it: There are getting sold pre-perforated 'overpatches' for common 
 
 You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM with a rubber band (ask Google or ebay).
 
-# AndroidAPS settings
+# Ustawienia AndroidAPS
 
 The following list aims to help you optimize settings. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
 
@@ -214,7 +214,7 @@ First of all, check your basal rate and make a no-carb basal rate test. If it is
 
 # Other settings
 
-## Nightscout settings
+## Ustawienia Nightscout
 
 ### AndroidAPS NSClient says 'not allowed' and does not upload data. What can I do?
 
