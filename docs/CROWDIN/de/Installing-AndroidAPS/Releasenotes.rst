@@ -17,6 +17,8 @@ Version 2.6.0
 ==============
 Erscheinungsdatum: 29.02.2020
 
+Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
+
 Wichtige neue Funktionen
 -----
 * Kleinere Designänderungen (Startseite...)
