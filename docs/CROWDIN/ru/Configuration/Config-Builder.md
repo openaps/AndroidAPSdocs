@@ -26,26 +26,26 @@
 
 Локальный профиль использует базальной профиль, введенный вручную в телефоне. Как только он выбран, появляется новая вкладка, где можно при необходимости изменить данные профиля, считываемые с помпы. При следующем переключении профиля они записываются на помпу в профиль 1. Мы рекомендуем этот профиль, поскольку он не зависит от интернет-соединения.
 
-Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). So make sure to have a backup in a safe place.
+Ваши локальные профили являются частью [экспортируемых настроек](../Usage/ExportImportSettings.rst). Поэтому убедитесь, что у вас есть резервная копия в безопасном месте.
 
-![Local Profile settings](../images/LocalProfile_Settings.png)
+![Параметры локального профиля](../images/LocalProfile_Settings.png)
 
-Buttons:
+Кнопки:
 
-* green plus: add
-* red X: delete
-* blue arrow: duplicate
+* зеленый плюс: добавить
+* красный крестик: удалить
+* синяя стрелка: дублировать
 
-#### Clone profile switch
+#### Переключение профиля и клонирование
 
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+Вы можете легко создать новый локальный профиль с помощью переключения профиля. В этом случае сдвиг по времени и процент будет применяться к новому локальному профилю.
 
-1. Go to treatments tab.
-2. Select ProfileSwitch.
-3. Press "Clone".
-4. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
+1. Перейдите на вкладку терапии.
+2. Выберите Переключатель профилей.
+3. Нажмите Кнопку "Клонировать".
+4. Вы можете редактировать новый локальный профиль через вкладку локальный профиль (ЛП) или через сэндвич-меню.
 
-![Clone profile switch](../images/LocalProfile_ClonePS.png)
+![Переключение профиля и клонирование](../images/LocalProfile_ClonePS.png)
 
 If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
 
@@ -53,14 +53,14 @@ If you want to switch from Nightscout profile to local profile just do a profile
 
 Local profiles can also be uploaded to Nightscout. The settings can be found in NS Client preferences.
 
-![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
+![Загрузить локальный профиль в НС](../images/LocalProfile_UploadNS2.png)
 
 Advantage:
 
 * no internet connection necessary to change profile settings
 * profile changes can be made directly on the phone
-* new profile can be created from profile switch
-* local profiles can be uploaded to Nightscout
+* новый профиль можно создать при помощи переключателя профиля
+* локальные профили можно загрузить в Nightscout
 
 Disadvantage:
 
@@ -185,7 +185,7 @@ See [Objectives](../Usage/Objectives.rst) page for more information.
 
 ## Терапия
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
+If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Если вы хотите редактировать или удалить запись (например, съели меньше углеводов, чем ожидали) выберите «Удалить» и введите новое значение (измените время, в случае необходимости) через [ кнопку углеводы на главном экране](../Getting-Started/Screenshots.md#carb-correction).
 
 ## Общие настройки
 
@@ -230,15 +230,15 @@ Some buttons to quickly access common features:
 * Temporary targets
 * Set / cancel temp. скорость базала
 * Extended bolus (DanaR/RS or Combo pump only)
-* Record for any specific care entries
+* Запись любых конкретных шагов терапии
     
-    * BG check
-    * Prime / fill - record pump site change and prime (if not done on pump)
-    * CGM sensor insert
-    * Pump battery change
+    * Проверка ГК
+    * Прайм/заполнение - запись о смене катетера и заполнение инфузионного набора (если не сделано на помпе)
+    * Установка сенсора мониторинга глюкозы
+    * Замена батареи помпы
     * Note
     * Exercise
-* View the current sensor, insulin, canula and pump battery ages
+* Показать текущие сроки валидности сенсора, инсулина, катетера и батареи помпы
 * History browser
 * TDD (Total daily dose = bolus + basal per day)
 
