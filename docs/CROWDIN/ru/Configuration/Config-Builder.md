@@ -86,58 +86,58 @@
 
 Выберите кривую, соответствующую типу вашего инсулина. Варианты 'Быстродействующий Oref', Сверхбыстрый Oref' и 'Безпиковый Oref' имеют вид экспоненты. Более подробно см. в [Документах OpenAPS](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), кривые различаются на основе длительности действия инсулина DIA и времени пика.
 
-Длительность работы инсулина не одинакова для всех. That's why you have to test it for yourself. But it must always be at least 5 hours. You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page.
+Длительность работы инсулина не одинакова для всех. Поэтому ее следует проверить самостоятельно. Но она всегда должна быть минимум 5 часов. Более подробную информацию можно прочитать в разделе "Профиль инсулина" на [ этой ](../Getting-Started/Screenshots#insulin-profile) странице.
 
-For Rapid-Acting and Ultra-Rapid, the DIA is the only variable you can adjust by yourself, the time to peak is fixed. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings.
+Для быстродействующих и сверхбыстрых инсулинов, длительность действия инсулина DIA является единственной переменной, которую можно настроить самостоятельно, время пика фиксированное. Безпиковый позволяет настроить как DIA, так и время пика, эта опция для опытных пользователей, которые знают последствия таких параметров.
 
-The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
+[Диаграмма работы инсулина](../Getting-Started/Screenshots#insulin-profile) поможет понять различные кривые. Его можно увидеть на вкладке, если отметить галочкой в конфигураторе или выбрать из выпадающего меню слева.
 
-### Rapid-Acting Oref
+### быстро действующий Oref
 
-* recommended for Humalog, Novolog and Novorapid
+* рекомендуется для Humalog, Novolog и Novorapid
 * DIA (длительность действия инсулина) = по крайней мере 5.0 часов
-* Макс. peak = 75 minutes after injection (fixed, not adjustable)
+* Макс. пик = 75 мин после инъекции (фиксированный, не регулируется)
 
-### Ultra-Rapid Oref
+### Сверхбыстрый Oref
 
-* recommended for FIASP
+* рекомендуется для FIASP
 * DIA (длительность действия инсулина) = по крайней мере 5.0 часов
-* Макс. peak = 55 minutes after injection (fixed, not adjustable)
+* Макс. пик = 55 мин после инъекции (фиксированный, не регулируется)
 
-For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
+Для многих людей действие FIASP практически незаметно спустя 3-4 часа, даже если тогда, как правило, остается 0.0xx ед. Это остаточное количество может быть ощутимо во время занятий спортом, например. Поэтому AndroidAPS использует как минимум 5 часов в качестве DIA.
 
-![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
+![Ультра-быстрый Oref в конфигураторе](../images/ConfBuild_UltraRapidOref.png)
 
-### Free Peak Oref
+### Безпиковый Oref
 
-With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+На профиле «Безпиковый 0ref» можно самостоятельно ввести пиковое время. Если в профиле не определено более высокое значение, DIA автоматически устанавливается на 5 часов.
 
-This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+Этот инсулиновый профиль рекомендуется если используется неподдерживаемый тип инсулина или смесь различных инсулинов.
 
 ## Источник данных гликемии
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
+Выберите источник данных ГК - см. страничку [Источник ГК](BG-Source.rst) для получения дополнительной информации по настройкам.
 
 * [xDrip +](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
-* NSClient BG
+* СК с клиента Nightscout
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
-* [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
+* [ Glimp ](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)-поддерживается только версия 4.15.57 и более поздние
+* Модифицированное приложение [Dexcom](https://github.com/dexcomapp/dexcomapp/) - выберите «Отправлять данные ГК на xDrip +», если хотите пользоваться оповещениями от xDrip +.
     
-    ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+    ![Источник ГК в конфигураторе](../images/ConfBuild_BGSource.png)
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Помпа
 
-Select the pump you are using.
+Выберите помпу, которой пользуетесь.
 
 * [Dana R](DanaR-Insulin-Pump.md)
-* Dana R Korean (for domestic DanaR pump)
-* Dana Rv2 (DanaR pump with firmware upgrade)
+* DanaR Корея (DanaR для корейского рынка)
+* DanaRv2 (DanaR с обновленной прошивкой)
 * [Dana RS](DanaRS-Insulin-Pump.md)
-* [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-* MDI (receive AAPS suggestions for your multiple daily injections therapy)
+* [Accu-Chek Combo](Accu-Chek-Combo-Pump.md) (требует установки утилиты ruffy)
+* MDI инъекции инсулина шприцем/шприц-ручкой (на основе предложений от AAPS по ведению терапии)
 * Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
 For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
