@@ -242,34 +242,34 @@ Some buttons to quickly access common features:
 * History browser
 * TDD (Total daily dose = bolus + basal per day)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Другие предпочитают диапазон от 32% до 37% от суточной величины базала TDD. Как и большинство подобных подсказок они имеют ограниченное практическое значение. Примечание: Ваш диабет может быть иным!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions_b.png)
+![Вкладка "Действия"](../images/ConfBuild_ConfBuild_Actions_b.png)
 
 ### СМС-коммуникатор
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
+Позволяет удалено управлять некоторыми функциями AndroidAPS при помощи SMS, см. [SMS команды](../Children/SMS-Commands.rst) для получения дополнительной информации по настройке.
 
-### Food
+### Еда
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Отображает предустановленные характеристики еды, определенные в базе данных Nightscout, см [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) для получения дополнительной информации по параметрам.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Примечание: Записи не могут использоваться в калькуляторе AndroidAPS. (Только просмотр)
 
-### Wear
+### Смарт-часы Wear
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Мониторим и контролируем AAPS, при помощи смарт-часов Android Wear (см. [страницу Циферблаты](../Configuration/Watchfaces.md)). Настройте параметры (шестеренка) для определения переменных, которые следует учитывать при расчете болюсов (т.е. тренд 15 мин, активные углеводы COB и т.п....).
 
 Если вы хотите подавать болюс и т. д. с часов, тогда в настройках часов Wear следует включить «Управление с часов».
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Настройки смарт-часов Wear](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+При помощи вкладки Wear или многослойного сэндвич-меню (в левой верхней части экрана, если вкладка не отображается) вы можете
 
-* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
+* Повторить отправку всех данных. Может быть полезно, если некоторое время часы не были подключены и вы хотите передать на них данные.
+* Открыть настройки на часах прямо с телефона.
 
-### xDrip Statusline (watch)
+### Cтрока состояния xDrip (часы)
 
 Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
