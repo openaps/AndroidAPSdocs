@@ -154,7 +154,7 @@ If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value 
 
 ## Система ИПЖ
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+Select the desired APS algorithm for therapy adjustments. Подробности выбранного алгоритма можно просмотреть на вкладке OpenAPS(OAPS).
 
 * OpenAPS MA (meal assist, state of the algorithm in 2016)
 * OpenAPS AMA (advanced meal assist, state of the algorithm in 2017)  
