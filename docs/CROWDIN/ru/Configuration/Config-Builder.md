@@ -169,80 +169,80 @@
 
 ### Открытый цикл
 
-AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+AAPS постоянно оценивает все доступные данные (активный инсулин IOB, активные углеводы COB, сахар крови и т. п.) и при необходимости делает предложения о корректировке терапии. Предложения не будут выполняться автоматически (как при замкнутом цикле) а должны вводиться вручную прямо в помпу или с помощью команды (при пользовании совместимыми помпами Dana R/RS или Accu Chek Combo). Этот параметр предназначен для знакомства с работой AndroidAPS или для неподдерживаемых помп.
 
 ### Closed Loop/Замкнутый цикл (петля, контур)
 
-AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). The Closed Loop works within numerous safety limits, which you can be set individually. Closed Loop is only possible if you are in [Objective 6](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
+AAPS постоянно оценивает доступные данные (активный инсулин IOB, активные углеводы COB, сахар крови и т. п.) и при необходимости автоматически корректирует лечение (без вашего дальнейшего вмешательства) для достижения целевого диапазона или величины (подача болюса, временная базальная скорость, отключение подачи инсулина во избежание гипогликемии и т.д.). Замкнутый цикл работает в рамках многочисленных ограничений безопасности, каждое из которых можно задать по отдельности. Замкнутый цикл можно инициировать только по достижении [цели 6](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) или далее с применением поддерживаемой помпы.
 
 ## Цели (обучающая программа)
 
-AndroidAPS has a number of objectives that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+AndroidAPS ставит перед вами ряд задач (целей), которые вы должны выполнить шаг за шагом. Подобная организация алгоритма безопасно проведет вас к созданию замкнутой системы. Она гарантирует, что вы все правильно наладили и понимаете, что именно делает система. Это единственный способ понять, что вы можете доверять системе.
 
-You should [export your settings](../Usage/ExportImportSettings.rst) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+Следует [экспортировать настройки](../Usage/ExportImportSettings.rst) (в том числе ход прохождения целей) на регулярной основе. В дальнейшем, если вам потребуется заменить смартфон (новая покупка, повреждение и т. д.) вы можете просто импортировать эти параметры.
 
-See [Objectives](../Usage/Objectives.rst) page for more information.
+См. страницу [Цели](../Usage/Objectives.rst) для дополнительной информации.
 
 ## Терапия
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Если вы хотите редактировать или удалить запись (например, съели меньше углеводов, чем ожидали) выберите «Удалить» и введите новое значение (измените время, в случае необходимости) через [ кнопку углеводы на главном экране](../Getting-Started/Screenshots.md#carb-correction).
+На вкладке лечения (назначения) отражены назначения, загруженные из nightscout. Если вы хотите редактировать или удалить запись (например, съели меньше углеводов, чем ожидали) выберите «Удалить» и введите новое значение (измените время, в случае необходимости) через [ кнопку углеводы на главном экране](../Getting-Started/Screenshots.md#carb-correction).
 
 ## Общие настройки
 
 ### Общие замечания
 
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
+Отображает текущее состояние цикла и кнопки для наиболее распространенных действий (см. [раздел Домашний экран](../Getting-Started/Screenshots.md) для подробной информации). Доступ к параметрам - через значок шестеренки.
 
-#### Keep screen on
+#### Не отключать экран
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+Параметр «не отключать экран» заставит Android держать экран включенным постоянно. Это полезно для презентаций и т. д. Но опция потребляет больше энергии аккумулятора. Поэтому рекомендуется подключить смартфон к кабелю зарядного устройства.
 
-#### Buttons
+#### Кнопки
 
-Define which Buttons are shown on the home screen.
+Определите, какие кнопки отображаются на домашнем экране.
 
 * Терапия
 * Калькулятор
 * Инсулин
-* Carbs
-* CGM (opens xDrip+)
-* Calibration
+* Углеводы
+* CGM (открывает) xDrip +
+* Калибровка
 
-Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
+Кроме того можно задать сочетания клавиш для приращения инсулина и углеводов и определить, должны ли диалоговые окна содержать примечания.
 
-#### QuickWizard settings
+#### Настройки мастера болюса
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Создайте кнопки для некоторых стандартных блюд (углеводы и метод вычисления болюса) которые будут отображаться на главном экране. Применяйте для стандартных часто употребляемых блюд. Если для различных блюд указано разное время, у вас всегда будет оответствующая кнопка приема пищи на домашнем экране, в зависимости от времени суток.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Примечание: Кнопка не будет видна вне диапазона времени, для нее созданного или если у вас есть достаточно активного инсулина IOB на углеводы, заданные кнопкой.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Кнопка мастера быстрой настройки](../images/ConfBuild_QuickWizard.png)
 
-#### Advanced settings
+#### Расширенные настройки
 
-Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Включает функцию супер болюс в мастере. Применяйтес осторожностью и не активируйте пока не узнаете, как она работает. В общем виде для следующих двух часов к базе добавляется болюс и активируется нулевой временный базал. **Другие функции алгоритма AAPS будут отключены - поэтому применяйте с осторожностью! Если вы используете функции супер микро болюса SMB AAPS, то время его работы будет ограничено в соответствии с настройками в ["Макс. минут базала для ограничения SMB до"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to); если вы не используете SMB, алгоритм AAPS будет отключен на два часа.** Подробности о супер-болюсе можно найти [здесь](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Действия
 
-Some buttons to quickly access common features:
+Кнопки быстрого доступа к распространенным настройкам:
 
-* Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
-* Temporary targets
-* Set / cancel temp. скорость базала
-* Extended bolus (DanaR/RS or Combo pump only)
+* Переключатель профилей (см. [страницу профилей](../Usage/Profiles.md) для дополнительной информации по настройке)
+* Временные целевые значения
+* Задать / отменить врем. скорость базала
+* Пролонгированный болюс (только для DanaR/RS или Combo)
 * Запись любых конкретных шагов терапии
     
     * Проверка ГК
     * Прайм/заполнение - запись о смене катетера и заполнение инфузионного набора (если не сделано на помпе)
     * Установка сенсора мониторинга глюкозы
     * Замена батареи помпы
-    * Note
-    * Exercise
+    * заметка
+    * нагрузка
 * Показать текущие сроки валидности сенсора, инсулина, катетера и батареи помпы
 * History browser
-* TDD (Total daily dose = bolus + basal per day)
+* TDD (Общая суточная доза = болюс + базал за день)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Другие предпочитают диапазон от 32% до 37% от суточной величины базала TDD. Как и большинство подобных подсказок они имеют ограниченное практическое значение. Примечание: Ваш диабет может быть иным!
+Некоторые врачи рекомендуют - особенно для новых пользователей - соотношение базал-болюс 50:50. Поэтому эта величина рассчитывается как TDD / 2 * TBB (общая суточная база = сумма базала в течение 24 часов). Другие предпочитают диапазон от 32% до 37% от суточной величины базала TDD. Как и большинство подобных подсказок они имеют ограниченное практическое значение. Примечание: Ваш диабет может быть иным!
 
 ![Вкладка "Действия"](../images/ConfBuild_ConfBuild_Actions_b.png)
 
@@ -271,49 +271,49 @@ Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Th
 
 ### Cтрока состояния xDrip (часы)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Отображение информации о состоянии цикла на циферблате xDrip + (если вы не пользуетесь циферблатом AAPS /[AAPSv2 ](../Configuration/Watchfaces.md))
 
-### Ongoing Notification
+### Текущее состояние приложения
 
-Displays a summary of current BG, delta, active TBR%, active basal u/h and profile, IOB and split into bolus IOB and basal IOB on the phones's dropdown screen and phone's lock screen.
+Показывает текущий СК, изменение СК, актуальный % временного базала TBR, активный базал ед/ч и профиль, активный инсулин с разбивкой на болюсный IOB и базальный IOB на экране вкладки и на экране блокировки телефона.
 
-![AAPS widget](../images/ConfBuild_Widget.png)
+![Виджет AAPS](../images/ConfBuild_Widget.png)
 
 ### Клиент Nightscout
 
-Setup sync of your AndroidAPS data with Nightscout.
+Синхронизация данных AndroidAPS с Nightscout.
 
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimization not disabled for AAPS) but can flood the Nightscout graph with entries.
+Если активировать **записывать старт приложения в NS**, каждый запуск AndroidAPS будет виден в Nightscout. Может быть полезным для обнаружения проблем с приложением (напр. если для AAPS не отключена оптимизация аккумулятора) но может переполнить записями график Nightscout.
 
-#### Alarm options
+#### Опции оповещения
 
-Activate/deactivate AndroidAPS alarms
+Активирует / деактивирует сигналы AndroidAPS
 
-![Alarm options](../images/ConfBuild_NSClient_Alarms.png)
+![Опции оповещения](../images/ConfBuild_NSClient_Alarms.png)
 
-#### Connection settings
+#### Настройки подключения
 
-Offline looping, disable roaming...
+Автономный цикл, отключить роуминг...
 
-If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
+Если вы хотите использовать только конкретные сети WiFi, вы можете ввести здесь **WiFi SSID**. Несколько идентификаторов SSID разделяются точкой с запятой. Чтобы удалить все SSID введите в поле пустое пространство.
 
-![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
+![Параметры подключения Nightscout](../images/ConfBuild_ConnectionSettings.png)
 
-#### Advanced settings
+#### Расширенные настройки
 
-* Auto backfill missing BGs from Nightscout
-* Create announcement from errors Create Nightscout announcement for error dialogs and local alerts (also viewable in careportal in treatments section)
-* Enable local broadcast to other apps like xDrip+
-* NS upload only (sync disabled)
-* No upload to NS
-* Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
+* Заполнять пропущенные данные данными из NS
+* Создать оповещение из сообщения об ошибке Создать оповещение Nightscout из диалогов об ошибках и местных оповещений (также отображаются в careportal в разделе лечение/назначения)
+* Активировать передачу на другие приложения (напр. xDrip+)
+* Только отправлять на NS (Синхронизация отключена)
+* Не отправлять в NS
+* Всегда использовать абсолютные значения базала -> должно быть активировано, если вы хотите правильно применять [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
-![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
+![Расширенные настройки Nightscout](../images/ConfBuild_NSClient_Advanced.png)
 
 ### Тех. обслуживание
 
-Email and number of logs to be send. Normally no change necessary.
+Адрес электронной почты и количество журналов/логов для отправки. Обычно не требует изменений.
 
 ### Конфигуратор
 
-Use tab for config builder instead of hamburger menu.
+Используйте вкладку конфигуратора вместо выпадающего сэндвич-меню слева.
