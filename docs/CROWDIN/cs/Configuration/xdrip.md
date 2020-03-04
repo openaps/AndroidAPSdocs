@@ -50,8 +50,8 @@ Pokud váš telefon používá systém Android 10 a máte potíže s aplikací x
 ## xDrip+ a Dexcom G6
 
 * Vysílač Dexcom G6 může být připojen současně k přijímači Dexcom (nebo pumpě t:slim) a zároveň k vašemu telefonu.
-* When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
-* If you need Clarity and want to profit from xDrip+ alarms use the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) with local broadcast to xDrip+.
+* Pokud používáte xDrip+ jako přijímač, nejprve odinstalujte aplikaci Dexcom. **K vysílači se nelze připojit prostřednictvím obou aplikací xDrip+ a Dexcom současně!**
+* Jestliže potřebujete službu Clarity, a chcete zároveň využívat výhod výstrah xDripu+, použijte [upravenou aplikaci Dexcom](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) a funkci místního odesílání do xDripu+.
 
 ### Verze xDripu+ závisí na výrobním čísle vysílače G6.
 
@@ -153,14 +153,14 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 is starting with 8G, 8H or 
 * Prozatím nelze prodloužit životnost vysílačů, jejichž výrobní číslo starts with 8G, 8H or 8J.
 * V zájmu prevence potíží se spouštěním senzorů je důrazně doporučeno prodlužovat životnost vysílače před 100 dny prvního použití.
 * Při operaci prodloužení životnosti vysílače bude přerušena aktuální relace senzoru. Mějte to na paměti a naplánujte prodloužení životnosti vysílače současně s výměnou senzoru. Nebo se připravte na 2 h zahřívání senzoru.
-* Stop sensor manually via hamburger menu.
+* Zastavte senzor ručně nebo prostřednictvím hamburger menu.
 * Přepněte do `engineering mode`: 
    * klepněte na symbol injekční stříkačky v pravém horním rohu hlavní obrazovky
    * pak klepněte na symbol mikrofonu v dolním pravém rohu
    * a do textového pole napište bez uvozovek „enable engineering mode“ 
    * klikněte na tlačítko „OK“
    * Pokud máte povoleny Google hlasové příkazy, můžete po klepnutí na symbol mikrofonu vyslovit „enable engeneering mode“. 
-* Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
+* Přejděte do nastavení ladění G5 a ujistěte se, že volba `Používat OB1 collector` je povolena.
 * Použijte hlasový příkaz: „hard reset transmitter“
 * Hlasový příkaz bude proveden při následujícím odeslání dat do vysílače
 * Přejděte na stav systému (hamburger menu -> Stav systému) a sledujte, co se stalo
@@ -191,7 +191,7 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 is starting with 8G, 8H or 
    
    ![xDrip+ Zastavit senzor Dexcom 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Forget device in xDrip+ system status AND in smartphone’s BT settings (Will be shown as Dexcom?? přičemž ?? jsou poslední dva znaky výrobního čísla vysílače)
+* Vymažte zařízení z xDripu+ (Stav systému -> Forget device) a ze seznamu BT v nastavení telefonu (Zobrazuje se jako Dexcom??, přičemž ?? jsou poslední dva znaky výrobního čísla vysílače)
    
    ![xDrip+ Zapomenout zařízení](../images/xDrip_Dexcom_ForgetDevice.png)
 
@@ -210,24 +210,24 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 is starting with 8G, 8H or 
    
    * Preemptivní restart (zakázat!)
    * Restartovat senzor (zakázat!)
-   * Fallback to xDrip+ (disable!)
+   * Vrátit se k xDrip+ algoritmu (zakázat!)
    
    ![Nastavení pro vysílače Firefly](../images/xDrip_Dexcom_FireflySettings.png)
 
-* Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following informations is displayed:
+* Na první stránce se stavem systému zkontrolujte -> stav G5/G6 -> PhoneServiceState, zda se zobrazuje některá z následujících informací:
    
    * Sériové číslo vysílače začínající na 80 nebo 81: "Got data hh:mm" (např. "Got data 19:04")
    * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
    
    ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Wait 15 minutes as the transmitter should communicate several times with xDrip before new sensor is started. Battery data will be shown below Firmware information.
+* Počkejte 15 minut, vysílač by měl s xDripem několikrát komunikovat, než bude spuštěn nový senzor. Udaje o baterii budou zobrazeny pod Informacemi o firmwaru.
    
-   ![Firefly transmitter battery data](../images/xDrip_Dexcom_FireflyBattery.png)
+   ![Údaje o baterii vysílače Firefly](../images/xDrip_Dexcom_FireflyBattery.png)
 
-* Start sensor and DO NOT BACKDATE! Always select "Yes, today"!
+* Spusťte senzor a NEZADÁVEJTE DATUM V MINULOSTI! Vždy vyberte „Ano, dnes“!
 
-* Restart collector (system status - if not replacing sensor)
+* Klikněte na Restart collector (Stav systému - když neměníte senzor)
 * Před prvním načtením dat do xDrip+ nezapínejte originální Dexcom přijímač (pokud ho používáte).
 * Dlouhým přidržením symbolu kapky krve xDrip+ zrušíte zobrazování `Source Wizard Button`.
    
@@ -262,7 +262,7 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 is starting with 8G, 8H or 
 
 * Spuštění senzoru
    
-   **For new Firefly transmitters** (serial no. starting with 8G, 8H or 8J) **it is mandatory, for all other transmitters it is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen). DO NOT BACKDATE!**
+   **Pro nové vysílače Firefly** (výrobní č. starting with 8G, 8H or 8J) **it is mandatory, for all other transmitters it is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen). NEZADÁVEJTE DATUM V MINULOSTI!**
 
 * Nastavit čas vložení
    
@@ -315,7 +315,7 @@ Berte prosím na vědomí, že následující metoda nebude pravděpodobně fung
 * Zastavte senzor
 * Spusťte senzor se skutečným kódem (vytištěným na ochranné nálepce)
 
-V log souborech v xDrip+ ověřte, že xDrip+ začne počítat „Trvání: 1 minuta“ (a tak dále). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Pozdější stav není v dolní části hlavní obrazovky vždy zobrazen správně.
+V log souborech v xDrip+ ověřte, že xDrip+ začne počítat „Trvání: 1 minuta“ (a tak dále). Pouze v log protokolech v xDrip+ můžete v úvodní fázi zjistit, zda xDrip+ zastavil senzor. Pozdější stav není v dolní části hlavní obrazovky vždy zobrazen správně.
 
 ## xDrip+ a Freestyle Libre
 
