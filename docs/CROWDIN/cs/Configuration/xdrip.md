@@ -76,7 +76,7 @@ Pokud váš telefon používá systém Android 10 a máte potíže s aplikací x
 
 ### Preemptivní restarty nejsou doporučené
 
-**S vysílači Dexcom začínající na č. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
+**S vysílači Dexcom začínající is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
 
 Automatické prodloužení senzorů Dexcom (`preemptivní restart`) není doporučeno, protože to může způsobit „skoky“ v hodnotách glykémie 9. den po restartu.
 
