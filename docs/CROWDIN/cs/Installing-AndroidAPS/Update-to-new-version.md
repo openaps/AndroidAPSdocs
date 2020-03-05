@@ -91,7 +91,7 @@ Klikněte na odkaz „locate“ v podokně „Event Log“.
 
 Přejděte prosím do složky AndroidAPS/app/full/release a tam vyhledejte soubor „app-full-release.apk“. Přeneste tento soubor do telefonu s Androidem. You can do it on your preferred way:
 
-* Bluetooth
+* přes Bluetooth
 * cloud upload (Google Drive or other cloud services)
 * connect computer and phone by cable 
 * by mail (Note that some mail apps do not allow apk attachments, in this case use other transfer method.)
