@@ -42,4 +42,4 @@
 .. image:: ../images/Troubleshooting_SensorAge.png
   :alt: Отрицательный срок работы датчика
 
-This occurs if there is either a double "CGM Sensor Insert" entry in `actions tab / menu <../Configuration/Config-Builder.html#actions>`_ or a sensor insert with wrong date. Go to treatments tab > careportal and delete the wrong entry.
+Это происходит, если на вкладке`действия / menu <../Configuration/Config-Builder.html#actions>`_ имеется двойная запись или неверно проставлена дата установки сенсора. Перейдите на вкладку назначений > портал терапии и удалите неверную запись.
