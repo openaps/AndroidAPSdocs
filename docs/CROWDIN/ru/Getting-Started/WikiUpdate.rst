@@ -1,13 +1,13 @@
-Docs updates & changes
+Обновления и изменения в документации
 **************************************************
 
-February 2020
+Февраль 2020
 ==================================================
-* `Automation caveats <../Usage/Automation.html#good-practice--caveats>`_
-* `Autosens <../Usage/Open-APS-features.html#autosens>`_ - short explanation
-* `Careportal alternatives <../Usage/CPbefore26.html>`_
-* `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
-* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
+Пояснения по автоматизации
+* ` Autosens <../Usage/Open-APS-features.html#autosens> ` _-краткое объяснение
+* '' Альтернативы порталу терапии <../Usage/CPbefore26.html> ` _
+* `Пролонгированный болюс <../Usage/Extended-Carbs.html > ` _ функция - замкнутый цикл будет отключена
+* Новый плагин `Local Profile <../Configuration/Config-Builder.html#local-profile-recommended>`_
 * `Sample Setup <../Getting-Started/Sample-Setup.html>`_ - update Dexcom G6
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - major new features
 * `Wear complications <../Configuration/Watchfaces.html>`_
