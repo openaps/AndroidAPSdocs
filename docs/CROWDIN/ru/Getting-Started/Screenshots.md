@@ -64,12 +64,12 @@
    * ** СЕРЫЕ ** столбцы показывают отклонение, вызванное углеводами. 
    * ** ЗЕЛЕНЫЕ ** столбцы показывают, что ГК превышает уровень, ожидаемый алгоритмом. 
    * ** КРАСНЫЕ ** столбцы показывают, что ГК ниже величины, ожидаемой алгоритмом.
-* **Sensitivity** (white line): It shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. Чувствительность - это расчет чувствительности к инсулину в результате нагрузки, гормонов и т.д.
+* ** Чувствительность ** (белая линия): отображается чувствительность, обнаруженная [ Autosens ](../Usage/Open-APS-features#autosens). Чувствительность - это расчет чувствительности к инсулину в результате нагрузки, гормонов и т.д.
 * **активность** (желтая линия): показывает активность инсулина, рассчитанную на основе профиля инсулина (не производная от активного инсулина). Значение выше ближе к пику времени действия. Это будет означать, что при снижении IOB величина будет отрицательной. 
 
 ### Секция G
 
-Позволяет подавать болюс (обычно это делается кнопкой Калькулятора болюса) и добавлять калибровку после замера глюкометром. Also a Quick Wizard button would be displayed here if configured in [Config Builder](../Configuration/Config-Builder#quickwizard-settings).
+Позволяет подавать болюс (обычно это делается кнопкой Калькулятора болюса) и добавлять калибровку после замера глюкометром. Здесь также будет видна кнопка Quick Wizard, если она настроена в [ Конфигураторе](../Configuration/Config-Builder#quickwizard-settings).
 
 ## Калькулятор
 
@@ -105,7 +105,7 @@ SUPER BOLUS - это когда базальный инсулин следующ
 
 ![Медленное усваивание углеводов](../images/Calculator_SlowCarbAbsorbtion.png)
 
-Если вы видите вышеприведенное предупреждение после использования болюс-мастера, это означает, что AndroidAPS обнаружил, что рассчетное значение активных углеводов COB может быть неправильным. So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! Подробнее см. подсказки на [странице расчета активных углеводов СOB](../Usage/COB-calculation#detection-of-wrong-cob-values).
+Если вы видите вышеприведенное предупреждение после использования болюс-мастера, это означает, что AndroidAPS обнаружил, что рассчетное значение активных углеводов COB может быть неправильным. Так что если вы хотите повторно подать болюс после предыдущей еды с активными углеводами COB, учитывайте возможность передозировки! Подробнее см. подсказки на [странице расчета активных углеводов СOB](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
 ## Профиль Инсулина
 
@@ -125,17 +125,17 @@ SUPER BOLUS - это когда базальный инсулин следующ
 
 ![Статус помпы](../images/Screenshot_pump_Combo.png)
 
-Здесь мы видим статус инсулиновой помпы - в нашем случае Акку-Чек Комбо. The information displayed is self-explanatory. Длительное нажатие на кнопку HISTORY/ИСТОРИЯ считывает данные из логов помпы, в том числе и ваш базальный профиль. Но помните, на помпе Combo поддерживается только один базальный профиль.
+Здесь мы видим статус инсулиновой помпы - в нашем случае Акку-Чек Комбо. Отображаемая информация не требует пояснений. Длительное нажатие на кнопку HISTORY/ИСТОРИЯ считывает данные из логов помпы, в том числе и ваш базальный профиль. Но помните, на помпе Combo поддерживается только один базальный профиль.
 
 ## Портал лечения/назначений
 
 Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
 
-### Carb correction
+### Корректировка углеводов
 
-Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+На вкладке Лечение можно исправить ошибочные записи углеводов (если вы переоцениваете или недооценили углеводы).
 
-1. Check and remember actual COB and IOB on homescreen.
+1. Проверьте и запомните фактические активные углеводы COB и активный инсулин IOB на главном экране.
 2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
    
    ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
@@ -153,19 +153,19 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 ## Состояние цикла/Loop, МА, АМА, SMB
 
-You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
+Об этих показателях не нужно беспокоиться, они дают представление о работе алгоритма OpenAPS, который исполняется каждый раз, когда система получает свежее данные мониторинга CGM. Они обсуждаются в других местах.
 
 ## Профиль
 
 ![Профиль](../images/Screenshot_profile.png)
 
-AndroidAPS can run using a number of different profile configurations. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nightscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a [Profile Switch](../Usage/Profiles.md) in AndroidAPS to activate the changes. Data such as the basal profile would then be automatically copied over to your pump.
+AndroidAPS can run using a number of different profile configurations. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nightscout client and is displayed here in read-only form. Если вы хотите внести какие-либо изменения, вы сделаете это из пользовательского интерфейса Nightcut, а затем выполните [ Profile Switch ](../Usage/Profiles.md) in AndroidAPS для активации изменений. Такие данные, как профиль базала будут автоматически скопированы на вашу помпу.
 
-**DIA:** stands for Duration of Insulin Action and it is discussed above in the section on insulin profiles.
+**DIA:** означает Продолжительность действия инсулина и обсуждается выше в разделе профилей инсулина.
 
-**IC:** is Insulin to Carb ratio. This profile has a number of different values set for different times of day.
+**IC:** является соотношением Инсулин - Углеводы. Профиль имеет несколько различных значений, установленных на разное время дня.
 
-**ISF:** is Insulin Sensitivity Factor - the amount by which one unit of insulin will reduce your blood glucose assuming that nothing else changes.
+**ISF:** это Фактор чувствительности к инсулину - величина, на которую одна единица инсулина уменьшит вашу ГК, при условии, что никакие другие факторы не изменятся.
 
 **Basal:** is the basal profile programmed into your pump.
 
