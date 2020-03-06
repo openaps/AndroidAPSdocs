@@ -136,20 +136,20 @@ Careportal replicated the functions you will find on your Nightscout screen unde
 На вкладке Лечение можно исправить ошибочные записи углеводов (если вы переоцениваете или недооценили углеводы).
 
 1. Проверьте и запомните фактические активные углеводы COB и активный инсулин IOB на главном экране.
-2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
+2. В зависимости от помпы углеводы на вкладке терапии могут быть показаны одной линией с инсулином или в виде отдельной записи (например, для Dana RS).
    
-   ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+   ![Терапия в 1 или 2 линии](../images/Treatment_1or2_lines.png)
 
-3. Remove the entry with the faulty carb amount.
+3. Удалите запись с неверным количеством углеводов.
 
-4. Make sure carbs are removed successfully by checking COB on homescreen again.
-5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
+4. Убедитесь, что углеводы удалены успешно, повторно проверив активные углеводы COB на главном экране.
+5. Сделайте то же для активного инсулина IOB, если на вкладке терапии только одна линия для углеводов и инсулина.
    
-   -> If carbs are not removed as intended and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+   -> Если углеводы не удаляются должным образом, а вы добавили дополнительные углеводы, как описано здесь (6.), активных углеводов COB окажется слишком много, и это может привести к передозировке инсулина.
 
-6. Enter correct carb amount through carbs button on homescreen and make sure to set the correct event time.
+6. Введите правильное количество углеводов при помощи кнопки углеводов на главном экране и убедитесь, что точное время события также введено.
 
-7. If there is just one line in treatment tab including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
+7. Если на вкладке терапии только одна линия для углеводов и инсулина, следует также добавить и запись о количестве инсулина. Убедитесь в том, чтобы установить правильное время событие и проверить активный инсулин IOB на главном экране после подтверждения новой записи.
 
 ## Состояние цикла/Loop, МА, АМА, SMB
 
@@ -159,7 +159,7 @@ Careportal replicated the functions you will find on your Nightscout screen unde
 
 ![Профиль](../images/Screenshot_profile.png)
 
-AndroidAPS can run using a number of different profile configurations. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nightscout client and is displayed here in read-only form. Если вы хотите внести какие-либо изменения, вы сделаете это из пользовательского интерфейса Nightcut, а затем выполните [ Profile Switch ](../Usage/Profiles.md) in AndroidAPS для активации изменений. Такие данные, как профиль базала будут автоматически скопированы на вашу помпу.
+AndroidAPS может работать с различными конфигурациями профиля. Обычно - как здесь показано - профиль Nightscout загружается через встроенный клиент Nighscout и виден здесь в формате "только для чтения". Если вы хотите внести какие-либо изменения, вы сделаете это из пользовательского интерфейса Nightcut, а затем выполните [ Profile Switch ](../Usage/Profiles.md) in AndroidAPS для активации изменений. Такие данные, как профиль базала будут автоматически скопированы на вашу помпу.
 
 **DIA:** означает Продолжительность действия инсулина и обсуждается выше в разделе профилей инсулина.
 
@@ -167,22 +167,22 @@ AndroidAPS can run using a number of different profile configurations. Typically
 
 **ISF:** это Фактор чувствительности к инсулину - величина, на которую одна единица инсулина уменьшит вашу ГК, при условии, что никакие другие факторы не изменятся.
 
-**Basal:** is the basal profile programmed into your pump.
+**Базал:** это базальный профиль, запрограммированный в вашей помпе.
 
-**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for different times of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
+**Целевое значение:** это уровень ГК, на который вы хотите, чтобы алгоритм цикла был все время нацелен. Вы можете установить разные целевые значения в разные дни, и можете даже установить верхний и нижний диапазон значений, чтобы система только начала вносить изменения, когда заданное значение ГК окажется вне диапазона, но если вы зададите такие настройки, то система будет реагировать медленнее и вы вряд ли достигнете очень стабильных ГК.
 
 ## Лечение/назначения, xDrip, NSClient
 
-These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
+Это просто журналы приема назначений (болюсы и углеводы), сообщения от xDrip и сообщения, отправленные в Nightscout через встроенный клиент NS. Обычно не нужно беспокоиться о каком-либо из них, если не возникают проблемы.
 
 ## Конфигуратор
 
 ![Конфигуратор](../images/Screenshot_config_builder.png)
 
-This is where you will set up the configuration of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
+Здесь вы настраиваете конфигурацию всей системы AndroidAPS. Снимок экрана показывает довольно типичную комбинацию, состоящую из помпы Combo, сенсора Dexcom G5, управляемую через приложение xDrip + и работающую с инсулином NovoRapid на профиле Oref, подключенную к облачному серверу Nightscout.
 
-The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
+Галочка в ячейке справа определяет, будет ли этот модуль отображаться в верхней панели меню (см. Секция А на домашнем экране) а значок шестеренки позволяет получить доступ к настройкам модуля, если они имеются.
 
 ## Параметры и настройки
 
-At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
+В верхней части панели навигации вы найдете три маленьких вертикальных точки. Нажатие на них приводит вас к настройкам приложения, браузеру истории, мастеру установки, информации о приложении и кнопке выхода, которая завершает работу AAPS.
