@@ -174,9 +174,9 @@ Suponiendo una basal correcta, puedes comprobar el parámetro: con una IOB de ce
 > 
 > Ejemplo:
 > 
-> Unidad factor de pan (BU = 12g carbs) de: 2,4 -> Se necesitan 2,4 unidades de insulina cuando se come una sola unidad de pan.
+> Bread unit fatcor (BU = 12g carbs): 2,4 -> You need 2,4 units of insulin when you eat one bread unit.
 > 
-> IC correspondiente: 12/2,4 = 5,2 -> 5,2 g de carbohidratos pueden estar cubiertos con una sola unidad de insulina.
+> Corresponding IC: 12 / 2,4 = 5,0 -> 5,0g carbs can be covered with one unit of insulin.
 > 
 > Las tablas de conversión están disponibles en línea, por ejemplo, [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
@@ -261,9 +261,10 @@ El cambio de cartucho no puede realizarse desde AndroidAPS, debe llevarse a cabo
 
 * Mantén pulsado "Lazo Abierto"/"Lazo Cerrado" en la pestaña de inicio de AndroidAPS y selecciona "Detener Lazo 1h"
 * Ahora desconecta la bomba y cambia el cartucho según las instrucciones de la bomba.
-* Una vez que hayas vuelto a conectar a la bomba, continúa el lazo manteniendo pulsado "Suspendido (X m)".
+* Also piming and filling tube and canula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26#pump) in the actions tab just to record the change.
+* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
-El cambio de cánula no utiliza la función "cebado del equipo", pero se debe rellenar el equipo de infusión y/o la cánula con un bolo que no debe aparecer en el historial de bolos. Esto significa que no es necesario interrumpir la basal temporal que este funcionando. En la pestaña "Acciones (Act)", utilice el botón PRIME/FILL para establecer la cantidad de insulina que necesitas para rellenar el conjunto de infusión e iniciar el proceso de cebado. Si la cantidad no es suficiente, repite el llenado. Puedes establecer las cantidades predeterminadas de los botones en "Preferencias > Otros > Rellenar/Cebado cantidades de insulina standard". Consulta el folleto de instrucciones en tu caja de cánulas para saber cuántas unidades se deben utilizar para llenar las cánulas según la longitud de la aguja y la longitud del tubo.
+El cambio de cánula no utiliza la función "cebado del equipo", pero se debe rellenar el equipo de infusión y/o la cánula con un bolo que no debe aparecer en el historial de bolos. Esto significa que no es necesario interrumpir la basal temporal que este funcionando. On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26#pump) to set the amount of insulin needed to fill the infusion set and start the priming. Si la cantidad no es suficiente, repite el llenado. Puedes establecer las cantidades predeterminadas de los botones en "Preferencias > Otros > Rellenar/Cebado cantidades de insulina standard". Consulta el folleto de instrucciones en tu caja de cánulas para saber cuántas unidades se deben utilizar para llenar las cánulas según la longitud de la aguja y la longitud del tubo.
 
 ## Fondo de pantalla
 
