@@ -174,9 +174,9 @@ Zorg dat je eerst jouw basaal + ISF goed hebt ingesteld, daarna kun je CR testen
 > 
 > Voorbeeld:
 > 
-> Broodeenheid factor (BE = 12,5g koolhydraten): 2,4 -> Je hebt 2,4 eenheden insuline nodig wanneer je één brood-eenheid eet.
+> Bread unit fatcor (BU = 12g carbs): 2,4 -> You need 2,4 units of insulin when you eat one bread unit.
 > 
-> Bijbehorende KH ratio: 12,5/2,4 = 5,2 -> je kunt 5,2g koolhydraten eten bij één eenheid insuline.
+> Corresponding IC: 12 / 2,4 = 5,0 -> 5,0g carbs can be covered with one unit of insulin.
 > 
 > Conversietabellen zijn online beschikbaar, bijvoorbeeld [ hier ](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf) (in het Duitse systeem).
 
@@ -261,9 +261,10 @@ Wisselen van het reservoir kan niet worden gedaan via AndroidAPS, maar moet geda
 
 * Houd "Open Loop" / "Closed Loop" op het Overzicht-scherm van AndroidAPS lang ingedrukt en selecteer 'Verbreek verbinding 1u met pomp'
 * Koppel nu de pomp af en verwissel het reservoir volgens de instructies van de pompfabrikant.
-* Wanneer je daarmee klaar bent, koppel je de pomp weer aan en houd 'Verbinding verbroken (.. m)' lang ingedrukt. Selecteer 'Hervatten'.
+* Also piming and filling tube and canula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26#pump) in the actions tab just to record the change.
+* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
-Het 'Ontlucht/vul' scherm van AAPS gebruikt niet de functie van "prime infusie set" van de pomp, maar vult de infusie set en/of canule met behulp van een bolus die niet in de geschiedenis van AAPS verschijnt. Dit betekent dat een lopende tijdelijke basaalstand niet zal worden onderbroken. Selecteer op het Acties (Act) tabblad, de knop ONTLUCHT/VUL en kies de hoeveelheid insuline die nodig is om de infuusset/canule te vullen en druk op OK. Wanneer er nog lucht in de infuusset zit, herhaal de vorige stap. Je kunt standaardhoeveelheden instellen in Instellingen > Andere > Vul standaard hoeveelheid. Hoeveel eenheden nodig zijn staat in het instructieboekje in de doos met infuussets, dit verschilt per type infuusset en is afhankelijk van de lengte van de canule en de lengte van de slang.
+Het 'Ontlucht/vul' scherm van AAPS gebruikt niet de functie van "prime infusie set" van de pomp, maar vult de infusie set en/of canule met behulp van een bolus die niet in de geschiedenis van AAPS verschijnt. Dit betekent dat een lopende tijdelijke basaalstand niet zal worden onderbroken. On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26#pump) to set the amount of insulin needed to fill the infusion set and start the priming. Wanneer er nog lucht in de infuusset zit, herhaal de vorige stap. Je kunt standaardhoeveelheden instellen in Instellingen > Andere > Vul standaard hoeveelheid. Hoeveel eenheden nodig zijn staat in het instructieboekje in de doos met infuussets, dit verschilt per type infuusset en is afhankelijk van de lengte van de canule en de lengte van de slang.
 
 ## Achtergrond
 
