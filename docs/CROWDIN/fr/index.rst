@@ -89,7 +89,7 @@ Utilisation d'AndroidAPS
    Cibles <./Usage/temptarget.md>   
    Glucides étendus <./Usage/Extended-Carbs.rst>
    Automatisation <./Usage/Automation.rst>
-   Careportal (discontinued) <./Usage/CPbefore26.rst>
+   Careportal (supprimé) <./Usage/CPbefore26.rst>
    Automatisation avec des applications tierces <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
  
