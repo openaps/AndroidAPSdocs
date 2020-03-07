@@ -89,6 +89,7 @@ Použití AndroidAPS
    Dočasné cíle <./Usage/temptarget.md>   
    Extended carbs <./Usage/Extended-Carbs.rst>
    Automatizace <./Usage/Automation.rst>
+   Careportal (discontinued) <./Usage/CPbefore26.rst>
    Automatizace s aplikacemi třetích stran <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
  
