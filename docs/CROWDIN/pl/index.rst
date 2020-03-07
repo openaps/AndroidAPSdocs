@@ -89,6 +89,7 @@ Użytkowanie AndroidAPS
    Cele tymczasowe TT <./Usage/temptarget.md>   
    Extended carbs <./Usage/Extended-Carbs.rst>
    Automatyzacja <./Usage/Automation.rst>
+   Careportal (discontinued) <./Usage/CPbefore26.rst>
    Automatyzacja z aplikacjami innych firm <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
  
