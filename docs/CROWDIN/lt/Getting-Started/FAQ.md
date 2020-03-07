@@ -174,11 +174,13 @@ Darant prielaidą, kad bazė yra teisinga, galite išbandyti pagal dabartinius n
 > 
 > Example:
 > 
-> Bread unit fatcor (BU = 12g carbs): 2,4 -> You need 2,4 units of insulin when you eat one bread unit.
+> Bread unit fatcor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
-> Corresponding IC: 12 / 2,4 = 5,0 -> 5,0g carbs can be covered with one unit of insulin.
+> Corresponding IC: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
 > 
-> Perskaičiavimo lentelės yra prieinamos internete, pvz., [čia](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> BU factor 2,4 U / 12g ===> IC = 12g / 2,4 U = 5,0 g/U
+> 
+> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Įtaka
 
