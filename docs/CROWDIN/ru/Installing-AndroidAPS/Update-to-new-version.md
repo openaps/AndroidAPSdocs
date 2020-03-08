@@ -31,84 +31,66 @@ Follow the manual on the [git installation page](../Installing-AndroidAPS/git-in
 ## Update your local copy
 
 * Click: VCS -> Git -> Pull
-  
-  ![Android Studio - GIT - Pull](../images/Update_Pull.png)
+    
+    ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
 
 * Click Pull (no changes in dialog field)
-  
-  ![Android Studio - GIT - Pull 2](../images/Update_Pull2.png)
+    
+    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02.png)
+
+* Wait while download is in progress.
+    
+    ![Android Studio - Pull in progress](../images/AndroidStudio361_Update03.png)
+
+* When done Android Studio will inform you that "all files are up-to-date".
+    
+    ![All files up to date](../images/AndroidStudio361_Update04.png)
 
 ## Создание подписанного APK
 
-<!--- Text is maintained in page building-apk.md ---> В меню выберите "Build"(выполнить сборку) и затем "Generate Signed Bundle / APK..."(создать подписанный пакет программ). (Меню в Android Studio изменилось с сентября 2018 года. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
+<!--- Text is maintained in page building-apk.md --->
 
-Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. Это необходимо потому, что Android имеет правило, согласно которому принимается только подписанный код для запуска по соображениям безопасности. Для получения дополнительной информации по этой теме перейдите по ссылке [здесь](https://developer.android.com/studio/publish/app-signing.html#generate-key). Безопасность - это глубокая и сложная тема, нам она сейчас не нужна.
+* Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
 
-![Снимок экрана 39a](../images/Installation_Screenshot_39a.PNG)
+![Build apk](../images/AndroidStudio361_27.png)
 
-В следующем диалоговом окне выберите "APK" вместо "Android App Bundle" и нажмите кнопку "Далее".
+* Select "APK" (1.) instead of "Android App Bundle" and click "Next" (2.).
 
-![Снимок экрана 39b](../images/Installation_Screenshot_39b.PNG)
+![APK instead of bundle](../images/AndroidStudio361_28.png)
 
-Выберите "app" (приложение) и нажмите "Next" (далее).
+* Make sure that module is set to "app".
+* Select your key store path by clicking on "Choose existing...".
+* Enter your passwords for key store and key.
+* If the box to remember passwords is checked you don't have to enter them. In case the box was not checked during last build and you cannot remember the passwords refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Click "Next".
 
-![Снимок экрана 40](../images/Installation_Screenshot_40.png)
+![Key store](../images/AndroidStudio361_Update05.png)
 
-Enter your key store path, enter key store password, select key alias and enter key password.
+* Select build variant "fullRelease" (1.). 
+* Check boxes V1 and V2 for signature versions (2.).
+* Click "Finish". (3.)
 
-Select 'Remember passwords'.
+![Finish build](../images/AndroidStudio361_32.png)
 
-Then click next.
+* Android Studio will display the information "APK(s) generated successfully..." after build is finished.
+* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* Easiest way to find the apk is to click on "Event log".
 
-![Key store path](../images/KeystorePathUpdate.PNG)
+![Build successfully - event log](../images/AndroidStudio361_33.png)
 
-Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". В дальнейшем может пригодиться следующая информация.
+* In the event log section click "locate".
 
-* 'Release' должен быть вашим выбором по умолчанию для "Build Type"(типа сборки), 'Debug' только для программистов.
-* Выберите тип сборки, который хотите создать. 
-  * full / fullRelease (i.e. recommendations automatically enacted in closed looping)
-  * открытый цикл (рекомендации, адресованные пользователю, выполняются вручную)
-  * управление помпой (дистанционное управление помпой, без функционирования цикла)
-  * nsclient (например, отображаются данные другого пользователя, могут добавляться записи портала лечения/назначений)
+![Event log - locate apk](../images/AndroidStudio361_34.png)
 
-![Снимок экрана 44](../images/Installation_Screenshot_44.png)
+* app-full-release.apk is the file you are looking for.
 
-В журнале событий вы увидите, что подписанное приложение (APK) было создано успешно.
-
-![Снимок экрана 45](../images/Installation_Screenshot_45.png)
-
-Нажмите на ссылку "Найти" в журнале событий.
-
-![Снимок экрана 46](../images/Installation_Screenshot_46.png)
+![File location apk](../images/AndroidStudio361_35.png)
 
 ## Перенос приложения на смартфон
 
-**[Export your settings](../Usage/ExportImportSettings#how-to-export-settings) from the existing AAPS version on your phone to be on the save side.**
+Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
-<!--- Text is maintained in page building-apk.md ---> Открывается окно файлового менеджера. Может выглядеть немного иначе в вашей системе, поскольку я использую Linux. В Windows это будет File Explorer (проводник), а на Mac OS X Finder (поисковик). Там вы увидите каталог с созданным APK файлом. К сожалению, это неверное место, так как "wear-release.apk" не является подписанным приложением, которое мы ищем.
-
-![Снимок экрана 47](../images/Installation_Screenshot_47.png)
-
-Перейдите к папке AndroidAPS/app/full/release, чтобы найти файл "app-full-release.apk". Перенесите этот файл на смартфон Android. You can do it on your preferred way:
-
-* Bluetooth
-* cloud upload (Google Drive or other cloud services)
-* connect computer and phone by cable 
-* by mail (Note that some mail apps do not allow apk attachments, in this case use other transfer method.)
-
-In this example Gmail is used as it is fairly simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. Если переносите установщик другим способом, поступите соответственно.
-
-![Снимок экрана 48](../images/Installation_Screenshot_48.png)
-
-В настройках смартфона есть область "установка неизвестных приложений" где я даю Gmail право устанавливать APK файлы, которые я получаю через Gmail.
-
-Выберите "Разрешить из этого источника". После установки вы можете отключить его снова.
-
-![Установка приложений из неизвестных источников](../images/Installation_Screenshot_49-50.png)
-
-Последний шаг - нажать на файл APK, который я получил через Gmail и установить приложение. Если APK не установливается и у вас более старая версия AndroidAPS на телефоне, подписанная другим ключом, то нужно сначала удалить более старое приложение; при этом не забудьте экспортировать ваши настройки!
-
-Да, все получилось, теперь можно начать настройку AndroidAPS (CGMS, помпа) и т. д.
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
 ## Check AAPS version on phone
 
