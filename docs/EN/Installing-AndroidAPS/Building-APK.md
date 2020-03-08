@@ -112,7 +112,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 ![Automatic git installation failed](../images/AndroidStudio361_11.png)
 
-* **Reboot your PC to update system environment.**
+* **Reboot your computer to update system environment.**
 
 ### Mac
 
@@ -121,6 +121,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 ## Download AndroidAPS code
 
+* **If you haven't already rebooted your computer after setting git path in preferences do it now. System environment must be updated.**
 * On the Android Studio welcome screen click the small triangle right of "Check out project from version control" (1.).
 * Select "Git" (2.).
 
