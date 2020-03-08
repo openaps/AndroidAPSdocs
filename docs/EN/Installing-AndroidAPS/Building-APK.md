@@ -26,12 +26,15 @@ If your build fails with an error regarding "on demand configuration" you can do
 
 In general, the steps necessary to build the APK file:
 
-* [Install git](../Installing-AndroidAPS/git-install.rst)
-* Install and setup Android Studio.
-* Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
-* Open the cloned project in Android Studio as active project.
-* Build the signed APK.
-* Transfer the signed APK to your smartphone.
+1. [Install git](../Installing-AndroidAPS/git-install.rst)
+2. [Install Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
+3. [Set git path in Android Studio preferences](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
+4. [Download AndroidAPS code](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
+5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
+6. [Build the app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generate signed apk)
+7. [Transfer apk file to your phone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+8. [Identify receiver if using xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
+
 
 ## Step by step walkthrough
 
