@@ -29,7 +29,7 @@ Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschläg
 
 Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 
-1. [Installiere git](../Installing-AndroidAPS/git-install.rst)
+1. [Install git](../Installing-AndroidAPS/git-install.rst)
 2. [Android Studio installieren](../Installing-AndroidAPS/Building-APK#install-android-studio)
 3. [Set git path in Android Studio preferences](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
 4. [Download AndroidAPS code](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
