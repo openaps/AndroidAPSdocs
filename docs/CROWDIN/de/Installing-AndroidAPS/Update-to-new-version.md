@@ -31,84 +31,66 @@ Die Schritt-für-Schritt-Anleitung findest Du auf der Seite zur [git Installatio
 ## Führe ein Update deiner lokalen Version durch
 
 * Klicke: VCS -> Git -> Pull
-  
-  ![Android Studio - GIT - Pull](../images/Update_Pull.png)
+    
+    ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
 
 * Klicke auf Pull (keine Änderungen im Dialogfeld erforderlich)
-  
-  ![Android Studio - GIT - Pull 2](../images/Update_Pull2.png)
+    
+    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02.png)
+
+* Warte während der Download läuft.
+    
+    ![Android Studio - Pull in Bearbeitung](../images/AndroidStudio361_Update03.png)
+
+* Nach erfolgreichem Update der lokalen Dateien zeigt Android Studio "all files are up-to-date" an.
+    
+    ![Alle Dateien sind auf dem neuesten Stand.](../images/AndroidStudio361_Update04.png)
 
 ## Signierte APK erstellen (Generate signed APK)
 
-<!--- Text is maintained in page building-apk.md ---> Wähle im Menü "Build" und dann "Generate Signed Bundle / APK...". (Das Menü in Android Studio wurde im September 2018 geändert. In älteren Versionen wähle im Menü „Build“ und dann „Signed APK generieren...“
+<!--- Text is maintained in page building-apk.md --->
 
-Signieren bedeutet, dass du deine generierte Anwendung unterschreibst, aber digital als eine Art digitaler Fingerabdruck in der Anwendung selbst. Es ist notwendig, die App digital zu signieren, da Android aus Sicherheitsgründen nur signierten Code akzeptiert. Falls dich das Thema interessiert, findest du [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key) mehr. Sicherheit ist ein großes und komplexes Thema, um das du dich zur Zeit noch nicht kümmern musst.
+* Klicke in der Menüzeile auf "Build" und wähle "Generate Signed Bundle / APK...".
 
-![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
+![Apk erstellen](../images/AndroidStudio361_27.png)
 
-Wähle in der folgenden Dialogbox "APK" statt "Android App Bundle" und klicke auf den Button "Next".
+* Wähle "APK" (1.) statt "Android App Bundle" aus und klicke auf "Next" (2.).
 
-![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
+![APK statt Bundle](../images/AndroidStudio361_28.png)
 
-Wähle “App” aus und klicke auf “Next”.
+* Bei Modul muss "app" ausgewählt werden.
+* Klicke auf "Choose existing..." um Deine Keystore-Datei auszuwählen.
+* Gib Deine Passwörter für Keystore und Key ein.
+* Wenn das Kästchen "remember passwords" aktiviert ist, musst Du diese nicht eingeben. Falls die Box beim letzten Erstellen der apk-Datei nicht aktiviert war und Du Dich nicht mehr an Deine Passwörter erinnern kannst, findest Du eine Lösung im Bereich [Fehlerbehebung](../Installing-AndroidAPS/troubleshooting_androidstudio#verlorener-keystore).
+* Klicke auf “Next”.
 
-![Screenshot 40](../images/Installation_Screenshot_40.png)
+![Key store](../images/AndroidStudio361_Update05.png)
 
-Gib den Pfad zu Deinem key store und Dein key store Passwort ein. Wähle anschließend key alias und gib Dein key Passwort ein.
+* Wählen Sie die Build-Variante "fullRelease" (1.) aus. 
+* Klicke die Checkboxen V1 und V2 für signature versions an (2.).
+* Klicke auf "Finish". (3.)
 
-Klicke 'Remember passwords' an.
+![Build beenden](../images/AndroidStudio361_32.png)
 
-Klicke danach auf “Next”.
+* Android Studio wird die Information "APK(s) generated successfully..." anzeigen, sobald die APK-Datei vollständig erstellt wurde.
+* Falls beim Erstellen Fehler auftreten, findest Du Lösungsansätze auf den Seiten zur [Fehlerbehebung](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* Der einfachste Weg, die fertige APK-Datei zu finden, ist ein Klick auf "Event log".
 
-![Key store path](../images/KeystorePathUpdate.PNG)
+![Build erfolgreich - Ereignisprotokoll](../images/AndroidStudio361_33.png)
 
-Wähle “full” (oder "fullRelease") in dem “Flavors” Menü aus, um die vollständige AndroidAPS App zu erstellen und klicke auf V1 “Jar Signature” (V2 ist optional) und klicke auf “Finish”. Folgende Informationen könnten später für dich nützlich sein:
+* Klicke im Event Log auf "locate".
 
-* “Release” solltest du immer lassen, “Debug” ist nur für Programmierer, um Fehler zu finden.
-* Wähle den “build type”, den du kompilieren möchtest: 
-  * full / fullRelease (d.h. automatische Pumpensteuerung im Closed Loop)
-  * openloop (d.h. gibt temporäre Basalraten-Vorschläge, die manuell auszuführen sind)
-  * pumpcontrol (d.h. nur Fernbedienung für die Pumpe, kein Loopen)
-  * nsclient (d.h. es werden z.B. die Daten eines anderen Nutzers dargestellt und Careportal-Einträge können hinzugefügt werden)
+![Ereignisprotokoll-apk suchen](../images/AndroidStudio361_34.png)
 
-![Screenshot 44](../images/Installation_Screenshot_44.png)
+* app-full-release.apk ist die von Dir gesuchte Datei.
 
-Im event log sollte jetzt angezeigt werden, dass die signierte APK erfolgreich generiert wurde.
-
-![Screenshot 45](../images/Installation_Screenshot_45.png)
-
-Klicke auf “locate” im “event log”.
-
-![Screenshot 46](../images/Installation_Screenshot_46.png)
+![Datei-Speicherort apk](../images/AndroidStudio361_35.png)
 
 ## Übertrage die APK-Datei auf das Smartphone
 
-**[Exportiere Deine Einstellungen](../Usage/ExportImportSettings#exportieren-der-einstellungen) von der "alten" AAPS Version auf Deinem Smartphone, um auf der sicheren Seite zu sein.**
+Der einfachste Weg, die Datei app-full-release.apk auf Dein Smartphone zu übertragen ist mittels [USB-Kabel oder Google Drive](https://support.google.com/android/answer/9064445?hl=de). Bitte beachte, dass die Übertragung per Mail zu Schwierigkeiten führen kann und daher nicht empfohlen wird.
 
-<!--- Text is maintained in page building-apk.md ---> Es sollte sich ein Datei Manager öffnen. Das könnte bei dir anders aussehen (dieser Screenshot wurde auf einem Linux PC erstellt). In Windows wird sich der “Explorer” öffnen, in Mac OS X der “Finder”. Dort solltest du jetzt das Verzeichnis mit der APK-Datei sehen. Es ist aber unglücklicherweise nicht die, die wir suchen, sondern nur die “wear-release.apk”.
-
-![Screenshot 47](../images/Installation_Screenshot_47.png)
-
-Um zu der gesuchten APK zu gelangen, musst du zu dem Ordner AndroidAPS/app/full/release gehen und nach der “app-full-release.apk” Datei Ausschau halten. Übertrage die Datei auf dein Smartphone. Wähle Deinen bevorzugten Weg:
-
-* Bluetooth
-* Upload in die Cloud (Google Drive oder vergleichbare Dienste)
-* Computer und Smartphone per Kabel verbinden 
-* per E-Mail (Beachte, dass einige Mail-Apps keine APK-Anhänge zulassen, verwende in diesem Fall eine andere Übertragungsmethode.)
-
-In diesem Beispiel wird Gmail verwendet, da es ziemlich einfach ist. Du musst Android erlauben, auf Deinem Smartphone diese Installation auszuführen, auch wenn diese Datei via Google Mail empfangen wurde, was normalerweise verboten ist. Wenn Du einen anderen Übertragungsweg nutzt, setze die entsprechenden Rechte analog zum Vorgehen bei Gmail.
-
-![Screenshot 48](../images/Installation_Screenshot_48.png)
-
-In den Einstellungen deines Smartphones gibt es den Bereich "Unbekannte Quellen". Dort musst du Gmail das Recht geben, APK Dateien zu installieren, die du per Gmail erhalten hast.
-
-Klicke dort auf “aus dieser Quelle zulassen”. Nach der Installation ist es empfehlenswert dies aus Sicherheitsgründen wieder rückgängig zu machen.
-
-![Installation von Apps aus unbekannten Quellen zulassen](../images/Installation_Screenshot_49-50.png)
-
-Der letzte Schritt ist es, auf die APK Datei zu klicken und die App zu installieren. Sollte es nicht funktionieren, kann es sein, dass sich eine ältere Version mit einem anderen “Key”/einer anderen Signatur auf dem Handy befindet. Exportiere deine Einstellungen aus der älteren Version und deinstalliere diese erst danach.
-
-Herzlichen Glückwunsch, du hast es geschafft! Nun kannst du AndroidAPS starten und einrichten.
+Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. Anleitungen dazu findest Du im Internet (z.B. [hier](https://mobilsicher.de/ratgeber/apps-aus-apk-datei-installieren-mit-android-8) oder [hier](https://www.tutonaut.de/anleitung-android-apps-unbekannten-quellen-installieren/)).
 
 ## AAPS-Version auf dem Smartphone überprüfen
 

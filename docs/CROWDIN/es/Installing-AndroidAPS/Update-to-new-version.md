@@ -31,90 +31,72 @@ Siga el manual en [git página de instalación](../Installing-AndroidAPS/git-ins
 ## Actualice su copia local
 
 * Pulse: VCS-> Git-> Pull
-  
-  ![Android Studio - GIT - Pull](../images/Update_Pull.png)
+    
+    ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
 
 * Pulse en Pull (sin cambios en el campo de diálogo)
-  
-  ![Android Studio - GIT - Pull 2](../images/Update_Pull2.png)
+    
+    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02.png)
+
+* Wait while download is in progress.
+    
+    ![Android Studio - Pull in progress](../images/AndroidStudio361_Update03.png)
+
+* When done Android Studio will inform you that "all files are up-to-date".
+    
+    ![All files up to date](../images/AndroidStudio361_Update04.png)
 
 ## Generar APK firmado
 
-<!--- Text is maintained in page building-apk.md ---> En el menú, seleccione "Build" y, a continuación, "Generate Firmado Bundle/APK...". (El menú de Android Studio cambió a partir de septiembre de 2018. En las versiones anteriores, seleccione en el menú "Build" y luego "Generar APK Firmado...".)
+<!--- Text is maintained in page building-apk.md --->
 
-La firma significa que usted firma su aplicación generada, pero en una forma digital como una especie de huella digital digital en la aplicación en sí. Esto es necesario porque Android tiene una regla que sólo acepta el código firmado para ejecutarse por razones de seguridad. Para obtener más información acerca de este tema, siga el enlace [aquí](https://developer.android.com/studio/publish/app-signing.html#generate-key) Seguridad es un tema profundo y complejo y no lo necesita ahora.
+* Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
 
-![Captura pantalla 39a](../images/Installation_Screenshot_39a.PNG)
+![Build apk](../images/AndroidStudio361_27.png)
 
-En el recuadro de diálogo siguiente, seleccione "APK" en lugar de "Android App Bundle" y haga clic en el botón "Next".
+* Select "APK" (1.) instead of "Android App Bundle" and click "Next" (2.).
 
-![Captura pantalla 39b](../images/Installation_Screenshot_39b.PNG)
+![APK instead of bundle](../images/AndroidStudio361_28.png)
 
-Seleccione "app" y haga clic en "Siguiente".
+* Make sure that module is set to "app".
+* Select your key store path by clicking on "Choose existing...".
+* Enter your passwords for key store and key.
+* If the box to remember passwords is checked you don't have to enter them. In case the box was not checked during last build and you cannot remember the passwords refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Click "Next".
 
-![Captura pantalla 40](../images/Installation_Screenshot_40.png)
+![Key store](../images/AndroidStudio361_Update05.png)
 
-Introduzca la ruta del almacen de claves, introduzca la contraseña de la tienda de claves, seleccione alias de la clave e introduzca la contraseña de la clave.
+* Select build variant "fullRelease" (1.). 
+* Check boxes V1 and V2 for signature versions (2.).
+* Click "Finish". (3.)
 
-Selecciona "Recordar contraseñas'.
+![Finish build](../images/AndroidStudio361_32.png)
 
-Luego haga clic en "Siguiente.
+* Android Studio will display the information "APK(s) generated successfully..." after build is finished.
+* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* Easiest way to find the apk is to click on "Event log".
 
-![Ruta de almacén de claves](../images/KeystorePathUpdate.PNG)
+![Build successfully - event log](../images/AndroidStudio361_33.png)
 
-Seleccione "full" (o "fullRelease") como sabor para la aplicación generada. Select V1 "Jar Signature" (V2 es opcional) y haga clic en "Finish". La siguiente información puede ser importante para su uso posterior.
+* In the event log section click "locate".
 
-* La opción 'Release' debe ser la opción predeterminada para "Tipo de compilación", "Depurar" es sólo para la codificación de personas.
-* Seleccione el tipo de construcción que quiere realizar. 
-  * full / fullRelease (es decir, recomendaciones promulgadas automáticamente en un lazo cerrado)
-  * openloop (es decir, recomendaciones entregada al usuario para la acción manual)
-  * pumpcontrol (es decir, control remoto para la bomba, sin lazo)
-  * nsclient (es decir, se visualizan los datos de bucle de otro usuario y se pueden añadir entradas del portal profesional careportal)
+![Event log - locate apk](../images/AndroidStudio361_34.png)
 
-![Captura pantalla 44](../images/Installation_Screenshot_44.png)
+* app-full-release.apk is the file you are looking for.
 
-En el registro de sucesos, verá que el APK firmado se ha generado satisfactoriamente.
-
-![Captura pantalla 45](../images/Installation_Screenshot_45.png)
-
-Pulse el enlace "locate" en el registro de sucesos.
-
-![Captura pantalla 46](../images/Installation_Screenshot_46.png)
+![File location apk](../images/AndroidStudio361_35.png)
 
 ## Transferir APK a smartphone
 
-**[Exporte los valores](../Usage/ExportImportSettings#how-to-export-settings) de la versión de AAPS existente en el teléfono para que estén en el lugar de respaldo.**
+Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
-<!--- Text is maintained in page building-apk.md ---> Se abrirá una ventana del gestor de archivos. Puede parecer un poco diferente en su sistema, ya que estoy usando Linux. En Windows estará el Explorador de archivos y en Mac OS X the Finder. Allí debe ver el directorio con el archivo APK generado. Desafortunadamente este es el lugar incorrecto porque "wear-release.apk" no es la APK firmada que estamos buscando.
-
-![Captura pantalla 47](../images/Installation_Screenshot_47.png)
-
-Por favor, cambie al directorio AndroidAPS/app/full/release para encontrar el archivo "app-full-release.apk". Transfiera este archivo a tu smartphone Android. Puede hacerlo de la forma que prefiera, por ejemplo:
-
-* Bluetooth
-* subido en la nube (Google Drive u otros servicios en la nube)
-* conectar el ordenador y el teléfono por cable 
-* por correo (Tenga en cuenta que algunas aplicaciones de correo no permiten adjuntos apk, en este caso utilizan otro método de transferencia.)
-
-En este ejemplo, Gmail se utiliza ya que es bastante simple. Para instalar la aplicación autofirmada, es necesario permitir que Android en el smartphone realice esta instalación incluso si este archivo se recibe a través de Gmail, lo que normalmente está prohibido. Si utiliza algo otro, continúe en consecuencia.
-
-![Captura pantalla 48](../images/Installation_Screenshot_48.png)
-
-En los ajustes de tu smartphone hay un área "instalación de aplicaciones desconocida" donde tengo que darle a Gmail el derecho de instalar archivos APK que obtengo a través de Gmail.
-
-Seleccione "Permitir de esta fuente". Después de la instalación, puede inhabilitarla de nuevo.
-
-![Permitir la instalación de aplicaciones de fuentes desconocidas](../images/Installation_Screenshot_49-50.png)
-
-El último paso es presionar en el archivo APK que tengo a través de Gmail e instalar la aplicación. Si el APK no instala y tiene una versión más antigua de AndroidAPS en su teléfono que fue firmado con una clave distinta, entonces tendrá que desinstalar esto primero, recuerde exportar sus ajustes, si es así!
-
-Sí, ya lo tienes y ahora puedes empezar con la configuración de AndroidAPS para tu uso (MCG, bomba de insulina), etc.
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
 ## Comprobar la versión de AAPS en el teléfono
 
-Puede comprobar la versión de AAPS en su teléfono haciendo clic en el menú de tres puntos en la parte superior derecha y luego acerca.
+You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
 
-![Versión de AAPS instalada](../images/Update_VersionCheck.png)
+![AAPS version installed](../images/Update_VersionCheck.png)
 
 ## Solución de problemas
 

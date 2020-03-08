@@ -51,7 +51,7 @@ Major new features
 * Tons on new translations
 
 Version 2.5.1
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Release date: 31-10-2019
 
 Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
@@ -59,7 +59,7 @@ Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#imp
 * New versioning that will allow to do minor updates without triggering the update-notification.
 
 Version 2.5.0
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Release date: 26-10-2019
 
 Important notes
@@ -95,7 +95,7 @@ Major new features
 * Fixed bug in `SMS communicator <../Children/SMS-Commands.html>`_
 
 Version 2.3
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Release date: 25-04-2019
 
 Major new features
@@ -112,7 +112,7 @@ Major new features
 
 
 Version 2.2.2
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Release date: 07-04-2019
 
 Major new features
@@ -124,7 +124,7 @@ Major new features
 
 
 Version 2.2
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Release date: 29-03-2019
 
 Major new features
@@ -137,7 +137,7 @@ Major new features
 
 
 Version 2.1
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Release date: 03-03-2019
 
 Major new features
@@ -157,7 +157,7 @@ Misc
 
 
 Version 2.0
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Release date: 03-11-2018
 
 Major new features

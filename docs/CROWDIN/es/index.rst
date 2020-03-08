@@ -89,6 +89,7 @@ Utilización de AndroidAPS
    Objetivos-temporales <./Usage/temptarget.md>   
    Carbohidratos extendidos <./Usage/Extended-Carbs.rst>
    Automatización <./Usage/Automation.rst>
+   Careportal (discontinued) <./Usage/CPbefore26.rst>
    Automatización con aplicaciones de terceros <./Usage/automationwithapp.md>
    Android automático <./Usage/Android-auto.md>  
  

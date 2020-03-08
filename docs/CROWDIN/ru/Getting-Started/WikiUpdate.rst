@@ -1,27 +1,31 @@
-Docs updates & changes
+Обновления и изменения в документации
 **************************************************
 
-February 2020
+March 2020
 ==================================================
-* `Automation caveats <../Usage/Automation.html#good-practice--caveats>`_
-* `Autosens <../Usage/Open-APS-features.html#autosens>`_ - short explanation
-* `Careportal alternatives <../Usage/CPbefore26.html>`_
-* `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
-* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
-* `Sample Setup <../Getting-Started/Sample-Setup.html>`_ - update Dexcom G6
-* `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - major new features
-* `Wear complications <../Configuration/Watchfaces.html>`_
-January 2020
+* `Build apk with Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
+* `Update apk with Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
+Февраль 2020
 ==================================================
-* `Manual carb correction <../Getting-Started/Screenshots.html#carb-correction>`_ for faulty carb entries
-* `Image size <../make-a-PR.html#image-size>`_ when editing docs
-December 2019
+Пояснения по автоматизации
+* ` Autosens <../Usage/Open-APS-features.html#autosens> ` _-краткое объяснение
+* '' Альтернативы порталу терапии <../Usage/CPbefore26.html> ` _
+* `Пролонгированный болюс <../Usage/Extended-Carbs.html > ` _ функция - замкнутый цикл будет отключена
+* Новый плагин `Local Profile <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* `Пример установки <../Getting-Started/Sample-Setup.html>`_ - обновление для Dexcom G6
+* Версия 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - основные новые функции
+* `Усложнения Wear <../Configuration/watchfaces.html>`_
+Январь 2020
 ==================================================
-* `Android auto <../Usage/Android-auto.html>`_ - setup with screenshots
-* `Accu-Chek Insight & Autotune <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_ - workaround for usage
-* `Glimp <../Configuration/Config-Builder.html#bg-source>`_ - version 4.15.57 and newer supported
-* `Watchfaces <../Configuration/Watchfaces.html>`_ - major update, way more details
-* `Watchface complications <../Configuration/Watchfaces.html#complications>`_ - use your favorite watchface with AAPS data
+* ` Корректировка углеводов вручную <../Getting-Started/Screenshots.html#carb-correction> ` _ для ошибочных записей углеводов
+* ` Размер изображения <../make-a-PR.html#image-size> ` _ при редактировании
+Декабрь 2019
+==================================================
+* ` Android auto <../Usage/Android-auto.html> ` _-настройка со скриншотами
+* `Accu-Chek Insight & Autotune <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_ - обходные приемы для применения
+* `Glimp <../Configuration/Config-Builder.html#bg-source>`_ - поддержка версии 4.15.57 и новее
+* `Циферблаты <../Configuration/Watchfaces.html>`_ - крупное обновление, намного более детально
+* `Усложнения для циферблатов <../Configuration/Watchfaces.html#complications>`_ - пользуйтесь любимыми циферблатами с данными из AAPS
 ноябрь 2019
 ==================================================
 * ` Автоматизация-деактивируйте при отключении петли <../Usage/Automation.html#important-note> ` _
@@ -37,7 +41,7 @@ December 2019
 * ` Устранение неполадок Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
 * ` Устранение неполадок- ссылки <../Usage/troubleshooting.html> ` _
 * `Обновление - краткое руководство для опытных пользователей <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users> ` _
-* Docs - update `edit <../make-a-PR.md#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
+* Документация - обновление `редактирования <../make-a-PR.md#code-syntax>`_ и`перевода<../translations.html#translate-wiki-pages>`_.
 
 Октябрь 2019
 ==================================================
