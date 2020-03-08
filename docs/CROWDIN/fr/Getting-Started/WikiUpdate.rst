@@ -1,10 +1,10 @@
 Wiki mises à jour et modifications
 **************************************************
 
-March 2020
+Mars 2020
 ==================================================
-* `Build apk with Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
-* `Update apk with Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
+* `Générer l'apk avec Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
+* `Mettre à jour l'apk avec Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
 Février 2020
 ==================================================
 * `Avertissement pour l'automatisation <../Usage/Automation.html#bonnes-pratiques-et-avertissements>`_
