@@ -38,65 +38,65 @@ Die Schritt-für-Schritt-Anleitung findest Du auf der Seite zur [git Installatio
     
     ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02.png)
 
-* Wait while download is in progress.
+* Warte während der Download läuft.
     
-    ![Android Studio - Pull in progress](../images/AndroidStudio361_Update03.png)
+    ![Android Studio - Pull in Bearbeitung](../images/AndroidStudio361_Update03.png)
 
-* When done Android Studio will inform you that "all files are up-to-date".
+* Nach erfolgreichem Update der lokalen Dateien zeigt Android Studio "all files are up-to-date" an.
     
-    ![All files up to date](../images/AndroidStudio361_Update04.png)
+    ![Alle Dateien sind auf dem neuesten Stand.](../images/AndroidStudio361_Update04.png)
 
 ## Signierte APK erstellen (Generate signed APK)
 
 <!--- Text is maintained in page building-apk.md --->
 
-* Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
+* Klicke in der Menüzeile auf "Build" und wähle "Generate Signed Bundle / APK...".
 
-![Build apk](../images/AndroidStudio361_27.png)
+![Apk erstellen](../images/AndroidStudio361_27.png)
 
-* Select "APK" (1.) instead of "Android App Bundle" and click "Next" (2.).
+* Wähle "APK" (1.) statt "Android App Bundle" aus und klicke auf "Next" (2.).
 
-![APK instead of bundle](../images/AndroidStudio361_28.png)
+![APK statt Bundle](../images/AndroidStudio361_28.png)
 
-* Make sure that module is set to "app".
-* Select your key store path by clicking on "Choose existing...".
-* Enter your passwords for key store and key.
-* If the box to remember passwords is checked you don't have to enter them. In case the box was not checked during last build and you cannot remember the passwords refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
-* Click "Next".
+* Bei Modul muss "app" ausgewählt werden.
+* Klicke auf "Choose existing..." um Deine Keystore-Datei auszuwählen.
+* Gib Deine Passwörter für Keystore und Key ein.
+* Wenn das Kästchen "remember passwords" aktiviert ist, musst Du diese nicht eingeben. Falls die Box beim letzten Erstellen der apk-Datei nicht aktiviert war und Du Dich nicht mehr an Deine Passwörter erinnern kannst, findest Du eine Lösung im Bereich [Fehlerbehebung](../Installing-AndroidAPS/troubleshooting_androidstudio#verlorener-keystore).
+* Klicke auf “Next”.
 
 ![Key store](../images/AndroidStudio361_Update05.png)
 
-* Select build variant "fullRelease" (1.). 
-* Check boxes V1 and V2 for signature versions (2.).
-* Click "Finish". (3.)
+* Wählen Sie die Build-Variante "fullRelease" (1.) aus. 
+* Klicke die Checkboxen V1 und V2 für signature versions an (2.).
+* Klicke auf "Finish". (3.)
 
-![Finish build](../images/AndroidStudio361_32.png)
+![Build beenden](../images/AndroidStudio361_32.png)
 
-* Android Studio will display the information "APK(s) generated successfully..." after build is finished.
-* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
-* Easiest way to find the apk is to click on "Event log".
+* Android Studio wird die Information "APK(s) generated successfully..." anzeigen, sobald die APK-Datei vollständig erstellt wurde.
+* Falls beim Erstellen Fehler auftreten, findest Du Lösungsansätze auf den Seiten zur [Fehlerbehebung](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* Der einfachste Weg, die fertige APK-Datei zu finden, ist ein Klick auf "Event log".
 
-![Build successfully - event log](../images/AndroidStudio361_33.png)
+![Build erfolgreich - Ereignisprotokoll](../images/AndroidStudio361_33.png)
 
-* In the event log section click "locate".
+* Klicke im Event Log auf "locate".
 
-![Event log - locate apk](../images/AndroidStudio361_34.png)
+![Ereignisprotokoll-apk suchen](../images/AndroidStudio361_34.png)
 
-* app-full-release.apk is the file you are looking for.
+* app-full-release.apk ist die von Dir gesuchte Datei.
 
-![File location apk](../images/AndroidStudio361_35.png)
+![Datei-Speicherort apk](../images/AndroidStudio361_35.png)
 
 ## Übertrage die APK-Datei auf das Smartphone
 
-Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
+Der einfachste Weg, die Datei app-full-release.apk auf Dein Smartphone zu übertragen ist mittels [USB-Kabel oder Google Drive](https://support.google.com/android/answer/9064445?hl=de). Bitte beachte, dass die Übertragung per Mail zu Schwierigkeiten führen kann und daher nicht empfohlen wird.
 
-On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. Anleitungen dazu findest Du im Internet (z.B. [hier](https://mobilsicher.de/ratgeber/apps-aus-apk-datei-installieren-mit-android-8) oder [hier](https://www.tutonaut.de/anleitung-android-apps-unbekannten-quellen-installieren/)).
 
 ## AAPS-Version auf dem Smartphone überprüfen
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Klicke oben rechts auf das Drei-Punkte-Menü und dann den Menüpunkt Über, um auf Deinem Smartphone die installierte AAPS-Version anzuzeigen.
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![Installierte AAPS version](../images/Update_VersionCheck.png)
 
 ## Problembehandlung
 
