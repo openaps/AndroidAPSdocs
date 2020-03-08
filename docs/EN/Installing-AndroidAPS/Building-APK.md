@@ -112,6 +112,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 ![Automatic git installation failed](../images/AndroidStudio361_11.png)
 
+* **Reboot your PC to update system environment.**
 
 ### Mac
 
