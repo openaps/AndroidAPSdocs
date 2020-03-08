@@ -30,13 +30,13 @@ Si votre construction échoue avec une erreur concernant la "configuration sur d
 En général, les étapes nécessaires pour construire le fichier APK sont :
 
 1. [Installer Git](../Installing-AndroidAPS/git-install.rst)
-2. [Install Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
-3. [Définir le chemin d’accès git dans Android Studio](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
-4. [Télécharger le code AndroidAPS](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
-5. [Télécharger Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
+2. [Installer Android Studio](../Installing-AndroidAPS/Building-APK#installez-android-studio)
+3. [Définir le chemin d’accès git dans Android Studio](../Installing-AndroidAPS/Building-APK#definir-le-chemin-de-git-dans-les-preferences)
+4. [Télécharger le code AndroidAPS](../Installing-AndroidAPS/Building-APK#telecharger-le-code-androidaps)
+5. [Télécharger Android SDK](../Installing-AndroidAPS/Building-APK#telecharger-android-sdk)
 6. [Générer l'application](../Installing-AndroidAPS/Building-APK#generer-un-apk-signe) (générer un fichier apk signé)
-7. [Transférer le fichier apk sur votre téléphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identifier le récepteur si vous utilisez xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
+7. [Transférer le fichier apk sur votre téléphone](../Installing-AndroidAPS/Building-APK#transferer-le-fichier-apk-sur-le-smartphone)
+8. [Identifier le récepteur si vous utilisez xDrip+](../Installing-AndroidAPS/Building-APK#identifier-le-recepteur-si-vous-utilisez-xdrip)
 
 ## Démarche pas à pas
 
@@ -158,7 +158,7 @@ Sur l'écran d'accueil d'Android Studio, cliquez sur le petit triangle (1. de la
 
 ![Licence SDK](../images/AndroidStudio361_19.png)
 
-## Download Android SDK
+## Télécharger Android SDK
 
 * Cliquez sur File > Settings.
 
@@ -256,7 +256,7 @@ Sur votre téléphone, vous devez autoriser l'installation à partir de sources 
 
 ## Identifier le récepteur si vous utilisez xDrip+
 
-[Voir la page xDrip+](../Configuration/xdrip#identify-receiver)
+[Voir la page xDrip+](../Configuration/xdrip#identifier-le-recepteur)
 
 ## Dépannage
 
