@@ -1,10 +1,10 @@
 Docs Updates & Änderungen
 **************************************************
 
-March 2020
+März 2020
 ==================================================
-* `Build apk with Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
-* `Update apk with Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
+* `AndroidAPS mit Android Studio 3.6.1 erstellen <../Installing-AndroidAPS/Building-APK.html>`_
+* `Update mit Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
 Februar 2020
 ==================================================
 * `Automation Vorbehalte <../Usage/Automation.html#empfehlungen-und-vorbehalte>`_
