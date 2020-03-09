@@ -13,20 +13,33 @@ Windows
 
 2. Pfad zu git in Android Studio festlegen
 --------------------------------------------------
-* In Android Studio musst Du den Pfad zu git.exe hinterlegen: File - Settings 
+* Open File > Settings 
 
   .. image:: ../images/Update_GitSettings1.png
     :alt: Android Studio - Einstellungen öffnen
 
-* Im nächsten Fenster: Version Control - Git
+* Click the small triangle next to Version Control (1.) to open the sub-menu.
+* Click Git (2.).
+* Make sure update method "Merge" (3.) is selected.
+* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
 
-* Gib den kompletten Pfad an: ... **/Git/bin** (inklusive /bin)
+  .. image:: ../images/AndroidStudio361_09.png
+    :alt: Android Studio settings
 
-* Stelle sicher, dass die update method "Merge" ausgewählt ist.
+* If automatic setting is successful git version will be displayed.
+* Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
 
-  .. image:: ../images/Update_GitSettings2a.png
-    :alt: Android Studio - Pfad zu git
-   
+  .. image:: ../images/AndroidStudio361_10.png
+    :alt: Automatic git installation succeeded
+
+* In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
+* Use `search function <https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html>`_ in windows explorer to find "git.exe" if you are unsure where it can be found. Du brauchst die git.exe, die im Ordner \bin\ gespeichert ist.
+* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
+* Close settings window by clicking "OK" button (5.).
+
+  .. image:: ../images/AndroidStudio361_11.png
+    :alt: Automatic git installation failed
+ 
 3. Starte den Rechner neu
 --------------------------------------------------
 * Starte Deinen PC neu, um die Systemumgebung zu aktualisieren.
