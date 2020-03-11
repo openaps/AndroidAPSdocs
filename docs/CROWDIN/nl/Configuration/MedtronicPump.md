@@ -23,6 +23,7 @@ If you started using Medtronic driver please add yourself to this [list](https:/
     - 523/723 (firmware 2.4A or lower)
     - 554/754 EU release (firmware 2.6A or lower)
     - 554/754 Canada release (firmware 2.7A or lower)
+- Check for firmware is described in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) and [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
 ## Configuration of the pump
 
