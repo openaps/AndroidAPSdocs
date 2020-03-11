@@ -13,32 +13,32 @@ Windows
 
 2. Pfad zu git in Android Studio festlegen
 --------------------------------------------------
-* Open File > Settings 
+* Öffne File > Settings 
 
   .. image:: ../images/Update_GitSettings1.png
     :alt: Android Studio - Einstellungen öffnen
 
-* Click the small triangle next to Version Control (1.) to open the sub-menu.
-* Click Git (2.).
-* Make sure update method "Merge" (3.) is selected.
-* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
+* Klicke auf das kleine Dreieck neben Version Control (1.), um das Untermenü zu öffnen.
+* Git (2.) anklicken.
+* Stelle sicher, dass die update method "Merge" (3.) ausgewählt ist.
+* Prüfe durch klicken des Buttons "Test" (4.), ob Android Studio den Pfad zu git.exe automatisch ermitteln kann.
 
   .. image:: ../images/AndroidStudio361_09.png
     :alt: Android Studio settings
 
-* If automatic setting is successful git version will be displayed.
-* Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
+* Wenn die automatische Einstellung möglich ist, wird die Git-Version angezeigt.
+* Klicke im Dialogfenster auf "OK" (1.) und dann im Einstellungsfenster nochmals auf "OK" (2.).
 
   .. image:: ../images/AndroidStudio361_10.png
-    :alt: Automatic git installation succeeded
+    :alt: Automatische git Installation erfolgreich
 
-* In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
-* Use `search function <https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html>`_ in windows explorer to find "git.exe" if you are unsure where it can be found. Du brauchst die git.exe, die im Ordner \bin\ gespeichert ist.
-* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
-* Close settings window by clicking "OK" button (5.).
+* Falls git.exe nicht gefunden werden kann, schließe das Dialogfenster mit "OK" (1.) und klicke dann auf den Button mit den drei Punkten (2.).
+* Du kannst auch die <a href="https://www.computerwoche.de/a/suchfunktion-optimal-nutzen,3331986,2">Suchfunktion  im Windows Explorer verwenden, um "git.exe" zu finden wenn Du Dir nicht sicher bist, wo diese gespeichert ist. Du brauchst die git.exe, die im Ordner \bin\ gespeichert ist.
+* Wähle den Pfad zu git.exe aus, stelle sicher, dass Du den Ordner ** \bin\ ** ausgewählt hast (3.), und klicke auf "OK" (4.).
+* Schließe das Einstellungs-Fenster durch Klick auf "OK" (5.).
 
   .. image:: ../images/AndroidStudio361_11.png
-    :alt: Automatic git installation failed
+    :alt: Automatische Git-Installation fehlgeschlagen
  
 3. Starte den Rechner neu
 --------------------------------------------------
