@@ -39,8 +39,19 @@ Cuando los eCarbs son generados, se genera una nota en el Careportal para docume
 
 Bolo extendido
 ==================================================
-Como se ha mencionado anteriormente, los bolos extendidos o de onda múltiple no funcionan realmente en un entorno de lazo cerrado. Por lo tanto, no hay ninguna opción para emitir un bolo extendido en AndroidAPS. Esta es la razón:
+Como se ha mencionado anteriormente, los bolos extendidos o de onda múltiple no funcionan realmente en un entorno de lazo cerrado. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-wont-work-in-a-closed-loop-environment>`_ for details
 
+Extended bolus and switch to open loop
+--------------------------------------------------
+Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to. 
+
+That's why as of version 2.6 there is an option for an extended bolus. But closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus. Bolus units, remaining and total time will be shown on homescreen.
+
+.. image:: ../images/ExtendedBolus2_6.png
+  :alt: Extended bolus in AAPS 2.6
+
+Why extended boluses won't work in a closed loop environment
+----------------------------------------------------------------------------------------------------
 1. El lazo determina que ahora se van a entregar 1.55U/h. Si se entrega como un bolus ampliado o TBR no importa al algoritmo. De hecho, algunas de las bombas utilizan el bolo extendido. ¿Qué debería pasar entonces? A continuación, la mayoría de los controladores de la bomba detienen el bolo extendido-> Ni siquiera ha necesitado iniciarlo.
 2. Si tuvieras el bolo extendido como entrada, ¿qué debería pasar en el modelo?
 

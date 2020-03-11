@@ -23,6 +23,7 @@ If you started using Medtronic driver please add yourself to this [list](https:/
     - 523/723 (firmware 2.4A ή χαμηλότερη)
     - 554/754 Έκδοση ΕΕ (firmware 2.6A ή χαμηλότερη)
     - 554/754 Έκδοση Καναδά (firmware 2.7A ή χαμηλότερη)
+- Check for firmware is described in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) and [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
 ## Διαμόρφωση της αντλίας
 

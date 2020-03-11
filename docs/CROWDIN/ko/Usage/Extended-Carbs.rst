@@ -40,8 +40,19 @@ eCarbs가 입력되면, 케어포털 메뉴는 더 쉽게 입력하게 만들어
 
 확장 Bolus
 ==================================================
-위에서 언급한 것과 같이, 확장 또는 멀티 웨이브 bolus는 Closed Loop에서 효과적으로 동작하지 않는다. 그래서 AndroidAPS에서 확장 bolus는 문제를 일으키지 않는다. 그 이유는 다음과 같다.
+위에서 언급한 것과 같이, 확장 또는 멀티 웨이브 bolus는 Closed Loop에서 효과적으로 동작하지 않는다. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-wont-work-in-a-closed-loop-environment>`_ for details
 
+Extended bolus and switch to open loop
+--------------------------------------------------
+Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to. 
+
+That's why as of version 2.6 there is an option for an extended bolus. But closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus. Bolus units, remaining and total time will be shown on homescreen.
+
+.. image:: ../images/ExtendedBolus2_6.png
+  :alt: Extended bolus in AAPS 2.6
+
+Why extended boluses won't work in a closed loop environment
+----------------------------------------------------------------------------------------------------
 1. Loop는 현재 1.55U/h로 주입하기로 결정한다. 이것이 확장 bolus로 주입되는지 TBR로 주입되는지는 알고리즘에서 중요하지 않다. 사실, 일부 펌프는 확장 bolus을 사용한다. 그러면 어떻게 동작해야 할까? 대부분의 펌프는 확장 bolus를 중지한다->사용자가 그것을 시작할 필요조차 없었다.
 2. 만약 사용자가 확장 bolus를 입력했다면, 모델에서는 어떤일이 일어날까?
 
