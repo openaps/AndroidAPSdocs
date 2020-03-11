@@ -23,6 +23,7 @@ So bald Du AAPS mit einer Medtronic Pumpe nutzt, bitten wir um Eintrag in diese 
     - 523/723 (Firmware 2.4A oder niedriger)
     - 554/754 EU Version (Firmware 2.6A oder niedriger)
     - 554/754 Kanada Version (Firmware 2.7A oder niedriger)
+- Check for firmware is described in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) and [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
 ## Pumpen-Einstellungen
 
