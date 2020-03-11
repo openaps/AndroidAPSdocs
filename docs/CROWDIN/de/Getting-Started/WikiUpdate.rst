@@ -4,6 +4,7 @@ Docs Updates & Änderungen
 März 2020
 ==================================================
 * `AndroidAPS mit Android Studio 3.6.1 erstellen <../Installing-AndroidAPS/Building-APK.html>`_
+* `Extended bolus and switch to open loop <../Usage/Extended-Carbs.html#why-extended-boluses-wont-work-in-a-closed-loop-environment>`_
 * `Update mit Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
 Februar 2020
 ==================================================
