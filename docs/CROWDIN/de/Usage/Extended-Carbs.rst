@@ -39,8 +39,19 @@ Wenn eCarbs eingegeben werden, wird im Careportal automatisch eine Notiz angeleg
 
 Verzögerter Bolus
 ==================================================
-Wie oben bereits erwähnt sind verzögerte oder sog. Multi-Wave-Boli beim Loopen nicht sinnvoll. Daher gibt es in AndroidAPS auch keine Möglichkeit, einen verzögerten Bolus abzugeben. Die Gründe dafür sind:
+Wie oben bereits erwähnt sind verzögerte oder sog. Multi-Wave-Boli beim Loopen nicht sinnvoll. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-wont-work-in-a-closed-loop-environment>`_ for details
 
+Extended bolus and switch to open loop
+--------------------------------------------------
+Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to. 
+
+That's why as of version 2.6 there is an option for an extended bolus. But closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus. Bolus units, remaining and total time will be shown on homescreen.
+
+.. image:: ../images/ExtendedBolus2_6.png
+  :alt: Extended bolus in AAPS 2.6
+
+Why extended boluses won't work in a closed loop environment
+----------------------------------------------------------------------------------------------------
 1. Der Loop bestimmt, dass jetzt 1,55 IE/Std. abgegeben werden soll. Ob das als verzögerter Bolus oder TBR abgegeben wird, ist dem Algorithmus egal. In der Tat verwenden einige der Pumpen den verzögerten Bolus. Was soll dann geschehen? Die meisten Pumpentreiber stoppen dann den verzögerten Bolus -> Man brauchte ihn gar nicht erst starten.
 2. Wenn man den verzögerten Bolus als Eingabe hätte, was soll dann damit im Modell geschehen?
 
