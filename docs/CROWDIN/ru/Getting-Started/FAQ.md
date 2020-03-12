@@ -174,7 +174,7 @@ AAPS по умолчанию строит свой алгоритм отталк
 > 
 > Пример:
 > 
-> Bread unit fatcor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
+> Множитель хлебной единицы (ХЕ = 12г. углеводов): 2,4 ед./ХЕ -> Требуется 2,4 ед. инсулина для компенсации одной ХЕ.
 > 
 > Corresponding IC: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
 > 
