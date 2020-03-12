@@ -32,11 +32,15 @@ AndroidAPS is designed to be _controlled_ by Android Wear watches. If you want t
 
 The following functions can be triggered from the watch:
 * set a temporary target
-* administer a bolus
-* administer eCarbs
 * use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
-* check the status of loop and pump
-* show TDD (Total daily dose = bolus + basal per day)
+* administer eCarbs
+* administer a bolus (insulin + carbs)
+* watch settings
+* status
+    * check pump status
+    * check loop status
+    * check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+    * show TDD (Total daily dose = bolus + basal per day)
 
 ## AAPS Watchfaces
 
