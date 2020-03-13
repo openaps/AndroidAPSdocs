@@ -34,7 +34,7 @@ Freestyle Libre 2
   :alt: Android Настройки местоположения
   
 .. изображение:: ../images/fsl2pic4.jpg
-  :alt: automatic time and timezone
+  :alt: автоматическое время и часовой пояс
   
 .. изображение:: ../images/fsl2pic4.jpg
   :alt: Параметры LibreLink
@@ -88,9 +88,9 @@ Freestyle Libre 2
 Шаг 3: Запустить сенсор
 ==================================================
 
-In xDrip+ start the sensor with "Start Sensor" and "not today". 
+В xDrip+ запустите датчик с помощью "Start Sensor" и "not today". 
 
-In fact this will not start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
+На самом деле это не запустит датчик Libre2 и не начнет взаимодействовие с ним. Это просто для того, чтобы указать xDrip+, что новый сенсор начал передавать уровень ГК. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
 
 Шаг 4: Настройка AndroidAPS
 ==================================================
