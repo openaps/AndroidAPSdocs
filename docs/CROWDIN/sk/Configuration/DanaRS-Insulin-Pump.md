@@ -2,7 +2,7 @@
 
 *These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
 
-**DanaRS with new firmware v3 cannot be used with AndroidAPS!**
+**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
 
 * In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
 
