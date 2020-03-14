@@ -2,7 +2,7 @@
 
 *Diese Anleitung beschreibt die Einrichtung der App und deiner Pumpe wenn du eine Dana RS (ab 2017) verwendest. Gehe zu [DanaR Insulinpumpe](./DanaR-Insulin-Pump) wenn du die Original DanaR benutzt.*
 
-**DanaRS with new firmware v3 cannot be used with AndroidAPS!**
+**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
 
 * Bei der DanaRS wird das Basalprofil "BASAL A" von AAPS verwendet. Eventuell in der Pumpe vorhandene Einträge in diesem Profil werden überschrieben.
 
