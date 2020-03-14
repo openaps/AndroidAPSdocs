@@ -33,15 +33,15 @@ AndroidAPS kann mit einer Android Wear Smartwatch *gesteuert* werden. Wenn Du De
 Die nachfolgenden Funktionen kannst Du von der Uhr aus starten:
 
 * temporäres Ziel setzen
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
+* Bolusrechner verwenden (Welche Variablen bei der Berechnung berücksichtigt werden, lässt sich in den [Einstellungen](../Configuration/Config-Builder#wear) auf dem Smartphone festlegen.)
 * eCarbs eintragen
-* administer a bolus (insulin + carbs)
-* watch settings
+* Bolus (Insulin + Kohlenhydrate) abgeben
+* Uhreinstellungen
 * status 
-    * check pump status
-    * check loop status
-    * check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
-    * show TDD (Total daily dose = bolus + basal per day)
+    * pumpenstatus überprüfen
+    * Pumpenstatus überprüfen
+    * Profil prüfen und ändern, CPP (Circadian Percentage Profile = Zeitverschiebung + Prozentsatz)
+    * TDD (Total daily dose = Bolus + Basal pro Tag) anzeigen
 
 ## AAPS Watchfaces
 
