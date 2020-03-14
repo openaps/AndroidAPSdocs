@@ -4,6 +4,7 @@
 
 * Accu-Check Combo
 * Accu-Check Insight
+* some old Medtronic
 * DanaR
 * DanaRS 
 
