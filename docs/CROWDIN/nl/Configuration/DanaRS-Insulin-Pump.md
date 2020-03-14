@@ -2,6 +2,8 @@
 
 *Deze instructies zijn voor het instellen van de app en pomp, en gelden voor een DanaRS uit 2017 of jonger. Als je een oudere pomp hebt, ga dan naar de instructies voor de [DanaR insulinepomp](./DanaR-Insulin-Pump).*
 
+**DanaRS with new firmware v3 cannot be used with AndroidAPS!**
+
 * De app gebruikt het profiel "BASAL A" op de pomp. Jouw huidige instellingen van jouw basaalstanden op de pomp zullen worden overschreven.
 
 * In AndroidAPS ga naar Configurator en selecteer 'DanaRS'
@@ -31,9 +33,9 @@
 
 ### Foutmelding tijdens toedienen insuline
 
-In het geval dat de verbinding tussen AAPS en DanaRS wordt verbroken tijdens het toedienen van een bolus (d.w.z. als je wegloop van je telefoon terwijl DanaRS bezig is insuline te geven) dan zul je het volgende bericht zien en een alarmgeluid horen.
+In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
-![Alarm insuline toediening](../images/DanaRS_Error_bolus.png)
+![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
 * In de meeste gevallen krijg je deze foutmelding omdat de communicatie werd verbroken, en is gewoon de juiste hoeveelheid insuline gegeven.
 * Controleer in de geschiedenis van je pomp (op de pomp zelf, of in de app op het Dana tabblad > Historiek > Bolussen > VERNIEUW) of de juiste bolus werd gegeven.
@@ -42,7 +44,7 @@ In het geval dat de verbinding tussen AAPS en DanaRS wordt verbroken tijdens het
 
 ## Een andere telefoon gebruiken
 
-Wanneer je een nieuwe telefoon gaat gebruiken, moet je dat doen via de volgende stappen:
+When switching to a new phone the following steps are neccessary:
 
 * **Exporteer instellingen** op je oude telefoon
   
