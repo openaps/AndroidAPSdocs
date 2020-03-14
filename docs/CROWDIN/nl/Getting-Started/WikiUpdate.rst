@@ -4,7 +4,7 @@ Wiki updates & wijzigingen
 March 2020
 ==================================================
 * `Build apk with Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
-* `DanaRS with firmware v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **cannot be used with AndroidAPS!**
+* `DanaRS with firmware v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **cannot currently be used with AndroidAPS!**
 * `Extended bolus and switch to open loop <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
 * `Update apk with Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
 February 2020
