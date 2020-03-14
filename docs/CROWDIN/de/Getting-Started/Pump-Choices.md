@@ -4,8 +4,9 @@ AndroidAPS funktioniert derzeit mit
 
 * Accu-Chek Combo
 * Accu-Chek Insight
-* DanaR
-* DanaRS 
+* some old Medtronic
+* Dana R
+* Dana RS 
 
 Pumpen. Informationen über weitere Pumpen, die möglicherweise irgendwann mit AndroidAPS funktionieren, findest du auf der Seite [Zukünftig ggf. loopbare Pumpen](Future-possible-Pump-Drivers.md).
 
