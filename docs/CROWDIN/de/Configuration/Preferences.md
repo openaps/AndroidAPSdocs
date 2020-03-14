@@ -105,7 +105,8 @@ Die Optionen hier hängen davon ab, welchen Pumpentreiber du im Config-Generator
 * [DanaR Insulinpumpe](../Configuration/DanaR-Insulin-Pump.md) 
 * [DanaRS Insulinpumpe](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
-* [Medtronic Pumpe](..//Configuration/MedtronicPump.md)
+* [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md) 
+* [Medtronic Pump](..//Configuration/MedtronicPump.md)
 
 Stelle sicher, dass du die virtuelle Pumpe im Config-Generator ausgewählt hast, wenn du AndroidAPS als Open Loop betreibst.
 
