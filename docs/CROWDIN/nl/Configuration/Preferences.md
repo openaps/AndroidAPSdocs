@@ -105,7 +105,8 @@ De opties hier zullen variëren afhankelijk van welke pomp je hebt geselecteerd 
 * [DanaR Insulinepomp](../Configuration/DanaR-Insulin-Pump.md) 
 * [DanaRS Insulinepomp](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Accu Chek Combo Pomp](../Configuration/Accu-Chek-Combo-Pump.md) 
-* [Medtronic Pomp](..//Configuration/MedtronicPump.md)
+* [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md) 
+* [Medtronic Pump](..//Configuration/MedtronicPump.md)
 
 Als je AndroidAPS gebruikt in 'open loop' modus, zorg er dan voor dat je Virtuele Pomp hebt geselecteerd in de Configurator.
 
