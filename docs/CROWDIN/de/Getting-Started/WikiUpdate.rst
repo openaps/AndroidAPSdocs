@@ -4,7 +4,7 @@ Docs Updates & Änderungen
 März 2020
 ==================================================
 * `AndroidAPS mit Android Studio 3.6.1 erstellen <../Installing-AndroidAPS/Building-APK.html>`_
-* `DanaRS with firmware v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **cannot currently be used with AndroidAPS!**
+* `DanaRS mit Firmware v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **kann momentan nicht mit AndroidAPS genutzt werden!**
 * `Extended bolus and switch to open loop <../Usage/Extended-Carbs.html#warum-ein-verzogerter-bolus-beim-loopen-nicht-funktioniert>`_
 * `Update mit Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
 Februar 2020
