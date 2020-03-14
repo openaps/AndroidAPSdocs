@@ -2,7 +2,7 @@
 
 *Te instrukcje dotyczą konfiguracji aplikacji i pompy, jeśli masz DanaRS wyprodukowaną po 2017 roku. Odwiedź [ Pompa insulinowa DanaR ](./DanaR-Insulin-Pump), jeśli zamiast niej masz oryginalną pompę DanaR.*
 
-**DanaRS with new firmware v3 cannot be used with AndroidAPS!**
+**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
 
 * W pompie DanaRS jest używana baza „BASAL A”. Istniejące dane zostaną zastąpione.
 
