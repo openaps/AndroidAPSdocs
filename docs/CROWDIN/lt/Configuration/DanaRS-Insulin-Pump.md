@@ -2,7 +2,7 @@
 
 *Naudokite šias instrukcijas AAPS programėlės ir DanaRS (nuo 2017 m.) pompos konfigūravimui. Jei turite DanaR pompą, skaitykite [DanaR insulino pompa](./DanaR-Insulin-Pump).*
 
-**DanaRS with new firmware v3 cannot be used with AndroidAPS!**
+**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
 
 * Programėlė naudoja tik "BASAL A". Programa pati perrašo duomenis pompoje.
 
