@@ -105,7 +105,8 @@ Les options ici varient selon le pilote de pompe que vous avez sélectionné dan
 * [Pompe à insuline DanaR](../Configuration/DanaR-Insulin-Pump.md) 
 * [Pompe à insuline DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Pompe Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
-* [Pompe Medtronic](..//Configuration/MedtronicPump.md)
+* [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md) 
+* [Medtronic Pump](..//Configuration/MedtronicPump.md)
 
 Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sélectionné Pompe virtuelle Pump dans le Générateur de configuration.
 
