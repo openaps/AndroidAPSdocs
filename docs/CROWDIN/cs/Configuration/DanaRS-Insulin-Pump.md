@@ -2,7 +2,7 @@
 
 *Tyto pokyny jsou pro konfiguraci aplikace a Vaší pumpy, pokud máte pumpu DanaRS od roku 2017 a výše. Pokud máte původní DanaR, navštivte [Pumpa DanaR](./DanaR-Insulin-Pump).*
 
-**DanaRS with new firmware v3 cannot be used with AndroidAPS!**
+**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
 
 * V pumpě DANARS je aplikací používán "BAZÁL A". Existující data budou přepsána.
 
