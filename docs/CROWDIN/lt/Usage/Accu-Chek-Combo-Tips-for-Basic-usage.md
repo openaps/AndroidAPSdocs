@@ -13,7 +13,7 @@
 ### Aktyvuoti Pompa Nepasiekiama aliarmą
 
 * AndroidAPS eikite į**Nustatymai / Vietiniai aliarmai** ir aktyvuokite **pompa nepasiekiama aliarmas** ir nustatykite **pompa nepasiekiama limitas [Min]** **31** minutei. 
-* This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
+* Tai duos jums pakankamai laiko, kad aliarmas nenuskambėtų, kai jūs paliekate kambarį palikę telefoną ant stalo, bet informuos jus, jei pompa negali būti pasiekta laiko tarpą, viršijantį laikinos bazės dydžio laikotarpį.
 
 ### Atstatyti pompos pasiekiamumą
 
@@ -41,12 +41,12 @@
 * Po **senka baterija** aliarmo, baterija turėtų būti pakeista kaip įmanoma greičiau, kad energijos užtektų užtikrinti patikimam Bluetooth ryšiui su telefonu, net jei telefonas yra toliau nuo pompos.
 * Net ir po aliarmo **senka baterija** baterija gali būti naudojama dar nemažai laiko. Tačiau rekomenduojama visada su savim turėti naują bateriją po nuskambėjusio "senka baterija" aliarmo.
 * Norėdami tai padaryti paspauskite ir palaikykite **Uždaras Ciklas** pagrindiniame ekrane ir pasirinkite **Sustabdyti ciklą 1 val.**. 
-* Wait for the pump to communicate with the phone and the Bluetooth logo on the pump has faded.
+* Palaukite, kol telefonas susisieks su pompa ir bluetooth ženkliukas išnyks pompos ekrane.
 
 ![Bluetooth įjungtas](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/Compo.png?raw=true)
 
 * Atrakinkite pompos klaviatūrą, sustabdykite pompą, patvirtinkite galimai atšauktą laikiną bazę ir pakeiskite bateriją.
-* Then put the pump back in run mode select **Resume** when long-pressing on **Suspended** on the main screen.
+* Tada iš naujo paleiskite pompą, pasirinkite **Atnaujinti** ilgai paspaudus ir palaikius ant **Sustabdyta** pagrindiniame ekrane.
 * AndroidAPS iš naujo nustatys reikalingą laikiną bazę, kai gaus naują glikemijos vertę. 
 
 ### Baterijų tipai ir galimos trumpo baterijų tarnavimo laiko priežastys
@@ -61,9 +61,9 @@ Tipinis baterijų tarnavimo laikas skirtingoms baterijoms yra toks:
 * **Power One Alkaline** (Varta) iš paslaugų paketo: nuo 2 iki 4 savaičių
 * **Eneloop rechargable** baterijos (BK-3MCCE): nuo 1 iki 3 savaičių
 
-If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
+Jei jūsų baterijos tarnauja daug trumpiau nei nurodyta aukščiau, patikrinkite šias galimas priežastis:
 
-* The latest version (March 2018) of the [ruffy App](https://github.com/MilosKozak/ruffy) significantly improved pump battery lifetime. Patikrinkite, ar naudojate šią versiją, jei turite problemų su trumpu baterijų veikimu.
+* Paskutinė (2018 kovas) [ruffy programėlės](https://github.com/MilosKozak/ruffy) versija reikšmingai pagerino pompos baterijos tarnavimo laiką. Patikrinkite, ar naudojate šią versiją, jei turite problemų su trumpu baterijų veikimu.
 * Yra keli variantai užsukamų Combo pompos baterijų dangtelių, kurie dalinai užtrumpina baterijas ir jas greičiau iškrauna. Dangteliai be šių problemų gali būti atpažįstami iš aukso spalvos metalinių kontaktų.
 * Jei pompos laikrodis "neišgyvena" greito baterijos pakeitimo, greičiausiai sugedo kondensatorius, kuris palaiko laikrodžio veikimą trumpai sutrikus energijos tiekimui. Šiuo atveju padės tik pompos pakeitimas Roche, kas nebus problema garantinio aptarnavimo laikotarpiu. 
 * Išmanaus telefono įranga ir programos (Android valdomos sistemos ir bluetooth susijungimas) taip pat įtakoja pompos baterijos tarnavimo laiką, net jei konkretūs faktoriai dar ne iki galo žinomi. Jei turite galimybę, išbandykite kitą telefoną ir palyginkite baterijos tarnavimo laiką.
@@ -78,15 +78,15 @@ If your battery life is significantly shorter than the ranges given above, pleas
 
 OpenAPS algortimas nepalaiko lygiagretaus ištęsto ar daugiabangio boluso. Bet panašus rezultatas gali būti pasiektas šiais alternatyviais veiksmais:
 
-* Įveskite angliavandenius, bet nebolusuokite jiems. The loop algorithm will react more aggressively. Jei reikalinga, naudokite **eAngliavandeniai** (ištęstus angliavandenius).
+* Įveskite angliavandenius, bet nebolusuokite jiems. Uždaro ciklo algoritmas reaguos daug agresyviau. Jei reikalinga, naudokite **eAngliavandeniai** (ištęstus angliavandenius).
 
-* If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
+* Jei jūs bandysite tiesiog naudoti ištęstą ar daugiabangį bolusą tiesiai iš pompos, AndroidAPS nubaus jus išjungdama uždarą ciklą kitoms šešioms valandoms, kad būtų išvengta perteklinio insulino apskaičiavimo ir suleidimo.
 
 ![Uždaras ciklas išjungtas po daugiabangio boluso](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
 
 ## Aliarmai leidžiant bolusą
 
-* If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical number of insulin units. If you really want to bolus the same insulin twice in short succession, just wait two more minutes and then deliver the bolus again. If the first bolus has been interrupted or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
+* Jei AndroidAPS nustato, kad identiškas bolusas buvo sėkmingai suleistas tą pačią minutę, nebus leidžiama suleisti identiško skaičiaus insulino vienetų. Jei jūs tikrai norite du kartus suleisti tą pačią insulino dozę viena po kitos, tiesiog palaukite dvi minutes ir tada vėl suleiskite bolusą. Jei pirmas bolusas buvo nutrauktas ar nesuleistas dėl kitų priežasčių, nuo AAPS 2.0 versijos jūs galite nedelsiant patvirtinti bolusą iš naujo.
 * Fone veikia saugumo mechanizmas, kuris nuskaito pompos bolusų istoriją prieš patvirtinant naują bolusą, kad būtų teisingai apskaičiuotas aktyvus insulinas organizme (AIO), net jei bolusas buvo suleistas tiesiai iš pompos. Turi būti užkirstas kelias nepastebimiems veiksmams.
 
 ![Dvigubas bolusas](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/Doppelbolus.png)

@@ -9,7 +9,7 @@ Oref0 / Oref1
 
 Los carbohidratos no absorbidos se cortan después del tiempo especificado
 
-.. imagen:: ../images/cob_oref0_orange.png
+.. image:: ../images/cob_oref0_orange_II.png
   :alt: Oref0 / Oref1
 
 AAPS, promedio ponderado
@@ -17,7 +17,7 @@ AAPS, promedio ponderado
 
 la absorción se calcula para tener `COB == 0` después del tiempo especificado
 
-.. imagen:: ../images/cob_aaps2_orange.png
+.. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, Promedio ponderado
 
 Si se utiliza la absorción mínima de carbohidratos (min_5m_carbimpact) en lugar del valor calculado a partir de las desviaciones de BG, aparece un punto naranja en el gráfico COB.

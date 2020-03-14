@@ -26,14 +26,45 @@ Sélectionnez le profil de basal que vous souhaitez utiliser. Voir la page [Prof
 
 Le profil local utilise le profil de basal entré manuellement sur le téléphone. Dès qu'il est sélectionné, un nouvel onglet apparaît dans AAPS, où vous pouvez modifier les données de profil lues à partir de la pompe si nécessaire. Avec le changement de profil suivant, les données sont ensuite écrites dans la pompe dans le profil 1. Ce profil est recommandé car il ne dépend pas de la connectivité Internet.
 
+Vos profils locaux font partie des [paramètres exportés](../Usage/ExportImportSettings.rst). Donc assurez vous d'avoir une sauvegarde dans un endroit sûr.
+
+![Paramètres profil local](../images/LocalProfile_Settings.png)
+
+Boutons :
+
+* Plus vert : ajouter
+* X rouge : supprimer
+* Flèche bleue : dupliquer
+
+#### Dupliquer un changement de profil
+
+Vous pouvez facilement créer un profil local à partir d'un changement de profil. Dans ce cas, le décalage temporel et le pourcentage seront appliqués au nouveau profil local.
+
+1. Allez dans l'onglet Traitements.
+2. Sélectionnez Changement Profil.
+3. Appuyez sur "Dupliquer".
+4. Vous pouvez éditer le nouveau profil local dans l'onglet Profil local (PL) ou via le menu hamburger.
+
+![Dupliquer un changement de profil](../images/LocalProfile_ClonePS.png)
+
+Si vous souhaitez passer du profil Nightscout au profil local, faites simplement un changement de profil sur votre profil NS et clonez le changement de profil comme décrit ci-dessus.
+
+#### Remonter les profils locaux sur Nightscout
+
+Les profils locaux peuvent également être téléchargés sur Nightscout. Les paramètres se trouvent dans les préférences NS Client.
+
+![Télécharger profil local sur NS](../images/LocalProfile_UploadNS2.png)
+
 Avantages :
 
-* pas de connexion internet nécessaire de modifier les paramètres de profil
-* les modifications du profil peuvent être effectués directement sur le téléphone
+* il n'est pas nécessaire d'avoir une connexion internet pour modifier les paramètres du profil
+* les modifications du profil peuvent être effectuées directement sur le téléphone
+* un nouveau profil peut être créé à partir d'un changement de profil
+* les profils locaux peuvent être téléchargés sur Nightscout
 
 Inconvénients :
 
-* seulement un profil
+* aucun
 
 ### Profil NS
 
@@ -51,10 +82,6 @@ Inconvénients :
 * aucune modification locale des paramètres de profil
 * le profil ne peut pas être modifié directement sur le téléphone
 
-### Profil simple
-
-Le Profil simple n'a qu'un seul bloc de temps pour la DAI, G/I, SI, le débit de basal et la plage cible (c.-à-d. aucun changement de taux de basal durant la journée). Plus susceptible d'être utilisé à des fins de test, sauf si vous avez les mêmes données sur 24 heures. Une fois que le "Profil simple" est sélectionné, un nouvel onglet apparaît dans AAPS où vous pouvez entrer les données de profil.
-
 ## Insuline
 
 Sélectionnez le type de courbe d'insuline que vous utilisez. Les options 'Insuline à Action rapide Oref', 'Insuline à action Ultra Rapide Oref' et 'Profil d'insuline ajustable Oref' ont toutes une forme exponentielle. Plus d'informations sont listées dans les [docs OpenAPS](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), les courbes varieront en fonction du DAI et du temps maximum.
@@ -71,21 +98,21 @@ Le [graphique de courbe d'insuline](../Getting-Started/Screenshots#insulin-profi
 * DAI = au moins 5.0h
 * Pic maxi = 75 minutes après l'injection (fixe, non réglable)
 
-### Insuline à Action Ultra Rapide Oref
+### Insuline Ultra Rapide Oref
 
 * recommendé pour FIASP
 * DAI = au moins 5.0h
 * Pic maxi = 55 minutes après l'injection (fixe, non réglable)
 
-Pour beaucoup de personnes, il n'y a pratiquement pas d'effet notable de la FIASP après 3-4 heures tout au plus, même si 0.0 xx unités sont disponibles en tant que règle. Cette quantité résiduelle peut encore être perceptible pendant le sport, par exemple. Par conséquent, AndroidAPS utilise au moins 5h comme DAI.
+Pour beaucoup de personnes, il n'y a pratiquement pas d'effet notable de FIASP après 3-4 heures tout au plus, même si 0.0 xx unités sont disponibles en tant que règle. Cette quantité résiduelle peut encore être perceptible pendant le sport, par exemple. Par conséquent, AndroidAPS utilise au moins 5h comme DAI.
 
 ![Générateur de configuration Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
 
 ### Profil d'insuline ajustable Oref
 
-Avec le "Profil d'insuline ajustable 0ref" vous pouvez entrer individuellement l'heure du pic. La DAI est automatiquement définie à 5 heures si elle n'est pas spécifiée plus haut dans le profil.
+Avec le "Profil d'insuline ajustable 0ref" vous pouvez entrer individuellement l'heure du pic. La DAI est automatiquement définie à 5 heures s'il n'est pas spécifié plus haut dans le profil.
 
-Ce profil est recommandé si une insuline non supportée ou un mélange d'insulines différentes est utilisé.
+Ce profil est recommandé si une insuline non soutenue ou un mélange d'insulines différentes est utilisé.
 
 ## Source GLY
 
@@ -132,9 +159,9 @@ Sélectionnez l'algorithme APS souhaité pour les ajustements de thérapie. Vous
 * OpenAPS MA (Assistant Repas, état de l'algorithme en 2016)
 * OpenAPS AMA (Assistance Améliorée Repas, état de l'algorithme en 2017)  
     Plus de détails sur OpenAPS AMA peuvent être trouvé dans la [documentation OpenAPS](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). En termes simples, les avantages sont une fois que vous vous êtes fait un bolus de repas, le système peut augmenter la basale temp plus rapidement SI vous entrez des glucides de manière fiable.  
-    Notez que vous devez être à l'[Objectif 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) pour utiliser OpenAPS AMA.
+    Notez que vous devez être à l'[Objectif 9](../Usage/Objectives#objectif-9-activation-de-fonctionnalites-supplementaires-en-journee-comme-l-aide-au-repas-amelioree-ara-ama) pour utiliser OpenAPS AMA.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (Super Micro Bolus, l'algorithme le plus récent pour les utilisateurs avancés)  
-    Notez que vous devez être à l'[Objectif 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) pour utiliser OpenAPS SMB et min_5m_carbimpact doit être mis à 8 dans le Générateur de configuration > Sensitivity detection > Estimation de Sensibilité > paramètres Oref1.
+    Notez que vous devez être à l'[Objectif 10](../Usage/Objectives#objectif-10-activation-de-fonctionnalites-supplementaires-pour-l-utilisation-en-journee-telles-que-la-fonction-smb) pour utiliser OpenAPS SMB et min_5m_carbimpact doit être mis à 8 dans le Générateur de configuration > Sensitivity detection > Estimation de Sensibilité > paramètres Oref1.
 
 ## Boucle
 
@@ -158,7 +185,7 @@ Voir la page [Objectifs](../Usage/Objectives.rst) pour plus d'informations.
 
 ## Traitements
 
-Si vous affichez l'onglet Traitements (TRAIT), vous pouvez voir les traitements qui ont été téléchargés dans Nightscout. Si vous souhaitez modifier ou supprimer une entrée (par ex. vous avez mangé moins de glucides que prévu), alors sélectionnez "Supprimer" et entrez la nouvelle valeur (changement de l'heure si nécessaire) via l'onglet Careportal (CP).
+Si vous affichez l'onglet Traitements (TRAIT), vous pouvez voir les traitements qui ont été téléchargés dans Nightscout. Si vous voulez modifier ou supprimer une entrée (par ex. vous avez mangé moins de glucides que prévu), alors sélectionnez 'Supprimer' et entrez la nouvelle valeur (changes l'heure si nécessaire) via le [bouton Glucides de l'écran d'accueil](../Getting-Started/Screenshots.md#carb-correction).
 
 ## Généralités
 
@@ -201,25 +228,23 @@ Quelques boutons pour accéder rapidement aux fonctions communes:
 
 * Changement de profils (voir la page [Changement de profil](../Usage/Profiles.md) pour plus d'informations sur la configuration)
 * Cibles temporaires
-* Définir/Annuler des débits de basal temporaires
+* Définir/Annuler des Débit de Base
 * Bolus étendu (pompe DanaR/RS ou Combo uniquement)
-* Amorcer/Remplir (si c'est supporté par la pompe [DanaR/RS, Combo et Insight])
+* Enregistrement de tous les soins spécifiques
+    
+    * Contrôle de la glycémie
+    * Amorcer/Remplir - enregistrement d'un changement de site et d'un changement de cartouche (si pas fait sur la pompe)
+    * Pose du capteur MGC
+    * Changement de la pile de pompe
+    * Remarque
+    * Activité Physique
+* Affichage des informations capteur, insuline, canule et age de la pile de pompe
 * Historique
 * DTI (Dosage Total d'Insuline quotidien = bolus + basale par jour)
 
 Certains médecins utilisent - en particulier pour les nouveaux utilisateurs de pompes - une proportion basal-bolus de 50:50. Par conséquent, le rapport est calculé ainsi DTI/(2*DTB) (Dose Totale de Basale = somme des débits de basal en 24 heures). D'autres préfèrent une fourchette allant de 32% à 37% de DTI pour DTB. Comme la plupart de ces règles empiriques, leur validité réelle est limitée. Remarque : Votre diabète peut varier!
 
-![Onglet Actions](../images/ConfBuild_ConfBuild_Actions.png)
-
-### Careportal
-
-Permet d'enregistrer toutes les entrées de soins spécifiques et d'afficher l'age du capteur, de l'insuline, de la canule et de la pompe dans l'onglet Careportal (CP).
-
-Remarque : **Aucune insuline** ne sera donnée si elle est entrée via Careportal (par ex. Bolus Repas, Bolus de Correction...)
-
-Les glucides entrés dans Careportal (par ex. Ressucrage) seront utilisés pour le calcul des GA.
-
-![Onglet Careportal](../images/ConfBuild_CarePortal.png)
+![Onglet Actions](../images/ConfBuild_ConfBuild_Actions_b.png)
 
 ### Communicateur SMS
 
@@ -235,7 +260,7 @@ Remarque : Les entrées ne peuvent pas être utilisées dans la calculatrice And
 
 Contrôler et contrôler AAPS à l'aide de votre montre Android Wear (voir la page [AAPS sur montres Wear OS](../Configuration/Watchfaces.md)). Utilisez les paramètres (roue crantée) pour définir quelles variables doivent être prises en compte lors du calcul du bolus donné par votre montre (par ex. tendance de 15min, GA...).
 
-Si vous voulez commander AAPS depuis la montre (bolus etc) vous devez activer "Commandes depuis la montre" dans les "Paramètres Wear".
+Si vous voulez commander AAPS depuis la montre (bolus etc) alors dans les "Paramètres Wear" vous devez activer "Commandes depuis la montre".
 
 ![Paramètres Wear](../images/ConfBuild_Wear.png)
 

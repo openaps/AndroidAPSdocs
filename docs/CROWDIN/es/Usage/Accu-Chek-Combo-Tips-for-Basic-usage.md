@@ -1,4 +1,4 @@
-# Consejos para uso básico de Combo AccuChek
+# Accu-Chek Combo Tips for basic usage
 
 ## Cómo garantizar las operaciones sin problemas
 
@@ -13,7 +13,7 @@
 ### Activar alarma de bomba inalcanzable
 
 * En AndroidAPS, vaya a **Settings/Local Alarms** y active **alarm when pump is unreachable** and set **pump not reachable limit [Min]** to **31** minutos. 
-* Esto le dará tiempo suficiente para no activar la alarma al salir de la habitación mientras su teléfono está a la izquierda en el escritorio, pero le informa si la bomba no puede ser alcanzado por un tiempo que exceda de la duración de un temporal basal.
+* This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
 
 ### Restaure la posibilidad de alcance de la bomba
 
@@ -41,12 +41,12 @@
 * Después de una alarma de **batería baja,** la batería debe cambiarse tan pronto como sea posible para tener siempre suficiente energía para una comunicación Bluetooth fiable con el smartphone, incluso si el teléfono está a una distancia más amplia de la bomba.
 * Incluso después de una alarma **batería baja**, la batería podría ser utilizado para una cantidad significativa de tiempo. Sin embargo, se recomienda tener siempre una batería fresca con usted después de un aviso de alarma de "batería baja".
 * Para ello, pulse la tecla **Closed Loop** en la pantalla principal y seleccione **Suspend loop for 1h**. 
-* Espere a que la bomba se comunique con el smartphone y que el logo de Bluetooth en la bomba se halla desvanecido.
+* Wait for the pump to communicate with the phone and the Bluetooth logo on the pump has faded.
 
 ![Bluetooth habilitado](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/Compo.png?raw=true)
 
 * Suelte la tecla de bloqueo en la bomba, coloque la bomba en el modo de parada, confirmar una posible cancelación de basal temporal, y cambiar la batería.
-* A continuación, vuelva a colocar la bomba en el modo de ejecución, seleccione **Reanudar** con una presión-larga en **Suspendido** en la pantalla principal.
+* Then put the pump back in run mode select **Resume** when long-pressing on **Suspended** on the main screen.
 * AndroidAPS volverá a establecer una tasa basal temporal necesaria con la llegada del próximo valor de glucosa en la sangre. 
 
 ### Tipos de batería y la causa de la corta vida de las mismas
@@ -61,9 +61,9 @@ Los rangos para el tiempo de vida típico de los diferentes tipos de batería so
 * **Power One Alkaline** (Varta) del envase de servcie: 2 a 4 semanas
 * **Eneloop rechargable** baterías (BK-3MCCE): de 1 a 3 semanas
 
-Si la duración de la batería es claramente inferior a los rangos indicados más arriba, por favor compruebe las siguientes causas posibles:
+If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
 
-* La última versión (marzo de 2018) de la [ruffy App](https://github.com/MilosKozak/ruffy) mejoró significativamente la duración de la batería de la bomba. Asegúrate de que estás en esa versión si tienes problemas con una vida corta de batería.
+* The latest version (March 2018) of the [ruffy App](https://github.com/MilosKozak/ruffy) significantly improved pump battery lifetime. Asegúrate de que estás en esa versión si tienes problemas con una vida corta de batería.
 * Hay algunas variantes de la tapa de la batería de tornillos de la bomba Combo, que parcialmente cortocircuita las baterías y las drena rápidamente. Las tapas sin este problema pueden ser reconocidas por los contactos de metal dorado.
 * Si el reloj de la bomba no "sobrevive" a un cambio de batería corto, es probable que el capacitor esté roto, lo que mantiene el reloj en funcionamiento durante un breve corte de energía. En este caso, sólo una sustitución de la bomba por parte de Roche ayudará, lo cual no es un problema durante el período de garantía. 
 * El hardware y el software del teléfono inteligente (sistema operativo Android y pila de bluetooth) también impactan la duración de la batería de la bomba, a pesar de que los factores exactos aún no se conocen completamente. Si tiene la oportunidad, pruebe otro smartphone y compare los tiempos de vida de la batería.
@@ -78,15 +78,15 @@ Si la duración de la batería es claramente inferior a los rangos indicados má
 
 El algoritmo OpenAPS no soporta un bolo extendido en paralelo o en bolo Multionda. Sin embargo, un tratamiento similar se puede lograr mediante la alternativa siguiente:
 
-* Aporta los carbohidratos, pero no el bolo para ellos. El algoritmo de lazo reaccionará de forma más agresiva. Si es necesario, utilice **eCarbs** (carbohidratos ampliados).
+* Aporta los carbohidratos, pero no el bolo para ellos. The loop algorithm will react more aggressively. Si es necesario, utilice **eCarbs** (carbohidratos ampliados).
 
-* Si se siente tentado a utilizar el bolo extendido o de multionda directamente en la bomba, AndroidAPS le penalizará desactivando el lazo cerrado durante las próximas seis horas para asegurarse de que no se calcula ningún exceso de dosis de insulina.
+* If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
 
 ![Lazo deshabilitado después del bolo Multionda](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
 
 ## Alarmas en la entrega en bolo
 
-* Si AndroidAPS detecta que un bolo idéntico ha sido entregado con éxito en el mismo minuto, la entrega en bolo se evitará con idéntico número de unidades de insulina. Si realmente quieres llegar a la misma insulina dos veces en una breve sucesión, sólo espera dos minutos más y luego reentrega el bolo de nuevo. Si el primer bolo se ha interrumpido o no se ha entregado por otras razones, puede volver a enviar inmediatamente el bolo desde AAPS 2.0.
+* If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical number of insulin units. If you really want to bolus the same insulin twice in short succession, just wait two more minutes and then deliver the bolus again. If the first bolus has been interrupted or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
 * El segundo plano es un mecanismo de seguridad que lee la historia del bolo de la bomba antes de enviar un bolo nuevo para calcular correctamente la insulina a bordo (IOB), incluso cuando un bolo se entrega directamente desde la bomba. Las entradas indistinguibles deben evitarse.
 
 ![Doble bolo](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/Doppelbolus.png)

@@ -26,14 +26,45 @@ Wähle das Basal-Profil aus, das du benutzen möchtest. Unter [Profile](../Usage
 
 Das lokale Profil nutzt das Profil, das in der Pumpe manuell erfasst wurde. Sobald "Lokales Profil" ausgewählt ist, erscheint ein weiterer Tab, in dem die aus der Pumpe ausgelesenen Profildaten bei Bedarf angepasst werden können. Beim nächsten Profil Wechsel werden sie an die Pumpe übertragen und in deren Profil 1 gespeichert. Diese Einstellung wird empfohlen, da keine Internetverbindung erforderlich ist.
 
+Deine lokalen Profile werden mit den [Einstellungen exportiert](../Usage/ExportImportSettings.rst). Stelle also sicher, dass Du immer ein Backup an einem sicheren Ort hast.
+
+![Einstellungen lokales Profil](../images/LocalProfile_Settings.png)
+
+Schaltflächen:
+
+* grünes Plus: hinzufügen
+* rotes X: löschen
+* blauer Pfeil: duplizieren
+
+#### Profilwechsel klonen
+
+Aus einem Profilwechsel kannst Du ganz einfach ein neues lokales Profil erstellen. Zeitverschiebung und Prozentsatz des Profilwechsels werden in das neue lokale Profil übernommen.
+
+1. Gehe zum Tab Behandlungen (BEH).
+2. Wähle Profilwechsel.
+3. Drücke "Klonen".
+4. Das neue lokale Profil kannst Du im Tab "Lokales Profil" (LP) oder über das Hamburger-Menü bearbeiten.
+
+![Profilwechsel klonen](../images/LocalProfile_ClonePS.png)
+
+Wenn Du vom Nightscout-Profil auf ein lokales Profil wechseln möchtest, führe einfach einen Profilwechsel auf Dein NS-Profil durch und klone den Profilwechsel wie oben beschrieben.
+
+#### Lokale Profile zu Nightscout hochladen
+
+Lokale Profile können auch zu Nightscout hochgeladen werden. Dies kannst Du unter Einstellungen > Nightscout-Client aktivieren.
+
+![Lokales Profil zu NS hochladen](../images/LocalProfile_UploadNS2.png)
+
 Vorteile:
 
 * Keine Internetverbindung erforderlich, um die Profileinstellungen zu ändern.
 * Profilwechsel können direkt auf dem Smartphone vorgenommen werden.
+* neues Profil kann über den Profilwechsel erstellt werden
+* lokale Profile können zu Nightscout hochgeladen werden
 
 Nachteile:
 
-* nur ein Profil
+* kein(e)
 
 ### Nightscout-Profil
 
@@ -51,17 +82,13 @@ Nachteile:
 * Keine lokalen Änderungen an den Profileinstellungen möglich.
 * Profilwechsel nicht direkt auf dem Smartphone möglich.
 
-### Einfaches Profil
-
-Einfaches Profil mit nur einem Zeitblock für DIA, IC, ISF, Basalrate und Zielbereich (z.B. keine Basalratenänderung im Laufe des Tages). Eher für Testzwecke geeignet, außer du verwendest über 24 Stunden dieselben Faktoren. Sobald "Einfaches Profil" ausgewählt ist erscheint ein weiterer Tab, in dem die Profildaten eingetragen werden können.
-
 ## Insulin
 
-Wähle die Art der Insulinkurve, die du verwendest. Die Oref Optionen 'Rapid-Acting Oref', Ultra-Rapid Oref' und 'Free-Peak Oref' sind exponentiell. Mehr Informationen dazu finden sich in den [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). Diese Kurven variieren basierend auf der DIA und dem zeitlichen Abstand zum Wirkmaximum.
+Hier musst du auswählen, welchen Insulintyp du verwendest. Die Oref Optionen 'Rapid-Acting Oref', Ultra-Rapid Oref' und 'Free-Peak Oref' sind exponentiell. Mehr Informationen dazu finden sich in den [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). Diese Kurven variieren basierend auf der DIA und dem zeitlichen Abstand zum Wirkmaximum.
 
 Die Insulinwirkdauer (DIA) ist nicht für jeden gleich. Daher musst Du es selbst für Dich austesten. Unter fünf Stunden darf der Wert aber nicht liegen. Im Abschnitt zu den Insulinprofilen auf [dieser Seite](../Getting-Started/Screenshots#insulin-profile) findest Du weitere Informationen dazu.
 
-Bei den Profilen Rapid-Acting und Ultra-Rapid kannst Du nur die Insulinwirkdauer (DIA) anpassen. Der Zeitpunkt der maximalen Insulinwirkung ist fix vorgegeben. Das Profil Free-Peak erlaubt, nicht nur die Insulinwirkdauer (DIA), sondern auch den Zeitpunkt der maximalen Insulinwirkung individuell festzulegen. Es sollte nur von erfahrenen Anwendern genutzt werden, die die Auswirkungen dieser Einstellungen kennen.
+Bei den Profilen Rapid-Acting und Ultra-Rapid kannst Du nur die Insulinwirkdauer (DIA) angpassen. Der Zeitpunkt der maximalen Insulinwirkung ist fix vorgegeben. Das Profil Free-Peak erlaubt, nicht nur die Insulinwirkdauer (DIA), sondern auch den Zeitpunkt der maximalen Insulinwirkung individuell festzulegen. Es sollte nur von erfahrenen Anwendern genutzt werden, die die Auswirkungen dieser Einstellungen kennen.
 
 Das [Kurvendiagramm](../Getting-Started/Screenshots#insulin-profile) unterstützt Dich dabei, die verschiedenen Kurven zu verstehen. Wenn Du die Checkbox akivierst, wird das Diagramm als eigener Tab angezeigt, sonst ist es über das Hamburger-Menü links oben erreichbar.
 
@@ -83,7 +110,7 @@ Für viele Menschen mit Diabetes gibt es 3 - 4 Stunden nach der Insulingabe nahe
 
 ### Free Peak Oref
 
-Erlaubt das Wirkmaximum der Insulinaktivität individuell zu definieren. DIA wird automatisch auf 5 Stunden gesetzt, sofern von Dir im Profil nichts anderes definiert wird.
+Erlaubt das Wirkmaximum der Insulinaktivität individuell zu definieren. DIA wird automatisch auf 5 Stunden gesetzt, sofern von dir im Profil nichts anderes definiert wird.
 
 Dieses Profil wird dann empfohlen, wenn dein Insulintyp von den anderen Profilen nicht abgedeckt werden kann oder wenn eine Mischung verschiedener Insuline verwendet wird.
 
@@ -103,7 +130,7 @@ Hier kannst du auswählen, aus welcher Quelle AAPS die BZ-Werte empfangen soll. 
 
 ## Pumpe
 
-Wähle die von Dir genutzte Pumpe.
+Wähle die von dir genutzte Pumpe.
 
 * [Dana R](DanaR-Insulin-Pump.md)
 * DanaR Korean (koreanische Version der DanaR)
@@ -158,7 +185,7 @@ Weitere Informationen findest du auf der Seite [Objectives (Ziele)](../Usage/Obj
 
 ## Behandlungen
 
-Der Reiter Behandlungen (BEH) zeigt dir die Behandlungen an, die zu Nightscout hochgeladen wurden. Falls du einen Eintrag editieren oder löschen willst (z.B. weil du weniger Kohlenhydrate gegessen hast, als erwartet) - wähle "Löschen" und trage den neuen Wert über den Reiter Careportal (CP) ein. Denke daran, ggf. die Zeit anzupassen.
+Der Reiter Behandlungen (BEH) zeigt dir die Behandlungen an, die zu Nightscout hochgeladen wurden. Falls du einen Eintrag editieren oder löschen willst (z.B. weil du weniger Kohlenhydrate gegessen hast, als erwartet) - wähle "Löschen" und trage den neuen Wert über den [Button Kohlenhydrate auf dem Startbildschirm](../Getting-Started/Screenshots.md#kohlenhydrat-korrektur) ein. Denke daran, ggf. die Zeit anzupassen.
 
 ## Allgemein
 
@@ -201,25 +228,23 @@ Einige Schaltflächen, um auf häufig verwendete Funktionen zugreifen zu können
 
 * Profilwechsel (Profil Switch - weitere Informationen dazu siehe Seite [Profile](../Usage/Profiles.md))
 * Temporäres Ziel
-* Temporäre Basalrate starten / abbrechen
+* Temporäre Basalrate starten / Basalrate
 * Verzögerter Bolus (nur für DanaR/RS und Combo)
-* Vorfüllen/Füllen (wenn von der Pumpe unterstützt [aktuell Dana R/RS, Combo und Insight])
+* Tagebucheinträge
+    
+    * BZ Test
+    * Katheterwechsel - Katheter- und Reservoirwechsel dokumentieren, Katheter und Kanüle füllen
+    * CGM-Sensor setzen
+    * Pumpenbatterie Wechsel
+    * Notiz
+    * Bewegung
+* Anzeige des Alters von Sensor, Kanüle und Pumpenbatterie
 * Historie
 * TDD (Total daily dose = Bolus + Basal pro Tag)
 
 Einige Ärzte nutzen, gerade für neue Pumpenbenutzer, ein Basal-Bolus-Verhältnis von 50:50. Daher wird das Verhältnis als TDD / 2 * TBB (Total base basal = Summe der Basalrate innerhalb von 24 Stunden) berechnet. Andere bevorzugen einen Anteil von 32% bis 37% des Basalinsulins (TBB) am Gesamtinsulin (TDD). Wie die meisten Faustregeln gilt, dass dies nicht allgemeingültig ist. Hinweis: Bei dir und deinem Diabetes kann es ganz anders sein!
 
-![Aktionen Tab](../images/ConfBuild_ConfBuild_Actions.png)
-
-### Careportal
-
-Im Careportal Tab (CP) können zu verschiedensten Ereignissen deiner Diabetestherapie Tagebucheinträge erstellt werden und es werden dort das Alter des Sensors, des Insulinreservoirs, der Kanüle und der Batterie angezeigt.
-
-Hinweis: Es wird **kein Insulin** abgegeben, wenn du eine der Schaltflächen im Careportal verwendest (z.B. Mahlzeitenbolus, Korrekturbolus...)
-
-Kohlenhydrate hingegen, die im Careportal erfasst werden (z.B. Kohlenhydrat Korrektur), werden in die Berechnung der COB (carbs on board) einbezogen.
-
-![Careportal Tab](../images/ConfBuild_CarePortal.png)
+![Aktionen Tab](../images/ConfBuild_ConfBuild_Actions_b.png)
 
 ### SMS-Kommunikator
 
@@ -256,7 +281,7 @@ Zeigt im Dropdown- und Sperrbildschirm deines Smartphones eine kurze Übersicht 
 
 ### Nightscout-Client
 
-Ns-Client Synchronisierung deiner AndroidAPS-Daten mit Nightscout einrichten.
+NS-Client Synchronisierung deiner AndroidAPS-Daten mit Nightscout einrichten.
 
 Falls **Logge App-Start in Nightscout** aktiviert ist, ist jeder AndroidAPS Neustart in Nightscout sichtbar. Dies kann dabei helfen, Probleme mit der App zu erkennen (z.B. Batteriesparmodus für AAPS nicht deaktiviert), aber auch die Kurven in Nightscout mit Einträgen überfrachten.
 

@@ -77,6 +77,20 @@ Po přidání akce kliknutím na výchozí hodnoty **nezapomeňte změnit výcho
 .. image:: ../images/Automation_Default_V2_5.png
   :alt: Výchozí hodnoty automatizace vs. nastavené hodnoty
 
+Sort automation rules
+-----
+To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
+
+.. image:: ../images/Automation_Sort.png
+  :alt: Sort automation rules
+  
+Delete automation rules
+-----
+To delete an automation rule just swipe it left or right.
+
+.. image:: ../images/Automation_Delete.png
+  :alt: Delete automation rule
+
 Good practice & caveats
 ==================================================
 * When you start using Automation or create a new rule add a notification until you are sure the rule is working well.

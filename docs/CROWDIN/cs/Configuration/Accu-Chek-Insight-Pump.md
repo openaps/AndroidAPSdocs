@@ -53,9 +53,9 @@ Poznámka: Spojení mezi pumpou a telefonem není permanentní. Spojení bude na
 
 ## Nastavení v AAPS
 
-Při používání pumpy Insight **nesmí být nastaveno 'Vždy použít absolutní hodnoty bazálu'**. In AAPS go to Preferences > NSClient > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. Toto nastavení způsobuje problémy při nastavování dočasných bazálů.
+Při používání pumpy Insight **nesmí být nastaveno 'Vždy použít absolutní hodnoty bazálu'**. V AAPS přejděte do nastavení > NSClient > Rozšířené nastavení a ujistěte se, že možnost 'Vždy použít bazální absolutní hodnoty' je vypnuta. Toto nastavení způsobuje problémy při nastavování dočasných bazálů.
 
-Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune. In AAPS go to Preferences > NSClient > Advanced Settings and Enable ‘NS upload only (disabled sync)‘.
+Jestliže potřebujete používat Autotune, jediným řešením v tuto chvíli je **zakázat synchronizaci** s Nightscoutem (pouze nahrávání). V AAPS přejděte do nastavení > NSClient > Pokročilá nastavení a povolte ‘Pouze nahrávání do NS (zakázat synchronizaci)‘.
 
 ![Screenshot nastavení Insight](../images/Insight_pairing_V2_5.png)
 
@@ -99,8 +99,8 @@ V AndroidAPS v záložce Accu-Chek Insight se zobrazuje aktuální stav pumpy a 
 
 Nastavení alarmů v pumpě:
 
-* Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
-* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
+* Menu > Nastavení > Nastavení zařízení > Nastavení režimu > Tichý > Signál > Zvuk
+* Menu > Nastavení > Nastavení zařízení > Nastavení režimu > Tichý > Hlasitost > 0 (odeberte všechny sloupečky)
 * Menu > Režimy > Režim signalizace > Tichý
 
 To ztlumí všechny alarmy z pumpy, což umožní systému AndroidAPS rozhodnout, zda je pro vás alarm relevantní. Pokud alarm AndroidAPS nebude potvrzen, hlasitost alarmu se bude zvyšovat (nejprvé pípnutí, potom vibrace).

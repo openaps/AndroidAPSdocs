@@ -1,11 +1,21 @@
 Wiki mises à jour et modifications
 **************************************************
 
+Mars 2020
+==================================================
+* `Générer l'apk avec Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
+* `Extended bolus and switch to open loop <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
+* `Mettre à jour l'apk avec Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
 Février 2020
 ==================================================
 * `Avertissement pour l'automatisation <../Usage/Automation.html#bonnes-pratiques-et-avertissements>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - courte explication
+* `Alternatives à Careportal <../Usage/CPbefore26.html>`_
+* La fonction `Bolus étendus <../Usage/Extended-Carbs.html#bolus-etendu>`_ désactive la boucle fermée
+* Nouveau `plugin Profil Local <../Configuration/Config-Builder.html#profil-local-recommande>`_
 * `Exemple de configuration <../Getting-Started/Sample-Setup.html>`_ - mise à jour Dexcom G6
+* `Version 2.6 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - Nouvelles fonctions majeures
+* `Complications pour la montre <../Configuration/Watchfaces.html>`_
 Janvier 2020
 ==================================================
 * `Correction manuelle des glucides <../Getting-Started/Screenshots.html#correction-de-glucides>`_ pour des entrées erronées de glucides

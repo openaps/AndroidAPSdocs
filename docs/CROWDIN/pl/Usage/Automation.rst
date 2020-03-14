@@ -2,14 +2,14 @@ Automation
 **************************************************
 
 What is Automation
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. I.e. when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
 
 .. image:: ../images/Automation_ConditionAction_RC3.png
   :alt: Automation condition + action
 
 How to use it
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 To set up an automation, you have to give it a title, select at least one condition and one action. 
 
 Important note
@@ -77,8 +77,22 @@ After adding your action, **don't forget to change the default values** to what 
 .. image:: ../images/Automation_Default_V2_5.png
   :alt: Automation default vs. set values
 
+Sort automation rules
+-----
+To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
+
+.. image:: ../images/Automation_Sort.png
+  :alt: Sort automation rules
+  
+Delete automation rules
+-----
+To delete an automation rule just swipe it left or right.
+
+.. image:: ../images/Automation_Delete.png
+  :alt: Delete automation rule
+
 Good practice & caveats
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 * When you start using Automation or create a new rule add a notification until you are sure the rule is working well.
 * Whatch the rule results.
 * Try not make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg < 180 mg/dl)
@@ -96,7 +110,7 @@ Good practice & caveats
     * Increased risk of Hypoglycemia if profile switch does not expire or reset back to base profile.
 
 Examples
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 These are just set up examples, no advises. Don't reproduce it without being aware what you are actually doing or why you need these. See below for two examples with screenshots.
 
 * Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
@@ -128,6 +142,6 @@ As every system Automation can be used incorrectly. This might lead to difficult
 * Creating long term rules
 
 Alternatives
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 
 For advanced users there are other posibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found `here <./automationwithapp.html>`_.

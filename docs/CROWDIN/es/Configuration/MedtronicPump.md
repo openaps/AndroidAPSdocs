@@ -23,6 +23,7 @@ Si comenzó a usar el controlador Medtronic por favor añádase a sí mismo a es
     - 523/723 (firmware 2.4A o inferior)
     - 554/754 versión de EU (firmware 2.6A o inferior)
     - 554/754 versión de Canadá (firmware 2.7A o inferior)
+- Check for firmware is described in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) and [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
 ## Configuración de la bomba
 

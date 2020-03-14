@@ -12,10 +12,10 @@ Chcete-li nastavit „Výchozí dočasný cíl“, můžete tak učinit přidrž
 
 ## Dočasný cíl při hypoglykémii
 
-Jde o nejdůležitější dočasný cíl. There are several reasons for it:
+Jde o nejdůležitější dočasný cíl. A to hned z několika důvodů:
 
-1. Realizing you will go low: Usually, the Loop should handle it, but sometimes you can see better in advance than the loop, so the loop can react faster when it targets a higher blood glucose value.
-2. When you eat hypo treatments carbs, your blood glucose will rise very fast. The loop will correct against the rising or even give SMBs if enabled. A "Hypo Temp-Target" can prevent that. 
+1. Uvědomíte si, že vaše glykémie bude klesat: Obvykle by si s tím měla smyčka poradit, ovšem někdy to budete vědět dříve než smyčka, takže smyčka bude moci reagovat rychleji, když se bude opírat o vyšší cílovou hodnotu glykémie.
+2. Když sníte dokrmové sacharidy, vaše glykémie bude rychle stoupat. Smyčka se bude snažit tento vzestup korigovat nebo vám dokonce vydá SMB, jsou-li povoleny. „Dočasný cíl při hypoglykémii“ takovému chování dokáže zabránit. 
 3. (advanced, [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)): You can enable “High Temp-Targets raises sensitivity” for Temp-Targets of 100mg/dl or 5.5mmol/l or higher in OpenAPS SMB, so AndroidAPS is more sensitive.
 4. (advanced, [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)): You can deactivate “SMB with high temp target”, so that even if you have COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active, AndroidAPS won’t give SMBs while high temp targets are active. 
 

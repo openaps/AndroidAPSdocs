@@ -77,10 +77,37 @@ Después de añadir la acción, **no olvide cambiar los valores por defecto** a 
 .. imagen:: ../images/Automation_Default_V2_5.png
   :alt: Valor por omisión de automatización frente a. valores del usuario
 
-Buenas prácticas
+Sort automation rules
+-----
+To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
+
+.. image:: ../images/Automation_Sort.png
+  :alt: Sort automation rules
+  
+Delete automation rules
+-----
+To delete an automation rule just swipe it left or right.
+
+.. image:: ../images/Automation_Delete.png
+  :alt: Delete automation rule
+
+Good practice & caveats
 ==================================================
 * Cuando empiece a utilizar la automatización o cree una regla nueva, añada una notificación hasta que esté seguro de que la regla funciona bien.
 * Cuál es el resultado de las reglas.
+* Try not make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg < 180 mg/dl)
+
+    **Doubly important if action is a profile switch!**
+ 
+* Try and use Temp Targets instead of Profile Switches. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`_ back to 0.
+* Make sure Profile switches are made sparingly and preferably at a last resort.
+
+    * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`_ useless for a min of 6 hours.
+
+* Profile switching will not reset the profile back to your base profile
+
+    * You have to make another rule to set this back or do it manually!
+    * Increased risk of Hypoglycemia if profile switch does not expire or reset back to base profile.
 
 Ejemplos
 ==================================================

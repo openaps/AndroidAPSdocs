@@ -4,6 +4,8 @@ Doelen
 AndroidAPS heeft een reeks leerdoelen die je moet doorlopen, zodat je alle opties en instellingen leert kennen om veilig te kunnen loopen.  De leerdoelen zorgen ervoor dat je alles goed hebt ingesteld, en dat je snapt wat het systeem doet en waarom. Zodat je erop kunt vertrouwen dat het de juiste keuzes maakt.
 
 Als je een **andere telefoon gaat gebruiken**, dan kun je jouw `instellingen exporteren <../Usage/ExportImportSettings.html>`_ om je voortgang door de doelstellingen te behouden. Ook jouw veiligheidsinstellingen zoals max. bolus etc. worden hierbij opgeslagen.  Wanneer je je instellingen niet exporteert en importeert op je nieuwe telefoon, dan zul je weer helemaal opnieuw moeten beginnen met de leerdoelen.  Het is een goed idee om regelmatig een `back-up te maken van jouw instellingen <../Usage/ExportImportSettings.html>`_ voor het geval dat er iets met jouw telefoon gebeurt.
+
+Als je wilt teruggaan in de doelen, zie de `uitleg hieronder <../Usage/Objectives.html#teruggaan-in-doelen>`_.
  
 Doel 1: Instellen van visualisatie en monitoring en analyseren van basaal en ratio's
 ====================================================================================================
@@ -88,7 +90,6 @@ Doel 6: Starten in Closed Loop met bescherming tegen lage BG
   
 De closed loop zal hoge glucosewaarden in doel 6 niet naar beneden kunnen brengen, omdat in dit doel alleen nog de 'pompstop voor laag' functie geactiveerd is. Om hoge glucosewaarden naar beneden te krijgen, moet je zelf nog handmatig ingrijpen!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 * Selecteer Closed-Loop vanuit het `Instellingen-menu <../Configuration/Preferences.html>`_ of door de Loop-knop linksbovenin het Overzicht-scherm ingedrukt te houden.
 * Stel je lage en hoge streefdoel iets hoger in dan je normaal zou doen, voor de zekerheid.
 * Kijk hoe tijdelijke basaastanden worden ingesteld door te kijken naar de blauwe tekst in het Overzicht-scherm, of door het blauwe deel van de grafiek op het Overzicht-scherm te bekijken.
@@ -128,3 +129,10 @@ Doel 10: Activeren van extra functies overdag zoals SMB (Super Micro Bolus)
 Je moet het `SMB hoofdstuk in deze wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ en het `hoofdstuk oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ lezen om te begrijpen hoe SMB werkt, met name het idee achter de tijdelijke basaalstanden van nul (zero-temp).
 * Daarna kun je `maxIOB verhogen <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ zodat SMB goed kan functioneren. maxIOB bevat nu alle IOB, niet alleen de toegediende basale insuline. Als je een bolus van 8E geeft voor een maaltijd en jouw maxIOB is 7E, dan zullen er geen SMBs worden afgegeven totdat IOB onder de 7E komt. Een goede start is maxIOB = gemiddelde maalbolus + 3x max dagelijkse basaal (max dagelijkse basaal = de hoogste waarde van jouw basaal (in eenheden per uur). Zie `Doel 7 <../Usage/Objectives#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_ voor een afbeelding
 Wanneer je van AMA naar SMB wisselt, dan moet je jouw instelling voor min_5m_carbimpact in de Opname instellingen veranderen van 3 naar 8. Je moet dit handmatig doen wanneer je van AMA naar SMB wisselt.
+
+Teruggaan in doelen
+====================================================================================================
+Als je om welke reden dan ook terug wilt gaan in de leerdoelen druk dan op "voltooiing wissen".
+
+   .. image:: ../images/Objective_ClearFinished.png
+     :alt: Teruggaan in doelen

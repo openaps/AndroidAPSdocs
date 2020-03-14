@@ -26,14 +26,45 @@ Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) p
 
 Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
 
+Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). So make sure to have a backup in a safe place.
+
+![Local Profile settings](../images/LocalProfile_Settings.png)
+
+Buttons:
+
+* green plus: add
+* red X: delete
+* blue arrow: duplicate
+
+#### Clone profile switch
+
+You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+
+1. Go to treatments tab.
+2. Select ProfileSwitch.
+3. Press "Clone".
+4. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
+
+![Clone profile switch](../images/LocalProfile_ClonePS.png)
+
+If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
+
+#### Upload local profiles to Nightscout
+
+Local profiles can also be uploaded to Nightscout. The settings can be found in NS Client preferences.
+
+![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
+
 Advantage:
 
 * no internet connection necessary to change profile settings
 * profile changes can be made directly on the phone
+* new profile can be created from profile switch
+* local profiles can be uploaded to Nightscout
 
 Disadvantage:
 
-* only one profile
+* none
 
 ### NS Profile
 
@@ -50,10 +81,6 @@ Disadvantage:
 
 * no local changes to profile settings
 * profile cannot be changed directly on the phone
-
-### Simple profile
-
-Simple profile with just one time block for DIA, IC, ISF, basal rate and target range (i.e. no basal rate changes during the day). More likely to be used for testing purposes unless you have the same factors over 24 hours. Once "Simple Profile" is selected, a new tab will appear in AAPS where you can enter the profile data.
 
 ## Insulin
 
@@ -158,7 +185,7 @@ See [Objectives](../Usage/Objectives.rst) page for more information.
 
 ## Treatments
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the Careportal (CP) tab.
+If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
 
 ## General
 
@@ -203,23 +230,21 @@ Some buttons to quickly access common features:
 * Temporary targets
 * Set / cancel temp. basal rate
 * Extended bolus (DanaR/RS or Combo pump only)
-* Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
+* Record for any specific care entries
+    
+    * BG check
+    * Prime / fill - record pump site change and prime (if not done on pump)
+    * CGM sensor insert
+    * Pump battery change
+    * Note
+    * Exercise
+* View the current sensor, insulin, canula and pump battery ages
 * History browser
 * TDD (Total daily dose = bolus + basal per day)
 
 Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
-
-### Careportal
-
-Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
-
-Note: **No insulin** will be given if entered via careportal (i.e. meal bolus, correction bolus...)
-
-Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
-
-![Careportal tab](../images/ConfBuild_CarePortal.png)
+![Actions tab](../images/ConfBuild_ConfBuild_Actions_b.png)
 
 ### SMS Communicator
 

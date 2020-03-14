@@ -25,7 +25,7 @@ Jestliže je použitá minimální absorpce sacharidů (min_5m_carbimpact) namí
 Zjišťování nesprávných hodnot COB
 ==================================================
 
-Pokud jde o verzi 2.4, AAPS vás varuje, pokud se chystáte počítat bolus s COB z předchozího jídla a algoritmus si myslí, že aktuální výpočet COB může být chybný. V takovém případě Vám bude po použití bolusové kalkulačky zobrazen dodatečný pokyn na obrazovce s potvrzením. 
+Počínaje verzí 2.4 vás AAPS varuje, pokud se chystáte počítat bolus s COB z předchozího jídla a algoritmus si myslí, že aktuální výpočet COB může být chybný. V takovém případě Vám bude po použití bolusové kalkulačky zobrazen dodatečný pokyn na obrazovce s potvrzením. 
 
 Jak AndroidAPS zjistí nesprávné hodnoty COB? 
 --------------------------------------------------
@@ -35,7 +35,7 @@ Obvykle AAPS detekuje absorpci sacharidů prostřednictvím odchylek glykémií.
 .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
   :alt: Pokyn pro chybnou hodnotu COB
 
-Na obrázku výše, 41% času absorpce sacharidů byla počítána pomocí min_5m_carbimpact místo hodnoty zjištěné odchylkami.  To znamená, že možná máte méně zbývajících sacharidů, než vypočteno. 
+Na obrázku výše, 41 % času absorpce sacharidů byla počítána pomocí min_5m_carbimpact místo hodnoty zjištěné odchylkami.  To znamená, že možná máte méně zbývajících sacharidů, než vypočteno. 
 
 Jak se vypořádat s tímto varováním? 
 --------------------------------------------------

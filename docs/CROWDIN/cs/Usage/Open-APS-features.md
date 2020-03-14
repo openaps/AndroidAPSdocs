@@ -20,7 +20,7 @@ SMB zahrnuje určité bezpečnostní mechanismy:
 
 1. Největší jednotlivý mikrobolus může být pouze nejmenší hodnota z:
     
-    * hodnota aktuálního bazálního inzulínu (upravená pomocí autotune a/nebo automatické detekce citlivosti) pro dobu přednastavenou ve volbě „Maximální počet minut bazálu, ke kterým se limituje SMB“, např. bazální dávka inzulínu pro následujících 30 minut, nebo
+    * value corresponding to the current basal rate (as adjusted by autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
     * polovina aktuálně požadované dávky inzulínu, nebo
     * zbývající část nastavené hodnoty maxIOB.
 
@@ -28,7 +28,7 @@ SMB zahrnuje určité bezpečnostní mechanismy:
 
 3. Dodatečné kalkulace zaměřené na odhad vývoje glykémie pomocí funkce UAM (detekce neoznámených jídel). I bez zadání hodnoty sacharidů do systému detekuje UAM automaticky výrazný vzestup glykémie způsobené jídlem, adrenalinem nebo jinými vlivy a pomocí SMB na ně reaguje. V zájmu zachování bezpečnosti to funguje i opačně a deaktivuje SMB dříve, pokud dojde k neočekávanému poklesu glykémie. To je důvod, proč by funkce UAM měla být při používání SMB vždy aktivní.
 
-**You must have completed [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
+**You must have started [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
 
 Viz také: [Dokumentace k OpenAPS pro oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) a [Timovy informace o SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
@@ -141,7 +141,7 @@ Výchozí hodnota: 4 (neměňte, pokud si opravdu nejste jisti tím, co děláte
 
 AMA je zkratka pro "advanced meal assist", což je funkce OpenAPS od roku 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) umožňuje systému rychleji reagovat po bolusu na jídlo, pokud zadáte sacharidy správně.
 
-**You will need to have completed [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature**
+**You will need to have started [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature**
 
 Více informací najdete v [dokumentaci k OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
@@ -181,11 +181,11 @@ Pokud máte tuto možnost povolenou, může autosense upravovat i dočasné cíl
 
 **Vždy používat krátkodobý průměrný rozdíl glykémií místo rozdílu posledních 2 hodnot** Jestliže povolíte tuto funkci, AndroidAPS bude používat krátkodobý průměrný rozdíl (delta) glykémií za posledních 15 minut, což je obvykle průměr z posledních tří hodnot. AndroidAPS tak bude moci pracovat stabilněji při použití zarušených zdrojů glykémie, jako např. xDrip+ nebo Libre.
 
-**Max. násobitel denního nejvyššího bazálu** Toto je důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně nebude potřeba upravovat) je 3. To znamená, že AndroidAPS nikdy nebude moci nastavit dočasnou bazální dávku, která je vyšší než 3x nejvyšší bazální dávka ve vašem profilu naprogramovaném v pumpě nebo, je-li tato možnost povolena, která je určena pomocí autotune. Příklad: jestliže vaše nejvyšší bazální dávka v profilu je 1,0 U/h a max. násobitel denního nejvyššího bazálu je 3, pak může AndroidAPS nastavit maximální dočasný bazál 3,0 U/h (= 3 x 1,0 U/h).
+**Max. násobitel denního nejvyššího bazálu** Toto je důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně nebude potřeba upravovat) je 3. To znamená, že AndroidAPS nikdy nebude moci nastavit dočasnou bazální dávku, která je vyšší než 3x nejvyšší bazální dávka ve vašem profilu naprogramovaném v pumpě. Příklad: jestliže vaše nejvyšší bazální dávka v profilu je 1,0 U/h a max. násobitel denního nejvyššího bazálu je 3, pak může AndroidAPS nastavit maximální dočasný bazál 3,0 U/h (= 3 x 1,0 U/h).
 
 Výchozí hodnota: 3 (neměňte, pokud si opravdu nejste jisti tím, co děláte)
 
-**Max. násobitel současného bazálu** Toto je další důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně také nebude potřeba upravovat) je 4. To znamená, že AndroidAPS nikdy nebude moci nastavit dočasnou bazální dávku, která je vyšší než 4x aktuální bazální dávka ve vašem profilu naprogramovaném v pumpě nebo, je-li tato možnost povolena, která je určena pomocí autotune.
+**Max. násobitel současného bazálu** Toto je další důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně také nebude potřeba upravovat) je 4. To znamená, že AndroidAPS nikdy nebude moci nastavit dočasnou bazální dávku, která je vyšší než 4x aktuální bazální dávka ve vašem profilu naprogramovaném v pumpě.
 
 Výchozí hodnota: 4 (neměňte, pokud si opravdu nejste jisti tím, co děláte)
 

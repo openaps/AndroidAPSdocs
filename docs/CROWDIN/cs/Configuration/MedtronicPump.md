@@ -1,6 +1,6 @@
 # Pumpy Medtronic
 
-**>>>> Medtronic pump driver is from 2.5 version part of AndroidAPS (master). While this is the case, Medtronic driver should still be considered beta software. Please install only if you are expirenced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)), this should be fixed with upcomming release. <<<<**
+**>>>> Ovladač pump Medtronic je od verze 2.5 součástí AndroidAPS (master). Přesto byste však měli ovladač Medtronic stále považovat za beta software. K instalaci přistupujte pouze v případě, že jste zkušený uživatel. V současné době se stále potýkáme s problémem dvojitých bolusů (V ošetřeních se objeví 2 bolusy, které vedou k chybnému výpočtu IOB (jestliže se s tímto problémem setkáte, povolte prosím možnost Logování dvojitých bolusů v konfiguraci Medtronic a pošlete nám své logy)), v následující verzi aplikace by již tento problém měl být odstraněn. <<<<**
 
 * * *
 
@@ -8,7 +8,7 @@ Pracuje pouze se staršími pumpami Medtronic (podrobnosti viz níže). Nefunguj
 
 * * *
 
-If you started using Medtronic driver please add yourself to this [list](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit#gid=0). This is just so that we can see which Phones are good and which are not so good (or bad) for this driver. There is one column called "BT restart". This is to check if yourPhone supports BT enable/disable, which can be used when pump is no longer able to connect, that happens from time to time. If you notice any other problem, please write that in Comments column.
+Jestliže jste začali používat ovladač Medtronic, zapište se prosím na tento [seznam](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit#gid=0). Slouží jen k tomu, abychom viděli, které telefony s tímto ovladačem pracují správně a které hůře (chybně). Je v něm jeden sloupec s názvem „BT restart“. Slouží ke kontrole, zda váš telefon podporuje možnost zapnutí/vypnutí BT, kterou lze použít, jestliže se pumpa nedokáže připojit, což se občas stane. Pokud si všimnete jakýchkoli jiných problémů, napište to prosím ve sloupci Komentáře.
 
 * * *
 
@@ -23,6 +23,7 @@ If you started using Medtronic driver please add yourself to this [list](https:/
     - 523/723 (firmware 2.4A nebo nižší)
     - 554/754 EU verze (firmware 2.6A nebo nižší)
     - 554/754 verze pro Kanadu (firmware 2.7A nebo nižší)
+- Check for firmware is described in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) and [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
 ## Nastavení pumpy
 
@@ -106,9 +107,9 @@ Je-li vybrán ovladač Medtronic, lze na kartu Akce přidat 3 možné akce:
 
 ## Důležité poznámky
 
-### OpenAPS users
+### Uživatelé OpenAPS
 
-When you start using AndroidAPS, primary controller is AndroidAPS and all commands should go through it. Sending boluses should go through AAPS and not be done on pump. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arrise, especially if you use the "setup" as it was not intended to be used). Since I started using AndroidAPS with my pump, I haven't touched the pump, except when I have to change the reservoir, and this is the way that AndroidAPS should be used.
+Když začnete používat AndroidAPS, primárním ovladačem je AndroidAPS a všechny příkazy by měly projít přes něj. Bolusy by měly být odeslány prostřednictvím AAPS a nikoli z pumpy. Aplikace sice využívá kód, který detekuje jakékoli příkazy zadané na pumpě, ale pokud můžete, snažte se to nedělat (mám za to, že jsme odstranili veškeré problémy se synchronizací historie pumpy a historie AAPS, ale stále může docházet k drobným problémům, zejména v případě, pokud „svou konfiguraci“ používáte tak, jak původně nebylo zamýšleno). Od té doby, co používám AndroidAPS, jsem s výjimkou výměny zásobníku na pumpu nesáhl. A tak by se měl systém AndroidAPS používat.
 
 ### Logování
 

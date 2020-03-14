@@ -1,43 +1,55 @@
 
-Export & import settings
+Eksporto & importo parametrai
 **************************************************
-When should I export settings?
+Kada turėčiau eksportuoti parametrus?
 ==================================================
-Be prepared for the unforeseen. You might change important settings by accident and have problems to undo the changes. Your phone might break or get stolen. To easily return to status you've been at, settings should be exported on a regular basis.
+Būkite pasirengę nenumatytiems atvejams. Galite netyčia pakeisti svarbius parametrus ir jums bus sunku anuliuoti pakeitimus. Jūsų išmanusis telefonas gali būti sugadintas arba pavogtas. Kad galėtumėte tiesiog grįžti į nustatymų statusą, kuriame buvote, nustatymus reikia reguliariai eksportuoti.
 
-Best practice is to export after change of settings or completing an objective. 
+Rekomenduojama eksportuoti nustatymus atlikus pakeitimus ar įvykdžius tikslą. 
 
-Exported settings should be copied to a cloud storage or your computer. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
+Eksportuoti nustatymai turėtų būti nukopijuoti į saugyklą debesyje arba į jūsų kompiuterį. Tuomet esate pasirengęs tam atvejui, jei prarasite ar sugadinsite savo AAPS išmanųjį telefoną ir nereikės pradėti nuo nulio.
 
-On a Windows 10 computer it looks like this:
+Windows 10 kompiuteryje tai atrodo maždaug taip:
   
-  .. image:: ../images/SmartphoneRootLevelWin10.png
-    :alt: AndroidAPS Preferences phone connected to computer
+  .. nuotrauka:: ../images/SmartphoneRootLevelWin10.png
+    :alt: AndroidAPS nuostatų failas - išmanusis telefonas prijungtas prie kompiuterio
 
-
-How to export settings
+Exported information
 ==================================================
-* **Export settings** on your old phone
+Among others the following information is part of the settings export:
 
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Export settings
-  * File location will be shown
+* `Automation <../Usage/Automation.html>`_ events
+* `Config builder <../Configuration/Config-Builder.html>`_ settings
+* `Local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ settings
+* `Objectives <../Usage/Objectives.html>`_ status incl. `exam results <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
+* `Preferences <../Configuration/Preferences.html>`_ incl. `NS Client settings <../Configuration/Preferences.html#ns-client>`_
+
+
+
+
+Kaip eksportuoti parametrus
+==================================================
+* **Eksportuoti nustatymus** senajame telefone
+
+  * Paspauskite trijų linijų meniu (viršutiniame kairiajame kampe)
+  * Servisas
+  * Eksportuoti nustatymus
+  * Parodoma failo saugojimo vieta
     
-.. image:: ../images/AAPS_ExportSettings.png
-  :alt: AndroidAPS export settings
+.. nuotrauka:: ../images/AAPS_ExportSettings.png
+  :alt: AndroidAPS eksportavimo parametrai
        
-* **Transfer** settings from old to new phone using the file location shown during export
+* **Perkelkite** eksportuotus nustatymus iš seno išmaniojo telefono
 
-  The exported file is called "AndroidAPSPreferences" and should be in your root folder in the main storage of the phone (just like C: on your computer).
+  Eksportuotas failas vadinamas „AndroidAPSPreferences“ ir turėtų būti rastas šakniniame aplanke pagrindiniame savo išmaniojo telefono lygyje (panašiai kaip C: jūsų kompiuteryje).
   
-* **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone
+* **Instaliuokite** AndroidAPS naujajame telefone.
+* **Importuokite nustatymus** naujajame telefone
 
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Import settings
+  * Paspauskite trijų linijų meniu (viršutiniame kairiajame kampe)
+  * Servisas
+  * Importuokite nustatymus
 
-* **Note for Dana RS users:**
+* **Pastaba Dana RS vartotojams:**
 
-  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Please pair new phone and pump manually.
+  * Kadangi pompos susiejimo nustatymai persikelia į naują telefoną kartu su kitais, Jūsų naujas telefonas jau "pažįsta" pompą, todėl nepradės BT paieškos. Rankiniu būdu Bluetooth ryšiu suporuokite išmanųjį telefoną ir pompą.

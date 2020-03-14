@@ -174,11 +174,13 @@ Darant prielaidą, kad bazė yra teisinga, galite išbandyti pagal dabartinius n
 > 
 > Example:
 > 
-> Duonos vieneto faktorius (DV = 12g angliavandenių): 2,4 -> Jums reikia 2,4 vienetų insulino, kai jūs valgote vieną duonos vienetą.
+> Bread unit fatcor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
-> Atitinkamą IA: 12 / 2,4 = 5,2 -> 5,2 g angliavandenių gali būti padengta vienu vienetu insulino.
+> Corresponding IC: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
 > 
-> Perskaičiavimo lentelės yra prieinamos internete, pvz., [čia](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> BU factor 2,4 U / 12g ===> IC = 12g / 2,4 U = 5,0 g/U
+> 
+> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Įtaka
 
@@ -261,9 +263,10 @@ Rezervuaro keitimo negali atlikti per AndroidAPS - tik tiesiogiai per pompą.
 
 * AndroidAPS pagrindinio ekrano skirtuke paspauskite ir palaikykite mygtuką Atviras ciklas / Uždaras ciklas ir pasirinkite "Sustabdyti ciklą 1 val."
 * Dabar atjunkite pompą, ir pakeiskite rezervuarą pagal pompos instrukciją.
-* Iš naujo prijungę pompą, pradėkite ciklą ilgai paspausdami mygtuką „Sustabdyta (X min.)“.
+* Also piming and filling tube and canula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26#pump) in the actions tab just to record the change.
+* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
-AndroidAPS nenaudoja pompos funkcijos „Pirminis kateterio užpildymas“, o užpildo kateterį įprastu bolusu, kuris į istoriją neįrašomas. Tai reiškia, kad jis nenutraukia tuo metu nustatytos laikinos valandinės bazės. AndroidAPS skirtuke VEIKLA naudokite mygtuką „Pirminis užpildymas / užpildymas“, kad nustatytumėte reikiamą insulino kiekį ir pradėtumėte pildyti. Jei kiekis nėra pakankamas, pakartokite užpildymą. Numatytuosius kiekius galite nustatyti trijų taškų meniu, esančiame skiltyje Nustatymai > Kita > Užpildymas / pirminio užpildymo standartiniai kiekiai. Norėdami sužinoti, kiek vienetų turėtumėte naudoti, priklausomai nuo adatos ir vamzdelio ilgio, skaitykite kateterio (kaniulės) instrukcijas.
+AndroidAPS nenaudoja pompos funkcijos „Pirminis kateterio užpildymas“, o užpildo kateterį įprastu bolusu, kuris į istoriją neįrašomas. Tai reiškia, kad jis nenutraukia tuo metu nustatytos laikinos valandinės bazės. On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26#pump) to set the amount of insulin needed to fill the infusion set and start the priming. Jei kiekis nėra pakankamas, pakartokite užpildymą. Numatytuosius kiekius galite nustatyti trijų taškų meniu, esančiame skiltyje Nustatymai > Kita > Užpildymas / pirminio užpildymo standartiniai kiekiai. Norėdami sužinoti, kiek vienetų turėtumėte naudoti, priklausomai nuo adatos ir vamzdelio ilgio, skaitykite kateterio (kaniulės) instrukcijas.
 
 ## Fonas
 

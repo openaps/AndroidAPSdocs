@@ -89,6 +89,7 @@ Uso AndroidAPS
    Alvos-Temporários <./Usage/temptarget.md>   
    Extended carbs <./Usage/Extended-Carbs.rst>
    Automation <./Usage/Automation.rst>
+   Careportal (discontinued) <./Usage/CPbefore26.rst>
    Automation with 3rd party apps <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
  

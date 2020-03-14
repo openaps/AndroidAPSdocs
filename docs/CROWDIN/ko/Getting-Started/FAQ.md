@@ -174,11 +174,13 @@ IC대신 I:C라고도 하며, 탄수화물비율(CR)이라는 용어로 사용�
 > 
 > 예:
 > 
-> 빵유닛 (BU = 12g 탄수화물): 2.4 -> 1 빵단위를 섭취할 때 2.4 유닛의 인슐린이 필요합니다.
+> Bread unit fatcor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
-> 이에 해당하는 IC: 12 / 2.4 = 5.0 -> 5.0 g의 탄수화물이 1단위의 인슐린으로 처리될 수 있습니다.
+> Corresponding IC: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
 > 
-> 환산표는 다음 링크에서 확인가능합니다. [환산표 링크](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> BU factor 2,4 U / 12g ===> IC = 12g / 2,4 U = 5,0 g/U
+> 
+> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### 영향
 
@@ -261,9 +263,10 @@ Loop사용은 펌프 배터리를 더 빠르게 소모시킬 수 있습니다. �
 
 * 홈 탭에서 "Open Loop"/"Closed Loop"를 길게 누르고 '1시간동안 Loop 일시 중지'를 선택하세요
 * 이제 펌프를 떼어내고 펌프의 지시에 따라 주사기를 교체합니다.
-* 펌프를 다시 연결하면 '일시중지중 (X분)'을 길게 눌러 Loop를 재실행합니다.
+* Also piming and filling tube and canula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26#pump) in the actions tab just to record the change.
+* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
-캐뉼라 교체는 펌프의 "프라임 주입 세트" 기능을 사용하지 않지만, Bolus를 이용하여 주입세트 그리고/또는 캐뉼라를 채우는 것은 Bolus 이력에 나타나지 않습니다. 이는 임시 Basal 양을 중단하지 않음을 의미합니다. 실행(Act)탭에서, 교체/채움 버튼을 사용하여 필요한 인슐린양을 설정하여 주입세트를 채우고 교체를 시작하세요. 주입세트와 교체를 시작 양이 충분치 않으면, 다시 채움을 하세요. 기본 인슐린 양 버튼은 설정 > 기타 > 채움/교체에서 설정할 수 있습니다. 바늘 길이와 튜브 길이에 따라 얼마나 많은 유닛이 채워져야하는지 캐뉼라 상자안의 설명서를 확인하세요.
+캐뉼라 교체는 펌프의 "프라임 주입 세트" 기능을 사용하지 않지만, Bolus를 이용하여 주입세트 그리고/또는 캐뉼라를 채우는 것은 Bolus 이력에 나타나지 않습니다. 이는 임시 Basal 양을 중단하지 않음을 의미합니다. On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26#pump) to set the amount of insulin needed to fill the infusion set and start the priming. 양이 충분치 않으면, 다시 채움을 하세요. 기본 인슐린 양 버튼은 설정 > 기타 > 채움/교체에서 설정할 수 있습니다. 바늘 길이와 튜브 길이에 따라 얼마나 많은 유닛이 채워져야하는지 캐뉼라 상자안의 설명서를 확인하세요.
 
 ## 배경화면
 

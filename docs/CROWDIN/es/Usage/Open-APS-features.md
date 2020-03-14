@@ -1,6 +1,16 @@
 # Características de OpenAPS
 
-## Super Micro Bolo (SMB)
+## Autosens
+
+* Autosens is a algorithm which looks at blood glucose deviations (positive/negative/neutral).
+* It will try and figure out how sensitive/resistant you are based on these deviations.
+* The oref implementation in **OpenAPS** runs off a combination of 24 and 8 hours worth of data. It uses either one which is more sensitive.
+* AndroidAPS only runs off 8 (to enable UAM) or 24 hour as a user option.
+* Changing a cannula or changing a profile will reset Autosens ratio back to 0%.
+* Autosens adjusts your basal and ISF for you (i.e.: mimicking what a Profile shift does).
+* If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
+
+## Super Micro Bolus (SMB)
 
 SMB, la forma abreviada de 'super micro bolo ', es la última característica de OpenAPS (desde 2018) dentro del algoritmo Oref1. En contraste con AMA, SMB no utiliza las tasas basales temporales para controlar los niveles de glucosa, pero principalmente usa **super pequeños microbolos**. En situaciones en las que la AMA añadiría 1,0 UI de insulina utilizando una tasa basal temporal, SMB entrega varios microbolos en pequeños pasos a intervalos de **5 minutos**, por ejemplo, 0,4 UI, 0,3 UI, 0,2 UI y 0,1 UI. Al mismo tiempo (por razones de seguridad), la tasa basal real se fija en 0 UI/ h durante un período determinado para evitar la sobredosis (**'cero-temporal'**). Esto permite que el sistema ajuste la glucosa en sangre más rápido que con el incremento temporal de la tasa basal en AMA.
 
@@ -10,7 +20,7 @@ La característica SMB contiene algunos mecanismos de seguridad:
 
 1. La única dosis de SMB más grande sólo puede ser un valor más pequeño que:
     
-    * el valor correspondiente a la tasa basal actual (ajustado por autoajuste/autosens) para la duración establecida en "Número máximo de minutos de basal para limitar a SMB a", por ejemplo, cantidad basal para los próximos 30 minutos, o
+    * value corresponding to the current basal rate (as adjusted by autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
     * la mitad de la cantidad de insulina que se requiere actualmente, o
     * la parte restante de su valor de maxIOB en la configuración.
 
@@ -18,7 +28,7 @@ La característica SMB contiene algunos mecanismos de seguridad:
 
 3. Cálculos adicionales para predecir el curso de la glucosa, por ejemplo, por UAM (comidas no anunciadas). Incluso sin la entrada manual de carbohidratos del usuario, UAM puede detectar automáticamente un incremento significativo en los niveles de glucosa debido a las comidas, adrenalina u otras influencias y tratar de ajustar esto con SMB. Para estar en el lado seguro, esto también funciona al revés y puede detener el SMB antes si se produce una caída inesperadamente rápida en la glucosa. Es por eso que UAM siempre debe estar activo en SMB.
 
-**Debes haber completado [objetivo 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) para usar SMB.**
+**You must have started [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
 
 Vea también: [documentación OpenAPS para oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) y [información de Tims sobre SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
@@ -34,10 +44,10 @@ Pero no se puede elegir ningún valor. AAPS limita el valor como un límite seg�
 
 AndroidAPS limita el valor de la forma siguiente:
 
-* Niños: 2
+* Child: 2
 * Adolescentes: 5
-* Adultos: 10
-* Adultos resistente a la insulina: 12
+* Adult: 10
+* Insulin-resistant adult: 12
 
 ### El número máximo de IOB que OpenAPS no puede sobrepasar (OpenAPS "max-iob")
 
@@ -50,10 +60,10 @@ Al utilizar OpenAPS SMB, max-IOB se calcula de forma diferente que en OpenAPS AM
 
 Sea cuidadoso y paciente, y sólo cambie los valores paso a paso. Es diferente para distintas personas y también depende de la dosis diaria total diaria (TDD). Por razones de seguridad, hay un límite, que depende de la edad del paciente. El 'límite ' para maxIOB es superior al de AMA.
 
-* Niños: 3
-* Adolescentes: 7
-* Adultos: 12
-* Adultos resistente a la insulina: 25
+* Child: 3
+* Teenage: 7
+* Adult: 12
+* Insulin resistant adult: 25
 
 Véase también [OpenAPS documentación para SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
 
@@ -127,11 +137,11 @@ Valor predeterminado: 4 (no se debe cambiar a menos que realmente necesite y sep
 
 * * *
 
-## Asistente de comida avanzada (AMA)
+## Advanced Meal Assist (AMA)
 
 AMA, la forma abreviada de "asistencia avanzada para comidas" es una función OpenAPS a partir de 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) permite que el sistema de alta temporal sea más rápido después de un bolo de comida si ingresa a los carbohidratos de forma fiable.
 
-**Debes haber completado [objectivo 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) para usar esta característica**
+**You will need to have started [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature**
 
 Usted puede encontrar más información en la documentación [Documentación de OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
@@ -143,9 +153,9 @@ No se puede elegir ningún valor: por razones de seguridad, existe un "límite d
 
 Los parámetros codificados en AndroidAPS son los siguientes:
 
-* Niños: 2
+* Child: 2
 * Adolescentes: 5
-* Adultos: 10
+* Adult: 10
 * Adultos resistente a la insulina: 12
 
 ### El máximo basal IOB que OpenAPS puede entregar \[U\] (OpenAPS "max-iob")
@@ -154,9 +164,9 @@ Este parámetro limita el máximo de IOB basal donde todavía funciona AndroidAP
 
 El valor predeterminado es 2, pero debe aumentar este parámetro lentamente para ver lo mucho que le afecta y qué valor se ajusta mejor. Es diferente para distintas personas y también depende de la dosis diaria total diaria (TDD). Por razones de seguridad, hay un límite, que depende de la edad del paciente. El límite para maxIOB es más bajo en AMA que en SMB.
 
-* Niños: 3
+* Child: 3
 * Adolescentes: 5
-* Adultos: 7
+* Adult: 7
 * Adultos resistente a la insulina: 12
 
 ### Habilitar el autosensado de AMA
@@ -171,11 +181,11 @@ Si tiene esta opción habilitada, el autosensado puede ajustar los objetivos (ju
 
 **Utilice siempre el delta promedio corto en lugar de los datos simples** Si habilita esta característica, AndroidAPS utiliza el delta/glucosa promedio corto de los últimos 15 minutos, que normalmente es el promedio de los tres últimos valores. Esto ayuda a AndroidAPS a trabajar más estable con los orígenes de datos ruidosos como xDrip + y Libre.
 
-**Max daily safety multiplier** Este es un límite de seguridad importante. El valor predeterminado (que es poco probable que sea necesario ajustar) es 3. Esto significa que a AndroidAPS nunca se le permitirá establecer una tasa basal temporal que sea más de 3x la tasa basal más alta por hora programada en la bomba de un usuario, o, si está habilitada, determinada por la autosintonía. Ejemplo: si su tasa basal más alta es de 1,0 U/h y el múltiplo máximo de seguridad diaria es 3, entonces AndroidAPS puede establecer una tasa basal temporal máxima de 3,0 U/h (= 3 x 1,0 U/h).
+**Max daily safety multiplier** Este es un límite de seguridad importante. El valor predeterminado (que es poco probable que sea necesario ajustar) es 3. Esto significa que a AndroidAPS nunca se le permitirá establecer una tasa basal temporal que sea más de 3x la tasa basal más alta por hora programada en la bomba de un usuario. Ejemplo: si su tasa basal más alta es de 1,0 U/h y el múltiplo máximo de seguridad diaria es 3, entonces AndroidAPS puede establecer una tasa basal temporal máxima de 3,0 U/h (= 3 x 1,0 U/h).
 
 Valor predeterminado: 3 (no se debe cambiar a menos que realmente necesite y sepa, lo que está haciendo)
 
-**Current Basal safety multiplier** Este es otro límite de seguridad importante. El valor predeterminado (que también es poco probable que necesite ajustar) es 4. Esto significa que a AndroidAPS nunca se le permitirá establecer una tasa basal temporal que sea más de 4x la tasa basal horaria actual programada en la bomba de un usuario, o, si está habilitada, determinada por la autoajuste.
+**Current Basal safety multiplier** Este es otro límite de seguridad importante. El valor predeterminado (que también es poco probable que necesite ajustar) es 4. Esto significa que a AndroidAPS nunca se le permitirá establecer una tasa basal temporal que sea más de 4x la tasa basal horaria actual programada en la bomba de un usuario.
 
 Valor predeterminado: 4 (no se debe cambiar a menos que realmente necesite y sepa, lo que está haciendo)
 
@@ -185,7 +195,7 @@ Valor predeterminado: 2
 
 * * *
 
-## Asistente de comida (MA)
+## Meal Assist (MA)
 
 ### Max U/h una basal temporal puede establecerse en (OpenAPS “max-basal")
 
@@ -195,9 +205,9 @@ No se puede elegir ningún valor: por razones de seguridad, existe un "límite d
 
 Los parámetros codificados en AndroidAPS son los siguientes:
 
-* Niños: 2
+* Child: 2
 * Adolescentes: 5
-* Adultos: 10
+* Adult: 10
 * Adultos resistente a la insulina: 12
 
 ### El máximo basal IOB que OpenAPS puede entregar \[U\] (OpenAPS "max-iob")
@@ -206,9 +216,9 @@ Este parámetro limita el máximo de IOB basal donde todavía funciona AndroidAP
 
 El valor predeterminado es 2, pero debe aumentar este parámetro lentamente para ver lo mucho que le afecta y qué valor se ajusta mejor. Es diferente para distintas personas y también depende de la dosis diaria total diaria (TDD). Por razones de seguridad, hay un límite, que depende de la edad del paciente. El limite para maxIOB es más bajo en MA que en SMB.
 
-* Niños: 3
+* Child: 3
 * Adolescentes: 5
-* Adultos: 7
+* Adult: 7
 * Adultos resistente a la insulina: 12
 
 ### Ajustes avanzados

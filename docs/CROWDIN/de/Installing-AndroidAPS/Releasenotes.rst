@@ -2,7 +2,7 @@ Release notes
 **************************************************
 Eine Schritt-für-Schritt-Anleitung des Updates findest Du `hier <../Installing-AndroidAPS/Update-to-new-version.html>`_. Auf dieser Seite gibt es auch einen Abschnitt mit möglichen Schwierigkeiten und Lösungsansätzen.
 
-Folgende Information wird angezeigt, so bald ein neues Update zur Verfügung steht:
+Folgende Information wird angezeigt, sobald ein neues Update zur Verfügung steht:
 
 .. image:: ../images/AAPS_LoopDisable90days.png
   :alt: Update info
@@ -12,6 +12,43 @@ Dann hast Du 60 Tage Zeit, das Update durchzuführen. Wenn Du nicht innerhalb di
 Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualisierst, wird AAPS auf Open Loop wechseln.
 
 Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln, sondern aus Sicherheitsgründen erfolgt. Neue Versionen von AndroidAPS bieten nicht nur neue Funktionen, sondern auch wichtige Sicherheitsfixes. Deshalb ist es notwendig, dass jeder Anwender so schnell wie möglich aktualisiert. Leider gibt es noch Fehlerberichte aus sehr alten Versionen, so dass dies ein Versuch ist, die Sicherheit für jeden einzelnen Benutzer und die gesamte DIY-Community zu verbessern. Danke für dein Verständnis.
+
+Version 2.6.0
+==============
+Erscheinungsdatum: 29.02.2020
+
+Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
+
+Wichtige neue Funktionen
+-----
+* Kleinere Designänderungen (Startseite...)
+* Careportal Tab / Menü entfernt - weitere Details dazu `hier <../Usage/CPbefore26.html>`_
+* Neues `Plugin Lokales Profil <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_
+
+  * Im lokalen Profil können mehrere Profile gespeichert werden.
+  * Profile können geklont und bearbeitet werden.
+  * Lokale Profile können zu Nightscout hochgeladen werden.
+  * Profilwechsel können in ein neues lokales Profil geklont werden (Zeitverschiebung und Prozentsatz werden berücksichtigt).
+  * Neue Eingabemöglichkeit für Zielwerte
+* Einfaches Profil wurde entfernt.
+* `Verzögerter Bolus <../Usage/Extended-Carbs.html#id1>`_ - der Closed Loop wird unterbrochen
+* Medtronic Pumpe: Fehler mit doppelten Einträgen behoben
+* Maßeinheiten (mmol / mg/dl) werden nicht mehr im Profil angegeben, sondern als globale Einstellung.
+* Neue Einstellungen zum Einrichtungsassistenten hinzugefügt.
+* Verbesserungen an der Benutzerschnittstelle und programmintern.
+* `Wear Komplikationen <../Configuration/Watchfaces.html>`_ für Smartwatches
+* Neue `SMS-Befehle <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
+* Korrektur Sprachauswahl
+* Objectives (Ziele) `neu starten <../Usage/Objectives.html#objective-ziel-neu-starten>`_
+* Automation: `Regeln sortieren <../Usage/Automation.html#automation-regeln-sortieren>`_
+* Automatisierung: Fehlerbeseitigung - Regeln wurden bei pausiertem Loop ausgeführt
+* Neue Statuszeile für Combo
+* Verbesserung des Glukosestatus
+* Fehlerbehebung: TempTarget NS-Synchronisation
+* Neue Aktivitätsstatistik
+* Verzögerter Bolus im Open Loop verfügbar
+* Android 10 Alarmunterstützung
+* Viele neue Übersetzungen
 
 Version 2.5.1
 ==================================================
@@ -29,15 +66,14 @@ Wichtige Hinweise
 --------------------------------------------------
 * Verwende `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ oder neuer `um die App zu erstellen <../Installing-AndroidAPS/Building-APK.html>`_ oder `ein Update durchzuführen <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Wenn Du xDrip verwendest, muss `identify receiver <../Configuration/xdrip.html#identify-receiver>`_ gesetzt sein.
-* Falls Du den Dexcom G6 mit der `gepatchen Dexcom App <../Hardware/DexcomG6.html#g6-mit-der-gepatchten-dexcom-app>`_ verwendest, benötigst Du die Version aus dem `2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Falls Du den Dexcom G6 mit der `gepatchten Dexcom App <../Hardware/DexcomG6.html#g6-mit-der-gepatchten-dexcom-app>`_ verwendest, benötigst Du die Version aus dem `2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Glimp wird ab Version 4.15.57 und neuer unterstützt.
 
 Kann ich dieses Update nutzen? Aktuell werden NOCH NICHT unterstützt:
 --------------------------------------------------
 * Android 5 oder niedriger
 * Poctech
 * 600SeriesUploader
-* Glimp
-   Glimp arbeitet im Offline-Modus nicht. Der Glimp-Entwickler muss die App updaten, um den SDK28 Broadcast zu nutzen.
 * Patched Dexcom App aus dem Verzeichnis 2.3
 
 Wichtige neue Funktionen
@@ -70,7 +106,7 @@ Wichtige neue Funktionen
 * Sprach-Updates
 * Überprüfung git und Warnung bei gradle Upgrade
 * Zusätzliche automatische Tests
-* Bugfix eines potentieller Absturzes des Alarm Sound Dienstes (Danke @lee-b!)
+* Bugfix eines potentiellen Absturzes des Alarm Sound Dienstes (Danke @lee-b!)
 * Bugfix BG-Broadcast (funktioniert nun unabhängig von den SMS-Berechtigungen!)
 * Neuer Versionscheck
 

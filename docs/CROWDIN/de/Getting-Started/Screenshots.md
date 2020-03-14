@@ -129,15 +129,11 @@ Hier sehen wir den Status des Insulin-Pumpe - in diesem Fall eine Accu-Chek Comb
 
 ## Care Portal (Behandlungen)
 
-![Care Portal (Behandlungen)](../images/Screenshot_care_portal.png)
-
-Dies entspricht den Funktionen, die du bei Nightscout unter dem "+" Symbol findest. Diese erlauben dir, zusätzliche Notizen in deine Aufzeichnungen zu übernehmen. Funktionen wie Katheter- und Reservoirwechsel sollten selbsterklärend sein.
-
-**Es werden aber KEINE BEFEHLE an die Pumpe gesandt!** Wenn Du also im Careportal einen Bolus erfasst, wird dieser nur in Deine Nightscout-Datenbank eingetragen. Die Pumpe wird keinen Bolus abgeben.
+Im Carportal konnten in der Vergangenheit die Funktionen, die Du bei Nightscout unter dem "+" Symbol findest, verwendet werden. Diese erlauben Dir, zusätzliche Notizen in Deine Aufzeichnungen zu übernehmen.
 
 ### Kohlenhydrat Korrektur
 
-Das Careportal kann verwendet werden, um fehlerhafte Kohlenhydrat-Einträge zu korrigieren (z.B. wenn Du die KH-Menge über- oder unterschätzt hast).
+Der Behandlungs-Tab kann verwendet werden, um fehlerhafte Kohlenhydrat-Einträge zu korrigieren (z.B. wenn Du die KH-Menge über- oder unterschätzt hast).
 
 1. Prüfe und merke Dir die aktuelle COB- und IOB-Menge, die auf dem Startbildschirm angezeigt wird.
 2. Je nach Pumpenmodell werden die Kohlenhydrate entweder zusammen mit dem Insulin in einer Zeile oder als separater Eintrag (z.B. bei der Dana RS) angezeigt.
@@ -151,7 +147,7 @@ Das Careportal kann verwendet werden, um fehlerhafte Kohlenhydrat-Einträge zu k
    
    -> Falls die KH nicht wie vorgesehen gelöscht werden und Du dennoch zusätzliche Kohlenhydrate eingibst, wird mit einem zu hohen COB gerechnet und dies kann zu überhöhter Insulinabgabe führen.
 
-6. Gib die korrekte Kohlenhydratmenge über das Careportal ein und achte dabei auf die Auswahl des richtigen Zeitpunkts.
+6. Gib die korrekte Kohlenhydratmenge über den Kohlenhydrate-Button auf der Startseite ein und achte dabei auf die Auswahl des richtigen Zeitpunkts.
 
 7. Falls bei Dir im Tab 'Behandlungen' KH und Insulin zusammen in einer Zeile angezeigt werden musst Du zusätzlich die Insulinmenge neu eingeben. Achte auch hier auf die Auswahl des richtigen Zeitpunkts und prüfe im Anschluss IOB auf dem Startbildschirm.
 

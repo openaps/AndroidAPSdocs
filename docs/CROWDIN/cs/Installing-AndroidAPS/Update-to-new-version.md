@@ -8,8 +8,8 @@
 
 * Please update as soon as possible after a new release is available. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes.html#release-notes) about the new version.
 * As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
-* Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.5.1.
+* Please use [Android Studio Version 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.6.1.
 * If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
 * If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
@@ -31,90 +31,72 @@ Follow the manual on the [git installation page](../Installing-AndroidAPS/git-in
 ## Aktualizace lokální kopie
 
 * Click: VCS -> Git -> Pull
-  
-  ![Android Studio - GIT - Pull](../images/Update_Pull.png)
+    
+    ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
 
 * Click Pull (no changes in dialog field)
-  
-  ![Android Studio - GIT - Pull 2](../images/Update_Pull2.png)
+    
+    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02.png)
+
+* Wait while download is in progress.
+    
+    ![Android Studio - Pull in progress](../images/AndroidStudio361_Update03.png)
+
+* When done Android Studio will inform you that "all files are up-to-date".
+    
+    ![All files up to date](../images/AndroidStudio361_Update04.png)
 
 ## Vytvořte podepsaný soubor APK
 
-<!--- Text is maintained in page building-apk.md ---> V nabídce vyberte „Build“ a pak „Generate Signed Bundle / APK…“. (Nabídka Android Studio se v září 2018 změnila. Ve starších verzích vyberte nabídku „Build“ a poté „Generate Signed APK“.
+<!--- Text is maintained in page building-apk.md --->
 
-Podepsání znamená, že podepíšete vygenerovanou aplikaci, ale digitálním způsobem, jakoby nějakým digitálním otiskem prstu uvnitř samotné aplikace. To je nezbytné, protože Android má pravidlo, že z bezpečnostních důvodů přijme pouze podepsaný kód. Pokud se o toto téma zajímáte, můžete si k tomu víc přečíst [zde](https://developer.android.com/studio/publish/app-signing.html#generate-key), ale Bezpečnost je hluboké a komplexní téma a teď ho nepotřebujete.
+* Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
 
-![Snímek 39a](../images/Installation_Screenshot_39a.PNG)
+![Build apk](../images/AndroidStudio361_27.png)
 
-V následujícím dialogovém okně vyberte „APK“ místo „Android App Bundle“ a klepněte na tlačítko „Next“.
+* Select "APK" (1.) instead of "Android App Bundle" and click "Next" (2.).
 
-![Snímek 39b](../images/Installation_Screenshot_39b.PNG)
+![APK instead of bundle](../images/AndroidStudio361_28.png)
 
-Zvolte „app“ a klepněte na tlačítko „Next“.
+* Make sure that module is set to "app".
+* Select your key store path by clicking on "Choose existing...".
+* Enter your passwords for key store and key.
+* If the box to remember passwords is checked you don't have to enter them. In case the box was not checked during last build and you cannot remember the passwords refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Click "Next".
 
-![Snímek 40](../images/Installation_Screenshot_40.png)
+![Key store](../images/AndroidStudio361_Update05.png)
 
-Zadejte cestu ke svému úložišti klíčů, zadejte heslo k úložišti klíčů, vyberte alias klíče a zadejte heslo klíče.
+* Select build variant "fullRelease" (1.). 
+* Check boxes V1 and V2 for signature versions (2.).
+* Click "Finish". (3.)
 
-Vyberte 'Zapamatovat hesla'.
+![Finish build](../images/AndroidStudio361_32.png)
 
-Poté klepněte na tlačítko „Next“.
+* Android Studio will display the information "APK(s) generated successfully..." after build is finished.
+* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* Easiest way to find the apk is to click on "Event log".
 
-![Cesta k úložišti klíčů](../images/KeystorePathUpdate.PNG)
+![Build successfully - event log](../images/AndroidStudio361_33.png)
 
-Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". Následující údaje mohou být důležité pro pozdější použití.
+* In the event log section click "locate".
 
-* Možnost „Release“ by měla být výchozí volbou pro „Build Type“, možnost „Debug“ je pouze pro vývojáře.
-* Vyberte typ sestavení, jaký budete chtít. 
-  * full / fullRelease (i.e. recommendations automatically enacted in closed looping)
-  * openloop (tj. doporučení pro uživatele s otevřenou smyčkou)
-  * pumpcontrol (tj. vzdálené ovládání pumpy bez smyčky)
-  * nsclient (tj. zobrazují se data jiného uživatele se smyčkou a lze vkládat záznamy ošetření)
+![Event log - locate apk](../images/AndroidStudio361_34.png)
 
-![Snímek 44](../images/Installation_Screenshot_44.png)
+* app-full-release.apk is the file you are looking for.
 
-V podokně „Event Log“ vidíme, že podepsaný soubor APK byl úspěšně vygenerován.
-
-![Snímek 45](../images/Installation_Screenshot_45.png)
-
-Klikněte na odkaz „locate“ v podokně „Event Log“.
-
-![Snímek 46](../images/Installation_Screenshot_46.png)
+![File location apk](../images/AndroidStudio361_35.png)
 
 ## Přeneste soubor APK do telefonu
 
-**[Export your settings](../Usage/ExportImportSettings#how-to-export-settings) from the existing AAPS version on your phone to be on the save side.**
+Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
-<!--- Text is maintained in page building-apk.md ---> Objeví se okno správce souborů. Na vašem počítači může vypadat trochu jinak, protože já používám systém Linux. Pokud používáte sytém Windows, otevře se Průzkumník souborů, na platformě Mac OS X to bude Finder. V něm byste měli vidět složku s vygenerovaným souborem APK. Toto bohužel není správné umístění, protože „wear-release.apk“ není podepsaný soubor „app“ APK, který hledáme.
-
-![Snímek 47](../images/Installation_Screenshot_47.png)
-
-Přejděte prosím do složky AndroidAPS/app/full/release a tam vyhledejte soubor „app-full-release.apk“. Přeneste tento soubor do telefonu s Androidem. You can do it on your preferred way:
-
-* Bluetooth
-* cloud upload (Google Drive or other cloud services)
-* connect computer and phone by cable 
-* by mail (Note that some mail apps do not allow apk attachments, in this case use other transfer method.)
-
-In this example Gmail is used as it is fairly simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. Pokud použijete jinou metodu, zvolte vhodný postup.
-
-![Snímek 48](../images/Installation_Screenshot_48.png)
-
-V nastavení telefonu je nabídka (instalovat neznámé aplikace), kde lze povolit instalaci APK souborů, které jsem si poslal přes Gmail.
-
-Vyberte možnost „Povolit z tohoto zdroje“. Po instalaci můžete tuto volbu zase zakázat.
-
-![Instalace z neznámých zdrojů](../images/Installation_Screenshot_49-50.png)
-
-Posledním krokem je klepnout na soubor APK, který jsem přijal přes Gmail, a nainstalovat aplikaci. Pokud se APK nechce nainstalovat a máte v telefonu již starší verzi AndroidAPS, pravděpodobně byla podepsaná jiným klíčem – v tom případě musíte starou verzi nejdřív odinstalovat, avšak nezapomeňte předtím exportovat svá nastavení!
-
-Ano, máte to a můžete začít s úvodní konfigurací AndroidAPS (CGM, inzulínová pumpa) atd.
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
 ## Zkontrolujte verzi AAPS na telefonu
 
-Verzi AAPS můžete na telefonu zkontrolovat klepnutím na tři tečky vpravo nahoře a poté na položku O aplikaci.
+You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
 
-![Nainstalovaná verze AAPS](../images/Update_VersionCheck.png)
+![AAPS version installed](../images/Update_VersionCheck.png)
 
 ## Poradce při potížích
 

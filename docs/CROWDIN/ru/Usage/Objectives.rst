@@ -4,6 +4,8 @@
 AndroidAPS ставит ряд Целей, которые необходимо выполнить, чтобы подготовиться к свойствам и параметрам настроек для безопасной работы алгоритма ИПЖ.  Цели позволяют удостовериться, что все сконфигурировано правильно, что мы понимаем, что, как и почему делает система и что мы можем доверять ей.
 
 If you are **upgrading phones** then you can `export your settings <../Usage/ExportImportSettings.html>`_ to keep your progress through the objectives. Ваш прогресс будет сохранен не только в прохождении целей, но и в настройках безопасности, таких как максимальный болюс и т. д.  Если настройки не переносить, то движение к целям придется начинать заново.  It is a good idea to `backup your settings <../Usage/ExportImportSettings.html>`_ frequently just in case.
+
+If you want to go back in objectives see `explanation below <../Usage/Objectives.html#go-back-in-objectives>`_.
  
 Цель 1: Настройка визуализации и мониторинга, анализ базальной скорости и коэффициентов
 ====================================================================================================
@@ -24,7 +26,7 @@ Objective 2: Learn how to control AndroidAPS
    .. image:: ../images/Objective2_V2_5.png
      :alt: Screenshot objective 2
 
-Objective 3: Prove your knowledge
+Objective 3: Proof your knowledge
 ==================================================
 * Pass a multiple-choice exam testing your AndroidAPS knowledge.
 * Click on the orange text "Not completed yet" to access the page with the question and answering options.
@@ -88,7 +90,6 @@ Objective 6: Starting to close the loop with Low Glucose Suspend
   
 Closed loop will not correct high bg values in objective 6 as it is limited to low glucose suspend. Вы сами вручную должны корректировать высокие значения ГК!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 * Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`_ or by pressing and holding the Open Loop button in the top left of the home screen.
 * Set your target range slightly higher than you usually aim for, just to be safe.
 * Watch  how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
@@ -128,3 +129,10 @@ Objective 10: Enabling additional oref1 features for daytime use, such as super 
 * You must read the `SMB chapter in this wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ and `chapter oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ to understand how SMB works, especially what's the idea behind zero-temping.
 * Then you ought to `rise maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ to get SMBs working fine. maxIOB теперь включает весь активный инсулин IOB, а не только добавленный базал. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see `objective 7 <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_ for an illustration)
 * min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually.
+
+Go back in objectives
+====================================================================================================
+If you want to go back in objectives for whatever reason you can do so by clicking at "clear finished".
+
+   .. image:: ../images/Objective_ClearFinished.png
+     :alt: Go back in objectives

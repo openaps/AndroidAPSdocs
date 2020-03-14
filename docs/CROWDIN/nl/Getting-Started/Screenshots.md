@@ -129,15 +129,11 @@ Hier zie je de status van je insulinepomp - in dit geval een Accu-Check Combo. D
 
 ## Care Portal
 
-![Care Portal](../images/Screenshot_care_portal.png)
-
-Wat je hier ziet, is hetzelfde als wat je in Nightscout ziet wanneer je daar op het "+" symbool klikt. Je kunt dit gebruiken om notities te maken. Deze knoppen, zoals infuus wissel of insuline ampul wissel, spreken voor zich.
-
-**MAAR dit gedeelte geeft geen opdrachten aan de pomp!** Dus als je een bolus toevoegt met behulp van dit scherm dan wordt dit als notitie toegevoegd in Nightscout, maar de pomp zal geen bolus afleveren.
+De Careportal had dezelfde functies als wat je in Nightscout ziet wanneer je daar op het "+" symbool klikt. Je kon de Careportal gebruiken om dingen in te noteren.
 
 ### Koolhydraten correctie
 
-De Careportal kan worden gebruikt om foutieve koolhydraat-invoer te corrigeren, bijvoorbeeld als je de hoeveelheid koolhydraten hebt onderschat, of juist minder hebt gegeten dan gepland.
+De Behandelingen tab kan worden gebruikt om foutieve koolhydraat-invoer te corrigeren, bijvoorbeeld als je de hoeveelheid koolhydraten hebt onderschat, of juist minder hebt gegeten dan gepland.
 
 1. Bekijk en onthoud de werkelijke COB en IOB op Overzichtscherm.
 2. Afhankelijk van de pomp op het behandelingen-tabblad kunnen koolhydraten samen met insuline op één regel staan, of als een aparte regel (dit laatste is zo bij de DanaRS).
@@ -151,9 +147,9 @@ De Careportal kan worden gebruikt om foutieve koolhydraat-invoer te corrigeren, 
    
    -> Als koolhydraten per ongeluk niet waren verwijderd maar je voegt vervolgens wel extra koolhydraten toe zoals uitgelegd bij 6., zal COB te hoog zijn en dat kan leiden tot een te hoge dosis insuline. Let dus op wat er gebeurt!
 
-6. Voer de juiste hoeveelheid koolhydraten in via de Careportal, zorg ervoor dat je het tijdstip aanpast naar het moment dat de koolhydraten daadwerkelijk zijn gegeten.
+6. Voer de juiste hoeveelheid koolhydraten in via de koolhydraten knop op het Overzichtscherm, zorg ervoor dat je het tijdstip aanpast naar het moment dat de koolhydraten daadwerkelijk zijn gegeten.
 
-7. Als er op jouw Behandelingen-tabblad één regel wordt gebruikt voor koolhydraten en insuline, moet je ook de hoeveelheid insuline weer toevoegen. Doe dit ook via de Careportal en zorg er ook hierbij voor dat je het tijdstip aanpast naar het moment dat de insuline was toegediend. Controleer tenslotte op het Overzichtscherm of de IOB is meeveranderd.
+7. Als er op jouw Behandelingen-tabblad één regel wordt gebruikt voor koolhydraten en insuline, moet je ook de hoeveelheid insuline weer toevoegen. Doe dit via de insuline knop op het Overzichtscherm en zorg er ook hierbij voor dat je het tijdstip aanpast naar het moment dat de insuline was toegediend. Controleer tenslotte op het Overzichtscherm of de IOB is meeveranderd.
 
 ## Loop, MA, AMA, SMB
 

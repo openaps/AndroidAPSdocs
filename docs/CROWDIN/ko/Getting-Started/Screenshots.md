@@ -129,15 +129,11 @@ Here we see the status of the insulin pump - in this case an Accu-Chek Combo. Th
 
 ## Care Portal
 
-![Care Portal](../images/Screenshot_care_portal.png)
-
-This replicates the functions you will find on your Nightscout screen under the "+" symbol which allows you to add notes to your records. Functions such as recording when you change a pump site, or insulin cartridge should be self-explanatory.
-
-**BUT this section does not issue any commands to your pump!** So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus.
+Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
 
 ### Carb correction
 
-Care portal can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
 
 1. Check and remember actual COB and IOB on homescreen.
 2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
@@ -151,7 +147,7 @@ Care portal can be used to correct faulty carb entries (i.e. you over- or undere
    
    -> If carbs are not removed as intended and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
 
-6. Enter correct carb amount through care portal and make sure to set the correct event time.
+6. Enter correct carb amount through carbs button on homescreen and make sure to set the correct event time.
 
 7. If there is just one line in treatment tab including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
 
@@ -161,7 +157,7 @@ You don't normally need to worry about these, they show the results of the OpenA
 
 ## 프로파일
 
-![프로파일](../images/Screenshot_profile.png)
+![Profile](../images/Screenshot_profile.png)
 
 AndroidAPS can run using a number of different profile configurations. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nightscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a [Profile Switch](../Usage/Profiles.md) in AndroidAPS to activate the changes. Data such as the basal profile would then be automatically copied over to your pump.
 
@@ -181,7 +177,7 @@ These are simply logs of treatments (boluses and carbs), xDrip messages and mess
 
 ## 구성 관리자
 
-![구성 관리자](../images/Screenshot_config_builder.png)
+![Config Builder](../images/Screenshot_config_builder.png)
 
 This is where you will set up the configuration of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
 

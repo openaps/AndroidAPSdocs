@@ -1,11 +1,21 @@
 Docs Updates & Änderungen
 **************************************************
 
+März 2020
+==================================================
+* `AndroidAPS mit Android Studio 3.6.1 erstellen <../Installing-AndroidAPS/Building-APK.html>`_
+* `Extended bolus and switch to open loop <../Usage/Extended-Carbs.html#warum-ein-verzogerter-bolus-beim-loopen-nicht-funktioniert>`_
+* `Update mit Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
 Februar 2020
 ==================================================
 * `Automation Vorbehalte <../Usage/Automation.html#empfehlungen-und-vorbehalte>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - kurze Erklärung
+* ` Careportal Alternativen <../Usage/CPbefore26.html> ` _
+* `Verzögerter Bolus <../Usage/Extended-Carbs.html#id1>`_ - der Closed Loop wird unterbrochen
+* Neues `Plugin Lokales Profil <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_
 * `Konfigurationsbeispiel <../Getting-Started/Sample-Setup.html>`_ - Update Dexcom G6
+* `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - wichtige neue Funktionen
+* `Wear Komplikationen <../Configuration/Watchfaces.html>`_ für Smartwatches
 Januar 2020
 ==================================================
 * `Kohlenhydrate manuell korrigieren <../Getting-Started/Screenshots.html#kohlenhydrat-korrektur>`_, falls diese falsch eingegeben wurden

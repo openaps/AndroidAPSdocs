@@ -81,9 +81,9 @@ Především s sebou musíte mít vybavení pro případ nouze, jako každý jin
 
 ## Jak bezpečně zajistit CGM/FGM?
 
-You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask Google or ebay). Někteří uživatelé používají levnější standardní kineziologické tejpy nebo Rocktape.
+Můžete ho přelepit tejpem: K dispozici jsou již vystřižené přelepky určené pro nejběžnější CGM systémy (hledejte na Googlu nebo eBay). Někteří uživatelé používají levnější standardní kineziologické tejpy nebo Rocktape.
 
-You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM with a rubber band (ask Google or ebay).
+Můžete ho zafixovat: K dispozici jsou speciální krytky, které zafixují CGM/FGM na ruce pomocí gumového pásku (hledejte na Googlu nebo eBay).
 
 # Nastavení AndroidAPS
 
@@ -164,19 +164,21 @@ Někteří lidé také používají I:C jako zkratku místo IC nebo mluví o car
 
 Za předpokladu, že máte správný bazál, můžete tento parametr otestovat tak, že zkontrolujete, že IOB je nula a vy máte dobrou glykémii, zkonzumujete přesně odměřené množství sacharidů a aplikujete si příslušnou dávku inzulinu podle aktuálního sacharidového poměru. Ideální je k testu využít jídlo, které v danou denní dobu běžně jíte a přesně spočítat obsah sacharidů.
 
-> **NOTE:**
+> **POZNÁMKA:**
 > 
-> In some European countries bread units were used for determination of how much insulin is needed for food. At the beginning 1 bread unit equaled 12g of carbs, later some changed to 10g of carbs.
+> V některých evropských zemích se používaly chlebové/výměnné jednotky pro stanovení toho, kolik inzulínu je na dané jídlo potřeba. Zpočátku byla 1 výměnná jednotka 12 g sacharidů, později se to změnilo na 10 g sacharidů.
 > 
-> In this model the amount of carbs was fixed and the amount of insulin was variable. ("How much insulin is needed to cover one bread unit?")
+> V tomto modelu bylo množství sacharidů fixní a měnilo se množství inzulinu. („Kolik inzulínu je zapotřebí k pokrytí jedné výměnné jednotky?“)
 > 
-> When using IC the amount of insulin is fixed and the amount of carbs is variable. ("How many g of carbs can be covered by one unit of insulin?")
+> Při používání inzulino-sacharidového poměru je naopak fixní množství inzulinu a mění se množství sacharidů. („Kolik g sacharidů lze pokrýt jednou jednotkou inzulínu?“)
 > 
 > Example:
 > 
-> Bread unit facor (BU = 12g carbs): 2,4 -> You need 2,4 units of insulin when you eat one bread unit.
+> Bread unit fatcor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
-> Corresponding IC: 12 / 2,4 = 5,2 -> 5,2g carbs can be covered with one unit of insulin.
+> Corresponding IC: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
+> 
+> BU factor 2,4 U / 12g ===> IC = 12g / 2,4 U = 5,0 g/U
 > 
 > Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
@@ -242,28 +244,29 @@ Smyčka může vybíjet baterii rychleji než v normálním režimu. Je to proto
 * na pumpě používejte tlačítka pouze pro výměnu inzulínu, jinak k prohlížení historie, stavu baterie a stavu zásobníku používejte raději AndroidAPS.
 * Aplikace AndroidAPS může být na některých telefonech často ukončována systémem kvůli úspoře energie nebo paměti RAM. Pokud se však AndroidAPS při každém startu znovu inicializuje, tak pokaždé znovu navazuje spojení s pumpou prostřednictvím Bluetooth a znovu načítá aktuální bazální dávky a historii bolusů. To vybíjí baterii. Abyste zjistili, jestli k tomu dochází, přejděte do Nastavení > NSClient a zapněte možnost 'Zaznamenávat spuštění aplikace do NS'. Nightscout pak obdrží událost při každém restartu AndroidAPS, čímž tento problém snadno odhalíte. Abyste tomuto chování zabránili, udělte aplikaci AndroidAPS výjimku, aby ji systém nevypínal v době nečinnosti (v menu úspory baterie na vašem telefonu).
     
-    For example, to whitelist on a Samsung phone running Android Pie:
+    Chcete-li například zakázat úsporu energie na telefonu Samsung se systémem Android Pie:
     
-    * Go to Settings -> Device Care -> Battery 
-    * Scroll until you find AndroidAPS and select it 
-    * De-select "Put app to sleep"
-    * ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
-    * Scroll to AndroidAPS and make sure it is de-selected.
+    * Přejděte do Nastavení -> Údržba zařízení -> Baterie 
+    * Posouvejte, dokud nenajdete aplikaci AndroidAPS, a vyberte ji 
+    * Zrušte označení možnosti „Přepnout aplikaci do režimu spánku“
+    * ROVNĚŽ přejděte do nabídky Nastavení -> Aplikace -> (Tři tečky v pravém horním rohu) vyberte „zvláštní přístup“ -> Optimalizovat využití baterie
+    * Přejděte k aplikaci AndroidAPS a zkontrolujte, že je zrušen její výběr.
 
 * Očistěte póly baterie alkoholem, aby na nich nezůstala případná mastnota/nečistoty z výroby.
 
-* for [Dana R/RS pumps](../Configuration/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Buďto baterie 2krát až 3krát vyjměte a znovu vložte (než se na obrazovce ukáže 100%), anebo před vložením baterií použijte bateriový klíč ke chvilkovému zkratu (přiložením k oběma pólům baterie na zlomek sekundy).
+* V případě pump [DanaR/RS](../Configuration/DanaRS-Insulin-Pump.md) při spouštěcí sekvenci protéká baterií velký proud, aby záměrně přerušil ochranný povlak (který zabraňuje ztrátě kapacity baterie při skladování), ale přerušení ochranného povlaku se nedaří vždy ve 100 % případů. Buďto baterie 2krát až 3krát vyjměte a znovu vložte (než se na obrazovce ukáže 100%), anebo před vložením baterií použijte bateriový klíč ke chvilkovému zkratu (přiložením k oběma pólům baterie na zlomek sekundy).
 * viz také další tipy pro [konkrétní typy baterií](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life) při použití pumpy Combo
 
 ### Výměna zásobníků a kanyl
 
-The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
+Výměnu zásobníku nelze provést přes AndroidAPS, výměna musí být provedena přímo na pumpě jako dřív.
 
 * Dlouze stiskněte "Otevřená smyčka"/"Uzavřená smyčka" na hlavní obrazovce AndroidAPS a vyberte 'Pozastavit smyčku na 1 h'
-* Now disconnect the pump and change the reservoir as per pump instructions.
-* Jak budete mít pumpu znovu připojenou, obnovte smyčku dlouhým stiskem na 'Pozastaveno (X min)'.
+* Nyní odpojte pumpu a vyměňte zásobník podle instrukcí pumpy.
+* Also piming and filling tube and canula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26#pump) in the actions tab just to record the change.
+* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
-Naproti tomu pro výměnu kanyly se nepoužívá funkce „naplnit infúzní set“ na pumpě, ale set a/nebo kanyla se plní bolusem, který se nezobrazuje v historii bolusů. To znamená, že se nepřeruší běžící dočasná bazální dávka. Na záložce Akce použijte tlačítko Plnění/Doplňování, abyste nastavili množství inzulínu k naplnění infúzního setu a plnění spustili. Pokud množství není dostatečné, opakujte plnění. Můžete si nastavit výchozí množství pro plnění v Nastavení > Jiné > Hodnoty plnění/doplňování. Podívejte se do příbalového letáku kanyl, kolik jednotek je nutné do kanyly naplnit podle délky jehly a hadičky.
+Naproti tomu pro výměnu kanyly se nepoužívá funkce „naplnit infúzní set“ na pumpě, ale set a/nebo kanyla se plní bolusem, který se nezobrazuje v historii bolusů. To znamená, že se nepřeruší běžící dočasná bazální dávka. On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26#pump) to set the amount of insulin needed to fill the infusion set and start the priming. Pokud množství není dostatečné, opakujte plnění. Můžete si nastavit výchozí množství pro plnění v Nastavení > Jiné > Hodnoty plnění/doplňování. Podívejte se do příbalového letáku kanyl, kolik jednotek je nutné do kanyly naplnit podle délky jehly a hadičky.
 
 ## Pozadí
 
@@ -287,21 +290,21 @@ V závislosti na druhu vaší práce možná používáte jiné nastavení pro p
 
 ### Sporty
 
-You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
+Budete muset změnit své staré sportovní návyky z doby, kdy jste ještě nepoužívali smyčku. Pokud budete při sportu dokrmovat sacharidy jako dříve, systém uzavřené smyčky to pozná a bude se snažit je korigovat.
 
-So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
+Takže byste sice měli více zkonzumovaných sacharidů, ale smyčka by na ně zároveň vydala inzulin.
 
-When looping you should try these steps:
+Při používání smyčky byste měli vyzkoušet tyto kroky:
 
-* Make a [profile switch](../Usage/Profiles.md) < 100%.
-* Set an [activity temp target](../Usage/temptarget#activity-temp-target) above your standard target.
-* If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
+* Proveďte [přepnutí profilu](../Usage/Profiles.md) < 100%.
+* Nastavte [dočasný cíl Aktivita](../Usage/temptarget#activity-temp-target), který bude vyšší než vaše běžná cílová hodnota.
+* Jestliže používáte SMB, zkontrolujte, že máte vypnuté možnosti [„Povolit SMB s vysokými dočasnými cíli“](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) a [„Vždy povolit SMB“](../Usage/Open-APS-features#enable-smb-always).
 
-Pre- and postprocessing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
+Je důležité změnit tato nastavení s dostatečným předstihem i následně po sportu. Proveďte změny v čase před sportem a zvažte vliv svalového plnění.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.rst) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
+Pokud se věnujete sportu pravidelně ve stejný čas (např. lekce ve fitku), zvažte možnost použití [automatizace](../Usage/Automation.rst) pro přepnutí profilu a nastavení dočasného cíle. Bylo by možné použít automatizaci na základě polohy, ale obtížně se pak kontroluje včasné provedení změny nastavení.
 
-The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
+Procentuální hodnota přepnutí profilu, hodnota pro váš dočasný cíl Aktivita a optimální čas pro změnu nastavení jsou velmi individuální. Při zjišťování správných hodnot se v zájmu bezpečnosti držte při zdi (začněte raději s nižší procentuální hodnotou a vyšším dočasným cílem).
 
 ### Sex
 

@@ -37,10 +37,9 @@
 --------------------------------------------------
 Можно попробовать изменить настройки блокировки шума в xdrip (Настройки - Настройки между приложениями - Блокировка шумов), напр. "Блокировать Очень высокий шум и хуже".  См. также `Сглаживание данных ГК <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
-Negative Sensor Age
+Отрицательный срок работы сенсора
 --------------------------------------------------
 .. image:: ../images/Troubleshooting_SensorAge.png
-  :alt: Negative sensor age
+  :alt: Отрицательный срок работы датчика
 
-This occurs if there is either a double "CGM Sensor Insert" entry in careportal or a sensor insert with wrong date. Go to treatments tab > careportal and delete the wrong entry.
-
+Это происходит, если на вкладке`действия / menu <../Configuration/Config-Builder.html#actions>`_ имеется двойная запись или неверно проставлена дата установки сенсора. Перейдите на вкладку назначений > портал терапии и удалите неверную запись.

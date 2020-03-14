@@ -1,36 +1,36 @@
-# How-to configure a Huawei phone
+# Kaip sukonfigūruoti "Huawei" telefoną
 
-There are different options, some Android specific, some Huawei specific:
+Yra įvairių variantų, kai kurie būdingi konkrečiai "Android", kai kurie - "Huawei":
 
-* Add AndroidAPS and xdrip+ to apps list which ignore battery optimisations:
+* Pridėti AndroidAPS ir xdrip+ į programų sąrašą, kuris ignoruoja baterijos optimizavimą:
   
-  * Settings / App / Settings / Special autorisations / Ignore battery optimisation / Select "All applications" / Set app to allowed
+  * Nustatymai / Programos / Nustatymai / Specialusis autorizavimas / Ignoruoti baterijos optimizavimą / Pasirinkite "Visos programos" / Suteikti programoms leidimą
     
-    ![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
+    ![Huawei - ignoruoti baterijos optimizavimą](../images/Huawei_BatteryOptimization.png)
 
-* Set battery option settings:
+* Nustatyti baterijos parinkties parametrus:
   
-  * Settings / App / Select AndroidAPS/xdrip+ / Under Battery / App launch
+  * Nustatymai / Programos / pasirinkti AndroidAPS/xdrip+ / ties Baterija / Programos paleidimas
     
-    * Make sure to remove "automatic management"
-    * Allow:
+    * Įsitikinkite, kad pašalinta "automatinis valdymas"
+    * Leisti:
       
-      * Automatic launch
-      * Secondary launch (can be launched from other apps)
-      * Background run
+      * Automatinis paleidimas
+      * Antrinis paleidimas (gali būti paleista iš kitų programų)
+      * Veikimas fono režimu
         
-        ![Huawei - battery options](../images/Huawei_BatteryOptions.png)
+        ![Huawei baterijos funkcijos](../images/Huawei_BatteryOptions.png)
 
-* Lock App
+* Užrakinti programą
   
-  * Go into App recent list and select the lock icon
+  * Eikite į neseniai naudotų programų sąrašą ir pasirinkite užrakto piktogramą
     
-    ![Huawei - lock app](../images/Huawei_LockApp.png)
+    ![Huawei - užrakinti programą](../images/Huawei_LockApp.png)
 
-For xdrip+, you can also enable persitent notifications (within xdrip+ app):
+Xdrip+ galite pasirinkti naudoti nuolatinius pranešimus (per xdrip+ programą):
 
 * Setttings / less common settings / other misc options / Run Collector in foreground
   
-  ![xdrip+ settings - collector in foreground](../images/xdrip_collector_foreground.png)
+  ![xdrip+ parametrai - kolektorius priekiniame plane](../images/xdrip_collector_foreground.png)
 
-Depending on Android version, these settings are somewhere else. These explanations are for Android 8.1.
+Priklausomai nuo turimos Android versijos, šie nustatymai gali būti kitur. Šie paaiškinimai yra skirti Android 8.1.
