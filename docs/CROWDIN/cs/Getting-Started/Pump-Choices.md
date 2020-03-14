@@ -4,6 +4,7 @@ AndroidAPS v současné době funguje s těmito pumpami:
 
 * Accu-Chek Combo
 * Accu-Chek Insight
+* some old Medtronic
 * DanaR
 * DanaRS 
 
