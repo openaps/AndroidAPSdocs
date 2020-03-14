@@ -105,7 +105,8 @@ V závislosti na ovladači pumpy vybraném v konfiguraci se zde mohou vyskytovat
 * [Inzulinová pumpa DanaR](../Configuration/DanaR-Insulin-Pump.md) 
 * [Inzulinová pumpa DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Accu Chek Combo Pump](../Configuration/Accu-Chek-Combo-Pump.md) 
-* [Pumpa Medtronic](..//Configuration/MedtronicPump.md)
+* [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md) 
+* [Medtronic Pump](..//Configuration/MedtronicPump.md)
 
 Používáte-li AndroidAPS pouze jako otevřenou smyčku, vyberte v nastavení Virtuální pumpu.
 

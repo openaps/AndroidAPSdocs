@@ -2,6 +2,8 @@
 
 *These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
 
+**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
+
 * In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
 
 * In AndroidAPS go to Config Builder and select 'DanaRS'
@@ -33,7 +35,7 @@
 
 In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
-![Alarme de entrega de insulina](../images/DanaRS_Error_bolus.png)
+![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
 * In most cases this is just a communication issue and the correct amount of insulin is delivered.
 * Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.

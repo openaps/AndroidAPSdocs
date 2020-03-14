@@ -2,6 +2,8 @@
 
 *Naudokite šias instrukcijas AAPS programėlės ir DanaRS (nuo 2017 m.) pompos konfigūravimui. Jei turite DanaR pompą, skaitykite [DanaR insulino pompa](./DanaR-Insulin-Pump).*
 
+**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
+
 * Programėlė naudoja tik "BASAL A". Programa pati perrašo duomenis pompoje.
 
 * AndroidAPS programoje eikite į Konfigūraciją ir pasirinkite DanaRS.
@@ -31,9 +33,9 @@
 
 ### Klaida suleidžiant insuliną
 
-Jei ryšys tarp AAPS ir DanaRS pompos nutrūksta boluso suleidimo metu (pvz.: Jūs nueinate per toli nuo telefono), Jūs matysite klaidos pranešimą ir girdėsite garsinį signalą.
+In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
-![Insulino tiekimo perspėjimas](../images/DanaRS_Error_bolus.png)
+![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
 * Dažniausiai tai tik ryšio klaida ir visas insulino kiekis sėkmingai suleidžiamas.
 * Patikrinkite, ar suleistas teisingas insulino kiekis pompos istorijoje (pačioje pompoje arba AAPS skirtuke Dana > Pompos istorija > Bolusai.
@@ -42,7 +44,7 @@ Jei ryšys tarp AAPS ir DanaRS pompos nutrūksta boluso suleidimo metu (pvz.: J�
 
 ## Specialūs veiksmai keičiant telefoną
 
-Kai keičiate seną telefoną į naują, turite atlikti šiuos veiksmus:
+When switching to a new phone the following steps are neccessary:
 
 * **Eksportuoti nustatymus** senajame telefone
   

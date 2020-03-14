@@ -2,6 +2,8 @@
 
 *Te instrukcje dotyczą konfiguracji aplikacji i pompy, jeśli masz DanaRS wyprodukowaną po 2017 roku. Odwiedź [ Pompa insulinowa DanaR ](./DanaR-Insulin-Pump), jeśli zamiast niej masz oryginalną pompę DanaR.*
 
+**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
+
 * W pompie DanaRS jest używana baza „BASAL A”. Istniejące dane zostaną zastąpione.
 
 * W AndroidAPS przejdź do zakładki Konfiguracja > Pompa i wybierz „DanaRS”
@@ -31,9 +33,9 @@
 
 ### Błąd podczas podawania insuliny
 
-W przypadku utraty połączenia między AAPS i Dana RS podczas podawania insuliny w bolusie (tzn. Odchodzisz od telefonu, gdy Dana RS pompuje insulinę) zobaczysz następujący komunikat i usłyszysz dźwięk alarmu.
+In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
-![Alarm podawania insuliny](../images/DanaRS_Error_bolus.png)
+![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
 * In most cases this is just a communication issue and the correct amount of insulin is delivered.
 * Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
@@ -42,7 +44,7 @@ W przypadku utraty połączenia między AAPS i Dana RS podczas podawania insulin
 
 ## Dodatkowe informacje związane z wymianą telefonu
 
-Jeśli chcesz zmienić telefon na nowy, konieczne są następujące kroki:
+When switching to a new phone the following steps are neccessary:
 
 * ** Eksportuj ustawienia ** na starym telefonie
   
@@ -64,4 +66,4 @@ Jeśli chcesz zmienić telefon na nowy, konieczne są następujące kroki:
 
 ## Strefy czasowe, podróżowanie z pompą Dana RS
 
-Informacje na temat podróżowania w różnych strefach czasowych można znaleźć w sekcji [ Strefa czasowa, podróżując z pompą ](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).

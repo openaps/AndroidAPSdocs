@@ -2,6 +2,8 @@
 
 *Эти инструкции подойдут для настройки приложения AAPS и помпы DanaRS, выпускаемой с 2017 года. Если у вас оригинальная помпа DanaR, перейдите на страницу [DanaR](./DanaR-Insulin-Pump).*
 
+**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
+
 * В помпе DanaRS приложением используется переменная "BASAL A". Существующие данные перезаписываются.
 
 * В AndroidAPS перейдите в Конфигуратор и выберите 'DanaRS'
@@ -31,9 +33,9 @@
 
 ### Ошибка во время подачи инсулина
 
-В случае, если связь между AAPS и Dana RS теряется во время подачи болюса (например вы отошли от телефона когда дана RS подает инсулин) вы увидите сообщение и услышите сигнал.
+In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
-![Оповещение - подача инсулина](../images/DanaRS_Error_bolus.png)
+![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
 * В большинстве случаев это просто проблема связи и нужное количество инсулина все равно подается.
 * Проверьте в истории помпы (либо на помпе, либо через вкладку Dana > история помпы> болюс), был ли подан правильный болюс.
@@ -42,7 +44,7 @@
 
 ## Отдельное замечание при смене телефона
 
-При переходе на новый телефон необходимы следующие шаги:
+When switching to a new phone the following steps are neccessary:
 
 * Выполнить **Экспорт настроек** на вашем старом телефоне
   
