@@ -105,6 +105,7 @@ The options here will vary depending on which pump driver you have selected in '
 * [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) 
 * [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Αντλία Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
+* [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md) 
 * [Medtronic Pump](..//Configuration/MedtronicPump.md)
 
 If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
