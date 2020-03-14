@@ -33,15 +33,15 @@ AndroidAPS est conçu pour être *contrôlé* par les montres Android Wear. Si v
 Les fonctions suivantes peuvent être déclenchées à partir de la montre :
 
 * définir une cible temporaire
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
+* utiliser l'assistant bolus (les paramètres à prendre en compte dans le calculs peuvent être définis dans [Paramètres de l'Assistant](../Configuration/Config-Builder#wear) sur le téléphone)
 * administrer des eGlucides
-* administer a bolus (insulin + carbs)
-* watch settings
-* status 
-    * check pump status
-    * check loop status
-    * check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
-    * show TDD (Total daily dose = bolus + basal per day)
+* administrer un bolus (insuline + glucides)
+* afficher les paramètres sur la montre
+* état 
+    * vérifier l'état de la pompe
+    * vérifier l'état de la pompe
+    * vérifier et modifier le profil (décalage horaire + pourcentage)
+    * montrer le DTI (Dosage Total d'Insuline quotidien = bolus + basale par jour)
 
 ## Cadrans AAPS
 
