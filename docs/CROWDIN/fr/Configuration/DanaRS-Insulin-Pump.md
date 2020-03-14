@@ -2,7 +2,7 @@
 
 *Ces instructions décrivent la configuration de l’application et de votre pompe si vous avez une DanaRS commercialisée depuis 2017. Visitez la [pompe à insuline Dana R](./DanaR-Insulin-Pump) si vous avez plutôt la pompe initiale DanaR.*
 
-**DanaRS with new firmware v3 cannot be used with AndroidAPS!**
+**La DanaRS avec le nouveau firmware v3 ne peut actuellement pas être utilisée avec AndroidAPS !**
 
 * Sur la pompe DanaRS, pompe « BASAL A » est utilisé par l'application. Les données existantes se font écrasé.
 
@@ -33,9 +33,9 @@
 
 ### Erreur lors de la distribution de l'insuline
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+Dans le cas où la connexion entre AAPS et DanaRS est perdue pendant un bolus d'insuline (par ex. vous vous éloignez de votre téléphone alors que la DanaRS est en train de délivrer de l'insuline), vous verrez le message suivant et vous entendrez une alarme sonore.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Alarme d'administration de l'insuline](../images/DanaRS_Error_bolus.png)
 
 * Dans la plupart des cas c'est juste un problème de communication et la quantité d'insuline délivrée est correcte.
 * Vérifiez dans l'historique de la pompe (à la pompe ou à l'aide de l'onglet Dana > historique de la pompe > bolus) si le bolus est correct.
@@ -44,7 +44,7 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 ## Remarque spéciale lors du changement de téléphone
 
-When switching to a new phone the following steps are neccessary:
+Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessaires :
 
 * **Exportez les paramètres** sur votre ancien téléphone
   
