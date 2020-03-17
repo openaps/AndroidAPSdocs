@@ -105,8 +105,8 @@
 * [Инсулиновая помпа DanaR](../Configuration/DanaR-Insulin-Pump.md) 
 * [Инсулиновая помпа DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Помпа Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
-* [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md) 
-* [Medtronic Pump](..//Configuration/MedtronicPump.md)
+* [Помпа Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) 
+* [Помпа Medtronic](..//Configuration/MedtronicPump.md)
 
 Для работы открытого цикла AndroidAPS, в конфигураторе выберите виртуальную помпу.
 
