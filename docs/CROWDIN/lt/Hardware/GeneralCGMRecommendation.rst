@@ -19,7 +19,7 @@ Sensoriaus nustatymas (G6)
 
 Įvedę sensorių, siųstuvą galima užfiksuoti ant jo platformos. Įspėjimas! Pirmiausia spustelėkite kvadratinę pusę, tada stumkite apvalią pusę.
 
-Troubleshooting 
+Trikčių šalinimas 
 ==================================================
 
 Ryšio problemos
@@ -42,4 +42,4 @@ Neigiamas sensoriaus amžius
 .. nuotrauka:: ../images/Troubleshooting_SensorAge.png
   :alt: Neigiamas jutiklis amžius
 
-This occurs if there is either a double "CGM Sensor Insert" entry in `actions tab / menu <../Configuration/Config-Builder.html#actions>`_ or a sensor insert with wrong date. Eikite į terapijos nustatymus > priežiūra ir ištrinkite klaidingą įrašą.
+Tai nutinka, kai arba yra įvestas dvigubas "NGS jutiklis įvestas" įrašas veiksmų skirtuke / meniu <../Configuration/Config-Builder.html#actions>`_ arba jutiklis įvestas su bloga data. Eikite į terapijos nustatymus > priežiūra ir ištrinkite klaidingą įrašą.
