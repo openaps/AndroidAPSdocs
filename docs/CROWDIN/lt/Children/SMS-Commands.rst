@@ -125,7 +125,7 @@ Kiti
 * HELP BOLUS
    * Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
-Troubleshooting
+Trikčių šalinimas
 ==================================================
 Multiple SMS
 --------------------------------------------------
