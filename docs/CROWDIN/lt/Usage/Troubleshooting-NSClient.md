@@ -1,20 +1,20 @@
-# Troubleshooting NSClient
+# Trikčių Diagnostika NSClient
 
-NSClient rely on stable communication with Nightscout. Unstable connection leads to synchronization errors and high data usage.
+NSClient priklauso nuo stabilaus bendravimo su Nightscout. Nestabilus ryšys lemia sinchronizacijos klaidas ir didelį duomenų išnaudojimą.
 
-If nobody is following you on Nightscout you can pause NSClient to save (a lot) battery life or setup connection only on wifi and during charging.
+Jei niekas neseka jūsų Nightscout, galite sustabdyti NSClient - tuo (labai) prailginsite baterijos gyvavimo laiką - arba nustatyti ryšį tik esant bevieliui ryšiui ir tik krovimo metu.
 
-* How to detect unstable connection?
+* Kaip aptikti nestabilų ryšį?
 
-Go to NSClient tab in AAPS and watch the log. Common behavior is to receive PING every ~30s and almost none reconnection messages. If you see many reconnections there is a problem. Since AndroidAPS 2.0 when such behavior is detected NSClient is paused for 15 minutes and message "NSClient malfunction" on Overview is displayed.
+Eikite į AAPS NSClient skirtuką ir žiūrėkite žurnalą. Paprastai PING'as yra gaunamas kas ~30 sek. ir beveik jokių susijungimo iš naujo pranešimų. Jei matote daug susijungimų iš naujo, vadinasi yra problema. Nuo AndroidAPS 2.0, kai toks elgesys yra aptinkamas, NSClient yra pristabdomas 15 minučių ir rodomas pranešimas "NSClient gedimas" Apžvalgoje.
 
-* Restart
+* Paleisti iš naujo
 
-What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
+Ką turėtumėte pirmu žingsniu pabandyti, tai perkrauti abu: Nightscout ir telefoną, tada žiūrėti ar problema pasikartoja
 
-* Phone issues
+* Telefono dalykai
 
-Android may put your phone into a sleep. Check you have exception for AndroidAPS in power options to allow run it on background all the time. Check it again on strong network signal. Try another phone.
+Android gali įjungti miego režimą telefone. Check you have exception for AndroidAPS in power options to allow run it on background all the time. Check it again on strong network signal. Try another phone.
 
 * Nightscout
 
