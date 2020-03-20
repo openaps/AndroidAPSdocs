@@ -14,12 +14,12 @@ Ką turėtumėte pirmu žingsniu pabandyti, tai perkrauti abu: Nightscout ir tel
 
 * Telefono dalykai
 
-Android gali įjungti miego režimą telefone. Check you have exception for AndroidAPS in power options to allow run it on background all the time. Check it again on strong network signal. Try another phone.
+Android gali įjungti miego režimą telefone. Patikrinkite ar įtraukėte AndroidAPS į energijos taupymo išimtis, leidžiančias veikti programai fono režimu visą laiką. Dar kartą patikrinkite esant stipriam tinklo signalui. Pabandykite kitą telefoną.
 
 * Nightscout
 
-If you are on Azure for many people helped to move to Heroku. Recently was reported Azure workaround to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+Jei naudojate Azure, daugeliui žmonių padėjo perėjimas į Heroku. Neseniai buvo pranešta apie Azure problemos apėjimą, programos nustatymuose nustatant HTTP protokolą į 2.0 ir Websockets į "Įjungti"
 
-* If you still get an error...
+* Jei jūs vis dar gaunate klaidą...
 
-Check the size of your database in mLab. 496MB means it is full and needs to be compacted. [Follow these OpenAPS instructions for checking the size of your database](https://openaps.readthedocs.io/en/latest/docs/Troubleshooting/Rig-NS-communications-troubleshooting.html#mlab-maintenance). If compacting does not work, you should consider donating your AndroidAPS data to the Data Commons (for research) before deleting any data collections. There are [instructions in the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Give%20Back-Pay%20It%20Forward/data-commons-data-donation.html) for how to accomplish this.
+Patikrinkite jūsų duomenų bazės dydį mLab. 496MB reiškia, ji yra pilna ir turi būti suspausta. [Atlikite šias OpenAPS tikrinimo instrukcijas duomenų bazės dydžiui nustatyti](https://openaps.readthedocs.io/en/latest/docs/Troubleshooting/Rig-NS-communications-troubleshooting.html#mlab-maintenance). Jei suspaudimas neveikia, galite apsvartyti padovanoti savo AndroidAPS duomenis Data Commons (tyrimui), prieš ištrinant bet kokius duomenis. Čia yra [nurodymai į OpenAPS dokumentaciją](https://openaps.readthedocs.io/en/latest/docs/Give%20Back-Pay%20It%20Forward/data-commons-data-donation.html) kaip tai padaryti.
