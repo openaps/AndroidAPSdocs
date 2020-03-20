@@ -46,7 +46,7 @@ Follow the manual on the [git installation page](../Installing-AndroidAPS/git-in
     
     ![All files up to date](../images/AndroidStudio361_Update04.png)
 
-## Generate signed APK
+## Generuoti pasirašytą APK (Generate signed APK)
 
 <!--- Text is maintained in page building-apk.md --->
 
@@ -86,7 +86,7 @@ Follow the manual on the [git installation page](../Installing-AndroidAPS/git-in
 
 ![File location apk](../images/AndroidStudio361_35.png)
 
-## Transfer APK to smartphone
+## Perkelkite APK į išmanųjį telefoną
 
 Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
