@@ -261,6 +261,6 @@ On your phone you have to allow installation from unknown sources. Manuals how t
 
 [See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
-## Troubleshooting
+## Trikčių šalinimas
 
 See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
