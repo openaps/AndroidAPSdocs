@@ -1,4 +1,4 @@
-Troubleshooting
+Trikčių šalinimas
 **************************************************
 You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem.
 
