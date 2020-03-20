@@ -106,7 +106,7 @@ Jei esate nustatę AMA Autosens, tada jums bus leista nustatyti maksimalų maist
 * [DanaRS insulino pompa](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Accu Chek Combo pompa](../Configuration/Accu-Chek-Combo-Pump.md) 
 * [Accu Chek Insight pompa](../Configuration/Accu-Chek-Insight-Pump.md) 
-* [Medtronic Pump](..//Configuration/MedtronicPump.md)
+* [Medtronic pompa](..//Configuration/MedtronicPump.md)
 
 Jei AndroidAPS naudojate kaip atvirą ciklą, įsitikinkite, kad konfigūratoriuje pasirinkote virtualią pompą.
 
