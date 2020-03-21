@@ -13,6 +13,25 @@ Als je daarna nog eens 30 dagen wacht met bijwerken (dus 90 dagen vanaf de datum
 
 Deze harde beperkingen zijn uiteraard niet bedoeld om je te pesten, maar zijn er om veiligheidsredenen. Nieuwe versies van AndroidAPS bevatten niet alleen nieuwe handige functies, maar ook belangrijke veiligheidsupdates. Daarom is het noodzakelijk dat elke gebruiker zijn app bijwerkt zodra een nieuwe versie beschikbaar komt. Helaas zijn er nog steeds signalen dat sommige gebruikers een hele oude versie van hun app gebruiken, dus dit is een poging om de veiligheid voor individuele gebruikers en de hele doe-het-zelf loop-gemeenschap te verbeteren.  
 
+Version 2.6.1
+==============
+Release date: 21-03-2020
+
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+Belangrijkste nieuwe functies
+-----
+* Allow to enter only https:// in NSClient settings
+* Fixed BGI displaying bug on watches
+* Fixed small UI bugs
+* Fixed Insight crashes
+* Fixed future carbs with Combo pump
+* Fixed LocalProfile -> NS sync
+* Insight alerts improvements
+* Improved detection of boluses from pump history
+* Fixed NSClient connection settings (wifi, charging)
+* Fixed sending of calibrations to xDrip
+
 Version 2.6.0
 ==============
 Release date: 29-02-2020
