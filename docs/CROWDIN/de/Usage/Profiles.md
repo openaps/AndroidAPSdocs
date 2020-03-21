@@ -18,6 +18,7 @@ Bei einem Profilwechsel kannst Du zwei zusätzliche Optionen wählen, die frühe
 
 * Wendet den gleichen Prozentsatz auf alle Parameter des Profils an. 
 * Wenn du ihn auf 130% setzt (was bedeutet, dass du eine 30% höhere Insulinresistenz hast), wird es die Basalrate um 30% erhöhen. Es senkt auch ISF und IC entsprechend (in diesem Beispiel werden sie durch 1,3 geteilt).
+
   
   ![Beispiel Profilwechsel mit Prozentsatz](../images/ProfileSwitchPercentageD.png)
 
@@ -43,6 +44,16 @@ Bei einem Profilwechsel kannst Du zwei zusätzliche Optionen wählen, die frühe
 ![Richtung der Zeitverschiebung für Profile](../images/ProfileSwitch_PlusMinus2.png)
 
 Der Mechanismus, dass eine Momentaufnahme des Profils gemacht wird, erlaubt eine sehr viel präzisere Berechnung der Vergangenheit und die Möglichkeit, Änderungen am Profil nachzuverfolgen.
+
+## Nutzung von lokalen Profilen
+
+Du kannst ab der Version 2.6 mehrere lokale Profile nutzen (und auch lokal verändern) und diese auch zu Nightsout hochladen. Beim Hochladen eines Profils aus AAPS wird in Nightscout eine neue Datenbank angelegt. 
+
+* Damit das Profil hochgeladen wird, auch nach einem Profilwechsel, muss in den Einstellungen unter "Nightscout Client" der Tab "Lade die Änderungen des lokalen Profils zu Nightscout hoch" aktiviert werden. 
+
+Profiländerungen werden nur dann zu Nightscout hochgeladen, wenn sie über den Reiter "lokale Profile" veränadert werden. Wenn du dein Profil über den Hauptscreen veränderst oder wechselt, wird es nicht zu Nightscout hochgeladen. Es besteht keine Verbindung zwischen dem Hauptscreen und dem Profilreiter, so dass im Profilreiter nicht unbedingt immer das aktuell gültige Profil angezeigt wird. 
+* Achte darauf, wenn du dein Profil an dieser Stelle ändern willst, erst das richtige, aktuelle Profil aufzurufen. 
+
 
 ## Fehlerbehebung bei Profil Fehlern
 
