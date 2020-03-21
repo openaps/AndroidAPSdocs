@@ -33,6 +33,9 @@ Buttons:
 * red X: delete
 * blue arrow: duplicate
 
+If you make any changes to your profile, make sure, you are editing the correct profile (in profile tab there is not always shown the actual profile beeing used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+
+
 #### Clone profile switch
 You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
 1. Go to treatments tab.
@@ -49,6 +52,9 @@ Local profiles can also be uploaded to Nightscout. The settings can be found in 
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
 
+Have in mind, only the profile switches made over the profile tab are uploaded to nightscout. If you do a profile switch by using the profile button in the mainscreen, it will not be uploaded.  
+
+
 Advantage:
 * no internet connection necessary to change profile settings
 * profile changes can be made directly on the phone
@@ -60,7 +66,7 @@ Disadvantage:
 
 ### NS Profile
 NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
-This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortlycreen  after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
 
 Do a <b>profile switch</b> to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
