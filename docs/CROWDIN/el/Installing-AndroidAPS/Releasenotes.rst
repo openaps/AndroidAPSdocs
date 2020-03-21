@@ -22,11 +22,11 @@ Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or ne
 Σημαντικά νέα χαρακτηριστικά
 -----
 * Allow to enter only https:// in NSClient settings
-* Fixed BGI displaying bug on watches
+* Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
 * Fixed small UI bugs
 * Fixed Insight crashes
 * Fixed future carbs with Combo pump
-* Fixed LocalProfile -> NS sync
+* Fixed `LocalProfile -> NS sync <../Configuration/Config-Builder.html#upload-local-profiles-to-nightscout>`_
 * Insight alerts improvements
 * Improved detection of boluses from pump history
 * Fixed NSClient connection settings (wifi, charging)
