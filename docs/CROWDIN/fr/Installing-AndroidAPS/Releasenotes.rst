@@ -22,11 +22,11 @@ Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une 
 Nouvelles fonctionnalités majeures
 -----
 * Permet de ne rentrer que https:// dans les paramètres NSClient
-* Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
+* Correction bug d'affichage `Impact Glycémique <../Getting-Started/Glossary.html>`_ sur les montres
 * Correction de petits bugs de l'interface utilisateur
 * Correction plantages Insight
 * Correction glucides futurs avec pompe Combo
-* Fixed `LocalProfile -> NS sync <../Configuration/Config-Builder.html#upload-local-profiles-to-nightscout>`_
+* Correction `Profil Local -> NS sync <../Configuration/Config-Builder.html#remonter-les-profils-locaux-sur-nightscout>`_
 * Amélioration des alertes Insight
 * Amélioration de la détection des bolus depuis l'historique de la pompe
 * Correction des paramètres de connexion NSClient (wifi, en charge)
