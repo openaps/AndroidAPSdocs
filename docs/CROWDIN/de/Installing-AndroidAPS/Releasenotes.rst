@@ -15,22 +15,22 @@ Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln,
 
 Version 2.6.1
 ==============
-Release date: 21-03-2020
+Erscheinungsdatum: 21.03.2020
 
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
 -----
-* Allow to enter only https:// in NSClient settings
-* Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
-* Fixed small UI bugs
-* Fixed Insight crashes
-* Fixed future carbs with Combo pump
-* Fixed `LocalProfile -> NS sync <../Configuration/Config-Builder.html#upload-local-profiles-to-nightscout>`_
-* Insight alerts improvements
-* Improved detection of boluses from pump history
-* Fixed NSClient connection settings (wifi, charging)
-* Fixed sending of calibrations to xDrip
+* Nur https:// in Nightscout-Client Einstellungen erlaubt
+* Fehlerbehebung `BGI <../Getting-Started/Glossary.html>`_ Anzeige auf der Smartwatch
+* Kleiner Anzeigefehler behoben
+* Fehlerbehebung Abstürze der Insight Pumpe
+* Fehlerbehebung zukünftige Kohlenhydrate bei der Combo Pumpe
+* Fehlerbehebung `Upload lokaler Profile <../Configuration/Config-Builder.html#lokale-profile-zu-nightscout-hochladen>`_ zu Nightscout
+* Verbesserung Alarme bei der Insight Pumpe
+* Verbesserte Erkennung der Boli aus der Pumpenhistorie
+* Fehlerbehebung Nightscout-Client Verbindungs-Einstellungen (WLAN, Laden)
+* Fehlerbeseitigung beim Senden der Kalibrierungen an xDrip+
 
 Version 2.6.0
 ==============
