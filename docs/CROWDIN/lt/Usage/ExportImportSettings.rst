@@ -14,15 +14,15 @@ Windows 10 kompiuteryje tai atrodo maždaug taip:
   .. nuotrauka:: ../images/SmartphoneRootLevelWin10.png
     :alt: AndroidAPS nuostatų failas - išmanusis telefonas prijungtas prie kompiuterio
 
-Exported information
+Eksportuojama informacija
 ==================================================
-Among others the following information is part of the settings export:
+Be kita ko, eksportuojami šie parametrai:
 
-* `Automation <../Usage/Automation.html>`_ events
-* `Config builder <../Configuration/Config-Builder.html>`_ settings
-* `Local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ settings
-* `Objectives <../Usage/Objectives.html>`_ status incl. `exam results <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
-* `Preferences <../Configuration/Preferences.html>`_ incl. `NS Client settings <../Configuration/Preferences.html#ns-client>`_
+* `Automatizavimo įvykiai <../Usage/Automation.html>`_
+* `Konfigūratoriaus <../Configuration/Config-Builder.html>`_ parametrai
+* 'Vietinio profilio <../Configuration/Config-Builder.html#local-profile-recommended>`_ parametrai
+* Tikslų <../Usage/Objectives.html>`_ statusas, įskaitant egzaminų rezultatus <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
+* `Nustatymai <../Configuration/Preferences.html>`_, įskaitant 'NS Kliento nustatymus <../Configuration/Preferences.html#ns-client>`_
 
 
 

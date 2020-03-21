@@ -33,15 +33,15 @@ AndroidAPS предусматривает возможность *управле
 Следующие функции могут быть запущены с часов:
 
 * установить временные целевые значения СК
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
+* использовать калькулятор болюса (переменные могут быть определены в [настройках](../Configuration/Config-Builder#wear) на телефоне)
 * расписать eCarbs
-* administer a bolus (insulin + carbs)
-* watch settings
-* status 
-    * check pump status
-    * check loop status
-    * check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
-    * show TDD (Total daily dose = bolus + basal per day)
+* подать болюс (инсулин + углеводы)
+* настройки часов
+* статус 
+    * проверить состояние помпы
+    * проверьте состояние замкнутого цикла
+    * проверить и изменить профиль, CPP (Circadian Percentage Profile = time shift + percentage)
+    * показать TDD (Общая суточная доза = болюс + базал в день)
 
 ## Циферблаты AAPS
 

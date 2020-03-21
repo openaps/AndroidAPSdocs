@@ -1,19 +1,19 @@
-# Smoothing blood glucose data
+# Gliukozės kraujyje duomenų išlyginimas
 
-If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
+Jei KG duomenys šokinėjantys/triukšmingi, AAPS gali neteisingai dozuoti insuliną, kas sąlygotų žemą arba aukštą KG. Dėl šios priežasties yra svarbu atjungti ciklą, kol problema bus išspręsta. Priklausomai nuo jūsų NGJ tokie dalykai gali kilti dėl NGJ konfigūravimo arba jutiklio problemų, puslapio sutrikimų. Kai kurios funkcijos, pavyzdžiui, "Įjungti SMB visada" ir "Įjungti SMB po angliavandenių" gali būti naudojami tik su geru KG šaltinio filtravimu.
 
-## Dexcom G5 App (patched)
+## Dexcom G5 programėlė (modifikuota)
 
-When using Dexcom G5 App (patched) your BG data is smooth and consistent. There are no restrictions in using SMB.
+Naudojant Dexcom G5 programėlę (modifikuotą) jūsų KG duomenys yra sklandūs ir pastovūs. Nėra jokių apribojimų naudoti SMB.
 
-## xDrip+ with Dexcom G5
+## xDrip+ su Dexcom G5
 
-Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
+Pakankamai sklandūs duomenys ir siunčiami tik tada, kai naudojate xDrip+ G5 "OB1 kolektorius natyviu režimu".
 
-## xDrip+ with Freestyle Libre
+## xDrip+ su Freestyle Libre
 
-When using xDrip+ as your data source for Freestyle Libre values until now you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB because the BG values are not smooth enough. Except this, there are a couple of things you can do to help reduce noise in the data.
+Naudojant Freestyle Libre vertes kaip duomenų šaltinį xDrip+, iki šiol negalite aktyvuoti "Įjungti SMB visada" ir "Įjungti SMB po angliavandenių", nes KG vertės nėra pakankamai sklandžios. Išskyrus tai, yra keletas dalykų, kuriuos galite padaryti, siekiant padėti sumažinti triukšmą duomenyse.
 
-**Smooth Sensor Noise.** In xDrip+ Settings > xDrip+ Display Settings ensure that Smooth Sensor Noise is turned on. This attempts to apply smoothing to noisy data.
+**Sumažinti jutiklio triukšmą.** xDrip+ Nustatymai > xDrip+ Ekrano nustatymai įsitikinkite, kad Sumažinti jutiklio triukšmą yra įjungta. Tai padės išlyginti triukšmingus duomenis.
 
-**Smooth Sensor Noise (Ultrasensitive).** If you are still seeing noisy data in xDrip+ you can apply more aggressive smoothing using the Smooth Sensor Noise (Ultrasensitive) setting. This will attempt to apply smoothing even on very low levels of detected noise. To do this, first [enable engineering mode in xDrip+](https://github.com/MilosKozak/AndroidAPS/wiki/Enabling-Engineering-Mode-in-xDrip). Then navigate to Settings > xDrip+ Display Settings and turn on Smooth Sensor Noise (Ultrasensitive).
+**Sumažinti jutiklio triukšmą (Ultrajautrumas).** Jei vis dar matote triukšmingus duomenis xDrip+, galite įjungti agresyvesnį išlyginimą, naudojant Sumažinti jutinklio triukšmą (Ultrajautrumas) nustatymą. Tai padės išlyginti duomenis, net esant labai žemam aptiktų triukšmų lygiui. Norint tai atlikti, iš pradžių [įjunkite inžinierijos režimą xDrip+](https://github.com/MilosKozak/AndroidAPS/wiki/Enabling-Engineering-Mode-in-xDrip). Tada eikite į Nustatymai > xDrip+ Ekrano nustatymai ir įjunkite Sumažinti jutiklio triukšmus (Ultrajautrumas).

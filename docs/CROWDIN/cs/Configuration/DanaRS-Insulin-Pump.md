@@ -12,13 +12,13 @@
 
 * Vyberte "DanaRS připojení nové pumpy" a zadejte sériové číslo pumpy DanaRS.
   
-      ![AAPS pairing Dana RS](../images/AAPS_DanaRSPairing.png)
+      ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
       
 
 * Zvolte Heslo k pumpě a vložte své heslo. (Výchozí heslo je 1234)   
   **Párování musíte potvrdit na pumpě!** Jedná se o stejný postup jako při párování jiných bluetooth zařízení (např. smartphonu nebo rádia v autě).
   
-      ![Dana RS confirm pairing](../images/DanaRS_Pairing.png)
+      ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
       
 
 * Vyberte rychlost bolusu, abyste změnili výchozí rychlost bolusu (12sec na 1U, 30sec na 1U nebo 60sec na 1U).

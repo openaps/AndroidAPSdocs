@@ -115,7 +115,7 @@ AndroidAPS for children
    SMS commands <./Children/SMS-Commands.rst>
    
 
-Troubleshooting
+Trikčių šalinimas
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1

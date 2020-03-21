@@ -33,15 +33,15 @@ AndroidAPS galima *valdyti* naudojant Android Wear išmanųjį laikrodį. Pavyzd
 Iš laikrodžio galite paleisti šias funkcijas:
 
 * nustatyti laikiną tikslą
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
+* naudoti boluso skaičiuoklę (skaičiavimo kintamieji gali būti apibrėžti telefono [nustatymuose](../Configuration/Config-Builder#wear))
 * administruoti iAV
-* administer a bolus (insulin + carbs)
-* watch settings
-* status 
-    * check pump status
-    * check loop status
-    * check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
-    * show TDD (Total daily dose = bolus + basal per day)
+* administruoti bolusus (insulinas + angliavandeniai)
+* nustatyti parametrus laikrodyje
+* būsena 
+    * patikrinti pompos būseną
+    * patikrinti ciklo būseną
+    * patikrinti ir pakeisti profilį, CPP (Cirkadinio procento profilis = laiko postūmis + procentinė dalis)
+    * parodyti TDD (Bendra paros dozė = bolusas + bazė per dieną)
 
 ## AAPS ciferblatai
 

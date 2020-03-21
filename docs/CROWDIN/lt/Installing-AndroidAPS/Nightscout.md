@@ -17,7 +17,7 @@ Taip pat NS turi tik įkėlimo (ne sinchronizavimo) funkciją AAPS nustatymuose.
 * Slinkite žemyn ir bakstelėkite "Išplėstiniai nustatymai".
 * Aktyvuokite "Įkelti tik į NS"
 
-![Nightscout upload only](../images/NSsafety.png)
+![Įkelti tik į Nightscout](../images/NSsafety.png)
 
 ### Tolimesni saugumo nustatymai
 
@@ -57,14 +57,14 @@ Manoma, kad jūs jau turite Nightscout svetainę, jei ne, apsilankykite [Nightsc
 
 ## Pusiau automatinis Nightscout diegimas
 
-This service is offered by fellow looper Martin Schiftan free of charge at the moment. If you like the service you can consider sending him a small donation (link in the navigation on the left side).
+Ši paslauga teikiama kolegos, uždaro ciklo naudotojo, Martin Schiftan šiuo metu nemokamai. Jei jums patinka ši paslauga, galite nusiųsti jam nedidelį atlygį (nuoroda navigacijos kairėje pusėje).
 
-**Benefits**
+**Privalumai**
 
-* You can install Nightscout with a few clicks and use it directly. 
-* Reduction of manual work as Martin tries to automate the administration.
-* All settings can be made via a user-friendly web interface. 
-* The service includes an automated basal rate check using Autotune. 
-* The server is located in Germany.
+* Galite įdiegti Nightscout keliais paspaudimais ir iškart naudoti. 
+* Sumažinti rankų darbą, nes Martin bando automatizuoti administravimą.
+* Visi nustatymai gali būti atliekami per patogią internetinę sąsają. 
+* Paslauga apima automatinį valandinės bazės patikrinimą, naudojant Autotune. 
+* Serveris yra Vokietijoje.
 
 <http://ns.10be.de/en/index.html>
