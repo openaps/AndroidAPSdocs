@@ -13,6 +13,25 @@ If you do not update for another 30 days (90 days from new release date) AAPS wi
 
 Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
 
+Version 2.6.1
+==============
+Release date: 21-03-2020
+
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+Major new features
+-----
+* Allow to enter only https:// in NSClient settings
+* Fixed BGI displaying bug on watches
+* Fixed small UI bugs
+* Fixed Insight crashes
+* Fixed future carbs with Combo pump
+* Fixed LocalProfile -> NS sync
+* Insight alerts improvements
+* Improved detection of boluses from pump history
+* Fixed NSClient connection settings (wifi, charging)
+* Fixed sending of calibrations to xDrip
+
 Version 2.6.0
 ==============
 Release date: 29-02-2020
