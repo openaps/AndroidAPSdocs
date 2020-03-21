@@ -20,7 +20,7 @@ De SMB-functie heeft een aantal veiligheidsmaatregelen:
 
 1. De kleinste waarde van onderstaande opties is de maximale dosis die een SMB mag geven:
     
-    * value corresponding to the current basal rate (as adjusted by autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
+    * waarde die hoort bij jouw huidige basaalstand (eventueel aangepast door autosens) voor de instelling "Maximum aantal minuten basaal om de SMB te limiteren tot", bijvoorbeeld de hoeveelheid basale insuline die je de komende 30 minuten zou krijgen, of
     * de helft van de insuline die je op dat moment nodig hebt, of
     * de overgebleven hoeveelheid van jouw maxIOB waarde in de instellingen.
 
@@ -28,7 +28,7 @@ De SMB-functie heeft een aantal veiligheidsmaatregelen:
 
 3. Allerlei berekeningen om het verloop van je glucosewaardes te kunnen voorspellen, bijv. met UAM (onaangekondigde maaltijden, unannounced meals). Zelfs zonder dat jij als gebruiker handmatig je koolhydraten invoert, zal UAM een sterke stijging van jouw glucosewaardes opmerken. Een stijging door maaltijden, adrenaline of andere invloeden. Vervolgens zal het systeem jouw waardes proberen te verlagen met SMB. Andersom werkt dit ook: om veilig te kunnen werken zal het systeem eerder stoppen met het geven van SMB als het merkt dat jouw glucosewaarde plotseling daalt. Daarom moet je UAM altijd ingeschakeld hebben wanneer je SMB gebruikt.
 
-**You must have started [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
+**Je moet [leerdoel 10](../Usage/Objectives#doel-10-activeren-van-extra-functies-overdag-zoals-smb-super-micro-bolus) hebben voltooid om SMB te kunnen gebruiken.**
 
 Zie ook: [OpenAPS documentatie voor oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) en [Tim's info over SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
@@ -141,7 +141,7 @@ Standaardwaarde: 4 (mag niet worden gewijzigd, tenzij je het echt wilt en weet w
 
 AMA (Advanced Meal Assist), oftewel "geavanceerde maaltijdhulp" is een OpenAPS functie uit 2017 (oref0). Dankzij AMA kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd.
 
-**You will need to have started [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature**
+**Je moet [leerdoel 9](../Usage/Objectives#doel-9-activeren-van-extra-functies-overdag-zoals-ama-geavanceerde-maaltijdhulp-advanced-meal-assist) hebben voltooid om AMA te kunnen gebruiken.**
 
 Meer informatie vind je in de [documentatie van OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 

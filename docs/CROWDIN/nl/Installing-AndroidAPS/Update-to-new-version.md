@@ -8,8 +8,8 @@
 
 * Bouw zo snel mogelijk een nieuwe app zodra er een nieuwe versie is uitgebracht. Je zult een [melding op het Overzichtscherm van AndroidAPS](../Installing-AndroidAPS/Releasenotes.html#release-notes) zien over de nieuwe versie.
 * Vanaf versie 2.3 moet je git gebruiken om te updaten. Bijwerken via zip-bestand werkt niet meer.
-* Gebruik [](https://developer.android.com/studio/)Android Studio Versie 3.5.1 of nieuwer om de apk te bouwen.
-* [Windows 10 32-bits systemen](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) worden niet ondersteund door Android Studio 3.5.1.
+* Please use [Android Studio Version 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.6.1.
 * Als je "xDrip+" gebruikt, zorg dan dat je de instelling voor [Identify receiver](../Configuration/xdrip#identificeer-ontvanger-identify-receiver) (identificeer ontvanger) hebt ingevuld in xDrip+.
 * Als je de Dexcom G6 gebruikt met de [aangepaste Dexcom-app](../Hardware/DexcomG6#g6-met-aangepaste-dexcom-app), dan moet je de versie uit de [2.4 map](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) gebruiken.
 
@@ -31,90 +31,72 @@ Volg de handleiding op de [git-installatiepagina](../Installing-AndroidAPS/git-i
 ## Bijwerken van jouw lokale kopie
 
 * Klik op: VCS-> Git-> Pull
-  
-  ![Android Studio - GIT - Pull](../images/Update_Pull.png)
+    
+    ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
 
 * Klik op Pull (laat alles staan zoals het is in het dialoogvenster)
-  
-  ![Android Studio - GIT - Pull 2](../images/Update_Pull2.png)
+    
+    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02.png)
+
+* Wait while download is in progress.
+    
+    ![Android Studio - Pull in progress](../images/AndroidStudio361_Update03.png)
+
+* When done Android Studio will inform you that "all files are up-to-date".
+    
+    ![All files up to date](../images/AndroidStudio361_Update04.png)
 
 ## Bouwen van de ondertekende APK
 
-<!--- Text is maintained in page building-apk.md ---> Selecteer in het menu "Build" en vervolgens "Generate Signed Bundle / APK...". (Het menu in Android Studio is gewijzigd per september 2018. In oudere versies ga je naar het menu "Build" en klik vervolgens op "Generate Signed APK...".)
+<!--- Text is maintained in page building-apk.md --->
 
-Ondertekenen betekent dat je een handtekening op jouw app zet, een soort digitale vingerafdruk. Dat is nodig omdat Android om veiligheidsredenen voorschrijft dat een app altijd zo'n handtekening moet hebben. Voor meer informatie over dit onderwerp, volg de link [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key). Veiligheid van apps is een groot en ingewikkeld onderwerp waarin je je niet verder hoeft te verdiepen.
+* Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
 
-![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
+![Build apk](../images/AndroidStudio361_27.png)
 
-In het volgende dialoogvenster selecteer je "APK" in plaats van "Android App Bundle" en klik op "Volgende".
+* Select "APK" (1.) instead of "Android App Bundle" and click "Next" (2.).
 
-![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
+![APK instead of bundle](../images/AndroidStudio361_28.png)
 
-Selecteer "App" en klik op "Next".
+* Make sure that module is set to "app".
+* Select your key store path by clicking on "Choose existing...".
+* Enter your passwords for key store and key.
+* If the box to remember passwords is checked you don't have to enter them. In case the box was not checked during last build and you cannot remember the passwords refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Click "Next".
 
-![Screenshot 40](../images/Installation_Screenshot_40.png)
+![Key store](../images/AndroidStudio361_Update05.png)
 
-Vul de locatie in waar jouw key store bestand (digitale handtekening) te vinden is, en het wachtwoord van jouw key store. Vul ook jouw key alias (naam van jouw 'handtekening') en het bijbehorende wachtwoord in.
+* Select build variant "fullRelease" (1.). 
+* Check boxes V1 and V2 for signature versions (2.).
+* Click "Finish". (3.)
 
-Selecteer 'Wachtwoorden onthouden'.
+![Finish build](../images/AndroidStudio361_32.png)
 
-Klik daarna op "Next" (Volgende).
+* Android Studio will display the information "APK(s) generated successfully..." after build is finished.
+* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* Easiest way to find the apk is to click on "Event log".
 
-![Key store bestandslocatie](../images/KeystorePathUpdate.PNG)
+![Build successfully - event log](../images/AndroidStudio361_33.png)
 
-Selecteer "full" (volledig) als "Flavour" (smaak) om de volledige AndroidAPS app te maken. Selecteer "V1 Jar Signature" (V2 is optioneel) en klik op "Finish". De volgende informatie kan handig zijn voor later.
+* In the event log section click "locate".
 
-* 'Release' is wat je hoort te kiezen als "Build Type", 'Debug' is alleen voor programmeurs.
-* Kies de "Flavour" die je wilt bouwen: 
-  * full/fullRelease (volledige versie van de app, deze heb je nodig om het systeem in closed loop modus te gebruiken)
-  * openloop (je krijgt alleen voorstellen voor tijdelijke basaalstanden, die jij als gebruiker handmatig op de pomp moet invoeren)
-  * pumpcontrol (functioneert alleen als afstandsbediening voor je pomp, zonder te loopen)
-  * nsclient (je kunt de real time gegevens van een andere looper bekijken je kunt dingen invullen in de care portal van die andere looper, wordt gebruikt door ouders van een loopend kind)
+![Event log - locate apk](../images/AndroidStudio361_34.png)
 
-![Screenshot 44](../images/Installation_Screenshot_44.png)
+* app-full-release.apk is the file you are looking for.
 
-In het Event Log kun je zien dat de Signed APK (ondertekende APK) succesvol is gebouwd.
-
-![Screenshot 45](../images/Installation_Screenshot_45.png)
-
-Klik op de "locate" link in het Event Log.
-
-![Screenshot 46](../images/Installation_Screenshot_46.png)
+![File location apk](../images/AndroidStudio361_35.png)
 
 ## Overzetten van de APK naar je telefoon
 
-**[Exporteer jouw instellingen](../Usage/ExportImportSettings#instellingen-exporteren) voor de zekerheid. Mocht er iets misgaan met bijwerken, dan ben je in ieder geval niet jouw AAPS instellingen kwijt.**
+Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
-<!--- Text is maintained in page building-apk.md ---> Een Verkenner venster zal openen. Het kan dat het er iets anders uitziet, dit screenshot is met een Linux computer gemaakt. In Windows zal de "Verkenner" openen, op een Mac OS X de "Finder" Hier zul je een map zien met daarin een APK bestand. Helaas is dit de VERKEERDE locatie, omdat "wear-release.apk" NIET de ondertekende app die we zoeken.
-
-![Screenshot 47](../images/Installation_Screenshot_47.png)
-
-Om de juiste locatie te openen, ga naar de map met AndroidAPS/app/full/release om het bestand "app-full-release.apk" te vinden. Zet dit bestand op jouw Android telefoon. Dit kan op verschillende manieren:
-
-* Bluetooth
-* Via de cloud (bijvoorbeeld Google Drive, Dropbox)
-* Simpelweg met een usb kabeltje tussen computer en telefoon 
-* Via e-mail (let op: sommige e-mailapps hebben de mogelijkheid om een apk-bestand als bijlage toe te voegen, geblokkeerd. Kies dan één van bovenstaande opties.)
-
-In dit voorbeeld wordt Gmail gebruikt omdat het vrij eenvoudig is. Om de zelf-ondertekende app te kunnen installeren, moet je Android hiervoor toestemming geven, ook al is dit bestand via Gmail ontvangen, wat normaal gesproken niet toegestaan is. Als je een andere manier gebruikt om de APK over te zetten op je telefoon, geef dan de toestemmingen waar hij naar vraagt zodat je verder kunt.
-
-![Screenshot 48](../images/Installation_Screenshot_48.png)
-
-In de instellingen van je telefoon is een optie om "Apps uit onbekende bronnen" toestemming te geven om te kunnen installeren. Daar moet je Gmail (in dit voorbeeld) toestemming geven om de APK te installeren.
-
-Selecteer "Toestaan van deze bron". Nadat je klaar bent met installeren, wordt het aanbevolen om de instellingen weer terug te zetten op "niet toestaan".
-
-![Installeren uit onbekende bronnen](../images/Installation_Screenshot_49-50.png)
-
-De laatste stap is om op het APK bestand te tikken en de app te installeren. Als hij niet uit zichzelf installeert en je hebt een vorige versie van AndroidAPS op je telefoon staan die met een andere handtekening is ondertekend, dan moet je die versie van de app eerst verwijderen. Vergeet niet om eerst je instellingen van die versie te exporteren vóórdat je de app verwijdert!
-
-Van harte! Je hebt de app geïnstalleerd op je telefoon en nu kun je verder met het instellen van AndroidAPS.
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
 ## Controleer AAPS versie op telefoon
 
-U kunt de AAPS-versie op jouw telefoon bekijken door op de drie stipjes in de rechterbovenhoek van het Overzicht scherm te tikken, en te kiezen voor 'Over'.
+You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
 
-![AAPS versie geïnstalleerd](../images/Update_VersionCheck.png)
+![AAPS version installed](../images/Update_VersionCheck.png)
 
 ## Problemen oplossen
 

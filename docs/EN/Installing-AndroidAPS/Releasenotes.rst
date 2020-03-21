@@ -32,7 +32,6 @@ Major new features
 * Fixed NSClient connection settings (wifi, charging)
 * Fixed sending of calibrations to xDrip
 
-
 Version 2.6.0
 ==============
 Release date: 29-02-2020
@@ -65,6 +64,9 @@ Major new features
 * New status line for Combo
 * GlucoseStatus improvement
 * Fixed TempTarget NS sync
+* New statistics activity
+* Allow Extended bolus in open loop mode
+* Android 10 alarm support
 * Tons on new translations
 
 Version 2.5.1

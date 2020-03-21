@@ -1,6 +1,6 @@
 De verschillende onderdelen 
 **************************************************
-AndroidAPS is meer dan de (zelfgebouwde) app alleen, er zijn ook andere onderdelen nodig om jouw closed loop systeem aan de praat te krijgen. Voordat je kiest welke onderdelen je wilt gebruiken, is het goed om eens te kijken naar de `Wat heb ik nodig <https://androidaps.readthedocs.io/en/latest/CROWDIN/nl/index.html#wat-heb-ik-nodig>`_sectie.
+AndroidAPS is meer dan de (zelfgebouwde) app alleen, er zijn ook andere onderdelen nodig om jouw closed loop systeem aan de praat te krijgen. Voordat je kiest welke onderdelen je wilt gebruiken, is het goed om eens te kijken naar de `Wat heb ik nodig <https://androidaps.readthedocs.io/en/latest/CROWDIN/nl/index.html#wat-heb-ik-nodig>`_ sectie.
    
 .. image:: ../images/modules.png
   :alt: Wat heb ik nodig
@@ -39,7 +39,7 @@ Je hebt een Android-smartphone met Android 6.0 of hoger nodig. Gebruikers houden
 
 Om een telefoon of horloge toe te voegen aan de lijst kun je dit `formulier <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_ invullen.
 
-Bij eventuele problemen met de spreadsheet stuur een e-mail naar `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, voor eventuele donaties van telefoon/smartwatch modellen die nog getest moeten worden kun je een e-mail sturen naar `donations@androidaps.org<mailto:hardware@androidaps.org>`_.
+Bij eventuele problemen met de spreadsheet stuur een e-mail naar `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, voor eventuele donaties van telefoon/smartwatch modellen die nog getest moeten worden kun je een e-mail sturen naar `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
 Insulinepomp
 --------------------------------------------------
@@ -48,7 +48,7 @@ AndroidAPS werkt momenteel met
 - `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (extra nodig: Ruffy app, minimaal Android 8.1 of anders LineageOS op jouw telefoon)
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
-- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_  
+- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_ (except pumps with new firmware v3) 
 - `bepaalde oudere Medtronic modellen <../Configuration/MedtronicPump.html>`_ (extra nodig: RileyLink/Gnarl hardware, Android telefoon met Bluetooth Low Energy / BLE-chipset)
 
 **Andere pompen** die mogelijk in de toekomst geschikt zullen zijn vind je op de `Mogelijk toekomstige insulinepompen <../Getting-Started/Future-possible-Pump-Drivers.html>`_ pagina.
@@ -103,7 +103,7 @@ Gebruikers houden een `lijst van geteste telefoons en smartwatches <https://docs
 
 Om een telefoon of horloge toe te voegen aan de lijst kun je dit `formulier <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_ invullen.
 
-Bij eventuele problemen met de spreadsheet stuur een e-mail naar `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, voor eventuele donaties van telefoon/smartwatch modellen die nog getest moeten worden kun je een e-mail sturen naar `donations@androidaps.org<mailto:hardware@androidaps.org>`_.
+Bij eventuele problemen met de spreadsheet stuur een e-mail naar `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, voor eventuele donaties van telefoon/smartwatch modellen die nog getest moeten worden kun je een e-mail sturen naar `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
 xDrip+
 --------------------------------------------------
@@ -127,4 +127,4 @@ Het duurt soms een tijdje voordat je alle onderdelen voor het maken van een clos
 Verder kun je deze documentatie doorlezen, je kunt online of offline contact opnemen met andere loopers. Lees wat `achtergrondinformatie <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ of bekijk welke vragen andere loopers stellen in de verschillende Facebook groepen (let hierbij wel op de kwaliteit van andermans suggesties, niet alles wat je leest is verstandig om blindelings na te doen).
 
 ** Klaar? **
-Als je jouw AAPS onderdelen bij elkaar hebt (gefeliciteerd!) of ten minste genoeg om te beginnen in de open loop modus, lees dan eerst de `Doelen <. /Usage/Objectives.html>`_ door en stel je `hardware <../index.html#component-setup>`_in.
+Als je jouw AAPS onderdelen bij elkaar hebt (gefeliciteerd!) of ten minste genoeg om te beginnen in de open loop modus, lees dan eerst de `Doelen <../Usage/Objectives.html>`_ door en stel je `hardware <../index.html#onderdelen-instellen>`_in.

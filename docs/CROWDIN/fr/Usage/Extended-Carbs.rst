@@ -39,8 +39,19 @@ Lorsque des eGlucides sont générés, une note Careportal est également créé
 
 Bolus étendu
 ==================================================
-Comme mentionné ci-dessus, les bolus étendus ou mixtes ne fonctionnent pas vraiment dans un environnement en boucle fermée. Par conséquent, il n'y a pas d'option pour faire un bolus étendu dans AndroidAPS. Voici pourquoi :
+Comme mentionné ci-dessus, les bolus étendus ou mixtes ne fonctionnent pas vraiment dans un environnement en boucle fermée. `Voir ci-dessous <../Usage/Extended-Carbs.html#pourquoi-les-bolus-etendus-ne-marchent-pas-avec-une-boucle-fermee>`_ pour plus de détails
 
+Bolus étendus et passage à en boucle ouverte
+--------------------------------------------------
+Certaines personnes ont demandé une option pour utiliser des bolus étendus dans AAPS, car ils voulaient traiter les aliments spéciaux comme ils avaient l'habitude de le faire. 
+
+C'est pourquoi à partir de la version 2.6, il existe une option pour les bolus étendus. Mais la boucle fermée sera automatiquement arrêtée et basculera en mode de boucle ouverte pendant la durée du bolus étendu. La quantité d'insuline, le temps restant et le temps total seront affichés sur la page d'accueil.
+
+.. image:: ../images/ExtendedBolus2_6.png
+  :alt: Bolus étendus dans AAPS 2.6
+
+Pourquoi les bolus étendus ne marchent pas avec une boucle fermée
+----------------------------------------------------------------------------------------------------
 1. La boucle détermine que maintenant 1,55 U / h doit être délivré. Que ce soit administré sous forme de bolus étendu ou de DBT n'a pas d'importance pour l'algorithme. En fait, certaines des pompes utilisent le bolus étendu. Que devrait-il arriver alors ? La plupart des pilotes de pompe arrêtent alors le bolus prolongé -> Vous n’avez même pas eu besoin de le démarrer.
 2. Si vous aviez le bolus étendu en entrée, que devrait-il se passer dans le modèle?
 

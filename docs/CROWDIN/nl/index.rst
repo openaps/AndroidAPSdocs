@@ -33,7 +33,7 @@ Wat heb ik nodig
    :glob:
    
    Onderdelen <./Module/module.rst>
-   Sample Setup <./Getting-Started/Sample-Setup.md>
+   Gebruiksvoorbeeld <./Getting-Started/Sample-Setup.md>
 
    
 AndroidAPS installeren
@@ -89,6 +89,7 @@ AndroidAPS gebruik
    Tijdelijk streefdoel <./Usage/temptarget.md>   
    Vertraagde koolhydraten (eCarbs) <./Usage/Extended-Carbs.rst>
    Automatisering <./Usage/Automation.rst>
+   Careportal (discontinued) <./Usage/CPbefore26.rst>
    Automatisering met andere apps <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
  

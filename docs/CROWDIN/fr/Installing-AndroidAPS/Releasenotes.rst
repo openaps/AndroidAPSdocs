@@ -13,9 +13,11 @@ Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à par
 
 Veuillez comprendre que cette modification n'a pas pour but de vous corriger mais est due à des raisons de sécurité. Les nouvelles versions d'AndroidAPS fournissent non seulement de nouvelles fonctionnalités, mais aussi d'importants correctifs de sécurité. Il est donc nécessaire que chaque utilisateur mette à jour a.s.a.p.. Malheureusement, il y a toujours des remontés de bug provenant de très anciennes versions, donc il s'agit d'une tentative d'améliorer la sécurité pour chaque utilisateur et toute la communauté DIY. Merci pour votre compréhension.
 
-Version 2.6
+Version 2.6.0
 ==============
 Date de sortie : 29-02-2020
+
+Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
 -----
@@ -29,7 +31,7 @@ Nouvelles fonctionnalités majeures
   * Les anciens changements de profil peuvent être dupliqués veres un nouveau profil local (décalage horaire et pourcentage appliqués)
   * Sélecteur pour les cibles temps
 * Le Profil Simple est supprimé
-* La fonction `Bolus étendus <../Usage/Extended-Carbs.html#id1>`_ désactive la boucle fermée
+* La fonction `Bolus étendus <../Usage/Extended-Carbs.html#bolus-etendu>`_ désactive la boucle fermée
 * Plugin MDT : Correction du bug entrées dupliquées
 * Les unités ne sont pas définies dans le profil mais c'est un paramètre global
 * Ajout de nouveaux paramètres à l'assistant de démarrage
@@ -43,6 +45,9 @@ Nouvelles fonctionnalités majeures
 * Nouvelle ligne d'état pour la Combo
 * Amélioration de l'état des Glucides
 * Correction synchronisation Cibles Temp avect NS
+* Nouvelle activité Statistiques
+* Bolus étendus autorisés en mode boucle ouverte
+* Support des alarmes Android 10
 * Des tonnes de nouvelles traductions
 
 Version 2.5.1

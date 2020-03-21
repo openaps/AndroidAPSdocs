@@ -23,6 +23,7 @@ Si vous avez commencé à utiliser le pilote Medtronic, merci de vous ajouter à
     - 523/723 (firmware 2.4A ou inférieur)
     - 554/754 version EU (firmware 2.6A ou inférieur)
     - 554/754 version canadienne (firmware 2.7A ou inférieure)
+- La vérification du firmware est décrite dans la [documentation d'OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) et la [documentation de Loop](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
 ## Configuration de la pompe
 

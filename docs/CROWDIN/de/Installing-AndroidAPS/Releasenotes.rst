@@ -13,9 +13,11 @@ Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualis
 
 Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln, sondern aus Sicherheitsgründen erfolgt. Neue Versionen von AndroidAPS bieten nicht nur neue Funktionen, sondern auch wichtige Sicherheitsfixes. Deshalb ist es notwendig, dass jeder Anwender so schnell wie möglich aktualisiert. Leider gibt es noch Fehlerberichte aus sehr alten Versionen, so dass dies ein Versuch ist, die Sicherheit für jeden einzelnen Benutzer und die gesamte DIY-Community zu verbessern. Danke für dein Verständnis.
 
-Version 2.6
+Version 2.6.0
 ==============
 Erscheinungsdatum: 29.02.2020
+
+Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
 -----
@@ -43,6 +45,9 @@ Wichtige neue Funktionen
 * Neue Statuszeile für Combo
 * Verbesserung des Glukosestatus
 * Fehlerbehebung: TempTarget NS-Synchronisation
+* Neue Aktivitätsstatistik
+* Verzögerter Bolus im Open Loop verfügbar
+* Android 10 Alarmunterstützung
 * Viele neue Übersetzungen
 
 Version 2.5.1

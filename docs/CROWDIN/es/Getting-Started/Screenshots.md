@@ -64,7 +64,7 @@ Esta sección también se puede configurar utilizando las opciones de la secció
    * **GRIS** barras que muestran una desviación debido a los carbohidratos. 
    * **VERDE** barras que muestran un BG mayor al que el algoritmo esperaba. 
    * **RED ** barras que muestran que BG es menor que el algoritmo esperaba.
-* **Sensibilidad** (línea blanca): muestra la sensibilidad que el Autosense ha detectado. La Sensibilidad es el cálculo de la respuesta a la insulina como resultado del ejercicio, las hormonas, etc.
+* **Sensitivity** (white line): It shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. La Sensibilidad es el cálculo de la respuesta a la insulina como resultado del ejercicio, las hormonas, etc.
 * **Actividad** (línea amarilla): muestra la actividad de la insulina, calculada por su perfil de insulina (no es un derivado de IOB). El valor es más alto para la insulina más próxima a la hora punta. Esto significaría un valor negativo cuando el IOB está disminuyendo. 
 
 ### Sección G
@@ -129,15 +129,11 @@ Aquí vemos el estado de la bomba de insulina - en este caso un Combo Accu-Chek.
 
 ## Portal de Atención (Care Portal)
 
-![Portal de Atención (Care Portal)](../images/Screenshot_care_portal.png)
-
-Este replica las funciones que encontrará en su Nightscout pantalla bajo el símbolo "+" que te permite añadir notas a sus registros. Functions such as recording when you change a pump site, or insulin cartridge should be self-explanatory.
-
-**BUT this section does not issue any commands to your pump!** So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus.
+Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
 
 ### Carb correction
 
-Care portal can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
 
 1. Check and remember actual COB and IOB on homescreen.
 2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
@@ -151,7 +147,7 @@ Care portal can be used to correct faulty carb entries (i.e. you over- or undere
    
    -> If carbs are not removed as intended and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
 
-6. Enter correct carb amount through care portal and make sure to set the correct event time.
+6. Enter correct carb amount through carbs button on homescreen and make sure to set the correct event time.
 
 7. If there is just one line in treatment tab including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
 

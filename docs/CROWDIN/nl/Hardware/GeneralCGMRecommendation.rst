@@ -42,4 +42,4 @@ Negatieve sensorleeftijd
 .. image:: ../images/Troubleshooting_SensorAge.png
   :alt: Negatieve sensorleeftijd
 
-This occurs if there is either a double "CGM Sensor Insert" entry in `actions tab / menu <../Configuration/Config-Builder.html#actions>`_ or a sensor insert with wrong date. Ga naar de Behandelingen tab > careportal en verwijder het verkeerde item.
+Dit gebeurt als er een dubbel "CGM Sensor Ingebracht"-item aanwezig is in de Acties tab/menu <../Configuration/Config-Builder.html#actions>`_ of er staat ergens een "CGM Sensor Ingebracht"-item met verkeerde datum. Ga naar de Behandelingen tab > careportal en verwijder het verkeerde item.

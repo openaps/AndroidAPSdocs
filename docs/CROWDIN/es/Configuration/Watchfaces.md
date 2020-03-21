@@ -33,11 +33,15 @@ AndroidAPS está diseñado para ser controlado por relojes Android Wear. Si dese
 Las siguientes funciones pueden activarse desde el reloj:
 
 * Establecer un objetivo temporal
-* Administrar un bolo
+* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
 * Administrar carbohidratos extendidos (eCarbs)
-* utilizar la calculadora del bolos (las variables de cálculo se pueden definir en [configuración ](../Configuration/Config-Builder#wear) en el teléfono)
-* comprobar el estado del lazo y la bomba
-* mostrar TDD (dosis diaria total = bolos + basal por día)
+* administer a bolus (insulin + carbs)
+* watch settings
+* status 
+    * check pump status
+    * check loop status
+    * check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+    * show TDD (Total daily dose = bolus + basal per day)
 
 ## Esferas de AAPS
 
@@ -141,9 +145,9 @@ La estrella rellena muestra el estado habilitado (**On**), y el icono de estrell
 * **Asistente en el Menú** (predeterminado `On`): se permite la interfaz del asistente en el menú principal para la entrada de Carbohidratos y Bolos
 * **Llenado en el Menú** (predeterminado `Off`): Permitir acción de Prime / Llenado desde el reloj
 * **Objetivo simple** (predeterminado `On`):
-  
-  * `On`: únicamente se indica un valor para un objetivo temporal (TT)
-  * `off`: deberás establecer un objetivo bajo y un objetivo alto para TT
+    
+    * `On`: únicamente se indica un valor para un objetivo temporal (TT)
+    * `off`: deberás establecer un objetivo bajo y un objetivo alto para TT
 
 * **Asistente Porcentaje** (por defecto `Off`): permite bolos de corrección del asistente (valor introducido en porcentaje antes de la notificación de confirmación)
 
@@ -194,13 +198,13 @@ Adicionalmente, hay tres compilaciones de `IMAGEN GRANDE` kind: **Fondo Oscuror*
 ### Ajustes relacionados con la Compilación
 
 * **Acción de Toque Compilación** (valor predeterminado `Valor predetermiando`): Decide qué diálogo se abre cuando se pulsa la compilación: 
-  * *Predeterminado*: acción específica para el tipo de compilación *(ver la lista anterior)*
-  * *Menú*: Menú principal de AAPS
-  * *Asistente*: asistente de bolos - calculadora de bolos
-  * *Bolo*: ingreso directo del valor de bolo
-  * *eCarb*: diálogo de configuración de Carbohidratos extendidos
-  * *Estado*: submenú de estado
-  * *Ninguno*: Deshabilita el pulsado en AAPS compilaciones
+    * *Predeterminado*: acción específica para el tipo de compilación *(ver la lista anterior)*
+    * *Menú*: Menú principal de AAPS
+    * *Asistente*: asistente de bolos - calculadora de bolos
+    * *Bolo*: ingreso directo del valor de bolo
+    * *eCarb*: diálogo de configuración de Carbohidratos extendidos
+    * *Estado*: submenú de estado
+    * *Ninguno*: Deshabilita el pulsado en AAPS compilaciones
 * **Unicode en Complications** (valor por omisión `On`): Cuando está `On`, la compilación utilizará caracteres Unicode para símbolos como `Δ` Delta, `formato vertical` o `en formato` Tasa Basal. La representación de los mismos depende de la fuente, y eso puede ser muy específico del reloj. Esta opción permite cambiar los símbolos Unicode `Off` cuando sea necesario - si la fuente utilizada por la pantalla personalizada no soporta esos símbolos - para evitar problemas gráficos.
 
 ## Sugerencias de rendimiento y batería

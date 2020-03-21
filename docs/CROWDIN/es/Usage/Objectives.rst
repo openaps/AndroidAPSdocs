@@ -4,6 +4,8 @@ Objetivos
 AndroidAPS tiene una serie de Objetivos que deben completarse para guiarlo a través de las características y configuraciones de lazo cerrado de manera segura.  Estos, aseguran que ha configurado correctamente todo lo detallado en las secciones anteriores, y que comprende lo que está haciendo su sistema y por qué, de modo que pueda confiar en él.
 
 Si estás **actualizando teléfonos** entonces puedes `exportar tus ajustes <../Usage/ExportImportSettings.html>`_ para mantener tu progreso a través de los objetivos. No solo se guardará su progreso a través de los objetivos, sino también su configuración de seguridad, como el máximo bolo, etc.  Si no exporta e importa su configuración, deberá volver a comenzar los objetivos desde el principio.  Es una buena idea hacer `copia de seguridad de tus ajustes <../Usage/ExportImportSettings.html>`_ frecuentemente sólo por si acaso.
+
+If you want to go back in objectives see `explanation below <../Usage/Objectives.html#go-back-in-objectives>`_.
  
 Objetivo 1: Establecimiento de la visualización y la supervisión, análisis de las basales y las tasas
 ====================================================================================================
@@ -24,7 +26,7 @@ Objetivo 2: Aprender a controlar AndroidAPS
    .. imagen:: ../images/Objective2_V2_5.png
      :alt: Captura de pantalla de objetivo 2
 
-Objetivo 3: Demuestra tus conocimientos
+Objective 3: Proof your knowledge
 ==================================================
 * Pasar un examen de múltiples opciones probando su conocimiento de AndroidAPS.
 * Haga clic en el texto naranja "No completado todavía" para acceder a la página con las opciones de preguntas y respuestas.
@@ -33,7 +35,11 @@ Objetivo 3: Demuestra tus conocimientos
      :alt: Captura de pantalla de objetivo 3
 
 * Se proporcionarán enlaces para guiarle en caso de que no esté seguro de las respuestas correctas todavía.
+
+Skip objectives
+--------------------------------------------------
 * Sólo si se ha cerrado un lazo con otro sistema (es decir, OpenAPS, iOS Loop) antes y puede probar esto (es decir,. al menos 3 meses de datos del lazo en Nightscout), puede enviar un correo electrónico a ` objectives@androidaps.org <mailto:objectives@androidaps.org>`_ con su dirección de NS y su código de petición para eludir el resto de los objetivos.
+* Please note that no support is provided through this mail account. Refer to the `support resources <../Where-To-Go-For-Help/Connect-with-other-users.html>`_ mentioned in this documentation.
 
 Objetivo 4: Iniciar en un lazo abierto
 ==================================================
@@ -48,7 +54,7 @@ Reducir el número de notificaciones
 * En Preferencias, puede establecer un porcentaje mínimo para la sugerencia de cambio de tasa basal.
 
    .. imagen:: ../images/OpenLoop_MinimalRequestChange2.png
-     :alt: Lazo Abierto pedido mínimo para cambio
+     :alt: Open Loop minimal request change
      
 * Además, no hace falta que actúe cada 5 minutos en todas las sugerencias...
 
@@ -64,7 +70,7 @@ Usted querrá establecer su objetivo más alto de lo normal hasta que esté segu
 
 El objetivo es el valor en el que se basan los cálculos, y no es el mismo que al que apuntamos para mantener la glucosa dentro del rango.  Si su objetivo es muy amplio (digamos, 3 o más mmol [50 mg/dl o más] de ancho), a menudo encontrarás poca acción de AAPS. Esto se debe a que eventualmente se prevé que la glucosa en sangre esté en algún lugar de esa amplia gama y, por lo tanto, no se sugieran muchas variaciones de basales temporales. 
 
-Es posible que desee experimentar con el ajuste de los destinos para que sea un rango más estrecho (digamos, 1 o menos mmol [20 mg/dl o menos] de ancho), y observe cómo cambia el comportamiento del sistema como resultado.  
+You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol [20 mg/dl or less] wide) and observe how the behavior of your system changes as a result.  
 
 Puede ver un rango más amplio (líneas verdes) en el gráfico para los valores que tiene como objetivo mantener su nivel de glucosa en sangre entrando valores diferentes en `Preferencias <../Configuration/Preferences.html>`_ > Rango para la visualización.
  
@@ -84,7 +90,6 @@ Objetivo 6: Empezando a cerrar el lazo con Baja Glucosa Suspender
   
 El lazo cerrado no corregirá los valores de bg alto en el objetivo 6, ya que se limita a la suspensión por baja glucosa. ¡Los valores altos de BG tienen que ser corregidos manualmente por usted!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 * Seleccionar lazo cerrado desde `Preferencias <../Configuration/Preferences.html>`_ o pulsando y manteniendo pulsado el botón Abrir Lazo en la parte superior izquierda de la pantalla de inicio.
 * Establezca el rango de destino un poco más alto de lo que normalmente pretende, sólo para estar seguros.
 * Vea cómo las basales temporales están activas al visualizar el texto basal azul en la pantalla de inicio o en la representación basal azul en el gráfico de pantalla.
@@ -107,8 +112,8 @@ Objetivo 7: Ajustar el lazo cerrado, elevando el IOB máximo por encima de 0 y r
 
 Objetivo 8: ajustar las basales y proporciones si es necesario, y luego habilitar el autosensado
 ====================================================================================================
-* Puede utilizar `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ como una de las formas para comprobar que las basales siguen siendo exactas, o realizar una prueba basal tradicional.
-* Habilite `autosens <../Usage/Open-APS-features.html>`_ durante un periodo de 7 días y vea la línea blanca en el gráfico de pantalla muestra cómo su sensibilidad a la insulina puede estar aumentando o cayendo como resultado del ejercicio o de las hormonas, etc, y manteniendo un ojo en la pestaña de informe OpenAPS cómo AndroidAPS está ajustando las basales y/o los objetivos en consecuencia.
+* You can use `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ as a one off to check your basals remain accurate or do a traditional basal test.
+* Enable `autosens <../Usage/Open-APS-features.html>`_ over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
 
 *No olvide registrar su lazo en `este formulario <http://bit.ly/nowlooping>`_ registrando AndroidAPS como su tipo de software de bucle DIY, si aún no lo has hecho.*
 
@@ -123,4 +128,11 @@ Objetivo 10: Habilitación adicional oref1 características para uso durante el 
 ====================================================================================================
 * Debe leer el capítulo `SMB en este wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ y `capítulo oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ para entender cómo funciona SMB, especialmente cuál es la idea detrás de cero-temporal.
 * A continuación, usted debe `subir maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ para tener los SMBs trabajando bien. maxIOB ahora incluye todo IOB, no sólo la basal añadida. Es decir, si se le da un bolo de 8 U para una comida y maxIOB es 7 U, no se entregarán SMB hasta que el IOB caiga por debajo de 7 U. Un buen inicio es maxIOB = promedio bolos de comidas + 3x valor máximo diario (máx. basal diario = el valor máximo por hora en cualquier segmento de tiempo del día - vea `objetivo 7 <../Usage/Objectives.html#objective-7-tuning-the-cerró-loop-loop-max-iob-arriba-0-and-gradualmente-lowering-bg-targets>`_ para una ilustración)
-* El valor predeterminado de min_5m_carbimpact en los valores de absorción ha cambiado de 3 a 8 al ir de AMA a SMB. Si está actualizando desde AMA a SMB, tiene que cambiarlo manualmente
+* El valor predeterminado de min_5m_carbimpact en los valores de absorción ha cambiado de 3 a 8 al ir de AMA a SMB. If you are upgrading from AMA to SMB, you have to change it manually.
+
+Go back in objectives
+====================================================================================================
+If you want to go back in objectives for whatever reason you can do so by clicking at "clear finished".
+
+   .. image:: ../images/Objective_ClearFinished.png
+     :alt: Go back in objectives

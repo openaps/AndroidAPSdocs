@@ -33,11 +33,15 @@ AndroidAPS est conçu pour être *contrôlé* par les montres Android Wear. Si v
 Les fonctions suivantes peuvent être déclenchées à partir de la montre :
 
 * définir une cible temporaire
-* administrer un bolus
+* utiliser l'assistant bolus (les paramètres à prendre en compte dans le calculs peuvent être définis dans [Paramètres de l'Assistant](../Configuration/Config-Builder#wear) sur le téléphone)
 * administrer des eGlucides
-* utilisez le calculateur de bolus (les paramètres à prendre en compte dans le calculs peuvent être définis dans [Paramètres de l'Assistant](../Configuration/Config-Builder#wear) sur le téléphone)
-* vérifier l'état de la boucle et de la pompe
-* montrer le DTI (Dosage Total d'Insuline quotidien = bolus + basale par jour)
+* administrer un bolus (insuline + glucides)
+* afficher les paramètres sur la montre
+* état 
+    * vérifier l'état de la pompe
+    * vérifier l'état de la pompe
+    * vérifier et modifier le profil (décalage horaire + pourcentage)
+    * montrer le DTI (Dosage Total d'Insuline quotidien = bolus + basale par jour)
 
 ## Cadrans AAPS
 
@@ -141,9 +145,9 @@ L'étoile remplie est pour l'état activé (**On**), et l'étoile vide indique q
 * **Assistant dans Menu** (par défaut `On`) : Autoriser l'action Assistant dans le menu principal pour renseigner les Glucides et faire des Bolus à partir de la montre
 * **Amorcer dans Menu** (par défaut `Off`) : Autoriser l'action Amorcer/Remplir à partir de la montre
 * **Cible unique** (par défaut `On`):
-  
-  * `On`: vous définissez une valeur unique pour une CT
-  * `Off`: vous définissez une cible basse et haute pour une CT
+    
+    * `On`: vous définissez une valeur unique pour une CT
+    * `Off`: vous définissez une cible basse et haute pour une CT
 
 * **Assistant Pourcentage** (par défaut `Off`) : Autoriser la correction du bolus à partir de l'assistant (valeur saisie en pourcentage avant la confirmation)
 
@@ -194,13 +198,13 @@ De plus, il y a trois complications de type `IMAGE LARGE` : **Fond d'écran noir
 ### Paramètres des complications
 
 * **Action Appui Complication** (par défaut `Défaut`) : Décide de l'action qui s'ouvre lorsque l'utilisateur appui sur la Complication : 
-  * *Défaut* : action spécifique à chaque complication *(voir la liste ci-dessus)*
-  * *Menu* : menu principal AAPS
-  * *Assistant* : assistant bolus - calculateur bolus
-  * *Bolus* : Bolus et glucides saisis directement
-  * *eGlucides* : boîte de dialogue de configuration eGlucides
-  * *Etats* : sous-menu d'états
-  * *Aucun* : Désactive l'action sur les complications AAPS
+    * *Défaut* : action spécifique à chaque complication *(voir la liste ci-dessus)*
+    * *Menu* : menu principal AAPS
+    * *Assistant* : assistant bolus - calculateur bolus
+    * *Bolus* : Bolus et glucides saisis directement
+    * *eGlucides* : boîte de dialogue de configuration eGlucides
+    * *Etats* : sous-menu d'états
+    * *Aucun* : Désactive l'action sur les complications AAPS
 * **Unicode dans Complications** (par défaut `On`) : Si `On`, la complication utilise des caractères Unicode pour les symboles tels que `Δ` Delta, `⁞` séparateur de point vertical ou `⎍` symbole du débit de basal. Le rendu de ces symboles dépend de la police, et cela peut être très spécifique au cadran. Cette option permet de désactiver les symboles `Unicode` quand c'est nécessaire - si la police utilisée par le cadran personnalisé ne prend pas en charge ces symboles - pour éviter les problèmes graphiques.
 
 ## Conseils sur les performances et la durée de vie des batteries

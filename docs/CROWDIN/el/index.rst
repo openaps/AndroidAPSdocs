@@ -89,6 +89,7 @@ AndroidAPS Χρήση
    Προσωρινοί στόχοι <./Usage/temptarget.md>   
    Extended carbs <./Usage/Extended-Carbs.rst>
    Αυτοματοποίηση <./Usage/Automation.rst>
+   Careportal (discontinued) <./Usage/CPbefore26.rst>
    Automation with 3rd party apps <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
  

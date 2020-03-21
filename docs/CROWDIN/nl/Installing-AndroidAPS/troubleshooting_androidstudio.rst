@@ -12,7 +12,7 @@ Mocht je jouw oude keystore bestand toch niet meer kunnen vinden, dan heb je een
 4. Bouwen van de ondertekende apk zoals beschreven op de pagina `Bijwerken naar een nieuwe versie <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 5. Verwijder de vorige AAPS-versie van jouw telefoon.
 6. Installeer de nieuwe AAPS-versie op jouw telefoon.
-7. `Instellingen importeren <../Usage/ExportImportSettings.html#instellingen-exporteren>`_ - mocht je ze op je telefoon niet kunnen vinden, kopieert ze dan vanaf de externe plek (computer, cloudopslag) waar je ze eerder had opgeslagen.
+7. `Instellingen importeren <../Usage/ExportImportSettings.html#instellingen-exporteren>`_ - mocht je ze op je telefoon niet kunnen vinden, kopieer ze dan vanaf de externe plek (computer, cloudopslag) waar je ze eerder had opgeslagen.
 8. En je kunt weer doorloopen!
 
 Kotlin compiler warning
@@ -134,16 +134,16 @@ Geen van de bovengenoemde
 Als geen van de bovenstaande tips je geholpen heeft, dan zou je de de app helemaal vanaf nul kunnen bouwen:
 
 1. `Instellingen exporteren <../Usage/ExportImportSettings.html>`_ (in AAPS-app die al op jouw telefoon is geïnstalleerd)
-2. Have your key password and key store password ready
-    In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components>`_.
+2. Houd jouw keystore file (digitale handtekening) en keystore wachtwoord bij de hand.
+    In het geval dat je het bestand kwijt bent en/of het wachtwoord bent vergeten dan kun je proberen om ze te vinden in de projectbestanden zoals `hier <https://youtu.be/nS3wxnLgZOo>`_beschreven. Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan. 
+3. Bouw app vanaf het begin zoals `hier <../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components>`_beschreven.
 4.	Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
 5. `Instellingen importeren <./Usage/ExportImportSettings.html>`_
 
 In het ergste geval
 ==================================================
-In het geval dat zelfs het bouwen van de app vanaf nul niet jouw probleem oplost, zou je kunnen proberen om Android Studio volledig te verwijderen. Sommige gebruikers hebben gemeld dat dit hun probleem heeft opgelost.
+Mocht zelfs het weer vanaf het begin bouwen van de app niet de oplossing zijn voor jouw probleem, dan zou je kunnen overwegen om Android Studio volledig van je computer te verwijderen en helemaal overnieuw te beginnen. Sommige gebruikers hebben gemeld dat dit hun probleem heeft opgelost.
 
-**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
+**Zorg ervoor dat echt alle bestanden die zijn gekoppeld aan Android Studio worden verwijderd.** Als je Android Studio en alle verborgen bestanden niet volledig verwijdert, dan kan dit leiden tot nieuwe problemen in plaats van jouw bestaande problemen op te lossen. Handleidingen voor volledige de-installatie kun je online vinden, bijv. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
 
-Install Android Studio from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#install-android-studio>`_ and **do not update gradle**.
+Installeer Android Studio zoals `hier <../Installing-AndroidAPS/Building-APK.html#install-android-studio>`beschreven_ en **update gradle niet**.

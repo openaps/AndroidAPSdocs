@@ -105,7 +105,8 @@ Las opciones aquí variarán según el controlador de la bomba que haya seleccio
 * [Bomba de insulina DanaR](../Configuration/DanaR-Insulin-Pump.md) 
 * [Bomba de insulina DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Bomba de insulina Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
-* [Infusora Medtronic](..//Configuration/MedtronicPump.md)
+* [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md) 
+* [Medtronic Pump](..//Configuration/MedtronicPump.md)
 
 Si usa AndroidAPS en lazo abierto, asegúrese de haber seleccionado Virtual Pump en config builder.
 

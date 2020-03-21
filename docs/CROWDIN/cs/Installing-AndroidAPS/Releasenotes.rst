@@ -13,26 +13,28 @@ Pokud neaktualizujete do dalších 30 dní (90 dní od nového vydání) přejde
 
 Prosím pochopte, že tato změna není určena, aby vás otravovala, ale je to kvůli bezpečnostním důvodům. Nové verze AndroidAPS neposkytují pouze nové funkce, ale také důležité bezpečnostní opravy. Proto je důležité, aby každý uživatel aktualizoval co nejdříve.. Bohužel stále existují hlášení o chybách z velmi starých verzí, takže se jedná o pokus zlepšit bezpečnost pro každého uživatele a celou komunitu DIY. Děkujeme za pochopení.
 
-Version 2.6
+Verze 2.6.0
 ==============
-Release date: 29-02-2020
+Datum vydání: 29. 02. 2020
+
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Hlavní nové funkce
 -----
-* Small design changes (startpage...)
-* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`_
-* New `LocalProfile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* Drobné úpravy vzhledu (úvodní obrazovka...)
+* Odstraněna karta/nabídka Péče - další podrobnosti `zde <../Usage/CPbefore26.html>`_
+* Nový `plugin Místního profilu <../Configuration/Config-Builder.html#local-profile-recommended>`_
 
-  * Local profile can hold more than 1 profile
-  * Profiles can be cloned and edited
-  * Ability of upload profiles to NS
-  * Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
-  * Veritical NumberPicker for targets
-* SimpleProfile is removed
-* `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
-* MDT plugin: Fixed bug with duplicated entries
-* Units are not specified in profile but it's global setting
-* Added new settings to startup wizard
+  * Do místního profilu lze nyní uložit více než 1 profil
+  * Profily lze kopírovat a upravovat
+  * Možnost nahrát profily do NS
+  * Stará přepnutí profilu lze kopírovat do nového profilu v Místním profilu (včetně posunu času a procentuální změny)
+  * Vertikální výběr hodnot pro cíle
+* Odstraněn Jednoduchý profil
+* Funkce `Rozloženého bolusu <../Usage/Extended-Carbs.html#id1>`_ - uzavřená smyčka bude deaktivována
+* Plugin MDT: Opravena chyba s duplicitními záznamy
+* Jednotky se nezadávají v profilu, ale v obecném nastavení aplikace
+* Přidáno nové nastavení do průvodce spuštěním
 * Different UI and internal improvements
 * `Wear complications <../Configuration/Watchfaces.html>`_
 * New `SMS commands <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
@@ -43,6 +45,9 @@ Hlavní nové funkce
 * New status line for Combo
 * GlucoseStatus improvement
 * Fixed TempTarget NS sync
+* New statistics activity
+* Allow Extended bolus in open loop mode
+* Android 10 alarm support
 * Tons on new translations
 
 Verze 2.5.1

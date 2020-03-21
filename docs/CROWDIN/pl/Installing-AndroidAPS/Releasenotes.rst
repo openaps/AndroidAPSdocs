@@ -13,15 +13,17 @@ If you do not update for another 30 days (90 days from new release date) AAPS wi
 
 Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
 
-Version 2.6
+Version 2.6.0
 ==============
 Release date: 29-02-2020
+
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Major new features
 -----
 * Small design changes (startpage...)
 * Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`_
-* New `LocalProfile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
 
   * Local profile can hold more than 1 profile
   * Profiles can be cloned and edited
@@ -43,10 +45,13 @@ Major new features
 * New status line for Combo
 * GlucoseStatus improvement
 * Fixed TempTarget NS sync
+* New statistics activity
+* Allow Extended bolus in open loop mode
+* Android 10 alarm support
 * Tons on new translations
 
 Version 2.5.1
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Release date: 31-10-2019
 
 Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
@@ -54,7 +59,7 @@ Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#imp
 * New versioning that will allow to do minor updates without triggering the update-notification.
 
 Version 2.5.0
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Release date: 26-10-2019
 
 Important notes
@@ -90,7 +95,7 @@ Major new features
 * Fixed bug in `SMS communicator <../Children/SMS-Commands.html>`_
 
 Version 2.3
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Release date: 25-04-2019
 
 Major new features
@@ -107,7 +112,7 @@ Major new features
 
 
 Version 2.2.2
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Release date: 07-04-2019
 
 Major new features
@@ -119,7 +124,7 @@ Major new features
 
 
 Version 2.2
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Release date: 29-03-2019
 
 Major new features
@@ -132,7 +137,7 @@ Major new features
 
 
 Version 2.1
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Release date: 03-03-2019
 
 Major new features
@@ -152,7 +157,7 @@ Misc
 
 
 Version 2.0
-==================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Release date: 03-11-2018
 
 Major new features

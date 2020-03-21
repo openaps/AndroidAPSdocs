@@ -13,20 +13,33 @@ Windows
 
 2. Définir le chemin d’accès git dans Android Studio
 --------------------------------------------------
-* Renseignez dans Android tudio où le fichier git.exe est situé : File - Settings 
+* Sélectionnez File > Settings 
 
   .. image:: ../images/Update_GitSettings1.png
     :alt: Android Studio - open settings
 
-* Dans la fenêtre suivante : Version Control - Git
+* Cliquez sur le petit triangle à côté de Version Control (1.) pour ouvrir le sous-menu.
+* Cliquez sur Git (2.).
+* Assurez-vous que la méthode de mise à jour "Merge" (3.) est sélectionnée.
+* Vérifiez si Android Studio peut localiser le chemin d'accès à git.exe automatiquement en cliquant sur le bouton "Test" (4.)
 
-* Choisissez le chemin d'accès correct : ... **/Git/bin** (incluant /bin)
+  .. image:: ../images/AndroidStudio361_09.png
+    :alt: Paramètres Android Studio
 
-* Assurez-vous que la méthode de mise à jour "Merge" est sélectionnée.
+* Si la configuration automatique est réussie, la version de git s'affiche.
+* Cliquez sur "OK" dans la boîte de dialogue (1.) et sur "OK" dans la fenêtre des paramètres (2.).
 
-  .. image:: ../images/Update_GitSettings2a.png
-    :alt: Android Studio - chemin GIT
-   
+  .. image:: ../images/AndroidStudio361_10.png
+    :alt: Installation automatic de git réussie
+
+* Si le fichier git.exe n'est pas trouvé, cliquez sur "OK" dans la boite de diablogue (1.) puis sur le bouton avec les 3 petits points (2.).
+* Utilisez la `fonction recherche <https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html>`_ dans l'explorateur windows pour trouver "git.exe" si vous n'êtes pas sûr de l'endroit où il est. Vous chercher un fichier git.exe situé dans un dossier \bin\.
+* Sélectionnez le chemin d'accès à git.exe et vérifiez que vous avez sélectionné le dossier ** \bin\ ** (3.) et cliquez sur "OK" (4.).
+* Fermez la fenêtre des paramètres en cliquant sur le bouton "OK" (5.).
+
+  .. image:: ../images/AndroidStudio361_11.png
+    :alt: Installation automatic de git ratée
+ 
 3. Redémarrer
 --------------------------------------------------
 * Redémarrez votre PC pour mettre à jour l'environnement système.
