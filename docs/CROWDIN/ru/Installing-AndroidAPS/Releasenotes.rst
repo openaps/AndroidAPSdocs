@@ -13,6 +13,25 @@ You will receive the following information as soon as a new update is available:
 
 Имейте в виду, что это изменение не предназначено для того, чтобы действовать вам на нервы, а существует по соображениям безопасности. Новые версии AndroidAPS не только обеспечивают новые возможности, но и содержат исправления безопасности. Поэтому необходимо, чтобы каждый пользователь обновлял приложение как можно чаще. К сожалению, все еще поступают сообщения об ошибках из очень старых версий, поэтому это попытка повысить безопасность каждого пользователя и всего сообщества. Благодарим за понимание!
 
+Version 2.6.1
+==============
+Release date: 21-03-2020
+
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+Новые возможности
+-----
+* Allow to enter only https:// in NSClient settings
+* Fixed BGI displaying bug on watches
+* Fixed small UI bugs
+* Fixed Insight crashes
+* Fixed future carbs with Combo pump
+* Fixed LocalProfile -> NS sync
+* Insight alerts improvements
+* Improved detection of boluses from pump history
+* Fixed NSClient connection settings (wifi, charging)
+* Fixed sending of calibrations to xDrip
+
 Version 2.6.0
 ==============
 Release date: 29-02-2020
