@@ -3,17 +3,17 @@ Tikslai
 
 AndroidAPS turi keletą mokymo programos tikslų, kuriuos įvykdę įvaldysite saugaus ciklo naudojimo funkcijas bei nustatymus.  Jie užtikrina, kad aukščiau aprašytus parametrus sukonfigūravote teisingai, ir kad suprantate, ką Jūsų sistema daro ir kodėl galite ja pasitikėti.
 
-Jei keičiate telefoną, galite `eksportuoti nustatymus <../Usage/ExportImportSettings.html>` - tokiu būdu jau pasiekti tikslai nebus prarasti. Kartu bus išsaugoti ir Jūsų saugumo parametrai, kaip maks bolusas ir pan.  Jei nustatymų eksportavimo ir importavimo neatliksite, Tikslų programą turėsite pradėti iš pradžių.  Geriausia `pasidaryti savo nustatymų atsarginę kopiją <../Usage/ExportImportSettings.html>`_ kuo dažniau.
+Jei **keičiate telefoną**, galite `eksportuoti nustatymus <../Usage/ExportImportSettings.html>`_ - tokiu būdu jau pasiekti tikslai nebus prarasti. Kartu bus išsaugoti ir Jūsų saugumo parametrai, kaip maks bolusas ir pan.  Jei nustatymų eksportavimo ir importavimo neatliksite, Tikslų programą turėsite pradėti iš pradžių.  Geriausia `pasidaryti savo nustatymų atsarginę kopiją <../Usage/ExportImportSettings.html>`_ kuo dažniau.
 
 If you want to go back in objectives see `explanation below <../Usage/Objectives.html#go-back-in-objectives>`_.
  
 Tikslas 1: vizualizacijos ir monitoringo nustatymai, bazės ir koeficientų analizė
 ====================================================================================================
-* Pasirinkite tinkamą glikemijos duomenų šaltinį.  Žr. `Glikemijos duomenų šaltinis <../Configuration/BG-Source.html>`.
+* Pasirinkite tinkamą glikemijos duomenų šaltinį.  Žr. `Glikemijos duomenų šaltinis <../Configuration/BG-Source.html>`_.
 * Pasirinkite tinkamą pompą Konfigūracijoje (pasirinkite Virtualią pompą, jei naudojate pompos modelį, kurio AndroidAPS sistema nepalaiko), kad būtų užtikrinta jos komunikacija su AndroidAPS.  
 * Jei naudojate DanaR pompą, įsitikinkite, kad laikėtės `DanaR insulino pompos <../Configuration/DanaR-Insulin-Pump.html>`_ instrukcijų, kad užtikrintumėte gerą ryšį tarp pompos ir AndroidAPS.
-* Vykdykite instrukcijas Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ puslapyje, kad įsitikintumėte, kad Nightscout gali priimti ir rodyti šiuos duomenis.
-NSClient URL turi būti įvestas **BE /api/v1/** pabaigoje - žr. NSClient nustatymai <../Configuration/Preferences.html#ns-client>`_.
+* Vykdykite instrukcijas 'Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ puslapyje, kad įsitikintumėte, kad Nightscout gali priimti ir rodyti šiuos duomenis.
+NSClient URL turi būti įvestas **BE /api/v1/** pabaigoje - žr. 'NSClient nustatymai <../Configuration/Preferences.html#ns-client>`_.
 
 *Jums gali tekti palaukti, kol bus perskaityta kita glikemijos reikšmė, kol AndroidAPS ją atpažins.*
 
@@ -23,7 +23,7 @@ Tikslas 2: išmokite valdyti AndroidAPS
 * Norėdami pamatyti individualias užduotis, spustelėkite oranžinį tekstą „Dar nebaigta“.
 * Nuorodos į dokumentaciją padės jums tuo atveju, jei nebūsite užtikrinti vienu ar kitu vykdomu veiksmu.
 
-   .. nuotrauka:: ../images/Objective2_V2_5.png
+   .. image:: ../images/Objective2_V2_5.png
      :alt: 2 tikslo ekrano vaizdas
 
 Objective 3: Proof your knowledge
