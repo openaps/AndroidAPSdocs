@@ -33,9 +33,9 @@
 
 ### Chyba během vydávání inzulinu
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+V případě, že dojde k přerušení spojení mezi AAPS a pumpou Dana RS v průběhu vydávání bolusu (např. odejdete mimo dosah telefonu, zatímco pumpa Dana RS vydává inzulin), zobrazí se následující zpráva a zazní akustická výstraha.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Oznámení chyby podávání inzulínu](../images/DanaRS_Error_bolus.png)
 
 * Ve většině případů se jedná pouze o problém s komunikací, který se netýká vydaného inzulinu (je vydáno správné množství).
 * Podívejte se do historie pumpy (buď v pumpě, nebo na kartě Dana > Historie pumpy > Bolusy), zda byl vydán správný bolus.
@@ -44,7 +44,7 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 ## Zvláštní poznámka, pokud měníte telefon
 
-When switching to a new phone the following steps are neccessary:
+Pokud přecházíte na nový telefon, je nezbytné, abyste provedli následující kroky:
 
 * **Exportujte nastavení** na svém starém telefonu
   
