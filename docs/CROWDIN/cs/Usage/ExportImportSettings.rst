@@ -1,33 +1,33 @@
 
 Export a import nastavení
 **************************************************
-When should I export settings?
+Kdy bych měl exportovat nastavení?
 ==================================================
-Be prepared for the unforeseen. You might change important settings by accident and have problems to undo the changes. Your phone might break or get stolen. To easily return to status you've been at, settings should be exported on a regular basis.
+Buďte připraveni na nepředvídané situace. Náhodou se vám může povést změnit důležité nastavení, a budete mít problémy s návratem zpět. Mobil se může rozbít nebo bude ukraden. Chcete-li se snadno vrátit do stavu před incidentem, měli byste nastavení exportovat pravidelně.
 
-Best practice is to export after change of settings or completing an objective. 
+Osvědčeným postupem je exportovat po změně nastavení nebo dokončení cíle. 
 
-Exported settings should be copied to a cloud storage or your computer. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
+Exportovaná nastavení by měla být zkopírována do úložiště v cloudu nebo na váš počítač. Takže tímto jste připraveni na ztrátu nebo poškození telefonu s AAPS a nemusíte začínat od nuly.
 
-On a Windows 10 computer it looks like this:
+Na počítači se systémem Windows 10 to vypadá takto:
   
   .. image:: ../images/SmartphoneRootLevelWin10.png
-    :alt: AndroidAPS Preferences phone connected to computer
+    :alt: telefon s AndroidAPS připojený k počítači
 
-Exported information
+Exportovaná data
 ==================================================
-Among others the following information is part of the settings export:
+Mezi jinými jsou součástí exportu tato nastavení:
 
-* `Automation <../Usage/Automation.html>`_ events
-* `Config builder <../Configuration/Config-Builder.html>`_ settings
-* `Local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ settings
-* `Objectives <../Usage/Objectives.html>`_ status incl. `exam results <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
-* `Preferences <../Configuration/Preferences.html>`_ incl. `NS Client settings <../Configuration/Preferences.html#ns-client>`_
-
-
+* Akce `Automatizace <../Usage/Automation.html>`_
+* `Konfigurace <../Configuration/Config-Builder.html>`_
+* `Lokální profil <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* `Cíle <../Usage/Objectives.html>`_ vč. `odpovědi na testové otázky <../Usage/Objectives.html#objective-3-proof-your-knowledge> ` _
+* `Nastavení <../Configuration/Preferences.html>`_ vč. `nastavení NSClienta <../Configuration/Preferences.html#ns-client>`_
 
 
-How to export settings
+
+
+Jak exportovat nastavení
 ==================================================
 * **Export nastavení** na starém mobilu
 
@@ -41,7 +41,7 @@ How to export settings
        
 * **Přeneste** nastavení ze starého telefonu do nového ze stejného umístění souboru, jaké se zobrazilo při exportu
 
-  The exported file is called "AndroidAPSPreferences" and should be in your root folder in the main storage of the phone (just like C: on your computer).
+  Exportovaný soubor je pojmenován "AndroidAPSPreference" a měl by být umístěn v kořenové složce v hlavní paměti telefonu (podobně jako C: na vašem počítači).
   
 * **Nainstalujte AndroidAPS** na nový telefon.
 * **Import nastavení** na novém mobilu
