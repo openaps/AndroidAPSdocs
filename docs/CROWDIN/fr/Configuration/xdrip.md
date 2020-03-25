@@ -76,7 +76,7 @@ Si votre téléphone tourne Android 10 et que vous avez des difficultés avec la
 
 ### Redémarrages préventifs non recommandés
 
-**Avec Dexcom les émetteurs dont le numéro de série commence par 8G, 8H ou 8J le redémarrage préventif ne fonctionnent pas et pourrait tuer complètement le capteur !**
+**With Dexcom transmitters who's serial no. commence par 8G, 8H ou 8J le redémarrage préventif ne fonctionnent pas et pourrait tuer complètement le capteur !**
 
 L'extension automatique des détecteurs Dexcom (`preemptive restarts`) n'est pas recommandée car cela peut entraîner des "sauts" dans les valeurs Gly le 9ème jour après le redémarrage.
 
@@ -150,9 +150,9 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 6G, 8H ou 8J, 
 
 ### Étendre la durée de vie de l'émetteur
 
-* Jusqu'à présent la durée de vie des émetteurs dont le numéro de série commence par 8G, 8H ou 8J ne peut pas être étendue. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.27 (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip#transmitter-battery-status).
+* So far life cannot be extended for transmitters who's serial no. commence par 8G, 8H ou 8J ne peut pas être étendue. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip#transmitter-battery-status)).
 * Pour éviter les difficultés de démarrage de capteurs il est fortement recommandé d'étendre la durée de vie de l'émetteur avant le jour 100 de la première utilisation.
-* Use of transmitters serial no. starting with 80 or 81 (expect 81 with firmware 1.6.5.27) beyond day 100 is only possible if 'engineering mode' is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm).
+* Use of transmitters serial no. starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if 'engineering mode' is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
 * Running sensor session will be stopped when extending transmitter life. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
 * Stop sensor manually via hamburger menu.
 * Switch to the `engineering mode`: 
@@ -216,7 +216,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G, 8H ou 8J, 
    
    ![Paramètres pour les transmetteurs Firefly](../images/xDrip_Dexcom_FireflySettings.png)
 
-* Vérifiez l'état dans Classic Status Page -> G5/G6 status -> PhoneServiceState si l'une des informations suivantes s'affiche :
+* Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following information is displayed:
    
    * Numéro de série du transmetteur commençant par 80 ou 81 : "Got data hh:mm" (par ex. "Got data 19:04")
    * Numéro de série du transmetteur commençant par 8G, 8H ou 8J : "Got glucose hh:mm" (par ex. "Got glucose 19:04") ou "Got now raw hh:mm" (par ex. "Got now raw 19:04")
