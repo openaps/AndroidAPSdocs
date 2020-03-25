@@ -150,25 +150,27 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. pradedant nuo 8G, 8H ar 8J, naudokite
 
 ### Pailginkite siųstuvo veikimo laiką
 
-* Kol kas nerastas būdas prailginti tarnavimo laiką siųstuvų, kurių serijos nr. prasideda 8G, 8H ar 8J.
+* Kol kas nerastas būdas prailginti tarnavimo laiką siųstuvų, kurių serijos nr. prasideda 8G, 8H ar 8J. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.27 (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip#transmitter-battery-status).
 * Norint išvengti sunkumų paleidžiant sensorius, ypač rekomenduojama, kad siųstuvas veiktų iki 100-osios pirmojo naudojimo dienos.
-* Veikiančio sensoriaus seansas bus sustabdytas, jei tuo metu prailginsite siųstuvo veikimo laiką. Todėl šį manipuliavimą reikėtų atlikti prieš keičiant sensorių arba būti pasirengusiam dėl to, kad įsijungs dviejų valandų jo įšilimo (warm-up) fazė.
-* Rankiniu būdu sustabdykite sensorių per trijų linijų meniu.
-* Įjunkite `Inžinieriaus režimą`: 
-   * pagrindiniame xDrip+ ekrane dešinėje spustelėkite švirkšto piktogramą
-   * tada spustelėkite mikrofono piktogramą apatiniame dešiniajame kampe
-   * Įveskite „enable engineering mode“ teksto laukelyje 
-   * spauskite Atlikta
-   * Jei įgalinta Google Speak, galite duoti balso komandą angliškai: „enable engineering mode“. 
-* Eikite į G5 derinimo nustatymus ir įsitikinkite, kad įjungta `Naudokite OB1 kolektorių` funkcija.
-* Duokite balso komandą angliškai: „hard reset transmitter“ (kietas perkrovimas iš naujo)
-* Balso komanda bus įvykdyta su kitų siųstuvo duomenų gavimu
-* Pažvelkite į sistemos būseną (trijų linijų meniu -> sistemos būsena) ir pamatysite rezultatą
-* Jei matote pranešimą „Telefono būsena: Hard Reset maybe failed (Kietas perkrovimas iš naujo neįvyko)“, tiesiog paleiskite sensorių antrame sistemos būsenos ekrane ir šis pranešimas turėtų išnykti.
+* Use of transmitters serial no. starting with 80 or 81 (expect 81 with firmware 1.6.5.27) beyond day 100 is only possible if 'engineering mode' is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm).
+* Running sensor session will be stopped when extending transmitter life. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
+* Stop sensor manually via hamburger menu.
+* Switch to the `engineering mode`: 
+   * tap on the character on the right of the xDrip+ start screen that represents a syringe
+   * then tap on the microphone icon in the lower right corner
+   * In the text box that opens type "enable engineering mode" 
+   * click "Done"
+   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
+* Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
+* Use the voice command: “hard reset transmitter”
+* The voice command will be executed with the next data receipt of the transmitter
+* Look at the system status (Hamburger menu -> system status) and see what happens
+* After approx. 10 min. you can switch to 'Classic Status Page' (swipe right) and click 'Restart collector'. This will set sensor days to 0 without the need to start a new sensor.
+* Alternative: If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
    
    ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
 
-* Sėkmės atveju siųstuvo veikimo laikas bus nustatytas iš naujo į 0.
+* Transmitter days will be set to 0 after successful extension and start of sensor.
 
 ### Siųstuvo pakeitimas
 
