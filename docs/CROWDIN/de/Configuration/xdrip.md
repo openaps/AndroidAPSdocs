@@ -76,7 +76,7 @@ Wenn Du Android 10 verwendest und Probleme mit der xDrip+ master Version auftret
 
 ### Preemptive restarts werden nicht empfohlen
 
-**Falls die Seriennummer Deines Dexcom G6 Transmitters mit 8G, 8H oder 8J beginnt können preemptive restarts nicht genutzt werden und ggf. sogar den Sensor unbenutzbar machen!**
+**With Dexcom transmitters who's serial no. mit 8G, 8H oder 8J beginnt können preemptive restarts nicht genutzt werden und ggf. sogar den Sensor unbenutzbar machen!**
 
 Die automatische Verlängerung von Dexcom G6 Sensoren (`preemptive restarts`) werden nicht empfohlen, da dies zu Sprüngen in den BZ-Werten nach dem Neustart am 9. Tag führen kann.
 
@@ -150,27 +150,27 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G, 8H oder 8J beginnt, verwen
 
 ### Transmitterlaufzeit verlängern
 
-* Bisher kann die Laufzeit von Transmittern, deren Seriennummer mit 8G, 8H oder 8J beginnt, nicht verlängert werden. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.27 (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip#transmitter-battery-status).
+* So far life cannot be extended for transmitters who's serial no. mit 8G, 8H oder 8J beginnt, nicht verlängert werden. Das Gleiche gilt für Transmitter deren Seriennummer starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip#transmitter-battery-status)).
 * Um Schwierigkeiten beim Start von Sensoren zu vermeiden, wird dringend empfohlen, den Transmitter vor Ablauf des 100. Tags der ersten Nutzung zu verlängern.
-* Use of transmitters serial no. starting with 80 or 81 (expect 81 with firmware 1.6.5.27) beyond day 100 is only possible if 'engineering mode' is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm).
-* Running sensor session will be stopped when extending transmitter life. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
-* Stop sensor manually via hamburger menu.
-* Switch to the `engineering mode`: 
-   * tap on the character on the right of the xDrip+ start screen that represents a syringe
-   * then tap on the microphone icon in the lower right corner
-   * In the text box that opens type "enable engineering mode" 
-   * click "Done"
-   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
-* Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
-* Use the voice command: “hard reset transmitter”
-* The voice command will be executed with the next data receipt of the transmitter
-* Look at the system status (Hamburger menu -> system status) and see what happens
-* After approx. 10 min. you can switch to 'Classic Status Page' (swipe right) and click 'Restart collector'. This will set sensor days to 0 without the need to start a new sensor.
-* Alternative: If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
+* Die Verwendung von Transmittern deren Seriennr. starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if 'engineering mode' is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
+* Eine laufende Sensorsitzung wird gestoppt, wenn Du die Transmitterlaufzeit verlängerst. Verlängere daher bei einem Sensorwechsel oder sei Dir bewusst, dass nach der Verlängerung eine neue zweistündige Warm-Up-Phase des Sensors beginnt.
+* Stoppe den Sensor manuell über das Hamburger-Menü.
+* Wechsle in den `engineering mode`: 
+   * Klicke auf das Spritzen-Symbol rechts auf dem xDrip+ Startbildschirm.
+   * Klicke dann auf das Mikrophon-Symbol in der unteren rechten Ecke.
+   * Gib in das Textfeld, das geöffnet wird, "enable engineering mode" ein und klicken auf OK. 
+   * Klicke auf "Done".
+   * Falls Du die Google Speak engine nutzt, kannst Du auch das Sprachkommando "enable engineering mode" nutzen. 
+* Wechsle zu den G5 Debugeinstellungen und stelle sicher, dass `Use the OB1 collector` is aktiviert ist.
+* Benutze den Sprachbefehl: “hard reset transmitter”
+* Beim nächsten Dateneingang vom Transmitter wird der Reset durchgeführt.
+* Beobachte im Systemstatus (Hamburgermenü links oben -> Systemstatus) was passiert.
+* Nach etwa 10 min. kannst Du auf die 'Classic Status Page' wechseln (nach rechts wischen) und 'Datensammler neu starten' klicken. Dadurch werden die Sensortage auf 0 gesetzt, ohne dass ein neuer Sensor gestartet werden muss.
+* Alternative: Wenn auf dem zweiten Statusbildschirm der Hinweis "Phone Service State: Hard Reset maybe failed" angezeigt wird, kannst Du trotzdem einfach den Sensor starten. Danach sollte diese Meldung verschwinden.
    
    ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
 
-* Transmitter days will be set to 0 after successful extension and start of sensor.
+* Die "Transmitter days" werden nach erfolgreicher Verlängerung und Start des Sensors auf 0 zurückgesetzt.
 
 ### Transmitter ersetzen
 
@@ -216,7 +216,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G, 8H oder 8J beginnt, verwen
    
    ![Einstellungen für Firefly Transmitter](../images/xDrip_Dexcom_FireflySettings.png)
 
-* Prüfe, ob auf der Classic Status Page -> G5/G6 status -> PhoneServiceState eine der folgenden Informationen angezeigt wird:
+* Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following information is displayed:
    
    * Transmitter Seriennummer beginnt mit 80 oder 81: "Got data hh:mm" (z.B. "Got data 19:04")
    * Transmitter Seriennummer beginnt mit 8G, 8H oder 8J: "Got glucose hh:mm" (z.B. "Got glucose 19:04") oder "Got no raw hh:mm" (z.B. "Got now raw 19:04")
