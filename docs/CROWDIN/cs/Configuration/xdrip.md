@@ -150,25 +150,27 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G nebo 8H 
 
 ### Prodloužení životnosti vysílače
 
-* Prozatím nelze prodloužit životnost vysílačů, jejichž výrobní číslo začíná znaky 8G, 8H nebo 8J.
+* Prozatím nelze prodloužit životnost vysílačů, jejichž výrobní číslo začíná znaky 8G, 8H nebo 8J. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.27 (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip#transmitter-battery-status).
 * V zájmu prevence potíží se spouštěním senzorů je důrazně doporučeno prodlužovat životnost vysílače před 100 dny prvního použití.
-* Při operaci prodloužení životnosti vysílače bude přerušena aktuální relace senzoru. Mějte to na paměti a naplánujte prodloužení životnosti vysílače současně s výměnou senzoru. Nebo se připravte na 2 h zahřívání senzoru.
-* Zastavte senzor ručně nebo prostřednictvím hamburger menu.
-* Přepněte do `engineering mode`: 
-   * klepněte na symbol injekční stříkačky v pravém horním rohu hlavní obrazovky
-   * pak klepněte na symbol mikrofonu v dolním pravém rohu
-   * a do textového pole napište bez uvozovek „enable engineering mode“ 
-   * klikněte na tlačítko „OK“
-   * Pokud máte povoleny Google hlasové příkazy, můžete po klepnutí na symbol mikrofonu vyslovit „enable engeneering mode“. 
-* Přejděte do nastavení ladění G5 a ujistěte se, že volba `Používat OB1 collector` je povolena.
-* Použijte hlasový příkaz: „hard reset transmitter“
-* Hlasový příkaz bude proveden při následujícím odeslání dat do vysílače
-* Přejděte na stav systému (hamburger menu -> Stav systému) a sledujte, co se stalo
-* Když se na druhé systémové stránce objeví hláška „Phone Service State: Hard Reset maybe failed“, prostě spusťte senzor a zpráva by měla zmizet.
+* Use of transmitters serial no. starting with 80 or 81 (expect 81 with firmware 1.6.5.27) beyond day 100 is only possible if 'engineering mode' is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm).
+* Running sensor session will be stopped when extending transmitter life. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
+* Stop sensor manually via hamburger menu.
+* Switch to the `engineering mode`: 
+   * tap on the character on the right of the xDrip+ start screen that represents a syringe
+   * then tap on the microphone icon in the lower right corner
+   * In the text box that opens type "enable engineering mode" 
+   * click "Done"
+   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
+* Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
+* Use the voice command: “hard reset transmitter”
+* The voice command will be executed with the next data receipt of the transmitter
+* Look at the system status (Hamburger menu -> system status) and see what happens
+* After approx. 10 min. you can switch to 'Classic Status Page' (swipe right) and click 'Restart collector'. This will set sensor days to 0 without the need to start a new sensor.
+* Alternative: If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
    
-   ![xDrip+ Hard Reset možná selhal](../images/xDrip_HardResetMaybeFailed.png)
+   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
 
-* Po úspěšném prodloužení vysílače a startu senzoru by se měla hodnota Transmitter days resetovat na 0.
+* Transmitter days will be set to 0 after successful extension and start of sensor.
 
 ### Výměna vysílače
 
