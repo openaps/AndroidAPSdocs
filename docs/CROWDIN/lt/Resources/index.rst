@@ -1,4 +1,4 @@
-Resources
+Resursai
 ---------
 
 .. toctree::

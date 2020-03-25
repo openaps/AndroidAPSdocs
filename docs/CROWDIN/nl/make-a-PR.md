@@ -1,6 +1,6 @@
 # Maak je eerste PR (pull request)
 
-** Als je de wiki naar andere talen wilt vertalen (waarvoor dank!), dan gebruik je [crowdin](https://wikitranslations.androidaps.org).**
+** All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org).**
 
 Voor hints hoe tekst te formatteren (kop, vet ...) en links instellen, zie de ["code syntax"](./make-a-PR#code-syntax) sectie van deze pagina.
 

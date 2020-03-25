@@ -13,6 +13,25 @@ Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à par
 
 Veuillez comprendre que cette modification n'a pas pour but de vous corriger mais est due à des raisons de sécurité. Les nouvelles versions d'AndroidAPS fournissent non seulement de nouvelles fonctionnalités, mais aussi d'importants correctifs de sécurité. Il est donc nécessaire que chaque utilisateur mette à jour a.s.a.p.. Malheureusement, il y a toujours des remontés de bug provenant de très anciennes versions, donc il s'agit d'une tentative d'améliorer la sécurité pour chaque utilisateur et toute la communauté DIY. Merci pour votre compréhension.
 
+Version 2.6.1
+==============
+Date de sortie : 21-03-2020
+
+Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
+
+Nouvelles fonctionnalités majeures
+-----
+* Permet de ne rentrer que https:// dans les paramètres NSClient
+* Correction bug d'affichage `Impact Glycémique <../Getting-Started/Glossary.html>`_ sur les montres
+* Correction de petits bugs de l'interface utilisateur
+* Correction plantages Insight
+* Correction glucides futurs avec pompe Combo
+* Correction `Profil Local -> NS sync <../Configuration/Config-Builder.html#remonter-les-profils-locaux-sur-nightscout>`_
+* Amélioration des alertes Insight
+* Amélioration de la détection des bolus depuis l'historique de la pompe
+* Correction des paramètres de connexion NSClient (wifi, en charge)
+* Correction de l'envoi des calibrations vers xDrip
+
 Version 2.6.0
 ==============
 Date de sortie : 29-02-2020

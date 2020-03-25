@@ -13,6 +13,25 @@ Si no se actualiza durante otros 30 días (90 días a partir de la fecha de la n
 
 Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Por lo tanto, son necesarias que todas las actualizaciones de usuario a.s.a.p. (Lo antes posible).. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
 
+Version 2.6.1
+==============
+Release date: 21-03-2020
+
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+Nuevas características importantes
+-----
+* Allow to enter only https:// in NSClient settings
+* Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
+* Fixed small UI bugs
+* Fixed Insight crashes
+* Fixed future carbs with Combo pump
+* Fixed `LocalProfile -> NS sync <../Configuration/Config-Builder.html#upload-local-profiles-to-nightscout>`_
+* Insight alerts improvements
+* Improved detection of boluses from pump history
+* Fixed NSClient connection settings (wifi, charging)
+* Fixed sending of calibrations to xDrip
+
 Version 2.6.0
 ==============
 Release date: 29-02-2020

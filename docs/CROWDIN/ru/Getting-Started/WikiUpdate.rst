@@ -4,7 +4,7 @@
 Март 2020
 ==================================================
 * Построение APK в Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
-* `DanaRS with firmware v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **cannot currently be used with AndroidAPS!**
+* `DanaRS с прошивкой v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **в настоящее время не может использоваться для AndroidAPS!**
 * `Пролонгированный болюс и переключение на открытый цикл <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
 * `Обновление APK в Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
 Февраль 2020

@@ -33,7 +33,7 @@ In general, the steps necessary to build the APK file:
 2. [Install Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
 3. [Set git path in Android Studio preferences](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
 4. [Download AndroidAPS code](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
-5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
+5. [Atsisiųskite AndroidAPS SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [Build the app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generate signed apk)
 7. [Transfer apk file to your phone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
 8. [Identify receiver if using xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
@@ -161,7 +161,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 ![SDK licence](../images/AndroidStudio361_19.png)
 
-## Download Android SDK
+## Atsisiųskite AndroidAPS SDK
 
 * Click File > Settings.
 
@@ -189,14 +189,14 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 ![Finish SDK installation](../images/AndroidStudio361_25.png)
 
-* Android Studio might recommend to update the gradle system. **Never update gradle!** This might lead to difficulties!
+* Android Studio might recommend to update the gradle system. **Niekada neatnaujinkite gradle!** Tai gali sukelti problemų!
 * If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1.) and in the dialog box on "Don't remind me again for this project" (2.).
 
 ![No cradle update](../images/AndroidStudio361_26.png)
 
-## Generate signed APK
+## Generuoti pasirašytą APK (Generate signed APK)
 
-Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. Programą būtina pasirašyti skaitmeniniu būdu, nes Android saugumo sumetimais priima tik pasirašytą kodą. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
 
@@ -209,7 +209,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 * Make sure that module is set to "app" (1.).
 * Click "Create new..." (2.) to start creating your key store.
     
-    A key store in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords.
+    A key store in this case is nothing more than a file in which the information for signing is stored. Ji šifruojama, ir informacija apsaugota slaptažodžiais.
 
 ![Create key store](../images/AndroidStudio361_29.png)
 
@@ -251,7 +251,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 ![File location apk](../images/AndroidStudio361_35.png)
 
-## Transfer APK to smartphone
+## Perkelkite APK į išmanųjį telefoną
 
 Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
@@ -261,6 +261,6 @@ On your phone you have to allow installation from unknown sources. Manuals how t
 
 [See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
-## Troubleshooting
+## Trikčių šalinimas
 
 See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
