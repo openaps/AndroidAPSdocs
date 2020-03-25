@@ -76,7 +76,7 @@ Jei naudojate Android 10 ir kyla problemų dėl xDrip+ pagrindinės versijos, ga
 
 ### Pakartoninis paleidimas nerekomenduojamas
 
-**Su Dexcom siųstuvais, kurių serijos nr. pradeda su 8G, 8H ar 8J, pakartotinis paleidimas iš naujo neveikia ir gali sugadinti jutiklį visiškai!**
+**With Dexcom transmitters who's serial no. pradeda su 8G, 8H ar 8J, pakartotinis paleidimas iš naujo neveikia ir gali sugadinti jutiklį visiškai!**
 
 Nerekomenduojama automatiškai pratęsti Dexcom jutiklio veikimo (`Pakartotinis paleidimas (preemptive restarts)`), nes tai gali sukelti glikemijų reikšmių šuolius 9 dieną po pakartotinio paleidimo.
 
@@ -150,9 +150,9 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. pradedant nuo 8G, 8H ar 8J, naudokite
 
 ### Pailginkite siųstuvo veikimo laiką
 
-* Kol kas nerastas būdas prailginti tarnavimo laiką siųstuvų, kurių serijos nr. prasideda 8G, 8H ar 8J. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.27 (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip#transmitter-battery-status).
+* So far life cannot be extended for transmitters who's serial no. prasideda 8G, 8H ar 8J. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip#transmitter-battery-status)).
 * Norint išvengti sunkumų paleidžiant sensorius, ypač rekomenduojama, kad siųstuvas veiktų iki 100-osios pirmojo naudojimo dienos.
-* Use of transmitters serial no. starting with 80 or 81 (expect 81 with firmware 1.6.5.27) beyond day 100 is only possible if 'engineering mode' is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm).
+* Use of transmitters serial no. starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if 'engineering mode' is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
 * Running sensor session will be stopped when extending transmitter life. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
 * Stop sensor manually via hamburger menu.
 * Switch to the `engineering mode`: 
@@ -216,7 +216,7 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. pradedant nuo 8G, 8H ar 8J, naudokite
    
    ![Nustatymai Firefly siųstuvams](../images/xDrip_Dexcom_FireflySettings.png)
 
-* Patikrinkite, ar klasikinės būsenos puslapyje -> G5/G6 būsena -> PhoneServiceState rodoma ši informacija:
+* Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following information is displayed:
    
    * Siųstuvo serijos numeris prasideda 80 arba 81: „Got data hh:mm“ (pvz., „Got data 19:04“)
    * Siųstuvo serijos numeris prasideda 8G, 8H arba 8J: „Got glucose hh:mm“ (pvz., „Got glucose 19:04“) arba „Got no raw hh:mm“ (pvz., „Got now raw 19:04“)
