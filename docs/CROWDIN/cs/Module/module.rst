@@ -72,13 +72,13 @@ Zdroj glykémií
 --------------------------------------------------
 Toto je jen krátký přehled všech CGM/FGM kompatibilních s AndroidAPS. Další podrobnosti naleznete `zde <../Configuration/BG-Source.html>`_. Rychlý tip: Pokud dokážete zobrazit údaje o glykémii v aplikaci xDrip+ nebo na webu Nightscout, můžete v AAPS jako zdroj glykémie vybrat xDrip+ (nebo Nightscout, máte-li připojení k internetu).
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or patched Dexcom app
-* `Dexcom G5 <../Hardware/DexcomG5.html>`_: It works with xDrip+ app or patched Dexcom app
-* `Dexcom G4 <../Hardware/DexcomG4.html>`_: These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
-* `Libre 2 <../Hardware/Libre2.html>`_: It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
-* `Libre 1 <../Hardware/Libre1.html>`_: You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
-* `Eversense <../Hardware/Eversense.html>`_: It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
-* `Enlite <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: Funguje s aplikací xDrip+ nebo s upravenou aplikací Dexcom
+* `Dexcom G5 <../Hardware/DexcomG5.html>`_: Funguje s aplikací xDrip+ nebo upravenou aplikací Dexcom
+* `Dexcom G4 <../Hardware/DexcomG4.html>`_: Tyto senzoru jsou poměrně staré, ale můžete si vyhledat pokyny, jak je používat s aplikací xDrip+
+* `Libre 2 <../Hardware/Libre2.html>`_: Funguje s aplikací xDrip+ (nevyžaduje žádný adaptér), ale musíte se sestavit vlastní upravenou aplikaci.
+* `Libre 1 <../Hardware/Libre1.html>`_: Potřebujete adaptér, jako např. Bluecon nebo MiaoMiao (sestavit nebo koupit) a aplikaci xDrip+
+* `Eversense <../Hardware/Eversense.html>`_: Funguje zatím pouze v kombinaci s aplikací ESEL a upravenou aplikací Eversense (nefunguje s pumpou Dana RS a LineageOS, ale funguje dobře s pumpou DanaRS a Android nebo pumpou Combo a Lineage OS)
+* `Enlite <../Hardware/MM640g.html>`_: poměrně komplikované a vyžaduje spoustu věcí dalších věcí navíc
 
 
 Nightscout

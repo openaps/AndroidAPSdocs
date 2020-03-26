@@ -53,6 +53,6 @@ Proč algoritmus nedetekuje COB správně?
 - Inzulínovosacharidový poměr vyžaduje úpravu
 - Hodnota pro min_5m_carbimpact je chybná (doporučeno je 8 s SMB, 3 s AMA)
 
-Manual correction of carbs entered
+Ruční korekce zadaných sacharidů
 ==================================================
-If you over- or underestimated carbs you can correct this though treatments tab and care portal as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.
+Pokud zadáte nesprávné množství sacharidů (příliš mnoho nebo příliš málo), můžete to napravit na kartě Ošetření a na portálu Péče, jak je popsáno `zde <../Getting-Started/Screenshots.html#carb-correction>`_.

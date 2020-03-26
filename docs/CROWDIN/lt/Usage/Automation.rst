@@ -1,9 +1,9 @@
-Automation
+Automatizavimas
 **************************************************
 
-What is Automation
+Kas yra Automatizavimas
 ==================================================
-For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. pvz.,  when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
+Dėl nuolatinių, pasikartojančių įvykių gali būti, kad visada turite pakeisti tuos pačius parametrus. Norėdami išvengti papildomo darbo, galite pabandyti automatizuoti visą reikalą (jei galite jį pakankamai tiksliai nurodyti). pvz.,  galite sukurti aukšto tikslo veiksmų rinkinį, kuris automatiškai suaktyvinamas, kai gliukozės kiekis kraujyje yra mažas. Arba, jei esate savo sporto klube, laikinas tikslas gali būti suaktyvintas automatiškai. Prieš naudodamiesi automatizavimu, turite išmanyti 'laikinus tikslus <./temptarget.html>`_ ir (arba) profilio keitimą. 
 
 .. image:: ../images/Automation_ConditionAction_RC3.png
   :alt: Automation condition + action

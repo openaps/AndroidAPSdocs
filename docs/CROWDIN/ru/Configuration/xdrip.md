@@ -76,7 +76,7 @@
 
 ### Упреждающие перезапуски не рекомендуются
 
-**В трансмиттерах Dexcom с серийным номером начинается с 8G, 8H, или 8J упреждающие перезапуски не работают и могут полностью убить сенсор!**
+**With Dexcom transmitters who's serial no. начинается с 8G, 8H, или 8J упреждающие перезапуски не работают и могут полностью убить сенсор!**
 
 Автоматическое продление работы сенсоров Dexcom (`упреждающие перезапуски, preemtive restarts`) не рекомендуется, так как может привести к скачкам значений ГК на 9 день после перезапуска.
 
@@ -150,25 +150,27 @@
 
 ### Увеличение срока работы трансмиттера
 
-* Пока что не найдено способа продлить жизнь трансмиттеров, чей серийный номер начинается с 8G, 8H или 8J.
+* So far life cannot be extended for transmitters who's serial no. начинается с 8G, 8H или 8J. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip#transmitter-battery-status)).
 * Для предотвращения трудностей при запуске сенсоров настоятельно рекомендуется продлить срок действия трансмиттера до 100-го дня первого использования.
-* При продлении срока действия трансмиттера работа сенсора будет остановлена. Поэтому проводить эту манипуляцию следует перед заменой сенсора или быть готовыми к тому, что состоится двухчасовая фаза его прогрева.
-* Остановите сенсор вручную через сэндвич-меню.
-* Переключитесь в `инженерный режим`: 
-   * нажмите на пиктограмму шприца на главном экране xDrip+ справа
-   * затем нажмите на значок микрофона в нижнем правом углу
-   * В текстовом поле впечатайте "enable Engineering mode" 
-   * нажмите "Готово"
-   * Если включен Google Speak, вы можете дать голосовую команду: "enable engineering mode" ("включить инженерный режим"). 
-* Зайти в настройки отладки G5 и убедитесь что `использовать OB1 коллектор` включен.
-* Дайте голосовую команду: “hard reset transmitter”(«жесткий сброс трансмиттера»)
-* Голосовая команда будет выполнена при следующем получении данных трансмиттера
-* Посмотрите на статус системы (сэндвич-меню -> системный статус) и убедитесь в результате
-* Если вы видите сообщение "Состояние телефона: жесткий сброс возможно не произошел", просто перезапустите датчик на втором экране состояния системы и это сообщение должно исчезнуть.
+* Use of transmitters serial no. starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if 'engineering mode' is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
+* Running sensor session will be stopped when extending transmitter life. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
+* Stop sensor manually via hamburger menu.
+* Switch to the `engineering mode`: 
+   * tap on the character on the right of the xDrip+ start screen that represents a syringe
+   * then tap on the microphone icon in the lower right corner
+   * In the text box that opens type "enable engineering mode" 
+   * click "Done"
+   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
+* Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
+* Use the voice command: “hard reset transmitter”
+* The voice command will be executed with the next data receipt of the transmitter
+* Look at the system status (Hamburger menu -> system status) and see what happens
+* After approx. 10 min. you can switch to 'Classic Status Page' (swipe right) and click 'Restart collector'. This will set sensor days to 0 without the need to start a new sensor.
+* Alternative: If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
    
-   ![xDrip+ Жесткий сброс возможно не произошел](../images/xDrip_HardResetMaybeFailed.png)
+   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
 
-* Срок работы трансмиттера будет сброшен до 0 в случае успеха.
+* Transmitter days will be set to 0 after successful extension and start of sensor.
 
 ### Замена трансмиттера
 
@@ -214,7 +216,7 @@
    
    ![Параметры для трансмиттеров "Firefly"](../images/xDrip_Dexcom_FireflySettings.png)
 
-* Проверьте в классическом меню страницу Состояние-> Состояние G5/G6-> PhoneServiceState, показано ли одно из следующих сведений:
+* Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following information is displayed:
    
    * С трансмиттерами, серийный номер которых начинается с 80 или 81: "Got data hh:mm" (напр. "Got data 19:04 ")
    * С трансмиттерами, серийный номер которых начинается с 8G, 8H или 8J: "Got glucose hh:mm" (напр. "Got glucose 19:04 ") или "Got no raw hh:mm" (i.e. "Got no raw 19:04")
