@@ -40,12 +40,12 @@ Pokud váš telefon používá systém Android 10 a máte potíže s aplikací x
    
    ![xDrip+ Základní nastavení 3](../images/xDrip_Basic3.png)
 
-### Identifikovat příjemce
+### Identify receiver
 
 * Jestliže se setkáte s problémy s místním odesíláním (AAPS nepřijímá hodnoty glykémie z xDripu+), přejděte do Nastavení > Komunikace mezi aplikacemi > Identify receiver a zadejte `info.nightscout.androidaps`.
 * Pozor: automatické opravy textu v androidu mají tendenci měnit velikost prvního písmene. Text `info.nightscout.androidaps` **musí být napsaný pouze malými písmeny**. Velká písmena způsobí, že z xDripu+ nebudou přijímané hodnoty glykémie.
    
-   ![xDrip+ Základní nastavení komunikace mezi aplikacemi rozpoznání přijímače](../images/xDrip_InterApp_NS.png)
+   ![xDrip+ Základní nastavení komunikace mezi aplikacemi Identify receiver](../images/xDrip_InterApp_NS.png)
 
 ## xDrip+ a Dexcom G6
 
@@ -76,7 +76,7 @@ Pokud váš telefon používá systém Android 10 a máte potíže s aplikací x
 
 ### Preemptivní restarty nejsou doporučené
 
-**With Dexcom transmitters who's serial no. znaky 8G, 8H nebo 8J preemptivní restarty nefungují, a dokonce mohou senzor úplně zničit!**
+**S vysílači Dexcom, jejichž sériové číslo začíná znaky 8G, 8H nebo 8J preemptivní restarty nefungují, a dokonce mohou senzor úplně zničit!**
 
 Automatické prodloužení senzorů Dexcom (`preemptivní restart`) není doporučeno, protože to může způsobit „skoky“ v hodnotách glykémie 9. den po restartu.
 
@@ -150,27 +150,27 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G nebo 8H 
 
 ### Prodloužení životnosti vysílače
 
-* So far life cannot be extended for transmitters who's serial no. začíná znaky 8G, 8H nebo 8J. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip#transmitter-battery-status)).
+* Prozatím nelze prodloužit životnost vysílačů, jejichž seriové číslo začíná znaky 8G, 8H nebo 8J. To samé platí pro vysílače se sériovým číslem začíná číslem 81 a firmwarem 1.6.5. ** 27 ** (viz xDrip+ Stav systému - G5/G6, [viz screenshot výše](../Configuration/xdrip#transmitter-battery-status)).
 * V zájmu prevence potíží se spouštěním senzorů je důrazně doporučeno prodlužovat životnost vysílače před 100 dny prvního použití.
-* Use of transmitters serial no. starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if 'engineering mode' is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
-* Running sensor session will be stopped when extending transmitter life. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
-* Stop sensor manually via hamburger menu.
-* Switch to the `engineering mode`: 
-   * tap on the character on the right of the xDrip+ start screen that represents a syringe
-   * then tap on the microphone icon in the lower right corner
-   * In the text box that opens type "enable engineering mode" 
-   * click "Done"
-   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
-* Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
-* Use the voice command: “hard reset transmitter”
-* The voice command will be executed with the next data receipt of the transmitter
-* Look at the system status (Hamburger menu -> system status) and see what happens
-* After approx. 10 min. you can switch to 'Classic Status Page' (swipe right) and click 'Restart collector'. This will set sensor days to 0 without the need to start a new sensor.
-* Alternative: If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
+* Používání vysílačů se sériovým číslem začínajícím na 81 a firmwarem 1.6.5.**27** po 100 dni je možné pouze při zapnutém „engineering mode“ a deaktivovaném „nativním režimu“ (hamburger menu -> nastavení -> nastavení ladění pro G5/G6 -> Native Algorithm), protože nelze udělat hard reset vysílače.
+* Během prodlužování životnosti vysílače bude přerušena aktuální relace senzoru. Mějte to na paměti a naplánujte prodloužení životnosti vysílače současně s výměnou senzoru. Nebo se připravte na 2h zahřívání senzoru.
+* Zastavte senzor ručně nebo prostřednictvím hamburger menu.
+* Přepněte do `engineering mode`: 
+   * klepněte na symbol injekční stříkačky v pravém horním rohu hlavní obrazovky
+   * pak chvíli podržte symbol mikrofonu v dolním pravém rohu
+   * a do textového pole napište bez uvozovek „enable engineering mode“ 
+   * klepněte na tlačítko „OK“
+   * Pokud máte povoleny Google hlasové příkazy, můžete po klepnutí na symbol mikrofonu vyslovit příkaz „enable engeneering mode“. 
+* Přejděte do nastavení ladění G5 a ujistěte se, že volba `Používat OB1 collector` je povolena.
+* Použijte hlasový příkaz: „hard reset transmitter“
+* Hlasový příkaz bude proveden při následujícím odeslání dat do vysílače
+* Přejděte na stav systému (hamburger menu -> Stav systému) a sledujte, co se stalo
+* Po cca. 10 min. můžete přepnout na stránku 'Classic Status Page' (přejeďte prstem vpravo) a klepnout na volbu 'Restart Collector'. Tím to bude senzor nastaven na den 0 bez nutnosti spuštění nového senzoru.
+* Další možnost: jestliže se na druhé systémové stránce objeví hláška "Phone Service State: Hard Reset maybe failed", prostě spusťte senzor, hláška by měla sama zmizet.
    
-   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
+   ![xDrip+ Hard Reset možná selhal](../images/xDrip_HardResetMaybeFailed.png)
 
-* Transmitter days will be set to 0 after successful extension and start of sensor.
+* Po úspěšném prodloužení vysílače a startu senzoru by se měla hodnota Transmitter days resetovat na 0.
 
 ### Výměna vysílače
 
@@ -216,7 +216,7 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G, 8H nebo
    
    ![Nastavení pro vysílače Firefly](../images/xDrip_Dexcom_FireflySettings.png)
 
-* Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following information is displayed:
+* Na stránce Classic Status Page -> G5/G6 status -> PhoneServiceState, zkontrolujte, zda se zobrazuje některá z následujících informací:
    
    * Sériové číslo vysílače začínající na 80 nebo 81: "Got data hh:mm" (např. "Got data 19:04")
    * Sériové číslo vysílače začínající na 8G, 8H nebo 8J: "Got glucose hh:mm" (např. "Got glucose 19:04") nebo "nemá raw hh:mm" Got no raw hh:mm" (např. "Got now raw 19:04")
