@@ -2,7 +2,7 @@
 
 ## Vyrobte si místo stažení
 
-**AndroidAPS není k dispozici ke stažení kvůli regulaci zdravotnických zařízení. Je legální vytvořit aplikaci pro své vlastní použití, ale nesmíte dát kopii ostatním! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+**AndroidAPS není k dispozici ke stažení kvůli regulaci zdravotnických zařízení. Je legální vytvořit aplikaci pro své vlastní použití, ale nesmíte dát kopii ostatním! Další informace naleznete v části [Časté dotazy](../Getting-Started/FAQ.md).**
 
 ## Důležité poznámky
 
@@ -21,30 +21,30 @@ Pokud jste v minulosti již AAPS aktualizovali a používáte-li Windows PC, mů
 
 1. [Exportujte své nastavení](../Usage/ExportImportSettings#how-to-export-settings) ze stávající verze AAPS do svého telefonu
 2. [Aktualizujte lokální kopii](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
-3. [Generate signed APK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Select 'app' instead of 'wear' on your way!)
-4. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the patched Dexcom app from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+3. [Vytvořte podepsané APK (Generate signed APK)](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Místo 'wear' zvolte 'app'!)
+4. V závislosti na [zdroji glykémie](../Configuration/BG-Source.rst) se ujistěte, že jste povolili možnost [identifikovat příjemce](../Configuration/xdrip#identify-receiver) v aplikaci xDrip nebo používáte upravenou aplikaci Dexcom ze [složky 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Nainstalujte git (pokud ho ještě nemáte)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
+Postupujte podle návodu na [stránka instalace gitu](../Installing-AndroidAPS/git-install.rst).
 
 ## Aktualizace lokální kopie
 
-* Click: VCS -> Git -> Pull
+* Klikněte na: VCS -> Git -> Pull
     
     ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
 
-* Click Pull (no changes in dialog field)
+* Klikněte na možnost Pull (žádné změny v dialogovém okně)
     
     ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02.png)
 
-* Wait while download is in progress.
+* Počkejte, dokud se stahování nedokončí.
     
-    ![Android Studio - Pull in progress](../images/AndroidStudio361_Update03.png)
+    ![Android Studio – probíhá stahování](../images/AndroidStudio361_Update03.png)
 
-* When done Android Studio will inform you that "all files are up-to-date".
+* Jakmile bude stahování dokončeno, Android Studio vás bude informovat hlášením "all files are up-to-date".
     
-    ![All files up to date](../images/AndroidStudio361_Update04.png)
+    ![Všechny soubory jsou aktuální](../images/AndroidStudio361_Update04.png)
 
 ## Vytvořte podepsaný soubor APK
 
@@ -58,13 +58,13 @@ Follow the manual on the [git installation page](../Installing-AndroidAPS/git-in
 
 ![APK instead of bundle](../images/AndroidStudio361_28.png)
 
-* Make sure that module is set to "app".
-* Select your key store path by clicking on "Choose existing...".
-* Enter your passwords for key store and key.
-* If the box to remember passwords is checked you don't have to enter them. In case the box was not checked during last build and you cannot remember the passwords refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
-* Click "Next".
+* Ujistěte se, že modul je nastaven na "app".
+* Vyberte cestu k úložišti klíčů klepnutím na volbu "Vybrat existující...".
+* Zadejte heslo pro úložiště klíčů a klíč.
+* Máte-li zaškrtnuté políčko pro zapamatování hesla, nemusíte ho zadávat. V případě, že během posledního sestavení aplikace nebylo zaškrtnuto políčko pro zapamatování hesla, a vy jste heslo zapomněli, pokračujte na článek [odstraňování problémů](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Klikněte na "Next".
 
-![Key store](../images/AndroidStudio361_Update05.png)
+![Úložiště klíčů](../images/AndroidStudio361_Update05.png)
 
 * Select build variant "fullRelease" (1.). 
 * Check boxes V1 and V2 for signature versions (2.).
@@ -94,10 +94,10 @@ On your phone you have to allow installation from unknown sources. Manuals how t
 
 ## Zkontrolujte verzi AAPS na telefonu
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Verzi AAPS můžete na telefonu zkontrolovat klepnutím na tři tečky vpravo nahoře a poté na položku O aplikaci.
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![Nainstalovaná verze AAPS](../images/Update_VersionCheck.png)
 
 ## Poradce při potížích
 
-See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+Viz samostatná stránka [odstraňování potíží s Android Studiem](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
