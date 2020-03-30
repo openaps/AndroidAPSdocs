@@ -40,12 +40,12 @@ Pokud váš telefon používá systém Android 10 a máte potíže s aplikací x
    
    ![xDrip+ Základní nastavení 3](../images/xDrip_Basic3.png)
 
-### Identifikovat příjemce
+### Identify receiver
 
 * Jestliže se setkáte s problémy s místním odesíláním (AAPS nepřijímá hodnoty glykémie z xDripu+), přejděte do Nastavení > Komunikace mezi aplikacemi > Identify receiver a zadejte `info.nightscout.androidaps`.
 * Pozor: automatické opravy textu v androidu mají tendenci měnit velikost prvního písmene. Text `info.nightscout.androidaps` **musí být napsaný pouze malými písmeny**. Velká písmena způsobí, že z xDripu+ nebudou přijímané hodnoty glykémie.
    
-   ![xDrip+ Základní nastavení komunikace mezi aplikacemi rozpoznání přijímače](../images/xDrip_InterApp_NS.png)
+   ![xDrip+ Základní nastavení komunikace mezi aplikacemi Identify receiver](../images/xDrip_InterApp_NS.png)
 
 ## xDrip+ a Dexcom G6
 
