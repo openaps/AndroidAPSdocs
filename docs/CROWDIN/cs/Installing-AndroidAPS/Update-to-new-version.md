@@ -10,7 +10,7 @@
 * Od verze 2.3 je potřeba pro aktualizaci použít git. Aktualizace pomocí zip souboru již nefunguje.
 * Chcete-li sestavit apk, použijte [ Android Studio verze 3.6.1 ](https://developer.android.com/studio/) nebo novější.
 * [32 bitové systémy Windows 10](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) nejsou programem Android Studio 3.6.1. podporovány.
-* Používáte-li xDrip, ujistěte se, že máte zapnutou volbu [identifikovat příjemce ](../Configuration/xdrip#identify-receiver).
+* Používáte-li xDrip, ujistěte se, že máte zapnutou volbu [Identify receiver](../Configuration/xdrip#identify-receiver).
 * Používáte-li Dexcom G6 [ s upravenou Dexcom aplikací ](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app), musíte si stáhnout verzi z adresáře [ 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Rychlý postup pro pokročilé uživatele
@@ -22,7 +22,7 @@ Pokud jste v minulosti již AAPS aktualizovali a používáte-li Windows PC, mů
 1. [Exportujte své nastavení](../Usage/ExportImportSettings#how-to-export-settings) ze stávající verze AAPS do svého telefonu
 2. [Aktualizujte lokální kopii](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
 3. [Vytvořte podepsané APK (Generate signed APK)](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Místo 'wear' zvolte 'app'!)
-4. V závislosti na [zdroji glykémie](../Configuration/BG-Source.rst) se ujistěte, že jste povolili možnost [identifikovat příjemce](../Configuration/xdrip#identify-receiver) v aplikaci xDrip nebo používáte upravenou aplikaci Dexcom ze [složky 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+4. V závislosti na [zdroji glykémie](../Configuration/BG-Source.rst) se ujistěte, že jste povolili možnost [Identify receiver](../Configuration/xdrip#identify-receiver) v aplikaci xDrip nebo používáte upravenou aplikaci Dexcom ze [složky 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Nainstalujte git (pokud ho ještě nemáte)
 
