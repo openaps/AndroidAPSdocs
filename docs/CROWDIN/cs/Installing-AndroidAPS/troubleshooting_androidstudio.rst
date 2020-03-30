@@ -76,9 +76,9 @@ No CGM data
 * In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
 * In case you are using `patched Dexcom G6 app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Make sure you are using the correct version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 
-Uncommitted changes
+Neprovedené změny
 ==================================================
-If you receive failure message like
+Pokud se zobrazí podobná chybová zpráva,
 
 .. image:: ../images/GIT_TerminalCheckOut0.PNG
   :alt: Failure uncommitted changes
@@ -92,15 +92,15 @@ Option 1 - Check git installation
 
 Option 2 - Reload source code
 --------------------------------------------------
-* In Android Studio select VCS -> GIT -> Reset HEAD
+* V Android Studio zvolte VCS -> GIT -> Reset HEAD
 
 .. image:: ../images/GIT_TerminalCheckOut3.PNG
   :alt: Reset HEAD
    
 Option 3 - Check for updates
 --------------------------------------------------
-* Copy ‘git checkout --’ to clipboard (without quote signs)
-* Switch to Terminal in Android Studio (lower left side of Android Studio window)
+* Zkopírujte ‘git checkout --’ do schránky (bez uvozovek)
+* Přepněte v Android Studiu na Terminal (ve spodní části vlevo v okně Android Studia)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
   :alt: Android Studio Terminal
@@ -110,13 +110,13 @@ Option 3 - Check for updates
   .. image:: ../images/GIT_TerminalCheckOut2.jpg
     :alt: GIT checkout success
 
-App not installed
+Aplikace není nainstalována
 ==================================================
 .. image:: ../images/Update_AppNotInstalled.png
   :alt: phone app note installed
 
 * Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps:
+* Pokud se na telefonu zobrazí „Aplikace není nainstalována“, postupujte následovně:
   
 1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
 2. Odinstalujte aplikaci AAPS ze svého telefonu
@@ -125,13 +125,13 @@ App not installed
 5. `Import settings <../Usage/ExportImportSettings.html>`_
 6. Znovu zapněte bluetooth a vypněte režim letadlo
 
-App installed but old version
+Aplikace je nainstalována, ale ve staré verzi
 ==================================================
 If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`.
 
-None of the above worked
+Nic z výše uvedeného nefunguje
 ==================================================
-If non of the above tips helped you might consider building the app from scratch:
+Jestliže žádný z uvedených tipů nepomáhá, zvažte sestavení aplikace úplně od začátku:
 
 1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
 2. Have your key password and key store password ready
@@ -140,9 +140,9 @@ If non of the above tips helped you might consider building the app from scratch
 4.	Jestliže jste úspěšně sestavili APK, odstraňte stávající aplikaci z telefonu a přeneste do něj a nainstalujte nový soubor apk.
 5. `Import settings <../Usage/ExportImportSettings.html>`_
 
-Worst case scenario
+Nejčernější scénář
 ==================================================
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
+V případě, že ani sestavení aplikace úplně od začátku nevyřeší váš problém, zkuste úplně odinstalovat Android Studio. Někteří uživatelé uvedli, že to jejich problém vyřešilo.
 
 **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
 
