@@ -36,7 +36,7 @@ Následují obecné kroky k sestavení souboru APK:
 5. [Stáhněte Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [Sestavte aplikaci](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (vygenerujte podepsaný soubor apk)
 7. [Nahrajte aplikaci do mobilu](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identifikace přijímače při používání xDripu+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
+8. [Možnost „Identify receiver“ při používání xDripu+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
 
 ## Průvodce krok za krokem
 
@@ -257,7 +257,7 @@ Easiest way to transfer app-full-release.apk to your phone is via [USB cable or 
 
 On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
-## Identifikace přijímače při používání xDripu+
+## Možnost „Identify receiver“ při používání xDripu+
 
 [Viz stránka xDrip+](../Configuration/xdrip#identify-receiver)
 
