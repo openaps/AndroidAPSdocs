@@ -117,7 +117,7 @@ Freestyle Libre 2
 .. изображение:: ../images/fsl2pic10.jpg
   :alt: Libre 2 время запуска
   
-В целом это одна из самых маленьких систем мониторинга ГК на рынке. Маленькая, не нуждается в трансмиттере, выдает очень точные значения без колебаний. After approx. 12 hours running-in phase with deviations of up to 30 mg/dL the deviations are typical smaller than 10 md/dL. Best results at the rear orbital arm, other setting points with caution! No need to set a new sensor one day ahead for soaking. That would disturbe the internal leveling mechanism.
+В целом это одна из самых маленьких систем мониторинга ГК на рынке. Маленькая, не нуждается в трансмиттере, выдает очень точные значения без колебаний. После приблизительно 12 часов работы в фазе подстройки с отклонениями до 30 мг/дл, далее отклонения не превышают 10 мд/дл. Best results at the rear orbital arm, other setting points with caution! No need to set a new sensor one day ahead for soaking. That would disturbe the internal leveling mechanism.
 
 There seem to be bad sensors from time to time, which are far away from the blood values. It stays that way. These should be immediately replaced.
 
