@@ -5,15 +5,15 @@ AndroidAPS turi keletą mokymo programos tikslų, kuriuos įvykdę įvaldysite s
 
 Jei **keičiate telefoną**, galite `eksportuoti nustatymus <../Usage/ExportImportSettings.html>`_ - tokiu būdu jau pasiekti tikslai nebus prarasti. Kartu bus išsaugoti ir Jūsų saugumo parametrai, kaip maks bolusas ir pan.  Jei nustatymų eksportavimo ir importavimo neatliksite, Tikslų programą turėsite pradėti iš pradžių.  Geriausia `pasidaryti savo nustatymų atsarginę kopiją <../Usage/ExportImportSettings.html>`_ kuo dažniau.
 
-If you want to go back in objectives see `explanation below <../Usage/Objectives.html#go-back-in-objectives>`_.
+Jei norite sugrįžti į ankstesnį tikslą, skaitykite `paaiškinimą čia <../Usage/Objectives.html#go-back-in-objectives>`_.
  
 Tikslas 1: vizualizacijos ir monitoringo nustatymai, bazės ir koeficientų analizė
 ====================================================================================================
 * Pasirinkite tinkamą glikemijos duomenų šaltinį.  Žr. `Glikemijos duomenų šaltinis <../Configuration/BG-Source.html>`_.
 * Pasirinkite tinkamą pompą Konfigūracijoje (pasirinkite Virtualią pompą, jei naudojate pompos modelį, kurio AndroidAPS sistema nepalaiko), kad būtų užtikrinta jos komunikacija su AndroidAPS.  
 * Jei naudojate DanaR pompą, įsitikinkite, kad laikėtės `DanaR insulino pompos <../Configuration/DanaR-Insulin-Pump.html>`_ instrukcijų, kad užtikrintumėte gerą ryšį tarp pompos ir AndroidAPS.
-* Vykdykite instrukcijas 'Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ puslapyje, kad įsitikintumėte, kad Nightscout gali priimti ir rodyti šiuos duomenis.
-NSClient URL turi būti įvestas **BE /api/v1/** pabaigoje - žr. 'NSClient nustatymai <../Configuration/Preferences.html#ns-client>`_.
+* Vykdykite instrukcijas `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ puslapyje, kad įsitikintumėte, kad Nightscout gali priimti ir rodyti šiuos duomenis.
+NSClient URL turi būti įvestas **BE /api/v1/** pabaigoje - žr. `NSClient nustatymai <../Configuration/Preferences.html#ns-client>`_.
 
 *Jums gali tekti palaukti, kol bus perskaityta kita glikemijos reikšmė, kol AndroidAPS ją atpažins.*
 
@@ -31,7 +31,7 @@ Objective 3: Proof your knowledge
 * Atsakykite į testo klausimus su atsakymų variantais įvairiomis AndroidAPS temomis.
 * Spustelėkite oranžinį tekstą „Dar nebaigta“, kad eitumėte į klausimų ir atsakymų puslapį.
 
-   .. nuotrauka:: ../images/Objective3_V2_5.png
+   .. image:: ../images/Objective3_V2_5.png
      :alt: 3 tikslo ekrano vaizdas
 
 * Nuorodos į dokumentaciją padės jums tuo atveju, jei nebūsite tokie tikri vienu ar kitu atsakymu.
@@ -39,12 +39,12 @@ Objective 3: Proof your knowledge
 Praleisti tikslus
 --------------------------------------------------
 * Tik tuo atveju, jei jau esate naudoję kitą sistemą (pvz., OpenAPS, iOS Loop) ir galite tai įrodyti (pvz. mažiausiai trijų mėnesių ciklo duomenys matomi Nightscout), galite išsiųsti el. laišką adresu `objectives@androidaps.org <mailto:objectives@androidaps.org>`_, nurodant savo NS adresą ir pateikti prašymą gauti likusių tikslų praleidimo kodą.
-* Prašome atkreipti dėmesį, kad pagalba nėra teikiama su šia el. pašto paskyra. Prašome naudoti šioje dokumentacijoje aprašytus „Palaikymo pasiūlymus <../Where-To-Go-For-Help/Connect-with-other-users.html>.
+* Prašome atkreipti dėmesį, kad pagalba nėra teikiama su šia el. pašto paskyra. Prašome naudoti šioje dokumentacijoje aprašytus `Palaikymo pasiūlymus <../Where-To-Go-For-Help/Connect-with-other-users.html>`_.
 
 Tikslas 4: pradėkite naudoti Atvirą ciklą
 ==================================================
 * Pasirinkite „Atviras ciklas“ arba Nustatymuose arba ilgai paspausdami mygtuką „Ciklas“ pagrindinio ekrano viršutiniame kairiajame kampe.
-* Norėdami pritaikyti AndroidAPS jūsų poreikiams, eikite į Nustatymus <../Configuration/Preferences.html>`_.
+* Norėdami pritaikyti AndroidAPS jūsų poreikiams, eikite į `Nustatymus <../Configuration/Preferences.html>`_.
 * Patvirtinkite bent 20 laikinų valandinių bazių pasiūlymus per 7 dienas; įveskite juos pompoje ir AndroidAPS patvirtinkite, kad sutikote su pasiūlymais.  Patikrinkite, ar šie duomenys rodomi AndroidAPS ir Nightscout.
 * Jei reikia, suaktyvinkite `Laikinus tikslus <../Usage/temptarget.html>`_. Naudokite Hipo laikiną tikslą apsisaugoti, kad sistema pernelyg aktyviai nekoreguotų kylančios glikemijos po buvusios hipoglikemijos. 
 
@@ -53,7 +53,7 @@ Sumažinti pranešimų skaičių
 * Norėdami sumažinti pasiūlymų, kuriuos reikia patvirtinti atvirajame cikle, skaičių, nustatykite platų tikslinį diapazoną, pvz., 90–150 mg/dl arba 5,0–8,5 mmol/l. * Jei reikia naktį taip pat galite nustatyti aukštesnę viršutinę ribą arba visiškai pristabdyti atvirą ciklą. 
 * Nustatymuose galite nustatyti mažiausią procentą, kurį reikia pasiekti prieš pasiūlant pakeisti laikiną valandinę bazę.
 
-   .. nuotrauka:: ../images/OpenLoop_MinimalRequestChange2.png
+   .. image:: ../images/OpenLoop_MinimalRequestChange2.png
      :alt: Atvirojo ciklo minimalaus pokyčio užklausa
      
 * Taip pat nereikia reaguoti į kiekvieną pasiūlymą kas penkias minutes...
@@ -72,9 +72,9 @@ Tikslas yra vertė, kuria grindžiami skaičiavimai, o ne vertė, kuria norite i
 
 Galbūt norėsite išbandyti koreguodami siauresnio tikslinio diapazono vertes (pvz., 1 mmol/l arba 20 mg/dl ar mažiau) ir pažiūrėkite, kaip keičiasi sistemos elgsena.  
 
-Pagrindinio ekrano grafike (žalios linijos), kuriame norite palaikyti gliukozės kiekį kraujyje, galite pakeisti tikslinę reikšmių diapazoną, pakeisdami reikšmes, esančias skyriuje „Nustatymai <../Configuration/Preferences.html>`_ > Rodymo diapazonas“.
+Pagrindinio ekrano grafike (žalios linijos), kuriame norite palaikyti gliukozės kiekį kraujyje, galite pakeisti tikslinę reikšmių diapazoną, pakeisdami reikšmes, esančias skyriuje `Nustatymai <../Configuration/Preferences.html>`_ > Rodymo diapazonas“.
  
-.. nuotrauka:: ../images/sign_stop.png
+.. image:: ../images/sign_stop.png
   :alt: Stop ženklas
 
 Jei naudojate virtualią pomp ir atvirą ciklą - nespauskite Patvirtinti šio tikslo pabaigoje.
@@ -85,7 +85,7 @@ Jei naudojate virtualią pomp ir atvirą ciklą - nespauskite Patvirtinti šio t
 
 Tikslas 6: pradėkite Uždaro ciklo (Closed Loop) režimą su pompos stabdymu esant žemai gliukozei
 ====================================================================================================
-.. nuotrauka:: ../images/sign_warning.png
+.. image:: ../images/sign_warning.png
   :alt: Įspėjamasis ženklas
   
 Uždaras ciklas nekoreguos aukštos glikemijos 6 tiksle, nes jį apriboja sustabdymas dėl žemos gliukozės. High bg values have to be corrected manually by you!
