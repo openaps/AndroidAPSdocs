@@ -68,9 +68,9 @@ You will want to set your target higher than usual until you are confident in th
 * a high target to be a minimum of 5 mmol (90 mg/dl) and maximum of 15 mmol (225 mg/dl)
 * a temporary target as a single value can be anywhere in the range of 4 mmol to 15 mmol (72 mg/dl to 225 mg/dl)
 
-Tikslas yra vertė, kuria grindžiami skaičiavimai, o ne vertė, kuria norite išlaikyti gliukozės kiekį kraujyje.  Jei turite labai platų tikslinį diapazoną (pvz., 3 mmol/50 mg/dl ar daugiau), vargu ar pastebėsite bet kokią AndroidAPS veiklą. Numatomas gliukozės lygis greičiausiai bus jūsų tiksliniame diapazone, todėl nebus siūloma daug laikinų bazinio greičio pokyčių. 
+Tikslas yra reikšmė, kuria grindžiami skaičiavimai, o ne reikšmė, kuria norite išlaikyti gliukozės kiekį kraujyje.  Jei turite labai platų tikslinį diapazoną (pvz., 3 mmol/50 mg/dl ar daugiau), vargu ar pastebėsite bet kokią AndroidAPS veiklą. Numatomas gliukozės lygis greičiausiai bus jūsų tiksliniame diapazone, todėl nebus siūloma daug laikinų bazinio greičio pokyčių. 
 
-Galbūt norėsite išbandyti koreguodami siauresnio tikslinio diapazono vertes (pvz., 1 mmol/l arba 20 mg/dl ar mažiau) ir pažiūrėkite, kaip keičiasi sistemos elgsena.  
+Galbūt norėsite išbandyti koreguodami siauresnio tikslinio diapazono reikšmes (pvz., 1 mmol/l arba 20 mg/dl ar mažiau) ir pažiūrėkite, kaip keičiasi sistemos elgsena.  
 
 Pagrindinio ekrano grafike (žalios linijos), kuriame norite palaikyti gliukozės kiekį kraujyje, galite pakeisti tikslinę reikšmių diapazoną, pakeisdami reikšmes, esančias skyriuje `Nustatymai <../Configuration/Preferences.html>`_ > Rodymo diapazonas“.
  
@@ -110,7 +110,7 @@ Tikslas 7: koreguokite savo uždarąjį ciklą po truputį didindami maks AIO ir
 * Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
 
 
-Tikslas 8: jei reikia, paderinkite valandines bazės vertes bei pagrindinius parametrus ir įgalinkite Autosens funkciją
+Tikslas 8: jei reikia, derinkite valandines bazės reikšmes bei pagrindinius parametrus ir įgalinkite Autosens funkciją
 ====================================================================================================
 * You can use `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ as a one off to check your basals remain accurate or do a traditional basal test.
 * Enable `autosens <../Usage/Open-APS-features.html>`_ over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
