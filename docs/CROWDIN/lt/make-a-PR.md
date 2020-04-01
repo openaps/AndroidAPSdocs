@@ -80,7 +80,7 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 * Headline 2: `## headline`
 * Headline 3: `### headline`
 
-#### Images
+#### Paveiksliukai
 
 * images: `![alt text](../images/file.png)`
 
@@ -112,9 +112,9 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
   `headline`  
   `-----`
 
-#### Images
+#### Paveiksliukai
 
-* images:
+* paveiksliukai:
   
   `.. image:: ../images/modules.png`  
   `:alt: alt text`
