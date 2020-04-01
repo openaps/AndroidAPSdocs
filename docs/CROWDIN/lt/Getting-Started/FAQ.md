@@ -60,7 +60,7 @@ Jei reikia išjungti pompą prieš dušą / maudymąsi / plaukiojimą / sportavi
 
 ### Rekomendacijos grindžiamos daugiau nei viena stebėjimo indikacija
 
-Saugumui užtikrinti sistemos rekomendacijos pateikiamos ne pagal vieną KG rodmenį, o pagal paskutinių verčių vidurkį (atsižvelgiant į pokyčio delta). Todėl, jei praleidžiami keli rodmenys, gali praeiti šiek tiek laiko, kol AndroidAPS vėl pradės koreguoti glikemiją uždarojo ciklo režimu.
+Saugumui užtikrinti sistemos rekomendacijos pateikiamos ne pagal vieną KG rodmenį, o pagal paskutinių reikšmių vidurkį (atsižvelgiant į pokyčio delta). Todėl, jei praleidžiami keli rodmenys, gali praeiti šiek tiek laiko, kol AndroidAPS vėl pradės koreguoti glikemiją uždarojo ciklo režimu.
 
 ### Papildoma informacija
 
@@ -119,7 +119,7 @@ Jei glikemija krenta, bazė yra per didelė. Ir atvirkščiai.
 
 Per aukšta bazė gali sukelti hipoglikemiją. Ir atvirkščiai.
 
-Pagal numatytuosius nustatymus AAPS sukuria savo algoritmą, remdamasis bazės parametrais. Jei bazinė dalis per aukšta, tada nulinė laikina bazė bus nustatoma su didesne neigiama aktyvaus insulino AIO verte, nei reikalinga. Dėl to AAPS bus darys daugiau koregavimų, nei turėtų būti, kad aktyvusis insulinas AIO sumažėtų iki nulio.
+Pagal numatytuosius nustatymus AAPS sukuria savo algoritmą, remdamasis bazės parametrais. Jei bazinė dalis per aukšta, tada nulinė laikina bazė bus nustatoma su didesne neigiama aktyvaus insulino AIO reikšme, nei reikalinga. Dėl to AAPS bus darys daugiau koregavimų, nei turėtų būti, kad aktyvusis insulinas AIO sumažėtų iki nulio.
 
 Taigi per didelė bazė lemia žemą glikemiją tiek per standartinę bazę, tiek vėliau dėl AAPS koregavimų.
 
@@ -135,7 +135,7 @@ Darant prielaidą, kad bazė yra teisinga, galite tai išbandyti taip: įsitikin
 
 Tada susileiskite numatomą insulino kiekį (esant dabartiniam 1/JIF santykiui), kad gautumėte tikslinę glikemiją.
 
-Būkite atsargūs, nes gana dažnai vertė yra per žema. Per žema reiškia, kad 1 vienetas sumažins glikemiją greičiau, nei tikėtasi.
+Būkite atsargūs, nes gana dažnai reikšmė yra per žema. Per žema reiškia, kad 1 vienetas sumažins glikemiją greičiau, nei tikėtasi.
 
 ### Įtaka
 
@@ -152,7 +152,7 @@ Būkite atsargūs, nes gana dažnai vertė yra per žema. Per žema reiškia, ka
 
 Per mažas nurodytas jautrumas JIF (dažnai) gali atlikti „per didelę korekciją“, nes AAPS darys prielaidą, kad norint koreguoti aukštą glikemiją reikia daugiau insulino, nei yra iš tikrųjų. Tai gali lemti "kalnelius"' (ypač nevalgius). Šiuo atveju jums reikia padidinti savo JIF. Tai reiškia, kad AAPS teiks mažesnes korekcijos dozes ir tai padės išvengti per didelio koregavimo, kuris baigiasi žema glikemija.
 
-Priešingai, per mažas JIF gali sukelti „dalinius pataisymus“. Tai reiškia, kad jūsų KG vertės išliks didesnės nei jūsų tikslinė glikemija, ypač naktį.
+Priešingai, per mažas JIF gali sukelti „dalinius pataisymus“. Tai reiškia, kad jūsų KG išliks didesnė nei jūsų tikslinė glikemija, ypač naktį.
 
 ## Insulino angliavandenių santykis (IA) (g/U)
 
@@ -162,7 +162,7 @@ Gramai angliavandenių kiekvienam insulino vienetui.
 
 Kai kurie žmonės naudoja I:A vietoj IA arba turi omenyje angliavandenių santykį (CR).
 
-Darant prielaidą, kad bazė yra teisinga, galite išbandyti pagal dabartinius nustatymus, jei jūsų AIO = 0 ir jūsų KG vertė yra normos ribose. Valgykite žinomą angliavandenių kiekį ir suleiskite reikiamą kiekį insulino, apskaičiuotą pagal jūsų IA santykį. Geriausia valgyti maisto produktus, kuriuos paprastai valgote tokiu dienos metu, ir tiksliai apskaičiuoti angliavandenių kiekį juose.
+Darant prielaidą, kad bazė yra teisinga, galite išbandyti pagal dabartinius nustatymus, jei jūsų AIO = 0 ir jūsų KG reikšmė yra normos ribose. Valgykite žinomą angliavandenių kiekį ir suleiskite reikiamą kiekį insulino, apskaičiuotą pagal jūsų IA santykį. Geriausia valgyti maisto produktus, kuriuos paprastai valgote tokiu dienos metu, ir tiksliai apskaičiuoti angliavandenių kiekį juose.
 
 > **PASTABA:**
 > 
@@ -172,7 +172,7 @@ Darant prielaidą, kad bazė yra teisinga, galite išbandyti pagal dabartinius n
 > 
 > Naudojant IA rodiklį, insulino kiekis yra fiksuotas, o angliavandenių kiekis yra kintamas. ("Kiek gramų angliavandenių padengia vienas vienetas insulino?")
 > 
-> Example:
+> Pavyzdys:
 > 
 > Duonos vieneto faktorius (DV = 12g angliavandenių): 2,4vv/DV -> Jums reikia 2,4 vienetų insulino, vienam duonos vienetui.
 > 
@@ -188,11 +188,11 @@ Darant prielaidą, kad bazė yra teisinga, galite išbandyti pagal dabartinius n
 
 **Aukštesnis IA** = daugiau angliavandenių vienam insulino vienetui, t. y. jums reikia mažiau insulino konkrečiam angliavandenių kiekiui. Jis gali būti vadinamas "mažiau agresyvus".
 
-Jei po valgio angliavandeniai visiškai suskaidomi, AIO vėl tampa lygus nuliui, o jūsų KG vertė yra didesnė nei prieš valgį, tada jūsų IA tikriausiai yra per didelis. Ir atvirkščiai, IA yra per mažas, jei jūsų KG vertė yra mažesnė nei prieš valgant.
+Jei po valgio angliavandeniai visiškai suskaidomi, AIO vėl tampa lygus nuliui, o jūsų KG yra didesnė nei prieš valgį, tada jūsų IA tikriausiai yra per didelis. Ir atvirkščiai, IA yra per mažas, jei jūsų KG yra mažesnė nei prieš valgant.
 
 # APS algoritmas
 
-## Kodėl skirtuke „OPENAPS AMA“ IVT insulino trukmė rodoma kaip 3 (dia:3), nors mano profilis turi kitokią vertę?
+## Kodėl skirtuke „OPENAPS AMA“ IVT insulino trukmė rodoma kaip 3 (dia:3), nors mano profilis turi kitokią reikšmę?
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
