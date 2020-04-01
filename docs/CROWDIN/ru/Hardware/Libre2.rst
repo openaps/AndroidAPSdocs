@@ -132,7 +132,7 @@ Freestyle Libre 2
 .. изображение:: ../images/fsl2pic11.jpg
   :alt: xDrip + пропущенные данные при замене сенсора Libre 2
   
-Вы можете откалибровать либре2 со смещением плюс/минус 20 мг/дЛ (перехват), но без уклона. To be on the safe side, calibrate every 24 - 48 hours. The values are accurate up to the end of the sensor and do not jitter as with the Libre1. However, if the sensor is completely off, this will not change. The sensor should then be replaced immediately.
+Вы можете откалибровать либре2 со смещением плюс/минус 20 мг/дЛ (перехват), но без уклона. Для верности, калибруйте каждые 24-48 часов. Значения точны до конца срока работы сенсора и не имеют такого разброса как в Libre1. Однако, если сенсор и близко не показывает верные значения, это не изменится. В этом случае сенсор следует немедленно заменить.
 
 The Libre2 sensors contain plausibility checks to detect bad sensor values. As soon as the sensor moves on the arm or is lifted slightly, the values may start to fluctuate. The Libre2 sensor will then shut down for safety reasons. Unfortunately, when scanning with the App, additional checks are made. The app can deactivate the sensor even though the sensor is OK. Currently the internal test are too strict. I have completely stopped scanning and haven't had a failure since then.
 
