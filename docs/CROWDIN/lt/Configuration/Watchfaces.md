@@ -83,7 +83,7 @@ J - aktyvus insulinas (iš boluso | iš bazės)
 
 Norėdami atidaryti pagrindinį AAPS meniu, galite naudoti šias parinktis:
 
-* dukart bakstelėkite į savo KG vertę
+* dukart bakstelėkite į savo KG reikšmę
 * pasirinkite AAPS piktogramą laikrodžio programų meniu
 * bakstelėkite į AAPS funkciją (jei sukonfigūruota meniu)
 
@@ -103,15 +103,15 @@ Užpildyta žvaigždutė reiškia, kad būsena yra aktyvi (**Įjungta**), o tuš
 ### Laikrodžio ekrano nustatymai
 
 * **Rodyti datą** (numatyta - `Išjungta`): pastaba, data matoma ne visų laikrodžių ekranuose
-* **Rodyti AIO** (numatyta - `Įjungta`): rodyti arba ne AIO reikšmes (nustatyti išsamias vertes galite AAPS parametruose)
-* **Rodyti AIO** (numatyta `Įjungta`): Rodyti arba ne AIO vertę
-* **Rodyti delta** (numatyta -` Įjungta`): rodyti arba ne KG reišmių kitimus per paskutines 5 minutes
-* **Rodyti AVGdelta** (numatyta - `Įjungta`): rodyti arba ne vidutinius KG reišmių kitimus per paskutines 15 minučių
+* **Rodyti AIO** (numatyta - `Įjungta`): rodyti arba ne AIO reikšmes (nustatyti išsamias reikšmes galite AAPS parametruose)
+* **Rodyti AIO** (numatyta `Įjungta`): Rodyti arba ne AIO
+* **Rodyti delta** (numatyta -` Įjungta`): rodyti arba ne KG reikšmių kitimus per paskutines 5 minutes
+* **Rodyti AVGdelta** (numatyta - `Įjungta`): rodyti arba ne vidutinius KG reikšmių kitimus per paskutines 15 minučių
 * **Rodyti telefono bateriją** (numatyta `Įjungta`): Telefono baterija %. Raudona, jei mažiau nei 30% .
 * **Rodyti įrenginio bateriją** (numatyta - `Išjungta`): įrenginio baterija yra telefono, pompos bei sensoriaus baterijų sintezė (paparastai žemiausia iš 3 reikšmių)
 * **Rodyti valandinę bazę** (numatyta - `Įjungta`): rodyti arba ne dabartinę valandinę bazę (V/h arba %, jei LVB)
 * **Rodo ciklo būklę** (numatyta - `Įjungta`): rodyti kiek minučių praėjo nuo paskutinio ciklo suveikimo (rodyklės aplink reikšmę patampa raudonomis, jei virš 15'').
-* **Rodyti KG** (numatyta `Įjungta`): Rodyti arba ne KG vertę
+* **Rodyti KG** (numatyta `Įjungta`): Rodyti arba ne KG reikšmę
 * **Rodyti krypties rodykles** (numatyta `Įjungta`): Rodyti arba ne KG kitimo rodyklę
 * **Rodyti Prieš** (numatytasis `Įjungta`): rodo, kiek minučių praėjo nuo paskutinio nuskaitymo.
 * **Tamsus** (numatyta `Įjungta`): galite perjungti iš juodo fono į baltą (išskyrus Cockpit ir Steampunk laikrodžio ekranus)
@@ -167,7 +167,7 @@ AAPS Wear OS programėlė pateikia tik pirminius duomenis, pagal numatytus forma
 
 * `TRUMPAS TEKSTAS` - Yra dvi teksto eilutės, 7 simboliai kiekvienoje, kartais vadinama reikšme ir pavadinimu. Paprastai parodoma viduje apskritimo ar mažo ovalo - vienas po kitu arba šalia. Tai yra labai erdvėje apribotas ekrano elementas. Kad sutilptų, AAPS stengiasi pašalinti nereikalingus ženklus: apvalina reikšmes, pašalindamas nulius pradžioje ir pabaigoje iš reikšmių ir pan.
 * `ILGAS TEKSTAS` - Yra dvi teksto eilutės, apie 20 simbolių kiekvienoje. Paprastai rodomas stačiakampyje arba ilgame ovale - vienas po kitu. Naudojamas pateikti daugiau detalių ir tekstinę būseną.
-* `RIBINĖ VERTĖ` - Naudojamas pateikti reikšmes iš nustatytų ribų, pvz., procentus. Turi paveikslėlį, pavadinimą ir pateikiamas kaip progreso apskritimas.
+* `RIBINĖ REIKŠMĖ` - Naudojamas pateikti reikšmes iš nustatytų ribų, pvz., procentus. Turi paveikslėlį, pavadinimą ir pateikiamas kaip progreso apskritimas.
 * `DIDELIS PAVEIKSLĖLIS` - Pasirinktinis fono paveikslėlis, kuris gali būti naudojamas (kai palaikoma ciferblate), kaip fonas.
 
 ### Ekrano elementų diegimas
@@ -183,66 +183,63 @@ AndroidAPS pateikia šiuos ekrano elementus:
 ![AAPS_plėtinių_sąrašas](../images/Watchface_Complications_List.png)
 
 * **VB, AAO & AIO** (`TRUMPAS TEKSTAS`, atsidaro *Meniu*): rodo *Valandinę bazę* pirmoje eilutėje ir *Aktyvius angliavandenius organizme* bei *Aktyvų insuliną organizme* antroje.
-* **Kraujo Gliukozė** (`TRUMPAS TEKSTAS`, atsidaro *Meniu*): rodo *Kraujo gliukozės* vertę ir *tendencijos* rodyklę pirmoje eilutėje ir *matavimo laikotarpį* bei *KG delta* antroje.
+* **Kraujo Gliukozė** (`TRUMPAS TEKSTAS`, atsidaro *Meniu*): rodo *Kraujo gliukozės* reikšmę ir *tendencijos* rodyklę pirmoje eilutėje ir *matavimo laikotarpį* bei *KG delta* antroje.
 * **AAO & AIO** (`TRUMPAS TEKSTAS`, atsidaro *Meniu*): rodo *Aktyvius angliavandenius organizme* pirmoje eilutėje ir *Aktyvų insuliną organizme* antroje.
 * **AAO išsamiai** (`TRUMPAS TEKSTAS`, atsidaro *Vedlys*): rodo dabartinius aktyvius *Angliavandenius organizme* pirmoje eilutėje ir planuojamus (būsimus, iAV) angliavandenius antroje.
-* **AAO piktograma** (`TRUMPAS TEKSTAS`, atsidaro *Vedlys*): rodo *Angliavandenių organizme* vertę su statine piktograma.
-* **Visa būsena** (`ILGAS TEKSTAS`, atsidaro *Meniu*): rodo dauguma duomenų vienu metu: *Kraujo gliukozės* vertę ir *tendencijos* rodyklę, *KG delta* ir *matavimo laikotarpį* pirmoje eilutėje. Antroje eilutėje *Angliavandenių organizme*, *Insuliną organizme* ir *valandinę bazę*.
+* **AAO piktograma** (`TRUMPAS TEKSTAS`, atsidaro *Vedlys*): rodo *Angliavandenių organizme* reikšmę su statine piktograma.
+* **Visa būsena** (`ILGAS TEKSTAS`, atsidaro *Meniu*): rodo dauguma duomenų vienu metu: *Kraujo gliukozės* reikšmę ir *tendencijos* rodyklę, *KG delta* ir *matavimo laikotarpį* pirmoje eilutėje. Antroje eilutėje *Angliavandenių organizme*, *Insuliną organizme* ir *valandinę bazę*.
 * **Visa būsena (pasukta)** (`ILGAS TEKSTAS`, atsidaro *Meniu*): tie patys duomenys, kaip ir standartinėje *Visoje būsenoje*, bet linijos yra pasuktos. Gali būti naudojama ciferblatuose, kurie ignoruoja vieną iš dviejų linijų `ILGAS TEKSTAS`
 * **AAO Išsamiai** (`TRUMPAS TEKSTAS`, atsidaro *Bolusas*): Rodo visą *aktyvų insuliną organizme* pirmoje eilutėje ir *AAO* dedamąsias *Boluso* ir *Bazės* dalis antroje eilutėje.
-* **AAO piktograma** (`TRUMPAS TEKSTAS`, atsidaro *Bolusas*): rodo *Angliavandenių organizme* vertę su statine piktograma.
-* **Siuntėjo/Telefono Baterija** (`RIBINĖ VERTĖ`, atsidaro *Būsena*): pateikia AAPS įdiegtame telefone baterijos procentą (siuntėjas) taip, kaip nurodo AAPS. Rodoma procentais, su akumuliatoriaus piktograma, kuri atspindi praneštą vertę. Gali būti neatnaujinama realiu laiku, o tik su kitais svarbiais AAPS duomenimis (paprastai kas ~5 minutes kartu su nauju *kraujo gliukozės* matavimu).
+* **AAO piktograma** (`TRUMPAS TEKSTAS`, atsidaro *Bolusas*): rodo *Angliavandenių organizme* reikšmę su statine piktograma.
+* **Siuntėjo/Telefono Baterija** (`RIBINĖ REIKŠMĖ/1>, atsidaro <em>Būsena</em>): pateikia AAPS įdiegtame telefone baterijos procentą (siuntėjas) taip, kaip nurodo AAPS. Rodoma procentais, su akumuliatoriaus piktograma, kuri atspindi praneštą reikšmę. Gali būti neatnaujinama realiu laiku, o tik su kitais svarbiais AAPS duomenimis (paprastai kas ~5 minutes kartu su nauju <em>kraujo gliukozės</em> matavimu).</li>
+</ul>
 
-Be to, yra trys ekrano elementai `DIDELIS PAVEIKSLĖLIS` tokios kaip: **Tamsus fono paveikslėlis**, **Pilkas fono paveikslėlis** ir **Šviesus fono paveikslėlis**, rodantys statinį AAPS fono paveikslėlį.
-
-### Su ekrano elementais susiję nustatymai
-
-* **Veiksmai paspaudus plėtinių mygtuką** (numatytoji reikšmė `Numatytasis`): Nusprendžia, kuris dialogo langas yra atidarytas, kai vartotojas baksteli į plėtinius: 
-    * *Numatytasis*: veiksmų, būdingų ekrano elementų tipui *(žr. sąrašą aukščiau)*
-    * *Meniu*: AAPS pagrindinis meniu
-    * *Vedlys*: boluso vedlys - boluso skaičiuoklė
-    * *Bolusas*: tiesioginis boluso vertės įrašas
-    * *iAV*: iAV sąrankos dialogas
-    * *Būsena*: būsenos sub-meniu
-    * *Jokių*: Išjungia AAPS plėtinių veiksmus
-* **Unicode ekrano elementuose** (numatytasis `Įjungta`): Kai `Įjungta`, elementuose bus naudojami Unicode simboliai, tokie kaip: `Δ` Delta, `⁞` vertikalių taškų daliklis arba `⎍` bazės simbolis. Jų pateikimas priklauso nuo šrifto, kuris gali būti būdingas tik tam ciferblatui. Ši parinktis leidžia perjungti Unicode simbolius `Išjungta` kai reikia - jei šriftas, naudojamas parinktiniuose ciferblatuose nepalaiko šių simbolių - taip išvengiant grafinių trikdžių.
-
-## Patarimai dėl darbo ir baterijos gyvavimo
-
-Wear OS laikrodžiai labai imlūs baterijos energijai. Laikrodžio dydis riboja baterijos talpą. Netgi su aparatinės dalies ir programinės įrangos patobulinimais, Wear OS laikrodžiai reikalauja kasdienės įkrovos.
-
-Jei baterijos tarnavimo trukmė yra trumpesnė nei diena (nuo aušros iki sutemų), štai keletas patarimų sprendžiant sunkumus.
-
-Pagrindinės baterijos eikvojimo sritys:
-
-* Aktyvus ekranas su apšvietimu (LED) arba visu intensyvumo režimu (OLED)
-* Atvaizdavimas ekrane
-* Radijo ryšys per Bluetooth
-
-Kadangi mes negalima nutraukti ryšio (mums reikia atnaujinti duomenis), ir norime turėti naujausius atvaizduotus duomenis, dauguma patobulinimų gali būti padaryta *laiko rodymo* srityje:
-
-* Gamykliniai ciferblatai paprastai yra geriau optimizuoti, nei tie, kuriuos atsisiunčiate iš parduotuvės.
-* Tai geriau naudoti ciferblatus, kurie atvaizduoja duomenis neaktyviu / blyškiu režimu.
-* Būkite atidūs, kai pridedate kitus ekrano elementus, tokius kaip oro valdikliai - jie naudoja duomenis iš išorinių šaltinių.
-* Pradėkite nuo paprastesnių ciferblatų. Pridėkite vieną plėtinį vienu metu ir stebėkite, kiek tai turi įtakos baterijos gyvavimui.
-* Pabandykite naudoti **Tamsią** temą AAPS ciferblate ir [**Atitikimo daliklį**](#watchface-settings). OLED įrenginiuose tai sumažins pikselių šviesį ir jų išdegimą.
-* Patikrinkite, kas veikia geriau jūsų laikrodyje: AAPS numatytasis ciferblatas ar kitas ciferblatas su AAPS plėtiniais.
-* Stebėkite kelias dienas, naudojant įvairius veiklos profilius. Daugelis laikrožių aktyvuoja ekraną, kai žiūrime į juos, judant ar dėl kitų priežasčių.
-* Patikrinkite bendrinius sistemos nustatymus, kurie gali turėti įtakos: pranešimai, apšvietimas/aktyvaus ekrano išsijungimas, kai GPS yra aktyvuotas.
-* Patikrinkite [sąrašą išbandytų telefonų ir laikrodžių](../Getting-Started/Phones#list-of-tested-phones) ir [paklauskite bendruomenės](../Where-To-Go-For-Help/Connect-with-other-users.md) apie kitų vartotojų patirtį bei baterijos gyvavimo būklę.
-* **Mes negalime garantuoti, kad duomenys rodomi ciferblate ar ekrano elemente yra atnaujinti**. Galų gale, tik nuo Wear OS priklauso, kada atnaujinti ciferblatą ar plėtinį. Net kai APPS programėlė užklausia atnaujinimo, sistema gali nuspręsti atidėti arba ignoruoti užklausą, siekdama tausoti bateriją. Jei abejojate ar baterija laikrodyje nusekusi - visada pasitikrinkite AAPS programėlę telefone.
-
-## Wear programos trikčių šalinimas:
-
-* Android Wear 2.0 laikrodžiuose ekranas nebeįsidiegia pats. Jūs turite eiti į laikrodžio Playstore (skiriasi nuo išmaniojo telefono Playstore!) Ir suaktyvinti AAPS kategorijoje "įdiegtos programos telefone“. Taip pat įjungti automatinį naujinimą. 
-* Kartais padeda pakartotinis programų sinchronizavimas su laikrodžiu, nes kartais jis gali tai atlikti per lėtai: Android Wear > krumpliaračio piktograma (apačia)> laikrodžio pavadinimas> sinchronizuoti programas dar kartą.
-* Laikrodžio kūrėjo parinktyse įjunkite ADB derinimo funkciją, prijunkite laikrodį prie kompiuterio per USB ir vieną kartą paleiskite Wear programoje Android Studio.
-* Jei ekrano elementai neatnaujina duomenų, iš pradžių patikrinkite ar AAPS ciferblatas veikia iš viso.
-
-## Peržiūrėti Nightscout duomenis
-
-Jei naudojate kitokią ciklo sistemą arba norite *pamatyti* savo vaiko ciklo informaciją laikrodyje, galite tiesiog sukurti/parsisiųsti NSClient APK. Eikite į [APK kūrimo instrukcijos](../Installing-AndroidAPS/Building-APK.md) ir pasirinkite kūrimo variantą NSClientRelease. Yra keletas skaitmeninių ciferblatų, kurie rodo vidutinį delta pokytį, aktyvų insuliną IOB, esamą laikiną bazinę TBR ir bazinį profilį bei CGM duomenų grafiką.
-
-# Pebble
-
-Pebble vartotojai gali naudoti [Urchin laikrodžio ekraną](https://github.com/mddub/urchin-cgm), kad *peržiūrėtų* jų ciklo duomenis (jei įkelti į Nightscout), tačiau negalėsite valdyti pompos ir AndroidAPS iš laikrodžio. Galite pasirinkti rodomus laukus, tokius kaip AAO ir šiuo metu aktyvi laikina bazė bei prognozes. Jei dirbate su atviru ciklu, galite naudoti [IFTTT](https://ifttt.com/) algoritmą, kad sukurtumėte programėlę, kuri, gavusi pranešimą iš AndroidAPS, siunčia SMS arba sukuria tiesioginį pranešimą.
+<p>Be to, yra trys ekrano elementai <code>DIDELIS PAVEIKSLĖLIS` tokios kaip: **Tamsus fono paveikslėlis**, **Pilkas fono paveikslėlis** ir **Šviesus fono paveikslėlis**, rodantys statinį AAPS fono paveikslėlį.</p> 
+    ### Su ekrano elementais susiję nustatymai
+    
+    * **Veiksmai paspaudus plėtinių mygtuką** (numatytoji reikšmė `Numatytasis`): Nusprendžia, kuris dialogo langas yra atidarytas, kai vartotojas baksteli į plėtinius: 
+        * *Numatytasis*: veiksmų, būdingų ekrano elementų tipui *(žr. sąrašą aukščiau)*
+        * *Meniu*: AAPS pagrindinis meniu
+        * *Vedlys*: boluso vedlys - boluso skaičiuoklė
+        * *Bolusas*: tiesioginis boluso reikšmės įrašas
+        * *iAV*: iAV sąrankos dialogas
+        * *Būsena*: būsenos sub-meniu
+        * *Jokių*: Išjungia AAPS plėtinių veiksmus
+    * **Unicode ekrano elementuose** (numatytasis `Įjungta`): Kai `Įjungta`, elementuose bus naudojami Unicode simboliai, tokie kaip: `Δ` Delta, `⁞` vertikalių taškų daliklis arba `⎍` bazės simbolis. Jų pateikimas priklauso nuo šrifto, kuris gali būti būdingas tik tam ciferblatui. Ši parinktis leidžia perjungti Unicode simbolius `Išjungta` kai reikia - jei šriftas, naudojamas parinktiniuose ciferblatuose nepalaiko šių simbolių - taip išvengiant grafinių trikdžių.
+    ## Patarimai dėl darbo ir baterijos gyvavimo
+    
+    Wear OS laikrodžiai labai imlūs baterijos energijai. Laikrodžio dydis riboja baterijos talpą. Netgi su aparatinės dalies ir programinės įrangos patobulinimais, Wear OS laikrodžiai reikalauja kasdienės įkrovos.
+    
+    Jei baterijos tarnavimo trukmė yra trumpesnė nei diena (nuo aušros iki sutemų), štai keletas patarimų sprendžiant sunkumus.
+    
+    Pagrindinės baterijos eikvojimo sritys:
+    
+    * Aktyvus ekranas su apšvietimu (LED) arba visu intensyvumo režimu (OLED)
+    * Atvaizdavimas ekrane
+    * Radijo ryšys per Bluetooth
+    
+    Kadangi mes negalima nutraukti ryšio (mums reikia atnaujinti duomenis), ir norime turėti naujausius atvaizduotus duomenis, dauguma patobulinimų gali būti padaryta *laiko rodymo* srityje:
+    
+    * Gamykliniai ciferblatai paprastai yra geriau optimizuoti, nei tie, kuriuos atsisiunčiate iš parduotuvės.
+    * Tai geriau naudoti ciferblatus, kurie atvaizduoja duomenis neaktyviu / blyškiu režimu.
+    * Būkite atidūs, kai pridedate kitus ekrano elementus, tokius kaip oro valdikliai - jie naudoja duomenis iš išorinių šaltinių.
+    * Pradėkite nuo paprastesnių ciferblatų. Pridėkite vieną plėtinį vienu metu ir stebėkite, kiek tai turi įtakos baterijos gyvavimui.
+    * Pabandykite naudoti **Tamsią** temą AAPS ciferblate ir [**Atitikimo daliklį**](#watchface-settings). OLED įrenginiuose tai sumažins pikselių šviesį ir jų išdegimą.
+    * Patikrinkite, kas veikia geriau jūsų laikrodyje: AAPS numatytasis ciferblatas ar kitas ciferblatas su AAPS plėtiniais.
+    * Stebėkite kelias dienas, naudojant įvairius veiklos profilius. Daugelis laikrožių aktyvuoja ekraną, kai žiūrime į juos, judant ar dėl kitų priežasčių.
+    * Patikrinkite bendrinius sistemos nustatymus, kurie gali turėti įtakos: pranešimai, apšvietimas/aktyvaus ekrano išsijungimas, kai GPS yra aktyvuotas.
+    * Patikrinkite [sąrašą išbandytų telefonų ir laikrodžių](../Getting-Started/Phones#list-of-tested-phones) ir [paklauskite bendruomenės](../Where-To-Go-For-Help/Connect-with-other-users.md) apie kitų vartotojų patirtį bei baterijos gyvavimo būklę.
+    * **Mes negalime garantuoti, kad duomenys rodomi ciferblate ar ekrano elemente yra atnaujinti**. Galų gale, tik nuo Wear OS priklauso, kada atnaujinti ciferblatą ar plėtinį. Net kai APPS programėlė užklausia atnaujinimo, sistema gali nuspręsti atidėti arba ignoruoti užklausą, siekdama tausoti bateriją. Jei abejojate ar baterija laikrodyje nusekusi - visada pasitikrinkite AAPS programėlę telefone.
+    ## Wear programos trikčių šalinimas:
+    
+    * Android Wear 2.0 laikrodžiuose ekranas nebeįsidiegia pats. Jūs turite eiti į laikrodžio Playstore (skiriasi nuo išmaniojo telefono Playstore!) Ir suaktyvinti AAPS kategorijoje "įdiegtos programos telefone“. Taip pat įjungti automatinį naujinimą. 
+    * Kartais padeda pakartotinis programų sinchronizavimas su laikrodžiu, nes kartais jis gali tai atlikti per lėtai: Android Wear > krumpliaračio piktograma (apačia)> laikrodžio pavadinimas> sinchronizuoti programas dar kartą.
+    * Laikrodžio kūrėjo parinktyse įjunkite ADB derinimo funkciją, prijunkite laikrodį prie kompiuterio per USB ir vieną kartą paleiskite Wear programoje Android Studio.
+    * Jei ekrano elementai neatnaujina duomenų, iš pradžių patikrinkite ar AAPS ciferblatas veikia iš viso.
+    ## Peržiūrėti Nightscout duomenis
+    
+    Jei naudojate kitokią ciklo sistemą arba norite *pamatyti* savo vaiko ciklo informaciją laikrodyje, galite tiesiog sukurti/parsisiųsti NSClient APK. Eikite į [APK kūrimo instrukcijos](../Installing-AndroidAPS/Building-APK.md) ir pasirinkite kūrimo variantą NSClientRelease. Yra keletas skaitmeninių ciferblatų, kurie rodo vidutinį delta pokytį, aktyvų insuliną IOB, esamą laikiną bazinę TBR ir bazinį profilį bei CGM duomenų grafiką.
+    
+    # Pebble
+    
+    Pebble vartotojai gali naudoti [Urchin laikrodžio ekraną](https://github.com/mddub/urchin-cgm), kad *peržiūrėtų* jų ciklo duomenis (jei įkelti į Nightscout), tačiau negalėsite valdyti pompos ir AndroidAPS iš laikrodžio. Galite pasirinkti rodomus laukus, tokius kaip AAO ir šiuo metu aktyvi laikina bazė bei prognozes. Jei dirbate su atviru ciklu, galite naudoti [IFTTT](https://ifttt.com/) algoritmą, kad sukurtumėte programėlę, kuri, gavusi pranešimą iš AndroidAPS, siunčia SMS arba sukuria tiesioginį pranešimą.
