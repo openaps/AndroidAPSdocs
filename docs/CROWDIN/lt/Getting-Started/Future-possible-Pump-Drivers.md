@@ -129,15 +129,15 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 - Pump has to support some kind of remote control. (BT, Radio frequency, etc)
 - Protocol is hacked/documented/etc.
 
-**Minimal requirement**
+**Minimalūs reikalavimai**
 
-- Set Temporary Basal Rate
+- Nustatyti laikinos bazės dydį
 - Get Status
 - Cancel Temporary Basal Rate
 
 **For oref1(SMB) or Bolusing:**
 
-- Set Bolus
+- Nustatyti bolusą
 
 **Good to have**
 
@@ -149,7 +149,7 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 **Other (not required but good to have)**
 
 - Set Extended Bolus
-- Cancel Extended Bolus
+- Atšaukti ištęstą bolusą
 - Read History
 - Read TDD
 
