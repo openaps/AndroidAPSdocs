@@ -1,4 +1,4 @@
-# I'm getting stuck; What do I do? Who can I ask?
+# Užstrigau; Ką daryti? Ko galiu paklausti?
 
 This project is based on volunteer work so some rules apply to avoid extra work to those who so kindly donate their time and skills:
 
