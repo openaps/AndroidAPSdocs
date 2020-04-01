@@ -53,7 +53,7 @@ Pastaba: tarp pompos ir telefono nebus nuolatinio ryšio. Ryšys bus užmegztas 
 
 ## AAPS nustatymai
 
-Jei duomenis įkeliate į Nightscout ir naudojate Insight pompą., neturėtumėte suaktyvinti **„"Visada naudoti bazės absoliučias vertes“**. Į AAPS eiti į Nustatymai> NSClient > Papildomi nustatymai, tada įsitikinkite, kad "Visada naudoti bazės absoliučias vertes" yra išjungta. Tai gali sukelti neteisingus laikinos bazės nustatymus Insight pompoje.
+Jei duomenis įkeliate į Nightscout ir naudojate Insight pompą., neturėtumėte suaktyvinti **„"Visada naudoti bazės absoliučias reikšmes“**. Į AAPS eiti į Nustatymai> NSClient > Papildomi nustatymai, tada įsitikinkite, kad "Visada naudoti bazės absoliučias reikšmes" yra išjungta. Tai gali sukelti neteisingus laikinos bazės nustatymus Insight pompoje.
 
 Norėdami išspręsti problemą, šiuo metu galite naudoti tik **Tik įkelti į NS (ne sinchronizuoti)**, jei norite naudoti automatinį derinimą. AAPS eikite į Nustatymai> NSClient > Papildomi nustatymai ir aktyvuokite "Tik įkelti į NS (ne sinchronizuoti)".
 
@@ -84,7 +84,7 @@ AndroidAPS Insight nustatymuose suaktyvinkite šiuos parametrus:
     kartoti -> nėra ryšio -> palaukti **20** sek.   
     ...
 
-* „Atjungimo atidėjimas“: nusako, kiek laiko (sekundėmis) AndroidAPS lauks, kol atsijungs nuo pompos po veiksmo atlikimo. Numatytoji vertė yra 5 sekundės.
+* „Atjungimo atidėjimas“: nusako, kiek laiko (sekundėmis) AndroidAPS lauks, kol atsijungs nuo pompos po veiksmo atlikimo. Numatytoji reikšmė yra 5 sekundės.
 
 Kol pompa sustabdyta, AAPS rodo laikiną bazės dydį 0%.
 
