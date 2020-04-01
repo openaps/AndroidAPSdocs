@@ -125,14 +125,14 @@ Freestyle Libre 2
 
 Замена сенсора происходит на лету: установите новый сенсор незадолго до активации. Как только xDrip + перестает получать больше данных от старого сенсора, запустите новый при помощи модифицированного приложения. Через час новые значения должны автоматически отображаться в xDrip+. 
 
-If not, please check the phone settings and proceed as with the first start. You have no time limit. Try to find the correct seetings. No need to immediately replace the sensor before you tried different combinations. The sensors are robust and try permanently to establish a connection. Please take your time. In most cases you accidentially changed one setting which causes now problems. 
+В противном случае проверьте настройки телефона и перейдите к первоначальному запуску. У вас нет ограничения по времени. Постарайтесь найти правильные настройки. Нет необходимости сразу же менять сенсор пока не перепробованы разные комбинации. Датчики надежны, постарайтесь установить надежное соединение. Не торопитесь. В большинстве случаев вы можете случайно изменить один параметр, который вызывет новые проблемы. 
 
-Once successful please select "Sensor Stop" and "Delete calibration only" in xDrip. This indicates for xDrip+ that a new sensor is releasing blood sugar levels and the old calibrations are no longer valid and therefore have to be deleted. No real interaction is done with the Libre2 sensor here! You do not need to start the sensor in xDrip.
+При успехе выберите "стоп сенсор" и "только удалить калибровки" в xDrip. xDrip + сможет понять, что новый сенсор получает данные об уровне сахара в крови, а старые калибровки больше не действительны и поэтому должны быть удалены. Никакого реального взаимодействия с сенсором Libre2 при этом не происходит!  Запускать сенсор в xDrip не требуется.
 
 .. изображение:: ../images/fsl2pic11.jpg
-  :alt: xDrip+ missing data when changing Libre 2 sensor
+  :alt: xDrip + пропущенные данные при замене сенсора Libre 2
   
-You can calibrate the Libre2 with an offset of plus/minus 20 mg/dL (intercept), but no slope. To be on the safe side, calibrate every 24 - 48 hours. The values are accurate up to the end of the sensor and do not jitter as with the Libre1. However, if the sensor is completely off, this will not change. The sensor should then be replaced immediately.
+Вы можете откалибровать либре2 со смещением плюс/минус 20 мг/дЛ (перехват), но без уклона. To be on the safe side, calibrate every 24 - 48 hours. The values are accurate up to the end of the sensor and do not jitter as with the Libre1. However, if the sensor is completely off, this will not change. The sensor should then be replaced immediately.
 
 The Libre2 sensors contain plausibility checks to detect bad sensor values. As soon as the sensor moves on the arm or is lifted slightly, the values may start to fluctuate. The Libre2 sensor will then shut down for safety reasons. Unfortunately, when scanning with the App, additional checks are made. The app can deactivate the sensor even though the sensor is OK. Currently the internal test are too strict. I have completely stopped scanning and haven't had a failure since then.
 
