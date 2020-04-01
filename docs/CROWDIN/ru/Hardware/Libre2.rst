@@ -117,13 +117,13 @@ Freestyle Libre 2
 .. изображение:: ../images/fsl2pic10.jpg
   :alt: Libre 2 время запуска
   
-В целом это одна из самых маленьких систем мониторинга ГК на рынке. Маленькая, не нуждается в трансмиттере, выдает очень точные значения без колебаний. После приблизительно 12 часов работы в фазе подстройки с отклонениями до 30 мг/дл, далее отклонения не превышают 10 мд/дл. Best results at the rear orbital arm, other setting points with caution! No need to set a new sensor one day ahead for soaking. That would disturbe the internal leveling mechanism.
+В целом это одна из самых маленьких систем мониторинга ГК на рынке. Маленькая, не нуждается в трансмиттере, выдает очень точные значения без колебаний. После приблизительно 12 часов работы в фазе подстройки с отклонениями до 30 мг/дл, далее отклонения не превышают 10 мд/дл. Наилучшие результаты на внутренней части верха руки, другие места применяйте с осторожностью! Нет необходимости устанавливать новый сенсор заранее для привыкания. Это помешает внутреннему механизму выравнивания.
 
-There seem to be bad sensors from time to time, which are far away from the blood values. It stays that way. These should be immediately replaced.
+В ремя от времени случаются плохие сенсоры, у которых имеются расхождения с показаниями ГК. Они не изменяются. Их следует немедленно заменить.
 
-If the sensor moved a little bit on the skin or is lifted somehow this can cause bad results. The filament which sits in the tissue is a little bit pulled out of the tissue and will measure different results then. Mostly probabaly you will see jumping values in xDrip+. Or the difference to the bloody values change. Please replace the sensor immediately! The results are inaccurate now.
+Если датчик сдвинется немного на коже или каким-то образом поднимется это может привести к плохим результатам. Если нить сенсора немного вышла из ткани, это приведет к неверным результатам. Скорее всего вы увидите скачущие данные в xDrip +. Или к изменению значений ГК. В этом случае немедленно замените сенсор! Т.к. результаты неточны.
 
-A sensor exchange takes place on-the-fly: Set new sensor shortly before activation. As soon as xDrip+ receives no more data from the old sensor, start the new sensor with the patched app. After one hour new values should appear automatically in xDrip+. 
+Замена сенсора происходит на лету: установите новый сенсор незадолго до активации. As soon as xDrip+ receives no more data from the old sensor, start the new sensor with the patched app. After one hour new values should appear automatically in xDrip+. 
 
 If not, please check the phone settings and proceed as with the first start. You have no time limit. Try to find the correct seetings. No need to immediately replace the sensor before you tried different combinations. The sensors are robust and try permanently to establish a connection. Please take your time. In most cases you accidentially changed one setting which causes now problems. 
 
