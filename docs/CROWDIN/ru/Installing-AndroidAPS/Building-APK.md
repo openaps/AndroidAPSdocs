@@ -217,37 +217,37 @@ Cледующие снимки экрана были сделаны c Android St
 * Выберите путь к хранилищу ключей (2.). **Не сохраняйте в той же папке, что и проект. Необходимо использовать другой каталог! ** Одна из опций может быть ваша домашняя папка.
 * Введите имя файла для хранилища ключей (3).
 * Нажмите "OK" (4.).
-* Пароли для хранилища ключей и ключа не должны быть очень сложными. Обязательно запомните их или запишите в безопасное место. In case you will not remember your passwords in the future you see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
-* Enter (5.) and confirm (6.) the password for your key store.
-* Do the same for your key (7. + 8.).
-* Validity (9.) is 25 years by default. You do not have to change the default value.
-* First and last name must be entered (10.). All other information is optional.
-* Click "OK" (11.) when you are done.
+* Пароли для хранилища ключей и ключа не должны быть очень сложными. Обязательно запомните их или запишите в безопасное место. В случае, если вы не запомните пароли смотрите [ устранение неполадок для потерянных ключей ](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Введите (5.) и подтвердите (6.) пароль для хранилища ключей.
+* Сделайте то же самое для ключа (7. + 8.).
+* Срок действия (9.) по умолчанию составляет 25 лет. Изменять значение по умолчанию не требуется.
+* Необходимо ввести имя и фамилию (10). Вся остальная информация необязательна.
+* Когда закончите, нажмите кнопку "OK" (11.).
 
 ![Key store path](../images/AndroidStudio361_30.png)
 
-* Make sure the box to remember passwords is checked (1.). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AndroidAPS version).
-* Click "Next" (2.).
+* Убедитесь, что поле для запоминания паролей отмечено (1.). Так что вам не нужно вводить их снова при следующей сборке apk (то есть при обновлении до новой версии AndroidAPS).
+* Нажмите "Далее" (2.).
 
 ![Remember passwords](../images/AndroidStudio361_31.png)
 
-* Select build variant "fullRelease" (1.). 
-* Check boxes V1 and V2 for signature versions (2.).
-* Click "Finish". (3.)
+* Выберите вариант компоновки "fullRelease" (1.). 
+* Отметьте флажки V1 и V2 для подписи версий (2.).
+* Нажмите ``Finish``. (3.)
 
 ![Finish build](../images/AndroidStudio361_32.png)
 
-* Android Studio will display the information "APK(s) generated successfully..." after build is finished.
-* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
-* Easiest way to find the apk is to click on "Event log".
+* После завершения сборки Android Studio покажет информацию "APK (s) сгенерировано успешно ...".
+* В случае, если сборка не удалась, обратитесь к разделу [поиск и устранение неисправностей ](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* Самый простой способ найти apk это нажать на кнопку "журнал событий".
 
 ![Build successfully - event log](../images/AndroidStudio361_33.png)
 
-* In the event log section click "locate".
+* В секции журнала событий нажмите «locate».
 
 ![Event log - locate apk](../images/AndroidStudio361_34.png)
 
-* app-full-release.apk is the file you are looking for.
+* app-full-release.apk это файл, который вы ищете.
 
 ![File location apk](../images/AndroidStudio361_35.png)
 
