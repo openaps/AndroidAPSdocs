@@ -6,37 +6,37 @@
 
 ## ## Важные Примечания
 
-* Please use **[Android Studio Version 3.6.1](https://developer.android.com/studio/)** or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.6.1.
+* Используйте **[ Android Studio версии 3.6.1 ](https://developer.android.com/studio/)** или новее для построения apk.
+* [Windows 10 для 32-разрядных систем](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) не поддерживается в Android Studio 3.6.1.
 
-**Configuration on demand** is not supported by the current version of the Android Gradle plugin!
+** Конфигурация по требованию ** не поддерживается текущей версией модуля Android Gradle!
 
 Если сборка выполнена с ошибкой, относящейся к "выборочной конфигурации", можно сделать следующее:
 
-* Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-* In the left pane, click Build, Execution, Deployment > Compiler.
-* Uncheck the Configure on demand checkbox.
-* Click Apply or OK.
+* Откройте окно настроек, нажав Файл > Настройки (на Mac, Android Studio > Настройки).
+* В левой панели нажмите Сборка, Выполнение, Развертывание > Компилятор.
+* Снимите флажок с ячейки "выборочная конфигурация".
+* Нажмите Применить или OK.
 
 * * *
 
 ### Эта статья разделена на две части.
 
-* In the overview part there is an explanation on what steps are necessary to build the APK file.
-* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
+* В обзорной части есть объяснение того, какие шаги необходимы для создания файла APK.
+* В пошаговой инструкции вы найдете снимки экранов установки. Поскольку версии Android Studio - среды разработки программного обеспечения, в которой мы будем создавать APK - меняются очень быстро, точного соответствия вашей сборке вы не увидите, но общее представление о том, как это делается, получите. Android Studio работает на Windows, Mac OS X и Linux, и между каждой платформой возможны незначительные различия. Если вы обнаружите, что что-то важное выполняется неправильно или отсутствует, пожалуйста, сообщите в группе facebook "AndroidAPS users" или в чате Gitter [Android APS](https://gitter.im/MilosKozak/AndroidAPS) или [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) чтобы мы могли устранить проблему.
 
 ## Общие замечания
 
-In general, the steps necessary to build the APK file:
+В целом, шаги, необходимые для создания файла APK таковы:
 
-1. [Install git](../Installing-AndroidAPS/git-install.rst)
+1. [Установите Git](../Installing-AndroidAPS/git-install.rst)
 2. [Установите Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
-3. [Set git path in Android Studio preferences](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
-4. [Download AndroidAPS code](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
-5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
-6. [Build the app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generate signed apk)
-7. [Transfer apk file to your phone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identify receiver if using xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
+3. [Задайте путь к git в параметрах Android Studio](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
+4. [Скачайте код AndroidAPS](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
+5. [Загрузите Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
+6. [Постройте приложение ](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (сгенерируйте подписанный apk)
+7. [Перенесите файл apk на телефон](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+8. [Идентифицируйте ресивер при использовании xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
 
 ## Пошаговое руководство
 
@@ -44,25 +44,25 @@ Detailed description of the steps necessary to build the APK file.
 
 ## Установите git (если у вас его нет)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
+Следуйте инструкциям на странице установки [git](../Installing-AndroidAPS/git-install.rst).
 
 ## Установите Android Studio
 
-The following screenshots have been taken from Android Studio Version 3.6.1. Your screen might look a bit different if you use a newer version of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
+Cледующие снимки экрана были сделаны c Android Studio версии 3.6.1. Экран может выглядеть несколько иначе в зависимости от используемой версии Android Studio. Но следует постараться найти свое решение установки. [Помощь от сообщества здесь](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
-One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
+Одна из наиболее важных заповедей при установке Android Studio: ** Будьте терпеливы! ** Во время установки и настройки Android Studio загружает многие элементы, которые отнимают время.
 
-Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
+Установите [ Android Studio ](https://developer.android.com/studio/install.html) и настройте при первом запуске.
 
-Select "Do not import settings" as you have not used it before.
+Выберите "Не импортировать настройки", так как вы не использовали их раньше.
 
 ![Do not import settings](../images/AndroidStudio361_01.png)
 
-Decide whether you want to share data with Google or not.
+Решите, хотите ли вы совместно использовать данные с Google или нет.
 
 ![Share data with Google](../images/AndroidStudio361_02.png)
 
-On the following screen click "Next".
+На следующем экране нажмите кнопку "Далее".
 
 ![Welcome screen](../images/AndroidStudio361_03.png)
 
@@ -120,7 +120,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 * For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
 
-## Download AndroidAPS code
+## Скачайте код AndroidAPS
 
 * **If you haven't already rebooted your computer after setting git path in preferences do it now. System environment must be updated.**
 * On the Android Studio welcome screen click the small triangle right of "Check out project from version control" (1.).
@@ -161,7 +161,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 ![SDK licence](../images/AndroidStudio361_19.png)
 
-## Download Android SDK
+## Загрузите Android SDK
 
 * Click File > Settings.
 
@@ -257,7 +257,7 @@ Easiest way to transfer app-full-release.apk to your phone is via [USB cable or 
 
 On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
-## Identify receiver if using xDrip+
+## Идентифицируйте ресивер при использовании xDrip+
 
 [See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
