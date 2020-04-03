@@ -163,34 +163,34 @@ Cледующие снимки экрана были сделаны c Android St
 
 ## Загрузите Android SDK
 
-* Click File > Settings.
+* Нажмите Файл > Настройки.
 
 ![Open settings](../images/AndroidStudio361_20.png)
 
-* Click the small triangle next to Appearance & Behaviour (1.).
-* Click the small triangle next to System Settings (2.) and select Android SDK (3.)
-* Check the box left of "Android 9.0 (Pie)" (4.) (API Level 28).
+* Нажмите на маленький треугольник рядом с Appearance & Behaviour (1.).
+* Щелкните на небольшом треугольнике рядом с System Settings (2.) и выберите Android SDK (3.)
+* Установите флажок слева от "Android 9.0 (Pie)" (4.) (API Level 28).
 
 ![SDK settings](../images/AndroidStudio361_21.png)
 
-* Confirm changes by clicking OK.
+* Подтвердите изменения, нажав кнопку OK.
 
 ![Confirm SDK changes](../images/AndroidStudio361_22.png)
 
-* Accept licence agreement (1.) and click "Next" (2.).
+* Примите лицензионное соглашение (1.) и нажмите "Далее" (2.).
 
 ![Accept SDK licence](../images/AndroidStudio361_23.png)
 
-* Wait until installation is finished.
+* Дождитесь завершения установки.
 
 ![Wait during SDK installation](../images/AndroidStudio361_24.png)
 
-* When SDK installation is completed the "Finish" button will turn blue. Click this button.
+* После завершения установки SDK кнопка "Finish" станет синей. Нажмите на кнопку.
 
 ![Finish SDK installation](../images/AndroidStudio361_25.png)
 
-* Android Studio might recommend to update the gradle system. **Never update gradle!** This might lead to difficulties!
-* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1.) and in the dialog box on "Don't remind me again for this project" (2.).
+* Android Studio может рекомендовать обновить систему gradle. **Не обновляйте gradle!** Это может привести к трудностям!
+* Если вы видите информацию в нижней правой части окна Android Studio, что модуль Android Gradile готов к обновлениям, щелкните по тексту "update" (1.) и в диалоговом окне выберите "Don't remind me again for this project" (2.).
 
 ![No cradle update](../images/AndroidStudio361_26.png)
 
