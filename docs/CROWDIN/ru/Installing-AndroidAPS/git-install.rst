@@ -33,7 +33,7 @@ Windows
     :alt: Automatic git installation succeeded
 
 * In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
-* Use `search function <https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html>`_ in windows explorer to find "git.exe" if you are unsure where it can be found. You are looking for git.exe located in \bin\ folder.
+* Use `search function <https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html>`_ in windows explorer to find "git.exe" if you are unsure where it can be found. Вы ищете файл git.exe, находящийся в папке \bin\.
 * Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
 * Close settings window by clicking "OK" button (5.).
 
@@ -62,4 +62,4 @@ Mac
 * Any git version should work. For example `https://git-scm.com/download/mac <https://git-scm.com/download/mac>`_
 * Use homebrew to install git: ```$ brew install git```.
 * For details on installing git see the `official git documentation <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.
-* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
+* If you install git via homebrew there is no need to change any preferences. На всякий случай: Их можно найти здесь: Android Studio - Настройки.
