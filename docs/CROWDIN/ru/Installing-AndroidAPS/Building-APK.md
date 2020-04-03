@@ -40,7 +40,7 @@
 
 ## Пошаговое руководство
 
-Detailed description of the steps necessary to build the APK file.
+Подробное описание шагов, необходимых для создания файла APK.
 
 ## Установите git (если у вас его нет)
 
@@ -66,59 +66,59 @@ Cледующие снимки экрана были сделаны c Android St
 
 ![Welcome screen](../images/AndroidStudio361_03.png)
 
-Select "Standard" installation and click "Next".
+Выберите "Стандартная" установка и нажмите "Далее".
 
 ![Standard installation](../images/AndroidStudio361_04.png)
 
-Select the theme for the user interface you like. (In this manual we used "Light".) Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
+Для интерфейса выберите тему, которая вам нравится. (В этом руководстве мы использовали "Светлую".) Затем нажмите кнопку "Далее". Это всего лишь цветовая схема. Можете выбрать любую (напр. Darcula для темного режима). Этот выбор не влияет на построение APK.
 
 ![UI color scheme](../images/AndroidStudio361_05.png)
 
-Click "Finish" on the "Verify Settings" dialog.
+Нажмите "Далее" в диалоге "Проверить настройки".
 
 ![Verify settings](../images/AndroidStudio361_06.png)
 
-Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
+Подождите, пока Android Studio скачивает дополнительные компоненты и будет терпеливы. После того, как все загрузится кнопка "Готово", станет синей. Теперь нажмите на кнопку.
 
 ![Downloading components](../images/AndroidStudio361_07.png)
 
-## Set git path in preferences
+## Задайте путь к git в параметрах
 
-Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer.
+Убедитесь, что [ git установлен ](../Installing-AndroidAPS/git-install.rst) на вашем компьютере.
 
-On the Android Studio welcome screen click the small triangle (1. in next screenshot) and select "Settings" (2.).
+На экране приветствия Android Studio нажмите на маленький треугольник (1. на следующем снимке экрана) и выберите "Настройки" (2.).
 
 ![Android Studio settings from welcome screen](../images/AndroidStudio361_08.png)
 
 ### Windows
 
-* Click the small triangle next to Version Control (1.) to open the sub-menu.
-* Click Git (2.).
-* Make sure update method "Merge" (3.) is selected.
-* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
+* Нажмите на маленький треугольник рядом с Контролем Версий (1.) чтобы открыть подменю.
+* Нажмите Git (2.).
+* Убедитесь, что выбран метод обновления "Слияние" (merge) (3.).
+* Проверьте, может ли Android Studio найти путь к файлу git.exe автоматически, нажав кнопку "Тест" (4.)
 
 ![Android Studio settings](../images/AndroidStudio361_09.png)
 
-* If automatic setting is successful git version will be displayed.
-* Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
+* Если автоматическая настройка будет успешной, то будет показана версия git.
+* Нажмите кнопку "OK" в диалоговом окне (1.) и "OK" в окне параметров (2.).
 
 ![Automatic git installation succeeded](../images/AndroidStudio361_10.png)
 
-* In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
-* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where it can be found. You are looking for git.exe located in \bin\ folder.
-* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
-* Close settings window by clicking "OK" button (5.).
+* В случае, если файл git.exe не найден, нажмите кнопку "OK" в диалоговом окне (1), а затем кнопку с тремя точками (2.).
+* Используйте функцию [ поиск ](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) в проводнике Windows для поиска "git.exe", если вы не уверены в том, где его можно найти. Вы ищете файл git.exe, находящийся в папке \bin\.
+* Выберите путь к файлу git.exe и убедитесь, что вы выбрали папку ** \bin\ ** (3.) и нажмите кнопку "OK" (4).
+* Закройте окно параметров, нажав кнопку "OK" (5.).
 
 ![Automatic git installation failed](../images/AndroidStudio361_11.png)
 
-* **Reboot your computer to update system environment.**
+* **Перезагрузите компьютер, чтобы обновить системную среду.**
 
 ### Mac
 
-* Any git version should work. For example <https://git-scm.com/download/mac>.
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
+* Любая версия git должна работать. Например <https://git-scm.com/download/mac>.
+* Используйте homebrew для установки git: ```$ brew install git```.
+* Подробности об установке git см. в [официальной документации git ](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Если вы устанавливаете git через homebrew, то нет необходимости изменять какие-либо настройки. На всякий случай: Их можно найти здесь: Android Studio - Настройки.
 
 ## Скачайте код AndroidAPS
 
