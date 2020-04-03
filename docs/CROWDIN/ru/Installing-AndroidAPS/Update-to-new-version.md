@@ -50,11 +50,11 @@ If you already updated AAPS in previous versions and use a Windows PC you can up
 
 <!--- Text is maintained in page building-apk.md --->
 
-* Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
+* Нажмите "Build" в строке меню и выберите "Generate Signed Bundle / APK...".
 
 ![Build apk](../images/AndroidStudio361_27.png)
 
-* Select "APK" (1.) instead of "Android App Bundle" and click "Next" (2.).
+* Выберите "APK" (1.) вместо "Android App Bundle" и нажмите кнопку "Далее" (2.).
 
 ![APK instead of bundle](../images/AndroidStudio361_28.png)
 
