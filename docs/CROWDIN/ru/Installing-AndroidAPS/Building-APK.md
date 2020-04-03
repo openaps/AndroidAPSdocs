@@ -122,42 +122,42 @@ Cледующие снимки экрана были сделаны c Android St
 
 ## Скачайте код AndroidAPS
 
-* **If you haven't already rebooted your computer after setting git path in preferences do it now. System environment must be updated.**
-* On the Android Studio welcome screen click the small triangle right of "Check out project from version control" (1.).
-* Select "Git" (2.).
+* **Если вы еще не перезагрузили компьютер после настройки пути к git в параметрах, сделайте это сейчас. Необходимо обновить системную среду.**
+* На экране приветствия Android Studio щелкните на маленьком треугольнике справа от "Изъять проект из системы управления версиями" (1.).
+* Выберите "Git" (2).
 
 ![Check out project from version control from welcome screen](../images/AndroidStudio361_12.png)
 
-* If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.) > Git (4.).
+* Если вы уже открыли Android Studio и не видите экран приветствия, то выберите File (1.) > New (2.) > Project from Version Control... (3.) > Git (4.).
 
 ![Check out project from version control within Android Studio](../images/AndroidStudio361_13.png)
 
-* Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") (1.).
-* Choose the directory where you want to save the cloned code.
-* Click button "Test" (2.).
-* If test cannot be completed successfully check URL, correct and click "Test" again.
-* If URL is entered correctly "Connection successful" (3.) will be shown.
-* Click button "Clone" (4.).
+* Заполните URL-адрес главного репозитория AndroidAPS ("https://github.com/MilosKozak/AndroidAPS") и нажмите "clone" (клонировать).
+* Выберите каталог для сохранения клонированного кода.
+* Нажмите кнопку "Test" (2.).
+* Если тест не может быть завершен успешно, проверьте еще раз адрес, и нажмите "Проверить".
+* Если URL-адрес введен правильно появится сообщение "подключение успешно" (3.).
+* Нажмите кнопку "Клонировать" (4.).
 
 ![Clone repository](../images/AndroidStudio361_14.png)
 
-* Do not click "Background" while repository is cloned!
+* Не нажимайте "Background", пока клонируется репозиторий!
 
 ![Clone repository - no background action](../images/AndroidStudio361_15.png)
 
-* After repository is cloned successfully open your local copy by clicking "Yes".
+* После того, как репозиторий клонирован успешно, откройте локальную копию, нажав кнопку "Да".
 
 ![Open repository](../images/AndroidStudio361_16.png)
 
-* In the lower right corner you will see the information that Android Studio is running background tasks.
+* В правом нижнем углу появится информация о том, что в Android Studio выполняются фоновые задачи.
 
 ![Background tasks](../images/AndroidStudio361_17.png)
 
-* Grant access if your firewall is asking for permission.
+* Предоставьте доступ, если ваш брандмауэр просит разрешения.
 
 ![Firewall permission java](../images/AndroidStudio361_18.png)
 
-* Once the background tasks are finished you will probably see the following error message:
+* После завершения фоновых задач вы, вероятно, увидите следующее сообщение об ошибке:
 
 ![SDK licence](../images/AndroidStudio361_19.png)
 
