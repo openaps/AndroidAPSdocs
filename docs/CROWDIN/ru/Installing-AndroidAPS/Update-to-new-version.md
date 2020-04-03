@@ -26,7 +26,7 @@ If you already updated AAPS in previous versions and use a Windows PC you can up
 
 ## Установите git (если у вас его нет)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
+Следуйте инструкциям на странице установки [git](../Installing-AndroidAPS/git-install.rst).
 
 ## Update your local copy
 
