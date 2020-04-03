@@ -196,28 +196,28 @@ Cледующие снимки экрана были сделаны c Android St
 
 ## Создание подписанного APK
 
-Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. Это необходимо потому, что Android имеет правило, согласно которому принимается только подписанный код для запуска по соображениям безопасности. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Подписание означает, что вы подписываете созданное вами приложение, но цифровым способом, как цифровым отпечатком пальца в самом приложении. Это необходимо потому, что Android имеет правило, согласно которому принимается только подписанный код для запуска по соображениям безопасности. Для получения дополнительной информации перейдите по [ этой ссылке](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
-* Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
+* Нажмите "Build" в строке меню и выберите "Generate Signed Bundle / APK...".
 
 ![Build apk](../images/AndroidStudio361_27.png)
 
-* Select "APK" (1.) instead of "Android App Bundle" and click "Next" (2.).
+* Выберите "APK" (1.) вместо "Android App Bundle" и нажмите кнопку "Далее" (2.).
 
 ![APK instead of bundle](../images/AndroidStudio361_28.png)
 
-* Make sure that module is set to "app" (1.).
-* Click "Create new..." (2.) to start creating your key store.
+* Убедитесь, что модуль имеет значение "app" (1.).
+* Нажмите "Create new" (cоздать новый...) для создания магазина ключей.
     
-    A key store in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords.
+    В этом случае магазин ключей является всего лишь файлом, в котором хранится информация о цифровой подписи. Он зашифрован и информация защищена паролями.
 
 ![Create key store](../images/AndroidStudio361_29.png)
 
-* Click the folder symbol (1.) to select your key store path. 
-* Select the path where your key store shall be saved (2.). **Do not save in same folder as project. You must use a different directory!** One option might be your home folder.
-* Type a file name for your key store (3.).
-* Click "OK" (4.).
-* Passwords for key store and key do not have to be very sophisticated. Make sure to remember those or make a note in a safe place. In case you will not remember your passwords in the future you see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Нажмите на символ папки (1.), чтобы выбрать путь к хранилищу ключей. 
+* Выберите путь к хранилищу ключей (2.). **Не сохраняйте в той же папке, что и проект. Необходимо использовать другой каталог! ** Одна из опций может быть ваша домашняя папка.
+* Введите имя файла для хранилища ключей (3).
+* Нажмите "OK" (4.).
+* Пароли для хранилища ключей и ключа не должны быть очень сложными. Обязательно запомните их или запишите в безопасное место. In case you will not remember your passwords in the future you see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
 * Enter (5.) and confirm (6.) the password for your key store.
 * Do the same for your key (7. + 8.).
 * Validity (9.) is 25 years by default. You do not have to change the default value.
