@@ -1,9 +1,9 @@
-## Development branch
+## Версия разработчиков
 
-<font color="#FF0000"><strong>Attention:</strong></font>
-Dev branch is for the further development of AndroidAPS only. It should be used on a separate phone for testing <font color="#FF0000"><strong>not for actual looping!</strong></font>
+<font color="#FF0000"><strong> Внимание: </strong></font>
+Версия разработчиков -только для дальнейшего развития AndroidAPS. Она должен использоваться на отдельном телефоне для тестирования <font color="#FF0000"><strong> а не для реального цикла!</strong></font>
 
-The most stable version of AndroidAPS to use is that in the [Master branch](https://github.com/MilosKozak/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
+Самая стабильная версия AndroidAPS для обычного пользователя - [ Master branch ](https://github.com/MilosKozak/AndroidAPS/tree/master). Рекомендуется оставаться на версии Master для реального использования.
 
 The dev version of AndroidAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in the same directory where you would find the log files. Enabling the engineering mode might break the loop entirely.
 
