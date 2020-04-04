@@ -47,19 +47,19 @@ Windows
 4. Проверьте параметры git в Android Studio
 --------------------------------------------------
 * Откройте окно терминала в Android Studio
-* Enter "`git - -version`" (without quotation marks and no spaces between the two - [minus sign]!) and press Return
+* Введите "` версию--git`" (без кавычек и без пробелов между двумя - [знак минус]!) и нажмите клавишу Ввод
 
-  .. image:: ../images/AndroidStudio_gitversion1.png
-    :alt: git - -version
+  .. изображение:: ../images/AndroidStudio_gitversion1.png
+    :alt: git-версия
 
-* If git is installed and connected properly you will receive an information about the installed version that looks as follows:
+* Если git установлен и подключен правильно, вы получите информацию об установленной версии, которая выглядит следующим образом:
 
-  .. image:: ../images/AndroidStudio_gitversion2.png
-    :alt: result git-version
+  .. изображение:: ../images/AndroidStudio_gitversion2.png
+    :alt: результат git-версия
 
 Mac
 ==================================================
-* Любая версия git должна работать. For example `https://git-scm.com/download/mac <https://git-scm.com/download/mac>`_
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the `official git documentation <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.
-* If you install git via homebrew there is no need to change any preferences. На всякий случай: Их можно найти здесь: Android Studio - Настройки.
+* Любая версия git должна работать. Например <https://git-scm.com/download/mac>https://git-scm.com/download/mac`_
+* Используйте homebrew для установки git: ```$ brew install git```.
+* Подробнее об установке git читайте в `официальной документации git <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.
+* Если вы устанавливаете git через homebrew, то нет необходимости изменять какие-либо настройки. На всякий случай: Их можно найти здесь: Android Studio - Настройки.
