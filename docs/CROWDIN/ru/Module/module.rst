@@ -72,11 +72,11 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 --------------------------------------------------
 Это всего лишь краткий обзор совместимых с AndroidAPS систем мониторинга ГК. Для получения дополнительной информации смотрите `здесь <../Configuration/BG-Source.html>`_. Или если проще: если данные ГК могут приниматься приложением xDrip+ или на веб-сайте Nightscout, вы можете выбрать xDrip+ (или Nightscout с интернет-соединением) как источник ГК в AAPS.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or patched Dexcom app
-* `Dexcom G5 <../Hardware/DexcomG5.html>`_: It works with xDrip+ app or patched Dexcom app
-* `Dexcom G4 <../Hardware/DexcomG4.html>`_: These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
-* `Libre 2 <../Hardware/Libre2.html>`_: It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
-* `Libre 1 <../Hardware/Libre1.html>`_: You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
+* ` Dexcom G6 <../Hardware/DexcomG6.html> ` _: Он работает с приложением xDrip + или модифицированным приложением Dexcom
+* ` Dexcom G5 <../Hardware/DexcomG5.html> ` _: Он работает с приложением xDrip + или модифицированным приложением Dexcom
+* Dexcom G4: Эти системы достаточно старые, но вы можете найти инструкции по их использованию с приложением xDrip+
+* ` Libre 2 <../Hardware/Libre2.html> ` _: Он работает с xDrip + (не требуется передатчик), но вы должны собрать собственное модифицированное приложение.
+* `Libre 1: -Нужен передатчик, такой как Bluecon или MiaoMiao (сборка или покупка) и приложение xDrip+
 * `Eversense <../Hardware/Eversense.html>`_: It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
 * `Enlite <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
 
