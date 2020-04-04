@@ -52,11 +52,11 @@ If you already updated AAPS in previous versions and use a Windows PC you can up
 
 * Нажмите "Build" в строке меню и выберите "Generate Signed Bundle / APK...".
 
-![Build apk](../images/AndroidStudio361_27.png)
+![Построение apk](../images/AndroidStudio361_27.png)
 
 * Выберите "APK" (1.) вместо "Android App Bundle" и нажмите кнопку "Далее" (2.).
 
-![APK instead of bundle](../images/AndroidStudio361_28.png)
+![Apk вместо пакета](../images/AndroidStudio361_28.png)
 
 * Make sure that module is set to "app".
 * Select your key store path by clicking on "Choose existing...".
@@ -70,27 +70,27 @@ If you already updated AAPS in previous versions and use a Windows PC you can up
 * Отметьте флажки V1 и V2 для подписи версий (2.).
 * Нажмите ``Finish``. (3.)
 
-![Finish build](../images/AndroidStudio361_32.png)
+![Завершение сборки](../images/AndroidStudio361_32.png)
 
 * После завершения сборки Android Studio покажет информацию "APK (s) сгенерировано успешно ...".
 * В случае, если сборка не удалась, обратитесь к разделу [поиск и устранение неисправностей ](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
 * Самый простой способ найти apk это нажать на кнопку "журнал событий".
 
-![Build successfully - event log](../images/AndroidStudio361_33.png)
+![Построено успешно - журнал событий](../images/AndroidStudio361_33.png)
 
 * В секции журнала событий нажмите «locate».
 
-![Event log - locate apk](../images/AndroidStudio361_34.png)
+![Журнал событий - обнаружить apk](../images/AndroidStudio361_34.png)
 
 * app-full-release.apk это файл, который вы ищете.
 
-![File location apk](../images/AndroidStudio361_35.png)
+![Расположение файла apk](../images/AndroidStudio361_35.png)
 
 ## Перенос приложения на смартфон
 
-Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
+Самый простой способ перенести приложение на ваш телефон - [через кабель USB или Google Drive](https://support.google.com/android/answer/9064445?hl=en). Обратите внимание, что передача по почте может вызвать трудности и не является предпочтительным способом.
 
-On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+На вашем телефоне необходимо разрешить установку из неизвестных источников. Инструкции, как это сделать, можно найти в интернете (например [здесь](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) или [здесь](https://www.androidcentral.com/unknown-sources)).
 
 ## Check AAPS version on phone
 
@@ -100,4 +100,4 @@ You can check the AAPS version on your phone by clicking the three dots menu on 
 
 ## Устранение неполадок
 
-See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+См. отдельную страницу [ устранение неполадок Android Studio ](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
