@@ -22,16 +22,16 @@ ContextEdit.
 
 Новые возможности
 -----
-* Allow to enter only https:// in NSClient settings
-* Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
-* Fixed small UI bugs
-* Fixed Insight crashes
-* Fixed future carbs with Combo pump
-* Fixed `LocalProfile -> NS sync <../Configuration/Config-Builder.html#upload-local-profiles-to-nightscout>`_
-* Insight alerts improvements
-* Improved detection of boluses from pump history
-* Fixed NSClient connection settings (wifi, charging)
-* Fixed sending of calibrations to xDrip
+* Позволяет вводить только HTTPS:// в настройках NSClient
+* Исправлено ` BGI <../Getting-Started/Glossary.html> ` _ отображение ошибок в часах
+* Исправлены мелкие ошибки интерфейса
+* Исправлены сбои Insight
+* Исправлены углеводы в будущем с помпой Combo
+* Исправленo LocalProfile -> NS sync <../Configuration/Config-Builder.html#upload-local-profiles-to-nightscout>`_
+* Улучшения оповещений Insight
+* Улучшено обнаружение болюсов в истории помпы
+* Исправлены параметры соединения NSClient (wifi, зарядка)
+* Исправлена отправка калибровок в xDrip
 
 Version 2.6.0
 ==============
