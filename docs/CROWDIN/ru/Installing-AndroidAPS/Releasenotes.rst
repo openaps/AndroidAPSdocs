@@ -1,23 +1,24 @@
 Примечания к изменениям в версиях
 **************************************************
-Please follow the instructions in the `update manual <../Installing-AndroidAPS/Update-to-new-version.html>`_. На ее страницах решаются наиболее распространенные проблемы связанные с обновлениями.
+Пожалуйста, следуйте инструкциям по обновлению <../Installing-AndroidAPS/Update-to-new-version.html>`_. На ее страницах решаются наиболее распространенные проблемы связанные с обновлениями.
 
-You will receive the following information as soon as a new update is available:
+Как только будет доступно новое обновление вы получите следующую информацию:
 
-.. image:: ../images/AAPS_LoopDisable90days.png
-  :alt: Update info
+.. изображение: ../images/AAPS_LoopDisable90days.png
+  :alt: Информация об обновлении
 
-У вас есть 60 дней для обновления. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 6 <../Usage/Objectives.html>`_.
+У вас есть 60 дней для обновления. Если вы не обновитесь в течение 60 дней AAPS войдет в режим LGS (приостановка на низких ГК - см.`glossary <../Getting-Started/Glossary.html>`_) as in `objective 6 <../Usage/Objectives.html>`_.
+ContextEdit.
 
 Если вы не обновитесь еще 30 дней (90 дней с новой даты выпуска) AAPS переключится в режим открытого цикла.
 
 Имейте в виду, что это изменение не предназначено для того, чтобы действовать вам на нервы, а существует по соображениям безопасности. Новые версии AndroidAPS не только обеспечивают новые возможности, но и содержат исправления безопасности. Поэтому необходимо, чтобы каждый пользователь обновлял приложение как можно чаще. К сожалению, все еще поступают сообщения об ошибках из очень старых версий, поэтому это попытка повысить безопасность каждого пользователя и всего сообщества. Благодарим за понимание!
 
-Version 2.6.1
+Версия 2.6.1
 ==============
-Release date: 21-03-2020
+Дата выпуска: 21-03-2020
 
-Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
 
 Новые возможности
 -----
@@ -36,7 +37,7 @@ Version 2.6.0
 ==============
 Release date: 29-02-2020
 
-Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
 
 Новые возможности
 -----
