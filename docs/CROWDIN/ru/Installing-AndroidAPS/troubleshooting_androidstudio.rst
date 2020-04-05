@@ -45,15 +45,15 @@
 Файл -> параметры
 
 .. изображение:: ../images/GIT_Offline2.jpg
-  :alt: Settings offline work
+  :alt: Параметры автономной работы
 
 Ошибка: buildOutput.apkData не может быть пустым
 ==================================================
 Иногда появляется сообщение об ошибке при компоновке apk
 
-  `Errors while building APK.`
+  `Ошибки при сборке APK.`
    
-  `Cause: buildOutput.apkData must not be null`
+  `Ошибка: buildOutput.apkData не может быть пустым`
 
 This is a known bug in Android Studio 3.5 and will probably not be fixed before Android Studio 3.6. Three options:
 
