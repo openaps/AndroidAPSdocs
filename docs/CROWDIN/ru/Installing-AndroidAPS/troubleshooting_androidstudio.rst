@@ -1,6 +1,6 @@
-Troubleshooting Android Studio
+Устранение неполадок Android Studio
 **************************************************
-Lost keystore
+Потеряно хранилище ключей
 ==================================================
 If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
 
