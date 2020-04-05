@@ -2,18 +2,18 @@
 **************************************************
 Потеряно хранилище ключей
 ==================================================
-If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
+Если вы используете одно и то же хранилище ключей при обновлении AndroidAPS, вам не нужно деинсталлировать предыдущую версию на смартфоне. Поэтому рекомендуется хранилище ключей размещать в надежном месте.
 
-In case you cannot find your old keystore anymore, proceed as follows:
+На случай, если вы не можете найти свое старое хранилище ключей, выполните следующие действия:
 
-1. `Export settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ on your phone.
-2. Copy settings from your phone to an external location (i.e. your computer, cloud storage service...).
-3. Make sure settings file "AndroidAPS Preferences" is stored safely.
-4. Generate signed apk of new version as described on the `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_.
-5. Uninstall previous AAPS version on your phone.
-6. Install new AAPS version on your phone.
-7. `Import settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ - if you can't find them on your phone copy them from the external storage.
-8. Keep on looping.
+1. `Экспорт настроек <../Usage/ExportImportSettings.html#how-to-export-settings>`_ на вашем телефоне.
+2. Скопируйте настройки вашего телефона во внешнее местоположение (напр. ваш компьютер, служба облачного хранения...).
+3. Убедитесь, что файл параметров "Параметры AndroidAPS" сохранен.
+4. Сгенерируйте подписанный apk новой версии, как описано на странице обновления <../Instaling-AndroidAPS/Update-to-new-version.html> ` _.
+5. Деинсталлируйте предыдущую версию AAPS на вашем телефоне.
+6. Установите новую версию AAPS на свой телефон.
+7. `Импортируйте настройки <../Usage/ExportImportSettings.html#how-to-export-settings>`_ - если не можете найти их на вашем телефоне, скопируйте их из внешнего хранилища.
+8. Продолжайте пользоваться циклом.
 
 Предупреждение компилятора Kotlin
 ==================================================
@@ -21,12 +21,12 @@ In case you cannot find your old keystore anymore, proceed as follows:
 
 Приложение успешно построено и может быть перенесено на телефон.
 
-.. image:: ../images/GIT_WarningIgnore.PNG
-  :alt: ignore Kotline compiler warning
+.. изображение:: ../images/GIT_WarningIgnore.PNG
+  :alt: игнорировать предупреждение компилятора Koline
 
-Key was created with errors
+Ключ создан с ошибками
 ==================================================
-When creating a new keystore for building the signed APK, on Windows the following error message might appear
+При создании нового хранилища ключей для построения подписанного APK в Windows может появиться следующее сообщение об ошибке
 
 .. image:: ../images/AndroidStudio35SigningKeys.png
   :alt: Key was created with errors
