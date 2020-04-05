@@ -105,45 +105,45 @@ Release date: 29-02-2020
 * Позволяет подать `только часть болюса <../конфигурация/настройки.расчет мастер HTML#расширенные-настройки>`_ с калькулятора болюса
 * Рендеринг активности инсулина
 * Корректировка прогнозов IOB с помощью результата autosense
-* New support for patched Dexcom apks (`2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
-* Signature verifier
-* Allow to bypass objectives for OpenAPS users
-* New `objectives <../Usage/Objectives.html>`_ - exam, application handling
+Новая поддержка модифицированных приложений Dexcom (<https://github.com/dexcomapp/dexcomapp/tree/master/2.4> папка 2.4)
+* Верификатор подписи
+* Возможность обойти цели пользователям OpenAPS
+* Новые цели <../Usage/Objectives.html> ` _-экзамен, обработка приложений
    
-   (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
-* Fixed bug in Dana* drivers where false time difference was reported
-* Fixed bug in `SMS communicator <../Children/SMS-Commands.html>`_
+   (Если вы начали хотя бы цель "открытый цикл" в предыдущих версиях экзамен не является обязательным.)
+* Исправлена ошибка в драйверах Dana*, где сообщалось о ложной разнице во времени
+* Исправлена ошибка в `SMS коммуникаторе <../Children/SMS-Commands.html>`_
 
-Version 2.3
+Версия 2.3
 ==================================================
-Release date: 25-04-2019
+Дата выпуска: 25-04-2019
 
 Новые возможности
 --------------------------------------------------
-* Important safety fix for Insight (really important if you use Insight!)
-* Fix History-Browser
-* Fix delta calculations
-* Language updates
-* Check for GIT and warn on gradle upgrade
-* More automatic testing
-* Fixing potential crash in AlarmSound Service (thanks @lee-b !)
-* Fix broadcast of BG data (works independently of SMS permission now!)
-* New Version-Checker
+* Важное исправление безопасности для Insight (очень важно, если вы используете Insight!)
+* Исправлен браузер истории
+* Исправление расчетов дельты
+* Обновление переводов
+* Проверка GIT и предостережение об обновлении gradle
+* Больше автоматического тестирования
+* Исправление потенциального сбоя в службе AlarmSound (спасибо @lee-b !)
+* Исправлена передача данных ГК (теперь работает независимо от разрешения SMS!)
+* Новый модуль проверки версий
 
 
-Version 2.2.2
+Версия 2.2.2
 ==================================================
-Release date: 07-04-2019
+Дата выпуска: 07-04-2019
 
 Новые возможности
 --------------------------------------------------
-* Autosens fix: deactivate TT raises/lowers target
-* New translations
-* Insight driver fixes
-* SMS plugin fix
+* Исправление Autosens: деактивировать значение временная цель ТТ повышает/понижает целевое значение
+* Новые переводы
+* Исправления драйверов Insight
+* исправление модуля SMS
 
 
-Version 2.2
+Версия 2.2
 ==================================================
 Release date: 29-03-2019
 
