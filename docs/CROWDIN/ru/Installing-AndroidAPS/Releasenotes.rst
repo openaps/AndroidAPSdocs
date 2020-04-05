@@ -145,20 +145,21 @@ Release date: 29-02-2020
 
 Версия 2.2
 ==================================================
-Release date: 29-03-2019
+Дата выпуска: 29-03-2019
 
 Новые возможности
 --------------------------------------------------
-* `DST fix <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
-* Wear Update
-* `SMS plugin <../Children/SMS-Commands.html>`_ update
-* Go back in objectives.
-* Stop loop if phone disk is full
+* `Исправление ошибки летнего времени <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
+ContextEdit
+* Обновление Wear
+* ` Модуль SMS <../Children/SMS-Commands.html> ` _ обновление
+* Возможность возврата к предыдущим целям.
+* Остановка цикла, если память телефона заполнена
 
 
-Version 2.1
+Версия 2.1
 ==================================================
-Release date: 03-03-2019
+Дата выпуска: 03-03-2019
 
 Новые возможности
 --------------------------------------------------
