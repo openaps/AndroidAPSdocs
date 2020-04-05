@@ -28,23 +28,23 @@
 ==================================================
 При создании нового хранилища ключей для построения подписанного APK в Windows может появиться следующее сообщение об ошибке
 
-.. image:: ../images/AndroidStudio35SigningKeys.png
-  :alt: Key was created with errors
+.. изображение:: ../images/AndroidStudio35SigningKeys.png
+  :alt: Ключ создан с ошибками
 
-This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
+Это, кажется, ошибка в Android Studio 3.5.1 и в среде Java в Windows. Ключ создается правильно, но рекомендация выводится как ошибка. В настоящее время это можно игнорировать.
 
 Не удалось загрузить… / Работа оффлайн
 ==================================================
 Если вы получите подобное сообщение об ошибке
 
-.. image:: ../images/GIT_Offline1.jpg
-  :alt: Warning could not download
+.. изображение:: ../images/GIT_Offline1.jpg
+  :alt: Не удалось загрузить предупреждение
 
 убедитесь, что 'Автономная работа' выключена.
 
 Файл -> параметры
 
-.. image:: ../images/GIT_Offline2.jpg
+.. изображение:: ../images/GIT_Offline2.jpg
   :alt: Settings offline work
 
 Ошибка: buildOutput.apkData не может быть пустым
