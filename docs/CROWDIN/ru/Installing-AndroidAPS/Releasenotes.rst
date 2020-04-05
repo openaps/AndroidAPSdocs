@@ -65,46 +65,46 @@ Release date: 29-02-2020
 * Новая строка состояния для Combo
 * Улучшенное состояние ГК
 * Исправлена синхронизация врем целей с NS
-* New statistics activity
-* Allow Extended bolus in open loop mode
-* Android 10 alarm support
-* Tons on new translations
+* Новая статистика
+* Разрешен пролонгированный болюс в режиме открытого цикла
+* Поддержка оповещений Android 10
+* Тонны новых переводов
 
-Version 2.5.1
+Версия 2.5.1
 ==================================================
-Release date: 31-10-2019
+Дата выпуска: 31-10-2019
 
-Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
-* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
-* New versioning that will allow to do minor updates without triggering the update-notification.
+Обратите внимание на " важные примечания <../Instaling-AndroidAPS/Releasenotes.html#important-notes> ` _ и ` ограничения <../Instaling-AndroidAPS/Releasenotes.html#is-this-update-for-me-is-not-supported> ` _ для ` версии 2.5.0 <../Instaling-AndroidAPS/Releasenotes.html#version-2-5-0 > ` _. 
+* Исправлена ошибка в сетевом состоянии, которые приводят к ошибкам (не критично, но будет тратить много энергии на пересчет).
+* Новая иерархия версий, позволяющая выполнять незначительные обновления без уведомлений об обновлении.
 
-Version 2.5.0
+Версия 2.5.0
 ==================================================
-Release date: 26-10-2019
+Дата выпуска: 26-10-2019
 
-Важные Примечания
+Важные замечания
 --------------------------------------------------
-* Please use `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ or newer to `build the apk <../Installing-AndroidAPS/Building-APK.html>`_ or `update <../Installing-AndroidAPS/Update-to-new-version.html>`_.
-* If you are using xDrip `identify receiver <../Configuration/xdrip.html#identify-receiver>`_ must be set.
-* If you are using Dexcom G6 with the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
-* Glimp is supported from version 4.15.57 and newer.
+* Пожалуйста, используйте `Android Studio версии 3.5.1 <https://developer.android.com/studio/>`_ или новее, чтобы `собрать apk <../Installing-AndroidAPS/Building-APK.html>`_ или `update <../Installing-AndroidAPS/Update-to-new-version.html>`_.
+* Если вы используете xDrip, должен быть отмечен `identify receiver <../Configuration/xdrip.html#identify-receiver>`_.
+* Если вы используете Dexcom G6 с ` модифицированным приложением Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app> ` _, вам понадобится версия из папки ` 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>` _.
+* Поддержка Glimp версии 4.15.57 и новее.
 
-Is this update for me? Currently is NOT supported
+Это обновление для меня? В настоящее время НЕ поддерживается
 --------------------------------------------------
-* Android 5 and lower
+* Android 5 и ниже
 * Poctech
 * 600SeriesUploader
-* Patched Dexcom from 2.3 directory
+* Модифицированное приложение Dexcom из каталога 2.3
 
 Новые возможности
 --------------------------------------------------
-* Internal change of targetSDK to 28 (Android 9), jetpack support
-* RxJava2, Okhttp3, Retrofit support
-* Old `Medtronic pumps <../Configuration/MedtronicPump.html>`_ support (RileyLink need)
-* New `Automation plugin <../Usage/Automation.html>`_
-* Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings>`_ from bolus wizard calculation
-* Rendering insulin activity
-* Adjusting IOB predictions by autosense result
+* Внутреннее изменение targetSDK на 28 (Android 9), поддержка jetpack
+* Поддержка RxJava2, Okhttp3, Retrofit
+*Поддержка старых помп `Medtronic <../Configuration/MedtronicPump.html>`_ поддержка (нужен RileyLink)
+* Новый модуль `Автоматизация <../Usage/Automation.html>`_
+* Позволяет подать `только часть болюса <../конфигурация/настройки.расчет мастер HTML#расширенные-настройки>`_ с калькулятора болюса
+* Рендеринг активности инсулина
+* Корректировка прогнозов IOB с помощью результата autosense
 * New support for patched Dexcom apks (`2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
 * Signature verifier
 * Allow to bypass objectives for OpenAPS users
