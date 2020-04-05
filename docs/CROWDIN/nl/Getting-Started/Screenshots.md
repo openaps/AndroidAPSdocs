@@ -22,7 +22,7 @@ Aanpassingen maak je door een veld lang ingedrukt te houden. Houd bijvoorbeeld d
 
 * Laatste bloedglucose waarde van jouw CGM
 * Hoe lang geleden werd bloedglucose uitgelezen
-* Wijzigingen in de laatste 15 en 40 minuten
+* Gemiddelde verandering in de laatste 15 en 40 minuten
 * Huidige basaalstand, inclusief een eventueel tijdelijke basaal stand (TBR) geprogrammeerd door het systeem
 * Insuline aan boord (IOB)
 * koolhydraten aan boord (Carbs On Board, COB)
