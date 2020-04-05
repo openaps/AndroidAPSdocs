@@ -41,30 +41,30 @@ Release date: 29-02-2020
 
 Новые возможности
 -----
-* Small design changes (startpage...)
-* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`_
-* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* Небольшие изменения дизайна (стартовая страница...)
+* Удалена закладка / меню Careportal - подробнее `здесь <../Usage/CPbefore26.html>`_
+* Новый плагин `Local Profile <../Configuration/Config-Builder.html#local-profile-recommended>`_
 
-  * Local profile can hold more than 1 profile
-  * Profiles can be cloned and edited
-  * Ability of upload profiles to NS
-  * Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
-  * Veritical NumberPicker for targets
-* SimpleProfile is removed
-* `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
-* MDT plugin: Fixed bug with duplicated entries
-* Units are not specified in profile but it's global setting
-* Added new settings to startup wizard
-* Different UI and internal improvements
-* `Wear complications <../Configuration/Watchfaces.html>`_
-* New `SMS commands <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
-* Fixed language support
-* Objectives: `Allow to go back <../Usage/Objectives.html#go-back-in-objectives>`_, Time fetching dialog
-* Automation: `allow sorting <../Usage/Automation.html#sort-automation-rules>`_
-* Automation: fixed bug when automation was running with disabled loop
-* New status line for Combo
-* GlucoseStatus improvement
-* Fixed TempTarget NS sync
+  * Локальный профиль может иметь более 1 профиля
+  * Профили можно копировать и редактировать
+  * Возможность загружать профили на NS
+  * Старые переключатели профиля можно клонировать на новый в LocalProfile (применяется сдвиг по времени и процент)
+  * Vertical NumberPicker для целей
+* SimpleProfile удален
+* `Пролонгированный болюс <../Usage/Extended-Carbs.html > ` _ функция - замкнутый цикл будет отключена
+* Плагин MDT: Исправлена ошибка с дублирующимися записями
+* Единицы не указаны в профиле, но это глобальные параметры
+* Добавлены новые параметры для мастера установки
+* Измененный пользовательский интерфейс и внутренние улучшения
+* `Усложнения Wear <../Configuration/watchfaces.html>`_
+* Новые `SMS команды <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
+* Исправлена поддержка языков
+* Цели: позволяют вернуться <../использования/цели.диалоговое окно HTML#идем-назад-в-задачах>`_,выбор времени
+* Автоматизация: ` позволяет сортировку <../Usage/Automation.html#sort-automation-rules> ` _
+* Автоматизация: исправляется ошибка, когда автоматизация выполнялась с отключенным циклом
+* Новая строка состояния для Combo
+* Улучшенное состояние ГК
+* Исправлена синхронизация врем целей с NS
 * New statistics activity
 * Allow Extended bolus in open loop mode
 * Android 10 alarm support
