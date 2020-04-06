@@ -55,17 +55,17 @@
    
   `Ошибка: buildOutput.apkData не может быть пустым`
 
-This is a known bug in Android Studio 3.5 and will probably not be fixed before Android Studio 3.6. Three options:
+Эта известная ошибка в Android Studio 3.5 и, вероятно, она не будет исправлена до Android Studio 3.6. Есть три варианта:
 
 1. Вручную удалите три папки компоновки (обычная "сборка", папка компоновки в "app" и папка компоновки в "wear") и снова сгенерируйте подписанный apk.
-2. Set destination folder to project folder instead of app folder as described in `this video <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
+2. Установите папку назначения в папку проекта, а не в папку приложения, как описано в этом видео <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
 3. Измените папку назначения apk (другое расположение).
 
-Unable to start daemon process
+Не удается запустить демон процесс
 ==================================================
-If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above. I you are using Windows 10 you must use a 64-bit operating system.
+Если вы видите подобное сообщение об ошибке, вы, вероятно, используете ОС Windows 10, 32-bit. Она не поддерживается Android Studio 3.5.1 и выше. В Windows 10 следовать использовать 64-битную операционную систему.
 
-There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. `this one <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
+В интернете много руководств, как определить, у вас 32-или 64-битная ОС- например " это <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>` _.
 
 .. image:: ../images/AndroidStudioWin10_32bitError.png
   :alt: Screenshot Unable to start daemon process
