@@ -67,13 +67,14 @@
 
 В интернете много руководств, как определить, у вас 32-или 64-битная ОС- например " это <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>` _.
 
-.. image:: ../images/AndroidStudioWin10_32bitError.png
-  :alt: Screenshot Unable to start daemon process
+.. изображение:: ../images/AndroidStudioWin10_32bitError.png
+  :alt: снимок экрана не удалось запустить процесс демона
   
 
-No CGM data
+Нет данных CGM мониторинга
 ==================================================
-* In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
+* В случае, если вы используете xDrip+: идентифицируйте ресивер, как описано в настройках xDrip+ <../Configuration/xdrip.html#identify-receiver>`_.
+ContextEdit.
 * In case you are using `patched Dexcom G6 app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Make sure you are using the correct version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 
 Неодобренные изменения
