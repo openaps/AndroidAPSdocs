@@ -24,6 +24,11 @@ Glucides et bolus
   :alt: Careportal Glucides et bolus
   
 * Pour renseigner un bolus - peu importe si c'est pour une collation, un repas ou une correction - utilisez le bouton Insuline sur l'écran d'accueil **et assurez vous de cocher "Ne pas administrer de bolus, enregistrer uniquement"!**
+* Option to backdate insulin - i.e. if you forgot to register insulin given by syringe - will only be available if checkbox "Do not bolus, record only" is ticked.
+
+   .. image:: ../images/Careportal_25_26_5.png
+     :alt: Backdate insulin via insulin button
+
 * Pour la correction des glucides, utilisez le bouton "Glucides" sur l'écran d'accueil.
 * Les débits de base temporaire peuvent être démarrés et arrêtés via le bouton de l'onglet/menu Actions. Veuillez noter que le bouton passe de "BASAL TEMPORAIRE" à "ANNULER x%" lorsqu'un débit de base temporaire est défini.
 
