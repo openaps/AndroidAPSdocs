@@ -1,9 +1,9 @@
 Wiki mises à jour et modifications
 **************************************************
 
-April 2020
+Avril 2020
 ==================================================
-* `Backdate insulin <..//Usage/CPbefore26.html#carbs--bolus>`_ (i.e. given by syringe)
+* `Antidater l'insuline <..//Usage/CPbefore26.html#id1>`_ (par ex. injectée avec une seringue)
 
 Mars 2020
 ==================================================
