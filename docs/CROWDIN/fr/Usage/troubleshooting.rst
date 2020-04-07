@@ -37,7 +37,7 @@ MGC
 
 Pompes
 ==================================================
-* `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#dana-rs-specific-errors>`_
+* `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#erreurs-specifiques-a-danars`_
 * `Accu-Chek Combo généralités <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_
 * `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#why-does-pairing-with-the-pump-does-not-work-with-the-app-ruffy>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html#insight-specific-errors>`_
