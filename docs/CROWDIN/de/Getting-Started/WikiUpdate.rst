@@ -1,6 +1,10 @@
 Docs Updates & Änderungen
 **************************************************
 
+April 2020
+==================================================
+* `Backdate insulin <..//Usage/CPbefore26.html#carbs--bolus>`_ (i.e. given by syringe)
+
 März 2020
 ==================================================
 * `AndroidAPS mit Android Studio 3.6.1 erstellen <../Installing-AndroidAPS/Building-APK.html>`_
