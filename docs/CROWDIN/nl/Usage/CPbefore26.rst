@@ -24,6 +24,11 @@ Koolhydraten & bolus
   :alt: Careportal carbs & bolus
   
 * Om een bolus te noteren - of het nu gaat om snack, maaltijd of correctie - gebruik de insuline knop op het Overzcht scherm **en let op dat je kiest voor "Geen bolus toedienen, enkel in behandelingen zetten"!**
+* Option to backdate insulin - i.e. if you forgot to register insulin given by syringe - will only be available if checkbox "Do not bolus, record only" is ticked.
+
+   .. image:: ../images/Careportal_25_26_5.png
+     :alt: Backdate insulin via insulin button
+
 * Voor koolhydraten correctie gebruik de koolhydraten knop op het Overzicht scherm.
 * Tijdelijke basaalstanden kunnen gestart en gestopt worden via Acties. NB: De knop verandert van "TIJD. BASAAL" naar "ANNULEER x%" wanneer een tijdelijke basaalstand is ingesteld.
 
