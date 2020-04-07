@@ -35,7 +35,9 @@ Inhibitory SGLT-2, též nazývané glifloziny, inhibují reabsorpci glukózy v 
 
 Telefon
 --------------------------------------------------
-Potřebujete telefon s Androidem s operačním systémem Google Android 6.0 a novějším. Uživatelé průběžné doplňují `seznam otestovaných telefonů a hodinek <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
+Potřebujete telefon s Androidem s operačním systémem Google Android 6.0 a novějším. Next major version AndroidAPS 2.7 will only support Android 7 and above. So if you are thinking about a new phone, Android 8.1 is recommended at least but optimicaly Android 9 or 10.
+
+Uživatelé průběžné doplňují `seznam otestovaných telefonů a hodinek <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
 Pro zápis telefonu nebo hodinek, které ještě nejsou uvedeny v tabulce, vyplňte prosím `formulář <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
