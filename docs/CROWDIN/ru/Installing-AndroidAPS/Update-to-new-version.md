@@ -64,7 +64,7 @@
 * Если установлен флажок запомнить пароли, вам не придется их вводить. В том случае, если этот переключатель не был включен во время последней компоновки, и вы не можете запомнить эти пароли, обратитесь к разделу [ Устранение неполадок ](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
 * Нажмите "Далее".
 
-![Key store](../images/AndroidStudio361_Update05.png)
+![Хранилище ключей](../images/AndroidStudio361_Update05.png)
 
 * Выберите вариант компоновки "fullRelease" (1.). 
 * Отметьте флажки V1 и V2 для подписи версий (2.).
@@ -92,9 +92,9 @@
 
 На вашем телефоне необходимо разрешить установку из неизвестных источников. Инструкции, как это сделать, можно найти в интернете (например [здесь](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) или [здесь](https://www.androidcentral.com/unknown-sources)).
 
-## Check AAPS version on phone
+## Проверить версию AAPS на телефоне
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Вы можете проверить версию AAPS на вашем телефоне, нажав на меню трех точек сверху справа "о приложении".
 
 ![Версия AAPS установлена](../images/Update_VersionCheck.p)
 
