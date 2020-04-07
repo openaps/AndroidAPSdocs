@@ -62,7 +62,7 @@ Menu > Settings > Device security > Unknown sources > slider to right side (= ac
 
 For security reasons this setting should be set back to inactive once the installation of all apps described here has been completed.
 
-### 블루투스를 활성화 시키세요.
+### Enable Bluetooth
 
 1. Menu > Settings > Connections > Bluetooth > slider to right side (= active)
 2. Menu > Settings > Connections > Location > slider to right side (= active)
