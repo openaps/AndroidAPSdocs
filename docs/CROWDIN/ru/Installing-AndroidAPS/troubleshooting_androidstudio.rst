@@ -86,60 +86,60 @@ ContextEdit.
 
 Вариант 1 - Проверить установку git
 --------------------------------------------------
-* git might be not installed correctly (must be globally available)
-* when on Windows and git was just installed, you should restart your computer or at least log out and re-login once, to make git globally available after the installation
-* `Check git installation <../Installing-AndroidAPS/git-install.html#check-git-settings-in-android-studio>`_
-* If no git version is shown in check but git is installed on your computer, make sure Android Studio knows where `git is located <../Installing-AndroidAPS/git-install.html#set-git-path-in-android-studio>`_ on your computer.
+* возможно, git установлен неправильно (должен быть доступен по всему миру)
+* после установки Git в Windows и, нужно перезапустить компьютер или хотя бы раз выйти и снова войти в систему, чтобы сделать git глобально доступным
+* `Проверьте установку git <../Installing-AndroidAPS/git-install.html#check-git-settings-in-android-studio>`_
+* Если на вашем компьютере не отображается версия gti, но git установлен, убедитесь, что Android Studio знает, где находится `git. /Installing-AndroidAPS/git-install.html#set-git-path-in-android-studio>`_ на своем компьютере.
 
-Option 2 - Reload source code
+Вариант 2 - Перезагрузка исходного кода
 --------------------------------------------------
-* In Android Studio select VCS -> GIT -> Reset HEAD
+* В Android Studio выберите VCS -> GIT -> Сбросить HEAD
 
-.. image:: ../images/GIT_TerminalCheckOut3.PNG
-  :alt: Reset HEAD
+.. изображение:: ../images/GIT_TerminalCheckOut3.PNG
+  :alt: Сбросить HEAD
    
-Option 3 - Check for updates
+Вариант 3 - проверить наличие обновлений
 --------------------------------------------------
-* Copy ‘git checkout --’ to clipboard (without quote signs)
-* Switch to Terminal in Android Studio (lower left side of Android Studio window)
+* Скопируйте «git checkout --» в буфер обмена (без кавычек)
+* Переключитесь на терминал в Android Studio (слева с нижней стороны окна Android Studio)
 
-  .. image:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
+  .. изображение:: ../images/GIT_TerminalCheckOut1.PNG
+  :alt: Терминал Android Studio
    
-* Paste copied text and press return
+* Вставьте скопированный текст и нажмите ввод
 
-  .. image:: ../images/GIT_TerminalCheckOut2.jpg
-    :alt: GIT checkout success
+  .. изображение:: ../images/GIT_TerminalCheckOut2.PNG
+    :alt: Проверка GIT успешно завершена
 
 Приложение не установлено
 ==================================================
-.. image:: ../images/Update_AppNotInstalled.png
-  :alt: phone app note installed
+.. изображение:: ../images/Update_AppNotInstalled.png
+  :alt: приложение не установлено
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps:
+* Убедитесь, что вы передали файл «full-release.apk» на ваш телефон.
+* Если на вашем телефоне появилось сообщение "приложение не установлено", то выполните следующее:
   
-1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
+1. `Экспортируйте параметры <../Usage/ExportImportSettings.html>`_ (в версии AAPS, уже установленной на телефоне)
 2. Удалите AAPS с телефона.
-3. Enable airplane mode & turn off bluetooth.
+3. Включите режим полета и выключите Bluetooth.
 4. Установите новую версию («app-full-release.apk»)
-5. `Import settings <../Usage/ExportImportSettings.html>`_
+5. `Импортируйте настройки <../Usage/ExportImportSettings.html>`_
 6. Снова включите Bluetooth и отключите режим самолета
 
 Приложение установлено, но старая версия
 ==================================================
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`.
+Если вы успешно построили приложение, передали его на ваш телефон и установили его, но номер версии остается прежним, то вы могли пропустить шаг обновления `update your local copy <../Update-to-new-version.html#update-your-local-copy>`.
 
 Ничего из вышеперечисленного не сработало
 ==================================================
 Если вышеперечисленные советы не помогли попробуйте начать сборку приложения с нуля:
 
-1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
-2. Have your key password and key store password ready
-    In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
+1. `Экспортируйте параметры <../Usage/ExportImportSettings.html>`_ (в версии AAPS, уже установленной на телефоне)
+2. Подготовьте пароль ключа и пароль хранилища
+    В случае, если вы забыле пароли, вы можете попытаться найти их в файлах проекта, как описано здесь <https://youtu.be/nS3wxnLgZOo>` _. Or you just use a new keystore. 
 3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components>`_.
 4.	Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на ваш телефон и установите.
-5. `Import settings <../Usage/ExportImportSettings.html>`_
+5. `Импортируйте настройки <../Usage/ExportImportSettings.html>`_
 
 Сценарий худшего варианта
 ==================================================
