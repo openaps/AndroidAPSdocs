@@ -128,7 +128,7 @@ ContextEdit.
 
 Приложение установлено, но старая версия
 ==================================================
-Если вы успешно построили приложение, передали его на ваш телефон и установили его, но номер версии остается прежним, то вы могли пропустить шаг обновления `update your local copy <../Update-to-new-version.html#update-your-local-copy>`.
+Если вы успешно построили приложение, перенесли его на телефон и установили его, но номер версии остается прежним, то вы могли пропустить шаг обновления `update your local copy <../Update-to-new-version.html#update-your-local-copy>`.
 
 Ничего из вышеперечисленного не сработало
 ==================================================
@@ -136,8 +136,8 @@ ContextEdit.
 
 1. `Экспортируйте параметры <../Usage/ExportImportSettings.html>`_ (в версии AAPS, уже установленной на телефоне)
 2. Подготовьте пароль ключа и пароль хранилища
-    В случае, если вы забыле пароли, вы можете попытаться найти их в файлах проекта, как описано здесь <https://youtu.be/nS3wxnLgZOo>` _. Or you just use a new keystore. 
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components>`_.
+    В случае, если вы забыле пароли, вы можете попытаться найти их в файлах проекта, как описано здесь <https://youtu.be/nS3wxnLgZOo>` _. Или просто создайте новый файл хранения ключей. 
+3. Постройте приложение с нуля, как описано `здесь <../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components>`_.
 4.	Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на ваш телефон и установите.
 5. `Импортируйте настройки <../Usage/ExportImportSettings.html>`_
 
@@ -145,6 +145,6 @@ ContextEdit.
 ==================================================
 Если даже создание приложения с нуля не решает проблему, попробуйте полностью удалить Android Studio. Некоторые пользователи сообщили, что это решило проблему.
 
-**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
+** Обязательно деинсталлируйте все файлы, связанные с Android Studio. * * Если вы не полностью удалите Android Studio со всеми скрытыми файлами, деинсталляция может привести к новым проблемам, а не к решению существующих. Руководства по полной деинсталляции можно найти в Интернете, напр. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Install Android Studio from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#install-android-studio>`_ and **do not update gradle**.
+Установите Android Studio с нуля, как описано ниже: <../Installing-AndroidAPS/Building-APK.html#install-android-studio>`_ и **не обновляйте gradle**.
