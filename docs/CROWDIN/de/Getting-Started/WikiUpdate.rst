@@ -3,7 +3,7 @@ Docs Updates & Änderungen
 
 April 2020
 ==================================================
-* `Backdate insulin <..//Usage/CPbefore26.html#carbs--bolus>`_ (i.e. given by syringe)
+* `Insulin nachträglich erfassen <..//Usage/CPbefore26.html#id1>`_ (z.B. bei Abgabe mit Spritze)
 
 März 2020
 ==================================================
