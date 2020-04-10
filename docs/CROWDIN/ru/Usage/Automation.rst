@@ -129,16 +129,16 @@ Condition
 .. изображение:: ../images/Automation3.png
   :alt: Автоматизация3
   
-Это пример настроек автоматизации человека, который обедает в одно и то же время в течение недели. If it is at a certain time at its lunch location, it gets a lower temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the certain time and the  location. So it does not work at any other time at this location or at this time when the persons stays home or works longer. 
+Это пример настроек автоматизации человека, который обедает в одно и то же время в течение недели. Если он в определенное время (перед обедом) находится в определенном месте, то получает более низкую временную цель (ожидаемый прием пищи). Из-за союза "И" это происходит только в определенное время в определенном месте. Поэтому эта автоматизация не работает в любое другое время в этом месте или в то время, когда человек сидит дома или работает дольше. 
 
-Incorrect use of Automation
+Неправильное использование автоматизации
 --------------------------------------------------
-As every system Automation can be used incorrectly. This might lead to difficulties and even danger for your health. Examples for incorrect use are for instance:
+Как и все системы, автоматизация может применяться неправильно. Это может привести к трудностям и даже опасности для здоровья. Примеры неправильного применения:
 
-* Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
-* Setting profile to compensate food
-* Setting profile without duration
-* Creating one way rules (i.e. do something but don't undo it by another rule)
+* Попытка полного переопределения алгоритма вместо помощи (напр. замена профиля вместо тюнинга базала, соотношения инсулин-углеводы IC и т. д.)
+* Установка профиля для компенсации приема пищи
+* Установка профиля без определения продолжительности
+* Создание правил в одну сторону (т.е. do something but don't undo it by another rule)
 * Creating long term rules
 
 Alternatives
