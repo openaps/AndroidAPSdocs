@@ -12,14 +12,14 @@ How to use it
 ==================================================
 Чтобы настроить автоматизацию, нужно дать ей заголовок, выбрать хотя бы одно условие и одно действие. 
 
-Important note
+Важное примечание
 --------------------------------------------------
-**Automation is still active when you disable loop!**
+** Автоматизация по-прежнему активна при отключении цикла! **
 
-So make sure to deactivate Automation rules during these occations if neccessary. You can do so by untiking the box left of the name of your automation rule.
+Поэтому при необходимости деактивируйте правила автоматизации на это время. Это можно сделать, сняв галочку в поле слева от названия правила автоматизации.
 
-.. image:: ../images/Automation_ActivateDeactivate.png
-  :alt: Activate and deactivaten automation rule
+.. изображение:: ../images/Automation_ActivateDeactivate.png
+  :alt: Активировать и деактивировать правило автоматизации
 
 Общие настройки
 --------------------------------------------------
@@ -54,7 +54,7 @@ Condition
 
   * Использовать пассивное расположение: AAPS принимает положения только в том случае, если другие приложения запрашивали его
   * Использовать расположение сети: расположение вашего Wifi
-  * Use GPS location (Attention! May cause excessive battery drain!)
+  * Используйте локатор GPS (Внимание! Может привести к чрезмерной разрядке аккумулятора!)
   
 Действие
 --------------------------------------------------
@@ -74,48 +74,48 @@ Condition
 
 После добавления ваших действий, **не забудьте изменить значения по умолчанию** на те, которые требуются, нажав на значения по умолчанию.
  
-.. image:: ../images/Automation_Default_V2_5.png
+.. образ:: ../images/Automation_Default_V2_5.png
   :alt: автоматизация по умолчанию vs. задать значения
 
-Sort automation rules
+Выбор правил автоматизации
 -----
-To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
+Для отбора правил автоматизации нажмите и удерживайте кнопку с четырьмя строками в правой части экрана и двигайтесь вверх или вниз.
 
-.. image:: ../images/Automation_Sort.png
-  :alt: Sort automation rules
+.. изображение:: ../images/Automation_Sort.png
+  :alt: Выбор правил автоматизации
   
-Delete automation rules
+Удаление правил автоматизации
 -----
-To delete an automation rule just swipe it left or right.
+Чтобы удалить правило автоматизации, просто смахните его влево или вправо.
 
-.. image:: ../images/Automation_Delete.png
-  :alt: Delete automation rule
+.. изображение:: ../images/Automation_Deletet.png
+  :alt: Выбор правила автоматизации
 
-Good practice & caveats
+Рекомендации и предостережения
 ==================================================
 * Когда вы начинаете пользоваться средствами автоматизации или создаете новое правило, добавьте уведомление об этом, пока не убедитесь, что правило хорошо работает.
 * Наблюдайте за результатами работы правила.
-* Try not make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg < 180 mg/dl)
+* Постарайтесь не делать условия слишком легкими (например, ЕСЛИ ГК > 80 мг/дл И ГК < 180 мг/дл)
 
-    **Doubly important if action is a profile switch!**
+    **Вдвойне важно, если правило активирует переключатель профиля!**
  
-* Try and use Temp Targets instead of Profile Switches. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`_ back to 0.
-* Make sure Profile switches are made sparingly and preferably at a last resort.
+* Попробуйте использовать временные цели Temp Targets вместо переключателей профиля Profile Switches. Temp Targets не сбрасывают ` Autosens <../Usage/Open-APS-features.html#autosens> ` _ на 0.
+* Убедитесь, что переключатели профиля создаются с осторожностью и желательно как крайняя мера.
 
-    * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`_ useless for a min of 6 hours.
+    * Переключение профилей делает `Autosens <../Usage/Open-APS-features.html#autosens>`_ бесполезным минимум на 6 часов.
 
-* Profile switching will not reset the profile back to your base profile
+* Переключение профилей не сбросит профиль назад на базовый профиль
 
-    * You have to make another rule to set this back or do it manually!
-    * Increased risk of Hypoglycemia if profile switch does not expire or reset back to base profile.
+    * Вы должны создать еще одно правило, чтобы вернуть профиль или сделать это вручную!
+    * Повышенный риск гипогликемии в случае, если время работы нового профиля не истечет или не сбросится назад на базовый профиль.
 
 Примеры
 ==================================================
-These are just set up examples, no advises. Don't reproduce it without being aware what you are actually doing or why you need these. See below for two examples with screenshots.
+Это просто примеры вариантов настройки, не советы. Не воспроизводите их, не зная, что вы делаете или зачем вам это нужно. Ниже приведены два примера со снимками экрана.
 
-* Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
-* Setting temp target for activities based on time, location...
-* Setting eating soon temp targets based on time, location...
+* Переключение профилей для вашей повседневной деятельности (например, школа, тренажерный зал, выходные, рабочий день...) с использованием геолокации, wifi, времени и т. д.
+* Настройка временной цели для решений на основе времени, геолокации...
+* Настройка временной цели ожидаемый прием пищи на основе времени, геолокации...
 
 Low Glucose Temp Target
 --------------------------------------------------
