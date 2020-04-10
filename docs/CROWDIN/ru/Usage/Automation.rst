@@ -117,19 +117,19 @@ Condition
 * Настройка временной цели для решений на основе времени, геолокации...
 * Настройка временной цели ожидаемый прием пищи на основе времени, геолокации...
 
-Low Glucose Temp Target
+Временная Цель Низкая ГК
 --------------------------------------------------
-.. image:: ../images/Automation2.png
-  :alt: Automation2
+.. изображение:: ../images/Automation2.png
+  :alt: Автоматизация2
 
-This is made by a person that wants to get an automatically hypo temp target when having a hypo.
+Это сделал человек, который хочет получить автоматическую цель гипо при гипогликемии.
 
-Lunch Time Temp Target
+Временная Цель Время Обеда
 --------------------------------------------------
-.. image:: ../images/Automation3.png
-  :alt: Automation3
+.. изображение:: ../images/Automation3.png
+  :alt: Автоматизация3
   
-These example is made by a person, that has lunch at the same time during the week. If it is at a certain time at its lunch location, it gets a lower temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the certain time and the  location. So it does not work at any other time at this location or at this time when the persons stays home or works longer. 
+Это пример настроек автоматизации человека, который обедает в одно и то же время в течение недели. If it is at a certain time at its lunch location, it gets a lower temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the certain time and the  location. So it does not work at any other time at this location or at this time when the persons stays home or works longer. 
 
 Incorrect use of Automation
 --------------------------------------------------
