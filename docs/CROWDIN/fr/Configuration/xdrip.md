@@ -32,7 +32,7 @@ Si votre téléphone tourne Android 10 et que vous avez des difficultés avec la
    
    ![xDrip+ Paramètres de base 2](../images/xDrip_Basic2.png)
 
-* ** Inter App-Settings ** (Diffusion locale) Si vous voulez utiliser AndroidAPS et que les données doivent être transmises à AndroidAPS, vous devez activer la Diffusion locale dans xDrip + dans les paramètres Inter-app.
+* **Inter App-Settings** (Diffusion locale) Si vous voulez utiliser AndroidAPS et que les données doivent être transmises à AndroidAPS, vous devez activer la Diffusion locale dans xDrip + dans les paramètres Inter-app.
 
 * Pour que les valeurs soient les mêmes, vous devez activer `Send Display Glucose`.
 
