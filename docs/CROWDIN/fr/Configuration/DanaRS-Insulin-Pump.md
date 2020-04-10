@@ -2,6 +2,8 @@
 
 *Ces instructions décrivent la configuration de l’application et de votre pompe si vous avez une DanaRS commercialisée depuis 2017. Visitez la [pompe à insuline Dana R](./DanaR-Insulin-Pump) si vous avez plutôt la pompe initiale DanaR.*
 
+**La DanaRS avec le nouveau firmware v3 ne peut actuellement pas être utilisée avec AndroidAPS !**
+
 * Sur la pompe DanaRS, pompe « BASAL A » est utilisé par l'application. Les données existantes se font écrasé.
 
 * Dans AndroidAPS, allez dans Générateur de configuration et sélectionnez « DanaRS »
@@ -10,13 +12,13 @@
 
 * Sélectionnez Appairage sur la nouvelle pompe DanaRS, puis cliquez sur le numéro de série de votre DanaRS.
   
-      ![AAPS pairing Dana RS](../images/AAPS_DanaRSPairing.png)
+      ![Appariage AAPS - Dana RS](../images/AAPS_DanaRSPairing.png)
       
 
 * Sélectionnez Mot de passe de la pompe et saisissez votre mot de passe. (Le mot de passe par défaut est 1234)   
   ** Vous devez confirmer l'appairage sur la pompe ! ** C'est juste la façon dont vous êtes habitués à faire d'autres appairages bluetooth (par ex. le smartphone et l'audio de la voiture).
   
-      ![DanaRS confirm pairing](../images/DanaRS_Pairing.png)
+      ![Dana RS confirmation d'appairage](../images/DanaRS_Pairing.png)
       
 
 * Sélectionner la vitesse de Bolus pour changer la vitesse de Bolus par défaut souhaitée (12 sec par 1 U, 30 sec par 1 U ou 60 sec par 1 U).

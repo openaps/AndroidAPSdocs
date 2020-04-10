@@ -13,32 +13,32 @@ Windows
 
 2. Définir le chemin d’accès git dans Android Studio
 --------------------------------------------------
-* Open File > Settings 
+* Sélectionnez File > Settings 
 
   .. image:: ../images/Update_GitSettings1.png
     :alt: Android Studio - open settings
 
-* Click the small triangle next to Version Control (1.) to open the sub-menu.
-* Click Git (2.).
-* Make sure update method "Merge" (3.) is selected.
-* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
+* Cliquez sur le petit triangle à côté de Version Control (1.) pour ouvrir le sous-menu.
+* Cliquez sur Git (2.).
+* Assurez-vous que la méthode de mise à jour "Merge" (3.) est sélectionnée.
+* Vérifiez si Android Studio peut localiser le chemin d'accès à git.exe automatiquement en cliquant sur le bouton "Test" (4.)
 
   .. image:: ../images/AndroidStudio361_09.png
-    :alt: Android Studio settings
+    :alt: Paramètres Android Studio
 
-* If automatic setting is successful git version will be displayed.
-* Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
+* Si la configuration automatique est réussie, la version de git s'affiche.
+* Cliquez sur "OK" dans la boîte de dialogue (1.) et sur "OK" dans la fenêtre des paramètres (2.).
 
   .. image:: ../images/AndroidStudio361_10.png
-    :alt: Automatic git installation succeeded
+    :alt: Installation automatic de git réussie
 
-* In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
-* Use `search function <https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html>`_ in windows explorer to find "git.exe" if you are unsure where it can be found. Vous chercher un fichier git.exe situé dans un dossier \bin\.
-* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
-* Close settings window by clicking "OK" button (5.).
+* Si le fichier git.exe n'est pas trouvé, cliquez sur "OK" dans la boite de diablogue (1.) puis sur le bouton avec les 3 petits points (2.).
+* Utilisez la `fonction recherche <https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html>`_ dans l'explorateur windows pour trouver "git.exe" si vous n'êtes pas sûr de l'endroit où il est. Vous chercher un fichier git.exe situé dans un dossier \bin\.
+* Sélectionnez le chemin d'accès à git.exe et vérifiez que vous avez sélectionné le dossier ** \bin\ ** (3.) et cliquez sur "OK" (4.).
+* Fermez la fenêtre des paramètres en cliquant sur le bouton "OK" (5.).
 
   .. image:: ../images/AndroidStudio361_11.png
-    :alt: Automatic git installation failed
+    :alt: Installation automatic de git ratée
  
 3. Redémarrer
 --------------------------------------------------
@@ -47,10 +47,10 @@ Windows
 4. Vérifier les paramètres de git dans Android Studio
 --------------------------------------------------
 * Ouvrez la fenêtre Terminal dans Android Studio
-* Entrez "git --version" (sans les guillemets !) et appuyez sur Return
+* Enter "`git - -version`" (without quotation marks and no spaces between the two - [minus sign]!) and press Return
 
   .. image:: ../images/AndroidStudio_gitversion1.png
-    :alt: git --version
+    :alt: git - -version
 
 * Si git est installé et connecté correctement, vous recevrez une information sur la version installée qui ressemble à ceci :
 

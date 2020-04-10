@@ -33,11 +33,15 @@ AndroidAPS kann mit einer Android Wear Smartwatch *gesteuert* werden. Wenn Du De
 Die nachfolgenden Funktionen kannst Du von der Uhr aus starten:
 
 * temporäres Ziel setzen
-* Bolus abgeben
-* eCarbs eintragen
 * Bolusrechner verwenden (Welche Variablen bei der Berechnung berücksichtigt werden, lässt sich in den [Einstellungen](../Configuration/Config-Builder#wear) auf dem Smartphone festlegen.)
-* Loop- und Pumpenstatus prüfen
-* TDD (Total daily dose = Bolus + Basal pro Tag) anzeigen
+* eCarbs eintragen
+* Bolus (Insulin + Kohlenhydrate) abgeben
+* Uhreinstellungen
+* status 
+    * pumpenstatus überprüfen
+    * Pumpenstatus überprüfen
+    * Profil prüfen und ändern, CPP (Circadian Percentage Profile = Zeitverschiebung + Prozentsatz)
+    * TDD (Total daily dose = Bolus + Basal pro Tag) anzeigen
 
 ## AAPS Watchfaces
 
@@ -141,9 +145,9 @@ Ein gefüllter Stern (**Ein**) zeigt an, dass die Option ausgewählt wurde und e
 * **Wizard in Menu** (Standard: `On`): Bolus Assistent im Hauptmenü, um direkt an der Uhr Boli und Kohlenhydrate zu erfassen.
 * **Prime in Menu** (Standard: `Off`): Katheter- und Kanülenbefüllung über die Uhr
 * **Single Target** (Standard: `On`):
-  
-  * `On`: Zielwert für temporäre Ziele (TT)
-  * `Off`: Zielbereich für temporäre Ziele (TT)
+    
+    * `On`: Zielwert für temporäre Ziele (TT)
+    * `Off`: Zielbereich für temporäre Ziele (TT)
 
 * **Wizard Percentage** (Standard: `Off`): Boluskorrektur über den Assistenten (Wert wird in Prozent eingegeben, bevor die Insulinabgabe bestätigt wird)
 
@@ -194,13 +198,13 @@ Darüber hinaus gibt es drei Komplikationen vom Typ `LARGE IMAGE` Art: **Dark Wa
 ### Einstellungen zu den Komplikationen
 
 * **Complication Tap Action** (Standard-Einstellung: `Default`): Legt fest, welcher Dialog nach Tippen der Komplikation geöffnet wird: 
-  * *Default*: Abhängig vom Komplikations-Typ *(siehe Liste oben)*
-  * *Menu*: AAPS Hauptmenü
-  * *Wizard*: Bolus Assistent
-  * *Bolus*: direkte Boluseingabe
-  * *eCarb*: eCarb Dialog
-  * *Status*: Status-Menü
-  * *None*: Deaktiviert den Menüaufruf bei Tippen der Komplikation
+    * *Default*: Abhängig vom Komplikations-Typ *(siehe Liste oben)*
+    * *Menu*: AAPS Hauptmenü
+    * *Wizard*: Bolus Assistent
+    * *Bolus*: direkte Boluseingabe
+    * *eCarb*: eCarb Dialog
+    * *Status*: Status-Menü
+    * *None*: Deaktiviert den Menüaufruf bei Tippen der Komplikation
 * **Unicode in Complications** (Standard: `On`): Wenn `On` gewählt ist, nutzt die Komplikation Unicode Zeichen für Symbole wie `Δ` Delta, `⁞` vertikaler Punkttrenner oder `⎍` Basalraten-Symbol. Die Anzeige hängt von der Schriftart ab und kann sich je nach Watchface unterscheiden. Mit dieser Option können die Unicode-Zeichen bei Bedarf ausgeschaltet werden (`Off`), wenn der Font des Watchfaces diese Zeichen nicht unterstützt. Anzeigefehler können so vermieden werden.
 
 ## Tipps zur Performance und zur Akku-Laufzeit

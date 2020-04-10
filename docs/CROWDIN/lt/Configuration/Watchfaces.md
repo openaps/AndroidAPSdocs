@@ -33,11 +33,15 @@ AndroidAPS galima *valdyti* naudojant Android Wear išmanųjį laikrodį. Pavyzd
 Iš laikrodžio galite paleisti šias funkcijas:
 
 * nustatyti laikiną tikslą
-* administruoti bolusą
-* administruoti iAV
 * naudoti boluso skaičiuoklę (skaičiavimo kintamieji gali būti apibrėžti telefono [nustatymuose](../Configuration/Config-Builder#wear))
-* patikrinti pompos ir ciklo būklę
-* parodyti TDD (Bendra paros dozė = bolusas + bazė per dieną)
+* administruoti iAV
+* administruoti bolusus (insulinas + angliavandeniai)
+* nustatyti parametrus laikrodyje
+* būsena 
+    * patikrinti pompos būseną
+    * patikrinti ciklo būseną
+    * patikrinti ir pakeisti profilį, CPP (Cirkadinio procento profilis = laiko postūmis + procentinė dalis)
+    * parodyti TDD (Bendra paros dozė = bolusas + bazė per dieną)
 
 ## AAPS ciferblatai
 
@@ -141,9 +145,9 @@ Užpildyta žvaigždutė reiškia, kad būsena yra aktyvi (**Įjungta**), o tuš
 * **Vedlys yra Meniu** (numatyta` Įjungta`): leisti vedlio sąsajai pagrindiniame meniu įvesti angliavandenius ir nustatyti bolusus iš laikrodžio
 * **Užpildymas per Meniu** (numatytasis `Išjungta`): Leisti užpildymą iš laikrodžio
 * **Vienas tikslas** (numatytasis `Įjungta`):
-  
-  * `Įjungta`: nustatysite vieną reikšmę LT
-  * `Išjungta`: nustatysite LT žemą ir aukštą reikšmes
+    
+    * `Įjungta`: nustatysite vieną reikšmę LT
+    * `Išjungta`: nustatysite LT žemą ir aukštą reikšmes
 
 * **Vedlys procentais** (numatyta `Išjungta`): leisite boluso korekciją iš vedlio (reikšmė įvesta procentais prieš patvirtinimo pranešimą)
 
@@ -194,13 +198,13 @@ Be to, yra trys ekrano elementai `DIDELIS PAVEIKSLĖLIS` tokios kaip: **Tamsus f
 ### Su ekrano elementais susiję nustatymai
 
 * **Veiksmai paspaudus plėtinių mygtuką** (numatytoji reikšmė `Numatytasis`): Nusprendžia, kuris dialogo langas yra atidarytas, kai vartotojas baksteli į plėtinius: 
-  * *Numatytasis*: veiksmų, būdingų ekrano elementų tipui *(žr. sąrašą aukščiau)*
-  * *Meniu*: AAPS pagrindinis meniu
-  * *Vedlys*: boluso vedlys - boluso skaičiuoklė
-  * *Bolusas*: tiesioginis boluso vertės įrašas
-  * *iAV*: iAV sąrankos dialogas
-  * *Būsena*: būsenos sub-meniu
-  * *Jokių*: Išjungia AAPS plėtinių veiksmus
+    * *Numatytasis*: veiksmų, būdingų ekrano elementų tipui *(žr. sąrašą aukščiau)*
+    * *Meniu*: AAPS pagrindinis meniu
+    * *Vedlys*: boluso vedlys - boluso skaičiuoklė
+    * *Bolusas*: tiesioginis boluso vertės įrašas
+    * *iAV*: iAV sąrankos dialogas
+    * *Būsena*: būsenos sub-meniu
+    * *Jokių*: Išjungia AAPS plėtinių veiksmus
 * **Unicode ekrano elementuose** (numatytasis `Įjungta`): Kai `Įjungta`, elementuose bus naudojami Unicode simboliai, tokie kaip: `Δ` Delta, `⁞` vertikalių taškų daliklis arba `⎍` bazės simbolis. Jų pateikimas priklauso nuo šrifto, kuris gali būti būdingas tik tam ciferblatui. Ši parinktis leidžia perjungti Unicode simbolius `Išjungta` kai reikia - jei šriftas, naudojamas parinktiniuose ciferblatuose nepalaiko šių simbolių - taip išvengiant grafinių trikdžių.
 
 ## Patarimai dėl darbo ir baterijos gyvavimo

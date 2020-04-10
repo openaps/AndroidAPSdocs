@@ -2,6 +2,8 @@
 
 *These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
 
+**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
+
 * In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
 
 * In AndroidAPS go to Config Builder and select 'DanaRS'
@@ -10,13 +12,13 @@
 
 * Select DanaRS Pair New Pump, and click your DanaRS serial number.
   
-      ![AAPS pairing Dana RS](../images/AAPS_DanaRSPairing.png)
+      ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
       
 
 * Select Pump password and input your password. (Default password is 1234)   
   **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
   
-      ![Dana RS confirm pairing](../images/DanaRS_Pairing.png)
+      ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
       
 
 * Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
@@ -33,7 +35,7 @@
 
 In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
-![Alarme de entrega de insulina](../images/DanaRS_Error_bolus.png)
+![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
 * In most cases this is just a communication issue and the correct amount of insulin is delivered.
 * Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.

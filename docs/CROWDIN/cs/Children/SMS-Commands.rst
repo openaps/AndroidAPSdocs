@@ -13,15 +13,15 @@ Jak to funguje
 * Používáte-li ke sledování iPhone, nemůžete použít NSclient. Pak máte k dispozici pouze SMS příkazy.
 
 * Ve vašem Android telefonu přejděte do jeho systémového nastavení, následně do Aplikace > AndroidAPS > Oprávnění a povolte SMS
-* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+* V AndroidAPS jděte do Nastavení > SMS komunikátor, a zadejte telefonní číslo(a), ze kterých umožníte přijímat SMS příkazy (oddělené středníkem – např. +420123456788;+420123456789), a také povolte 'Povolit vzdálené příkazy přes SMS'.
 * Chcete-li nastavit více než jedno číslo:
 
   * Zadejte pouze jedno číslo.
-  * Make that single number work by sending and confirming a SMS command.
-  * Enter additional number(s) separated by semicolon, no space.
+  * Ujistěte se, že první číslo funguje - zasláním SMS příkazu a jeho potvrzením.
+  * Přidejte další číslo(a) oddělené středníkem, bez mezery.
   
     .. image:: ../images/SMSCommandsSetupSpace.png
-      :alt: SMS Commands Setup
+      :alt: Nastavení SMS příkazů
 
 
 * Z některého z povolených čísel odešlete SMS zprávu na telefon s běžícím AndroidAPS a do zprávy zadejte některý z níže tučně zapsaných příkazů. Telefon vám odpoví, aby potvrdil úspěšné provedení daného příkazu nebo vrátí požadované stavové informace. V případě potřeby potvrďte příkaz odesláním kódu, který poskytne telefon s AndroidAPS.
@@ -36,7 +36,7 @@ Při odesílání příkazů nezáleží na velikosti písmen.
 Příkazy musí být odeslány v angličtině. Pokud je řetězec odpovědi `přeložen <../translations.html#translate-řetězce-pro-androidaps-app> ` _, bude odpověď ve vašem jazyce.
 
 .. image:: ../images/SMSCommands.png
-  :alt: SMS Commands Example
+  :alt: příklad SMS příkazu
 
 Smyčka
 --------------------------------------------------
@@ -83,13 +83,13 @@ V případě, že jsou nastavena 2 telefonní čísla, není do 15 minut od posl
    * Odpověď A: Pro poslání bolusu 1.2U odpovězte pomocí SMS s kódem Rrt
    * Odpověď B: Vzdálený bolus není k dispozici. Zkuste to později.
 * BOLUS 0.60 MEAL
-   * If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins).
-   * Response A: To deliver meal bolus 0.60U reply with code Rrt
+   * Zadáte-li volitelný parametr MEAL, nastaví se dočasný cíl PŘED JÍDLEM (výchozí hodnoty jsou: 90 mg/dL, 5,0 mmol/l na 45 minut).
+   * Odpověď A: Pro poslání bolusu na jídlo 0.60U odpovězte pomocí SMS s kódem Rrt
    * Odpověď B: Vzdálený bolus není k dispozici. 
 * CARBS 5
-   * Response: To enter 5g at 12:45 reply with code EmF
+   * Odpověď: Chcete-li zadat 5g v 12:45 odpovězte pomocí SMS s kódem EmF
 * CARBS 5 17:35/5:35PM
-   * Response: To enter 5g at 17:35 reply with code EmF
+   * Odpověď: Chcete-li zadat 5g v 17:35, odpovězte pomocí SMS s kódem EmF
 * EXTENDED STOP/CANCEL
    * Odpověď: Pro zastavení prodlouženého bolusu odpovězte pomocí SMS s kódem EmF
 * EXTENDED 2 120
@@ -115,25 +115,25 @@ Jiné
 * PUMP
    * Odpověď: Posl. spojení: 1 min zpět Doč. bazál: 0.00U/h @11:38 5/30min IOB: 0.5U Zás: 34U Baterie: 100
 * SMS DISABLE/STOP
-   * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+   * Odpověď: Pro vypnutí vzdálené SMS služby odpovězte pomocí SMS s kódem Any. Mějte na paměti, že ji budete moci opětovně reaktivovat pouze z hlavního smartphonu s AAPS.
 * TARGET MEAL/ACTIVITY/HYPO   
-   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code Any
-* TARGET STOP/CANCEL   
-   * Response: To cancel Temp Target reply with code Any
+   * Odpověď: Chcete-li nastavit Dočasný cíl JÍDLO/AKTIVITA/HYPO , odpovězte pomocí SMS s kódem Any
+TARGET STOP/CANCEL   
+   * Odpověď: Pro zrušení dočasného cíle odpovězte pomocí SMS s kódem Any
 * HELP
-   * Response: BG, LOOP, TREATMENTS, .....
+   * Odpověď: BG, LOOP, TREATMENTS, .....
 * HELP BOLUS
-   * Response: BOLUS 1.2 BOLUS 1.2 MEAL
+   * Odpověď: BOLUS 1.2 BOLUS 1.2 MEAL
 
 Poradce při potížích
 ==================================================
-Multiple SMS
+Duplicitní SMS
 --------------------------------------------------
-If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not uploads treatments to NS. 
+Obdržíte-li stejnou zprávu znovu a znovu (např. přepnutí profilu), je pravděpodobné, že se jedná o zacyklení s jinými aplikacemi. Například xDrip+. Pokud je to tak, ujistěte se prosím, že xDrip+ (nebo jakákoliv jiná aplikace) nenahrává ošetření do NS. 
 
-If the other app is installed on multiple phones make sure to deactive upload on all of them.
+Je-li tato druhá aplikace nainstalovaná na více telefonech, deaktivujte upload u všech instancí.
 
-SMS commands not working on Samsung phones
+Nefunkční SMS příkazy na telefonech Samsung
 --------------------------------------------------
 Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Lze to vyřešit vypnutím možnosti „odeslání zprávy jako konverzace“.
 

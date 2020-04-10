@@ -47,10 +47,10 @@ Windows
 4. Check git settings in Android Studio
 --------------------------------------------------
 * Open Terminal window in Android Studio
-* Enter "git --version" (without quotation marks!) and press Return
+* Enter "`git - -version`" (without quotation marks and no spaces between the two - [minus sign]!) and press Return
 
   .. image:: ../images/AndroidStudio_gitversion1.png
-    :alt: git --version
+    :alt: git - -version
 
 * If git is installed and connected properly you will receive an information about the installed version that looks as follows:
 

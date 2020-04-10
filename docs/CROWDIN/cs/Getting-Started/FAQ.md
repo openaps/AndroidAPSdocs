@@ -172,15 +172,15 @@ Za předpokladu, že máte správný bazál, můžete tento parametr otestovat t
 > 
 > Při používání inzulino-sacharidového poměru je naopak fixní množství inzulinu a mění se množství sacharidů. („Kolik g sacharidů lze pokrýt jednou jednotkou inzulínu?“)
 > 
-> Example:
+> Příklad:
 > 
-> Bread unit fatcor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
+> Množství inzulinu na 1 výměnnou jednotku (VJ = 12 g sacharidů): 2,4 U/VJ -> Na 1 VJ potřebujete 2,4 jednotky inzulinu.
 > 
-> Corresponding IC: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
+> Odpovídající inzulino-sacharidový poměr: I:C - 12 g / 2,4 U = 5,0 g/U -> 5,0 g sacharidů pokryje 1 jednotka inzulinu.
 > 
-> BU factor 2,4 U / 12g ===> IC = 12g / 2,4 U = 5,0 g/U
+> VJ faktor 2,4 U / 12g ===> IC = 12g / 2,4 U = 5,0 g/U
 > 
-> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Převodní tabulky jsou k dispozici online, např. [zde](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Dopad
 
@@ -263,10 +263,10 @@ Výměnu zásobníku nelze provést přes AndroidAPS, výměna musí být proved
 
 * Dlouze stiskněte "Otevřená smyčka"/"Uzavřená smyčka" na hlavní obrazovce AndroidAPS a vyberte 'Pozastavit smyčku na 1 h'
 * Nyní odpojte pumpu a vyměňte zásobník podle instrukcí pumpy.
-* Also piming and filling tube and canula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26#pump) in the actions tab just to record the change.
-* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
+* I výměna a plnění hadičky a kanyly může být provedena přímo na pumpě. V tomto případě použijte [tlačítko PLNĚNÍ/DOPLŇOVÁNÍ](../Usage/CPbefore26#pump) na kartě akcí jen k tomu, abyste zaznamenali výměnu.
+* Až budete mít pumpu znovu připojenou, obnovte smyčku dlouhým stiskem na 'Pozastaveno (X min)'.
 
-Naproti tomu pro výměnu kanyly se nepoužívá funkce „naplnit infúzní set“ na pumpě, ale set a/nebo kanyla se plní bolusem, který se nezobrazuje v historii bolusů. To znamená, že se nepřeruší běžící dočasná bazální dávka. On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26#pump) to set the amount of insulin needed to fill the infusion set and start the priming. Pokud množství není dostatečné, opakujte plnění. Můžete si nastavit výchozí množství pro plnění v Nastavení > Jiné > Hodnoty plnění/doplňování. Podívejte se do příbalového letáku kanyl, kolik jednotek je nutné do kanyly naplnit podle délky jehly a hadičky.
+Naproti tomu pro výměnu kanyly se nepoužívá funkce „naplnit infúzní set“ na pumpě, ale set a/nebo kanyla se plní bolusem, který se nezobrazuje v historii bolusů. To znamená, že se nepřeruší běžící dočasná bazální dávka. Chcete-li zadat množství inzulínu k naplnění infúzního setu a spustili plnění, použijte na záložce Akce tlačítko [PLNĚNÍ/DOPLŇOVÁNÍ](../Usage/CPbefore26#pump). Pokud množství není dostatečné, opakujte plnění. Můžete si nastavit výchozí množství pro plnění v Nastavení > Jiné > Hodnoty plnění/doplňování. Podívejte se do příbalového letáku kanyl, kolik jednotek je nutné do kanyly naplnit podle délky jehly a hadičky.
 
 ## Pozadí
 
@@ -334,9 +334,9 @@ Mnoho uživatelů na noc přepíná telefon do režimu letadlo. Pokud chcete pro
 
 Nebudete moci přijímat telefonní hovory ani nebudete mít přístup k internetu. Ale smyčka poběží.
 
-Objevily se problémy s lokálním odesíláním dat (AAPS nepřijímal nové hodnoty BG z xDrip+) v případě, že byl zapnutý mód letadlo. Jděte do Nastavení > Komunikace mezi zařízeními > Identify reciever, a vložte hodnotu `info.nightscout.androidaps`.
+Objevily se problémy s lokálním odesíláním dat (AAPS nepřijímal nové hodnoty BG z xDrip+) v případě, že byl zapnutý mód letadlo. Jděte do Nastavení > Komunikace mezi zařízeními > Identify receiver, a vložte hodnotu `info.nightscout.androidaps`.
 
-![xDrip+ Základní nastavení komunikace mezi aplikacemi rozpoznání přijímače](../images/xDrip_InterApp_NS.png)
+![xDrip+ Základní nastavení komunikace mezi aplikacemi Identify receiver](../images/xDrip_InterApp_NS.png)
 
 ### Cestování
 

@@ -35,7 +35,9 @@ SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in th
 
 Phone
 --------------------------------------------------
-You need an Android smartphone with Google Android 6.0 or above. Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
+You need an Android smartphone with Google Android 6.0 or above. Next major version AndroidAPS 2.7 will only support Android 7 and above. So if you are thinking about a new phone, Android 8.1 is recommended at least but optimicaly Android 9 or 10.
+
+Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
 To record a phone or watch that isn't already listed in the spreadsheet then please fill in the `form <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
@@ -48,7 +50,7 @@ AndroidAPS **currently** works with
 - `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
-- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_  
+- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_ (except pumps with new firmware v3) 
 - `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (additionally needed: RileyLink/Gnarl hardware, Android Phone with bluetooth low energy / BLE-chipset)
 
 **Other pumps** that may have the potential to work with AndroidAPS are listed on the `Future (possible) Pumps <../Getting-Started/Future-possible-Pump-Drivers.html>`_ page.

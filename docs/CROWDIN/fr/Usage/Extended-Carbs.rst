@@ -39,18 +39,18 @@ Lorsque des eGlucides sont générés, une note Careportal est également créé
 
 Bolus étendu
 ==================================================
-Comme mentionné ci-dessus, les bolus étendus ou mixtes ne fonctionnent pas vraiment dans un environnement en boucle fermée. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-wont-work-in-a-closed-loop-environment>`_ for details
+Comme mentionné ci-dessus, les bolus étendus ou mixtes ne fonctionnent pas vraiment dans un environnement en boucle fermée. `Voir ci-dessous <../Usage/Extended-Carbs.html#pourquoi-les-bolus-etendus-ne-marchent-pas-avec-une-boucle-fermee>`_ pour plus de détails
 
-Extended bolus and switch to open loop
+Bolus étendus et passage à en boucle ouverte
 --------------------------------------------------
-Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to. 
+Certaines personnes ont demandé une option pour utiliser des bolus étendus dans AAPS, car ils voulaient traiter les aliments spéciaux comme ils avaient l'habitude de le faire. 
 
-That's why as of version 2.6 there is an option for an extended bolus. But closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus. Bolus units, remaining and total time will be shown on homescreen.
+C'est pourquoi à partir de la version 2.6, il existe une option pour les bolus étendus. Mais la boucle fermée sera automatiquement arrêtée et basculera en mode de boucle ouverte pendant la durée du bolus étendu. La quantité d'insuline, le temps restant et le temps total seront affichés sur la page d'accueil.
 
 .. image:: ../images/ExtendedBolus2_6.png
-  :alt: Extended bolus in AAPS 2.6
+  :alt: Bolus étendus dans AAPS 2.6
 
-Why extended boluses won't work in a closed loop environment
+Pourquoi les bolus étendus ne marchent pas avec une boucle fermée
 ----------------------------------------------------------------------------------------------------
 1. La boucle détermine que maintenant 1,55 U / h doit être délivré. Que ce soit administré sous forme de bolus étendu ou de DBT n'a pas d'importance pour l'algorithme. En fait, certaines des pompes utilisent le bolus étendu. Que devrait-il arriver alors ? La plupart des pilotes de pompe arrêtent alors le bolus prolongé -> Vous n’avez même pas eu besoin de le démarrer.
 2. Si vous aviez le bolus étendu en entrée, que devrait-il se passer dans le modèle?

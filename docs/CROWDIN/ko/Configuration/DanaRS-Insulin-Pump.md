@@ -2,6 +2,8 @@
 
 *These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
 
+**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
+
 * In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
 
 * In AndroidAPS go to Config Builder and select 'DanaRS'
@@ -10,13 +12,13 @@
 
 * Select DanaRS Pair New Pump, and click your DanaRS serial number.
   
-      ![AAPS pairing Dana RS](../images/AAPS_DanaRSPairing.png)
+      ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
       
 
 * Select Pump password and input your password. (Default password is 1234)   
   **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
   
-      ![Dana RS confirm pairing](../images/DanaRS_Pairing.png)
+      ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
       
 
 * Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
@@ -64,4 +66,4 @@ When switching to a new phone the following steps are neccessary:
 
 ## Timezone traveling with Dana RS pump
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+다른 시간대의 나라로 여행하는 경우에 대한 정보는 [ 펌프와 함께 하는 다른 시간대 여행 ](../Usage/Timezone-traveling#danarv2-danars) 섹션을 참조하십시오.

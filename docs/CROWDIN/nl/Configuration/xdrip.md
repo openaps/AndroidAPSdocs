@@ -76,7 +76,7 @@ Als jouw telefoon draait op Android 10 en je hebt problemen met jouw xDrip+ mast
 
 ### Pre-emptive restarts niet aanbevolen
 
-**Als jouw Dexcom zender een serienummer heeft dat begint met 8G, 8H of 8J dan zullen 'preemptive restarts' (automatische herstarts) niet werken en deze optie kan de zender volledig stukmaken!**
+**With Dexcom transmitters who's serial no. dat begint met 8G, 8H of 8J dan zullen 'preemptive restarts' (automatische herstarts) niet werken en deze optie kan de zender volledig stukmaken!**
 
 Het wordt sowieso niet aangeraden om de automatische herstart optie voor Dexcom G6 sensoren (`pre-emptive restarts`) te gebruiken, omdat dit kan leiden tot een "sprong” in de BG waarden op dag 9, wanneer hij de herstart uitvoert.
 
@@ -150,25 +150,27 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G, 
 
 ### Zender resetten
 
-* Een zender kun je resetten zodat de teller van het aantal dagen dat hij in gebruik is, weer op nul komt te staan. Dan gaat hij langer mee dan de maximaal 100 dagen die Dexcom garandeert (na de 100 dagen is de zenderbatterij meestal nog niet leeg, maar hij is geprogrammeerd om te stoppen). Tot nu toe kan een zender niet gereset worden waarvan het serienummer begint met 8G, 8H of 8J. Onderstaande instructies werken dus helaas niet voor deze zenders, wel voor oudere modellen.
+* So far life cannot be extended for transmitters who's serial no. begint met 8G, 8H of 8J. Onderstaande instructies werken dus helaas niet voor deze zenders, wel voor oudere modellen. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip#transmitter-battery-status)).
 * Het wordt aangeraden om de zender te resetten vóórdat hij 100 dagen in gebruik is. Dit om problemen met het starten van sensoren te voorkomen.
-* De actieve sensor sessie zal worden gestopt bij het resetten van de zender. Dat betekent dat je daarna weer de 2 uur opwarm-fase zult moeten uitzitten. Plan je zender reset dus gelijktijdig met een sensorwissel, of doe het op een moment dat het geen probleem is om 2 uur geen gegevens te hebben.
-* Stop de sensor handmatig via het hamburger menu.
-* Schakel de `engineering mode` in: 
-   * tik op het injectiespuit-icoontje aan de rechterkant van het xDrip+ startscherm
-   * houdt het microfoon-icoontje rechtsonder lang ingedrukt
-   * In het tekstveld typ je in "enable engineering mode" (zonder de aanhalingstekens) 
-   * klik op "OK"
-   * Als je Google Speak engine hebt ingeschakeld, dan kun je ook kort op het microfoon-icoontje tikken en daarna de opdracht inspreken: "enable engineering mode". Het liefst in accentloos Engels;) 
-* Ga naar de G5-debug-instellingen en zorg ervoor dat `Use the OB1 collector` is ingeschakeld.
-* Geef via het microfoon-icoontje weer de spraakopdracht (op dezelfde manier als hierboven): “hard reset transmitter”
-* De opdracht om de zender te resetten zal worden verstuurd bij de eerstvolgende keer dat jouw telefoon contact heeft met de zender
-* Kijk vervolgens naar de systeemstatus (Hamburger menu > system status) en zie wat er gebeurt. Het kan even duren voordat de zender heeft terug gecommuniceerd naar je telefoon dat hij succesvol is gereset.
-* Als je een bericht ziet "Phone Service State: Hard Reset maybe failed" op het tweede systeemstatusscherm, start dan gewoon de sensor en dit bericht zou moeten verdwijnen.
+* Use of transmitters serial no. starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if 'engineering mode' is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
+* Running sensor session will be stopped when extending transmitter life. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
+* Stop sensor manually via hamburger menu.
+* Switch to the `engineering mode`: 
+   * tap on the character on the right of the xDrip+ start screen that represents a syringe
+   * then tap on the microphone icon in the lower right corner
+   * In the text box that opens type "enable engineering mode" 
+   * click "Done"
+   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
+* Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
+* Use the voice command: “hard reset transmitter”
+* The voice command will be executed with the next data receipt of the transmitter
+* Look at the system status (Hamburger menu -> system status) and see what happens
+* After approx. 10 min. you can switch to 'Classic Status Page' (swipe right) and click 'Restart collector'. This will set sensor days to 0 without the need to start a new sensor.
+* Alternative: If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
    
-   ![xDrip+ Hard Reset mogelijk mislukt](../images/xDrip_HardResetMaybeFailed.png)
+   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
 
-* Transmitter days (ouderdom zender, in dagen) zal worden ingesteld op 0 nadat je succesvol de zender hebt gereset en weer een sensor hebt gestart.
+* Transmitter days will be set to 0 after successful extension and start of sensor.
 
 ### Zender vervangen
 
@@ -214,7 +216,7 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting wit
    
    ![Instellingen voor Firefly zenders](../images/xDrip_Dexcom_FireflySettings.png)
 
-* Controleer op de Classic Status Pagina-> G5/G6 status-> PhoneServiceState of de volgende informatie wordt weergegeven:
+* Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following information is displayed:
    
    * Zendernummer beginnend met 80 of 81: "Got data hh:mm" (bijvoorbeeld "Got data 19:04")
    * Zendernummer beginnnend met 8G, 8H of 8J: "Got glucose hh:mm" (bijvoorbeeld "Got glucose 19:04") of "Got no raw hh:mm" (bijvoorbeeld "Got no raw 19:04")

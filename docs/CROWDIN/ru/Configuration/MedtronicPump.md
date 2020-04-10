@@ -23,7 +23,7 @@
     - 523/723 (прошивка 2.4 или ниже)
     - 554/754 версия ЕС (прошивка 2.6A или ниже)
     - 554/754 Канадская версия (прошивка 2.7A или ниже)
-- Check for firmware is described in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) and [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
+- Проверьте прошивку в соответствии с инструкциями в [OpenAPS документы](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) и [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
 ## Настройка помпы
 

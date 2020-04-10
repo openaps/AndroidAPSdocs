@@ -2,6 +2,8 @@
 
 *Αυτές οι οδηγίες αφορούν τη διαμόρφωση της εφαρμογής και της αντλίας σας εάν έχετε μια DanaRS από το 2017 και μετά. Επισκεφθείτε την  DanaR Αντλία Ινσουλίνης </ 0> αν έχετε την DanaR αντλία.</em></p> 
 
+**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
+
 * Στην αντλία DanaRS χρησιμοποιείται η εφαρμογή "βασικός ρυθμός Α". Τα υπάρχοντα δεδομένα αντικαθίστανται.
 
 * Στο AndroidAPS μεταβείτε στη Διαμόρφωση και επιλέξτε 'DanaRS'
@@ -10,13 +12,13 @@
 
 * Επιλέξτε τη νέα αντλία DanaRS και κάντε κλικ στον σειριακό αριθμό της DanaRS.
   
-      ![AAPS pairing Dana RS](../images/AAPS_DanaRSPairing.png)
+      ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
       
 
 * Επιλέξτε τον κωδικό αντλίας και εισαγάγετε τον κωδικό πρόσβασης σας. (Ο προεπιλεγμένος κωδικός πρόσβασης είναι 1234)   
   ** Πρέπει να επιβεβαιώσετε την σύζευξη στην αντλία! ** Αυτός είναι ο τρόπος με τον οποίο συνηθίζετε να κάνετε και άλλες συνδέσεις bluetooth (δηλαδή smartphone και ηχείο αυτοκινήτου).
   
-      ![Dana RS confirm pairing](../images/DanaRS_Pairing.png)
+      ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
       
 
 * Επιλέξτε ταχύτητα Bolus ​​για να αλλάξετε την προεπιλεγμένη ταχύτητα bolus (12sec ανά 1u, 30sec ανά 1u ή 60sec ανά 1u).
@@ -31,9 +33,9 @@
 
 ### Βλάβη κατά την χορήγηση ινσουλίνης
 
-Σε περίπτωση απώλειας της σύνδεσης μεταξύ AAPS και Dana RS κατά τη διάρκεια της χορήγησης ινσουλίνης (δηλ. Απομακρύνεστε από το τηλέφωνο ενώ η Dana RS δίνει ινσουλίνη), θα δείτε το ακόλουθο μήνυμα και θα ακούσετε έναν ήχο συναγερμού.
+In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
-![Συναγερμός παράδοσης ινσουλίνης](../images/DanaRS_Error_bolus.png)
+![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
 * Στις περισσότερες περιπτώσεις πρόκειται για θέμα επικοινωνίας και παρέχεται η σωστή ποσότητα ινσουλίνης.
 * Ελέγξτε το ιστορικό της αντλίας (είτε στην αντλία είτε μέσω της καρτέλας Dana> ιστορικό αντλίας> boluses) αν έχει δοθεί σωστό bolus.
@@ -42,7 +44,7 @@
 
 ## Ειδική σημείωση για την αλλαγή τηλεφώνου
 
-Κατά τη μετάβαση σε νέο τηλέφωνο απαιτούνται τα ακόλουθα βήματα:
+When switching to a new phone the following steps are neccessary:
 
 * ** Εξαγωγή ρυθμίσεων ** στο παλιό σας τηλέφωνο
   
@@ -64,4 +66,4 @@
 
 ## Ταξιδεύοντας σε διαφορετικές ζώνες ώρας με την Dana Rs
 
-Για πληροφορίες σχετικά με τη μετακίνηση σε ζώνες ώρας, ανατρέξτε στην ενότητα [Αλλαγή ζώνης ώρας όταν ταξιδεύεις με αντλίες ](../Usage/Timezone-traveling#danarv2-danars).
+Για πληροφορίες σχετικά με τη μετακίνηση σε ζώνες ώρας, ανατρέξτε στην ενότητα [Ζώνη ώρας που ταξιδεύει με αντλίες](../Usage/Timezone-traveling#danarv2-danars).

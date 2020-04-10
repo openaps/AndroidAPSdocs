@@ -150,8 +150,9 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G, 8H oder 8J beginnt, verwen
 
 ### Transmitterlaufzeit verlängern
 
-* Bisher kann die Laufzeit von Transmittern, deren Seriennummer mit 8G, 8H oder 8J beginnt, nicht verlängert werden.
+* Bisher kann die Laufzeit von Transmittern, deren Seriennummer mit 8G, 8H oder 8J beginnt, nicht verlängert werden. Das Gleiche gilt für Transmitter deren Seriennummer mit 81 beginnt und die die Firmware 1.6.5.**27** (siehe xDrip+ System Status - G5/G6 Status wie im [Screenshot oben beschrieben](../Configuration/xdrip#transmitter-batteriestatus)) haben).
 * Um Schwierigkeiten beim Start von Sensoren zu vermeiden, wird dringend empfohlen, den Transmitter vor Ablauf des 100. Tags der ersten Nutzung zu verlängern.
+* Die Verwendung von Transmittern deren Seriennr. 81 beginnt und Firmware 1.6.5.**27** haben nach Tag 100 ist nur möglich, wenn der 'engineering mode' eingeschaltet ist und 'native mode' deaktiviert wird (Hamburger Menü -> Einstellungen -> G5 Debugeinstellungen -> Native Algorithm).
 * Eine laufende Sensorsitzung wird gestoppt, wenn Du die Transmitterlaufzeit verlängerst. Verlängere daher bei einem Sensorwechsel oder sei Dir bewusst, dass nach der Verlängerung eine neue zweistündige Warm-Up-Phase des Sensors beginnt.
 * Stoppe den Sensor manuell über das Hamburger-Menü.
 * Wechsle in den `engineering mode`: 
@@ -164,7 +165,8 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G, 8H oder 8J beginnt, verwen
 * Benutze den Sprachbefehl: “hard reset transmitter”
 * Beim nächsten Dateneingang vom Transmitter wird der Reset durchgeführt.
 * Beobachte im Systemstatus (Hamburgermenü links oben -> Systemstatus) was passiert.
-* Wenn auf dem zweiten Statusbildschirm der Hinweis "Phone Service State: Hard Reset maybe failed" angezeigt wird, kannst Du trotzdem einfach den Sensor starten. Danach sollte diese Meldung verschwinden.
+* Nach etwa 10 min. kannst Du auf die 'Classic Status Page' wechseln (nach rechts wischen) und 'Datensammler neu starten' klicken. Dadurch werden die Sensortage auf 0 gesetzt, ohne dass ein neuer Sensor gestartet werden muss.
+* Alternative: Wenn auf dem zweiten Statusbildschirm der Hinweis "Phone Service State: Hard Reset maybe failed" angezeigt wird, kannst Du trotzdem einfach den Sensor starten. Danach sollte diese Meldung verschwinden.
    
    ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
 
