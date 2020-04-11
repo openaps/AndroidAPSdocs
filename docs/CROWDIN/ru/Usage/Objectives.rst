@@ -3,30 +3,30 @@
 
 AndroidAPS ставит ряд Целей, которые необходимо выполнить, чтобы подготовиться к свойствам и параметрам настроек для безопасной работы алгоритма ИПЖ.  Цели позволяют удостовериться, что все сконфигурировано правильно, что мы понимаем, что, как и почему делает система и что мы можем доверять ей.
 
-Если вы обновляете телефон, то можете экспортировать настройки <../Usage/ExportImportSettings.html>`_ чтобы сохранить прогресс в прохождении целей. Ваш прогресс будет сохранен не только в прохождении целей, но и в настройках безопасности, таких как максимальный болюс и т. д.  Если настройки не переносить, то движение к целям придется начинать заново.  It is a good idea to `backup your settings <../Usage/ExportImportSettings.html>`_ frequently just in case.
+Если вы обновляете телефон, то можете экспортировать настройки <../Usage/ExportImportSettings.html>`_ чтобы сохранить прогресс в прохождении целей. Ваш прогресс будет сохранен не только в прохождении целей, но и в настройках безопасности, таких как максимальный болюс и т. д.  Если настройки не переносить, то движение к целям придется начинать заново.  Очень важно на всякий случай часто "создать резервную копию параметров <../Usage/ExportImportSettings.html>" _.
 
-If you want to go back in objectives see `explanation below <../Usage/Objectives.html#go-back-in-objectives>`_.
+Если вы хотите вернуться к целям, см. раздел объяснение ниже <../Usage/Objectives.html#go-back-in-objectives> ` _.
  
 Цель 1: Настройка визуализации и мониторинга, анализ базальной скорости и коэффициентов
 ====================================================================================================
-* Select the right blood glucose source for your setup.  See `BG Source <../Configuration/BG-Source.html>`_ for more information.
-* Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.  
-* If using DanaR pump then ensure you have followed `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ instructions to ensure the link between pump and AndroidAPS.
-* Follow instructions in `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ page to ensure Nightscout can receive and display this data.
-* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#ns-client>`_.
+* Выберите правильный источник мониторинга ГК.  Дополнительные сведения см. в разделе ` Источник ГК <../Configuration/BG-Source.html> ` _.
+* Выбираем нужную помпу в Конфигураторе (если к помпе нет драйвера, можно пользоваться виртуальной помпой) чтобы пома могла вести коммуникацию с AndroidAPS.  
+* При работе с помпой Dana R следуйте инструкциям `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ по привязке помпы к AndroidAPS.
+* Следуйте инструкциям по настройке `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_чтобы Nightscout мог получать и отображать данные ГК.
+* Обратите внимание, что URL-адрес в NSClient должны быть **БЕЗ /api/v1/** в конце - см. параметры NSClient в настройках <../Configuration/Preferences.html#ns-client>`_.
 
-*You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
+*Возможно, придется подождать следующего значения глюкозы крови, чтобы AndroidAPS принял его.*
 
-Objective 2: Learn how to control AndroidAPS
+Цель 2: научиться контролировать AndroidAPS
 ==================================================
-* Perform several actions in AndroidAPS as described in this objective.
-* Click on the orange text "Not completed yet" to access the to-dos.
-* Links will be provided to guide you in case you are not familiar with a specific action yet.
+* Выполните несколько действий в AndroidAPS, как описано в этой цели.
+* Нажмите на оранжевый текст «Не завершено» для доступа к предстоящим действиям.
+* Если вы еще не знакомы с конкретным действием, вам будут предоставлены ссылки на инструкции.
 
-   .. image:: ../images/Objective2_V2_5.png
-     :alt: Screenshot objective 2
+   .. изображение:: ../images/Objective2_V2_5.png
+     :alt: снимок экрана Цель 2
 
-Objective 3: Proof your knowledge
+Задача 3: доказательство ваших знаний
 ==================================================
 * Pass a multiple-choice exam testing your AndroidAPS knowledge.
 * Click on the orange text "Not completed yet" to access the page with the question and answering options.
