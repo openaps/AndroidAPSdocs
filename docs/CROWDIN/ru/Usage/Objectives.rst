@@ -113,26 +113,26 @@ AndroidAPS ставит ряд Целей, которые необходимо �
 Цель 8: При необходимости скорректируйте базал и коэффициенты и затем активируйте авто-чувствительность autosens
 ====================================================================================================
 * Вы можете единовременно воспользоваться автонастройкой <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>_ чтобы проверить, остаются ли точными настройки базала или провести традиционный базальный тест.
-* Enable `autosens <../Usage/Open-APS-features.html>`_ over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
+* Активируйте автоподстройку чувствительности <../Usage/Open-APS-features.html>`_на 7 дней и понаблюдайте за тем, как опускается или поднимается белая линия чувствительности к инсулину на графике домашнего экрана в результате нагрузок, гормонов и т. п. не забывая о вкладке отчетов OpenAPS, где AndroidAPS соответствующим образом корректирует базу и/или цели.
 
-*Don’t forget to record your looping in `this form <http://bit.ly/nowlooping>`_ logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
+*Не забудьте зарегистрироваться, заполнив <http://bit.ly/nowlooping> эту анкету и указав AndroidAPS в качестве используемого самодеятельного ПО, если это еще не сделано.*
 
 
-Objective 9: Enabling additional oref0 features for daytime use, such as advanced meal assist (AMA)
+Цель 9: Активация таких дополнительных функций алгоритма oref0 для работы в дневное время, как подробный калькулятор болюса AMA
 ====================================================================================================
-* Now you should feel confident with how AndroidAPS works and what settings reflect your diabetes best
-* Then over a period of 28 days you can try additional features that automate even more of the work for you such as the `advanced meal assist <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_
+* Теперь вы чувствуете уверенность в работе AndroidAPS и в том, какие настройки лучше соответствует вашему диабету
+* Затем, в течение следующих 28 дней можете попробовать дополнительные функции, которые помогут еще больше автоматизировать работу системы, такие как подробный калькулятор болюса AMA <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_
 
 
-Objective 10: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+Цель 10: Активация таких дополнительных функций алгоритма oref1 для работы в дневное время, как супер микроболюс SMB
 ====================================================================================================
-* You must read the `SMB chapter in this wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ and `chapter oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ to understand how SMB works, especially what's the idea behind zero-temping.
-* Then you ought to `rise maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ to get SMBs working fine. maxIOB теперь включает весь активный инсулин IOB, а не только добавленный базал. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see `objective 7 <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_ for an illustration)
-* min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually.
+* Следует прочитать раздел SMB в этой документации <../Usage/Open-APS-features.html#super-micro-bolus-smb>` и главу oref1 в документации OpenAPS <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html> чтобы понять, как работает SMB и особенно что включает в себя понятие нулевой временной базы.
+* Затем следует поднять максимальное значение maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ чтобы заставить супермикроболюсы SMB работать должным образом. maxIOB теперь включает весь активный инсулин IOB, а не только добавленный базал. То есть, если подан болюс 8 ед. на еду, а maxIOB равен 7 ед., то микроболюс SMB не будет подан до тех пор, пока активный инсулин IOB не упадет ниже 7 ед. Хорошим стартом является maxIOB = средний болюс на еду + 3 максимальных ежедневных базала (макс. ежедневный базал = максимальное почасовое значение в любое время сегмента дня - см.`objective 7 <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_ в качестве примера)
+* минимальное воздействие углеводов min_5m_carbimpact по умолчанию изменилось с 3 до 8, при переходе с AMA на SMB. Если вы переходите с AMA к SMB, то вам нужно изменить его вручную.
 
-Go back in objectives
+Возможность возврата к предыдущим целям
 ====================================================================================================
-If you want to go back in objectives for whatever reason you can do so by clicking at "clear finished".
+Если вы хотите вернуться к целям по какой-либо причине, вы можете сделать это, нажав на "очистить завершенное".
 
-   .. image:: ../images/Objective_ClearFinished.png
-     :alt: Go back in objectives
+   .. изображение: ../images/Objective_ClearFinished.png
+     :alt: Вернуться в цели
