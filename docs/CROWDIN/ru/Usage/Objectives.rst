@@ -3,7 +3,7 @@
 
 AndroidAPS ставит ряд Целей, которые необходимо выполнить, чтобы подготовиться к свойствам и параметрам настроек для безопасной работы алгоритма ИПЖ.  Цели позволяют удостовериться, что все сконфигурировано правильно, что мы понимаем, что, как и почему делает система и что мы можем доверять ей.
 
-If you are **upgrading phones** then you can `export your settings <../Usage/ExportImportSettings.html>`_ to keep your progress through the objectives. Ваш прогресс будет сохранен не только в прохождении целей, но и в настройках безопасности, таких как максимальный болюс и т. д.  Если настройки не переносить, то движение к целям придется начинать заново.  It is a good idea to `backup your settings <../Usage/ExportImportSettings.html>`_ frequently just in case.
+Если вы обновляете телефон, то можете экспортировать настройки <../Usage/ExportImportSettings.html>`_ чтобы сохранить прогресс в прохождении целей. Ваш прогресс будет сохранен не только в прохождении целей, но и в настройках безопасности, таких как максимальный болюс и т. д.  Если настройки не переносить, то движение к целям придется начинать заново.  It is a good idea to `backup your settings <../Usage/ExportImportSettings.html>`_ frequently just in case.
 
 If you want to go back in objectives see `explanation below <../Usage/Objectives.html#go-back-in-objectives>`_.
  
