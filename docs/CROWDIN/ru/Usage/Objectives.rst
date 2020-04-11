@@ -28,45 +28,45 @@ AndroidAPS ставит ряд Целей, которые необходимо �
 
 Задача 3: доказательство ваших знаний
 ==================================================
-* Pass a multiple-choice exam testing your AndroidAPS knowledge.
-* Click on the orange text "Not completed yet" to access the page with the question and answering options.
+* Пройдите экзамен с выбором варианта ответа для проверки на знание AndroidAPS.
+* Нажмите на оранжевый текст "Не завершено" чтобы получить доступ к странице с вопросом и вариантами ответа.
 
-   .. image:: ../images/Objective3_V2_5.png
-     :alt: Screenshot objective 3
+   .. изображение:: ../images/Objective2_V2_5.png
+     :alt: снимок экрана Цель 3
 
-* Links will be provided to guide you in case you are unsure about the correct answers yet.
+* Если вы не уверены в правильности ответов, предоставлены ссылки на источники информации.
 
-Skip objectives
+Пропуск целей
 --------------------------------------------------
-* Only if you have been closed looping with another system (i.e. OpenAPS, iOS Loop) before and can proof this (i.e. at least 3 months of looping data in Nightscout), you can send an email to `objectives@androidaps.org <mailto:objectives@androidaps.org>`_ with your NS address and request code to bypass the rest of objectives.
-* Please note that no support is provided through this mail account. Refer to the `support resources <../Where-To-Go-For-Help/Connect-with-other-users.html>`_ mentioned in this documentation.
+* Только в том случае, если вы имеете опыт работыс другой системой ИПЖ (например, OpenAPS, iOS Loop) и можете подтвердить это (напр. имея по крайней мере данные за 3 месяца работы в Nightscout), вы можете отправить сообщение по адресу objectives@androidaps.org <mailto:objectives@androidaps.org>` _ с вашим адресом NS и запросом кода, чтобы обойти остальные цели.
+* Пожалуйста, обратите внимание, что этот почтовый аккаунт не предоставляет поддержки. Обратитесь к ресурсам поддержки <../Where-To-Go-For-Help/Connect-with-other-users.html>`_, упомянутые в данной документации.
 
-Objective 4: Starting on an open loop
+Цель 4: Начало на незамкнутом цикле
 ==================================================
-* Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-* Work through the `Preferences <../Configuration/Preferences.html>`_ to set up for you.
-* Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Убедитесь, что эти данные представлены в AndroidAPS и Nightscout.
-* Enable `temp targets <../Usage/temptarget.html>`_ if necessary. Используйте врем. цели для купирования гипогликемии чтобы предотвратить слишком сильные коррекции после гипо. 
+* Выбрать Незамкнутый цикл либо в настройках либо нажав кнопку цикла в левом верхнем углу главного экрана.
+* Для настройки используйте `Preferences <../Configuration/Preferences.html>`.
+* Вручную активируйте по крайней мере 20 предложений временного базала за период в 7 дней, отправьте их на помпу и подтвердите в AndroidAPS что вы их принимаете.  Убедитесь, что эти данные представлены в AndroidAPS и Nightscout.
+* Включите временные цели `temp targets <../Usage/temptarget.html>`_, если необходимо. Используйте врем. цели для купирования гипогликемии чтобы предотвратить слишком сильные коррекции после гипо. 
 
-Reduce number of notifications
+Сократите количество уведомлений
 --------------------------------------------------
-* To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l. * You might even want to wider upper limit (or disable Open Loop) at night. 
-* In Preferences you can set a minimum percentage for suggestion of basal rate change.
+* Для сокращения количества решений, которые должны быть приняты в незамкнутом цикле Open Loop, установите широкий целевой диапазон, например, 90-150 мг/дл или 5,0-8,5 ммоль/л. * Вы можете даже захотеть больший верхний предел (или отключить Open Loop) ночью. 
+* В настройках можно установить минимальный процент для предложений по изменению базальной скорости.
 
-   .. image:: ../images/OpenLoop_MinimalRequestChange2.png
-     :alt: Open Loop minimal request change
+   .. изображение:: ../images/OpenLoop_MinimalRequestChange2.png
+     :alt: изменение минимального запроса на незамкнутом цикле
      
-* Also, you do not need to act every 5 minutes on all suggestions...
+* Также не нужно выполнять все предложения каждые 5 минут...
 
-Objective 5: Understanding your open loop, including its temp basal recommendations
+Глубже понимаем незамкнутую систему Open Loop, включая ее рекомендации по временным базалам
 ====================================================================================================
-* Start to understand the thinking behind the temp basal recommendations by looking at the `determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ and both the `forecast line in AndroidAPS homescreen <../Getting-Started/Screenshots.html#section-e>`_/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+* Начинаем вникать в логику рекомендаций по временным базалам изучив <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html> и логику определения базала по линии прогнозируемой гликемии на главном экране AndroidAPS / Nightscout <../Getting-Started/Screenshots.html#section-e>`_ и итогам вычислений на вкладке OpenAPS.
  
-До тех пор, пока мы не убедимся в правильности вычислений и настроек, целевые значения гликемии следует несколько завысить.  System allows
+До тех пор, пока мы не убедимся в правильности вычислений и настроек, целевые значения гликемии следует несколько завышать.  Система позволяет
 
-* a low target to be a minimum of 4 mmol (72 mg/dl) or maximum of 10 mmol (180 mg/dl) 
-* a high target to be a minimum of 5 mmol (90 mg/dl) and maximum of 15 mmol (225 mg/dl)
-* a temporary target as a single value can be anywhere in the range of 4 mmol to 15 mmol (72 mg/dl to 225 mg/dl)
+* установить минимум нижнего целевого значения ГК на 4 ммоль (72 мг/дл) и максимум на 10 ммоль (180 мг/дл) 
+* установить минимум верхнего целевого значения на 5 ммоль (90 мг/дл) и максимум на 15 ммоль (225 мг/дл)
+* временная цель как отдельная величина может иметь любое значение от 4 до 15ммоль (72 мг/дл до 225 мг/дл)
 
 Целевое значение - это значение, на котором основываются расчеты, а не то же самое, что долгосрочные целевые значения вашей ГК.  If your target is very wide (say, 3 or more mmol [50 mg/dl or more] wide), you will often find little AAPS action. This is because blood glucose is eventually predicted to be somewhere in that wide range and therefore not many fluctuating temporary basal rates are suggested. 
 
