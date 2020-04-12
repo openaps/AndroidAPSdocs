@@ -1,52 +1,52 @@
-Welcome to the AndroidAPS documentation
+Добро пожаловать в документацию по AndroidAPS
 ==================================================
 
-AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. Main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter. 
+AndroidAPS-приложение с открытым исходным кодом для людей с инсулинозависимым диабетом, которое функционирует как система искусственной поджелудочной железы (APS) на смартфонах Google Android. Основными компонентами являются программные алгоритмы openAPS, которые выполняют функцию поджелудочной железы: держать уровень сахара в крови в здоровых пределах с помощью автоматизированного дозирования инсулина (AID). Кроме того, необходима одобренная FDA/CE инсулиновая помпа и непрерывный мониторинг глюкозы. 
 
-The app does NOT use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into his treatments profile, but they are verified by the system for safety reasons. 
+Приложение НЕ использует самообучающий искусственный интеллект. Вместо этого расчеты AndroidAPS основаны на индивидуальном алгоритме дозирования и поглощения углеводов, который пользователь самостоятельно вводит в профиль лечения, но они проверяются системой с точки зрения безопасности. 
 
-The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
+Приложение нельзя найти в Google Play - вы должны самостоятельно собрать его из исходного кода по юридическим причинам.
 
-Main components are:
+Основными компонентами являются:
 
-.. image:: images/modules-female.png
-  :alt: Components
+.. изображение:../images/modules-female.png
+  :alt: Компоненты
 
-For more details, please read on here.
+Более подробную информацию смотрите здесь.
 
-Getting started
+Начало работы
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Safety first <./Getting-Started/Safety-first.rst>
-   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Главное- безопасность <./Getting-Started/Safety-first.rst>
+   Что такое система замкнутого цикла <./Getting-Started/ClosedLoop.rst>
+   Что такое система замкнутого цикла с AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Обновления и изменения документации <./Getting-Started/WikiUpdate.rst>
    
    
-What do I need 
+Что необходимо 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Module <./Module/module.rst>
-   Sample Setup <./Getting-Started/Sample-Setup.md>
+   Модуль <./Module/module.rst>
+   Пример системы <../Getting-Started/Sample-Setup.html>
 
    
-How to Install AndroidAPS
+Как установить AndroidAPS
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   Building the APK <./Installing-AndroidAPS/Building-APK.md>
-   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
-   Install git <./Installing-AndroidAPS/git-install.rst>
-   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
-   Release notes <./Installing-AndroidAPS/Releasenotes.rst>
+   Построение APK <./Instaling-AndroidAPS/Building-APK.md>
+   Обновление до новой версии или ветви <./Instaling-AndroidAPS/Update-to-new-version.md>
+   Установка git <./Instaling-AndroidAPS/git-install.rst>
+   Устранение неполадок Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Примечания к выпуску <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch <./Installing-AndroidAPS/Dev_branch.md>
    
    
@@ -150,7 +150,7 @@ Where to go for help
 
    Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Обновления и изменения документации <./Getting-Started/WikiUpdate.rst>
 
 For Clinicians
 --------------------------------------------------
