@@ -47,21 +47,21 @@ AndroidAPS-приложение с открытым исходным кодом 
    Установка git <./Instaling-AndroidAPS/git-install.rst>
    Устранение неполадок Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Примечания к выпуску <./Installing-AndroidAPS/Releasenotes.rst>
-   Dev branch <./Installing-AndroidAPS/Dev_branch.md>
+   Ветка разработчика <./Instaling-AndroidAPS/Dev_branch.md>
    
    
-Component Setup
+Настройка компонентов
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
    CGM/FGM <./Configuration/BG-Source.rst>
-   xDrip Settings <./Configuration/xdrip.md>
-   Pumps <./Hardware/pumps.rst>
-   Phones <./Hardware/Phoneconfig.rst>
-   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
-   Smartwatch  <./Hardware/Smartwatch.rst>
+   параметры xDrip <./Configuration/xdrip.md>
+   Помпы <./Hardware/pumps.rst>
+   Телефоны <./Hardware/Phoneconfig.rst>
+   Настройка Nightscout <./Instaling-AndroidAPS/Nightscout.md>
+   Смарт-часы <./Hardware/Smartwatch.rst>
    
 
 Конфигурация 
@@ -70,49 +70,49 @@ Component Setup
    :maxdepth: 1
    :glob:
    
-   Config builder <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences.md>
+   Конфигуратор <../Configuration/Config-Builder.html>`_ настройки>
+   Параметры <./Configuration/Preferences.md>
    
    
-AndroidAPS Usage
+Использование androidAPS
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
     
-   AndroidAPS screens <./Getting-Started/Screenshots.md>
-   Objectives <./Usage/Objectives.rst>
-   OpenAPS features <./Usage/Open-APS-features.md>   
-   COB calculation <./Usage/COB-calculation.rst>
-   Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
-   Profile switch <./Usage/Profiles.md>
-   Temp-targets <./Usage/temptarget.md>   
-   Extended carbs <./Usage/Extended-Carbs.rst>
-   Automation <./Usage/Automation.rst>
-   Careportal (discontinued) <./Usage/CPbefore26.rst>
-   Automation with 3rd party apps <./Usage/automationwithapp.md>
+   Экраны androidAPS <./Getting-Started/Screenshots.md>
+   Цели <./Usage/Objectives.rst>
+   Функции OpenAPS <./Usage/Open-APS-features.md>   
+   Вычисление COB <./Usage/COB-calculation.rst>
+   Обнаружение чувствительности <./Configuration/Sensitivity-detection-COB.md>
+   Переключение профиля <./Usage/Profiles.md>
+   Временные цели <./Usage/temptarget.md>   
+   Пролонгированные углеводы <./Usage/Extended-Carbs.rst>
+   Автоматизация <./Usage/Automation.rst>
+   Careportal (более не поддерживается) <./Usage/CPbefore26.rst>
+   Автоматизация с приложениями сторонних организаций <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
  
-General Hints 
+Общие советы 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Crossing timezones with pumps <./Usage/Timezone-traveling.md>
-   Accessing logfiles <./Usage/Accessing-logfiles.md>
-   Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
-   Export/Import Settings <./Usage/ExportImportSettings.rst>
+   Пересечение часовых поясов с помпами <./Usage/Timezon-traveling.md>
+   Доступ к файлам журнала <./Usage/Accessing-logfiles.md>
+   Accu-Chek Combo советы для простого использования <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
+   Параметры экспорта/импорта <./Usage/ExportImportSettings.rst>
    
 
-AndroidAPS for children
+AndroidAPS для детей
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Remote monitoring <./Children/Children.rst>
-   SMS commands <./Children/SMS-Commands.rst>
+   Удаленный мониторинг <../Children/Children.html>
+   Команды SMS <./Children/SMS-Commands.rst>
    
 
 Устранение неполадок
@@ -130,7 +130,7 @@ AndroidAPS for children
    :maxdepth: 1
    :glob:
   
-   FAQ <./Getting-Started/FAQ.md>
+   Часто задаваемые вопросы <./Getting-started/FAQ.md>
 
    
 Глоссарий
@@ -139,37 +139,37 @@ AndroidAPS for children
    :maxdepth: 1
    :glob:
   
-   Glossary <./Getting-Started/Glossary.md>
+   Глоссарий <./Getting-Started/Glossary.md>
   
 
-Where to go for help 
+Куда обращаться за помощью 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
-   Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   Полезные ресурсы для чтения перед запуском <./Where-To-Go-For-Help/Background-reading.md>
+   Куда обратиться за справкой <./Where-To-Go-For-Help/Connect-wit-other-users.md>
    Обновления и изменения документации <./Getting-Started/WikiUpdate.rst>
 
-For Clinicians
+Для клиницистов
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
             
-   For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
+   Для клиницистов <./Resources/clinician-guide-to-AndroidAPS>
 
 
-How to help
+Как помочь
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   How to help <./Getting-Started/How-can-I-help.md>
-   How to translate the app and docs <./translations.md>
-   How to edit the docs <./make-a-PR>
+   Как помочь <./Getting-Started/How-can-I-help.md>
+   Как перевести приложение и документы <./translations.md>
+   Как редактировать документы <./сделать-это-пиар>
 
 
 .. примечание:: 
@@ -181,4 +181,4 @@ How to help
 
 	* Все наименования продуктов и компаний, товарные знаки, услуги по обслуживанию, зарегистрированные товарные знаки и зарегистрированные службы являются собственностью соответствующих владельцев. Их использование - в информационных целях и не подразумевает какой-либо принадлежности к ним или их одобрения.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ or `Medtronic <http://www.medtronic.com/>`_
+	Обратите внимание, что этот проект не имеет связи с и одобрения от: ` SOOIL <http://www.sooil.com/eng/>` _, ` Dexcom <http://www.dexcom.com/>` _, ` Accu-Chek, Roche Diabet Care <http://www.accu-chek.com/>` _ или ` Medtronic <http://www.medtronic.com/>` _
