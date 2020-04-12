@@ -121,7 +121,7 @@ AndroidAPS для детей
    :maxdepth: 1
    :glob:
   
-   Troubleshooting <./Usage/troubleshooting.rst>
+   Устранение неполадок <./Usage/troubleshooting.rst>
    
 
 Часто задаваемые вопросы 
