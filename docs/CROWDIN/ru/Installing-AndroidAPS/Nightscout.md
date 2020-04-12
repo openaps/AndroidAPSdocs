@@ -17,7 +17,7 @@
 * Прокрутите страницу вниз и выберите "Дополнительные параметры".
 * Активируйте "только загрузку NS"
 
-![Nightscout upload only](../images/NSsafety.png)
+![Только выгрузка в Nightscout](../images/NSsafety.png)
 
 ### Дополнительные параметры защиты
 
@@ -38,33 +38,33 @@
   * ` ENABLE ` = ` careportal boluscalc food bwp cage sage iob cob basal ar2 rawbg pushover bgi pump openaps `
   * ` DEVICESTATUS_ADVANCED ` = ` true `
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
-    * `PUMP_WARN_BATT_P` = `51`
-    * `PUMP_URGENT_BATT_P` = `26` 
-  * Optional: The following 'timers' can be set for the coloring in the AAPS careportal: 
-    * `BAGE_WARN` = `480` (Warning after x hours since last Battery Changed Event in Careportal)
-  * `BAGE_URGENT` = `504` (Urgent warning after x hours since last Battery Changed Event in Careportal)
-  * `CAGE_WARN` = `40` (Warning after x hours since last Cannula Changed Event in Careportal)
-  * `CAGE_URGENT` = `48` (Urgent warning after x hours since last Cannula Changed Event in Careportal)
-  * `IAGE_WARN` = `144` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
-  * `IAGE_URGENT` = `192` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
+  * Для [ мониторинга помпы ](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring) можно задать различные оповещения, в частности, рекомендуется % заряда батареи: 
+    * ` PUMP_WARN_BATT_P ` = ` 51 `
+    * ` PUMP_URGENT_BATT_P ` = ` 26 ` 
+  * Необязательно: для цветовой наглядности на портале терапии AAPS можно задать следующие "таймеры": 
+    * ` BAGE_WARN ` = ` 480 ` (Предупреждение после x часов с момента последнего изменения статуса батареи в Careportal)
+  * ` BAGE_WARN ` = ` 504 ` (Оповещение после x часов с момента последнего изменения статуса батареи в Careportal)
+  * ` CAGE_WARN ` = ` 40 ` (Предупреждение после x часов с момента последнего изменения статуса Cannula в портале терапии)
+  * ` CAGE_WARN ` = ` 48 ` (Оповещение после x часов с момента последнего изменения статуса Cannula в портале терапии)
+  * ` IAGE_WARN ` = ` 144 ` (Предупреждение после x часов с момента последнего изменения статуса замены картриджа инсулина в портале терапии)
+  * ` CAGE_WARN ` = ` 192 ` (Оповещение после x часов с момента последнего изменения статуса замены картриджа инсулина в портале терапии)
   * ` SAGE_WARN ` = ` 160 ` (Предупреждение после x часов с момента последнего изменения статуса установки сенсора в Careportal)
-  * `SAGE_URGENT` = `168` (Urgent Warning after x hours since the last CGM Sensor Insert Event in Careportal)
+  * ` SAGE_WARN ` = ` 168 ` (Оповещение после x часов с момента последнего изменения статуса установки сенсора в Careportal)
 
 ![Azure](../../images/nightscout1.png)
 
-* Click "Save" at the top of the panel.
+* Нажмите кнопку "Сохранить" в верхней части панели.
 
-## Semi-automated Nightscout setup
+## Полуавтоматизированная установка Nightscout
 
-This service is offered by fellow looper Martin Schiftan free of charge at the moment. If you like the service you can consider sending him a small donation (link in the navigation on the left side).
+На данный момент эту услугу бесплатно предлагает Martin Schiftan. Если вам понравилась услуга, вы можете отправить ему небольшое пожертвование (ссылка в навигации слева).
 
-**Benefits**
+**Преимущества**
 
-* You can install Nightscout with a few clicks and use it directly. 
-* Reduction of manual work as Martin tries to automate the administration.
-* All settings can be made via a user-friendly web interface. 
-* The service includes an automated basal rate check using Autotune. 
-* The server is located in Germany.
+* Можно установить Nightscout в несколько щелчков и сразу же начать им пользоваться. 
+* Сокращение ручной работы поскольку Martin пытается автоматизировать администрирование.
+* Все настройки можно задать с помощью удобного для пользователя веб-интерфейса. 
+* Услуга включает автоматическую проверку базальной скорости с помощью автонастройки. 
+* Сервер расположен в Германии.
 
 <http://ns.10be.de/en/index.html>
