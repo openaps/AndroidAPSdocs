@@ -1,8 +1,8 @@
-# For Clinicians – A General Introduction and Guide to AndroidAPS
+# Для клиницистов – Общие сведения и руководство по AndroidAPS
 
-This page is intended for clinicians who have expressed interest in open source artificial pancreas technology such as AndroidAPS, or for patients who want to share such information with their clinicians.
+Эта страница предназначена для клиницистов, которые проявили интерес к технологии искусственной поджелудочной железы, такой как AndroidAPS, или для пациентов, которые хотят делиться такой информацией со своими лечащими врачами.
 
-This guide has some high-level information about DIY closed looping and specifically how AndroidAPS works. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](http://androidaps.readthedocs.io/en/latest/index.html). If you have questions, please ask your patient for more details, or always feel free to reach out to the community with question. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@AndroidAPS.org). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
+В этом руководстве содержится достоверная информация о самодеятельных алгоритмах замкнутого цикла и, в частности, о том, как работает AndroidAPS. Более подробную информацию по всем этим темам можно найти во [ всеобъемлющей интернет-документации по AndroidAPS ](http://androidaps.readthedocs.io/en/latest/index.html). Если у вас есть вопросы, узнайте подробности у вашего пациента или обратитесь с вопросом к сообществу. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@AndroidAPS.org). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
 
 ### The steps for building a DIY Closed Loop:
 
