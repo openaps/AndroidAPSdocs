@@ -10,33 +10,33 @@
 
 ### Настройки системы AndroidAPS
 
-There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs. If you are using [NS profile](../Configuration/Config-Builder#ns-profile) the profiles will be synced between AAPS and Nightscout despite the setting "upload only".
+В параметрах AAPS есть функция только загрузки NS (без синхронизации). При этом AAPS не отбирает изменения, внесенные в Nightscout, такие как временные цели или будущие углеводы. Если вы используете [ профиль NS ](../Configuration/Config-Builder#ns-profile), то профили будут синхронизировано между AAPS и Nightscout, несмотря на настройку "только загрузка".
 
-* Tap 3-dot menu on top right corner on your AAPS homescreen.
-* Select "Preferences".
-* Scroll down and tap "Advanced settings".
-* Activate "NS upload only
+* Коснитесь 3-точечного меню в правом верхнем углу на домашней странице AAPS.
+* Выберите "Параметры".
+* Прокрутите страницу вниз и выберите "Дополнительные параметры".
+* Активируйте "только загрузку NS"
 
 ![Nightscout upload only](../images/NSsafety.png)
 
-### Further security settings
+### Дополнительные параметры защиты
 
-Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.rst).
+Регулярно обновляйте программное обеспечение телефона, как описано в разделе [ безопасность прежде всего](../Getting-Started/Safety-first.rst).
 
-## Manual Nightscout setup
+## Установка Nightscout вручную
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
+Предполагается, что у вас уже есть сайт Nightscout, если не посетить страницу [ Nightscout ](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) для получения полных инструкций по настройке, приведенные ниже инструкции являются параметрами, которые вам также потребуется добавить на сайт Nightscout. Сайт Nightscut должен быть по крайней мере версии 10 (отображается как 0.10...), поэтому убедитесь, что вы запускаете [ последнюю версию ](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie); в противном случае появится сообщение об ошибке в приложении AAPS. Некоторые люди находят, что алгоритмы ИПЖ требуют больше трафика, чем квоты Azure, поэтому Heroku предпочтительнее.
 
-* Go to https://herokuapp.com/
+* Перейдите на https://herokuapp.com/
 
-* Click your App Service name.
+* Нажмите на имя службы приложения.
 
-* Click Application settings (azure) or Settings > "Reveal Config Variables (heroku)
+* Щелкните по параметрам приложения (azure) или Settings > " Reveal Config Variables (heroku)
 
-* Add or edit the variables as follows:
+* Добавьте или измените переменные следующим образом:
   
-  * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
-  * `DEVICESTATUS_ADVANCED` = `true`
+  * ` ENABLE ` = ` careportal boluscalc food bwp cage sage iob cob basal ar2 rawbg pushover bgi pump openaps `
+  * ` DEVICESTATUS_ADVANCED ` = ` true `
   * `PUMP_FIELDS` = `reservoir battery clock`
   * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
     * `PUMP_WARN_BATT_P` = `51`
@@ -48,7 +48,7 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
   * `CAGE_URGENT` = `48` (Urgent warning after x hours since last Cannula Changed Event in Careportal)
   * `IAGE_WARN` = `144` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
   * `IAGE_URGENT` = `192` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
-  * `SAGE_WARN` = `160` (Warning after x hours since the last CGM Sensor Insert Event in Careportal)
+  * ` SAGE_WARN ` = ` 160 ` (Предупреждение после x часов с момента последнего изменения статуса установки сенсора в Careportal)
   * `SAGE_URGENT` = `168` (Urgent Warning after x hours since the last CGM Sensor Insert Event in Careportal)
 
 ![Azure](../../images/nightscout1.png)
