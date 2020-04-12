@@ -1,12 +1,12 @@
 # Nightscout
 
-## Security considerations
+## Вопросы безопасности
 
-Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
+Помимо отчетов Nightscout можно также использовать для управления AAPS. Например, вы можете задать временные цели или добавить будущие углеводы. Эта информация будет подхвачена в AAPS, которая будет выполнять соответствующие действия. Поэтому стоит задуматься над тем, как обеспечить безопасность веб-сайта Nightcut.
 
 ### Настройки Nightscout
 
-You can deny public access to your Nightscout site by using [authentication roles](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
+Можно запретить общий доступ к сайту Nightscout с помощью [ идентификационных ролей ](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
 
 ### Настройки системы AndroidAPS
 
