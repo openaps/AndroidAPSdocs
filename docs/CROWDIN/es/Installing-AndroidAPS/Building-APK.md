@@ -29,7 +29,7 @@ Si la compilación falla con un error en la configuración personalizada, puede 
 
 En general, los pasos necesarios para crear el archivo APK son:
 
-1. [Install git](../Installing-AndroidAPS/git-install.rst)
+1. [Instala Git](../Installing-AndroidAPS/git-install.rst)
 2. [Instalar Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
 3. [Set git path in Android Studio preferences](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
 4. [Download AndroidAPS code](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
