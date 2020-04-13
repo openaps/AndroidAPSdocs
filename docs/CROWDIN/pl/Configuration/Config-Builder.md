@@ -114,7 +114,7 @@ With the "Free Peak 0ref" profile you can individually enter the peak time. The 
 
 This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
-## BG Source
+## Źródło BG
 
 Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
 
