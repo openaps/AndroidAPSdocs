@@ -2,19 +2,19 @@
 
 Эта страница предназначена для клиницистов, которые проявили интерес к технологии искусственной поджелудочной железы, такой как AndroidAPS, или для пациентов, которые хотят делиться такой информацией со своими лечащими врачами.
 
-В этом руководстве содержится достоверная информация о самодеятельных алгоритмах замкнутого цикла и, в частности, о том, как работает AndroidAPS. Более подробную информацию по всем этим темам можно найти во [ всеобъемлющей интернет-документации по AndroidAPS ](http://androidaps.readthedocs.io/en/latest/index.html). Если у вас есть вопросы, узнайте подробности у вашего пациента или обратитесь с вопросом к сообществу. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@AndroidAPS.org). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
+В этом руководстве содержится первоочередная информация о самодеятельных алгоритмах замкнутого цикла и, в частности, о том, как работает AndroidAPS. Более подробную информацию по всем этим темам можно найти во [ всеобъемлющей интернет-документации по AndroidAPS ](http://androidaps.readthedocs.io/en/latest/index.html). Если у вас есть вопросы, узнайте подробности у вашего пациента или обратитесь с вопросом к сообществу. (Если вы не в социальных сетях (например, [ Twitter ](https://twitter.com/kozakmilos) или Facebook), пишите разработчиками по электронной почте @AndroidAPS.org). [ Здесь также можно найти некоторые из последних исследований и связанных с ними данными ](https://openaps.org/outcomes/).
 
-### The steps for building a DIY Closed Loop:
+### Этапы самостоятельного построения системы замкнутого цикла:
 
-To start using AndroidAPS, the following steps should be taken:
+Для начала работы с AndroidAPS необходимо выполнить следующие действия:
 
-* Find a [compatible pump](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started-with-androidaps).
-* [Download the AndroidAPS source code and build the software](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
+* Найдите [ совместимую помпу ](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), [совместимое устройство Android ](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), и [ совместимый мониторинг ГК ](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started-with-androidaps).
+* [ Загрузите исходный код AndroidAPS и создайте программное обеспечение ](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
+* [ Сконфигурируйте программу для работы с устройствами, настройте и задайте параметры защиты ](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
 
-### How A DIY Closed Loop Works
+### Как работает замкнутый цикл
 
-Without a closed loop system, a person with diabetes gathers data from their pump and CGM, decides what to do, and takes action.
+Без системы замкнутого цикла человек с диабетом собирает данные своей помпы и мониторинга ГК, решает, что делать, и принимает меры.
 
 With automated insulin delivery, the system does the same thing: it gathers data from the pump, CGM, and anywhere else information is logged (such as Nightscout), uses this information to do the maths and decide how much more or less insulin is needed (above or below the underlying basal rate), and uses temporary basal rates to make the necessary adjustments to keep or eventually bring BGs into target range.
 
