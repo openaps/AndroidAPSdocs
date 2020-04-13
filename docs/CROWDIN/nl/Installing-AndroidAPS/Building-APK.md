@@ -29,7 +29,7 @@ Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het
 
 De belangrijkste stappen voor het bouwen van het APK bestand zijn:
 
-1. [Install git](../Installing-AndroidAPS/git-install.rst)
+1. [Git installeren](../Installing-AndroidAPS/git-install.rst)
 2. [Installeer Git + Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
 3. [Set git path in Android Studio preferences](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
 4. [Download AndroidAPS code](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
