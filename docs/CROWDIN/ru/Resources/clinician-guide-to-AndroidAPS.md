@@ -37,29 +37,29 @@
 
 Программное обеспечение с открытым исходным кодом предназначено для того, чтобы устройство легко выполняло задания, которые выполнялись в ручном режиме для расчета того, как следует корректировать подачу инсулина. Сначала он собирает данные со всех вспомогательных устройств и из облака, подготавливает данные и выполняет вычисления, делает прогнозы разных сценариев ожидаемых уровней ГК и производит необходимые корректировки, чтобы сохранить или вернуть ГК в целевой диапазон. Затем он отправляет необходимые корректировки на помпу. Затем он снова считывает данные и снова повторяет алгоритм корректировки.
 
-As the most important input parameter is the blood glucose level coming from the CGM, it is important to have high-quality CGM data.
+Поскольку наиболее важным исходным параметром является уровень глюкозы в крови, поступающий от системы мониторинга, важно иметь высококачественные данные CGM.
 
-AndroidAPS is designed to transparently track all input data it gathers, the resulting recommendation, and any action taken. It is therefore easy to answer the question at any time, “why is it doing X?” by reviewing the logs.
+AndroidAPS предназначен для прозрачного отслеживания всех входных данных, а также выдаваемых рекомендаций и действий. Поэтому в любое время, просматривая журналы событий, легко ответить на вопрос, "почему он делает X?".
 
-### Examples of AndroidAPS algorithm decision making:
+### Примеры принятия решений алгоритмом AndroidAPS:
 
-AndroidAPS uses the same core algorithm and feature set as OpenAPS. The algorithm makes multiple predictions (based on settings, and the situation) representing different scenarios of what might happen in the future. In Nightscout, these are displayed as “purple lines”. AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes#overview-tab). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
+AndroidAPS основывается на том же основном алгоритме и наборе функций, что и OpenAPS. Алгоритм выполняет несколько предсказаний (на основе параметров и ситуации), представляющих различные сценарии того, что может произойти в будущем. В Nightscout они отображаются в виде фиолетовых линий. Для распознавания этих [линий прогнозирования](../Installing-AndroidAPS/Releasenotes#overview-tab) AndroidAPS использует различные цвета. В журнале событий будет описано, какие из этих предсказаний и в какие временные рамки будут управлять необходимыми действиями.
 
-#### Here are examples of the purple prediction lines, and how they might differ:
+#### Ниже приведены примеры фиолетовых линий прогнозирования, а также то, как они могут различаться:
 
 ![Purple prediction line examples](../images/Prediction_lines.jpg)
 
-#### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
+#### Вот примеры различных временных рамок, влияющих на необходимые коррективы в подаче инсулина:
 
-#### Scenario 1 - Zero Temp for safety
+#### Сценарий 1- Временный нулевой базал для безопасности
 
-In this example, BG is rising in the near-term time frame; however, it is predicted to be low over a longer time frame. In fact, it is predicted to go below target *and* the safety threshold. For safety to prevent the low, AndroidAPS will issue a zero temp (temporary basal rate at 0%), until the eventualBG (in any time frame) is above threshold.
+В этом примере ГК увеличивается в краткосрочной перспективе, однако, как ожидается, она будет низкой в течение более длительного периода времени. По сути, ожидается, что она будет ниже целевого значения * и * порога безопасности. Для безопасности с целью предотвращения низкой ГК Андроид выдаст нулевую временную базальную скорость до тех пор пока конечная ГК (в любых временных рамках) не окажется выше порогового значения.
 
 ![Dosing scenario 1](../images/Dosing_scenario_1.jpg)
 
-#### Scenario 2 - Zero temp for safety
+#### Сценарий 2- Временный нулевой базал для безопасности
 
-In this example, BG is predicted to go low in the near-term, but is predicted to eventually be above target. However, because the near-term low is actually below the safety threshold, AndroidAPS will issue a zero temp, until there is no longer any point of the prediction line that is below threshold.
+В этом примере ожидается, что ГК будет низкой в ближайшем будущем, но, в конечном счете, будет выше целевого значения. Тем не менее, поскольку краткосрочная ГК фактически ниже порога безопасности, AndroidAPS будет выдавать нулевой базал до тех пор, пока не останется никакой предсказуемой точки, находящейся ниже порогового значения.
 
 ![Dosing scenario 2](../images/Dosing_scenario_2.jpg)
 
