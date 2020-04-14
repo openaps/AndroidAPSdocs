@@ -63,21 +63,21 @@ AndroidAPS основывается на том же основном алгор
 
 ![Dosing scenario 2](../images/Dosing_scenario_2.jpg)
 
-#### Scenario 3 - More insulin needed
+#### Сценарий 3 - Требуется больше инсулина
 
-In this example, a near-term prediction shows a dip below target. However, it is not predicted to be below the safety threshold. The eventual BG is above target. Therefore, AndroidAPS will restrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). It will then assess adding insulin to bring the lowest level of the eventual predicted BG down to target, once it is safe to do so. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMB's (super micro boluses) ).*
+В этом примере, краткосрочный прогноз показывает падение ниже целевого. Однако оно не ниже порога безопасности. Конечная ГК находится выше целевой. Поэтому AndroidAPS будет сдерживать добавление инсулина, который будет приводить к ближайшему низкому значению ГК (того, который опустит прогнозируемую ГК ниже порога). Затем он оценит возможность добавление инсулина, который приведет самый низкий уровень предсказанной ГК к цели, как только это станет безопасно. * (В зависимости от настроек и потребностей, этот инсулин может быть подан через временные базалы или микроболюсы SMB) *
 
 ![Dosing scenario 3](../images/Dosing_scenario_3.jpg)
 
-#### Scenario 4 - Low temping for safety
+#### Сценарий 4- Временный нулевой базал для безопасности
 
-In this example, AndroidAPS sees that BG is spiking well above target. However, due to the timing of insulin, there is already enough insulin in the body to bring BG into range eventually. In fact, BG is predicted to eventually be below target. Therefore, AndroidAPS will not provide extra insulin so it will not contribute to a longer-timeframe low. Although BG is high/rising, a low temporary basal rate is likely here.
+В этом примере AndroidAPS видит, что ГК поднимается намного выше цели. Однако из-за времени подачи инсулина, в организме его уже достаточно, чтобы в конечном итоге привести ГК в желаемый диапазон. По сути, ГК, как ожидается, в конечном счете будет ниже целевого показателя. Поэтому AndroidAPS не будет подавать дополнительный инсулин, чтобы не способствовать более низкой ГК на широком временном отрезке. Несмотря на то, что ГК высока/растет, здесь, скорее всего, будет задана низкая временная базальная скорость.
 
 ![Dosing scenario 4](../images/Dosing_scenario_4.jpg)
 
-### Optimizing settings and making changes
+### Оптимизация параметров и внесение изменений
 
-As a clinician who may not have experience with AndroidAPS or DIY closed loops, you may find it challenging to help your patient optimize their settings or make changes to improve their outcomes. We have multiple tools and [guides](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
+Как клиницист, который не имеет опыта с AndroidAPS или подобными системами, вам может показаться сложным помочь своему пациенту оптимизировать настройки или внести изменения, улучшающие результаты. У нас в сообществе есть несколько инструментов и [ инструкций](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html), которые помогают пациентам делать небольшие, проверенные корректировки для улучшения своих настроек.
 
 The most important thing for patients to do is make one change at a time, and observe the impact for 2-3 days before choosing to change or modify another setting (unless it’s obviously a bad change that makes things worse, in which case they should revert immediately to the previous setting). The human tendency is to turn all the knobs and change everything at once; but if someone does so, then they may end up with further sub-optimal settings for the future, and find it hard to get back to a known good state.
 
