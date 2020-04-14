@@ -35,7 +35,9 @@ SGLT-2 Hemmer, auch Gliflozins genannt, hemmen die Resorption (Aufnahme) von Glu
 
 Smartphone
 --------------------------------------------------
-Du benötigst ein Android Smartphone mit Android 6.0 oder höher. Es gibt eine von AAPS Anwendern erstellte `Liste mit getesteten Smartphones und Smartwatches: <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
+Du benötigst ein Android Smartphone mit Android 6.0 oder höher. Die nächste AndroidAPS-Version 2.7 wird nur noch Android 7 und höher unterstützen. Solltest Du also über ein neues Telefon nachdenken, wird mindestens Android 8.1 idealerweise aber Android 9 oder 10 empfohlen.
+
+Es gibt eine von AAPS Anwendern erstellte `Liste mit getesteten Smartphones und Smartwatches: <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
 Um ein Handy oder eine Smartwatch einzutragen welches noch nicht in der Liste ist, bitte das  `Formular <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_ ausfüllen.
 

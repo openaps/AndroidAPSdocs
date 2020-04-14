@@ -35,7 +35,9 @@ SGLT-2 억제제의 미사용
 
 핸드폰
 --------------------------------------------------
-구글 안드로이드 6.0 이상의 안드로이드 스마트 폰이 필요합니다. 사용자들이 테스트된 핸드폰과 스마트워치 목록을 작성하고 있으며<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_에서 확인하실 수 있습니다.
+구글 안드로이드 6.0 이상의 안드로이드 스마트 폰이 필요합니다. Next major version AndroidAPS 2.7 will only support Android 7 and above. So if you are thinking about a new phone, Android 8.1 is recommended at least but optimicaly Android 9 or 10.
+
+사용자들이 테스트된 핸드폰과 스마트워치 목록을 작성하고 있으며<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_에서 확인하실 수 있습니다.
 
 시트에 기록되어 있지 않은 핸드폰 혹은 시계를 추가하기 위해서는 <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_에서 신청서를 작성해주시기 바랍니다.
 

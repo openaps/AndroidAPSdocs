@@ -4,7 +4,7 @@
 
 * * *
 
-## *** AVERTISSEMENT: ** Si vous avez utilisé l'Insight avec ** SightRemote ** par le passé, veuillez ** mettre à jour vers la version de AAPS la plus récente ** et ** désinstaller SightRemote **.*
+## ***AVERTISSEMENT :** Si vous avez utilisé l'Insight avec **SightRemote** par le passé, veuillez **mettre à jour vers la version de AAPS la plus récente** et **désinstaller SightRemote**.*
 
 ## Configuration matérielle et logicielle requise
 

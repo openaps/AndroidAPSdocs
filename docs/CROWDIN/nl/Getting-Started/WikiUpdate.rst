@@ -1,6 +1,10 @@
 Wiki updates & wijzigingen
 **************************************************
 
+April 2020
+==================================================
+* `Backdate insulin <..//Usage/CPbefore26.html#carbs--bolus>`_ (i.e. given by syringe)
+
 March 2020
 ==================================================
 * `Build apk with Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_

@@ -1,6 +1,10 @@
 Docs Updates & Änderungen
 **************************************************
 
+April 2020
+==================================================
+* `Insulin nachträglich erfassen <..//Usage/CPbefore26.html#id1>`_ (z.B. bei Abgabe mit Spritze)
+
 März 2020
 ==================================================
 * `AndroidAPS mit Android Studio 3.6.1 erstellen <../Installing-AndroidAPS/Building-APK.html>`_

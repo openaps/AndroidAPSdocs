@@ -8,11 +8,11 @@ Application AndroidAPS
 ==================================================
 Génération et mise à jour
 -----
-* `Certificats perdus <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
+* `Certificats perdus <../Installing-AndroidAPS/troubleshooting_androidstudio.html#certificats-perdus>`_
 * `Dépannage AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 Paramètres
 --------------------------------------------------
-* `Profils <../Usage/Profiles.html#troubleshooting-profile-errors>`_
+* `Profils <../Usage/Profiles.html#depannage-des-erreurs-de-profil>`_
 
   .. image:: ../images/BasalNotAlignedToHours2.png
     :alt: Error: Débits de Basal non alignés sur les heures
@@ -20,28 +20,28 @@ Paramètres
 * `Client Nightscout <../Usage/Troubleshooting-NSClient.html>`_
 Utilisation
 --------------------------------------------------
-* `Valeur de glucides incorrectes <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
+* `Valeur de glucides incorrectes <../Usage/COB-calculation.html#detection-de-ga-errones>`_
 
   .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
     :alt: Error: Absorption lente des glucides
 
-* `Commandes SMS <../Children/SMS-Commands.html#troubleshooting>`_
+* `Commandes SMS <../Children/SMS-Commands.html#depannage>`_
 
 MGC
 ==================================================
 * `Généralités <../Hardware/GeneralCGMRecommendation.rst>`_
-* `Dexcom G6 <../Hardware/DexcomG6.html#troubleshooting-g6>`_
-* `Libre 2 <../Hardware/Libre2.html#experiences-and-troubleshooting>`_
-* `xDrip - pas de données MGC <../Configuration/xdrip.html#identify-receiver>`_
-* `Dépannage xDrip - Dexcom <../Configuration/xdrip.html#troubleshooting-dexcom-g5-g6-and-xdrip>`_
+* `Dexcom G6 <../Hardware/DexcomG6.html#depannage-g6>`_
+* `Libre 2 <../Hardware/Libre2.html#astuces-et-depannages>`_
+* `xDrip - pas de données MGC <../Configuration/xdrip.html#identifier-le-recepteur>`_
+* `Dépannage xDrip - Dexcom <../Configuration/xdrip.html#depannage-dexcom-g5-g6-et-xdrip>`_
 
 Pompes
 ==================================================
-* `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#dana-rs-specific-errors>`_
+* `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#erreurs-specifiques-a-danars`_
 * `Accu-Chek Combo généralités <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_
-* `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#why-does-pairing-with-the-pump-does-not-work-with-the-app-ruffy>`_
-* `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html#insight-specific-errors>`_
-* `Medtronic + RileyLink <../Configuration/MedtronicPump.html#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump>`_
+* `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#pourquoi-l-appairage-avec-la-pompe-ne-fonctionne-pas-avec-l-application-ruffy>`_
+* `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html#erreurs-specifiques-a-insight>`_
+* `Medtronic + RileyLink <../Configuration/MedtronicPump.html#que-faire-si-je-perds-la-connexion-a-rileylink-et-ou-a-la-pompe>`_
 
 Téléphones
 ==================================================

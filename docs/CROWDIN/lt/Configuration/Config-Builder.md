@@ -110,7 +110,7 @@ Daugeliui žmonių FIASP poveikis beveik nepastebimas po 3–4 valandų, net jei
 
 ### Oref be piko
 
-„Be piko 0ref“ profilyje galite patys įvesti piko laiką. Insulino veikimo trukmė IVT automatiškai nustatoma 5 valandoms, jei profilyje nenustatoma didesnė vertė.
+„Be piko 0ref“ profilyje galite patys įvesti piko laiką. Insulino veikimo trukmė IVT automatiškai nustatoma 5 valandoms, jei profilyje nenustatoma didesnė reikšmė.
 
 Šis insulino profilis yra rekomenduojamas, jei naudojamas nepalaikomas insulino tipas arba skirtingų insulinų mišiniai.
 
@@ -150,7 +150,7 @@ Pagrindiniame puslapyje galite peržiūrėti jautrumo kreivę, pasirinkdami lauk
 
 ### Angliavandenių įsisavinimo parametrai
 
-Jei naudojate Oref1 su SMB, turite nustatyti ** min_5m_ carbimpact** reikšmę į 8. Ši vertė naudojama tik tuo atveju, jei CGM vertės negaunamos arba fizinis aktyvumas kompensuoja padidėjusį cukraus kiekį kraujyje, kurį AAPS paprastai naudoja angliavandenių skaidymui apskaičiuoti. Tais atvejais, kai angliavandenių absorbcijos negalima dinamiškai apskaičiuoti pagal gliukozės kiekį kraujyje, naudojama ši numatytoji absorbcijos vertė. Iš esmės tai yra saugiklis.
+Jei naudojate Oref1 su SMB, turite nustatyti ** min_5m_ carbimpact** reikšmę į 8. Ši reikšmė naudojama tik tuo atveju, jei NGJ reikšmės negaunamos arba fizinis aktyvumas kompensuoja padidėjusį cukraus kiekį kraujyje, kurį AAPS paprastai naudoja angliavandenių skaidymui apskaičiuoti. Tais atvejais, kai angliavandenių absorbcijos negalima dinamiškai apskaičiuoti pagal gliukozės kiekį kraujyje, naudojama ši numatytoji absorbcijos reikšmė. Iš esmės tai yra saugiklis.
 
 ## APS
 
@@ -173,7 +173,7 @@ AAPS nuolat vertina visus turimus duomenis (AIO, AAO, glikemijos reikšmė) ir, 
 
 ### Uždaras Ciklas
 
-AAPS nuolat vertina visus turimus duomenis (AIO, AAO, glikemijos reikšmes) ir automatiškai koreguoja terapiją pagal poreikį (t.y. be jūsų tolesnio įsikišimo), kad būtų pasiektas nustatytas tikslo diapazonas arba tikslinė vertė (boluso įvedimas, laikinos bazės nustatymas, insulino sustabdymas siekiant išvengti hipoglikemijos ir t.t.). Uždaras ciklas veikia atsižvelgiant į daugybę saugumo ribų, kurias galite nustatyti atskirai. Uždaras ciklas yra galimas, jei esate [6-ame tiksle](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) ar toliau ir naudojate palaikomą pompą.
+AAPS nuolat vertina visus turimus duomenis (AIO, AAO, glikemijos reikšmes) ir automatiškai koreguoja terapiją pagal poreikį (t.y. be jūsų tolesnio įsikišimo), kad būtų pasiektas nustatytas tikslo diapazonas arba tikslinė reikšmė (boluso įvedimas, laikinos bazės nustatymas, insulino sustabdymas siekiant išvengti hipoglikemijos ir t.t.). Uždaras ciklas veikia atsižvelgiant į daugybę saugumo ribų, kurias galite nustatyti atskirai. Uždaras ciklas yra galimas, jei esate [6-ame tiksle](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) ar toliau ir naudojate palaikomą pompą.
 
 ## Tikslai (mokymosi programa)
 
@@ -185,7 +185,7 @@ Norėdami rasti daugiau informacijos, žiūrėkite puslapį [ Tikslai ](../Usage
 
 ## Terapija
 
-Skirtuke Terapija (Terapija) rodomos terapijos, kurios buvo įkeltos į Nightscout. Jei norite taisyti ar ištrinti įrašą (pavyzdžiui, suvalgykite mažiau angliavandenių nei tikėtasi), pasirinkite Trinti ir [pagrindinio ekrano AV mygtuku](../Getting-Started/Screenshots.md#carb-correction) įveskite naują vertę (jei reikia, pakeiskite laiką).
+Skirtuke Terapija (Terapija) rodomos terapijos, kurios buvo įkeltos į Nightscout. Jei norite taisyti ar ištrinti įrašą (pavyzdžiui, suvalgykite mažiau angliavandenių nei tikėtasi), pasirinkite Trinti ir [pagrindinio ekrano AV mygtuku](../Getting-Started/Screenshots.md#carb-correction) įveskite naują reikšmę (jei reikia, pakeiskite laiką).
 
 ## Bendrieji
 
@@ -208,7 +208,7 @@ Nustatyti, kurie rodomi pradiniame ekrane.
 * NGJ (atsidaro xDrip+)
 * Kalibravimas
 
-Taip pat galite nustatyti fiksuotas insulino ir angliavandenių lygio padidinimo vertes ir nuspręsti, ar terapijos dialogo lange rodyti užrašo lauką.
+Taip pat galite nustatyti fiksuotas insulino ir angliavandenių lygio padidinimo reikšmes ir nuspręsti, ar terapijos dialogo lange rodyti užrašo lauką.
 
 #### Greitojo patarėjo nustatymai
 

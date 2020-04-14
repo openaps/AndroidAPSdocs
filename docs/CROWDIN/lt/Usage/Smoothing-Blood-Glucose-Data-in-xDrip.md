@@ -12,7 +12,7 @@ Pakankamai sklandūs duomenys ir siunčiami tik tada, kai naudojate xDrip+ G5 "O
 
 ## xDrip+ su Freestyle Libre
 
-Naudojant Freestyle Libre vertes kaip duomenų šaltinį xDrip+, iki šiol negalite aktyvuoti "Įjungti SMB visada" ir "Įjungti SMB po angliavandenių", nes KG vertės nėra pakankamai sklandžios. Išskyrus tai, yra keletas dalykų, kuriuos galite padaryti, siekiant padėti sumažinti triukšmą duomenyse.
+Naudojant Freestyle Libre kaip duomenų šaltinį xDrip+, iki šiol negalite aktyvuoti "Įjungti SMB visada" ir "Įjungti SMB po angliavandenių", nes KG reikšmės nėra pakankamai sklandžios. Išskyrus tai, yra keletas dalykų, kuriuos galite padaryti, siekiant padėti sumažinti triukšmą duomenyse.
 
 **Sumažinti jutiklio triukšmą.** xDrip+ Nustatymai > xDrip+ Ekrano nustatymai įsitikinkite, kad Sumažinti jutiklio triukšmą yra įjungta. Tai padės išlyginti triukšmingus duomenis.
 

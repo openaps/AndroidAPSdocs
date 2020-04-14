@@ -6,7 +6,7 @@ AndroidAPS n'est pas seulement une application (faite vous même), c'est juste u
   :alt: Compontents overview
 
 .. note:: 
-   ** AVIS DE SÉCURITÉ IMPORTANT * *
+   **AVIS DE SÉCURITÉ IMPORTANT**
 
    La base des fonctions de sécurité d'AndroidAPS présentée dans cette documentation s'appuie sur les fonctions de sécurité du matériel utilisé pour construire votre système. Il est extrêmement important que vous utilisiez uniquement une pompe à insuline et un capteur de MGC approuvés FDA/CE pour mettre en oeuvre une boucle fermée d'administration automatique d'insuline. Les modifications matérielles ou logicielles de ces composants peuvent entraîner un dosage incorrect de l'insuline, causant un risque significatif pour l'utilisateur. Si vous trouvez ou recevez des pompes à insuline ou des récepteurs CGM cassés, modifiés ou fabriqués par vos soins, *ne les utilisez pas* pour créer un système AndroidAPS.
 
@@ -35,7 +35,9 @@ Les inhibiteurs SGLT-2, aussi appelés gliflozines, empêchent la réabsorption 
 
 Téléphone
 --------------------------------------------------
-Il vous faut un smartphone Android avec Google Android 6.0 ou supérieur. Les utilisateurs sont en train de créer une `liste des téléphones et des montres testées <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
+Il vous faut un smartphone Android avec Google Android 6.0 ou supérieur. La prochaine version majeure AndroidAPS 2.7 ne que les versions Android 7 et supérieures. Donc si vous pensez à un nouveau téléphone, un Android 8.1 minimum est recommandé mais choisissez de préférence une version Android 9 ou 10.
+
+Les utilisateurs sont en train de créer une `liste des téléphones et des montres testées <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
 Pour enregistrer un téléphone ou une montre qui n'est pas déjà dans la feuille de calcul, veuillez remplir le `formulaire <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
@@ -51,9 +53,9 @@ AndroidAPS fonctionne **actuellement** avec
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_ (sauf les pompes avec le nouveau firmware v3) 
 - `quelques vieilles pompes Medtronic <../Configuration/MedtronicPump.html>`_ à partir de la version 2.4 (également nécessaires : RileyLink/Gnarl, téléphone Android avec bluetooth basse énergie / puce BLE)
 
-**D'autres pompes ** qui peuvent potentiellement fonctionner avec AndroidAPS sont listées sur la page `Futures pompes (possible) <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
+**D'autres pompes**, qui peuvent potentiellement fonctionner avec AndroidAPS, sont listées sur la page `Futures pompes (possible) <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
-Si vous avez besoin d'acheter ** à titre privé** une pompe alors vous pouvez trouver différents distributeurs dans ` cette feuille de calcul <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>` _, veuillez s'il vous plaît partager les détails de la vôtre si elle n'est pas déjà listée.
+Si vous avez besoin d'acheter **à titre privé** une pompe alors vous pouvez trouver différents distributeurs dans `cette feuille de calcul <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_, veuillez s'il vous plaît partager les détails de la vôtre si elle n'est pas déjà listée.
 
 **Alors quelle est la meilleure pompe pour boucler avec AndroidAPS ?**
 

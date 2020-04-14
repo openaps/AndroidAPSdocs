@@ -35,7 +35,9 @@ SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in th
 
 Phone
 --------------------------------------------------
-You need an Android smartphone with Google Android 6.0 or above. Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
+You need an Android smartphone with Google Android 6.0 or above. Next major version AndroidAPS 2.7 will only support Android 7 and above. So if you are thinking about a new phone, Android 8.1 is recommended at least but optimicaly Android 9 or 10.
+
+Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
 To record a phone or watch that isn't already listed in the spreadsheet then please fill in the `form <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
@@ -64,7 +66,7 @@ The advantages of the DanaR/RS vs. the Combo as the pump of choice however are:
 - The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... όχι τόσο εύκολο με την Combo. (Αυτό μπορεί να αλλάξει στο μέλλον όταν το Android 8.1 γίνει πιο διαδεδομένο)
 - Initial pairing is simpler with the Dana* RS. Επειδή όμως συνήθως αυτό γίνεται μόνο μία φορά, σας επηρεάζει μόνο όταν θέλετε να δοκιμάσετε ένα νέο χαρακτηριστικό με διαφορετικές αντλίες.
 - So far the Combo works with screen parsing. Σε γενικές γραμμές αυτό λειτουργεί καλά αλλά είναι αργό. Για το κύκλωμα αυτό δεν έχει σημασία όσο όλα λειτουργούν στο παρασκήνιο. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking. 
-- The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB.  Η Dana * RS είναι διαμορφωμένη ώστε να μην εκπέμπει ή να δονείται.
+- The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. Τη νύχτα είναι πιθανό να χρησιμοποιείτε TBRs περισσότερο από SMB.  Η Dana * RS είναι διαμορφωμένη ώστε να μην εκπέμπει ή να δονείται.
 - Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
 - All pumps AndroidAPS can talk with are waterproof on delivery. Μόνο οι αντλίες Dana είναι επίσης "αδιάβροχες με εγγύηση" λόγω της σφραγισμένης θήκης των μπαταριών και του συστήματος πλήρωσης δεξαμενών. 
 

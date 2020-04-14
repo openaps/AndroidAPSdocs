@@ -9,7 +9,7 @@ Oref0 / Oref1
 
 Neįsisavinti angliavandeniai yra nebeskaičiuojami po nustatyto laiko
 
-.. nuotrauka:: ../images/cob_oref0_orange_II.png
+.. image:: ../images/cob_oref0_orange_II.png
   :alt: Oref0 / Oref1
 
 AAPS, SvertinisVidurkis
@@ -17,12 +17,12 @@ AAPS, SvertinisVidurkis
 
 įsisavinimas yra apskaičiuojamas, kad būtų `AAO == 0` po nustatyto laiko
 
-.. nuotrauka:: ../images/cob_aaps2_orange_II.png
+.. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, SvertinisVidurkis
 
-Jei minimalus angliavandenių įsisavinimas (min_5m_carbimpact) yra naudojamas vietoj verčių, apskaičiuotų iš KG svyravimų, atsiranda oranžinis taškas AAO grafike.
+Jei minimalus angliavandenių įsisavinimas (min_5m_carbimpact) yra naudojamas vietoj reikšmių, apskaičiuotų iš KG svyravimų, atsiranda oranžinis taškas AAO grafike.
 
-Neteisingų AAO verčių nustatymas
+Neteisingų AAO reikšmių aptikimas
 ==================================================
 
 Nuo 2.4 versijos AAPS įspėja jus, jei jūs ketinate bolusuoti su AAO iš prieš tai buvusio valgio ir algoritmas mano, kad dabartinis AAO apskaičiavimas gali būti neteisingas. Šiuo atveju jis duos jums papildomą užuominą patvirtinimo ekrane, kai pasinaudosite boluso patarėju. 
@@ -55,4 +55,4 @@ Kodėl algoritmas nenustato AAO teisingai?
 
 Įvestų angliavandenių koregavimas rankiniu būdu
 ==================================================
-Jei pervertinote ar nepakankamai įvertinote angliavandenių kiekį, galite juos ištaisyti naudodamiesi terapijos skirtuku ir priežiūros portalu, kaip aprašyta čia <../Getting-Started/Screenshots.html#carb-correction>`_.
+Jei pervertinote ar nepakankamai įvertinote angliavandenių kiekį, galite juos ištaisyti naudodamiesi terapijos skirtuku ir priežiūros portalu, kaip aprašyta `čia <../Getting-Started/Screenshots.html#carb-correction>`_.

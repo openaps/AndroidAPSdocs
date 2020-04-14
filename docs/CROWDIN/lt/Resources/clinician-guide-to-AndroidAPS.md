@@ -1,63 +1,63 @@
-# For Clinicians – A General Introduction and Guide to AndroidAPS
+# Gydytojams – AndroidAPS įvadas ir vadovas
 
-This page is intended for clinicians who have expressed interest in open source artificial pancreas technology such as AndroidAPS, or for patients who want to share such information with their clinicians.
+Šis puslapis yra skirtas gydytojams, besidomintiems atvirojo kodo dirbtinės kasos technologijomis, tokiomis kaip AndroidAPS, ir pacientams, norintiems pasidalinti šia informacija su savo gydytojais ir diabetologais.
 
-This guide has some high-level information about DIY closed looping and specifically how AndroidAPS works. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](http://androidaps.readthedocs.io/en/latest/index.html). If you have questions, please ask your patient for more details, or always feel free to reach out to the community with question. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@AndroidAPS.org). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
+Šiame vadove yra tam tikros svarbios informacijos apie „pasidaryk pats“ uždarojo tipo ciklą ir konkrečiai kaip veikia AndroidAPS. Norėdami gauti daugiau informacijos apie visas šias temas, skaitykite [išsamią AndroidAPS dokumentaciją internete](http://androidaps.readthedocs.io/en/latest/index.html). Jei turite klausimų, susisiekite su savo pacientu dėl išsamesnės informacijos arba nedvejodami susisiekite su bendruomene. (Jei nesinaudojate socialiniais tinklais (pvz., [Twitter](https://twitter.com/kozakmilos) ar Facebook), galite atsiųsti el. laišką adresu developers@AndroidAPS.org). [ Šioje nuorodoje galite rasti keletą naujausių tyrimų & ir duomenų, susijusių su rezultatais](https://openaps.org/outcomes/).
 
-### The steps for building a DIY Closed Loop:
+### „Pasidaryk pats“ uždaro ciklo kūrimo veiksmai:
 
-To start using AndroidAPS, the following steps should be taken:
+Norėdami naudoti AndroidAPS, turite atlikti šiuos veiksmus:
 
-* Find a [compatible pump](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started-with-androidaps).
-* [Download the AndroidAPS source code and build the software](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
+* Turėti [ suderinamą insulino pompą](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), [suderinamą Android įrenginį](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) ir [suderinamą NGJ šaltinį](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started-with-androidaps).
+* [Atsisiųsti AndroidAPS programinį kodą ir „sukurti“ programinę įrangą ](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
+* [Konfigūruoti programinę įrangą taip, kad ji "susikalbėtų" su diabeto priežiūros prietaisais, nustatyti asmeninius bei saugos parametrus](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
 
-### How A DIY Closed Loop Works
+### Kaip veikia „pasidaryk pats“ uždaras ciklas
 
-Without a closed loop system, a person with diabetes gathers data from their pump and CGM, decides what to do, and takes action.
+Be uždaro ciklo sistemos, pacientas, sergantis cukriniu diabetu, gauna duomenis iš savo pompos ir NGJ, nusprendžia, ką daryti, ir imasi atitinkamų veiksmų.
 
-With automated insulin delivery, the system does the same thing: it gathers data from the pump, CGM, and anywhere else information is logged (such as Nightscout), uses this information to do the maths and decide how much more or less insulin is needed (above or below the underlying basal rate), and uses temporary basal rates to make the necessary adjustments to keep or eventually bring BGs into target range.
+Sistema daro tą patį: renka duomenis iš pompos, NGJ ir kitos registruojamos informacijos (pvz., per Nightscout). Ji naudojasi šia informacija apskačiuodama, kiek daugiau ar mažiau reikia insulino (nei užprogramuota bazės profilyje). Sistema nustato laikiną bazę, kuri padeda išlaikyti glikemiją stabilią arba grąžina ją į tikslinę zoną.
 
-If the device running AndroidAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basals rates runnning.
+Jei įrenginys, kuriame veikia AndroidAPS, sugenda arba nutrūksta Bluetooth ryšys su pompa, pasibaigus nustatytai laikinai bazei insulino pompa grįžta į įprastą vartotojo nustatytą programą.
 
-### How data is gathered:
+### Kaip duomenys yra renkami:
 
-With AndroidAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AndroidAPS can communicate with other devices and to the cloud via wifi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
+Naudodamas AndroidAPS, Android įrenginys paleidžia specialią programą skaičiavimams atlikti. Įrenginys Bluetooth ryšiu komunikuoja su insulino pompa. AndroidAPS gali komunikuoti su kitais įrenginiais ir gauti papildomą informaciją iš internetinės debesijos per WiFi ar mobiliųjų duomenų ryšį. Tokiu būdu pacientas, slaugos personalas ir artimieji taip pat gali sekti, ką ir kodėl AndroidAPS daro.
 
-The Android device needs to:
+Android įrenginys turi:
 
-* communicate with the pump and read history - how much insulin has been delivered
-* communicate with the CGM (either directly, or via the cloud) - to see what BGs are/have been doing
+* komunikuoti su pompa ir skaityti jos istoriją, kad nustatytų, kiek insulino buvo suleista
+* komunikuoti su NGJ (tiesiogiai arba per debesies serverį), kad žinotų, kaip keičiasi glikemija
 
-When the device has collected this data, the algorithm runs and does the decision-making based on the settings (ISF, carb ratio, DIA, target, etc.). If required, it then issues commands to the pump to modify insulin delivery rate.
+Kai tik įrenginys surenka duomenis, algoritmas juos analizuoja ir priima sprendimus remdamasis nustatymais (insulino jautrumo faktorius, insulino ir angliavandenių santykis, insulino veikimo trukmė, tikslinė glikemija ir kt.). Jei reikia, duoda komandą pompai, kad koreguotų insulino leidimą.
 
-It will also gather any information about boluses, carbohydrate consumption, and temporary target adjustments from the pump or from Nightscout to use it for the calculation of insulin delivery rates.
+Čia taip pat kaupiama visa informacija apie bolusus, angliavandenių suvartojimą ir laikinus tikslo / diapazono pokyčius, iš pompos ar Nightscout, ir ji naudojama apskaičiuoti insulino suleidimo kiekį.
 
-### How does it know what to do?
+### Kaip ji žino, ką daryti?
 
-The open source software is designed to make it easy for the device to do the work people used to do (in manual mode) to calculate how insulin delivery should be adjusted. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of expected BG-levels during the next hours will be expected to do in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Next it sends any necessary adjustments to the pump. Then it reads the data back, and does it over and over again.
+Atvirojo kodo programinė įranga buvo sukurta siekiant perimti užduotis, kurias anksčiau sergantys cukriniu diabetu atlikdavo rankiniu būdu, ir apskaičiuoti, kiek tiksliai reikia suleisti insulino. Pirmiausia sistema renka duomenis iš visų prijungtų įrenginių ir iš debesies, juos parengia ir atlieka reikalingus skaičiavimus. Remiantis įvairiais scenarijais, prognozuojama artimiausių valandų tikėtina glikemija ir apskaičiuojami būtini insulino dozės patikslinimai, kad glikemija išliktų tikslinėje zonoje arba grąžintų ją ten. Tada ji išsiunčia pompai reikiamus nustatymus. Tada ji vėl nuskaito duomenis iš pompos ir skaičiavimai vėl pradedami iš naujo.
 
-As the most important input parameter is the blood glucose level coming from the CGM, it is important to have high-quality CGM data.
+Svarbu turėti aukštos kokybės NGJ duomenis, nes glikemijos duomenys yra svarbiausi įvesties parametrai.
 
-AndroidAPS is designed to transparently track all input data it gathers, the resulting recommendation, and any action taken. It is therefore easy to answer the question at any time, “why is it doing X?” by reviewing the logs.
+AndroidAPS skaidriai dokumentuoja visus įvestus duomenis, gautą rekomendaciją ir priemones, kurių buvo imtasi. Taigi į klausimą: "Kodėl tai daro X?" bet kuriuo metu galite lengvai atsakyti peržiūrėdami žurnalo įrašus.
 
-### Examples of AndroidAPS algorithm decision making:
+### AndroidAPS algoritmo sprendimų priėmimo pavyzdžiai:
 
-AndroidAPS uses the same core algorithm and feature set as OpenAPS. The algorithm makes multiple predictions (based on settings, and the situation) representing different scenarios of what might happen in the future. In Nightscout, these are displayed as “purple lines”. AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes#overview-tab). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
+AndroidAPS naudoja tą patį pagrindinį algoritmą ir funkcionalumą kaip ir OpenAPS. Remdamasis nustatymais ir esama situacija, algoritmas pateikia keletą prognozių, pagal kurias apskaičiuojami skirtingi scenarijai, kas gali nutikti ateityje. Nightscout jie rodomi kaip violetinės linijos. AndroidAPS naudoja skirtingas spalvas, kad atskirtų šias [ prognozuojamas kreives](../Installing-AndroidAPS/Releasenotes#overview-tab). Žurnalo failai gali būti naudojami norint atsekti, kuris iš šių įvairių numatymų buvo naudojamas konkrečiu laikotarpiu, kad būtų apskaičiuotos būtinos priemonės.
 
-#### Here are examples of the purple prediction lines, and how they might differ:
+#### Čia yra keletas prognozių pavyzdžių ir kaip jos gali skirtis:
 
-![Purple prediction line examples](../images/Prediction_lines.jpg)
+![Violetinių prognozės kreivių pavyzdžiai](../images/Prediction_lines.jpg)
 
-#### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
+#### Šie pavyzdžiai rodo skirtingus laikotarpius ir kaip jie veikia insulino leidimą:
 
-#### Scenario 1 - Zero Temp for safety
+#### 1 scenarijus - Nulinė bazė saugumo sumetimais
 
-In this example, BG is rising in the near-term time frame; however, it is predicted to be low over a longer time frame. In fact, it is predicted to go below target *and* the safety threshold. For safety to prevent the low, AndroidAPS will issue a zero temp (temporary basal rate at 0%), until the eventualBG (in any time frame) is above threshold.
+Nors glikemija per trumpą laiką didėja, prognozuojama, kad vidutiniu laikotarpiu ji smarkiai sumažės. Tiesą sakant, prognozuojama, kad ji ne tik nukris žemiau tikslinės zonos, *bet ir* žemiau saugios ribos. Saugumo sumetimais ir siekiant išvengti hipoglikemijos, AndroidAPS nustato vadinamąją nulinę bazę (laikiną valandinę 0% bazę), iki kol tikėtina glikemijos vertė viršija saugos slenkstį bet kuriuo laikotarpiu.
 
-![Dosing scenario 1](../images/Dosing_scenario_1.jpg)
+![1 scenarijus](../images/Dosing_scenario_1.jpg)
 
-#### Scenario 2 - Zero temp for safety
+#### 2 scenarijus - Nulinė bazė saugumo sumetimais
 
 In this example, BG is predicted to go low in the near-term, but is predicted to eventually be above target. However, because the near-term low is actually below the safety threshold, AndroidAPS will issue a zero temp, until there is no longer any point of the prediction line that is below threshold.
 

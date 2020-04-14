@@ -1,6 +1,10 @@
 Wiki mises à jour et modifications
 **************************************************
 
+Avril 2020
+==================================================
+* `Antidater l'insuline <..//Usage/CPbefore26.html#id1>`_ (par ex. injectée avec une seringue)
+
 Mars 2020
 ==================================================
 * `Générer l'apk avec Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_

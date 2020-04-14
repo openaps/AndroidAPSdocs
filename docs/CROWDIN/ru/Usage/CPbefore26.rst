@@ -24,6 +24,11 @@ Carbs & bolus
   :alt: Careportal carbs & bolus
   
 * To note a bolus - no matter if for snack, meal or correction - use the insulin button on the homescreen **and make sure to tick "Do not bolus, record only"!**
+* Option to backdate insulin - i.e. if you forgot to register insulin given by syringe - will only be available if checkbox "Do not bolus, record only" is ticked.
+
+   .. image:: ../images/Careportal_25_26_5.png
+     :alt: Backdate insulin via insulin button
+
 * For carbs correction use the carbs button on the homescreen.
 * Temporary basal rates can be started and stopped through the button in actions tab / menu. Please note that the button changes from "TEMPBASAL" to "CANCEL x%" when a temporary basal rate is set.
 
