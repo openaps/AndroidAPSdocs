@@ -47,7 +47,7 @@ AndroidAPS основывается на том же основном алгор
 
 #### Ниже приведены примеры фиолетовых линий прогнозирования, а также то, как они могут различаться:
 
-![Purple prediction line examples](../images/Prediction_lines.jpg)
+![Примеры фиолетовой линии прогнозирования](../images/Prediction_lines.jpg)
 
 #### Вот примеры различных временных рамок, влияющих на необходимые коррективы в подаче инсулина:
 
@@ -55,25 +55,25 @@ AndroidAPS основывается на том же основном алгор
 
 В этом примере ГК увеличивается в краткосрочной перспективе, однако, как ожидается, она будет низкой в течение более длительного периода времени. По сути, ожидается, что она будет ниже целевого значения * и * порога безопасности. Для безопасности с целью предотвращения низкой ГК Андроид выдаст нулевую временную базальную скорость до тех пор пока конечная ГК (в любых временных рамках) не окажется выше порогового значения.
 
-![Dosing scenario 1](../images/Dosing_scenario_1.jpg)
+![Сценарий дозирования 1](../images/Dosing_scenario_1.jpg)
 
 #### Сценарий 2- Временный нулевой базал для безопасности
 
 В этом примере ожидается, что ГК будет низкой в ближайшем будущем, но, в конечном счете, будет выше целевого значения. Тем не менее, поскольку краткосрочная ГК фактически ниже порога безопасности, AndroidAPS будет выдавать нулевой базал до тех пор, пока не останется никакой предсказуемой точки, находящейся ниже порогового значения.
 
-![Dosing scenario 2](../images/Dosing_scenario_2.jpg)
+![Сценарий дозирования 2](../images/Dosing_scenario_2.jpg)
 
 #### Сценарий 3 - Требуется больше инсулина
 
 В этом примере, краткосрочный прогноз показывает падение ниже целевого. Однако оно не ниже порога безопасности. Конечная ГК находится выше целевой. Поэтому AndroidAPS будет сдерживать добавление инсулина, который будет приводить к ближайшему низкому значению ГК (того, который опустит прогнозируемую ГК ниже порога). Затем он оценит возможность добавление инсулина, который приведет самый низкий уровень предсказанной ГК к цели, как только это станет безопасно. * (В зависимости от настроек и потребностей, этот инсулин может быть подан через временные базалы или микроболюсы SMB) *
 
-![Dosing scenario 3](../images/Dosing_scenario_3.jpg)
+![Сценарий дозирования 3](../images/Dosing_scenario_3.jpg)
 
 #### Сценарий 4- Временный нулевой базал для безопасности
 
 В этом примере AndroidAPS видит, что ГК поднимается намного выше цели. Однако из-за времени подачи инсулина, в организме его уже достаточно, чтобы в конечном итоге привести ГК в желаемый диапазон. По сути, ГК, как ожидается, в конечном счете будет ниже целевого показателя. Поэтому AndroidAPS не будет подавать дополнительный инсулин, чтобы не способствовать более низкой ГК на широком временном отрезке. Несмотря на то, что ГК высока/растет, здесь, скорее всего, будет задана низкая временная базальная скорость.
 
-![Dosing scenario 4](../images/Dosing_scenario_4.jpg)
+![Сценарий дозирования 4](../images/Dosing_scenario_4.jpg)
 
 ### Оптимизация параметров и внесение изменений
 
@@ -81,21 +81,21 @@ AndroidAPS основывается на том же основном алгор
 
 Самое важное для пациентов-это делать одно изменение за раз, и наблюдать за результатом в течение 2-3 дней, прежде чем решать, изменять ли другой параметр (если только такое изменение явно не идет во вред, - в этом случае следует немедленно вернуться к предыдущему параметру). Человек склонен сразу крутить все настройки и менять все сразу; но если кто-то делает это, то такое поведение приведет к суб-оптимальным настройками и его трудно будет вернуть в известное хорошее состояние.
 
-Один из самых мощных инструментов для изменения настроек-это автоматизированный инструмент вычислений базальной скорости, чувствительности ISF и соотношения инсулин-углеводы CR. Это называется “[Autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)”. Он предназначен для самостоятельного функционирования с целью определения дополнительных изменений в настройках. В сообществе принято запускать (или просматривать) отчеты Autotune, прежде чем пытаться вручную внести изменения в параметры. Для AndroidAPS Autotune выполняется как "разовая" программа, хотя предпринимаются усилия по ее включению непосредственно в AndroidAPS. As these parameters are a prerequesite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adustment of these parameters would be the natural link to the clinician.
+Один из самых мощных инструментов для изменения настроек-это автоматизированный инструмент вычислений базальной скорости, чувствительности ISF и соотношения инсулин-углеводы CR. Это называется “[Autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)”. Он предназначен для самостоятельного функционирования с целью определения дополнительных изменений в настройках. В сообществе принято запускать (или просматривать) отчеты Autotune, прежде чем пытаться вручную внести изменения в параметры. Для AndroidAPS Autotune выполняется как "разовая" программа, хотя предпринимаются усилия по ее включению непосредственно в AndroidAPS. Поскольку эти параметры являются условием как стандартной помповой терапии, так и подачи инсулина в системах замкнутого цикла, обсуждение результатов автонастройки и применения этих параметров будет естественным для клинициста.
 
-Additionally, human behavior (learned from manual diabetes mode) often influences outcomes, even with a DIY closed loop. For example, if BG is predicted to go low and AndroidAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dl (3.9 mmol). However, in many cases, someone may choose to treat with many more carbs (e.g. sticking to the 15 rule), which will cause a resulting faster spike both from the extra glucose and because insulin had been reduced in the timeframe leading up to the low.
+Кроме того, поведение человека (основанное на ручном режиме компенсации диабета) часто влияет на результаты даже и в замкнутом цикле. Например, если, согласно прогнозам, ГК ожидается низкой, а AndroidAPS снижает уровень инсулина, то для возврата ГК до 70 мг/дл (3,9 ммоль/л) может потребоваться лишь небольшое количество углеводов (например 3-4 ГУ). Однако во многих случаях кто-то может взять для корректировки гораздо больше углеводов (например, придерживаясь правила 15), что приведет к более быстрому скачку как из-за дополнительной глюкозы, так и из-за того, что подача инсулина была снижена в период, ведущий к низкому.
 
 ### OpenAPS
 
-**This guide was adopted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AndroidAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AndroidAPS, with the main difference being the hardware platform where each peace of software is run.
+** Это руководство было принято на основе [ The clinician's guide to OpenAPS ](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html). ** OpenAPS-это система, разработанная для микрокомпьютера (обычно именуемого "платформа"). AndroidAPS использует многие методы, реализовываные в OpenAPS, и разделяет большую часть логики и алгоритмов, поэтому это руководство очень похоже на оригинальное руководство. Большая часть информации о OpenAPS можно легко адаптировать к AndroidAPS, при этом главное отличие-это аппаратная платформа, на которой работает программное обеспечение.
 
-### Summary
+### Итог
 
-This is meant to be a high-level overview of how AndroidAPS works. For more details, ask your patient, reach out to the community, or read the full AndroidAPS documentation available online.
+Это обзорная информация о том, как работает AndroidAPS. Для получения более подробной информации обратитесь к пациенту, сообществу или прочитайте полную документацию AndroidAPS в Интернете.
 
-Additional recommended reading:
+Дополнительное рекомендуемое чтение:
 
-* The [full AndroidAPS documentation](http://androidaps.readthedocs.io/en/latest/EN/index.html)
-* The [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), which explains how OpenAPS is designed for safety: https://openaps.org/reference-design/
-* The [full OpenAPS documentation](http://openaps.readthedocs.io/en/latest/index.html) 
-  * More [details on OpenAPS calculations](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+* [Полная документация AndroidAPS](http://androidaps.readthedocs.io/en/latest/EN/index.html)
+* Справочник [ Эталонный дизайн Open](https://OpenAPS.org/reference-design/), в котором объясняются принципы работы и безопасности OpenAPS: https://openaps.org/reference-design/
+* [Полная документация OpenAPS](http://openaps.readthedocs.io/en/latest/index.html) 
+  * Подробнее [о расчетах в OpenAPS](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
