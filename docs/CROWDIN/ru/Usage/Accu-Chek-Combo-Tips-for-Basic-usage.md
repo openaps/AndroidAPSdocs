@@ -6,7 +6,7 @@
 * Всегда убеждайтесь, что батарея помпы максимально заряжена. Информацию о батарее смотрите в разделе подсказок по использованию батареи.
 * Лучше всего ** не трогать приложению ruffy ** во время работы системы. Если приложение запускается заново, соединение с помпой может прерваться. Как только помпа соединится с ruffy, нет необходимости в повторном подключении. Даже после перезапуска телефона соединение восстанавливается автоматически. По возможности переместите приложение на неиспользуемый экран или папку на смартфоне, чтобы случайно его не открыть.
 * Если вы непреднамеренно откроете приложение во время работы цикла, лучше сразу же перезапустить смартфон.
-* Всякий раз, когда это возможно, управляйте помпой с помощью приложения AndroidAPS. Для этого активируйте блокировку кнопок на помпе в ** PUMP SETTINGS/KEY LOCK/ON **. Кнопками помпы следует пользоваться только при замене батареи или картриджа. ![Keylock](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/keylock.png?raw=true)
+* Всякий раз, когда это возможно, управляйте помпой с помощью приложения AndroidAPS. Для этого активируйте блокировку кнопок на помпе в ** PUMP SETTINGS/KEY LOCK/ON **. Кнопками помпы следует пользоваться только при замене батареи или картриджа. ![Блокировка кнопок](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/keylock.png?raw=true)
 
 ## Помпа недоступна. Что делать?
 
@@ -25,7 +25,7 @@
 
 * На телефонах с ** небольшой памятью ** (или ** агрессивными параметрами экономии заряда батареи **) AndroidAPS часто отключается. Это можно определить по тому, что кнопки Bolus и Calculator не присутствуют на главном экране при запуске AAPS, так как система инициализируется. Это может привести к оповещениям "помпа недоступна" при запуске. В поле ** недавнее соединение ** на вкладке Combo можно проверить, когда AndroidAPS последний раз обменивался данными с помпой. 
 
-![Pump unreachable](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Pump_Unreachable.png) ![No connection to pump](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/No_connection_to_pump.png)
+![Помпа недоступна](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Pump_Unreachable.png) ![Нет соединения с помпой](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/No_connection_to_pump.png)
 
 * Эта ошибка может ускорить понижение заряда батареи помпы, так как профиль базала считывается из помпы при перезапуске приложения.
 * Кроме того, это увеличивает вероятность возникновения ошибки, которая заставляет помпу отклонять все входящие соединения до тех пор, пока на помпе не будет нажата кнопка. 
@@ -43,7 +43,7 @@
 * Для этого в главном окне нажмите кнопку ** Замкнутый цикл ** и выберите ** Приостановить цикл на 1 ч. **. 
 * Подождите, пока помпа общается с телефоном, а логотип Bluetooth на помпе поблекнет.
 
-![Bluetooth enabled](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/Compo.png?raw=true)
+![Bluetooth включен](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/Compo.png?raw=true)
 
 * Разблокируйте кнопки на помпе, переведите ее в режим остановки, подтвердите, возможно, отмененный временный базал, и замените батарею.
 * Затем переведите помпу в рабочий режим и выберите ** Возобновить ** при длинном нажатии на ** Приостановлено ** на главном экране.
@@ -53,7 +53,7 @@
 
 * Так как интенсивная связь Bluetooth потребляет много энергии, пользуйтесь только ** высококачественными батареями **, такими как Energizer Ultimate Lithium, Power One" из "большого" сервисного набора Accu-Chek, или, если вы собираетесь пользоваться перезаряжаемым аккумулятором, используйте аккумуляторы Eneloop. 
 
-![Energizer](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/energizer-l91aa---image.jpg?raw=true) ![OnePower](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/PowerOne.png?raw=true)
+![Энерджайзер](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/energizer-l91aa---image.jpg?raw=true) ![OnePower](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/PowerOne.png?raw=true)
 
 Диапазоны времени жизни различных типов батарей:
 
@@ -71,26 +71,26 @@
 ## Переход на летнее время
 
 * В настоящее время драйвер combo не поддерживает автоматическую корректировку времени помпы.
-* During the night of a daylight saving time change, the time of the smartphone is updated, but the time of the pump remains unchanged. This leads to an alarm due to deviating times between the systems at 3 am.
-* If you do not want to be awakened at night, **deactivate the automatic daylight saving time changeover on the mobile phone** in the evening before the time changeover and adjust the times manually the next morning.
+* В течение ночи перехода на летнее/зимнее время смартфон обновляется, но время на часах помпы остается неизменным. Это приводит к срабатыванию оповещения из-за разницы времени между системами в 3 часа утра.
+* Если вы не хотите просыпаться ночью, ** деактивируйте автоматический переход на летнее время на мобильном телефоне ** вечером перед переходом и скорректируйте время вручную на следующее утро.
 
-## Extended bolus, multiwave bolus
+## Пролонгированный болюс, многоволновый болюс
 
-The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternative:
+Алгоритм OpenAPS не поддерживает параллельное выполнение пролонгированного болюса или многоволнового болюса. Однако аналогичного результата можно достичь с помощью следующей альтернативы:
 
-* Input the carbs but do not bolus for it. The loop algorithm will react more aggressively. If needed, use **eCarbs** (extended carbs).
+* Вводите углеводы, но не подавайте на них болюс. Алгоритм цикла будет реагировать на них более агрессивно. При необходимости используйте ** eCarbs ** (прологированные углеводы).
 
-* If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
+* Если вы соблазнились просто использовать пролонгированный или многоволновый болюс непосредственно на помпе, AndroidAPS накажет вас отключением замкнутого цикла на следующие шесть часов, чтобы убедиться, что отсутствует избыток подачи инсулина.
 
-![Disabled loop after multiwave bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
+![Отключение цикла после многоволнового болюса](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
 
-## Alarms at bolus delivery
+## Сигналы оповещений при подаче болюса
 
-* If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical number of insulin units. If you really want to bolus the same insulin twice in short succession, just wait two more minutes and then deliver the bolus again. If the first bolus has been interrupted or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
-* Background is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Here indistinguishable entries must be prevented.
+* Если AndroidAPS обнаружит, что идентичные болюсы были успешно поданы в одну и ту же минуту, то подача болюса с одним и тем же количеством единиц инсулина будет предотвращена. Если вы действительно хотите подать одинаковое количество инсулина за короткий промежуток времени, просто подождите еще две минуты, а затем снова подайте болюс. Если первый болюс был прерван или не был доставлен по другим причинам, вы можете сразу же повторно дать болюс (начиная с версии AAPS 2.0.).
+* Работа в фоновом режиме -это механизм безопасности, который считывает историю помпы, прежде чем подавать новый болюс, чтобы правильно вычислить активный инсулин IOB, даже когда болюс доставляется непосредственно из помпы. Он не позволяет неразличимые записи.
 
-![Double bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/Doppelbolus.png)
+![Двойной болюс](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/Doppelbolus.png)
 
-* This mechanism is also responsible for a second cause of the error: If during the use of the bolus calculator another bolus is delivered via the pump and thereby the bolus history changes, the basis of the bolus calculation is wrong and the bolus is aborted. 
+* Этот механизм также предотвращает другую причину ошибок: если во время использования калькулятора болюса с помпы подается другой болюс и тем самым меняется история болюсов, то основа расчета болюса становится неверной, и болюс отменяется. 
 
-![Canceled bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/History_changed.png)
+![Отмена болюса](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/History_changed.png)
