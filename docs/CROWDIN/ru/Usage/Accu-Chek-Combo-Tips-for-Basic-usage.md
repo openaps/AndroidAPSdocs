@@ -39,38 +39,38 @@
 ### Замена батареи
 
 * После сигнала оповещения ** низкий заряд батареи ** батарея должна быть заменена как можно скорее, чтобы всегда иметь достаточно энергии для надежной связи Bluetooth со смартфоном, даже на большом удалении от помпы.
-* Even after a **low battery** alarm, the battery might be used for a significant amount of time. However, it is recommended to always have a fresh battery with you after a "low battery" alarm rang.
-* To do this, long-press on **Closed Loop** on the main screen and select **Suspend loop for 1h**. 
-* Wait for the pump to communicate with the phone and the Bluetooth logo on the pump has faded.
+* Даже после оповещения ** низкий заряд батареи ** батарея может прослужить еще значительное время. Тем не менее, рекомендуется всегда иметь с собой свежую батарею после оповещения "низкий заряд".
+* Для этого в главном окне нажмите кнопку ** Замкнутый цикл ** и выберите ** Приостановить цикл на 1 ч. **. 
+* Подождите, пока помпа общается с телефоном, а логотип Bluetooth на помпе поблекнет.
 
 ![Bluetooth enabled](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/Compo.png?raw=true)
 
-* Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery.
-* Then put the pump back in run mode select **Resume** when long-pressing on **Suspended** on the main screen.
-* AndroidAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value. 
+* Разблокируйте кнопки на помпе, переведите ее в режим остановки, подтвердите, возможно, отмененный временный базал, и замените батарею.
+* Затем переведите помпу в рабочий режим и выберите ** Возобновить ** при длинном нажатии на ** Приостановлено ** на главном экране.
+* AndroidAPS возобновит подачу необходимого временного базала с получением следующего значения ГК. 
 
-### Battery type and causes of short battery life
+### Типы батарей и причины их короткой жизни
 
-* As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium ,the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries. 
+* Так как интенсивная связь Bluetooth потребляет много энергии, пользуйтесь только ** высококачественными батареями **, такими как Energizer Ultimate Lithium, Power One" из "большого" сервисного набора Accu-Chek, или, если вы собираетесь пользоваться перезаряжаемым аккумулятором, используйте аккумуляторы Eneloop. 
 
 ![Energizer](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/energizer-l91aa---image.jpg?raw=true) ![OnePower](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/PowerOne.png?raw=true)
 
-Ranges for typical life time of the different battery types are as follows:
+Диапазоны времени жизни различных типов батарей:
 
-* **Energizer Ultimate Lithium**: 4 to 7 weeks
-* **Power One Alkaline** (Varta) from the servcie pack: 2 to 4 weeks
-* **Eneloop rechargable** batteries (BK-3MCCE): 1 to 3 weeks
+* **Energizer Ultimate Lithium**: от 4 до 7 недель
+* ** Power One Alkaline ** (Varta) из сервисного набора: 2-4 недели
+* Перезаряжаемые батареи ** Eenlook ** (BK-3MCCE): от 1 до 3 недель
 
-If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
+Если срок службы батареи значительно короче указанных выше диапазонов, проверьте следующие возможные причины:
 
-* The latest version (March 2018) of the [ruffy App](https://github.com/MilosKozak/ruffy) significantly improved pump battery lifetime. Make sure you are on that version if you have issues with a short battery lifetime.
-* There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
-* If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, only a replacement of the pump by Roche will help, which is not a problem during the warranty period. 
-* The smart phone hardware and software (Android operating system and bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
+* Свежая версия (март 2018 года) приложения [ ruffy ](https://github.com/MilosKozak/ruffy) значительно улучшила время работы батареи помпы. Убедитесь, что у вас эта версия, если есть проблемы с коротким сроком жизни батареи.
+* Есть некоторые варианты закручивающегося колпачка батарейного отсека помпы Combo, которые частично замыкают батарейку и быстро ее истощают. Колпачки без этой проблемы можно узнать по золотым металлическим контактам.
+* Если часы помпы не "выдерживают" быстрой замены батареи, то, скорее всего, сломался конденсатор, который поддерживает работу часов во время краткочного отключения питания. В этом случае поможет только замена помпы Roche, что не является проблемой в течение гарантийного срока. 
+* Аппаратное и программное обеспечение смартфона (операционная система Android и модуль Bluetooth) также влияют на время работы батареи помпы, хотя точные факторы пока неясны. Если у вас есть возможность, попробуйте другой телефон и сравните время жизни батареи.
 
-## Daylight saving time changes
+## Переход на летнее время
 
-* Currently the combo driver does not support automatic adjustment of the pump's time.
+* В настоящее время драйвер combo не поддерживает автоматическую корректировку времени помпы.
 * During the night of a daylight saving time change, the time of the smartphone is updated, but the time of the pump remains unchanged. This leads to an alarm due to deviating times between the systems at 3 am.
 * If you do not want to be awakened at night, **deactivate the automatic daylight saving time changeover on the mobile phone** in the evening before the time changeover and adjust the times manually the next morning.
 
