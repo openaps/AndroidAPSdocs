@@ -1,27 +1,27 @@
-# Accu-Chek Combo Tips for basic usage
+# Советы по базовому применению Accu-Chek Combo
 
-## How to ensure smooth operations
+## Как обеспечить бесперебойную работу
 
-* Always **carry the smartphone with you**, leave it next to your bed at night.
-* Always make sure that the pump battery is as full as possible. See the battery section for tipps regarding the battery.
-* It is best to **not touch the app ruffy** while the system is running. If the app is started again, the connection to the pump can break off. Once the pump is connected to ruffy, there is no need to re-connect. Even after a restart of the phone, the connection is automatically re-established. If possible, move the app to an unused screen or in a folder on your smartphone so you do not accidentally open it.
-* If you unintentionally open the app ruffy during looping, it's best to restart the smartphone right away.
-* Whenever possible, only operate the pump via the AndroidAPS app. To facilitate this, activate the key lock on the pump under **PUMP SETTINGS / KEY LOCK / ON**. Only when changing the battery or the cartridge, it is necessary to use the pump's keys. ![Keylock](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/keylock.png?raw=true)
+* Всегда ** носите смартфон с собой **, оставляя его рядом с кроватью ночью.
+* Всегда убеждайтесь, что батарея помпы максимально заряжена. Информацию о батарее смотрите в разделе подсказок по использованию батареи.
+* Лучше всего ** не трогать приложению ruffy ** во время работы системы. Если приложение запускается заново, соединение с помпой может прерваться. Как только помпа соединится с ruffy, нет необходимости в повторном подключении. Даже после перезапуска телефона соединение восстанавливается автоматически. По возможности переместите приложение на неиспользуемый экран или папку на смартфоне, чтобы случайно его не открыть.
+* Если вы непреднамеренно откроете приложение во время работы цикла, лучше сразу же перезапустить смартфон.
+* Всякий раз, когда это возможно, управляйте помпой с помощью приложения AndroidAPS. Для этого активируйте блокировку кнопок на помпе в ** PUMP SETTINGS/KEY LOCK/ON **. Кнопками помпы следует пользоваться только при замене батареи или картриджа. ![Keylock](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/keylock.png?raw=true)
 
-## Pump not reachable. What to do?
+## Помпа недоступна. Что делать?
 
-### Activate pump unreachable alarm
+### Активируйте сигнализацию "помпа недоступна"
 
-* In AndroidAPS, go to **Settings / Local Alarms** and activate **alarm when pump is unreachable** and set **pump not reachable limit [Min]** to **31** minutes. 
-* This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
+* В AndroidAPS перейдите в ** Настройки/Локальные оповещения **, активируйте ** оповещение при недоступности помпы ** и задайте для него лимит [Min]</strong> до ** 31 ** минут. 
+* Это даст вам достаточно времени, чтобы не активировать сигнал при выходе из помещения, пока телефон останется на столе, но информирует вас, если помпа не может быть достигнута на время, превышающее длительность временного базала.
 
-### Restore reachability of the pump
+### Восстановление доступности помпы
 
-* When AndroidAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, press **UPDATE** on the **Combo Tab** in AndroidAPS. Mostly then the communication works again.
-* If that does not help, reboot your smartphone. After the restart, AndroidAPS and ruffy will be reactivated and a new connection will be established with the pump.
-* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) lists successfully tested smartphones. 
+* Когда AndroidAPS сообщает о том, что **помпа недоступна** разблокируйте кнопки помпы и ** нажмите на любую кнопку ** (например, "вниз"). Как только меню помпы отключится, нажмите кнопку ** ОБНОВИТЬ** на вкладке ** СOMBO ** в AndroidAPS. В большинстве случаев связь с помпой восстанавливается.
+* Если это не поможет, перезагрузите смартфон. После перезапуска, AndroidAPS и ruffy будут реактивированы, и с помпой будет установлено новое соединение.
+* Тесты с разными телефонами показали, что некоторые из них запускают ошибку "помпа недоступна" чаще, чем другие. В разделе [ Телефоны для AAPS ](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) перечислены успешно проверенные смартфоны. 
 
-### Root causes and consequences of frequent communication errors
+### Причины и последствия частых ошибок связи
 
 * On phones with **low memory** (or **aggressive power-saving** settings), AndroidAPS is often shut down. You can tell by the fact that the Bolus and Calculator buttons on the Home screen are not shown when opening AAPS because the system is initializing. This can trigger "pump unreachable alarms" at startup. In the **Last Connection** field of the Combo tab, you can check when AndroidAPS last communicated with the pump. 
 
