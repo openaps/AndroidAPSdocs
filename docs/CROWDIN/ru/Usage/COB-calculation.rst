@@ -35,24 +35,24 @@ AAPS, Средневзвешенное значение
 .. изображение:: ../images/Calculator_SlowCarbAbsorbtion.png
   :alt: Подсказка о неверном значении COB
 
-In the screenshot above, 41% of1 time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  This means that maybe you are having less carbs on board than calculated by the algorithm. 
+На этом снимке экрана 41% времени поглощения углеводов был вычислен математически методом min_5m_carbimpact вместо значения, основанного на отклонениях ГК.  Это означает, что в организме может быть меньше активных углеводов, чем вычисляется алгоритмом. 
 
-How to deal with this warning? 
+Как относиться к этому предупреждению? 
 --------------------------------------------------
 
-- Consider to cancel the treatment - press Cancel instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving COB unticked.
-- In case you are sure you need a correction bolus, enter it manually.
-- In any case be careful not to overdose!
+-Подумайте об отмене действия -нажмите кнопку Отмена, а не ОК.
+-Снова рассчитайте свой предстоящий прием пищи с помощью калькулятора болюса, сняв галочку с COB.
+-В случае, если вы уверены, что вам нужен болюс на коррекцию, введите его вручную.
+-В любом случае будьте осторожны, чтобы не допустить передозировки!
 
-Why does the algorithm not detect COB correctly? 
+Почему алгоритм неправильно распознает COB? 
 --------------------------------------------------
 
-- Maybe you overestimated carbs when entering them.  
-- Activity / exercise after your previous meal
-- I:C needs adjustment
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA)
+-Возможно, вы переоценили количество углеводов при их вводе.  
+-Активность/нагрузка после предыдущего приема пищи
+-Соотношение I:C нуждается в корректировке
+- Значение для min_5m_carbimpact неверно (рекомендуется 8 с SMB, 3 с AMA)
 
-Manual correction of carbs entered
+Ручная коррекция введенных углеводов
 ==================================================
-If you over- or underestimated carbs you can correct this though treatments tab and care portal as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.
+Если вы переоценили или недооценили количество углеводов, это можно исправить на вкладке назначений на портале терапии, как описано: " здесь <../Getting-Started/Screenshots.html#carb-correction> ` _.
