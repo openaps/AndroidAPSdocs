@@ -15,18 +15,18 @@
 
 ## Оптимизация батареи Jelly Pro
 
-The following settings and handling advice (use watch for daily operations instead of Jelly smartphone) lead to approx. 35 hours of battery life. An additional battery saving mode is not necessary, rather counterproductive, therefore turn off.
+Следующие настройки и рекомендации (использование часов для ежедневных операций вместо смартфона Jelly) ведут к приблизительно 35 часам жизни батареи. Дополнительный режим экономии батарей не является необходимым, скорее контрпродуктивным, поэтому выключаем.
 
 ![Jelly smartphone](../images/jelly_01.jpg)
 
-### First setup
+### Первая настройка
 
-<b><font color="#FF0000">Very important:</b></font> If you don't need Android 8.1 (i.e. to loop with an Accu-Check Combo) stay with android 7.0!
+<b> <font color="#FF0000"> Важно: </b> </font> Если вам не нужен Android 8.1 (для цикла с Accu-Check Combo) оставайтесь на Android 7.0!
 
-Follow these rules to stay with Andorid 7.0:
+Следуйте этим правилам, чтобы остаться на Andorid 7.0:
 
-* Do not connect to wifi or mobile network on first use to prevent auto update.
-* Skip setting up wifi network.
+* Не подключайтесь к wifi или мобильной сети при первом использовании для предотвращения автоматического обновления.
+* Пропустить настройку сети wifi.
 * Setting up Google account offline is the only thing that cannot be skipped.
 * Go to settings and disable auto update (Settings >System >About the phone >System update >Three-point menu top right >Settings >Automatically check for updates >Once)
 * Every time you activate the wifi or mobile network you will be notified that a system update is available. Do not update! It is best to delete the notification so that you do not accidentally update. This would not be so easy to undo. 
