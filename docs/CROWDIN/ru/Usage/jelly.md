@@ -11,9 +11,9 @@
 
 * Рекомендуется только для опытных пользователей (некоторые настройки не распознаются, их расположение нужно помнить из опыта работы с большим телефоном с Android AAPS). Некоторые кнопки AAPS трудно нажимать из-за их маленького размера.)
 * Может использоваться только как телефон для APS. Лучше иметь обычный смартфон в кармане. 
-* If you don't treat Jelly like a diva (Always (!) carry it with you!) Jelly shows its bitchy side, disconnects all Bluetooth and sulks until you restart. 
+* Если над ним не трястись, не носить Всегда! с собой, он покажет свой несносный характер, разъединится с помпой пока не перезагрузишь. 
 
-## Jelly Pro - battery life optimization
+## Оптимизация батареи Jelly Pro
 
 The following settings and handling advice (use watch for daily operations instead of Jelly smartphone) lead to approx. 35 hours of battery life. An additional battery saving mode is not necessary, rather counterproductive, therefore turn off.
 
