@@ -10,15 +10,15 @@ eCarbs не ограничивается тяжелой пищей богато�
 
 Чтобы ввести eCarbs, задайте длительность в диалоговом окне _Carbs_ на вкладке обзора, общее количество углеводов и (необязательно) сдвиг по времени:
 
-.. image:: ../images/eCarbs_Dialog.png
-  :alt: Enter carbs
+.. изображение:: ../images/eCarbs_Dialog.png
+  :alt: Введение углеводов
 
-The eCarbs on the overview tab, note the carbs in brackets at the COB field, which shows the carbs in the future:
+ECarbs на вкладке обзора, обратите внимание на углеводы в скобках в поле COB, в котором показаны углеводы в будущем:
 
-.. image:: ../images/eCarbs_Graph.png
-  :alt: eCarbs in graph
+.. изображение:: ../images/eCarbs_Graph.png
+  :alt: eCarbs на графике
 
-Carb entries which are in the future are coloured in dark orange on the treatment tab:
+Углеводы в будущем окрашены в темно-оранжевый цвет на вкладке Терапии:
 
 .. image:: ../images/eCarbs_Treatment.png
   :alt: eCarbs in future in treatment tab
