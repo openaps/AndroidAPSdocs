@@ -38,11 +38,11 @@
 
 * Используйте Jelly только для AAPS.
 * Настройте wifi для установки xDrip, AAPS и WearOS, в противном случае wifi должен быть отключен. 
-* Wifi can be enabled for a short time if you want to upload the data to Nightscout.
-* Jelly does not need a SIM card, but if you use one make sure to turn off the mobile data. The easiest way is to activate flight mode.
-* Also if you do not use a SIM card turn of mobile data.
-* Bluetooth must be turned on of course. If the pump is not within range for a longer period of time, the "search" will consume a lot of battery power.
-* DURASPEED ON (Settings > Device > Duraspeed on). Whitelist AAPS, WearOS and xDrip+ to run in background. All other apps should not run in background.
+* Wi-fi может быть включен в течение короткого времени, если вы хотите выгрузить данные в Nightscout.
+* Jelly не нуждается в SIM-карте, но если вы пользуетесь ей, отключите передачу мобильных данных. Самый простой способ-активировать режим полета.
+* Кроме того, если вы не используете SIM-карту, отключите передачу мобильных данных.
+* Разумеется, bluetooth должен быть включен. Если помпа не находится в пределах связи в течение длительного периода времени, то "поиск" будет потреблять много энергии.
+* Включите DURASPEED (Параметры > Устройство > Duraspeed on). Включите в Белый список AAPS, WearOS и xDrip + для запуска в фоновом режиме. All other apps should not run in background.
 * End all other tasks in the background. Settings > Intelligent assistant > Exit tasks in background > Disable all other apps (despite AAPS, WearOS and xDrip+).
 * Location services must be on but in power save mode (Settings > User > Location > Mode > Energy Saver Mode).
 * Screen brightness set to 0%, sleep 15-30 sec. (Settings > Device > Display).
