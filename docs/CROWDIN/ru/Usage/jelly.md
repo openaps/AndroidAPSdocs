@@ -27,9 +27,9 @@
 
 * Не подключайтесь к wifi или мобильной сети при первом использовании для предотвращения автоматического обновления.
 * Пропустить настройку сети wifi.
-* Setting up Google account offline is the only thing that cannot be skipped.
-* Go to settings and disable auto update (Settings >System >About the phone >System update >Three-point menu top right >Settings >Automatically check for updates >Once)
-* Every time you activate the wifi or mobile network you will be notified that a system update is available. Do not update! It is best to delete the notification so that you do not accidentally update. This would not be so easy to undo. 
+* Настройка учетной записи Google в автономном режиме это единственное, что нельзя пропустить.
+* Перейдите к настройкам и отключите автоматическое обновление (Настройки > Система > О телефоне > Обновление системы > Трехточечное меню сверху справа > Настройки > Автоматическая проверка обновлений > Один раз)
+* Каждый раз, когда вы активируете wifi или мобильную сеть, вы будете уведомлены о том, что доступно обновление системы. Do not update! It is best to delete the notification so that you do not accidentally update. This would not be so easy to undo. 
 * Installed apps can and should be upgraded.
 
 ![Jelly settings](../images/jelly_02.jpg)
