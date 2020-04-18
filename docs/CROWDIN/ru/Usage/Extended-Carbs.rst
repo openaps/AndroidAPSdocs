@@ -20,19 +20,19 @@ ECarbs на вкладке обзора, обратите внимание на 
 
 Углеводы в будущем окрашены в темно-оранжевый цвет на вкладке Терапии:
 
-.. image:: ../images/eCarbs_Treatment.png
-  :alt: eCarbs in future in treatment tab
+.. изображение:: ../images/eCarbs_Treatment.png
+  :alt: eCarbs в будущем на вкладке лечения
 
 
 -----
 
-A way to handle fat and protein with that feature is described here: `https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html <https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html>`_
+Способ компенсации жира и белка с этой функцией описан здесь: ` https: //adriansloop.blogspot.co. at/2018/04/page-margin-0.html <https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html>` _
 
 -----
 
-The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the _Enable SMB with COB_ preference being enabled.
+Рекомендуется использовать модуль OpenAPS SMB APS, с поддержкой SMB, а также включить параметр _Enable SMB с COB_.
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the _calculator_ and then use the _carbs_ button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours. You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting _max minutes of basal to limit SMB to_ to make the algorithm more or less aggressive.
+Сценарий, например, на пиццу может быть такой: дать (частично) болюс заранее через калькулятор болюса а затем через 1 или 2 часа нажать кнопку углеводы чтобы ввести оставшиеся углеводы на последующие 4-6 часов. You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting _max minutes of basal to limit SMB to_ to make the algorithm more or less aggressive.
 With low carb, high fat/protein meals it may be enough to only use eCarbs without manual boluses (see the blog post above).
 
 When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
