@@ -32,14 +32,14 @@ ECarbs на вкладке обзора, обратите внимание на 
 
 Рекомендуется использовать модуль OpenAPS SMB APS, с поддержкой SMB, а также включить параметр _Enable SMB с COB_.
 
-Сценарий, например, на пиццу может быть такой: дать (частично) болюс заранее через калькулятор болюса а затем через 1 или 2 часа нажать кнопку углеводы чтобы ввести оставшиеся углеводы на последующие 4-6 часов. You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting _max minutes of basal to limit SMB to_ to make the algorithm more or less aggressive.
-With low carb, high fat/protein meals it may be enough to only use eCarbs without manual boluses (see the blog post above).
+Сценарий, например, на пиццу может быть такой: дать (частично) болюс заранее через калькулятор болюса а затем через 1 или 2 часа нажать кнопку углеводы чтобы ввести оставшиеся углеводы на последующие 4-6 часов. Нужно приспособиться, чтобы понять какие конкретные величины подходят для вас. Можно также подстроить параметр _max minutes of basal для ограничения SMB чтобы сделать алгоритм более или менее агрессивным.
+При низком содержании углеводов, высоким содержании жиров и белков, eCarbs может быть достаточен, чтобы обойтись без дополнительного контроля болюсов (см. пост блога выше).
 
-When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
+При создании eCarbs в портале терапии создается также запись для документирования, упрощающая итерацию и ввод данных.
 
 Пролонгированный болюс
 ==================================================
-As mentioned above extended or multiwave boluses do not really work in a closed loop environment. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-wont-work-in-a-closed-loop-environment>`_ for details
+Как упоминалось выше, пролонгированные или многоволновые болизы не работают в замкнутом цикле. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-wont-work-in-a-closed-loop-environment>`_ for details
 
 Extended bolus and switch to open loop
 --------------------------------------------------
