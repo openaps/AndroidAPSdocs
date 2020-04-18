@@ -1,16 +1,16 @@
 # Jelly Pro
 
-## Advantage/Disadvantage
+## Преимущества и недостатки
 
-### Advantages Jelly
+### Преимущества Jelly
 
-* It's really small.
-* Even if you tell people, they might not consider it as a normal smartphone and will except it easier as a exception when phones are normally not allowed.
+* Он действительно маленький.
+* Даже если сообщить о его наличии, его могут не посчитать обычным смартфоном, и легче примут как исключение, в тех ситуациях, когда телефоны обычно не разрешаются.
 
-### Disadvantages Jelly
+### Недостатки Jelly
 
-* Recommended only for experienced loopers (some settings are not recognizable, you have to know from experience with a big Android AAPS phone, how and where what is located. Some AAPS buttons are hard to touch with a lot of feeling, but not with stubby fingers.)
-* Can only be used as LooperPhone. It's better to have a normal smartphone in your pocket. 
+* Рекомендуется только для опытных пользователей (некоторые настройки не распознаются, их расположение нужно помнить из опыта работы с большим телефоном с Android AAPS). Некоторые кнопки AAPS трудно нажимать из-за их маленького размера.)
+* Может использоваться только как телефон для APS. Лучше иметь обычный смартфон в кармане. 
 * If you don't treat Jelly like a diva (Always (!) carry it with you!) Jelly shows its bitchy side, disconnects all Bluetooth and sulks until you restart. 
 
 ## Jelly Pro - battery life optimization
