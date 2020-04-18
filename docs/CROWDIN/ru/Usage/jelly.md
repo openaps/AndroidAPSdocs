@@ -29,15 +29,15 @@
 * Пропустить настройку сети wifi.
 * Настройка учетной записи Google в автономном режиме это единственное, что нельзя пропустить.
 * Перейдите к настройкам и отключите автоматическое обновление (Настройки > Система > О телефоне > Обновление системы > Трехточечное меню сверху справа > Настройки > Автоматическая проверка обновлений > Один раз)
-* Каждый раз, когда вы активируете wifi или мобильную сеть, вы будете уведомлены о том, что доступно обновление системы. Do not update! It is best to delete the notification so that you do not accidentally update. This would not be so easy to undo. 
-* Installed apps can and should be upgraded.
+* Каждый раз, когда вы активируете wifi или мобильную сеть, вы будете уведомлены о том, что доступно обновление системы. Не обновляйте! Лучше всего удалить уведомление, чтобы случайно не обновить. Это будет не так легко отменить. 
+* Установленные приложения могут и должны быть обновлены.
 
 ![Jelly settings](../images/jelly_02.jpg)
 
 ### Настройки
 
-* Use Jelly only for looping.
-* Set up wifi to install xDrip, AAPS and WearOS, otherwise wifi off. 
+* Используйте Jelly только для AAPS.
+* Настройте wifi для установки xDrip, AAPS и WearOS, в противном случае wifi должен быть отключен. 
 * Wifi can be enabled for a short time if you want to upload the data to Nightscout.
 * Jelly does not need a SIM card, but if you use one make sure to turn off the mobile data. The easiest way is to activate flight mode.
 * Also if you do not use a SIM card turn of mobile data.
