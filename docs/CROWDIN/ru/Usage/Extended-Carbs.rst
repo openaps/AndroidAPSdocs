@@ -45,14 +45,14 @@ ECarbs на вкладке обзора, обратите внимание на 
 --------------------------------------------------
 Некоторые пользователи просили предусмотреть пролонгированные болюсы в ААПС, так как хотели бы компенсировать специфические продукты питания привычным для себя образом. 
 
-That's why as of version 2.6 there is an option for an extended bolus. But closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus. Bolus units, remaining and total time will be shown on homescreen.
+Поэтому, начиная с версии 2.6, появилось опция пролонгированного или удлиненного болюса. Но замкнутый цикл автоматически будет остановлен и переключится на режим открытого цикла на время пролонгированных болюсов. Единицы измерения, оставшееся и общее время, будут показаны на гланом экране.
 
-.. image:: ../images/ExtendedBolus2_6.png
-  :alt: Extended bolus in AAPS 2.6
+.. изображение:: ../images/ExtendedBolus2_6.png
+  :alt: Пролонгиованный болюс в AAPS 2.6
 
-Why extended boluses won't work in a closed loop environment
+Почему пролонгированные болюсы не будут работать в среде замкнутого цикла
 ----------------------------------------------------------------------------------------------------
-1. The loop determines that now 1.55U/h is to be delivered. Whether this is delivered as an extended bolus or TBR does not matter to the algorithm. In fact, some of the pumps use the extended bolus. What should happen then? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
+1. Цикл определяет, что скорость базала должна быть 1.55 ед/ч. Whether this is delivered as an extended bolus or TBR does not matter to the algorithm. In fact, some of the pumps use the extended bolus. What should happen then? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
 2. If you had the extended bolus as input, what should happen in the model?
 
    1. Should it be considered neutral together with the BR and looped on it? Then the loop should also be able to reduce the bolus if, for example, you get too low and all the "neutral" insulin is taken away?
