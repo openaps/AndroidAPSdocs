@@ -52,10 +52,10 @@ ECarbs на вкладке обзора, обратите внимание на 
 
 Почему пролонгированные болюсы не будут работать в среде замкнутого цикла
 ----------------------------------------------------------------------------------------------------
-1. Цикл определяет, что скорость базала должна быть 1.55 ед/ч. Whether this is delivered as an extended bolus or TBR does not matter to the algorithm. In fact, some of the pumps use the extended bolus. What should happen then? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
-2. If you had the extended bolus as input, what should happen in the model?
+1. Цикл определяет, что скорость базала должна быть 1.55 ед/ч. Для алгоритма неважно подается ли при этом пролонгированный болюс или обычный временный базал TBR. На самом деле, на некоторых помпах возможен пролонгированный болюс. Что должно произойти в этом случае? Большинство драйверов помп останавливает пролонгированный болюс-> Можно не даже не пытаться его запустить.
+2. Если в качестве входных данных задан пролонгированный болюс, что должно произойти?
 
-   1. Should it be considered neutral together with the BR and looped on it? Then the loop should also be able to reduce the bolus if, for example, you get too low and all the "neutral" insulin is taken away?
-   2. Should the extended bolus simply be added? So the loop should simply be allowed to continue? Even in the worst hypo? I don't think this is so good: A hypo is foreseen but it must not be prevented?
+   1. Будет ли алгоритм считать базу нейтральной и работать невзирая на нее? Он также должен уметь уменьшать болюс, например, при низкой ГК, когда "нейтральный" инсулин уже израсходован?
+   2. Следует ли просто добавить пролонгированный болюс? То есть, алгоритму петли нужно просто позволить продолжить? Even in the worst hypo? I don't think this is so good: A hypo is foreseen but it must not be prevented?
    
 3. The IOB that the extended bolus builds up materializes after 5 minutes at the next run. Accordingly, the loop would give less basal. So not much changes... except that the possibility of hypo avoidance is taken.
