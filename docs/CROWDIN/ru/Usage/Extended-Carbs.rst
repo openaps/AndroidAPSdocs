@@ -39,11 +39,11 @@ ECarbs на вкладке обзора, обратите внимание на 
 
 Пролонгированный болюс
 ==================================================
-Как упоминалось выше, пролонгированные или многоволновые болизы не работают в замкнутом цикле. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-wont-work-in-a-closed-loop-environment>`_ for details
+Как упоминалось выше, пролонгированные или многоволновые болизы не работают в замкнутом цикле. ` Подробнее см. ниже <../Usage/Extended-Carbs.html#why-Extended-boluses-wont-work-in-a-closed-loop-environment> ` _
 
-Extended bolus and switch to open loop
+Пролонгированный болюс и переход на открытый цикл
 --------------------------------------------------
-Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to. 
+Некоторые пользователи просили предусмотреть пролонгированные болюсы в ААПС, так как хотели бы компенсировать специфические продукты питания привычным для себя образом. 
 
 That's why as of version 2.6 there is an option for an extended bolus. But closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus. Bolus units, remaining and total time will be shown on homescreen.
 
