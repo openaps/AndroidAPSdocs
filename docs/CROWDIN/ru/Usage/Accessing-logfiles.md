@@ -1,8 +1,8 @@
-# Accessing logfiles
+# Чтение лог-файлов
 
-* Connect phone to a computer in file transfer mode
-* Locate log files in this directory or similiar (may little bit vary on different phones)
+* Подключите телефон к компьютеру в режиме передачи файлов
+* Найдите лог-файлы в этой директории или аналогичной (может немного отличаться на разных телефонах)
 
-![logs](../images/aapslog.png)
+![журнал событий](../images/aapslog.png)
 
-* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) in Android Studio, Log Viewer android app, or simply plain text. Previous log files are zipped and stored in folders in date/time order. If sharing your log in [gitter](https://gitter.im/MilosKozak/AndroidAPS) when talking about a potential bug then unzip and upload the folder dated before the error occurred.
+* Текущий журнал-это файл .log, который можно просмотреть разными способами, например как [ LogCat ](https://developer.android.com/studio/debug/am-logcat.html) в Android Studio, через Android-приложение Log Viewer или просто как обычный текст. Предыдущие файлы журналов архивируются и хранятся в папках по датам/времени. Отправляя журнал в [ gitter ](https://gitter.im/MilosKozak/AndroidAPS) при сообщении о потенциальной ошибке, распакуйте и отправьте папку с датой перед возникновением ошибки.
