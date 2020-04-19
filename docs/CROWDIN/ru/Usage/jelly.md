@@ -17,7 +17,7 @@
 
 Следующие настройки и рекомендации (использование часов для ежедневных операций вместо смартфона Jelly) ведут к приблизительно 35 часам жизни батареи. Дополнительный режим экономии батарей не является необходимым, скорее контрпродуктивным, поэтому выключаем.
 
-![Jelly smartphone](../images/jelly_01.jpg)
+![Смартфон Jelly](../images/jelly_01.jpg)
 
 ### Первая настройка
 
@@ -32,7 +32,7 @@
 * Каждый раз, когда вы активируете wifi или мобильную сеть, вы будете уведомлены о том, что доступно обновление системы. Не обновляйте! Лучше всего удалить уведомление, чтобы случайно не обновить. Это будет не так легко отменить. 
 * Установленные приложения могут и должны быть обновлены.
 
-![Jelly settings](../images/jelly_02.jpg)
+![Настройки Jelly](../images/jelly_02.jpg)
 
 ### Настройки
 
@@ -42,22 +42,22 @@
 * Jelly не нуждается в SIM-карте, но если вы пользуетесь ей, отключите передачу мобильных данных. Самый простой способ-активировать режим полета.
 * Кроме того, если вы не используете SIM-карту, отключите передачу мобильных данных.
 * Разумеется, bluetooth должен быть включен. Если помпа не находится в пределах связи в течение длительного периода времени, то "поиск" будет потреблять много энергии.
-* Включите DURASPEED (Параметры > Устройство > Duraspeed on). Включите в Белый список AAPS, WearOS и xDrip + для запуска в фоновом режиме. All other apps should not run in background.
-* End all other tasks in the background. Settings > Intelligent assistant > Exit tasks in background > Disable all other apps (despite AAPS, WearOS and xDrip+).
-* Location services must be on but in power save mode (Settings > User > Location > Mode > Energy Saver Mode).
-* Screen brightness set to 0%, sleep 15-30 sec. (Settings > Device > Display).
-* The daily operations only via the watch. Other settings and display use only during charging. 
-* Jelly, just like the pump, remains untouched under clothing all day long.
+* Включите DURASPEED (Параметры > Устройство > Duraspeed on). Включите в Белый список AAPS, WearOS и xDrip + для запуска в фоновом режиме. Все остальные приложения не должны работать в фоновом режиме.
+* Завершите все другие задачи в фоне. Параметры > Интеллектуальный помощник > Вывести задачи из фонового режима > Выключить все остальные приложения ( кроме AAPS, WearOS и xDrip +).
+* Службы геолокации должны быть включены но в режиме экономии питания (параметры > Пользователь > Расположение > Режим > Режим энергосберегающего питания).
+* Яркость экрана-0%, сон 15-30 сек. (Настройки > Устройство > Дисплей).
+* Повседневные операции только через часы. Другие настройки и дисплей использовать только во время зарядки. 
+* Jelly, как и помпа, остается нетронутым под одеждой весь день.
 
-## Tips
+## Подсказки
 
-* The Jelly is a not always intuitive to use and sometimes acts like a baby diva. A restart (button on the right) every now and then might be a good idea.
-* In portrait view not all buttons might be displayed. So it is worth turning Jelly by 90 degrees.
+* Jelly - не всегда интуитивно понятен в работе и иногда ведет себя как капризный ребенок. Перезапуск (кнопка справа) телефона время от времени - неплохая практика.
+* В портретном формате могут быть показаны не все кнопки. Так что стоит повернуть Jelly на 90 градусов.
 
-![Jelly portrait + landscape view](../images/jelly_04.jpg)
+![Jelly - портретный + пейзажный формат](../images/jelly_04.jpg)
 
-* The headline on the startscreen of the phone can hold up to 6 icons on the right. The clock needs 2 of them. So if 5 are already occupied (i.e. bluetooth, do not disturb, no SIM card, flight mode and the battery indicator), no clock will be displayed. Briefly increase the volume with the button in the upper left corner, then the clock appears in the header. ;-)
-* The "alarm clock", which is initially (with factory settings) displayed on the Home screen below the time, is probably a second time zone. Switch this off as AAPS might access wrong timezone (Settings > System > Date&Time > Automatic Time Zone > OFF). Use the time provided by the network instead.
-* A screenshot can be taken by pressing the quiet button (bottom left) + the an button (right) simultaneously. 
+* Заголовок на главном экране телефона может вмещать до 6 значков справа. Часы требуют 2 из них. Таким образом, если 5 уже заняты (то есть bluetooth, не беспокоить, нет SIM-карты, режим полета и индикатор батареи), то часы не будут отображаться. Ненадолго увеличьте громкость кнопкой в левом верхнем углу, затем часы появятся в заголовке. ;-)
+* "Будильник", который изначально (с заводскими настройками), находится на домашнем экране ниже дисплея времени, вероятно, показывает вторую часовую зону. Выключите этот будильник, так как AAPS может получить доступ к неправильной часовой зоне (Параметры > Система > Дата&Время > Автоматическая часовая зона > OFF). Используйте время, предоставляемое сетью.
+* Снимок экрана можно сделать, нажав на кнопку уменьшения громкости (внизу слева) + кнопку (справа) одновременно. 
 
-![Jelly headline](../images/jelly_03.png)
+![Jelly строка заголовка](../images/jelly_03.png)
