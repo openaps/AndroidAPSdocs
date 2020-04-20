@@ -34,7 +34,7 @@ Décembre 2019
 * `Complications sur les montres connectées <../Configuration/Watchfaces.html#complications>`_ - utilisez vos cadrans favoris avec les données AAPS
 Novembre 2019
 ==================================================
-* `Automatisation - à désactiver lors de la désactivation de la boucle <../Usage/Automation.html#important-note>`_
+* `Automation - deactivate when disabling loop <../Usage/Automation.html#important-note>`_
 * `Remplacement du transmetteur Dexcom G6 <../Configuration/xdrip.html#replace-transmitter>`_
 * `Bolus étendus - pourquoi ils ne fonctionnent pas dans le cadre d'une boucle <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
