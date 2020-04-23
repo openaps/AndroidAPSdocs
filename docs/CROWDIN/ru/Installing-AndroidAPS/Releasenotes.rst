@@ -14,6 +14,28 @@ ContextEdit.
 
 Имейте в виду, что это изменение не предназначено для того, чтобы действовать вам на нервы, а существует по соображениям безопасности. Новые версии AndroidAPS не только обеспечивают новые возможности, но и содержат исправления безопасности. Поэтому необходимо, чтобы каждый пользователь обновлял приложение как можно чаще. К сожалению, все еще поступают сообщения об ошибках из очень старых версий, поэтому это попытка повысить безопасность каждого пользователя и всего сообщества. Благодарим за понимание!
 
+Version 2.6.1.2
+================
+Release date: 19-04-2020
+
+Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
+
+Новые возможности
+-----
+* Fix crashing in Insight service
+* Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
+
+Version 2.6.1.1
+================
+Release date: 06-04-2020
+
+Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
+
+Новые возможности
+-----
+* Resolves SMS CARBS command issue while using Combo pump
+* Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
+
 Версия 2.6.1
 ==============
 Дата выпуска: 21-03-2020
