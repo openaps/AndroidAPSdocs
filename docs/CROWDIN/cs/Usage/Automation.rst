@@ -1,22 +1,22 @@
-Automatizace
+Automation
 **************************************************
 
-Co je automatizace
+What is Automation
 ==================================================
-Může se stát, že pro tytéž často se opakující události budete měnit tatáž nastavení. Chcete-li se vyhnout nadbytečným úkonům, můžete se pokusit tyto události zautomatizovat, pokud je dokážete dostatečně jasně specifikovat. 
+For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. 
 
-Např. když je glykémie příliš nízká, můžete si nechat automaticky nastavit vyšší dočasný cíl. Nebo když se budete nacházet ve fitness centru, automaticky se nastaví dočasný cíl. 
+Π.χ. when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. 
 
-Dříve než použijete Automatizaci, měli byste ovládat ruční nastavování dočasných cílů <./temptarget.html>`_ nebo přepínání profilu. 
+Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
 
 Make sure you really understand how automation works before setting up your first simple rule. **Instead of action let AAPS display only notification.** When you are sure automation is triggered at the right time replace notification by real action.
 
 .. image:: ../images/Automation_ConditionAction_RC3.png
-  :alt: Automatizace – podmínka + akce
+  :alt: Automation condition + action
 
-Jak to používat
+How to use it
 ==================================================
-Chcete-li nastavit automatizaci, musíte ji pojmenovat a vybrat alespoň jednu podmínku a jednu akci. 
+To set up an automation, you have to give it a title, select at least one condition and one action. 
 
 Important note
 --------------------------------------------------
@@ -27,61 +27,61 @@ So make sure to deactivate Automation rules during these occations if neccessary
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Activate and deactivaten automation rule
 
-Obecné
+Γενικά
 --------------------------------------------------
-Existují určitá omezení:
+There are some limits:
 
-* Hodnota glykémie musí být v rozmezí 4 až 15 mmol/l.
-* Procentuální hodnota profilu musí být mezi 70 % a 130%.
-* Je tam 5 min. časový limit mezi provedeními (a prvním provedením).
+* The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
+* The profile percentage has to be between 70 % and 130%.
+* There is a 5 min. time limit between executions (and first execution).
 
-**Buďte prosím opatrní:**
+**Please be careful:**
 
-* **méně než -2 znamená: -3 a nižší (-4,-10 atd.)**
-* **více než -2 znamená: -1 a vyšší (-1, 0, +10 atd.)**
+* **less than -2 means: -3 and lower (-4,-10, etc)**
+* **more than -2 means: -1 and higher (-1, 0, +10, etc)**
 
 
-Podmínka
+Condition
 --------------------------------------------------
-Můžete si vybrat mezi několika podmínkami. Některé věci jsou zde vysvětleny, ale většina z nich by měla být snadno srozumitelná a není zde popsána:
+You can choose between several conditions. Here are some things explained, but most of it should be easy to understand and is not all described here:
 
-* spojování podmínek: můžete mít několik podmínek, které navzájem spojíte pomocí operátorů 
+* connect conditions: you can have several conditions and can connect them with 
 
-   * „A“
-   * „Nebo“
-   * „Exkluzivní nebo“ (což znamená, že pokud nastane jedna (a pouze jedna) z podmínek, bude provedena akce)
+   * "And"
+   * "Or"
+   * "Exclusive or" (which means that if one (and only one of the) conditions applies, the action(s) will happen)
    
-* Čas vs. opakující se čas
+* Time vs. recurring time
 
-   * čas =  jednorázová událost
-   * opakující se čas = něco, co se děje pravidelně (tj. jednou týdně, každý pracovní den apod.)
+   * time =  single time event
+   * recurring time = something that happens regulalrly (i.e. once a week, every working day etc.)
    
-* poloha: na kartě Konfigurace (Automatizace) můžete vybrat, kterou službu určování polohy chcete používat:
+* location: in the config builder (Automation), you can select which location service you want to use:
 
-  * Používat pasivní polohu: AAPS zjistí polohu pouze v případě, že ji budou požadovat ostatní aplikace
-  * Používat zjištění polohy podle sítě: Poloha podle vaší sítě Wifi
+  * Use passive location: AAPS only takes locations if other apps are requesting it
+  * Use network location: Location of your Wifi
   * Use GPS location (Attention! May cause excessive battery drain!)
   
-Akce
+Action
 --------------------------------------------------
-Můžete si vybrat jednu nebo více akcí: 
+You can choose one or more actions: 
 
-* spustit dočasný cíl 
+* start temp target 
 
-   * musí být v rozmezí 4 mmol/l a 15 mmol/l
-   * funguje pouze tehdy, není-li již spuštěn jiný dočasný cíl
+   * must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
+   * works only if there is no previous temp target
    
-* zastavit dočasný cíl
-* oznámení
-* procento profilu
+* stop temp target
+* notification
+* profile percentage
 
-   * musí být mezi 70 % a 130 % 
-   * funguje pouze v případě, že předchozí procento profilu bylo 100 %
+   * must be between 70% and 130% 
+   * works only if the previous percentage is 100%
 
-Po přidání akce kliknutím na výchozí hodnoty **nezapomeňte změnit výchozí hodnoty** na to, co potřebujete.
+After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
  
 .. image:: ../images/Automation_Default_V2_5.png
-  :alt: Výchozí hodnoty automatizace vs. nastavené hodnoty
+  :alt: Automation default vs. set values
 
 Sort automation rules
 -----
@@ -115,27 +115,27 @@ Good practice & caveats
     * You have to make another rule to set this back or do it manually!
     * Increased risk of Hypoglycemia if profile switch does not expire or reset back to base profile.
 
-Příklady
+Examples
 ==================================================
-Toto jsou jen příklady, žádné rady. Nesnažte se je reprodukovat, aniž byste si uvědomovali, co vlastně děláte nebo proč je potřebujete. See below for two examples with screenshots.
+These are just set up examples, no advises. Don't reproduce it without being aware what you are actually doing or why you need these. See below for two examples with screenshots.
 
 * Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
 * Setting temp target for activities based on time, location...
 * Setting eating soon temp targets based on time, location...
 
-Dočasný cíl při nízké glykémii
+Low Glucose Temp Target
 --------------------------------------------------
 .. image:: ../images/Automation2.png
-  :alt: Automatizace 2
+  :alt: Automation2
 
-Toto nastavení má osoba, která chce, aby se při hypoglykémii automaticky spustil dočasný cíl „Hypoglykémie“.
+This is made by a person that wants to get an automatically hypo temp target when having a hypo.
 
-Dočasný cíl v době oběda
+Lunch Time Temp Target
 --------------------------------------------------
 .. image:: ../images/Automation3.png
-  :alt: Automatizace 3
+  :alt: Automation3
   
-Toto je ukázkové nastavení osoby, která během týdne mívá oběd ve stejnou dobu. Pokud se v určitou dobu nachází na místě, kde obvykle obědvá, spustí se při čekání na oběd dočasný cíl „Před jídlem“. Vzhledem k použitému operátoru „A“ se tak stane pouze tehdy, když je splněna podmínka určitého času A polohy. Tato automatizace tedy nefunguje, pokud je osoba v nastaveném místě v jakoukoli jinou dobu, ani když je v nastavenou dobu někde jinde, např. pracuje z domu nebo pracuje přesčas. 
+These example is made by a person, that has lunch at the same time during the week. If it is at a certain time at its lunch location, it gets a lower temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the certain time and the  location. So it does not work at any other time at this location or at this time when the persons stays home or works longer. 
 
 Incorrect use of Automation
 --------------------------------------------------
@@ -147,7 +147,7 @@ As every system Automation can be used incorrectly. This might lead to difficult
 * Creating one way rules (i.e. do something but don't undo it by another rule)
 * Creating long term rules
 
-Alternativy
+Alternatives
 ==================================================
 
-Pokročilí uživatelé mohou využít další možnosti pro automatizaci úloh pomocí IFTTT nebo externí aplikace pro Android zvané Automate. Některé příklady jsou uvedeny v části <./automationwithapp.html>`_.
+For advanced users there are other posibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found `here <./automationwithapp.html>`_.
