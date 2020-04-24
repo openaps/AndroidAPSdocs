@@ -1,11 +1,11 @@
-Telefony
+Teléfonos
 ************
 
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Seznam otestovaných telefonů <../Getting-Started/Phones.md>
-   Nastavení Jelly Pro <../Usage/jelly.md>
-   Nastavení telefonů Huawei <../Usage/huawei.md>
+   Lista de teléfonos probados <../Getting-Started/Phones.md>
+   Ajustes Jelly Pro <../Usage/jelly.md>
+   Ajustes de Huawei <../Usage/huawei.md>
    
