@@ -1,13 +1,13 @@
-Automation
+Automatizavimas
 **************************************************
 
-What is Automation
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
-For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. 
+Kas yra Automatizavimas
+==================================================
+Dėl nuolatinių, pasikartojančių įvykių gali būti, kad visada turite pakeisti tuos pačius parametrus. Norėdami išvengti papildomo darbo, galite pabandyti automatizuoti visą reikalą (jei galite jį pakankamai tiksliai nurodyti). 
 
-I.e. when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. 
+pvz.,  galite sukurti aukšto tikslo veiksmų rinkinį, kuris automatiškai suaktyvinamas, kai gliukozės kiekis kraujyje yra mažas. Arba, jei esate savo sporto klube, laikinas tikslas gali būti suaktyvintas automatiškai. 
 
-Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
+Prieš naudodamiesi automatizavimu, turite išmanyti 'laikinus tikslus <./temptarget.html>`_ ir (arba) profilio keitimą. 
 
 Make sure you really understand how automation works before setting up your first simple rule. **Instead of action let AAPS display only notification.** When you are sure automation is triggered at the right time replace notification by real action.
 
@@ -15,7 +15,7 @@ Make sure you really understand how automation works before setting up your firs
   :alt: Automation condition + action
 
 How to use it
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==================================================
 To set up an automation, you have to give it a title, select at least one condition and one action. 
 
 Important note
@@ -27,7 +27,7 @@ So make sure to deactivate Automation rules during these occations if neccessary
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Activate and deactivaten automation rule
 
-Ogólnie
+Bendrieji
 --------------------------------------------------
 There are some limits:
 
@@ -98,7 +98,7 @@ To delete an automation rule just swipe it left or right.
   :alt: Delete automation rule
 
 Good practice & caveats
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==================================================
 * When you start using Automation or create a new rule add a notification until you are sure the rule is working well.
 * Whatch the rule results.
 * Try not make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg < 180 mg/dl)
@@ -116,7 +116,7 @@ Good practice & caveats
     * Increased risk of Hypoglycemia if profile switch does not expire or reset back to base profile.
 
 Examples
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==================================================
 These are just set up examples, no advises. Don't reproduce it without being aware what you are actually doing or why you need these. See below for two examples with screenshots.
 
 * Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
@@ -148,6 +148,6 @@ As every system Automation can be used incorrectly. This might lead to difficult
 * Creating long term rules
 
 Alternatives
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==================================================
 
 For advanced users there are other posibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found `here <./automationwithapp.html>`_.
