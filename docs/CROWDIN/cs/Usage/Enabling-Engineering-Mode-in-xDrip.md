@@ -1,3 +1,3 @@
-Povolením vývojářského režimu v xDrip+ aktivujete rozšířené a experimentální funkce v rámci aplikace.
+La habilitación de la modalidad de ingeniería en xDrip+ activa las características ampliadas y experimentales dentro de la aplicación.
 
-Abyste vývojářský režim povolili, na hlavní stránce xDrip+ ťukněte na ikonu ošetření v pravé části obrazovky (připomíná stříkačku). Pak ťukněte na ikonu mikrofonu v pravé dolní části panelu ošetření. Do textového pole, které se otevře, napište "enable engineering mode" a klikněte na Hotovo. Nebo když je Google Speak aktivní, namluvte příkaz "enable engineering mode". Vývojářský režim je nyní zapnutý.
+Para activar el Modo de Ingeniería, en la pantalla de inicio de xDrip+ toque el icono Tratamiento en el lado derecho de la pantalla (esto se asemeja a una jeringa). A continuación, toque y mantenga el icono del micrófono en la parte inferior derecha de la interfaz Tratamiento. En el recuadro de texto que abre escriba "enable engineering mode" y presione Hecho (Done). O, cuando el motor de Google Speak está activo, diga el comando "enable engineering mode". El modo de ingeniería está ahora activado.
