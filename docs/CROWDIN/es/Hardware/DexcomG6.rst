@@ -33,7 +33,7 @@ Si utiliza G6 con la aplicación Dexcom parcheada
 ==================================================
 * Descargar el apk desde `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, y elegir la versión que más se adapte a sus necesidades (mg/dl o mmol/l versión, G6).
 
-   * Carpeta 2.3 es para los usuarios de AndroidAPS 2.3, carpeta 2.4 para los usuarios de la AAPS 2.5.
+   * Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of the current version.
    * Abrir https://play.google.com/store/search?q=dexcom%20g6 en tu ordenador. La región estará visible en el URL.
    
    .. imagen:: ../images/DexcomG6regionURL.PNG
