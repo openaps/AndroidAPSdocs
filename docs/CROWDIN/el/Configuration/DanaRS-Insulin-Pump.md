@@ -1,69 +1,69 @@
-# DanaRS Insulinpumpe
+# Αντλία DanaRS
 
-*Diese Anleitung beschreibt die Einrichtung der App und deiner Pumpe wenn du eine Dana RS (ab 2017) verwendest. Gehe zu [DanaR Insulinpumpe](./DanaR-Insulin-Pump) wenn du die Original DanaR benutzt.*
+*Αυτές οι οδηγίες αφορούν τη διαμόρφωση της εφαρμογής και της αντλίας σας εάν έχετε μια DanaRS από το 2017 και μετά. Επισκεφθείτε την  DanaR Αντλία Ινσουλίνης </ 0> αν έχετε την DanaR αντλία.</em></p> 
 
-**Die DanaRS mit neuer Firmware v3 kann derzeit nicht mit AndroidAPS verwendet werden!**
+**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
 
-* Bei der DanaRS wird das Basalprofil "BASAL A" von AAPS verwendet. Eventuell in der Pumpe vorhandene Einträge in diesem Profil werden überschrieben.
+* Στην αντλία DanaRS χρησιμοποιείται η εφαρμογή "βασικός ρυθμός Α". Τα υπάρχοντα δεδομένα αντικαθίστανται.
 
-* Gehe in AndroidAPS zu "KONFIGURATION".
+* Στο AndroidAPS μεταβείτε στη Διαμόρφωση και επιλέξτε 'DanaRS'
 
-* Klicke auf die drei Punkte rechts oben, um das Menü zu öffnen. Klicke auf Einstellungen.
+* Επιλέξτε Μενού αγγίζοντας τις 3 τελείες στην επάνω δεξιά γωνία. Επιλέξτε Προτιμήσεις.
 
-* Klicke im Abschnitt "DanaRS" auf "Verbinde neue Pumpe" und gib die Seriennummer (Unterseite der Pumpe gegenüber dem Reservoir- und Batteriedeckel) deiner DanaRS ein.
+* Επιλέξτε τη νέα αντλία DanaRS και κάντε κλικ στον σειριακό αριθμό της DanaRS.
   
       ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
       
 
-* Wähle "Pumpen-Passwort" und gib das Passwort ein. (Das Standardpasswort ist 1234.)   
-  ** Du musst das Pairing auf der Pumpe bestätigen!** Genau so wie Du es von anderen Bluetooth Verbindungen (z.B. Smartphone und Auto-Multimediasystem) kennst.
+* Επιλέξτε τον κωδικό αντλίας και εισαγάγετε τον κωδικό πρόσβασης σας. (Ο προεπιλεγμένος κωδικός πρόσβασης είναι 1234)   
+  ** Πρέπει να επιβεβαιώσετε την σύζευξη στην αντλία! ** Αυτός είναι ο τρόπος με τον οποίο συνηθίζετε να κάνετε και άλλες συνδέσεις bluetooth (δηλαδή smartphone και ηχείο αυτοκινήτου).
   
       ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
       
 
-* Klicke auf "Bolus-Geschwindigkeit" um die gewünschte Abgabegeschwindigkeit (12 s/1 IE, 30 s/1 IE oder 60 s/1 IE) einzustellen.
+* Επιλέξτε ταχύτητα Bolus ​​για να αλλάξετε την προεπιλεγμένη ταχύτητα bolus (12sec ανά 1u, 30sec ανά 1u ή 60sec ανά 1u).
 
-* Starte dein Smartphone neu.
+* Επανεκκινήστε το τηλέφωνό σας.
 
-* Stelle im Arztmenü auf der Pumpe (siehe Bedienungsanleitung der DanaRS) die Basalschritte auf 0,01 IE/h.
+* Ρυθμίστε το βασικό βήμα στην αντλία σε 0,01 U / h χρησιμοποιώντας το μενού Γιατροί (δείτε το εγχειρίδιο χρήσης της αντλίας)
 
-* Erlaube verzögerte Boli auf der Pumpe (Bolus Einstellungen -> V Bolus: EIN).
+* Ενεργοποιήστε τα εκτεταμένα bolus στην αντλία
 
-## Dana RS spezifische Fehler
+## Συγκεκριμένες βλάβες της Dana Rs
 
-### Fehler bei der Insulinabgabe
+### Βλάβη κατά την χορήγηση ινσουλίνης
 
-Falls die Verbindung zwischen AAPS und der Dana RS während der Insulinabgabe abbricht (z.B. weil du dich vom Smartphone entfernst, während die Dana RS Insulin abgibt) wird die folgende Meldung angezeigt und ein Alarmton abgegeben.
+In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
-![Alarm Abgabefehler](../images/DanaRS_Error_bolus.png)
+![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
-* In den meisten Fällen handelt es sich nur um ein Kommunikationsproblem und es wurde tatsächlich die korrekte Insulinmenge abgegeben.
-* Prüfe in der Historie der Dana RS (entweder direkt in der Pumpe oder über den Dana Tab > Pumpen-Speicher > Boli), ob die korrekte Bolusmenge abgegeben wurde.
-* Den Fehler kannst Du, falls gewünscht, im CP (Careportal) Tab löschen.
-* Die tatsächlich abgegebene Insulinmenge wird bei der nächsten Verbindung zwischen AAPS und Dana RS ausgelesen. Um eine Verbindung manuell herzustellen, drücke das Bluetooth Icon auf dem Dana Tab oder warte einfach auf die nächste Verbindung.
+* Στις περισσότερες περιπτώσεις πρόκειται για θέμα επικοινωνίας και παρέχεται η σωστή ποσότητα ινσουλίνης.
+* Ελέγξτε το ιστορικό της αντλίας (είτε στην αντλία είτε μέσω της καρτέλας Dana> ιστορικό αντλίας> boluses) αν έχει δοθεί σωστό bolus.
+* Διαγράψτε την καταχώρηση σφάλματος στην καρτέλα CP αν θέλετε.
+* Το πραγματικό ποσό διαβάζεται και καταγράφεται στην επόμενη σύνδεση. Για να ενεργοποιήσετε αυτό, πατήστε το εικονιδίο BT στην καρτέλα dana ή απλά περιμένετε την επόμενη σύνδεση.
 
-## Wichtiger Hinweis beim Wechsel des Smartphones
+## Ειδική σημείωση για την αλλαγή τηλεφώνου
 
-Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
+When switching to a new phone the following steps are neccessary:
 
-* **Exportiere die Einstellungen** auf Deinem alten Smartphone
+* ** Εξαγωγή ρυθμίσεων ** στο παλιό σας τηλέφωνο
   
-  * Hamburger Menü (drei Striche oben links am Bildschirm)
-  * Wartung
-  * Exportiere die Einstellungen
+  * Μενού Hamburger (στην πάνω αριστερή γωνία της οθόνης)
+  * Συντήρηση
+  * Ρυθμίσεις εξαγωγής
     
-    ![AAPS Einstellungen exportieren](../images/AAPS_ExportSettings.png)
+    ![Ρυθμίσεις εξαγωγής AAPS](../images/AAPS_ExportSettings.png)
 
-* **Übertrage** die exportierten Einstellungen vom alten auf das neue Smartphone
+* ** Μεταφορά ** από παλιό σε νέο τηλέφωνο
 
-* **Verbinde** die Dana RS und das neue Smartphone manuell (Bluetooth-Verbindung) 
-  * Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Daher müssen das neue Smartphone und die Pumpe manuell verbunden werden.
-* **Installiere AndroidAPS** auf dem neuen Smartphone.
-* **Importiere die Einstellungen** auf Deinem neuen Smartphone 
-  * Hamburger Menü (drei Striche oben links am Bildschirm)
-  * Wartung
-  * Einstellungen importieren
+* **Χειροκίνητη σύζευξη** Dana RS με νέο τηλέφωνο 
+  * Καθώς η σύνδεση της αντλίας εισάγετε, το AAPS στο νέο τηλέφωνο θα ξέρει ήδη την αντλία και για αυτό δεν χρειάζεται ξανά σκανάρισμα με bluetooth. Συνεπώς, το νέο τηλέφωνο και η αντλία πρέπει να ζευγαρώσουν χειροκίνητα.
+* ** Εγκαταστήστε το AndroidAPS ** στο νέο τηλέφωνο.
+* **Ρυθμίσεις εισαγωγής** στο νέο τηλέφωνο 
+  * Μενού Hamburger (στην πάνω αριστερή γωνία της οθόνης)
+  * Συντήρηση
+  * Ρυθμίσεις εισαγωγής
 
-## Mit der Dana RS Pumpe über Zeitzonen hinweg reisen
+## Ταξιδεύοντας σε διαφορετικές ζώνες ώρας με την Dana Rs
 
-Für allgemeine Informationen siehe die Seite [Mit der Pumpe über Zeitzonen hinweg reisen](../Usage/Timezone-traveling#danarv2-danars).
+Για πληροφορίες σχετικά με τη μετακίνηση σε ζώνες ώρας, ανατρέξτε στην ενότητα [Ζώνη ώρας που ταξιδεύει με αντλίες](../Usage/Timezone-traveling#danarv2-danars).
