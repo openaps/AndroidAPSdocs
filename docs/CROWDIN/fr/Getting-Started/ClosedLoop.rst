@@ -1,55 +1,55 @@
-Co je systém uzavřené smyčky?
+Qu'est ce qu'un Système de boucle fermée ?
 **************************************************
 
 .. image:: ../images/autopilot.png
-  :alt: AAPS je jako autopilot
+  :alt: AAPS est comme un pilote automatique
 
-Systém uzavřené smyčky APS využívá kombinaci různých komponent, aby vám usnadnil management diabetu. 
-Dana M. Lewis, jedna za zakladatelek hnutí pro open source uzavřenou smyčku, jej ve své skvělé knize `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ přirovnává k „autopilotu pro váš diabetes“<https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. Co to však znamená?
+Un système de boucle fermée du pancréas artificiel combine différents composants afin de vous faciliter la gestion du diabète. 
+Dans son grand livre `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, une des fondatrices du mouvement "Open Source closed loop" (Boucle fermée en open Source), appelle cela `"pilote automatique pour votre diabète" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. Mais qu'est-ce que cela signifie ?
 
-**Autopilot v letadle**
+**Pilot automatique dans un avion**
 
-Autopilot nedělá úplně všechno a neumožňuje skutečnému pilotovi, abys celý let prospal. Pouze mu pomáhá při jeho práci. Ulevuje mu od zátěže způsobené nutností neustále monitorovat funkce letadla a sledovat letovou hladinu. Pilot se tak může soustředit na sledování letového prostoru a kontrolu funkcí autopilota.
+Le pilote automatique ne fait pas le travail complet et ne donne pas la possibilité au pilote de dormir pendant tout le vol. Il facilite le travail des pilotes. Il les soulage de la charge de la surveillance permanente de l'avion et de l'attitude de vol. Cela permet au pilote de se concentrer sur la surveillance de l'espace aérien et le contrôle des fonctions du pilote automatique.
 
-Autopilot dostává signály od mnoha různých senzorů, počítač je následně vyhodnocuje společně se zadanými specifikacemi od pilota a nakonec provede potřebné korekce. Pilot se tak již nemusí zabývat neustálými drobnými úpravami.
+Le pilote automatique reçoit des signaux de différents capteurs, un ordinateur les évalue avec les spécifications du pilote et effectue ensuite les ajustements nécessaires. Le pilote n'a plus à s'inquiéter des ajustements constants.
 
-**Systém uzavřené smyčky**
+**Système de boucle fermée**
 
-Totéž platí pro systém uzavřené smyčky APS. Nedělá úplně všechno, stále se musíte o svůj diabetes starat vy sami. Systém uzavřené smyčky využívá data ze senzorů CGM/FGM v kombinaci s vašimi specifikacemi, jako jsou bazální dávky, citlivost na inzulin a inzulino-sacharidový poměr. Na základě toho pak vypočítává návrhy, jak upravit léčbu, a provádí tyto neustále drobné změny tak, aby udržel vaší glykémii v cílovém rozmezí a vy jste s nimi neměli tolik práce. Získáte tak více času na život „mimo diabetes“.
+Il en va de même pour un système de boucle fermée du pancréas artificiel. Il ne fait pas tout le travail, vous devez toujours faire attention à votre diabète. Un système de boucle fermée combine les données du capteur d'une MGC/MGF avec vos spécifications de gestion du diabète telles que le taux de basal, le facteur de sensibilité à l'insuline (SI) et le ratio du glucides/insuline (G/I). De cette façon, il calcule les propositions de traitements et implémente ces petits ajustements permanents afin de garder votre diabète dans la plage cible et vous soulager. Cela vous laisse plus de temps pour votre vie "à côté" du diabète.
 
-Stejně jako byste nenastoupili do letadla, které by řídil pouze autopilot bez dohledu živého pilota, tak i systém uzavřené smyčky vám sice usnadní management vašeho diabetu, ale stále vyžaduje vaši pozornost a podporu! **Ani s uzavřenou smyčkou nemůžete na svůj diabetes zcela zapomenout!**
+Tout comme vous ne voudriez pas monter dans un avion où seul un pilote automatique vole sans surveillance humaine, un système de boucle fermée vous aide à gérer votre diabète, mais a toujours besoin de votre soutien! **Même avec une boucle fermée, vous ne pouvez pas simplement oublier votre diabète !**
 
-Stejně jako autopilot závisí na hodnotách ze senzorů i specifikacích pilota, tak i systém uzavřené smyčky potřebuje správné údaje jako bazály, ISF a sacharidový poměr, aby vám mohl dobře pomáhat.
+Tout comme le pilote automatique dépend des valeurs du capteur ainsi que des spécifications du pilote, un système de boucle fermée nécessite des entrées adaptées, telles que les débits de basal, la SI et le rapport G/I, pour vous aider à réussir.
 
 
-Open source systémy uzavřené smyčky APS
+Systèmes de boucle fermée de pancréas artificiels en Open Source
 ==================================================
-V současnosti jsou k dispozici tři hlavní oper source systémy uzavřené smyčky:
+À l'heure actuelle, il existe trois grands systèmes de boucle fermée en Open Source :
 
 AndroidAPS (AAPS)
 --------------------------------------------------
-Systém AndroidAPS je podrobně popsán v `této dokumentaci <./WhatisAndroidAPS.html>`_. Pro výpočty a ovládání inzulinové pumpy využívá smartphone se systémem Android. Vývojáři úzce spolupracují s OpenAPS (tzn. používají stejné algoritmy).
+AndroidAPS est décrit en détail dans `cette documentation <./WhatisAndroidAPS.html>`_. Il utilise un Smartphone Android pour le calcul et le contrôle de votre pompe à insuline. Il est en étroite collaboration avec OpenAPS (par ex. ils partagent les algorithmes).
 
-Kompatibilní pumpy jsou:
+Les `pompes <../Hardware/pumps.html>`_ compatibles sont :
 
 * DanaR / DanaRS
 * Accu-Chek Combo
 * Accu-Chek Insight
-* některé staré pumpy Medtronic (verze 2.4)
+* quelques anciennes pompes Medtronic (à partir de la version 2.4)
 
 OpenAPS
 --------------------------------------------------
-`OpenAPS <https://openaps.readthedocs.io>`_ byl první open source systém uzavřené smyčky. Používá malý počítač, jako je Raspberry Pi nebo Intel Edison.
+`OpenAPS <https://openaps.readthedocs.io>`_ a été le premier système de boucle fermée Open Source. Il utilise un petit ordinateur comme un Raspberry Pi ou un Intel Edison.
 
-Kompatibilní pumpy jsou:
+Les pompes compatibles sont :
 
-* některé staré pumpy Medtronic
+* quelques anciennes pompes Medtronic
 
-Loop pro iOS
+Loop pour iOS
 --------------------------------------------------
-`Loop for iOS <https://loopkit.github.io/loopdocs/>`_ je open source systém uzavřené smyčky pro zařízení Apple iPhone.
+`Loop pour iOS <https://loopkit.github.io/loopdocs/>`_ est le système de boucle fermée Open Source à utiliser avec un iPhone Apple.
 
-Kompatibilní pumpy jsou:
+Les pompes compatibles sont :
 
 * Omnipod
-* některé staré pumpy Medtronic
+* quelques anciennes pompes Medtronic
