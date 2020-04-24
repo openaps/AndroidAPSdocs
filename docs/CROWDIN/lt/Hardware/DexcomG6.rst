@@ -33,7 +33,7 @@ Kai naudojate G6 su modifikuota Dexcom programa
 ==================================================
 * Atsisiųskite programą iš `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>` _ ir pasirinkite versiją pagal savo poreikius (mg/dl arba mmol/l, G6).
 
-   * Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of the current version.
+   * Folder 2.4 for users of the current version, folder 2.3 is only for the outdated AndroidAPS 2.3.
    * Atidarykite https://play.google.com/store/search?q=dexcom%20g6 savo kompiuteryje. Regionas bus matomas URL adrese.
    
    .. nuotrauka:: ../images/DexcomG6regionURL.PNG
