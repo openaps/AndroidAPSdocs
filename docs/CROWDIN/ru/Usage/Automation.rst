@@ -9,7 +9,7 @@
 
 Перед использованием автоматизации следует уверенно овладеть ручным управлением ` временными целями <./temptarget.html> ` _ или переключением профиля. 
 
-Make sure you really understand how automation works before setting up your first simple rule. **Instead of action let AAPS display only notification.** When you are sure automation is triggered at the right time replace notification by real action.
+Убедитесь, что вы понимаете, как работает автоматизация перед настройкой первого простого правила. ** Вместо действий разрешите AAPS только показывать уведомления. * * Если вы уверены, что автоматизация инициируется в нужное время, замените уведомление реальным действием.
 
 .. изображение:: ../images/Automation_ConditionAction_RC3.png
   :alt: условие автоматизации + действие
