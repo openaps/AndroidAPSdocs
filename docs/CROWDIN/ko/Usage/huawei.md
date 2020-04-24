@@ -1,36 +1,36 @@
-# Πώς να διαμορφώσετε ένα τηλέφωνο Huawei
+# How-to configure a Huawei phone
 
-Υπάρχουν διάφορες επιλογές, μερικές συγκεκριμένες για Android, μερικές συγκεκριμένες για Huawei:
+There are different options, some Android specific, some Huawei specific:
 
-* Προσθέστε τα AndroidAPS και xdrip + στη λίστα εφαρμογών που αγνοούν τις βελτιστοποιήσεις της μπαταρίας:
+* Add AndroidAPS and xdrip+ to apps list which ignore battery optimisations:
   
-  * Ρυθμίσεις / Εφαρμογές / Ρυθμίσεις / Ειδικές εξουσιοδοτήσεις / Παράβλεψη βελτιστοποίησης μπαταρίας / Επιλέξτε "Όλες οι εφαρμογές" / Ρυθμίστε την εφαρμογή σε επιτρεπτή
+  * Settings / App / Settings / Special autorisations / Ignore battery optimisation / Select "All applications" / Set app to allowed
     
-    ![Huawei - αγνοήστε τη βελτιστοποίηση της μπαταρίας](../images/Huawei_BatteryOptimization.png)
+    ![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
 
-* Ρύθμιση των επιλογών της μπαταρίας:
+* Set battery option settings:
   
-  * Ρυθμίσεις / Εφαρμογές / Επιλογή AndroidAPS / xdrip + / Κάτω από την μπαταρία / Εκκίνηση εφαρμογής
+  * Settings / App / Select AndroidAPS/xdrip+ / Under Battery / App launch
     
-    * Βεβαιωθείτε ότι έχετε καταργήσει την "αυτόματη διαχείριση"
-    * Επιτρέψτε:
+    * Make sure to remove "automatic management"
+    * Allow:
       
-      * Αυτόματη εκκίνηση
-      * Δευτερεύων εκκίνηση( μπορεί να ξεκινήσει από άλλες εφαρμογές)
-      * Εκτέλεση στο υπόβαθρου
+      * Automatic launch
+      * Secondary launch (can be launched from other apps)
+      * Background run
         
-        ![Huawei - επιλογές μπαταριών](../images/Huawei_BatteryOptions.png)
+        ![Huawei - battery options](../images/Huawei_BatteryOptions.png)
 
-* Κλείδωσε εφαρμογή
+* Lock App
   
-  * Μεταβείτε στην τελευταία λίστα εφαρμογής και επιλέξτε το εικονίδιο κλειδώματος
+  * Go into App recent list and select the lock icon
     
-    ![Huawei - κλείδωμα εφαρμογής](../images/Huawei_LockApp.png)
+    ![Huawei - lock app](../images/Huawei_LockApp.png)
 
-Για το xdrip +, μπορείτε επίσης να ενεργοποιήσετε τις επακόλουθες ειδοποιήσεις (εντός xdrip + εφαρμογής):
+For xdrip+, you can also enable persitent notifications (within xdrip+ app):
 
-* Ρυθμίσεις / Λιγότερο κοινές ρυθμίσεις / άλλες επιλογές misc / Run Collector στο προσκήνιο
+* Setttings / less common settings / other misc options / Run Collector in foreground
   
-  ![xdrip + ρυθμίσεις - συλλέκτης στο προσκήνιο](../images/xdrip_collector_foreground.png)
+  ![xdrip+ settings - collector in foreground](../images/xdrip_collector_foreground.png)
 
-Ανάλογα με την έκδοση Android, αυτές οι ρυθμίσεις είναι κάπου αλλού. Αυτές οι εξηγήσεις αφορούν το Android 8.1.
+Depending on Android version, these settings are somewhere else. These explanations are for Android 8.1.
