@@ -33,7 +33,7 @@ If using G6 with xDrip+
 ==================================================
 * Κάντε λήψη του apk από <https://github.com/dexcomapp/dexcomapp> https://github.com/dexcomapp/dexcomapp και επιλέξτε την έκδοση που ταιριάζει στις ανάγκες σας (mg / dl ή mmol / l, G6).
 
-   * Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of the current version.
+   * Folder 2.4 for users of the current version, folder 2.3 is only for the outdated AndroidAPS 2.3.
    * Ανοίξτε https://play.google.com/store/search?q=dexcom%20g6 στον υπολογιστή σας. Η περιοχή θα είναι ορατή στη διεύθυνση URL.
    
    .. εικόνα:: ../images/DexcomG6regionURL.PNG
