@@ -2,13 +2,13 @@
 
 **Эта статья была написана перед появлением AndroidAPS версии 2.5. В AndroidAPS 2.5. теперь есть [ модуль автоматизации ](./Automation.rst). Таким образом, это описание может быть полезно, но только для опытных пользователей.**
 
-As AndroidAPS is a hybrid closed loop system, some user interaction is necessary though (e.g. tell the loop that you are walking, eating soon, lying on the sofa...). Frequent manual user inputs can be automated via external tools like Automate or IFTTT to extend the recent AndroidAPS functionality.
+Так как AndroidAPS-гибридная замкнутая система замкнутого цикла, необходимо некоторое взаимодействие с пользователем (например, подсказки алгоритму, что вы гуляли, ожидаете приема пищи, лежите на диване ...). Часто вводимые вручную пользовательские данные можно автоматизировать с помощью таких внешних инструментов, как Automate или IFTTT, что расширяет функциональность AndroidAPS.
 
-## Android Automate App
+## Приложение Android Automate
 
-The free Android™ application Automate lets you automate various tasks on your smartphone. Create your automations with flowcharts, make your device automatically change settings like Bluetooth, Wi-Fi, NFC or perform actions like sending SMS, e-mail, based on your location, the time of day, or any other “event trigger”. You can automate almost everything on your device, Automate even support plug-ins made for Tasker and Locale.
+Бесплатное приложение Android™ Automate позволяет автоматизировать различные задачи на смартфоне. Создайте свои автоматизации с поточными диаграммами, чтобы ваше устройство автоматически изменяло такие настройки, как Bluetooth, Wi-Fi, NFC, или выполнять такие действия, как отправка SMS, электронной почты, на основе вашего положения, времени суток или любого другого "инициатора событий". Вы можете автоматизировать практически все на своем устройстве, Automate поддерживает даже вспомогательные модули, сделанные для Tasker и Locale.
 
-Using this tool you can easily create workflows to auto-treat your diabetes based on several conditions according to the principle of 'if this... and this... not this..., then do that... and that...'. There are thousands of possibilities you can configure.
+С помощью этого инструмента вы можете легко создавать рабочие потоки для автоматического лечения диабета на основе нескольких условий в соответствии с принципом ' если это, то... И это ... not this..., then do that... and that...'. There are thousands of possibilities you can configure.
 
 Until now it is **necessary to loop via Nightscout Profile**, as Automate executes the commands via HTTP-request directly in your nightscout website that subsequently syncs it to your AndroidAPS app.
 
