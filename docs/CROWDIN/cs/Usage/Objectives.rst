@@ -54,7 +54,7 @@ Pro snížení počtu rozhodnutí, která mají být provedena v režimu otevře
 * V Předvolbách můžete nastavit minimální procento navrhované změny bazální dávky.
 
    .. image:: ../images/OpenLoop_MinimalRequestChange2.png
-     :alt: Open Loop minimal request change
+     :alt: Minimální změna pro požadavek Open Loop
      
 * Navíc, nemusíte reagovat každých 5 minut na všechna doporučení…
 
