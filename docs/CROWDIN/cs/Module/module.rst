@@ -35,7 +35,7 @@ Inhibitory SGLT-2, též nazývané glifloziny, inhibují reabsorpci glukózy v 
 
 Telefon
 --------------------------------------------------
-Potřebujete telefon s Androidem s operačním systémem Google Android 6.0 a novějším. Next major version AndroidAPS 2.7 will only support Android 7 and above. So if you are thinking about a new phone, Android 8.1 is recommended at least but optimicaly Android 9 or 10.
+Potřebujete telefon s Androidem s operačním systémem Google Android 6.0 a novějším. Další hlavní verze AndroidAPS 2.7 bude podporovat pouze Android 7 a vyšší. Takže pokud přemýšlíte o novém telefonu, doporučuje se Android 8.1, ale optimisticky Android 9 nebo 10.
 
 Uživatelé průběžné doplňují `seznam otestovaných telefonů a hodinek <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
@@ -50,7 +50,7 @@ AndroidAPS **v současné době** funguje s
 - `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (vyžaduje navíc: aplikaci Ruffy, LineageOS nebo Android 8.1 nainstalované v telefonu)
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
-- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_ (except pumps with new firmware v3) 
+-`DanaRS <../Configuration/DanaS-Insulin-Pump.html>`_ (s výjimkou čerpadel s novým firmwarem v3) 
 - `některé staré pumpy Medtronic <../Configuration/MedtronicPump.html>`_ od připravované verze 2.4 (vyžaduje navíc: hardware RileyLink/Gnarl, telefon s Androidem s čipovou sadou s BLE)
 
 **Ostatní pumpy**, které potenciálně mohou fungovat s AndroidAPS, jsou uvedeny na stránce `Pumpy potenciálně použitelné v budoucnu <../Getting-Started/Future-possible-Pump-Drivers.html>`_.

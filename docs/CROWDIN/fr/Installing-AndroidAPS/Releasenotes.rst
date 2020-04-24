@@ -13,6 +13,28 @@ Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à par
 
 Veuillez comprendre que cette modification n'a pas pour but de vous corriger mais est due à des raisons de sécurité. Les nouvelles versions d'AndroidAPS fournissent non seulement de nouvelles fonctionnalités, mais aussi d'importants correctifs de sécurité. Il est donc nécessaire que chaque utilisateur mette à jour a.s.a.p.. Malheureusement, il y a toujours des remontés de bug provenant de très anciennes versions, donc il s'agit d'une tentative d'améliorer la sécurité pour chaque utilisateur et toute la communauté DIY. Merci pour votre compréhension.
 
+Version 2.6.1.2
+================
+Release date: 19-04-2020
+
+Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
+
+Nouvelles fonctionnalités majeures
+-----
+* Fix crashing in Insight service
+* Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
+
+Version 2.6.1.1
+================
+Release date: 06-04-2020
+
+Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
+
+Nouvelles fonctionnalités majeures
+-----
+* Resolves SMS CARBS command issue while using Combo pump
+* Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
+
 Version 2.6.1
 ==============
 Date de sortie : 21-03-2020

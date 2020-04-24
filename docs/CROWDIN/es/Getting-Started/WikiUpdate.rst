@@ -34,7 +34,7 @@ Diciembre 2019
 * `Watchface complications <../Configuration/Watchfaces.html#complications>`_ - use your favorite watchface with AAPS data
 Noviembre 2019
 ==================================================
-* `Automatización - desactivación cuando se deshabilita el lazo <../Usage/Automation.html#important-note>`_
+* `Automation - deactivate when disabling loop <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 reemplazar actualización de transmisor <../Configuration/xdrip.html#replace-transmitter>`_
 * `Bolos ampliados - por qué no funcionan en un contexto de bucle <../Usage/Extended-Carbs.html#extended-bolus>` _
 * ` FAQ - deportes <../Getting-Started/FAQ.html#sports>`_

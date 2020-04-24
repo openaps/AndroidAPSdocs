@@ -23,7 +23,7 @@ Jestliže jste začali používat ovladač Medtronic, zapište se prosím na ten
     - 523/723 (firmware 2.4A nebo nižší)
     - 554/754 EU verze (firmware 2.6A nebo nižší)
     - 554/754 verze pro Kanadu (firmware 2.7A nebo nižší)
-- Check for firmware is described in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) and [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
+- Zkontrolujte, zda je firmware popsán v souboru [ OpenAPS docs ](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) a [ LoopDocs ](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
 ## Nastavení pumpy
 

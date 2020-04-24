@@ -13,6 +13,28 @@ You will receive the following information as soon as a new update is available:
 
 Σας παρακαλούμε να καταλάβετε ότι αυτή η αλλαγή δεν έχει σκοπό να σας δυσκολέψει, αλλά γίνετε για λόγους ασφαλείας. Οι νέες εκδόσεις του AndroidAPS δεν παρέχουν μόνο νέες λειτουργίες αλλά και σημαντικές διορθώσεις ασφαλείας. Ως εκ τούτου, είναι απαραίτητο κάθε χρήστης να ενημερώνει όσων το δυνατό πιο γρήγορα.. Δυστυχώς υπάρχουν ακόμα αναφορές σφαλμάτων από πολύ παλιές εκδόσεις, γι 'αυτό προσπαθείστε να βελτιώσετε την ασφάλεια για κάθε χρήστη και ολόκληρη την κοινότητα του DIY. Ευχαριστώ για την κατανόηση.
 
+Version 2.6.1.2
+================
+Release date: 19-04-2020
+
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+Σημαντικά νέα χαρακτηριστικά
+-----
+* Fix crashing in Insight service
+* Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
+
+Version 2.6.1.1
+================
+Release date: 06-04-2020
+
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+Σημαντικά νέα χαρακτηριστικά
+-----
+* Resolves SMS CARBS command issue while using Combo pump
+* Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
+
 Version 2.6.1
 ==============
 Release date: 21-03-2020
