@@ -9,7 +9,7 @@ Par ex. lorsque votre Gly est trop faible, vous pouvez décider d'avoir automati
 
 Avant d'utiliser l'Automatisation, vous devez être à l'aise avec l'utilisation des cibles temp. <./temptarget.html>`_ ou les changements de profil. 
 
-Make sure you really understand how automation works before setting up your first simple rule. **Instead of action let AAPS display only notification.** When you are sure automation is triggered at the right time replace notification by real action.
+Assurez-vous de bien comprendre comment l'automatisation fonctionne avant de configurer votre première règle simple. **Au lieu de l'action, laisser AAPS n'afficher qu'une notification.** Quand vous êtes sûr que l'automatisation est déclenchée au bon moment, remplacez la notification par une action réelle.
 
 .. image:: ../images/Automation_ConditionAction_RC3.png
   :alt: Condition d'Automation + action
