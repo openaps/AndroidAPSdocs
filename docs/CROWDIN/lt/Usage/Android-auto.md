@@ -7,7 +7,7 @@
 Use system notifications for alerts and notifications:
 
 * Open 3-dot-menu on top right of home screen
-* 설정
+* Nustatymai
 * Scroll all the way down
 * Activate "Use system notifications..."
 
@@ -42,6 +42,6 @@ As AAPS is no official Android Auto app notifications have to be activated in An
 
 ![AAPS CGM data on Android Auto](../images/AndroidAuto_05.png)
 
-## Troubleshooting:
+## Trikčių šalinimas:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidaps-settings-for-android-auto) in Android and if [Android Auto has access rights to notifications](#settings-in-android-auto-app-on-your-phone).
+* Jei pranešimai nerodomi, patikrinkite, ar [leidote AAPS parodyti pranešimus ](#androidaps-settings-for-android-auto) Android operacinėje sistemoje ir ar [Android Auto turi prieigos teisę prie šių pranešimų](#settings-in-android-auto-app-on-your-phone).
