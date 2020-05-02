@@ -15,25 +15,25 @@ Veuillez comprendre que cette modification n'a pas pour but de vous corriger mai
 
 Version 2.6.1.2
 ================
-Release date: 19-04-2020
+Date de sortie : 19-04-2020
 
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
 -----
-* Fix crashing in Insight service
-* Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
+* Correction du plantage dans le service Insight
+* Sinon, identique à 2.6.1.1. Si vous n'êtes pas affecté par ce bug, vous n'avez pas besoin de mettre à niveau.
 
 Version 2.6.1.1
 ================
-Release date: 06-04-2020
+Date de sortie : 06-04-2020
 
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
 -----
-* Resolves SMS CARBS command issue while using Combo pump
-* Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
+* Résout le problème de commande SMS CARBS avec la pompe Combo
+* Sinon, identique à 2.6.1. Si vous n'êtes pas affecté par ce bug, vous n'avez pas besoin de mettre à niveau.
 
 Version 2.6.1
 ==============
