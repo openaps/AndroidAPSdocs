@@ -41,11 +41,11 @@ Verzögerter Bolus
 ==================================================
 Wie oben bereits erwähnt sind verzögerte oder sog. Multi-Wave-Boli beim Loopen nicht sinnvoll. `Weiter unten <../Usage/Extended-Carbs.html#why-extended-boluses-wont-work-in-a-closed-loop-environment>`_ wird beschrieben, warum.
 
-Extended bolus and switch to open loop - Dana and Insight pump only
+Verzögerter Bolus und Wechsel zum Open Loop - nur für Dana- und Insight-Pumpe
 -----------------------------------------------------------------------------
 Es kam immer wieder der Wunsch auf, verzögerte Boli auch in AAPS zu nutzen, um spezielle Mahlzeiten wie gewohnt behandeln zu können. 
 
-That's why as of version 2.6 there is an option for an extended bolus for users of Dana and Insight pumps. Der Closed Loop wird aber automatisch gestoppt und für die Laufzeit des verzögerten Bolus zum Open Loop gewechselt. Die Einheiten des verzögerten Bolus, die verbleibende und die Gesamtzeit werden auf der Startseite angezeigt.
+Daher gibt es ab Version 2.6 für Nutzer der Dana- und Insight-Pumpe eine Option für einen verzögerten Bolus.  Der Closed Loop wird aber automatisch gestoppt und für die Laufzeit des verzögerten Bolus zum Open Loop gewechselt. Die Einheiten des verzögerten Bolus, die verbleibende und die Gesamtzeit werden auf der Startseite angezeigt.
 
 .. image:: ../images/ExtendedBolus2_6.png
   :alt: Verzögerter Bolus in AAPS 2.6
