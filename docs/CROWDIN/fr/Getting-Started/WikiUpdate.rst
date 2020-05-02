@@ -3,7 +3,7 @@ Wiki mises à jour et modifications
 
 Avril 2020
 ==================================================
-* `Antidater l'insuline <..//Usage/CPbefore26.html#id1>`_ (par ex. injectée avec une seringue)
+* `Antidater l'insuline <../Usage/CPbefore26.html#id1>`_ (par ex. injectée avec une seringue)
 
 Mars 2020
 ==================================================
@@ -34,7 +34,7 @@ Décembre 2019
 * `Complications sur les montres connectées <../Configuration/Watchfaces.html#complications>`_ - utilisez vos cadrans favoris avec les données AAPS
 Novembre 2019
 ==================================================
-* `Automation - deactivate when disabling loop <../Usage/Automation.html#important-note>`_
+* `Automatisation - Désactiver quand vous désactivez la boucle <../Usage/Automation.html#remarque-importante>`_
 * `Remplacement du transmetteur Dexcom G6 <../Configuration/xdrip.html#replace-transmitter>`_
 * `Bolus étendus - pourquoi ils ne fonctionnent pas dans le cadre d'une boucle <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_

@@ -1,16 +1,16 @@
-# Profile switch
+# Profile switch/смена профиля
 
-On starting your AndroidAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again (in NS or AAPS) to start using these changes.
+При запуске AndroidAPS и выборе проиля необходимо выполнить "Profile switch" с нулевой продолжительностью действия (объясняется ниже). При этом AAPS начинает отслеживать историю профилей, а каждое новое изменение профиля требует другого "переключения профиля" даже при изменении содержимого профиля в NS. Обновленный профиль немедленно передается в AAPS, но для начала использования этих изменений необходимо снова включить один и тот же профиль (в NS или AAPS).
 
-Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period. Duration of zero means infinite. Such profile is valid until new "Profile switch".
+Внутри себя AAPS создает моментальную копию профиля с начальной датой и длительностью и использует ее в выбранный период. Нулевая длительность означает постоянную работу. Такой профиль действителен до нового "переключения профиля".
 
-To do a profile switch long-press on the name of your profile ("Aktuell (Rad)" in the picture below) and select profile switch.
+Для того чтобы переключить профиль выполните долгое нажатие на название текущего профиля ("Aktuell (Rad)" на рисунке ниже) и выберите переключить профиль.
 
 ![Do profile switch](../images/ProfileSwitch_HowTo.png)
 
-If you use "Profile switch" with duration profile is switched back to previous valid "Profile switch"
+Если вы используете "Переключатель профиля" с указанием длительности, то профиль вернется на предыдущий допустимый
 
-If you use local AAPS profiles (Simple, Local, CPP) you have to press button there to apply these changes (it creates proper "Profile switch" event).
+Если вы используете локальные профили AAPS (Simple, Local, CPP), вы должны нажать эту кнопку, чтобы применить изменения (это создает правильное событие "Profile switch").
 
 Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
 

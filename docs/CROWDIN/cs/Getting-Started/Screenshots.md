@@ -65,7 +65,7 @@ Tuto část lze konfigurovat pomocí voleb v sekci D.
    * **ZELENÉ** sloupce ukazují, že je glykémie vyšší, než algoritmus očekával. 
    * **ČERVENÉ** sloupce ukazují, že je glykémie nižší, než algoritmus očekával.
 * **Citlivost** (bílá linka): Ukazuje citlivost, kterou [Autosens](../Usage/Open-APS-features#autosens) detekovala. Citlivost je výpočet citlivosti na inzulín v důsledku pohybu, hormonů atd.
-* ** Aktivita ** (žlutá linka): Zobrazuje aktivitu inzulínu, vypočtenou podle profilu inzulínu (není derivací IOB). Hodnota je vyšší pro inzulín blíže době špičky. Derivace by znamenala, že aktivita bude záporná, pokud IOB klesá. 
+* **Aktivita** (žlutá linka): Zobrazuje aktivitu inzulínu, vypočtenou podle profilu inzulínu (není derivací IOB). Hodnota je vyšší pro inzulín blíže době špičky. Derivace by znamenala, že aktivita bude záporná, pokud IOB klesá. 
 
 ### Sekce G
 
