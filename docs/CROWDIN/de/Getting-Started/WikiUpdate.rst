@@ -1,11 +1,13 @@
 Docs Updates & Änderungen
 **************************************************
-
+May 2020
+==================================================
+* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
+* `Insight deactivate vibration <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (firmware 3.x only)
 April 2020
 ==================================================
-* `Insulin nachträglich erfassen <..//Usage/CPbefore26.html#id1>`_ (z.B. bei Abgabe mit Spritze)
-
-März 2020
+* `Backdate insulin <../Usage/CPbefore26.html#carbs--bolus>`_ (i.e. bei Abgabe mit Spritze)
+* `Android 6 support will be discontinued in next master version <../Module/module.html#phone>`_
 ==================================================
 * `AndroidAPS mit Android Studio 3.6.1 erstellen <../Installing-AndroidAPS/Building-APK.html>`_
 * `DanaRS mit Firmware v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **kann momentan nicht mit AndroidAPS genutzt werden!**
