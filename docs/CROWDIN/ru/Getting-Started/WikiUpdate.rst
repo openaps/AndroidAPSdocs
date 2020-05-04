@@ -8,6 +8,7 @@ May 2020
 ==================================================
 * `Backdate insulin <../Usage/CPbefore26.html#carbs--bolus>`_ (i.e. с помощью шприца)
 * `Android 6 support will be discontinued in next master version <../Module/module.html#phone>`_
+March 2020
 ==================================================
 * Построение APK в Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
 * `DanaRS с прошивкой v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **в настоящее время не может использоваться для AndroidAPS!**
