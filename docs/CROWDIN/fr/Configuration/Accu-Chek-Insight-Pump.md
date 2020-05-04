@@ -107,11 +107,11 @@ Ceci supprimera toutes les alarmes de la pompe, permettant à AndroidAPS de déc
 
 ### Vibration
 
-Depending on pump firmware Insight pump will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus).
+Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus).
 
 * Firmware 1.x: No vibration by design.
 * Firmware 2.x: Vibration cannot be disabled.
-* Firmware 3.x: Vibration can be diabled in AAPS (minimum [version 2.6.1.3](../Installing-AndroidAPS/Releasenotes#version-2-6-1-3))
+* Firmware 3.x: AndroidAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
 
 Firmware version can be found in the menu.
 
