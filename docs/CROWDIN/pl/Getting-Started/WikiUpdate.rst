@@ -1,11 +1,13 @@
 Docs updates & changes
 **************************************************
-
+May 2020
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
+* `Insight deactivate vibration <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (firmware 3.x only)
 April 2020
 == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
-* `Backdate insulin <..//Usage/CPbefore26.html#carbs--bolus>`_ (i.e. given by syringe)
-
-March 2020
+* `Backdate insulin <../Usage/CPbefore26.html#carbs--bolus>`_ (i.e. given by syringe)
+* `Android 6 support will be discontinued in next master version <../Module/module.html#phone>`_
 == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 * `Build apk with Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
 * `DanaRS with firmware v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **cannot currently be used with AndroidAPS!**
