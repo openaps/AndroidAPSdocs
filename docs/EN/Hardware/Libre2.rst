@@ -8,6 +8,8 @@ Step 1: Build your own patched Librelink-App
 
 For legal reasons, the so-called patching has to be done by yourself. Use search engines to find the corresponding links.
 
+To check whether you correctly patched the Libtrlink-App, please take a look at the font of the patched app. The fonts in the original and patched app differ. Your patching was successful if the font looks like the font as folows:
+
 The patched app has to be installed instead of the original app. The next sensor started with it will wireless transmit its values to the smartphone.
 
 Important: First install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. This costs no extra power. Then install the patched app. It can be identified by the foreground authorization notification. 
