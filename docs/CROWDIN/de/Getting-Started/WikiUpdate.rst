@@ -1,18 +1,18 @@
 Docs Updates & Änderungen
 **************************************************
-May 2020
+Mai 2020
 ==================================================
-* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
-* `Insight deactivate vibration <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (firmware 3.x only)
+* `Verzögerter Bolus nur für Dana + Insight Pumpen <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
+* `Insight Vibration deaktivieren <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (nur Firmware 3.x)
 April 2020
 ==================================================
-* `Backdate insulin <../Usage/CPbefore26.html#carbs--bolus>`_ (i.e. bei Abgabe mit Spritze)
-* `Android 6 support will be discontinued in next master version <../Module/module.html#phone>`_
-March 2020
+* `Insulin nachträglich erfassen <../Usage/CPbefore26.html#id1>`_ (z.B. bei Abgabe mit Spritze)
+* `Android 6 Unterstützung wird mit der nächsten Master Version eingestellt <../Module/module.html#smartphone>`_
+März 2020
 ==================================================
 * `AndroidAPS mit Android Studio 3.6.1 erstellen <../Installing-AndroidAPS/Building-APK.html>`_
 * `DanaRS mit Firmware v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **kann momentan nicht mit AndroidAPS genutzt werden!**
-* `Extended bolus and switch to open loop <../Usage/Extended-Carbs.html#warum-ein-verzogerter-bolus-beim-loopen-nicht-funktioniert>`_
+* `Verzögerter Bolus <../Usage/Extended-Carbs.html#id1>`_ - der Closed Loop wird unterbrochen
 * `Update mit Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
 Februar 2020
 ==================================================
