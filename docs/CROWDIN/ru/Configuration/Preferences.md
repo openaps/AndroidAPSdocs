@@ -75,7 +75,7 @@ When using open loop you will receive notifications every time AAPS recommends t
 
 ![Minimal request rate](../images/MinRequestChange.png)
 
-Please note: In closed loop mode a single target instead of range
+Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol instead of 5,0 - 7,0 mmol) is recommended.
 
 ## Помощник болюса OpenAPS AMA
 
