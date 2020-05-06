@@ -85,7 +85,7 @@ This is list of some Pumps floating around there, and status of support for them
  ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
 
 
-### Willcare Insulin pump ([Homepage](https://en.shinmyungmedi.com))
+### Willcare Insulin pump ([Homepage](http://en.shinmyungmedi.com))
 
 **Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands). 
 
