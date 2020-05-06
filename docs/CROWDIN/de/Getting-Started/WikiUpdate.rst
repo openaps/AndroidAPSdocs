@@ -4,6 +4,8 @@ Mai 2020
 ==================================================
 * `Verzögerter Bolus nur für Dana + Insight Pumpen <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
 * `Insight Vibration deaktivieren <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (nur Firmware 3.x)
+* `Minimal request rate <../Configuration/Preferences.html#minimal-request-rate>`_ to reduce number of notifications in open loop mode
+* `Patched Libre Link app <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - check if correctly patched
 April 2020
 ==================================================
 * `Insulin nachträglich erfassen <../Usage/CPbefore26.html#id1>`_ (z.B. bei Abgabe mit Spritze)
