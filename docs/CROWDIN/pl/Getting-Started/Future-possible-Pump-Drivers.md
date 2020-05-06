@@ -4,16 +4,6 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ## Pompy, których wsparcie jest w fazie rozwoju
 
-### Medtronic
-
-**Loop status:** Medtronic is part of AAPS, since version 2.4
-
-**Hardware requirement for AAPS:** RileyLink (with 916 MHz antenna).
-
-**Loopable versions:** 512-522, 523 (Fw 2.4A or lower), 554 (EU firmware 2.6A or lower, CA firmware 2.7A or lower). Same for 7xx versions. All other devices are not supported, and probably won't be.
-
-* * *
-
 ### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
 **Loop status:** Not supported natively by AAPS at the moment. Decoding of the Omnipod protocol is finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
@@ -34,7 +24,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
 
-** Status pętli: ** Obecnie nie jest obsługiwany przez żaden z systemów pętli. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump officially started in January 2019.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump officially started in January 2019.
 
 ** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, ponieważ pompa komunikuje się przez Bluetooth.
 
@@ -42,7 +32,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 * * *
 
-### Pompa Ypsomed ([Strona domowa](https://www.ypsomed.com/en/diabetes-care-mylife.html))
+### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
 **Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions. It seems that we will get loopable version in begining of 2021, see this [article](https://www.ypsomed.com/en/media/details/ypsomed-and-dexcom-enter-into-partnership-to-drive-closed-loop-system.html?fbclid=IwAR3gYSMz8dvPARYgbj5djm4Yxa7JdFthfzOrrg94C9Bigj6RGeycxSfGHyg).
 
@@ -50,15 +40,15 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 * * *
 
-### Kaleido ([Strona domowa](https://www.hellokaleido.com/))
+### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
-** Status pętli: ** Obecnie nie jest obsługiwany przez żaden z systemów pętli. Pompa może być odpowiednia do wykonania pętli, ale ponieważ protokół komunikacji jest obecnie nieznany, przyszła implementacja jest mało prawdopodobna.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 ** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, ponieważ pompa komunikuje się przez Bluetooth.
 
 * * *
 
-### Medtrum A6/P6/C6 ([Strona domowa](http://www.medtrum.com/P6.html))
+### Medtrum A6/P6/C6 ([Homepage](http://www.medtrum.com/P6.html))
 
 **Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
 
@@ -66,7 +56,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 * * *
 
-### EOFLOW ([Strona domowa](http://www.eoflow.com/eng/main/main.html))
+### EOFLOW ([Homepage](http://www.eoflow.com/eng/main/main.html))
 
 **Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
 
@@ -74,7 +64,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 * * *
 
-### Accu-Chek Solo ([Strona domowa](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
+### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
 **Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app on special controler device for control.
 
@@ -98,7 +88,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
 
-** Status pętli: ** Obecnie nie jest obsługiwany przez żaden z systemów pętli. Pompa może być odpowiednia do wykonania pętli, ale ponieważ protokół komunikacji jest obecnie nieznany, przyszła implementacja jest mało prawdopodobna.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 ** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, ponieważ pompa komunikuje się przez Bluetooth.
 
@@ -108,7 +98,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ### Tandem:(any) ([Homepage](https://www.tandemdiabetes.com/))
 
-** Status pętli: ** Nie nadaje się do zapętlenia.
+**Loop status:** Not loopable.
 
 While ago they had firmware called T:AP (mentioned in this [article](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), which could be used in loop (its no longer available, since pump was upgraded to x2), but that was not intended for commercial use, just for experimental use only (research projects). I talked with one of directors of company and he assured my that Tandem pump will never be open, but they have created their own closed loop system, which they are calling Control-IQ (I think it is already available in USA, and should be available in 2020 in Eu).
 
@@ -116,13 +106,13 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 
 ### Animas Vibe
 
-** Status pętli: ** Nie nadaje się do zapętlenia. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
+**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
 
 * * *
 
 ### Animas Ping
 
-** Status pętli: ** Nie nadaje się do zapętlenia. It has bolus possibility, but no TBR one. **Note** Stopped beeing sold when Vibe came out.
+**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped beeing sold when Vibe came out.
 
 ## Wymagania dotyczące możliwości zapętlenia pomp
 
