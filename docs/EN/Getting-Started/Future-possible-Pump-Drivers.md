@@ -4,18 +4,6 @@ This is list of some Pumps floating around there, and status of support for them
 
 ## Pumps whose support is in development
 
-### Medtronic
-
-**Loop status:** Medtronic is part of AAPS, since version 2.4
-
-**Hardware requirement for AAPS:** RileyLink (with 916 MHz antenna).
-
-**Loopable versions:** 512-522, 523 (Fw 2.4A or lower), 554 (EU firmware 2.6A or lower, CA firmware 2.7A or lower). Same for 7xx versions. All other devices are not supported, and probably won't be.
-
-
-***
-
-
 ### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
 **Loop status:** Not supported natively by AAPS at the moment. Decoding of the Omnipod protocol is finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
