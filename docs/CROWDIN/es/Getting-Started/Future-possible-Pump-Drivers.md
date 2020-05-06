@@ -4,17 +4,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ## Bombas con soporte en desarrollo
 
-### Medtronic
-
-**Loop status:** Medtronic is part of AAPS, since version 2.4
-
-**Hardware requirement for AAPS:** RileyLink (with 916 MHz antenna).
-
-**Loopable versions:** 512-522, 523 (Fw 2.4A or lower), 554 (EU firmware 2.6A or lower, CA firmware 2.7A or lower). Same for 7xx versions. All other devices are not supported, and probably won't be.
-
-* * *
-
-### Insulet Omnipod (con los viejos Eros Pods) ([Página de inicio ](https://www.myomnipod.com/en-gb/about/how-to-use))
+### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
 **Loop status:** Not supported natively by AAPS at the moment. Decoding of the Omnipod protocol is finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
 
@@ -32,9 +22,9 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ## Bombas compatibles
 
-### Omnipod DASH ([Homepage ](https://www.myomnipod.com/DASH))
+### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
 
-**Loop status: ** Actualmente no está soportado por ninguno de los sistemas de lazo cerrado. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump officially started in January 2019.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump officially started in January 2019.
 
 **Requisitos de hardware para AAPS: ** Probablemente ninguno. Está habilitada para BT.
 
@@ -42,7 +32,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 * * *
 
-### Bomba Ypsomed([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
+### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
 **Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions. It seems that we will get loopable version in begining of 2021, see this [article](https://www.ypsomed.com/en/media/details/ypsomed-and-dexcom-enter-into-partnership-to-drive-closed-loop-system.html?fbclid=IwAR3gYSMz8dvPARYgbj5djm4Yxa7JdFthfzOrrg94C9Bigj6RGeycxSfGHyg).
 
@@ -52,7 +42,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
-**Loop status: ** Actualmente no está soportado por ninguno de los sistemas de lazo cerrado. Se considera una candidata para sistemas de lazo cerrado, pero en la medida que aún no se conoce el protocolo, no se prevé que sea soportada en breve.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **Requisitos de hardware para AAPS: ** Probablemente ninguno. Está habilitada para BT.
 
@@ -98,57 +88,57 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
 
-**Loop status: ** Actualmente no está soportado por ninguno de los sistemas de lazo cerrado. Se considera una candidata para sistemas de lazo cerrado, pero en la medida que aún no se conoce el protocolo, no se prevé que sea soportada en breve.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **Requisitos de hardware para AAPS: ** Probablemente ninguno. Está habilitada para BT.
 
-**Nota acerca del producto:** parece que la compañía decidió abandonar el negocio de Bombas. Puedes ver más en este [artículo](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
 ## Bombas incompatibles
 
 ### Tandem:(any) ([Homepage](https://www.tandemdiabetes.com/))
 
-**Loop status:** Incompatible.
+**Loop status:** Not loopable.
 
-Hace tiempo que tenían el firmware llamado T:AP (mencionado en este [artículo ](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), que podría haber sido utilizado para sistemas de lazo cerrado (ya no está disponible, desde que la bomba se actualizó a x2), pero además, no estaba destinado para uso comercial, sólo para uso experimental (proyectos de investigación). Hablé con uno de los directores de la empresa y me ha asegurado que la bomba de Tandem nunca estará abierta, pero han creado su propio sistema de lazo cerrado, que están llamando Control-IQ (creo que ya está disponible en USA, y que debería estar disponible en 2020 en Eu).
+While ago they had firmware called T:AP (mentioned in this [article](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), which could be used in loop (its no longer available, since pump was upgraded to x2), but that was not intended for commercial use, just for experimental use only (research projects). I talked with one of directors of company and he assured my that Tandem pump will never be open, but they have created their own closed loop system, which they are calling Control-IQ (I think it is already available in USA, and should be available in 2020 in Eu).
 
 * * *
 
 ### Animas Vibe
 
-**Loop status:** Incompatible. No hay posibilidad de control remoto. **Nota: ** La bomba ya no se comercializa. La compañía dejó de trabajar en el negocio de las bombas (J&J).
+**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
 
 * * *
 
 ### Animas Ping
 
-**Loop status:** Incompatible. Tenia posibilidad de bolos, pero no de TBR. **Nota:** Dejo de comercializarse con la salida de Vibe al mercado.
+**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped beeing sold when Vibe came out.
 
 ## Requisitos para que una bombas sea compatible
 
-**Prerequisitos**
+**Prerequisite**
 
 - La bomba debe disponer de algún tipo de control remoto. (BT, Radio frecuencia, etc)
 - El protocolo está documentado/hackeado/etc.
 
-**Requisitos mínimos**
+**Minimal requirement**
 
 - Establecer basales temporales
 - Obtener estado
 - Cancelar basales temporales
 
-**Para oref1(SMB) o Bolusing:**
+**For oref1(SMB) or Bolusing:**
 
 - Fijar Bolo
 
-**Recomendable**
+**Good to have**
 
 - Cancelar Bolus
 - Obtener perfil basal (casi un requisito)
 - Establecer Perfil Basal (recomendable)
 - Leer historial 
 
-**Otros (no necesarios, pero deseables)**
+**Other (not required but good to have)**
 
 - Suministrar bolos extendidos
 - Cancelar bolo extendido
@@ -159,4 +149,4 @@ Hace tiempo que tenían el firmware llamado T:AP (mencionado en este [artículo 
 
 ### Other pumps support
 
-Si tienes alguna otra bomba de la que te gustaría ver el estado, por favor, ponte en contacto conmigo (@andyrozman en gitter). En próximas versiones, un buen número de configuraciones de bombas se incluirán como compatibles (podrás seleccionar Bomba Virtual en la configuración y se cargarán tus ajustes - [Petición de mejora #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
+If you have any other pumps you would like to see status on, please contact me (@andyrozman on gitter). In future release a lot of Pump configurations will be added to be Open loopable (you will be able to select Virtual Pump Type in configuration and your settings will be loaded - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
