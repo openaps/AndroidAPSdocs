@@ -9,7 +9,7 @@ Schritt 1: Erstelle Deine eigene gepatchte LibreLink-App
 
 Aus rechtlichen Gründen muss das sogenannte Patchen von Dir selbst erledigt werden. Verwende Suchmaschinen, um die entsprechenden Links zu finden.
 
-To check whether you correctly patched the LibreLink app, take a look at the font of the patched app. The fonts in the original and patched app differ. Your patching was successful if the font looks like the font on the right:
+Um zu überprüfen, ob Du die LibreLink App richtig gepatcht hast, wird einfach einen Blick auf die Schriftart der App-Bezeichnung. Die Schriftarten weichen zwischen der Original- und der gepatchten App ab. Du hast die gepatchte App erfolgreich erstellt, wenn sie wie rechts im folgenden Screenshot aussieht:
 
 .. image:: ../images/LibreLinkPatchedCheck.png
   :alt: LibreLink Vordergrund Service
