@@ -4,16 +4,6 @@ This is list of some Pumps floating around there, and status of support for them
 
 ## Pumps whose support is in development
 
-### Medtronic
-
-**Loop status:** Medtronic is part of AAPS, since version 2.4
-
-**Hardware requirement for AAPS:** RileyLink (with 916 MHz antenna).
-
-**Loopable versions:** 512-522, 523 (Fw 2.4A or lower), 554 (EU firmware 2.6A or lower, CA firmware 2.7A or lower). Same for 7xx versions. All other devices are not supported, and probably won't be.
-
-* * *
-
 ### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
 **Loop status:** Not supported natively by AAPS at the moment. Decoding of the Omnipod protocol is finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
@@ -42,7 +32,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 * * *
 
-### Bomba Ypsomed ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
+### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
 **Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions. It seems that we will get loopable version in begining of 2021, see this [article](https://www.ypsomed.com/en/media/details/ypsomed-and-dexcom-enter-into-partnership-to-drive-closed-loop-system.html?fbclid=IwAR3gYSMz8dvPARYgbj5djm4Yxa7JdFthfzOrrg94C9Bigj6RGeycxSfGHyg).
 
@@ -131,7 +121,7 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 - Pump has to support some kind of remote control. (BT, Radio frequency, etc)
 - Protocol is hacked/documented/etc.
 
-**Requisição mínima**
+**Minimal requirement**
 
 - Set Temporary Basal Rate
 - Obter Estado
