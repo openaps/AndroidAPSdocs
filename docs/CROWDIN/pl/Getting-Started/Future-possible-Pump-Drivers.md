@@ -6,17 +6,11 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ### Medtronic
 
-** Status pętli: ** Niektóre starsze wersje pomp nadają się do zastosowania w pętli, nowsze modele jeszcze nie nadają się na użycie w pętli (patrz poniżej)
-
-**Inne implementacje:** OpenAPS, Loop
-
-** Implementacje Java: ** Dostępne częściowe implementacje [ Rountrip2 ](https://github.com/TC2013/Roundtrip2) i [ RileyLinkAAPS ](https://github.com/andyrozman/RileyLinkAAPS)
-
-** Status wdrożenia AAPS: ** Trwają prace. Szczegóły na GitHUBie [Andy's AndroidAPS](https://github.com/andyrozman/AndroidAPS), gałąź medtronic_andy. Większość prac została wykonana dla [ RileyLinkAAPS ](https://github.com/andyrozman/RileyLinkAAPS) do uzyskania dostępu do struktury aplikacji i poleceń. W tym repozytorium został stworzony projekt (Medtronic) i zadania otwarte do dalszego rozwoju. Rozwój odbywa się w oddziale dev_medtronic (jest to lokalna gałąź domyślna). Istnieje również czat dla użytkowników GitHUB: RileyLinkAAPS / Lobby. AAPS. 0.10 test "release" is out, with about 95% of all functionality, at the moment what is missing is synhronization of TBRs and Pump "Delivery stopped" events. Project will probably be merged to main repository by end of July 2019. Szczegółowe informacje i harmonogram można znaleźć w [ tablicy projektu ](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
+**Loop status:** Medtronic is part of AAPS, since version 2.4
 
 **Hardware requirement for AAPS:** RileyLink (with 916 MHz antenna).
 
-** Wersje pomp współpracujących z pętlą: ** 512-522, 523 (Fw 2.4A lub niższa), 554 (EU firmware 2.6A lub niższa, firmware CA 2.7A lub niższa). To samo dotyczy wersji 7xx. Wszystkie inne urządzenia nie są obsługiwane i prawdopodobnie nie będą.
+**Loopable versions:** 512-522, 523 (Fw 2.4A or lower), 554 (EU firmware 2.6A or lower, CA firmware 2.7A or lower). Same for 7xx versions. All other devices are not supported, and probably won't be.
 
 * * *
 
@@ -30,9 +24,9 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 - OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project).
 - [iOS Loop](https://loopkit.github.io/loopdocs/) (stable, released, requires RileyLink).
 
-**Implementacji Javy:** brak do tej pory.
+**Java implementations:** None till now.
 
-**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version is expected to be released around January 2020.
+**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version was released in January 2020, and work is beeing done towards stabilization. Current version 0.3 (March)
 
 **Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.x) and 433 MHz antenna.
 
@@ -40,7 +34,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
 
-** Status pętli: ** Obecnie nie jest obsługiwany przez żaden z systemów pętli. Pompa jest kandydatem do pętli, ale protokół komunikacji jest jeszcze nieznany. Selling of pump officially started in January 2019.
+** Status pętli: ** Obecnie nie jest obsługiwany przez żaden z systemów pętli. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump officially started in January 2019.
 
 ** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, ponieważ pompa komunikuje się przez Bluetooth.
 
@@ -50,7 +44,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ### Pompa Ypsomed ([Strona domowa](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-** Status pętli: ** Wersja 1 - 1.5 (2 kwartał 2018) nie są kandydatami dla pętli. Mimo że komunikuje się poprzez Bluetooth, transfer danych wydaje się być bardzo ograniczony (tylko w jedną stronę: od pompy do aplikacji). Może to zmieni się w jednym z kolejnych modeli pompy.
+**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions. It seems that we will get loopable version in begining of 2021, see this [article](https://www.ypsomed.com/en/media/details/ypsomed-and-dexcom-enter-into-partnership-to-drive-closed-loop-system.html?fbclid=IwAR3gYSMz8dvPARYgbj5djm4Yxa7JdFthfzOrrg94C9Bigj6RGeycxSfGHyg).
 
 ** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, ponieważ pompa komunikuje się przez Bluetooth.
 
@@ -66,7 +60,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ### Medtrum A6/P6/C6 ([Strona domowa](http://www.medtrum.com/P6.html))
 
-** Status pętli: ** pompa Jest kandydatem do wykonania pętli. Firma ma swój własny system limitowanej połowy pętli (A6). Sterowanie za pomocą aplikacji na iPhone'a. Obecnie brak aplikacji na Androida.
+**Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
 
 ** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, wygląda na to, że jest włączona obsługa BT w pompie.
 
@@ -74,7 +68,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ### EOFLOW ([Strona domowa](http://www.eoflow.com/eng/main/main.html))
 
-** Status pętli: ** pompa Jest kandydatem do wykonania pętli. Użyty pilot zdalnego sterowania to zmodyfikowane urządzenie z systemem Android. (Pompa jest obecnie dostępna tylko w Korei).
+**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
 
 ** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, wygląda na to, że jest włączona obsługa BT w pompie.
 
@@ -82,13 +76,21 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ### Accu-Chek Solo ([Strona domowa](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-** Status pętli: ** pompa Jest kandydatem do wykonania pętli. Sprzedaż pompy rozpocznie się pod koniec 2018 r. w wybranych krajach UE. Wg wstępnych ustaleń kontrola pracy pompy odbywa się za pośrednictwem aplikacji na Androida.
+**Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app on special controler device for control.
 
 ** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, wygląda na to, że jest włączona obsługa BT w pompie.
 
 ### Medtronic Bluetooth
 
 **Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
+
+### Willcare Insulin pump ([Homepage](https://en.shinmyungmedi.com))
+
+**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+
+**Hardware requirement for AAPS:** None. wygląda na to, że jest włączona obsługa BT w pompie.
+
+**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
 
 * * *
 
