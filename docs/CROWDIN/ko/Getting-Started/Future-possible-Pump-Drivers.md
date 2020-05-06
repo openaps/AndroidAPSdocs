@@ -4,16 +4,6 @@
 
 ## Pumps whose support is in development
 
-### Medtronic
-
-**Loop status:** Medtronic is part of AAPS, since version 2.4
-
-**Hardware requirement for AAPS:** RileyLink (with 916 MHz antenna).
-
-**Loopable versions:** 512-522, 523 (Fw 2.4A or lower), 554 (EU firmware 2.6A or lower, CA firmware 2.7A or lower). Same for 7xx versions. All other devices are not supported, and probably won't be.
-
-* * *
-
 ### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
 **Loop status:** Not supported natively by AAPS at the moment. Decoding of the Omnipod protocol is finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
@@ -52,7 +42,7 @@
 
 ### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
-**Loop status:** Currently not supported by any of loop system. 펌프는 루프 검토대상이나, 프로토콜이 현재 알려지지 않으므로 이 펌프는 당분간 검토되지 않을 듯 합니다.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. It's BT enabled.
 
@@ -98,7 +88,7 @@
 
 ### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
 
-**Loop status:** Currently not supported by any of loop system. 펌프는 루프 검토대상이나, 프로토콜이 현재 알려지지 않으므로 이 펌프는 당분간 검토되지 않을 듯 합니다.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. It's BT enabled.
 
