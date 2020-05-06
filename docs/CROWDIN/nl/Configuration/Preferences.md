@@ -61,46 +61,60 @@ Dit is de maximale hoeveelheid koolhydraten waarvoor de Boluscalculator insuline
 
 ## Loop
 
-Je kunt hier schakelen tussen open loop en closed loop. Open loop betekent dat er suggesties worden gedaan voor tijdelijke basaalstanden (Temporary Basal Rates, TBR) op basis van jouw gegevens. Deze suggesties laat je telefoon zien in de vorm van een melding, je moet vervolgens handmatig kiezen om ze te accepteren en handmatig in je pomp invoeren. Closed loop (gesloten loop) betekent dat TBR-suggesties automatisch naar je pomp worden verzonden zonder bevestiging of invoer van jou. In het Overzicht-scherm kun je in de linker bovenhoek zien of je in de open of closed loop zit. Wanneer je deze knop ingedrukt houd, dan kun je ook schakelen tussen open en closed loop.
+You can toggle between open and closed looping here.
+
+**Open looping** means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump.
+
+**Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.
+
+The homescreen will display in the top left corner whether you are open or closed looping, and pressing and holding this homescreen button will also allow you to toggle between the two.
+
+### Minimal Request Rate
+
+When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate. This defines the relative change required to trigger a notification.
+
+![Minimal request rate](../images/MinRequestChange.png)
+
+Please note: In closed loop mode a single target instead of range
 
 ## OpenAPS AMA
 
-Dankzij de geavanceerde maaltijdhulp (Advanced Meal Assist, AMA) kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd. In de Configurator kun je dit inschakelen, en de bijbehorende veiligheidsinstellingen bekijken/aanpassen. Je moet minimaal [Doel 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) hebben voltooid om deze functie te gebruiken. Onderstaande tekst gaat dieper in op de instellingen voor AMA, de andere opties (MA en SMB) worden elders in deze wiki omschreven op de pagina over "OpenAPS functies". Of je kunt meer lezen over de instellingen en [Autosens in de OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. Turn it on in the Config tab to view the safety settings here, you will need to have completed [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature. You can read more about the settings and [Autosens in the OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-### Maximale E/uur dat OpenAPS kan toedienen
+### Max U/hr a Temp Basal can be set to
 
-Deze instelling is een veiligheidslimiet om te voorkomen dat AAPS ooit een gevaarlijk hoge basaalstand kan instellen. Dit getal wordt weergegeven in eenheden per uur (E/uur). We raden je aan je verstand te gebruiken bij het invullen van deze waarde. Een goede aanbeveling is om de **hoogste basaalstand** in je profiel te nemen en die te **vermenigvuldigen met 4**. Als de hoogste basaalstand in je profiel bijvoorbeeld 0,5 E/uur is, dan moet je dat vermenigvuldigen met 4 om een waarde van 2 E/uur te krijgen.
+This setting exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. The value is measured in units per hour (u/hr). We raden je aan je verstand te gebruiken bij het invullen van deze waarde. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
 
-### Max totaal IOB dat OpenAPS niet kan overschrijden [E]
+### Maximum basal IOB OpenAPS can deliver [U]
 
-Hoeveelheid extra basale insuline (in eenheden) tot waaraan OpenAPS de hoeveelheid insuline in jouw lichaam mag laten oplopen, bovenop je normale basale insuline. Zodra deze waarde is bereikt, zal AAPS stoppen met het geven van extra basale insuline totdat jouw basale Insulin On Board (IOB, insuline aan boord) naar binnen dit bereik is teruggelopen.
+Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
 
 * Deze waarde laat bolus IOB buiten beschouwing, alleen basale insuline wordt meegerekend.
 * Het berekenen en sturen op deze waarde gebeurt onafhankelijk van jouw normale basale insuline. Alleen de extra basale insuline die werd afgegeven bovenop je normale basaalstand, wordt meenomen.
 * Deze waarde wordt gemeten in eenheden (E).
 
-Wanneer je begint met loopen, wordt tijdens een van de leerdoelen een tijd lang **Max Basal IOB beperkt naar 0**, zodat je gewend raakt aan het systeem. Dit zorgt ervoor dat AAPS helemaal geen extra basale insuline kan geven. Terwijl AAPS wel je basale insuline naar beneden kan bijstellen, of zelfs helemaal uitschakelen om een hypo te helpen voorkomen.
+When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia.
 
-Dit is een belangrijke stap omdat:
+This is an important step in order to:
 
 * Je de tijd krijgt om veilig gebruik te maken van het AAPS-systeem en rustig kunt observeren hoe het werkt.
 * Je nu de kans hebt om jouw basaalprofiel en insuline gevoeligheidsfactor (ISF, Insulin Sensitivity Factor) perfect te maken.
 * Je kunt zien hoe AAPS jouw basale insuline naar beneden bijstelt om hypo's te voorkomen.
 
-Pas na een tijd mag je het systeem toestaan om extra basale insuline te geven door de Max Basal IOB waarde te verhogen. Als eerste start wordt aangeraden om de **hoogste basaalstand** in je profiel te nemen en die te **vermenigvuldigen met 3**. Als de hoogste basaalstand in je profiel bijvoorbeeld 0,5 E/uur is, dan moet je dat vermenigvuldigen met 3 om een waarde van 1,5 E/uur te krijgen.
+When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 3 to get a value of 1.5u.
 
 * Je kunt voorzichtig beginnen met deze waarde en deze langzaam verhogen. 
 * Dit zijn alleen richtlijnen; ieder mens is anders. Je kunt onderweg merken dat jij zelf minder of meer nodig hebt dan wat hier wordt aanbevolen, begin altijd voorzichtig en pas langzaam aan.
 
-*Opmerking: om veiligheidsredenen geldt er voor Max Basal IOB een 'harde limiet' (voor volwassenen is die 7E). Zie ook de pagina over "OpenAPS functies" elders in deze wiki.*
+*Note: As a safety feature, Max Basal IOB is hard-limited to 7u.*
 
 ## Opname instellingen
 
-Wanneer je AMA Autosens aan hebt staan, kun je jouw maximale maaltijd absorptie tijd invoeren. Als je vaak maaltijden met een hoog vet- of eiwitgehalte eet, moet je de opnametijd verhogen.
+If you have selected to use AMA Autosens then you will be able to enter your maximum meal absorption time and how frequently you want autosense to refresh. If you often eat high fat or protein meals you will need to increase your meal absorption time.
 
 ## Pomp instellingen
 
-De opties hier zullen variëren afhankelijk van welke pomp je hebt geselecteerd in de 'Configurator'. Koppel en stel je pomp in volgens de instructies van jouw pomp:
+The options here will vary depending on which pump driver you have selected in 'Config Builder'. Pair and set your pump up according to the pump related instructions:
 
 * [DanaR Insulinepomp](../Configuration/DanaR-Insulin-Pump.md) 
 * [DanaRS Insulinepomp](../Configuration/DanaRS-Insulin-Pump.md) 
@@ -108,7 +122,7 @@ De opties hier zullen variëren afhankelijk van welke pomp je hebt geselecteerd 
 * [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md) 
 * [Medtronic Pump](..//Configuration/MedtronicPump.md)
 
-Als je AndroidAPS gebruikt in 'open loop' modus, zorg er dan voor dat je Virtuele Pomp hebt geselecteerd in de Configurator.
+If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
 ## NS Client
 
@@ -127,7 +141,7 @@ Als je AndroidAPS gebruikt in 'open loop' modus, zorg er dan voor dat je Virtuel
 
 ## SMS Communicator
 
-Deze instelling maakt externe controle van de app mogelijk door SMS instructies te sturen naar de telefoon die de patiënt bij zich heeft. Bijvoorbeeld het uitschakelen van de loop of het geven van een bolus. Hoe dit werkt, wordt beschreven in [SMS commando's](../Children/SMS-Commands.rst) maar het zal alleen worden weergegeven in de Instellingen als je deze optie hebt aangevinkt in de Configurator.
+This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](../Children/SMS-Commands.rst) but it will only display in Preferences if you have selected this option in the Config Builder.
 
 ## Andere
 
