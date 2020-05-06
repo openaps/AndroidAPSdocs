@@ -105,9 +105,9 @@
 
 Это уберет звук всех оповещений помпы и позволит AndroidAPS решать, какой сигнал является актуальным для вас. Если AndroidAPS не распознает сигнал, то его громкость увеличится (сначала гудок, затем вибрация).
 
-### Vibration
+### Вибрация
 
-Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus).
+В зависимости от версии прошивки, Insight кратко вибрирует при каждо подаче болюса (например, когда AAPS подает супермикроболюс SMB или эмулирует пролонгированный болюс временным базалом TBR).
 
 * Firmware 1.x: No vibration by design.
 * Firmware 2.x: Vibration cannot be disabled.
