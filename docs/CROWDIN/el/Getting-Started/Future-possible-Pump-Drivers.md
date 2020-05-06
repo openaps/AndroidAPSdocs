@@ -6,51 +6,45 @@
 
 ### Medtronic
 
-** Κατάσταση κυκλώματος: ** Ορισμένες από τις παλαιότερες εκδόσεις των αντλιών είναι κατάλληλες για κύκλωμα, αλλά όχι τα νεότερα μοντέλα (βλ. Παρακάτω)
+**Loop status:** Medtronic is part of AAPS, since version 2.4
 
-** Άλλες εφαρμογές: ** OpenAPS, Loop
+**Hardware requirement for AAPS:** RileyLink (with 916 MHz antenna).
 
-** Εφαρμογές Java: ** Η μερική υλοποίηση είναι διαθέσιμη [ Rountrip2 ](https://github.com/TC2013/Roundtrip2) και [ RileyLinkAAPS ](https://github.com/andyrozman/RileyLinkAAPS)
-
-** Κατάσταση εφαρμογής AAPS: ** Εργασίες σε εξέλιξη. Δείτε [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), τμήμα medtronic_andy. Το μεγαλύτερο μέρος της εργασίας έγινε στο [ RileyLinkAAPS ](https://github.com/andyrozman/RileyLinkAAPS) για να πάρει το πλαίσιο και τις εντολές εργασίας. Υπάρχει έργο (Medtronic) και εισιτήρια ανοικτά για μελλοντική ανάπτυξη σε αυτό το αποθετήριο, η ανάπτυξη γίνεται στο υποκατάστημα dev_medtronic (που είναι το προεπιλεγμένο υποκατάστημα εκεί). Υπάρχει επίσης η αίθουσα gitter: RileyLinkAAPS / Lobby. AAPS. 0.10 δοκιμή "απελευθέρωσης" είναι έξω, με περίπου το 95% όλων των λειτουργιών, αυτή τη στιγμή αυτό που λείπει είναι συγχρονισμός των TBRs και το γεγονός ''σταμάτημα παράδοσης'' στην αντλία. Το έργο πιθανότατα θα συγχωνευθεί στο κύριο αποθετήριο έως τα τέλη Ιουλίου του 2019. Για λεπτομέρειες και χρονισμό βλ. [ Πίνακας έργου ](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
-
-** Απαιτήσεις υλικού για το AAPS: ** RileyLink (με κεραία 916 MHz).
-
-** Εκδόσεις για κύκλωμα: ** 512-522, 523 (Fw 2.4A ή χαμηλότερη), 554 (firmware της ΕΕ 2.6A ή χαμηλότερη, firmware CA 2.7A ή χαμηλότερη). Ίδια για εκδόσεις 7xx. Όλες οι άλλες συσκευές δεν υποστηρίζονται, και πιθανότατα ούτε στο μέλλον.
+**Loopable versions:** 512-522, 523 (Fw 2.4A or lower), 554 (EU firmware 2.6A or lower, CA firmware 2.7A or lower). Same for 7xx versions. All other devices are not supported, and probably won't be.
 
 * * *
 
 ### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
-** Κατάσταση κυκλώματος: ** Αυτή τη στιγμή δεν υποστηρίζεται από το AAPS. Η αποκωδικοποίηση του πρωτοκόλλου Omnipod έχει ολοκληρωθεί - [ OpenOmni ](http://www.openomni.org/) και [ OmniAPS Slack ](https://omniaps.slack.com/)
+**Loop status:** Not supported natively by AAPS at the moment. Decoding of the Omnipod protocol is finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
 
-**Άλλες εφαρμογές:**
+**Other implementations:**
 
 - Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink, and specially modified AndroidAPS) 
 - OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project).
 - [iOS Loop](https://loopkit.github.io/loopdocs/) (stable, released, requires RileyLink).
 
-**Υλοποιήσεις της εφαρμογής Java: ** Καμία μέχρι τώρα.
+**Java implementations:** None till now.
 
-**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version is expected to be released around January 2020.
+**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version was released in January 2020, and work is beeing done towards stabilization. Current version 0.3 (March)
 
-** Απαιτήσεις υλικού για το AAPS: ** RileyLink με firmware Omnipod (2.x) και 433 MHz κεραία.
+**Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.x) and 433 MHz antenna.
 
 ## Αντλίες που είναι για κύκλωμα
 
 ### Omnipod DASH ([Αρχική σελίδα](https://www.myomnipod.com/DASH))
 
-**Κατάσταση κυκλώματος:** Αυτήν τη στιγμή δεν υποστηρίζεται από κανένα σύστημα κυκλώματος. Η αντλία είναι υποψήφια για κύκλωμα, αλλά το πρωτόκολλο είναι άγνωστο προς το παρόν. Η πώληση της αντλίας ξεκίνησε επίσημα τον Ιανουάριο του 2019.
+**Κατάσταση κυκλώματος:** Αυτήν τη στιγμή δεν υποστηρίζεται από κανένα σύστημα κυκλώματος. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump officially started in January 2019.
 
 ** Απαιτήσεις υλικού για το AAPS: ** Πιθανώς κανένα. Είναι ενεργοποιημένη η λειτουργία BT.
 
-** Σχόλια: ** Ψάχνουμε για την ανάπτυξη του Omnipod DASH, αλλά το πρόβλημα αυτή τη στιγμή είναι ότι το Dash δεν είναι ακόμα διαθέσιμο στην Ευρώπη (όπου είναι οι περισσότεροι προγραμματιστές του AAPS) και ότι το πρωτόκολλο επικοινωνίας είναι άγνωστο. Θα προσπαθήσουμε να αναστρέψουμε το επίσημο Dash APK, να καθορίσουμε τον τρόπο λειτουργίας της επικοινωνίας και στη συνέχεια την εφαρμογή με βάση τα ευρήματα αυτά. Μπορείτε να ακολουθήσετε ό, τι συμβαίνει εδώ: [ DashAAPS ](https://github.com/andyrozman/DashAAPS/projects/1), αλλά μην περιμένετε ότι αυτό θα είναι διαθέσιμο σύντομα. Αυτό είναι προς το παρόν μόνο απόδειξη της έννοιας (έως ότου ολοκληρωθεί ο στόχος 2).
+**Comments:** We are looking into development of Omnipod DASH, but problem at the moment is, that Dash is not yet available in Europe (where most of AAPS developers are) and that communciation protocol is unknown. We will try to reverse engineer official Dash APK, to determine how communication works and then implementation based on that findings. You can follow what is happening here: [DashAAPS](https://github.com/andyrozman/DashAAPS/projects/1), but don't expect this to be available anytime soon. This is at the moment only Proof Of Concept (until Milestone 2 is completed).
 
 * * *
 
 ### Αντλία Ypsomed ([ Αρχική σελίδα ](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-** Κατάσταση κυκλώματος: ** Έκδοση 1 - 1.5 (2Q / 2018) δεν είναι υποψήφια για κύκλωμα. Ενώ έχουν επικοινωνία BT, φαίνεται ότι η επικοινωνία είναι πολύ περιορισμένη (μονόδρομη: Αντλία-> Εφαρμογή). Ίσως αυτό να αλλάξει στις επόμενες εκδόσεις.
+**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions. It seems that we will get loopable version in begining of 2021, see this [article](https://www.ypsomed.com/en/media/details/ypsomed-and-dexcom-enter-into-partnership-to-drive-closed-loop-system.html?fbclid=IwAR3gYSMz8dvPARYgbj5djm4Yxa7JdFthfzOrrg94C9Bigj6RGeycxSfGHyg).
 
 ** Απαιτήσεις υλικού για το AAPS: ** Πιθανώς κανένα. Είναι ενεργοποιημένη η λειτουργία BT.
 
@@ -66,7 +60,7 @@
 
 ### Medtrum A6 / P6 / C6 ([ Αρχική σελίδα ](http://www.medtrum.com/P6.html))
 
-** Κατάσταση κυκλώματος: ** είναι υποψήφια για κύκλωμα. Η εταιρία έχει το δικό της σύστημα περιορισμένου ημι-κυκλώματος (A6). Ελεγχόμενη μέσω εφαρμογής iPhone. Καμία εφαρμογή Android δεν είναι διαθέσιμη προς το παρόν.
+**Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
 
 ** Απαιτήσεις υλικού για το AAPS: ** Πιθανώς κανένα. Φαίνεται ότι είναι ενεργοποιημένο το BT.
 
@@ -74,7 +68,7 @@
 
 ### EOFLOW ([Αρχική σελίδα](http://www.eoflow.com/eng/main/main.html))
 
-** Κατάσταση κυκλώματος: ** είναι υποψήφια για κύκλωμα. Το τηλεχειριστήριο που χρησιμοποιούν είναι στην πραγματικότητα τροποποιημένη συσκευή Android. (Η αντλία είναι προς το παρόν διαθέσιμη μόνο στην Κορέα).
+**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
 
 ** Απαιτήσεις υλικού για το AAPS: ** Πιθανώς κανένα. Φαίνεται ότι είναι ενεργοποιημένο το BT.
 
@@ -82,19 +76,27 @@
 
 ### Accu-Chek Solo ([Αρχική σελίδα](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-** Κατάσταση κυκλώματος: ** είναι υποψήφια για κύκλωμα. Η αντλία θα αρχίσει να πωλεί στα τέλη του 2018 σε επιλεγμένες χώρες της ΕΕ. Φημολογείται ότι θα έχει εφαρμογή Android για έλεγχο.
+**Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app on special controler device for control.
 
 ** Απαιτήσεις υλικού για το AAPS: ** Πιθανώς κανένα. Φαίνεται ότι είναι ενεργοποιημένο το BT.
 
 ### Medtronic Bluetooth
 
-** Σχόλια: ** Αυτή είναι η αντλία που θα κυκλοφορήσει τα επόμενα χρόνια και σχεδιάζεται να υποστηριχθεί στο λογισμικό Tidepool Loop ([ δείτε αυτό το άρθρο ](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
+**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
+
+### Willcare Insulin pump ([Homepage](https://en.shinmyungmedi.com))
+
+**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+
+**Hardware requirement for AAPS:** None. Φαίνεται ότι είναι ενεργοποιημένο το BT.
+
+**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
 
 * * *
 
 ## Οι αντλίες που δεν πωλούνται πλέον (εταιρείες που δεν λειτουργούν πλέον)
 
-### Αντλία Cellnovo ([ Αρχική σελίδα ](https://www.cellnovo.com/en/homepage))
+### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
 
 **Κατάσταση κυκλώματος:** Αυτήν τη στιγμή δεν υποστηρίζεται από κανένα σύστημα κυκλώματος. Η αντλία είναι υποψήφια για κύκλωμα, αλλά δεδομένου ότι το πρωτόκολλο είναι άγνωστο τότε, δεν βλέπω να υποστηρίζεται αυτή η αντλία πολύ σύντομα.
 
@@ -104,7 +106,7 @@
 
 ## Αντλίες που δεν είναι για κύκλωμα
 
-### Tandem: (οποιαδήποτε) ([ Αρχική σελίδα ](https://www.tandemdiabetes.com/))
+### Tandem:(any) ([Homepage](https://www.tandemdiabetes.com/))
 
 ** Κατάσταση κυκλώματος: ** Δεν είναι για κύκλωμα.
 
@@ -155,6 +157,6 @@
 
 * * *
 
-### Άλλες αντλίες που υποστηρίζονται
+### Other pumps support
 
 Εάν έχετε οποιεσδήποτε άλλες αντλίες και θέλετε να δείτε την κατάσταση, παρακαλώ με ελάτε σε επαφή με τον (@andyrozman στο gitter). Στη μελλοντική έκδοση θα προστεθούν πολλές διαμορφώσεις αντλίας για να είναι ανοιχτή σε κύκλωμα (θα μπορείτε να επιλέξετε εικονικό τύπο αντλίας στη διαμόρφωση και οι ρυθμίσεις σας θα φορτωθούν - [ Request Feature # 863 ](https://github.com/MilosKozak/AndroidAPS/issues/863)).
