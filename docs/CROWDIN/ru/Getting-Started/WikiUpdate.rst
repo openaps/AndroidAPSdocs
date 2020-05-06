@@ -1,11 +1,14 @@
 Обновления и изменения в документации
 **************************************************
-
+May 2020
+==================================================
+* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
+* `Insight deactivate vibration <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (firmware 3.x only)
 Апрель 2020
 ==================================================
-* ` Инсулин задним числом < ..//Usage/CPbefore26.html#carbs-- bolus> ` _ (напр. с помощью шприца)
-
-Март 2020
+* `Backdate insulin <../Usage/CPbefore26.html#carbs--bolus>`_ (i.e. с помощью шприца)
+* `Android 6 support will be discontinued in next master version <../Module/module.html#phone>`_
+March 2020
 ==================================================
 * Построение APK в Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
 * `DanaRS с прошивкой v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **в настоящее время не может использоваться для AndroidAPS!**

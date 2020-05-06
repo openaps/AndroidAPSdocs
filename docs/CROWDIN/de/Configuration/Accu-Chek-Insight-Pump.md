@@ -105,7 +105,15 @@ Stelle die Alarme in der Pumpe wie folgt ein:
 
 So werden alle Alarme der Pumpe nur noch ohne Ton abgegeben, so dass AndroidAPS entscheiden kann, ob ein Alarm für Dich relevant ist. Wenn AndroidAPS einen Alarm nicht anerkennt, wird dessen Lautstärke steigen (zuerst Piepton, dann Vibration).
 
-Insight Pumpen mit neuerer Firmware werden bei jeder Bolusabgabe kurz vibrieren (z.B. wenn AndroidAPS eine SMB- oder TBR-Emulation anführt). Diese Vibration kann nicht deaktiviert werden. Ältere Pumpen vibrieren in diesen Fällen nicht.
+### Vibration
+
+Abhängig von der Version der Pumpen-Firmware kann die Insight jedes Mal kurz vibrieren, wenn ein Bolus abgegeben wird (z. B. Abgabe SMB oder TBR-Emulation mit erweitertem Bolus).
+
+* Firmware 1.x: Grundsätzlich keine Vibration
+* Firmware 2.x: Vibration kann nicht deaktiviert werden.
+* Firmware 3.x: AndroidAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+
+Die Firmware-Version kann im Menü der Pumpe nachgesehen werden.
 
 ## Batteriewechsel
 

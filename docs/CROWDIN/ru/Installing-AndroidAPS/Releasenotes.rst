@@ -14,6 +14,28 @@ ContextEdit.
 
 Имейте в виду, что это изменение не предназначено для того, чтобы действовать вам на нервы, а существует по соображениям безопасности. Новые версии AndroidAPS не только обеспечивают новые возможности, но и содержат исправления безопасности. Поэтому необходимо, чтобы каждый пользователь обновлял приложение как можно чаще. К сожалению, все еще поступают сообщения об ошибках из очень старых версий, поэтому это попытка повысить безопасность каждого пользователя и всего сообщества. Благодарим за понимание!
 
+Version 2.6.1.4
+================
+Release date: 04-05-2020
+
+Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
+
+Новые возможности
+-----
+* Insight: Disable vibration on bolus for firmware version 3 - second attempt
+* Otherwise is equal to 2.6.1.3. Update is optional. 
+
+Version 2.6.1.3
+================
+Release date: 03-05-2020
+
+Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
+
+Новые возможности
+-----
+* Insight: Disable vibration on bolus for firmware version 3
+* Otherwise is equal to 2.6.1.2. Update is optional. 
+
 Версия 2.6.1.2
 ================
 Дата выпуска: 19-04-2020

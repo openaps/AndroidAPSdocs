@@ -45,7 +45,11 @@ Verzögerter Bolus und Wechsel zum Open Loop - nur für Dana- und Insight-Pumpe
 -----------------------------------------------------------------------------
 Es kam immer wieder der Wunsch auf, verzögerte Boli auch in AAPS zu nutzen, um spezielle Mahlzeiten wie gewohnt behandeln zu können. 
 
-Daher gibt es ab Version 2.6 für Nutzer der Dana- und Insight-Pumpe eine Option für einen verzögerten Bolus.  Der Closed Loop wird aber automatisch gestoppt und für die Laufzeit des verzögerten Bolus zum Open Loop gewechselt. Die Einheiten des verzögerten Bolus, die verbleibende und die Gesamtzeit werden auf der Startseite angezeigt.
+Daher gibt es ab Version 2.6 für Nutzer der Dana- und Insight-Pumpe eine Option für einen verzögerten Bolus.  
+
+Der Closed Loop wird automatisch gestoppt und für die Laufzeit des verzögerten Bolus zum Open Loop gewechselt. 
+* Die Einheiten des verzögerten Bolus, die verbleibende und die Gesamtzeit werden auf der Startseite angezeigt.
+* Bei der Insight Pumpe steht der verzögerte Bolus *nicht zur Verfügung*, wenn `TBR emulation <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps>`_ verwendet wird. 
 
 .. image:: ../images/ExtendedBolus2_6.png
   :alt: Verzögerter Bolus in AAPS 2.6

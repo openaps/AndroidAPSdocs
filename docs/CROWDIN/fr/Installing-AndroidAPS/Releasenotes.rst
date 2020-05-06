@@ -13,6 +13,28 @@ Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à par
 
 Veuillez comprendre que cette modification n'a pas pour but de vous corriger mais est due à des raisons de sécurité. Les nouvelles versions d'AndroidAPS fournissent non seulement de nouvelles fonctionnalités, mais aussi d'importants correctifs de sécurité. Il est donc nécessaire que chaque utilisateur mette à jour a.s.a.p.. Malheureusement, il y a toujours des remontés de bug provenant de très anciennes versions, donc il s'agit d'une tentative d'améliorer la sécurité pour chaque utilisateur et toute la communauté DIY. Merci pour votre compréhension.
 
+Version 2.6.1.4
+================
+Release date: 04-05-2020
+
+Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
+
+Nouvelles fonctionnalités majeures
+-----
+* Insight: Disable vibration on bolus for firmware version 3 - second attempt
+* Otherwise is equal to 2.6.1.3. Update is optional. 
+
+Version 2.6.1.3
+================
+Release date: 03-05-2020
+
+Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
+
+Nouvelles fonctionnalités majeures
+-----
+* Insight: Disable vibration on bolus for firmware version 3
+* Otherwise is equal to 2.6.1.2. Update is optional. 
+
 Version 2.6.1.2
 ================
 Date de sortie : 19-04-2020
