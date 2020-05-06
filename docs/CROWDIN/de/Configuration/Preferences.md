@@ -73,9 +73,9 @@ Auf dem Hauptbildschirm wird links oben angezeigt, ob du Open oder Closed Loop l
 
 Im Open Loop erhälst Du jedes Mal eine Benachrichtigung, wenn AAPS empfiehlt, die Basalrate anzupassen. Um die Anzahl der Benachrichtigungen zu reduzieren, kannst Du entweder einen breiteren BZ-Zielbereich verwenden oder den Prozentsatz des minimalen Werts zur Anfrage einer Änderung erhöhen. Diese definiert, wie hoch die relative Änderung sein muss, damit eine Benachrichtigung erscheint.
 
-![Minimal request rate](../images/MinRequestChange.png)
+![Minimaler Wert zur Anfrage einer Änderung](../images/MinRequestChange.png)
 
-Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol instead of 5,0 - 7,0 mmol) is recommended.
+Hinweis: Im Closed Loop wird ein Zielwert statt einem Zielbereich empfohlen (also z.B. 100 mg/dl statt 90 - 130 mg/dl bzw. 5,5 mmol statt 5,0 - 7,0 mmol).
 
 ## OpenAPS AMA
 
