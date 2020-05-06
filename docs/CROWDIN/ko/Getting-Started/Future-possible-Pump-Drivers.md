@@ -4,22 +4,6 @@
 
 ## Pumps whose support is in development
 
-### Medtronic
-
-**Loop status:** Some of older versions of pumps are loopable, but not the newer models (see below)
-
-**추가적인 기능:** OpenAPS, Loop
-
-**자바 기능:** 일부 기능이 가능합니다. [Rountrip2](https://github.com/TC2013/Roundtrip2)과 [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
-
-**AAPS implementation status:** Work in progress. See [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Most of work was done on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) to get framework and commands working. 프로젝트 (Medtronic) 가 있으며, 향 후 개발을 위해서 티켓이 발급되어있습니다. 이 건은 branch dev_medtronic (기본사항) 에서 이루어집니다. RileyLinkAAPS/Lobby에 gitter room이 있습니다. AAPS 0.10 test "release" is out, with about 95% of all functionality, at the moment what is missing is synhronization of TBRs and Pump "Delivery stopped" events. Project will probably be merged to main repository by end of July 2019. For details and timing see [Project board](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
-
-**Hardware requirement for AAPS:** RileyLink (with 916 MHz antenna).
-
-**루프가능한 버젼:** 512-522, 523 (Fw 2.4A 또는 이전버젼), 554 (EU firmware 2.6A 또는 이전버젼, CA firmware 2.7A 또는 이전버젼. 7xx버젼과 동일함. 다른 장치들은 지원이 되지 않으며, 앞으로도 계획은 없습니다.
-
-* * *
-
 ### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
 **Loop status:** Not supported natively by AAPS at the moment. Decoding of the Omnipod protocol is finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
@@ -32,7 +16,7 @@
 
 **Java implementations:** None till now.
 
-**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version is expected to be released around January 2020.
+**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version was released in January 2020, and work is beeing done towards stabilization. Current version 0.3 (March)
 
 **Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.x) and 433 MHz antenna.
 
@@ -40,7 +24,7 @@
 
 ### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
 
-**Loop status:** Currently not supported by any of loop system. 펌프는 루프 검토대상이나, 프로토콜에 대해서는 알려져있지 않습니다. Selling of pump officially started in January 2019.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump officially started in January 2019.
 
 **AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. It's BT enabled.
 
@@ -50,7 +34,7 @@
 
 ### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**루프 상태:** Version 1 - 1.5 (2Q/2018)는 루프 검토대상이 아닙니다. BT통신 기능이 있지만, 통신기능은 제한적으로 보여집니다 (Pump에서 App으로 보내지는 일방적인 교신). 하지만 다음 버젼에서는 변경될 수도 있습니다.
+**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions. It seems that we will get loopable version in begining of 2021, see this [article](https://www.ypsomed.com/en/media/details/ypsomed-and-dexcom-enter-into-partnership-to-drive-closed-loop-system.html?fbclid=IwAR3gYSMz8dvPARYgbj5djm4Yxa7JdFthfzOrrg94C9Bigj6RGeycxSfGHyg).
 
 **AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. It's BT enabled.
 
@@ -58,7 +42,7 @@
 
 ### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
-**Loop status:** Currently not supported by any of loop system. 펌프는 루프 검토대상이나, 프로토콜이 현재 알려지지 않으므로 이 펌프는 당분간 검토되지 않을 듯 합니다.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. It's BT enabled.
 
@@ -66,7 +50,7 @@
 
 ### Medtrum A6/P6/C6 ([Homepage](http://www.medtrum.com/P6.html))
 
-**Loop status:** Is a Loop candidate. (A6)라는 제한된 루프시스템을 가지고 있습니다. iPhone App으로 통제가능하나 안드로이드 App은 가능하지 않습니다.
+**Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
 
 **AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. BT기능이 가능할 것으로 보여집니다.
 
@@ -82,7 +66,7 @@
 
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app for control.
+**Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app on special controler device for control.
 
 **AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. BT기능이 가능할 것으로 보여집니다.
 
@@ -90,13 +74,21 @@
 
 **Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
 
+### Willcare Insulin pump ([Homepage](http://en.shinmyungmedi.com))
+
+**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+
+**Hardware requirement for AAPS:** None. BT기능이 가능할 것으로 보여집니다.
+
+**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+
 * * *
 
 ## Pumps no longer sold (companies no longer operating)
 
 ### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
 
-**Loop status:** Currently not supported by any of loop system. 펌프는 루프 검토대상이나, 프로토콜이 현재 알려지지 않으므로 이 펌프는 당분간 검토되지 않을 듯 합니다.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. It's BT enabled.
 

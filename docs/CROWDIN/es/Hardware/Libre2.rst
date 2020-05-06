@@ -8,6 +8,11 @@ Paso 1: Construye tu propia Librelink-App parcheada
 
 Por razones legales, el llamado parche tiene que ser hecho por usted mismo. Utilizar motores de búsqueda para encontrar los enlaces correspondientes.
 
+To check whether you correctly patched the LibreLink app, take a look at the font of the patched app. The fonts in the original and patched app differ. Your patching was successful if the font looks like the font on the right:
+
+.. image:: ../images/LibreLinkPatchedCheck.png
+  :alt: LibreLink Servicio en segundo plano
+
 La aplicación patchada tiene que ser instalada en lugar de la aplicación original. El siguiente sensor que se inicia con ella transmitirá sus valores al smartphone.
 
 Importante: Primero instale y desinstale la aplicación original en un smartphone con capacidad NFC. NFC tiene que estar habilitado. Esto no suma consumo a la batería. A continuación, instale la aplicación parcheada. Se puede identificar mediante la notificación de autorización en primer plano. 

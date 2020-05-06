@@ -9,6 +9,11 @@ Schritt 1: Erstelle Deine eigene gepatchte LibreLink-App
 
 Aus rechtlichen Gründen muss das sogenannte Patchen von Dir selbst erledigt werden. Verwende Suchmaschinen, um die entsprechenden Links zu finden.
 
+To check whether you correctly patched the LibreLink app, take a look at the font of the patched app. The fonts in the original and patched app differ. Your patching was successful if the font looks like the font on the right:
+
+.. image:: ../images/LibreLinkPatchedCheck.png
+  :alt: LibreLink Vordergrund Service
+
 Die gepachtete App wird dann anstelle der originalen App installiert. Der nächste damit gestartete Sensor übermittelt dann drahtlos seine Werte an das Smartphone.
 
 Wichtig: Erst die originale App auf einem NFC-fähigen Smartphone installieren und wieder deinstallieren. NFC muss eingeschaltet sein. Das verbraucht keine zusätzliche Energie. Dann die gepatchte App installieren. Diese ist an der Vordergrund-Berechtigung "Notification" eindeutig erkennbar. 
