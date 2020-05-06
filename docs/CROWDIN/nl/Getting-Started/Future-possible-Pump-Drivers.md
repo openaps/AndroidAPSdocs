@@ -4,17 +4,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 ## Pompen waaraan wordt gewerkt
 
-### Medtronic
-
-**Loop status:** Medtronic is part of AAPS, since version 2.4
-
-**Hardware requirement for AAPS:** RileyLink (with 916 MHz antenna).
-
-**Loopable versions:** 512-522, 523 (Fw 2.4A or lower), 554 (EU firmware 2.6A or lower, CA firmware 2.7A or lower). Same for 7xx versions. All other devices are not supported, and probably won't be.
-
-* * *
-
-### Insulet Omnipod (met "oude" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
+### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
 **Loop status:** Not supported natively by AAPS at the moment. Decoding of the Omnipod protocol is finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
 
@@ -34,7 +24,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 ### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
 
-**Status:** (Opmerking: Omnipod DASH is een nieuwe versie van de Omnipod). Wordt momenteel niet ondersteund. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump officially started in January 2019.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump officially started in January 2019.
 
 **Hardware eisen voor AAPS:** Waarschijnlijk geen. Want gebruikt Bluetooth.
 
@@ -42,7 +32,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 * * *
 
-### Ypsomed Pomp ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
+### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
 **Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions. It seems that we will get loopable version in begining of 2021, see this [article](https://www.ypsomed.com/en/media/details/ypsomed-and-dexcom-enter-into-partnership-to-drive-closed-loop-system.html?fbclid=IwAR3gYSMz8dvPARYgbj5djm4Yxa7JdFthfzOrrg94C9Bigj6RGeycxSfGHyg).
 
@@ -52,7 +42,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 ### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
-**Status:** (Opmerking: Omnipod DASH is een nieuwe versie van de Omnipod). Wordt momenteel niet ondersteund. De pomp is een Loop-kandidaat, maar aangezien het communicatie-protocol op dit moment onbekend is, zie ik het niet snel gebeuren dat deze pomp wordt ondersteund.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **Hardware eisen voor AAPS:** Waarschijnlijk geen. Want gebruikt Bluetooth.
 
@@ -98,57 +88,57 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 ### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
 
-**Status:** (Opmerking: Omnipod DASH is een nieuwe versie van de Omnipod). Wordt momenteel niet ondersteund. De pomp is een Loop-kandidaat, maar aangezien het communicatie-protocol op dit moment onbekend is, zie ik het niet snel gebeuren dat deze pomp wordt ondersteund.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **Hardware eisen voor AAPS:** Waarschijnlijk geen. Want gebruikt Bluetooth.
 
-**Opmerking over product:** Het lijkt erop dat het bedrijf heeft besloten de insulinepomp industrie te verlaten. Je kunt meer lezen in dit [artikel](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
 ## Pompen die niet loopbaar zijn
 
 ### Tandem:(any) ([Homepage](https://www.tandemdiabetes.com/))
 
-**Status:** Niet loopbaar.
+**Loop status:** Not loopable.
 
-Voorheen gebruikten ze firmware die T:AP heette (genoemd in dit [artikel](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&)), dat in een loop gebruikt zou kunnen worden. Maar die firmware is niet meer beschikbaar, omdat de pomp is overgegaan naar x2. De T:AP firmware was overigens niet bedoeld voor commercieel gebruik, alleen voor experimenteel gebruik (onderzoeksprojecten). Ik heb met een van de directeuren van het bedrijf gesproken en hij heeft mij verzekerd dat de Tandem pomp door hen nooit openlijk beschikbaar wordt gemaakt voor doe-het-zelf. Ze hebben wel hun eigen closed loop-systeem gecreÃ«erd, dat ze Control-IQ noemen (ik denk dat het al beschikbaar is in de VS en dat het in 2020 in de EU beschikbaar zou komen).
+While ago they had firmware called T:AP (mentioned in this [article](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), which could be used in loop (its no longer available, since pump was upgraded to x2), but that was not intended for commercial use, just for experimental use only (research projects). I talked with one of directors of company and he assured my that Tandem pump will never be open, but they have created their own closed loop system, which they are calling Control-IQ (I think it is already available in USA, and should be available in 2020 in Eu).
 
 * * *
 
 ### Animas Vibe
 
-**Status:** Niet loopbaar. Is niet op afstand bedienbaar. **Opmerking:** Deze pomp wordt niet meer verkocht. Bedrijf is gestopt met alle insulinepomp activiteiten (J&J).
+**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
 
 * * *
 
 ### Animas Ping
 
-**Status:** Niet loopbaar. Heeft bolus mogelijkheid, maar geen TBR mogelijkheid. **Opmerking** Werd sinds komst van de Vibe niet meer verkocht. En bedrijf is gestopt met alle insulinepomp activiteiten (J&J).
+**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped beeing sold when Vibe came out.
 
 ## Eisen aan pompen die loopbaar zijn
 
-**Randvoorwaarden**
+**Prerequisite**
 
 - Pump moet op Ã©Ã©n of andere manier op afstand bedienbaar zijn. (Bluetooth, radiofrequentie, etc)
 - Communicatie-protocol is gehackt/gedocumenteerd/etc.
 
-**Minimale vereisten**
+**Minimal requirement**
 
 - Heeft een mogelijkheid voor het instellen van Tijdelijke Basaalstanden
 - De Pompstatus kan worden uitgelezen
 - Heeft een mogelijkheid voor het annuleren van Tijdelijke Basaalstanden
 
-**Voor oref1(SMB) of Bolussen:**
+**For oref1(SMB) or Bolusing:**
 
 - Bolus kunnen instellen
 
-**Fijn om te hebben**
+**Good to have**
 
 - Annuleer Bolus
 - Lees Basaalprofiel uit (is haast een vereiste)
 - Stel Basaalprofiel in (leuk om te hebben)
 - Lees geschiedenis uit 
 
-**Overige (niet verplicht maar goed om te hebben)**
+**Other (not required but good to have)**
 
 - Vertraagde bolus instellen
 - Vertraagde bolus annuleren
@@ -159,4 +149,4 @@ Voorheen gebruikten ze firmware die T:AP heette (genoemd in dit [artikel](https:
 
 ### Other pumps support
 
-Als je andere pompen hebt waarvan je wilt weten wat de status is, neem dan contact met mij op (@andyrozman op gitter). In toekomstige releases zullen een heleboel pomp configuraties worden toegevoegd aan de opties voor open loop (Je kunt die pompen dan kiezen in AAPS als Virtuele pomp en jouw instellingen worden geladen, zie [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
+If you have any other pumps you would like to see status on, please contact me (@andyrozman on gitter). In future release a lot of Pump configurations will be added to be Open loopable (you will be able to select Virtual Pump Type in configuration and your settings will be loaded - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
