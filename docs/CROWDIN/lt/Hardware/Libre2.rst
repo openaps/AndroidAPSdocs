@@ -8,6 +8,11 @@ Freestyle Libre 2 sistema gali automatiškai pranešti apie pavojingus kraujo gl
 
 Dėl teisinių priežasčių, taip vadinamas "pataisymas" turi būti atliekamas jūsų paties. Naudokite paieškos sistemas, norėdami rasti atitinkamas nuorodas.
 
+To check whether you correctly patched the LibreLink app, take a look at the font of the patched app. The fonts in the original and patched app differ. Your patching was successful if the font looks like the font on the right:
+
+.. image:: ../images/LibreLinkPatchedCheck.png
+  :alt: LibreLink pranešimų paslauga
+
 Modifikuota programa turi būti įdiegta vietoj originalios programos. Kitas jutiklis, aktyvuotas su ja, pradės siųsti belaidžiu ryšiu duomenis į jūsų telefoną.
 
 Svarbu: Pirmiausia įdiekite ir pašalinkite originalią programą NFC turinčiame išmaniąjame telefone. NFC turi būti įjungtas. Tai neeikvoja baterijos. Tada įdiekite modifikuotą programą. Ji gali būti identifikuota autorizacijos pranešimu ekrane. 
