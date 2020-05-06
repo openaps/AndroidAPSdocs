@@ -111,7 +111,7 @@ Abhängig von der Version der Pumpen-Firmware kann die Insight jedes Mal kurz vi
 
 * Firmware 1.x: Grundsätzlich keine Vibration
 * Firmware 2.x: Vibration kann nicht deaktiviert werden.
-* Firmware 3.x: AndroidAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+* Firmware 3.x: AndroidAPS Bolusabgabe ohne Vibration. (Mindestanforderung [AAPS Version 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
 
 Die Firmware-Version kann im Menü der Pumpe nachgesehen werden.
 
