@@ -125,16 +125,16 @@
 
 ### Пролонгированный болюс
 
-Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
+Рекомендуется применять только один растянутый болюс единовременно так как одновременное использование нескольких растянутых болюсов может вызвать ошибки.
 
-### Time out
+### Таймаут
 
-Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
+Иногда помпа Insight может не отвечать во время установки соединения. В этом случае AAPS выдает следующее сообщение: "Таймаут сопряжения - выполните сброс bluetooth".
 
-![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
+![Сброс Bluetooth помпы Insight](../images/Insight_ResetBT.png)
 
-In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
+В этом случае выключите Bluetooth на помпе и смартфоне примерно 10 секунд, а затем включите его обратно.
 
 ## Пересечение часовых поясов с помпой Insight
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
+Информацию о пересечении часовых поясов см. в разделе [Пересечение часовых поясов с помпами](../Usage/Timezone-traveling#insight).
