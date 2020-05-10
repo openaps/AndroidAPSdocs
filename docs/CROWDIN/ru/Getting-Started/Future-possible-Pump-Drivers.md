@@ -8,7 +8,7 @@
 
 **Статус взаимодействия с ИПЖ:** В настоящее время нативно не поддерживается в среде AAPS. Завершено декодирование протокола Omnipod- [OpenOmni](http://www.openomni.org/) и [OmniAPS Slack](https://omniaps.slack.com/)
 
-**Other implementations:**
+**Другие решения:**
 
 - Omnipy для AndroidAPS (стабильно в тестировании, требует Raspberry Pi, а также RileyLink, и специально модифицированного AndroidAPS) Omnipy 
 - OmniCore для AndroidAPS (еще не выпущен, нативный код C# работает на Android, нуждается только в RileyLink и специально модифицированном AndroidAPS - следующая версия проекта Omnipy).
@@ -86,7 +86,7 @@
 
 ## Помпы, снятые с производства (компании больше не работают)
 
-### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
+### Помпа Cellnovo ([Домашняя страница](https://www.cellnovo.com/en/homepage))
 
 **Статус реализации:** В настоящее время не поддерживается какой-либо системой ИПЖ. Помпа является кандидатом на работу с ИПЖ, но поскольку протокол ее работы неизвестен, поддержка появится не очень скоро.
 
