@@ -1,32 +1,32 @@
-Remote monitoring
+Bewaking op afstand
 **************************************************
 
 .. image:: ../images/KidsMonitoring.png
-  :alt: Monitoring children
+  :alt: Toezicht op kinderen
   
-AndroidAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
+AndroidAPS biedt verschillende opties voor het vanaf afstand volgen van kinderen en kan ook behandelings opdrachten verzenden vanaf afstand. Deze functies kun je natuurlijk ook gebruiken om jouw partner of andere dierbare op afstand te volgen.
 
-Functions
+Functies
 ==================================================
-* Kid's pump is controlled by kid's phone using AndroidAPS.
-* Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone. Settings must be the same in AndroidAPS and NSClient.
-* Parents can be alarmed by using **xDrip+ app in follower mode** on their phone.
-* Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_.
-* Remote profile switch and temp targets through NSClient app.
+* De pomp van het kind wordt aangestuurd door de AndroidAPS app op de telefoon van het kind.
+* Ouders kunnen op afstand volgen en alle relevante gegevens bekijken, zoals bloedglucose, koolhydraten aan boord, insuline aan boord etc. door middel van de ** NSClient app** op hun telefoon. De instellingen in zowel AndroidAPS en in NSClient moeten exact hetzelfde zijn.
+* Ouders kunnen glucose alarmen op hun telefoon ontvangen via de **xDrip+ app in 'follower' modus** op hun telefoon.
+* AndroidAPS kan worden bediend op afstand door middel van `SMS Commando's<../Children/SMS-Commands.html>`_.
+* Profiel wissels en tijdelijke streefdoelen kunnen op afstand worden ingesteld via de NSClient app.
 
-Tools and apps for remote monitoring
+Hulpmiddelen en apps voor controle op afstand
 --------------------------------------------------
-* `Nightscout <http://www.nightscout.info/>`_ in web browser (mainly data display)
+* `Nightscout <http://www.nightscout.info/>`_ in webbrowser (voornamelijk data weergave)
 *	NSClient app
-*	Dexcom follow if you are using original Dexcom app (BG values only)
-*	`xDrip+ <../Configuration/xdrip.html>`_ in follower mode (mainly BG values and **alarms**)
-*	`Spike <https://spike-app.com/>`_ on iPhone (mainly BG values and **alarms**)
+* Dexcom follow als je de originele Dexcom app gebruikt (alleen BG waarden)
+* `xDrip+ <../Configuration/xdrip.html>`_ in 'follow'modus (voornamelijk BG waarden en **alarmen**)
+* `Spike <https://spike-app.com/>`_ op iPhone (voornamelijk BG waarden en **alarmen**)
 
-Things to consider
+Belangrijke keuzes vooraf
 ==================================================
-* Setting the correct `treatment factors <../Getting-Started/FAQ.html#how-to-begin>`_ (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved. 
-* Settings must be the same in AndroidAPS and NSClient.
-* Consider time gap between master and follower due to time for up- and download as well as the fact that AAPS master phone will only upload after loop run.
-* So take your time to set those correctly and test them in real life with your kid next to you before starting remote monitoring and remote treatment. School holidays might be a good time for that.
-* What is your emergency plan when remote control does not work (i.e. network problems)?
-* Remote monitoring and treatment can be really helpful in kinder garden and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan. Examples for such care plans can be found in the `files section of AndroidAPS users <https://www.facebook.com/groups/AndroidAPSUsers/files/>`_ on Facebook.
+* Het instellen van de juiste ` behandelingsfactoren <../Getting-Started/FAQ.html#how-begin> ` _ (basaal, DIA, ISF...) is moeilijk bij kinderen, vooral wanneer er groeihormonen in het spel zijn. 
+* De instellingen in zowel AndroidAPS en in NSClient moeten exact hetzelfde zijn.
+* Houd rekening met tijdsvertraging tussen master en volger. Dit vanwege de tijd die nodig is voor zowel up- als download, en het feit dat de hoofd AAPS telefoon even niet zal uploaden tijdens het uitvoeren van een loop-berekening.
+* Neem dus de tijd om de loop correct in te stellen en in "real life" met jouw kind binnen handbereik te testen, voordat je begint met het op afstand monitoren en behandelen. Schoolvakanties kunnen daar een goed moment voor zijn.
+* Wat is jullie noodplan wanneer bediening op afstand niet werkt (bijv. bij netwerk problemen)?
+* Monitoren en behandeling op afstand kunnen zeer nuttig zijn bij de kinderopvang en de basisschool. Zorg er dan ook voor dat de docenten en begeleiders kennis hebben van het behandelplan voor je kind. Voorbeelden van dergelijke behandelplannen kunnen worden gevonden in de `gedeelde bestanden van de AndroidAPS-Users Facebook groep. <https://www.facebook.com/groups/AndroidAPSUsers/files/>`_ op Facebook.
