@@ -30,7 +30,7 @@
 ![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
 
 * Эта установка позволяет сместить профиль на введенное число часов. 
-* So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
+* Так, например, когда работаете в ночные смены, сдвиньте часы на то, насколько позже/раньше вы ложитесь спать или просыпаетесь.
 * It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example: 
   * Current time: 12:00
   * **Positive** time shift 
