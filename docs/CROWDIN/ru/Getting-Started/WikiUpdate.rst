@@ -1,6 +1,6 @@
 Обновления и изменения в документации
 **************************************************
-May 2020
+Май 2020
 ==================================================
 * `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
 * `Insight deactivate vibration <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (firmware 3.x only)
