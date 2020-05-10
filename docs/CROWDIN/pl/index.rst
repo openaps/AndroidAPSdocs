@@ -1,13 +1,13 @@
 Witamy w dokumentacji systemu AndroidAPS
 ==================================================
 
-AndroidAPS jest to aplikacja open source przeznaczona dla osób chorujących na cukrzycę typu 1, która zainstalowana w smartfonach z systemem Android. działa jak system sztucznej trzustki (APS). Głównymi składnikami są różne algorytmy oprogramowania openAPS, których celem jest robienie tego, co robi żywa trzustka: utrzymywanie w odpowiednim zakresie poziomu cukru we krwi dzięki zastosowaniu automatycznego dozowania insuliny (AID). Ponadto co najmniej potrzebujesz obsługiwanej i zatwierdzonej przez FDA/CE pompy insulinowej i systemu ciągłego monitoringu glikemii. 
+AndroidAPS jest to aplikacja open source przeznaczona dla osób chorujących na cukrzycę typu 1, która zainstalowana w smartfonach z systemem Android. działa jak system sztucznej trzustki (APS). The main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Ponadto co najmniej potrzebujesz obsługiwanej i zatwierdzonej przez FDA/CE pompy insulinowej i systemu ciągłego monitoringu glikemii. 
 
-Aplikacja NIE korzysta z samouczącej się sztucznej inteligencji. Zamiast tego obliczenia AndroidAPS opierają się na indywidualnym algorytmie dawkowania i spożyciu węglowodanów, które użytkownik ręcznie wprowadza do swojego profilu terapii, ale dodatkowo są one weryfikowane przez system ze względów bezpieczeństwa. 
+Aplikacja NIE korzysta z samouczącej się sztucznej inteligencji. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons. 
 
 Aplikacja nie jest dostępna w Google Play - ze względów prawnych musisz ją samodzielnie zbudować bezpośrednio z kodu źródłowego.
 
-Głównymi składnikami są:
+The main components are:
 
 .. image:: images/modules-female.png
   :alt: Składniki
