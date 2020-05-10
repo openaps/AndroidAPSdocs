@@ -31,12 +31,12 @@
 
 * Эта установка позволяет сместить профиль на введенное число часов. 
 * Так, например, когда работаете в ночные смены, сдвиньте часы на то, насколько позже/раньше вы ложитесь спать или просыпаетесь.
-* It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example: 
-  * Current time: 12:00
-  * **Positive** time shift 
-    * 2:00 **+10 h** -> 12:00
-    * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
-  * **Negative** time shift 
+* Всегда возникает вопрос о том, какие настройки должны сменять параметры текущего времени. Это время должно быть сдвинуто на х часов. Следуйте инструкции, описанной в этом примере: 
+  * Текущее время: 12:00
+  * **Сдвиг в сторону увеличения** времени 
+    * 2:00 ** + 10 ч **-> 12:00
+    * Параметры от 2:00 будут использоваться вместо параметров, обычно используемых в 12:00 из-за положительного сдвига времени.
+  * **Negative** времени 
     * 22:00 **-10 h** -> 12:00
     * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
 
