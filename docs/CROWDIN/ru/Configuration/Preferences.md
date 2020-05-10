@@ -73,7 +73,7 @@
 
 При открытогм цикле вы будете получать уведомления каждый раз, когда AAPS рекомендует скорректировать базальную скорость. Чтобы уменьшить число уведомлений, можно либо использовать более широкий диапазон целевой ГК, либо увеличить процент минимального запроса на изменения. Он определяет относительное изменение, необходимое для активации уведомления.
 
-![Minimal request rate](../images/MinRequestChange.png)
+![Минимальный уровень запроса на изменения](../images/MinRequestChange.png)
 
 Примечание: В режиме замкнутого цикла рекомендуется использовать одиночный целевой показатель вместо целевого диапазона (т.е. 5,5 ммоль вместо 5,0-7,0 ммоль).
 
@@ -93,28 +93,28 @@
 * Эта величина вычисляется и отслеживается независимо от скорости вашего обычного базала. Учитывается только дополнительный базал, который свыше обычного.
 * Значение задается в единицах инсулина (ед.).
 
-When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia.
+Когда вы начинаете работать с алгоритмом ИПЖ, **рекомендуется установить макс. активный базальный инсулин IOB на 0 ** на время привыкания к системе. Такая настройка запрещает AAPS давать дополнительный базальный инсулин. В этот период алгоритм AAPS в состоянии ограничить или отключить базу инсулина для предотвращения гипогликемии.
 
-This is an important step in order to:
+Это важный шаг для того чтобы:
 
 * Безопасно привыкнуть к системе AAPS и тому, как она работает.
 * Совершенствовать свой базальный профиль и лучше настроить фактор чувствительности к инсулину ISF.
 * Увидеть, как AAPS ограничивает ваш базальный инсулин, чтобы предотвратить гипокликемию.
 
-When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 3 to get a value of 1.5u.
+Когда вы почувствуете себя комфортно, то можете позволить системе начать давать вам дополнительный базал, повышая макс. значение активного базального инсулина IOB. Хорошая рекомендация – взять **наивысшую скорость базала** в вашем профиле и **умножить ее на 3**. Например, если максимальная скорость базала в вашем профиле была 0,5 ед./ч, то, умножив ее на 3, вы получите значение 1.5 ед./ч.
 
 * Вы можете консервативно принять это значение и медленно увеличивать его со временем. 
 * Это только руководящие принципы; организмы всех людей отличаются друг от друга. Вы можете понять, что вам требуется больше или меньше, чем рекомендуется здесь, но всегда следует начинать консервативно и регулировать медленно.
 
-*Note: As a safety feature, Max Basal IOB is hard-limited to 7u.*
+*Примечание: В качестве функции безопасности максимально допустимый базальный Max Basal IOB жестко ограничен 7ед.*
 
 ## Настройки усваиваемости
 
-If you have selected to use AMA Autosens then you will be able to enter your maximum meal absorption time and how frequently you want autosense to refresh. If you often eat high fat or protein meals you will need to increase your meal absorption time.
+Если вы выбрали AMA Autosens, то сможете ввести максимальное время усвоения пищи и то, как часто вы хотите обновлять Autosens. Если вы часто едите блюда с высоким содержанием жиров или белка, вам следует увеличить время усвоения пищи.
 
 ## Настройки помпы
 
-The options here will vary depending on which pump driver you have selected in 'Config Builder'. Pair and set your pump up according to the pump related instructions:
+Параметры здесь варьируются в зависимости от того, какой драйвер помпы вы выбрали в конфигураторе. Выполните сопряжение и настройте помпу в соответствии с инструкциями относящимися к помпе:
 
 * [Инсулиновая помпа DanaR](../Configuration/DanaR-Insulin-Pump.md) 
 * [Инсулиновая помпа DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
@@ -122,7 +122,7 @@ The options here will vary depending on which pump driver you have selected in '
 * [Помпа Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) 
 * [Помпа Medtronic](..//Configuration/MedtronicPump.md)
 
-If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+Для работы открытого цикла AndroidAPS, в конфигураторе выберите виртуальную помпу.
 
 ## Клиент Nightscout
 
@@ -141,7 +141,7 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 
 ## СМС-коммуникатор
 
-This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](../Children/SMS-Commands.rst) but it will only display in Preferences if you have selected this option in the Config Builder.
+Эта настройка позволяет осуществлять удаленное управление приложением при помощи смс-инструкций, отправляемых на телефон пациента, который выполняет их в AAPS, например, приостанавливая работу цикла или подавая болюсы. Дополнительная информация описана в [SMS командах](../Children/SMS-Commands.rst) но они отображаются в настройках только если вы выбрали эту опцию в конфигураторе.
 
 ## Другое
 
