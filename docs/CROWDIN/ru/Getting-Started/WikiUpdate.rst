@@ -10,7 +10,7 @@
 ==================================================
 * `Запись о введении инсулина задним числом < ..//Usage/CPbefore26.html#carbs-- bolus> ` _ (напр. с помощью шприца)
 * Поддержка Android 6 будет прекращена в следующей основной версии < ../Module/module.html#phone> ` _
-March 2020
+Март 2020
 ==================================================
 * Построение APK в Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
 * `DanaRS с прошивкой v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **в настоящее время не может использоваться для AndroidAPS!**
