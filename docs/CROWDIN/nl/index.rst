@@ -1,13 +1,13 @@
 Welkom bij de Android APS documentatie
 ==================================================
 
-AndroidAPS is een open source app voor mensen met insuline-afhankelijke diabetes. De app fungeert als een kunstmatig alvleesklier systeem (APS, Artificial Pancreas System) op Android smartphones. The main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Daarnaast is een door de app ondersteunde en FDA/CE goedgekeurde insulinepomp en een continue glucosesensor nodig. 
+AndroidAPS is een open source app voor mensen met insuline-afhankelijke diabetes. De app fungeert als een kunstmatig alvleesklier systeem (APS, Artificial Pancreas System) op Android smartphones. Belangrijkste componenten zijn verschillende OpenAPS software algoritmen die doen wat een levende alvleesklier doet: de bloedsuiker binnen gezonde grenzen houden. Het algoritme doet dit door het gebruik van geautomatiseerde insulinedosering (AID, Automated Insulin Dosing). Daarnaast is een door de app ondersteunde en FDA/CE goedgekeurde insulinepomp en een continue glucosesensor nodig. 
 
-De app gebruikt GEEN zelflerende kunstmatige intelligentie. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons. 
+De app gebruikt GEEN zelflerende kunstmatige intelligentie. In plaats daarvan zijn de berekeningen van AndroidAPS gebaseerd op de individuele insulinebehoefte en de inname van koolhydraten die de gebruiker handmatig invoert, maar ze worden om veiligheidsredenen door het systeem gecontroleerd. 
 
 De app is niet verkrijgbaar in de Google Play store - om juridische redenen moet iedere gebruiker de app zelf vanuit de broncode bouwen.
 
-The main components are:
+De belangrijkste onderdelen zijn:
 
 .. image:: images/modules-female.png
   :alt: Onderdelen
@@ -89,7 +89,7 @@ AndroidAPS gebruik
    Tijdelijk streefdoel <./Usage/temptarget.md>   
    Vertraagde koolhydraten (eCarbs) <./Usage/Extended-Carbs.rst>
    Automatisering <./Usage/Automation.rst>
-   Careportal (discontinued) <./Usage/CPbefore26.rst>
+   Careportal (bestaat niet meer) <./Usage/CPbefore26.rst>
    Automatisering met andere apps <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
  
