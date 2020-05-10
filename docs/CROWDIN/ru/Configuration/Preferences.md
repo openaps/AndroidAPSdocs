@@ -61,29 +61,29 @@
 
 ## Замкнутый цикл
 
-You can toggle between open and closed looping here.
+Здесь можно переключаться между открытым и замкнутым циклом.
 
-**Open looping** means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump.
+**Открытый цикл** означает, что предложения по изменению скорости временного базала TBR, сделанные на основе ваших данных, появляются на экране в качестве уведомления, но вы должны самостоятельно принять их и вручную ввести в помпу.
 
-**Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.
+**Замкнутый цикл** означает, что предложения по изменению скорости временного базала TBR автоматически отправляются на вашу помпу без вашего подтверждения.
 
-The homescreen will display in the top left corner whether you are open or closed looping, and pressing and holding this homescreen button will also allow you to toggle between the two.
+Домашний экран в левом верхнем углу отображает открытое или замкнутое состояние цикла и нажатие и удерживание этого участка экрана позволяет переключаться между этими опциями.
 
-### Minimal Request Rate
+### Минимальный уровень запроса на изменения
 
-When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate. This defines the relative change required to trigger a notification.
+При открытогм цикле вы будете получать уведомления каждый раз, когда AAPS рекомендует скорректировать базальную скорость. Чтобы уменьшить число уведомлений, можно либо использовать более широкий диапазон целевой ГК, либо увеличить процент минимального запроса на изменения. Он определяет относительное изменение, необходимое для активации уведомления.
 
 ![Minimal request rate](../images/MinRequestChange.png)
 
-Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol instead of 5,0 - 7,0 mmol) is recommended.
+Примечание: В режиме замкнутого цикла рекомендуется использовать одиночный целевой показатель вместо целевого диапазона (т.е. 5,5 ммоль вместо 5,0-7,0 ммоль).
 
 ## Помощник болюса OpenAPS AMA
 
-OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. Turn it on in the Config tab to view the safety settings here, you will need to have completed [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature. You can read more about the settings and [Autosens in the OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Помощник болюса OpenAPS Advanced Meal Assist (AMA) позволяет системе быстрее установить высокое временное целевое значение после болюса на еду, ЕСЛИ вы правильно ввели углеводы. Включите его на вкладке Конфигуратор, чтобы просмотреть параметры безопасности, чтобы использовать эту возможность, вам нужно будет выполнить [ Цель 9 ](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama). Подробнее о настройках и автонастройке чувствительности [Autosens можно прочитать в документации OpenAPS ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-### Max U/hr a Temp Basal can be set to
+### Максималное значение ед./ч для скорости временного базала
 
-This setting exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. The value is measured in units per hour (u/hr). Рекомендуется установить это значение на разумный предел. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
+Эта настройка существует как ограничение безопасности, чтобы не позволить алгоритму ААПС когда-либо задать слишком большую величину скорости базала. Значение задается в единицах в час (ед./ч). Рекомендуется установить это значение на разумный предел. Хорошая рекомендация – взять **наивысшую скорость базала** в вашем профиле и **умножить ее на 4**. Например, если максимальная скорость базала в вашем профиле была 0,5 ед./ч, то, умножив ее на 4, вы получите значение 2 ед./ч.
 
 ### Maximum basal IOB OpenAPS can deliver [U]
 
