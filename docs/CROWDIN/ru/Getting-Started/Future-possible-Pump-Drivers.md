@@ -80,7 +80,7 @@
 
 **Требования к оборудованию для AAPS:** Никаких. Похоже, что блутус-связь имеется.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+** Комментарии: ** Поскольку компания заинтересована в интеграции с AAPS, они могут сами предпринять необходимые действия.
 
 * * *
 
@@ -92,53 +92,53 @@
 
 **Требования к оборудованию для AAPS:** По-видимому, никаких. В помпе есть блутус-связь.
 
-**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+**Примечание о товаре:** Похоже, что компания решила выйти из Pump Business. Подробнее в этой [статье](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
 ## Помпы, неспособные к работе в качестве компонента ИПЖ
 
-### Tandem:(any) ([Homepage](https://www.tandemdiabetes.com/))
+### Тандем:(любой) ([Домашняя страница](https://www.tandemdiabetes.com/))
 
-**Loop status:** Not loopable.
+**Статус пригодности:** Не пригодна.
 
-While ago they had firmware called T:AP (mentioned in this [article](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), which could be used in loop (its no longer available, since pump was upgraded to x2), but that was not intended for commercial use, just for experimental use only (research projects). I talked with one of directors of company and he assured my that Tandem pump will never be open, but they have created their own closed loop system, which they are calling Control-IQ (I think it is already available in USA, and should be available in 2020 in Eu).
+Некоторое время назад у них имелась микропрограмма (прошивка) под названием T:AP (упоминается в этой статье [](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), которая могла бы использоваться в цикле ИПЖ). Прошивка больше не доступна, поскольку помпа была обновлена до x2). Прошивка не была предназначена для коммерческого использования, только для экспериментов (исследовательские проекты). Я разговаривал с одним из директоров компании и он заверил меня, что ПО помпы Tandem никогда не будет открыто, но что они создали свою собственную замкнутую систему, которую они называют Control-IQ (я думаю, что она уже доступна в США, и должна быть доступна в 2020 году в Европе).
 
 * * *
 
 ### Animas Vibe
 
-**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
+**Статус пригодности:** Не пригодна. Нет возможности дистанционного управления. **Примечание:** помпа снята с продажи. Компания вышла из бизнеса (J&J).
 
 * * *
 
 ### Animas Ping
 
-**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped beeing sold when Vibe came out.
+**Статус пригодности:** Не пригодна. Она имеет возможность подачи болюса, но не временного базала ТБР. **Примечание** Была снята с продажи после выхода Animas Vibe.
 
 ## Требования к пригодности помп для ИПЖ
 
-**Prerequisite**
+**Предварительные условия**
 
 - Помпа должна поддерживать дистанционное управление. (BT, Радио частота и т. д.)
 - Протокол взломан/документирован/и т. д.
 
-**Minimal requirement**
+**Минимальные требования**
 
 - Устанавливать временную скорость базала
 - Получать сведения о состоянии
 - Отменять временную базальную скорость
 
-**For oref1(SMB) or Bolusing:**
+**Для oref1(SMB) или болюсов:**
 
 - Настраивать подачу болюса
 
-**Good to have**
+**Желательно иметь**
 
 - Отмену болюса
 - Получать профиль базала (почти обязательно)
 - Устанавливать профиль базала (хорошо иметь)
 - Способность читать журнал 
 
-**Other (not required but good to have)**
+**Другое (не обязательно, но желательно)**
 
 - Настраивать пролонгированный болюс
 - Отменять пролонгированный болюс
@@ -147,6 +147,6 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 
 * * *
 
-### Other pumps support
+### Поддержка других помп
 
-If you have any other pumps you would like to see status on, please contact me (@andyrozman on gitter). In future release a lot of Pump configurations will be added to be Open loopable (you will be able to select Virtual Pump Type in configuration and your settings will be loaded - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
+Если у вас есть какие-либо другие помпы, для которых вы хотите увидеть статус, пожалуйста, свяжитесь со мной (@andyrozman на gitter). В будущем в релизе будет добавлено много конфигураций помп для открытого цикла (вы сможете выбрать в конфигурации виртуальную помпу Virtual Pump и ваши настройки будут загружены - [Запрос на функциональность #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
