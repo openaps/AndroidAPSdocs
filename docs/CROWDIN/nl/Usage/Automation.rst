@@ -66,7 +66,7 @@ Action
 --------------------------------------------------
 You can choose one or more actions: 
 
-* start temp target 
+* start tijdelijk doel 
 
    * must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
    * works only if there is no previous temp target
