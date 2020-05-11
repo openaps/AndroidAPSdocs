@@ -8,8 +8,8 @@
 
 * Bouw zo snel mogelijk een nieuwe app zodra er een nieuwe versie is uitgebracht. Je zult een [melding op het Overzichtscherm van AndroidAPS](../Installing-AndroidAPS/Releasenotes.html#release-notes) zien over de nieuwe versie.
 * Vanaf versie 2.3 moet je git gebruiken om te updaten. Bijwerken via zip-bestand werkt niet meer.
-* Please use [Android Studio Version 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.6.1.
+* Gebruik [](https://developer.android.com/studio/)Android Studio Versie 3.6.1 of nieuwer om de apk te bouwen.
+* [Windows 10 32-bits systemen](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) worden niet ondersteund door Android Studio 3.6.1.
 * Als je "xDrip+" gebruikt, zorg dan dat je de instelling voor [Identify receiver](../Configuration/xdrip#identificeer-ontvanger-identify-receiver) (identificeer ontvanger) hebt ingevuld in xDrip+.
 * Als je de Dexcom G6 gebruikt met de [aangepaste Dexcom-app](../Hardware/DexcomG6#g6-met-aangepaste-dexcom-app), dan moet je de versie uit de [2.4 map](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) gebruiken.
 
@@ -38,13 +38,13 @@ Volg de handleiding op de [git-installatiepagina](../Installing-AndroidAPS/git-i
     
     ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02.png)
 
-* Wait while download is in progress.
+* Wacht terwijl het downloaden bezig is.
     
-    ![Android Studio - Pull in progress](../images/AndroidStudio361_Update03.png)
+    ![Android Studio - Pull wordt uitgevoerd](../images/AndroidStudio361_Update03.png)
 
-* When done Android Studio will inform you that "all files are up-to-date".
+* Wanneer Android Studio klaar is zul je een melding krijgen dat alle bestanden up-to-date zijn: "all files are up-to-date".
     
-    ![All files up to date](../images/AndroidStudio361_Update04.png)
+    ![Alle bestanden zijn up-to-date](../images/AndroidStudio361_Update04.png)
 
 ## Bouwen van de ondertekende APK
 
@@ -58,11 +58,11 @@ Volg de handleiding op de [git-installatiepagina](../Installing-AndroidAPS/git-i
 
 ![APK in plaats van bundel](../images/AndroidStudio361_28.png)
 
-* Make sure that module is set to "app".
-* Select your key store path by clicking on "Choose existing...".
-* Enter your passwords for key store and key.
-* If the box to remember passwords is checked you don't have to enter them. In case the box was not checked during last build and you cannot remember the passwords refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
-* Click "Next".
+* Zorg dat de module is ingesteld op "app".
+* Selecteer jouw key store door te klikken op "Choose existing..." (Kies bestaande...).
+* Voer jouw wachtwoorden in voor key stor en key.
+* Als je het vakje voor het onthouden van wachtwoorden eerder had geselecteerd, dan staan de wachtwoorden er al en hoef je deze niet in te voeren. Als je het vakje niet had aangevinkt tijdens de laatste keer dat je de app bouwde en je kunt je wachtwoorden niet meer herinneren, ga dan naar de [Problemen oplossen sectie](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Klik "Next" (volgende).
 
 ![Key store](../images/AndroidStudio361_Update05.png)
 
@@ -94,9 +94,9 @@ Op jouw telefoon moet je installatie uit onbekende bronnen toestaan. Je vindt di
 
 ## Controleer AAPS versie op telefoon
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+U kunt de AAPS-versie op jouw telefoon bekijken door op de drie stipjes in de rechterbovenhoek van het Overzicht scherm te tikken, en te kiezen voor 'Over'.
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![AAPS versie geïnstalleerd](../images/Update_VersionCheck.png)
 
 ## Problemen oplossen
 
