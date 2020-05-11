@@ -10,7 +10,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 **Other implementations:**
 
-- Omnipy voor AndroidAPS (stabiel in tests, vereist Raspberry Pi en RileyLink, en een speciale versie van AndroidAPS. Enkele tientalen mensen gebruiken dit al in het dagelijks leven.) Lees meer op Omnipy 
+- Omnipy voor AndroidAPS (stabiel in tests, vereist Raspberry Pi en RileyLink, en een speciale versie van AndroidAPS. Enkele tientalen mensen gebruiken dit al in het dagelijks leven.) Lees meer op github, zoek op Omnipy 
 - OmniCore voor AndroidAPS (nog niet vrijgegeven, is geschreven in C# programmeertaal die "native" op Android draait. Heeft alleen een RileyLink nodig en een speciale versie van AndroidAPS. NB: dit is de opvolger van het Omnipy project).
 - [iOS Loop](https://loopkit.github.io/loopdocs/) (stabiel, released, vereist RileyLink).
 
