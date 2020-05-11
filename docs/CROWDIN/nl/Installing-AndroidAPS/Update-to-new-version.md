@@ -50,13 +50,13 @@ Volg de handleiding op de [git-installatiepagina](../Installing-AndroidAPS/git-i
 
 <!--- Text is maintained in page building-apk.md --->
 
-* Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
+* Klik op "Build" in de menubalk en kies "Generate Signed Bundle / APK..." (Ondertekende Bundel/APK genereren...).
 
-![Build apk](../images/AndroidStudio361_27.png)
+![Apk bouwen](../images/AndroidStudio361_27.png)
 
-* Select "APK" (1.) instead of "Android App Bundle" and click "Next" (2.).
+* Selecteer "APK" (1.) in plaats van "Android App Bundle" en klik op "Next" (2.).
 
-![APK instead of bundle](../images/AndroidStudio361_28.png)
+![APK in plaats van bundel](../images/AndroidStudio361_28.png)
 
 * Make sure that module is set to "app".
 * Select your key store path by clicking on "Choose existing...".
@@ -66,31 +66,31 @@ Volg de handleiding op de [git-installatiepagina](../Installing-AndroidAPS/git-i
 
 ![Key store](../images/AndroidStudio361_Update05.png)
 
-* Select build variant "fullRelease" (1.). 
-* Check boxes V1 and V2 for signature versions (2.).
-* Click "Finish". (3.)
+* Selecteer de buildvariant "fullRelease" (1.). 
+* Selecteer de hokjes V1 en V2 voor de handtekeningversies (2.).
+* Klik op "Finish". (3.)
 
-![Finish build](../images/AndroidStudio361_32.png)
+![Bouwen voltooien](../images/AndroidStudio361_32.png)
 
-* Android Studio will display the information "APK(s) generated successfully..." after build is finished.
-* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
-* Easiest way to find the apk is to click on "Event log".
+* Android Studio laat het je weten wanneer de APK succesvol is gebouwd: "APK(s) generated succesfully...".
+* In het geval dat de APK niet succesvol is gebouwd, verwijzen we je naar de [Problemen oplossen sectie](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* De makkelijkste manier om de apk te vinden is door te klikken op "Event log".
 
-![Build successfully - event log](../images/AndroidStudio361_33.png)
+![Succesvol gebouwd - event log](../images/AndroidStudio361_33.png)
 
-* In the event log section click "locate".
+* Klik in de event log sectie op "locate".
 
-![Event log - locate apk](../images/AndroidStudio361_34.png)
+![Event log - zoek apk](../images/AndroidStudio361_34.png)
 
-* app-full-release.apk is the file you are looking for.
+* app-full-release.apk is het bestand dat je nodig hebt.
 
-![File location apk](../images/AndroidStudio361_35.png)
+![Bestandslocatie apk](../images/AndroidStudio361_35.png)
 
 ## Overzetten van de APK naar je telefoon
 
-Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
+De eenvoudigste manier om app-full-release.apk over te zetten op je telefoon is via [USB-kabel of Google Drive](https://support.google.com/android/answer/9064445?hl=en). Overdracht per e-mail kan leiden tot problemen (veel e-mailprogramma's blokkeren apk-bestanden als bijlage) en is dus niet de makkelijkste manier.
 
-On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+Op jouw telefoon moet je installatie uit onbekende bronnen toestaan. Je vindt dit ergens in je telefooninstellingen, waarschijnlijk onder Beveiliging. Handleidingen hoe dit te doen kun je op internet vinden (bijv. [hier](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) of [hier](https://www.androidcentral.com/unknown-sources)).
 
 ## Controleer AAPS versie op telefoon
 
