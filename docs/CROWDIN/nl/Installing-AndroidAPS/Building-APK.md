@@ -7,7 +7,7 @@
 ## ## Belangrijk:
 
 * Gebruik **[Android Studio Versie 3.6.1](https://developer.android.com/studio/)** of nieuwer om de apk te bouwen.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.6.1.
+* [Windows 10 32-bits systemen](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) worden niet ondersteund door Android Studio 3.6.1.
 
 **Configuration on demand** wordt niet ondersteund door de huidige versie van de Android Gradle-plugin.
 
