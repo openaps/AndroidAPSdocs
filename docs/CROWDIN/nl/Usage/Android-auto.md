@@ -1,47 +1,47 @@
 # Android Auto
 
-![AAPS CGM data on Android Auto](../images/AndroidAuto_05.png)
+![AAPS CGM gegevens op Android Auto](../images/AndroidAuto_05.png)
 
-## AndroidAPS settings for Android Auto
+## AndroidAPS instellingen voor Android Auto
 
-Use system notifications for alerts and notifications:
+Gebruik systeem notificaties voor waarschuwingen en notificaties:
 
-* Open 3-dot-menu on top right of home screen
+* Klik op 3 puntjes in rechterbovenhoek van AAPS
 * Instellingen
-* Scroll all the way down
-* Activate "Use system notifications..."
+* Scroll helemaal naar beneden
+* Activeer "Gebruik systeem notificaties voor waarschuwingen..."
 
-![Use system notifications for alerts and notifications](../images/AndroidAuto_01.png)
+![Gebruik systeem notificaties voor waarschuwingen en notificaties](../images/AndroidAuto_01.png)
 
-## Settings in Android Auto app on your phone
+## Instellingen in Android Auto app op jouw telefoon
 
-As AAPS is no official Android Auto app notifications have to be activated in Android Auto.
+Omdat AAPS geen officiële Android Auto app is, moet je meldingen activeren in Android Auto.
 
-* Open Android Auto app on your phone.
-* Tap hamburger menu
-* Select settings
-* Scroll down all the way to the bottom of the list and tap version no. 10 times until message "Developer mode enabled" is displayed.
+* Open de Android Auto app op je telefoon.
+* Tik op hamburger menu
+* Selecteer instellingen
+* Scroll helemaal naar beneden naar de onderkant van de lijst en tik 10 keer op versie nummer totdat bericht "Developer mode enabled" wordt weergegeven.
 
-![Enable developer mode](../images/AndroidAuto_02.png)
+![Ontwikkelaarsmodus inschakelen](../images/AndroidAuto_02.png)
 
-* Open 3-dot-menu on top right corner
-* Select "Developer settings"
-* Scroll down all the way to the bottom of the list and activate "Unknown sources"
+* Klik op 3 puntjes in rechterbovenhoek
+* Selecteer "Ontwikkelaars instellingen"
+* Scroll naar beneden helemaal naar de onderkant van de lijst en activeer "Onbekende bronnen"
 
-![Enable unknown sources](../images/AndroidAuto_03.png)
+![Onbekende bronnen toestaan](../images/AndroidAuto_03.png)
 
-* Now you can quit developper mode if you want. Tap three dots menu on the top right to do so.
+* Je kunt de ontwikkelaars-modus nu sluiten als je wilt. Klik hiervoor op de 3 menupuntjes rechtsboven.
 
-## Show notifications in car
+## Toon meldingen in jouw auto
 
-* Tap the bell icon on the lower menu bar in Android Auto in your car
+* Tik op het bel pictogram op de onderste menubalk in Android Auto in jouw auto
 
-![Bell icon - Android Auto in car](../images/AndroidAuto_04.png)
+![Bel pictogram - Android Auto in de auto](../images/AndroidAuto_04.png)
 
-* CGM values wil be shown as follows:
+* CGM-waarden worden als volgt weergegeven:
 
-![AAPS CGM data on Android Auto](../images/AndroidAuto_05.png)
+![AAPS CGM gegevens op Android Auto](../images/AndroidAuto_05.png)
 
-## Troubleshooting:
+## Problemen oplossen:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidaps-settings-for-android-auto) in Android and if [Android Auto has access rights to notifications](#settings-in-android-auto-app-on-your-phone).
+* Als je de melding niet ziet, controleer dan of je [AAPS toestemming hebt gegeven om meldingen te tonen](#androidaps-settings-for-android-auto) in Android en of [Android Auto toegangsrechten heeft tot meldingen](#settings-in-android-auto-app-on-your-phone).
