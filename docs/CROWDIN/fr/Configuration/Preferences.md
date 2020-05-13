@@ -63,11 +63,11 @@ Il s’agit de la quantité maximale de Glucides que la Calculatrice de Bolus AA
 
 Vous pouvez alterner entre Boucle Ouverte et Boucle Fermée.
 
-**Open looping** means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump.
+**Boucle Ouverte** signifie que des propositions de DBT sont effectuées sur la base de vos données et apparaissent en tant que notifications, mais vous devez choisir de les accepter et de les rentrer manuellement dans votre pompe.
 
-**Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.
+**Boucle Fermée** signifie que les propositions de DBT sont automatiquement envoyées à la pompe sans confirmation ou action de votre part.
 
-The homescreen will display in the top left corner whether you are open or closed looping, and pressing and holding this homescreen button will also allow you to toggle between the two.
+L’écran d’accueil affiche dans le coin supérieur gauche si vous etes en Boucle Ouverte ou en Boucle Fermée. Appuyer et en maintenir ce bouton de l’écran d’accueil vous permettra également de basculer entre les deux modes.
 
 ### Changement minimum
 
@@ -79,7 +79,7 @@ Remarque : En mode boucle fermée, une cible unique au lieu de la plage cible (p
 
 ## OpenAPS AMA
 
-OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. Turn it on in the Config tab to view the safety settings here, you will need to have completed [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature. You can read more about the settings and [Autosens in the OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+L'Assistance Améliorée Repas (AAR) de OpenAPS permet au système de reagir plus rapidement après un bolus de repas SI vous entrez les Glucides de manière fiable. Activez-le dans le Générateur de configuration pour voir les paramètres de sécurité, vous devrez avoir complété l'[Objectif 9](../Usage/Objectives#objectif-9-activation-de-fonctionnalites-supplementaires-en-journee-comme-l-aide-au-repas-amelioree-ara-ama) pour utiliser cette fonctionnalité. Vous pouvez en apprendre plus sur les Paramètres et l'Autosens dans le [manuel d'OpenAPS](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 ### Max U/hr a Temp Basal can be set to
 
