@@ -61,60 +61,60 @@
 
 ## Замкнутый цикл
 
-You can toggle between open and closed looping here.
+Здесь можно переключаться между открытым и замкнутым циклом.
 
-**Open looping** means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump.
+**Открытый цикл** означает, что предложения по изменению скорости временного базала TBR, сделанные на основе ваших данных, появляются на экране в качестве уведомления, но вы должны самостоятельно принять их и вручную ввести в помпу.
 
-**Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.
+**Замкнутый цикл** означает, что предложения по изменению скорости временного базала TBR автоматически отправляются на вашу помпу без вашего подтверждения.
 
-The homescreen will display in the top left corner whether you are open or closed looping, and pressing and holding this homescreen button will also allow you to toggle between the two.
+Домашний экран в левом верхнем углу отображает открытое или замкнутое состояние цикла и нажатие и удерживание этого участка экрана позволяет переключаться между этими опциями.
 
-### Minimal Request Rate
+### Минимальный уровень запроса на изменения
 
-When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate. This defines the relative change required to trigger a notification.
+При открытогм цикле вы будете получать уведомления каждый раз, когда AAPS рекомендует скорректировать базальную скорость. Чтобы уменьшить число уведомлений, можно либо использовать более широкий диапазон целевой ГК, либо увеличить процент минимального запроса на изменения. Он определяет относительное изменение, необходимое для активации уведомления.
 
-![Minimal request rate](../images/MinRequestChange.png)
+![Минимальный уровень запроса на изменения](../images/MinRequestChange.png)
 
-Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol instead of 5,0 - 7,0 mmol) is recommended.
+Примечание: В режиме замкнутого цикла рекомендуется использовать одиночный целевой показатель вместо целевого диапазона (т.е. 5,5 ммоль вместо 5,0-7,0 ммоль).
 
 ## Помощник болюса OpenAPS AMA
 
-OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. Turn it on in the Config tab to view the safety settings here, you will need to have completed [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature. You can read more about the settings and [Autosens in the OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Помощник болюса OpenAPS Advanced Meal Assist (AMA) позволяет системе быстрее установить высокое временное целевое значение после болюса на еду, ЕСЛИ вы правильно ввели углеводы. Включите его на вкладке Конфигуратор, чтобы просмотреть параметры безопасности, чтобы использовать эту возможность, вам нужно будет выполнить [ Цель 9 ](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama). Подробнее о настройках и автонастройке чувствительности [Autosens можно прочитать в документации OpenAPS ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-### Max U/hr a Temp Basal can be set to
+### Максималное значение ед./ч для скорости временного базала
 
-This setting exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. The value is measured in units per hour (u/hr). Рекомендуется установить это значение на разумный предел. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
+Эта настройка существует как ограничение безопасности, чтобы не позволить алгоритму ААПС когда-либо задать слишком большую величину скорости базала. Значение задается в единицах в час (ед./ч). Рекомендуется установить это значение на разумный предел. Хорошая рекомендация – взять **наивысшую скорость базала** в вашем профиле и **умножить ее на 4**. Например, если максимальная скорость базала в вашем профиле была 0,5 ед./ч, то, умножив ее на 4, вы получите значение 2 ед./ч.
 
-### Maximum basal IOB OpenAPS can deliver [U]
+### Максимальный активный базальный инсулин IOB, разрешенный к подаче для OpenAPS [ед.]
 
-Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
+Количество базального инсулина (в единицах) которому позволено накопиться в вашем организме в дополнение к нормальному базальному профилю. По достижении этой величины AAPS перестает подавать дополнительный базальный инсулин до тех пор, пока ваш активный базальный Инсулин (IOB) снова не вернется в этот диапазон.
 
 * Эта величина не учитывает активный болюсный инсулин IOB, только базальный.
 * Эта величина вычисляется и отслеживается независимо от скорости вашего обычного базала. Учитывается только дополнительный базал, который свыше обычного.
 * Значение задается в единицах инсулина (ед.).
 
-When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia.
+Когда вы начинаете работать с алгоритмом ИПЖ, **рекомендуется установить макс. активный базальный инсулин IOB на 0 ** на время привыкания к системе. Такая настройка запрещает AAPS давать дополнительный базальный инсулин. В этот период алгоритм AAPS в состоянии ограничить или отключить базу инсулина для предотвращения гипогликемии.
 
-This is an important step in order to:
+Это важный шаг для того чтобы:
 
 * Безопасно привыкнуть к системе AAPS и тому, как она работает.
 * Совершенствовать свой базальный профиль и лучше настроить фактор чувствительности к инсулину ISF.
 * Увидеть, как AAPS ограничивает ваш базальный инсулин, чтобы предотвратить гипокликемию.
 
-When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 3 to get a value of 1.5u.
+Когда вы почувствуете себя комфортно, то можете позволить системе начать давать вам дополнительный базал, повышая макс. значение активного базального инсулина IOB. Хорошая рекомендация – взять **наивысшую скорость базала** в вашем профиле и **умножить ее на 3**. Например, если максимальная скорость базала в вашем профиле была 0,5 ед./ч, то, умножив ее на 3, вы получите значение 1.5 ед./ч.
 
 * Вы можете консервативно принять это значение и медленно увеличивать его со временем. 
 * Это только руководящие принципы; организмы всех людей отличаются друг от друга. Вы можете понять, что вам требуется больше или меньше, чем рекомендуется здесь, но всегда следует начинать консервативно и регулировать медленно.
 
-*Note: As a safety feature, Max Basal IOB is hard-limited to 7u.*
+*Примечание: В качестве функции безопасности максимально допустимый базальный Max Basal IOB жестко ограничен 7ед.*
 
 ## Настройки усваиваемости
 
-If you have selected to use AMA Autosens then you will be able to enter your maximum meal absorption time and how frequently you want autosense to refresh. If you often eat high fat or protein meals you will need to increase your meal absorption time.
+Если вы выбрали AMA Autosens, то сможете ввести максимальное время усвоения пищи и то, как часто вы хотите обновлять Autosens. Если вы часто едите блюда с высоким содержанием жиров или белка, вам следует увеличить время усвоения пищи.
 
 ## Настройки помпы
 
-The options here will vary depending on which pump driver you have selected in 'Config Builder'. Pair and set your pump up according to the pump related instructions:
+Параметры здесь варьируются в зависимости от того, какой драйвер помпы вы выбрали в конфигураторе. Выполните сопряжение и настройте помпу в соответствии с инструкциями относящимися к помпе:
 
 * [Инсулиновая помпа DanaR](../Configuration/DanaR-Insulin-Pump.md) 
 * [Инсулиновая помпа DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
@@ -122,7 +122,7 @@ The options here will vary depending on which pump driver you have selected in '
 * [Помпа Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) 
 * [Помпа Medtronic](..//Configuration/MedtronicPump.md)
 
-If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+Для работы открытого цикла AndroidAPS, в конфигураторе выберите виртуальную помпу.
 
 ## Клиент Nightscout
 
@@ -141,7 +141,7 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 
 ## СМС-коммуникатор
 
-This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](../Children/SMS-Commands.rst) but it will only display in Preferences if you have selected this option in the Config Builder.
+Эта настройка позволяет осуществлять удаленное управление приложением при помощи смс-инструкций, отправляемых на телефон пациента, который выполняет их в AAPS, например, приостанавливая работу цикла или подавая болюсы. Дополнительная информация описана в [SMS командах](../Children/SMS-Commands.rst) но они отображаются в настройках только если вы выбрали эту опцию в конфигураторе.
 
 ## Другое
 

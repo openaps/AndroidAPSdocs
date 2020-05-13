@@ -6,6 +6,7 @@ Mai 2020
 * `Insight Vibration deaktivieren <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (nur Firmware 3.x)
 * `Minimaler Wert zur Anfrage einer Änderung <../Configuration/Preferences.html#minimaler-wert-zur -anfrage-einer-anderung>`_ zur Reduktion der Zahl der Benachrichtigungen im Open Loop
 * `Patched Libre Link App <../Hardware/Libre2.html#schritt-1-erstelle-deine-eigene-gepatchte-librelink-app>`_ - Prüfen, ob die gepatchte App korrekt erstellt wurde
+* `Vorhersagelinien <../Getting-Started/Screenshots.html#abschnitt-e>`_ - zusätzliche Details
 April 2020
 ==================================================
 * `Insulin nachträglich erfassen <../Usage/CPbefore26.html#id1>`_ (z.B. bei Abgabe mit Spritze)

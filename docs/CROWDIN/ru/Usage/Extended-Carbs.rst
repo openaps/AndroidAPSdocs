@@ -41,15 +41,15 @@ ECarbs на вкладке обзора, обратите внимание на 
 ==================================================
 Как упоминалось выше, пролонгированные или многоволновые болизы не работают в замкнутом цикле. ` Подробнее см. ниже <../Usage/Extended-Carbs.html#why-Extended-boluses-wont-work-in-a-closed-loop-environment> ` _
 
-Extended bolus and switch to open loop - Dana and Insight pump only
+Пролонгированный болюс и переключение на незамкнутый цикл - только для помп Dana и Insight
 -----------------------------------------------------------------------------
 Некоторые пользователи просили предусмотреть пролонгированные болюсы в ААПС, так как хотели бы компенсировать специфические продукты питания привычным для себя образом. 
 
-That's why as of version 2.6 there is an option for an extended bolus for users of Dana and Insight pumps. 
+Поэтому, начиная с версии 2.6, существует опция пролонгированного болюса для пользователей помп Dana и Insight. 
 
-* Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus. 
-* Bolus units, remaining and total time will be shown on homescreen.
-* On Insight pump extended bolus is *not available* if `TBR emulation <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_ is used. 
+Замкнутый цикл автоматически будет остановлен и переключится на режим открытого цикла на время пролонгированных болюсов. 
+* Единицы измерения, оставшееся и общее время, будут показаны на гланом экране.
+* На помпе Insight пролонгированный болюс *не доступен*, если используется эмуляция временной скорости базала `TBR <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`. 
 
 .. изображение:: ../images/ExtendedBolus2_6.png
   :alt: Пролонгиованный болюс в AAPS 2.6

@@ -12,33 +12,33 @@
 
 Если вы используете локальные профили AAPS (Simple, Local, CPP), вы должны нажать эту кнопку, чтобы применить изменения (это создает правильное событие "Profile switch").
 
-Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
+В рамках "переключения профиля" можно выбрать два дополнительных изменения, которые раньше были частью суточного процентного профиля Circadian Percentage Profile:
 
-## Percentage
+## Процент
 
-* This applies the same percentage to all parameters. 
-* If you set it to 130% (meaning you are 30% more insulin resistant), it will raise the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example).
+* Это применяет одинаковый процент ко всем параметрам. 
+* Если установить его на 130% (то есть вы на 30% более инсулинорезистентны), то он повысит базальную скорость на 30%. Кроме того, соответственно снизится чувствительность к инсулину ISF и соотношение инсулин-углеводы (делятся на 1.3 в данном примере).
   
   ![Example profile switch percentage](../images/ProfileSwitchPercentage.png)
 
-* It will be sent to the pump and then be the default basal rate.
+* Эти установки будут отправлены в помпу, а затем будут использоваться по умолчанию.
 
-* The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
+* Алгоритм цикла (открытый или закрытый) продолжит работу на основе выбранного процентного профиля. Так, отдельные процентные профили могут быть установлены для различных этапов гормонального цикла.
 
-## Time shift
+## Сдвиг по времени
 
 ![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
 
-* This moves everything round the clock by the number of hours entered. 
-* So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
-* It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example: 
-  * Current time: 12:00
-  * **Positive** time shift 
-    * 2:00 **+10 h** -> 12:00
-    * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
-  * **Negative** time shift 
-    * 22:00 **-10 h** -> 12:00
-    * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
+* Эта установка позволяет сместить профиль на введенное число часов. 
+* Так, например, когда работаете в ночные смены, сдвиньте часы на то, насколько позже/раньше вы ложитесь спать или просыпаетесь.
+* Всегда возникает вопрос о том, какие настройки должны сменять параметры текущего времени. Это время должно быть сдвинуто на х часов. Следуйте инструкции, описанной в этом примере: 
+  * Текущее время: 12:00
+  * **Сдвиг в сторону увеличения** времени 
+    * 2:00 ** + 10 ч **-> 12:00
+    * Параметры от 2:00 будут использоваться вместо параметров, обычно используемых в 12:00 из-за положительного сдвига времени.
+  * **Сдвиг в сторону уменьшения ** времени 
+    * 22:00 ** -10 ч **-> 12:00
+    * Параметры от 22:00 будут использоваться вместо параметров, обычно используемых в 12:00 из-за отрицательного сдвига времени.
 
 ![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
 

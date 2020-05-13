@@ -35,7 +35,7 @@ SGLT-2 remmers, ook wel glifozines genoemd, remmen de herabsorptie van glucose i
 
 Telefoon
 --------------------------------------------------
-Je hebt een Android-smartphone met Android 6.0 of hoger nodig. Next major version AndroidAPS 2.7 will only support Android 7 and above. So if you are thinking about a new phone, Android 8.1 is recommended at least but optimicaly Android 9 or 10.
+Je hebt een Android-smartphone met Android 6.0 of hoger nodig. De eerstvolgende versie van AndroidAPS die eraan komt (versie 2.7) ondersteunt alleen Android 7 en hoger. Dus als je denkt over een nieuwe telefoon, dan raden we aan om op zijn minst voor Android 8.1 te gaan maar liever Android 9 of 10.
 
 Gebruikers houden een `lijst van geteste telefoons en smartwatches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ bij.
 
@@ -50,7 +50,7 @@ AndroidAPS werkt momenteel met
 - `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (extra nodig: Ruffy app, minimaal Android 8.1 of anders LineageOS op jouw telefoon)
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
-- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_ (except pumps with new firmware v3) 
+-` DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_ (met uitzondering van pompen met nieuwe firmware v3) 
 - `bepaalde oudere Medtronic modellen <../Configuration/MedtronicPump.html>`_ (extra nodig: RileyLink/Gnarl hardware, Android telefoon met Bluetooth Low Energy / BLE-chipset)
 
 **Andere pompen** die mogelijk in de toekomst geschikt zullen zijn vind je op de `Mogelijk toekomstige insulinepompen <../Getting-Started/Future-possible-Pump-Drivers.html>`_ pagina.

@@ -43,12 +43,23 @@ Une pression longue sur le graphique permet de changer l'échelle de temps. Vous
 
 Le prolongement des lignes indique la glycémie prévue, et la tendance, si vous avez sélectionné cette option.
 
-* Ligne **orange** : [Glucides Actifs (GA)](../Usage/COB-calculation.rst) (la couleur est généralement utilisée pour représenter les Glucides)
-* Ligne **bleu foncé** : Insuline Active (IA) (la couleur est généralement utilisée pour représenter l'insuline)
-* Ligne **bleu clair** ligne : zéro-temp (glycémie prévisionnelle si un débit de base temporaire à 0% était défini)
-* Ligne **jaune foncé**: [RNS](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (Repas Non Signalés)
+* **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
+   
+   Prediction line shows where your BG (not where cob itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
 
-Ces lignes vous montrent les différentes prédictions basées sur l'absorption actuelle de glucides (GA ou COB); l'insuline seulement (IA ou IOB); montrant combien de temps cela prendra pour que la glycémie soit en dessous de la cible, à la cible ou au dessus de la cible si les déviations cessent soudainement et nous poursuivons un temp zéro jusque là (zéro temp) et des Repas/effets Non Signalés (RNS ou UAM) où les glucides sont détectés mais n'ont pas été entrés dans le système par l'utilisateur.
+* **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
+   
+   Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
+
+* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
+   
+   Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+
+* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals)
+   
+   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+
+Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
 
 La ligne **bleu continu** indique le débit de base de votre pompe. La ligne **bleue pointillée** correspond au débit de basal du profil sélectionné sans débits de basal temporaires (DBT) et la ligne bleue continue est le débit réel distribué au fil du temps.
 

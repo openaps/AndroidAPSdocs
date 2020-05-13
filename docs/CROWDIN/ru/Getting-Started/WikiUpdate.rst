@@ -1,16 +1,17 @@
 Обновления и изменения в документации
 **************************************************
-May 2020
+Май 2020
 ==================================================
-* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
-* `Insight deactivate vibration <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (firmware 3.x only)
-* `Minimal request rate <../Configuration/Preferences.html#minimal-request-rate>`_ to reduce number of notifications in open loop mode
-* `Patched Libre Link app <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - check if correctly patched
+* `Пролонгированный болюс только для помп Dana + Insight <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
+* `Отключение вибрации на помпе Insight < ../Configuration/Accu-Ch-Insight-Pump.html#vibration> ` _ (только на прошивке 3.x)
+* `Минимальный уровень запроса на отключение уведомлений < ../Configuration/Preferences.html#minimal-request-rate> ` _ для сокращения числа уведомлений в режиме открытого цикла
+* `Модифицированное приложение Libre Link < ../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app> ` _- проверьте правильность патча
+* `Prediction lines <../Getting-Started/Screenshots.html#section-e>`_ - more details
 Апрель 2020
 ==================================================
-* `Backdate insulin <../Usage/CPbefore26.html#carbs--bolus>`_ (i.e. с помощью шприца)
-* `Android 6 support will be discontinued in next master version <../Module/module.html#phone>`_
-March 2020
+* `Запись о введении инсулина задним числом < ..//Usage/CPbefore26.html#carbs-- bolus> ` _ (напр. с помощью шприца)
+* Поддержка Android 6 будет прекращена в следующей основной версии < ../Module/module.html#phone> ` _
+Март 2020
 ==================================================
 * Построение APK в Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
 * `DanaRS с прошивкой v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **в настоящее время не может использоваться для AndroidAPS!**

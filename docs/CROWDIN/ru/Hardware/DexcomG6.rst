@@ -33,7 +33,7 @@ Dexcom G6
 ==================================================
 * Скачайте приложение из `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, и выберите версию в соответствии с предпочтениями (mg/dl или mmol/l, G6).
 
-   * Folder 2.4 for users of the current version, folder 2.3 is only for the outdated AndroidAPS 2.3.
+   * Папка 2.4 для пользователей текущей версии, папка 2.3-только для устаревших AndroidAPS 2.3.
    * Откройте https://play.google.com/store/search?q=dexcom%20g6 на вашем компьютере. Регион будет виден в URL.
    
    .. изображение:../images/DexcomG6regionURL.PNG

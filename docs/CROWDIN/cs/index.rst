@@ -1,13 +1,13 @@
 Vítejte v dokumentaci k AndroidAPS
 ==================================================
 
-AndroidAPS je open source aplikace určená pro osoby s diabetem, které jsou závislé na inuzlinu. Funguje jako umělá slinivka (APS) na telefonech se systémem Google Android. Hlavními součástmi jsou různé softwarové algoritmy openAPS, jejichž cílem je dělat totéž, co zdravá slinivka: udržovat glykémii ve zdravém rozmezí pomocí automatizovaného dávkování inzulinu (AID). Komě toho potřebujete schválenou inzulinovou pumpu a senzor pro kontinuální monitoraci glykémie. 
+AndroidAPS je open source aplikace určená pro osoby s diabetem, které jsou závislé na inuzlinu. Funguje jako umělá slinivka (APS) na telefonech se systémem Google Android. The main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Komě toho potřebujete schválenou inzulinovou pumpu a senzor pro kontinuální monitoraci glykémie. 
 
-Tato aplikace NEPOUŽÍVÁ umělou inteligenci, která se sama učí. Místo toho se výpočty AndroidAPS zakládají na algoritmu individuálního dávkování a příjmu sacharidů, které uživatel ručně zadává do svého profilu ošetření, ale z bezpečnostních důvodů jsou systémem ověřovány. 
+Tato aplikace NEPOUŽÍVÁ umělou inteligenci, která se sama učí. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons. 
 
 Aplikace není k dispozici v Google Play - z právních důvodů si ji musíte sami sestavit ze zdrojového kódu.
 
-Hlavní součásti jsou:
+The main components are:
 
 .. image:: images/modules-female.png
   :alt: Součásti
