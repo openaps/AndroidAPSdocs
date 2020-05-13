@@ -42,7 +42,7 @@
 
 ![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+Этот механизм захвата снимков профиля позволяет гораздо точнее вычислить прошлое и дает возможность отслеживать изменения профиля.
 
 ## Troubleshooting Profile Errors
 
