@@ -73,7 +73,7 @@ The homescreen will display in the top left corner whether you are open or close
 
 When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate. This defines the relative change required to trigger a notification.
 
-![Minimal request rate](../images/MinRequestChange.png)
+![Changement minimum](../images/MinRequestChange.png)
 
 Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol instead of 5,0 - 7,0 mmol) is recommended.
 
@@ -93,9 +93,9 @@ Amount of additional basal insulin (in units) allowed to accumulate in your body
 * Cette valeur est calculée et surveillée indépendamment de votre débit de basal normal. Ce n'est que l'insuline basale additionnelle en plus du débit normal qui est pris en compte.
 * Cette valeur est mesurée en unités d'insuline (u).
 
-When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia.
+Lorsque vous commencez à boucler, **il est conseillé de mettre l'IA Basal Max à 0** pour une certaine durée, le temps que vous vous habituiez au système. Cela empêche AAPS de donner de l'insuline basale supplémentaire. Pendant ce temps, AAPS sera toujours en mesure de limiter ou de désactiver votre insuline basale pour prévenir l'hypoglycémie.
 
-This is an important step in order to:
+C'est une étape importante pour :
 
 * Avoir un certain temps pour s'habituer en toute sécurité au système AAPS et surveiller son fonctionnement.
 * Profiter de l'occasion pour parfaire votre profil basal et votre Sensibilité à l'Insulin (SI).
@@ -106,15 +106,15 @@ When you feel comfortable, you can allow the system to start giving you addition
 * Vous pouvez commencer prudemment avec cette valeur et l'augmenter lentement avec le temps. 
 * Ce ne sont que des lignes directrices; chacun a un corps différent. Vous trouverez peut-être que vous aurez besoin de paramétrer une valeur supérieure ou inférieure à ce qui est recommandé ici, mais commencez toujours prudemment et ajustez lentement.
 
-*Note: As a safety feature, Max Basal IOB is hard-limited to 7u.*
+*Remarque : En tant que fonction de sécurité, l'IA Basal Max est limitée à 7 U.*
 
 ## Paramètres d’absorption
 
-If you have selected to use AMA Autosens then you will be able to enter your maximum meal absorption time and how frequently you want autosense to refresh. If you often eat high fat or protein meals you will need to increase your meal absorption time.
+Si vous avez choisi d'utiliser l'Autosense AMA, vous pourrez alors entrer votre durée macimale d'absorption pour un repas et la fréquence de rafraîchissement de l'autosense. Si vous mangez souvent des repas riches en matières grasses ou en protéines, vous devrez augmenter votre temps d'absorption des repas.
 
 ## Paramètres de la pompe
 
-The options here will vary depending on which pump driver you have selected in 'Config Builder'. Pair and set your pump up according to the pump related instructions:
+Ici les options varient selon la pompe que vous avez sélectionnée dans le 'Générateur de configuration'. Appairez et réglez votre pompe selon les instructions relatives à la pompe :
 
 * [Pompe à insuline DanaR](../Configuration/DanaR-Insulin-Pump.md) 
 * [Pompe à insuline DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
@@ -122,7 +122,7 @@ The options here will vary depending on which pump driver you have selected in '
 * [Pompe Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) 
 * [Pompe Medtronic](..//Configuration/MedtronicPump.md)
 
-If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+Si vous utilisez AndroidAPS en mode boucle ouverte, vérifiez que vous avez sélectionné une Pompe Virtuelle dans le Générateur de configuration.
 
 ## NS Client
 
@@ -141,7 +141,7 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 
 ## Communicateur SMS
 
-This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](../Children/SMS-Commands.rst) but it will only display in Preferences if you have selected this option in the Config Builder.
+Ce paramètre permet de contrôler à distance de l'application en envoyant des instructions au téléphone du patient que l'application appliquera comme Suspendre la boucle ou un bolus. Des informations supplémentaires sont décrites dans [Commandes SMS](../Children/SMS-Commands.rst), mais elles ne s'afficheront dans les Préférences que si vous avez sélectionné cette option dans le Générateur de configuration.
 
 ## Autres
 
