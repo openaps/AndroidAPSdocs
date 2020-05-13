@@ -42,13 +42,16 @@ The extended lines show the predicted BG calculations and trends - if you have i
 
    Prediction line shows where your BG (not where cob itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
 
+
 * **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
 
    Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
-   
+
+
 * **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
 
    Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+
 
 * **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals)
 
