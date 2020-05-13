@@ -101,7 +101,7 @@ C'est une étape importante pour :
 * Profiter de l'occasion pour parfaire votre profil basal et votre Sensibilité à l'Insulin (SI).
 * Voir comment AAPS limite votre insuline basale pour prévenir l'hypoglycémie.
 
-When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 3 to get a value of 1.5u.
+Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commencer à vous donner de l'insuline basale supplémentaire, en augmentant la valeur de l'IA basal Max. Une bonne recommandation est de prendre le **débit de basal maximum** de votre profil et de le **multiplier par 3**. Par exemple, si le débit de basal le plus élevé dans votre profil est de 0,5 U/h, vous pourriez le multiplier par 3 pour obtenir la valeur de 1,5 U.
 
 * Vous pouvez commencer prudemment avec cette valeur et l'augmenter lentement avec le temps. 
 * Ce ne sont que des lignes directrices; chacun a un corps différent. Vous trouverez peut-être que vous aurez besoin de paramétrer une valeur supérieure ou inférieure à ce qui est recommandé ici, mais commencez toujours prudemment et ajustez lentement.
