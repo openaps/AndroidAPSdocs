@@ -6,6 +6,7 @@ May 2020
 * `Insight deactivate vibration <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (firmware 3.x only)
 * `Minimal request rate <../Configuration/Preferences.html#minimal-request-rate>`_ to reduce number of notifications in open loop mode
 * `Patched Libre Link app <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - check if correctly patched
+* `Prediction lines <../Getting-Started/Screenshots.html#section-e>`_ - more details
 Avril 2020
 ==================================================
 * `Backdate insulin <../Usage/CPbefore26.html#carbs--bolus>`_ (i.e. injectée avec une seringue)
