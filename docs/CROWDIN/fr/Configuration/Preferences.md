@@ -61,7 +61,7 @@ Il s’agit de la quantité maximale de Glucides que la Calculatrice de Bolus AA
 
 ## Boucle
 
-You can toggle between open and closed looping here.
+Vous pouvez alterner entre Boucle Ouverte et Boucle Fermée.
 
 **Open looping** means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump.
 
@@ -69,13 +69,13 @@ You can toggle between open and closed looping here.
 
 The homescreen will display in the top left corner whether you are open or closed looping, and pressing and holding this homescreen button will also allow you to toggle between the two.
 
-### Minimal Request Rate
+### Changement minimum
 
-When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate. This defines the relative change required to trigger a notification.
+Lorsque vous utilisez le mode boucle ouverte, vous recevrez des notifications chaque fois que le programme AAPS vous recommande d'ajuster le débit de basal. Pour réduire le nombre de notifications, vous pouvez utiliser une plage cible de glycémie plus étendue ou augmenter le pourcentage de changement minimal. Ce paramètre défini le changement relatif minimum qui déclenchera une notification.
 
 ![Changement minimum](../images/MinRequestChange.png)
 
-Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol instead of 5,0 - 7,0 mmol) is recommended.
+Remarque : En mode boucle fermée, une cible unique au lieu de la plage cible (par ex. 5,5 mmol au lieu de 5,0 - 7,0 mmol) est recommandée.
 
 ## OpenAPS AMA
 
