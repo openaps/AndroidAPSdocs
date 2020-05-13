@@ -15,7 +15,7 @@ Veuillez comprendre que cette modification n'a pas pour but de vous corriger mai
 
 Version 2.6.1.4
 ================
-Release date: 04-05-2020
+Date de sortie : 04-05-2020
 
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
@@ -26,14 +26,14 @@ Nouvelles fonctionnalités majeures
 
 Version 2.6.1.3
 ================
-Release date: 03-05-2020
+Date de sortie : 03-05-2020
 
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
 -----
 * Insight: Disable vibration on bolus for firmware version 3
-* Otherwise is equal to 2.6.1.2. Update is optional. 
+* Sinon, identique à 2.6.1.2. Update is optional. 
 
 Version 2.6.1.2
 ================
