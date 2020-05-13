@@ -83,11 +83,11 @@ L'Assistance Améliorée Repas (AAR) de OpenAPS permet au système de reagir plu
 
 ### Max U/h pour le débit de Basal Temp
 
-This setting exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. The value is measured in units per hour (u/hr). Il est conseillé de definir cette valeur de facon raisonnable et sensée. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
+Ce paramètre est une limite de sécurité pour empêcher AAPS d'administrer un débit de basal dangereusement élevé. La valeur est definie en Unités d'insuline par heure (U/h). Il est conseillé de definir cette valeur de facon raisonnable et sensée. Une bonne recommandation est de prendre le **débit de basal le plus élevé** de votre profil et de le **multiplier par 4**. Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, vous pourriez le multiplier par 4 pour obtenir la valeur de 2 U/h.
 
-### Maximum basal IOB OpenAPS can deliver [U]
+### IA Basal max que OpenAPS pourra délivrer [U]
 
-Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
+Une quantité d'insuline basale supplémentaire (en unités) a pu s'accumuler dans votre corps, en plus de votre profil de basal normal. Une fois cette valeur atteinte, AAPS cessera de délivrer de l'insuline basale supplémentaire jusqu'à ce que votre Insuline Active Basal (IA) aie diminuée et soit de nouveau sous ce seuil.
 
 * Cette valeur ne prend pas en compte pas l'Insuline Active IA des bolus, mais seulement la Basal.
 * Cette valeur est calculée et surveillée indépendamment de votre débit de basal normal. Ce n'est que l'insuline basale additionnelle en plus du débit normal qui est pris en compte.
