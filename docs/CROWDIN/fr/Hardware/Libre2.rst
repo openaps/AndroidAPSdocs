@@ -8,7 +8,7 @@ Le système Freestyle Libre 2 peut automatiquement signaler des niveaux de glyc�
 
 Pour des raisons légales, le soi-disant correctifs doit être fait par vous-même. Utilisez les moteurs de recherche pour trouver les liens correspondants.
 
-To check whether you correctly patched the LibreLink app, take a look at the font of the patched app. The fonts in the original and patched app differ. Your patching was successful if the font looks like the font on the right:
+Pour vérifier si vous avez correctement patché l'application LibreLink, regardez la police de caractère de l'application patchée. Les polices sont différentes entre l'application originale et l'application patchée. Votre patch a réussi si la police ressemble à la police de droite :
 
 .. image:: ../images/LibreLinkPatchedCheck.png
   :alt: LibreLink Foreground Service
