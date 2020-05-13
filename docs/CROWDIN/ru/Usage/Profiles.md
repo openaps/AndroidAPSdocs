@@ -44,13 +44,13 @@
 
 Этот механизм захвата снимков профиля позволяет гораздо точнее вычислить прошлое и дает возможность отслеживать изменения профиля.
 
-## Troubleshooting Profile Errors
+## Устранение ошибок профиля
 
-### 'Invalid profile' / 'Basal Profile not aligned to hours'
+### 'Недопустимый профиль'/'Профиль базала не скорректирован по часам '
 
 ![Basal not aligned to the hour](../images/BasalNotAlignedToHours2.png)
 
-* These error messages will appear if you have any basal rates or I:C rates not on the hour. (DanaR and DanaRS pumps do not support changes on the half hour for example.)
+* Эти сообщения об ошибках будут появляться, если базальные скорости или коэффициенты I:C не выверены по часам. (Так, помпы DanaR и DanaRS не поддерживают изменения в течение получаса)
   
   ![Example profile not aligned to hours](../images/ProfileNotAlignedToHours.png)
 
