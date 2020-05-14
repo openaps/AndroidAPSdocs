@@ -54,7 +54,7 @@
   
   ![Пример профиля не распределен по часам](../images/ProfileNotAlignedToHours.png)
 
-* Remember / note down date and time shown in the error message (26/07/2019 5:45 pm in screenshot above).
+* Запомните / запишите дату и время, указанные в сообщении об ошибке (26/07/2019 5:45 pm на снимке экрана выше).
 
 * Go to Treatments tab
 * Select ProfileSwitch
