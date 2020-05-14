@@ -56,28 +56,28 @@
 
 * Запомните / запишите дату и время, указанные в сообщении об ошибке (26/07/2019 5:45 pm на снимке экрана выше).
 
-* Go to Treatments tab
-* Select ProfileSwitch
-* Scroll until you find date and time from error message.
-* Use remove function.
-* Sometimes there is not only one faulty profile switch. In this case remove also the others.
+* Перейдите на вкладку терапии
+* Выберите Переключатель профилей
+* Прокрутите страницу пока не найдете дату и время сообщения об ошибке.
+* Используйте функцию удаления.
+* Иногда находится не только один неисправный коммутатор профиля. В этом случае удалите также другие.
   
-  ![Remove profile switch](../images/PSRemove.png)
+  ![Удалите переключатель профиля](../images/PSRemove.png)
 
-Alternatively you can delete the profile switch directly in mLab as described below.
+Как вариант, можно удалить переключатель профиля непосредственно в mLab, как описано ниже.
 
-### 'Received profile switch from NS but profile does not exist locally'
+### 'Получено переключение профиля из NS, но профиль не существует локально'
 
-* The requested profile was not synced correctly from Nightscout.
-* Follow instructions from above to delte the profile switch
+* Запрошенный профиль не синхронизирован корректно с Nightscout.
+* Следуйте инструкциям выше, чтобы удалить переключатель профиля
 
-Alternatively you can delete the profile switch directly in mLab:
+Как вариант, можно удалить переключатель профиля непосредственно в mLab:
 
-* Go to your mlab collection
-* Search in the treatments for profile switch
-* Delete the profile switch with date and time that was mentioned in the error message. ![mlab](../images/mLabDeletePS.png)
+* Перейдите в коллекцию mlab
+* Найдите в терапии переключатель профиля
+* Удалите переключатель профиля с датой и временем, указанным в сообщении об ошибке. ![mlab](../images/mLabDeletePS.png)
 
-### 'DIA 3hr too short'
+### Слишком короткое время действия инсулина "DIA 3hr"
 
-* Error message will appear if your duration of insulin action in your profile is listed at a value that AndroidAPS doesn't believe will be accurate. 
-* Read about [selecting the right DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles) to continue.
+* Сообщение об ошибке появится, если длительность действия инсулина в вашем профиле указана со значением, которое AndroidAPS не признает точным. 
+* Прочитайте о [ выборе правильного времени действия инсулина DIA ](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) и отредактируйте его в своем профиле, затем выполните [ Profile Switch ](../Usage/Profiles), чтобы продолжить.
