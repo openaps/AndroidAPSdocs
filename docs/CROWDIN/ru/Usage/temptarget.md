@@ -1,6 +1,6 @@
 # Временные цели
 
-## What are Temp-Targets and where can I set and configure them?
+## Что такое временные цели и где можно задать и сконфигурировать их?
 
 With “Temp-Targets” (or short TT), you can change your blood glucose target for a certain time period. As these are mostly needed for activity, hypo (treatment carbs) or eating soon, you can configure default ones. To configure these one, you can go to the menu in the right corner on top and go to Preferences-> Other-> Default Temp-Targets.
 
