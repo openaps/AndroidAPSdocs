@@ -1,4 +1,4 @@
-# Temp-Targets
+# Временные цели
 
 ## What are Temp-Targets and where can I set and configure them?
 
