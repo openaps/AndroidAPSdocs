@@ -1,12 +1,12 @@
 # Сглаживание данных о глюкозе в крови
 
-If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
+Если данные гликемии скачкообразны/зашумлены, AAPS может дозировать инсулин неправильно, что приведет к высокой или низкой ГК. По этой причине необходимо отключить цикл до устранения неполадки. В зависимости от типа мониторинга такие проблемы могут быть обусловлены проблемами конфигурации или сенсора/места установки. Некоторые функции, такие как "Всегда включать микроболюсы SMB" и "Активировать микроболюсы после приема углеводов", можно использовать только с хорошо фильтруемым источником данных ГК.
 
-## Dexcom G5 App (patched)
+## Приложение Dexcom G5 (модифицированное)
 
-When using Dexcom G5 App (patched) your BG data is smooth and consistent. There are no restrictions in using SMB.
+При использовании приложения Dexcom G5 (модифицированного) данные гликемии идут плавно и последовательно. При использовании микроболюсов SMB нет ограничений.
 
-## xDrip+ with Dexcom G5
+## xDrip + с Dexcom G5
 
 Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
