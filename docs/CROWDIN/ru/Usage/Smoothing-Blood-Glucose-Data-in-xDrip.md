@@ -8,9 +8,9 @@
 
 ## xDrip + с Dexcom G5
 
-Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
+Достаточно ровные данные идут только в том случае, если в xDrip + выбран G5 Ob1 коллектор в нативном режиме'.
 
-## xDrip+ with Freestyle Libre
+## xDrip + с Freestyle Libre
 
 When using xDrip+ as your data source for Freestyle Libre values until now you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB because the BG values are not smooth enough. Except this, there are a couple of things you can do to help reduce noise in the data.
 
