@@ -6,13 +6,13 @@
 
 ![Set default temp targets](../images/TempTarget_Default.png)
 
-Чтобы установить одну из "Предустановленных временных целей TT", следует долго нажать на ваши цели в правом углу панели обзора или использовать ярлыки в оранжевой кнопке "Углеводы". To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration) use “Custom“ after long-pressing your target in the top right corner or use the “Temporary Target“ button in the “Actions”-tab.
+Чтобы установить одну из "Предустановленных временных целей TT", следует долго нажать на ваши цели в правом углу панели обзора или использовать ярлыки в оранжевой кнопке "Углеводы". Чтобы вручную задать [ "Произвольную временную цель TT "](../Usage/temptarget#custom-temp-target) (значение ГК и/или продолжительность), выберите" Пользовательская "после долгого нажатия на цель в верхнем правом углу или используйте кнопку "Временная цель "на вкладке "Действия ".
 
 ![Set temp target](../images/TempTarget_Set2.png)
 
-## Hypo Temp-Target
+## Временная цель Гипо 
 
-This can be considered as the most important Temp-Target. There are several reasons for it:
+Можно считать ее наиболее важной временной целью. There are several reasons for it:
 
 1. Realizing you will go low: Usually, the Loop should handle it, but sometimes you can see better in advance than the loop, so the loop can react faster when it targets a higher blood glucose value.
 2. When you eat hypo treatments carbs, your blood glucose will rise very fast. The loop will correct against the rising or even give SMBs if enabled. A "Hypo Temp-Target" can prevent that. 
