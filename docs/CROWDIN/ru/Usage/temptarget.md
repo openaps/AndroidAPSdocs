@@ -23,9 +23,9 @@
 
 ## Временная цель Нагрузка
 
-До и во время нагрузки, можно установить более высокую цель, чтобы предотвратить гипогликемию. Чтобы упростить настройку временной цели, можно сконфигурировать значение временной цели "Нагрузка (Activity)" по умолчанию. Based on DIA, IOB and your experience you might want to set TT prior to activity. See also [sports section in FAQ](../Getting-Started/FAQ#sports).
+До и во время нагрузки, можно установить более высокую цель, чтобы предотвратить гипогликемию. Чтобы упростить настройку временной цели, можно сконфигурировать значение временной цели "Нагрузка (Activity)" по умолчанию. На основе DIA, IOB и вашего опыта можно задать TT перед нагрузкой. См также [спортивный раздел в FAQ](../Getting-Started/FAQ#sports).
 
-Advanced, [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): The advantages about “Activity Temp-Target”, is that you can enable “High Temp-Targets raises sensitivity” for Temp-Targets higher or equal 100mg/dl or 5.5mmol/L in OpenAPS SMB. Then AndroidAPS is more sensitive. Some people do instead a profile switch before/while activity TT, but everybody is different. If “SMB with high Temp-Target” is deactivated, AndroidAPS won't use SMBs, even with COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active.
+Для опытных пользователей, [ цель 10 ](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)):преимущество Временной цели "Нагрузка" в том, что можно включить настройку "Выокая врем цель TT повышает чувствительность" для временных целей выше или равных 100мг/дл / 5.5 ммоль/л в настройках микроболюсов OpenAPS SMB. В этом случае чувствительность AndroidAPS повышается. Some people do instead a profile switch before/while activity TT, but everybody is different. If “SMB with high Temp-Target” is deactivated, AndroidAPS won't use SMBs, even with COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active.
 
 ## Eating soon Temp-Target
 
