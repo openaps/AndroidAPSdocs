@@ -1,6 +1,6 @@
 # Lissage des données de glycémie
 
-Si les glycémies sont instables/bruitées, AAPS peut mal doser la quantité d'insuline, entraînant des hyper ou hypo. Pour cette raison, il est important de désactiver la boucle jusqu'à ce que le problème soit résolu. Selon votre MGC, de tels problèmes peuvent être dus à la configuration de la MGC ou à des problèmes de capteur ou de site. Certaines fonctionnalités comme 'Activer en permanence les SMB' et 'Activer SMB après injection de glucides' ne peuvent être utilisées qu'avec une source de glycémie bien filtrée.
+Si les glycémies sont instables/bruitées, AAPS peut mal doser la quantité d'insuline, entraînant des hyper ou hypo. Pour cette raison, il est important de désactiver la boucle jusqu'à ce que le problème soit résolu. Selon votre MGC, de tels problèmes peuvent être dus à la configuration de la MGC ou à des problèmes de capteur ou de site. You may need to replace your CGM sensor to resolve this. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
 
 ## Application Dexcom G5 (patchée)
 
