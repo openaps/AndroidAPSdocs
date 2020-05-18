@@ -1,6 +1,6 @@
 # Glättung der Blut-Glukose-Daten
 
-Wenn die BZ-Daten Sprünge haben oder verrauscht sind, kann es dazu kommen, dass AndroidAPS das Insulin falsch dosiert. Zu hohe oder zu niedrige BZ-Werte können die Folge sein. Daher ist es wichtig, den Loop zu pausieren, bis die Probleme beseitigt sind. Abhängig von Deinem CGM-System können solche Probleme durch die CGM-Konfiguration oder Probleme mit dem Sensor oder der Einsetzstelle entstehen. Einige Features wie 'Aktiviere SMB immer' und "Aktiviere SMB nach Kohlenhydraten" können nur mit einer gut gefilterten BZ-Quelle verwendet werden.
+Wenn die BZ-Daten Sprünge haben oder verrauscht sind, kann es dazu kommen, dass AndroidAPS das Insulin falsch dosiert. Zu hohe oder zu niedrige BZ-Werte können die Folge sein. Daher ist es wichtig, den Loop zu pausieren, bis die Probleme beseitigt sind. Abhängig von Deinem CGM-System können solche Probleme durch die CGM-Konfiguration oder Probleme mit dem Sensor oder der Einsetzstelle entstehen. You may need to replace your CGM sensor to resolve this. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
 
 ## Dexcom G5 App (gepatched)
 
