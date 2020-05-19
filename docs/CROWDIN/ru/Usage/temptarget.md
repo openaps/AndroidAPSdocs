@@ -29,11 +29,11 @@
 
 ## Временная цель Ожидаемый прием пищи
 
-Если вы знаете, что в ближайшее время вас ожидает прием пищи, можно включить эту временную цель, чтобы активный инсулин IOB уже начал работать перед едой. Especially for those who don’t do prebolusing, it might be a good alternative to already get the blood glucose to a lower target. You can read more about the "Eating soon mode" in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+Если вы знаете, что в ближайшее время вас ожидает прием пищи, можно включить эту временную цель, чтобы активный инсулин IOB уже начал работать перед едой. Особенно для тех, кто не ставит преболюсы, такая установка позволит привести глюкозу крови к более низкому значению. Подробнее об "Ожидаемом приеме пищи" можно прочитать в статье [ How to do "eating soon" mode ' ](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) или [ здесь ](https://diyps.org/tag/eating-soon-mode/).
 
-Advanced, [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): If you use OpenAPS SMB and have “Low temptarget lowers sensitivity”, AndroidAPS works a little bit more aggressive. Requirement is a Temp-Target less than 100mg/dl or 5.5mmol/l for this option.
+Для опытных пользователей, [ цель 10 ](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): Если вы включили OpenAPS SMB и активировали режим "низкая временная цель понижает чувствительность" AAPS будет работать более агрессивно. Для этой опции требуется значение временной цели TT менее 100мг/дл или 5,5 ммоль/л.
 
-## Custom Temp-Target
+## Настраиваемая временная цель
 
 Sometimes, you just want to have a temp target other than the default ones. You can set one by long pressing on the target (range) on the right corner in overview or in the “Action”-Tab.
 
