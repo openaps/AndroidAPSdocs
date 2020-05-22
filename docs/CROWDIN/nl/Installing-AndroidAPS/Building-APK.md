@@ -117,7 +117,7 @@ Op het welkomstscherm van Android Studio klik op de kleine driehoek (1. in het v
 
 * Elke versie van Git zou moeten werken. Bijvoorbeeld <https://git-scm.com/download/mac>. Volg de instructies op die site om Git te installeren.
 * Gebruik homebrew om git te installeren: ```$ brew install git```.
-* Voor meer informatie over het installeren van git zie de [officiële git documentatie](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Voor meer informatie over het installeren van git zie de [officiële git dokumentatie](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * Als je git installeert via homebrew, hoef je niets aan de instellingen te wijzigen. Voor het geval je ze toch zoekt: je vind ze hier: Android Studio - Preferences.
 
 ## AndroidAPS-code downloaden
