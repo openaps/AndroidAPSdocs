@@ -95,8 +95,13 @@ Closed loop will not correct high bg values in objective 6 as it is limited to l
 * Watch  how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
 * Ensure your settings have supported AndroidAPS to avoid having to treat a low glucose over a period of 5 days.  If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios.
 * You don't have to change your settings. During objective 6 maxIOB setting is internally set to zero automatically. This override will be reversed when moving to objective 7.
+* The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.  
 
-*The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.  You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.*
+   .. image:: ../images/Objective6_negIOB.png
+     :alt: Example negative IOB
+
+* If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
+* You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.
 
 Objective 7: Tuning the closed loop, raising max IOB above 0 and gradually lowering BG targets
 ====================================================================================================
