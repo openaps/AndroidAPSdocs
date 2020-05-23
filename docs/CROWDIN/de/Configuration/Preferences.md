@@ -114,7 +114,7 @@ Wenn du AMA Autosense eingestellt hast, dann wird dir hier ermöglicht, die maxi
 
 ## Pumpen-Einstellungen
 
-Die Optionen hier hängen davon ab, welchen Pumpentreiber du im Config-Generator ausgewählt hast. Verbinde Deine Pumpe und richte sie entsprechend der pumpenspezifischen Beschreibung ein:
+Die Optionen hier hängen davon ab, welchen Pumpentreiber du im Config-Generator ausgewählt hast. Kopple Deine Pumpe und richte sie entsprechend der pumpenspezifischen Beschreibung ein:
 
 * [DanaR Insulinpumpe](../Configuration/DanaR-Insulin-Pump.md) 
 * [DanaRS Insulinpumpe](../Configuration/DanaRS-Insulin-Pump.md) 
