@@ -98,7 +98,7 @@ Closed loop will not correct high bg values in objective 6 as it is limited to l
 * The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.  
 
    .. image:: ../images/Objective6_negIOB.png
-  :alt: Example negative IOB
+     :alt: Example negative IOB
 
 * If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
 * You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.
