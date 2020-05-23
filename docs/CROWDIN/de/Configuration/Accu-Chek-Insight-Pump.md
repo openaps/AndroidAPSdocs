@@ -28,22 +28,22 @@
 
 * Tippe auf das Zahnrad, um die Insight-Einstellungen zu öffnen.
 
-* Klicke den Button 'Insight Pairing' am oberen Bildschirmrand in den erscheinenden Einstellungen. Du solltest eine Liste aller Bluetooth-Geräte in der Nähe sehen (Bild unten links).
+* Klicke den Button 'Insight Kopplung' in den Einstellungen am oberen Bildschirmrand. Du solltest eine Liste aller Bluetooth-Geräte in der Nähe sehen (Bild unten links).
 * Wähle auf der Insight Pumpe Menü Einstellungen Kommunikation Gerät hinzufügen (Menu > Settings > Communication > Add Device). Auf dem Display der Pumpe wird in folgender Anzeige die Seriennummer der Pumpe angezeigt (Bild unten rechts).
     
-    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
+    ![Bildschirmfoto Insight Kopplung 1](../images/Insight_Pairing1.png)
 
-* Klicke im Smartphone auf die Seriennummer der Pumpe in der Liste der gefundenen Bluetooth-Geräte. Klicke dann zum Bestätigen auf 'Pair'.
+* Klicke im Smartphone auf die Seriennummer der Pumpe in der Liste der gefundenen Bluetooth-Geräte. Klicke dann zum Bestätigen auf 'Pair' (Koppeln).
     
-    ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
+    ![Bildschirmfoto Insight Kopplung 2](../images/Insight_Pairing2.png)
 
 * Sowohl die Pumpe als auch das Telefon zeigen dann einen Code. Stelle sicher, dass der Code auf beiden Geräten übereinstimmt und bestätige das sowohl auf der Pumpe als auch auf dem Smartphone.
     
-    ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
+    ![Bildschirmfoto Insight Kopplung 3](../images/Insight_Pairing3.png)
 
 * Fertig! Klopfe Dir selbst auf die Schulter, denn Du hast Pumpe und AndroidAPS erfolgreich verbunden.
     
-    ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
+    ![Bildschirmfoto Insight Kopplung 4](../images/Insight_Pairing4.png)
 
 * Klicke im Konfigurations-Generator in AndroidAPS auf das Zahnrad beim Eintrag 'Insight Pumpe', um die Insight-Einstellungen aufzurufen. Klicke dann auf "Insight Pairing' und Dir werden einige Informationen zur Pumpe angezeigt
     
