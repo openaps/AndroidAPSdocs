@@ -50,7 +50,7 @@ Volg de handleiding op de [git-installatiepagina](../Installing-AndroidAPS/git-i
 
 De volgende screenshots zijn gemaakt met Android Studio Versie 3.6.1. Jouw scherm ziet er misschien een beetje anders uit, afhankelijk van de versie van de Android Studio die je gebruikt. Maar laat je niet tegenhouden door kleine (uiterlijke) verschillen. Wanneer je er niet uitkomt, schroom dan niet om [hulp van andere gebruikers](../Where-To-Go-For-Help/Connect-with-other-users.md) te vragen.
 
-Een van de belangrijkste dingen bij het installeren van Android Studio: **Wees geduldig!** Tijdens de installatie en setup Android Studio is het downloaden van een heleboel dingen die zijn tijd zal nemen.
+Een van de belangrijkste dingen bij het installeren van Android Studio: **Wees geduldig!** Tijdens de installatie en setup zal Android Studio een heleboel dingen gaan downloaden die best wat tijd kosten.
 
 Installeer [Android Studio](https://developer.android.com/studio/install.html).
 
@@ -117,7 +117,7 @@ Op het welkomstscherm van Android Studio klik op de kleine driehoek (1. in het v
 
 * Elke versie van Git zou moeten werken. Bijvoorbeeld <https://git-scm.com/download/mac>. Volg de instructies op die site om Git te installeren.
 * Gebruik homebrew om git te installeren: ```$ brew install git```.
-* Voor meer informatie over het installeren van git zie de [officiële git documentatie](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Voor meer informatie over het installeren van git zie de [officiële git dokumentatie](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * Als je git installeert via homebrew, hoef je niets aan de instellingen te wijzigen. Voor het geval je ze toch zoekt: je vind ze hier: Android Studio - Preferences.
 
 ## AndroidAPS-code downloaden

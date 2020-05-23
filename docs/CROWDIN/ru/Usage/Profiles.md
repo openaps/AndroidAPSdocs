@@ -6,7 +6,7 @@
 
 Для того чтобы переключить профиль выполните долгое нажатие на название текущего профиля ("Aktuell (Rad)" на рисунке ниже) и выберите переключить профиль.
 
-![Do profile switch](../images/ProfileSwitch_HowTo.png)
+![Переключить профиль](../images/ProfileSwitch_HowTo.png)
 
 Если вы используете "Переключатель профиля" с указанием длительности, то профиль вернется на предыдущий допустимый
 
@@ -19,7 +19,7 @@
 * Это применяет одинаковый процент ко всем параметрам. 
 * Если установить его на 130% (то есть вы на 30% более инсулинорезистентны), то он повысит базальную скорость на 30%. Кроме того, соответственно снизится чувствительность к инсулину ISF и соотношение инсулин-углеводы (делятся на 1.3 в данном примере).
   
-  ![Example profile switch percentage](../images/ProfileSwitchPercentage.png)
+  ![Пример переключения профиля в процентах](../images/ProfileSwitchPercentage.png)
 
 * Эти установки будут отправлены в помпу, а затем будут использоваться по умолчанию.
 
@@ -27,7 +27,7 @@
 
 ## Сдвиг по времени
 
-![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
+![Переключение профиля в процентах и сдвиг по времени](../images/ProfileSwitchTimeShift2.png)
 
 * Эта установка позволяет сместить профиль на введенное число часов. 
 * Так, например, когда работаете в ночные смены, сдвиньте часы на то, насколько позже/раньше вы ложитесь спать или просыпаетесь.
@@ -40,44 +40,44 @@
     * 22:00 ** -10 ч **-> 12:00
     * Параметры от 22:00 будут использоваться вместо параметров, обычно используемых в 12:00 из-за отрицательного сдвига времени.
 
-![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
+![Инструкции по смене профиля и часового пояса](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+Этот механизм захвата снимков профиля позволяет гораздо точнее вычислить прошлое и дает возможность отслеживать изменения профиля.
 
-## Troubleshooting Profile Errors
+## Устранение ошибок профиля
 
-### 'Invalid profile' / 'Basal Profile not aligned to hours'
+### 'Недопустимый профиль'/'Профиль базала не скорректирован по часам '
 
-![Basal not aligned to the hour](../images/BasalNotAlignedToHours2.png)
+![Базал не соответствует распределению по часам](../images/BasalNotAlignedToHours2.png)
 
-* These error messages will appear if you have any basal rates or I:C rates not on the hour. (DanaR and DanaRS pumps do not support changes on the half hour for example.)
+* Эти сообщения об ошибках будут появляться, если базальные скорости или коэффициенты I:C не выверены по часам. (Так, помпы DanaR и DanaRS не поддерживают изменения в течение получаса)
   
-  ![Example profile not aligned to hours](../images/ProfileNotAlignedToHours.png)
+  ![Пример профиля не распределен по часам](../images/ProfileNotAlignedToHours.png)
 
-* Remember / note down date and time shown in the error message (26/07/2019 5:45 pm in screenshot above).
+* Запомните / запишите дату и время, указанные в сообщении об ошибке (26/07/2019 5:45 pm на снимке экрана выше).
 
-* Go to Treatments tab
-* Select ProfileSwitch
-* Scroll until you find date and time from error message.
-* Use remove function.
-* Sometimes there is not only one faulty profile switch. In this case remove also the others.
+* Перейдите на вкладку терапии
+* Выберите Переключатель профилей
+* Прокрутите страницу пока не найдете дату и время сообщения об ошибке.
+* Используйте функцию удаления.
+* Иногда находится не только один неисправный коммутатор профиля. В этом случае удалите также другие.
   
-  ![Remove profile switch](../images/PSRemove.png)
+  ![Удалите переключатель профиля](../images/PSRemove.png)
 
-Alternatively you can delete the profile switch directly in mLab as described below.
+Как вариант, можно удалить переключатель профиля непосредственно в mLab, как описано ниже.
 
-### 'Received profile switch from NS but profile does not exist locally'
+### 'Получено переключение профиля из NS, но профиль не существует локально'
 
-* The requested profile was not synced correctly from Nightscout.
-* Follow instructions from above to delte the profile switch
+* Запрошенный профиль не синхронизирован корректно с Nightscout.
+* Следуйте инструкциям выше, чтобы удалить переключатель профиля
 
-Alternatively you can delete the profile switch directly in mLab:
+Как вариант, можно удалить переключатель профиля непосредственно в mLab:
 
-* Go to your mlab collection
-* Search in the treatments for profile switch
-* Delete the profile switch with date and time that was mentioned in the error message. ![mlab](../images/mLabDeletePS.png)
+* Перейдите в коллекцию mlab
+* Найдите в терапии переключатель профиля
+* Удалите переключатель профиля с датой и временем, указанным в сообщении об ошибке. ![mlab](../images/mLabDeletePS.png)
 
-### 'DIA 3hr too short'
+### Слишком короткое время действия инсулина "DIA 3hr"
 
-* Error message will appear if your duration of insulin action in your profile is listed at a value that AndroidAPS doesn't believe will be accurate. 
-* Read about [selecting the right DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles) to continue.
+* Сообщение об ошибке появится, если длительность действия инсулина в вашем профиле указана со значением, которое AndroidAPS не признает точным. 
+* Прочитайте о [ выборе правильного времени действия инсулина DIA ](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) и отредактируйте его в своем профиле, затем выполните [ Profile Switch ](../Usage/Profiles), чтобы продолжить.

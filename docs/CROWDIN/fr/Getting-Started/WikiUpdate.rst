@@ -1,17 +1,17 @@
 Wiki mises à jour et modifications
 **************************************************
-May 2020
+Mai 2020
 ==================================================
-* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
-* `Insight deactivate vibration <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (firmware 3.x only)
-* `Minimal request rate <../Configuration/Preferences.html#minimal-request-rate>`_ to reduce number of notifications in open loop mode
-* `Patched Libre Link app <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - check if correctly patched
-* `Prediction lines <../Getting-Started/Screenshots.html#section-e>`_ - more details
+* `Bolus étendus uniquement pour les pompes Dana + Insight <../Usage/Extended-Carbs.html#bolus-etendus-et-passage-en-boucle-ouverte-uniquement-pour-les-pompesdana-et-insight>`_
+* `Désactivation des vibrations sur pompes Insight <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (uniquement firmware 3.x)
+* `Changement minimum <../Configuration/Preferences.html#changement-minimum>`_ pour réduire le nombre de notifications en mode boucle ouverte
+* `Application Libre Link patchée <../Hardware/Libre2.html#etape-1-construire-votre-propre-application-librelink-patchee>`_ - vérifier si le patch est correct
+* `Lignes de prédiction <../Getting-Started/Screenshots.html#section-e>`_ - plus de détails
 Avril 2020
 ==================================================
-* `Backdate insulin <../Usage/CPbefore26.html#carbs--bolus>`_ (i.e. injectée avec une seringue)
-* `Android 6 support will be discontinued in next master version <../Module/module.html#phone>`_
-March 2020
+* `Antidater l'insulin <../Usage/CPbefore26.html#id1>`_ (par ex. injectée avec une seringue)
+* `La prise en charge Android 6 sera interrompue dans la prochaine version majeure <../Module/module.html#phone>`_
+Mars 2020
 ==================================================
 * `Générer l'apk avec Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
 * `La DanaRS avec le firmware v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **ne peut actuellement pas être utilisée avec AndroidAPS !**

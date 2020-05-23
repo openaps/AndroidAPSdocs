@@ -16,7 +16,7 @@
       
 
 * Wähle "Pumpen-Passwort" und gib das Passwort ein. (Das Standardpasswort ist 1234.)   
-  ** Du musst das Pairing auf der Pumpe bestätigen!** Genau so wie Du es von anderen Bluetooth Verbindungen (z.B. Smartphone und Auto-Multimediasystem) kennst.
+  ** Du musst das Koppeln auf der Pumpe bestätigen!** Genau so wie Du es von anderen Bluetooth Verbindungen (z.B. Smartphone und Auto-Multimediasystem) kennst.
   
       ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
       
@@ -56,7 +56,7 @@ Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 
 * **Übertrage** die exportierten Einstellungen vom alten auf das neue Smartphone
 
-* **Verbinde** die Dana RS und das neue Smartphone manuell (Bluetooth-Verbindung) 
+* **Manuelle Kopplung** die Dana RS und das neue Smartphone manuell (Bluetooth-Verbindung) 
   * Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Daher müssen das neue Smartphone und die Pumpe manuell verbunden werden.
 * **Installiere AndroidAPS** auf dem neuen Smartphone.
 * **Importiere die Einstellungen** auf Deinem neuen Smartphone 

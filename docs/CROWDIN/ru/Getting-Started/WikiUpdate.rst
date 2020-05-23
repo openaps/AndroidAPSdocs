@@ -6,7 +6,7 @@
 * `Отключение вибрации на помпе Insight < ../Configuration/Accu-Ch-Insight-Pump.html#vibration> ` _ (только на прошивке 3.x)
 * `Минимальный уровень запроса на отключение уведомлений < ../Configuration/Preferences.html#minimal-request-rate> ` _ для сокращения числа уведомлений в режиме открытого цикла
 * `Модифицированное приложение Libre Link < ../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app> ` _- проверьте правильность патча
-* `Prediction lines <../Getting-Started/Screenshots.html#section-e>`_ - more details
+* `Линии прогнозирования <../Getting-Started/Screenshots.html#section-e>`_-дополнительные подробности
 Апрель 2020
 ==================================================
 * `Запись о введении инсулина задним числом < ..//Usage/CPbefore26.html#carbs-- bolus> ` _ (напр. с помощью шприца)

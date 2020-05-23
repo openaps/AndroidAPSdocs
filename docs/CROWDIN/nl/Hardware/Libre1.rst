@@ -18,10 +18,10 @@ Libre met xDrip+
 * Als je AndroidAPS wilt gebruiken om te kalibreren ga dan in xdrip naar Instellingen > Interapp settings > Accept Calibrations en selecteer ON.  Je kunt ook de opties aanpassen aan jouw behoefte in Instellingen > Minder vaak voorkomende instellingen > Advanced Calibration Settings.
 * Selecteer xdrip in Configurator (instellingen in AndroidAPS).
 * Instellingen in xDrip+ aanpassen volgens `xDrip+ instellingen pagina <../Configuration/xdrip.html>`__. Er is een onderdeel voor de standaard-xDrip+ instellingen en voor Freestyle Libre xDrip+ instellingen.
-* Als AAPS geen BG-waarden ontvangt wanneer de telefoon in vliegtuigmodus staat, gebruik dan `Identify receiver' (Identificer ontvanger) zoals beschreven op de `xDrip+ instellingen pagina <../Configuration/xdrip.html>`_.
+* Als AAPS geen BG-waarden ontvangt wanneer de telefoon in vliegtuigmodus staat, gebruik dan 'Identify receiver' (Identificeer ontvanger) zoals beschreven op de `xDrip instellingen pagina <../Configuration/xdrip.html>`_.
 
 Libre met Glimp
 ==================================================
 * Je hebt Glimp versie 4.15.57 of nieuwer nodig. Oudere versies worden op dit moment niet ondersteund.
-* Als het niet al is ingesteld, download Glimp en volg de instructies van <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>Nightscout`_.
+* Als het niet al is ingesteld, download Glimp en volg de instructies van `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_.
 * Selecteer Glimp in Configurator (instellingen in AndroidAPS).

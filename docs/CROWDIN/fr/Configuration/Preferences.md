@@ -61,60 +61,60 @@ Il s’agit de la quantité maximale de Glucides que la Calculatrice de Bolus AA
 
 ## Boucle
 
-You can toggle between open and closed looping here.
+Vous pouvez alterner entre Boucle Ouverte et Boucle Fermée.
 
-**Open looping** means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump.
+**Boucle Ouverte** signifie que des propositions de DBT sont effectuées sur la base de vos données et apparaissent en tant que notifications, mais vous devez choisir de les accepter et de les rentrer manuellement dans votre pompe.
 
-**Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.
+**Boucle Fermée** signifie que les propositions de DBT sont automatiquement envoyées à la pompe sans confirmation ou action de votre part.
 
-The homescreen will display in the top left corner whether you are open or closed looping, and pressing and holding this homescreen button will also allow you to toggle between the two.
+L’écran d’accueil affiche dans le coin supérieur gauche si vous etes en Boucle Ouverte ou en Boucle Fermée. Appuyer et en maintenir ce bouton de l’écran d’accueil vous permettra également de basculer entre les deux modes.
 
-### Minimal Request Rate
+### Changement minimum
 
-When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate. This defines the relative change required to trigger a notification.
+Lorsque vous utilisez le mode boucle ouverte, vous recevrez des notifications chaque fois que le programme AAPS vous recommande d'ajuster le débit de basal. Pour réduire le nombre de notifications, vous pouvez utiliser une plage cible de glycémie plus étendue ou augmenter le pourcentage de changement minimal. Ce paramètre défini le changement relatif minimum qui déclenchera une notification.
 
-![Minimal request rate](../images/MinRequestChange.png)
+![Changement minimum](../images/MinRequestChange.png)
 
-Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol instead of 5,0 - 7,0 mmol) is recommended.
+Remarque : En mode boucle fermée, une cible unique au lieu de la plage cible (par ex. 5,5 mmol au lieu de 5,0 - 7,0 mmol) est recommandée.
 
 ## OpenAPS AMA
 
-OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. Turn it on in the Config tab to view the safety settings here, you will need to have completed [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature. You can read more about the settings and [Autosens in the OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+L'Assistance Améliorée Repas (AAR) de OpenAPS permet au système de reagir plus rapidement après un bolus de repas SI vous entrez les Glucides de manière fiable. Activez-le dans le Générateur de configuration pour voir les paramètres de sécurité, vous devrez avoir complété l'[Objectif 9](../Usage/Objectives#objectif-9-activation-de-fonctionnalites-supplementaires-en-journee-comme-l-aide-au-repas-amelioree-ara-ama) pour utiliser cette fonctionnalité. Vous pouvez en apprendre plus sur les Paramètres et l'Autosens dans le [manuel d'OpenAPS](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-### Max U/hr a Temp Basal can be set to
+### Max U/h pour le débit de Basal Temp
 
-This setting exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. The value is measured in units per hour (u/hr). Il est conseillé de definir cette valeur de facon raisonnable et sensée. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
+Ce paramètre est une limite de sécurité pour empêcher AAPS d'administrer un débit de basal dangereusement élevé. La valeur est definie en Unités d'insuline par heure (U/h). Il est conseillé de definir cette valeur de facon raisonnable et sensée. Une bonne recommandation est de prendre le **débit de basal le plus élevé** de votre profil et de le **multiplier par 4**. Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, vous pourriez le multiplier par 4 pour obtenir la valeur de 2 U/h.
 
-### Maximum basal IOB OpenAPS can deliver [U]
+### IA Basal max que OpenAPS pourra délivrer [U]
 
-Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
+Une quantité d'insuline basale supplémentaire (en unités) a pu s'accumuler dans votre corps, en plus de votre profil de basal normal. Une fois cette valeur atteinte, AAPS cessera de délivrer de l'insuline basale supplémentaire jusqu'à ce que votre Insuline Active Basal (IA) aie diminuée et soit de nouveau sous ce seuil.
 
 * Cette valeur ne prend pas en compte pas l'Insuline Active IA des bolus, mais seulement la Basal.
 * Cette valeur est calculée et surveillée indépendamment de votre débit de basal normal. Ce n'est que l'insuline basale additionnelle en plus du débit normal qui est pris en compte.
 * Cette valeur est mesurée en unités d'insuline (u).
 
-When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia.
+Lorsque vous commencez à boucler, **il est conseillé de mettre l'IA Basal Max à 0** pour une certaine durée, le temps que vous vous habituiez au système. Cela empêche AAPS de donner de l'insuline basale supplémentaire. Pendant ce temps, AAPS sera toujours en mesure de limiter ou de désactiver votre insuline basale pour prévenir l'hypoglycémie.
 
-This is an important step in order to:
+C'est une étape importante pour :
 
 * Avoir un certain temps pour s'habituer en toute sécurité au système AAPS et surveiller son fonctionnement.
 * Profiter de l'occasion pour parfaire votre profil basal et votre Sensibilité à l'Insulin (SI).
 * Voir comment AAPS limite votre insuline basale pour prévenir l'hypoglycémie.
 
-When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 3 to get a value of 1.5u.
+Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commencer à vous donner de l'insuline basale supplémentaire, en augmentant la valeur de l'IA basal Max. Une bonne recommandation est de prendre le **débit de basal maximum** de votre profil et de le **multiplier par 3**. Par exemple, si le débit de basal le plus élevé dans votre profil est de 0,5 U/h, vous pourriez le multiplier par 3 pour obtenir la valeur de 1,5 U.
 
 * Vous pouvez commencer prudemment avec cette valeur et l'augmenter lentement avec le temps. 
 * Ce ne sont que des lignes directrices; chacun a un corps différent. Vous trouverez peut-être que vous aurez besoin de paramétrer une valeur supérieure ou inférieure à ce qui est recommandé ici, mais commencez toujours prudemment et ajustez lentement.
 
-*Note: As a safety feature, Max Basal IOB is hard-limited to 7u.*
+*Remarque : En tant que fonction de sécurité, l'IA Basal Max est limitée à 7 U.*
 
 ## Paramètres d’absorption
 
-If you have selected to use AMA Autosens then you will be able to enter your maximum meal absorption time and how frequently you want autosense to refresh. If you often eat high fat or protein meals you will need to increase your meal absorption time.
+Si vous avez choisi d'utiliser l'Autosense AMA, vous pourrez alors entrer votre durée macimale d'absorption pour un repas et la fréquence de rafraîchissement de l'autosense. Si vous mangez souvent des repas riches en matières grasses ou en protéines, vous devrez augmenter votre temps d'absorption des repas.
 
 ## Paramètres de la pompe
 
-The options here will vary depending on which pump driver you have selected in 'Config Builder'. Pair and set your pump up according to the pump related instructions:
+Ici les options varient selon la pompe que vous avez sélectionnée dans le 'Générateur de configuration'. Appairez et réglez votre pompe selon les instructions relatives à la pompe :
 
 * [Pompe à insuline DanaR](../Configuration/DanaR-Insulin-Pump.md) 
 * [Pompe à insuline DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
@@ -122,7 +122,7 @@ The options here will vary depending on which pump driver you have selected in '
 * [Pompe Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) 
 * [Pompe Medtronic](..//Configuration/MedtronicPump.md)
 
-If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+Si vous utilisez AndroidAPS en mode boucle ouverte, vérifiez que vous avez sélectionné une Pompe Virtuelle dans le Générateur de configuration.
 
 ## NS Client
 
@@ -141,7 +141,7 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 
 ## Communicateur SMS
 
-This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](../Children/SMS-Commands.rst) but it will only display in Preferences if you have selected this option in the Config Builder.
+Ce paramètre permet de contrôler à distance de l'application en envoyant des instructions au téléphone du patient que l'application appliquera comme Suspendre la boucle ou un bolus. Des informations supplémentaires sont décrites dans [Commandes SMS](../Children/SMS-Commands.rst), mais elles ne s'afficheront dans les Préférences que si vous avez sélectionné cette option dans le Générateur de configuration.
 
 ## Autres
 
