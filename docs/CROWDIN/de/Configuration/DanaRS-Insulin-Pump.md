@@ -10,7 +10,7 @@
 
 * Klicke auf die drei Punkte rechts oben, um das Menü zu öffnen. Klicke auf Einstellungen.
 
-* Klicke im Abschnitt "DanaRS" auf "Verbinde neue Pumpe" und gib die Seriennummer (Unterseite der Pumpe gegenüber dem Reservoir- und Batteriedeckel) deiner DanaRS ein.
+* Klicke im Abschnitt "DanaRS" auf "Verbinde neue Pumpe" und wähle die Seriennummer deiner DanaRS aus. Diese findest Du auf Unterseite der Pumpe gegenüber dem Reservoir- und Batteriedeckel.
   
       ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
       
