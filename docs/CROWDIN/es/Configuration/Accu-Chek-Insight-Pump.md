@@ -8,52 +8,51 @@
 
 ## Requisitos hardware y software
 
-* Una bomba de insulina Roche Accu-Chek Combo (cualquier firmware, todos funcionan)
-    
-    Nota: AAPS escribirá los datos siempre en **primer perfil de tasa basal en la bomba**.
+* A Roche Accu-Chek Insight pump (any firmware, they all work)
 
-* Un teléfono Android (Basicamente todas las versiones de Android funcionarían, pero el AndroidAPS requiere al menos Android 5 (Lollipop)
+Note: AAPS will write data always in **first basal rate profile in the pump**.
 
-* La aplicación AndroidAPS instalada en el teléfono
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module#phone) page which Android version is required to run AndroidAPS.)
+* The AndroidAPS app installed on your phone
 
 ## Configuración
 
-* La bomba Insight sólo debe estar conectado a un dispositivo a la vez. Si ha utilizado previamente el Insight remote control (medidor), debe quitar el medidor de la lista de dispositivos emparejados de la bomba: Menú > ajustes > Ajustes Comunicación > Quitar dispositivo
+* The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
     
-    ![Pantallazo de quitar el medidor Insight](../images/Insight_RemoveMeter.png)
+    ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
 
-* En [Config Builder ](../Configuration/Config-Builder) de la aplicación AndroidAPS, seleccione Accu-Chek Insight en la sección de la bomba
+* In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
     
-    ![Pantalla de Configuración de Insight](../images/Insight_ConfigBuilder.png)
+    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
-* Toque el engranaje para abrir la configuración de la bomba.
+* Tap the cog-wheel to open Insight settings.
 
-* En configuración, pulsa en el botón 'Insight emparejamiento" en la parte superior de la pantalla. Debería ver una lista de todos los dispositivos Bluetooth cercanos (por debajo de la izquierda).
-* En la bomba Insight, ir a Menu > Settings > Communication > Add Device. La bomba mostrará la siguiente pantalla (a la derecha) mostrando el número de serie de la bomba.
+* In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
+* On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
     
-    ![Pantalla de emparejamiento 1 de Insight](../images/Insight_Pairing1.png)
+    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
 
-* Volviendo a tu teléfono, toca el número de serie de la bomba en la lista de dispositivos Bluetooth. Entonces toca "Pair" para confirmar.
+* Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm.
     
-    ![Pantalla de emparejamiento 2 de Insight](../images/Insight_Pairing2.png)
+    ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
 
-* A continuación, la bomba y el teléfono mostrarán un código. Compruebe que los códigos sean los mismos en ambos dispositivos y confirme tanto en la bomba como en el teléfono.
+* Both the pump and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
     
-    ![Pantalla de emparejamiento 3 de Insight](../images/Insight_Pairing3.png)
+    ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
 
-* Correcto! Una palmadita en la espalda por el éxito en la vinculación de la bomba con AndroidAPS.
+* Success! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
     
-    ![Pantalla de emparejamiento 4 de Insight](../images/Insight_Pairing4.png)
+    ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
 
-* Para comprobar todo está bien, vuelve a Config builder en AndroidAPS y pulsa sobre el engranaje de la bomba Insight para entrar en la configuración Insight, luego pulsa en el emparejamiento Insight y verás alguna información sobre la bomba:
+* To check all is well, go back to Config builder in AndroidAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
     
-    ![Pantalla de información de emparejamiento Insight](../images/Insight_PairingInformation.png)
+    ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
-Nota: No habrá una conexión permanente entre la bomba y el teléfono. Sólo se establecerá una conexión si es necesario (por ejemplo, fijar la tasa basal temporal, dar bolo, leer la historia de la bomba...). De lo contrario, la batería del teléfono y de la bomba se agotarían demasiado rápido.
+Note: There will be no permanent connection between pump and phone. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
 
 ## Valores en AAPS
 
-Usted **no debe utilizar 'Siempre usar valores basales absolutos'** con la bomba Insight. In AAPS go to Preferences > NSClient > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. Esto conduciría a valores de TBR falsos en la bomba Insight.
+You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > NSClient > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump.
 
 Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune. In AAPS go to Preferences > NSClient > Advanced Settings and Enable ‘NS upload only (disabled sync)‘.
 
@@ -61,39 +60,39 @@ Only workaround at the moment is to **disable sync** with Nightscout (upload onl
 
 In the Insight settings in AndroidAPS you can enable the following options:
 
-* "Registrar cambios en el depósito": Esto registrará automáticamente un cambio de cartucho de insulina cuando se ejecute el programa de "llenar la cánula" en la bomba.
-* "Registro de cambios de tubo": Esto agrega una nota a la base de datos de AndroidAPS al ejecutar el programa de "llenado de tubo" de la bomba.
-* "Registro de cambio de cánula”: Esto agrega una nota a la base de datos de AndroidAPS cuando se ejecuta "el llenado de la cánula" del programa de la bomba. **Nota: un cambio de cánula también restablece el autosens.**
-* "Registro de cambios de batería": Se registra el cambio de la batería cuando usted pone una batería nueva en la bomba.
-* "Registro de cambios del modo de operación": Se agrega una nota en la base de datos de AndroidAPS cuando: se inicia, detiene o pausa la bomba.
-* "Registro de alertas": Se agrega una nota en la base de datos AndroidAPS siempre que la bomba emite una alerta (excepto los recordatorios, el bolo y la cancelación de TBR, eventos que no se registran).
-* "Habilitar emulación TBR": La bomba Insight sólo puede realizar las tasas basales temporales (TBRs) hasta el 250%. Para evitar esta restricción, La emulación TBR dará instrucciones a la bomba para que proporcione un bolus extendido para la insulina extra si solicita un TBR de más del 250%.
+* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
+* "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
+* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+* "Log battery changes": This records a battery change when you put a new battery in the pump.
+* "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
+* "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
+* "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.
     
-    **Sólo utilice un bolo extendido, ya que múltiples bolos extendidos al mismo tiempo pueden causar errores.**
+    **Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.**
 
-* "Tiempo de recuperación": Esto define cuánto tiempo esperará el AndroidAPS antes de volver a intentarlo, después de un intento de conexión fallido. Puede elegir entre 0 y 20 segundos. Si experimenta problemas de conexión, elija un tiempo de espera más largo.   
+* "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
       
-    Ejemplo de min. tiempo de recuperación = 5 y max. tiempo de recuperación = 20   
+    Example for min. recovery duration = 5 and max. recovery duration = 20   
       
-    no conexión-> espere **5 ** seg.   
-    reintento-> sin conexión-> espera **6 ** seg.   
-    reintento-> sin conexión-> espera **7 ** seg.   
-    reintento-> sin conexión-> espera **8 ** seg.   
+    no connection -> wait **5** sec.   
+    retry -> no connection -> wait **6** sec.   
+    retry -> no connection -> wait **7** sec.   
+    retry -> no connection -> wait **8** sec.   
     ...   
-    reintento-> sin conexión-> espera **20 ** seg.   
-    reintento-> sin conexión-> espera **20 ** seg.   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
-* "Retraso de desconexión": Define cuánto tiempo (en segundos) AndroidAPS esperará a desconectarse de la bomba después de que finalice una operación. El valor predeterminado es de 5 segundos.
+* "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
 
 For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
 
 In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
 
-* "Actualizar": Refresca el estado de la bomba
-* "Activar/Desactivar TBR notificación": Una bomba Insight estándar emite una alarma cuando un TBR está terminado. Este botón le permite habilitar o inhabilitar esta alarma sin necesidad de software de configuración.
+* "Refresh": Refreshes pump status
+* "Enable/Disable TBR over notification": A standard Insight pump emits an alarm when a TBR is finished. This button lets you enable or disable this alarm without the need for configuration software.
     
-    ![Pantalla de estados de Insight](../images/Insight_Status2.png)
+    ![Screenshot of Insight Status](../images/Insight_Status2.png)
 
 ## Configuración de la bomba
 
