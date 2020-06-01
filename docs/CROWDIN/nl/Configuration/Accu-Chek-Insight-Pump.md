@@ -4,13 +4,17 @@
 
 * * *
 
-## ***WAARSCHUWING:** Als je de Insight in het verleden al gebruikte met **SightRemote,** werk AndroidAPS dan bij naar **versie 2.1.1** en **verwijder SightRemote**!*
+## ***WAARSCHUWING:** Als je de Insight in het verleden al gebruikte met **SightRemote,** werk AndroidAPS dan bij naar de nieuwste AAPS versie en **verwijder SightRemote**!*
 
 ## Benodigde hardware en software
 
-* Een Roche Accu-Chek Insight pomp (firmware maakt niet uit, ze werken allemaal) <br />Opmerking: AAPS zal alleen het **eerste basaal-profiel van de pomp** gebruiken.
+* Een Roche Accu-Chek Combo pomp (elke firmware is geschikt).
+    
+    Opmerking: AAPS zal informatie altijd opslaan in het **eerste basaal profiel in de pomp**.
+
 * Een Android-telefoon (in principe werkt elke Android-versie, maar AndroidAPS zelf vereist minstens Android 5 (Lollipop).)
-* De AndroidAPS-app (versie 2.1.1 of hoger) geïnstalleerd op jouw telefoon
+
+* De AndroidAPS-app geïnstalleerd op jouw telefoon
 
 ## Pomp koppelen
 
@@ -49,18 +53,24 @@ Opmerking: Er zal geen permanente verbinding zijn tussen pomp en telefoon. Een v
 
 ## Instellingen in AAPS
 
-![Screenshot van Insight Settings](../images/Insight_pairing.png)
+Let op: je mag **'Gebruik altijd absolute basale waarden' ** niet ingeschakeld hebben met een Insight-pomp. Ga in AAPS naar Instellingen> Nightscout-Client > Geavanceerde instellingen en zorg ervoor dat 'Gebruik altijd absolute basale waarden' is uitgeschakeld. Bij de Insight pomp zou deze optie ervoor zorgen dat er verkeerde tijdelijke basaalstanden worden ingesteld.
+
+Als je Autotune wilt kunnen gebruiken, dan is de enige manier op dit moment **synchronisatie uitschakelen** met Nightscout (alleen uploaden). Nadeel is wel dat bepaalde functies die vooral handig zijn voor ouders van kinderen (via de NSClient app) niet meer werken als synchronisatie is uitgeschakeld. Ga in AAPS naar Instellingen > NSClient > Geavanceerde Instellingen en vink 'Alleen NS upload (sync. gedeactiveerd)' aan.
+
+![Screenshot van Insight Settings](../images/Insight_pairing_V2_5.png)
 
 In de Insight-instellingen in AndroidAPS kun je de volgende opties inschakelen:
 
-* "Infuuswissel noteren": Dit zal automatisch een insuline ampul wissel noteren in AndroidAPS wanneer je het "vul canule" programma op de pomp gebruikt.  
-    <font color="red">Opmerking: Een canule wissel reset ook Autosens</b></font>
+* "Infuuswissel noteren": Dit zal automatisch een insulinepatroon wissel noteren wanneer je de "cannule vullen" optie op de pomp gebruikt.
 * "Slangwissel noteren": Dit voegt een notitie toe aan de AndroidAPS database wanneer je het "infusieset vullen" programma op de pomp gebruikt.
+* "Infuuswissel noteren": Dit voegt een notitie toe aan de AndroidAPS database wanneer je het "cannule vullen" programma op de pomp gebruikt. **Opmerking: Bij een infuuswissel wordt ook automatisch Autosens gereset.**
 * "Batterijwissel noteren": Dit voegt een notitie toe aan AndroidAPS wanneer je een nieuwe batterij in de pomp plaatst.
 * "Werkingsmodus-wissel noteren": Hiermee voegt je een notitie toe in de AndroidAPS database wanneer je de pomp start, stopt of pauzeert.
 * "Alarm noteren": Dit maakt een notitie in AndroidAPS wanneer de pomp een alarm geeft (behalve herinneringen, bolus en tijdelijke basaalstand annulering - deze worden niet geregistreerd).
-* "TBR-emulatie inschakelen": De Insight pump kan alleen tijdelijke basaalstanden (TBRs) instellen tot maximaal 250%. Om deze beperking te omzeilen, zal TBR-emulatie ervoor zorgen dat de pomp een vertraagde bolus gebruikt als je een TBR van meer dan 250% nodig hebt.  
-    <font color="red">Opmerking: gebruik slechts één vertraagde bolus tegelijkertijd omdat meerdere vertraagde bolussen tegelijkertijd, fouten kunnen veroorzaken.</font>
+* "TBR-emulatie inschakelen": De Insight pump kan alleen tijdelijke basaalstanden (TBRs) instellen tot maximaal 250%. Om deze beperking te omzeilen, zal TBR emulatie de pomp instructies geven om een vertraagde bolus te leveren voor de extra insuline als je een TBR van meer dan 250 procent vraagt.
+    
+    **Gebruik slechts één vertraagde bolus tegelijk, omdat meerdere uitgebreide bolussen tegelijkertijd fouten kunnen veroorzaken.**
+
 * "Herstel duur": Dit definieert hoe lang AndroidAPS zal wachten na een mislukte verbindingspoging voordat hij het opnieuw probeert. Je kunt een getal kiezen van 0 tot 20 seconden. Als je verbindingsproblemen ondervindt, kies je een langere wachttijd.   
       
     Voorbeeld voor min. herstel duur = 5 en max. herstel duur = 20   
@@ -89,14 +99,25 @@ In AndroidAPS toont het Accu-Chek Insight tabblad de huidige status van de pomp.
 
 Configureer alarmen in de pomp als volgt:
 
-* Menu > Instellingen > Apparaat-instellingen > Instellingen modus > Zacht > Signaal > Geluid Menu > Instellingen > Apparaatinstellingen > Instellingen modus > Zacht > Volume > 0 (verwijder alle balken)
+* Menu > Instellingen > Apparaatinstellingen > Modus instellingen > Zacht > Signaal > Geluid
+* Menu > Instellingen > Apparaatinstellingen > Instellingen modus > Zacht > Volume > 0 (verwijder alle balken)
 * Menu > Modi > Signaalmodus > Zacht
 
 Met deze instellingen gaan alle alarmen vanuit de pomp af in stilte. AndroidAPS krijgt de alarmen wel binnen, en beslist vervolgens of een alarm relevant voor jou is. Niet-relevante alarmen worden bevestigd in de pomp door AndroidAPS, hiervan zul jij dus niks merken. Wel-relevante alarmen worden door AndroidAPS niet bevestigd, waarna het volume van het alarm zal toenemen (eerst piepen, dan trillen) en jij als gebruiker het alarm moet bevestigen.
 
-Insight pompen met nieuwere firmware zullen kort trillen wanneer een bolus wordt afgeleverd (bijvoorbeeld wanneer AndroidAPS een SMB afgeeft of wanneer AndroidAPS een vertraagde bolus afgeeft om een hoge tijdelijke basaalstand te simuleren). Dit trilalarm kan niet worden uitgeschakeld. Oudere pompen zullen hierbij niet trillen.
+### Trilalarmen
+
+Insight pompen met nieuwere firmware zullen kort trillen wanneer een bolus wordt afgeleverd (bijvoorbeeld wanneer AndroidAPS een SMB afgeeft of wanneer AndroidAPS een vertraagde bolus afgeeft om een hoge tijdelijke basaalstand te simuleren).
+
+* Firmware 1.x: Geen trillingen.
+* Firmware 2.x: Trillingen kunnen niet worden uitgeschakeld.
+* Firmware-3.x: AndroidAPS trilt niet bij afgeven van bolus. (minimum [versie 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+
+Firmwareversie is te vinden in het menu.
 
 ## Batterij vervangen
+
+De batterij gaan ongeveer 10 tot 14 dagen mee, maximaal 20 dagen. Dit zijn ervaringen van gebruikers die lithiumbatterijen van het merk Energizer in hun pomp hebben.
 
 De Insight pomp heeft een kleine interne batterij om essentiële functies zoals de interne klok, te kunnen laten doorgaan terwijl jij de batterij verwisselt. Als het wisselen van de batterij te lang duurt, kan deze interne batterij leegraken. Dan wordt de interne klok gereset en wordt je gevraagd een nieuwe tijd en datum in te voeren nadat je een nieuwe batterij in de pomp hebt gedaan. Als dit gebeurt, zullen alle behandelingen in AndroidAPS voorafgaand aan de batterijwissel niet meer in berekeningen (zoals COB, IOB) worden opgenomen, omdat de juiste tijd niet kan worden vastgesteld.
 

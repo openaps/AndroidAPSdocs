@@ -1,13 +1,13 @@
-# Phones
+# Liste des téléphones testés
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
+Les utilisateurs ont créé une [liste de téléphones et montres testés](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
-You can use filters to display particular pumps or phones but please set back to view all when you've finished looking, ready for the next person to view all.
+Vous pouvez utiliser des filtres pour afficher des pompes ou des téléphones particuliers, mais veuillez remettre les filtres à zéro et tout afficher lorsque vous avez fini de chercher, afin que la prochaine personne puisse tout voir.
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
+Pour enregistrer un téléphone ou une montre qui n'est pas déjà listée dans la feuille de calcul, veuillez remplir le [formulaire](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
 
-Any problems with the spreadsheet please email <hardware@androidaps.org>, any donations of phone/watch models that still need testing please email [donations@androidaps.org](mailto:hardware@androidaps.org).
+En cas de problème avec la feuille de calcul, envoyez un email à hardware@androidaps.org, pour les dons de smartphone/montres qui ont encore besoin de tests, envoyez un email à donations@androidaps.org.
 
-## Phone Background
+# Fond d'écran
 
-![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
+![fond d'écran](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> Si vous voulez décorer votre téléphone avec plus d'AndroidAPS, vous pouvez télécharger votre image d'arrière-plan ici : ![Fond d'écran en haute résolution.](../images/bg_phone.jpg)

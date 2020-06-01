@@ -1,101 +1,101 @@
-# For Clinicians – A General Introduction and Guide to AndroidAPS
+# Για τους κλινικούς ιατρούς - μια γενική εισαγωγή και οδηγός για το AndroidAPS
 
-This page is intended for clinicians who have expressed interest in open source artificial pancreas technology such as AndroidAPS, or for patients who want to share such information with their clinicians.
+Αυτή η σελίδα προορίζεται για κλινικούς ιατρούς που έχουν εκδηλώσει ενδιαφέρον για τεχνολογία τεχνητού παγκρέατος ανοιχτού κώδικα όπως το AndroidAPS ή για ασθενείς που επιθυμούν να μοιραστούν αυτές τις πληροφορίες με τους κλινικούς γιατρούς τους.
 
-This guide has some high-level information about DIY closed looping and specifically how AndroidAPS works. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](http://androidaps.readthedocs.io/en/latest/index.html). If you have questions, please ask your patient for more details, or always feel free to reach out to the community with question. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@AndroidAPS.org). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
+Αυτός ο οδηγός περιέχει ορισμένες πληροφορίες υψηλού επιπέδου σχετικά με το κλειστό κύκλωμα DIY και συγκεκριμένα τον τρόπο λειτουργίας του AndroidAPS. Για περισσότερες λεπτομέρειες σχετικά με όλα αυτά τα θέματα, ανατρέξτε [στην πλήρη τεκμηρίωση του AndroidAPS online ](http://androidaps.readthedocs.io/en/latest/index.html). Εάν έχετε ερωτήσεις, ρωτήστε τον ασθενή σας για περισσότερες λεπτομέρειες ή αισθανθείτε ελεύθερος να απευθυνθείτε στην κοινότητα με ερώτησης. (Εάν δεν είστε σε κοινωνικά μέσα (π.χ. [ Twitter ](https://twitter.com/kozakmilos) ή Facebook), μην διστάσετε να στείλετε email στο developers@AndroidAPS.org). [ Μπορείτε επίσης να βρείτε μερικές από τις τελευταίες μελέτες & δεδομένα σχετικά με τα αποτελέσματα εδώ ](https://openaps.org/outcomes/).
 
-### The steps for building a DIY Closed Loop:
+### Τα βήματα για την οικοδόμηση ενός DIY κλειστού κυκλώματος:
 
-To start using AndroidAPS, the following steps should be taken:
+Για να ξεκινήσετε να χρησιμοποιείτε το AndroidAPS, ακολουθήστε τα παρακάτω βήματα:
 
-* Find a [compatible pump](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started-with-androidaps).
-* [Download the AndroidAPS source code and build the software](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
+* Βρείτε μια [ συμβατή αντλία ](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), μια [ συμβατή συσκευή Android ](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) και μια[ συμβατή πηγή CGM ](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started-with-androidaps).
+* [ Κάντε λήψη του πηγαίου κώδικα AndroidAPS και δημιουργήστε το λογισμικό ](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
+* [ Διαμορφώστε το λογισμικό για να μιλήσετε στις συσκευές διαβήτη και καθορίστε τις ρυθμίσεις και τις προτιμήσεις ασφαλείας ](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
 
-### How A DIY Closed Loop Works
+### Πώς λειτουργεί ένα κλειστό κύκλωμα DIY
 
-Without a closed loop system, a person with diabetes gathers data from their pump and CGM, decides what to do, and takes action.
+Χωρίς σύστημα κλειστού κυκλώματος, ένα άτομο με διαβήτη συλλέγει δεδομένα από την αντλία και το CGM, αποφασίζει τι πρέπει να κάνει και αναλαμβάνει δράση.
 
-With automated insulin delivery, the system does the same thing: it gathers data from the pump, CGM, and anywhere else information is logged (such as Nightscout), uses this information to do the maths and decide how much more or less insulin is needed (above or below the underlying basal rate), and uses temporary basal rates to make the necessary adjustments to keep or eventually bring BGs into target range.
+Με την αυτοματοποιημένη παράδοση ινσουλίνης, το σύστημα κάνει το ίδιο πράγμα: συλλέγει δεδομένα από την αντλία, το CGM και οπουδήποτε αλλού καταγράφονται οι πληροφορίες (όπως το Nightscout), χρησιμοποιεί αυτές τις πληροφορίες για να κάνει τα μαθηματικά και να αποφασίσει πόση περισσότερη ή λιγότερη ινσουλίνη χρειάζεται (πάνω ή κάτω από τον υποκείμενο βασικό ρυθμό) και χρησιμοποιεί προσωρινά βασικά ποσοστά για να πραγματοποιήσει τις απαραίτητες προσαρμογές για να διατηρήσει ή τελικά να φέρει το BG σε εύρος στόχου.
 
-If the device running AndroidAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basals rates runnning.
+Αν η συσκευή με AndroidAPS σπάσει ή βγει από την εμβέλεια της αντλίας, μόλις ολοκληρωθεί ο τελευταίος προσωρινός βασικός ρυθμός, η αντλία επιστρέφει στην κανονική αντλία με τις προρυθμισμένους βασικούς ρυθμούς.
 
-### How data is gathered:
+### Πώς συλλέγονται τα δεδομένα:
 
-With AndroidAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AndroidAPS can communicate with other devices and to the cloud via wifi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
+Με το AndroidAPS, μια συσκευή Android τρέχει μια ειδική εφαρμογή για να κάνει τα μαθηματικά, η συσκευή επικοινωνεί μέσω Bluetooth με μια υποστηριζόμενη αντλία. Το AndroidAPS μπορεί να επικοινωνεί με άλλες συσκευές και με το cloud μέσω wifi ή δεδομένων κινητής τηλεφωνίας για να συλλέξει πρόσθετες πληροφορίες και να αναφέρει στον ασθενή, τους φροντιστές και τους αγαπημένους του τι κάνει και γιατί.
 
-The Android device needs to:
+Οι συσκευές Android πρέπει:
 
-* communicate with the pump and read history - how much insulin has been delivered
-* communicate with the CGM (either directly, or via the cloud) - to see what BGs are/have been doing
+* επικοινωνούν με την αντλία και διαβάζουν το ιστορικό - πόση ινσουλίνη έχει παραδοθεί
+* επικοινωνούν με το CGM (είτε άμεσα είτε μέσω του cloud) - για να δουν τι κάνουν τα BGs
 
-When the device has collected this data, the algorithm runs and does the decision-making based on the settings (ISF, carb ratio, DIA, target, etc.). If required, it then issues commands to the pump to modify insulin delivery rate.
+Όταν η συσκευή έχει συλλέξει αυτά τα δεδομένα, ο αλγόριθμος τρέχει και κάνει τη λήψη αποφάσεων με βάση τις ρυθμίσεις (ISF, υδατάνθρακας, DIA, στόχος κ. λπ.). Αν απαιτείται, τότε εκδίδει εντολές στην αντλία για να τροποποιήσει την ταχύτητα παράδοσης ινσουλίνης.
 
-It will also gather any information about boluses, carbohydrate consumption, and temporary target adjustments from the pump or from Nightscout to use it for the calculation of insulin delivery rates.
+Θα συγκεντρώσει επίσης οποιαδήποτε πληροφορία σχετικά με τις δόσεις, την κατανάλωση υδατανθράκων και τις προσωρινές προσαρμογές στόχου από την αντλία ή από το Nightscout για να την χρησιμοποιήσει για τον υπολογισμό των ρυθμών παράδοσης ινσουλίνης.
 
-### How does it know what to do?
+### Πώς ξέρει τι να κάνει;
 
-The open source software is designed to make it easy for the device to do the work people used to do (in manual mode) to calculate how insulin delivery should be adjusted. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of expected BG-levels during the next hours will be expected to do in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Next it sends any necessary adjustments to the pump. Then it reads the data back, and does it over and over again.
+Το λογισμικό ανοιχτού κώδικα έχει σχεδιαστεί για να διευκολύνει τη συσκευή να κάνει τις εργασίες που χρησιμοποιούνται (σε ​​χειροκίνητη λειτουργία) για τον υπολογισμό του ποσού με τον οποίο θα πρέπει να ρυθμίζεται η παροχή ινσουλίνης. Αρχικά συλλέγει δεδομένα από όλες τις υποστηρικτικές συσκευές και από το cloud, προετοιμάζει τα δεδομένα και εκτελεί τους υπολογισμούς, κάνει προβλέψεις των αναμενόμενων επιπέδων BG κατά τις επόμενες ώρες αναμένεται να το κάνει σε διαφορετικά σενάρια και υπολογίζει τις απαραίτητες προσαρμογές για να διατηρήσει ή επαναφέρει το BG στο στόχο. Στη συνέχεια στέλνει τις απαραίτητες ρυθμίσεις στην αντλία. Στη συνέχεια διαβάζει τα δεδομένα πάλι, και το κάνει ξανά και ξανά.
 
-As the most important input parameter is the blood glucose level coming from the CGM, it is important to have high-quality CGM data.
+Επειδή η πιο σημαντική παράμετρος εισόδου είναι το επίπεδο γλυκόζης αίματος που προέρχεται από το CGM, είναι σημαντικό να έχετε υψηλής ποιότητας δεδομένα CGM.
 
-AndroidAPS is designed to transparently track all input data it gathers, the resulting recommendation, and any action taken. It is therefore easy to answer the question at any time, “why is it doing X?” by reviewing the logs.
+Το AndroidAPS έχει σχεδιαστεί για να παρακολουθεί με διαφάνεια όλα τα δεδομένα εισόδου που συγκεντρώνει, την προκύπτουσα σύσταση και οποιαδήποτε ενέργεια που έχει αναληφθεί. Επομένως, είναι εύκολο να απαντήσετε ανά πάσα στιγμή στο ερώτημα "γιατί κάνει το X;" εξετάζοντας τα αρχεία καταγραφής.
 
-### Examples of AndroidAPS algorithm decision making:
+### Παραδείγματα λήψης αποφάσεων του αλγόριθμου AndroidAPS:
 
-AndroidAPS uses the same core algorithm and feature set as OpenAPS. The algorithm makes multiple predictions (based on settings, and the situation) representing different scenarios of what might happen in the future. In Nightscout, these are displayed as “purple lines”. AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes#overview-tab). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
+Το AndroidAPS χρησιμοποιεί τον ίδιο βασικό αλγόριθμο και το σύνολο λειτουργιών του ως OpenAPS. Ο αλγόριθμος κάνει πολλαπλές προβλέψεις (με βάση τις ρυθμίσεις και την κατάσταση) που αντιπροσωπεύουν διαφορετικά σενάρια για το τι μπορεί να συμβεί στο μέλλον. Στη Nightscout, αυτά εμφανίζονται ως "μοβ γραμμές". Το AndroidAPS χρησιμοποιεί διαφορετικά χρώματα για να διαχωρίσει αυτές τις[ γραμμές πρόβλεψης ](../Installing-AndroidAPS/Releasenotes#overview-tab). Στα ημερολόγια, θα περιγράψει ποιες από αυτές τις προβλέψεις και ποιο χρονικό πλαίσιο οδηγεί τις απαραίτητες ενέργειες.
 
-#### Here are examples of the purple prediction lines, and how they might differ:
+#### Εδώ είναι παραδείγματα των μοβ γραμμών πρόβλεψης, και πώς μπορεί να διαφέρουν:
 
-![Purple prediction line examples](../images/Prediction_lines.jpg)
+![Παραδείγματα μοβ γραμμών πρόβλεψης](../images/Prediction_lines.jpg)
 
-#### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
+#### Ακολουθούν παραδείγματα διαφορετικών χρονικών πλαισίων που επηρεάζουν τις απαραίτητες προσαρμογές στην παροχή ινσουλίνης:
 
-#### Scenario 1 - Zero Temp for safety
+#### Σενάριο 1 - Μηδενικός ρυθμός για ασφάλεια
 
-In this example, BG is rising in the near-term time frame; however, it is predicted to be low over a longer time frame. In fact, it is predicted to go below target *and* the safety threshold. For safety to prevent the low, AndroidAPS will issue a zero temp (temporary basal rate at 0%), until the eventualBG (in any time frame) is above threshold.
+Σε αυτό το παράδειγμα, το BG αυξάνεται στο βραχυπρόθεσμο χρονικό πλαίσιο. Ωστόσο, προβλέπεται ότι θα είναι χαμηλό σε μεγαλύτερο χρονικό διάστημα. Στην πραγματικότητα, προβλέπεται να φτάσει κάτω από το στόχο * και * στο κατώφλι ασφαλείας. Για λόγους ασφαλείας για την αποφυγή του χαμηλού, το AndroidAPS θα εκδώσει μηδενικό ρυθμό (προσωρινή βασική συχνότητα στο 0%), έως ότου η BG (σε οποιοδήποτε χρονικό διάστημα) είναι πάνω από το όριο.
 
-![Dosing scenario 1](../images/Dosing_scenario_1.jpg)
+![Σενάριο δοσολογίας 1](../images/Dosing_scenario_1.jpg)
 
-#### Scenario 2 - Zero temp for safety
+#### Σενάριο 2 - Μηδενικός ρυθμός για ασφάλεια
 
-In this example, BG is predicted to go low in the near-term, but is predicted to eventually be above target. However, because the near-term low is actually below the safety threshold, AndroidAPS will issue a zero temp, until there is no longer any point of the prediction line that is below threshold.
+Σε αυτό το παράδειγμα, το BG προβλέπεται ότι θα μειωθεί βραχυπρόθεσμα, αλλά προβλέπεται ότι τελικά θα είναι πάνω από το στόχο. Ωστόσο, επειδή το βραχυπρόθεσμα χαμηλό είναι στην πραγματικότητα κάτω από το κατώφλι ασφαλείας, το AndroidAPS θα εκδώσει μηδενική θερμοκρασία, έως ότου δεν υπάρχει πλέον κανένα σημείο της γραμμής πρόβλεψης που να είναι κάτω από το όριο.
 
-![Dosing scenario 2](../images/Dosing_scenario_2.jpg)
+![Σενάριο δοσολογίας 2](../images/Dosing_scenario_2.jpg)
 
-#### Scenario 3 - More insulin needed
+#### Σενάριο 3 - Απαιτείται περισσότερη ινσουλίνη
 
-In this example, a near-term prediction shows a dip below target. However, it is not predicted to be below the safety threshold. The eventual BG is above target. Therefore, AndroidAPS will restrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). It will then assess adding insulin to bring the lowest level of the eventual predicted BG down to target, once it is safe to do so. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMB's (super micro boluses) ).*
+Σε αυτό το παράδειγμα, μια βραχυπρόθεσμη πρόβλεψη δείχνει μια πτώση κάτω από τον στόχο. Ωστόσο, δεν προβλέπεται να είναι κάτω από το όριο ασφαλείας. Το προβλεπόμενο BG είναι πάνω από το στόχο. Επομένως, το AndroidAPS θα περιορίσει την προσθήκη οποιασδήποτε ινσουλίνης που θα μπορούσε να συμβάλει σε ένα χαμηλό επίπεδο (με την προσθήκη ινσουλίνης που θα έκανε την πρόβλεψη να πέσει κάτω από το όριο). Στη συνέχεια, θα αξιολογήσει την προσθήκη ινσουλίνης για να μειώσει το στόχο του χαμηλότερου επιπέδου του προβλεπόμενου BG, εφόσον το κάνει ασφαλές. * (Ανάλογα με τις ρυθμίσεις και την απαιτούμενη ποσότητα και χρονισμό της ινσουλίνης, αυτή η ινσουλίνη μπορεί να χορηγηθεί μέσω βασικών θεραπειών ή SMB (πολύ μικρό bolus)). *
 
-![Dosing scenario 3](../images/Dosing_scenario_3.jpg)
+![Σενάριο δοσολογίας 3](../images/Dosing_scenario_3.jpg)
 
-#### Scenario 4 - Low temping for safety
+#### Σενάριο 4 - Χαμηλός ρυθμός για ασφάλεια
 
-In this example, AndroidAPS sees that BG is spiking well above target. However, due to the timing of insulin, there is already enough insulin in the body to bring BG into range eventually. In fact, BG is predicted to eventually be below target. Therefore, AndroidAPS will not provide extra insulin so it will not contribute to a longer-timeframe low. Although BG is high/rising, a low temporary basal rate is likely here.
+Σε αυτό το παράδειγμα, το AndroidAPS βλέπει ότι το BG ξεπερνάει τον στόχο. Ωστόσο, λόγω του χρονισμού της ινσουλίνης, υπάρχει ήδη αρκετή ινσουλίνη στο σώμα για να φέρει το BG στη σειρά τελικά. Στην πραγματικότητα, το BG προβλέπεται ότι τελικά θα είναι κάτω από τον στόχο. Ως εκ τούτου, το AndroidAPS δεν θα παρέχει επιπλέον ινσουλίνη, ώστε να μην συμβάλλει σε μακρύτερο χρονικό διάστημα στα χαμηλά. Αν και το BG είναι υψηλό / αυξανόμενο, είναι πιθανό να υπάρχει χαμηλός προσωρινός βασικός ρυθμός.
 
-![Dosing scenario 4](../images/Dosing_scenario_4.jpg)
+![Σενάριο δοσολογίας 4](../images/Dosing_scenario_4.jpg)
 
-### Optimizing settings and making changes
+### Βελτιστοποίηση ρυθμίσεων και πραγματοποίηση αλλαγών
 
-As a clinician who may not have experience with AndroidAPS or DIY closed loops, you may find it challenging to help your patient optimize their settings or make changes to improve their outcomes. We have multiple tools and [guides](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
+Ως κλινικός ιατρός που μπορεί να μην έχει εμπειρία με τους κλειστά κυκλώματα, AndroidAPS ή DIY, ίσως είναι δύσκολο να βοηθήσετε τον ασθενή να βελτιστοποιήσει τις ρυθμίσεις του ή να κάνει αλλαγές για να βελτιώσει τα αποτελέσματά του. Έχουμε πολλαπλά εργαλεία και [ οδηγούς ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) στην κοινότητα που βοηθούν τους ασθενείς να κάνουν μικρές δοκιμασμένες προσαρμογές για να βελτιώσουν τις ρυθμίσεις τους.
 
-The most important thing for patients to do is make one change at a time, and observe the impact for 2-3 days before choosing to change or modify another setting (unless it’s obviously a bad change that makes things worse, in which case they should revert immediately to the previous setting). The human tendency is to turn all the knobs and change everything at once; but if someone does so, then they may end up with further sub-optimal settings for the future, and find it hard to get back to a known good state.
+Το πιο σημαντικό πράγμα που πρέπει να κάνουν οι ασθενείς είναι να κάνουν μια αλλαγή κάθε φορά και παρατηρούν τον αντίκτυπο για 2-3 ημέρες πριν επιλέξουν να αλλάξουν ή να τροποποιήσουν τις ρυθμίσεις (εκτός αν είναι προφανώς μια κακή αλλαγή που κάνει τα πράγματα χειρότερα, οπότε θα έπρεπε επαναφέρετε αμέσως την προηγούμενη ρύθμιση). Η ανθρώπινη τάση είναι να γυρίσουμε όλα τα κουμπιά και να αλλάξουμε τα πάντα με τη μία. αλλά αν κάποιος το κάνει, τότε μπορεί να καταλήξουν σε περαιτέρω κακές ρυθμίσεις για το μέλλον και να δυσκολευτεί να επιστρέψει σε μια γνωστή καλή κατάσταση.
 
-One of the most powerful tools for making settings changes is an automated calculation tool for basal rates, ISF, and carb ratio. This is called “[Autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)”. It is designed to be run independently/manually, and allow the data to guide you or your patient in making incremental changes to settings. It is best practice in the community to run (or review) Autotune reports first, prior to attempting to make manual adjustments to settings. With AndroidAPS, Autotune will be run as a "one-off", although there are ongoing efforts to incorporate it directly into AndroidAPS as well. As these parameters are a prerequesite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adustment of these parameters would be the natural link to the clinician.
+Ένα από τα πιο ισχυρά εργαλεία για την πραγματοποίηση αλλαγών στις ρυθμίσεις είναι ένα αυτοματοποιημένο εργαλείο υπολογισμού βασικών ρυθμών, ISF και υδατανθράκων. Αυτό ονομάζεται "[ Autotune ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)". Είναι σχεδιασμένο να εκτελείται ανεξάρτητα / χειροκίνητα και να επιτρέπει στα δεδομένα να σας καθοδηγούν εσάς ή τον ασθενή σας για να κάνετε αυξομειώσεις στις ρυθμίσεις. Είναι η καλύτερη πρακτική στην κοινότητα να τρέχει (ή να αναθεωρεί) τις αναφορές Autotune πρώτα, προτού επιχειρήσετε να κάνει χειροκίνητες προσαρμογές στις ρυθμίσεις. Με το AndroidAPS, το Autotune θα λειτουργεί ως "εφάπαξ", αν και υπάρχουν συνεχείς προσπάθειες για την ενσωμάτωσή του απευθείας στο AndroidAPS. Καθώς αυτές οι παράμετροι είναι ένα προκαταρκτικό ζήτημα τόσο για την τυπική παροχή ινσουλίνης αντλίας όσο και για την παράδοση ινσουλίνης κλειστού κυκλώματος, η συζήτηση των αποτελεσμάτων αυτόματης λήψεως και η εμφάνιση αυτών των παραμέτρων θα ήταν η φυσική σύνδεση με τον κλινικό ιατρό.
 
-Additionally, human behavior (learned from manual diabetes mode) often influences outcomes, even with a DIY closed loop. For example, if BG is predicted to go low and AndroidAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dl (3.9 mmol). However, in many cases, someone may choose to treat with many more carbs (e.g. sticking to the 15 rule), which will cause a resulting faster spike both from the extra glucose and because insulin had been reduced in the timeframe leading up to the low.
+Επιπρόσθετα, η ανθρώπινη συμπεριφορά (που αντλείται από τον χειρωνακτικό τρόπο αντιμετώπισης διαβήτη) επηρεάζει συχνά τα αποτελέσματα, ακόμη και με κλειστό κύκλωμα DIY. Για παράδειγμα, εάν το BG εκτιμάται ότι θα μειωθεί και το AndroidAPS μειώνει την ινσουλίνη με κατεύθυνση προς τα κάτω, μπορεί να χρειαστεί μόνο μικρή ποσότητα υδατανθράκων (π.χ. 3-4g υδατάνθρακες) για να φθάσει το BG πάνω από 70 mg / dl (3,9 mmol). Ωστόσο, σε πολλές περιπτώσεις, κάποιος μπορεί να επιλέξει να θεραπεύσει με πολλούς περισσότερους υδατάνθρακες (π.χ. να κολλήσει στον κανόνα 15), γεγονός που θα προκαλέσει μια ταχύτερη ακίδα τόσο από την επιπλέον γλυκόζη όσο και επειδή η ινσουλίνη είχε μειωθεί στο χρονικό πλαίσιο που οδηγούσε στο χαμηλό.
 
 ### OpenAPS
 
-**This guide was adopted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AndroidAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AndroidAPS, with the main difference being the hardware platform where each peace of software is run.
+** Αυτός ο οδηγός εγκρίθηκε από τον [ Οδηγό του κλινικού για το OpenAPS ](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html). ** Το OpenAPS είναι ένα σύστημα που αναπτύσσεται για να τρέχει σε ένα μικρό φορητό υπολογιστή (που γενικά αναφέρεται ως "rig"). Το AndroidAPS χρησιμοποιεί πολλές από τις τεχνικές που εφαρμόζονται στο OpenAPS και μοιράζεται μεγάλο μέρος της λογικής και των αλγορίθμων, γι 'αυτό και αυτός ο οδηγός είναι πολύ παρόμοιος με τον αρχικό οδηγό. Πολλές από τις πληροφορίες σχετικά με το OpenAPS μπορούν εύκολα να προσαρμοστούν στο AndroidAPS, με την κύρια διαφορά να είναι η πλατφόρμα υλικού, όπου κάθε κομμάτι του λογισμικού λειτουργεί.
 
-### Summary
+### Περίληψη
 
-This is meant to be a high-level overview of how AndroidAPS works. For more details, ask your patient, reach out to the community, or read the full AndroidAPS documentation available online.
+Αυτό πρέπει να είναι μια επισκόπηση υψηλού επιπέδου για το πώς λειτουργεί το AndroidAPS. Για περισσότερες λεπτομέρειες, ρωτήστε τον ασθενή σας, επικοινωνήστε με την κοινότητα ή διαβάστε την πλήρη τεκμηρίωση του AndroidAPS που είναι διαθέσιμη στο διαδίκτυο.
 
-Additional recommended reading:
+Επιπλέον προτεινόμενη ανάγνωση:
 
-* The [full AndroidAPS documentation](http://androidaps.readthedocs.io/en/latest/EN/index.html)
-* The [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), which explains how OpenAPS is designed for safety: https://openaps.org/reference-design/
-* The [full OpenAPS documentation](http://openaps.readthedocs.io/en/latest/index.html) 
-  * More [details on OpenAPS calculations](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+* [Η πλήρης τεκμηρίωση του AndroidAPS ](http://androidaps.readthedocs.io/en/latest/EN/index.html)
+* Το [ Σχεδιασμό Αναφοράς OpenAPS ](https://OpenAPS.org/reference-design/), το οποίο εξηγεί πώς είναι σχεδιασμένο το OpenAPS για ασφάλεια: https://openaps.org/reference-design/
+* [Η πλήρης τεκμηρίωση OpenAPS ](http://openaps.readthedocs.io/en/latest/index.html) 
+  * Περισσότερες λεπτομέρειες [ σχετικά με τους υπολογισμούς OpenAPS ](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)

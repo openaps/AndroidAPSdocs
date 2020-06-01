@@ -2,6 +2,8 @@
 
 *Diese Anleitung beschreibt die Einrichtung der App und deiner Pumpe wenn du eine Dana RS (ab 2017) verwendest. Gehe zu [DanaR Insulinpumpe](./DanaR-Insulin-Pump) wenn du die Original DanaR benutzt.*
 
+**Die DanaRS mit neuer Firmware v3 kann derzeit nicht mit AndroidAPS verwendet werden!**
+
 * Bei der DanaRS wird das Basalprofil "BASAL A" von AAPS verwendet. Eventuell in der Pumpe vorhandene Einträge in diesem Profil werden überschrieben.
 
 * Gehe in AndroidAPS zu "KONFIGURATION".
@@ -10,13 +12,13 @@
 
 * Klicke im Abschnitt "DanaRS" auf "Verbinde neue Pumpe" und gib die Seriennummer (Unterseite der Pumpe gegenüber dem Reservoir- und Batteriedeckel) deiner DanaRS ein.
   
-      ![AAPS pairing Dana RS](../images/AAPS_DanaRSPairing.png)
+      ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
       
 
 * Wähle "Pumpen-Passwort" und gib das Passwort ein. (Das Standardpasswort ist 1234.)   
-  ** Du musst das Pairing auf der Pumpe bestätigen!** Genau so wie Du es von anderen Bluetooth Verbindungen (z.B. Smartphone und Auto-Multimediasystem) kennst.
+  ** Du musst das Koppeln auf der Pumpe bestätigen!** Genau so wie Du es von anderen Bluetooth Verbindungen (z.B. Smartphone und Auto-Multimediasystem) kennst.
   
-      ![Dana RS Pairing Bestätigung](../images/DanaRS_Pairing.png)
+      ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
       
 
 * Klicke auf "Bolus-Geschwindigkeit" um die gewünschte Abgabegeschwindigkeit (12 s/1 IE, 30 s/1 IE oder 60 s/1 IE) einzustellen.
@@ -54,7 +56,7 @@ Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 
 * **Übertrage** die exportierten Einstellungen vom alten auf das neue Smartphone
 
-* **Verbinde** die Dana RS und das neue Smartphone manuell (Bluetooth-Verbindung) 
+* **Manuelle Kopplung** die Dana RS und das neue Smartphone manuell (Bluetooth-Verbindung) 
   * Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Daher müssen das neue Smartphone und die Pumpe manuell verbunden werden.
 * **Installiere AndroidAPS** auf dem neuen Smartphone.
 * **Importiere die Einstellungen** auf Deinem neuen Smartphone 

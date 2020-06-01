@@ -1,58 +1,63 @@
-# Jelly Pro - battery life optimization
+# Jelly Pro
 
-The following settings and handling advice (use watch for daily operations instead of Jelly smartphone) lead to approx. 35 hours of battery life. An additional battery saving mode is not necessary, rather counterproductive, therefore turn off.
+## Ventajas y desventajas
 
-![Jelly smartphone](../images/jelly_01.jpg)
+### Ventajas Jelly
 
-## First setup
+* Es realmente pequeño.
+* Incluso si se lo dice a la gente, es posible que no lo consideren como un smartphone normal y lo hará más fácil como una excepción cuando los teléfonos normalmente no están permitidos.
 
-<b><font color="#FF0000">Very important:</b></font> If you don't need Android 8.1 (i.e. to loop with an Accu-Check Combo) stay with android 7.0!
+### Inconvenientes Jelly
 
-Follow these rules to stay with Andorid 7.0:
+* Recomendado sólo para los loopers experimentados (algunos ajustes no son reconocibles, tienes que tener la experiencia de un teléfono grande Android AAPS, cómo y dónde se encuentra cada cosa. Algunos botones de AAPS son difíciles de tocar con mucha sensación, pero no con los dedos rechonchos.)
+* Sólo se puede utilizar como LooperPhone. Es mejor tener un smartphone normal en tu bolsillo. 
+* Si no tratas a Jelly como una diva (Siempre (¡) llevalo contigo!) Jelly muestra su lado amargo, desconecta todos los Bluetooth y se enfurruña hasta que lo reinicies. 
 
-* Do not connect to wifi or mobile network on first use to prevent auto update.
-* Skip setting up wifi network.
-* Setting up Google account offline is the only thing that cannot be skipped.
-* Go to settings and disable auto update (Settings >System >About the phone >System update >Three-point menu top right >Settings >Automatically check for updates >Once)
-* Every time you activate the wifi or mobile network you will be notified that a system update is available. Do not update! It is best to delete the notification so that you do not accidentally update. This would not be so easy to undo. 
-* Installed apps can and should be upgraded.
+## Optimización de la duración de la batería Jelly Pro
 
-![Jelly settings](../images/jelly_02.jpg)
+Los siguientes valores y consejos de manejo (uso de reloj para las operaciones diarias en lugar de un smartphone Jelly) llevan a aproximadamente 35 horas de duración de batería. Un modo de ahorro de batería adicional no es necesario, más bien contraproducente, por lo tanto, apagalo.
 
-## Settings
+![Teléfono inteligente Jelly](../images/jelly_01.jpg)
 
-* Use Jelly only for looping.
-* Set up wifi to install xDrip, AAPS and WearOS, otherwise wifi off. 
-* Wifi can be enabled for a short time if you want to upload the data to Nightscout.
-* Jelly does not need a SIM card, but if you use one make sure to turn off the mobile data. The easiest way is to activate flight mode.
-* Also if you do not use a SIM card turn of mobile data.
-* Bluetooth must be turned on of course. If the pump is not within range for a longer period of time, the "search" will consume a lot of battery power.
-* DURASPEED ON (Settings > Device > Duraspeed on). Whitelist AAPS, WearOS and xDrip+ to run in background. All other apps should not run in background.
-* End all other tasks in the background. Settings > Intelligent assistant > Exit tasks in background > Disable all other apps (despite AAPS, WearOS and xDrip+).
-* Location services must be on but in power save mode (Settings > User > Location > Mode > Energy Saver Mode).
-* Screen brightness set to 0%, sleep 15-30 sec. (Settings > Device > Display).
-* The daily operations only via the watch. Other settings and display use only during charging. 
-* Jelly, just like the pump, remains untouched under clothing all day long.
+### Primera configuración
 
-## Tips
+<b><font color="#FF0000">Muy importante:</b></font> Si no necesitas Android 8.1 (es decir, con un Accu-Check Combo), quédate con el android 7.0!
 
-* The Jelly is a not always intuitive to use and sometimes acts like a baby diva. A restart (button on the right) every now and then might be a good idea.
-* In portrait view not all buttons might be displayed. So it is worth turning Jelly by 90 degrees.
+Siga estas reglas para permanecer con Andorid 7.0:
 
-![Jelly portrait + landscape view](../images/jelly_04.jpg)
+* No se conecte a la red wifi o a la red móvil en primer lugar para evitar la actualización automática.
+* Omitir la configuración de la red wifi.
+* Configurar la cuenta de Google fuera de línea es la única cosa que no se puede omitir.
+* Vaya a la configuración e inhabilite la actualización automática (Settings >System >Acerca de the phone >System update >Three-point menu top right >Settings >Automatically check for updates >Once)
+* Cada vez que active la red wifi o la red móvil, se le notificará que hay disponible una actualización del sistema. No actualizar! Es mejor suprimir la notificación para que no se actualice accidentalmente. Esto no sería tan fácil de deshacer. 
+* Las aplicaciones instaladas pueden y deben actualizarse.
 
-* The headline on the startscreen of the phone can hold up to 6 icons on the right. The clock needs 2 of them. So if 5 are already occupied (i.e. bluetooth, do not disturb, no SIM card, flight mode and the battery indicator), no clock will be displayed. Briefly increase the volume with the button in the upper left corner, then the clock appears in the header. ;-)
-* The "alarm clock", which is initially (with factory settings) displayed on the Home screen below the time, is probably a second time zone. Switch this off as AAPS might access wrong timezone (Settings > System > Date&Time > Automatic Time Zone > OFF). Use the time provided by the network instead.
-* A screenshot can be taken by pressing the quiet button (bottom left) + the an button (right) simultaneously. 
+![Ajustes de Jelly](../images/jelly_02.jpg)
 
-![Jelly headline](../images/jelly_03.png)
+### Configuración
 
-## Advantages Jelly
+* Utilice Jelly sólo para el lazo.
+* Configure wifi para instalar xDrip, AAPS y WearOS, de lo contrario wifi off. 
+* Wifi puede ser habilitado por un corto tiempo si quiere subir los datos a Nightscout.
+* Jelly no necesita una tarjeta SIM, pero si la utiliza asegurese de desactivar los datos móviles. La forma más fácil es activar el modo de vuelo.
+* También, si usted no utiliza una tarjeta SIM activar los datos móviles.
+* El Bluetooth debe estar encendido, por supuesto. Si la bomba no está dentro del rango durante un periodo de tiempo más largo, la "búsqueda" consumirá mucha energía de la batería.
+* DURASPEED ON (Ajustes > Dispositivo > Duraspeed on). La lista blanca AAPS, WearOS y xDrip+ a ejecutar en segundo plano. Todas las demás aplicaciones no deben ejecutarse en segundo plano.
+* Poner fin a todas las demás tareas en segundo plano. Ajustes > asistente Inteligente > Salir de tareas en segundo plano > Deshabilitar todas las otras aplicaciones (a excepto de AAPS, WearOS y xDrip+).
+* Los servicios de localización deben estar encendidos pero en modo de ahorro de energía (Ajustes > Usuario > Ubicación > Modo > Modo de Ahorro Energético).
+* El brillo de pantalla se establece en 0%, sleep 15 -30 seg. (Configuración > Dispositivo > Pantalla).
+* Las operaciones diarias sólo a través del reloj. Otros valores y uso de pantalla sólo durante la carga. 
+* Jelly, al igual que la bomba, permanece intacto bajo la ropa todo el día.
 
-* It's really small.
+## Consejos
 
-## Disadvantages Jelly
+* El Jelly no es siempre intuitivo de usar y a veces actúa como una diva. Un reinicio (botón a la derecha) cada vez y luego podría ser una buena idea.
+* En la vista vertical, no se pueden visualizar todos los botones. Así que vale la pena convertir a Jelly en 90 grados.
 
-* Recommended only for experienced loopers (some settings are not recognizable, you have to know from experience with a big Android AAPS phone, how and where what is located. Some AAPS buttons are hard to touch with a lot of feeling, but not with stubby fingers.)
-* Can only be used as LooperPhone. It's better to have a normal smartphone in your pocket. 
-* If you don't treat Jelly like a diva (Always (!) carry it with you!) Jelly shows its bitchy side, disconnects all Bluetooth and sulks until you restart.
+![Jelly vertical + vista horizontal](../images/jelly_04.jpg)
+
+* El titulo en la pantalla de inicio del teléfono puede contener hasta 6 iconos a la derecha. El reloj necesita dos de ellos. Así que si 5 ya están ocupados (es decir, bluetooth, no molestar, no hay tarjeta SIM, modo de vuelo y el indicador de la batería), no se mostrará ningún reloj. Aumente brevemente el volumen con el botón en la esquina superior izquierda, y el reloj aparece en la cabecera. ;-)
+* El "despertador", que inicialmente (con la configuración de fábrica) aparece en la pantalla de inicio debajo de la hora, es probablemente una segunda zona horaria. Desactive esta opción ya que AAPS puede acceder al huso horario incorrecto (Settings > System > Date&Time > Automatic Time Zone > OFF). Utilice el tiempo proporcionado por la red en su lugar.
+* Una captura de pantalla puede tomarse presionando el botón de silencio (inferior izquierda) + el botón (derecha) simultáneamente. 
+
+![Jelly titulo](../images/jelly_03.png)

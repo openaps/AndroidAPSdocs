@@ -56,7 +56,7 @@
  <td>BAT</td>
  <td>statusindicator batterij niveau op Overzichtsscherm</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Instellingen</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Instellingen</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>BG</td>
@@ -104,7 +104,7 @@
  <td>CAN</td>
  <td>statusindicator infuuswissel op Overzichtsscherm</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Instellingen</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Instellingen</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -193,7 +193,7 @@
 <tr>
  <td>LGS</td>
  <td>Lage Glucose Stop<br>AAPS zal het basaal verminderen als bloedglucose daalt. Maar als de bloedglucose stijgt, wordt de basaal verhoogd zolang IOB negatief is (van een eerdere LGS), anders geeft hij de basaal uit jouw profiel. Het kan daardoor voorkomen dat je na een hypo een piek krijgt in je glucosewaarde, omdat het systeem op dat moment geen hogere basaalstand zal instellen._</td>
- <td><a href="../Usage/Objectives.html">doel 4</a></td>
+ <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">doel 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
@@ -284,7 +284,7 @@
  <td>PH</td>
  <td>pompgeschiedenis (Pump History) - je ziet PH staan op het Behandelingen tabblad, om aan te geven dat die invoer in het pompgeheugen staat</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Screenshots</a></td>
 </tr>
 <tr>
  <td>Voorspellingslijnen</td>
@@ -308,7 +308,7 @@
  <td>RES</td>
  <td>statusindicator reservoir niveau op Overzichtsscherm</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Instellingen</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Instellingen</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
@@ -326,7 +326,7 @@
  <td>SEN</td>
  <td>statusindicator sensor leeftijd op Overzichtsscherm</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences#overview">Instellingen</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Instellingen</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>Gevoeligheids detectie (Sensitivity detection)</td>
@@ -389,6 +389,12 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
+ <td>Achtergrond</td>
+ <td>AndroidAPS achtergrond afbeelding</td>
+ <td></td>
+ <td><a href="../Getting-Started/Phones.html#phone-background">Zie de pagina telefoons</a></td>
+</tr>
+<tr>
  <td>xDrip / xDrip+</td>
  <td>open source software. app om CGM waardes te ontvangen</td>
  <td>&nbsp;</td>
@@ -396,7 +402,7 @@
 </tr>
 <tr>
  <td>Zero-temp</td>
- <td>tijdelijke basaalstand met 0% (geen basale insuline afgifte)</td>
+ <td>tijdelijke basaalstand met 0% (geen basale insuline levering)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>

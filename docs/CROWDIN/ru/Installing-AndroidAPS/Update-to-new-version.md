@@ -1,205 +1,103 @@
-# Update to a new version or branch
+# Обновление до новой версии или ветки
 
-<font color="#FF0000"><b>Important note: As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.</font></b>
+## Постройте сами вместо того, чтобы загружать
 
-## Install git (if you don't have it)
+**AndroidAPS недоступен для скачивания из-за законодательства, касающегося медицинских устройств. Построить приложение для собственного использования вполне законно, но вам не разрешается передавать копию другим! См. раздел [ FAQ ](../Getting-Started/FAQ.md).**
 
-### Windows
+## Важные Примечания
 
-* Any git version should work. For example <https://git-scm.com/download/win>
-* Make sure to note down the installation path. You will need it in the next step.
-  
-  ![Git installation path](../images/Update_GitPath.png)
+* Пожалуйста, обновите приложение сразу же после выхода новой версии. Вы получите информацию [ на главном экране AndroidAPS ](../Installing-AndroidAPS/Releasenotes.html#release-notes) о новой версии.
+* Начиная с версии 2.3 для обновления требуется использовать git. Обновление с zip-файла больше не работает.
+* Используйте [](https://developer.android.com/studio/) Android Studio версии 3.6.1 или новее для построения apk.
+* [Windows 10 для 32-разрядных систем](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) не поддерживается в Android Studio 3.6.1.
+* Если вы используете xDrip, [identify the receiver](../Configuration/xdrip#identify-receiver).
+* Если вы используете Dexcom G6 с модифицированным приложением [Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) вам понадобится версия из папки [2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
-* Let Studio know where is git.exe located: File - Settings
-  
-  ![Android Studio - open settings](../images/Update_GitSettings1.png)
+## Пошаговая инструкция для опытных пользователей
 
-* In the next window: Version Control - Git
+Пропустите этот пункт, если вы обновляете в первый раз. Пошаговая инструкция для опытных пользователей. Следующим шагом будет [ установить git ](../Installing-AndroidAPS/git-install.rst), если у вас его еще нет.
 
-* Choose correct path: .../Git<font color="#FF0000"><b>/bin</b></font>
+Если вы уже обновили AAPS в предыдущих версиях и используете Windows PC, вы можете обновить его в четырех простых шагах:
 
-* Make sure update method "Merge" is selected.
-  
-  ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
+1. [ Экспортируйте параметры ](../Usage/ExportImportSettings#how-to-export-settings) из существующей версии AAPS на вашем телефоне, чтобы обезопасить себя
+2. [ Обновите локальную копию ](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS-> Git-> Pull)
+3. [ Создайте подписанное APK ](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Выберите 'app', а не 'wear' на своем пути!)
+4. В зависимости от источника ГК [BG source](../Configuration/BG-Source.rst) убедитесь, что [identify receiver](../Configuration/xdrip#identify-receiver) отмечен в xDrip или используйте модифицированное приложение Dexcom из [папки 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
-### Mac
+## Установите git (если у вас его нет)
 
-* Any git version should work. For example <https://git-scm.com/download/mac>
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
+Следуйте инструкциям на странице установки [git](../Installing-AndroidAPS/git-install.rst).
 
-## Update your local copy
+## Обновите свою локальную копию
 
-* Click: VCS->Git->Fetch
-  
-  ![Android Studio - GIT - Fetch](../images/Update_Fetch.png)
-
-## Selecting branch
-
-* If you want to change branch select another branch from tray: master (latest release) or another version (please see below)
-  
-  ![](../images/UpdateAAPS1.png)
-
-and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
-
-     ![](../images/UpdateAAPS2.png)
+* Выберите: VCS-> Git-> Pull
     
+    ![Android Studio-GIT-Pull](../images/AndroidStudio361_Update01.png)
 
-## Updating branch from Github
+* Нажмите кнопку Pull (без изменений в диалоговом окне)
+    
+    ![Android Studio-GIT-Pull 2](../images/AndroidStudio361_Update02.png)
 
-* Press Ctrl+T, select Merge method and press OK
-  
-  ![](../images/merge.png)
+* Подождите, пока выполняется загрузка.
+    
+    ![Android Studio-извлечение выполняется](../images/AndroidStudio361_Update03.png)
 
-On the tray you'll see green message about updated project
+* По завершении Android Studio сообщит вам, что "все файлы актуальны".
+    
+    ![Все файлы в актуальном состоянии](../images/AndroidStudio361_Update04.png)
 
-## Generate signed APK
+## Создание подписанного APK
 
-<!--- Text is maintained in page building-apk.md ---> In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
+<!--- Text is maintained in page building-apk.md --->
 
-  
-Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
+* Нажмите "Build" в строке меню и выберите "Generate Signed Bundle / APK...".
 
-![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
+![Построение apk](изображение::../images/AndroidStudio361_27.png)
 
-In the following dialogue box select "APK" instead of "Android App Bundle" and click button "Next".
+* Выберите "APK" (1.) вместо "Android App Bundle" и нажмите кнопку "Далее" (2.).
 
-![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
+![Apk вместо пакета](изображение::../images/AndroidStudio361_28.png)
 
-Select "app" and click "Next".
+* Убедитесь, что модуль имеет значение "app".
+* Выберите путь к хранилищу ключей, нажав кнопку "Выбрать существующую...".
+* Введите пароли для хранилища ключей и ключа.
+* Если установлен флажок запомнить пароли, вам не придется их вводить. В том случае, если этот переключатель не был включен во время последней компоновки, и вы не можете запомнить эти пароли, обратитесь к разделу [ Устранение неполадок ](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Нажмите "Далее".
 
-![Screenshot 40](../images/Installation_Screenshot_40.png)
+![Хранилище ключей](../images/AndroidStudio361_Update05.png)
 
-Enter your key store path, enter key store password, select key alias and enter key password.
+* Выберите вариант компоновки "fullRelease" (1.). 
+* Отметьте флажки V1 и V2 для подписи версий (2.).
+* Нажмите ``Finish``. (3.)
 
-Select 'Remember passwords'.
+![Завершение сборки](изображение::../images/AndroidStudio361_32.png)
 
-Then click next.
+* После завершения сборки Android Studio покажет информацию "APK (s) сгенерировано успешно ...".
+* В случае, если сборка не удалась, обратитесь к разделу [поиск и устранение неисправностей ](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* Самый простой способ найти apk это нажать на кнопку "журнал событий".
 
-![Key store path](../images/KeystorePathUpdate.PNG)
+![Построено успешно - журнал событий](изображение::../images/AndroidStudio361_33.png)
 
-Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
+* В секции журнала событий нажмите «locate».
 
-* 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
-* Select the build type you want to build. 
-  * full (i.e. recommendations automatically enacted in closed looping)
-  * openloop (i.e. recommendations given to user to manually enact)
-  * pumpcontrol (i.e. remote control for pump, no looping)
-  * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
+![Журнал событий - обнаружить apk](изображение::../images/AndroidStudio361_34.png)
 
-![Screenshot 44](../images/Installation_Screenshot_44.png)
+* app-full-release.apk это файл, который вы ищете.
 
-In the event log you see that the Signed APK was generated successfully.
+![Расположение файла apk](изображение::../images/AndroidStudio361_35.png)
 
-![Screenshot 45](../images/Installation_Screenshot_45.png)
+## Перенос приложения на смартфон
 
-Click the "locate" link in the event log.
+Самый простой способ перенести приложение на ваш телефон - [через кабель USB или Google Drive](https://support.google.com/android/answer/9064445?hl=en). Обратите внимание, что передача по почте может вызвать трудности и не является предпочтительным способом.
 
-![Screenshot 46](../images/Installation_Screenshot_46.png)
+На вашем телефоне необходимо разрешить установку из неизвестных источников. Инструкции, как это сделать, можно найти в интернете (например [здесь](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) или [здесь](https://www.androidcentral.com/unknown-sources)).
 
-## Transfer APK to smartphone
+## Проверить версию AAPS на телефоне
 
-<!--- Text is maintained in page building-apk.md ---> A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
+Вы можете проверить версию AAPS на вашем телефоне, нажав на меню трех точек сверху справа "о приложении".
 
-![Screenshot 47](../images/Installation_Screenshot_47.png)
+![Версия AAPS установлена](../images/Update_VersionCheck.p)
 
-Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. Bluetooth, cloud upload, connect computer and phone by cable or use email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
+## Устранение неполадок
 
-![Screenshot 48](../images/Installation_Screenshot_48.png)
-
-In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
-
-Select "Allow from this source". After the installation, you can disable it again.
-
-![Installation from unknown sources](../images/Installation_Screenshot_49-50.png)
-
-The last step is to press on the APK file I got via Gmail and install the app. If the APK does not install and you have an older version of AndroidAPS on your phone that was signed with a different key then you will need to uninstall this first, remember to export your settings if so!
-
-Yeah, you got it and can now start with configuring AndroidAPS for your use (CGMS, insulin pump) etc.
-
-## Check AAPS version on phone
-
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
-
-![AAPS version installed](../images/Update_VersionCheck.png)
-
-# Troubleshooting
-
-## Kotlin compiler warning
-
-If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings.
-
-App was build successfully and can be transferred to phone.
-
-![ignore Kotline compiler warning](../images/GIT_WarningIgnore.PNG)
-
-## Could not download… / Offline Work
-
-If you get a failure message like this
-
-![Warning could not download](../images/GIT_Offline1.jpg)
-
-make sure that ‘Offline work’ is disabled.
-
-File -> Settings
-
-![Settings offline work](../images/GIT_Offline2.jpg)
-
-## Uncommitted changes
-
-If you receive failure message like
-
-![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
-
-### Option 1
-
-* In Android Studio select VCS -> GIT -> Reset HEAD ![Reset HEAD](../images/GIT_TerminalCheckOut3.PNG)
-
-### Option 2
-
-* Copy ‘git checkout --’ to clipboard (without quote signs)
-* Switch to Terminal in Android Studio (lower left side of Android Studio window) ![Android Studio Terminal](../images/GIT_TerminalCheckOut1.PNG)
-
-* Paste copied text and press return ![GIT checkout success](../images/GIT_TerminalCheckOut2.jpg)
-
-## App not installed
-
-![phone app note installed](../images/Update_AppNotInstalled.png)
-
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps: 
-  1. [Export settings](../Usage/Objectives#export-import-settings) (in AAPS version already installed on your phone)
-  2. Uninstall AAPS on your phone.
-  3. Enable airplane mode & turn off bluetooth.
-  4. Install new version (“app-full-release.apk”)
-  5. [Выполните импорт настроек](../Usage/Objectives#export-import-settings)
-  6. Turn bluetooth back on and disable airplane mode
-
-## App installed but old version
-
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](…/Installing-AndroidAPS/Update-to-new-version.html#updating-branch-from-github).
-
-## None of the above worked
-
-If non of the above tips helped you might consider building the app from scratch:
-
-1. [Export settings](../Usage/Objectives#export-import-settings) (in AAPS version already installed on your phone)
-2. Have your key password and key store password ready In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
-3.     Note down the path to your key store
-      In Android Studio Build -> Generate Signed APK
-      ![Key store path](../images/KeystorePath.PNG)
-      
-  
-  4. Build app from scratch as described [here](…/Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components). Use existing key and key store.
-4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
-5. [Выполните импорт настроек](../Usage/Objectives#export-import-settings)
-
-## Worst case scenario
-
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
-
-Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
-
-Install Android Studio from scratch as described [here](/Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
+См. отдельную страницу [ устранение неполадок Android Studio ](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).

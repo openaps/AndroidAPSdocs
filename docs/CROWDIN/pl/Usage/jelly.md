@@ -1,10 +1,25 @@
-# Jelly Pro - battery life optimization
+# Jelly Pro
+
+## Advantage/Disadvantage
+
+### Advantages Jelly
+
+* It's really small.
+* Even if you tell people, they might not consider it as a normal smartphone and will except it easier as a exception when phones are normally not allowed.
+
+### Disadvantages Jelly
+
+* Recommended only for experienced loopers (some settings are not recognizable, you have to know from experience with a big Android AAPS phone, how and where what is located. Some AAPS buttons are hard to touch with a lot of feeling, but not with stubby fingers.)
+* Can only be used as LooperPhone. It's better to have a normal smartphone in your pocket. 
+* If you don't treat Jelly like a diva (Always (!) carry it with you!) Jelly shows its bitchy side, disconnects all Bluetooth and sulks until you restart. 
+
+## Jelly Pro - battery life optimization
 
 The following settings and handling advice (use watch for daily operations instead of Jelly smartphone) lead to approx. 35 hours of battery life. An additional battery saving mode is not necessary, rather counterproductive, therefore turn off.
 
 ![Jelly smartphone](../images/jelly_01.jpg)
 
-## First setup
+### First setup
 
 <b><font color="#FF0000">Very important:</b></font> If you don't need Android 8.1 (i.e. to loop with an Accu-Check Combo) stay with android 7.0!
 
@@ -19,7 +34,7 @@ Follow these rules to stay with Andorid 7.0:
 
 ![Jelly settings](../images/jelly_02.jpg)
 
-## Settings
+### Settings
 
 * Use Jelly only for looping.
 * Set up wifi to install xDrip, AAPS and WearOS, otherwise wifi off. 
@@ -46,13 +61,3 @@ Follow these rules to stay with Andorid 7.0:
 * A screenshot can be taken by pressing the quiet button (bottom left) + the an button (right) simultaneously. 
 
 ![Jelly headline](../images/jelly_03.png)
-
-## Advantages Jelly
-
-* It's really small.
-
-## Disadvantages Jelly
-
-* Recommended only for experienced loopers (some settings are not recognizable, you have to know from experience with a big Android AAPS phone, how and where what is located. Some AAPS buttons are hard to touch with a lot of feeling, but not with stubby fingers.)
-* Can only be used as LooperPhone. It's better to have a normal smartphone in your pocket. 
-* If you don't treat Jelly like a diva (Always (!) carry it with you!) Jelly shows its bitchy side, disconnects all Bluetooth and sulks until you restart.

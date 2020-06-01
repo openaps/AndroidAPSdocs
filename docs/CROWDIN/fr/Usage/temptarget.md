@@ -1,27 +1,40 @@
-# Temp-Targets
+# Cibles temporaires
 
-## What are Temp-Targets and where can I set and configure them?
+## Que sont les cibles temporaires et où puis-je les définir et les configurer ?
 
-With “Temp-Targets” (or short TT), you can change your blood glucose target for a certain time period. As these are mostly needed for activity, hypo (treatment carbs) or eating soon, you can configure default ones. To configure these one, you can go to the menu in the right corner on top and go to Preferences-> Other-> Default Temp-Targets. To set “Default-Temp-Targets”, you can press long on your target in the right corner on the top in the overview-tab or in the orange “Carbs” button. To set a “Custom Temp-Target”, you can also do it by long pressing you target or in the “Actions”-tab.
+Avec « Cibles Temporaires » (ou CT), vous pouvez changer votre objectif glycémique pendant une certaine période de temps. Comme cela est surtout nécessaire pour de l'activité, des hypos (traitement de glucides) ou proche d'un repas, vous pouvez configurer des CT par défaut. Pour configurer ces CT, vous pouvez accéder au menu situé dans le coin en haut à droite et aller dans Préférences -> Autres -> Cibles Temporaires par défaut.
 
-## Hypo Temp-Target
+![Définir les cibles temp. par défaut](../images/TempTarget_Default.png)
 
-This can be considered as the most important Temp-Target. There are several reasons for it: 1. Realizing you will go low: Usually, the Loop should handle it, but sometimes you can see better in advance than the loop, so the loop can react faster when it targets a higher blood glucose value. 2. When you eat hypo treatments carbs, your blood glucose will rise very fast. The loop will correct against the rising or even give SMBs if enabled. A "Hypo Temp-Target" can prevent that. 3. (advanced, objective 8): You can enable “High Temp-Targets raises sensitivity” for Temp-Targets of 100mg/dl or 5.5mmol/l or higher in OpenAPS SMB, so AndroidAPS is more sensitive. 4. (advanced, objective 8): You can deactivate “SMB with high temp target”, so that even if you have COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active, AndroidAPS won’t give SMBs while high temp targets are active.
+Pour utiliser une de ces « Cibles temporaires par défault », vous pouvez appuyer longuement sur votre cible dans le coin droit en haut de l'onglet Aperçu (ou Accueil) ou encore utiliser les raccourcis dans le bouton orange « Glucides ». Pour définir manuellement une [ "Cible Temporaire personnalisée" ](../Usage/temptarget#custom-temp-target) (valeur de Gly et/ou durée), utilisez "Personnalisé" après avoir fait un appui long sur votre cible dans le coin en haut à droite ou utilisez le bouton "Cible temp." dans l'onglet "Actions".
 
-Note: if you enter carbs with the carb button and your blood glucose is less then 72mg/dl or 4mmol/l, Hypo TT is automatically enabled.
+![Définir une cible temp.](../images/TempTarget_Set2.png)
 
-## Activity Temp-Target
+## Cible temporaire Hypo
 
-Before and during activity, you might want to have a higher target to prevent getting low. To simplify setting the Temp-Target, you can configure a default "Activity Temp-Target".
+Cela peut être considéré comme la cible temporaire la plus importante. Il y a plusieurs raisons à cela :
 
-Advanced, objective 8: The advantages about “Activity Temp-Target”, is that you can enable “High Temp-Targets raises sensitivity” for Temp-Targets higher or equal 100mg/dl or 5.5mmol/L in OpenAPS SMB. Then AndroidAPS is more sensitive. Some people do instead a profile switch before/while activity TT, but everbody is different. If “SMB with high Temp-Target” is deactivated, AndroidAPS won't use SMBs, even with COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active.
+1. Vous vous rendez compte que vous aller faire une hypo : généralement, la boucle doit le gérer, mais parfois vous pouvez mieux anticiper que la boucle, dans ce cas la boucle réagira plus vite quand une cible est définie avec une valeur de glycémie plus élevée.
+2. Quand vous manger pour traiter une hypo, votre glycémie va monter très rapidement. La boucle va vouloir agir contre cette hausse ou même faire des SMB si c'est activé. Une "Cible temp. Hypo" peut empêcher cela. 
+3. (Avancés, [Objectif 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)) : Vous pouvez activer “Cible temp. haute élève la sensibilité” pour les cibles temp. supérieures ou égales à 100 mg/dl ou 5.5 mmol/l dans OpenAPS SMB, ainsi AndroidAPS est plus sensible.
+4. (Avancés, [Objectif 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)) : Vous pouvez désactiver les “SMB avec cibles temp. hautes”, de sorte que même si vous avez des GA > 0, "SMB avec les cibles temp." ou "SMB en permanence" activés avec l'algorithme OpenAPS SMB activé, AndroidAPS ne délivrera pas de SMB tant qu'une cible temp. haute sera active. 
 
-## Eating soon Temp-Target
+Note: si vous entrez des glucides avec le bouton orange "Glucides" et que votre glycémie est inférieure à 72mg/dl ou 4mmol/l, une CT Hypo est automatiquement activée.
 
-If you know, that you want to eat soon, you can enable this Temp-Target, so there is already more IOB before eating. Especially for those who don’t do prebolusing, it might be a good alternative to already get the blood glucose to a lower target. You can read more about the "Eating soon mode" in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+## Cible temporaire Activité
 
-Advanced, objective 8: If you use OpenAPS SMB and have “Low temptarget lowers sensitivity”, AndroidAPS works a little bit more aggressive. Requirement is a Temp-Target less than 100mg/dl or 5.5mmol/l for this option.
+Avant et pendant une activité, vous souhaiterez peut-être avoir une cible plus élevée pour éviter d'avoir une hypo. Pour simplifier le réglage de la Cible temp., vous pouvez configurer une "Cible temp. Activité" par défaut. Sur la base de la DAI, l'IA et votre expérience, vous pouvez définir la CT avant l'activité. Voir aussi la [section sports dans la FAQ](../Getting-Started/FAQ#sports).
 
-## Custom Temp-Target
+Avancés, [Objectif 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) : Les avantages de la “Cible temps. Activité”, est que vous pouvez activer “Cible temp. haute élève la sensibilité” pour les Cibles temp. supérieures ou égales à 100 mg/dl ou 5.5 mmol/l dans OpenAPS SMB. Alors AndroidAPS est plus sensible. Certaines personnes font un changement de profil avant plutôt qu'une CT pendant l'activité, mais tout le monde est différent. Si les “SMB avec cibles temp. hautes” est désactivé, AndroidAPS n'utilisera pas de SMB, même avec des GA > 0, "SMB avec les cibles temp." ou "SMB en permanence" activés avec l'algorithme OpenAPS SMB activé.
 
-Sometimes, you just want to have a temp target other than the default ones. You can set one by long pressing on the target (range) on the right corner in overview or in the “Action”-Tab.
+## Cible temporaire Repas imminent
+
+Si vous savez que vous voulez manger bientôt, vous pouvez activer cette Cible temp., donc il y aura déjà plus d'IA avant de manger. En particulier pour ceux qui ne font pas de pré-bolus, cela peut être une bonne alternative pour avoir une glycémie basse. Vous pouvez en savoir plus sur le mode "Repas imminent" dans l'article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) ou [ici](https://diyps.org/tag/eating-soon-mode/).
+
+Avancés, [Objectif 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) : Si vous utilisé OpenAPS SMB et que vous avez “Cible temp. basse abaisse la sensibilité”, AndroidAPS sera un peu plus aggressif. Le pré-requis est d'avoir une Cible temp. inférieure à 100 mg/dl ou 5.5 mmol/l pour cette option.
+
+## Cible temporaire Personnalisé
+
+Parfois, vous voulez juste avoir une cible temporaire autre que celles par défaut. Vous pouvez en définir une en appuyant sur la cible en haut à droite dans la vue principale ou dans l'onglet "Actions".
+
+![Définir une cible temp. via l'onglet Action](../images/TempTarget_ActionTab.png)

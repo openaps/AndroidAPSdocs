@@ -1,150 +1,184 @@
-Witamy w dokumentacji systemu Android APS
-==============================================
+Witamy w dokumentacji systemu AndroidAPS
+==================================================
 
-.. note:: 
-   **IMPORTANT SAFETY NOTICE**
+AndroidAPS jest to aplikacja open source przeznaczona dla osób chorujących na cukrzycę typu 1, która zainstalowana w smartfonach z systemem Android. działa jak system sztucznej trzustki (APS). The main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Ponadto co najmniej potrzebujesz obsługiwanej i zatwierdzonej przez FDA/CE pompy insulinowej i systemu ciągłego monitoringu glikemii. 
 
-   The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
+Aplikacja NIE korzysta z samouczącej się sztucznej inteligencji. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons. 
 
-   Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+Aplikacja nie jest dostępna w Google Play - ze względów prawnych musisz ją samodzielnie zbudować bezpośrednio z kodu źródłowego.
 
-.. note:: 
-	**Disclaimer And Warning**
+The main components are:
 
-	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
+.. image:: images/modules-female.png
+  :alt: Składniki
 
-	* Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
+Aby uzyskać więcej informacji, czytaj dalej.
 
-	* All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
-
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_.
-
-
-**What is AndroidAPS?**
-
-AndroidAPS is a app that acts as an artificial pancreas system (APS) on an Android smartphone. What is an artificial pancreas system? It is a software program that aims to do what a living pancreas does: keep blood sugar levels within healthy limits automatically. An APS can't do the job as well as a biological pancreas does, but it can make type 1 diabetes easier to manage using devices that are commercially available and software that is simple and safe. Those devices include a continuous glucose monitor (CGM) to tell AndroidAPS about your blood sugar levels and an insulin pump which AndroidAPS controls to deliver appropriate doses of insulin. The app communicates with those devices via bluetooth. It makes its dosing calculations using an algorithm, or set of rules, developed for another artificial pancreas system, called OpenAPS, which has thousands of users and has accumulated millions of hours of use. 
-
-A note of caution: AndroidAPS is not regulated by any medical authority in any country. Using AndroidAPS is essentially carrying out a medical experiment on yourself. Setting up the system requires determination and technical knowledge. If you don't have the technical know-how at the beginning, you will by the end. All the information you need can be found in these documents, elsewhere online, or from others who have already done it -- you can ask them in Facebook groups or other forums. Many people have successfully built AndroidAPS and are now using it entirely safely, but it is essential that every user:
-
-* Builds the system themselves so that they thoroughly understand how it works
-* Adjusts the settings to suit their own diabetes
-* Maintains and monitors the system to ensure it is working properly
-
-If you're ready for the challenge, please read on. 
-
-**Primary goals behind AndroidAPS:**
-
-* An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (https://openaps.org/reference-design/)
-* An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
-* An app to which users can easily add or remove modules as needed
-* An app with different versions for specific locations and languages.
-* An app which can be used in open- and closed-loop mode
-* An app that is totally transparent: users can input parameters, see results, and make the final decision
-* An app which is independent of particular pump drivers and contains a "virtual pump" so users can safely experiment before using it on themselves 
-* An app closely integrated with Nightscout
-* An app in which the user is in control of safety constraints 
-
-**What you need to get started:**
-
-* An Android smartphone with Android 5.0 or later. See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ to learn which phones work best with AndroidAPS.
-* A continuous clucose monitor (CGM): Dexcom G4/G5/G6, Freestyle Libre, Eversense, Medtronic Guardian, or PocTech
-* An app on the phone to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ or `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
-* `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ itself installed on the phone
-* `Nightscout cgm-remote-monitor <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_ 0.10.2 or later
-* A supported pump: Dana-R or Dana-RS from Sooil, or Accu-Chek Combo or Insight from Roche (unless you are able to build your own driver for another insulin pump)
-
-
-
-Getting Started with AndroidAPS
-----------------
+Pierwsze kroki
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Safety First <./Getting-Started/Safety-first.md>
-   Screenshots <./Getting-Started/Screenshots.md>
-   Phones <./Getting-Started/Phones.md>
-   Pump choices <./Getting-Started/Pump-Choices.md>
-   Possible future pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
-   Sample Setup: Samsung S7, Dana-R, Dexcom G5 and Sony Smartwatch <./Getting-Started/Sample-Setup.md>
-   FAQ for loopers <./Getting-Started/FAQ.md>
-   Glossary <./Getting-Started/Glossary.md>
-  
-How to Install AndroidAPS
-------------
+   Bezpieczeństwo przede wszystkim <./Getting-Started/Safety-first.rst>
+   Co to jest system zamkniętej pętli <./Getting-Started/ClosedLoop.rst>
+   Co to jest system zamkniętej pętli AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   
+   
+Czego potrzebuję 
+--------------------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   Moduł <./Module/module.rst>
+   Sample Setup <./Getting-Started/Sample-Setup.md>
+
+   
+Jak zainstalować AndroidAPS
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   Building the APK <./Installing-AndroidAPS/Building-APK.md>
-   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
-   Release notes <./Installing-AndroidAPS/Releasenotes.md>
-   Dev branch <./Installing-AndroidAPS/Dev_branch.md>
-   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
+   Tworzenie pakietu APK <./Installing-AndroidAPS/Building-APK.md>
+   Aktualizacja do nowej wersji lub innego branch <./Installing-AndroidAPS/Update-to-new-version.md>
+   Install git <./Installing-AndroidAPS/git-install.rst>
+   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Release notes <./Installing-AndroidAPS/Releasenotes.rst>
+   Wersja developerska <./Installing-AndroidAPS/Dev_branch.md>
    
-Configuration 
----------------
+   
+Ustawienia składników systemu
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Config Builder <./Configuration/Config-Builder.md>
-   BG Source <./Configuration/BG-Source.md>
-   Dexcom G6 hints <./Configuration/Dexcom.md>
-   Dana-R pump <./Configuration/DanaR-Insulin-Pump.md>
-   Dana-RS pump <./Configuration/DanaRS-Insulin-Pump.md>
-   Accu-Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
-   Accu-Chek Insight pump <./Configuration/Accu-Chek-Insight-Pump.md>
-   Watchfaces <./Configuration/Watchfaces.md>
-   Preferences <./Configuration/Preferences.md>
-   Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
-   xDrip+ settings <./Configuration/xdrip.md>
+   CGM/FGM <./Configuration/BG-Source.rst>
+   Ustawienia xDrip <./Configuration/xdrip.md>
+   Pompy <./Hardware/pumps.rst>
+   Telefony <./Hardware/Phoneconfig.rst>
+   Konfiguracja Nightscout <./Installing-AndroidAPS/Nightscout.md>
+   Zegarki/Smartwatche  <./Hardware/Smartwatch.rst>
    
-Użytkowanie
-------------
+
+Konfiguracja 
+--------------------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   Narzędzie do konfiguracji <./Configuration/Config-Builder.md>
+   Ustawienia <./Configuration/Preferences.md>
+   
+   
+Użytkowanie AndroidAPS
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
     
-   Objectives <./Usage/Objectives.md>
-   OpenAPS features <./Usage/Open-APS-features.md>
-   Profile switch <./Usage/Profiles.md>
-   Temp-targets <./Usage/temptarget.md>
-   SMS commands <./Usage/SMS-Commands.md>
-   Extended Carbs <./Usage/Extended-Carbs.md>
-   Crossing timezones with pumps <./Usage/Timezone-traveling.md>
-   Accessing logfiles <./Usage/Accessing-logfiles.md>
-   Smoothing blood glucose data <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
-   Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
-   Troubleshooting NSClient <./Usage/Troubleshooting-NSClient.md>
-   Android auto <./Usage/Android-auto.md>
-   Huawei phones special configuration <./Usage/huawei.md>
-   Jelly Pro - battery life optimization <./Usage/jelly.md>
-   Automation <./Usage/automation.md>
+   Zrzuty ekranów AndroidAPS <./Getting-Started/Screenshots.md>
+   Objectives <./Usage/Objectives.rst>
+   Funkcje OpenAPS <./Usage/Open-APS-features.md>   
+   COB calculation <./Usage/COB-calculation.rst>
+   Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
+   Zmiana profilu <./Usage/Profiles.md>
+   Cele tymczasowe TT <./Usage/temptarget.md>   
+   Extended carbs <./Usage/Extended-Carbs.rst>
+   Automatyzacja <./Usage/Automation.rst>
+   Careportal (discontinued) <./Usage/CPbefore26.rst>
+   Automatyzacja z aplikacjami innych firm <./Usage/automationwithapp.md>
+   Android auto <./Usage/Android-auto.md>  
+ 
+Porady ogólne 
+--------------------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   Przekraczania stref czasowych z pompami <./Usage/Timezone-traveling.md>
+   Dostęp do pliku logu <./Usage/Accessing-logfiles.md>
+   Wskazówki dotyczące podstawowego użytkowania Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
+   Eksport/Import wstawień <./Usage/ExportImportSettings.rst>
+   
 
-Where to go for help 
-------------
+AndroidAPS dla dzieci
+--------------------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   Zdalne monitorowanie <./Children/Children.rst>
+   SMS commands <./Children/SMS-Commands.rst>
+   
+
+Rozwiązywanie problemów
+--------------------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+  
+   Troubleshooting <./Usage/troubleshooting.rst>
+   
+
+FAQ 
+--------------------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+  
+   FAQ <./Getting-Started/FAQ.md>
+
+   
+Słowniczek pojęć
+--------------------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+  
+   Słowniczek pojęć <./Getting-Started/Glossary.md>
+  
+
+Gdzie szukać pomocy 
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
-   Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   Przydatne zasoby do przeczytania zanim rozpoczniesz <./Where-To-Go-For-Help/Background-reading.md>
+   Gdzie można znaleźć pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 
+Dla lekarzy specjalistów
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Resources/Reference
             
-   Resources <./Resources/index>
-   For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
+   Dla lekarzy specjalistów <./Resources/clinician-guide-to-AndroidAPS>
 
-How to help
-------------
+
+Jak pomóc
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   How to help <./Getting-Started/How-can-I-help.md>
-   How to translate the app <./translations.md>
-   How to edit the wiki <./make-a-PR>
+   Jak pomóc <./Getting-Started/How-can-I-help.md>
+   How to translate the app and docs <./translations.md>
+   How to edit the docs <./make-a-PR>
+
+
+.. notatka:: 
+	** Wyłączenie odpowiedzialności i ostrzeżenie **
+
+	* Wszystkie informacje, przemyślenia i kod opisane tutaj są przeznaczone wyłącznie do celów informacyjnych i edukacyjnych. Nightscout obecnie nie podejmuje prób zachowania zgodności z zasadami ochrony prywatności HIPAA. Korzystasz z Nightscout i AndroidAPS na własne ryzyko i nie używaj informacji ani kodu do podejmowania decyzji medycznych.
+
+	* Korzystanie z kodu pobranego ze strony github.com nie jest objęte żadną gwarancją ani formalnym wsparciem. Proszę zapoznać się LICENCJA w repozytorium aby poznać szczegóły.
+
+	* Wszystkie nazwy produktów i firm, znaki handlowe, znaki serwisowe, zastrzeżone znaki handlowe i zastrzeżone znaki serwisowe są własnością ich odpowiednich właścicieli. Ich wykorzystanie służy celom informacyjnym i nie oznacza żadnego powiązania z nimi ani poparcia.
+
+	Uwaga - ten projekt nie jest powiązany i nie jest popierany przez: `SOOIL <http://www.sooil.com/eng/>` _, `Dexcom <http://www.dexcom.com/>` _, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>` _ lub `Medtronic <http://www.medtronic.com/>` _

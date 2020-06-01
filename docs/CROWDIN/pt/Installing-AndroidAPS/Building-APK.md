@@ -1,256 +1,266 @@
 # Building the APK
 
+## Build yourself instead of download
+
+**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+
+## ## Important notes
+
+* Please use **[Android Studio Version 3.6.1](https://developer.android.com/studio/)** or newer to build the apk.
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.6.1.
+
+**Configuration on demand** is not supported by the current version of the Android Gradle plugin!
+
+If your build fails with an error regarding "on demand configuration" you can do the following:
+
+* Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
+* In the left pane, click Build, Execution, Deployment > Compiler.
+* Uncheck the Configure on demand checkbox.
+* Click Apply or OK.
+
 * * *
-
-***Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:*
-
-     * *Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).*
-     * *In the left pane, click Build, Execution, Deployment > Compiler.*
-     * *Uncheck the Configure on demand checkbox.*
-    
-
-## * *Click Apply or OK.*
 
 ### This article is divided into two parts.
 
 * In the overview part there is an explanation on what steps are necessary to build the APK file.
 * In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
 
-## Vista Geral
+## Visão Geral
 
 In general, the steps necessary to build the APK file:
 
-* Instalar Git
-* Instalar e configurar o Android Studio.
-* Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
-* Open the cloned project in Android Studio as active project.
-* Build the signed APK.
-* Transfer the signed APK to your smartphone.
+1. [Instalar Git](../Installing-AndroidAPS/git-install.rst)
+2. [Instalar o Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
+3. [Set git path in Android Studio preferences](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
+4. [Download AndroidAPS code](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
+5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
+6. [Build the app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generate signed apk)
+7. [Transfer apk file to your phone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+8. [Identify receiver if using xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
 
 ## Step by step walkthrough
 
 Detailed description of the steps necessary to build the APK file.
 
+## Install git (if you don't have it)
+
+Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
+
 ## Instalar o Android Studio
 
-* Instalar Git 
-  * [Windows](https://gitforwindows.org/)
-  * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
-  * Linux - basta instalar um pacote git através do gerenciador de pacote da sua distribuição
-* Install [Android Studio](https://developer.android.com/studio/install.html).
-* Setup Android Studio during first start
+The following screenshots have been taken from Android Studio Version 3.6.1. Your screen might look a bit different if you use a newer version of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
+
+One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
+
+Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
 
 Select "Do not import settings" as you have not used it before.
 
-![Captura de ecrã 1](../images/Installation_Screenshot_01.png)
+![Do not import settings](../images/AndroidStudio361_01.png)
 
-Click "Next".
+Decide whether you want to share data with Google or not.
 
-![Captura de ecrã 2](../images/Installation_Screenshot_02.png)
+![Share data with Google](../images/AndroidStudio361_02.png)
+
+On the following screen click "Next".
+
+![Welcome screen](../images/AndroidStudio361_03.png)
 
 Select "Standard" installation and click "Next".
 
-![Captura de ecrã 3](../images/Installation_Screenshot_03.png)
+![Standard installation](../images/AndroidStudio361_04.png)
 
-Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
+Select the theme for the user interface you like. (In this manual we used "Light".) Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
 
-![Captura de ecrã 4](../images/Installation_Screenshot_04.png)
+![UI color scheme](../images/AndroidStudio361_05.png)
 
-Click "Next" on the "Verify Settings" dialog.
+Click "Finish" on the "Verify Settings" dialog.
 
-![Captura de ecrã 5](../images/Installation_Screenshot_05.png)
+![Verify settings](../images/AndroidStudio361_06.png)
 
-The Android emulator (to emulate the smartphone on your PC or Mac) is not used to build the APK. You can click "Finish" to finish the installation and read the documentation later on demand.
+Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
 
-![Captura de ecrã 6](../images/Installation_Screenshot_06.png)
+![Downloading components](../images/AndroidStudio361_07.png)
 
-Android Studio is downloading a lot of software components it uses. You can click on the "Show Details" button to the what happens but that's not important at all.
+## Set git path in preferences
 
-![Captura de ecrã 7](../images/Installation_Screenshot_07.png)
+Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer.
 
-![Captura de ecrã 8](../images/Installation_Screenshot_08.png)
+On the Android Studio welcome screen click the small triangle (1. in next screenshot) and select "Settings" (2.).
 
-After the downloads are completed click the "Finish" button.
+![Android Studio settings from welcome screen](../images/AndroidStudio361_08.png)
 
-![Captura de ecrã 9](../images/Installation_Screenshot_09.png)
+### Windows
 
-* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
+* Click the small triangle next to Version Control (1.) to open the sub-menu.
+* Click Git (2.).
+* Make sure update method "Merge" (3.) is selected.
+* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
 
-## Download code and additional components
+![Android Studio settings](../images/AndroidStudio361_09.png)
 
-* Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
+* If automatic setting is successful git version will be displayed.
+* Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
 
-![Captura de ecrã 10](../images/Installation_Screenshot_10.png) ![Version_Control_Git](../images/Version_Control_Git.png)
+![Automatic git installation succeeded](../images/AndroidStudio361_10.png)
 
-Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") and click "clone".
+* In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
+* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where it can be found. You are looking for git.exe located in \bin\ folder.
+* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
+* Close settings window by clicking "OK" button (5.).
 
-![Captura de ecrã 13](../images/Installation_Screenshot_13.png)
+![Automatic git installation failed](../images/AndroidStudio361_11.png)
 
-Android Studio will start cloning. Don't click "Background" as it goes fast and makes things more complicated at the moment.
+* **Reboot your computer to update system environment.**
 
-![Captura de ecrã 14](../images/Installation_Screenshot_14.png)
+### Mac
 
-Finish the checkout from version control with opening the project by clicking "Yes".
+* Any git version should work. For example <https://git-scm.com/download/mac>.
+* Use homebrew to install git: ```$ brew install git```.
+* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
 
-![Captura de ecrã 15](../images/Installation_Screenshot_15.png)
+## Download AndroidAPS code
 
-Use the standard "default gradle wrapper" and click "OK".
+* **If you haven't already rebooted your computer after setting git path in preferences do it now. System environment must be updated.**
+* On the Android Studio welcome screen click the small triangle right of "Check out project from version control" (1.).
+* Select "Git" (2.).
 
-![Captura de ecrã 16](../images/Installation_Screenshot_16.png)
+![Check out project from version control from welcome screen](../images/AndroidStudio361_12.png)
 
-Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
+* If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.) > Git (4.).
 
-![Captura de ecrã 17](../images/Installation_Screenshot_17.png)
+![Check out project from version control within Android Studio](../images/AndroidStudio361_13.png)
 
-* Excellent, you have your own copy of the source code and are ready to start the build.
-* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
+* Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") (1.).
+* Choose the directory where you want to save the cloned code.
+* Click button "Test" (2.).
+* If test cannot be completed successfully check URL, correct and click "Test" again.
+* If URL is entered correctly "Connection successful" (3.) will be shown.
+* Click button "Clone" (4.).
 
-Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
+![Clone repository](../images/AndroidStudio361_14.png)
 
-![Captura de ecrã 18](../images/Installation_Screenshot_18.png)
+* Do not click "Background" while repository is cloned!
 
-Accept the license agreement by selecting "Accept" and clicking "Next".
+![Clone repository - no background action](../images/AndroidStudio361_15.png)
 
-![Captura de ecrã 19](../images/Installation_Screenshot_19.png)
+* After repository is cloned successfully open your local copy by clicking "Yes".
 
-As it is said in the dialog please wait until the download is finished.
+![Open repository](../images/AndroidStudio361_16.png)
 
-![Captura de ecrã 20](../images/Installation_Screenshot_20.png)
+* In the lower right corner you will see the information that Android Studio is running background tasks.
 
-Now it's finished. Please click "Finish".
+![Background tasks](../images/AndroidStudio361_17.png)
 
-![Captura de ecrã 21](../images/Installation_Screenshot_21.png)
+* Grant access if your firewall is asking for permission.
 
-Aaaahhh, next error. But Android Studio suggests a similar solution. Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
+![Firewall permission java](../images/AndroidStudio361_18.png)
 
-![Captura de ecrã 22](../images/Installation_Screenshot_22.png)
+* Once the background tasks are finished you will probably see the following error message:
 
-As it is said in the dialog please wait until the download is finished.
+![SDK licence](../images/AndroidStudio361_19.png)
 
-![Captura de ecrã 23](../images/Installation_Screenshot_23.png)
+## Download Android SDK
 
-Now it's finished. Please click "Finish".
+* Click File > Settings.
 
-![Captura de ecrã 24](../images/Installation_Screenshot_24.png)
+![Open settings](../images/AndroidStudio361_20.png)
 
-And another error to handle as Android Studio needs to download again a missing platform. Click "Install missing platform(s) and sync project".
+* Click the small triangle next to Appearance & Behaviour (1.).
+* Click the small triangle next to System Settings (2.) and select Android SDK (3.)
+* Check the box left of "Android 9.0 (Pie)" (4.) (API Level 28).
 
-![Captura de ecrã 25](../images/Installation_Screenshot_25.png)
+![SDK settings](../images/AndroidStudio361_21.png)
 
-As it is said in the dialog please wait until the download is finished.
+* Confirm changes by clicking OK.
 
-![Captura de ecrã 26](../images/Installation_Screenshot_26.png)
+![Confirm SDK changes](../images/AndroidStudio361_22.png)
 
-Now it's finished. Please click "Finish".
+* Accept licence agreement (1.) and click "Next" (2.).
 
-![Captura de ecrã 27](../images/Installation_Screenshot_27.png)
+![Accept SDK licence](../images/AndroidStudio361_23.png)
 
-Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
+* Wait until installation is finished.
 
-![Captura de ecrã 28](../images/Installation_Screenshot_28.png)
+![Wait during SDK installation](../images/AndroidStudio361_24.png)
 
-As it is said in the dialog please wait until the download is finished.
+* When SDK installation is completed the "Finish" button will turn blue. Click this button.
 
-![Captura de ecrã 29](../images/Installation_Screenshot_29.png)
+![Finish SDK installation](../images/AndroidStudio361_25.png)
 
-Now it's finished. Please click "Finish".
+* Android Studio might recommend to update the gradle system. **Never update gradle!** This might lead to difficulties!
+* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1.) and in the dialog box on "Don't remind me again for this project" (2.).
 
-![Captura de ecrã 30](../images/Installation_Screenshot_30.png)
-
-Yeah, the error messages are gone and the first gradle build is runing. Maybe it's time to drink some water?
-
-![Captura de ecrã 31](../images/Installation_Screenshot_31.png)
-
-<!--- Android Studio recommends we now update the gradle system to version 4.4. If you made this build for an AndroidAPS version before the release of at least a release candidate(RC) of version 2.0 do not follow this recommendation. Otherwise, the build will fail. The gradle system is a tool which Android Studio uses to control the build process. For AndroidAPS there is no disadvantage to using the old gradle version. The APK file in the end is not different. If you build a APK for version 2 of AndroidAPS feel free to upgrade the gradle system to version 4.4. ---> Android Studio recommends to update the gradle system. 
-
-**Never update gradle!** This might lead to difficulties!
-
-Please click "Don't remind me again for this project".
-
-![Screenshot 32](../images/AS_NoGradleUpdate.png)
-
-The build is running again.
-
-![Screenshot 33](../images/Installation_Screenshot_33.png)
-
-Yeah, the first build is successful but we are not finished.
-
-![Screenshot 34](../images/Installation_Screenshot_34.png)
+![No cradle update](../images/AndroidStudio361_26.png)
 
 ## Generate signed APK
 
-<!--- Do not forget to copy to update-to-new-version.md / But keystore path must be modified --->
+Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
-In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)  
-Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
+* Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
 
-![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
+![Build apk](../images/AndroidStudio361_27.png)
 
-In the following dialogue box select "APK" instead of "Android App Bundle" and click button "Next".
+* Select "APK" (1.) instead of "Android App Bundle" and click "Next" (2.).
 
-![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
+![APK instead of bundle](../images/AndroidStudio361_28.png)
 
-Select "app" and click "Next".
+* Make sure that module is set to "app" (1.).
+* Click "Create new..." (2.) to start creating your key store.
+    
+    A key store in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords.
 
-<!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used --->
+![Create key store](../images/AndroidStudio361_29.png)
 
-![Screenshot 40](../images/Installation_Screenshot_40.png)
+* Click the folder symbol (1.) to select your key store path. 
+* Select the path where your key store shall be saved (2.). **Do not save in same folder as project. You must use a different directory!** One option might be your home folder.
+* Type a file name for your key store (3.).
+* Click "OK" (4.).
+* Passwords for key store and key do not have to be very sophisticated. Make sure to remember those or make a note in a safe place. In case you will not remember your passwords in the future you see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Enter (5.) and confirm (6.) the password for your key store.
+* Do the same for your key (7. + 8.).
+* Validity (9.) is 25 years by default. You do not have to change the default value.
+* First and last name must be entered (10.). All other information is optional.
+* Click "OK" (11.) when you are done.
 
-Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
+![Key store path](../images/AndroidStudio361_30.png)
 
-![Screenshot 41](../images/Installation_Screenshot_41.png)
+* Make sure the box to remember passwords is checked (1.). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AndroidAPS version).
+* Click "Next" (2.).
 
-* Fill in the information for the next dialog. 
-  * Key store path: is the path to the keystore file
-  * The password fields below are for the keystore to double check for typing errors.
-  * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
-  * The password fields below the key are for the key itself. As always to double check for typing errors.
-  * You can let the validity at the default of 25 years.
-  * You only have to fill out first name and last name but feel free to complete the rest of information. Then click "OK".
+![Remember passwords](../images/AndroidStudio361_31.png)
 
-![Screenshot 42](../images/Installation_Screenshot_42.png)
+* Select build variant "fullRelease" (1.). 
+* Check boxes V1 and V2 for signature versions (2.).
+* Click "Finish". (3.)
 
-Fill in the information of the last dialog in this dialog and click "Next".
+![Finish build](../images/AndroidStudio361_32.png)
 
-![Screenshot 43](../images/Installation_Screenshot_43.png)
+* Android Studio will display the information "APK(s) generated successfully..." after build is finished.
+* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* Easiest way to find the apk is to click on "Event log".
 
-<!--- End modification here ---> Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
+![Build successfully - event log](../images/AndroidStudio361_33.png)
 
-* 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
-* Select the build type you want to build. 
-  * full (i.e. recommendations automatically enacted in closed looping)
-  * openloop (i.e. recommendations given to user to manually enact)
-  * pumpcontrol (i.e. remote control for pump, no looping)
-  * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
+* In the event log section click "locate".
 
-![Screenshot 44](../images/Installation_Screenshot_44.png)
+![Event log - locate apk](../images/AndroidStudio361_34.png)
 
-In the event log you see that the Signed APK was generated successfully.
+* app-full-release.apk is the file you are looking for.
 
-![Screenshot 45](../images/Installation_Screenshot_45.png)
-
-Click the "locate" link in the event log.
-
-![Screenshot 46](../images/Installation_Screenshot_46.png)
+![File location apk](../images/AndroidStudio361_35.png)
 
 ## Transfer APK to smartphone
 
-<!--- Do not forget to copy to update-to-new-version.md --->
+Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
-A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
-![Screenshot 47](../images/Installation_Screenshot_47.png)
+## Identify receiver if using xDrip+
 
-Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. Bluetooth, cloud upload, connect computer and phone by cable or use email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
+[See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
-![Screenshot 48](../images/Installation_Screenshot_48.png)
+## Resolução de Problemas
 
-In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
-
-Select "Allow from this source". After the installation, you can disable it again.
-
-![Installation from unknown sources](../images/Installation_Screenshot_49-50.png)
-
-The last step is to press on the APK file I got via Gmail and install the app. If the APK does not install and you have an older version of AndroidAPS on your phone that was signed with a different key then you will need to uninstall this first, remember to export your settings if so!
-
-Yeah, you got it and can now start with configuring AndroidAPS for your use (CGMS, insulin pump) etc.
+See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).

@@ -1,19 +1,19 @@
-# Smoothing blood glucose data
+# Εξομάλυνση των δεδομένων γλυκόζης στο αίμα
 
-AAPS works best when the blood glucose data it receives is smooth and consistent. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
+Εάν τα δεδομένα BG είναι μεταβλητά / θορυβώδη, το AAPS μπορεί να προκαλέσει λανθασμένη δόση ινσουλίνης με αποτέλεσμα την υψηλή ή χαμηλή BG. Για το λόγο αυτό, είναι σημαντικό να απενεργοποιήσετε το κύκλωμα μέχρι να επιλυθεί το πρόβλημα. Ανάλογα με το CGM σας, τέτοια ζητήματα μπορεί να οφείλονται σε προβλήματα διαμόρφωσης ή προβλημάτων αισθητήρων / ιστοτόπων του CGM. You may need to replace your CGM sensor to resolve this. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
 
-## Dexcom G5 App (patched)
+## Εφαρμογή Dexcom G5 (patched)
 
-When using Dexcom G5 App (patched) your BG data is smooth and consistent. There are no restrictions in using SMB.
+Όταν χρησιμοποιείτε το Dexcom G5 (patched) τα δεδομένα BG σας είναι ομαλά και συνεπή. Δεν υπάρχουν περιορισμοί στη χρήση του SMB.
 
-## xDrip+ with Dexcom G5
+## xDrip+ με Dexcom G5
 
-Smooth enough data is only delivered if you use xDrip G5 'OB1 collector in native mode'.
+Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
-## xDrip+ with Freestyle Libre
+## xDrip+ με Freestyle Libre
 
-When using xDrip+ as your data source for Freestyle Libre values until now you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB because the BG values are not smooth enough. Except this, there are a couple of things you can do to help reduce noise in the data.
+Όταν χρησιμοποιείτε το xDrip + ως πηγή δεδομένων για τις τιμές Freestyle Libre μέχρι τώρα δεν μπορείτε να ενεργοποιήσετε την επιλογή "Ενεργοποίηση SMB πάντα" και "Ενεργοποίηση SMB μετά από υδατάνθρακες" στο SMB, επειδή οι τιμές BG δεν είναι αρκετά ομαλές. Εκτός από αυτό, υπάρχουν μερικά πράγματα που μπορείτε να κάνετε για να μειώσετε το θόρυβο στα δεδομένα.
 
-**Smooth Sensor Noise.** In xDrip+ Settings > xDrip+ Display Settings ensure that Smooth Sensor Noise is turned on. This attempts to apply smoothing to noisy data.
+** Ομαλός θόρυβος αισθητήρα. ** Στην xDrip + Ρυθμίσεις> xDrip + Ρυθμίσεις οθόνης βεβαιωθείτε ότι ο Smooth Sensor Noise είναι ενεργοποιημένος. Αυτό προσπαθεί να εφαρμόσει εξομάλυνση στα θορυβώδη δεδομένα.
 
-**Smooth Sensor Noise (Ultrasensitive).** If you are still seeing noisy data in xDrip+ you can apply more aggressive smoothing using the Smooth Sensor Noise (Ultrasensitive) setting. This will attempt to apply smoothing even on very low levels of detected noise. To do this, first [enable engineering mode in xDrip+](../Enabling-Engineering-Mode-in-xDrip.md). Then navigate to Settings > xDrip+ Display Settings and turn on Smooth Sensor Noise (Ultrasensitive).
+** Ο θόρυβος του Smooth Sensor (Υπερευαισθησία). ** Αν εξακολουθείτε να βλέπετε θορυβώδη δεδομένα στο xDrip +, μπορείτε να εφαρμόσετε πιο επιθετική εξομάλυνση χρησιμοποιώντας τη ρύθμιση Smooth Sensor Noise (Υπερευαισθησία). Αυτό θα προσπαθήσει να εφαρμόσει εξομάλυνση ακόμη και σε πολύ χαμηλά επίπεδα ανιχνευμένου θορύβου. Για να το κάνετε αυτό, πρώτα [ ενεργοποιήστε τη λειτουργία μηχανικής στο xDrip (enable engineering mode) ](https://github.com/MilosKozak/AndroidAPS/wiki/Enabling-Engineering-Mode-in-xDrip). Στη συνέχεια, μεταβείτε στις Ρυθμίσεις> xDrip + Ρυθμίσεις οθόνης και ενεργοποιήστε τον Smooth Sensor Noise (Υπερευαισθησία).

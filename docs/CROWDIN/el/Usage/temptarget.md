@@ -1,27 +1,40 @@
-# Temp-Targets
+# Στόχοι ρυθμού
 
-## What are Temp-Targets and where can I set and configure them?
+## Τι είναι οι Στόχοι ρυθμού και πού μπορώ να τα ορίσω και να τα διαμορφώσω;
 
-With “Temp-Targets” (or short TT), you can change your blood glucose target for a certain time period. As these are mostly needed for activity, hypo (treatment carbs) or eating soon, you can configure default ones. To configure these one, you can go to the menu in the right corner on top and go to Preferences-> Other-> Default Temp-Targets. To set “Default-Temp-Targets”, you can press long on your target in the right corner on the top in the overview-tab or in the orange “Carbs” button. To set a “Custom Temp-Target”, you can also do it by long pressing you target or in the “Actions”-tab.
+Με το "Στόχοι ρυθμού" (ή το σύντομο ΣΡ), μπορείτε να αλλάξετε τον στόχο γλυκόζης αίματος για μια συγκεκριμένη χρονική περίοδο. Καθώς αυτά απαιτούνται ως επί το πλείστον για δραστηριότητα, υπογλυκαιμίας (Θεραπεία υδατανθράκων) ή τρώγοντας σύντομα, μπορείτε να διαμορφώσετε τα προεπιλεγμένα. Για να τις ρυθμίσετε, μπορείτε να μεταβείτε στο μενού στη δεξιά γωνία της κορυφής και να μεταβείτε στις Προτιμήσεις-> Άλλο-> Προεπιλεγμένοι στόχοι-στόχοι.
 
-## Hypo Temp-Target
+![Ορίστε προεπιλεγμένους προσωρινούς στόχους](../images/TempTarget_Default.png)
 
-This can be considered as the most important Temp-Target. There are several reasons for it: 1. Realizing you will go low: Usually, the Loop should handle it, but sometimes you can see better in advance than the loop, so the loop can react faster when it targets a higher blood glucose value. 2. When you eat hypo treatments carbs, your blood glucose will rise very fast. The loop will correct against the rising or even give SMBs if enabled. A "Hypo Temp-Target" can prevent that. 3. (advanced, objective 8): You can enable “High Temp-Targets raises sensitivity” for Temp-Targets of 100mg/dl or 5.5mmol/l or higher in OpenAPS SMB, so AndroidAPS is more sensitive. 4. (advanced, objective 8): You can deactivate “SMB with high temp target”, so that even if you have COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active, AndroidAPS won’t give SMBs while high temp targets are active.
+Για να ορίσετε "Προεπιλεγμένες τιμές-Προσωρινοί-Στόχοι", μπορείτε να πατήσετε παρατεταμένα τον στόχο σας στη δεξιά γωνία στην κορυφή της καρτέλας επισκόπησης ή στο πορτοκαλί κουμπί "Υδατάνθρακες". Για να ορίσετε χειροκίνητα ένα [ "προσαρμοσμένο προσωρινό στόχο" ](../Usage/temptarget#custom-temp-target) (τιμή BG ή / και διάρκεια), χρησιμοποιήστε το κουμπί "Προσαρμογή" μετά από παρατεταμένο πάτημα στο στόχο σας στην πάνω δεξιά γωνία ή χρησιμοποιήστε το κουμπί "Προσωρινός στόχος" "Ενέργειες" -tab.
 
-Note: if you enter carbs with the carb button and your blood glucose is less then 72mg/dl or 4mmol/l, Hypo TT is automatically enabled.
+![Ορίστε προσωρινό στόχο](../images/TempTarget_Set2.png)
 
-## Activity Temp-Target
+## Υπογλυκαιμικός Ρυθμός-Στόχος
 
-Before and during activity, you might want to have a higher target to prevent getting low. To simplify setting the Temp-Target, you can configure a default "Activity Temp-Target".
+Αυτό μπορεί να θεωρηθεί ως ο πιο σημαντικός Ρυθμός -Στόχος. There are several reasons for it:
 
-Advanced, objective 8: The advantages about “Activity Temp-Target”, is that you can enable “High Temp-Targets raises sensitivity” for Temp-Targets higher or equal 100mg/dl or 5.5mmol/L in OpenAPS SMB. Then AndroidAPS is more sensitive. Some people do instead a profile switch before/while activity TT, but everbody is different. If “SMB with high Temp-Target” is deactivated, AndroidAPS won't use SMBs, even with COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active.
+1. Realizing you will go low: Usually, the Loop should handle it, but sometimes you can see better in advance than the loop, so the loop can react faster when it targets a higher blood glucose value.
+2. When you eat hypo treatments carbs, your blood glucose will rise very fast. The loop will correct against the rising or even give SMBs if enabled. A "Hypo Temp-Target" can prevent that. 
+3. (advanced, [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)): You can enable “High Temp-Targets raises sensitivity” for Temp-Targets of 100mg/dl or 5.5mmol/l or higher in OpenAPS SMB, so AndroidAPS is more sensitive.
+4. (advanced, [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)): You can deactivate “SMB with high temp target”, so that even if you have COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active, AndroidAPS won’t give SMBs while high temp targets are active. 
 
-## Eating soon Temp-Target
+Σημείωση: Εάν εισαγάγετε υδατάνθρακες με το κουμπί υδατάνθρακες και η γλυκόζη του αίματός σας είναι μικρότερη από 72mg / dl ή 4mmol / l, ο Υπογλυκαιμικός Ρυθμός-Στόχος ενεργοποιείται αυτόματα.
 
-If you know, that you want to eat soon, you can enable this Temp-Target, so there is already more IOB before eating. Especially for those who don’t do prebolusing, it might be a good alternative to already get the blood glucose to a lower target. You can read more about the "Eating soon mode" in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+## Δραστηριότητα Ρυθμού-Στόχου
 
-Advanced, objective 8: If you use OpenAPS SMB and have “Low temptarget lowers sensitivity”, AndroidAPS works a little bit more aggressive. Requirement is a Temp-Target less than 100mg/dl or 5.5mmol/l for this option.
+Πριν και κατά τη διάρκεια της δραστηριότητας, ίσως θελήσετε να έχετε έναν υψηλότερο στόχο για να αποφύγετε το χαμηλό σάκχαρο. Για να απλοποιήσετε τη ρύθμιση του Ρυθμού-Στόχου, μπορείτε να διαμορφώσετε μια προεπιλεγμένη "Δραστηριότητα Ρυθμού-Στόχου". Based on DIA, IOB and your experience you might want to set TT prior to activity. See also [sports section in FAQ](../Getting-Started/FAQ#sports).
 
-## Custom Temp-Target
+Advanced, [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): The advantages about “Activity Temp-Target”, is that you can enable “High Temp-Targets raises sensitivity” for Temp-Targets higher or equal 100mg/dl or 5.5mmol/L in OpenAPS SMB. Στη συνέχεια, το AndroidAPS είναι πιο ευαίσθητο. Μερικοί άνθρωποι κάνουν αντ 'αυτού μια αλλαγή προφίλ πριν / παράλληλα με την δραστηριότητα ΡΣ, αλλά όλοι είναι διαφορετικοί. Εάν το "SMB με υψηλό Ρυθμού-Στόχου" είναι απενεργοποιημένο, το AndroidAPS δεν θα χρησιμοποιήσει SMB, ακόμη και με COB> 0, "SMB με Ρυθμού-Στόχου" ή "SMB πάντα" ενεργοποιημένο και OpenAPS SMB ενεργό.
 
-Sometimes, you just want to have a temp target other than the default ones. You can set one by long pressing on the target (range) on the right corner in overview or in the “Action”-Tab.
+## Τρώγοντας νωρίς Ρυθμός-Στόχος
+
+Αν γνωρίζετε ότι θέλετε να φάτε σύντομα, μπορείτε να ενεργοποιήσετε αυτό το Ρυθμός-Στόχος, οπότε υπάρχει ήδη περισσότερο IOB πριν από το φαγητό. Ειδικά για όσους δεν κάνουν προληπτική χρήση bolus, μπορεί να είναι μια καλή εναλλακτική λύση για να έχετε ήδη τη γλυκόζη του αίματος σε χαμηλότερο στόχο. Μπορείτε να διαβάσετε περισσότερα σχετικά με τη λειτουργία πρόωρης κατανάλωσης φαγητού στο άρθρο [ «Πώς να κάνετε» να φάτε σύντομα «λειτουργία» ](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) ή [ εδώ ](https://diyps.org/tag/eating-soon-mode/).
+
+Advanced, [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): If you use OpenAPS SMB and have “Low temptarget lowers sensitivity”, AndroidAPS works a little bit more aggressive. Η απαίτηση είναι ο Ρυθμός-Στόχος να είναι μικρότερος από 100mg / dl ή 5.5mmol / l για αυτή την επιλογή.
+
+## Διαμορφόμενος Ρυθμός-Στόχος
+
+Μερικές φορές, θέλετε απλώς να έχετε έναν στόχο ρυθμό διαφορετικό από τους προεπιλεγμένους. Μπορείτε να ορίσετε ένα πατώντας μακροπρόθεσμα τον στόχο (εύρος) στη δεξιά γωνία της επισκόπησης ή στο κουμπί "Δράση".
+
+![Ορίστε ρυθμό στόχου μέσω της καρτέλας Δράσης](../images/TempTarget_ActionTab.png)

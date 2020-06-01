@@ -2,6 +2,8 @@
 
 *Deze instructies zijn voor het instellen van de app en pomp, en gelden voor een DanaRS uit 2017 of jonger. Als je een oudere pomp hebt, ga dan naar de instructies voor de [DanaR insulinepomp](./DanaR-Insulin-Pump).*
 
+**DanaRS met nieuwe firmware v3 kan momenteel niet worden gebruikt met AndroidAPS!**
+
 * De app gebruikt het profiel "BASAL A" op de pomp. Jouw huidige instellingen van jouw basaalstanden op de pomp zullen worden overschreven.
 
 * In AndroidAPS ga naar Configurator en selecteer 'DanaRS'
@@ -10,13 +12,13 @@
 
 * Selecteer 'Koppel nieuwe pomp' en klik op het serienummer van jouw DanaRS.
   
-      ![AAPS pairing Dana RS](../images/AAPS_DanaRSPairing.png)
+      ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
       
 
 * Selecteer 'Pomp wachtwoord' en voer jouw wachtwoord in. (Standaardwachtwoord is 1234)   
   **Je moet de koppeling bevestigen dmv de OK knop op de pomp** Net zoals bij andere bluetooth-apparaten (bijv. smartphone en autoradio).
   
-      ![Dana RS confirm pairing](../images/DanaRS_Pairing.png)
+      ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
       
 
 * Selecteer 'Bolus snelheid' om de standaardsnelheid te wijzigen die de pomp gebruikt bij een bolus (12sec per Eenheid, 30sec per Eenheid of 60sec per Eenheid).

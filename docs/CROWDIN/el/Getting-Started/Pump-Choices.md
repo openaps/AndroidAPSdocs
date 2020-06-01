@@ -1,28 +1,29 @@
-# Pump choices
+# Επιλογές αντλίας
 
-AndroidAPS currently works with
+Το AndroidAPS προς το παρόν λειτουργεί με
 
-* Accu-Chek Combo
-* Accu-Chek Insight
+* Accu-Check Combo
+* Accu-Check Insight
+* some old Medtronic
 * DanaR
 * DanaRS 
 
-pumps. Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
+αντλίες. Λεπτομέρειες σχετικές με την κατάσταση άλλων αντλιών που ενδέχεται να λειτουργήσουν με AndroidAPS εμφανίζονται στη σελίδα [Μελλοντικές (πιθανές) Αντλίες](Future-possible-Pump-Drivers.md).
 
-If you need to choose a pump to upgrade to or buy then people often ask which to choose. Details of the various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
+Εάν χρειάζεται να επιλέξετε μία αντλία για αναβάθμιση ή για αγορά, τότε συχνά, πολλοί ρωτούν ποια να επιλέξουν. Λεπτομέρειες για τους διάφορους προμηθευτές βρίσκονται σε [αυτή τη φόρμα ](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), παρακαλούμε να μοιραστείτε τα στοιχεία της δικής σας, εάν δεν είναι ήδη στη λίστα.
 
-The Combo and the Insight are solid pumps, and loopable. The advantages of the DanaR/RS as the pump of choice however are:
+Οι αντλίες Combo και Insight είναι αντλίες durable και δυνατότητα κλειστού κυκλώματος. Τα πλεονεκτήματα όμως των DanaR/RS σαν αντλίες επιλογής είναι:
 
-* The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
+* Οι Dana*R/RS συνδέονται με σχεδόν όλα τα Android τηλέφωνα >= 5.1 χωρίς την ανάγκη flash lineage. Εάν το τηλέφωνό σας χαλάει συχνά, μπορείτε να βρείτε εύκολα οποιοδήποτε τηλέφωνο λειτουργεί με τις αντλίες Dana*R/RS σαν γρήγορη αντικατάσταση... όχι τόσο εύκολο με την Combo. (Αυτό μπορεί να αλλάξει στο μέλλον όταν το Android 8.1 γίνει πιο διαδεδομένο)
 
-* Initial pairing is simpler with the Dana* RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
+* Η αρχική σύζευξη είναι πιο εύκολη με την Dana* RS. Επειδή όμως συνήθως αυτό γίνεται μόνο μία φορά, σας επηρεάζει μόνο όταν θέλετε να δοκιμάσετε ένα νέο χαρακτηριστικό με διαφορετικές αντλίες.
 
-* So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
+* Μέχρι στιγμής η αντλία Combo λειτουργεί με τεχνολογία οθόνης. Σε γενικές γραμμές αυτό λειτουργεί καλά αλλά είναι αργό. Για το κύκλωμα αυτό δεν έχει σημασία όσο όλα λειτουργούν στο παρασκήνιο. Εξακολουθεί να υπάρχει πολύς χρόνος που πρέπει να συνδεθείτε, ώστε να υπάρχει μεγαλύτερη διάρκεια σύνδεσης με τη σύνδεση BT, κάτι που δεν είναι τόσο εύκολο εάν απομακρυνθείτε από το τηλέφωνό σας ενώ ταυτόχρονα πιέζετε bolus & μαγείρεμα.
 
-* The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB. The Dana* RS is configurable that it does neither beeps or vibrates.
+* Το Combo δονείται στο τέλος των TBR, η Dana * R δονείται (ή μπιπ) στο SMB. Τη νύχτα είναι πιθανό να χρησιμοποιείτε TBRs περισσότερο από SMB. Η Dana * RS είναι διαμορφωμένη ώστε να μην εκπέμπει ή να δονείται.
 
-* Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+* Η ανάγνωση του ιστορικού στην RS σε λίγα δευτερόλεπτα με υδατάνθρακες καθιστά δυνατή την εύκολη εναλλαγή των τηλεφώνων ενώ είναι εκτός σύνδεσης και συνεχίζει το κύκλωμα από τη στιγμή που αναγνωρίσει τιμές από το cgm.
 
-* All pumps AndroidAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
+* Όλες οι αντλίες που μπορεί να συνομιλεί με το AndroidAPS είναι αδιάβροχες κατά την παράδοση. Μόνο οι αντλίες Dana είναι επίσης "αδιάβροχες με εγγύηση" λόγω της σφραγισμένης θήκης των μπαταριών και του συστήματος πλήρωσης δεξαμενών.
 
-The Combo of course is a very good pump, and loopable. It also has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
+Το Combo, φυσικά, είναι μια πολύ καλή αντλία, και έχει και τη δυνατότητα κυκλώματος. Έχει επίσης το πλεονέκτημα πολλών περισσότερων τύπων συσκευών έγχυσης για να διαλέξετε, καθώς έχει μια τυποποιημένη κλειδαριά Luer. Και η μπαταρία είναι μια προεπιλεγμένη που μπορείτε να αγοράσετε σε οποιοδήποτε βενζινάδικο, κατάστημα 24 ωρών και αν χρειάζεστε πραγματικά, μπορείτε να το κλέψετε / δανειστείτε από το τηλεχειριστήριο στο δωμάτιο του ξενοδοχείου ;-)

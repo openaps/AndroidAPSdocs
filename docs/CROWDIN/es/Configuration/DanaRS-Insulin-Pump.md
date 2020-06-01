@@ -1,67 +1,69 @@
-# DanaRS Pump
+# Bomba DanaRS
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
+*Estas instrucciones son para configurar la app y la bomba si tiene una DanaRS a partir de 2017. Visite [Bomba de insulina DanaR](./DanaR-Insulin-Pump) si en su lugar tiene una DanaR original.*
 
-* In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
+**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
 
-* In AndroidAPS go to Config Builder and select 'DanaRS'
+* En la bomba DanaRS la app utiliza el perfil "BASAL A". Los datos existentes se sobrescriben.
 
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
+* En AndroidAPS, vaya a Configuración y seleccione 'DanaRS'
 
-* Select DanaRS Pair New Pump, and click your DanaRS serial number.
+* Seleccione Menú pulsando los 3 puntos en la parte superior derecha. Seleccione preferencias.
+
+* Seleccione el dispositivo Bluetooth de DanaRS y haga clic en el número de serie de DanaRS.
   
-      ![AAPS pairing Dana RS](../images/AAPS_DanaRSPairing.png)
+      ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
       
 
-* Select Pump password and input your password. (Default password is 1234)   
-  **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+* Seleccione la contraseña de la bomba e introduzca su contraseña. (La contraseña predeterminada es 1234)   
+  **Hay que confirmar el emparejamiento en la bomba! ** Es la forma que se utiliza para otros emparejamientos bluetooth (es decir, smartphone y audio de autos).
   
-      ![Dana RS confirm pairing](../images/DanaRS_Pairing.png)
+      ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
       
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Seleccione velocidad de bolo, para cambiar la velocidad predeterminada utilizada (12seg por 1u, 30seg por 1u o 60seg por 1u).
 
-* Restart your phone.
+* Reinicia tu dispositivo.
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
+* Establezca la tasa basal en la bomba en 0,01 U/h mediante el menú de Doctores (consulte la guía del usuario de la bomba)
 
-* Enable extended boluses on pump
+* Habilitar bolos extendidos en bomba
 
-## Dana RS specific errors
+## Errores específicos de Dana RS
 
-### Error during insulin delivery
+### Error durante la administración de insulina
 
 In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
 ![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
-* In most cases this is just a communication issue and the correct amount of insulin is delivered.
-* Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
-* Delete error entry in CP tab if you wish.
-* Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
+* En la mayoría de los casos, se trata sólo de un problema de comunicación y se inyecta la cantidad correcta de insulina.
+* Compruebe el historial de la bomba (ya sea en la bomba o a través de la pestaña Dana > historial de bomba > bolos) para ver si es correcto bolo inyectado.
+* Suprima la entrada de error en la pestaña CP si lo desea.
+* La cantidad real es leída y grabada en la siguiente conexión. Para forzar esto pulse el icono BT en la pestaña de dana o simplemente espere a la siguiente conexión.
 
-## Special note when switching phone
+## Nota especial al cambiar de teléfono
 
 When switching to a new phone the following steps are neccessary:
 
-* **Export settings** on your old phone
+* **Exportar valores** en el teléfono antiguo
   
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Export settings
+  * Menú Hamburguesa (esquina superior izquierda de la pantalla)
+  * Mantenimiento
+  * Exportar ajustes
     
-    ![AAPS export settings](../images/AAPS_ExportSettings.png)
+    ![* Exportar configuración](../images/AAPS_ExportSettings.png)
 
-* **Transfer** settings from old to new phone
+* **Transferir** ajustes del viejo al nuevo teléfono
 
-* **Manually pair** Dana RS with the new phone 
-  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
-* **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone 
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Import settings
+* **Emparejamiento manual** Dana RS con el nuevo teléfono 
+  * La configuración de conexión de la bomba y también se importa AAPS en su nuevo teléfono con esto ya "conoce" la bomba y por lo tanto no es necesario iniciar un escaneo bluetooth. Por tanto, el nuevo teléfono y la bomba deben estar emparejados manualmente.
+* **Instalar AndroidAPS ** en el nuevo teléfono.
+* **Importar ajustes** en tu nuevo teléfono 
+  * Menú Hamburguesa (esquina superior izquierda de la pantalla)
+  * Mantenimiento
+  * Importar ajustes
 
-## Timezone traveling with Dana RS pump
+## Cambio de zona horaria al viajar con la bomba Dana RS
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+Para obtener información sobre cómo actuar a través de zonas horarias consulte la sección [cambio de zona Horaria con bombas](../Usage/Timezone-traveling#danarv2-danars).

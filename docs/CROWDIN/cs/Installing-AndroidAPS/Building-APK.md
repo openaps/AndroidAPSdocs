@@ -1,256 +1,266 @@
 # Sestavení APK
 
+## Vyrobte si místo stažení
+
+**AndroidAPS není k dispozici ke stažení kvůli regulaci zdravotnických zařízení. Je legální vytvořit aplikaci pro své vlastní použití, ale nesmíte dát kopii ostatním! Další informace naleznete v části [Časté dotazy](../Getting-Started/FAQ.md).**
+
+## ## Důležité poznámky
+
+* Chcete-li sestavit apk, použijte **[Android Studio Version 3.6.1](https://developer.android.com/studio/)** nebo novější.
+* [32 bitové systémy Windows 10](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) nejsou programem Android Studio 3.6.1. podporovány.
+
+**Configuration on demand (Konfigurace na vyžádání)** není aktuální verzí plug-inu Android Gradle podporována!
+
+Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
+
+* Otevřete okno Preferences klepnutím na File > Settings (na platformě Mac, Android Studio > Preferences).
+* V levé části pak na Build, Execution, Deployment > Compiler.
+* Zrušte označení možnosti Configure on demand.
+* Klepněte na tlačítko použít nebo OK.
+
 * * *
-
-***Mějte prosím na paměti** při vytváření AndroidAPS 2.0 apk: **Konfigurace na vyžádání** není podporována v aktuální verzi Android Gradle pluginu! Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:*
-
-     * * Otevřete okno Preferences klepnutím na File > Settings (v systému Mac, Android Studio > Preferences). *
-     * * V levém podokně klepněte na Build, Execution, Deployment > Compiler.*
-     * * Zrušte zaškrtnutí políčka Configure on demand.*
-    
-
-## * *Klepněte na tlačítko použít nebo OK.*
 
 ### Tento článek je rozdělený do dvou částí.
 
 * V části Přehled najdete vysvětlení, které kroky jsou obecně nutné, abyste sestavili soubor APK.
-* V části Průvodce krok za krokem najdete snímky obrazovky z konkrétní instalace. Jelikož se Android Studio (vývojové prostředí, které použijeme k sestavení APK) v čase mění velmi rychle, nebudou snímky úplně shodné s vaší instalací, ale určitě vám poskytnou dobrý záchytný bod. Android studio běží na Windows, Linuxu a Mac OS X, a proto mohou být na různých platformách malé rozdíly. Jestliže najdete něco zásadního, co je špatně, nebo vám něco chybí, prosím informujte o tom facebookovou skupinu „AndroidAPS users“ nebo použijte Gitter chat [Android APS](https://gitter.im/MilosKozak/AndroidAPS) nebo [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby), abychom se na to mohli podívat.
+* V části Průvodce krok za krokem najdete snímky obrazovky z konkrétní instalace. Jelikož se Android Studio (vývojové prostředí, které použijeme k sestavení APK) v čase mění velmi rychle, nebudou snímky úplně shodné s vaší instalací, ale určitě vám poskytnou dobrý záchytný bod. Android studio běží na Windows, Linuxu a Mac OS X, a proto mohou být na různých platformách malé rozdíly. Jestliže najdete něco zásadního, co je špatně nebo vám něco chybí, prosím informujte o tom facebookovou skupinu „AndroidAPS users“ nebo použijte Gitter chat [Android APS](https://gitter.im/MilosKozak/AndroidAPS) nebo [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby), abychom se na to mohli podívat.
 
 ## Přehled
 
 Následují obecné kroky k sestavení souboru APK:
 
-* Instalujte git
-* Instalujte a nastavte Android Studio.
-* Použijte git, abyste si naklonovali zdrojové kódy z centrálního úložiště na Githubu, kam vývojáři umístili poslední zdrojové kódy aplikace.
-* Otevřete naklonovaný projekt v Android Studiu jako aktivní projekt.
-* Sestavete podepsané APK.
-* Doručte podepsané APK na váš telefon.
+1. [Nainstalujte git](../Installing-AndroidAPS/git-install.rst)
+2. [Instalace Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
+3. [Nastavte v předvolbách Android Studio cestu ke gitu](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
+4. [Stáhněte si kód AndroidAPS](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
+5. [Stáhněte Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
+6. [Sestavte aplikaci](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (vygenerujte podepsaný soubor apk)
+7. [Nahrajte aplikaci do mobilu](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+8. [Možnost „Identify receiver“ při používání xDripu+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
 
 ## Průvodce krok za krokem
 
 Následuje detailní popis kroků nutných k sestavení souboru APK.
 
-## Nainstalujte Android Studio
+## Nainstalujte git (pokud ho ještě nemáte)
 
-* Instalujte git 
-  * [Windows](https://gitforwindows.org/)
-  * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
-  * Linux - prostě instalujte balíček git správcem balíčků z vaší distribuce
-* Instalujte [Android Studio](https://developer.android.com/studio/install.html).
-* Nastavte Android Studio při prvním spuštění
+Postupujte podle návodu na [stránka instalace gitu](../Installing-AndroidAPS/git-install.rst).
+
+## Instalace Android Studio
+
+Následující snímky obrazovky byly převzaty z aplikace Android Studio verze 3.6.1. Máte-li vyšší verzi aplikace Android Studio, může Vaše obrazovka vypadat trochu jinak. Měli byste však být schopni najít cestu. K dispozici je [pomoc od komunity](../Where-To-Go-For-Help/Connect-with-other-users.md).
+
+Jedna z nejdůležitějších věcí při instalaci aplikace Android Studio: **Buďte trpěliví!** Během instalace a nastavení aplikace Android Studio se stahuje spousta věcí, které zaberou spoustu času.
+
+Nainstalujte [Android Studio](https://developer.android.com/studio/install.html) a proveďte nastavení během prvního spuštění.
 
 Zvolte "Do not import settings", protože jste tento software zatím nevyužívali.
 
-![Snímek 1](../images/Installation_Screenshot_01.png)
+![Do not import settings](../images/AndroidStudio361_01.png)
 
-Klikněte na "Next".
+Rozhodněte se, zda chcete či nechcete sdílet data se společností Google.
 
-![Snímek 2](../images/Installation_Screenshot_02.png)
+![Share data with Google](../images/AndroidStudio361_02.png)
 
-Vyberte "Standard" instalaci a klikněte na "Next".
+Na následující obrazovce klepněte na tlačítko „Další“.
 
-![Snímek 3](../images/Installation_Screenshot_03.png)
+![Welcome screen](../images/AndroidStudio361_03.png)
 
-Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
+Vyberte „Standard“ instalaci a klikněte na „Next“.
 
-![Snímek 4](../images/Installation_Screenshot_04.png)
+![Standard installation](../images/AndroidStudio361_04.png)
 
-Klikněte na "Next" v dialogovém okně "Verify Settings".
+Vyberte si motiv uživatelského rozhraní, který se vám líbí. (V tomto návodu jsme použili „Light“.) Poté klikněte na „Next“. Jedná se pouze o barevný motiv. Můžete si vybrat jakýkoli jiný (např. „Darcula“ pro tmavý režim). Tato volba nemá žádný vliv na sestavení APK.
 
-![Snímek 5](../images/Installation_Screenshot_05.png)
+![UI color scheme](../images/AndroidStudio361_05.png)
 
-Emulátor Androidu (pro simulaci telefonu na vašem PC nebo Macu) se pro sestavení APK nepoužívá. Můžete kliknout na "Finish", abyste dokončili instalaci a odložili četbu dokumentace později na vyžádání.
+V dialogovém okně „Verify Settings“ klikněte na „Next“.
 
-![Snímek 6](../images/Installation_Screenshot_06.png)
+![Verify settings](../images/AndroidStudio361_06.png)
 
-Android Studio stahuje velké množství softwarových komponent, které používá. Můžete kliknout na tlačítko "Show Details" pro zobrazení detailů, které ale vůbec nejsou důležité.
+Buďte trpěliví - vyčkejte, dokud Android Studio nestáhne potřebné komponenty. Jakmile je vše staženo, tlačítko „Finish“ se zbarví modře. Klikněte na něj.
 
-![Snímek 7](../images/Installation_Screenshot_07.png)
+![Downloading components](../images/AndroidStudio361_07.png)
 
-![Snímek 8](../images/Installation_Screenshot_08.png)
+## Nastavení cesty k nástroji git v předvolbách
 
-Jakmile jsou stahování dokončena, klikněte na tlačítko "Finish".
+Ujistěte se, že na svém počítači máte [nainstalován git](../Installing-AndroidAPS/git-install.rst).
 
-![Snímek 9](../images/Installation_Screenshot_09.png)
+Na úvodní obrazovce aplikace Android Studio klepněte na malý trojúhelník (1. v dalším snímku obrazovky) a vyberte „Settings“ (2.).
 
-* Hurá, hurá, nyní jste dokončili instalaci Android Studia a můžete začít s klonováním zdrojových souborů. Možná je teď vhodná doba na krátkou přestávku?
+![Android Studio settings from welcome screen](../images/AndroidStudio361_08.png)
 
-## Stáhněte si kód a další komponenty
+### Windows
 
-* Použijte klonování gitu v Android Studiu, jak je vidět na snímku níže. Zvolte "Check out project from Version Control" s "Git" jako konkrétní verzí správce zdrojových kódů.
+* Click the small triangle next to Version Control (1.) to open the sub-menu.
+* Click Git (2.).
+* Make sure update method "Merge" (3.) is selected.
+* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
 
-![Snímek 10](../images/Installation_Screenshot_10.png) ![Version_Control_Git](../images/Version_Control_Git.png)
+![Android Studio settings](../images/AndroidStudio361_09.png)
 
-Zadejte URL adresu do hlavního úložiště AndroidAPS ("https://github.com/MilosKozak/AndroidAPS") a klepněte na "Clone".
+* If automatic setting is successful git version will be displayed.
+* Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
 
-![Snímek 13](../images/Installation_Screenshot_13.png)
+![Automatic git installation succeeded](../images/AndroidStudio361_10.png)
 
-Android Studio začne s klonováním. Neklikejte na "Background", což by věci nyní pouze zkomplikovalo.
+* In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
+* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where it can be found. You are looking for git.exe located in \bin\ folder.
+* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
+* Close settings window by clicking "OK" button (5.).
 
-![Snímek 14](../images/Installation_Screenshot_14.png)
+![Automatic git installation failed](../images/AndroidStudio361_11.png)
 
-Dokončete načtení projektu od správce zdrojových kódů kliknutím na "Yes", což projekt otevře.
+* **Reboot your computer to update system environment.**
 
-![Snímek 15](../images/Installation_Screenshot_15.png)
+### Mac
 
-Použijte standardní "default gradle wrapper" a klikněte na "OK".
+* Měly by fungovat všechny verze gitu. Například <https://git-scm.com/download/mac>.
+* Použijte homebrew k instalaci gitu: ```$ brew install git```.
+* Detaily o instalaci gitu naleznete v [oficiální dokumentaci gitu](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Pokud instalujete git přes homebrew, není třeba měnit žádné předvolby. Pokud by bylo třeba: Najdete je zde: Android Studio - Preferences.
 
-![Snímek 16](../images/Installation_Screenshot_16.png)
+## Stáhněte si kód AndroidAPS
 
-Přečtěte si okno "Tip of Day" a kliknutím na "Close" je zavřete.
+* **If you haven't already rebooted your computer after setting git path in preferences do it now. System environment must be updated.**
+* On the Android Studio welcome screen click the small triangle right of "Check out project from version control" (1.).
+* Select "Git" (2.).
 
-![Snímek 17](../images/Installation_Screenshot_17.png)
+![Check out project from version control from welcome screen](../images/AndroidStudio361_12.png)
 
-* Super, máte vlastní kopii zdrojového kódu a jste připraveni na vytvoření Apk.
-* Nyní se blížíme k první chybové zprávě. Naštěstí nám Android Studio nabídne její řešení.
+* If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.) > Git (4.).
 
-Klikněte na "Install missing platform(s) and sync project", protože Android Studio potřebuje doinstalovat chybějící platformu.
+![Check out project from version control within Android Studio](../images/AndroidStudio361_13.png)
 
-![Snímek 18](../images/Installation_Screenshot_18.png)
+* Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") (1.).
+* Choose the directory where you want to save the cloned code.
+* Click button "Test" (2.).
+* If test cannot be completed successfully check URL, correct and click "Test" again.
+* If URL is entered correctly "Connection successful" (3.) will be shown.
+* Click button "Clone" (4.).
 
-Přijměte licenční ujednání zvolením "Accept" a kliknutím na "Next".
+![Clone repository](../images/AndroidStudio361_14.png)
 
-![Snímek 19](../images/Installation_Screenshot_19.png)
+* Do not click "Background" while repository is cloned!
 
-Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
+![Clone repository - no background action](../images/AndroidStudio361_15.png)
 
-![Snímek 20](../images/Installation_Screenshot_20.png)
+* After repository is cloned successfully open your local copy by clicking "Yes".
 
-Nyní je dokončené. Prosím, klikněte na "Finish".
+![Open repository](../images/AndroidStudio361_16.png)
 
-![Snímek 21](../images/Installation_Screenshot_21.png)
+* In the lower right corner you will see the information that Android Studio is running background tasks.
 
-Aaaach, další chyba. Ale Android Studio navrhuje podobné řešení. Klikněte na "Install Build Tools and sync project", protože Android Studio potřebuje stáhnout chybějící pomůcky.
+![Background tasks](../images/AndroidStudio361_17.png)
 
-![Snímek 22](../images/Installation_Screenshot_22.png)
+* Grant access if your firewall is asking for permission.
 
-Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
+![Firewall permission java](../images/AndroidStudio361_18.png)
 
-![Snímek 23](../images/Installation_Screenshot_23.png)
+* Once the background tasks are finished you will probably see the following error message:
 
-Nyní je dokončené. Prosím, klikněte na "Finish".
+![SDK licence](../images/AndroidStudio361_19.png)
 
-![Snímek 24](../images/Installation_Screenshot_24.png)
+## Stáhněte Android SDK
 
-A další chyba k řešení, protože Android Studio potřebuje zase stáhnout chybějící platformu. Klikněte na "Install missing platform(s) and sync project".
+* Click File > Settings.
 
-![Snímek 25](../images/Installation_Screenshot_25.png)
+![Open settings](../images/AndroidStudio361_20.png)
 
-Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
+* Click the small triangle next to Appearance & Behaviour (1.).
+* Click the small triangle next to System Settings (2.) and select Android SDK (3.)
+* Check the box left of "Android 9.0 (Pie)" (4.) (API Level 28).
 
-![Snímek 26](../images/Installation_Screenshot_26.png)
+![SDK settings](../images/AndroidStudio361_21.png)
 
-Nyní je dokončené. Prosím, klikněte na "Finish".
+* Confirm changes by clicking OK.
 
-![Snímek 27](../images/Installation_Screenshot_27.png)
+![Confirm SDK changes](../images/AndroidStudio361_22.png)
 
-Klikněte na "Install Build Tools and sync project", protože Android Studio potřebuje stáhnout chybějící pomůcky.
+* Accept licence agreement (1.) and click "Next" (2.).
 
-![Snímek 28](../images/Installation_Screenshot_28.png)
+![Accept SDK licence](../images/AndroidStudio361_23.png)
 
-Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
+* Wait until installation is finished.
 
-![Snímek 29](../images/Installation_Screenshot_29.png)
+![Wait during SDK installation](../images/AndroidStudio361_24.png)
 
-Nyní je dokončené. Prosím, klikněte na "Finish".
+* When SDK installation is completed the "Finish" button will turn blue. Click this button.
 
-![Snímek 30](../images/Installation_Screenshot_30.png)
+![Finish SDK installation](../images/AndroidStudio361_25.png)
 
-Ano, chybové zprávy jsou pryč a první gradle sestavení běží. Možná je čas dát si trochu vody?
+* Android Studio might recommend to update the gradle system. **Nikdy neaktualizujte gradle!** Mohlo by to vše zkomplikovat!
+* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1.) and in the dialog box on "Don't remind me again for this project" (2.).
 
-![Snímek 31](../images/Installation_Screenshot_31.png)
-
-<!--- Android Studio recommends we now update the gradle system to version 4.4. If you made this build for an AndroidAPS version before the release of at least a release candidate(RC) of version 2.0 do not follow this recommendation. Otherwise, the build will fail. The gradle system is a tool which Android Studio uses to control the build process. For AndroidAPS there is no disadvantage to using the old gradle version. The APK file in the end is not different. If you build a APK for version 2 of AndroidAPS feel free to upgrade the gradle system to version 4.4. ---> Android Studio doporučuje aktualizaci systému gradle. 
-
-**Nikdy neaktualizujte gradle!** Mohlo by to vše zkomplikovat!
-
-Klikněte prosím na „Znovu nepřipomínat pro tento projekt“.
-
-![Snímek 32](../images/AS_NoGradleUpdate.png)
-
-Sestavení zase běží.
-
-![Snímek 33](../images/Installation_Screenshot_33.png)
-
-Ano, první sestavení bylo úspěšné, ale ještě nejsme hotoví.
-
-![Snímek 34](../images/Installation_Screenshot_34.png)
+![No cradle update](../images/AndroidStudio361_26.png)
 
 ## Vytvořte podepsaný soubor APK
 
-<!--- Do not forget to copy to update-to-new-version.md / But keystore path must be modified --->
+Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. To je nezbytné, protože Android má pravidlo, že z bezpečnostních důvodů přijme pouze podepsaný kód. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
-V nabídce vyberte „Build“ a pak „Generate Signed Bundle / APK…“. (Nabídka Android Studio se v září 2018 změnila. Ve starších verzích vyberte nabídku „Build“ a pak „Generate Signed APK...“.)  
-Podepsání znamená, že podepíšete svou generovanou aplikaci, ale digitálním způsobem, něco jako digitálním otiskem prstu v samotné aplikaci. To je nezbytné, protože Android má pravidlo, že z bezpečnostních důvodů přijme pouze podepsaný kód. Pokud se o toto téma zajímáte, můžete si k tomu víc přečíst [zde](https://developer.android.com/studio/publish/app-signing.html#generate-key), ale Bezpečnost je hluboké a komplexní téma a teď ho nepotřebujete.
+* Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
 
-![Snímek 39a](../images/Installation_Screenshot_39a.PNG)
+![Build apk](../images/AndroidStudio361_27.png)
 
-V následujícím dialogovém okně vyberte „APK“ místo „Android App Bundle“ a klepněte na tlačítko „Next“.
+* Select "APK" (1.) instead of "Android App Bundle" and click "Next" (2.).
 
-![Snímek 39b](../images/Installation_Screenshot_39b.PNG)
+![APK instead of bundle](../images/AndroidStudio361_28.png)
 
-Zvolte „app“ a klepněte na tlačítko „Next“.
+* Make sure that module is set to "app" (1.).
+* Click "Create new..." (2.) to start creating your key store.
+    
+    A key store in this case is nothing more than a file in which the information for signing is stored. Je zašifrované a údaje jsou zabezpečené hesly.
 
-<!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used --->
+![Create key store](../images/AndroidStudio361_29.png)
 
-![Snímek 40](../images/Installation_Screenshot_40.png)
+* Click the folder symbol (1.) to select your key store path. 
+* Select the path where your key store shall be saved (2.). **Do not save in same folder as project. You must use a different directory!** One option might be your home folder.
+* Type a file name for your key store (3.).
+* Click "OK" (4.).
+* Passwords for key store and key do not have to be very sophisticated. Make sure to remember those or make a note in a safe place. In case you will not remember your passwords in the future you see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Enter (5.) and confirm (6.) the password for your key store.
+* Do the same for your key (7. + 8.).
+* Validity (9.) is 25 years by default. You do not have to change the default value.
+* First and last name must be entered (10.). All other information is optional.
+* Click "OK" (11.) when you are done.
 
-Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
+![Cesta k úložišti klíčů](../images/AndroidStudio361_30.png)
 
-![Screenshot 41](../images/Installation_Screenshot_41.png)
+* Make sure the box to remember passwords is checked (1.). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AndroidAPS version).
+* Click "Next" (2.).
 
-* Vyplňte údaje pro další dialogové okno. 
-  * Key store path: je cesta k vašemu úložišti klíčů
-  * Políčka s hesly níže jsou pro úložiště klíčů a jsou zdvojená, aby se zabránilo překlepům.
-  * Alias je název pro klíč, který potřebujete. Můžete ponechat výchozí, anebo si vybrat jakýkoli jiný název.
-  * Políčka s hesly pod tím jsou pro samotný klíč. Jako vždy jsou zdvojená, aby se zabránilo překlepům.
-  * Můžete ponechat "Validity (years)" na výchozí hodnotě 25.
-  * Povinná pole jsou pouze jméno a příjmení, ale klidně můžete vyplnit i zbývající údaje. Pak klikněte na tlačítko „OK“.
+![Remember passwords](../images/AndroidStudio361_31.png)
 
-![Screenshot 42](../images/Installation_Screenshot_42.png)
+* Select build variant "fullRelease" (1.). 
+* Check boxes V1 and V2 for signature versions (2.).
+* Click "Finish". (3.)
 
-Fill in the information of the last dialog in this dialog and click "Next".
+![Finish build](../images/AndroidStudio361_32.png)
 
-![Screenshot 43](../images/Installation_Screenshot_43.png)
+* Android Studio will display the information "APK(s) generated successfully..." after build is finished.
+* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* Easiest way to find the apk is to click on "Event log".
 
-<!--- End modification here ---> Zvolte „full“ jako flavour generované aplikace. Zvolte V1 „Jar Signature“ (V2 je volitelné) a klikněte na tlačítko „Finish“. Následující údaje mohou být důležité pro pozdější použití.
+![Build successfully - event log](../images/AndroidStudio361_33.png)
 
-* Možnost „Release“ by měla být výchozí volbou pro „Build Type“, možnost „Debug“ je pouze pro vývojáře.
-* Vyberte typ sestavení, jaký budete chtít. 
-  * full (tj. automatické doporučení pro uzavřenou smyčku)
-  * openloop (tj. doporučení pro uživatele s otevřenou smyčkou)
-  * pumpcontrol (tj. vzdálené ovládání pumpy bez smyčky)
-  * nsclient (tj. zobrazují se data jiného uživatele se smyčkou a lze vkládat záznamy ošetření)
+* In the event log section click "locate".
 
-![Snímek 44](../images/Installation_Screenshot_44.png)
+![Event log - locate apk](../images/AndroidStudio361_34.png)
 
-V podokně „Event Log“ vidíme, že podepsaný soubor APK byl úspěšně vygenerován.
+* app-full-release.apk is the file you are looking for.
 
-![Snímek 45](../images/Installation_Screenshot_45.png)
-
-Klikněte na odkaz „locate“ v podokně „Event Log“.
-
-![Snímek 46](../images/Installation_Screenshot_46.png)
+![File location apk](../images/AndroidStudio361_35.png)
 
 ## Přeneste soubor APK do telefonu
 
-<!--- Do not forget to copy to update-to-new-version.md --->
+Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
-Objeví se okno správce souborů. Na vašem počítači může vypadat trochu jinak, protože já používám systém Linux. Pokud používáte sytém Windows, otevře se Průzkumník souborů, na platformě Mac OS X to bude Finder. V něm byste měli vidět složku s vygenerovaným souborem APK. Toto bohužel není správné umístění, protože „wear-release.apk“ není podepsaný soubor „app“ APK, který hledáme.
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
-![Snímek 47](../images/Installation_Screenshot_47.png)
+## Možnost „Identify receiver“ při používání xDripu+
 
-Přejděte prosím do složky AndroidAPS/app/full/release a tam vyhledejte soubor „app-full-release.apk“. Přeneste tento soubor do telefonu s Androidem. Můžete to udělat způsobem, který upřednostňujete, přes Bluetooth, nahráním do cloudu, připojením telefonu k počítači pomocí kabelu nebo přes přílohu e-mailu. Já v této ukázce používám Gmail, jelikož je to pro mě poměrně jednoduché. Zmiňuji to proto, protože instalaci self-signed aplikace (certifikát podepsaný sám sebou) potřebujeme v systému Android výslovně povolit, i když byl soubor přijatý přes Gmail. Standardně je to totiž zakázané. Pokud použijete jinou metodu, zvolte vhodný postup.
+[Viz stránka xDrip+](../Configuration/xdrip#identify-receiver)
 
-![Snímek 48](../images/Installation_Screenshot_48.png)
+## Poradce při potížích
 
-V nastavení telefonu je nabídka (instalovat neznámé aplikace), kde lze povolit instalaci APK souborů, které jsem si poslal přes Gmail.
-
-Vyberte možnost „Povolit z tohoto zdroje“. Po instalaci můžete tuto volbu zase zakázat.
-
-![Instalace z neznámých zdrojů](../images/Installation_Screenshot_49-50.png)
-
-Posledním krokem je klepnout na soubor APK, který jsem přijal přes Gmail, a nainstalovat aplikaci. Pokud se APK nechce nainstalovat a máte v telefonu již starší verzi AndroidAPS, pravděpodobně byla podepsaná jiným klíčem – v tom případě musíte starou verzi nejdřív odinstalovat, avšak nezapomeňte předtím exportovat svá nastavení!
-
-Ano, máte to a můžete začít s úvodní konfigurací AndroidAPS (CGM, inzulínová pumpa) atd.
+Viz samostatná stránka [odstraňování potíží s Android Studiem](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).

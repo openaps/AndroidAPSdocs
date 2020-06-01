@@ -1,10 +1,25 @@
-# Jelly Pro - Optimierung der Batterielaufzeit
+# Jelly Pro
+
+## Vor- und Nachteile
+
+### Vorteile Jelly Pro
+
+* Es ist wirklich klein.
+* Selbst wenn Du Leutene erklärst, werden es manche Menschen nicht als normales Smartphone ansehen und vielleicht eher in Bereichen, in denen keine Smartphones erlaubt sind, akzeptieren.
+
+### Nachteile Jelly Pro
+
+* Nur für erfahrene Looper zu empfehlen (Manche Einstellungen sind nicht zu erkennen, man muss aus Erfahrungen mit einem großen Android-AAS-Phone wissen, wie und wo was steht. Manche AAPS Buttons kann man mit viel Gefühl nur schwer antippen, mit Wurstfingern gar nicht.)
+* Nur als Loop-Phone zu nutzen. In wessen Hosentasche ein normales Android passt, ist damit besser beraten. 
+* Wenn man es nicht wie eine Diva behandelt (Immer (!) bei sich trägt!) zeigt es seine zickige Seite, entkoppelt alle Bluetooth-Verbindungen und schmollt bis zum Neustart. 
+
+## Jelly Pro - Optimierung der Batterielaufzeit
 
 Mit den nachfolgend beschriebenen Einstellungen und Handhabung (u.a. Nutzung der Smartwatch statt des Jelly Pro für die Behandlungen im Alltag) sind ca. 35 Stunden Akkulaufzeit möglich. Ein zusätzlicher Batteriesparmodus ist nicht nötig, eher kontraproduktiv, also aus lassen.
 
 ![Jelly Smartphone](../images/jelly_01.jpg)
 
-## Ersteinrichtung
+### Ersteinrichtung
 
 <b><font color="#FF0000">Sehr wichtig:</b></font> Wenn Du Android 8.1 nicht benötigst (z.B. um mit einer Accu-Check Combo zu loopen) bleibe bei Android 7.0!
 
@@ -19,7 +34,7 @@ Gehe wie folgt vor, um bei Android 7.0 zu bleiben:
 
 ![Jelly Einstellungen](../images/jelly_02.jpg)
 
-## Einstellungen
+### Einstellungen
 
 * Verwende das Jelly nur zum Loopen.
 * Aktiviere WLAN nur, um xDrip, AAPS und WearOS zu installieren. Ansonsten bleibt das WLAN aus. 
@@ -46,13 +61,3 @@ Gehe wie folgt vor, um bei Android 7.0 zu bleiben:
 * Einen Screenshot macht man, indem man den leise-Button (links unten) + den An-Button (rechts) gleichzeitig drückt. 
 
 ![Jelly Kopfzeile Homescreen](../images/jelly_03.png)
-
-## Vorteile Jelly Pro
-
-* Es ist wirklich klein.
-
-## Nachteile Jelly Pro
-
-* Nur für erfahrene Looper zu empfehlen (Manche Einstellungen sind nicht zu erkennen, man muss aus Erfahrungen mit einem großen Android-AAS-Phone wissen, wie und wo was steht. Manche AAPS Buttons kann man mit viel Gefühl nur schwer antippen, mit Wurstfingern gar nicht.)
-* Nur als Loop-Phone zu nutzen. In wessen Hosentasche ein normales Android passt, ist damit besser beraten. 
-* Wenn man es nicht wie eine Diva behandelt (Immer (!) bei sich trägt!) zeigt es seine zickige Seite, entkoppelt alle Bluetooth-Verbindungen und schmollt bis zum Neustart.

@@ -1,4 +1,29 @@
-# Příprava Nightscoutu
+# Nightscout
+
+## Bezpečnostní pokyny
+
+Kromě sledování může být Nightscout použit také k ovládání AAPS. Tj. můžete nastavit dočasné cíle nebo přidat budoucí sacharidy. Tyto informace budou sbírány AAPS a bude to fungovat odpovídajícím způsobem. Proto stojí za to přemýšlet o zabezpečení Nightscout webové stránky.
+
+### Nastavení Nightscoutu
+
+Můžete odepřít veřejný přístup k serveru Nightscout pomocí [ověřovacích rolí](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
+
+### Nastavení AndroidAPS
+
+V nastavení AAPS existuje funkce pouze nahrávání do NS (ne synchronizace). Tím AAPS nebude provádět změny zadané v Nightscoutu, jako jsou dočasné cíle nebo budoucí sacharidy. Pokud používáte [NS Profil](../Configuration/Config-Builder#ns-profile), budou profily synchronizovány mezi AAPS a Nightscoutem i přes nastavení „pouze nahrávání“.
+
+* Klepněte na menu (3 tečky v pravém horním rohu) na hlavní obrazovce AAPS.
+* Zvolte „Nastavení“.
+* Posuňte se dolů a klepněte na „Rozšířená nastavení“.
+* Aktivujte možnost „pouze nahrávání do NS“
+
+![Nightscout pouze nahrávání](../images/NSsafety.png)
+
+### Další nastavení zabezpečení
+
+Udržujte svůj telefon aktualizovaný, jak je popsáno v části [bezpečnost na prvním místě](../Getting-Started/Safety-first.rst).
+
+## Ruční nastavení Nightscoutu
 
 Předpokládá se, že Nightscout stránky už máte, pokud ne, tak navštivte stránku [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) pro návod k založení. Následující pokyny jsou nastavení, která potřebujete provést v Nightscoutu pro správnou funkčnost AndroidAPS. Je nutné, aby byl váš Nightscout verze alespoň 10 (zobrazeno jako 0.10...), zkontrolujte tedy, jestli provozujete [poslední verzi](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie), jinak se vám V AAPS zobrazí chybová zpráva. Některým uživatelům se při smyčce překračuje Azure kvóta zdarma, proto je hostování na Heroku doporučená volba.
 
@@ -16,30 +41,30 @@ Předpokládá se, že Nightscout stránky už máte, pokud ne, tak navštivte s
   * Pro [hlídání pumpy](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring) lze nastavit různé alarmy, doporučujeme zejména % nabití baterie: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
-  * Optional: The following 'timers' can be set for the coloring in the AAPS careportal: 
-    * `BAGE_WARN` = `480` (Warning after x hours since last Battery Changed Event in Careportal)
-  * `BAGE_URGENT` = `504` (Urgent warning after x hours since last Battery Changed Event in Careportal)
-  * `CAGE_WARN` = `40` (Warning after x hours since last Cannula Changed Event in Careportal)
-  * `CAGE_URGENT` = `48` (Urgent warning after x hours since last Cannula Changed Event in Careportal)
-  * `IAGE_WARN` = `144` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
-  * `IAGE_URGENT` = `192` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
-  * `SAGE_WARN` = `160` (Warning after x hours since the last CGM Sensor Insert Event in Careportal)
-  * `SAGE_URGENT` = `168` (Urgent Warning after x hours since the last CGM Sensor Insert Event in Careportal)
+  * Volitelné: Následující 'časovače' lze nastavit pro barevné odlišení v záložce Péče v AAPS: 
+    * `BAGE_WARN` = `480` (Upozornění po x hodinách od poslední výměny baterie zaznamenané v Ošetření)
+  * `BAGE_URGENT` = `504` (Urgentní varování po x hodinách od poslední výměny baterie zaznamenané v Ošetření)
+  * `CAGE_WARN` = `40` (Upozornění po x hodinách od poslední výměny kanyly zaznamenané v Ošetření)
+  * `CAGE_URGENT` = `48` (Urgentní varování po x hodinách od poslední výměny kanyly zaznamenané v Ošetření)
+  * `IAGE_WARN` = `144` (Varování po x hodinách od poslední výměny zásobníku s inzulinem zaznamenané v Ošetření)
+  * `IAGE_URGENT` = `192` (Urgentní varování po x hodinách od poslední výměny zásobníku s inzulinem zaznamenané v Ošetření)
+  * `SAGE_WARN` = `160` (Upozornění po x hodinách od poslední výměny senzoru zaznamenané v Ošetření)
+  * `SAGE_URGENT` = `168` (Urgentní varování po x hodinách od poslední výměny senzoru zaznamenané v Ošetření)
 
 ![Azure](../../images/nightscout1.png)
 
 * Klikněte na "Save" ve vrchní části panelu.
 
-## Semi-automated Nightscout setup
+## Poloautomatickíé zřízení Nightscoutu
 
-Tuto službu nabízí kolega looper Martin Schiftan a v současnosti je zdarma. If you like the service you can consider sending him a small donation (link in the navigation on the left side).
+Tuto službu nabízí kolega looper Martin Schiftan a v současnosti je zdarma. Pokud se vám služba líbí, můžete zvážit odeslání drobného příspěvku (odkaz v navigačním panelu vlevo).
 
-**Benefits**
+**Výhody**
 
-* You can install Nightscout with a few clicks and use it directly. 
-* Reduction of manual work as Martin tries to automate the administration.
-* All settings can be made via a user-friendly web interface. 
-* The service includes an automated basal rate check using Autotune. 
-* The server is located in Germany.
+* Nightscout si pomocí této služby můžete nainstalovat pomocí několika málo kliknutí a ihned jej začít používat. 
+* Téměř žádná manuální práce, protože Martin se snaží celou administraci zautomatizovat.
+* Všechna nastavení lze provádět prostřednictvím uživatelsky přívětivého webového rozhraní. 
+* Tato služba obsahuje rovněž automatické kontroly bazálů prostřednictvím nástroje Autotune. 
+* Server se nachází v Německu.
 
 <http://ns.10be.de/en/index.html>

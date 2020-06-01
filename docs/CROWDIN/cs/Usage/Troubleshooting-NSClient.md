@@ -6,7 +6,7 @@ Pokud vás nikdo nesleduje na Nightscoutu, můžete pozastavit NSClienta, abyste
 
 * Jak detekovat nestabilní spojení?
 
-Běžte do záložky NSClient v AAPS a pozorujte výpisy protokolu (log). Běžné chování je obdržet PING každých zhruba 30 sekund a téměř žádné zprávy o restartu spojení. Pokud vidíte mnoho restartů spojení, pak máte nějaký problém. Od AndroidAPS verze 2.0, pokud je takové chování samo detekováno, tak je NSClient pozastavený na 15 minut a v přehledové obrazovce se zobrazí zpráva "Chyba NSClienta".
+Běžte do záložky NSClient v AAPS a pozorujte výpisy protokolu (log). Common behavior is to receive PING every ~30s and almost none reconnection messages. Pokud vidíte mnoho restartů spojení, pak máte nějaký problém. Since AndroidAPS 2.0 when such behavior is detected NSClient is paused for 15 minutes and message "NSClient malfunction" on Overview is displayed.
 
 * Restart
 

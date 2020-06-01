@@ -56,7 +56,7 @@
  <td>BAT</td>
  <td>Statusanzeige niedriger Batteriestand auf dem Startbildschirm</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>BZ</td>
@@ -104,7 +104,7 @@
  <td>CAN</td>
  <td>Statusanzeige Kanülenwechsel auf dem Startbildschirm</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -193,7 +193,7 @@
 <tr>
  <td>LGS</td>
  <td>Low Glucose Suspend (Reduzierung der Baslarate bei niedrigen Glukosewerten)<br>AAPS wird die Basalrate reduzieren, wenn die BZ-Werte zu stark sinken. Wenn die BZ-Werte aber steigen, wird AAPS die Basalrate nur dann erhöhen, wenn negatives Insulin on board (von einer vorangegangenen Basalratenreduzierung) ist. Sonst bleibt die Basalrate wie in Deinem Profil eingestellt. Wenn du eine Hypo korrigierst, kann es vorkommen, dass danach Spitzen auftreten, die du nicht durch Erhöhung der Basalrate korrigieren kannst.</td>
- <td><a href="../Usage/Objectives.html">Ziel 4</a></td>
+ <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">Ziel 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
@@ -284,7 +284,7 @@
  <td>PH</td>
  <td>Pumpenhistorie (Eintrag im Behandlungs-Tab)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Screenshots</a></td>
 </tr>
 <tr>
  <td>Predictions (Vorhersagen)</td>
@@ -293,7 +293,7 @@
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - Vorhersagelinien</a></td>
 </tr>
 <tr>
- <td>Profil</td>
+ <td>Profile</td>
  <td>grundlegende Behandlungseinstellungen (Basalrate, DIA, IC, ISF, BZ-Zielbereich)<br>kann lokal auf dem Gerät oder über Nightscout eingerichtet werden</td>
  <td>Nightscout</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - Profil</a></td>
@@ -308,7 +308,7 @@
  <td>RES</td>
  <td>Statusanzeige Reservoirwechsel auf dem Startbildschirm</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
@@ -326,7 +326,7 @@
  <td>SEN</td>
  <td>Statusanzeige Sensorwechsel auf dem Startbildschirm</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>Sensitivitätserkennung</td>
@@ -387,6 +387,12 @@
  <td>Möglichkeit, AAPS Funktionen auszuprobieren oder für um mit Pumpen, für die noch kein Treiber zur Verfügung steht, manuell loopen zu können</td>
  <td>Open Loop</td>
  <td>&nbsp;</td>
+</tr>
+<tr>
+ <td>Smartphone-Hintergrundbild</td>
+ <td>AndroidAPS-Hintergrundbild</td>
+ <td></td>
+ <td><a href="../Getting-Started/Phones.html#phone-background">siehe Seite Smartphones</a></td>
 </tr>
 <tr>
  <td>xDrip / xDrip+</td>

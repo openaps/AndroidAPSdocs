@@ -1,15 +1,16 @@
-# Pump choices
+# Voľba pumpy
 
-AndroidAPS currently works with
+AndroidAPS v súčasnosti funguje s týmito pumpami
 
 * Accu-Chek Combo
 * Accu-Chek Insight
+* some old Medtronic
 * DanaR
 * DanaRS 
 
-pumps. Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
+pumpy. Podrobnosti o stave ďalších púmp, ktoré majú potenciál fungovať s AndroidAPS sú uvedené na stránke [Budúce (možné) pumpy](Future-possible-Pump-Drivers.md).
 
-If you need to choose a pump to upgrade to or buy then people often ask which to choose. Details of the various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
+Ľudia, ktorí sa rozhodujú pre novú pumpu, sa často pýtajú, na ktorú pumpu prejsť, alebo ktorú kúpiť. Details of the various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
 
 The Combo and the Insight are solid pumps, and loopable. The advantages of the DanaR/RS as the pump of choice however are:
 

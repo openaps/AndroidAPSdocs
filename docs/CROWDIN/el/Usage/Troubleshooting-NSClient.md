@@ -1,25 +1,25 @@
-# Troubleshooting NSClient
+# Αντιμετώπιση προβλημάτων του NSClient
 
-NSClient rely on stable communication with Nightscout. Unstable connection leads to synchronization errors and high data usage.
+Ο NSClient βασίζεται στη σταθερή επικοινωνία με το Nightscout. Η ασταθής σύνδεση οδηγεί σε σφάλματα συγχρονισμού και υψηλή χρήση δεδομένων.
 
-If nobody is following you on Nightscout you can pause NSClient to save (a lot) battery life or setup connection only on wifi and during charging.
+Εάν κανείς δεν σας παρακολουθεί στη Nightscout, μπορείτε να θέσετε σε παύση το NSClient για να αποθηκεύσετε (κατά πολύ) τη διάρκεια ζωής της μπαταρίας ή τη σύνδεση ρύθμισης μόνο σε wifi και κατά τη διάρκεια της φόρτισης.
 
-* How to detect unstable connection?
+* Πώς να ανιχνεύσετε ασταθή σύνδεση;
 
-Go to NSClient tab in AAPS and watch the log. Common beavior is to receive PING every ~30s and almost none reconnection messages. If you see many reconnections there is a problem. Since AndoridAPS 2.0 when such behavior is detected NSClient is paused for 15 minutes and message "NSClient malfunction" on Overview is displayed.
+Μεταβείτε στην καρτέλα NSClient στο AAPS και παρακολουθήστε το αρχείο καταγραφής. Common behavior is to receive PING every ~30s and almost none reconnection messages. Εάν δείτε πολλούς επανασύνδεσμους, υπάρχει κάποιο πρόβλημα. Since AndroidAPS 2.0 when such behavior is detected NSClient is paused for 15 minutes and message "NSClient malfunction" on Overview is displayed.
 
-* Restart
+* Επανεκκίνηση
 
-What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
+Αυτό που πρέπει να δοκιμάσετε ως πρώτο βήμα είναι η επανεκκίνηση και των δύο: Nightscout και, στη συνέχεια, το τηλέφωνο για να διαπιστώσετε αν το ζήτημα είναι μόνιμο
 
-* Phone issues
+* Θέματα τηλεφώνου
 
-Android may put your phone into a sleep. Check you have exception for AndroidAPS in power options to allow run it on background all the time. Check it again on strong network signal. Try another phone.
+Το Android μπορεί να κάνει το τηλέφωνό σας να μπει σε λειτουργία εξοικονόμησης. Ελέγξτε ότι έχετε εξαίρεση το AndroidAPS στις επιλογές παροχής ενέργειας, ώστε να μπορείτε να το εκτελείτε συνεχώς στο παρασκήνιο. Ελέγξτε ξανά με ισχυρό σήμα δικτύου. Δοκιμάστε ένα άλλο τηλέφωνο.
 
 * Nightscout
 
-If you are on Azure for many people helped to move to Heroku. Recently was reported Azure workaround to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+Αν είστε στο Azure δοκιμάστε μετακόμιση στο Heroku, πολλοί άνθρωποι έχουν βοηθηθεί. Πρόσφατα αναφέρθηκε στο Azure λύση για να ορίσετε στις Ρυθμίσεις εφαρμογής πρωτόκολλο HTTP σε 2.0 και Websockets σε ON
 
-* If you still get an error...
+* Εάν εξακολουθείτε να έχετε κάποιο σφάλμα...
 
-Check the size of your database in mLab. 496MB means it is full and needs to be compacted. [Follow these OpenAPS instructions for checking the size of your database](https://openaps.readthedocs.io/en/latest/docs/Troubleshooting/Rig-NS-communications-troubleshooting.html#mlab-maintenance). If compacting does not work, you should consider donating your AndroidAPS data to the Data Commons (for research) before deleting any data collections. There are [instructions in the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Give%20Back-Pay%20It%20Forward/data-commons-data-donation.html) for how to accomplish this.
+Ελέγξτε το μέγεθος της βάσης δεδομένων σας σε mLab. Το 496MB σημαίνει ότι είναι γεμάτο και πρέπει να συμπιεστεί. [ Ακολουθήστε αυτές τις οδηγίες του OpenAPS για να ελέγξετε το μέγεθος της βάσης δεδομένων σας ](https://openaps.readthedocs.io/en/latest/docs/Troubleshooting/Rig-NS-communications-troubleshooting.html#mlab-maintenance). Εάν η συμπίεση δεν λειτουργεί, θα πρέπει να εξετάσετε το ενδεχόμενο να δώσετε τα δεδομένα σας AndroidAPS στα δεδομένα Commons (για έρευνα) πριν διαγράψετε τυχόν συλλογές δεδομένων. Υπάρχουν οδηγίες [ στην τεκμηρίωση του OpenAPS ](https://openaps.readthedocs.io/en/latest/docs/Give%20Back-Pay%20It%20Forward/data-commons-data-donation.html) για τον τρόπο επίτευξης αυτού του στόχου.

@@ -27,18 +27,26 @@ Word lid van de belangrijkste [AndroidAPS Facebook groep](https://www.facebook.c
 
 * [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): Australische gebruikers van OpenAPS, Loop en AndroidAPS
 
+### Tsjechisch en Slowaaks
+
+* [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Tsjechisch sprekende gebruikers van AndroidAPS
+
 ### Duitsland
 
-* [Looped-DE](https://www.facebook.com/groups/loopedDE/): Duits sprekende gebruikers van OpenAPS, Loop en AndroidAPS
+* [Open Source Looper Community](https://de.loopercommunity.org/): Duitse looper gemeenschap voor Open Source Loop, diabetes in het algemeen, communicatie, ondersteuning en lokale bijeenkomsten
+* [Looper Meetings Duitsland, Oostenrijk & Zwitserland](http://loopertreffen.androidaps.de)
 * [Freestyle Libre Freaks](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre als CGM/FGM
-* [NightscoutDE](https://www.facebook.com/groups/nightscoutDE/)
-* [Looper bijeenkomsten Duitsland & Oostenrijk](http://loopertreffen.androidaps.de)
-
-### Groot-Brittannië
-
-* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (Gebruikers uit Groot-Brittanië en Nood-Ierland van OpenAPS, Loop en AndroidAPS)
+* [NightscoutDE Facebook-groep](https://www.facebook.com/groups/nightscoutDE/)
 
 ### Nederland
 
 * [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Nederlandstalige gebruikers van OpenAPS, Loop en AndroidAPS
 * [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
+
+### Zweden
+
+* [Looped Sweden](https://www.facebook.com/groups/661514380864081/): Gebruikers uit Zweden van OpenAPS, Loop en AndroidAPS
+
+### Groot-Brittannië
+
+* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (Gebruikers uit Groot-Brittanië en Nood-Ierland van OpenAPS, Loop en AndroidAPS)

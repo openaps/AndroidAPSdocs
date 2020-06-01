@@ -12,15 +12,15 @@
 
 ## Limitaciones
 
-- El bolo extendido y el bolo multionda no son compatibles (consulte en cambio los carbohidratos extendidos)
+- Los bolos extendidos y multiondas no están soportados (consulte el apartado [Carbohidratos Extendidos](../Usage/Extended-Carbs.rst) en su lugar)
 - Solo se admite un perfil basal.
 - Establecer más de un perfil basal en la bomba, o administrar bolos extendidos o bolos multionda desde la bomba interfiere con TBR y fuerza al lazo cerrado a un modo de suspensión baja durante 6 horas ya que al lazo cerrado no puede funcionar de manera segura bajo estas condiciones.
 - •Actualmente no es posible configurar la hora y la fecha en la bomba, por lo que los cambios de horario de verano deben realizarse manualmente (puede desactivar la actualización automática del reloj por la tarde y volver a cambiarla por la mañana junto con el reloj de la bomba para evitar una alarma durante la noche).
 - Actualmente solo se admiten tasas basales en el rango de 0.05 a 10 U / h. Esto también se aplica cuando se modifica un perfil, p.ej cuando aumenta al 200%, la tasa basal más alta no debe superar las 5 U / h, ya que se duplicará. De manera similar, cuando se reduce al 50%, la tasa basal más baja debe ser de al menos 0,10 U / h.
 - Si el lazo solicita que se cancele una TBR en ejecución, el Combo configurará una TBR de 90% o 110% durante 15 minutos. Esto es porque cancelar un TBR causa una alerta en la bomba que causa muchas vibraciones.
 - Ocasionalmente (cada dos o tres días) AAPS puede no tratar una alerta de TBR CANCELADA, por lo que el usuario debe tratarla (presionar el botón Actualizar en AAPS para transferir la advertencia a AAPS o confirmar la alerta en la bomba).
-- La estabilidad de la conexión Bluetooth varía según diferentes teléfonos, lo que causa alertas de "no se puede volver a conectar la bomba", cuando se pierde conexión con la bomba. Si se produce ese error, asegúrese de que Bluetooth esté habilitado, presione el botón Actualizar en la barra Combo para ver si esto fue causado por un problema conexión y, si todavía no se establece ninguna conexión, reinicie el teléfono, que normalmente debería solucionarlo. Puede haber otro problema donde el reinicio no ayuda, pero se requiere presionar un botón en la bomba (que restablece el Bluetooth de la bomba), antes de que la bomba acepte las conexiones desde el teléfono nuevamente. Es muy poco lo que se puede hacer para remediar estos problemas en este punto. Entonces, si ve esos errores con frecuencia, su única opción en este momento es obtener otro teléfono que se sepa que funciona bien con AndroidAPS y el Combo (consulte más arriba).
-- Los bolos de la bomba no siempre se detectan a tiempo (se verifica cuando AAPS se conecte a la bomba) y puede llevar hasta 20 minutos en el peor de los casos. Los bolos en la bomba siempre se verifican antes de un TBR alto o un bolo emitido por AAPS, pero debido a las limitaciones, AAPS rechazará las TBR / Bolus, ya que se calculó bajo premisas falsas. (-> ¡No comande bolos desde la bomba! Consulte el capítulo de Uso)
+- Bluetooth connection stability varies with different phones, causing "pump unreachable" alerts, where no connection to the pump is established anymore. Si se produce ese error, asegúrese de que Bluetooth esté habilitado, presione el botón Actualizar en la barra Combo para ver si esto fue causado por un problema conexión y, si todavía no se establece ninguna conexión, reinicie el teléfono, que normalmente debería solucionarlo. Puede haber otro problema donde el reinicio no ayuda, pero se requiere presionar un botón en la bomba (que restablece el Bluetooth de la bomba), antes de que la bomba acepte las conexiones desde el teléfono nuevamente. Es muy poco lo que se puede hacer para remediar estos problemas en este punto. Entonces, si ve esos errores con frecuencia, su única opción en este momento es obtener otro teléfono que se sepa que funciona bien con AndroidAPS y el Combo (consulte más arriba).
+- Issuing a bolus from the pump will not always be detected in time (checked for whenever AAPS connects to the pump), and might take up to 20 minutes in the worst case. Los bolos en la bomba siempre se verifican antes de un TBR alto o un bolo emitido por AAPS, pero debido a las limitaciones, AAPS rechazará las TBR / Bolus, ya que se calculó bajo premisas falsas. (-> ¡No comande bolos desde la bomba! Consulte el capítulo de Uso)
 - Debe evitarse establecer un TBR en la bomba, ya que el lazo cerrado asume el control de TBR. La detección de un nuevo TBR en la bomba puede demorar hasta 20 minutos y el efecto del TBR solo se tendrá en cuenta desde el momento en que se detecte, por lo que en el peor de los casos podría haber 20 minutos de un TBR no reflejada en el IOB del algoritmo. 
 
 ## Configuración
@@ -40,64 +40,52 @@
     - Habilitar el bloqueo de teclas en la bomba para evitar los bolos desde la bomba, especialmente. cuando la bomba se usó antes y el bolusing rápido era un hábito.
     - Establezca el tiempo de espera de la pantalla y el tiempo de espera del menú en un mínimo de 5.5 y 5 respectivamente. Esto permite que el AAPS se recupere más rápidamente de situaciones de error y reduce la cantidad de vibraciones que pueden ocurrir durante tales errores
 
-![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+![Pantalla del menú de usuarios](../images/combo/combo-menu-settings.png)
 
-![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+![Pantalla de los ajustes de basal temporal](../images/combo/combo-tbr-settings.png)
 
-![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+![Pantalla de los ajustes de bolus](../images/combo/combo-bolus-settings.png)
 
-![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+![Pantalla de los ajustes del cartucho de insulina](../images/combo/combo-insulin-settings.png)
 
-- Install AndroidAPS as described in the [AndroidAPS wiki](http://wiki.AndroidAPS.org).
+- Instalar AndroidAPS como se describe en la [AndroidAPS wiki](http://wiki.AndroidAPS.org).
 - Asegúrese de leer la wiki para comprender cómo configurar AndroidAPS.
 - Seleccione el complemento MDI en AndroidAPS, no el complemento Combo en este punto para evitar que el complemento Combo interfiera con ruffy durante el proceso de emparejamiento.
-- Follow the link <http://ruffy.AndroidAPS.org> and clone ruffy via git.
-- Instale ruffy y úselo para emparejar la bomba. Si no funciona después de varios intentos, cambie a la rama 'pairing', empareje la bomba y luego vuelva a cambiar a la rama original. Note that the pairing processing is somewhat fragile (but only has to be done once) and may need a few attempts; quickly acknowledge prompts and when starting over, remove the pump device from the Bluetooth settings beforehand. Another option to try is to go to the Bluetooth menu after initiating the pairing process (this keeps the phone's Bluetooth discoverable as long as the menu is displayed) and switch back to ruffy after confirming the pairing on the pump, when the pump displays the authorization code. If you're unsuccessful in pairing the pump (say after 10 attempts), try waiting up to 10s before confirming the pairing on the pump (when the name of the phone is displayed on the pump). If you have configured the menu timeout to be 5s above, you need to increase it again. Some users reported they needed to do this. Lastly, consider moving from one room to another in case of local radio interference. At least one user immediately overcame pairing problems by simply changing rooms.
+- Siga el enlace <http://ruffy.AndroidAPS.org> y clone ruffy a través de git.
+- Instale ruffy y úselo para emparejar la bomba. Si no funciona después de varios intentos, cambie a la rama 'pairing', empareje la bomba y luego vuelva a cambiar a la rama original. Tenga en cuenta que el proceso de emparejamiento es algo frágil (pero solo debe hacerse una vez) y puede necesitar algunos intentos; confirme rápidamente las indicaciones y, cuando comience nuevamente, elimine la bomba de dispositivos en la configuración de Bluetooth de antemano. Otra opción para probar es ir al menú de Bluetooth después de iniciar el proceso de emparejamiento (esto permite que el Bluetooth del teléfono sea visible siempre que se muestre el menú) y volver a cambiar a ruffy después de confirmar el emparejamiento en la bomba, cuando la bomba muestra la autorización código. Si no logra emparejar la bomba (por ejemplo, después de 10 intentos), intente esperar hasta 10 s antes de confirmar el emparejamiento en la bomba (cuando se muestra el nombre del teléfono en la bomba). Si ha configurado el tiempo de espera del menú para que sea 5s arriba, necesita aumentarlo nuevamente. Algunos usuarios informaron que necesitaban hacer esto. Por último, considere la posibilidad de pasar de una habitación a otra en caso de interferencia de radio local. Al menos un usuario superó inmediatamente los problemas de emparejamiento simplemente cambiando de ubicación.
 - Cuando AAPS usa ruffy, la aplicación ruffy no se puede usar. La manera más fácil es simplemente reiniciar el teléfono después del proceso de emparejamiento y dejar que AAPS comience con ruffy en segundo plano.
 - Si la bomba es completamente nueva, debe poner un bolo con la bomba, para que se cree una primera entrada de historia de la bomba.
 - Antes de habilitar el complemento Combo en AAPS, asegúrese de que su perfil esté configurado correctamente y activado (!) Y su perfil basal esté actualizado, ya que AAPS sincronizará el perfil basal con la bomba. Luego active el complemento Combo. Presione el botón Actualizar en la pestaña Combo para inicializar la bomba.
 - Para verificar su configuración, con la bomba desconectada, use AAPS para establecer un TBR de 500% durante 15 minutos y ponga un bolo. La bomba ahora debería tener un TBR en ejecución y el bolo en la historia. AAPS debe mostrar la TBR y el bolo.
 
-## Why does pairing with the pump does not work with the app "ruffy"?
+## ¿Por qué la vinculación con la bomba no funciona con la app "ruffy"?
 
-There are serveral possible reasons. Try the following steps:
+There are several possible reasons. Realice los siguientes pasos:
 
-1. Insert a **fresh or full battery** into the pump. Look at the battery section for details. Make sure that the pump is very close to the smartphone.
+1. Ponga una **batería nueva o totalmente cargada ** en la bomba. Mire la sección de batería para más detalles. Asegúrese de que la bomba esta muy cerca del teléfono.
 
-![Combo should be next to phone](../images/Combo_next_to_Phone.png)
+![La bomba debe estar al lado del teléfono](../images/Combo_next_to_Phone.png)
 
-2. Turn off or remove any other bluetooth devices so they will not be able to establish a connection to the phone while pairing is in progress. Any parallel bluetooth communication or prompt to establish connections might disturb the pairing process.
+2. Apague o retire cualquier otro dispositivo bluetooth de manera que no establezca conexión con el teléfono mientras la vinculación está en marcha. Cualquier comunicación bluetooth simultánea o pregunta de establecer conexión puede interferir con el proceso de vinculación.
 
-3.     Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until 
-      **NO DEVICE** is shown.
+3.     Borre los dispositivos Bluetooth ya vinculados en el menú de la bomba:**AJUSTES BLUETOOTH / CONEXION / BORRAR** hasta que se muestre **NO DEVICE**.
       
 
-4. Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device "**SpiritCombo**"
-5. Make sure, that AAPS not running in background the loop. Deaktivate Loop in AAPS.
-6. Now start ruffy on the phone. You may press Reset! and remove old Bonding. Then hit Connect!.
-7. In the Bluetooth menu of the pump, go to **ADD DEVICE / ADD CONNECTION**. Press *CONNECT!** * Step 5 and 6 have to be in a short timing.
-8.     Now the Pump should show up the BT Name of phone to select for pairing. Here it is importand to whait at least 5s 
-      bevore you hit the select button on Pump. Otherwise the Pumpe will not send the Paring request to the Phone proberly.
-      
-      * If Combo Pump is set to 5s Screentime out, you may test it with 40s (original setting). From experiance the time 
-        between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out 
-        without successfully Pair. Later you should set it back to 5s, to meet AAPS Combo settings.
-      * If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not 
-        compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If 
-        possible, try another smartphone. You can find a list of already successfully used smartphones under [AAPS Phones] 
-        (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
-      
+4. Borre la bomba ya conectada al teléfono vía Bluetooth: En ajustes/Bluetooth, eliminar dispositivo emparejado "**SpiritCombo**"
+5. Asegúrese que el lazo de AAPS no está en ejecución. Disable Loop in AAPS.
+6. Ahora inicie ruffy en el teléfono. Debe pulsar Reset! eliminar el antiguo emparejamiento. Y por último pulsar en Connectar!.
+7. El el menú Bluetooth de la bomba, ir a **ADD DEVICE / ADD CONNECTION**. Press *CONNECT!** * Step 5 and 6 have to be done in a short timing.
+8. Now the Pump should show up the BT Name of phone to select for pairing. Here it is important to wait at least 5s before you hit the select button on Pump. Otherwise the Pump will not send the Pairing request to the Phone properly.
 
-9.     At next Pump should show up a 10 digit security code. And Ruffy a screen to enter it. So enter it in Ruffy and you 
-      should be ready to go.
-      
+* If Combo Pump is set to 5s Screen timeout, you may test it with 40s (original setting). From experience the time between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out without successfully Pair. Later you should set it back to 5s, to meet AAPS Combo settings. * If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If possible, try another smartphone. You can find a list of already successfully used smartphones under \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435).
 
+9. At next Pump should show up a 10 digit security code. And Ruffy a screen to enter it. So enter it in Ruffy and you should be ready to go.
 10. Reboot the phone.
 11. Now you can restart AAPS loop.
 
 ## Uso
 
-- Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
+- Tenga en cuenta que esto no es un producto, especializado, es necesario que el usuario supervise y entienda el sistema, sus limitaciones y cómo puede fallar. Se aconseja encarecidamente NO utilizar este sistema cuando la persona lo que utiliza no es capaz de entender completamente el sistema.
 - Lea la documentación de OpenAPS https://openaps.org para comprender el algoritmo de lazo cerrado en el que se basa AndroidAPS.
 - Lea la wiki para conocer y comprender AndroidAPS http://wiki.AndroidAPS.org
 - Esta integración usa la misma funcionalidad que proporciona el medidor que viene con el Combo. El medidor permite reflejar la pantalla de la bomba y presiona el botón hacia la bomba. La conexión a la bomba y este reenvío es lo que hace la aplicación Ruffy. Un componente de script lee la pantalla y automatiza el ingreso de bolos, TBR, etc., y se asegura de que las entradas se procesen correctamente. AAPS luego interactúa con el scripter para aplicar comandos de lazo cerrado y administrar bolos. Este modo tiene algunas restricciones: es comparativamente lento (pero lo suficientemente rápido para lo que se usa), y establecer un TBR o administrar un bolo hace que la bomba vibre.
@@ -105,7 +93,7 @@ There are serveral possible reasons. Try the following steps:
 - No configure ni cancele un TBR en la bomba. El lazo asume el control de TBR y, de lo contrario, no puede funcionar de manera confiable, ya que no es posible determinar el tiempo de inicio de una TBR establecida por el usuario en la bomba.
 - El primer perfil basal de la bomba se lee al inicio de la aplicación y es actualizado por AAPS. La tasa basal no se debe cambiar manualmente en la bomba, pero se detectará y corregirá como una medida de seguridad (no confíe en medidas de seguridad por defecto, esto es para detectar un cambio.
 - Se recomienda habilitar el bloqueo de teclas en la bomba para evitar opción bolos de la bomba, especialmente. cuando la bomba se usó antes y el uso de la función "bolo rápido" era un hábito. Además, con el bloqueo de teclas activado, presionar accidentalmente una tecla NO interrumpe la comunicación activa entre AAPS y la bomba.
-- Cuando se inicia una alerta BOLUS / TBR CANCELED en la bomba durante el bolo o la configuración de una TBR, esto se debe a una desconexión entre la bomba y el teléfono, lo que ocurre de vez en cuando. AAPS intentará reconectar y confirmar la alerta y luego volver a intentar la última acción (los bolos NO se vuelven a intentar por razones de seguridad). Por lo tanto, dicha alarma puede ignorarse ya que AAPS la confirmará automáticamente, generalmente dentro de 30 segundos (cancelarla no es un problema, pero hará que la acción activa tenga que esperar hasta que la pantalla de la bomba se apague antes de que pueda volver a conectarse a la bomba). Si la alarma de la bomba continúa, la confirmación automática para eliminar la alerta falla, en cuyo caso el usuario debe confirmar la alarma manualmente.
+- Cuando se inicia una alerta BOLUS / TBR CANCELED en la bomba durante el bolo o la configuración de una TBR, esto se debe a una desconexión entre la bomba y el teléfono, lo que ocurre de vez en cuando. AAPS intentará reconectar y confirmar la alerta y luego volver a intentar la última acción (los bolos NO se vuelven a intentar por razones de seguridad). Por lo tanto, dicha alarma puede ignorarse ya que AAPS la confirmará automáticamente, generalmente dentro de 30 segundos (cancelarla no es un problema, pero hará que la acción activa tenga que esperar hasta que la pantalla de la bomba se apague antes de que pueda volver a conectarse a la bomba). If the pump's alarm continues, automatic confirmation failed, in which case the user needs to confirm the alarm manually.
 - Cuando se salta una alarma de cartucho bajo o batería baja durante un bolo, se confirman y se muestran como una notificación en AAPS. Si se producen mientras no hay conexión abierta a la bomba, al ir a la pestaña Combo y al presionar el botón Actualizar se hará cargo de esas alertas confirmándolas y mostrando una notificación en AAPS.
 - Cuando AAPS no confirma una alerta TBR CANCELADA, o una se genera por un motivo diferente, al presionar Actualizar en la pestaña Combo se establece una conexión, se confirma la alerta y se muestra una notificación en AAPS. Esto se puede hacer de manera segura, ya que esas alertas son benignas: se volverá a establecer un TBR apropiado durante la siguiente iteración del lazo cerrado.
 - Para todas las demás alertas generadas por la bomba: la conexión a la bomba mostrará el mensaje de alerta en la pestaña Combo, p.ej "Estado: E4: oclusión", además de mostrar una notificación en la pantalla principal. Un error generará una notificación urgente. AAPS nunca confirma errores graves en la bomba, pero la bomba vibra y suena para asegurarse de que el usuario esté informado de una situación crítica que necesita acción.

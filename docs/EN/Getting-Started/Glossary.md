@@ -47,7 +47,7 @@
  <td>BAT</td>
  <td>status light low battery on homescreen</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>BG</td>
@@ -87,7 +87,7 @@
 </tr>
 <tr>
  <td>CAGE</td>
- <td>canula age - displayed in Nightscout if information was entered in the AAPS careportal tab or through AAPS actions tab 'prime'</td>
+ <td>canula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -95,7 +95,7 @@
  <td>CAN</td>
  <td>status light overdue canula change on homescreen</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -184,7 +184,7 @@
 <tr>
  <td>LGS</td>
  <td>Low Glucose Suspend<br>AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
- <td><a href="../Usage/Objectives.html">objective 4</a></td>
+ <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objective 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
@@ -275,7 +275,7 @@
  <td>PH</td>
  <td>pump history (entry in treatments tab)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Screenshots</a></td>
 </tr>
 <tr>
  <td>Predictions</td>
@@ -299,7 +299,7 @@
  <td>RES</td>
  <td>status light overdue reservoir change on homescreen</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
@@ -309,7 +309,7 @@
 </tr>
 <tr>
  <td>SAGE</td>
- <td>sensor age - displayed in Nightscout if information was entered in the AAPS careportal tab</td>
+ <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
@@ -317,7 +317,7 @@
  <td>SEN</td>
  <td>status light sensor change on homescreen</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>Sensivity detection</td>
@@ -378,6 +378,12 @@
  <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
  <td>Open Loop</td>
  <td>&nbsp;</td>
+</tr>
+<tr>
+ <td>Wallpaper</td>
+ <td>AndroidAPS background image</td>
+ <td></td>
+ <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>
 </tr>
 <tr>
  <td>xDrip / xDrip+</td>

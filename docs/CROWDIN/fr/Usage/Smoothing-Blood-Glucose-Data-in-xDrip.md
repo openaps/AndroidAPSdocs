@@ -1,19 +1,19 @@
-# Smoothing blood glucose data
+# Lissage des données de glycémie
 
-AAPS works best when the blood glucose data it receives is smooth and consistent. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
+Si les glycémies sont instables/bruitées, AAPS peut mal doser la quantité d'insuline, entraînant des hyper ou hypo. Pour cette raison, il est important de désactiver la boucle jusqu'à ce que le problème soit résolu. Selon votre MGC, de tels problèmes peuvent être dus à la configuration de la MGC ou à des problèmes de capteur ou de site. You may need to replace your CGM sensor to resolve this. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
 
-## Dexcom G5 App (patched)
+## Application Dexcom G5 (patchée)
 
-When using Dexcom G5 App (patched) your BG data is smooth and consistent. There are no restrictions in using SMB.
+Lorsque vous utilisez l'application Dexcom G5 (patchée) vos données de glycémie sont lisses et cohérentes. Il n'y a aucune restriction à utiliser les SMB.
 
-## xDrip+ with Dexcom G5
+## xDrip+ avec Dexcom G5
 
-Smooth enough data is only delivered if you use xDrip G5 'OB1 collector in native mode'.
+Les glycémies ne sont suffisament lissées avec XDrip+ et G5 que si vous utilisez 'OB1 collector in native mode'.
 
-## xDrip+ with Freestyle Libre
+## XDrip+ avec Freestyle Libre
 
-When using xDrip+ as your data source for Freestyle Libre values until now you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB because the BG values are not smooth enough. Except this, there are a couple of things you can do to help reduce noise in the data.
+Lorsque vous utilisez xDrip+ comme source de données avec le Freestyle Libre, vous ne pouvez pour l'instant pas activer 'Activer en permanence les SMB' et 'Activer SMB après injection de glucides' car les valeurs de glycémies ne sont pas assez lissées. Sauf qu'il y a deux choses que vous pouvez faire pour aider à réduire le bruit dans les données.
 
-**Smooth Sensor Noise.** In xDrip+ Settings > xDrip+ Display Settings ensure that Smooth Sensor Noise is turned on. This attempts to apply smoothing to noisy data.
+**Smooth Sensor Noise.** Allez dans xDrip+ Paramètres > xDrip+ Paramètres d'affichage, et vérifiez que "Smooth Sensor Noise" est activé. Cela va essayer de lisser les données bruyantes.
 
-**Smooth Sensor Noise (Ultrasensitive).** If you are still seeing noisy data in xDrip+ you can apply more aggressive smoothing using the Smooth Sensor Noise (Ultrasensitive) setting. This will attempt to apply smoothing even on very low levels of detected noise. To do this, first [enable engineering mode in xDrip+](../Enabling-Engineering-Mode-in-xDrip.md). Then navigate to Settings > xDrip+ Display Settings and turn on Smooth Sensor Noise (Ultrasensitive).
+**Smooth Sensor Noise (Ultrasensitive).** Si vous voyez toujours des données bruitées dans xDrip+, vous pouvez appliquer un lissage plus agressif en activant "Smooth Sensor Noise (Ultrasensitive)". Cela essaiera de lisser même si de faibles niveaux de bruits sont détectés. Pour ce faire, vous devez d'abord [activer le mode d'ingénierie dans xDrip+](https://github.com/MilosKozak/AndroidAPS/wiki/Enabling-Engineering-Mode-in-xDrip). Ensuite, allez dans Paramètres > xDrip+ Paramètres d'affichage et activez "Smooth Sensor Noise (Ultrasensitive)".

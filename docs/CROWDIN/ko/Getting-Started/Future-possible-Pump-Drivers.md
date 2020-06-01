@@ -1,54 +1,42 @@
-# Future (possible) Pump Drivers
+# 가능한 펌프 드라이버.
 
-This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
+아래는 현재 유효한 펌프리스트이며, AAPS의 상태 및 루핑시스템의 지원과 관련된 것입니다. 펌프에서 루프를 가능하게 하기 위해서 요구되는 정보들이 포함되어있습니다.
 
 ## Pumps whose support is in development
 
-### Medtronic
-
-**Loop status:** Some of older versions of pumps are loopable, but not the newer models (see below)
-
-**Other implementations:** OpenAPS, Loop
-
-**Java implementations:** Partial implementation available [Rountrip2](https://github.com/TC2013/Roundtrip2), and [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
-
-**AAPS implementation status:** Work in progress. See [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Most of work was done on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) to get framework and commands working. There is project (Medtronic) and tickets opened for future development on that repository, development is being done on branch dev_medtronic (which is default branch there). There is also gitter room: RileyLinkAAPS/Lobby. AAPS. 0.7 test "release" is out, with about 80% of all functionality, missing is only History analysis to determine state of the pump and to confirm that Treatments were or to import new treatments. For details and timing see [Project board](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
-
-**Hardware requirement for AAPS:** RileyLink (with 916 MHz antenna).
-
-**Loopable versions:** 512-522, 523 (Fw 2.4A or lower), 554 (EU firmware 2.6A or lower, CA firmware 2.7A or lower). Same for 7xx versions. All other devices are not supported, and probably won't be.
-
-* * *
-
-### Insulet Omnipod, eros pods ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
+### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
 **Loop status:** Not supported natively by AAPS at the moment. Decoding of the Omnipod protocol is finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
 
-**Other implementations:** Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink); Loop (stable in testing, requires RileyLink).
+**Other implementations:**
+
+- Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink, and specially modified AndroidAPS) 
+- OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project).
+- [iOS Loop](https://loopkit.github.io/loopdocs/) (stable, released, requires RileyLink).
 
 **Java implementations:** None till now.
 
-**AAPS implementation status:** Work has started on [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) for Omnipod (dev_omnipod branch) which will not require a Raspberry Pi, but this is not finished. You can follow progress on https://omniaps.slack.com/ channel android-driver.
+**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version was released in January 2020, and work is beeing done towards stabilization. Current version 0.3 (March)
 
 **Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.x) and 433 MHz antenna.
 
 ## Pumps that are Loopable
 
-### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH_FAQs))
+### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump will start in January 2019 (they are doing pre-sales now in USA).
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump officially started in January 2019.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. It's BT enabled.
 
-**Comments:** Omnipod DASH is currently not in the plan. Once we have a java implementation for standard Omnipod, we will work from that implementation. If (omnipod) protocol hasn't changed, we might have an implementation a few months later, but if the protocol has changed then it might take some time.
+**Comments:** We are looking into development of Omnipod DASH, but problem at the moment is, that Dash is not yet available in Europe (where most of AAPS developers are) and that communciation protocol is unknown. We will try to reverse engineer official Dash APK, to determine how communication works and then implementation based on that findings. You can follow what is happening here: [DashAAPS](https://github.com/andyrozman/DashAAPS/projects/1), but don't expect this to be available anytime soon. This is at the moment only Proof Of Concept (until Milestone 2 is completed).
 
 * * *
 
 ### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions.
+**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions. It seems that we will get loopable version in begining of 2021, see this [article](https://www.ypsomed.com/en/media/details/ypsomed-and-dexcom-enter-into-partnership-to-drive-closed-loop-system.html?fbclid=IwAR3gYSMz8dvPARYgbj5djm4Yxa7JdFthfzOrrg94C9Bigj6RGeycxSfGHyg).
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. It's BT enabled.
 
 * * *
 
@@ -56,7 +44,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. It's BT enabled.
 
 * * *
 
@@ -64,7 +52,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
 
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+**AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. BT기능이 가능할 것으로 보여집니다.
 
 * * *
 
@@ -72,15 +60,27 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
 
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+**AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. BT기능이 가능할 것으로 보여집니다.
 
 * * *
 
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app for control.
+**Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app on special controler device for control.
 
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+**AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. BT기능이 가능할 것으로 보여집니다.
+
+### Medtronic Bluetooth
+
+**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
+
+### Willcare Insulin pump ([Homepage](http://en.shinmyungmedi.com))
+
+**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+
+**Hardware requirement for AAPS:** None. BT기능이 가능할 것으로 보여집니다.
+
+**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
 
 * * *
 
@@ -90,7 +90,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. It's BT enabled.
 
 **Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 

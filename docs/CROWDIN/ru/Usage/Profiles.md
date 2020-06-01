@@ -1,23 +1,83 @@
-# Profile switch
+# Profile switch/смена профиля
 
-On starting your AndroidAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately but you need to switch the same profile again (in NS or AAPS) to start using these changes.
+При запуске AndroidAPS и выборе проиля необходимо выполнить "Profile switch" с нулевой продолжительностью действия (объясняется ниже). При этом AAPS начинает отслеживать историю профилей, а каждое новое изменение профиля требует другого "переключения профиля" даже при изменении содержимого профиля в NS. Обновленный профиль немедленно передается в AAPS, но для начала использования этих изменений необходимо снова включить один и тот же профиль (в NS или AAPS).
 
-Internaly AAPS creates snapshot of profile with start date and duration and is using it within selected period. Duration of zero means infinite. Such profile is valid until new "Profile switch".
+Внутри себя AAPS создает моментальную копию профиля с начальной датой и длительностью и использует ее в выбранный период. Нулевая длительность означает постоянную работу. Такой профиль действителен до нового "переключения профиля".
 
-If you use "Profile switch" with duration profile is switched back to previous valid "Profile switch"
+Для того чтобы переключить профиль выполните долгое нажатие на название текущего профиля ("Aktuell (Rad)" на рисунке ниже) и выберите переключить профиль.
 
-If you use local AAPS profiles (Simple, Local, CPP) you have to press button there to apply these changes (it creates proper "Profile switch" event).
+![Переключить профиль](../images/ProfileSwitch_HowTo.png)
 
-Within the "profile switch" you can choose two changes which used to be part of the Circadian Percentage Profile:
+Если вы используете "Переключатель профиля" с указанием длительности, то профиль вернется на предыдущий допустимый
 
-* Percentage - this applies the same percentage to all parameters. If you set it to 130% (meaning you are 30% more insulin resistant), it will up the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example). It will be sent to the pump and then be the default basal rate. The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So for example separate percentage profiles can be set up for different stages of the hormone cycle.
-* Timeshift - this moves everything round the clock by the number of hours entered. So for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
+Если вы используете локальные профили AAPS (Simple, Local, CPP), вы должны нажать эту кнопку, чтобы применить изменения (это создает правильное событие "Profile switch").
 
-This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+В рамках "переключения профиля" можно выбрать два дополнительных изменения, которые раньше были частью суточного процентного профиля Circadian Percentage Profile:
 
-<b>Troubleshooting Profile Errors</b>  
+## Процент
 
+* Это применяет одинаковый процент ко всем параметрам. 
+* Если установить его на 130% (то есть вы на 30% более инсулинорезистентны), то он повысит базальную скорость на 30%. Кроме того, соответственно снизится чувствительность к инсулину ISF и соотношение инсулин-углеводы (делятся на 1.3 в данном примере).
+  
+  ![Пример переключения профиля в процентах](../images/ProfileSwitchPercentage.png)
 
-* 'Invalid profile' or 'Basal Profile not aligned to hours' error message will appear if you have any basal rates or I:C rates not on the hour. The DanaR and DanaRS pumps do not support changes on the half hour.
-* 'Received profile switch from NS but profile does not exist locally' or Go either to Treatments tab in AndoridAPS and select Profile Switch, 'remove' the date and time that was mentioned in the error message. Or go to your mlab collection, search in the treatments for profile switch and delete the date and time that was mentioned in the error message. ![mlab](https://files.gitter.im/MilosKozak/AndroidAPS/I5am/image.png)
-* 'DIA 3hr too short' error message will appear if your duration of insulin action in your profile is listed at a value that AndroidAPS doesn't believe will be accurate. Read about [selecting the right DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a Profile Switch to continue.
+* Эти установки будут отправлены в помпу, а затем будут использоваться по умолчанию.
+
+* Алгоритм цикла (открытый или закрытый) продолжит работу на основе выбранного процентного профиля. Так, отдельные процентные профили могут быть установлены для различных этапов гормонального цикла.
+
+## Сдвиг по времени
+
+![Переключение профиля в процентах и сдвиг по времени](../images/ProfileSwitchTimeShift2.png)
+
+* Эта установка позволяет сместить профиль на введенное число часов. 
+* Так, например, когда работаете в ночные смены, сдвиньте часы на то, насколько позже/раньше вы ложитесь спать или просыпаетесь.
+* Всегда возникает вопрос о том, какие настройки должны сменять параметры текущего времени. Это время должно быть сдвинуто на х часов. Следуйте инструкции, описанной в этом примере: 
+  * Текущее время: 12:00
+  * **Сдвиг в сторону увеличения** времени 
+    * 2:00 ** + 10 ч **-> 12:00
+    * Параметры от 2:00 будут использоваться вместо параметров, обычно используемых в 12:00 из-за положительного сдвига времени.
+  * **Сдвиг в сторону уменьшения ** времени 
+    * 22:00 ** -10 ч **-> 12:00
+    * Параметры от 22:00 будут использоваться вместо параметров, обычно используемых в 12:00 из-за отрицательного сдвига времени.
+
+![Инструкции по смене профиля и часового пояса](../images/ProfileSwitch_PlusMinus2.png)
+
+Этот механизм захвата снимков профиля позволяет гораздо точнее вычислить прошлое и дает возможность отслеживать изменения профиля.
+
+## Устранение ошибок профиля
+
+### 'Недопустимый профиль'/'Профиль базала не скорректирован по часам '
+
+![Базал не соответствует распределению по часам](../images/BasalNotAlignedToHours2.png)
+
+* Эти сообщения об ошибках будут появляться, если базальные скорости или коэффициенты I:C не выверены по часам. (Так, помпы DanaR и DanaRS не поддерживают изменения в течение получаса)
+  
+  ![Пример профиля не распределен по часам](../images/ProfileNotAlignedToHours.png)
+
+* Запомните / запишите дату и время, указанные в сообщении об ошибке (26/07/2019 5:45 pm на снимке экрана выше).
+
+* Перейдите на вкладку терапии
+* Выберите Переключатель профилей
+* Прокрутите страницу пока не найдете дату и время сообщения об ошибке.
+* Используйте функцию удаления.
+* Иногда находится не только один неисправный коммутатор профиля. В этом случае удалите также другие.
+  
+  ![Удалите переключатель профиля](../images/PSRemove.png)
+
+Как вариант, можно удалить переключатель профиля непосредственно в mLab, как описано ниже.
+
+### 'Получено переключение профиля из NS, но профиль не существует локально'
+
+* Запрошенный профиль не синхронизирован корректно с Nightscout.
+* Следуйте инструкциям выше, чтобы удалить переключатель профиля
+
+Как вариант, можно удалить переключатель профиля непосредственно в mLab:
+
+* Перейдите в коллекцию mlab
+* Найдите в терапии переключатель профиля
+* Удалите переключатель профиля с датой и временем, указанным в сообщении об ошибке. ![mlab](../images/mLabDeletePS.png)
+
+### Слишком короткое время действия инсулина "DIA 3hr"
+
+* Сообщение об ошибке появится, если длительность действия инсулина в вашем профиле указана со значением, которое AndroidAPS не признает точным. 
+* Прочитайте о [ выборе правильного времени действия инсулина DIA ](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) и отредактируйте его в своем профиле, затем выполните [ Profile Switch ](../Usage/Profiles), чтобы продолжить.

@@ -4,13 +4,17 @@
 
 * * *
 
-## ***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to version 2.1** and **uninstall SightRemote**.*
+## ***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to the newest AAPS version** and **uninstall SightRemote**.*
 
 ## Hardware and software requirements
 
-* A Roche Accu-Chek Insight pump (any firmware, they all work) <br /> Note: AAPS will write data always in **first basal rate profile in the pump**
+* A Roche Accu-Chek Insight pump (any firmware, they all work)
+    
+    Note: AAPS will write data always in **first basal rate profile in the pump**.
+
 * An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
-* The AndroidAPS app (at least v2.1) installed on your phone
+
+* The AndroidAPS app installed on your phone
 
 ## Setup
 
@@ -45,22 +49,28 @@
     
     ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
-Note: There will be no permanent connection between pump and phone. A connection will only be established if neccessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
+Note: There will be no permanent connection between pump and phone. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
 
 ## Settings in AAPS
 
-![Screenshot of Insight Settings](../images/Insight_pairing.png)
+You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > NSClient > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump.
+
+Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune. In AAPS go to Preferences > NSClient > Advanced Settings and Enable ‘NS upload only (disabled sync)‘.
+
+![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
 
 In the Insight settings in AndroidAPS you can enable the following options:
 
-* "Log site changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.  
-    <font color="red">Note: A cannula change also resets Autosens</b></font>
+* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
 * "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
+* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
 * "Log battery changes": This records a battery change when you put a new battery in the pump.
 * "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
 * "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
-* "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.  
-    <font color="red">Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.</font>
+* "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.
+    
+    **Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.**
+
 * "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
       
     Example for min. recovery duration = 5 and max. recovery duration = 20   
@@ -89,7 +99,8 @@ In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump an
 
 Configure alarms in the pump as follows:
 
-* Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
+* Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
+* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
 * Menu > Modes > Signal mode > Quiet
 
 This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
@@ -97,6 +108,8 @@ This will silence all alarms from the pump, allowing AndroidAPS to decide if an 
 Insight pumps with newer firmware will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus). Vibration cannot be disabled. Older pumps do not vibrate in these circumstances.
 
 ## Battery replacement
+
+Battery life for Insight when looping range from 10 to 14 days, max. 20 days. The user reporting this is using Energizer lithium batteries.
 
 The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
 
@@ -116,4 +129,4 @@ In this case turn off bluetooth on pump AND smartphone for about 10 seconds and 
 
 ## Crossing time zones with Insight pump
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).

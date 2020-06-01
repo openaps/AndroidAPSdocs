@@ -1,42 +1,30 @@
-# Sensitivity detection
+# Detekcja wrażliwości (sensitivity)
 
-## Sensitvity algorithm
+## Algorytmy detekcji wrażliwości na insulinę
 
-Currently we have 4 sensitivity detection models:
+Obecnie istnieje możliwość wyboru jednego z czterech modeli detekcji zmian wrażliwości na insulinę:
 
-* Sensitivity Oref0
-* Sensitivity AAPS
-* Sensitivity WeightedAverage
-* Sensitivity Oref1
+* Wrażliwość Oref0
+* Wrażliwość AAPS
+* Wrażliwość Średnia ważona
+* Wrażliwość Oref1
 
-### Sensitivity Oref0
+### Wrażliwość Oref0
 
-Basically sensitivity is calculated from 24h data in the past and carbs (if not absorbed) are cut off after time specified in preferences. The algorithm is similiar to OpenAPS Oref0, described in [OpenAPS Oref0 documentation](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html).
+Co do zasady, wrażliwość jest obliczana na podstawie danych z ostatnich 24 godzin, przy czym węglowodany, które nie zostały wchłonięte przez okres ustalony w ustawieniach, są "ucinane" tj. nie są dalej brane pod uwagę. The algorithm is similiar to OpenAPS Oref0, described in [OpenAPS Oref0 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-### Sensitivity AAPS
+### Wrażliwość AAPS
 
-Sensitivity is calculated the same way like Oref0 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
+Wrażliwość jest obliczana w taki sam sposób, jak algorytm Oref0, ale dodatkowo możliwe jest ustalenie okresu z którego następuje kalkulacja. Minimalna absorpcja węglowodanów jest obliczana na podstawie wskaźnika - maksymalnego czasu absorpcji węglowodanów (max carbs absorption time) określonego w ustawieniach
 
-### Sensitivity WeightedAverage
+### Wrażliwość Średnia ważona
 
-Sensitivity is calculated as a weighted average from deviations. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
+Wrażliwość jest obliczana jako średnia ważona odchyleń. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
 
-### Sensitivity Oref1
+### Wrażliwość Oref1
 
-Sensitivity is calculated from 8h data in the past or from last site change, if it is less than 8h ago. Carbs (if not absorbed) are cut after time specified in preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from sensitivity calculation. So if you are using SMB with UAM, you have to choose Oref1 algorithm to work properly. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Wrażliwość jest obliczana na podstawie danych zebrany z ostatnich 8 godzin lub od chwili zmiany miejsca wkłucia (jeśli taka zmiana została dokonana w ostatnich 8 godzinach). Węglowodany, które nie zostały wchłonięte przez okres ustalony w ustawieniach, są "ucinane" tj. nie są dalej brane pod uwagę. Oref1 jest jedynym algorytmem, który współpracuje z metodą detekcji i reakcji na niezgłoszone posiłki (UAM) [Un-announced meal]. Współpraca ta polega na tym, iż momenty wykrycia niezgłoszonych posiłków (UAM) wyłączane są z obliczeń wrażliwości. Jeśli więc używasz SMB (super-mikro bolusów) z metodą detekcji UAM, do poprawnego funkcjonowania konieczne jest stosowanie algorytmu Oref1. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
 
-## Simultaneous carbs
+## Równoczesne węglowodany
 
-There is significant difference while using AAPS, WeightedAverage vs Oref0, Oref1. Oref plugins expects only one meal decaying at time. It means 2nd meal starts decaying after 1st meal is completely decayed. AAPS+Weighted average starts decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to meal size and max absorption time. The minimum absorption accordingly will be higher in comparation to Oref plugins.
-
-## COB Examples
-
-Oref0 / Oref1 - unabsorbed carbs are cut off after specified time
-
-![COB from oref0](../images/cob_oref0.png)
-
-AAPS, WeightedAverage - absorption is calculated to have `COB == 0` after specified time
-
-![COB from AAPS](../images/cob_aaps.png)
-
-If minimal carbs absorption is used instead of value calculated from deviations, a green dot appears on COB graph
+Należy podkreślić, iż pomiędzy modelami wykrywania wrażliwości - AAPS, Średnią ważoną a Oref0 i Oref1 istnieją zasadnicze różnice. [Oryginalny tekst jest mylący] W tym przypadku do COB dodaje się dodatkowe węglowodany, a następnie COB jest wchłaniany na podstawie obserwowanej absorpcji węglowodorów (w oparciu o to, ile wzrasta BG w stosunku do tego, ile powinno spaść wg. IOB) [Oryginalny tekst jest mylący] Algorytm AAPS oraz Średnio ważona zaczynają przyjmować wchłanianie posiłku niezwłocznie po tym, kiedy wpiszesz węglowodany do aplikacji. Jeśli w organizmie znajduje się więcej niż jeden posiłek, minimalne wchłanianie węglowodanów dostosowuje się do wielkości posiłku i maksymalnego czasu wchłaniania (carbs max absorption time). Minimalna absorpcja będzie odpowiednio wyższa w porównaniu do algorytmów Oref.

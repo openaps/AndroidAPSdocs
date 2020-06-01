@@ -6,9 +6,28 @@ Es gibt keine Probleme beim Zeitzonenwechsel im Smartphone, da die Pumpe keine H
 
 ## DanaRv2, DanaRS
 
-Diese Pumpen benötigen besondere Aufmerksamkeit, weil AndroidAPS die Historie der Pumpe verwendet, die Einträge in der Pumpe aber keine Zeitangaben beinhalten. Das bedeutet, dass ein einfacher Zeitzonenwechsel im Smartphone dazu führt, dass Einträge mit verschiedenen Zeitzonen ausgelesen und doppelt angezeigt werden. Um dies zu vermeiden, führe folgende Schritte bei jedem Zeitzonenwechsel aus:
+Diese Pumpen benötigen besondere Aufmerksamkeit, weil AndroidAPS die Historie der Pumpe verwendet, die Einträge in der Pumpe aber keine Zeitangaben beinhalten. **Das bedeutet, dass ein einfacher Zeitzonenwechsel im Smartphone dazu führt, dass Einträge mit verschiedenen Zeitzonen ausgelesen und doppelt angezeigt werden.**
 
-* setze das Smartphone vor der Reise auf manuellen Zeitzonenwechsel
+Um dies zu vermeiden, gibt es zwei Möglichkeiten:
+
+### Option 1: Heimazteit beibehalten und Time Shift des Profils
+
+* Schalte die automatische Einstellung von Datum und Uhrzeit in Deinem Smartphone aus (manueller Zeitzonen-Wechsel).
+* Dein Smartphone muss für die gesamte Reise auf Datum und Zeit Deines Heimatortes eingestellt bleiben.
+* Führe einen Profilwechsel mit Zeitverschiebung entsprechend dem Zeitunterschied Deines Heimatortes zum Zielort durch.
+   
+   * Drücke lang auf den Profilnamen (oben in der Mitte auf dem Startbildschirm).
+   * Wähle 'Profilwechsel'.
+   * Stelle die 'Zeitverschiebung' entsprechend Deines Zielortes ein.
+   
+   ![Profilwechsel mit Zeitverschiebung](../images/ProfileSwitchTimeShift2.png)
+   
+   * z.B. Wien -> New York: Profilwechsel +6 Stunden
+   * z.B. Wien -> Sydney: Profilwechsel -8 Stunden
+
+### Option : Pumpenhistorie löschen
+
+* Schalte die automatische Einstellung von Datum und Uhrzeit in Deinem Smartphone aus (manueller Zeitzonen-Wechsel)
 
 Wenn du aus dem Flugzeug steigst:
 
@@ -55,7 +74,7 @@ Ein guter Zeitpunkt für diese Umstellung ist bei niedrigem IOB (z.B. eine Stund
 
 ## Andere Pumpen - neu ab AAPS Version 2.2
 
-<b><font color="#FF0000">Du musst AAPS auf Version 2.2 (oder höher) updaten, um diese Funktion nutzen zu können!</font></b>
+**Du musst AAPS auf Version 2.2 (oder höher) updaten, um diese Funktion nutzen zu können!**
 
 * Um Schwierigkeiten zu vermeiden, wird der Loop für 3 Stunden nach der Zeitumstellung deaktiviert. Dies geschieht aus Sicherheitsgründen (IOB zu hoch aufgrund von doppeltem Boluseinträgen vor der Zeitumstellung).
 * Du erhälst 24 Stunden vor der Zeitumstellung einen Hinweis auf dem Startbildschirm, dass der Loop vorübergehend pausiert wird. Diese Nachricht erscheint ohne Ton, Vibration oder anderes.

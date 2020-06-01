@@ -1,6 +1,6 @@
-# Accu Chek Combo Pump
+# Pumpa Accu-Chek Combo
 
-**Tento software je součástí DIY řešení a není to produkt, vyžaduje, abyste si přečetli dokumentaci, pochopili celý systém a naučili se ho používat. Není to něco, co za Vás udělá veškerý management diabetu, ale pomůže Vám k lepším výsledkům a kvalitě života, pokud investujete čas k tomu potřebný. Zbytečně nespěchejte, a vytvořte si čas pro učení. Pouze Vy jste zodpovědní za to, jak ze systémem zacházíte.**
+**Tento software je součástí DIY řešení a není to produkt, vyžaduje, abyste si přečetli dokumentaci, pochopili celý systém a naučili se ho používat. Není to něco, co za Vás udělá veškerý management diabetu, ale pomůže Vám k lepším výsledkům a kvalitě života, pokud investujete čas k tomu potřebný. Zbytečně nespěchejte, a vytvořte si čas pro učení. Pouze Vy jste zodpovědní za ovládání Vašeho systému.**
 
 ## Hardwarové požadavky
 
@@ -12,9 +12,9 @@
 
 ## Omezení
 
-- Prodloužené bolusy a rozložené bolusy nejsou podporovány (podívejte se na [Extended Carbs](../Usage/Extended-Carbs))
+- Rozložené bolusy a kombinované bolusy nejsou podporovány (podívejte se na [Extended Carbs](../Usage/Extended-Carbs.rst))
 - Je podporován pouze jeden bazální profil.
-- Nastavení více než jednoho bazálního profilu na pumpě nebo rozloženého bolusu z pumpy naruší dočasný bazál a uvede smyčku do režimu zastavení při nízké glykémii na dobu 6 hodin. Za těchto podmínek nemůže smyčka správně pracovat.
+- Nastavení více než jednoho bazálního profilu na pumpě nebo rozloženého či kombinovaného bolusu z pumpy naruší dočasný bazál a uvede smyčku do režimu zastavení při nízké glykémii na dobu 6 hodin. Za těchto podmínek nemůže smyčka správně pracovat.
 - Aktuálně není možné nastavit čas a datum na pumpě, stejně jako změny času, které musí být zadány ručně (můžete deaktivovat automatickou aktualizaci času, abyste předešli alarmům v průběhu noci).
 - Aktuální rozsah bazálních dávek je od 0,05 do 10 U/h. To platí i při úpravách profilu, například při zvýšení na 200 % nesmí nejvyšší bazál přesáhnout 5 U/h, protože tato hodnota bude zdvojnásobena. Obdobně platí, že při snížení na 50% musí být nejnižší bazální dávka 0,10 U/h.
 - Pokud smyčka požaduje zrušení spuštěného dočasného bazálu, Combo nastaví dočasný bazál na 90 % nebo 110 % na dobu 15 minut. Důvodem je, že zrušení dočasného bazálu vyvolá alarm na pumpě, což způsobuje četné vibrace.
@@ -27,44 +27,44 @@
 
 - Nastavte pumpu pomocí 360 Config Software. Pokud tento software nemáte, kontaktujte svého obchodního zástupce Roche nebo zákaznickou linku. Registrovaným uživatelům poskytují software a také hardwarovou čtečku SmartPix pro komunikaci s pumpou. 
   - Požadované nastavení: 
-    - Set/leave the menu configuration as "Standard", this will show only the supported menus/actions on the pump and hide those which are unsupported (extended/multiwave bolus, multiple basal rates), which cause the loop functionality to be restricted when used because it's not possible to run the loop in a safe manner when used.
-    - Verify the *Quick Info Text* is set to "QUICK INFO" (without the quotes, found under *Insulin Pump Options*).
-    - Set TBR *Maximum Adjustment* to 500%
-    - Disable *Signal End of Temporary Basal Rate*
-    - Set TBR *Duration increment* to 15 min
-    - Enable Bluetooth
+    - Nastavte/nechte nastaven typ menu na "Standard", v tomto nastavení jsou zobrazeny jen ty položky, které jsou podporované, a jsou skryty zbytečné položky, které nejsou podporovány (jako je rozložený/kombinovaný bolus nebo volby více bazálních režimů). Pokud by tyto rozšířené volby byly zobrazeny, způsobí to omezení funkčnosti smyčky, protože použití smyčky v kombinaci s rozšířenými funkcemi není bezpečné.
+    - Ověřte, že *Quick Info Text* je nastaven přesně na "QUICK INFO" (bez uvozovek, nastavení najdete pod *Insulin Pump Options*).
+    - Nastavte maximální velikost dočasného bazálu (TBR) *Maximum Adjustment* na 500%
+    - Vypněte *Signal End of Temporary Basal Rate* - alarm na konci dočasného bazálu
+    - Nastavte časový krok dočasného bazálu na 15 min
+    - Povolte Bluetooh
   - Doporučené (označeno modře na snímcích obrazovky): 
     - Nastavte si upozornění na nízký stav zásobníku.
     - Nastavte si maximální bolus s ohledem na svou léčbu jako ochranu před chybami softwaru.
-    - Podobně si nastavte maximální hodnotu dočasného bazálu jako pojistku. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
+    - Podobně si nastavte maximální hodnotu dočasného bazálu jako pojistku. Nastavte maximální dobu trvání dočasného bazálu na minimálně 3 hodiny. (Funkce odpojení pumpy nastaví dočasný bazál na 0 % na 3 hodiny).
     - Aktivujte zámek tlačítek na pumpě, abyste předešli nechtěnému vydání bolusů z pumpy, zvláště pokud jste byli zvyklí používat rychlé bolusy.
     - Nastavte čas zhasnutí displeje na 5,5 s a čas opuštění menu na 5 s. Toto pomůže AAPS k rychlejšímu obnovení v případě chyb a předejde četným vibracím, které se mohou objevit během těchto chyb.
 
-![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+![Screenshot z nastavení uživatelského menu](../images/combo/combo-menu-settings.png)
 
-![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+![Screenshot nastavení dočasného bazálu](../images/combo/combo-tbr-settings.png)
 
-![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+![Screenshot nastavení bolusu](../images/combo/combo-bolus-settings.png)
 
-![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+![Screenshot nastavení zásobníku](../images/combo/combo-insulin-settings.png)
 
-- Install AndroidAPS as described in the [AndroidAPS wiki](http://wiki.AndroidAPS.org).
+- Nainstalujte AndroidAPS tak, jak je popsáno na [AndroidAPS wiki](http://wiki.AndroidAPS.org).
 - Přečtěte si dokumentaci, abyste pochopili, jak nastavit AndroidAPS.
-- Select the MDI plugin in AndroidAPS, not the Combo plugin at this point to avoid the Combo plugin from interfering with ruffy during the pairing process.
-- Follow the link <http://ruffy.AndroidAPS.org> and clone ruffy via git.
-- Install ruffy and use it to pair the pump. If it doesn't work after multiple attempts, switch to the `pairing` branch, pair the pump and then switch back the original branch. Note that the pairing processing is somewhat fragile (but only has to be done once) and may need a few attempts; quickly acknowledge prompts and when starting over, remove the pump device from the Bluetooth settings beforehand. Another option to try is to go to the Bluetooth menu after initiating the pairing process (this keeps the phone's Bluetooth discoverable as long as the menu is displayed) and switch back to ruffy after confirming the pairing on the pump, when the pump displays the authorization code. If you're unsuccessful in pairing the pump (say after 10 attempts), try waiting up to 10s before confirming the pairing on the pump (when the name of the phone is displayed on the pump). If you have configured the menu timeout to be 5s above, you need to increase it again. Some users reported they needed to do this. Lastly, consider moving from one room to another in case of local radio interference. At least one user immediately overcame pairing problems by simply changing rooms.
-- When AAPS is using ruffy, the ruffy app can't be used. The easiest way is to just reboot the phone after the pairing process and let AAPS start ruffy in the background.
-- If the pump is completely new, you need to do one bolus on the pump, so the pump creates a first history entry.
-- Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump. Then activate the Combo plugin. Press the *Refresh* button on the Combo tab to initialize the pump.
-- To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
+- Zvolte v konfigurátoru AndroidAPS pera jako plugin pro pumpu. V tuto chvíli nenastavujte plugin Combo, aby nedocházelo k narušování procesu párovaní.
+- Jděte na odkaz <http://ruffy.AndroidAPS.org> a stáhněte si (klonujte) ruffy pomocí gitu.
+- Pomocí Android Studia zkompilujte a následně nainstalujte ruffy. Spusťte ruffy a spárujte v něm pumpu. Pokud se nepodaří párovaní po několika pokusech, použijte branch `pairing`, spárujte pumpu a následně se vraťte k původnímu branchi. Párovaní je v některých případech náročný proces (naštěstí se dělá pouze jednou). Může vyžadovat několik pokusů. Je potřeba rychle odpovídat na potvrzovací výzvy a často začít znovu. Když začínáte znovu, nezapomeňte odstranit párovaní z nastavení bluetooh. Jiný postup, který je možné vyzkoušet, je přejít do nastavení bluetooth ihned po začátku párovaní (to zajistí, že telefon je stále viditelný po celou dobu, co je nastavení otevřené), jakmile pumpa najde telefon, vrátit se ihned do ruffy a potvrdit párování i tam (ve chvíli, kdy pumpa zobrazí autorizační kód). Pokud se párovaní nepodaří ani po desátém pokusu, zkuste počkat 5–10 sekund, než potvrdíte na pumpě párování potom, co je zobrazen název telefonu. Pokud jste v předchozím kroku výše nastavili timeout menu na 5 s, je potřeba tuto hodnotu zvýšit. Tento postup byl u některých uživatelů úspěšný. Jedna z posledních možností při neúspěchu párovaní je možné rušení, zkuste párování v jiné místnosti, ideálně tam, kde není příliš WiFi a bluetooth zařízení. Minimálně jednomu člověku velmi pomohlo párovat mimo radiově zarušený prostor.
+- Pokud použiváte AAPS s ruffy, nikdy nespouštějte a nepoužívejte ruffy přímo. Po úspěšném párovaní restartujte telefon, aby si AAPS mohl spustit ruffy na pozadí a sami už ruffy nespouštějte.
+- U nikdy nepoužité pumpy je nutné před zahájením párovaní vydat aspoň jeden bolus, aby se vytvořil záznam v historii. Bez aspoň jednoho záznamu v historii je AAPS nefunkční.
+- Před spuštěním Combo pluginu v AAPS ověřte, že máte správně nastavený a aktivovaný (!) profil. Ověřte dvakrát, že profil v AAPS odpovídá vašemu bazálnímu profilu. AAPS po spojení s pumpou zapíše bazální profil z AAPS do pumpy do profilu 1. Potom aktivujte Combo plugin. Stiskněte tlačítko *Obnovit* na záložce Combo, abyste zahájili komunikaci s pumpou Combo.
+- Ověřte správné nastavení pumpy. Ve chvíli, kdy je pumpa ve stavu **Odpojeno**, použijte AAPS k nastavení dočasného bazálu (TBR) na 500 % po dobu 15 min a následně zkuste vydat malý bolus. Ověřte na pumpě, že dočasný bazál se nastavil na 500 % a bolus je zaznamenán v historii. AAPS také zobrazí, že obě akce (dočasný bazál a bolus) byly provedeny.
 
-## Why does pairing with the pump does not work with the app "ruffy"?
+## Proč nefunguje párování pumpy pomocí aplikace „ruffy“ (tipy na řešení)?
 
-Má to několik možných důvodů. Vyzkoušejte tyto kroky:
+Existuje několik možných důvodů. Vyzkoušejte tyto kroky:
 
 1. Vložte ** novou nebo nabitou baterii ** do pumpy. Podívejte se na podrobnosti do návodu do části Baterie. Ujistěte se, že pumpa je velmi blízko telefonu.
 
-![Combo should be next to phone](../images/Combo_next_to_Phone.png)
+![Combo by mělo být vedle telefonu](../images/Combo_next_to_Phone.png)
 
 2. Vypněte nebo odstraňte jakékoliv jiné Bluetooth zařízení, abyste eliminovali možné rušení při párování. Jakákoliv paralelní komunikace s rozhraním Bluetooth nebo výzva k vytvoření připojení může narušit proces párování.
 
@@ -75,21 +75,12 @@ Má to několik možných důvodů. Vyzkoušejte tyto kroky:
 4. Vymažte již spárovaný telefon z pumpy. Settings / Bluetooth, remove the paired device
 5. Ujistěte se, že na pozadí není spuštěna smyčka aplikace AAPS. Deaktivuje smyčku v AAPS.
 6. Nyní spusťte aplikaci Ruffy v telefonu. Stiskněte tlačítko Reset a vymažte staré párování. Poté stiskněte tlačítko Connect.
-7. V Bluetooth menu pumpy přejděte na ** ADD DEVICE / ADD CONNECTION**. Stiskněte *CONNECT!* Kroky 5 a 6 musí následovat za sebou v krátkém časovém intervalu.
-8.     Nyní se na pumpě ukáže BT název telefonu a nabídne možnost párování. S potvrzením a stisknutím na pumpě je nutné počkat aspoň 5 s. Jinak pumpa neodešle požadavek pro párování korektně.
-      
-      * If Combo Pump is set to 5s Screentime out, you may test it with 40s (original setting). From experiance the time 
-        between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out 
-        without successfully Pair. Later you should set it back to 5s, to meet AAPS Combo settings.
-      * If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not 
-        compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If 
-        possible, try another smartphone. You can find a list of already successfully used smartphones under [AAPS Phones] 
-        (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
-      
+7. V Bluetooth menu pumpy přejděte na ** ADD DEVICE / ADD CONNECTION**. Stiskněte *CONNECT!** *Kroky 5 a 6 musí následovat za sebou v krátkém časovém intervalu.
+8. Nyní se na pumpě ukáže BT název telefonu a nabídne možnost párování. S potvrzením a stisknutím na pumpě je nutné počkat aspoň 5 s. Jinak pumpa neodešle požadavek pro párování korektně.
 
-9.     Na pumpě se zobrazí desetimístný bezpečnostní kód. Ruffy zobrazí obrazovku pro zadání. Po zadání kódu do aplikace Ruffy byste měli být připraveni.
-      
+* Jestliže je nastaveno zhasnutí displeje na 5 s, můžete zkusit nastavit na 40 s (původní nastavení). Ze zkušenosti je potřeba cca 5–10 s počkat, než je pumpa v telefonu vidět a je vybrána. Často se stane, že párovaní vyprší bez úspěšného výsledku. Později můžete vrátit zhasnuti LCD na 5 s, jak je doporučeno pro AAPS. * Pokud váš telefon pumpu vůbec nikdy nevidí, je dost možné, že Bluetooth vašeho telefonu není kompatibilní s pumpou. Ujistěte se, že používáte novou verzi systému **LineageOS ≥ 14.1** nebo **Android ≥ 8.1 (Oreo)**. Pokud máte možnost, zkuste jiný telefon. Pod níže uvedeným odkazem najdete seznam telefonů, které již byly s AAPS vyzkoušeny \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435).
 
+9. Na pumpě se zobrazí desetimístný bezpečnostní kód. Ruffy zobrazí obrazovku pro zadání. Po zadání kódu do aplikace Ruffy byste měli být připraveni.
 10. Restartujte telefon.
 11. Nyní můžete restartovat AAPS smyčku.
 
@@ -98,15 +89,15 @@ Má to několik možných důvodů. Vyzkoušejte tyto kroky:
 - Mějte na pamětí, že toto není produkt, zvláště na začátku potřebuje uživatel pochopit a monitorovat systém, jeho limity a jak může dojít k chybě. Je důrazně doporučováno nepoužívat tento systém, pokud ho uživatel není schopen plně pochopit.
 - Přečtěte si dokumentaci k OpenAPS na https://openaps.org, abyste pochopili algoritmus smyčky, na které je systém AndroidAPS založen.
 - Přečtěte si Wiki, abyste se seznámili se systémem AndroidAPS a pochopili, jak funguje: http://wiki.AndroidAPS.org
-- This integration uses the same functionality which the meter provides that comes with the Combo. The meter allows to mirror the pump screen and forwards button presses to the pump. The connection to the pump and this forwarding is what the ruffy app does. A `scripter` components reads the screen and automates entering boluses, TBRs etc and making sure inputs are processed correctly. AAPS then interacts with the scripter to apply loop commands and to administer boluses. This mode has some restrictions: it's comparatively slow (but well fast enough for what it is used for), and setting a TBR or giving a bolus causes the pump to vibrate.
-- The integration of the Combo with AndroidAPS is designed with the assumption that all inputs are made via AndroidAPS. Boluses entered on the pump directly will be detected by AAPS, but it can take up to 20 min before AndroidAPS becomes aware of such a bolus. Reading boluses delivered directly on the pump is a safety feature and not meant to be regularly used (the loop requires knowledge of carbs consumed, which can't be entered on the pump, which is another reason why all inputs should be done in AndroidAPS). 
-- Don't set or cancel a TBR on the pump. The loop assumes control of TBR and cannot work reliably otherwise, since it's not possible to determine the start time of a TBR that was set by the user on the pump.
-- The pump's first basal rate profile is read on application start and is updated by AAPS. The basal rate should not be manually changed on the pump, but will be detected and corrected as a safety measure (don't rely on safety measures by default, this is meant to detect an unintended change on the pump).
-- It's recommended to enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and using the "quick bolus" feature was a habit. Also, with keylock enabled, accidentally pressing a key will NOT interrupt active communication between AAPS and pump.
-- When a BOLUS/TBR CANCELLED alert starts on the pump during bolusing or setting a TBR, this is caused by a disconnect between pump and phone, which happens from time to time. AAPS will try to reconnect and confirm the alert and then retry the last action (boluses are NOT retried for safety reasons). Therefore, such an alarm can be ignored as AAPS will confirm it automatically, usually within 30s (cancelling it is not problem, but will lead to the currently active action to have to wait till the pump's display turns off before it can reconnect to the pump). If the pump's alarm continues, automatic corfirmation failed, in which case the user needs to confirm the alarm manually.
-- When a low cartridge or low battery alarm is raised during a bolus, they are confirmed and shown as a notification in AAPS. If they occur while no connection is open to the pump, going to the Combo tab and hitting the Refresh button will take over those alerts by confirming them and show a notification in AAPS.
-- When AAPS fails to confirm a TBR CANCELLED alert, or one is raised for a different reason, hitting Refresh in the Combo tab establishes a connection, confirms the alert and shows a notification for it in AAPS. This can safely be done, since those alerts are benign - an appropriate TBR will be set again during the next loop iteration.
-- For all other alerts raised by the pump: connecting to the pump will show the alert message in the Combo tab, e.g. "State: E4: Occlusion" as well as showing a notification on the main screen. An error will raise an urgent notification. AAPS never confirms serious errors on the pump, but let's the pump vibrate and ring to make sure the user is informed of a critical situation that needs action.
-- After pairing, ruffy should not be used directly (AAPS will start in the background as needed), since using ruffy at AAPS at the same time is not supported.
+- Propojení combo s ruffy/aaps používá stejné rozhraní jako originální glukometr. Glukometr zrcadlí obrazovku pumpy a simuluje stisk tlačítek na pumpě. Přenos obrazovky a zpětný přenos tlačítek je to, co dělá aplikace ruffy. Komponenta `scripter` dekóduje obrazovku a automaticky zadává bolusy, dočasné bazály a další operace, které jsou s pumpou potřeba. Také se stará o to, aby vše proběhlo korektně. AAPS komunikuje s komponentou scripter a pomocí ní zadává příkazy vycházející z algoritmu smyčky. Tento způsob komunikace má pár omezení: Je relativně pomalý (ale stále dostatečně rychlý pro běžné použití), nastavení dočasného bazálu (TBR) nebo podání bolusu způsobuje vibrace pumpy.
+- Integrace pumpy Combo do AAPS počítá s tím, že všechny příkazy pro pumpu jsou zadávány výhradně prostřednictvím AAPS. Bolus zadaný přímo na pumpě je sice detekován a načten do AAPS, ale může dojít ke zpoždění až 20 minut, než to AAPS zjistí. Zpětné načítání bolusů zadaných přímo na pumpě je JEN bezpečnostní opatření a nemělo by být nikdy používáno. (Smyčka stejně potřebuje znát i sacharidy, které nelze na pumpě zadat. Toto je další důvod, proč by veškeré operace měly být prováděny výhradně prostřednictvím AAPS). 
+- Nenastavujte a nerušte dočasný bazál (TBR) na pumpě. Smyčka předpokládá, že řídí dočasné bazály, bez tohoto předpokladu nemůže spolehlivě fungovat. Důvod je ten, že nelze určit čas spuštění dočasného bazálu zadaného uživatelem přímo na pumpě.
+- AAPS používá první bazální profil, ten je při startu aplikace načten a následně nastaven dle bazálního profilu v AAPS. Bazální profil neměňte ručně na pumpě. Tato změna je jako bezpečnostní opatření detekována a opět přepsána na nastavení platné v AAPS (nespoléhejte však na bezpečností opatření a detekci nežádoucích změn – toto je pouze bezpečnostní opatření).
+- V zájmu snížení rizika náhodného vydání bolusu doporučujeme používat zámek klávesnice pumpy. Zejména pokud jste dříve používali pumpu s možností rychlého bolusu. Výhodou zámku je rovněž skutečnost, že náhodný stisk klávesy nepřeruší právě probíhající komunikaci mezi AAPS a pumpou.
+- Občas se stane, že je vyvolán alarm „zrušený bolus“ nebo „zrušená dočasná bazální dávka“. Toto se čas od času stane a je to způsobeno přerušením komunikace mezi telefonem a pumpou v průběhu zadávaní příkazu. AAPS se snaží znovu připojit a zrušit alarm. Také se snaží znovu poslat neúspěšný příkaz (toto neplatí pro bolus, který se z bezpečnostních důvodů znovu neposílá). Proto alarm ani zrušení příkazu jako takové nejsou problém. Ale obvykle trvá až 30 sekund, než se AAPS podaří alarm zrušit a zaslat příkaz znova. Je to z toho důvodu, že dokud nezhasne obrazovka pumpy, není možné znovu navázat komunikaci s pumpou. Pokud alarm pumpy přetrvává, je možné, že automatické zrušení alarmu selhalo. V tomto případě je nutné, aby alarm zrušil uživatel ručně.
+- Pokud je vyvolán alarm kvůli vybité baterii nebo docházejícímu inzulínu v průběhu bolusu, AAPS tento alarm automaticky zruší a zobrazí notifikaci. V případě, že k této situaci dojde ve chvíli, kde není aktivní spojení s pumpou, je možné jít na záložku Combo v AAPS a stisknout tlačítko Obnovit. Alarm je zrušen a notifikace o důvodu alarmu uložena do AAPS.
+- Pokud se AAPS nepodaří zrušit alarm o zrušení dočasné bazální dávky nebo jiný alarm, stisknutí tlačítka Obnovit na záložce Combo naváže spojení AAPS s pumpou, které zruší alarm a zobrazí notifikaci o důvodu alarmu. Je bezpečné tak učinit, protože hned v další operaci smyčky je nastavení provedeno znovu.
+- Pro všechny ostatní alarmy vycházející z pumpy je zobrazena varovná hláška v záložce Combo. Pro některé, jako je například E4 – Ucpání systému, je zobrazena notifikace i na hlavní obrazovce. Chyby (E1–10) vždy zobrazí urgentní notifikaci. Systém AAPS nikdy neruší závažné chyby na pumpě, nechá pumpu vydávat zvukový alarm a vibrovat, aby uživatele upozornil na kritickou situaci, která potřebuje řešení.
+- Po párovaní nikdy nepoužívejte aplikaci ruffy (AAPS spustí ruffy pro svoje použití na pozadí). Použití ruffy paralelně s AAPS není možné.
 - Pokud dojde k chybě AAPS (nebo zastavení z debugger) při vzájemné komunikaci AAPS a pumpy, je nutné ukončit RUFFY v systémových prostředcích. Po restartování AAPS se RUFFY znovu spustí. Restartování telefonu je většinou nejjednodušší cesta, pokud nejde aplikace ukončit prostřednictvím systému.
 - Jestliže probíhá komunikace AAPS s pumpou (na pumpě je zobrazeno logo Bluetooth), nemačkejte žádná tlačítka na pumpě.
