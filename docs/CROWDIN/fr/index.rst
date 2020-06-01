@@ -32,7 +32,7 @@ Ce dont j'ai besoin
    :maxdepth: 1
    :glob:
    
-   Module <./Module/module.rst>
+   Composants <./Module/module.rst>
    Exemple de configuration <./Getting-Started/Sample-Setup.md>
 
    
