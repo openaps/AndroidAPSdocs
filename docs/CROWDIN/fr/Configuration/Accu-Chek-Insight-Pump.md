@@ -12,7 +12,7 @@
 
 Remarque : AAPS écrira toujours les données dans le **premier profil débit de base de la pompe**.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module#phone) page which Android version is required to run AndroidAPS.)
+* Un téléphone Android (en pratique n'importe quelle version d'Android devrait marcher avec l'Insight, mais vérifiez sur la page [Composants](../Module/module.html#telephone) quelle version d'Android est nécessaire pour exécuter AndroidAPS.)
 * L'application AndroidAPS installée sur votre téléphone
 
 ## Paramètres
