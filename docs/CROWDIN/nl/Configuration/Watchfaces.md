@@ -1,26 +1,26 @@
 # AAPS op Wear OS smartwatch
 
-Je kunt de AndroidAPS app installeren op je **Wear OS based** smartwatch. Watch versie van AAPS laat je:
+Je kunt de AndroidAPS app installeren op je **Wear OS based** smartwatch. Met de watch versie van AAPS kun je:
 
-* **Toon de gegevens op uw horloge**: door een[specifieke wijzerplaat](#aaps-watchfaces) of standaard wijzerplaat te gebruiken d.m.v. watchface [complications](#complications)
-* **beheer AAPS met telefoon**: stel een tijdelijk streefdoel in, bolus, etc. 
+* **AAPS gegevens bekijken**: door een [specifieke watchface](#aaps-watchfaces) of standaard watchface te gebruiken d.m.v. watchface [complications](#complications)
+* **AAPS aansturen**: stel een tijdelijk streefdoel in, bolus, etc. Je moet uiteraard wel jouw telefoon steeds in de buurt hebben, zowel voor het bekijken van gegevens als voor het aansturen. 
 
 ### Voor je een horloge aanschaft...
 
 * Sommige functies zoals *complications* vereisen Wear OS versie 2.0 of recenter om te functioneren
-* Google heeft*Android Wear 1.x* als *Wear OS* omgedoopt vanaf versie 2.x. Indien het betreffende horloge met *Android Wear* aangeduid wordt kan het op de oudere 1.x versie van het systeem kan duiden
+* Google heeft *Android Wear 1.x* omgedoopt naar *Wear OS* vanaf versie 2.x. Indien een smartwatch met *Android Wear* wordt aangeduid, kan het goed zijn dat het de oudere 1.x versie heeft
 * Als in een beschrijving van smartwatch alleen compatibiliteit met *Android* en *iOS* aangegeven wordt, betekent het **niet** dat deze draait op *Wear OS* - het kan net zo goed een ander soort fabrikant specifieke OS zijn **die niet compatibel is met AAPS wear!**.
 * Controleer de [lijst van geteste telefoons en horloges](../Getting-Started/Phones#list-of-tested-phones) en [ vraag de community](../Where-To-Go-For-Help/Connect-with-other-users.md) om advies als je twijfelt of het horloge wordt ondersteund
 
 ### Wear OS-versie van AAPS bouwen
 
-Om een Wear OS versie van AAPS te maken, heb je de build variant "fullRelease" nodig deze is te selecteren wanneer [de APK](../Installing-AndroidAPS/Building-APK.md) bouwt (de versie "pumpRelease" zal je in staat stellen om de pomp zonder loop te gebruiken op afstand te kunnen bedienen).
+Om een Wear OS versie van AAPS te maken, heb je de build variant "fullRelease" nodig deze is te selecteren wanneer [de APK](../Installing-AndroidAPS/Building-APK.md) bouwt (met de versie "pumpRelease" kun je de pomp wel op afstand bedienen, maar je hebt geen "closed loop").
 
 Zorg ervoor dat zowel de telefoon als de wear versies van AAPS zijn ondertekend met dezelfde "key"!
 
 De Wear APK moet op dezelfde manier op het horloge geïnstalleerd worden als de AAPS APK op de telefoon. Het inschakelen van *developer mode* is mogelijk noodzakelijk voor het bekijken, uploaden en installeren van de APK op het horloge met: `adb install wear-full-release.apk`
 
-Wanneer u de wear versie van AAPS gebruikt, update deze altijd gelijktijdig met de telefoonversie van de app houd hun versies gesynchroniseerd.
+Wanneer je de wear versie van AAPS gebruikt, update deze altijd gelijktijdig met de telefoonversie van de app houd hun versies gesynchroniseerd.
 
 ### Instellen op de telefoon
 

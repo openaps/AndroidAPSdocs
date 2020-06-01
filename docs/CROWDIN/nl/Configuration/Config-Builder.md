@@ -14,7 +14,7 @@ Wanneer er voor een functie nog extra instellingen zijn, dan kun je die openen d
 
 ## Tabblad of hamburger menu
 
-Met het selectievakje onder het oog icoontje, kun je instellen hoe een sectie bereikbaar is. De aangevinkte onderdelen zullen als tabbladen worden weergegeven. 
+Met het selectievakje onder het oog icoontje, kun je instellen hoe een sectie bereikbaar is. De aangevinkte onderdelen zullen als tabbladen worden weergegeven. Alle niet-aangevinkte onderdelen vindt je terug in het hamburger menu (onder de 3 streepjes in linkerbovenhoek).
 
 ![Tabblad of hamburger menu](../images/ConfBuild_TabOrHH.png)
 
@@ -42,12 +42,12 @@ Je kunt eenvoudig een nieuw lokaal profiel aanmaken van een profiel wissel. In d
 
 1. Ga naar het tabblad behandelingen.
 2. Kies Profiel Wissel.
-3. Druk op "kopiëren".
+3. Druk op "Dupliceren".
 4. Het nieuwe lokale profiel kunt u bewerken in het tabblad Lokaal profiel (LP) of via het hamburgermenu.
 
 ![Profiel wissel kopiëren](../images/LocalProfile_ClonePS.png)
 
-Als je van Nightscout profiel wilt veranderen naar lokaal profiel, schakel dan je NS profiel in en kopieer de profiel wissel zoals hierboven beschreven.
+Als je van Nightscout profiel wilt veranderen naar lokaal profiel, doe dan een profielwissel naar jouw NS profiel en dupliceer de profielwissel zoals hierboven beschreven.
 
 #### Lokale profielen uploaden naar Nightscout
 
@@ -187,7 +187,7 @@ Zie [Doelen](../Usage/Objectives.rst) pagina voor meer informatie.
 
 Op het tabblad Behandelingen kunt je de behandelingen zien die zijn geüpload naar Nightscout. Wilt u invoer bewerken of verwijderen (bijvoorbeeld bij minder gegeten koolhydraten dan verwacht) selecteer dan 'Verwijderen' en voer de nieuwe waarde in (wijzig indien nodig het tijdstip) via de [koolhydraten knop op het beginscherm](../Getting-Started/Screenshots.md#carb-correction).
 
-## Algemeen
+## General
 
 ### Overzicht
 

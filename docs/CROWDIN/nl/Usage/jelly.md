@@ -5,7 +5,7 @@
 ### Voordelen Jelly
 
 * Hij is echt heel klein.
-* Zelfs als je het aan mensen vertelt, zullen veel niet geloven dat het een normale smartphone is. Dat maakt het makkelijker als je wilt dat er voor jou een uitzondering wordt gemaakt op een plek waar telefoons normaal niet zijn toegestaan.
+* Lang niet iedereen zal doorhebben dat dit een normale smartphone is. Het voordeel hiervan is dat er voor jou makkelijker een uitzondering wordt gemaakt als je ergens bent waar telefoons normaal niet zijn toegestaan.
 
 ### Nadelen Jelly
 

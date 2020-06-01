@@ -8,133 +8,132 @@
 
 ## Требования к аппаратному и программному обеспечению
 
-* Помпа Roche Accu-Chek Combo (любая версия прошивки, работают все)
-    
-    Примечание: AAPS всегда записывает данные в ** первый профиль скорости базала в помпе **.
+* A Roche Accu-Chek Insight pump (any firmware, they all work)
 
-* Телефон на Android (будет работать любая версия, но сам AndroidAPS требует как минимум Android 5 (Lollipop).)
+Note: AAPS will write data always in **first basal rate profile in the pump**.
 
-* Приложение AndroidAPS установлено на вашем телефоне
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module#phone) page which Android version is required to run AndroidAPS.)
+* The AndroidAPS app installed on your phone
 
 ## Настройки
 
-* Помпа Insight должна быть единовременно подключена только к одному устройству. Если вы ранее уже подсоединяли дистанционное управление (глюкометр) Insight, то его необходимо удалить из списка сопряженных устройств помпы: Меню > Настройки > Связь > Удалить устройство
+* The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
     
-    ![Снимок экрана удаления глюкометра из помпы Insight](../images/Insight_RemoveMeter.png)
+    ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
 
-* В [Конфигураторе](../Configuration/Config-Builder) приложения AndroidAPS выберите Accu-Chek Insight в разделе помпа
+* In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
     
-    ![Снимок экрана конфигуратора Config Builder помпы Insight](../images/Insight_ConfigBuilder.png)
+    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
-* Нажмите на значок шестеренки, чтобы открыть настройки Insight.
+* Tap the cog-wheel to open Insight settings.
 
-* В настройках помпы нажмите кнопку "Сопряжение Insight" в верхней части экрана. Вы увидете список устройств bluetooth поблизости (ниже слева).
-* На помпе Insight перейдите в меню > Настройки > Связь > Добавить устройство. На помпе появится экран (внизу справа) с указанием серийного номера помпы.
+* In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
+* On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
     
-    ![Снимок экрана сопряжения Insight 1](../images/Insight_Pairing1.png)
+    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
 
-* Вернувшись к телефону, нажмите на серийный номер помпы в списке устройств Bluetooth. Затем нажмите на Сопряжение, чтобы подтвердить действие.
+* Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm.
     
-    ![Снимок экрана сопряжения Insight 2](../images/Insight_Pairing2.png)
+    ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
 
-* Как помпа, так и телефон отобразят код. Убедитесь, что коды одинаковы на обоих устройствах и подтвердите сопряжение на помпе и на телефоне.
+* Both the pump and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
     
-    ![Снимок экрана сопряжения Insight 3](../images/Insight_Pairing3.png)
+    ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
 
-* Успешно! Похлопайте себя по спине за успешно выполненную задачу по сопряжению с AndroidAPS.
+* Success! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
     
-    ![Снимок экрана сопряжения Insight 4](../images/Insight_Pairing4.png)
+    ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
 
-* Чтобы убедиться, что все в порядке, вернитесь к конфигуратору в AndroidAPS и нажмите на значок настройки рядом с надписью Помпа Insight, войдите в настройки Insight, затем нажмите на Сопряжение Insight и вы увидите информацию о помпе:
+* To check all is well, go back to Config builder in AndroidAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
     
-    ![Снимок экрана информации о сопряжения Insight](../images/Insight_PairingInformation.png)
+    ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
-Примечание: Постоянного соединения между помпой и телефоном не будет. Подключение будет устанавливаться только в случае необходимости (т.е. для изменения временного базала, подачи болюса, чтения логов помпы и т.п...). В ином случае аккумуляторы телефона и помпы будут расходоваться слишком быстро.
+Note: There will be no permanent connection between pump and phone. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
 
 ## Настройки на AAPS
 
-** Не следует применять 'Всегда использовать абсолютные значения базала' ** на помпе Insight. В AAPS выберите Параметры > Nightscout-Client > Дополнительные параметры и убедитесь, что 'Всегда использовать абсолютные значения базала' выключено. Это привело бы к неверным настройкам временного базала TBR в помпе Insight.
+You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > NSClient > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump.
 
-Единственное решение на данный момент - **отключить синхронизацию** с Nightscout (только выгрузка) если хотите использовать автонастройку. В AAPS выберите Параметры > NSClient > подробные настройки 'только выгрузка в NS (без синхронизации)'.
+Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune. In AAPS go to Preferences > NSClient > Advanced Settings and Enable ‘NS upload only (disabled sync)‘.
 
-![Снимок экрана настроек Insight](../images/Insight_pairing_V2_5.png)
+![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
 
-В настройках Insight в AndroidAPS следует активировать следующие параметры:
+In the Insight settings in AndroidAPS you can enable the following options:
 
-* "Отслеживать замены картриджа": При выполнении команды "заполнение инфузионного набора" на помпе, это действие автоматически внесется в журнал как замена картриджа.
-* "Отслеживать смену инфузионного набора": При запуске программы помпы "первичное заполнение инфузионного набора" в базе данных AndroidAP добавляется соответствующая заметка.
-* "Отслеживать смену места установки катетера": При запуске программы помпы "первичное заполнение инфузионного набора" в базе данных AndroidAP добавляется соответствующая заметка. ** Примечание: Изменение места установки катетера также сбрасывает Autosens. **
-* "Отслеживать замену батареи": При установке нового аккумулятора в помпе в базе данных Aaps добавляется соответствующая заметка.
-* "Отслеживать изменение режима работы": Это добавляет заметку в базу данных AndroidAPS, когда вы запускаете, останавливаете или приостанавливаете помпу.
-* "Отслеживать оповещения": В базе данных AndroidAPS автоматически делается заметка при оповещениях помпы (за исключением напоминаний, болюсов и отмены временной скорости базала TBR).
-* "Разрешить эмуляцию временного базала TBR": помпа Insight может давать только до 250% временной базальной скорости TBR. Чтобы обойти это ограничение, эмуляция временной базальной скорости TBR поручит помпе подать пролонгированный болюс с дополнительным инсулином если запрошенная временная скорость базала превышает 250%.
+* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
+* "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
+* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+* "Log battery changes": This records a battery change when you put a new battery in the pump.
+* "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
+* "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
+* "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.
     
-    **Рекомендуется применять только один растянутый болюс единовременно так как одновременное использование нескольких растянутых болюсов может вызвать ошибки.**
+    **Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.**
 
-* "Длительность восстановления": Это определяет, время ожидания AndroidAPS перед новой попыткой подключения после неудачной. Можно выбрать от 0 до 20 секунд. Если вы испытываете проблемы с подключением, выберите более длительное время ожидания.   
+* "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
       
-    Пример для мин. длительности восстановления = 5 и макс. длительности восстановления = 20   
+    Example for min. recovery duration = 5 and max. recovery duration = 20   
       
-    нет соединения -> подождать **5** сек.   
-    повторите -> нет соединения -> подождать **6** сек.   
-    повторите -> нет соединения -> подождать **7** сек.   
-    повторите -> нет соединения -> подождать **8** сек.   
+    no connection -> wait **5** sec.   
+    retry -> no connection -> wait **6** sec.   
+    retry -> no connection -> wait **7** sec.   
+    retry -> no connection -> wait **8** sec.   
     ...   
-    повторите -> нет соединения -> подождать **20** сек.   
-    повторите -> нет соединения -> подождать **20** сек.   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
-* "Задержка при разъединении": Определяет, сколько времени (в секундах) AndroidAPS будет ждать, чтобы отключиться от помпы после завершения операции. Значение по умолчанию - 5 секунд.
+* "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
 
-В период, когда помпа не работает, AAPS записывает временный лог базальную скорость равную 0%.
+For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
 
-В AndroidAPS на вкладке Accu-Chek Insight показано текущее состояние помпы и две кнопки:
+In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
 
-* "Обновить": Обновляет состояние помпы
-* "Включить/выключить уведомление TBR": Стандартная помпа Insight издает сигнал по завершении временной TBR. Кнопка позволяет включить или отключить это оповещение без изменения конфигурации программного обеспечения.
+* "Refresh": Refreshes pump status
+* "Enable/Disable TBR over notification": A standard Insight pump emits an alarm when a TBR is finished. This button lets you enable or disable this alarm without the need for configuration software.
     
-    ![Снимок экрана текущего состояния Insight](../images/Insight_Status2.png)
+    ![Screenshot of Insight Status](../images/Insight_Status2.png)
 
 ## Настройки помпы
 
-Настройте сигналы в помпе следующим образом:
+Configure alarms in the pump as follows:
 
-* Меню > Настройки > Параметры устройства > Параметры режима > Тихий > Сигнал > Звук
-* Меню > Настройки > Параметры устройства > Параметры режима > Тихий > Сигнал > 0 (удалить все полоски)
-* Меню > настройка режимов > режим сигнала > тихий
+* Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
+* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
+* Menu > Modes > Signal mode > Quiet
 
-Это уберет звук всех оповещений помпы и позволит AndroidAPS решать, какой сигнал является актуальным для вас. Если AndroidAPS не распознает сигнал, то его громкость увеличится (сначала гудок, затем вибрация).
+This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
 
 ### Вибрация
 
-В зависимости от версии прошивки, Insight кратко вибрирует при каждо подаче болюса (например, когда AAPS подает супермикроболюс SMB или эмулирует пролонгированный болюс временным базалом TBR).
+Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus).
 
-* Прошивка 1.х: нет вибрации конструктивно.
-* Прошивка 2.х: вибрация не может быть отключена.
-* Прошивка 3.х: AndroidAPS подает болюс беззвучно. (минимум [версия 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+* Firmware 1.x: No vibration by design.
+* Firmware 2.x: Vibration cannot be disabled.
+* Firmware 3.x: AndroidAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
 
-Версию прошивки можно найти через меню.
+Firmware version can be found in the menu.
 
 ## Замена батареи
 
-Срок службы батареи для Insight в замкнутом цикле составляет от 10 до 14 дней, максимум 20 дней. Пользователи, сообщающие об этом, используют литиевые батареи Energizer.
+Battery life for Insight when looping range from 10 to 14 days, max. 20 days. The user reporting this is using Energizer lithium batteries.
 
-В помпе Insight есть небольшой внутренний аккумулятор для поддержания таких важных функций, как часы, которые продолжают работать при замене батарей помпы. Если смена батареи занимает слишком много времени, то в этой внутренней батарее может кончиться заряд, время на часах будет сброшено, и вам будет предложено ввести новое время и дату после установки новых батарей. Если это произойдет, все записи в AndroidAPS до замены батареи больше не будут включены в расчеты, так как правильное время не может быть определено.
+The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
 
 ## Специфические ошибки помпы Insight
 
 ### Пролонгированный болюс
 
-Рекомендуется применять только один растянутый болюс единовременно так как одновременное использование нескольких растянутых болюсов может вызвать ошибки.
+Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
 
 ### Таймаут
 
-Иногда помпа Insight может не отвечать во время установки соединения. В этом случае AAPS выдает следующее сообщение: "Таймаут сопряжения - выполните сброс bluetooth".
+Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
 
-![Сброс Bluetooth помпы Insight](../images/Insight_ResetBT.png)
+![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
-В этом случае выключите Bluetooth на помпе и смартфоне примерно 10 секунд, а затем включите его обратно.
+In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
 
 ## Пересечение часовых поясов с помпой Insight
 
-Информацию о пересечении часовых поясов см. в разделе [Пересечение часовых поясов с помпами](../Usage/Timezone-traveling#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).

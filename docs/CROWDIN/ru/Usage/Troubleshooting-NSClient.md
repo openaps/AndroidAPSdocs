@@ -1,25 +1,25 @@
-# Troubleshooting NSClient
+# Устранение неисправностей клиента Nightscout
 
-NSClient rely on stable communication with Nightscout. Unstable connection leads to synchronization errors and high data usage.
+Для правильной работы NSClient требуется стабильная коммуникация с сайтом Nightscout. Нестабильная связь приводит к ошибками синхронизации и высокой интенсивности использования данных.
 
-If nobody is following you on Nightscout you can pause NSClient to save (a lot) battery life or setup connection only on wifi and during charging.
+Если никто не контролирует вас на Nightscout, для экономии заряда батареи можно приостановить NSClient или настроить соединение для работы только на wifi и во время подзарядки.
 
-* How to detect unstable connection?
+* Как обнаружить нестабильную связь?
 
-Go to NSClient tab in AAPS and watch the log. Common behavior is to receive PING every ~30s and almost none reconnection messages. If you see many reconnections there is a problem. Since AndroidAPS 2.0 when such behavior is detected NSClient is paused for 15 minutes and message "NSClient malfunction" on Overview is displayed.
+Перейдите на вкладку NSClient в AAPS и просмотрите журнал событий. Обычно отклик PING происходит каждые ~ 30 секунд и сообщения о повторном подключении не поступают. Если вы видите много повторных попыток соединения, то это свидетельство проблемы связи. Начиная с версии AndroidAPS 2.0, при обнаружении такого поведения, происходит приостановка NSClient на 15 минут и появляется сообщение "Сбой NSClient".
 
-* Restart
+* перезапуск
 
-What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
+В качестве первого шага попробуйте перезапустить Nightcout и затем телефон, чтобы понять, сохраняется ли проблема.
 
-* Phone issues
+* Проблемы с телефоном
 
-Android may put your phone into a sleep. Check you have exception for AndroidAPS in power options to allow run it on background all the time. Check it again on strong network signal. Try another phone.
+Android может перевести телефон в спящий режим. Убедитесь, что AndroidAPS в опциях питания имеет разрешение на постоянную работу в фоновом режиме. Повторите это при сильном сигнале сети. Попробуйте другой телефон.
 
 * Nightscout
 
-If you are on Azure for many people helped to move to Heroku. Recently was reported Azure workaround to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+Если вы пользуетесь хостингом Azure попробуйте перейти на Heroku, это помогало многим. Недавно сообщалось о том, что в Azure существует обходной путь -- задать в параметрах приложения HTTP протокол 2.0, и установить WebSockets на ON
 
-* If you still get an error...
+* Если все еще приходят сообщения об ошибке...
 
-Check the size of your database in mLab. 496MB means it is full and needs to be compacted. [Follow these OpenAPS instructions for checking the size of your database](https://openaps.readthedocs.io/en/latest/docs/Troubleshooting/Rig-NS-communications-troubleshooting.html#mlab-maintenance). If compacting does not work, you should consider donating your AndroidAPS data to the Data Commons (for research) before deleting any data collections. There are [instructions in the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Give%20Back-Pay%20It%20Forward/data-commons-data-donation.html) for how to accomplish this.
+Проверьте размер базы данных в MLab. 496MB означает, что она заполнена и нуждается в сжатии. [ Следуй инструкциям OpenAPS для проверки размера базы данных ](https://openaps.readthedocs.io/en/latest/docs/Troubleshooting/Rig-NS-communications-troubleshooting.html#mlab-maintenance). Если сжатие не работает, перед удалением наборов данных следует рассмотреть возможность передачи данных AndroidAPS в Data Commons (для исследований). Для этого в документации OpenAPS </a> есть инструкции .</p>

@@ -21,7 +21,7 @@ Er is een Alleen NS upload (geen synchronisatie) functie in de AAPS instellingen
 
 ### Aanvullende veiligheidsmaatregelen
 
-Houd jouw telefoon up-to-date zoals beschreven bij Allereerst de veiligheid<0>.</p> 
+Houd jouw telefoon up-to-date zoals beschreven bij [Allereerst de veiligheid](../Getting-Started/Safety-first.rst).
 
 ## Nightscout aanmaken
 
@@ -38,7 +38,7 @@ Deze omschrijving is voor het handmatig aanmaken en instellen van jouw eigen Nig
   * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
   * `DEVICESTATUS_ADVANCED` = `true`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Je kunt verschillende alarmen instellen voor [monitoring the pump ](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery% raden we sowieso aan om te activeren: 
+  * Je kunt verschillende alarmen instellen voor [monitoring the pump ](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), batterijpercentage raden we sowieso aan om te activeren: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
   * Optioneel: De volgende 'timers' kunnen worden ingesteld voor de kleuren in de AAPS Careportal: 
