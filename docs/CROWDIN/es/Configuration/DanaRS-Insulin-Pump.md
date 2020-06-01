@@ -12,14 +12,12 @@
 
 * Seleccione el dispositivo Bluetooth de DanaRS y haga clic en el número de serie de DanaRS.
   
-      ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
-      
+  ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
 
 * Seleccione la contraseña de la bomba e introduzca su contraseña. (La contraseña predeterminada es 1234)   
   **Hay que confirmar el emparejamiento en la bomba! ** Es la forma que se utiliza para otros emparejamientos bluetooth (es decir, smartphone y audio de autos).
   
-      ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
-      
+  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
 * Seleccione velocidad de bolo, para cambiar la velocidad predeterminada utilizada (12seg por 1u, 30seg por 1u o 60seg por 1u).
 
