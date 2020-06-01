@@ -75,7 +75,7 @@ Bij het gebruik van open loop ontvangt je meldingen telkens wanneer AAPS een sug
 
 ![Minimale verzoek voor aanpassing](../images/MinRequestChange.png)
 
-Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol instead of 5,0 - 7,0 mmol) is recommended.
+Let op: in closed loop modus wordt het aangeradem om één enkel streefdoel te hebben in plaats van een doelbereik (bijv. 5,5 mmol/l en geen 5,0-7,0 mmol/l).
 
 ## OpenAPS AMA
 
