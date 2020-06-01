@@ -12,14 +12,12 @@
 
 * Wybierz DanaRS sparuj nową pompę i kliknij swój numer seryjny DanaRS.
   
-      ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
-      
+  ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
 
 * Wybierz hasło pompy i wprowadź hasło. (Domyślne hasło to 1234)   
   ** Musisz potwierdzić powiązanie w pompie! ** Tak jak podczas parowania innych urządzeń po bluetoth (np. Smartfona i car audio).
   
-      ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
-      
+  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
 * Wybierz Szybkość bolusa, aby zmienić domyślną prędkość bolusa (12 sek na 1u, 30 sek na 1u lub 60 sek na 1u).
 
