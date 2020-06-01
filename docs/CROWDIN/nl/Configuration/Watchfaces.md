@@ -14,13 +14,13 @@ Je kunt de AndroidAPS app installeren op je **Wear OS based** smartwatch. Met de
 
 ### Wear OS-versie van AAPS bouwen
 
-Om een Wear OS versie van AAPS te maken, heb je de build variant "fullRelease" nodig deze is te selecteren wanneer [de APK](../Installing-AndroidAPS/Building-APK.md) bouwt (de versie "pumpRelease" zal je in staat stellen om de pomp zonder loop te gebruiken op afstand te kunnen bedienen).
+Om een Wear OS versie van AAPS te maken, heb je de build variant "fullRelease" nodig deze is te selecteren wanneer [de APK](../Installing-AndroidAPS/Building-APK.md) bouwt (met de versie "pumpRelease" kun je de pomp wel op afstand bedienen, maar je hebt geen "closed loop").
 
 Zorg ervoor dat zowel de telefoon als de wear versies van AAPS zijn ondertekend met dezelfde "key"!
 
 De Wear APK moet op dezelfde manier op het horloge geïnstalleerd worden als de AAPS APK op de telefoon. Het inschakelen van *developer mode* is mogelijk noodzakelijk voor het bekijken, uploaden en installeren van de APK op het horloge met: `adb install wear-full-release.apk`
 
-Wanneer u de wear versie van AAPS gebruikt, update deze altijd gelijktijdig met de telefoonversie van de app houd hun versies gesynchroniseerd.
+Wanneer je de wear versie van AAPS gebruikt, update deze altijd gelijktijdig met de telefoonversie van de app houd hun versies gesynchroniseerd.
 
 ### Instellen op de telefoon
 
