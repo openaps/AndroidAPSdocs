@@ -12,7 +12,7 @@ Hiermee kunt je een wachtwoord instellen om onbedoelde of ongeoorloofde wijzigin
 
 AndroidAPS stelt veiligheidslimieten in op basis van de leeftijd die je hier hebt geselecteerd. Als je tegen de beperkingen van zo'n zogenaamde 'harde limiet' (zoals max bolus) aanloopt, dan is het tijd om te kiezen voor de daaropvolgende categorie. Het is een slecht idee om hogere categorie te kiezen dan past bij jouw echte leeftijd/resistentie, omdat het kan leiden tot een overdosis als je de verkeerde waarde in het insuline-dialoogvenster intypt (bijv. als je de komma verkeerd zet). Als je wilt weten wat de precieze getallen zijn voor deze veiligheidslimieten, ga dan naar [deze pagina](../Usage/Open-APS-features.md) en scroll naar het algoritme dat jij gebruikt.
 
-## Algemeen
+## General
 
 * Kies welke taal je wilt gebruiken. Als je taal niet beschikbaar is, of niet alle woorden worden vertaald, voel je dan vrij om suggesties te doen op [Crowdin](https://crowdin.com/project/androidaps) of vraag in de [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
 
