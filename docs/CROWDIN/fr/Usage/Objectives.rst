@@ -98,10 +98,10 @@ La boucle fermée ne corrigera pas les valeurs de glycémies élevées dans l'ob
 * The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.  
 
    .. image:: ../images/Objective6_negIOB.png
-     :alt: Example negative IOB
+     :alt: Exemple IA négative
 
-* If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
-* You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.
+* Si votre IA basale est négative (voir copie d'écran ci-dessus) un DBT > 100% peut également être diffusé à l'objectif 6.
+* Vous pouvez subir temporairement des pics de glycémie à la suite d'hypos sans pouvoir augmenter le débit de base sur le rebond.
 
 Objectif 7 : Réglage de la Boucle Fermée, augmentation de l'IA (Insuline Active) maximale au dessus de 0 et abaissement progressif des cibles glycémiques
 ====================================================================================================
