@@ -12,13 +12,12 @@
 
 * Klicke im Abschnitt "DanaRS" auf "Verbinde neue Pumpe" und gib die Seriennummer (Unterseite der Pumpe gegenüber dem Reservoir- und Batteriedeckel) deiner DanaRS ein.
   
-      ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
-      
-
+    ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
+   
 * Wähle "Pumpen-Passwort" und gib das Passwort ein. (Das Standardpasswort ist 1234.)   
   ** Du musst das Koppeln auf der Pumpe bestätigen!** Genau so wie Du es von anderen Bluetooth Verbindungen (z.B. Smartphone und Auto-Multimediasystem) kennst.
   
-      ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+    ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
       
 
 * Klicke auf "Bolus-Geschwindigkeit" um die gewünschte Abgabegeschwindigkeit (12 s/1 IE, 30 s/1 IE oder 60 s/1 IE) einzustellen.
