@@ -12,13 +12,13 @@
 
 * Selecteer 'Koppel nieuwe pomp' en klik op het serienummer van jouw DanaRS.
   
-      ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
+  ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
       
 
 * Selecteer 'Pomp wachtwoord' en voer jouw wachtwoord in. (Standaardwachtwoord is 1234)   
   **Je moet de koppeling bevestigen dmv de OK knop op de pomp** Net zoals bij andere bluetooth-apparaten (bijv. smartphone en autoradio).
   
-      ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
       
 
 * Selecteer 'Bolus snelheid' om de standaardsnelheid te wijzigen die de pomp gebruikt bij een bolus (12sec per Eenheid, 30sec per Eenheid of 60sec per Eenheid).
