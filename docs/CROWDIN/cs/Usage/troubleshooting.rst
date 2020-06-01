@@ -1,12 +1,12 @@
 Poradce při potížích
 **************************************************
-You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem.
+Informace o odstraňování problémů můžete najít na mnoha stránkách wiki. Tato stránka obsahuje řadu odkazů, které vám mohou pomoci při hledání informací k řešení vašeho problému.
 
-Additional useful information might also be available in the `FAQ <../Getting-Started/FAQ.html>`_.
+Další užitečné informace mohou být k dispozici také v sekci " FAQ <../Getting-Started/FAQ.html> ` _.
 
-AndroidAPS app
+Aplikace AndroidAPS
 ==================================================
-Building & updating
+Vytváření a aktualizace
 -----
 * `Lost keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
 * `Troubleshooting AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
@@ -35,7 +35,7 @@ CGM
 * `xDrip - no CGM data <../Configuration/xdrip.html#identify-receiver>`_
 * `xDrip - Dexcom troubleshooting <../Configuration/xdrip.html#troubleshooting-dexcom-g5-g6-and-xdrip>`_
 
-Pumps
+Pumpy
 ==================================================
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#dana-rs-specific-errors>`_
 * `Accu-Chek Combo general <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_
