@@ -57,7 +57,7 @@ Onderdelen instellen
    :glob:
    
    BG bron <./Configuration/BG-Source.rst>
-   xDrip+ instellingen <./Configuratie/xdrip.md>
+   xDrip+ instellingen <./Configuration/xdrip.md>
    Pompen <./Hardware/pumps.rst>
    Telefoons <./Hardware/Phoneconfig.rst>
    Nightscout instellen <./Installing-AndroidAPS/Nightscout.md>
@@ -112,7 +112,7 @@ AndroidAPS voor kinderen
    :glob:
    
    Monitoren op afstand <./Children/Children.rst>
-   SMS Comando's <./Usage/SMS-Commands.rst>
+   SMS Comando's <./Children/SMS-Commands.rst>
    
 
 Problemen oplossen
