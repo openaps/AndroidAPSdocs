@@ -19,34 +19,34 @@
 
 * Помпа Insight должна быть единовременно подключена только к одному устройству. Если вы ранее уже подсоединяли пульт дистанционного управления (глюкометр) Insight, то его необходимо удалить из списка сопряженных устройств помпы: Меню > Настройки > Связь > Удалить устройство
     
-    ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
+    ![Снимок экрана удаления глюкометра из помпы Insight](../images/Insight_RemoveMeter.png)
 
 * В [Конфигураторе](../Configuration/Config-Builder) приложения AndroidAPS выберите Accu-Chek Insight в разделе помпа
     
-    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
+    ![Снимок экрана конфигуратора Config Builder помпы Insight](../images/Insight_ConfigBuilder.png)
 
 * Нажмите на значок шестеренки, чтобы открыть настройки Insight.
 
 * В настройках помпы нажмите кнопку "Сопряжение Insight" в верхней части экрана. Вы увидете список устройств bluetooth поблизости (ниже слева).
 * На помпе Insight перейдите в меню > Настройки > Связь > Добавить устройство. На помпе появится экран (внизу справа) с указанием серийного номера помпы.
     
-    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
+    ![Снимок экрана сопряжения Insight 1](../images/Insight_Pairing1.png)
 
 * Вернувшись к телефону, нажмите на серийный номер помпы в списке устройств Bluetooth. Затем нажмите на Сопряжение, чтобы подтвердить действие.
     
-    ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
+    ![Снимок экрана сопряжения Insight 2](../images/Insight_Pairing2.png)
 
 * Как помпа, так и телефон отобразят код. Убедитесь, что коды одинаковы на обоих устройствах и подтвердите сопряжение на помпе и на телефоне.
     
-    ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
+    ![Снимок экрана сопряжения Insight 3](../images/Insight_Pairing3.png)
 
 * Успешно! Похлопайте себя по спине за успешно выполненную задачу по сопряжению с AndroidAPS.
     
-    ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
+    ![Снимок экрана сопряжения Insight 4](../images/Insight_Pairing4.png)
 
 * Чтобы убедиться, что все в порядке, вернитесь к конфигуратору в AndroidAPS и нажмите на значок настройки рядом с надписью Помпа Insight, войдите в настройки Insight, затем нажмите на Сопряжение Insight и вы увидите информацию о помпе:
     
-    ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
+    ![Снимок экрана информации о сопряжения Insight](../images/Insight_PairingInformation.png)
 
 Примечание: Постоянного соединения между помпой и телефоном не будет. Подключение будет устанавливаться только в случае необходимости (т.е. для изменения временного базала, подачи болюса, чтения логов помпы и т.п...). В ином случае аккумуляторы телефона и помпы будут расходоваться слишком быстро.
 
@@ -56,7 +56,7 @@
 
 Единственное решение на данный момент - **отключить синхронизацию** с Nightscout (только выгрузка) если хотите использовать автонастройку. В AAPS выберите Параметры > NSClient > подробные настройки 'только выгрузка в NS (без синхронизации)'.
 
-![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
+![Снимок экрана настроек Insight](../images/Insight_pairing_V2_5.png)
 
 В настройках Insight в AndroidAPS следует активировать следующие параметры:
 
@@ -92,7 +92,7 @@
 * "Обновить": Обновляет состояние помпы
 * "Включить/выключить уведомление TBR": Стандартная помпа Insight издает сигнал по завершении временной TBR. Кнопка позволяет включить или отключить это оповещение без изменения конфигурации программного обеспечения.
     
-    ![Screenshot of Insight Status](../images/Insight_Status2.png)
+    ![Снимок экрана текущего состояния Insight](../images/Insight_Status2.png)
 
 ## Настройки помпы
 
@@ -128,12 +128,12 @@
 
 ### Таймаут
 
-Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
+Иногда помпа Insight может не отвечать во время установки соединения. В этом случае AAPS выдает следующее сообщение: "Таймаут сопряжения - выполните сброс bluetooth".
 
-![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
+![Сброс Bluetooth помпы Insight](../images/Insight_ResetBT.png)
 
-In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
+В этом случае выключите Bluetooth на помпе и смартфоне примерно 10 секунд, а затем включите его обратно.
 
 ## Пересечение часовых поясов с помпой Insight
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
+Информацию о пересечении часовых поясов см. в разделе [Пересечение часовых поясов с помпами](../Usage/Timezone-traveling#insight).
