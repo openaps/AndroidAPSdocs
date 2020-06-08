@@ -27,7 +27,7 @@ Volg deze regels om bij Andorid 7.0 te blijven:
 
 * Geen verbinding maken met wifi of mobiel netwerk bij het eerste gebruik, om automatische update te voorkomen.
 * Stel géén wifi-netwerk in.
-* Het offline instellen van een Google account is het enige wat niet kan worden overgeslagen.
+* Het offline instellen van een Google account is het enige dat je niet kunt overslaan.
 * Ga naar instellingen en schakel automatisch updaten uit (Instellingen >Systeem >Over de telefoon >Systeem update >Menu via drie-stipjes rechtsboven >Instellingen >Automatisch controleren op updates >Eenmalig)
 * Elke keer dat je het wifi- of mobiele netwerk activeert, krijg je een melding dat er een systeemupdate beschikbaar is. Niet bijwerken! Het is het beste om de melding te verwijderen zodat je niet per ongeluk bijwerkt. Dat is namelijk niet zo gemakkelijk om ongedaan te maken. 
 * Geïnstalleerde apps kunnen en moeten worden bijgewerkt.
