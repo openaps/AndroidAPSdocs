@@ -51,5 +51,5 @@ Loop für iOS
 
 Kompatible Insulinpumpen sind:
 
-* Omnipod
+* Omnipod Eros
 * einige alte Medtronic Pumpen
