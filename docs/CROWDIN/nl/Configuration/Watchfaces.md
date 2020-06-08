@@ -129,7 +129,7 @@ Een gevulde ster geeft aan ingeschakeld (**Aan**), een lege ster geeft aan dat i
 
 #### Steampunk watchface
 
-* **Delta Korrelgrootte** (default `Medium`)
+* **Delta Korrelgrootte** (standaard `Medium`)
 
 ![Steampunk_meter](../images/Watchface_Steampunk_Gauge.png)
 
@@ -146,7 +146,7 @@ Een gevulde ster geeft aan ingeschakeld (**Aan**), een lege ster geeft aan dat i
 * **Voorvullen in Menu** (standaard `Uit`): Voorvullen / Vullen vanaf horloge toestaan
 * **Enkel doel** (standaard `Aan`):
     
-    * `On`: je stelt een enkele waarde als TT in
+    * `Aan`: je stelt een enkele waarde als TT in
     * `Uit`: Laag en hoog doel gelijktijdig als TT ingesteld
 
 * **Wizard Percentage** (standaard `Uit`): Bolus correctie vanuit de wizard toestaan (waarde ingevoerd in percentage voor bevestiging melding)
