@@ -51,5 +51,5 @@ Loop iOS sistemai <https://loopkit.github.io/loopdocs/>`_ yra Atvirojo kodo Užd
 
 Suderinamos pompos yra:
 
-* Omnipod
+* Omnipod Eros
 * kai kurios senosios Medtronic pompos
