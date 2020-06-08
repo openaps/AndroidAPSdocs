@@ -60,7 +60,7 @@ Als je Autotune wilt kunnen gebruiken, dan is de enige manier op dit moment **sy
 
 In de Insight-instellingen in AndroidAPS kun je de volgende opties inschakelen:
 
-* "Infuuswissel noteren": Dit zal automatisch een insulinepatroon wissel noteren wanneer je de "cannule vullen" optie op de pomp gebruikt.
+* "Reservoirwissel noteren": Dit zal automatisch een insulinepatroon wissel noteren wanneer je de "cannule vullen" optie op de pomp gebruikt.
 * "Slangwissel noteren": Dit voegt een notitie toe aan de AndroidAPS database wanneer je het "infusieset vullen" programma op de pomp gebruikt.
 * "Infuuswissel noteren": Dit voegt een notitie toe aan de AndroidAPS database wanneer je het "cannule vullen" programma op de pomp gebruikt. **Opmerking: Bij een infuuswissel wordt ook automatisch Autosens gereset.**
 * "Batterijwissel noteren": Dit voegt een notitie toe aan AndroidAPS wanneer je een nieuwe batterij in de pomp plaatst.
