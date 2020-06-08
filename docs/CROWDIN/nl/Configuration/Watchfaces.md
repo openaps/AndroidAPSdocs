@@ -10,7 +10,7 @@ Je kunt de AndroidAPS app installeren op je **Wear OS based** smartwatch. Met de
 * Sommige functies zoals *complications* vereisen Wear OS versie 2.0 of recenter om te functioneren
 * Google heeft *Android Wear 1.x* omgedoopt naar *Wear OS* vanaf versie 2.x. Indien een smartwatch met *Android Wear* wordt aangeduid, kan het goed zijn dat het de oudere 1.x versie heeft
 * Als in een beschrijving van smartwatch alleen compatibiliteit met *Android* en *iOS* aangegeven wordt, betekent het **niet** dat deze draait op *Wear OS* - het kan net zo goed een ander soort fabrikant specifieke OS zijn **die niet compatibel is met AAPS wear!**.
-* Controleer de [lijst van geteste telefoons en horloges](../Getting-Started/Phones#list-of-tested-phones) en [ vraag de community](../Where-To-Go-For-Help/Connect-with-other-users.md) om advies als je twijfelt of het horloge wordt ondersteund
+* Controleer de [lijst van geteste telefoons en horloges](../Getting-Started/Phones.md) en [ vraag de community](../Where-To-Go-For-Help/Connect-with-other-users.md) om advies als je twijfelt of het horloge wordt ondersteund
 
 ### Wear OS-versie van AAPS bouwen
 
@@ -104,17 +104,17 @@ Een gevulde ster geeft aan ingeschakeld (**Aan**), een lege ster geeft aan dat i
 
 * **Toon Datum** (standaard `Uit`): let wel: datum is niet beschikbaar op alle watchfaces
 * **Toon IOB** (standaard `Aan`): De IOB waarde weergeven of niet (gedetailleerde instellingen voor de waarde staan in AAPS wear instellingen)
-* **Toon COB** (standaard `On`): Toon wel of geen COB waarde
+* **Toon COB** (standaard `Aan`): Toon wel of geen COB waarde
 * **Toon Delta** (standaard `Aan`): Toon wel of geen BG variatie van de laatste 5 minuten
 * **Toon AvgDelta** (standaard `Aan`): De gemiddelde BG variatie van de afgelopen 15 minuten wel of niet weergeven
 * **Toon Telefoon Batterij** (standaard `Aan`): Telefoon batterij in %. Is rood beneden de 30%.
 * **Rig Batterij tonen** (standaard `Uit`): Rig batterij is een samenvoeging van Telefoon batterij, pompbatterij en sensor accu (over het algemeen de laagste van de 3 waarden)
 * **Toon Basaal hoeveelheid** (standaard `Aan`): Huidige basaalstand weergeven (in E/uur of in % bij TBR)
 * **Toon Loop Status** (standaard `Aan`): laat aantal minuten zien sinds de laatst uitgevoerde loop (pijlen bij de waarde worden rood indien boven de 15').
-* **Toon BG** (standaard `On`): Wel of geen laatste BG waarde weergeven
+* **Toon BG** (standaard `Aan`): Wel of geen laatste BG waarde weergeven
 * **Toon richting pijl ** (standaard `Aan`): Wel of geen BG trend pijl weergeven
-* **Toon historie** (standaard `On`): toon aantal minuten sinds de laatste uitlezing.
-* **Donker** (standaard `On`): Je kunt overschakelen van zwarte naar witte achtergrond (behalve voor Cockpit en Steampunk wijzerplaaten)
+* **Toon historie** (standaard `Aan`): toon aantal minuten sinds de laatste uitlezing.
+* **Donker** (standaard `Aan`): Je kunt overschakelen van zwarte naar witte achtergrond (behalve voor Cockpit en Steampunk wijzerplaaten)
 * **Markeer basaal** (standaard `Uit`): verbeter de zichtbaarheid van basaalstanden en tijdelijke basaalstanden
 * **Overeenkomst verdeler** (standaard `Uit`): Voor AAPS, AAPSv2 en AAPS(groot) wijzerplaten, toon contrast op de achtergrond voor verdeler (**Uit**) of match met de achtergrondkleur (**Aan**)
 * **Grafiek Tijdschaal** (standaard `3 uur`): in het submenu kan je de maximale tijdschaal van de grafiek tussen 1 uur en 5 uur selecteren.
@@ -229,7 +229,7 @@ Omdat we geen compromissen kunnen sluiten op het gebied van communicatie (we heb
 * Controleer wat op jouw horloge beter functioneert: meegeleverde AAPS watchfaces of andere watchfaces met AAPS Complicaties.
 * Observer een paar dagen, waarop je verschillende activiteiten doet. De meeste horloges activeren het display wanneer je hem naar je gezicht beweegt, bij beweging en andere gebruik-gerelateerde zaken.
 * Controleer de algemene systeeminstellingen die van invloed zijn op de prestaties: notificaties, achtergrondverlichting/uitschakelen na inactiviteit, als GPS wordt geactiveerd etc.
-* Bekijk de [lijst van geteste telefoons en horloges](../Getting-Started/Phones#list-of-tested-phones) en [ vraag de community](../Where-To-Go-For-Help/Connect-with-other-users.md) om advies als je twijfelt of het horloge wordt ondersteund.
+* Bekijk de [lijst van geteste telefoons en horloges](../Getting-Started/Phones.md) en [ vraag de community](../Where-To-Go-For-Help/Connect-with-other-users.md) om advies als je twijfelt of het horloge wordt ondersteund.
 * **We kunnen niet garanderen dat de gegevens die worden weergegeven op het watchface of complicatie altijd up-to-date is**. Uiteindelijk is het aan Wear OS om te beslissen wanneer een watchface of een complicatie wordt bijgewerkt. Zelfs wanneer de AAPS app aanvragen worden bijgewerkt, dan kan het systeem besluiten om updates uit te stellen of te negeren uit batterijbesparing. Wanneer je twijfelt en het batterijniveau van je horloge is laag - doe altijd een dubbel-check met de AAPS-app op je telefoon.
 
 ## Probleemoplossing van de wear app:
