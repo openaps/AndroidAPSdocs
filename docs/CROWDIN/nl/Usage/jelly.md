@@ -9,7 +9,7 @@
 
 ### Nadelen Jelly
 
-* Heel klein. Wordt daarom alleen aangeraden voor ervaren loopers (sommige instellingen zijn niet herkenbaar, je moet van eerdere ervaringen met een grote AndroidAPS telefoon weten hoe en waar je alles kunt vinden). Sommige AAPS knoppen zijn lastig te raken en vereisen veel gevoel, dit is erg lastig met grote of onhandige vingers.
+* Hij is echt heel klein. Wordt daarom alleen aangeraden voor ervaren loopers (sommige dingen zijn nauwelijks te lezen, je moet weten waar je alles kunt vinden uit eerdere ervaringen met een normaal formaat telefoon). Sommige AAPS knoppen zijn lastig te raken omdat ze zo klein zijn, je hebt dus wat geduld nodig en je moet niet al te grote of onhandige vingers hebben.
 * Kan alleen worden gebruikt als extra telefoon om mee te loopen. Het is beter om een andere smartphone bij je te hebben voor dagelijks telefoon/internetgebruik. 
 * Als je de Jelly niet (altijd! ja echt altijd!) behandelt als de diva die het is, dan toont de Jelly zijn bitchy kant: hij vergeet alle Bluetooth-verbindingen en gaat zitten mokken totdat je hem opnieuw opstart. 
 
@@ -21,7 +21,7 @@ De volgende instellingen zorgen ervoor dat de batterij van de Jelly smartphone o
 
 ### Instellingen voor eerste gebruik
 
-<b><font color="#FF0000">Belangrijk:</b></font> Als je Android 8.1 niet persé nodig hebt (alleen nodig om te loopel met een Accu-Check Combo), dan laat je de telefoon op Android versie 7.0 staan!
+<b><font color="#FF0000">Belangrijk:</b></font> Als je Android 8.1 niet persé nodig hebt (alleen nodig om te loopen met een Accu-Check Combo), dan laat je de telefoon op Android versie 7.0 staan!
 
 Volg deze regels om bij Andorid 7.0 te blijven:
 
