@@ -51,5 +51,5 @@ Loop para iOS
 
 Las bombas compatibles son:
 
-* Omnipod
+* Omnipod Eros
 * algunas bombas Medtronic antiguas
