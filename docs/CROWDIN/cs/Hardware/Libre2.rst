@@ -1,36 +1,44 @@
 Freestyle Libre 2
 **************************************************
 
-The Freestyle Libre 2 system can automatically report dangerous blood glucose levels. The Libre2 Sensor sends the current blood sugar level to a receiver (reader or smartphone) every minute. The receiver triggers an alarm if necessary. With a self-modified LibreLink App, you can continuously receive your blood sugar level on your smartphone. As they send them directly via bluetooth to your phone, you won't need to buy a bluetooth adapter like MiaoMiao or blucon anymore. 
+The Freestyle Libre 2 system can automatically report dangerous blood glucose levels. The Libre2 Sensor sends the current blood sugar level to a receiver (reader or smartphone) every minute. The receiver triggers an alarm if necessary. With a self-modified LibreLink app and the xDrip+ app, you can continuously receive and display your blood sugar level on your smartphone. 
+
+The sensor can be calibrated to adjust differences between finger prick mesurements and sensor readings.
+
+BG readings can also be done using a BT transmitter like with the Libre1.
 
 Krok 1: Sestavte si svou vlastní upravenou aplikaci Librelink
 ==================================================
 
-For legal reasons, the so-called patching has to be done by yourself. Use search engines to find the corresponding links.
+For legal reasons, the so-called patching has to be done by yourself. Use search engines to find the corresponding links. There are mainly two variants: The recommended original patched app blocks any internet traffic to avoid tracking. The other variant supports LibreView which may be needed by your doctor.
 
-To check whether you correctly patched the LibreLink app, take a look at the font of the patched app. The fonts in the original and patched app differ. Your patching was successful if the font looks like the font on the right:
+The patched app has to be installed instead of the original app. The next sensor started with it will transmit the current BG values to the xDrip+ app running on your smartphone via bluetooth.
 
-.. image:: ../images/LibreLinkPatchedCheck.png
-  :alt: LibreLink Foreground Service
+Important: To avoid possible problems it may help to first install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. This costs no extra power. Then install the patched app. 
 
-The patched app has to be installed instead of the original app. The next sensor started with it will wireless transmit its values to the smartphone.
-
-Important: First install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. This costs no extra power. Then install the patched app. It can be identified by the foreground authorization notification. 
+The patched app can be identified by the foreground authorization notification. The foreground authorization service improves the connection stability compared to the original app which do not use this service.
 
 .. image:: ../images/fsl2pic1.jpg
   :alt: LibreLink Foreground Service
 
-This significantly improves the connection stability compared to the original app. Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and timezone and set at least one alarm in the patched app. 
+Other indications could be the Linux penguin logo three dot menue -> Info or the font of the pachted app. These criterias are optional depending on the app source you choose.
 
-Now start the Libre2 sensor with the patched app by simply scanning the sensor. Follow the instructions. The sensor remembers the device it was started with. Only this device can receive alarms in the future.
+.. image:: ../images/LibreLinkPatchedCheck.png
+  :alt: LibreLink Foreground Service
+
+Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and timezone and set at least one alarm in the patched app. 
+
+Now start the Libre2 sensor with the patched app by simply scanning the sensor. Ensure to have set all settings done.
 
 Mandatory settings for successful sensor start: 
 
 * NFC enabled / BT enabled
-* memory permission enabled 
-* location enabled
+* memory and location permission enabled 
+* location service enabled
 * automatic time and timezone setting
 * set at least one alarm in the patched app
+
+Please note that the location service is a central setting. this is not the app permission which has to be set also!
 
 .. image:: ../images/fsl2pic2.jpg
   :alt: LibreLink permissions memory & location
@@ -44,9 +52,12 @@ Mandatory settings for successful sensor start:
 .. image:: ../images/fsl2pic4.jpg
   :alt: LibreLink settings alarm
   
+
+The sensor remembers the device it was started with. Only this device can receive alarms in the future.
+
 The first connection setup to the sensor is critical. The LibreLink app tries to establish a wireless connection to the sensor every 30 seconds. If one or more mandatory settings are missing they have to be adjusted. You have no time limit to do that. The sensor is constantly trying to setup the connection. Even if is last some hours. Be patient and try different seetings before even think of changing the sensor.
 
-As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLinks start screen there is no connection. Only when the exclamation mark is gone, the connection is established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
+As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLinks start screen there is no connection or some other setting blocks LibreLink to signal alarms. Please check if the sound is enabled and all sorts of blocking app notifications are disabled. When the exclamation mark is gone, the connection should be established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
 
 .. image:: ../images/fsl2pic5.jpg
   :alt: LibreLink no connection
@@ -57,19 +68,28 @@ If the exclamation mark remains or you get an error message, this can have sever
 - automatic time and time zone is not set - please change the settings accordingly
 - activate alarms - at least one of the three alarms must be activated in LibreLink
 - Bluetooth is switched off - please switch on
+- sound is blocked
+- app notifications are blocked
+- idle screen notifications are blocked 
+- you have a faulty Libre 2 sensor from a production LOT number with a 'K' followed by 8 digits. You find this printed on the yellow package. That sensors has to be replace as they dont function on bluetooth.
 
-Restarting the phone can help, you may have to do it several times. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
+Restarting the phone can help, you may have to do it several times. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. It may happen that depending on system settings the exclamation mark remain but you still get readings. In both cases you are fine. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
 
 .. image:: ../images/fsl2pic6.jpg
   :alt: LibreLink connection established
   
-Now the smartphone settings can be changed again if necessary, e.g. if you want to save power. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The bloodsugar levels are transferred anyway.
+In rare case it could help to empty the bluetooth cache and/or reset all network connections via the system menu. This removes all connected bluetooth devices which may help to setup a proper bluetooth connection.
+
+Now the smartphone settings can be changed again if necessary. This is not recommended but you may want to save power. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The bloodsugar levels are transferred anyway.
 
 When starting the next sensor, however, all settings must be set again!
 
-You can use a second NFC capable smartphone with the original LibreLink app for scanning via NFC. The Reader can NOT be used any more, it cannot be connected in parallel! The second phone can upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for the DiaDoc. There are many parents who absolutely need this. 
+Remark: The patched app need them in that hour after warmup to enable a connection. For the 14 days operation time they are not needed. 
 
-Remark: The patched app does not have any connection to the Internet.
+You can use one or more NFC capable smartphones (not the reader device!) running the original LibreLink app for scanning via NFC. The second phone can upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for the DiaDoc. There are many parents who absolutely need this. Please note the the original patched app does not have any connection to the Internet.
+
+There is a variant of the patched app supporting LibreView. Please be aware that your data are transfered to the cloud then. But your diadoc tool- and reportingchain is fully supported then. With that variant it is also possible to move the alarms to a different device which not has started the sensor. Please google to find the way how this could be done.
+
 
 Step 2: Nainstalujte a nastavte aplikaci xDrip+
 ==================================================
@@ -95,9 +115,11 @@ Step 3: Start sensor
 
 In xDrip+ start the sensor with "Start Sensor" and "not today". 
 
-In fact this will not start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
+In fact this will not physically start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
 
-Step 4: Configure AndroidAPS
+After a sensor change xDrip+ will automatically detect the new sensor and will delete all calibration data. You may check you bloody BG after activation and make a new inital calibration.
+
+Step 4: Configure AndroidAPS (for looping only)
 ==================================================
 * V AndroidAPS přejděte na kartu Konfigurace > Zdroj glykémie a vyberte 'xDrip+' 
 * If AndroidAPS does not receive BG values when phone is in airplane mode, use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html#identifiziere-empfanger>`_.
@@ -107,9 +129,11 @@ Ani v současné době není možné při používání Libre 2 jako zdroje glyk
 Experiences and Troubleshooting
 ==================================================
 
-The connectivity is extraordinary good. With the exception of Huawei mobile phones, all current smartphones seems to work well. The reconnect in case of connection loss is phenomenal. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. When I am gardening, I use to wear my phone on the sensor side of my body. In rooms, where Bluettooth spreads over refections, no problems should occur. If you have connectivity problems please test another phone.
+The connectivity is extraordinary good. With the exception of Huawei mobile phones, all current smartphones seems to work well. The reconnect rate in case of connection loss is phenomenal. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. When I am gardening, I use to wear my phone on the sensor side of my body. In rooms, where Bluettooth spreads over refections, no problems should occur. If you have connectivity problems please test another phone. It may also help to set the sensor with the internal BT antenna pointing down. The slit on the applicator must be pointing down when setting the sensor.
 
 Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes. This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip+ graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings > Advanced Settings for Libre2 > "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor infos are available in the System menu.
+
+The raw values are very helpfull when the blood sugar is moving fast. Even if the dots are more jumpy you would detect the tendence much better as using the smoothed line to make proper therapy decisions.
 
 .. image:: ../images/fsl2pic8.jpg
   :alt: xDrip+ advanced settings Libre 2
@@ -137,7 +161,7 @@ Once successful please select "Sensor Stop" and "Delete calibration only" in xDr
 .. image:: ../images/fsl2pic11.jpg
   :alt: xDrip+ missing data when changing Libre 2 sensor
   
-You can calibrate the Libre2 with an offset of plus/minus 20 mg/dL (intercept), but no slope. To be on the safe side, calibrate every 24 - 48 hours. The values are accurate up to the end of the sensor and do not jitter as with the Libre1. However, if the sensor is completely off, this will not change. The sensor should then be replaced immediately.
+You can calibrate the Libre2 with an offset of -40 - +20 mg/dL (intercept). The slope isnt changable as the Libre2 is much more accurate compared to the Libe1. Please check by fingerpricking early after setting a new sensor. It is know that there can arise big differences to the blood measurements. To be on the safe side, calibrate every 24 - 48 hours. The values are accurate up to the end of the sensor and do not jitter as with the Libre1. However, if the sensor is completely off, this will not change. The sensor should then be replaced immediately.
 
 The Libre2 sensors contain plausibility checks to detect bad sensor values. As soon as the sensor moves on the arm or is lifted slightly, the values may start to fluctuate. The Libre2 sensor will then shut down for safety reasons. Unfortunately, when scanning with the App, additional checks are made. The app can deactivate the sensor even though the sensor is OK. Currently the internal test are too strict. I have completely stopped scanning and haven't had a failure since then.
 
@@ -149,3 +173,18 @@ In other `time zones <../Usage/Timezone-traveling.html>`_ there are two strategi
 Method 1. is great as long as you don't have to set a new Libre2 sensor on-site. If in doubt, choose method 2., especially if the trip takes longer. If you set a new sensor, the automatic time zone must be set, so method 1. would be disturbed. Please check before, if you are somewhere else, you can run otherwise fast into problems.
 
 Besides the patched app the new Droplet transmitter or (soon available) the new OOP algorithm of xDrip+ can be used to receive blood sugar values. MM2 and blucon do NOT work so far.
+
+Step 5: Using bluetooth transmitter and OOP
+==================================================
+
+Bluetooth transmitter can be used with the Libre2. 
+
+Please refer to the miaomiao website to find a description. This will also work with the Bubble devices.
+
+Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth tranmitter instead.
+
+  - the BG readings are identical to the reader results
+  - the Libre2 sensor can be used 14.5 days as with the Libre1 before 
+  - 8 hours Backfilling is fully supported.
+
+Remark: The transmitter can be used in parallel to the LibreLink app.
