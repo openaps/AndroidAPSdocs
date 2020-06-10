@@ -1,5 +1,8 @@
 Wiki mises à jour et modifications
 **************************************************
+June 2020
+==================================================
+* `Libre 2 <../Hardware/Libre2.html>`_ - more details / instructions patched Libre Link app
 Mai 2020
 ==================================================
 * `Bolus étendus uniquement pour les pompes Dana + Insight <../Usage/Extended-Carbs.html#bolus-etendus-et-passage-en-boucle-ouverte-uniquement-pour-les-pompesdana-et-insight>`_
