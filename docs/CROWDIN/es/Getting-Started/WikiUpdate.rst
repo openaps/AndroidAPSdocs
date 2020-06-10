@@ -1,5 +1,8 @@
 Docs updates & changes
 **************************************************
+June 2020
+==================================================
+* `Libre 2 <../Hardware/Libre2.html>`_ - more details / instructions patched Libre Link app
 May 2020
 ==================================================
 * `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
