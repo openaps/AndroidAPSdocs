@@ -1,44 +1,44 @@
 Freestyle Libre 2
 **************************************************
 
-Le système Freestyle Libre 2 peut automatiquement signaler des niveaux de glycémie dangereux. Le capteur Libre2 envoie le taux de glycémie actuel à un récepteur (lecteur ou smartphone) chaque minute. Le récepteur déclenche une alarme si nécessaire. With a self-modified LibreLink app and the xDrip+ app, you can continuously receive and display your blood sugar level on your smartphone. 
+Le système Freestyle Libre 2 peut automatiquement signaler des niveaux de glycémie dangereux. Le capteur Libre2 envoie le taux de glycémie actuel à un récepteur (lecteur ou smartphone) chaque minute. Le récepteur déclenche une alarme si nécessaire. Avec une application LibreLink modifiée par vous-même et l'application xDrip+, vous pouvez recevoir en permanence votre taux de sucre dans le sang sur votre smartphone. 
 
-The sensor can be calibrated to adjust differences between finger prick mesurements and sensor readings.
+Le capteur peut être étalonné pour ajuster les différences entre les glycémies capîllaires et les capteurs.
 
-BG readings can also be done using a BT transmitter like with the Libre1.
+Les glycémies peuvent également être transmise avec un émetteur BT comme avec le Libre1.
 
 Étape 1 : Construire votre propre application Librelink patchée
 ==================================================
 
-Pour des raisons légales, le soi-disant correctifs doit être fait par vous-même. Utilisez les moteurs de recherche pour trouver les liens correspondants. There are mainly two variants: The recommended original patched app blocks any internet traffic to avoid tracking. The other variant supports LibreView which may be needed by your doctor.
+Pour des raisons légales, le soi-disant correctifs doit être fait par vous-même. Utilisez les moteurs de recherche pour trouver les liens correspondants. Il y a deux principales variantes : L'application patchée d'origine recommandée bloque tout trafic Internet pour éviter le suivi. L'autre variante supporte LibreView qui peut être nécessaire pour votre médecin.
 
-The patched app has to be installed instead of the original app. The next sensor started with it will transmit the current BG values to the xDrip+ app running on your smartphone via bluetooth.
+L'application patchée doit être installée à la place de l'application d'origine. Le prochain capteur demarré avec elle transmettra les valeurs GLY actuelles via bluetooth à l'application xDrip+ qui s'exécute sur votre smartphone.
 
-Important: To avoid possible problems it may help to first install and uninstall the original app on an NFC capable smartphone. Le NFC doit être activé. Cela ne consomme pas plus d'énergie. Then install the patched app. 
+Important : Pour éviter d'éventuels problèmes, il peut être utile dans un premier temps d'installer et de désinstaller l'application originale sur un smartphone compatible NFC. Le NFC doit être activé. Cela ne consomme pas plus d'énergie. Installez ensuite l'application patchée. 
 
-The patched app can be identified by the foreground authorization notification. The foreground authorization service improves the connection stability compared to the original app which do not use this service.
+L'application patchée peut être identifiée par la notification d'autorisation au premier plan. Le service d'autorisation au premier plan améliore la stabilité de la connexion par rapport à l'application d'origine qui n'utilise pas ce service.
 
 .. image:: ../images/fsl2pic1.jpg
   :alt: LibreLink Foreground Service
 
-Other indications could be the Linux penguin logo three dot menue -> Info or the font of the pachted app. These criterias are optional depending on the app source you choose.
+D'autres indications pourraient être le logo Linux pingouin à trois points -> Info ou la police de l'application pachtée. Ces critères sont facultatifs selon la source d'application que vous choisissez.
 
 .. image:: ../images/LibreLinkPatchedCheck.png
   :alt: LibreLink Foreground Service
 
-Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and timezone and set at least one alarm in the patched app. 
+Assurez-vous que NFC est activé, activez l'autorisation de mémoire et d'emplacement pour l'application corrigée, activez l'heure et le fuseau horaire automatiques et définissez au moins une alarme dans l'application patchée. 
 
-Maintenant, démarrez le détecteur Libre2 avec l'application patchée en scannant simplement le capteur. Ensure to have set all settings done.
+Maintenant, démarrez le détecteur Libre2 avec l'application patchée en scannant simplement le capteur. Assurez-vous d'avoir défini tous les paramètres.
 
 Paramètres obligatoires pour réussir le démarrage du capteur : 
 
 * NFC activé / BT activé
-* memory and location permission enabled 
-* location service enabled
+* autorisation de mémoire et d'emplacement activée 
+* service d'emplacement activé
 * réglage automatique de l'heure et du fuseau horaire
 * définir au moins une alarme dans l'application patchée
 
-Please note that the location service is a central setting. this is not the app permission which has to be set also!
+Veuillez noter que l'activation du service de localisation est primordial. Il ne s'agit pas de l'autorisation d'application qui doit être également définie !
 
 .. image:: ../images/fsl2pic2.jpg
   :alt: LibreLink permissions memory & location
@@ -57,7 +57,7 @@ Le capteur se souvient de l'appareil avec lequel il a été démarré. Seul cet 
 
 La première configuration de connexion au capteur est critique. L'application LibreLink tente d'établir une connexion sans fil au capteur toutes les 30 secondes. Si un ou plusieurs paramètres obligatoires sont manquants, ils doivent être renseignés. Vous n'avez pas de limite de temps pour le faire. Le capteur essaye constamment de configurer la connexion. Même si cela dure plusieurs heures. Soyez patient et essayez différents paramétres avant d'envisager de changer le capteur.
 
-As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLinks start screen there is no connection or some other setting blocks LibreLink to signal alarms. Please check if the sound is enabled and all sorts of blocking app notifications are disabled. When the exclamation mark is gone, the connection should be established and blood sugar values are sent to the smartphone. Cela devrait se produire après un maximum de 5 minutes.
+Tant que vous voyez un point d'exclamation rouge ("!") Dans le coin supérieur gauche de l'écran de démarrage de LibreLinks, il n'y a pas de connexion ou d'autres blocs de configuration LibreLink pour signaler des alarmes. Vérifiez si le son est activé et que toutes les applications de blocage de notifications sont désactivées. Ce n'est que lorsque le point d'exclamation est parti, que la connexion est établie et que les valeurs de glycémies sont envoyées au smartphone. Cela devrait se produire après un maximum de 5 minutes.
 
 .. image:: ../images/fsl2pic5.jpg
   :alt: LibreLink no connection
@@ -68,12 +68,12 @@ Si le point d'exclamation reste ou si vous obtenez un message d'erreur, cela peu
 - le réglage automatique de l'heure et du fuseau horaire n'est pas activé - veuillez modifier les paramètres en conséquence
 - activez les alarmes - au moins une des trois alarmes doit être activée dans LibreLink
 - le Bluetooth est éteint - veuillez l'activer
-- sound is blocked
-- app notifications are blocked
-- idle screen notifications are blocked 
-- you have a faulty Libre 2 sensor from a production LOT number with a 'K' followed by 8 digits. You find this printed on the yellow package. That sensors has to be replace as they dont function on bluetooth.
+- le son est bloqué
+- les notifications de l'application sont bloquées
+- les notifications de l'écran de veille sont bloqués 
+- vous avez un capteur Libre 2 défectueux (LOT avec un 'K' suivi de 8 chiffres). Vous trouvez ce numéro imprimé sur le paquet jaune. Ces capteurs doivent être remplacés car ils ne fonctionnent pas en bluetooth.
 
-Le redémarrage du téléphone peut vous aider, vous devrez peut-être le faire plusieurs fois. Dès que la connexion est établie, le point d'exclamation rouge disparaît et l'étape la plus importante est franchie. It may happen that depending on system settings the exclamation mark remain but you still get readings. In both cases you are fine. Le capteur et le téléphone sont maintenant connectés, chaque minute une valeur de glycémie est transmise.
+Le redémarrage du téléphone peut vous aider, vous devrez peut-être le faire plusieurs fois. Dès que la connexion est établie, le point d'exclamation rouge disparaît et l'étape la plus importante est franchie. Il peut arriver que, selon les paramètres du système, le point d'exclamation reste mais que vous obtenez des lectures. Dans les deux cas, c'est bon. Le capteur et le téléphone sont maintenant connectés, chaque minute une valeur de glycémie est transmise.
 
 .. image:: ../images/fsl2pic6.jpg
   :alt: LibreLink connexion établie
