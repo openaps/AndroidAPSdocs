@@ -78,17 +78,17 @@ Le redémarrage du téléphone peut vous aider, vous devrez peut-être le faire 
 .. image:: ../images/fsl2pic6.jpg
   :alt: LibreLink connexion établie
   
-In rare case it could help to empty the bluetooth cache and/or reset all network connections via the system menu. This removes all connected bluetooth devices which may help to setup a proper bluetooth connection.
+Dans de rares cas, cela peut aider à vider le cache bluetooth et/ou réinitialiser toutes les connexions réseau via le menu système. Cela supprime tous les périphériques bluetooth connectés ce qui peut aider à configurer une nouvelle connexion bluetooth spécifique.
 
-Now the smartphone settings can be changed again if necessary. This is not recommended but you may want to save power. Le service de localisation peut être éteint, le volume peut être réglé à zéro ou les alarmes peuvent être à nouveau désactivées. Les glycémies sont de toute façon transmises.
+Maintenant, les paramètres du smartphone peuvent être modifiés à nouveau si nécessaire. Cela n'est pas recommandé, mais vous pouvez vouloir économiser de l'énergie. Le service de localisation peut être éteint, le volume peut être réglé à zéro ou les alarmes peuvent être à nouveau désactivées. Les glycémies sont de toute façon transmises.
 
 Toutefois, lors du démarrage du capteur suivant, tous les paramètres devront à nouveau être définis !
 
-Remark: The patched app need them in that hour after warmup to enable a connection. For the 14 days operation time they are not needed. 
+Remarque: L'application patchée en a besoin dans l'heure qui suit le préchauffage pour activer une connexion. Pour les 14 jours de fonctionnement, ils ne sont pas nécessaires. 
 
-You can use one or more NFC capable smartphones (not the reader device!) running the original LibreLink app for scanning via NFC. Le second téléphone peut télécharger les glycémies dans Cloud d'Abbott (LibreView). LibreView peut générer des rapport pour le DiaDoc. Il y a beaucoup de parents qui en ont absolument besoin. Please note the the original patched app does not have any connection to the Internet.
+Vous pouvez utiliser un ou plusieurs smartphones NFC (pas le lecteur !) avec l'application LibreLink pour le scanner via NFC. Le second téléphone peut télécharger les glycémies dans Cloud d'Abbott (LibreView). LibreView peut générer des rapport pour le DiaDoc. Il y a beaucoup de parents qui en ont absolument besoin. Veuillez noter que l'application patchée d'origine n'a aucune connection Internet.
 
-There is a variant of the patched app supporting LibreView. Please be aware that your data are transfered to the cloud then. But your diadoc tool- and reportingchain is fully supported then. With that variant it is also possible to move the alarms to a different device which not has started the sensor. Please google to find the way how this could be done.
+Il existe une variante de l'application patchée qui supporte LibreView. Veuillez noter que vos données sont ensuite transférées dans le cloud. Mais votre outil diadoc outil - et les rapports sont entièrement pris en charge ensuite. Avec cette variante il est également possible de déplacer les alarmes vers un autre appareil qui n'a pas démarré le capteur. Merci google pour trouver comment cela peut être fait.
 
 
 Étape 2 : Installer et configurer l'application xDrip+
@@ -115,11 +115,11 @@ Les glycémies sont reçues sur le smartphone par l'application xDrip+.
 
 Dans xDrip+ démarrez le capteur avec "Start Sensor" et "not today". 
 
-In fact this will not physically start any Libre2 sensor or interact with them in any case. Il s'agit simplement d'indiquer à xDrip+ qu'un nouveau capteur envoie des glycémies. Si possible, entrez deux valeurs de glycémie capillaire pour l'étalonnage initial. Maintenant, les glycémies doivent être affichées dans xDrip+ toutes les 5 minutes. Les valeurs manquantes, par ex. parce que vous étiez trop loin de votre téléphone, ne seront pas remises.
+En fait, cela ne démarre aucun capteur Libre2 ou n'interagit en aucun cas avec eux. Il s'agit simplement d'indiquer à xDrip+ qu'un nouveau capteur envoie des glycémies. Si possible, entrez deux valeurs de glycémie capillaire pour l'étalonnage initial. Maintenant, les glycémies doivent être affichées dans xDrip+ toutes les 5 minutes. Les valeurs manquantes, par ex. parce que vous étiez trop loin de votre téléphone, ne seront pas remises.
 
 After a sensor change xDrip+ will automatically detect the new sensor and will delete all calibration data. You may check you bloody BG after activation and make a new inital calibration.
 
-Step 4: Configure AndroidAPS (for looping only)
+Étape 4 : Configurer AndroidAPS (pour la boucle uniquement)
 ==================================================
 * Dans AndroidAPS allez dans le Générateur de configuration > Source des glycémies et cochez 'xDrip+' 
 * Si AndroidAPS ne reçoit pas de Glycémie lorsque le téléphone est en mode avion, utilisez `Identify receiver` comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html#identifier-le-recepteur>`_.
@@ -129,11 +129,11 @@ Jusqu'à présent, en utilisant le Freestyle Libre 2 comme source Gly, vous ne p
 Astuces et Dépannages
 ==================================================
 
-La connectivité est extrêmement bonne. A l'exception des téléphones portables Huawei, tous les smartphones actuels semblent bien fonctionner. The reconnect rate in case of connection loss is phenomenal. La connexion peut s'interrompre si le téléphone portable se trouve dans la poche opposée au capteur ou si vous êtes à l'extérieur. Lorsque je jardinage, je porte mon téléphone du même côté que le capteur. Dans les pièces, où le Bluetooth se propage avec des réflexions, aucun problème ne devrait survenir. Si vous avez des problèmes de connectivité, testez avec un autre téléphone. It may also help to set the sensor with the internal BT antenna pointing down. The slit on the applicator must be pointing down when setting the sensor.
+La connectivité est extrêmement bonne. A l'exception des téléphones portables Huawei, tous les smartphones actuels semblent bien fonctionner. Le taux de reconnexion en cas de perte de connexion est phénoménal. La connexion peut s'interrompre si le téléphone portable se trouve dans la poche opposée au capteur ou si vous êtes à l'extérieur. Lorsque je jardinage, je porte mon téléphone du même côté que le capteur. Dans les pièces, où le Bluetooth se propage avec des réflexions, aucun problème ne devrait survenir. Si vous avez des problèmes de connectivité, testez avec un autre téléphone. Cela peut aussi aider positionner le capteur avec l'antenne BT interne pointant vers le bas. La fente sur l'applicateur doit pointer vers le bas lors de la pose du capteur.
 
 Techniquement, la glycémie est transmise chaque minute à xDrip+. Une moyenne pondérée calcule une valeur lissée sur les 25 dernières minutes. Ceci est obligatoire pour la boucle. Les courbes sont lisses et les résultats avec la boucle sont excellents. Les valeurs brutes sur lesquelles les alarmes sont basées sont un peu plus instables, mais correspondent également aux valeurs que le lecteur affiche. De plus, les valeurs brutes peuvent être affichées dans le graphique xDrip+ afin de pouvoir réagir à temps en cas de changements rapides. Veuillez activer Paramètres moins courants > Advanced settings for Libre2 > "show Raw values in Graph" et "show Sensors Infos in Status". Ainsi les valeurs brutes sont affichées sous forme de petits points blancs et des informations supplémentaires sur les capteurs sont disponibles dans le menu Système.
 
-The raw values are very helpfull when the blood sugar is moving fast. Even if the dots are more jumpy you would detect the tendence much better as using the smoothed line to make proper therapy decisions.
+Les valeurs brutes sont très utiles lorsque les glycémies changent rapidement. Même si les points sont moins stables, vous beaucoup mieux détecter la tendance qu'avec l'utilisation de la ligne lissée pour prendre les bonnes décisions de traitement.
 
 .. image:: ../images/fsl2pic8.jpg
   :alt: xDrip+ advanced settings Libre 2
@@ -161,7 +161,7 @@ Une fois réussi, sélectionnez "Sensor Stop" et "Supprimer l'étalonnage seulem
 .. image:: ../images/fsl2pic11.jpg
   :alt: xDrip+ missing data when changing Libre 2 sensor
   
-You can calibrate the Libre2 with an offset of -40 - +20 mg/dL (intercept). The slope isnt changable as the Libre2 is much more accurate compared to the Libe1. Please check by fingerpricking early after setting a new sensor. It is know that there can arise big differences to the blood measurements. Pour être en sécurité, étalonner toutes les 24 - 48 heures. Les valeurs sont précises jusqu'à la fin du capteur et ne sautent pas comme avec le Libre1. Cependant, si le capteur est complètement éteint, cela ne changera pas. Le capteur doit alors être remplacé immédiatement.
+Vous pouvez calibrer le Libre2 avec un décalage de -40 à 20 mg/dl (intercept). La pente n'est pas modifiable car le Libre2 est beaucoup plus précis que le Libre1. Veuillez vérifier la glycémie capillaire dès le début de la pose d'un nouveau capteur. On sait qu'il peut y avoir de grandes différences avec les mesures de glycémies. Pour être en sécurité, étalonner toutes les 24 - 48 heures. Les valeurs sont précises jusqu'à la fin du capteur et ne sautent pas comme avec le Libre1. Cependant, si le capteur est complètement éteint, cela ne changera pas. Le capteur doit alors être remplacé immédiatement.
 
 Les capteurs Libre2 vérifient que les glycémies lues sont plausibles pour détecter les mauvaises valeurs. Dès que le capteur bouge sur le bras ou est légèrement relevé, les valeurs peuvent commencer à fluctuer. Dans ce cas le capteur Libre2 s'éteindra pour des raisons de sécurité. Malheureusement, lors du scan avec l'application, des vérifications complémentaires sont faites. L'application peut désactiver le capteur même si celui-ci est OK. Actuellement le test interne est trop strict. J'ai complètement arrêté de scanner le capteur et je n'ai pas eu d'échec depuis.
 
@@ -174,17 +174,17 @@ La méthode 1 est excellente tant que vous n'avez pas à mettre en place un nouv
 
 En plus de l'application patchée, le nouveau transmetteur Droplet ou (bientôt disponible) le nouvel algorithme OOP de xDrip+ pourra être utilisé pour recevoir les glycémies. MM2 et blucon ne fonctionnent pas pour l'instant.
 
-Step 5: Using bluetooth transmitter and OOP
+Étape 5 : Utiliser le transmetteur bluetooth et OOP
 ==================================================
 
-Bluetooth transmitter can be used with the Libre2. 
+L'émetteur Bluetooth peut être utilisé avec le Libre2. 
 
-Please refer to the miaomiao website to find a description. This will also work with the Bubble devices.
+Veuillez vous référer au site web miaomiao pour trouver une description. Cela marche aussi avec les périphériques Bubble.
 
-Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth tranmitter instead.
+Même si l'approche app de LibreLink est intelligente, il peut y avoir des raisons d'utiliser un transmetteur bluetooth à la place.
 
-  - the BG readings are identical to the reader results
-  - the Libre2 sensor can be used 14.5 days as with the Libre1 before 
-  - 8 hours Backfilling is fully supported.
+  - les GLY sont identiques aux résultats du lecteur
+  - le capteur Libre2 peut être utilisé 14,5 jours comme avec le Libre1 
+  - 8 heures d'historique est entièrement pris en charge.
 
-Remark: The transmitter can be used in parallel to the LibreLink app.
+Remarque : L'émetteur peut être utilisé en parallèle avec l'application LibreLink.
