@@ -3,7 +3,7 @@ Freestyle Libre 2
 
 The Freestyle Libre 2 system can automatically report dangerous blood glucose levels. The Libre2 Sensor sends the current blood sugar level to a receiver (reader or smartphone) every minute. The receiver triggers an alarm if necessary. With a self-modified LibreLink app and the xDrip+ app, you can continuously receive and display your blood sugar level on your smartphone. 
 
-The sensor can be calibrated to adjust differences between finger prick mesurements and sensor readings.
+The sensor can be calibrated in the range of -40 - +20 mg/dl to adjust differences between finger prick mesurements and sensor readings.
 
 BG readings can also be done using a BT transmitter like with the Libre1.
 
@@ -38,7 +38,7 @@ Mandatory settings for successful sensor start:
 * automatic time and timezone setting
 * set at least one alarm in the patched app
 
-Please note that the location service is a central setting. this is not the app permission which has to be set also!
+Please note that the location service is a central setting. This is not the app location permission which has to be set also!
 
 .. image:: ../images/fsl2pic2.jpg
   :alt: LibreLink permissions memory & location
@@ -53,7 +53,7 @@ Please note that the location service is a central setting. this is not the app 
   :alt: LibreLink settings alarm
   
 
-The sensor remembers the device it was started with. Only this device can receive alarms in the future.
+The sensor remembers the device it was started from. Only this device can receive alarms in the future.
 
 The first connection setup to the sensor is critical. The LibreLink app tries to establish a wireless connection to the sensor every 30 seconds. If one or more mandatory settings are missing they have to be adjusted. You have no time limit to do that. The sensor is constantly trying to setup the connection. Even if is last some hours. Be patient and try different seetings before even think of changing the sensor.
 
@@ -78,17 +78,19 @@ Restarting the phone can help, you may have to do it several times. As soon as t
 .. image:: ../images/fsl2pic6.jpg
   :alt: LibreLink connection established
   
-In rare case it could help to empty the bluetooth cache and/or reset all network connections via the system menu. This removes all connected bluetooth devices which may help to setup a proper bluetooth connection.
+In rare case it could help to empty the bluetooth cache and/or reset all network connections via the system menu. This removes all connected bluetooth devices which may help to setup a proper bluetooth connection. That procedure is save as the started sensor is remembered by the patched LibreLink app. Nothing additional has to be done here. Simply wait for the patched app to connect to the sensor.
 
-Now the smartphone settings can be changed again if necessary. This is not recommended but you may want to save power. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The bloodsugar levels are transferred anyway.
+After a successfull connection the smartphone settings can be changed if necessary. This is not recommended but you may want to save power. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The bloodsugar levels are transferred anyway.
 
 When starting the next sensor, however, all settings must be set again!
 
-Remark: The patched app need them in that hour after warmup to enable a connection. For the 14 days operation time they are not needed. 
+Remark: The patched app need the mandatory settings set in that hour after warmup to enable a connection. For the 14 days operation time they are not needed. In most cases when you have problems with starting a sensor the location service was switched off. For Android it is needed for proper bluetooth operation(!) to connect. Please refer to googles Android documentation.
 
-You can use one or more NFC capable smartphones (not the reader device!) running the original LibreLink app for scanning via NFC. The second phone can upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for the DiaDoc. There are many parents who absolutely need this. Please note the the original patched app does not have any connection to the Internet.
+During the 14 days you can use in parallel one or more NFC capable smartphones (not the reader device!) running the original LibreLink app for scanning via NFC. There is no time limitation to start that. You could use a parallel phone for wexample on day 5 or so. The parallel phones(s) could upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for the DiaDoc. There are many parents who absolutely need this. 
 
-There is a variant of the patched app supporting LibreView. Please be aware that your data are transfered to the cloud then. But your diadoc tool- and reportingchain is fully supported then. With that variant it is also possible to move the alarms to a different device which not has started the sensor. Please google to find the way how this could be done.
+Please note the the original patched app does not have any connection to the Internet to avoid tracking.
+
+However there is a variant of the patched app supporting LibreView with enabled internet access. Please be aware that your data are transfered to the cloud then. But your diadoc tool- and reportingchain is fully supported then. With that variant it is also possible to move the alarms of a running sensor to a different device which not has started the sensor. Please google in diabetes related german forums how this could be done.
 
 
 Step 2: Install and configure xDrip+ app
@@ -177,14 +179,15 @@ Besides the patched app the new Droplet transmitter or (soon available) the new 
 Step 5: Using bluetooth transmitter and OOP
 ==================================================
 
-Bluetooth transmitter can be used with the Libre2. 
+Bluetooth transmitter can be used with the Libre2 with the latest xDrip+ nightlys. Please refer to the miaomiao website to find a description. This will also work with the Bubble devices and in the future with ohter transmitter devices.
 
-Please refer to the miaomiao website to find a description. This will also work with the Bubble devices.
+The Droplet transmitter is working with Libre2 but uses a internet service. Please refer to FB or Google to get further information.
 
 Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth tranmitter instead.
 
   - the BG readings are identical to the reader results
   - the Libre2 sensor can be used 14.5 days as with the Libre1 before 
   - 8 hours Backfilling is fully supported.
+  - get BG readings during the 1 hour startup time of a new sensor
 
-Remark: The transmitter can be used in parallel to the LibreLink app.
+Remark: The transmitter can be used in parallel to the LibreLink app. It dont disturb the patched LibreLink app operation.
