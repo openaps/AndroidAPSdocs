@@ -3,7 +3,7 @@ Allereerst de veiligheid
 
 **Wanneer je besluit om je eigen kunstmatige alvleesklier te bouwen, is het belangrijk om je eigen veiligheid op de eerste plek te zetten, daarom zul je de impact van al je acties moeten leren begrijpen**
 
-General
+Algemeen
 ==================================================
 
 * AndroidAPS is alleen een hulpmiddel bij het onder controle houden van je diabetes, niet iets wat je eenmalig installeert en daarna nooit meer naar hoeft om te kijken!

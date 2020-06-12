@@ -27,7 +27,7 @@ Dus zorg ervoor dat je de Automation-regels deactiveert indien nodig. Je kunt di
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Automatiseringsregel activeren en deactiveren
 
-General
+Algemeen
 --------------------------------------------------
 Er zijn een aantal beperkingen:
 

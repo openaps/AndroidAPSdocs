@@ -1,5 +1,8 @@
 Обновления и изменения в документации
 **************************************************
+June 2020
+==================================================
+* `Libre 2 <../Hardware/Libre2.html>`_ - more details / instructions patched Libre Link app
 Май 2020
 ==================================================
 * `Пролонгированный болюс только для помп Dana + Insight <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_

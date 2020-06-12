@@ -51,5 +51,5 @@ Loop voor iOS
 
 Te gebruiken pompen zijn:
 
-* Omnipod
+* Omnipod Eros
 * enkele oude Medtronic pompen

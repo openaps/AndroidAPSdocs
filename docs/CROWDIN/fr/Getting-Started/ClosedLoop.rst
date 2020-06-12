@@ -51,5 +51,5 @@ Loop pour iOS
 
 Les pompes compatibles sont :
 
-* Omnipod
+* Omnipod Eros
 * quelques anciennes pompes Medtronic
