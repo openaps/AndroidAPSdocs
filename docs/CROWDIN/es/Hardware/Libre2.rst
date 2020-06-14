@@ -180,7 +180,7 @@ Parece que hay malos sensores de vez en cuando, que están muy lejos de los valo
 
 Si el sensor se mueve un poco en la piel o se levanta de alguna manera esto puede causar malos resultados. El filamento que se encuentra en el tejido es un poco tirado fuera del tejido y medirá diferentes resultados entonces. Mostly probably you will see jumping values in xDrip+. O que la diferencia con los valores de glucosa en sangre cambian. Por favor, reemplace el sensor de inmediato! Los resultados son inexactos.
 
-Step 5: Using bluetooth transmitter and OOP
+Using bluetooth transmitter and OOP
 ==================================================
 
 Además de la aplicación parcheaa, el nuevo transmisor Droplet o (pronto disponible) el nuevo algoritmo OOP de xDrip+ se puede utilizar para recibir valores de azúcar en sangre. El MM2 y el blucon NO funcionan hasta ahora.
