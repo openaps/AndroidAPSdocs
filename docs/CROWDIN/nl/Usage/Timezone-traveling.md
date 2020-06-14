@@ -24,6 +24,7 @@ Om dit te voorkomen zijn er twee mogelijkheden:
    
    * Bijvoorbeeld Wenen-> New York: profiel wissel + 6 uur
    * Bijvoorbeeld Wenen-> Sydney: profiel wissel - 8 uur
+* Probably not an option if using [patched LibreLink app](../Hardware/Libre2#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Optie 2: pomphistorie wissen
 
@@ -38,8 +39,6 @@ Wanneer je uit het vliegtuig komt:
 * verander tijd in pomp
 * telefoon aanzetten
 * laat telefoon verbinding maken met de pomp en de tijd fine-tunen
-
-## Combo
 
 ## Insight
 
@@ -72,7 +71,7 @@ Een goed moment om deze omschakeling te maken zou zijn wanneer jouw IOB laag is.
 
 * Wisselingen tussen zomer/wintertijd worden automatisch gedaan. Geen actie vereist.
 
-## Andere pompen - voor AAPS versie 2.2 en hoger
+## Other pumps - new as of AAPS version 2.2
 
 **Je moet AAPS bijgewerkt hebben naar versie 2.2 om deze functie te gebruiken.**
 
