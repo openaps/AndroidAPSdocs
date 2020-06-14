@@ -2,7 +2,8 @@ Wiki mises à jour et modifications
 **************************************************
 Juin 2020
 ==================================================
-* `Libre 2 <../Hardware/Libre2.html>`_ - plus de détails / instructions sur l'application Libre Link patchée
+* `Libre 2 <../Hardware/Libre2.html>`_ - more details patched Libre Link app & use of bluetooth transmitters
+* `Time zone travelling <../Usage/Timezone-traveling.html>`_ with Libre 2
 Mai 2020
 ==================================================
 * `Bolus étendus uniquement pour les pompes Dana + Insight <../Usage/Extended-Carbs.html#bolus-etendus-et-passage-en-boucle-ouverte-uniquement-pour-les-pompesdana-et-insight>`_
