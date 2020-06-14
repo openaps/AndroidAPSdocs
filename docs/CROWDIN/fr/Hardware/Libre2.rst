@@ -180,7 +180,7 @@ Il semble y avoir de mauvais capteurs de temps en temps, qui sont loin des glyc�
 
 Si le capteur bouge un peu sur la peau ou est soulevé d'une manière ou d'une autre, cela peut entraîner de mauvais résultats. Le filament qui se trouve dans la peau est un peu sorti et mesurera ensuite des valeurs différentes. Mostly probably you will see jumping values in xDrip+. Ou les écarts avec les glycémies capillaires augmenteront. Veuillez remplacer le capteur immédiatement ! Les résultats sont inexacts maintenant.
 
-Étape 5 : Utiliser le transmetteur bluetooth et OOP
+Using bluetooth transmitter and OOP
 ==================================================
 
 En plus de l'application patchée, le nouveau transmetteur Droplet ou (bientôt disponible) le nouvel algorithme OOP de xDrip+ pourra être utilisé pour recevoir les glycémies. MM2 et blucon ne fonctionnent pas pour l'instant.
