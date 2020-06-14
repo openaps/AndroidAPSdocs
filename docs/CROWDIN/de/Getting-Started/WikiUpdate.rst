@@ -2,7 +2,8 @@ Docs Updates & Änderungen
 **************************************************
 Juni 2020
 ==================================================
-* `Libre 2 <../Hardware/Libre2.html>`_ - weitere Details und Anleitungen zur gepatchten Libre Link App
+* `Libre 2 <../Hardware/Libre2.html>`_ - weitere Details zu gepatchten Libre Link App und zu Bluetooth Transmittern
+* `Reisen über Zeitzonen hinweg <../Usage/Timezone-traveling.html>`_ mit Libre 2
 Mai 2020
 ==================================================
 * `Verzögerter Bolus nur für Dana + Insight Pumpen <../Usage/Extended-Carbs.html#verzogerter-bolus-und-wechsel-zum-open-loop-nur-fur-dana-und-insight-pumpe>`_

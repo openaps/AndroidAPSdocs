@@ -24,6 +24,7 @@ Um dies zu vermeiden, gibt es zwei Möglichkeiten:
    
    * z.B. Wien -> New York: Profilwechsel +6 Stunden
    * z.B. Wien -> Sydney: Profilwechsel -8 Stunden
+* Wahrscheinlich keine Option, wenn Du die [gepatchte LibreLink-App](../Hardware/Libre2#reisen-uber-zeitzonen-hinweg) nutzt. Dort muss der automatische Zeitzonenwechsel eingestellt werden, um einen neuen Libre 2 Sensor starten zu können.
 
 ### Option : Pumpenhistorie löschen
 
@@ -38,8 +39,6 @@ Wenn du aus dem Flugzeug steigst:
 * ändere die Zeit in der Pumpe
 * schalte das Smartphone an
 * lasse das Smartphone mit der Pumpe verbinden und verfeinere die Zeiteinstellung
-
-## Combo
 
 ## Insight
 

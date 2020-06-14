@@ -2,7 +2,8 @@
 **************************************************
 June 2020
 ==================================================
-* `Libre 2 <../Hardware/Libre2.html>`_ - more details / instructions patched Libre Link app
+* `Libre 2 <../Hardware/Libre2.html>`_ - more details patched Libre Link app & use of bluetooth transmitters
+* `Time zone travelling <../Usage/Timezone-traveling.html>`_ with Libre 2
 Май 2020
 ==================================================
 * `Пролонгированный болюс только для помп Dana + Insight <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
