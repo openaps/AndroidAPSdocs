@@ -60,7 +60,7 @@ So lange Du der linken oberen Ecke des LibreLink-Startbildschirms ein rotes Ausr
 Wenn das Ausrufezeichen bleibt oder Du eine Fehlermeldung erhältst, kann dies mehrere Gründe haben:
 
 - die Standortfreigabe von Android ist nicht erteilt - bitte in den Systemeinstellungen freigeben
-- automatic time and time zone not set - please change the settings accordingly
+- automatische Zeitzone und Uhrzeit nicht gesetzt - bitte entsprechend die Einstellungen ändern
 - Alarme einschalten - mindestens einer der drei Alarme muss aktiviert sein
 - Bluetooth ist ausgeschaltet - bitte einschalten
 - Ton ist ausgeschaltet
@@ -93,12 +93,12 @@ Schritt 2: Installieren und konfigurieren der xDrip+ App
 
 Die Blutzuckerwerte werden von der xDrip + App auf dem Smartphone empfangen. 
 
-* If not already set up then download xDrip+ app and install one of the latest nightly builds from `here <https://github.com/NightscoutFoundation/xDrip/releases>`_.
+* Falls noch nicht geschehen lade die xDrip+ App `hier <https://github.com/NightscoutFoundation/xDrip/releases>`_ herunter und installiere eine der neuesten nightly builts auf Deinem Smartphone.
 * In xDrip+ als Datenquelle „Libre2 (patched App)“ auswählen
 * Ggf. unter Less Common Settings->Extra Logging Settings->Extra tags for logging „BgReading:d,xdrip libre_receiver:v“ eintragen. Damit werden evtl. Fehlermeldungen protokolliert.
 * In xDrip+ gehe zu Einstellungen > Inter-App Einstellungen > Lokaler Broadcast und wähle AN.
 * In xDrip+ gehe zu Einstellungen > Inter-App Einstellungen > Behandlungen annehmen und wähle AUS.
-* to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <https://androidaps.readthedocs.io/en/latest/EN/Configuration/xdrip.html#identify-receiver>`_
+* Um in AndroidAPS (ab Version 2.5) CGM-Werte von xDrip+ empfangen zu können, identifiziere den Empfänger in xDrip `(Einstellungen > Inter-App Einstellungen > Identifiziere Empfänger und gib info.nightscout.androidaps ein) <https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Configuration/xdrip.html#identifiziere-empfanger>`_
 * Falls du mit AndroidAPS kalibrieren willst dann gehe in xDrip+ zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN.  Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
 
 .. image:: ../images/Libre2_Tags.png
@@ -123,34 +123,34 @@ Wenn Du den Libre 2 als BZ-Quelle nutzt, stehen die Funktionen 'Enable SMB alway
 Erfahrungen und Troubleshooting
 ==================================================
 
-Connectivity
+Verbindung
 --------------------------------------------------
-The connectivity is extraordinarily good. With the exception of Huawei mobile phones, all current smartphones seams to work well. Das Wiederverbinden nach Verbindungsverlust ist phänomenal. Die Verbindung kann durchaus einmal abreißen, wenn sich der Sensor auf der einen Körperseite, das Handy auf der anderen in der Hosentasche befindet oder wenn man im Freien unterwegs ist. Bei Gartenarbeit habe ich mir angewöhnt, das Handy auf der Sensorseite am Körper zu tragen. In rooms, where Bluetooth spreads over reflections, no problems should occur. Bei Verbindungsproblemen bitte ein anderes Telefon testen. Es kann auch helfen, den Sensor so zu setzen, dass die interne Bluetooth-Antenne nach unten zeigt. Der Schlitz auf dem Applikator muss beim Setzen des Sensors nach unten zeigen.
+Die Verbindungsqualität ist außerordentlich gut. Bis auf Huawei Handys scheinen alle aktuellen Smartphones gut zu funktionieren. Das Wiederverbinden nach Verbindungsverlust ist phänomenal. Die Verbindung kann durchaus einmal abreißen, wenn sich der Sensor auf der einen Körperseite, das Handy auf der anderen in der Hosentasche befindet oder wenn man im Freien unterwegs ist. Bei Gartenarbeit habe ich mir angewöhnt, das Handy auf der Sensorseite am Körper zu tragen. In Räumen, wo sich Bluetooth über Reflektionen ausbreitet, sollten keine Probleme auftreten. Bei Verbindungsproblemen bitte ein anderes Telefon testen. Es kann auch helfen, den Sensor so zu setzen, dass die interne Bluetooth-Antenne nach unten zeigt. Der Schlitz auf dem Applikator muss beim Setzen des Sensors nach unten zeigen.
 
-Value smoothing & raw values
+Glättung der Werte & Rohdaten
 --------------------------------------------------
 Technisch wird alle Minute der aktuelle Blutzucker-Wert an xDrip+ übertragen. Daraus wird mit einem weighted average Filter über die letzten 25 Minuten ein geglätteter Wert errechnet,  um damit bei Bedarf loopen zu können. Die Kurven sehen glatt aus und die Loopergebnisse sind prima. Die Rohwerte, die den Alarmen zugrunde liegen, schwanken ein wenig mehr, entsprechen aber den Werten, die auch der Reader anzeigt. Man kann zusätzlich die Rohwerte im xDrip+ Graph anzeigen lassen, um bei schnellen Veränderungen rechtzeitig reagieren zu können. Dazu bitte Less Common Settings->Advanced Settings for Libre2->show Raw values anschalten". Dann werden zusätzlich Rohwerte als kleine weiße Punkte angezeigt und zusätzliche Sensorinformationen sind im Systemmenü verfügbar.
 
 Die Rohwerte sind sehr hilfreich, wenn sich der Blutzuckerwert schnell ändert. Auch wenn die einzelnen Punkte viel mehr springen, wirst Du die Tendenz deutlich besser erkennen als bei der geglätteten Linie und kannst so bessere Therapieentscheidungen treffen.
 
 .. image:: ../images/Libre2_RawValues.png
-  :alt: xDrip+ advanced settings Libre 2 & raw values
+  :alt: xDrip+ Advanced Settings Libre 2 & Rohdaten
 
-Sensor runtime
+Sensorlaufzeit
 --------------------------------------------------
 Die Sensorlaufzeit ist fix 14 Tage. Die 12 extra Stunden des Libre1 existieren nicht mehr. Aktiviert man unter Advanced settings for Libre2->show Sensor wird im Systemstatus die Sensor Startzeit sowie weitere Infos angezeigt. Die Restzeitlaufzeit des Sensors ist ebenfalls in der gepatchten LibreLink App zu sehen. Entweder im Hauptbildschirm als Resttagesanzeige oder als Startzeit im Dreipunktmenü->Hilfe->Ereignisprotokoll unter „Neuer Sensor gefunden“.
 
 .. image:: ../images/Libre2_Starttime.png
   :alt: Libre 2 Startzeit
 
-New sensor
+Neuer Sensor
 --------------------------------------------------
 Ein Sensortausch erfolgt danach dann immer on-the-fly: Neuen Sensor kurz vor Aktivieren setzen. Sobald xDrip+ keine Daten mehr vom alten Sensor empfängt den neuen Sensor
 mit der gepatchten App starten. Nach einer Stunde sollten automatisch neue Werte in xDrip+ erscheinen.  
 
-Wenn nicht, dann die Smartphone-Einstellungen prüfen und vorgehen wie beim ersten Start. Es gibt keine zeitliche Einschränkung. Try to find the correct settings. Es ist nicht erforderlich, den Sensor sofort zu ersetzen, bevor Du verschiedene Kombinationen ausprobiert hast. Die Sensoren sind robust und versuchen permanent, eine Verbindung herzustellen. Lasse Dir Zeit. In den meisten Fällen hast Du eine Einstellung verändert, die nun zu Problemen führt. 
+Wenn nicht, dann die Smartphone-Einstellungen prüfen und vorgehen wie beim ersten Start. Es gibt keine zeitliche Einschränkung. Versuche, die richtigen Einstellungen herauszufinden. Es ist nicht erforderlich, den Sensor sofort zu ersetzen, bevor Du verschiedene Kombinationen ausprobiert hast. Die Sensoren sind robust und versuchen permanent, eine Verbindung herzustellen. Lasse Dir Zeit. In den meisten Fällen hast Du eine Einstellung verändert, die nun zu Problemen führt. 
 
-Nach erfolgreicher Verbindung musst Du in xDrip "Sensor Stop" und "Delete calibration only" wählen. Dadurch erkennt xDrip+, dass die Werte von einem neuen Sensor kommen und die alten Kalibrationen nicht mehr verwendet werden dürfen und daher gelöscht werden müssen. Dabei findet keine Kommunikation mit dem Libre2 Sensor statt. You do not need to start the sensor in xDrip+.
+Nach erfolgreicher Verbindung musst Du in xDrip "Sensor Stop" und "Delete calibration only" wählen. Dadurch erkennt xDrip+, dass die Werte von einem neuen Sensor kommen und die alten Kalibrationen nicht mehr verwendet werden dürfen und daher gelöscht werden müssen. Dabei findet keine Kommunikation mit dem Libre2 Sensor statt. Du musst den Sensor in xDrip nicht starten+.
 
 .. image:: ../images/Libre2_GapNewSensor.png
   :alt: xDrip+ Fehlende Daten beim Libre 2 Sensorwechsel
@@ -159,15 +159,15 @@ Kalibrierung
 --------------------------------------------------
 Der Sensor kann im Bereich von -40 mg/dl bis +20 mg/dl (-2,2 mmol/l bis +1,1 mmol/l) kalibriert werden. Die Steigung lässt sich nicht ändern, da der Libre2 deutlich genauer ist als der Libre1. Prüfe zeitnah nach dem Setzen eines neuen Sensors mit einer blutigen Messung. Es ist bekannt, dass es deutliche Abweichungen zu den blutigen Messungen geben kann. Zur Sicherheit sollte alle 24 - 48 Stunden kalibriert werden. Die Werte sind bis zum Sensorende genau und „leiern“ nicht aus wie beim Libre1.  Ist der Sensor allerdings völlig daneben, dann wird sich das nicht ändern. Der Sensor sollte dann umgehend getauscht werden.
 
-Plausibility checks
+Plausibilitätsprüfungen
 --------------------------------------------------
 Die Libre2 Sensoren enthalten Plausibilitätsprüfungen, um schlechte Sensorwerte zu erkennen. Sobald sich der Sensor am Arm bewegt oder leicht angehoben wird, können die Werte anfangen zu schwanken. Der Libre2 Sensor schaltet sich dann aus Sicherheitsgründen ab. Leider erfolgen beim Scannen mit der App weitere Prüfungen. Die App kann ebenfalls den Sensor deaktivieren, was zu einem frühen Ausfall führen kann, obwohl der Sensor in Ordnung ist. Derzeit ist der interne Test zu streng. Ich verzichte mittlerweile vollständig auf das Scannen und habe seitdem keinen Ausfall mehr gehabt.
 
-Time zone travelling
+Reisen über Zeitzonen hinweg
 --------------------------------------------------
-In other `time zones <../Usage/Timezone-traveling.html>`_ there are two strategies for looping: 
+In anderen `Zeitzonen <../Usage/Timezone-traveling.html>`_ gibt es beim Loopen zwei Strategien: 
 
-Either 
+Entweder 
 
 1. Entweder die Zeit des Smartphones unverändert lassen und das Basalprofil
 zeitverschieben (Smartphone im Flugmodus) oder 
@@ -175,7 +175,7 @@ zeitverschieben (Smartphone im Flugmodus) oder
 
 Methode 1. ist prima, solange man vor Ort keinen neuen Libre2 Sensor setzen muss. Im Zweifel Methode 2 wählen, insbesondere wenn die Reise länger dauert. Setzt man einen neuen Sensor muss leider die automatische Zeitzone gesetzt sein, wodurch  Methode 1 gestört würde. Bitte vorher prüfen, wenn man erst woanders ist, kann man sonst schnell in Probleme laufen.
 
-Experiences
+Erfahrungen
 --------------------------------------------------
 Insgesamt eines der kleinsten CGM System am Markt. Klein, kein Transmitter notwendig und (bei mir) sehr genaue Werte ohne Schwankungen. Nach rd. 12 Stunden Einlaufphase mit Abweichungen von bis zu 30 mg/dl (1,7 mmol/l) sind die Abweichungen bei mir kleiner als 10 md/dl (0,6 mmol/l). Beste Ergebnisse am hinteren Oberarm, andere Setzstellen mit Vorsicht! Den Sensor einen Tag vorher zu setzen ist hier unnötig. Das würde den Einpendelmechanismus stören.
 
@@ -183,7 +183,7 @@ Es scheint ab und an schlechte Sensoren zu geben, die weit neben den Blutwerten 
 
 Falls der Sensor auf der Haut ein wenig bewegt oder irgendwie angehoben wird, kann dies zu fehlerhaften Ergebnissen führen. Das Filament, das im Gewebe sitzt, wurde in diesem Fall ein wenig aus dem Gewebe gezogen und liefert deshalb falsche Messergebnisse. Meistens springen dann die Werte in xDrip+. Oder es kommt zu Abweichungen zu blutig gemessenen Werten. Bitte ersetze den Sensor sofort! Die Ergebnisse sind ab diesem Zeitpunkt ungenau.
 
-Schritt 5: Einsatz von Bluetooth-Transmittern und OOP
+Einsatz von Bluetooth-Transmittern und OOP
 ==================================================
 
 Neben der gepatchten App können derzeit der Droplet oder (bald verfügbar) der neue OOP Algorithmus unter xDrip+ eingesetzt werden. Bisher funktionieren der MM2 und blucon NICHT.
@@ -194,9 +194,9 @@ Der Droplet-Transmitter funktioniert mit dem Libre2, benötigt aber eine Interne
 
 Auch wenn der Ansatz der gepatchten LibreLink App sehr smart ist, kann es Gründe geben, statt dessen einen Bluetooth-Transmitter zu nutzen:
 
-* the BG readings are identical to the reader results
-* the Libre2 sensor can be used 14.5 days as with the Libre1 before 
-* 8 hours Backfilling is fully supported.
-* get BG readings during the 1 hour startup time of a new sensor
+* Werte sind identisch mit denen des Lesegeräts
+* Der Libre2 Sensor kann 14,5 Tage genutzt werden wie zuvor schon der Libre1. 
+* Das nachträgliche Auffüllen der Werte der letzten acht Stunden wird vollständig unterstützt.
+* Bereits während des einstündigen WarmUps können Werte empfangen werden.
 
 Hinweis: Der Transmitter kann auch parallel zur gepatchten LibreLink App verwendet werden. Er stört deren Betrieb nicht.
