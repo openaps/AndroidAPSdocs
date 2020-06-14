@@ -180,7 +180,7 @@ There seem to be bad sensors from time to time, which are far away from the bloo
 
 If the sensor moved a little bit on the skin or is lifted somehow this can cause bad results. The filament which sits in the tissue is a little bit pulled out of the tissue and will measure different results then. Mostly probably you will see jumping values in xDrip+. Or the difference to the bloody values change. Please replace the sensor immediately! The results are inaccurate now.
 
-Step 5: Using bluetooth transmitter and OOP
+Using bluetooth transmitter and OOP
 ==================================================
 
 Besides the patched app the new Droplet transmitter or (soon available) the new OOP algorithm of xDrip+ can be used to receive blood sugar values. MM2 and blucon do NOT work so far.
