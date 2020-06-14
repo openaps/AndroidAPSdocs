@@ -18,13 +18,13 @@ Important: To avoid possible problems it may help to first install and uninstall
 
 The patched app can be identified by the foreground authorization notification. The foreground authorization service improves the connection stability compared to the original app which do not use this service.
 
-.. image:: ../images/fsl2pic1.jpg
+.. image:: ../images/Libre2_ForegroundServiceNotification.png
   :alt: LibreLink pranešimų paslauga
 
 Other indications could be the Linux penguin logo three dot menu -> Info or the font of the patched app. These criteria are optional depending on the app source you choose.
 
 .. image:: ../images/LibreLinkPatchedCheck.png
-  :alt: LibreLink pranešimų paslauga
+  :alt: LibreLink Font Check
 
 Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and time zone and set at least one alarm in the patched app. 
 
@@ -40,18 +40,12 @@ Privalomi parametrai norint sėkmingai aktyvuoti jutiklį:
 
 Please note that the location service is a central setting. This is not the app location permission which has to be set also!
 
-.. image:: ../images/fsl2pic2.jpg
+.. image:: ../images/Libre2_AppPermissionsAndLocation.png
   :alt: LibreLink atminties & vietos teisės
   
-.. image:: ../images/fsl2pic3.jpg
-  :alt: Android vietos nustatymai
   
-.. image:: ../images/fsl2pic4a.jpg
-  :alt: automatic time and time zone
-  
-.. image:: ../images/fsl2pic4.jpg
-  :alt: LibreLink aliarmo nustatymai
-  
+.. image:: ../images/Libre2_DateTimeAlarms.png
+  :alt: automatic time and time zone + alarm settings  
 
 The sensor remembers the device it was started from. Tik šis prietaisas gali priimti signalus ateityje.
 
@@ -59,13 +53,13 @@ Pirmas ryšio nustatymas su jutikliu yra ypač svarbus. LibreLink programėlė b
 
 As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLink's start screen there is no connection or some other setting blocks LibreLink to signal alarms. Please check if the sound is enabled and all sorts of blocking app notifications are disabled. When the exclamation mark is gone, the connection should be established and blood sugar values are sent to the smartphone. Tai turėtų įvykti daugiausiai po 5 minučių.
 
-.. image:: ../images/fsl2pic5.jpg
+.. image:: ../images/Libre2_ExclamationMark.png
   :alt: LibreLink nėra ryšio
   
 Jei šauktukas lieka arba gaunate klaidos pranešimą, tai gali būti dėl keletos priežasčių:
 
 - Android vietos nustatymo paslauga nėra įgalinta - prašome įjungti tai sistemos nustatymuose
-- automatinio laiko ir laiko juostos nėra nustatytos - prašome pakeisti parametrus atitinkamai
+- automatic time and time zone not set - please change the settings accordingly
 - įjunkite aliarmus - bent vienas iš trijų aliarmų turi būti įjungtas LibreLink
 - Bluetooth yra išjungtas - įjunkite
 - sound is blocked
@@ -75,7 +69,7 @@ Jei šauktukas lieka arba gaunate klaidos pranešimą, tai gali būti dėl kelet
 
 Gali padėti telefono paleidimas iš naujo, jums gali tekti padaryti tai keletą kartų. Kai tik ryšys yra užmegztas, raudonas šauktukas dingsta ir svarbiausias žingsnis yra atliktas. It may happen that depending on system settings the exclamation mark remain but you still get readings. In both cases you are fine. Jutiklis ir telefonas dabar yra sujungti, kiekvieną minutę kraujo gliukozės reikšmės yra perduodamos.
 
-.. image:: ../images/fsl2pic6.jpg
+.. image:: ../images/Libre2_Connected.png
   :alt: LibreLink ryšys nustatytas
   
 In rare case it could help to empty the bluetooth cache and/or reset all network connections via the system menu. This removes all connected bluetooth devices which may help to setup a proper bluetooth connection. That procedure is save as the started sensor is remembered by the patched LibreLink app. Nothing additional has to be done here. Simply wait for the patched app to connect to the sensor.
@@ -98,20 +92,17 @@ However there is a variant of the patched app supporting LibreView with enabled 
 
 Kraujo gliukozės reikšmės išmaniąjame telefone gaunamos per xDrip+ programėlę. 
 
-* If not already set up then download xdrip app and install one of the latest nightly builds from `here <https://github.com/NightscoutFoundation/xDrip/releases>`_.
+* If not already set up then download xDrip+ app and install one of the latest nightly builds from `here <https://github.com/NightscoutFoundation/xDrip/releases>`_.
 * xDrip+ pasirinkite "Libre2 (patched App)" kaip duomenų šaltinį
 * Jei reikia, įveskite "BgReading:d,xdrip libre_receiver:v" ties Less Common Settings->Extra Logging Settings->Extra tags for logging. Taip bus įrašomi papildomi klaidų pranešimai trikčių šalinimui.
-* xDrip eikite į Nustatymus > Programinės įrangos suderinamumas > Vietinis transliavimas ir pasirinkite Įjungta.
-* xDrip eikite į Nustatymus > Programinės įrangos suderinamumas > Priimti terapijas ir pasirinkite Išjungta.
-- norėdami įgalinti AAPS gauti kraujo gliukozės duomenis (versija 2.5x ir naujesnė), xdrip nustatykite `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <https://androidaps.readthedocs.io/en/latest/EN/Configuration/xdrip.html#identify-receiver>`_
-Jei norite naudotis AndroidAPS kalibracijoms, xDrip+ eikite į Nustatymus> Programinės įrangos suderinamumas> Priimti kalibracijas ir pasirinkite Įjungti.  Taip pat galbūt norėsite peržiūrėti kalibravimo parinktis Nustatymuose > Mažiau įprasti nustatymai > išplėstinės kalibravimo parinktys.
+* xDrip+ eikite į Settings > Interapp Compatibility > Broadcast Data Locally ir pasirinkite On.
+* xDrip+ eikite į Settings > Interapp Compatibility > Accept Treatments ir pasirinkite Off.
+* to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <https://androidaps.readthedocs.io/en/latest/EN/Configuration/xdrip.html#identify-receiver>`_
+*Jei norite naudotis AndroidAPS kalibracijoms, xDrip+ eikite į Settings > Interapp Compatibility > Accept Calibrations ir pasirinkite On.  Taip pat galbūt norėsite peržiūrėti kalibravimo parinktis Nustatymuose > Mažiau įprasti nustatymai > išplėstinės kalibravimo parinktys.
 
-.. image:: ../images/fsl2pic7.jpg
+.. image:: ../images/Libre2_Tags.png
   :alt: xDrip+ LibreLink žurnalas
-  
-.. image:: ../images/fsl2pic7a.jpg
-  :alt: xDrip+ žurnalas
-  #
+
 3 žingsnis: aktyvuokite jutiklį
 ==================================================
 
@@ -131,53 +122,68 @@ Kol kas naudojant Libre 2 kaip KG šaltinį, negalite aktyvuoti 'Įjungti SMB vi
 Patirtis ir gedimų šalinimas
 ==================================================
 
-Ryšys yra neįtikėtinai geras. Išskyrus "Huawei" mobiliojo ryšio telefonus, visi dabartiniai išmanieji telefonai, atrodo, gerai veikia. The reconnect rate in case of connection loss is phenomenal. Ryšys gali nutrūkti, jei mobilusis telefonas yra kišenėje, esančioje priešingoje pusėje nei jutiklis arba, jei esate lauke. Kai aš sode, nešioju telefoną toje pačioje pusėje kur ir jutiklis. In rooms, where Bluettooth spreads over reflections, no problems should occur. Jei jūs turite ryšio problemų, išbandykite kitą telefoną. It may also help to set the sensor with the internal BT antenna pointing down. The slit on the applicator must be pointing down when setting the sensor.
+Connectivity
+--------------------------------------------------
+The connectivity is extraordinarily good. With the exception of Huawei mobile phones, all current smartphones seams to work well. The reconnect rate in case of connection loss is phenomenal. Ryšys gali nutrūkti, jei mobilusis telefonas yra kišenėje, esančioje priešingoje pusėje nei jutiklis arba, jei esate lauke. Kai aš sode, nešioju telefoną toje pačioje pusėje kur ir jutiklis. In rooms, where Bluetooth spreads over reflections, no problems should occur. Jei jūs turite ryšio problemų, išbandykite kitą telefoną. It may also help to set the sensor with the internal BT antenna pointing down. The slit on the applicator must be pointing down when setting the sensor.
 
+Value smoothing & raw values
+--------------------------------------------------
 Techniškai, esama kraujo gliukozės reikšmė yra perduodama xDrip+ kiekvieną minutę. Svertinio vidurkio filtras apskaičiuoja išlygintą reikšmę per pastarąsias 25 minutes. Tai privaloma naudojant uždarą ciklą. Kreivės atrodo sklandžiai ir ciklo rezultatai yra puikūs. Neapdorotos reikšmės, kuriomis aktyvuojami aliarmai, šiek tiek šokinėja, tačiau atitinka reikšmes skaitytuve. Be to, neapdorotos reikšmės gali būti rodomos xDrip+ grafike, kad būtų galima sureaguoti laiku į staigius pokyčius. Įjunkite Less Common Settings > Advanced Settings for Libre2 > "show Raw values" ir "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor info is available in the system menu.
 
 The raw values are very helpful when the blood sugar is moving fast. Even if the dots are more jumpy you would detect the tendency much better as using the smoothed line to make proper therapy decisions.
 
-.. image:: ../images/fsl2pic8.jpg
-  :alt: xDrip+ išplėstiniai parametrai Libre 2
-  
-.. image:: ../images/fsl2pic9.jpg
-  :alt: xDrip+ ekranas su neapdorotais duomenimis
-  
+.. image:: ../images/Libre2_RawValues.png
+  :alt: xDrip+ advanced settings Libre 2 & raw values
+
+Sensor runtime
+--------------------------------------------------
 Jutiklio naudojimo trukmė yra nustatyta 14 dienų. 12 papildomų valandų kaip Libre1 nebėra. xDrip+ shows additional sensor information after enabling Advanced Settings for Libre2 > "show Sensors Infos" in the system menu like the starting time. Likęs jutiklio laikas taip pat gali būti matomas modifikuotoje LibreLink programėlėje. Arba pagrindiniame ekrane rodomos likusios dienos arba jutiklio pradžio laiką rasite trijų taškų meniu->Help->Event log ties "New sensor found".
 
-.. image:: ../images/fsl2pic10.jpg
+.. image:: ../images/Libre2_Starttime.png
   :alt: Libre 2 pradžios laikas
-  
-Apskritai, tai yra viena iš mažiausių NGJ sistemų rinkoje. Maža, nereikia siųstuvo ir dažniausiai labai tikslūs duomenys be svyravimų. After approx. 12 hours running-in phase with deviations of up to 30 mg/dl (1,7 mmol/l)the deviations are typical smaller than 10 mg/dl (0,6 mmol/l). Geriausi rezultatai būna užpakalinėje žąsto pusėje, kitur - atsargiai! Nėra būtinybės įdurti naują jutiklį dieną prieš "įmirkymui". That would disturb the internal leveling mechanism.
 
-Karts nuo karto pasitaiko blogų jutiklių, rodančių dideliu skirtumu palyginus su kraujo rodikliais. Taip būna. Tokie turėtų būti nedelsiant pakeisti.
-
-Jei jutiklis šiek tiek pasislinko ant odos ar buvo pastumtas, tai gali sąlygoti neteisingus rezultatus. Siūlelis, esantis audinyje, šiek tiek ištraukiamas iš audinio ir tada matuoja skirtingus rezultatus. Mostly probably you will see jumping values in xDrip+. Arba bus skirtumas su rodikliais iš piršto. Prašome nedelsiant pakeisti jutiklį! Rezultatai dabar yra netikslūs.
-
+New sensor
+--------------------------------------------------
 Jutiklio keitimas vyksta nepertraukiamai: uždėkite naują jutiklį šiek tiek prieš aktyvavimą. Kai tik xDrip+ nebegaus duomenų iš seno jutiklio, aktyvuokite naują jutiklį su modifikuota programėle. Po vienos valandos naujos reikšmės turėtų automatiškai atsirasti xDrip+'e. 
 
-Jei ne, patikrinkite telefono nustatymus ir darykite taip, kaip su pirmuoju. Neturite laiko apribojimų. Pabandykite rasti teisingus nustatymus. Nėra reikalo iš karto keisti jutiklį, kol nepabandėte skirtingų derinių. Jutikliai yra atkaklūs ir nuolat bando užmegzti ryšį. Neskubėkite. In most cases you accidentally changed one setting which causes now problems. 
+Jei ne, patikrinkite telefono nustatymus ir darykite taip, kaip su pirmuoju. Neturite laiko apribojimų. Try to find the correct settings. Nėra reikalo iš karto keisti jutiklį, kol nepabandėte skirtingų derinių. Jutikliai yra atkaklūs ir nuolat bando užmegzti ryšį. Neskubėkite. In most cases you accidentally changed one setting which causes now problems. 
 
-Pavykus, prašome xDrip'e pasirinkti "Sensor stop" ir "Delete calibration only". Tai nurodo xDrip'ui, kad naujas jutiklis siunčia naujus gliukozės kraujyje duomenis ir senos kalibaracijos daugiau netinkamos, todėl turi būti ištrintos. Čia nėra daroma jokios realios sąveikos su Libre2 jutikliu! Jums nereikia aktyvuoti jutiklio xDrip'e.
+Pavykus, prašome xDrip'e pasirinkti "Sensor stop" ir "Delete calibration only". Tai nurodo xDrip'ui, kad naujas jutiklis siunčia naujus gliukozės kraujyje duomenis ir senos kalibaracijos daugiau netinkamos, todėl turi būti ištrintos. Čia nėra daroma jokios realios sąveikos su Libre2 jutikliu! You do not need to start the sensor in xDrip+.
 
-.. image:: ../images/fsl2pic11.jpg
+.. image:: ../images/Libre2_GapNewSensor.png
   :alt: xDrip+ trūksta duomenų, keičiant Libre 2 jutiklį
-  
+
+Kalibravimas
+--------------------------------------------------
 You can calibrate the Libre2 with an offset of -40 mg/dl to +20 mg/dL [-2,2 mmol/l to +1,1 mmol/l] (intercept). The slope isn't changeable as the Libre2 is much more accurate compared to the Libe1. Please check by fingerpricking early after setting a new sensor. It is know that there can arise big differences to the blood measurements. Norint saugiai jaustis, kalibruokite kas 24-48 valandas. Reikšmės yra tikslios iki pat jutiklio pabaigos ir nešokinėja taip kaip Libre1. Tačiau, jei jutiklis rodo visiškai netiksliai, tai nepasikeis. Tada jutiklis turėtų būti nedelsiant pakeistas.
 
+Plausibility checks
+--------------------------------------------------
 Libre2 jutikliai turi patikimumo patikrinimus, siekiant nustatyti blogas reikšmes. Kai tik jutiklis pajuda ant rankos ar yra šiek tiek pastumiamas, reikšmės gali pradėti svyruoti. Libre2 jutiklis tada išsijungs saugumo sumetimais. Deja, skenuojant su programėle, atliekami papildomi tikrinimai. Programėlė gali deaktyvuoti jutiklį, net jei su jutikliu viskas yra gerai. Šiuo metu vidinis testas yra per griežtas. Aš visiškai nustojau skenuoti ir nuo tada neturėjau sutrikimų.
 
-Kitose laiko zonose <../Usage/Timezone-traveling.html>`_ yra dvi strategijos ciklui: Arba 
+Time zone travelling
+--------------------------------------------------
+In other `time zones <../Usage/Timezone-traveling.html>`_ there are two strategies for looping: 
+
+Either 
 
 1. nekeisti išmaniojo telefono laiko ir pastumti bazės profilį (telefonas skrydžio režimu) arba 
 2. ištrinti pompos istoriją ir pakeisti telefono laiką į vietinį. 
 
 1. būdas yra geras iki tol, kol nereikia keisti Libre2 jutiklio į naują. Jei abejojate, pasirinkite metodą 2., ypač, jei kelionė trunka ilgiau. Jei aktyvuojate naują jutiklį, automatinė laiko juosta turi būti nustatyta, taigi 1. metodas netinka. Prašome patikrinti tai prieš kelionę, kitaip galite greitai turėti problemų.
 
-Be to, modifikuota programėlė gali būti naudojama su Droplet siųstuvu arba (greit pasirodys) nauju OOP xDrip+ algoritmu, norint gauti gliukozės reikšmes. MM2 ir blucon neveikia iki šiol.
+Experiences
+--------------------------------------------------
+Apskritai, tai yra viena iš mažiausių NGJ sistemų rinkoje. Maža, nereikia siųstuvo ir dažniausiai labai tikslūs duomenys be svyravimų. After approx. 12 hours running-in phase with deviations of up to 30 mg/dl (1,7 mmol/l)the deviations are typical smaller than 10 mg/dl (0,6 mmol/l). Geriausi rezultatai būna užpakalinėje žąsto pusėje, kitur - atsargiai! Nėra būtinybės įdurti naują jutiklį dieną prieš "įmirkymui". That would disturb the internal leveling mechanism.
+
+Karts nuo karto pasitaiko blogų jutiklių, rodančių dideliu skirtumu palyginus su kraujo rodikliais. Taip būna. Tokie turėtų būti nedelsiant pakeisti.
+
+Jei jutiklis šiek tiek pasislinko ant odos ar buvo pastumtas, tai gali sąlygoti neteisingus rezultatus. Siūlelis, esantis audinyje, šiek tiek ištraukiamas iš audinio ir tada matuoja skirtingus rezultatus. Mostly probably you will see jumping values in xDrip+. Arba bus skirtumas su rodikliais iš piršto. Prašome nedelsiant pakeisti jutiklį! Rezultatai dabar yra netikslūs.
 
 Step 5: Using bluetooth transmitter and OOP
 ==================================================
+
+Be to, modifikuota programėlė gali būti naudojama su Droplet siųstuvu arba (greit pasirodys) nauju OOP xDrip+ algoritmu, norint gauti gliukozės reikšmes. MM2 ir blucon neveikia iki šiol.
 
 Bluetooth transmitter can be used with the Libre2 with the latest xDrip+ nightlys. Please refer to the miaomiao website to find a description. This will also work with the Bubble devices and in the future with other transmitter devices.
 
@@ -185,9 +191,9 @@ The Droplet transmitter is working with Libre2 but uses a internet service. Plea
 
 Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth transmitter instead.
 
-  - the BG readings are identical to the reader results
-  - the Libre2 sensor can be used 14.5 days as with the Libre1 before 
-  - 8 hours Backfilling is fully supported.
-  - get BG readings during the 1 hour startup time of a new sensor
+* the BG readings are identical to the reader results
+* the Libre2 sensor can be used 14.5 days as with the Libre1 before 
+* 8 hours Backfilling is fully supported.
+* get BG readings during the 1 hour startup time of a new sensor
 
 Remark: The transmitter can be used in parallel to the LibreLink app. It doesn't disturb the patched LibreLink app operation.
