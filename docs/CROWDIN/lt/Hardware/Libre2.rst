@@ -180,7 +180,7 @@ Karts nuo karto pasitaiko blogų jutiklių, rodančių dideliu skirtumu palyginu
 
 Jei jutiklis šiek tiek pasislinko ant odos ar buvo pastumtas, tai gali sąlygoti neteisingus rezultatus. Siūlelis, esantis audinyje, šiek tiek ištraukiamas iš audinio ir tada matuoja skirtingus rezultatus. Mostly probably you will see jumping values in xDrip+. Arba bus skirtumas su rodikliais iš piršto. Prašome nedelsiant pakeisti jutiklį! Rezultatai dabar yra netikslūs.
 
-Step 5: Using bluetooth transmitter and OOP
+Using bluetooth transmitter and OOP
 ==================================================
 
 Be to, modifikuota programėlė gali būti naudojama su Droplet siųstuvu arba (greit pasirodys) nauju OOP xDrip+ algoritmu, norint gauti gliukozės reikšmes. MM2 ir blucon neveikia iki šiol.
