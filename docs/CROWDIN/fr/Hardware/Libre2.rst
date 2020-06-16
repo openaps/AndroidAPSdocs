@@ -41,7 +41,7 @@ Paramètres obligatoires pour réussir le démarrage du capteur :
 Veuillez noter que l'activation du service de localisation est primordial. This is not the app location permission which has to be set also!
 
 .. image:: ../images/Libre2_AppPermissionsAndLocation.png
-  :alt: LibreLink permissions memory & location
+  :alt: LibreLink autorisation mémoire & localisation
   
   
 .. image:: ../images/Libre2_DateTimeAlarms.png
