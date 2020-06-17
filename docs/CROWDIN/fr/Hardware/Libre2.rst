@@ -130,7 +130,7 @@ Lissage de valeur & valeurs brutes
 --------------------------------------------------
 Techniquement, la glycémie est transmise chaque minute à xDrip+. Une moyenne pondérée calcule une valeur lissée sur les 25 dernières minutes. Ceci est obligatoire pour la boucle. Les courbes sont lisses et les résultats avec la boucle sont excellents. Les valeurs brutes sur lesquelles les alarmes sont basées sont un peu plus instables, mais correspondent également aux valeurs que le lecteur affiche. De plus, les valeurs brutes peuvent être affichées dans le graphique xDrip+ afin de pouvoir réagir à temps en cas de changements rapides. Veuillez activer Paramètres moins courants > Advanced settings for Libre2 > "show Raw values in Graph" et "show Sensors Infos in Status". Ainsi les valeurs brutes sont affichées sous forme de petits points blancs et des informations supplémentaires sur les capteurs sont disponibles dans le menu Système.
 
-Les valeurs brutes sont très utiles lorsque les glycémies changent rapidement. Even if the dots are jumpier you would detect the tendency much better as using the smoothed line to make proper therapy decisions.
+Les valeurs brutes sont très utiles lorsque les glycémies changent rapidement. Même si les points sont moins stables, vous détecterez beaucoup mieux la tendance qu'avec l'utilisation de la ligne lissée pour prendre les bonnes décisions de traitement.
 
 .. image:: ../images/Libre2_RawValues.png
   :alt: xDrip+ paramètres avancés Libre2 & valeurs brutes
@@ -155,11 +155,11 @@ Une fois réussi, sélectionnez "Sensor Stop" et "Supprimer l'étalonnage seulem
 
 Étalonnage
 --------------------------------------------------
-Vous pouvez calibrer le Libre2 avec un décalage de -40 mg/dl à +20 mg/dL [-2,2 mmol/l à +1,1 mmol/l] (intercept). La pente n'est pas modifiable car le Libre2 est beaucoup plus précis que le Libre1. Veuillez vérifier la glycémie capillaire dès le début de la pose d'un nouveau capteur. It is known that there can arise big differences to the blood measurements. Pour être en sécurité, étalonner toutes les 24 - 48 heures. Les valeurs sont précises jusqu'à la fin du capteur et ne sautent pas comme avec le Libre1. Cependant, si le capteur est complètement éteint, cela ne changera pas. Le capteur doit alors être remplacé immédiatement.
+Vous pouvez calibrer le Libre2 avec un décalage de -40 mg/dl à +20 mg/dL [-2,2 mmol/l à +1,1 mmol/l] (intercept). La pente n'est pas modifiable car le Libre2 est beaucoup plus précis que le Libre1. Veuillez vérifier la glycémie capillaire dès le début de la pose d'un nouveau capteur. On sait qu'il peut y avoir de grandes différences avec les mesures de glycémies. Pour être en sécurité, étalonner toutes les 24 - 48 heures. Les valeurs sont précises jusqu'à la fin du capteur et ne sautent pas comme avec le Libre1. Cependant, si le capteur est complètement éteint, cela ne changera pas. Le capteur doit alors être remplacé immédiatement.
 
 Contrôles de cohérence
 --------------------------------------------------
-Les capteurs Libre2 vérifient que les glycémies lues sont plausibles pour détecter les mauvaises valeurs. Dès que le capteur bouge sur le bras ou est légèrement relevé, les valeurs peuvent commencer à fluctuer. Dans ce cas le capteur Libre2 s'éteindra pour des raisons de sécurité. Malheureusement, lors du scan avec l'application, des vérifications complémentaires sont faites. L'application peut désactiver le capteur même si celui-ci est OK. Currently the internal test is too strict. J'ai complètement arrêté de scanner le capteur et je n'ai pas eu d'échec depuis.
+Les capteurs Libre2 vérifient que les glycémies lues sont plausibles pour détecter les mauvaises valeurs. Dès que le capteur bouge sur le bras ou est légèrement relevé, les valeurs peuvent commencer à fluctuer. Dans ce cas le capteur Libre2 s'éteindra pour des raisons de sécurité. Malheureusement, lors du scan avec l'application, des vérifications complémentaires sont faites. L'application peut désactiver le capteur même si celui-ci est OK. Actuellement le test interne est trop strict. J'ai complètement arrêté de scanner le capteur et je n'ai pas eu d'échec depuis.
 
 Changement de fuseau horaire
 --------------------------------------------------
@@ -183,9 +183,9 @@ Si le capteur bouge un peu sur la peau ou est soulevé d'une manière ou d'une a
 Étape : Utiliser le transmetteur bluetooth et OOP
 ==================================================
 
-Bluetooth transmitter can be used with the Libre2 with the latest xDrip+ nightlys and the Libre2 OOP app. You can receive blood sugar readings every 5 minutes as well as with the Libre1. Veuillez vous référer au site web miaomiao pour trouver une description. This will also work with the Bubble device and in the future with other transmitter devices. The blucon should work but has not been tested yet.
+Le transmetteur Bluetooth peut être utilisé avec le Libre2 et la dernière version courante de xDrip+ ainsi qu'avec l'application Libre2 OOP. Vous pouvez recevoir des lectures de glycémie toutes les 5 minutes comme avec le Libre1. Veuillez vous référer au site web miaomiao pour trouver une description. Cela marche aussi avec un Bubble et dans le futur avec d'autres transmetteurs. Le blucon devrait fonctionner mais n'a pas encore été testé.
 
-Old Libre1 transmitter devices cannot be used with the Libre2 OOP. They need to be replaced with a newer version or have a firmware upgrade for proper operation. MM1 with newest firmware is unfortunately not working yet - searching for root cause is currently ongoing.
+Les anciens transmetteurs Libre1 ne peuvent pas être utilisés avec l'application OOP Libre2. Ils doivent être remplacés par une version plus récente ou avoir une mise à jour de firmware pour fonctionner. MM1 avec le firmware le plus récent ne marche malheureusement pas encore - l'analyse du problème est en cours.
 
 The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre2 do a 25 minutes smoothing to avoid certain jumps. OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
 
