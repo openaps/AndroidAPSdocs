@@ -36,7 +36,7 @@ Knoppen:
 * rode X: verwijderen
 * blauwe pijl: kopiëren
 
-#### Profiel wissel kopiëren
+#### Profiel wissel dupliceren
 
 Je kunt eenvoudig een nieuw lokaal profiel aanmaken van een profiel wissel. In dit geval word het tijdsverschil en het percentage toegepast op het nieuwe lokale profiel.
 
@@ -45,7 +45,7 @@ Je kunt eenvoudig een nieuw lokaal profiel aanmaken van een profiel wissel. In d
 3. Druk op "Dupliceren".
 4. Het nieuwe lokale profiel kunt u bewerken in het tabblad Lokaal profiel (LP) of via het hamburgermenu.
 
-![Profiel wissel kopiëren](../images/LocalProfile_ClonePS.png)
+![Profiel wissel dupliceren](../images/LocalProfile_ClonePS.png)
 
 Als je van Nightscout profiel wilt veranderen naar lokaal profiel, doe dan een profielwissel naar jouw NS profiel en dupliceer de profielwissel zoals hierboven beschreven.
 
@@ -84,7 +84,7 @@ Nadelen:
 
 ## Insuline
 
-Kies het werkingsprofiel van de insuline die jij gebruikt. De werkingsprofielen voor 'Rapid-Acting Oref', Ultra-Rapid Oref' en 'Free-Peak Oref' hebben allemaal een exponentiële vorm. Meer informatie staat in de [OpenAPS documenten](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). Het werkingsprofiel zal variëren op basis van de DIA (Duration of Insulin Action, duur van insulineactiviteit) en de piektijd.
+Kies het werkingsprofiel van de insuline die jij gebruikt. De werkingsprofielen voor 'Rapid-Acting Oref', 'Ultra-Rapid Oref' en 'Free-Peak Oref' hebben allemaal een exponentiële vorm. Meer informatie staat in de [OpenAPS documenten](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). Het werkingsprofiel zal variëren op basis van de DIA (Duration of Insulin Action, duur van insulineactiviteit) en de piektijd.
 
 De DIA is niet voor iedereen hetzelfde. Daarom moet je het voor jouzelf testen. Maar het moet altijd minstens 5 uur zijn. Meer informatie hierover vind je in de sectie Insuline Profiel van [deze](../Getting-Started/Screenshots#insulin-profile) pagina.
 
