@@ -183,13 +183,15 @@ Si le capteur bouge un peu sur la peau ou est soulevé d'une manière ou d'une a
 Étape : Utiliser le transmetteur bluetooth et OOP
 ==================================================
 
-En plus de l'application patchée, le nouveau transmetteur Droplet ou (bientôt disponible) le nouvel algorithme OOP de xDrip+ pourra être utilisé pour recevoir les glycémies. MM2 et blucon ne fonctionnent pas pour l'instant.
+Bluetooth transmitter can be used with the Libre2 with the latest xDrip+ nightlys and the Libre2 OOP app. You can receive blood sugar readings every 5 minutes as well as with the Libre1. Veuillez vous référer au site web miaomiao pour trouver une description. This will also work with the Bubble device and in the future with other transmitter devices. The blucon should work but has not been tested yet.
 
-Bluetooth transmitter can be used with the Libre2 with the latest xDrip+ nightlys. Veuillez vous référer au site web miaomiao pour trouver une description. This will also work with the Bubble devices and in the future with other transmitter devices.
+Old Libre1 transmitter devices cannot be used with the Libre2 OOP. They need to be replaced with a newer version or have a firmware upgrade for proper operation. MM1 with newest firmware is unfortunately not working yet - searching for root cause is currently ongoing.
 
-The Droplet transmitter is working with Libre2 but uses a internet service. Veuillez vous référer à FB ou Google pour obtenir de plus amples informations.
+The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre2 do a 25 minutes smoothing to avoid certain jumps. OOP generates 5 minute readings with the avergae of the last 5 minutes. Therefore the BG readings are not that smooth but match the orginal reader device and faster follow the "real" BG readings. Wehn you try to loop with OOP please enable all smoothing settings in xDrip+.
 
-Même si l'utilisation de LibreLink patchée est pratique, il peut y avoir des raisons d'utiliser un transmetteur bluetooth à la place.
+The Droplet transmitter is working with Libre2 also but uses an internet service instead. Please refer to FB or Google to get further informations. The MM2 with the tomato app also seems to use an internet service. For both devices you have to take care to have a proper internet connection to get your BG readings.
+
+Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth transmitter:
 
 * les GLY sont identiques aux résultats du lecteur
 * le capteur Libre2 peut être utilisé 14,5 jours comme avec le Libre1 
@@ -197,3 +199,5 @@ Même si l'utilisation de LibreLink patchée est pratique, il peut y avoir des r
 * obtenir des glycémies pendant l'heure de démarrage d'un nouveau capteur
 
 Remarque : Le transmetteur peut être utilisé en parallèle à l'application LibreLink. Il ne perturbe pas l'application LibreLink patchée.
+
+Remark #2: The OOP algorithm cannot be calibrated yet. This will be changed in the future.
