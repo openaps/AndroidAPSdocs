@@ -144,7 +144,7 @@ Zoals elk systeem kan Automatisering ook onjuist worden gebruikt. Dit kan leiden
 * Het AAPS algoritme proberen te overschrijven in plaats van alleen te helpen (d.w.z. door een profielwissel in te stellen in plaats van jouw basaal, ISF etc. goed in te stellen)
 * Instellen van profielwissel om voor voedsel te compenseren
 * Instellen van een profielwissel zonder duur
-* Het maken van een regel die maar één kant op gaat (d.w.z. do something but don't undo it by another rule)
+* Het maken van een regel die maar één kant op gaat (d.w.z. je maakt een regel om iets aan te zetten, zonder ook een regel te hebben om het weer uit te zetten)
 * Het maken van regels met een hele lange duur
 
 Alternatieven
