@@ -146,7 +146,7 @@ Voor Dana pompen, gebruik **Geavanceerde instellingen** om BT watchdog te active
 
 Selecteer het type gevoeligheid detectie (ook wel bekend als Auto-Sensitivity / Autosens in het Engels). Hiermee houdt het algoritme jouw gegevens van de afgelopen tijd in de gaten, en past zijn gedrag aan wanneer hij merkt dat je gevoeliger (of, juist ongevoeliger) bent voor insuline dan normaal. Details over het Oref0 Gevoeligheid algoritme kun je lezen in de [OpenAPS documenten](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
-Je kunt je gevoeligheid op het Overzicht-scherm laten weergeven door Gevoeligheid te selecteren en te kijken naar de witte lijn. Ook wordt het weergegeven als "AS...%", waarbij AS staat voor AutoSens. Let op, je moet minimaal [Doel 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) bereikt hebben voor het gebruiken van gevoeligheid detectie/[Autosens](../Usage/Open-APS-features.html#autosens).
+Je kunt je gevoeligheid op het Overzicht-scherm laten weergeven door Gevoeligheid te selecteren en te kijken naar de witte lijn. Ook wordt het weergegeven als "AS...%", waarbij AS staat voor AutoSens. Let op, je moet minimaal [Doel 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) bereikt hebben om gevoeligheid detectie/[Autosens](../Usage/Open-APS-features.html#autosens) jouw insulinetoediening automatisch te laten aanpassen. Het Autosens percentage / de lijn in de grafiek wordt wél al vanaf de eerdere doelen weergegeven, ter informatie.
 
 ### Opname instellingen
 
