@@ -186,15 +186,15 @@ Falls der Sensor auf der Haut ein wenig bewegt oder irgendwie angehoben wird, ka
 Einsatz von Bluetooth-Transmittern und OOP
 ==================================================
 
-Bluetooth transmitter can be used with the Libre2 with the latest xDrip+ nightlys and the Libre2 OOP app. You can receive blood sugar readings every 5 minutes as well as with the Libre1. Auf der miaomiao Webseite findest Du eine Beschreibung dazu. This will also work with the Bubble device and in the future with other transmitter devices. The blucon should work but has not been tested yet.
+Bluetooth Transmitter für den Libre 2 können zusammen mit den letzten xDrip+ Nightlys und der Libre2 Opp Abb genutzt werden. Du kannst wie beim Libre1 alle 5 Minuten einen Wert erhalten. Auf der miaomiao Webseite findest Du eine Beschreibung dazu. Diese funktioniert auch mit den Bubble und künftig evtl. erhältlichen anderen Transmittern. Auch der Bluecon sollte funktionieren, wurde bisher aber noch nicht getestet.
 
-Old Libre1 transmitter devices cannot be used with the Libre2 OOP. They need to be replaced with a newer version or have a firmware upgrade for proper operation. MM1 with newest firmware is unfortunately not working yet - searching for root cause is currently ongoing.
+Alte Libre1-Transmitter können nicht mit der Libre2 OOP verwendet werden. Sie müssen durch eine neuere Version ersetzt werden oder benötigen ein Firmware-Upgrade für den ordnungsgemäßen Betrieb mit dem Libre 2. MM1 mit neuester Firmware funktioniert leider noch nicht - die Suche nach der grundsätzlichen Ursache läuft derzeit noch.
 
-The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre2 do a 25 minutes smoothing to avoid certain jumps. OOP generates 5 minute readings with the avergae of the last 5 minutes. Therefore the BG readings are not that smooth but match the orginal reader device and faster follow the "real" BG readings. Wehn you try to loop with OOP please enable all smoothing settings in xDrip+.
+Die Libre2 OOP gibt die gleichen BZ-Messwerte aus wie das Lesegerät oder die LibreLink-App über einen NFC-Scan. AAPS glättet Libre2 Daten über 25 Minuten um Sprünge zu vermeiden. OOP übergibt alle fünf Minuten einen Wert. Dieser entspricht dem Durchschnitt der letzten fünf Minuten. Daher sind die BZ-Werte nicht so glatt, stimmen aber mit dem Lesegerät überein und folgen den "echten" BZ-Entwicklungen schneller. Wenn Du mit OOP loppen möchtest, aktiviere alle Glättungseinstellungen in xDrip+.
 
-The Droplet transmitter is working with Libre2 also but uses an internet service instead. Please refer to FB or Google to get further informations. The MM2 with the tomato app also seems to use an internet service. For both devices you have to take care to have a proper internet connection to get your BG readings.
+Der Droplet-Transmitter funktioniert auch mit dem Libre2, benötigt dafür aber eine Internetverbindung. Weitere Informationen findest Du bei Facebook oder über eine Suchmaschine Deiner Wahl. MM2 mit Tomato-App scheint auch eine Internetverbindung zu nutzen. Bei beiden Geräten musst Du auf eine stabile Internetverbindung achten, um permanent BZ-Werte zu erhalten.
 
-Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth transmitter:
+Auch wenn der Ansatz der gepatchten LibreLink App sehr smart ist, kann es Gründe geben, statt dessen einen Bluetooth-Transmitter zu nutzen:
 
 * Werte sind identisch mit denen des Lesegeräts
 * Der Libre2 Sensor kann 14,5 Tage genutzt werden wie zuvor schon der Libre1. 
@@ -203,4 +203,4 @@ Even if the patched LibreLink app approach is smart there may be some reasons to
 
 Hinweis: Der Transmitter kann auch parallel zur gepatchten LibreLink App verwendet werden. Er stört deren Betrieb nicht.
 
-Remark #2: The OOP algorithm cannot be calibrated yet. This will be changed in the future.
+Hinweis 2: Der OOP Algorithmus kann bisher noch nicht kalibriert werden. Das wird sich in Zukunft ändern.
