@@ -24,7 +24,7 @@ Pour éviter cela, il y a deux possibilités :
    
    * par ex. Vienne -> New York : Changement de profil +6 heures
    * par ex. Vienne -> Sydney : Changement de profil -8 heures
-* Probably not an option if using [patched LibreLink app](../Hardware/Libre2#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
+* Probablement pas une option si vous utilisez [l'application LibreLink patchée](../Hardware/Libre2#changement-de-fuseau-horaire) car la Date et heure automatique doit être activé pour démarrer un nouveau capteur Libre 2.
 
 ### Option 2: Supprimer l'historique de la pompe
 
@@ -71,7 +71,7 @@ Un bon moment pour faire ce changement serait avec des IA faibles. Par ex., une 
 
 * Le changement d'heure est effectué automatiquement. Aucune action requise.
 
-## Other pumps - new as of AAPS version 2.2
+## Autres pompes - nouvelles depuis AAPS version 2.2
 
 **Vous devez mettre à jour AAPS pour utiliser cette fonctionnalité !**
 

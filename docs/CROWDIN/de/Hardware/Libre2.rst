@@ -186,11 +186,13 @@ Falls der Sensor auf der Haut ein wenig bewegt oder irgendwie angehoben wird, ka
 Einsatz von Bluetooth-Transmittern und OOP
 ==================================================
 
-Neben der gepatchten App können derzeit der Droplet oder (bald verfügbar) der neue OOP Algorithmus unter xDrip+ eingesetzt werden. Bisher funktionieren der MM2 und blucon NICHT.
+Bluetooth Transmitter für den Libre 2 können zusammen mit den letzten xDrip+ Nightlys und der Libre2 Opp Abb genutzt werden. Du kannst wie beim Libre1 alle 5 Minuten einen Wert erhalten. Auf der miaomiao Webseite findest Du eine Beschreibung dazu. Diese funktioniert auch mit den Bubble und künftig evtl. erhältlichen anderen Transmittern. Auch der Bluecon sollte funktionieren, wurde bisher aber noch nicht getestet.
 
-Bluetooth-Transmitter können mit dem Libre2 mit den neuesten xDrip + nightlys verwendet werden. Auf der miaomiao Webseite findest Du eine Beschreibung dazu. Diese funktioniert auch mit den Bubble und künftig evtl. erhältlichen anderen Transmittern.
+Alte Libre1-Transmitter können nicht mit der Libre2 OOP verwendet werden. Sie müssen durch eine neuere Version ersetzt werden oder benötigen ein Firmware-Upgrade für den ordnungsgemäßen Betrieb mit dem Libre 2. MM1 mit neuester Firmware funktioniert leider noch nicht - die Suche nach der grundsätzlichen Ursache läuft derzeit noch.
 
-Der Droplet-Transmitter funktioniert mit dem Libre2, benötigt aber eine Internetverbindung. Weitere Informationen findest Du bei Facebook oder über eine Suchmaschine Deiner Wahl.
+Die Libre2 OOP gibt die gleichen BZ-Messwerte aus wie das Lesegerät oder die LibreLink-App über einen NFC-Scan. AAPS glättet Libre2 Daten über 25 Minuten um Sprünge zu vermeiden. OOP übergibt alle fünf Minuten einen Wert. Dieser entspricht dem Durchschnitt der letzten fünf Minuten. Daher sind die BZ-Werte nicht so glatt, stimmen aber mit dem Lesegerät überein und folgen den "echten" BZ-Entwicklungen schneller. Wenn Du mit OOP loppen möchtest, aktiviere alle Glättungseinstellungen in xDrip+.
+
+Der Droplet-Transmitter funktioniert auch mit dem Libre2, benötigt dafür aber eine Internetverbindung. Weitere Informationen findest Du bei Facebook oder über eine Suchmaschine Deiner Wahl. MM2 mit Tomato-App scheint auch eine Internetverbindung zu nutzen. Bei beiden Geräten musst Du auf eine stabile Internetverbindung achten, um permanent BZ-Werte zu erhalten.
 
 Auch wenn der Ansatz der gepatchten LibreLink App sehr smart ist, kann es Gründe geben, statt dessen einen Bluetooth-Transmitter zu nutzen:
 
@@ -200,3 +202,5 @@ Auch wenn der Ansatz der gepatchten LibreLink App sehr smart ist, kann es Gründ
 * Bereits während des einstündigen WarmUps können Werte empfangen werden.
 
 Hinweis: Der Transmitter kann auch parallel zur gepatchten LibreLink App verwendet werden. Er stört deren Betrieb nicht.
+
+Hinweis 2: Der OOP Algorithmus kann bisher noch nicht kalibriert werden. Das wird sich in Zukunft ändern.
