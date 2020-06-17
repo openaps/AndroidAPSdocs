@@ -67,7 +67,7 @@ Si le point d'exclamation reste ou si vous obtenez un message d'erreur, cela peu
 - les notifications de l'écran de veille sont bloqués 
 - vous avez un capteur Libre 2 défectueux (LOT avec un 'K' suivi de 8 chiffres). Vous trouvez ce numéro imprimé sur le paquet jaune. Ces capteurs doivent être remplacés car ils ne fonctionnent pas en bluetooth.
 
-Le redémarrage du téléphone peut vous aider, vous devrez peut-être le faire plusieurs fois. Dès que la connexion est établie, le point d'exclamation rouge disparaît et l'étape la plus importante est franchie. Il peut arriver que, selon les paramètres du système, le point d'exclamation reste mais que vous obtenez des lectures. Dans les deux cas, c'est bon. Le capteur et le téléphone sont maintenant connectés, chaque minute une valeur de glycémie est transmise.
+Le redémarrage du téléphone peut vous aider, vous devrez peut-être le faire plusieurs fois. Dès que la connexion est établie, le point d'exclamation rouge disparaît et l'étape la plus importante est franchie. It may happen that depending on system settings the exclamation mark remains but you still get readings. Dans les deux cas, c'est bon. Le capteur et le téléphone sont maintenant connectés, chaque minute une valeur de glycémie est transmise.
 
 .. image:: ../images/Libre2_Connected.png
   :alt: LibreLink connexion établie
@@ -78,7 +78,7 @@ Après une connexion réussie, les paramètres du smartphone peuvent être modif
 
 Toutefois, lors du démarrage du capteur suivant, tous les paramètres devront à nouveau être définis !
 
-Remarque: L'application patchée en a besoin dans l'heure qui suit le préchauffage pour activer une connexion. Pour les 14 jours de fonctionnement, ils ne sont pas nécessaires. Dans la plupart des cas, lorsque vous rencontrez des problèmes avec le démarrage d'un capteur, le service de localisation a été désactivé. Sur Android c'est nécessaire pour la bonne connection bluetooth (!). Reportez-vous à la documentation Android de Google.
+Remark: The patched app needs the mandatory settings set in that hour after warmup to enable a connection. Pour les 14 jours de fonctionnement, ils ne sont pas nécessaires. Dans la plupart des cas, lorsque vous rencontrez des problèmes avec le démarrage d'un capteur, le service de localisation a été désactivé. Sur Android c'est nécessaire pour la bonne connection bluetooth (!). Reportez-vous à la documentation Android de Google.
 
 Pendant les 14 jours, vous pouvez utiliser un ou plusieurs smartphones NFC (pas le lecteur !) avec l'application LibreLink pour le scanner via NFC. Il n'y a pas de limite de temps pour les démarrer. Vous pouvez par exemple utiliser un téléphone en parallèle à partir du 5ème jour. Le second téléphone peut télécharger les glycémies dans le Cloud d'Abbott (LibreView). LibreView peut générer des rapports pour votre équipe soignante. Il y a beaucoup de parents qui en ont absolument besoin. 
 
@@ -124,13 +124,13 @@ Astuces et Dépannages
 
 Connectivité
 --------------------------------------------------
-La connectivité est extrêmement bonne. A l'exception des téléphones portables Huawei, tous les smartphones actuels semblent bien fonctionner. Le taux de reconnexion en cas de perte de connexion est phénoménal. La connexion peut s'interrompre si le téléphone portable se trouve dans la poche opposée au capteur ou si vous êtes à l'extérieur. Lorsque je jardinage, je porte mon téléphone du même côté que le capteur. Dans les pièces, où le Bluetooth se propage avec des réflexions, aucun problème ne devrait survenir. Si vous avez des problèmes de connectivité, testez avec un autre téléphone. Cela peut aussi aider positionner le capteur avec l'antenne BT interne pointant vers le bas. La fente sur l'applicateur doit pointer vers le bas lors de la pose du capteur.
+La connectivité est extrêmement bonne. With the exception of Huawei mobile phones, all current smartphones seem to work well. Le taux de reconnexion en cas de perte de connexion est phénoménal. La connexion peut s'interrompre si le téléphone portable se trouve dans la poche opposée au capteur ou si vous êtes à l'extérieur. Lorsque je jardinage, je porte mon téléphone du même côté que le capteur. Dans les pièces, où le Bluetooth se propage avec des réflexions, aucun problème ne devrait survenir. Si vous avez des problèmes de connectivité, testez avec un autre téléphone. Cela peut aussi aider positionner le capteur avec l'antenne BT interne pointant vers le bas. La fente sur l'applicateur doit pointer vers le bas lors de la pose du capteur.
 
 Lissage de valeur & valeurs brutes
 --------------------------------------------------
 Techniquement, la glycémie est transmise chaque minute à xDrip+. Une moyenne pondérée calcule une valeur lissée sur les 25 dernières minutes. Ceci est obligatoire pour la boucle. Les courbes sont lisses et les résultats avec la boucle sont excellents. Les valeurs brutes sur lesquelles les alarmes sont basées sont un peu plus instables, mais correspondent également aux valeurs que le lecteur affiche. De plus, les valeurs brutes peuvent être affichées dans le graphique xDrip+ afin de pouvoir réagir à temps en cas de changements rapides. Veuillez activer Paramètres moins courants > Advanced settings for Libre2 > "show Raw values in Graph" et "show Sensors Infos in Status". Ainsi les valeurs brutes sont affichées sous forme de petits points blancs et des informations supplémentaires sur les capteurs sont disponibles dans le menu Système.
 
-Les valeurs brutes sont très utiles lorsque les glycémies changent rapidement. Même si les points sont moins stables, vous beaucoup mieux détecter la tendance qu'avec l'utilisation de la ligne lissée pour prendre les bonnes décisions de traitement.
+Les valeurs brutes sont très utiles lorsque les glycémies changent rapidement. Even if the dots are jumpier you would detect the tendency much better as using the smoothed line to make proper therapy decisions.
 
 .. image:: ../images/Libre2_RawValues.png
   :alt: xDrip+ paramètres avancés Libre2 & valeurs brutes
@@ -155,11 +155,11 @@ Une fois réussi, sélectionnez "Sensor Stop" et "Supprimer l'étalonnage seulem
 
 Étalonnage
 --------------------------------------------------
-Vous pouvez calibrer le Libre2 avec un décalage de -40 mg/dl à +20 mg/dL [-2,2 mmol/l à +1,1 mmol/l] (intercept). La pente n'est pas modifiable car le Libre2 est beaucoup plus précis que le Libre1. Veuillez vérifier la glycémie capillaire dès le début de la pose d'un nouveau capteur. On sait qu'il peut y avoir de grandes différences avec les mesures de glycémies. Pour être en sécurité, étalonner toutes les 24 - 48 heures. Les valeurs sont précises jusqu'à la fin du capteur et ne sautent pas comme avec le Libre1. Cependant, si le capteur est complètement éteint, cela ne changera pas. Le capteur doit alors être remplacé immédiatement.
+Vous pouvez calibrer le Libre2 avec un décalage de -40 mg/dl à +20 mg/dL [-2,2 mmol/l à +1,1 mmol/l] (intercept). La pente n'est pas modifiable car le Libre2 est beaucoup plus précis que le Libre1. Veuillez vérifier la glycémie capillaire dès le début de la pose d'un nouveau capteur. It is known that there can arise big differences to the blood measurements. Pour être en sécurité, étalonner toutes les 24 - 48 heures. Les valeurs sont précises jusqu'à la fin du capteur et ne sautent pas comme avec le Libre1. Cependant, si le capteur est complètement éteint, cela ne changera pas. Le capteur doit alors être remplacé immédiatement.
 
 Contrôles de cohérence
 --------------------------------------------------
-Les capteurs Libre2 vérifient que les glycémies lues sont plausibles pour détecter les mauvaises valeurs. Dès que le capteur bouge sur le bras ou est légèrement relevé, les valeurs peuvent commencer à fluctuer. Dans ce cas le capteur Libre2 s'éteindra pour des raisons de sécurité. Malheureusement, lors du scan avec l'application, des vérifications complémentaires sont faites. L'application peut désactiver le capteur même si celui-ci est OK. Actuellement le test interne est trop strict. J'ai complètement arrêté de scanner le capteur et je n'ai pas eu d'échec depuis.
+Les capteurs Libre2 vérifient que les glycémies lues sont plausibles pour détecter les mauvaises valeurs. Dès que le capteur bouge sur le bras ou est légèrement relevé, les valeurs peuvent commencer à fluctuer. Dans ce cas le capteur Libre2 s'éteindra pour des raisons de sécurité. Malheureusement, lors du scan avec l'application, des vérifications complémentaires sont faites. L'application peut désactiver le capteur même si celui-ci est OK. Currently the internal test is too strict. J'ai complètement arrêté de scanner le capteur et je n'ai pas eu d'échec depuis.
 
 Changement de fuseau horaire
 --------------------------------------------------
@@ -187,16 +187,16 @@ Bluetooth transmitter can be used with the Libre2 with the latest xDrip+ nightly
 
 Old Libre1 transmitter devices cannot be used with the Libre2 OOP. They need to be replaced with a newer version or have a firmware upgrade for proper operation. MM1 with newest firmware is unfortunately not working yet - searching for root cause is currently ongoing.
 
-The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre2 do a 25 minutes smoothing to avoid certain jumps. OOP generates 5 minute readings with the avergae of the last 5 minutes. Therefore the BG readings are not that smooth but match the orginal reader device and faster follow the "real" BG readings. Wehn you try to loop with OOP please enable all smoothing settings in xDrip+.
+The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre2 do a 25 minutes smoothing to avoid certain jumps. OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
 
-The Droplet transmitter is working with Libre2 also but uses an internet service instead. Please refer to FB or Google to get further informations. The MM2 with the tomato app also seems to use an internet service. For both devices you have to take care to have a proper internet connection to get your BG readings.
+The Droplet transmitter is working with Libre2 also but uses an internet service instead. Please refer to FB or a search engine to get further information. The MM2 with the tomato app also seems to use an internet service. For both devices you have to take care to have a proper internet connection to get your BG readings.
 
 Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth transmitter:
 
 * les GLY sont identiques aux résultats du lecteur
 * le capteur Libre2 peut être utilisé 14,5 jours comme avec le Libre1 
 * 8 heures d'historique est entièrement pris en charge.
-* obtenir des glycémies pendant l'heure de démarrage d'un nouveau capteur
+* get BG readings during the one hour startup time of a new sensor
 
 Remarque : Le transmetteur peut être utilisé en parallèle à l'application LibreLink. Il ne perturbe pas l'application LibreLink patchée.
 
