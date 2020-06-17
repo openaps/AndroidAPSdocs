@@ -24,7 +24,7 @@ Om dit te voorkomen zijn er twee mogelijkheden:
    
    * Bijvoorbeeld Wenen-> New York: profiel wissel + 6 uur
    * Bijvoorbeeld Wenen-> Sydney: profiel wissel - 8 uur
-* Probably not an option if using [patched LibreLink app](../Hardware/Libre2#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
+* Let op: dit is waarschijnlijk niet mogelijk als je gebruik maakt van de [gepatchte LibreLink app](../Hardware/Libre2#time-zone-travelling) omdat je telefoon op 'automatische tijdzone' moet staan om een nieuwe Libre 2 sensor te starten.
 
 ### Optie 2: pomphistorie wissen
 
@@ -71,7 +71,7 @@ Een goed moment om deze omschakeling te maken zou zijn wanneer jouw IOB laag is.
 
 * Wisselingen tussen zomer/wintertijd worden automatisch gedaan. Geen actie vereist.
 
-## Other pumps - new as of AAPS version 2.2
+## Andere pompen - voor AAPS versie 2.2 en hoger
 
 **Je moet AAPS bijgewerkt hebben naar versie 2.2 om deze functie te gebruiken.**
 
