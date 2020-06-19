@@ -13,6 +13,41 @@ If you do not update for another 30 days (90 days from new release date) AAPS wi
 
 Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
 
+Version 2.7.0
+================
+Release date:
+
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+`Password for Dana RS pump <..Configuration/DanaRS-Insulin-Pump.html>`_ must be entered correctly. Password was not checked in previous versions.
+
+Major new features
+----------------------
+* internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
+* using modules for Dana pumps @MilosKozak
+* new layout, layout selection @MilosKozak
+* new status lights layout @MilosKozak
+* multiple graphs support @MilosKozak
+* visualization of TT adjustment @Tornado-Tim
+* new preferences layout @MilosKozak
+* SMB algorithm update @Tornado-Tim
+* Low glucose suspend mode @Tornado-Tim
+* carbs required notifications @twain47 @Tornado-Tim
+* removed Careportal (moved to Actions) @MilosKozak
+* new encrypted backup format @dlvoy
+* new SMS TOTP authentication @dlvoy
+* new SMS PUMP CONNECT, DISCONNECT commands @Lexsus
+* better support for tiny basals on Dana pumps @Mackwe
+* small Insight fixes @TebbeUbben @MilosKozak
+* "Default language" option @MilosKozak
+* vector icons @Philoul
+* skip neutral temps for MDT pump @Tornado-Tim
+* History browser improvements @MilosKozak
+* removed OpenAPS MA algorithm @Tornado-Tim
+* removed Oref0 sensitivity @Tornado-Tim
+* Biometric or password protection for settings, bolus @MilosKozak
+* new automation trigger @PoweRGbg
+
 Version 2.6.1.4
 ================
 Release date: 04-05-2020
@@ -20,7 +55,7 @@ Release date: 04-05-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Major new features
------
+----------------------
 * Insight: Disable vibration on bolus for firmware version 3 - second attempt
 * Otherwise is equal to 2.6.1.3. Update is optional. 
 
