@@ -23,7 +23,7 @@ Set master password
 -----------------------------------------------------------
 * Neccessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
 * Open Preferences (three-dot-menu on top right of home screen)
-* Click triangle next to "General"
+* Click triangle below "General"
 * Click "Master-Password"
 * Enter password, confirm password and click ok.
 
