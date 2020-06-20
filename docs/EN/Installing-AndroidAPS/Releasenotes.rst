@@ -19,7 +19,7 @@ Release date:
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
-`Password for Dana RS pump <..Configuration/DanaRS-Insulin-Pump.html>`_ must be entered correctly. Password was not checked in previous versions.
+Make sure to check and adjust settings after updating to 2.7 as described `here <../Installing-AndroidAPS/update2_7.rst.html>`_.
 
 Major new features
 ----------------------
