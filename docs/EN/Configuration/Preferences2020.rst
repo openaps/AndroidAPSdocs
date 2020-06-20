@@ -121,7 +121,7 @@ Range for visualization
 -----------------------------------------------------------
 * Define which part of the graph on the home screen shall be you target range and be filled with green background.
 
-.. image:: ../images/Pref2020_OV_Range.png
+.. image:: ../images/Pref2020_OV_Range2.png
   :alt: Preferences > Range for visualization
 
 Shorten tab titles
@@ -154,7 +154,7 @@ Status lights
 * If threshold critical is exceeded, values will be shown in red.
 * In versions prior to AAPS 2.7 settings for status lights had to be made in Nightscout settings.
 
-.. image:: ../images/Pref2020_OV_StatusLights.png
+.. image:: ../images/Pref2020_OV_StatusLights2.png
   :alt: Preferences > Status Lights
 
 Advanced Settings
