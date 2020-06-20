@@ -29,7 +29,7 @@ Major new features
 * new status lights layout @MilosKozak
 * multiple graphs support @MilosKozak
 * visualization of TT adjustment @Tornado-Tim
-* new preferences layout @MilosKozak
+* new `preferences layout <../Configuration/Preferences2020.html>`_ @MilosKozak
 * SMB algorithm update @Tornado-Tim
 * Low glucose suspend mode @Tornado-Tim
 * carbs required notifications @twain47 @Tornado-Tim
@@ -39,7 +39,7 @@ Major new features
 * new SMS PUMP CONNECT, DISCONNECT commands @Lexsus
 * better support for tiny basals on Dana pumps @Mackwe
 * small Insight fixes @TebbeUbben @MilosKozak
-* "Default language" option @MilosKozak
+* `"Default language" option <../Configuration/Preferences2020.html#general>`_ @MilosKozak
 * vector icons @Philoul
 * skip neutral temps for MDT pump @Tornado-Tim
 * History browser improvements @MilosKozak
