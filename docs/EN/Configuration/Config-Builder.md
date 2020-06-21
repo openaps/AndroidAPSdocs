@@ -111,14 +111,18 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
    ![Config Builder BG source](../images/ConfBuild_BGSource.png)
 
 - [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
+- [Tomato App](http://tomato.cool/) for MiaoMiao device
+- Random BG: Generates random BG data (Demo mode only)
 
 ## Pump
 Select the pump you are using.  
 - [Dana R](DanaR-Insulin-Pump.md)
 - Dana R Korean (for domestic DanaR pump)
-- Dana Rv2 (DanaR pump with firmware upgrade)
+- Dana Rv2 (DanaR pump with unofficially firmware upgrade)
 - [Dana RS](DanaRS-Insulin-Pump.md)
-- [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+- [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
+- [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+- [Medtronic](MedtronicPump.md)
 - MDI (receive AAPS suggestions for your multiple daily injections therapy)
 - Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
@@ -127,7 +131,7 @@ For dana pumps, use <b>Advanced settings</b> to activate BT watchdog if necessar
 [Password for Dana RS pump](..Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
 
 ## Sensitivity Detection
-Select the type of sensitivity detection.  This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual.  Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).  
+Select the type of sensitivity detection. For more details of different designs please [read on here](Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual.  More details about the Sensitivity algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).  
 
 You can view your sensitivity on the homescreen by selecting SEN and watching the white line.  Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features.html#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
@@ -152,8 +156,8 @@ AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treat
 AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). The Closed Loop works within numerous safety limits, which you can be set individually.
 Closed Loop is only possible if you are in [Objective 6](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
 
-## Objectives (learning program)
-AndroidAPS has a number of objectives that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+## Constraints (learning program)
+AndroidAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
 You should [export your settings](../Usage/ExportImportSettings.rst) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
@@ -187,8 +191,32 @@ Note: Button will not be visible if outside the specified time range or if you h
 
 ![QuickWizard button](../images/ConfBuild_QuickWizard.png)
 
+#### Default Temp-Targets
+Choose default temp-targets (duration and target). Preset values are:
+
+* eating soon: target 72 mg/dl / 4.0 mmol/l, duration 45 min
+* activity: target 140 mg/dl / 7.8 mmol/l, duration 90 min
+* hypo: target 125 mg/dl / 6.9 mmol/l, duration 45 min
+
+#### Fill/Prime standard insulin amounts
+Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+
+#### Range of visualization
+Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+
+#### Shorten tab titles
+Choose either the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+
+#### Show notes field in treatment dialogs
+Choose if you want to have a notes field when entering treatments or not.
+
+#### Status lights
+Choose if you want to have status lights on overview for canula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+
 #### Advanced settings
-Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units. 
+
+**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Actions
 Some buttons to quickly access common features:
@@ -212,6 +240,9 @@ Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Th
 
 ![Actions tab](../images/ConfBuild_ConfBuild_Actions_b.png)
 
+### Automation
+User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst)
+
 ### SMS Communicator
 Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
 
@@ -234,11 +265,6 @@ Might be helpful if watch was not connected for some time and you want to push t
 
 ### xDrip Statusline (watch)
 Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
-
-### Ongoing Notification
-Displays a summary of current BG, delta, active TBR%, active basal u/h and profile, IOB and split into bolus IOB and basal IOB on the phones's dropdown screen and phone's lock screen.
-
-![AAPS widget](../images/ConfBuild_Widget.png)
 
 ### NS Client
 Setup sync of your AndroidAPS data with Nightscout.
