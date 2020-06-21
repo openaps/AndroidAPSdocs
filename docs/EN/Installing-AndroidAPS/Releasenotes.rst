@@ -32,7 +32,7 @@ Major new features
 * new `preferences layout <../Configuration/Preferences2020.html>`_ @MilosKozak
 * SMB algorithm update @Tornado-Tim
 * `Low glucose suspend mode <../Configuration/Preferences2020.html#aps-mode>`_ @Tornado-Tim
-* carbs required notifications @twain47 @Tornado-Tim
+* `carbs required notifications <../Configuration/Preferences2020.html#carb-required-notification>`_ @twain47 @Tornado-Tim
 * removed Careportal (moved to Actions) @MilosKozak
 * new encrypted backup format @dlvoy
 * new SMS TOTP authentication @dlvoy
