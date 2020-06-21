@@ -196,14 +196,112 @@ Loop
 ===========================================================
 APS mode
 -----------------------------------------------------------
-* Toggle between open and closed looping
+* Toggle between open and closed looping as well as low glucose suspend (LGS)
 * **Open looping** means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump.  
 * **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.  
-* The home screen will display in the top left corner whether you are in open or closed loop mode. 
-* Long press this home screen button will also allow you to toggle between the two.
+* **Low glucose suspend** gives you the possiblity to enter into Low Glucose Suspend without the need for the reverting an objective.
 
 Minimal request change [%]
 -----------------------------------------------------------
 * When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. 
 * To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
 * This defines the relative change required to trigger a notification.
+
+Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
+===========================================================
+Depending on your settings in `config builder <../Configuration/Config-Builder.html>`_ you can choose between two algorithms:
+
+* `Advanced meal assist (OpenAPS AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ - state of the algorithm in 2017
+* `Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - most recent algorithm for advanced users
+
+OpenAPS AMA settings
+-----------------------------------------------------------
+* Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. 
+* More details about the settings and Autosens can be found in the `OpenAPS docs <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`_.
+
+Max U/h a Temp Basal can be set to
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. 
+* The value is measured in units per hour (U/h). 
+* It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. 
+* For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
+* See also `detailed feature description <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>`_.
+
+Maximum basal IOB OpenAPS can deliver [U]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. 
+* Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again. 
+* This value **does not consider bolus IOB**, only basal.
+* This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
+
+When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia. This is an important step in order to:
+
+* Have a period of time to safely get used to the AAPS system and monitor how it works.
+* Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
+* See how AAPS limits your basal insulin to prevent hypoglycaemia.
+
+When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 3 to get a value of 1.5 U.
+
+* You can start conservatively with this value and increase it slowly over time. 
+* These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
+
+**Note: As a safety feature, Max Basal IOB is hard-limited to 7u.**
+
+Autosens
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* `Autosens <../Usage/Open-APS-features.html#autosens>`_ looks at blood glucose deviations (positive/negative/neutral).
+* It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
+* If you select "Autosens adjust target, too" the algorithm will also modify your glucose target.
+
+Advanced settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Normally you do not have to change the settings in this dialogue!
+* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While You Wait For Gear/preferences-and-safety-settings.html>`_ and to understand what you are doing.
+
+OpenAPS SMB settings
+-----------------------------------------------------------
+* In contrast to AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ does not use temporary basal rates to control glucose levels, but mainly small super microboluses.
+* You must have started `objective 10 <../Usage/Objectives.html#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ to use SMB.
+* The first three settings are explained `_above <./Configuration/Preferences2020.html#max-u-h-a-temp-basal-can-be-set-to>`_.
+* Details on the different enable options are described in `OpenAPS feature section <../Usage/Open-APS-features.html#enable-smb>`_.
+* If sensitivity raises / lowers target is enabled `Autosens <../Usage/Open-APS-features.html#autosens>`_ will modify your glucose target according to your blood glucose deviations.
+* If target is modified it will be displayed with a green background on your home screen.
+
+.. image:: ../images/Pref2020_SMB_TargetModified.png
+  :alt: Target modified by autosens
+  
+Carb required notification
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* This feature is only available if SMB algorithm is selected.
+* Eating of additional carbs will be suggested when the reference design detects that it requires carbs.
+* In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
+* Additionally the required carbs will be displayed in the COB section on your home screen.
+* A threshold can  be defined - minimum amount of carbs needed to trigger notification. 
+* Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+
+.. image:: ../images/Pref2020_CarbsRequired.png
+  :alt: Display carbs required on home screen
+  
+Advanced settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Normally you do not have to change the settings in this dialogue!
+* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While You Wait For Gear/preferences-and-safety-settings.html>`_ and to understand what you are doing.
+
+Absorption settings
+===========================================================
+min_5m_carbimpact
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed. 
+* To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. 
+* Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc. 
+* The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`_.
+* Standard value for AMA is 3.
+* The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+
+.. image:: ../images/Pref2020_min_5m_carbimpact.png
+  :alt: COB graph
+  
+Absorption Settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* If you have selected to use AMA Autosens then you will be able to enter your maximum meal absorption time and how frequently you want autosense to refresh.  
+* If you often eat high fat or protein meals you will need to increase your meal absorption time.

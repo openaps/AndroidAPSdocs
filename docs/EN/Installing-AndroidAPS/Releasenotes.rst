@@ -26,13 +26,13 @@ Major new features
 * internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
 * using modules for Dana pumps @MilosKozak
 * new layout, layout selection @MilosKozak
-* new status lights layout @MilosKozak
+* new `status lights layout <../Configuration/Preferences2020.html#status-lights>`_ @MilosKozak
 * multiple graphs support @MilosKozak
-* visualization of TT adjustment @Tornado-Tim
+* visualization of dynamic target adjustment @Tornado-Tim
 * new `preferences layout <../Configuration/Preferences2020.html>`_ @MilosKozak
 * SMB algorithm update @Tornado-Tim
-* Low glucose suspend mode @Tornado-Tim
-* carbs required notifications @twain47 @Tornado-Tim
+* `Low glucose suspend mode <../Configuration/Preferences2020.html#aps-mode>`_ @Tornado-Tim
+* `carbs required notifications <../Configuration/Preferences2020.html#carb-required-notification>`_ @twain47 @Tornado-Tim
 * removed Careportal (moved to Actions) @MilosKozak
 * new encrypted backup format @dlvoy
 * new SMS TOTP authentication @dlvoy
@@ -45,7 +45,7 @@ Major new features
 * History browser improvements @MilosKozak
 * removed OpenAPS MA algorithm @Tornado-Tim
 * removed Oref0 sensitivity @Tornado-Tim
-* Biometric or password protection for settings, bolus @MilosKozak
+* `Biometric or password protection <..../Configuration/Preferences2020.html#protection>`_ for settings, bolus @MilosKozak
 * new automation trigger @PoweRGbg
 
 Version 2.6.1.4
