@@ -136,7 +136,6 @@ If you use Oref1 with SMB you must change <b>min_5m_carbimpact</b> to 8. The val
 
 ## APS
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
-- OpenAPS MA (meal assist, state of the algorithm in 2016)
 - OpenAPS AMA (advanced meal assist, state of the algorithm in 2017)  
 More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
 Note you need to be in [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) in order to use OpenAPS AMA.
