@@ -21,6 +21,8 @@ Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or ne
 
 Make sure to check and adjust settings after updating to 2.7 as described `here <../Installing-AndroidAPS/update2_7.rst.html>`_.
 
+You need at least start Objective 11 in order to continue using Automation feature (all previous objectives must be completed otherwise starting Objective 11 is not possible).
+
 Major new features
 ----------------------
 * internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
