@@ -10,9 +10,6 @@ Preferences
 General
 ===========================================================
 
-.. image:: ../images/Pref2020_General.png
-  :alt: Preferences > General
-
 **Units**
 
 * Set units to mmol/l or mg/dl depending on your preferences.
@@ -21,6 +18,10 @@ General
 
 * New option to use phone's default language (recommended). 
 * In case you want AAPS in different language than standard phone language you can choose from a broad variety.
+* If you use different languages you might sometimes see a language mix. This is due to an an android issue that overriding default andorid language sometimes doesn't work.
+
+  .. image:: ../images/Pref2020_General.png
+    :alt: Preferences > General
 
 **Patient name**
 
@@ -262,7 +263,7 @@ OpenAPS SMB settings
 -----------------------------------------------------------
 * In contrast to AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ does not use temporary basal rates to control glucose levels, but mainly small super microboluses.
 * You must have started `objective 10 <../Usage/Objectives.html#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ to use SMB.
-* The first three settings are explained `_above <./Configuration/Preferences2020.html#max-u-h-a-temp-basal-can-be-set-to>`_.
+* The first three settings are explained `above <./Configuration/Preferences2020.html#max-u-h-a-temp-basal-can-be-set-to>`_.
 * Details on the different enable options are described in `OpenAPS feature section <../Usage/Open-APS-features.html#enable-smb>`_.
 * If sensitivity raises / lowers target is enabled `Autosens <../Usage/Open-APS-features.html#autosens>`_ will modify your glucose target according to your blood glucose deviations.
 * If target is modified it will be displayed with a green background on your home screen.
