@@ -51,5 +51,5 @@ OpenAPS
 
 Совместимые помпы:
 
-* Omnipod Eros
+* Omnompod Eros
 * некоторые старые помпы Medtronic

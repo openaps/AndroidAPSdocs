@@ -67,12 +67,12 @@ Si le point d'exclamation reste ou si vous obtenez un message d'erreur, cela peu
 - les notifications de l'écran de veille sont bloqués 
 - vous avez un capteur Libre 2 défectueux (LOT avec un 'K' suivi de 8 chiffres). Vous trouvez ce numéro imprimé sur le paquet jaune. Ces capteurs doivent être remplacés car ils ne fonctionnent pas en bluetooth.
 
-Le redémarrage du téléphone peut vous aider, vous devrez peut-être le faire plusieurs fois. Dès que la connexion est établie, le point d'exclamation rouge disparaît et l'étape la plus importante est franchie. Il peut arriver que, selon les paramètres du système, le point d'exclamation reste mais que vous obtenez des lectures. Dans les deux cas, c'est bon. Le capteur et le téléphone sont maintenant connectés, chaque minute une valeur de glycémie est transmise.
+Le redémarrage du téléphone peut vous aider, vous devrez peut-être le faire plusieurs fois. Dès que la connexion est établie, le point d'exclamation rouge disparaît et l'étape la plus importante est franchie. Il peut arriver, selon les paramètres du système, que le point d'exclamation reste mais que vous obtenez des lectures. Dans les deux cas, c'est bon. Le capteur et le téléphone sont maintenant connectés, chaque minute une valeur de glycémie est transmise.
 
 .. image:: ../images/Libre2_Connected.png
   :alt: LibreLink connexion établie
   
-Dans de rares cas, cela peut aider à vider le cache bluetooth et/ou réinitialiser toutes les connexions réseau via le menu système. Cela supprime tous les périphériques bluetooth connectés ce qui peut aider à configurer une nouvelle connexion bluetooth spécifique. That procedure is save as the started sensor is remembered by the patched LibreLink app. Nothing additional has to be done here. Il suffit d'attendre que l'application patchée se connecte au capteur.
+Dans de rares cas, cela peut aider de vider le cache bluetooth et/ou réinitialiser toutes les connexions réseau via le menu système. Cela supprime tous les périphériques bluetooth connectés ce qui peut aider à configurer une nouvelle connexion bluetooth spécifique. Cette procédure est enregistrée car le capteur démarré est mémorisé par l'application LibreLink patchée. Rien de plus n'a à être fait ici. Il suffit d'attendre que l'application patchée se connecte au capteur.
 
 Après une connexion réussie, les paramètres du smartphone peuvent être modifiés si nécessaire. Cela n'est pas recommandé, mais vous pouvez vouloir économiser de l'énergie. Le service de localisation peut être éteint, le volume peut être réglé à zéro ou les alarmes peuvent être à nouveau désactivées. Les glycémies sont de toute façon transmises.
 
@@ -130,7 +130,7 @@ Lissage de valeur & valeurs brutes
 --------------------------------------------------
 Techniquement, la glycémie est transmise chaque minute à xDrip+. Une moyenne pondérée calcule une valeur lissée sur les 25 dernières minutes. Ceci est obligatoire pour la boucle. Les courbes sont lisses et les résultats avec la boucle sont excellents. Les valeurs brutes sur lesquelles les alarmes sont basées sont un peu plus instables, mais correspondent également aux valeurs que le lecteur affiche. De plus, les valeurs brutes peuvent être affichées dans le graphique xDrip+ afin de pouvoir réagir à temps en cas de changements rapides. Veuillez activer Paramètres moins courants > Advanced settings for Libre2 > "show Raw values in Graph" et "show Sensors Infos in Status". Ainsi les valeurs brutes sont affichées sous forme de petits points blancs et des informations supplémentaires sur les capteurs sont disponibles dans le menu Système.
 
-Les valeurs brutes sont très utiles lorsque les glycémies changent rapidement. Même si les points sont moins stables, vous beaucoup mieux détecter la tendance qu'avec l'utilisation de la ligne lissée pour prendre les bonnes décisions de traitement.
+Les valeurs brutes sont très utiles lorsque les glycémies changent rapidement. Même si les points sont moins stables, vous détecterez beaucoup mieux la tendance qu'avec l'utilisation de la ligne lissée pour prendre les bonnes décisions de traitement.
 
 .. image:: ../images/Libre2_RawValues.png
   :alt: xDrip+ paramètres avancés Libre2 & valeurs brutes
@@ -183,15 +183,15 @@ Si le capteur bouge un peu sur la peau ou est soulevé d'une manière ou d'une a
 Étape : Utiliser le transmetteur bluetooth et OOP
 ==================================================
 
-Bluetooth transmitter can be used with the Libre2 with the latest xDrip+ nightlys and the Libre2 OOP app. You can receive blood sugar readings every 5 minutes as well as with the Libre1. Veuillez vous référer au site web miaomiao pour trouver une description. This will also work with the Bubble device and in the future with other transmitter devices. The blucon should work but has not been tested yet.
+Le transmetteur Bluetooth peut être utilisé avec le Libre2 et la dernière version courante de xDrip+ ainsi qu'avec l'application Libre2 OOP. Vous pouvez recevoir des lectures de glycémie toutes les 5 minutes comme avec le Libre1. Veuillez vous référer au site web miaomiao pour trouver une description. Cela marche aussi avec un Bubble et dans le futur avec d'autres transmetteurs. Le blucon devrait fonctionner mais n'a pas encore été testé.
 
-Old Libre1 transmitter devices cannot be used with the Libre2 OOP. They need to be replaced with a newer version or have a firmware upgrade for proper operation. MM1 with newest firmware is unfortunately not working yet - searching for root cause is currently ongoing.
+Les anciens transmetteurs Libre1 ne peuvent pas être utilisés avec l'application OOP Libre2. Ils doivent être remplacés par une version plus récente ou avoir une mise à jour de firmware pour fonctionner. MM1 avec le firmware le plus récent ne marche malheureusement pas encore - l'analyse du problème est en cours.
 
-The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre2 do a 25 minutes smoothing to avoid certain jumps. OOP generates 5 minute readings with the avergae of the last 5 minutes. Therefore the BG readings are not that smooth but match the orginal reader device and faster follow the "real" BG readings. Wehn you try to loop with OOP please enable all smoothing settings in xDrip+.
+Le OOP Libre2 obtient les mêmes lectures de glycémies qu'avec le lecteur d'origine ou l'application LibreLink via NFC. AAPS avec Libre2 fait un lissage sur 25 minutes pour éviter certains sauts. OOP génère des relevés toutes les 5 minutes avec la moyenne des 5 dernières minutes. Par conséquent, les lectures glycémique ne sont pas aussi lissées mais correspondent au lecteur d'origine et suivent plus vite les lectures "réelles". Si vous essayez de boucler avec OOP, activez tous les réglages de lissage dans xDrip +.
 
-The Droplet transmitter is working with Libre2 also but uses an internet service instead. Please refer to FB or Google to get further informations. The MM2 with the tomato app also seems to use an internet service. For both devices you have to take care to have a proper internet connection to get your BG readings.
+Le transmetteur Droplet marche également avec Libre2 mais utilise un service Internet. Veuillez vous référer à FB ou à un moteur de recherche pour obtenir de plus amples renseignements. Le MM2 avec l'application Tomato semble également utiliser un service Internet. Pour ces deux appareils, vous devez prendre soin d'avoir une connexion Internet appropriée pour obtenir vos relevés de glycémies.
 
-Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth transmitter:
+Même si l'utilisation de LibreLink patchée est pratique, il peut y avoir des raisons d'utiliser un transmetteur bluetooth à la place :
 
 * les GLY sont identiques aux résultats du lecteur
 * le capteur Libre2 peut être utilisé 14,5 jours comme avec le Libre1 
@@ -200,4 +200,4 @@ Even if the patched LibreLink app approach is smart there may be some reasons to
 
 Remarque : Le transmetteur peut être utilisé en parallèle à l'application LibreLink. Il ne perturbe pas l'application LibreLink patchée.
 
-Remark #2: The OOP algorithm cannot be calibrated yet. This will be changed in the future.
+Remarque 2: L'algorithme OOP ne peut pas encore être calibré. Cela sera modifié à l'avenir.
