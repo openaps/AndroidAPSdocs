@@ -12,14 +12,14 @@ Freestyle Libre 2
 
 По юридическим причинам установка так называемого патча должна быть произведена самостоятельно. Используйте поисковые системы для поиска соответствующих ссылок. Есть в основном два варианта: рекомендуемое оригинальное исправленное приложение блокирует любой интернет-трафик, чтобы избежать отслеживания. Другой вариант поддерживает LibreView, который может понадобиться вашему врачу.
 
-The patched app has to be installed instead of the original app. The next sensor started with it will transmit the current BG values to the xDrip+ app running on your smartphone via Bluetooth.
+Вместо оригинального приложения следует установить модифицированное. Следующий сенсор, запущенный с его помощью, будет передавать по Bluetooth текущие значения гликемии в приложение xDrip +, работающее на смартфоне.
 
-Important: To avoid possible problems it may help to first install and uninstall the original app on an NFC capable smartphone. NFC должен быть включен. Это не требует дополнительной энергии. Then install the patched app. 
+Важно: чтобы избежать возможных проблем, при первой установке/деинсталляции оригинального приложения может помочь использование смартфона с поддержкой NFC. NFC должен быть включен. Это не требует дополнительной энергии. Затем установите модифицированное приложение. 
 
-The patched app can be identified by the foreground authorization notification. The foreground authorization service improves the connection stability compared to the original app which do not use this service.
+Исправленное приложение можно определить с помощью уведомления об авторизации в основном режиме. Служба проверки прав доступа в основном режиме повышает стабильность соединения по сравнению с исходным приложением, которое не использует эту службу.
 
 .. image:: ../images/Libre2_ForegroundServiceNotification.png
-  :alt: LibreLink Служба переднего плана
+  :alt: LibreLink Служба переднего плана (основной режим)
 
 Other indications could be the Linux penguin logo three dot menu -> Info or the font of the patched app. These criteria are optional depending on the app source you choose.
 
