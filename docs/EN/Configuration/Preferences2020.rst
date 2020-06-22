@@ -36,8 +36,8 @@ Master password
 * Click "Master-Password"
 * Enter password, confirm password and click ok.
 
-.. image:: ../images/MasterPW.png
-  :alt: Set master password
+  .. image:: ../images/MasterPW.png
+    :alt: Set master password
   
 Settings protection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -45,8 +45,8 @@ Settings protection
 * Custom password should be used if you want to use master password just for securing `exported settings <../Usage/ExportImportSettings.html>`_.
 * If you are using a custom password click on line "Settings password" to set password as described `above <../Configuration/Preferences2020.html#master-password>`_.
 
-.. image:: ../images/Pref2020_Protection.png
-  :alt: Protection
+  .. image:: ../images/Pref2020_Protection.png
+    :alt: Protection
 
 Application protection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -58,8 +58,8 @@ Bolus protection
 * Bolus protection might be useful if AAPS is used by a small child and you `bolus via SMS <../Children/SMS-Commands.html>`_.
 * In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter master password.
 
-.. image:: ../images/Pref2020_PW.png
-  :alt: Prompt biometric protection
+  .. image:: ../images/Pref2020_PW.png
+    :alt: Prompt biometric protection
 
 Skin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -69,16 +69,16 @@ You can choose from three types of skins:
 * Buttons always on bottom of screen - especially for stand alone Android watches
 * Large display - bigger graph
 
-.. image:: ../images/Pref2020_Skin.png
-  :alt: Select skin
+  .. image:: ../images/Pref2020_Skin.png
+    :alt: Select skin
 
 Overview
 ===========================================================
 
 * Overview section in preferences is the same as plugin preferences which are accessible through the three-dot-menu.
 
-.. image:: ../images/Pref2020_Overview.png
-  :alt: Preferences > Overview
+  .. image:: ../images/Pref2020_Overview.png
+    :alt: Preferences > Overview
 
 Keep screen on
 -----------------------------------------------------------
@@ -90,8 +90,8 @@ Buttons
 * Define which buttons are visible on the bottom of your home screen.
 * With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
 
-.. image:: ../images/Pref2020_OV_Buttons.png
-  :alt: Preferences > Buttons
+  .. image:: ../images/Pref2020_OV_Buttons.png
+    :alt: Preferences > Buttons
 
 Quick Wizard
 -----------------------------------------------------------
@@ -100,8 +100,8 @@ Quick Wizard
 * If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up). 
 * The proposal has to be confirmed before insulin is delivered.
 
-.. image:: ../images/Pref2020_OV_QuickWizard.png
-  :alt: Preferences > Quick Wizard Button
+  .. image:: ../images/Pref2020_OV_QuickWizard.png
+    :alt: Preferences > Quick Wizard Button
   
 Default temp targets
 -----------------------------------------------------------
@@ -109,8 +109,8 @@ Default temp targets
 * With setting of default TT you can easily change your target for activity, eating soon etc.
 * Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
 
-.. image:: ../images/Pref2020_OV_DefaultTT.png
-  :alt: Preferences > Default temp targets
+  .. image:: ../images/Pref2020_OV_DefaultTT.png
+    :alt: Preferences > Default temp targets
   
 Fill/Prime standard insulin amounts
 -----------------------------------------------------------
@@ -121,23 +121,23 @@ Range for visualization
 -----------------------------------------------------------
 * Define which part of the graph on the home screen shall be you target range and be filled with green background.
 
-.. image:: ../images/Pref2020_OV_Range2.png
-  :alt: Preferences > Range for visualization
+  .. image:: ../images/Pref2020_OV_Range2.png
+    :alt: Preferences > Range for visualization
 
 Shorten tab titles
 -----------------------------------------------------------
 * See more tab titles on screen. 
 * For example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
 
-.. image:: ../images/Pref2020_OV_Tabs.png
-  :alt: Preferences > Tabs
+  .. image:: ../images/Pref2020_OV_Tabs.png
+    :alt: Preferences > Tabs
 
 Show notes field in treatments dialogs
 -----------------------------------------------------------
 * Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...) 
 
-.. image:: ../images/Pref2020_OV_Notes.png
-  :alt: Preferences > Notes in treatment dialogs
+  .. image:: ../images/Pref2020_OV_Notes.png
+    :alt: Preferences > Notes in treatment dialogs
   
 Status lights
 -----------------------------------------------------------
@@ -154,8 +154,8 @@ Status lights
 * If threshold critical is exceeded, values will be shown in red.
 * In versions prior to AAPS 2.7 settings for status lights had to be made in Nightscout settings.
 
-.. image:: ../images/Pref2020_OV_StatusLights2.png
-  :alt: Preferences > Status Lights
+  .. image:: ../images/Pref2020_OV_StatusLights2.png
+    :alt: Preferences > Status Lights
 
 Advanced Settings
 -----------------------------------------------------------
@@ -267,8 +267,8 @@ OpenAPS SMB settings
 * If sensitivity raises / lowers target is enabled `Autosens <../Usage/Open-APS-features.html#autosens>`_ will modify your glucose target according to your blood glucose deviations.
 * If target is modified it will be displayed with a green background on your home screen.
 
-.. image:: ../images/Pref2020_SMB_TargetModified.png
-  :alt: Target modified by autosens
+  .. image:: ../images/Pref2020_SMB_TargetModified.png
+    :alt: Target modified by autosens
   
 Carb required notification
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -279,8 +279,8 @@ Carb required notification
 * A threshold can  be defined - minimum amount of carbs needed to trigger notification. 
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
-.. image:: ../images/Pref2020_CarbsRequired.png
-  :alt: Display carbs required on home screen
+  .. image:: ../images/Pref2020_CarbsRequired.png
+    :alt: Display carbs required on home screen
   
 Advanced settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -290,7 +290,7 @@ Advanced settings
 Absorption settings
 ===========================================================
 min_5m_carbimpact
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------------------------
 * The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed. 
 * To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. 
 * Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc. 
@@ -298,10 +298,10 @@ min_5m_carbimpact
 * Standard value for AMA is 3.
 * The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
 
-.. image:: ../images/Pref2020_min_5m_carbimpact.png
-  :alt: COB graph
+  .. image:: ../images/Pref2020_min_5m_carbimpact.png
+    :alt: COB graph
   
 Absorption Settings
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------------------------
 * If you have selected to use AMA Autosens then you will be able to enter your maximum meal absorption time and how frequently you want autosense to refresh.  
 * If you often eat high fat or protein meals you will need to increase your meal absorption time.
