@@ -11,7 +11,7 @@ Dexcom G6
 
 Αυτό που είναι σαφές είναι ότι η χρήση του G6 είναι ίσως λίγο πιο πολύπλοκη από ό, τι φαίνεται. Για να το χρησιμοποιήσετε με ασφάλεια, υπάρχουν μερικά σημεία που πρέπει να γνωρίζετε: 
 
-* Εάν χρησιμοποιείτε τα εγχώρια δεδομένα με τον κώδικα βαθμονόμησης σε xDrip ή Spike, το πιο ασφαλές που μπορείτε να κάνετε είναι να μην επιτρέψετε την προληπτική επανεκκίνηση του αισθητήρα.
+* If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
 * Αν πρέπει να χρησιμοποιήσετε την προληπτική επανεκκίνηση, βεβαιωθείτε ότι εισάγετε μια ώρα της ημέρας όπου μπορείτε να παρατηρήσετε την αλλαγή και να βαθμονομήσετε εάν είναι απαραίτητο. 
 * Αν κάνετε επανεκκίνηση των αισθητήρων, καταρχήν κάντε το χωρίς την εργοστασιακή βαθμονόμηση για ασφαλέστερα αποτελέσματα στις ημέρες 11 και 12, και βεβαιωθείτε ότι είστε έτοιμοι να βαθμονομήσετε και να παρακολουθήσετε την παραλλαγή.
 * Η προ-εμβάπτιση του G6 με εργοστασιακή βαθμονόμηση είναι πιθανό να προκαλέσει διακύμανση στα αποτελέσματα. Αν κάνετε προ-εμβάπτιση, τότε για να έχετε τα καλύτερα αποτελέσματα, πιθανόν να χρειαστεί να βαθμονομήσετε τον αισθητήρα.
@@ -43,13 +43,14 @@ If using G6 with xDrip+
 * Εγκαταστήστε το κατεβασμένο apk
 * Ξεκινήστε τον αισθητήρα
 * Επιλέξτε το DexcomG App (patched) στο μενού διαμόρφωσης (ρύθμιση στο AndroidAPS).
-* Αν θέλετε να χρησιμοποιήσετε συναγερμούς xDrip μέσω τοπικής εκπομπής: στο μενού hamburger xDrip> ρυθμίσεις> πηγή δεδομένων υλικού> 640G / EverSense.
+* If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
+* There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.
 
 Αντιμετώπιση προβλημάτων G6
 ==================================================
 Dexcom G6 αντιμετώπιση συγκεκριμένων προβλημάτων
 --------------------------------------------------
-* Πομποί με σειριακό αριθμό. ξεκινώντας με 80 ή 81 χρειάζεται τουλάχιστον την τελευταία σταθερή xDrip έκδοση από τον Μάιο του 2019 ή μια νεότερη nightly build.
+* Πομποί με σειριακό αριθμό. starting with 80 or 81 need at least last stable xDrip+ version from May 2019 or a newer nightly build.
 * Πομποί με σειριακό αριθμό. ξεκινώντας με 8G πρέπει τουλάχιστον να έχετε nightly build από 25 Ιουλίου, του 2019 ή νεότερη έκδοση.
 * xDrip+ and Dexcom app cannot be connected with the transmitter at the same time.
 * Περιμένετε τουλάχιστον 15 λεπτά. μεταξύ παύση και η έναρξη ενός αισθητήρα.
@@ -61,7 +62,7 @@ Dexcom G6 αντιμετώπιση συγκεκριμένων προβλημάτ
   * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
 
 .. εικόνα:: ../images/xDrip_Dexcom_PhoneServiceState.png
-  :alt: xDrip PhoneServiceState
+  :alt: xDrip+ PhoneServiceState
 
 Γενική αντιμετώπιση προβλημάτων
 --------------------------------------------------
