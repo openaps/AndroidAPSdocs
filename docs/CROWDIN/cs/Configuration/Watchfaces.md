@@ -182,13 +182,13 @@ AndroidAPS nabízí následující komplikace:
 
 ![Seznam_AAPS_Komplikací](../images/Watchface_Complications_List.png)
 
-* **BR, CoB & IoB** (`KRÁTKÝ TEXT`, otevře *Nabídku*): zobrazuje *hodnotu bazálu* na prvním řádku a *aktuální množství sacharidů* a *aktivní množství inzulínu* na druhém řádku.
-* **Glykémie** (`KRÁTKÝ TEXT`, otevře *Nabídku*): znázorňuje *glykémii* , *trendovou* šipku na prvním řádku a *čas odečtu* a *hodnotu změny glykémie* na druhém řádku.
-* **CoB & IoB** (`KRÁTKÝ TEXT`, otevře *Nabídku*): zobrazuje *aktivní sacharidy* na prvním řádku *aktivní inzulín* na druhém řádku.
-* **Detailní CoB** (`KRÁTKÝ TEXT`, otevře *Průvodce*): zobrazuje aktuálně aktivní sacharidy *aktivní sacharidy* na prvním řádku a plánované (budoucí, eCarbs) sacharidy na druhém řádku.
-* **Ikona CoB** (`KRÁTKÝ TEXT`, otevře *Průvodce*): Zobrazuje *aktivní sacharidy* pomocí statické ikony.
-* **Úplný stav** (`DLOUHÝ TEXT`, otevře *Nabídku*): Zobrazí většinu údajů dohromady: *glykémii* a *trendovou* šipku, *hodnotu změny glykémie* a *čas odečtu* na prvním řádku. Na druhém řádku * aktivní sacharidy *, * aktivní inzulín * a * hodnotu bazálu *.
-* **Úplný stav (převrácené)** (`DLOUHÝ TEXT`, otevře *Nabídku*): Stejné hodnoty jako standardní *Úplný stav*, ale řádky jsou převrácené. Může být použit pro ciferníky, které ignorují jeden ze dvou řádků v `DLOUHÝ TEXT`
+* **BR, CoB & IoB** (`KRÁTKÝ TEXT`, otevře *Menu*): zobrazuje *hodnotu bazálu* na prvním řádku a *aktuální množství sacharidů* a *aktivní množství inzulínu* na druhém řádku.
+* **Glykémie** (`KRÁTKÝ TEXT`, otevře *Menu*): znázorňuje *glykémii* , *trendovou* šipku na prvním řádku a *čas odečtu* a *hodnotu změny glykémie* na druhém řádku.
+* **CoB & IoB** (`KRÁTKÝ TEXT`, otevře *Menu*): zobrazuje *aktivní sacharidy* na prvním řádku *aktivní inzulín* na druhém řádku.
+* **Detailní CoB** (`KRÁTKÝ TEXT`, otevře *Wizard*): zobrazuje aktuálně aktivní sacharidy *aktivní sacharidy* na prvním řádku a plánované (budoucí, eCarbs) sacharidy na druhém řádku.
+* **Ikona CoB** (`KRÁTKÝ TEXT`, otevře *Wizard*): Zobrazuje *aktivní sacharidy* pomocí statické ikony.
+* **Úplný stav** (`DLOUHÝ TEXT`, otevře *Menu*): Zobrazí většinu údajů dohromady: *glykémii* a *trendovou* šipku, *hodnotu změny glykémie* a *čas odečtu* na prvním řádku. Na druhém řádku * aktivní sacharidy *, * aktivní inzulín * a * hodnotu bazálu *.
+* **Úplný stav (převrácené)** (`DLOUHÝ TEXT`, otevře *Menu*): Stejné hodnoty jako standardní *Úplný stav*, ale řádky jsou převrácené. Může být použit pro ciferníky, které ignorují jeden ze dvou řádků v `DLOUHÝ TEXT`
 * **Detailní IoB** (`KRÁTKÝ TEXT`, otevře *Bolus*): Zobrazuje celkové množství *aktivního inzulínu* na prvním řádku a celkové *IoB* z *bolusu* a *bazálu* na druhém řádku.
 * **Ikona IoB** (`KRÁTKÝ TEXT`, otevře *Bolus*): Zobrazuje *aktivní inzulín* jako statickou ikonu.
 * **Baterie Uploaderu/Telefonu** (`HODNOTA ROZSAHU`, otevře *Status*): Znázorňuje nabití baterie v procentech na AAPS telefonu (uploader), jak je uvedeno v AAPS. Zobrazí se jako jako procentuální ukazatel s ikonou baterie znázorňující hodnotu. Toto není zobrazováno v reálném čase, ale když se změní jiné důležité hodnoty AAPS (obvykle: každých ~5 minut s novým odečtem </em>glykémie</0> ).
@@ -199,35 +199,35 @@ Navíc existují tři druhy komplikací </code>VELKÝ OBRÁZEK</0> **Tmavá tape
 
 * **Akce po klepnutí na komplikaci** (výchozí `Výchozí`): Rozhodne, které dialogové okno se otevře, když uživatel poklepe na komplikaci: 
     * *Výchozí*: specifické akce pro typ kompilace *(viz seznam výše)*
-    * *Menu*: AAPS main menu
-    * *Wizard*: bolus wizard - bolus calculator
-    * *Bolus*: direct bolus value entry
-    * *eCarb*: eCarb configuration dialog
-    * *Status*: status sub-menu
-    * *None*: Disables tap action on AAPS complications
-* **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
+    * *Menu*: Hlavní nabídka AAPS
+    * *Wizard*: bolusový průvodce – bolusová kalkulačka
+    * *Bolus*: přímé zadávání bolusu
+    * *eCarb*: dialogové okno konfigurace eCarb
+    * *Status*: dílčí nabídka stavu
+    * *None*: Zakáže akci klepnutím na komplikace AAPS
+* **Unicode v komplikacích** (výchozí hodnota `On`): Pokud je`On`, komplikace bude používat Unicode znaky pro symboly jako `Δ` Delta, `⁞` vertikální oddělovač teček nebo `⎍` symbol hodnoty bazálu. Vykreslování závisí na typu písma, které může být u každého ciferníku jiné. Tato volba umožňuje symboly Unicode `Vypnout` v případě potřeby – pokud písmo používané vlastním ciferníkem tyto symboly nepodporuje – aby se zabránilo chybám v zobrazení grafiky.
 
-## Performance and battery life tips
+## Tipy pro lepší chod a delší výdrž baterie
 
-Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+Wear OS hodinky jsou zařízení s velmi omezenou kapacitou. Velikost hodinek omezuje kapacitu vestavěné baterie. Navzdory nedávnému vylepšení na straně hardwaru i softwaru hodinky Wear OS stále vyžadují denní nabíjení.
 
-If an experienced battery span is shorter than a day (from dusk to dawn), here are some tips to troubleshoot the issues.
+Pokud je výdrž baterie hodinek kratší než jeden den (od rána do večera), existuje pár tipů, jak se s tím vypořádat.
 
-Main battery-demanding areas are:
+Baterii nejvíce vybíjejí:
 
-* Active display with a backlight on (for LED) or in full intensity mode (for OLED)
-* Rendering on screen
-* Radio communication over Bluetooth
+* Aktivní displej se zapnutým podsvícením (LED), nebo max. intenzita (OLED)
+* Vykreslování na obrazovce
+* Bezdrátová komunikace přes Bluetooth
 
-Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in *display time* area:
+Protože nemůžeme ohrozit komunikaci (potřebujeme aktuální data) a chceme, aby se zobrazovaly nejnovější údaje, většinu optimalizací lze provést v oblasti * doba zobrazení *:
 
-* Stock watchfaces are usually better optimized than custom one, downloaded from the store.
-* It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
-* Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
-* Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
-* Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
-* Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
+* Originální ciferník je obvykle lépe optimalizován než vlastní, stažený z obchodu.
+* Je lepší použít ciferníky, které omezují množství přenesených dat v režimu neaktivní/ztlumený režim.
+* Uvědomte si, že při používaní dalších komplikací, jako jsou widgety počasí třetích stran nebo jiné, využíváte data z externích zdrojů.
+* Začněte s jednoduššími ciferníky. Přidejte pouze jednu komplikaci a sledujte, jaký má vliv na výdrž baterie.
+* Zkuste pro ciferník AAPS použít motiv **Tmavý** a také [**Matching divider**](#watchface-settings). Na zařízeních s OLED to omezí počet zapnutých pixelů a omezí vypalování.
+* Zkuste, co lépe funguje na vašich hodinkách: Originální ciferník AAPS nebo jiný s AAPS komplikací.
+* Sledujte několik dní, s různými profily aktivit. Většina hodinek aktivuje obrazovku při pohledu na ně, pohybu a dalších spouštěčích souvisejících s užíváním.
 * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
 * Check [list of tested phones and watches](../Getting-Started/Phones#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
 * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
