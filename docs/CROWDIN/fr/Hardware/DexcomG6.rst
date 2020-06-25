@@ -11,7 +11,7 @@ Conseils généraux pour boucler avec un G6
 
 Ce qui est clair, c’est que l’utilisation du G6 est peut-être un peu plus complexe qu’on pourrait le penser au premier abord. Pour l'utiliser en toute sécurité, il y a quelques points à prendre en compte : 
 
-* If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
+* Si vous utilisez les données natives avec le code d'étalonnage dans xDrip+ ou Spike, la chose la plus sûre à faire est de ne pas autoriser les redémarrages préventifs du capteur.
 * Si vous devez faire des redémarrages préemptifs, veillez à le faire à une heure de la journée où vous pourrez observer les changements et étalonner si nécessaire. 
 * Si vous redémarrez le capteur, faites-le sans l'étalonnage usine pour obtenir les résultats les plus sûrs les jours 11 et 12, ou assurez-vous que vous êtes prêt à le calibrer et à garder un oeil sur les variations.
 * La pré-installation du G6 avec l'étalonnage usine peut entraîner des variations dans les résultats. Si vous faites une pré-installation, alors pour obtenir les meilleurs résultats, vous devrez probablement calibrer le capteur.
@@ -43,14 +43,14 @@ Si vous utilisez le G6 avec l'application Dexcom patchée
 * Installer l'APK téléchargé
 * Démarrer le capteur
 * Sélectionner App Dexcom (patchée) dans le Générateur de configuration (paramètre dans AndroidAPS).
-* If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
-* There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.
+* Si vous voulez utiliser les alarmes xDrip via une diffusion locale, allez dans xDrip, Menu hamburger > Paramètres > Source de données matérielles > 640G / EverSense.
+* Il n'y a pas de diffusion locale de l'application Dexcom patchée directement vers xDrip+. La diffusion doit passer par AAPS, comme décrit ci-dessus.
 
 Dépannage G6
 ==================================================
 Dépannages spécifiques à Dexcom G6
 --------------------------------------------------
-* Les transmetteurs avec les numéros de série starting with 80 or 81 need at least last stable xDrip+ version from May 2019 or a newer nightly build.
+* Les transmetteurs avec les numéros de série commençant par 80 ou 81 ont besoin au minimum de la dernière version stable de xDrip datée de Mai 2019 (ou d'une mise à jour plus récente).
 * Transmetteurs avec les numéros de série commençant par 8G ont besoin de la version du 25 juillet ou plus récente.
 * xDrip+ et l'Application Dexcom ne peuvent pas être connectés à l'émetteur en même temps.
 * Attendre au moins 15 min. entre l'arrêt et le démarrage d'un capteur.
@@ -62,7 +62,7 @@ Dépannages spécifiques à Dexcom G6
   * Numéro de série du transmetteur commençant par 8G, 8H ou 8J : "Got glucose hh:mm" (par ex. "Got glucose 19:04") ou "Got now raw hh:mm" (par ex. "Got now raw 19:04")
 
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
-  :alt: xDrip+ PhoneServiceState
+  :alt: xDrip+ Etat du téléphone
 
 Dépannage général
 --------------------------------------------------
