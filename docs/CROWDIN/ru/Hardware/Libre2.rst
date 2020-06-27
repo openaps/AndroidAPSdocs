@@ -38,9 +38,9 @@ Freestyle Libre 2
 * автоматическое определение времени и часового пояса
 * задать хотя бы одно оповещение в модифицированном приложении
 
-Please note that the location service is a central setting. This is not the app location permission which has to be set also!
+Обратите внимание, что служба определения расположения является центральным параметром. Это не разрешение на доступ к геолокации в приложении, которое также должно быть активировано!
 
-.. image:: ../images/Libre2_AppPermissionsAndLocation.png
+.. изображение:: ../images/Libre2_AppPermissionsAndLocation.png
   :alt: LibrreLink-разрешение на доступ к памяти и расположению
   
   
