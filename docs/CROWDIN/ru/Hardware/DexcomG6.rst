@@ -43,14 +43,14 @@ Dexcom G6
 * Установите загруженное приложение
 * Запустите сенсор
 * В конфигуратоге (настройки AndroidAPS) выберите Dexcom G App (модифицированное).
-* If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
-* There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.
+* Если хотите использовать xDrip-оповещения через локальную трансляцию: в сэндвич-меню xDrip > настройки > источник данных глюкозы > 640G /EverSense.
+* Из модифицированного приложения Dexcom нет локальной трансляции непосредственно в xDrip +. Трансляция должна пройти через ААПС, как описано выше.
 
 Устранение неполадок с G6
 ==================================================
 Устранение неполадок, связанных с dexcom G6
 --------------------------------------------------
-* Трансмиттеры с серийным номером starting with 80 or 81 need at least last stable xDrip+ version from May 2019 or a newer nightly build.
+* Трансмиттеры с серийным номером начинающиеся с 80 или 81, требуют, по крайней мере, последнюю стабильную версию xDrip мая 2019 года или более позднюю ночную сборку.
 * Трансмиттеры с серийным номером начиная с 8G, требуют по крайней мере ночную сборку 25 июля 2019 года или новее
 * Приложения xDrip + и Dexcom не могут быть одновременно подключены к трансмиттеру.
 * Подождите не менее 15 минут. между остановкой и запуском сенсора
@@ -62,7 +62,7 @@ Dexcom G6
   * Серийный номер трансмиттера, который начинается с 8G: "Got glucose hh:mm" (напр. "Got glucose 19:04") или "Got no raw hh:mm" (напр. "Got now raw 19:04")
 
 .. image:../images/xDrip_Dexcom_PhoneServiceState.png
-  :alt: xDrip+ PhoneServiceState
+  :alt: xDrip PhoneServiceState
 
 Общее средство устранения неполадок
 --------------------------------------------------
