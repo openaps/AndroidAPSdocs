@@ -11,7 +11,7 @@ Obecné tipy pro použití smyčky s G6
 
 Použití G6 může být o něco složitější, než se na první pohled zdá. Abyste ho mohli používat bezpečně, je třeba vědět o několika skutečnostech: 
 
-* Pokud používáte nativní data s kalibračním algoritmem aplikace xDrip nebo Spike, je nejbezpečnější zakázat preemptivní restartování senzoru.
+* If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
 * Pokud musíte preemptivní restarty používat, pak se ujistěte, že senzor zavádíte v takovou denní dobu, kdy můžete sledovat změny a v případě potřeby provést kalibraci. 
 * Jestliže senzory restartujete, udělejte to bez tovární kalibrace, aby byly výsledky 11 a 12 den co nejbezpečnější, nebo buďte připraveni provést kalibrace a sledujte odchylku.
 * Nastřelení senzoru G6 předem v kombinaci s tovární kalibrací pravděpodobně povede k odchylkám ve výsledcích měření. Jestliže nastřelujete senzor s předstihem, pak jej pravděpodobně v zájmu co nejlepších výsledků bude nutné zkalibrovat.
@@ -44,13 +44,14 @@ kde si podle používaných jednotek glykémie vyberte odpovídající G6 verzi 
 * Nainstalujte stažený apk
 * Spusťte senzor
 * Na kartě Konfigurace (nastavení v AndroidAPS) vyberte DexcomG aplikace (upravená).
-* Pokud chcete použít xDrip alarmy přes místní vysílání: v xDrip hamburger menu > nastavení > hardwarový zdroj dat > 640G /EverSense.
+* If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
+* There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.
 
 Poradce při potížích s G6
 ==================================================
 Dexcom G6 konkrétní řešení problémů
 --------------------------------------------------
-* Vysílače se sériovým číslem začínajícím na 80 nebo 81 potřebují minimálně poslední stabilní xDrip verzi z května 2019 nebo novější noční sestavení.
+* Vysílače se sériovým číslem starting with 80 or 81 need at least last stable xDrip+ version from May 2019 or a newer nightly build.
 * Vysílače se sériovým číslem začínajícím na 8G potřebuje minimálně noční sestavení z 25. července 2019 nebo novější.
 * K vysílači nelze připojit aplikaci xDrip+ i Dexcom současně.
 * Vyčkejte nejméně 15 minut. mezi zastavením a spuštěním senzoru.
@@ -62,7 +63,7 @@ Dexcom G6 konkrétní řešení problémů
   * Sériové číslo vysílače začínající na 8G nebo 8H: "Got glucose hh:mm" (tj. "Got glucose 19:04") nebo "Got no raw hh:mm" (tj. "Got now raw 19:04")
 
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
-  :alt: xDrip PhoneServiceState
+  :alt: xDrip+ PhoneServiceState
 
 Obecné odstraňování problémů
 --------------------------------------------------

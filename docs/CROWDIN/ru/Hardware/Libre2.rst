@@ -21,26 +21,26 @@ Freestyle Libre 2
 .. image:: ../images/Libre2_ForegroundServiceNotification.png
   :alt: LibreLink Служба переднего плана (основной режим)
 
-Other indications could be the Linux penguin logo three dot menu -> Info or the font of the patched app. These criteria are optional depending on the app source you choose.
+Другими индикаторами может быть логотип Linux penguin с тремя точками меню-> Info или шрифт модифицированного приложения. Эти критерии являются необязательными в зависимости от того, какой источник приложения вы выбрали.
 
 .. изображение:: ../images/LibreLinkPatchedCheck.
-  :alt: LibreLink Font Check
+  :alt: Проверка шрифтов LibreLink
 
-Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and time zone and set at least one alarm in the patched app. 
+Убедитесь, что активирована NFC, включите разрешение на память и геолокацию для модифицированного приложения, включите автоматическое время и часовой пояс и задайте хотя бы одно оповещение в этом приложении. 
 
-Теперь запустите датчик Libre2 при помощи модифицированного приложения, просто сканируя сенсор. Ensure to have set all settings done.
+Теперь запустите датчик Libre2 при помощи модифицированного приложения, просто сканируя сенсор. Убедитесь, что заданы все параметры.
 
 Обязательные параметры для успешного запуска сенсора: 
 
 * NFC включен/BT включен
-* memory and location permission enabled 
-* location service enabled
-* automatic time and time zone setting
+* включено разрешение на память и геолокацию 
+* Включена служба определения местоположения
+* автоматическое определение времени и часового пояса
 * задать хотя бы одно оповещение в модифицированном приложении
 
-Please note that the location service is a central setting. This is not the app location permission which has to be set also!
+Обратите внимание, что служба определения расположения является центральным параметром. Это не разрешение на доступ к геолокации в приложении, которое также должно быть активировано!
 
-.. image:: ../images/Libre2_AppPermissionsAndLocation.png
+.. изображение:: ../images/Libre2_AppPermissionsAndLocation.png
   :alt: LibrreLink-разрешение на доступ к памяти и расположению
   
   

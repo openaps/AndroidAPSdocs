@@ -11,7 +11,7 @@ Algemene tips voor loopen met G6
 
 Het gebruik van de is G6 misschien wat complexer dan het op het eerste gezicht lijkt. Om de G6 veilig te gebruiken, moet je rekening houden met het volgende: 
 
-* Wanneer je het "Native" algoritme gebruikt in combinatie met de kalibratiecode in xDrip of Spike, is het veiligste om de optie "Pre-emptive restart" (voortijdige herstart) niet te gebruiken.
+* If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
 Als je er wel voor kiest om Pre-emptive restarts te gebruiken, zorg dan dat je de sensor start op een moment van de dag dat je tijd kunt vrijmaken om te zien wat er gebeurt tijdens de herstart. Zodat je kunt kalibreren als je ziet dat dat nodig is (je ziet een 'sprong' in je glucosegrafiek). 
 * Als je jouw sensoren herstart, dan zul je dat moeten doen A) zonder gebruik te maken van de kalibratiecode voor de veiligste resultaten op dagen 11 en 12, of B) ervoor te zorgen dat je jouw sensorgrafiek in de gaten kunt houden en bereid bent om te kalibreren.
 * Het zogenaamde "Pre-soaking" (de sensor alvast inbrengen, waarna je nog wacht met starten) van de G6 met kalibratiecode zal hoogstwaarschijnlijk leiden tot onnauwkeurigheden in je glucosewaardes na starten. Omdat het algoritme van de G6 rekent op weefselbeschadiging na inbrengen, terwijl je met Pre-soaken niet dezelfde mate van weefselbeschadiging zult hebben op het moment dat je de sensor start. Wanneer je Pre-soakt is het waarschijnlijk het beste om de sensor te kalibreren.
@@ -43,13 +43,14 @@ G6 met aangepaste Dexcom app
 * Installeer de gedownloade apk
 * Start sensor
 * Selecteer Dexcom App (aangepast) in ConfigBuilder (instelling in AndroidAPS).
-* Als je de Dexcom app wilt gebruiken om aan de zender te koppelen, maar ook gebruik wilt maken van xDrip alarmen zet dan óók de xDrip+ app op je telefoon en kies in xDrip hamburger menu > instellingen > hardware gegevensbron > 640G /EverSense. De Dexcom app stuurt de waardes door dmv 'local broadcast' (lokaal uitzenden) naar xDrip+, je hebt hierbij geen internet nodig.
+* If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
+* There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.
 
 Problemen oplossen
 ==================================================
 Dexcom G6 specifieke probleemoplossing
 --------------------------------------------------
-* Zenders met serienummer beginnend met 80 of 81 hebben ten minste de laatste stabiele versie van xDrip van mei 2019 of een nieuwere 'Nightly Build' versie nodig.
+* Zenders met serienummer starting with 80 or 81 need at least last stable xDrip+ version from May 2019 or a newer nightly build.
 * Zenders met serienummer beginnend met 8G, 8H of 8J hebben ten minste een 'Nightly Build' versie vanaf 25 juli 2019 of nieuwer nodig.
 * xDrip+ en Dexcom app kunnen niet tegelijkertijd met de zender worden verbonden.
 * Wacht minstens 15 min. tussen het stoppen en starten van een sensor.
@@ -61,7 +62,7 @@ Dexcom G6 specifieke probleemoplossing
   * Transmitter serie vanaf 8G of 8H: "Got glucose hh:mm" (d.w.z. "Got glucose 19:04") of "Got no raw hh:mm" (d.w.z. "Got now raw 19:04")
 
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
-  :alt: xDrip PhoneServiceState
+  :alt: xDrip+ PhoneServiceState
 
 Algemene probleemoplossing
 --------------------------------------------------

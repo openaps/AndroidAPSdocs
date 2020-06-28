@@ -43,7 +43,8 @@ G6 mit der gepatchten Dexcom App
 * Installiere die heruntergeladene apk
 * Starte den Sensor
 * Wähle gepatchte Dexcom App im Konfigurations-Generator (Konfiguration in AndroidAPS).
-* xDrip Alarme kannst Du über den lokalen Broadcast nutzen: In xDrip > Hamburger Menü > Einstellungen > Datenquelle > 640G / EverSense.
+* xDrip+ Alarme kannst Du über den lokalen Broadcast nutzen: In xDrip > Hamburger Menü > Einstellungen > Datenquelle > 640G / EverSense.
+* Der lokale Broadcast funktioniert nicht direkt von der gepatchten Dexcom App zu xDrip+. Der Broadcast muss über AAPS laufen.
 
 Problembehandlung G6
 ==================================================
@@ -61,7 +62,7 @@ Dexcom G6-spezifische Problembehandlung
   * Transmitter Seriennummer beginnt mit 8G oder 8H: "Got glucose hh:mm" (z.B. "Got glucose 19:04") oder "Got no raw hh:mm" (z.B.  "Got now raw 19:04")
 
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
-  :alt: xDrip PhoneServiceState
+  :alt: xDrip+ PhoneServiceState
 
 Allgemeine Problembehandlung
 --------------------------------------------------

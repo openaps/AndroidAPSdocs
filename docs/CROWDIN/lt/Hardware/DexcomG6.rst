@@ -11,7 +11,7 @@ Bendrieji patarimai naudojant uždarą ciklą su G6
 
 Naudoti G6 yra šiek tiek sudėtingiau, nei atrodė anksčiau. Norint jį naudoti saugiai, yra keletas niuansų, kuriuos reikia žinoti: 
 
-* Jei xDrip ar Spike naudojate natyvinius duomenis su kalibravimo kodu, saugumo sumetimais neturėtumėte leisti pakartotinio jutiklio paleidimo iš naujo.
+* If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
 * Jei vis dėlto naudojatės pakartotiniu paleidimu, tada jis turėtų būti daromas tokiu metu, kai galima stebėti pokyčius ir prireikus kalibruoti. 
 * Jei iš naujo paleisite sensorių, atlikite tai be gamyklinio kalibravimo, kad rezultatai būtų saugūs 11-ą ir 12-ą dieną, arba būkite pasirengę kalibruoti ir stebėti pokyčius.
 „Išankstinis įmirkymas“ (sensoriaus įvedimas daug anksčiau nei jo pradžia programoje) G6 su gamykliniu kalibravimu gali sukelti duomenų nukrypimus. Jei sensorių įvedate anksčiau, nei jį startuojate, gali reikėti jį kalibruoti, kad gautumėte geriausius rezultatus.
@@ -43,13 +43,14 @@ Kai naudojate G6 su modifikuota Dexcom programa
 * Įdiekite atsisiųstą apk
 * Startuokite sensorių
 * Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite Dexcom App (modifikuota).
-* Jei norite naudoti xDrip aliarmus per vietinį transliavimą: xDrip trijų linijų meniu > Nustatymai> Aparatinės įrangos duomenų šaltinis> 640G / EverSense.
+* If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
+* There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.
 
 G6 trikčių šalinimas
 ==================================================
 Dexcom G6 specifinių trikčių šalinimas
 --------------------------------------------------
-* Siųstuvams su serijos nr. pradedant nuo 80 ar 81 reikia bent paskutinės stabilios 2019 m. gegužės mėn. xDrip versijos arba naujesnės.
+* Siųstuvams su serijos nr. starting with 80 or 81 need at least last stable xDrip+ version from May 2019 or a newer nightly build.
 * Siųstuvams su serijos nr. pradedant 8G, reikia bent 2019 m. liepos 25 d. versijos arba naujesnės.
 * xDrip+ ir Dexcom programa negali būti prijungtos prie siųstuvo tuo pačiu metu.
 * Palaukite bent 15 min. prieš sustabdant ir vėl paleidžiant jutiklį.
@@ -61,7 +62,7 @@ Dexcom G6 specifinių trikčių šalinimas
   Siųstuvo serijos numeris prasideda 8G arba 8H: „Got glucose hh:mm“ (pvz., "Got glucose 19:04") arba "Got no raw hh:mm" (pvz., "Got now raw 19:04")
 
 .. ../images/xDrip_Dexcom_PhoneServiceState.png
-  :alt: xDrip PhoneServiceState
+  :alt: xDrip+ PhoneServiceState
 
 Bendrųjų trikčių šalinimas
 --------------------------------------------------
