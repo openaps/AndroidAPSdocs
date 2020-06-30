@@ -33,6 +33,9 @@ Buttons:
 * red X: delete
 * blue arrow: duplicate
 
+If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile beeing used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+
+
 #### Clone profile switch
 You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
 1. Go to treatments tab.
@@ -48,6 +51,9 @@ If you want to switch from Nightscout profile to local profile just do a profile
 Local profiles can also be uploaded to Nightscout. The settings can be found in NS Client preferences.
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
+
+Have in mind, only the profile switches made over the profile tab are uploaded to nightscout. If you do a profile switch by using the profile button in the mainscreen, it will not be uploaded.  
+
 
 Advantage:
 * no internet connection necessary to change profile settings
