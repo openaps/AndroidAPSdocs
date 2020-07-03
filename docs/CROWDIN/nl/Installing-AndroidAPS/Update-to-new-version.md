@@ -6,7 +6,7 @@
 
 ## Belangrijk:
 
-* Bouw zo snel mogelijk een nieuwe app zodra er een nieuwe versie is uitgebracht. Je zult een [melding op het Overzichtscherm van AndroidAPS](../Installing-AndroidAPS/Releasenotes.html#release-notes) zien over de nieuwe versie.
+* Bouw zo snel mogelijk een nieuwe app zodra er een nieuwe versie is uitgebracht. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes#release-notes) about the new version.
 * Vanaf versie 2.3 moet je git gebruiken om te updaten. Bijwerken via zip-bestand werkt niet meer.
 * Gebruik [](https://developer.android.com/studio/)Android Studio Versie 3.6.1 of nieuwer om de apk te bouwen.
 * [Windows 10 32-bits systemen](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) worden niet ondersteund door Android Studio 3.6.1.
