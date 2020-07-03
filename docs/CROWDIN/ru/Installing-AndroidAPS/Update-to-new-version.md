@@ -6,7 +6,7 @@
 
 ## Важные Примечания
 
-* Пожалуйста, обновите приложение сразу же после выхода новой версии. Вы получите информацию [ на главном экране AndroidAPS ](../Installing-AndroidAPS/Releasenotes.html#release-notes) о новой версии.
+* Пожалуйста, обновите приложение сразу же после выхода новой версии. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes#release-notes) about the new version.
 * Начиная с версии 2.3 для обновления требуется использовать git. Обновление с zip-файла больше не работает.
 * Используйте [](https://developer.android.com/studio/) Android Studio версии 3.6.1 или новее для построения apk.
 * [Windows 10 для 32-разрядных систем](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) не поддерживается в Android Studio 3.6.1.
