@@ -71,7 +71,7 @@ Un buen momento para hacer este interruptor sería con un IOB bajo. Por ejemplo,
 
 * El cambio a DST se realiza automáticamente. No se requiere acción.
 
-## Other pumps - new as of AAPS version 2.2
+## Otras bombas de la nueva como de la AAPS versión 2.2
 
 **¡Tienes que actualizar AAPS para usar esta función!**
 
