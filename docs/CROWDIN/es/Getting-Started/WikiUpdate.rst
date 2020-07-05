@@ -1,4 +1,4 @@
-Docs updates & changes
+Actualizaciones y cambios de Documentos
 **************************************************
 June 2020
 ==================================================
@@ -31,17 +31,17 @@ February 2020
 * `Sample Setup <../Getting-Started/Sample-Setup.html>`_ - update Dexcom G6
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - major new features
 * `Wear complications <../Configuration/Watchfaces.html>`_
-January 2020
+Enero de 2020
 ==================================================
-* `Manual carb correction <../Getting-Started/Screenshots.html#carb-correction>`_ for faulty carb entries
-* `Image size <../make-a-PR.html#image-size>`_ when editing docs
+* `Corrección manual de carbohidratos <../Getting-Started/Screenshots.html#carb-corrección>` _ para las entradas de carbohidratos erróneas
+* `Tamaño de imagen <../make-a-PR.html#image-size>`_ cuando se editan dcumentos
 Diciembre 2019
 ==================================================
-* `Android auto <../Usage/Android-auto.html>`_ - setup with screenshots
+* `Android automático <../Usage/Android-auto.html>`_ - ajustes con capturas de pantalla
 * `Accu-Chek Insight & Autoajustar <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_ - solución para el uso
 * `Glimp <../Configuration/Config-Builder.html#bg-source>`_ - versión 4.15.57 y soporte más reciente
-* `Watchfaces <../Configuration/Watchfaces.html>`_ - major update, way more details
-* `Watchface complications <../Configuration/Watchfaces.html#complications>`_ - use your favorite watchface with AAPS data
+* `Pantallas de reloj <../Configuration/Watchfaces.html>`_ - actualización importante, con más detalles
+* `Complicaciones de reloj <../Configuration/Watchfaces.html#complications>`_ - utiliza tu pantalla de reloj favorita con datos AAPS
 Noviembre 2019
 ==================================================
 * `Automation - deactivate when disabling loop <../Usage/Automation.html#important-note>`_
@@ -57,7 +57,7 @@ Noviembre 2019
 * `Resolución de problemas de Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>` _
 * `Resolución de problemas - colección de enlaces <../Usage/troubleshooting.html>`_
 * 'Actualización - de paseo a través de la experiencia de los usuarios <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
-* Docs - update `edit <../make-a-PR.md#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
+* Actualización - documentos `editar <../make-a-PR.md#code-syntax>`_ y `traducción <../translations.html#translate-wiki-pages>`_.
 
 Octubre 2019
 ==================================================
