@@ -32,7 +32,7 @@ Hay límites de seguridad basados en la edad que selecciona aquí. Si sobrepasa 
 
 * Opción para habilitar [superbolo](../Getting-Started/Screenshots#section-a) en el asistente de bolos.
 
-### Status lights
+### Luces de estado
 
 * Las luces de estado proporcionan un aviso visual para el bajo nivel de reservorio y batería, así como para el cambio de cánula por tiempo vencido (cambio de sitio). La versión ampliada muestra el tiempo transcurrido / el porcentaje de la batería.
     
