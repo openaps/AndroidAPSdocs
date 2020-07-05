@@ -170,17 +170,17 @@ You don't normally need to worry about these, they show the results of the OpenA
 
 ![Perfil](../images/Screenshot_profile.png)
 
-AndroidAPS can run using a number of different profile configurations. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nightscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a [Profile Switch](../Usage/Profiles.md) in AndroidAPS to activate the changes. Data such as the basal profile would then be automatically copied over to your pump.
+AndroidAPS can run using a number of different profile configurations. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nightscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a [Profile Switch](../Usage/Profiles.md) in AndroidAPS to activate the changes. Los datos, como el perfil basal, se copiarían entonces automáticamente en la bomba.
 
-**DIA:** stands for Duration of Insulin Action and it is discussed above in the section on insulin profiles.
+**DIA:** representa la Duración de la acción de insulina y se describe más arriba en la sección sobre perfiles de insulina.
 
-**IC:** is Insulin to Carb ratio. This profile has a number of different values set for different times of day.
+**IC:** es la proporción de Insulina a Carbohidratos. Este perfil tiene un número de valores diferentes establecidos para diferentes horas del día.
 
-**ISF:** is Insulin Sensitivity Factor - the amount by which one unit of insulin will reduce your blood glucose assuming that nothing else changes.
+**ISF:** es el factor de sensibilidad de la insulina - la cantidad de glucosa que una unidad de insulina reducirá, asumiendo que nada más cambia.
 
-**Basal:** is the basal profile programmed into your pump.
+**Basal:** es el perfil basal programado en la bomba.
 
-**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for different times of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
+**Objetivo:** es el nivel de glucosa en sangre objetivo que desea para todo el tiempo. You can set different levels for different times of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
 
 ## Tratamiento, xDrip, NSClient
 
