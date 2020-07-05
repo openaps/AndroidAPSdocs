@@ -1,6 +1,6 @@
 # Realización de su primera PR (petición de modificación)
 
-**Esta descripción es sólo para editar la documentación en inglés. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org).**
+**Esta descripción es sólo para editar la documentación en inglés. All new information must be added in English first. Si desea traducir a otros idiomas (gracias), por favor use [crowdin](https://wikitranslations.androidaps.org).**
 
 Para obtener sugerencias sobre cómo formatear texto (titulares, audaces ...) y establecer enlaces, por favor vea la sección ["sintaxis de código"](./make-a-PR#code-syntax) de esta página.
 
@@ -59,18 +59,18 @@ PD: su fork y rama va a estar asentados en su propia cuenta de GitHub. Después 
 
 ## Sintaxis del código
 
-At the moment there are two languages used for docs pages:
+En este momento se utilizan dos idiomas para las páginas de los documentos:
 
-* Markdown (.md) - the markup language originally used for docs pages
+* Markdown (.md) - el lenguaje de marcado utilizado originalmente para las páginas de wiki
 * texto reStructuredText (.rst) - el nuevo lenguaje de códigos
 
-We will change all docs pages from Markdown to reStructuredText bit by bit. Mientras tanto, es importante que utilice la sintaxis correcta al formatear texto o enlazar. Si no está seguro de tener un vistazo a los códigos de formato/enlace en las páginas existentes.
+Cambiaremos todas las páginas de documentos de Markdown a reStructuredText bit a bit. Mientras tanto, es importante que utilice la sintaxis correcta al formatear texto o enlazar. Si no está seguro de tener un vistazo a los códigos de formato/enlace en las páginas existentes.
 
-### Image size
+### Tamaño de la imagen
 
-If using images please use reasonable sizes. Screenshot images should be **250 pixels wide**.
+Si usa imágenes por favor use tamaños razonables. Las imágenes de captura de pantalla deben ser **de 250 píxeles de ancho**.
 
-### .md files
+### Archivos .md
 
 #### Formato de texto
 
@@ -91,7 +91,7 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 * enlace interno a archivo .rst: `[alt text](.../folder/file.rst)`
 * enlace interno a tíyulo: `[alt text](.../folder/file#headline)`
 
-### .rst files
+### Archivos .rst
 
 #### Formato de texto
 
@@ -126,9 +126,9 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 * enlace interno al archivo .rst: `` `alt text <../folder/file.html>_` ``
 * enlace interno a título: `` `alt text <../folder/file.html#headline>_` ``
 
-### Internal links
+### Enlaces internos
 
-If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages (Czech, German...) as well.
+Si desea establecer un enlace interno dentro de la documentación de AndroidAPS, utilice sólo **enlaces relativos**. Only this will make the link work in the other languages (Czech, German...) as well.
 
 #### En archivos que terminan con **.md**:
 
@@ -153,14 +153,14 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
 
 * As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png". 
-* Please use reasonable sizes. Screenshot images should be **250 pixels wide**.
-* You can upload images in batches easily by:
+* Por favor use tamaños razonables. Las imágenes de captura de pantalla deben ser **de 250 píxeles de ancho**.
+* Puede subir imágenes en lotes fácilmente mediante:
   
   1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your github username)).
   
-  2. Click in the upper right corner where it says "Upload files"
+  2. Haga clic en la esquina superior derecha donde dice "Cargar archivos"
   
-  3. Drag and drop your images into the screen
+  3. Arrastre y suelte las imágenes en la pantalla
   
   4. Commit these to your branch
   
