@@ -308,9 +308,9 @@ Si desea utilizar sólo una red WiFi específica, puede especificar su **SSID de
 * Rellenar BGs perdidos desde NS
 * Create announcement from errors Create Nightscout announcement for error dialogs and local alerts (also viewable in careportal in treatments section)
 * Permitir emisión de mensajes a otras aplicaciones como xDrip+
-* NS upload only (sync disabled)
-* No upload to NS
-* Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
+* Sólo carga de NS (sincronización inhabilitada)
+* Datos no subidos a NS
+* Utilice siempre los valores absolutos basales-> Debe activarse si desea utilizar [Autoajuste ](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) correctamente.
 
 ![Ajustes avanzados de Nightscout](../images/ConfBuild_NSClient_Advanced.png)
 
