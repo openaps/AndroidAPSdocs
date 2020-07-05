@@ -26,32 +26,32 @@ Other indications could be the Linux penguin logo three dot menu -> Info or the 
 .. image:: ../images/LibreLinkPatchedCheck.png
   :alt: LibreLink Font Check
 
-Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and time zone and set at least one alarm in the patched app. 
+Asegúrese de que NFC esté activado, habilite el permiso de memoria y ubicación para la aplicación parcheada, habilite el tiempo y el huso horario automáticos y establezca al menos una alarma en la aplicación parcheada. 
 
-Ahora inicie el sensor de Libre2 con la aplicación patchada, simplemente escaneando el sensor. Ensure to have set all settings done.
+Ahora inicie el sensor de Libre2 con la aplicación patchada, simplemente escaneando el sensor. Asegúrese de haber configurado todos los ajustes.
 
 Ajustes obligatorios para el inicio del sensor con éxito: 
 
 * NFC habilitado / BT habilitado
-* memory and location permission enabled 
+* permiso de memoria y ubicación habilitado 
 * servicio de ubicación habilitado
 * configuración automática de hora y zona horaria
 * establecer al menos una alarma en la aplicación parchada
 
-Please note that the location service is a central setting. This is not the app location permission which has to be set also!
+Please note that the location service is a central setting. Este no es el permiso de ubicación de la aplicación que tiene que estar habilitado también!
 
 .. image:: ../images/Libre2_AppPermissionsAndLocation.png
   :alt: LibreLink permisos de memoria y ubicación
   
   
 .. image:: ../images/Libre2_DateTimeAlarms.png
-  :alt: automatic time and time zone + alarm settings  
+  :alt: ajustes automáticos de hora y zona horaria + alarma  
 
-The sensor remembers the device it was started from. Sólo este dispositivo puede recibir alarmas en el futuro.
+El sensor recuerda el dispositivo con el que se inició. Sólo este dispositivo puede recibir alarmas en el futuro.
 
-La primera configuración de la conexión para el sensor es fundamental. La aplicación LibreLink intenta establecer una conexión inalámbrica al sensor cada 30 segundos. Si faltan uno o más valores obligatorios, hay que establecerlos. No tienes límite de tiempo para hacer eso. El sensor está constantemente intentando configurar la conexión. Incluso después de algunas horas. Be patient and try different settings before even think of changing the sensor.
+La primera configuración de la conexión para el sensor es fundamental. La aplicación LibreLink intenta establecer una conexión inalámbrica al sensor cada 30 segundos. Si faltan uno o más valores obligatorios, hay que establecerlos. No tienes límite de tiempo para hacer eso. El sensor está constantemente intentando configurar la conexión. Incluso después de algunas horas. Sea paciente y trate de hacer diferentes ajustes antes incluso de pensar en cambiar el sensor.
 
-As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLink's start screen there is no connection or some other setting blocks LibreLink to signal alarms. Please check if the sound is enabled and all sorts of blocking app notifications are disabled. When the exclamation mark is gone, the connection should be established and blood sugar values are sent to the smartphone. Esto debería ocurrir después de un máximo de 5 minutos.
+As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLink's start screen there is no connection or some other setting blocks LibreLink to signal alarms. Compruebe si el sonido está habilitado y todas las clases de notificaciones de la aplicación de bloqueo están inhabilitadas. When the exclamation mark is gone, the connection should be established and blood sugar values are sent to the smartphone. Esto debería ocurrir después de un máximo de 5 minutos.
 
 .. image:: ../images/Libre2_ExclamationMark.png
   :alt: LibreLink no hay conexión
@@ -65,20 +65,20 @@ Si la marca de exclamación permanece o se obtiene un mensaje de error, esto pue
 -el sonido está bloqueado
 -Las notificaciones de la aplicación están bloqueadas
 - idle screen notifications are blocked 
-- you have a faulty Libre 2 sensor from a production LOT number with a 'K' followed by 8 digits. Esto se encuentra impreso en el paquete amarillo. These sensors have to be replaced as they don't function on bluetooth.
+- you have a faulty Libre 2 sensor from a production LOT number with a 'K' followed by 8 digits. Esto se encuentra impreso en el paquete amarillo. Estos sensores tienen que ser reemplazados ya que no funcionan con bluetooth.
 
 Reiniciar el teléfono puede ayudar, es posible que tenga que hacerlo varias veces. Tan pronto como se establezca la conexión, desaparece la marca de exclamación roja y se toma el paso más importante. It may happen that depending on system settings the exclamation mark remains but you still get readings. En ambos casos está bien. El sensor y el teléfono están ahora conectados, cada minuto se transmite un valor de azúcar en la sangre.
 
 .. imagen:: ../images/Libre2_Connected.png
   :alt: Conexión LibreLink establecida
   
-In rare case it could help to empty the bluetooth cache and/or reset all network connections via the system menu. This removes all connected bluetooth devices which may help to setup a proper bluetooth connection. That procedure is save as the started sensor is remembered by the patched LibreLink app. Nothing additional has to be done here. Simply wait for the patched app to connect to the sensor.
+In rare case it could help to empty the bluetooth cache and/or reset all network connections via the system menu. This removes all connected bluetooth devices which may help to setup a proper bluetooth connection. That procedure is save as the started sensor is remembered by the patched LibreLink app. Nothing additional has to be done here. Simplemente espere a que la aplicación parcheada se conecte al sensor.
 
-After a successful connection the smartphone settings can be changed if necessary. This is not recommended but you may want to save power. El servicio de ubicación se puede desactivar, el volumen puede establecerse en cero o las alarmas se pueden desactivar de nuevo. The blood sugar levels are transferred anyway.
+Después de una conexión exitosa la configuración del smartphone se puede cambiar si es necesario. Esto no es recomendable, pero es posible que desee ahorrar energía. El servicio de ubicación se puede desactivar, el volumen puede establecerse en cero o las alarmas se pueden desactivar de nuevo. Los niveles de azúcar de sangre se transfieren de todos modos.
 
 Al iniciar el siguiente sensor, no obstante, todos los valores deben volver a establecerse!
 
-Remark: The patched app needs the mandatory settings set in that hour after warmup to enable a connection. For the 14 days operation time they are not needed. In most cases when you have problems with starting a sensor the location service was switched off. For Android it is needed for proper bluetooth operation(!) to connect. Please refer to Google's Android documentation.
+Remark: The patched app needs the mandatory settings set in that hour after warmup to enable a connection. Durante los 14 días de funcionamiento no son necesarios. In most cases when you have problems with starting a sensor the location service was switched off. For Android it is needed for proper bluetooth operation(!) to connect. Please refer to Google's Android documentation.
 
 During the 14 days you can use in parallel one or more NFC capable smartphones (not the reader device!) running the original LibreLink app for scanning via NFC. There is no time limitation to start that. You could use a parallel phone for example on day 5 or so. The parallel phones(s) could upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for your diabetes team. Hay muchos padres que necesitan absolutamente esto. 
 
