@@ -53,6 +53,6 @@ En la captura de pantalla de arriba, 41% de 1 vez que la absorción de carbohidr
 - I:C necesita ajuste
 - El valor de min_5m_carbimpact es incorrecto (el recomendado es 8 con SMB, 3 con AMA)
 
-Manual correction of carbs entered
+Corrección manual de los carbohidratos ingresados
 ==================================================
-If you over- or underestimated carbs you can correct this though treatments tab and care portal as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.
+Si sobreestimó o subestimo los carbohidratos, puede corregir esto a través de la pestaña de tratamientos y el portal de atención, tal como se describe en `aquí <../Getting-Started/Screenshots.html#carb-corrección>`_.
