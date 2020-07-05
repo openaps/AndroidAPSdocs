@@ -173,11 +173,11 @@ Defina si quieres permitir controles automáticos AAPS o no.
 
 ### Lazo abierto
 
-AAPS evalúa continuamente todos los datos disponibles (IOB, COB, BG...) y hace sugerencias de tratamiento sobre cómo ajustar su terapia si es necesario. The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+AAPS evalúa continuamente todos los datos disponibles (IOB, COB, BG...) y hace sugerencias de tratamiento sobre cómo ajustar su terapia si es necesario. Las sugerencias no se ejecutarán automáticamente (como en el lazo cerrado) deben introducirse manualmente en la bomba o usando un botón en caso de que esté usando una bomba compatible (Dana R/RS o Accu Chek Combo). Esta opción es para conocer cómo funciona AndroidAPS o si está usando una bomba no soportada.
 
 ### Lazo cerrado
 
-AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). El Loop Cerrado funciona dentro de numerosos límites de seguridad, que se pueden establecer individualmente. El Lazo Cerrado sólo es posible si está en [Objetivo 6 ](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) o superior y utiliza una bomba compatible.
+AAPS evalúa continuamente todos los datos disponibles (IOB, COB, BG...) y ajusta automáticamente el tratamiento si es necesario (es decir, sin intervención adicional) para alcanzar el rango o valor de destino establecido (entrega en bolo, velocidad basal temporal, cambio de insulina para evitar la hipoglucemia, etc.). El Loop Cerrado funciona dentro de numerosos límites de seguridad, que se pueden establecer individualmente. El Lazo Cerrado sólo es posible si está en [Objetivo 6 ](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) o superior y utiliza una bomba compatible.
 
 ## Objetivos (programa de aprendizaje)
 
@@ -195,7 +195,7 @@ Si ve la pestaña Tratamientos (Trat), usted puede ver los tratamientos que se h
 
 ### Inicio
 
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Se puede acceder a los valores haciendo clic en el icono rueda dentada.
+Muestra el estado actual de su lazo y los botones para las acciones más comunes (ver [sección de La Pantalla de inicio](../Getting-Started/Screenshots.md) para obtener más detalles). Se puede acceder a los valores haciendo clic en el icono rueda dentada.
 
 #### Mantener pantalla activa
 
@@ -216,15 +216,15 @@ Además, puede establecer accesos directos para los incrementos de insulina y ca
 
 #### Asistente configuración
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Usar para comidas que se consumen con frecuencia. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Crear un botón para una determinada comida estándar (carbohidratos y método de cálculo para el bolo) que se mostrará en la pantalla de inicio. Usar para comidas que se consumen con frecuencia. Si se especifican diferentes horas para las diferentes comidas, siempre tendrá el botón de comida adecuado en la pantalla de inicio, dependiendo de la hora del día.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Nota: el botón, no será visible si se encuentra fuera del intervalo de tiempo especificado, o si usted tiene suficiente IOB para cubrir los hidratos de carbono definidos en el botón Asistente rápido (QuickWizard).
 
 ![Configuración del asistente rápido](../images/ConfBuild_QuickWizard.png)
 
 #### Ajustes avanzados
 
-Habilite la funcionalidad de super bolo en el asistente. Utilícelo con precaución y no lo habilite hasta que aprenda lo que realmente hace. Básicamente, el basal para las próximas dos horas se añade al bolo y se activa un tiempo cero de dos horas. **Las funciones de lazo AAPS se inhabilitarán, por lo que se utilizará con precaución! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Habilite la funcionalidad de super bolo en el asistente. Utilícelo con precaución y no lo habilite hasta que aprenda lo que realmente hace. Básicamente, el basal para las próximas dos horas se añade al bolo y se activa un tiempo cero de dos horas. **Las funciones de lazo AAPS se inhabilitarán, por lo que se utilizará con precaución! Si utiliza las funciones del lazo de SMB, AAPS se inhabilitará de acuerdo con los valores en ["Máx minutos de basal para limitar SMB a" ](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), si no utiliza funciones de bucle de SMB se inhabilitarán durante dos horas. ** Detalles de super bolo pueden encontrarse [aquí ](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Acciones
 
@@ -279,7 +279,7 @@ Visualizar información del lazo en el reloj de xDrip + (si no está utilizando 
 
 ### Avisos permanentes
 
-Displays a summary of current BG, delta, active TBR%, active basal u/h and profile, IOB and split into bolus IOB and basal IOB on the phones's dropdown screen and phone's lock screen.
+Visualiza un resumen del BG actual, delta, TBR% activo, basal activo u/h y perfil, IOB y se divide en IOB en bolo y basal IOB en la pantalla desplegable de los teléfonos y en la pantalla de bloqueo del teléfono.
 
 ![Widget de AAPS](../images/ConfBuild_Widget.png)
 
@@ -287,7 +287,7 @@ Displays a summary of current BG, delta, active TBR%, active basal u/h and profi
 
 Configuración de la sincronización de datos de su AndroidAPS con Nightscout.
 
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimization not disabled for AAPS) but can flood the Nightscout graph with entries.
+Si **Comenzar registro de app hacia NS** se activa cada dato de AndroidAPS será visible en Nightscout. Puede ser útil para detectar problemas con la aplicación (por ejemplo, la optimización de la batería no inhabilitada para AAPS), pero puede llenar el gráfico Nightscout con datos.
 
 #### Opciones de alarma
 
@@ -306,7 +306,7 @@ Si desea utilizar sólo una red WiFi específica, puede especificar su **SSID de
 #### Ajustes avanzados
 
 * Rellenar BGs perdidos desde NS
-* Create announcement from errors Create Nightscout announcement for error dialogs and local alerts (also viewable in careportal in treatments section)
+* Crear un anuncio a partir de los errores Crear anuncio de Nightscout para los diálogos de errores y alertas locales (también disponible en careportal en la sección de tratamientos)
 * Permitir emisión de mensajes a otras aplicaciones como xDrip+
 * Sólo carga de NS (sincronización inhabilitada)
 * Datos no subidos a NS
