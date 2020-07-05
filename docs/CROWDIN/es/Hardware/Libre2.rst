@@ -3,20 +3,20 @@ Freestyle libre 2
 
 El sistema Freestyle Libre 2 puede reportar automáticamente niveles peligrosos de glucosa en sangre. El Sensor Libre2 envía el nivel de azúcar en sangre actual a un receptor (lector o smartphone) cada minuto. El receptor activa una alarma si es necesario. With a self-modified LibreLink app and the xDrip+ app, you can continuously receive and display your blood sugar level on your smartphone. 
 
-The sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2,2 mmol/l to +1,1 mmol/l) to adjust differences between finger prick measurements and sensor readings.
+El sensor puede ser calibrado en el rango de -40 mg/dl a +20 mg/dl (-2,2 mmol/l a +1,1 mmol/l) para ajustar las diferencias entre las mediciones del pinchazo de los dedos y las lecturas del sensor.
 
-BG readings can also be done using a BT transmitter like with the Libre1.
+Las lecturas de BG también se pueden hacer usando un transmisor BT como con el Libre1.
 
-Step 1: Build your own patched LibreLink-App
+Paso 1: Construye tu propia Librelink-App parcheada
 ==================================================
 
-Por razones legales, el llamado parche tiene que ser hecho por usted mismo. Utilizar motores de búsqueda para encontrar los enlaces correspondientes. There are mainly two variants: The recommended original patched app blocks any internet traffic to avoid tracking. The other variant supports LibreView which may be needed by your doctor.
+Por razones legales, el llamado parche tiene que ser hecho por usted mismo. Utilizar motores de búsqueda para encontrar los enlaces correspondientes. There are mainly two variants: The recommended original patched app blocks any internet traffic to avoid tracking. La otra variante es compatible con LibreView que puede ser necesario para su médico.
 
 The patched app has to be installed instead of the original app. The next sensor started with it will transmit the current BG values to the xDrip+ app running on your smartphone via Bluetooth.
 
-Important: To avoid possible problems it may help to first install and uninstall the original app on an NFC capable smartphone. NFC tiene que estar habilitado. Esto no suma consumo a la batería. Then install the patched app. 
+Importante: Para evitar posibles problemas puede ayudar a instalar y desinstalar la aplicación original en un smartphone con capacidad NFC. NFC tiene que estar habilitado. Esto no suma consumo a la batería. A continuación, instale la aplicación parcheada. 
 
-The patched app can be identified by the foreground authorization notification. The foreground authorization service improves the connection stability compared to the original app which do not use this service.
+La aplicación parcheada se puede identificar mediante la notificación de autorización de primer plano. El servicio de autorización de primer plano mejora la estabilidad de la conexión en comparación con la aplicación original que no utiliza este servicio.
 
 .. image:: ../images/Libre2_ForegroundServiceNotification.png
   :alt: LibreLink Servicio en segundo plano
@@ -34,8 +34,8 @@ Ajustes obligatorios para el inicio del sensor con éxito:
 
 * NFC habilitado / BT habilitado
 * memory and location permission enabled 
-* location service enabled
-* automatic time and time zone setting
+* servicio de ubicación habilitado
+* configuración automática de hora y zona horaria
 * establecer al menos una alarma en la aplicación parchada
 
 Please note that the location service is a central setting. This is not the app location permission which has to be set also!
@@ -59,17 +59,17 @@ As long as you see a red exclamation mark ("!") on the upper left corner of the 
 Si la marca de exclamación permanece o se obtiene un mensaje de error, esto puede tener varias razones:
 
 - El servicio de ubicación de Android no está disponible - por favor actívalo en la configuración del sistema
-- automatic time and time zone not set - please change the settings accordingly
+- la hora y zona horaria automáticas no están configuradas - por favor cambie la configuración en consecuencia
 - activar alarmas - al menos una de las tres alarmas debe activarse en LibreLink
 - El Bluetooth está apagado, por favor enciendalo
-- sound is blocked
-- app notifications are blocked
+-el sonido está bloqueado
+-Las notificaciones de la aplicación están bloqueadas
 - idle screen notifications are blocked 
-- you have a faulty Libre 2 sensor from a production LOT number with a 'K' followed by 8 digits. You find this printed on the yellow package. These sensors have to be replaced as they don't function on bluetooth.
+- you have a faulty Libre 2 sensor from a production LOT number with a 'K' followed by 8 digits. Esto se encuentra impreso en el paquete amarillo. These sensors have to be replaced as they don't function on bluetooth.
 
-Reiniciar el teléfono puede ayudar, es posible que tenga que hacerlo varias veces. Tan pronto como se establezca la conexión, desaparece la marca de exclamación roja y se toma el paso más importante. It may happen that depending on system settings the exclamation mark remains but you still get readings. In both cases you are fine. El sensor y el teléfono están ahora conectados, cada minuto se transmite un valor de azúcar en la sangre.
+Reiniciar el teléfono puede ayudar, es posible que tenga que hacerlo varias veces. Tan pronto como se establezca la conexión, desaparece la marca de exclamación roja y se toma el paso más importante. It may happen that depending on system settings the exclamation mark remains but you still get readings. En ambos casos está bien. El sensor y el teléfono están ahora conectados, cada minuto se transmite un valor de azúcar en la sangre.
 
-.. image:: ../images/Libre2_Connected.png
+.. imagen:: ../images/Libre2_Connected.png
   :alt: Conexión LibreLink establecida
   
 In rare case it could help to empty the bluetooth cache and/or reset all network connections via the system menu. This removes all connected bluetooth devices which may help to setup a proper bluetooth connection. That procedure is save as the started sensor is remembered by the patched LibreLink app. Nothing additional has to be done here. Simply wait for the patched app to connect to the sensor.
