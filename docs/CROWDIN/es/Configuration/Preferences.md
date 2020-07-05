@@ -63,19 +63,19 @@ Esta es la cantidad máxima de carbohidratos que la calculadora de bolo AAPS pue
 
 Puede alternar entre lazo abierto y cerrado aquí.
 
-**Open looping** means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump.
+Abrir lazo significa que las sugerencias de TBR se basan en sus datos y aparecen como una notificación, pero debe elegir aceptarlas manualmente e ingresarlas manualmente en su bomba.
 
-**Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.
+El lazo cerrado significa que las sugerencias de TBR se envían automáticamente a su bomba sin confirmación o aportación de usted.
 
 La pantalla de inicio se mostrará en la esquina superior izquierda, ya sea que esté abierto o cerrado, y al mantener presionado este botón de pantalla de inicio también podrá alternar entre los dos.
 
-### Minimal Request Rate
+### Tasa mínima de solicitud
 
-When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate. This defines the relative change required to trigger a notification.
+Cuando se utiliza en lazo abierto recibirás notificaciones cada vez que AAPS recomienda ajustar basal. Para reducir el número de notificaciones puede usar un rango de objetivo más amplio o aumentar el porcentaje de la tasa mínima de solicitud. Esto define el cambio relativo necesario para desencadenar una notificación.
 
-![Minimal request rate](../images/MinRequestChange.png)
+![Tasa mínima de solicitud](../images/MinRequestChange.png)
 
-Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol instead of 5,0 - 7,0 mmol) is recommended.
+Nota: En el modo de lazo cerrado se recomienda un único objetivo en lugar del rango objetivo (es decir, 5,5 mmol en lugar de 5,0-7,0 mmol).
 
 ## OpenaAPS AMA
 
@@ -119,7 +119,7 @@ Las opciones aquí variarán según el controlador de la bomba que haya seleccio
 * [Bomba de insulina DanaR](../Configuration/DanaR-Insulin-Pump.md) 
 * [Bomba de insulina DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Bomba de insulina Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
-* [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md) 
+* [Bomba Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) 
 * [Infusora Medtronic](..//Configuration/MedtronicPump.md)
 
 Si usa AndroidAPS en lazo abierto, asegúrese de haber seleccionado Bomba Virtual en config builder.
