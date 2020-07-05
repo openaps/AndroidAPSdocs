@@ -101,7 +101,7 @@ El lazo cerrado no corregirá los valores de bg alto en el objetivo 6, ya que se
      :alt: Example negative IOB
 
 * If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
-* You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.
+* Puede experimentar temporalmente picos después de las hipos tratadas sin la posibilidad de aumentar basal en el rebote.
 
 Objetivo 7: Ajustar el lazo cerrado, elevando el IOB máximo por encima de 0 y reduciendo gradualmente los objetivos de BG
 ====================================================================================================
