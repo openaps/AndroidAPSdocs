@@ -6,8 +6,8 @@
 
 ## ## Notas importantes
 
-* Please use **[Android Studio Version 3.6.1](https://developer.android.com/studio/)** or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.6.1.
+* Por favor utilice **[Android Studio Versión 3.6.1](https://developer.android.com/studio/)** o más reciente para construir el apk.
+* [Windows 10 sistemas de 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) no son compatibles con Android Studio 3.6.1.
 
 **Configuración bajo demanda** no está soportada por la versión actual del plugin de Gradle de Android!
 
@@ -36,7 +36,7 @@ En general, los pasos necesarios para crear el archivo APK son:
 5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [Build the app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generate signed apk)
 7. [Transfer apk file to your phone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identify receiver if using xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
+8. [Identificar receptor si se utiliza xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
 
 ## Tutorial paso a paso
 
@@ -52,9 +52,9 @@ The following screenshots have been taken from Android Studio Version 3.6.1. You
 
 One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
 
-Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
+Instale [Android Studio](https://developer.android.com/studio/install.html) y configurelo durante el primer inicio.
 
-Select "Do not import settings" as you have not used it before.
+Seleccione "No importar valores", ya que no lo ha utilizado anteriormente.
 
 ![Do not import settings](../images/AndroidStudio361_01.png)
 
@@ -66,11 +66,11 @@ On the following screen click "Next".
 
 ![Welcome screen](../images/AndroidStudio361_03.png)
 
-Select "Standard" installation and click "Next".
+Seleccione la instalación "Estándar" y haga clic en "Siguiente".
 
 ![Standard installation](../images/AndroidStudio361_04.png)
 
-Select the theme for the user interface you like. (In this manual we used "Light".) Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
+Seleccione el tema para la interfaz de usuario que desee. (In this manual we used "Light".) Then click "Next". Este es sólo el esquema de colores. Usted puede seleccionar cualquier que le gusta (por ejemplo, "Darcula" para el modo oscuro). Esta selección no tiene ninguna influencia sobre la construcción del APK.
 
 ![UI color scheme](../images/AndroidStudio361_05.png)
 
@@ -115,10 +115,10 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 ### Mac
 
-* Any git version should work. For example <https://git-scm.com/download/mac>.
+* Cualquier versión de git sirve. For example <https://git-scm.com/download/mac>.
 * Use homebrew to install git: ```$ brew install git```.
 * For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* If you install git via homebrew there is no need to change any preferences. Solo por caso: se puedan encontrar aquí: Android Studio - Preferencias.
+* Si instala git a través de un homebrew, no es necesario cambiar ninguna preferencia. Solo por caso: se puedan encontrar aquí: Android Studio - Preferencias.
 
 ## Download AndroidAPS code
 
@@ -189,7 +189,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 ![Finish SDK installation](../images/AndroidStudio361_25.png)
 
-* Android Studio might recommend to update the gradle system. **Never update gradle!** This might lead to difficulties!
+* Android Studio might recommend to update the gradle system. **Nunca actualice gradle! ** Esto podría llevar a dificultades!
 * If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1.) and in the dialog box on "Don't remind me again for this project" (2.).
 
 ![No cradle update](../images/AndroidStudio361_26.png)
@@ -209,7 +209,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 * Make sure that module is set to "app" (1.).
 * Click "Create new..." (2.) to start creating your key store.
     
-    A key store in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords.
+    A key store in this case is nothing more than a file in which the information for signing is stored. Está encriptado y la información está protegida con contraseñas.
 
 ![Create key store](../images/AndroidStudio361_29.png)
 
@@ -257,7 +257,7 @@ Easiest way to transfer app-full-release.apk to your phone is via [USB cable or 
 
 On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
-## Identify receiver if using xDrip+
+## Identificar receptor si se utiliza xDrip+
 
 [See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
