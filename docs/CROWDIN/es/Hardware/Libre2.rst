@@ -153,7 +153,7 @@ Una vez que tenga éxito, por favor seleccione "Parada de Sensor" y "Borrar cali
 .. image:: ../images/Libre2_GapNewSensor.png
   :alt: xDrip+ falta datos al cambiar el sensor de Libre 2
 
-Calibration
+Calibración
 --------------------------------------------------
 You can calibrate the Libre2 with an offset of -40 mg/dl to +20 mg/dL [-2,2 mmol/l to +1,1 mmol/l] (intercept). The slope isn't changeable as the Libre2 is much more accurate compared to the Libe1. Please check by fingerpricking early after setting a new sensor. It is known that there can arise big differences to the blood measurements. Para estar en el lado seguro, calibre cada 24 - 48 horas. Los valores son precisos hasta el final del sensor y no varían como los del Libre1. Sin embargo, si el sensor está completamente apagado, esto no va a cambiar. A continuación, el sensor debe ser sustituido inmediatamente.
 
