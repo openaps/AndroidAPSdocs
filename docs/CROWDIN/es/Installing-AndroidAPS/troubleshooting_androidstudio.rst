@@ -144,6 +144,6 @@ El peor escenario
 ==================================================
 En caso de que incluso la creación de la aplicación desde cero no soluciona el problema, es posible que desee desinstalar el Android Studio completamente. Algunos usuarios informaron de que esto resolvió su problema.
 
-**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
+**Asegúrese de desinstalar todos los archivos asociados con Android Studio.** Si no elimina completamente Android Studio con todos los archivos ocultos, la desinstalación puede causar nuevos problemas en lugar de resolver uno (s) existente (s). Los manuales para la desinstalación completa se pueden encontrar en línea, por ejemplo,. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
 
 Instale Android Studio desde cero, tal como se describe en 'aqui <../Installing-AndroidAPS/Building-APK.html#install-android-studio>`_ y **no actualizar gradle**.
