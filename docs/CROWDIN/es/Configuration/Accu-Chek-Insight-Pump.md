@@ -1,6 +1,6 @@
 # Bomba Accu-Chek Insight
 
-**Este software es parte de una solución de páncreas artificial de "hágalo usted mismo" y no es un producto, pero requiere que lea, aprenda y entienda el sistema, incluyendo cómo utilizarlo. No es algo que haga todo el manejo de su diabetes, pero le permite mejorar su diabetes y su calidad de vida si está dispuesto a dedicar el tiempo necesario. No te precipites, pero date tiempo para aprender. Solo Usted es responsable de lo que hace con él.**
+**Este software es parte de una solución de páncreas artificial de "hágalo usted mismo" y no es un producto, pero requiere que lea, aprenda y entienda el sistema, incluyendo cómo utilizarlo. No es algo que haga todo el manejo de su diabetes, pero le permite mejorar su diabetes y su calidad de vida si está dispuesto a dedicar el tiempo necesario. No te precipites, date tiempo para aprender. Solo Usted es responsable de lo que hace con él.**
 
 * * *
 
@@ -12,7 +12,7 @@
 
 Nota: AAPS escribirá los datos siempre en **primer perfil de tasa basal en la bomba**.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module#phone) page which Android version is required to run AndroidAPS.)
+* Un teléfono Android (cualquier versión de Android funcionaría con Insight, pero compruebe en la página [ Módulo ](../Module/module#phone) qué versión de Android es necesaria para ejecutar AndroidAPS.)
 * La aplicación AndroidAPS instalada en el teléfono
 
 ## Configuración
@@ -104,15 +104,15 @@ Configure las alarmas en la bomba como se indica a continuación:
 
 Esto silenciará todas las alarmas de la bomba, permitiendo que AndroidAPS decida si una alarma es relevante para usted. Si AndroidAPS no confirma una alarma, su volumen se incrementará (primera señal, después vibración).
 
-### Vibration
+### Vibración
 
-Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus).
+Dependiendo de la versión de firmware de su bomba, el Insight vibrará brevemente cada vez que se entregue un bolo (por ejemplo, cuando AndroidAPS emite una emulación SMB o TBR entrega un bolo extendido).
 
-* Firmware 1.x: No vibration by design.
-* Firmware 2.x: Vibration cannot be disabled.
-* Firmware 3.x: AndroidAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+* Firmware 1.x: Sin vibración por diseño.
+* Firmware 2.x: La vibración no se puede inhabilitar.
+* Firmware 3.x: AndroidAPS libera en forma silenciosa. (mínimo [ versión 2.6.1.4 ](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
 
-Firmware version can be found in the menu.
+La versión de firmware se puede encontrar en el menú.
 
 ## Reemplazo de la batería
 
