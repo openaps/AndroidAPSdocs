@@ -33,7 +33,7 @@ Si utiliza G6 con la aplicación Dexcom parcheada
 ==================================================
 * Descargar el apk desde `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, y elegir la versión que más se adapte a sus necesidades (mg/dl o mmol/l versión, G6).
 
-   * Folder 2.4 for users of the current version, folder 2.3 is only for the outdated AndroidAPS 2.3.
+   * Carpeta 2.4 para los usuarios de la versión actual, la carpeta 2.3 es sólo para la anticuada AndroidAPS 2.3.
    * Abrir https://play.google.com/store/search?q=dexcom%20g6 en tu ordenador. La región estará visible en el URL.
    
    .. imagen:: ../images/DexcomG6regionURL.PNG
@@ -50,7 +50,7 @@ Resolución de problemas G6
 ==================================================
 Resolución de problemas específica de Dexcom G6
 --------------------------------------------------
-* Transmisores con número de serie starting with 80 or 81 need at least last stable xDrip+ version from May 2019 or a newer nightly build.
+* Transmisores con número de serie comenzando con 80 o 81 necesitan, al menos, la última versión estable xDrip de Mayo de 2019 o una versión más reciente.
 * Transmisores con número de serie a partir de 8G necesita al menos la versión nightly a partir del 25 de julio de 2019 o más reciente.
 * La aplicación xDrip + y Dexcom no se puede conectar con el transmisor a la vez.
 * Espere por lo menos 15 min. entre la detención y el inicio de un sensor.
@@ -62,7 +62,7 @@ Resolución de problemas específica de Dexcom G6
   * Transmisor de serie empezando con 8G o 8H: "Obengo la glucosa hh:mm" (es decir, "Obtuviste la glucosa 19:04") o "No hay datos hh:mm" (por ejemplo. "Obtenidos ahora en bruto 19:04")
 
 .. imagen:: ../images/xDrip_Dexcom_PhoneServiceState.png
-  :alt: xDrip+ PhoneServiceState
+  :alt: xDrip PhoneServiceState
 
 Resolver problemas generales
 --------------------------------------------------
