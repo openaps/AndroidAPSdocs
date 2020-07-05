@@ -116,11 +116,11 @@ Para mucha gente no hay prácticamente ningún efecto visible de FIASP después 
 
 Con el perfil "Free Peak 0ref" usted puede ingresar individualmente el tiempo del pico. El DIA se establece automáticamente en 5 horas si no se especifica un valor superior en el perfil.
 
-This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+Este perfil de efecto se recomienda si se utiliza una insulina fuera del uso aprobado o una mezcla de insulinas diferentes.
 
 ## Fuentes de BG (datos de glucemia)
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
+Seleccione la fuente de glucosa en sangre que está utilizando: consulte la página [BG Fuentes ](BG-Source.rst) para obtener más información de configuración.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient BG
@@ -144,28 +144,28 @@ Seleccione la bomba que está utilizando.
 * MDI (recibir sugerencias de AAPS para su terapia de inyecciones múltiples diarias)
 * Bomba virtual (lazo abierto para la bomba que no tiene ningún controlador todavía-sólo sugerencias de AAPS)
 
-For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. Desactiva bluetooth por un segundo si no es posible la conexión con la bomba. Esto puede ayudar en algunos teléfonos donde la pila (Stack) Bluetooth se congela (freezes).
 
 ## Detección de sensibilidad
 
-Seleccione el tipo de detección de sensibilidad. This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Seleccione el tipo de detección de sensibilidad. Esto analizará los datos históricos sobre la marcha y realizará ajustes si reconoce que está reaccionando con más sensibilidad (o a la inversa, más resistente) a la insulina de lo habitual. Los detalles sobre el algoritmo de Sensibilidad Oref0 se pueden leer en el [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
 Usted puede ver su sensibilidad en la pantalla de inicio seleccionando SEN y viendo la línea blanca. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features.html#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
 ### Ajustes absorción
 
-Si utiliza Oref1 con SMB, debe cambiar **min_5m_carbimpact ** a 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.rst) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Básicamente, es un seguro contra fallos.
+Si utiliza Oref1 con SMB, debe cambiar **min_5m_carbimpact ** a 8. El valor sólo se utiliza durante las diferencias en las lecturas del sensor o cuando la actividad física "utiliza" todo el aumento de la glucosa en la sangre, lo que de otra manera causaría que la AAPS descienda a COB. At times when [carb absorption](../Usage/COB-calculation.rst) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Básicamente, es un seguro contra fallos.
 
 ## APS
 
-Seleccione el algoritmo APS deseado para realizar los ajustes de la terapia. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+Seleccione el algoritmo APS deseado para realizar los ajustes de la terapia. Puede ver los detalles activos del algoritmo elegido en la pestaña OpenAPS(OAPS).
 
 * OpenAPS MA (asistencia para comidas, estado del algoritmo en 2016)
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017)  
-    More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
-    Note you need to be in [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) in order to use OpenAPS AMA.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
-    Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* OpenAPS AMA (asistencia de comida avanzada, estado del algoritmo en 2017)   
+    Más detalles acerca de OpenAPS AMA se pueden encontrar en [OpenAPS docs ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). En términos simples, los beneficios son después que se pone un bolo de comida, el sistema puede ser más rápido si especifica los carbohidratos de forma fiable.   
+    Note que necesita estar en [Objetivo 9 ](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) para poder utilizar OpenAPS AMA.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolo, el más reciente algoritmo para usuarios avanzados)  
+    Nota: debe estar en [Objetivo 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) para utilizar OpenAPS SMB y min_5m_carbimpact debe estar ajustado a las 8 en el Config builder > Sensibilidad de detección > Valor de sensibilidad Oref1.
 
 ## Loop
 
@@ -173,7 +173,7 @@ Defina si quieres permitir controles automáticos AAPS o no.
 
 ### Lazo abierto
 
-AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+AAPS evalúa continuamente todos los datos disponibles (IOB, COB, BG...) y hace sugerencias de tratamiento sobre cómo ajustar su terapia si es necesario. The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
 
 ### Lazo cerrado
 
@@ -256,7 +256,7 @@ Permite a los cuidadores remotos controlar algunas características de AndroidAP
 
 ### Comida
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Muestra los valores de alimentos definidos en la base de datos de alimentos de Nightscout, consulte el apartado [Información de Nightscout](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) para obtener más información de configuración.
 
 Nota: Las entradas no se pueden utilizar en la calculadora AndroidAPS. (Ver solamente)
 
@@ -268,14 +268,14 @@ Si desea bolo etc. desde el reloj entonces dentro de "Configuración de Reloj" q
 
 ![Ajustes reloj](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+A través de la pestaña Reloj o el menú principal (la parte superior izquierda de la pantalla, si no se visualiza el tabulador) puede
 
 * Reenviar todos los datos. Puede ser útil si el reloj no está conectado durante algún tiempo y desea enviar la información al reloj.
 * Abre los ajustes en tu reloj directamente desde tu teléfono.
 
 ### Linea de estado xDrip (reloj)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Visualizar información del lazo en el reloj de xDrip + (si no está utilizando AAPS/[AAPSv2 watchface ](../Configuration/Watchfaces.md)
 
 ### Avisos permanentes
 
