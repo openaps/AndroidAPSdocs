@@ -26,36 +26,36 @@ Seleccione el perfil basal que desea utilizar. Consulte la página [Perfiles](..
 
 El "perfil local" utiliza el perfil basal manualmente ingresado en el teléfono. Tan pronto como se selecciona, aparece una nueva pestaña en AAPS, donde puede cambiar los datos de perfil leídos de la bomba si es necesario. Con la tecla siguiente, el perfil se escriben en la bomba en el perfil 1. Este perfil se recomienda ya que no depende de la conectividad a Internet.
 
-Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). So make sure to have a backup in a safe place.
+Los perfiles locales forman parte de [ valores exportados ](../Usage/ExportImportSettings.rst). Así que asegúrese de tener una copia de seguridad en un lugar seguro.
 
-![Local Profile settings](../images/LocalProfile_Settings.png)
+![Valores de perfil local](../images/LocalProfile_Settings.png)
 
 Botones:
 
 * green plus: add
-* red X: delete
-* blue arrow: duplicate
+* rojo X: borrar
+* flecha azul: duplicado
 
-If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile beeing used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+Si realiza algún cambio en su perfil, asegúrese de que está editando el perfil correcto. In profile tab there is not always shown the actual profile beeing used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
 #### Clone profile switch
 
 You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
 
-1. Go to treatments tab.
+1. Vaya a la pestaña de tratamientos.
 2. Seleccionar Cambio de perfil.
-3. Press "Clone".
-4. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
+3. Pulse "Clonar".
+4. Puede editar el nuevo perfil local en la pestaña Perfil local (LP) o a través del menú principal.
 
 ![Clone profile switch](../images/LocalProfile_ClonePS.png)
 
 If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
 
-#### Upload local profiles to Nightscout
+#### Cargar los perfiles locales para Nightscout
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in NS Client preferences.
+Local profiles can also be uploaded to Nightscout. Los ajustes se pueden encontrar en las preferencias de NS Client.
 
-![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
+![Cargar el perfil local de NS](../images/LocalProfile_UploadNS2.png)
 
 Have in mind, only the profile switches made over the profile tab are uploaded to nightscout. If you do a profile switch by using the profile button in the mainscreen, it will not be uploaded.
 
@@ -125,7 +125,7 @@ Seleccione la fuente de glucosa en sangre que está utilizando: consulte la pág
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
+* [ Spip ](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)-sólo se da soporte a la versión 4.15.57 y posterior
 * [Dexcom App (parche) ](https://github.com/dexcomapp/dexcomapp/) -Seleccione 'Enviar datos de BG a xDrip +' si desea utilizar las alarmas xDrip +.
     
     ![Configurar origen de BG](../images/ConfBuild_BGSource.png)
@@ -236,13 +236,13 @@ Algunos botones para acceder rápidamente a funciones comunes:
 * Bolo extendido (sólo la bomba DanaR/RS o Combo)
 * Record for any specific care entries
     
-    * BG check
+    * Medir glucosa
     * Prime / fill - record pump site change and prime (if not done on pump)
-    * CGM sensor insert
-    * Pump battery change
+    * Inserción de sensor
+    * Cambio batería bomba
     * Nota
     * Ejercicio
-* View the current sensor, insulin, canula and pump battery ages
+* Ver el tiempo del sensor actual, la insulina, la cánula y la batería de la bomba
 * Historial
 * TDD (dosis diaria total = bolo + basal por día)
 
