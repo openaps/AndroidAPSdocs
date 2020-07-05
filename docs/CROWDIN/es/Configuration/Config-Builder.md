@@ -30,7 +30,7 @@ Your local profiles are part of [exported settings](../Usage/ExportImportSetting
 
 ![Local Profile settings](../images/LocalProfile_Settings.png)
 
-Buttons:
+Botones:
 
 * green plus: add
 * red X: delete
@@ -43,7 +43,7 @@ If you make any changes to your profile, make sure, you are editing the correct 
 You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
 
 1. Go to treatments tab.
-2. Select ProfileSwitch.
+2. Seleccionar Cambio de perfil.
 3. Press "Clone".
 4. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
 
@@ -59,16 +59,16 @@ Local profiles can also be uploaded to Nightscout. The settings can be found in 
 
 Have in mind, only the profile switches made over the profile tab are uploaded to nightscout. If you do a profile switch by using the profile button in the mainscreen, it will not be uploaded.
 
-Advantage:
+Ventajas:
 
 * no internet connection necessary to change profile settings
-* profile changes can be made directly on the phone
+* los cambios de perfil se pueden hacer directamente en el teléfono
 * new profile can be created from profile switch
 * local profiles can be uploaded to Nightscout
 
-Disadvantage:
+Desventajas:
 
-* none
+* ninguno
 
 ### Perfil NS
 
@@ -76,21 +76,21 @@ NS Profile uses the profiles you have saved on your Nightscout site (https://[yo
 
 Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
-Advantage:
+Ventajas:
 
-* multiple profiles
-* easy to edit via PC or tablet
+* perfiles múltiples
+* fácil de editar por PC o tablet
 
-Disadvantage:
+Desventajas:
 
 * no local changes to profile settings
-* profile cannot be changed directly on the phone
+* el perfil no puede ser cambiado directamente en el teléfono
 
 ## Insulina
 
-Select the type of insulin curve you are using. The options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak.
+Seleccione el tipo de curva de insulina que está usando. The options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak.
 
-The DIA is not the same for each person. That's why you have to test it for yourself. But it must always be at least 5 hours. You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page.
+La DIA no es la misma para cada persona. Es por eso que tienes que probarlo por ti mismo. Pero siempre debe ser de al menos 5 horas. You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page.
 
 For Rapid-Acting and Ultra-Rapid, the DIA is the only variable you can adjust by yourself, the time to peak is fixed. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings.
 
@@ -98,15 +98,15 @@ The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps 
 
 ### Rapid-Acting Oref
 
-* recommended for Humalog, Novolog and Novorapid
+* recomendado para Humalog, Novolog y Novorapid
 * DIA = al menos 5.0h
-* Máximo peak = 75 minutes after injection (fixed, not adjustable)
+* Máximo pico = 75 minutos después de la inyección (fijo, no ajustable)
 
 ### Ultra-Rapid Oref
 
-* recommended for FIASP
+* recomendado para FIASP
 * DIA = al menos 5.0h
-* Máximo peak = 55 minutes after injection (fixed, not adjustable)
+* Máximo pico = 55 minutos después de la inyección (fijo, no ajustable)
 
 For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
 
