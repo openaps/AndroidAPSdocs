@@ -40,7 +40,7 @@ Si realiza algún cambio en su perfil, asegúrese de que está editando el perfi
 
 #### Clone profile switch
 
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+Puede crear fácilmente un perfil local nuevo a partir del conmutador de perfil. In this case timeshift and percentage will be applied to the new local profile.
 
 1. Vaya a la pestaña de tratamientos.
 2. Seleccionar Cambio de perfil.
@@ -53,7 +53,7 @@ If you want to switch from Nightscout profile to local profile just do a profile
 
 #### Cargar los perfiles locales para Nightscout
 
-Local profiles can also be uploaded to Nightscout. Los ajustes se pueden encontrar en las preferencias de NS Client.
+Los perfiles locales también se pueden subir a Nightscout. Los ajustes se pueden encontrar en las preferencias de NS Client.
 
 ![Cargar el perfil local de NS](../images/LocalProfile_UploadNS2.png)
 
@@ -144,13 +144,13 @@ Seleccione la bomba que está utilizando.
 * MDI (recibir sugerencias de AAPS para su terapia de inyecciones múltiples diarias)
 * Bomba virtual (lazo abierto para la bomba que no tiene ningún controlador todavía-sólo sugerencias de AAPS)
 
-For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. Desactiva bluetooth por un segundo si no es posible la conexión con la bomba. Esto puede ayudar en algunos teléfonos donde la pila (Stack) Bluetooth se congela (freezes).
+Para las bombas dana, utilice ** Valores avanzados ** para activar el control de BT si es necesario. Desactiva bluetooth por un segundo si no es posible la conexión con la bomba. Esto puede ayudar en algunos teléfonos donde la pila (Stack) Bluetooth se congela (freezes).
 
 ## Detección de sensibilidad
 
 Seleccione el tipo de detección de sensibilidad. Esto analizará los datos históricos sobre la marcha y realizará ajustes si reconoce que está reaccionando con más sensibilidad (o a la inversa, más resistente) a la insulina de lo habitual. Los detalles sobre el algoritmo de Sensibilidad Oref0 se pueden leer en el [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
-Usted puede ver su sensibilidad en la pantalla de inicio seleccionando SEN y viendo la línea blanca. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features.html#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+Usted puede ver su sensibilidad en la pantalla de inicio seleccionando SEN y viendo la línea blanca. Tenga en cuenta que debe estar en el [ Objetivo 8 ](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) para permitir que la detección de sensibilidad/[ Autosens ](../Usage/Open-APS-features.html#autosens) ajuste automáticamente la cantidad de insulina suministrada. Antes de alcanzar ese objetivo, el porcentaje de Autosens/la línea en el gráfico se muestra sólo para información.
 
 ### Ajustes absorción
 
@@ -237,7 +237,7 @@ Algunos botones para acceder rápidamente a funciones comunes:
 * Record for any specific care entries
     
     * Medir glucosa
-    * Prime / fill - record pump site change and prime (if not done on pump)
+    * Cambio de cánula y llenado - registro de cambio cánula y llenado (si no se hace en la bomba)
     * Inserción de sensor
     * Cambio batería bomba
     * Nota
