@@ -4,17 +4,17 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ## Bombas con soporte en desarrollo
 
-### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
+### Insulet Omnipod (con los viejos Eros Pods) ([Página de inicio ](https://www.myomnipod.com/en-gb/about/how-to-use))
 
-**Loop status:** Not supported natively by AAPS at the moment. Decoding of the Omnipod protocol is finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
+**Loop status:** En este momento no soportado de forma nativa por parte de AAPS. La decodificación del protocolo Omnipod ha finalizado-[OpenOmni ](http://www.openomni.org/) y [OmniAPS Slack ](https://omniaps.slack.com/)
 
-**Other implementations:**
+**Otras implementaciones:**
 
 - Omnipy para AndroidAPS (estable en las pruebas, se requiere de Raspberry Pi especialmente modificado para RileyLink y AndroidAPS) Omnipy 
 - OmniCore para AndroidAPS (sin versión todavía, código C# que se ejecuta en modo nativo en Android, sólo requiere RileyLink y de AndroidAPS especialmente modificado -la próxima versión del proyecto Omnipy).
 - [iOS Loop](https://loopkit.github.io/loopdocs/) (estable, distribuida, requere RileyLink).
 
-**Java implementations:** None till now.
+**Plataformas en Java:** Ninguna hasta ahora.
 
 **AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version was released in January 2020, and work is beeing done towards stabilization. Current version 0.3 (March)
 
