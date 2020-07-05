@@ -16,7 +16,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 **Plataformas en Java:** Ninguna hasta ahora.
 
-**AAPS estado de implementación:** Se está trabajando en un controlador nativo de Java para el Omnipod en AAPS en [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (rama omnipod_eros rama). No requiere Raspberry Pi. Puede seguir el progreso en [el OmniAPS Slack ](https://omniaps.slack.com/) en el canal android-driver. A first public test version was released in January 2020, and work is beeing done towards stabilization. Current version 0.3 (March)
+**AAPS estado de implementación:** Se está trabajando en un controlador nativo de Java para el Omnipod en AAPS en [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (rama omnipod_eros rama). No requiere Raspberry Pi. Puede seguir el progreso en [el OmniAPS Slack ](https://omniaps.slack.com/) en el canal android-driver. Una primera versión de prueba pública se publicó en enero de 2020, y se ha hecho trabajo en una versión estable. Versión actual 0.3 (marzo)
 
 **Requisitos hardware para AAPS: ** RileyLink con el firmware de Omnipod (2.x) y la antena de 433 MHz.
 
@@ -34,7 +34,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### Bomba Ypsomed([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop status:** los modelos 1 - 1.5 (2Q/2018) no son candidatos. Si bien tienen comunicación BT, parece que es muy limitada (uni directional: Bomba->App). Tal vez esto cambie en las próximas versiones. It seems that we will get loopable version in begining of 2021, see this [article](https://www.ypsomed.com/en/media/details/ypsomed-and-dexcom-enter-into-partnership-to-drive-closed-loop-system.html?fbclid=IwAR3gYSMz8dvPARYgbj5djm4Yxa7JdFthfzOrrg94C9Bigj6RGeycxSfGHyg).
+**Loop status:** los modelos 1 - 1.5 (2Q/2018) no son candidatos. Si bien tienen comunicación BT, parece que es muy limitada (uni directional: Bomba->App). Tal vez esto cambie en las próximas versiones. Parece que vamos a obtener una versión loopable en el inicio de 2021, ver este [ artículo ](https://www.ypsomed.com/en/media/details/ypsomed-and-dexcom-enter-into-partnership-to-drive-closed-loop-system.html?fbclid=IwAR3gYSMz8dvPARYgbj5djm4Yxa7JdFthfzOrrg94C9Bigj6RGeycxSfGHyg).
 
 **Requisitos de hardware para AAPS: ** Probablemente ninguno. Está habilitada para BT.
 
@@ -66,7 +66,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Loop status:** Es candidata a ser utilizada en sistemas de Bucle Cerrado. La bomba se empezará a vender a finales de 2018 en algunos países de la UE. Its rummored to have Android app on special controler device for control.
+**Loop status:** Es candidata a ser utilizada en sistemas de Bucle Cerrado. La bomba se empezará a vender a finales de 2018 en algunos países de la UE. Se rumorea que tiene Android en un dispositivo de control dedicado.
 
 **Requisitos de hardware para AAPS: ** Probablemente ninguno. Parece estar habilitado para BT.
 
@@ -74,13 +74,13 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 **Comentarios: ** Esto es la bomba que se presentará en los próximos años y se ha planificado para que sea compatible con el software Tidepool Loop ([ver este artículo ](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration)).
 
-### Willcare Insulin pump ([Homepage](http://en.shinmyungmedi.com))
+### Bomba de insulina Willcare ([página web](http://en.shinmyungmedi.com))
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+** Estado del lazo: ** Por el momento, no es candidato de Loop, pero su personal nos ha contactado y están interesados en que su bomba sea loopeable (por el momento, creo que faltan sólo los mandatos de perfil get/set).
 
-**Hardware requirement for AAPS:** None. Parece estar habilitado para BT.
+**Requisitos hardware para AAPS: ** ninguno. Parece estar habilitado para BT.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+** Comentarios: ** Puesto que la empresa está interesada en la integración con AAPS, es posible que lo hagan ellos mismos.
 
 * * *
 
