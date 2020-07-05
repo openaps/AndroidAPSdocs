@@ -7,11 +7,11 @@
 ## Notas importantes
 
 * Please update as soon as possible after a new release is available. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes#release-notes) about the new version.
-* As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
-* Please use [Android Studio Version 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.6.1.
-* If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
-* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* A partir de la versión 2.3, debe utilizar git para actualizar. La actualización a través del archivo zip ya no funciona.
+* Utilice [Android Studio Versión 3.6.1](https://developer.android.com/studio/) o más reciente para crear el apk.
+* [Windows 10 sistemas de 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) no son compatibles con Android Studio 3.6.1.
+* Si está utilizando xDrip, asegúrese de que [identifique el receptor](../Configuration/xdrip#identify-receiver).
+* Si utiliza Dexcom G6 con el [parcheado de la aplicación Dexcom](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) necesitará la versión de la carpeta [carpeta 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Rápido acceso a los usuarios experimentados
 
@@ -62,7 +62,7 @@ Siga el manual en [git página de instalación](../Installing-AndroidAPS/git-ins
 * Select your key store path by clicking on "Choose existing...".
 * Enter your passwords for key store and key.
 * If the box to remember passwords is checked you don't have to enter them. In case the box was not checked during last build and you cannot remember the passwords refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
-* Click "Next".
+* Haga clic en "Siguiente".
 
 ![Key store](../images/AndroidStudio361_Update05.png)
 
@@ -94,9 +94,9 @@ On your phone you have to allow installation from unknown sources. Manuals how t
 
 ## Comprobar la versión de AAPS en el teléfono
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Puede comprobar la versión de AAPS en su teléfono haciendo clic en el menú de tres puntos en la parte superior derecha y luego acerca.
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![Versión de AAPS instalada](../images/Update_VersionCheck.png)
 
 ## Solución de problemas
 
