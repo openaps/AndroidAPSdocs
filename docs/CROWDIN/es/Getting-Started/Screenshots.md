@@ -43,19 +43,19 @@ Pulsación larga en el gráfico para cambiar la escala de tiempo. Puede elegir e
 
 Las líneas extendidas muestran los cálculos y tendencias de BG pronosticados - si lo ha seleccionado.
 
-* **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
+* **Naranja** línea: [COB](../Usage/COB-calculation.rst) (color que se utiliza generalmente para representar a los COB y los hidratos)
    
    Prediction line shows where your BG (not where cob itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
 
-* **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
+* **Azul oscuro** línea: IOB (color que se utiliza generalmente para representar IOB e insulina)
    
    Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
 
-* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* **Azul claro** línea: cero-temp (predicción de BG si se establecería una tasa basal temporal en 0%)
    
    Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
 
-* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals)
+* **Amarillo oscuro** line: [UAM ](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (comidas no anunciadas)
    
    Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
 
@@ -80,7 +80,7 @@ Esta sección también se puede configurar utilizando las opciones de la secció
 
 ### Sección G
 
-Le permite administrar un bolo (normalmente usaría el botón Calculadora para hacer esto) y añadir una calibración CGM con sangre del dedo. Also a Quick Wizard button would be displayed here if configured in [Config Builder](../Configuration/Config-Builder#quickwizard-settings).
+Le permite administrar un bolo (normalmente usaría el botón Calculadora para hacer esto) y añadir una calibración CGM con sangre del dedo. También se mostrará aquí un botón de Asistente rápido si está configurado en [Constructor de Configuración](../Configuration/Config-Builder#quickwizard-settings).
 
 ## La calculadora
 
@@ -136,17 +136,17 @@ Y más en: [Curvas Exponenciales de Insulina + Fiasp](http://seemycgm.com/2017/1
 
 ![Estado de Infusora](../images/Screenshot_pump_Combo.png)
 
-Aquí vemos el estado de la bomba de insulina - en este caso un Combo Accu-Chek. The information displayed is self-explanatory. Una pulsación larga en el botón HISTORIAL permite leer los datos de la historia de la bomba, incluyendo su perfil basal. Pero recuerde que sólo se da soporte a un perfil basal en la bomba Combo.
+Aquí vemos el estado de la bomba de insulina - en este caso un Combo Accu-Chek. La información que se muestra es autoexplicativa. Una pulsación larga en el botón HISTORIAL permite leer los datos de la historia de la bomba, incluyendo su perfil basal. Pero recuerde que sólo se da soporte a un perfil basal en la bomba Combo.
 
 ## Portal de Atención (Care Portal)
 
 Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
 
-### Carb correction
+### Corrección de Carbohidratos
 
 Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
 
-1. Check and remember actual COB and IOB on homescreen.
+1. Compruebe y recuerde el COB y el IOB actuales en la pantalla de inicio.
 2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
    
    ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
@@ -164,7 +164,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 ## Loop, MA, AMA, SMB
 
-You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
+You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. Estos temas se debaten en otro lugar.
 
 ## Perfil
 
