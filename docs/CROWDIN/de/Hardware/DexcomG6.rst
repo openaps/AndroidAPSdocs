@@ -5,6 +5,7 @@ Grundsätzliches vorab
 
 * Beachte die allgemeinen Empfehlungen zur CGM Hygiene und zum Setzen des Sensors, die Du `hier <../Hardware/GeneralCGMRecommendation.html>`_ findest.
 * Für G6 Transmitter, die nach Herbst / Ende 2018 produziert wurden, musst Du eine der letzten `nightly built xDrip+ versions <https://github.com/NightscoutFoundation/xDrip/releases>`_ verwenden. Diese Transmitter haben eine neue Firmware und die letzte stabile Version von xDrip+ vom 10.01.2019 kann mit diesen noch nicht korrekt umgehen.
+* Der Dexcom Empfänger ist hilfreich und wird i.d.R. von den Krankenkassen bezahlt. Selbst wenn Du ihn nicht täglich im Einsatz hast, kannst Du Dich bei eventuellen Reklamationen allein auf die Anzeigen des Receivers beziehen. Der Parallelbetrieb ist möglich, denn Transmitter können gleichzeitig an den Empfänger und ein weiteres Gerät senden.
 
 Allgemeine Hinweise zum Closed Loop mit dem Dexcom G6
 ==================================================
@@ -24,7 +25,7 @@ Dexcom G6 mit xDrip+
 * Der Dexcom G6-Transmitter kann gleichzeitig mit einem Dexcom-Empfänger (oder alternativ mit der t:slim-Pumpe) und einer App auf dem Handy verbunden werden.
 * Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
 * Falls Du Clarity benötigst und trotzdem von den xDrip+ Alarmen profitieren willst, musst Du die <a href="../Hardware/DexcomG6#g6-mit-der-gepatchten-dexcom-app">gepatchte Dexcom App</a> mit lokaler Datenübertragung zu xDrip+ verwenden.
-* Lade `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ herunter und folge den Anleitungen auf Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
+* Lade `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ herunter und folge den Anleitungen auf Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xdrip.
 * Passe die Einstellungen von xDrip+ entsprechend den Angaben auf der `Seite xDrip+ Einstellungen  <../Configuration/xdrip.html>`_ an.
 * Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze `Identify receiver` wie auf der Seite `xDrip+ Einstellungen <../Configuration/xdrip.html>`_ beschrieben.

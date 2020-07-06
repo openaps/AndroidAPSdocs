@@ -36,6 +36,8 @@ Schaltflächen:
 * rotes X: löschen
 * blauer Pfeil: duplizieren
 
+Achte darauf, dass Du das richtige Profil anpasst, wenn Du Änderungen vornimmst. Beim Wechsel zum Profil-Tab wird nicht immer das aktuell genutzte Profil angezeigt. Wenn Du z.B. einen Profilwechsel über den Startbildschirm durchgeführt hast, wird ggf. im Profil-Tab ein anderes Profil angezeigt.
+
 #### Profilwechsel klonen
 
 Aus einem Profilwechsel kannst Du ganz einfach ein neues lokales Profil erstellen. Zeitverschiebung und Prozentsatz des Profilwechsels werden in das neue lokale Profil übernommen.
@@ -281,7 +283,7 @@ Zeigt im Dropdown- und Sperrbildschirm deines Smartphones eine kurze Übersicht 
 
 ### Nightscout-Client
 
-NS-Client Synchronisierung deiner AndroidAPS-Daten mit Nightscout einrichten.
+Ns-Client Synchronisierung deiner AndroidAPS-Daten mit Nightscout einrichten.
 
 Falls **Logge App-Start in Nightscout** aktiviert ist, ist jeder AndroidAPS Neustart in Nightscout sichtbar. Dies kann dabei helfen, Probleme mit der App zu erkennen (z.B. Batteriesparmodus für AAPS nicht deaktiviert), aber auch die Kurven in Nightscout mit Einträgen überfrachten.
 

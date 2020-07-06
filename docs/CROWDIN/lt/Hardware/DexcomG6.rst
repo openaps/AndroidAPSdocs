@@ -5,6 +5,7 @@ Pirmiausia pagrindai
 
 * Laikykitės pagrindinių NGJ higienos ir nustatymų rekomendacijų, kurios pateiktos čia: <../Hardware/GeneralCGMRecommendation.html>`_.
 * G6 siųstuvams, pagamintiems nuo 2018 metų rudens/pabaigos, prašome įsitikinkite, kad naudojate vieną naujausių xDrip+ versijų <https://github.com/NightscoutFoundation/xDrip/releases>`_. Šie siųstuvai turi naują programinę įrangą, o vėliausia stabili xDrip+ versija (2019/01/10) su ja neveikia.
+* If you have the possibility to get a Dexcom receiver from your health insurance it is worth getting it. Even if you do not use it every day you can exclusively refer to what the receiver said when you need to file a complaint. Parallel use is possible as transmitters can send to the receiver, plus to one more device at the same time.
 
 Bendrieji patarimai naudojant uždarą ciklą su G6
 ==================================================
@@ -24,7 +25,7 @@ Jei naudojate G6 su xDrip+
 * Dexcom G6 siųstuvą galima vienu metu sujungti su Dexcom imtuvu (arba alternatyviai su t:slim pompa) ir mobiliojo telefono programa.
 * Jei naudojate xDrip+ glikemijos duomenims gauti, pirmiausia pašalinkite Dexcom programą. **Negalite vienu metu prijungti xDrip+ ir Dexcom programos prie vieno siųstuvo!**
 * Jei jums reikia Clarity programos ir vis tiek norite naudotis xDrip+ aliarmais, jums reikia </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>modifikuotos Dexcom programos su įjungta lokalaus duomenų perdavimo funkcija į xDrip+.
-* Jei dar to nepadarėte, atsisiųskite xDrip <https://github.com/NightscoutFoundation/xDrip> _ir vykdykite Nightscout instrukcijas (G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>_).
+* If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite xDrip.
 * Pritaikykite xDrip+ nustatymus pagal 'xDrip+ nustatymų puslapį <../Configuration/xdrip.html>`_
 * Jei AAPS negauna glikemijos duomenų, kai telefonas veikia skrydžio režimu, naudokite funkciją 'Nustatyti gavėją', kaip aprašyta xDrip+ nustatymų puslapyje <../Configuration/xdrip.html>`_.
@@ -64,9 +65,9 @@ Dexcom G6 specifinių trikčių šalinimas
 .. ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip+ PhoneServiceState
 
-Bendrųjų trikčių šalinimas
+General troubleshooting
 --------------------------------------------------
-Bendrųjų trikčių šalinimą, skirtą NGJ, galite rasti 'čia <./GeneralCGMRecommendation.html#Troubleshooting>`_.
+General Troubleshooting for CGMs can be found `here <./GeneralCGMRecommendation.html#Troubleshooting>`_.
 
 Naujas siųstuvas su veikiančiu sensoriumi
 --------------------------------------------------

@@ -31,9 +31,9 @@
 
 ### Error durante la administración de insulina
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+En caso de que la conexión entre la AAPS y Dana RS se pierde durante la infusión del bolo de insulina (es decir, usted camina alejándose del teléfono, mientras que Dana RS esta bombeando la insulina), verá el siguiente mensaje y escuchar un sonido de alarma:
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Alarma de administración de insulina](../images/DanaRS_Error_bolus.png)
 
 * En la mayoría de los casos, se trata sólo de un problema de comunicación y se inyecta la cantidad correcta de insulina.
 * Compruebe el historial de la bomba (ya sea en la bomba o a través de la pestaña Dana > historial de bomba > bolos) para ver si es correcto bolo inyectado.
@@ -42,7 +42,7 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 ## Nota especial al cambiar de teléfono
 
-When switching to a new phone the following steps are neccessary:
+Al cambiar a un teléfono nuevo, los siguientes pasos son necesarios:
 
 * **Exportar valores** en el teléfono antiguo
   

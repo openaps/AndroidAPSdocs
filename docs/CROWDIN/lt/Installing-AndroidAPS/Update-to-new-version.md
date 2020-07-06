@@ -6,7 +6,7 @@
 
 ## Important notes
 
-* Prašome atnaujinti kuo greičiau, kai tik nauja versija yra prieinama. Gausite [informaciją AndroidAPS pagrindiniame ekrane](../Installing-AndroidAPS/Releasenotes.html#release-notes) apie naują versiją.
+* Prašome atnaujinti kuo greičiau, kai tik nauja versija yra prieinama. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes#release-notes) about the new version.
 * Nuo versijos 2.3 jūs turite naudoti git atnaujinimui. Atnaujinimas per zip failą daugiau nebeveikia.
 * Norėdami sukurti apk failą, naudokite [Android Studio versiją 3.6.1](https://developer.android.com/studio/) arba naujesnę versiją.
 * [Windows 10 32-bitų sistemos](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) nėra palaikomos Android Studio 3.6.1.

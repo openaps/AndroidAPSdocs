@@ -33,15 +33,15 @@ AndroidAPS está diseñado para ser controlado por relojes Android Wear. Si dese
 Las siguientes funciones pueden activarse desde el reloj:
 
 * Establecer un objetivo temporal
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
+* utilizar el calculador de bolos (las variables de cálculo se pueden definir en [configuración ](../Configuration/Config-Builder#wear) en el teléfono)
 * Administrar carbohidratos extendidos (eCarbs)
 * administer a bolus (insulin + carbs)
 * watch settings
-* status 
-    * check pump status
+* estado 
+    * comprobar estado de la infusora
     * check loop status
     * check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
-    * show TDD (Total daily dose = bolus + basal per day)
+    * mostrar TDD (dosis diaria total = bolos + basal por día)
 
 ## Esferas de AAPS
 
@@ -225,7 +225,7 @@ Puesto que no podemos comprometer la comunicación (necesitamos datos actualizad
 * Es mejor utilizar las pantallas que limitan la cantidad de datos representados en modalidad inactiva / atenuada.
 * Tenga en cuenta que al mezclar otras compilaciones, como los widgets meteorológicos de terceros, u otros datos de utilización de orígenes externos.
 * Empiece con las pantallas más sencillas. Añada una compilación por vez y observe cómo afecta a la duración de la batería.
-* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). En los dispositivos OLED, esto limitará la cantidad de píxeles encendidos y limitará el agotamiento.
+* Intente utilizar el tema **Oscuro** para la pantalla de AAPS y [**Divisor de Coincidencias**](#watchface-settings). En los dispositivos OLED, esto limitará la cantidad de píxeles encendidos y limitará el agotamiento.
 * Compruebe lo que funciona mejor en su reloj: AAPS en pantallas estándars o relojes con AAPS y pantallas con compilaciones.
 * Observar durante unos días, con diferentes perfiles de actividad. La mayoría de los relojes activan la pantalla al mirar, mover y otros disparadores relacionados con el uso.
 * Compruebe los valores del sistema global que afectan al rendimiento: notificaciones, tiempo de espera de visualización retroiluminación/activo, cuando se activa el GPS.
