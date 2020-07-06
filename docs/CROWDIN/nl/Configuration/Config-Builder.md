@@ -57,8 +57,6 @@ Local profiles can also be uploaded to Nightscout. The settings can be found in 
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
 
-Have in mind, only the profile switches made over the profile tab are uploaded to nightscout. If you do a profile switch by using the profile button in the mainscreen, it will not be uploaded.
-
 Advantage:
 
 * Geen internetverbinding nodig om profielinstellingen te wijzigen
