@@ -5,7 +5,7 @@ Grundsätzliches vorab
 
 * Beachte die allgemeinen Empfehlungen zur CGM Hygiene und zum Setzen des Sensors, die Du `hier <../Hardware/GeneralCGMRecommendation.html>`_ findest.
 * Für G6 Transmitter, die nach Herbst / Ende 2018 produziert wurden, musst Du eine der letzten `nightly built xDrip+ versions <https://github.com/NightscoutFoundation/xDrip/releases>`_ verwenden. Diese Transmitter haben eine neue Firmware und die letzte stabile Version von xDrip+ vom 10.01.2019 kann mit diesen noch nicht korrekt umgehen.
-* Wenn Du die Möglichkeit hast, dass Deine Krankenkasse einen Dexcom Empfänger bezahlt, lohnt sich dessen Anschaffung. Selbst wenn Du ihn nicht täglich im Einsatz hast, kannst Du Dich bei eventuellen Reklamationen allein auf die Anzeigen des Receivers beziehen. Der Parallelbetrieb ist möglich, denn Transmitter können gleichzeitig an den Empfänger und ein weiteres Gerät senden.
+* Der Dexcom Empfänger ist hilfreich und wird i.d.R. von den Krankenkassen bezahlt. Selbst wenn Du ihn nicht täglich im Einsatz hast, kannst Du Dich bei eventuellen Reklamationen allein auf die Anzeigen des Receivers beziehen. Der Parallelbetrieb ist möglich, denn Transmitter können gleichzeitig an den Empfänger und ein weiteres Gerät senden.
 
 Allgemeine Hinweise zum Closed Loop mit dem Dexcom G6
 ==================================================
