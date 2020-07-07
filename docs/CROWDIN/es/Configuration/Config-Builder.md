@@ -32,24 +32,24 @@ Los perfiles locales forman parte de [ valores exportados ](../Usage/ExportImpor
 
 Botones:
 
-* green plus: add
+* verde más: añadir
 * rojo X: borrar
 * flecha azul: duplicado
 
-Si realiza algún cambio en su perfil, asegúrese de que está editando el perfil correcto. In profile tab there is not always shown the actual profile beeing used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+Si realiza algún cambio en su perfil, asegúrese de que está editando el perfil correcto. En la pestaña de perfil no siempre se muestra el perfil real que se utiliza-por ejemplo, si usted hizo un cambio de perfil utilizando la pestaña de perfil en la pantalla de inicio puede diferir del perfil realmente mostrado en la pestaña de perfil, ya que no hay ninguna conexión entre estos.
 
-#### Clone profile switch
+#### Clonar cambio de perfil
 
-Puede crear fácilmente un perfil local nuevo a partir del conmutador de perfil. In this case timeshift and percentage will be applied to the new local profile.
+Puede crear fácilmente un perfil local nuevo a partir del conmutador de perfil. En este caso, el cambio de tiempo y el porcentaje se aplicarán al nuevo perfil local.
 
 1. Vaya a la pestaña de tratamientos.
 2. Seleccionar Cambio de perfil.
 3. Pulse "Clonar".
 4. Puede editar el nuevo perfil local en la pestaña Perfil local (LP) o a través del menú principal.
 
-![Clone profile switch](../images/LocalProfile_ClonePS.png)
+![Clonar cambio de perfil](../images/LocalProfile_ClonePS.png)
 
-If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
+Si desea cambiar de perfil Nightscout a un perfil local, haga un cambio de perfil en su perfil NS y clone el conmutador de perfil tal como se ha descrito anteriormente.
 
 #### Cargar los perfiles locales para Nightscout
 
@@ -61,8 +61,8 @@ Ventajas:
 
 * no es necesaria ninguna conexión a Internet para cambiar los valores de perfil
 * los cambios de perfil se pueden hacer directamente en el teléfono
-* new profile can be created from profile switch
-* local profiles can be uploaded to Nightscout
+* nuevo perfil se puede crear desde el conmutador de perfil
+* los perfiles locales también se pueden subir a Nightscout
 
 Desventajas:
 
@@ -152,7 +152,7 @@ Usted puede ver su sensibilidad en la pantalla de inicio seleccionando SEN y vie
 
 ### Ajustes absorción
 
-Si utiliza Oref1 con SMB, debe cambiar **min_5m_carbimpact ** a 8. El valor sólo se utiliza durante las diferencias en las lecturas de CGM o cuando la actividad física "utiliza" todo el aumento de la glucosa en la sangre, lo que de otra manera causaría que AAPS descienda los COB. At times when [carb absorption](../Usage/COB-calculation.rst) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Básicamente, es un seguro contra fallos.
+Si utiliza Oref1 con SMB, debe cambiar **min_5m_carbimpact ** a 8. El valor sólo se utiliza durante las diferencias en las lecturas de CGM o cuando la actividad física "utiliza" todo el aumento de la glucosa en la sangre, lo que de otra manera causaría que AAPS descienda los COB. A veces, cuando [ absorción de carbohidratos ](../Usage/COB-calculation.rst) no se puede elaborar dinámicamente basándose en su cambios de glucosa, se inserta un ajuste por medio de los carbohidratos. Básicamente, es un seguro contra fallos.
 
 ## APS
 
