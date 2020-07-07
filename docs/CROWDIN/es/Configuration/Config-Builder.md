@@ -152,7 +152,7 @@ Usted puede ver su sensibilidad en la pantalla de inicio seleccionando SEN y vie
 
 ### Ajustes absorción
 
-Si utiliza Oref1 con SMB, debe cambiar **min_5m_carbimpact ** a 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.rst) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Básicamente, es un seguro contra fallos.
+Si utiliza Oref1 con SMB, debe cambiar **min_5m_carbimpact ** a 8. El valor sólo se utiliza durante las diferencias en las lecturas de CGM o cuando la actividad física "utiliza" todo el aumento de la glucosa en la sangre, lo que de otra manera causaría que AAPS descienda los COB. At times when [carb absorption](../Usage/COB-calculation.rst) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Básicamente, es un seguro contra fallos.
 
 ## APS
 
@@ -171,33 +171,33 @@ Defina si quieres permitir controles automáticos AAPS o no.
 
 ### Lazo abierto
 
-AAPS evalúa continuamente todos los datos disponibles (IOB, COB, BG...) y hace sugerencias de tratamiento sobre cómo ajustar su terapia si es necesario. The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). Esta opción es para conocer cómo funciona AndroidAPS o si está usando una bomba no soportada.
+AAPS evalúa continuamente todos los datos disponibles (IOB, COB, BG...) y hace sugerencias de tratamiento sobre cómo ajustar su terapia si es necesario. Las sugerencias no se ejecutarán automáticamente (como en el bucle cerrado) deben introducirse manualmente en la bomba o usando un botón en caso de que esté usando una bomba compatible (Dana R/RS o Accu Chek Combo). Esta opción es para conocer cómo funciona AndroidAPS o si está usando una bomba no soportada.
 
 ### Lazo cerrado
 
-AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). The Closed Loop works within numerous safety limits, which you can be set individually. El Lazo Cerrado sólo es posible si está en [Objetivo 6 ](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) o superior y utiliza una bomba soportada.
+AAPS evalúa continuamente todos los datos disponibles (IOB, COB, BG...) y ajusta automáticamente el tratamiento si es necesario (es decir, sin intervención adicional) para alcanzar el rango o valor de destino establecido (entrega en bolo, velocidad basal temporal, cambio de insulina para evitar la hipoglucemia, etc.). El Loop Cerrado funciona dentro de numerosos límites de seguridad, que se pueden establecer individualmente. El Lazo Cerrado sólo es posible si está en [Objetivo 6 ](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) o superior y utiliza una bomba soportada.
 
 ## Objetivos (programa de aprendizaje)
 
 AndroidAPS tiene una serie de objetivos que tiene que cumplir paso a paso. Esto debería guiarle de forma segura hacia la configuración de un sistema de bucle cerrado. Esto garantiza que usted tiene configurado todo correctamente y que entienda lo que el sistema hace exactamente. Esta es la única forma en la que puedes confiar en el sistema.
 
-Deberías [exportar tus ajustes](../Usage/ExportImportSettings.rst) (incluyendo el progreso de los objetivos) regularmente. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+Deberías [exportar tus ajustes](../Usage/ExportImportSettings.rst) (incluyendo el progreso de los objetivos) regularmente. En caso de que tenga que reemplazar su smartphone más tarde (compra de uno nuevo, daños de pantalla, etc.), simplemente puede importar estos ajustes.
 
-See [Objectives](../Usage/Objectives.rst) page for more information.
+Consulte la página [Objetivos](../Usage/Objectives.rst) para obtener más información de configuración.
 
 ## Tratamientos
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
+Si ve la pestaña Tratamientos (Trat), usted puede ver los tratamientos que se han subido a nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
 
 ## General
 
 ### Inicio
 
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
+Muestra el estado actual de su lazo y los botones para las acciones más comunes (ver [sección de La Pantalla de inicio](../Getting-Started/Screenshots.md) para obtener más detalles). Se puede acceder a los valores haciendo clic en el engranaje.
 
 #### Mantener pantalla activa
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. Esto es útil para presentaciones, etc. Pero que consume una gran cantidad de energía de la batería. Therefore, it is recommended to connect the smartphone to a charger cable.
+La opción 'Mantener pantalla encendida' obligará a Android a mantener la pantalla en todo momento. Esto es útil para presentaciones, etc. Pero que consume una gran cantidad de energía de la batería. Por lo tanto, se recomienda conectar el smartphone con un cable a un cargador.
 
 #### Botones
 
@@ -210,19 +210,19 @@ Definir los Botones que se muestran en la pantalla de inicio.
 * MCG (abre xDrip +)
 * Calibración
 
-Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
+Además, puede establecer accesos directos para los incrementos de insulina y carb y decidir si el campo de notas debe mostrarse en los diálogos de tratamiento.
 
 #### Asistente configuración
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Usar para comidas que se consumen con frecuencia. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Crear un botón para una determinada comida estándar (carbohidratos y método de cálculo para el bolo) que se mostrará en la pantalla de inicio. Usar para comidas que se consumen con frecuencia. Si se especifican diferentes horas para las diferentes comidas, siempre tendrá el botón de comida adecuado en la pantalla de inicio, dependiendo de la hora del día.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Nota: el botón, no será visible si se encuentra fuera del intervalo de tiempo especificado, o si usted tiene suficiente IOB para cubrir los hidratos de carbono definidos en el botón Asistente rápido (QuickWizard).
 
 ![Configuración del asistente rápido](../images/ConfBuild_QuickWizard.png)
 
 #### Ajustes avanzados
 
-Habilite la funcionalidad de super bolo en el asistente. Utilícelo con precaución y no lo habilite hasta que aprenda lo que realmente hace. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Habilite la funcionalidad de super bolo en el asistente. Utilícelo con precaución y no lo habilite hasta que aprenda lo que realmente hace. Básicamente, el basal para las próximas dos horas se añade al bolo y se activa un tiempo cero de dos horas. **Las funciones de lazo AAPS se inhabilitarán, por lo que se utilizará con precaución! Si utiliza las funciones de lazo de SMB, AAPS se inhabilitará de acuerdo con los valores en ["Máx minutos de basal para limitar SMB a" ](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), si no utiliza funciones de SMB se inhabilitarán durante dos horas. ** Detalles de super bolo pueden encontrarse [aquí ](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Acciones
 
@@ -244,62 +244,62 @@ Algunos botones para acceder rápidamente a funciones comunes:
 * Historial
 * TDD (dosis diaria total = bolo + basal por día)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Algunos médicos usan -especialmente para los recién iniciados en las bombas- una relación basal-bolo de 50:50. Por lo tanto, la proporción se calcula como TDD / 2 * TBB (Total base basal = suma de la tasa basal en 24 horas). Otros prefieren un rango de 32% a 37% de TDD para TBB. Al igual que la mayoría de estas reglas empíricas, su validez real es limitada. Nota: ¡Tu diabetes puede variar!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions_b.png)
+![Pestaña de acción](../images/ConfBuild_ConfBuild_Actions_b.png)
 
 ### Comunicaciones SMS
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
+Permite a los cuidadores remotos controlar algunas características de AndroidAPS a través de SMS, ver [mandos SMS ](../Children/SMS-Commands.rst) para obtener más información de configuración.
 
 ### Comida
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Muestra los valores de alimentos definidos en la base de datos de alimentos de Nightscout, consulte el apartado [Información de Nightscout](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) para obtener más información de configuración.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Nota: Las entradas no se pueden utilizar en la calculadora AndroidAPS. (Ver solamente)
 
 ### Reloj
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Supervise y controle AAPS con su reloj Android Wear (vea [pagina de pantallas de reloj](../Configuration/Watchfaces.md)). Utilice la configuración (icono engranaje) para definir las variables que deben tenerse en cuenta a la hora de calcular el bolo dado a través de su reloj (por ejemplo, la tendencia de 15min, COB...).
 
 Si desea bolo etc. desde el reloj entonces dentro de "Configuración de Reloj" que necesitas para activar "Controles desde el Reloj".
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Ajustes reloj](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+A través de la pestaña Reloj o el menú principal (la parte superior izquierda de la pantalla, si no se visualiza el tabulador) puede
 
 * Reenviar todos los datos. Puede ser útil si el reloj no está conectado durante algún tiempo y desea enviar la información al reloj.
 * Abre los ajustes en tu reloj directamente desde tu teléfono.
 
 ### Linea de estado xDrip (reloj)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Visualizar información de lazo en el reloj de xDrip + (si no está utilizando AAPS/[AAPSv2 watchface ](../Configuration/Watchfaces.md)
 
 ### Avisos permanentes
 
-Displays a summary of current BG, delta, active TBR%, active basal u/h and profile, IOB and split into bolus IOB and basal IOB on the phones's dropdown screen and phone's lock screen.
+Visualiza un resumen del BG actual, delta, TBR% activo, basal activo u/h y perfil, IOB y se divide en IOB en bolo y basal IOB en la pantalla desplegable de los teléfonos y en la pantalla de bloqueo del teléfono.
 
-![AAPS widget](../images/ConfBuild_Widget.png)
+![Widget de AAPS](../images/ConfBuild_Widget.png)
 
 ### NS Client
 
-Setup sync of your AndroidAPS data with Nightscout.
+Configuración de la sincronización de datos de su AndroidAPS con Nightscout.
 
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimization not disabled for AAPS) but can flood the Nightscout graph with entries.
+Si **Comenzar registro de app hacia NS** se activa cada dato de AndroidAPS será visible en Nightscout. Puede ser útil para detectar problemas con la aplicación (por ejemplo, la optimización de la batería no inhabilitada para AAPS), pero puede llenar el gráfico Nightscout con datos.
 
 #### Opciones de alarma
 
-Activate/deactivate AndroidAPS alarms
+Activar/desactivar alarmas AndroidAPS
 
 ![Opciones de alarma](../images/ConfBuild_NSClient_Alarms.png)
 
 #### Ajustes conexión
 
-Offline looping, disable roaming...
+Lazo sin conexión, desactivar roaming...
 
-If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
+Si desea utilizar sólo una red WiFi específica, puede especificar su **SSID de WiFi **. Varios SSID se pueden separar mediante punto y coma. Para suprimir todos los SSID, introduzca un espacio en blanco en el campo.
 
-![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
+![Configuración conexión de Nightscout](../images/ConfBuild_ConnectionSettings.png)
 
 #### Ajustes avanzados
 
@@ -310,12 +310,12 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 * Datos no subidos a NS
 * Utilice siempre los valores absolutos basales-> Debe activarse si desea utilizar [Autoajuste ](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) correctamente.
 
-![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
+![Ajustes avanzados de Nightscout](../images/ConfBuild_NSClient_Advanced.png)
 
 ### Mantenimiento
 
-Email and number of logs to be send. Normally no change necessary.
+Correo electrónico y número de registros que se van a enviar. Normalmente no es necesario ningún cambio.
 
 ### Configuraciones
 
-Use tab for config builder instead of hamburger menu.
+Utilice la pestaña para configuraciones en lugar del menú principal.
