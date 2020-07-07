@@ -36,11 +36,11 @@ Knoppen:
 * rode X: verwijderen
 * blauwe pijl: kopiëren
 
-If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile beeing used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+Als je wijzigingen aanbrengt in je profiel, zorg er dan voor dat je het juiste profiel aan het bewerken bent. Op het profiel tabblad wordt niet altijd het gebruikte profiel weergegeven - bijvoorbeeld als je van profiel hebt gewisseld met de profiel tab op het overzicht-scherm, kan dit afwijken van het profiel dat wordt weergegeven in het tabblad profiel omdat er geen koppeling tussen deze tabs bestaat.
 
 #### Profiel wissel dupliceren
 
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+Je kunt eenvoudig een nieuw lokaal profiel aanmaken van een profiel wissel. In dit geval word het tijdsverschil en het percentage toegepast op het nieuwe lokale profiel.
 
 1. Ga naar het tabblad behandelingen.
 2. Kies Profiel Wissel.
@@ -49,37 +49,37 @@ You can easily create a new local profile from a profile switch. In this case ti
 
 ![Profiel wissel dupliceren](../images/LocalProfile_ClonePS.png)
 
-If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
+Als je van Nightscout profiel wilt veranderen naar lokaal profiel, schakel dan je NS profiel in en kopieer de profiel wissel zoals hierboven beschreven.
 
 #### Lokale profielen uploaden naar Nightscout
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in NS Client preferences.
+Lokale profielen kunnen ook worden geüpload naar Nightscout. De instellingen bevinden zich in NS Client instellingen.
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
 
-Advantage:
+Voordelen:
 
 * Geen internetverbinding nodig om profielinstellingen te wijzigen
 * Profielwijzigingen kunnen direct op de telefoon worden aangebracht
 * nieuw profiel kan gecreëerd worden via profiel wissel
 * lokale profielen kunnen naar Nightscout worden geüpload
 
-Disadvantage:
+Nadelen:
 
 * niks
 
 ### NS Profiel
 
-NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+NS Profiel maakt gebruik van de profielen die je hebt opgeslagen op jouw Nightscout site (https://[jouwnightscoutpagina]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
 
 Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
-Advantage:
+Voordelen:
 
 * Meerdere profielen
 * Gemakkelijk te bewerken via PC of tablet
 
-Disadvantage:
+Nadelen:
 
 * Geen lokale wijzigingen in profielinstellingen
 * Profielwijzigingen kunnen niet direct op de telefoon worden aangebracht
