@@ -34,7 +34,7 @@ Rejoindre le groupe Facebook principal [AndroidAPS](https://www.facebook.com/gro
 ### Allemagne
 
 * [Communauté Open Source Looper](https://de.loopercommunity.org/): communauté allemande de boucleurs pour des boucles en Open Source, diabète en général, communication, soutien et rencontre locale
-* [Réunions de Looper en Allemagne, Autriche & Suisse](http://loopertreffen.androidaps.de)
+* [Réunions de Looper en Allemagne, Autriche & Suisse](https://de.loopercommunity.org/c/veranstaltungen/l/calendar)
 * [Freestyle Libre Freaks Facebook group](https://www.facebook.com/groups/FreestyleLibreFreaks/): Capteur Freestyle Libre en tant que MGC/MGF
 * [Groupe Facebook NightscoutDE](https://www.facebook.com/groups/nightscoutDE/)
 
