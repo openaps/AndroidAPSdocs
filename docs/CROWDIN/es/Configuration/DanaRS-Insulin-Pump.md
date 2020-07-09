@@ -2,7 +2,7 @@
 
 *Estas instrucciones son para configurar la app y la bomba si tiene una DanaRS a partir de 2017. Visite [Bomba de insulina DanaR](./DanaR-Insulin-Pump) si en su lugar tiene una DanaR original.*
 
-**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
+**DanaRS con nuevo firmware v3 no se puede utilizar actualmente con AndroidAPS!**
 
 * En la bomba DanaRS la app utiliza el perfil "BASAL A". Los datos existentes se sobrescriben.
 
@@ -12,12 +12,12 @@
 
 * Seleccione el dispositivo Bluetooth de DanaRS y haga clic en el número de serie de DanaRS.
   
-  ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
+  ![AAPS empareja con Dana RS](../images/AAPS_DanaRSPairing.png)
 
 * Seleccione la contraseña de la bomba e introduzca su contraseña. (La contraseña predeterminada es 1234)   
   **Hay que confirmar el emparejamiento en la bomba! ** Es la forma que se utiliza para otros emparejamientos bluetooth (es decir, smartphone y audio de autos).
   
-  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+  ![Emparejamiento de confirmación Dana RS](../images/DanaRS_Pairing.png)
 
 * Seleccione velocidad de bolo, para cambiar la velocidad predeterminada utilizada (12seg por 1u, 30seg por 1u o 60seg por 1u).
 
