@@ -1,4 +1,4 @@
-# Accu-Chek Combo Tips for basic usage
+# Consejos para uso básico de Combo AccuChek
 
 ## Cómo garantizar las operaciones sin problemas
 
