@@ -187,7 +187,7 @@ Consulte la página [Objetivos](../Usage/Objectives.rst) para obtener más infor
 
 ## Tratamientos
 
-Si ve la pestaña Tratamientos (Trat), usted puede ver los tratamientos que se han subido a nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
+Si ve la pestaña Tratamientos (Trat), usted puede ver los tratamientos que se han subido a nightscout. Si desea editar o suprimir una entrada (por ejemplo, comió menos carbohidratos de lo que esperaba), seleccione 'Eliminar' y especifique el nuevo valor (cambie la hora si es necesario) a través del botón [ carbohidratos en la pantalla inicial ](../Getting-Started/Screenshots.md#carb-correction).
 
 ## General
 
@@ -232,7 +232,7 @@ Algunos botones para acceder rápidamente a funciones comunes:
 * Objetivos temporales
 * Establecer / cancelar temporal. dosis basal
 * Bolo extendido (sólo la bomba DanaR/RS o Combo)
-* Record for any specific care entries
+* Registro de cualquier entrada de cuidados
     
     * Medir glucosa
     * Cambio de cánula y llenado - registro de cambio cánula y llenado (si no se hace en la bomba)
