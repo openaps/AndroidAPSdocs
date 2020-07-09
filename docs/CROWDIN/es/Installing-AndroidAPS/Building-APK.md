@@ -31,11 +31,11 @@ En general, los pasos necesarios para crear el archivo APK son:
 
 1. [Instala Git](../Installing-AndroidAPS/git-install.rst)
 2. [Instalar Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
-3. [Set git path in Android Studio preferences](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
-4. [Download AndroidAPS code](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
-5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
-6. [Build the app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generate signed apk)
-7. [Transfer apk file to your phone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+3. [Establecer la ruta git en las preferencias de Android Studio](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
+4. [Descargar código de AndroidAPS](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
+5. [Descargar Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
+6. [ Construir la aplicación ](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generar apk firmado)
+7. [Transferir el archivo apk a su teléfono](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
 8. [Identificar receptor si se utiliza xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
 
 ## Tutorial paso a paso
@@ -48,53 +48,53 @@ Siga el manual en [git página de instalación](../Installing-AndroidAPS/git-ins
 
 ## Instalar Android Studio
 
-The following screenshots have been taken from Android Studio Version 3.6.1. Your screen might look a bit different if you use a newer version of Android Studio. Pero deberías ser capaz de encontrar el camino a través del proceso. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
+Las siguientes capturas de pantalla se han tomado de Android Studio Versión 3.6.1. Es posible que la pantalla parezca un poco diferente si utiliza una versión más reciente de Android Studio. Pero deberías ser capaz de encontrar el camino a través del proceso. [ Se proporciona ayuda de la comunidad ](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
-One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
+Una de las cosas más importantes al instalar Android Studio: ** Be patient! ** Durante la instalación y configurar Android Studio está descargando un montón de cosas que se tomarán su tiempo.
 
 Instale [Android Studio](https://developer.android.com/studio/install.html) y configurelo durante el primer inicio.
 
 Seleccione "No importar valores", ya que no lo ha utilizado anteriormente.
 
-![Do not import settings](../images/AndroidStudio361_01.png)
+![No importar valores](../images/AndroidStudio361_01.png)
 
-Decide whether you want to share data with Google or not.
+Decida si desea compartir datos con Google o no.
 
-![Share data with Google](../images/AndroidStudio361_02.png)
+![Compartir datos con Google](../images/AndroidStudio361_02.png)
 
-On the following screen click "Next".
+En la siguiente pantalla, haga clic en "Next".
 
-![Welcome screen](../images/AndroidStudio361_03.png)
+![Pantalla de bienvenida](../images/AndroidStudio361_03.png)
 
 Seleccione la instalación "Estándar" y haga clic en "Siguiente".
 
-![Standard installation](../images/AndroidStudio361_04.png)
+![Instalación estándar](../images/AndroidStudio361_04.png)
 
-Seleccione el tema para la interfaz de usuario que desee. (In this manual we used "Light".) Then click "Next". Este es sólo el esquema de colores. Usted puede seleccionar cualquier que le gusta (por ejemplo, "Darcula" para el modo oscuro). Esta selección no tiene ninguna influencia sobre la construcción del APK.
+Seleccione el tema para la interfaz de usuario que desee. (En este manual usamos "Light".) Luego haga clic en "Next". Este es sólo el esquema de colores. Usted puede seleccionar cualquier que le gusta (por ejemplo, "Darcula" para el modo oscuro). Esta selección no tiene ninguna influencia sobre la construcción del APK.
 
-![UI color scheme](../images/AndroidStudio361_05.png)
+![Esquema de color de IU](../images/AndroidStudio361_05.png)
 
-Click "Finish" on the "Verify Settings" dialog.
+Pulse "Siguiente" en el diálogo "Verificar valores".
 
-![Verify settings](../images/AndroidStudio361_06.png)
+![Verificar la configuración](../images/AndroidStudio361_06.png)
 
-Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
+Espere mientras Android Studio descarga componentes adicionales y tenga paciencia. Una vez que todo se descarga el botón "Finalizar" se vuelve azul. Haga clic en el botón ahora.
 
-![Downloading components](../images/AndroidStudio361_07.png)
+![Descarga de componentes](../images/AndroidStudio361_07.png)
 
 ## Establecer la ruta git en las preferencias
 
-Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer.
+Asegúrese de que [ git esté instalado ](../Installing-AndroidAPS/git-install.rst) en el sistema.
 
-On the Android Studio welcome screen click the small triangle (1. in next screenshot) and select "Settings" (2.).
+En la pantalla de bienvenida de Android Studio, haga clic en el triángulo pequeño (1. en la siguiente captura de pantalla) y seleccione "Configuración" (2.).
 
-![Android Studio settings from welcome screen](../images/AndroidStudio361_08.png)
+![Valores de Android Studio desde la pantalla de bienvenida](../images/AndroidStudio361_08.png)
 
 ### Windows
 
-* Click the small triangle next to Version Control (1.) to open the sub-menu.
-* Click Git (2.).
-* Make sure update method "Merge" (3.) is selected.
+* Haga clic en el triángulo pequeño junto a Control de versiones (1.) para abrir el submenú.
+* Haga clic en Git (2.).
+* Asegúrese de que el método de actualización "Merge" (3.) está seleccionado.
 * Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
 
 ![Android Studio settings](../images/AndroidStudio361_09.png)
@@ -120,7 +120,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 * For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * Si instala git a través de un homebrew, no es necesario cambiar ninguna preferencia. Solo por caso: se puedan encontrar aquí: Android Studio - Preferencias.
 
-## Download AndroidAPS code
+## Descargar código de AndroidAPS
 
 * **If you haven't already rebooted your computer after setting git path in preferences do it now. System environment must be updated.**
 * On the Android Studio welcome screen click the small triangle right of "Check out project from version control" (1.).
@@ -161,7 +161,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 ![SDK licence](../images/AndroidStudio361_19.png)
 
-## Download Android SDK
+## Descargar Android SDK
 
 * Click File > Settings.
 
