@@ -36,11 +36,11 @@
 * красный крестик: удалить
 * синяя стрелка: дублировать
 
-If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile beeing used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+Если вы вносите изменения в профиль, убедитесь, что редактируете правильный профиль. На вкладке профиля не всегда отображается фактически используемый профиль, например, если вы переключили профиль, используя вкладку профиля на домашней странице, то он может отличаться от профиля, который показан на вкладке, так как между ними нет синхронизации.
 
 #### Переключение профиля и клонирование
 
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+Вы можете легко создать новый локальный профиль с помощью переключения профиля. В этом случае сдвиг по времени и процент будет применяться к новому локальному профилю.
 
 1. Перейдите на вкладку терапии.
 2. Выберите Переключатель профилей.
@@ -49,15 +49,15 @@ You can easily create a new local profile from a profile switch. In this case ti
 
 ![Переключение профиля и клонирование](../images/LocalProfile_ClonePS.png)
 
-If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
+Если вы хотите переключаться с профиля Nightscout на локальный профиль просто сделайте переключение профиля в профиле NS и клонируйте его, как описано выше.
 
 #### Загрузить локальные профили в Nightscout
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in NS Client preferences.
+Локальные профили также могут быть загружены на Nightscout. Параметры можно найти в параметрах клиента NS.
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
 
-Advantage:
+Преимущества:
 
 * не требуется подключение к интернету для изменения настроек профиля
 * изменения профиля могут быть сделаны непосредственно на телефоне
@@ -70,25 +70,25 @@ Disadvantage:
 
 ### Профиль Nightscout (NS)
 
-NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+Профиль NS использует профили, которые вы сохранили на сайте Nightscout (https://[адрес вашего сайта]/profile). Можно использовать [Переключатель профиля](../Usage/Profiles.md) для изменения активного профиля, это записывает профиль в помпу на случай неполадок с AndroidAPS. Это позволяет вам легко создавать несколько профилей в Nightscout (то есть.. работа, дом, спорт, отдых и т. п.). Вскоре после нажатия кнопки «Сохранить» они будут переданы в AAPS если ваш смартфон подключен к интернету. Даже без подключения к Интернету или без подключения к Nightscout профили Nightscout доступны в AAPS после синхронизации.
 
-Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+Проделайте ** переключение профиля** для активации профиля из Nightscout. Нажмите и удерживайте поле текущего профиля в верхнем углу (серое поле между светло синим полем «Открытый/замкнутый цикл» и темно синим полем области целевых значений) > переключатель профиля > выберите профиль > ОК. AAPS также прописывает выбранный профиль в помпу после изменения профиля, так что он доступен и продолжает выполняться без AAPS в чрезвычайных ситуациях.
 
-Advantage:
+Преимущества:
 
 * множественные профили
 * легко редактировать с помощью ПК или планшета
 
-Disadvantage:
+Недостатки:
 
 * невозможность локальных изменений в настройках профиля
 * профиль не может быть изменен непосредственно на телефоне
 
 ## Инсулин
 
-Select the type of insulin curve you are using. The options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak.
+Выберите кривую, соответствующую типу вашего инсулина. Варианты 'Быстродействующий Oref', Сверхбыстрый Oref' и 'Безпиковый Oref' имеют вид экспоненты. Более подробно см. в [Документах OpenAPS](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), кривые различаются на основе длительности действия инсулина DIA и времени пика.
 
-The DIA is not the same for each person. That's why you have to test it for yourself. But it must always be at least 5 hours. You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page.
+Длительность работы инсулина не одинакова для всех. Вот почему вы должны проверить ее на себе. Но она всегда должна быть минимум 5 часов. Более подробную информацию можно прочитать в разделе "Профиль инсулина" на [ этой ](../Getting-Started/Screenshots#insulin-profile) странице.
 
 For Rapid-Acting and Ultra-Rapid, the DIA is the only variable you can adjust by yourself, the time to peak is fixed. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings.
 
