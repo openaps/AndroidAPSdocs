@@ -55,7 +55,7 @@
 
 Локальные профили также могут быть загружены на Nightscout. Параметры можно найти в параметрах клиента NS.
 
-![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
+![Загрузить локальный профиль в НС](../images/LocalProfile_UploadNS2.png)
 
 Преимущества:
 
@@ -108,7 +108,7 @@ Disadvantage:
 
 Для многих людей действие FIASP практически незаметно спустя 3-4 часа, даже если тогда, как правило, остается 0.0xx ед. Это остаточное количество может быть ощутимо во время занятий спортом, например. Поэтому AndroidAPS использует как минимум 5 часов в качестве DIA.
 
-![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
+![Ультра-быстрый Oref в конфигураторе](../images/ConfBuild_UltraRapidOref.png)
 
 ### Безпиковый Oref
 
@@ -218,7 +218,7 @@ AndroidAPS ставит перед вами ряд задач (целей), ко
 
 Примечание: Кнопка не будет видна вне диапазона времени, для нее созданного или если у вас есть достаточно активного инсулина IOB на углеводы, заданные кнопкой.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Кнопка мастера быстрой настройки](../images/ConfBuild_QuickWizard.png)
 
 #### Расширенные настройки
 
@@ -244,27 +244,27 @@ AndroidAPS ставит перед вами ряд задач (целей), ко
 * История
 * TDD (Общая суточная доза = болюс + базал за день)
 
-Некоторые врачи рекомендуют - особенно для новых пользователей - соотношение базал-болюс 50:50. Поэтому эта величина рассчитывается как TDD / 2 * TBB (общая суточная база = сумма базала в течение 24 часов). Другие предпочитают диапазон от 32% до 37% от величины базала TBB. Как и большинство подобных подсказок они имеют ограниченное практическое значение. Note: Your diabetes may vary!
+Некоторые врачи рекомендуют - особенно для новых пользователей - соотношение базал-болюс 50:50. Поэтому эта величина рассчитывается как TDD / 2 * TBB (общая суточная база = сумма базала в течение 24 часов). Другие предпочитают диапазон от 32% до 37% от величины базала TBB. Как и большинство подобных подсказок они имеют ограниченное практическое значение. Примечание: Ваш диабет может быть иным!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions_b.png)
+![Вкладка "Действия"](../images/ConfBuild_ConfBuild_Actions_b.png)
 
 ### СМС-коммуникатор
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
+Позволяет удалено управлять некоторыми функциями AndroidAPS при помощи SMS, см. [SMS команды](../Children/SMS-Commands.rst) для получения дополнительной информации по настройке.
 
 ### Еда
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Отображает предустановленные характеристики еды, определенные в базе данных Nightscout, см [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) для получения дополнительной информации по параметрам.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Примечание: Записи не могут использоваться в калькуляторе AndroidAPS. (Только просмотр)
 
 ### Смарт-часы Wear
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Мониторим и контролируем AAPS, при помощи смарт-часов Android Wear (см. [страницу Циферблаты](../Configuration/Watchfaces.md)). Настройте параметры (шестеренка) для определения переменных, которые следует учитывать при расчете болюсов (т.е. тренд 15 мин, активные углеводы COB и т.п....).
 
 Если вы хотите подавать болюс и т. д. с часов, тогда в настройках часов Wear следует включить «Управление с часов».
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Настройки смарт-часов Wear](../images/ConfBuild_Wear.png)
 
 Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
@@ -273,33 +273,33 @@ Through Wear tab or hamburger menu (top left of screen, if tab is not displayed)
 
 ### Cтрока состояния xDrip (часы)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Отображает информацию о состоянии цикла на циферблате xDrip + (если вы не пользуетесь циферблатом AAPS [<AAPSv2](../Configuration/Watchfaces.md))
 
 ### Текущее состояние приложения
 
-Displays a summary of current BG, delta, active TBR%, active basal u/h and profile, IOB and split into bolus IOB and basal IOB on the phones's dropdown screen and phone's lock screen.
+Показывает текущую ГК, изменение ГК, актуальный % временного базала TBR, активный базал ед/ч и профиль, активный инсулин с разбивкой на болюсный IOB и базальный IOB на экране вкладки и на экране блокировки телефона.
 
-![AAPS widget](../images/ConfBuild_Widget.png)
+![Виджет AAPS](../images/ConfBuild_Widget.png)
 
 ### Клиент Nightscout
 
-Setup sync of your AndroidAPS data with Nightscout.
+Синхронизация данных AndroidAPS с Nightscout.
 
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimization not disabled for AAPS) but can flood the Nightscout graph with entries.
+Если активировать **записывать старт приложения в NS**, каждый запуск AndroidAPS будет виден в Nightscout. Может быть полезным для обнаружения проблем с приложением (напр. если для AAPS не отключена оптимизация аккумулятора) но может переполнить записями график Nightscout.
 
 #### Опции оповещения
 
-Activate/deactivate AndroidAPS alarms
+Активирует / деактивирует сигналы AndroidAPS
 
 ![Опции оповещения](../images/ConfBuild_NSClient_Alarms.png)
 
 #### Настройки подключения
 
-Offline looping, disable roaming...
+Автономный цикл, отключение роуминга...
 
-If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
+Если вы хотите использовать только конкретные сети WiFi, вы можете ввести здесь **WiFi SSID**. Несколько идентификаторов SSID разделяются точкой с запятой. Чтобы удалить все SSID введите в поле пустое пространство.
 
-![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
+![Параметры подключения Nightscout](../images/ConfBuild_ConnectionSettings.png)
 
 #### Расширенные настройки
 
@@ -310,12 +310,12 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 * Не отправлять в NS
 * Всегда использовать абсолютные значения базала -> должно быть активировано, если вы хотите правильно применять [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
-![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
+![Расширенные настройки Nightscout](../images/ConfBuild_NSClient_Advanced.png)
 
 ### Тех. обслуживание
 
-Email and number of logs to be send. Normally no change necessary.
+Адрес электронной почты и количество журналов/логов для отправки. Обычно не требует изменений.
 
 ### Конфигуратор
 
-Use tab for config builder instead of hamburger menu.
+Используйте вкладку для конфигуратора вместо выпадающего сэндвич-меню слева.
