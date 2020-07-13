@@ -4,7 +4,7 @@ AndroidAPS trabaja actualmente con
 
 * Accu-Check Combo
 * Accu-Chek Insight
-* some old Medtronic
+* algunas antiguas Medtronic
 * DanaR
 * DanaRS 
 

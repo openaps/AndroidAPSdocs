@@ -45,21 +45,21 @@ Las líneas extendidas muestran los cálculos y tendencias de BG pronosticados -
 
 * **Naranja** línea: [COB](../Usage/COB-calculation.rst) (color que se utiliza generalmente para representar a los COB y los hidratos)
    
-   Prediction line shows where your BG (not where cob itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
+   La línea de predicción muestra dónde su BG llegará teniendo en cuenta los ajustes actuales de la bomba y asumiendo que las desviaciones debidas a la absorción de carbohidratos permanecen constantes. Esta línea sólo aparece si se conoce COB.
 
 * **Azul oscuro** línea: IOB (color que se utiliza generalmente para representar IOB e insulina)
    
-   Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
+   La línea de predicción muestra lo que ocurriría bajo la influencia de la insulina solamente. Por ejemplo, si usted se ha marcado con alguna insulina y luego no ha comido carbohidratos.
 
 * **Azul claro** línea: cero-temp (predicción de BG si se establecería una tasa basal temporal en 0%)
    
-   Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+   La línea de predicción muestra cómo la línea de trayectoria del IOB cambiaría si la bomba detuviera toda la entrega de insulina (0% TBR).
 
 * **Amarillo oscuro** line: [UAM ](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (comidas no anunciadas)
    
-   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+   Las comidas no anunciadas significan que se detecta un aumento significativo en los niveles de glucosa debido a las comidas, adrenalina u otras influencias. La línea de predicción es similar a la línea ORANGE COB pero supone que las desviaciones se recortarán a un ritmo constante (ampliando la tasa actual de reducción).
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+Por lo general, su verdadera curva de glucosa termina en el medio de estas líneas, o cerca de la que hace suposiciones que se asemejan más a su situación.
 
 La línea **azul continua** muestra la entrega basal de la bomba. La línea **azul de puntos** es la que sería la tasa basal si no hubiera ajustes basales temporales (TBRs) y la línea azul sólida es la entrega real a lo largo del tiempo.
 
@@ -75,7 +75,7 @@ Esta sección también se puede configurar utilizando las opciones de la secció
    * **GRIS** barras que muestran una desviación debido a los carbohidratos. 
    * **VERDE** barras que muestran un BG mayor al que el algoritmo esperaba. 
    * **RED ** barras que muestran que BG es menor que el algoritmo esperaba.
-* **Sensitivity** (white line): It shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. La Sensibilidad es el cálculo de la respuesta a la insulina como resultado del ejercicio, las hormonas, etc.
+* ** Sensibilidad ** (línea blanca): muestra la sensibilidad que [ Autosens ](../Usage/Open-APS-features#autosens) ha detectado. La Sensibilidad es el cálculo de la respuesta a la insulina como resultado del ejercicio, las hormonas, etc.
 * **Actividad** (línea amarilla): muestra la actividad de la insulina, calculada por su perfil de insulina (no es un derivado de IOB). El valor es más alto para la insulina más próxima a la hora punta. Esto significaría un valor negativo cuando el IOB está disminuyendo. 
 
 ### Sección G
@@ -144,16 +144,16 @@ Careportal replicated the functions you will find on your Nightscout screen unde
 
 ### Corrección de Carbohidratos
 
-Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+La pestaña de tratamiento se puede utilizar para corregir las entradas de Hc defectuosas (es decir, los carbohidratos sobrantes o subestimados).
 
 1. Compruebe y recuerde el COB y el IOB actuales en la pantalla de inicio.
 2. Dependiendo de la bomba en la pestaña de tratamiento, los carbohidratos pueden mostrarse junto con la insulina en una sola línea o como una entrada separada (por ejemplo, en la Dana RS).
    
-   ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+   ![Tratamiento en 1 ó 2 líneas](../images/Treatment_1or2_lines.png)
 
-3. Remove the entry with the faulty carb amount.
+3. Suprima la entrada con la cantidad de carbohidratos erróneos.
 
-4. Make sure carbs are removed successfully by checking COB on homescreen again.
+4. Asegúrese de que los carbohidratos se eliminan correctamente comprobando COB en la pantalla de inicio de nuevo.
 5. Haga lo mismo con el IOB si hay una sola línea en el tabulador, incluyendo los carbohidratos y la insulina.
    
    -> If carbs are not removed as intended and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.

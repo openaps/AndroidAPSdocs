@@ -34,7 +34,7 @@ Word lid van de belangrijkste [AndroidAPS Facebook groep](https://www.facebook.c
 ### Duitsland
 
 * [Open Source Looper Community](https://de.loopercommunity.org/): Duitse looper gemeenschap voor Open Source Loop, diabetes in het algemeen, communicatie, ondersteuning en lokale bijeenkomsten
-* [Looper Meetings Duitsland, Oostenrijk & Zwitserland](http://loopertreffen.androidaps.de)
+* [Looper Meetings Duitsland, Oostenrijk & Zwitserland](https://de.loopercommunity.org/c/veranstaltungen/l/calendar)
 * [Freestyle Libre Freaks](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre als CGM/FGM
 * [NightscoutDE Facebook-groep](https://www.facebook.com/groups/nightscoutDE/)
 

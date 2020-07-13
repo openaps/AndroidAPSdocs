@@ -35,12 +35,12 @@ Las siguientes funciones pueden activarse desde el reloj:
 * Establecer un objetivo temporal
 * utilizar el calculador de bolos (las variables de cálculo se pueden definir en [configuración ](../Configuration/Config-Builder#wear) en el teléfono)
 * Administrar carbohidratos extendidos (eCarbs)
-* administer a bolus (insulin + carbs)
-* watch settings
+* administrar un bolo (insulina + carbohidratos)
+* ajustes del reloj
 * estado 
     * comprobar estado de la infusora
-    * check loop status
-    * check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+    * comprobar estado del lazo
+    * comprobar y cambiar perfil, CPP (Perfil en Porcentaje circadiano= turno de tiempo + porcentaje)
     * mostrar TDD (dosis diaria total = bolos + basal por día)
 
 ## Esferas de AAPS
