@@ -40,7 +40,7 @@ If you make any changes to your profile, make sure, you are editing the correct 
 
 #### Dupliquer un changement de profil
 
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+Vous pouvez facilement créer un profil local à partir d'un changement de profil. Dans ce cas, le décalage temporel et le pourcentage seront appliqués au nouveau profil local.
 
 1. Allez dans l'onglet Traitements.
 2. Sélectionnez Changement Profil.
@@ -49,37 +49,37 @@ You can easily create a new local profile from a profile switch. In this case ti
 
 ![Dupliquer un changement de profil](../images/LocalProfile_ClonePS.png)
 
-If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
+Si vous souhaitez passer du profil Nightscout au profil local, faites simplement un changement de profil sur votre profil NS et clonez le changement de profil comme décrit ci-dessus.
 
 #### Remonter les profils locaux sur Nightscout
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in NS Client preferences.
+Les profils locaux peuvent également être téléchargés sur Nightscout. Les paramètres se trouvent dans les préférences NS Client.
 
-![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
+![Télécharger profil local sur NS](../images/LocalProfile_UploadNS2.png)
 
-Advantage:
+Avantages :
 
 * il n'est pas nécessaire d'avoir une connexion internet pour modifier les paramètres du profil
 * les modifications du profil peuvent être effectuées directement sur le téléphone
 * un nouveau profil peut être créé à partir d'un changement de profil
 * les profils locaux peuvent être téléchargés sur Nightscout
 
-Disadvantage:
+Inconvénients :
 
 * aucun
 
 ### Profil NS
 
-NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+NS Profile utilise les profils que vous avez enregistrés sur votre site Nightscout (https: //[yournightscoutsiteaddress]/profile). Vous pouvez utiliser le [changement de profil](../Usage/Profiles.md) pour définir lequel de ces profils est actif, ceci écrit le profil dans la pompe en cas de problème avec AndroidAPS. Cela vous permet de créer facilement plusieurs profils dans Nightscout (par ex. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
 
 Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
-Advantage:
+Avantages :
 
 * profils multiples
 * facile à modifier via un PC ou une tablette
 
-Disadvantage:
+Inconvénients :
 
 * aucune modification locale des paramètres de profil
 * le profil ne peut pas être modifié directement sur le téléphone
