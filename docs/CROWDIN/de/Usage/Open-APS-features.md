@@ -101,7 +101,7 @@ Für andere CGM/FGM wie das Freestyle Libre ist die SMB-always-Option deaktivier
 
 ### SMB-Basal-Limit in Minuten
 
-Dies ist eine wichtige Sicherheitseinstellung. Dieser Wert legt fest, für wie viele Minuten der SMB benötigtes Basal-Insulin zugeben darf, obwohl es nicht von COB gedeckt ist.
+Dies ist eine wichtige Sicherheitseinstellung. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
 Dadurch wird der SMB aggressiver. Zu Beginn solltest du den Standardwert von 30 Minuten wählen. Mit etwas SMB-Erfahrung kannst du den Wert dann in 15-Minuten-Schritten erhöhen. Dabei solltest du immer genau beobachten, wie sich diese Veränderung auswirkt.
 
