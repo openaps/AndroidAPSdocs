@@ -101,7 +101,7 @@ Pour les autres MGC/MGF comme le Freestyle Libre, ‘SMB en permanence’ sera d
 
 ### Max. minutes de basal pour limiter le SMB
 
-C'est un paramètre de sécurité important. Cette valeur détermine la quantité de SMB qui peut être administrée en fonction de la quantité d'insuline basale diffusée sur une durée donnée, lorsqu'elle n'est pas couverte par des GA.
+C'est un paramètre de sécurité important. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
 Cela rend les SMB plus agressifs. Pour commencer, vous devez commencer par la valeur par défaut de 30 minutes. Avec de l''expérience, vous pouvez augmenter la valeur par pas de 15 minutes et voir l'impact de ces changements.
 
