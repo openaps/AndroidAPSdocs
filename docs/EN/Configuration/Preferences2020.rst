@@ -4,8 +4,16 @@ Preferences
 
   .. image:: ../images/Pref2020_Open.png
     :alt: Open preferences
-  
+
+* You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and click Plugin preferences.
+
+  .. image:: ../images/Pref2020_OpenPlugin.png
+    :alt: Open plugin preferences
+    
 * Sub-menus can be opened by clicking the triangle below the sub-menu title.
+
+  .. image:: ../images/Pref2020_Submenu.png
+    :alt: Open submenu
 
 General
 ===========================================================
@@ -76,9 +84,9 @@ You can choose from three types of skins:
 Overview
 ===========================================================
 
-* Overview section in preferences is the same as plugin preferences which are accessible through the three-dot-menu.
+* In overview section you can define preferences for home screen.
 
-  .. image:: ../images/Pref2020_Overview.png
+  .. image:: ../images/Pref2020_OverviewII.png
     :alt: Preferences > Overview
 
 Keep screen on
@@ -290,13 +298,19 @@ Advanced settings
 
 Absorption settings
 ===========================================================
+
+  .. image:: ../images/Pref2020_Absorption.png
+    :alt: Absorption settings
+
 min_5m_carbimpact
 -----------------------------------------------------------
 * The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed. 
+* The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB. 
+* At times when carb absorption can’t be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
 * To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. 
 * Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc. 
 * The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`_.
-* Standard value for AMA is 3.
+* Standard value for AMA is 3, for SMB it's 8.
 * The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
 
   .. image:: ../images/Pref2020_min_5m_carbimpact.png
