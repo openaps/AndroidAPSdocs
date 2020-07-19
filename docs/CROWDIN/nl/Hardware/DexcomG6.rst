@@ -45,7 +45,7 @@ G6 met aangepaste Dexcom app
 * Start sensor
 * Selecteer Dexcom App (aangepast) in ConfigBuilder (instelling in AndroidAPS).
 * Als je de Dexcom app wilt gebruiken om aan de zender te koppelen, maar ook gebruik wilt maken van xDrip alarmen zet dan óók de xDrip+ app op je telefoon en kies in xDrip hamburger menu > instellingen > hardware gegevensbron > 640G /EverSense.
-* There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.
+De Dexcom app stuurt de waardes door dmv 'local broadcast' (lokaal uitzenden) naar AndroidAPS. AndroidAPS stuurt het dmv 'local broadcast' dan door naar xDrip+. De local broadcast vindt plaats tussen de apps op jouw telefoon, je hebt hierbij geen internet nodig.
 
 Problemen oplossen
 ==================================================
