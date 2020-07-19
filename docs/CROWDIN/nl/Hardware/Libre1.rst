@@ -3,14 +3,14 @@ Freestyle Libre 1
 
 Om je Libre te gebruiken als een CGM die elke 5 minuten nieuwe BG waarden krijgt, moet je eerst een NFC naar Bluetooth adapter kopen, zoals:
 
-* MiaoMiao Reader (version 1 or 2) `https://www.miaomiao.cool/ <https://www.miaomiao.cool/>`_
+* MiaoMiao (versie 1 of 2) `https://www.miaomiao.cool/ <https://www.miaomiao.cool/>`_
 * Blucon Nightrider `https://www.ambrosiasys.com/our-products/blucon/ <https://www.ambrosiasys.com/our-products/blucon/>`_
 * Bubble `https://bubbleshop.eu/ <https://bubbleshop.eu/>`_
 
-Additionally it is possible to use a specific watch, the Sony Smartwatch 3 which has an NFC chip which can be enabled and can be used as a NFC collector. However the custom NFC to Bluetooth adapters listed above offer a less complex solution and would be used by the majority of those wanting to use their Libre 1 as a CGM.
-* Sony Smartwatch 3 (SWR50) `https://github.com/pimpimmi/LibreAlarm/wiki/ <https://github.com/pimpimmi/LibreAlarm/wiki/>`_
+Bovendien is het mogelijk om een specifieke smartwactch te gebruiken, de Sony Smartwatch 3. Deze heeft een NFC chip die de gegevens rechtstreeks uit jouw Libre kan ontvangen. Deze smartwatch moet dan wel permanent tegen de Libre aan zitten, bijvoorbeeld dmv een armband of tape. Al zijn de hierboven genoemde NFC naar Bluetooth-adapters wel een stuk kleiner en daardoor handiger in gebruik, de meeste mensen kiezen dan ook voor één van die adapters.
+* Sony Smartwatch 3 (SWR50) als ontvanger `https://github.com/pimpimmi/LibreAlarm/wiki/ <https://github.com/pimpimmi/LibreAlarm/wiki/>`_
 
-As it currently stands, if using Libre 1 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within the SMB algorithm. De BG waarden van Libre 1 zijn niet betrouwbaar genoeg om het veilig te gebruiken. Zie `Filteren van glucosewaardes <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ voor meer details.
+Tot nu toe kun je met Libre 1 als BG bron 'Activeer SMB altijd' en 'Activeer SMB na koolhydraten' in SMB algoritme niet aanzetten. De BG waarden van Libre 1 zijn niet betrouwbaar genoeg om die functies veilig te gebruiken (alle overige SMB functies zijn overigens wél gewoon te gebruiken). Zie `Filteren van glucosewaardes <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ voor meer details.
 
 Libre met xDrip+
 ==================================================
