@@ -310,13 +310,29 @@ min_5m_carbimpact
 * To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. 
 * Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc. 
 * The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`_.
-* Standard value for AMA is 3, for SMB it's 8.
+* Standard value for AMA is 5, for SMB it's 8.
 * The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
 
   .. image:: ../images/Pref2020_min_5m_carbimpact.png
     :alt: COB graph
   
-Absorption Settings
+Maximum meal absorption time
 -----------------------------------------------------------
-* If you have selected to use AMA Autosens then you will be able to enter your maximum meal absorption time and how frequently you want autosense to refresh.  
 * If you often eat high fat or protein meals you will need to increase your meal absorption time.
+
+Advanced settings - autosens ratio
+-----------------------------------------------------------
+* Define min. and max. `autosens <../Usage/Open-APS-features.html#autosens>`_ ratio.
+* Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+
+Pump settings
+===========================================================
+The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`_.  Pair and set your pump up according to the pump related instructions:
+
+* `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ 
+* `DanaRS Insulin Pump <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `Accu Chek Combo Pump <../Configuration/Accu-Chek-Combo-Pump.html>`_
+* `Accu Chek Insight Pump <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+* `Medtronic Pump <..//Configuration/MedtronicPump.html>`_
+
+If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
