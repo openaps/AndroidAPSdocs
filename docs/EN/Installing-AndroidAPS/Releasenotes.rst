@@ -30,6 +30,7 @@ Major new features
 * new layout, layout selection @MilosKozak
 * new `status lights layout <../Configuration/Preferences2020.html#status-lights>`_ @MilosKozak
 * multiple graphs support @MilosKozak
+* Profile helper @MilosKozak
 * visualization of dynamic target adjustment @Tornado-Tim
 * new `preferences layout <../Configuration/Preferences2020.html>`_ @MilosKozak
 * SMB algorithm update @Tornado-Tim
