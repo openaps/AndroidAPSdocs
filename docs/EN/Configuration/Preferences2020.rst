@@ -336,3 +336,75 @@ The options here will vary depending on which pump driver you have selected in `
 * `Medtronic Pump <..//Configuration/MedtronicPump.html>`_
 
 If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+
+NS Client
+===========================================================
+
+  .. image:: ../images/Pref2020_NSClient.png
+    :alt: NS Client
+
+* Set your *Nightscout URL* (i.e. https://yourwebsitename.herokuapp.com) and the *API secret* (a 12 character password recorded in your heroku variables).
+* This enables data to be read and written between both the nightscout website and AndroidAPS.  
+* Double check for typos here if you are stuck in Objective 1.
+* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
+* *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem. 
+* If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ are uploaded to your Nightscout site.
+* Use *connection settings* to restrict Nightscout upload to Wifi only or even to certain Wifi SSIDs.
+
+Alarm options
+-----------------------------------------------------------
+* Alarm options allows you to select which default Nightscout alarms to use through the app.  
+* For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `heroku variables <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
+* They will only work whilst you have a connection to Nightscout and are intended for parent/carers. 
+* If you have the CGM source on your phone then use those alarms instead (i.e. xDrip+).
+
+Advanced settings
+-----------------------------------------------------------
+
+  .. image:: ../images/Pref2020_NSClientAdv.png
+    :alt: NS Client advanced settings
+
+* Most options in advanced settings are self-explanatory.
+* *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+.
+* *Always use basal absolute values* must be activated if you want to use Autotune properly. See `OpenAPS documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ for more details on Autotune.
+* **Do not activate this when using `Insight pump <../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps>`_!**  It would lead to false TBR settings in Insight pump.
+
+SMS Communicator
+===========================================================
+* Options will only be displayed if SMS communicator is selected in `Config Builder <../Configuration/Config-Builder.html#sms-communicator>`_.
+* This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing.  
+* Further information is described in `SMS Commands <../Children/SMS-Commands.html>`_.
+* Additional safety can be optained through use of an authenticator app or additional PIN at token end.
+
+Automation
+===========================================================
+Select which location service shall be used:
+
+* Use passive location: AAPS only takes locations if other apps are requesting it
+* Use network location: Location of your Wifi
+* Use GPS location (Attention! May cause excessive battery drain!)
+
+Local alerts
+===========================================================
+
+  .. image:: ../images/Pref2020_LocalAlerts.png
+    :alt: Local alerts
+
+* Settings should be self-explanatory.
+
+Data choices
+===========================================================
+
+  .. image:: ../images/Pref2020_DataChoice.png
+    :alt: Data choices
+
+* You can help develop AAPS further by sending crash reports to the developers.
+
+Maintenance settings
+===========================================================
+
+  .. image:: ../images/Pref2020_Maintenance.png
+    :alt: Maintenance settings
+
+* Standard recepient of logs is logs@androidaps.org.
+* If you select *Encrypt exported settings* these are encrypted with your `master password <../Configuration/Preferences.html#master-password>`_. In this case master password has to be entered each time settings are exported or imported.
