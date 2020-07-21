@@ -28,27 +28,27 @@ Major new features
 * internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
 * using modules for Dana pumps @MilosKozak
 * new layout, layout selection @MilosKozak
-* new `status lights layout <../Configuration/Preferences2020.html#status-lights>`_ @MilosKozak
+* new `status lights layout <../Configuration/Preferences.html#status-lights>`_ @MilosKozak
 * multiple graphs support @MilosKozak
 * Profile helper @MilosKozak
 * visualization of dynamic target adjustment @Tornado-Tim
-* new `preferences layout <../Configuration/Preferences2020.html>`_ @MilosKozak
+* new `preferences layout <../Configuration/Preferences.html>`_ @MilosKozak
 * SMB algorithm update @Tornado-Tim
-* `Low glucose suspend mode <../Configuration/Preferences2020.html#aps-mode>`_ @Tornado-Tim
-* `carbs required notifications <../Configuration/Preferences2020.html#carb-required-notification>`_ @twain47 @Tornado-Tim
+* `Low glucose suspend mode <../Configuration/Preferences.html#aps-mode>`_ @Tornado-Tim
+* `carbs required notifications <../Configuration/Preferences.html#carb-required-notification>`_ @twain47 @Tornado-Tim
 * removed Careportal (moved to Actions) @MilosKozak
 * new encrypted backup format @dlvoy
 * new SMS TOTP authentication @dlvoy
 * new SMS PUMP CONNECT, DISCONNECT commands @Lexsus
 * better support for tiny basals on Dana pumps @Mackwe
 * small Insight fixes @TebbeUbben @MilosKozak
-* `"Default language" option <../Configuration/Preferences2020.html#general>`_ @MilosKozak
+* `"Default language" option <../Configuration/Preferences.html#general>`_ @MilosKozak
 * vector icons @Philoul
 * skip neutral temps for MDT pump @Tornado-Tim
 * History browser improvements @MilosKozak
 * removed OpenAPS MA algorithm @Tornado-Tim
 * removed Oref0 sensitivity @Tornado-Tim
-* `Biometric or password protection <..../Configuration/Preferences2020.html#protection>`_ for settings, bolus @MilosKozak
+* `Biometric or password protection <..../Configuration/Preferences.html#protection>`_ for settings, bolus @MilosKozak
 * new automation trigger @PoweRGbg
 
 Version 2.6.1.4
