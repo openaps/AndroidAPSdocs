@@ -101,7 +101,7 @@ V případě ostatních CGM/FGM, jako je Freestyle Libre, je možnost ‘Vždy p
 
 ### Maximální počet minut bazálu, ke kterým se limituje SMB
 
-Jedná se o důležité bezpečnostní nastavení. Tato hodnota určuje, kolik SMB může být vydáno na základě aktuálního bazálu, když nejsou pokryty sacharidy.
+Jedná se o důležité bezpečnostní nastavení. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
 Tímto nastavením lze zvýšit agresivitu funkce SMB. Pro začátek byste měli začít s výchozí hodnotou 30 minut. Až získáte nějaké zkušenosti, můžete zvyšovat hodnotu po 15minutových krocích a sledovat, jaký mají tyto změny efekt.
 

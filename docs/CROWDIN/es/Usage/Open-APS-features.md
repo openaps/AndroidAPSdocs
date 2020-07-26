@@ -101,7 +101,7 @@ Para otros MCG/FGM como Freestyle Libre, 'SMB siempre' se desactiva hasta que xD
 
 ### Minutos máximos de basal para limitar SMB
 
-Esta es una configuración importante. Este valor determina la cantidad de SMB que se puede dar en función de la cantidad de insulina basal en un momento determinado, cuando no está cubierto por los COB.
+Esta es una configuración importante. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
 Esto hace que el SMB sea más agresivo. Para el principio, debe empezar por el valor predeterminado de 30 minutos. Después de cierta experiencia, puede aumentar el valor con pasos de 15 minutos y observar cómo están afectando estos cambios.
 

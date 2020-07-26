@@ -3,12 +3,14 @@ Freestyle Libre 1
 
 Om je Libre te gebruiken als een CGM die elke 5 minuten nieuwe BG waarden krijgt, moet je eerst een NFC naar Bluetooth adapter kopen, zoals:
 
-* MiaoMiao `https://www.miaomiao.cool/ <https://www.miaomiao.cool/>`_
-* Blukon Nightrider `https://www.ambrosiasys.com/howit <https://www.ambrosiasys.com/howit>`_
-* BlueReader `https://bluetoolz.de/blueorder/#home <https://bluetoolz.de/blueorder/#home>`_
+* MiaoMiao (versie 1 of 2) `https://www.miaomiao.cool/ <https://www.miaomiao.cool/>`_
+* Blucon Nightrider `https://www.ambrosiasys.com/our-products/blucon/ <https://www.ambrosiasys.com/our-products/blucon/>`_
+* Bubble `https://bubbleshop.eu/ <https://bubbleshop.eu/>`_
+
+Bovendien is het mogelijk om een specifieke smartwactch te gebruiken, de Sony Smartwatch 3. Deze heeft een NFC chip die de gegevens rechtstreeks uit jouw Libre kan ontvangen. Deze smartwatch moet dan wel permanent tegen de Libre aan zitten, bijvoorbeeld dmv een armband of tape. Al zijn de hierboven genoemde NFC naar Bluetooth-adapters wel een stuk kleiner en daardoor handiger in gebruik, de meeste mensen kiezen dan ook voor één van die adapters.
 * Sony Smartwatch 3 (SWR50) als ontvanger `https://github.com/pimpimmi/LibreAlarm/wiki/ <https://github.com/pimpimmi/LibreAlarm/wiki/>`_
 
-Tot nu toe kun je met Libre 1 als BG bron 'Activeer SMB altijd' en 'Activeer SMB na koolhydraten' in SMB algoritme niet aanzetten. De BG waarden van Libre 1 zijn niet betrouwbaar genoeg om het veilig te gebruiken. Zie `Filteren van glucosewaardes <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ voor meer details.
+Tot nu toe kun je met Libre 1 als BG bron 'Activeer SMB altijd' en 'Activeer SMB na koolhydraten' in SMB algoritme niet aanzetten. De BG waarden van Libre 1 zijn niet betrouwbaar genoeg om die functies veilig te gebruiken (alle overige SMB functies zijn overigens wél gewoon te gebruiken). Zie `Filteren van glucosewaardes <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ voor meer details.
 
 Libre met xDrip+
 ==================================================
