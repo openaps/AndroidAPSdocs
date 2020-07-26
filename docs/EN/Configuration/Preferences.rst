@@ -26,7 +26,7 @@ General
 
 * New option to use phone's default language (recommended). 
 * In case you want AAPS in different language than standard phone language you can choose from a broad variety.
-* If you use different languages you might sometimes see a language mix. This is due to an an android issue that overriding default andorid language sometimes doesn't work.
+* If you use different languages you might sometimes see a language mix. This is due to an an android issue that overriding default android language sometimes doesn't work.
 
   .. image:: ../images/Pref2020_General.png
     :alt: Preferences > General
