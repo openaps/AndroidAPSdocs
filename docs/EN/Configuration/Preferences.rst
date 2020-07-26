@@ -273,10 +273,11 @@ OpenAPS SMB settings
 * You must have started `objective 10 <../Usage/Objectives.html#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ to use SMB.
 * The first three settings are explained `above <./Configuration/Preferences2020.html#max-u-h-a-temp-basal-can-be-set-to>`_.
 * Details on the different enable options are described in `OpenAPS feature section <../Usage/Open-APS-features.html#enable-smb>`_.
+* "How frequently SMBs will be given in min" is a restiction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target beeing set). You should not change this setting unless you know exactly about consequences. 
 * If sensitivity raises / lowers target is enabled `Autosens <../Usage/Open-APS-features.html#autosens>`_ will modify your glucose target according to your blood glucose deviations.
 * If target is modified it will be displayed with a green background on your home screen.
 
-  .. image:: ../images/Pref2020_SMB_TargetModified.png
+  .. image:: ../images/Home2020_DynamicTargetAdjustment.png
     :alt: Target modified by autosens
   
 Carb required notification
