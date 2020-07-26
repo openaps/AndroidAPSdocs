@@ -27,6 +27,15 @@ This is the first screen you will come across when you open AndroidAPS and it co
 
 ![Temp traget remaining duration](../images/Home2020_TT.png)
 
+##### Visualization of Dynamic target adjustment
+* When SMB algorithim is selected - and either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) are selected- 
+   * "sensitivity raises target" and/or 
+   * "resistance lowers target" 
+  the target will change from what is set from profile. 
+* When it alters the target glucose background will change to green.
+
+![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+
 ### Section C - BG & loop status
 
 #### Current blood glucose
@@ -52,8 +61,39 @@ This is the first screen you will come across when you open AndroidAPS and it co
 
 ![Loop status menu](../images/Home2020_LoopStatusMenu.png)
 
-### Section C - IOB, COB, BR and AS
+### Section D - IOB, COB, BR and AS
 
+![Section D](../images/Home2020_SectionD.png)
+
+* Srynge: insulin on board (IOB) - amount of active insulin inside your body
+* Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before
+  -> icon pulses if carbs are required 
+* Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%)
+* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features#autosens) status
+
+#### Carbs required
+* Carbs suggestions are given when the reference design detects that it requires carbs.
+* This is when the oref algorithm thinks I can't rescue you by 0 temping and you will need carbs to fix.
+* The carb notifications are much more sophisticated then the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
+* Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+
+![Carbs required](../images/Home2020_CarbsRequired.png)
+
+### Section E - Status lights
+
+* Status lights give a visual warning for
+   * Cannula age
+   * Insulin age (days reservoir is used)
+   * Reservoir level (units)
+   * Sensor age
+   * Battery age and level (%)
+* If threshold warning is exceeded, values will be shown in yellow.
+* If threshold critical is exceeded, values will be shown in red.
+* Settings can be made in [preferences](../Configuration/Preferences#status-lights).
+
+# ************************************
+# Hier geht es weiter!
+# ************************************
 
 * your current basal rate - including any temporary basal rate (TBR) programmed by the system
 * insulin on board (IOB)
