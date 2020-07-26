@@ -9,7 +9,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
 ### Section A - Tabs
 * Navigate between the various AndroidAPS modules.
 * Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder#tab-or-hamburger-menu)
+* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder#tab-or-hamburger-menu).
 
 ### Section B - Profile & target
 
@@ -18,14 +18,14 @@ This is the first screen you will come across when you open AndroidAPS and it co
 * Long press profile bar to view profile details or to [switch between different profiles](../Usage/Profiles#profile-switch).
 * If profile switch was made with duration remaining time in minutes is shown in brackets.
 
-![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+   ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
 #### Target
 * Current target blood glucose level is displayed in the right bar.
 * Long press target bar to set a [temporary target](../Usage/temptarget.md).
 * If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
 
-![Temp traget remaining duration](../images/Home2020_TT.png)
+   ![Temp traget remaining duration](../images/Home2020_TT.png)
 
 ##### Visualization of Dynamic target adjustment
 * When SMB algorithim is selected - and either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) are selected- 
@@ -34,7 +34,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
   the target will change from what is set from profile. 
 * When it alters the target glucose background will change to green.
 
-![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+   ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
 ### Section C - BG & loop status
 
@@ -59,7 +59,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
    
 * Long press the icon to open the menu to disable, suspend, reenable loop or disconnect / reconnect pump.
 
-![Loop status menu](../images/Home2020_LoopStatusMenu.png)
+   ![Loop status menu](../images/Home2020_LoopStatusMenu.png)
 
 ### Section D - IOB, COB, BR and AS
 
@@ -72,14 +72,15 @@ This is the first screen you will come across when you open AndroidAPS and it co
 * Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features#autosens) status
 
 #### Carbs required
+![Carbs required](../images/Home2020_CarbsRequired.png)
 * Carbs suggestions are given when the reference design detects that it requires carbs.
 * This is when the oref algorithm thinks I can't rescue you by 0 temping and you will need carbs to fix.
 * The carb notifications are much more sophisticated then the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
-![Carbs required](../images/Home2020_CarbsRequired.png)
-
 ### Section E - Status lights
+
+![Section D](../images/Home2020_StatusLights.png)
 
 * Status lights give a visual warning for
    * Cannula age
