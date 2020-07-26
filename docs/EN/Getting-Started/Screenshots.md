@@ -2,24 +2,59 @@
 
 ## The Homescreen
 
-![Homescreen V2.5](../images/Screenshot_Home_screen_V2_5_1.png)
+![Homescreen V2.7](../images/Home2020_Homescreen.png)
 
 This is the first screen you will come across when you open AndroidAPS and it contains most of the information that you will need day to day.
 
-### Section A
-* navigate between the various AndroidAPS modules by swiping left or right
+### Section A - Tabs
+* Navigate between the various AndroidAPS modules.
+* Alternatively you can change screens by swiping left or right.
+* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder#tab-or-hamburger-menu)
 
-### Section B
-* change the loop status (open loop, closed loop, suspend loop etc)
-* see your current profile and do a [profile switch](../Usage/Profiles.md)
-* see your current target blood glucose level and set a [temporary target](../Usage/temptarget.md).
+### Section B - Profile & target
 
-Long press on any of the buttons to alter the setting. I.e long press the target bar in the upper right ("100" in the screenshot above) to set a temp target.
+#### Profile
+* Current profile is displayed in the left bar.
+* Long press profile bar to view profile details or to [switch between different profiles](../Usage/Profiles#profile-switch).
+* If profile switch was made with duration remaining time in minutes is shown in brackets.
 
-### Section C
-* latest blood glucose reading from your CGM
-* how long ago it was read
-* changes in the last 15 and 40 minutes
+![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+
+#### Target
+* Current target blood glucose level is displayed in the right bar.
+* Long press target bar to set a [temporary target](../Usage/temptarget.md).
+* If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
+
+![Temp traget remaining duration](../images/Home2020_TT.png)
+
+### Section C - BG & loop status
+
+#### Current blood glucose
+* Latest blood glucose reading from your CGM is shown on the left side.
+* Color of the bg value reflects the status to the defined [range](../Configuration/Preferences#range-for-visualization).
+   * green = in range
+   * red = below range
+   * yellow = above range
+* The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
+
+#### Loop status
+
+![Loop status](../images/Home2020_LoopStatus.png)
+
+* A new icon shows loop status:
+   * green circle = loop running
+   * green circle with dotted line = [low glucose suspend (LGS)](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * red circled = loop disabled (not working permanently)
+   * yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
+   * grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
+   
+* Long press the icon to open the menu to disable, suspend, reenable loop or disconnect / reconnect pump.
+
+![Loop status menu](../images/Home2020_LoopStatusMenu.png)
+
+### Section C - IOB, COB, BR and AS
+
+
 * your current basal rate - including any temporary basal rate (TBR) programmed by the system
 * insulin on board (IOB)
 * carbs on board (COB)
