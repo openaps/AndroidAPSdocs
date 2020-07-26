@@ -10,7 +10,7 @@ Um dein Libre als CGM zu verwenden, das alle 5 Minuten Glukosewerte empfängt, m
 Außerdem kann die Sony Smartwatch 3, die einen NFC Chip eingebaut hat, zum Auslesen verwendet werden. Die oben aufgeführten NFC zu Bluetooth-Adapter bieten aber eine wenige komplexe Lösung und dürften daher für die meisten Nutzer, die ihr Libre 1 als CGM verwenden wollen, erste Wahl sein.
 * Sony Smartwatch 3 (SWR50) `https://github.com/pimpimmi/LibreAlarm/wiki/ <https://github.com/pimpimmi/LibreAlarm/wiki/>`_
 
-Wenn Du den Libre 1 als BZ-Quelle nutzt, stehen die Funktionen 'Enable SMB always' und 'Enable SMB after carbs' nicht zur Verfügung. Die BZ-Werte des Libre 1 sind für einen sicheren Einsatz dieser Funktionen nicht glatt genug. Weitere Details findest Du unter `Glättung der Blut-Glukose-Daten <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ .
+Wenn Du den Libre 1 als BZ-Quelle nutzt, stehen die Funktionen *Enable SMB always* und *Enable SMB after carbs* nicht zur Verfügung. Die BZ-Werte des Libre 1 sind für einen sicheren Einsatz dieser Funktionen nicht glatt genug. Weitere Details findest Du unter `Glättung der Blut-Glukose-Daten <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ .
 
 Libre mit xDrip+
 ==================================================
