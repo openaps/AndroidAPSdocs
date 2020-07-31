@@ -10,7 +10,7 @@ Vous pouvez interdire l'accès public à votre site Nightscout en utilisant des 
 
 ### Paramètres AndroidAPS
 
-Il y a dans les paramètres AAPS une fonction "Remonter uniquement vers NS (sync désactivée)". En l'activant, AAPS ne prendra pas en compte les changement effectués dans Nightscout comme les cibles temp. ou les glucides renseignés. Si vous utilisez les [Profils NS](../Configuration/Config-Builder#ns-profile), les profils seront synchronisés entre AAPS et Nightscout malgré le paramètre "Remonter uniquement vers NS".
+Il y a dans les paramètres AAPS une fonction "Remonter uniquement vers NS (sync désactivée)". En l'activant, AAPS ne prendra pas en compte les changement effectués dans Nightscout comme les cibles temp. ou les glucides renseignés. Si vous utilisez les [Profils NS](../Configuration/Config-Builder#profile-ns), les profils seront synchronisés entre AAPS et Nightscout malgré le paramètre "Remonter uniquement vers NS".
 
 * Cliquez sur le menu 3 points en haut à droite de votre page d'accueil AAPS.
 * Sélectionnez "Préferences".
