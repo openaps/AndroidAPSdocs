@@ -173,7 +173,7 @@ Comment aider
 
 
 .. note:: 
-	** Avertissement **
+	**Avertissement**
 
 	* Toutes les informations, pensées et codes décrits ici sont destinés à des fins d'information et d'éducation uniquement. Nightscout ne fait actuellement aucune tentative de conformité à la confidentialité HIPAA. Utilisez Nightscout et AndroidAPS à vos propres risques et n'utilisez pas les informations ni le code pour prendre des décisions médicales.
 
