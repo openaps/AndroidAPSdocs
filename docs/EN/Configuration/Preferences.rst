@@ -40,6 +40,9 @@ Protection
 Master password
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
+
+   **Biometric protection does not work on OnePlus phones. This is a know issue of OnePlus.**
+
 * Open Preferences (three-dot-menu on top right of home screen)
 * Click triangle below "General"
 * Click "Master-Password"
