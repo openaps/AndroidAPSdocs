@@ -147,7 +147,7 @@ Si vous voulez définir un lien interne dans la documentation AndroidAPS, n'util
 
 * Pour définir un lien vers une **ancre** (par ex. un titre) vous devez ajouter l'ancre au lien 
   * `[texte](../Usage/Test.html#ancre)` au lieu de `[texte](../Usage/Test#ancre)`
-
+.
 ## Ajout de plusieurs images à la documentation
 
 Si vous prévoyez de faire beaucoup de modifications, y compris d'ajouter des images pour illustrer certaines parties de la documentation (merci !), vous pouvez adopter l'approche suivante :
