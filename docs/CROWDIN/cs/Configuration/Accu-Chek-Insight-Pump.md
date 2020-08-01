@@ -9,45 +9,44 @@
 ## Hardwarové a softwarové požadavky
 
 * Roche Accu-Chek Insight (kterýkoli firmware, funguje se všemi)
-    
-    Poznámka: AAPS vždy zapíše data do **prvního bazálního profilu v pumpě**.
 
-* Telefon s Androidem (v podstatě všechny verze Androidu budou fungovat, ale AndroidAPS sám o sobě vyžaduje alespoň Android 5 (Lollipop)).
+Poznámka: AAPS vždy zapíše data do **prvního bazálního profilu v pumpě**.
 
-* Aplikace AndroidAPS instalovaná ve vašem telefonu
+* Telefon se systémem Android (v podstatě každá Android verze bude fungovat s Insight, ale zkontrolujte stránku [Module](../Module/module#phone), která Android verze je požadována pro AndroidAPS.)
+* Aplikace AndroidAPS nainstalovaná v telefonu
 
 ## Nastavení
 
-* Pumpa Insight by měla být připojena současně pouze k jednomu zařízení. Pokud jsme v minulosti používali dálkové ovládání pro Insight (glukometr), musíte zařízení odstranit ze seznamu spárovaných zařízení ve své pumpě: Menu > Nastavení > Komunikace > Odebrat zařízení
+* Pumpa Insight by měla být připojena současně pouze k jednomu zařízení. Pokud jsme v minulosti používali dálkové ovládání pro Insight (glukometr), musíte zařízení odstranit ze seznamu spárovaných zařízení v pumpě: Menu > Nastavení > Komunikace > Odebrat zařízení
     
-    ![Screenshot odebrání glukometru z Insight](../images/Insight_RemoveMeter.png)
+    ![Snímek obrazovky odebrání glukometru z pumpy Insight](../images/Insight_RemoveMeter.png)
 
-* V nabídce [Konfigurace](../Configuration/Config-Builder) aplikace AndroidAPS vyberte v sekci Pumpa možnost Accu-Chek Insight
+* V nabídce [Konfigurace](../Configuration/Config-Builder) aplikace AndroidAPS vyberte v sekci Pumpa model Accu-Chek Insight
     
-    ![Screenshot nastavení pumpy Insight](../images/Insight_ConfigBuilder.png)
+    ![Snímek obrazovky nastavení pumpy Insight](../images/Insight_ConfigBuilder.png)
 
 * Chcete-li otevřít nabídku nastavení, klikněte na ozubené kolečko.
 
 * V nastavení klikněte na tlačítko „Insight párování“ v horní části obrazovky. Měli byste vidět seznam bluetooth zařízení v dosahu (níže vlevo).
 * V pumpě Insight jděte do Menu > Nastavení > Komunikace > Přidat zařízení. Pumpa zobrazí následující obrazovku (vpravo níže) zobrazující seriové číslo pumpy.
     
-    ![Screenshot párování Insight 1](../images/Insight_Pairing1.png)
+    ![Snímek obrazovky párování Insight 1](../images/Insight_Pairing1.png)
 
-* Vezměte telefon a klikněte na sériové číslo pumpy v seznamu bluetooth zařízení v telefonu. Potvrďte kliknutím na Párování.
+* Vezměte zpět telefon, klikněte na sériové číslo pumpy v seznamu bluetooth zařízení. Potvrďte kliknutím na Spárovat.
     
-    ![Screenshot párování Insight 2](../images/Insight_Pairing2.png)
+    ![Snímek obrazovky párování Insight 2](../images/Insight_Pairing2.png)
 
-* Pumpa i telefon poté zobrazí na displeji kód. Zkontrolujte, jestli je na obou zařízeních shodný kód a potvrďte jej jak v pumpě, tak v telefonu.
+* Pumpa i telefon poté zobrazí na displeji kód. Zkontrolujte, jestli jsou na obou zařízení kódy stejné a potvrďte je jak v pumpě, tak v telefonu.
     
-    ![Screenshot párování Insight 3](../images/Insight_Pairing3.png)
+    ![Snímek obrazovky párování Insight 3](../images/Insight_Pairing3.png)
 
 * Úspěch! Můžete si poblahopřát, úspěšně jste spárovali pumpu s AndroidAPS.
     
-    ![Screenshot párování Insight 4](../images/Insight_Pairing4.png)
+    ![Snímek obrazovky párování Insight 4](../images/Insight_Pairing4.png)
 
-* Chcete-li zkontrolovat, jestli je vše správně, jděte zpět do nabídky Konfigurace v AndroidAPS a klikněte na ozubené kolečko v nabídce Pumpa - Accu Chek Insight. Klikněte na Insight párování, kde uvidíte informace o pumpě:
+* Pro kontrolu, jestli je vše správně, jděte zpět do nabídky Konfigurace v AndroidAPS a klikněte na ozubené kolečko v nabídce Pumpa - Accu Chek Insight pro vstup do nastavení. Klikněte na Insight párování, kde uvidíte informace o pumpě:
     
-    ![Screenshot informací o spárování Insight](../images/Insight_PairingInformation.png)
+    ![Snímek obrazovky informací o spárování Insight](../images/Insight_PairingInformation.png)
 
 Poznámka: Spojení mezi pumpou a telefonem není permanentní. Spojení bude navázáno pouze tehdy, je-li to nezbytné (např. při nastavování dočasného bazálu, posílání bolusu, čtení historie z pumpy apod.). V opačném případě by se baterie v pumpě i mobilu velmi rychle vybila.
 
@@ -57,19 +56,19 @@ Při používání pumpy Insight **nesmí být nastaveno 'Vždy použít absolut
 
 Jestliže potřebujete používat Autotune, jediným řešením v tuto chvíli je **zakázat synchronizaci** s Nightscoutem (pouze nahrávání). V AAPS přejděte do nastavení > NSClient > Pokročilá nastavení a povolte ‘Pouze nahrávání do NS (zakázat synchronizaci)‘.
 
-![Screenshot nastavení Insight](../images/Insight_pairing_V2_5.png)
+![Snímek obrazovky nastavení Insight](../images/Insight_pairing_V2_5.png)
 
 V Insight nastavení v AndroidAPS můžete upravit následující možnosti:
 
-* „Zaznamenat výměnu zásobníku“: při spuštění programu „naplnit kanylu“ dojde automaticky k zaznamenání výměny inzulínu.
+* „Zaznamenat výměnu zásobníku“: při spuštění programu „naplnit kanylu“ na pumpě dojde automaticky k zaznamenání výměny inzulínu.
 * „Zaznamenat výměnu hadičky“: Automaticky provede záznam v databázi AndroidAPS, když v pumpě provedete „Naplnit hadičku“.
-* „Zaznamenat výměnu kanyly“: Tato volba přidá do databáze AndroidAPS záznam při spuštění programu „naplnit kanylu“. ** Poznámka: Výměna kanyly také resetuje Autosens. **
-* „Zaznamenat výměnu baterie“: Automaticky provede záznam o výměně baterie, pokud vložíte do pumpy novou baterii.
+* „Zaznamenat výměnu kanyly“: Tato volba přidá do databáze AndroidAPS záznam při spuštění programu „naplnit kanylu“ na pumpě. ** Poznámka: Výměna kanyly také resetuje Autosens. **
+* „Zaznamenat výměnu baterie“: Automaticky provede záznam výměny baterie, pokud vložíte do pumpy novou baterii.
 * „Zaznamenat změnu režimu provozu“: Automaticky provede záznam v databázi AndroidAPS, kdykoliv spustíte/zastavíte pumpu.
 * „Zaznamenat výstrahy“: Automaticky provede záznam v databázi AndroidAPS, kdykoliv pumpa zahlásí alarm (s výjimkou upomínek, bolusů a konce dočasných bazálů (TBR) – ty zaznamenány nejsou).
 * „Povolit emulaci dočasných bazálů“: pumpa Insight umožňuje hodnotu maximálního dočasného bazálu (TBR) do výše 250 %. Pumpa má nastaveno omezení dočasného bazálu na 250 %. Pokud je požadavek na dočasný bazál vyšší než 250 %, bude provedena jeho emulace zadáním rozloženého bolusu.
     
-    **Pozn.: Nastavte najednou jeden rozložený bolus. Používání více rozložených bolusů současně může způsobit chyby.**
+    **Pozn.: Používejte vždy pouze jeden rozložený bolus. Používání více rozložených bolusů současně může způsobit chyby.**
 
 * „Doba čekání na obnovení spojení“: Definuje, jak dlouho bude AndroidAPS čekat před opětovným pokusem po neúspěšném pokusu o připojení. Můžete vybrat 0 až 20 sekund. Pokud máte problémy s připojením, vyberte delší dobu čekání.   
       
@@ -90,10 +89,10 @@ Po dobu, kdy byla pumpa zastavena, AAPS zobrazí záznam s dočasnou bazální h
 
 V AndroidAPS v záložce Accu-Chek Insight se zobrazuje aktuální stav pumpy a dvě tlačítka:
 
-* „Obnovit“: Opětovné načtení statusu z pumpy
-* „Povolit oznamování konce dočasného bazálu“: Standardně pumpa Insight spouští zvukový signál, když je TBR dokončen. Toto tlačítko vám umožňuje povolit nebo zakázat tento alarm, aniž byste museli použít software pro konfiguraci pumpy.
+* „Obnovit“: Opětovné načtení stavu pumpy
+* „Povolit oznamování konce dočasného bazálu“: Standardně pumpa Insight po dokončení TBR spouští zvukový signál. Toto tlačítko vám umožňuje povolit nebo zakázat tento alarm, aniž byste museli použít software pro konfiguraci pumpy.
     
-    ![Screenshot stavu Insight](../images/Insight_Status2.png)
+    ![Snímek obrazovky stavu Insight](../images/Insight_Status2.png)
 
 ## Nastavení v pumpě
 
@@ -105,7 +104,15 @@ Nastavení alarmů v pumpě:
 
 To ztlumí všechny alarmy z pumpy, což umožní systému AndroidAPS rozhodnout, zda je pro vás alarm relevantní. Pokud alarm AndroidAPS nebude potvrzen, hlasitost alarmu se bude zvyšovat (nejprvé pípnutí, potom vibrace).
 
-Pumpy Insight s novějším firmwarem budou vibrovat vždy při podání bolusu (například když AndroidAPS pošle SMB nebo emulace TBR vydá prodloužený bolus). Vibrace není možné vypnout. Starší pumpy za těchto okolností nevibrují.
+### Vibrace
+
+Pumpy Insight s novějším firmwarem budou vibrovat vždy při podání bolusu (například, když AndroidAPS pošle SMB nebo emulace TBR vydá prodloužený bolus).
+
+* Firmware 1.x: Žádné vibrace z výroby
+* Firmware 2.x: Vibrace nelze vypnout.
+* Firmware 3.x: AndroidAPS aplikuje bolus tiše. (minimální [verze 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+
+Verzi Firmware lze nalézt v menu.
 
 ## Výměna baterie
 

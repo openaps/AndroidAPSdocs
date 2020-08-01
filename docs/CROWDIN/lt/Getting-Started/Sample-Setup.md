@@ -1,10 +1,10 @@
-# Sample setup: Samsung S7, Dana RS, Dexcom G6 and Sony Smartwatch
+# Pavyzdinė sąranka: Samsung S7, DanaRS, Dexcom G6 ir Sony Smartwatch
 
-![Sample Setup](../images/SampleSetup.png)
+![Pavyzdinis nustatymas](../images/SampleSetup.png)
 
 ## Aprašymas
 
-Šiame derinyje Samsung Galaxy S7 išmanusis telefonas naudojamas kaip ciklo valdymo centras. The slightly modified Dexcom App reads glucose values from the Dexcom G6 CGM. AndroidAPS is used to control the Dana RS insulin pump from Korean manufacturer SOOIL via bluetooth. Nereikia jokių papildomų įrenginių.
+Šiame derinyje Samsung Galaxy S7 išmanusis telefonas naudojamas kaip ciklo valdymo centras. Šiek tiek pakeista Dexcom programa nuskaito glikemijos reikšmes iš Dexcom G6 sensoriaus. AndroidAPS Bluetooth ryšiu valdo korėjiečių gamintojo SOOIL Dana RS pompą. Nereikia jokių papildomų įrenginių.
 
 Kadangi Dexcom programa siūlo ribotas įspėjimo parinktis, atvirojo kodo xDrip + programa yra sukonfigūruota ne tik aukštos ir žemos glikemijos aliarmams, bet ir kitiems perspėjimams, atsižvelgiant į individualius poreikius.
 
@@ -26,8 +26,8 @@ Tačiau, kai yra interneto ryšys, duomenys automatiškai įkeliami į Nightscou
     * [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
     * [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
     * [DanaR](../Configuration/DanaR-Insulin-Pump.md)
-    * [Some old Medtronic pumps (additionally needed: RileyLink/Gnarl hardware, Android Phone with bluetooth low energy / BLE-chipset)](../Configuration/MedtronicPump.md)
-    * Other pumps might be available in the future, see [future possible pump drivers](Future-possible-Pump-Drivers.md) for details.
+    * [Tam tikri seni Medtronic pompų modeliai (reikalinga papildoma įranga: RileyLink/Gnarl aparatinė įranga, Android telefonas su Bluetooth Low Energy/BLE mikroschemų rinkiniu)](../Configuration/MedtronicPump.md)
+    * Kitos pompos gali būti suderinamos ateityje, dėl išsamesnės informacijos žr. [ateityje galimos pompos ](Future-possible-Pump-Drivers.md).
 
 3. [Dexcom G6](https://dexcom.com)
     
@@ -35,7 +35,7 @@ Tačiau, kai yra interneto ryšys, duomenys automatiškai įkeliami į Nightscou
 
 4. Pasirinktinai: Sony Smartwatch 3 (SWR50)
     
-    * Alternatives: All [watches with Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) should work fine, for details see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS (OS must be Android Wear)
+    * Alternatyvos: Visi [laikrodžiai su Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) turėtų veikti gerai, išsamiau žr. [AndroidAPS patikrintų telefonų laikrodžių sąrašą](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) (OS turi būti Android Wear)
 
 ## Nightscout nustatymas
 
@@ -49,7 +49,7 @@ Diegdami Android Studio būkite kantrūs, nes programa į savo kompiuterį atsis
 
 ## Išmanaus telefono nustatymas
 
-![Smartphone](../images/SampleSetupSmartphone.png)
+![Išmanusis telefonas](../images/SampleSetupSmartphone.png)
 
 ### Patikrinkite išmaniojo telefono programinę įrangą
 
@@ -71,21 +71,21 @@ Vietovės paslaugos („GPS“) turi būti suaktyvintos, kad Bluetooth tinkamai 
 
 ### Įdiegti Dexcom App (modifikuota versija)
 
-![Dexcom App patched](../images/SampleSetupDexApp.png)
+![Modifikuota Dexcom programėlė](../images/SampleSetupDexApp.png)
 
 Originali Dexcom programa iš Google Play Store neveiks, nes ji neperduoda duomenų į kitas programas. Todėl reikalinga šiek tiek pakeista mūsų bendruomenės versija. Tik ši modifikuota Dexcom programa gali bendrauti su AAPS. Be to, modifikuota Dexcom programa gali veikti su visais Android išmaniaisiais telefonais, o ne tik su tais, kurie yra [ Dexcom suderinamumo sąraše](https://www.dexcom.com/dexcom-international-compatibility).
 
-A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 [app for your region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app).
+Modifikuotos Dexcom G6 programos mmol/l ir mg/dl versijas galite rasti svetainėje <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. Jūs turite pasirinkti G6 [aplikaciją tinkamą savo regionui](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app).
 
-To do this perform the following steps on your smartphone:
+Norėdami tai padaryti, atlikite šiuos veiksmus savo išmaniajame telefone:
 
 1. Jei originali Dexcom programėlė yra įdiegta: 
     * Sustabdykite sensorių
-    * Uninstall app via Menu > Settings > Apps > Dexcom G6 Mobile > Uninstall
-2. Download modified Dexcom app (check unit mg/dl or mmol/l and [region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) according to your needs): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
-3. Install modified Dexcom G6 app on your smartphone (= select the downloaded APK file)
-4. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
-5. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
+    * Ištrinkite programas per Meniu > Nustatymai> Programos> Dexcom G6 Mobile > Pašalinti
+2. Atsisiųskite modifikuotą Dexcom programą (prireikus patikrinkite matavimo vienetus mg/dl arba mmol/l bei [regioną](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app)): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
+3. Įdiekite modifikuotą Dexcom G6 programą į savo išmanųjį telefoną (= pasirinkite atsisiųstą APK failą)
+4. Paleiskite modifikuotą Dexcom G6 programą, suaktyvinkite / sukalibruokite sensorių pagal instrukcijas ir palaukite, kol baigsis apšilimo laikotarpis.
+5. Kai modifikuota Dexcom programa parodys esamą gliukozės vertę, nustatykite įspėjimus (trijų linijų meniu kairėje ekrano pusėje) taip: 
     * Urgent low `55 mg/dl ` / `3,1 mmol/l ` (negali būti išjungtas)
     * Low `OFF`
     * High `OFF`
@@ -100,24 +100,24 @@ To do this perform the following steps on your smartphone:
 3. [Konfigūruokite AndroidAPS](../Configuration/Config-Builder.md) pagal savo poreikius, naudodamiesi sąrankos vedliu arba rankiniu būdu
 4. Šiame pavyzdyje mes naudojome (be kita ko)
 
-* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
+* KG šaltinis: `Dexcom G6 App (modifikuota)` -- spustelėkite krumpliaračio piktogramą ir įjunkite `Įkelti KG duomenų NS` ir `Siųsti KG duomenis xDrip+` (žr. [KG šaltinis](../Configuration/BG-Source.rst))
 
-![G5 Settings](../images/SampleSetupG5Settings.png)
+![G5 parametrai](../images/SampleSetupG5Settings.png)
 
 * NS Client suaktyvintas (žr. [NS Client](../Configuration/Config-Builder#ns-profile) ir [Nightscout nustatymai](../Installing-AndroidAPS/Nightscout.md))
 
 ## Įdiegti xDrip+
 
-xDrip+ is another mature open source app that offers countless possibilities. In this setup, contrary to what the developers first wrote the app for, xDrip+ is not used to collect glucose data from the Dexcom G6, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. With xDrip+ the alarms can be set much more individually than with the Dexcom software, AAPS or Nightscout (no limitation in the selection of sounds, different alarms depending on day/night time etc.).
+xDrip+ yra puiki atvirojo kodo programa, siūlanti daugybę galimybių. Šiame pavyzdyje, skirtingai nuo pirminės xDrip+ kūrėjų idėjos, programa nėra naudojama norint gauti glikemijos duomenis iš Dexcom G6, o tik rodyti įspėjimus ir rodyti dabartinę glikemijos vertę, įskaitant valdiklio kreivę Android pagrindiniame ekrane. Naudodamiesi xDrip+, perspėjimai gali būti konfigūruojami daug individualiau nei naudojant Dexcom programinę įrangą, AAPS ar Nightscout (neribotas garsų, dienos/nakties signalų pasirinkimas ir t.t.).
 
 1. Atsisiųskite naujausią stabilią APK xDrip+ versiją naudodamiesi savo išmaniuoju telefonu iš čia:[https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - tik ne versiją iš Google Play Store!
 2. Įdiekite xDrip+ pasirinkdami atsisiųstą APK failą.
 3. Paleiskite xDrip+ ir atlikite šiuos nustatymus (trijų linijų meniu viršuje kairėje) 
     * Nustatymai> Aliarmai ir perspėjimai> Įspėjimų apie KG lygį sąrašas> Sukurkite įspėjimus (aukštus ir žemus) pagal jūsų poreikius. 
     * Esamus įspėjimus galima pakeisti ilgai spustelėjus signalo piktogramą.
-    * Settings > Alarms and Alerts > Calibration Alerts: disabled (reminded via the modified Dexcom app)
-    * Settings > Hardware Data Source > 640G/EverSense
-    * Settings > Inter-app settings > Accept Calibrations > `ON`
+    * Nustatymai > Aliarmai ir perspėjimai > Kalibravimo įspėjimai: išjungti (priminimas per modifikuotą Dexcom programą)
+    * Nustatymai > Aparatūros duomenų šaltinis> 640G/EverSense
+    * Nustatymai> Tarp-programų nustatymai> Priimti kalibravimą> `Įgalinta`
     * Menu > Start sensor (is only "pro forma" and has nothing to do with the running G6 sensor. This is necessary otherwise an error message will appear regularly.) 
 
 For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).

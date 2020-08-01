@@ -24,6 +24,7 @@ Pour éviter cela, il y a deux possibilités :
    
    * par ex. Vienne -> New York : Changement de profil +6 heures
    * par ex. Vienne -> Sydney : Changement de profil -8 heures
+* Probablement pas une option si vous utilisez [l'application LibreLink patchée](../Hardware/Libre2#changement-de-fuseau-horaire) car la Date et heure automatique doit être activé pour démarrer un nouveau capteur Libre 2.
 
 ### Option 2: Supprimer l'historique de la pompe
 
@@ -38,8 +39,6 @@ Quand vous sortez de l'avion :
 * changez l'heure de la pompe
 * allumez le telephone
 * laissez le téléphone se connecter à la pompe et ré-ajuster l'heure
-
-## Combo
 
 ## Insight
 

@@ -4,74 +4,74 @@ Saugumas - svarbiausia
 ==================================================
 * AndroidAPS leidžia jums kontroliuoti vaiko telefoną nuotoliniu būdu per tekstinį pranešimą. Jei įgalinate šį SMS komunikatorių, visada prisiminkite, kad telefonas, duodantis nuotolinio valdymo komandas, gali būti pavogtas. Todėl visada jį apsaugokite bent PIN kodu.
 * AndroidAPS teikia grįžtamąjį ryšį Sms žinute, jei jūsų nuotolinės komandos, tokios kaip buvo atliktas boluso suleidimas ar profilio keitimas, buvo patvirtintos. Patartina tai nustatyti taip, kad patvirtinimo tekstai būtų siunčiami bent dviem skirtingais telefono numeriais, jei pavogtas vienas iš priimančių telefonų.
-* **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
+* **Jei bolusuojate per SMS Komandas, jūs privalote įvesti angliavandenius per Nightscout (NSClient, Interneto svetainėje...)!** Jei to nepadarysite AIO bus teisingas su per mažai AAO, kas potencialiai lems, kad korekcinis bolusas nebus leidžiamas, nes AAPS preziumuos, kad yra per daug aktyvaus insulino.
 
-How it works
+Kaip tai veikia
 ==================================================
-* Most of the adjustments of temp targets, following AAPS etc. can be done on `NSclient app <../Children/Children.html>`_ on an Android phone with an internet connection.
-* Boluses can't be given through Nightscout, but you can use SMS commands.
-* If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
+* Dauguma tokių nustatymų kaip laikinas tikslas, AAPS veiksmų sekimas ir t. t. gali būti atliekama per NSClient programėlę <../Children/Children.html>`_ Android telefone su interneto ryšiu.
+* Bolusai negali būti suleisti per Nightscout, bet jūs galite naudoti SMS komandas.
+* Jei jūs naudojate iPhone kaip sekėjas ir todėl negalite naudoti NSClient, tam yra papildomos SMS komandos.
 
-* In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
-* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
-* If you want to use more than one number:
+* Savo Android telefono nustatymuose eikite į Programos > AndroidAPS > Leidimai ir įjunkite SMS
+* AndroidAPS eikite į Nustatymus > SMS Komunikatorius ir įveskite telefono numerį(-ius), iš kurio jūs leidžiate SMS komandas (atskirtas kabliataškiu - pvz. +37012345678;+37012345679) ir taip pat įjunkite "Leisti nuotolines SMS komandas".
+* Jei norite naudoti daugiau nei vieną numerį:
 
-  * Enter just one number.
-  * Make that single number work by sending and confirming a SMS command.
-  * Enter additional number(s) separated by semicolon, no space.
+  * Įveskite tik vieną numerį.
+  * Įsitikinkite to vieno numerio veikimu nusiunčiant ir patvirtinant SMS komandą.
+  * Įveskite papildomą numerį(-ius) atskiriant juos kabliataškiu be tarpo.
   
     .. image:: ../images/SMSCommandsSetupSpace.png
-      :alt: SMS Commands Setup
+      :alt: SMS Komandų Nustatymas
 
 
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Confirm command by sending the code provided in SMS from AndroidAPS phone where neccessary.
+* Siųskite SMS žinutę iš vieno patvirtinto telefono numerio į mobilųjį telefoną, kuriame veikia AndroidAPS. Galite naudoti bet kurią iš komandų, išvardytų žemiau, tačiau tik **DIDŽIOSIOMIS RAIDĖMIS**. AndroidAPS mobilusis telefonas patvirtina sėkmingą komandos vykdymą arba grąžina prašomą būseną. Jei reikia, patvirtinkite komandą išsiųsdami atgal kodą, kurį AndroidAPS išmanusis telefonas siunčia SMS žinute.
 
-**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
+**Patarimas**: jei reikia siųsti didelį kiekį SMS, naudinga abiejuose mobiliuosiuose telefonuose turėti mažo tarifo planą SMS.
 
-Commands
+Komandos
 ==================================================
 
-Upper and lower case is irrelevant when sending commands.
+Siunčiant komandas, didžiosios ir mažosios raidės nėra svarbios.
 
-Commands must be send in English, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Komandos turi būti išsiųstos anglų kalba, atsakymą gausite savo vietine kalba, jei eilutė jau yra išversta <../translations.html#translate-strings-for-androidaps-app>`_.
 
-.. image:: ../images/SMSCommands.png
-  :alt: SMS Commands Example
+.. nuotrauka:: ../images/SMSCommands.png
+  :alt: SMS komandų pavyzdys
 
 Ciklas
 --------------------------------------------------
 * LOOP STOP/DISABLE
-   * Response: Loop has been disabled
+   * Atsakymas: Ciklas išjungtas
 * LOOP START/ENABLE
-   * Response: Loop has been enabled
-* LOOP STATUS
-   * Response depends on actual status
+   * Atsakymas: Ciklas įjungtas
+* LOOP-STATUS
+   * Atsakymas priklauso nuo esamos būsenos
       * Ciklas išjungtas
       * Ciklas įjungtas
-      * Suspended (10 min)
+      * Sustabdyta (10 m)
 * LOOP SUSPEND 20
-   * Response: Loop suspended for 20 minutes
+   * Atsakymas: Ciklas sustabdytas 20 minučių
 * LOOP RESUME
-   * Response: Loop resumed
+   * Atsakymas: Ciklas atnaujintas
 
-CGM data
+NGJ duomenys
 --------------------------------------------------
 * BG
-   * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+   * Atsakymas: Paskutinis KG: 5.6 prieš 4 min, Delta: -0,2 mmol, AIO: 0.20U (Boluso: 0.10U Bazės: 0.10U)
 * CAL 5.6
-   * Response: To send calibration 5.6 reply with code Rrt
-   * Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
+   * Atsakymas: Norėdami išsiųsti 5.6 kalibravimui, atsakykite kodu Rrt
+   * Atsakymas po to, kai AAPS gauna teisingą kodą: kalibravimas išsiųstas (**jei įdiegta xDrip+. xDrip+ turi būti aktyvi funkcija „Priimti kalibravimą"**)
 
-Basal
+Valandinė bazė
 --------------------------------------------------
 * BASAL STOP/CANCEL
-   * Response: To stop temp basal reply with code EmF [Note: Code EmF is just an example]
+   * Atsakymas: Norėdami sustabdyti laikiną bazę atsakyti kodu EmF [Pastaba: Kodas EmF yra tik pavyzdys]
 * BASAL 0.3
-   * Response: To start basal 0.3U/h for 30 min reply with code Swe
+   * Atsakymas: Norėdami aktyvuoti 0.3 vv/val bazę, kurios trukmė 30 min, atsakykite kodu Swe
 * BASAL 0.3 20
-   * Response: To start basal 0.3U/h for 20 min reply with code Swe
+   * Atsakymas: Norėdami aktyvuoti 0.3 vv/val bazę, kurios trukmė 20 min, atsakykite kodu Swe
 * BASAL 30%
-   * Response: To start basal 30% for 30 min reply with code Swe
+   * Atsakymas: Norėdami aktyvuoti 30% laikiną bazę, kurios trukmė 30 min, atsakykite kodu Swe
 * BASAL 30% 50
    * Response: To start basal 30% for 50 min reply with code Swe
 
@@ -133,7 +133,7 @@ If you receive the same message over and over again (i.e. profile switch) you wi
 
 If the other app is installed on multiple phones make sure to deactive upload on all of them.
 
-SMS commands not working on Samsung phones
+SMS komandos neveikia Samsung telefonuose
 --------------------------------------------------
 There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
 

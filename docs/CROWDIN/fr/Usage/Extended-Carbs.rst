@@ -41,11 +41,15 @@ Bolus étendu
 ==================================================
 Comme mentionné ci-dessus, les bolus étendus ou mixtes ne fonctionnent pas vraiment dans un environnement en boucle fermée. `Voir ci-dessous <../Usage/Extended-Carbs.html#pourquoi-les-bolus-etendus-ne-marchent-pas-avec-une-boucle-fermee>`_ pour plus de détails
 
-Bolus étendus et passage à en boucle ouverte
---------------------------------------------------
+Bolus étendus et passage en boucle ouverte - uniquement pour les pompesDana et Insight
+-----------------------------------------------------------------------------
 Certaines personnes ont demandé une option pour utiliser des bolus étendus dans AAPS, car ils voulaient traiter les aliments spéciaux comme ils avaient l'habitude de le faire. 
 
-C'est pourquoi à partir de la version 2.6, il existe une option pour les bolus étendus. Mais la boucle fermée sera automatiquement arrêtée et basculera en mode de boucle ouverte pendant la durée du bolus étendu. La quantité d'insuline, le temps restant et le temps total seront affichés sur la page d'accueil.
+C'est pourquoi à partir de la version 2.6, il y a une option pour un bolus étendu pour les utilisateurs de pompes Dana et Insight. 
+
+* La boucle fermée sera automatiquement arrêtée et basculera en mode boucle ouverte pour la durée du bolus étendu. 
+* La quantité d'insuline, le temps restant et le temps total seront affichés sur la page d'accueil.
+* Sur les pompes Insight, les bolus étendus *ne sont pas disponibles* si `Activer l'émulation de DBT <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_ est activé. 
 
 .. image:: ../images/ExtendedBolus2_6.png
   :alt: Bolus étendus dans AAPS 2.6

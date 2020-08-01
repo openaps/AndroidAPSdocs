@@ -1,6 +1,20 @@
 Обновления и изменения в документации
 **************************************************
-
+Июнь 2020
+==================================================
+* ` Libre 2 <../Hardware/Libre2.html> ` _-более подробно об исправленном приложении Libre Link и использование передатчиков Bluetooth
+* `Пересечение часовых поясов <../Usage/Timezon-traveling.html> ` _ с Libre 2
+Май 2020
+==================================================
+* `Пролонгированный болюс только для помп Dana + Insight <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
+* `Отключение вибрации на помпе Insight < ../Configuration/Accu-Ch-Insight-Pump.html#vibration> ` _ (только на прошивке 3.x)
+* `Минимальный уровень запроса на отключение уведомлений < ../Configuration/Preferences.html#minimal-request-rate> ` _ для сокращения числа уведомлений в режиме открытого цикла
+* `Модифицированное приложение Libre Link < ../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app> ` _- проверьте правильность патча
+* `Линии прогнозирования <../Getting-Started/Screenshots.html#section-e>`_-дополнительные подробности
+Апрель 2020
+==================================================
+* `Запись о введении инсулина задним числом < ..//Usage/CPbefore26.html#carbs-- bolus> ` _ (напр. с помощью шприца)
+* Поддержка Android 6 будет прекращена в следующей основной версии < ../Module/module.html#phone> ` _
 Март 2020
 ==================================================
 * Построение APK в Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
@@ -30,7 +44,7 @@
 * `Усложнения для циферблатов <../Configuration/Watchfaces.html#complications>`_ - пользуйтесь любимыми циферблатами с данными из AAPS
 ноябрь 2019
 ==================================================
-* ` Автоматизация-деактивируйте при отключении петли <../Usage/Automation.html#important-note> ` _
+* ` Автоматизация-деактивировать при выключении цикла <../Usage/Automation.html#important-note> ` _
 Замена трансмиттера Dexcom G6 - обновление <../Configuration/xdrip.html#replace-transmitter>`_
 Пролонгированный болюс - почему не работает в контексте ИПЖ <../Usage/Extended-Carbs.html#extended-bolus>`_
 * ` FAQ-занятия спортом <../Начало/FAQ.html#спорт> ` _

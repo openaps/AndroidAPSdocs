@@ -9,11 +9,10 @@
 ## Benodigde hardware en software
 
 * Een Roche Accu-Chek Combo pomp (elke firmware is geschikt).
-    
-    Opmerking: AAPS zal informatie altijd opslaan in het **eerste basaal profiel in de pomp**.
 
-* Een Android-telefoon (in principe werkt elke Android-versie, maar AndroidAPS zelf vereist minstens Android 5 (Lollipop).)
+Opmerking: AAPS zal informatie altijd opslaan in het **eerste basaal profiel in de pomp**.
 
+* Een Android-telefoon (In principe zou elke Android-versie moeten werken met Insight, maar check op de [Onderdelen](../Module/module#phone) pagina welke Android-versie nodig is voor AndroidAPS.)
 * De AndroidAPS-app geïnstalleerd op jouw telefoon
 
 ## Pomp koppelen
@@ -24,7 +23,7 @@
 
 * In de [Configurator](../Configuration/Config-Builder) van AndroidAPS: selecteer Accu-Chek Insight in de pomp sectie
     
-    ![Screenshot van Insight Config Builder](../images/Insight_ConfigBuilder.png)
+    ![Screenshot van Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
 * Tik op het tandwiel-icoon naast Insight om de instellingen te openen.
 
@@ -41,11 +40,11 @@
     
     ![Screenshot van Insight Pairing 3](../images/Insight_Pairing3.png)
 
-* Succes! Geef jezelf een schouderklopje voor het succesvol koppelen van je pomp met AndroidAPS.
+* Gelukt! Geef jezelf een schouderklopje voor het succesvol koppelen van je pomp met AndroidAPS.
     
     ![Screenshot van Insight Pairing 4](../images/Insight_Pairing4.png)
 
-* Om te controleren of alles goed is gegaan, ga je terug naar de Configurator in AndroidAPS en tik op het tandwiel-icoontje bij de Insight pomp om in de Insight-instellingen te komen. Tik vervolgens op Insight Pairing en je zult wat informatie te zien krijgen over de pomp:
+* Om te controleren of alles goed is, ga je terug naar de Configurator in AndroidAPS en tik op het tandwiel-icoontje bij de Insight pomp om in de Insight-instellingen te komen. Tik vervolgens op Insight Pairing en je zult wat informatie te zien krijgen over de pomp:
     
     ![Screenshot van Insight Pairing Informatie](../images/Insight_PairingInformation.png)
 
@@ -61,7 +60,7 @@ Als je Autotune wilt kunnen gebruiken, dan is de enige manier op dit moment **sy
 
 In de Insight-instellingen in AndroidAPS kun je de volgende opties inschakelen:
 
-* "Infuuswissel noteren": Dit zal automatisch een insulinepatroon wissel noteren wanneer je de "cannule vullen" optie op de pomp gebruikt.
+* "Reservoirwissel noteren": Dit zal automatisch een insulinepatroon wissel noteren wanneer je de "cannule vullen" optie op de pomp gebruikt.
 * "Slangwissel noteren": Dit voegt een notitie toe aan de AndroidAPS database wanneer je het "infusieset vullen" programma op de pomp gebruikt.
 * "Infuuswissel noteren": Dit voegt een notitie toe aan de AndroidAPS database wanneer je het "cannule vullen" programma op de pomp gebruikt. **Opmerking: Bij een infuuswissel wordt ook automatisch Autosens gereset.**
 * "Batterijwissel noteren": Dit voegt een notitie toe aan AndroidAPS wanneer je een nieuwe batterij in de pomp plaatst.
@@ -105,7 +104,15 @@ Configureer alarmen in de pomp als volgt:
 
 Met deze instellingen gaan alle alarmen vanuit de pomp af in stilte. AndroidAPS krijgt de alarmen wel binnen, en beslist vervolgens of een alarm relevant voor jou is. Niet-relevante alarmen worden bevestigd in de pomp door AndroidAPS, hiervan zul jij dus niks merken. Wel-relevante alarmen worden door AndroidAPS niet bevestigd, waarna het volume van het alarm zal toenemen (eerst piepen, dan trillen) en jij als gebruiker het alarm moet bevestigen.
 
-Insight pompen met nieuwere firmware zullen kort trillen wanneer een bolus wordt afgeleverd (bijvoorbeeld wanneer AndroidAPS een SMB afgeeft of wanneer AndroidAPS een vertraagde bolus afgeeft om een hoge tijdelijke basaalstand te simuleren). Dit trilalarm kan niet worden uitgeschakeld. Oudere pompen zullen hierbij niet trillen.
+### Trilalarmen
+
+Insight pompen met nieuwere firmware zullen kort trillen wanneer een bolus wordt afgeleverd (bijvoorbeeld wanneer AndroidAPS een SMB afgeeft of wanneer AndroidAPS een vertraagde bolus afgeeft om een hoge tijdelijke basaalstand te simuleren).
+
+* Firmware 1.x: Geen trillingen.
+* Firmware 2.x: Trillingen kunnen niet worden uitgeschakeld.
+* Firmware-3.x: AndroidAPS trilt niet bij afgeven van bolus. (minimum [versie 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+
+Firmwareversie is te vinden in het menu.
 
 ## Batterij vervangen
 

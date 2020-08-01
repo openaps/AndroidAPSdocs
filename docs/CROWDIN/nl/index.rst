@@ -57,7 +57,7 @@ Onderdelen instellen
    :glob:
    
    BG bron <./Configuration/BG-Source.rst>
-   xDrip+ instellingen <./Configuratie/xdrip.md>
+   xDrip+ instellingen <./Configuration/xdrip.md>
    Pompen <./Hardware/pumps.rst>
    Telefoons <./Hardware/Phoneconfig.rst>
    Nightscout instellen <./Installing-AndroidAPS/Nightscout.md>
@@ -89,7 +89,7 @@ AndroidAPS gebruik
    Tijdelijk streefdoel <./Usage/temptarget.md>   
    Vertraagde koolhydraten (eCarbs) <./Usage/Extended-Carbs.rst>
    Automatisering <./Usage/Automation.rst>
-   Careportal (discontinued) <./Usage/CPbefore26.rst>
+   Careportal (bestaat niet meer) <./Usage/CPbefore26.rst>
    Automatisering met andere apps <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
  
@@ -112,7 +112,7 @@ AndroidAPS voor kinderen
    :glob:
    
    Monitoren op afstand <./Children/Children.rst>
-   SMS Comando's <./Usage/SMS-Commands.rst>
+   SMS Comando's <./Children/SMS-Commands.rst>
    
 
 Problemen oplossen

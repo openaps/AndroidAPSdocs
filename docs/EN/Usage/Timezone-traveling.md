@@ -23,6 +23,7 @@ To avoid this there are two possibilities:
 
    * i.e. Vienna -> New York: profile switch +6 hours
    * i.e. Vienna -> Sydney: profile switch -8 hours
+* Probably not an option if using [patched LibreLink app](../Hardware/Libre2#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Option 2: Delete pump history
 
@@ -38,8 +39,6 @@ When get out of plane:
 * turn on phone
 * let phone connect to the pump and fine-tune time
 
-## Combo
-
 ## Insight
 
 The driver automatically adjusts the time of the pump to the time of the phone.
@@ -49,7 +48,6 @@ The Insight also records the history entries in which moment time was changed an
 It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
 
 So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skiped in calculation in AAPS as the correct time cannot be identified properly.
-
 
 # Time adjustment daylight savings time (DST)
 

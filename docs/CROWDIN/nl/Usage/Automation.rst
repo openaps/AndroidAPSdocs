@@ -1,147 +1,153 @@
 Automatisering
 **************************************************
 
-What is Automation
+Wat is automatisering
 ==================================================
-For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. Bijv. when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
+Voor bepaalde veelvoorkomende gebeurtenissen moet je wellicht altijd dezelfde instellingen wijzigen. Om extra werk te voorkomen, kun je proberen om dit te automatiseren, en het dus automatisch voor je te laten doen. 
+
+Bijv. wanneer jouw BG te laag is, kun je besluiten om automatisch een hoger tijdelijk streefdoel in te stellen. Of als je in het sportcentrum bent, wordt er automatisch een tijdelijk streefdoel voor je ingesteld. 
+
+Voordat je automatisering gebruikt, moet je ruime ervaring hebben met de handmatige 'tijdelijke streefdoelen <./temptarget.html>`_ of handmatige profiel wissels die je toepast. 
+
+Zorg ervoor dat je goed begrijpt hoe automatisering werkt voordat je jouw eerste eenvoudige regel aanmaakt. **In plaats van de regel een actie te laten uitvoeren, laat hem alleen een notificatie tonen.** Pas als je zeker weet dat de automatisering op het juiste moment wordt geactiveerd, vervang je de melding door een echte actie.
 
 .. image:: ../images/Automation_ConditionAction_RC3.png
-  :alt: Automation condition + action
+  :alt: Automatiseringsvoorwaarde + actie
 
-How to use it
+Zo stel je het in
 ==================================================
-To set up an automation, you have to give it a title, select at least one condition and one action. 
+Als je een automatisering wilt instellen, moet je deze een titel geven, en ten minste één voorwaarde en één actie selecteren. 
 
-Important note
+Belangrijke opmerking
 --------------------------------------------------
-**Automation is still active when you disable loop!**
+**Automatisering is nog steeds actief wanneer je de loop uitschakelt!**
 
-So make sure to deactivate Automation rules during these occations if neccessary. You can do so by untiking the box left of the name of your automation rule.
+Dus zorg ervoor dat je de Automation-regels deactiveert indien nodig. Je kunt dit doen door het vinkje in het vakje bij de naam van jouw automatiseringsregel weg te halen.
 
 .. image:: ../images/Automation_ActivateDeactivate.png
-  :alt: Activate and deactivaten automation rule
+  :alt: Automatiseringsregel activeren en deactiveren
 
 Algemeen
 --------------------------------------------------
-There are some limits:
+Er zijn een aantal beperkingen:
 
-* The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
-* The profile percentage has to be between 70 % and 130%.
-* There is a 5 min. time limit between executions (and first execution).
+* De glucosewaarde moet tussen 72 en 270 mg/dl of 4 en 15 mmol/l liggen.
+* Het profiel percentage moet liggen tussen 70% en 130%.
+* Er is een 5 min. tijdslimiet tussen het opnieuw uitvoeren van een regel (t.o.v. de eerste uitvoering).
 
-**Please be careful:**
+**Let op:**
 
-* **less than -2 means: -3 and lower (-4,-10, etc)**
-* **more than -2 means: -1 and higher (-1, 0, +10, etc)**
+* **minder dan -2 betekent: -3 en lager (-4, -10, etc)**
+* **meer dan -2 betekent: -1 en hoger (-1, 0, +10, etc.)**
 
 
-Condition
+Voorwaarde
 --------------------------------------------------
-You can choose between several conditions. Here are some things explained, but most of it should be easy to understand and is not all described here:
+Je kunt kiezen tussen verschillende voorwaarden. Hieronder worden enkele voorbeelden uitwerkt, maar de meeste voorwaarden zijn gemakkelijk te begrijpen en daarom wordt niet alles hier beschreven:
 
-* connect conditions: you can have several conditions and can connect them with 
+* voorwaarden combineren: je kunt verschillende voorwaarden selecteren en je kunt ze aan elkaar verbinden dmv: 
 
-   * "And"
-   * "Or"
-   * "Exclusive or" (which means that if one (and only one of the) conditions applies, the action(s) will happen)
+   * "En"
+   * "Of"
+   * "Exclusive of" (wat betekent dat als er één (en slechts één) van de voorwaarden van toepassing is, de actie zal plaatsvinden)
    
-* Time vs. recurring time
+* Tijd vs. herhaal tijd
 
-   * time =  single time event
-   * recurring time = something that happens regulalrly (i.e. once a week, every working day etc.)
+   * tijd = eenmalige gebeurtenis
+   * herhaal tijd = iets dat met regelmaat gebeurt (dat wil zeggen één keer per week, elke werkdag etc.)
    
-* location: in the config builder (Automation), you can select which location service you want to use:
+* locatie: in de configurator (Automation) kun je opgeven welke locatieservice je wilt gebruiken:
 
-  * Use passive location: AAPS only takes locations if other apps are requesting it
-  * Use network location: Location of your Wifi
-  * Use GPS location (Attention! May cause excessive battery drain!)
+  * Gebruik passieve locatie: AAPS neemt alleen locaties als andere apps erom vragen
+  * Gebruik netwerk locatie: Locatie van jouw Wifi
+  * Gebruik GPS-locatie (Let op! Dit kan veel batterijverbruik geven!)
   
-Action
+Actie
 --------------------------------------------------
-You can choose one or more actions: 
+Je kunt één of meer acties kiezen: 
 
-* start temp target 
+* start tijdelijk doel 
 
-   * must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
-   * works only if there is no previous temp target
+   * moet tussen 72 mg/dl en 270 mg/dl (4 mmol/l en 15 mmol/l) zijn
+   * werkt alleen als er geen vorig tijdelijk doel actief is
    
-* stop temp target
-* notification
-* profile percentage
+* stop tijdelijk doel
+* notificatie
+* profiel percentage
 
-   * must be between 70% and 130% 
-   * works only if the previous percentage is 100%
+   * moet tussen 70% en 130% liggen 
+   * werkt alleen als het vorige percentage 100% is
 
-After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
+Na het toevoegen van jouw actie, **vergeet niet om de standaardwaarden** te veranderen naar de waarde die jij nodig hebt door op de standaardwaarden te tikken of de + - knoppen te gebruiken.
  
 .. image:: ../images/Automation_Default_V2_5.png
-  :alt: Automation default vs. set values
+  :alt: Automatisering standaard vs. ingestelde waardes
 
-Sort automation rules
+Automatiseringsregels sorteren
 -----
-To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
+Om jouw automatiseringsregels te sorteren, houd je de vier-streepjes-knop aan de rechterkant van het scherm ingedrukt en sleep je de regel omhoog of omlaag.
 
 .. image:: ../images/Automation_Sort.png
-  :alt: Sort automation rules
+  :alt: Automatiseringsregels sorteren
   
-Delete automation rules
+Automatiseringsregels verwijderen
 -----
-To delete an automation rule just swipe it left or right.
+Om een automatiseringsregel te verwijderen houd je de regel ingedrukt en veeg je hem simpelweg naar links of naar rechts.
 
 .. image:: ../images/Automation_Delete.png
-  :alt: Delete automation rule
+  :alt: Automatiseringsregels verwijderen
 
-Good practice & caveats
+Tips & valkuilen
 ==================================================
-* When you start using Automation or create a new rule add a notification until you are sure the rule is working well.
-* Whatch the rule results.
-* Try not make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg < 180 mg/dl)
+* Wanneer je begint met het gebruik van Automatisering of wanneer je een nieuwe regel toevoegt, laat de regel dan een notificatie weergeven totdat je zeker weet dat de regel op het juiste moment geactiveerd wordt. Vervang daarna pas de notificatie voor een echte actie.
+* Houd in de gaten wat er gebeurt als de regel actief is.
+* Probeer de omstandigheden niet te gemakkelijk te maken (d.w.z.: ALS bg > 80 mg/dl en bg < 180 mg/dl)
 
-    **Doubly important if action is a profile switch!**
+    **Extra belangrijk wanneer de actie een profiel wissel is!**
  
-* Try and use Temp Targets instead of Profile Switches. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`_ back to 0.
-* Make sure Profile switches are made sparingly and preferably at a last resort.
+* Probeer tijdelijke streefdoelen te gebruiken in plaats van profiel wissels. Tijdelijke streefdoelen resetten `Autosens <../Usage/Open-APS-features.html#autosens>`_ niet. Profiel wissels doen dat wel, en veelvuldige profielwissels maken het Autosens daardoor onmogelijk om goed te functioneren.
+* Gebruik profielwissels daarom spaarzaam en zet ze bij voorkeur pas in als laatste redmiddel.
 
-    * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`_ useless for a min of 6 hours.
+    * Elke profielwissel maakt `Autosens <../Usage/Open-APS-features.html#autosens>`_ nutteloos voor minimaal 6 uur.
 
-* Profile switching will not reset the profile back to your base profile
+* Een profielwissel zal het profiel NIET automatisch terugzetten naar jouw basisprofiel wanneer de condities van jouw regel niet meer van toepassing zijn.
 
-    * You have to make another rule to set this back or do it manually!
-    * Increased risk of Hypoglycemia if profile switch does not expire or reset back to base profile.
+    * Je moet dus zelf een andere regel aanmaken om jouw profiel terug te zetten naar normaal, of dit handmatig doen!
+    * Je loopt een verhoogd risico op hypo's / hypers als je nalaat om jouw profielwissel weer terug te (laten) zetten naar normaal.
 
-Examples
+Voorbeelden
 ==================================================
-These are just set up examples, no advises. Don't reproduce it without being aware what you are actually doing or why you need these. See below for two examples with screenshots.
+Dit zijn slechts voorbeelden, geen advies. Doe het niet blind na zonder je bewust te zijn van wat je eigenlijk doet of waarom je deze regels nodig zou hebben. Zie hieronder twee voorbeelden met screenshots.
 
-* Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
-* Setting temp target for activities based on time, location...
-* Setting eating soon temp targets based on time, location...
+* Profielwissels voor jouw dagelijkse activiteiten (zoals school, fitnesscentrum, weekend, werkdag...) met behulp van gps-locatie, wifi, tijd etc.
+* Instellen van tijdelijk streefdoel voor activiteiten op basis van tijd, locatie...
+* Het instellen van een "eet binnenkort" tijdelijk doel op basis van tijd, locatie...
 
-Low Glucose Temp Target
+Lage glucose tijdelijk doel
 --------------------------------------------------
 .. image:: ../images/Automation2.png
   :alt: Automation2
 
-This is made by a person that wants to get an automatically hypo temp target when having a hypo.
+Deze regel is gemaakt door iemand die een automatisch hypo-tijdelijk doel wil krijgen bij het hebben van een hypo.
 
-Lunch Time Temp Target
+Lunchtijd tijdelijk doel
 --------------------------------------------------
 .. image:: ../images/Automation3.png
   :alt: Automation3
   
-These example is made by a person, that has lunch at the same time during the week. If it is at a certain time at its lunch location, it gets a lower temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the certain time and the  location. So it does not work at any other time at this location or at this time when the persons stays home or works longer. 
+Deze regel is gemaakt door iemand, die doordeweeks luncht op hetzelfde tijdstip. Als deze persoon op een bepaald tijdstip op de lunchlocatie is, dan wordt er een lager tijdelijk doel (eet binnenkort) ingesteld terwijl h/zij wacht op de lunch. Door de "en" combinatie wordt de regel alleen uitgevoerd als diegene op dat tijdstip op die locatie is. De regel wordt dus niet actief wanneer diegene op een ander tijdstip op deze locatie is, en ook niet wanneer het wel dat tijdstip is maar diegene thuis is gebleven of langer op de werkplek is gebleven. 
 
-Incorrect use of Automation
+Onjuist gebruik van automatisering
 --------------------------------------------------
-As every system Automation can be used incorrectly. This might lead to difficulties and even danger for your health. Examples for incorrect use are for instance:
+Zoals elk systeem kan Automatisering ook onjuist worden gebruikt. Dit kan leiden tot problemen en zelfs gevaar voor jouw gezondheid. Voorbeelden van onjuist gebruik zijn bijvoorbeeld:
 
-* Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
-* Setting profile to compensate food
-* Setting profile without duration
-* Creating one way rules (i.e. do something but don't undo it by another rule)
-* Creating long term rules
+* Het AAPS algoritme proberen te overschrijven in plaats van alleen te helpen (d.w.z. door een profielwissel in te stellen in plaats van jouw basaal, ISF etc. goed in te stellen)
+* Instellen van profielwissel om voor voedsel te compenseren
+* Instellen van een profielwissel zonder duur
+* Het maken van een regel die maar één kant op gaat (d.w.z. je maakt een regel om iets aan te zetten, zonder ook een regel te hebben om het weer uit te zetten)
+* Het maken van regels met een hele lange duur
 
-Alternatives
+Alternatieven
 ==================================================
 
-For advanced users there are other posibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found `here <./automationwithapp.html>`_.
+Voor gevorderde gebruikers zijn er andere mogelijkheden om taken te automatiseren met behulp van IFTTT of een Android app genaamd Automate. Enkele voorbeelden zijn `hier <./automationwithapp.html>`_ te vinden.

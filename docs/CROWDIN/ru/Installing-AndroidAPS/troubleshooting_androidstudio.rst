@@ -1,19 +1,19 @@
-Troubleshooting Android Studio
+Устранение неполадок Android Studio
 **************************************************
-Lost keystore
+Потеряно хранилище ключей
 ==================================================
-If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
+Если вы используете одно и то же хранилище ключей при обновлении AndroidAPS, вам не нужно деинсталлировать предыдущую версию на смартфоне. Поэтому рекомендуется хранилище ключей размещать в надежном месте.
 
-In case you cannot find your old keystore anymore, proceed as follows:
+На случай, если вы не можете найти свое старое хранилище ключей, выполните следующие действия:
 
-1. `Export settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ on your phone.
-2. Copy settings from your phone to an external location (i.e. your computer, cloud storage service...).
-3. Make sure settings file "AndroidAPS Preferences" is stored safely.
-4. Generate signed apk of new version as described on the `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_.
-5. Uninstall previous AAPS version on your phone.
-6. Install new AAPS version on your phone.
-7. `Import settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ - if you can't find them on your phone copy them from the external storage.
-8. Keep on looping.
+1. `Экспорт настроек <../Usage/ExportImportSettings.html#how-to-export-settings>`_ на вашем телефоне.
+2. Скопируйте настройки вашего телефона во внешнее местоположение (напр. ваш компьютер, служба облачного хранения...).
+3. Убедитесь, что файл параметров "Параметры AndroidAPS" сохранен.
+4. Сгенерируйте подписанный apk новой версии, как описано на странице обновления <../Instaling-AndroidAPS/Update-to-new-version.html> ` _.
+5. Деинсталлируйте предыдущую версию AAPS на вашем телефоне.
+6. Установите новую версию AAPS на свой телефон.
+7. `Импортируйте настройки <../Usage/ExportImportSettings.html#how-to-export-settings>`_ - если не можете найти их на вашем телефоне, скопируйте их из внешнего хранилища.
+8. Продолжайте пользоваться циклом.
 
 Предупреждение компилятора Kotlin
 ==================================================
@@ -21,129 +21,130 @@ In case you cannot find your old keystore anymore, proceed as follows:
 
 Приложение успешно построено и может быть перенесено на телефон.
 
-.. image:: ../images/GIT_WarningIgnore.PNG
-  :alt: ignore Kotline compiler warning
+.. изображение:: ../images/GIT_WarningIgnore.PNG
+  :alt: игнорировать предупреждение компилятора Koline
 
-Key was created with errors
+Ключ создан с ошибками
 ==================================================
-When creating a new keystore for building the signed APK, on Windows the following error message might appear
+При создании нового хранилища ключей для построения подписанного APK в Windows может появиться следующее сообщение об ошибке
 
-.. image:: ../images/AndroidStudio35SigningKeys.png
-  :alt: Key was created with errors
+.. изображение:: ../images/AndroidStudio35SigningKeys.png
+  :alt: Ключ создан с ошибками
 
-This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
+Это, кажется, ошибка в Android Studio 3.5.1 и в среде Java в Windows. Ключ создается правильно, но рекомендация выводится как ошибка. В настоящее время это можно игнорировать.
 
 Не удалось загрузить… / Работа оффлайн
 ==================================================
 Если вы получите подобное сообщение об ошибке
 
-.. image:: ../images/GIT_Offline1.jpg
-  :alt: Warning could not download
+.. изображение:: ../images/GIT_Offline1.jpg
+  :alt: Не удалось загрузить предупреждение
 
 убедитесь, что 'Автономная работа' выключена.
 
 Файл -> параметры
 
-.. image:: ../images/GIT_Offline2.jpg
-  :alt: Settings offline work
+.. изображение:: ../images/GIT_Offline2.jpg
+  :alt: Параметры автономной работы
 
 Ошибка: buildOutput.apkData не может быть пустым
 ==================================================
 Иногда появляется сообщение об ошибке при компоновке apk
 
-  `Errors while building APK.`
+  `Ошибки при сборке APK.`
    
-  `Cause: buildOutput.apkData must not be null`
+  `Ошибка: buildOutput.apkData не может быть пустым`
 
-This is a known bug in Android Studio 3.5 and will probably not be fixed before Android Studio 3.6. Three options:
+Эта известная ошибка в Android Studio 3.5 и, вероятно, она не будет исправлена до Android Studio 3.6. Есть три варианта:
 
 1. Вручную удалите три папки компоновки (обычная "сборка", папка компоновки в "app" и папка компоновки в "wear") и снова сгенерируйте подписанный apk.
-2. Set destination folder to project folder instead of app folder as described in `this video <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
+2. Установите папку назначения в папку проекта, а не в папку приложения, как описано в этом видео <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
 3. Измените папку назначения apk (другое расположение).
 
-Unable to start daemon process
+Не удается запустить демон процесс
 ==================================================
-If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above. I you are using Windows 10 you must use a 64-bit operating system.
+Если вы видите подобное сообщение об ошибке, вы, вероятно, используете ОС Windows 10, 32-bit. Она не поддерживается Android Studio 3.5.1 и выше. В Windows 10 следовать использовать 64-битную операционную систему.
 
-There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. `this one <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
+В интернете много руководств, как определить, у вас 32-или 64-битная ОС- например " это <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>` _.
 
-.. image:: ../images/AndroidStudioWin10_32bitError.png
-  :alt: Screenshot Unable to start daemon process
+.. изображение:: ../images/AndroidStudioWin10_32bitError.png
+  :alt: снимок экрана не удалось запустить процесс демона
   
 
-No CGM data
+Нет данных CGM мониторинга
 ==================================================
-* In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
-* In case you are using `patched Dexcom G6 app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Make sure you are using the correct version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* В случае, если вы используете xDrip+: идентифицируйте ресивер, как описано в настройках xDrip+ <../Configuration/xdrip.html#identify-receiver>`_.
+ContextEdit.
+* Если вы используете Dexcom G6 с ` модифицированным приложением Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app> ` _, вам понадобится версия из папки ` 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>` _.
 
 Неодобренные изменения
 ==================================================
 Если вы получите сообщение об ошибке, как это
 
-.. image:: ../images/GIT_TerminalCheckOut0.PNG
-  :alt: Failure uncommitted changes
+.. изображение:: ../images/GIT_TerminalCheckOut0.PNG
+  :alt: отказ: незафиксированные изменения
 
-Option 1 - Check git installation
+Вариант 1 - Проверить установку git
 --------------------------------------------------
-* git might be not installed correctly (must be globally available)
-* when on Windows and git was just installed, you should restart your computer or at least log out and re-login once, to make git globally available after the installation
-* `Check git installation <../Installing-AndroidAPS/git-install.html#check-git-settings-in-android-studio>`_
-* If no git version is shown in check but git is installed on your computer, make sure Android Studio knows where `git is located <../Installing-AndroidAPS/git-install.html#set-git-path-in-android-studio>`_ on your computer.
+* возможно, git установлен неправильно (должен быть доступен по всему миру)
+* после установки Git в Windows и, нужно перезапустить компьютер или хотя бы раз выйти и снова войти в систему, чтобы сделать git глобально доступным
+* `Проверьте установку git <../Installing-AndroidAPS/git-install.html#check-git-settings-in-android-studio>`_
+* Если на вашем компьютере не отображается версия gti, но git установлен, убедитесь, что Android Studio знает, где находится `git. /Installing-AndroidAPS/git-install.html#set-git-path-in-android-studio>`_ на своем компьютере.
 
-Option 2 - Reload source code
+Вариант 2 - Перезагрузка исходного кода
 --------------------------------------------------
-* In Android Studio select VCS -> GIT -> Reset HEAD
+* В Android Studio выберите VCS -> GIT -> Сбросить HEAD
 
-.. image:: ../images/GIT_TerminalCheckOut3.PNG
-  :alt: Reset HEAD
+.. изображение:: ../images/GIT_TerminalCheckOut3.PNG
+  :alt: Сбросить HEAD
    
-Option 3 - Check for updates
+Вариант 3 - проверить наличие обновлений
 --------------------------------------------------
-* Copy ‘git checkout --’ to clipboard (without quote signs)
-* Switch to Terminal in Android Studio (lower left side of Android Studio window)
+* Скопируйте «git checkout --» в буфер обмена (без кавычек)
+* Переключитесь на терминал в Android Studio (слева с нижней стороны окна Android Studio)
 
-  .. image:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
+  .. изображение:: ../images/GIT_TerminalCheckOut1.PNG
+  :alt: Терминал Android Studio
    
-* Paste copied text and press return
+* Вставьте скопированный текст и нажмите ввод
 
-  .. image:: ../images/GIT_TerminalCheckOut2.jpg
-    :alt: GIT checkout success
+  .. изображение:: ../images/GIT_TerminalCheckOut2.PNG
+    :alt: Проверка GIT успешно завершена
 
 Приложение не установлено
 ==================================================
-.. image:: ../images/Update_AppNotInstalled.png
-  :alt: phone app note installed
+.. изображение:: ../images/Update_AppNotInstalled.png
+  :alt: приложение не установлено
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps:
+* Убедитесь, что вы передали файл «full-release.apk» на ваш телефон.
+* Если на вашем телефоне появилось сообщение "приложение не установлено", то выполните следующее:
   
-1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
+1. `Экспортируйте параметры <../Usage/ExportImportSettings.html>`_ (в версии AAPS, уже установленной на телефоне)
 2. Удалите AAPS с телефона.
-3. Enable airplane mode & turn off bluetooth.
+3. Включите режим полета и выключите Bluetooth.
 4. Установите новую версию («app-full-release.apk»)
-5. `Import settings <../Usage/ExportImportSettings.html>`_
+5. `Импортируйте настройки <../Usage/ExportImportSettings.html>`_
 6. Снова включите Bluetooth и отключите режим самолета
 
 Приложение установлено, но старая версия
 ==================================================
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`.
+Если вы успешно построили приложение, перенесли его на телефон и установили его, но номер версии остается прежним, то вы могли пропустить шаг обновления `update your local copy <../Update-to-new-version.html#update-your-local-copy>`.
 
 Ничего из вышеперечисленного не сработало
 ==================================================
 Если вышеперечисленные советы не помогли попробуйте начать сборку приложения с нуля:
 
-1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
-2. Have your key password and key store password ready
-    In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components>`_.
+1. `Экспортируйте параметры <../Usage/ExportImportSettings.html>`_ (в версии AAPS, уже установленной на телефоне)
+2. Подготовьте пароль ключа и пароль хранилища
+    В случае, если вы забыле пароли, вы можете попытаться найти их в файлах проекта, как описано здесь <https://youtu.be/nS3wxnLgZOo>` _. Или просто создайте новый файл хранения ключей. 
+3. Постройте приложение с нуля, как описано `здесь <../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components>`_.
 4.	Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на ваш телефон и установите.
-5. `Import settings <../Usage/ExportImportSettings.html>`_
+5. `Импортируйте настройки <../Usage/ExportImportSettings.html>`_
 
 Сценарий худшего варианта
 ==================================================
 Если даже создание приложения с нуля не решает проблему, попробуйте полностью удалить Android Studio. Некоторые пользователи сообщили, что это решило проблему.
 
-**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
+** Обязательно деинсталлируйте все файлы, связанные с Android Studio. * * Если вы не полностью удалите Android Studio со всеми скрытыми файлами, деинсталляция может привести к новым проблемам, а не к решению существующих. Руководства по полной деинсталляции можно найти в Интернете, напр. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Install Android Studio from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#install-android-studio>`_ and **do not update gradle**.
+Установите Android Studio с нуля, как описано ниже: <../Installing-AndroidAPS/Building-APK.html#install-android-studio>`_ и **не обновляйте gradle**.

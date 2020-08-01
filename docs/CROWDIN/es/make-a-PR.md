@@ -1,6 +1,6 @@
 # Realización de su primera PR (petición de modificación)
 
-**Esta descripción es sólo para editar la documentación en inglés. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org).**
+**Esta descripción es sólo para editar la documentación en inglés. All new information must be added in English first. Si desea traducir a otros idiomas (gracias), por favor use [crowdin](https://wikitranslations.androidaps.org).**
 
 Para obtener sugerencias sobre cómo formatear texto (titulares, audaces ...) y establecer enlaces, por favor vea la sección ["sintaxis de código"](./make-a-PR#code-syntax) de esta página.
 
@@ -59,18 +59,18 @@ PD: su fork y rama va a estar asentados en su propia cuenta de GitHub. Después 
 
 ## Sintaxis del código
 
-At the moment there are two languages used for docs pages:
+En este momento se utilizan dos idiomas para las páginas de los documentos:
 
-* Markdown (.md) - the markup language originally used for docs pages
+* Markdown (.md) - el lenguaje de marcado utilizado originalmente para las páginas de wiki
 * texto reStructuredText (.rst) - el nuevo lenguaje de códigos
 
-We will change all docs pages from Markdown to reStructuredText bit by bit. Mientras tanto, es importante que utilice la sintaxis correcta al formatear texto o enlazar. Si no está seguro de tener un vistazo a los códigos de formato/enlace en las páginas existentes.
+Cambiaremos todas las páginas de documentos de Markdown a reStructuredText bit a bit. Mientras tanto, es importante que utilice la sintaxis correcta al formatear texto o enlazar. Si no está seguro de tener un vistazo a los códigos de formato/enlace en las páginas existentes.
 
-### Image size
+### Tamaño de la imagen
 
-If using images please use reasonable sizes. Screenshot images should be **250 pixels wide**.
+Si usa imágenes por favor use tamaños razonables. Las imágenes de captura de pantalla deben ser **de 250 píxeles de ancho**.
 
-### .md files
+### Archivos .md
 
 #### Formato de texto
 
@@ -91,7 +91,7 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 * enlace interno a archivo .rst: `[alt text](.../folder/file.rst)`
 * enlace interno a tíyulo: `[alt text](.../folder/file#headline)`
 
-### .rst files
+### Archivos .rst
 
 #### Formato de texto
 
@@ -126,9 +126,9 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 * enlace interno al archivo .rst: `` `alt text <../folder/file.html>_` ``
 * enlace interno a título: `` `alt text <../folder/file.html#headline>_` ``
 
-### Internal links
+### Enlaces internos
 
-If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages (Czech, German...) as well.
+Si desea establecer un enlace interno dentro de la documentación de AndroidAPS, utilice sólo **enlaces relativos**. Sólo esto hará que el enlace funcione en los otros idiomas (checo, alemán...) también.
 
 #### En archivos que terminan con **.md**:
 
@@ -150,28 +150,28 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 
 ## Adición de varias imágenes a la documentación
 
-If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
+Si usted está planeando hacer un montón de modificaciones, incluyendo la adición de imágenes para ayudar a ilustrar las partes de la documentación (¡gracias!), es posible que desee tomar el siguiente enfoque:
 
-* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png". 
-* Please use reasonable sizes. Screenshot images should be **250 pixels wide**.
-* You can upload images in batches easily by:
+* A medida que vas y guardas capturas de pantalla, renombra las capturas de pantalla a un nombre descriptivo - pero intenta no usar espacios ya que confunden a Github. En su lugar, utilice guiones bajos. Es decir, Example_batch_images_upload.png en vez de "Ejemplo de imágenes por lotes upload.png". 
+* Por favor use tamaños razonables. Las imágenes de captura de pantalla deben ser **de 250 píxeles de ancho**.
+* Puede subir imágenes en lotes fácilmente mediante:
   
-  1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your github username)).
+  1. Navegue hasta la carpeta de imágenes (https: //github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - pero asegúrese de que está en su fork/copia de la carpeta docs Images para poder hacer esto (sustituya "openaps" en el URL con su nombre de usuario github)).
   
-  2. Click in the upper right corner where it says "Upload files"
+  2. Haga clic en la esquina superior derecha donde dice "Cargar archivos"
   
-  3. Drag and drop your images into the screen
+  3. Arrastre y suelte las imágenes en la pantalla
   
-  4. Commit these to your branch
+  4. Confirme esto en su rama
   
-  5. Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
+  5. Ahora, puede buscar la ruta URL/relativa de cada archivo y utilizarla para hacer referencia al añadir imágenes a una página de la documentación.
   
-  6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR#code-syntax) for the page type you are on (.md or .rst). The main thing is to have a plain text description, followed by a link with a relative path to the image, like this:
+  6. Para ver ejemplos de cómo añadir las imágenes, puede ver el código "raw" de una página para ver un ejemplo de una página que ya tiene las imágenes incrustadas correctamente. Asegúrese de utilizar el [código correcto](./make-a-PR#code-syntax) para el tipo de página sobre la que está (.md o .rst). Lo principal es tener una simple descripción de texto, seguido por un enlace con una ruta de acceso relativa a la imagen, como este:
     
-    * For .md pages: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)` (That code is exactly how the image below is embedded to be displayed.)
-    * For .rst pages: `.. image:: ../images/Example_batch_images_upload.png`  
-      `:alt: Example of uploading images in batches`
+    * Para páginas .md: `![ Ejemplo de carga de imágenes en lotes](../images/Example_batch_images_upload.png)` (Este código es exactamente la forma en que se incorpora la imagen siguiente)
+    * Para páginas .rst: `.. imagen:: ../images/Example_batch_images_upload.png`  
+      `:alt: Ejemplo de carga de imágenes en lotes`
 
-![Example of uploading images in batches](./images/Example_batch_images_upload.png)
+![Ejemplo de carga de imágenes en lotes](./images/Example_batch_images_upload.png)
 
 7. Después de añadir imágenes o realizar ajustes, puede enviar un PR a la rama maestra de AndroidAPSdocs.

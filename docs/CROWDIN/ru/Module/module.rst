@@ -35,7 +35,9 @@ SGLT-2 ингибиторы, которые также называются гл
 
 Телефон
 --------------------------------------------------
-Вам нужен смартфон Android с операционной системой Google Android 6.0 или выше. Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
+Вам нужен смартфон Android с операционной системой Google Android 6.0 или выше. Следующая основная версия AndroidAPS 2.7 будет поддерживать только Android 7 и выше. Так что если вы думаете о новом телефоне, рекомендуем хотя бы Android 8., но оптимально Android 9 или 10.
+
+Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
 Для того, чтобы включить в список телефон, который не занесен в таблицу, заполните форму <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>.
 
@@ -48,7 +50,7 @@ AndroidAPS **на данный момент** работает с
 - `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (дополнительно необходимо: Ruffy app, LineageOS или Android 8.1 на вашем телефоне)
 - `Помпа Accu-Chek Insight <./Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
-- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_ (except pumps with new firmware v3) 
+- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_ (кроме помп с новой прошивкой v3) 
 - `некоторые старые помпы Medtronic <./Configuration/MedtronicPump.html>`_ начиная с [предстоящей[ версии 2.4 (дополнительно необходимо: RileyLink/Gnarl аппаратное обеспечение, телефон на Android с чипом Bluetooth LE / BLE-chipset)
 
 **Другие помпы** которые потенциально могут работать с AndroidAPS перечислены на `Будущие (возможные) помпы <../Getting-Started/Future-possible-Pump-Drivers.html>`_ странице.
@@ -72,13 +74,13 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 --------------------------------------------------
 Это всего лишь краткий обзор совместимых с AndroidAPS систем мониторинга ГК. Для получения дополнительной информации смотрите `здесь <../Configuration/BG-Source.html>`_. Или если проще: если данные ГК могут приниматься приложением xDrip+ или на веб-сайте Nightscout, вы можете выбрать xDrip+ (или Nightscout с интернет-соединением) как источник ГК в AAPS.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or patched Dexcom app
-* `Dexcom G5 <../Hardware/DexcomG5.html>`_: It works with xDrip+ app or patched Dexcom app
-* `Dexcom G4 <../Hardware/DexcomG4.html>`_: These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
-* `Libre 2 <../Hardware/Libre2.html>`_: It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
-* `Libre 1 <../Hardware/Libre1.html>`_: You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
-* `Eversense <../Hardware/Eversense.html>`_: It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
-* `Enlite <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
+* ` Dexcom G6 <../Hardware/DexcomG6.html> ` _: Он работает с приложением xDrip + или модифицированным приложением Dexcom
+* ` Dexcom G5 <../Hardware/DexcomG5.html> ` _: Он работает с приложением xDrip + или модифицированным приложением Dexcom
+* Dexcom G4: Эти системы достаточно старые, но вы можете найти инструкции по их использованию с приложением xDrip+
+* ` Libre 2 <../Hardware/Libre2.html> ` _: Он работает с xDrip + (не требуется передатчик), но вы должны собрать собственное модифицированное приложение.
+* `Libre 1: -Нужен передатчик, такой как Bluecon или MiaoMiao (сборка или покупка) и приложение xDrip+
+* `Eversense: Он работает до сих пор только в сочетании с модифицированными приложениями ESEL и Eversense-App (не работает с Dana RS и LineageOS, но Dana RS и Android или Combo и Lineage OS работают прекрасно)
+* `Enlite <../Hardware/MM640g.html>`_: довольно сложная система с большим количеством дополнительных материалов
 
 
 Nightscout

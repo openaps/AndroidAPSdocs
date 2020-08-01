@@ -1,36 +1,36 @@
-# How-to configure a Huawei phone
+# Как настроить телефон Huawei
 
-There are different options, some Android specific, some Huawei specific:
+Существуют различные варианты, некоторые специфичные для Android, некоторые из них имеют специфику Huawei:
 
-* Add AndroidAPS and xdrip+ to apps list which ignore battery optimisations:
+* Добавить AndroidAPS и xdrip+ в список приложений, которые игнорируют оптимизацию батареи:
   
-  * Settings / App / Settings / Special autorisations / Ignore battery optimisation / Select "All applications" / Set app to allowed
+  * Параметры/Приложения/Настройки/Специальные разрешения/Игнорировать оптимизацию батареи/Выбрать "Все приложения"/Включить приложение в список разрешенных
     
-    ![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
+    ![Huawei - игнорировать оптимизацию батареи](../images/Huawei_BatteryOptimization.png)
 
-* Set battery option settings:
+* Задать параметры батареи:
   
-  * Settings / App / Select AndroidAPS/xdrip+ / Under Battery / App launch
+  * Настройки / приложения / выбрать AndroidAPS/xdrip+ / раздел батареи / запуск приложения
     
-    * Make sure to remove "automatic management"
-    * Allow:
+    * Обязательно отмените "автоматическое управление"
+    * Разрешите:
       
-      * Automatic launch
-      * Secondary launch (can be launched from other apps)
-      * Background run
+      * Автоматический запуск
+      * Вторичный запуск (можно запустить из других приложений)
+      * Работа в фоновом режиме
         
-        ![Huawei - battery options](../images/Huawei_BatteryOptions.png)
+        ![Huawei - параметры батареи](../images/Huawei_BatteryOptions.png)
 
-* Lock App
+* Заблокируйте приложение
   
-  * Go into App recent list and select the lock icon
+  * Перейдите в список недавних приложений и выберите значок блокировки
     
-    ![Huawei - lock app](../images/Huawei_LockApp.png)
+    ![Huawei - блокировка приложения](../images/Huawei_LockApp.png)
 
-For xdrip+, you can also enable persitent notifications (within xdrip+ app):
+Для xdrip + можно также включить постоянные уведомления (в приложении xdrip +):
 
-* Setttings / less common settings / other misc options / Run Collector in foreground
+* Настройки/менее распространенные параметры/другие опции /Запустить коллектор на переднем плане
   
-  ![xdrip+ settings - collector in foreground](../images/xdrip_collector_foreground.png)
+  ![Настройки xdrip+ - коллектор на переднем плане](../images/xdrip_collector_foreground.png)
 
-Depending on Android version, these settings are somewhere else. These explanations are for Android 8.1.
+В зависимости от версии Android, эти параметры могут находятся в каких-нибудь других местах. Эти пояснения относятся к Android 8.1.

@@ -1,6 +1,6 @@
 # Suavizado de los datos de glucosa en la sangre
 
-Si los datos de BG son variables/ruidosos, la AAPS puede inyectar incorrectamente la insulina lo que resulta en BG altos o bajos. Por esta razón, es importante inhabilitar el lazo hasta que se resuelva el problema. Dependiendo de su MCG, estos problemas pueden deberse a la configuración de los mismos o a problemas de sensor/sitio. Algunas características como 'Habilitar SMB siempre' y 'Habilitar SMB después de carbohidratos' sólo se pueden utilizar con una fuente BG con buen filtrado.
+Si los datos de BG son variables/ruidosos, la AAPS puede inyectar incorrectamente la insulina lo que resulta en BG altos o bajos. Por esta razón, es importante inhabilitar el lazo hasta que se resuelva el problema. Dependiendo de su MCG, estos problemas pueden deberse a la configuración de los mismos o a problemas de sensor/sitio. You may need to replace your CGM sensor to resolve this. Algunas características como 'Habilitar SMB siempre' y 'Habilitar SMB después de carbohidratos' sólo se pueden utilizar con una fuente BG con buen filtrado.
 
 ## Aplicación de DexcomG5 (parcheada)
 

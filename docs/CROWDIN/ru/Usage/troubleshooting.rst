@@ -22,7 +22,7 @@ Building & updating
 --------------------------------------------------
 * `Wrong carb values <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 
-  .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
+  .. изображение:: ../images/Calculator_SlowCarbAbsorbtion.png
     :alt: Error: Slow carb absorbtion
 
 * `SMS commands <../Children/SMS-Commands.html#troubleshooting>`_

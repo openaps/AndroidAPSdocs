@@ -1,19 +1,19 @@
-# Smoothing blood glucose data
+# Сглаживание данных о глюкозе в крови
 
-If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
+Если данные гликемии скачкообразны/зашумлены, AAPS может дозировать инсулин неправильно, что приведет к высокой или низкой ГК. По этой причине необходимо отключить цикл до устранения неполадки. В зависимости от типа мониторинга такие проблемы могут быть обусловлены проблемами конфигурации или сенсора/места установки. Для устранения этой проблемы может потребоваться заменить сенсор мониторинга. Некоторые функции, такие как "Всегда включать микроболюсы SMB" и "Активировать микроболюсы после приема углеводов", можно использовать только с хорошо фильтруемым источником данных ГК.
 
-## Dexcom G5 App (patched)
+## Приложение Dexcom G5 (модифицированное)
 
-When using Dexcom G5 App (patched) your BG data is smooth and consistent. There are no restrictions in using SMB.
+При использовании приложения Dexcom G5 (модифицированного) данные гликемии идут плавно и последовательно. При использовании микроболюсов SMB нет ограничений.
 
-## xDrip+ with Dexcom G5
+## xDrip + с Dexcom G5
 
-Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
+Достаточно ровные данные идут только в том случае, если в xDrip + выбран G5 Ob1 коллектор в нативном режиме'.
 
-## xDrip+ with Freestyle Libre
+## xDrip + с Freestyle Libre
 
-When using xDrip+ as your data source for Freestyle Libre values until now you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB because the BG values are not smooth enough. Except this, there are a couple of things you can do to help reduce noise in the data.
+При использовании xDrip + в качестве источника данных для значений Freestyle Libre пока что нельзя активировать 'Всегда включать микроболюсы SMB' и 'Включать микроболюсы SMB после приема углеводов' так как значения ГК недостаточно ровные. Наряду с этим, есть пара вещей, которые можно сделать, чтобы снизить уровень шума в данных.
 
-**Smooth Sensor Noise.** In xDrip+ Settings > xDrip+ Display Settings ensure that Smooth Sensor Noise is turned on. This attempts to apply smoothing to noisy data.
+** Сглаживать шумы сенсора. ** В параметрах xDrip + Settings > xDrip + Display Settings убедитесь, что включено сглаживание шумов сенсора. Это приведет к попыткам сглаживать зашумленные данные.
 
-**Smooth Sensor Noise (Ultrasensitive).** If you are still seeing noisy data in xDrip+ you can apply more aggressive smoothing using the Smooth Sensor Noise (Ultrasensitive) setting. This will attempt to apply smoothing even on very low levels of detected noise. To do this, first [enable engineering mode in xDrip+](https://github.com/MilosKozak/AndroidAPS/wiki/Enabling-Engineering-Mode-in-xDrip). Then navigate to Settings > xDrip+ Display Settings and turn on Smooth Sensor Noise (Ultrasensitive).
+** Сглаживать шумы сенсора (сверхчуствительный режим). ** Если данные в xDrip + все же зашумлены, можно применить более агрессивное сглаживание с помощью параметра Сглаживать шумы. Это приведет к применению сглаживания даже при очень низких уровнях обнаруженного шума. Для этого сначала [активируйте режим разработчика в xDrip + ](https://github.com/MilosKozak/AndroidAPS/wiki/Enabling-Engineering-Mode-in-xDrip). Затем перейдите к параметрам > xDrip + Настройки экрана и включите Сглаживание шумов сенсора (сверхчувствительное).

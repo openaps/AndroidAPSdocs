@@ -1,4 +1,4 @@
-# Lijst van geteste telefoons
+# Lijst van geteste telefoons en smartwatches
 
 Gebruikers houden een [lijst van geteste telefoons en horloges](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) bij
 

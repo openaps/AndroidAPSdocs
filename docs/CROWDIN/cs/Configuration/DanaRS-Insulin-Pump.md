@@ -2,7 +2,7 @@
 
 *Tyto pokyny jsou pro konfiguraci aplikace a Vaší pumpy, pokud máte pumpu DanaRS od roku 2017 a výše. Pokud máte původní DanaR, navštivte [Pumpa DanaR](./DanaR-Insulin-Pump).*
 
-**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
+**DanuRS s novým firmware v3 nelze v současné době použít s AndroidAPS!**
 
 * V pumpě DANARS je aplikací používán "BAZÁL A". Existující data budou přepsána.
 
@@ -12,14 +12,12 @@
 
 * Vyberte "DanaRS připojení nové pumpy" a zadejte sériové číslo pumpy DanaRS.
   
-      ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
-      
+  ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
 
 * Zvolte Heslo k pumpě a vložte své heslo. (Výchozí heslo je 1234)   
   **Párování musíte potvrdit na pumpě!** Jedná se o stejný postup jako při párování jiných bluetooth zařízení (např. smartphonu nebo rádia v autě).
   
-      ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
-      
+  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
 * Vyberte rychlost bolusu, abyste změnili výchozí rychlost bolusu (12sec na 1U, 30sec na 1U nebo 60sec na 1U).
 

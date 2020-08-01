@@ -61,7 +61,21 @@ Dit is de maximale hoeveelheid koolhydraten waarvoor de Boluscalculator insuline
 
 ## Loop
 
-Je kunt hier schakelen tussen open loop en closed loop. Open loop betekent dat er suggesties worden gedaan voor tijdelijke basaalstanden (Temporary Basal Rates, TBR) op basis van jouw gegevens. Deze suggesties laat je telefoon zien in de vorm van een melding, je moet vervolgens handmatig kiezen om ze te accepteren en handmatig in je pomp invoeren. Closed loop (gesloten loop) betekent dat TBR-suggesties automatisch naar je pomp worden verzonden zonder bevestiging of invoer van jou. In het Overzicht-scherm kun je in de linker bovenhoek zien of je in de open of closed loop zit. Wanneer je deze knop ingedrukt houd, dan kun je ook schakelen tussen open en closed loop.
+Je kunt hier schakelen tussen open loop en closed loop.
+
+**Open loop** betekent dat er suggesties worden gedaan voor tijdelijke basaalstanden (Temporary Basal Rates, TBR) op basis van jouw gegevens. Deze suggesties zie je op jouw telefoon in de vorm van een melding, je moet vervolgens handmatig kiezen om ze te accepteren en handmatig in je pomp invoeren.
+
+**Closed loop (gesloten loop)** betekent dat TBR-suggesties automatisch naar je pomp worden verzonden zonder bevestiging of invoer van jou.
+
+In het Overzicht-scherm kun je in de linker bovenhoek zien of je in de open of closed loop zit. Wanneer je deze knop ingedrukt houdt, dan kun je ook schakelen tussen open en closed loop.
+
+### Minimale verzoek voor aanpassing
+
+Bij het gebruik van open loop ontvangt je meldingen telkens wanneer AAPS een suggestie doet om de basaalstand aan te passen. Om het aantal meldingen te verminderen, kun je een breder bereik voor BG gebruiken of een hoger percentage van het minimale verzoek voor aanpassing. Hiermee stel je de minimale relatieve TBR aanpassing in waarbij AAPS een suggestie doet.
+
+![Minimale verzoek voor aanpassing](../images/MinRequestChange.png)
+
+Let op: in closed loop modus wordt het aangeradem om één enkel streefdoel te hebben in plaats van een doelbereik (bijv. 5,5 mmol/l en geen 5,0-7,0 mmol/l).
 
 ## OpenAPS AMA
 
@@ -105,8 +119,8 @@ De opties hier zullen variëren afhankelijk van welke pomp je hebt geselecteerd 
 * [DanaR Insulinepomp](../Configuration/DanaR-Insulin-Pump.md) 
 * [DanaRS Insulinepomp](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Accu Chek Combo Pomp](../Configuration/Accu-Chek-Combo-Pump.md) 
-* [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md) 
-* [Medtronic Pump](..//Configuration/MedtronicPump.md)
+* [Accu-Chek Insight pomp](../Configuration/Accu-Chek-Insight-Pump.md) 
+* [Medtronic Pomp](..//Configuration/MedtronicPump.md)
 
 Als je AndroidAPS gebruikt in 'open loop' modus, zorg er dan voor dat je Virtuele Pomp hebt geselecteerd in de Configurator.
 

@@ -9,47 +9,46 @@
 ## Hardwarové a softwarové požiadavky
 
 * A Roche Accu-Chek Insight pump (any firmware, they all work)
-    
-    Note: AAPS will write data always in **first basal rate profile in the pump**.
 
-* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+Note: AAPS will write data always in **first basal rate profile in the pump**.
 
-* Aplikácia AndroidAPS nainštalovaná vo vašom telefóne
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module#phone) page which Android version is required to run AndroidAPS.)
+* The AndroidAPS app installed on your phone
 
 ## Nastavenia
 
-* Pumpa Insight by mala byť súčasne pripojená iba k jednému zariadeniu. Ak ste v minulosti používali diaľkový ovládač pre Insight (glukomer), je potrebné aby ste ho odstránili zo zoznamu spárovaných zariadení vo svojej pumpe: Menu > Nastavenia > Komunikácia > Odstrániť zariadenie
+* The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
     
-    ![Screenshot odstránenia zariadenia v pumpe Insight](../images/Insight_RemoveMeter.png)
+    ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
 
-* V menu [Konfigurácia](../Configuration/Config-Builder) aplikácie AndroidAPS zvoľte v sekcii Pumpa možnosť Accu-Chek Insight
+* In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
     
-    ![Screenshot Konfigurácie pre Insight](../images/Insight_ConfigBuilder.png)
+    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
-* Pre nastavenia týkajúce sa pumpy Insight, kliknite na ozubené koliesko.
+* Tap the cog-wheel to open Insight settings.
 
-* V nastaveniach kliknite na tlačidlo "Párovanie Insight" v hornej časti obrazovky. Mali by ste vidieť zoznam všetkých bluetooth zariadení v dosahu (nižšie vľavo).
-* Na pumpe Insight, zvoľte Menu > Nastavenia > Komunikácia > Pridať zariadenie. Pumpa zobrazí nasledujúcu obrazovku (nižšie vpravo) zobrazujúcu sériové číslo pumpy.
+* In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
+* On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
     
-    ![Screenshot Párovania Insight 1](../images/Insight_Pairing1.png)
+    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
 
-* Zoberte telefón, kliknite na sériové číslo pumpy v zozname bluetooth zariadení. Potvrďte kliknutím na Párovanie.
+* Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm.
     
-    ![Screenshot Párovania Insight 2](../images/Insight_Pairing2.png)
+    ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
 
-* Na pumpe aj telefóne sa zobrazí kód. Skontrolujte či je kód rovnaký na oboch zariadeniach a potvrďte na pumpe aj telefóne.
+* Both the pump and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
     
-    ![Screenshot Párovania Insight 3](../images/Insight_Pairing3.png)
+    ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
 
-* Hotovo! Môžete si zagratulovať, podarilo sa Vám úspešne spárovať pumpu s aplikáciou AndroidAPS.
+* Success! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
     
-    ![Screenshot Párovania Insight 4](../images/Insight_Pairing4.png)
+    ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
 
-* Pre kontrolu toho či je všetko správne nastavené, choďte v aplikácii AndroidAPS do menu Konfigurácia a kliknite na ozubené koliesko vedľa Accu-Chek Insight. Kliknite na Párovanie Insight, kde uvidíte informácie o pumpe:
+* To check all is well, go back to Config builder in AndroidAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
     
-    ![Screenshot Informácií Párovania Insight](../images/Insight_PairingInformation.png)
+    ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
-Poznámka: Spojenie medzi pumpou a telefónom nebude permanentné. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). V opačnom prípade by sa batéria v telefóne a pumpe vybila príliš rýchlo.
+Note: There will be no permanent connection between pump and phone. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
 
 ## Nastavenia v AAPS
 
@@ -62,7 +61,7 @@ Only workaround at the moment is to **disable sync** with Nightscout (upload onl
 In the Insight settings in AndroidAPS you can enable the following options:
 
 * "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
-* "Zaznamenať výmenu zásobníka": Pridá poznámku do databázy AndroidAPS ak na pumpe zadáte "Výmena zásobníka".
+* "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
 * "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
 * "Log battery changes": This records a battery change when you put a new battery in the pump.
 * "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
@@ -90,8 +89,8 @@ For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
 
 In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
 
-* "Aktualizovať": Opätovné načítanie stavu pumpy
-* "Aktivovať/Deaktivovať dočasný bazál prostredníctvom notifikácie": Štandardne pumpa Insight spúšťa zvukový signál, keď je TBR dokončený. This button lets you enable or disable this alarm without the need for configuration software.
+* "Refresh": Refreshes pump status
+* "Enable/Disable TBR over notification": A standard Insight pump emits an alarm when a TBR is finished. This button lets you enable or disable this alarm without the need for configuration software.
     
     ![Screenshot of Insight Status](../images/Insight_Status2.png)
 
@@ -105,7 +104,15 @@ Configure alarms in the pump as follows:
 
 This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
 
-Insight pumps with newer firmware will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus). Vibration cannot be disabled. Older pumps do not vibrate in these circumstances.
+### Vibration
+
+Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus).
+
+* Firmware 1.x: No vibration by design.
+* Firmware 2.x: Vibration cannot be disabled.
+* Firmware 3.x: AndroidAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+
+Firmware version can be found in the menu.
 
 ## Battery replacement
 

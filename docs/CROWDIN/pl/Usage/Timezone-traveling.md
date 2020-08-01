@@ -24,6 +24,7 @@ To avoid this there are two possibilities:
    
    * i.e. Vienna -> New York: profile switch +6 hours
    * i.e. Vienna -> Sydney: profile switch -8 hours
+* Probably not an option if using [patched LibreLink app](../Hardware/Libre2#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Option 2: Delete pump history
 
@@ -38,8 +39,6 @@ Po wyjściu z samolotu:
 * zmień czas w pompie
 * włącz telefon
 * pozwól telefonowi połączyć się z pompą i dostosować czas
-
-## Combo
 
 ## Insight
 
@@ -72,7 +71,7 @@ Dobrym momentem na dokonanie przełączenia jest stan z niskim IOB. Na przykład
 
 * Zmiana na DST jest wykonywana automatycznie. Żadne działanie nie jest wymagane.
 
-## Inne pompy - nowe od wersji AAPS 2.2
+## Other pumps - new as of AAPS version 2.2
 
 **Musisz zaktualizować APPS, aby korzystać z tej funkcji!**
 

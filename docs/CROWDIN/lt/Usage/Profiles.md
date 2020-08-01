@@ -1,83 +1,83 @@
-# Profile switch
+# Profilio keitimas
 
-On starting your AndroidAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again (in NS or AAPS) to start using these changes.
+Paleidę AndroidAPS ir pasirinkę profilį, turėsite atlikti „profilio pakeitimą“, kurio trukmė bus 0 (bus paaiškinta vėliau). Šitaip AAPS pradės sekti jūsų profilio istoriją, ir kiekvienam naujam profilio pakeitimui reikalingas papildomas „Profilio keitimo“ veiksmas, net jei profilį keičiate Nightscout svetainėje. Pakeistas profilis iš karto perkeliamas į AAPS, tačiau jūs vis tiek turite perjungti į tą patį profilį (NS arba AAPS), kad šie pakeitimai įsigaliotų.
 
-Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period. Duration of zero means infinite. Such profile is valid until new "Profile switch".
+AAPS susikuria profilio momentinį vaizdą su pradžios data ir trukme ir naudoja jį nurodytu laikotarpiu. Trukmė "0" reiškia "neribotai". Toks profilis yra aktyvus, kol bus perjungtas naujas profilis.
 
-To do a profile switch long-press on the name of your profile ("Aktuell (Rad)" in the picture below) and select profile switch.
+Atlikite profilio pakeitimą: ilgai paspauskite profilio pavadinimą (žemiau pateiktame paveikslėlyje „Aktualus (Rad)“) ir pasirinkite Profilio keitimas.
 
-![Do profile switch](../images/ProfileSwitch_HowTo.png)
+![Profilio keitimas](../images/ProfileSwitch_HowTo.png)
 
-If you use "Profile switch" with duration profile is switched back to previous valid "Profile switch"
+Jei pakeičiate profilį su laiko trukme, praėjus nustatytam laikui, profilis bus atstatytas į paskutinį galiojantį profilio pakeitimą
 
-If you use local AAPS profiles (Simple, Local, CPP) you have to press button there to apply these changes (it creates proper "Profile switch" event).
+Jei naudojate vietinius AAPS profilius (paprastas, vietinis, CPP), turite paspausti ten esantį mygtuką, kad suaktyvintumėte šiuos pakeitimus (tai sukuria teisingą profilio keitimo įvykį).
 
-Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
+Keisdami profilius, galite pasirinkti dvi papildomas parinktis, kurios anksčiau buvo Cirkadinio procento profilio dalis:
 
-## Percentage
+## Procentais
 
-* This applies the same percentage to all parameters. 
-* If you set it to 130% (meaning you are 30% more insulin resistant), it will raise the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example).
+* Taikoma ta pati procentinė dalis visiems profilio parametrams. 
+* Jei nustatysite 130% (tai reiškia, kad esate 30% labiau rezistentiškas insulinui), valandinė bazė padidės 30%. Tai taip pat atitinkamai sumažina JIF ir IA (šiame pavyzdyje jie padalijami iš 1,3).
   
-  ![Example profile switch percentage](../images/ProfileSwitchPercentage.png)
+  ![Profilio pakeitimo procentine dalimi pavyzdys](../images/ProfileSwitchPercentage.png)
 
-* It will be sent to the pump and then be the default basal rate.
+* Ši informacija užrašoma į pompą ir bus suprantama kaip nustatytas bazinis profilis.
 
-* The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
+* Nuo tada ciklo algoritmas (atviras arba uždaras) veiks su pasirinktu procentiniu profiliu. Pavyzdžiui, skirtingoms hormoninio ciklo fazėms galima nustatyti skirtingą procentinį profilį.
 
-## Time shift
+## Laiko perstūmimas
 
-![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
+![Profilio procentas ir laiko perstūmimas](../images/ProfileSwitchTimeShift2.png)
 
-* This moves everything round the clock by the number of hours entered. 
-* So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
-* It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example: 
-  * Current time: 12:00
-  * **Positive** time shift 
+* Viską perkelia pagal įvestų valandų skaičių. 
+* Pavyzdžiui, naktinėse pamainose galite nurodyti, kiek valandų vėliau / anksčiau einate miegoti ar atsikeliate.
+* Dažnai klausiama, kuria kryptimi per kurį laiką slinkti profilį. Šis laikas turi būti perkeltas x valandomis. Atkreipkite dėmesį į laiko poslinkio kryptį, kaip aprašyta šiame pavyzdyje: 
+  * Dabartinis laikas: 12:00
+  * **Teigiamas** laiko perstūmimas 
     * 2:00 **+10 h** -> 12:00
-    * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
-  * **Negative** time shift 
+    * Nustatymai, kurie prasideda 02:00 val. bus naudojami vietoje tų nustatymų, kurie paprastai užprogramuojami 12.00 val.
+  * **Neigiamas** laiko perstūmimas 
     * 22:00 **-10 h** -> 12:00
-    * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
+    * Nustatymai, kurie prasideda 22:00 val. bus naudojami vietoje tų nustatymų, kurie paprastai užprogramuojami 12.00 val.
 
-![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
+![Profilio pakeitimo laiko perstūmimo kryptys](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+Šis profilio fiksavimo mechanizmas leidžia daug tikslesnius praeities skaičiavimus ir taip pat leidžia stebėti profilio pokyčius.
 
-## Troubleshooting Profile Errors
+## Profilio klaidų šalinimas
 
-### 'Invalid profile' / 'Basal Profile not aligned to hours'
+### "Neteisingas profilis" / "Pagrindinis profilis nesutampa su valandomis"
 
-![Basal not aligned to the hour](../images/BasalNotAlignedToHours2.png)
+![Bazė nesutampa su valandomis](../images/BasalNotAlignedToHours2.png)
 
-* These error messages will appear if you have any basal rates or I:C rates not on the hour. (DanaR and DanaRS pumps do not support changes on the half hour for example.)
+* Šie klaidų pranešimai rodomi, jei nustatėte valandines bazes ar I:A santykius ne pilnoms valandoms, o, pvz.: pusvalandžiams. (Pvz., DanaR ir DanaRS pompos nepalaiko pusvalandžio pakeitimų.)
   
-  ![Example profile not aligned to hours](../images/ProfileNotAlignedToHours.png)
+  ![Profilio, nesutampančio su valandomis, pavyzdys](../images/ProfileNotAlignedToHours.png)
 
-* Remember / note down date and time shown in the error message (26/07/2019 5:45 pm in screenshot above).
+* Įsidėmėkite datą ir laiką, nurodytą klaidos pranešime (aukščiau esančioje ekrano kopijoje, 2016 07 26 17:45).
 
-* Go to Treatments tab
-* Select ProfileSwitch
-* Scroll until you find date and time from error message.
-* Use remove function.
-* Sometimes there is not only one faulty profile switch. In this case remove also the others.
+* Eikite į Įrašų skirtuką
+* Pasirinkite "Profilio keitimas"
+* Slinkite, kol rasite datą ir laiką pagal klaidos pranešimą.
+* Spauskite Pašalinti.
+* Kartais yra ne vienas klaidingas profilio pakeitimas. Tokiu atveju pašalinkite ir kitus įrašus.
   
-  ![Remove profile switch](../images/PSRemove.png)
+  ![Panaikinti profilio keitimą](../images/PSRemove.png)
 
-Alternatively you can delete the profile switch directly in mLab as described below.
+Kaip alternatyvą, galite ištrinti profilio pakeitimą tiesiogiai mLab, kaip aprašyta toliau.
 
-### 'Received profile switch from NS but profile does not exist locally'
+### „Profilio pakeitimas gautas iš NS, tačiau profilis neegzistuoja lokaliai“
 
-* The requested profile was not synced correctly from Nightscout.
-* Follow instructions from above to delte the profile switch
+* Nightscout netinkamai sinchronizavo profilį.
+* Ištrinkite profilio keitimo įrašą, kaip aprašyta aukščiau
 
-Alternatively you can delete the profile switch directly in mLab:
+Kaip alternatyvą, galite ištrinti profilio keitimą tiesiogiai mLab:
 
-* Go to your mlab collection
-* Search in the treatments for profile switch
-* Delete the profile switch with date and time that was mentioned in the error message. ![mlab](../images/mLabDeletePS.png)
+* Eikite į savo mLab duombazę
+* Ieškokite Terapijoje profilio keitimo
+* Ištrinkite profilio pakeitimą pagal klaidos pranešime nurodytą datą ir laiką. ![mLab](../images/mLabDeletePS.png)
 
-### 'DIA 3hr too short'
+### "IVT 3 val. yra per trumpa"
 
-* Error message will appear if your duration of insulin action in your profile is listed at a value that AndroidAPS doesn't believe will be accurate. 
-* Read about [selecting the right DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles) to continue.
+* Klaidos pranešimas pasirodo, kai jūsų profilyje nurodyta insulino veikimo trukmė, kurios vertę AndroidAPS laiko neteisinga. 
+* Perskaitykite skyrių [Tinkamos IVT pasirinkimas](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), peržiūrėkite savo profilį ir atlikite [profilio keitimą](../Usage/Profiles), kad jį suaktyvintumėte.

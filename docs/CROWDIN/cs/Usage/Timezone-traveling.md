@@ -24,6 +24,7 @@ Abychom se tomu vyhnuli, existují dvě možnosti:
    
    * např. Vídeň -> New York: posun času +6 hodin
    * např. Vídeň -> Sydney: posun času -8 hodin
+* Probably not an option if using [patched LibreLink app](../Hardware/Libre2#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Možnost 2: Vymazat historii pumpy
 
@@ -38,8 +39,6 @@ Když vystoupíte z letadla:
 * změňte čas na pumpě
 * zapněte telefon
 * nechejte telefon spojit se s pumpou a sladit se s jejím časem
-
-## Combo
 
 ## Insight
 
@@ -72,7 +71,7 @@ Toto přepnutí je vhodné dělat v době, kdy máte nízký IOB. Např. hodinu 
 
 * Změna letního času se provádí automaticky. Není vyžadována žádná akce.
 
-## Ostatní pumpy - nově od AAPS verze 2.2
+## Other pumps - new as of AAPS version 2.2
 
 **Abyste mohli tuto funkci využívat, musíte aktualizovat AAPS!**
 

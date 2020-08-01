@@ -2,7 +2,7 @@
 
 *Estas instrucciones son para configurar la app y la bomba si tiene una DanaRS a partir de 2017. Visite [Bomba de insulina DanaR](./DanaR-Insulin-Pump) si en su lugar tiene una DanaR original.*
 
-**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
+**DanaRS con nuevo firmware v3 no se puede utilizar actualmente con AndroidAPS!**
 
 * En la bomba DanaRS la app utiliza el perfil "BASAL A". Los datos existentes se sobrescriben.
 
@@ -12,14 +12,12 @@
 
 * Seleccione el dispositivo Bluetooth de DanaRS y haga clic en el número de serie de DanaRS.
   
-      ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
-      
+  ![AAPS empareja con Dana RS](../images/AAPS_DanaRSPairing.png)
 
 * Seleccione la contraseña de la bomba e introduzca su contraseña. (La contraseña predeterminada es 1234)   
   **Hay que confirmar el emparejamiento en la bomba! ** Es la forma que se utiliza para otros emparejamientos bluetooth (es decir, smartphone y audio de autos).
   
-      ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
-      
+  ![Emparejamiento de confirmación Dana RS](../images/DanaRS_Pairing.png)
 
 * Seleccione velocidad de bolo, para cambiar la velocidad predeterminada utilizada (12seg por 1u, 30seg por 1u o 60seg por 1u).
 
@@ -33,9 +31,9 @@
 
 ### Error durante la administración de insulina
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+En caso de que la conexión entre la AAPS y Dana RS se pierde durante la infusión del bolo de insulina (es decir, usted camina alejándose del teléfono, mientras que Dana RS esta bombeando la insulina), verá el siguiente mensaje y escuchar un sonido de alarma:
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Alarma de administración de insulina](../images/DanaRS_Error_bolus.png)
 
 * En la mayoría de los casos, se trata sólo de un problema de comunicación y se inyecta la cantidad correcta de insulina.
 * Compruebe el historial de la bomba (ya sea en la bomba o a través de la pestaña Dana > historial de bomba > bolos) para ver si es correcto bolo inyectado.
@@ -44,7 +42,7 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 ## Nota especial al cambiar de teléfono
 
-When switching to a new phone the following steps are neccessary:
+Al cambiar a un teléfono nuevo, los siguientes pasos son necesarios:
 
 * **Exportar valores** en el teléfono antiguo
   

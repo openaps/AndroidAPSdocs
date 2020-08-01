@@ -61,25 +61,39 @@ Il s’agit de la quantité maximale de Glucides que la Calculatrice de Bolus AA
 
 ## Boucle
 
-Vous pouvez alterner entre Boucle Ouverte et Boucle Fermée. La Boucle Ouverte signifie que les suggestions de DBT (Débit de Basal Temporaire) sont calculées à partir de vos données et apparaissent sous forme d’une notification, mais vous devez choisir manuellement de les accepter et de les entrer manuellement sur votre pompe. La Boucle fermée signifie que les suggestions DBT (Débit de Basal Temporaire) sont automatiquement envoyées à votre pompe sans confirmation ou entrée de votre part. L’écran d’accueil affiche dans le coin supérieur gauche si vous êtes en Boucle Ouverte ou en Boucle Fermée. Appuyer et maintenir ce bouton de l’écran d’accueil vous permettra également de basculer entre les deux.
+Vous pouvez alterner entre Boucle Ouverte et Boucle Fermée.
+
+**Boucle Ouverte** signifie que des propositions de DBT sont effectuées sur la base de vos données et apparaissent en tant que notifications, mais vous devez choisir de les accepter et de les rentrer manuellement dans votre pompe.
+
+**Boucle Fermée** signifie que les propositions de DBT sont automatiquement envoyées à la pompe sans confirmation ou action de votre part.
+
+L’écran d’accueil affiche dans le coin supérieur gauche si vous etes en Boucle Ouverte ou en Boucle Fermée. Appuyer et en maintenir ce bouton de l’écran d’accueil vous permettra également de basculer entre les deux modes.
+
+### Changement minimum
+
+Lorsque vous utilisez le mode boucle ouverte, vous recevrez des notifications chaque fois que le programme AAPS vous recommande d'ajuster le débit de basal. Pour réduire le nombre de notifications, vous pouvez utiliser une plage cible de glycémie plus étendue ou augmenter le pourcentage de changement minimal. Ce paramètre défini le changement relatif minimum qui déclenchera une notification.
+
+![Changement minimum](../images/MinRequestChange.png)
+
+Remarque : En mode boucle fermée, une cible unique au lieu de la plage cible (par ex. 5,5 mmol au lieu de 5,0 - 7,0 mmol) est recommandée.
 
 ## OpenAPS AMA
 
-L'Assistance Améliorée Repas (AAR) de OpenAPS permet au système de reagir plus rapidement après un bolus de repas SI vous entrez les Glucides de manière fiable. Activez-le dans le Générateur de configuration pour voir les paramètres de sécurité, vous devrez avoir complété l'[Objectif 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) pour utiliser cette fonctionnalité. Vous pouvez apprendre plus sur les Paramètres et [Autosens dans le manuel d'OpenAPS](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+L'Assistance Améliorée Repas (AAR) de OpenAPS permet au système de reagir plus rapidement après un bolus de repas SI vous entrez les Glucides de manière fiable. Activez-le dans le Générateur de configuration pour voir les paramètres de sécurité, vous devrez avoir complété l'[Objectif 9](../Usage/Objectives#objectif-9-activation-de-fonctionnalites-supplementaires-en-journee-comme-l-aide-au-repas-amelioree-ara-ama) pour utiliser cette fonctionnalité. Vous pouvez en apprendre plus sur les Paramètres et l'Autosens dans le [manuel d'OpenAPS](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-### Max. U/hr pour le débit de basal temp
+### Max U/h pour le débit de Basal Temp
 
-Ce paramètre existe comme une limite de sécurité pour empêcher AAPS d'être capable d'administrer un dosage Basal dangereusement élevé. La valeur est definie en Unités d'insuline par heure (U/h). Il est conseillé de definir cette valeur de facon raisonnable et sensée. Une bonne recommandation est de prendre le **plus haut dosage Basal** de votre profil et de le **multiplier par 4**. Par exemple, si le dosage basal le plus élevé dans votre profil a été 0.5 U/hr, vous qui pourriez le multiplier par 4 pour obtenir la valeur de 2 U/h.
+Ce paramètre est une limite de sécurité pour empêcher AAPS d'administrer un débit de basal dangereusement élevé. La valeur est definie en Unités d'insuline par heure (U/h). Il est conseillé de definir cette valeur de facon raisonnable et sensée. Une bonne recommandation est de prendre le **débit de basal le plus élevé** de votre profil et de le **multiplier par 4**. Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, vous pourriez le multiplier par 4 pour obtenir la valeur de 2 U/h.
 
-### L'IA basal maximum que l'OpenAPS pourra délivrer [U]
+### IA Basal max que OpenAPS pourra délivrer [U]
 
-Une quantité d'insuline basale supplémentaire (en unités) a pu s'accumuler dans votre corps, en plus de votre profil basal normal. Une fois cette valeur atteinte, AAPS cessera de délivrer de l'insuline basale supplémentaire jusqu'à ce que votre Insuline basale Active (IA) aie diminuée et soit de nouveau dans cette plage.
+Une quantité d'insuline basale supplémentaire (en unités) a pu s'accumuler dans votre corps, en plus de votre profil de basal normal. Une fois cette valeur atteinte, AAPS cessera de délivrer de l'insuline basale supplémentaire jusqu'à ce que votre Insuline Active Basal (IA) aie diminuée et soit de nouveau sous ce seuil.
 
 * Cette valeur ne prend pas en compte pas l'Insuline Active IA des bolus, mais seulement la Basal.
 * Cette valeur est calculée et surveillée indépendamment de votre débit de basal normal. Ce n'est que l'insuline basale additionnelle en plus du débit normal qui est pris en compte.
 * Cette valeur est mesurée en unités d'insuline (u).
 
-Lorsque vous commencez à boucler, **il est conseillé de mettre l'IA basal Max à 0** pour une période de temps, pendant que vous vous habituez au système. Cela empêche AAPS de donner de l'insuline basale supplémentaire. Pendant ce temps, AAPS sera toujours en mesure de limiter ou de désactiver votre insuline basale pour prévenir l'hypoglycémie.
+Lorsque vous commencez à boucler, **il est conseillé de mettre l'IA Basal Max à 0** pour une certaine durée, le temps que vous vous habituiez au système. Cela empêche AAPS de donner de l'insuline basale supplémentaire. Pendant ce temps, AAPS sera toujours en mesure de limiter ou de désactiver votre insuline basale pour prévenir l'hypoglycémie.
 
 C'est une étape importante pour :
 
@@ -92,15 +106,15 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 * Vous pouvez commencer prudemment avec cette valeur et l'augmenter lentement avec le temps. 
 * Ce ne sont que des lignes directrices; chacun a un corps différent. Vous trouverez peut-être que vous aurez besoin de paramétrer une valeur supérieure ou inférieure à ce qui est recommandé ici, mais commencez toujours prudemment et ajustez lentement.
 
-*Remarque : En tant que fonction de sécurité, l'IA Max Basal est limitée à 7 U.*
+*Remarque : En tant que fonction de sécurité, l'IA Basal Max est limitée à 7 U.*
 
 ## Paramètres d’absorption
 
-Si vous avez choisi d'utiliser l'Autosense AMA, vous pourrez alors entrer votre temps d'absorption maximum de repas et la fréquence de rafraîchissement de l'autosense. Si vous mangez souvent des repas riches en matières grasses ou en protéines, vous devrez augmenter votre temps d'absorption des repas.
+Si vous avez choisi d'utiliser l'Autosense AMA, vous pourrez alors entrer votre durée macimale d'absorption pour un repas et la fréquence de rafraîchissement de l'autosense. Si vous mangez souvent des repas riches en matières grasses ou en protéines, vous devrez augmenter votre temps d'absorption des repas.
 
 ## Paramètres de la pompe
 
-Les options ici varient selon le pilote de pompe que vous avez sélectionné dans 'Générateur de configuration'. Appairez et réglez votre pompe selon les instructions relatives à la pompe :
+Ici les options varient selon la pompe que vous avez sélectionnée dans le 'Générateur de configuration'. Appairez et réglez votre pompe selon les instructions relatives à la pompe :
 
 * [Pompe à insuline DanaR](../Configuration/DanaR-Insulin-Pump.md) 
 * [Pompe à insuline DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
@@ -108,7 +122,7 @@ Les options ici varient selon le pilote de pompe que vous avez sélectionné dan
 * [Pompe Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) 
 * [Pompe Medtronic](..//Configuration/MedtronicPump.md)
 
-Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sélectionné Pompe virtuelle Pump dans le Générateur de configuration.
+Si vous utilisez AndroidAPS en mode boucle ouverte, vérifiez que vous avez sélectionné une Pompe Virtuelle dans le Générateur de configuration.
 
 ## NS Client
 
@@ -127,7 +141,7 @@ Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sé
 
 ## Communicateur SMS
 
-Ce paramètre permet de contrôler à distance de l'application en envoyant des instructions au téléphone du patient que l'application appliquera comme Suspendre la boucle ou un bolus. Des informations supplémentaires sont décrites dans [Commandes SMS](../Children/SMS-Commands.rst), mais elles ne s'afficheront dans Préférences que si vous avez sélectionné cette option dans le Générateur de configuration.
+Ce paramètre permet de contrôler à distance de l'application en envoyant des instructions au téléphone du patient que l'application appliquera comme Suspendre la boucle ou un bolus. Des informations supplémentaires sont décrites dans [Commandes SMS](../Children/SMS-Commands.rst), mais elles ne s'afficheront dans les Préférences que si vous avez sélectionné cette option dans le Générateur de configuration.
 
 ## Autres
 

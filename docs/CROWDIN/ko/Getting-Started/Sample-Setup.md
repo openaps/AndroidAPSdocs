@@ -24,7 +24,7 @@ Dexcom앱은 제한된 알림기능을 제공함에 따라서, 오픈소스앱 x
     
     * 대안: 
     * [아큐-첵 콤보](../Configuration/Accu-Chek-Combo-Pump.md)
-    * [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
+    * [Accu-Chek Insight (아큐첵 인사이트)](../Configuration/Accu-Chek-Insight-Pump.md)
     * [DanaR (다나알)](../Configuration/DanaR-Insulin-Pump.md)
     * [Some old Medtronic pumps (additionally needed: RileyLink/Gnarl hardware, Android Phone with bluetooth low energy / BLE-chipset)](../Configuration/MedtronicPump.md)
     * Other pumps might be available in the future, see [future possible pump drivers](Future-possible-Pump-Drivers.md) for details.
@@ -62,7 +62,7 @@ Menu > Settings > Device security > Unknown sources > slider to right side (= ac
 
 For security reasons this setting should be set back to inactive once the installation of all apps described here has been completed.
 
-### Enable Bluetooth
+### 블루투스를 활성화 시키세요.
 
 1. Menu > Settings > Connections > Bluetooth > slider to right side (= active)
 2. Menu > Settings > Connections > Location > slider to right side (= active)

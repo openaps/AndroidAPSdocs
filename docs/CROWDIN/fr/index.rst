@@ -1,9 +1,9 @@
 Bienvenue dans la documentation de AndroidAPS
 ==================================================
 
-AndroidAPS est une application open source pour les personnes vivant avec un diabète insulino-dépendant et qui agit comme un pancréas artificiel (APS) sur les smartphones Google Android. Les principaux composants sont les différents algorithmes du logiciel openAPS qui visent à faire ce qu'est un pancréas vivant : maintenir les taux de sucre dans le sang à l'intérieur de limites saines en utilisant l'administration automatisée de l'insuline (AID). De plus, il vous faut une pompe à insuline compatible approuvée FDA/CE et un capteur de Mesure de Glycémies en Continu (MGC). 
+AndroidAPS est une application open source pour les personnes vivant avec un diabète insulino-dépendant et qui agit comme un pancréas artificiel (APS) sur les smartphones Google Android. Les principaux composants sont différents algorithmes logiciels de openAPS qui visent à reproduire ce que fait un pancréas vivant : maintenir la glycémie dans des limites de santé en utilisant un dosage automatisé d'insuline. De plus, il vous faut une pompe à insuline compatible approuvée FDA/CE et un capteur de Mesure de Glycémies en Continu (MGC). 
 
-L'application n'utilise PAS d'auto-apprentissage par de l'intelligence artificielle. A la place, les calculs d'AndroidAPS sont basés sur des algorithmes qui exploitent les débits de basal, la sensibilité à l'insuline ou la quantité de glucides correspondant à une unité d'insuline que l'utilisateur renseigne manuellement dans son profil de traitements, mais ils sont vérifiés par le système pour des raisons de sécurité. 
+L'application n'utilise PAS d'auto-apprentissage par de l'intelligence artificielle. A la place, les calculs d'AndroidAPS sont basés sur un algorithme de dosage individuel et les apports en glucides que l'utilisateur renseigne manuellement dans son profil de traitement, mais ces informations sont vérifiés par le système pour des raisons de sécurité. 
 
 L'application n'est pas fournie dans Google Play - vous devez la compiler vous même à partir du code source pour des raisons juridiques.
 
@@ -32,7 +32,7 @@ Ce dont j'ai besoin
    :maxdepth: 1
    :glob:
    
-   Module <./Module/module.rst>
+   Composants <./Module/module.rst>
    Exemple de configuration <./Getting-Started/Sample-Setup.md>
 
    

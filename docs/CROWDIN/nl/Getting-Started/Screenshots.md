@@ -22,7 +22,7 @@ Aanpassingen maak je door een veld lang ingedrukt te houden. Houd bijvoorbeeld d
 
 * Laatste bloedglucose waarde van jouw CGM
 * Hoe lang geleden werd bloedglucose uitgelezen
-* Wijzigingen in de laatste 15 en 40 minuten
+* Gemiddelde verandering in de laatste 15 en 40 minuten
 * Huidige basaalstand, inclusief een eventueel tijdelijke basaal stand (TBR) geprogrammeerd door het systeem
 * Insuline aan boord (IOB)
 * koolhydraten aan boord (Carbs On Board, COB)
@@ -44,11 +44,22 @@ Houd de grafiek lang ingedrukt om de tijdsduur aan te passen. Je kunt kiezen om 
 De verlengde lijnen zijn de voorspelde BG waardes en trends - wanneer je die hebt aangevinkt.
 
 * ** Oranje ** lijn: [COB](../Usage/COB-calculation.rst) (kleur wordt gebruikt om COB en koolhydraten weer te geven)
-* ** Donker blauwe ** lijn: IOB (kleur wordt gebruikt om IOB en insuline weer te geven)
-* **Licht blauwe** lijn: zero-temp (voorspelde BG als tijdelijke basaalstand op 0% zou worden ingesteld)
-* **Donker gele** lijn: [UAM](../Configuration/Sensitivity-detection-and-COB#gevoeligheid-oref1) (un-announced meals, onaangekondigde maaltijden)
+   
+   Deze voorspellingslijn laat zien waar jouw BG (niet COB zelf!) heengaat op basis van je huidige pomp instellingen, en ervan uitgaande dat de afwijkingen door koolhydraat absorptie constant blijven. Deze lijn wordt alleen getoond als je COB hebt.
 
-Deze lijnen laten voorspellingen zien aan de hand van verschillende scenario's. Dit zijn theoretische scenario's, gebaseerd op gegevens van dit moment. Omdat het systeem continu aanpassingen maakt, zullen de voorspellingen ook steeds worden aangepast. Dit betekent ook dat de kans klein is dat één van de voorspellingslijnen die je op een willekeurig moment ziet, ook het daadwerkelijke verloop zal zijn van je toekomstige bloedsuiker. De scenario's zijn: Eentje waarbij rekening wordt gehouden met de huidige absorptie van koolhydraten (COB). Eentje waarbij alleen met insuline rekening wordt gehouden (IOB). Eentje die laat zien wat er gebeurt als er vanaf nu een tijdelijke basaalstand van nul (zero-temp) wordt gegeven zonder verder rekening te houden met BG afwijkingen. En eentje waarbij het systeem een BG stijging heeft opgemerkt en ervan uitgaat dat je koolhydraten hebt gegeten zonder die ingevoerd te hebben (UAM, unannounced meal).
+* ** Donker blauwe ** lijn: IOB (kleur wordt gebruikt om IOB en insuline weer te geven)
+   
+   Deze voorspellingslijn laat zien waar jouw BG heengaat, alleen rekening houdend met de insuline die je aan boord hebt. Alsof je wel insuline hebt gebolusd maar vervolgens geen koolhydraten hebt gegeten.
+
+* **Licht blauwe** lijn: zero-temp (voorspelde BG als tijdelijke basaalstand op 0% zou worden ingesteld)
+   
+   Deze voorspellingslijn is vergelijkbaar met IOB, maar gaat ervan uit dat er geen insuline meer wordt afgegeven door jouw pomp (0% TBR vanaf nu).
+
+* **Donker gele** lijn: [UAM](../Configuration/Sensitivity-detection-and-COB#gevoeligheid-oref1) (un-announced meals, onaangekondigde maaltijden)
+   
+   Onaangekondigde maaltijden (Un Announced Meals) - het algoritme heeft een aanzienlijke toename van je glucosewaardes gedetecteerd. Bijvoorbeeld door maaltijden, adrenaline of andere invloeden. Deze voorspellingslijn is vergelijkbaar met de oranje COB lijn, maar veronderstelt dat de afwijkingen met een constante snelheid zullen afnemen (dmv het doortrekken van de huidige afnamesnelheid van de afwijkingen).
+
+Bovenstaande voorspellingslijnen rekenen met verschillende (extreme) scenario's. Meestal eindigt je werkelijke bloedglucose curve ergens in het midden van deze lijnen, of dicht bij de lijn die aannames maakt die het meest lijken op jouw situatie van dat moment.
 
 De grafiek eronder, met de blauwe lijnen zijn de basaalstanden. De **ononderbroken blauwe** lijn is de basale insuline die jouw pomp afgegeven heeft, inclusief eventuele tijdelijke basaalstanden (TBRs) die jouw pomp heeft afgegeven. De **blauwe stippellijn** is de basaal die jij zelf had ingesteld, zonder tijdelijke basaalstanden (TBRs) van AndroidAPS.
 

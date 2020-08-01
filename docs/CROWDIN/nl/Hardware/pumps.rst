@@ -10,4 +10,4 @@ Pomp Instellingen
    Accu-Chek Combo pomp <../Configuration/Accu-Chek-Combo-Pump.md>
    Accu-Chek Insight pomp <../Configuration/Accu-Chek-Insight-Pump.md>
    Medtronic pomp <../Configuration/MedtronicPump.md>
-   Mogelijk toekomstige insulinepompen <./Getting-Started/Future-possible-Pump-Drivers.md>
+   Mogelijk toekomstige insulinepompen <../Getting-Started/Future-possible-Pump-Drivers.md>

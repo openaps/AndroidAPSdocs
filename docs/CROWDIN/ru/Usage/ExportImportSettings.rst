@@ -1,33 +1,33 @@
 
 Экспорт/импорт настроек
 **************************************************
-When should I export settings?
+Когда следует экспортировать настройки?
 ==================================================
-Be prepared for the unforeseen. You might change important settings by accident and have problems to undo the changes. Your phone might break or get stolen. To easily return to status you've been at, settings should be exported on a regular basis.
+Будьте готовы к непредвиденным ситуациям. Вы можете случайно изменить важные параметры и иметь проблемы с отменой. Телефон может сломаться или быть украден. Чтобы легко вернуться к состоянию, в котором вы были, регулярно экспортируйте параметры.
 
-Best practice is to export after change of settings or completing an objective. 
+Лучше всего экспортировать после изменения настроек или прохождения цели. 
 
-Exported settings should be copied to a cloud storage or your computer. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
+Экспортированные параметры следует скопировать в облачное хранилище или на компьютер. Так вы будете готовы к утрате или повреждению телефона с AAPS и вам не придется начинать с нуля.
 
-On a Windows 10 computer it looks like this:
+На компьютере с Windows 10 это выглядит так:
   
-  .. image:: ../images/SmartphoneRootLevelWin10.png
-    :alt: AndroidAPS Preferences phone connected to computer
+  .. изображение:: ../images/SmartphoneRootLevelWin10.png
+    :alt: AndroidAPS настройки телефона, подключенного к компьютеру
 
-Exported information
+Экспортированные данные
 ==================================================
-Among others the following information is part of the settings export:
+Среди прочего следующая информация является частью экспорта настроек:
 
-* `Automation <../Usage/Automation.html>`_ events
-* `Config builder <../Configuration/Config-Builder.html>`_ settings
-* `Local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ settings
-* `Objectives <../Usage/Objectives.html>`_ status incl. `exam results <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
-* `Preferences <../Configuration/Preferences.html>`_ incl. `NS Client settings <../Configuration/Preferences.html#ns-client>`_
-
-
+* ` Автоматизация <../Usage/Automation.html> ` _события
+* `Конфигуратор <../Configuration/Config-Builder.html>`_ настройки
+* `Локальный профиль <../Configuration/Config-Builder.html#local-profile-recommended>`_ настройки
+* `Цели <../Usage/Objectives.html>`_ статус включая `результаты экзамена <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
+* ` Параметры конфигурации <../Configuration/Preferences.html> ` _ включая ` Параметры клиента NS <../Configuration/Preferences.html#ns-client> ` _
 
 
-How to export settings
+
+
+Как экспортировать настройки
 ==================================================
 * **Выполнить Экспорт настроек на вашем старом телефоне
 
@@ -41,7 +41,7 @@ How to export settings
        
 * **Перенесите** настройки со старого на новый телефон, используя местоположение файла, показанное во время экспорта
 
-  The exported file is called "AndroidAPSPreferences" and should be in your root folder in the main storage of the phone (just like C: on your computer).
+  Экспортированный файл называется "AndroidAPSPreferences" и должен находиться в корневой папке основного хранилища телефона (как C: на вашем компьютере).
   
 * **Установите AndroidAPS ** на новом телефоне.
 * **Импорт настроек** на вашем новом телефоне

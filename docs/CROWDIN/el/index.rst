@@ -1,13 +1,13 @@
 Καλώς ήρθατε στην τεκμηρίωση AndroidAPS
 ==================================================
 
-AndroidAPS είναι ένα open source εφαρμογή για τους ανθρώπους που ζουν με ινσουλίνο-εξαρτώμενο διαβήτη, η οποία ενεργεί ως ένα τεχνητό πάγκρεας system (APS) σε Google Android smartphones. Τα κύρια συστατικά είναι διαφορετικοί αλγόριθμοι λογισμικού openAPS που στοχεύουν να κάνουν ό, τι κάνει το ζωντανό πάγκρεας: διατηρώντας τα επίπεδα του σακχάρου στο αίμα μέσα σε υγιή όρια χρησιμοποιώντας αυτοματοποιημένη δοσολογία ινσουλίνης (AID). Επιπλέον, χρειάζεστε τουλάχιστον μια υποστηριζόμενη από την FDA / CE εγκεκριμένη αντλία ινσουλίνης και έναν συνεχή μετρητή γλυκόζης. 
+AndroidAPS είναι ένα open source εφαρμογή για τους ανθρώπους που ζουν με ινσουλίνο-εξαρτώμενο διαβήτη, η οποία ενεργεί ως ένα τεχνητό πάγκρεας system (APS) σε Google Android smartphones. The main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Επιπλέον, χρειάζεστε τουλάχιστον μια υποστηριζόμενη από την FDA / CE εγκεκριμένη αντλία ινσουλίνης και έναν συνεχή μετρητή γλυκόζης. 
 
-Η εφαρμογή ΔΕΝ χρησιμοποιεί αυτο-μάθηση στην τεχνητή νοημοσύνη. Αντ 'αυτού, οι υπολογισμοί του AndroidAPS βασίζονται στον ατομικό αλγόριθμο δοσολογίας και την πρόσληψη υδατανθράκων που ο χρήστης θέτει χειροκίνητα στο προφίλ θεραπείας του, αλλά επαληθεύονται από το σύστημα για λόγους ασφαλείας. 
+Η εφαρμογή ΔΕΝ χρησιμοποιεί αυτο-μάθηση στην τεχνητή νοημοσύνη. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons. 
 
 Η εφαρμογή δεν παρέχεται στο Google Play - πρέπει να το κατασκευάσετε από τον πηγαίο κώδικα μόνοι σας για νομικούς λόγους.
 
-Κύρια συστατικά είναι:
+The main components are:
 
 .. εικόνα::../images/modules-female.png
   :alt: Συστατικά

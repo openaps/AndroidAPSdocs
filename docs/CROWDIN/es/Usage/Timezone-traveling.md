@@ -24,6 +24,7 @@ Para evitar esto, hay dos posibilidades:
    
    * p.e. Viena -> Nueva York: cambio de perfil +6 horas
    * p.e. Viena -> Sydney: cambio de perfil -8 horas
+* Probably not an option if using [patched LibreLink app](../Hardware/Libre2#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Opción 2: Suprimir historial de bomba
 
@@ -38,8 +39,6 @@ Cuando salga del avión:
 * cambiar hora en la bomba
 * activar el teléfono
 * deje que el teléfono se conecte a la bomba y se ajuste de tiempo
-
-## Combo
 
 ## Insight
 

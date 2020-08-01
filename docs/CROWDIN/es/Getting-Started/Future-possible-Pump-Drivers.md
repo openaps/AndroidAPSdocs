@@ -4,27 +4,11 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ## Bombas con soporte en desarrollo
 
-### Medtronic
-
-**Loop status:** algunas de la versiones antiguas son utilizables, pro no los modelos más recientes (ver más abajo)
-
-**Otras plataformas: ** OpenAPS, Loop
-
-**Plataformas Java:** aplicación parcial, disponible en [Rountrip2](https://github.com/TC2013/Roundtrip2), y [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
-
-**Estado de implementación AAPS:** Trabajo en curso. Mira [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), rama medtronic_andy. La mayor parte del trabajo se hizo en [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) para tener la estructura y los comandos funcionando. Hay proyecto (Medtronic) y tickets abiertos para el desarrollo futuro en ese repositorio, el desarrollo se está realizando en la rama dev_medtronic (que es la rama predeterminada allí). También hay un espacio en git: RileyLinkAAPS/Lobby. AAPS. Ya ha salido la versión 0.10, con aproximadamente el 95% de toda la funcionalidad, por el momento falta la sincronización de eventos TBRs y eventos de "Suministro detenido" de la bomba. El proyecto probablemente se añadirá al repositorio principal a finales de julio de 2019. Para más detalles y calendario vea [Tabla de proyecto](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
-
-**Requisitos hardware para AAPS: ** RileyLink (con antena de 916 MHz).
-
-**Versiones Loopables: ** 512-522, 523 (Fw 2.4A o inferior), 554 (firmware de la UE 2.6A o inferior, firmware de CA 2.7A o inferior). Lo mismo ocurre con las versiones 7xx. Todos los demás dispositivos no son compatibles, y probablemente no lo serán.
-
-* * *
-
 ### Insulet Omnipod (con los viejos Eros Pods) ([Página de inicio ](https://www.myomnipod.com/en-gb/about/how-to-use))
 
-**Loop status:** En este momento no soportado de forma nativa por parte de AAPS. El decodificación del protocolo Omnipod ha finalizado-[OpenOmni ](http://www.openomni.org/) y [OmniAPS Slack ](https://omniaps.slack.com/)
+**Loop status:** En este momento no soportado de forma nativa por parte de AAPS. La decodificación del protocolo Omnipod ha finalizado-[OpenOmni ](http://www.openomni.org/) y [OmniAPS Slack ](https://omniaps.slack.com/)
 
-**Otras plataformas:**
+**Otras implementaciones:**
 
 - Omnipy para AndroidAPS (estable en las pruebas, se requiere de Raspberry Pi especialmente modificado para RileyLink y AndroidAPS) Omnipy 
 - OmniCore para AndroidAPS (sin versión todavía, código C# que se ejecuta en modo nativo en Android, sólo requiere RileyLink y de AndroidAPS especialmente modificado -la próxima versión del proyecto Omnipy).
@@ -32,7 +16,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 **Plataformas en Java:** Ninguna hasta ahora.
 
-**AAPS estado de implementación:** Trabajando en un controlador nativo de Java para el Omnipod en AAPS se está avanzando en [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (rama omnipod_eros rama). No requiere Raspberry Pi. Puede seguir el progreso en [el OmniAPS Slack ](https://omniaps.slack.com/) en el canal android-driver. Se espera que una primera versión de prueba pública sea publicada alrededor de enero de 2020.
+**AAPS estado de implementación:** Se está trabajando en un controlador nativo de Java para el Omnipod en AAPS en [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (rama omnipod_eros rama). No requiere Raspberry Pi. Puede seguir el progreso en [el OmniAPS Slack ](https://omniaps.slack.com/) en el canal android-driver. Una primera versión de prueba pública se publicó en enero de 2020, y se ha hecho trabajo en una versión estable. Versión actual 0.3 (marzo)
 
 **Requisitos hardware para AAPS: ** RileyLink con el firmware de Omnipod (2.x) y la antena de 433 MHz.
 
@@ -50,9 +34,9 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### Bomba Ypsomed([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop status:** los modelos 1 - 1.5 (2Q/2018) no son candidatos. Si bien tienen comunicación BT, parece que es muy limitada (uni directional: Bomba->App). Tal vez esto cambie en las próximas versiones.
+**Loop status:** los modelos 1 - 1.5 (2Q/2018) no son candidatos. Si bien tienen comunicación BT, parece que es muy limitada (uni directional: Bomba->App). Tal vez esto cambie en las próximas versiones. Parece que vamos a obtener una versión loopable en el inicio de 2021, ver este [ artículo ](https://www.ypsomed.com/en/media/details/ypsomed-and-dexcom-enter-into-partnership-to-drive-closed-loop-system.html?fbclid=IwAR3gYSMz8dvPARYgbj5djm4Yxa7JdFthfzOrrg94C9Bigj6RGeycxSfGHyg).
 
-**Requisitos hardware para AAPS: ** Probablemente ninguno. Está habilitada para BT.
+**Requisitos de hardware para AAPS: ** Probablemente ninguno. Está habilitada para BT.
 
 * * *
 
@@ -60,15 +44,15 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 **Loop status: ** Actualmente no está soportado por ninguno de los sistemas de lazo cerrado. Se considera una candidata para sistemas de lazo cerrado, pero en la medida que aún no se conoce el protocolo, no se prevé que sea soportada en breve.
 
-**Requisitos hardware para AAPS: ** Probablemente ninguno. Está habilitada para BT.
+**Requisitos de hardware para AAPS: ** Probablemente ninguno. Está habilitada para BT.
 
 * * *
 
 ### Medtrum A6/P6/C6 ([Homepage](http://www.medtrum.com/P6.html))
 
-**Loop status:** Es candidata a ser utilizada en sistemas de Lazo Cerrado. La empresa tiene su propio sistema de medio-lazo limitado (A6). Controlable a través de la apps iPhone. No hay ninguna app de Android disponible en este momento.
+**Loop status:** Es candidata a ser utilizada en sistemas de Bucle Cerrado. La empresa tiene su propio sistema de medio-lazo limitado (A6). Controlable a través de la apps iPhone. No hay ninguna app de Android disponible en este momento.
 
-**Requisitos hardware para AAPS: ** Probablemente ninguno. Parece estar habilitado para BT.
+**Requisitos de hardware para AAPS: ** Probablemente ninguno. Parece estar habilitado para BT.
 
 * * *
 
@@ -76,19 +60,27 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 **Loop status:** Es candidata a ser utilizada en sistemas de Bucle Cerrado. El control remoto que utilizan es realmente un dispositivo Android modificado. (La bomba, actualmente, sólo está disponible en Corea).
 
-**Requisitos hardware para AAPS: ** Probablemente ninguno. Parece estar habilitado para BT.
+**Requisitos de hardware para AAPS: ** Probablemente ninguno. Parece estar habilitado para BT.
 
 * * *
 
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Loop status:** Es candidata a ser utilizada en sistemas de Bucle Cerrado. La bomba se empezará a vender a finales de 2018 en algunos países de la UE. Se rumoreaba que se controlaría desde una app Android.
+**Loop status:** Es candidata a ser utilizada en sistemas de Bucle Cerrado. La bomba se empezará a vender a finales de 2018 en algunos países de la UE. Se rumorea que tiene Android en un dispositivo de control dedicado.
 
-**Requisitos hardware para AAPS: ** Probablemente ninguno. Parece estar habilitado para BT.
+**Requisitos de hardware para AAPS: ** Probablemente ninguno. Parece estar habilitado para BT.
 
 ### Medtronic Bluetooth
 
 **Comentarios: ** Esto es la bomba que se presentará en los próximos años y se ha planificado para que sea compatible con el software Tidepool Loop ([ver este artículo ](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration)).
+
+### Bomba de insulina Willcare ([página web](http://en.shinmyungmedi.com))
+
+** Estado del lazo: ** Por el momento, no es candidato de Loop, pero su personal nos ha contactado y están interesados en que su bomba sea loopeable (por el momento, creo que faltan sólo los mandatos de perfil get/set).
+
+**Requisitos hardware para AAPS: ** ninguno. Parece estar habilitado para BT.
+
+** Comentarios: ** Puesto que la empresa está interesada en la integración con AAPS, es posible que lo hagan ellos mismos.
 
 * * *
 
@@ -98,7 +90,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 **Loop status: ** Actualmente no está soportado por ninguno de los sistemas de lazo cerrado. Se considera una candidata para sistemas de lazo cerrado, pero en la medida que aún no se conoce el protocolo, no se prevé que sea soportada en breve.
 
-**Requisitos hardware para AAPS: ** Probablemente ninguno. Está habilitada para BT.
+**Requisitos de hardware para AAPS: ** Probablemente ninguno. Está habilitada para BT.
 
 **Nota acerca del producto:** parece que la compañía decidió abandonar el negocio de Bombas. Puedes ver más en este [artículo](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 

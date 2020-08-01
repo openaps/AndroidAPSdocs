@@ -1,6 +1,20 @@
-Docs updates & changes
+Actualizaciones y cambios de Documentos
 **************************************************
-
+June 2020
+==================================================
+* `Libre 2 <../Hardware/Libre2.html>`_ - more details patched Libre Link app & use of bluetooth transmitters
+* `Time zone travelling <../Usage/Timezone-traveling.html>`_ with Libre 2
+May 2020
+==================================================
+* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
+* `Insight deactivate vibration <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (firmware 3.x only)
+* `Minimal request rate <../Configuration/Preferences.html#minimal-request-rate>`_ to reduce number of notifications in open loop mode
+* `Patched Libre Link app <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - check if correctly patched
+* `Prediction lines <../Getting-Started/Screenshots.html#section-e>`_ - more details
+April 2020
+==================================================
+* `Backdate insulin <../Usage/CPbefore26.html#carbs--bolus>`_ (i.e. given by syringe)
+* `Android 6 support will be discontinued in next master version <../Module/module.html#phone>`_
 March 2020
 ==================================================
 * `Build apk with Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
@@ -17,20 +31,20 @@ February 2020
 * `Sample Setup <../Getting-Started/Sample-Setup.html>`_ - update Dexcom G6
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - major new features
 * `Wear complications <../Configuration/Watchfaces.html>`_
-January 2020
+Enero de 2020
 ==================================================
-* `Manual carb correction <../Getting-Started/Screenshots.html#carb-correction>`_ for faulty carb entries
-* `Image size <../make-a-PR.html#image-size>`_ when editing docs
+* `Corrección manual de carbohidratos <../Getting-Started/Screenshots.html#carb-corrección>` _ para las entradas de carbohidratos erróneas
+* `Tamaño de imagen <../make-a-PR.html#image-size>`_ cuando se editan dcumentos
 Diciembre 2019
 ==================================================
-* `Android auto <../Usage/Android-auto.html>`_ - setup with screenshots
+* `Android automático <../Usage/Android-auto.html>`_ - ajustes con capturas de pantalla
 * `Accu-Chek Insight & Autoajustar <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_ - solución para el uso
 * `Glimp <../Configuration/Config-Builder.html#bg-source>`_ - versión 4.15.57 y soporte más reciente
-* `Watchfaces <../Configuration/Watchfaces.html>`_ - major update, way more details
-* `Watchface complications <../Configuration/Watchfaces.html#complications>`_ - use your favorite watchface with AAPS data
+* `Pantallas de reloj <../Configuration/Watchfaces.html>`_ - actualización importante, con más detalles
+* `Complicaciones de reloj <../Configuration/Watchfaces.html#complications>`_ - utiliza tu pantalla de reloj favorita con datos AAPS
 Noviembre 2019
 ==================================================
-* `Automatización - desactivación cuando se deshabilita el lazo <../Usage/Automation.html#important-note>`_
+* `Automation - deactivate when disabling loop <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 reemplazar actualización de transmisor <../Configuration/xdrip.html#replace-transmitter>`_
 * `Bolos ampliados - por qué no funcionan en un contexto de bucle <../Usage/Extended-Carbs.html#extended-bolus>` _
 * ` FAQ - deportes <../Getting-Started/FAQ.html#sports>`_
@@ -43,7 +57,7 @@ Noviembre 2019
 * `Resolución de problemas de Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>` _
 * `Resolución de problemas - colección de enlaces <../Usage/troubleshooting.html>`_
 * 'Actualización - de paseo a través de la experiencia de los usuarios <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
-* Docs - update `edit <../make-a-PR.md#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
+* Actualización - documentos `editar <../make-a-PR.md#code-syntax>`_ y `traducción <../translations.html#translate-wiki-pages>`_.
 
 Octubre 2019
 ==================================================

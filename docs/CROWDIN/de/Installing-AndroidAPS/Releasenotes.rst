@@ -13,6 +13,50 @@ Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualis
 
 Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln, sondern aus Sicherheitsgründen erfolgt. Neue Versionen von AndroidAPS bieten nicht nur neue Funktionen, sondern auch wichtige Sicherheitsfixes. Deshalb ist es notwendig, dass jeder Anwender so schnell wie möglich aktualisiert. Leider gibt es noch Fehlerberichte aus sehr alten Versionen, so dass dies ein Versuch ist, die Sicherheit für jeden einzelnen Benutzer und die gesamte DIY-Community zu verbessern. Danke für dein Verständnis.
 
+Version 2.6.1.4
+================
+Erscheinungsdatum: 04.05.2020
+
+Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
+
+Wichtige neue Funktionen
+-----
+* Insight: Vibration bei Bolus deaktivieren (Nur Firmware Version 3.x) - zweiter Versuch
+* Sonst identisch mit 2.6.1.3. Update ist optional. 
+
+Version 2.6.1.3
+================
+Erscheinungsdatum: 03.05.2020
+
+Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
+
+Wichtige neue Funktionen
+-----
+* Insight: Vibration bei Bolus deaktivieren (Nur Firmware Version 3.x)
+* Sonst identisch mit 2.6.1.2. Update ist optional. 
+
+Version 2.6.1.2
+================
+Erscheinungsdatum: 19.04.2020
+
+Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
+
+Wichtige neue Funktionen
+-----
+* Fehlerbehebung Insight Service
+* Sonst identisch mit 2.6.1.1. Wenn Dich der Fehler nicht betrifft, musst Du nicht updaten.
+
+Version 2.6.1.1
+================
+Erscheinungsdatum: 06.04.2020
+
+Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
+
+Wichtige neue Funktionen
+-----
+* Fehlerbehebung SMS CARBS Kommando in Zusammenhang mit der Combo Pumpe
+* Sonst identisch mit 2.6.1. Wenn Dich der Fehler nicht betrifft, musst Du nicht updaten.
+
 Version 2.6.1
 ==============
 Erscheinungsdatum: 21.03.2020

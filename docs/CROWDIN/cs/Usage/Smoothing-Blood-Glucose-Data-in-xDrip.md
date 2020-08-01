@@ -1,6 +1,6 @@
 # Vyhlazování zarušených dat glykémií
 
-Pokud glykémie poskakují, může AAPS nesprávně poslat dávku inzulinu vedoucí k vysoké nebo nízké glykémii. Z tohoto důvodu je důležité deaktivovat smyčku, dokud se problém nevyřeší. V závislosti na Vašem CGM mohou být tyto problémy způsobeny konfigurací CGM nebo problémy se senzorem/umístěním. Některé funkce, jako je "Vždy povolit SMB" a "Povolit SMB po jídle" lze použít pouze s filtrovaným zdrojem glykémií.
+Pokud glykémie poskakují, může AAPS nesprávně poslat dávku inzulinu vedoucí k vysoké nebo nízké glykémii. Z tohoto důvodu je důležité deaktivovat smyčku, dokud se problém nevyřeší. V závislosti na Vašem CGM mohou být tyto problémy způsobeny konfigurací CGM nebo problémy se senzorem/umístěním. You may need to replace your CGM sensor to resolve this. Některé funkce, jako je "Vždy povolit SMB" a "Povolit SMB po jídle" lze použít pouze s filtrovaným zdrojem glykémií.
 
 ## Dexcom G5 aplikace (upravená)
 

@@ -1,61 +1,65 @@
-Extended carbs / "eCarbs"
+Пролонгированные (расширенные) углеводы / "eCarbs"
 **************************************************
-With a regular pump therapy, extended boluses are a good way to deal with fatty or otherwise slowly-absorbed meals which increase blood glucose longer than the insulin is in effect. In a loop context, however, extended boluses don't make as much sense (and pose technical difficulties), since they're basically a fixed high temporary basal rate, which goes against how the loop works, which is adjusting the basal rate dynamically. For details see `extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ below.
+При обычной помповой терапии пролонгированные болюcы-хороший способ справиться с жирной или медленно усваиваемой пищей, которая увеличивает уровень глюкозы в крови дольше, чем работает инсулин. Однако в контексте алгоритма ИПЖ пролонгированные болюсы не имеют большого смысла (и создают технические трудности), поскольку они представляют собой по сути, фиксированную высокую временную базальную скорость, которая идет вразрез с тем, как работает цикл ИПЖ, который должен динамически корректировать базальную скорость. Дополнительные сведения см. в разделе " Пролонгированный болюс <../Usage/Extended-Carbs.html#extended-bolus> ` _ ниже.
 
-The need to deal with such meals still exists though. Which is why AndroidAPS as of version 2.0 supports so called extended carbs or eCarbs.
+Однако необходимость работать с такой едой все же существует. Именно поэтому AndroidAPS начиная с версии 2.0 поддерживает так называемые расширенные углеводы или eCarbs.
 
-eCarbs are carbs that are spilt up over several hours. For standard meals with more carbohydrates than fat/protein, entering the carbs up front (and reducing the initial bolus if needed) is usually sufficient to prevent too-early insulin delivery.  But for slower-absorbing meals where full carb entry up front results in too much IOB from SMB, eCarbs can be used to more accurately simulate how the carbs (and any carb equivalents you enter for other macronutrients) are absorbed and influence the blood glucose. With this information, the loop can administer SMBs more gradually to deal with those carbs, which can be seen as a dynamic extended bolus (this should also work without SMBs, but is probably less effective).
+eCarbs-это углеводы, которые растягиваются на несколько часов. Для стандартного питания с бОльшим содержанием углеводов, чем жира/белка, введение углеводов заранее (и при необходимости уменьшение начального болюса), как правило, достаточно для предотвращения преждевременной подачи инсулина.  Но для медленно поглощающейся еды, при которой предварительное введение углеводов приводит к слишком большой величине активного инсулина IOB из-за микроболюсов SMB, eCarbs могут применяться для более точного моделирования того, как усваиваются углеводы и влияют на уровень глюкозы в крови. С помощью этой информации алгоритм может управлять микроболюсами SMB которые выступают как пролонгированный болюс на такие углеводы ( должно работать и без SMB, но, возможно, менее эффективно).
 
-eCarbs aren't limited to fatty / protein heavy meals: they can be also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+eCarbs не ограничивается тяжелой пищей богатой жирами/белками: они могут быть также использованы для оказания помощи в других случаях, когда увеличивается уровень сахара в крови, например, прием лекарств, таких как кортикостероиды.
 
-To enter eCarbs, set a duration in the _Carbs_ dialog on the overview tab, the total carbs and optionally a time shift:
+Чтобы ввести eCarbs, задайте длительность в диалоговом окне _Carbs_ на вкладке обзора, общее количество углеводов и (необязательно) сдвиг по времени:
 
-.. image:: ../images/eCarbs_Dialog.png
-  :alt: Enter carbs
+.. изображение:: ../images/eCarbs_Dialog.png
+  :alt: Введение углеводов
 
-The eCarbs on the overview tab, note the carbs in brackets at the COB field, which shows the carbs in the future:
+ECarbs на вкладке обзора, обратите внимание на углеводы в скобках в поле COB, в котором показаны углеводы в будущем:
 
-.. image:: ../images/eCarbs_Graph.png
-  :alt: eCarbs in graph
+.. изображение:: ../images/eCarbs_Graph.png
+  :alt: eCarbs на графике
 
-Carb entries which are in the future are coloured in dark orange on the treatment tab:
+Углеводы в будущем окрашены в темно-оранжевый цвет на вкладке Терапии:
 
-.. image:: ../images/eCarbs_Treatment.png
-  :alt: eCarbs in future in treatment tab
+.. изображение:: ../images/eCarbs_Treatment.png
+  :alt: eCarbs в будущем на вкладке лечения
 
-
------
-
-A way to handle fat and protein with that feature is described here: `https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html <https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html>`_
 
 -----
 
-The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the _Enable SMB with COB_ preference being enabled.
+Способ компенсации жира и белка с этой функцией описан здесь: ` https: //adriansloop.blogspot.co. at/2018/04/page-margin-0.html <https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html>` _
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the _calculator_ and then use the _carbs_ button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours. You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting _max minutes of basal to limit SMB to_ to make the algorithm more or less aggressive.
-With low carb, high fat/protein meals it may be enough to only use eCarbs without manual boluses (see the blog post above).
+-----
 
-When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
+Рекомендуется использовать модуль OpenAPS SMB APS, с поддержкой SMB, а также включить параметр _Enable SMB с COB_.
+
+Сценарий, например, на пиццу может быть такой: дать (частично) болюс заранее через калькулятор болюса а затем через 1 или 2 часа нажать кнопку углеводы чтобы ввести оставшиеся углеводы на последующие 4-6 часов. Нужно приспособиться, чтобы понять какие конкретные величины подходят для вас. Можно также подстроить параметр _max minutes of basal для ограничения SMB чтобы сделать алгоритм более или менее агрессивным.
+При низком содержании углеводов, высоким содержании жиров и белков, eCarbs может быть достаточен, чтобы обойтись без дополнительного контроля болюсов (см. пост блога выше).
+
+При создании eCarbs в портале терапии создается также запись для документирования, упрощающая итерацию и ввод данных.
 
 Пролонгированный болюс
 ==================================================
-As mentioned above extended or multiwave boluses do not really work in a closed loop environment. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-wont-work-in-a-closed-loop-environment>`_ for details
+Как упоминалось выше, пролонгированные или многоволновые болизы не работают в замкнутом цикле. ` Подробнее см. ниже <../Usage/Extended-Carbs.html#why-Extended-boluses-wont-work-in-a-closed-loop-environment> ` _
 
-Extended bolus and switch to open loop
---------------------------------------------------
-Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to. 
+Пролонгированный болюс и переключение на незамкнутый цикл - только для помп Dana и Insight
+-----------------------------------------------------------------------------
+Некоторые пользователи просили предусмотреть пролонгированные болюсы в ААПС, так как хотели бы компенсировать специфические продукты питания привычным для себя образом. 
 
-That's why as of version 2.6 there is an option for an extended bolus. But closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus. Bolus units, remaining and total time will be shown on homescreen.
+Поэтому, начиная с версии 2.6, существует опция пролонгированного болюса для пользователей помп Dana и Insight. 
 
-.. image:: ../images/ExtendedBolus2_6.png
-  :alt: Extended bolus in AAPS 2.6
+Замкнутый цикл автоматически будет остановлен и переключится на режим открытого цикла на время пролонгированных болюсов. 
+* Единицы измерения, оставшееся и общее время, будут показаны на гланом экране.
+* На помпе Insight пролонгированный болюс *не доступен*, если используется эмуляция временной скорости базала `TBR <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`. 
 
-Why extended boluses won't work in a closed loop environment
+.. изображение:: ../images/ExtendedBolus2_6.png
+  :alt: Пролонгиованный болюс в AAPS 2.6
+
+Почему пролонгированные болюсы не будут работать в среде замкнутого цикла
 ----------------------------------------------------------------------------------------------------
-1. The loop determines that now 1.55U/h is to be delivered. Whether this is delivered as an extended bolus or TBR does not matter to the algorithm. In fact, some of the pumps use the extended bolus. What should happen then? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
-2. If you had the extended bolus as input, what should happen in the model?
+1. Цикл определяет, что скорость базала должна быть 1.55 ед/ч. Для алгоритма неважно подается ли при этом пролонгированный болюс или обычный временный базал TBR. На самом деле, на некоторых помпах возможен пролонгированный болюс. Что должно произойти в этом случае? Большинство драйверов помп останавливает пролонгированный болюс-> Можно не даже не пытаться его запустить.
+2. Если в качестве входных данных задан пролонгированный болюс, что должно произойти?
 
-   1. Should it be considered neutral together with the BR and looped on it? Then the loop should also be able to reduce the bolus if, for example, you get too low and all the "neutral" insulin is taken away?
-   2. Should the extended bolus simply be added? So the loop should simply be allowed to continue? Even in the worst hypo? I don't think this is so good: A hypo is foreseen but it must not be prevented?
+   1. Будет ли алгоритм считать базу нейтральной и работать невзирая на нее? Он также должен уметь уменьшать болюс, например, при низкой ГК, когда "нейтральный" инсулин уже израсходован?
+   2. Следует ли просто добавить пролонгированный болюс? То есть, алгоритму петли нужно просто позволить продолжить? Даже при жесточайшей гипо? Не думаю, что это правильно: предвидится гипогликемия, но не предотвращается?
    
-3. The IOB that the extended bolus builds up materializes after 5 minutes at the next run. Accordingly, the loop would give less basal. So not much changes... except that the possibility of hypo avoidance is taken.
+3. Активный инсулин IOB, который создается пролонгированным болюсом, материализуется через 5 минут при следующем прохождении. Соответственно, цикл снизил бы базал. Так что не сильно меняется... кроме того, что используется возможность ухода от гипо.

@@ -32,7 +32,7 @@ Hay límites de seguridad basados en la edad que selecciona aquí. Si sobrepasa 
 
 * Opción para habilitar [superbolo](../Getting-Started/Screenshots#section-a) en el asistente de bolos.
 
-### Status lights
+### Luces de estado
 
 * Las luces de estado proporcionan un aviso visual para el bajo nivel de reservorio y batería, así como para el cambio de cánula por tiempo vencido (cambio de sitio). La versión ampliada muestra el tiempo transcurrido / el porcentaje de la batería.
     
@@ -61,11 +61,25 @@ Esta es la cantidad máxima de carbohidratos que la calculadora de bolo AAPS pue
 
 ## Loop
 
-Puede alternar entre lazo abierto y cerrado aquí. Abrir lazo significa que las sugerencias de Basales temporales se basan en sus datos y aparecen como una notificación, pero debe elegir aceptarlas manualmente e ingresarlas manualmente en su bomba. El lazo cerrado significa que las sugerencias de TBR se envían automáticamente a su bomba sin confirmación o aportación suya. La pantalla de inicio se mostrará en la esquina superior izquierda, ya sea que esté abierto o cerrado, y al mantener presionado este botón de pantalla de inicio también podrá alternar entre los dos.
+Puede alternar entre lazo abierto y cerrado aquí.
+
+Abrir lazo significa que las sugerencias de TBR se basan en sus datos y aparecen como una notificación, pero debe elegir aceptarlas manualmente e ingresarlas manualmente en su bomba.
+
+El lazo cerrado significa que las sugerencias de TBR se envían automáticamente a su bomba sin confirmación o aportación de usted.
+
+La pantalla de inicio se mostrará en la esquina superior izquierda, ya sea que esté abierto o cerrado, y al mantener presionado este botón de pantalla de inicio también podrá alternar entre los dos.
+
+### Tasa mínima de solicitud
+
+Cuando se utiliza en lazo abierto recibirás notificaciones cada vez que AAPS recomienda ajustar basal. Para reducir el número de notificaciones puede usar un rango de objetivo más amplio o aumentar el porcentaje de la tasa mínima de solicitud. Esto define el cambio relativo necesario para desencadenar una notificación.
+
+![Tasa mínima de solicitud](../images/MinRequestChange.png)
+
+Nota: En el modo de lazo cerrado se recomienda un único objetivo en lugar del rango objetivo (es decir, 5,5 mmol en lugar de 5,0-7,0 mmol).
 
 ## OpenaAPS AMA
 
-Openaps AMA Permite que el sistema funcione más agresivamente de manera temporal después de un bolo de comida SI se ingresa carbohidratos. Actívelo en la pestaña Configuración para ver los valores de seguridad aquí, tendrá que haber completado [Objetivo 9 ](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) para utilizar esta característica. Puede leer más sobre la configuración y Autosens en los documentos de OpenAPS.
+El Sistema OpenAPS AMA o asistente avanzado de comida, permite que el sistema funcione más agresivamente de manera temporal después de un bolo de comida SI se ingresa carbohidratos. Actívelo en la pestaña Configuración para ver los valores de seguridad aquí, tendrá que haber completado [Objetivo 9 ](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) para utilizar esta característica. Puede leer más sobre la configuración y Autosens en los documentos de OpenAPS.
 
 ### Max U/hr que se pueden configurar la Basal Temporal
 
@@ -105,10 +119,10 @@ Las opciones aquí variarán según el controlador de la bomba que haya seleccio
 * [Bomba de insulina DanaR](../Configuration/DanaR-Insulin-Pump.md) 
 * [Bomba de insulina DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Bomba de insulina Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
-* [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md) 
-* [Medtronic Pump](..//Configuration/MedtronicPump.md)
+* [Bomba Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) 
+* [Infusora Medtronic](..//Configuration/MedtronicPump.md)
 
-Si usa AndroidAPS en lazo abierto, asegúrese de haber seleccionado Virtual Pump en config builder.
+Si usa AndroidAPS en lazo abierto, asegúrese de haber seleccionado Bomba Virtual en config builder.
 
 ## NS Client
 
@@ -134,9 +148,9 @@ Esta configuración permite el control remoto de la aplicación enviando instruc
 * Puede establecer los valores predeterminados para sus objetivos temporales aquí, para los diferentes tipos de objetivos temporales (eating soon y actividad). Cuando selecciona un objetivo temporal, si elige, por ejemplo, "eating soon" en el cuadro desplegable, automáticamente rellenará la duración y el valor en función de las cifras que proporcionó aquí. Para obtener más información sobre el uso de Objetivos temporales, vea Abrir las características de Aps. 
 * Puede establecer cantidades de purgado predeterminadas: esto hará que la bomba cuente con el valor especificado y esta insulina se cuenta como utilizada desde el depósito, pero no se cuenta en los cálculos IOB. Consulte el folleto de instrucciones en su caja de cánulas para saber cuántas unidades debe llenar las cánulas según la longitud de la aguja y la longitud del tubo.
 * Puede cambiar la visualización en la pantalla de inicio y observar los valores que están dentro del rango. Tenga en cuenta que solo afecta a cómo se ven los gráficos y no afecta su objetivo o sus cálculos.
-* 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
-* 'Local Alerts' lets you decide if you receive a warning and after how long for not receiving blood glucose values (stale data) or the pump being unreachable. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
+* 'Acortar títulos de pestañas' le permite ver más títulos de pestañas en la pantalla, por ejemplo, la pestaña 'Abrir APS' se convierte en 'OAPS', 'Objetivos' se convierte en 'Obj', etc.
+* 'Alertas locales' le permite decidir si recibe una advertencia y a partir de cuánto tiempo no recibe los valores de glucosa en sangre (datos obsoletos) o si la bomba no está disponible. Si con frecuencia recibe alertas de bomba inaccesible, active BT Watchdog en Configuración.
 
 ## Opciones de datos
 
-* 'Fabric Upload' will send crash reporting and feature usage data to the developers.
+* "Fabric Upload" enviará datos de informes de fallos y datos de uso a los desarrolladores.

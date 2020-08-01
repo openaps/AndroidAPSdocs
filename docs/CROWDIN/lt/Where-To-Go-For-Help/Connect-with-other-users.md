@@ -1,4 +1,4 @@
-# I'm getting stuck; What do I do? Who can I ask?
+# Užstrigau; Ką daryti? Ko galiu paklausti?
 
 This project is based on volunteer work so some rules apply to avoid extra work to those who so kindly donate their time and skills:
 
@@ -34,7 +34,7 @@ Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/190019
 ### Germany
 
 * [Open Source Looper Community](https://de.loopercommunity.org/): German looper community for Open Source Loop, diabetes in general, communication, support and local meet-up
-* [Looper Meetings Germany, Austria & Switzerland](http://loopertreffen.androidaps.de)
+* [Looper Meetings Germany, Austria & Switzerland](https://de.loopercommunity.org/c/veranstaltungen/l/calendar)
 * [Freestyle Libre Freaks Facebook group](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
 * [NightscoutDE Facebook group](https://www.facebook.com/groups/nightscoutDE/)
 

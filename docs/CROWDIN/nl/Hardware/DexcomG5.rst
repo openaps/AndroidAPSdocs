@@ -7,7 +7,7 @@ Dexcom G5 met xDrip+
 * In xdrip ga naar Instellingen > Interapp Settings > Accept Treatments selecteer OFF.
 * Als je AndroidAPS wilt gebruiken om te kalibreren ga dan in xdrip naar Instellingen > Interapp settings > Accept Calibrations en selecteer ON.  Je kunt ook de opties aanpassen aan jouw behoefte in Instellingen > Minder vaak voorkomende instellingen > Advanced Calibration Settings.
 * Selecteer xdrip in Configurator (instellingen in AndroidAPS).
-* Als AAPS geen BG-waarden ontvangt wanneer de telefoon in vliegtuigmodus staat, gebruik dan `Identify receiver' (Identificer ontvanger) zoals beschreven op de [xDrip+ instellingen pagina] (../Configuration/xdrip.md).
+* Als AAPS geen BG-waarden ontvangt wanneer de telefoon in vliegtuigmodus staat, gebruik dan 'Identify receiver' (Identificeer ontvanger) zoals beschreven op de `xDrip+ instellingen pagina <../Configuration/xdrip.html>`_.
 
 G5 met aangepaste Dexcom G5 app
 ==================================================

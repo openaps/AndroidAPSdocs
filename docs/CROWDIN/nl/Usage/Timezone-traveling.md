@@ -24,6 +24,7 @@ Om dit te voorkomen zijn er twee mogelijkheden:
    
    * Bijvoorbeeld Wenen-> New York: profiel wissel + 6 uur
    * Bijvoorbeeld Wenen-> Sydney: profiel wissel - 8 uur
+* Let op: dit is waarschijnlijk niet mogelijk als je gebruik maakt van de [gepatchte LibreLink app](../Hardware/Libre2#time-zone-travelling) omdat je telefoon op 'automatische tijdzone' moet staan om een nieuwe Libre 2 sensor te starten.
 
 ### Optie 2: pomphistorie wissen
 
@@ -38,8 +39,6 @@ Wanneer je uit het vliegtuig komt:
 * verander tijd in pomp
 * telefoon aanzetten
 * laat telefoon verbinding maken met de pomp en de tijd fine-tunen
-
-## Combo
 
 ## Insight
 

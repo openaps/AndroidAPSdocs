@@ -11,7 +11,7 @@ Actualmente tenemos 4 modelos de detección de sensibilidad:
 
 ### Sensibilidad Oref0
 
-Básicamente, la sensibilidad se calcula a partir de los datos de las pasadas 24h y los carbohidratos (si no se absorben) se anulan después del tiempo especificado en las preferencias. The algorithm is similiar to OpenAPS Oref0, described in [OpenAPS Oref0 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Básicamente, la sensibilidad se calcula a partir de los datos de las pasadas 24h y los carbohidratos (si no se absorben) se anulan después del tiempo especificado en las preferencias. El algoritmo es similiar a OpenAPS Oref0, descrito en [Documentación de OpenAPS Oref0](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 ### Sensibilidad AAPS
 
@@ -23,7 +23,7 @@ La sensibilidad se calcula como un promedio ponderado de las desviaciones. Puede
 
 ### Sensibilidad Oref1
 
-La sensibilidad se calcula a partir de los datos de 8h en el pasado o en el último cambio de sitio(cánula), si es menor a 8h. Las carbohidratos (si no se absorben) se anulan tras el tiempo especificado en las preferencias. Únicamente el algoritmo Oref1 soporta las comidas no anunciadas (UAM). Esto significa que los tiempos al detectar UAM se excluyen del cálculo de sensibilidad. Por lo tanto, si utiliza SMB con UAM, tiene que elegir el algoritmo Oref1 para trabajar correctamente. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
+La sensibilidad se calcula a partir de los datos de 8h en el pasado o en el último cambio de sitio(cánula), si es menor a 8h. Las carbohidratos (si no se absorben) se anulan tras el tiempo especificado en las preferencias. Únicamente el algoritmo Oref1 soporta las comidas no anunciadas (UAM). Esto significa que los tiempos al detectar UAM se excluyen del cálculo de sensibilidad. Por lo tanto, si utiliza SMB con UAM, tiene que elegir el algoritmo Oref1 para trabajar correctamente. Para obtener más información, consulte la publicación [Documentación de OpenAPS Oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
 
 ## Carbohidratos simultáneos
 

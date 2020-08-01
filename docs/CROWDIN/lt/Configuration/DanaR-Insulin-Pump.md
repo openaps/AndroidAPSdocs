@@ -15,7 +15,7 @@
 * Pradinio lango viršutiniame dešiniajame kampe paspauskite 3 taškus. Išsirinkite Nustatymai.
 * Išsirinkite "DanaR Bluetooth" ir paspauskite savo pompos serijinį numerį.
 * Pasirinkite "Pompos slaptažodis" ir įveskite savo slaptažodį. (Standartinis slaptažodis yra 1234)
-* Jei norite, kad AndroidAPS naudotų bazės vertes virš 200 %, pažymėkite "Naudoti ištęstus bolusus >200%". Įsidėmėkite, kad Jūs negalėsite naudoti ciklo su padidinta laikina baze, jei naudosite ištęstus bolusus maistui.
+* Jei norite, kad AndroidAPS naudotų bazės reikšmes virš 200 %, pažymėkite "Naudoti ištęstus bolusus >200%". Įsidėmėkite, kad Jūs negalėsite naudoti ciklo su padidinta laikina baze, jei naudosite ištęstus bolusus maistui.
 * "Nustatymuose" pasirinkę "DanaR pompos nustatymai" galite pakeisti standartinį boluso greitį (1 V per 12 s, 1 V per 30 s, 1 V per 60 s).
 * Nustatykite bazės žingsnį pompoje 0.01 U/h
 * Įgalinkite ištęstus bolusus pompoje

@@ -3,23 +3,29 @@
 
 Что такое автоматизация
 ==================================================
-Для одинаковых частых событий приходится изменять одни и те же параметры. Чтобы избежать лишней работы, можно автоматизировать событие, если вы можете описать его достаточно точно и позволить ему делать это автоматически. Например, при низкой ГК, вы можете решить, что должна автоматически установиться высокая временная цель. Или если вы находитесь в фитнес-центре, вы автоматически получаете временную цель. Перед использованием автоматизации следует уверенно овладеть ручным управлением ` временными целями <./temptarget.html> ` _ или переключением профиля. 
+Для одинаковых частых событий приходится изменять одни и те же параметры. Чтобы избежать лишней работы, можно автоматизировать событие, если вы можете описать его достаточно точно и позволить ему делать это автоматически. 
+
+Например, при низкой ГК, вы можете решить, что должна автоматически установиться высокая временная цель. Или если вы находитесь в фитнес-центре, вы автоматически получаете временную цель. 
+
+Перед использованием автоматизации следует уверенно овладеть ручным управлением ` временными целями <./temptarget.html> ` _ или переключением профиля. 
+
+Убедитесь, что вы понимаете, как работает автоматизация перед настройкой первого простого правила. ** Вместо действий разрешите AAPS только показывать уведомления. * * Если вы уверены, что автоматизация инициируется в нужное время, замените уведомление реальным действием.
 
 .. изображение:: ../images/Automation_ConditionAction_RC3.png
   :alt: условие автоматизации + действие
 
-How to use it
+Как пользоваться
 ==================================================
 Чтобы настроить автоматизацию, нужно дать ей заголовок, выбрать хотя бы одно условие и одно действие. 
 
-Important note
+Важное примечание
 --------------------------------------------------
-**Automation is still active when you disable loop!**
+** Автоматизация по-прежнему активна при отключении цикла! **
 
-So make sure to deactivate Automation rules during these occations if neccessary. You can do so by untiking the box left of the name of your automation rule.
+Поэтому при необходимости деактивируйте правила автоматизации на это время. Это можно сделать, сняв галочку в поле слева от названия правила автоматизации.
 
-.. image:: ../images/Automation_ActivateDeactivate.png
-  :alt: Activate and deactivaten automation rule
+.. изображение:: ../images/Automation_ActivateDeactivate.png
+  :alt: Активировать и деактивировать правило автоматизации
 
 Общие настройки
 --------------------------------------------------
@@ -35,7 +41,7 @@ So make sure to deactivate Automation rules during these occations if neccessary
 * **более -2 означает: -1 и выше (-1, 0, +10 и т.д)**
 
 
-Condition
+Условие
 --------------------------------------------------
 Вы можете выбрать между несколькими условиями. Некоторые моменты здесь объясняются, но основное легко понять и оно не все здесь описано:
 
@@ -54,7 +60,7 @@ Condition
 
   * Использовать пассивное расположение: AAPS принимает положения только в том случае, если другие приложения запрашивали его
   * Использовать расположение сети: расположение вашего Wifi
-  * Use GPS location (Attention! May cause excessive battery drain!)
+  * Используйте локатор GPS (Внимание! Может привести к чрезмерной разрядке аккумулятора!)
   
 Действие
 --------------------------------------------------
@@ -74,74 +80,74 @@ Condition
 
 После добавления ваших действий, **не забудьте изменить значения по умолчанию** на те, которые требуются, нажав на значения по умолчанию.
  
-.. image:: ../images/Automation_Default_V2_5.png
+.. образ:: ../images/Automation_Default_V2_5.png
   :alt: автоматизация по умолчанию vs. задать значения
 
-Sort automation rules
+Выбор правил автоматизации
 -----
-To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
+Для отбора правил автоматизации нажмите и удерживайте кнопку с четырьмя строками в правой части экрана и двигайтесь вверх или вниз.
 
-.. image:: ../images/Automation_Sort.png
-  :alt: Sort automation rules
+.. изображение:: ../images/Automation_Sort.png
+  :alt: Выбор правил автоматизации
   
-Delete automation rules
+Удаление правил автоматизации
 -----
-To delete an automation rule just swipe it left or right.
+Чтобы удалить правило автоматизации, просто смахните его влево или вправо.
 
-.. image:: ../images/Automation_Delete.png
-  :alt: Delete automation rule
+.. изображение:: ../images/Automation_Deletet.png
+  :alt: Выбор правила автоматизации
 
-Good practice & caveats
+Рекомендации и предостережения
 ==================================================
 * Когда вы начинаете пользоваться средствами автоматизации или создаете новое правило, добавьте уведомление об этом, пока не убедитесь, что правило хорошо работает.
 * Наблюдайте за результатами работы правила.
-* Try not make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg < 180 mg/dl)
+* Постарайтесь не делать условия слишком легкими (например, ЕСЛИ ГК > 80 мг/дл И ГК < 180 мг/дл)
 
-    **Doubly important if action is a profile switch!**
+    **Вдвойне важно, если правило активирует переключатель профиля!**
  
-* Try and use Temp Targets instead of Profile Switches. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`_ back to 0.
-* Make sure Profile switches are made sparingly and preferably at a last resort.
+* Попробуйте использовать временные цели Temp Targets вместо переключателей профиля Profile Switches. Temp Targets не сбрасывают ` Autosens <../Usage/Open-APS-features.html#autosens> ` _ на 0.
+* Убедитесь, что переключатели профиля создаются с осторожностью и желательно как крайняя мера.
 
-    * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`_ useless for a min of 6 hours.
+    * Переключение профилей делает `Autosens <../Usage/Open-APS-features.html#autosens>`_ бесполезным минимум на 6 часов.
 
-* Profile switching will not reset the profile back to your base profile
+* Переключение профилей не сбросит профиль назад на базовый профиль
 
-    * You have to make another rule to set this back or do it manually!
-    * Increased risk of Hypoglycemia if profile switch does not expire or reset back to base profile.
+    * Вы должны создать еще одно правило, чтобы вернуть профиль или сделать это вручную!
+    * Повышенный риск гипогликемии в случае, если время работы нового профиля не истечет или не сбросится назад на базовый профиль.
 
 Примеры
 ==================================================
-These are just set up examples, no advises. Don't reproduce it without being aware what you are actually doing or why you need these. See below for two examples with screenshots.
+Это просто примеры вариантов настройки, не советы. Не воспроизводите их, не зная, что вы делаете или зачем вам это нужно. Ниже приведены два примера со снимками экрана.
 
-* Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
-* Setting temp target for activities based on time, location...
-* Setting eating soon temp targets based on time, location...
+* Переключение профилей для вашей повседневной деятельности (например, школа, тренажерный зал, выходные, рабочий день...) с использованием геолокации, wifi, времени и т. д.
+* Настройка временной цели для решений на основе времени, геолокации...
+* Настройка временной цели ожидаемый прием пищи на основе времени, геолокации...
 
-Low Glucose Temp Target
+Временная Цель Низкая ГК
 --------------------------------------------------
-.. image:: ../images/Automation2.png
-  :alt: Automation2
+.. изображение:: ../images/Automation2.png
+  :alt: Автоматизация2
 
-This is made by a person that wants to get an automatically hypo temp target when having a hypo.
+Это сделал человек, который хочет получить автоматическую цель гипо при гипогликемии.
 
-Lunch Time Temp Target
+Временная Цель Время Обеда
 --------------------------------------------------
-.. image:: ../images/Automation3.png
-  :alt: Automation3
+.. изображение:: ../images/Automation3.png
+  :alt: Автоматизация3
   
-These example is made by a person, that has lunch at the same time during the week. If it is at a certain time at its lunch location, it gets a lower temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the certain time and the  location. So it does not work at any other time at this location or at this time when the persons stays home or works longer. 
+Это пример настроек автоматизации человека, который обедает в одно и то же время в течение недели. Если он в определенное время (перед обедом) находится в определенном месте, то получает более низкую временную цель (ожидаемый прием пищи). Из-за союза "И" это происходит только в определенное время в определенном месте. Поэтому эта автоматизация не работает в любое другое время в этом месте или в то время, когда человек сидит дома или работает дольше. 
 
-Incorrect use of Automation
+Неправильное использование автоматизации
 --------------------------------------------------
-As every system Automation can be used incorrectly. This might lead to difficulties and even danger for your health. Examples for incorrect use are for instance:
+Как и все системы, автоматизация может применяться неправильно. Это может привести к трудностям и даже опасности для здоровья. Примеры неправильного применения:
 
-* Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
-* Setting profile to compensate food
-* Setting profile without duration
-* Creating one way rules (i.e. do something but don't undo it by another rule)
-* Creating long term rules
+* Попытка полного переопределения алгоритма вместо помощи (напр. замена профиля вместо тюнинга базала, соотношения инсулин-углеводы IC и т. д.)
+* Установка профиля для компенсации приема пищи
+* Установка профиля без определения продолжительности
+* Создание правил в одну сторону (т.е. делать что-то, но не отменять это другим правилом)
+* Создание долгосрочных правил
 
-Alternatives
+Альтернативы
 ==================================================
 
-For advanced users there are other posibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found `here <./automationwithapp.html>`_.
+Для опытных пользователей есть и другие возможности для автоматизации задач с помощью IFTTT или приложения Android под названием Automate. Некоторые примеры можно найти ` здесь <./automationwithapp.html> ` _.

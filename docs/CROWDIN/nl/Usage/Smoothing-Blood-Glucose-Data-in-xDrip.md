@@ -1,6 +1,6 @@
 # Filteren van bloed glucose waardes
 
-Als de BG data van jouw sensor veel ruis heeft of 'springerig' is, dan zou het kunnen dat AAPS een verkeerde dosis insuline geeft, wat dan weer kan zorgen voor hoge of lage BG. Om deze reden is het belangrijk om de closed loop uit te schakelen totdat het probleem met de sensor is opgelost. Afhankelijk van jouw CGM kunnen dit soort problemen liggen aan jouw sensor instellingen, aan de sensor zelf, of aan de plaats waar je de sensor draagt. Sommige functies in AndroidAPS, zoals 'Activeer SMB altijd' en 'Gebruik SMB met koolhydraten' kunnen alleen worden gebruikt wanneer je een goed gefilterde BG bron hebt.
+Als de BG data van jouw sensor veel ruis heeft of 'springerig' is, dan zou het kunnen dat AAPS een verkeerde dosis insuline geeft, wat dan weer kan zorgen voor hoge of lage BG. Om deze reden is het belangrijk om de closed loop uit te schakelen totdat het probleem met de sensor is opgelost. Afhankelijk van jouw CGM kunnen dit soort problemen liggen aan jouw sensor instellingen, aan de sensor zelf, of aan de plaats waar je de sensor draagt. Om dit op te lossen moet je wellicht jouw CGM-sensor vervangen. Sommige functies in AndroidAPS, zoals 'Activeer SMB altijd' en 'Gebruik SMB met koolhydraten' kunnen alleen worden gebruikt wanneer je een goed gefilterde BG bron hebt.
 
 ## Aangepaste Dexcom G5/G6 app
 

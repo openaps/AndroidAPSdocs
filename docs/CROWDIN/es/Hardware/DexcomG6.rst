@@ -5,13 +5,14 @@ Lo básico primero
 
 * Siga la higiene general de la CGM y establezca la recomendación del sensor ` Aquí <../Hardware/GeneralCGMRecommendation.html>` _.
 * Para los transmisores G6 fabricados después del final del otoño de 2018, asegúrese de utilizar una de las ` última versión nightly de xDrip+ <https://github.com/NightscoutFoundation/xDrip/releases>` _. Dichos transmisores tienen un nuevo firmware y la última versión estable de xDrip+ (2019/01/10) no puede tratar con él.
+* Si usted tiene la posibilidad de obtener un receptor Dexcom de su seguro de salud vale la pena recibirlo. Incluso si no lo usas todos los días puedes usarlo exclusivamente cuando necesitas presentar una denuncia. El uso paralelo es posible como los transmisores pueden enviar al receptor, más a un dispositivo más al mismo tiempo.
 
 Consejos generales para el bucle con G6
 ==================================================
 
 Lo que está claro es que el uso del G6 es tal vez un poco más complejo que lo que se sugiere en primer lugar. Para utilizar de manera segura, hay un par de puntos a tener en cuenta: 
 
-* Si está utilizando los datos nativos con el código de calibración en xDrip o Spike, la cosa más segura es no permitir reinicios preventivos del sensor.
+* Si estás usando los datos nativos con el código de calibración en xDrip+ o Spike, lo más seguro es no permitir reinicios preventivos del sensor.
 * Si debe usar reinicio preventivo, a continuación, asegúrese de insertar una hora del día donde puede observar el cambio y calibrar si es necesario. 
 * Si está reiniciando sensores, o bien haga esto sin la calibración de fábrica para obtener resultados más seguros en los días 11 y 12, o asegúrate de que estás listo para calibrar y vigilar la variación.
 * La preabsorción del G6 con calibración de fábrica es probable que dé variaciones en los resultados. Si haces preconfiguración, entonces para obtener los mejores resultados, probablemente necesitarás calibrar el sensor.
@@ -33,7 +34,7 @@ Si utiliza G6 con la aplicación Dexcom parcheada
 ==================================================
 * Descargar el apk desde `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, y elegir la versión que más se adapte a sus necesidades (mg/dl o mmol/l versión, G6).
 
-   * Carpeta 2.3 es para los usuarios de AndroidAPS 2.3, carpeta 2.4 para los usuarios de la AAPS 2.5.
+   * Carpeta 2.4 para los usuarios de la versión actual, la carpeta 2.3 es sólo para la anticuada AndroidAPS 2.3.
    * Abrir https://play.google.com/store/search?q=dexcom%20g6 en tu ordenador. La región estará visible en el URL.
    
    .. imagen:: ../images/DexcomG6regionURL.PNG
@@ -43,13 +44,14 @@ Si utiliza G6 con la aplicación Dexcom parcheada
 * Instalar el apk descargado
 * Iniciar Sensor
 * Seleccione la aplicación Dexcom (parchada) en ConfigBuilder (seteos en AndroidAPS).
-* Si desea utilizar xDrip alarmas a través de la difusión local: en xDrip menú hamburguesa > ajustes > ajustes de hardware de origen de datos > 640G /EverSense.
+* If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
+* There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.
 
 Resolución de problemas G6
 ==================================================
 Resolución de problemas específica de Dexcom G6
 --------------------------------------------------
-* Transmisores con número de serie comenzando con 80 o 81 necesitan, al menos, la última versión estable xDrip de Mayo de 2019 o una versión nocturna más reciente.
+* Transmisores con número de serie comenzando con 80 o 81 necesitan, al menos, la última versión estable xDrip de Mayo de 2019 o una versión más reciente.
 * Transmisores con número de serie a partir de 8G necesita al menos la versión nightly a partir del 25 de julio de 2019 o más reciente.
 * La aplicación xDrip + y Dexcom no se puede conectar con el transmisor a la vez.
 * Espere por lo menos 15 min. entre la detención y el inicio de un sensor.
@@ -63,9 +65,9 @@ Resolución de problemas específica de Dexcom G6
 .. imagen:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
 
-Resolver problemas generales
+General troubleshooting
 --------------------------------------------------
-Los problemas generales de resolución de problemas para los CGM se pueden encontrar `aquí <../GeneralCGMRecommendation.html#Troubleshooting>` _.
+General Troubleshooting for CGMs can be found `here <./GeneralCGMRecommendation.html#Troubleshooting>`_.
 
 Nuevo transmisor con sensor en ejecución
 --------------------------------------------------

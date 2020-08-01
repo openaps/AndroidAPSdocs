@@ -24,6 +24,7 @@ To avoid this there are two possibilities:
    
    * i.e. Vienna -> New York: profile switch +6 hours
    * i.e. Vienna -> Sydney: profile switch -8 hours
+* Probably not an option if using [patched LibreLink app](../Hardware/Libre2#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Option 2: Delete pump history
 
@@ -38,8 +39,6 @@ When get out of plane:
 * change time in pump
 * turn on phone
 * let phone connect to the pump and fine-tune time
-
-## Combo
 
 ## Insight
 

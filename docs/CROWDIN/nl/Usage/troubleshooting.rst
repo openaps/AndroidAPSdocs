@@ -18,7 +18,7 @@ Instellingen
     :alt: fout: Basaal profiel niet ingesteld in hele uren
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
-Usage
+Gebruik
 --------------------------------------------------
 * `COB - Detectie van verkeerde COB waarden <../Usage/COB-calculation.html#detectie-van-verkeerde-cob-waarden>`_
 

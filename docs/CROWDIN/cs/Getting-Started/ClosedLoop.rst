@@ -51,5 +51,5 @@ Loop pro iOS
 
 Kompatibilní pumpy jsou:
 
-* Omnipod
+* Omnipod Eros
 * některé staré pumpy Medtronic

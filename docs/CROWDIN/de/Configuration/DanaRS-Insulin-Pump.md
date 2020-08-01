@@ -10,16 +10,14 @@
 
 * Klicke auf die drei Punkte rechts oben, um das Menü zu öffnen. Klicke auf Einstellungen.
 
-* Klicke im Abschnitt "DanaRS" auf "Verbinde neue Pumpe" und gib die Seriennummer (Unterseite der Pumpe gegenüber dem Reservoir- und Batteriedeckel) deiner DanaRS ein.
+* Klicke im Abschnitt "DanaRS" auf "Verbinde neue Pumpe" und wähle die Seriennummer deiner DanaRS aus. Diese findest Du auf Unterseite der Pumpe gegenüber dem Reservoir- und Batteriedeckel.
   
-      ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
-      
+  ![Dana RS mit AndroidAPS verbinden](../images/AAPS_DanaRSPairing.png)
 
 * Wähle "Pumpen-Passwort" und gib das Passwort ein. (Das Standardpasswort ist 1234.)   
-  ** Du musst das Pairing auf der Pumpe bestätigen!** Genau so wie Du es von anderen Bluetooth Verbindungen (z.B. Smartphone und Auto-Multimediasystem) kennst.
+  ** Du musst das Koppeln auf der Pumpe bestätigen!** Genau so wie Du es von anderen Bluetooth Verbindungen (z.B. Smartphone und Auto-Multimediasystem) kennst.
   
-      ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
-      
+  ![Bestätigung der Verbindung auf der Dana RS](../images/DanaRS_Pairing.png)
 
 * Klicke auf "Bolus-Geschwindigkeit" um die gewünschte Abgabegeschwindigkeit (12 s/1 IE, 30 s/1 IE oder 60 s/1 IE) einzustellen.
 
@@ -56,7 +54,7 @@ Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 
 * **Übertrage** die exportierten Einstellungen vom alten auf das neue Smartphone
 
-* **Verbinde** die Dana RS und das neue Smartphone manuell (Bluetooth-Verbindung) 
+* **Manuelle Kopplung** die Dana RS und das neue Smartphone manuell (Bluetooth-Verbindung) 
   * Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Daher müssen das neue Smartphone und die Pumpe manuell verbunden werden.
 * **Installiere AndroidAPS** auf dem neuen Smartphone.
 * **Importiere die Einstellungen** auf Deinem neuen Smartphone 

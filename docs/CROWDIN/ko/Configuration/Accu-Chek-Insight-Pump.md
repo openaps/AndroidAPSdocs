@@ -9,47 +9,46 @@
 ## 하드웨어와 소프트웨어의 필요 요건
 
 * A Roche Accu-Chek Insight pump (any firmware, they all work)
-    
-    Note: AAPS will write data always in **first basal rate profile in the pump**.
 
-* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+Note: AAPS will write data always in **first basal rate profile in the pump**.
 
-* AndroidAPS앱을 핸드폰에 설치해주시기 바랍니다.
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module#phone) page which Android version is required to run AndroidAPS.)
+* The AndroidAPS app installed on your phone
 
 ## 설정
 
-* Insight 펌프는 한 번에 한 개의 장치에만 연결해야합니다. 전에 Insight Remote Control(Meter)를 연결하여 사용하신 적이 있으시다면, 연결 목록에서 Meter를 삭제해주셔야 합니다: 메뉴 > 세팅 > 연결 > 장치 제거
+* The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
     
     ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
 
-* AndroidAPS 앱의 [구성관리자](../Configuration/Config-Builder) 펌프 부분에서 아큐첵 Insight를 선택해주시기 바랍니다.
+* In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
     
     ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
-* 톱니바퀴 아이콘을 눌러 Insight 설정을 열어주세요.
+* Tap the cog-wheel to open Insight settings.
 
-* 설정 상단에서 "Insight 연결" 버튼을 눌러주세요 주변 모든 블루투스 장치 목록이 보일 것 입니다 (하단 왼쪽).
-* Insight 펌프에서 메뉴 > 설정 > 연결 > 장치추가를 선택해주세요 그러면 펌프에서 아래 화면과 같이 (하단 오른쪽) 펌프의 시리얼 번호를 보여줍니다.
+* In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
+* On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
     
     ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
 
-* 확인하신 시리얼번호를 핸드폰 블루투스 장치 목록에서 선택해주시기 바랍니다. 그런 다음 "연결"을 눌러주세요.
+* Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm.
     
     ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
 
-* 그럼 펌프와 핸드폰에 코드가 보일 것 입니다. 두 장치에서 보여지는 코드가 동일한 경우 두 장치에서 "확인"을 눌러 연결해주시기 바랍니다.
+* Both the pump and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
     
     ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
 
-* 성공! 펌프와 Android Aps를 성공적으로 연결되었습니다.
+* Success! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
     
     ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
 
-* 잘 작동하고 있는지 확인하기 위해서는, Android APS에서 구정관리자로 들어가신 다음에 Insight 펌프에서 톱니바퀴 아이콘을 선택하셔서 Insight 설정으로 들어갑니다. 그 후 Insight 연결을 누르시면 펌프의 정보가 보일 것 입니다.
+* To check all is well, go back to Config builder in AndroidAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
     
     ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
-주의: 펌프와 휴대폰의 연결은 영구적이지 않습니다. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). 그렇지 않으면 핸드폰과 펌프의 베터리가 너무 빨리 소모됩니다.
+Note: There will be no permanent connection between pump and phone. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
 
 ## AAPS의 설정
 
@@ -62,7 +61,7 @@ Only workaround at the moment is to **disable sync** with Nightscout (upload onl
 In the Insight settings in AndroidAPS you can enable the following options:
 
 * "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
-* "로그 튜브 변경": 펌프에서 '튜브 채우기"를 실행했을 경우 Android APS 데이타 베이스에 메모로 기록됩니다.
+* "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
 * "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
 * "Log battery changes": This records a battery change when you put a new battery in the pump.
 * "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
@@ -90,8 +89,8 @@ For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
 
 In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
 
-* "새로고침": 펌프의 상태를 새로고침 합니다.
-* "임시 Basal 알림 활성화/비활성화": Insight 펌프는 기본적으로 임시 Basal이 끝나면 알림을 울립니다. 이 버튼은 구성 소프트웨어 없이 알림을 끄거나 킬수 있습니다.
+* "Refresh": Refreshes pump status
+* "Enable/Disable TBR over notification": A standard Insight pump emits an alarm when a TBR is finished. This button lets you enable or disable this alarm without the need for configuration software.
     
     ![Screenshot of Insight Status](../images/Insight_Status2.png)
 
@@ -105,7 +104,15 @@ Configure alarms in the pump as follows:
 
 This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
 
-Insight pumps with newer firmware will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus). Vibration cannot be disabled. Older pumps do not vibrate in these circumstances.
+### Vibration
+
+Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus).
+
+* Firmware 1.x: No vibration by design.
+* Firmware 2.x: Vibration cannot be disabled.
+* Firmware 3.x: AndroidAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+
+Firmware version can be found in the menu.
 
 ## 베터리 교체
 

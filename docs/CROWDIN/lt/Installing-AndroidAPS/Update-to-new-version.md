@@ -1,103 +1,103 @@
-# Update to a new version or branch
+# Atnaujinimas į naują versiją arba atšaką
 
-## Build yourself instead of download
+## Kurti sau, o ne parsisiųsti
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+**Dėl reikalavimų medicininiams įrenginiams, nėra galimybės tiesiog parsisiųsti AndroidAPS programą. Programos kūrimas savo reikmėms yra visiškai teisėtas, tačiau jums neleidžiama perduoti jos kopijos kitiems! Žr. [DUK](../Getting-Started/FAQ.md) dėl išsamesnės informacijos.**
 
 ## Important notes
 
-* Please update as soon as possible after a new release is available. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes.html#release-notes) about the new version.
-* As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
-* Please use [Android Studio Version 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.6.1.
-* If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
-* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* Prašome atnaujinti kuo greičiau, kai tik nauja versija yra prieinama. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes#release-notes) about the new version.
+* Nuo versijos 2.3 jūs turite naudoti git atnaujinimui. Atnaujinimas per zip failą daugiau nebeveikia.
+* Norėdami sukurti apk failą, naudokite [Android Studio versiją 3.6.1](https://developer.android.com/studio/) arba naujesnę versiją.
+* [Windows 10 32-bitų sistemos](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) nėra palaikomos Android Studio 3.6.1.
+* Jei naudojate xDrip įsitikinkite, kad [nustatote gavėją](../Configuration/xdrip#identify-receiver).
+* Jei naudojate Dexcom G6 su [modifikuota Dexcom programa](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app), jums reikės versijos iš [2.4 aplanko](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
-## Quick walk-through for experienced users
+## Trumpas vadovas patyrusiems vartotojams
 
-Please skip this paragraph if you update for the first time. The quick walk-through is for experienced users. Your next step would be to [install git](../Installing-AndroidAPS/git-install.rst) if you do not have it already.
+Prašau praleiskite šį punktą, jeigu atnaujinate pirmą kartą. Trumpas vadovas patyrusiems vartotojams. Kitas jūsų žingsnis būtų [įdiegti git](../Installing-AndroidAPS/git-install.rst), jei dar to nepadarėte.
 
-If you already updated AAPS in previous versions and use a Windows PC you can update in four simple steps:
+Jei jau atnaujinote AAPS ankstesnėje versijoje ir naudojate Windows kompiuterį, galite atlikti atnaujinimą keturiais paprastais žingsniais:
 
-1. [Export your settings](../Usage/ExportImportSettings#how-to-export-settings) from the existing AAPS version on your phone to be on the save side
-2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
-3. [Generate signed APK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Select 'app' instead of 'wear' on your way!)
-4. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the patched Dexcom app from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+1. [Eksportuokite nustatymus](../Usage/ExportImportSettings#how-to-export-settings) iš esamos AAPS versijos telefone ir išsaugokite
+2. [Atnaujinkite vietinę kopiją](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
+3. [Generuokite pasirašomąAPK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Pasirinkite "app", o ne "wear"!)
+4. Priklausomai nuo jūsų [KG šaltinio](../Configuration/BG-Source.rst), įsitikinkite, kad [nustatytas gavėjas](../Configuration/xdrip#identify-receiver) xDrip arba naudoti modifikuotą Dexcom programą iš [2.4 aplanko](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
-## Install git (if you don't have it)
+## Įdiegti git (jei neturite)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
+Vykdykite instrukcijas pagal [git instaliavimo puslapį](../Installing-AndroidAPS/git-install.rst).
 
-## Update your local copy
+## Atnaujinkite savo vietinę kopiją
 
-* Click: VCS -> Git -> Pull
+* Spustelėkite: VCS -> Git -> Pull
     
     ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
 
-* Click Pull (no changes in dialog field)
+* Spustelėkite Pull (nėra pasikeitimų dialogo srityje)
     
     ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02.png)
 
-* Wait while download is in progress.
+* Palaukite, kol vyksta atsisiuntimas.
     
-    ![Android Studio - Pull in progress](../images/AndroidStudio361_Update03.png)
+    ![Android Studio - Pull vyksta](../images/AndroidStudio361_Update03.png)
 
-* When done Android Studio will inform you that "all files are up-to-date".
+* Kai bus atlikta, Android Studio informuos, kad "visi failai yra atnaujinti".
     
-    ![All files up to date](../images/AndroidStudio361_Update04.png)
+    ![Visi failai atnaujinti](../images/AndroidStudio361_Update04.png)
 
 ## Generuoti pasirašytą APK (Generate signed APK)
 
 <!--- Text is maintained in page building-apk.md --->
 
-* Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
+* Spustelėkite "Build" (Sukurti) meniu juostoje ir pasirinkite "Generate Signed Bundle / APK..." (Generuoti pasirašomą rinkinį / APK...).
 
-![Build apk](../images/AndroidStudio361_27.png)
+![Kurti apk](../images/AndroidStudio361_27.png)
 
-* Select "APK" (1.) instead of "Android App Bundle" and click "Next" (2.).
+* Pasirinkite "APK" (1.) vietoje "Android App Bundle" ir spauskite "Next" (2.).
 
-![APK instead of bundle](../images/AndroidStudio361_28.png)
+![APK vietoj rinkinio](../images/AndroidStudio361_28.png)
 
-* Make sure that module is set to "app".
-* Select your key store path by clicking on "Choose existing...".
-* Enter your passwords for key store and key.
-* If the box to remember passwords is checked you don't have to enter them. In case the box was not checked during last build and you cannot remember the passwords refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
-* Click "Next".
+* Įsitikinkite, kad modulis yra nustatytas, į "app".
+* Pasirinkite kelią į savo raktų saugyklą, paspausdami "Choose existing..." ("Pasirinkti esamą...").
+* Įveskite savo slaptažodžius raktų saugyklai ir raktui.
+* Jei pažymėtas laukelis slaptažodžio priminimui, nereikia jų įvesti iš naujo. Jei laukelis nebuvo pažymėtas paskutinio apk kūrimo metu ir negalite priminti slaptažodžių, skaitykite [trikčių skyrių](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Spauskite "Next".
 
-![Key store](../images/AndroidStudio361_Update05.png)
+![Raktų saugykla](../images/AndroidStudio361_Update05.png)
 
-* Select build variant "fullRelease" (1.). 
-* Check boxes V1 and V2 for signature versions (2.).
-* Click "Finish". (3.)
+* Pasirinkite kūrimo variantą "fullRelease" (1.). 
+* Pažymėkite langelius V1 ir V2 parašo versijoms(2.).
+* Spustelėkite "Finish". (3.)
 
-![Finish build](../images/AndroidStudio361_32.png)
+![Baigti kūrimą](../images/AndroidStudio361_32.png)
 
-* Android Studio will display the information "APK(s) generated successfully..." after build is finished.
-* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
-* Easiest way to find the apk is to click on "Event log".
+* Android Studio bus rodoma informacija "APK(s) generated successfully..."(APK(s) sukurtas sėkmingai...), kai kūrimas bus baigtas.
+* Jei kūrimas nebuvo sėkmingas, skaitykite [trikčių diagnostikos skiltį](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* Lengviausias būdas surasti sukurtą APK, spustelėkite ant "Event log" (įvykių žurnalai).
 
-![Build successfully - event log](../images/AndroidStudio361_33.png)
+![Kūrimas sėkmingas - įvykių žurnalas](../images/AndroidStudio361_33.png)
 
-* In the event log section click "locate".
+* Įvykių žurnalo skiltyje spauskite "locate" (surasti).
 
-![Event log - locate apk](../images/AndroidStudio361_34.png)
+![Įvykių žurnalas - raskite apk](../images/AndroidStudio361_34.png)
 
-* app-full-release.apk is the file you are looking for.
+* failo, kurio ieškote, pavadinimas yra app-full-release.apk.
 
-![File location apk](../images/AndroidStudio361_35.png)
+![APK failo vieta](../images/AndroidStudio361_35.png)
 
 ## Perkelkite APK į išmanųjį telefoną
 
-Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
+Lengviausias būdas perkelti app-full-release.apk failą į telefoną yra [USB kabeliu ar Google Disku](https://support.google.com/android/answer/9064445?hl=en). Prašome atkreipti dėmesį, kad perdavimas elektroniniu paštu gali sukelti sunkumų ir nėra tinkamiausias būdas.
 
-On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+Jūsų telefone jūs turite leisti diegti programas iš nežinomų šaltinių. Instrukcijas, kaip tai padaryti, galima rasti internete (pvz., [čia](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) arba [čia](https://www.androidcentral.com/unknown-sources)).
 
-## Check AAPS version on phone
+## Patikrinkite AAPS versiją telefone
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Galite patikrinti AAPS versiją telefone, paspaudę trijų taškų meniu, ekrano viršuje, dešiniajame kampe ir tada "Apie" ("About").
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![Įdiegta AAPS versija](../images/Update_VersionCheck.png)
 
 ## Trikčių šalinimas
 
-See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+Žr. atskirą puslapį, kuriame pateiktas [Android Studio trikčių šalinimas](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).

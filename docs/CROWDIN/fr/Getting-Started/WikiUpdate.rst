@@ -1,6 +1,20 @@
 Wiki mises à jour et modifications
 **************************************************
-
+Juin 2020
+==================================================
+* `Libre 2 <../Hardware/Libre2.html>`_ - plus de détails sur l'application LibreLink patchée & l'utilisation des transmetteurs bluetooth
+* `Changement de fuseau horaire <../Usage/Timezone-traveling.html>`_ avec Libre 2
+Mai 2020
+==================================================
+* `Bolus étendus uniquement pour les pompes Dana + Insight <../Usage/Extended-Carbs.html#bolus-etendus-et-passage-en-boucle-ouverte-uniquement-pour-les-pompesdana-et-insight>`_
+* `Désactivation des vibrations sur pompes Insight <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (uniquement firmware 3.x)
+* `Changement minimum <../Configuration/Preferences.html#changement-minimum>`_ pour réduire le nombre de notifications en mode boucle ouverte
+* `Application Libre Link patchée <../Hardware/Libre2.html#etape-1-construire-votre-propre-application-librelink-patchee>`_ - vérifier si le patch est correct
+* `Lignes de prédiction <../Getting-Started/Screenshots.html#section-e>`_ - plus de détails
+Avril 2020
+==================================================
+* `Antidater l'insulin <../Usage/CPbefore26.html#id1>`_ (par ex. injectée avec une seringue)
+* `La prise en charge Android 6 sera interrompue dans la prochaine version majeure <../Module/module.html#phone>`_
 Mars 2020
 ==================================================
 * `Générer l'apk avec Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
@@ -30,7 +44,7 @@ Décembre 2019
 * `Complications sur les montres connectées <../Configuration/Watchfaces.html#complications>`_ - utilisez vos cadrans favoris avec les données AAPS
 Novembre 2019
 ==================================================
-* `Automatisation - à désactiver lors de la désactivation de la boucle <../Usage/Automation.html#important-note>`_
+* `Automatisation - Désactiver quand vous désactivez la boucle <../Usage/Automation.html#remarque-importante>`_
 * `Remplacement du transmetteur Dexcom G6 <../Configuration/xdrip.html#replace-transmitter>`_
 * `Bolus étendus - pourquoi ils ne fonctionnent pas dans le cadre d'une boucle <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_

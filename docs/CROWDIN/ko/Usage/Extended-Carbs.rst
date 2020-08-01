@@ -42,11 +42,15 @@ eCarbs가 입력되면, 케어포털 메뉴는 더 쉽게 입력하게 만들어
 ==================================================
 위에서 언급한 것과 같이, 확장 또는 멀티 웨이브 bolus는 Closed Loop에서 효과적으로 동작하지 않는다. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-wont-work-in-a-closed-loop-environment>`_ for details
 
-Extended bolus and switch to open loop
---------------------------------------------------
+Extended bolus and switch to open loop - Dana and Insight pump only
+-----------------------------------------------------------------------------
 Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to. 
 
-That's why as of version 2.6 there is an option for an extended bolus. But closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus. Bolus units, remaining and total time will be shown on homescreen.
+That's why as of version 2.6 there is an option for an extended bolus for users of Dana and Insight pumps. 
+
+* Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus. 
+* Bolus units, remaining and total time will be shown on homescreen.
+* On Insight pump extended bolus is *not available* if `TBR emulation <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_ is used. 
 
 .. image:: ../images/ExtendedBolus2_6.png
   :alt: Extended bolus in AAPS 2.6

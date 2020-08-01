@@ -4,52 +4,52 @@ Wat is een closed loop systeem?
 .. image:: ../images/autopilot.png
   :alt: AAPS is als een automatische piloot
 
-An artificial pancreas closed loop system combines different components in order to make diabetes management easier for you. 
-In her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an `"autopilot for your diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. But what does that mean?
+Een closed loop systeem combineert verschillende onderdelen om zo de zorg voor jouw diabetes makkelijker te maken. 
+In haar boek `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ noemt Dana M. Lewis, een van de oprichters van de open source closed loop beweging, het een `"automatische piloot voor jouw diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. Maar wat betekent dat?
 
-**Autopilot in an aircraft**
+**De automatische piloot in een vliegtuig**
 
-The autopilot does not do the complete job and does not give the possibility to the pilot to sleep throughout the entire flight. It facilitates the work of the pilots. It relieves them of the burden of permanently monitoring the aircraft and the flight attitude. This allows the pilot to concentrate on monitoring the airspace and controlling the autopilot's functions.
+De automatische piloot doet niet al het werk, hij zorgt er niet voor dat een piloot de gehele vlucht kan gaan zitten slapen. Het vergemakkelijkt wel het werk van de piloten. Het neemt hen de taak van het voortdurend besturen van het vliegtuig, uit handen. Hierdoor kan de piloot zijn aandacht richten op het in de gaten houden van het luchtruim en het aansturen van de automatische piloot.
 
-The autopilot receives signals from various sensors, a computer evaluates them together with the pilot's specifications and then makes the necessary adjustments. The pilot no longer has to worry about the constant adjustments.
+De automatische piloot ontvangt signalen van verschillende sensoren, een computer vergelijkt die signalen met de instructies van de piloot en maakt dan de noodzakelijke aanpassingen. De piloot hoeft zich geen zorgen meer te maken over voortdurende kleine aanpassingen.
 
-**Closed Loop System**
+**Closed Loop Systeem**
 
-The same applies to an artificial pancreas closed loop system. It does not do the whole job, you still have to take care of your diabetes. A closed loop system combines the sensor data from a CGM/FGM with your diabetes management specifications such as basal rate, insulin sensitivity factor and carb ratio. From this it calculates treatment suggestions and implements these permanent small adjustments in order to keep your diabetes within the target range and to relieve you. This leaves more time for your life "next to" diabetes.
+Hetzelfde geldt voor een closed loop systeem. Het doet niet al het werk, je moet nog steeds aandacht aan je diabetes geven. Een closed loop systeem combineert de sensorgegevens van een CGM/FGM met jouw instellingen voor diabetesregulatie, zoals basaal, insulinegevoeligheidsfactor en koolhydraat ratio. Hieruit berekent het systeem behandelsuggesties en voert het voortdurende kleine aanpassingen uit om jouw bloedsuikers binnen jouw streefwaardes te houden en jou op die manier te ontzorgen. Hierdoor hou je tijd en energie over voor je leven 'naast' diabetes.
 
-Just as you don't want to get on a plane where only the autopilot flies without human supervision, a closed loop system helps you with your diabetes management, but always needs your support! **Even with a closed loop you can't just forget your diabetes!**
+Net zoals je niet wilt vliegen in een vliegtuig waar alleen de automatische piloot vliegt zonder menselijk toezicht, helpt een closed loop systeem je met diabetes management, maar heeft het altijd jouw input nodig! **Zelfs met een closed loop kun je niet zomaar je diabetes vergeten.**
 
-Just as the autopilot depends on the sensor values as well as the pilot's specifications, a closed loop system needs appropriate input such as basal rates, ISF and carb ratio to support you successfully.
+Net zoals de automatische piloot afhankelijk is van de sensorwaarden en de aansturing van de piloot, heeft een closed loop goede invoer nodig, zoals CGM/FGM waardes, basaalwaardes, ISF en koolhydraat ratio om jou succesvol te ondersteunen.
 
 
-Open Source Artificial Pancreas Closed Loop Systems
+Open Source Closed Loop Systemen
 ==================================================
-At present there are three major open source closed loop systems available:
+Op dit moment zijn er drie grote open-source closed loop systemen beschikbaar:
 
 AndroidAPS (AAPS)
 --------------------------------------------------
-AndroidAPS is described in detail in `this documentation <./WhatisAndroidAPS.html>`_. It uses an Android Smartphone for calculation and control of your insulin pump. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+AndroidAPS wordt in detail beschreven in `deze documentatie <./WhatisAndroidAPS.html>`_. Het maakt gebruik van een Android Smartphone voor de berekening en controle van uw insulinepomp. Het is in nauwe samenwerking met OpenAPS (d.w.z. ze delen algoritmen).
 
-Compatible `pumps <../Hardware/pumps.html>`_ are:
+Te gebruiken `pompen <../Hardware/pumps.html>`_ zijn:
 
 * DanaR / DanaRS
 * Accu-Chek Combo
 * Accu-Chek Insight
-* some old Medtronic pumps (as of version 2.4)
+* enkele oude Medtronic pompen (vanaf AAPS versie 2.4)
 
 OpenAPS
 --------------------------------------------------
-`OpenAPS <https://openaps.readthedocs.io>`_ was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison.
+`OpenAPS <https://openaps.readthedocs.io>`_ was het eerste Open Source Closed Loop Systeem. Het maakt gebruik van een kleine computer zoals Raspberry Pi of Intel Edison.
 
-Compatible pumps are:
+Te gebruiken pompen zijn:
 
-* some old Medtronic pumps
+* enkele oude Medtronic pompen
 
-Loop for iOS
+Loop voor iOS
 --------------------------------------------------
-`Loop for iOS <https://loopkit.github.io/loopdocs/>`_ is the Open Source Closed Loop System to be used with Apple iPhones.
+`Loop voor iOS <https://loopkit.github.io/loopdocs/>`_ is het Open Source Closed Loop Systeem te gebruiken met Apple iPhones.
 
-Compatible pumps are:
+Te gebruiken pompen zijn:
 
-* Omnipod
-* some old Medtronic pumps
+* Omnipod Eros
+* enkele oude Medtronic pompen

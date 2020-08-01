@@ -17,11 +17,11 @@ V rámci „Přepnutí profilu“ můžete ještě upravit následující dva pa
 ## Procento
 
 * Toto uplatní stejný procentní přepočet na všechny parametry. 
-* If you set it to 130% (meaning you are 30% more insulin resistant), it will raise the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example).
+* Pokud toto pole nastavíte na 130 % (což značí, že jste o 30 % více rezistentní na inzulín), navýší to váš bazál o 30 %. Dále se také adekvátně sníží ISF - citlivost a IC - sacharidový poměr (děleno 1,3 v našem příkladě).
   
   ![Example profile switch percentage](../images/ProfileSwitchPercentage.png)
 
-* It will be sent to the pump and then be the default basal rate.
+* Bazální dávka bude odeslaná do pumpy jako výchozí (údaje v pumpě se přepíší).
 
 * Algoritmus smyčky (otevřené nebo uzavřené) bude dále pracovat se zvoleným procentuálním profilem. Tak například mohou být samostatné procentuální profily nastavené pro různé fáze hormonálního cyklu.
 

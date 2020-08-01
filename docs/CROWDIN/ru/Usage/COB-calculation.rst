@@ -1,58 +1,58 @@
-COB calculation
+Вычисление активных углеводов COB
 **************************************************
 
-How does AndroidAPS calculate the COB value?
+Как AndroidAPS вычисляет значение COB?
 ==================================================
 
 Oref0 / Oref1
 --------------------------------------------------
 
-Unabsorbed carbs are cut off after specified time
+Непоглощенные углеводы отбрасываются после указанного времени
 
-.. image:: ../images/cob_oref0_orange_II.png
-  :alt: Oref0 / Oref1
+.. изображение:: ../images/cob_oref0_orange_II.png
+  :alt: Oref0/Oref1
 
-AAPS, WeightedAverage
+AAPS, Средневзвешенное значение
 --------------------------------------------------
 
-absorption is calculated to have `COB == 0` after specified time
+усвоение рассчитывается как "COB == 0" после определенного времени
 
-.. image:: ../images/cob_aaps2_orange_II.png
-  :alt: AAPS, WheitedAverage
+.. изображение:: ../images/cob_aaps2_orange_II.png
+  :alt: AAPS, средневзвешенное значение
 
-If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from BG deviations, an orange dot appears on COB graph.
+Если вместо значения, вычисленного из отклонений ГК, используется минимальное поглощение углеводов (min_5m_arbarimpact), на графике активных углеводов COB появится оранжевая точка.
 
-Detection of wrong COB values
+Обнаружение неправильного значения COB
 ==================================================
 
-As of version 2.4, AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. In this case it will give you an additional hint on the confirmation screen after usage of bolus wizard. 
+Начиная с версии 2.4, AAPS предупреждает вас о том, что вы собираетесь подавать болюс при активных углеводах COB, оставшихся от предыдущего приема пищи, и алгоритм считает, что текущий расчет COB может быть неправильным. В этом случае он даст дополнительный подсказку на экране подтверждения калькулятора болюса. 
 
-How does AndroidAPS detect wrong COB values? 
+Как AndroidAPS обнаруживает неправильные значения COB? 
 --------------------------------------------------
 
-Normally AAPS detects carb absorption through BG deviations. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings>`_ method to calculate the absorption instead (so called 'fallback'). As this method calculates only the minimal carb absorption without considering BG deviations, it might lead to incorrect COB values.
+Обычно AAPS обнаруживает усвоение углеводов через отклонения ГК. В случае, если вы ввели углеводы, но AAPS не сможет оценить их усвоение с помощью отклонений ГК, для вычисления поглощения система будет использовать метод ` min_5m_arbimpact <../Configuration/Config-Builder.html?highlight=min_5m_arbarimpact#absorption-settings> ` _ (так называемый 'запасной вариант'). Поскольку этот метод вычисляет только минимальное поглощение углеводов без учета отклонений гК, это может привести к неправильным значениям COB.
 
-.. image:: ../images/Calculator_SlowCarbAbsorbtion.png
-  :alt: Hint on wrong COB value
+.. изображение:: ../images/Calculator_SlowCarbAbsorbtion.png
+  :alt: Подсказка о неверном значении COB
 
-In the screenshot above, 41% of1 time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  This means that maybe you are having less carbs on board than calculated by the algorithm. 
+На этом снимке экрана 41% времени поглощения углеводов был вычислен математически методом min_5m_carbimpact вместо значения, основанного на отклонениях ГК.  Это означает, что в организме может быть меньше активных углеводов, чем вычисляется алгоритмом. 
 
-How to deal with this warning? 
+Как относиться к этому предупреждению? 
 --------------------------------------------------
 
-- Consider to cancel the treatment - press Cancel instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving COB unticked.
-- In case you are sure you need a correction bolus, enter it manually.
-- In any case be careful not to overdose!
+-Подумайте об отмене действия -нажмите кнопку Отмена, а не ОК.
+-Снова рассчитайте свой предстоящий прием пищи с помощью калькулятора болюса, сняв галочку с COB.
+-В случае, если вы уверены, что вам нужен болюс на коррекцию, введите его вручную.
+-В любом случае будьте осторожны, чтобы не допустить передозировки!
 
-Why does the algorithm not detect COB correctly? 
+Почему алгоритм неправильно распознает COB? 
 --------------------------------------------------
 
-- Maybe you overestimated carbs when entering them.  
-- Activity / exercise after your previous meal
-- I:C needs adjustment
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA)
+-Возможно, вы переоценили количество углеводов при их вводе.  
+-Активность/нагрузка после предыдущего приема пищи
+-Соотношение I:C нуждается в корректировке
+- Значение для min_5m_carbimpact неверно (рекомендуется 8 с SMB, 3 с AMA)
 
-Manual correction of carbs entered
+Ручная коррекция введенных углеводов
 ==================================================
-If you over- or underestimated carbs you can correct this though treatments tab and care portal as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.
+Если вы переоценили или недооценили количество углеводов, это можно исправить на вкладке назначений на портале терапии, как описано: " здесь <../Getting-Started/Screenshots.html#carb-correction> ` _.

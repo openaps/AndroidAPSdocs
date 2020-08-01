@@ -1,10 +1,20 @@
 Docs updates & changes
 **************************************************
-
+June 2020
+==================================================
+* `Libre 2 <../Hardware/Libre2.html>`_ - more details patched Libre Link app & use of bluetooth transmitters
+* `Time zone travelling <../Usage/Timezone-traveling.html>`_ with Libre 2
+May 2020
+==================================================
+* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
+* `Insight deactivate vibration <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (firmware 3.x only)
+* `Minimal request rate <../Configuration/Preferences.html#minimal-request-rate>`_ to reduce number of notifications in open loop mode
+* `Patched Libre Link app <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - check if correctly patched
+* `Prediction lines <../Getting-Started/Screenshots.html#section-e>`_ - more details
 April 2020
 ==================================================
-* `Backdate insulin <..//Usage/CPbefore26.html#carbs--bolus>`_ (i.e. given by syringe)
-
+* `Backdate insulin <../Usage/CPbefore26.html#carbs--bolus>`_ (i.e. given by syringe)
+* `Android 6 support will be discontinued in next master version <../Module/module.html#phone>`_
 March 2020
 ==================================================
 * `Build apk with Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
@@ -34,7 +44,7 @@ December 2019
 * `Watchface complications <../Configuration/Watchfaces.html#complications>`_ - use your favorite watchface with AAPS data
 November 2019
 ==================================================
-* `Automation - deactivate when disabeling loop <../Usage/Automation.html#important-note>`_
+* `Automation - deactivate when disabling loop <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
 * `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_

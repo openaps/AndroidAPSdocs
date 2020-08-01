@@ -56,7 +56,7 @@ Loop
 
 CGM-Daten
 --------------------------------------------------
-* BZ
+* BG
    * Antwort: Letzter BZ: 5.6 4min her, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
    * Antwort: Um die Kalibrierung 5.6 zu senden, antworte mit dem Code Rrt.

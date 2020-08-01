@@ -12,11 +12,11 @@ _These instructions are for configuring the app and your pump if you have a Dana
 
 *  Select DanaRS Pair New Pump, and click your DanaRS serial number.
 
-    ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
+   ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
 
 *  Select Pump password and input your password. (Default password is 1234) <br><b>You have to confirm the pairing on the pump!</b> That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
 
-    ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+   ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
 *  Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
 

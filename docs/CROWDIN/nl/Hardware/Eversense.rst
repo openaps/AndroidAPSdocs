@@ -1,9 +1,9 @@
 Eversense
 **************************************************
-The easiest way to use Eversense with AndroidAPS is to install the non-US modified `Eversense app <https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk>`_ (and unistall the original one first).
+De makkelijkste manier om de Eversense te gebruiken met AndroidAPS is om de aangepaste `Eversense app voor buiten de Verenigde Staten <https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk>`_ te installeren (en de originele app eerst te verwijderen).
 
-**Warning: by uninstalling the old app, your local historical data older than one week will be lost!**
+**Waarschuwing: door de oude app te verwijderen zullen jouw lokaal opgeslagen (glucose)gegevens ouder dan een week, ook worden verwijderd!**
 
-To finally get your data to AndroidAPS, you need to install `ESEL <https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk>`_ and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the `Configuration Builder <../Configuration/Config-Builder.html>`_ in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple delta" in AAPS.
+Om jouw gegevens in AndroidAPS te krijgen, moet je `ESEL <https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk>`_ installeren en "Send to AAPS and xDrip" (Stuur naar AAPS en xDrip) in ESEL aanzetten. Ook moet je "MM640g" kiezen als BG bron in de `Configurator <../Configuration/Config-Builder.html>`_ in AndroidAPS. Aangezien de BG-gegevens van Eversense soms veel 'ruis' kunnen hebben, is het goed om "Smooth Data" (gegevens vloeiend maken) in ESEL in te schakelen. Dit heeft de voorkeur boven "Gebruik altijd korte gemiddeld verschil ipv gewone verschil" inschakelen in AAPS.
 
-You can find  all APKs including the one for the US and another instruction for using xDrip with an Eversense `here <https://github.com/BernhardRo/Esel/tree/master/apk>`_.
+Je kunt alle APK's vinden, inclusief die voor de VS en een andere instructie voor het gebruik van xDrip met Eversense `op deze site <https://github.com/BernhardRo/Esel/tree/master/apk>`_.

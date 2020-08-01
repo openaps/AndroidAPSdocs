@@ -6,98 +6,98 @@
 
 ## Важные Примечания
 
-* Please update as soon as possible after a new release is available. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes.html#release-notes) about the new version.
-* As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
-* Please use [Android Studio Version 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.6.1.
-* If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
-* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* Пожалуйста, обновите приложение сразу же после выхода новой версии. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes#release-notes) about the new version.
+* Начиная с версии 2.3 для обновления требуется использовать git. Обновление с zip-файла больше не работает.
+* Используйте [](https://developer.android.com/studio/) Android Studio версии 3.6.1 или новее для построения apk.
+* [Windows 10 для 32-разрядных систем](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) не поддерживается в Android Studio 3.6.1.
+* Если вы используете xDrip, [identify the receiver](../Configuration/xdrip#identify-receiver).
+* Если вы используете Dexcom G6 с модифицированным приложением [Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) вам понадобится версия из папки [2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
-## Quick walk-through for experienced users
+## Пошаговая инструкция для опытных пользователей
 
-Please skip this paragraph if you update for the first time. The quick walk-through is for experienced users. Your next step would be to [install git](../Installing-AndroidAPS/git-install.rst) if you do not have it already.
+Пропустите этот пункт, если вы обновляете в первый раз. Пошаговая инструкция для опытных пользователей. Следующим шагом будет [ установить git ](../Installing-AndroidAPS/git-install.rst), если у вас его еще нет.
 
-If you already updated AAPS in previous versions and use a Windows PC you can update in four simple steps:
+Если вы уже обновили AAPS в предыдущих версиях и используете Windows PC, вы можете обновить его в четырех простых шагах:
 
-1. [Export your settings](../Usage/ExportImportSettings#how-to-export-settings) from the existing AAPS version on your phone to be on the save side
-2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
-3. [Generate signed APK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Select 'app' instead of 'wear' on your way!)
-4. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the patched Dexcom app from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+1. [ Экспортируйте параметры ](../Usage/ExportImportSettings#how-to-export-settings) из существующей версии AAPS на вашем телефоне, чтобы обезопасить себя
+2. [ Обновите локальную копию ](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS-> Git-> Pull)
+3. [ Создайте подписанное APK ](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Выберите 'app', а не 'wear' на своем пути!)
+4. В зависимости от источника ГК [BG source](../Configuration/BG-Source.rst) убедитесь, что [identify receiver](../Configuration/xdrip#identify-receiver) отмечен в xDrip или используйте модифицированное приложение Dexcom из [папки 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Установите git (если у вас его нет)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
+Следуйте инструкциям на странице установки [git](../Installing-AndroidAPS/git-install.rst).
 
-## Update your local copy
+## Обновите свою локальную копию
 
-* Click: VCS -> Git -> Pull
+* Выберите: VCS-> Git-> Pull
     
-    ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
+    ![Android Studio-GIT-Pull](../images/AndroidStudio361_Update01.png)
 
-* Click Pull (no changes in dialog field)
+* Нажмите кнопку Pull (без изменений в диалоговом окне)
     
-    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02.png)
+    ![Android Studio-GIT-Pull 2](../images/AndroidStudio361_Update02.png)
 
-* Wait while download is in progress.
+* Подождите, пока выполняется загрузка.
     
-    ![Android Studio - Pull in progress](../images/AndroidStudio361_Update03.png)
+    ![Android Studio-извлечение выполняется](../images/AndroidStudio361_Update03.png)
 
-* When done Android Studio will inform you that "all files are up-to-date".
+* По завершении Android Studio сообщит вам, что "все файлы актуальны".
     
-    ![All files up to date](../images/AndroidStudio361_Update04.png)
+    ![Все файлы в актуальном состоянии](../images/AndroidStudio361_Update04.png)
 
 ## Создание подписанного APK
 
 <!--- Text is maintained in page building-apk.md --->
 
-* Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
+* Нажмите "Build" в строке меню и выберите "Generate Signed Bundle / APK...".
 
-![Build apk](../images/AndroidStudio361_27.png)
+![Построение apk](изображение::../images/AndroidStudio361_27.png)
 
-* Select "APK" (1.) instead of "Android App Bundle" and click "Next" (2.).
+* Выберите "APK" (1.) вместо "Android App Bundle" и нажмите кнопку "Далее" (2.).
 
-![APK instead of bundle](../images/AndroidStudio361_28.png)
+![Apk вместо пакета](изображение::../images/AndroidStudio361_28.png)
 
-* Make sure that module is set to "app".
-* Select your key store path by clicking on "Choose existing...".
-* Enter your passwords for key store and key.
-* If the box to remember passwords is checked you don't have to enter them. In case the box was not checked during last build and you cannot remember the passwords refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
-* Click "Next".
+* Убедитесь, что модуль имеет значение "app".
+* Выберите путь к хранилищу ключей, нажав кнопку "Выбрать существующую...".
+* Введите пароли для хранилища ключей и ключа.
+* Если установлен флажок запомнить пароли, вам не придется их вводить. В том случае, если этот переключатель не был включен во время последней компоновки, и вы не можете запомнить эти пароли, обратитесь к разделу [ Устранение неполадок ](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Нажмите "Далее".
 
-![Key store](../images/AndroidStudio361_Update05.png)
+![Хранилище ключей](../images/AndroidStudio361_Update05.png)
 
-* Select build variant "fullRelease" (1.). 
-* Check boxes V1 and V2 for signature versions (2.).
-* Click "Finish". (3.)
+* Выберите вариант компоновки "fullRelease" (1.). 
+* Отметьте флажки V1 и V2 для подписи версий (2.).
+* Нажмите ``Finish``. (3.)
 
-![Finish build](../images/AndroidStudio361_32.png)
+![Завершение сборки](изображение::../images/AndroidStudio361_32.png)
 
-* Android Studio will display the information "APK(s) generated successfully..." after build is finished.
-* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
-* Easiest way to find the apk is to click on "Event log".
+* После завершения сборки Android Studio покажет информацию "APK (s) сгенерировано успешно ...".
+* В случае, если сборка не удалась, обратитесь к разделу [поиск и устранение неисправностей ](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* Самый простой способ найти apk это нажать на кнопку "журнал событий".
 
-![Build successfully - event log](../images/AndroidStudio361_33.png)
+![Построено успешно - журнал событий](изображение::../images/AndroidStudio361_33.png)
 
-* In the event log section click "locate".
+* В секции журнала событий нажмите «locate».
 
-![Event log - locate apk](../images/AndroidStudio361_34.png)
+![Журнал событий - обнаружить apk](изображение::../images/AndroidStudio361_34.png)
 
-* app-full-release.apk is the file you are looking for.
+* app-full-release.apk это файл, который вы ищете.
 
-![File location apk](../images/AndroidStudio361_35.png)
+![Расположение файла apk](изображение::../images/AndroidStudio361_35.png)
 
 ## Перенос приложения на смартфон
 
-Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
+Самый простой способ перенести приложение на ваш телефон - [через кабель USB или Google Drive](https://support.google.com/android/answer/9064445?hl=en). Обратите внимание, что передача по почте может вызвать трудности и не является предпочтительным способом.
 
-On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+На вашем телефоне необходимо разрешить установку из неизвестных источников. Инструкции, как это сделать, можно найти в интернете (например [здесь](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) или [здесь](https://www.androidcentral.com/unknown-sources)).
 
-## Check AAPS version on phone
+## Проверить версию AAPS на телефоне
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Вы можете проверить версию AAPS на вашем телефоне, нажав на меню трех точек сверху справа "о приложении".
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![Версия AAPS установлена](../images/Update_VersionCheck.p)
 
 ## Устранение неполадок
 
-See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+См. отдельную страницу [ устранение неполадок Android Studio ](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).

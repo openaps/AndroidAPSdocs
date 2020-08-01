@@ -4,16 +4,15 @@
 
 * * *
 
-## *** AVERTISSEMENT: ** Si vous avez utilisé l'Insight avec ** SightRemote ** par le passé, veuillez ** mettre à jour vers la version de AAPS la plus récente ** et ** désinstaller SightRemote **.*
+## ***AVERTISSEMENT :** Si vous avez utilisé l'Insight avec **SightRemote** par le passé, veuillez **mettre à jour vers la version de AAPS la plus récente** et **désinstaller SightRemote**.*
 
 ## Configuration matérielle et logicielle requise
 
 * Une pompe Roche Accu-Chek Insight (n'importe quel firmware, ils marchent tous)
-    
-    Remarque : AAPS écrira toujours les données dans le **premier profil débit de base de la pompe**.
 
-* Un téléphone Android (en gros, toutes les versions d'Android pourrait fonctionner, mais AndroidAPS nécessite au moins Android 5 (Lollipop).)
+Remarque : AAPS écrira toujours les données dans le **premier profil débit de base de la pompe**.
 
+* Un téléphone Android (en pratique n'importe quelle version d'Android devrait marcher avec l'Insight, mais vérifiez sur la page [Composants](../Module/module.html#telephone) quelle version d'Android est nécessaire pour exécuter AndroidAPS.)
 * L'application AndroidAPS installée sur votre téléphone
 
 ## Paramètres
@@ -31,7 +30,7 @@
 * Dans paramètres, appuyez sur le bouton "Appairage de Insight", en haut de l'écran. Vous devriez voir la liste de tous les appareils bluetooth à proximité (en bas à gauche).
 * Dans la pompe Insight, sélectionnez Menu > Réglages > Communication > Ajouter un dispositif. La pompe affichera l'écran suivant (en bas à droite) indiquant le numéro de série de la pompe.
     
-    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
+    ![Copie d'écran appairage Insight 1](../images/Insight_Pairing1.png)
 
 * Revenez à votre téléphone, appuyez sur le numéro de série de la pompe dans la liste des appareils bluetooth. Ensuite, appuyez sur Pair pour confirmer.
     
@@ -64,10 +63,10 @@ Dans les paramètres Insight d'AndroidAPS, vous pouvez activer les options suiva
 * "Enreg. changement de réservoir": ajoute automatiquement le changement de réservoire quand vous effectuez "Remplir tubulure" sur la pompe.
 * "Enreg. changement de tubulure": ajoute une note dans la base de données AndroidAPS quand vous exécutez "Remplir tubulure" sur la pompe.
 * "Enreg. changement de site": ajoute une note dans la base de données AndroidAPS lorsque vous exécutez "Remplir canule" sur la pompe. Remarque: Une modification de canule réinitialise également Autosens. **Remarque : un changement de site réinitialise également Autosens.**
-* "Enreg. changements de batterie" : Ceci enregistre un changement de pile quand vous en mettez une nouvelle dans la pompe.
+* "Enreg. changements de pile" : Ceci enregistre un changement de pile quand vous en mettez une nouvelle dans la pompe.
 * "Enreg. changement mode de fonctionnement" : ajoute une note dans la base de données AndroidAPS quand vous démarrez, arrêtez ou mettez en pause la pompe.
 * "Enreg. alertes" : ajoute une note dans la base de données AndroidAPS chaque fois que la pompe émet une alerte (sauf les rappels, annulations de bolus et annulations de DBT - ceux-ci ne sont pas enregistrés).
-* "Activer l'émulation de DBT": La pompe Insight ne permet de faire que des débits de base temporaires (DBT) jusqu'à 250%. Pour contourner cette restriction, l'émulation DBT demandera à la pompe de fournir un bolus étendu pour l'insuline supplémentaire si vous demandez un DBT supérieur à 250%.
+* "Activer l'émulation de DBT": La pompe Insight ne faire des débits de base temporaires (DBT) que jusqu'à 250%. Pour contourner cette restriction, l'émulation DBT demandera à la pompe de fournir un bolus étendu pour l'insuline supplémentaire si vous demandez un DBT supérieur à 250%.
     
     **Remarque : n'utilisez qu'un seul bolus étendu à la fois car plusieurs bolus étendus en même temps peuvent provoquer des erreurs.**
 
@@ -105,7 +104,15 @@ Configurez les alarmes dans la pompe comme suit :
 
 Ceci supprimera toutes les alarmes de la pompe, permettant à AndroidAPS de décider si une alarme est pertinente pour vous. Si AndroidAPS ne reconnaît pas une alarme, son volume augmentera (d'abord bip, puis vibration).
 
-Les pompes Insight avec un firmware plus récent vibreront brièvement chaque fois qu'un bolus est livré (par exemple, lorsque AndroidAPS émet un SMB ou une émulation DBT avec un bolus étendu). La vibration ne peut pas être désactivée. Les pompes plus anciennes ne vibrent pas dans ces circonstances.
+### Vibration
+
+Selon la version de firmware de votre pompe Insight, elle vibrera brièvement à chaque fois qu'un bolus est délivré (par exemple quand AndroidAPS délivre un SMB ou une émulation DBT effectuée avec un bolus étendu).
+
+* Firmware 1.x : Aucune vibration par conception.
+* Firmware 2.x : Les vibrations ne peuvent pas être désactivées.
+* Firmware 3.x : Il n'y a pas de vibration quand AndroidAPS injecte un bolus. (Au minimum avec la [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+
+La version du firmware se trouve dans le menu Appairage de Insight / Version du logiciel.
 
 ## Remplacement de pile
 

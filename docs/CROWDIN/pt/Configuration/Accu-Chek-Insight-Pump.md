@@ -9,11 +9,10 @@
 ## Requisitos de hardware e software
 
 * A Roche Accu-Chek Insight pump (any firmware, they all work)
-    
-    Note: AAPS will write data always in **first basal rate profile in the pump**.
 
-* Um telefone Android (basicamente todas as versões Android funcionariam, mas o próprio AndroidAPS requer pelo menos o Android 5 (Lollipop).)
+Note: AAPS will write data always in **first basal rate profile in the pump**.
 
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module#phone) page which Android version is required to run AndroidAPS.)
 * The AndroidAPS app installed on your phone
 
 ## Instalação
@@ -26,7 +25,7 @@
     
     ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
-* Toque no ícone de configuração (catraca) para abrir as configurações Insigth.
+* Tap the cog-wheel to open Insight settings.
 
 * In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
 * On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
@@ -41,7 +40,7 @@
     
     ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
 
-* Sucesso! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
+* Success! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
     
     ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
 
@@ -73,15 +72,15 @@ In the Insight settings in AndroidAPS you can enable the following options:
 
 * "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
       
-    Exemplo por min. duração da recuperação = 5 e max. duração da recuperação = 20   
+    Example for min. recovery duration = 5 and max. recovery duration = 20   
       
-    sem conexão -> aguarde **5** seg.   
-    tente novamente -> sem conexão -> aguarde **6** seg.   
-    tente novamente -> sem conexão -> aguarde **7** seg.   
-    tente novamente -> sem conexão -> aguarde **8** seg.   
+    no connection -> wait **5** sec.   
+    retry -> no connection -> wait **6** sec.   
+    retry -> no connection -> wait **7** sec.   
+    retry -> no connection -> wait **8** sec.   
     ...   
-    tente novamente -> sem conexão -> aguarde **20** seg.   
-    tente novamente -> sem conexão -> aguarde **20** seg.   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
 * "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
@@ -97,7 +96,7 @@ In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump an
 
 ## Configurações na bomba
 
-Configurar alarmes na bomba da seguinte forma:
+Configure alarms in the pump as follows:
 
 * Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
 * Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
@@ -105,7 +104,15 @@ Configurar alarmes na bomba da seguinte forma:
 
 This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
 
-Insight pumps with newer firmware will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus). Vibration cannot be disabled. Older pumps do not vibrate in these circumstances.
+### Vibration
+
+Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus).
+
+* Firmware 1.x: No vibration by design.
+* Firmware 2.x: Vibration cannot be disabled.
+* Firmware 3.x: AndroidAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+
+Firmware version can be found in the menu.
 
 ## Battery replacement
 

@@ -14,15 +14,15 @@ Op een Windows-10 computer ziet het er zo uit:
   .. image:: ../images/SmartphoneRootLevelWin10.png
     :alt: Telefoon-opslag bekijken via computer
 
-Exported information
+Ge-exporteerde gegevens
 ==================================================
-Among others the following information is part of the settings export:
+Onder andere de volgende gegevens uit jouw instellingen worden ge-exporteerd:
 
-* `Automation <../Usage/Automation.html>`_ events
-* `Config builder <../Configuration/Config-Builder.html>`_ settings
-* `Local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ settings
-* `Objectives <../Usage/Objectives.html>`_ status incl. `exam results <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
-* `Preferences <../Configuration/Preferences.html>`_ incl. `NS Client settings <../Configuration/Preferences.html#ns-client>`_
+* `Automation <../Usage/Automation.html>`_ instellingen
+* `Configurator <../Configuration/Config-Builder.html>`_ instellingen
+* `Lokaal profiel <../Configuration/Config-Builder.html#lokaal-profiele-aanbevolen>`_ instellingen
+* Jouw voortgang door de `Doelen <../Usage/Objectives.html>`_ incl. `examen resultaten <../Usage/Objectives.html#doel-3-bewijs-jouw-kennis>`_
+* `Instellingen <../Configuration/Preferences.html>`_ incl. `NS Client-instellingen <../Configuration/Preferences.html#ns-client>`_
 
 
 

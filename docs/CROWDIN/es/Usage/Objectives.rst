@@ -95,8 +95,13 @@ El lazo cerrado no corregirá los valores de bg alto en el objetivo 6, ya que se
 * Vea cómo las basales temporales están activas al visualizar el texto basal azul en la pantalla de inicio o en la representación basal azul en el gráfico de pantalla.
 * Asegúrese de que sus ajustes han soportado AndroidAPS para evitar tener que tratar una glucosa baja durante un período de 5 días.  Si sigue teniendo episodios frecuentes o graves de glucosa baja, considere la posibilidad de ajustar las proporciones de DIA, basal, ISF y tasa de carbohidratos.
 * No tienes que cambiar tu configuración. Durante el objetivo 6, el valor de maxIOB se establece internamente en cero automáticamente. Esta alteración temporal se invertirá cuando se mueva al objetivo 7.
+* The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.  
 
-*El sistema pondrá los valores maxIOB a cero, lo que significa que si la glucosa en sangre está cayendo puede reducir el basal para usted, pero si la glucosa en sangre está aumentando entonces sólo incrementará la basal si el IOB es negativo (de un anterior Glucosa Baja Glucosa), de lo contrario las tasas basales seguirán siendo las mismas que el perfil seleccionado.  Puede experimentar temporalmente picos después de los hipos tratados sin la posibilidad de aumentar basal en el rebote.*
+   .. image:: ../images/Objective6_negIOB.png
+     :alt: Example negative IOB
+
+* If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
+* Puede experimentar temporalmente picos después de las hipos tratadas sin la posibilidad de aumentar basal en el rebote.
 
 Objetivo 7: Ajustar el lazo cerrado, elevando el IOB máximo por encima de 0 y reduciendo gradualmente los objetivos de BG
 ====================================================================================================

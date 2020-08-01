@@ -12,14 +12,12 @@
 
 * Sélectionnez Appairage sur la nouvelle pompe DanaRS, puis cliquez sur le numéro de série de votre DanaRS.
   
-      ![Appariage AAPS - Dana RS](../images/AAPS_DanaRSPairing.png)
-      
+  ![Appairage Dana RS avec AAPS](../images/AAPS_DanaRSPairing.png)
 
 * Sélectionnez Mot de passe de la pompe et saisissez votre mot de passe. (Le mot de passe par défaut est 1234)   
   ** Vous devez confirmer l'appairage sur la pompe ! ** C'est juste la façon dont vous êtes habitués à faire d'autres appairages bluetooth (par ex. le smartphone et l'audio de la voiture).
   
-      ![Dana RS confirmation d'appairage](../images/DanaRS_Pairing.png)
-      
+  ![Confirmation d'appairage Dana RS](../images/DanaRS_Pairing.png)
 
 * Sélectionner la vitesse de Bolus pour changer la vitesse de Bolus par défaut souhaitée (12 sec par 1 U, 30 sec par 1 U ou 60 sec par 1 U).
 

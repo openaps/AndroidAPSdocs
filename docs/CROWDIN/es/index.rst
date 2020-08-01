@@ -1,13 +1,13 @@
 Bienvenido a la documentación AndroidAPS
 ==================================================
 
-AndroidAPS es una aplicación de código abierto para las personas que viven con diabetes insulino-dependiente, que actúa como un sistema de páncreas artificial (APS) en los teléfonos inteligentes con Google Android. Los componentes principales son los diferentes algoritmos del software openAPS que tienen por objetivo hacer lo que un páncreas vivo hace: mantener los niveles de azúcar en la sangre dentro de límites saludables utilizando la dosificación de insulina automatizada (AID). Además, necesita al menos una bomba de insulina sopada y aprobada por la FDA/CE y un medidor de glucosa continuo. 
+AndroidAPS es una aplicación de código abierto para las personas que viven con diabetes insulino-dependiente, que actúa como un sistema de páncreas artificial (APS) en los teléfonos inteligentes con Google Android. The main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Además, necesita al menos una bomba de insulina sopada y aprobada por la FDA/CE y un medidor de glucosa continuo. 
 
-La aplicación NO utiliza inteligencia artificial de autoaprendizaje. En cambio, los cálculos de AndroidAPS se basan en el algoritmo de dosificación individual y en la ingesta de carbohidratos que el usuario pone manualmente en su perfil de tratamiento, que son verificados por el sistema debido a razones de seguridad. 
+La aplicación NO utiliza inteligencia artificial de autoaprendizaje. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons. 
 
 La aplicación no se proporciona en Google Play - tienes que construirla a partir del código fuente por ti mismo por razones legales.
 
-Los componentes principales son:
+The main components are:
 
 .. imagen:: ./images/modules-female.png
   :alt: Componentes
@@ -23,7 +23,7 @@ Primeros Pasos
    La seguridad primero <./Getting-Started/Safety-first>
    Qué es un sistema de lazo cerrado <./Getting-Started/ClosedLoop.rst>
    ¿Qué es un sistema de lazo cerrado con AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Actualizaciones y cambios en documentos <./Getting-Started/WikiUpdate.rst>
    
    
 Lo que necesitas 
@@ -150,7 +150,7 @@ Donde buscar ayuda
 
    Recursos útiles para leer antes de empezar <./Where-To-Go-For-Help/Background-reading.md>
    Cómo puedo ayudar <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Actualizaciones y cambios en documentos <./Getting-Started/WikiUpdate.rst>
 
 Para Los Médicos
 --------------------------------------------------
@@ -168,8 +168,8 @@ Cómo ayudar
    :glob:
 
    Cómo se puede ayudar <./Getting-Started/How-can-I-help.md>
-   How to translate the app and docs <./translations.md>
-   How to edit the docs <./make-a-PR>
+   Cómo traducir la aplicación y documentos <./translations.md>
+   Cómo editar los documentos <./make-a-PR>
 
 
 .. note:: 

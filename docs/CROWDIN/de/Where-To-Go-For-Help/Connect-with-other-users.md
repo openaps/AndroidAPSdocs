@@ -34,7 +34,7 @@ Tritt der [AndroidAPS Facebook Gruppe (englisch)](https://www.facebook.com/group
 ### Deutschland
 
 * [Open Source Looper Community](https://de.loopercommunity.org/): Deutsche Looper-Community für Open Source Loop, Diabetes im Allgemeinen, Austausch, Hilfe und lokale Treffen
-* [Treffen der Looper und Loop-Interessierten im deutschsprachigen Raum](http://loopertreffen.androidaps.de)
+* [Treffen der Looper und Loop-Interessierten im deutschsprachigen Raum](https://de.loopercommunity.org/c/veranstaltungen/l/calendar)
 * [Freestyle Libre Freaks Facebook Gruppe](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre als CGM/FGM
 * [NightscoutDE Facebook Gruppe](https://www.facebook.com/groups/nightscoutDE/)
 

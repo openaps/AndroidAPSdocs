@@ -136,7 +136,7 @@ Als geen van de bovenstaande tips je geholpen heeft, dan zou je de de app helema
 1. `Instellingen exporteren <../Usage/ExportImportSettings.html>`_ (in AAPS-app die al op jouw telefoon is geïnstalleerd)
 2. Houd jouw keystore file (digitale handtekening) en keystore wachtwoord bij de hand.
     In het geval dat je het bestand kwijt bent en/of het wachtwoord bent vergeten dan kun je proberen om ze te vinden in de projectbestanden zoals `hier <https://youtu.be/nS3wxnLgZOo>`_beschreven. Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan. 
-3. Bouw app vanaf het begin zoals `hier <../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components>`_beschreven.
+3. Bouw app vanaf het begin zoals `hier <../Installing-AndroidAPS/Update-to-new-version.html#bijwerken-van-jouw-lokale-kopie>`_ beschreven.
 4.	Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
 5. `Instellingen importeren <./Usage/ExportImportSettings.html>`_
 
@@ -146,4 +146,4 @@ Mocht zelfs het weer vanaf het begin bouwen van de app niet de oplossing zijn vo
 
 **Zorg ervoor dat echt alle bestanden die zijn gekoppeld aan Android Studio worden verwijderd.** Als je Android Studio en alle verborgen bestanden niet volledig verwijdert, dan kan dit leiden tot nieuwe problemen in plaats van jouw bestaande problemen op te lossen. Handleidingen voor volledige de-installatie kun je online vinden, bijv. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
 
-Installeer Android Studio zoals `hier <../Installing-AndroidAPS/Building-APK.html#install-android-studio>`beschreven_ en **update gradle niet**.
+Installeer Android Studio zoals `hier <../Installing-AndroidAPS/Building-APK.html##installeer-git-android-studio>`_ beschreven en **update gradle niet**.

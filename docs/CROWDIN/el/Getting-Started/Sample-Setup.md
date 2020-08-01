@@ -24,7 +24,7 @@
     
     * Εναλλακτικά: 
     * [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
-    * [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
+    * [Accu-Check Insight](../Configuration/Accu-Chek-Insight-Pump.md)
     * [DanaR](../Configuration/DanaR-Insulin-Pump.md)
     * [Some old Medtronic pumps (additionally needed: RileyLink/Gnarl hardware, Android Phone with bluetooth low energy / BLE-chipset)](../Configuration/MedtronicPump.md)
     * Other pumps might be available in the future, see [future possible pump drivers](Future-possible-Pump-Drivers.md) for details.

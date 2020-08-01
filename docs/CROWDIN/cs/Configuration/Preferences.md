@@ -61,46 +61,60 @@ To je maximální množství sacharidů, které AAPS kalkulačka bolusu dovolí 
 
 ## Smyčka
 
-Zde můžete přepínat mezi otevřenou a uzavřenou smyčkou. Otevřená smyčka znamená, že návrhy na změny dočasného bazálu jsou sice prováděny na základě skutečných dat, zobrazí se jako upozornění, ale Vy je musíte ručně potvrdit a ručně zadat do pumpy. Uzavřená smyčka znamená, že dočasné bazály jsou automaticky, bez jakéhokoliv potvrzení z vaší strany, posílány přímo do pumpy. Na úvodní obrazovce se zobrazí v levém horním rohu, zda používáte smyčku otevřenou nebo uzavřenou. Stisknutím a podržením tohoto tlačítka je možno přepínat mezi smyčkami.
+Zde můžete přepínat mezi otevřenou a uzavřenou smyčkou.
+
+**Otevřená smyčka** znamená, že návrhy na změny dočasného bazálu jsou sice prováděny na základě skutečných dat, zobrazí se jako upozornění, ale vy je musíte ručně potvrdit a ručně zadat do pumpy.
+
+**Uzavřená smyčka** znamená, že dočasné bazály jsou automaticky posílány přímo do pumpy bez jakéhokoliv potvrzení z vaší strany.
+
+V levém horním okraji domovské obrazovky je vidět, jakou smyčku máte aktuálně vybranou. Podržením tohoto tlačítka mezi nimi můžete přepínat.
+
+### Minimální změna pro výzvu
+
+Při použití otevřené smyčky budete dostávat oznámení pokaždé, když AAPS doporučí úpravu bazální dávky. Ke snížení počtu oznámení můžete použít buď širší rozsah cílové glykemie, nebo vyšší procento minimální změny pro výzvu. Toto definuje relativní změnu, která je požadována pro spuštění oznámení.
+
+![Minimální změna pro výzvu](../images/MinRequestChange.png)
+
+Poznámka: V uzavřené smyčce se doporučuje jeden cíl místo cílového rozsahu (tj. 5,5 mmol místo 5,0–7,0 mmol).
 
 ## OpenAPS AMA
 
-OpenAPS Advanced Meal Assist (AMA) umožňuje systému rychleji reagovat po bolusu na jídlo, pokud zadáte sacharidy správně. Zapněte tuto funkci na kartě Konfigurace a podívejte se na její bezpečnostní nastavení. Abyste mohli tuto funkci využívat, musíte splnit [9. cíl](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama). O tomto nastavení a [ o Autosens si můžete přečíst více v dokumentaci k OpenAPS ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+OpenAPS Advanced Meal Assist (AMA) umožňuje systému rychleji reagovat po bolusu na jídlo, pokud zadáte sacharidy správně. Zapněte tuto funkci na kartě Konfigurace a podívejte se na její bezpečnostní nastavení. Abyste mohli tuto funkci využívat, musíte splnit [9. cíl](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama). O tomto nastavení a [ o Autosens si můžete přečíst více v dokumentech OpenAPS ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 ### Maximální povolený bazál [U/h]
 
-Toto nastavení existuje jako bezpečnostní limit, aby se zabránilo AndroidAPS v nastavení nebezpečně vysokého bazálu. Hodnota se udává v jednotkách za hodinu (U/h). Doporučuje se nastavit na rozumnou hodnotu. Je doporučeno vzít si ze svého profilu **nejvyšší hodnotu bazálu**, a **vynásobit ji 4**. Například, když je nejvyšší nastavení bazálu ve Vašem profilu 0,5 jednotky za hodinu, můžete to vynásobit 4 a dostanete hodnotu 2 jednotky za hodinu.
+Toto nastavení existuje jako bezpečnostní limit, aby se zabránilo AndroidAPS v nastavení nebezpečně vysokého bazálu. Hodnota se udává v jednotkách za hodinu (U/h). Doporučuje se nastavit na rozumnou hodnotu. Je doporučeno vzít **nejvyšší hodnotu bazálu** v profilu a **vynásobit ji 4**. Například: máte-li v profilu nejvyšší hodnotu bazálu 0,5 U/h, dostanete po vynásobení 4 hodnotu 2 U/h.
 
 ### Maximální bazální IOB [U]
 
-Množství dodatečného bazálního inzulínu (v jednotkách), který je povolený, aby se nahromadil v těle navíc oproti Vašemu normálnímu bazálu. Jakmile je tato hodnota dosažena, AAPS zastaví přidávání dodatečného bazálu, dokud hodnota inzulínu v těle (IOB) opět neklesne pod tuto hodnotu.
+Maximální hodnota dodatečného bazálního inzulínu (v jednotkách), o který může smyčka navýšit váš normální bazál. Jakmile je tato hodnota dosažena, AAPS zastaví přidávání dodatečného bazálu, dokud hodnota inzulínu v těle (IOB) opět neklesne pod tuto hodnotu.
 
 * Tato hodnota nebere v úvahu bolusový IOB, pouze IOB z bazálu.
 * Tato hodnota je počítána a monitorována nezávisle na vašem normálním bazálu. V úvahu je brán pouze dodatečný bazální inzulín převyšující normální bazál.
 * Hodnota se udává v inzulínových jednotkách (U).
 
-Když začínáte se smyčkou, ** je doporučováno nastavit si na nějaký čas maximální bazální IOB na 0**, než si na systém zvyknete. Toto zabrání AndroidAPS v tom, aby přidal jakýkoliv bazální inzulín. Během této doby bude AndoidAPS pořád schopen omezit či vypnout Váš bazální inzulín, aby pomohl předejít hypoglykémii.
+Když začínáte se smyčkou, ** je doporučováno nastavit si na nějaký čas maximální bazální IOB na 0**, než si na systém zvyknete. Toto zabrání AndroidAPS v tom, aby přidal dodatečný bazální inzulín. Během této doby bude AndoidAPS pořád schopen omezit či vypnout váš bazální inzulín, aby pomohl předejít hypoglykémii.
 
-Toto je důležitý krok kvůli:
+To je důležitý krok pro:
 
 * získání dostatečného času na to, abyste naučili AndroidAPS ovládat a vysledovat, jak funguje.
 * perfektní vyladění nastavení Vašeho bazálního profilu a citlivosti na inzulín (ISF).
 * zjištění, jak AndroidAPS omezuje Váš bazální inzulín, aby se předešlo hypoglykémii.
 
-Když se na to už budete cítit, můžete dovolit systému, aby Vám začal posílat další bazální inzulín, a to navýšením hodnoty maximálního množství bazálního inzulínu v těle. Doporučuje se vzít **nejvyšší hodnotu bazálu **ve Vašem profilu a ** vynásobit ji 3**. Například, je-li nejvyšší hodnota bazálu ve Vašem profilu 0,5 jednotky za hodinu, dostanete po vynásobení 3 hodnotu 1,5 U/h.
+Když se na to už budete cítit, můžete dovolit systému, aby začal přidávat bazální inzulín, a to navýšením hodnoty maximálního množství bazálního inzulínu v těle. Doporučuje se vzít **nejvyšší hodnotu bazálu **ve vašem profilu, a ** vynásobit ji 3**. Například, je-li nejvyšší hodnota bazálu ve vašem profilu 0,5 jednotky za hodinu, dostanete po vynásobení 3 hodnotu 1,5 U/h.
 
 * Začněte tedy s touto hodnotou a postupem času ji opatrně navyšujte. 
 * Toto jsou samozřejmě pouze návrhy; u každého člověka to je jiné. Možná zjistíte, že potřebujete méně nebo více, než je zde doporučeno. Vždy ale začněte opatrně a přidávejte pomalu.
 
-*Poznámka: Jako bezpečnostní prvek je u dospělého pacienta natvrdo nastaveno maximální bazální IOB na 7 U.*
+*Poznámka: Jako bezpečnostní prvek je u dospělého pacienta napevno nastaveno maximální bazální IOB na 7 U.*
 
 ## Nastavení absorpce sacharidů
 
-Pokud jste si zvolili použití AMA Autosense, pak si budete moct zadat maximální čas absorpce jídla a také požadovanou frekvenci aktualizace Autosense. Pokud často jíte jídla s vysokým obsahem tuků nebo bílkovin, budete si muset nastavit delší čas absorpce jídla.
+Pokud jste si zvolili použití AMA Autosense, pak budete moci zadat maximální čas absorpce jídla a také četnost aktualizace funkce Autosense. Pokud často jíte jídla s vysokým obsahem tuků nebo bílkovin, budete si muset nastavit delší čas absorpce jídla.
 
 ## Nastavení pumpy
 
-V závislosti na ovladači pumpy vybraném v konfiguraci se zde mohou vyskytovat i jiné volby. Spárujte a nastavte svou pumpu podle pokynů pro jednotlivé pumpy:
+V závislosti na ovladači pumpy vybraném v konfiguraci se zde mohou vyskytovat i jiné volby. Spárujte a nastavte pumpu podle pokynů pro jednotlivé pumpy:
 
 * [Inzulinová pumpa DanaR](../Configuration/DanaR-Insulin-Pump.md) 
 * [Inzulinová pumpa DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
@@ -127,7 +141,7 @@ Používáte-li AndroidAPS pouze jako otevřenou smyčku, vyberte v nastavení V
 
 ## SMS komunikátor
 
-Toto nastavení dovoluje vzdálené ovládání telefonu s AAPS posláním SMS s textem, jako je zastavení smyčky nebo poslání bolusu. Další informace jsou uvedeny v části [SMS příkazy](../Children/SMS-Commands.rst), ale zobrazí se v nastavení, pouze pokud jste vybrali tuto možnost v konfigurátoru.
+Toto nastavení umožňuje vzdálené ovládání telefonu s AAPS posláním SMS s textem, jako je zastavení smyčky nebo poslání bolusu. Další informace jsou uvedeny v části [SMS příkazy](../Children/SMS-Commands.rst), ale zobrazí se v nastavení, pouze pokud jste vybrali tuto možnost v konfigurátoru.
 
 ## Jiné
 

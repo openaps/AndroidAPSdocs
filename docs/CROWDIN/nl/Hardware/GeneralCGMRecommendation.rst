@@ -35,11 +35,11 @@ Vaak kan een "Sensor fout" worden gecorrigeerd door te wachten en te zorgen dat 
 
 'Springende' waardes
 --------------------------------------------------
-Wanneer jouw waardes alle kanten op springen, zou je kunnen proberen om de instellingen voor Noise Blocking in xDrip+ te wijzigen (Settings - Inter-App Settings - Noise Blocking) d.w.z. "Block Very High noise and worse".  Zie ook `Filteren van glucosewaardes <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
+Wanneer jouw waardes alle kanten op springen, zou je kunnen proberen om de instellingen voor Noise Blocking in xDrip+ te wijzigen (Settings - Inter-App Settings - Noise Blocking) d.w.z. "Block Very High noise and worse".  Zie ook `Filteren van glucosewaardes <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
 Negatieve sensorleeftijd
 --------------------------------------------------
 .. image:: ../images/Troubleshooting_SensorAge.png
   :alt: Negatieve sensorleeftijd
 
-Dit gebeurt als er een dubbel "CGM Sensor Ingebracht"-item aanwezig is in de Acties tab/menu <../Configuration/Config-Builder.html#actions>`_ of er staat ergens een "CGM Sensor Ingebracht"-item met verkeerde datum. Ga naar de Behandelingen tab > careportal en verwijder het verkeerde item.
+Dit gebeurt als er een dubbel "CGM Sensor Ingebracht"-item aanwezig is in de `Acties tab/menu <../Configuration/Config-Builder.html#acties>`_ of er staat ergens een "CGM Sensor Ingebracht"-item met verkeerde datum. Ga naar de Behandelingen tab > careportal en verwijder het foutieve item.

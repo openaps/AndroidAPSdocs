@@ -34,19 +34,19 @@ Para obtener soporte en fuentes de CGM, utilice los grupos de Facebook o los can
 ### Alemania
 
 * [Open Source Looper Community](https://de.loopercommunity.org/): German looper community for Open Source Loop, diabetes in general, communication, support and local meet-up
-* [Looper Meetings Germany, Austria & Switzerland](http://loopertreffen.androidaps.de)
+* [Looper Meetings Germany, Austria & Switzerland](https://de.loopercommunity.org/c/veranstaltungen/l/calendar)
 * [Freestyle Libre Freaks Facebook group](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
 * [NightscoutDE Facebook group](https://www.facebook.com/groups/nightscoutDE/)
 
-### Netherlands
+### Países Bajos
 
-* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch speaking users of OpenAPS, Loop and AndroidAPS
-* [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
+* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): usuarios de habla holandesa de OpenAPS, Loop y AndroidAPS
+* [MCG en la nube Países Bajos](https://www.facebook.com/groups/1764754560436596)
 
-### Sweden
+### Suecia
 
-* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Sweden based users of OpenAPS, Loop and AndroidAPS)
+* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (usuarios con sede en Suecia de OpenAPS, Loop y AndroidAPS)
 
 ### UK
 
-* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)
+* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (usuarios basados en el Reino Unido de OpenAPS, Loop y AndroidAPS)
