@@ -25,10 +25,10 @@ This is the first screen you will come across when you open AndroidAPS and it co
 * Long press target bar to set a [temporary target](../Usage/temptarget.md).
 * If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
 
-   ![Temp traget remaining duration](../images/Home2020_TT.png)
+   ![Temp target remaining duration](../images/Home2020_TT.png)
 
 ##### Visualization of Dynamic target adjustment
-* When SMB algorithim is selected - and either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) are selected- 
+* When SMB algorithm is selected - and either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) are selected- 
    * "sensitivity raises target" and/or 
    * "resistance lowers target" 
   the target will change from what is set from profile. 
@@ -65,7 +65,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
 
 ![Section D](../images/Home2020_TBR.png)
 
-* Srynge: insulin on board (IOB) - amount of active insulin inside your body
+* Syringe: insulin on board (IOB) - amount of active insulin inside your body
 
    * The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
    * IOB may be negative if there have recently been periods of reduced basal.
@@ -103,11 +103,11 @@ This is the first screen you will come across when you open AndroidAPS and it co
 * Graph shows your blood glucose (BG) as read from your glucose monitor (CGM). 
 * Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
 * Long press on the graph to change the time scale. You can choose 6, 12, 18 or 24 hours.
-* The green area reflects ypur target range. It can be configured in [preferences](../Configuration/Preferences#range-for-visualization).
+* The green area reflects your target range. It can be configured in [preferences](../Configuration/Preferences#range-for-visualization).
 * Blue triangles show [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - if enabled in [preferences](.../Configuration/Preferences#openaps-smb-settings).
 * Optional information:
    
-   * Predicitons
+   * Predictions
    * Basals
    * Activity - insulin activity curve
 
@@ -117,7 +117,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
 
    ![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
-#### Preditcion lines
+#### Prediction lines
 
 * **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
 
@@ -191,15 +191,51 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 #### Deviation slope
 * Internal value used in algorithm.
 
+### Section H - Buttons
+
+![Homescreen buttons](../images/Home2020_Buttons.png)
+
+* Buttons for insulin, carbs and Calculator are 'always on'. 
+* Other Buttons have to be setup in [preferences](../Configuration/Preferences#buttons).
+
+#### Insulin
+
+![Insulin button](../images/Home2020_ButtonInsulin.png)
+
+* To give a certain amount of insulin without using [bolus calculator](../Configuration/Screenhots#bolus-wizard).
+* By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences#default-temp-targets).
+* If you do not want to bolus through pump but record insulin amount (i.e. insulin given by syringe) check the corresponding box.
+
+#### Carbs
+
+![Carbs button](../images/Home2020_ButtonCarbs.png)
+
+* To record carbs without bolusing.
+* Certain [pre-set temporary targets](../Configuration/Preferences#default-temp-targets) can be set directly by checking the box.
+* Time offset: When will you / have you been eaten carbs (in minutes).
+* Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.rst)
+* You can use the buttons to quickly increase carb amount.
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#ns-client).
+
+#### Calculator
+* See [details below](../Configuration/Screenhots#bolus-wizard)
+
+#### Calibrations
+* Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
+* Must be activated in [preferences](../Configuration/Preferences#buttons).
+
+#### CGM
+* Opens xDrip+.
+* Back button returns to AAPS.
+* Must be activated in [preferences](../Configuration/Preferences#buttons).
+
+#### Quick Wizard
+* Easily enter amount of carbs and set calculation basics.
+* Details are setup in [preferences](../Configuration/Preferences#quick-wizard).
+
 # ************************************
 # Hier geht es weiter!
-# ************************************
-
-
-
-
-
-    
+# ************************************    
  
 
 
@@ -209,7 +245,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 ### Section G
 Enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration. Also a Quick Wizard button would be displayed here if configured in [Config Builder](../Configuration/Config-Builder#quickwizard-settings).
 
-## The Calculator
+## Bolus Wizard
 
 ![Calculator](../images/Screenshot_Bolus_calculator.png)
 
