@@ -88,17 +88,17 @@ Permet d'administrer un bolus (normalement, vous devriez utiliser le bouton Calc
 
 Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le ferez.
 
-### Section A
+### Section H
 
 zone où vous renseignez les informations concernant le bolus que vous voulez. Le champ de la glycémie (Gly) est normalement déjà renseigné avec la dernière lecture de votre MGC. Si vous n'avez pas de MGC, il sera vide. Dans le champ Glucides, vous indiquez votre estimation de la quantité de glucides pour laquelle vous voulez faire le bolus. Le champ "Corr" (correction) vous permet de modifier le dosage final si vous le souhaitez, et le champ "Heure glucides" est prévu pour le pré-bolus, pour que vous puissiez indiquer au système qu'il va y avoir un délai avant que les glucides n'arrivent et le bolus sera retardé. Vous pouvez mettre un nombre négatif dans ce champ si vous faites un bolus pour des glucides déjà consommés.
 
 SUPER BOLUS : permet d'ajouter l'insuline basale des 2 prochaines heures au bolus immédiat, et un débit basal temporaire (DBT) à 0 est défini pour les 2 prochaines heures afin de ne pas avoir d'insuline supplémentaire. L'idée est de fournir l'insuline plus tôt et, espérons-le, de réduire les pointes.
 
-### Section B
+### Section I
 
 affiche le bolus calculé et permet de renseigner une note. Si la quantité d'insuline active dépasse déjà le bolus calculé, elle affichera simplement la quantité de glucides encore nécessaire.
 
-### Section C
+### Section J
 
 montre les différents éléments qui ont été utilisées pour calculer le bolus. Vous pouvez décocher tout ce que vous ne souhaitez pas inclure mais vous ne voudrez normalement pas faire cela.
 
