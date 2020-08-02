@@ -88,17 +88,17 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 Įprastai jis naudojamas maisto bolusams suleisti.
 
-### Sritis A
+### Section H
 
 vieta, kur įvedate informaciją apie norimą bolusą. KG (kraujo gliukozės) langelyje matosi paskutinis sensoriaus rodmuo. Jei sensorius neveikia, šis langelis bus tuščias. AV langelyje turite įvesti maisto, kurį valgysite, angliavandenių ar jų atitikmens kiekį. KOREKCIJOS langelyje galite pakeisti pasiūlytą insulino dozę, AV LAIKO langelyje galite nurodyti sistemai, kad valgysite tik po kažkurio laiko, todėl ir bolusas bus atidėtas. Šiame langelyje galite įvesti ir laiką su minuso ženklu, jei angliavandenius jau suvalgėte anksčiau.
 
 Jei pažymėsite SUPER BOLUSO laukelį, bus suleistas papildomas insulinas, kurio kiekis lygus ateinančių 2 valandų bazei, o bazė taps nulinė. Tai galbūt padės išvengti didelio glikemijos pakilimo po maisto, nes papildomai "pasiskolinama" insulino iš bazės.
 
-### Sritis B
+### Section I
 
 rodo apskaičiuotą bolusą. Jei aktyvaus, anksčiau suleisto insulino kiekis viršija apskaičiuotą boluso kiekį, bus parodytas tik papildomai reikalingų angliavandenių kiekis.
 
-### Sritis C
+### Section J
 
 rodo įvairius elementus, kurie naudojami apskaičiuojant bolusą. Jūs galite nuimti žymes nuo bet kurių iš jų, tačiau normaliai neturėtumėte to daryti.
 
