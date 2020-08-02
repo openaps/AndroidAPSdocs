@@ -80,7 +80,7 @@ Cette section est aussi configurable en utilisant les options de la section D.
 
 ### Section G
 
-Permet d'administrer un bolus (normalement, vous devriez utiliser le bouton Calculatrice pour effectuer cette opération), de renseigner des glucides et d'ajouter une glycémie capillaire de calibration MGC. Un bouton d'assistant rapide s'affiche également ici s'il est configuré dans le [Générateur de configuration](../Configuration/Config-Builder#quickwizard-settings).
+Permet d'administrer un bolus (normalement, vous devriez utiliser le bouton Calculatrice pour effectuer cette opération), de renseigner des glucides et d'ajouter une glycémie capillaire de calibration MGC. Un bouton d'assistant rapide s'affiche également ici s'il est configuré dans le [Générateur de configuration](../Config-Builder.html#parametres-de-l-assistant-rapide).
 
 ## Calculatrice
 
@@ -88,17 +88,17 @@ Permet d'administrer un bolus (normalement, vous devriez utiliser le bouton Calc
 
 Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le ferez.
 
-### Section A
+### Section H
 
 zone où vous renseignez les informations concernant le bolus que vous voulez. Le champ de la glycémie (Gly) est normalement déjà renseigné avec la dernière lecture de votre MGC. Si vous n'avez pas de MGC, il sera vide. Dans le champ Glucides, vous indiquez votre estimation de la quantité de glucides pour laquelle vous voulez faire le bolus. Le champ "Corr" (correction) vous permet de modifier le dosage final si vous le souhaitez, et le champ "Heure glucides" est prévu pour le pré-bolus, pour que vous puissiez indiquer au système qu'il va y avoir un délai avant que les glucides n'arrivent et le bolus sera retardé. Vous pouvez mettre un nombre négatif dans ce champ si vous faites un bolus pour des glucides déjà consommés.
 
 SUPER BOLUS : permet d'ajouter l'insuline basale des 2 prochaines heures au bolus immédiat, et un débit basal temporaire (DBT) à 0 est défini pour les 2 prochaines heures afin de ne pas avoir d'insuline supplémentaire. L'idée est de fournir l'insuline plus tôt et, espérons-le, de réduire les pointes.
 
-### Section B
+### Section I
 
 affiche le bolus calculé et permet de renseigner une note. Si la quantité d'insuline active dépasse déjà le bolus calculé, elle affichera simplement la quantité de glucides encore nécessaire.
 
-### Section C
+### Section J
 
 montre les différents éléments qui ont été utilisées pour calculer le bolus. Vous pouvez décocher tout ce que vous ne souhaitez pas inclure mais vous ne voudrez normalement pas faire cela.
 
@@ -116,7 +116,7 @@ Si vous faites un bolus aditionnel rapidement après un bolus de repas (par exem
 
 ![Absorption lente des glucides](../images/Calculator_SlowCarbAbsorbtion.png)
 
-Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. Donc si vous voulez faire un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation#detection-of-wrong-cob-values).
+Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. Donc si vous voulez faire un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation.html#detection-de-ga-errones).
 
 ## Profil d'Insuline
 

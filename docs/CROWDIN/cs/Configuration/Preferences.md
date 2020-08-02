@@ -30,7 +30,7 @@ V tomto nastavení jsou stanoveny bezpečnostní limity v závislosti na vámi z
     
     ![Bolusová kalkulačka 80%](../images/BolusWizardPartDelivery.png)
 
-* Možnost povolit [superbolus](../Getting-Started/Screenshots#section-a) v bolusové kalkulačce.
+* Option to enable [superbolus](../Getting-Started/Screenshots#section-h) in bolus wizard.
 
 ### Stavové indikátory
 

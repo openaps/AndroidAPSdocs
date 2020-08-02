@@ -10,7 +10,7 @@
 * À partir de la version 2.3, vous devez utiliser git pour la mise à jour. La mise à jour via le fichier zip ne fonctionne plus.
 * Utilisez [Android Studio Version 3.6.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
 * [Les systèmes d'exploitation Windows 10 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#impossible-de-demarrer-le-processus-daemon) ne sont pas pris en charge par Android Studio 3.6.1.
-* Si vous utilisez xDrip+ assurez vous de bien renseigner [identify receiver](../Configuration/xdrip#identify-receiver).
+* Si vous utilisez xDrip+ assurez vous de bien renseigner [identify receiver](../Configuration/xdrip.html#identifier-le-recepteur).
 * Si vous utilisez Dexcom G6 avec l'application [Dexcom patchée](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app), vous aurez besoin de la version du [dossier 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Accès rapide aux utilisateurs expérimentés
@@ -19,10 +19,10 @@ Veuillez sauter ce paragraphe si vous mettez à jour AAPS pour la première fois
 
 Si vous avez déjà mis à jour AAPS dans les versions précédentes et que vous utilisez un PC, vous pouvez faire une mise à jour en quatre étapes simples :
 
-1. [Exportez vos paramètres](../Usage/ExportImportSettings#how-to-export-settings) à partir de la version AAPS existante sur votre téléphone pour être à jour côté sauvegardes
-2. [Mettez à jour la copie locale](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS -> Git -> Pull)
-3. [Générez un APK signé](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Sélectionnez 'app' au lieu de 'wear' au passage !)
-4. En fonction de votre [source de glycémie](../Configuration/BG-Source.rst) vérifiez bien [identify receiver](../Configuration/xdrip#identify-receiver) dans xDrip+ ou utilisez l'application Dexcom patchée à partir du [dossier 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+1. [Exportez vos paramètres](../Usage/ExportImportSettings.html#comment-exporter-les-parametres) à partir de la version AAPS existante sur votre téléphone pour être à jour côté sauvegardes
+2. [Mettez à jour la copie locale](../Installing-AndroidAPS/Update-to-new-version.html#mettez-a-jour-votre-copie-locale) (VCS -> Git -> Pull)
+3. [Générez un APK signé](../Installing-AndroidAPS/Update-to-new-version.html#generer-un-apk-signe) (Sélectionnez 'app' au lieu de 'wear' au passage !)
+4. En fonction de votre [source de glycémie](../Configuration/BG-Source.rst) vérifiez bien [identify receiver](../Configuration/xdrip.html#identifier-le-recepteur) dans xDrip+ ou utilisez l'application Dexcom patchée à partir du [dossier 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Installer git (si vous ne l'avez pas)
 
