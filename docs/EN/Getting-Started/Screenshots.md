@@ -63,9 +63,13 @@ This is the first screen you will come across when you open AndroidAPS and it co
 
 ### Section D - IOB, COB, BR and AS
 
-![Section D](../images/Home2020_SectionD.png)
+![Section D](../images/Home2020_TBR.png)
 
 * Srynge: insulin on board (IOB) - amount of active insulin inside your body
+
+   * The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
+   * IOB may be negative if there have recently been periods of reduced basal.
+   
 * Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before
   -> icon pulses if carbs are required 
 * Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%)
@@ -80,7 +84,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
 
 ### Section E - Status lights
 
-![Section D](../images/Home2020_StatusLights.png)
+![Section E](../images/Home2020_StatusLights.png)
 
 * Status lights give a visual warning for
    * Cannula age
@@ -92,28 +96,28 @@ This is the first screen you will come across when you open AndroidAPS and it co
 * If threshold critical is exceeded, values will be shown in red.
 * Settings can be made in [preferences](../Configuration/Preferences#status-lights).
 
-# ************************************
-# Hier geht es weiter!
-# ************************************
+### Section F - Main graph
 
-* your current basal rate - including any temporary basal rate (TBR) programmed by the system
-* insulin on board (IOB)
-* carbs on board (COB)
+![Section F](../images/Home2020_MainGraph.png)
 
-The optional [status lights](../Configuration/Preferences#overview) (CAN | INS | RES | SEN | BAT) give a visual warning for low reservoir and battery level as well as overdue site change.
+* Graph shows your blood glucose (BG) as read from your glucose monitor (CGM). 
+* Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
+* Long press on the graph to change the time scale. You can choose 6, 12, 18 or 24 hours.
+* The green area reflects ypur target range. It can be configured in [preferences](../Configuration/Preferences#range-for-visualization).
+* Blue triangles show [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - if enabled in [preferences](.../Configuration/Preferences#openaps-smb-settings).
+* Optional information:
+   
+   * Predicitons
+   * Basals
+   * Activity - insulin activity curve
 
-The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. The figures in brackets show how much consists of insulin remaining from previous boluses and how much is a basal variation due to previous TBRs programmed by AAPS. This second component may be negative if there have recently been periods of reduced basal.
+#### Activate optional information
+* Click the arrow on the right side of the main graph to select which information will be displayed in the main graph.
 
-### Section D
-Click the arrow on the right side of the screen in section D to select which information is displayed on the charts below.
+   ![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
-### Section E
-Is the graph showing your blood glucose (BG) as read from your glucose monitor (CGM) it also shows Nightscout notifications such as fingerstick calibrations, and carbs entries. 
+#### Preditcion lines
 
-Long press on the graph to change the time scale. You can choose 6, 8, 12, 18 or 24 hours.
-
-The extended lines show the predicted BG calculations and trends - if you have it selected. 
-    
 * **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
 
    Prediction line shows where your BG (not where cob itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
@@ -133,11 +137,32 @@ The extended lines show the predicted BG calculations and trends - if you have i
 
   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation. 
+Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
 
-The **solid blue** line shows the basal delivery of your pump. The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs) and the solid blue line is the actual delivery over time. 
+#### Basals
 
-The **thin yellow** line shows the activity of Insulin. It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+* A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time. . 
+* The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs)
+* In times standard basal rate is given the area under the curve is shown in dark blue.
+* When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
+
+#### Activity
+
+* The **thin yellow** line shows the activity of Insulin. 
+* It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+
+# ************************************
+# Hier geht es weiter!
+# ************************************
+
+
+
+
+
+    
+ 
+
+
 
 ### Section F
 This section is also configurable using the options in section D. 
