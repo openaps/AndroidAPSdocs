@@ -30,7 +30,7 @@
     
     ![Мастер Болюса 80%](../images/BolusWizardPartDelivery.png)
 
-* Опция включения [ суперболюса ](../Getting-Started/Screenshots#section-a) в мастере болюса.
+* Option to enable [superbolus](../Getting-Started/Screenshots#section-h) in bolus wizard.
 
 ### Индикаторы состояния
 
