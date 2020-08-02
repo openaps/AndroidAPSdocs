@@ -30,7 +30,7 @@ AndroidAPS stelt veiligheidslimieten in op basis van de leeftijd die je hier heb
     
     ![Boluswizard 80%](../images/BolusWizardPartDelivery.png)
 
-* Inschakelen van [superbolus](../Getting-Started/Screenshots#sectie-a) in de boluswizard.
+* Option to enable [superbolus](../Getting-Started/Screenshots#section-h) in bolus wizard.
 
 ### Statusindicatoren
 
