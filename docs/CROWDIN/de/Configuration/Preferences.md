@@ -30,7 +30,7 @@ Es gibt Sicherheitsgrenzen aufgrund des Alters, die hier eingestellt werden kön
     
     ![Bolus-Rechner 80%](../images/BolusWizardPartDelivery.png)
 
-* Option to enable [superbolus](../Getting-Started/Screenshots#section-h) in bolus wizard.
+* Option, den [Superbolus](../Getting-Started/Screenshots#section-h) im Bolus Kalkulator auswählen zu können.
 
 ### Statusanzeige
 
