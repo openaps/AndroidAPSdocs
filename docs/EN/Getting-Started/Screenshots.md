@@ -112,7 +112,8 @@ This is the first screen you will come across when you open AndroidAPS and it co
    * Activity - insulin activity curve
 
 #### Activate optional information
-* Click the arrow on the right side of the main graph to select which information will be displayed in the main graph.
+* Click the triangle on the right side of the main graph to select which information will be displayed in the main graph.
+* For the main graph just the three options above the line "------- Graph 1 -------" are available.
 
    ![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
@@ -151,6 +152,45 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * The **thin yellow** line shows the activity of Insulin. 
 * It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
 
+### Section G - additional graphs
+
+* You can activate up to four additional graphs below the main graph.
+* To open settings for additional graphs click the triangle on the right side of the [main graph](../Getting-Started/Screenshots#section-f-main-graph) and scroll down.
+
+![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+
+* To add an additional graph check the box on the left side of its name (i.e. ------- Graph 1 -------).
+
+#### Absolute insulin
+* Active insulin including boluses **and basal**.
+
+#### Insulin on board
+* Shows the insulin from bolus (**excludes basals**) you have on board (= active insulin in your body). 
+* If there were no [SMBs]](../Usage/Open-APS-features#super-micro-bolus-smb) and no remaining boluses this would be zero. 
+* Decaying depends on your [DIA and insulin profile settings](..Configuration/Config-Builder#local-profile-recommended). 
+
+#### Carbs On Board
+* Shows the carbs you have on board (= active, not yet decayed carbs in your body). 
+* Decaying depends on the deviations the algorithm detects. 
+* If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
+
+#### Deviations
+* **GREY** bars show a deviation due to carbs. 
+* **GREEN** bars show that BG is higher than the algorithm expected it to be. 
+* **RED** bars show that BG is lower than the algorithm expected.
+
+#### Sensitivity
+* Shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. 
+* Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+
+#### Activity
+* Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
+* The value is higher for insulin closer to peak time.
+* It would mean to be negative when IOB is decreasing. 
+
+#### Deviation slope
+* Internal value used in algorithm.
+
 # ************************************
 # Hier geht es weiter!
 # ************************************
@@ -164,17 +204,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 
 
-### Section F
-This section is also configurable using the options in section D. 
 
-* **Insulin On Board** (blue chart): It shows the insulin you have on board. If there were no TBRs, SMBs and no remaining boluses this would be zero. Decaying depends on your DIA and insulin profile settings. 
-* **Carbs On Board** (orange chart): It shows the carbs you have on board. Decaying depends on the deviations the algorithm detects. If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
-* **Deviations**: 
-   * **GREY** bars show a deviation due to carbs. 
-   * **GREEN** bars show that BG is higher than the algorithm expected it to be. 
-   * **RED** bars show that BG is lower than the algorithm expected.
-* **Sensitivity** (white line): It shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
-* **Activity** (yellow line): It shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). The value is higher for insulin closer to peak time. It would mean to be negative when IOB is decreasing. 
 
 ### Section G
 Enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration. Also a Quick Wizard button would be displayed here if configured in [Config Builder](../Configuration/Config-Builder#quickwizard-settings).
