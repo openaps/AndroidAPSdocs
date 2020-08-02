@@ -30,7 +30,7 @@ Il existe des limites de sécurité en fonction de l'âge que vous avez sélecti
     
     ![Assistant de Bolus 80%](../images/BolusWizardPartDelivery.png)
 
-* Option permettant d'activer [superbolus](../Getting-Started/Screenshots#section-a) dans l'assistant de bolus.
+* Option to enable [superbolus](../Getting-Started/Screenshots#section-h) in bolus wizard.
 
 ### Voyants d'état
 
