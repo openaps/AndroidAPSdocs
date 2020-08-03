@@ -172,13 +172,13 @@ Vous n'avez pas besoin de vous en inquiéter, ils montrent les résultats de l'a
 
 AndroidAPS peut être exécuté avec un certain nombre de configurations de profil différentes. Typiquement - comme ici - le profil Nightscout a été téléchargé via le Client Nightscout intégré et il est présenté ici en lecture seule. Si vous souhaitez effectuer des modifications, vous pouvez le faire à partir de votre interface utilisateur Nightscout, puis faire un [Changement de Profil](../Usage/Profiles.md) dans AndroidAPS pour activer les modifications. Les données telles que les débits de base du profil seront automatiquement copiés sur votre pompe.
 
-** DAI : ** représente la Durée d'Action de l'Insulin et il est détaillé plus haut dans la section sur les profils d'insuline.
+**DAI :** représente la Durée d'Action de l'Insulin et il est détaillé plus haut dans la section sur les profils d'insuline.
 
-** G/I : ** est le rapport quantité de glucides divisé par le nombre d'unité d'insuline. Ce profil comporte un certain nombre de valeurs différentes définies pour différentes périodes de la journée.
+**G/I :** est le rapport quantité de glucides divisé par le nombre d'unité d'insuline. Ce profil comporte un certain nombre de valeurs différentes définies pour différentes périodes de la journée.
 
-** SI :** est la Sensibilité à l'Insuline, elle correspond à la réduction de glycémie que permettra d'obtenir une unité d'insuline en supposant que rien d'autre ne change par ailleurs.
+**SI :** est la Sensibilité à l'Insuline, elle correspond à la réduction de glycémie que permettra d'obtenir une unité d'insuline en supposant que rien d'autre ne change par ailleurs.
 
-**Basal : ** est le profil de basal programmé dans votre pompe.
+**Basal :** est le profil de basal programmé dans votre pompe.
 
 **Cible :** est l'objectif glycémique que vous souhaitez atteindre. Si vous le souhaitez, vous pouvez définir différents niveaux pour différentes heures de la journée. Vous pouvez même définir des limites supérieures et inférieures afin que le l'algorithme ne commence à faire des changements que lorsque la glycémie sort de la plage, mais si vous le faites, la boucle réagira moins vite et il est peu probable que vous obteniez une glycémie aussi stable.
 
