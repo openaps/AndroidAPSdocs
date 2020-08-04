@@ -132,55 +132,55 @@ Oref 프로파일 중 하나를 일반적으로 사용하며, 인슐린이 긴 �
 
 추가적인 내용: [인슐린의 지수 곡선 + 피아스프](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
-## Pump Status
+## 펌프 상태
 
-![Pump Status](../images/Screenshot_pump_Combo.png)
+![펌프 상태](../images/Screenshot_pump_Combo.png)
 
-Here we see the status of the insulin pump - in this case an Accu-Chek Combo. The information displayed is self-explanatory. A long press on the HISTORY button will read the data from your pump history, including your basal profile. But remember only one basal profile is supported on the Combo pump.
+인슐린 펌프의 상태를 확인할 수 있습니다. Accu-Chek Combo의 예시입니다. 표시되는 정보들은 부가적인 설명없이 이해하실 수 있을 것입니다. 이력 버튼을 길게 누르면 펌프로부터 basal 프로파일을 포함한 이력 데이터를 전송 받을 수 있습니다. 그러나 Combo 펌프는 하나의 basal 프로파일만 지원되는 것을 기억하십시오.
 
-## Care Portal
+## 케어 포털
 
-Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
+케어 포털은 Nightscout 화면에서 "+" 기호를 눌러 기록에 메모를 남기는 기능과 같은 것입니다.
 
-### Carb correction
+### 탄수화물 교정
 
-Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+관리 탭에서는 잘못 입력한 탄수화물을 수정할 수 있습니다 (탄수화물을 과다 또는 과소 평가한 경우).
 
-1. Check and remember actual COB and IOB on homescreen.
-2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
+1. 홈 화면에서 실제 COB와 IOB를 확인하고 기억하십시오.
+2. 펌프에 따라 관리 탭에서 탄수화물이 인슐린과 함께 하나의 항목으로 표시되거나 별도의 항목으로 표시 (Dana RS의 경우) 될 수 있습니다.
    
    ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
 
-3. Remove the entry with the faulty carb amount.
+3. 잘못 입력된 탄수화물을 삭제하십시오.
 
-4. Make sure carbs are removed successfully by checking COB on homescreen again.
-5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
+4. 홈 화면에서 COB를 확인하여 탄수화물이 제대로 삭제되었는지 확인하십시오.
+5. 관리 탭에 탄수화물과 인슐린이 하나의 항목으로 표시될 경우 IOB에 대해서도 똑같이 진행하십시오.
    
-   -> If carbs are not removed as intended and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+   -> 의도한 대로 탄수화물이 제거되지 않은 채 (6) 의 설명처럼 추가로 탄수화물을 입력하는 경우, COB가 너무 높아서 과도한 인슐린 주입이 이루어질 수 있습니다.
 
-6. Enter correct carb amount through carbs button on homescreen and make sure to set the correct event time.
+6. 홈 화면에서 탄수화물 버튼을 눌러 올바른 탄수화물 양을 입력하고, 식사 시간 설정이 올바르게 되었는지 확인하십시오.
 
-7. If there is just one line in treatment tab including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
+7. 관리 탭에 탄수화물과 인슐린이 하나의 항목으로 표시될 경우에는 인슐린 양도 다시 입력해야 합니다. 인슐린 주입 시간 설정이 올바르게 되었는지 확인해야하며, 새로 입력한 뒤에는 홈 화면에서 IOB를 확인하십시오.
 
 ## Loop, MA, AMA, SMB
 
-You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
+시스템이 CGM에서 새로운 값을 전송받을 때마다 실행되는 OpenAPS 알고리즘의 결과를 표시하며, 일반적으로 이것들에 대해 걱정할 필요는 없습니다. 이에 대한 내용은 나중에 다루겠습니다.
 
 ## 프로파일
 
 ![프로파일](../images/Screenshot_profile.png)
 
-AndroidAPS can run using a number of different profile configurations. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nightscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a [Profile Switch](../Usage/Profiles.md) in AndroidAPS to activate the changes. Data such as the basal profile would then be automatically copied over to your pump.
+AndroidAPS는 다양한 프로파일 설정을 적용하여 실행할 수 있습니다. 일반적으로 - 여기에 표시된 바와 같이 - Nightscout 프로파일은 내장된 Nightscout client를 통해 다운로드할 수 있고, 여기에서는 읽기 전용 양식으로 표시됩니다. 프로파일 변경 시 Nightscout 사용자 인터페이스에서 변경 작업을 수행한 다음 AndroidAPS에 있는 [Profile Switch](../Usage/Profiles.md)를 실행하여 변경 사항을 활성화합니다. 이후 basal 프로파일 등의 데이터가 펌프에 자동으로 복사됩니다.
 
-**DIA:** stands for Duration of Insulin Action and it is discussed above in the section on insulin profiles.
+**DIA**: 인슐린의 작용 시간을 의미하며, 인슐린 프로필에 관한 이전 섹션에 설명되어 있습니다.
 
-**IC:** is Insulin to Carb ratio. This profile has a number of different values set for different times of day.
+**IC**: 인슐린에 대한 탄수화물 비입니다. 이 프로파일에서는 하루의 시간대별로 다양한 값의 구간을 설정할 수 있습니다.
 
-**ISF:** is Insulin Sensitivity Factor - the amount by which one unit of insulin will reduce your blood glucose assuming that nothing else changes.
+**ISF**: 인슐린 민감도 인자 - 변동사항이 없다는 가정하에 1 unit의 인슐린이 떨어뜨리는 혈당량
 
-**Basal:** is the basal profile programmed into your pump.
+**basal**: 펌프에 프로그램된 basal 프로파일입니다.
 
-**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for different times of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
+**목표**: 모든 시간동안 장치들이 목표로 하기 바라는 혈당 수준을 의미합니다. You can set different levels for different times of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
 
 ## Treatment, xDrip, NSClient
 
