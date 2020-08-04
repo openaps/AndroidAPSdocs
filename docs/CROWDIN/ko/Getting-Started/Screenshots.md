@@ -1,6 +1,6 @@
-# AndroidAPS screens
+# AndroidAPS 화면
 
-## The Homescreen
+## 홈 화면
 
 ![Homescreen V2.5](../images/Screenshot_Home_screen_V2_5_1.png)
 
