@@ -70,67 +70,67 @@
 섹션 D의 옵션을 사용하여 이 섹션도 설정할 수 있습니다.
 
 * **Insulin On Board (IOB)** (파란색 차트): 체내 잔여 인슐린을 의미합니다. TBR, SMB가 없고, bolus가 남아있지 않다면 이는 0이 될 것입니다. 감소하는 정도는 DIA와 인슐린 프로파일 설정에 따릅니다. 
-* **Carbs On Board (COB)** (주황색 차트): 체내 잔여 탄수화물을 의미합니다. Decaying depends on the deviations the algorithm detects. If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
-* **Deviations**: 
-   * **GREY** bars show a deviation due to carbs. 
-   * **GREEN** bars show that BG is higher than the algorithm expected it to be. 
-   * **RED** bars show that BG is lower than the algorithm expected.
-* **Sensitivity** (white line): It shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
-* **Activity** (yellow line): It shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). The value is higher for insulin closer to peak time. It would mean to be negative when IOB is decreasing. 
+* **Carbs On Board (COB)** (주황색 차트): 체내 잔여 탄수화물을 의미합니다. 감소하는 정도는 알고리즘이 분석한 편차에 따릅니다. 예상한 것보다 높은 탄수화물 흡수를 감지하면, (안정성 설정에 따라 많은 양이나 적은 양의) 인슐린을 주입해 IOB를 증가시킬 것 입니다. 
+* **편차**: 
+   * **회색 막대**는 탄수화물에 의한 편차를 의미합니다. 
+   * **초록색 막대**는 알고리즘이 예상한 것보다 혈당값이 높다는 것을 의미합니다. 
+   * **빨간색 막대**는 알고리즘이 예상한 것보다 혈당값이 낮다는 것을 의미합니다.
+* **민감도** (흰 선): [Autosens](../Usage/Open-APS-features#autosens)가 감지한 민감도를 의미합니다. 민감도는 운동, 호르몬 등에 의한 인슐린의 감수성을 계산한 것입니다.
+* **활동** (노란색 선): 인슐린 프로파일에 의해 계산된 인슐린의 활동을 의미합니다 (IOB에 따른 것이 아님). 이 값은 인슐린의 피크 시간에 근접할 때 높게 나타납니다. 이것은 IOB가 감소할 때 음수로 나타남을 의미합니다. 
 
-### Section G
+### 섹션 G
 
-Enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration. Also a Quick Wizard button would be displayed here if configured in [Config Builder](../Configuration/Config-Builder#quickwizard-settings).
+Bolus를 주입하고 (일반적으로 계산기 버튼을 사용함), CGM 채혈 교정을 입력할 수 있습니다. 또한 [구성 마법사](../Configuration/Config-Builder#quickwizard-settings)에서 설정하여 빠른 마법사 버튼을 나타나게 할 수 있습니다.
 
-## The Calculator
+## 계산기
 
 ![계산기](../images/Screenshot_Bolus_calculator.png)
 
-When you want to make a meal bolus this is where you will normally make it from.
+식사 bolus를 주입하고 싶을 때 일반적으로 사용하는 방법입니다.
 
-### Section H
+### 섹션 H
 
-contains is where you input the information about the bolus that you want. The BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. The CORR field is if you want to modify the end dosage for some reason, and the CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+Bolus에 대한 원하는 정보들을 입력하는 항목이 포함되어 있습니다. 혈당값 영역은 일반적으로 CGM에서 전송된 최신 수치가 미리 입력되어 있습니다. CGM이 작동하고 있지 않는 경우에는 이 영역이 공백으로 나타날 것입니다. CARBS 영역에는 bolus를 위한 탄수화물 양 또는 등가의 양에 대한 추정치를 입력합니다. CORR 영역은 몇몇 이유로 인하여 최종 용량을 수정하려는 경우에 사용하며, CARB TIME 영역은 식전 bolus 주입 시 탄수화물 섭취 전 지연시간이 있음을 시스템에 입력할 때 사용할 수 있습니다. 이전에 섭취한 탄수화물에 대한 bolus를 주입하는 경우 이 영역에 음수를 입력할 수 있습니다.
 
-SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The idea is to deliver the insulin sooner and hopefully reduce spikes.
+SUPER BOLUS 사용 시 다음 2시간 동안의 basal 인슐린을 bolus에 추가하여 주입하고, 추가된 인슐린을 되돌리기 위해 이후 2시간 동안은 zero TBR을 사용하게 됩니다. 이 아이디어는 인슐린을 더 빨리 전달하고 혈당 스파이크를 줄이기 위한 것입니다.
 
-### Section I
+### 섹션 I
 
-shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+계산된 bolus를 보여줍니다. 체내 잔여 인슐린의 양이 계산된 bolus 양을 이미 초과하는 경우에는 필요한 탄수화물의 양만을 표시할 것입니다.
 
-### Section J
+### 섹션 J
 
-shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
+Bolus를 계산하는 데 사용되는 다양한 요소들을 보여줍니다. 포함을 원하지 않는 항목은 선택 취소할 수 있으나 일반적으로 적용하지 않을 것입니다.
 
-### Combinations of COB and IOB and what they mean
+### COB와 IOB의 조합과 의미
 
 <ul>
-    <li>If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account</li>
-    <li>If you tick COB without IOB you run the risk of too much insulin as AAPS is not accounting for what’s already given. </li>
-    <li>If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
+    <li>COB와 IOB 체크 시: 인슐린으로 아직 커버하지 못한 흡수되지 않은 탄수화물 + TBR 또는 SMB로 주입된 모든 인슐린을 계산 시 고려함.</li>
+    <li>COB만 선택 시: AAPS가 이미 주입된 인슐린을 고려하지 않기 때문에 과도한 인슐린 주입의 위험이 있음. </li>
+    <li>IOB만 선택 시: AAPS가 이미 주입된 인슐린을 고려하지만, 이는 흡수되어야 하는 탄수화물를 커버하지 않게 됨. 이로 인해 '누락된 탄수화물' 문구가 발생합니다.
 </ul>
 
-If you bolus for additional food shortly after a meal bolus (i.e. additional desert) it can be helpful to untick all boxes. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
+식사 bolus 직후에 추가적인 음식 (추가 디저트)를 위해 bolus를 주입한다면 모든 항목의 선택 해제가 도움이 될 수 있습니다. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
 
-### Wrong COB detection
+### 잘못된 COB 감지
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
 
-If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
+Bolus 마법사를 사용한 후 위와 같은 경고가 나온다면, 계산된 COB 값이 잘못된 것일 수 있음을 AndroidAPS가 감지한 것입니다. 따라서, 이전 식사 이후에 COB를 포함하여 다시 bolus를 주입하려면 용량 초과에 유의해야 합니다! 자세한 내용은 [COB 계산 페이지](../Usage/COB-calculation#detection-of-wrong-cob-values)를 참고하십시오.
 
-## Insulin Profile
+## 인슐린 프로파일
 
-![Insulin Profile](../images/Screenshot_insulin_profile.png)
+![인슐린 프로파일](../images/Screenshot_insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen. The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
+선택한 인슐린의 작용 프로파일을 보여줍니다. 보라색 선은 시간이 경과함에 따라 주입된 인슐린이 얼마나 남아 있는지를 의미하며, 파란색 선은 인슐린이 어떻게 작용하는지를 보여줍니다.
 
-You will normally be using one of the Oref profiles - and the important thing to note is that the decay has a long tail. If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
+Oref 프로파일 중 하나를 일반적으로 사용하며, 인슐린이 긴 꼬리를 갖는 형태로 사라진다는 것이 중요합니다. 만약 수동으로 펌프를 사용해왔다면, 인슐린이 약 3.5시간에 걸쳐 사라진다고 추측했을 것입니다. 그러나 loop을 사용할 때는 계산이 더 정교하기 때문에 긴 꼬리가 중요하며, AndroidAPS 알고리즘에서 반복해서 계산을 할 때 이 작은 용량들을 더해서 계산하게 됩니다.
 
-For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+서로 다른 종류의 인슐린과 이들의 작용 프로파일과 왜 이것들이 모두 중요한지에 대한 자세한 내용은 [지수 작용 곡선에 따른 새로운 IOB 곡선 이해하기](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) 글에서 읽을 수 있습니다.
 
-And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+또한, 이 내용에 관한 훌륭한 블로그 글을 여기에서 읽을 수 있습니다: [우리는 왜 사용하는 인슐린의 작용 시간 (DIA) 을 자주 잘못 생각하고, 이것이 왜 중요한가...](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-And more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+추가적인 내용: [인슐린의 지수 곡선 + 피아스프](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Pump Status
 
