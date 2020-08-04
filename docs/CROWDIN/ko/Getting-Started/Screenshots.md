@@ -4,73 +4,73 @@
 
 ![Homescreen V2.5](../images/Screenshot_Home_screen_V2_5_1.png)
 
-This is the first screen you will come across when you open AndroidAPS and it contains most of the information that you will need day to day.
+홈 화면은 AndroidAPS를 실행했을 때 처음 나오는 화면이며, 매일매일 필요한 정보의 대부분을 포함하고 있습니다.
 
-### Section A
+### 섹션 A
 
-* navigate between the various AndroidAPS modules by swiping left or right
+* 왼쪽 또는 오른쪽으로 화면을 넘겨 AndroidAPS의 다양한 모듈들을 확인할 수 있습니다.
 
-### Section B
+### 섹션 B
 
-* change the loop status (open loop, closed loop, suspend loop etc)
-* see your current profile and do a [profile switch](../Usage/Profiles.md)
-* see your current target blood glucose level and set a [temporary target](../Usage/temptarget.md).
+* loop의 상태 (open loop, closed loop, loop 중지 등) 를 변경할 수 있습니다.
+* 현재 프로파일을 확인하고 [프로파일 변경](../Usage/Profiles.md)을 할 수 있습니다.
+* 현재 목표 혈당 수준을 확인하고 [임시 목표](../Usage/temptarget.md)를 설정할 수 있습니다.
 
-Long press on any of the buttons to alter the setting. I.e long press the target bar in the upper right ("100" in the screenshot above) to set a temp target.
+설정을 변경하려면 버튼을 길게 누르십시오. 예를 들어, 우측 상단의 목표 버튼(위 스크린샷의 "100")을 길게 눌러 임시 목표를 설정할 수 있습니다.
 
-### Section C
+### 섹션 C
 
-* latest blood glucose reading from your CGM
-* how long ago it was read
-* changes in the last 15 and 40 minutes
-* your current basal rate - including any temporary basal rate (TBR) programmed by the system
-* insulin on board (IOB)
-* carbs on board (COB)
+* CGM에서 전송된 가장 최근 혈당값을 의미합니다.
+* 몇 분 전에 혈당값이 전송되었는지를 의미합니다.
+* 최근 15분과 40분 동안의 혈당 변화를 의미합니다.
+* 시스템이 실행한 임시 basal 양 (TBR) 과 현재 basal 양을 의미합니다.
+* 체내 잔여 인슐린 (IOB) 을 의미합니다.
+* 체내 잔여 탄수화물 (COB) 을 의미합니다.
 
-The optional [status lights](../Configuration/Preferences#overview) (CAN | INS | RES | SEN | BAT) give a visual warning for low reservoir and battery level as well as overdue site change.
+옵션으로 [상태 표시](../Configuration/Preferences#overview) (CAN | INS | RES | SEN | BAT) 에서 펌프 주입세트의 변경 기한 지남, 펌프의 인슐린 부족과 펌프의 배터리 레벨에 대한 시각적 경고를 보여줍니다.
 
-The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. The figures in brackets show how much consists of insulin remaining from previous boluses and how much is a basal variation due to previous TBRs programmed by AAPS. This second component may be negative if there have recently been periods of reduced basal.
+원래 설정한 표준 basal이 주입되고 있고, 이전 bolus 주입에서 남은 인슐린이 없는 경우에는 IOB가 0으로 표시됩니다. 괄호 안의 숫자는 이전 bolus 주입에서 남아있는 인슐린 양과 AAPS에서 이전에 실행한 TBR에 따른 basal의 차이를 의미합니다. 가까운 시간에 basal 감소 기간이 있었던 경우에는 두 번째 항목이 음수로 표시될 것입니다.
 
-### Section D
+### 섹션 D
 
-Click the arrow on the right side of the screen in section D to select which information is displayed on the charts below.
+섹션 D 화면에서 우측에 있는 화살표를 클릭하면 하단 차트에 표시되는 정보를 선택할 수 있습니다.
 
-### Section E
+### 섹션 E
 
-Is the graph showing your blood glucose (BG) as read from your glucose monitor (CGM) it also shows Nightscout notifications such as fingerstick calibrations, and carbs entries.
+그래프는 혈당 모니터 (CGM) 에서 전송된 혈당값 (BG) 과 채혈 교정 등의 nightscout 알림, 탄수화물 입력을 보여줍니다.
 
-Long press on the graph to change the time scale. You can choose 6, 8, 12, 18 or 24 hours.
+그래프를 길게 눌러 시간 범위를 변경할 수 있습니다. 6, 8, 12, 18 또는 24시간 단위를 선택할 수 있습니다.
 
-The extended lines show the predicted BG calculations and trends - if you have it selected.
+연장된 선은 예측된 혈당값 계산과 경향을 나타냅니다 (사용 선택한 경우).
 
-* **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
+* **주황색** 선: [COB](../Usage/COB-calculation.rst) (주황색은 COB와 탄수화물을 나타내기 위해 사용됩니다.)
    
-   Prediction line shows where your BG (not where cob itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
+   예측선은 현재 펌프 설정을 기반으로 하여, 탄수화물 흡수에 따른 편차가 일정하게 유지될 것이라고 가정했을 때의 혈당값을 보여줍니다 (COB 자체를 의미하는 것이 아닙니다). 이 선은 입력된 COB가 있을 때만 나타납니다.
 
-* **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
+* **진한 파란색** 선: IOB (진한 파랑색은 IOB와 인슐린을 나타내기 위해 사용됩니다.)
    
-   Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
+   예측선은 인슐린이 단독으로 작용하였을 때 혈당값이 어떻게 변할지를 보여줍니다. 즉, 인슐린을 주입한 뒤 탄수화물을 전혀 섭취하지 않은 상황입니다.
 
-* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* **연한 파란색** 선: zero-temp (임시 basal 양이 0%로 설정되었을 때 예측되는 혈당값)
    
-   Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+   예측선은 펌프가 모든 인슐린 주입을 중단했을 때 (0% TBR) IOB 궤도가 어떻게 변할지를 보여줍니다.
 
-* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals)
+* **진한 노랑색** 선: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (사용자가 입력하지 않은 식사)
    
-   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+   입력되지 않은 식사는 식사, 아드레날린 또는 다른 영향으로 인한 혈당값의 유의한 증가를 의미합니다. 예측선은 주황색 COB 선과 비슷하지만, (현재의 감소 속도를 적용하여) 일정한 비율로 편차가 줄어들 것으로 예측합니다.
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+일반적으로 실제 포도당 곡선은 이 선들의 중간에서 끝나거나, 실제 상황에 거의 가깝게 예측했을 때는 이 선들 중 하나에 가깝게 끝날 것입니다.
 
-The **solid blue** line shows the basal delivery of your pump. The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs) and the solid blue line is the actual delivery over time.
+**파란색 실선**은 펌프에서 주입되는 basal 양을 의미합니다. **점선**은 임시 basal 조절 (TBR) 이 없을 때의 basal 양을 의미하고, 실선은 시간에 따라 실제로 주입된 양입니다.
 
-The **thin yellow** line shows the activity of Insulin. It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+**노란색 선**은 인슐린의 활동을 의미합니다. 이는 다른 요인 (예를 들어, 탄수화물) 이 존재하지 않을 때, 인슐린이 어느정도 혈당값을 떨어뜨릴지 예상하는 근거가 됩니다.
 
-### Section F
+### 섹션 F
 
-This section is also configurable using the options in section D.
+섹션 D의 옵션을 사용하여 이 섹션도 설정할 수 있습니다.
 
-* **Insulin On Board** (blue chart): It shows the insulin you have on board. If there were no TBRs, SMBs and no remaining boluses this would be zero. Decaying depends on your DIA and insulin profile settings. 
-* **Carbs On Board** (orange chart): It shows the carbs you have on board. Decaying depends on the deviations the algorithm detects. If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
+* **Insulin On Board (IOB)** (파란색 차트): 체내 잔여 인슐린을 의미합니다. TBR, SMB가 없고, bolus가 남아있지 않다면 이는 0이 될 것입니다. 감소하는 정도는 DIA와 인슐린 프로파일 설정에 따릅니다. 
+* **Carbs On Board (COB)** (주황색 차트): 체내 잔여 탄수화물을 의미합니다. Decaying depends on the deviations the algorithm detects. If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
 * **Deviations**: 
    * **GREY** bars show a deviation due to carbs. 
    * **GREEN** bars show that BG is higher than the algorithm expected it to be. 
