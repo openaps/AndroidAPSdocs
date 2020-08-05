@@ -180,11 +180,11 @@ AndroidAPS는 다양한 프로파일 설정을 적용하여 실행할 수 있습
 
 **basal**: 펌프에 프로그램된 basal 프로파일입니다.
 
-**목표**: 모든 시간동안 장치들이 목표로 하기 바라는 혈당 수준을 의미합니다. You can set different levels for different times of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
+**목표**: 모든 시간동안 장치들이 목표로 하기 바라는 혈당 수준을 의미합니다. 원하는 경우 시간대별로 다른 레벨을 설정할 수 있으며, 예측 혈당값이 범위를 벗어나는 경우에만 장치가 설정을 조절할 수 있도록 상한 범위와 하한 범위를 설정할 수 있습니다. 하지만, 이 경우 장치가 더 느리게 반응하게 되고 이런 안정된 혈당을 달성할 수 없을 것입니다.
 
-## Treatment, xDrip, NSClient
+## 관리, xDrip, NSClient
 
-These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
+관리 내용 (bolus 및 탄수화물), xDrip 메시지, NSClient를 통해 Nightscout에 전송한 메시지를 요약한 기록입니다. 일반적으로 문제가 없을 때는 이것들에 대해 걱정할 필요가 없습니다.
 
 ## 구성 관리자
 
