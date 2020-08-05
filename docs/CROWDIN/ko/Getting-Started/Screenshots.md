@@ -2,7 +2,7 @@
 
 ## 홈 화면
 
-![Homescreen V2.5](../images/Screenshot_Home_screen_V2_5_1.png)
+![홈 화면 v2.5](../images/Screenshot_Home_screen_V2_5_1.png)
 
 홈 화면은 AndroidAPS를 실행했을 때 처음 나오는 화면이며, 매일매일 필요한 정보의 대부분을 포함하고 있습니다.
 
@@ -110,11 +110,11 @@ Bolus를 계산하는 데 사용되는 다양한 요소들을 보여줍니다. �
     <li>IOB만 선택 시: AAPS가 이미 주입된 인슐린을 고려하지만, 이는 흡수되어야 하는 탄수화물를 커버하지 않게 됨. 이로 인해 '누락된 탄수화물' 문구가 발생합니다.
 </ul>
 
-식사 bolus 직후에 추가적인 음식 (추가 디저트)를 위해 bolus를 주입한다면 모든 항목의 선택 해제가 도움이 될 수 있습니다. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
+식사 bolus 직후에 추가적인 음식 (추가 디저트)를 위해 bolus를 주입한다면 모든 항목의 선택 해제가 도움이 될 수 있습니다. 필연적으로 흡수되지 않은 메인 식사에 새로운 탄수화물이 추가되는 것이기 때문에, 이 방법에서 식사 bolus 직후에는 IOB가 COB에 정확하게 매칭되지 않을 것입니다.
 
 ### 잘못된 COB 감지
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
+![느린 탄수화물 흡수](../images/Calculator_SlowCarbAbsorbtion.png)
 
 Bolus 마법사를 사용한 후 위와 같은 경고가 나온다면, 계산된 COB 값이 잘못된 것일 수 있음을 AndroidAPS가 감지한 것입니다. 따라서, 이전 식사 이후에 COB를 포함하여 다시 bolus를 주입하려면 용량 초과에 유의해야 합니다! 자세한 내용은 [COB 계산 페이지](../Usage/COB-calculation#detection-of-wrong-cob-values)를 참고하십시오.
 
@@ -149,7 +149,7 @@ Oref 프로파일 중 하나를 일반적으로 사용하며, 인슐린이 긴 �
 1. 홈 화면에서 실제 COB와 IOB를 확인하고 기억하십시오.
 2. 펌프에 따라 관리 탭에서 탄수화물이 인슐린과 함께 하나의 항목으로 표시되거나 별도의 항목으로 표시 (Dana RS의 경우) 될 수 있습니다.
    
-   ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+   ![관리의 1개 또는 2개의 항목](../images/Treatment_1or2_lines.png)
 
 3. 잘못 입력된 탄수화물을 삭제하십시오.
 
@@ -190,10 +190,10 @@ AndroidAPS는 다양한 프로파일 설정을 적용하여 실행할 수 있습
 
 ![구성 관리자](../images/Screenshot_config_builder.png)
 
-This is where you will set up the configuration of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
+AndroidAPS 장치의 구성을 설정할 수 있습니다. 이 스크린샷은 콤보 펌프, xDrip+로 관리하는 덱스컴 G5 CGM 센서, Oref 프로파일에서 노보래피드를 선택, Nighscout cloud 기반 서버에 접속한 전형적인 세팅을 보여줍니다.
 
-The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
+오른쪽의 선택 박스는 특정 모듈들을 상단 메뉴바 (홈 화면의 섹션 A) 에 나타나게 할 것인지 결정하는 것이며, 해당 모듈에 설정 사항이 있는 경우 작은 톱니바퀴 버튼을 눌러 엑세스할 수 있습니다.
 
-## Settings and Preferences
+## 설정 및 환경 설정
 
-At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
+탐색바의 우측 상단에 세 점 버튼이 있습니다. 이 버튼을 눌러 앱의 설정, 이력 브라우저, 설정 마법사, 버전 정보 및 AAPS를 종료하는 종료 버튼을 사용할 수 있습니다.
