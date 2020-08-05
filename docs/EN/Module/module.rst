@@ -80,7 +80,7 @@ This is just a short overview of all compatible CGMs/FGM with AndroidAPS. For fu
 * `Libre 2 <../Hardware/Libre2.html>`_: It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
 * `Libre 1 <../Hardware/Libre1.html>`_: You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
 * `Eversense <../Hardware/Eversense.html>`_: It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
-* `Enlite <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
+* `MM630g/MM640g <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
 
 
 Nightscout
