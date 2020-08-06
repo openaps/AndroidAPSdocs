@@ -32,11 +32,11 @@
 
 버튼:
 
-* green plus: add
-* red X: delete
-* blue arrow: duplicate
+* 초록색 십자 모양 버튼: 추가하기
+* 빨간색 가위자 모양 버튼: 삭제하기
+* 파란색 화살표 모양 버튼: 복제하기
 
-If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile beeing used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+프로파일에서 무언가를 변경할 경우, 올바른 프로파일에서 편집 중인지 반드시 확인해야 합니다. In profile tab there is not always shown the actual profile beeing used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
 #### Clone profile switch
 
