@@ -36,20 +36,20 @@
 * 빨간색 가위자 모양 버튼: 삭제하기
 * 파란색 화살표 모양 버튼: 복제하기
 
-프로파일에서 무언가를 변경할 경우, 올바른 프로파일에서 편집 중인지 반드시 확인해야 합니다. In profile tab there is not always shown the actual profile beeing used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+프로파일에서 무언가를 변경할 경우, 올바른 프로파일에서 편집 중인지 반드시 확인해야 합니다. 프로파일 탭에서는 사용 중인 실제 프로파일이 항상 보여지는 것은 아닙니다. - 예를 들어, 홈 스크린에서 프로파일 탭을 사용하여 프로파일을 변경한 경우, 이들 사이에 연동이 안되기 때문에 프로파일 탭에서 실제로 보여지는 프로파일과 다를 수 있습니다.
 
-#### Clone profile switch
+#### 프로파일 변경 사항을 복제하기
 
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+프로파일 변경 기능으로 새로운 로컬 프로파일을 쉽게 만들 수 있습니다. 이 경우 새로운 로컬 프로파일에 시간 이동과 비율 변경을 적용하게 됩니다.
 
-1. Go to treatments tab.
-2. Select ProfileSwitch.
-3. Press "Clone".
-4. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
+1. 관리 탭으로 이동하기
+2. '프로파일 변경'을 선택하기
+3. "복제하기"를 누르기
+4. 로컬 프로파일 (LP) 탭 또는 ≡ 메뉴에서 새로운 로컬 프로파일을 편집할 수 있습니다.
 
-![Clone profile switch](../images/LocalProfile_ClonePS.png)
+![프로파일 변경 사항을 복제하기](../images/LocalProfile_ClonePS.png)
 
-If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
+Nightscout 프로파일에서 로컬 프로파일로 전환하려면, NS 프로파일의 프로파일 변경을 선택한 뒤 앞서 설명한 것처럼 프로파일 변경 사항을 복제합니다.
 
 #### Upload local profiles to Nightscout
 
