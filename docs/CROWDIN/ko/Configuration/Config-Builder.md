@@ -51,35 +51,35 @@
 
 Nightscout 프로파일에서 로컬 프로파일로 전환하려면, NS 프로파일의 프로파일 변경을 선택한 뒤 앞서 설명한 것처럼 프로파일 변경 사항을 복제합니다.
 
-#### Upload local profiles to Nightscout
+#### 로컬 프로파일을 Nightscout에 업로드하기
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in NS Client preferences.
+로컬 프로파일을 Nightscout에 업로드할 수도 있습니다. NS Client 환경 설정에서 적용할 수 있습니다.
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
 
-Advantage:
+장점:
 
-* no internet connection necessary to change profile settings
-* profile changes can be made directly on the phone
-* new profile can be created from profile switch
-* local profiles can be uploaded to Nightscout
+* 프로파일 세팅 변경을 위해 인터넷 연결이 필요하지 않음.
+* 프로파일을 폰에서 직접 변경 가능.
+* 프로파일 변경에서 새 프로파일을 만들 수 있음
+* 로컬 프로파일을 Nightscout에 업로드 할 수 있음
 
-Disadvantage:
+단점:
 
-* none
+* 없음
 
 ### NS 프로파일
 
-NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+NS 프로파일은 Nightscout 사이트 저장된 프로파일들을 사용합니다 (https://[yournightscoutsiteaddress]/profile). 여러 프로파일들 중에 하나를 선택하기 위해서는 '프로파일 변경' 메뉴를 사용할 수 있고 AndroidAPS가 제대로 동작하지 않을 경우 현재 선택된 프로파일이 펌프에서 동작합니다. 이것은 Nightscout에서 다양한 프로파일들을 쉽게 만들 수 있도록 합니다 (예를 들어 직장에서, 가정에서, 운동할때, 휴가를 보낼 시 등등) Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
 
 Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
-Advantage:
+장점:
 
 * multiple profiles
 * easy to edit via PC or tablet
 
-Disadvantage:
+단점:
 
 * no local changes to profile settings
 * profile cannot be changed directly on the phone
