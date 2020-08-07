@@ -72,12 +72,12 @@ Nightscout 프로파일에서 로컬 프로파일로 전환하려면, NS 프로�
 
 NS 프로파일은 Nightscout 사이트 저장된 프로파일들을 사용합니다 (https://[yournightscoutsiteaddress]/profile). 여러 프로파일들 중에 하나를 선택하기 위해서는 '프로파일 변경' 메뉴를 사용할 수 있고 AndroidAPS가 제대로 동작하지 않을 경우 현재 선택된 프로파일이 펌프에서 동작합니다. 이것은 Nightscout에서 다양한 프로파일들을 쉽게 만들 수 있도록 합니다 (예를 들어 직장에서, 가정에서, 운동할때, 휴가를 보낼 시 등등) 스마트폰이 인터넷에 연결되어 있으면, "저장" 버튼을 누른 뒤 얼마되지 않아 저장된 프로파일들이 AAPS로 전송될 것입니다. 인터넷 연결이 안된 상태나 NightScout과 연결되지 않은 상태에 설정하더라도, 한 번 동기화되면 NightScout의 프로파일을 AAPS에서 사용할 수 있습니다.
 
-NightScout에서 프로파일을 활성화하기 위해서는 **프로파일 변경**을 해주셔야 합니다. AAPS 홈스크린 상단에서 현재 프로파일 (밝은 파란색의 "Open / Closed Loop" 영역과 진한 파란색의 "목표" 영역 사이의 회색 영역)을 길게 누르기 > 프로파일 변경 > 프로파일 선택 > 확인. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+NightScout에서 프로파일을 활성화하기 위해서는 **프로파일 변경**을 해주셔야 합니다. AAPS 홈스크린 상단에서 현재 프로파일 (밝은 파란색의 "Open / Closed Loop" 영역과 진한 파란색의 "목표" 영역 사이의 회색 영역)을 길게 누르기 > 프로파일 변경 > 프로파일 선택 > 확인. 프로파일 변경 후 AAPS는 선택된 프로파일을 펌프에 기록함으로써 긴급 상황에서 AAPS 없이도 사용 가능하여 끊기지 않고 실행되게 합니다.
 
 장점:
 
-* multiple profiles
-* easy to edit via PC or tablet
+* 다양한 프로파일 설정 가능
+* 컴퓨터 또는 태블릿을 통해 쉽게 편집 가능
 
 단점:
 
