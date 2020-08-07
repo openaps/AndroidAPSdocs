@@ -81,12 +81,12 @@ NightScout에서 프로파일을 활성화하기 위해서는 **프로파일 변
 
 단점:
 
-* no local changes to profile settings
-* profile cannot be changed directly on the phone
+* 프로파일 설정에 대한 로컬 변경 사항 없음
+* 프로파일을 폰에서 직접 변경할 수 없음
 
 ## 인슐린
 
-Select the type of insulin curve you are using. The options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak.
+사용하고 있는 인슐린 그래프를 선택하시기 바랍니다. The options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak.
 
 The DIA is not the same for each person. That's why you have to test it for yourself. But it must always be at least 5 hours. You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page.
 
