@@ -106,7 +106,7 @@ DIA는 사람마다 다릅니다. 따라서 스스로 시험해봐야 합니다.
 * DIA = 최소 5시간
 * 최대 피크 타임 = 주사 후 55분 (고정된 값으로 조정할 수 없음)
 
-For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
+많은 사람들이 실제로 사용해보면, 0.0xx 단위가 유효하더라도 주사 후 3-4시간이 지나면 눈에 띄는 피아스프의 효과는 거의 없습니다. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
 
 ![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
 
