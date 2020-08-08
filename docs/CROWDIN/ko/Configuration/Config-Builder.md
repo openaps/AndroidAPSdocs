@@ -86,7 +86,7 @@ NightScout에서 프로파일을 활성화하기 위해서는 **프로파일 변
 
 ## 인슐린
 
-사용하고 있는 인슐린 그래프를 선택하시기 바랍니다. '초속형성 Oref', 초-초속형성 Oref' 및 '지속형 Oref' 옵션은 모두 지수 모형입니다. 자세한 내용은 [OpenAPS 문서](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)에 나와 있으며, DIA 및 피크 시간에 따라 곡선이 달라집니다.
+사용하고 있는 인슐린 그래프를 선택하시기 바랍니다. '초속형성 Oref', 초-초속형성 Oref' 및 '사용자 지정 피크 Oref' 옵션은 모두 지수 모형입니다. 자세한 내용은 [OpenAPS 문서](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)에 나와 있으며, DIA 및 피크 시간에 따라 곡선이 달라집니다.
 
 DIA는 사람마다 다릅니다. 따라서 스스로 시험해봐야 합니다. 단, 이 값은 반드시 5시간 이상이 되어야합니다. [이 페이지](../Getting-Started/Screenshots#insulin-profile)의 인슐린 프로파일 섹션에서 더 자세한 내용을 확인할 수 있습니다.
 
@@ -106,11 +106,11 @@ DIA는 사람마다 다릅니다. 따라서 스스로 시험해봐야 합니다.
 * DIA = 최소 5시간
 * 최대 피크 타임 = 주사 후 55분 (고정된 값으로 조정할 수 없음)
 
-많은 사람들이 실제로 사용해보면, 0.0xx 단위가 유효하더라도 주사 후 3-4시간이 지나면 눈에 띄는 피아스프의 효과는 거의 없습니다. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
+많은 사람들이 실제로 사용해보면, 0.0xx 단위가 유효하더라도 주사 후 3-4시간이 지나면 눈에 띄는 피아스프의 효과는 거의 없습니다. 하지만 이 잔여량으로도 운동과 같은 상황에서는 효과가 나타날 수 있습니다. 그러므로 AndroidAPS는 DIA를 최소 5시간으로 설정합니다.
 
 ![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
 
-### Free Peak Oref
+### 사용자 지정 피크 Oref
 
 With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 
