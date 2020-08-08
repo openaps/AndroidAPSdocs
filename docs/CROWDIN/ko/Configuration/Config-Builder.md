@@ -90,21 +90,21 @@ NightScout에서 프로파일을 활성화하기 위해서는 **프로파일 변
 
 DIA는 사람마다 다릅니다. 따라서 스스로 시험해봐야 합니다. 단, 이 값은 반드시 5시간 이상이 되어야합니다. [이 페이지](../Getting-Started/Screenshots#insulin-profile)의 인슐린 프로파일 섹션에서 더 자세한 내용을 확인할 수 있습니다.
 
-For Rapid-Acting and Ultra-Rapid, the DIA is the only variable you can adjust by yourself, the time to peak is fixed. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings.
+초속형과 초-초속형의 경우, DIA만 사용자가 직접 조정할 수 있으며 피크 시간은 정해져 있습니다. 지속형은 DIA와 피크 시간을 모두 조정할 수 있으며, 이러한 설정의 효과를 알고있는 상급 사용자만 사용해야합니다.
 
-The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
+[인슐린 곡선 그래프](../Getting-Started/Screenshots#insulin-profile)는 다른 곡선들을 이해하는 데 도움이 됩니다. 체크박스를 활성화하여 탭으로 표시되도록 설정할 수 있으며, 그렇지 않은 경우에는 ≡ 메뉴에서 확인할 수 있습니다.
 
-### Rapid-Acting Oref
+### 초속효성 Oref
 
-* recommended for Humalog, Novolog and Novorapid
+* 휴마로그, 노보로그, 노보래피드에 권장됨
 * DIA = 최소 5시간
-* 최대. peak = 75 minutes after injection (fixed, not adjustable)
+* 최대 피크 타임 = 주사 후 75분 (고정된 값으로 조정할 수 없음)
 
-### Ultra-Rapid Oref
+### 초-초속효성 Oref
 
-* recommended for FIASP
+* 피아스프에 권장됨
 * DIA = 최소 5시간
-* 최대. peak = 55 minutes after injection (fixed, not adjustable)
+* 최대 피크 타임 = 주사 후 55분 (고정된 값으로 조정할 수 없음)
 
 For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
 
