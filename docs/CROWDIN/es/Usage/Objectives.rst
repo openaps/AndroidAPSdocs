@@ -36,11 +36,6 @@ Objective 3: Proof your knowledge
 
 * Se proporcionarán enlaces para guiarle en caso de que no esté seguro de las respuestas correctas todavía.
 
-Skip objectives
---------------------------------------------------
-* Sólo si se ha cerrado un lazo con otro sistema (es decir, OpenAPS, iOS Loop) antes y puede probar esto (es decir,. al menos 3 meses de datos del lazo en Nightscout), puede enviar un correo electrónico a ` objectives@androidaps.org <mailto:objectives@androidaps.org>`_ con su dirección de NS y su código de petición para eludir el resto de los objetivos.
-* Please note that no support is provided through this mail account. Refer to the `support resources <../Where-To-Go-For-Help/Connect-with-other-users.html>`_ mentioned in this documentation.
-
 Objetivo 4: Iniciar en un lazo abierto
 ==================================================
 * Seleccione Abrir lazo desde Preferencias, o pulsando y manteniendo pulsado el botón de Lazo en la parte superior izquierda de la pantalla de inicio.
