@@ -36,11 +36,6 @@ Cíl 2: Naučte se ovládat AndroidAPS
 
 * Odkazy budou poskytnuty jako vodítko pro případ, že si nejste jisti odpovědí.
 
-Přeskočit cíle
---------------------------------------------------
-* Pouze pokud máte zkušenost s jiným systémem uzavřené smyčky (např. OpenAPS, iOS Loop) a můžete to dokázat (např. minimálně 3 měsíce dat ze smyčky v Nightscoutu), můžete zaslat e-mail na `objectives@androidaps.org <mailto:objectives@androidaps.org>`_ s vaší NS adresou a žádostí o kód, pomocí kterého přeskočíte zbytek cílů.
-* Vezměte prosím na vědomí, že prostřednictvím tohoto e-mailového účtu není poskytována žádná podpora. Viz `Kam jít pro pomoc <../Where-To-Go-For-Help/Connect-with-other-users.html>`_ uvedené v této dokumentaci.
-
 Cíl 4: Začít s otevřenou smyčkou
 ==================================================
 * Vyberte možnost Otevřená smyčka buď v Nastavení, nebo stisknutím a podržením tlačítka Smyčka v levém horním rohu hlavní obrazovky.
