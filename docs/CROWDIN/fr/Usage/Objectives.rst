@@ -36,11 +36,6 @@ Objectif 3 : Prouver ses connaissances
 
 * Des liens sont fournis pour vous guider si vous n'êtes pas certain d'avoir les bonnes réponses.
 
-Ignorer les objectifs
---------------------------------------------------
-* Uniquement si vous avez utilisez une boucle fermée sur un autre système (par ex. OpenAPS, iOS Loop) auparavant et que vous pouvez le prouver (par ex. avec au moins 3 mois de données de bouclage dans Nightscout), vous pouvez envoyer un email à `objectives@androidaps.org <mailto:objectives@androidaps.org>`_ avec votre adresse NS et demander un code pour contourner le reste des objectifs.
-* Veuillez noter qu'aucun support n'est fourni via ce compte de messagerie. Reportez-vous aux `ressources de support <../Where-To-Go-For-Help/Connect-with-other-users.html>`_ mentionnés dans cette documentation.
-
 Objectif 4 : Démarrage de la boucle ouverte
 ==================================================
 * Sélectionnez la Boucle Ouverte soit à partir des Préférences, soit en faisant un appui long sur le bouton de boucle en haut à gauche de l'écran d'accueil.
