@@ -36,11 +36,6 @@ Objective 3: Proof your knowledge
 
 * Nuorodos į dokumentaciją padės jums tuo atveju, jei nebūsite tokie tikri vienu ar kitu atsakymu.
 
-Praleisti tikslus
---------------------------------------------------
-* Tik tuo atveju, jei jau esate naudoję kitą sistemą (pvz., OpenAPS, iOS Loop) ir galite tai įrodyti (pvz. mažiausiai trijų mėnesių ciklo duomenys matomi Nightscout), galite išsiųsti el. laišką adresu `objectives@androidaps.org <mailto:objectives@androidaps.org>`_, nurodant savo NS adresą ir pateikti prašymą gauti likusių tikslų praleidimo kodą.
-* Prašome atkreipti dėmesį, kad pagalba nėra teikiama su šia el. pašto paskyra. Prašome naudoti šioje dokumentacijoje aprašytus `Palaikymo pasiūlymus <../Where-To-Go-For-Help/Connect-with-other-users.html>`_.
-
 Tikslas 4: pradėkite naudoti Atvirą ciklą
 ==================================================
 * Pasirinkite „Atviras ciklas“ arba Nustatymuose arba ilgai paspausdami mygtuką „Ciklas“ pagrindinio ekrano viršutiniame kairiajame kampe.
