@@ -112,19 +112,19 @@ DIA는 사람마다 다릅니다. 따라서 스스로 시험해봐야 합니다.
 
 ### 사용자 지정 피크 Oref
 
-With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+"사용자 지정 피크 Oref" 프로파일에서는 개개인별로 피크타임을 입력할 수 있습니다. 프로파일에서 DIA를 더 높게 설정하지 않은 경우 자동으로 5시간으로 설정됩니다.
 
-This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+이 프로파일은 품질 보증이 되지 않은 인슐린 또는 다른 인슐린들을 혼합해서 사용하는 경우 권장됩니다.
 
-## 혈당정보
+## 혈당 출처
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
+사용하고 있는 혈당 출처를 선택하세요 - 더 많은 설정 정보를 [혈당 출처](BG-Source.rst) 페이지에서 확인할 수 있습니다.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
-* NSClient BG
-* [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
-* [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
+* NSClient 혈당
+* [미니메드640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - 4.15.57 및 최신 버전만 지원됨
+* [덱스콤 앱 (패치용)](https://github.com/dexcomapp/dexcomapp/) - xDrip+ 알람을 사용하고 싶은 경우 '혈당 데이터를 xDrip+로 보내기' 선택.
     
     ![Config Builder BG source](../images/ConfBuild_BGSource.png)
 
@@ -132,12 +132,12 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 
 ## 펌프
 
-Select the pump you are using.
+사용하고 있는 펌프를 선택하시기 바랍니다.
 
-* [Dana R](DanaR-Insulin-Pump.md)
-* Dana R Korean (for domestic DanaR pump)
-* Dana Rv2 (DanaR pump with firmware upgrade)
-* [Dana RS](DanaRS-Insulin-Pump.md)
+* [다나 R](DanaR-Insulin-Pump.md)
+* 다나 R 한국어 (국내용 다나 R 펌프)
+* 다나 Rv2 (펌웨어 업그레이드 다나 R 펌프)
+* [다나 RS](DanaRS-Insulin-Pump.md)
 * [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
 * MDI (receive AAPS suggestions for your multiple daily injections therapy)
 * Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
