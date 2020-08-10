@@ -138,15 +138,15 @@ DIA는 사람마다 다릅니다. 따라서 스스로 시험해봐야 합니다.
 * 다나 R 한국어 (국내용 다나 R 펌프)
 * 다나 Rv2 (펌웨어 업그레이드 다나 R 펌프)
 * [다나 RS](DanaRS-Insulin-Pump.md)
-* [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-* MDI (receive AAPS suggestions for your multiple daily injections therapy)
-* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
+* [아큐첵 콤보 펌프](Accu-Chek-Combo-Pump.md) (추가적인 설치가 필요함)
+* 다회주사요법 (다회주사요법 시행 중 AAPS의 제안을 받는 경우)
+* 가상 펌프 (기기가 없는 경우 open loop으로 사용 - AAPS 제안만 가능)
 
-For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+다나 펌프에서 필요한 경우 **고급 설정**의 BT 워치독(블루투스 감시장치)를 활성화하십시오. 이 기능을 활성화 시, 펌프 연결이 끊기면 1초 동안 블루투스를 끄게 됩니다. 이것은 블루투스 스택이 멈추는 일부 전화에서 도움이 될 수 있습니다.
 
 ## 민감도 감지
 
-Select the type of sensitivity detection. This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+민감도 감지 유형을 선택하시기 바랍니다. This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
 You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features.html#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
