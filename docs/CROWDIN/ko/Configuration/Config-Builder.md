@@ -146,7 +146,7 @@ DIA는 사람마다 다릅니다. 따라서 스스로 시험해봐야 합니다.
 
 ## 민감도 감지
 
-민감도 감지 유형을 선택하시기 바랍니다. This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+민감도 감지 유형을 선택하시기 바랍니다. 이 기능은 사용자가 평소보다 인슐린에 더 민감하게 반응하는 것 (또는 반대로 저항성을 나타내는 것)을 인식하면, 기존의 데이터를 분석하여 민감도를 조정하게 됩니다. 민감도 Oref0 알고리즘에 관한 상세정보는 [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode)에서 확인할 수 있습니다.
 
 You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features.html#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
