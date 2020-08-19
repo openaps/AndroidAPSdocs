@@ -148,11 +148,11 @@ DIA는 사람마다 다릅니다. 따라서 스스로 시험해봐야 합니다.
 
 민감도 감지 유형을 선택하시기 바랍니다. 이 기능은 사용자가 평소보다 인슐린에 더 민감하게 반응하는 것 (또는 반대로 저항성을 나타내는 것)을 인식하면, 기존의 데이터를 분석하여 민감도를 조정하게 됩니다. 민감도 Oref0 알고리즘에 관한 상세정보는 [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode)에서 확인할 수 있습니다.
 
-You can view your sensitivity on the homescreen by selecting SEN and watching the white line. [목표 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)을 수행하고 있어야 자동으로 인슐린 주입양을 조절해주는 민감도 감지/[autosens](../Usage/Open-APS-features.html#autosens)를 사용할 수 있습니다. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+You can view your sensitivity on the homescreen by selecting SEN and watching the white line. [목표 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)을 수행하고 있어야 자동으로 인슐린 주입양을 조절해주는 민감도 감지/[autosens](../Usage/Open-APS-features.html#autosens)를 사용할 수 있습니다. 해당 목표에 도달하기 전에는 사용자의 그래프에서 Autosens 백분율 / 선으로 표시되어 정보 제공의 역할만 합니다.
 
 ### Absorption settings
 
-If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.rst) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+만약 Oref1과 SMB를 사용하고 계시다면 반드시 **min_5m_carbimpact**를 8로 변경하셔야 합니다. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.rst) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
 
 ## APS
 
