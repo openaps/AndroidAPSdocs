@@ -160,18 +160,18 @@ You can view your sensitivity on the homescreen by selecting SEN and watching th
 
 * OpenAPS MA (식사 보조 장치, 2016년도 알고리즘)
 * OpenAPS AMA (상급 식사 보조 장치, 2017년도 알고리즘)  
-    OpenAPS AMA에 대한 자세한 내용은 [OpenAPS 문서](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama)에서 확인할 수 있습니다. In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
-    Note you need to be in [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) in order to use OpenAPS AMA.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
-    Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+    OpenAPS AMA에 대한 자세한 내용은 [OpenAPS 문서](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama)에서 확인할 수 있습니다. 간단하게 장점을 설명하면, 사용자가 탄수화물을 정확하게 기입했을 경우 식사 bolus를 주입 후 시스템이 좀 더 신속하게 임시 basal을 높일 수 있다는 것입니다.  
+    OpenAPS AMA를 사용하기 위해서는 [목표 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama)를 수행하고 있어야 합니다.
+* [OpenAPS SMB](../Usage/Open-APS-features.md)(super micro bolus, 상급 사용자를 위한 가장 최신 알고리즘)  
+    OpenAPS SMB를 사용하기 위해서는 [목표 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)을 수행하고 있어야 하며, min_5m_carbimpact를 8로 설정해야 합니다. (구성 관리자 > 민감도 감지 > 민감도 Oref1 설정)
 
 ## Loop
 
-Define whether you want to allow AAPS automatic controls or not.
+AAPS 자동 제어의 허용 여부를 설정합니다.
 
 ### Open Loop
 
-AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+AAPS는 이용 가능한 모든 데이터들 (IOB, COB, BG...) 를 계속해서 평가하고, 필요 시 인슐린 주입을 어떻게 조정할 것인지에 대한 처치 제안을 합니다. The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
 
 ### Closed Loop
 
