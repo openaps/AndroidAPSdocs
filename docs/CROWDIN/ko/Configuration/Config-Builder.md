@@ -152,15 +152,15 @@ You can view your sensitivity on the homescreen by selecting SEN and watching th
 
 ### Absorption settings
 
-만약 Oref1과 SMB를 사용하고 계시다면 반드시 **min_5m_carbimpact**를 8로 변경하셔야 합니다. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.rst) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+만약 Oref1과 SMB를 사용하고 계시다면 반드시 **min_5m_carbimpact**를 8로 변경하셔야 합니다. 이 값은 CGM 혈당 값에 차이가 있는 경우 혹은 AAPS가 COB를 감쇠하도록 하는 혈당 상승을 신체활동으로 통해 "모두 소모한 경우"에만 이용됩니다. [탄수화물 흡수](../Usage/COB-calculation.rst)가 사용자의 혈액 반응에 따라 역학적으로 계산되지 않을 경우에는 탄수화물에 기본 감쇠값을 이용합니다. 기본적으로, 이것은 안전 장치라고 생각하면 됩니다.
 
 ## APS
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+치료 조정을 위해 원하는 APS 알고리즘을 선택하세요 OpenAPS(OAPS) 탭에서 선택된 알고리즘의 활성화된 정보를 확인할 수 있습니다.
 
-* OpenAPS MA (meal assist, state of the algorithm in 2016)
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017)  
-    More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
+* OpenAPS MA (식사 보조 장치, 2016년도 알고리즘)
+* OpenAPS AMA (상급 식사 보조 장치, 2017년도 알고리즘)  
+    OpenAPS AMA에 대한 자세한 내용은 [OpenAPS 문서](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama)에서 확인할 수 있습니다. In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
     Note you need to be in [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) in order to use OpenAPS AMA.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
     Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
