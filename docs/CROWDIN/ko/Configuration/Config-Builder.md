@@ -171,7 +171,7 @@ AAPS 자동 제어의 허용 여부를 설정합니다.
 
 ### Open Loop
 
-AAPS는 이용 가능한 모든 데이터들 (IOB, COB, BG...) 를 계속해서 평가하고, 필요 시 인슐린 주입을 어떻게 조정할 것인지에 대한 처치 제안을 합니다. The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+AAPS는 이용 가능한 모든 데이터들 (IOB, COB, BG...) 를 계속해서 평가하고, 필요 시 인슐린 주입을 어떻게 조정할 것인지에 대한 처치 제안을 합니다. 제안은 (closed loop에서처럼) 자동으로 실행되는 것이 아니며, 사용자가 수동으로 펌프에 직접 또는 호환 가능한 펌프(Dana R/RS 또는 아큐첵 콤보)의 경우 AAPS의 버튼을 사용해서 입력해야 합니다. 이 옵션은 AndroidAPS가 어떻게 작동하는지 알기 위해 사용하거나, 지원되지 않는 펌프에서 사용할 수 있습니다.
 
 ### Closed Loop
 
