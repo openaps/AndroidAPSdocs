@@ -1,6 +1,6 @@
 # Πώς να μεταφράσετε AndroidAPS και την τεκμηρίωση
 
-* Μεταβείτε στο [ https://translations.androidaps.org ](https://translations.androidaps.org) ή [ https://wikitranslations.androidaps.org ](https://wikitranslations.androidaps.org) και συνδεθείτε χρησιμοποιώντας τον λογαριασμό σας Github
+* Go to <https://crowdin.com/project/androidaps> or <https://crowdin.com/project/androidapsdocs> and login using your Github account
 
 * Send a join request to the docs team. Για να το κάνετε, κάντε κλικ στη σημαία της τη γλώσσα που επιθυμείτε και, στη συνέχεια, το κουμπί "Εγγραφή" στην πάνω δεξιά γωνία της επόμενης σελίδας. Παρακαλείστε να προσδιορίσετε τη γλώσσα, να δώσετε κάποιες πληροφορίες σχετικά με εσάς και την AAPS εμπειρία σας και αν θέλετε να είστε μεταφραστής ή διορθωτής (μόνο άνθρωποι ειδικευμένοι σε μετάφραση + advanced AndroidAPS χρήστες).
 

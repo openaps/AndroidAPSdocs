@@ -1,6 +1,6 @@
 # Comment traduire l'application et la documentation wiki
 
-* Allez à <https://translations.androidaps.org> ou <https://wikitranslations.androidaps.org> et connectez-vous à l'aide de votre compte Github
+* Allez à <https://crowdin.com/project/androidaps> ou <https://crowdin.com/project/androidapsdocs> et connectez-vous à l'aide de votre compte Github
 
 * Envoyez une demande d'adhésion à l'équipe Wiki. Pour le faire, cliquez sur le drapeau de la langue souhaitée, puis sur le bouton "Join" dans le coin supérieur droit de la page suivante. Veuillez renseigner la langue, donner quelques informations sur vous et votre expérience AAPS et si vous voulez être un traducteur ou un correcteur (seulement les personnes qualifiées pour traduire + les utilisateurs avancés d'AndroidAPS).
 
