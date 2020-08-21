@@ -228,13 +228,13 @@ AndroidAPS에는 단계적으로 수행해야 하는 몇 가지 목표가 있습
 
 일반 기능들의 빠른 실행 버튼:
 
-* Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
-* Temporary targets
-* Set / cancel temp. basal양
-* Extended bolus (DanaR/RS or Combo pump only)
-* Record for any specific care entries
+* 프로파일 변경 (설정에 대한 더 많은 정보는 [프로파일 페이지](../Usage/Profiles.md)에서 확인).
+* 임시 목표
+* 임시 basal 설정 / 취소 basal 양
+* 확장 bolus (다나 R/RS 또는 콤보 펌프만 가능)
+* 특정 관리 항목에 대한 기록
     
-    * BG check
+    * 혈당 체크
     * Prime / fill - record pump site change and prime (if not done on pump)
     * CGM sensor insert
     * Pump battery change
