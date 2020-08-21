@@ -216,17 +216,17 @@ AndroidAPS에는 단계적으로 수행해야 하는 몇 가지 목표가 있습
 
 (Bolus를 위한 탄수화물 양과 계산 방법을 선택해둔) 표준 식사 버튼을 만들어 홈 화면에 표시할 수 있습니다. 자주 먹는 표준 식사에 사용하십시오. 각각의 식사들에 시간대를 지정해두면, 시간에 따라 적절한 표준 식사 단추가 홈 화면에 나타나게 됩니다.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+참고: 지정된 시간 범위를 벗어나는 경우 또는 빠른 마법사 버튼에서 설정한 탄수화물 양을 허용하기에 충분한 IOB가 이미 있는 경우에는 버튼이 나타나지 않습니다.
 
 ![QuickWizard button](../images/ConfBuild_QuickWizard.png)
 
-#### Advanced settings
+#### 고급 설정
 
-Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+마법사에서 Super bolus 기능을 가능하게 합니다. 주의해서 사용해야 하며, 실제로 무엇을 수행하는지 알기 전까지 사용하지 마십시오. 기본적으로, 다음 2시간 동안의 basal을 bolus에 더하여 주입하고, 0% 임시 basal을 2시간 동안 활성화시킵니다. **AAPS loop 기능을 사용할 수 없으므로 주의하여 사용합니다! SMB를 사용하는 경우 ["SMB 제한을 위한 최대 basal 시간"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to)의 설정만큼 AAPS loop 기능을 사용할 수 없고, SMB를 사용하지 않는 경우 loop 기능을 2시간 동안 사용할 수 없습니다.** Super bolus에 대한 [상세정보](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus)가 나와있습니다.
 
 ### 실행
 
-Some buttons to quickly access common features:
+일반 기능들의 빠른 실행 버튼:
 
 * Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
 * Temporary targets
@@ -301,7 +301,7 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 
 ![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
 
-#### Advanced settings
+#### 고급 설정
 
 * Auto backfill missing BGs from Nightscout
 * Create announcement from errors Create Nightscout announcement for error dialogs and local alerts (also viewable in careportal in treatments section)
