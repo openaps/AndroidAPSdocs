@@ -214,7 +214,7 @@ AndroidAPS에는 단계적으로 수행해야 하는 몇 가지 목표가 있습
 
 #### 빠른 마법사 설정
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+(Bolus를 위한 탄수화물 양과 계산 방법을 선택해둔) 표준 식사 버튼을 만들어 홈 화면에 표시할 수 있습니다. 자주 먹는 표준 식사에 사용하십시오. 각각의 식사들에 시간대를 지정해두면, 시간에 따라 적절한 표준 식사 단추가 홈 화면에 나타나게 됩니다.
 
 Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
 
