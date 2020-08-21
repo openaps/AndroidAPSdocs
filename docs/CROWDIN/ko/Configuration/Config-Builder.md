@@ -148,7 +148,7 @@ DIA는 사람마다 다릅니다. 따라서 스스로 시험해봐야 합니다.
 
 민감도 감지 유형을 선택하시기 바랍니다. 이 기능은 사용자가 평소보다 인슐린에 더 민감하게 반응하는 것 (또는 반대로 저항성을 나타내는 것)을 인식하면, 기존의 데이터를 분석하여 민감도를 조정하게 됩니다. 민감도 Oref0 알고리즘에 관한 상세정보는 [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode)에서 확인할 수 있습니다.
 
-You can view your sensitivity on the homescreen by selecting SEN and watching the white line. [목표 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)을 수행하고 있어야 자동으로 인슐린 주입양을 조절해주는 민감도 감지/[autosens](../Usage/Open-APS-features.html#autosens)를 사용할 수 있습니다. 해당 목표에 도달하기 전에는 사용자의 그래프에서 Autosens 백분율 / 선으로 표시되어 정보 제공의 역할만 합니다.
+홈 화면에서 SEN을 선택하고 흰색 선을 참고하여, 사용자의 민감도를 확인할 수 있습니다. [목표 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)을 수행하고 있어야 자동으로 인슐린 주입양을 조절해주는 민감도 감지/[autosens](../Usage/Open-APS-features.html#autosens)를 사용할 수 있습니다. 해당 목표에 도달하기 전에는 사용자의 그래프에서 Autosens 백분율 / 선으로 표시되어 정보 제공의 역할만 합니다.
 
 ### Absorption settings
 
@@ -156,7 +156,7 @@ You can view your sensitivity on the homescreen by selecting SEN and watching th
 
 ## APS
 
-치료 조정을 위해 원하는 APS 알고리즘을 선택하세요 OpenAPS(OAPS) 탭에서 선택된 알고리즘의 활성화된 정보를 확인할 수 있습니다.
+관리 조정을 위해 원하는 APS 알고리즘을 선택하세요 OpenAPS(OAPS) 탭에서 선택된 알고리즘의 활성화된 정보를 확인할 수 있습니다.
 
 * OpenAPS MA (식사 보조 장치, 2016년도 알고리즘)
 * OpenAPS AMA (상급 식사 보조 장치, 2017년도 알고리즘)  
@@ -171,7 +171,7 @@ AAPS 자동 제어의 허용 여부를 설정합니다.
 
 ### Open Loop
 
-AAPS는 이용 가능한 모든 데이터들 (IOB, COB, BG...) 를 계속해서 평가하고, 필요 시 인슐린 주입을 어떻게 조정할 것인지에 대한 처치 제안을 합니다. 제안은 (closed loop에서처럼) 자동으로 실행되는 것이 아니며, 사용자가 수동으로 펌프에 직접 또는 호환 가능한 펌프(Dana R/RS 또는 아큐첵 콤보)의 경우 AAPS의 버튼을 사용해서 입력해야 합니다. 이 옵션은 AndroidAPS가 어떻게 작동하는지 알기 위해 사용하거나, 지원되지 않는 펌프에서 사용할 수 있습니다.
+AAPS는 이용 가능한 모든 데이터들 (IOB, COB, BG...) 를 계속해서 평가하고, 필요 시 처치를 어떻게 조정할 것인지에 대한 관리 제안을 합니다. 제안은 (closed loop에서처럼) 자동으로 실행되는 것이 아니며, 사용자가 수동으로 펌프에 직접 또는 호환 가능한 펌프(Dana R/RS 또는 아큐첵 콤보)의 경우 AAPS의 버튼을 사용해서 입력해야 합니다. 이 옵션은 AndroidAPS가 어떻게 작동하는지 알기 위해 사용하거나, 지원되지 않는 펌프에서 사용할 수 있습니다.
 
 ### Closed Loop
 
@@ -181,13 +181,13 @@ AAPS는 이용 가능한 모든 데이터(IOB, COB, BG...)를 계속해서 평�
 
 AndroidAPS에는 단계적으로 수행해야 하는 몇 가지 목표가 있습니다. 이는 closed loop 시스템을 설정하는 과정에서 사용자를 안전하게 안내해줄 것입니다. 사용자가 모든 것을 올바르게 설정하고, 시스템이 정확히 무엇을 수행하는지 이해하는 것을 확실하게 하는 과정입니다. 이것은 사용자가 시스템을 신뢰할 수 있는 유일한 방법입니다.
 
-정기적으로 (목표의 진행 과정을 포함한) [설정 내보내기](../Usage/ExportImportSettings.rst)를 해야 합니다. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+정기적으로 (목표의 진행 과정을 포함한) [설정 내보내기](../Usage/ExportImportSettings.rst)를 해야 합니다. 나중에 스마트폰을 교체해야 하는 경우 (새 제품, 디스플레이 손상 등), 해당 설정들을 쉽게 가져올 수 있습니다.
 
-See [Objectives](../Usage/Objectives.rst) page for more information.
+더 많은 정보를 확인하려면 [목표](../Usage/Objectives.rst) 페이지를 방문하세요.
 
 ## 관리
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
+관리(Treat)탭에서 nightscout에 업로드 된 처치들을 확인할 수 있습니다. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
 
 ## 일반
 
