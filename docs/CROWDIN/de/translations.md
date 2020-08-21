@@ -1,6 +1,6 @@
 # App oder Dokumentation übersetzen
 
-* Go to <https://crowdin.com/project/androidaps> or <https://crowdin.com/project/androidapsdocs> and login using your Github account
+* Gehe zu <https://crowdin.com/project/androidaps> oder <https://crowdin.com/project/androidapsdocs> und melde Dich mit Deinem Github Konto an.
 
 * Sende Deinen Beitrittswunsch an das Docs-Team. Klicke dazu auf die Fahne der gewünschten Sprache und dann auf der nächsten Seite rechts oben auf den Button "Join". Gib die gewünschte(n) Sprach(n) an, ein paar Infos zu Dir und Deiner AAPS Erfahrung und auch ob Du als Übersetzter oder Lektor (nur Personen mit Übersetzungs- und längerer AAPS-Erfahrung ) unterstützen möchtest.
 
