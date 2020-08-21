@@ -187,32 +187,32 @@ AndroidAPS에는 단계적으로 수행해야 하는 몇 가지 목표가 있습
 
 ## 관리
 
-관리(Treat)탭에서 nightscout에 업로드 된 처치들을 확인할 수 있습니다. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
+관리(Treat)탭에서 nightscout에 업로드 된 처치들을 확인할 수 있습니다. 입력된 정보를 수정 또는 삭제하려면 (예를 들어, 예상한 것보다 탄수화물 섭취량이 적은 경우), 'Remove'를 선택 후 [홈 화면의 탄수화물 버튼](../Getting-Started/Screenshots.md#carb-correction)을 이용하여 새로운 값 (필요 시 시간도 변경)을 입력할 수 있습니다.
 
 ## 일반
 
 ### 개요
 
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
+대부분의 실행을 위한 버튼 및 현재 loop의 상태를 보여줍니다 (상세정보는 [홈 화면 섹션](../Getting-Started/Screenshots.md) 참고). 톱니바퀴 버튼을 클릭하여 설정에 접근할 수 있습니다.
 
-#### Keep screen on
+#### 화면을 켜진 상태로 유지
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+'화면을 켜진 상태로 유지' 옵션은 화면이 항상 켜진 채로 있도록 Android를 강제할 것입니다. 이는 프레젠테이션 등에서 유용합니다. 하지만 배터리 전력을 많이 소모하게 됩니다. 따라서 스마트폰을 충전기 케이블에 연결하는 것이 좋습니다.
 
-#### Buttons
+#### 버튼
 
-Define which Buttons are shown on the home screen.
+홈 화면에 표시될 단추를 설정하십시오.
 
 * 관리
 * 계산기
 * 인슐린
 * Carbs
-* CGM (opens xDrip+)
-* Calibration
+* CGM (xDrip+ 열기)
+* 보정
 
-Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
+인슐린과 탄수화물에 대한 단축키를 설정할 수 있고, 관리 기록에서 노트 영역의 표시 여부도 설정할 수 있습니다.
 
-#### QuickWizard settings
+#### 빠른 마법사 설정
 
 Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
 
