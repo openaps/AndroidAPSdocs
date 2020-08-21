@@ -175,13 +175,13 @@ AAPS는 이용 가능한 모든 데이터들 (IOB, COB, BG...) 를 계속해서 
 
 ### Closed Loop
 
-AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). The Closed Loop works within numerous safety limits, which you can be set individually. Closed Loop is only possible if you are in [Objective 6](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
+AAPS는 이용 가능한 모든 데이터(IOB, COB, BG...)를 계속해서 평가하고, 필요 시 자동으로 (즉, 사용자의 추가 개입 없이) 처치를 조정하여 (예를 들어, bolus 주입, 임시 basal 양, 저혈당 방지하기 위한 인슐린 주입 중단 등) 설정된 목표 범위 또는 값에 도달할 수 있게 합니다. Closed Loop은 다양한 안전 제한치 내에서 작동하며, 이는 개별적으로 설정할 수 있습니다. [목표 6](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) 또는 그 이상의 단계를 수행하고 있고, 지원되는 펌프를 사용하는 경우에만 Closed Loop이 가능합니다.
 
 ## 목표 (학습 프로그램)
 
-AndroidAPS has a number of objectives that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+AndroidAPS에는 단계적으로 수행해야 하는 몇 가지 목표가 있습니다. 이는 closed loop 시스템을 설정하는 과정에서 사용자를 안전하게 안내해줄 것입니다. 사용자가 모든 것을 올바르게 설정하고, 시스템이 정확히 무엇을 수행하는지 이해하는 것을 확실하게 하는 과정입니다. 이것은 사용자가 시스템을 신뢰할 수 있는 유일한 방법입니다.
 
-You should [export your settings](../Usage/ExportImportSettings.rst) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+정기적으로 (목표의 진행 과정을 포함한) [설정 내보내기](../Usage/ExportImportSettings.rst)를 해야 합니다. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
 See [Objectives](../Usage/Objectives.rst) page for more information.
 
