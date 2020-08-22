@@ -235,16 +235,16 @@ AndroidAPS에는 단계적으로 수행해야 하는 몇 가지 목표가 있습
 * 특정 관리 항목에 대한 기록
     
     * 혈당 체크
-    * Prime / fill - record pump site change and prime (if not done on pump)
-    * CGM sensor insert
-    * Pump battery change
-    * Note
-    * Exercise
-* View the current sensor, insulin, canula and pump battery ages
-* History browser
-* TDD (Total daily dose = bolus + basal per day)
+    * 프라임 /채우기 - 펌프 위치 변경 및 프라임 기록 (펌프에서 시행되지 않은 경우)
+    * CGM 센서 삽입
+    * 펌프 배터리 교체
+    * 노트
+    * 운동
+* 현재 센서, 인슐린, 캐뉼라 및 펌프 배터리 수명 확인
+* 이력 브라우저
+* TDD (일 총량 = 하루 bolus + 하루 basal)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+일부 의사들은 - 특히, 새로 펌프를 사용하는 사람들에게 - basal-bolus 비율을 50:50으로 적용합니다. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 다른 의사들은 TBB가 TDD의 32%에서 37% 범위에 있는 것을 선호합니다. 이러한 경험에 따른 대부분의 규칙들은 실질적으로 제한된 유효성을 보입니다. Note: Your diabetes may vary!
 
 ![Actions tab](../images/ConfBuild_ConfBuild_Actions_b.png)
 
