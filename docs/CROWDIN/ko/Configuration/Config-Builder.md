@@ -248,7 +248,7 @@ AndroidAPS에는 단계적으로 수행해야 하는 몇 가지 목표가 있습
 
 ![Actions tab](../images/ConfBuild_ConfBuild_Actions_b.png)
 
-### SMS Communicator
+### SMS 통신기
 
 Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
 
