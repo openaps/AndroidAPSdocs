@@ -244,7 +244,7 @@ AndroidAPS에는 단계적으로 수행해야 하는 몇 가지 목표가 있습
 * 이력 브라우저
 * TDD (일 총량 = 하루 bolus + 하루 basal)
 
-일부 의사들은 - 특히, 새로 펌프를 사용하는 사람들에게 - basal-bolus 비율을 50:50으로 적용합니다. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 다른 의사들은 TBB가 TDD의 32%에서 37% 범위에 있는 것을 선호합니다. 이러한 경험에 따른 대부분의 규칙들은 실질적으로 제한된 유효성을 보입니다. Note: Your diabetes may vary!
+일부 의사들은 - 특히, 새로 펌프를 사용하는 사람들에게 - basal-bolus 비율을 50:50으로 적용합니다. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 다른 의사들은 TBB가 TDD의 32%에서 37% 범위에 있는 것을 선호합니다. 이러한 경험에 따른 대부분의 규칙들은 실질적으로 제한된 유효성을 보입니다. 참고: 당뇨병 관리는 개인별로 다릅니다!
 
 ![Actions tab](../images/ConfBuild_ConfBuild_Actions_b.png)
 
