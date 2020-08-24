@@ -44,7 +44,7 @@ Siga el manual en [git página de instalación](../Installing-AndroidAPS/git-ins
 
 * When done Android Studio will inform you that "all files are up-to-date".
     
-    ![All files up to date](../images/AndroidStudio361_Update04.png)
+    ![Todos los archivos están actualizados](../images/AndroidStudio361_Update04.png)
 
 ## Generar APK firmado
 
@@ -64,16 +64,16 @@ Siga el manual en [git página de instalación](../Installing-AndroidAPS/git-ins
 * If the box to remember passwords is checked you don't have to enter them. In case the box was not checked during last build and you cannot remember the passwords refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
 * Haga clic en "Siguiente".
 
-![Key store](../images/AndroidStudio361_Update05.png)
+![Almacén de claves](../images/AndroidStudio361_Update05.png)
 
-* Select build variant "fullRelease" (1.). 
-* Check boxes V1 and V2 for signature versions (2.).
-* Click "Finish". (3.)
+* Seleccione la variante de compilación "fullRelease" (1.). 
+* Marque las casillas V1 y V2 para las versiones de firma (2.).
+* Haga clic en "Finalizar". (3.)
 
-![Finish build](../images/AndroidStudio361_32.png)
+![Finalizar construcción](../images/AndroidStudio361_32.png)
 
-* Android Studio will display the information "APK(s) generated successfully..." after build is finished.
-* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* Android Studio mostrará la información "APK(s) generados con éxito..." una vez finalizada la compilación.
+* En caso de que la compilación no fuera exitosa, consulte la sección [solución de problemas](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
 * Easiest way to find the apk is to click on "Event log".
 
 ![Build successfully - event log](../images/AndroidStudio361_33.png)
