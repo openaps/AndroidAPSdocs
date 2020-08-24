@@ -30,7 +30,7 @@ Hay límites de seguridad basados en la edad que selecciona aquí. Si sobrepasa 
     
     ![Asistente de Bolos 80%](../images/BolusWizardPartDelivery.png)
 
-* Option to enable [superbolus](../Getting-Started/Screenshots#section-h) in bolus wizard.
+* Opción para habilitar [superbolo](../Getting-Started/Screenshots#section-h) en el asistente de bolos.
 
 ### Luces de estado
 
