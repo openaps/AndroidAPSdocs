@@ -1,10 +1,10 @@
-# Sample setup: Samsung S7, Dana RS, Dexcom G6 and Sony Smartwatch
+# Ejemplo de instalación: Samsung S7, DanaR, Dexcom G5 y el Smartwatch de Sony
 
 ![Configuración de ejemplo](../images/SampleSetup.png)
 
 ## Descripción
 
-En esta configuración, se utiliza el Samsung Galaxy S7 como centro de control del lazo. The slightly modified Dexcom App reads glucose values from the Dexcom G6 CGM. AndroidAPS is used to control the Dana RS insulin pump from Korean manufacturer SOOIL via bluetooth. No se requieren otros dispositivos.
+En esta configuración, se utiliza el Samsung Galaxy S7 como centro de control del lazo. La aplicación Dexcom, ligeramente modificada, lee los valores de glucosa del sensor MCG Dexcom G6. Se utiliza AndroidAPS para controlar la bomba de insulina Dana R del fabricante coreano SOOIL a través de bluetooth. No se requieren otros dispositivos.
 
 Como la aplicación Dexcom sólo ofrece opciones de alarma limitadas, la aplicación de código abierto xDrip+ se utiliza para definir no sólo alarmas altas y bajas, sino también alarmas adicionales según las necesidades individuales.
 
@@ -26,8 +26,8 @@ Sin embargo, los datos se subirán automáticamente a Nightscout "en la nube" cu
     * [Accu-Check Combo](../Configuration/Accu-Chek-Combo-Pump.md)
     * [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
     * [DanaR](../Configuration/DanaR-Insulin-Pump.md)
-    * [Some old Medtronic pumps (additionally needed: RileyLink/Gnarl hardware, Android Phone with bluetooth low energy / BLE-chipset)](../Configuration/MedtronicPump.md)
-    * Other pumps might be available in the future, see [future possible pump drivers](Future-possible-Pump-Drivers.md) for details.
+    * [Algunas bombas Medtronic antiguas (además necesarias: hardware RileyLink/Gnarl, Android Phone con bluetooth low energy/BLE-chipset)](../Configuration/MedtronicPump.md)
+    * Puede que otras bombas estén disponibles en el futuro, vea [futuros drivers de bomba ](Future-possible-Pump-Drivers.md) para obtener detalles.
 
 3. [Dexcom G6](https://dexcom.com)
     
@@ -35,7 +35,7 @@ Sin embargo, los datos se subirán automáticamente a Nightscout "en la nube" cu
 
 4. Opcional: Sony Smartwatch 3 (SWR50)
     
-    * Alternatives: All [watches with Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) should work fine, for details see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS (OS must be Android Wear)
+    * Alternativas: Todos los relojes [con Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) deben funcionar bien, para detalles ver la lista [de teléfonos probados y relojes](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) para AndroidAPS (OS debe ser Android Wear)
 
 ## Nightscout
 
@@ -77,7 +77,7 @@ La aplicación de Dexcom original de Google Play Store no funcionará porque no 
 
 A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 [app for your region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app).
 
-To do this perform the following steps on your smartphone:
+Para ello, realice los pasos siguientes en el smartphone:
 
 1. Si la aplicación Dexcom original ya está instalada: 
     * Detener Sensor
@@ -142,7 +142,7 @@ With an Android Wear smartwatch life with diabetes can be made even more inconsp
 
 ![Smartwatches (Relojes inteligentes)](../images/SampleSetupSmartwatch.png)
 
-Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
+Detalles sobre la información mostrada en el watchface se pueden encontrar [aquí](../Configuration/Watchfaces.md).
 
 * Instale la aplicación "Android Wear" en su smartphone a través de Google Play Store y conecte el smartwatch de acuerdo con las instrucciones allí.
 * En AAPS elija el menú de hamburguesa (esquina superior izquierda) > Configurar Builder > General (al final de la lista) > Usar > activar en el lado izquierdo, haga clic en el engranaje > Usar ajustes y activar `Controles desde el reloj`
