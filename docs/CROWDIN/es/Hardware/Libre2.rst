@@ -1,7 +1,7 @@
 Freestyle libre 2
 **************************************************
 
-El sistema Freestyle Libre 2 puede reportar automáticamente niveles peligrosos de glucosa en sangre. El Sensor Libre2 envía el nivel de azúcar en sangre actual a un receptor (lector o smartphone) cada minuto. El receptor activa una alarma si es necesario. With a self-modified LibreLink app and the xDrip+ app, you can continuously receive and display your blood sugar level on your smartphone. 
+El sistema Freestyle Libre 2 puede reportar automáticamente niveles peligrosos de glucosa en sangre. El Sensor Libre2 envía el nivel de azúcar en sangre actual a un receptor (lector o smartphone) cada minuto. El receptor activa una alarma si es necesario. Con una aplicación de LibreLink parcheada y la aplicación xDrip +, puede recibir y ver continuamente su nivel de glucemia en su teléfono. 
 
 El sensor puede ser calibrado en el rango de -40 mg/dl a +20 mg/dl (-2,2 mmol/l a +1,1 mmol/l) para ajustar las diferencias entre las mediciones del pinchazo de los dedos y las lecturas del sensor.
 
@@ -10,9 +10,9 @@ Las lecturas de BG también se pueden hacer usando un transmisor BT como con el 
 Paso 1: Construye tu propia Librelink-App parcheada
 ==================================================
 
-Por razones legales, el llamado parche tiene que ser hecho por usted mismo. Utilizar motores de búsqueda para encontrar los enlaces correspondientes. There are mainly two variants: The recommended original patched app blocks any internet traffic to avoid tracking. La otra variante es compatible con LibreView que puede ser necesario para su médico.
+Por razones legales, el llamado parche tiene que ser hecho por usted mismo. Utilizar motores de búsqueda para encontrar los enlaces correspondientes. Hay principalmente dos variantes: La aplicación parcheada bloquea cualquier tráfico de Internet para evitar el rastreo. La otra variante es compatible con LibreView que puede ser necesario para su médico.
 
-The patched app has to be installed instead of the original app. The next sensor started with it will transmit the current BG values to the xDrip+ app running on your smartphone via Bluetooth.
+La aplicación parcheada tiene que ser instalada en lugar de la app original. El siguiente sensor iniciado con él transmitirá los valores actuales de BG a la aplicación xDrip + que se ejecuta en su smartphone a través de Bluetooth.
 
 Importante: Para evitar posibles problemas puede ayudar a instalar y desinstalar la aplicación original en un smartphone con capacidad NFC. NFC tiene que estar habilitado. Esto no suma consumo a la batería. A continuación, instale la aplicación parcheada. 
 
@@ -21,10 +21,10 @@ La aplicación parcheada se puede identificar mediante la notificación de autor
 .. image:: ../images/Libre2_ForegroundServiceNotification.png
   :alt: LibreLink Servicio en segundo plano
 
-Other indications could be the Linux penguin logo three dot menu -> Info or the font of the patched app. These criteria are optional depending on the app source you choose.
+Otras indicaciones podrían ser el logotipo del pingüino de Linux tres puntos del menú-> Info o la fuente de la aplicación parcheada. Estos criterios son opcionales en función de la fuente de aplicación que elija.
 
-.. image:: ../images/LibreLinkPatchedCheck.png
-  :alt: LibreLink Font Check
+.. imagen:: ../images/LibreLinkPatchedCheck.png
+  :alt: Comprobación de fuentes de LibreLink
 
 Asegúrese de que NFC esté activado, habilite el permiso de memoria y ubicación para la aplicación parcheada, habilite el tiempo y el huso horario automáticos y establezca al menos una alarma en la aplicación parcheada. 
 
@@ -38,7 +38,7 @@ Ajustes obligatorios para el inicio del sensor con éxito:
 * configuración automática de hora y zona horaria
 * establecer al menos una alarma en la aplicación parchada
 
-Please note that the location service is a central setting. Este no es el permiso de ubicación de la aplicación que tiene que estar habilitado también!
+Tenga en cuenta que el servicio de ubicación es imprescindible. Este no es el permiso de ubicación de la aplicación que tiene que estar habilitado también!
 
 .. image:: ../images/Libre2_AppPermissionsAndLocation.png
   :alt: LibreLink permisos de memoria y ubicación
@@ -165,7 +165,7 @@ Zona horaria viajando
 --------------------------------------------------
 En otros `husos horarios <../Usage/Timezone-traveling.html>` _ hay dos estrategias para el hacer lazo cerrado: 
 
-Either 
+Cualquiera 
 
 1. dejar el tiempo del smartphone sin cambios y cambiar el perfil basal (smartphone en modalidad de vuelo) o 
 2. borrar el historial de la bomba y cambiar la hora del smartphone a la hora local. 
@@ -174,7 +174,7 @@ Método 1. es genial siempre y cuando usted no tiene que establecer un nuevo Lib
 
 Experiencias
 --------------------------------------------------
-En conjunto, es uno de los sistemas de MCG más pequeños del mercado. Pequeño, sin transmisor adicional y en su mayoría los valores son muy precisos sin fluctuaciones. After approx. 12 hours running-in phase with deviations of up to 30 mg/dl (1,7 mmol/l)the deviations are typical smaller than 10 mg/dl (0,6 mmol/l). Los mejores resultados se obtiene en el ante brazo posición trasera, otros puntos de inserción vaya con precaución! No hay necesidad de establecer un nuevo sensor un día antes para que se ajuste. Eso alteraría el mecanismo de nivelación interna.
+En conjunto, es uno de los sistemas de MCG más pequeños del mercado. Pequeño, sin transmisor adicional y en su mayoría los valores son muy precisos sin fluctuaciones. Después de aproximadamente 12 horas de funcionamiento-en fase con desviaciones de hasta 30 mg/dl (1,7 mmol/l), las desviaciones son típicas inferiores a 10 mg/dl (0,6 mmol/l). Los mejores resultados se obtiene en el ante brazo posición trasera, otros puntos de inserción vaya con precaución! No hay necesidad de establecer un nuevo sensor un día antes para que se ajuste. Eso alteraría el mecanismo de nivelación interna.
 
 Parece que hay malos sensores de vez en cuando, que están muy lejos de los valores de la sangre. Se queda así. Estos deben ser sustituidos inmediatamente.
 
