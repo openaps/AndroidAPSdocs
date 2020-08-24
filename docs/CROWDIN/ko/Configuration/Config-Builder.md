@@ -254,21 +254,21 @@ SMS를 통해 일부 AndroidAPS 기능을 보호자가 원격으로 조정할 �
 
 ### 음식
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Nightscout에서 미리 설정한 음식 정보를 사용할 수 있도록 합니다. 설정에 대한 더 많은 정보는 [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods)에서 확인할 수 있습니다.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+참고: AndroidAPS 계산기에서는 입력 항목들을 사용할 수 없습니다. (보기 전용)
 
-### Wear
+### 워치
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Android Wear watch를 사용하여 AAPS를 모니터하고 제어합니다 ([Watchfaces 페이지](../Configuration/Watchfaces.md) 참고). Watch로 주입할 bolus를 계산할 때 어떤 변수들(즉, 15분 추이, COB...)를 고려할 것인지 (톱니바퀴 버튼에서) 설정할 수 있습니다.
 
-If you want to bolus etc. "Wear 설정"에서 "Watch로부터 컨트롤하기"를 사용합니다.
+Watch에서 bolus 주입 등을 하려면, "Wear 설정"에서 "Watch로부터 컨트롤하기"를 활성화합니다.
 
 ![Wear settings](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+Wear 탭 또는 ≡ 버튼(화면의 왼쪽 상단, 탭이 표시되지 않을 경우) 에서 다음을 수행할 수 있습니다.
 
-* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
+* 모든 데이터 다시 보내기. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
 * Open settings on your watch directly from your phone.
 
 ### xDrip Statusline (watch)
