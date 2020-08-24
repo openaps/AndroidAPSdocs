@@ -250,9 +250,9 @@ AndroidAPS에는 단계적으로 수행해야 하는 몇 가지 목표가 있습
 
 ### SMS 통신기
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
+SMS를 통해 일부 AndroidAPS 기능을 보호자가 원격으로 조정할 수 있습니다. 설정에 대한 더 많은 정보는 [SMS Commands](../Children/SMS-Commands.rst)에서 확인할 수 있습니다.
 
-### Food
+### 음식
 
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
