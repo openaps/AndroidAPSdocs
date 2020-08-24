@@ -268,8 +268,8 @@ Watch에서 bolus 주입 등을 하려면, "Wear 설정"에서 "Watch로부터 �
 
 Wear 탭 또는 ≡ 버튼(화면의 왼쪽 상단, 탭이 표시되지 않을 경우) 에서 다음을 수행할 수 있습니다.
 
-* 모든 데이터 다시 보내기. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
+* 모든 데이터 다시 보내기. Watch와의 연결이 얼마 동안 끊긴 경우 watch에 정보를 보내고 싶을 때 도움이 됨.
+* 폰에서 직접 watch 설정을 실행함.
 
 ### xDrip Statusline (watch)
 
