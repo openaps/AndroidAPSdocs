@@ -104,10 +104,10 @@ En la pantalla de bienvenida de Android Studio, haga clic en el triángulo peque
 
 ![Instalación automática de git satisfactoria](../images/AndroidStudio361_10.png)
 
-* In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
-* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where it can be found. You are looking for git.exe located in \bin\ folder.
-* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
-* Close settings window by clicking "OK" button (5.).
+* En caso de archivo git.exe no se puede encontrar clic en "OK" en el cuadro de diálogo (1.) y luego el botón con los tres puntos (2.).
+* Utilice la función de búsqueda [](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) en el explorador de Windows para encontrar "git.exe" si no está seguro de dónde se encuentra. Está buscando git.exe ubicado en la carpeta \bin\.
+* Seleccione la vía de acceso a git.exe y asegúrese de seleccionar la carpeta en ** \bin\ ** carpeta (3.) y haga clic en "Aceptar" (4.).
+* Cierre la ventana de configuración haciendo clic en el botón "Aceptar" (5.).
 
 ![Error en la instalación automática de git](../images/AndroidStudio361_11.png)
 
@@ -117,16 +117,16 @@ En la pantalla de bienvenida de Android Studio, haga clic en el triángulo peque
 
 * Cualquier versión de git sirve. Por ejemplo, `https://git-scm.com/download/mac <https://git-scm.com/download/mac>.
 * Utilice homebrew para instalar git: ```$brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Para más detalles sobre la instalación de git, consulte la documentación oficial del [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * Si instala git a través de un homebrew, no es necesario cambiar ninguna preferencia. Solo por caso: se puedan encontrar aquí: Android Studio - Preferencias.
 
 ## Descargar código de AndroidAPS
 
-* **If you haven't already rebooted your computer after setting git path in preferences do it now. System environment must be updated.**
-* On the Android Studio welcome screen click the small triangle right of "Check out project from version control" (1.).
+* **Si aún no ha reiniciado su equipo después de configurar la ruta de git en las preferencias, hágalo ahora. El entorno del sistema debe actualizarse.**
+* En la pantalla de bienvenida de Android Studio haz clic en el triángulo pequeño a la derecha de "Revisar proyecto desde el control de versión" (1.).
 * Seleccione "Git" (2.).
 
-![Check out project from version control from welcome screen](../images/AndroidStudio361_12.png)
+![Revisa el proyecto desde el control de versiones desde la pantalla de bienvenida](../images/AndroidStudio361_12.png)
 
 * If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.) > Git (4.).
 
@@ -143,7 +143,7 @@ En la pantalla de bienvenida de Android Studio, haga clic en el triángulo peque
 
 * Do not click "Background" while repository is cloned!
 
-![Clone repository - no background action](../images/AndroidStudio361_15.png)
+![Clonar repositorio - no hay ninguna acción en segundo plano](../images/AndroidStudio361_15.png)
 
 * After repository is cloned successfully open your local copy by clicking "Yes".
 
@@ -151,11 +151,11 @@ En la pantalla de bienvenida de Android Studio, haga clic en el triángulo peque
 
 * In the lower right corner you will see the information that Android Studio is running background tasks.
 
-![Background tasks](../images/AndroidStudio361_17.png)
+![Tareas en segundo plano](../images/AndroidStudio361_17.png)
 
 * Grant access if your firewall is asking for permission.
 
-![Firewall permission java](../images/AndroidStudio361_18.png)
+![Permiso de cortafuegos java](../images/AndroidStudio361_18.png)
 
 * Once the background tasks are finished you will probably see the following error message:
 
@@ -179,15 +179,15 @@ En la pantalla de bienvenida de Android Studio, haga clic en el triángulo peque
 
 * Acepte el acuerdo de licencia (1.) y haga clic en "Next" (2.).
 
-![Accept SDK licence](../images/AndroidStudio361_23.png)
+![Aceptar licencia SDK](../images/AndroidStudio361_23.png)
 
-* Wait until installation is finished.
+* Espere hasta que termine la instalación.
 
-![Wait during SDK installation](../images/AndroidStudio361_24.png)
+![Espere durante la instalación de SDK](../images/AndroidStudio361_24.png)
 
-* When SDK installation is completed the "Finish" button will turn blue. Click this button.
+* Cuando se complete la instalación de SDK el botón "Finalizar" se volverá azul. Pulse el botón.
 
-![Finish SDK installation](../images/AndroidStudio361_25.png)
+![Finalizar la instalación del SDK](../images/AndroidStudio361_25.png)
 
 * Android Studio might recommend to update the gradle system. **Nunca actualice gradle! ** Esto podría llevar a dificultades!
 * If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1.) and in the dialog box on "Don't remind me again for this project" (2.).
@@ -196,13 +196,13 @@ En la pantalla de bienvenida de Android Studio, haga clic en el triángulo peque
 
 ## Generar APK firmado
 
-Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. Esto es necesario porque Android tiene una regla que sólo acepta el código firmado para ejecutarse por razones de seguridad. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. Esto es necesario porque Android tiene una regla que sólo acepta el código firmado para ejecutarse por razones de seguridad. Para obtener más información sobre este tema, siga [este enlace](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
 
-![Build apk](../images/AndroidStudio361_27.png)
+![Crear apk](../images/AndroidStudio361_27.png)
 
-* Select "APK" (1.) instead of "Android App Bundle" and click "Next" (2.).
+* Seleccione "APK" (1.) en lugar de "Android App Bundle" y haga clic en "Next" (2.).
 
 ![APK instead of bundle](../images/AndroidStudio361_28.png)
 
