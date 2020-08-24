@@ -52,9 +52,9 @@ Siga el manual en [git página de instalación](../Installing-AndroidAPS/git-ins
 
 * Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
 
-![Build apk](../images/AndroidStudio361_27.png)
+![Crear apk](../images/AndroidStudio361_27.png)
 
-* Select "APK" (1.) instead of "Android App Bundle" and click "Next" (2.).
+* Seleccione "APK" (1.) en lugar de "Android App Bundle" y haga clic en "Next" (2.).
 
 ![APK instead of bundle](../images/AndroidStudio361_28.png)
 
