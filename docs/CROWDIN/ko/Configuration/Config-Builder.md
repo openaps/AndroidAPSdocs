@@ -271,33 +271,33 @@ Wear 탭 또는 ≡ 버튼(화면의 왼쪽 상단, 탭이 표시되지 않을 �
 * 모든 데이터 다시 보내기. Watch와의 연결이 얼마 동안 끊긴 경우 watch에 정보를 보내고 싶을 때 도움이 됨.
 * 폰에서 직접 watch 설정을 실행함.
 
-### xDrip Statusline (watch)
+### xDrip 상태표시라인 (워치)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+xDrip+의 watchface에 loop 정보를 표시합니다 (AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)를 사용하고 있지 않은 경우).
 
-### Ongoing Notification
+### 상시 알림
 
-Displays a summary of current BG, delta, active TBR%, active basal u/h and profile, IOB and split into bolus IOB and basal IOB on the phones's dropdown screen and phone's lock screen.
+현재의 혈당값, 증분, 활성 TBR%, 활성 basal 양(u/h) 및 프로파일, IOB (bolus IOB, basal IOB로 세분화 함)의 요약을 폰의 알림창 또는 잠금 화면에서 보여줍니다.
 
 ![AAPS widget](../images/ConfBuild_Widget.png)
 
 ### NS Client
 
-Setup sync of your AndroidAPS data with Nightscout.
+AndroidAPS의 설정을 Nightscout과 동기화합니다.
 
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimization not disabled for AAPS) but can flood the Nightscout graph with entries.
+만약 **앱 시작을 NS에 기록하기**를 활성화하면, 실행할 때마다 AndroidAPS가 Nightscout에 나타날 것입니다. 앱의 문제 (즉, AAPS가 배터리 최적화 제외 안됨)을 찾기에 유용할 수 있으나, 입력 사항이 Nightscout 그래프에 범람할 수 있습니다.
 
-#### Alarm options
+#### 알람 옵션
 
-Activate/deactivate AndroidAPS alarms
+AndroidAPS 알람을 활성화/비활성화 시킵니다.
 
-![Alarm options](../images/ConfBuild_NSClient_Alarms.png)
+![알람 옵션](../images/ConfBuild_NSClient_Alarms.png)
 
-#### Connection settings
+#### 연결 설정
 
-Offline looping, disable roaming...
+오프라인 loop, 로밍 사용 안함...
 
-If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
+특정 WiFi 네트워크만 사용하려면, 해당 **WiFi SSID**를 입력할 수 있습니다. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
 
 ![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
 
