@@ -303,11 +303,11 @@ AndroidAPS 알람을 활성화/비활성화 시킵니다.
 
 #### 고급 설정
 
-* Nightscout에서 누락된 혈당을 자동 다시 가져옴
-* Create announcement from errors Create Nightscout announcement for error dialogs and local alerts (also viewable in careportal in treatments section)
-* Enable local broadcast to other apps like xDrip+
-* NS upload only (sync disabled)
-* No upload to NS
+* Nightscout에서 누락된 혈당을 자동 다시 가져옴.
+* 에러 발생 시 알림 생성 에러 발생에 대한 nightscout 알림과 로컬 경고(관리 섹션의 케어포털에서도 확인 가능)을 생성.
+* xDrip+ 등 다른 앱들에 대해 로컬 전송을 활성화 함.
+* NS에 업로드만 하기 (동기화 안됨)
+* NS에 업로드하지 않기
 * Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
 
 ![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
