@@ -297,13 +297,13 @@ AndroidAPS 알람을 활성화/비활성화 시킵니다.
 
 오프라인 loop, 로밍 사용 안함...
 
-특정 WiFi 네트워크만 사용하려면, 해당 **WiFi SSID**를 입력할 수 있습니다. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
+특정 WiFi 네트워크만 사용하려면, 해당 **WiFi SSID**를 입력할 수 있습니다. 각각의 SSID를 세미콜론으로 구분할 수 있습니다. 모든 SSID를 삭제하려면 필드에 아무것도 입력하지 않습니다.
 
 ![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
 
 #### 고급 설정
 
-* Auto backfill missing BGs from Nightscout
+* Nightscout에서 누락된 혈당을 자동 다시 가져옴
 * Create announcement from errors Create Nightscout announcement for error dialogs and local alerts (also viewable in careportal in treatments section)
 * Enable local broadcast to other apps like xDrip+
 * NS upload only (sync disabled)
