@@ -1,29 +1,30 @@
 # Das AndroidAPS Projekt unterstützen
 
-## AndroidAPS operates entirely on volunteer efforts and has no paid staff.
+## AndroidAPS lebt ausschließlich von ehrenamtlichem Einsatz und hat keine bezahlten Mitarbeiter.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Eltern, Betreuer, geliebte Personen und Menschen mit Diabetes arbeiten zusammen, um die Entwicklung einer Lösung für ein sehr verbreitetes Problem voranzutreiben. </br>Die Entwickler arbeiten kostenlos in ihrer Freizeit. Aber es wäre etwas unfair von ihnen zu erwarten, zusätzliche Ausgaben auf sich zu nehmen, um ein solch fantastisches Projekt kostenfrei für alle als Open Source zur Verfügung zu stellen.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*Um ein neues Gerät vollständig zu testen, benötigen die Entwickler ein Ersatzgerät und eine Ersatzpumpe, denn diese Tests können nicht an Menschen durchgeführt werden, bevor AndroidAPS stabil läuft. Neuere Pumpenmodelle und CGM-Geräte müssen getestet werden, sobald sie verfügbar sind. Ein Teil des gespendeten Geldes wird auch für den weltweiten Versand dieser Testgeräte an die Entwickler benötigt.   
+Außerdem ist es einfach auch eine gute Idee, etwas zu den Reisekosten der Entwickler beizutragen, damit diese ihre dunklen Kellerräume verlassen und ihre Köpfe auf Konferenzen und anderen Veranstaltungen zusammen stecken können.*
 
-## I can write code! How do I participate?
+## Ich kann programmieren! Wie kann ich mich beteiligen?
 
-Yay! Look at the issues, ask in the gitter channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+Juhuu! Schau dir die Issues an, frag im Gitter Channel. Es gibt immer viel zu tun! Suche dir zunächst eine kleine Aufgabe aus und mache deinen ersten pull request! :)
 
-## I know the system and can write documentation!
+## Ich kenne mich aus mit dem System und möchte bei den Docs mitschreiben!
 
-Great, this is a highly appreciated thing and a good way to pay it foreward!
+Großartig, das ist sehr willkommen und eine gute Möglichkeit, etwas beizutragen!
 
 * Den bisher hauptsächlich verwendeten Gitter-Channel über das Wiki findest du hier: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). Alternativ erreichst Du das Dokumentationsteam über die neue Mailadresse wiki@androidaps.org.
 * Eine Anleitung, wie man Beiträge auf Englisch hinzufügt und bearbeitet, ist hier zu finden: [Am Wiki mitschreiben](../make-a-PR.md). Andere Sprachen können nur übersetzt, aber nicht bearbeitet werden. Dadurch wird die Einheitlichkeit des Wikis in allen Sprachen gewährleistet.
 
-## I do speak multiple languages and whant to translate the app or the documentation
+## Ich spreche mehrere Sprachen und würde gerne bei der Übersetzung der App bzw. des Wikis helfen
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
-* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
+* Falls du die **die App** in andere Sprachen übersetzen willst (danke), nutze bitte [crowdin](https://crowdin.com/project/androidaps).
+* Falls du die **die Docs** in andere Sprachen übersetzen willst (danke), nutze bitte [crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Registriere dich einfach bei CROWDIN, wähle deine Sprache aus, warte bis der Admin deine Anfrage bestätigt und schon kannst du loslegen!
 
-## Are there aother ways to help?
+## Gibt es weitere Möglichkeiten, zu helfen?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+Wir brauchen auch Grafikdesigner, Experten für User Experience, Übersetzer und Autoren für das Wiki. Oder bringe das Projekt dadurch voran, dass du die einfachen Fragen auf Gitter und Facebook beantwortest, damit sich die Entwickler darauf konzentrieren, die harten Nüsse zu knacken.
