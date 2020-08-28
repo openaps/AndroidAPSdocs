@@ -19,8 +19,8 @@ Dexcom G5를 Dexcom 앱(패치버전)과 사용하는 경우
    .. image:: ../images/DexcomG5regionURL.PNG
      :alt: Region in Dexcom G5 URL
 
-* Stop sensor and uninstall the original Dexcom app, if not already done.
-* Install downloaded apk
-* Start sensor
-* Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
-* If you want to use xDrip alarms via local broadcast: in xDrip hamburger menu > settings > hardware data source > 640G /EverSense.
+* 오리지날 Dexcom 앱이 남아 있는 경우 센서를 스탑하고 삭제합니다.
+* 다운로드 된 apk를 설치합니다.
+* 센서를 시작합니다.
+* 구성 관리자 (AndroidAPS의 설정)에서 Dexcom 앱 (패치버전)을 선택합니다.
+* local broadcast를 통해 xDrip 알람을 사용하려면 xDrip 메뉴 > 설정 > 하드웨어 데이터 출처 > 640G /EverSense를 선택하십시오.
