@@ -1,48 +1,29 @@
 # Das AndroidAPS Projekt unterstützen
 
-**AndroidAPS lebt ausschließlich von ehrenamtlichem Einsatz und hat keine bezahlten Mitarbeiter.**
+## AndroidAPS operates entirely on volunteer efforts and has no paid staff.
 
-Eltern, Betreuer, geliebte Personen und Menschen mit Diabetes arbeiten zusammen, um die Entwicklung einer Lösung für ein sehr verbreitetes Problem voranzutreiben. Die Entwickler arbeiten kostenlos in ihrer Freizeit. Aber es wäre etwas unfair von ihnen zu erwarten, Ausgaben auf sich zu nehmen, um ein solch fantastisches Projekt kostenlos für alle als Open Source zur Verfügung stellen zu können.
+Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
 
-*Um ein neues Gerät vollständig zu testen, benötigen die Entwickler ein Ersatzgerät und eine Ersatzpumpe, denn solche Tests können nicht an Menschen durchgeführt werden, bevor AndroidAPS stabil läuft. Neuere Pumpenmodelle und CGM-Geräte müssen getestet werden, sobald sie verfügbar sind. Ein Teil des gespendeten Geldes wird auch für den weltweiten Versand dieser Testgeräte an die Entwickler benötigt. Außerdem ist es gut, etwas zu den Reisekosten der Entwickler beizutragen, damit sie die dunklen Kellerräume verlassen und ihre Köpfe auf Konferenzen und anderen Veranstaltungen zusammenstecken können.*
+*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
 
-**Ich kann programmieren! Wie kann ich mich beteiligen?**
+## I can write code! How do I participate?
 
-Juhuu! Schau dir die Probleme an, frag im Gitter-Channel. Es gibt immer viel zu tun! Suche dir zunächst eine kleine Aufgabe aus und mache deinen ersten Pull Request! :)
+Yay! Look at the issues, ask in the gitter channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
 
-**Ich kenne mich aus mit dem System und möchte beim Wiki mitschreiben!**
+## I know the system and can write documentation!
 
-Großartig, das ist sehr willkommen und eine gute Möglichkeit, etwas beizutragen!
+Great, this is a highly appreciated thing and a good way to pay it foreward!
 
 * Den bisher hauptsächlich verwendeten Gitter-Channel über das Wiki findest du hier: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). Alternativ erreichst Du das Dokumentationsteam über die neue Mailadresse wiki@androidaps.org.
 * Eine Anleitung, wie man Beiträge auf Englisch hinzufügt und bearbeitet, ist hier zu finden: [Am Wiki mitschreiben](../make-a-PR.md). Andere Sprachen können nur übersetzt, aber nicht bearbeitet werden. Dadurch wird die Einheitlichkeit des Wikis in allen Sprachen gewährleistet.
 
-**Ich spreche mehrere Sprachen und würde gerne bei der Übersetzung der App bzw. des Wikis helfen**
+## I do speak multiple languages and whant to translate the app or the documentation
 
-* Falls du die **die App** in andere Sprachen übersetzen willst (danke), nutze bitte [crowdin](https://translations.androidaps.org).
-* Falls du **das Wiki** in andere Sprachen übersetzen willst (danke), nutze bitte [crowdin](https://wikitranslations.androidaps.org). 
+* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
+* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Registriere dich einfach bei CROWDIN, wähle deine Sprache aus, warte bis der Admin deine Anfrage bestätigt und schon kannst du loslegen!
+Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
 
-**Ich habe Geld, das ich gerne spenden würde, wie gehe ich vor?**
+## Are there aother ways to help?
 
-    PayPal: [donations@androidaps.org] (donations@androidaps.org)  
-    
-
-**Für was wird das Geld ausgegeben?**
-
-Das Geld wird NICHT dafür benutzt, um jemanden für seine Arbeit zu bezahlen! Es wird aufbewahrt, um die Kosten für die Entwickler bei der Organisation von Treffen niedrig zu halten. Dabei wird versucht, transparent damit umzugehen. Hier ein Beispiel aus dem Jahr 2018:
-
-* Europäisches Entwicklertreffen in Prag Ende Mai 2018:
-* Raummiete und Internet
-* Ausrüstung
-* Verpflegung / Kaffee
-* Im unwahrscheinlichen Fall, dass die o.g. Kosten durch Spenden voll abgedeckt sind und etwas Geld übrig bleibt: Reisekosten für die Entwickler mit weiterer Anreise. (Einige Entwickler von anderen Kontinenten werden teilnehmen, sind zu der Zeit aber bereits in Europa, so dass die Reisekosten niedrig bleiben.)
-
-**Ich habe Ersatzgeräte, die ich gerne spenden würde, wohin kann ich sie senden?**
-
-Derzeit sammeln wir "wird später zur Verfügung gestellt", um sie zum Testen zu verteilen. Sollten am Ende Geräte übrig bleiben, so werden wir diese an einer der Pay-it-Forward Facebook Gruppen spenden, die bereits existieren und die T1 Community unterstützen. Falls du Ersatzgeräte spenden möchtest, schicke bitte eine E-Mail an developers@androidaps.org, sodass wir dir eine Lieferungsanschrift geben können.
-
-**Ich kann weder spenden noch habe ich Ersatzgeräte. Wie kann ich trotzdem helfen?**
-
-Wir benötigen auch Grafikdesigner, Experten für User Experience, Übersetzer und Autoren für das Wiki. Oder bringe das Projekt einfach dadurch voran, dass du die Fragen auf Gitter und Facebook beantwortest. Dann können sich die Entwickler darauf konzentrieren, die harten Nüsse zu knacken.
+Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
