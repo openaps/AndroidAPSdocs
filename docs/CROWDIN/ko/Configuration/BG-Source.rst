@@ -15,7 +15,7 @@
    Libre 2 <../Hardware/Libre2.rst>
    Libre 1 <../Hardware/Libre1.rst>
    Eversense <../Hardware/Eversense.rst>
-   MM640g/MM630g  <../Hardware/MM640g.rst>
+   MM640g/MM630g <../Hardware/MM640g.rst>
    PocTech <../Hardware/PocTech.rst>   
-   Nightscout as BG Source <../Hardware/CGMNightscoutUpload.rst>
+   혈당 출처로 Nightscout을 사용 <../Hardware/CGMNightscoutUpload.rst>
    
