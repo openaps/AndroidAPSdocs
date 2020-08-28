@@ -1,48 +1,29 @@
 # Hoe kan je helpen met AndroidAPS?
 
-**AndroidAPS draait volledig op inzet van vrijwilligers en heeft geen betaald personeel.**
+## AndroidAPS operates entirely on volunteer efforts and has no paid staff.
 
-Ontwikkelaars zijn ouders, verzorgers, partners en mensen met diabetes ze ontwikkelen en verbeteren samen een gemeenschappelijke oplossing. Ontwikkelaars besteden hier hun eigen tijd aan, maar we kunnen niet van ze verwachten om extra kosten te maken om deze geweldige open source oplossing voor iedereen vrij beschikbaar te maken.
+Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
 
-*Om een nieuwe pomp-AAPS combinatie volledig te kunnen testen hebben zij vaak een reserve telefoon en pomp nodig, voordat het als stabiele oplossing op een mens gebruikt kan worden. Nieuwe modellen moeten worden getest, zodra deze beschikbaar komen. Een deel van het gedoneerde geld is nodig om de hulpmiddelen te versturen naar de ontwikkelaars in verschillende landen. Soms is het ook leuk om de ontwikkelaars vanuit hun donkere kamers uit te nodigen op conferenties of andere events, waar zij andere ontwikkelaars kunnen ontmoeten en zich kunnen laten inspireren.*
+*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
 
-**Ik kan programmeren! Hoe doe ik mee?**
+## I can write code! How do I participate?
 
-Ja! Bekijk de problemen, vraag in het Gitter kanaal, er is altijd genoeg te doen! Pak een kleine taak als eerste en maak je eerste Pull Request! :)
+Yay! Look at the issues, ask in the gitter channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
 
-**Ik ken de AAPS-oplossing en kan documentatie schrijven!**
+## I know the system and can write documentation!
 
-Mooi, dit wordt zeer gewaardeerd en is een prima manier om je steentje bij te dragen #payitforward.
+Great, this is a highly appreciated thing and a good way to pay it foreward!
 
 * Het oude gitter kanaal voor de wiki kan je hier vinden: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). In plaats daarvan kun je nu ook contact opnemen met de schrijvers van de wiki via het nieuwe e-mailadres: wiki@androidaps.org.
 * Een instructie hoe je Commits op de Engelse wiki kunt doen: [How to make a PR](../make-a-PR.md). Andere talen worden alleen vertaald uit het Engels en worden verder niet bewerkt, om de wiki consistent te houden.
 
-**Ik spreek meedere talen en wil de AAPS applicatie of documentatie vertalen.**
+## I do speak multiple languages and whant to translate the app or the documentation
 
-* Als je de **app** naar andere talen wilt vertalen (dank!), dan gebruik je [crowdin](https://translations.androidaps.org).
-* Als je de **wiki** naar andere talen wilt vertalen (ook dank!), dan gebruik je [crowdin](https://wikitranslations.androidaps.org). 
+* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
+* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Meld je aan bij Crowdin, kies je taal en wacht op autorisatie door een admin en je kunt aan de slag!
+Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
 
-**Ik wil graag geld doneren, hoe doe ik dat?**
+## Are there aother ways to help?
 
-    PayPal: [donations@androidaps.org](donations@androidaps.org)  
-    
-
-**Waar wordt het geld voor gebruikt?**
-
-Het geld wordt niet uitbetaald aan iemand voor werk dat hij/zij doet! Het wordt gebruikt om de kosten laag te houden voor het organiseren van meetings tussen de ontwikkelaars. We streven transparantie herin na. Hier is een voorbeeld van 2018:
-
-* European Dev Meetup in Prague end of May 2018:
-* de huur van een kamer met internet
-* equipment
-* eten en koffie
-* in de onwaarschijnlijke situatie dat de kosten van bovenstaande volledig gedekt zijn: reiskosten voor diegene die van ver komen. (sommige ontwikkelaars van andere continenten zijn aanwezig, die dan al in Europa zijn, zodat de kosten laag blijven.)
-
-**Ik heb reserve apparaten, waar stuur ik deze naar toe?**
-
-We verzamelen, zodat we deze kunnen versturen om mee te testen. Aan het eind van het proces, worden apparaten gedoneerd aan de pay-it-forward facebook groepen die bestaan om de T1 community te supporten. Als je een reserve aparaat (pomp/telefoon) wilt doneren, neem dan contact op met developers@androidaps.org
-
-**Ik heb geen geld en geen apparaat te doneren, hoe kan ik toch helpen?**
-
-De benodigde skills zijn Grafische Vormgeving, UX design, vertalen, Wiki bewerken of simpelweg bijdragen in gitter en Facebook door vragen te beantwoorden, zodat de ontwikkelaars zich kunnen richten op het complexere werk.
+Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
