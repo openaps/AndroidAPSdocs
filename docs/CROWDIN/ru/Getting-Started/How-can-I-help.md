@@ -1,48 +1,29 @@
 # Как помочь с AndroidAPS
 
-**AndroidAPS работает полностью на добровольной основе и не имеет оплачиваемого персонала.**
+## AndroidAPS operates entirely on volunteer efforts and has no paid staff.
 
-Разработчики – родители, опекуны, близкие люди и люди с диабетом, работающие над развитием и улучшением решения общих задач. Разработчики безвозмездно выделяют свое свободное время, но несправедливо ожидать, что они будут нести дополнительные расходы, когда делают что-то такое удивительное с открытым исходным кодом и бесплатно для всех.
+Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
 
-*Для полного тестирования новой техники необходимо иметь дополнительный телефон и запасную помпу, так как людям нельзя пользоваться системой пока она не будет стабильной. Новые модели нуждаются в тестировании по мере появления. Некоторые из жертвуемых денег необходимы для расходов на доставку этих устройств разработчикам в разных странах. Иногда полезно сделать пожертвование, чтобы разработчики могли оставить свои темные комнаты и встретиться друг с другом на конференциях и мероприятиях, где они смогут дать своим творческим и аналитическим мозгам столкнуться.*
+*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
 
-**Я могу написать код! Как принять участие?**
+## I can write code! How do I participate?
 
-Ура! Изучите проблемы, поспрашивайте в канале gitter, там всегда много дел! Сначала выберите небольшую задачу и внесите первый вклад в общий проект! :)
+Yay! Look at the issues, ask in the gitter channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
 
-**Я знаю систему и могу написать документацию!**
+## I know the system and can write documentation!
 
-Отлично, это очень ценится и это хороший способ поучаствовать!
+Great, this is a highly appreciated thing and a good way to pay it foreward!
 
 * Старый канал gitter для обсуждения базы знаний AAPS находится здесь: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). Вместо этого, теперь вы можете связаться с командой документации по новому адресу электронной почты: wiki@androidaps.org.
 * Руководство, как предлагать описания на английском языке, можно найти здесь: [Как сделать PR](../make-a-PR.md). Другие языки переводятся только с английского языка и не могут редактироваться по соображениям целостности и последовательности.
 
-**Я говорю на нескольких языках и хочу перевести приложение или документацию**
+## I do speak multiple languages and whant to translate the app or the documentation
 
-* Если вы хотите перевести **приложение** на другие языки (спасибо), пожалуйста, воспользуйтесь [crowdin](https://translations.androidaps.org).
-* Если вы хотите перевести **энциклопедию AAPS ** на другие языки (спасибо), пожалуйста, воспользуйтесь [crowdin](https://wikitranslations.androidaps.org). 
+* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
+* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Просто зарегистрируйтесь в CROWDIN, выберите ваш язык, подождите авторизации администратора и двигайтесь дальше!
+Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
 
-**У меня есть деньги, я бы хотел сделать взнос, как это осуществить?**
+## Are there aother ways to help?
 
-    PayPal: [donations@androidaps.org](donations@androidaps.org)  
-    
-
-**На что идут деньги?**
-
-Деньги за работу не выплачиваются никому! При организации конференций деньги идут на снижение затрат разработчиков. Мы стараемся быть максимально открытыми. Вот пример из 2018:
-
-* Европейская встреча разработчиков в Праге в конце мая 2018 года:
-* наем жилья плюс Интернет
-* экипировка
-* еда / кофе
-* в маловероятном случае, что вышеперечисленное будет полностью покрыто и остается немного денег: путевые расходы тех, кто должен путешествовать на большие расстояния. (Некоторые разработчики с других континентов будут присутствовать, но уже находятся в Европе в это время, поэтому расходы на поездки будут низкими.)
-
-**У меня есть лишнее оборудование, куда его отправить?**
-
-В настоящее время мы собираем фонд "будет предоставлено позднее", чтобы начать распространять оборудование для тестирования. В конце процесса оставшееся оборудование будет передано одной из групп «Pay-it-Forward» для поддержки сообщества T1. Если вы хотите пожертвовать лишнее оборудование, сообщите по электронной почте developers@androidaps.org и мы отправим вам адрес для отправки.
-
-**У меня нет наличных или оборудования, как я могу помочь?**
-
-Навыки, необходимые нам: графический дизайн, дизайн UX, переводы, вики-редакторование или просто люди, готовые отвечать на простые вопросы в gitter & Facebook, чтобы дать разработчикам сосредоточиться на более сложных вещах.
+Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
