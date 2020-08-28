@@ -24,6 +24,6 @@ Great, this is a highly appreciated thing and a good way to pay it foreward!
 
 Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
 
-## Are there aother ways to help?
+## Are there other ways to help?
 
 Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
