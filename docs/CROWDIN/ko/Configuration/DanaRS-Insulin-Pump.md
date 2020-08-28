@@ -8,9 +8,9 @@
 
 * AndroidAPS의 구성 관리자에서 'DanaRS'를 선택하십시오.
 
-* 우측 상단에 있는 점 3개 버튼을 눌러 메뉴를 선택하십시오. 설정을 선택하세요.
+* 우측 상단에 있는 점 3개 버튼을 눌러 메뉴를 선택하십시오. 설정을 선택하십시오.
 
-* Select DanaRS Pair New Pump, and click your DanaRS serial number.
+* 다나 RS의 '새 펌프와 연동'에서 사용 중인 다나 RS 펌프의 시리얼 번호를 선택하십시오.
   
   ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
 
