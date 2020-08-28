@@ -1,14 +1,14 @@
-# DanaRS Pump
+# 다나 RS 펌프
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
+*다음은 2017년 이후의 다나 RS 펌프를 사용하는 경우에서 앱과 펌프를 설정하기 위한 안내입니다. 만약 오리지널 다나 R 펌프를 사용하는 경우에는 [DanaR Insulin Pump](./DanaR-Insulin-Pump)를 확인하십시오.*
 
-**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
+**새 펌웨어 v3를 사용하는 다나 RS는 현재 AndroidAPS를 사용할 수 없습니다.**
 
-* In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
+* 다나 RS 펌프의 "BASAL A"가 앱에서 사용됩니다. 기존 데이터는 덮어쓰여집니다.
 
-* In AndroidAPS go to Config Builder and select 'DanaRS'
+* AndroidAPS의 구성 관리자에서 'DanaRS'를 선택하십시오.
 
-* 오른쪽 상단에 있는 점 3개를 눌러 메뉴를 선택하세요. 설정을 선택하세요.
+* 우측 상단에 있는 점 3개 버튼을 눌러 메뉴를 선택하십시오. 설정을 선택하세요.
 
 * Select DanaRS Pair New Pump, and click your DanaRS serial number.
   
