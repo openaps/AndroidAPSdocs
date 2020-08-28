@@ -1,14 +1,14 @@
-혈당정보
+혈당 출처
 ************
 
 
-.. toctree::
+.. 목차::
    :maxdepth: 1
    :glob:
    
-   General <../Hardware/GeneralCGMRecommendation.rst>
-   Data Smoothing <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
-   xDrip+Settings <./xdrip.md>
+   일반적인 고려 사항 <../Hardware/GeneralCGMRecommendation.rst>
+   데이터의 평탄화 <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
+   xDrip+ 설정 <./xdrip.md>
    Dexcom G6 <../Hardware/DexcomG6.rst>
    Dexcom G5 <../Hardware/DexcomG5.rst>
    Dexcom G4 <../Hardware/DexcomG4.rst>
