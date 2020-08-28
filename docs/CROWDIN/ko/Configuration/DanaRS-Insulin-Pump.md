@@ -47,7 +47,7 @@ When switching to a new phone the following steps are neccessary:
 * **Export settings** on your old phone
   
   * Hamburger menu (top left corner of screen)
-  * Maintenance
+  * 정비
   * Export settings
     
     ![AAPS export settings](../images/AAPS_ExportSettings.png)
@@ -59,7 +59,7 @@ When switching to a new phone the following steps are neccessary:
 * **Install AndroidAPS** on the new phone.
 * **Import settings** on your new phone 
   * Hamburger menu (top left corner of screen)
-  * Maintenance
+  * 정비
   * Import settings
 
 ## Timezone traveling with Dana RS pump
