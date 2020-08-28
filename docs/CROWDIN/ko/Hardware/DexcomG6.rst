@@ -26,7 +26,7 @@ If using G6 with xDrip+
 * When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
 * If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app <./Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
 * If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
-* Select xdrip in ConfigBuilder (setting in AndroidAPS).
+* 구성 관리자 (AndroidAPS의 세팅)에서 xDrip을 선택합니다.
 * Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`_
 * If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
@@ -40,9 +40,9 @@ If using G6 with patched Dexcom app
    .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Region in Dexcom G6 URL
 
-* Stop sensor and uninstall the original Dexcom app, if not already done.
-* Install downloaded apk
-* Start sensor
+* 오리지날 Dexcom 앱이 남아 있는 경우 센서를 스탑하고 삭제합니다.
+* 다운로드 된 apk를 설치합니다.
+* 센서를 시작합니다.
 * Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
 * If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
 * There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.

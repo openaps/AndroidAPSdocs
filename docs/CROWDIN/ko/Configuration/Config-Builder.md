@@ -28,7 +28,7 @@
 
 로컬 프로파일은 [설정 내보내기](../Usage/ExportImportSettings.rst)의 항목입니다. 따라서 안전한 저장공간에 백업이 되어 있는지 확인해야합니다.
 
-![Local Profile settings](../images/LocalProfile_Settings.png)
+![로컬 프로파일 설정](../images/LocalProfile_Settings.png)
 
 버튼:
 
@@ -55,7 +55,7 @@ Nightscout 프로파일에서 로컬 프로파일로 전환하려면, NS 프로�
 
 로컬 프로파일을 Nightscout에 업로드할 수도 있습니다. NS Client 환경 설정에서 적용할 수 있습니다.
 
-![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
+![로컬 프로파일을 NS에 업로드하기](../images/LocalProfile_UploadNS2.png)
 
 장점:
 
@@ -108,7 +108,7 @@ DIA는 사람마다 다릅니다. 따라서 스스로 시험해봐야 합니다.
 
 많은 사람들이 실제로 사용해보면, 0.0xx 단위가 유효하더라도 주사 후 3-4시간이 지나면 눈에 띄는 피아스프의 효과는 거의 없습니다. 하지만 이 잔여량으로도 운동과 같은 상황에서는 효과가 나타날 수 있습니다. 그러므로 AndroidAPS는 DIA를 최소 5시간으로 설정합니다.
 
-![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
+![구성 관리자 초속효성 Oref](../images/ConfBuild_UltraRapidOref.png)
 
 ### 사용자 지정 피크 Oref
 
@@ -126,7 +126,7 @@ DIA는 사람마다 다릅니다. 따라서 스스로 시험해봐야 합니다.
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - 4.15.57 및 최신 버전만 지원됨
 * [덱스콤 앱 (패치용)](https://github.com/dexcomapp/dexcomapp/) - xDrip+ 알람을 사용하고 싶은 경우 '혈당 데이터를 xDrip+로 보내기' 선택.
     
-    ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+    ![구성 관리자 혈당 출처](../images/ConfBuild_BGSource.png)
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
@@ -218,7 +218,7 @@ AndroidAPS에는 단계적으로 수행해야 하는 몇 가지 목표가 있습
 
 참고: 지정된 시간 범위를 벗어나는 경우 또는 빠른 마법사 버튼에서 설정한 탄수화물 양을 허용하기에 충분한 IOB가 이미 있는 경우에는 버튼이 나타나지 않습니다.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![빠른 마법사 버튼](../images/ConfBuild_QuickWizard.png)
 
 #### 고급 설정
 
@@ -235,87 +235,87 @@ AndroidAPS에는 단계적으로 수행해야 하는 몇 가지 목표가 있습
 * 특정 관리 항목에 대한 기록
     
     * 혈당 체크
-    * Prime / fill - record pump site change and prime (if not done on pump)
-    * CGM sensor insert
-    * Pump battery change
-    * Note
-    * Exercise
-* View the current sensor, insulin, canula and pump battery ages
-* History browser
-* TDD (Total daily dose = bolus + basal per day)
+    * 프라임 /채우기 - 펌프 위치 변경 및 프라임 기록 (펌프에서 시행되지 않은 경우)
+    * CGM 센서 삽입
+    * 펌프 배터리 교체
+    * 노트
+    * 운동
+* 현재 센서, 인슐린, 캐뉼라 및 펌프 배터리 수명 확인
+* 이력 브라우저
+* TDD (일 총량 = 하루 bolus + 하루 basal)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+일부 의사들은 - 특히, 새로 펌프를 사용하는 사람들에게 - basal-bolus 비율을 50:50으로 적용합니다. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 다른 의사들은 TBB가 TDD의 32%에서 37% 범위에 있는 것을 선호합니다. 이러한 경험에 따른 대부분의 규칙들은 실질적으로 제한된 유효성을 보입니다. 참고: 당뇨병 관리는 개인별로 다릅니다!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions_b.png)
+![실행 탭](../images/ConfBuild_ConfBuild_Actions_b.png)
 
-### SMS Communicator
+### SMS 통신기
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
+SMS를 통해 일부 AndroidAPS 기능을 보호자가 원격으로 조정할 수 있습니다. 설정에 대한 더 많은 정보는 [SMS Commands](../Children/SMS-Commands.rst)에서 확인할 수 있습니다.
 
-### Food
+### 음식
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Nightscout에서 미리 설정한 음식 정보를 사용할 수 있도록 합니다. 설정에 대한 더 많은 정보는 [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods)에서 확인할 수 있습니다.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+참고: AndroidAPS 계산기에서는 입력 항목들을 사용할 수 없습니다. (보기 전용)
 
-### Wear
+### 워치
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Android Wear watch를 사용하여 AAPS를 모니터하고 제어합니다 ([Watchfaces 페이지](../Configuration/Watchfaces.md) 참고). Watch로 주입할 bolus를 계산할 때 어떤 변수들(즉, 15분 추이, COB...)를 고려할 것인지 (톱니바퀴 버튼에서) 설정할 수 있습니다.
 
-If you want to bolus etc. "Wear 설정"에서 "Watch로부터 컨트롤하기"를 사용합니다.
+Watch에서 bolus 주입 등을 하려면, "Wear 설정"에서 "Watch로부터 컨트롤하기"를 활성화합니다.
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![워치 설정](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+Wear 탭 또는 ≡ 버튼(화면의 왼쪽 상단, 탭이 표시되지 않을 경우) 에서 다음을 수행할 수 있습니다.
 
-* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
+* 모든 데이터 다시 보내기. Watch와의 연결이 얼마 동안 끊긴 경우 watch에 정보를 보내고 싶을 때 도움이 됨.
+* 폰에서 직접 watch 설정을 실행함.
 
-### xDrip Statusline (watch)
+### xDrip 상태표시라인 (워치)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+xDrip+의 watchface에 loop 정보를 표시합니다 (AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)를 사용하고 있지 않은 경우).
 
-### Ongoing Notification
+### 상시 알림
 
-Displays a summary of current BG, delta, active TBR%, active basal u/h and profile, IOB and split into bolus IOB and basal IOB on the phones's dropdown screen and phone's lock screen.
+현재의 혈당값, 증분, 활성 TBR%, 활성 basal 양(u/h) 및 프로파일, IOB (bolus IOB, basal IOB로 세분화 함)의 요약을 폰의 알림창 또는 잠금 화면에서 보여줍니다.
 
-![AAPS widget](../images/ConfBuild_Widget.png)
+![AAPS 위젯](../images/ConfBuild_Widget.png)
 
 ### NS Client
 
-Setup sync of your AndroidAPS data with Nightscout.
+AndroidAPS의 설정을 Nightscout과 동기화합니다.
 
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimization not disabled for AAPS) but can flood the Nightscout graph with entries.
+만약 **앱 시작을 NS에 기록하기**를 활성화하면, 실행할 때마다 AndroidAPS가 Nightscout에 나타날 것입니다. 앱의 문제 (즉, AAPS가 배터리 최적화 제외 안됨)을 찾기에 유용할 수 있으나, 입력 사항이 Nightscout 그래프에 범람할 수 있습니다.
 
-#### Alarm options
+#### 알람 옵션
 
-Activate/deactivate AndroidAPS alarms
+AndroidAPS 알람을 활성화/비활성화 시킵니다.
 
-![Alarm options](../images/ConfBuild_NSClient_Alarms.png)
+![알람 옵션](../images/ConfBuild_NSClient_Alarms.png)
 
-#### Connection settings
+#### 연결 설정
 
-Offline looping, disable roaming...
+오프라인 loop, 로밍 사용 안함...
 
-If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
+특정 WiFi 네트워크만 사용하려면, 해당 **WiFi SSID**를 입력할 수 있습니다. 각각의 SSID를 세미콜론으로 구분할 수 있습니다. 모든 SSID를 삭제하려면 필드에 아무것도 입력하지 않습니다.
 
-![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
+![Nightscout 연결 설정](../images/ConfBuild_ConnectionSettings.png)
 
 #### 고급 설정
 
-* Auto backfill missing BGs from Nightscout
-* Create announcement from errors Create Nightscout announcement for error dialogs and local alerts (also viewable in careportal in treatments section)
-* Enable local broadcast to other apps like xDrip+
-* NS upload only (sync disabled)
-* No upload to NS
-* Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
+* Nightscout에서 누락된 혈당을 자동 다시 가져옴.
+* 에러 발생 시 알림 생성 에러 발생에 대한 nightscout 알림과 로컬 경고(관리 섹션의 케어포털에서도 확인 가능)을 생성.
+* xDrip+ 등 다른 앱들에 대해 로컬 전송을 활성화 함.
+* NS에 업로드만 하기 (동기화 안됨)
+* NS에 업로드하지 않기
+* 항상 basal의 절대값 사용하기 -> [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)을 적절히 사용하려면 활성화되어야 함.
 
-![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
+![Nightscout 고급 설정](../images/ConfBuild_NSClient_Advanced.png)
 
-### Maintenance
+### 정비
 
-Email and number of logs to be send. Normally no change necessary.
+로그의 수와 이메일을 전송함. 일반적으로 변경은 필요하지 않음.
 
 ### 구성 관리자
 
-Use tab for config builder instead of hamburger menu.
+≡ 버튼 대신 구성 관리자를 탭에서 사용합니다.

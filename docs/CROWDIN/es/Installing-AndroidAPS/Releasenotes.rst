@@ -22,7 +22,7 @@ Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or ne
 Nuevas características importantes
 -----
 * Insight: Disable vibration on bolus for firmware version 3 - second attempt
-* Otherwise is equal to 2.6.1.3. Update is optional. 
+* Otherwise is equal to 2.6.1.3. La actualización es opcional. 
 
 Versión 2.6.1.3
 ================
@@ -33,7 +33,7 @@ Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or ne
 Nuevas características importantes
 -----
 * Insight: Disable vibration on bolus for firmware version 3
-* Otherwise is equal to 2.6.1.2. Update is optional. 
+* Otherwise is equal to 2.6.1.2. La actualización es opcional. 
 
 Versión 2.6.1.2
 ================
