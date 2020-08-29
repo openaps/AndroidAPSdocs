@@ -1,16 +1,16 @@
-# Comment aider AndroidAPS
+# Comment aider avec AndroidAPS
 
-## AndroidAPS operates entirely on volunteer efforts and has no paid staff.
+## AndroidAPS fonctionne entièrement sur le bénévolat et n'a pas de personnel rémunéré.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Les développeurs sont des parents, des soignants, des proches et des personnes atteintes de diabète qui travaillent ensemble pour développer et améliorer une solution qui répond à un besoin très large. Les développeurs donnent leur temps libre gratuitement, mais il est un peu injuste qu'ils soient confrontés à des coûts supplémentaires pour créer quelque chose d'aussi incroyable et gratuit pour tous.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*Pour tester complètement un nouvel appareil, les développeurs doivent disposer d'un téléphone et d'une pompe de secours car ils ne peuvent pas être utilisés sur un être humain tant que tout n'est pas stable. Les nouveaux modèles doivent être testés au fur et à mesure de leur disponibilité. Une partie de l'argent donné est également nécessaire pour les coûts logistiques liés à l'expédition de ces fournitures vers les pays des développeurs. Parfois, il est également agréable de contribuer aux frais des développeurs pour leur permettre de quitter leurs salles obscures et de se rencontrer lors de conférences et d’événements pour laisser leurs cerveaux créatifs et analytiques se confronter.*
 
-## I can write code! How do I participate?
+## Je peux écrire du code ! Comment puis-je participer ?
 
-Yay! Look at the issues, ask in the gitter channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+Yeh ! Regardez les problèmes ("Issues"), demandez dans "gitter", il y a toujours beaucoup à faire ! Choisissez une petite tâche au début et faites votre première Pull Request ! :)
 
-## I know the system and can write documentation!
+## Je connais le système et je peux écrire de la documentation !
 
 Great, this is a highly appreciated thing and a good way to pay it foreward!
 
