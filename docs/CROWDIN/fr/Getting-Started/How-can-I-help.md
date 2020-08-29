@@ -17,13 +17,13 @@ Great, this is a highly appreciated thing and a good way to pay it foreward!
 * L'ancien canal de gitter concernant le wiki se trouve ici : [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). A la place, vous pouvez également contacter l'équipe de documentation via la nouvelle adresse email : wiki@androidaps.org.
 * Un guide sur la façon de faire des "commits" concernant le wiki anglais peut être trouvé ici : [Comment faire un PR](../make-a-PR.md). Les autres langues ne sont que traduites de l'anglais et ne peuvent pas être éditées indépendamment pour des raisons de cohérence.
 
-## I do speak multiple languages and whant to translate the app or the documentation
+## Je parle plusieurs langues et je veux traduire l'application ou la documentation
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
-* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
+* Si vous voulez traduire **l'application** dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidaps).
+* Si vous voulez traduire la **documentation** dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Il suffit de vous inscrire à CROWDIN, de cliquer sur votre langue, d'attendre l'autorisation de l'admin et d'aller de l'avant !
 
-## Are there other ways to help?
+## Y a-t-il d'autres façons d'aider ?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+Les compétences requises incluent la conception graphique, le retour d'expérience, les traductions, les pages wiki ou simplement aider en répondant à des questions simples dans gitter & Facebook pour donner aux développeurs le temps et l’espace nécessaires pour se concentrer sur les choses les plus difficiles.
