@@ -17,7 +17,7 @@
 * '펌프 비밀번호'에서 비밀번호를 입력하십시오. (초기 비밀번호는 1234입니다)   
   ** 펌프와 연결되었는지 확인해야합니다!** 다른 블루투스 연결 (예를 들어, 스마트폰과 자동차 오디오)에서 사용하는 방법과 같습니다.
   
-  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+  ![다나 RS 연결 확인](../images/DanaRS_Pairing.png)
 
 * 'Bolus 속도'에서 설정되어 있는 bolus 속도를 변경할 수 있습니다(1u에 12초, 30초, 60초).
 
@@ -33,7 +33,7 @@
 
 Bolus 인슐린 주입 중 AAPS와 Dana RS의 연결이 끊기는 경우 (즉, Dana RS가 인슐린을 주입하는 동안 폰에서 멀어지는 경우), 다음과 같은 메시지가 뜨고 알람이 울릴 것입니다.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![인슐린 주입 알람](../images/DanaRS_Error_bolus.png)
 
 * 대부분의 경우 이것은 단지 통신 상의 문제이며, 인슐린 양은 올바르게 주입됩니다.
 * 올바른 bolus가 주입되었는지 (펌프 본체 또는 앱의 Dana 탭 > 펌프 이력 > boluses에서) 펌프의 이력을 확인하십시오.
@@ -50,7 +50,7 @@ Bolus 인슐린 주입 중 AAPS와 Dana RS의 연결이 끊기는 경우 (즉, D
   * 정비
   * 설정 내보내기
     
-    ![AAPS export settings](../images/AAPS_ExportSettings.png)
+    ![AAPS 설정 내보내기](../images/AAPS_ExportSettings.png)
 
 * 새 폰에서 이전 폰의 설정을 **불러오기**
 
@@ -62,6 +62,6 @@ Bolus 인슐린 주입 중 AAPS와 Dana RS의 연결이 끊기는 경우 (즉, D
   * 정비
   * 설정 불러오기
 
-## Timezone traveling with Dana RS pump
+## 다나 RS 펌프 사용 시 다른 표준시간대 지역으로의 이동
 
-다른 시간대의 나라로 여행하는 경우에 대한 정보는 [ 펌프와 함께 하는 다른 시간대 여행 ](../Usage/Timezone-traveling#danarv2-danars) 섹션을 참조하십시오.
+다른 시간대로 이동하는 경우에 대한 정보는 [펌프와 다른 시간대로의 이동 ](../Usage/Timezone-traveling#danarv2-danars) 섹션을 참조하십시오.
