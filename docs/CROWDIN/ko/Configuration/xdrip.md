@@ -22,11 +22,11 @@ Android 10을 실행하면서 xDrip+ 마스터를 사용하는 데 문제가 있
 
 * `Extra Options`에 들어갑니다.
 
-* Deactivate `Upload treatments` and `Back-fill data`.
+* `Upload treatments`와 `Back-fill data`를 비활성화합니다.
    
-   **Safety warning : You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.**
+   **안전 경고 : xDrip+에서 "Upload treatment"를 비활성화해야 하며, 그렇지 않으면 잘못된 COB와 IOB로 인하여 AAPS에서 처치가 이중으로 이루어질 수 있습니다.**
 
-* Option `Alert on failures` should also be deactivated. Otherwise you will get an alarm every 5 minutes in case wifi/mobile network is too bad or the server is not available.
+* `실패 시 경고` 옵션도 비활성화해야 합니다. 그렇지 않으면, 와이파이/모바일 네트워크가 매우 불안정하거나 서버를 사용할 수 없는 경우 5분마다 알람이 울리게 됩니다.
    
    ![xDrip+ Basic Settings 1](../images/xDrip_Basic1.png)
    
