@@ -1,8 +1,8 @@
-# xDrip+ settings
+# xDrip+ 설정
 
-If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
+xDrip+를 아직 설치하지 않은 경우에는 [xDrip+](https://jamorham.github.io/#xdrip-plus)에서 다운로드하십시오.
 
-**This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
+**이 문서는 android용 xDrip+만을 위한 것입니다.** "iOS용 xDrip"은 Android용 오리지날 xDrip+와 전혀 다른 것입니다.
 
 For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
 
