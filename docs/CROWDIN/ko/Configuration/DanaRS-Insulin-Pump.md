@@ -14,8 +14,8 @@
   
   ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
 
-* Select Pump password and input your password. (Default password is 1234)   
-  **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+* '펌프 비밀번호'에서 비밀번호를 입력하십시오. (초기 비밀번호는 1234입니다)   
+  ** 펌프와 연결되었는지 확인해야합니다!** 다른 블루투스 연결 (예를 들어, 스마트폰과 자동차 오디오)에서 사용하는 방법과 같습니다.
   
   ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
