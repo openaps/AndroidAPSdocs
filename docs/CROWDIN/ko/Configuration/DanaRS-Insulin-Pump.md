@@ -19,25 +19,25 @@
   
   ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* 'Bolus 속도'에서 설정되어 있는 bolus 속도를 변경할 수 있습니다(1u에 12초, 30초, 60초).
 
-* Restart your phone.
+* 폰을 재시작합니다.
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
+* 펌프의 닥터 모드에서 basal step (basal inc)를 0.01로 설정하십시오 (펌프 사용자 가이드를 참고).
 
-* 펌프에서 확장Bolus를 활성화하세요.
+* 펌프에서 확장 bolus 기능을 활성화하십시오.
 
-## Dana RS specific errors
+## Dana RS 특정 오류
 
-### Error during insulin delivery
+### 인슐린 주입 중 발생하는 오류
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+Bolus 인슐린 주입 중 AAPS와 Dana RS의 연결이 끊기는 경우 (즉, Dana RS가 인슐린을 주입하는 동안 폰에서 멀어지는 경우), 다음과 같은 메시지가 뜨고 알람이 울릴 것입니다.
 
 ![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
-* In most cases this is just a communication issue and the correct amount of insulin is delivered.
-* Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
-* Delete error entry in CP tab if you wish.
+* 대부분의 경우 이것은 단지 통신 상의 문제이며, 인슐린 양은 올바르게 주입됩니다.
+* 올바른 bolus가 주입되었는지 (펌프 본체 또는 앱의 Dana 탭 > 펌프 이력 > boluses에서) 펌프의 이력을 확인하십시오.
+* 케어포털 탭에서 오류 항목을 삭제할 수도 있습니다.
 * Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
 
 ## Special note when switching phone
