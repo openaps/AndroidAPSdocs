@@ -15,27 +15,27 @@ Closed loop 시스템이란 어떤 것일까요?
 
 **Closed Loop 시스템**
 
-인공 췌장 closed loop 시스템은 오토파일럿과 유사하다고 볼 수 있습니다. 이 시스템이 모든 관리를 대신 해주는 것이 아니며, 사용자는 계속해서 당뇨병 관리에 신경써야합니다. Closed loop 시스템은 CGM/FGM의 센서 데이터와 사용자의 당뇨병 관리 인자(basal 양, 인슐린 민감도 인자 (ISF), 인슐린 탄수화물 비율 (IC) 등)을 결합하여 작동합니다. From this it calculates treatment suggestions and implements these permanent small adjustments in order to keep your diabetes within the target range and to relieve you. This leaves more time for your life "next to" diabetes.
+인공 췌장 closed loop 시스템은 오토파일럿과 유사하다고 볼 수 있습니다. 이 시스템이 모든 관리를 대신 해주는 것이 아니며, 사용자는 계속해서 당뇨병 관리에 신경써야합니다. Closed loop 시스템은 CGM/FGM의 센서 데이터와 사용자의 당뇨병 관리 인자(basal 양, 인슐린 민감도 인자 (ISF), 인슐린 탄수화물 비율 (IC) 등)을 결합하여 작동합니다. From this it calculates treatment suggestions and implements these permanent small adjustments in order to keep your diabetes within the target range and to relieve you. 이것은 당뇨병 관리에 "함께 해줌으로써" 사용자의 삶에 시간 여유를 만들어 줍니다.
 
-Just as you don't want to get on a plane where only the autopilot flies without human supervision, a closed loop system helps you with your diabetes management, but always needs your support! **Even with a closed loop you can't just forget your diabetes!**
+우리가 사람 관리자 없이 오토파일럿만 있는 비행기에 탑승하고 싶지 않은 것처럼, closed loop 시스템은 당뇨병 관리를 도와주지만 반드시 사용자의 도움이 필요합니다! **Closed loop을 사용할지라도 당뇨병 관리를 완전히 잊어서는 안됩니다! **
 
-Just as the autopilot depends on the sensor values as well as the pilot's specifications, a closed loop system needs appropriate input such as basal rates, ISF and carb ratio to support you successfully.
+오토파일럿이 조종사의 설정 뿐만 아니라 센서 값들에 의존하는 것과 같이, AAPS에서도 적절한 basal 양, ISF, 인슐린 탄수화물 비율 (CR) 등을 적절하게 입력해야 closed loop 시스템이 사용자를 성공적으로 보조할 수 있습니다.
 
 
-Open Source Artificial Pancreas Closed Loop Systems
+인공 췌장 closed loop 시스템의 오픈 소스
 ==================================================
-At present there are three major open source closed loop systems available:
+현재는 대표적인 세 종류의 오픈 소스 closed loop 시스템을 사용할 수 있습니다:
 
 AndroidAPS (AAPS)
 --------------------------------------------------
-AndroidAPS is described in detail in `this documentation <./WhatisAndroidAPS.html>`_. It uses an Android Smartphone for calculation and control of your insulin pump. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+AndroidAPS는 '이 문서<./WhatisAndroidAPS.html>'에 자세히 설명되어 있습니다. 이는 안드로이드 스마트폰을 사용하여 인슐린 펌프 사용을 계산하고 제어합니다. 이는 OpenAPS와 강력하게 연동되어 있습니다 (즉, 알고리즘을 공유합니다).
 
-Compatible `pumps <../Hardware/pumps.html>`_ are:
+호환 가능한 '펌프<../Hardware/pumps.html>`는 다음과 같습니다:
 
-* DanaR / DanaRS
-* Accu-Chek Combo
-* Accu-Chek Insight
-* some old Medtronic pumps (as of version 2.4)
+* 다나 R / 다나 RS
+* 아큐-첵 콤보
+* 아큐-첵 인사이트
+* 일부 오래된 메드트로닉 펌프 (버전 2.4의 경우)
 
 OpenAPS
 --------------------------------------------------
