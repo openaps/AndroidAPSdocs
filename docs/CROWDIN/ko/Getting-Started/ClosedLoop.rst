@@ -39,17 +39,17 @@ AndroidAPS는 '이 문서<./WhatisAndroidAPS.html>'에 자세히 설명되어 �
 
 OpenAPS
 --------------------------------------------------
-`OpenAPS <https://openaps.readthedocs.io>`_ was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison.
+OpenAPS<https://openaps.readthedocs.io>는 closed loop 시스템의 첫 번째 오픈 소스입니다. Raspberry Pi나 Intel Edison 같은 작은 컴퓨터를 사용합니다.
 
-Compatible pumps are:
+호환 가능한 펌프는 다음과 같습니다:
 
-* some old Medtronic pumps
+* 일부 오래된 메드트로닉 펌프
 
-Loop for iOS
+iOS 용 loop
 --------------------------------------------------
-`Loop for iOS <https://loopkit.github.io/loopdocs/>`_ is the Open Source Closed Loop System to be used with Apple iPhones.
+iOS 용 loop<https://loopkit.github.io/loopdocs/>은 애플 iPhone에서 사용하는 closed loop 시스템의 오픈 소스입니다.
 
-Compatible pumps are:
+호환 가능한 펌프는 다음과 같습니다:
 
-* Omnipod Eros
-* some old Medtronic pumps
+* 옴니파트 에로스
+* 일부 오래된 메드트로닉 펌프
