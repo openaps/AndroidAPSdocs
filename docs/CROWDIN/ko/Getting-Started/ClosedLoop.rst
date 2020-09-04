@@ -9,13 +9,13 @@ Closed loop 시스템이란 어떤 것일까요?
 
 **비행기에서의 오토파일럿(자동조종장치)**
 
-The autopilot does not do the complete job and does not give the possibility to the pilot to sleep throughout the entire flight. It facilitates the work of the pilots. It relieves them of the burden of permanently monitoring the aircraft and the flight attitude. This allows the pilot to concentrate on monitoring the airspace and controlling the autopilot's functions.
+오토파일럿이 모든 작업을 수행하는 것은 아니며, 따라서 비행하는 전체 시간 동안 조종사가 잠을 잘 수 있게 해주는 것은 아닙니다. 그것은 조종사들의 일을 용이하게 해주는 것입니다. 이는 항공기와 비행 상태를 계속해서 모니터링해야 하는 부담을 줄여줍니다. 이것은 조종사가 영공을 살피며 오토파일럿 기능들을 제어하는 것에 집중할 수 있도록 도와줍니다.
 
-The autopilot receives signals from various sensors, a computer evaluates them together with the pilot's specifications and then makes the necessary adjustments. The pilot no longer has to worry about the constant adjustments.
+오토파일럿은 다양한 센서로부터 신호들을 수신하고, 컴퓨터가 파일럿의 설정에 따라 이를 평가한 다음, 필요한 조정을 시행합니다. 조종사는 계속적인 조정에 대해 걱정하지 않아도 됩니다.
 
-**Closed Loop System**
+**Closed Loop 시스템**
 
-The same applies to an artificial pancreas closed loop system. It does not do the whole job, you still have to take care of your diabetes. A closed loop system combines the sensor data from a CGM/FGM with your diabetes management specifications such as basal rate, insulin sensitivity factor and carb ratio. From this it calculates treatment suggestions and implements these permanent small adjustments in order to keep your diabetes within the target range and to relieve you. This leaves more time for your life "next to" diabetes.
+인공 췌장 closed loop 시스템은 오토파일럿과 유사하다고 볼 수 있습니다. 이 시스템이 모든 관리를 대신 해주는 것이 아니며, 사용자는 계속해서 당뇨병 관리에 신경써야합니다. Closed loop 시스템은 CGM/FGM의 센서 데이터와 사용자의 당뇨병 관리 인자(basal 양, 인슐린 민감도 인자 (ISF), 인슐린 탄수화물 비율 (IC) 등)을 결합하여 작동합니다. From this it calculates treatment suggestions and implements these permanent small adjustments in order to keep your diabetes within the target range and to relieve you. This leaves more time for your life "next to" diabetes.
 
 Just as you don't want to get on a plane where only the autopilot flies without human supervision, a closed loop system helps you with your diabetes management, but always needs your support! **Even with a closed loop you can't just forget your diabetes!**
 
