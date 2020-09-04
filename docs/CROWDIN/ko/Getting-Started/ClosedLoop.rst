@@ -1,13 +1,13 @@
-What is a Closed Loop System?
+Closed loop 시스템이란 어떤 것일까요?
 **************************************************
 
 .. image:: ../images/autopilot.png
-  :alt: AAPS is like an autopilot
+  :alt: AAPS는 오토파일럿과 유사합니다.
 
-An artificial pancreas closed loop system combines different components in order to make diabetes management easier for you. 
-In her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an `"autopilot for your diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. But what does that mean?
+인공 췌장 closed loop 시스템은 당뇨병 관리를 좀 더 편리하게 하기 위해 다양한 구성 요소들을 결합한 것입니다. 
+오픈 소스 closed loop 활동의 창립자 중 한 명인 Dana M. Lewis는 그의 훌륭한 책 'Automated Insulin Delivery (자동으로 인슐린 주입하기)<https://www.artificialpancreasbook.com/>' 에서 이를 당뇨병을 위한 오토파일럿(자동조종장치)'<https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>'라고 명명했습니다. 과연 이게 무엇을 의미할까요?
 
-**Autopilot in an aircraft**
+**비행기에서의 오토파일럿(자동조종장치)**
 
 The autopilot does not do the complete job and does not give the possibility to the pilot to sleep throughout the entire flight. It facilitates the work of the pilots. It relieves them of the burden of permanently monitoring the aircraft and the flight attitude. This allows the pilot to concentrate on monitoring the airspace and controlling the autopilot's functions.
 
