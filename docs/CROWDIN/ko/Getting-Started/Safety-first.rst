@@ -9,13 +9,13 @@
 * AndroidAPS은 당뇨병을 관리함에 있어서 도움을 주는 도구일 뿐이며, 이는 설치한 뒤 잊고 있어도 되는 완전한 자동화 시스템이 아닙니다.
 * AndroidAPS가 절대로 실수하지 않을 것이라고 생각하지 마십시오. This device is taking control of your insulin delivery: Watch it all the time, understand how it works, and learn how to interpret its actions.
 * 폰이 한 번 연결되면 펌프에 무엇이든지 지시할 수 있다는 사실을 기억하십시오. AndroidAPS 전용으로 폰을 사용하고, 아이가 사용하는 경우에는 AndroidAPS와 필수적인 통신만을 사용합니다. 사용자의 시스템을 방해할 수 있는 트로이 목마, 바이러스 또는 로봇과 같은 악성 소프트웨어를 가져올 수 있는 불필요한 앱이나 게임(!!!)을 설치하지 마십시오.
-* Install all security updates provided by your phone manufacturer and Google.
-* You might also need to change your diabetes habits as you change your therapy by using a closed loop system. I.e. some people report, they need less hypo treatments as AndroidAPS has already reduced insulin.  
+* 구글이나 휴대기기 제조사에서 제공하는 모든보안패치를 업데이트하시기 바랍니다.
+* closed loop 시스템을 사용하는 것으로 관리 방법을 변경할 때는 당뇨병 관련 습관들을 변경해야 할 수도 있습니다. 예를 들어, AndroidAPS가 인슐린 주입을 미리 감소시켜줌에 따라 저혈당 간식이 적게 필요했다고 일부 사용자들은 보고하였습니다.  
    
 SMS 통신기
 ==================================================
 
-* AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code.
+* AndroidAPS는 문자 메세지를 통해 아이의 폰을 원격으로 조정할 수 있게 해줍니다. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code.
 * AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
 
 .. note:: 
