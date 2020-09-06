@@ -1,13 +1,13 @@
 가장 중요한 안전 유의사항
 **************************************************
 
-**When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
+**인공 췌장을 구축하기로 결정하면, 보안과 안전에 대해 생각하고 사용자의 모든 적용이 가져오는 영향을 이해하는 것이 항상 중요합니다**
 
-일반
+포괄적인 정보
 ==================================================
 
-* AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
-* Do not assume that AndroidAPS will never make mistakes. This device is taking control of your insulin delivery: Watch it all the time, understand how it works, and learn how to interpret its actions.
+* AndroidAPS은 당뇨병을 관리함에 있어서 도움을 주는 도구일 뿐이며, 이는 설치한 뒤 잊고 있어도 되는 완전한 자동화 시스템이 아닙니다.
+* AndroidAPS가 절대로 실수하지 않을 것이라고 생각하지 마십시오. This device is taking control of your insulin delivery: Watch it all the time, understand how it works, and learn how to interpret its actions.
 * Remember that, once paired, the phone can instruct the pump to do anything. Only use this phone for AndroidAPS and, if being used by a child, essential communications. Do not install unnecessary apps or games (!!!) which could introduce malware such as trojans, viruses, or bots that could interfere with your system.
 * Install all security updates provided by your phone manufacturer and Google.
 * You might also need to change your diabetes habits as you change your therapy by using a closed loop system. I.e. some people report, they need less hypo treatments as AndroidAPS has already reduced insulin.  
