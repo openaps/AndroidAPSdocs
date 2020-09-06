@@ -1,4 +1,4 @@
-안전유의사항
+가장 중요한 안전 유의사항
 **************************************************
 
 **When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
