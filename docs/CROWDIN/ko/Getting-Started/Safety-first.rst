@@ -8,7 +8,7 @@
 
 * AndroidAPS은 당뇨병을 관리함에 있어서 도움을 주는 도구일 뿐이며, 이는 설치한 뒤 잊고 있어도 되는 완전한 자동화 시스템이 아닙니다.
 * AndroidAPS가 절대로 실수하지 않을 것이라고 생각하지 마십시오. This device is taking control of your insulin delivery: Watch it all the time, understand how it works, and learn how to interpret its actions.
-* Remember that, once paired, the phone can instruct the pump to do anything. Only use this phone for AndroidAPS and, if being used by a child, essential communications. Do not install unnecessary apps or games (!!!) which could introduce malware such as trojans, viruses, or bots that could interfere with your system.
+* 폰이 한 번 연결되면 펌프에 무엇이든지 지시할 수 있다는 사실을 기억하십시오. AndroidAPS 전용으로 폰을 사용하고, 아이가 사용하는 경우에는 AndroidAPS와 필수적인 통신만을 사용합니다. 사용자의 시스템을 방해할 수 있는 트로이 목마, 바이러스 또는 로봇과 같은 악성 소프트웨어를 가져올 수 있는 불필요한 앱이나 게임(!!!)을 설치하지 마십시오.
 * Install all security updates provided by your phone manufacturer and Google.
 * You might also need to change your diabetes habits as you change your therapy by using a closed loop system. I.e. some people report, they need less hypo treatments as AndroidAPS has already reduced insulin.  
    
