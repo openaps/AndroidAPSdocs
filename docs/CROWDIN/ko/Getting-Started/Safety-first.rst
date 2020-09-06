@@ -15,8 +15,8 @@
 SMS 통신기
 ==================================================
 
-* AndroidAPS는 문자 메세지를 통해 아이의 폰을 원격으로 조정할 수 있게 해줍니다. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code.
-* AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
+* AndroidAPS는 문자 메세지를 통해 아이의 폰을 원격으로 조정할 수 있게 해줍니다. SMS 통신기를 활성화 했다면, 원격 명령어를 사용하기 위해 설정된 폰(부모폰)을 도난 맞을 수도 있다는 사실에 항상 유념하셔야 합니다. 따라서 최소한 PIN 코드 이상의 보안으로 폰을 보호하십시오.
+* Bolus 또는 프로파일 변경 등의 원격 명령들이 수행된 경우, AndroidAPS 역시 문자 메시지로 알려줄 것입니다. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
 
 .. note:: 
    ** 중요 안전 수칙 **
