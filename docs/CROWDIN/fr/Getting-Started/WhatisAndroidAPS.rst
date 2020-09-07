@@ -14,7 +14,7 @@ Prudence : AndroidAPS n’est réglementée par aucune autorité médicale dans 
 * Gèrent et surveillent le système pour s’assurer qu’il fonctionne correctement
 
 .. note:: 
-	**Disclaimer and Warning**
+	**Clause de non-responsabilité et avertissement**
 
 	* Toutes les informations, pensées et codes décrits ici sont destinés à des fins d'information et d'éducation uniquement. Nightscout ne fait actuellement aucune tentative de conformité à la confidentialité HIPAA. Utilisez Nightscout et AndroidAPS à vos propres risques et n'utilisez pas les informations ni le code pour prendre des décisions médicales.
 
