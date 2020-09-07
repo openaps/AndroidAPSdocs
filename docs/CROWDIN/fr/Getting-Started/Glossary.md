@@ -96,7 +96,7 @@
 </tr>
 <tr>
  <td>CAGE</td>
- <td>canula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
+ <td>Age Canule - affiché dans Nightscout si l'information a été renseignée dans l'onglet / menu Actions de AAPS ou par l'intermédiaire de l'action 'AMORCER' de l'onglet ACT</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -318,7 +318,7 @@
 </tr>
 <tr>
  <td>SAGE</td>
- <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
+ <td>âge du capteur - affiché dans Nightscout si l'information a été renseignée dans l'onglet / menu Actions de AAPS</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
