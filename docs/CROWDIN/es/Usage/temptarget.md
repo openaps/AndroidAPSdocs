@@ -6,7 +6,7 @@ Con "Objetivo-Temporal" (o TT corto), puede cambiar su objetivo de glucosa en sa
 
 ![Establecer objetivos temporales por defecto](../images/TempTarget_Default.png)
 
-Para utilizar uno de los conjuntos "Por defecto-Objetivos-Temporales", puede presionar mucho tiempo en su objetivo en la esquina derecha de la parte superior de la pestaña de visión general o utilizar los accesos directos en el botón "Carbs" de color naranja. Para establecer manualmente un ["Objetivo-Temporal Personalizado"](../Usage/temptarget#custom-temp-target) (valor de BG y/o duración) use "Personalizado" después de pulsar el objetivo en la esquina superior derecha o utilice el botón "Objetivo Temporal" en la pestaña "Acciones".
+Para utilizar uno de los conjuntos "Por defecto-Objetivos-Temporales", puede presionar mucho tiempo en su objetivo en la esquina derecha de la parte superior de la pestaña de visión general o utilizar los accesos directos en el botón "Carbs" de color naranja. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration) use “Custom“ after long-pressing your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
 
 ![Establecer el objetivo temporal](../images/TempTarget_Set2.png)
 

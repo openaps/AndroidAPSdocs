@@ -1,6 +1,6 @@
 Übersicht der Komponenten 
 **************************************************
-AndroidAPS ist nicht einfach eine (selbst erstellte) App, es ist eines von verschiedenen Modulen Deines Closed Loop Systems. Bevor Du Dich für die einzelnen Komponenten entscheidest, solltest Du einen Blick auf das `Komponenten-Setup<https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_, werfen..
+AndroidAPS ist nicht einfach eine (selbst erstellte) App, es ist eines von verschiedenen Modulen Deines Closed Loop Systems. Bevor Du Dich für die einzelnen Komponenten entscheidest, solltest Du einen Blick auf das `Komponenten-Setup <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_, werfen..
    
 .. image:: ../images/modules.png
   :alt: Übersicht der Komponenten
@@ -41,7 +41,7 @@ Es gibt eine von AAPS Anwendern erstellte `Liste mit getesteten Smartphones und 
 
 Um ein Handy oder eine Smartwatch einzutragen welches noch nicht in der Liste ist, bitte das  `Formular <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_ ausfüllen.
 
-Probleme mit der Tabelle bitte per E-Mail an `hardware@androidaps.org <mailto:hardware@androidaps.org>`_melden. Wenn du Handys oder Smartwatches zum Testen zur Verfügung stellen möchtest, bitte eine E-Mail an `donations@androidaps.org <mailto:hardware@androidaps.org>`_ schreiben.
+Probleme mit der Tabelle bitte per E-Mail an `hardware@androidaps.org <mailto:hardware@androidaps.org>`_ melden. Wenn du Handys oder Smartwatches zum Testen zur Verfügung stellen möchtest, bitte eine E-Mail an `donations@androidaps.org <mailto:hardware@androidaps.org>`_ schreiben.
 
 Insulinpumpe
 --------------------------------------------------
@@ -50,7 +50,7 @@ AndroidAPS funktioniert **derzeit** mit
 - `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
--` DanaRS <../Configuration/DanaRS-Insulin-Pump.html> ` _ (außer Pumpen mit neuer Firmware v3) 
+- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_ (außer Pumpen mit neuer Firmware v3) 
 - `einigen alten Medtronic Pumpen <../Configuration/MedtronicPump.html>`_ ab der neuen Version 2.4 (zusätzlich werden RileyLink/Gnarl Hardware und ein Android Smartphone mit Bluetooth Low Energy (BLE-Chipset) benötigt.)
 
 **Andere Pumpen,** die zukünftig möglicherweise von AndroidAPS unterstützt werden können, sind auf der Seite `Zukünftig ggf. loopbare Pumpen <../Getting-Started/Future-possible-Pump-Drivers.html>`_ aufgeführt.
@@ -74,8 +74,8 @@ BZ-Quelle
 --------------------------------------------------
 Dies ist nur eine knappe Übersicht über alle kompatiblen CGM/FGM mit AndroidAPS. Weitere Details findest Du `hier <../Configuration/BG-Source.html>`_. Nur ein kurzer Hinweis: Wenn Du Deine Glukose-Daten in der xDrip+ App oder Deiner Nightscout-Website anzeigen kannst, kannst Du xDrip+ (oder Nightscout mit Webverbindung) als BZ-Quelle in AAPS wählen.
 
-* ` Dexcom G6 <../Hardware/DexcomG6.html> ` _: Funktioniert mit xDrip+ oder der gepatchten Dexcom App
-* ` Dexcom G5 <../Hardware/DexcomG5.html> ` _: Funktioniert mit xDrip+ oder der gepatchten Dexcom App
+* ` Dexcom G6 <../Hardware/DexcomG6.html>`_: Funktioniert mit xDrip+ oder der gepatchten Dexcom App
+* ` Dexcom G5 <../Hardware/DexcomG5.html>`_: Funktioniert mit xDrip+ oder der gepatchten Dexcom App
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_:  Diese Sensoren sind relativ alt, aber es gibt im Netz Anleitungen wie Du sie mit der xDrip+ App verwenden kannst.
 * `Libre 2 <../Hardware/Libre2.html>`_: Funktioniert mit xDrip+ (kein Transmitter erforderlich), Du musst aber auch für den Libre 2 eine eigene gepatchte App erstellen.
 * `Libre 1 <../Hardware/Libre1.html>`_: Du benötigst einen Sender wie Bluecon oder MiaoMiao, den Du selbst bauen oder einfach kaufen kannst, und die xDrip+ App.
@@ -105,7 +105,7 @@ Es gibt eine von AAPS Anwendern erstellte `Liste mit getesteten Smartphones und 
 
 Um ein Handy oder eine Smartwatch einzutragen welches noch nicht in der Liste ist, bitte das  `Formular <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_ ausfüllen.
 
-Probleme mit der Tabelle bitte per E-Mail an `hardware@androidaps.org <mailto:hardware@androidaps.org>`_melden. Wenn du Handys oder Smartwatches zum Testen zur Verfügung stellen möchtest, bitte eine E-Mail an `donations@androidaps.org <mailto:hardware@androidaps.org>`_ schreiben.
+Probleme mit der Tabelle bitte per E-Mail an `hardware@androidaps.org <mailto:hardware@androidaps.org>`_ melden. Wenn du Handys oder Smartwatches zum Testen zur Verfügung stellen möchtest, bitte eine E-Mail an `donations@androidaps.org <mailto:hardware@androidaps.org>`_ schreiben.
 
 xDrip+
 --------------------------------------------------

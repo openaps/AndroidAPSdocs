@@ -55,4 +55,4 @@ Waarom detect het algoritme COB niet goed?
 
 Handmatige correctie van ingevoerde koolhydraten
 ==================================================
-Als je de hoeveelheid koolhydraten hebt over/onderschat dan kun je dit corrigeren via het Behandelingen-tabblad en de Careportal, zoals `hier <../Getting-Started/Screenshots.html#koolhydraten-correctie>`_beschreven.
+If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.

@@ -1,7 +1,7 @@
 What is a closed loop system with AndroidAPS?
 **************************************************
 
-AndroidAPS는 인공췌장시스템(APS) 안드로이드용 스마트폰 앱입니다. 인공췌장시스템(APS)는 무엇입니까? 혈당을 건강한 범위안에서 유지시켜주는 췌장의 역할을 소프트웨어적으로 하게 만든 프로그램입니다. 
+AndroidAPS is an app that acts as an artificial pancreas system (APS) on an Android smartphone. 인공췌장시스템(APS)는 무엇입니까? 혈당을 건강한 범위안에서 유지시켜주는 췌장의 역할을 소프트웨어적으로 하게 만든 프로그램입니다. 
 
 APS가 실제 췌장과 동일한 역할을 하진 못하지만, 1형당뇨인들이 기기를 이용하여 보다 편하고 안전하게 혈당을 관리할 수 있도록 하게해줍니다. 연속혈당측정기(CGM)이 AndroidAPS에 혈당정보를 전달해주고, AndroidAPS가 인슐린펌프에 적절한 인슐린 양을 조절하게 하여줍니다. 이 앱들은 블루투스로 서로 통신합니다. OpenAPS라고 불리는 또 다른 인공췌장시스템을 위해 개발된 특별한 알고리즘 혹은 규칙을 사용하여 적정 인슐린 양을 계산합니다. 이 OpenAPS는 전 세계 수천명의 사람들이 사용하며 수백만 시간의 누적사용양을 기록하고 있습니다. 
 
@@ -11,8 +11,8 @@ APS가 실제 췌장과 동일한 역할을 하진 못하지만, 1형당뇨인�
 * Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
 * 시스템이 올바르게 작동하는지 확인하고 관리하세요.
 
-.. note:: 
-	**고지사항 및 경고문**
+.. 참고:: 
+	**Disclaimer and Warning**
 
 	이곳에 설명된 모든 정보, 생각, 코드는 오직 정보제공 및 교육적 목적으로만 제공된 것입니다. Nightscout은 현재 HIPAA 개인 정보 보호 준수 규약을 따르지 않습니다. Nightscout와 AndroidAPS를 본인의 책임하에 사용하세요. 의학적 결정을 위해 이 정보와 코드를 사용하지 마세요.
 

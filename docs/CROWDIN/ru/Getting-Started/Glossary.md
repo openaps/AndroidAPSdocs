@@ -96,7 +96,7 @@
 </tr>
 <tr>
  <td>CAGE/ВозрКан</td>
- <td>Отображаемый в системе Nightscout срок эксплуатации инсулиновой канюли. Появляется в случае ввода информации об установке канюли на закладке портала лечения/назначений AAPS careportal или через закладку действий 'первичное заполнение инфузионного набора' AAPS</td>
+ <td>canula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -318,7 +318,7 @@
 </tr>
 <tr>
  <td>SAGE/Возраст сенсора</td>
- <td>возраст сенсора - отображается на сайте Nightscout, если информация введена на вкладке портала лечения/назначений AAPS</td>
+ <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>

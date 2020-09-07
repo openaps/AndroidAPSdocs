@@ -1,32 +1,32 @@
-# xDrip+ settings
+# xDrip+ 설정
 
-If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
+xDrip+를 아직 설치하지 않은 경우에는 [xDrip+](https://jamorham.github.io/#xdrip-plus)에서 다운로드하십시오.
 
-**This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
+**이 문서는 android용 xDrip+만을 위한 것입니다.** "iOS용 xDrip"은 Android용 오리지날 xDrip+와 전혀 다른 것입니다.
 
-For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
+2018년 가을에서 연말 이후 제작된 G6 트랜스미터(시리얼 번호가 80 또는 81로 시작함)의 경우 [master](https://jamorham.github.io/#xdrip-plus) 버전을 사용하십시오.
 
-If your Dexcom G6 transmitter's serial no. is starting with 8G..., 8H... or 8J... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+만약 Dexcom G6 트랜스미터의 시리얼 번호가 8G..., 8H... 또는 8J 등으로 시작한다면 [최신의 nightly 빌드](https://github.com/NightscoutFoundation/xDrip/releases)를 사용하십시오.
 
-If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+Android 10을 실행하면서 xDrip+ 마스터를 사용하는 데 문제가 있는 경우에 [2019/12/31 또는 그 이후의 nightly 빌드](https://github.com/NightscoutFoundation/xDrip/releases)를 사용해보십시오.
 
-## Basic settings for all CGM & FGM systems
+## 모든 CGM & FGM 시스템의 기본 설정
 
-* Make sure to set Base URL correctly including **S** at the end of http**s**:// (not http://)
+* http**s** 끝의 **S**를 포함하여 기본 URL을 정확하게 입력해야 합니다:// (http:// 아님)
    
-   i.e. https://API_SECRET@your-app-name.herokuapp.com/api/v1/
+   즉, https://API_SECRET@your-app-name.herokuapp.com/api/v1/ 입니다.
    
-   -> Hamburger Menu (top left of homescreen) -> Settings-> Cloud Upload-> Nightscout Sync (REST-API) -> Base URL
+   -> ≡ 버튼 (홈스크린 화면의 좌측 상단) -> 세팅 -> Cloud Upload -> Nightscout Sync (REST-API) -> Base URL
 
-* Deactivate `Automatic Calibration` If the checkbox for `Automatic Calibration` is checked, activate `Download data` once, then remove the checkbox for `Automatic Calibration` and deactivate `Download data` again, otherwise the treatments (insulin & carbs) will be added twice to Nightscout.
+* `Automatic Calibration`을 비활성화합니다. `Automatic Calibration`이 활성화되어 있는 경우, `Download data`를 활성화한 뒤, `Automatic Calibration` 체크를 해제합니다. 이후 `Download data`를 다시 비활성화합니다. 그렇지 않으면 관리 내용 (인슐린 & 탄수화물)이 Nightscout에 두 번씩 기록됩니다.
 
-* Tap `Extra Options`
+* `Extra Options`에 들어갑니다.
 
-* Deactivate `Upload treatments` and `Back-fill data`.
+* `Upload treatments`와 `Back-fill data`를 비활성화합니다.
    
-   **Safety warning : You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.**
+   **안전 경고 : xDrip+에서 "Upload treatment"를 비활성화해야 하며, 그렇지 않으면 잘못된 COB와 IOB로 인하여 AAPS에서 처치가 이중으로 이루어질 수 있습니다.**
 
-* Option `Alert on failures` should also be deactivated. Otherwise you will get an alarm every 5 minutes in case wifi/mobile network is too bad or the server is not available.
+* `실패 시 경고` 옵션도 비활성화해야 합니다. 그렇지 않으면, 와이파이/모바일 네트워크가 매우 불안정하거나 서버를 사용할 수 없는 경우 5분마다 알람이 울리게 됩니다.
    
    ![xDrip+ Basic Settings 1](../images/xDrip_Basic1.png)
    

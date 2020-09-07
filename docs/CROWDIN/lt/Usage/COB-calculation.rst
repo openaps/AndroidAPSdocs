@@ -55,4 +55,4 @@ Kodėl algoritmas nenustato AAO teisingai?
 
 Įvestų angliavandenių koregavimas rankiniu būdu
 ==================================================
-Jei pervertinote ar nepakankamai įvertinote angliavandenių kiekį, galite juos ištaisyti naudodamiesi terapijos skirtuku ir priežiūros portalu, kaip aprašyta `čia <../Getting-Started/Screenshots.html#carb-correction>`_.
+If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.

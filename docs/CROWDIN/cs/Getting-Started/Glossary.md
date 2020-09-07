@@ -96,7 +96,7 @@
 </tr>
 <tr>
  <td>CAGE</td>
- <td>Stáří kanyly (canula age) - hodnota zobrazená v Nightscoutu, pokud byla tato informace zadána v AAPS v části Péče nebo v AAPS prostřednictvím Akce 'Plnění/Doplňování'</td>
+ <td>canula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -318,7 +318,7 @@
 </tr>
 <tr>
  <td>SAGE</td>
- <td>Stáří senzoru (sensor age) - zobrazené v Nightscoutu, pokud byla tato informace zadána do AAPS v části Péče</td>
+ <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>

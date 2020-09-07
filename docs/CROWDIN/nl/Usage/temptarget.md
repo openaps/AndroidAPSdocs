@@ -6,7 +6,7 @@ Met een Tijdelijk streefdoel ("Temp-Target” of TT in het Engels), kun je het s
 
 ![Standaard Tijdelijke streefdoelen instellen](../images/TempTarget_Default.png)
 
-Om vervolgens een Tijdelijk streefdoel te gebruiken, zijn er verschillende manieren. Houd op het Overzicht-scherm het vlak rechtsboven met jouw streefdoel lang ingedrukt. Of druk op het Overzicht-scherm op de oranje 'Koolhydraten' knop onderin beeld. Voor het instellen van een ["Aangepast Tijdelijk streefdoel"](../Usage/temptarget#custom-temp-target) (BG-waarde en/of duur), houd jouw streefdoel in de rechter bovenhoek lang ingedrukt en kies "Aangepast" of gebruik de "Tijdelijk Streefdoel" knop in de "Acties"-tab.
+Om vervolgens een Tijdelijk streefdoel te gebruiken, zijn er verschillende manieren. Houd op het Overzicht-scherm het vlak rechtsboven met jouw streefdoel lang ingedrukt. Of druk op het Overzicht-scherm op de oranje 'Koolhydraten' knop onderin beeld. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration) use “Custom“ after long-pressing your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
 
 ![Start Tijdelijk streefdoel](../images/TempTarget_Set2.png)
 

@@ -1,7 +1,7 @@
 ¿Qué es un sistema de lazo cerrado con AndroidAPS?
 **************************************************
 
-AndroidAPS es una aplicación que actúa como un sistema de páncreas artificial (APS) en un smartphone Android. ¿Qué es un sistema de páncreas artificial? Se trata de un programa de software que tiene como objetivo hacer lo que un páncreas vivo hace: mantener los niveles de azúcar en la sangre dentro de límites saludables automáticamente. 
+AndroidAPS is an app that acts as an artificial pancreas system (APS) on an Android smartphone. ¿Qué es un sistema de páncreas artificial? Se trata de un programa de software que tiene como objetivo hacer lo que un páncreas vivo hace: mantener los niveles de azúcar en la sangre dentro de límites saludables automáticamente. 
 
 Un APS no puede hacer el trabajo tan bien como lo hace un páncreas biológico, pero puede hacer que la diabetes de tipo 1 sea más fácil de manejar usando dispositivos que están comercialmente disponibles y un software que es simple y seguro. Dichos dispositivos incluyen un monitor de glucosa continuo (MCG) para indicar a AndroidAPS sobre sus niveles de azúcar en la sangre y una bomba de insulina que controla AndroidAPS para administrar dosis apropiadas de insulina. La aplicación se comunica con esos dispositivos a través de Bluetooth. Hace sus cálculos de dosificación usando un algoritmo, o un conjunto de reglas, desarrollado para otro sistema de páncreas artificial, llamado OpenAPS, que tiene miles de usuarios y ha acumulado millones de horas de uso. 
 
@@ -12,7 +12,7 @@ Una nota de cautela: los AndroidAPS no están regulados por ninguna autoridad m�
 * Mantenga y supervise el sistema para asegurarse de que está funcionando correctamente
 
 .. note:: 
-	**Advertencia**
+	**Disclaimer and Warning**
 
 	* Toda la información y el código descrito aquí solo es de carácter informativo y de educación. Actualmente Nightscout no dispone de HIPAA privacy compliance. Use Nightscout y AndroidAPS bajo su responsabilidad, no use esta información para o código para tomar decisiones médicas.
 

@@ -96,7 +96,7 @@
 </tr>
 <tr>
  <td>CAGE</td>
- <td>ηλικία κάνουλας - εμφανίζεται στη Nightscout εάν καταχωρήθηκαν πληροφορίες στην καρτέλα "AAportsportportal" ή στην καρτέλα "prime"</td>
+ <td>canula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -318,7 +318,7 @@
 </tr>
 <tr>
  <td>SAGE</td>
- <td>ηλικία αισθητήρα - εμφανίζεται στη λειτουργία Nightscout εάν καταχωρήθηκαν πληροφορίες στην καρτέλα AAPS careportal</td>
+ <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>

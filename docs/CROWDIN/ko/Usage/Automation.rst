@@ -5,7 +5,7 @@ What is Automation
 ==================================================
 For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. 
 
-I.e. when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. 
+예를 들어, when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. 
 
 Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
 

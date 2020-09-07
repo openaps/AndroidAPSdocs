@@ -55,4 +55,4 @@ Pourquoi l'algorithme ne détecte-on pas correctement les GA ?
 
 Correction manuelle des glucides
 ==================================================
-Si vous avez sur-estimé ou sous-estimé les glucides, vous pouvez corriger cela via l'onglet traitements et Action comme c'est décrit `ici <../Getting-Started/Screenshots.html#correction-de-glucides>`_.
+If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.

@@ -6,7 +6,7 @@
 
 ![임시 목표 기본값 설정하기](../images/TempTarget_Default.png)
 
-홈 화면 탭에서 우측 상단 코너에 있는 목표를 길게 누르거나 주황색 "탄수화물" 단축키를 눌러 임시 목표 기본값"을 설정할 수 있습니다. 우측 상단 코너에 있는 목표를 길게 누른 뒤 "사용자 정의"를 사용하거나, "실행" 탭에서 "임시 목표"를 사용하여 ["사용자 정의 임시 목표"](../Usage/temptarget#custom-temp-target) (혈당값 및 기간) 을 수동으로 설정할 수 있습니다.
+홈 화면 탭에서 우측 상단 코너에 있는 목표를 길게 누르거나 주황색 "탄수화물" 단축키를 눌러 임시 목표 기본값"을 설정할 수 있습니다. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration) use “Custom“ after long-pressing your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
 
 ![임시 목표 설정하기](../images/TempTarget_Set2.png)
 

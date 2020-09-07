@@ -6,7 +6,7 @@ Za pomocą celów tymczasowych "Temp-Targets" (lub krótko TT) możesz zmienić 
 
 ![Set default temp targets](../images/TempTarget_Default.png)
 
-To use one of the set “Default-Temp-Targets”, you can press long on your target in the right corner on the top in the overview-tab or use the shortcuts in the orange “Carbs” button. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration) use “Custom“ after long-pressing your target in the top right corner or use the “Temporary Target“ button in the “Actions”-tab.
+To use one of the set “Default-Temp-Targets”, you can press long on your target in the right corner on the top in the overview-tab or use the shortcuts in the orange “Carbs” button. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration) use “Custom“ after long-pressing your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
 
 ![Set temp target](../images/TempTarget_Set2.png)
 
