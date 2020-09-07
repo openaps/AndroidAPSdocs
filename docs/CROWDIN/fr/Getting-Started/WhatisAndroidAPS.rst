@@ -1,7 +1,7 @@
 Qu'est-ce qu'un système de boucle fermé avec AndroidAPS ?
 **************************************************
 
-AndroidAPS is an app that acts as an artificial pancreas system (APS) on an Android smartphone. Qu'est ce qu'un système de pancréas artificiel? C’est un logiciel qui a pour but de faire ce que fait un pancréas vivant : maintenir la glycémie dans les limites saines automatiquement. 
+AndroidAPS est une application qui agit comme un pancréas artificiel (APS) sur un smartphone Android. Qu'est ce qu'un système de pancréas artificiel? C’est un logiciel qui a pour but de faire ce que fait un pancréas vivant : maintenir la glycémie dans les limites saines automatiquement. 
 
 Malheureusement, l’APS ne peut pas faire le même travail qu'un pancréas biologique, mais il peut soulager un diabète de type 1 en le rendant plus facile à gérer avec l’aide des dispositifs disponibles dans le commerce et son logiciel qui est simple et sûr. Le dispositif comporte:
 - une mesure de glycémie en continu (MGC) qui communique à AndroidAPS le taux de sucre dans le sang.
