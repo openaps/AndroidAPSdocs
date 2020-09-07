@@ -55,4 +55,4 @@ Warum erkennt der Algorithmus COB nicht richtig?
 
 Manuelle Korrektur der eingegebenen Kohlenhydrate
 ==================================================
-Wenn Du die Menge der Kohlenhydrate über- oder unterschätzt hast, kannst Du diese über den Behandlungs-Tab und das Careportal wie `hier beschrieben <../Getting-Started/Screenshots.html#kohlenhydrat-korrektur>`_korrigieren.
+If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.
