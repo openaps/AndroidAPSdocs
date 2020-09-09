@@ -56,8 +56,10 @@ This is the first screen you will come across when you open AndroidAPS and it co
    * red circled = loop disabled (not working permanently)
    * yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
    * grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
+   * Orange circle = super bolus running - remaining time is shown below icon
+   * blue circle with dotted line = open loop
    
-* Long press the icon to open the menu to disable, suspend, reenable loop or disconnect / reconnect pump.
+* Long press the icon to open the menu to disable, suspend, re enable loop or disconnect / reconnect pump.
 
    ![Loop status menu](../images/Home2020_LoopStatusMenu.png)
 
@@ -73,7 +75,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
 * Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before
   -> icon pulses if carbs are required 
 * Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%)
-* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features#autosens) status
+* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features#autosens) status (enabled or disabled) and value is shown below icon
 
 #### Carbs required
 ![Carbs required](../images/Home2020_CarbsRequired.png)
@@ -106,7 +108,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
 * The green area reflects your target range. It can be configured in [preferences](../Configuration/Preferences#range-for-visualization).
 * Blue triangles show [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - if enabled in [preferences](.../Configuration/Preferences#openaps-smb-settings).
 * Optional information:
-   
+  
    * Predictions
    * Basals
    * Activity - insulin activity curve
@@ -277,7 +279,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 # ************************************
 # Hier geht es weiter!
 # ************************************    
- 
+
 
 
 
@@ -351,9 +353,9 @@ These are simply logs of treatments (boluses and carbs), xDrip messages and mess
 
 ## Config Builder
 
-![Config Builder](../images/Screenshot_config_builder.png)
+![Config Builder](../images/Screenshot_config_builder_2020.png)
 
-This is where you will set up the configuration of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
+This is where you will set up the configuration of your AndroidAPS rig. This screenshot shows a pretty typical rig using an Insight pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on a Local profile and connected to a Nightscout cloud based server.
 
 The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
 
