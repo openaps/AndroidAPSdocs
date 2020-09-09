@@ -26,7 +26,7 @@ General
 
 * New option to use phone's default language (recommended). 
 * In case you want AAPS in different language than standard phone language you can choose from a broad variety.
-* If you use different languages you might sometimes see a language mix. This is due to an an android issue that overriding default android language sometimes doesn't work.
+* If you use different languages you might sometimes see a language mix. This is due to an android issue that overriding default android language sometimes doesn't work.
 
   .. image:: ../images/Pref2020_General.png
     :alt: Preferences > General
@@ -187,7 +187,7 @@ Treatment safety
 Patient age
 -----------------------------------------------------------
 * Safety limits are set based on the age you select in this setting. 
-* If you start hitting these hard limits (like max bolus) it's time move one step up. 
+* If you start hitting these hard limits (like max bolus) it's time to move one step up. 
 * It's a bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). 
 * If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on `this page <../Usage/Open-APS-features.html>`_.
 
@@ -211,7 +211,7 @@ APS mode
 * Toggle between open and closed looping as well as low glucose suspend (LGS)
 * **Open looping** means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump.  
 * **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.  
-* **Low glucose suspend** gives you the possiblity to enter into Low Glucose Suspend without the need for the reverting an objective.
+* **Low glucose suspend** gives you the possibility to enter into Low Glucose Suspend without the need for the reverting an objective.
 
 Minimal request change [%]
 -----------------------------------------------------------
@@ -272,11 +272,11 @@ Advanced settings
 
 OpenAPS SMB settings
 -----------------------------------------------------------
-* In contrast to AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ does not use temporary basal rates to control glucose levels, but mainly small super microboluses.
+* In contrast to AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 * You must have started `objective 10 <../Usage/Objectives.html#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ to use SMB.
 * The first three settings are explained `above <./Configuration/Preferences2020.html#max-u-h-a-temp-basal-can-be-set-to>`_.
 * Details on the different enable options are described in `OpenAPS feature section <../Usage/Open-APS-features.html#enable-smb>`_.
-* *How frequently SMBs will be given in min* is a restiction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target beeing set). You should not change this setting unless you know exactly about consequences. 
+* *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target being set). You should not change this setting unless you know exactly about consequences. 
 * If sensitivity raises / lowers target is enabled `Autosens <../Usage/Open-APS-features.html#autosens>`_ will modify your glucose target according to your blood glucose deviations.
 * If target is modified it will be displayed with a green background on your home screen.
 
@@ -347,18 +347,18 @@ NS Client
   .. image:: ../images/Pref2020_NSClient.png
     :alt: NS Client
 
-* Set your *Nightscout URL* (i.e. https://yourwebsitename.herokuapp.com) and the *API secret* (a 12 character password recorded in your heroku variables).
-* This enables data to be read and written between both the nightscout website and AndroidAPS.  
+* Set your *Nightscout URL* (i.e. https://yourwebsitename.herokuapp.com) and the *API secret* (a 12 character password recorded in your Heroku variables).
+* This enables data to be read and written between both the Nightscout website and AndroidAPS.  
 * Double check for typos here if you are stuck in Objective 1.
 * **Make sure that the URL is WITHOUT /api/v1/ at the end.**
 * *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem. 
 * If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ are uploaded to your Nightscout site.
-* Use *connection settings* to restrict Nightscout upload to Wifi only or even to certain Wifi SSIDs.
+* Use *connection settings* to restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
 
 Alarm options
 -----------------------------------------------------------
 * Alarm options allows you to select which default Nightscout alarms to use through the app.  
-* For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `heroku variables <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
+* For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
 * They will only work whilst you have a connection to Nightscout and are intended for parent/carers. 
 * If you have the CGM source on your phone then use those alarms instead (i.e. xDrip+).
 
@@ -376,16 +376,16 @@ Advanced settings
 SMS Communicator
 ===========================================================
 * Options will only be displayed if SMS communicator is selected in `Config Builder <../Configuration/Config-Builder.html#sms-communicator>`_.
-* This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing.  
+* This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.  
 * Further information is described in `SMS Commands <../Children/SMS-Commands.html>`_.
-* Additional safety can be optained through use of an authenticator app or additional PIN at token end.
+* Additional safety can be obtained through use of an authenticator app or additional PIN at token end.
 
 Automation
 ===========================================================
 Select which location service shall be used:
 
 * Use passive location: AAPS only takes locations if other apps are requesting it
-* Use network location: Location of your Wifi
+* Use network location: Location of your Wi-Fi
 * Use GPS location (Attention! May cause excessive battery drain!)
 
 Local alerts
@@ -410,5 +410,5 @@ Maintenance settings
   .. image:: ../images/Pref2020_Maintenance.png
     :alt: Maintenance settings
 
-* Standard recepient of logs is logs@androidaps.org.
+* Standard recipient of logs is logs@androidaps.org.
 * If you select *Encrypt exported settings* these are encrypted with your `master password <../Configuration/Preferences.html#master-password>`_. In this case master password has to be entered each time settings are exported or imported.
