@@ -7,7 +7,7 @@
 * **OpenAPS**에서 Oref 구현은 24시간, 8시간 동안의 데이터를 조합하여 실행됩니다. 두 가지 데이터 중 민감도가 더 높은 것을 사용합니다.
 * AndroidAPS는 8시간 (UAM을 사용하기 위한 경우) 또는 사용자 옵션으로서 24시간으로만 실행 가능합니다.
 * 캐뉼라를 변경하거나 프로파일을 변경하면 autosens 비율이 0%로 재설정됩니다.
-* Autosens는 basal 및 ISF를 조정합니다 (즉, 프로파일 변경이 수행하는 것과 비슷함).
+* Autosens adjusts your basal, I:C and ISF for you (i.e.: mimicking what a Profile shift does).
 * 연장된 기간 동안 계속 탄수화물을 섭취하면, 섭취한 탄수화물은 혈당값 증분 계산으로부터 제외됨으로써 이 기간동안 autosens는 덜 효과적일 것입니다.
 
 ## Super Micro Bolus (SMB)
