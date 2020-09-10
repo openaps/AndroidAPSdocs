@@ -7,7 +7,7 @@
 * De oref-implementatie in **OpenAPS** gebruikt een combinatie van 24 en 8 uur aan gegevens. Welk van die twee hegt meest gevoelig is, wordt gebruikt.
 * AndroidAPS gebruikt slechts 8 (om UAM mogelijk te maken) of 24 uur, in te stellen door de gebruiker.
 * Het plaatsen van een nieuw infuus of het doen van een profielwissel (zonder tijdsduur) zal de Gevoeligheidsdetectie ratio terugzetten naar 0%.
-* Gevoeligheidsdetectie past jouw basaal en ISF aan (daarmee bootst het na wat een profielwissel doet).
+* Autosens adjusts your basal, I:C and ISF for you (i.e.: mimicking what a Profile shift does).
 * Wanneer je gedurende een langere tijd telkens koolhydraten eet, dan zal de Gevoeligheidsdetectie minder goed zijn werk kunnen doen, omdat periodes met COB worden uitgesloten van BG delta berekeningen.
 
 ## Super Micro Bolus (SMB)
