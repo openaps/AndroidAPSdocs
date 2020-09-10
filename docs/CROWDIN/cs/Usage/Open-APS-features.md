@@ -7,7 +7,7 @@
 * Realizace algoritmu oref v ** OpenAPS ** pracuje s kombinací dat za 24 a 8 hodin. Používá ta, která jsou více senzitivní.
 * AndroidAPS pouze pracuje s daty za 8 (pro umožnění UAM) nebo 24 hodin (uživatelská volba).
 * Výměna kanyly nebo změna profilu automaticky nastaví Autosense zpět na 0%.
-* Autosense upravuje váš bazál a ISF za vás (tzn. napodobuje to, co dělá změna profilu).
+* Autosens adjusts your basal, I:C and ISF for you (i.e.: mimicking what a Profile shift does).
 * Pokud budete nepřetržitě po delší dobu jíst sacharidy, Autosense bude během této doby méně efektivní, protože období se sacharidy jsou vyloučena z výpočtů odchylek glykémie.
 
 ## Super Micro Bolus (SMB)
