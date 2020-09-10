@@ -7,7 +7,7 @@
 * Die oref-Implementierung in **OpenAPS** läuft mit einer Kombination von Daten aus 24 und 8 Stunden. Es wird das "empfindlichere" Ergebnis der beiden Berechnungen verwendet.
 * AndroidAPS läuft nur mit 8 (um UAM zu aktivieren) oder 24 Stunden auf Wahl des Benutzers.
 * Das Wechseln einer Kanüle oder ein Profilwechsel setzt Autosens wieder auf 0 zurück.
-* Autosens passt Deine Basalrate und den ISF für Dich an (d.h. Nachahmen der Effekte einer Profilverschiebung).
+* Autosens adjusts your basal, I:C and ISF for you (i.e.: mimicking what a Profile shift does).
 * Wenn Du über einen längeren Zeitraum kontinuierlich Kohlenhydrate zu Dir nimmst, ist Autosens während dieses Zeitraums weniger effektiv, da Kohlenhydrate aus den Berechnungen der BZ-Abweichungen ausgenommen werden.
 
 ## Super Micro Bolus (SMB)
