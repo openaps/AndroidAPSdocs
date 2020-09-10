@@ -7,7 +7,7 @@
 * L'implémentation oref dans **OpenAPS** utilise une combinaison de 24 et 8 heures de données. Il utilise celui qui le est plus sensible.
 * AndroidAPS n'exécute que la version 8 heures (pour activer les RNS) ou 24 heures en tant qu'option utilisateur.
 * Le changement de canule ou le changement de profil réinitialisera le ratio Autosens à 0%.
-* Autosens ajuste votre basal et votre SI pour vous (c.-à-d. qu'il imite ce que fait un changement de profil).
+* Autosens adjusts your basal, I:C and ISF for you (i.e.: mimicking what a Profile shift does).
 * Si vous mangez continuellement des glucides sur une période prolongée, l'Autosens sera moins efficace pendant cette période car les glucides sont exclus les calculs des écarts de glycémie.
 
 ## Super Micro Bolus (SMB)
