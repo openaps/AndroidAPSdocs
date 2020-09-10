@@ -7,6 +7,22 @@ AndroidAPS is ready to synchronize your data with `Open Humans <www.openhumans.o
 
 You retain full control about what happens to your data and what projects you want to support by giving them access to your data. Depending on the project you have joined, data is evaluated and used by them in different ways and extent.
 
+The following data will be uploaded to your Open Humans account: 
+
+* Glucose values
+* Careportal events (except notes)
+* Extended boluses
+* Profile switches
+* Total daily doses
+* Temporary basals
+* Temp targets
+* Preferences
+* Application version
+* Device model 
+* Screen dimensions. 
+
+Secret or private information such as your Nightscout URL or API secret will not be uploaded.
+
 Setup
 ========================================
 1. Create your account on www.openhumans.org if not already done. You can reuse your existing Google or Facebook accounts if you wish to.
