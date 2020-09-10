@@ -1,13 +1,13 @@
-# OpenAPS features
+# OpenAPS의 기능
 
 ## Autosens
 
-* Autosens is a algorithm which looks at blood glucose deviations (positive/negative/neutral).
-* It will try and figure out how sensitive/resistant you are based on these deviations.
-* The oref implementation in **OpenAPS** runs off a combination of 24 and 8 hours worth of data. It uses either one which is more sensitive.
-* AndroidAPS only runs off 8 (to enable UAM) or 24 hour as a user option.
-* Changing a cannula or changing a profile will reset Autosens ratio back to 0%.
-* Autosens adjusts your basal and ISF for you (i.e.: mimicking what a Profile shift does).
+* Autosens는 혈당 편차 (플러스/마이너스/중립)을 관찰하는 알고리즘입니다.
+* 이 기능은 혈당 편차에 근거하여 사용자가 얼마나 인슐린에 민감한지, 저항성을 띄는지를 파악할 것입니다.
+* **OpenAPS**에서 Oref 구현은 24시간, 8시간 동안의 데이터를 조합하여 실행됩니다. 두 가지 데이터 중 민감도가 더 높은 것을 사용합니다.
+* AndroidAPS는 8시간 (UAM을 사용하기 위한 경우) 또는 사용자 옵션으로서 24시간으로만 실행 가능합니다.
+* 캐뉼라를 변경하거나 프로파일을 변경하면 autosens 비율이 0%로 재설정됩니다.
+* Autosens는 basal 및 ISF를 조정합니다 (즉, 프로파일 변경이 수행하는 것과 비슷함).
 * If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
 
 ## Super Micro Bolus (SMB)
