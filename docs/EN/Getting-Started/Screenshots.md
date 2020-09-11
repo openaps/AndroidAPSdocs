@@ -178,8 +178,9 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Deviations
 * **GREY** bars show a deviation due to carbs. 
-* **GREEN** bars show that BG is higher than the algorithm expected it to be. 
-* **RED** bars show that BG is lower than the algorithm expected.
+* **GREEN** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
+* **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
+* **YELLOW** bars show a deviation due to UAM.
 
 #### Sensitivity
 * Shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. 
