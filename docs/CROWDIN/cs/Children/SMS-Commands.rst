@@ -56,7 +56,7 @@ Smyčka
 
 CGM data
 --------------------------------------------------
-* Glykémie
+* BG
    * Odpověď: poslední BG: 5.6 před 4min Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)
 * CAL 5.6
    * Odpověď: Pro odeslání kalibrace 5.6 odpovězte pomocí SMS s kódem Rrt
