@@ -276,6 +276,27 @@ When you want to make a meal bolus this is where you will normally make it from.
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
 * For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
+
+
+## Skins
+
+3 skins are available in AndroidAPS, you can select skin in Preference / General / Skin
+
+![Bolus wizard](../images/Pref2020_Skin.png)
+
+### Portrait and Landscape orientation
+
+![Bolus wizard](../images/Screenshots_Skins.png)
+
+- Portrait orientation
+  - **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
+  - **Large Display** has an increased size of all graphs compare to other skins
+- Landscape orientation
+  - in **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
+  - **Large Display** has an increased size of all graphs compare to other skins
+
+
+
 # ************************************
 # Hier geht es weiter!
 # ************************************    
