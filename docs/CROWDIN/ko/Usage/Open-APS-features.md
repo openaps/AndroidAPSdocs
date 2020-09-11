@@ -14,14 +14,14 @@
 
 '수퍼 마이크로 볼루스 (super micro bolus)'의 줄임말인 SMB는 Oref1 알고리즘에서 사용하는 OpenAPS의 최신 기능(2018년부터 사용됨)입니다. AMA와 다르게, SMB는 혈당 수치를 조절하기 위해 임시 basal 양을 사용하지 않고, **작은 양의 super microbolus**를 주로 사용합니다. AMA에서 임시 basal 양을 사용하여 1.0 IU 인슐린을 추가할 때, SMB에서는 0.4 IU, 0.3 IU, 0.2 IU, 0.1 IU처럼 작은 용량의 super microbolus를 **5분 마다** 주입합니다. 동시에 (안전상의 이유로) 과주입을 방지하기 위해 실제 basal 양은 해당 기간 동안 0 IU/h로 설정됩니다 (**'zero-temping'**). AMA에서 임시 basal 양을 증가시키는 것보다 이 방법을 통해 시스템이 빠르게 혈당을 조절할 수 있습니다.
 
-Thanks to SMB, it can basically be sufficient for low-carb meals to inform the system of the planned amount of carbohydrate and leave the rest to AAPS. However, this may lead to higher postprandial peaks because pre-bolusing isn’t possible. Or you give, if necessary with pre-bolusing, a **start bolus**, which **only partly** covers the carbohydrates (e.g. 2/3 of the estimated amount) and let SMB fill up the rest.
+고마운 SMB 덕분에, 기본적으로 저탄수화물 식사에서는 다른 것은 AAPS에 맡기고, 식사 예정된 탄수화물 양을 시스템에 입력하는 것으로 충분할 수 있습니다. 그러나 이 경우 식전 주입이 가능하지 않기 때문에 식후 피크가 높을 수 있습니다. 또는 식전 주입이 필요하다면 탄수화물의 **일부**(예를 들어, 예상 양의 2/3 정도)를 커버하는 **시작 bolus**를 주입하고, SMB가 나머지 부분을 담당하게 할 수 있습니다.
 
-The SMB feature contains some safety mechanisms:
+SMB 기능에는 몇 가지 안전 메커니즘이 있습니다:
 
-1. The largest single SMB dose can only be the smallest value off:
+1. 다음 값들 중 최소 용량이 SMB 단독으로 사용할 수 있는 최대 인슐린 용량입니다:
     
-    * value corresponding to the current basal rate (as adjusted by autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
-    * half the amount of insulin currently required, or
+    * "SMB 제한을 위한 최대 시간"으로 설정된 시간 동안의 (autosens에 의해 조정된) 현재 basal 양에 따른 값, 즉, 다음 30분 동안의 basal 총량,
+    * 또는, 현재 필요한 인슐린의 양의 절반
     * the remaining portion of your maxIOB value in the settings.
 
 2. Probably you will often notice low temporary basal rates (called 'low temps') or temporary basal rates at 0 U/h (called 'zero-temps'). This is by design for security reasons and has no negative effects if the profile is set correctly. The IOB curve is more meaningful than the course of the temporary basal rates.
