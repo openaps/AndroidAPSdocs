@@ -22,9 +22,9 @@ SMB 기능에는 몇 가지 안전 메커니즘이 있습니다:
     
     * "SMB 제한을 위한 최대 시간"으로 설정된 시간 동안의 (autosens에 의해 조정된) 현재 basal 양에 따른 값, 즉, 다음 30분 동안의 basal 총량,
     * 또는, 현재 필요한 인슐린의 양의 절반
-    * the remaining portion of your maxIOB value in the settings.
+    * 또는, 설정의 maxIOB 값에서 남아있는 양
 
-2. Probably you will often notice low temporary basal rates (called 'low temps') or temporary basal rates at 0 U/h (called 'zero-temps'). This is by design for security reasons and has no negative effects if the profile is set correctly. The IOB curve is more meaningful than the course of the temporary basal rates.
+2. 종종 낮은 임시 basal 양 (low temps) 또는 0 U/h 임시 basal 양(zero-temps)를 자주 보게 될 것입니다. 이는 안전상의 이유로 설계되었으며 프로파일이 올바르게 설정된 경우에는 부정적인 영향을 미치지 않습니다. 임시 basal 양의 추이보다 IOB 곡선이 더 큰 의미를 갖습니다.
 
 3. Additional calculations to predict the course of glucose, e.g. by UAM (un-announced meals). Even without manual carbohydrate input from the user, UAM can automatically detect a significant increase in glucose levels due to meals, adrenaline or other influences and try to adjust this with SMB. To be on the safe side this also works the other way round and can stop the SMB earlier if an unexpectedly rapid drop in glucose occurs. That's why UAM should always be active at SMB.
 
