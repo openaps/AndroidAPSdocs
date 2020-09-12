@@ -26,7 +26,7 @@ SMB 기능에는 몇 가지 안전 메커니즘이 있습니다:
 
 2. 종종 낮은 임시 basal 양 (low temps) 또는 0 U/h 임시 basal 양(zero-temps)를 자주 보게 될 것입니다. 이는 안전상의 이유로 설계되었으며 프로파일이 올바르게 설정된 경우에는 부정적인 영향을 미치지 않습니다. 임시 basal 양의 추이보다 IOB 곡선이 더 큰 의미를 갖습니다.
 
-3. Additional calculations to predict the course of glucose, e.g. by UAM (un-announced meals). Even without manual carbohydrate input from the user, UAM can automatically detect a significant increase in glucose levels due to meals, adrenaline or other influences and try to adjust this with SMB. To be on the safe side this also works the other way round and can stop the SMB earlier if an unexpectedly rapid drop in glucose occurs. That's why UAM should always be active at SMB.
+3. 혈당 추이를 예측하기 위한 부가적인 계산, 즉, UAM (un-announced meals, 입력되지 않은 음식 섭취). Even without manual carbohydrate input from the user, UAM can automatically detect a significant increase in glucose levels due to meals, adrenaline or other influences and try to adjust this with SMB. To be on the safe side this also works the other way round and can stop the SMB earlier if an unexpectedly rapid drop in glucose occurs. That's why UAM should always be active at SMB.
 
 **You must have started [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
 
