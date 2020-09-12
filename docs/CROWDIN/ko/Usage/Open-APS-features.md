@@ -34,11 +34,11 @@ SMB 기능에는 몇 가지 안전 메커니즘이 있습니다:
 
 ### 임시 Basal의 Max U/h을 (OpenAPS "max-basal")로 설정할 수 있습니다.
 
-이러한 안전 설정은 인슐린 펌프가 주입할 수 있는 최대의 임시 basal 양을 결정합니다. The value should be the same in the pump and in AAPS and should be at least 3 times the highest single basal rate set.
+이러한 안전 설정은 인슐린 펌프가 주입할 수 있는 최대의 임시 basal 양을 결정합니다. 이 값은 펌프와 AAPS에서 동일해야 하며, 설정된 basal 양 중 제일 높은 값의 3배 이상이어야 합니다.
 
-Example:
+예시:
 
-Your basal profile’s highest basal rate during the day is 1.00 U/h. Then a max-basal value of at least 3 U/h is recommended.
+사용자의 basal 프로파일에서 하루 중 가장 높은 basal 양이 1.00 U/h인 경우입니다. Then a max-basal value of at least 3 U/h is recommended.
 
 But you cannot choose any value. AAPS limits the value as a 'hard limit' according to the patients age you have selected under settings. The lowest permitted value is for children and the highest for insulin-resistant adults.
 
