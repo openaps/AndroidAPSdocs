@@ -26,15 +26,15 @@ SMB 기능에는 몇 가지 안전 메커니즘이 있습니다:
 
 2. 종종 낮은 임시 basal 양 (low temps) 또는 0 U/h 임시 basal 양(zero-temps)를 자주 보게 될 것입니다. 이는 안전상의 이유로 설계되었으며 프로파일이 올바르게 설정된 경우에는 부정적인 영향을 미치지 않습니다. 임시 basal 양의 추이보다 IOB 곡선이 더 큰 의미를 갖습니다.
 
-3. 혈당 추이를 예측하기 위한 부가적인 계산, 즉, UAM (un-announced meals, 입력되지 않은 음식 섭취). Even without manual carbohydrate input from the user, UAM can automatically detect a significant increase in glucose levels due to meals, adrenaline or other influences and try to adjust this with SMB. To be on the safe side this also works the other way round and can stop the SMB earlier if an unexpectedly rapid drop in glucose occurs. That's why UAM should always be active at SMB.
+3. 혈당 추이를 예측하기 위한 부가적인 계산, 즉, UAM (un-announced meals, 입력되지 않은 음식 섭취). 사용자로부터 수동으로 탄수화물 섭취가 입력되지 않은 경우에도, 식사/아드레날린 또는 다른 영향들에 의해 상당히 상승한 혈당 수준을 UAM이 자동으로 검출할 수 있습니다. SMB를 사용하여 이러한 혈당 상승을 조절해볼 수 있습니다. 안전 측면에서 이는 반대로 작동하며, 예상치 못한 혈당의 급격한 감소가 발생하는 경우 SMB를 일찍 중단할 수 있습니다. 이것이 SMB 사용 시 UAM이 항상 활성화되어야 하는 이유입니다.
 
-**You must have started [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
+**SMB를 사용하기 위해서는 [목표 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)을 시행 중이어야 합니다.**
 
-See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) and [Tim's info on SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
+참고: [Oref1 SMB에 대한 OpenAPS 문서](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)와 [SMB에 대한 Tim의 정보](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
-### Max U/h a temp basal can be set to (OpenAPS “max-basal”)
+### 임시 Basal의 Max U/h을 (OpenAPS "max-basal")로 설정할 수 있습니다.
 
-This safety setting determines the maximum temporary basal rate the insulin pump may deliver. The value should be the same in the pump and in AAPS and should be at least 3 times the highest single basal rate set.
+이러한 안전 설정은 인슐린 펌프가 주입할 수 있는 최대의 임시 basal 양을 결정합니다. The value should be the same in the pump and in AAPS and should be at least 3 times the highest single basal rate set.
 
 Example:
 
