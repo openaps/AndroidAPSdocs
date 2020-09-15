@@ -49,7 +49,7 @@ AndroidAPS는 다음과 같이 값을 제한합니다:
 * 성인: 10
 * 인슐린 저항성이 있는 성인: 12
 
-### Maximum total IOB OpenAPS can’t go over (OpenAPS "max-iob")
+### OpenAPS가 주입할 수 있는 최대 basal IOB (OpenAPS "max-iob")
 
 This value determines which maxIOB has to be considered by AAPS running in closed loop mode. If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
 
