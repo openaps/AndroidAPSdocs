@@ -7,7 +7,7 @@
 * **OpenAPS**에서 Oref 구현은 24시간, 8시간 동안의 데이터를 조합하여 실행됩니다. 두 가지 데이터 중 민감도가 더 높은 것을 사용합니다.
 * AndroidAPS는 8시간 (UAM을 사용하기 위한 경우) 또는 사용자 옵션으로서 24시간으로만 실행 가능합니다.
 * 캐뉼라를 변경하거나 프로파일을 변경하면 autosens 비율이 0%로 재설정됩니다.
-* Autosens adjusts your basal, I:C and ISF for you (i.e.: mimicking what a Profile shift does).
+* Autosens는 basal 및 ISF를 조정합니다 (즉, 프로파일 변경이 수행하는 것과 비슷함).
 * 연장된 기간 동안 계속 탄수화물을 섭취하면, 섭취한 탄수화물은 혈당값 증분 계산으로부터 제외됨으로써 이 기간동안 autosens는 덜 효과적일 것입니다.
 
 ## Super Micro Bolus (SMB)
@@ -38,9 +38,9 @@ SMB 기능에는 몇 가지 안전 메커니즘이 있습니다:
 
 예시:
 
-사용자의 basal 프로파일에서 하루 중 가장 높은 basal 양이 1.00 U/h인 경우입니다. Then a max-basal value of at least 3 U/h is recommended.
+사용자의 basal 프로파일에서 하루 중 가장 높은 basal 양이 1.00 U/h인 경우입니다. 이 경우 max basal 양으로 3U/h이 추천됩니다.
 
-But you cannot choose any value. AAPS limits the value as a 'hard limit' according to the patients age you have selected under settings. The lowest permitted value is for children and the highest for insulin-resistant adults.
+하지만 사용자가 아무 값이나 선택할 수 있는 것은 아닙니다. 설정에서 선택된 환자의 연령에 따라 이 값은 AAPS에 의해 '엄격한 한계(hard limit)'로 제한됩니다. 허용되는 가장 낮은 값은 어린이를 위한 것이며, 가장 높은 값은 인슐린 저항성이 있는 성인들을 위한 것 입니다.
 
 AndroidAPS limits the value as follows:
 
