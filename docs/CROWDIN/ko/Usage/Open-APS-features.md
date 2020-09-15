@@ -42,12 +42,12 @@ SMB 기능에는 몇 가지 안전 메커니즘이 있습니다:
 
 하지만 사용자가 아무 값이나 선택할 수 있는 것은 아닙니다. 설정에서 선택된 환자의 연령에 따라 이 값은 AAPS에 의해 '엄격한 한계(hard limit)'로 제한됩니다. 허용되는 가장 낮은 값은 어린이를 위한 것이며, 가장 높은 값은 인슐린 저항성이 있는 성인들을 위한 것 입니다.
 
-AndroidAPS limits the value as follows:
+AndroidAPS는 다음과 같이 값을 제한합니다:
 
-* Child: 2
-* Teenage: 5
-* Adult: 10
-* Insulin-resistant adult: 12
+* 어린이: 2
+* 청소년: 5
+* 성인: 10
+* 인슐린 저항성이 있는 성인: 12
 
 ### Maximum total IOB OpenAPS can’t go over (OpenAPS "max-iob")
 
@@ -153,9 +153,9 @@ You cannot chose any value: For safety reason, there is a 'hard limit', which de
 
 The hardcoded parameters in AndroidAPS are:
 
-* Child: 2
-* Teenage: 5
-* Adult: 10
+* 어린이: 2
+* 청소년: 5
+* 성인: 10
 * Insulin resistant adult: 12
 
 ### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
@@ -165,7 +165,7 @@ This parameter limits the maximum of basal IOB where AndroidAPS still works. If 
 The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 * Child: 3
-* Teenage: 5
+* 청소년: 5
 * Adult: 7
 * Insulin resistant adult: 12
 
@@ -205,9 +205,9 @@ You cannot chose any value: For safety reason, there is a 'hard limit', which de
 
 The hardcoded parameters in AndroidAPS are:
 
-* Child: 2
-* Teenage: 5
-* Adult: 10
+* 어린이: 2
+* 청소년: 5
+* 성인: 10
 * Insulin resistant adult: 12
 
 ### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
@@ -217,7 +217,7 @@ This parameter limits the maximum of basal IOB where AndroidAPS still works. If 
 The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in MA than in SMB.
 
 * Child: 3
-* Teenage: 5
+* 청소년: 5
 * Adult: 7
 * Insulin resistant adult: 12
 
