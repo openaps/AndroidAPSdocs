@@ -277,25 +277,6 @@ When you want to make a meal bolus this is where you will normally make it from.
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
 * For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
-
-
-## Skins
-
-3 skins are available in AndroidAPS, you can select skin in Preference / General / Skin
-
-![Bolus wizard](../images/Pref2020_Skin.png)
-
-### Portrait and Landscape orientation
-
-#### Portrait orientation
-* **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
-+  **Large Display** has an increased size of all graphs compare to other skins
-#### Landscape orientation
-* Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
-* **Large Display** has an increased size of all graphs compare to other skins
-
-![Bolus wizard](../images/Screenshots_Skins.png)
-
 ## Insulin Profile
 
 ![Insulin Profile](../images/Screenshot_insulin_profile.png)
@@ -317,7 +298,7 @@ And even more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/
 * Different information on pump status. Displayed information depends on your pump model.
 * See [pumps page](../Hardware/pumps.rst) for details.
 
-![Pump Status](../images/Screenshot_PumpStatusPreliminary.png)
+![Pump Status](../images/Screenshot_PumpStatus.png)
 
 ## Care Portal
 
@@ -359,23 +340,28 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 ![Profile](../images/Screenshots_Profile.png)
 
+## Treatment
 
-# ************************************
-# Hier geht es weiter!
-# ************************************  
+History of the following treatments:
 
-## Treatment, xDrip, NSClient
+* Bolus & carbs -> option to [remove entries](..Getting-Started/Screenshots#carb-correction) to correct history
+* [Extended bolus](../Usage/Extended-Carbs#id1)
+* Temporary basal rate
+* [Temporary target](../Usage/temptarget.md)
+* [Profile switch](../Usage/Profiles.md)
+* [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
-These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem. 
+## BG Source - xDrip, Dexcom App (pateched)...
+* Depending on your BG source settings this tab is named differntly.
+* Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
 
-## Config Builder
+![BG Source tab - here xDrip]../images/Screenshots_BGSource.png)
 
-![Config Builder](../images/Screenshot_config_builder_2020.png)
+These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
 
-This is where you will set up the configuration of your AndroidAPS rig. This screenshot shows a pretty typical rig using an Insight pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on a Local profile and connected to a Nightscout cloud based server.
+## NSClient
+* Displays status of the connection with your Nightscout site.
+* Settings are made in [preferences](../Configuration/Preferences#ns-client). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
+* For troubleshooting see this [page](../Usage/Troubleshooting-NSClient.md).
 
-The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
-
-## Settings and Preferences
-
-At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
+![NSClient](../Screenshots_NSClient.png)
