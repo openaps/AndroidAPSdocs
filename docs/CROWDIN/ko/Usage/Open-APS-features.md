@@ -58,7 +58,7 @@ OpenAPS SMB를 사용하면, OpenAPS AMA에서와는 다르게 max-IOB가 계산
     maxIOB = 평균 식사 bolus + 하루 최대 basal의 3배 양
     
 
-Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in AMA.
+조심하면서 참을성 있게 한 단계 한 단계 설정을 변경해야만 합니다. 이 값은 사용자마다 다르며, 평균 총 하루 용량 (TDD)에 따라 달라지게 됩니다. 안전상의 이유로, 환자 나이에 따른 제한이 있습니다. The 'hard limit' for maxIOB is higher than in AMA.
 
 * Child: 3
 * Teenage: 7
@@ -162,7 +162,7 @@ The hardcoded parameters in AndroidAPS are:
 
 This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
+The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. 이 값은 사용자마다 다르며, 평균 총 하루 용량 (TDD)에 따라 달라지게 됩니다. 안전상의 이유로, 환자 나이에 따른 제한이 있습니다. The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 * Child: 3
 * 청소년: 5
@@ -214,7 +214,7 @@ The hardcoded parameters in AndroidAPS are:
 
 This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in MA than in SMB.
+The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. 이 값은 사용자마다 다르며, 평균 총 하루 용량 (TDD)에 따라 달라지게 됩니다. 안전상의 이유로, 환자 나이에 따른 제한이 있습니다. The 'hard limit' for maxIOB is lower in MA than in SMB.
 
 * Child: 3
 * 청소년: 5
