@@ -261,7 +261,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 ### Section L
 * Details of wizard's bolus calculation.
 * You can deselect any that you do not want to include but you normally wouldn't want to.
-* For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate baes on an existing temporary target.
+* For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
 
 #### Combinations of COB and IOB and what they mean
 * For safety reasons IOB boxed cannot be unticked when COB box is ticked as you might run the risk of too much insulin as AAPS is not accounting for what’s already given.
@@ -287,14 +287,16 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ### Portrait and Landscape orientation
 
+#### Portrait orientation
+* **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
++  **Large Display** has an increased size of all graphs compare to other skins
+#### Landscape orientation
+* Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
+* **Large Display** has an increased size of all graphs compare to other skins
+
 ![Bolus wizard](../images/Screenshots_Skins.png)
 
-- Portrait orientation
-  - **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
-  - **Large Display** has an increased size of all graphs compare to other skins
-- Landscape orientation
-  - in **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
-  - **Large Display** has an increased size of all graphs compare to other skins
+
 
 
 
