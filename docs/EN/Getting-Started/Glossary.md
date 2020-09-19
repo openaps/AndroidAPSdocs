@@ -200,12 +200,6 @@
  <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - log files</a></td>
 </tr>
 <tr>
- <td>MA</td>
- <td>meal assist - standard algorithm to handle carbs</td>
- <td>AMA / SMB</td>
- <td><a href="../Usage/Open-APS-features.html#meal-assist-ma">Wiki - MA</a></td>
-</tr>
-<tr>
  <td>maxIOB</td>
  <td>safety feature - maximum total IOB AAPS can't go over</td>
  <td>&nbsp;</td>
