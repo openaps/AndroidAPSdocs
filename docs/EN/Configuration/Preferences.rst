@@ -352,26 +352,36 @@ The options here will vary depending on which pump driver you have selected in `
 
 If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
-NS Client
+NSClient
 ===========================================================
 
   .. image:: ../images/Pref2020_NSClient.png
-    :alt: NS Client
+    :alt: NSClient
 
 * Set your *Nightscout URL* (i.e. https://yourwebsitename.herokuapp.com) and the *API secret* (a 12 character password recorded in your Heroku variables).
 * This enables data to be read and written between both the Nightscout website and AndroidAPS.  
 * Double check for typos here if you are stuck in Objective 1.
 * **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-* *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem. 
+* *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS). 
 * If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ are uploaded to your Nightscout site.
-* Use *connection settings* to restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
+
+Connection settings
+-----------------------------------------------------------
+
+  .. image:: ../images/ConfBuild_ConnectionSettings.png
+    :alt: NSClient connection settings  
+  
+* Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
+* If you want to use only a specific WiFi network you can enter its WiFi SSID. 
+* Multiple SSIDs can be separated by semicolon. 
+* To delete all SSIDs enter a blank space in the field.
 
 Alarm options
 -----------------------------------------------------------
 * Alarm options allows you to select which default Nightscout alarms to use through the app.  
 * For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
 * They will only work whilst you have a connection to Nightscout and are intended for parent/carers. 
-* If you have the CGM source on your phone then use those alarms instead (i.e. xDrip+).
+* If you have the CGM source on your phone (i.e. xDrip+ or Dexcom patched app) then use those alarms instead.
 
 Advanced settings
 -----------------------------------------------------------
@@ -380,7 +390,11 @@ Advanced settings
     :alt: NS Client advanced settings
 
 * Most options in advanced settings are self-explanatory.
-* *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+.
+* *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+. 
+
+  * Dexcom patched app does not broadcast directly to xDrip+. 
+  * You need to `go through AAPS <../Configuration/Config-Builder.html#bg-source>`_ and enable local broadcast in AAPS to use xDrip+ alarms.
+  
 * *Always use basal absolute values* must be activated if you want to use Autotune properly. See `OpenAPS documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ for more details on Autotune.
 * **Do not activate this when using `Insight pump <../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps>`_!**  It would lead to false TBR settings in Insight pump.
 
