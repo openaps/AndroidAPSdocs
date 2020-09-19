@@ -53,9 +53,9 @@ AndroidAPS는 다음과 같이 값을 제한합니다:
 
 이 값은 closed loop 모드에서 실행되는 AAPS가 고려해야하는 maxIOB를 결정합니다. 현재 IOB가 이 값을 초과하는 경우 (예를 들어, 식사 bolus 후), 루프는 IOB 한계가 주어진 값보다 낮아질 때까지 인슐린 주입을 중단시킵니다.
 
-OpenAPS SMB를 사용하면, OpenAPS AMA에서와는 다르게 max-IOB가 계산됩니다. In AMA, maxIOB was just a safety-parameter for basal IOB, while in SMB-mode, it also includes bolus IOB. A good start is
+OpenAPS SMB를 사용하면, OpenAPS AMA에서와는 다르게 max-IOB가 계산됩니다. MaxIOB는 AMA에서 basal IOB에 대한 안전 기준이며, SMB-모드에서는 bolus IOB를 포함한 기준입니다. 좋은 시작값은
 
-    maxIOB = average mealbolus + 3x max daily basal
+    maxIOB = 평균 식사 bolus + 하루 최대 basal의 3배 양
     
 
 Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in AMA.
