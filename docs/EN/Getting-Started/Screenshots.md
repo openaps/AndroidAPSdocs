@@ -40,7 +40,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
 
 #### Current blood glucose
 * Latest blood glucose reading from your CGM is shown on the left side.
-* Color of the bg value reflects the status to the defined [range](../Configuration/Preferences#range-for-visualization).
+* Color of the BG value reflects the status to the defined [range](../Configuration/Preferences#range-for-visualization).
    * green = in range
    * red = below range
    * yellow = above range
@@ -296,39 +296,28 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ![Bolus wizard](../images/Screenshots_Skins.png)
 
-
-
-
-
-# ************************************
-# Hier geht es weiter!
-# ************************************    
-
-
-
-
-
-
 ## Insulin Profile
 
 ![Insulin Profile](../images/Screenshot_insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen. The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
-
-You will normally be using one of the Oref profiles - and the important thing to note is that the decay has a long tail. If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
+* This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
+* The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
+* The important thing to note is that the decay has a long tail. 
+* If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
+* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
 
 For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
 And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-And more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
-
+And even more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Pump Status
 
-![Pump Status](../images/Screenshot_pump_Combo.png)
+* Different information on pump status. Displayed information depends on your pump model.
+* See [pumps page](../Hardware/pumps.rst) for details.
 
-Here we see the status of the insulin pump - in this case an Accu-Chek Combo. The information displayed is self-explanatory. A long press on the HISTORY button will read the data from your pump history, including your basal profile. But remember only one basal profile is supported on the Combo pump.
+![Pump Status](../images/Screenshot_PumpStatusPreliminary.png)
 
 ## Care Portal
 
@@ -352,24 +341,28 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 6. Enter correct carb amount through carbs button on homescreen and make sure to set the correct event time.
 7. If there is just one line in treatment tab including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
 
-## Loop, MA, AMA, SMB
-You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
+## Loop, AMA / SMB
+* These tabs show details about the algorithm's calculations and why AAPS acts the way it does.
+* Calculations are each time the system gets a fresh reading from the CGM.
+* For more details see [APS section on config builder page](../Configuration/Config-Builder#aps).
 
 ## Profile
+* Profile contains information on your individual diabetes settings:
 
-![Profile](../images/Screenshot_profile.png)
+   * DIA (Duration of Insulin Action)
+   * IC or I:C: Insulin to Carb ratio
+   * ISF: Insulin Sensitivity Factor
+   * Basal rate
+   * Target: Blood glucose level that you want AAPS to be aiming for
+   
+* You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](/Configuration/Config-Builder.md).
 
-AndroidAPS can run using a number of different profile configurations. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nightscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a [Profile Switch](../Usage/Profiles.md) in AndroidAPS to activate the changes. Data such as the basal profile would then be automatically copied over to your pump.
+![Profile](../images/Screenshots_Profile.png)
 
-**DIA:** stands for Duration of Insulin Action and it is discussed above in the section on insulin profiles.
 
-**IC:** is Insulin to Carb ratio. This profile has a number of different values set for different times of day.
-
-**ISF:** is Insulin Sensitivity Factor - the amount by which one unit of insulin will reduce your blood glucose assuming that nothing else changes.
-
-**Basal:** is the basal profile programmed into your pump.
-
-**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for different times of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
+# ************************************
+# Hier geht es weiter!
+# ************************************  
 
 ## Treatment, xDrip, NSClient
 
