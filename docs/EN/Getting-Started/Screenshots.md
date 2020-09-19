@@ -355,7 +355,7 @@ History of the following treatments:
 * Depending on your BG source settings this tab is named differntly.
 * Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
 
-![BG Source tab - here xDrip]../images/Screenshots_BGSource.png)
+![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
 
 These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
 
@@ -364,4 +364,4 @@ These are simply logs of treatments (boluses and carbs), xDrip messages and mess
 * Settings are made in [preferences](../Configuration/Preferences#ns-client). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
 * For troubleshooting see this [page](../Usage/Troubleshooting-NSClient.md).
 
-![NSClient](../Screenshots_NSClient.png)
+![NSClient](../images/Screenshots_NSClient.png)
