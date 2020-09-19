@@ -148,7 +148,16 @@ More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.
 Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Loop
-Define whether you want to allow AAPS automatic controls or not.
+![Config builder - loop mode](.../images/ConfigBuilder_LoopLGS.png)
+
+* Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
+* Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol or 100 mg/dl instead of 5,0 - 7,0 mmol or 90 - 125 mg/dl) is recommended.
+
+### Minimal request change
+* When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. 
+* To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate.
+* This defines the relative change required to trigger a notification.
+
 
 ### Open Loop
 AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
