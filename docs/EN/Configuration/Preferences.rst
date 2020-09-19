@@ -75,14 +75,25 @@ Bolus protection
 
 Skin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-You can choose from three types of skins:
-
-* Original skin - AAPS as you know it
-* Buttons always on bottom of screen - especially for stand alone Android watches
-* Large display - bigger graph
+* You can choose from three types of skins:
 
   .. image:: ../images/Pref2020_Skin.png
     :alt: Select skin
+
+* Difference depend of phone's display orientation
+
+Portrait orientation
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+* **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
+* **Large Display** has an increased size of all graphs compare to other skins
+
+Landscape orientation
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+* Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
+* **Large Display** has an increased size of all graphs compare to other skins
+
+  .. image:: ../images/Screenshots_Skins.png
+    :alt: Skins depending on phone's display orientation
 
 Overview
 ===========================================================
