@@ -14,27 +14,30 @@ This is the first screen you will come across when you open AndroidAPS and it co
 ### Section B - Profile & target
 
 #### Profile
+   ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+
 * Current profile is displayed in the left bar.
 * Long press profile bar to view profile details or to [switch between different profiles](../Usage/Profiles#profile-switch).
 * If profile switch was made with duration remaining time in minutes is shown in brackets.
 
-   ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
-
 #### Target
+   ![Temp target remaining duration](../images/Home2020_TT.png)
+
 * Current target blood glucose level is displayed in the right bar.
 * Long press target bar to set a [temporary target](../Usage/temptarget.md).
 * If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
 
-   ![Temp target remaining duration](../images/Home2020_TT.png)
 
-##### Visualization of Dynamic target adjustment
-* When SMB algorithm is selected - and either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) are selected- 
+
+#### Visualization of Dynamic target adjustment
+   ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+
+* AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
+* Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
    * "sensitivity raises target" and/or 
    * "resistance lowers target" 
-  the target will change from what is set from profile. 
+* If AAPS detects resistance or sensitivity the target will change from what is set from profile. 
 * When it alters the target glucose background will change to green.
-
-   ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
 ### Section C - BG & loop status
 
@@ -294,25 +297,28 @@ And you can read an excellent blog article about it here: [Why we are regularly 
 And even more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Pump Status
+![Pump Status](../images/Screenshot_PumpStatus.png)
 
 * Different information on pump status. Displayed information depends on your pump model.
 * See [pumps page](../Hardware/pumps.rst) for details.
-
-![Pump Status](../images/Screenshot_PumpStatus.png)
 
 ## Care Portal
 
 Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records. 
 
-### Carb correction
+### Review carb calculation
+![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
 
+* If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
+* Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
+
+### Carb correction
+![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+   
 Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
 
 1. Check and remember actual COB and IOB on homescreen.
 2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-
-   ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
-
 3. Remove the entry with the faulty carb amount.
 4. Make sure carbs are removed successfully by checking COB on homescreen again.
 5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
@@ -328,6 +334,8 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 * For more details see [APS section on config builder page](../Configuration/Config-Builder#aps).
 
 ## Profile
+![Profile](../images/Screenshots_Profile.png)
+
 * Profile contains information on your individual diabetes settings:
 
    * DIA (Duration of Insulin Action)
@@ -337,8 +345,6 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
    * Target: Blood glucose level that you want AAPS to be aiming for
    
 * You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](/Configuration/Config-Builder.md).
-
-![Profile](../images/Screenshots_Profile.png)
 
 ## Treatment
 
@@ -352,16 +358,14 @@ History of the following treatments:
 * [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
 ## BG Source - xDrip, Dexcom App (pateched)...
+![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
+
 * Depending on your BG source settings this tab is named differntly.
 * Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
 
-![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
-
-These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
-
 ## NSClient
+![NSClient](../images/Screenshots_NSClient.png)
+
 * Displays status of the connection with your Nightscout site.
 * Settings are made in [preferences](../Configuration/Preferences#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
 * For troubleshooting see this [page](../Usage/Troubleshooting-NSClient.md).
-
-![NSClient](../images/Screenshots_NSClient.png)
