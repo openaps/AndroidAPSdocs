@@ -361,7 +361,7 @@ These are simply logs of treatments (boluses and carbs), xDrip messages and mess
 
 ## NSClient
 * Displays status of the connection with your Nightscout site.
-* Settings are made in [preferences](../Configuration/Preferences#ns-client). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
+* Settings are made in [preferences](../Configuration/Preferences#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
 * For troubleshooting see this [page](../Usage/Troubleshooting-NSClient.md).
 
 ![NSClient](../images/Screenshots_NSClient.png)
