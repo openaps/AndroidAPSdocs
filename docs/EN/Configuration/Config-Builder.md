@@ -47,7 +47,7 @@ You can easily create a new local profile from a profile switch. In this case ti
 If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
 
 #### Upload local profiles to Nightscout
-Local profiles can also be uploaded to Nightscout. The settings can be found in NS Client preferences.
+Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
 
@@ -267,33 +267,9 @@ Might be helpful if watch was not connected for some time and you want to push t
 ### xDrip Statusline (watch)
 Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
-### NS Client
-Setup sync of your AndroidAPS data with Nightscout.
-
-If <b>Log app start to NS</b> is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimization not disabled for AAPS) but can flood the Nightscout graph with entries.
-
-#### Alarm options
-Activate/deactivate AndroidAPS alarms
-
-![Alarm options](../images/ConfBuild_NSClient_Alarms.png)
-
-#### Connection settings
-Offline looping, disable roaming...
-
-If you want to use only a specific WiFi network you can enter its <b>WiFi SSID </b>. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
-
-![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
-
-#### Advanced settings
-* Auto backfill missing BGs from Nightscout
-* Create announcement from errors
-Create Nightscout announcement for error dialogs and local alerts (also viewable in careportal in treatments section)
-* Enable local broadcast to other apps like xDrip+
-* NS upload only (sync disabled)
-* No upload to NS
-* Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
-
-![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
+### NSClient
+* Setup sync of your AndroidAPS data with Nightscout.
+* Settings in [preferences](../Configuration/Preferences#nsclient) can be opened by clicking the cog wheel.
 
 ### Maintenance
 Email and number of logs to be send. Normally no change necessary.
