@@ -60,6 +60,15 @@ Advantage:
 Disadvantage: 
 * none
 
+### Profile helper
+
+Profile helper offers two functions:
+
+   1. Find a profile for kids
+   2. Compare two profiles or profile switches in order to clone a new profile
+
+Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
+
 ### NS Profile
 NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
 This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
