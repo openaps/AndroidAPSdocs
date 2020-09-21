@@ -1,4 +1,3 @@
-
 Export & import settings
 **************************************************
 When should I export settings?
@@ -11,8 +10,8 @@ Exported settings should be copied to a cloud storage or your computer. So you a
 
 On a Windows 10 computer it looks like this:
   
-  .. image:: ../images/SmartphoneRootLevelWin10.png
-    :alt: AndroidAPS Preferences phone connected to computer
+.. image:: ../images/SmartphoneRootLevelWin10.png
+  :alt: AndroidAPS Preferences phone connected to computer
 
 Exported information
 ==================================================
@@ -24,32 +23,46 @@ Among others the following information is part of the settings export:
 * `Objectives <../Usage/Objectives.html>`_ status incl. `exam results <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
 * `Preferences <../Configuration/Preferences.html>`_ incl. `NS Client settings <../Configuration/Preferences.html#ns-client>`_
 
-
-
-
-How to export settings
+Encrypted backup format
 ==================================================
-* **Export settings** on your old phone
+Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`_ .
 
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Export settings
-  * File location will be shown
-    
+
+Export settings
+==================================================
+* Hamburger menu (top left corner of screen)
+* Maintenance
+* Export settings
+* Date and time of export will be added to the file name automatically and displayed together with the path.
+* Click OK.
+* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click OK.
+* Successful export will be promted at bottom of the screen.
+
+**********************************************************************
+** NEUE BILDER
+**********************************************************************
+
+
+
 .. image:: ../images/AAPS_ExportSettings.png
   :alt: AndroidAPS export settings
-       
-* **Transfer** settings from old to new phone using the file location shown during export
 
-  The exported file is called "AndroidAPSPreferences" and should be in your root folder in the main storage of the phone (just like C: on your computer).
-  
-* **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone
+Import settings
+==================================================
+* Hamburger menu (top left corner of screen)
+* Maintenance
+* Import settings
 
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Import settings
+**********************************************************************
+** NEUE BILDER + Ergänzen
+**********************************************************************
+
 
 * **Note for Dana RS users:**
 
   * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Please pair new phone and pump manually.
+  
+**********************************************************************
+** Transfer
+**********************************************************************
+
