@@ -37,7 +37,7 @@ Major new features
 * `Low glucose suspend mode <../Configuration/Preferences.html#aps-mode>`_ @Tornado-Tim
 * `carbs required notifications <../Configuration/Preferences.html#carb-required-notification>`_ @twain47 @Tornado-Tim
 * removed Careportal (moved to Actions) @MilosKozak
-* new encrypted backup format @dlvoy
+* `new encrypted backup format <../Usage/ExportImportSettings.html>`_ @dlvoy
 * `new SMS TOTP authentication <../Children/SMS-Commands.html>`_ @dlvoy
 * `new SMS PUMP CONNECT, DISCONNECT <../Children/SMS-Commands.html#commands>`_ commands @Lexsus
 * better support for tiny basals on Dana pumps @Mackwe
