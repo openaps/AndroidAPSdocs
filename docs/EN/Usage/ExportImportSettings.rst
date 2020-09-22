@@ -10,7 +10,7 @@ Exported settings should be copied to a cloud storage or your computer. So you a
 
 On a Windows 10 computer it looks like this:
   
-.. image:: ../images/SmartphoneRootLevelWin10.png
+.. image:: ../images/AAPS_ExImportSettingsWin.png
   :alt: AndroidAPS Preferences phone connected to computer
 
 Exported information
@@ -33,36 +33,47 @@ Export settings
 * Hamburger menu (top left corner of screen)
 * Maintenance
 * Export settings
+
+.. image:: ../images/AAPS_ExportSettings1.png
+  :alt: AndroidAPS export settings 1
+
 * Date and time of export will be added to the file name automatically and displayed together with the path.
-* Click OK.
-* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click OK.
+* Click 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
 * Successful export will be promted at bottom of the screen.
 
-**********************************************************************
-** NEUE BILDER
-**********************************************************************
-
-
-
-.. image:: ../images/AAPS_ExportSettings.png
-  :alt: AndroidAPS export settings
-
+.. image:: ../images/AAPS_ExportSettings2.png
+  :alt: AndroidAPS export settings 2
+  
 Import settings
 ==================================================
 * Hamburger menu (top left corner of screen)
 * Maintenance
 * Import settings
 
-**********************************************************************
-** NEUE BILDER + Ergänzen
-**********************************************************************
+.. image:: ../images/AAPS_ImportSettings1.png
+  :alt: AndroidAPS import settings 1
 
+* All files from folder AAPS/preferences/ on your phone will be shown in the list.
+* Select file.
+* Confirm import by clicking 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+
+.. image:: ../images/AAPS_ImportSettings2.png
+  :alt: AndroidAPS import settings 2
+
+* Details on the preference file will be shown.
+* Last option to cancel import.
+* Click 'Import'.
+* Confirm message by clicking 'OK'.
+* AAPS will be restarted in order to activate imported preferences.
 
 * **Note for Dana RS users:**
 
   * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Please pair new phone and pump manually.
   
-**********************************************************************
-** Transfer
-**********************************************************************
-
+Transfer settings file
+==================================================
+* Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
+* Manuals can be found on the web, i.e. `Android help pages <https://support.google.com/android/answer/9064445?hl=en>`_.
+* If you experience problems with the transfered file try another way to transfer file.
