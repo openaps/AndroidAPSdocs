@@ -19,7 +19,7 @@ Release date:
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
-Make sure to check and adjust settings after updating to 2.7 as described `here <../Installing-AndroidAPS/update2_7.html>`_.
+**Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`_.
 
 You need at least start Objective 11 in order to continue using Automation feature (all previous objectives must be completed otherwise starting Objective 11 is not possible).
 
@@ -49,8 +49,8 @@ Major new features
 * removed OpenAPS MA algorithm @Tornado-Tim
 * removed Oref0 sensitivity @Tornado-Tim
 * `Biometric or password protection <..../Configuration/Preferences.html#protection>`_ for settings, bolus @MilosKozak
-* new automation trigger @PoweRGbg
-* Open Humans uploader
+* `new automation trigger <../Usage/Automation.html>`_ @PoweRGbg
+* `Open Humans uploader <../Configuration/OpenHumans.html>`_
 
 Version 2.6.1.4
 ================
