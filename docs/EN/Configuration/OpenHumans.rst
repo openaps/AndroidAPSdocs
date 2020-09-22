@@ -30,8 +30,8 @@ Setup
 3. Open its setting using the cog wheel button. You can restrict upload to times when phone uses Wi-Fi and/or is charged. 
 4. Open the Open Humans Plugin (either trough OH tab or hamburger menu) and click 'LOGIN'.
 
-   .. image:: ../images/OHUploader1.png
-     :alt: Open Humans Config Builder
+.. image:: ../images/OHUploader1.png
+  :alt: Open Humans Config Builder
     
 5. Read the given information about the Open Humans Uploader and terms of use carefully. 
 6. Confirm by checking the box and click 'LOGIN'.
@@ -39,8 +39,8 @@ Setup
 8. Decide whether you want to hide your AndroidAPS Uploader membership in your public Open Humans profile.
 9. Click button 'Authorize project'.
 
-   .. image:: ../images/OHUploader2.png
-     :alt: Open Humans Terms of Use + Login
+.. image:: ../images/OHUploader2.png
+  :alt: Open Humans Terms of Use + Login
 
 11. Returning to AAPS you will see a prompt that login succeeded.
 12. Keep Open Humans Uploader plugin and phone turned on for setup to complete.
@@ -48,13 +48,13 @@ Setup
 14. Click 'LOGOUT' if you want to stop uploading data to Open Humans.
 15. Android notification will inform you about running upload.
 
-   .. image:: ../images/OHUploader3.png
-     :alt: Open Humans finish setup
+.. image:: ../images/OHUploader3.png
+  :alt: Open Humans finish setup
 
 16. You can manage your data by logging in to the `Open Humans website <www.openhumans.org>`_.
 
-   .. image:: ../images/OHWeb.png
-     :alt: Open Humans manage data
+.. image:: ../images/OHWeb.png
+  :alt: Open Humans manage data
      
 Sharing Opportunities
 ========================================
