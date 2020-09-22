@@ -30,6 +30,19 @@ Set master password
 .. image:: ../images/MasterPW.png
   :alt: Set master password
   
+Export settings
+-----------------------------------------------------------
+* AAPS 2.7 uses a new encrypted backup format. 
+* You must `export your settings <../Usage/ExportImportSettings.html>`_ after updating to version 2.7.
+* Settings files from previous versions **cannot** be used in AAPS 2.7 and onwards anymore.
+* Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
+
+Autosens (Hint - no action necessary)
+-----------------------------------------------------------
+* Autosens is changed to a dynamic switching model which replicates the reference design.
+* Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
+* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
+
 Set Pump Password for Dana RS (if using Dana RS)
 -----------------------------------------------------------
 * Pump password for `Dana RS <../Configuration/DanaRS-Insulin-Pump.html>`_ was not checked in previous versions.
@@ -52,16 +65,3 @@ To change password on Dana RS:
 * Confirm with OK button.
 * Save by pressing OK button again.
 * Move down to "14. EXIT" and press OK button.
-
-Export settings
------------------------------------------------------------
-* AAPS 2.7 uses a new encrypted backup format. 
-* You must `export your settings <../Usage/ExportImportSettings.html>`_ after updating to version 2.7.
-* Settings files from previous versions **cannot** be used in AAPS 2.7 and onwards anymore.
-* Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
-
-Autosens
------------------------------------------------------------
-* Autosens is changed to a dynamic switching model which replicates the reference design.
-* Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
-* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
