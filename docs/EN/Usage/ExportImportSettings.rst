@@ -40,7 +40,7 @@ Export settings
 * Date and time of export will be added to the file name automatically and displayed together with the path.
 * Click 'OK'.
 * Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
-* Successful export will be promted at bottom of the screen.
+* Successful export will be prompted at bottom of the screen.
 
 .. image:: ../images/AAPS_ExportSettings2.png
   :alt: AndroidAPS export settings 2
@@ -76,4 +76,4 @@ Transfer settings file
 ==================================================
 * Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
 * Manuals can be found on the web, i.e. `Android help pages <https://support.google.com/android/answer/9064445?hl=en>`_.
-* If you experience problems with the transfered file try another way to transfer file.
+* If you experience problems with the transferred file try another way to transfer file.
