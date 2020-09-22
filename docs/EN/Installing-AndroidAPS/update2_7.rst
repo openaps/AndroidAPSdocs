@@ -1,7 +1,9 @@
 Necessary checks after update to AndroidAPS 2.7
 ***********************************************************
 
-The program code was changed significantly when switching to AAPS 2.7. Therefore it is important that you make some changes or check settings after the update.
+* The program code was changed significantly when switching to AAPS 2.7. 
+* Therefore it is important that you make some changes or check settings after the update.
+* Please see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-270>`_ for details on new and extended features.
 
 Check BG source
 -----------------------------------------------------------
