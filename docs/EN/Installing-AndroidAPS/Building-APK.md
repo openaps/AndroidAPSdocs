@@ -134,7 +134,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 ![Check out project from version control within Android Studio](../images/AndroidStudio361_13.png)
 
-* Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") (1.).
+* Fill in the URL to the main AndroidAPS repository ("https://github.com/nightscout/AndroidAPS") (1.).
 * Choose the directory where you want to save the cloned code.
 * Click button "Test" (2.).
 * If test cannot be completed successfully check URL, correct and click "Test" again.
