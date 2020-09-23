@@ -129,7 +129,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 Select the pump you are using.  
 - [Dana R](DanaR-Insulin-Pump.md)
 - Dana R Korean (for domestic DanaR pump)
-- Dana Rv2 (DanaR pump with unofficially firmware upgrade)
+- Dana Rv2 (DanaR pump with unofficial firmware upgrade)
 - [Dana RS](DanaRS-Insulin-Pump.md)
 - [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
 - [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
