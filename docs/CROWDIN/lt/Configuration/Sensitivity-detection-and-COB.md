@@ -2,29 +2,24 @@
 
 ## Jautrumo algoritmas
 
-Šiuo metu yra 4 jautrumo nustatymo modeliai:
+Currently we have 3 sensitivity detection models:
 
-* Jautrumo nustatymo algoritmas Oref0
-* Jautrumo nustatymo algoritmas AAPS
-* Jautrumas pagal svertinį vidurkį
-* Jautrumo nustatymo algoritmas Oref1
+* Sensitivity AAPS
+* Sensitivity WeightedAverage
+* Sensitivity Oref1
 
-### Jautrumo nustatymo algoritmas Oref0
+### Sensitivity AAPS
 
-Jautrumas apskaičiuojamas pagal praėjusių 24 valandų duomenis, o į neįsisavintus angliavandenius (jei tokių yra) po nustatymuose nurodyto laiko neatsižvelgiama. Algoritmas yra panašus į OpenAPS Oref0, aprašytą [OpenAPS Oref0 dokumentacijoje](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Sensitivity is calculated the same way like Oref1 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
 
-### Jautrumo nustatymo algoritmas AAPS
+### Sensitivity WeightedAverage
 
-Jautrumas apskaičiuojamas taip pat, kaip ir Oref0, tačiau jūs galite nurodyti skaičiavimams laiką praeityje. Mažiausia angliavandenių absorbcija apskaičiuojama pagal maksimalų angliavandenių absorbcijos laiką nustatymuose
+Sensitivity is calculated as a weighted average from deviations. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
 
-### Jautrumas pagal svertinį vidurkį
+### Sensitivity Oref1
 
-Jautrumas apskaičiuojamas kaip svertinis nuokrypių vidurkis. Jūs galite nurodyti laiką praeityje. Nauji nukrypimai yra svarbesni. Mažiausia angliavandenių absorbcija apskaičiuojama pagal maksimalų angliavandenių absorbcijos laiką nustatymuose. Šis algoritmas greičiausiai atsižvelgia į jautrumo pokyčius.
-
-### Jautrumo nustatymo algoritmas Oref1
-
-Jautrumas apskaičiuojamas remiantis praėjusių 8 valandų arba paskutinio kateterio pakeitimo duomenimis, jei jis keistas mažiau nei prieš 8 valandas. Į angliavandenius (jei neįsisavinti) neatsižvelgiama po nustatymuose nustatyto laiko. Tik Oref1 algoritmas palaiko nedeklaruoto maisto NDM aptikimą. Tai reiškia, kad nedeklaruotas maistas neįtraukiamas į jautrumo skaičiavimus. Taigi, jei su NDM aptikimo metodu naudojate SMB, turite pasirinkti Oref1 algoritmą, kad SMB tinkamai veiktų. Norėdami gauti daugiau informacijos, skaitykite [OpenAPS Oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) dokumentaciją.
+Sensitivity is calculated from 8h data in the past or from last site change, if it is less than 8h ago. Carbs (if not absorbed) are cut after time specified in preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from sensitivity calculation. So if you are using SMB with UAM, you have to choose Oref1 algorithm to work properly. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
 
 ## Vienu metu gaunami angliavandeniai
 
-Reikia pabrėžti, kad yra esminių skirtumų tarp jautrumo aptikimo modelių - AAPS, Svertinis vidurkio ir Oref0 bei Oref1. Oref įskiepiai daro prielaidą, kad įsisavinami tik vieno valgymo angliavandeniai. Tai reiškia, kad įvedus antrą valgymą, jo įsisavinimas prasideda tik tada, kai pirmasis valgymas yra visiškai įsisavintas. AAPS + Svertinis vidurkis angliavandenių mažėjimo skaičiavimą pradeda iškart po angliavandenių įvedimo. Jei yra daugiau nei vienas valgymas, tada minimalus angliavandenių suvartojimas apskaičiuojamas atsižvelgiant į maisto kiekį ir maksimalų absorbcijos laiką. Atitinkamai, minimali absorbcija bus didesnė, palyginti su Oref įskiepiais.
+There is significant difference while using AAPS, WeightedAverage vs Oref1. Oref plugins expects only one meal decaying at time. It means 2nd meal starts decaying after 1st meal is completely decayed. AAPS+Weighted average starts decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to meal size and max absorption time. The minimum absorption accordingly will be higher in comparation to Oref plugins.
