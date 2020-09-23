@@ -5,10 +5,12 @@
 * Autosens는 혈당 편차 (플러스/마이너스/중립)을 관찰하는 알고리즘입니다.
 * 이 기능은 혈당 편차에 근거하여 사용자가 얼마나 인슐린에 민감한지, 저항성을 띄는지를 파악할 것입니다.
 * **OpenAPS**에서 Oref 구현은 24시간, 8시간 동안의 데이터를 조합하여 실행됩니다. 두 가지 데이터 중 민감도가 더 높은 것을 사용합니다.
-* AndroidAPS는 8시간 (UAM을 사용하기 위한 경우) 또는 사용자 옵션으로서 24시간으로만 실행 가능합니다.
-* 캐뉼라를 변경하거나 프로파일을 변경하면 autosens 비율이 0%로 재설정됩니다.
-* Autosens는 basal 및 ISF를 조정합니다 (즉, 프로파일 변경이 수행하는 것과 비슷함).
-* 연장된 기간 동안 계속 탄수화물을 섭취하면, 섭취한 탄수화물은 혈당값 증분 계산으로부터 제외됨으로써 이 기간동안 autosens는 덜 효과적일 것입니다.
+* In versions prior to AAPS 2.7 user had to choose between 8 or 24 hours manually.
+* From AAPS 2.7 on Autosens in AAPS will switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
+* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
+* Changing a cannula or changing a profile will reset Autosens ratio back to 0%.
+* Autosens adjusts your basal, I:C and ISF for you (i.e.: mimicking what a Profile shift does).
+* If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
 
 ## Super Micro Bolus (SMB)
 
@@ -141,13 +143,11 @@ Default value: 4 (shouldn’t be changed unless you really need to and know, wha
 
 AMA, the shortform of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
 
-**You will need to have started [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature**
-
 You can find more information in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 ### Max U/hr a Temp Basal can be set to (OpenAPS "max-basal")
 
-This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. 이것을 설정할 때에는 합리적으로 설정하는 것이 좋습니다. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
+This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. It is advised to set this to something sensible. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
 
 You cannot chose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
 
@@ -190,41 +190,5 @@ Default value: 3 (shouldn’t be changed unless you really need to and know, wha
 Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing)
 
 **Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
-
-Default value: 2
-
-* * *
-
-## Meal Assist (MA)
-
-### Max U/hr a Temp Basal can be set to (OpenAPS "max-basal")
-
-This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. 이것을 설정할 때에는 합리적으로 설정하는 것이 좋습니다. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
-
-You cannot chose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in MA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
-
-The hardcoded parameters in AndroidAPS are:
-
-* 어린이: 2
-* 청소년: 5
-* 성인: 10
-* Insulin resistant adult: 12
-
-### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
-
-This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
-
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. 이 값은 사용자마다 다르며, 평균 총 하루 용량 (TDD)에 따라 달라지게 됩니다. 안전상의 이유로, 환자 나이에 따른 제한이 있습니다. The 'hard limit' for maxIOB is lower in MA than in SMB.
-
-* Child: 3
-* 청소년: 5
-* Adult: 7
-* Insulin resistant adult: 12
-
-### Advanced Settings
-
-**Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
-
-**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2.That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
 
 Default value: 2
