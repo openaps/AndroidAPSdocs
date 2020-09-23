@@ -44,6 +44,7 @@ AndroidAPS 설치하기
 
    APK 파일 빌드하기 <./Installing-AndroidAPS/Building-APK.md>
    새 버전 혹은 다른 branch로 업데이트 하기 <./Installing-AndroidAPS/Update-to-new-version.md>
+   Checks after update to AAPS 2.7 <.//Installing-AndroidAPS/update2_7.rst>
    Install git <./Installing-AndroidAPS/git-install.rst>
    Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
@@ -71,7 +72,7 @@ Component Setup
    :glob:
    
    Config builder <./Configuration/Config-Builder.md>
-   설정 <./Configuration/Preferences.md>
+   Preferences <./Configuration/Preferences2020.rst>
    
    
 AndroidAPS Usage
