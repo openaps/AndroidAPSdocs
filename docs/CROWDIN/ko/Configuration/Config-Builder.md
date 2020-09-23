@@ -53,7 +53,7 @@ Nightscout 프로파일에서 로컬 프로파일로 전환하려면, NS 프로�
 
 #### 로컬 프로파일을 Nightscout에 업로드하기
 
-로컬 프로파일을 Nightscout에 업로드할 수도 있습니다. NS Client 환경 설정에서 적용할 수 있습니다.
+로컬 프로파일을 Nightscout에 업로드할 수도 있습니다. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
 
 ![로컬 프로파일을 NS에 업로드하기](../images/LocalProfile_UploadNS2.png)
 
@@ -68,11 +68,20 @@ Nightscout 프로파일에서 로컬 프로파일로 전환하려면, NS 프로�
 
 * 없음
 
-### NS 프로파일
+### Profile helper
 
-NS 프로파일은 Nightscout 사이트 저장된 프로파일들을 사용합니다 (https://[yournightscoutsiteaddress]/profile). 여러 프로파일들 중에 하나를 선택하기 위해서는 '프로파일 변경' 메뉴를 사용할 수 있고 AndroidAPS가 제대로 동작하지 않을 경우 현재 선택된 프로파일이 펌프에서 동작합니다. 이것은 Nightscout에서 다양한 프로파일들을 쉽게 만들 수 있도록 합니다 (예를 들어 직장에서, 가정에서, 운동할때, 휴가를 보낼 시 등등) 스마트폰이 인터넷에 연결되어 있으면, "저장" 버튼을 누른 뒤 얼마되지 않아 저장된 프로파일들이 AAPS로 전송될 것입니다. 인터넷 연결이 안된 상태나 NightScout과 연결되지 않은 상태에 설정하더라도, 한 번 동기화되면 NightScout의 프로파일을 AAPS에서 사용할 수 있습니다.
+Profile helper offers two functions:
 
-NightScout에서 프로파일을 활성화하기 위해서는 **프로파일 변경**을 해주셔야 합니다. AAPS 홈스크린 상단에서 현재 프로파일 (밝은 파란색의 "Open / Closed Loop" 영역과 진한 파란색의 "목표" 영역 사이의 회색 영역)을 길게 누르기 > 프로파일 변경 > 프로파일 선택 > 확인. 프로파일 변경 후 AAPS는 선택된 프로파일을 펌프에 기록함으로써 긴급 상황에서 AAPS 없이도 사용 가능하여 끊기지 않고 실행되게 합니다.
+1. Find a profile for kids
+2. Compare two profiles or profile switches in order to clone a new profile
+
+Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
+
+### NS Profile
+
+NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+
+Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
 장점:
 
@@ -86,39 +95,39 @@ NightScout에서 프로파일을 활성화하기 위해서는 **프로파일 변
 
 ## 인슐린
 
-사용하고 있는 인슐린 그래프를 선택하시기 바랍니다. '초속형성 Oref', 초-초속형성 Oref' 및 '사용자 지정 피크 Oref' 옵션은 모두 지수 모형입니다. 자세한 내용은 [OpenAPS 문서](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)에 나와 있으며, DIA 및 피크 시간에 따라 곡선이 달라집니다.
+Select the type of insulin curve you are using. The options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak.
 
-DIA는 사람마다 다릅니다. 따라서 스스로 시험해봐야 합니다. 단, 이 값은 반드시 5시간 이상이 되어야합니다. [이 페이지](../Getting-Started/Screenshots#insulin-profile)의 인슐린 프로파일 섹션에서 더 자세한 내용을 확인할 수 있습니다.
+The DIA is not the same for each person. That's why you have to test it for yourself. But it must always be at least 5 hours. You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page.
 
-초속형과 초-초속형의 경우, DIA만 사용자가 직접 조정할 수 있으며 피크 시간은 정해져 있습니다. 지속형은 DIA와 피크 시간을 모두 조정할 수 있으며, 이러한 설정의 효과를 알고있는 상급 사용자만 사용해야합니다.
+For Rapid-Acting and Ultra-Rapid, the DIA is the only variable you can adjust by yourself, the time to peak is fixed. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings.
 
-[인슐린 곡선 그래프](../Getting-Started/Screenshots#insulin-profile)는 다른 곡선들을 이해하는 데 도움이 됩니다. 체크박스를 활성화하여 탭으로 표시되도록 설정할 수 있으며, 그렇지 않은 경우에는 ≡ 메뉴에서 확인할 수 있습니다.
+The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
 
-### 초속효성 Oref
+### Rapid-Acting Oref
 
 * 휴마로그, 노보로그, 노보래피드에 권장됨
 * DIA = 최소 5시간
 * 최대 피크 타임 = 주사 후 75분 (고정된 값으로 조정할 수 없음)
 
-### 초-초속효성 Oref
+### Ultra-Rapid Oref
 
 * 피아스프에 권장됨
 * DIA = 최소 5시간
 * 최대 피크 타임 = 주사 후 55분 (고정된 값으로 조정할 수 없음)
 
-많은 사람들이 실제로 사용해보면, 0.0xx 단위가 유효하더라도 주사 후 3-4시간이 지나면 눈에 띄는 피아스프의 효과는 거의 없습니다. 하지만 이 잔여량으로도 운동과 같은 상황에서는 효과가 나타날 수 있습니다. 그러므로 AndroidAPS는 DIA를 최소 5시간으로 설정합니다.
+For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
 
-![구성 관리자 초속효성 Oref](../images/ConfBuild_UltraRapidOref.png)
+![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
 
-### 사용자 지정 피크 Oref
+### Free Peak Oref
 
-"사용자 지정 피크 Oref" 프로파일에서는 개개인별로 피크타임을 입력할 수 있습니다. 프로파일에서 DIA를 더 높게 설정하지 않은 경우 자동으로 5시간으로 설정됩니다.
+With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 
-이 프로파일은 품질 보증이 되지 않은 인슐린 또는 다른 인슐린들을 혼합해서 사용하는 경우 권장됩니다.
+This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
 ## 혈당 출처
 
-사용하고 있는 혈당 출처를 선택하세요 - 더 많은 설정 정보를 [혈당 출처](BG-Source.rst) 페이지에서 확인할 수 있습니다.
+Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient 혈당
@@ -130,192 +139,219 @@ DIA는 사람마다 다릅니다. 따라서 스스로 시험해봐야 합니다.
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
+* [Tomato App](http://tomato.cool/) for MiaoMiao device
+* Random BG: Generates random BG data (Demo mode only)
+
 ## 펌프
 
-사용하고 있는 펌프를 선택하시기 바랍니다.
+Select the pump you are using.
 
 * [다나 R](DanaR-Insulin-Pump.md)
 * 다나 R 한국어 (국내용 다나 R 펌프)
-* 다나 Rv2 (펌웨어 업그레이드 다나 R 펌프)
+* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
 * [다나 RS](DanaRS-Insulin-Pump.md)
-* [아큐첵 콤보 펌프](Accu-Chek-Combo-Pump.md) (추가적인 설치가 필요함)
-* 다회주사요법 (다회주사요법 시행 중 AAPS의 제안을 받는 경우)
-* 가상 펌프 (기기가 없는 경우 open loop으로 사용 - AAPS 제안만 가능)
+* [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
+* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Medtronic](MedtronicPump.md)
+* MDI (receive AAPS suggestions for your multiple daily injections therapy)
+* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
-다나 펌프에서 필요한 경우 **고급 설정**의 BT 워치독(블루투스 감시장치)를 활성화하십시오. 이 기능을 활성화 시, 펌프 연결이 끊기면 1초 동안 블루투스를 끄게 됩니다. 이것은 블루투스 스택이 멈추는 일부 전화에서 도움이 될 수 있습니다.
+For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+
+[Password for Dana RS pump](..Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
 
 ## 민감도 감지
 
-민감도 감지 유형을 선택하시기 바랍니다. 이 기능은 사용자가 평소보다 인슐린에 더 민감하게 반응하는 것 (또는 반대로 저항성을 나타내는 것)을 인식하면, 기존의 데이터를 분석하여 민감도를 조정하게 됩니다. 민감도 Oref0 알고리즘에 관한 상세정보는 [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode)에서 확인할 수 있습니다.
+Select the type of sensitivity detection. For more details of different designs please [read on here](Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
-홈 화면에서 SEN을 선택하고 흰색 선을 참고하여, 사용자의 민감도를 확인할 수 있습니다. [목표 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)을 수행하고 있어야 자동으로 인슐린 주입양을 조절해주는 민감도 감지/[autosens](../Usage/Open-APS-features.html#autosens)를 사용할 수 있습니다. 해당 목표에 도달하기 전에는 사용자의 그래프에서 Autosens 백분율 / 선으로 표시되어 정보 제공의 역할만 합니다.
+You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features.html#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
 ### Absorption settings
 
-만약 Oref1과 SMB를 사용하고 계시다면 반드시 **min_5m_carbimpact**를 8로 변경하셔야 합니다. 이 값은 CGM 혈당 값에 차이가 있는 경우 혹은 AAPS가 COB를 감쇠하도록 하는 혈당 상승을 신체활동으로 통해 "모두 소모한 경우"에만 이용됩니다. [탄수화물 흡수](../Usage/COB-calculation.rst)가 사용자의 혈액 반응에 따라 역학적으로 계산되지 않을 경우에는 탄수화물에 기본 감쇠값을 이용합니다. 기본적으로, 이것은 안전 장치라고 생각하면 됩니다.
+If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.rst) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
 
 ## APS
 
-관리 조정을 위해 원하는 APS 알고리즘을 선택하세요 OpenAPS(OAPS) 탭에서 선택된 알고리즘의 활성화된 정보를 확인할 수 있습니다.
+Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
-* OpenAPS MA (식사 보조 장치, 2016년도 알고리즘)
-* OpenAPS AMA (상급 식사 보조 장치, 2017년도 알고리즘)  
-    OpenAPS AMA에 대한 자세한 내용은 [OpenAPS 문서](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama)에서 확인할 수 있습니다. 간단하게 장점을 설명하면, 사용자가 탄수화물을 정확하게 기입했을 경우 식사 bolus를 주입 후 시스템이 좀 더 신속하게 임시 basal을 높일 수 있다는 것입니다.  
-    OpenAPS AMA를 사용하기 위해서는 [목표 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama)를 수행하고 있어야 합니다.
-* [OpenAPS SMB](../Usage/Open-APS-features.md)(super micro bolus, 상급 사용자를 위한 가장 최신 알고리즘)  
-    OpenAPS SMB를 사용하기 위해서는 [목표 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)을 수행하고 있어야 하며, min_5m_carbimpact를 8로 설정해야 합니다. (구성 관리자 > 민감도 감지 > 민감도 Oref1 설정)
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017)  
+    More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably. 
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
+    Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Loop
 
-AAPS 자동 제어의 허용 여부를 설정합니다.
+* Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
+
+![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
 
 ### Open Loop
 
-AAPS는 이용 가능한 모든 데이터들 (IOB, COB, BG...) 를 계속해서 평가하고, 필요 시 처치를 어떻게 조정할 것인지에 대한 관리 제안을 합니다. 제안은 (closed loop에서처럼) 자동으로 실행되는 것이 아니며, 사용자가 수동으로 펌프에 직접 또는 호환 가능한 펌프(Dana R/RS 또는 아큐첵 콤보)의 경우 AAPS의 버튼을 사용해서 입력해야 합니다. 이 옵션은 AndroidAPS가 어떻게 작동하는지 알기 위해 사용하거나, 지원되지 않는 펌프에서 사용할 수 있습니다.
+* AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. 
+* The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
+* This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
 
 ### Closed Loop
 
-AAPS는 이용 가능한 모든 데이터(IOB, COB, BG...)를 계속해서 평가하고, 필요 시 자동으로 (즉, 사용자의 추가 개입 없이) 처치를 조정하여 (예를 들어, bolus 주입, 임시 basal 양, 저혈당 방지하기 위한 인슐린 주입 중단 등) 설정된 목표 범위 또는 값에 도달할 수 있게 합니다. Closed Loop은 다양한 안전 제한치 내에서 작동하며, 이는 개별적으로 설정할 수 있습니다. [목표 6](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) 또는 그 이상의 단계를 수행하고 있고, 지원되는 펌프를 사용하는 경우에만 Closed Loop이 가능합니다.
+* AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). 
+* The Closed Loop works within numerous safety limits, which you can be set individually.
+* Closed Loop is only possible if you are in [Objective 6](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
+* Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol or 100 mg/dl instead of 5,0 - 7,0 mmol or 90 - 125 mg/dl) is recommended.
+
+### Low Glucose Suspend (LGS)
+
+* maxIOB is set to zero
+* This means if blood glucose is dropping it can reduce basal for you.
+* But if blood glucose is rising no automatic correction will be made. Your basal rates will remain the same as your selected profile.
+* Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower BG.
+
+### Minimal request change
+
+* When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. 
+* To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate.
+* This defines the relative change required to trigger a notification.
 
 ## 목표 (학습 프로그램)
 
-AndroidAPS에는 단계적으로 수행해야 하는 몇 가지 목표가 있습니다. 이는 closed loop 시스템을 설정하는 과정에서 사용자를 안전하게 안내해줄 것입니다. 사용자가 모든 것을 올바르게 설정하고, 시스템이 정확히 무엇을 수행하는지 이해하는 것을 확실하게 하는 과정입니다. 이것은 사용자가 시스템을 신뢰할 수 있는 유일한 방법입니다.
+AndroidAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
-정기적으로 (목표의 진행 과정을 포함한) [설정 내보내기](../Usage/ExportImportSettings.rst)를 해야 합니다. 나중에 스마트폰을 교체해야 하는 경우 (새 제품, 디스플레이 손상 등), 해당 설정들을 쉽게 가져올 수 있습니다.
+You should [export your settings](../Usage/ExportImportSettings.rst) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
-더 많은 정보를 확인하려면 [목표](../Usage/Objectives.rst) 페이지를 방문하세요.
+See [Objectives](../Usage/Objectives.rst) page for more information.
 
 ## 관리
 
-관리(Treat)탭에서 nightscout에 업로드 된 처치들을 확인할 수 있습니다. 입력된 정보를 수정 또는 삭제하려면 (예를 들어, 예상한 것보다 탄수화물 섭취량이 적은 경우), 'Remove'를 선택 후 [홈 화면의 탄수화물 버튼](../Getting-Started/Screenshots.md#carb-correction)을 이용하여 새로운 값 (필요 시 시간도 변경)을 입력할 수 있습니다.
+If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
 
-## 일반
+## 포괄적인 정보
 
 ### 개요
 
-대부분의 실행을 위한 버튼 및 현재 loop의 상태를 보여줍니다 (상세정보는 [홈 화면 섹션](../Getting-Started/Screenshots.md) 참고). 톱니바퀴 버튼을 클릭하여 설정에 접근할 수 있습니다.
+Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
 
 #### 화면을 켜진 상태로 유지
 
-'화면을 켜진 상태로 유지' 옵션은 화면이 항상 켜진 채로 있도록 Android를 강제할 것입니다. 이는 프레젠테이션 등에서 유용합니다. 하지만 배터리 전력을 많이 소모하게 됩니다. 따라서 스마트폰을 충전기 케이블에 연결하는 것이 좋습니다.
+Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
 #### 버튼
 
-홈 화면에 표시될 단추를 설정하십시오.
+Define which Buttons are shown on the home screen.
 
 * 관리
 * 계산기
 * 인슐린
 * Carbs
-* CGM (xDrip+ 열기)
+* CGM (opens xDrip+)
 * 보정
 
-인슐린과 탄수화물에 대한 단축키를 설정할 수 있고, 관리 기록에서 노트 영역의 표시 여부도 설정할 수 있습니다.
+Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
 
 #### 빠른 마법사 설정
 
-(Bolus를 위한 탄수화물 양과 계산 방법을 선택해둔) 표준 식사 버튼을 만들어 홈 화면에 표시할 수 있습니다. 자주 먹는 표준 식사에 사용하십시오. 각각의 식사들에 시간대를 지정해두면, 시간에 따라 적절한 표준 식사 단추가 홈 화면에 나타나게 됩니다.
+Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
 
-참고: 지정된 시간 범위를 벗어나는 경우 또는 빠른 마법사 버튼에서 설정한 탄수화물 양을 허용하기에 충분한 IOB가 이미 있는 경우에는 버튼이 나타나지 않습니다.
+Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
 
-![빠른 마법사 버튼](../images/ConfBuild_QuickWizard.png)
+![QuickWizard button](../images/ConfBuild_QuickWizard.png)
 
-#### 고급 설정
+#### Default Temp-Targets
 
-마법사에서 Super bolus 기능을 가능하게 합니다. 주의해서 사용해야 하며, 실제로 무엇을 수행하는지 알기 전까지 사용하지 마십시오. 기본적으로, 다음 2시간 동안의 basal을 bolus에 더하여 주입하고, 0% 임시 basal을 2시간 동안 활성화시킵니다. **AAPS loop 기능을 사용할 수 없으므로 주의하여 사용합니다! SMB를 사용하는 경우 ["SMB 제한을 위한 최대 basal 시간"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to)의 설정만큼 AAPS loop 기능을 사용할 수 없고, SMB를 사용하지 않는 경우 loop 기능을 2시간 동안 사용할 수 없습니다.** Super bolus에 대한 [상세정보](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus)가 나와있습니다.
+Choose default temp-targets (duration and target). Preset values are:
+
+* eating soon: target 72 mg/dl / 4.0 mmol/l, duration 45 min
+* activity: target 140 mg/dl / 7.8 mmol/l, duration 90 min
+* hypo: target 125 mg/dl / 6.9 mmol/l, duration 45 min
+
+#### Fill/Prime standard insulin amounts
+
+Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+
+#### Range of visualization
+
+Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+
+#### Shorten tab titles
+
+Choose either the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+
+#### Show notes field in treatment dialogs
+
+Choose if you want to have a notes field when entering treatments or not.
+
+#### Status lights
+
+Choose if you want to have status lights on overview for canula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+
+#### Advanced settings
+
+**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
+
+**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### 실행
 
-일반 기능들의 빠른 실행 버튼:
+Some buttons to quickly access common features:
 
-* 프로파일 변경 (설정에 대한 더 많은 정보는 [프로파일 페이지](../Usage/Profiles.md)에서 확인).
-* 임시 목표
-* 임시 basal 설정 / 취소 basal 양
-* 확장 bolus (다나 R/RS 또는 콤보 펌프만 가능)
-* 특정 관리 항목에 대한 기록
+* Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
+* Temporary targets
+* Set / cancel temp. basal양
+* Extended bolus (DanaR/RS or Combo pump only)
+* Record for any specific care entries
     
-    * 혈당 체크
-    * 프라임 /채우기 - 펌프 위치 변경 및 프라임 기록 (펌프에서 시행되지 않은 경우)
-    * CGM 센서 삽입
-    * 펌프 배터리 교체
-    * 노트
-    * 운동
-* 현재 센서, 인슐린, 캐뉼라 및 펌프 배터리 수명 확인
-* 이력 브라우저
-* TDD (일 총량 = 하루 bolus + 하루 basal)
+    * BG check
+    * Prime / fill - record pump site change and prime (if not done on pump)
+    * CGM sensor insert
+    * Pump battery change
+    * Note
+    * Exercise
+* View the current sensor, insulin, canula and pump battery ages
+* History browser
+* TDD (Total daily dose = bolus + basal per day)
 
-일부 의사들은 - 특히, 새로 펌프를 사용하는 사람들에게 - basal-bolus 비율을 50:50으로 적용합니다. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 다른 의사들은 TBB가 TDD의 32%에서 37% 범위에 있는 것을 선호합니다. 이러한 경험에 따른 대부분의 규칙들은 실질적으로 제한된 유효성을 보입니다. 참고: 당뇨병 관리는 개인별로 다릅니다!
+Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
-![실행 탭](../images/ConfBuild_ConfBuild_Actions_b.png)
+![Actions tab](../images/ConfBuild_ConfBuild_Actions_b.png)
+
+### Automation
+
+User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst)
 
 ### SMS 통신기
 
-SMS를 통해 일부 AndroidAPS 기능을 보호자가 원격으로 조정할 수 있습니다. 설정에 대한 더 많은 정보는 [SMS Commands](../Children/SMS-Commands.rst)에서 확인할 수 있습니다.
+Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
 
-### 음식
+### Food
 
-Nightscout에서 미리 설정한 음식 정보를 사용할 수 있도록 합니다. 설정에 대한 더 많은 정보는 [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods)에서 확인할 수 있습니다.
+Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-참고: AndroidAPS 계산기에서는 입력 항목들을 사용할 수 없습니다. (보기 전용)
+Note: Entries cannot be used in the AndroidAPS calculator. (View only)
 
-### 워치
+### Wear
 
-Android Wear watch를 사용하여 AAPS를 모니터하고 제어합니다 ([Watchfaces 페이지](../Configuration/Watchfaces.md) 참고). Watch로 주입할 bolus를 계산할 때 어떤 변수들(즉, 15분 추이, COB...)를 고려할 것인지 (톱니바퀴 버튼에서) 설정할 수 있습니다.
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
-Watch에서 bolus 주입 등을 하려면, "Wear 설정"에서 "Watch로부터 컨트롤하기"를 활성화합니다.
+Watch에서 bolus 주입 등을 하려면, "Wear 설정"에서 "Watch로부터 컨트롤하기"를 사용합니다.
 
-![워치 설정](../images/ConfBuild_Wear.png)
+![Wear settings](../images/ConfBuild_Wear.png)
 
-Wear 탭 또는 ≡ 버튼(화면의 왼쪽 상단, 탭이 표시되지 않을 경우) 에서 다음을 수행할 수 있습니다.
+Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
-* 모든 데이터 다시 보내기. Watch와의 연결이 얼마 동안 끊긴 경우 watch에 정보를 보내고 싶을 때 도움이 됨.
-* 폰에서 직접 watch 설정을 실행함.
+* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
+* Open settings on your watch directly from your phone.
 
-### xDrip 상태표시라인 (워치)
+### xDrip Statusline (watch)
 
-xDrip+의 watchface에 loop 정보를 표시합니다 (AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)를 사용하고 있지 않은 경우).
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
-### 상시 알림
+### NSClient
 
-현재의 혈당값, 증분, 활성 TBR%, 활성 basal 양(u/h) 및 프로파일, IOB (bolus IOB, basal IOB로 세분화 함)의 요약을 폰의 알림창 또는 잠금 화면에서 보여줍니다.
-
-![AAPS 위젯](../images/ConfBuild_Widget.png)
-
-### NS Client
-
-AndroidAPS의 설정을 Nightscout과 동기화합니다.
-
-만약 **앱 시작을 NS에 기록하기**를 활성화하면, 실행할 때마다 AndroidAPS가 Nightscout에 나타날 것입니다. 앱의 문제 (즉, AAPS가 배터리 최적화 제외 안됨)을 찾기에 유용할 수 있으나, 입력 사항이 Nightscout 그래프에 범람할 수 있습니다.
-
-#### 알람 옵션
-
-AndroidAPS 알람을 활성화/비활성화 시킵니다.
-
-![알람 옵션](../images/ConfBuild_NSClient_Alarms.png)
-
-#### 연결 설정
-
-오프라인 loop, 로밍 사용 안함...
-
-특정 WiFi 네트워크만 사용하려면, 해당 **WiFi SSID**를 입력할 수 있습니다. 각각의 SSID를 세미콜론으로 구분할 수 있습니다. 모든 SSID를 삭제하려면 필드에 아무것도 입력하지 않습니다.
-
-![Nightscout 연결 설정](../images/ConfBuild_ConnectionSettings.png)
-
-#### 고급 설정
-
-* Nightscout에서 누락된 혈당을 자동 다시 가져옴.
-* 에러 발생 시 알림 생성 에러 발생에 대한 nightscout 알림과 로컬 경고(관리 섹션의 케어포털에서도 확인 가능)을 생성.
-* xDrip+ 등 다른 앱들에 대해 로컬 전송을 활성화 함.
-* NS에 업로드만 하기 (동기화 안됨)
-* NS에 업로드하지 않기
-* 항상 basal의 절대값 사용하기 -> [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)을 적절히 사용하려면 활성화되어야 함.
-
-![Nightscout 고급 설정](../images/ConfBuild_NSClient_Advanced.png)
+* Setup sync of your AndroidAPS data with Nightscout.
+* Settings in [preferences](../Configuration/Preferences#nsclient) can be opened by clicking the cog wheel.
 
 ### 정비
 
-로그의 수와 이메일을 전송함. 일반적으로 변경은 필요하지 않음.
+Email and number of logs to be send. Normally no change necessary.
 
 ### 구성 관리자
 
-≡ 버튼 대신 구성 관리자를 탭에서 사용합니다.
+Use tab for config builder instead of hamburger menu.
