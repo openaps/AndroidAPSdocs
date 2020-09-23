@@ -5,10 +5,12 @@
 * Autosens je algoritmus, který sleduje odchylky glykémie (pozitivní/negativní/neutrální).
 * Pokusí se zjistit, jak citlivý(-á)/rezistentní jste na základě těchto odchylek.
 * Realizace algoritmu oref v ** OpenAPS ** pracuje s kombinací dat za 24 a 8 hodin. Používá ta, která jsou více senzitivní.
-* AndroidAPS pouze pracuje s daty za 8 (pro umožnění UAM) nebo 24 hodin (uživatelská volba).
-* Výměna kanyly nebo změna profilu automaticky nastaví Autosense zpět na 0%.
+* In versions prior to AAPS 2.7 user had to choose between 8 or 24 hours manually.
+* From AAPS 2.7 on Autosens in AAPS will switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
+* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
+* Changing a cannula or changing a profile will reset Autosens ratio back to 0%.
 * Autosens adjusts your basal, I:C and ISF for you (i.e.: mimicking what a Profile shift does).
-* Pokud budete nepřetržitě po delší dobu jíst sacharidy, Autosense bude během této doby méně efektivní, protože období se sacharidy jsou vyloučena z výpočtů odchylek glykémie.
+* If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
 
 ## Super Micro Bolus (SMB)
 
@@ -141,17 +143,15 @@ Výchozí hodnota: 4 (neměňte, pokud si opravdu nejste jisti tím, co děláte
 
 AMA je zkratka pro "advanced meal assist", což je funkce OpenAPS od roku 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) umožňuje systému rychleji reagovat po bolusu na jídlo, pokud zadáte sacharidy správně.
 
-**Musíte zahájit plnění cíle 9, abyste mohli používat tuto funkci**
-
-Více informací najdete v [dokumentaci k OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+You can find more information in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 ### Max. povolený bazál U/h (OpenAPS "max-basal")
 
-Toto bezpečnostní nastavení zabraňuje systému AndroidAPS vydat nebezpečně vysokou bazální dávku a omezuje dočasnou bazální dávku na x U/h. Doporučuje se nastavit na rozumnou hodnotu. Doporučuje se vzít z vašeho profilu nejvyšší hodnotu bazálu, a vynásobit ji 4 a alespoň 3. Například: máte-li ve svém profilu nejvyšší hodnotu bazálu 1,0 U/h, dostanete po vynásobení 4 hodnotu 4 U/h. Nastavte tedy 4 jako svůj bezpečnostní parametr.
+This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. It is advised to set this to something sensible. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
 
-Nemůžete si vybrat libovolnou hodnotu: Z bezpečnostních důvodů je tato hodnota omezena v závislosti na věku pacienta. 'Pevný limit' pro maxIOB jev algoritmu AMA nižší než v SMB. Pro děti je hodnota nejnižší, zatímco pro dospělé pacienty s rezistencí na inzulin je největší.
+You cannot chose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
 
-Pevně zadané parametry v AndroidAPS jsou:
+The hardcoded parameters in AndroidAPS are:
 
 * Děti: 2
 * Dospívající: 5
@@ -160,9 +160,9 @@ Pevně zadané parametry v AndroidAPS jsou:
 
 ### Maximální hodnota IOB, kterou OpenAPS může vydat \[U\] (OpenAPS "max-iob")
 
-Tento parametr omezuje maximální bazální IOB, kde AndroidAPS stále funguje. Pokud je IOB vyšší, zastaví se výdej dalšího bazálního inzulínu, dokud je IOB z bazálu pod limitem.
+This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
 
-Výchozí hodnota je 2, tento parametr byste však měli měnit postupně, abyste viděli, jak velký má efekt a která hodnota se hodí nejlépe. Nastavení je individuální a mj. vychází i z výše celkové denní dávky inzulínu. Z bezpečnostních důvodů jsou nastaveny limity vycházející z věku pacienta. 'Pevný limit' pro maxIOB jev algoritmu AMA nižší než v SMB.
+The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Nastavení je individuální a mj. vychází i z výše celkové denní dávky inzulínu. Z bezpečnostních důvodů jsou nastaveny limity vycházející z věku pacienta. The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 * Děti: 3
 * Dospívající: 5
@@ -171,11 +171,11 @@ Výchozí hodnota je 2, tento parametr byste však měli měnit postupně, abyst
 
 ### Povolit AMA Autosense
 
-Zde si můžete vybrat, zda chcete používat [detekci citlivosti](../Configuration/Sensitivity-detection-and-COB.md) autosense nebo ne.
+Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosense or not.
 
 ### Autosense upravuje také cílovou glykémii
 
-Pokud máte tuto možnost povolenou, může autosense upravovat i dočasné cíle (kromě bazálu, ISF a IC). AndroidAPS tak může být více či méně 'agresivní'. Aktuálně nastaveného cíle lze s touto funkcí dosáhnout rychleji.
+If you have this option enabled, autosense can adjust targets (next to basal, ISF and IC), too. This lets AndroidAPS work more 'aggressive' or not. The actual target might be reached faster with this.
 
 ### Rozšířená nastavení
 
@@ -189,42 +189,6 @@ Výchozí hodnota: 3 (neměňte, pokud si opravdu nejste jisti tím, co děláte
 
 Výchozí hodnota: 4 (neměňte, pokud si opravdu nejste jisti tím, co děláte)
 
-**Dělitel bolus snooze** Funkce “bolus snooze” funguje po bolusu na jídlo. AAPS nenastaví nízký dočasný bazál po jídle během doby, která trvá DIA děleno parametrem “bolus snooze”. Výchozí hodnota je 2. To znamená, že s DIA 5 h by trvání parametru „bolus snooze“ bylo 5 h : 2 = 2,5 h.
+**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
 
-Výchozí hodnota: 2
-
-* * *
-
-## Meal Assist (MA)
-
-### Max. povolený bazál U/h (OpenAPS "max-basal")
-
-Toto bezpečnostní nastavení zabraňuje systému AndroidAPS vydat nebezpečně vysokou bazální dávku a omezuje dočasnou bazální dávku na x U/h. Doporučuje se nastavit na rozumnou hodnotu. Doporučuje se vzít z vašeho profilu nejvyšší hodnotu bazálu, a vynásobit ji 4 a alespoň 3. Například: máte-li ve svém profilu nejvyšší hodnotu bazálu 1,0 U/h, dostanete po vynásobení 4 hodnotu 4 U/h. Nastavte tedy 4 jako svůj bezpečnostní parametr.
-
-Nemůžete si vybrat libovolnou hodnotu: Z bezpečnostních důvodů je tato hodnota omezena v závislosti na věku pacienta. 'Pevný limit' pro maxIOB jev algoritmu MA nižší než v SMB. Pro děti je hodnota nejnižší, zatímco pro dospělé pacienty s rezistencí na inzulin je největší.
-
-Pevně zadané parametry v AndroidAPS jsou:
-
-* Děti: 2
-* Dospívající: 5
-* Dospělí: 10
-* Dospělí s vyšší rezistencí na inzulín: 12
-
-### Maximální hodnota IOB, kterou OpenAPS může vydat \[U\] (OpenAPS "max-iob")
-
-Tento parametr omezuje maximální bazální IOB, kde AndroidAPS stále funguje. Pokud je IOB vyšší, zastaví se výdej dalšího bazálního inzulínu, dokud je IOB z bazálu pod limitem.
-
-Výchozí hodnota je 2, tento parametr byste však měli měnit postupně, abyste viděli, jak velký má efekt a která hodnota se hodí nejlépe. Nastavení je individuální a mj. vychází i z výše celkové denní dávky inzulínu. Z bezpečnostních důvodů jsou nastaveny limity vycházející z věku pacienta. 'Pevný limit' pro maxIOB jev algoritmu MA nižší než v SMB.
-
-* Děti: 3
-* Dospívající: 5
-* Dospělí: 7
-* Dospělí s vyšší rezistencí na inzulín: 12
-
-### Rozšířené nastavení
-
-**Vždy používat krátkodobý průměrný rozdíl glykémií místo rozdílu posledních 2 hodnot** Jestliže povolíte tuto funkci, AndroidAPS bude používat krátkodobý průměrný rozdíl (delta) glykémií za posledních 15 minut, což je obvykle průměr z posledních tří hodnot. AndroidAPS tak bude moci pracovat stabilněji při použití zarušených zdrojů glykémie, jako např. xDrip+ nebo Libre.
-
-**Dělitel bolus snooze** Funkce “bolus snooze” funguje po bolusu na jídlo. AAPS nenastaví nízký dočasný bazál po jídle během doby, která trvá DIA děleno parametrem “bolus snooze”. Výchozí hodnota je 2. To znamená, že s DIA 5 h by trvání parametru „bolus snooze“ bylo 5 h : 2 = 2,5 h.
-
-Výchozí hodnota: 2
+Default value: 2
