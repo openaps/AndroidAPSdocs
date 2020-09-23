@@ -56,19 +56,29 @@ You **must not use ‘Always use basal absolute values’** with Insight pump. I
 
 Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune. In AAPS go to Preferences > NSClient > Advanced Settings and Enable ‘NS upload only (disabled sync)‘.
 
-![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
+![Screenshot of Insight Settings](../images/Insight_settings.png)
 
 In the Insight settings in AndroidAPS you can enable the following options:
 
 * "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
+
 * "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
+
 * "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+
 * "Log battery changes": This records a battery change when you put a new battery in the pump.
+
 * "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
+
 * "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
+
 * "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.
     
     **Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.**
+
+* "Disable vibrations on manual bolus delivery": This disables the Insight pump's vibrations when delivering a manual bolus (or extended bolus). This setting is available only with the latest version of Insight firmware (3.x).
+
+* "Disable vibrations on automated bolus delivery": This disables the Insight pump's vibrations when delivering an automatic bolus (SMB or Temp basal with TBR emulation). This setting is available only with the latest version of Insight firmware (3.x).
 
 * "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
       
@@ -79,8 +89,8 @@ In the Insight settings in AndroidAPS you can enable the following options:
     retry -> no connection -> wait **7** sec.   
     retry -> no connection -> wait **8** sec.   
     ...   
-    ponów próbę -> brak połączenia -> poczekaj ** 20 ** sek.   
-    ponów próbę -> brak połączenia -> poczekaj ** 20 ** sek.   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
 * "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
