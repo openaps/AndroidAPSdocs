@@ -4,13 +4,13 @@ AAO apskaičiavimas
 Kaip AndroidAPS apskaičiuoja AAO reikšmes?
 ==================================================
 
-Oref0 / Oref1
+Oref1
 --------------------------------------------------
 
 Neįsisavinti angliavandeniai yra nebeskaičiuojami po nustatyto laiko
 
 .. image:: ../images/cob_oref0_orange_II.png
-  :alt: Oref0 / Oref1
+  :alt: Oref1
 
 AAPS, SvertinisVidurkis
 --------------------------------------------------
@@ -25,7 +25,7 @@ Jei minimalus angliavandenių įsisavinimas (min_5m_carbimpact) yra naudojamas v
 Neteisingų AAO reikšmių aptikimas
 ==================================================
 
-Nuo 2.4 versijos AAPS įspėja jus, jei jūs ketinate bolusuoti su AAO iš prieš tai buvusio valgio ir algoritmas mano, kad dabartinis AAO apskaičiavimas gali būti neteisingas. Šiuo atveju jis duos jums papildomą užuominą patvirtinimo ekrane, kai pasinaudosite boluso patarėju. 
+AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. Šiuo atveju jis duos jums papildomą užuominą patvirtinimo ekrane, kai pasinaudosite boluso patarėju. 
 
 Kaip AndroidAPS nustato klaidingas AAO reikšmes? 
 --------------------------------------------------
