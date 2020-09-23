@@ -15,7 +15,7 @@ Please understand that this change is not intended to bug you but is due to safe
 
 Version 2.7.0
 ================
-Release date:
+Release date: 23-09-2020
 
 Repository location changed to https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a new clone.
 
