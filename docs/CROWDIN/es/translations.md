@@ -1,8 +1,8 @@
 # Cómo traducir AndroidAPS y la documentación
 
-* Vaya a <https://translations.androidaps.org> o <https://wikitranslations.androidaps.org> e inicie sesión utilizando su cuenta de Github
+* Vaya a <https://crowdin.com/project/androidaps> o <https://crowdin.com/project/androidapsdocs> e inicie sesión utilizando su cuenta de Github
 
-* Send a join request to the docs team. Para ello, haz clic en la bandera del idioma deseado y luego el botón "Únete" en la esquina superior derecha de la siguiente página. Especifique un idioma, dé alguna información acerca de usted y su experiencia AAPS y si desea ser un traductor o un corrector de pruebas (sólo personas habilitadas para traducir + avanzados usuarios AndroidAPS).
+* Envíe una solicitud de unión al equipo de documentación. Para ello, haz clic en la bandera del idioma deseado y luego el botón "Únete" en la esquina superior derecha de la siguiente página. Especifique un idioma, dé alguna información acerca de usted y su experiencia AAPS y si desea ser un traductor o un corrector de pruebas (sólo personas habilitadas para traducir + avanzados usuarios AndroidAPS).
 
 * Cuando se apruebe, haga clic en la bandera ![Cuando se apruebe, haga clic en la bandera](./images/translation_flags2019.png)
 
@@ -26,11 +26,11 @@
 
 Cuando un lector de pruebas aprueba una traducción, se agregará a la siguiente versión de AndroidAPS. En el principio sería bueno también repasar las traducciones existentes que aún no están aprobadas y comprobar si hay errores o aprobarlas si son correctas.
 
-## Translate docs pages
+## Traducir páginas de la documentación
 
-* Click the name of the docs page you want to translate
+* Haga clic en el nombre de la página de documentos que desea traducir
     
-    ![Click docs page](./images/translation_WikiPage.png)
+    ![Pulse en la página de los documentos](./images/translation_WikiPage.png)
 
 * Traducir oración por oración
     
@@ -42,9 +42,9 @@ Cuando un lector de pruebas aprueba una traducción, se agregará a la siguiente
     
     4 Pulse Guardar
     
-    ![Translation docs](./images/translation_WikiTranslate.png)
+    ![Traducción de documentos](./images/translation_WikiTranslate.png)
 
-* A translated page will not be published in docs before the translation is proofread.
+* La traducción de su página no va a ser publicado en la la documentación antes de que la traducción sea revisada.
 
 ### Traducir enlaces de títulos
 
@@ -62,7 +62,7 @@ Cuando un lector de pruebas aprueba una traducción, se agregará a la siguiente
 
 #### Traducción de enlaces en archivos Markdown (.md)
 
-At the moment two [markup languages](./make-a-PR#code-syntax) are used in docs. Mientras que los archivos escritos en la sintaxis de reStructuredText (.rst) siempre muestran la dirección de enlace en Crowdin, para los archivos de la sintaxis de Markdown (.md), es posible que tenga que activar la visualización de códigos HTML con el fin de traducir la dirección de enlace.
+En el momento dos [lenguajes de marcación](./make-a-PR#code-syntax) se utilizan en docs. Mientras que los archivos escritos en la sintaxis de reStructuredText (.rst) siempre muestran la dirección de enlace en Crowdin, para los archivos de la sintaxis de Markdown (.md), es posible que tenga que activar la visualización de códigos HTML con el fin de traducir la dirección de enlace.
 
 * * *
 
@@ -72,26 +72,26 @@ At the moment two [markup languages](./make-a-PR#code-syntax) are used in docs. 
 
 * * *
 
-If links are displayed like this in Crowdin
+Si se visualizan enlaces como este en Crowdin
 
-![Crowdin - no HTML tag display](./images/CrowdinShowURL1.png)
+![Crowdin - no se visualiza ningún código HTML](./images/CrowdinShowURL1.png)
 
-click on the cogwheel to open settings, select "Show" and click "Save".
+haga clic en la rueda dentada para abrir la configuración, seleccione "Show" y haga clic en "Save".
 
-![Crowdin - show HTML tag display](./images/CrowdinShowURL2.png)
+![Crowdin - mostrar la etiqueta HTML](./images/CrowdinShowURL2.png)
 
-Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations#translate-headline-links).
+A continuación, los enlaces se mostrarán en formato HTML estándar y se pueden traducir teniendo en cuenta las reglas mencionadas [arriba](./translations#translate-headline-links).
 
-![Crowdin - HTML tag display](./images/CrowdinShowURL3.png)
+![Crowdin - mostrar la etiqueta HTML](./images/CrowdinShowURL3.png)
 
 ## Revisores
 
 * Los revisores tienen que cambiar al modo de revisión
     
-    ![Proofreading mode docs](./images/translation_WikiProofreading.png)
+    ![Modo de revisión](./images/translation_WikiProofreading.png)
     
     y aprobar los textos traducidos
     
     ![aprobar texto](./images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build. To speed process you can inform docs team about new translations.
+* Cuando un corrector aprueba una traducción será añadido a la siguiente construcción de documentos. Para acelerar el proceso, puede informar al equipo de documentación sobre las nuevas traducciones.

@@ -23,7 +23,7 @@ Primeros Pasos
    La seguridad primero <./Getting-Started/Safety-first>
    Qué es un sistema de lazo cerrado <./Getting-Started/ClosedLoop.rst>
    ¿Qué es un sistema de lazo cerrado con AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Actualizaciones y cambios en documentos <./Getting-Started/WikiUpdate.rst>
    
    
 Lo que necesitas 
@@ -150,7 +150,7 @@ Donde buscar ayuda
 
    Recursos útiles para leer antes de empezar <./Where-To-Go-For-Help/Background-reading.md>
    Cómo puedo ayudar <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Actualizaciones y cambios en documentos <./Getting-Started/WikiUpdate.rst>
 
 Para Los Médicos
 --------------------------------------------------
@@ -168,8 +168,8 @@ Cómo ayudar
    :glob:
 
    Cómo se puede ayudar <./Getting-Started/How-can-I-help.md>
-   How to translate the app and docs <./translations.md>
-   How to edit the docs <./make-a-PR>
+   Cómo traducir la aplicación y documentos <./translations.md>
+   Cómo editar los documentos <./make-a-PR>
 
 
 .. note:: 

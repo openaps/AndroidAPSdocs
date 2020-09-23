@@ -159,7 +159,7 @@ De AndroidAPS Wear OS-app ondersteunt complicaties sinds build nummer `2.6`, dit
 
 Complicaties kunnen ook dienen als **snelkoppeling** naar AAPS functies. Door te tikken op een complicatie kun je AAPS menu's en dialoogvensters openen (afhankelijk van type complicatie en configuratie).
 
-![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
+![Complications_Op_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
 
 ### Complicatie types
 

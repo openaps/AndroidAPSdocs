@@ -43,23 +43,23 @@ Pulsación larga en el gráfico para cambiar la escala de tiempo. Puede elegir e
 
 Las líneas extendidas muestran los cálculos y tendencias de BG pronosticados - si lo ha seleccionado.
 
-* **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
+* **Naranja** línea: [COB](../Usage/COB-calculation.rst) (color que se utiliza generalmente para representar a los COB y los hidratos)
    
-   Prediction line shows where your BG (not where cob itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
+   La línea de predicción muestra dónde su BG llegará teniendo en cuenta los ajustes actuales de la bomba y asumiendo que las desviaciones debidas a la absorción de carbohidratos permanecen constantes. Esta línea sólo aparece si se conoce COB.
 
-* **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
+* **Azul oscuro** línea: IOB (color que se utiliza generalmente para representar IOB e insulina)
    
-   Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
+   La línea de predicción muestra lo que ocurriría bajo la influencia de la insulina solamente. Por ejemplo, si usted se ha marcado con alguna insulina y luego no ha comido carbohidratos.
 
-* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* **Azul claro** línea: cero-temp (predicción de BG si se establecería una tasa basal temporal en 0%)
    
-   Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+   La línea de predicción muestra cómo la línea de trayectoria del IOB cambiaría si la bomba detuviera toda la entrega de insulina (0% TBR).
 
-* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals)
+* **Amarillo oscuro** line: [UAM ](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (comidas no anunciadas)
    
-   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+   Las comidas no anunciadas significan que se detecta un aumento significativo en los niveles de glucosa debido a las comidas, adrenalina u otras influencias. La línea de predicción es similar a la línea ORANGE COB pero supone que las desviaciones se recortarán a un ritmo constante (ampliando la tasa actual de reducción).
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+Por lo general, su verdadera curva de glucosa termina en el medio de estas líneas, o cerca de la que hace suposiciones que se asemejan más a su situación.
 
 La línea **azul continua** muestra la entrega basal de la bomba. La línea **azul de puntos** es la que sería la tasa basal si no hubiera ajustes basales temporales (TBRs) y la línea azul sólida es la entrega real a lo largo del tiempo.
 
@@ -75,12 +75,12 @@ Esta sección también se puede configurar utilizando las opciones de la secció
    * **GRIS** barras que muestran una desviación debido a los carbohidratos. 
    * **VERDE** barras que muestran un BG mayor al que el algoritmo esperaba. 
    * **RED ** barras que muestran que BG es menor que el algoritmo esperaba.
-* **Sensitivity** (white line): It shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. La Sensibilidad es el cálculo de la respuesta a la insulina como resultado del ejercicio, las hormonas, etc.
+* ** Sensibilidad ** (línea blanca): muestra la sensibilidad que [ Autosens ](../Usage/Open-APS-features#autosens) ha detectado. La Sensibilidad es el cálculo de la respuesta a la insulina como resultado del ejercicio, las hormonas, etc.
 * **Actividad** (línea amarilla): muestra la actividad de la insulina, calculada por su perfil de insulina (no es un derivado de IOB). El valor es más alto para la insulina más próxima a la hora punta. Esto significaría un valor negativo cuando el IOB está disminuyendo. 
 
 ### Sección G
 
-Le permite administrar un bolo (normalmente usaría el botón Calculadora para hacer esto) y añadir una calibración CGM con sangre del dedo. Also a Quick Wizard button would be displayed here if configured in [Config Builder](../Configuration/Config-Builder#quickwizard-settings).
+Le permite administrar un bolo (normalmente usaría el botón Calculadora para hacer esto) y añadir una calibración CGM con sangre del dedo. También se mostrará aquí un botón de Asistente rápido si está configurado en [Constructor de Configuración](../Configuration/Config-Builder#quickwizard-settings).
 
 ## La calculadora
 
@@ -88,17 +88,17 @@ Le permite administrar un bolo (normalmente usaría el botón Calculadora para h
 
 Cuando usted quiere hacer un bolo para comida, aquí es de donde normalmente lo hará.
 
-### Sección A
+### Section H
 
 es el lugar donde se introduce la información sobre el bolo que desea. El campo BG normalmente se llena con la lectura más reciente de la CGM. Si no tienes una CGM que funcione, entonces estará en blanco. En el campo CARBS se añade su estimación de la cantidad de carbohidratos (o equivalente) a los que desea realizar el bolo. El campo CORR es si desea modificar la dosificación final por alguna razón, y el campo CARB TIME es para hacer PRE-bolo, de modo que pueda indicar al sistema que habrá un retraso antes de que se esperen los carbohidratos. Puede poner un número negativo en este campo si está colocando un bolo para los carbohidratos ya ingeridos.
 
 SUPER BOLO es el lugar en el que se añade la insulina basal para las próximas dos horas junto all bolo inmediato y basal temporal de cero durante las dos horas siguientes para recuperar la insulina adicional. La idea es entregar la insulina antes y esperar que reduzca los picos.
 
-### Sección B
+### Section I
 
 muestra el bolo calculado. Si la cantidad de insulina a bordo sobrepasa ya el bolo calculado, entonces sólo se mostrará la cantidad de carbohidratos que todavía se necesitan.
 
-### Sección C
+### Section J
 
 le muestra los diversos elementos que se han utilizado para calcular el bolo. Puede anular la selección de cualquier que no desee incluir, pero normalmente no es algo que realizaría.
 
@@ -116,7 +116,7 @@ Si usted se pone un bolo para alimentos adicionales poco después de un bolo de 
 
 ![Absorción lenta de carbohidratos](../images/Calculator_SlowCarbAbsorbtion.png)
 
-Si ve el aviso anterior después de utilizar el asistente de bolos, AndroidAPS ha detectado que el valor COB calculado puede ser incorrecto. So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! Para obtener detalles, consulte las sugerencias sobre [página de cálculo de COB](../Usage/COB-calculation#detection-of-wrong-cob-values).
+Si ve el aviso anterior después de utilizar el asistente de bolos, AndroidAPS ha detectado que el valor COB calculado puede ser incorrecto. Así que si quieres bolo de nuevo después de una comida previa con COB, debes ser consciente de una posible sobredosis! Para obtener detalles, consulte las sugerencias sobre [página de cálculo de COB](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
 ## Perfil de Insulina
 
@@ -136,64 +136,64 @@ Y más en: [Curvas Exponenciales de Insulina + Fiasp](http://seemycgm.com/2017/1
 
 ![Estado de Infusora](../images/Screenshot_pump_Combo.png)
 
-Aquí vemos el estado de la bomba de insulina - en este caso un Combo Accu-Chek. The information displayed is self-explanatory. Una pulsación larga en el botón HISTORIAL permite leer los datos de la historia de la bomba, incluyendo su perfil basal. Pero recuerde que sólo se da soporte a un perfil basal en la bomba Combo.
+Aquí vemos el estado de la bomba de insulina - en este caso un Combo Accu-Chek. La información que se muestra es autoexplicativa. Una pulsación larga en el botón HISTORIAL permite leer los datos de la historia de la bomba, incluyendo su perfil basal. Pero recuerde que sólo se da soporte a un perfil basal en la bomba Combo.
 
 ## Portal de Atención (Care Portal)
 
 Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
 
-### Carb correction
+### Corrección de Carbohidratos
 
-Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+La pestaña de tratamiento se puede utilizar para corregir las entradas de Hc defectuosas (es decir, los carbohidratos sobrantes o subestimados).
 
-1. Check and remember actual COB and IOB on homescreen.
-2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
+1. Compruebe y recuerde el COB y el IOB actuales en la pantalla de inicio.
+2. Dependiendo de la bomba en la pestaña de tratamiento, los carbohidratos pueden mostrarse junto con la insulina en una sola línea o como una entrada separada (por ejemplo, en la Dana RS).
    
-   ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+   ![Tratamiento en 1 ó 2 líneas](../images/Treatment_1or2_lines.png)
 
-3. Remove the entry with the faulty carb amount.
+3. Suprima la entrada con la cantidad de carbohidratos erróneos.
 
-4. Make sure carbs are removed successfully by checking COB on homescreen again.
-5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
+4. Asegúrese de que los carbohidratos se eliminan correctamente comprobando COB en la pantalla de inicio de nuevo.
+5. Haga lo mismo con el IOB si hay una sola línea en el tabulador, incluyendo los carbohidratos y la insulina.
    
    -> If carbs are not removed as intended and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
 
 6. Enter correct carb amount through carbs button on homescreen and make sure to set the correct event time.
 
-7. If there is just one line in treatment tab including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
+7. Si sólo hay una línea en la pestaña de tratamiento, incluyendo los carbohidratos y la insulina, debe añadirse también la cantidad de insulina. Asegúrese de establecer el tiempo de ocurrencia correcto y compruebe el IOB en la pantalla de inicio después de confirmar la nueva entrada.
 
 ## Loop, MA, AMA, SMB
 
-You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
+Normalmente no tienes que preocuparte de esto, muestran los resultados del algoritmo OpenAPS que se ejecuta cada vez que el sistema recibe una nueva lectura del sensor. Estos temas se debaten en otro lugar.
 
 ## Perfil
 
 ![Perfil](../images/Screenshot_profile.png)
 
-AndroidAPS can run using a number of different profile configurations. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nightscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a [Profile Switch](../Usage/Profiles.md) in AndroidAPS to activate the changes. Data such as the basal profile would then be automatically copied over to your pump.
+AndroidAPS se puede ejecutar utilizando un diferentes configuraciones de perfil. Típicamente - como se muestra aquí - el perfil de Nightscout se ha descargado a través del cliente de Nighscout y se visualiza aquí en forma de sólo lectura. Si desea realizar algún cambio, lo haría desde la interfaz el de Nightscout y, a continuación, realice un [Perfil Switch](../Usage/Profiles.md) en AndroidAPS para activar los cambios. Los datos, como el perfil basal, se copiarían entonces automáticamente en la bomba.
 
-**DIA:** stands for Duration of Insulin Action and it is discussed above in the section on insulin profiles.
+**DIA:** representa la Duración de la acción de insulina y se describe más arriba en la sección sobre perfiles de insulina.
 
-**IC:** is Insulin to Carb ratio. This profile has a number of different values set for different times of day.
+**IC:** es la proporción de Insulina a Carbohidratos. Este perfil tiene un número de valores diferentes establecidos para diferentes horas del día.
 
-**ISF:** is Insulin Sensitivity Factor - the amount by which one unit of insulin will reduce your blood glucose assuming that nothing else changes.
+**ISF:** es el factor de sensibilidad de la insulina - la cantidad de glucosa que una unidad de insulina reducirá, asumiendo que nada más cambia.
 
-**Basal:** is the basal profile programmed into your pump.
+**Basal:** es el perfil basal programado en la bomba.
 
-**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for different times of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
+**Objetivo:** es el nivel de glucosa en sangre objetivo que desea para todo el tiempo. Puede establecer diferentes niveles para las diferentes horas del día, e incluso puede establecer un rango superior e inferior para que la plataforma empiece a hacer cambios cuando el valor de glucosa en sangre previsto cae fuera, pero si hace eso, la plataforma responderá más lentamente y es poco probable que consiga una glucosa estable.
 
 ## Tratamiento, xDrip, NSClient
 
-These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
+Estos son registros de tratamientos (bolos y carbohidratos), mensajes de xDrip y mensajes enviados a Nightscout a través de Nightscout. Normalmente no tienes que preocuparte por nada de esto a menos que haya un problema.
 
 ## Configuraciones
 
 ![Configuraciones](../images/Screenshot_config_builder.png)
 
-This is where you will set up the configuration of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
+Aquí es donde se ajustará la configuración de su plataforma AndroidAPS. Esta captura de pantalla muestra un montaje típico con una bomba Combo, un sensor Dexcom G5 que se gestiona a través de xDrip + y que se ejecuta con la insulina NovoRapid en un perfil de Oref y conectado a un servidor basado en la nube de Nightscout.
 
-The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
+El cuadro de selección de la derecha determina si ese módulo en particular se visualizará en la barra de menús superior (consulte la sección A en la pantalla de inicio) y el símbolo de engranaje pequeño permite el acceso a la configuración de dicho módulo, si hay alguno.
 
 ## Ajustes y preferencias
 
-At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
+En la parte superior derecha de la barra de navegación encontrarás tres pequeños puntos verticales. Al pulsar en estos se va a las preferencias de la aplicación, al navegador de historial, al asistente de configuración, a la información de la aplicación y al botón de salida que cerrará AAPS.

@@ -12,7 +12,7 @@ Si vous ne trouvez plus votre ancien fichier de clés, procédez comme suit :
 4. Générez un apk signé de la nouvelle version comme c'est décrit dans la page `Mise à jour vers une nouvelle version <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 5. Désinstaller la précédente version de AAPS sur votre téléphone.
 6. Installez la nouvelle version de AAPS sur votre téléphone.
-7. `Importez les les paramètres <../Usage/ExportImportSettings.html#comment-exporter-les-parametres>`_ - si vous ne trouvez pas le fichier sur votre téléphone, copiez le depuis votre stockage externe.
+7. `Importez les paramètres <../Usage/ExportImportSettings.html#comment-exporter-les-parametres>`_ - si vous ne trouvez pas le fichier sur votre téléphone, copiez le depuis votre stockage externe.
 8. Pousuivez la boucle.
 
 Avertissement du compilateur Kotlin
@@ -146,4 +146,4 @@ Dans le cas où même construire l'application à partir de rien ne résout pas 
 
 **Assurez-vous de désinstaller tous les fichiers associés à Android Studio.** Si vous ne supprimez pas complètement tous les fichiers cachés, la désinstallation peut provoquer de nouveaux problèmes au lieu de résoudre ceux existants. Les manuels pour une désinstallation complète peuvent être trouvés en ligne, par ex. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
 
-Installez Android Studio à partir de zéro comme indiqué `ici <../Installing-AndroidAPS/Building-APK.html#install-android-studio>`_ et **ne mettez pas à jour gradle**.
+Installez Android Studio à partir de zéro comme indiqué `ici <../Installing-AndroidAPS/Building-APK.html#installez-android-studio>`_ et **ne mettez pas à jour gradle**.

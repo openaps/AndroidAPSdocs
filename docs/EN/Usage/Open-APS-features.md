@@ -8,7 +8,7 @@
 * From AAPS 2.7 on Autosens in AAPS will switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
 * If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
 * Changing a cannula or changing a profile will reset Autosens ratio back to 0%.
-* Autosens adjusts your basal and ISF for you (i.e.: mimicking what a Profile shift does).
+* Autosens adjusts your basal, I:C and ISF for you (i.e.: mimicking what a Profile shift does).
 * If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
 
 ## Super Micro Bolus (SMB)
@@ -90,7 +90,7 @@ SMB is working for 6h after carbohydrates , even if COB is at 0. For safety reas
 For other CGM/FGM like Freestyle Libre, 'SMB always' is deactivated until xDrip+ has a better noise smoothing plugin. You can find [more information here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Max minutes of basal to limit SMB to
-This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is not covered by COBs.
+This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
 This makes the SMB more aggressive. For the beginning, you should start with the default value of 30 minutes. After some experience, you can increase the value with 15 minutes steps and watch how these changes are affecting.
 

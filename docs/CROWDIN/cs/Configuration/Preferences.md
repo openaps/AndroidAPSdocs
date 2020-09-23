@@ -30,7 +30,7 @@ V tomto nastavení jsou stanoveny bezpečnostní limity v závislosti na vámi z
     
     ![Bolusová kalkulačka 80%](../images/BolusWizardPartDelivery.png)
 
-* Možnost povolit [superbolus](../Getting-Started/Screenshots#section-a) v bolusové kalkulačce.
+* Option to enable [superbolus](../Getting-Started/Screenshots#section-h) in bolus wizard.
 
 ### Stavové indikátory
 
@@ -69,13 +69,13 @@ Zde můžete přepínat mezi otevřenou a uzavřenou smyčkou.
 
 V levém horním okraji domovské obrazovky je vidět, jakou smyčku máte aktuálně vybranou. Podržením tohoto tlačítka mezi nimi můžete přepínat.
 
-### Minimal Request Rate
+### Minimální změna pro výzvu
 
-When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate. This defines the relative change required to trigger a notification.
+Při použití otevřené smyčky budete dostávat oznámení pokaždé, když AAPS doporučí úpravu bazální dávky. Ke snížení počtu oznámení můžete použít buď širší rozsah cílové glykemie, nebo vyšší procento minimální změny pro výzvu. Toto definuje relativní změnu, která je požadována pro spuštění oznámení.
 
-![Minimal request rate](../images/MinRequestChange.png)
+![Minimální změna pro výzvu](../images/MinRequestChange.png)
 
-Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol instead of 5,0 - 7,0 mmol) is recommended.
+Poznámka: V uzavřené smyčce se doporučuje jeden cíl místo cílového rozsahu (tj. 5,5 mmol místo 5,0–7,0 mmol).
 
 ## OpenAPS AMA
 

@@ -36,11 +36,6 @@ Objective 3: Proof your knowledge
 
 * Se proporcionarán enlaces para guiarle en caso de que no esté seguro de las respuestas correctas todavía.
 
-Skip objectives
---------------------------------------------------
-* Sólo si se ha cerrado un lazo con otro sistema (es decir, OpenAPS, iOS Loop) antes y puede probar esto (es decir,. al menos 3 meses de datos del lazo en Nightscout), puede enviar un correo electrónico a ` objectives@androidaps.org <mailto:objectives@androidaps.org>`_ con su dirección de NS y su código de petición para eludir el resto de los objetivos.
-* Please note that no support is provided through this mail account. Refer to the `support resources <../Where-To-Go-For-Help/Connect-with-other-users.html>`_ mentioned in this documentation.
-
 Objetivo 4: Iniciar en un lazo abierto
 ==================================================
 * Seleccione Abrir lazo desde Preferencias, o pulsando y manteniendo pulsado el botón de Lazo en la parte superior izquierda de la pantalla de inicio.
@@ -101,7 +96,7 @@ El lazo cerrado no corregirá los valores de bg alto en el objetivo 6, ya que se
      :alt: Example negative IOB
 
 * If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
-* You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.
+* Puede experimentar temporalmente picos después de las hipos tratadas sin la posibilidad de aumentar basal en el rebote.
 
 Objetivo 7: Ajustar el lazo cerrado, elevando el IOB máximo por encima de 0 y reduciendo gradualmente los objetivos de BG
 ====================================================================================================

@@ -80,7 +80,7 @@ Cette section est aussi configurable en utilisant les options de la section D.
 
 ### Section G
 
-Permet d'administrer un bolus (normalement, vous devriez utiliser le bouton Calculatrice pour effectuer cette opération), de renseigner des glucides et d'ajouter une glycémie capillaire de calibration MGC. Un bouton d'assistant rapide s'affiche également ici s'il est configuré dans le [Générateur de configuration](../Configuration/Config-Builder#quickwizard-settings).
+Permet d'administrer un bolus (normalement, vous devriez utiliser le bouton Calculatrice pour effectuer cette opération), de renseigner des glucides et d'ajouter une glycémie capillaire de calibration MGC. Un bouton d'assistant rapide s'affiche également ici s'il est configuré dans le [Générateur de configuration](../Config-Builder.html#parametres-de-l-assistant-rapide).
 
 ## Calculatrice
 
@@ -88,17 +88,17 @@ Permet d'administrer un bolus (normalement, vous devriez utiliser le bouton Calc
 
 Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le ferez.
 
-### Section A
+### Section H
 
 zone où vous renseignez les informations concernant le bolus que vous voulez. Le champ de la glycémie (Gly) est normalement déjà renseigné avec la dernière lecture de votre MGC. Si vous n'avez pas de MGC, il sera vide. Dans le champ Glucides, vous indiquez votre estimation de la quantité de glucides pour laquelle vous voulez faire le bolus. Le champ "Corr" (correction) vous permet de modifier le dosage final si vous le souhaitez, et le champ "Heure glucides" est prévu pour le pré-bolus, pour que vous puissiez indiquer au système qu'il va y avoir un délai avant que les glucides n'arrivent et le bolus sera retardé. Vous pouvez mettre un nombre négatif dans ce champ si vous faites un bolus pour des glucides déjà consommés.
 
 SUPER BOLUS : permet d'ajouter l'insuline basale des 2 prochaines heures au bolus immédiat, et un débit basal temporaire (DBT) à 0 est défini pour les 2 prochaines heures afin de ne pas avoir d'insuline supplémentaire. L'idée est de fournir l'insuline plus tôt et, espérons-le, de réduire les pointes.
 
-### Section B
+### Section I
 
 affiche le bolus calculé et permet de renseigner une note. Si la quantité d'insuline active dépasse déjà le bolus calculé, elle affichera simplement la quantité de glucides encore nécessaire.
 
-### Section C
+### Section J
 
 montre les différents éléments qui ont été utilisées pour calculer le bolus. Vous pouvez décocher tout ce que vous ne souhaitez pas inclure mais vous ne voudrez normalement pas faire cela.
 
@@ -116,7 +116,7 @@ Si vous faites un bolus aditionnel rapidement après un bolus de repas (par exem
 
 ![Absorption lente des glucides](../images/Calculator_SlowCarbAbsorbtion.png)
 
-Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. Donc si vous voulez faire un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation#detection-of-wrong-cob-values).
+Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. Donc si vous voulez faire un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation.html#detection-de-ga-errones).
 
 ## Profil d'Insuline
 
@@ -172,13 +172,13 @@ Vous n'avez pas besoin de vous en inquiéter, ils montrent les résultats de l'a
 
 AndroidAPS peut être exécuté avec un certain nombre de configurations de profil différentes. Typiquement - comme ici - le profil Nightscout a été téléchargé via le Client Nightscout intégré et il est présenté ici en lecture seule. Si vous souhaitez effectuer des modifications, vous pouvez le faire à partir de votre interface utilisateur Nightscout, puis faire un [Changement de Profil](../Usage/Profiles.md) dans AndroidAPS pour activer les modifications. Les données telles que les débits de base du profil seront automatiquement copiés sur votre pompe.
 
-** DAI : ** représente la Durée d'Action de l'Insulin et il est détaillé plus haut dans la section sur les profils d'insuline.
+**DAI :** représente la Durée d'Action de l'Insulin et il est détaillé plus haut dans la section sur les profils d'insuline.
 
-** G/I : ** est le rapport quantité de glucides divisé par le nombre d'unité d'insuline. Ce profil comporte un certain nombre de valeurs différentes définies pour différentes périodes de la journée.
+**G/I :** est le rapport quantité de glucides divisé par le nombre d'unité d'insuline. Ce profil comporte un certain nombre de valeurs différentes définies pour différentes périodes de la journée.
 
-** SI :** est la Sensibilité à l'Insuline, elle correspond à la réduction de glycémie que permettra d'obtenir une unité d'insuline en supposant que rien d'autre ne change par ailleurs.
+**SI :** est la Sensibilité à l'Insuline, elle correspond à la réduction de glycémie que permettra d'obtenir une unité d'insuline en supposant que rien d'autre ne change par ailleurs.
 
-**Basal : ** est le profil de basal programmé dans votre pompe.
+**Basal :** est le profil de basal programmé dans votre pompe.
 
 **Cible :** est l'objectif glycémique que vous souhaitez atteindre. Si vous le souhaitez, vous pouvez définir différents niveaux pour différentes heures de la journée. Vous pouvez même définir des limites supérieures et inférieures afin que le l'algorithme ne commence à faire des changements que lorsque la glycémie sort de la plage, mais si vous le faites, la boucle réagira moins vite et il est peu probable que vous obteniez une glycémie aussi stable.
 

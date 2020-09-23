@@ -55,4 +55,4 @@ Proč algoritmus nedetekuje COB správně?
 
 Ruční korekce zadaných sacharidů
 ==================================================
-Pokud zadáte nesprávné množství sacharidů (příliš mnoho nebo příliš málo), můžete to napravit na kartě Ošetření a na portálu Péče, jak je popsáno `zde <../Getting-Started/Screenshots.html#carb-correction>`_.
+If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.

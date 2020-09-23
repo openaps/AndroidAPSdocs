@@ -1,6 +1,6 @@
 # Medtronic Pompen
 
-**>>>> Medtronic pump driver is from 2.5 version part of AndroidAPS (master). While this is the case, Medtronic driver should still be considered beta software. Please install only if you are expirenced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)), this should be fixed with upcomming release. <<<<**
+**> > > De Medtronic pomp driver is vanaf AAPS versie 2.5 onderdeel van AndroidAPS (master). Toch moet de Medtronic driver nog steeds als bètasoftware worden beschouwd. Gebruik het dus alleen als je een ervaren AndroidAPS gebruiker bent. Op dit moment zijn er nog steeds problemen met dubbele registraties van bolussen (Er worden 2 bolussen in de behandelingen geregistreerd, die de IOB-berekening in de war gooit (als je deze bug ondervindt, schakel Double Bolus Logging in in Medtronic configuratie en stuur ons jouw logfiles)). Dit probleem moet worden verholpen in de volgende release van AndroidAPS. <<<<**
 
 * * *
 

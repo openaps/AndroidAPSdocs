@@ -6,7 +6,7 @@
 
 ## Belangrijk:
 
-* Bouw zo snel mogelijk een nieuwe app zodra er een nieuwe versie is uitgebracht. Je zult een [melding op het Overzichtscherm van AndroidAPS](../Installing-AndroidAPS/Releasenotes.html#release-notes) zien over de nieuwe versie.
+* Bouw zo snel mogelijk een nieuwe app zodra er een nieuwe versie is uitgebracht. Je zult een [melding op het Overzichtscherm van AndroidAPS](../Installing-AndroidAPS/Releasenotes#release-notes) zien over de nieuwe versie.
 * Vanaf versie 2.3 moet je git gebruiken om te updaten. Bijwerken via zip-bestand werkt niet meer.
 * Gebruik [](https://developer.android.com/studio/)Android Studio Versie 3.6.1 of nieuwer om de apk te bouwen.
 * [Windows 10 32-bits systemen](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) worden niet ondersteund door Android Studio 3.6.1.
@@ -73,7 +73,7 @@ Volg de handleiding op de [git-installatiepagina](../Installing-AndroidAPS/git-i
 ![Bouwen voltooien](../images/AndroidStudio361_32.png)
 
 * Android Studio laat het je weten wanneer de APK succesvol is gebouwd: "APK(s) generated succesfully...".
-* In het geval dat de APK niet succesvol is gebouwd, verwijzen we je naar de [Problemen oplossen sectie](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* In het geval dat de APK niet succesvol is gebouwd, verwijzen we je naar de pagina [Problemen oplossen](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
 * De makkelijkste manier om de apk te vinden is door te klikken op "Event log".
 
 ![Succesvol gebouwd - event log](../images/AndroidStudio361_33.png)

@@ -1,6 +1,6 @@
 Vue d'ensemble des composants 
 **************************************************
-AndroidAPS n'est pas seulement une application (faite vous même), c'est juste un des modules fonctionnels de votre système de boucle fermée. Avant de décider des composants, ce serait une bonne idée de jeter un oeil à la `configuration des composants <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_.
+AndroidAPS n'est pas seulement une application (faite vous même), c'est juste un des modules fonctionnels de votre système de boucle fermée. Avant de décider des composants, ce serait une bonne idée de jeter un oeil à la `configuration des composants <../index.html#configuration-des-composants>`_.
    
 .. image:: ../images/modules.png
   :alt: Compontents overview

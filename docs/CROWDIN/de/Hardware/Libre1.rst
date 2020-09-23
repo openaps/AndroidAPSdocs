@@ -3,12 +3,14 @@ Freestyle Libre 1
 
 Um dein Libre als CGM zu verwenden, das alle 5 Minuten Glukosewerte empfängt, musst du zuerst einen NFC-zu-Bluetooth Adapter kaufen, z.B.:
 
-* MiaoMiao-Reader `https://www.miaomiao.cool/ <https://www.miaomiao.cool/>`_
-* Blukon Nightrider `https://www.ambrosiasys.com/howit <https://www.ambrosiasys.com/howit>`_
-* BlueReader `https://bluetoolz.de/blueorder/#home <https://bluetoolz.de/blueorder/#home>`_
-* Sony Smartwatch 3 (SWR50) als Auslesetool `https://github.com/pimpimmi/LibreAlarm/wiki/ <https://github.com/pimpimmi/LibreAlarm/wiki/>`_
+* MiaoMiao-Reader (Version 1 oder 2) `https://www.miaomiao.cool/ <https://www.miaomiao.cool/>`_
+* Blucon Nightrider `https://www.ambrosiasys.com/our-products/blucon <https://www.ambrosiasys.com/our-products/blucon/>`_
+* Bubble `https://bubbleshop.eu/ <https://bubbleshop.eu/>`_
 
-Wenn Du den Libre 1 als BZ-Quelle nutzt, stehen die Funktionen 'Enable SMB always' und 'Enable SMB after carbs' nicht zur Verfügung. Die BZ-Werte des Libre 1 sind für einen sicheren Einsatz dieser Funktionen nicht glatt genug. Weitere Details findest Du unter `Glättung der Blut-Glukose-Daten <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ .
+Außerdem kann die Sony Smartwatch 3, die einen NFC Chip eingebaut hat, zum Auslesen verwendet werden. Die oben aufgeführten NFC zu Bluetooth-Adapter bieten aber eine wenige komplexe Lösung und dürften daher für die meisten Nutzer, die ihr Libre 1 als CGM verwenden wollen, erste Wahl sein.
+* Sony Smartwatch 3 (SWR50) `https://github.com/pimpimmi/LibreAlarm/wiki/ <https://github.com/pimpimmi/LibreAlarm/wiki/>`_
+
+Wenn Du den Libre 1 als BZ-Quelle nutzt, stehen die Funktionen *Enable SMB always* und *Enable SMB after carbs* nicht zur Verfügung. Die BZ-Werte des Libre 1 sind für einen sicheren Einsatz dieser Funktionen nicht glatt genug. Weitere Details findest Du unter `Glättung der Blut-Glukose-Daten <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ .
 
 Libre mit xDrip+
 ==================================================

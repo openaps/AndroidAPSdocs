@@ -36,11 +36,6 @@ Ziel 3: Belege Dein Wissen
 
 * Links zum Wiki helfen Dir weiter, falls Du an der einen oder anderen Stelle noch nicht so sicher sein solltest.
 
-Objectives (Ziele) überspringen
---------------------------------------------------
-* Nur falls Du bereits mit einem anderen System (z.B. OpenAPS, iOS Loop) geloopt hast und dies belegen kannst (z.B.  mind. drei Monate Loop-Daten in Nightscout), kannst Du eine E-Mail an `objectives@androidaps.org <mailto:objectives@androidaps.org>`_ senden, um einen Code zu erhalten, um die restlichen Ziele (Objectives) zu überspringen. Füge dieser Mail Deine Nightscout-URL und den Code, der Dir in AAPS angezeigt wird, bei.
-* Bitte beachte, dass über diese Mail-Adresse kein Support geleistet werden kann. Nutze bitte die in dieser Dokumentation beschriebenen `Support-Angebote <../Where-To-Go-For-Help/Connect-with-other-users.html>`_.
-
 Ziel 4: Starte den Open Loop
 ==================================================
 * Wähle Open Loop entweder in den Einstellungen oder indem du lange auf den Loop Button in der linken oberen Ecke des Hauptbildschirms drückst.

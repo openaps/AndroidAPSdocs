@@ -96,7 +96,7 @@
 </tr>
 <tr>
  <td>CAGE</td>
- <td>Kanülenalter (canula age) - Wird in Nightscout angezeigt, wenn die Information in AAPS im Careportal Tab oder durch AAPS Tab Aktionen -> Vorfüllen/Füllen eingetragen wurde.</td>
+ <td>Kanülenalter (canula age) - Wird in Nightscout angezeigt, wenn die Information in AAPS im Aktionen Tab/Menü oder durch AAPS Tab Aktionen -> Vorfüllen/Füllen eingetragen wurde.</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -318,7 +318,7 @@
 </tr>
 <tr>
  <td>SAGE</td>
- <td>Sensoralter (sensor age) - Wird in Nightscout angezeigt, wenn die Information in AAPS im Careportal Tab eingetragen wurde.</td>
+ <td>Sensoralter (sensor age) - Wird in Nightscout angezeigt, wenn die Information in AAPS im Aktionen Tab/Menü eingetragen wurde.</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>

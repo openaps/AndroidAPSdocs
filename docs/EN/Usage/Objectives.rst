@@ -36,7 +36,6 @@ Objective 3: Proof your knowledge
 
 * Links will be provided to guide you in case you are unsure about the correct answers yet.
 
-
 Objective 4: Starting on an open loop
 ==================================================
 * Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.

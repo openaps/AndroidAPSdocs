@@ -36,6 +36,8 @@ Tlačítka:
 * červené X: odstranit
 * modrá šipka: kopírovat
 
+Děláte-li v profilu nějaké změny, ujistěte se, že upravujete správný profil. Na záložce profilu nemusí být pokaždé zobrazen aktuální profil. Například když na domovské obrazovce přepnete přes záložku profilu na jiný profil, může pak být aktuální profil odlišný od toho, který je zobrazen v záložce profil, protože mezi nimi není žádné spojení.
+
 #### Klonování přepnutí profilu
 
 Z přepnutí profilu můžete snadno vytvořit nový místní profil. Posun času a procentuální změna budou v takovém případě přeneseny do nového místního profilu.
@@ -70,7 +72,7 @@ Nevýhody:
 
 NS profil používá profily, které jste uložili na webu nightscout (https://[adresavašehoprofilu]/profile). K přepnutí profilu, který bude aktivní, můžete použít tlačítko [Přepnout profil](../Usage/Profiles.md). Tato akce zapíše profil do pumpy, kde bude použit v případě selhání AndroidAPS. Takto si v Nightscoutu můžete vytvořit více profilů (např.. práce, doma, sport, prázdniny atd.). Je-li Váš mobil online, budou profily po stisknutí tlačítka „Uložit“ odeslány do AAPS. Pokud nemáte připojení k internetu nebo k Nightscoutu, budou profily uloženy pouze v AAPS, a to do té doby, dokud nebudou synchronizované.
 
-Pomocí tlačítka **Přepnout profil** se aktivuje vybraný profil z Nightscoutu. V horní části hlavní obrazovky AAPS stiskněte a podržte tlačítko s názvem aktuálního profilu (prostřední šedé pole mezi polem „Otevřená/Uzavřená smyčka“ a polem s hodnotami cíle) > Přepnutí profilu > Vybrat profil > OK. Po změně profilu zapíše AAPS vybraný profil do pumpy, takže zde bude k dispozici pro případ nouze, a pumpa bude moci pokračovat.
+Klepnutím na tlačítko **Přepnout profil** se aktivuje vybraný profil z Nightscoutu. V horní části hlavní obrazovky AAPS stiskněte a podržte tlačítko s názvem aktuálního profilu (prostřední šedé pole mezi polem „Otevřená/Uzavřená smyčka“ a polem s hodnotami cíle) > Přepnutí profilu > Vybrat profil > OK. Po změně profilu zapíše AAPS vybraný profil do pumpy, takže zde bude k dispozici pro případ nouze a pumpa bude moci pokračovat.
 
 Výhody:
 
@@ -90,7 +92,7 @@ Hodnota DIA není u každého člověka stejná. Proto si ji musíte muset vyzko
 
 Pro „Rychle působící“ a „Ultra rychlý“ inzulín je DIA jediná proměnná, kterou si můžete upravovat. Doba maximální účinnosti je fixní. „Volitelný vrchol“ umožňuje nastavit obě proměnné – DIA i dobu maximální účinnosti inzulínu. Tato volba je určena pouze pro pokročilé uživatele, kteří znají důsledky nastavených hodnot.
 
-Graf [ Křivka inzulínu ](../Getting-Started/Screenshots#insulin-profile) pomáhá pochopit různé křivky. Po zaškrtnutí čtverečku vedle možností se jednotlivé položky zobrazí jako záložky v horním pásu karet. Další možnost jejich zobrazení je přes hamburger menu.
+Graf [ Křivka inzulínu ](../Getting-Started/Screenshots#insulin-profile) pomáhá pochopit různé křivky. Zaškrtnutím čtverečku vedle názvu si je můžete prohlédnout v záložce. Další možnost jejich zobrazení je přes hamburger menu.
 
 ### Rychle působící - Oref
 
@@ -110,7 +112,7 @@ Pro velké množství lidí nemá po 3–4 hodinách FIASP prakticky žádné zn
 
 ### Volitelný vrchol Oref
 
-V profilu „Volitelný vrchol 0ref“ můžete ručně zadat dobu max. účinku inzulínu. Pokud není v profilu zadána vyšší hodnota, je DIA je automaticky nastavena na 5 h.
+V profilu „Volitelný vrchol 0ref“ můžete ručně zadat dobu max. účinku inzulínu. Pokud není v profilu zadána vyšší hodnota, je DIA je automaticky nastaveno na 5 h.
 
 Tento profil je doporučován v případě, že používáte nepodporovaný inzulín nebo směs různých inzulínů.
 
@@ -130,7 +132,7 @@ Vyberte, který zdroj glykémií používáte – další informace k nastavení
 
 ## Pumpa
 
-Vyberte kterou pumpu používáte.
+Vyberte, kterou pumpu používáte.
 
 * [Dana R](DanaR-Insulin-Pump.md)
 * DanaR Korea (pro korejskou verzi pumpy DanaR)
@@ -144,13 +146,13 @@ Pro pumpy Dana – pokud je nutný BT watchdog, aktivujte ho v **Rozšířená n
 
 ## Detekce citlivosti
 
-Vyberte variantu detekce citlivosti. Bude prováděna analýza historických dat. Jestliže se zjistí, že na inzulín reagujete citlivěji než obvykle (nebo naopak máte vyšší rezistenci), provedou se úpravy. Podrobnosti o algoritmu citlivosti Oref0 jsou k přečtení v [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Vyberte variantu detekce citlivosti. Bude prováděna analýza historických dat. Jestliže se zjistí, že na inzulín reagujete citlivěji než obvykle (nebo naopak máte vyšší rezistenci), provedou se úpravy. Podrobnosti o algoritmu citlivosti Oref0 si můžete přečíst v [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
-Průběh citlivosti můžete na hlavní stránce zobrazit vybráním políčka Citlivost. Zobrazí se jako bílá čára. Pozn: abyste mohli používat detekci citlivosti/[Autosens](../Usage/Open-APS-features.html#autosens), je třeba být v [Cíli 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens).
+Průběh citlivosti můžete na hlavní stránce zobrazit vybráním políčka Citlivost. Zobrazí se jako bílá čára. Pozn: aby mohla Detekce citlivosti/[ Autosens](../Usage/Open-APS-features.html#autosens) automaticky upravovat množství dodávaného inzulínu, musíte mít splněný [cíl 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens). Před dosažením tohoto cíle slouží procentuální údaj Autosens a bílá čára v grafu pouze pro informaci.
 
 ### Nastavení absorpce sacharidů
 
-Pokud používáte Oref1 s SMB, musíte změnit **min_5m_carbimpact** na 8. Tato hodnota se používá pouze při výpadcích hodnot odečítaných z CGM nebo v případech, kdy se fyzickou aktivitou vyrovná vzestup glykémie, který by jinak vedl k tomu, že by systém AAPS odbourával COB. V situacích, kdy absorpci sacharidů nelze počítat dynamicky na základě reakcí vaší glykémie, je použita tato výchozí hodnota absorpce. V podstatě jde o bezpečnostní pojistku.
+Pokud používáte Oref1 s SMB, musíte změnit **min_5m_carbimpact** na 8. Tato hodnota se používá pouze při výpadcích hodnot odečítaných z CGM nebo v případech, kdy se fyzickou aktivitou vyrovná vzestup glykémie, který by jinak vedl k tomu, že by systém AAPS odbourával COB. V situacích, kdy [absorpci sacharidů](../Usage/COB-calculation.rst) nelze počítat dynamicky na základě reakcí vaší glykémie, je použita tato výchozí hodnota absorpce. V podstatě jde o bezpečnostní pojistku.
 
 ## APS
 
@@ -177,7 +179,7 @@ AAPS průběžně vyhodnocuje všechny dostupné údaje (IOB, COB, glykémie…)
 
 ## Cíle (výukový program)
 
-AndroidAPS má řadu cílů, které musíte splnit krok za krokem. Měly by vás bezpečně provést nastavením uzavřené smyčky. Postupným splněním cílů je zajištěno, že přesně porozumíte tomu, jak systém pracuje. Jedině touto cestou můžete svému systému plně důvěřovat.
+AndroidAPS má řadu cílů, které musíte splnit krok za krokem. Měly by vás bezpečně provést nastavením uzavřené smyčky. Postupným splněním cílů je zajištěno, že přesně porozumíte tomu, jak systém pracuje. Jedině tak můžete svému systému plně důvěřovat.
 
 Měli byste pravidelně [exportovat svá nastavení](../Usage/ExportImportSettings.rst) (včetně pokroku v plnění cílů). V případě, že v budoucnosti budete muset svůj smartphone nahradit (nové zařízení, poškození displeje atd.), můžete tato nastavení jednoduše importovat.
 
@@ -195,7 +197,7 @@ Zobrazí aktuální stav smyčky a tlačítko pro přístup k běžným akcím (
 
 #### Nechat obrazovku zapnutou
 
-Tato volba zabrání Androidu vypnout obrazovku. To je velmi vhodné například pro prezentace. Při tomto nastavení ale dochází k velmi rychlému vybíjení baterie. Proto je doporučeno připojit smartphone k napájecímu kabelu.
+Tato volba zabrání Androidu vypnout obrazovku. To je vhodné například pro prezentace. Při tomto nastavení ale dochází k velmi rychlému vybíjení baterie. Proto je doporučeno připojit smartphone k napájecímu kabelu.
 
 #### Tlačítka
 
@@ -220,7 +222,7 @@ Poznámka: tlačítko nebude viditelné, pokud je aktuální čas mimo interval 
 
 #### Pokročilá nastavení
 
-Povolit v kalkulačce funkci superbolus. Používejte se zvýšenou opatrností a nenastavujte, dokud jste si nenastudovali, co to vlastně dělá. V podstatě je bazál za následující 2 hodiny přidán do bolusu a po dobu těchto 2 h je nastaven nulový dočasný bazál. **Funkce smyčky AAPS budou deaktivovány – používat opatrně! Pokud používáte funkci SMB, funkce smyčky AAPS budou deaktivovány dle vašeho nastavení v části [„Maximální počet minut bazálu, ke kterým se limituje SMB“](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), pokud funkci SMB nevyužíváte, funkce smyčky budou vypnuty na dvě hodiny.** Podrobnosti o superbolusu najdete [zde](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Povolit v kalkulačce funkci superbolus. Používejte se zvýšenou opatrností a nenastavujte, dokud jste si nenastudovali, co to vlastně dělá. V podstatě je bazál za následující 2 hodiny přidán do bolusu a po dobu těchto 2 h je nastaven nulový dočasný bazál. **Funkce smyčky AAPS budou deaktivovány – používat opatrně! Pokud používáte funkci SMB, funkce smyčky AAPS budou deaktivovány dle vašeho nastavení v části [„Maximální počet minut bazálu, ke kterým se limituje SMB“](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), pokud funkci SMB nevyužíváte, funkce smyčky budou vypnuty na dvě hodiny.** Podorbnosti o superbolusu najdete [zde](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Akce
 
@@ -271,7 +273,7 @@ Prostřednictvím záložky Wear nebo hamburger menu (levý horní roh obrazovky
 
 ### Stavová řádka xDrip (hodinky)
 
-Zobrazit na displeji hodinek (xDrip+ watchface) stav smyčky (pokud nepoužíváte AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md))
+Zobrazit na displeji hodinek (ciferník xDrip+) stav smyčky (pokud nepoužíváte ciferník AAPS/[AAPSv2](../Configuration/Watchfaces.md))
 
 ### Oznámení v notifikační liště
 
@@ -283,7 +285,7 @@ V telefonu přidá do notifikační lišty nebo na zamykací obrazovku informace
 
 Nastavení synchronizace dat AndroidAPS s Nightscoutem.
 
-Je-li aktivována možnost **Zaznamenat start aplikace do NS**, bude každý restart AndroidAPS v Nightscoutu zobrazen. Může to být praktické v případě problémů s aplikací (např. když není aplikace vyjmuta z optimalizace baterie telefonu). Na druhou stranu to může zahltit graf Nightscoutu spoustou položek.
+Je-li aktivována možnost **Zaznamenat spuštění aplikace do NS**, bude každý restart AndroidAPS v Nightscoutu zobrazen. Může to být praktické v případě problémů s aplikací (např. když není aplikace vyjmuta z optimalizace baterie telefonu). Na druhou stranu to může zahltit graf Nightscoutu spoustou položek.
 
 #### Nastavení alarmů
 

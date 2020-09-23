@@ -6,12 +6,12 @@
 
 ## Notas importantes
 
-* Please update as soon as possible after a new release is available. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes.html#release-notes) about the new version.
-* As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
-* Please use [Android Studio Version 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.6.1.
-* If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
-* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* Please update as soon as possible after a new release is available. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes#release-notes) about the new version.
+* A partir de la versión 2.3, debe utilizar git para actualizar. La actualización a través del archivo zip ya no funciona.
+* Utilice [Android Studio Versión 3.6.1](https://developer.android.com/studio/) o más reciente para crear el apk.
+* [Windows 10 sistemas de 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) no son compatibles con Android Studio 3.6.1.
+* Si está utilizando xDrip, asegúrese de que [identifique el receptor](../Configuration/xdrip#identify-receiver).
+* Si utiliza Dexcom G6 con el [parcheado de la aplicación Dexcom](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) necesitará la versión de la carpeta [carpeta 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Rápido acceso a los usuarios experimentados
 
@@ -44,7 +44,7 @@ Siga el manual en [git página de instalación](../Installing-AndroidAPS/git-ins
 
 * When done Android Studio will inform you that "all files are up-to-date".
     
-    ![All files up to date](../images/AndroidStudio361_Update04.png)
+    ![Todos los archivos están actualizados](../images/AndroidStudio361_Update04.png)
 
 ## Generar APK firmado
 
@@ -52,9 +52,9 @@ Siga el manual en [git página de instalación](../Installing-AndroidAPS/git-ins
 
 * Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
 
-![Build apk](../images/AndroidStudio361_27.png)
+![Crear apk](../images/AndroidStudio361_27.png)
 
-* Select "APK" (1.) instead of "Android App Bundle" and click "Next" (2.).
+* Seleccione "APK" (1.) en lugar de "Android App Bundle" y haga clic en "Next" (2.).
 
 ![APK instead of bundle](../images/AndroidStudio361_28.png)
 
@@ -62,18 +62,18 @@ Siga el manual en [git página de instalación](../Installing-AndroidAPS/git-ins
 * Select your key store path by clicking on "Choose existing...".
 * Enter your passwords for key store and key.
 * If the box to remember passwords is checked you don't have to enter them. In case the box was not checked during last build and you cannot remember the passwords refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
-* Click "Next".
+* Haga clic en "Siguiente".
 
-![Key store](../images/AndroidStudio361_Update05.png)
+![Almacén de claves](../images/AndroidStudio361_Update05.png)
 
-* Select build variant "fullRelease" (1.). 
-* Check boxes V1 and V2 for signature versions (2.).
-* Click "Finish". (3.)
+* Seleccione la variante de compilación "fullRelease" (1.). 
+* Marque las casillas V1 y V2 para las versiones de firma (2.).
+* Haga clic en "Finalizar". (3.)
 
-![Finish build](../images/AndroidStudio361_32.png)
+![Finalizar construcción](../images/AndroidStudio361_32.png)
 
-* Android Studio will display the information "APK(s) generated successfully..." after build is finished.
-* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* Android Studio mostrará la información "APK(s) generados con éxito..." una vez finalizada la compilación.
+* En caso de que la compilación no fuera exitosa, consulte la sección [solución de problemas](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
 * Easiest way to find the apk is to click on "Event log".
 
 ![Build successfully - event log](../images/AndroidStudio361_33.png)
@@ -94,9 +94,9 @@ On your phone you have to allow installation from unknown sources. Manuals how t
 
 ## Comprobar la versión de AAPS en el teléfono
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Puede comprobar la versión de AAPS en su teléfono haciendo clic en el menú de tres puntos en la parte superior derecha y luego acerca.
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![Versión de AAPS instalada](../images/Update_VersionCheck.png)
 
 ## Solución de problemas
 

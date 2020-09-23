@@ -45,21 +45,21 @@ Dlouhým zmáčknutím na grafu, změníte časový rozsah grafu. Můžete si vy
 
 * **Oranžová** linka: [COB](../Usage/COB-calculation.rst) (barva se obecně používá k vizualizaci COB a sacharidů)
    
-   Prediction line shows where your BG (not where cob itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
+   Linka předpovědi ukazuje, jak se bude vaše glykemie (ne samotné COB!) vyvíjet na základě aktuálního nastavení pumpy a za předpokladu, že odchylky způsobené absorpcí sacharidů zůstanou konstantní. Tato linka se zobrazí pouze v případě, že je známý COB.
 
 * **Tmavě modrá** linka: IOB (barva se obecně používá k vizualizaci IOB a inzulínu)
    
-   Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
+   Linka předpovědi ukazuje, co by se stalo pouze pod vlivem inzulínu. Například, pokud jste aplikovali nějaký inzulín a pak nejedli žádné sacharidy.
 
 * **Světle modrá** linka: nulový dočasný bazál (předpověď glykémie, pokud by byl dočasný bazál nastaven na 0 %)
    
-   Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+   Linka předpovědi ukazuje, jak by se změnila trajektorie IOB, pokud pumpa zastaví všechny dodávky inzulínu. (0% dočasný bazál).
 
 * **Tmavě žlutá** linka: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (neohlášená jídla)
    
-   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+   Neohlášená jídla znamenají, že je zjištěn výrazný nárůst glykemie v důsledku jídla, adrenalinu nebo jiných vlivů. Linka předpovědi je podobná ORANŽOVÉ COB lince, ale předpokládá, že se odchylky budou snižovat konstantní rychlostí (rozšířením současné rychlosti snížení).
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+Obvykle vaše skutečná křivka glykémie končí uprostřed těchto linek nebo blízko k té, jejíž předpoklady se nejvíce podobají vaší situaci.
 
 **Modrá linka** ukazuje dávkování bazálního inzulínu pumpou. **Tečkovaná modrá** linka ukazuje úroveň bazální dávky, jaká by byla vydávána za normálních okolností, kdyby nebyla navýšená/snížená pomocí dočasné bazální dávky (TBR), a plná modrá linka je aktuální dávkování v průběhu času.
 
@@ -88,17 +88,17 @@ Umožňuje podávání bolusu (obvykle k tomu použijete tlačítko Kalkulačka)
 
 Když se chystáte odesílat bolus k jídlu, dobře se k tomu hodí funkce kalkulačka.
 
-### Sekce A
+### Section H
 
 zde se vyplňují údaje o bolusu, který se chystáte odeslat. Pole „Glykémie“ bývá automaticky předvyplněné poslední naměřenou hodnotou ze senzoru. Pokud právě nemáte senzor v provozu, pak bude pole prázdné. Do pole „Sacharidy“ vkládáte odhadované množství sacharidů (nebo ekvivalentní hodnotu), ke kterému chcete poslat bolus. Pole „Korekce“ slouží k navýšení/snížení výsledné dávky inzulínu z jakéhokoliv důvodu a „Čas jídla“ slouží k předsazení bolusu tak, abyste systému řekli, že mezi bolusem a konzumací jídla bude udaná prodleva. Můžete zde zadat i záporné číslo, pokud později dopichujete bolus k již dříve zkonzumovaným sacharidům.
 
 SUPERBOLUS je funkce, kdy je k dávce okamžitého bolusu přičtený bazální inzulín za následující dvě hodiny a zároveň je na pumpě nastavená dočasná bazální dávka 0% na dvě hodiny, aby se tak kompenzoval extra podaný inzulín. Cílem je dodat inzulín dřív, aby se snížil kopec, který na grafu glykémie obvykle následuje.
 
-### Sekce B
+### Section I
 
 zobrazuje vypočtený bolus. Pokud množství již aktivního inzulínu v krvi převyšuje vypočtený bolus, pak se jen zobrazí doporučené množství sacharidů k jeho pokrytí.
 
-### Sekce C
+### Section J
 
 zobrazuje různé prvky, které byly použity k výpočtu bolusu. Můžete zrušit označení všech, které se vám nehodí, ale normálně by k tomu neměl být důvod.
 

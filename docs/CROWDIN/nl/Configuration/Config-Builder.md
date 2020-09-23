@@ -36,7 +36,9 @@ Knoppen:
 * rode X: verwijderen
 * blauwe pijl: kopiëren
 
-#### Profiel wissel kopiëren
+Als je wijzigingen aanbrengt in je profiel, zorg er dan voor dat je het juiste profiel aan het bewerken bent. Op het profiel tabblad wordt niet altijd het gebruikte profiel weergegeven - bijvoorbeeld als je van profiel hebt gewisseld met de profiel tab op het overzicht-scherm, kan dit afwijken van het profiel dat wordt weergegeven in het tabblad profiel omdat er geen koppeling tussen deze tabs bestaat.
+
+#### Profiel wissel dupliceren
 
 Je kunt eenvoudig een nieuw lokaal profiel aanmaken van een profiel wissel. In dit geval word het tijdsverschil en het percentage toegepast op het nieuwe lokale profiel.
 
@@ -45,13 +47,13 @@ Je kunt eenvoudig een nieuw lokaal profiel aanmaken van een profiel wissel. In d
 3. Druk op "Dupliceren".
 4. Het nieuwe lokale profiel kunt u bewerken in het tabblad Lokaal profiel (LP) of via het hamburgermenu.
 
-![Profiel wissel kopiëren](../images/LocalProfile_ClonePS.png)
+![Profiel wissel dupliceren](../images/LocalProfile_ClonePS.png)
 
-Als je van Nightscout profiel wilt veranderen naar lokaal profiel, doe dan een profielwissel naar jouw NS profiel en dupliceer de profielwissel zoals hierboven beschreven.
+Als je van Nightscout profiel wilt veranderen naar lokaal profiel, schakel dan je NS profiel in en kopieer de profiel wissel zoals hierboven beschreven.
 
 #### Lokale profielen uploaden naar Nightscout
 
-Lokale profielen kunnen ook worden geüpload naar Nightscout. De instellingen bevinden zich in NS Client voorkeuren.
+Lokale profielen kunnen ook worden geüpload naar Nightscout. De instellingen bevinden zich in NS Client instellingen.
 
 ![Lokaal profiel naar NS uploaden](../images/LocalProfile_UploadNS2.png)
 
@@ -68,7 +70,7 @@ Nadelen:
 
 ### NS Profiel
 
-NS Profiel maakt gebruik van de profielen die je hebt opgeslagen op jouw Nightscout site (https://[jouwnightscoutpagina]/profile). Je kunt de [Profiel wissel](../Usage/Profiles.md) gebruiken om te kiezen welk van jouw profielen actief wordt, dit profiel zal vervolgens naar jouw pomp worden gestuurd en in het pompgeheugen worden opgeslagen. Zodat je pomp hierop terugvalt wanneer AndroidAPS niet zou werken. Hierdoor kunt je heel makkelijk meerdere profielen gebruiken in Nightscout (dat wil zeggen werk, thuis, sport, vakantie, etc.). Kort nadat je klikt op "Opslaan" zullen deze profielen worden overgedragen naar AAPS als jouw smartphone online is. Zelfs zonder een internetverbinding of zonder een verbinding met Nightscout zijn de Nightscout-profielen beschikbaar in AAPS zodra ze zijn gesynchroniseerd.
+NS Profiel maakt gebruik van de profielen die je hebt opgeslagen op jouw Nightscout site (https://[jouwnightscoutpagina]/profile). Je kunt de [Profiel wissel](../Usage/Profiles.md) gebruiken om te kiezen welk van jouw profielen actief wordt, dit profiel zal vervolgens naar jouw pomp worden gestuurd en in het pompgeheugen worden opgeslagen. Zodat je pomp hierop terugvalt wanneer AndroidAPS niet zou werken. Hierdoor kun je heel makkelijk meerdere profielen gebruiken in Nightscout (dat wil zeggen werk, thuis, sport, vakantie, etc.). Kort nadat je klikt op "Opslaan" zullen deze profielen worden overgedragen naar AAPS als jouw smartphone online is. Zelfs zonder een internetverbinding of zonder een verbinding met Nightscout zijn de Nightscout-profielen beschikbaar in AAPS zodra ze zijn gesynchroniseerd.
 
 Gebruik een **Profiel wissel** om een profiel van Nightscout te activeren. Houd het huidige profiel in het AAPS Overzicht-scherm aan de bovenkant ingedrukt (middelste grijze knop tussen de grijze "Open/Closed Loop"-knop en de grijze streefdoel-knop) > Profiel wissel > Profiel selecteren > OK. AAPS schrijft nu het geselecteerde profiel naar de pomp na de profiel wissel, zodat het beschikbaar blijft zonder AAPS (in noodgevallen) en je pomp dus gewoon blijft doorlopen.
 
@@ -116,7 +118,7 @@ Dit profiel wordt aanbevolen als de insuline bij jou een werkingsprofiel heeft d
 
 ## BG bron
 
-Selecteer de bloed glucose bron u gebruikt - Zie [BG bron](BG-Source.rst) pagina voor meer informatie over setup.
+Selecteer de bloed glucose bron je gebruikt - Zie [BG bron](BG-Source.rst) pagina voor meer informatie over setup.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient BG
@@ -146,11 +148,11 @@ Voor dana pompen, gebruik **Geavanceerde instellingen ** om BT watchdog te activ
 
 Selecteer het type gevoeligheid detectie (ook wel bekend als Auto-Sensitivity / Autosens in het Engels). Hiermee houdt het algoritme jouw gegevens van de afgelopen tijd in de gaten, en past zijn gedrag aan wanneer hij merkt dat je gevoeliger (of, juist ongevoeliger) bent voor insuline dan normaal. Details over het Oref0 Gevoeligheid algoritme kun je lezen in de [OpenAPS documenten](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
-Je kunt je gevoeligheid op het Overzicht-scherm laten weergeven door Gevoeligheid te selecteren en te kijken naar de witte lijn. Ook wordt het weergegeven als "AS...%", waarbij AS staat voor AutoSens. Let op, je moet minimaal [Doel 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) bereikt hebben voor het gebruiken van gevoeligheid detectie/[Autosens](../Usage/Open-APS-features.html#autosens).
+Je kunt je gevoeligheid op het Overzicht-scherm laten weergeven door Gevoeligheid te selecteren en te kijken naar de witte lijn. Ook wordt het weergegeven als "AS...%", waarbij AS staat voor AutoSens. Let op, je moet minimaal [Doel 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) bereikt hebben om gevoeligheid detectie/[Autosens](../Usage/Open-APS-features.html#autosens) jouw insulinetoediening automatisch te laten aanpassen. Als je dit doel nog niet hebt bereikt, dan wordt de Autosens percentage lijn in de grafiek alleen weergegeven ter info.
 
 ### Opname instellingen
 
-Als je Oref1 met SMB gebruikt moet je **min_5m_carbimpact** op 8 instellen. Als je AMA gebruikt moet je dit op 3 hebben staan. Deze waarde wordt gebruikt om de hoeveelheid opgenomen koolhydraten (Carbs On Board, COB) te laten afnemen wanneer jouw bloedsuiker niet zoveel stijgt als het algoritme had verwacht nadat je koolhydraten hebt gegeten. Deze waarde wordt alleen gebruikt in speciale gevallen: wanneer jouw CGM geen gegevens doorgeeft, of wanneer bijv. fysieke activiteit de koolhydraten "opeet". In dit soort gevallen, wanneer jouw koolhydraat opname niet kan worden bepaald op basis van hoe jouw bloedglucose reageert, dan zal AAPS terugvallen op deze waarde voor de afname van COB. Het is in feite een vangnet.
+Als je Oref1 met SMB gebruikt moet je **min_5m_carbimpact** op 8 instellen. Als je AMA gebruikt moet je dit op 3 hebben staan. Deze waarde wordt gebruikt om de hoeveelheid opgenomen koolhydraten (Carbs On Board, COB) te laten afnemen wanneer jouw bloedsuiker niet zoveel stijgt als het algoritme had verwacht nadat je koolhydraten hebt gegeten. Deze waarde wordt alleen gebruikt in speciale gevallen: wanneer jouw CGM geen gegevens doorgeeft, of wanneer bijv. fysieke activiteit de koolhydraten "opeet". Op momenten wanneer [koolhydraat absorptie](../Usage/COB-calculation.rst) niet dynamisch vastgesteld kan worden aan de hand van veranderende bloed glucose word een basis verval gehanteerd. Het is in feite een vangnet.
 
 ## APS
 
@@ -242,7 +244,7 @@ Een aantal knoppen voor snelle toegang tot algemene functies:
 * Historiek venster
 * TDD (Totale Dagelijkse Dosis = bolus + basale insuline per dag)
 
-Sommige artsen gebruiken - met name voor nieuwe pompgebruikers- een basaal:bolus ratio van 50:50. Daarom wordt de ratio berekend als TDD / 2 * TBB (Totale Basis Basaal = som van alle basale insuline binnen 24 uur). Anderen geven de voorkeur aan 32% tot 37% van de TDD voor TBB. Zoals de meeste van deze vuistregels hoeft ook deze in het echte leven niet persé te kloppen. Ieder mens is anders!
+Sommige artsen gebruiken - met name voor nieuwe pompgebruikers- een basaal:bolus ratio van 50:50. Daarom wordt de ratio berekend als TDD / 2 * TBB (Totale Basis Basaal = som van alle basale insuline binnen 24 uur). Anderen geven de voorkeur aan 32% tot 37% van de TDD voor TBB. Zoals de meeste vuistregels hoeft ook deze in het echte leven niet persé te kloppen. Ieder mens is anders!
 
 ![Acties tabblad](../images/ConfBuild_ConfBuild_Actions_b.png)
 

@@ -5,13 +5,14 @@ Basics first
 
 * Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`_.
 * For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the `latest nightly built xDrip+ versions <https://github.com/NightscoutFoundation/xDrip/releases>`_. Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+* If you have the possibility to get a Dexcom receiver from your health insurance it is worth getting it. Even if you do not use it every day you can exclusively refer to what the receiver said when you need to file a complaint. Parallel use is possible as transmitters can send to the receiver, plus to one more device at the same time.
 
 General hints for looping with G6
 ==================================================
 
 Dexcom G6를 사용하는 것은 맨 처음 육안으로 보여지는 것 보다 좀더 복잡합니다. 그것을 안전하게 사용하기 위해서는 , 몇가지 인지하고 넘어갈 것들이 있습니다. 
 
-* If you are using the native data with the calibration code in xDrip or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
+* If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
 * If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
 * If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
 * Pre-soaking of the G6 with factory calibration is likely to give variation in results. 만일 당신이 Pre-soak을 한다면,  가장 정확한 결과값을 얻기위해  센서보정을 할 필요가 있습니다.
@@ -23,9 +24,9 @@ If using G6 with xDrip+
 ==================================================
 * The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
 * When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
-* If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
-* If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
-* Select xdrip in ConfigBuilder (setting in AndroidAPS).
+* If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app <./Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
+* If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
+* 구성 관리자 (AndroidAPS의 세팅)에서 xDrip을 선택합니다.
 * Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`_
 * If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
@@ -39,17 +40,18 @@ If using G6 with patched Dexcom app
    .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Region in Dexcom G6 URL
 
-* Stop sensor and uninstall the original Dexcom app, if not already done.
-* Install downloaded apk
-* Start sensor
+* 오리지날 Dexcom 앱이 남아 있는 경우 센서를 스탑하고 삭제합니다.
+* 다운로드 된 apk를 설치합니다.
+* 센서를 시작합니다.
 * Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
-* If you want to use xDrip alarms via local broadcast: in xDrip hamburger menu > settings > hardware data source > 640G /EverSense.
+* If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
+* There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.
 
 Troubleshooting G6
 ==================================================
 Dexcom G6 specific troubleshooting
 --------------------------------------------------
-* Transmitters with serial no. starting with 80 or 81 need at least last stable xDrip version from May 2019 or a newer nightly build.
+* Transmitters with serial no. starting with 80 or 81 need at least last stable xDrip+ version from May 2019 or a newer nightly build.
 * Transmitters with serial no. starting with 8G need at least nightly build from July 25th, 2019 or newer.
 * xDrip+ and Dexcom app cannot be connected with the transmitter at the same time.
 * Wait at least 15 min. between stopping and starting a sensor.
@@ -61,11 +63,11 @@ Dexcom G6 specific troubleshooting
   * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
 
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
-  :alt: xDrip PhoneServiceState
+  :alt: xDrip+ PhoneServiceState
 
-General troubleshoothing
+General troubleshooting
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#Troubleshooting>`_.
+General Troubleshooting for CGMs can be found `here <./GeneralCGMRecommendation.html#Troubleshooting>`_.
 
 New transmitter with running sensor
 --------------------------------------------------

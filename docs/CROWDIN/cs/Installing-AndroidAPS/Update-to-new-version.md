@@ -6,7 +6,7 @@
 
 ## Důležité poznámky
 
-* Aktualizujte co nejdříve, jakmile bude k dispozici nová verze. O nové verzi budete [informování na domovské obrazovce AndroidAPS](../Installing-AndroidAPS/Releasenotes.html#release-notes).
+* Aktualizujte co nejdříve, jakmile bude k dispozici nová verze. O nové verzi budete [informování na domovské obrazovce AndroidAPS](../Installing-AndroidAPS/Releasenotes#release-notes).
 * Od verze 2.3 je potřeba pro aktualizaci použít git. Aktualizace pomocí zip souboru již nefunguje.
 * Chcete-li sestavit apk, použijte [ Android Studio verze 3.6.1 ](https://developer.android.com/studio/) nebo novější.
 * [32 bitové systémy Windows 10](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) nejsou programem Android Studio 3.6.1. podporovány.

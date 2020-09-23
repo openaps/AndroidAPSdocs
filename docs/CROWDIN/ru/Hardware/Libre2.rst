@@ -1,46 +1,46 @@
 Freestyle Libre 2
 **************************************************
 
-Система Freestyle Libre 2 может автоматически сообщать об опасных уровнях глюкозы в крови. Сенсор Libre2 каждую минуту отправляет текущие значения гликемии на принимающее устройство (ридер или смартфон). При необходимости приемник инициирует оповещение. With a self-modified LibreLink app and the xDrip+ app, you can continuously receive and display your blood sugar level on your smartphone. 
+Система Freestyle Libre 2 может автоматически сообщать об опасных уровнях глюкозы в крови. Сенсор Libre2 каждую минуту отправляет текущие значения гликемии на принимающее устройство (ридер или смартфон). При необходимости приемник инициирует оповещение. С помощью модифицированного приложения LibreLink и приложения xDrip+ можно непрерывно получать данные ГК на смартфон. 
 
-The sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2,2 mmol/l to +1,1 mmol/l) to adjust differences between finger prick measurements and sensor readings.
+Сенсор может быть откалиброван в диапазоне от -40 мг/дл до +20 мг/дл (-2,2 ммоль/л до +1,1 ммоль/л) для корректировки различий между замерами глюкометра и показаниями с сенсора.
 
-BG readings can also be done using a BT transmitter like with the Libre1.
+Показания ГК можно также получать с помощью трансмиттера BT, как, например для Libre1.
 
-Step 1: Build your own patched LibreLink-App
+Шаг 1: Создайте собственное модифицированное приложение Librelink
 ==================================================
 
-По юридическим причинам установка так называемого патча должна быть произведена самостоятельно. Используйте поисковые системы для поиска соответствующих ссылок. There are mainly two variants: The recommended original patched app blocks any internet traffic to avoid tracking. The other variant supports LibreView which may be needed by your doctor.
+По юридическим причинам установка так называемого патча должна быть произведена самостоятельно. Используйте поисковые системы для поиска соответствующих ссылок. Есть в основном два варианта: рекомендуемое оригинальное исправленное приложение блокирует любой интернет-трафик, чтобы избежать отслеживания. Другой вариант поддерживает LibreView, который может понадобиться вашему врачу.
 
-The patched app has to be installed instead of the original app. The next sensor started with it will transmit the current BG values to the xDrip+ app running on your smartphone via Bluetooth.
+Вместо оригинального приложения следует установить модифицированное. Следующий сенсор, запущенный с его помощью, будет передавать по Bluetooth текущие значения гликемии в приложение xDrip +, работающее на смартфоне.
 
-Important: To avoid possible problems it may help to first install and uninstall the original app on an NFC capable smartphone. NFC должен быть включен. Это не требует дополнительной энергии. Then install the patched app. 
+Важно: чтобы избежать возможных проблем, при первой установке/деинсталляции оригинального приложения может помочь использование смартфона с поддержкой NFC. NFC должен быть включен. Это не требует дополнительной энергии. Затем установите модифицированное приложение. 
 
-The patched app can be identified by the foreground authorization notification. The foreground authorization service improves the connection stability compared to the original app which do not use this service.
+Исправленное приложение можно определить с помощью уведомления об авторизации в основном режиме. Служба проверки прав доступа в основном режиме повышает стабильность соединения по сравнению с исходным приложением, которое не использует эту службу.
 
 .. image:: ../images/Libre2_ForegroundServiceNotification.png
-  :alt: LibreLink Служба переднего плана
+  :alt: LibreLink Служба переднего плана (основной режим)
 
-Other indications could be the Linux penguin logo three dot menu -> Info or the font of the patched app. These criteria are optional depending on the app source you choose.
+Другими индикаторами может быть логотип Linux penguin с тремя точками меню-> Info или шрифт модифицированного приложения. Эти критерии являются необязательными в зависимости от того, какой источник приложения вы выбрали.
 
 .. изображение:: ../images/LibreLinkPatchedCheck.
-  :alt: LibreLink Font Check
+  :alt: Проверка шрифтов LibreLink
 
-Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and time zone and set at least one alarm in the patched app. 
+Убедитесь, что активирована NFC, включите разрешение на память и геолокацию для модифицированного приложения, включите автоматическое время и часовой пояс и задайте хотя бы одно оповещение в этом приложении. 
 
-Теперь запустите датчик Libre2 при помощи модифицированного приложения, просто сканируя сенсор. Ensure to have set all settings done.
+Теперь запустите датчик Libre2 при помощи модифицированного приложения, просто сканируя сенсор. Убедитесь, что заданы все параметры.
 
 Обязательные параметры для успешного запуска сенсора: 
 
 * NFC включен/BT включен
-* memory and location permission enabled 
-* location service enabled
-* automatic time and time zone setting
+* включено разрешение на память и геолокацию 
+* Включена служба определения местоположения
+* автоматическое определение времени и часового пояса
 * задать хотя бы одно оповещение в модифицированном приложении
 
-Please note that the location service is a central setting. This is not the app location permission which has to be set also!
+Обратите внимание, что служба определения расположения является центральным параметром. Это не разрешение на доступ к геолокации в приложении, которое также должно быть активировано!
 
-.. image:: ../images/Libre2_AppPermissionsAndLocation.png
+.. изображение:: ../images/Libre2_AppPermissionsAndLocation.png
   :alt: LibrreLink-разрешение на доступ к памяти и расположению
   
   
@@ -67,7 +67,7 @@ As long as you see a red exclamation mark ("!") on the upper left corner of the 
 - idle screen notifications are blocked 
 - you have a faulty Libre 2 sensor from a production LOT number with a 'K' followed by 8 digits. You find this printed on the yellow package. These sensors have to be replaced as they don't function on bluetooth.
 
-Перезапуск телефона помогает, возможно, придется перезапустить несколько раз. Как только соединение будет установлено, красный восклицательный знак исчезнет и самый важный этап - сопряжение - пройден. It may happen that depending on system settings the exclamation mark remain but you still get readings. In both cases you are fine. Сенсор и телефон теперь сопряжены, каждую минуту передаются данные ГК.
+Перезапуск телефона помогает, возможно, придется перезапустить несколько раз. Как только соединение будет установлено, красный восклицательный знак исчезнет и самый важный этап - сопряжение - пройден. It may happen that depending on system settings the exclamation mark remains but you still get readings. In both cases you are fine. Сенсор и телефон теперь сопряжены, каждую минуту передаются данные ГК.
 
 .. image:: ../images/Libre2_Connected.png
   :alt: Соединение LibreLink установлено
@@ -78,7 +78,7 @@ After a successful connection the smartphone settings can be changed if necessar
 
 Однако, при запуске следующего сенсора, все параметры должны быть установлены снова!
 
-Remark: The patched app need the mandatory settings set in that hour after warmup to enable a connection. For the 14 days operation time they are not needed. In most cases when you have problems with starting a sensor the location service was switched off. For Android it is needed for proper bluetooth operation(!) to connect. Please refer to Google's Android documentation.
+Remark: The patched app needs the mandatory settings set in that hour after warmup to enable a connection. For the 14 days operation time they are not needed. In most cases when you have problems with starting a sensor the location service was switched off. For Android it is needed for proper bluetooth operation(!) to connect. Please refer to Google's Android documentation.
 
 During the 14 days you can use in parallel one or more NFC capable smartphones (not the reader device!) running the original LibreLink app for scanning via NFC. There is no time limitation to start that. You could use a parallel phone for example on day 5 or so. The parallel phones(s) could upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for your diabetes team. Есть много родителей, которым это необходимо. 
 
@@ -124,13 +124,13 @@ Step 4: Configure AndroidAPS (for looping only)
 
 Connectivity
 --------------------------------------------------
-The connectivity is extraordinarily good. With the exception of Huawei mobile phones, all current smartphones seams to work well. The reconnect rate in case of connection loss is phenomenal. Связь может прерваться, если мобильный телефон находится в кармане напротив сенсора или на улице. Когда я работаю в саду, я ношу телефон на одной стороне тела с датчиком. In rooms, where Bluetooth spreads over reflections, no problems should occur. Если возникают проблемы с подключением, проверьте другой телефон. It may also help to set the sensor with the internal BT antenna pointing down. The slit on the applicator must be pointing down when setting the sensor.
+The connectivity is extraordinarily good. With the exception of Huawei mobile phones, all current smartphones seem to work well. The reconnect rate in case of connection loss is phenomenal. Связь может прерваться, если мобильный телефон находится в кармане напротив сенсора или на улице. Когда я работаю в саду, я ношу телефон на одной стороне тела с датчиком. In rooms, where Bluetooth spreads over reflections, no problems should occur. Если возникают проблемы с подключением, проверьте другой телефон. It may also help to set the sensor with the internal BT antenna pointing down. The slit on the applicator must be pointing down when setting the sensor.
 
 Value smoothing & raw values
 --------------------------------------------------
 Технически, текущее значение сахара в крови передается на xDrip + каждую минуту. Фильтруется средневзвешенное сглаженное значение за последние 25 минут. Это обязательно для цикла. Кривые выглядят гладкими, и результаты работы цикла великолепны. Необработаные значения, на которых основаны оповещения, имеют несколько больший разборос, но в конечном счете соответствуют показателям ридера. Кроме того, необработанные значения могут отображаться на графике xDrip+ для того, чтобы имелась возможность своевременно реагировать на быстрые изменения. Переключитесь на Менее распространенные Настройки > Расширенные настройки для Libre2 > "показывать необработанные значения" и "показывать Информацию с сенсора". Then the raw values are additionally displayed as small white dots and additional sensor info is available in the system menu.
 
-The raw values are very helpful when the blood sugar is moving fast. Even if the dots are more jumpy you would detect the tendency much better as using the smoothed line to make proper therapy decisions.
+The raw values are very helpful when the blood sugar is moving fast. Even if the dots are jumpier you would detect the tendency much better as using the smoothed line to make proper therapy decisions.
 
 .. image:: ../images/Libre2_RawValues.png
   :alt: xDrip+ advanced settings Libre 2 & raw values
@@ -155,11 +155,11 @@ New sensor
 
 Калибровка
 --------------------------------------------------
-You can calibrate the Libre2 with an offset of -40 mg/dl to +20 mg/dL [-2,2 mmol/l to +1,1 mmol/l] (intercept). The slope isn't changeable as the Libre2 is much more accurate compared to the Libe1. Please check by fingerpricking early after setting a new sensor. It is know that there can arise big differences to the blood measurements. Для верности, калибруйте каждые 24-48 часов. Значения точны до конца срока работы сенсора и не имеют такого разброса как в Libre1. Однако, если сенсор и близко не показывает верные значения, это не изменится. В этом случае сенсор следует немедленно заменить.
+You can calibrate the Libre2 with an offset of -40 mg/dl to +20 mg/dL [-2,2 mmol/l to +1,1 mmol/l] (intercept). The slope isn't changeable as the Libre2 is much more accurate compared to the Libe1. Please check by fingerpricking early after setting a new sensor. It is known that there can arise big differences to the blood measurements. Для верности, калибруйте каждые 24-48 часов. Значения точны до конца срока работы сенсора и не имеют такого разброса как в Libre1. Однако, если сенсор и близко не показывает верные значения, это не изменится. В этом случае сенсор следует немедленно заменить.
 
 Plausibility checks
 --------------------------------------------------
-Сенсоры Libre2 способны выполнять самопроверку для обнаружения неверных значений. Как только сенсор смещается на руке или слегка приподнимается, данные могут начать колебаться. После этого датчик Libre2 отключится по соображениям безопасности. К сожалению, при сканировании при помощи приложения, проводятся дополнительные проверки. Приложение может отключить сенсор, даже если он исправен. В настоящее время внутренние тесты слишком строги. Я полностью прекратил сканирование и с тех пор сбоев не было.
+Сенсоры Libre2 способны выполнять самопроверку для обнаружения неверных значений. Как только сенсор смещается на руке или слегка приподнимается, данные могут начать колебаться. После этого датчик Libre2 отключится по соображениям безопасности. К сожалению, при сканировании при помощи приложения, проводятся дополнительные проверки. Приложение может отключить сенсор, даже если он исправен. Currently the internal test is too strict. Я полностью прекратил сканирование и с тех пор сбоев не было.
 
 Time zone travelling
 --------------------------------------------------
@@ -187,16 +187,16 @@ Bluetooth transmitter can be used with the Libre2 with the latest xDrip+ nightly
 
 Old Libre1 transmitter devices cannot be used with the Libre2 OOP. They need to be replaced with a newer version or have a firmware upgrade for proper operation. MM1 with newest firmware is unfortunately not working yet - searching for root cause is currently ongoing.
 
-The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre2 do a 25 minutes smoothing to avoid certain jumps. OOP generates 5 minute readings with the avergae of the last 5 minutes. Therefore the BG readings are not that smooth but match the orginal reader device and faster follow the "real" BG readings. Wehn you try to loop with OOP please enable all smoothing settings in xDrip+.
+The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre2 do a 25 minutes smoothing to avoid certain jumps. OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
 
-The Droplet transmitter is working with Libre2 also but uses an internet service instead. Please refer to FB or Google to get further informations. The MM2 with the tomato app also seems to use an internet service. For both devices you have to take care to have a proper internet connection to get your BG readings.
+The Droplet transmitter is working with Libre2 also but uses an internet service instead. Please refer to FB or a search engine to get further information. The MM2 with the tomato app also seems to use an internet service. For both devices you have to take care to have a proper internet connection to get your BG readings.
 
 Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth transmitter:
 
 * the BG readings are identical to the reader results
 * the Libre2 sensor can be used 14.5 days as with the Libre1 before 
 * 8 hours Backfilling is fully supported.
-* get BG readings during the 1 hour startup time of a new sensor
+* get BG readings during the one hour startup time of a new sensor
 
 Remark: The transmitter can be used in parallel to the LibreLink app. It doesn't disturb the patched LibreLink app operation.
 

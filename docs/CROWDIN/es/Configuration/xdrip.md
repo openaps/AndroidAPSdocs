@@ -1,12 +1,12 @@
 # Configuración de xDrip+
 
-If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
+Si todavía no lo has hecho, descarga [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
-**This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
+**Esta documentación es para xDrip + sólo para Android.** Hay una app "xDrip para iOS" que nada tiene que ver con el xDrip + original para Android.
 
-Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
+Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus).
 
-Si el número de serie de su transmisor Dexcom G6 is starting with 8G..., 8H... or 8J... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Si el número de serie de su transmisor Dexcom G6 que empieza por 8G o 8H... or 8J... utiliza una de las [últimas compilaciones ](https://github.com/NightscoutFoundation/xDrip/releases).
 
 If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -24,7 +24,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 * Desactiva `Cargar tratamientos` y `Rellenar datos`.
    
-   **Safety warning : You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.**
+   **Advertencia de seguridad: Debes desactivar "Cargar tratamientos" en xDrip+, de lo contrario, si los tratamientos se duplican pueden dar lugar a cifras erróneas de insulina activa (IOB) y carbohidratos activos (COB) en en AAPS.**
 
 * La opción `Alerta de fallos` también debe desactivarse. De lo contrario, recibirás una alarma cada 5 minutos si la red wifi/móvil es demasiado mala o si el servidor no está disponible.
    
@@ -55,7 +55,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### La versión de xDrip+ a utilizar depende del número de serie de los transmisores G6.
 
-* Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus). 
+* Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus). 
 * Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ### Ajustes específicos de Dexcom
@@ -76,11 +76,11 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### No se recomiendan reinicios preventivos
 
-**With Dexcom transmitters who's serial no. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
+**With Dexcom transmitters who's serial no. que empieza por 8G o 8H, los reinicios preventivos no funcionan y podrían matar el sensor completamente!**
 
-The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
+No se recomienda la extensión automática de los sensores Dexcom (`reinicios preventivos`) ya que esto podría conducir a "saltos" en los valores BG el día 9 después del reinicio.
 
-![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ Salta después de un reinicio preventivo](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Lo que está claro es que el uso del G6 es tal vez un poco más complejo que lo que se sugiere en primer lugar. Para utilizar de manera segura, hay un par de puntos a tener en cuenta:
 
@@ -90,13 +90,13 @@ Lo que está claro es que el uso del G6 es tal vez un poco más complejo que lo 
 * La preabsorción del G6 con calibración de fábrica es probable que dé variaciones en los resultados. Si haces preconfiguración, entonces para obtener los mejores resultados, probablemente necesitarás calibrar el sensor.
 * Si no estás observando los cambios que pueden estar teniendo lugar, puede ser mejor volver al modo no calibrado en fábrica y usar el sistema como un G5.
 
-To learn more about the details and reasons for these recommendations read the [complete article](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](http://www.diabettech.com).
+Para obtener más información acerca de los detalles y las razones de estas recomendaciones, lea el [artículo completo](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) publicado por Tim Street en [www.diabettech.com](http://www.diabettech.com).
 
 ### Conectar el transmisor G6 por primera vez
 
-**For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
+**Para el segundo y los siguientes transmisores ver [Extender la vida del transmisor](../Configuration/xdrip#extend-transmitter-life) a continuación.**
 
-Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
+Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus).
 
 Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -124,7 +124,7 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J 
    
    -> Cerca de la parte inferior de la pantalla `Iniciando x, x horas faltantes` debe aparecer después de unos pocos minutos.
 
--> If your transmitter serial no. does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
+-> Si el número de serie de su transmisor does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
 
 * Reiniciar el colector (estado del sistema - si no se reemplaza el sensor}
 * No encienda el receptor original de Dexcom (si lo utiliza) de nuevo antes de xDrip+ muestre las primeras lecturas.
@@ -153,28 +153,28 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J 
 * So far life cannot be extended for transmitters who's serial no. starts with 8G, 8H or 8J. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip#transmitter-battery-status)).
 * Para evitar las dificultades iniciando los sensores, se recomienda encarecidamente extender la vida del transmisor antes del día 100 de la primera utilización.
 * Use of transmitters serial no. starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if 'engineering mode' is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
-* Running sensor session will be stopped when extending transmitter life. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
+* La sesión en ejecución del sensor se detendrá al ampliar la vida del transmisor. Así que, extienda antes del cambio de sensor o tenga en cuenta que habrá una nueva fase de inicialización de 2 h.
 * Stop sensor manually via hamburger menu.
-* Switch to the `engineering mode`: 
-   * tap on the character on the right of the xDrip+ start screen that represents a syringe
-   * then tap on the microphone icon in the lower right corner
-   * In the text box that opens type "enable engineering mode" 
-   * click "Done"
-   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
+* Cambie a la `modo ingeniería`: 
+   * pulsar sobre el carácter a la derecha de la pantalla de inicio de xDrip+ que representa una jeringa
+   * luego toca el icono del micrófono en la esquina inferior derecha
+   * En el recuadro de texto que abre escriba "enable engineering mode" 
+   * pulse "Terminado"
+   * Si el motor de Google Speak está habilitado, también puede hablar el comando de voz: "enable engineering mode". 
 * Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
-* Use the voice command: “hard reset transmitter”
-* The voice command will be executed with the next data receipt of the transmitter
-* Look at the system status (Hamburger menu -> system status) and see what happens
+* Utilice el mandato de voz: "hard reset transmitter"
+* El comando de voz se ejecutará con la siguiente recepción de datos del transmisor
+* Examine el estado del sistema (menú principal-> estado del sistema) y consulte lo que sucede
 * After approx. 10 min. you can switch to 'Classic Status Page' (swipe right) and click 'Restart collector'. This will set sensor days to 0 without the need to start a new sensor.
 * Alternative: If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
    
-   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
+   ![xDrip+ El reseteo pudo haber fallado](../images/xDrip_HardResetMaybeFailed.png)
 
-* Transmitter days will be set to 0 after successful extension and start of sensor.
+* Los días de Transmisor se establecerán en 0 después de la extensión y el inicio satisfactorios del sensor.
 
 ### Sustituir transmisor
 
-Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
+Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus).
 
 Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -307,7 +307,7 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8Ju
 
 ### Problema al iniciar un nuevo sensor
 
-Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J.
+Por favor, tenga en cuenta que es posible que el siguiente método no funcione si el transmisor Dexcom G6 tiene el número de serie is starting with 8G, 8H or 8J.
 
 * El sensor nativo se marca como "FAILED: Sensor Failed Start"
 * Detener Sensor
@@ -317,7 +317,7 @@ Please note that the following method might likely not work if your Dexcom G6 tr
 * Detener Sensor
 * Iniciar sensor con el código "real" (impreso en el protector adhesivo)
 
-Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
+Consulte los registros de xDrip+ si xDrip+ inicia el conteo de "Duración: 1 minuto" (y siguiendo). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. El estado más reciente no se muestra siempre correctamente en la parte inferior de la pantalla de inicio.
 
 ## xDrip+ & Freestyle Libre
 
@@ -339,8 +339,8 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
 
 ### Conectar el transmisor de Libre & iniciar sensor
 
-![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ iniciar transmisor Libre & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ iniciar transmisor Libre & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ iniciar transmisor Libre & Sensor 3](../images/xDrip_Libre_Transmitter03.png)

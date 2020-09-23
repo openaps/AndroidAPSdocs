@@ -79,8 +79,8 @@ In the Insight settings in AndroidAPS you can enable the following options:
     retry -> no connection -> wait **7** sec.   
     retry -> no connection -> wait **8** sec.   
     ...   
-    retry -> no connection -> wait **20** sec.   
-    retry -> no connection -> wait **20** sec.   
+    ponów próbę -> brak połączenia -> poczekaj ** 20 ** sek.   
+    ponów próbę -> brak połączenia -> poczekaj ** 20 ** sek.   
     ...
 
 * "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.

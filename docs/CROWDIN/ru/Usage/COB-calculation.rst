@@ -55,4 +55,4 @@ AAPS, Средневзвешенное значение
 
 Ручная коррекция введенных углеводов
 ==================================================
-Если вы переоценили или недооценили количество углеводов, это можно исправить на вкладке назначений на портале терапии, как описано: " здесь <../Getting-Started/Screenshots.html#carb-correction> ` _.
+If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.

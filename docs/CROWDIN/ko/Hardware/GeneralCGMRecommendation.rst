@@ -1,45 +1,45 @@
-General CGM recommendations
+일반적인 CGM 권고 사항
 **************************************************
 
-CGM hygiene
+CGM 위생관리
 ==================================================
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps. 
+DIY CGM 소프트웨어 또는 공식 앱을 사용하든 사용하지 않든, 채혈로 교정할 때는 CGM 종류와 관계없이 반드시 지켜야 할 명확한 규칙들이 있습니다. 
 
-* Make sure hands and kit are clean.
-* Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
-* Avoid calibrating when glucose levels are moving up or down. 
-* Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
-* If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+* 반드시 손과 기기들을 깨끗하게 하십시오.
+* 혈당 수치가 연속적으로 수평 화살표를 보일 때 (보통 15-30분 정도면 충분함) 교정하십시오.
+* 혈당 수치가 오르거나 내릴 때는 교정하지 마십시오. 
+* "충분한" 보정을 하십시오 - 공식 앱에서는 하루 한두 번 확인을 위한 메시지가 제공됩니다. DIY 시스템을 사용하는 경우, 메시지가 제공되지 않으므로 교정없이 계속 사용하지 않도록 주의해야 합니다.
+* 가능하다면, 점/선 교정에 알맞은 낮은 혈당범위(4-5mmol/l 또는 72-90mg/dl)나 약간 높은 혈당범위(7-9mmol/l 또는 126-160mg/dl)에서 교정하십시오.
 
-Setting sensor (G6)
+센서 삽입 (G6)
 ==================================================
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor thread should not come into contact with blood.
+센서 삽입 시, 인서터를 너무 세게 누르지 않아야 출혈을 예방할 수 있습니다. 센서 실(바늘) 부분은 혈액에 접촉하면 안됩니다.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Caution! First click in the square side and then press down the round side.
+센서를 삽입한 후, 트랜스미터를 센서 홀더에 끼울 수 있습니다. 주의할 점! 각진 쪽을 먼저 끼운 뒤 둥근 쪽을 아래로 누르십시오.
 
-문제해결 
+문제 해결 
 ==================================================
 
-Connection problems
+연결 문제
 --------------------------------------------------
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is reestablished the data is backfilled.
+혈당 측정기, 헤드셋, 태블릿 또는 전자레인지, 세라믹 열판과 같은 주방 용품 등 근처에 있는 다른 블루투스 기기들에 의해 블루투스 연결이 방해받을 수 있습니다. 이러한 경우 xdrip은 혈당값을 표시하지 않습니다. 블루투스가 재연결될 때 데이터가 다시 채워집니다.
 
-Sensor Errors
+센서 오류
 --------------------------------------------------
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood. 
+센서 오류가 반복되는 경우 센서 삽입 위치를 바꿔보십시오. 센서 실(바늘) 부분은 혈액에 접촉하면 안됩니다. 
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+"센서 오류" 는 혈액을 바로 흡수시키고 센서 주변을 마사지하는 방법으로 수정될 수도 있습니다!
 
-Jumpy values
+튀는 혈당값
 --------------------------------------------------
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse".  See also `Smoothing BG data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
+노이즈 차단을 위해 xDrip에서 설정을 바꿔볼 수 있습니다 (설정 - Inter-app settings - Noise Blocking). "Block Very High noise and worse" 을 선택합니다.  `혈당 데이터의 평탄화<../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`내용도 확인하십시오.
 
-Negative Sensor Age
+잘못된 sensor 사용 기간 (마이너스 값)
 --------------------------------------------------
 .. image:: ../images/Troubleshooting_SensorAge.png
-  :alt: Negative sensor age
+  :alt: 잘못된 센서 사용 기간 (마이너스 값)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in `actions tab / menu <../Configuration/Config-Builder.html#actions>`_ or a sensor insert with wrong date. Go to treatments tab > careportal and delete the wrong entry.
+이는 실행 탭 / 메뉴<../Configuration/Config-Builder.html#actions"에서 "CGM 센서 삽입"을 이중으로 입력했거나 잘못된 날짜를 입력한 경우에 발생합니다. 관리 탭 > 케어포털에서 잘못 입력한 내용을 삭제하십시오.
