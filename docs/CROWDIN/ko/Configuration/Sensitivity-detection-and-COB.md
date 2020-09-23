@@ -2,29 +2,24 @@
 
 ## 민감도 알고리즘
 
-현재 4개의 민감도 감지 모델 들이 있습니다.
+Currently we have 3 sensitivity detection models:
 
-* 민감도 Oref0
-* 민감도 AAPS
-* 민감도 가중평균
-* 민감도 Oref1
+* Sensitivity AAPS
+* Sensitivity WeightedAverage
+* Sensitivity Oref1
 
-### 민감도 Oref0
+### Sensitivity AAPS
 
-기본적으로 민감도는 과거 24시간의 데이터로 부터 계산됩니다. (흡수되지 않은 경우) 탄수화물은 설정에서 설정된 시간이 지나면 없어집니다. 이 알고리즘은 OpenAPS Oref0 문서에 설명되어 있는 오픈APS Oref0와 유사합니다.
+Sensitivity is calculated the same way like Oref1 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
 
-### 민감도 AAPS
+### Sensitivity WeightedAverage
 
-민감도는 Oref0와 동일한 방법으로 계산되어지나, 시간을 과거로 설정할 수 있습니다. 최소 탄수화물 흡수는 설정의 최대 탄수화물 흡수시간으로부터 계산이 되어집니다.
+Sensitivity is calculated as a weighted average from deviations. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
 
-### 민감도 가중평균
+### Sensitivity Oref1
 
-민감도는 편차에서 가중평균되어 계산됩니다. 시간을 과거로 설정할 수 있습니다. 최신의 편차가 더 높은 비중을 가지게 됩니다. 최소 탄수화물 흡수는 설정의 최대 탄수화물 흡수시간으로부터 계산이 되어집니다. 이 알고리즘이 민감도 변화에 있어서 가장 빠릅니다.
-
-### 민감도 Oref1
-
-민감도는 이전의 8시간 데이터 혹은, 8시간 미만인 경우, 마지막 센서위치를 변경한 이후의 데이터로부터 계산됩니다 미흡수된 탄수화물 양은 시간이 설정되는 데로 분해되기 시작합니다. Oref1알고리즘만으로 식사량을 미반영할 수 있습니다.(식사량 미반영) 이것은 식사량 미반영의 횟수가 민감도 계산으로부터 배제됨을 의미합니다. 따라서 식사량이 미반영된 SMB를 사용하는 경우, Oref1알고리즘을 선택해야합니다. 더 상세한 정보는 OpenAPS Oref1 documentation에 있습니다.
+Sensitivity is calculated from 8h data in the past or from last site change, if it is less than 8h ago. Carbs (if not absorbed) are cut after time specified in preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from sensitivity calculation. So if you are using SMB with UAM, you have to choose Oref1 algorithm to work properly. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
 
 ## 동시 탄수화물
 
-AAPS, Oref0대비 가중평균 그리고 Oref1을 사용할 때, 눈에띄는 차이점이 발생한다. Oref plugins은 제때 소화되는 한 끼 식사를 예측합니다. 이것은 첫번째 식사가 완전히 소화된 이후, 두번째로 식사한 것이 소화되기 시작함을 의미합니다. AAPS+가중 평균은, 탄수화물이 입력된 직 후, 줄어들기 시작합니다. 식사가 한 끼 이상인 경우, 식사 크기와 최대 흡수 시간에 따라 최소한의 탄수화물 감소가 조정됩니다. 그 최소 흡수율은 Oref 플러그인과 비교할 때 더 높을 것입니다.
+There is significant difference while using AAPS, WeightedAverage vs Oref1. Oref plugins expects only one meal decaying at time. It means 2nd meal starts decaying after 1st meal is completely decayed. AAPS+Weighted average starts decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to meal size and max absorption time. The minimum absorption accordingly will be higher in comparation to Oref plugins.
