@@ -13,6 +13,47 @@ Pokud neaktualizujete do dalších 30 dní (90 dní od nového vydání) přejde
 
 Prosím pochopte, že tato změna není určena, aby vás otravovala, ale je to kvůli bezpečnostním důvodům. Nové verze AndroidAPS neposkytují pouze nové funkce, ale také důležité bezpečnostní opravy. Proto je důležité, aby každý uživatel aktualizoval co nejdříve.. Bohužel stále existují hlášení o chybách z velmi starých verzí, takže se jedná o pokus zlepšit bezpečnost pro každého uživatele a celou komunitu DIY. Děkujeme za pochopení.
 
+Version 2.7.0
+================
+Release date: 24-09-2020
+
+Repository location changed to https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a new clone.
+
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk. Gradle Plugin Version should be 3.6.4 and Gradle Version 5.6.4.
+
+**Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`_.
+
+You need at least start Objective 11 in order to continue using Automation feature (all previous objectives must be completed otherwise starting Objective 11 is not possible).
+
+Hlavní nové funkce
+----------------------
+* internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
+* using modules for Dana pumps @MilosKozak
+* `new layout, layout selection <../Getting-Started/Screenshots.html>`_ @MilosKozak
+* new `status lights layout <../Configuration/Preferences.html#status-lights>`_ @MilosKozak
+* `multiple graphs support <../Getting-Started/Screenshots.html#section-f---main-graph>`_ @MilosKozak
+* `Profile helper <../Configuration/profilehelper.html>`_ @MilosKozak
+* visualization of `dynamic target adjustment <../Getting-Started/Screenshots.html#visualization-of-dynamic-target-adjustment>`_ @Tornado-Tim
+* new `preferences layout <../Configuration/Preferences.html>`_ @MilosKozak
+* SMB algorithm update @Tornado-Tim
+* `Low glucose suspend mode <../Configuration/Preferences.html#aps-mode>`_ @Tornado-Tim
+* `carbs required notifications <../Configuration/Preferences.html#carb-required-notification>`_ @twain47 @Tornado-Tim
+* removed Careportal (moved to Actions) @MilosKozak
+* `new encrypted backup format <../Usage/ExportImportSettings.html>`_ @dlvoy
+* `new SMS TOTP authentication <../Children/SMS-Commands.html>`_ @dlvoy
+* `new SMS PUMP CONNECT, DISCONNECT <../Children/SMS-Commands.html#commands>`_ commands @Lexsus
+* better support for tiny basals on Dana pumps @Mackwe
+* small Insight fixes @TebbeUbben @MilosKozak
+* `"Default language" option <../Configuration/Preferences.html#general>`_ @MilosKozak
+* vector icons @Philoul
+* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phoneandroidaps>`_ @Tornado-Tim
+* History browser improvements @MilosKozak
+* removed OpenAPS MA algorithm @Tornado-Tim
+* removed Oref0 sensitivity @Tornado-Tim
+* `Biometric or password protection <..../Configuration/Preferences.html#protection>`_ for settings, bolus @MilosKozak
+* `new automation trigger <../Usage/Automation.html>`_ @PoweRGbg
+* `Open Humans uploader <../Configuration/OpenHumans.html>`_
+
 Version 2.6.1.4
 ================
 Release date: 04-05-2020
@@ -20,7 +61,7 @@ Release date: 04-05-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Hlavní nové funkce
------
+----------------------
 * Insight: Disable vibration on bolus for firmware version 3 - second attempt
 * Otherwise is equal to 2.6.1.3. Update is optional. 
 
