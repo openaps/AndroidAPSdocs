@@ -5,7 +5,6 @@ Les bases en premier
 
 * Suivez les recommandations générales relatives à l'hygiène des MGG et du capteur `here <../Hardware/GeneralCGMRecommendation.html>`_.
 * Pour les transmetteurs G6 fabriqués après l'automne / fin 2018, veuillez vous assurez que vous utilisez bien l'une des dernières versions de xDrip+ <https://github.com/NightscoutFoundation/xDrip/releases>`_. Ces transmetteurs ont un nouveau firmware et la dernière version stable de xDrip+ (10/01/2019) ne fonctionne pas avec.
-* Si vous avez la possibilité d'obtenir un récepteur Dexcom de votre assurance maladie, cela vaut la peine de l'obtenir. Même si vous ne l’utilisez pas tous les jours, vous pouvez vous référer exclusivement à ce que le transmetteur a dit lorsque vous avez besoin de déposer une plainte. L'utilisation parallèle est possible car les émetteurs peuvent envoyer au récepteur, ainsi qu'à un autre appareil en même temps.
 
 Conseils généraux pour boucler avec un G6
 ==================================================
@@ -24,9 +23,9 @@ Si vous utilisez le G6 avec xdrip+
 ==================================================
 * L'émetteur Dexcom G6 peut être connecté simultanément au récepteur Dexcom (ou alternativement à la pompe t:slim) et à une application sur votre téléphone.
 * Lorsque vous utilisez xDrip+ comme récepteur, désinstallez d'abord l'application Dexcom. **Vous ne pouvez pas connecter en même temps xDrip+ et l'application Dexcom avec le transmetteur !**
-* Si vous avez besoin de clarté et que vous voulez profiter des alertes xDrip+, utilisez `l'application Dexcom patchée <./Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee>`_ avec la diffusion locale vers xDrip+.
-* Si vous ne l'avez pas déjà configuré, téléchargez `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ et suivez les instructions sur nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
-* Sélectionnez xDrip+ dans le Générateur de configuration (Menu Paramètres dans AndroidAPS).
+* If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
+* If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
+* Sélectionnez xDrip dans le Générateur de configuration (dans AndroidAPS).
 * Réglez les paramètres dans xDrip+ comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_
 * Si AAPS ne reçoit pas de GLY quand le téléphone est en mode avion, utilisez `Identify receiver` comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_.
 
@@ -65,12 +64,10 @@ Dépannages spécifiques à Dexcom G6
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip+ Etat du téléphone
 
-Dépannage général
+General troubleshoothing
 --------------------------------------------------
-Les dépannages généraux concernant les MGC peuvent être trouvés `ici <./GeneralCGMRecommendation.html#depannage>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#Troubleshooting>`_.
 
 Nouvel émetteur avec capteur en cours
 --------------------------------------------------
 Si vous changez de transmetteur avec un capteur en cours d'exécution, vous pouvez essayer de retirer le transmetteur sans endommager le montage du capteur. Une vidéo peut être trouvée ici `https://youtu.be/AAhBVsc6NZo <https://youtu.be/AAhBVsc6NZo>`_.
-
-
