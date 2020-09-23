@@ -15,27 +15,27 @@ Veuillez comprendre que cette modification n'a pas pour but de vous corriger mai
 
 Version 2.7.0
 ================
-Release date: 24-09-2020
+Date de sortie : 24-09-2020
 
-Repository location changed to https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a new clone.
+Le dossier github à été déplacé vers https://github.com/nightscout/AndroidAPS. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un nouveau clone.
 
-Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk. Gradle Plugin Version should be 3.6.4 and Gradle Version 5.6.4.
+Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk. La version du plugin Gradle doit être 3.6.4 et la Version de Gradle 5.6.4.
 
-**Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`_.
+**Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 2.7 comme c'est décrit ici** `ici <../Installing-AndroidAPS/update2_7.html>`_.
 
-You need at least start Objective 11 in order to continue using Automation feature (all previous objectives must be completed otherwise starting Objective 11 is not possible).
+Vous devez au moins démarrer l'objectif 11 afin de continuer à utiliser la fonction d'automatisation (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 11 n'est pas possible).
 
 Nouvelles fonctionnalités majeures
 ----------------------
-* internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
-* using modules for Dana pumps @MilosKozak
-* `new layout, layout selection <../Getting-Started/Screenshots.html>`_ @MilosKozak
-* new `status lights layout <../Configuration/Preferences.html#status-lights>`_ @MilosKozak
+* utilisation interne de l'injection de dépendance, bibliothèques mises à jour, code réécrit en kotlin @MilosKozak @AdrianLxM
+* utilisation de modules pour les pompes Dana @MilosKozak
+* `nouvelle mise en page, selection de thème <../Getting-Started/Screenshots.html>`_ @MilosKozak
+* nouvelle `mise en page des voyants d'états <../Configuration/Preferences.html#voyants-d-etat>`_ @MilosKozak
 * `multiple graphs support <../Getting-Started/Screenshots.html#section-f---main-graph>`_ @MilosKozak
-* `Profile helper <../Configuration/profilehelper.html>`_ @MilosKozak
+* `Assistant Profil <../Configuration/profilehelper.html>`_ @MilosKozak
 * visualization of `dynamic target adjustment <../Getting-Started/Screenshots.html#visualization-of-dynamic-target-adjustment>`_ @Tornado-Tim
-* new `preferences layout <../Configuration/Preferences.html>`_ @MilosKozak
-* SMB algorithm update @Tornado-Tim
+* nouvelle `mise en page des préférences <../Configuration/Preferences.html>`_ @MilosKozak
+* Mise à jour de l'algorithme SMB @Tornado-Tim
 * `Low glucose suspend mode <../Configuration/Preferences.html#aps-mode>`_ @Tornado-Tim
 * `carbs required notifications <../Configuration/Preferences.html#carb-required-notification>`_ @twain47 @Tornado-Tim
 * removed Careportal (moved to Actions) @MilosKozak
@@ -45,7 +45,7 @@ Nouvelles fonctionnalités majeures
 * better support for tiny basals on Dana pumps @Mackwe
 * small Insight fixes @TebbeUbben @MilosKozak
 * `"Default language" option <../Configuration/Preferences.html#general>`_ @MilosKozak
-* vector icons @Philoul
+* icônes vectorielles @Philoul
 * `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phoneandroidaps>`_ @Tornado-Tim
 * History browser improvements @MilosKozak
 * removed OpenAPS MA algorithm @Tornado-Tim
