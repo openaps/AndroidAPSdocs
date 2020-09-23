@@ -44,6 +44,7 @@ The main components are:
 
    Χτίζοντας το APK <./Installing-AndroidAPS/Building-APK.md>
    Ενημέρωση σε νέα έκδοση ή υποκατάστημα <./Installing-AndroidAPS/Update-to-new-version.md>
+   Checks after update to AAPS 2.7 <.//Installing-AndroidAPS/update2_7.rst>
    Install git <./Installing-AndroidAPS/git-install.rst>
    Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
@@ -71,7 +72,7 @@ The main components are:
    :glob:
    
    Config builder <./Configuration/Config-Builder.md>
-   Προτιμήσεις <./Configuration/Preferences.md>
+   Preferences <./Configuration/Preferences2020.rst>
    
    
 AndroidAPS Χρήση
