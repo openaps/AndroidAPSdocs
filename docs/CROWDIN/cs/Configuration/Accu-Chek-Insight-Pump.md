@@ -56,34 +56,44 @@ Při používání pumpy Insight **nesmí být nastaveno 'Vždy použít absolut
 
 Jestliže potřebujete používat Autotune, jediným řešením v tuto chvíli je **zakázat synchronizaci** s Nightscoutem (pouze nahrávání). V AAPS přejděte do nastavení > NSClient > Pokročilá nastavení a povolte ‘Pouze nahrávání do NS (zakázat synchronizaci)‘.
 
-![Snímek obrazovky nastavení Insight](../images/Insight_pairing_V2_5.png)
+![Snímek obrazovky nastavení Insight](../images/Insight_settings.png)
 
 V Insight nastavení v AndroidAPS můžete upravit následující možnosti:
 
-* „Zaznamenat výměnu zásobníku“: při spuštění programu „naplnit kanylu“ na pumpě dojde automaticky k zaznamenání výměny inzulínu.
-* „Zaznamenat výměnu hadičky“: Automaticky provede záznam v databázi AndroidAPS, když v pumpě provedete „Naplnit hadičku“.
-* „Zaznamenat výměnu kanyly“: Tato volba přidá do databáze AndroidAPS záznam při spuštění programu „naplnit kanylu“ na pumpě. ** Poznámka: Výměna kanyly také resetuje Autosens. **
-* „Zaznamenat výměnu baterie“: Automaticky provede záznam výměny baterie, pokud vložíte do pumpy novou baterii.
-* „Zaznamenat změnu režimu provozu“: Automaticky provede záznam v databázi AndroidAPS, kdykoliv spustíte/zastavíte pumpu.
-* „Zaznamenat výstrahy“: Automaticky provede záznam v databázi AndroidAPS, kdykoliv pumpa zahlásí alarm (s výjimkou upomínek, bolusů a konce dočasných bazálů (TBR) – ty zaznamenány nejsou).
+* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
+
+* "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
+
+* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+
+* "Log battery changes": This records a battery change when you put a new battery in the pump.
+
+* "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
+
+* "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
+
 * „Povolit emulaci dočasných bazálů“: pumpa Insight umožňuje hodnotu maximálního dočasného bazálu (TBR) do výše 250 %. Pumpa má nastaveno omezení dočasného bazálu na 250 %. Pokud je požadavek na dočasný bazál vyšší než 250 %, bude provedena jeho emulace zadáním rozloženého bolusu.
     
     **Pozn.: Používejte vždy pouze jeden rozložený bolus. Používání více rozložených bolusů současně může způsobit chyby.**
 
-* „Doba čekání na obnovení spojení“: Definuje, jak dlouho bude AndroidAPS čekat před opětovným pokusem po neúspěšném pokusu o připojení. Můžete vybrat 0 až 20 sekund. Pokud máte problémy s připojením, vyberte delší dobu čekání.   
+* "Disable vibrations on manual bolus delivery": This disables the Insight pump's vibrations when delivering a manual bolus (or extended bolus). This setting is available only with the latest version of Insight firmware (3.x).
+
+* "Disable vibrations on automated bolus delivery": This disables the Insight pump's vibrations when delivering an automatic bolus (SMB or Temp basal with TBR emulation). This setting is available only with the latest version of Insight firmware (3.x).
+
+* "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
       
-    Příklad pro min. dobu trvání zotavení = 5 a max. dobu zotavení = 20   
+    Example for min. recovery duration = 5 and max. recovery duration = 20   
       
-    žádné spojení -> čekej **5** s   
-    znovu -> žádné spojení -> čekej **6** s   
-    znovu -> žádné spojení -> čekej **7** s   
-    znovu -> žádné spojení -> čekej **8** s   
+    no connection -> wait **5** sec.   
+    retry -> no connection -> wait **6** sec.   
+    retry -> no connection -> wait **7** sec.   
+    retry -> no connection -> wait **8** sec.   
     ...   
-    znovu -> žádné spojení -> čekej **20** s   
-    znovu -> žádné spojení -> čekej **20** s   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
-* „Limit pro odpojení“: Definuje, jak dlouho (v sekundách) bude AndroidAPS čekat s odpojením od pumpy po dokončení úlohy. Výchozí hodnota je 5 sekund.
+* "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
 
 Po dobu, kdy byla pumpa zastavena, AAPS zobrazí záznam s dočasnou bazální hodnotou 0 %.
 
