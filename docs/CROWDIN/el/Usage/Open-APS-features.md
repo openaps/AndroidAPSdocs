@@ -5,7 +5,9 @@
 * Autosens is a algorithm which looks at blood glucose deviations (positive/negative/neutral).
 * It will try and figure out how sensitive/resistant you are based on these deviations.
 * The oref implementation in **OpenAPS** runs off a combination of 24 and 8 hours worth of data. It uses either one which is more sensitive.
-* AndroidAPS only runs off 8 (to enable UAM) or 24 hour as a user option.
+* In versions prior to AAPS 2.7 user had to choose between 8 or 24 hours manually.
+* From AAPS 2.7 on Autosens in AAPS will switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
+* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
 * Changing a cannula or changing a profile will reset Autosens ratio back to 0%.
 * Autosens adjusts your basal, I:C and ISF for you (i.e.: mimicking what a Profile shift does).
 * If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
@@ -141,17 +143,15 @@
 
 AMA, η σύντομη μορφή του "advanced meal assist" είναι μια δυνατότητα OpenAPS από το 2017 (oref0). Το OpenAPS Advanced Meal Assist (Προηγμένος Βοηθός Γεύματος) (AMA) επιτρέπει στο σύστημα να φτάσει σε υψηλούς ρυθμούς πιο γρήγορα μετά από ένα bolus γεύματος, αν εισάγετε αξιόπιστα τους υδατάνθρακες.
 
-**You will need to have started [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature**
-
-Μπορείτε να βρείτε περισσότερες πληροφορίες στο [OpenAPS τεκμηρίωση](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+You can find more information in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 ### Μέγιστη τιμή U / h μια τιμή βασικού ρυθμού μπορεί να ρυθμιστεί σε (OpenAPS "μέγιστος βασικός")
 
-Αυτή η ρύθμιση ασφαλείας βοηθάει το AndroidAPS να είναι πάντα σε θέση να δώσει ένα επικίνδυνα υψηλό βασικό ρυθμό και περιορίζει το βασικό ρυθμό σε x U / h. Συνιστάται να το ορίσετε σε κάτι λογικό. Μια καλή σύσταση είναι να λάβετε το υψηλότερο βασικό ποσοστό στο προφίλ σας και να το να το πολλαπλασιάσετε κατά 4 ή 3 τουλάχιστον. Για παράδειγμα, εάν ο υψηλότερος βασικός ρυθμός στο προφίλ σας ήταν 1.0u / hr θα μπορούσατε να το πολλαπλασιάσετε κατά 4 για να πάρετε μια τιμή 4u / hr και να ορίσετε το 4 σαν παράμετρο ασφαλείας.
+This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. It is advised to set this to something sensible. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
 
-Δεν μπορείτε να επιλέξετε οποιαδήποτε τιμή: Για λόγους ασφάλειας, υπάρχει ένα «αυστηρό όριο», το οποίο εξαρτάται από την ηλικία του ασθενούς. Το «αυστηρό όριο» για το μέγιστο IOB είναι χαμηλότερο στο MA από ότι στο SMB. Για τα παιδιά, η αξία είναι η χαμηλότερη τιμή για ενήλικες ανθεκτικούς στην ινσουλίνη, είναι ο μεγαλύτερος.
+You cannot chose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
 
-Οι ενσωματωμένες παράμετροι AndroidAPS είναι:
+The hardcoded parameters in AndroidAPS are:
 
 * Child: 2
 * Έφηβος: 5
@@ -160,9 +160,9 @@ AMA, η σύντομη μορφή του "advanced meal assist" είναι μι�
 
 ### Το μέγιστο συνολικό IOB που το OpenAPS μπορεί να δώσει\[U\] (OpenAPS "max-iob")
 
-Η παράμετρος αυτή περιορίζει το μέγιστο βασικό ΙΟΒ που AndroidAPS εξακολουθεί να λειτουργεί. Εάν η τιμή IOB είναι υψηλότερη, σταματά να χορηγείται επιπλέον βασική ινσουλίνη έως ότου το βασικό IOB βρίσκεται κάτω από το όριο.
+This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
 
-Η προεπιλεγμένη τιμή είναι 2, αλλά θα πρέπει να αυξηθεί αυτή η παράμετρος σιγά-σιγά για να δείτε πόσο σας επηρεάζει και ποια τιμή ταιριάζει καλύτερα. Είναι διαφορετικό για όλους και επίσης εξαρτάται από τη μέση συνολική ημερήσια δόση (TDD). Για λόγους ασφάλειας, υπάρχει ένα όριο, το οποίο εξαρτάται από την ηλικία του ασθενούς. Το «αυστηρό όριο» για το μέγιστο IOB είναι χαμηλότερο στο MA από ότι στο SMB.
+The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Είναι διαφορετικό για όλους και επίσης εξαρτάται από τη μέση συνολική ημερήσια δόση (TDD). Για λόγους ασφάλειας, υπάρχει ένα όριο, το οποίο εξαρτάται από την ηλικία του ασθενούς. The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 * Child: 3
 * Έφηβος: 5
@@ -171,11 +171,11 @@ AMA, η σύντομη μορφή του "advanced meal assist" είναι μι�
 
 ### Ενεργοποιήστε το AMA Autosense
 
-Εδώ, μπορείτε να επιλέξετε αν θέλετε να χρησιμοποιήσετε ή όχι την [ ανίχνευση ευαισθησίας ](../Configuration/Sensitivity-detection-and-COB.md) 'autosense'.
+Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosense or not.
 
 ### Το autosens ρυθμίζει επίσης προσωρινούς στόχους
 
-Εάν έχετε ενεργοποιήσει αυτήν την επιλογή, το autosense μπορεί να προσαρμόσει τους στόχους (δίπλα στη βασική, ISF και IC). Αυτό επιτρέπει στο AndroidAPS να λειτουργήσει πιο "επιθετικά" ή όχι. Ο πραγματικός στόχος θα μπορούσε να επιτευχθεί πιο γρήγορα με αυτό.
+If you have this option enabled, autosense can adjust targets (next to basal, ISF and IC), too. This lets AndroidAPS work more 'aggressive' or not. The actual target might be reached faster with this.
 
 ### Προηγμένες ρυθμίσεις
 
@@ -189,42 +189,6 @@ AMA, η σύντομη μορφή του "advanced meal assist" είναι μι�
 
 Προεπιλεγμένη τιμή: 4 (δεν πρέπει να αλλάξει, εκτός αν πραγματικά χρειάζεται και ξέρεις τι κάνεις)
 
-** Αναβολή bolus μεσώ διαχωρισμού ** Το χαρακτηριστικό "αναβολής bolus" λειτουργεί μετά από ένα bolus γεύματος. Το AAPS δεν ρυθμίζει χαμηλά προσωρινά βασικά ποσοστά μετά από γεύμα κατά την περίοδο της DIA, διαιρούμενο με την παράμετρο "αναβολής bolus". Η προεπιλεγμένη τιμή είναι 2. Η προεπιλεγμένη τιμή είναι 2. Αυτό σημαίνει ότι με DIA 5 ωρών, η "αναβολή bolus" θα ήταν 5 ώρες: 2 = 2,5 ώρες.
+**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
 
-Προεπιλεγμένη τιμή: 2
-
-* * *
-
-## Meal Assist (MA)
-
-### Μέγιστη τιμή U / h μια τιμή βασικού ρυθμού μπορεί να ρυθμιστεί σε (OpenAPS "μέγιστος βασικός")
-
-Αυτή η ρύθμιση ασφαλείας βοηθάει το AndroidAPS να είναι πάντα σε θέση να δώσει ένα επικίνδυνα υψηλό βασικό ρυθμό και περιορίζει το βασικό ρυθμό σε x U / h. Συνιστάται να το ορίσετε σε κάτι λογικό. Μια καλή σύσταση είναι να λάβετε το υψηλότερο βασικό ποσοστό στο προφίλ σας και να το να το πολλαπλασιάσετε κατά 4 ή 3 τουλάχιστον. Για παράδειγμα, εάν ο υψηλότερος βασικός ρυθμός στο προφίλ σας ήταν 1.0u / hr θα μπορούσατε να το πολλαπλασιάσετε κατά 4 για να πάρετε μια τιμή 4u / hr και να ορίσετε το 4 σαν παράμετρο ασφαλείας.
-
-Δεν μπορείτε να επιλέξετε οποιαδήποτε τιμή: Για λόγους ασφάλειας, υπάρχει ένα «αυστηρό όριο», το οποίο εξαρτάται από την ηλικία του ασθενούς. Το «αυστηρό όριο» για το μέγιστο IOB είναι χαμηλότερο στο MA από ότι στο SMB. Για τα παιδιά, η αξία είναι η χαμηλότερη τιμή για ενήλικες ανθεκτικούς στην ινσουλίνη, είναι ο μεγαλύτερος.
-
-Οι ενσωματωμένες παράμετροι AndroidAPS είναι:
-
-* Child: 2
-* Έφηβος: 5
-* Adult: 10
-* Ανθεκτικός στην ινσουλίνη ενήλικος: 12
-
-### Το μέγιστο συνολικό IOB που το OpenAPS μπορεί να δώσει\[U\] (OpenAPS "max-iob")
-
-Η παράμετρος αυτή περιορίζει το μέγιστο βασικό ΙΟΒ που AndroidAPS εξακολουθεί να λειτουργεί. Εάν η τιμή IOB είναι υψηλότερη, σταματά να χορηγείται επιπλέον βασική ινσουλίνη έως ότου το βασικό IOB βρίσκεται κάτω από το όριο.
-
-Η προεπιλεγμένη τιμή είναι 2, αλλά θα πρέπει να αυξηθεί αυτή η παράμετρος σιγά-σιγά για να δείτε πόσο σας επηρεάζει και ποια τιμή ταιριάζει καλύτερα. Είναι διαφορετικό για όλους και επίσης εξαρτάται από τη μέση συνολική ημερήσια δόση (TDD). Για λόγους ασφάλειας, υπάρχει ένα όριο, το οποίο εξαρτάται από την ηλικία του ασθενούς. Το «αυστηρό όριο» για το μέγιστο IOB είναι χαμηλότερο στο MA από ότι στο SMB.
-
-* Child: 3
-* Έφηβος: 5
-* Adult: 7
-* Ανθεκτικός στην ινσουλίνη ενήλικος: 12
-
-### Προηγμένες ρυθμίσεις
-
-** Χρησιμοποιείτε πάντα το σύντομο μέσο δέλτα αντί για απλά δεδομένα. **Εάν ενεργοποιήσετε αυτή τη λειτουργία, το AndroidAPS χρησιμοποιεί το σύντομο μέσο όρο γλυκόζης δέλτα / αίματος από τα τελευταία 15 λεπτά, το οποίο είναι συνήθως ο μέσος όρος των τριών τελευταίων τιμών. Αυτό βοηθά το AndroidAPS να λειτουργεί πιο σταθερά με θορυβώδεις πηγές δεδομένων όπως το xDrip + και το Libre.
-
-** Αναβολή bolus μεσώ διαχωρισμού ** Το χαρακτηριστικό "αναβολής bolus" λειτουργεί μετά από ένα bolus γεύματος. Το AAPS δεν ρυθμίζει χαμηλά προσωρινά βασικά ποσοστά μετά από γεύμα κατά την περίοδο της DIA, διαιρούμενο με την παράμετρο "αναβολής bolus". Η προεπιλεγμένη τιμή είναι 2. Αυτό σημαίνει ότι με DIA 5 ωρών, η "αναβολή bolus" θα ήταν 5 ώρες: 2 = 2,5 ώρες.
-
-Προεπιλεγμένη τιμή: 2
+Default value: 2
