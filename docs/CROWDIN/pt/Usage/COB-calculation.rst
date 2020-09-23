@@ -4,13 +4,13 @@ Cálculo COB
 How does AndroidAPS calculate the COB value?
 ==================================================
 
-Oref0 / Oref1
+Oref1
 --------------------------------------------------
 
 Unabsorbed carbs are cut off after specified time
 
 .. image:: ../images/cob_oref0_orange_II.png
-  :alt: Oref0 / Oref1
+  :alt: Oref1
 
 AAPS, WeightedAverage
 --------------------------------------------------
@@ -25,7 +25,7 @@ If minimal carbs absorption (min_5m_carbimpact) is used instead of value calcula
 Detection of wrong COB values
 ==================================================
 
-As of version 2.4, AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. In this case it will give you an additional hint on the confirmation screen after usage of bolus wizard. 
+AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. In this case it will give you an additional hint on the confirmation screen after usage of bolus wizard. 
 
 How does AndroidAPS detect wrong COB values? 
 --------------------------------------------------
