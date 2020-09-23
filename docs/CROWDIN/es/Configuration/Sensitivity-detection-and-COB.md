@@ -2,29 +2,24 @@
 
 ## Algoritmo de sensibilidad
 
-Actualmente tenemos 4 modelos de detección de sensibilidad:
+Currently we have 3 sensitivity detection models:
 
-* Sensibilidad Oref0
-* Sensibilidad AAPS
-* Sensibilidad promedio ponderada
-* Sensibilidad Oref1
+* Sensitivity AAPS
+* Sensitivity WeightedAverage
+* Sensitivity Oref1
 
-### Sensibilidad Oref0
+### Sensitivity AAPS
 
-Básicamente, la sensibilidad se calcula a partir de los datos de las pasadas 24h y los carbohidratos (si no se absorben) se anulan después del tiempo especificado en las preferencias. El algoritmo es similiar a OpenAPS Oref0, descrito en [Documentación de OpenAPS Oref0](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Sensitivity is calculated the same way like Oref1 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
 
-### Sensibilidad AAPS
+### Sensitivity WeightedAverage
 
-La sensibilidad se calcula de la misma forma que en Oref0, pero puede especificar la cantidad de horas a contabilizar del pasado. La absorción de los mínima de los carbohidratos se calcula a partir del tiempo máximo de absorción de los carbohidratos en las preferencias
+Sensitivity is calculated as a weighted average from deviations. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
 
-### Sensibilidad promedio ponderada
+### Sensitivity Oref1
 
-La sensibilidad se calcula como un promedio ponderado de las desviaciones. Puede especificar una hora en el pasado. Las desviaciones más recientes tienen un peso más alto. La absorción de los mínima de los carbohidratos se calcula a partir del tiempo máximo de absorción de los carbohidratos en las preferencias. Este algoritmo es más rápido para seguir los cambios de sensibilidad.
-
-### Sensibilidad Oref1
-
-La sensibilidad se calcula a partir de los datos de 8h en el pasado o en el último cambio de sitio(cánula), si es menor a 8h. Las carbohidratos (si no se absorben) se anulan tras el tiempo especificado en las preferencias. Únicamente el algoritmo Oref1 soporta las comidas no anunciadas (UAM). Esto significa que los tiempos al detectar UAM se excluyen del cálculo de sensibilidad. Por lo tanto, si utiliza SMB con UAM, tiene que elegir el algoritmo Oref1 para trabajar correctamente. Para obtener más información, consulte la publicación [Documentación de OpenAPS Oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
+Sensitivity is calculated from 8h data in the past or from last site change, if it is less than 8h ago. Carbs (if not absorbed) are cut after time specified in preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from sensitivity calculation. So if you are using SMB with UAM, you have to choose Oref1 algorithm to work properly. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
 
 ## Carbohidratos simultáneos
 
-Hay una diferencia significativa al utilizar AAPS, Promedio ponderado vs Oref0, Oref1. Los plugins de Oref sólo esperan una comida a la vez, que va siendo absorbida. Esto significa que la segunda comida comienza a absorberse después de que la primer comida fue totalmente absorvida. AAPS + Promedio ponderado empieza a absorber inmediatamente cuando se especifican los carbohidratos. Si hay más de una comida a bordo, la absorción mínima de carbohidratos se ajustará según el tamaño de la comida y el tiempo máximo de absorción. En consecuencia, la absorción mínima será más alta en comparación con los plugins de Oref.
+There is significant difference while using AAPS, WeightedAverage vs Oref1. Oref plugins expects only one meal decaying at time. It means 2nd meal starts decaying after 1st meal is completely decayed. AAPS+Weighted average starts decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to meal size and max absorption time. The minimum absorption accordingly will be higher in comparation to Oref plugins.
