@@ -53,7 +53,7 @@ If you want to switch from Nightscout profile to local profile just do a profile
 
 #### Vietinių profilių įkėlimas į Nightscout
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in NS Client preferences.
+Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
 
@@ -68,7 +68,16 @@ Disadvantage:
 
 * nėra
 
-### NS profilis
+### Profile helper
+
+Profile helper offers two functions:
+
+1. Find a profile for kids
+2. Compare two profiles or profile switches in order to clone a new profile
+
+Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
+
+### NS Profile
 
 NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
 
@@ -94,13 +103,13 @@ For Rapid-Acting and Ultra-Rapid, the DIA is the only variable you can adjust by
 
 The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
 
-### Greito veikimo Oref
+### Rapid-Acting Oref
 
 * rekomenduojama Humalog, Novolog ir Novorapid
 * IVT = bent 5.0 val
 * Maks. pikas = 75 minutės po injekcijos (fiksuotas, nekeičiamas)
 
-### Staigaus veikimo Oref
+### Ultra-Rapid Oref
 
 * rekomenduojama FIASP
 * IVT = bent 5.0 val
@@ -110,7 +119,7 @@ For a lot of people there is practically no noticeable effect of FIASP after 3-4
 
 ![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
 
-### Oref be piko
+### Free Peak Oref
 
 With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 
@@ -130,27 +139,34 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
+* [Tomato App](http://tomato.cool/) for MiaoMiao device
+* Random BG: Generates random BG data (Demo mode only)
+
 ## Pompa
 
 Select the pump you are using.
 
 * [Dana R](DanaR-Insulin-Pump.md)
 * DanaR Korean (DanaR, skirta Korėjos rinkai)
-* DanaRv2 (DanaR su atnaujinta programine įranga)
+* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
 * [Dana R](DanaRS-Insulin-Pump.md)
-* [ Accu-Chek Combo](Accu-Chek-Combo-Pump.md) (reikia įdiegti ruffy programą)
-* MDI (AAPS pateikia insulino tiekimo patarimus naudojant insulino švirkštimo priemones)
-* Virtuali pompa (atviras ciklas pompai, kuri dar nėra palaikoma - AAPS teikia tik pasiūlymus)
+* [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
+* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Medtronic](MedtronicPump.md)
+* MDI (receive AAPS suggestions for your multiple daily injections therapy)
+* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
 For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
 
+[Password for Dana RS pump](..Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
+
 ## Jautrumo nustatymas
 
-Select the type of sensitivity detection. This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Select the type of sensitivity detection. For more details of different designs please [read on here](Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
 You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features.html#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
-### Angliavandenių įsisavinimo parametrai
+### Absorption settings
 
 If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.rst) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
 
@@ -158,28 +174,46 @@ If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value 
 
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
-* OpenAPS MA (maisto asistentas, algoritmas nuo 2016 m.)
-* OpenAPS AMA (pažangusis maisto asistentas, algoritmas nuo 2017 m.)   
-    Išsamios informacijos apie OpenAPS AMA galima rasti [ OpenAPS dokumentacijoje ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Paprastai tariant nauda tokia, kad po suleisto maisto boluso sistema gali greičiau kelti bazę, JEI jūs teisingai įvedėte angliavandenius.  
-    Pastaba: jūs turite būti [9-ame tiksle](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama)norint naudoti OpenAPS AMA.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super mikro bolusas, naujausias algoritmas patyrusiems vartotojams)  
-    Pastaba: jūs turite būti[ 10-ame tiksle ](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)norint naudoti OpenAPS SMB ir min_5m_carbimpact turi būti nustatyti į 8 Konfigūracijos generatorius> Jautrumo aptikimas> Jautrumo Oref1 nustatymai.
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017)  
+    More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably. 
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
+    Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Ciklas
 
-Define whether you want to allow AAPS automatic controls or not.
+* Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
+
+![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
 
 ### Atviras Ciklas
 
-AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+* AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. 
+* The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
+* This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
 
 ### Uždaras Ciklas
 
-AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). The Closed Loop works within numerous safety limits, which you can be set individually. Closed Loop is only possible if you are in [Objective 6](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
+* AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). 
+* The Closed Loop works within numerous safety limits, which you can be set individually.
+* Closed Loop is only possible if you are in [Objective 6](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
+* Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol or 100 mg/dl instead of 5,0 - 7,0 mmol or 90 - 125 mg/dl) is recommended.
+
+### Low Glucose Suspend (LGS)
+
+* maxIOB is set to zero
+* This means if blood glucose is dropping it can reduce basal for you.
+* But if blood glucose is rising no automatic correction will be made. Your basal rates will remain the same as your selected profile.
+* Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower BG.
+
+### Minimal request change
+
+* When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. 
+* To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate.
+* This defines the relative change required to trigger a notification.
 
 ## Tikslai (mokymosi programa)
 
-AndroidAPS has a number of objectives that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+AndroidAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
 You should [export your settings](../Usage/ExportImportSettings.rst) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
@@ -207,7 +241,7 @@ Define which Buttons are shown on the home screen.
 * Skaičiuotuvas
 * Insulinas
 * Angliavandeniai
-* NGJ (atsidaro xDrip+)
+* CGM (opens xDrip+)
 * Kalibravimas
 
 Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
@@ -220,45 +254,79 @@ Note: Button will not be visible if outside the specified time range or if you h
 
 ![QuickWizard button](../images/ConfBuild_QuickWizard.png)
 
-#### Papildomi nustatymai
+#### Default Temp-Targets
 
-Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Choose default temp-targets (duration and target). Preset values are:
+
+* eating soon: target 72 mg/dl / 4.0 mmol/l, duration 45 min
+* activity: target 140 mg/dl / 7.8 mmol/l, duration 90 min
+* hypo: target 125 mg/dl / 6.9 mmol/l, duration 45 min
+
+#### Fill/Prime standard insulin amounts
+
+Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+
+#### Range of visualization
+
+Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+
+#### Shorten tab titles
+
+Choose either the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+
+#### Show notes field in treatment dialogs
+
+Choose if you want to have a notes field when entering treatments or not.
+
+#### Būklės indikatoriai
+
+Choose if you want to have status lights on overview for canula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+
+#### Advanced settings
+
+**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
+
+**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Veiksmai
 
 Some buttons to quickly access common features:
 
-* Profilio keitimas (profilio perjungimas - daugiau informacijos rasite [Profiliai](../Usage/Profiles.md))
-* Laikinas tikslas
-* Nustatyti / atšaukti laikiną valandinė bazė
-* Ištęstas bolusas (tik DanaR/RS arba Combo pompa)
-* Įrašykite specifinius terapijos veiksmus
+* Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
+* Temporary targets
+* Set / cancel temp. valandinė bazė
+* Extended bolus (DanaR/RS or Combo pump only)
+* Record for any specific care entries
     
-    * KG testas
-    * Pirminis užpildymas / pildymas - įrašyti kateterio kaniulės keitimą ir ją užpildyti (jei nėra atlikta pompoje)
-    * NGJ sensoriaus įvedimas
-    * Pompos baterijos keitimas
-    * Pastaba
-    * Fizinis aktyvumas
-* Peržiūrėti jutiklio, insulino rezervuaro, kaniulės ir pompos baterijos naudojimo laiką
-* Istorija
-* BPD (Bendra paros dozė = bolusas + bazė per dieną)
+    * BG check
+    * Prime / fill - record pump site change and prime (if not done on pump)
+    * CGM sensor insert
+    * Pump battery change
+    * Note
+    * Exercise
+* View the current sensor, insulin, canula and pump battery ages
+* History browser
+* TDD (Total daily dose = bolus + basal per day)
 
 Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
 ![Actions tab](../images/ConfBuild_ConfBuild_Actions_b.png)
 
+### Automatizavimas
+
+User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst)
+
 ### SMS komunikatorius
 
 Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
 
-### Maistas
+### Food
 
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
 Note: Entries cannot be used in the AndroidAPS calculator. (View only)
 
-### Išmanieji laikrodžiai
+### Wear
 
 Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
@@ -268,49 +336,17 @@ Pavyzdžiui, jei norite suleisti boliusą, tuomet laikrodžio nustatymuose turė
 
 Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
-* Pakartotinai siųsti visus duomenis. Gali būti naudinga, jei laikrodis nebuvo prijungtas kurį laiką ir norite perduoti informaciją į laikrodį.
-* Atidaryti laikrodžio nustatymus tiesiai iš savo telefono.
+* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
+* Open settings on your watch directly from your phone.
 
-### xSrip būsenos juosta (laikrodyje)
+### xDrip Statusline (watch)
 
 Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
-### Nuolatinis pranešimas
+### NSClient
 
-Displays a summary of current BG, delta, active TBR%, active basal u/h and profile, IOB and split into bolus IOB and basal IOB on the phones's dropdown screen and phone's lock screen.
-
-![AAPS widget](../images/ConfBuild_Widget.png)
-
-### NS Client
-
-Setup sync of your AndroidAPS data with Nightscout.
-
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimization not disabled for AAPS) but can flood the Nightscout graph with entries.
-
-#### Aliarmų nustatymai
-
-Activate/deactivate AndroidAPS alarms
-
-![Aliarmų nustatymai](../images/ConfBuild_NSClient_Alarms.png)
-
-#### Ryšio nustatymai
-
-Offline looping, disable roaming...
-
-If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
-
-![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
-
-#### Papildomi nustatymai
-
-* Automatiškai atstatyti trūkstamus glikemijos duomenis iš Nightscout
-* Generuoti pranešimus apie klaidas. Sukurti klaidų dialogų ir vietinių aliarmų įrašus Nightscout (jie taip pat rodomi Priežiūros skirtuko terapijos dalyje)
-* Įgalinti duomenų perdavimą kitoms programėlėms, kaip xDrip+
-* Tik įkelti į NS (sinchronizacija išjungta)
-* Nėra įkėlimų į NS
-* Vietoje procentinių bazinių dydžių naudoti absoliučius -> Turi būti įjungta, jei norite naudoti [ Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
-
-![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
+* Setup sync of your AndroidAPS data with Nightscout.
+* Settings in [preferences](../Configuration/Preferences#nsclient) can be opened by clicking the cog wheel.
 
 ### Servisas
 
