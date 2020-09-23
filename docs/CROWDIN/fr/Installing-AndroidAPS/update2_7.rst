@@ -23,47 +23,47 @@ Terminer les objectifs
 
 Définir le mot de passe principal
 -----------------------------------------------------------
-* Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
-* Open Preferences (three-dot-menu on top right of home screen)
-* Click triangle below "General"
-* Click "Master-Password"
-* Enter password, confirm password and click ok.
+* Nécessaire pour pouvoir `exporter les paramètres <../Usage/ExportImportSettings.html>`_ car ils sont chiffrés depuis la version 2.7.
+* Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
+* Cliquez sur le triangle sous " Général "
+* Cliquez sur " Mot de passe principal "
+* Entrez le mot de passe, confirmez le et cliquez sur OK.
 
 .. image:: ../images/MasterPW.png
-  :alt: Set master password
+  :alt: Définir le mot de passe principal
   
 Exporter les paramètres
 -----------------------------------------------------------
-* AAPS 2.7 uses a new encrypted backup format. 
-* You must `export your settings <../Usage/ExportImportSettings.html>`_ after updating to version 2.7.
-* Settings files from previous versions **cannot** be used in AAPS 2.7 and onwards anymore.
-* Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
+* AAPS 2.7 utilise un nouveau format de sauvegarde chiffré. 
+* Vous devez `exporter vos paramètres <../Usage/ExportImportSettings.html>`_ après la mise à jour vers la version 2.7.
+* Les fichiers de paramètres des versions précédentes **ne peuvent plus** être utilisés dans AAPS 2.7 et les versions suivantes.
+* Assurez-vous de stocker vos paramètres exportés non seulement sur votre téléphone, mais également dans au moins un autre endroit sûr (votre pc, stockage cloud...).
 
-Autosens (Hint - no action necessary)
+Autosens (un indice - aucune action nécessaire)
 -----------------------------------------------------------
-* Autosens is changed to a dynamic switching model which replicates the reference design.
-* Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
-* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
+* Autosens est changé pour un modèle qui reproduit la conception de référence avec une commutation dynamique.
+* Autosens bascule maintenant entre une fenêtre de 24 heures et une de 8 heures pour calculer la sensibilité. Il choisira celle qui est le plus sensible. 
+* Les utilisateurs qui utilisaient oref1 remarqueront probablement que le système peut être moins dynamique en raison de la variation de sensibilité entre 24 heures et 8 heures.
 
-Set Pump Password for Dana RS (if using Dana RS)
+Définir le mot de passe de la pompe Dana RS (si vous utilisez une Dana RS)
 -----------------------------------------------------------
-* Pump password for `Dana RS <../Configuration/DanaRS-Insulin-Pump.html>`_ was not checked in previous versions.
-* Open Preferences (three-dot-menu on top right of screen)
-* Scroll down and click triangle next to "Dana RS".
-* Click "Pump password (v1 only)"
-* Enter pump password (Default password is 1234) and click OK.
+* Le mot de passe Pump pour `Dana RS <../Configuration/DanaRS-Insulin-Pump.html>`_ n'était pas été vérifié dans les versions précédentes.
+* Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
+* Faites défiler vers le bas et cliquez sur triangle à côté de " Dana RS ".
+* Cliquez sur " Mot de passe pompe (v1 uniquement) "
+* Entrez le mot de passe de la pompe (mot de passe par défaut 1234) et cliquez sur OK.
 
 .. image:: ../images/DanaRSPW.png
-  :alt: Set Dana RS password
+  :alt: Définir le mot de passe Dana RS
   
-To change password on Dana RS:
+Pour changer le mot de passe sur Dana RS :
 
-* Press OK button on pump
-* In main menu select "OPTION" (move right by pressing arrow button several times)
-* In options menu select "USER OPTION"
-* Use arrow button to scroll down to "11. password"
-* Enter old password (Default password is 1234)
-* Set new password (Change numbers with + & - buttons / Move right with arrow button).
-* Confirm with OK button.
-* Save by pressing OK button again.
-* Move down to "14. EXIT" and press OK button.
+* Appuyez sur le bouton OK de la pompe
+* Dans le menu principal, sélectionnez "OPTION" (déplacer à droite en appuyant sur le bouton flèche plusieurs fois)
+* Dans le menu Options, sélectionnez "OPTION UTILISATEUR"
+* Utilisez le bouton flèche pour faire défiler vers le bas jusqu'à " 11. Mot de passe "
+* Entrez l'ancien mot de passe (mot de passe par défaut 1234)
+* Définissez un nouveau mot de passe (Modifiez les numéros avec les boutons + & - / Déplacez vers la droite avec le bouton flèche).
+* Confirmez avec le bouton OK.
+* Sauvegardez en appuyant à nouveau sur le bouton OK.
+* Déplacer vers le bas jusqu'à " 14. QUITTEZ " et appuyez sur le bouton OK.
