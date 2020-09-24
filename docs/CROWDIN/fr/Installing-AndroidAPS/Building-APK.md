@@ -122,120 +122,120 @@ Sur l'écran d'accueil d'Android Studio, cliquez sur le petit triangle (1. de la
 
 ## Télécharger le code AndroidAPS
 
-* **Si vous n'avez pas encore redémarré votre ordinateur après avoir défini le chemin d'accès à git dans les préférences, faites le maintenant. L'environnement système doit être mis à jour.**
-* Sur l'écran d'accueil d'Android Studio, cliquez sur le petit triangle droit de "Check out project from version control" (1.).
-* Sélectionnez "Git" (2.).
+* **If you haven't already rebooted your computer after setting git path in preferences do it now. System environment must be updated.**
 
-![Charger le projet à partir du contrôle de version à partir de l'écran d'accueil](../images/AndroidStudio361_12.png)
+* There are two options to start a new project:
+    
+    * On the Android Studio welcome screen click "Get from version control"
+        
+        ![Check out project from version control from welcome screen](../images/AndroidStudio_GetFromVersionControl.PNG)
+    
+    * If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.)
+        
+        ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
 
-* Si vous avez déjà ouvert Android Studio et que vous ne voyez plus l'écran d'accueil, sélectionnez File (1.) > New (2.) > Project from Version Control ... (3.) > Git (4.).
+* Fill in the URL to the main AndroidAPS repository (https://github.com/nightscout/AndroidAPS) (1.).
 
-![Charger le projet à partir du contrôle de version dans Android Studio](../images/AndroidStudio361_13.png)
+* Choose the directory where you want to save the cloned code. (2.)
+* Click button "Clone" (3.).
 
-* Renseignez l'URL vers l'adresse de base d'AndroidAPS ("https://github.com/MilosKozak/AndroidAPS") (1.).
-* Choisissez le répertoire dans lequel vous voulez enregistrer le code cloné.
-* Cliquez sur le bouton "Test" (2.).
-* Si le test ne peut pas être effectué correctement, vérifiez l'URL et cliquez à nouveau sur "Test".
-* Si l'URL est entrée correctement, vous verrez "Connection successful" (3.).
-* Cliquez sur le bouton "Clone" (4.).
+![Clone repository](../images/AndroidStudio_NewURL.PNG)
 
-![Cloner le répertoire](../images/AndroidStudio361_14.png)
+* Do not click "Background" while repository is cloned!
 
-* Ne cliquez pas sur "Background" pendant que le répertoire est cloné !
+![Clone repository - no background action](../images/AndroidStudio361_15.png)
 
-![Cloner le répertoire - pas en arrière-plan](../images/AndroidStudio361_15.png)
+* After repository is cloned successfully open your local copy by clicking "Yes".
 
-* Une fois le clonage du répertoire réussi, ouvrez votre copie locale en cliquant sur "Yes".
+![Open repository](../images/AndroidStudio361_16.png)
 
-![Ouvrir le projet](../images/AndroidStudio361_16.png)
+* In the lower right corner you will see the information that Android Studio is running background tasks.
 
-* Dans le coin inférieur droit, vous verrez qu'Android Studio exécute les tâches d'arrière-plan en information.
+![Background tasks](../images/AndroidStudio361_17.png)
 
-![Tâches d'arrière-plan](../images/AndroidStudio361_17.png)
+* Grant access if your firewall is asking for permission.
 
-* Accorder l'accès si votre pare-feu demande l'autorisation.
+![Firewall permission java](../images/AndroidStudio361_18.png)
 
-![Autorisation java dans le pare-feu](../images/AndroidStudio361_18.png)
+* Once the background tasks are finished you will probably see the following error message:
 
-* Une fois les tâches en arrière-plan terminées, vous verrez probablement le message d'erreur suivant :
-
-![Licence SDK](../images/AndroidStudio361_19.png)
+![SDK licence](../images/AndroidStudio361_19.png)
 
 ## Télécharger Android SDK
 
-* Cliquez sur File > Settings.
+* Click File > Settings.
 
-![Ouvrir les paramètres](../images/AndroidStudio361_20.png)
+![Open settings](../images/AndroidStudio361_20.png)
 
-* Cliquez sur le petit triangle à côté de Appearance & Behaviour (1.).
-* Cliquez sur le petit triangle à côté de System Settings (2.) et sélectionnez Android SDK (3.)
-* Cochez la case à gauche de "Android 9.0 (Pie)" (4.) (API niveau 28).
+* Click the small triangle next to Appearance & Behaviour (1.).
+* Click the small triangle next to System Settings (2.) and select Android SDK (3.)
+* Check the box left of "Android 9.0 (Pie)" (4.) (API Level 28).
 
-![Paramètres SDK](../images/AndroidStudio361_21.png)
+![SDK settings](../images/AndroidStudio361_21.png)
 
-* Confirmez les modifications en cliquant sur OK.
+* Confirm changes by clicking OK.
 
-![Confirmer les modifications SDK](../images/AndroidStudio361_22.png)
+![Confirm SDK changes](../images/AndroidStudio361_22.png)
 
-* Accepter le contrat de licence (1.) et cliquer sur "Next" (2.).
+* Accept licence agreement (1.) and click "Next" (2.).
 
-![Accepter la licence SDK](../images/AndroidStudio361_23.png)
+![Accept SDK licence](../images/AndroidStudio361_23.png)
 
-* Attendez que l'installation soit terminée.
+* Wait until installation is finished.
 
-![Attendre lors de l'installation du SDK](../images/AndroidStudio361_24.png)
+![Wait during SDK installation](../images/AndroidStudio361_24.png)
 
-* Lorsque l'installation du SDK est terminée, le bouton "Finish" devient bleu. Cliquez sur ce bouton.
+* When SDK installation is completed the "Finish" button will turn blue. Click this button.
 
-![Terminer l'installation du SDK](../images/AndroidStudio361_25.png)
+![Finish SDK installation](../images/AndroidStudio361_25.png)
 
-* Android Studio recommande de mettre à jour le "gradle system". **Ne jamais mettre à jour gradle !** Cela pourrait entraîner des difficultés !
-* Si vous voyez dans le coin inférieur droit une information indiquant que le plugin Android Gradle Plugin est près à être mis à jour, cliquez sur le texte "update" (1.) et dans la boite de dialogue sur "Don't remind me again for this project" (2.).
+* Android Studio might recommend to update the gradle system. **Never update gradle!** This might lead to difficulties!
+* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1.) and in the dialog box on "Don't remind me again for this project" (2.).
 
-![Pas de mise à jour de Gradle](../images/AndroidStudio361_26.png)
+![No cradle update](../images/AndroidStudio361_26.png)
 
 ## Générer un APK signé
 
-Signer signifie que vous signez votre application générée mais d'une façon numérique comme une sorte d'empreinte digitale intégrée dans l'application elle-même. C'est nécessaire car Android a une règle qui impose de n'accepter que du code signé pour des raisons de sécurité. Pour plus d'informations sur ce sujet, suivez [ce lien](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Cliquez sur "Build" dans la barre de menus et sélectionnez "Generate Signed Bundle / APK ...".
 
 ![Génération de l'apk](../images/AndroidStudio361_27.png)
 
-* Sélectionnez "APK" (1.) au lieu de "Android App Bundle" et cliquez sur "Next" (2.).
+* Sélectionnez "APK" (1.) au lieu de "Android App Bundle" et cliquez sur "Suivant" (2.).
 
-![APK et non bundle](../images/AndroidStudio361_28.png)
+![APK au lieu du bundle](../images/AndroidStudio361_28.png)
 
-* Assurez-vous que le module est défini sur "app" (1.).
-* Cliquez sur "Create new..." (2.) pour commencer la création de votre fichier de clés.
+* Make sure that module is set to "app" (1.).
+* Click "Create new..." (2.) to start creating your key store.
     
-    Un fichier de clés dans ce cas n'est rien de plus qu'un fichier dans lequel les informations de signature sont stockées. Il est crypté et les informations sont sécurisées avec des mots de passe.
+    A key store in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords.
 
-![Créer le fichier de clés](../images/AndroidStudio361_29.png)
+![Create key store](../images/AndroidStudio361_29.png)
 
-* Cliquez sur le symbole de dossier (1.) pour sélectionner votre chemin d'accès au fichier de clés. 
-* Sélectionnez le répertoire dans lequel votre fichier de clés doit être sauvé (2.). **Ne pas le mettre dans le même répertoire que celui du projet. Vous devez utiliser un autre répertoire !** Une option peut être dans votre dossier d'accueil.
-* Entrez le nom de votre fichier de clés (3.).
-* Cliquez sur "OK" (4.).
-* Les mots de passe pour le fichier de clés et la clé ne doivent pas être très compliqués. Assurez vous de bien vous en souvenir ou notez le dans un endroit sûr. Si plus tard vous avez oublié vos mots de passe, allez voir la page [Dépannages d'Android Studio - Certificats perdus](../Installing-AndroidAPS/troubleshooting_androidstudio#certificats-perdus).
-* Entrez (5.) et confirmez (6.) le mot de passe de votre fichier de clé.
-* Faites de même pour votre clé (7. + 8.).
-* La validité (9.) est de 25 ans par défaut. Vous n'avez pas à modifier la valeur par défaut.
-* Le prénom et le nom sont obligatoires (10.). Toutes les autres informations sont facultatives.
-* Cliquez sur "OK" (11.) lorsque vous avez terminé.
+* Click the folder symbol (1.) to select your key store path. 
+* Select the path where your key store shall be saved (2.). **Do not save in same folder as project. You must use a different directory!** One option might be your home folder.
+* Type a file name for your key store (3.).
+* Click "OK" (4.).
+* Passwords for key store and key do not have to be very sophisticated. Make sure to remember those or make a note in a safe place. In case you will not remember your passwords in the future you see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Enter (5.) and confirm (6.) the password for your key store.
+* Do the same for your key (7. + 8.).
+* Validity (9.) is 25 years by default. You do not have to change the default value.
+* First and last name must be entered (10.). All other information is optional.
+* Click "OK" (11.) when you are done.
 
-![Chemin du fichier de clés](../images/AndroidStudio361_30.png)
+![Key store path](../images/AndroidStudio361_30.png)
 
-* Assurez-vous que la case permettant de mémoriser les mots de passe est cochée (1.). Ainsi vous n'aurez pas à les saisir à nouveau la prochaine fois que vous génèrerez le fichier apk (par ex. en faisant une mise à jour avec une nouvelle version d'AndroidAPS).
-* Cliquez sur "Next" (2.).
+* Make sure the box to remember passwords is checked (1.). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AndroidAPS version).
+* Click "Next" (2.).
 
-![Mémoriser les mots de passe](../images/AndroidStudio361_31.png)
+![Remember passwords](../images/AndroidStudio361_31.png)
 
 * Sélectionnez la variante "fullRelease" (1.). 
 * Cochez les cases V1 et V2 pour les versions de signature (2.).
 * Cliquez sur "Finish". (3.)
 
-![Terminer la génération](../images/AndroidStudio361_32.png)
+![Génération terminée](../images/AndroidStudio361_32.png)
 
 * Android Studio affiche l'information "APK(s) generated successfully..." quand la génération est terminée.
 * Dans le cas ou la génération n'a pas réussie, référez vous à la [section dépannage](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
@@ -259,7 +259,7 @@ Sur votre téléphone, vous devez autoriser l'installation à partir de sources 
 
 ## Identifier le récepteur si vous utilisez xDrip+
 
-[Voir la page xDrip+](../Configuration/xdrip#identifier-le-recepteur)
+[See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
 ## Dépannage
 
