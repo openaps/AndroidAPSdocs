@@ -15,7 +15,7 @@ Préférences
   .. image:: ../images/Pref2020_Submenu.png
     :alt: Ouvrir le sous-menu
 
-Généralités
+Général
 ===========================================================
 
 **Unités**
