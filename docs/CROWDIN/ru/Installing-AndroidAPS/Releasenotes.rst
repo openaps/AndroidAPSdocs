@@ -54,6 +54,7 @@ You need at least start `Objective 11 <../Usage/Objectives.html#objective-11-aut
 * `Biometric or password protection <..../Configuration/Preferences.html#protection>`_ for settings, bolus @MilosKozak
 * `new automation trigger <../Usage/Automation.html>`_ @PoweRGbg
 * `Open Humans uploader <../Configuration/OpenHumans.html>`_
+* New documentation @Achim
 
 Версия 2.6.1.4
 ================
