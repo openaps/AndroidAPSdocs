@@ -60,17 +60,17 @@ Si vous avez besoin d'utiliser autotune, la seule solution pour le moment est de
 
 Dans les paramètres Insight d'AndroidAPS, vous pouvez activer les options suivantes :
 
-* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
+* "Enreg. changement de réservoir": ajoute automatiquement le changement de réservoire quand vous effectuez "Remplir tubulure" sur la pompe.
 
-* "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
+* "Enreg. changement de tubulure": ajoute une note dans la base de données AndroidAPS quand vous exécutez "Remplir tubulure" sur la pompe.
 
-* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+* "Enreg. changement de site": ajoute une note dans la base de données AndroidAPS lorsque vous exécutez "Remplir canule" sur la pompe. Remarque: Une modification de canule réinitialise également Autosens. **Remarque : un changement de site réinitialise également Autosens.**
 
-* "Log battery changes": This records a battery change when you put a new battery in the pump.
+* "Enreg. changements de batterie" : Ceci enregistre un changement de pile quand vous en mettez une nouvelle dans la pompe.
 
-* "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
+* "Enreg. changement mode de fonctionnement" : ajoute une note dans la base de données AndroidAPS quand vous démarrez, arrêtez ou mettez en pause la pompe.
 
-* "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
+* "Enreg. alertes" : ajoute une note dans la base de données AndroidAPS chaque fois que la pompe émet une alerte (sauf les rappels, annulations de bolus et annulations de DBT - ceux-ci ne sont pas enregistrés).
 
 * "Activer l'émulation de DBT": La pompe Insight ne faire des débits de base temporaires (DBT) que jusqu'à 250%. Pour contourner cette restriction, l'émulation DBT demandera à la pompe de fournir un bolus étendu pour l'insuline supplémentaire si vous demandez un DBT supérieur à 250%.
     
