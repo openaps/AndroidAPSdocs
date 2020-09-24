@@ -6,13 +6,13 @@
 
 Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il contient la plupart des informations dont vous aurez besoin au jour le jour.
 
-### Section A - Tabs
+### Section A - Onglets
 
 * Navigate between the various AndroidAPS modules.
 * Alternatively you can change screens by swiping left or right.
 * Displayed tabs can be selected in [config builder](../Configuration/Config-Builder#tab-or-hamburger-menu).
 
-### Section B - Profile & target
+### Section B - Profil & cible
 
 #### Profil
 
@@ -23,7 +23,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 * Long press profile bar to view profile details or to [switch between different profiles](../Usage/Profiles#profile-switch).
 * If profile switch was made with duration remaining time in minutes is shown in brackets.
 
-#### Target
+#### Cible
 
     ![Temp target remaining duration](../images/Home2020_TT.png)
     
@@ -32,21 +32,21 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 * Long press target bar to set a [temporary target](../Usage/temptarget.md).
 * If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
 
-#### Visualization of Dynamic target adjustment
+#### Visualisation de l'ajustement dynamique de la cible
 
     ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
     
 
 * AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
 * Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
-   * "sensitivity raises target" and/or 
-   * "resistance lowers target" 
+   * "sensibilité augmente la cible" et/ou 
+   * "la résistance diminue la cible" 
 * If AAPS detects resistance or sensitivity the target will change from what is set from profile. 
 * When it alters the target glucose background will change to green.
 
-### Section C - BG & loop status
+### Section C - Gly & état de la boucle
 
-#### Current blood glucose
+#### Glycémie actuelle
 
 * Latest blood glucose reading from your CGM is shown on the left side.
 * Color of the BG value reflects the status to the defined [range](../Configuration/Preferences#range-for-visualization). 
@@ -55,9 +55,9 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
    * yellow = above range
 * The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
 
-#### Loop status
+#### État de la boucle
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![État de la boucle](../images/Home2020_LoopStatus.png)
 
 * A new icon shows loop status:
    
@@ -73,13 +73,13 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
    
    ![Loop status menu](../images/Home2020_LoopStatusMenu.png)
 
-### Section D - IOB, COB, BR and AS
+### Section D - IA, GA, Basal et AS
 
 ![Section D](../images/Home2020_TBR.png)
 
 * Syringe: insulin on board (IOB) - amount of active insulin inside your body
    
-   * The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
+   * Le chiffre de l’insuline active serait à 0 s’il n’y avait que votre basal standard en cours et qu’il ne restait plus d’insuline active d’un précédent bolus. 
    * IOB may be negative if there have recently been periods of reduced basal.
 
 * Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
@@ -87,16 +87,16 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 * Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%)
 * Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features#autosens) status (enabled or disabled) and value is shown below icon
 
-#### Carbs required
+#### Glucides requis
 
-![Carbs required](../images/Home2020_CarbsRequired.png)
+![Glucides requis](../images/Home2020_CarbsRequired.png)
 
 * Carbs suggestions are given when the reference design detects that it requires carbs.
 * This is when the oref algorithm thinks I can't rescue you by 0 temping and you will need carbs to fix.
 * The carb notifications are much more sophisticated then the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
-### Section E - Status lights
+### Section E - Voyants d'état
 
 ![Section E](../images/Home2020_StatusLights.png)
 
@@ -110,13 +110,13 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 * If threshold critical is exceeded, values will be shown in red.
 * Settings can be made in [preferences](../Configuration/Preferences#status-lights).
 
-### Section F - Main graph
+### Section F - Graphique principal
 
 ![Section F](../images/Home2020_MainGraph.png)
 
 * Graph shows your blood glucose (BG) as read from your glucose monitor (CGM). 
 * Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
-* Long press on the graph to change the time scale. You can choose 6, 12, 18 or 24 hours.
+* Une pression longue sur le graphique permet de changer l'échelle de temps. Vous pouvez choisir 6, 12, 18 ou 24 heures.
 * The green area reflects your target range. It can be configured in [preferences](../Configuration/Preferences#range-for-visualization).
 * Blue triangles show [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - if enabled in [preferences](.../Configuration/Preferences#openaps-smb-settings).
 * Optional information:
@@ -125,32 +125,32 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
    * Basals
    * Activity - insulin activity curve
 
-#### Activate optional information
+#### Activation des informations optionnelles
 
 * Click the triangle on the right side of the main graph to select which information will be displayed in the main graph.
 * For the main graph just the three options above the line "\---\---- Graph 1 \---\----" are available.
    
    ![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
-#### Prediction lines
+#### Lignes de prédiction
 
-* **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
+* Ligne **orange** : [Glucides Actifs (GA)](../Usage/COB-calculation.rst) (la couleur est généralement utilisée pour représenter les Glucides)
    
-   Prediction line shows where your BG (not where cob itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
+   Cette ligne de prédiction montre comment votre Glycémie (et pas les GA eux mêmes) devrait évoluer sur la base de vos réglages actuels de la pompe, en supposant que les déviations liées à l'absorption des glucides restent constantes. Cette ligne n'apparaît que s'il y a des GA connus.
 
-* **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
+* Ligne **bleu foncé** : Insuline Active (IA) (la couleur est généralement utilisée pour représenter l'insuline)
    
-   Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
+   Cette ligne de prédiciton montre ce qui pourrait arriver uniquement avec l'action de l'Insuline. Par exemple si vous avez injecté de l'insuline mais que vous n'avez pas mangé de glucides.
 
-* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* Ligne **bleu clair** ligne : zéro-temp (glycémie prévisionnelle si un débit de base temporaire à 0% était défini)
    
-   Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+   Cette ligne de prédiction montre comment la trajectoire de l'IA changerai si la pompe arrêtait toute injection d'insuline (DBT 0%).
 
-* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals)
+* Ligne **jaune foncé**: [RNS](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (Repas Non Signalés)
    
-   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+   Les Repas Non Signalés signifient qu'une augmentation significative de la glycémie liée aux repas, à l'adrénaline ou à d'autres facteurs est détectée. Cette ligne de prédiction est similaire à la ligne ORANGE GA, mais elle suppose que les déviations diminueront de façon constante (en étendant le taux de réduction actuel).
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+Généralement votre courbe de glycémie réelle finira au milieu de ces lignes, ou proche de la ligne qui représente le mieux votre situation réelle.
 
 #### Basals
 
@@ -159,12 +159,12 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * In times standard basal rate is given the area under the curve is shown in dark blue.
 * When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
 
-#### Activity
+#### Activité
 
-* The **thin yellow** line shows the activity of Insulin. 
-* It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+* La ligne **jaune fine** montre l'activité de l'insuline. 
+* Elle indique la capacité de l'insuline présente dans votre corps à faire baisser la glycémie, si aucun autre facteur (comme les glucides) n'était présent.
 
-### Section G - additional graphs
+### Section G - Graphiques additionnels
 
 * You can activate up to four additional graphs below the main graph.
 * To open settings for additional graphs click the triangle on the right side of the [main graph](../Getting-Started/Screenshots#section-f-main-graph) and scroll down.
@@ -173,45 +173,45 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 * To add an additional graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
 
-#### Absolute insulin
+#### Insuline absolue
 
 * Active insulin including boluses **and basal**.
 
-#### Insulin on board
+#### Insuline active
 
 * Shows the insulin from bolus (**excludes basals**) you have on board (= active insulin in your body). 
 * If there were no \[SMBs]\](../Usage/Open-APS-features#super-micro-bolus-smb) and no remaining boluses this would be zero. 
 * Decaying depends on your [DIA and insulin profile settings](..Configuration/Config-Builder#local-profile-recommended). 
 
-#### Carbs On Board
+#### Glucides actifs
 
 * Shows the carbs you have on board (= active, not yet decayed carbs in your body). 
 * Decaying depends on the deviations the algorithm detects. 
 * If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
 
-#### Deviations
+#### Déviations
 
-* **GREY** bars show a deviation due to carbs. 
-* **GREEN** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
-* **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
-* **YELLOW** bars show a deviation due to UAM.
+* barres **GRISES** montrent un écart dû aux glucides. 
+* barres **VERTES** montrent que la Gly est supérieure à l'attendu de l'algorithme Les barres vertes sont utilisées par [Autosens](../Usage/Open-APS-features#autosens) pour augmenter la résistance.
+* barres **ROUGES** montrent que la Gly est inférieur à l'attendu de l'algorithme. Les barres rouges sont utilisées par [Autosens](../Usage/Open-APS-features#autosens) pour augmenter la sensibilité.
+* **Les barres YELLOW** montrent une déviation due aux RNS.
 
-#### Sensitivity
+#### Sensibilité
 
 * Shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. 
-* Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+* C'est le résultat d'un calcul de la sensibilité à l'insuline suite à de l'exercice, aux hormones, etc.
 
-#### Activity
+#### Activité
 
 * Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
-* The value is higher for insulin closer to peak time.
-* It would mean to be negative when IOB is decreasing. 
+* La valeur est plus élevée quand l'insuline délivrée est proche de son pic d'activité.
+* Elle n'est pas dérivée de l'IA, car si c'était le cas elle serait négative quand l'IA diminue. 
 
-#### Deviation slope
+#### Pente de déviations
 
 * Internal value used in algorithm.
 
-### Section H - Buttons
+### Section H - Boutons
 
 ![Homescreen buttons](../images/Home2020_Buttons.png)
 
@@ -241,7 +241,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 * See [details below](../Configuration/Screenhots#bolus-wizard)
 
-#### Calibrations
+#### Étalonnages
 
 * Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
 * Must be activated in [preferences](../Configuration/Preferences#buttons).
