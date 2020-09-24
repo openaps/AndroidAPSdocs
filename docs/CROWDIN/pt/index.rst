@@ -44,7 +44,7 @@ Como Instalar AndroidAPS
 
    Construindo o APK <./Installing-AndroidAPS/Building-APK.md>
    Actualizar para uma nova versão ou branch <./Installing-AndroidAPS/Update-to-new-version.md>
-   Checks after update to AAPS 2.7 <.//Installing-AndroidAPS/update2_7.rst>
+   Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Install git <./Installing-AndroidAPS/git-install.rst>
    Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
