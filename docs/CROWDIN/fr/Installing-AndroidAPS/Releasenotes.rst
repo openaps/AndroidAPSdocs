@@ -17,13 +17,13 @@ Version 2.7.0
 ================
 Date de sortie : 24-09-2020
 
-Le dossier github à été déplacé vers https://github.com/nightscout/AndroidAPS. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un nouveau clone.
+Le dossier github à été déplacé vers https://github.com/nightscout/AndroidAPS. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
 
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk. La version du plugin Gradle doit être 3.6.4 et la Version de Gradle 5.6.4.
 
 **Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 2.7 comme c'est décrit ici** `ici <../Installing-AndroidAPS/update2_7.html>`_.
 
-Vous devez au moins démarrer l'objectif 11 afin de continuer à utiliser la fonction d'automatisation (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 11 n'est pas possible).
+You need at least start `Objective 11 <../Usage/Objectives.html#objective-11-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible).
 
 Nouvelles fonctionnalités majeures
 ----------------------
