@@ -33,7 +33,7 @@ Befehle
 
 Groß- und Kleinschreibung müssen beim Senden der Befehle nicht berücksichtigt werden.
 
-Befehle müssen in Englisch gesendet werden, die Antwort erhältst Du in Deiner lokalen Sprache, wenn die Zeichenfolge bereits ` übersetzt ist <../translations.html##texte-fur-die-androidaps-app-ubersetzen> ` _.
+Befehle müssen in Englisch gesendet werden, die Antwort erhältst Du in Deiner lokalen Sprache, wenn die Zeichenfolge bereits `übersetzt ist <../translations.html#texte-fur-die-androidaps-app-ubersetzen>`_.
 
 .. image:: ../images/SMSCommands.png
   :alt: Beispiele für SMS-Befehle

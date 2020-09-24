@@ -44,6 +44,7 @@ AndroidAPS installeren
 
    Bouwen van de app <./Installing-AndroidAPS/Building-APK.md>
    Bijwerken naar een nieuwe versie <./Installing-AndroidAPS/Update-to-new-version.md>
+   Checks after update to AAPS 2.7 <.//Installing-AndroidAPS/update2_7.rst>
    Git installeren <./Installing-AndroidAPS/git-install.rst>
    Problemen in Android Studio oplossen <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
@@ -71,7 +72,7 @@ AndroidAPS instellingen
    :glob:
    
    Configurator <./Configuration/Config-Builder.md>
-   Instellingen <./Configuration/Preferences.md>
+   Preferences <./Configuration/Preferences2020.rst>
    
    
 AndroidAPS gebruik

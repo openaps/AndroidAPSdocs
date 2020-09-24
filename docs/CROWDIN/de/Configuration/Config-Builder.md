@@ -53,7 +53,7 @@ Wenn Du vom Nightscout-Profil auf ein lokales Profil wechseln möchtest, führe 
 
 #### Lokale Profile zu Nightscout hochladen
 
-Lokale Profile können auch zu Nightscout hochgeladen werden. Dies kannst Du unter Einstellungen > Nightscout-Client aktivieren.
+Lokale Profile können auch zu Nightscout hochgeladen werden. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
 
 ![Lokales Profil zu NS hochladen](../images/LocalProfile_UploadNS2.png)
 
@@ -67,6 +67,15 @@ Vorteile:
 Nachteile:
 
 * kein(e)
+
+### Profil-Helfer
+
+Profile helper offers two functions:
+
+1. Find a profile for kids
+2. Compare two profiles or profile switches in order to clone a new profile
+
+Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
 
 ### Nightscout-Profil
 
@@ -130,23 +139,30 @@ Hier kannst du auswählen, aus welcher Quelle AAPS die BZ-Werte empfangen soll. 
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
+* [Tomato App](http://tomato.cool/) for MiaoMiao device
+* Random BG: Generates random BG data (Demo mode only)
+
 ## Pumpe
 
 Wähle die von dir genutzte Pumpe.
 
 * [Dana R](DanaR-Insulin-Pump.md)
 * DanaR Korean (koreanische Version der DanaR)
-* DanaRv2 (DanaR mit Firmware Upgrade)
+* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
 * [Dana RS](DanaRS-Insulin-Pump.md)
-* [Accu Chek Combo ](Accu-Chek-Combo-Pump.md) (erfordert Installation von Ruffy)
+* [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
+* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Medtronic](MedtronicPump.md)
 * ICT (für OpenLoop mit ICT, AAPS macht nur Behandlungsvorschläge, die du dann selbst mit dem Pen umsetzen musst)
 * Virtuelle Pumpe (für OpenLoop mit nicht unterstützten Pumpen, AAPS macht nur Behandlungsvorschläge, die du dann selbst in deiner Pumpe umsetzen musst)
 
 Wenn Du eine Dana-Pumpe nutzt, kannst Du in den **erweiterten Einstellungen** den Bluetooth Watchdog aktivieren, falls dies notwendig sein sollte. Er deaktiviert Bluetooth für eine Sekunde, falls keine Verbindung zur Pumpe möglich ist. Dies kann helfen, falls bei deinem Smartphone Probleme mit der Bluetooth-Verbindung auftreten.
 
+[Password for Dana RS pump](..Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
+
 ## Empfindlichkeitserkennung
 
-Hier kannst du auswählen, nach welchem Algorythmus AAPS die Insulinempfindlichkeit berechnen soll. Bei der Empfindlichkeitserkennung werden historische Daten "on the go" analysiert und Anpassungen vorgenommen, falls der Algorithmus feststellt, dass du sensibler oder weniger empfindlich auf das Insulin reagierst als üblich. Details zum Sensitivity Oref0 Algorithmus findest du in den [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Hier kannst du auswählen, nach welchem Algorythmus AAPS die Insulinempfindlichkeit berechnen soll. For more details of different designs please [read on here](Sensitivity-detection-and-COB.md). Bei der Empfindlichkeitserkennung werden historische Daten "on the go" analysiert und Anpassungen vorgenommen, falls der Algorithmus feststellt, dass du sensibler oder weniger empfindlich auf das Insulin reagierst als üblich. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
 Die berechnete Insulinempfindlichkeit kannst du verfolgen, indem du auf der Startseite im Auswahlmenü der angezeigten Kurven “Sensitivität” auswählst. Die weiße Linie zeigt dir das graphisch an. Die [Empfindlichkeitserkennung Autosens](../Usage/Open-APS-features.html#autosens) ist erst freigeschaltet, wenn du [Ziel (objective) 8](../Usage/Objectives#ziel-8-passe-falls-notwendig-basalraten-und-faktoren-an-und-aktiviere-dann-die-autosens-funktion) erreicht hast. So lange Du diese Ziel (objective) noch nicht erreicht hast, wird der Autosens-Prozentsatz bzw. die Autosens-Kurve nur zu Deiner Information angezeigt. AAPS nimmt keine Änderungen vor.
 
@@ -158,28 +174,46 @@ Wenn Du Oref1 mit SMB musst du **min_5m_carbimpact** auf 8 ändern. Dieser Wert 
 
 Wähle den gewünschten APS-Algorithmus für Therapie-Anpassungen. Die Details zum ausgewählten Algorithmus findest du im Reiter OpenAPS (OPAS).
 
-* OpenAPS MA (meal assist, Algorithmus aus 2016)
 * OpenAPS AMA (advanced meal assist, Algorithmus aus 2017)  
-    Details zu OpenAPS AMA findest Du in der [OpenAPS Dokumentation](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Einfach ausgedrückt profitierst Du von schnelleren AAPS-Korrekturen nach einem Mahlzeitenbolus, wenn du die Menge der Kohlenhydrate korrekt angegeben hast.  
-    Hinweis: OpenAPS AMA steht ab dem [9. Ziel](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) (objective 9) zur Verfügung.
+    Details zu OpenAPS AMA findest Du in der [OpenAPS Dokumentation](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably. 
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, aktuellster Algorithmus für erfahrene Anwender  
     Hinweis: OpenAPS SMB steht ab dem [10. Ziel](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) (objective 10) zur Verfügung und min_5m_carbimpact muss auf 8 eingestellt werden (Konfigurations-Generator > Sensitivitätserkennung > Sensitivität Oref1 Einstellungen).
 
 ## Loop
 
-Hier kannst du einstellen, ob du AAPS die automatische Steuerung erlauben willst oder nicht.
+* Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
+
+![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
 
 ### Open Loop
 
-AAPS wertet laufend alle verfügbaren Daten (IOB, COB, BZ-Wert) aus und macht dir bei Bedarf Behandlungsvorschläge, wie du deine Therapie anpassen solltest. Die Vorschläge werden nicht automatisch (wie im Closed Loop) ausgeführt, sondern müssen manuell in die Pumpe eingegeben werden. Wenn Du eine kompatible Pumpe (Dana R/RS oder Accu Chek Combo) verwendest, kann dies auch über eine Schaltfläche in AndroidAPS geschehen. Diese Option ist zum Kennenlernen der Funktionsweise gedacht oder falls du eine nicht unterstützte Pumpe verwendest.
+* AAPS wertet laufend alle verfügbaren Daten (IOB, COB, BZ-Wert) aus und macht dir bei Bedarf Behandlungsvorschläge, wie du deine Therapie anpassen solltest. 
+* Die Vorschläge werden nicht automatisch (wie im Closed Loop) ausgeführt, sondern müssen manuell in die Pumpe eingegeben werden. Wenn Du eine kompatible Pumpe (Dana R/RS oder Accu Chek Combo) verwendest, kann dies auch über eine Schaltfläche in AndroidAPS geschehen. 
+* Diese Option ist zum Kennenlernen der Funktionsweise gedacht oder falls du eine nicht unterstützte Pumpe verwendest.
 
 ### Closed Loop
 
-AAPS wertet laufend alle verfügbaren Daten (IOB, COB, BZ-Wert) aus und passt die Behandlung bei Bedarf automatisch (also ohne weiteren Eingriff durch dich) an, um den eingestellten Zielbereich oder Zielwert zu erreichen (Bolusabgabe, temporäre Basalrate, Insulinabschaltung zur Hypovermeidung etc.). Der Closed Loop arbeitet im Rahmen zahlreicher Sicherheitsgrenzen, die du individuell einstellen kannst. Hinweis: Der Closed Loop steht ab dem [6. Ziel](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) (objective 6) zur Verfügung und setzt eine unterstütze Pumpe voraus.
+* AAPS wertet laufend alle verfügbaren Daten (IOB, COB, BZ-Wert) aus und passt die Behandlung bei Bedarf automatisch (also ohne weiteren Eingriff durch dich) an, um den eingestellten Zielbereich oder Zielwert zu erreichen (Bolusabgabe, temporäre Basalrate, Insulinabschaltung zur Hypovermeidung etc.). 
+* Der Closed Loop arbeitet im Rahmen zahlreicher Sicherheitsgrenzen, die du individuell einstellen kannst.
+* Hinweis: Der Closed Loop steht ab dem [6. Ziel](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) (objective 6) zur Verfügung und setzt eine unterstütze Pumpe voraus.
+* Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol or 100 mg/dl instead of 5,0 - 7,0 mmol or 90 - 125 mg/dl) is recommended.
+
+### Low Glucose Suspend (LGS)
+
+* maxIOB is set to zero
+* This means if blood glucose is dropping it can reduce basal for you.
+* But if blood glucose is rising no automatic correction will be made. Your basal rates will remain the same as your selected profile.
+* Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower BG.
+
+### Minimal request change
+
+* Im Open Loop erhälst Du jedes Mal eine Benachrichtigung, wenn AAPS empfiehlt, die Basalrate anzupassen. 
+* Um die Anzahl der Benachrichtigungen zu reduzieren, kannst Du entweder einen breiteren BZ-Zielbereich verwenden oder den Prozentsatz des minimalen Werts zur Anfrage einer Änderung erhöhen.
+* Diese definiert, wie hoch die relative Änderung sein muss, damit eine Benachrichtigung erscheint.
 
 ## Ziele (objectives - Lernprogramm)
 
-AndroidAPS hat eine Reihe an Zielen (objectives), die du nach und nach erfüllen musst. Dies soll dich sicher durch die Einrichtung eines Closed Loop Systems führen. Das garantiert, dass du alles korrekt eingestellt hast und auch verstehst, was das System genau macht. Nur so kannst du dem System vertrauen.
+AndroidAPS has a leraning program (objectives) that you have to fulfill step by step. Dies soll dich sicher durch die Einrichtung eines Closed Loop Systems führen. Das garantiert, dass du alles korrekt eingestellt hast und auch verstehst, was das System genau macht. Nur so kannst du dem System vertrauen.
 
 Du solltest regelmäßig deine Einstellungen (inklusive deiner Fortschritte in den objectives) [exportieren](../Usage/ExportImportSettings.rst). Dann kannst du sie einfach importieren, wenn du später einmal dein Smartphone austauschen musst (neues Gerät, Displayschaden...).
 
@@ -220,9 +254,39 @@ Hinweis: Die Schaltfläche wird außerhalb der eingestellten Zeiträume nicht an
 
 ![QuickWizard Schaltfläche](../images/ConfBuild_QuickWizard.png)
 
+#### Vordefinierte temporäre Ziele
+
+Choose default temp-targets (duration and target). Preset values are:
+
+* eating soon: target 72 mg/dl / 4.0 mmol/l, duration 45 min
+* activity: target 140 mg/dl / 7.8 mmol/l, duration 90 min
+* hypo: target 125 mg/dl / 6.9 mmol/l, duration 45 min
+
+#### Füll-/Vorfüll-Standardmengen
+
+Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+
+#### Range of visualization
+
+Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+
+#### Kurze Tab-Überschriften
+
+Choose either the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+
+#### Zeige Feld für Notizen in den Behandlungsdialogen
+
+Choose if you want to have a notes field when entering treatments or not.
+
+#### Statusanzeige
+
+Choose if you want to have status lights on overview for canula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+
 #### Erweiterte Einstellungen
 
-Aktiviere den SuperBolus im Wizard. Sei vorsichtig und aktiviere das erst, wenn du weißt, was es wirklich bewirkt. Im Wesentlichen wird das Basalinsulin der nächsten zwei Stunden zum Bolus hinzugefügt und die Basalrate für zwei Stunden auf null gesetzt. **AAPS Loop-Funktionen werden deaktiviert - also mit Vorsicht verwenden! Wenn Du SMB nutzt, werden die AAPS Loop-Funktionen entsprechend Deiner Einstellungen in ["SMB Basal-Limit in Minuten"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to) deaktiviert. Wenn Du SMB nicht nutzt, wird für zwei Stunden deaktiviert.** Details zum Superbolus findest Du [hier](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
+
+**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Im Wesentlichen wird das Basalinsulin der nächsten zwei Stunden zum Bolus hinzugefügt und die Basalrate für zwei Stunden auf null gesetzt. **AAPS Loop-Funktionen werden deaktiviert - also mit Vorsicht verwenden! Wenn Du SMB nutzt, werden die AAPS Loop-Funktionen entsprechend Deiner Einstellungen in ["SMB Basal-Limit in Minuten"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to) deaktiviert. Wenn Du SMB nicht nutzt, wird für zwei Stunden deaktiviert.** Details zum Superbolus findest Du [hier](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Aktionen
 
@@ -248,7 +312,11 @@ Einige Ärzte nutzen, gerade für neue Pumpenbenutzer, ein Basal-Bolus-Verhältn
 
 ![Aktionen Tab](../images/ConfBuild_ConfBuild_Actions_b.png)
 
-### SMS-Kommunikator
+### Automatisierung
+
+User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst)
+
+### SMS Kommunikator
 
 Der SMS-Kommunikator erlaubt die Fernsteuerung einiger AndroidAPS Funktionen via SMS. Weitere Informationen zum Setup findest Du auf der Seite [SMS-Befehle](../Children/SMS-Commands.rst).
 
@@ -275,42 +343,10 @@ Wenn Du Deinen Loop von der Uhr aus steuern willst (z.B. Bolus abgeben), aktivie
 
 Zeigt Loop Information in deinem xDrip+ Watchface (falls du nicht das AAPS/[AAPSv2 Watchface](../Configuration/Watchfaces.md) nutzt.)
 
-### Dauer-Benachrichtigung
-
-Zeigt im Dropdown- und Sperrbildschirm deines Smartphones eine kurze Übersicht über den aktuellen BZ, eine aktive temporäre Basalrate (%), die Basalrate (I. E./Std.) sowie IOB und COB.
-
-![AAPS Widget](../images/ConfBuild_Widget.png)
-
 ### Nightscout-Client
 
-Ns-Client Synchronisierung deiner AndroidAPS-Daten mit Nightscout einrichten.
-
-Falls **Logge App-Start in Nightscout** aktiviert ist, ist jeder AndroidAPS Neustart in Nightscout sichtbar. Dies kann dabei helfen, Probleme mit der App zu erkennen (z.B. Batteriesparmodus für AAPS nicht deaktiviert), aber auch die Kurven in Nightscout mit Einträgen überfrachten.
-
-#### Alarm-Optionen
-
-AndroidAPS Alarme aktivieren/deaktivieren
-
-![Alarm-Optionen](../images/ConfBuild_NSClient_Alarms.png)
-
-#### Verbindungseinstellungen
-
-Offline loopen, Roaming deaktivieren...
-
-Wenn Du nur ein bestimmtes WLAN-Netzwerk verwenden möchtest, kannst du dessen **WiFi SSID** eingeben. Mehrere SSIDs können durch Semikolon (Strichpunkt) getrennt werden. Gib zum Löschen aller SSIDs ein Leerzeichen in das Feld ein.
-
-![Nightscout Verbindungseinstellungen](../images/ConfBuild_ConnectionSettings.png)
-
-#### Erweiterte Einstellungen
-
-* Lade fehlende Blutzuckerwerte automatisch aus Nightscout nach.
-* Ankündigungen aus Fehlern generieren Erstelle Nightscout-Einträge für Fehler-Dialoge und lokale Alarme. Sie werden auch im Careportal im Bereich Behandlungen angezeigt,
-* Aktiviere Broadcasts für andere Apps (z. B. xDrip+)
-* Zu Nightscout nur hochladen (keine Synchronisierung)
-* Kein Upload zu Nightscout
-* Verwende absolute statt prozentuale Basalraten -> Muss aktiviert sein, wenn du [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) nutzen willst.
-
-![Nightscout erweiterte Einstellungen](../images/ConfBuild_NSClient_Advanced.png)
+* Ns-Client Synchronisierung deiner AndroidAPS-Daten mit Nightscout einrichten.
+* Settings in [preferences](../Configuration/Preferences#nsclient) can be opened by clicking the cog wheel.
 
 ### Wartung
 

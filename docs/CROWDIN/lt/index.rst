@@ -44,6 +44,7 @@ How to Install AndroidAPS
 
    Building the APK <./Installing-AndroidAPS/Building-APK.md>
    Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
+   Checks after update to AAPS 2.7 <.//Installing-AndroidAPS/update2_7.rst>
    Install git <./Installing-AndroidAPS/git-install.rst>
    Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
@@ -71,7 +72,7 @@ Configuration
    :glob:
    
    Config builder <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences.md>
+   Preferences <./Configuration/Preferences2020.rst>
    
    
 AndroidAPS Usage

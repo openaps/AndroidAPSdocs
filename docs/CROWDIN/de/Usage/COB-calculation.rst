@@ -4,13 +4,13 @@ Berechnung der aktiven Kohlenhydrate (COB)
 Wie berechnet AAPS die aktiven Kohlenhydrate?
 ==================================================
 
-Oref0 / Oref1
+Oref1
 --------------------------------------------------
 
 Nicht absorbierte Kohlenhydrate werden nach der eingestellten Zeit verworfen, werden also bei Berechnungen nicht mehr berücksichtigt
 
 .. image:: ../images/cob_oref0_orange_II.png
-  :alt: Oref0 / Oref1
+  :alt: Oref1
 
 AAPS, WeightedAverage
 --------------------------------------------------
@@ -25,7 +25,7 @@ Falls die minimale Kohlenhydrat-Resorption (min_5m_carbimpact) statt einem aus d
 Erkennung Fehlerhafter COB-Werte
 ==================================================
 
-Ab Version 2.4 warnt AAPS Dich, wenn Du mit aktiven Kohlenhydraten von einer vorherigen Mahlzeit bolen willst und der Algorithmus davon ausgeht, dass die aktuelle COB-Berechnung falsch sein könnte. In diesem Fall gibt es einen zusätzlichen Hinweis in der Bestätigungsanzeige nach der Nutzung des Bolus-Assistenten. 
+AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. In diesem Fall gibt es einen zusätzlichen Hinweis in der Bestätigungsanzeige nach der Nutzung des Bolus-Assistenten. 
 
 Wie erkennt AndroidAPS falsche COB-Werte? 
 --------------------------------------------------
@@ -55,4 +55,4 @@ Warum erkennt der Algorithmus COB nicht richtig?
 
 Manuelle Korrektur der eingegebenen Kohlenhydrate
 ==================================================
-If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.
+Wenn Du die Menge der Kohlenhydrate über- oder unterschätzt hast, kannst Du diese über den Aktionen-Tab / Menü wie `hier beschrieben <../Getting-Started/Screenshots.html#kohlenhydrat-korrektur>`_korrigieren.

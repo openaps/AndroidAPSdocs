@@ -2,157 +2,350 @@
 
 ## 홈 화면
 
-![홈 화면 v2.5](../images/Screenshot_Home_screen_V2_5_1.png)
+![Homescreen V2.7](../images/Home2020_Homescreen.png)
 
 홈 화면은 AndroidAPS를 실행했을 때 처음 나오는 화면이며, 매일매일 필요한 정보의 대부분을 포함하고 있습니다.
 
-### 섹션 A
+### Section A - Tabs
 
-* 왼쪽 또는 오른쪽으로 화면을 넘겨 AndroidAPS의 다양한 모듈들을 확인할 수 있습니다.
+* Navigate between the various AndroidAPS modules.
+* Alternatively you can change screens by swiping left or right.
+* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder#tab-or-hamburger-menu).
 
-### 섹션 B
+### Section B - Profile & target
 
-* loop의 상태 (open loop, closed loop, loop 중지 등) 를 변경할 수 있습니다.
-* 현재 프로파일을 확인하고 [프로파일 변경](../Usage/Profiles.md)을 할 수 있습니다.
-* 현재 목표 혈당 수준을 확인하고 [임시 목표](../Usage/temptarget.md)를 설정할 수 있습니다.
+#### 프로파일
 
-설정을 변경하려면 버튼을 길게 누르십시오. 예를 들어, 우측 상단의 목표 버튼(위 스크린샷의 "100")을 길게 눌러 임시 목표를 설정할 수 있습니다.
+    ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+    
 
-### 섹션 C
+* Current profile is displayed in the left bar.
+* Long press profile bar to view profile details or to [switch between different profiles](../Usage/Profiles#profile-switch).
+* If profile switch was made with duration remaining time in minutes is shown in brackets.
 
-* CGM에서 전송된 가장 최근 혈당값을 의미합니다.
-* 몇 분 전에 혈당값이 전송되었는지를 의미합니다.
-* 최근 15분과 40분 동안의 혈당 변화를 의미합니다.
-* 시스템이 실행한 임시 basal 양 (TBR) 과 현재 basal 양을 의미합니다.
-* 체내 잔여 인슐린 (IOB) 을 의미합니다.
-* 체내 잔여 탄수화물 (COB) 을 의미합니다.
+#### Target
 
-옵션으로 [상태 표시](../Configuration/Preferences#overview) (CAN | INS | RES | SEN | BAT) 에서 펌프 주입세트의 변경 기한 지남, 펌프의 인슐린 부족과 펌프의 배터리 레벨에 대한 시각적 경고를 보여줍니다.
+    ![Temp target remaining duration](../images/Home2020_TT.png)
+    
 
-원래 설정한 표준 basal이 주입되고 있고, 이전 bolus 주입에서 남은 인슐린이 없는 경우에는 IOB가 0으로 표시됩니다. 괄호 안의 숫자는 이전 bolus 주입에서 남아있는 인슐린 양과 AAPS에서 이전에 실행한 TBR에 따른 basal의 차이를 의미합니다. 가까운 시간에 basal 감소 기간이 있었던 경우에는 두 번째 항목이 음수로 표시될 것입니다.
+* Current target blood glucose level is displayed in the right bar.
+* Long press target bar to set a [temporary target](../Usage/temptarget.md).
+* If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
 
-### 섹션 D
+#### Visualization of Dynamic target adjustment
 
-섹션 D 화면에서 우측에 있는 화살표를 클릭하면 하단 차트에 표시되는 정보를 선택할 수 있습니다.
+    ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+    
 
-### 섹션 E
+* AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
+* Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
+   * "sensitivity raises target" and/or 
+   * "resistance lowers target" 
+* If AAPS detects resistance or sensitivity the target will change from what is set from profile. 
+* When it alters the target glucose background will change to green.
 
-그래프는 혈당 모니터 (CGM) 에서 전송된 혈당값 (BG) 과 채혈 교정 등의 nightscout 알림, 탄수화물 입력을 보여줍니다.
+### Section C - BG & loop status
 
-그래프를 길게 눌러 시간 범위를 변경할 수 있습니다. 6, 8, 12, 18 또는 24시간 단위를 선택할 수 있습니다.
+#### Current blood glucose
 
-연장된 선은 예측된 혈당값 계산과 경향을 나타냅니다 (사용 선택한 경우).
+* Latest blood glucose reading from your CGM is shown on the left side.
+* Color of the BG value reflects the status to the defined [range](../Configuration/Preferences#range-for-visualization). 
+   * green = in range
+   * red = below range
+   * yellow = above range
+* The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
 
-* **주황색** 선: [COB](../Usage/COB-calculation.rst) (주황색은 COB와 탄수화물을 나타내기 위해 사용됩니다.)
+#### Loop status
+
+![Loop status](../images/Home2020_LoopStatus.png)
+
+* A new icon shows loop status:
    
-   예측선은 현재 펌프 설정을 기반으로 하여, 탄수화물 흡수에 따른 편차가 일정하게 유지될 것이라고 가정했을 때의 혈당값을 보여줍니다 (COB 자체를 의미하는 것이 아닙니다). 이 선은 입력된 COB가 있을 때만 나타납니다.
+   * green circle = loop running
+   * green circle with dotted line = [low glucose suspend (LGS)](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * red circled = loop disabled (not working permanently)
+   * yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
+   * grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
+   * Orange circle = super bolus running - remaining time is shown below icon
+   * blue circle with dotted line = open loop
 
-* **진한 파란색** 선: IOB (진한 파랑색은 IOB와 인슐린을 나타내기 위해 사용됩니다.)
+* Long press the icon to open the menu to disable, suspend, re enable loop or disconnect / reconnect pump.
    
-   예측선은 인슐린이 단독으로 작용하였을 때 혈당값이 어떻게 변할지를 보여줍니다. 즉, 인슐린을 주입한 뒤 탄수화물을 전혀 섭취하지 않은 상황입니다.
+   ![Loop status menu](../images/Home2020_LoopStatusMenu.png)
 
-* **연한 파란색** 선: zero-temp (임시 basal 양이 0%로 설정되었을 때 예측되는 혈당값)
+### Section D - IOB, COB, BR and AS
+
+![Section D](../images/Home2020_TBR.png)
+
+* Syringe: insulin on board (IOB) - amount of active insulin inside your body
    
-   예측선은 펌프가 모든 인슐린 주입을 중단했을 때 (0% TBR) IOB 궤도가 어떻게 변할지를 보여줍니다.
+   * The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
+   * IOB may be negative if there have recently been periods of reduced basal.
 
-* **진한 노랑색** 선: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (사용자가 입력하지 않은 식사)
+* Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
+
+* Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%)
+* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features#autosens) status (enabled or disabled) and value is shown below icon
+
+#### Carbs required
+
+![Carbs required](../images/Home2020_CarbsRequired.png)
+
+* Carbs suggestions are given when the reference design detects that it requires carbs.
+* This is when the oref algorithm thinks I can't rescue you by 0 temping and you will need carbs to fix.
+* The carb notifications are much more sophisticated then the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
+* Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+
+### Section E - Status lights
+
+![Section E](../images/Home2020_StatusLights.png)
+
+* Status lights give a visual warning for 
+   * Cannula age
+   * Insulin age (days reservoir is used)
+   * Reservoir level (units)
+   * Sensor age
+   * Battery age and level (%)
+* If threshold warning is exceeded, values will be shown in yellow.
+* If threshold critical is exceeded, values will be shown in red.
+* Settings can be made in [preferences](../Configuration/Preferences#status-lights).
+
+### Section F - Main graph
+
+![Section F](../images/Home2020_MainGraph.png)
+
+* Graph shows your blood glucose (BG) as read from your glucose monitor (CGM). 
+* Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
+* Long press on the graph to change the time scale. You can choose 6, 12, 18 or 24 hours.
+* The green area reflects your target range. It can be configured in [preferences](../Configuration/Preferences#range-for-visualization).
+* Blue triangles show [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - if enabled in [preferences](.../Configuration/Preferences#openaps-smb-settings).
+* Optional information:
    
-   입력되지 않은 식사는 식사, 아드레날린 또는 다른 영향으로 인한 혈당값의 유의한 증가를 의미합니다. 예측선은 주황색 COB 선과 비슷하지만, (현재의 감소 속도를 적용하여) 일정한 비율로 편차가 줄어들 것으로 예측합니다.
+   * Predictions
+   * Basals
+   * Activity - insulin activity curve
 
-일반적으로 실제 포도당 곡선은 이 선들의 중간에서 끝나거나, 실제 상황에 거의 가깝게 예측했을 때는 이 선들 중 하나에 가깝게 끝날 것입니다.
+#### Activate optional information
 
-**파란색 실선**은 펌프에서 주입되는 basal 양을 의미합니다. **점선**은 임시 basal 조절 (TBR) 이 없을 때의 basal 양을 의미하고, 실선은 시간에 따라 실제로 주입된 양입니다.
+* Click the triangle on the right side of the main graph to select which information will be displayed in the main graph.
+* For the main graph just the three options above the line "\---\---- Graph 1 \---\----" are available.
+   
+   ![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
-**노란색 선**은 인슐린의 활동을 의미합니다. 이는 다른 요인 (예를 들어, 탄수화물) 이 존재하지 않을 때, 인슐린이 어느정도 혈당값을 떨어뜨릴지 예상하는 근거가 됩니다.
+#### Prediction lines
 
-### 섹션 F
+* **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
+   
+   Prediction line shows where your BG (not where cob itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
 
-섹션 D의 옵션을 사용하여 이 섹션도 설정할 수 있습니다.
+* **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
+   
+   Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
 
-* **Insulin On Board (IOB)** (파란색 차트): 체내 잔여 인슐린을 의미합니다. TBR, SMB가 없고, bolus가 남아있지 않다면 이는 0이 될 것입니다. 감소하는 정도는 DIA와 인슐린 프로파일 설정에 따릅니다. 
-* **Carbs On Board (COB)** (주황색 차트): 체내 잔여 탄수화물을 의미합니다. 감소하는 정도는 알고리즘이 분석한 편차에 따릅니다. 예상한 것보다 높은 탄수화물 흡수를 감지하면, (안정성 설정에 따라 많은 양이나 적은 양의) 인슐린을 주입해 IOB를 증가시킬 것 입니다. 
-* **편차**: 
-   * **회색 막대**는 탄수화물에 의한 편차를 의미합니다. 
-   * **초록색 막대**는 알고리즘이 예상한 것보다 혈당값이 높다는 것을 의미합니다. 
-   * **빨간색 막대**는 알고리즘이 예상한 것보다 혈당값이 낮다는 것을 의미합니다.
-* **민감도** (흰 선): [Autosens](../Usage/Open-APS-features#autosens)가 감지한 민감도를 의미합니다. 민감도는 운동, 호르몬 등에 의한 인슐린의 감수성을 계산한 것입니다.
-* **활동** (노란색 선): 인슐린 프로파일에 의해 계산된 인슐린의 활동을 의미합니다 (IOB에 따른 것이 아님). 이 값은 인슐린의 피크 시간에 근접할 때 높게 나타납니다. 이것은 IOB가 감소할 때 음수로 나타남을 의미합니다. 
+* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
+   
+   Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
 
-### 섹션 G
+* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals)
+   
+   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
 
-Bolus를 주입하고 (일반적으로 계산기 버튼을 사용함), CGM 채혈 교정을 입력할 수 있습니다. 또한 [구성 마법사](../Configuration/Config-Builder#quickwizard-settings)에서 설정하여 빠른 마법사 버튼을 나타나게 할 수 있습니다.
+Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
 
-## 계산기
+#### Basals
 
-![계산기](../images/Screenshot_Bolus_calculator.png)
+* A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time. . 
+* The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs)
+* In times standard basal rate is given the area under the curve is shown in dark blue.
+* When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
 
-식사 bolus를 주입하고 싶을 때 일반적으로 사용하는 방법입니다.
+#### Activity
 
-### 섹션 H
+* The **thin yellow** line shows the activity of Insulin. 
+* It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
 
-Bolus에 대한 원하는 정보들을 입력하는 항목이 포함되어 있습니다. 혈당값 영역은 일반적으로 CGM에서 전송된 최신 수치가 미리 입력되어 있습니다. CGM이 작동하고 있지 않는 경우에는 이 영역이 공백으로 나타날 것입니다. CARBS 영역에는 bolus를 위한 탄수화물 양 또는 등가의 양에 대한 추정치를 입력합니다. CORR 영역은 몇몇 이유로 인하여 최종 용량을 수정하려는 경우에 사용하며, CARB TIME 영역은 식전 bolus 주입 시 탄수화물 섭취 전 지연시간이 있음을 시스템에 입력할 때 사용할 수 있습니다. 이전에 섭취한 탄수화물에 대한 bolus를 주입하는 경우 이 영역에 음수를 입력할 수 있습니다.
+### Section G - additional graphs
 
-SUPER BOLUS 사용 시 다음 2시간 동안의 basal 인슐린을 bolus에 추가하여 주입하고, 추가된 인슐린을 되돌리기 위해 이후 2시간 동안은 zero TBR을 사용하게 됩니다. 이 아이디어는 인슐린을 더 빨리 전달하고 혈당 스파이크를 줄이기 위한 것입니다.
+* You can activate up to four additional graphs below the main graph.
+* To open settings for additional graphs click the triangle on the right side of the [main graph](../Getting-Started/Screenshots#section-f-main-graph) and scroll down.
+
+![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+
+* To add an additional graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
+
+#### Absolute insulin
+
+* Active insulin including boluses **and basal**.
+
+#### Insulin on board
+
+* Shows the insulin from bolus (**excludes basals**) you have on board (= active insulin in your body). 
+* If there were no \[SMBs]\](../Usage/Open-APS-features#super-micro-bolus-smb) and no remaining boluses this would be zero. 
+* Decaying depends on your [DIA and insulin profile settings](..Configuration/Config-Builder#local-profile-recommended). 
+
+#### Carbs On Board
+
+* Shows the carbs you have on board (= active, not yet decayed carbs in your body). 
+* Decaying depends on the deviations the algorithm detects. 
+* If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
+
+#### Deviations
+
+* **GREY** bars show a deviation due to carbs. 
+* **GREEN** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
+* **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
+* **YELLOW** bars show a deviation due to UAM.
+
+#### Sensitivity
+
+* Shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. 
+* Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+
+#### Activity
+
+* Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
+* The value is higher for insulin closer to peak time.
+* It would mean to be negative when IOB is decreasing. 
+
+#### Deviation slope
+
+* Internal value used in algorithm.
+
+### Section H - Buttons
+
+![Homescreen buttons](../images/Home2020_Buttons.png)
+
+* Buttons for insulin, carbs and Calculator are 'always on'. 
+* Other Buttons have to be setup in [preferences](../Configuration/Preferences#buttons).
+
+#### 인슐린
+
+![Insulin button](../images/Home2020_ButtonInsulin.png)
+
+* To give a certain amount of insulin without using [bolus calculator](../Configuration/Screenhots#bolus-wizard).
+* By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences#default-temp-targets).
+* If you do not want to bolus through pump but record insulin amount (i.e. insulin given by syringe) check the corresponding box.
+
+#### Carbs
+
+![Carbs button](../images/Home2020_ButtonCarbs.png)
+
+* To record carbs without bolusing.
+* Certain [pre-set temporary targets](../Configuration/Preferences#default-temp-targets) can be set directly by checking the box.
+* Time offset: When will you / have you been eaten carbs (in minutes).
+* Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.rst)
+* You can use the buttons to quickly increase carb amount.
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#ns-client).
+
+#### 계산기
+
+* See [details below](../Configuration/Screenhots#bolus-wizard)
+
+#### Calibrations
+
+* Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
+* Must be activated in [preferences](../Configuration/Preferences#buttons).
+
+#### CGM
+
+* Opens xDrip+.
+* Back button returns to AAPS.
+* Must be activated in [preferences](../Configuration/Preferences#buttons).
+
+#### Quick Wizard
+
+* Easily enter amount of carbs and set calculation basics.
+* Details are setup in [preferences](../Configuration/Preferences#quick-wizard).
+
+## Bolus Wizard
+
+![Bolus wizard](../images/Home2020_BolusWizard.png)
+
+When you want to make a meal bolus this is where you will normally make it from.
 
 ### 섹션 I
 
-계산된 bolus를 보여줍니다. 체내 잔여 인슐린의 양이 계산된 bolus 양을 이미 초과하는 경우에는 필요한 탄수화물의 양만을 표시할 것입니다.
+* BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. 
+* In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. 
+* The CORR field is if you want to modify the end dosage for some reason.
+* The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
 
 ### 섹션 J
 
-Bolus를 계산하는 데 사용되는 다양한 요소들을 보여줍니다. 포함을 원하지 않는 항목은 선택 취소할 수 있으나 일반적으로 적용하지 않을 것입니다.
+* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. 
+* The idea is to deliver the insulin sooner and hopefully reduce spikes.
+* For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
-### COB와 IOB의 조합과 의미
+### Section K
 
-<ul>
-    <li>COB와 IOB 체크 시: 인슐린으로 아직 커버하지 못한 흡수되지 않은 탄수화물 + TBR 또는 SMB로 주입된 모든 인슐린을 계산 시 고려함.</li>
-    <li>COB만 선택 시: AAPS가 이미 주입된 인슐린을 고려하지 않기 때문에 과도한 인슐린 주입의 위험이 있음. </li>
-    <li>IOB만 선택 시: AAPS가 이미 주입된 인슐린을 고려하지만, 이는 흡수되어야 하는 탄수화물를 커버하지 않게 됨. 이로 인해 '누락된 탄수화물' 문구가 발생합니다.
-</ul>
+* Shows the calculated bolus. 
+* If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#ns-client).
 
-식사 bolus 직후에 추가적인 음식 (추가 디저트)를 위해 bolus를 주입한다면 모든 항목의 선택 해제가 도움이 될 수 있습니다. 필연적으로 흡수되지 않은 메인 식사에 새로운 탄수화물이 추가되는 것이기 때문에, 이 방법에서 식사 bolus 직후에는 IOB가 COB에 정확하게 매칭되지 않을 것입니다.
+### Section L
 
-### 잘못된 COB 감지
+* Details of wizard's bolus calculation.
+* You can deselect any that you do not want to include but you normally wouldn't want to.
+* For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
 
-![느린 탄수화물 흡수](../images/Calculator_SlowCarbAbsorbtion.png)
+#### Combinations of COB and IOB and what they mean
 
-Bolus 마법사를 사용한 후 위와 같은 경고가 나온다면, 계산된 COB 값이 잘못된 것일 수 있음을 AndroidAPS가 감지한 것입니다. 따라서, 이전 식사 이후에 COB를 포함하여 다시 bolus를 주입하려면 용량 초과에 유의해야 합니다! 자세한 내용은 [COB 계산 페이지](../Usage/COB-calculation#detection-of-wrong-cob-values)를 참고하십시오.
+* For safety reasons IOB boxed cannot be unticked when COB box is ticked as you might run the risk of too much insulin as AAPS is not accounting for what’s already given.
+* If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
+* If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
+* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
+
+#### Wrong COB detection
+
+![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
+
+* If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. 
+* So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
+* For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
 ## 인슐린 프로파일
 
 ![인슐린 프로파일](../images/Screenshot_insulin_profile.png)
 
-선택한 인슐린의 작용 프로파일을 보여줍니다. 보라색 선은 시간이 경과함에 따라 주입된 인슐린이 얼마나 남아 있는지를 의미하며, 파란색 선은 인슐린이 어떻게 작용하는지를 보여줍니다.
+* This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
+* The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
+* The important thing to note is that the decay has a long tail. 
+* If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
+* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
 
-Oref 프로파일 중 하나를 일반적으로 사용하며, 인슐린이 긴 꼬리를 갖는 형태로 사라진다는 것이 중요합니다. 만약 수동으로 펌프를 사용해왔다면, 인슐린이 약 3.5시간에 걸쳐 사라진다고 추측했을 것입니다. 그러나 loop을 사용할 때는 계산이 더 정교하기 때문에 긴 꼬리가 중요하며, AndroidAPS 알고리즘에서 반복해서 계산을 할 때 이 작은 용량들을 더해서 계산하게 됩니다.
+For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-서로 다른 종류의 인슐린과 이들의 작용 프로파일과 왜 이것들이 모두 중요한지에 대한 자세한 내용은 [지수 작용 곡선에 따른 새로운 IOB 곡선 이해하기](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) 글에서 읽을 수 있습니다.
+And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-또한, 이 내용에 관한 훌륭한 블로그 글을 여기에서 읽을 수 있습니다: [우리는 왜 사용하는 인슐린의 작용 시간 (DIA) 을 자주 잘못 생각하고, 이것이 왜 중요한가...](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
-
-추가적인 내용: [인슐린의 지수 곡선 + 피아스프](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+And even more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## 펌프 상태
 
-![펌프 상태](../images/Screenshot_pump_Combo.png)
+![펌프 상태](../images/Screenshot_PumpStatus.png)
 
-인슐린 펌프의 상태를 확인할 수 있습니다. Accu-Chek Combo의 예시입니다. 표시되는 정보들은 부가적인 설명없이 이해하실 수 있을 것입니다. 이력 버튼을 길게 누르면 펌프로부터 basal 프로파일을 포함한 이력 데이터를 전송 받을 수 있습니다. 그러나 Combo 펌프는 하나의 basal 프로파일만 지원되는 것을 기억하십시오.
+* Different information on pump status. Displayed information depends on your pump model.
+* See [pumps page](../Hardware/pumps.rst) for details.
 
 ## 케어 포털
 
-케어 포털은 Nightscout 화면에서 "+" 기호를 눌러 기록에 메모를 남기는 기능과 같은 것입니다.
+Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
 
-### 탄수화물 교정
+### Review carb calculation
 
-관리 탭에서는 잘못 입력한 탄수화물을 수정할 수 있습니다 (탄수화물을 과다 또는 과소 평가한 경우).
+![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
+
+* If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
+* Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
+
+### Carb correction
+
+![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+
+Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
 
 1. 홈 화면에서 실제 COB와 IOB를 확인하고 기억하십시오.
-2. 펌프에 따라 관리 탭에서 탄수화물이 인슐린과 함께 하나의 항목으로 표시되거나 별도의 항목으로 표시 (Dana RS의 경우) 될 수 있습니다.
-   
-   ![관리의 1개 또는 2개의 항목](../images/Treatment_1or2_lines.png)
-
-3. 잘못 입력된 탄수화물을 삭제하십시오.
-
+2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
+3. Remove the entry with the faulty carb amount.
 4. 홈 화면에서 COB를 확인하여 탄수화물이 제대로 삭제되었는지 확인하십시오.
 5. 관리 탭에 탄수화물과 인슐린이 하나의 항목으로 표시될 경우 IOB에 대해서도 똑같이 진행하십시오.
    
@@ -162,38 +355,48 @@ Oref 프로파일 중 하나를 일반적으로 사용하며, 인슐린이 긴 �
 
 7. 관리 탭에 탄수화물과 인슐린이 하나의 항목으로 표시될 경우에는 인슐린 양도 다시 입력해야 합니다. 인슐린 주입 시간 설정이 올바르게 되었는지 확인해야하며, 새로 입력한 뒤에는 홈 화면에서 IOB를 확인하십시오.
 
-## Loop, MA, AMA, SMB
+## Loop, AMA / SMB
 
-시스템이 CGM에서 새로운 값을 전송받을 때마다 실행되는 OpenAPS 알고리즘의 결과를 표시하며, 일반적으로 이것들에 대해 걱정할 필요는 없습니다. 이에 대한 내용은 나중에 다루겠습니다.
+* These tabs show details about the algorithm's calculations and why AAPS acts the way it does.
+* Calculations are each time the system gets a fresh reading from the CGM.
+* For more details see [APS section on config builder page](../Configuration/Config-Builder#aps).
 
 ## 프로파일
 
-![프로파일](../images/Screenshot_profile.png)
+![프로파일](../images/Screenshots_Profile.png)
 
-AndroidAPS는 다양한 프로파일 설정을 적용하여 실행할 수 있습니다. 일반적으로 - 여기에 표시된 바와 같이 - Nightscout 프로파일은 내장된 Nightscout client를 통해 다운로드할 수 있고, 여기에서는 읽기 전용 양식으로 표시됩니다. 프로파일 변경 시 Nightscout 사용자 인터페이스에서 변경 작업을 수행한 다음 AndroidAPS에 있는 [Profile Switch](../Usage/Profiles.md)를 실행하여 변경 사항을 활성화합니다. 이후 basal 프로파일 등의 데이터가 펌프에 자동으로 복사됩니다.
+* Profile contains information on your individual diabetes settings:
+   
+   * DIA (Duration of Insulin Action)
+   * IC or I:C: Insulin to Carb ratio
+   * ISF: Insulin Sensitivity Factor
+   * Basal rate
+   * Target: Blood glucose level that you want AAPS to be aiming for
 
-**DIA**: 인슐린의 작용 시간을 의미하며, 인슐린 프로필에 관한 이전 섹션에 설명되어 있습니다.
+* You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](/Configuration/Config-Builder.md).
 
-**IC**: 인슐린에 대한 탄수화물 비입니다. 이 프로파일에서는 하루의 시간대별로 다양한 값의 구간을 설정할 수 있습니다.
+## Treatment
 
-**ISF**: 인슐린 민감도 인자 - 변동사항이 없다는 가정하에 1 unit의 인슐린이 떨어뜨리는 혈당량
+History of the following treatments:
 
-**basal**: 펌프에 프로그램된 basal 프로파일입니다.
+* Bolus & carbs -> option to [remove entries](..Getting-Started/Screenshots#carb-correction) to correct history
+* [확장 Bolus](../Usage/Extended-Carbs#id1)
+* Temporary basal rate
+* [Temporary target](../Usage/temptarget.md)
+* [프로파일 변경](../Usage/Profiles.md)
+* [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
-**목표**: 모든 시간동안 장치들이 목표로 하기 바라는 혈당 수준을 의미합니다. 원하는 경우 시간대별로 다른 레벨을 설정할 수 있으며, 예측 혈당값이 범위를 벗어나는 경우에만 장치가 설정을 조절할 수 있도록 상한 범위와 하한 범위를 설정할 수 있습니다. 하지만, 이 경우 장치가 더 느리게 반응하게 되고 이런 안정된 혈당을 달성할 수 없을 것입니다.
+## BG Source - xDrip, Dexcom App (pateched)...
 
-## 관리, xDrip, NSClient
+![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
 
-관리 내용 (bolus 및 탄수화물), xDrip 메시지, NSClient를 통해 Nightscout에 전송한 메시지를 요약한 기록입니다. 일반적으로 문제가 없을 때는 이것들에 대해 걱정할 필요가 없습니다.
+* Depending on your BG source settings this tab is named differntly.
+* Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
 
-## 구성 관리자
+## NSClient
 
-![구성 관리자](../images/Screenshot_config_builder.png)
+![NSClient](../images/Screenshots_NSClient.png)
 
-AndroidAPS 장치의 구성을 설정할 수 있습니다. 이 스크린샷은 콤보 펌프, xDrip+로 관리하는 덱스컴 G5 CGM 센서, Oref 프로파일에서 노보래피드를 선택, Nighscout cloud 기반 서버에 접속한 전형적인 세팅을 보여줍니다.
-
-오른쪽의 선택 박스는 특정 모듈들을 상단 메뉴바 (홈 화면의 섹션 A) 에 나타나게 할 것인지 결정하는 것이며, 해당 모듈에 설정 사항이 있는 경우 작은 톱니바퀴 버튼을 눌러 엑세스할 수 있습니다.
-
-## 설정 및 환경 설정
-
-탐색바의 우측 상단에 세 점 버튼이 있습니다. 이 버튼을 눌러 앱의 설정, 이력 브라우저, 설정 마법사, 버전 정보 및 AAPS를 종료하는 종료 버튼을 사용할 수 있습니다.
+* Displays status of the connection with your Nightscout site.
+* Settings are made in [preferences](../Configuration/Preferences#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
+* For troubleshooting see this [page](../Usage/Troubleshooting-NSClient.md).

@@ -4,13 +4,13 @@ COB berekening
 Hoe berekent AndroidAPS de COB-waarde?
 ==================================================
 
-Oref0 / Oref1
+Oref1
 --------------------------------------------------
 
 Niet-opgenomen koolhydraten worden afgekapt (naar nul) na bepaalde tijd.
 
 .. image:: ../images/cob_oref0_orange_II.png
-  :alt: Oref0 / Oref1
+  :alt: Oref1
 
 AAPS, Gewogen gemiddelde
 --------------------------------------------------
@@ -25,7 +25,7 @@ Als de door jou ingestelde minimale koolhydraten absorptie (min_5min_carbimpact)
 Detectie van verkeerde COB-waarden
 ==================================================
 
-Vanaf versie 2.4 waarschuwt AAPS je als je op het punt staat om een bolus te gaan geven wanneer je nog COB van een vorige maaltijd hebt, en als het algoritme denkt dat de huidige COB berekening verkeerd kan zijn. In dat geval zie je een extra hint op het bevestigingsscherm nadat je op OK hebt gedrukt in de bolus wizard. 
+AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. In dat geval zie je een extra hint op het bevestigingsscherm nadat je op OK hebt gedrukt in de bolus wizard. 
 
 Hoe detecteert AndroidAPS verkeerde COB waarden? 
 --------------------------------------------------

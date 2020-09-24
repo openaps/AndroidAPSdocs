@@ -44,6 +44,7 @@ Jak nainstalovat AndroidAPS
 
    Vytvoření APK<./Installing-AndroidAPS/Building-APK.md>
    Jak aktualizovat na novou verzi <./Installing-AndroidAPS/Update-to-new-version.md>
+   Checks after update to AAPS 2.7 <.//Installing-AndroidAPS/update2_7.rst>
    Install git <./Installing-AndroidAPS/git-install.rst>
    Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
@@ -71,7 +72,7 @@ Konfigurace
    :glob:
    
    Konfigurace <./Configuration/Config-Builder.md>
-   Nastavení <./Configuration/Preferences.md>
+   Preferences <./Configuration/Preferences2020.rst>
    
    
 Použití AndroidAPS

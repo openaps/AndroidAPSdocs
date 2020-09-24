@@ -44,6 +44,7 @@ AndroidAPS installieren
 
    App aus Quellcode erstellen <./Installing-AndroidAPS/Building-APK.md>
    Update auf neue Version oder Branch <./Installing-AndroidAPS/Update-to-new-version.md>
+   Checks after update to AAPS 2.7 <.//Installing-AndroidAPS/update2_7.rst>
    Installation git <./Installing-AndroidAPS/git-install.rst>
    Fehlerbehebung Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release Notes <./Installing-AndroidAPS/Releasenotes.rst>
@@ -71,7 +72,7 @@ AndroidAPS einrichten
     
    
    Konfigurations-Generator <./Configuration/Config-Builder.md>
-   Einstellungen im Drei-Punkte-Menü <./Configuration/Preferences.md>
+   Preferences <./Configuration/Preferences2020.rst>
    
    
 AndroidAPS Nutzung

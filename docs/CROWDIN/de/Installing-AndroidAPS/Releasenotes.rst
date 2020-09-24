@@ -13,6 +13,47 @@ Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualis
 
 Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln, sondern aus Sicherheitsgründen erfolgt. Neue Versionen von AndroidAPS bieten nicht nur neue Funktionen, sondern auch wichtige Sicherheitsfixes. Deshalb ist es notwendig, dass jeder Anwender so schnell wie möglich aktualisiert. Leider gibt es noch Fehlerberichte aus sehr alten Versionen, so dass dies ein Versuch ist, die Sicherheit für jeden einzelnen Benutzer und die gesamte DIY-Community zu verbessern. Danke für dein Verständnis.
 
+Version 2.7.0
+================
+Erscheinungsdatum: 24.09.2020
+
+Speicherort des Repositories wurde auf https://github.com/nightscout/AndroidAPS geändert. Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die App-Erstellung `von vorne beginnst <../Installing-AndroidAPS/Building-APK.html>`_.
+
+Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen. Gradle Plugin Version sollte 3.6.4 und Gradle Version 5.6.4 sein.
+
+**Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie `hier <../Installing-AndroidAPS/update2_7.html>`_ beschrieben.**
+
+Du musst `Objective 11 <../Usage/Objectives.html#objective-11-automation>`_ zumindest starten, um die `Automatisierungsfunktion <../Usage/Automation.html>`_ weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden.
+
+Wichtige neue Funktionen
+----------------------
+* Zahlreiche Code- und Library-Änderungen, Code neu in Kotlin geschrieben @MilosKozak @AdrianLxM
+* Module für Dana Pumpen @MilosKozak
+* `Neues Layout und Layoutauswahl <../Getting-Started/Screenshots.html>`_ @MilosKozak
+* Neues `Status Lights Layout <../Configuration/Preferences.html#status-lights>`_ @MilosKozak
+* `Unterstützung mehrerer Diagramme <../Getting-Started/Screenshots.html#section-f---main-graph>`_ @MilosKozak
+* `Profil Helfer <../Configuration/profilehelper.html>`_ @MilosKozak
+* Visualisierung der `dynamischen Ziel-Anpassung <../Getting-Started/Screenshots.html#visualization-of-dynamic-target-adjustment>`_ @Tornado-Tim
+* Neues `Layout für die Einstellungen <../Configuration/Preferences.html>`_ @MilosKozak
+* Update des SMB Algorithmus @Tornado-Tim
+* `Low glucose Suspend (Reduzierung der Baslarate bei niedrigen Glukosewerten) Modus <../Configuration/Preferences.html#aps-mode>`_ @Tornado-Tim
+* `Benachrichtigung Kohlenhydrate benötigt <../Configuration/Preferences.html#carb-required-notification>`_ @twain47 @Tornado-Tim
+* Careportal entfernt (jetzt im Aktionen-Tab/Menü) @MilosKozak
+* `Neues, verschlüsseltes Exportformat <../Usage/ExportImportSettings.html>`_ @dlvoy
+* `Neue SMS Authentifikation mit Einmalpasswort <../Children/SMS-Commands.html>`_ @dlvoy
+* `Neue SMS Befehle zum Verbinden und Trennen der Pumpe <../Children/SMS-Commands.html#commands>`_ @Lexsus
+* Bessere Unterstützung niedriger Basalraten bei Dana Pumpen @Mackwe
+* Small Fehlerbehebungen für Insight Pumpen @TebbeUbben @MilosKozak
+* `Option "Standardsprache" <../Configuration/Preferences.html#general>`_ @MilosKozak
+* Vector Icons @Philoul
+* `Neutrale Temps für Medtronic Pumpen <../Configuration/MedtronicPump.html#configuration-of-phoneandroidaps>`_ @Tornado-Tim
+* Verbesserung Historie @MilosKozak
+* OpenAPS MA Algorithmus entfernt @Tornado-Tim
+* Oref0 Sensitivität entfernt @Tornado-Tim
+* `Biometrischer oder Password-Schutz <..../Configuration/Preferences.html#protection>`_ ffür Einstellungen und Bolus @MilosKozak
+* `Neuer Automation Trigger <../Usage/Automation.html>`_ @PoweRGbg
+* `Open Humans Uploader <../Configuration/OpenHumans.html>`_
+
 Version 2.6.1.4
 ================
 Erscheinungsdatum: 04.05.2020
@@ -20,7 +61,7 @@ Erscheinungsdatum: 04.05.2020
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
------
+----------------------
 * Insight: Vibration bei Bolus deaktivieren (Nur Firmware Version 3.x) - zweiter Versuch
 * Sonst identisch mit 2.6.1.3. Update ist optional. 
 

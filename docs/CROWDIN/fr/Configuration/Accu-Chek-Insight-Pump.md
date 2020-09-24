@@ -56,34 +56,44 @@ Vous **ne devez pas activer 'Utiliser toujours les valeurs absolues du basal'** 
 
 Si vous avez besoin d'utiliser autotune, la seule solution pour le moment est de **désactiver la synchronisation** avec Nightscout. Dans AAPS, allez dans Paramètres / NSClient / Paramètres Avancés et activez ‘Remonter uniquement vers NS (sync désactivée)‘.
 
-![Copie d'écran paramètres Insight](../images/Insight_pairing_V2_5.png)
+![Copie d'écran paramètres Insight](../images/Insight_settings.png)
 
 Dans les paramètres Insight d'AndroidAPS, vous pouvez activer les options suivantes :
 
 * "Enreg. changement de réservoir": ajoute automatiquement le changement de réservoire quand vous effectuez "Remplir tubulure" sur la pompe.
+
 * "Enreg. changement de tubulure": ajoute une note dans la base de données AndroidAPS quand vous exécutez "Remplir tubulure" sur la pompe.
+
 * "Enreg. changement de site": ajoute une note dans la base de données AndroidAPS lorsque vous exécutez "Remplir canule" sur la pompe. Remarque: Une modification de canule réinitialise également Autosens. **Remarque : un changement de site réinitialise également Autosens.**
-* "Enreg. changements de pile" : Ceci enregistre un changement de pile quand vous en mettez une nouvelle dans la pompe.
+
+* "Enreg. changements de batterie" : Ceci enregistre un changement de pile quand vous en mettez une nouvelle dans la pompe.
+
 * "Enreg. changement mode de fonctionnement" : ajoute une note dans la base de données AndroidAPS quand vous démarrez, arrêtez ou mettez en pause la pompe.
+
 * "Enreg. alertes" : ajoute une note dans la base de données AndroidAPS chaque fois que la pompe émet une alerte (sauf les rappels, annulations de bolus et annulations de DBT - ceux-ci ne sont pas enregistrés).
+
 * "Activer l'émulation de DBT": La pompe Insight ne faire des débits de base temporaires (DBT) que jusqu'à 250%. Pour contourner cette restriction, l'émulation DBT demandera à la pompe de fournir un bolus étendu pour l'insuline supplémentaire si vous demandez un DBT supérieur à 250%.
     
     **Remarque : n'utilisez qu'un seul bolus étendu à la fois car plusieurs bolus étendus en même temps peuvent provoquer des erreurs.**
 
-* "Durée min./max. de récupération [s]": définit les durées d'attente d'AndroidAPS avant d'essayer à nouveau après une tentative de connexion échouée. Vous pouvez choisir entre 0 et 20 secondes. Si vous rencontrez des problèmes de connexion, choisissez un temps d'attente plus long.   
+* "Disable vibrations on manual bolus delivery": This disables the Insight pump's vibrations when delivering a manual bolus (or extended bolus). This setting is available only with the latest version of Insight firmware (3.x).
+
+* "Disable vibrations on automated bolus delivery": This disables the Insight pump's vibrations when delivering an automatic bolus (SMB or Temp basal with TBR emulation). This setting is available only with the latest version of Insight firmware (3.x).
+
+* "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
       
-    Exemple pour durée min. de récupération = 5 et durée max. de récupération = 20   
+    Example for min. recovery duration = 5 and max. recovery duration = 20   
       
-    aucune connexion -> attendre **5** sec.   
-    réessayer -> aucune connexion -> attendre **6** sec.   
-    réessayer -> aucune connexion -> attendre **7** sec.   
-    réessayer -> aucune connexion -> attendre **8** sec.   
+    no connection -> wait **5** sec.   
+    retry -> no connection -> wait **6** sec.   
+    retry -> no connection -> wait **7** sec.   
+    retry -> no connection -> wait **8** sec.   
     ...   
-    réessayer -> aucune connexion -> attendre **20** sec.   
-    réessayer -> aucune connexion -> attendre **20** sec.   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
-* "Délai de déconnexion": indique combien de temps (en secondes) AndroidAPS attendra avant de se déconnecter de la pompe une fois l'opération terminée. La valeur par défaut est de 5 secondes.
+* "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
 
 Pendant les périodes où la pompe est débranchée, AAPS va enregistrer un débit de basal temporaire avec 0%.
 
