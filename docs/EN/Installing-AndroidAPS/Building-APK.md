@@ -144,7 +144,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 * Do not click "Background" while repository is cloned!
 
-   ![Clone repository - no background action](../images/AndroidStudio_Background.PNG)
+   ![No background action](../images/AndroidStudio_NoBackground.png)
 
 * After repository is cloned successfully open your local copy by clicking "Yes".
 
