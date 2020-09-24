@@ -17,7 +17,7 @@ Version 2.7.0
 ================
 Date de sortie : 24-09-2020
 
-Le dossier github à été déplacé vers https://github.com/nightscout/AndroidAPS. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
+Le dossier github à été déplacé vers https://github.com/nightscout/AndroidAPS. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un `nouveau clone <../Installing-AndroidAPS/Building-APK.html>`_.
 
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk. La version du plugin Gradle doit être 3.6.4 et la Version de Gradle 5.6.4.
 
@@ -31,9 +31,9 @@ Nouvelles fonctionnalités majeures
 * utilisation de modules pour les pompes Dana @MilosKozak
 * `nouvelle mise en page, selection de thème <../Getting-Started/Screenshots.html>`_ @MilosKozak
 * nouvelle `mise en page des voyants d'états <../Configuration/Preferences.html#voyants-d-etat>`_ @MilosKozak
-* `multiple graphs support <../Getting-Started/Screenshots.html#section-f---main-graph>`_ @MilosKozak
+* `support de graphiques multiples <../Getting-Started/Screenshots.html#section-f---graphique-principal>`_ @MilosKozak
 * `Assistant Profil <../Configuration/profilehelper.html>`_ @MilosKozak
-* visualization of `dynamic target adjustment <../Getting-Started/Screenshots.html#visualization-of-dynamic-target-adjustment>`_ @Tornado-Tim
+* visualisation du `réglage dynamique de la cible <../Getting-Started/Screenshots.html#visualisation-de-l-ajustement-dynamique-de-la-cible>`_ @Tornado-Tim
 * nouvelle `mise en page des préférences <../Configuration/Preferences.html>`_ @MilosKozak
 * Mise à jour de l'algorithme SMB @Tornado-Tim
 * `Mode Arrêt Glycémie Basse <../Configuration/Preferences.html#mode-aps>`_ @Tornado-Tim
