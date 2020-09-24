@@ -19,30 +19,30 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
     ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
     
 
-* Current profile is displayed in the left bar.
-* Long press profile bar to view profile details or to [switch between different profiles](../Usage/Profiles#profile-switch).
-* If profile switch was made with duration remaining time in minutes is shown in brackets.
+* Le profil actuel est affiché dans la barre de gauche.
+* Un appui long sur la bar de profil permet de voir le détail du profil ou de [changer de profil](../Usage/Profiles#changement-de-profil).
+* Si le changement de profil a été effectué avec une durée, le temps restant en minutes est indiqué entre parenthèses.
 
 #### Cible
 
     ![Temp target remaining duration](../images/Home2020_TT.png)
     
 
-* Current target blood glucose level is displayed in the right bar.
-* Long press target bar to set a [temporary target](../Usage/temptarget.md).
-* If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
+* La cible de glycémie actuelle est affichée dans la barre de droite.
+* Un appui long sur la barre de cible permet de définir une [cible temporaire](../Usage/temptarget.md).
+* Si une cible temporaire est définie, la barre devient jaune et le temps restant en minutes est affiché entre parenthèses.
 
 #### Visualisation de l'ajustement dynamique de la cible
 
     ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
     
 
-* AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
-* Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
+* AAPS peut ajuster dynamiquement votre cible en fonction de la sensibilité si vous utilisez l'algorithme SMB.
+* Activez soit une, soit les deux [options suivantes](../Configuration/Preferences#parametres-openaps-smb) 
    * "sensibilité augmente la cible" et/ou 
    * "la résistance diminue la cible" 
-* If AAPS detects resistance or sensitivity the target will change from what is set from profile. 
-* When it alters the target glucose background will change to green.
+* Si AAPS détecte une résistance ou une sensibilité, la cible change en fonction de ce qui est défini dans le profil. 
+* Lorsqu'il modifie la cible glycémique, l'arrière-plan passe en vert.
 
 ### Section C - Gly & état de la boucle
 
@@ -59,17 +59,17 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 ![État de la boucle](../images/Home2020_LoopStatus.png)
 
-* A new icon shows loop status:
+* Une nouvelle icône affiche l'état de la boucle:
    
-   * green circle = loop running
-   * green circle with dotted line = [low glucose suspend (LGS)](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
-   * red circled = loop disabled (not working permanently)
-   * yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-   * grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-   * Orange circle = super bolus running - remaining time is shown below icon
-   * blue circle with dotted line = open loop
+   * cercle vert = boucle fermée en cours d'exécution
+   * cercle vert avec des pointillés = [arrêt glycémie basse (AGB)](../Usage/Objectives#objectif-6-demarrage-de-la-boucle-fermee-avec-le-systeme-agb-arret-pour-glycemie-basse)
+   * cercle rouge = boucle désactivée (ne fonctionne pas de façon permanente)
+   * cercle jaune = boucle suspendue (temporairement en pause, mais l'insuline basale sera délivrée) - le temps restant est affiché sous l'icône
+   * cercle gris = pompe déconnectée (temporairement aucune insuline n'est délivrée) - le temps restant est affiché sous l'icône
+   * cercle orange = super bolus en cours - le temps restant est affiché sous l'icône
+   * cercle bleu avec pointillés = boucle ouverte
 
-* Long press the icon to open the menu to disable, suspend, re enable loop or disconnect / reconnect pump.
+* Faites un appui long sur l'icône pour ouvrir le menu permettant de désactiver, suspendre, réactiver la boucle ou déconnecter / reconnecter la pompe.
    
    ![Menu état de la boucle](../images/Home2020_LoopStatusMenu.png)
 
@@ -77,15 +77,15 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 ![Section D](../images/Home2020_TBR.png)
 
-* Syringe: insulin on board (IOB) - amount of active insulin inside your body
+* Seringue : insuline active (IA) - quantité d'insuline active à l'intérieur de votre corps
    
    * Le chiffre de l’insuline active serait à 0 s’il n’y avait que votre basal standard en cours et qu’il ne restait plus d’insuline active d’un précédent bolus. 
-   * IOB may be negative if there have recently been periods of reduced basal.
+   * L'IA peut être négative s’il y a eu récemment des périodes de basal réduit.
 
-* Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
+* Grain de blé : [glucides actifs (GA)](../Usage/COB-calculation.rst) - glucides précédemment mangés et non encore absorbés -> l'icône clignotte (orange/rouge) si des glucides sont requis
 
-* Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%)
-* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features#autosens) status (enabled or disabled) and value is shown below icon
+* Ligne violette : débits de basal - les changements d'icône reflétant les changements des débits de base temporaires (plat à 100%)
+* Flèches haut & bas : indique le statut [autosens](../Usage/Open-APS-features#autosens) (activé ou désactivé) et la valeur est affichée sous l'icône
 
 #### Glucides requis
 
