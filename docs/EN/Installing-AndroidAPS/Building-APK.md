@@ -125,23 +125,22 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 ## Download AndroidAPS code
 
 * **If you haven't already rebooted your computer after setting git path in preferences do it now. System environment must be updated.**
-* On the Android Studio welcome screen click the small triangle right of "Check out project from version control" (1.).
-* Select "Git" (2.).
 
-![Check out project from version control from welcome screen](../images/AndroidStudio361_12.png)
+* There are two options to start a new project:
 
-* If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.) > Git (4.).
+   * On the Android Studio welcome screen click "Get from version control"
 
-![Check out project from version control within Android Studio](../images/AndroidStudio361_13.png)
+      ![Check out project from version control from welcome screen](../images/AndroidStudio_GetFromVersionControl.PNG)
 
-* Fill in the URL to the main AndroidAPS repository ("https://github.com/nightscout/AndroidAPS") (1.).
-* Choose the directory where you want to save the cloned code.
-* Click button "Test" (2.).
-* If test cannot be completed successfully check URL, correct and click "Test" again.
-* If URL is entered correctly "Connection successful" (3.) will be shown.
-* Click button "Clone" (4.).
+   * If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.)
 
-![Clone repository](../images/AndroidStudio361_14.png)
+      ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
+
+* Fill in the URL to the main AndroidAPS repository (https://github.com/nightscout/AndroidAPS) (1.).
+* Choose the directory where you want to save the cloned code. (2.)
+* Click button "Clone" (3.).
+
+![Clone repository](../images/AndroidStudio_NewURL.PNG)
 
 * Do not click "Background" while repository is cloned!
 
