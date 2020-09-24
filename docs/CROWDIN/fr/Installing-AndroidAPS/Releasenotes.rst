@@ -46,7 +46,7 @@ Nouvelles fonctionnalités majeures
 * petits correctifs Insight @TebbeUbben @MilosKozak
 * option `"Langue par défaut" <../Configuration/Preferences.html#general>`_ @MilosKozak
 * icônes vectorielles @Philoul
-* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phoneandroidaps>`_ @Tornado-Tim
+* `définir une basal temp neutre pour les pompes MDT <../Configuration/MedtronicPump.html#configuration-du-telephone-androidaps>`_ @Tornado-Tim
 * amélioration de l'Historique @MilosKozak
 * suppression de l'algorithme OpenAPS MA @Tornado-Tim
 * suppression de la sensibilité Oref0 @Tornado-Tim
