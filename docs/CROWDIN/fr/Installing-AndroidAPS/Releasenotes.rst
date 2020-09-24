@@ -51,8 +51,8 @@ Nouvelles fonctionnalités majeures
 * suppression de l'algorithme OpenAPS MA @Tornado-Tim
 * suppression de la sensibilité Oref0 @Tornado-Tim
 * `protection biométrique ou par mot de passe <../Configuration/Preferences.html#protection>`_ pour les paramètres, bolus @MilosKozak
-* `new automation trigger <../Usage/Automation.html>`_ @PoweRGbg
-* `Open Humans uploader <../Configuration/OpenHumans.html>`_
+* `nouveau déclencheur d'automatisation <../Usage/Automation.html>`_ @PoweRGbg
+* `Téléversement Open Humans <../Configuration/OpenHumans.html>`_
 
 Version 2.6.1.4
 ================
