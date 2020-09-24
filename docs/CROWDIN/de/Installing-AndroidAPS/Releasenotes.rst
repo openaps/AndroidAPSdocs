@@ -15,44 +15,44 @@ Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln,
 
 Version 2.7.0
 ================
-Release date: 24-09-2020
+Erscheinungsdatum: 24.09.2020
 
-Repository location changed to https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a new clone.
+Speicherort des Repositories wurde auf https://github.com/nightscout/AndroidAPS geändert. Wenn Du mit git nicht vertraut bist, ist der einfachste Weg zur neuen Version das AndroidAPS -Verzeichnis zu entfernen und die APK-Datei komplett neu zu erstellen.
 
-Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen. Gradle Plugin Version should be 3.6.4 and Gradle Version 5.6.4.
+Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen. Gradle Plugin Version sollte 3.6.4 und Gradle Version 5.6.4 sein.
 
-**Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`_.
+**Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie `hier <../Installing-AndroidAPS/update2_7.html>`_ beschrieben.
 
-You need at least start Objective 11 in order to continue using Automation feature (all previous objectives must be completed otherwise starting Objective 11 is not possible).
+Du musst Objective 11 zumindest gestartet haben, um Automation nutzen zu können. Alle vorherigen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden.
 
 Wichtige neue Funktionen
 ----------------------
-* internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
-* using modules for Dana pumps @MilosKozak
-* `new layout, layout selection <../Getting-Started/Screenshots.html>`_ @MilosKozak
-* new `status lights layout <../Configuration/Preferences.html#status-lights>`_ @MilosKozak
-* `multiple graphs support <../Getting-Started/Screenshots.html#section-f---main-graph>`_ @MilosKozak
-* `Profile helper <../Configuration/profilehelper.html>`_ @MilosKozak
-* visualization of `dynamic target adjustment <../Getting-Started/Screenshots.html#visualization-of-dynamic-target-adjustment>`_ @Tornado-Tim
-* new `preferences layout <../Configuration/Preferences.html>`_ @MilosKozak
-* SMB algorithm update @Tornado-Tim
-* `Low glucose suspend mode <../Configuration/Preferences.html#aps-mode>`_ @Tornado-Tim
-* `carbs required notifications <../Configuration/Preferences.html#carb-required-notification>`_ @twain47 @Tornado-Tim
-* removed Careportal (moved to Actions) @MilosKozak
-* `new encrypted backup format <../Usage/ExportImportSettings.html>`_ @dlvoy
-* `new SMS TOTP authentication <../Children/SMS-Commands.html>`_ @dlvoy
-* `new SMS PUMP CONNECT, DISCONNECT <../Children/SMS-Commands.html#commands>`_ commands @Lexsus
-* better support for tiny basals on Dana pumps @Mackwe
-* small Insight fixes @TebbeUbben @MilosKozak
-* `"Default language" option <../Configuration/Preferences.html#general>`_ @MilosKozak
-* vector icons @Philoul
-* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phoneandroidaps>`_ @Tornado-Tim
-* History browser improvements @MilosKozak
-* removed OpenAPS MA algorithm @Tornado-Tim
-* removed Oref0 sensitivity @Tornado-Tim
-* `Biometric or password protection <..../Configuration/Preferences.html#protection>`_ for settings, bolus @MilosKozak
-* `new automation trigger <../Usage/Automation.html>`_ @PoweRGbg
-* `Open Humans uploader <../Configuration/OpenHumans.html>`_
+* Zahlreiche Code- und Library-Änderungen, Code neu in Kotlin geschrieben @MilosKozak @AdrianLxM
+* Module für Dana Pumpen @MilosKozak
+* `Neues Layout und Layoutauswahl <../Getting-Started/Screenshots.html>`_ @MilosKozak
+* Neues `Status Lights Layout <../Configuration/Preferences.html#status-lights>`_ @MilosKozak
+* `Unterstützung mehrerer Diagramme <../Getting-Started/Screenshots.html#section-f---main-graph>`_ @MilosKozak
+* `Profil Helfer <../Configuration/profilehelper.html>`_ @MilosKozak
+* Visualisierung der `dynamischen Ziel-Anpassung <../Getting-Started/Screenshots.html#visualization-of-dynamic-target-adjustment>`_ @Tornado-Tim
+* Neues `Layout für die Einstellungen <../Configuration/Preferences.html>`_ @MilosKozak
+* Update des SMB Algorithmus @Tornado-Tim
+* `Low glucose Suspend (Reduzierung der Baslarate bei niedrigen Glukosewerten) Modus <../Configuration/Preferences.html#aps-mode>`_ @Tornado-Tim
+* `Benachrichtigung Kohlenhydrate benötigt <../Configuration/Preferences.html#carb-required-notification>`_ @twain47 @Tornado-Tim
+* Careportal entfernt (jetzt im Aktionen-Tab/Menü) @MilosKozak
+* `Neues, verschlüsseltes Exportformat <../Usage/ExportImportSettings.html>`_ @dlvoy
+* `Neue SMS Authentifikation mit Einmalpasswort <../Children/SMS-Commands.html>`_ @dlvoy
+* `Neue SMS Befehle zum Verbinden und Trennen der Pumpe <../Children/SMS-Commands.html#commands>`_ @Lexsus
+* Bessere Unterstützung niedriger Basalraten bei Dana Pumpen @Mackwe
+* Small Fehlerbehebungen für Insight Pumpen @TebbeUbben @MilosKozak
+* `Option "Standardsprache" <../Configuration/Preferences.html#general>`_ @MilosKozak
+* Vector Icons @Philoul
+* `Neutrale Temps für Medtronic Pumpen <../Configuration/MedtronicPump.html#configuration-of-phoneandroidaps>`_ @Tornado-Tim
+* Verbesserung Historie @MilosKozak
+* OpenAPS MA Algorithmus entfernt @Tornado-Tim
+* Oref0 Sensitivität entfernt @Tornado-Tim
+* `Biometrischer oder Password-Schutz <..../Configuration/Preferences.html#protection>`_ ffür Einstellungen und Bolus @MilosKozak
+* `Neuer Automation Trigger <../Usage/Automation.html>`_ @PoweRGbg
+* `Open Humans Uploader <../Configuration/OpenHumans.html>`_
 
 Version 2.6.1.4
 ================
