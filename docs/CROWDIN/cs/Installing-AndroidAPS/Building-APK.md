@@ -123,23 +123,23 @@ Na úvodní obrazovce aplikace Android Studio klepněte na malý trojúhelník (
 ## Stáhněte si kód AndroidAPS
 
 * **If you haven't already rebooted your computer after setting git path in preferences do it now. System environment must be updated.**
-* On the Android Studio welcome screen click the small triangle right of "Check out project from version control" (1.).
-* Select "Git" (2.).
 
-![Check out project from version control from welcome screen](../images/AndroidStudio361_12.png)
+* There are two options to start a new project:
+    
+    * On the Android Studio welcome screen click "Get from version control"
+        
+        ![Check out project from version control from welcome screen](../images/AndroidStudio_GetFromVersionControl.PNG)
+    
+    * If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.)
+        
+        ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
 
-* If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.) > Git (4.).
+* Fill in the URL to the main AndroidAPS repository (https://github.com/nightscout/AndroidAPS) (1.).
 
-![Check out project from version control within Android Studio](../images/AndroidStudio361_13.png)
+* Choose the directory where you want to save the cloned code. (2.)
+* Click button "Clone" (3.).
 
-* Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") (1.).
-* Choose the directory where you want to save the cloned code.
-* Click button "Test" (2.).
-* If test cannot be completed successfully check URL, correct and click "Test" again.
-* If URL is entered correctly "Connection successful" (3.) will be shown.
-* Click button "Clone" (4.).
-
-![Clone repository](../images/AndroidStudio361_14.png)
+![Clone repository](../images/AndroidStudio_NewURL.PNG)
 
 * Do not click "Background" while repository is cloned!
 
@@ -189,14 +189,14 @@ Na úvodní obrazovce aplikace Android Studio klepněte na malý trojúhelník (
 
 ![Finish SDK installation](../images/AndroidStudio361_25.png)
 
-* Android Studio might recommend to update the gradle system. **Nikdy neaktualizujte gradle!** Mohlo by to vše zkomplikovat!
+* Android Studio might recommend to update the gradle system. **Never update gradle!** This might lead to difficulties!
 * If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1.) and in the dialog box on "Don't remind me again for this project" (2.).
 
 ![No cradle update](../images/AndroidStudio361_26.png)
 
 ## Vytvořte podepsaný soubor APK
 
-Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. To je nezbytné, protože Android má pravidlo, že z bezpečnostních důvodů přijme pouze podepsaný kód. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
 
@@ -209,7 +209,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 * Make sure that module is set to "app" (1.).
 * Click "Create new..." (2.) to start creating your key store.
     
-    A key store in this case is nothing more than a file in which the information for signing is stored. Je zašifrované a údaje jsou zabezpečené hesly.
+    A key store in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords.
 
 ![Create key store](../images/AndroidStudio361_29.png)
 
@@ -224,7 +224,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 * First and last name must be entered (10.). All other information is optional.
 * Click "OK" (11.) when you are done.
 
-![Cesta k úložišti klíčů](../images/AndroidStudio361_30.png)
+![Key store path](../images/AndroidStudio361_30.png)
 
 * Make sure the box to remember passwords is checked (1.). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AndroidAPS version).
 * Click "Next" (2.).
@@ -259,7 +259,7 @@ On your phone you have to allow installation from unknown sources. Manuals how t
 
 ## Možnost „Identify receiver“ při používání xDripu+
 
-[Viz stránka xDrip+](../Configuration/xdrip#identify-receiver)
+[See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
 ## Poradce při potížích
 
