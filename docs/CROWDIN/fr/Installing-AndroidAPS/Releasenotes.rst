@@ -41,7 +41,7 @@ Nouvelles fonctionnalités majeures
 * Careportal supprimé (déplacé vers Actions) @MilosKozak
 * `nouveau format chiffré des sauvegardes <../Usage/ExportImportSettings.html>`_ @dlvoy
 * `nouvelle authentication SMS TOTP <../Children/SMS-Commands.html>`_ @dlvoy
-* `nouvelles commandes SMS PUMP CONNECT, DISCONNECT <../Children/SMS-Commands.html#commandes>`_ @Lexsus
+* `nouvelles commandes SMS PUMP CONNECT, DISCONNECT <../Children/SMS-Commands.html#autres>`_ @Lexsus
 * meilleure prise en charge des petits débits de basale sur les pompes Dana @Mackwe
 * petits correctifs Insight @TebbeUbben @MilosKozak
 * option `"Langue par défaut" <../Configuration/Preferences.html#general>`_ @MilosKozak
