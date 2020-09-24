@@ -36,12 +36,12 @@ Nouvelles fonctionnalités majeures
 * visualization of `dynamic target adjustment <../Getting-Started/Screenshots.html#visualization-of-dynamic-target-adjustment>`_ @Tornado-Tim
 * nouvelle `mise en page des préférences <../Configuration/Preferences.html>`_ @MilosKozak
 * Mise à jour de l'algorithme SMB @Tornado-Tim
-* `Low glucose suspend mode <../Configuration/Preferences.html#aps-mode>`_ @Tornado-Tim
-* `carbs required notifications <../Configuration/Preferences.html#carb-required-notification>`_ @twain47 @Tornado-Tim
-* removed Careportal (moved to Actions) @MilosKozak
-* `new encrypted backup format <../Usage/ExportImportSettings.html>`_ @dlvoy
-* `new SMS TOTP authentication <../Children/SMS-Commands.html>`_ @dlvoy
-* `new SMS PUMP CONNECT, DISCONNECT <../Children/SMS-Commands.html#commands>`_ commands @Lexsus
+* `Mode Arrêt Glycémie Basse <../Configuration/Preferences.html#mode-aps>`_ @Tornado-Tim
+* `notifications glucides requis <../Configuration/Preferences.html#notification-glucides-requis>`_ @twain47 @Tornado-Tim
+* Careportal supprimé (déplacé vers Actions) @MilosKozak
+* `nouveau format chiffré des sauvegardes <../Usage/ExportImportSettings.html>`_ @dlvoy
+* `nouvelle authentication SMS TOTP <../Children/SMS-Commands.html>`_ @dlvoy
+* `nouvelles commandes SMS PUMP CONNECT, DISCONNECT <../Children/SMS-Commands.html#commandes>`_ @Lexsus
 * better support for tiny basals on Dana pumps @Mackwe
 * small Insight fixes @TebbeUbben @MilosKozak
 * `"Default language" option <../Configuration/Preferences.html#general>`_ @MilosKozak
