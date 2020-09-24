@@ -42,15 +42,15 @@ Nouvelles fonctionnalités majeures
 * `nouveau format chiffré des sauvegardes <../Usage/ExportImportSettings.html>`_ @dlvoy
 * `nouvelle authentication SMS TOTP <../Children/SMS-Commands.html>`_ @dlvoy
 * `nouvelles commandes SMS PUMP CONNECT, DISCONNECT <../Children/SMS-Commands.html#commandes>`_ @Lexsus
-* better support for tiny basals on Dana pumps @Mackwe
-* small Insight fixes @TebbeUbben @MilosKozak
-* `"Default language" option <../Configuration/Preferences.html#general>`_ @MilosKozak
+* meilleure prise en charge des petits débits de basale sur les pompes Dana @Mackwe
+* petits correctifs Insight @TebbeUbben @MilosKozak
+* option `"Langue par défaut" <../Configuration/Preferences.html#general>`_ @MilosKozak
 * icônes vectorielles @Philoul
 * `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phoneandroidaps>`_ @Tornado-Tim
-* History browser improvements @MilosKozak
-* removed OpenAPS MA algorithm @Tornado-Tim
-* removed Oref0 sensitivity @Tornado-Tim
-* `Biometric or password protection <..../Configuration/Preferences.html#protection>`_ for settings, bolus @MilosKozak
+* amélioration de l'Historique @MilosKozak
+* suppression de l'algorithme OpenAPS MA @Tornado-Tim
+* suppression de la sensibilité Oref0 @Tornado-Tim
+* `protection biométrique ou par mot de passe <../Configuration/Preferences.html#protection>`_ pour les paramètres, bolus @MilosKozak
 * `new automation trigger <../Usage/Automation.html>`_ @PoweRGbg
 * `Open Humans uploader <../Configuration/OpenHumans.html>`_
 
