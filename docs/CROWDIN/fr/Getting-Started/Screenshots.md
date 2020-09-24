@@ -8,9 +8,9 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 ### Section A - Onglets
 
-* Navigate between the various AndroidAPS modules.
-* Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder#tab-or-hamburger-menu).
+* Permet de naviguer entre les différents modules AndroidAPS.
+* Vous pouvez également changer d'écrans en glissant vers la gauche ou la droite.
+* Les onglets affichés peuvent être sélectionnés dans le [Générateur de configuration](../Configuration/Config-Builder#onglet-ou-menu-hamburger).
 
 ### Section B - Profil & cible
 
