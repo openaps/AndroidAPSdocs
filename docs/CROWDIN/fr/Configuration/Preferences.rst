@@ -294,7 +294,7 @@ Paramètres OpenAPS SMB
   .. image:: ../images/Home2020_DynamicTargetAdjustment.png
     :alt: Target modified by autosens
   
-Carb required notification
+Notification glucides requis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * This feature is only available if SMB algorithm is selected.
 * Eating of additional carbs will be suggested when the reference design detects that it requires carbs.
@@ -304,7 +304,7 @@ Carb required notification
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
   .. image:: ../images/Pref2020_CarbsRequired.png
-    :alt: Display carbs required on home screen
+    :alt: Afficher les glucides requis sur l'écran d'accueil
   
 Paramètres Avancés
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
