@@ -158,7 +158,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
    ![Firewall permission java](../images/AndroidStudio361_18.png)
 
-* Once the background tasks are finished you will probably see the following error message:
+* Once the background tasks are finished you will probably see the following error message: 
 
    ![SDK licence](../images/AndroidStudio361_19.png)
 
