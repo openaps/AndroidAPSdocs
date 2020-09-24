@@ -122,81 +122,81 @@ En la pantalla de bienvenida de Android Studio, haga clic en el triángulo peque
 
 ## Descargar código de AndroidAPS
 
-* **Si aún no ha reiniciado su equipo después de configurar la ruta de git en las preferencias, hágalo ahora. El entorno del sistema debe actualizarse.**
-* En la pantalla de bienvenida de Android Studio haz clic en el triángulo pequeño a la derecha de "Revisar proyecto desde el control de versión" (1.).
-* Seleccione "Git" (2.).
+* **If you haven't already rebooted your computer after setting git path in preferences do it now. System environment must be updated.**
 
-![Revisa el proyecto desde el control de versiones desde la pantalla de bienvenida](../images/AndroidStudio361_12.png)
+* There are two options to start a new project:
+    
+    * On the Android Studio welcome screen click "Get from version control"
+        
+        ![Check out project from version control from welcome screen](../images/AndroidStudio_GetFromVersionControl.PNG)
+    
+    * If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.)
+        
+        ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
 
-* If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.) > Git (4.).
+* Fill in the URL to the main AndroidAPS repository (https://github.com/nightscout/AndroidAPS) (1.).
 
-![Check out project from version control within Android Studio](../images/AndroidStudio361_13.png)
+* Choose the directory where you want to save the cloned code. (2.)
+* Click button "Clone" (3.).
 
-* Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") (1.).
-* Elija el directorio en el que desea guardar el código clonado.
-* Haga clic en el botón "Test" (2.).
-* Si la prueba no se puede completar correctamente, compruebe el URL, corrija y haga clic en "Probar" de nuevo.
-* Si el URL se especifica correctamente "Conexión satisfactoria" (3.) se mostrará.
-* Haga clic en el botón "Clonar" (4.).
-
-![Clonar repositorio](../images/AndroidStudio361_14.png)
+![Clone repository](../images/AndroidStudio_NewURL.PNG)
 
 * Do not click "Background" while repository is cloned!
 
-![Clonar repositorio - no hay ninguna acción en segundo plano](../images/AndroidStudio361_15.png)
+![Clone repository - no background action](../images/AndroidStudio361_15.png)
 
 * After repository is cloned successfully open your local copy by clicking "Yes".
 
-![Abrir repositorio](../images/AndroidStudio361_16.png)
+![Open repository](../images/AndroidStudio361_16.png)
 
 * In the lower right corner you will see the information that Android Studio is running background tasks.
 
-![Tareas en segundo plano](../images/AndroidStudio361_17.png)
+![Background tasks](../images/AndroidStudio361_17.png)
 
 * Grant access if your firewall is asking for permission.
 
-![Permiso de cortafuegos java](../images/AndroidStudio361_18.png)
+![Firewall permission java](../images/AndroidStudio361_18.png)
 
 * Once the background tasks are finished you will probably see the following error message:
 
-![Licencia SDK](../images/AndroidStudio361_19.png)
+![SDK licence](../images/AndroidStudio361_19.png)
 
 ## Descargar Android SDK
 
-* Haga clic en Archivo > Configuración.
+* Click File > Settings.
 
-![Abrir ajustes](../images/AndroidStudio361_20.png)
+![Open settings](../images/AndroidStudio361_20.png)
 
 * Click the small triangle next to Appearance & Behaviour (1.).
 * Click the small triangle next to System Settings (2.) and select Android SDK (3.)
 * Check the box left of "Android 9.0 (Pie)" (4.) (API Level 28).
 
-![Ajustes de SDK](../images/AndroidStudio361_21.png)
+![SDK settings](../images/AndroidStudio361_21.png)
 
-* Confirme los cambios pulsando Aceptar.
+* Confirm changes by clicking OK.
 
-![Confirmar cambios de SDK](../images/AndroidStudio361_22.png)
+![Confirm SDK changes](../images/AndroidStudio361_22.png)
 
-* Acepte el acuerdo de licencia (1.) y haga clic en "Next" (2.).
+* Accept licence agreement (1.) and click "Next" (2.).
 
-![Aceptar licencia SDK](../images/AndroidStudio361_23.png)
+![Accept SDK licence](../images/AndroidStudio361_23.png)
 
-* Espere hasta que termine la instalación.
+* Wait until installation is finished.
 
-![Espere durante la instalación de SDK](../images/AndroidStudio361_24.png)
+![Wait during SDK installation](../images/AndroidStudio361_24.png)
 
-* Cuando se complete la instalación de SDK el botón "Finalizar" se volverá azul. Pulse el botón.
+* When SDK installation is completed the "Finish" button will turn blue. Click this button.
 
-![Finalizar la instalación del SDK](../images/AndroidStudio361_25.png)
+![Finish SDK installation](../images/AndroidStudio361_25.png)
 
-* Android Studio might recommend to update the gradle system. **Nunca actualice gradle! ** Esto podría llevar a dificultades!
+* Android Studio might recommend to update the gradle system. **Never update gradle!** This might lead to difficulties!
 * If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1.) and in the dialog box on "Don't remind me again for this project" (2.).
 
 ![No cradle update](../images/AndroidStudio361_26.png)
 
 ## Generar APK firmado
 
-Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. Esto es necesario porque Android tiene una regla que sólo acepta el código firmado para ejecutarse por razones de seguridad. Para obtener más información sobre este tema, siga [este enlace](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
 
@@ -209,7 +209,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 * Make sure that module is set to "app" (1.).
 * Click "Create new..." (2.) to start creating your key store.
     
-    A key store in this case is nothing more than a file in which the information for signing is stored. Está encriptado y la información está protegida con contraseñas.
+    A key store in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords.
 
 ![Create key store](../images/AndroidStudio361_29.png)
 
@@ -224,12 +224,12 @@ Signing means that you indicate your app to be your own creation but in a digita
 * First and last name must be entered (10.). All other information is optional.
 * Click "OK" (11.) when you are done.
 
-![Ruta de almacén de claves](../images/AndroidStudio361_30.png)
+![Key store path](../images/AndroidStudio361_30.png)
 
 * Make sure the box to remember passwords is checked (1.). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AndroidAPS version).
-* Haga clic en "Next" (2.).
+* Click "Next" (2.).
 
-![Recordar contraseñas](../images/AndroidStudio361_31.png)
+![Remember passwords](../images/AndroidStudio361_31.png)
 
 * Seleccione la variante de compilación "fullRelease" (1.). 
 * Marque las casillas V1 y V2 para las versiones de firma (2.).
