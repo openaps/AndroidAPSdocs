@@ -48,12 +48,12 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 #### Glycémie actuelle
 
-* Latest blood glucose reading from your CGM is shown on the left side.
-* Color of the BG value reflects the status to the defined [range](../Configuration/Preferences#range-for-visualization). 
-   * green = in range
-   * red = below range
-   * yellow = above range
-* The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
+* La dernière glycémie reçue de votre MGC est affichée sur le côté gauche.
+* La couleur de la glycémie reflète sa position par rapport à la [fourchette](../Configuration/Preferences#fourchette-de-visualisation) définie. 
+   * vert = dans la fourchette
+   * rouge = en dessous de la fourchette
+   * jaune = au-dessus de la fourchette
+* Le bloc gris du milieu affiche les minutes depuis la dernière lecture et les variations depuis la dernière lecture ainsi que depuis les 15 et 40 dernières minutes.
 
 #### État de la boucle
 
