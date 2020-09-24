@@ -1,69 +1,69 @@
-Necessary checks after update to AndroidAPS 2.7
+Notwendige Überprüfungen nach Aktualisierung auf AndroidAPS 2.7
 ***********************************************************
 
-* The program code was changed significantly when switching to AAPS 2.7. 
-* Therefore it is important that you make some changes or check settings after the update.
-* Please see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-270>`_ for details on new and extended features.
+* Der Programmcode wurde bei der Umstellung auf AAPS 2.7 deutlich verändert. 
+* Daher ist es wichtig, dass Du einige Änderungen vornimmst oder Einstellungen nach der Aktualisierung überprüfst.
+* In den `Release Notes <../Installing-AndroidAPS/Releasenotes.html#version-270>`_ findest Du Details zu allen neuen und verbesserten Funktionen.
 
-Check BG source
+Prüfe die BZ-Quelle
 -----------------------------------------------------------
-* Check if BG source is correct after update.
-* Especially when using `xDrip+ <../Configuration/xdrip.html>`_ it might happen, that BG source is changed to Dexcom app (patched).
-* Open `Config builder <../Configuration/Config-Builder.html#bg-source>`_ (hamburger menu on top left side of home screen)
-* Scroll down to "BG source".
-* Select correct BG source if changes are necessary.
+* Prüfe, ob Deine BZ-Quelle nach dem Update noch richtig eingestellt ist.
+* Wenn Du z.B. `xDrip+ <../Configuration/xdrip.html>`_ nutzt, kann es passieren, dass die BZ-Quelle auf die gepatchte Dexcom App geändert wird.
+* Öffne den `Konfigurations-Generator <../Configuration/Config-Builder.htmll#bz-quelle>`_ (Hamburger Menü oben links)
+* Scrolle nach unten zu "BZ-Quelle".
+* Ändere bei Bedarf die BZ-Quelle.
 
 .. image:: ../images/ConfBuild_BG.png
-  :alt: BG source
+  :alt: BZ-Quelle
 
-Finish exam
+Prüfung abschließen
 -----------------------------------------------------------
-* AAPS 2.7 contains new objective 11 for `automation <../Usage/Automation.html>`_.
-* You have to finish exam (`objective 3 and 4 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_) in order to complete `objective 11 <../Usage/Objectives.html#objective-11-automation>`_.
+* AAPS 2.7 hat ein neues Objective 11 für `Automatisierung <../Usage/Automation.html>`_ bekommen.
+* Du musst die Prüfung erfolgreich beenden (`Objectives 3 und 4 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_), um `Objective 11 <../Usage/Objectives.html#objective-11-automation>`_ starten zu können.
 
-Set master password
+Master-Passwort festlegen
 -----------------------------------------------------------
-* Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
-* Open Preferences (three-dot-menu on top right of home screen)
-* Click triangle below "General"
-* Click "Master-Password"
-* Enter password, confirm password and click ok.
+* Die `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ sind ab Version 2.7 verschlüsselt.
+* Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
+* Klicke das Dreieck neben "Allgemein".
+* Klicke auf "Master-Passwort".
+* Gib ein Passwort ein, bestätige es und klicke auf OK.
 
 .. image:: ../images/MasterPW.png
-  :alt: Set master password
+  :alt: Master-Password festlegen
   
 Exportiere die Einstellungen
 -----------------------------------------------------------
-* AAPS 2.7 uses a new encrypted backup format. 
-* You must `export your settings <../Usage/ExportImportSettings.html>`_ after updating to version 2.7.
-* Settings files from previous versions **cannot** be used in AAPS 2.7 and onwards anymore.
-* Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
+* AAPS 2.7 verwendet ein neues verschlüsseltes Backup-Format. 
+* Du musst daher nach dem Update auf Version 2.7 `Deine Einstellungen exportieren <../Usage/ExportImportSettings.html>`_.
+* Einstellungen aus früheren Versionen **können nicht** mit AAPS 2.7 und höher verwendet werden.
+* Speichere Deine exportierten Einstellungen nicht nur auf Deinem Smartphone, sondern auch an mindestens einem sicheren Ort (PC, Cloud-Speicher ...).
 
-Autosens (Hint - no action necessary)
+Autosens (Hinweis - keine Maßnahmen erforderlich)
 -----------------------------------------------------------
-* Autosens is changed to a dynamic switching model which replicates the reference design.
-* Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
-* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
+* Autosens wurde von einem statischen zu einem dynamischen Modell geändert. Dies entspricht auch dem Referenzdesign.
+* Autosens wechselt nun zwischen einem 8-stündigen und 24-stündigen Zeitfenster für die Berechnung der Sensitivität. Dabei wird das empfindlichere Ergebnis verwendet. 
+* Wenn Du bisher oref1 genutzt hast, wirst Du wahrscheinlich bemerken, dass das System weniger dynamisch auf Veränderungen reagiert, da zwischen 8 und 24 Stunden gewechselt wird.
 
-Set Pump Password for Dana RS (if using Dana RS)
+Pumpen-Passwort für Dana RS setzen (wenn Dana RS verwendet wird)
 -----------------------------------------------------------
-* Pump password for `Dana RS <../Configuration/DanaRS-Insulin-Pump.html>`_ was not checked in previous versions.
-* Open Preferences (three-dot-menu on top right of screen)
-* Scroll down and click triangle next to "Dana RS".
-* Click "Pump password (v1 only)"
-* Enter pump password (Default password is 1234) and click OK.
+* Das Pumpen-Passwort der `Dana RS <../Configuration/DanaRS-Insulin-Pump.html>`_ wurde in früheren Versionen nicht geprüft.
+* Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
+* Scrolle nach unten und klicke das Dreieck neben "Dana RS".
+* Klicke auf "Pumpen-Passwort (nur v1)".
+* Gib das Pumpen-Passwort ein (Standardpasswort ist 1234) und klicke auf OK.
 
 .. image:: ../images/DanaRSPW.png
-  :alt: Set Dana RS password
+  :alt: Dana RS Passwort setzen
   
-To change password on Dana RS:
+So änderst Du das Passwort auf der Dana RS:
 
-* Press OK button on pump
-* In main menu select "OPTION" (move right by pressing arrow button several times)
-* In options menu select "USER OPTION"
-* Use arrow button to scroll down to "11. password"
-* Enter old password (Default password is 1234)
-* Set new password (Change numbers with + & - buttons / Move right with arrow button).
-* Confirm with OK button.
-* Save by pressing OK button again.
-* Move down to "14. EXIT" and press OK button.
+* Auf der Pumpe Taste OK drücken.
+* Im Hauptmenü "EINSTELLUNGEN" wählen. (Dazu nach rechts scrollen indem Du mehrfach den Pfeiltaste drückst.)
+* Wähle im Untermenü "ANWENDER MENÜ".
+* Scrolle mit der Pfeiltaste nach unten zu "11. Passwort".
+* Gib das alte Passwort ein (Standard ist 1234).
+* Neues Passwort eingeben. (Ändere die Ziffern mit den + & - Buttons und nutze den Pfeilbutton, um nach rechts zu gehen.)
+* Bestätige mit der OK-Taste.
+* Speichere durch erneutes Drücken der OK-Taste.
+* Scrolle nach unten zu "14. EXIT" und drücke die OK-Taste.
