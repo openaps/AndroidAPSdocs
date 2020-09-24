@@ -53,6 +53,7 @@ Wichtige neue Funktionen
 * `Biometrischer oder Password-Schutz <..../Configuration/Preferences.html#protection>`_ ffür Einstellungen und Bolus @MilosKozak
 * `Neuer Automation Trigger <../Usage/Automation.html>`_ @PoweRGbg
 * `Open Humans Uploader <../Configuration/OpenHumans.html>`_
+* New documentation @Achim
 
 Version 2.6.1.4
 ================
