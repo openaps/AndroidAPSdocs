@@ -104,7 +104,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
    * Cannula age
    * Insulin age (days reservoir is used)
    * Reservoir level (units)
-   * Sensor age
+   * Age Capteur
    * Battery age and level (%)
 * If threshold warning is exceeded, values will be shown in yellow.
 * If threshold critical is exceeded, values will be shown in red.
@@ -186,8 +186,8 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 #### Glucides actifs
 
 * Shows the carbs you have on board (= active, not yet decayed carbs in your body). 
-* Decaying depends on the deviations the algorithm detects. 
-* If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
+* La diminution dépend des écarts que l'algorithme détecte. 
+* S'il détecte une absorption plus élevée de glucides que prévu, de l'insuline sera injectée, ce qui augmentera l'IA (plus ou moins, selon vos paramètres de sécurité). 
 
 #### Déviations
 
@@ -382,7 +382,7 @@ History of the following treatments:
 * Bolus & carbs -> option to [remove entries](..Getting-Started/Screenshots#carb-correction) to correct history
 * [Bolus étendu](../Usage/Extended-Carbs#id1)
 * Temporary basal rate
-* [Temporary target](../Usage/temptarget.md)
+* [Cible temp.](../Usage/temptarget.md)
 * [Changement de profil](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
