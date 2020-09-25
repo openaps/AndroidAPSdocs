@@ -77,65 +77,65 @@ Valandinė bazė
 
 Bolusas
 --------------------------------------------------
-Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
+Per 15 minučių po paskutinio AAPS boluso arba po paskutinės SMS komandos, boluso SMS žinute siųsti neįmanoma. Reikšmę galite pakoreguoti tik įvedę bent du telefonų numerius! Taigi atsakymas priklauso nuo to, kada buvo suleistas paskutinis bolusas.
 
 * BOLUS 1.2
-   * Response A: To deliver bolus 1.2U reply with code Rrt
-   * Response B: Remote bolus not available. Try again later.
+   * Atsakymas A: Norėdami suleisti 1.2 vv bolusą, atsakykite kodu Rrt
+   * Atsakymas B: Nuotolinis bolusas negalimas. Bandykite dar kartą vėliau.
 * BOLUS 0.60 MEAL
-   * If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins).
-   * Response A: To deliver meal bolus 0.60U reply with code Rrt
-   * Response B: Remote bolus not available. 
+   * Valgymo laikinas tikslas nustatomas pasirenkamu parametru MEAL (standartinės vertės yra 90 mg/dL, 5,0 mmol/L 45 minutės).
+   * Atsakymas A: Norėdami suleisti 0.60vv bolusą maistui, atsakykite kodu Rrt
+   * Atsakymas B: Nuotolinis bolusas negalimas. 
 * CARBS 5
-   * Response: To enter 5g at 12:45 reply with code EmF
+   * Atsakymas: Norėdami įvesti 5 g 12:45 atsakyti kodas EmF
 * CARBS 5 17:35/5:35PM
-   * Response: To enter 5g at 17:35 reply with code EmF
+   * Atsakymas: Norėdami įvesti 5 g 17:35 atsakyti kodas EmF
 * EXTENDED STOP/CANCEL
-   * Response: To stop extended bolus reply with code EmF
+   * Atsakymas: Norėdami sustabdyti ištęstinį bolusą, atsakykite kodu EmF
 * EXTENDED 2 120
-   * Response: To start extended bolus 2U for 120 min reply with code EmF
+   * Atsakymas: Norint pradėti ištęstinį bolusą 2 vv 120 min., atsakykite kodu EmF
 
 Profilis
 --------------------------------------------------
 * PROFILE STATUS
-   * Response: Profile1
+   * Atsakymas: Profilis1
 * PROFILE LIST
-   * Response: 1.`Profile1` 2.`Profile2`
+   * Atsakymas: 1.`Profilis1` 2.`Profilis2`
 * PROFILE 1
-   * Response: To switch profile to Profile1 100% reply with code Any
+   * Atsakymas: Norėdami perjungti Profilį 1 100% atsakyti kodu Any
 * PROFILE 2 30
-   * Response: To switch profile to Profile2 30% reply with code Any
+   * Atsakymas: Norėdami perjungti Profilį 2 30% atsakyti kodu Any
 
 Kiti
 --------------------------------------------------
 * TREATMENTS REFRESH
-   * Response: Refresh treatments from NS
+   * Atsakymas: Atnaujinti terapiją iš NS
 * NSCLIENT RESTART
-   * Response: NSCLIENT RESTART 1 receivers
+   * Atsakymas: NSCLIENT RESTART 1 gavėjas
 * PUMP
-   * Response: Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+   * Atsakymas: Paskutinis ryšys: prieš 1 min LT: 0.00U/h @11:38 5/30min AIO: 0.5 U Reservuaras: 34U Baterija: 100
 * SMS DISABLE/STOP
-   * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+   * Atsakymas: Norėdami išjungti SMS Nuotolinį valdymą atsakykite kodu Any. Atminkite, kad nuotolinį valdymą galite suaktyvinti tik AAPS pagrindiniame išmaniajame telefone.
 * TARGET MEAL/ACTIVITY/HYPO   
-   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code Any
+   * Atsakymas: Norėdami nustatyti laikiną tikslą MEAL/ACTIVITY/HYPO atsakykite kodu Any
 * TARGET STOP/CANCEL   
-   * Response: To cancel Temp Target reply with code Any
+   * Atsakymas: Norėdami atšaukti laikiną tikslą, atsakykite su kodu Any
 * HELP
-   * Response: BG, LOOP, TREATMENTS, .....
+   * Atsakymas: BG, LOOP, TREATMENTS, .....
 * HELP BOLUS
-   * Response: BOLUS 1.2 BOLUS 1.2 MEAL
+   * Atsakymas: BOLUS 1.2 BOLUS 1.2 MEAL
 
 Trikčių šalinimas
 ==================================================
-Multiple SMS
+Kelios SMS
 --------------------------------------------------
-If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not uploads treatments to NS. 
+Jei gaunate tą pačią žinutę, vėl ir vėl iš naujo (t. y. profilio pakeitimas) tikriausiai nustatėte nesibaigiantį ciklą su kita programa. Pavyzdžiui, tai galėtų būti xDrip+. Tokiu atveju įsitikinkite, kad xDrip+ (arba kita programa, prijungta prie Nightscout) neįkelia jokių terapijos duomenų. 
 
-If the other app is installed on multiple phones make sure to deactive upload on all of them.
+Jei kita programa įdiegta keliuose telefonuose, turite išjungti visų jų terapijų įkėlimą.
 
 SMS komandos neveikia Samsung telefonuose
 --------------------------------------------------
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+Buvo pranešimų, kad po atnaujinimo Galaxy S10 SMS komandos nustojo veikti. Tai galima išspręsti išjungiant parinktį "Siųsti kaip pokalbio pranešimą“.
 
 .. image:: ../images/SMSdisableChat.png
   :alt: Išjungti SMS kaip pokalbio pranešimą
