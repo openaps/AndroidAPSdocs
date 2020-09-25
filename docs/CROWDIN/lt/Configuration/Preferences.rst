@@ -411,7 +411,7 @@ Select which location service shall be used:
 
 * Use passive location: AAPS only takes locations if other apps are requesting it
 * Use network location: Location of your Wi-Fi
-* Use GPS location (Attention! May cause excessive battery drain!)
+* GPS vieta (Dėmesio! Gali sukelti pernelyg didelį akumuliatoriaus sunaudojimą!)
 
 Local alerts
 ===========================================================
