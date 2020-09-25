@@ -166,10 +166,10 @@ Kiti
 * PUMP DISCONNECT *30*
    * Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
 * SMS DISABLE/STOP
-   * Atsakymas: Norėdami išjungti SMS Nuotolinį valdymą atsakykite kodu Any. Atminkite, kad nuotolinį valdymą galite suaktyvinti tik AAPS pagrindiniame išmaniajame telefone.
+   * Atsakas: Norėdami išjungti SMS nuotolinį valdymą, atsakykite su kodu Any. Atminkite, kad nuotolinį valdymą galite suaktyvinti tik AAPS pagrindiniame išmaniajame telefone.
 * TARGET MEAL/ACTIVITY/HYPO   
    * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
-* TARGET STOP/CANCEL   
+*  TARGET STOP/CANCEL   
    * Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
 * HELP
    * Atsakymas: BG, LOOP, TREATMENTS, .....
