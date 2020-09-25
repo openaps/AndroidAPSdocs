@@ -73,7 +73,7 @@ Valandinė bazė
 * BASAL 30%
    * Atsakymas: Norėdami aktyvuoti 30% laikiną bazę, kurios trukmė 30 min, atsakykite kodu Swe
 * BASAL 30% 50
-   * Response: To start basal 30% for 50 min reply with code Swe
+   * Atsakymas: Norėdami aktyvuoti 30% laikiną bazę, kurios trukmė 50 min, atsakykite kodu Swe
 
 Bolusas
 --------------------------------------------------
@@ -138,4 +138,4 @@ SMS komandos neveikia Samsung telefonuose
 There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
 
 .. image:: ../images/SMSdisableChat.png
-  :alt: Disable SMS as chat message
+  :alt: Išjungti SMS kaip pokalbio pranešimą
