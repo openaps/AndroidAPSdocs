@@ -95,112 +95,112 @@ Android Studio pasisveikinimo ekrane spustelėkite mažą trikampį (1. kitame p
 * Spustelėkite mažą trikampį šalia "Version Control" (1.) norėdami atidaryti sub-meniu.
 * Spustelėkite Git (2.).
 * Įsitikinkite, kad atnaujinimo metodas "Merge" (3.) yra pasirinktas.
-* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
+* Patikrinkite, ar Android Studio automatiškai randa kelią į git.exe, paspaudus mygtuką "Test" (4.)
     
-    ![Android Studio settings](../images/AndroidStudio361_09.png)
+    ![Android Studio nustatymai](../images/AndroidStudio361_09.png)
 
-* If automatic setting is successful git version will be displayed.
+* Jei automatinis nustatymas sėkmingas, git versija bus rodoma.
 
-* Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
+* Spauskite "OK" dialogo lange (1.) ir "OK" nustatymų lange (2.).
     
-    ![Automatic git installation succeeded](../images/AndroidStudio361_10.png)
+    ![Automatinis git instaliavimas pavyko](../images/AndroidStudio361_10.png)
 
-* In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
+* Jei failas git.exe negali būti rastas, spustelėkite "OK" dialogo lange (1.) ir tada mygtuką su trimis taškais (2.).
 
-* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where it can be found. Jūs ieškote git.exe, esančiame \bin\ aplanke.
-* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
-* Close settings window by clicking "OK" button (5.).
+* Naudokite [paieškos funkcija](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) "Windows explorer" rasti "git.exe" jei jūs nežinote, kur jį galima rasti. Jūs ieškote git.exe, esančiame \bin\ aplanke.
+* Pasirinkite kelią į git.exe ir įsitikinkite, kad jūs pasirinkote vieną iš ** \bin\ ** aplankų (3.) ir spustelėkite "OK" (4.).
+* Uždarykite nustatymų langą, paspausdami "OK" mygtuką (5.).
     
-    ![Automatic git installation failed](../images/AndroidStudio361_11.png)
+    ![Automatinis git instaliavimas nepavyko](../images/AndroidStudio361_11.png)
 
-* **Reboot your computer to update system environment.**
+* **Perkraukite kompiuterį, kad atsinaujintų sistemos aplinka.**
 
 ### Mac
 
-* Any git version should work. For example <https://git-scm.com/download/mac>.
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* If you install git via homebrew there is no need to change any preferences. Jei prireiks: Jos gali būti randamos čia: Android Studio - Preferences.
+* Bet kuri git versija turėtų veikti. Pvz., <https://git-scm.com/download/mac>.
+* Naudoti homebrew įdiegti git: ```$ brew install git```.
+* Daugiau informacijos, kaip įdiegti git, žr. [oficialioji git dokumentacija](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Jei įdiegiate git per homebrew, nereikia keisti jokių nuostatų. Jei prireiks: Jos gali būti randamos čia: Android Studio - Preferences.
 
 ## Atsisiųsti AndroidAPS kodą
 
-* **If you haven't already rebooted your computer after setting git path in preferences do it now. System environment must be updated.**
+* **Jei dar neperkrovėte kompiuterio iš naujo, po git.exe kelio nustatymų, padarykite tai dabar. Sistemos aplinka turi būti atnaujinta.**
 
-* There are two options to start a new project:
+* Yra du variantai, kaip pradėti naują projektą:
     
-    * On the Android Studio welcome screen click "Get from version control"
+    * Android Studio pasisveikinimo ekrane spustelėkite "Get from version control"
         
-        ![Check out project from version control from welcome screen](../images/AndroidStudio_GetFromVersionControl.PNG)
+        ![Patikrinti projektą iš Versijos kontrolės pasisveikinimo ekrane](../images/AndroidStudio_GetFromVersionControl.PNG)
     
-    * If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.)
+    * Jei jau atidarėte Android Studio ir nematote pasisveikinimo ekrano, pasirinkite File (1.) > New (2.) > Project from Version Control... (3.)
         
-        ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
+        ![Patikrinti projektą iš Versijos kontrolės Android Studio](../images/AndroidStudio_FileNew.PNG)
 
-* Fill in the URL to the main AndroidAPS repository (https://github.com/nightscout/AndroidAPS) (1.).
+* Įveskite pagrindinio AndroidAPS saugyklos puslapio URL (https://github.com/nightscout/AndroidAPS) (1.).
 
-* Choose the directory where you want to save the cloned code. (2.)
-* Click button "Clone" (3.).
+* Pasirinkite katalogą, kuriame norite išsaugoti klonuotą kodą. (2.)
+* Spustelėkite mygtuką "Clone" (3.).
     
-    ![Clone repository](../images/AndroidStudio_NewURL.PNG)
+    ![Klonuoti saugyklą](../images/AndroidStudio_NewURL.PNG)
 
-* Do not click "Background" while repository is cloned!
+* Nespauskite "Background" (vykdyti fone), o kol duomenų saugykla yra klonuojama!
     
-    ![No background action](../images/AndroidStudio_NoBackground.png)
+    ![Nėra foninio veiksmo](../images/AndroidStudio_NoBackground.png)
 
-* After repository is cloned successfully open your local copy by clicking "Yes".
+* Po duomenų saugyklos sėkmingo klonavimo, atidarykite savo vietinę kopiją, paspausdami "Yes".
     
-    ![Open repository](../images/AndroidStudio361_16.png)
+    ![Atidaryti saugyklą](../images/AndroidStudio361_16.png)
 
-* In the lower right corner you will see the information that Android Studio is running background tasks.
+* Apatiniame dešiniajame kampe pamatysite informaciją, kad Android Studio vykdo fonines užduotis.
     
-    ![Background tasks](../images/AndroidStudio361_17.png)
+    ![Foninis veikimas](../images/AndroidStudio361_17.png)
 
-* Grant access if your firewall is asking for permission.
+* Suteikite prieigą, jei ugniasienė prašo leidimo.
     
-    ![Firewall permission java](../images/AndroidStudio361_18.png)
+    ![Ugniasienės leidimas java](../images/AndroidStudio361_18.png)
 
-* Once the background tasks are finished you will probably see the following error message:
+* Kai foninės užduotys yra baigtos, jūs tikriausiai pamatysite tokį klaidos pranešimą:
     
-    ![SDK licence](../images/AndroidStudio361_19.png)
+    ![SDK licencija](../images/AndroidStudio361_19.png)
 
 ## Atsisiųskite AndroidAPS SDK
 
-* Click File > Settings.
+* Spustelėkite File > Settings.
     
-    ![Open settings](../images/AndroidStudio361_20.png)
+    ![Atidaryti nustatymus](../images/AndroidStudio361_20.png)
 
-* Click the small triangle next to Appearance & Behaviour (1.).
+* Spustelėkite mažą trikampį šalia Appearance & Behaviour (1.).
 
-* Click the small triangle next to System Settings (2.) and select Android SDK (3.)
-* Check the box left of "Android 9.0 (Pie)" (4.) (API Level 28).
+* Spustelėkite mažą trikampį prie System Settings (2.) ir pasirinkite Android SDK (3.)
+* Pažymėkite langelį kairėje "Android 9.0 (Pie)" (4.) (API Level 28).
     
-    ![SDK settings](../images/AndroidStudio361_21.png)
+    ![SDK nustatymai](../images/AndroidStudio361_21.png)
 
-* Confirm changes by clicking OK.
+* Patvirtinkite pakeitimus paspausdami OK.
     
-    ![Confirm SDK changes](../images/AndroidStudio361_22.png)
+    ![Patvirtinti SDK pakeitimus](../images/AndroidStudio361_22.png)
 
-* Accept licence agreement (1.) and click "Next" (2.).
+* Sutikite su licencijos nuostatomis (1.) ir spustelėkite "Next" (2.).
     
-    ![Accept SDK licence](../images/AndroidStudio361_23.png)
+    ![Priimti SDK licenciją](../images/AndroidStudio361_23.png)
 
-* Wait until installation is finished.
+* Palaukite, kol baigsis diegimas.
     
-    ![Wait during SDK installation](../images/AndroidStudio361_24.png)
+    ![Palaukti, kol SDK diegiamas](../images/AndroidStudio361_24.png)
 
-* When SDK installation is completed the "Finish" button will turn blue. Click this button.
+* Kai SDK diegimas bus baigtas, "Finish" mygtukas pamėlynuos. Spustelėkite mygtuką dabar.
     
-    ![Finish SDK installation](../images/AndroidStudio361_25.png)
+    ![Baigti SDK diegimą](../images/AndroidStudio361_25.png)
 
-* Android Studio might recommend to update the gradle system. **Never update gradle!** This might lead to difficulties!
+* Android Studio gali rekomenduoti atnaujinti gradle sistemą. **Niekada neatnaujinkite gradle!** Tai gali sukelti problemų!
 
-* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1.) and in the dialog box on "Don't remind me again for this project" (2.).
+* Jei apatinėje dešinėje Android Studio lango pusėje matote informaciją, kad Android Gradle papildinį galima atnaujinti, spustelėkite tekstą „update“ (1.) ir dialogo lange "Don't remind me again for this project" (Nepriminti vėl šiam projektui) (2.).
     
-    ![No cradle update](../images/AndroidStudio361_26.png)
+    ![Neatnaujinti Gradle](../images/AndroidStudio361_26.png)
 
 ## Generuoti pasirašytą APK (Generate signed APK)
 
-Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Pasirašymas reiškia, kad jūs pasirašote savo sukurtą programą, skaitmenine prasme reiškia tam tikrą skaitmeninį pirštų atspaudą pačioje programoje. Programą būtina pasirašyti skaitmeniniu būdu, nes Android saugumo sumetimais priima tik pasirašytą kodą. Daugiau informacijos apie šią temą, spauskite [šią nuorodą](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Spustelėkite "Build" (Sukurti) meniu juostoje ir pasirinkite "Generate Signed Bundle / APK..." (Generuoti pasirašomą rinkinį / APK...).
     
@@ -210,33 +210,33 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![APK vietoj rinkinio](../images/AndroidStudio361_28.png)
 
-* Make sure that module is set to "app" (1.).
+* Įsitikinkite, kad modulis yra nustatytas, į "app" (1.).
 
-* Click "Create new..." (2.) to start creating your key store.
+* Spustelėkite "Create new..." (2.), kad pradėtumėte kurti savo raktų saugyklą.
     
-    A key store in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords.
+    Tai ne kas kita, kaip failas, kuriame saugoma jūsų programos parašo informacija. Ji šifruojama, ir informacija apsaugota slaptažodžiais.
     
-    ![Create key store](../images/AndroidStudio361_29.png)
+    ![Sukurti raktų saugyklą](../images/AndroidStudio361_29.png)
 
-* Click the folder symbol (1.) to select your key store path.
+* Spustelėkite aplanko simbolį (1.), kad pasirinktumėte savo rakto saugyklos kelią.
 
-* Select the path where your key store shall be saved (2.). **Do not save in same folder as project. You must use a different directory!** One option might be your home folder.
-* Type a file name for your key store (3.).
-* Click "OK" (4.).
-* Passwords for key store and key do not have to be very sophisticated. Make sure to remember those or make a note in a safe place. In case you will not remember your passwords in the future you see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
-* Enter (5.) and confirm (6.) the password for your key store.
-* Do the same for your key (7. + 8.).
-* Validity (9.) is 25 years by default. You do not have to change the default value.
-* First and last name must be entered (10.). All other information is optional.
-* Click "OK" (11.) when you are done.
+* Pasirinkite kelią, kur jūsų raktų saugykla turi būti išsaugota (2.). **Nesaugokite tame pačiame aplanke, kuriame yra projektas. Jūs turite naudoti kitą aplanką!** Galimas variantas yra jūsų pagrindinis katalogas.
+* Įveskite failo vardą savo raktų saugyklai (3.).
+* Spustelėkite "OK" (4.).
+* Raktų saugyklos ir pačių raktų slaptažodžiai neturi būti labai sudėtingi. Įsitikinkite, kad juos prisiminsite, arba užsirašykite ir laikykite saugioje vietoje. Tuo atveju, jei neprisiminsite slaptažodžio ateityje, skaitykite [pamestų raktų saugyklų trikčių šalinimas](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Įveskite (5.) ir patvirtinkite (6.) raktų saugyklos slaptažodį.
+* Atlikite tą patį ir raktui (7. + 8.).
+* Galiojimas (9.) 25 metus, kaip nustatyta. Jums nereikia pakeisti nustatytų reikšmių.
+* Vardas ir pavardė turi būti įrašyti (10.). Visa kita informacija yra neprivaloma.
+* Spustelėkite "OK" (11.) kai baigsite.
     
-    ![Key store path](../images/AndroidStudio361_30.png)
+    ![Raktų saugyklos kelias](../images/AndroidStudio361_30.png)
 
-* Make sure the box to remember passwords is checked (1.). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AndroidAPS version).
+* Įsitikinkite, kad langelis prisiminti slaptažodžius (remember passwords), yra pažymėtas (1.). Taigi jums nereikia įvesti juos kitą kartą, kai kursite apk (t. y. kai atnaujinima į naują AndroidAPS versiją).
 
-* Click "Next" (2.).
+* Spustelėkite "Next" (2.).
     
-    ![Remember passwords](../images/AndroidStudio361_31.png)
+    ![Atsiminti slaptažodžius](../images/AndroidStudio361_31.png)
 
 * Pasirinkite kūrimo variantą "fullRelease" (1.).
 
@@ -268,7 +268,7 @@ Jūsų telefone jūs turite leisti diegti programas iš nežinomų šaltinių. I
 
 ## Identifikuoti gavėją, jei naudojate xDrip+
 
-[See xDrip+ page](../Configuration/xdrip#identify-receiver)
+[Žr. xDrip+ puslapyje](../Configuration/xdrip#identify-receiver)
 
 ## Trikčių šalinimas
 
