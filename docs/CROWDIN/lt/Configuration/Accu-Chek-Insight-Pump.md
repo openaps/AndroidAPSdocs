@@ -12,7 +12,7 @@
 
 Pastaba: AAPS visada duomenis įrašys į **pirmąjį pompos bazės profilį**.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module#phone) page which Android version is required to run AndroidAPS.)
+* Android telefonas (Iš esmės kiekviena Android versija būtų tinkama Insight, bet žvilgtelėkite į [Moduliai](../Module/module#phone) puslapį, kuri Android versija yra būtina AndroidAPS veikimui.)
 * Jūsų telefone įdiegtos AndroidAPS programos
 
 ## Sąranka
@@ -76,9 +76,9 @@ AndroidAPS Insight nustatymuose suaktyvinkite šiuos parametrus:
     
     **Pastaba: Rekomenduojama naudoti tik vieną ištęstinį bolusą vienu metu, nes tuo pačiu metu naudojant kelis ištęstinius bolusus gali sukelti klaidas.**
 
-* "Disable vibrations on manual bolus delivery": This disables the Insight pump's vibrations when delivering a manual bolus (or extended bolus). This setting is available only with the latest version of Insight firmware (3.x).
+* "Išjungti vibracijas rankiniu boluso atveju": Tai išjungia Insight pompos vibracijas, sueidžiant bolusą rankiniu būdu (arba ištęstą bolusą). Šis nustatymas yra prieinamas tik su naujausia Insight programine įranga (3.x).
 
-* "Disable vibrations on automated bolus delivery": This disables the Insight pump's vibrations when delivering an automatic bolus (SMB or Temp basal with TBR emulation). This setting is available only with the latest version of Insight firmware (3.x).
+* "Išjungti vibracijas automatinio boluso atveju": Tai išjungia Insight pompos vibracijas, suleidžiant bolusą automatiškai (SMB arba laikina bazė su LB emuliacija). Šis nustatymas yra prieinamas tik su naujausia Insight programine įranga (3.x).
 
 * „Atkūrimo trukmė“: tai nustato, ar AndroidAPS laukia naujo bandymo prisijungti po nesėkmingo. Jūs galite pasirinkti nuo 0 iki 20 sekundžių. Jei kyla ryšio problemų, pasirinkite ilgesnį laukimo laiką.   
       
@@ -114,15 +114,15 @@ Signalus pompoje nustatykite taip:
 
 Tai pašalins visų įspėjimų apie pompą garsą ir leis AndroidAPS nuspręsti, kuris signalas jums aktualus. Jei AndroidAPS neatpažįsta signalo, padidės jo garsas (pirmiausia pypsėjimas, paskui vibracija).
 
-### Vibration
+### Vibracija
 
-Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus).
+Priklausomai nuo pompos programinės įrangos versijos, Insight trumpai vibruos kiekvieną kartą, kai bus suleistas bolusas (pvz., kai AndroidaAPS suleidžia SMB arba laikinos valandinės bazės emuliacija leis ištęstą bolusą).
 
-* Firmware 1.x: No vibration by design.
-* Firmware 2.x: Vibration cannot be disabled.
-* Firmware 3.x: AndroidAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+* Programinė versija 1.x: Jokios vibracijos.
+* Programinė versija 2.x: Vibracija negali būti išjungta.
+* Programinė versija 3.x: AndroidAPS suleidžia bolusą tyliai. (nuo [versijos 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
 
-Firmware version can be found in the menu.
+Programinės įrangos versiją galima rasti meniu.
 
 ## Baterijos pakeitimas
 
