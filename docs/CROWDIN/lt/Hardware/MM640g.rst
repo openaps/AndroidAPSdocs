@@ -1,6 +1,6 @@
-For users of MM640g or MM630g
+Pompų MM640g ar MM630g naudotojams
 **************************************************
 
-* If not already set up then download `600SeriesAndroidUploaer <http://pazaan.github.io/600SeriesAndroidUploader/>`_ and follow instructions on `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g>`_.
-* In 600 Series Uploader go to Settings > Send to xdrip+ and select ON (tick).
-* Select MM640g in ConfigBuilder (setting in AndroidAPS).
+* Jei dar to nepadarėte, atsisiųskite `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_ ir vykdykite Nightscout instrukcijas <http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g>`_.
+* 600 Serijos Uploader, eikite į Parametrai > Siųsti xdrip+ ir pasirinkite ON (pažymėkite).
+* Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite MM640g.
