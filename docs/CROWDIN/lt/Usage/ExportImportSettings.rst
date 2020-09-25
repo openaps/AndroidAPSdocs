@@ -21,8 +21,8 @@ Be kita ko, eksportuojami šie parametrai:
 * `Automatizavimo įvykiai <../Usage/Automation.html>`_
 * `Konfigūratoriaus <../Configuration/Config-Builder.html>`_ parametrai
 * 'Vietinio profilio <../Configuration/Config-Builder.html#local-profile-recommended>`_ parametrai
-* Tikslų <../Usage/Objectives.html>`_ statusas, įskaitant egzaminų rezultatus <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
-* `Nustatymai <../Configuration/Preferences.html>`_, įskaitant 'NS Kliento nustatymus <../Configuration/Preferences.html#ns-client>`_
+* `Tikslų <../Usage/Objectives.html>`_ statusas, įskaitant egzaminų rezultatus <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
+* `Nustatymai <../Configuration/Preferences.html>`_, įskaitant `NS Kliento nustatymus <../Configuration/Preferences.html#ns-client>`_
 
 Encrypted backup format
 ==================================================
