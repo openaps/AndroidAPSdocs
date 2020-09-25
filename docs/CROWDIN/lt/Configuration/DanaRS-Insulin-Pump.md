@@ -17,7 +17,7 @@
 * Paspauskite "Pompos slaptažodis" ir įveskite savo pompos slaptažodį. (Standartinis slaptažodis yra 1234)   
   **Patvirtinkite susiejimą pompoje!**Taip, kaip įprastai darote susiedami bluetooth prietaisus (pvz.: išmanųjį telefoną ir automobilio garso sistemą).
   
-  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+  ![Dana RS suporavimo patvirtinimas](../images/DanaRS_Pairing.png)
 
 * Pasirinkite "Boluso greitis", jei norite pakeisti standartinį boluso greitį (1 V per 12 s, 1 V per 30 s, 1 V per 60 s).
 
