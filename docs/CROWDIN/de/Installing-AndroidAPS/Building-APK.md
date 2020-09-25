@@ -124,42 +124,42 @@ Klicke auf dem Android Studio Willkommensbildschirm auf das kleine Dreieck (1. i
 
 ## AndroidAPS-Code herunterladen
 
-* **If you haven't already rebooted your computer after setting git path in preferences do it now. System environment must be updated.**
+* **Wenn Du Deinen Computer noch nicht neu gestartet hast, nachdem Du den Pfad zu git.exe in den Einstellungen gesetzt hast, mache es jetzt. Die Systemumgebung muss aktualisiert werden.**
 
-* There are two options to start a new project:
+* Ein neues Projekt kannst Du auf zwei verschiedene Arten starten:
     
-    * On the Android Studio welcome screen click "Get from version control"
+    * Klicke auf dem Android Studio Willkommensbildschirm auf "Get from version control".
         
         ![Check out project from version control from welcome screen](../images/AndroidStudio_GetFromVersionControl.PNG)
     
-    * If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.)
+    * Wenn Du Android Studio bereits geöffnet hast und den Willkommensbildschirm nicht mehr siehst, klicke auf File (1.) > New (2.) > Project from Version Control... (3.)
         
         ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
 
-* Fill in the URL to the main AndroidAPS repository (https://github.com/nightscout/AndroidAPS) (1.).
+* Trage die URL zum AndroidAPS Repository (https://github.com/nightscout/AndroidAPS) (1.) ein.
 
-* Choose the directory where you want to save the cloned code. (2.)
-* Click button "Clone" (3.).
+* Wähle das Verzeichnis, in dem die Kopie des Codes gespeichert werden soll. (2.)
+* Klicke auf "Clone" (3.).
     
     ![Clone repository](../images/AndroidStudio_NewURL.PNG)
 
-* Do not click "Background" while repository is cloned!
+* Klicke nicht auf "Background", während das Repository geklont wird!
     
     ![No background action](../images/AndroidStudio_NoBackground.png)
 
-* After repository is cloned successfully open your local copy by clicking "Yes".
+* Nachdem das Repository geklont wurde, öffne Deine lokale Kopie indem Du auf "Yes" klickst.
     
     ![Open repository](../images/AndroidStudio361_16.png)
 
-* In the lower right corner you will see the information that Android Studio is running background tasks.
+* In der unteren rechten Ecke siehst Du die Information, dass Android Studio Hintergrundaufgaben ausführt.
     
     ![Background tasks](../images/AndroidStudio361_17.png)
 
-* Grant access if your firewall is asking for permission.
+* Gewähre Zugriff, falls Dich Deine Firewall dazu auffordert.
     
     ![Firewall permission java](../images/AndroidStudio361_18.png)
 
-* Once the background tasks are finished you will probably see the following error message:
+* Wenn die Hintergrundtasks beendet sind, wird wahrscheinlich die folgende Fehlernachricht angezeigt:
     
     ![SDK licence](../images/AndroidStudio361_19.png)
 
