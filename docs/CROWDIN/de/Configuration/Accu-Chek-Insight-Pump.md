@@ -76,9 +76,9 @@ In den Insight-Einstellungen in AndroidAPS kannst Du die folgenden Optionen akti
     
     **Hinweis: Bitte verwende nicht mehrere verzögerte Boli gleichzeitig, da dies zu Fehlern führen kann.**
 
-* "Disable vibrations on manual bolus delivery": This disables the Insight pump's vibrations when delivering a manual bolus (or extended bolus). This setting is available only with the latest version of Insight firmware (3.x).
+* "Vibrationen bei der manuellen Bolusabgabe deaktivieren": Deaktiviert die Vibrationen der Insight Pumpe wenn ein manueller Bolus (oder erweiterter Bolus) abgegeben wird. Diese Einstellung ist nur mit der neuesten Insight Firmware verfügbar (3.x).
 
-* "Disable vibrations on automated bolus delivery": This disables the Insight pump's vibrations when delivering an automatic bolus (SMB or Temp basal with TBR emulation). This setting is available only with the latest version of Insight firmware (3.x).
+* "Vibrationen bei der automatischen Bolusabgabe deaktivieren": Deaktiviert die Vibrationen der Insight Pumpe wenn ein automatischer Bolus (SMB oder Temporäre Basalrate mit TBR Emulation) abgegeben wird. Diese Einstellung ist nur mit der neuesten Insight Firmware verfügbar (3.x).
 
 * "Erholungsdauer": Dies legt fest, wie lange AndroidAPS abwartet, bevor nach einem fehlgeschlagenen Verbindungsversuch ein neuer Versuch unternommen wird. Du kannst Werte zwischen 0 und 20 Sekunden auswählen. Falls Du Verbindungsprobleme haben solltest, wähle eine längere Wartezeit aus ("Erholungsdauer").   
       
