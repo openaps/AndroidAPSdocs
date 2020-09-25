@@ -132,7 +132,7 @@ Klicke auf dem Android Studio Willkommensbildschirm auf das kleine Dreieck (1. i
 
 ![Check out project from version control innerhalb von Android Studio](../images/AndroidStudio361_13.png)
 
-* Trage die URL zum AndroidAPS Repository ("https://github.com/MilosKozak/AndroidAPS") (1.) ein.
+* Trage die URL zum AndroidAPS Repository ("https://github.com/nightscout/AndroidAPS") (1.) ein.
 * Wähle das Verzeichnis, in dem die Kopie des Codes gespeichert werden soll.
 * Klicke auf "Test" (2.).
 * Wenn der Test nicht erfolgreich abgeschlossen werden kann, überprüfe die URL, korrigiere sie und klicke erneut auf "Test".
