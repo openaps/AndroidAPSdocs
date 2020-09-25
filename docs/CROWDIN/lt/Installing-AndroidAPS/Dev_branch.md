@@ -1,9 +1,9 @@
-## Development branch
+## Kūrėjo versija (Development branch)
 
-<font color="#FF0000"><strong>Attention:</strong></font>
-Dev branch is for the further development of AndroidAPS only. It should be used on a separate phone for testing <font color="#FF0000"><strong>not for actual looping!</strong></font>
+<font color="#FF0000"><strong>Dėmesio:</strong></font>
+„Kūrėjo versija“ yra skirta tik tolesniam AndroidAPS tobulinimui. Jis gali būti naudojamas tik atskirame išmaniajame telefone bandymo tikslais, <font color="#FF0000"><strong>o ne realiam ciklui</strong></font>
 
-The most stable version of AndroidAPS to use is that in the [Master branch](https://github.com/MilosKozak/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
+Stabiliausia AndroidAPS versija, kurią galima naudoti [Master branch](https://github.com/MilosKozak/AndroidAPS/tree/master). Realiam cikui rekomenduojama naudoti tik Master branch.
 
 AndroidAPS kūrėjo versija yra skirta kūrėjams ir testuotojams, kurie gali tvarkyti programos įrašus, žurnalo failus ir galbūt suaktyvinti derinimo įrankį, kad būtų parengtos klaidų ataskaitos, kurios naudingos kūrėjams (trumpai tariant, žmonėms, kurie tai žino ką daro ir dirba savarankiškai). Todėl daugelis nebaigtų funkcijų yra išjungtos. Norėdami įjungti šias funkcijas, įjunkite **Engineering Mode** sukurdami failą pavadinimu ` engineering_mode` tame pačiame kataloge, kuriame rastumėte žurnalo failus. Įjungę inžinerinį režimą, galite visiškai sugadinti ciklą.
 

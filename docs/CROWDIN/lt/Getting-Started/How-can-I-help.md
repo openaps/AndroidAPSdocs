@@ -1,29 +1,29 @@
 # Kaip padėti su AndroidAPS
 
-## AndroidAPS operates entirely on volunteer efforts and has no paid staff.
+## AndroidAPS veikia tik savanorių pastangomis ir neturi apmokamų darbuotojų.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Tėvai, globėjai, artimieji ir diabetu sergantys žmonės dirba kartu, kad padėtų rasti labai bendros problemos sprendimą. Kūrėjai laisvu metu dirba nemokamai. Bet būtų šiek tiek nesąžininga tikėtis, kad jie išleis pinigus padarydami tokį fantastišką atviro kodo visiems prieinamą projektą.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*Norėdami visiškai išbandyti naują įrenginį, kūrėjams reikia atsarginio telefono ir atsarginės pompos, nes tokių bandymų negalima atlikti žmonėms, kol AndroidAPS neveikia stabiliai. Naujesnius modelius reikia išbandyti, kai tik jie tampa prieinami. Dalis paaukotų pinigų taip pat bus skirti šiai bandymo įrangai išsiųsti kūrėjams visame pasaulyje. Kartais naudinga paaukoti, kad kūrėjai galėtų palikti savo tamsius kambarius ir susitikti vienas su kitu konferencijose ir renginiuose, kur galėtų leisti susidurti savo kūrybinėms ir analitinėms smegenims.*
 
-## I can write code! How do I participate?
+## Aš galiu parašyti kodą! Kaip man dalyvauti?
 
-Yay! Look at the issues, ask in the gitter channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+Super! Tyrinėkite problemas, klauskite gitter kanale, visada yra daug ką nuveikti! Pirmiausia pasirinkite nedidelę užduotį ir pirmą kartą prisidėkite prie viso projekto! :)
 
-## I know the system and can write documentation!
+## Aš žinau sistemą ir galiu parašyti dokumentaciją!
 
-Great, this is a highly appreciated thing and a good way to pay it foreward!
+Puiku, tai yra labai vertinama ir yra geras būdas dalyvauti!
 
 * Senasis gitter kanalas AAPS žinių bazei aptarti yra čia: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). Dabar galite susisiekti su dokumentacijos komanda nauju el. pašto adresu: wiki@androidaps.org.
 * Nurodymus, kaip pateikti aprašymus anglų kalba, galite rasti čia: [Kaip daryti PR](../make-a-PR.md). Kitos kalbos yra išverstos tik iš anglų kalbos ir dėl vientisumo ir nuoseklumo jų taisyti negalima.
 
-## I do speak multiple languages and whant to translate the app or the documentation
+## Aš kalbu keliomis kalbomis ir noriu išversti programą ar dokumentus
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
-* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
+* Jei norite versti **programą** į kitas kalbas (ačiū), naudokite [crowdin](https://crowdin.com/project/androidaps).
+* Jei norite išversti **AAPS dokumentaciją** į kitas kalbas (ačiū), naudokite [crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Tiesiog užsiregistruokite CROWDIN, pasirinkite savo kalbą, palaukite administratoriaus leidimo ir judėkite toliau!
 
-## Are there other ways to help?
+## Ar yra kitų būdų, kaip padėti?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+Mums reikalingi įgūdžiai: grafinis dizainas, UX dizainas, vertimai, wiki redagavimas ar tiesiog žmonės, pasirengę atsakyti į paprastus klausimus Facebook & gitter, kad kūrėjai galėtų sutelkti dėmesį į sudėtingesnius dalykus.

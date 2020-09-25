@@ -1,29 +1,29 @@
-Welcome to the AndroidAPS documentation
+Sveiki atvykę į AndroidAPS dokumentaciją
 ==================================================
 
-AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. The main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter. 
+AndroidAPS yra atvirojo kodo programa Google Android išmaniesiems telefonams, kuri veikia kaip dirbtinė kasa (vadinamoji dirbtinė kasos sistema - DKS) insuliną leidžiantiesiems pacientams. Pagrindiniai komponentai yra įvairūs OpenAPS programinės įrangos algoritmai, kurie, kaip manoma, daro tiksliai tai, ką daro tikroji kasa: palaiko sveiką cukraus kiekį kraujyje, naudodamiesi automatiniu insulino dozavimu (AID). Be to, naudojimui būtinos bent jau palaikomos insulino pompos, turinčios CE ženklą, ir nuolatiniai glukozės jutikliai. 
 
-The app does NOT use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons. 
+Programa neturi savarankiško mokymosi dirbtinio intelekto. Vietoje to, AndroidAPS skaičiavimai grindžiami individualiais terapijos veiksniais ir angliavandenių kiekiais, kuriuos vartotojas rankiniu būdu įveda į savo terapijos profilį. Šiuos įrašus sistema patikrina saugumo sumetimais. 
 
-The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
+Programa nesiūloma Google Play sistemoje - jūs turite ją sukurti patys iš šaltinio kodo dėl teisinių priežasčių.
 
-The main components are:
+Pagrindinės sudedamosios dalys yra:
 
 .. image:: images/modules-female.png
-  :alt: Components
+  :alt: Komponentai
 
-For more details, please read on here.
+Norėdami gauti daugiau informacijos, prašome perskaityti čia.
 
-Getting started
+Pradėkite
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Safety first <./Getting-Started/Safety-first.rst>
-   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Saugumas pirmiausia <./Getting-Started/Safety-first.rst>
+   Kas yra uždaro ciklo sistema <./Getting-Started/ClosedLoop.rst>
+   Kas yra uždaro ciklo sistema su AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Dokumentacijos atnaujinimai ir pakeitimai <./Getting-Started/WikiUpdate.rst>
    
    
 Ko man reikia 
@@ -32,88 +32,88 @@ Ko man reikia
    :maxdepth: 1
    :glob:
    
-   Module <./Module/module.rst>
-   Sample Setup <./Getting-Started/Sample-Setup.md>
+   Moduliai <./Module/module.rst>
+   Pavyzdinė Sąranka <./Getting-Started/Sample-Setup.md>
 
    
-How to Install AndroidAPS
+Kaip įdiegti AndroidAPS
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   Building the APK <./Installing-AndroidAPS/Building-APK.md>
-   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
-   Checks after update to AAPS 2.7 <.//Installing-AndroidAPS/update2_7.rst>
-   Install git <./Installing-AndroidAPS/git-install.rst>
-   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
-   Release notes <./Installing-AndroidAPS/Releasenotes.rst>
-   Dev branch <./Installing-AndroidAPS/Dev_branch.md>
+   Android programos (APK) kūrimas <./Installing-AndroidAPS/Building-APK.md>
+   Atnaujinimas į naują versiją ar atšaką <./Installing-AndroidAPS/Update-to-new-version.md>
+   Patikrinimas po atnaujinimo į AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
+   Git įdiegimas <./Installing-AndroidAPS/git-install.rst>
+   * Android Studio trikčių šalinimas <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Atnaujinimų pastabos <./Installing-AndroidAPS/Releasenotes.rst>
+   Kūrėjo versija <./Installing-AndroidAPS/Dev_branch.md>
    
    
-Component Setup
+Komponentų Nustatymas
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   CGM/FGM <./Configuration/BG-Source.rst>
-   xDrip Settings <./Configuration/xdrip.md>
-   Pumps <./Hardware/pumps.rst>
-   Phones <./Hardware/Phoneconfig.rst>
-   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
-   Smartwatch  <./Hardware/Smartwatch.rst>
+   Glikemijos duomenų šaltiniai <./Configuration/BG-Source.rst>
+   xDrip Nustatymai <./Configuration/xdrip.md>
+   Pumpos <./Hardware/pumps.rst>
+   Telefonai <./Hardware/Phoneconfig.rst>
+   Nightscout nustatymas <./Installing-AndroidAPS/Nightscout.md>
+   Išmanieji laikrodžiai <./Hardware/Smartwatch.rst>
    
 
-Configuration 
+Konfigūracija 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Config builder <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences2020.rst>
+   Konfigūratorius <./Configuration/Config-Builder.md>
+   Nustatymai <./Configuration/Preferences2020.rst>
    
    
-AndroidAPS Usage
+AndroidAPS naudojimas
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
     
-   AndroidAPS screens <./Getting-Started/Screenshots.md>
-   Objectives <./Usage/Objectives.rst>
-   OpenAPS features <./Usage/Open-APS-features.md>   
-   COB calculation <./Usage/COB-calculation.rst>
-   Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
-   Profile switch <./Usage/Profiles.md>
-   Temp-targets <./Usage/temptarget.md>   
-   Extended carbs <./Usage/Extended-Carbs.rst>
-   Automation <./Usage/Automation.rst>
-   Careportal (discontinued) <./Usage/CPbefore26.rst>
-   Automation with 3rd party apps <./Usage/automationwithapp.md>
-   Android auto <./Usage/Android-auto.md>  
+   AndroidAPS ekranai <./Getting-Started/Screenshots.md>
+   Tikslai <./Usage/Objectives.rst>
+   OpenAPS funkcijos <./Usage/Open-APS-features.md>   
+   Aktyvių angliavandenių skaičiavimas <./Usage/COB-calculation.rst>
+   Jautrumo aptikimas <./Configuration/Sensitivity-detection-and-COB.md>
+   Profilių perjungimas <./Usage/Profiles.md>
+   Laikini tikslai <./Usage/temptarget.md>   
+   Ištęsti angliavandeniai <./Usage/Extended-Carbs.rst>
+   Automatizavimas <./Usage/Automation.rst>
+   Priežiūros portalas (nutraukta) <./Usage/CPbefore26.rst>
+   Automatizavimas su 3-ios šalies aplikacijomis <./Usage/automationwithapp.md>
+   Android Auto <./Usage/Android-auto.md>  
  
-General Hints 
+Bendrieji Patarimai 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Crossing timezones with pumps <./Usage/Timezone-traveling.md>
-   Accessing logfiles <./Usage/Accessing-logfiles.md>
-   Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
-   Export/Import Settings <./Usage/ExportImportSettings.rst>
+   Keliavimas per laiko zonas su pompomis <./Usage/Timezone-traveling.md>
+   Žurnalų pasiekimas <./Usage/Accessing-logfiles.md>
+   Accu-Chek Combo patarimai bendram naudojimui <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
+   Eksportuoti / Importuoti Parametrus <./Usage/ExportImportSettings.rst>
    
 
-AndroidAPS for children
+AndroidAPS vaikams
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Remote monitoring <./Children/Children.rst>
-   SMS commands <./Children/SMS-Commands.rst>
+   Nuotolinis stebėjimas <./Children/Children.rst>
+   SMS komandos <./Usage/SMS-Commands.rst>
    
 
 Trikčių šalinimas
@@ -122,16 +122,16 @@ Trikčių šalinimas
    :maxdepth: 1
    :glob:
   
-   Troubleshooting <./Usage/troubleshooting.rst>
+   Trikčių šalinimas <./Usage/troubleshooting.rst>
    
 
-FAQ 
+DUK 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
   
-   FAQ <./Getting-Started/FAQ.md>
+   DUK <./Getting-Started/FAQ.md>
 
    
 Terminų žodynas
@@ -140,37 +140,37 @@ Terminų žodynas
    :maxdepth: 1
    :glob:
   
-   Glossary <./Getting-Started/Glossary.md>
+   Terminų žodynas <./Getting-Started/Glossary.md>
   
 
-Where to go for help 
+Kur ieškoti pagalbos 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
-   Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Naudingi ištekliai prieš pradedant <./Where-To-Go-For-Help/Background-reading.md>
+   Kur kreiptis pagalbos <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   Dokumentacijos atnaujinimai ir pakeitimai <./Getting-Started/WikiUpdate.rst>
 
-For Clinicians
+Medikams
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
             
-   For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
+   Medikams <./Resources/clinician-guide-to-AndroidAPS>
 
 
-How to help
+Kaip padėti
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   How to help <./Getting-Started/How-can-I-help.md>
-   How to translate the app and docs <./translations.md>
-   How to edit the docs <./make-a-PR>
+   Kaip padėti <./Getting-Started/How-can-I-help.md>
+   Kaip išversti programėlę ir dokumentaciją <./translations.md>
+   Kaip redaguoti dokumentaciją <./make-a-PR>
 
 
 .. pastaba:: 
@@ -182,4 +182,4 @@ How to help
 
 	* Visi gaminių ir gamintojų pavadinimai, prekės ženklai, paslaugų ženklai, prekių ženklai ir registruoti paslaugų ženklai yra atitinkamų savininkų nuosavybė ir naudojami tik informaciniais tikslais, o ne reklamai ar rinkodarai. Jie naudojami tik informaciniais tikslais ir nereiškia, kad AAPS priklauso jiems ir kad jie yra palaikomi.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ or `Medtronic <http://www.medtronic.com/>`_
+	Atkreipkite dėmesį: Šis projektas nėra susijęs su ir jam nėra pritarę: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ ar `Medtronic <http://www.medtronic.com/>`_

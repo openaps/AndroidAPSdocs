@@ -24,7 +24,7 @@ Norint išvengti šito, yra du pasirinkimai:
    
    * pvz.: Viena -> Niujorkas: profilio perjungimas +6 valandos
    * pvz.: Viena -> Sidnėjus: profilio perjungimas -8 valandos
-* Probably not an option if using [patched LibreLink app](../Hardware/Libre2#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
+* Tikriausiai tai nėra aktualu, jei naudojate [modifikuotą Libre Link programą](../Hardware/Libre2#time-zone-travelling). Ten reikia nustatyti automatinį laiko juostos keitimą, kad būtų galima paleisti naują Libre 2 jutiklį.
 
 ### Pasirinkimas Nr. 2: Pompos istorijos ištrynimas
 
@@ -71,7 +71,7 @@ Geriausias laikas šiam perjungimui yra tada, kai yra žemas AIO. Pvz., valanda 
 
 * VL persukimas vyksta automatiškai. Nereikia imtis jokių veiksmų. 
 
-## Other pumps - new as of AAPS version 2.2
+## Kitos pompos - AAPS versija aukštesnė nei 2.2
 
 **Turite atnaujinti AAPS, kad galėtumėte naudotis šiomis funkcijomis!**
 

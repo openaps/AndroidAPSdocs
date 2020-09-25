@@ -7,16 +7,16 @@ Dėl nuolatinių, pasikartojančių įvykių gali būti, kad visada turite pakei
 
 pvz.,  galite sukurti aukšto tikslo veiksmų rinkinį, kuris automatiškai suaktyvinamas, kai gliukozės kiekis kraujyje yra mažas. Arba, jei esate savo sporto klube, laikinas tikslas gali būti suaktyvintas automatiškai. 
 
-Prieš naudodamiesi automatizavimu, turite išmanyti 'laikinus tikslus <./temptarget.html>`_ ir (arba) profilio keitimą. 
+Prieš naudodamiesi automatizavimu, turite išmanyti `laikinus tikslus <./temptarget.html>`_ ir (arba) profilio keitimą. 
 
-Make sure you really understand how automation works before setting up your first simple rule. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
+Įsitikinkite, kad jūs tikrai suprantate, kaip automatizavimas veikia prieš nustatant savo pirmąjį paprastą taisyklę. ** Vietoje veiksmų, leiskite AAPS pirmą kartą rodyti tik pranešimus.** Kai esate tikri, kad automatizavimas yra inicijuotas tinkamu laiku, pakeisti pranešimą realiu veiksmu.
 
 .. image:: ../images/Automation_ConditionAction_RC3.png
-  :alt: Automation condition + action
+  :alt: Automatizavimo būsena + veiksmai
 
-How to use it
+Kaip naudoti
 ==================================================
-To set up an automation, you have to give it a title, select at least one condition and one action. 
+Norėdami nustatyti automatizavimą, jūs turite suteikti jam pavadinimą, bent vieną sąlygą ir bent vieną atliktiną veiksmą. 
 
 Important note
 --------------------------------------------------

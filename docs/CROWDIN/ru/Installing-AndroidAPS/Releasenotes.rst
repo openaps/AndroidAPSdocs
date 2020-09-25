@@ -20,7 +20,7 @@ Release date: 24-09-2020
 
 Repository location changed to https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
 
-Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk. Gradle Plugin Version should be 3.6.4 and Gradle Version 5.6.4.
+Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
 
 **Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`_.
 
@@ -54,6 +54,7 @@ You need at least start `Objective 11 <../Usage/Objectives.html#objective-11-aut
 * `Biometric or password protection <..../Configuration/Preferences.html#protection>`_ for settings, bolus @MilosKozak
 * `new automation trigger <../Usage/Automation.html>`_ @PoweRGbg
 * `Open Humans uploader <../Configuration/OpenHumans.html>`_
+* New documentation @Achim
 
 Версия 2.6.1.4
 ================

@@ -81,10 +81,12 @@ Toto je první obrazovka, na kterou narazíte, když spustíte aplikaci AndroidA
    
    * The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
    * IOB may be negative if there have recently been periods of reduced basal.
+   * Press the icon to see the split of bolus and basal insulin
 
 * Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
 
-* Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%)
+* Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%) 
+   * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
 * Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features#autosens) status (enabled or disabled) and value is shown below icon
 
 #### Carbs required
@@ -92,7 +94,7 @@ Toto je první obrazovka, na kterou narazíte, když spustíte aplikaci AndroidA
 ![Carbs required](../images/Home2020_CarbsRequired.png)
 
 * Carbs suggestions are given when the reference design detects that it requires carbs.
-* This is when the oref algorithm thinks I can't rescue you by 0 temping and you will need carbs to fix.
+* This is when the oref algorithm thinks I can't rescue you by 0 (zero) temping and you will need carbs to fix.
 * The carb notifications are much more sophisticated then the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
@@ -136,7 +138,7 @@ Toto je první obrazovka, na kterou narazíte, když spustíte aplikaci AndroidA
 
 * **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
    
-   Prediction line shows where your BG (not where cob itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
+   Prediction line shows where your BG (not where COB itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
 
 * **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
    

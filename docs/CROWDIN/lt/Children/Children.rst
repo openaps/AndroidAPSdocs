@@ -1,7 +1,7 @@
 Nuotolinis stebėjimas
 **************************************************
 
-.. nuotrauka:: ../images/KidsMonitoring.png
+.. image:: ../images/KidsMonitoring.png
   :alt: Vaikų stebėjimas
   
 AndroidAPS siūlo kelis variantus vaikų nuotoliniam stebėjimui, taip pat leidžia siųsti nuotolinio valdymo komandas. Žinoma, jūs galite taip pat naudoti nuotolinį stebėjimą jūsų partneriui arba draugui.
@@ -24,7 +24,7 @@ Funkcijos
 
 Būtina atsižvelgti
 ==================================================
-* Nustatyti vaikams teisingus `terapijos faktorius <../Getting-Started/DUK.html#how-to-begin>`_ (bazės, IVT, JIF...) yra sudėtinga, ypač veikiant augimo hormonams. 
+* Nustatyti vaikams teisingus `terapijos faktorius <../Getting-Started/FAQ.html#how-to-begin>`_ (bazės, IVT, JIF...) yra sudėtinga, ypač veikiant augimo hormonams. 
 * AndroidAPS ir NSClient parametrai turi būti vienodi.
 * Atsižvelkite į laiko tarpą tarp pagrindinio telefono ir jūsų naudojamo išmaniojo telefono komunikacijos. Tai lemia įkėlimui ir atsisiuntimui reikalingo laiko trukmė. Taip pat, pagrindinis AAPS telefonas įkelia duomenis tik tuo atveju, jei išmaniajame telefone buvo įvykdyta uždaro ciklo veikla.
 * Todėl skirkite laiko, kad nustatytumėte juos teisingai ir išbandykite juos, kai vaikas yra šalia jūsų, ypač prieš pradėdami nuotolinį stebėjimą ir nuotolines terapijas. Mokyklinės atostogos gali būti labai geras laikas tam.

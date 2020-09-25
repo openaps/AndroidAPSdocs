@@ -19,7 +19,7 @@ Erscheinungsdatum: 24.09.2020
 
 Speicherort des Repositories wurde auf https://github.com/nightscout/AndroidAPS geändert. Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die App-Erstellung `von vorne beginnst <../Installing-AndroidAPS/Building-APK.html>`_.
 
-Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen. Gradle Plugin Version sollte 3.6.4 und Gradle Version 5.6.4 sein.
+Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 **Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie** `hier <../Installing-AndroidAPS/update2_7.html>`_ **beschrieben.**
 
@@ -53,6 +53,7 @@ Wichtige neue Funktionen
 * `Biometrischer oder Password-Schutz <..../Configuration/Preferences.html#protection>`_ ffür Einstellungen und Bolus @MilosKozak
 * `Neuer Automation Trigger <../Usage/Automation.html>`_ @PoweRGbg
 * `Open Humans Uploader <../Configuration/OpenHumans.html>`_
+* New documentation @Achim
 
 Version 2.6.1.4
 ================

@@ -8,9 +8,9 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 ### Section A - Onglets
 
-* Navigate between the various AndroidAPS modules.
-* Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder#tab-or-hamburger-menu).
+* Permet de naviguer entre les différents modules AndroidAPS.
+* Vous pouvez également changer d'écrans en glissant vers la gauche ou la droite.
+* Les onglets affichés peuvent être sélectionnés dans le [Générateur de configuration](../Configuration/Config-Builder#onglet-ou-menu-hamburger).
 
 ### Section B - Profil & cible
 
@@ -19,57 +19,57 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
     ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
     
 
-* Current profile is displayed in the left bar.
-* Long press profile bar to view profile details or to [switch between different profiles](../Usage/Profiles#profile-switch).
-* If profile switch was made with duration remaining time in minutes is shown in brackets.
+* Le profil actuel est affiché dans la barre de gauche.
+* Un appui long sur la bar de profil permet de voir le détail du profil ou de [changer de profil](../Usage/Profiles#changement-de-profil).
+* Si le changement de profil a été effectué avec une durée, le temps restant en minutes est indiqué entre parenthèses.
 
 #### Cible
 
     ![Temp target remaining duration](../images/Home2020_TT.png)
     
 
-* Current target blood glucose level is displayed in the right bar.
-* Long press target bar to set a [temporary target](../Usage/temptarget.md).
-* If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
+* La cible de glycémie actuelle est affichée dans la barre de droite.
+* Un appui long sur la barre de cible permet de définir une [cible temporaire](../Usage/temptarget.md).
+* Si une cible temporaire est définie, la barre devient jaune et le temps restant en minutes est affiché entre parenthèses.
 
 #### Visualisation de l'ajustement dynamique de la cible
 
     ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
     
 
-* AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
-* Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
+* AAPS peut ajuster dynamiquement votre cible en fonction de la sensibilité si vous utilisez l'algorithme SMB.
+* Activez soit une, soit les deux [options suivantes](../Configuration/Preferences#parametres-openaps-smb) 
    * "sensibilité augmente la cible" et/ou 
    * "la résistance diminue la cible" 
-* If AAPS detects resistance or sensitivity the target will change from what is set from profile. 
-* When it alters the target glucose background will change to green.
+* Si AAPS détecte une résistance ou une sensibilité, la cible change en fonction de ce qui est défini dans le profil. 
+* Lorsqu'il modifie la cible glycémique, l'arrière-plan passe en vert.
 
 ### Section C - Gly & état de la boucle
 
 #### Glycémie actuelle
 
-* Latest blood glucose reading from your CGM is shown on the left side.
-* Color of the BG value reflects the status to the defined [range](../Configuration/Preferences#range-for-visualization). 
-   * green = in range
-   * red = below range
-   * yellow = above range
-* The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
+* La dernière glycémie reçue de votre MGC est affichée sur le côté gauche.
+* La couleur de la glycémie reflète sa position par rapport à la [fourchette](../Configuration/Preferences#fourchette-de-visualisation) définie. 
+   * vert = dans la fourchette
+   * rouge = en dessous de la fourchette
+   * jaune = au-dessus de la fourchette
+* Le bloc gris du milieu affiche les minutes depuis la dernière lecture et les variations depuis la dernière lecture ainsi que depuis les 15 et 40 dernières minutes.
 
 #### État de la boucle
 
 ![État de la boucle](../images/Home2020_LoopStatus.png)
 
-* A new icon shows loop status:
+* Une nouvelle icône affiche l'état de la boucle:
    
-   * green circle = loop running
-   * green circle with dotted line = [low glucose suspend (LGS)](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
-   * red circled = loop disabled (not working permanently)
-   * yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-   * grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-   * Orange circle = super bolus running - remaining time is shown below icon
-   * blue circle with dotted line = open loop
+   * cercle vert = boucle fermée en cours d'exécution
+   * cercle vert avec des pointillés = [arrêt glycémie basse (AGB)](../Usage/Objectives#objectif-6-demarrage-de-la-boucle-fermee-avec-le-systeme-agb-arret-pour-glycemie-basse)
+   * cercle rouge = boucle désactivée (ne fonctionne pas de façon permanente)
+   * cercle jaune = boucle suspendue (temporairement en pause, mais l'insuline basale sera délivrée) - le temps restant est affiché sous l'icône
+   * cercle gris = pompe déconnectée (temporairement aucune insuline n'est délivrée) - le temps restant est affiché sous l'icône
+   * cercle orange = super bolus en cours - le temps restant est affiché sous l'icône
+   * cercle bleu avec pointillés = boucle ouverte
 
-* Long press the icon to open the menu to disable, suspend, re enable loop or disconnect / reconnect pump.
+* Faites un appui long sur l'icône pour ouvrir le menu permettant de désactiver, suspendre, réactiver la boucle ou déconnecter / reconnecter la pompe.
    
    ![Menu état de la boucle](../images/Home2020_LoopStatusMenu.png)
 
@@ -77,22 +77,24 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 ![Section D](../images/Home2020_TBR.png)
 
-* Syringe: insulin on board (IOB) - amount of active insulin inside your body
+* Seringue : insuline active (IA) - quantité d'insuline active à l'intérieur de votre corps
    
    * Le chiffre de l’insuline active serait à 0 s’il n’y avait que votre basal standard en cours et qu’il ne restait plus d’insuline active d’un précédent bolus. 
-   * IOB may be negative if there have recently been periods of reduced basal.
+   * L'IA peut être négative s’il y a eu récemment des périodes de basal réduit.
+   * Press the icon to see the split of bolus and basal insulin
 
-* Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
+* Grain de blé : [glucides actifs (GA)](../Usage/COB-calculation.rst) - glucides précédemment mangés et non encore absorbés -> l'icône clignotte (orange/rouge) si des glucides sont requis
 
-* Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%)
-* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features#autosens) status (enabled or disabled) and value is shown below icon
+* Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%) 
+   * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
+* Flèches haut & bas : indique le statut [autosens](../Usage/Open-APS-features#autosens) (activé ou désactivé) et la valeur est affichée sous l'icône
 
 #### Glucides requis
 
 ![Glucides requis](../images/Home2020_CarbsRequired.png)
 
 * Carbs suggestions are given when the reference design detects that it requires carbs.
-* This is when the oref algorithm thinks I can't rescue you by 0 temping and you will need carbs to fix.
+* This is when the oref algorithm thinks I can't rescue you by 0 (zero) temping and you will need carbs to fix.
 * The carb notifications are much more sophisticated then the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
@@ -104,7 +106,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
    * Cannula age
    * Insulin age (days reservoir is used)
    * Reservoir level (units)
-   * Sensor age
+   * Age Capteur
    * Battery age and level (%)
 * If threshold warning is exceeded, values will be shown in yellow.
 * If threshold critical is exceeded, values will be shown in red.
@@ -136,7 +138,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 * Ligne **orange** : [Glucides Actifs (GA)](../Usage/COB-calculation.rst) (la couleur est généralement utilisée pour représenter les Glucides)
    
-   Cette ligne de prédiction montre comment votre Glycémie (et pas les GA eux mêmes) devrait évoluer sur la base de vos réglages actuels de la pompe, en supposant que les déviations liées à l'absorption des glucides restent constantes. Cette ligne n'apparaît que s'il y a des GA connus.
+   Prediction line shows where your BG (not where COB itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. Cette ligne n'apparaît que s'il y a des GA connus.
 
 * Ligne **bleu foncé** : Insuline Active (IA) (la couleur est généralement utilisée pour représenter l'insuline)
    
@@ -186,8 +188,8 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 #### Glucides actifs
 
 * Shows the carbs you have on board (= active, not yet decayed carbs in your body). 
-* Decaying depends on the deviations the algorithm detects. 
-* If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
+* La diminution dépend des écarts que l'algorithme détecte. 
+* S'il détecte une absorption plus élevée de glucides que prévu, de l'insuline sera injectée, ce qui augmentera l'IA (plus ou moins, selon vos paramètres de sécurité). 
 
 #### Déviations
 
@@ -382,7 +384,7 @@ History of the following treatments:
 * Bolus & carbs -> option to [remove entries](..Getting-Started/Screenshots#carb-correction) to correct history
 * [Bolus étendu](../Usage/Extended-Carbs#id1)
 * Temporary basal rate
-* [Temporary target](../Usage/temptarget.md)
+* [Cible temp.](../Usage/temptarget.md)
 * [Changement de profil](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
