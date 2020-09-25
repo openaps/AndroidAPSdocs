@@ -96,7 +96,7 @@
 </tr>
 <tr>
  <td>KAMŽ</td>
- <td>canula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
+ <td>kaniulės amžius - rodomas Nightscout, jei informacija buvo įvesta AAPS skirtuke Priežiūra arba AAPS veiksmų skirtuke "pradinis užpildymas“</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -318,7 +318,7 @@
 </tr>
 <tr>
  <td>SAMŽ</td>
- <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
+ <td>sensoriaus amžius - rodomas Nightscout svetainėje, jei informacija įvedama AAPS Priežiūros skirtuke</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
