@@ -63,7 +63,7 @@ Authenticator setup
    * TOTP token from the authenticator app is 457051
    * Enter 4570512020
    
-* Red text "WRONG PIN" will change to green "OK" if entry is correct.
+* Red text "WRONG PIN" will change **automatically** to green "OK" if entry is correct. **There is no button you can press!**
 * Use button "RESET AUTHENTICATORS" if you want to remove provisions.
 
 Use SMS commands
