@@ -11,7 +11,7 @@ Bendrieji patarimai naudojant uždarą ciklą su G6
 
 Naudoti G6 yra šiek tiek sudėtingiau, nei atrodė anksčiau. Norint jį naudoti saugiai, yra keletas niuansų, kuriuos reikia žinoti: 
 
-* If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
+* Jei xDrip ar Spike naudojate natyvinius duomenis su kalibravimo kodu, saugumo sumetimais neturėtumėte leisti pakartotinio paleidimo iš naujo.
 * Jei vis dėlto naudojatės pakartotiniu paleidimu, tada jis turėtų būti daromas tokiu metu, kai galima stebėti pokyčius ir prireikus kalibruoti. 
 * Jei iš naujo paleisite sensorių, atlikite tai be gamyklinio kalibravimo, kad rezultatai būtų saugūs 11-ą ir 12-ą dieną, arba būkite pasirengę kalibruoti ir stebėti pokyčius.
 „Išankstinis įmirkymas“ (sensoriaus įvedimas daug anksčiau nei jo pradžia programoje) G6 su gamykliniu kalibravimu gali sukelti duomenų nukrypimus. Jei sensorių įvedate anksčiau, nei jį startuojate, gali reikėti jį kalibruoti, kad gautumėte geriausius rezultatus.
@@ -23,8 +23,8 @@ Jei naudojate G6 su xDrip+
 ==================================================
 * Dexcom G6 siųstuvą galima vienu metu sujungti su Dexcom imtuvu (arba alternatyviai su t:slim pompa) ir mobiliojo telefono programa.
 * Jei naudojate xDrip+ glikemijos duomenims gauti, pirmiausia pašalinkite Dexcom programą. **Negalite vienu metu prijungti xDrip+ ir Dexcom programos prie vieno siųstuvo!**
-* If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
-* If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
+* Jei jums reikia Clarity programos ir vis tiek norite naudotis xDrip+ aliarmais, jums reikia </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>modifikuotos Dexcom programos su įjungta lokalaus duomenų perdavimo funkcija į xDrip+.
+* Jei dar to nepadarėte, atsisiųskite xDrip <https://github.com/NightscoutFoundation/xDrip> _ir vykdykite Nightscout instrukcijas (G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>_).
 * Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite xDrip.
 * Pritaikykite xDrip+ nustatymus pagal 'xDrip+ nustatymų puslapį <../Configuration/xdrip.html>`_
 * Jei AAPS negauna glikemijos duomenų, kai telefonas veikia skrydžio režimu, naudokite funkciją 'Nustatyti gavėją', kaip aprašyta xDrip+ nustatymų puslapyje <../Configuration/xdrip.html>`_.
@@ -33,24 +33,24 @@ Kai naudojate G6 su modifikuota Dexcom programa
 ==================================================
 * Atsisiųskite programą iš `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>` _ ir pasirinkite versiją pagal savo poreikius (mg/dl arba mmol/l, G6).
 
-   * Folder 2.4 for users of the current version, folder 2.3 is only for the outdated AndroidAPS 2.3.
+   * Aplankas 2.4 dabartinės versijos vartotojams, aplankas 2.3 yra tik pasenusiam AndroidAPS 2.3.
    * Atidarykite https://play.google.com/store/search?q=dexcom%20g6 savo kompiuteryje. Regionas bus matomas URL adrese.
    
-   .. nuotrauka:: ../images/DexcomG6regionURL.PNG
+   .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Regiono Dexcom G6 URL
 
 * Sustabdykite sensorių ir pašalinkite originalią „Dexcom“ programą, jei to dar nepadarėte.
 * Įdiekite atsisiųstą apk
 * Startuokite sensorių
 * Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite Dexcom App (modifikuota).
-* If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
-* There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.
+* Jei norite naudoti xDrip+ aliarmus per vietinį transliavimą: xDrip+ trijų linijų meniu > Nustatymai> Aparatinės įrangos duomenų šaltinis> 640G /EverSense.
+* Nėra vietinio informacijos perdavimo iš modifikuotos Dexcom programėlės tiesiai į xDrip+. Perdavimas turi vykti per AAPS, kaip aprašyta aukščiau.
 
 G6 trikčių šalinimas
 ==================================================
 Dexcom G6 specifinių trikčių šalinimas
 --------------------------------------------------
-* Siųstuvams su serijos nr. starting with 80 or 81 need at least last stable xDrip+ version from May 2019 or a newer nightly build.
+* Siųstuvams su serijos nr. pradedant nuo 80 ar 81 reikia bent paskutinės stabilios 2019 m. gegužės mėn. xDrip+ versijos arba naujesnės.
 * Siųstuvams su serijos nr. pradedant 8G, reikia bent 2019 m. liepos 25 d. versijos arba naujesnės.
 * xDrip+ ir Dexcom programa negali būti prijungtos prie siųstuvo tuo pačiu metu.
 * Palaukite bent 15 min. prieš sustabdant ir vėl paleidžiant jutiklį.
@@ -61,12 +61,12 @@ Dexcom G6 specifinių trikčių šalinimas
   Siųstuvo serijos numeris prasideda 80 arba 81: „Got data hh:mm“ (pvz., "Got data 19:04")
   Siųstuvo serijos numeris prasideda 8G arba 8H: „Got glucose hh:mm“ (pvz., "Got glucose 19:04") arba "Got no raw hh:mm" (pvz., "Got now raw 19:04")
 
-.. ../images/xDrip_Dexcom_PhoneServiceState.png
+.. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip+ PhoneServiceState
 
-General troubleshoothing
+Bendrųjų trikčių šalinimas
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#Troubleshooting>`_.
+Bendrųjų trikčių šalinimą, skirtą NGJ, galite rasti 'čia <./GeneralCGMRecommendation.html#Troubleshooting>`_.
 
 Naujas siųstuvas su veikiančiu sensoriumi
 --------------------------------------------------
