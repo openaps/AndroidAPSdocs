@@ -53,7 +53,7 @@ Nouvelles fonctionnalités majeures
 * `protection biométrique ou par mot de passe <../Configuration/Preferences.html#protection>`_ pour les paramètres, bolus @MilosKozak
 * `nouveau déclencheur d'automatisation <../Usage/Automation.html>`_ @PoweRGbg
 * `Téléversement Open Humans <../Configuration/OpenHumans.html>`_
-* New documentation @Achim
+* Nouvelle documentation @Achim
 
 Version 2.6.1.4
 ================
