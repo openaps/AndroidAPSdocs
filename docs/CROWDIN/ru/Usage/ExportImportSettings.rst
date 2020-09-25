@@ -1,6 +1,6 @@
-
 Экспорт/импорт настроек
 **************************************************
+
 Когда следует экспортировать настройки?
 ==================================================
 Будьте готовы к непредвиденным ситуациям. Вы можете случайно изменить важные параметры и иметь проблемы с отменой. Телефон может сломаться или быть украден. Чтобы легко вернуться к состоянию, в котором вы были, регулярно экспортируйте параметры.
@@ -11,8 +11,8 @@
 
 На компьютере с Windows 10 это выглядит так:
   
-  .. изображение:: ../images/SmartphoneRootLevelWin10.png
-    :alt: AndroidAPS настройки телефона, подключенного к компьютеру
+.. image:: ../images/AAPS_ExImportSettingsWin.png
+  :alt: AndroidAPS настройки телефона, подключенного к компьютеру
 
 Экспортированные данные
 ==================================================
@@ -24,32 +24,57 @@
 * `Цели <../Usage/Objectives.html>`_ статус включая `результаты экзамена <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
 * ` Параметры конфигурации <../Configuration/Preferences.html> ` _ включая ` Параметры клиента NS <../Configuration/Preferences.html#ns-client> ` _
 
-
-
-
-Как экспортировать настройки
+Encrypted backup format
 ==================================================
-* **Выполнить Экспорт настроек на вашем старом телефоне
+Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`_ .
 
-  * Сэндвич-меню (в верхнем левом углу экрана)
-  * Обслуживание
-  * Экспортировать настройки
-  * Будет показано местоположение файла
-    
-.. изображение:: ../images/AAPS_ExportSettings.png
-  :alt: настройки экспорта AndroidAPS
-       
-* **Перенесите** настройки со старого на новый телефон, используя местоположение файла, показанное во время экспорта
 
-  Экспортированный файл называется "AndroidAPSPreferences" и должен находиться в корневой папке основного хранилища телефона (как C: на вашем компьютере).
+Экспорт настроек
+==================================================
+* Сэндвич-меню (в верхнем левом углу экрана)
+* Обслуживание
+* Экспортировать настройки
+
+.. image:: ../images/AAPS_ExportSettings1.png
+  :alt: AndroidAPS export settings 1
+
+* Date and time of export will be added to the file name automatically and displayed together with the path.
+* Click 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+* Successful export will be prompted at bottom of the screen.
+
+.. image:: ../images/AAPS_ExportSettings2.png
+  :alt: AndroidAPS export settings 2
   
-* **Установите AndroidAPS ** на новом телефоне.
-* **Импорт настроек** на вашем новом телефоне
+Выполните импорт настроек
+==================================================
+* Сэндвич-меню (в верхнем левом углу экрана)
+* Обслуживание
+* Выполните импорт настроек
 
-  * Сэндвич-меню (в верхнем левом углу экрана)
-  * Обслуживание
-  * Выполните импорт настроек
+.. image:: ../images/AAPS_ImportSettings1.png
+  :alt: AndroidAPS import settings 1
+
+* All files from folder AAPS/preferences/ on your phone will be shown in the list.
+* Select file.
+* Confirm import by clicking 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+
+.. image:: ../images/AAPS_ImportSettings2.png
+  :alt: AndroidAPS import settings 2
+
+* Details on the preference file will be shown.
+* Last option to cancel import.
+* Click 'Import'.
+* Confirm message by clicking 'OK'.
+* AAPS will be restarted in order to activate imported preferences.
 
 * **Примечание для пользователей Dana RS:**
 
   * Поскольку настройки подключения помпы также переносятся на новый телефон, AAPS на новом телефоне уже будет "знать" помпу и не запустит сканирование bluetooth. Выполните сопряжение нового телефона и помпы вручную.
+  
+Transfer settings file
+==================================================
+* Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
+* Manuals can be found on the web, i.e. `Android help pages <https://support.google.com/android/answer/9064445?hl=en>`_.
+* If you experience problems with the transferred file try another way to transfer file.
