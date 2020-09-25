@@ -1,46 +1,46 @@
 # Android Auto
 
-![AAPS CGM data on Android Auto](../images/AndroidAuto_05.png)
+![AAPS NGJ duomenys Android Auto](../images/AndroidAuto_05.png)
 
-## AndroidAPS settings for Android Auto
+## AndroidAPS parametrai Android Auto
 
-Use system notifications for alerts and notifications:
+Naudoti sistemos perspėjimus aliarmams ir įspėjimams:
 
-* Open 3-dot-menu on top right of home screen
+* Atidarykite trijų taškų meniu dešinėje pagrindinio ekrano pusėje
 * Nustatymai
-* Scroll all the way down
-* Activate "Use system notifications..."
+* Slinkite iki galo
+* Įjungti "Naudoti sistemos pranešimus..."
 
-![Use system notifications for alerts and notifications](../images/AndroidAuto_01.png)
+![Naudoti sistemos perspėjimus aliarmams ir įspėjimams](../images/AndroidAuto_01.png)
 
-## Settings in Android Auto app on your phone
+## Android Auto programos išmaniajame telefone nustatymai
 
-As AAPS is no official Android Auto app notifications have to be activated in Android Auto.
+Kadangi AAPS nėra oficiali Android Auto programėlė, pranešimus vieną kartą reikia suaktyvinti rankiniu būdu.
 
-* Open Android Auto app on your phone.
-* Tap hamburger menu
-* Select settings
-* Scroll down all the way to the bottom of the list and tap version no. 10 times until message "Developer mode enabled" is displayed.
+* Paleiskite Android Auto programą išmaniajame telefone.
+* Paspauskite trijų linijų meniu
+* Pasirinkite parametrus
+* Slinkite iki galo ir 10 kartų bakstelėkite versijos numerį, kol pasirodys pranešimas „Aktyvuotas kūrėjo režimas“ ("Developer mode enabled").
 
-![Enable developer mode](../images/AndroidAuto_02.png)
+![Įgalinti kūrėjo režimą](../images/AndroidAuto_02.png)
 
-* Open 3-dot-menu on top right corner
-* Select "Developer settings"
-* Scroll down all the way to the bottom of the list and activate "Unknown sources"
+* Atidarykite trijų taškų meniu dešinėje viršutinėje ekrano pusėje
+* Pasirinkite "Kūrėjo nustatymai" ("Developer settings")
+* Slinkite iki galo ir suaktyvinkite „Nežinomi šaltiniai“ ("Unknown sources")
 
-![Enable unknown sources](../images/AndroidAuto_03.png)
+![Įgalinti nežinomus šaltinius](../images/AndroidAuto_03.png)
 
-* Now you can quit developper mode if you want. Tap three dots menu on the top right to do so.
+* Dabar vėl galite išeiti iš kūrėjo režimo. Norėdami tai padaryti, paspauskite trijų taškų meniu.
 
-## Show notifications in car
+## Rodyti pranešimus automobilyje
 
-* Tap the bell icon on the lower menu bar in Android Auto in your car
+* Bakstelėkite varpelio piktogramą apatinėje Android Auto meniu juostoje jūsų automobilyje
 
-![Bell icon - Android Auto in car](../images/AndroidAuto_04.png)
+![Varpelio piktograma - Android Auto automobilyje](../images/AndroidAuto_04.png)
 
-* CGM values wil be shown as follows:
+* NGJ reikšmės bus pavaizduotos taip:
 
-![AAPS CGM data on Android Auto](../images/AndroidAuto_05.png)
+![AAPS NGJ duomenys Android Auto](../images/AndroidAuto_05.png)
 
 ## Trikčių šalinimas:
 
