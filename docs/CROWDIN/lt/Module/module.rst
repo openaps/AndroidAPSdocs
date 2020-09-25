@@ -1,4 +1,4 @@
-Component Overview 
+Komponentų Apžvalga 
 **************************************************
 AndroidAPS nėra tik (pačių sukurta) programa, tai yra vienas iš skirtingų jūsų uždarosios sistemos modulių. Prieš priimdami sprendimus dėl atskirų komponentų, turėtumėte peržiūrėti skiltį `Komponentų sąranka <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_.
    
@@ -55,53 +55,53 @@ AndroidAPS **šiuo metu** veikia su
 
 ** Kitos pompos**, kurios ateityje gali veikti su AndroidAPS, yra išvardytos puslapyje „Ateityje galimos naudoti pompos" <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
-If you need to **privately buy** a pump then you can find various distributors is in `this spreadsheet <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_, please share the details of yours if not already listed.
+Jei norite įsigyti pompą ** savo lėšomis **, tiekėjų adresus skirtingose šalyse galite rasti `šioje lentelėje <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>“. Prašome užpildyti savo pardavėjo informaciją, jei ji dar nėra joje nurodyta.
 
-**So what's the best pump for looping with AndroidAPS?**
+**Kuri pompa labiausiai tinka uždaro ciklo sistemai su AndroidAPS?**
 
-The Combo, the Insight and the older Medtronics are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard luer lock. Ir tam naudojama įprasta baterija, kurią galite nusipirkti bet kurioje degalinėje ar jums patogioje parduotuvėje. Ir jei jums to tikrai reikia, galite pavogti / pasiskolinti iš nuotolinio valdymo pultelio iš viešbučio kambario ;-).
+Combo, Insight ir senesnės Medtronic pompos yra patikimos ir tinkamos uždaram ciklui. Dėl infuzinės sistemos standartinės Luer užrakto jungties, Combo turi didelį pranašumą. Ir tam naudojama įprasta baterija, kurią galite nusipirkti bet kurioje degalinėje ar jums patogioje parduotuvėje. Ir jei jums to tikrai reikia, galite pavogti / pasiskolinti iš nuotolinio valdymo pultelio iš viešbučio kambario ;-).
 
-The advantages of the DanaR/RS vs. the Combo as the pump of choice however are:
+Dana R/RS pranašumai prieš Combo yra:
 
-- The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... su Combo tai nėra taip lengva. bent jau tol, kol Android 8.1 diegiama tik keliuose telefonų modeliuose
-- Initial pairing is simpler with the Dana* RS. Tačiau paprastai šio žingsnio reikia tik pradinio sąrankos metu.
-- So far the Combo works with screen parsing. Iš esmės tai veikia gerai, bet, deja, lėtai. Tai nėra taip blogai, ko reikia ciklui, nes visa tai veikia fone. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking. 
-- The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. Naktį greičiausiai naudositės TBR, o ne SMB.  Dana* RS gali būti sukonfigūruota nei vibruoti, nei pypsėti.
-- Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
-- All pumps AndroidAPS can talk with are waterproof on delivery. Tik Dana pompos taip pat turi „garantiją dėl vandens atsparumo“ dėl uždaro akumuliatoriaus ir rezervuaro užpildymo skyriaus. 
+Dana* R/RS gali prisijungti prie beveik bet kurio išmaniojo telefono, kuriame įdiegta Android> = 5.1. Nebūtina pakeisti gamyklinės programinės įrangos (pvz., Operacine sistema Lineage). Jei jūsų išmanusis telefonas sugenda arba yra pavogtas, galite greitai rasti kitą, kuris veiks su Dana*R/RS pompa... su Combo tai nėra taip lengva. bent jau tol, kol Android 8.1 diegiama tik keliuose telefonų modeliuose
+- Pirmą kartą nustatyti DanaR/RS ir išmaniojo telefono ryšį yra lengviau. Tačiau paprastai šio žingsnio reikia tik pradinio sąrankos metu.
+- Kol kas Combo dirba su ekrano analizavimu. Iš esmės tai veikia gerai, bet, deja, lėtai. Tai nėra taip blogai, ko reikia ciklui, nes visa tai veikia fone. Tačiau tai leis lengviau atšaukti esamą Bluetooth ryšį. Tai gali būti nepatogu, jei inicijuojate bolusą ir vėliau būdami per daug toli nuo išmaniojo telefono, pvz., gamindami maistą. 
+- Combo vibruoja laikinos bazės TBR pabaigoje, Dana* R vibruoja (arba supypsi) dėl SMB. Naktį greičiausiai naudositės TBR, o ne SMB.  Dana* RS gali būti sukonfigūruota nei vibruoti, nei pypsėti.
+- Istoriją su aktyviais angliavandeniais galima perskaityti DanaRS per kelias sekundes. Todėl išmaniuosius telefonus galima lengvai pakeisti neprisijungus. Kai tik bus gaunami nauji NGJ duomenys, ciklas gali būti iš karto tęsiamas.
+Visos pompos, palaikančio AndroidAPS, yra atsparios vandeniui (bent jau naujos). Tik Dana pompos taip pat turi „garantiją dėl vandens atsparumo“ dėl uždaro akumuliatoriaus ir rezervuaro užpildymo skyriaus. 
 
 Glikemijos šaltinis
 --------------------------------------------------
-This is just a short overview of all compatible CGMs/FGM with AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`_. Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
+Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. Norėdami gauti daugiau informacijos, žr. `čia <../Configuration/BG-Source.html>`_. Tiesiog trumpa pastaba: jei galite pateikti gliukozės duomenis xDrip+ programoje ar Nightscout svetainėje, galite pasirinkti xDrip+ (arba Nightscout su interneto ryšiu) kaip AAPS KG šaltinį.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or patched Dexcom app
-* `Dexcom G5 <../Hardware/DexcomG5.html>`_: It works with xDrip+ app or patched Dexcom app
-* `Dexcom G4 <../Hardware/DexcomG4.html>`_: These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
-* `Libre 2 <../Hardware/Libre2.html>`_: It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
-* `Libre 1 <../Hardware/Libre1.html>`_: You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
-* `Eversense <../Hardware/Eversense.html>`_: It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
-* `Enlite <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: Veikia su xDrip+ arba modifikuota Dexcom programa
+* `Dexcom G5 <../Hardware/DexcomG5.html>`_: Veikia su xDrip+ arba modifikuota Dexcom programa
+* `Dexcom G4 <../Hardware/DexcomG4.html>`_: Šie sensoriai yra gana seni, bet jūs galite rasti instrukcijas apie tai, kaip naudoti juos su xDrip+ programa
+* `Libre 2 <../Hardware/Libre2.html>`_: Veikia su xDrip+ (nereikia siųstuvo), tačiau taip pat turite sukurti savo modifikuotą programą Libre 2.
+* `Libre 1 <../Hardware/Libre1.html>`_: Jums reikalingas siųstuvas, pavyzdžiui, Blucon ar MiaoMiao, kurį galite susikurti patys arba tiesiog nusipirkti, ir xDrip+ programa
+* `Eversense <../Hardware/Eversense.html>`_: Kol kas veikia tik kartu su ESEL programa ir modifikuota Eversense programa (neveikia su Dana RS ir LineageOS deriniu, tačiau gerai veikia su DanaRS ir Android arba Combo ir Lineage OS)
+* `Enlite <../Hardware/MM640g.html>`_: gana sudėtingas, reikalinga daug papildomų pastangų
 
 
 Nightscout
 --------------------------------------------------
-Nightscout is a open source web application that can log and display your CGM data and AndroidAPS data and creates reports. You can find more information on the `website of the Nightscout project <http://www.nightscout.info/>`_. You can create your own Nightscout website `using Heroko <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
+Nightscout yra atvirojo kodo žiniatinklio programa, galinti registruoti ir rodyti jūsų NGJ ir AndroidAPS duomenis bei generuoti ataskaitas. Daugiau informacijos galite rasti projekto Nightscout tinklalapyje <http://www.nightscout.info/>`_. Galite sukurti savo Nightscout svetainę naudodami `Heroku <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, pusiau automatinę Nightscout sąranką naudodami 'zehn.be <https://ns.10be.de/en/index.html> `_ arba patalpinti savo serveryje (tai skirta IT ekspertams).
 
-Nightscout is independent of the other modules. You will need it to fulfill Objective 1.
+Nightscout yra nepriklausomas nuo kitų modulių. Jums jo reikės, kad galėtumėte įvykdyti 1-ą Tikslą.
 
-Additional information on how to configure Nightscout for use with AndroidAPS can be found `here <../Installing-AndroidAPS/Nightscout.html>`_.
+Norėdami gauti daugiau informacijos apie Nightscout konfigūravimą, kad galėtumėte naudoti su AndroidAPS, skaitykite `čia <../Installing-AndroidAPS/Nightscout.html>`_.
 
-AAPS-.apk file
+AAPS-.apk failas
 --------------------------------------------------
-The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`_.  
+Pagrindiniai sistemos komponentai. Prieš diegdami programą, pirmiausia turite sukurti apk failą (kuris yra Android programos failo pavadinimo plėtinys). Instrukcijas rasite `čia  <../Installing-AndroidAPS/Building-APK.html>`_.  
 
-Optional Modules
+Pasirenkamieji Moduliai
 ==================================================
-Smartwatch
+Išmanieji laikrodžiai
 --------------------------------------------------
-You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear a Sony Smartwatch 3 (SWR50) as it is the only watch that can get readings from Dexcom G5/G5 when phone is out of range. Some other watches can be patched to work as a standalone receiver as well (see `this documentation <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ for more details).
+Bet koks išmanusis laikrodis su Android Wear 1.x ar naujesne versija veikia. Daugelis uždaro ciklo vartotojai naudoja Sony Smartwatch 3 (SWR50), nes taip pat galima priimti reikšmes iš Dexcom G5/G6, kai išmaniojo telefono nėra diapazone. Kai kuriuos kitus išmaniuosius laikrodžius galima pritaikyti, kad juos būtų galima naudoti kaip autonominį imtuvą (žr. `dokumentaciją <<https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_, jei norite gauti daugiau informacijos).
 
-Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`_.
+Vartotojai sukūrė `patikrintų išmaniųjų telefonų ir išmaniųjų laikrodžių, sąrašą:<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. Yra įvairių laikrodžių ekranų, skirtų naudoti su AndroidAPS, daugiau informacijos galite rasti `čia <../Configuration/Watchfaces.html>`_.
 
 Norėdami įvesti mobilųjį telefoną ar išmanųjį laikrodį, kurio dar nėra sąraše, užpildykite formą <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewfor>'_.
 
@@ -109,24 +109,25 @@ Praneškite apie bet kokias lentelės problemas el. paštu `hardware@androidaps.
 
 xDrip+
 --------------------------------------------------
-Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`_. Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
+Net jei jums nereikia xDrip+ programos kaip KG duomenų šaltinio, vis tiek galite ja naudotis aliarmams arba patogų glikemijos duomenų rodymą. xDrip+ galite nustatyti norimus įspėjimo signalų, apibrėžti laiką, kada jie turėtų būti aktyvūs, ar jie gali nepaisyti išmaniojo telefono nutildymo ir pan. Kai kurią xDrip+ informaciją galima rasti `čia <../Configuration/xdrip.html>`_. Atminkite, kad xDrip+ tobulinimas yra labai aktyvus ir dokumentacija kartais negali jo sekti, todėl ne visada gali būti atnaujinta.
 
 Pavyzdinis nustatymas
 ==================================================
-If you want to get a step by step example, you might want to look at a sample setup. The first sample setup is quite old, but should be still up-to-date.
+Žingsnis po žingsnio instrukcijas rasite Pavyzdiniame nustatyme. Pavyzdinio nustatymo rekomendacijos yra gana senos, tačiau vis dar aktualios.
 
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Sample Setup <../Getting-Started/Sample-Setup.rst>
+   Pavyzdinis Nustatymas <../Getting-Started/Sample-Setup.rst>
  
   
-What to do while waiting for modules
+Ką daryti laukiant modulių
 ==================================================
-It sometimes takes a while to get all modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is NECESSARY to check and (where approporiate) adapt basal rates (BR), insulin-carbration (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with AndroidAPS. Using this mode, AndroidAPS gives treatment advices you can manually execute.
+Kartais užtrunka šiek tiek laiko, kol bus gauti visi uždaro ciklo moduliai. Nesijaudinkite, laukdami galite padaryti daug. BŪTINA patikrinti ir (jei reikia) pritaikyti bazę, insulino ir angliavandenių santykį (IA), jautrumo insulinui faktorių (JIF) ir kt. Ir galbūt atviras ciklas gali būti geras būdas išbandyti sistemą ir susipažinti su AndroidAPS. Šiame režime AndroidAPS teikia rekomendacijas, kurių galite laikytis rankiniu būdu.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+Galite tęsti darbą skaitydami <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html> dokumentaciją, susisiekti su kitais uždaro ciklo naudotojais, skaityti kitų vartotojų praktikas. Tačiau būkite atsargūs, ne visos vartotojo praktikos yra teisingos ar tinkamos jūsų atveju.
 
-**Done?**
-If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the `Objective description <../Usage/Objectives.html>`_ before each new Objective and setup up your `hardware <../index.html#component-setup>`_.
+**Atlikta?**
+Jei turite visus AAPS komponentus kartu arba bent jau pakankamai, kad pradėtumėte nuo atviro ciklo, pirmiausia turėtumėte perskaityti `Tikslų skiltį <../Usage/Objectives.html>`_ prieš pradedant naują Tikslą bei nustatyti savo 
+`įrangą <../index.html#component-setup>`_.
