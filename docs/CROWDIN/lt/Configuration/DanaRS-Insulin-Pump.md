@@ -12,7 +12,7 @@
 
 * Pasirinkite "DanaRS susieti naują pompą" ir patvirtinkite Jūsų DanaRS pompos serijinį numerį.
   
-  ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
+  ![AAPS ir Dana RS suporavimas](../images/AAPS_DanaRSPairing.png)
 
 * Paspauskite "Pompos slaptažodis" ir įveskite savo pompos slaptažodį. (Standartinis slaptažodis yra 1234)   
   **Patvirtinkite susiejimą pompoje!**Taip, kaip įprastai darote susiedami bluetooth prietaisus (pvz.: išmanųjį telefoną ir automobilio garso sistemą).
