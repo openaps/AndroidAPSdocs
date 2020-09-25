@@ -1,9 +1,9 @@
 Eversense naudotojai
 **************************************************
-The easiest way to use Eversense with AndroidAPS is to install the non-US modified `Eversense app <https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk>`_ (and unistall the original one first).
+Lengviausias būdas naudoti Eversense NGJ su AndroidAPS, yra įsirašyti ne-JAV vartotojams skirtą modifikuotą `Eversense" programą <https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk>`_, o prieš tai originalią programą ištrinti.
 
 **Įspėjimas: išinstaliavus senąją programą visi senesni nei vienos savaitės duomenys bus prarasti!**
 
 Kad AndroidAPS gautų Jūsų duomenis, turite įsirašyti ESEL programą <https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk> ir pasirinkti ESEL programoje "Siųsti duomenis AAPS ir xDrip" ir MM640g kaip gliukozės šaltinį AAPS nustatymuose <../Configuration/Config-Builder.html>. Eversense gliukozės duomenys kartais gali triukšmauti, taigi siūlome ESEL programoje pasirinkti "Sklandūs duomenys", nes tai yra geriau nei naudoti AAPS "Visada naudoti trumpą vidutinę deltą, o ne paprastą deltą".
 
-You can find  all APKs including the one for the US and another instruction for using xDrip with an Eversense `here <https://github.com/BernhardRo/Esel/tree/master/apk>`_.
+Visus APK, įskaitant JAV versiją, ir daugiau informacijos apie xDrip+ naudojimą su Eversense rasite `čia <https://github.com/BernhardRo/Esel/tree/master/apk>`_.
