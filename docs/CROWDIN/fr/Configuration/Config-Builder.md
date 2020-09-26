@@ -183,7 +183,7 @@ Sélectionnez l'algorithme APS souhaité pour les ajustements de thérapie. Vous
 
 * Basculer entre Boucle Ouverte, Boucle Fermée et Arrêt Glycémie Basse (AGB).
 
-![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
+![Générateur de configuration - mode boucle](../images/ConfigBuilder_LoopLGS.png)
 
 ### Boucle Ouverte
 
