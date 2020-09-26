@@ -39,17 +39,17 @@ Protection
 -----------------------------------------------------------
 Master password
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
+* Jis yra būtinas, kad būtų galima `eksportuoti nustatymus <../Usage/ExportImportSettings.html>`_, nes versijoje 2.7 jie yra užkoduoti.
 
    **Biometric protection does not work on OnePlus phones. This is a know issue of OnePlus.**
 
-* Open Preferences (three-dot-menu on top right of home screen)
-* Click triangle below "General"
-* Click "Master-Password"
-* Enter password, confirm password and click ok.
+* Atidarykite Nustatymus (trijų taškų meniu dešinėje viršutinėje pagrindinio ekrano pusėje)
+* Spustelėkite trikampį žemiau "Bendrieji"
+* Spauskite "Pagrindinis Slaptažodis"
+* Įveskite slaptažodį, patvirtinkite slaptažodį ir spustelėkite Ok.
 
   .. image:: ../images/MasterPW.png
-    :alt: Set master password
+    :alt: Nustatyti pagrindinį slaptažodį
   
 Settings protection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
