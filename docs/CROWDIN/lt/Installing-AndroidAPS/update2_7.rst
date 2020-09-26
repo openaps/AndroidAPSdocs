@@ -20,6 +20,8 @@ Baigti egzaminą
 -----------------------------------------------------------
 * AAPS 2.7 programoje yra naujas Tikslas 11 `Automatizavimas <../Usage/Automation.html>`_.
 * Jūs turite išlaikyti egzaminą (`Tikslas 3 ir 4 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_), kad užbaigtumėte `Tikslą 11 <../Usage/Objectives.html#objective-11-automation>`_.
+* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Automation.html>`_. 
+* This will not effect other objectives you have already finished. You will keep all finished objectives!
 
 Pagrindinio slaptažodžio nustatymas
 -----------------------------------------------------------
@@ -38,6 +40,12 @@ Eksportuoti nustatymus
 * Jūs turite `eksportuoti savo nustatymus <../Usage/ExportImportSettings.html>`_ po atnaujinimo į versiją 2.7.
 * Nustatymų failai iš ankstesnių versijų ** negali** būti naudojami AAPS 2.7 versijoje ir vėlesnėse.
 * Įsitikinkite, kad saugojate savo eksportuotus nustatymus ne tik telefone, bet ir bent vienoje saugioje vietoje (jūsų kompiuteris, debesijos saugykla...).
+* If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version. 
+* All settings as well as finished objectives will remain as they were in the previous version.
+* In case you have lost your keystore build do the following to keep your settings & objectives:
+
+   * Build version 2.6.4(not 2.7!!) with new keystore as described in the `troubleshooting section <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_.
+   * After you finished all these steps build version 2.7 with this new keystore and your settings and objectives will be as you had them in previous version.
 
 Autosens (Užuomina - nėra būtina imtis konkrečių veiksmų)
 -----------------------------------------------------------
