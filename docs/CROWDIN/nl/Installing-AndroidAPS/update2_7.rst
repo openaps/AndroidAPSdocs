@@ -20,6 +20,8 @@ Finish exam
 -----------------------------------------------------------
 * AAPS 2.7 contains new objective 11 for `automation <../Usage/Automation.html>`_.
 * You have to finish exam (`objective 3 and 4 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_) in order to complete `objective 11 <../Usage/Objectives.html#objective-11-automation>`_.
+* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Automation.html>`_. 
+* This will not effect other objectives you have already finished. You will keep all finished objectives!
 
 Set master password
 -----------------------------------------------------------
@@ -38,6 +40,12 @@ Exporteer instellingen
 * You must `export your settings <../Usage/ExportImportSettings.html>`_ after updating to version 2.7.
 * Settings files from previous versions **cannot** be used in AAPS 2.7 and onwards anymore.
 * Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
+* If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version. 
+* All settings as well as finished objectives will remain as they were in the previous version.
+* In case you have lost your keystore build do the following to keep your settings & objectives:
+
+   * Build version 2.6.4(not 2.7!!) with new keystore as described in the `troubleshooting section <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_.
+   * After you finished all these steps build version 2.7 with this new keystore and your settings and objectives will be as you had them in previous version.
 
 Autosens (Hint - no action necessary)
 -----------------------------------------------------------
