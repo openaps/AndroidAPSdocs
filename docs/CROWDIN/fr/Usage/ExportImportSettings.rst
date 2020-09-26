@@ -24,7 +24,7 @@ Entre autres, les informations suivantes font partie des paramètres exportés :
 * Résultats des `Objectifs <../Usage/Objectives.html>`_ y compris les résultats de l'objectif 3 `Prouver ses connaissances <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
 * `Préférences <../Configuration/Preferences.html>`_ y compris les paramètres `NSClient <../Configuration/Preferences.html#ns-client>`_
 
-Encrypted backup format
+Format de sauvegarde chiffré
 ==================================================
 Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`_ .
 
@@ -36,15 +36,15 @@ Exporter les paramètres
 * Exporter les paramètres
 
 .. image:: ../images/AAPS_ExportSettings1.png
-  :alt: AndroidAPS export settings 1
+  :alt: AndroidAPS exporter les paramètres 1
 
 * Date and time of export will be added to the file name automatically and displayed together with the path.
-* Click 'OK'.
+* Cliquez sur "OK'.
 * Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
 * Successful export will be prompted at bottom of the screen.
 
 .. image:: ../images/AAPS_ExportSettings2.png
-  :alt: AndroidAPS export settings 2
+  :alt: AndroidAPS exporter les paramètres 2
   
 Importez les paramètres
 ==================================================
@@ -53,7 +53,7 @@ Importez les paramètres
 * Importez les paramètres
 
 .. image:: ../images/AAPS_ImportSettings1.png
-  :alt: AndroidAPS import settings 1
+  :alt: AndroidAPS importer les paramètres 1
 
 * All files from folder AAPS/preferences/ on your phone will be shown in the list.
 * Select file.
@@ -73,7 +73,7 @@ Importez les paramètres
 
   * Comme les paramètres de connexion de la pompe sont également importés dans AAPS sur votre nouveau téléphone, il va déjà "connaître" la pompe et donc ne démarrera pas une analyse bluetooth. Veuillez associer manuellement le nouveau téléphone et la pompe.
   
-Transfer settings file
+Transférer les paramètres
 ==================================================
 * Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
 * Manuals can be found on the web, i.e. `Android help pages <https://support.google.com/android/answer/9064445?hl=en>`_.
