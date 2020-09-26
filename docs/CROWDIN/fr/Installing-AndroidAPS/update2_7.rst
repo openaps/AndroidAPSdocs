@@ -20,8 +20,8 @@ Terminer les objectifs
 -----------------------------------------------------------
 * AAPS 2.7 contient un nouvel objectif 11 pour `l'automatisation <../Usage/Automation.html>`_.
 * Vous devez avoir fini les autres objectfs (`objectifs 3 et 4 <../Usage/Objectives.html#objectif-3-prouver-ses-connaissances>`_) pour pouvoir faire l'`objectif 11 <../Usage/Objectives.html#objectif-11-automatisation>`_.
-* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Automation.html>`_. 
-* This will not effect other objectives you have already finished. You will keep all finished objectives!
+* Si par exemple vous n'avez pas encore terminé l'examen dans l'`objective 3 <../Usage/Objectives. tml#objectif-3-prouver-ses-connaissances>`_ , vous devrez terminer l'examen avant de pouvoir commencer l'`objective 11 <../Usage/Objectives.html#objectif-11-automatisation>`_. 
+* Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
 Définir le mot de passe principal
 -----------------------------------------------------------
@@ -40,12 +40,12 @@ Exporter les paramètres
 * Vous devez `exporter vos paramètres <../Usage/ExportImportSettings.html>`_ après la mise à jour vers la version 2.7.
 * Les fichiers de paramètres des versions précédentes **ne peuvent plus** être utilisés dans AAPS 2.7 et les versions suivantes.
 * Assurez-vous de stocker vos paramètres exportés non seulement sur votre téléphone, mais également dans au moins un autre endroit sûr (votre pc, stockage cloud...).
-* If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version. 
-* All settings as well as finished objectives will remain as they were in the previous version.
-* In case you have lost your keystore build do the following to keep your settings & objectives:
+* Si vous construisez l'apk AAPS 2.7 avec le même fichier de clés que dans les versions précédentes, vous pouvez installer la nouvelle version sans supprimer la version précédente. 
+* Tous les paramètres ainsi que les objectifs terminés resteront tels qu'ils étaient dans la version précédente.
+* Si vous avez perdu votre fichier de clés, faites ce qui suit pour conserver vos paramètres et vos objectifs :
 
-   * Build version 2.6.4(not 2.7!!) with new keystore as described in the `troubleshooting section <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_.
-   * After you finished all these steps build version 2.7 with this new keystore and your settings and objectives will be as you had them in previous version.
+   * Construisez la version 2.6.4 (et non la 2.7 !!) avec un nouveau fichier de clés, comme c'est décrit dans la `section dépannage <../Installing-AndroidAPS/troubleshooting_androidstudio.html#certificats-perdus>`_.
+   * Une fois toutes les étapes terminées, construisez la version 2.7 avec le nouveau magasin de clés et vos paramètres et objectifs seront comme vous les aviez dans la version précédente.
 
 Autosens (un indice - aucune action nécessaire)
 -----------------------------------------------------------
