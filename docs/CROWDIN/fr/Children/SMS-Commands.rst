@@ -21,7 +21,7 @@ Paramétrer les commandes SMS
 
 Numéros de tél autorisés
 -------------------------------------------------
-* Dans AndroidAPS, allez dans **Préférences > Communicateur SMS** et entrez le(s) numéro(s) de téléphone que vous autoriserez pour les commandes SMS (séparés par des points-virgules, par ex. +4412345678;+4412345679) 
+* Dans AndroidAPS, allez dans **Préférences > Communicateur SMS** et entrez le(s) numéro(s) de téléphone que vous autoriserez pour les commandes SMS (séparés par des points-virgules, par ex. +6412345678;+6412345679) 
 * Activez 'Autoriser les commandes distantes par SMS'.
 * Si vous voulez utiliser plus d'un numéro :
 
