@@ -29,7 +29,7 @@ Autorizuoti telefono numeriai
   * Įsitikinkite to vieno numerio veikimu nusiunčiant ir patvirtinant SMS komandą.
   * Įveskite papildomą numerį(-ius) atskiriant juos kabliataškiu be tarpo.
   
-    .. image:: ../images/SMSCommandsSetupSpace.png
+    .. image:: ../images/SMSCommandsSetupSpace2.png
       :alt: SMS komandos konfigūravimas. Keli numeriai
 
 Minutės tarp boluso komandų
