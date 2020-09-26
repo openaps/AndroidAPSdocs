@@ -54,7 +54,7 @@ Major new features
 * removed Oref0 sensitivity @Tornado-Tim
 * `Biometric or password protection <..../Configuration/Preferences.html#protection>`_ for settings, bolus @MilosKozak
 * `new automation trigger <../Usage/Automation.html>`_ @PoweRGbg
-* `Open Humans uploader <../Configuration/OpenHumans.html>`_
+* `Open Humans uploader <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
 * New documentation @Achim
 
 Version 2.6.1.4
