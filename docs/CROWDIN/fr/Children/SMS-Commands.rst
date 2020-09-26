@@ -29,7 +29,7 @@ Numéros de tél autorisés
   * Vérifiez le bon fonctionnement de ce numéro unique en envoyant et en confirmant une commande SMS.
   * Entrez le(s) numéro(s) supplémentaire(s) séparé(s) par un point-virgule, pas d'espace.
   
-    .. image:: ../images/SMSCommandsSetupSpace.png
+    .. image:: ../images/SMSCommandsSetupSpace2.png
       :alt: Commandes SMS Configurer plusieurs numéros
 
 Délai entre les commandes bolus
