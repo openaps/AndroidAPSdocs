@@ -95,32 +95,32 @@ Klicke auf dem Android Studio Willkommensbildschirm auf das kleine Dreieck (1. i
 * Klicke auf das kleine Dreieck neben Version Control (1.), um das Untermenü zu öffnen.
 * Git (2.) anklicken.
 * Stelle sicher, dass die update method "Merge" (3.) ausgewählt ist.
-* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
+* Prüfe durch klicken des Buttons "Test" (4.), ob Android Studio den Pfad zu git.exe automatisch ermitteln kann.
     
-    ![Android Studio settings](../images/AndroidStudio361_09.png)
+    ![Einstellungen für Android Studio](../images/AndroidStudio361_09.png)
 
-* If automatic setting is successful git version will be displayed.
+* Wenn die automatische Einstellung möglich ist, wird die Git-Version angezeigt.
 
-* Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
+* Klicke im Dialogfenster auf "OK" (1.) und dann im Einstellungsfenster nochmals auf "OK" (2.).
     
-    ![Automatic git installation succeeded](../images/AndroidStudio361_10.png)
+    ![Automatische Git-Installation erfolgreich](../images/AndroidStudio361_10.png)
 
-* In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
+* Falls git.exe nicht gefunden werden kann, schließe das Dialogfenster mit "OK" (1.) und klicke dann auf den Button mit den drei Punkten (2.).
 
-* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where it can be found. Du brauchst die git.exe, die im Ordner \bin\ gespeichert ist.
-* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
-* Close settings window by clicking "OK" button (5.).
+* Du kannst auch die [Suchfunktion ](https://www.computerwoche.de/a/suchfunktion-optimal-nutzen,3331986,2) im Windows Explorer verwenden, um "git.exe" zu finden wenn Du Dir nicht sicher bist, wo diese gespeichert ist. Du brauchst die git.exe, die im Ordner \bin\ gespeichert ist.
+* Wähle den Pfad zu git.exe aus, stelle sicher, dass Du den Ordner ** \bin\ ** ausgewählt hast (3.), und klicke auf "OK" (4.).
+* Schließe das Einstellungs-Fenster durch Klick auf "OK" (5.).
     
-    ![Automatic git installation failed](../images/AndroidStudio361_11.png)
+    ![Automatische Git-Installation fehlgeschlagen](../images/AndroidStudio361_11.png)
 
-* **Reboot your computer to update system environment.**
+* **Starte Deinen Computer neu, um die Systemumgebung zu aktualisieren.**
 
 ### Mac
 
-* Any git version should work. For example <https://git-scm.com/download/mac>.
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* If you install git via homebrew there is no need to change any preferences. Im Fall der Fälle findest Du diese unter Android Studio - Preferences.
+* Jede git Version sollte funktionieren. Zum Beispiel <https://git-scm.com/download/mac>.
+* Benutze Homebrew um git zu installieren: ```$ brew install git```.
+* Details zur Installation von git findest Du in der [offiziellen git Dokumentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Wenn Du git über homebrew installierst, musst Du keine Einstellungen ändern. Im Fall der Fälle findest Du diese unter Android Studio - Preferences.
 
 ## AndroidAPS-Code herunterladen
 
@@ -130,11 +130,11 @@ Klicke auf dem Android Studio Willkommensbildschirm auf das kleine Dreieck (1. i
     
     * Klicke auf dem Android Studio Willkommensbildschirm auf "Get from version control".
         
-        ![Check out project from version control from welcome screen](../images/AndroidStudio_GetFromVersionControl.PNG)
+        ![Check out project from version control vom Willkommensbildschirm](../images/AndroidStudio_GetFromVersionControl.PNG)
     
     * Wenn Du Android Studio bereits geöffnet hast und den Willkommensbildschirm nicht mehr siehst, klicke auf File (1.) > New (2.) > Project from Version Control... (3.)
         
-        ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
+        ![Check out project from version control innerhalb von Android Studio](../images/AndroidStudio_FileNew.PNG)
 
 * Trage die URL zum AndroidAPS Repository (https://github.com/nightscout/AndroidAPS) (1.) ein.
 
