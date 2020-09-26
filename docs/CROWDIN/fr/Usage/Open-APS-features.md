@@ -5,9 +5,11 @@
 * Autosens est un algorithme qui examine les écarts de glycémie (positives/négatives/neutres).
 * Il va essayer de déterminer à quel point vous êtes sensible/résistant en fonction de ces écarts.
 * L'implémentation oref dans **OpenAPS** utilise une combinaison de 24 et 8 heures de données. Il utilise celui qui le est plus sensible.
-* AndroidAPS n'exécute que la version 8 heures (pour activer les RNS) ou 24 heures en tant qu'option utilisateur.
+* Dans les versions antérieures à AAPS 2.7, l'utilisateur devait choisir manuellement entre 8 heures ou 24 heures.
+* A partir de la version 2.7 d'AAPS, l'Autosens basculera entre une fenêtre de 24 heures et 8 heures pour calculer la sensibilité. Il choisira celle qui est le plus sensible. 
+* Les utilisateurs qui utilisaient oref1 remarqueront probablement que le système peut être moins dynamique en raison de la variation de sensibilité entre 24 heures et 8 heures.
 * Le changement de canule ou le changement de profil réinitialisera le ratio Autosens à 0%.
-* Autosens ajuste votre basal et votre SI pour vous (c.-à-d. qu'il imite ce que fait un changement de profil).
+* Autosens ajuste votre basal, votre ratio G/I et votre SI pour vous (c'est à dire qu'il imite ce que fait un changement de profil).
 * Si vous mangez continuellement des glucides sur une période prolongée, l'Autosens sera moins efficace pendant cette période car les glucides sont exclus les calculs des écarts de glycémie.
 
 ## Super Micro Bolus (SMB)
@@ -141,13 +143,11 @@ Valeur par défaut : 4 (ne doit pas être modifié sauf si vous en avez vraiment
 
 AAR, la version abrégée de "Assistance Améliorée Repas" est une fonctionnalité OpenAPS de 2017 (oref0). L'Assistance Améliorée Repas (AAR) de OpenAPS permet au système de réagir plus rapidement après un bolus repas si vous entrez les Glucides de façon fiable.
 
-**Vous devez avoir démarré [l'objectif 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) pour utiliser cette fonctionnalité.**
-
 Vous pouvez trouver plus d'informations dans la [documentation OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 ### Max. U/h pour le débit temp Basal (OpenAPS "max-basal")
 
-Ce paramètre de sécurité aide AndroidAPS à ne jamais diffuser des débits de base dangereusement élevé et limite les débits des basals temp à x U/h. Il est conseillé de definir cette valeur de facon raisonnable et sensée. Une bonne recommandation est de prendre le plus haut débit de votre profil de basal et de le multiplier par 4 et d'au moins 3. Pa exemple, si le débit le plus élevé de votre profil est de 1,0 U/h vous pouvez la multiplier par 4 ce qui vous fait 4 U/h que vous définissez comme paramètre de sécurité.
+Ce paramètre de sécurité aide AndroidAPS à ne jamais diffuser des débits de base dangereusement élevé et limite les débits des basals temp à x U/h. Il est conseillé de definir cette valuer de facon raisonnable et sensée. Une bonne recommandation est de prendre le plus haut débit de votre profil de basal et de le multiplier par 4 et d'au moins 3. Par exemple, si le débit le plus élevé de votre profil est de 1,0 U/h vous pouvez la multiplier par 4 ce qui vous fait 4 U/h que vous définissez comme paramètre de sécurité.
 
 Vous ne pouvez pas choisir n'importe quelle valeur : Pour des raison de sécurité, il y a une 'limite en dur' qui dépend de l'age du patient. Cette 'limite en dur' pour maxIA est plus basse avec AMA (AAR) qu'avec SMB. La valeur la plus faible est pour les enfants et la valeur la plus élevée est pour les adultes résistants à l'insuline.
 
@@ -188,42 +188,6 @@ Valeur par défaut : 3 (ne doit pas être modifié sauf si vous en avez vraiment
 **Multiplicateur de sécurité basale courante** C'est une autre limite de sécurité importante. Le paramètre par défaut (qui n'a normalement pas besoin d'être ajusté) est 4. Cela signifie qu'AndroidAPS ne sera jamais autorisé à fixer un débit de basal temporaire supérieur à 4 x le débit de base courant programmé dans la pompe de l'utilisateur.
 
 Valeur par défaut : 4 (ne doit pas être modifié sauf si vous en avez vraiment besoin et que vous savez ce que vous faites)
-
-**Snooze bolus Diviseur de DAI** La fonction “Snooze bolus” marche après un bolus repas. AAPS ne définit pas de débits de base temporaires bas après un repas pendant une durée égale à la DAI divisée par le paramètre « bolus snooze ». La valeur par défaut est 2. Cela signifie qu'avec un DAI de 5h, le "bolus snooze" serait d'une durée de 5h/2 = 2,5h.
-
-Valeur par défaut : 2
-
-* * *
-
-## Assistance Repas (AR)
-
-### Max. U/h pour le débit temp Basal (OpenAPS "max-basal")
-
-Ce paramètre de sécurité aide AndroidAPS à ne jamais diffuser des débits de base dangereusement élevé et limite les débits des basals temp à x U/h. Il est conseillé de definir cette valeur de facon raisonnable et sensée. Une bonne recommandation est de prendre le plus haut débit de votre profil de basal et de le multiplier par 4 et d'au moins 3. Pa exemple, si le débit le plus élevé de votre profil est de 1,0 U/h vous pouvez la multiplier par 4 ce qui vous fait 4 U/h que vous définissez comme paramètre de sécurité.
-
-Vous ne pouvez pas choisir n'importe quelle valeur : Pour des raison de sécurité, il y a une 'limite en dur' qui dépend de l'age du patient. Cette 'limite en dur' pour maxIA est plus basse avec MA (AR) qu'avec SMB. La valeur la plus faible est pour les enfants et la valeur la plus élevée est pour les adultes résistants à l'insuline.
-
-Les paramètres codés en dur dans AndroidAPS sont les suivants :
-
-* Enfant : 2
-* Adolescent : 5
-* Adulte : 10
-* Adulte résistant à l'insuline : 12
-
-### IA basale max que OpenAPS pourra délivrer \[U\] (OpenAPS "max-iob")
-
-Ce paramètre limite la quantité maximale d'IA basale pour AndroidAPS. Si l'IA est plus élevée, AAPS arrête de délivrer de l'insuline basale additionnelle jusqu'à ce que l'IA de basale repasse sous la limite.
-
-La valeur par défaut est 2, mais vous pouvez augmenter ce paramètre lentement pour voir comment cela vous affecte et trouver quelle valeur vous convient le mieux. C'est différent pour tout le monde et dépend aussi de la Dose Totale d'Insuline (DTI) moyenne quotidienne. Pour des raisons de sécurité, il y a une limite, qui dépend de l'âge du patient. Cette 'limite en dur' pour maxIA est plus basse avec MA (AR) qu'avec SMB.
-
-* Enfant : 3
-* Adolescent : 5
-* Adulte : 7
-* Adulte résistant à l'insuline : 12
-
-### Paramètres Avancés
-
-**Utiliser delta basé sur moyenne courte** Si vous activez cette fonction, AndroidAPS utilise une moyenne courte des variations de glycémie sur les 15 dernières minutes, ce qui correspond généralement à la moyenne des trois dernières valeurs. Cela aide AndroidAPS à travailler plus régulièrement avec des sources de données bruyantes comme xDrip+ et Libre.
 
 **Snooze bolus Diviseur de DAI** La fonction “Snooze bolus” marche après un bolus repas. AAPS ne définit pas de débits de base temporaires bas après un repas pendant une durée égale à la DAI divisée par le paramètre « bolus snooze ». La valeur par défaut est 2. Cela signifie qu'avec un DAI de 5h, le "bolus snooze" serait d'une durée de 5h/2 = 2,5h.
 

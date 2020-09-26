@@ -2,11 +2,11 @@
 
 Si todavía no lo has hecho, descarga [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
-**This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
+**Esta documentación es para xDrip + sólo para Android.** Hay una app "xDrip para iOS" que nada tiene que ver con el xDrip + original para Android.
 
-Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
+Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus).
 
-Si el número de serie de su transmisor Dexcom G6 is starting with 8G..., 8H... or 8J... utiliza una de las [últimas compilaciones ](https://github.com/NightscoutFoundation/xDrip/releases).
+Si el número de serie de su transmisor Dexcom G6 que empieza por 8G o 8H... or 8J... utiliza una de las [últimas compilaciones ](https://github.com/NightscoutFoundation/xDrip/releases).
 
 If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -24,7 +24,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 * Desactiva `Cargar tratamientos` y `Rellenar datos`.
    
-   **Safety warning : You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.**
+   **Advertencia de seguridad: Debes desactivar "Cargar tratamientos" en xDrip+, de lo contrario, si los tratamientos se duplican pueden dar lugar a cifras erróneas de insulina activa (IOB) y carbohidratos activos (COB) en en AAPS.**
 
 * La opción `Alerta de fallos` también debe desactivarse. De lo contrario, recibirás una alarma cada 5 minutos si la red wifi/móvil es demasiado mala o si el servidor no está disponible.
    
@@ -55,7 +55,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### La versión de xDrip+ a utilizar depende del número de serie de los transmisores G6.
 
-* Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus). 
+* Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus). 
 * Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ### Ajustes específicos de Dexcom
@@ -76,7 +76,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### No se recomiendan reinicios preventivos
 
-**With Dexcom transmitters who's serial no. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
+**With Dexcom transmitters who's serial no. que empieza por 8G o 8H, los reinicios preventivos no funcionan y podrían matar el sensor completamente!**
 
 No se recomienda la extensión automática de los sensores Dexcom (`reinicios preventivos`) ya que esto podría conducir a "saltos" en los valores BG el día 9 después del reinicio.
 
@@ -96,7 +96,7 @@ Para obtener más información acerca de los detalles y las razones de estas rec
 
 **Para el segundo y los siguientes transmisores ver [Extender la vida del transmisor](../Configuration/xdrip#extend-transmitter-life) a continuación.**
 
-Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
+Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus).
 
 Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -174,7 +174,7 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J 
 
 ### Sustituir transmisor
 
-Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
+Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus).
 
 Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 

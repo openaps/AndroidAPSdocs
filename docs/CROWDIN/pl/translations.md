@@ -1,6 +1,6 @@
 # Jak przetłumaczyć AndroidAPS i dokumentację
 
-* Przejdź do <https://translations.androidaps.org> lub <https://wikitranslations.androidaps.org> i zaloguj się przy użyciu konta Github
+* Go to <https://crowdin.com/project/androidaps> or <https://crowdin.com/project/androidapsdocs> and login using your Github account
 
 * Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users).
 

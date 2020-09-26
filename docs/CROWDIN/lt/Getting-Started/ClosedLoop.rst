@@ -1,7 +1,7 @@
 Kas yra uždaro ciklo sistema?
 **************************************************
 
-.. nuotrauka:: ../images/autopilot.png
+.. image:: ../images/autopilot.png
   :alt: AAPS yra tarsi autopilotas
 
 Dirbtinės kasos uždaro ciklo sistema sujungia įvairius komponentus, kad būtų lengviau valdyti diabetą. 

@@ -4,13 +4,13 @@ Cálculo COB
 ¿Cómo calcula AndroidAPS el valor de COB?
 ==================================================
 
-Oref0 / Oref1
+Oref1
 --------------------------------------------------
 
 Los carbohidratos no absorbidos se cortan después del tiempo especificado
 
 .. image:: ../images/cob_oref0_orange_II.png
-  :alt: Oref0 / Oref1
+  :alt: Oref1
 
 AAPS, promedio ponderado
 --------------------------------------------------
@@ -25,7 +25,7 @@ Si se utiliza la absorción mínima de carbohidratos (min_5m_carbimpact) en luga
 Detección de valores COB incorrectos
 ==================================================
 
-A partir de la versión 2.4, AAPS le avisa si está a punto de bolo con COB de una comida previa y el algoritmo cree que el cálculo de COB actual podría estar mal. En este caso, le dará una sugerencia adicional en la pantalla de confirmación después del uso del asistente en bolo. 
+AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. En este caso, le dará una sugerencia adicional en la pantalla de confirmación después del uso del asistente en bolo. 
 
 ¿Cómo detecta AndroidAPS valores de COB erróneo? 
 --------------------------------------------------
@@ -55,4 +55,4 @@ En la captura de pantalla de arriba, 41% de 1 vez que la absorción de carbohidr
 
 Corrección manual de los carbohidratos ingresados
 ==================================================
-Si sobreestimó o subestimo los carbohidratos, puede corregir esto a través de la pestaña de tratamientos y el portal de atención, tal como se describe en `aquí <../Getting-Started/Screenshots.html#carb-corrección>`_.
+If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.

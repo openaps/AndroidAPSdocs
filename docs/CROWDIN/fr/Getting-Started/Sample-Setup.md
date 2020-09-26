@@ -75,14 +75,14 @@ Les services de géolocalisation ("GPS") doivent être activés pour que Bluetoo
 
 L'application Dexcom originale du Google Play Store ne fonctionnera pas parce qu'elle ne diffuse pas de valeurs vers d'autres applications. Par conséquent, une version légèrement modifiée par la communauté est nécessaire. Seule cette application Dexcom modifiée peut communiquer avec AAPS. De plus, l'application Dexcom modifiée peut être utilisée avec tous les smartphones Android et non pas seulement ceux de [la liste de compatibilité Dexcom](https://www.dexcom.com/dexcom-international-compatibility).
 
-Une version en mmol/l et une version en mg/dl de l'application Dexcom G6 patchée sont disponibles ici <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. Vous devez choisir [l'application G6 correspondant à votre région](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app).
+Une version en mmol/l et une version en mg/dl de l'application Dexcom G6 patchée sont disponibles ici <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. Vous devez choisir [l'application G6 correspondant à votre région](../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee).
 
 Pour ce faire, effectuez les étapes suivantes sur votre smartphone :
 
 1. Si l'application Dexcom originale est déjà installée : 
     * Arrêter le capteur
     * Désinstallez l'application via Menu > Paramètres > Apps > Dexcom G6 Mobile > Désinstaller
-2. Téléchargez l'application Dexcom patchée (vérifiez l'unité mg/dl ou mmol/l et la [région](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) selon vos besoins): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
+2. Téléchargez l'application Dexcom patchée (vérifiez l'unité mg/dl ou mmol/l et la [région](../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee) selon vos besoins): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
 3. Installez l'application Dexcom G6 patchée sur votre smartphone (= selectionnez le fichier apk téléchargé)
 4. Démarrez l'application Dexcom G6 patchée, activez/calibrez le capteur selon les instructions données et attendez la fin de la phase de démarrage.
 5. Une fois que l'application Dexcom patchée affiche la valeur actuelle de la glycémie, configurez les alertes (menu hamburger sur le côté gauche de l'écran) comme suit : 
@@ -95,8 +95,8 @@ Pour ce faire, effectuez les étapes suivantes sur votre smartphone :
 
 ## Installer AndroidAPS
 
-1. Suivez les instructions de [construire l'APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
-2. [Transférez](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) l'APK généré sur votre téléphone
+1. Suivez les instructions de [construire l'APK](../Installing-AndroidAPS/Building-APK.html#generer-un-apk-signe)
+2. [Transférez](../Installing-AndroidAPS/Building-APK.html#transferer-le-fichier-apk-sur-le-smartphone) l'APK généré sur votre téléphone
 3. [Configurez AndroidAPS](../Configuration/Config-Builder.md) selon vos besoins en utilisant l'assistant de configuration ou manuellement
 4. Dans cet exemple de configuration, nous avons utilisé (entre autres)
 

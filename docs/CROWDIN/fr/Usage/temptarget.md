@@ -6,7 +6,7 @@ Avec « Cibles Temporaires » (ou CT), vous pouvez changer votre objectif glycé
 
 ![Définir les cibles temp. par défaut](../images/TempTarget_Default.png)
 
-Pour utiliser une de ces « Cibles temporaires par défault », vous pouvez appuyer longuement sur votre cible dans le coin droit en haut de l'onglet Aperçu (ou Accueil) ou encore utiliser les raccourcis dans le bouton orange « Glucides ». Pour définir manuellement une [ "Cible Temporaire personnalisée" ](../Usage/temptarget#custom-temp-target) (valeur de Gly et/ou durée), utilisez "Personnalisé" après avoir fait un appui long sur votre cible dans le coin en haut à droite ou utilisez le bouton "Cible temp." dans l'onglet "Actions".
+Pour utiliser une de ces « Cibles temporaires par défault », vous pouvez appuyer longuement sur votre cible dans le coin droit en haut de l'onglet Aperçu (ou Accueil) ou encore utiliser les raccourcis dans le bouton orange « Glucides ». Pour définir manuellement une [ "Cible Temporaire personnalisée"](../Usage/temptarget. html#cible-temporaire-personnalise) (valeur de Gly et/ou durée), utilisez "Personnalisé" après avoir fait un appui long sur votre cible dans le coin en haut à droite ou utilisez le bouton "Cible temp." dans l'[onglet / menu Actions](../Configuration/Config-Builder#actions).
 
 ![Définir une cible temp.](../images/TempTarget_Set2.png)
 

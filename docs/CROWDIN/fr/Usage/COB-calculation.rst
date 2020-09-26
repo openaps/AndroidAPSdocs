@@ -4,13 +4,13 @@ Calcul GA
 Comment AndroidAPS calcul-il la valeur de GA?
 ==================================================
 
-Oref0 / Oref1
+Oref1
 --------------------------------------------------
 
 Les glucides non absorbés sont coupés après un certain temps
 
 .. image:: ../images/cob_oref0_orange_II.png
-  :alt: Oref0 / Oref1
+  :alt: Oref1
 
 AAPS, Moyenne pondérée
 --------------------------------------------------
@@ -25,7 +25,7 @@ Si l'absorption minimale de glucides (min_5m_carbimpact) est utilisée à la pla
 Détection de GA erronés
 ==================================================
 
-A partir de la version 2.4, AAPS vous avertit si vous êtes sur le point de faire un bolus avec GA d'un précédent repas et que l'algorithme pense que le calcul actuel des GA pourrait être erroné. Dans ce cas, il vous donnera une indication supplémentaire sur l'écran de confirmation après l'utilisation de l'assistant bolus. 
+AAPS vous avertit si vous êtes sur le point de faire un bolus avec des GA d'un précédent repas et que l'algorithme pense que le calcul actuel des GA pourrait être erroné. Dans ce cas, il vous donnera une indication supplémentaire sur l'écran de confirmation après l'utilisation de l'assistant bolus. 
 
 Comment AndroidAPS détecte-t-il les mauvaises valeurs de GA ? 
 --------------------------------------------------
@@ -55,4 +55,4 @@ Pourquoi l'algorithme ne détecte-on pas correctement les GA ?
 
 Correction manuelle des glucides
 ==================================================
-Si vous avez sur-estimé ou sous-estimé les glucides, vous pouvez corriger cela via l'onglet traitements et Action comme c'est décrit `ici <../Getting-Started/Screenshots.html#correction-de-glucides>`_.
+Si vous avez sur-estimé ou sous-estimé les glucides, vous pouvez corriger cela via les onglets / menus Traitements et Actions comme c'est décrit `ici <../Getting-Started/Screenshots.html#correction-de-glucides>`_.

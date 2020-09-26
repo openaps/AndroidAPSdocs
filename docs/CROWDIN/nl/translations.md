@@ -1,6 +1,6 @@
 # De app of wiki vertalen
 
-* Wanneer je wilt meehelpen vertalen vanuit het Engels, dan gaan we ervan uit dat je er wel uitkomt met de Engelstalige instructies;) -> Go to <https://translations.androidaps.org> or <https://wikitranslations.androidaps.org> and login using your Github account
+* Go to <https://crowdin.com/project/androidaps> or <https://crowdin.com/project/androidapsdocs> and login using your Github account
 
 * Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users).
 

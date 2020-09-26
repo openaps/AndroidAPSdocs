@@ -56,34 +56,44 @@ Let op: je mag **'Gebruik altijd absolute basale waarden' ** niet ingeschakeld h
 
 Als je Autotune wilt kunnen gebruiken, dan is de enige manier op dit moment **synchronisatie uitschakelen** met Nightscout (alleen uploaden). Nadeel is wel dat bepaalde functies die vooral handig zijn voor ouders van kinderen (via de NSClient app) niet meer werken als synchronisatie is uitgeschakeld. Ga in AAPS naar Instellingen > NSClient > Geavanceerde Instellingen en vink 'Alleen NS upload (sync. gedeactiveerd)' aan.
 
-![Screenshot van Insight Settings](../images/Insight_pairing_V2_5.png)
+![Screenshot van Insight Settings](../images/Insight_settings.png)
 
 In de Insight-instellingen in AndroidAPS kun je de volgende opties inschakelen:
 
-* "Reservoirwissel noteren": Dit zal automatisch een insulinepatroon wissel noteren wanneer je de "cannule vullen" optie op de pomp gebruikt.
-* "Slangwissel noteren": Dit voegt een notitie toe aan de AndroidAPS database wanneer je het "infusieset vullen" programma op de pomp gebruikt.
-* "Infuuswissel noteren": Dit voegt een notitie toe aan de AndroidAPS database wanneer je het "cannule vullen" programma op de pomp gebruikt. **Opmerking: Bij een infuuswissel wordt ook automatisch Autosens gereset.**
-* "Batterijwissel noteren": Dit voegt een notitie toe aan AndroidAPS wanneer je een nieuwe batterij in de pomp plaatst.
-* "Werkingsmodus-wissel noteren": Hiermee voegt je een notitie toe in de AndroidAPS database wanneer je de pomp start, stopt of pauzeert.
-* "Alarm noteren": Dit maakt een notitie in AndroidAPS wanneer de pomp een alarm geeft (behalve herinneringen, bolus en tijdelijke basaalstand annulering - deze worden niet geregistreerd).
+* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
+
+* "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
+
+* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+
+* "Log battery changes": This records a battery change when you put a new battery in the pump.
+
+* "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
+
+* "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
+
 * "TBR-emulatie inschakelen": De Insight pump kan alleen tijdelijke basaalstanden (TBRs) instellen tot maximaal 250%. Om deze beperking te omzeilen, zal TBR emulatie de pomp instructies geven om een vertraagde bolus te leveren voor de extra insuline als je een TBR van meer dan 250 procent vraagt.
     
     **Gebruik slechts één vertraagde bolus tegelijk, omdat meerdere uitgebreide bolussen tegelijkertijd fouten kunnen veroorzaken.**
 
-* "Herstel duur": Dit definieert hoe lang AndroidAPS zal wachten na een mislukte verbindingspoging voordat hij het opnieuw probeert. Je kunt een getal kiezen van 0 tot 20 seconden. Als je verbindingsproblemen ondervindt, kies je een langere wachttijd.   
+* "Disable vibrations on manual bolus delivery": This disables the Insight pump's vibrations when delivering a manual bolus (or extended bolus). This setting is available only with the latest version of Insight firmware (3.x).
+
+* "Disable vibrations on automated bolus delivery": This disables the Insight pump's vibrations when delivering an automatic bolus (SMB or Temp basal with TBR emulation). This setting is available only with the latest version of Insight firmware (3.x).
+
+* "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
       
-    Voorbeeld voor min. herstel duur = 5 en max. herstel duur = 20   
+    Example for min. recovery duration = 5 and max. recovery duration = 20   
       
-    geen verbinding -> wacht **5** sec.   
-    probeer opnieuw -> geen verbinding -> wacht **6** sec.   
-    probeer opnieuw -> geen verbinding -> wacht **7** sec.   
-    probeer opnieuw -> geen verbinding -> wacht **8** sec.   
+    no connection -> wait **5** sec.   
+    retry -> no connection -> wait **6** sec.   
+    retry -> no connection -> wait **7** sec.   
+    retry -> no connection -> wait **8** sec.   
     ...   
-    probeer opnieuw -> geen verbinding -> wacht **20** sec.   
-    probeer opnieuw -> geen verbinding -> wacht **20** sec.   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
-* "Verbindingsvertraging ": Dit bepaalt hoe lang (in seconden) AndroidAPS zal wachten met het verbreken van de pompverbinding nadat een opdracht is uitgevoerd. Standaard waarde is 5 seconden.
+* "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
 
 Voor perioden waarin de pomp gestopt is geweest, zal AAPS een tijdelijke basaalstand noteren van 0%.
 

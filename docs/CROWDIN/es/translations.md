@@ -1,6 +1,6 @@
 # Cómo traducir AndroidAPS y la documentación
 
-* Vaya a <https://translations.androidaps.org> o <https://wikitranslations.androidaps.org> e inicie sesión utilizando su cuenta de Github
+* Vaya a <https://crowdin.com/project/androidaps> o <https://crowdin.com/project/androidapsdocs> e inicie sesión utilizando su cuenta de Github
 
 * Envíe una solicitud de unión al equipo de documentación. Para ello, haz clic en la bandera del idioma deseado y luego el botón "Únete" en la esquina superior derecha de la siguiente página. Especifique un idioma, dé alguna información acerca de usted y su experiencia AAPS y si desea ser un traductor o un corrector de pruebas (sólo personas habilitadas para traducir + avanzados usuarios AndroidAPS).
 
@@ -72,17 +72,17 @@ En el momento dos [lenguajes de marcación](./make-a-PR#code-syntax) se utilizan
 
 * * *
 
-If links are displayed like this in Crowdin
+Si se visualizan enlaces como este en Crowdin
 
-![Crowdin - no HTML tag display](./images/CrowdinShowURL1.png)
+![Crowdin - no se visualiza ningún código HTML](./images/CrowdinShowURL1.png)
 
-click on the cogwheel to open settings, select "Show" and click "Save".
+haga clic en la rueda dentada para abrir la configuración, seleccione "Show" y haga clic en "Save".
 
-![Crowdin - show HTML tag display](./images/CrowdinShowURL2.png)
+![Crowdin - mostrar la etiqueta HTML](./images/CrowdinShowURL2.png)
 
-Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations#translate-headline-links).
+A continuación, los enlaces se mostrarán en formato HTML estándar y se pueden traducir teniendo en cuenta las reglas mencionadas [arriba](./translations#translate-headline-links).
 
-![Crowdin - HTML tag display](./images/CrowdinShowURL3.png)
+![Crowdin - mostrar la etiqueta HTML](./images/CrowdinShowURL3.png)
 
 ## Revisores
 

@@ -1,6 +1,6 @@
 # Gliukozės kraujyje duomenų išlyginimas
 
-Jei KG duomenys šokinėjantys/triukšmingi, AAPS gali neteisingai dozuoti insuliną, kas sąlygotų žemą arba aukštą KG. Dėl šios priežasties yra svarbu atjungti ciklą, kol problema bus išspręsta. Priklausomai nuo jūsų NGJ tokie dalykai gali kilti dėl NGJ konfigūravimo arba jutiklio problemų, puslapio sutrikimų. You may need to replace your CGM sensor to resolve this. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
+Jei KG duomenys šokinėjantys/triukšmingi, AAPS gali neteisingai dozuoti insuliną, kas sąlygotų žemą arba aukštą KG. Dėl šios priežasties yra svarbu atjungti ciklą, kol problema bus išspręsta. Priklausomai nuo jūsų NGJ tokie dalykai gali kilti dėl NGJ konfigūravimo arba jutiklio problemų, puslapio sutrikimų. Jums gali tekti pakeisti savo NGJ jutiklį, kad išsprętumėte tai. Kai kurios funkcijos, pavyzdžiui, "Įjungti SMB visada" ir "Įjungti SMB po angliavandenių" gali būti naudojami tik su geru KG šaltinio filtravimu.
 
 ## Dexcom G5 programėlė (modifikuota)
 

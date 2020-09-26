@@ -30,7 +30,7 @@ There are safety limits in place based on age you selected in this setting. If y
     
     ![Bolus Wizard 80%](../images/BolusWizardPartDelivery.png)
 
-* Option to enable [superbolus](../Getting-Started/Screenshots#section-a) in bolus wizard.
+* Option to enable [superbolus](../Getting-Started/Screenshots#section-h) in bolus wizard.
 
 ### Status lights
 
@@ -139,7 +139,7 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
     
     **Do not activate this when using [Insight pump](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** It would lead to false TBR settings in Insight pump.
 
-## SMS Communicator
+## SMS 통신기
 
 This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](../Children/SMS-Commands.rst) but it will only display in Preferences if you have selected this option in the Config Builder.
 

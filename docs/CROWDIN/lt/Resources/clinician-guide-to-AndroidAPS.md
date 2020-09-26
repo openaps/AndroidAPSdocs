@@ -59,43 +59,43 @@ Nors glikemija per trumpą laiką didėja, prognozuojama, kad vidutiniu laikotar
 
 #### 2 scenarijus - Nulinė bazė saugumo sumetimais
 
-In this example, BG is predicted to go low in the near-term, but is predicted to eventually be above target. However, because the near-term low is actually below the safety threshold, AndroidAPS will issue a zero temp, until there is no longer any point of the prediction line that is below threshold.
+Tikimasi, kad šiame pavyzdyje glikemija greitai nukris žemiau saugios ribos, tačiau vidutiniu laikotarpiu reikšmingai padidės virš tikslinės zonos. Kadangi trumpalaikė numatoma reikšmė yra mažesnė už saugią ribą, AndroidAPS vėl nustato nulinę bazę, kol laukiama glikemija nebebus mažesnė už šią ribą.
 
-![Dosing scenario 2](../images/Dosing_scenario_2.jpg)
+![Dozavimo 2 scenarijus](../images/Dosing_scenario_2.jpg)
 
-#### Scenario 3 - More insulin needed
+#### 3 scenarijus - Reikia daugiau insulino
 
-In this example, a near-term prediction shows a dip below target. However, it is not predicted to be below the safety threshold. The eventual BG is above target. Therefore, AndroidAPS will restrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). It will then assess adding insulin to bring the lowest level of the eventual predicted BG down to target, once it is safe to do so. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMB's (super micro boluses) ).*
+Šiame pavyzdyje prognozuojama, kad artimiausiu metu glikemija nukris žemiau tikslinės zonos. Tačiau nesitikima, kad ši vertė nukris žemiau saugios ribos. Ilgalaikė tikėtina glikemija yra didesnė už tikslinę. Todėl AndroidAPS neleis insulino, nes tai prisidėtų prie trumpalaikės hipoglikemijos, nes suleidus insulino, prognozuojama glikemija nesiektų tikslo. AndroidAPS ir toliau stebi glikemijos lygį ir kuo greičiau suleis insulino (nerizikuodama hipoglikemija), kad numatytą aukštą glikemiją grąžintų į tikslinę zoną. *(Priklausomai nuo nustatymo, reikiamo insulino kiekio ir laiko, šis insulinas gali būti leidžiamas kaip laikina bazė arba SMB (Super Mikro Bolusas) ). *
 
-![Dosing scenario 3](../images/Dosing_scenario_3.jpg)
+![Dozavimo 3 scenarijus](../images/Dosing_scenario_3.jpg)
 
-#### Scenario 4 - Low temping for safety
+#### 4 scenarijus - Žema valandinė bazė saugumo sumetimais
 
-In this example, AndroidAPS sees that BG is spiking well above target. However, due to the timing of insulin, there is already enough insulin in the body to bring BG into range eventually. In fact, BG is predicted to eventually be below target. Therefore, AndroidAPS will not provide extra insulin so it will not contribute to a longer-timeframe low. Although BG is high/rising, a low temporary basal rate is likely here.
+Šiame pavyzdyje AndroidAPS mato, kad glikemija sparčiai kyla virš tikslinės zonos. Tikimasi, kad dėl organizme jau esančio insulino ir jo veikimo trukmės, tikslinę ribą vėl bus galima pasiekti neleidžiant papildomo insulino. Iš tikrųjų tikimasi, kad ji nukris žemiau tikslo. Todėl AndroidAPS nesuleis papildomai insulino, kad vidutiniu laikotarpiu nesukeltų hipoglikemijos. Nors glikemijos reikšmė yra aukšta ir auga, tokiu atveju labiau tikėtina, kad AndroidAPS sumažins valandinę bazę.
 
-![Dosing scenario 4](../images/Dosing_scenario_4.jpg)
+![Dozavimo 4 scenarijus](../images/Dosing_scenario_4.jpg)
 
-### Optimizing settings and making changes
+### Nustatymų ir pakeitimų optimizavimas
 
-As a clinician who may not have experience with AndroidAPS or DIY closed loops, you may find it challenging to help your patient optimize their settings or make changes to improve their outcomes. We have multiple tools and [guides](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
+Jums, kaip gydytojui, neturinčiam patirties su AndroidAPS ar „pasidaryk pats“ uždarojo ciklo sistemomis, gali būti sudėtinga padėti pacientui optimizuoti nustatymus arba atlikti pakeitimus, kad pagerintumėte jo rezultatus. Turime keletą įrankių ir [vadovų](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html), kurie padeda pacientams atlikti mažus, patikrintus pakeitimus, kad pagerėtų jų nustatymai.
 
-The most important thing for patients to do is make one change at a time, and observe the impact for 2-3 days before choosing to change or modify another setting (unless it’s obviously a bad change that makes things worse, in which case they should revert immediately to the previous setting). The human tendency is to turn all the knobs and change everything at once; but if someone does so, then they may end up with further sub-optimal settings for the future, and find it hard to get back to a known good state.
+Svarbiausia užduotis pacientui yra padaryti tik vieną pakeitimą vienu metu ir stebėti jo poveikį 2–3 dienas prieš nusprendžiant pakeisti kitą parametrą. Žinoma, tai netaikoma, jei akivaizdžiai „blogas pritaikymas“ pablogina situaciją. Tokiu atveju jis turėtų nedelsdamas grįžti prie ankstesnio nustatymo. Mes, žmonės, linkę viską pakeisti iškart. Bet jei tai padarysite, tai gali sukelti neoptimalų pakeitimą, kurį sunku sugrąžinti į gerą būklę.
 
-One of the most powerful tools for making settings changes is an automated calculation tool for basal rates, ISF, and carb ratio. This is called “[Autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)”. It is designed to be run independently/manually, and allow the data to guide you or your patient in making incremental changes to settings. It is best practice in the community to run (or review) Autotune reports first, prior to attempting to make manual adjustments to settings. With AndroidAPS, Autotune will be run as a "one-off", although there are ongoing efforts to incorporate it directly into AndroidAPS as well. As these parameters are a prerequesite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adustment of these parameters would be the natural link to the clinician.
+Vienas galingiausių nustatymų yra automatinis valandinės bazės, insulino jautrumo faktoriaus bei insulino ir angliavandenių santykio skaičiavimo įrankis. Tai vadinama "[Autotune - automatinis pritaikymas](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)". Jis skirtas paleisti nepriklausomai / rankiniu būdu, o duomenys padės jums ar jūsų pacientui laipsniškai keisti parametrus. Geriausia praktika, prieš pradedant rankiniu būdu koreguoti nustatymus, pirmiausia peržiūrėti Autotune ataskaitas. Naudojant AndroidAPS, Autotune veikia kaip atskira sistema, nors šiuo metu stengiamasi ją integruoti tiesiai į AndroidAPS. Kadangi šie parametrai yra tiek standartinės pompos terapijos, tiek uždaro ciklo pagrindas, Autotune rezultatų aptarimas ir šių parametrų koregavimas būtų natūralus paciento ryšys su gydytoju.
 
-Additionally, human behavior (learned from manual diabetes mode) often influences outcomes, even with a DIY closed loop. For example, if BG is predicted to go low and AndroidAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dl (3.9 mmol). However, in many cases, someone may choose to treat with many more carbs (e.g. sticking to the 15 rule), which will cause a resulting faster spike both from the extra glucose and because insulin had been reduced in the timeframe leading up to the low.
+Be to, žmogaus elgesys, išmoktas valdant diabetą rankiniu būdų, dažnai daro įtaką rezultatams - net ir naudojant „pasidaryk pats“ uždarą ciklą. Pvz., jei prognozuojamas žema glikemija, o AndroidAPS sumažina insulino kiekį, gali pakakti nedaug angliavandenių (pvz., 3–4 g angliavandenių), kad glikemija padidėtų nuo 70 mg/dl (3,9 mmol). Tačiau daugeliu atvejų pacientas, remdamasis savo ankstesne patirtimi, nusprendžia suvartoti žymiai daugiau angliavandenių. Tai lemia spartesnį padidėjimą tiek dėl papildomos gliukozės, tiek dėl iš anksto sumažintos AndroidAPS insulino dozės.
 
 ### OpenAPS
 
-**This guide was adopted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AndroidAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AndroidAPS, with the main difference being the hardware platform where each peace of software is run.
+**Šis vadovas paimtas ir pritaikytas iš [OpenAPS Medicinos vadovas](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html). **OpenAPS yra sistema, kuri sukurta veikti mažame nešiojamame kompiuteryje (paprastai vadinama „rig“). AndroidAPS naudoja daugelį OpenAPS įdiegtų metodų ir dalijasi didžiąja logikos ir algoritmų dalimi, todėl šis vadovas yra labai panašus į pirminį vadovą. Didžiąją dalį informacijos apie OpenAPS galima lengvai pritaikyti AndroidAPS, pagrindinis skirtumas yra aparatinės įrangos platforma, kurioje veikia programinė įranga.
 
-### Summary
+### Apibendrinimas
 
-This is meant to be a high-level overview of how AndroidAPS works. For more details, ask your patient, reach out to the community, or read the full AndroidAPS documentation available online.
+Tai buvo bendra AndroidAPS veikimo apžvalga. Norėdami gauti daugiau informacijos, klauskite paciento, susisiekite su bendruomene arba perskaitykite visą AndroidAPS dokumentaciją, kurią galite rasti internete.
 
-Additional recommended reading:
+Papildomai rekomenduojama literatūra:
 
-* The [full AndroidAPS documentation](http://androidaps.readthedocs.io/en/latest/EN/index.html)
-* The [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), which explains how OpenAPS is designed for safety: https://openaps.org/reference-design/
-* The [full OpenAPS documentation](http://openaps.readthedocs.io/en/latest/index.html) 
-  * More [details on OpenAPS calculations](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+* Visa [AndroidAPS dokumentacija](http://androidaps.readthedocs.io/en/latest/EN/index.html)
+* [OpenAPS informacija](https://OpenAPS.org/reference-design/) paaiškina, kaip OpenAPS sukurtas saugumui: https://openaps.org/reference-design/
+* Visa [OpenAPS dokumentacija](http://openaps.readthedocs.io/en/latest/index.html) 
+  * Kita [informacija apie OpenAPS skaičiavimus](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)

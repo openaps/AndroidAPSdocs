@@ -30,7 +30,7 @@ Tai leidžia nustatyti slaptažodį, kad būtų išvengta netyčinių ar neleist
     
     ![Boluso skaičiuoklė 80%](../images/BolusWizardPartDelivery.png)
 
-* Galimybė įjungti [superbolusus](../Getting-Started/Screenshots#section-a) boluso skaičiuoklėje.
+* Option to enable [superbolus](../Getting-Started/Screenshots#section-h) in bolus wizard.
 
 ### Būklės indikatoriai
 

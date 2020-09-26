@@ -44,6 +44,7 @@ Comment installer AndroidAPS
 
    Construire l'APK <./Installing-AndroidAPS/Building-APK.md>
    Télécharger la nouvelle version ou branche <./Installing-AndroidAPS/Update-to-new-version.md>
+   Vérifications à faire après la mise à jour vers AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Installer git <./Installing-AndroidAPS/git-install.rst>
    Dépannage d'Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Notes de versions <./Installing-AndroidAPS/Releasenotes.rst>
@@ -71,7 +72,7 @@ Générateur de configuration
    :glob:
    
    Générateur de configuration <./Configuration/Config-Builder.md>
-   Préférences <./Configuration/Preferences.md>
+   Préférences <./Configuration/Preferences2020.rst>
    
    
 Utilisation d'AndroidAPS
@@ -173,7 +174,7 @@ Comment aider
 
 
 .. note:: 
-	** Avertissement **
+	**Avertissement**
 
 	* Toutes les informations, pensées et codes décrits ici sont destinés à des fins d'information et d'éducation uniquement. Nightscout ne fait actuellement aucune tentative de conformité à la confidentialité HIPAA. Utilisez Nightscout et AndroidAPS à vos propres risques et n'utilisez pas les informations ni le code pour prendre des décisions médicales.
 

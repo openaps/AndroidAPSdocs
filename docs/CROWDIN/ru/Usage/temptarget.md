@@ -6,7 +6,7 @@
 
 ![Задать временные цели по умолчанию](../images/TempTarget_Default.png)
 
-Чтобы установить одну из "Предустановленных временных целей TT", следует долго нажать на ваши цели в правом углу панели обзора или использовать ярлыки в оранжевой кнопке "Углеводы". Чтобы вручную задать [ "Произвольную временную цель TT "](../Usage/temptarget#custom-temp-target) (значение ГК и/или продолжительность), выберите" Пользовательская "после долгого нажатия на цель в верхнем правом углу или используйте кнопку "Временная цель "на вкладке "Действия ".
+Чтобы установить одну из "Предустановленных временных целей TT", следует долго нажать на ваши цели в правом углу панели обзора или использовать ярлыки в оранжевой кнопке "Углеводы". To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration) use “Custom“ after long-pressing your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
 
 ![Начать врем цель](../images/TempTarget_Set2.png)
 

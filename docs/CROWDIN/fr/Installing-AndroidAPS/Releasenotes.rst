@@ -13,6 +13,48 @@ Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à par
 
 Veuillez comprendre que cette modification n'a pas pour but de vous corriger mais est due à des raisons de sécurité. Les nouvelles versions d'AndroidAPS fournissent non seulement de nouvelles fonctionnalités, mais aussi d'importants correctifs de sécurité. Il est donc nécessaire que chaque utilisateur mette à jour a.s.a.p.. Malheureusement, il y a toujours des remontés de bug provenant de très anciennes versions, donc il s'agit d'une tentative d'améliorer la sécurité pour chaque utilisateur et toute la communauté DIY. Merci pour votre compréhension.
 
+Version 2.7.0
+================
+Date de sortie : 24-09-2020
+
+Le dossier github à été déplacé vers https://github.com/nightscout/AndroidAPS. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un `nouveau clone <../Installing-AndroidAPS/Building-APK.html>`_.
+
+Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
+
+**Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 2.7 comme c'est décrit ici** `ici <../Installing-AndroidAPS/update2_7.html>`_.
+
+Vous devez au moins démarrer l'`objectif 11 <../Usage/Objectives.html#objective-11-automation>`_ afin de continuer à utiliser la `fonction d'automatisation <../Usage/Automation.html>`_ (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 11 n'est pas possible).
+
+Nouvelles fonctionnalités majeures
+----------------------
+* utilisation interne de l'injection de dépendance, bibliothèques mises à jour, code réécrit en kotlin @MilosKozak @AdrianLxM
+* utilisation de modules pour les pompes Dana @MilosKozak
+* `nouvelle mise en page, selection de thème <../Getting-Started/Screenshots.html>`_ @MilosKozak
+* nouvelle `mise en page des voyants d'états <../Configuration/Preferences.html#voyants-d-etat>`_ @MilosKozak
+* `support de graphiques multiples <../Getting-Started/Screenshots.html#section-f---graphique-principal>`_ @MilosKozak
+* `Assistant Profil <../Configuration/profilehelper.html>`_ @MilosKozak
+* visualisation du `réglage dynamique de la cible <../Getting-Started/Screenshots.html#visualisation-de-l-ajustement-dynamique-de-la-cible>`_ @Tornado-Tim
+* nouvelle `mise en page des préférences <../Configuration/Preferences.html>`_ @MilosKozak
+* Mise à jour de l'algorithme SMB @Tornado-Tim
+* `Mode Arrêt Glycémie Basse <../Configuration/Preferences.html#mode-aps>`_ @Tornado-Tim
+* `notifications glucides requis <../Configuration/Preferences.html#notification-glucides-requis>`_ @twain47 @Tornado-Tim
+* Careportal supprimé (déplacé vers Actions) @MilosKozak
+* `nouveau format chiffré des sauvegardes <../Usage/ExportImportSettings.html>`_ @dlvoy
+* `nouvelle authentication SMS TOTP <../Children/SMS-Commands.html>`_ @dlvoy
+* `nouvelles commandes SMS PUMP CONNECT, DISCONNECT <../Children/SMS-Commands.html#autres>`_ @Lexsus
+* meilleure prise en charge des petits débits de basale sur les pompes Dana @Mackwe
+* petits correctifs Insight @TebbeUbben @MilosKozak
+* option `"Langue par défaut" <../Configuration/Preferences.html#general>`_ @MilosKozak
+* icônes vectorielles @Philoul
+* `définir une basal temp neutre pour les pompes MDT <../Configuration/MedtronicPump.html#configuration-du-telephone-androidaps>`_ @Tornado-Tim
+* amélioration de l'Historique @MilosKozak
+* suppression de l'algorithme OpenAPS MA @Tornado-Tim
+* suppression de la sensibilité Oref0 @Tornado-Tim
+* `protection biométrique ou par mot de passe <../Configuration/Preferences.html#protection>`_ pour les paramètres, bolus @MilosKozak
+* `nouveau déclencheur d'automatisation <../Usage/Automation.html>`_ @PoweRGbg
+* `Téléversement Open Humans <../Configuration/OpenHumans.html>`_
+* Nouvelle documentation @Achim
+
 Version 2.6.1.4
 ================
 Date de sortie : 04-05-2020
@@ -20,7 +62,7 @@ Date de sortie : 04-05-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
------
+----------------------
 * Insight: Désactivation de la vibration sur bolus pour le firmware version 3 - Deuxième tentative
 * Sinon, identique à 2.6.1.3. La mise à jour est facultative. 
 

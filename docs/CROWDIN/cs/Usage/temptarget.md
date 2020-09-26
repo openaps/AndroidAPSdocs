@@ -6,7 +6,7 @@ Použitím dočasných cílů (DC) lze na přechodnou dobu změnit cílovou hodn
 
 ![Nastavit výchozí dočasné cíle](../images/TempTarget_Default.png)
 
-Chcete-li nastavit „Výchozí dočasný cíl“, můžete tak učinit přidržením cíle v pravém horním rohu hlavní obrazovky nebo pomocí oranžového tlačítka „Sacharidy“. Chcete-li ručně nastavit položku ["Vlastní dočasný cíl"](../Usage/temptarget#custom-temp-target) (hodnota glykémie a/nebo dobu trvání), použijte tlačítko "Vlastní" po dlouhém stisku svého cíle v pravém horním rohu nebo použijte tlačítko "Dočasný cíl" na kartě Akce.
+Chcete-li nastavit „Výchozí dočasný cíl“, můžete tak učinit přidržením cíle v pravém horním rohu hlavní obrazovky nebo pomocí oranžového tlačítka „Sacharidy“. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration) use “Custom“ after long-pressing your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
 
 ![Spustit dočasný cíl](../images/TempTarget_Set2.png)
 

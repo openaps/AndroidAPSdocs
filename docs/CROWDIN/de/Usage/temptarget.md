@@ -6,7 +6,7 @@ Mit temporären Zielen (oder kurz - aus dem Englischen - TT von temp Targets) ka
 
 ![Standards für temporäre Ziele festlegen](../images/TempTarget_Default.png)
 
-Vordefinierte temporäre Ziele kannst du auswählen und aktivieren, indem du entweder lange auf das Zielbereich-Feld auf der "Home"-Seite drückst oder auf den orangen "Kohlenhydrate"-Button. Um manuell ein [ "Benutzerdefiniertes Temporäres Ziel" ](../Usage/temptarget#custom-temp-target) (BG-Wert und/oder Dauer) zu setzen, verwende "Benutzerdefiniert", nachdem Du Dein Ziel in der oberen rechten Ecke lang gedrückt hast oder verwende die Schaltfläche "Temporäres Ziel" auf der Registerkarte (Tab) "Aktionen".
+Vordefinierte temporäre Ziele kannst du auswählen und aktivieren, indem du entweder lange auf das Zielbereich-Feld auf der "Home"-Seite drückst oder auf den orangen "Kohlenhydrate"-Button. Um manuell ein [ "Benutzerdefiniertes Temporäres Ziel" ](../Usage/temptarget#benutzerdefiniertes-temp-target) (BG-Wert und/oder Dauer) zu setzen, verwende "Benutzerdefiniert", nachdem Du Dein Ziel in der oberen rechten Ecke lang gedrückt hast oder verwende die Schaltfläche "Temporäres Ziel" auf der Registerkarte (Tab) ["Aktionen"](../Configuration/Config-Builder#aktionen).
 
 ![Temporäres Ziel (TT) setzen](../images/TempTarget_Set2.png)
 

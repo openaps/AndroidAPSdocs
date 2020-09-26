@@ -98,7 +98,7 @@ The blood sugar values are received on the smartphone by the xDrip+ App.
 * In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
 * In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
 * to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <https://androidaps.readthedocs.io/en/latest/EN/Configuration/xdrip.html#identify-receiver>`_
-* If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON.  You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
+* If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON.  세팅 > 추가 세팅 > Advanced Calibration 설정에서 선택사항들을 검토할 수 있습니다.
 
 .. image:: ../images/Libre2_Tags.png
   :alt: xDrip+ LibreLink logging
@@ -153,7 +153,7 @@ Once successful please select "Sensor Stop" and "Delete calibration only" in xDr
 .. image:: ../images/Libre2_GapNewSensor.png
   :alt: xDrip+ missing data when changing Libre 2 sensor
 
-Calibration
+보정
 --------------------------------------------------
 You can calibrate the Libre2 with an offset of -40 mg/dl to +20 mg/dL [-2,2 mmol/l to +1,1 mmol/l] (intercept). The slope isn't changeable as the Libre2 is much more accurate compared to the Libe1. Please check by fingerpricking early after setting a new sensor. It is known that there can arise big differences to the blood measurements. To be on the safe side, calibrate every 24 - 48 hours. The values are accurate up to the end of the sensor and do not jitter as with the Libre1. However, if the sensor is completely off, this will not change. The sensor should then be replaced immediately.
 

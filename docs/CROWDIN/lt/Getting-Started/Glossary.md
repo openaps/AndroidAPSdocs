@@ -96,7 +96,7 @@
 </tr>
 <tr>
  <td>KAMŽ</td>
- <td>kateterio amžius - rodomas Nightscout, jei informacija buvo įvesta AAPS skirtuke Priežiūra arba AAPS veiksmų skirtuke "pradinis užpildymas“</td>
+ <td>kaniulės amžius - rodomas Nightscout, jei informacija buvo įvesta AAPS skirtuke Priežiūra arba AAPS veiksmų skirtuke "pradinis užpildymas“</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>

@@ -1,6 +1,6 @@
-
 Instellingen exporteren & importeren
 **************************************************
+
 Wanneer zou ik mijn instellingen moeten exporteren?
 ==================================================
 Wees voorbereid op onvoorziene omstandigheden. Je kunt belangrijke instellingen per ongeluk veranderen en problemen hebben om weer terug te gaan naar de juiste instellingen. Je telefoon kan stuk gaan of gestolen worden. Om makkelijk terug te keren naar instellingen die voor jou goed werkten (en ook: als je de Doelen die je eerder hebt afgerond, niet opnieuw wilt moeten doen) dan moet je jouw instellingen regelmatig exporteren.
@@ -11,8 +11,8 @@ Geëxporteerde instellingen moet je vervolgens kopiëren naar een cloudopslag, n
 
 Op een Windows-10 computer ziet het er zo uit:
   
-  .. image:: ../images/SmartphoneRootLevelWin10.png
-    :alt: Telefoon-opslag bekijken via computer
+.. image:: ../images/AAPS_ExImportSettingsWin.png
+  :alt: Telefoon-opslag bekijken via computer
 
 Ge-exporteerde gegevens
 ==================================================
@@ -24,32 +24,57 @@ Onder andere de volgende gegevens uit jouw instellingen worden ge-exporteerd:
 * Jouw voortgang door de `Doelen <../Usage/Objectives.html>`_ incl. `examen resultaten <../Usage/Objectives.html#doel-3-bewijs-jouw-kennis>`_
 * `Instellingen <../Configuration/Preferences.html>`_ incl. `NS Client-instellingen <../Configuration/Preferences.html#ns-client>`_
 
-
-
-
-Instellingen exporteren
+Encrypted backup format
 ==================================================
-* **Exporteer instellingen** op je oude telefoon
+Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`_ .
 
-  * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
-  * Onderhoud
-  * Exporteer instellingen
-  * Je ziet nu de locatie waar jouw instellingenbestand zal worden opgeslagen
-    
-.. image:: ../images/AAPS_ExportSettings.png
-  :alt: AndroidAPS instellingen exporteren
-       
-* ** Instellingen overdragen** van je oude naar je nieuwe telefoon doe je door de bestandslocatie op je oude telefoon op te zoeken, en het instellingenbestand te kopiëren naar jouw nieuwe telefoon. Bijvoorbeeld via Bluetooth, email, of met een usb-kabeltje via je computer.
 
-  Het geëxporteerde bestand heet "AndroidAPSPreferences" en moet in de hoofdmap van de hoofdmap van de telefoon staan (net als C: op je computer).
+Exporteer instellingen
+==================================================
+* Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
+* Onderhoud
+* Exporteer instellingen
+
+.. image:: ../images/AAPS_ExportSettings1.png
+  :alt: AndroidAPS export settings 1
+
+* Date and time of export will be added to the file name automatically and displayed together with the path.
+* Click 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+* Successful export will be prompted at bottom of the screen.
+
+.. image:: ../images/AAPS_ExportSettings2.png
+  :alt: AndroidAPS export settings 2
   
-* **Installeer AndroidAPS** op je nieuwe telefoon.
-* **Importeer instellingen** op je nieuwe telefoon
+Importeer instellingen
+==================================================
+* Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
+* Onderhoud
+* Importeer instellingen
 
-  * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
-  * Onderhoud
-  * Importeer instellingen
+.. image:: ../images/AAPS_ImportSettings1.png
+  :alt: AndroidAPS import settings 1
+
+* All files from folder AAPS/preferences/ on your phone will be shown in the list.
+* Select file.
+* Confirm import by clicking 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+
+.. image:: ../images/AAPS_ImportSettings2.png
+  :alt: AndroidAPS import settings 2
+
+* Details on the preference file will be shown.
+* Last option to cancel import.
+* Click 'Import'.
+* Confirm message by clicking 'OK'.
+* AAPS will be restarted in order to activate imported preferences.
 
 * **Tip voor Dana RS gebruikers:**
 
   * Omdat ook de instellingen voor het verbinden met je pomp zijn mee-geïmporteerd, zal jouw nieuwe telefoon denken dat hij de pomp al "kent" en dus geen Bluetooth verbindingsverzoek doen. Daarom moet je handmatig een Bluetooth verbinding maken tussen jouw nieuwe telefoon en je pomp (via Instellingen-menu van jouw telefoon).
+  
+Transfer settings file
+==================================================
+* Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
+* Manuals can be found on the web, i.e. `Android help pages <https://support.google.com/android/answer/9064445?hl=en>`_.
+* If you experience problems with the transferred file try another way to transfer file.

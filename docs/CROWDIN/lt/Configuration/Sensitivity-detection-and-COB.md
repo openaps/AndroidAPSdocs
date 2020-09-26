@@ -2,20 +2,15 @@
 
 ## Jautrumo algoritmas
 
-Šiuo metu yra 4 jautrumo nustatymo modeliai:
+Šiuo metu yra 3 jautrumo nustatymo modeliai:
 
-* Jautrumo nustatymo algoritmas Oref0
 * Jautrumo nustatymo algoritmas AAPS
 * Jautrumas pagal svertinį vidurkį
 * Jautrumo nustatymo algoritmas Oref1
 
-### Jautrumo nustatymo algoritmas Oref0
-
-Jautrumas apskaičiuojamas pagal praėjusių 24 valandų duomenis, o į neįsisavintus angliavandenius (jei tokių yra) po nustatymuose nurodyto laiko neatsižvelgiama. Algoritmas yra panašus į OpenAPS Oref0, aprašytą [OpenAPS Oref0 dokumentacijoje](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
-
 ### Jautrumo nustatymo algoritmas AAPS
 
-Jautrumas apskaičiuojamas taip pat, kaip ir Oref0, tačiau jūs galite nurodyti skaičiavimams laiką praeityje. Mažiausia angliavandenių absorbcija apskaičiuojama pagal maksimalų angliavandenių absorbcijos laiką nustatymuose
+Jautrumas apskaičiuojamas taip pat, kaip ir Oref1, tačiau jūs galite nurodyti skaičiavimams laiką praeityje. Mažiausia angliavandenių absorbcija apskaičiuojama pagal maksimalų angliavandenių absorbcijos laiką nustatymuose
 
 ### Jautrumas pagal svertinį vidurkį
 
@@ -27,4 +22,4 @@ Jautrumas apskaičiuojamas remiantis praėjusių 8 valandų arba paskutinio kate
 
 ## Vienu metu gaunami angliavandeniai
 
-Reikia pabrėžti, kad yra esminių skirtumų tarp jautrumo aptikimo modelių - AAPS, Svertinis vidurkio ir Oref0 bei Oref1. Oref įskiepiai daro prielaidą, kad įsisavinami tik vieno valgymo angliavandeniai. Tai reiškia, kad įvedus antrą valgymą, jo įsisavinimas prasideda tik tada, kai pirmasis valgymas yra visiškai įsisavintas. AAPS + Svertinis vidurkis angliavandenių mažėjimo skaičiavimą pradeda iškart po angliavandenių įvedimo. Jei yra daugiau nei vienas valgymas, tada minimalus angliavandenių suvartojimas apskaičiuojamas atsižvelgiant į maisto kiekį ir maksimalų absorbcijos laiką. Atitinkamai, minimali absorbcija bus didesnė, palyginti su Oref įskiepiais.
+Reikia pabrėžti, kad yra esminių skirtumų tarp jautrumo aptikimo modelių - AAPS, Svertinis vidurkio ir Oref1. Oref įskiepiai daro prielaidą, kad įsisavinami tik vieno valgymo angliavandeniai. Tai reiškia, kad įvedus antrą valgymą, jo įsisavinimas prasideda tik tada, kai pirmasis valgymas yra visiškai įsisavintas. AAPS + Svertinis vidurkis angliavandenių mažėjimo skaičiavimą pradeda iškart po angliavandenių įvedimo. Jei yra daugiau nei vienas valgymas, tada minimalus angliavandenių suvartojimas apskaičiuojamas atsižvelgiant į maisto kiekį ir maksimalų absorbcijos laiką. Atitinkamai, minimali absorbcija bus didesnė, palyginti su Oref įskiepiais.

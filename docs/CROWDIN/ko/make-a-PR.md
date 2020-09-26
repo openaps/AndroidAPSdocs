@@ -4,7 +4,7 @@
 
 For hints how to format text (headline, bold...) and set links please see the ["code syntax"](./make-a-PR#code-syntax) section of this page.
 
-## 일반
+## 포괄적인 정보
 
 For any questions, feedback or new ideas you can contact the documentation team via email (wiki@androidaps.org). Doing a PR isn't difficult, but we can help you editing the documentation.
 

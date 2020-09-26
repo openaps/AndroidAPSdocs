@@ -45,20 +45,20 @@ Condition
 --------------------------------------------------
 Vous pouvez choisir entre plusieurs conditions. Voici quelques explications, mais la plupart d'entre elles devraient être faciles à comprendre et elles ne sont pas toutes décrites ici :
 
-* conditions de connexion : vous pouvez avoir plusieurs conditions et les connecter avec 
+* conditions de connexion : vous pouvez avoir plusieurs conditions et les lier avec 
 
-   * "Et"
-   * "Ou"
-   * "Ou exclusif" (qui signifie que si uniquement une (et une seule) des conditions s'applique, alors la ou les actions se produiront)
+  * "Et"
+  * "Ou"
+  * "Ou exclusif" (qui signifie que si uniquement une - et une seule - des conditions s'applique, alors la ou les action(s) se produiront)
    
 * Temps vs. Période répétitive
 
-   * Temps = événement unique
-   * Période répétitive = quelque chose qui arrive régulièrement (par ex. une fois par semaine, chaque jour ouvrable, etc)
+  * Temps = événement unique
+  * Période répétitive = quelque chose qui arrive régulièrement (par ex. une fois par semaine, chaque jour ouvrable, etc)
    
 * Localisation : dans le générateur de configuration (Automatisation), vous pouvez choisir le service de localisation que vous souhaitez utiliser :
 
-  * Utiliser la localisation passive : AAPS ne prend la localisation que si d'autres applications la demandent
+  * Utiliser la localisation passive : AAPS ne prend la localisation que lorsque d'autres applications la demandent
   * Utiliser la localisation par le réseau : Localisation de votre Wifi
   * Utiliser la localisition GPS (Attention ! Peut entrainer une consommation excessive de la batterie !)
   
@@ -68,15 +68,15 @@ Vous pouvez choisir une ou plusieurs actions :
 
 * démarrer la cible temp 
 
-   * doit être comprise entre 72 mg/dl et 270 mg/dl (4 mmol/l et 15 mmol/l)
-   * ne fonctionne que s'il n'y a pas de cible temporaire en cours
+  * doit être comprise entre 72 mg/dl et 270 mg/dl (4 mmol/l et 15 mmol/l)
+  * ne fonctionne que s'il n'y a pas de cible temporaire en cours
    
 * arrêter la cible temp
 * notification
 * pourcentage du profil
 
-   * doit être comprise entre 70% et 130% 
-   * ne fonctionne que si le pourcentage précédent est de 100%
+  * doit être comprise entre 70% et 130% 
+  * ne fonctionne que si le pourcentage précédent est de 100%
 
 Après avoir ajouté votre action, **n'oubliez pas de modifier les valeurs par défaut** pour répondre à vos besoins en cliquant sur les valeurs par défaut.
  
@@ -99,47 +99,47 @@ Pour supprimer une règle d'automatisation, faites-la glisser vers la gauche ou 
 
 Bonnes pratiques et avertissements
 ==================================================
-* Lorsque vous commencez à utiliser l'automatisation ou que vous créez une nouvelle règle, ajoutez une notification jusqu'à ce que vous soyez certain que la règle fonctionne correctement.
+* Lorsque vous commencez à utiliser l'automatisation ou que vous créez une nouvelle règle, commencez par ajouter une notification jusqu'à ce que vous soyez certain que la règle fonctionne correctement.
 * Observez les résultats de la règle.
-* Essayez de ne pas rendre les conditions trop faciles (par ex.: SI Glycémie > 80 mg/dl ET Glycémie < 180 mg/dl)
+* N'essayez pas de mettre des conditions trop faciles (par ex.: SI Glycémie > 80 mg/dl ET Glycémie < 180 mg/dl)
 
-    **C'est doublement important si l'action est un changement de profil!**
+  **C'est doublement important si l'action est un changement de profil!**
  
-* Essayez et privilégiez l'utilisation de Cibles Temp. plutôt que des Changements de Profil. Les Cibles temporaires ne réinitialisent pas `Autosens <../Usage/Open-APS-features.html#autosens>`_ à 0.
+* Essayez de privilégier l'utilisation de Cibles Temp. plutôt que des Changements de Profil. Les Cibles temporaires ne réinitialisent pas `Autosens <../Usage/Open-APS-features.html#autosens>`_ à 0.
 * Assurez-vous que les cchangements de profil sont faits avec parcimonie et de préférence en dernier recours.
 
-    * Les changements de profil rendent `Autosens <../Usage/Open-APS-features.html#autosens>`_ inutilisable pendant au minimum 6 heures.
+  * Les changements de profil rendent `Autosens <../Usage/Open-APS-features.html#autosens>`_ inutilisable pendant au minimum 6 heures.
 
 * Un changement de profil ne remettra pas le profil standard initial
 
-    * Vous devez faire une autre règle pour remettre le profil initial ou le faire manuellement !
-    * Il y a un risque d'hypoglycémie plus élevé si le changement de profil n'expire pas ou si le profil standard n'est pas remis en place.
+  * Vous devez faire une autre règle pour remettre le profil initial ou le faire manuellement !
+  * Il y a un risque d'hypoglycémie plus élevé si le changement de profil n'expire pas ou si le profil standard n'est pas remis en place.
 
 Exemples
 ==================================================
-Ce ne sont que des exemples, pas des conseils. Ne le reproduisez pas sans savoir ce que vous faites réellement ou pourquoi vous en avez besoin. Voir ci-dessous deux exemples avec des captures d'écran.
+Ce ne sont que des exemplesde configuration, pas des conseils. Ne les reproduisez pas sans savoir ce que vous faites réellement ou pourquoi vous en avez besoin.
 
 * Changement de profil pour vos activités quotidiennes (comme à l'école, gymnastique, week-end, journée de travail...) utilisant la géolocalisation, le wifi, l'heure, etc.
-* Définir une cible temporaire d'activités en fonction de l'heure et de l'emplacement...
-* Définir une Cible temporaire Repas imminent basée sur l'heure et la localisation...
+* Définition d'une cible temporaire pour les activités en fonction du temps, de l'emplacement, de la connexion à un périphérique Bluetooth ...
+* Définition d'une cible temporaire repas imminent basée sur l'heure et la localisation...
 
 Cible temp. Glycémie basse
 --------------------------------------------------
 .. image:: ../images/Automation2.png
   :alt: Automatisation2
 
-Ceci est fait par une personne qui veut mettre automatiquement une cible temp. "hypo" quand elle a une hypoglycémie.
+Ceci est pour quelqu'un qui veut avoir automatiquement une cible temporaire d'hypo lorsque sa glycémie est basse.
 
 Cible Temp. heure du repas
 --------------------------------------------------
 .. image:: ../images/Automation3.png
   :alt: Automatisation3
   
-Cet exemple est fait par une personne, qui a déjeune à la même heure pendant la semaine. S'il est à une certaine heure localisé à son lieu de repas, il met une cible temp. basse (repas imminent) en attendant le déjeuner. En raison de la connexion "Et", cela ne se produit que pendant une certaine heure et au bon emplacement. Donc cela ne fonctionne pas à tout autre moment à cet endroit, ou à ce moment là si la personne reste à la maison, ou si elle travaille plus longtemps. 
+Cet exemple est pour quelqu'un qui déjeune au travail tous les jours à la même heure. Si il ou elle est localisé(e) à une certaine heure sur son lieu de repas, l'automatisation mettra une cible temporaire basse (repas imminent) en attendant le déjeuner. En raison de la connexion "Et", cela ne se produit que pendant une certaine heure et si il ou elle est au bon emplacement. Donc cela ne fonctionne pas à cet endroit à tous les autres moments, ou à ce moment là si la personne reste à la maison, ou encore si elle reste plus longtemps à son travail. 
 
 Utilisation incorrecte de l'automatisation
 --------------------------------------------------
-Comme tout système, l'Automatisation peut être utilisée de manière incorrecte. Cela pourrait entraîner des difficultés et même être dangereux pour votre santé. Des exemples d'utilisation incorrecte sont :
+Veuillez noter que si vous n'utilisez pas correctement l'automatisation, cela pourrait entraîner des difficultés et même être dangereux pour votre santé. Des exemples d'utilisation incorrecte sont :
 
 * Essayer de surcharger l'algorithme au lieu de l'utiliser simplement comme une aide (par ex. en changeant de profil au lieu d'ajuster le débit de basal, le G/I etc.)
 * Régler le profil pour compenser la nourriture

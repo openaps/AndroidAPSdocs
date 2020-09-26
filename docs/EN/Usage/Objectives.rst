@@ -36,11 +36,6 @@ Objective 3: Proof your knowledge
 
 * Links will be provided to guide you in case you are unsure about the correct answers yet.
 
-Skip objectives
---------------------------------------------------
-* Only if you have been closed looping with another system (i.e. OpenAPS, iOS Loop) before and can proof this (i.e. at least 3 months of looping data in Nightscout), you can send an email to `objectives@androidaps.org <mailto:objectives@androidaps.org>`_ with your NS address and request code to bypass the rest of objectives.
-* Please note that no support is provided through this mail account. Refer to the `support resources <../Where-To-Go-For-Help/Connect-with-other-users.html>`_ mentioned in this documentation.
-
 Objective 4: Starting on an open loop
 ==================================================
 * Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
@@ -123,10 +118,10 @@ Objective 8: Adjust basals and ratios if needed, and then enable autosens
 *Don’t forget to record your looping in `this form <http://bit.ly/nowlooping>`_ logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
 
 
-Objective 9: Enabling additional oref0 features for daytime use, such as advanced meal assist (AMA)
+Objective 9: Try additional features for daytime use and gain confidence in your closed loop system
 ====================================================================================================
-* Now you should feel confident with how AndroidAPS works and what settings reflect your diabetes best
-* Then over a period of 28 days you can try additional features that automate even more of the work for you such as the `advanced meal assist <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_
+* Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_.
+* As `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
 
 
 Objective 10: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
@@ -134,6 +129,13 @@ Objective 10: Enabling additional oref1 features for daytime use, such as super 
 * You must read the `SMB chapter in this wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ and `chapter oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ to understand how SMB works, especially what's the idea behind zero-temping.
 * Then you ought to `rise maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see `objective 7 <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_ for an illustration)
 * min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually.
+
+
+Objective 11: Automation
+====================================================================================================
+* You have to start objective 11 to be able to use `Automation <../Usage/Automation.html>`_.
+* Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-proof-your-knowledge>`_.
+
 
 Go back in objectives
 ====================================================================================================

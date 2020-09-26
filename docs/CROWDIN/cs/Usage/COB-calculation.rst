@@ -4,13 +4,13 @@ Kalkulace COB
 Jak AndroidAPS počítá COB hodnotu?
 ==================================================
 
-Oref0 / Oref1
+Oref1
 --------------------------------------------------
 
 Nestrávené sacharidy jsou odříznuty po určené době
 
 .. image:: ../images/cob_oref0_orange_II.png
-  :alt: Oref0 / Oref1
+  :alt: Oref1
 
 AAPS, Vážený průměr
 --------------------------------------------------
@@ -25,7 +25,7 @@ Jestliže je použitá minimální absorpce sacharidů (min_5m_carbimpact) namí
 Zjišťování nesprávných hodnot COB
 ==================================================
 
-Počínaje verzí 2.4 vás AAPS varuje, pokud se chystáte počítat bolus s COB z předchozího jídla a algoritmus si myslí, že aktuální výpočet COB může být chybný. V takovém případě Vám bude po použití bolusové kalkulačky zobrazen dodatečný pokyn na obrazovce s potvrzením. 
+AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. V takovém případě Vám bude po použití bolusové kalkulačky zobrazen dodatečný pokyn na obrazovce s potvrzením. 
 
 Jak AndroidAPS zjistí nesprávné hodnoty COB? 
 --------------------------------------------------
@@ -55,4 +55,4 @@ Proč algoritmus nedetekuje COB správně?
 
 Ruční korekce zadaných sacharidů
 ==================================================
-Pokud zadáte nesprávné množství sacharidů (příliš mnoho nebo příliš málo), můžete to napravit na kartě Ošetření a na portálu Péče, jak je popsáno `zde <../Getting-Started/Screenshots.html#carb-correction>`_.
+If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.

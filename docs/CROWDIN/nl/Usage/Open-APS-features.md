@@ -5,10 +5,12 @@
 * De Gevoeligheidsdetectie is een algoritme dat kijkt naar de afwijkingen in jouw bloedglucose (positief/negatief/neutraal).
 * Op basis van deze afwijkingen, bepaalt het algoritme hoe insulinegevoelig/resistent je bent.
 * De oref-implementatie in **OpenAPS** gebruikt een combinatie van 24 en 8 uur aan gegevens. Welk van die twee hegt meest gevoelig is, wordt gebruikt.
-* AndroidAPS gebruikt slechts 8 (om UAM mogelijk te maken) of 24 uur, in te stellen door de gebruiker.
-* Het plaatsen van een nieuw infuus of het doen van een profielwissel (zonder tijdsduur) zal de Gevoeligheidsdetectie ratio terugzetten naar 0%.
-* Gevoeligheidsdetectie past jouw basaal en ISF aan (daarmee bootst het na wat een profielwissel doet).
-* Wanneer je gedurende een langere tijd telkens koolhydraten eet, dan zal de Gevoeligheidsdetectie minder goed zijn werk kunnen doen, omdat periodes met COB worden uitgesloten van BG delta berekeningen.
+* In versions prior to AAPS 2.7 user had to choose between 8 or 24 hours manually.
+* From AAPS 2.7 on Autosens in AAPS will switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
+* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
+* Changing a cannula or changing a profile will reset Autosens ratio back to 0%.
+* Autosens adjusts your basal, I:C and ISF for you (i.e.: mimicking what a Profile shift does).
+* If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
 
 ## Super Micro Bolus (SMB)
 
@@ -141,17 +143,15 @@ Standaardwaarde: 4 (mag niet worden gewijzigd, tenzij je het echt wilt en weet w
 
 AMA (Advanced Meal Assist), oftewel "geavanceerde maaltijdhulp" is een OpenAPS functie uit 2017 (oref0). Dankzij AMA kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd.
 
-**Je moet [leerdoel 9](../Usage/Objectives#doel-9-activeren-van-extra-functies-overdag-zoals-ama-geavanceerde-maaltijdhulp-advanced-meal-assist) hebben voltooid om AMA te kunnen gebruiken.**
-
-Meer informatie vind je in de [documentatie van OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+You can find more information in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 ### Maximale E/uur dat een tijdelijke basaalstand kan toedienen (OpenAPS "max-basal")
 
-Deze veiligheidsinstelling voorkomt dat AndroidAPS ooit een gevaarlijk hoge basaalstand instelt, en beperkt de tijdelijke basaalstand tot xx E/uur. We raden je aan je verstand te gebruiken bij het invullen van deze waarde. Een goede aanbeveling is om de hoogste basaalstand van jouw profiel te vermenigvuldigen met 4, of ten minste met 3. Bijvoorbeeld, als de hoogste basaalstand in jouw profiel 1,0 E/uur is dan kun je dat vermenigvuldigen met 4. Je krijgt dan een waarde van 4 E/uur, dus stel je "4" in bij deze veiligheidsinstelling.
+This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. It is advised to set this to something sensible. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
 
-Je kunt niet elke waarde kiezen: om veiligheidsredenen is er een 'harde limiet', afhankelijk van de leeftijd van de patiënt. De 'harde limiet' voor max-IOB is lager bij AMA dan bij SMB. Voor kinderen is deze waarde het laagste terwijl voor insulineresistentie volwassenen deze waarde het grootste is.
+You cannot chose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
 
-AndroidAPS gebruikt de volgende 'harde limieten':
+The hardcoded parameters in AndroidAPS are:
 
 * Kind: 2
 * Tiener: 5
@@ -160,9 +160,9 @@ AndroidAPS gebruikt de volgende 'harde limieten':
 
 ### Max basaal IOB dat OpenAPS kan toedienen \[E\] (OpenAPS "max-iob")
 
-Deze instelling beperkt het maximum van basaal IOB waar AndroidAPS nog steeds werkt. Als de IOB hoger is, wordt er geen extra basale insuline meer gegeven totdat de waarde van basaal IOB weer onder de limiet ligt.
+This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
 
-De standaardinstelling is 2, je moet deze waarde in kleine stapjes ophogen om te zien wat de invloed is en welke waarde het beste bij jou past. Dat is voor iedereen anders en hangt ook af van jouw gemiddelde totale dagdosis (TDD). Om veiligheidsredenen is er ook hier een grens, die afhangt van de leeftijd van de patiënt. De 'harde limiet' voor max-IOB is lager bij AMA dan bij SMB.
+The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Dat is voor iedereen anders en hangt ook af van jouw gemiddelde totale dagdosis (TDD). Om veiligheidsredenen is er ook hier een grens, die afhangt van de leeftijd van de patiënt. The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 * Kind: 3
 * Tiener: 5
@@ -171,11 +171,11 @@ De standaardinstelling is 2, je moet deze waarde in kleine stapjes ophogen om te
 
 ### Activeer AMA autosens
 
-Hier kun je kiezen of je [gevoeligheidsdetectie](../Configuration/Sensitivity-detection-and-COB.md) 'autosens' wilt inschakelen of niet.
+Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosense or not.
 
 ### Autosens past de streefwaardes ook aan
 
-Als je deze optie ingeschakeld hebt dan kan autosense ook jouw tijdelijke streefdoelen (naast basaalstanden, ISF en KH ratio), ook aanpassen. Hierdoor grijpt AndroidAPS 'agressiever' in. Jouw streefdoel kan hierdoor wellicht sneller bereikt worden.
+If you have this option enabled, autosense can adjust targets (next to basal, ISF and IC), too. This lets AndroidAPS work more 'aggressive' or not. The actual target might be reached faster with this.
 
 ### Geavanceerde instellingen
 
@@ -189,42 +189,6 @@ Standaardwaarde: 3 (mag niet worden gewijzigd, tenzij je het echt wilt en weet w
 
 Standaardwaarde: 4 (mag niet worden gewijzigd, tenzij je het echt wilt en weet wat je doet)
 
-**Bolus snooze dia deler** De functie "bolus snooze" werkt na een maaltijd bolus. Na een maaltijd, gedurende de periode voor de DIA gedeeld door de "bolus snooze"-parameter, stelt AAPS geen lage tijdelijke basaalstand in. De standaardwaarde is 2. Dat betekent met een DIA van 5h, dat de "bolus snooze" dus 5uur : 2 = 2,5 uur zal duren.
+**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
 
-Standaardwaarde: 2
-
-* * *
-
-## Maaltijd Assistent (MA)
-
-### Maximale E/uur dat een tijdelijke basaalstand kan toedienen (OpenAPS "max-basal")
-
-Deze veiligheidsinstelling voorkomt dat AndroidAPS ooit een gevaarlijk hoge basaalstand instelt, en beperkt de tijdelijke basaalstand tot xx E/uur. We raden je aan je verstand te gebruiken bij het invullen van deze waarde. Een goede aanbeveling is om de hoogste basaalstand van jouw profiel te vermenigvuldigen met 4, of ten minste met 3. Bijvoorbeeld, als de hoogste basaalstand in jouw profiel 1,0 E/uur is dan kun je dat vermenigvuldigen met 4. Je krijgt dan een waarde van 4 E/uur, dus stel je "4" in bij deze veiligheidsinstelling.
-
-Je kunt niet elke waarde kiezen: om veiligheidsredenen is er een 'harde limiet', afhankelijk van de leeftijd van de patiënt. De 'harde limiet' voor max-IOB is lager bij MA dan bij SMB. Voor kinderen is deze waarde het laagste terwijl voor insulineresistentie volwassenen deze waarde het grootste is.
-
-AndroidAPS gebruikt de volgende 'harde limieten':
-
-* Kind: 2
-* Tiener: 5
-* Volwassene: 10
-* Insuline-resistente volwassene: 12
-
-### Max basaal IOB dat OpenAPS kan toedienen \[E\] (OpenAPS "max-iob")
-
-Deze instelling beperkt het maximum van basaal IOB waar AndroidAPS nog steeds werkt. Als de IOB hoger is, wordt er geen extra basale insuline meer gegeven totdat de waarde van basaal IOB weer onder de limiet ligt.
-
-De standaardinstelling is 2, je moet deze waarde in kleine stapjes ophogen om te zien wat de invloed is en welke waarde het beste bij jou past. Dat is voor iedereen anders en hangt ook af van jouw gemiddelde totale dagdosis (TDD). Om veiligheidsredenen is er ook hier een grens, die afhangt van de leeftijd van de patiënt. De 'harde limiet' voor max-IOB is lager bij MA dan bij SMB.
-
-* Kind: 3
-* Tiener: 5
-* Volwassene: 7
-* Insuline-resistente volwassene: 12
-
-### Geavanceerde instellingen
-
-**Gebruik altijd korte gemiddeld verschil ipv gewone verschil** Wanneer je deze functie inschakelt, dan gebruikt AndroidAPS het korte gemiddelde (= gemiddelde vd afgelopen 15 minuten), wat meestal het gemiddelde is van de afgelopen drie waardes. Dit helpt AndroidAPS om stabieler te werken met bloedglucose bronnen met veel ruis, zoals xDrip+ en Libre.
-
-**Bolus snooze dia deler** De functie "bolus snooze" werkt na een maaltijd bolus. Na een maaltijd, gedurende de periode voor de DIA gedeeld door de "bolus snooze"-parameter, stelt AAPS geen lage tijdelijke basaalstand in. Dat betekent met een DIA van 5h, dat de "bolus snooze" dus 5uur : 2 = 2,5 uur zal duren.
-
-Standaardwaarde: 2
+Default value: 2

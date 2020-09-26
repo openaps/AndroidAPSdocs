@@ -36,11 +36,11 @@ Mygtukai:
 * raudonas X: ištrinti
 * mėlyna rodyklė: dubliuoti
 
-If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile beeing used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+Jei atliekate pakeitimus savo profilį, įsitikinkite, kad redaguojate teisingą profilį. Perjungiant į profilio skirtuką, ne visada rodomas šiuo metu naudojamas profilis. Pavyzdžiui, jei jūs Jei pakeitėte profilį per pradinį ekraną, profilio skirtuke gali būti rodomas kitas profilis.
 
 #### Profilių perjungimo klonavimas
 
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+Per profilio perjungimo funkciją galite lengvai sukurti naują vietinį profilį. Laiko postūmis ir profilio pasikeitimo procentas bus pritaikyti naujame vietiniame profilyje.
 
 1. Eikite į Terapijos skirtuką.
 2. Pasirinkite "Profilio perjungimas".
@@ -49,50 +49,59 @@ You can easily create a new local profile from a profile switch. In this case ti
 
 ![Profilių perjungimo klonavimas](../images/LocalProfile_ClonePS.png)
 
-If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
+Jei norite perjungti iš Nightscout profilio į vietinį profilį, tiesiog atlikite NS profilio pakeitimą ir klonuokite profilio perjungimą, kaip aprašyta aukščiau.
 
 #### Vietinių profilių įkėlimas į Nightscout
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in NS Client preferences.
+Vietiniai profiliai taip pat gali būti įkelti į Nightscout. Nustatymai gali būti rasti [NSClient nustatymai](../Configuration/Preferences#nsclient).
 
-![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
+![Įkelti vietinį profilį į NS](../images/LocalProfile_UploadNS2.png)
 
-Advantage:
+Privalumai:
 
 * norint pakeisti profilio parametrus, nereikia interneto ryšio
 * profilio pakeitimai gali būti atliekami tiesiogiai telefone
 * naują profilį galite sukurti per profilio perjungimą
 * vietiniai profiliai gali būti įkelti į Nightscout
 
-Disadvantage:
+Trūkumas:
 
 * nėra
 
+### Profilio pagalbininkas
+
+Profilio pagalbininkas siūlo dvi funkcijas:
+
+1. Rasti profilį vaikams
+2. Palyginti du profilius arba profilio pakeitimus, kad būtų galima klonuoti naują profilį
+
+Detalės yra paaiškintos atskirame [profilio pagalbininko puslapyje](../Configuration/profilehelper.rst).
+
 ### NS profilis
 
-NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+NS Profilis naudoja profilius, kuriuos išsaugojote savo Nightscout svetainėje (https://[yournightscoutsiteaddress]/profilis). Jei norite pakeisti aktyvų profilį, galite naudoti [ Profilio perjungimas ](../Usage/Profiles.md). Ši funkcija sukurtą profilį užrašo pompoje, jei kiltų ryšio problemų su AndroidAPS. Tai leidžia jums lengvai sukurti kelis profilius Nightscout (pvz., darbe, namuose, sporto, švenčių dienomis ir pan.). Netrukus, paspaudus mygtuką „Išsaugoti“, jie bus perkelti į AAPS, jei jūsų išmanusis telefonas prijungtas prie interneto. Net be interneto ryšio ar be Nightscout ryšio, NS profiliai yra pasiekiami AAPS po sinchronizacijos.
 
-Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+Norėdami suaktyvinti Nightscout profilį, pasirinkite ** Profilio perjungimas**. Paspauskite ir palaikykite dabartinio profilio pavadinimą viršutinėje AAPS ekrano dalyje (pilkasis laukas yra tarp šviesiai mėlyno lauko „Atviras / uždaras ciklas“ ir tamsiai mėlyno tikslo lauko) > Perjungti profilį> Pasirinkti profilį> Gerai. Pakeitęs profilį, AAPS taip pat užrašo pasirinktą profilį į pompą, kad jis būtų prieinamas iškilus AAPS problemoms, ir toliau veikia.
 
-Advantage:
+Privalumai:
 
 * keli profiliai
 * lengva redaguoti per kompiuterį arba planšetę
 
-Disadvantage:
+Trūkumai:
 
 * profilio parametrų pakeisti vietoje negalima
 * profilio pakeitimai negali būti atliekami tiesiogiai telefone
 
 ## Insulinas
 
-Select the type of insulin curve you are using. The options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak.
+Pasirinkite insulino veikimo kreivės tipą. „Greitai veikiantis Oref“, „Ypač greitas Oref“ ir „Be piko Oref“ parinktys turi eksponentinę formą. Norėdami sužinoti daugiau informacijos, žiūrėkite [ OpenAPS dokumentai ](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). Kreivės skiriasi atsižvelgiant į insulino trukmę IVT ir piko laiką.
 
-The DIA is not the same for each person. That's why you have to test it for yourself. But it must always be at least 5 hours. You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page.
+IVT nėra vienoda visiems. Todėl turite nustatyti ją patys. Bet ji turi būti mažiausiai bent 5 valandos. Galite perskaityti daugiau apie tai Insulino profilio skyriaus [šiame](../Getting-Started/Screenshots#insulin-profile) puslapyje.
 
-For Rapid-Acting and Ultra-Rapid, the DIA is the only variable you can adjust by yourself, the time to peak is fixed. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings.
+Greitai veikiančio ir ypač greitai veikiančio insulino IVT veikimo trukmė yra vienintelis kintamasis, kurį galite susikonfigūruoti patys, piko laikas yra fiksuotas. „Be piko“ leidžia konfigūruoti ir insulino veikimo trukmę IVT, ir piko laiką. Ši parinktis skirta patyrusiems vartotojams, žinantiems šių nustatymų pasekmes.
 
-The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
+[Insulino kreivės grafikas](../Getting-Started/Screenshots#insulin-profile) padeda suprasti skirtingas kreives. Jį galima pamatyti skirtuke, jei jį pažymėjote varnele konfigūratoriuje arba pasirinkdami iš išskleidžiamojo meniu kairėje.
 
 ### Greito veikimo Oref
 
@@ -100,25 +109,25 @@ The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps 
 * IVT = bent 5.0 val
 * Maks. pikas = 75 minutės po injekcijos (fiksuotas, nekeičiamas)
 
-### Staigaus veikimo Oref
+### Ypač greito veikimo Oref
 
 * rekomenduojama FIASP
 * IVT = bent 5.0 val
 * Maks. pikas = 55 minutės po injekcijos (fiksuotas, nekeičiamas)
 
-For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
+Daugeliui žmonių FIASP poveikis beveik nepastebimas po 3–4 valandų, net jei paprastai liktų 0,0xx vienetų. Šis likutis gali būti jaučiamas, pavyzdžiui, sporto metu. Todėl AndroidAPS insulino veikimo trukmė IVT naudojama mažiausiai 5 valandos.
 
-![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
+![Ypač greitas Oref konfigūratoriuje](../images/ConfBuild_UltraRapidOref.png)
 
 ### Oref be piko
 
-With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+„Be piko 0ref“ profilyje galite patys įvesti piko laiką. Insulino veikimo trukmė IVT automatiškai nustatoma 5 valandoms, jei profilyje nenustatoma didesnė vertė.
 
-This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+Šis insulino profilis yra rekomenduojamas, jei naudojamas nepalaikomas insulino tipas arba skirtingų insulinų mišiniai.
 
 ## Glikemijos šaltinis
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
+Pasirinkite pagrindinės glikemijos duomenų šaltinį - daugiau informacijos apie nustatymus ieškokite puslapyje [ KG šaltinis ](BG-Source.rst).
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient KG
@@ -130,78 +139,103 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
+* [Tomato programėlė](http://tomato.cool/) MiaoMiao įrenginiui
+* Generuoja atsitiktinių KG duomenis (demonstracinis režimas)
+
 ## Pompa
 
-Select the pump you are using.
+Pasirinkite pompą, kurią naudojate.
 
 * [Dana R](DanaR-Insulin-Pump.md)
 * DanaR Korean (DanaR, skirta Korėjos rinkai)
-* DanaRv2 (DanaR su atnaujinta programine įranga)
+* DanaRv2 (DanaR su neoficialia atnaujinta programine įranga)
 * [Dana R](DanaRS-Insulin-Pump.md)
-* [ Accu-Chek Combo](Accu-Chek-Combo-Pump.md) (reikia įdiegti ruffy programą)
+* [Accu-Chek Insight](Accu-Chek-Insight-Pump.md)
+* [Accu-Chek Combo](Accu-Chek-Combo-Pump.md) (reikia įdiegti ruffy programą)
+* [Medtronic](MedtronicPump.md)
 * MDI (AAPS pateikia insulino tiekimo patarimus naudojant insulino švirkštimo priemones)
 * Virtuali pompa (atviras ciklas pompai, kuri dar nėra palaikoma - AAPS teikia tik pasiūlymus)
 
-For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+Naudojantis Dana pompa, eikite į **Išplėstiniai nustatymai**, kad suaktyvintumėte BT Watchdog, jei tai reikalinga. Jei prisijungti prie pompos neįmanoma, jis vienai sekundei išjungia Bluetooth. Tai padeda kai kuriuose telefonuose, kur užstringa Bluetooth modulis.
+
+[Danos RS pompos slaptažodis](..Configuration/DanaRS-Insulin-Pump.md) turi būti įvestas teisingai. Slaptažodis nebuvo patikrinamas ankstesnėse versijose.
 
 ## Jautrumo nustatymas
 
-Select the type of sensitivity detection. This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Pasirinkite jautrumo nustatymo tipą. Daugiau informacijos apie skirtingas variacijas prašome [skaityti čia](Sensitivity-detection-and-COB.md). Algoritmas analizuos duomenų istoriją ir koreguos, jei atpažins, kad į insuliną reaguojate jautriau (arba, atvirkščiai, su mažesniu jautrumu) nei įprastai. Daugiau apie Jautrumo algoritmą galite perskaityti [OpenAPS dokumentacijoje](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
-You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features.html#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+Pagrindiniame puslapyje galite peržiūrėti jautrumo kreivę, pasirinkdami laukelį Jautrumas. Jis atrodo kaip balta linija. Dėmesio, turite būti [Tiksle 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens), kad leistumėte Jautrumo aptikimui/[Autosens](../Usage/Open-APS-features.html#autosens) automatiškai koreguoti insulino kiekio suleidimą. Kol dar nepasiekėte šio tikslo, Autosens procentas / kreivė rodoma tik informacijai. AAPS neatlieka jokių pakeitimų.
 
 ### Angliavandenių įsisavinimo parametrai
 
-If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.rst) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+Jei naudojate „Oref1“ su SMB, turite nustatyti **min_5m_ carbimpact** reikšmę į 8. Ši vertė naudojama tik tuo atveju, jei NGJ reikšmės negaunamos arba fizinis aktyvumas kompensuoja padidėjusį gliukozės kiekį kraujyje, kurį AAPS paprastai naudoja angliavandenių skaidymui apskaičiuoti. Tais atvejais, kai [angliavandenių absorbcijos](../Usage/COB-calculation.rst) negalima dinamiškai apskaičiuoti pagal gliukozės kiekį kraujyje, naudojama ši numatytoji absorbcijos reikšmė. Iš esmės tai yra saugiklis.
 
 ## APS
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+Pasirinkite norimą APS algoritmą terapijos koregavimui. Išsamią informaciją apie pasirinktą algoritmą galite rasti skirtuke OpenAPS (OPAS).
 
-* OpenAPS MA (maisto asistentas, algoritmas nuo 2016 m.)
 * OpenAPS AMA (pažangusis maisto asistentas, algoritmas nuo 2017 m.)   
-    Išsamios informacijos apie OpenAPS AMA galima rasti [ OpenAPS dokumentacijoje ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Paprastai tariant nauda tokia, kad po suleisto maisto boluso sistema gali greičiau kelti bazę, JEI jūs teisingai įvedėte angliavandenius.  
-    Pastaba: jūs turite būti [9-ame tiksle](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama)norint naudoti OpenAPS AMA.
+    Išsamios informacijos apie OpenAPS AMA galima rasti [ OpenAPS dokumentacijoje ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Paprasčiau tariant, nauda yra po to, kai susileidžiate bolusą maistui, sistema gali greičiau įjungti aukštą tikslą, JEI patikimai suvesite angliavandenius. 
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super mikro bolusas, naujausias algoritmas patyrusiems vartotojams)  
-    Pastaba: jūs turite būti[ 10-ame tiksle ](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)norint naudoti OpenAPS SMB ir min_5m_carbimpact turi būti nustatyti į 8 Konfigūracijos generatorius> Jautrumo aptikimas> Jautrumo Oref1 nustatymai.
+    Pastaba: jūs turite būti[10-ame tiksle ](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)norint naudoti OpenAPS SMB ir Konfigūratoriuje min_5m_carbimpact turi būti nustatytas į 8 > Jautrumo aptikimas> Jautrumo Oref1 nustatymai.
 
 ## Ciklas
 
-Define whether you want to allow AAPS automatic controls or not.
+* Perjungimas tarp Atviro ciklo, Uždaro ciklo ir Žemos glikemijos stabdymo (ŽGS).
+
+![Konfigūratorius - ciklo režimas](../images/ConfigBuilder_LoopLGS.png)
 
 ### Atviras Ciklas
 
-AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+* AAPS nuolat vertina visus turimus duomenis (AIO, AAO, glikemija...) ir, jei reikia, teikia patarimus, kaip koreguoti terapiją. 
+* Pasiūlymai nėra vykdomi automatiškai (kaip uždarame cikle), bet turi būti rankiniu būdu įvedami į pompą. Jei naudojate suderinamą pompą (Dana R/RS arba Accu-Chek Combo), tai taip pat galima padaryti naudojant mygtuką AndroidAPS. 
+* Šis nustatymas skirtas susipažinti su AndroidAPS arba nepalaikomoms pompoms.
 
 ### Uždaras Ciklas
 
-AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). The Closed Loop works within numerous safety limits, which you can be set individually. Closed Loop is only possible if you are in [Objective 6](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
+* AAPS nuolat vertina visus turimus duomenis (AIO, AAO, glikemijos reikšmes) ir automatiškai koreguoja terapiją pagal poreikį (t.y. be jūsų tolesnio įsikišimo), kad būtų pasiektas nustatytas tikslo diapazonas arba tikslinė vertė (boluso įvedimas, laikinos bazės nustatymas, insulino sustabdymas siekiant išvengti hipoglikemijos ir t.t.). 
+* Uždaras ciklas veikia atsižvelgiant į daugybę saugumo ribų, kurias galite nustatyti atskirai.
+* Uždaras ciklas yra galimas, jei esate [6-ame tiksle](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) ar toliau ir naudojate palaikomą pompą.
+* Pastaba: Uždaro ciklo režime rekomenduojama vietoj tikslinio intervalo naudoti vieną tikslą (t. y. 5,5 mmol arba 100 mg/dl vietoje 5,0-7,0 mmol arba 90-125 mg/dl).
+
+### Sustabdymas esant žemai gliukozei (ŽGS)
+
+* maxAIO yra lygus nuliui
+* Tai reiškia, kad, jei gliukozės kiekis kraujyje mažėja, AAPS gali sumažinti valandinę bazę.
+* Bet jei gliukozės kiekis kraujyje didėja, jokių automatinių korekcijų nebus padaryta. Jūsų valandinė bazė išliks tokia pati kaip ir Jūsų pasirinktame profilyje.
+* Tik jei valandinė bazė yra neigiama (dėl ankstesnio sustabdymo esant žemai gliukozei), papildomas insulinas bus suleistas, siekiant sumažinti glikemiją.
+
+### Minimalaus pokyčio užklausa
+
+* Naudodami atvirą ciklą, gausite pranešimus kiekvieną kartą, kai AAPS rekomenduoja koreguoti valandinę bazę. 
+* Norėdami sumažinti pranešimų skaičių, galite naudoti platesnį KG tikslinį intervalą arba padidinti procentais nuo minimalios užklausos normos.
+* Tai apibrėžia santykinį pokytį, kurio reikia, kad būtų galima pateikti pranešimą.
 
 ## Tikslai (mokymosi programa)
 
-AndroidAPS has a number of objectives that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+„AndroidAPS“ turi mokymosi programą (tikslus), kurią turite įgyvendinti palaipsniui. Panašus algoritmo organizavimas padės jums sukurti uždaro ciklo sistemą. Tai garantuoja, kad jūs turite viską nustatyti teisingai ir suprasti, kaip sistema tiksliai veikia. Tai yra vienintelis būdas suprasti, kad galite pasitikėti sistema.
 
-You should [export your settings](../Usage/ExportImportSettings.rst) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+Turėtumėte reguliariai[eksportuoti savo nustatymus](../Usage/ExportImportSettings.rst) (įskaitant pažangą tiksluose). Ateityje, jei jums reikės pakeisti išmanųjį telefoną (naujas pirkinys, sugadinimas ir pan.), galite tiesiog importuoti šiuos parametrus.
 
-See [Objectives](../Usage/Objectives.rst) page for more information.
+Norėdami rasti daugiau informacijos, žiūrėkite puslapį [Tikslai](../Usage/Objectives.rst).
 
 ## Terapija
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
+Skirtuke Terapija (Terapija) rodomos terapijos, kurios buvo įkeltos į Nightscout. Jei norite taisyti ar ištrinti įrašą (pavyzdžiui, suvalgykite mažiau angliavandenių nei tikėtasi), pasirinkite Trinti ir [pagrindinio ekrano AV mygtuku](../Getting-Started/Screenshots.md#carb-correction) įveskite naują reikšmę (jei reikia, pakeiskite laiką).
 
 ## Bendrieji
 
 ### Apžvalga
 
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
+Parodo dabartinę dažniausiai naudojamų veiksmų algoritmo ir mygtukų būseną (išsamesnės informacijos žr. [ Pradinio ekrano skyrius ](../Getting-Started/Screenshots.md)). Prieiga prie parametrų - per krumpliaračio piktogramą.
 
 #### Laikyti ekraną įjungtą
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+Parinktis „Neišjungti ekrano“ privers Android nuolat laikyti įjungtą ekraną. Tai naudinga pristatymams ir kt. Bet ji sunaudoja daug baterijos energijos. Todėl rekomenduojama išmanųjį telefoną prijungti prie įkroviklio laido.
 
 #### Mygtukai
 
-Define which Buttons are shown on the home screen.
+Nustatyti, kurie mygtukai rodomi pradiniame ekrane.
 
 * Terapija
 * Skaičiuotuvas
@@ -210,23 +244,53 @@ Define which Buttons are shown on the home screen.
 * NGJ (atsidaro xDrip+)
 * Kalibravimas
 
-Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
+Taip pat galite nustatyti fiksuotas insulino ir angliavandenių lygio padidinimo vertes ir nuspręsti, ar terapijos dialogo lange rodyti užrašo lauką.
 
 #### Greitojo patarėjo nustatymai
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Čia galite sukurti mygtuką konkrečiam standartiniam maistui (angliavandenių ir boluso skaičiavimo metodas), kuris bus rodomas pagrindiniame ekrane. Tai labai praverčia, jei jūs dažnai valgo tą patį. Jei sukursite keletą standartinių patiekalų ir jiems nustatysite skirtingą laiką, priklausomai nuo dienos laiko pagrindiniame ekrane visada turėsite atitinkamą standartinio patiekalo mygtuką.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Pastaba: mygtukas nebus rodomas už nustatytų laikotarpių ribų. Tas pats pasakytina ir tuo atveju, jei yra pakankamai aktyvaus insulino AIO angliavandenių kiekiui padengti, nustatytam mygtuko nustatymuose.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Greitojo patarėjo mygtukas](../images/ConfBuild_QuickWizard.png)
+
+#### Numatyti Laikini Tikslai
+
+Pasirinkite numatytuosius laikinus tikslus (trukmė ir reikšmė). Iš anksto nustatytos reikšmės:
+
+* netrukus valgysiu: tikslas 72 mg/dl / 4.0 mmol/l, trukmė 45 min
+* aktyvumas: tikslas 140 mg/dl/ 7.8 mmol/l, trukmė 90 min
+* hipo: tikslas 125 mg/dl / 6.9 mmol/l, trukmė 45 min
+
+#### Standartiniai insulino kiekiai kateterio/kaniulės užpildymui
+
+Pasirinkite numatytuosius kiekius iš trijų mygtukų, užpildymo/pirminio užpildymo lange, priklausomai nuo jūsų kateterio ilgio.
+
+#### Vizualizacijos diapazonas
+
+Pasirinkite aukštos ir žemos glikemijos ribas grafike. Jos bus matomos AndroidAPS apžvalgoje ir išmaniajame laikrodyje. Tai tik vizualizacija, o ne tikslinės jūsų glikemijos ribos. Pavyzdžiui: 70-180 mg/dl arba 3,9-10 mmol/l
+
+#### Naudoti sutrumpintus skirtukų pavadinimus
+
+Pasirinkite ar skirtukų pavadinimai AndroidAPS yra ilgi (pvz. VEIKSMAI, VIETINIS PROFILIS, AUTOMATIZAVIMAS) arba trumpi (pvz., VEIKS, VP, AUTO)
+
+#### Rodyti pastabų laukelį terapijos dialoguose
+
+Pasirinkite, ar norite matyti pastabas, kai įvedate terapijas arba ne.
+
+#### Būklės indikatoriai
+
+Pasirinkite, ar norite matyti būsenos indikatorius kaniulės, insulino, sensoriaus, baterijos amžiui, rezervuaro ar baterijos lygiui. Pasiekus įspėjamąjį lygį, būsenos indikatorius taps geltonas. Kritinis lygis bus rodomas raudona spalva.
 
 #### Papildomi nustatymai
 
-Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Suleisti dalį boluso iš boluso patarėjo**: Kai naudojamasi SMB, dauguma žmonių nesusileidžia 100% reikiamo insulino, o tik dalį jo (pvz., 75 %) ir leidžia SMB su NDM (nedeklaruotas maitas) atlikti likusį darbą. Šiuo atveju, galite pasirinkti numatytąją procentinę reikšmę, į kurią boluso patarėjas turėtų atsižvelgti. Jei šis nustatymas yra 75%, o jūs turite susileisti 10vv, boluso patarėjas jums pasiūlys iš karto susileisti tik 7,5 vienetus.
+
+**Įjungti Superboluso funkciją skaičiuoklėje** (Tai skiriasi nuo *super mikro boluso SMB*!): Naudokite atsargiai ir neįjunkite, kol nesuprasite, kas iš tikrųjų tai yra. Iš esmės valandinė bazė pridedama prie boluso kitoms dviem valandoms, o valandinė bazė dviem valandoms nustatoma ties nuliu. ** AAPS ciklo funkcijos bus išjungtos - naudokite atsargiai! Jei naudosite SMB, AAPS ciklo funkcijos bus išjungtos atsižvelgiant į jūsų nustatymus, pateiktus [„SMB bazinė riba minutėmis“](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to). Jei nenaudosite SMB, ciklas bus išjungtas dviem valandoms. **Norėdami gauti daugiau informacijos apie Superbolus, skaitykite [čia](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Veiksmai
 
-Some buttons to quickly access common features:
+Mygtukai greitesniam pagrindinių funkcijų paleidimui:
 
 * Profilio keitimas (profilio perjungimas - daugiau informacijos rasite [Profiliai](../Usage/Profiles.md))
 * Laikinas tikslas
@@ -239,83 +303,55 @@ Some buttons to quickly access common features:
     * NGJ sensoriaus įvedimas
     * Pompos baterijos keitimas
     * Pastaba
-    * Fizinis aktyvumas
+    * Aktyvumas
 * Peržiūrėti jutiklio, insulino rezervuaro, kaniulės ir pompos baterijos naudojimo laiką
 * Istorija
 * BPD (Bendra paros dozė = bolusas + bazė per dieną)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Kai kurie gydytojai rekomenduoja - ypač pradedantiesiems - bazės ir boluso insulino santykį 50:50. Todėl santykis apskaičiuojamas kaip bendra BPD / 2 * BPB paros dozė (BPB bendra paros bazė = valandinių bazių suma per 24 valandas). Kiti labiau linkę apskaičiuoti paros BPB dozę kaip 32–37% paros insulino BPD. Kaip ir dauguma jų, jie turi ribotą praktinę reikšmę. Pastaba: Jūsų diabetas gali skirtis!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions_b.png)
+![Veiksmų skirtukas](../images/ConfBuild_ConfBuild_Actions_b.png)
+
+### Automatizavimas
+
+Vartotojo apibrėžtos automatizavimo užduotys ("jei-tada-jei ne"). Prašome [skaityti čia](../Usage/Automation.rst)
 
 ### SMS komunikatorius
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
+Leidžia nuotoliniu būdu valdyti kai kurias AndroidAPS funkcijas SMS žinutėmis, daugiau informacijos apie konfigūraciją žr. [ SMS komandos ](../Children/SMS-Commands.rst).
 
 ### Maistas
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Parodo iš anksto nustatytas maisto savybes, apibrėžtas Nightscout duomenų bazėje, daugiau informacijos apie parinktis žr. [ Nightscout ](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods).
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Pastaba: įrašų negalima naudoti AndroidAPS skaičiuotuve. (Tik peržiūra)
 
 ### Išmanieji laikrodžiai
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Android Wear laikrodyje galima peržiūrėti AAPS duomenis ir valdyti kai kurias funkcijas (žr. [ Laikrodžiai](../Configuration/Watchfaces.md)). Nustatymuose (krumpliaračio piktograma) galite nustatyti kintamuosius, į kuriuos reikia atsižvelgti apskaičiuojant bolusą atsižvelgiant į laikrodį (pavyzdžiui, 15 min. tendencija, aktyvūs angliavandeniai AAO...).
 
 Pavyzdžiui, jei norite suleisti boliusą, tuomet laikrodžio nustatymuose turėtumėte įjungti „Valdymas iš laikrodžio“.
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Išmaniojo laikrodžio nustatymai](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+Naudodamiesi skirtuku „Išmanieji laikrodžiai“ arba trijų linijų meniu (ekrano viršutiniame kairiajame kampe, jei skirtukas nerodomas), galite
 
-* Pakartotinai siųsti visus duomenis. Gali būti naudinga, jei laikrodis nebuvo prijungtas kurį laiką ir norite perduoti informaciją į laikrodį.
+* Pakartotinai siųsti visus duomenis. Gali būti naudinga, jei laikrodis nebuvo prijungtas šiek tiek laiko ir norite perduoti informaciją į laikrodį.
 * Atidaryti laikrodžio nustatymus tiesiai iš savo telefono.
 
-### xSrip būsenos juosta (laikrodyje)
+### xDrip būsenos juosta (laikrodyje)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Rodyti informaciją apie algoritmo būseną xDrip+ laikrodžio ekrane (jei nenaudojate AAPS /[AAPSv2 laikrodžio ekrane](../Configuration/Watchfaces.md)
 
-### Nuolatinis pranešimas
+### NSClient
 
-Displays a summary of current BG, delta, active TBR%, active basal u/h and profile, IOB and split into bolus IOB and basal IOB on the phones's dropdown screen and phone's lock screen.
-
-![AAPS widget](../images/ConfBuild_Widget.png)
-
-### NS Client
-
-Setup sync of your AndroidAPS data with Nightscout.
-
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimization not disabled for AAPS) but can flood the Nightscout graph with entries.
-
-#### Aliarmų nustatymai
-
-Activate/deactivate AndroidAPS alarms
-
-![Aliarmų nustatymai](../images/ConfBuild_NSClient_Alarms.png)
-
-#### Ryšio nustatymai
-
-Offline looping, disable roaming...
-
-If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
-
-![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
-
-#### Papildomi nustatymai
-
-* Automatiškai atstatyti trūkstamus glikemijos duomenis iš Nightscout
-* Generuoti pranešimus apie klaidas. Sukurti klaidų dialogų ir vietinių aliarmų įrašus Nightscout (jie taip pat rodomi Priežiūros skirtuko terapijos dalyje)
-* Įgalinti duomenų perdavimą kitoms programėlėms, kaip xDrip+
-* Tik įkelti į NS (sinchronizacija išjungta)
-* Nėra įkėlimų į NS
-* Vietoje procentinių bazinių dydžių naudoti absoliučius -> Turi būti įjungta, jei norite naudoti [ Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
-
-![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
+* AndroidAPS duomenų sinchronizavimą su Nightscout sinchronizavimas.
+* Pasirinkimai [nustatymuose](../Configuration/Preferences#nsclient) gali būti pasiekiami paspaudus krumpliaračio simbolį.
 
 ### Servisas
 
-Email and number of logs to be send. Normally no change necessary.
+El. Pašto adresas ir siunčiamų protokolų skaičius. Paprastai nereikia jokių pakeitimų.
 
 ### Konfigūracija
 
-Use tab for config builder instead of hamburger menu.
+Vietoje trijų linijų meniu kairėje galite naudoti konfigūratoriaus skirtuką.

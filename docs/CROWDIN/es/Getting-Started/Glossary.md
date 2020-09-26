@@ -96,7 +96,7 @@
 </tr>
 <tr>
  <td>CAGE</td>
- <td>edad de la canula - mostrada en Nightscout si la información se introdujo en la pestaña del careportal AAPS o a través de la pestaña de acciones AAPS 'prime'</td>
+ <td>canula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -318,7 +318,7 @@
 </tr>
 <tr>
  <td>SAGE</td>
- <td>tiempo de uso del sensor - mostrada en Nightscout si la información fue introducida en la pestaña del careportal AAPS</td>
+ <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>

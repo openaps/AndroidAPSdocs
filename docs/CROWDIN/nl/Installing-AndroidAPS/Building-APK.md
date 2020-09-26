@@ -95,161 +95,170 @@ Op het welkomstscherm van Android Studio klik op de kleine driehoek (1. in het v
 * Klik op het driehoekje naast Version Control "versiebeheer" (1.) om het submenu te openen.
 * Klik op Git (2.).
 * Zorg ervoor dat de update methode Merge "Samenvoegen" (3.)is geselecteerd.
-* Controleer of Android Studio het pad naar git.exe automatisch heeft gevonden door te klikken op de knop "Test" (4.)
+* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
+    
+    ![Android Studio settings](../images/AndroidStudio361_09.png)
 
-![Android Studio instellingen](../images/AndroidStudio361_09.png)
+* If automatic setting is successful git version will be displayed.
 
-* Als hij hem heeft gevonden, zal het git versienummer worden getoond.
-* Klik op "OK" in het dialoogvenster (1.) en "OK" in het instellingenvenster (2.).
+* Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
+    
+    ![Automatic git installation succeeded](../images/AndroidStudio361_10.png)
 
-![Automatische installatie van git geslaagd](../images/AndroidStudio361_10.png)
+* In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
 
-* Als hij het bestand git.exe niet heeft kunnen vinden klik "OK" in het dialoogvenster (1.) en dan de knop met de drie stipjes (2.).
-* Gebruik [zoekfunctie](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows verkenner om "git.exe" te vinden als je niet zeker weet waar op jouw computer het git bestand staat. Je moet zoeken naar git.exe in een map die \bin\ heet.
-* Selecteer het pad naar git.exe en zorg ervoor dat je de map hebt geselecteerd in de ** \bin\ ** map (3.) en klik op "OK" (4.).
-* Sluit het instellingen venster door te klikken op de "OK" knop (5.).
+* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where it can be found. Je moet zoeken naar git.exe in een map die \bin\ heet.
+* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
+* Close settings window by clicking "OK" button (5.).
+    
+    ![Automatic git installation failed](../images/AndroidStudio361_11.png)
 
-![Automatische installatie van git mislukt](../images/AndroidStudio361_11.png)
-
-* **Start de PC opnieuw op om de installatie van Android Studio af te ronden.**
+* **Reboot your computer to update system environment.**
 
 ### Mac
 
-* Elke versie van Git zou moeten werken. Bijvoorbeeld <https://git-scm.com/download/mac>. Volg de instructies op die site om Git te installeren.
-* Gebruik homebrew om git te installeren: ```$ brew install git```.
-* Voor meer informatie over het installeren van git zie de [officiële git dokumentatie](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* Als je git installeert via homebrew, hoef je niets aan de instellingen te wijzigen. Voor het geval je ze toch zoekt: je vind ze hier: Android Studio - Preferences.
+* Any git version should work. For example <https://git-scm.com/download/mac>.
+* Use homebrew to install git: ```$ brew install git```.
+* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* If you install git via homebrew there is no need to change any preferences. Voor het geval je ze toch zoekt: je vind ze hier: Android Studio - Preferences.
 
 ## AndroidAPS-code downloaden
 
-* **Als je je computer nog niet hebt heropgestart nadat je het git pad in voorkeuren hebt ingesteld, doe het dan nu. Als je dit niet doet krijg je later een foutmelding.**
-* Op het welkomstscherm van Android Studio klikt op het kleine driehoekje van het "Check out project van versiebeheer" (1.).
-* Selecteer "Git" (2.).
+* **If you haven't already rebooted your computer after setting git path in preferences do it now. System environment must be updated.**
 
-![Project uitchecken van versiebeheer vanaf welkomstscherm](../images/AndroidStudio361_12.png)
+* There are two options to start a new project:
+    
+    * On the Android Studio welcome screen click "Get from version control"
+        
+        ![Check out project from version control from welcome screen](../images/AndroidStudio_GetFromVersionControl.PNG)
+    
+    * If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.)
+        
+        ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
 
-* Als je Android Studio al geopend had en het welkomstscherm niet meer ziet, selecteer je Bestand (1.) > Nieuw (2.) > Project van versiebeheer... (3.) > Git (4.).
+* Fill in the URL to the main AndroidAPS repository (https://github.com/nightscout/AndroidAPS) (1.).
 
-![Project uitchecken van versiebeheer vanuit Android studio](../images/AndroidStudio361_13.png)
+* Choose the directory where you want to save the cloned code. (2.)
+* Click button "Clone" (3.).
+    
+    ![Clone repository](../images/AndroidStudio_NewURL.PNG)
 
-* Vul de URL in van de hoofdpagina van de AndroidAPS Repository (“https://github.com/MilosKozak/AndroidAPS”) (1.).
-* Kies de map waar je de gedownloade code wilt opslaan.
-* Klik op de knop "Test" (2.).
-* Als de test niet kan worden voltooid, controleer dan de URL en klik opnieuw op "Test".
-* Als de URL klopt, wordt "Connection successful" (3.) afgebeeld.
-* Klik op de knop "Clone" (4.).
+* Do not click "Background" while repository is cloned!
+    
+    ![No background action](../images/AndroidStudio_NoBackground.png)
 
-![Kloon repository](../images/AndroidStudio361_14.png)
+* After repository is cloned successfully open your local copy by clicking "Yes".
+    
+    ![Open repository](../images/AndroidStudio361_16.png)
 
-* Klik niet op "Background" terwijl de code wordt gekloond!
+* In the lower right corner you will see the information that Android Studio is running background tasks.
+    
+    ![Background tasks](../images/AndroidStudio361_17.png)
 
-![Kloon repository - geen achtergrondactie](../images/AndroidStudio361_15.png)
+* Grant access if your firewall is asking for permission.
+    
+    ![Firewall permission java](../images/AndroidStudio361_18.png)
 
-* Nadat de code is gedownload, open je jouw lokale kopie door te klikken op "Ja".
-
-![Open repository](../images/AndroidStudio361_16.png)
-
-* In de rechterbenedenhoek zie je dat Android Studio achtergrondtaken uitvoert "background tasks running".
-
-![Achtergrondtaken](../images/AndroidStudio361_17.png)
-
-* Verleen toegang als jouw firewall om toestemming vraagt.
-
-![Firewall toestemming java](../images/AndroidStudio361_18.png)
-
-* Zodra de achtergrondtaken zijn voltooid, zul je waarschijnlijk het volgende foutbericht zien:
-
-![SDK licentie](../images/AndroidStudio361_19.png)
+* Once the background tasks are finished you will probably see the following error message:
+    
+    ![SDK licence](../images/AndroidStudio361_19.png)
 
 ## Android SDK downloaden
 
-* Klik op File > Settings (Bestand > Instellingen).
+* Click File > Settings.
+    
+    ![Open settings](../images/AndroidStudio361_20.png)
 
-![Instellingen openen](../images/AndroidStudio361_20.png)
+* Click the small triangle next to Appearance & Behaviour (1.).
 
-* Klik op de kleine driehoek naast Appearance & Behaviour (1.) (Verschijning & Gedrag).
-* Klik op de kleine driehoek naast System Settings (2.) en selecteer Android SDK (3.).
-* Vink het vakje links van "Android 9.0 (Pie)" (4.) (API Level 28) aan.
+* Click the small triangle next to System Settings (2.) and select Android SDK (3.)
+* Check the box left of "Android 9.0 (Pie)" (4.) (API Level 28).
+    
+    ![SDK settings](../images/AndroidStudio361_21.png)
 
-![SDK instellingen](../images/AndroidStudio361_21.png)
+* Confirm changes by clicking OK.
+    
+    ![Confirm SDK changes](../images/AndroidStudio361_22.png)
 
-* Bevestig door op OK te klikken.
+* Accept licence agreement (1.) and click "Next" (2.).
+    
+    ![Accept SDK licence](../images/AndroidStudio361_23.png)
 
-![Bevestig SDK wijzigingen](../images/AndroidStudio361_22.png)
+* Wait until installation is finished.
+    
+    ![Wait during SDK installation](../images/AndroidStudio361_24.png)
 
-* Accepteer de licence agreement (1.) (licentieovereenkomst) en klik op "Next" (2.) (Volgende).
+* When SDK installation is completed the "Finish" button will turn blue. Click this button.
+    
+    ![Finish SDK installation](../images/AndroidStudio361_25.png)
 
-![SDK licentie accepteren](../images/AndroidStudio361_23.png)
+* Android Studio might recommend to update the gradle system. **Never update gradle!** This might lead to difficulties!
 
-* Wacht tot de installatie is voltooid.
-
-![Wachten tijdens SDK installatie](../images/AndroidStudio361_24.png)
-
-* Wanneer de SDK-installatie is voltooid zal de "Finish" knop blauw worden. Klik op de knop.
-
-![Voltooi SDK installatie](../images/AndroidStudio361_25.png)
-
-* Android Studio komt nu misschien met een "update Gradle" melding (Gradle bijwerken). **Update Gradle nooit!** Dit kan tot problemen leiden!
-* Als je een melding ziet aan de rechteronderkant van het Android Studio scherm waarin iets staat over "Android Gradle Plugin is ready to update" (dat de Android Gradle Plugin klaar is om te updaten) klik dan op de tekst "update" (1.) en in het dialoogvenster op "Don't remind me again for this prject" (2.) (Herinner me niet opnieuw voor dit project).
-
-![Geen cradle update](../images/AndroidStudio361_26.png)
+* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1.) and in the dialog box on "Don't remind me again for this project" (2.).
+    
+    ![No cradle update](../images/AndroidStudio361_26.png)
 
 ## Bouwen van de ondertekende APK
 
-Ondertekenen betekent dat je een handtekening op jouw app zet, een soort digitale vingerafdruk. Dat is nodig omdat Android om veiligheidsredenen voorschrijft dat een app altijd zo'n handtekening moet hebben. Voor meer informatie over dit onderwerp, ga naar [deze link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Klik op "Build" in de menubalk en kies "Generate Signed Bundle / APK..." (Ondertekende Bundel/APK genereren...).
-
-![Apk bouwen](../images/AndroidStudio361_27.png)
+    
+    ![Apk bouwen](../images/AndroidStudio361_27.png)
 
 * Selecteer "APK" (1.) in plaats van "Android App Bundle" en klik op "Next" (2.).
-
-![APK in plaats van bundel](../images/AndroidStudio361_28.png)
-
-* Zorg dat de module is ingesteld op "app" (1.).
-* Klik op "Create new..." (maak nieuwe...) om jouw eigen key store (digitale handtekening) te maken.
     
-    Een key store is een bestandje waarin de informatie van jouw handtekening is opgeslagen. Het bestandje is versleuteld en beveiligd met een wachtwoord.
+    ![APK in plaats van bundel](../images/AndroidStudio361_28.png)
 
-![Maak key store](../images/AndroidStudio361_29.png)
+* Make sure that module is set to "app" (1.).
 
-* Klik op het mapsymbool (1.) om te selecteren waar jouw key store bestandje moet worden opgeslagen. 
-* Selecteer een map (submap) waar jouw key store moet worden opgeslagen (2.). **Sla dit NIET op in dezelfde map als jouw project. Je moet het in een andere map opslaan!** Bijvoorbeeld ergens in je persoonlijke bestanden.
-* Typ een bestandsnaam voor jouw key store (3.).
-* Klik op "OK" (4.).
-* Je hoeft niet een heel ingewikkeld wachtwoord te kiezen voor de key store en de key. Zorg er wel voor dat je deze onthoudt of noteer ze op een veilige plek. Je hebt ze telkens nodig wanneer je een nieuwe versie van de app moet bouwen als er een update is uitgekomen. In het geval dat je jouw wachtwoorden toch vergeet zie [probleemoplossing bij verloren key store](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
-* Typ (5.) en bevestig (6.) het wachtwoord voor jouw key store.
-* Doe hetzelfde voor jouw key (7. + 8.).
-* Geldigheid (9.) is standaard 25 jaar. Je hoeft de standaardwaarde niet te wijzigen.
-* De voor- en de achternaam velden moeten worden ingevuld (10.). Alle andere informatie is optioneel.
-* Klik op "OK" (11.) als je klaar bent.
+* Click "Create new..." (2.) to start creating your key store.
+    
+    A key store in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords.
+    
+    ![Create key store](../images/AndroidStudio361_29.png)
 
-![Key store bestandslocatie](../images/AndroidStudio361_30.png)
+* Click the folder symbol (1.) to select your key store path.
 
-* Zorg ervoor dat het vakje om wachtwoorden te onthouden is geselecteerd (1.). Zodat je ze niet opnieuw hoeft in te voeren de volgende keer dat je de apk bouwt (d.w.z. bij het updaten naar een nieuwe AndroidAPS versie).
-* Klik op "Next" (2.).
+* Select the path where your key store shall be saved (2.). **Do not save in same folder as project. You must use a different directory!** One option might be your home folder.
+* Type a file name for your key store (3.).
+* Click "OK" (4.).
+* Passwords for key store and key do not have to be very sophisticated. Make sure to remember those or make a note in a safe place. In case you will not remember your passwords in the future you see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Enter (5.) and confirm (6.) the password for your key store.
+* Do the same for your key (7. + 8.).
+* Validity (9.) is 25 years by default. You do not have to change the default value.
+* First and last name must be entered (10.). All other information is optional.
+* Click "OK" (11.) when you are done.
+    
+    ![Key store path](../images/AndroidStudio361_30.png)
 
-![Wachtwoorden onthouden](../images/AndroidStudio361_31.png)
+* Make sure the box to remember passwords is checked (1.). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AndroidAPS version).
 
-* Selecteer de buildvariant "fullRelease" (1.). 
+* Click "Next" (2.).
+    
+    ![Remember passwords](../images/AndroidStudio361_31.png)
+
+* Selecteer de buildvariant "fullRelease" (1.).
+
 * Selecteer de hokjes V1 en V2 voor de handtekeningversies (2.).
 * Klik op "Finish". (3.)
-
-![Bouwen voltooien](../images/AndroidStudio361_32.png)
+    
+    ![Bouwen voltooien](../images/AndroidStudio361_32.png)
 
 * Android Studio laat het je weten wanneer de APK succesvol is gebouwd: "APK(s) generated succesfully...".
-* In het geval dat de APK niet succesvol is gebouwd, verwijzen we je naar de [Problemen oplossen sectie](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
-* De makkelijkste manier om de apk te vinden is door te klikken op "Event log".
 
-![Succesvol gebouwd - event log](../images/AndroidStudio361_33.png)
+* In het geval dat de APK niet succesvol is gebouwd, verwijzen we je naar de pagina [Problemen oplossen](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* De makkelijkste manier om de apk te vinden is door te klikken op "Event log".
+    
+    ![Succesvol gebouwd - event log](../images/AndroidStudio361_33.png)
 
 * Klik in de event log sectie op "locate".
-
-![Event log - zoek apk](../images/AndroidStudio361_34.png)
+    
+    ![Event log - zoek apk](../images/AndroidStudio361_34.png)
 
 * app-full-release.apk is het bestand dat je nodig hebt.
-
-![Bestandslocatie apk](../images/AndroidStudio361_35.png)
+    
+    ![Bestandslocatie apk](../images/AndroidStudio361_35.png)
 
 ## Overzetten van de APK naar je telefoon
 
@@ -259,7 +268,7 @@ Op jouw telefoon moet je installatie uit onbekende bronnen toestaan. Je vindt di
 
 ## Identify receiver (identificeer ontvanger) bij gebruik van xDrip+
 
-[Zie xDrip pagina](../Configuration/xdrip#identify-receiver)
+[See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
 ## Problemen oplossen
 

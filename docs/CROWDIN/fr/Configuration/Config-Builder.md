@@ -53,7 +53,7 @@ Si vous souhaitez passer du profil Nightscout au profil local, faites simplement
 
 #### Remonter les profils locaux sur Nightscout
 
-Les profils locaux peuvent également être téléchargés sur Nightscout. Les paramètres se trouvent dans les préférences NS Client.
+Les profils locaux peuvent également être téléchargés sur Nightscout. Les paramètres peuvent être trouvés dans [les préférences NSClient](../Configuration/Preferences#nsclient).
 
 ![Télécharger profil local sur NS](../images/LocalProfile_UploadNS2.png)
 
@@ -67,6 +67,15 @@ Avantages :
 Inconvénients :
 
 * aucun
+
+### Assistant Profil
+
+L'assistant profil a deux fonctions :
+
+1. Trouver un profil pour les enfants
+2. Comparer deux profils ou changements de profil pour cloner un nouveau profil
+
+Les détails sont expliqués sur la [page d'aide des profils](../Configuration/profilehelper.rst).
 
 ### Profil NS
 
@@ -100,7 +109,7 @@ Le [graphique de courbe d'insuline](../Getting-Started/Screenshots#insulin-profi
 * DAI = au moins 5.0h
 * Pic maxi = 75 minutes après l'injection (fixe, non réglable)
 
-### Insuline Ultra Rapide Oref
+### Insuline à Action Ultra Rapide Oref
 
 * recommendé pour FIASP
 * DAI = au moins 5.0h
@@ -130,23 +139,30 @@ Sélectionnez la source de glycémie que vous utilisez - consultez la page [Sour
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
+* [Application Tomato](http://tomato.cool/) pour les transmetteurs MiaoMiao
+* Gly Aléatoire : Génère des données de glycémie aléatoires (mode Démo uniquement)
+
 ## Pompe
 
 Sélectionner la pompe que vous utilisez.
 
 * [DanaR](DanaR-Insulin-Pump.md)
 * DanaR coréenne (pour la pompe DanaR domestique)
-* DanaRv2 (pompe DanaR avec mise à niveau firmware)
+* DanaRv2 (pompe DanaR avec mise à niveau du firmware non officiel)
 * [DanaRS](DanaRS-Insulin-Pump.md)
-* [Pompe Accu-Chek Combo](Accu-Chek-Combo-Pump.md) (nécessite l'installation de ruffy)
+* [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
+* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (nécessite l'installation de ruffy)
+* [Medtronic](MedtronicPump.md)
 * MIQ (Permet de recevoir des suggestions de AAPS pour des thérapies avec de Multiples Injection Quotidiennes)
 * Pompe virtuelle (boucle ouverte pour les pompes qui n'ont pas encore de pilote - suggestions AAPS uniquement)
 
 Pour les pompes Dana, utilisez **Paramètres avancés** pour activer le "Watchdog BT" si nécessaire. Il éteint le Bluetooth pendant une seconde si aucune connexion à la pompe n'est possible. Cela peut être utile sur certains téléphones où la puce bluetooth se bloque.
 
+[Le mot de passe pour les pompes Dana RS](..Configuration/DanaRS-Insulin-Pump.md) doit être entré correctement. Le mot de passe n'était vérifié dans les versions précédentes.
+
 ## Estimation de Sensibilité
 
-Sélectionnez le type de calcul pour la sensibilité. Cela analysera les données historiques au fur et à mesure et fera des ajustements si elle détecte que vous réagissez de façon plus sensible (ou plus résistante) à l'insuline que d'habitude. Les détails sur l'algorithme de la Sensitibilité Oref0 peuvent être lus dans la [documentation OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Sélectionnez le type de calcul pour la sensibilité. Pour plus de détails sur la conception, veuillez [lire ceci](Sensitivity-detection-and-COB.md). Cela analysera les données historiques au fur et à mesure et fera des ajustements si elle détecte que vous réagissez de façon plus sensible (ou plus résistante) à l'insuline que d'habitude. Plus de détails sur l'algorithme de la Sensitibilité peuvent être lus dans la [documentation OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
 Vous pouvez voir votre sensibilité sur l'écran d'accueil en sélectionnant Sensibilité dans les paramètres du graphique et en observant la ligne blanche. Remarque, vous devez être à l'[Objectif 8](../Usage/Objectives#objectif-8-ajustement-des-debits-basal-et-des-ratios-si-necessaire-puis-activation-de-la-fonction-auto-sens) pour que la détection de sensibilité / [Autosens](../Usage/Open-APS-features.html#autosens) ajuste automatiquement la quantité d'insuline délivrée. Avant d'atteindre cet objectif, le poucentage Autosens ainsi que la ligne dans votre graphique ne sont affichés que pour information.
 
@@ -158,28 +174,46 @@ Si vous utilisez le type Oref1 avec les SMB, vous devez modifier **min_5m_carbim
 
 Sélectionnez l'algorithme APS souhaité pour les ajustements de thérapie. Vous pouvez afficher le détail actif de l'algorithme choisi dans l'onglet OpenAPS (OAPS).
 
-* OpenAPS MA (Assistant Repas, état de l'algorithme en 2016)
 * OpenAPS AMA (Assistance Améliorée Repas, état de l'algorithme en 2017)  
-    Plus de détails sur OpenAPS AMA peuvent être trouvé dans la [documentation OpenAPS](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). En termes simples, les avantages sont une fois que vous vous êtes fait un bolus de repas, le système peut augmenter la basale temp plus rapidement SI vous entrez des glucides de manière fiable.  
-    Notez que vous devez être à l'[Objectif 9](../Usage/Objectives#objectif-9-activation-de-fonctionnalites-supplementaires-en-journee-comme-l-aide-au-repas-amelioree-ara-ama) pour utiliser OpenAPS AMA.
+    Plus de détails sur OpenAPS AMA peuvent être trouvé dans la [documentation OpenAPS](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). En termes simples, les avantages sont après vous être administré un bolus repas, le système peut faire une temporaire haute plus rapidement SI vous entrez les glucides de manière fiable. 
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (Super Micro Bolus, l'algorithme le plus récent pour les utilisateurs avancés)  
-    Notez que vous devez être à l'[Objectif 10](../Usage/Objectives#objectif-10-activation-de-fonctionnalites-supplementaires-pour-l-utilisation-en-journee-telles-que-la-fonction-smb) pour utiliser OpenAPS SMB et min_5m_carbimpact doit être mis à 8 dans le Générateur de configuration > Sensitivity detection > Estimation de Sensibilité > paramètres Oref1.
+    Notez que vous devez être à l'[Objectif 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) pour utiliser OpenAPS SMB et min_5m_carbimpact doit être mis à 8 dans le Générateur de configuration > Sensitivity detection > Estimation de Sensibilité > paramètres Oref1.
 
 ## Boucle
 
-Définissez si vous souhaitez autoriser ou non les contrôles automatiques AAPS.
+* Basculer entre Boucle Ouverte, Boucle Fermée et Arrêt Glycémie Basse (AGB).
+
+![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
 
 ### Boucle Ouverte
 
-AAPS évalue en permanence toutes les données disponibles (IA, GA, Gly ...) et fait des propositions de traitement pour ajuster votre thérapie si nécessaire. Les suggestions ne seront pas exécutées automatiquement (comme dans la boucle fermée) doivent être entrées manuellement dans la pompe ou en utilisant un bouton si vous utiliserez une pompe compatible (Dana R/RS, Accu Chek Combo, Insight...). Cette option permet de savoir comment AndroidAPS fonctionne ou si vous utilisez une pompe non prise en charge.
+* AAPS évalue en permanence toutes les données disponibles (IA, GA, Gly ...) et fait des propositions de traitement pour ajuster votre thérapie si nécessaire. 
+* Les suggestions ne seront pas exécutées automatiquement (comme dans la boucle fermée) doivent être entrées manuellement dans la pompe ou en utilisant un bouton si vous utiliserez une pompe compatible (Dana R/RS, Accu Chek Combo, Insight...). 
+* Cette option permet de savoir comment AndroidAPS fonctionne ou si vous utilisez une pompe non prise en charge.
 
 ### Boucle Fermée
 
-AAPS évalue en permanence toutes les données disponibles (IA, GA, Gly ...) et ajuste automatiquement le traitement si nécessaire (c'est-à-dire sans intervention de votre part) pour atteindre la plage ou la valeur cible fixée (bolus, débit de basal temporaire, arrêt de l'insuline pour éviter l'hypo, etc.). La boucle fermée fonctionne avec de nombreuses limites de sécurité, que vous pouvez définir individuellement. La boucle fermée n'est possible que si vous êtes à l'[Objectif 6](../Usage/Objectives.html#objectif-6-demarrage-de-la-boucle-fermee-avec-le-systeme-agb-arret-pour-glycemie-basse) ou plus et si vous utilisez une pompe prise en charge.
+* AAPS évalue en permanence toutes les données disponibles (IA, GA, Gly ...) et ajuste automatiquement le traitement si nécessaire (c'est-à-dire sans intervention de votre part) pour atteindre la plage ou la valeur cible fixée (bolus, débit de basal temporaire, arrêt de l'insuline pour éviter l'hypo, etc.). 
+* La boucle fermée fonctionne avec de nombreuses limites de sécurité, que vous pouvez définir individuellement.
+* La boucle fermée n'est possible que si vous êtes à l'[Objectif 6](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) ou plus et si vous utilisez une pompe prise en charge.
+* Remarque : En mode boucle fermée, une cible unique au lieu de la plage cible (par ex. 5,5 mmol ou 100 mg/dl au lieu de 5,0 - 7,0 mmol ou 90 - 125 mg/dl) est recommandée.
+
+### Arrêt Glycémie Basse (AGB)
+
+* maxIA est fixé à zéro
+* Cela signifie que si le taux de glycémie chute, il peut réduire le débit de basal pour vous.
+* Mais si la glycémie augmente, aucune correction automatique ne sera apportée. Vos débits de basal resteront les mêmes que votre profil sélectionné.
+* Ce n'est que si l'insuline basale active est négative (à cause d'un arrêt glycémie basse antérieur), que de l'insuline additionnelle sera administrer pour faire baisser la glycémie.
+
+### Changement minimum
+
+* Lorsque vous utilisez le mode boucle ouverte, vous recevrez des notifications chaque fois que le programme AAPS vous recommande d'ajuster le débit de basal. 
+* Pour réduire le nombre de notifications, vous pouvez utiliser une plage cible de glycémie plus étendue ou augmenter le pourcentage de changement minimal.
+* Ce paramètre défini le changement relatif minimum qui déclenchera une notification.
 
 ## Objectifs (programme d'apprentissage)
 
-AndroidAPS a un certain nombre d'objectifs que vous devez réaliser étape par étape. Cela devrait vous guider en toute sécurité à travers la mise en place d'un système de boucle fermée. Ce programme d'apprentissage garantit que vous avez tout mis en place correctement et que vous comprenez ce que le système fait exactement. C'est la seule façon pour vous de faire confiance au système.
+AndroidAPS a un programme d'apprentissage (objectifs) que vous devez réaliser étape par étape. Cela devrait vous guider en toute sécurité à travers la mise en place d'un système de boucle fermée. Ce programme d'apprentissage garantit que vous avez tout mis en place correctement et que vous comprenez ce que le système fait exactement. C'est la seule façon pour vous de faire confiance au système.
 
 Vous devez [exporter régulièrement vos paramètres](../Usage/ExportImportSettings.rst) (y compris la progression des objectifs). Au cas où vous devrez remplacer votre smartphone plus tard (nouvel achat, problème d'écran, etc.) vous pouvez simplement importer ces paramètres.
 
@@ -220,9 +254,39 @@ Remarque : Le bouton ne sera pas visible si vous êtes en dehors de la plage de 
 
 ![Bouton Assistant rapide](../images/ConfBuild_QuickWizard.png)
 
+#### Cibles Temporaires par défaut
+
+Choose default temp-targets (duration and target). Preset values are:
+
+* eating soon: target 72 mg/dl / 4.0 mmol/l, duration 45 min
+* activity: target 140 mg/dl / 7.8 mmol/l, duration 90 min
+* hypo: target 125 mg/dl / 6.9 mmol/l, duration 45 min
+
+#### Quantité d'insuline par défaut pour Amorcer/Remplir
+
+Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+
+#### Fourchette de visualisation
+
+Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+
+#### Raccourcir les titres des onglets
+
+Choose either the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+
+#### Affiche les notes dans les dialogues
+
+Choose if you want to have a notes field when entering treatments or not.
+
+#### Voyants d'état
+
+Choose if you want to have status lights on overview for canula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+
 #### Paramètres Avancés
 
-Activer la fonction super bolus dans l'Assistant. Utilisez avec prudence et ne l'activez pas tant que vous n'avez pas parfaitement compris ce qu'il fait réellement. En gros, l'insuline correspondant au débit de basal des deux heures suivantes est ajoutée au bolus et deux heures de zéro-temp sont activées. **Les fonctions de boucle AAPS seront désactivées - c'est donc à utiliser avec prudence ! Si vous utilisez OpenAPS SMB, les fonctions de la boucle seront désactivées selon le paramètre ["Max. minutes de basal pour limiter le SMB"](../Usage/Open-APS-features.html#max-minutes-de-basal-pour-limiter-le-smb), si vous n'utilisez pas les SMB les fonctions de la boucle seront désactivées pendant deux heures.** Plus de détails sur le super bolus peuvent être trouvés [ici](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
+
+**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. En gros, l'insuline correspondant au débit de basal des deux heures suivantes est ajoutée au bolus et deux heures de zéro-temp sont activées. **Les fonctions de boucle AAPS seront désactivées - c'est donc à utiliser avec prudence ! Si vous utilisez OpenAPS SMB, les fonctions de la boucle seront désactivées selon le paramètre ["Max. minutes de basal pour limiter le SMB"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), si vous n'utilisez pas les SMB les fonctions de la boucle seront désactivées pendant deux heures.** Plus de détails sur le super bolus peuvent être trouvés [ici](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Actions
 
@@ -247,6 +311,10 @@ Quelques boutons pour accéder rapidement aux fonctions communes:
 Certains médecins utilisent - en particulier pour les nouveaux utilisateurs de pompes - une proportion basal-bolus de 50:50. Par conséquent, le rapport est calculé ainsi DTI/(2*DTB) (Dose Totale de Basale = somme des débits de basal en 24 heures). D'autres préfèrent une fourchette allant de 32% à 37% de DTI pour DTB. Comme la plupart de ces règles empiriques, leur validité réelle est limitée. Remarque : Votre diabète peut varier!
 
 ![Onglet Actions](../images/ConfBuild_ConfBuild_Actions_b.png)
+
+### Automatisation
+
+User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst)
 
 ### Communicateur SMS
 
@@ -275,42 +343,10 @@ Via l'onglet Wear ou le menu hamburger (en haut à gauche de l'écran, si l'ongl
 
 Affiche les informations de la boucle sur votre cadran xDrip+ (si vous n'utilisez pas les cadrans AAPS/[cadran AAPSv2](../Configuration/Watchfaces.md)
 
-### Notification en cours
+### NSClient
 
-Affiche un récapitulatif des Gly, delta, %DBT actif, basale u/h et profil actif, IA décomposée en IA bolus et IA basal sur l'écran de veille et l'écran de verrouillage du téléphone.
-
-![Widget AAPS](../images/ConfBuild_Widget.png)
-
-### NS Client
-
-Configurer la synchronisation de vos données AndroidAPS avec Nightscout.
-
-Si **Démarrage AAPS entré dans NS** est activé chaque lancement de AndroidAPS sera visible dans Nightscout. Peut être utile pour détecter des problèmes avec l'application (par ex. si l'optimisation de la batterie n'a pas été désactivée pour l'AAPS), mais peut saturer le graphique Nightscout avec les entrées.
-
-#### Options d'alarme
-
-Activez/désactivez les alarmes AndroidAPS
-
-![Options d'alarme](../images/ConfBuild_NSClient_Alarms.png)
-
-#### Paramètres de connexion
-
-Bloucler hors connexion, désactiver l'itinérance...
-
-Si vous souhaitez utiliser uniquement un réseau WiFi spécifique, vous pouvez entrer son **SSID**. Plusieurs SSID peuvent être séparés par un point-virgule. Pour supprimer tous les SSID, entrez un espace dans la zone.
-
-![Paramètres de connexion Nighscout](../images/ConfBuild_ConnectionSettings.png)
-
-#### Paramètres Avancés
-
-* Remplissage automatique des glycémies manquantes en utilisant NS
-* Créer des messages d'erreurs Créer une annonce Nightscout pour les messages d'erreur et les alertes locales (également visible dans la section Careportal de l'onglet traitements)
-* Activer la diffusion locale vers d'autres applications telles que xDrip +
-* Remonter uniquement vers NS (synchronisation désactivée)
-* Pas de téléchargement vers NS
-* Utiliser toujours les valeurs absolues du basal -> Doit être activé si vous voulez utiliser [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) correctement.
-
-![Paramètres avancés Nightscout](../images/ConfBuild_NSClient_Advanced.png)
+* Configurer la synchronisation de vos données AndroidAPS avec Nightscout.
+* Settings in [preferences](../Configuration/Preferences#nsclient) can be opened by clicking the cog wheel.
 
 ### Maintenance
 
