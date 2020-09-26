@@ -21,7 +21,7 @@ SMS komandų nustatymas
 
 Autorizuoti telefono numeriai
 --------------------------------------------------
-* AndroidAPS eikite į **Nustatymus > SMS Komunikatorius** ir įveskite telefono numerį(-ius), iš kurio(-ių) jūs leidžiate SMS komandas (atskirtas kabliataškiu - pvz. +4412345678;+4412345679) 
+* AndroidAPS eikite į **Nustatymus > SMS Komunikatorius** ir įveskite telefono numerį(-ius), iš kurio(-ių) jūs leidžiate SMS komandas (atskirtas kabliataškiu - pvz. +6412345678;+6412345679) 
 * Įgalinkite "Leisti nuotolines komandas SMS žinutėmis".
 * Jei norite naudoti daugiau nei vieną numerį:
 
