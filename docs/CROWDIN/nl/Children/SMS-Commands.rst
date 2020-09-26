@@ -21,7 +21,7 @@ Setup SMS commands
 
 Authorized phone numbers
 -------------------------------------------------
-* In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678;+4412345679) 
+* In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679) 
 * Enable 'Allow remote commands via SMS'.
 * Als je meer dan één nummer wilt gebruiken:
 
