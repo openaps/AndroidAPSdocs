@@ -25,7 +25,7 @@ Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder
 
 **Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie `hier <../Installing-AndroidAPS/update2_7.html>`_ beschrieben.**
 
-Du musst `Objective 11 <../Usage/Objectives.html#objective-11-automation>`_ zumindest starten, um die `Automatisierungsfunktion <../Usage/Automation.html>`_ weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden.
+Du musst `Objective 11 <../Usage/Objectives.html#objective-11-automation>`_ zumindest starten, um die `Automatisierungsfunktion <../Usage/Automation.html>`_ weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden. If for example you did not finish the exam in objective 3 yet, you will have to complete the exam before you can start objective 11. This will not effect other objectives you have already finished. You will keep all finished objectives!
 
 Wichtige neue Funktionen
 ----------------------
