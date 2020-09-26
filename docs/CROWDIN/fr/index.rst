@@ -72,7 +72,7 @@ Générateur de configuration
    :glob:
    
    Générateur de configuration <./Configuration/Config-Builder.md>
-   Préférences <./Configuration/Preferences2020.rst>
+   Preferences <./Configuration/Preferences.rst>
    
    
 Utilisation d'AndroidAPS
