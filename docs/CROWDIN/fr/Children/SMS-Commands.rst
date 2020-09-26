@@ -68,7 +68,7 @@ Configuration de l'Authentificateur
 
 Utiliser les commandes SMS
 ==================================================
-* Envoyez depuis votre/vos numéro(s) de téléphone approuvé(s) un SMS au téléphone ayant AndroidAPS lancé en utilisant l'une des `commandes </Children/SMS-Commands.html#commandes>`_ ci-dessous en **LETTRES CAPITALES**. 
+* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands </Children/SMS-Commands.html#commands>`_ below. 
 * Le téléphone AAPS répondra pour confirmer le succès de la commande ou du statut demandé. 
 * Confirmez la commande en envoyant le code si nécessaire. Par exemple :
 
@@ -80,7 +80,7 @@ Utiliser les commandes SMS
 
 Commandes
 ==================================================
-Les commandes doivent être envoyées en anglais et en **LETTRES CAPITALES**, la réponse sera dans votre langue locale si la chaîne de réponse a déjà été `traduite <../translations.html#traduire-les-textes-de-l-application-androidaps>` _.
+Commands must be send in English, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
 
 .. image:: ../images/SMSCommands.png
   :alt: Example de commandes SMS
