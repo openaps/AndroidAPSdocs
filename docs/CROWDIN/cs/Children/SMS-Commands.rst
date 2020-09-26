@@ -29,7 +29,7 @@ Authorized phone numbers
   * Ujistěte se, že první číslo funguje - zasláním SMS příkazu a jeho potvrzením.
   * Přidejte další číslo(a) oddělené středníkem, bez mezery.
   
-    .. image:: ../images/SMSCommandsSetupSpace.png
+    .. image:: ../images/SMSCommandsSetupSpace2.png
       :alt: SMS Commands Setup multiple numbers
 
 Minutes between bolus commands
