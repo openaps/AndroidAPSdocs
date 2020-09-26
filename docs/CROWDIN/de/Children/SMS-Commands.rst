@@ -80,7 +80,7 @@ SMS-Befehle verwenden
 
 Befehle
 ==================================================
-Befehle müssen in Englisch gesendet werden; die Antwort erhältst Du in Deiner lokalen Sprache, wenn die Zeichenfolge bereits `übersetzt <../translations.html#texte-fur-die-androidaps-app-ubersetzen>`_ worden ist.
+Befehle müssen in Englisch gesendet werden, die Antwort erhältst Du in Deiner lokalen Sprache, wenn die Zeichenfolge bereits `übersetzt ist <../translations.html#texte-fur-die-androidaps-app-ubersetzen>`_.
 
 .. image:: ../images/SMSCommands.png
   :alt: Beispiele für SMS-Befehle
@@ -106,41 +106,41 @@ CGM-Daten
 * BG
    * Antwort: Letzter BZ: 5.6 4min her, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
-   * Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN
+   * Antwort: Um die Kalibrierung 5.6 zu senden, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
    * Antwort, nachdem der korrekte Code von AAPS empfangen wurde: Kalibrierung gesendet (**Falls xDrip installiert ist. In xDrip+ muss "Kalibrierungen akzeptieren" aktiviert sein.)
 
 Basal
 --------------------------------------------------
 * BASAL STOP/CANCEL
-   * Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
+   * Antwort: Antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN, um die temporäre Basalrate zu beenden.
 * BASAL 0.3
-   * Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
+   * Antwort: Um eine Basalrate von 0.3IE/h für 30 Minuten zu setzen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
 * BASAL 0.3 20
-   * Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
+   Antwort: Um eine Basalrate von 0.3IE/h für 20 Minuten zu setzen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
 * BASAL 30%
-   * Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
+   * Antwort: Um die Basalrate von 30% für 30 Minuten zu setzen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
 * BASAL 30% 50
-   * Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
+   * Antwort: Um die Basalrate von 30% für 50 Minuten zu setzen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
 
 Bolus
 --------------------------------------------------
 Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAPS oder nach dem letzten SMS-Befehl nicht möglich. Den Wert kannst Du nur anpassen, wenn mind. zwei Rufnummern eingetragen sind. Die Antwort hängt daher davon ab, wann der letzte Bolus abgegeben wurde.
 
 * BOLUS 1.2
-   * Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN
+   * Antwort A: Um einen Bolus von 1,2 IE abzugeben, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
    * Antwort B: Bolusabgabe aus der Ferne nicht verfügbar. Versuch es später nochmal.
 * BOLUS 0.60 MEAL
    * Mit dem optionalen Parameter MEAL wird ein Mahlzeiten TT gesetzt (Standardwerte sind 90 mg/dL / 5.0 mmol/L für 45 Minuten).
-   * Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN
+   * Antwort A: Um einen Bolus von 0,6 IE abzugeben, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
    * Antwort B: Bolusabgabe aus der Ferne nicht verfügbar. 
 * CARBS 5
-   * Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
+   * Antwort: Um 5g Kohlenhydrate um 12:45 einzugeben, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
 * CARBS 5 17:35/5:35PM
-   * Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
+   * Antwort: Um 5g Kohlenhydrate um 17:35 einzugeben, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
 * EXTENDED STOP/CANCEL
-   * Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
+   * Antwort: Antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN, um den erweiterten Bolus zu beenden.
 * EXTENDED 2 120
-   * Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
+   * Antwort: Um den erweiterten Bolus 2 IE für 120 Minuten abzugeben, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
 
 Profile
 --------------------------------------------------
@@ -149,9 +149,9 @@ Profile
 * PROFILE LIST
    * Antwort: 1. ` Profil1 ` 2. ` Profil2 `
 * PROFILE 1
-   * Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
+   * Antwort: Um zum Profil 1 mit 100% zu wechseln, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
 * PROFILE 2 30
-   * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+   * Antwort: Um zum Profil 2 mit 30% zu wechseln, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
 
 Andere
 --------------------------------------------------
@@ -160,17 +160,17 @@ Andere
 * NSCLIENT RESTART
    * Antwort: NSCLIENT RESTART 1 receivers
 * PUMP
-   * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+   * Antwort: Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
 * PUMP CONNECT
-   * Response: Pump reconnected
+   * Antwort: Pumpe erneut verbunden
 * PUMP DISCONNECT *30*
-   * Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
+   * Um die Pumpe für *30* Minuten zu trennen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
 * SMS DISABLE/STOP
    * Antwort: Um den SMS Remote Service zu deaktivieren, antworte mit dem Code Any. Beachte, dass Du die Fernsteuerung nur am AAPS Master-Smartphone wieder aktivieren kannst.
 * TARGET MEAL/ACTIVITY/HYPO   
-   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
+   * Antwort: Um ein MEAL/ACTIVITY/HYPO TT zu setzen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
 * TARGET STOP/CANCEL   
-   * Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
+   * Antwort: Um das temporäre Ziel zu stoppen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
 * HELP
    * Antwort: BG, LOOP, TREATMENTS, .....
 * HELP BOLUS
