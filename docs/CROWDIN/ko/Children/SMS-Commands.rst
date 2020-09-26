@@ -29,7 +29,7 @@ Authorized phone numbers
   * SMS 명령을 보내고 확인하여 해당 전화번호가 올바르게 작동하는지 확인하십시오.
   * 다른 번호를 입력하세요. 세미콜론으로 구분하고 공백이 있으면 안됩니다.
   
-    .. image:: ../images/SMSCommandsSetupSpace.png
+    .. image:: ../images/SMSCommandsSetupSpace2.png
       :alt: SMS Commands Setup multiple numbers
 
 Minutes between bolus commands
