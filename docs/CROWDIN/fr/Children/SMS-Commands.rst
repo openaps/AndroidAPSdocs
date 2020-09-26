@@ -106,7 +106,7 @@ Données MGC
 * Gly
    * Réponse: Dernière G: 5,6 il y a 4 min, Delta: 2 mmol, IA: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
-   * Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN
+   * Réponse : Pour envoyer la calibration 5.6, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
    * Réponse après réception du code correct : Étalonnage envoyé. La réception doit être activée dans xDrip. (**Si xDrip est installé. L'acceptation des calibrations doit être activée dans xDrip+**)
 
 Basal
