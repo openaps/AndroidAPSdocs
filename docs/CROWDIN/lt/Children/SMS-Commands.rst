@@ -68,7 +68,7 @@ Autentifikavimo sąrankos nustatymas
 
 SMS komandų naudojimas
 ==================================================
-Siųskite SMS žinutę į pagrindinį AndroidAPS telefoną iš jūsų patvirtinto(-ų) telefono numerio(-ių), naudodami bet kurią iš toliau nurodytų `komandų </Children/SMS-Commands.html#commands>`_ **DIDŽIOSIOMIS RAIDĖMIS**. 
+* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands </Children/SMS-Commands.html#commands>`_ below. 
 * AAPS telefonas reaguos patvirtindamas komandos ar būsenos prašymą. 
 * Patvirtinkite komandą, jei reikia, nusiųsdami kodą. Pavyzdys:
 
@@ -80,7 +80,7 @@ Siųskite SMS žinutę į pagrindinį AndroidAPS telefoną iš jūsų patvirtint
 
 Komandos
 ==================================================
-Komandos turi būti išsiųstos anglų kalba **DIDŽIOSIOMIS RAIDĖMIS**, atsakymą gausite savo vietine kalba, jei eilutė jau yra `išversta <../translations.html#translate-strings-for-androidaps-app>`_.
+Commands must be send in English, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
 
 .. nuotrauka:: ../images/SMSCommands.png
   :alt: SMS komandų pavyzdys
