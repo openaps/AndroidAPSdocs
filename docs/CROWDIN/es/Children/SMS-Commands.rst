@@ -29,7 +29,7 @@ Authorized phone numbers
   * Verifique que este número funcione por medio del envío y confirmación de un comando de SMS.
   * Ingrese número(s) adicional(es) separados por punto y coma(s) sin espacio.
   
-    .. imagen:: ../images/SMSCommandsSetup.png
+    .. image:: ../images/SMSCommandsSetupSpace2.png
       :alt: SMS Commands Setup multiple numbers
 
 Minutes between bolus commands
