@@ -29,7 +29,7 @@ Authorized phone numbers
   * Убедитесь, что этот телефон работает с алгоритмом путем отправки и подтверждения команды SMS.
   * Введите дополнительные номера, разделенные точкой с запятой, без пробела.
   
-    .. изображение:: ../images/SMSCommandsSetupSpace.png
+    .. image:: ../images/SMSCommandsSetupSpace2.png
       :alt: SMS Commands Setup multiple numbers
 
 Minutes between bolus commands
