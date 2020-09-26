@@ -29,7 +29,7 @@ Authorized phone numbers
   * Make that single number work by sending and confirming a SMS command.
   * Enter additional number(s) separated by semicolon, no space.
   
-    .. image:: ../images/SMSCommandsSetupSpace.png
+    .. image:: ../images/SMSCommandsSetupSpace2.png
       :alt: SMS Commands Setup multiple numbers
 
 Minutes between bolus commands
