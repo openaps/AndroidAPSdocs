@@ -29,7 +29,7 @@ Authorized phone numbers
   * Zorg dat dat enkele nummer werkt door het verzenden en het bevestigen van een SMS-commando.
   * Geef extra nummer(s) op, gescheiden door puntkomma, geen spatie.
   
-    .. image:: ../images/SMSCommandsSetupSpace.png
+    .. image:: ../images/SMSCommandsSetupSpace2.png
       :alt: SMS Commands Setup multiple numbers
 
 Minutes between bolus commands
