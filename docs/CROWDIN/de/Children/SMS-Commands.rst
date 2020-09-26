@@ -5,82 +5,82 @@ Sicherheitshinweise
 * AndroidAPS erlaubt es Dir, das Smartphone eines Kindes über SMS-Nachricht aus der Ferne zu steuern. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Befehle eingerichtet ist, gestohlen werden kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code.
 * AndroidAPS gibt Rückmeldung per SMS, wenn Deine Remote-Befehle, wie z.B. ein Bolus oder eine Profiländerung, ausgeführt wurden. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
 * **Wenn Du einen Bolus über  SMS-Befehle abgibst, musst Du die Kohlenhydrate über Nightscout (NSClient, Webseite...) eingeben!** Wenn Du das unterlässt, ist zwar das IOB korrekt, aber die COB sind zu gering. Dies kann dazu führen, dass notwendige Korrekturboli nicht abgegeben werden, da AAPS davon ausgeht, dass Du zu viel aktives Insulin hast.
-* As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
+* Ab AndroidAPS Version 2.7 muss eine Authentifizierungs-App mit einem zeitbasierten Einmalpasswort verwendet werden, um die Sicherheit bei der Verwendung von SMS-Befehlen zu erhöhen.
 
-Setup SMS commands
+SMS-Befehle einrichten
 ==================================================
 
 .. image:: ../images/SMSCommandsSetup.png
   :alt: SMS-Befehle einrichten
       
-* Die meisten Anpassungen der temporären Ziele, AAPS folgen etc. can be done on `NSClient app <../Children/Children.html>`_ on an Android phone with an internet connection.
+* Die meisten Anpassungen der temporären Ziele, AAPS folgen etc. können über die `NSClient-App <../Children/Children.html>`_ auf einem Android-Smartphone durchgeführt werden.
 * Boli können nicht über Nightscout abgegeben werden, aber Du kannst dafür SMS-Befehle verwenden.
-* If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
+* Falls Du als Follower ein iPhone verwendest und daher die NSClient-App nicht nutzen kannst, gibt es weitere SMS-Befehle.
 
 * Gehe dazu in den Systemeinstellungen deines Android-Telefons zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
 
-Authorized phone numbers
+Erlaubte Telefonnummern
 -------------------------------------------------
-* In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679) 
-* Enable 'Allow remote commands via SMS'.
+* In AndroidAPS gehst du zu **Einstellungen > SMS-Kommunikator** und trägst die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AndroidAPS zu senden. Mehrere Nummern werden dabei durch Semikolon ohne Leerzeichen getrennt (z.B. +6412345678;+6412345679) 
+* Aktiviere 'Erlaube Fernsteuerung per SMS zulassen'.
 * Wenn Du mehr als eine Nummer verwenden möchtest:
 
   * Gib nur eine der Telefonnummern ein.
   * Führe einen SMS-Befehl aus um sicher zu stellen, dass die Kommandos mit dieser Telefonnummer funktionieren.
   * Gib die zusätzliche(n) Telefonnummer(n) getrennt durch Semikolon ohne Leerzeichen ein.
   
-    .. image:: ../images/SMSCommandsSetupSpace.png
-      :alt: SMS Commands Setup multiple numbers
+    .. image:: ../images/SMSCommandsSetupSpace2.png
+      :alt: SMS-Befehle Setup mehrerer Nummern
 
-Minutes between bolus commands
+Minuten zwischen Bolus-Befehlen
 -------------------------------------------------
-* You can define the minimum delay between to boluses issued via SMS.
-* For safety reasons you have to add at least two authorized phone numbers to edit this value.
+* Du kannst den minimalen Zeitabstand zwischen über SMS durchgeführte Boli definieren.
+* Aus Sicherheitsgründen musst Du mindestens zwei erlaubte Telefonnummern hinzufügen, um diesen Wert zu bearbeiten.
 
-Additionally mandatory PIN at token end
+Zusätzliche obligatorische PIN am Token-Ende
 -------------------------------------------------
-* For safety reasons the reply code must be followed by a PIN.
-* PIN rules:
+* Aus Sicherheitsgründen muss dem Antwortcode eine PIN folgen.
+* PIN-Regeln:
 
-   * 3 to 6 digits
-   * not same digits (i.e. 1111)
-   * not in a row (i.e. 1234)
+   * 3 bis 6 Ziffern
+   * nicht dieselben Ziffern (z.B. 1111)
+   * keine Ziffernfolge (z.B. 1234)
 
-Authenticator setup
+Konfiguration des Authentifikators
 -------------------------------------------------
-* Two-factor authentication is used to improve safety.
-* You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
+* Zwei-Faktor-Authentifizierung wird zur Verbesserung der Sicherheit verwendet.
+* Du kannst jede Authentifizierungs-App, die RFC 6238 TOTP-Token unterstützt, verwenden. Beliebte kostenlose Apps sind:
 
    * `Authy <https://authy.com/download/>`_
    * Google Authenticator - `Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>`_ / `iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>`_
    * `LastPass Authenticator <https://lastpass.com/auth/>`_
    * `FreeOTP Authenticator <https://freeotp.github.io/>`_
 
-* Install the authenticator app of your choice on your follower phone and scan the QR code shown in AAPS.
-* Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. Beispiel:
+* Installiere die Authentifizierungs-App Deiner Wahl auf Deinem Follower-Smartphone und scanne den in AAPS angezeigten QR-Code.
+* Teste das Einmal-Passwort, indem Du den in Deiner Authentifizierungs-App angezeigte Token und die PIN, die Du gerade in AAPS eingerichtet hast, eingibst. Beispiel:
 
-   * Your mandatory PIN is 2020
-   * TOTP token from the authenticator app is 457051
-   * Enter 4570512020
+   * Deine zwingend erforderliche PIN ist 2020
+   * TOTP Token von der Authentifizierungs-App ist 457051
+   * Trage 4570512020 ein
    
-* Red text "WRONG PIN" will change **automatically** to green "OK" if entry is correct. **There is no button you can press!**
-* Use button "RESET AUTHENTICATORS" if you want to remove provisions.
+* Der rote Text "WRONG PIN" ändert sich **automatisch** in den grünen Text "OK", wenn das Einmal-Passwort korrekt ist. **Es gibt keine Taste, die Du drücken kannst!**
+* Verwende die Schaltfläche "AUTHENTIKATORS ZURÜCKSETZEN", wenn Du bereits eingerichtete Berechtigungen entfernen möchten.
 
-Use SMS commands
+SMS-Befehle verwenden
 ==================================================
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands </Children/SMS-Commands.html#commands>`_ below in **CAPITAL LETTERS**. 
-* The AAPS phone will respond to confirm success of command or status requested. 
-* Confirm command by sending the code where necessary. Beispiel:
+* Sende eine SMS von Deiner/Deinen erlaubte/n Telefonnummer(n) an das Smartphone, das AndroidAPS ausgeführt und nutze dabei einen der `Befehle </Children/SMS-Commands.html#befehle>`_ unten. 
+* Das AAPS-Smartphone wird antworten, um sich die Durchführung des übermittelten Befehls bestätigen zu lassen oder um den angeforderten Status zu übermitteln. 
+* Bestätige falls erforderlich die Durchführung des übermittelten Befehls, indem Du den angegebenen Code zurücksendest. Beispiel:
 
-   * Your mandatory PIN is 2020
-   * TOTP token from the authenticator app is 457051
-   * Enter 4570512020
+   * Deine zwingend erforderliche PIN ist 2020
+   * TOTP Token von der Authentifizierungs-App ist 457051
+   * Trage 4570512020 ein
 
 **Hinweis:** Eine SMS-Flat auf beiden Telefonen kann nützlich sein, da u.U. viele SMS hin und her gesandt werden.
 
 Befehle
 ==================================================
-Commands must be send in English and in **CAPITAL LETTERS**, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Befehle müssen in Englisch gesendet werden; die Antwort erhältst Du in Deiner lokalen Sprache, wenn die Zeichenfolge bereits `übersetzt <../translations.html#texte-fur-die-androidaps-app-ubersetzen>`_ worden ist.
 
 .. image:: ../images/SMSCommands.png
   :alt: Beispiele für SMS-Befehle
@@ -182,7 +182,7 @@ Mehrfach-SMS
 --------------------------------------------------
 Wenn Du die gleiche SMS immer und immer wieder empfängst (z.B. Profilwechsel), hast Du wahrscheinlich eine Endlosschleife mit einer anderen App eingerichtet. Das könnte zum Beispiel xDrip+ sein. Falls dies der Fall ist, stelle sicher, dass xDrip+ (oder eine andere App, die mit Nightscout verbunden ist), keine Behandlungsdaten hochlädt. 
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+Wenn die andere App auf mehreren Smartphones installiert ist, musst Du den Upload auf allen deaktivieren.
 
 SMS-Befehle funktionieren nicht auf Samsung-Smartphones
 --------------------------------------------------
