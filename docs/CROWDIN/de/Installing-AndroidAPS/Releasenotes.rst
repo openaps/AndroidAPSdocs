@@ -19,13 +19,13 @@ Erscheinungsdatum: 24.09.2020
 
 Speicherort des Repositories wurde auf https://github.com/nightscout/AndroidAPS geändert. Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die App-Erstellung `von vorne beginnst <../Installing-AndroidAPS/Building-APK.html>`_.
 
-As already `announced some time ago <../Module/module.html#phone>`_, **Android 7 is minimum requirement** for AndroidAPS 2.7.
+Wie bereits `vor einiger Zeit angekündigt < ../Module/module.html#smartphone> ` _, **  ist Android 7 Mindestvoraussetzung * * für AndroidAPS 2.7.
 
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 **Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie `hier <../Installing-AndroidAPS/update2_7.html>`_ beschrieben.**
 
-Du musst `Objective 11 <../Usage/Objectives.html#objective-11-automation>`_ zumindest starten, um die `Automatisierungsfunktion <../Usage/Automation.html>`_ weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden. If for example you did not finish the exam in objective 3 yet, you will have to complete the exam before you can start objective 11. This will not effect other objectives you have already finished. You will keep all finished objectives!
+You need at least start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 Wichtige neue Funktionen
 ----------------------
@@ -54,8 +54,8 @@ Wichtige neue Funktionen
 * Oref0 Sensitivität entfernt @Tornado-Tim
 * `Biometrischer oder Password-Schutz <..../Configuration/Preferences.html#protection>`_ ffür Einstellungen und Bolus @MilosKozak
 * `Neuer Automation Trigger <../Usage/Automation.html>`_ @PoweRGbg
-* `Open Humans Uploader <../Configuration/OpenHumans.html>`_
-* New documentation @Achim
+* `Open Humans uploader <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
+* Neue Dokumentation @Achim
 
 Version 2.6.1.4
 ================
