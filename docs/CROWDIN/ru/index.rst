@@ -72,7 +72,7 @@ AndroidAPS-приложение с открытым исходным кодом 
    :glob:
    
    Конфигуратор <../Configuration/Config-Builder.html>`_ настройки>
-   Preferences <./Configuration/Preferences2020.rst>
+   Preferences <./Configuration/Preferences.rst>
    
    
 Использование androidAPS
