@@ -26,7 +26,7 @@ Tikslas 2: išmokite valdyti AndroidAPS
    .. image:: ../images/Objective2_V2_5.png
      :alt: 2 tikslo ekrano vaizdas
 
-Objective 3: Proof your knowledge
+Tikslas 3: Patvirtinkite, kad jūs suprantate
 ==================================================
 * Atsakykite į testo klausimus su atsakymų variantais įvairiomis AndroidAPS temomis.
 * Spustelėkite oranžinį tekstą „Dar nebaigta“, kad eitumėte į klausimų ir atsakymų puslapį.
@@ -55,13 +55,13 @@ Sumažinti pranešimų skaičių
 
 Tikslas 5: perpraskite atvirojo ciklo veikimą bei laikinos bazės rekomendacijas
 ====================================================================================================
-* Start to understand the thinking behind the temp basal recommendations by looking at the `determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ and both the `forecast line in AndroidAPS homescreen <../Getting-Started/Screenshots.html#section-e>`_/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+* Pradėkite suprasti kiekvienos laikinos valandinės bazės rekomendacijos argumentus, peržiūrėdami `Pagrindinės logikos supratimo straipsnį <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_, taip pat `Prognozavimo kreives pagrindiniame AndroidAPS ekrane <../Getting-Started/Screenshots.html#section-e>`_/Nightscout ir skaičiavimo rezultatų santrauką jūsų OpenAPS skirtuke.
  
-You will want to set your target higher than usual until you are confident in the calculations and settings.  System allows
+Tikslinę glikemiją greičiausiai norėsite nustatyti aukštesnę nei įprastai, kol įsitikinsite skaičiavimais ir nustatymais.  Sistema leidžia
 
-* a low target to be a minimum of 4 mmol (72 mg/dl) or maximum of 10 mmol (180 mg/dl) 
-* a high target to be a minimum of 5 mmol (90 mg/dl) and maximum of 15 mmol (225 mg/dl)
-* a temporary target as a single value can be anywhere in the range of 4 mmol to 15 mmol (72 mg/dl to 225 mg/dl)
+* žemas tikslas yra ne mažiau kaip 4 mmol (72 mg/dl) arba ne daugiau kaip 10 mmol (180 mg/dl) 
+* aukštas tikslas yra ne mažiau kaip 5 mmol (90 mg/dl) ir ne daugiau kaip 15 mmol (225 mg/dl)
+* laikinas tikslas, kaip viena reikšmė, gali būti bet kokio dydžio, nuo 4 iki 15 mmol (72 mg/dl iki 225 mg/dl)
 
 Tikslas yra reikšmė, kuria grindžiami skaičiavimai, o ne reikšmė, kuria norite išlaikyti gliukozės kiekį kraujyje.  Jei turite labai platų tikslinį diapazoną (pvz., 3 mmol/50 mg/dl ar daugiau), vargu ar pastebėsite bet kokią AndroidAPS veiklą. Numatomas gliukozės lygis greičiausiai bus jūsų tiksliniame diapazone, todėl nebus siūloma daug laikinų bazinio greičio pokyčių. 
 
@@ -75,7 +75,7 @@ Pagrindinio ekrano grafike (žalios linijos), kuriame norite palaikyti gliukozė
 Jei naudojate virtualią pomp ir atvirą ciklą - nespauskite Patvirtinti šio tikslo pabaigoje.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. nuotrauka:: ./images/blank.png
+.. image:: ./images/blank.png
   :alt: tuščias
 
 Tikslas 6: pradėkite Uždaro ciklo (Closed Loop) režimą su pompos stabdymu esant žemai gliukozei
@@ -83,7 +83,7 @@ Tikslas 6: pradėkite Uždaro ciklo (Closed Loop) režimą su pompos stabdymu es
 .. image:: ../images/sign_warning.png
   :alt: Įspėjamasis ženklas
   
-Uždaras ciklas nekoreguos aukštos glikemijos 6 tiksle, nes jį apriboja sustabdymas dėl žemos gliukozės. High bg values have to be corrected manually by you!
+Uždaras ciklas nekoreguos aukštos glikemijos 6 tiksle, nes jį apriboja sustabdymas dėl žemos gliukozės. Todėl jūs turite patys koreguoti aukštą glikemiją!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 * Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`_ or by pressing and holding the Open Loop button in the top left of the home screen.
 * Set your target range slightly higher than you usually aim for, just to be safe.
@@ -96,7 +96,7 @@ Uždaras ciklas nekoreguos aukštos glikemijos 6 tiksle, nes jį apriboja sustab
      :alt: Example negative IOB
 
 * If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
-* You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.
+* Dėl to Jūs galite patirti laikinus staigius glikemijos šuolius, ypač po hipoglikemijos korekcijos, nes neturėsite galimybės padidinti valandinės bazės.
 
 Tikslas 7: koreguokite savo uždarąjį ciklą po truputį didindami maks AIO ir mažindami tikslinę glikemijos reikšmę
 ====================================================================================================
