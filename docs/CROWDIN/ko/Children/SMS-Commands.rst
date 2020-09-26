@@ -21,7 +21,7 @@ Bolus는 Nightscout를 통해 원격 주입되지 않지만, SMS 명령으로 �
 
 Authorized phone numbers
 -------------------------------------------------
-* In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678;+4412345679) 
+* In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679) 
 * Enable 'Allow remote commands via SMS'.
 * 하나 이상의 전화번호 사용을 원한다면:
 
