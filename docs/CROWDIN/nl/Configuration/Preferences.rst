@@ -118,7 +118,7 @@ Knoppen
 
 Quick Wizard
 -----------------------------------------------------------
-* If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount or carbs and set calculation basics.
+* If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
 * In setup you define during which time period the button will be visible on your home screen - just one button per period.
 * If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up). 
 * The proposal has to be confirmed before insulin is delivered.
@@ -150,7 +150,7 @@ Range for visualization
 Shorten tab titles
 -----------------------------------------------------------
 * See more tab titles on screen. 
-* For example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
+* For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
 
   .. image:: ../images/Pref2020_OV_Tabs.png
     :alt: Preferences > Tabs
@@ -191,7 +191,7 @@ Deliver this part of bolus wizard result
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Option to enable superbolus in bolus wizard.
-* `Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ is a concept to "borrow" some insulin from basal rate in the next to hours to prevent spikes.
+* `Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes.
 
 Treatment safety
 ===========================================================
@@ -288,7 +288,7 @@ OpenAPS SMB settings
 * The first three settings are explained `above <./Configuration/Preferences2020.html#max-u-h-a-temp-basal-can-be-set-to>`_.
 * Details on the different enable options are described in `OpenAPS feature section <../Usage/Open-APS-features.html#enable-smb>`_.
 * *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target being set). You should not change this setting unless you know exactly about consequences. 
-* If sensitivity raises / lowers target is enabled `Autosens <../Usage/Open-APS-features.html#autosens>`_ will modify your glucose target according to your blood glucose deviations.
+* If 'Sensitivity raises target' or 'Resistance lowers target' is enabled `Autosens <../Usage/Open-APS-features.html#autosens>`_ will modify your glucose target according to your blood glucose deviations.
 * If target is modified it will be displayed with a green background on your home screen.
 
   .. image:: ../images/Home2020_DynamicTargetAdjustment.png
@@ -348,7 +348,7 @@ The options here will vary depending on which pump driver you have selected in `
 * `DanaRS Insulin Pump <../Configuration/DanaRS-Insulin-Pump.html>`_
 * `Accu Chek Combo Pump <../Configuration/Accu-Chek-Combo-Pump.html>`_
 * `Accu Chek Insight Pump <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
-* `Medtronic Pump <..//Configuration/MedtronicPump.html>`_
+* `Medtronic Pump <../Configuration/MedtronicPump.html>`_
 
 If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 

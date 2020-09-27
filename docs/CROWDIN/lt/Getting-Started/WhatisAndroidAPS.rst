@@ -1,7 +1,7 @@
 Kas yra uždaro ciklo sistema su AndroidAPS?
 **************************************************
 
-AndroidAPS is an app that acts as an artificial pancreas system (APS) on an Android smartphone. Kas yra dirbtinės kasos sistema? Tai programa, kuria siekiama padaryti tai, ką daro funkcionuojanti kasa: automatiškai siekia išlaikyti sveiką gliukozės kiekį kraujyje. 
+AndroidAPS yra programa, veikianti kaip dirbtinė kasos sistema (DKS) Android išmaniajame telefone. Kas yra dirbtinės kasos sistema? Tai programa, kuria siekiama padaryti tai, ką daro funkcionuojanti kasa: automatiškai siekia išlaikyti sveiką gliukozės kiekį kraujyje. 
 
 APS negali atlikti tokio pat darbo kaip biologinė kasa, tačiau tai gali palengvinti I tipo cukrinio diabeto gydymą standartine įranga ir paprasta bei saugia programine įranga. Šie prietaisai apima nepertraukiamą gliukozės monitorių (CGM), skirtą AndroidAPS informuoti apie jūsų gliukozės kiekį kraujyje, ir insulino pompą, valdomą AndroidAPS, kad būtų tiekiamos atitinkamos insulino dozės. Programa susisiekia su šiais įrenginiais Bluetooth ryšiu. Dozė apskaičiuojama naudojant algoritmą ar taisyklių rinkinį, sukurtą kitai dirbtinei kasai, vadinamai OpenAPS. OpenAPS turi tūkstančius vartotojų, kurie sukaupė milijonus valandų naudojimo. 
 
@@ -12,7 +12,7 @@ Atsargiai: nei vienos šalies medicininis reguliatorius nereglamentuoja AndroidA
 * Prižiūri, nuolat atnaujina ir stebi sistemą, kad įsitikintų, jog ji veikia tinkamai
 
 .. pastaba:: 
-	**Disclaimer and Warning**
+	**Atsakomybės Ir Įspėjimas**
 
 	* Visa informacija, mintys ir šaltinio kodas yra skirti tik informaciniams ir moksliniams tikslams. Nightscout neatitinka jokių privatumo reikalavimų sveikatos priežiūros srityje. Savo rizika naudokite Nightscout ir AndroidAPS ir nenaudokite jų priimdami medicininius sprendimus.
 

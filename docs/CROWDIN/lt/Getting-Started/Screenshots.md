@@ -2,14 +2,14 @@
 
 ## Pradžios ekranas
 
-![Homescreen V2.7](../images/Home2020_Homescreen.png)
+![Pradžios ekranas V2.7](../images/Home2020_Homescreen.png)
 
 Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa svarbiausia informacija.
 
 ### Section A - Tabs
 
-* Navigate between the various AndroidAPS modules.
-* Alternatively you can change screens by swiping left or right.
+* Naršyti tarp įvairių AndroidAPS modulių.
+* Arba galite pakeisti ekranus, pasukant į kairę arba į dešinę.
 * Displayed tabs can be selected in [config builder](../Configuration/Config-Builder#tab-or-hamburger-menu).
 
 ### Section B - Profile & target
@@ -23,7 +23,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 * Long press profile bar to view profile details or to [switch between different profiles](../Usage/Profiles#profile-switch).
 * If profile switch was made with duration remaining time in minutes is shown in brackets.
 
-#### Target
+#### Tikslas
 
     ![Temp target remaining duration](../images/Home2020_TT.png)
     
@@ -75,7 +75,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 ### Section D - IOB, COB, BR and AS
 
-![Section D](../images/Home2020_TBR.png)
+![Sritis D](../images/Home2020_TBR.png)
 
 * Syringe: insulin on board (IOB) - amount of active insulin inside your body
    
@@ -100,13 +100,13 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 ### Section E - Status lights
 
-![Section E](../images/Home2020_StatusLights.png)
+![Sritis E](../images/Home2020_StatusLights.png)
 
 * Status lights give a visual warning for 
    * Cannula age
    * Insulin age (days reservoir is used)
    * Reservoir level (units)
-   * Sensor age
+   * Sensorius
    * Battery age and level (%)
 * If threshold warning is exceeded, values will be shown in yellow.
 * If threshold critical is exceeded, values will be shown in red.
@@ -114,17 +114,17 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 ### Section F - Main graph
 
-![Section F](../images/Home2020_MainGraph.png)
+![Sritis F](../images/Home2020_MainGraph.png)
 
 * Graph shows your blood glucose (BG) as read from your glucose monitor (CGM). 
 * Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
-* Long press on the graph to change the time scale. You can choose 6, 12, 18 or 24 hours.
+* Ilgai paspaudę ant grafiko, galite pakeisti laiko skalę. You can choose 6, 12, 18 or 24 hours.
 * The green area reflects your target range. It can be configured in [preferences](../Configuration/Preferences#range-for-visualization).
 * Blue triangles show [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - if enabled in [preferences](.../Configuration/Preferences#openaps-smb-settings).
 * Optional information:
    
    * Prognozės
-   * Basals
+   * Bazė
    * Activity - insulin activity curve
 
 #### Activate optional information
@@ -144,7 +144,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
    
    Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
 
-* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* **Žydra** linija: glikemijos kitimo prognozė, jei būtų nustatyta nulinė bazė
    
    Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
 
@@ -154,17 +154,17 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
 
-#### Basals
+#### Bazė
 
 * A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time. . 
 * The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs)
 * In times standard basal rate is given the area under the curve is shown in dark blue.
 * When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
 
-#### Activity
+#### Aktyvumas
 
-* The **thin yellow** line shows the activity of Insulin. 
-* It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+* **Plona geltona** linija rodo insulino aktyvumą. 
+* Ji remiasi tikėtinu insulino poveikiu glikemijai, kai neveikia kiti veiksniai (pvz.: angliavandeniai).
 
 ### Section G - additional graphs
 
@@ -175,41 +175,41 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 * To add an additional graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
 
-#### Absolute insulin
+#### Insulinas absoliučiais vienetais
 
 * Active insulin including boluses **and basal**.
 
-#### Insulin on board
+#### Aktyvus insulinas organizme
 
 * Shows the insulin from bolus (**excludes basals**) you have on board (= active insulin in your body). 
 * If there were no \[SMBs]\](../Usage/Open-APS-features#super-micro-bolus-smb) and no remaining boluses this would be zero. 
 * Decaying depends on your [DIA and insulin profile settings](..Configuration/Config-Builder#local-profile-recommended). 
 
-#### Carbs On Board
+#### Aktyvūs angliavandeniai
 
 * Shows the carbs you have on board (= active, not yet decayed carbs in your body). 
 * Decaying depends on the deviations the algorithm detects. 
 * If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
 
-#### Deviations
+#### Nuokrypiai
 
 * **GREY** bars show a deviation due to carbs. 
 * **GREEN** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
 * **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
 * **YELLOW** bars show a deviation due to UAM.
 
-#### Sensitivity
+#### Jautrumas insulinui
 
 * Shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. 
 * Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
 
-#### Activity
+#### Aktyvumas
 
 * Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
-* The value is higher for insulin closer to peak time.
-* It would mean to be negative when IOB is decreasing. 
+* Kreivė tuo aukštesnė, kuo insulino aktyvumo pikas arčiau.
+* AIO mažėjant, aktyvumas gali tapti neigiamas. 
 
-#### Deviation slope
+#### Nukrypimo koeficientas
 
 * Internal value used in algorithm.
 
@@ -250,7 +250,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### NGJ
 
-* Opens xDrip+.
+* Atveria xDrip+.
 * Back button returns to AAPS.
 * Must be activated in [preferences](../Configuration/Preferences#buttons).
 
@@ -261,7 +261,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ## Bolus Wizard
 
-![Bolus wizard](../images/Home2020_BolusWizard.png)
+![Boluso patarėjas](../images/Home2020_BolusWizard.png)
 
 When you want to make a meal bolus this is where you will normally make it from.
 
@@ -294,7 +294,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * For safety reasons IOB boxed cannot be unticked when COB box is ticked as you might run the risk of too much insulin as AAPS is not accounting for what’s already given.
 * If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
+* If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. Todėl matysite pranešimą 'trūkstami angliavandeniai'.
 * If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
 
 #### Wrong COB detection

@@ -25,7 +25,7 @@ Jei minimalus angliavandenių įsisavinimas (min_5m_carbimpact) yra naudojamas v
 Neteisingų AAO reikšmių aptikimas
 ==================================================
 
-AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. Šiuo atveju jis duos jums papildomą užuominą patvirtinimo ekrane, kai pasinaudosite boluso patarėju. 
+AAPS įspėja jus, jei jūs ketinate bolusuoti su AAO iš prieš tai buvusio valgio ir algoritmas mano, kad dabartinis AAO apskaičiavimas gali būti neteisingas. Šiuo atveju jis duos jums papildomą užuominą patvirtinimo ekrane, kai pasinaudosite boluso patarėju. 
 
 Kaip AndroidAPS nustato klaidingas AAO reikšmes? 
 --------------------------------------------------
@@ -55,4 +55,4 @@ Kodėl algoritmas nenustato AAO teisingai?
 
 Įvestų angliavandenių koregavimas rankiniu būdu
 ==================================================
-If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.
+Jei pervertinote ar nepakankamai įvertinote angliavandenių kiekį, galite juos ištaisyti naudodamiesi terapijos skirtuku ir Veiksmų portalu, kaip aprašyta `čia <../Getting-Started/Screenshots.html#carb-correction>`_.

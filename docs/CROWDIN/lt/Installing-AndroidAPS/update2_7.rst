@@ -1,69 +1,74 @@
-Necessary checks after update to AndroidAPS 2.7
+Būtini patikrinimai po to, kai buvo atnaujinta AndroidAPS 2.7
 ***********************************************************
 
-* The program code was changed significantly when switching to AAPS 2.7. 
-* Therefore it is important that you make some changes or check settings after the update.
-* Please see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-270>`_ for details on new and extended features.
+* Atnaujinant į AAPS 2.7, programos kodas buvo žymiai pakeistas. 
+* Todėl svarbu, kad atnaujinę atliktumėte keletą pakeitimų arba patikrintumėte nustatymus.
+* Prašome peržiūrėti `Išleidimo pastabos <../Installing-AndroidAPS/Releasenotes.html#version-270>`_ dėl detalių apie naujas ir išplėstines funkcijas.
 
-Check BG source
+Tikrinti KG šaltinį
 -----------------------------------------------------------
-* Check if BG source is correct after update.
-* Especially when using `xDrip+ <../Configuration/xdrip.html>`_ it might happen, that BG source is changed to Dexcom app (patched).
-* Open `Config builder <../Configuration/Config-Builder.html#bg-source>`_ (hamburger menu on top left side of home screen)
-* Scroll down to "BG source".
-* Select correct BG source if changes are necessary.
+* Patikrinkite, ar po atnaujinimo KG šaltinis yra teisingas.
+* Jei jūs naudojate `xDrip+ <../Configuration/xdrip.html>`_ gali atsitikti taip, kad KG šaltinis pakeistas į modifikuotą „Dexcom“ programą.
+* Atidarykite `Konfigūratorių <../Configuration/Config-Builder.html#bg-source>`_ (trijų linijų meniu pagrindinio ekrano viršuje kairėje)
+* Slinkite žemyn į "KG šaltinis".
+* Pasirinkite teisingą KG šaltinį, jei pakeitimai yra būtini.
 
 .. image:: ../images/ConfBuild_BG.png
-  :alt: BG source
+  :alt: KG šaltinis
 
-Finish exam
+Baigti egzaminą
 -----------------------------------------------------------
-* AAPS 2.7 contains new objective 11 for `automation <../Usage/Automation.html>`_.
-* You have to finish exam (`objective 3 and 4 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_) in order to complete `objective 11 <../Usage/Objectives.html#objective-11-automation>`_.
+* AAPS 2.7 programoje yra naujas Tikslas 11 `Automatizavimas <../Usage/Automation.html>`_.
+* Jūs turite išlaikyti egzaminą (`Tikslas 3 ir 4 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_), kad užbaigtumėte `Tikslą 11 <../Usage/Objectives.html#objective-11-automation>`_.
+* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Automation.html>`_. 
+* This will not effect other objectives you have already finished. You will keep all finished objectives!
 
-Set master password
+Pagrindinio slaptažodžio nustatymas
 -----------------------------------------------------------
-* Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
-* Open Preferences (three-dot-menu on top right of home screen)
-* Click triangle below "General"
-* Click "Master-Password"
-* Enter password, confirm password and click ok.
+* Jis yra būtinas, kad būtų galima `eksportuoti nustatymus <../Usage/ExportImportSettings.html>`_, nes versijoje 2.7 jie yra užkoduoti.
+* Atidarykite Nustatymus (trijų taškų meniu dešinėje viršutinėje pagrindinio ekrano pusėje)
+* Spustelėkite trikampį žemiau "Bendrieji"
+* Spauskite "Pagrindinis Slaptažodis"
+* Įveskite slaptažodį, patvirtinkite slaptažodį ir spustelėkite Ok.
 
 .. image:: ../images/MasterPW.png
-  :alt: Set master password
+  :alt: Nustatyti pagrindinį slaptažodį
   
 Eksportuoti nustatymus
 -----------------------------------------------------------
-* AAPS 2.7 uses a new encrypted backup format. 
-* You must `export your settings <../Usage/ExportImportSettings.html>`_ after updating to version 2.7.
-* Settings files from previous versions **cannot** be used in AAPS 2.7 and onwards anymore.
-* Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
+* AAPS 2.7 naudoja naują šifruotą atsarginės kopijos formatą. 
+* Jūs turite `eksportuoti savo nustatymus <../Usage/ExportImportSettings.html>`_ po atnaujinimo į versiją 2.7.
+* Nustatymų failai iš ankstesnių versijų ** negali** būti naudojami AAPS 2.7 versijoje ir vėlesnėse.
+* Įsitikinkite, kad saugojate savo eksportuotus nustatymus ne tik telefone, bet ir bent vienoje saugioje vietoje (jūsų kompiuteris, debesijos saugykla...).
+* If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version. 
+* All settings as well as finished objectives will remain as they were in the previous version.
+* In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the `troubleshooting section <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_.
 
-Autosens (Hint - no action necessary)
+Autosens (Užuomina - nėra būtina imtis konkrečių veiksmų)
 -----------------------------------------------------------
-* Autosens is changed to a dynamic switching model which replicates the reference design.
-* Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
-* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
+* Autosens buvo pakeistas iš statinio į dinaminį modelį.
+* Autosens jautrumui apskaičiuoti dabar persijungia tarp dviejų modulių: 24 valandų ir 8 valandų laikotarpius. Jis išsirinks vieną, kuris yra jautresnis. 
+* Vartotojai, kurie naudojo oref1, gali pastebėti, kad sistema gali būti mažiau dinamiška pokyčiams, dėl tuo metu pasirinkto 24 ar 8 valandas jautrumo.
 
-Set Pump Password for Dana RS (if using Dana RS)
+Danos RS slaptažodžio nustatymas (jei naudojate Dana RS)
 -----------------------------------------------------------
-* Pump password for `Dana RS <../Configuration/DanaRS-Insulin-Pump.html>`_ was not checked in previous versions.
-* Open Preferences (three-dot-menu on top right of screen)
-* Scroll down and click triangle next to "Dana RS".
-* Click "Pump password (v1 only)"
-* Enter pump password (Default password is 1234) and click OK.
+* Pompos slaptažodis `Dana RS pompai <../Configuration/DanaRS-Insulin-Pump.html>`_ buvo netikrinamas ankstesnėse versijose.
+* Atidarykite Nustatymus (trijų taškų meniu dešinėje viršutinėje ekrano pusėje)
+* Slinkite žemyn ir spustelėkite trikampį šalia "Dana RS".
+* Paspauskite "Pompos slaptažodis (tik v1)"
+* Įveskite pompos slaptažodį (Numatytasis slaptažodis yra 1234) ir spustelėkite Gerai.
 
 .. image:: ../images/DanaRSPW.png
-  :alt: Set Dana RS password
+  :alt: Nustatyti Dana RS slaptažodį
   
-To change password on Dana RS:
+Norėdami pakeisti slaptažodį Dana RS pompoje:
 
-* Press OK button on pump
-* In main menu select "OPTION" (move right by pressing arrow button several times)
-* In options menu select "USER OPTION"
-* Use arrow button to scroll down to "11. password"
-* Enter old password (Default password is 1234)
-* Set new password (Change numbers with + & - buttons / Move right with arrow button).
-* Confirm with OK button.
-* Save by pressing OK button again.
-* Move down to "14. EXIT" and press OK button.
+* paspauskite OK mygtuką pompoje
+* Pagrindiniame meniu pasirinkite „OPTION“ (judėkite dešinėn kelis kartus paspausdami rodyklės mygtuką)
+* Meniu Parinktys pasirinkite „USER OPTION“
+* Rodyklės mygtuku slinkite žemyn iki "11. password"
+* Įveskite senąjį slaptažodį (Numatytasis slaptažodis yra 1234)
+* Įveskite naują slaptažodį (Keiskite numerius mygtukais + ir - / Perkelkite į dešinę rodyklės mygtuku).
+* Patvirtinkite paspausdami OK mygtuką.
+* Išsaugokite spausdami OK mygtuką dar kartą.
+* Pereikite žemyn į „14. EXIT" ir paspauskite OK mygtuką.

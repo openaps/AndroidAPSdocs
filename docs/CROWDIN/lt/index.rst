@@ -72,7 +72,7 @@ Konfigūracija
    :glob:
    
    Konfigūratorius <./Configuration/Config-Builder.md>
-   Nustatymai <./Configuration/Preferences2020.rst>
+   Preferences <./Configuration/Preferences.rst>
    
    
 AndroidAPS naudojimas
