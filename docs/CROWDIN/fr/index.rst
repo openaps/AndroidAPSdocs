@@ -72,7 +72,7 @@ Générateur de configuration
    :glob:
    
    Générateur de configuration <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences.rst>
+   Préférences <./Configuration/Preferences.rst>
    
    
 Utilisation d'AndroidAPS
@@ -87,7 +87,7 @@ Utilisation d'AndroidAPS
    Calcul des GA <./Usage/COB-calculation.rst>
    Estimation de la Sensibilité <./Configuration/Sensitivity-detection-and-COB.md>
    Changement de profil <./Usage/Profiles.md>
-   Cibles <./Usage/temptarget.md>   
+   Cibles Temporaires <./Usage/temptarget.md>   
    Glucides étendus <./Usage/Extended-Carbs.rst>
    Automatisation <./Usage/Automation.rst>
    Careportal (supprimé) <./Usage/CPbefore26.rst>
