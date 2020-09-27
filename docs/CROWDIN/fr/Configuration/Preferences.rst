@@ -118,7 +118,7 @@ Boutons
 
 Assistant Rapide
 -----------------------------------------------------------
-* If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
+* Si vous avez une collation ou un repas fréquent, vous pouvez utiliser le bouton Assistant Rapide pour entrer facilement la quantité de glucides et définir les règles de calcul.
 * Dans le paramétrage, vous définissez au cours de quelle période le bouton sera visible sur votre écran d'accueil - ne définissez qu'un bouton par période.
 * Si vous cliquez sur le bouton Assistant Rapide, AAPS calculera et proposera un bolus pour ces glucides en fonction de vos valeurs actuelles (glycémie ou insuline active si configurées). 
 * La proposition doit être confirmée avant l'injection de l'insuline.
@@ -150,7 +150,7 @@ Fourchette de visualisation
 Raccourcir les titres des onglets
 -----------------------------------------------------------
 * Permet de voir plus de onglets à l'écran. 
-* For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
+* Par exemple, l'onglet "OpenAPS AMA" devient "OAPS", "Objectifs" devient "OBJ" etc.
 
   .. image:: ../images/Pref2020_OV_Tabs.png
     :alt: Préférences > Onglets
@@ -191,7 +191,7 @@ Injecter cette partie de Bolus calculée par l’assistant
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Activer les Superbolus dans l'Assistant.
-* `Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes.
+* le principe des `Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ est "d'emprunter" de l'insuline du débit de basal dans les deux prochaines heures pour éviter les pics.
 
 Traitements de sécurité
 ===========================================================
