@@ -53,7 +53,7 @@ Wenn Du vom Nightscout-Profil auf ein lokales Profil wechseln möchtest, führe 
 
 #### Lokale Profile zu Nightscout hochladen
 
-Lokale Profile können auch zu Nightscout hochgeladen werden. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
+Lokale Profile können auch zu Nightscout hochgeladen werden. Die Einstellungen sind in den [NSClient Einstellungen](../Configuration/Preferences#nsclient) zu finden.
 
 ![Lokales Profil zu NS hochladen](../images/LocalProfile_UploadNS2.png)
 
