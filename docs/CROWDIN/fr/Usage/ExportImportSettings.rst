@@ -39,7 +39,7 @@ Exporter les paramètres
   :alt: AndroidAPS exporter les paramètres 1
 
 * Date and time of export will be added to the file name automatically and displayed together with the path.
-* Cliquez sur "OK'.
+* Cliquez sur 'OK'.
 * Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
 * Successful export will be prompted at bottom of the screen.
 
