@@ -106,7 +106,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
    * Cannula age
    * Insulin age (days reservoir is used)
    * Reservoir level (units)
-   * Age Capteur
+   * Âge du capteur
    * Battery age and level (%)
 * If threshold warning is exceeded, values will be shown in yellow.
 * If threshold critical is exceeded, values will be shown in red.
