@@ -297,11 +297,11 @@ Paramètres OpenAPS SMB
 Notification glucides requis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Cette fonctionnalité n'est disponible que si l'algorithme SMB est sélectionné.
-* Eating of additional carbs will be suggested when the reference design detects that it requires carbs.
-* In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
-* Additionally the required carbs will be displayed in the COB section on your home screen.
-* A threshold can  be defined - minimum amount of carbs needed to trigger notification. 
-* Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+* Il sera suggéré de manger des glucides supplémentaires quand l'algorithme détecte que des glucides sont requis.
+* Dans ce cas, vous recevrez une notification qui peut être reportée pendant 5, 15 ou 30 minutes.
+* De plus, les glucides requis seront affichés dans la section GA sur votre écran d'accueil.
+* Un seuil peut être défini - Glucides minimum requis pour suggestion. 
+* Les notifications Glucides requis peuvent être envoyées sur Nightscout si vous le souhaitez, dans ce cas une annonce sera affichée et diffusée.
 
   .. image:: ../images/Pref2020_CarbsRequired.png
     :alt: Afficher les glucides requis sur l'écran d'accueil
