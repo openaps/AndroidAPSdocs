@@ -39,8 +39,8 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 * AAPS peut ajuster dynamiquement votre cible en fonction de la sensibilité si vous utilisez l'algorithme SMB.
 * Activez soit une, soit les deux [options suivantes](../Configuration/Preferences#parametres-openaps-smb) 
-   * "sensibilité augmente la cible" et/ou 
-   * "la résistance diminue la cible" 
+   * "Sensibilité augmente la cible" et/ou 
+   * "Résistance diminue la cible" 
 * Si AAPS détecte une résistance ou une sensibilité, la cible change en fonction de ce qui est défini dans le profil. 
 * Lorsqu'il modifie la cible glycémique, l'arrière-plan passe en vert.
 
