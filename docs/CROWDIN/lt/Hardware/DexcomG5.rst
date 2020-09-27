@@ -16,7 +16,7 @@ Kai naudojate G5 su modifikuota Dexcom programa
    * 2.3 aplankas skirtas AndroidAPS 2.3 vartotojams, 2.4 aplankas yra skirtas AAPS 2.5 vartotojams.
    * Atidarykite https://play.google.com/store/search?q=dexcom%20g5 kompiuteryje. Regionas bus matomas URL adrese.
    
-   .. nuotrauka:: ../images/DexcomG5regionURL.PNG
+   .. image:: ../images/DexcomG5regionURL.PNG
      :alt: Regiono Dexcom G5 URL
 
 * Sustabdykite sensorių ir pašalinkite originalią „Dexcom“ programą, jei to dar nepadarėte.

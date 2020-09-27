@@ -20,6 +20,8 @@ Terminer les objectifs
 -----------------------------------------------------------
 * AAPS 2.7 contient un nouvel objectif 11 pour `l'automatisation <../Usage/Automation.html>`_.
 * Vous devez avoir fini les autres objectfs (`objectifs 3 et 4 <../Usage/Objectives.html#objectif-3-prouver-ses-connaissances>`_) pour pouvoir faire l'`objectif 11 <../Usage/Objectives.html#objectif-11-automatisation>`_.
+* Si par exemple vous n'avez pas encore terminé l'examen dans l'`objective 3 <../Usage/Objectives. tml#objectif-3-prouver-ses-connaissances>`_ , vous devrez terminer l'examen avant de pouvoir commencer l'`objective 11 <../Usage/Objectives.html#objectif-11-automatisation>`_. 
+* Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
 Définir le mot de passe principal
 -----------------------------------------------------------
@@ -38,6 +40,9 @@ Exporter les paramètres
 * Vous devez `exporter vos paramètres <../Usage/ExportImportSettings.html>`_ après la mise à jour vers la version 2.7.
 * Les fichiers de paramètres des versions précédentes **ne peuvent plus** être utilisés dans AAPS 2.7 et les versions suivantes.
 * Assurez-vous de stocker vos paramètres exportés non seulement sur votre téléphone, mais également dans au moins un autre endroit sûr (votre pc, stockage cloud...).
+* Si vous construisez l'apk AAPS 2.7 avec le même fichier de clés que dans les versions précédentes, vous pouvez installer la nouvelle version sans supprimer la version précédente. 
+* Tous les paramètres ainsi que les objectifs terminés resteront tels qu'ils étaient dans la version précédente.
+* Si vous avez perdu votre fichier de clés, construisez la version 2.7 avec un nouveau fichier de clés et importez les paramètres de la version précédente, comme c'est décrit dans la section `dépannage <. /Installing-AndroidAPS/troubleshooting_androidstudio.html#fichier-de-cles-perdu>`_.
 
 Autosens (un indice - aucune action nécessaire)
 -----------------------------------------------------------

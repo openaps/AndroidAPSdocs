@@ -1,65 +1,65 @@
-Extended carbs / "eCarbs"
+Ištęsti angliavandeniai / "iAV"
 **************************************************
-With a regular pump therapy, extended boluses are a good way to deal with fatty or otherwise slowly-absorbed meals which increase blood glucose longer than the insulin is in effect. In a loop context, however, extended boluses don't make as much sense (and pose technical difficulties), since they're basically a fixed high temporary basal rate, which goes against how the loop works, which is adjusting the basal rate dynamically. For details see `extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ below.
+Vykdant įprastą pompos terapiją, ištęstos dozės yra tinkamas būdas susitvarkyti su riebiu ar kitokiu lėtai įsisavinamu maistu, kuris padidina gliukozės kiekį kraujyje ilgiau nei daro insulinas. Tačiau ištęsti bolusai neturi prasmės (ir sukelia techninių sunkumų), nes jie iš esmės reiškia fiksuotą aukštą laikiną valandinę bazę, o tai prieštarauja normaliam uždaro ciklo veikimui - jis dinamiškai sureguliuoja bazinius dažnius. Išsamesnę informaciją galite rasti šio puslapio apačioje, skyriuje `Ištęstas bolusas <../Usage/Extended-Carbs.html#extended-bolus>`_.
 
-The need to deal with such meals still exists though. Which is why AndroidAPS as of version 2.0 supports so called extended carbs or eCarbs.
+Tačiau vis tiek reikia susitvarkyti su tokiais patiekalais. Štai kodėl AndroidAPS“ nuo 2.0 versijos palaiko vadinamuosius ištęstinius angliavandenius arba "iAV".
 
-eCarbs are carbs that are spilt up over several hours. For standard meals with more carbohydrates than fat/protein, entering the carbs up front (and reducing the initial bolus if needed) is usually sufficient to prevent too-early insulin delivery.  But for slower-absorbing meals where full carb entry up front results in too much IOB from SMB, eCarbs can be used to more accurately simulate how the carbs (and any carb equivalents you enter for other macronutrients) are absorbed and influence the blood glucose. With this information, the loop can administer SMBs more gradually to deal with those carbs, which can be seen as a dynamic extended bolus (this should also work without SMBs, but is probably less effective).
+iAV yra angliavandeniai, kurie pasiskirsto per kelias valandas. Įprastam maistui, kuriame yra daugiau angliavandenių nei riebalų / baltymų, paprastai pakanka iš anksto įvesti angliavandenis (ir, jei reikia, sumažinti pradinį boliusą), kad insulinas nebūtų suleistas per anksti.  Tačiau lėčiau įsisavinamiems patiekalams, kai visų angliavandenių įvedimas reikš per daug aktyvaus insulino, iAV gali būti naudojamas kaip šios situacijos išsprendimas. iAV tiksliau imituoja, kaip angliavandeniai (arba angliavandenių ekvivalentai iš riebalų ir baltymų) yra įsisavinami organizme ir kaip įtakoja glikemijos pokyčius. Turėdamas šią informaciją, uždaras ciklas gali geriau panaudoti SMB šiems angliavandeniams valdyti, o tai gali būti vertinama kaip savotiškas dinamiškas atidėtasis boliusas (tai turėtų veikti be SMB, bet nėra toks pat efektyvus).
 
-eCarbs aren't limited to fatty / protein heavy meals: they can be also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+iAV neapsiriboja maistu, kuriame yra daug riebalų / baltymų: ši funkcija taip pat gali būti naudojama padėti kitose situacijose, kuriose yra padidėjęs cukraus kiekis kraujyje, pvz. vartojant kitus vaistus, pavyzdžiui, kortikosteroidus.
 
-To enter eCarbs, set a duration in the _Carbs_ dialog on the overview tab, the total carbs and optionally a time shift:
+Norėdami įvesti iAV, pagrindiniame ekrane esančiame dialogo lange mygtuku AV turite nustatyti trukmę, angliavandenių kiekį ir pasirinktinai laiko postūmį:
 
 .. image:: ../images/eCarbs_Dialog.png
-  :alt: Enter carbs
+  :alt: Įveskite angliavandenius
 
-The eCarbs on the overview tab, note the carbs in brackets at the COB field, which shows the carbs in the future:
+Pagrindiniame ekrane atkreipkite dėmesį į angliavandenius skliausteliuose AAO lauke - tai rodomi angliavandeniai, likę ateičiai:
 
 .. image:: ../images/eCarbs_Graph.png
-  :alt: eCarbs in graph
+  :alt: iAV grafike
 
-Carb entries which are in the future are coloured in dark orange on the treatment tab:
+Ateities angliavandeniai Terapijos skirtuke žymimi tamsiai oranžine spalva:
 
 .. image:: ../images/eCarbs_Treatment.png
-  :alt: eCarbs in future in treatment tab
+  :alt: ateities iAV Terapijos skirtuke
 
 
 -----
 
-A way to handle fat and protein with that feature is described here: `https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html <https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html>`_
+Čia aprašytas konkretus riebalų ir baltymų tvarkymo šios funkcijos kontekste pavyzdys: `https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html <https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html>`_
 
 -----
 
-The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the _Enable SMB with COB_ preference being enabled.
+Rekomenduojama naudoti APS įskiepį OpenAPS SMB, įjungti SMB ir suaktyvinti nustatymą _Aktyvuoti SMB aktyviųjų angliavandenių metu.
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the _calculator_ and then use the _carbs_ button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours. You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting _max minutes of basal to limit SMB to_ to make the algorithm more or less aggressive.
-With low carb, high fat/protein meals it may be enough to only use eCarbs without manual boluses (see the blog post above).
+Pavyzdžiui, scenarijus picai: reikėtų duoti pradinį (dalinį) bolusą per boluso skaičiuoklę ir tada naudoti mygtuką AV, kad likusius angliavandenius būtų galima įsisavinti maždaug 4–6 valandas, pradedant po 1 ar 2 valandos. Žinoma, jūs turite patys išbandyti, kurios konkrečios reikšmės jums labiausiai tinka. Taip pat galite atsargiai pakoreguoti "SMB bazinės ribos minutėmis" reikšmę, kad nustatytumėte daugiau ar mažiau agresyvų algoritmą.
+Laikantis mitybos, kuriojee mažai angliavandenių, ir daugiau riebalų bei baltymų, gali pakakti įvesti tik iAV be įprasto boluso maistui (plačiau apie tai aukščiau tinklaraščio įraše).
 
-When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
+Įvedus iAV, Priežiūros portale automatiškai sukuriamas užrašas, kad būtų lengviau patikrinti ir pakoreguoti įrašus.
 
 Ištęstas bolusas
 ==================================================
-As mentioned above extended or multiwave boluses do not really work in a closed loop environment. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-wont-work-in-a-closed-loop-environment>`_ for details
+Kaip jau minėta aukščiau, ištęstas arba vadinamasis daugiabangis bolusas neveikia su uždaru ciklu. `Dėl daugiau informacijos, skaitykite žemiau <../Usage/Extended-Carbs.html#why-extended-boluses-wont-work-in-a-closed-loop-environment>`_
 
-Extended bolus and switch to open loop - Dana and Insight pump only
+Ištęstinis bolusas ir perjungimas į atvirą ciklą - tik Dana ir Insight pompoms
 -----------------------------------------------------------------------------
-Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to. 
+Kai kurie žmonės vis dar prašė parinkties AAPS naudoti ištęstinius bolusus, nes jie norėjo su specialiu maistu elgtis taip, kaip įpratę. 
 
-That's why as of version 2.6 there is an option for an extended bolus for users of Dana and Insight pumps. 
+Štai kodėl 2.6 versijoje yra galimybė nustatyti ištęstą bolusą Danos ir Insight pompose. 
 
-* Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus. 
-* Bolus units, remaining and total time will be shown on homescreen.
-* On Insight pump extended bolus is *not available* if `TBR emulation <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_ is used. 
+* Uždaras ciklas bus automatiškai sustabdytas ir ištęsto boluso metu pereis į atviro ciklo režimą. 
+* Pradiniame ekrane bus rodomas boluso insulino kiekis, likęs laikas ir visas laikas.
+* Ištęstas bolusas *negalimas* su Insight pompa, jei naudojama laikinos valandinės bazės emuliacija <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_. 
 
 .. image:: ../images/ExtendedBolus2_6.png
-  :alt: Extended bolus in AAPS 2.6
+  :alt: Ištęstas bolusas AAPS 2.6
 
-Why extended boluses won't work in a closed loop environment
+Kodėl ištęstas bolusas neveiks uždaro ciklo aplinkoje
 ----------------------------------------------------------------------------------------------------
-1. The loop determines that now 1.55U/h is to be delivered. Whether this is delivered as an extended bolus or TBR does not matter to the algorithm. In fact, some of the pumps use the extended bolus. What should happen then? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
-2. If you had the extended bolus as input, what should happen in the model?
+1. Ciklas nustato, kad turi būti suleista 1.55 vv/h. Algoritmui nesvarbu, ar suleidžiama kaip ištęstas boliusas, ar kaip TBR (laikina valandinė bazė). Tiesą sakant, kai kurios pompos naudoja ištęstus bolusus. Kas tada atsitinka? Tada dauguma pompų tvarkyklių sustabdo ištęstinį bolusą -> jums net nereikėjo jo pradėti.
+2. Jeigu įvedėte ištęstą bolusą, kas turėtų atsitikti modelyje?
 
-   1. Should it be considered neutral together with the BR and looped on it? Then the loop should also be able to reduce the bolus if, for example, you get too low and all the "neutral" insulin is taken away?
-   2. Should the extended bolus simply be added? So the loop should simply be allowed to continue? Even in the worst hypo? I don't think this is so good: A hypo is foreseen but it must not be prevented?
+   1. Ar jis turėtų būti laikomas neutraliu dydžiu kartu su nustatyta valandine baze ir ciklas turėtų remtis juo kaip pagrindu? Tada ciklas taip pat turėtų galimybę sumažinti bolusą, pvz., jei glikemija nukrenta per žemai ir visas "neutralus" insulinas įsisavintas?
+   2. Ar reikia tiesiog pridėti ištęstą bolusą? Taigi turėtų būti leidžiama toliau uždaram ciklui veikti? Net blogiausios hipoglikemijos atveju? Nemanau, kad tai geras dalykas: kai yra numatoma hipoglikemija, tačiau nėra imamasi jokių priemonių jos išvengti?
    
-3. The IOB that the extended bolus builds up materializes after 5 minutes at the next run. Accordingly, the loop would give less basal. So not much changes... except that the possibility of hypo avoidance is taken.
+3. Į aktyvaus insulino kiekį, kurį kaupia ištęstas bolusas, yra atsižvelgiama po 5 minučių atliekant kitą skaičiavimą. Atitinkamai ciklas sumažintų valandinę bazę. Taigi nedaug pokyčių... išskyrus galimybę išvengti hipoglikemijos.

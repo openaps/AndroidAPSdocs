@@ -72,7 +72,7 @@ Component Setup
    :glob:
    
    Config builder <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences2020.rst>
+   Preferences <./Configuration/Preferences.rst>
    
    
 AndroidAPS Usage

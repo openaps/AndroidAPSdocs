@@ -183,7 +183,7 @@ Sélectionnez l'algorithme APS souhaité pour les ajustements de thérapie. Vous
 
 * Basculer entre Boucle Ouverte, Boucle Fermée et Arrêt Glycémie Basse (AGB).
 
-![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
+![Générateur de configuration - mode boucle](../images/ConfigBuilder_LoopLGS.png)
 
 ### Boucle Ouverte
 
@@ -256,37 +256,37 @@ Remarque : Le bouton ne sera pas visible si vous êtes en dehors de la plage de 
 
 #### Cibles Temporaires par défaut
 
-Choose default temp-targets (duration and target). Preset values are:
+Choisissez les cibles temporaires par défaut (durée et cible). Les valeurs prédéfinies sont :
 
-* eating soon: target 72 mg/dl / 4.0 mmol/l, duration 45 min
-* activity: target 140 mg/dl / 7.8 mmol/l, duration 90 min
-* hypo: target 125 mg/dl / 6.9 mmol/l, duration 45 min
+* Repas imminent : cible 72 mg/dl / 4,0 mmol/l, durée 45 min
+* Activité : cible 140 mg/dl / 7,8 mmol/l, durée 90 min
+* Hypo : cible 125 mg/dl / 6,9 mmol/l, durée 45 min
 
 #### Quantité d'insuline par défaut pour Amorcer/Remplir
 
-Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+Choisissez la quantité par défaut des trois boutons de la boite de dialogue Amorcer/Remplir, selon la longueur de votre cathéter.
 
 #### Fourchette de visualisation
 
-Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+Choisissez les valeurs de glycémies hautes et basses du graphique principal sur l'écran d'accueil AndroidAPS et la montre. Il ne s'agit que de la visualisation, pas de la plage cible de votre glycémie. Par exemple : 70 - 180 mg/dl ou 3,9 - 10 mmol/l
 
 #### Raccourcir les titres des onglets
 
-Choose either the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+Choisissez si les titres des onglets dans AndroidAPS sont longs (ex: ACTIONS, PROFIL LOCAL, AUTOMATION) ou courts (ex: ACT, PL, AUTO)
 
 #### Affiche les notes dans les dialogues
 
-Choose if you want to have a notes field when entering treatments or not.
+Choisissez si vous voulez avoir un champ Notes lors de la saisie des traitements ou non.
 
 #### Voyants d'état
 
-Choose if you want to have status lights on overview for canula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+Choisissez si vous voulez avoir des voyants de statut sur l'écran d'accueil avec l'âge de la canule, l'âge du capteur, l'âge de la batterie, le niveau du réservoir ou de la batterie. Lorsque le seuil d'avertissement est atteint, la couleur du voyant d'état passe à jaune. Le seuil critique s'affichera en rouge.
 
 #### Paramètres Avancés
 
-**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
+**Injecter cette partie de Bolus calculée par l’assistant** : Avec l'utilisation des SMB, beaucoup de personnes ne font pas de bolus repas avec 100% de l'insuline nécessaire, mais seulement une partie de celle-ci (par ex. 75 %) et laissent les SMB avec les RNS (repas non signalés) faire le reste. Avec ce paramètre, vous pouvez choisir une valeur par défaut pour le pourcentage que l'assistant bolus doit prendre. Si ce paramètre est de 75 % et que vous avez besoin d'un de bolus 10U, l'assistant de bolus proposera un bolus repas de seulement 7,5 unités.
 
-**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. En gros, l'insuline correspondant au débit de basal des deux heures suivantes est ajoutée au bolus et deux heures de zéro-temp sont activées. **Les fonctions de boucle AAPS seront désactivées - c'est donc à utiliser avec prudence ! Si vous utilisez OpenAPS SMB, les fonctions de la boucle seront désactivées selon le paramètre ["Max. minutes de basal pour limiter le SMB"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), si vous n'utilisez pas les SMB les fonctions de la boucle seront désactivées pendant deux heures.** Plus de détails sur le super bolus peuvent être trouvés [ici](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Activer la fonction super bolus dans l'Assistant** (c'est différent des *super micro bolus* !) : à utiliser avec prudence et ne l'activez pas tans que vous n'avez pas appris ce qu'il fait vraiment. En gros, l'insuline correspondant au débit de basal des deux heures suivantes est ajoutée au bolus et deux heures de zéro-temp sont activées. **Les fonctions de boucle AAPS seront désactivées - c'est donc à utiliser avec prudence ! Si vous utilisez OpenAPS SMB, les fonctions de la boucle seront désactivées selon le paramètre ["Max. minutes de basal pour limiter le SMB"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), si vous n'utilisez pas les SMB les fonctions de la boucle seront désactivées pendant deux heures.** Plus de détails sur le super bolus peuvent être trouvés [ici](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Actions
 
@@ -314,7 +314,7 @@ Certains médecins utilisent - en particulier pour les nouveaux utilisateurs de 
 
 ### Automatisation
 
-User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst)
+Tâches d'automatisation définies par l'utilisateur ('si-alors-sinon'). Veuillez [lire ici](../Usage/Automation.rst)
 
 ### Communicateur SMS
 
@@ -346,7 +346,7 @@ Affiche les informations de la boucle sur votre cadran xDrip+ (si vous n'utilise
 ### NSClient
 
 * Configurer la synchronisation de vos données AndroidAPS avec Nightscout.
-* Settings in [preferences](../Configuration/Preferences#nsclient) can be opened by clicking the cog wheel.
+* Les paramètres dans les [préferences](../Configuration/Preferences#nsclient) peuvent être ouverts en cliquant sur la roue crantée.
 
 ### Maintenance
 
