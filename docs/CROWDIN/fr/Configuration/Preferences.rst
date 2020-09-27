@@ -285,11 +285,11 @@ Paramètres OpenAPS SMB
 -----------------------------------------------------------
 * Contrairement à AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ n'utilise pas de les débits de basal temporaires pour contrôler la glycémie, mais principalement les petits super micro-bolus.
 * Vous devez avoir démarré `l'objectif 10 <../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ pour utiliser les SMB.
-* The first three settings are explained `above <./Configuration/Preferences2020.html#max-u-h-a-temp-basal-can-be-set-to>`_.
-* Details on the different enable options are described in `OpenAPS feature section <../Usage/Open-APS-features.html#enable-smb>`_.
-* *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target being set). You should not change this setting unless you know exactly about consequences. 
-* If 'Sensitivity raises target' or 'Resistance lowers target' is enabled `Autosens <../Usage/Open-APS-features.html#autosens>`_ will modify your glucose target according to your blood glucose deviations.
-* If target is modified it will be displayed with a green background on your home screen.
+* Les trois premiers paramètres sont expliqués `ci-dessus <./Configuration/Preferences20.html#debit-max-en-u-h-pour-une-temp-basal>`_.
+* Les détails sur les différentes options d'activation sont décrits dans la section `Fonctionnalités OpenAPS <../Usage/Open-APS-features.html#activer-smb>`_.
+* *La fréquence à laquelle les SMB seront donnés en min* est une restriction pour que le SMB ne soit distribué que toutes les 4 minutes par défaut. Cette valeur empêche le système d'émettre trop souvent des SMB (par exemple dans le cas où une cible temporaire a été définie). Vous ne devriez pas modifier ce paramètre sauf si vous en connaissez exactement les conséquences. 
+* Si 'Sensibilité augmente la cible' ou 'Résistance diminue la cible' est activée, `Autosens <../Usage/Open-APS-features.html#autosens>`_ modifiera votre cible glycémique en fonction de vos écarts de glycémie.
+* Si la cible est modifiée, elle sera affichée avec un fond vert sur votre écran d'accueil.
 
   .. image:: ../images/Home2020_DynamicTargetAdjustment.png
     :alt: Cible modifiée par Autosens
@@ -342,13 +342,13 @@ Paramètres avancés - Ratio autosens
 
 Paramètres de la pompe
 ===========================================================
-The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`_.  Appairez et réglez votre pompe selon les instructions relatives à la pompe :
+Les options ici varient selon le pilote de pompe que vous avez sélectionné dans le `Générateur de configuration <../Configuration/Config-Builder.html#pompe>`_.  Appairez et réglez votre pompe selon les instructions relatives à la pompe :
 
 * `Pompe à Insuline DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 * `Pompe à Insuline DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 * `Pompe Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
 * `Pompe Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
-* `Medtronic Pump <../Configuration/MedtronicPump.html>`_
+* `Pompe Medtronic <../Configuration/MedtronicPump.html>`_
 
 Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sélectionné Pompe virtuelle Pump dans le Générateur de configuration.
 
@@ -358,12 +358,12 @@ NSClient
   .. image:: ../images/Pref2020_NSClient.png
     :alt: NSClient
 
-* Set your *Nightscout URL* (i.e. https://yourwebsitename.herokuapp.com) and the *API secret* (a 12 character password recorded in your Heroku variables).
-* This enables data to be read and written between both the Nightscout website and AndroidAPS.  
+* Définissez votre *URL Nightscout* (par ex. https://yourwebsitename.herokuapp.com) et l'*API secret* (un mot de passe de 12 caractères enregistré dans vos variables Heroku).
+* Cela permet de lire et d'écrire des données entre le site Nightscout et AndroidAPS.  
 * Vérifiez deux fois les fautes de frappe ici si vous êtes coincé dans l'objectif 1.
-* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-* *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS). 
-* If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ are uploaded to your Nightscout site.
+* **Vérifiez bien que l'URL est SANS /api/v1/ à la fin.**
+* *Log app start to NS* enregistre une note dans Careportal Nightscout à chaque démarrage de l'application.  L'application ne devrait pas avoir besoin de démarrer plus d'une fois par jour; si c'est plus souvent, cela suggère un problème (par ex. l'optimisation de la batterie n'est pas désactivée pour AAPS). 
+* Si activé, les modifications du `profil local <../Configuration/Config-Builder.html#profil-local-recommande>`_ sont envoyées sur votre site Nightscout.
 
 Paramètres de connexion
 -----------------------------------------------------------
@@ -371,17 +371,17 @@ Paramètres de connexion
   .. image:: ../images/ConfBuild_ConnectionSettings.png
     :alt: Paramètres de connexion NSClient  
   
-* Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-* If you want to use only a specific WiFi network you can enter its WiFi SSID. 
-* Multiple SSIDs can be separated by semicolon. 
+* Restreignez le téléchargement de Nightscout au Wi-Fi seulement ou même à certains SSID Wi-Fi.
+* Si vous souhaitez utiliser uniquement un réseau WiFi spécifique, vous pouvez entrer son SSID. 
+* Plusieurs SSID peuvent être séparés par un point-virgule. 
 * Pour supprimer tous les SSID, entrez un espace dans la zone.
 
 Options d'alarme
 -----------------------------------------------------------
-* Alarm options allows you to select which default Nightscout alarms to use through the app.  
-* For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
-* They will only work whilst you have a connection to Nightscout and are intended for parent/carers. 
-* If you have the CGM source on your phone (i.e. xDrip+ or Dexcom patched app) then use those alarms instead.
+* Les options d'alarme vous permettent de sélectionner les alarmes Nightscout par défaut à utiliser via l'application.  
+* Pour que les alarmes sonnent, vous devez définir les valeurs de seuil des alarmes Urgent High, High, Low et Urgent Low dans vos `variables Heroku <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
+* Elles ne fonctionneront que si vous avez une connexion avec Nightscout et sont destinées aux parents/aidants. 
+* Si vous avez la source MGC sur votre téléphone (par ex. xDrip+ ou l'application Dexcom patchée), utilisez ces alarmes à la place.
 
 Paramètres Avancés
 -----------------------------------------------------------
@@ -389,20 +389,20 @@ Paramètres Avancés
   .. image:: ../images/Pref2020_NSClientAdv.png
     :alt: Paramètres avancés NSClient
 
-* Most options in advanced settings are self-explanatory.
-* *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+. 
+* La plupart des options dans les paramètres avancés sont explicites.
+* *Activer les transmissions locales* partagera vos données vers d'autres applications sur le téléphone, telles que xDrip+. 
 
-  * Dexcom patched app does not broadcast directly to xDrip+. 
-  * You need to `go through AAPS <../Configuration/Config-Builder.html#bg-source>`_ and enable local broadcast in AAPS to use xDrip+ alarms.
+  * L'application Dexcom patchée ne diffuse pas directement vers xDrip+. 
+  * Vous devez `passer par AAPS <../Configuration/Config-Builder.html#source-gly>`_ et activer la diffusion locale dans AAPS pour utiliser les alarmes xDrip+.
   
-* *Always use basal absolute values* must be activated if you want to use Autotune properly. See `OpenAPS documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ for more details on Autotune.
+* *Utiliser toujours les valeurs absolues du basal* doit être activé si vous souhaitez utiliser Autotune correctement. Voir la `documentation OpenAPS <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ pour plus de détails sur Autotune.
 * **Do not activate this when using `Insight pump <../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps>`_!**  It would lead to false TBR settings in Insight pump.
 
 Communicateur SMS
 ===========================================================
-* Options will only be displayed if SMS communicator is selected in `Config Builder <../Configuration/Config-Builder.html#sms-communicator>`_.
-* This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.  
-* Further information is described in `SMS Commands <../Children/SMS-Commands.html>`_.
+* Les options ne seront affichées que si le Communicateur SMS est sélectionné dans le `Générateur de configuration <../Configuration/Config-Builder.html#communicateur-sms>`_.
+* Ce paramètre permet de contrôler à distance de l'application en envoyant des instructions au téléphone du patient que l'application appliquera comme Suspendre la boucle ou un bolus.  
+* De plus amples informations sont décrites dans `Commandes SMS <../Children/SMS-Commands.html>`_.
 * Additional safety can be obtained through use of an authenticator app or additional PIN at token end.
 
 Automatisation
