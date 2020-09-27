@@ -29,7 +29,7 @@ Authorized phone numbers
   * Make that single number work by sending and confirming a SMS command.
   * Enter additional number(s) separated by semicolon, no space.
   
-    .. image:: ../images/SMSCommandsSetupSpace.png
+    .. image:: ../images/SMSCommandsSetupSpace2.png
       :alt: SMS Commands Setup multiple numbers
 
 Minutes between bolus commands
@@ -68,7 +68,7 @@ Authenticator setup
 
 Use SMS commands
 ==================================================
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands </Children/SMS-Commands.html#commands>`_ below in **CAPITAL LETTERS**. 
+* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands </Children/SMS-Commands.html#commands>`_ below. 
 * The AAPS phone will respond to confirm success of command or status requested. 
 * Confirm command by sending the code where necessary. Example:
 
@@ -80,7 +80,7 @@ Use SMS commands
 
 Commands
 ==================================================
-Commands must be send in English and in **CAPITAL LETTERS**, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Commands must be send in English, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
 
 .. image:: ../images/SMSCommands.png
   :alt: SMS Commands Example
