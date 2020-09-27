@@ -237,18 +237,18 @@ Selon vos paramètres dans le `Générateur de configuration <../Configuration/C
 * `Assistance Améliorée Repas (OpenAPS AMA) <../Usage/Open-APS-features.html#assistance-amelioree-repas-aar>`_ - état de l'algorithme en 2017
 * `Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - algorithme le plus récent pour les utilisateurs avancés
 
-OpenAPS AMA settings
+Paramètres OpenAPS AMA
 -----------------------------------------------------------
-* Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. 
-* More details about the settings and Autosens can be found in the `OpenAPS docs <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`_.
+* Permet au système de reagir plus rapidement après un bolus de repas SI vous entrez les Glucides de manière fiable. 
+* Plus de détail sur les paramètres et l'Autosens peuvent être trouvés dans la `documentation OpenAPS <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`_.
 
 Débit max en U/h pour une Basal Temp.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. 
-* The value is measured in units per hour (U/h). 
-* Il est conseillé de definir cette valuer de facon raisonnable et sensée. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. 
-* For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
-* See also `detailed feature description <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>`_.
+* Existe comme une limite de sécurité pour empêcher AAPS d'etre capable d'administrer un dosage de Basal dangereusement élevé. 
+* La valeur est definie en Unités d'insuline par heure (U/h). 
+* Il est conseillé de definir cette valuer de facon raisonnable et sensée. Une bonne recommandation est de prendre le **débit de basal le plus élevé** de votre profil et de le **multiplier par 4**. 
+* Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, vous pourriez le multiplier par 4 pour obtenir la valeur de 2 U/h.
+* Voir également la `description détaillée de la fonctionnalité <../Usage/Open-APS-features.html#max-u-h-pour-le-debit-temp-basal-openaps-max-basal>`_.
 
 L'IA basal maximum que l'OpenAPS pourra délivrer [U]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -284,7 +284,7 @@ Paramètres Avancés
 Paramètres OpenAPS SMB
 -----------------------------------------------------------
 * In contrast to AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
-* You must have started `objective 10 <../Usage/Objectives.html#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ to use SMB.
+* Vous devez avoir démarré `l'objectif 10 <../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ pour utiliser les SMB.
 * The first three settings are explained `above <./Configuration/Preferences2020.html#max-u-h-a-temp-basal-can-be-set-to>`_.
 * Details on the different enable options are described in `OpenAPS feature section <../Usage/Open-APS-features.html#enable-smb>`_.
 * *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target being set). You should not change this setting unless you know exactly about consequences. 
@@ -292,11 +292,11 @@ Paramètres OpenAPS SMB
 * If target is modified it will be displayed with a green background on your home screen.
 
   .. image:: ../images/Home2020_DynamicTargetAdjustment.png
-    :alt: Target modified by autosens
+    :alt: Cible modifiée par Autosens
   
 Notification glucides requis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* This feature is only available if SMB algorithm is selected.
+* Cette fonctionnalité n'est disponible que si l'algorithme SMB est sélectionné.
 * Eating of additional carbs will be suggested when the reference design detects that it requires carbs.
 * In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
 * Additionally the required carbs will be displayed in the COB section on your home screen.
@@ -324,8 +324,8 @@ min_5m_carbimpact
 * At times when carb absorption can’t be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. De base, c'est une sécurité intégrée.
 * To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. 
 * Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc. 
-* The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`_.
-* Standard value for AMA is 5, for SMB it's 8.
+* The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. Pour plus de détails, voir la `documentation OpenAPS <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`_.
+* La valeur standard pour AMA est de 5, pour SMB c'est 8.
 * The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
 
   .. image:: ../images/Pref2020_min_5m_carbimpact.png
@@ -335,20 +335,20 @@ Durée max d’absorption d'un repas
 -----------------------------------------------------------
 * Si vous mangez souvent des repas riches en matières grasses ou en protéines, vous devrez augmenter votre temps d'absorption des repas.
 
-Advanced settings - autosens ratio
+Paramètres avancés - Ratio autosens
 -----------------------------------------------------------
-* Define min. and max. `autosens <../Usage/Open-APS-features.html#autosens>`_ ratio.
-* Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+* Définit les ratios min. et max. `Autosens <../Usage/Open-APS-features.html#autosens>`_.
+* Normalement les valeurs standards (max. 1,2 et min. 0,7) ne devrait pas être modifiées.
 
 Paramètres de la pompe
 ===========================================================
 The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`_.  Appairez et réglez votre pompe selon les instructions relatives à la pompe :
 
-* `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ 
-* `DanaRS Insulin Pump <../Configuration/DanaRS-Insulin-Pump.html>`_
-* `Accu Chek Combo Pump <../Configuration/Accu-Chek-Combo-Pump.html>`_
-* `Accu Chek Insight Pump <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
-* `Medtronic Pump <..//Configuration/MedtronicPump.html>`_
+* `Pompe à Insuline DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
+* `Pompe à Insuline DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `Pompe Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
+* `Pompe Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+* `Pompe Medtronic <../Configuration/MedtronicPump.html>`_
 
 Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sélectionné Pompe virtuelle Pump dans le Générateur de configuration.
 
@@ -387,7 +387,7 @@ Paramètres Avancés
 -----------------------------------------------------------
 
   .. image:: ../images/Pref2020_NSClientAdv.png
-    :alt: NS Client advanced settings
+    :alt: Paramètres avancés NSClient
 
 * Most options in advanced settings are self-explanatory.
 * *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+. 
@@ -427,7 +427,7 @@ Choix de données
   .. image:: ../images/Pref2020_DataChoice.png
     :alt: Choix de données
 
-* You can help develop AAPS further by sending crash reports to the developers.
+* Vous pouvez aider davantage au développement d'AAPS en envoyant des rapports de plantage aux développeurs.
 
 Paramètres de maintenance
 ===========================================================
@@ -435,5 +435,5 @@ Paramètres de maintenance
   .. image:: ../images/Pref2020_Maintenance.png
     :alt: Paramètres de maintenance
 
-* Standard recipient of logs is logs@androidaps.org.
-* If you select *Encrypt exported settings* these are encrypted with your `master password <../Configuration/Preferences.html#master-password>`_. In this case master password has to be entered each time settings are exported or imported.
+* Le destinataire standard des journaux est logs@androidaps.org.
+* Si vous sélectionnez *Chiffrer les paramètres exportés* ces paramètres sont chiffrés avec votre mot de passe principal <../Configuration/Preferences.html#mot-de-passe-principal>`_. Dans ce cas, le mot de passe principal doit être entré à chaque fois que les paramètres sont exportés ou importés.
