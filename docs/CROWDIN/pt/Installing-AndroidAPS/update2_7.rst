@@ -42,10 +42,7 @@ Exportar definições
 * Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
 * If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version. 
 * All settings as well as finished objectives will remain as they were in the previous version.
-* In case you have lost your keystore build do the following to keep your settings & objectives:
-
-   * Build version 2.6.4(not 2.7!!) with new keystore as described in the `troubleshooting section <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_.
-   * After you finished all these steps build version 2.7 with this new keystore and your settings and objectives will be as you had them in previous version.
+* In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the `troubleshooting section <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_.
 
 Autosens (Hint - no action necessary)
 -----------------------------------------------------------
