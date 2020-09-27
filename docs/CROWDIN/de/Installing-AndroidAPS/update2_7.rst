@@ -20,8 +20,8 @@ Prüfung abschließen
 -----------------------------------------------------------
 * AAPS 2.7 hat ein neues Objective 11 für `Automatisierung <../Usage/Automation.html>`_ bekommen.
 * Du musst die Prüfung erfolgreich beenden (`Objectives 3 und 4 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_), um `Objective 11 <../Usage/Objectives.html#objective-11-automation>`_ starten zu können.
-* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Automation.html>`_. 
-* This will not effect other objectives you have already finished. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
+* Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Automation.html> starten kannst.`_. 
+* Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 Master-Passwort festlegen
 -----------------------------------------------------------
@@ -40,9 +40,9 @@ Exportiere die Einstellungen
 * Du musst daher nach dem Update auf Version 2.7 `Deine Einstellungen exportieren <../Usage/ExportImportSettings.html>`_.
 * Einstellungen aus früheren Versionen **können nicht** mit AAPS 2.7 und höher verwendet werden.
 * Speichere Deine exportierten Einstellungen nicht nur auf Deinem Smartphone, sondern auch an mindestens einem sicheren Ort (PC, Cloud-Speicher ...).
-* If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version. 
-* All settings as well as finished objectives will remain as they were in the previous version.
-* In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the `troubleshooting section <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_.
+* Wenn Du die AAPS 2.7 APK mit dem gleichen keystore wie in früheren Versionen erstellst, kannst Du die neue Version installieren, ohne die vorherige Version zu deinstallieren. 
+* Alle Einstellungen sowie abgeschlossenen Objectives (Ziele) bleiben so, wie sie in der Vorgängerversion waren.
+* Falls Du Deinen keystore verloren hast, erstelle die Version 2.7 mit einem neuen keystore und importiere Deine Einstellungen von der Vorgängerversion wie auf der Seite `Problembehebung <../Installing-AndroidAPS/troubleshooting_androidstudio.html#verlorener-keystore>`_ beschrieben.
 
 Autosens (Hinweis - keine Maßnahmen erforderlich)
 -----------------------------------------------------------
