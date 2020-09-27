@@ -42,7 +42,7 @@ Exporter les paramètres
 * Assurez-vous de stocker vos paramètres exportés non seulement sur votre téléphone, mais également dans au moins un autre endroit sûr (votre pc, stockage cloud...).
 * Si vous construisez l'apk AAPS 2.7 avec le même fichier de clés que dans les versions précédentes, vous pouvez installer la nouvelle version sans supprimer la version précédente. 
 * Tous les paramètres ainsi que les objectifs terminés resteront tels qu'ils étaient dans la version précédente.
-* In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the `troubleshooting section <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_.
+* Si vous avez perdu votre fichier de clés, construisez la version 2.7 avec un nouveau fichier de clés et importez les paramètres de la version précédente, comme c'est décrit dans la section `dépannage <. /Installing-AndroidAPS/troubleshooting_androidstudio.html#fichier-de-cles-perdu>`_.
 
 Autosens (un indice - aucune action nécessaire)
 -----------------------------------------------------------
