@@ -242,7 +242,7 @@ Paramètres OpenAPS AMA
 * Permet au système de reagir plus rapidement après un bolus de repas SI vous entrez les Glucides de manière fiable. 
 * Plus de détail sur les paramètres et l'Autosens peuvent être trouvés dans la `documentation OpenAPS <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`_.
 
-Débit max en U/h pour une Basal Temp.
+Débit max en U/h pour une Temp Basal
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Existe comme une limite de sécurité pour empêcher AAPS d'etre capable d'administrer un dosage de Basal dangereusement élevé. 
 * La valeur est definie en Unités d'insuline par heure (U/h). 
