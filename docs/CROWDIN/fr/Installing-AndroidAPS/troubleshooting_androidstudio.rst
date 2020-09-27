@@ -1,6 +1,6 @@
 Dépannage d'Android Studio
 **************************************************
-Certificats perdus
+Fichier de clés perdu
 ==================================================
 Si vous utilisez le même fichier de clés lors de la mise à jour d'AndroidAPS, vous n'avez pas besoin de désinstaller la version précédente sur votre smartphone. C'est pourquoi il est recommandé de stocker le fichier de clés dans un dossier de sauvegarde sûr.
 

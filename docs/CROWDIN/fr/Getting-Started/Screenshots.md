@@ -39,8 +39,8 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 * AAPS peut ajuster dynamiquement votre cible en fonction de la sensibilité si vous utilisez l'algorithme SMB.
 * Activez soit une, soit les deux [options suivantes](../Configuration/Preferences#parametres-openaps-smb) 
-   * "sensibilité augmente la cible" et/ou 
-   * "la résistance diminue la cible" 
+   * "Sensibilité augmente la cible" et/ou 
+   * "Résistance diminue la cible" 
 * Si AAPS détecte une résistance ou une sensibilité, la cible change en fonction de ce qui est défini dans le profil. 
 * Lorsqu'il modifie la cible glycémique, l'arrière-plan passe en vert.
 
@@ -85,7 +85,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 * Grain de blé : [glucides actifs (GA)](../Usage/COB-calculation.rst) - glucides précédemment mangés et non encore absorbés -> l'icône clignotte (orange/rouge) si des glucides sont requis
 
-* Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%) 
+* Ligne violette : débits de basal - les changements d'icône reflétant les changements des débits de basal temporaires (plat à 100%) 
    * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
 * Flèches haut & bas : indique le statut [autosens](../Usage/Open-APS-features#autosens) (activé ou désactivé) et la valeur est affichée sous l'icône
 

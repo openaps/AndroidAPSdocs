@@ -21,12 +21,12 @@ Be kita ko, eksportuojami šie parametrai:
 * `Automatizavimo įvykiai <../Usage/Automation.html>`_
 * `Konfigūratoriaus <../Configuration/Config-Builder.html>`_ parametrai
 * 'Vietinio profilio <../Configuration/Config-Builder.html#local-profile-recommended>`_ parametrai
-* Tikslų <../Usage/Objectives.html>`_ statusas, įskaitant egzaminų rezultatus <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
-* `Nustatymai <../Configuration/Preferences.html>`_, įskaitant 'NS Kliento nustatymus <../Configuration/Preferences.html#ns-client>`_
+* `Tikslų <../Usage/Objectives.html>`_ statusas, įskaitant egzaminų rezultatus <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
+* `Nustatymai <../Configuration/Preferences.html>`_, įskaitant `NS Kliento nustatymus <../Configuration/Preferences.html#ns-client>`_
 
-Encrypted backup format
+Šifruotas kopijos formatas
 ==================================================
-Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`_ .
+Nustatymų atsarginės kopijos užšifruotos pagrindiniu slaptažodžiu, kuris gali būti nustatytas `Nustatymai <../Configuration/Preferences.html#master-password>`_ .
 
 
 Eksportuoti nustatymus
@@ -36,15 +36,15 @@ Eksportuoti nustatymus
 * Eksportuoti nustatymus
 
 .. image:: ../images/AAPS_ExportSettings1.png
-  :alt: AndroidAPS export settings 1
+  :alt: AndroidAPS eksportavimo nustatymai 1
 
-* Date and time of export will be added to the file name automatically and displayed together with the path.
-* Click 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
-* Successful export will be prompted at bottom of the screen.
+* Eksporto data ir laikas bus pridėta prie failo pavadinimo automatiškai ir rodomas kartu su keliu.
+* Spustelėkite "OK'.
+* Įveskite `pagrindinį slaptažodį <../Configuration/Preferences.html#master-password>`_ ir spauskite "OK".
+* Ekrano apačioje bus pranešta apie sėkmingą eksportavimą.
 
 .. image:: ../images/AAPS_ExportSettings2.png
-  :alt: AndroidAPS export settings 2
+  :alt: AndroidAPS eksportavimo nustatymai 2
   
 Importuokite nustatymus
 ==================================================
@@ -53,28 +53,28 @@ Importuokite nustatymus
 * Importuokite nustatymus
 
 .. image:: ../images/AAPS_ImportSettings1.png
-  :alt: AndroidAPS import settings 1
+  :alt: AndroidAPS importavimo nustatymai 1
 
-* All files from folder AAPS/preferences/ on your phone will be shown in the list.
-* Select file.
-* Confirm import by clicking 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+* Visi failai iš aplanko AAPS/preferencece/ jūsų telefone bus rodomi sąraše.
+* Pasirinkite failą.
+* Patvirtinkite importavimą paspausdami 'OK'.
+* Įveskite `pagrindinį slaptažodį <../Configuration/Preferences.html#master-password>`_ ir spauskite "OK".
 
 .. image:: ../images/AAPS_ImportSettings2.png
-  :alt: AndroidAPS import settings 2
+  :alt: AndroidAPS importavimo nustatymai 2
 
-* Details on the preference file will be shown.
-* Last option to cancel import.
-* Click 'Import'.
-* Confirm message by clicking 'OK'.
-* AAPS will be restarted in order to activate imported preferences.
+* Bus parodyta išsami informacija apie parametrų failą.
+* Paskutinė galimybė atšaukti importą.
+* Spustelėkite "Importuoti".
+* Patvirtinkite žinutę paspausdami 'OK'.
+* AAPS bus perkrauta iš naujo, kad būtų aktyvuoti importuoti parametrai.
 
 * **Pastaba Dana RS vartotojams:**
 
   * Kadangi pompos susiejimo nustatymai persikelia į naują telefoną kartu su kitais, Jūsų naujas telefonas jau "pažįsta" pompą, todėl nepradės BT paieškos. Rankiniu būdu Bluetooth ryšiu suporuokite išmanųjį telefoną ir pompą.
   
-Transfer settings file
+Nustatymų failo perkėlimas
 ==================================================
-* Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
-* Manuals can be found on the web, i.e. `Android help pages <https://support.google.com/android/answer/9064445?hl=en>`_.
-* If you experience problems with the transferred file try another way to transfer file.
+* Geriausias būdas perkelti nustatymų failą į naują telefoną yra per USB kabelį arba debesijos paslaugą (pvz., Google Drive).
+* Instrukcijas galima rasti internete, pvz., `Android pagalbos puslapiai <https://support.google.com/android/answer/9064445?hl=en>`_.
+* Jei patiriate problemų su perkeliamu failu, pabandykite kitą būdą perkelti failą.

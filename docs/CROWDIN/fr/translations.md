@@ -26,7 +26,7 @@
 
 Lorsqu'un correcteur approuve une traduction, elle sera ajoutée à la prochaine version d'AndroidAPS. Au départ, il serait bon de vérifier les traductions existantes qui ne sont pas encore approuvées et de vérifier les erreurs ou de les approuver si elles sont correctes.
 
-## Traduire les pages wiki
+## Traduire les pages de documentation
 
 * Cliquez sur le nom de la page que vous voulez traduire
     

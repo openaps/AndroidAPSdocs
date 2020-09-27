@@ -10,7 +10,7 @@ Actuellement, nous avons 3 modèles de détection de sensibilité:
 
 ### Sensibilité AAPS 
 
-Sensitivity is calculated the same way like Oref1 but you can specify time to the past. L'absorption minimale des glucides est calculée à partir du temps d'absorption maximale des glucides renseigné dans les préférences
+La sensibilité est calculée de la même façon que Oref1, mais vous pouvez spécifier la durée prise en compte. L'absorption minimale des glucides est calculée à partir du temps d'absorption maximale des glucides renseigné dans les préférences
 
 ### Sensibilité avec moyenne pondérée
 
@@ -22,4 +22,4 @@ La sensibilité est calculée à partir des données des 8 dernières heures ou 
 
 ## Glucides simultanés
 
-There is significant difference while using AAPS, WeightedAverage vs Oref1. Les plugins Oref ne s'attendent qu'à un seul repas aborbé à la fois. Cela signifie que le 2e repas commence à être absorbé qu'après la décomposition complète du 1er repas. Avec la sensibilité AAPS et moyenne pondérée, la décomposition commence immédiatement après avoir entré les glucides. S'il y a plus d'un repas en cours d'absoption, la décomposition minimale des glucides s'ajuste en fonction de la taille du repas et du temps d'absorption maximum. En conséquence, l'absorption minimale sera plus élevée en comparaison avec les plugins Oref.
+Il y a une différence significative quand on utilise AAPS et moyenne pondérée versus Oref1. Les plugins Oref ne s'attendent qu'à un seul repas aborbé à la fois. Cela signifie que le 2e repas commence à être absorbé qu'après la décomposition complète du 1er repas. Avec la sensibilité AAPS et moyenne pondérée, la décomposition commence immédiatement après avoir entré les glucides. S'il y a plus d'un repas en cours d'absoption, la décomposition minimale des glucides s'ajuste en fonction de la taille du repas et du temps d'absorption maximum. En conséquence, l'absorption minimale sera plus élevée en comparaison avec les plugins Oref.

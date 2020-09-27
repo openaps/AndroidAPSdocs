@@ -72,7 +72,7 @@ AndroidAPS einrichten
     
    
    Konfigurations-Generator <./Configuration/Config-Builder.md>
-   Einstellungen im Drei-Punkte-Menü <./Configuration/Preferences2020.rst>
+   Preferences <./Configuration/Preferences.rst>
    
    
 AndroidAPS Nutzung

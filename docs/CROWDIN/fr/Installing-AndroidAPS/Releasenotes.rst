@@ -19,11 +19,13 @@ Date de sortie : 24-09-2020
 
 Le dossier github à été déplacé vers https://github.com/nightscout/AndroidAPS. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un `nouveau clone <../Installing-AndroidAPS/Building-APK.html>`_.
 
+Comme déjà `annoncé il y a quelque temps <../Module/module.html#telephone>`_, **Android 7 est un minimum requis** pour AndroidAPS 2.7.
+
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 **Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 2.7 comme c'est décrit ici** `ici <../Installing-AndroidAPS/update2_7.html>`_.
 
-Vous devez au moins démarrer l'`objectif 11 <../Usage/Objectives.html#objective-11-automation>`_ afin de continuer à utiliser la `fonction d'automatisation <../Usage/Automation.html>`_ (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 11 n'est pas possible).
+Vous devez au moins démarrer l'`objectif 11 <../Usage/Objectives.html#objective-11-automation>`_ afin de continuer à utiliser la `fonction d'automatisation <../Usage/Automation.html>`_ (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 11 n'est pas possible). Si par exemple vous n'avez pas encore terminé l'examen dans l'`objective 3 <../Usage/Objectives. tml#objectif-3-prouver-ses-connaissances>`_ , vous devrez terminer l'examen avant de pouvoir commencer l'`objective 11 <../Usage/Objectives.html#objectif-11-automatisation>`_. Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
 Nouvelles fonctionnalités majeures
 ----------------------
@@ -52,7 +54,7 @@ Nouvelles fonctionnalités majeures
 * suppression de la sensibilité Oref0 @Tornado-Tim
 * `protection biométrique ou par mot de passe <../Configuration/Preferences.html#protection>`_ pour les paramètres, bolus @MilosKozak
 * `nouveau déclencheur d'automatisation <../Usage/Automation.html>`_ @PoweRGbg
-* `Téléversement Open Humans <../Configuration/OpenHumans.html>`_
+* `Téléversement Open Humans <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
 * Nouvelle documentation @Achim
 
 Version 2.6.1.4

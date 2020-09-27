@@ -72,7 +72,7 @@ Konfiguracja
    :glob:
    
    Narzędzie do konfiguracji <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences2020.rst>
+   Preferences <./Configuration/Preferences.rst>
    
    
 Użytkowanie AndroidAPS

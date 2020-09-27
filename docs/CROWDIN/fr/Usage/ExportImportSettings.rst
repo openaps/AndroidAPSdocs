@@ -24,9 +24,9 @@ Entre autres, les informations suivantes font partie des paramètres exportés :
 * Résultats des `Objectifs <../Usage/Objectives.html>`_ y compris les résultats de l'objectif 3 `Prouver ses connaissances <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
 * `Préférences <../Configuration/Preferences.html>`_ y compris les paramètres `NSClient <../Configuration/Preferences.html#ns-client>`_
 
-Encrypted backup format
+Format de sauvegarde chiffré
 ==================================================
-Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`_ .
+La sauvegarde des paramètres est chiffrée par un mot de passe principal qui peut être défini dans `Préférences <../Configuration/Preferences.html#mot-de-passe-principal>`_ .
 
 
 Exporter les paramètres
@@ -36,15 +36,15 @@ Exporter les paramètres
 * Exporter les paramètres
 
 .. image:: ../images/AAPS_ExportSettings1.png
-  :alt: AndroidAPS export settings 1
+  :alt: AndroidAPS exporter les paramètres 1
 
-* Date and time of export will be added to the file name automatically and displayed together with the path.
-* Click 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
-* Successful export will be prompted at bottom of the screen.
+* La date et l'heure d'exportation seront automatiquement ajoutées au nom du fichier et affichées avec le chemin.
+* Cliquez sur 'OK'.
+* Entrez le `mot de passe principal <../Configuration/Preferences.html#mot-de-passe-principal>`_ et cliquez 'OK'.
+* L'exportation réussie sera affichée en bas de l'écran.
 
 .. image:: ../images/AAPS_ExportSettings2.png
-  :alt: AndroidAPS export settings 2
+  :alt: AndroidAPS exporter les paramètres 2
   
 Importez les paramètres
 ==================================================
@@ -53,28 +53,28 @@ Importez les paramètres
 * Importez les paramètres
 
 .. image:: ../images/AAPS_ImportSettings1.png
-  :alt: AndroidAPS import settings 1
+  :alt: AndroidAPS importer les paramètres 1
 
-* All files from folder AAPS/preferences/ on your phone will be shown in the list.
-* Select file.
-* Confirm import by clicking 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+* Tous les fichiers présents dans le dossier AAPS/préférences/ de votre téléphone seront affichés dans la liste.
+* Sélectionnez un fichier.
+* Confirmez l'importation en cliquant sur 'OK'.
+* Entrez le `mot de passe principal <../Configuration/Preferences.html#mot-de-passe-principal>`_ et cliquez 'OK'.
 
 .. image:: ../images/AAPS_ImportSettings2.png
-  :alt: AndroidAPS import settings 2
+  :alt: AndroidAPS importer les paramètres 2
 
-* Details on the preference file will be shown.
-* Last option to cancel import.
-* Click 'Import'.
-* Confirm message by clicking 'OK'.
-* AAPS will be restarted in order to activate imported preferences.
+* Les détails du fichier de préférences seront affichés.
+* C'est la dernière possibilité pour annuler l'importation.
+* Cliquez sur 'Importer'.
+* Confirmez le message en cliquant sur 'OK'.
+* AAPS sera redémarré afin d'activer les préférences importées.
 
 * **Remarque pour les utilisateurs de Dana RS :**
 
   * Comme les paramètres de connexion de la pompe sont également importés dans AAPS sur votre nouveau téléphone, il va déjà "connaître" la pompe et donc ne démarrera pas une analyse bluetooth. Veuillez associer manuellement le nouveau téléphone et la pompe.
   
-Transfer settings file
+Transférer les paramètres
 ==================================================
-* Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
-* Manuals can be found on the web, i.e. `Android help pages <https://support.google.com/android/answer/9064445?hl=en>`_.
-* If you experience problems with the transferred file try another way to transfer file.
+* La meilleure façon de transférer des fichiers de paramètres sur un nouveau téléphone est via un câble USB ou un service cloud (par ex. Google Drive).
+* Des aides peuvent être trouvées sur le web, par ex. `Aide Android <https://support.google.com/android/answer/9064445?hl=fr>`_.
+* Si vous rencontrez des problèmes avec le fichier transféré, essayez de transférer le fichier par d'une autre façon.
