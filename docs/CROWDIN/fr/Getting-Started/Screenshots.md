@@ -156,7 +156,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 #### Basals
 
-* A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time. . 
+* Une ligne **bleue continue** indique le débit de basal de votre pompe et reflète l'injection réelle au fil du temps. 
 * The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs)
 * In times standard basal rate is given the area under the curve is shown in dark blue.
 * When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
