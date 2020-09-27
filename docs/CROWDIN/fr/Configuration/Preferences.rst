@@ -135,7 +135,7 @@ Cibles Temporaires par défaut
   .. image:: ../images/Pref2020_OV_DefaultTT.png
     :alt: Préférences > Cibles temporaires par défaut
   
-Quantité d'insuline par défaut pour Amorcer/Remplir
+Insuline par défaut pour Amorcer/Remplir
 -----------------------------------------------------------
 * If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Usage/CPbefore26.html#pump>`_.
 * Pre-set values can be defined in this dialogue.
