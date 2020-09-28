@@ -396,14 +396,13 @@ Advanced settings
   * You need to `go through AAPS <../Configuration/Config-Builder.html#bg-source>`_ and enable local broadcast in AAPS to use xDrip+ alarms.
   
 * *Always use basal absolute values* must be activated if you want to use Autotune properly. See `OpenAPS documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ for more details on Autotune.
-* **Do not activate this when using `Insight pump <../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps>`_!**  It would lead to false TBR settings in Insight pump.
 
 СМС-коммуникатор
 ===========================================================
 * Options will only be displayed if SMS communicator is selected in `Config Builder <../Configuration/Config-Builder.html#sms-communicator>`_.
 * This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.  
 * Further information is described in `SMS Commands <../Children/SMS-Commands.html>`_.
-* Additional safety can be obtained through use of an authenticator app or additional PIN at token end.
+* Additional safety is obtained through use of an authenticator app and additional PIN at token end.
 
 Автоматизация
 ===========================================================
