@@ -396,14 +396,13 @@ Paramètres Avancés
   * Vous devez `passer par AAPS <../Configuration/Config-Builder.html#source-gly>`_ et activer la diffusion locale dans AAPS pour utiliser les alarmes xDrip+.
   
 * *Utiliser toujours les valeurs absolues du basal* doit être activé si vous souhaitez utiliser Autotune correctement. Voir la `documentation OpenAPS <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ pour plus de détails sur Autotune.
-* **Do not activate this when using `Insight pump <../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps>`_!**  It would lead to false TBR settings in Insight pump.
 
 Communicateur SMS
 ===========================================================
 * Les options ne seront affichées que si le Communicateur SMS est sélectionné dans le `Générateur de configuration <../Configuration/Config-Builder.html#communicateur-sms>`_.
 * Ce paramètre permet de contrôler à distance de l'application en envoyant des instructions au téléphone du patient que l'application appliquera comme Suspendre la boucle ou un bolus.  
 * De plus amples informations sont décrites dans `Commandes SMS <../Children/SMS-Commands.html>`_.
-* Une sécurité supplémentaire est obtenue grâce à l'utilisation d'une application authentificateur et d'un code confidentiel supplémentaire à la fin du jeton.
+* Additional safety is obtained through use of an authenticator app and additional PIN at token end.
 
 Automatisation
 ===========================================================
