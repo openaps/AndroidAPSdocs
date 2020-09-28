@@ -238,7 +238,7 @@ L'option 'Garder l'écran allumé' forcera Android à garder l'écran allumé en
 Définissez quels boutons sont affichés sur l'écran d'accueil.
 
 * Traitements
-* Calculatrice
+* Assistant
 * Insuline
 * Glucides
 * MGC (ouvre xDrip+)
