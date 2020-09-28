@@ -38,7 +38,7 @@ Exporter les paramètres
 -----------------------------------------------------------
 * AAPS 2.7 utilise un nouveau format de sauvegarde chiffré. 
 * Vous devez `exporter vos paramètres <../Usage/ExportImportSettings.html>`_ après la mise à jour vers la version 2.7.
-* Settings files from previous versions can only be imported in AAPS 2.7 and onwards anymore. Export is in new format.
+* Settings files from previous versions can only be imported in AAPS 2.7. Export will be in new format.
 * Assurez-vous de stocker vos paramètres exportés non seulement sur votre téléphone, mais également dans au moins un autre endroit sûr (votre pc, stockage cloud...).
 * Si vous construisez l'apk AAPS 2.7 avec le même fichier de clés que dans les versions précédentes, vous pouvez installer la nouvelle version sans supprimer la version précédente. 
 * Tous les paramètres ainsi que les objectifs terminés resteront tels qu'ils étaient dans la version précédente.
