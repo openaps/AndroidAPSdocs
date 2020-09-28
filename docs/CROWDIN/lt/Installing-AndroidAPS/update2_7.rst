@@ -38,7 +38,7 @@ Eksportuoti nustatymus
 -----------------------------------------------------------
 * AAPS 2.7 naudoja naują šifruotą atsarginės kopijos formatą. 
 * Jūs turite `eksportuoti savo nustatymus <../Usage/ExportImportSettings.html>`_ po atnaujinimo į versiją 2.7.
-* Nustatymų failai iš ankstesnių versijų ** negali** būti naudojami AAPS 2.7 versijoje ir vėlesnėse.
+* Settings files from previous versions can only be imported in AAPS 2.7 and onwards anymore. Export is in new format.
 * Įsitikinkite, kad saugojate savo eksportuotus nustatymus ne tik telefone, bet ir bent vienoje saugioje vietoje (jūsų kompiuteris, debesijos saugykla...).
 * If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version. 
 * All settings as well as finished objectives will remain as they were in the previous version.
