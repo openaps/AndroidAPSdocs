@@ -262,7 +262,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 ## Assistant bolus
 
-![Assistant Bolus](../images/Home2020_BolusWizard.png)
+![Assistant Rapide](../images/Home2020_BolusWizard.png)
 
 Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le ferez.
 
