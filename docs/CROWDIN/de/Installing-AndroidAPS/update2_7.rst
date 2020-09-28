@@ -38,7 +38,7 @@ Exportiere die Einstellungen
 -----------------------------------------------------------
 * AAPS 2.7 verwendet ein neues verschlüsseltes Backup-Format. 
 * Du musst daher nach dem Update auf Version 2.7 `Deine Einstellungen exportieren <../Usage/ExportImportSettings.html>`_.
-* Einstellungen aus früheren Versionen **können nicht** mit AAPS 2.7 und höher verwendet werden.
+* Settings files from previous versions can only be imported in AAPS 2.7 and onwards anymore. Export is in new format.
 * Speichere Deine exportierten Einstellungen nicht nur auf Deinem Smartphone, sondern auch an mindestens einem sicheren Ort (PC, Cloud-Speicher ...).
 * Wenn Du die AAPS 2.7 APK mit dem gleichen keystore wie in früheren Versionen erstellst, kannst Du die neue Version installieren, ohne die vorherige Version zu deinstallieren. 
 * Alle Einstellungen sowie abgeschlossenen Objectives (Ziele) bleiben so, wie sie in der Vorgängerversion waren.
