@@ -38,7 +38,7 @@ Set master password
 -----------------------------------------------------------
 * AAPS 2.7 uses a new encrypted backup format. 
 * You must `export your settings <../Usage/ExportImportSettings.html>`_ after updating to version 2.7.
-* Settings files from previous versions **cannot** be used in AAPS 2.7 and onwards anymore.
+* Settings files from previous versions can only be imported in AAPS 2.7 and onwards anymore. Export is in new format.
 * Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
 * If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version. 
 * All settings as well as finished objectives will remain as they were in the previous version.
