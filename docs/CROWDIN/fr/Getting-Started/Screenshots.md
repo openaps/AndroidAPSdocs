@@ -132,7 +132,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 * Cliquez sur le triangle situé sur le côté droit du graphique principal pour sélectionner les informations qui seront affichées dans le graphique principal.
 * Pour le graphique principal, juste les trois options au-dessus de la ligne "\---\---- Graph 1 \---\----" sont disponibles.
    
-   ![Main graph setting](../images/Home2020_MainGraphSetting.png)
+   ![Réglage du graphique principal](../images/Home2020_MainGraphSetting.png)
 
 #### Lignes de prédiction
 
@@ -171,7 +171,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 * Vous pouvez activer jusqu'à quatre graphiques supplémentaires en dessous du graphique principal.
 * Pour ouvrir les paramètres pour des graphiques supplémentaires, cliquez sur le triangle sur le côté droit du [graphique principal](../Getting-Started/Screenshots#section-f-graphique-principal) et faites défiler vers le bas.
 
-![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+![Paramètres graphiques additionnels](../images/Home2020_AdditionalGraphSetting.png)
 
 * Pour ajouter un graphique supplémentaire, cochez la case sur le côté gauche de son nom (par ex. \---\---- Graph 1 \---\----).
 
@@ -216,14 +216,14 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 ### Section H - Boutons
 
-![Homescreen buttons](../images/Home2020_Buttons.png)
+![Boutons de l'écran d'accueil](../images/Home2020_Buttons.png)
 
 * Les boutons pour l'Insuline, les Glucides et l'Assistant bolus sont "toujours affichés". 
 * Les autres boutons doivent être configurés dans les [préférences](../Configuration/Preferences#boutons).
 
 #### Insuline
 
-![Insulin button](../images/Home2020_ButtonInsulin.png)
+![Bouton Insuline](../images/Home2020_ButtonInsulin.png)
 
 * Permet d'entrer une certaine quantité d'insuline sans utiliser l'[Assistant bolus](../Configuration/Screenhots#bolus-wizard).
 * En cochant la case, vous pouvez démarrer automatiquement votre [cible temporaire Repas imminent](../Configuration/Preferences#default-temp-targets).
@@ -231,7 +231,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 #### Glucides
 
-![Carbs button](../images/Home2020_ButtonCarbs.png)
+![Bouton Glucides](../images/Home2020_ButtonCarbs.png)
 
 * Permet d'enregistrer les glucides sans faire de bolus.
 * Certaines [cibles temporaires par défaut](../Configuration/Preferences#cibles-temporaires-par-defaut) peuvent être définies directement en cochant la case.
@@ -246,21 +246,21 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 #### Étalonnages
 
-* Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
+* Envoie un étalonnage à xDrip+ ou ouvre la boîte de dialogue de calibration du Dexcom.
 * Must be activated in [preferences](../Configuration/Preferences#buttons).
 
 #### MGC
 
-* Opens xDrip+.
-* Back button returns to AAPS.
+* Ouvre xDrip+.
+* Le bouton Retour permet de revenir à AAPS.
 * Must be activated in [preferences](../Configuration/Preferences#buttons).
 
-#### Assistant Rapide
+#### Assistant bolus
 
-* Easily enter amount of carbs and set calculation basics.
-* Details are setup in [preferences](../Configuration/Preferences#quick-wizard).
+* Entrez facilement la quantité de glucides et définissez les paramètres de calcul.
+* Les détails sont configurés dans les [préférences](../Configuration/Preferences#assistant-rapide).
 
-## Assistant bolus
+## Assistant rapide
 
 ![Assistant Rapide](../images/Home2020_BolusWizard.png)
 
@@ -335,7 +335,7 @@ Careportal reproduisait les fonctions que vous pouvez trouver dans Nightscout so
 
 ### Revoir le calcul des glucides
 
-![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
+![Revoir le calcul des glucides dans l'onglet Traitement](../images/Screenshots_TreatCalc.png)
 
 * If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
 * Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
@@ -383,7 +383,7 @@ L'onglet Traitement peut être utilisé pour corriger les entrées de glucides e
 History of the following treatments:
 
 * Bolus & carbs -> option to [remove entries](..Getting-Started/Screenshots#carb-correction) to correct history
-* [Bolus étendu](../Usage/Extended-Carbs#id1)
+* [Bolus étendu](../Usage/Extended-Carbs#bolus-etendus)
 * Temporary basal rate
 * [Cible temp.](../Usage/temptarget.md)
 * [Changement de profil](../Usage/Profiles.md)
@@ -391,7 +391,7 @@ History of the following treatments:
 
 ## Source Gly - xDrip, Application Dexcom (patchée)...
 
-![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
+![Onglet Source Gly - ici xDrip](../images/Screenshots_BGSource.png)
 
 * Depending on your BG source settings this tab is named differntly.
 * Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
