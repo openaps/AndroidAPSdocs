@@ -240,7 +240,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 * You can use the buttons to quickly increase carb amount.
 * Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#ns-client).
 
-#### Calculatrice
+#### Assistant
 
 * See [details below](../Configuration/Screenhots#bolus-wizard)
 
