@@ -118,7 +118,7 @@ Sur l'écran d'accueil d'Android Studio, cliquez sur le petit triangle (1. de la
 ### Mac
 
 * N’importe quelle version de git devrait fonctionner. Par exemple <https://git-scm.com/download/mac>.
-* Utilisez homebrew pour installer git: ```$ brew install git```.
+* Utilisez homebrew pour installer git: ```$ brew install git``` 
 * Pour plus de détails sur l'installation de git, voir la [documentation officielle](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * Si vous installez git via homebrew, il n'est pas nécessaire de modifier les préférences. Juste au cas où : on peut y accéder ici : Android Studio - Preferences.
 
