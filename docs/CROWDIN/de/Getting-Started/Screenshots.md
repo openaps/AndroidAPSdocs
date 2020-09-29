@@ -6,21 +6,21 @@
 
 Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meisten der Informationen, die du tagtäglich benötigst.
 
-### Section A - Tabs
+### Abschnitt A - Register
 
-* Navigate between the various AndroidAPS modules.
-* Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder#tab-or-hamburger-menu).
+* Wechsele zwischen den verschiedenen AndroidAPS-Modulen.
+* Alternativ kannst Du die Bildschirme wechseln, indem Du nach links oder rechts wischst.
+* Anzuzeigende Registerkarten können im Konfigurations-Generator[ im Konfigurationsbuilder ](../Configuration/Config-Builder#registerkarte-tab-oder-hamburger-menu)ausgewählt werden.
 
-### Section B - Profile & target
+### Abschnitt B - Profil & Ziel
 
 #### Profile
 
     ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
     
 
-* Current profile is displayed in the left bar.
-* Long press profile bar to view profile details or to [switch between different profiles](../Usage/Profiles#profile-switch).
+* Das aktuelle Profil wird in der linken Schaltfläche angezeigt.
+* Schaltfläche Profil lange Drücken um Profildetails anzuzeigen oder um [zwischen verschiedenen Profilen zu wechseln](../Usage/Profiles#profilwechsel).
 * If profile switch was made with duration remaining time in minutes is shown in brackets.
 
 #### Ziel
