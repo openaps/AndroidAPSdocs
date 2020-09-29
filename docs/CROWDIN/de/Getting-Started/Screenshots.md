@@ -236,31 +236,31 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 * Kohlenhydrate ohne Bolus dokumentieren.
 * Certain [pre-set temporary targets](../Configuration/Preferences#default-temp-targets) can be set directly by checking the box.
 * Zeitverschiebung: Wann wirst Du/hast Du Kohlenhydrate gegessen (in Minuten).
-* Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.rst)
-* You can use the buttons to quickly increase carb amount.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#ns-client).
+* Dauer: Wird für ["eCarbs" verwendet](../Usage/Extended-Carbs.rst).
+* Mit den Buttons können Sie schnell die Menge der Kohlenhydrate erhöhen.
+* Notizen werden in Nightscout hochgeladen - abhängig von Deinen Einstellungen für den [NS-Client](../Configuration/Preferences#nightscout-client).
 
 #### Bolus-Rechner
 
-* See [details below](../Configuration/Screenhots#bolus-wizard)
+* Siehe [Details unten](../Configuration/Screenhots#bolus-wizard)
 
-#### Calibrations
+#### Kalibrierungen
 
-* Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
+* Sendet eine Kalibrierung an xDrip + oder öffnet den Dexcom Kalibrierungsdialog.
 * Must be activated in [preferences](../Configuration/Preferences#buttons).
 
 #### CGM
 
-* Opens xDrip+.
-* Back button returns to AAPS.
+* Öffnet xDrip+.
+* Die Schaltfläche "Zurück" kehrt zu AAPS zurück.
 * Must be activated in [preferences](../Configuration/Preferences#buttons).
 
 #### Quick Wizard
 
-* Easily enter amount of carbs and set calculation basics.
-* Details are setup in [preferences](../Configuration/Preferences#quick-wizard).
+* Einfache Eingabe von Kohlenhydraten und deren Berechnungsgrundlage.
+* Details werden in den [Einstellungen](../Configuration/Preferences#quick-wizard) eingerichtet.
 
-## Bolus Wizard
+## Bolus-Rechner
 
 ![Bolus-Rechner](../images/Home2020_BolusWizard.png)
 
@@ -268,9 +268,9 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
 ### Abschnitt I
 
-* BG field is normally already populated with the latest reading from your CGM. Falls Du keine aktuellen CGM-Werte hast, ist das Feld leer. 
+* Das Feld BZ ist in der Regel mit dem letzten CGM-Wert vorbefüllt. Falls Du keine aktuellen CGM-Werte hast, ist das Feld leer. 
 * Unter CARBS (Kohlenhydrate) trägst Du Deine Schätzung der Kohlenhydrate - oder deren Äquivalent - ein. 
-* The CORR field is if you want to modify the end dosage for some reason.
+* Das Korr-Feld wird benutzt, wenn Du die vorgeschlagene Dosis ändern möchtest.
 * The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Gib einen negativen Wert ein, wenn Du nach dem Essen spritzt, die Kohlenhydrate also schon zu Dir genommen hast.
 
 ### Abschnitt J
@@ -283,7 +283,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
 * Zeigt den errechneten Bolus. 
 * Falls IOB (Insulin on board) den berechneten Bolus bereits übersteigt, wird nur die Menge der fehlenden Kohlenhydrate angezeigt.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#ns-client).
+* Notizen werden in Nightscout hochgeladen - abhängig von Deinen Einstellungen für den [NS-Client](../Configuration/Preferences#nightscout-client).
 
 ### Section L
 
