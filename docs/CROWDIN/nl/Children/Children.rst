@@ -11,7 +11,7 @@ Functies
 * De pomp van het kind wordt aangestuurd door de AndroidAPS app op de telefoon van het kind.
 * Ouders kunnen op afstand volgen en alle relevante gegevens bekijken, zoals bloedglucose, koolhydraten aan boord, insuline aan boord etc. door middel van de ** NSClient app** op hun telefoon. De instellingen in zowel AndroidAPS en in NSClient moeten exact hetzelfde zijn.
 * Ouders kunnen glucose alarmen op hun telefoon ontvangen via de **xDrip+ app in 'follower' modus** op hun telefoon.
-* AndroidAPS kan worden bediend op afstand door middel van `SMS Commando's<../Children/SMS-Commands.html>`_.
+* Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_ secured by two-factor authentication.
 * Profiel wissels en tijdelijke streefdoelen kunnen op afstand worden ingesteld via de NSClient app.
 
 Hulpmiddelen en apps voor controle op afstand
@@ -20,7 +20,7 @@ Hulpmiddelen en apps voor controle op afstand
 *	NSClient app
 * Dexcom follow als je de originele Dexcom app gebruikt (alleen BG waarden)
 * `xDrip+ <../Configuration/xdrip.html>`_ in 'follow'modus (voornamelijk BG waarden en **alarmen**)
-* `Spike <https://spike-app.com/>`_ op iPhone (voornamelijk BG waarden en **alarmen**)
+*	`Sugarmate <https://sugarmate.io/>`_ or `Spike <https://spike-app.com/>`_ on iOS (mainly BG values and **alarms**)
 
 Belangrijke keuzes vooraf
 ==================================================
