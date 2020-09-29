@@ -11,7 +11,7 @@ Funkce
 * Pumpa dítěte je řízena z telefonu dítěte používajícího AndroidAPS.
 * Rodiče mohou na dálku sledovat všechny důležité údaje, jako jsou glykémie, zbývající sacharidy, inzulin atd. pomocí aplikace **NSClient** v jejich telefonu. V AndroidAPS a NSCinetu musí být stejné nastavení.
 * Rodiče mohou být na svém mobilu varováni alarmy v aplikaci **xDrip v režimu follower**.
-* Dálkové ovládání AndroidAPS pomocí `SMS Příkazů <../Children/SMS-Commands.html>`_.
+* Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_ secured by two-factor authentication.
 * Dálkové přepínání profilů a dočasných cílů prostřednictvím aplikace NSClient.
 
 Nástroje a aplikace pro vzdálené monitorování
@@ -20,7 +20,7 @@ Nástroje a aplikace pro vzdálené monitorování
 * Aplikace NSClient
 * Dexcom follow, pokud používáte originální aplikaci Dexcom (pouze hodnoty glykémie)
 *	`xDrip+ <../Configuration/xdrip.html>`_ v módu follower (hlavně hodnoty BG a **alarmy**)
-* `Spike <https://spike-app.com/>` _ na iPhonech (hlavně hodnoty glykémií a ** alarmy**)
+*	`Sugarmate <https://sugarmate.io/>`_ or `Spike <https://spike-app.com/>`_ on iOS (mainly BG values and **alarms**)
 
 Co je třeba zvážit
 ==================================================
