@@ -1,39 +1,39 @@
 Einstellungen
 ***********************************************************
-* Open preferences by clicking three-dot-menu on top right side of home screen.
+* Öffne die Einstellungen durch einen Klick auf das 3-Punkte-Menü rechts oben auf dem Startbildschirm.
 
   .. image:: ../images/Pref2020_Open.png
-    :alt: Open preferences
+    :alt: Einstellungen öffnen
 
-* You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and click Plugin preferences.
+* Du kannst direkt zu den Einstellungen für einen bestimmten Tab (z.B. Pumpen-Tab) springen, indem Du diesen Tab öffnest und auf Plugin-Einstellungen klickst.
 
   .. image:: ../images/Pref2020_OpenPlugin.png
-    :alt: Open plugin preferences
+    :alt: Plugin-Einstellungen öffnen
     
-* Sub-menus can be opened by clicking the triangle below the sub-menu title.
+* Untermenüs können geöffnet werden, indem Du auf das Dreieck unter dem Untermenü-Titel klicken.
 
   .. image:: ../images/Pref2020_Submenu.png
-    :alt: Open submenu
+    :alt: Untermenü öffnen
 
 Allgemein
 ===========================================================
 
-**Units**
+**Einheiten**
 
-* Set units to mmol/l or mg/dl depending on your preferences.
+* Stelle die Einheiten auf mmol/l oder mg/dl je nach deiner Vorliebe ein.
 
-**Language**
+**Sprache**
 
-* New option to use phone's default language (recommended). 
-* In case you want AAPS in different language than standard phone language you can choose from a broad variety.
-* If you use different languages you might sometimes see a language mix. This is due to an android issue that overriding default android language sometimes doesn't work.
+* Neue Option, um die Standardsprache des Smartphones zu verwenden (empfohlen). 
+* Falls Du AAPS in einer anderen Sprache als der Standardsprache deines Smartphones nutzen möchtest, kannst Du zwischen vielen verschiedenen Sprachen wählen.
+* Falls sich die Systemsprache deines Smartphones und die ausgewählte Sprache für AAPS unterscheiden, kann dies manchmal zu einem Sprachmix führen. Dies ist auf ein Android-Problem zurückzuführen, sodass das Überschreiben der Standardsprache einer App manchmal nicht korrekt funktioniert.
 
   .. image:: ../images/Pref2020_General.png
-    :alt: Preferences > General
+    :alt: Einstellungen > Allgemein
 
-**Patient name**
+**Name des Patienten**
 
-* Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+Kann verwendet werden, wenn Du zwischen verschiedenen Installationen unterscheiden musst (z.B. zwei Kinder mit Typ 1 in Deiner Familie).
 
 Schutz
 -----------------------------------------------------------
