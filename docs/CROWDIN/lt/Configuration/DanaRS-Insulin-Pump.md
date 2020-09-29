@@ -2,7 +2,7 @@
 
 *Naudokite šias instrukcijas AAPS programėlės ir DanaRS (nuo 2017 m.) pompos konfigūravimui. Jei turite DanaR pompą, skaitykite [DanaR insulino pompa](./DanaR-Insulin-Pump).*
 
-**DanaRS su nauja programine įranga v3 šiuo metu negali būti naudojama su AndroidAPS!**
+**New Dana RS firmware v3 can be used from AndroidAPS version 2.7 onwards.**
 
 * Programėlė naudoja tik "BASAL A". Programa pati perrašo duomenis pompoje.
 
@@ -14,18 +14,22 @@
   
   ![AAPS ir Dana RS suporavimas](../images/AAPS_DanaRSPairing.png)
 
-* Paspauskite "Pompos slaptažodis" ir įveskite savo pompos slaptažodį. (Standartinis slaptažodis yra 1234)   
-  **Patvirtinkite susiejimą pompoje!**Taip, kaip įprastai darote susiedami bluetooth prietaisus (pvz.: išmanųjį telefoną ir automobilio garso sistemą).
+* Select Pump password and input your password.
   
-  ![Dana RS suporavimo patvirtinimas](../images/DanaRS_Pairing.png)
+  * For DanaRS with firmware 1 and 2 the default password is 1234.
+  * For DanaRS with firmware 3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> On your pump open main menu -> review -> information. Ne. 3 is production date.
 
-* Pasirinkite "Boluso greitis", jei norite pakeisti standartinį boluso greitį (1 V per 12 s, 1 V per 30 s, 1 V per 60 s).
+* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+  
+  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
-* Paleiskite telefoną iš naujo.
+* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
 
-* Naudodami Gydytojo meniu (žr. pompos Vartotojo vadovą) nustatykite pompos bazinį greitį 0,01 U/h.
+* Restart your phone.
 
-* Aktyvuokite pompoje ištęstinius bolusus.
+* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
+
+* Įgalinkite ištęstus bolusus pompoje
 
 ## Specifinės DanaRS klaidos 
 
