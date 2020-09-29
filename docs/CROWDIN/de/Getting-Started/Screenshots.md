@@ -107,8 +107,8 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
    * Insulinalter (Tage Reservoirverwendung)
    * Reservoirstand (Einheiten)
    * Sensoralter
-   * Battery age and level (%)
-* If threshold warning is exceeded, values will be shown in yellow.
+   * Batteriealter und Ladezustand (%)
+* Bei Überschreitung der Warnschwellen werden die Werte gelb angezeigt.
 * If threshold critical is exceeded, values will be shown in red.
 * Settings can be made in [preferences](../Configuration/Preferences#status-lights).
 
@@ -268,35 +268,35 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
 ### Abschnitt I
 
-* Das Feld BZ ist in der Regel mit dem letzten CGM-Wert vorbefüllt. Falls Du keine aktuellen CGM-Werte hast, ist das Feld leer. 
+* Das Feld BZ (BG) ist in der Regel mit dem letzten CGM-Wert vorbefüllt. Falls Du keine aktuellen CGM-Werte hast, ist das Feld leer. 
 * Unter CARBS (Kohlenhydrate) trägst Du Deine Schätzung der Kohlenhydrate - oder deren Äquivalent - ein. 
-* Das Korr-Feld wird benutzt, wenn Du die vorgeschlagene Dosis ändern möchtest.
-* The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Gib einen negativen Wert ein, wenn Du nach dem Essen spritzt, die Kohlenhydrate also schon zu Dir genommen hast.
+* Das Korr-Feld (CORR) wird benutzt, wenn Du die vorgeschlagene Dosis ändern möchtest.
+* Das Feld KH-Zeit (CARB TIME) ist für einen Spritz-Ess-Abstand gedacht, so dass Du dem System mitteilen kannst, dass die Kohlenhydrate erst später gegessen werden. Gib einen negativen Wert ein, wenn Du nach dem Essen spritzt, die Kohlenhydrate also schon zu Dir genommen hast.
 
 ### Abschnitt J
 
 * Beim SUPER BOLUS wird das Basalinsulin der kommenden zwei Stunden zum berechneten Bolus addiert und die Basalrate für die kommenden zwei Stunden auf Null gesetzt, um das extra Insulin wieder heraus zu nehmen. 
 * Damit soll kurzfristig mehr Insulin zur Verfügung stehen und dadurch hoffentlich Spitzen vermieden werden.
-* For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
+* Weitere Informationen findest Du unter [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
-### Section K
+### Abschnitt K
 
 * Zeigt den errechneten Bolus. 
 * Falls IOB (Insulin on board) den berechneten Bolus bereits übersteigt, wird nur die Menge der fehlenden Kohlenhydrate angezeigt.
 * Notizen werden in Nightscout hochgeladen - abhängig von Deinen Einstellungen für den [NS-Client](../Configuration/Preferences#nightscout-client).
 
-### Section L
+### Abschnitt L
 
-* Details of wizard's bolus calculation.
+* Details zum Bolus-Rechner.
 * Du kannst einzelne davon abwählen, wenn du sie nicht berücksichtigen willst, dies wird aber die Ausnahme sein.
-* For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
+* Aus Sicherheitsgründen muss das Feld **TT manuell aktiviert werden**, wenn der Bolus-Rechner ein vorhandenes temporäres Ziel berücksichtigen soll.
 
 #### Kombinationen von COB und IOB und deren Bedeutung
 
-* For safety reasons IOB boxed cannot be unticked when COB box is ticked as you might run the risk of too much insulin as AAPS is not accounting for what’s already given.
-* If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
+* Aus Sicherheitsgründen kann die IOB Box nicht deaktiviert werden, wenn die COB Box aktivt ist. Sonst bestünde das Risiko, dass bereits im Körper befindliches Insulin nicht berücksichtigt und daher zu viel Insulin abgegeben würde.
+* Wenn Du COB und IOB aktivierst, werden noch nicht resorbierte Kohlenhydrate, die nicht bereits mit Insulin abgedeckt sind, sowie alles Insulin, das als TBR oder SMB geliefert wurde, berücksichtigt.
 * Falls Du IOB ohne COB auswählst besteht das Risiko, dass zu wenig Insulin abgegeben wird, da der Anteil des IOB, der eigentlich für noch nicht komplett vom Körper aufgenommene Kohlenhydrate vorgesehen ist, von der neuen Insulinmenge abgezogen wird. Das kann auch zur "Fehlend x g" (fehlende Kohlenhydrate führen).
-* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. Dadurch wird die Insulinmenge nur auf Basis der neuen Kohlenhydrate berechnet.
+* Falls Du einen weiteren Bolus wegen **zusätzlichen Essens** kurz nach einem Mahlzeitenbolus abgeben willst (z.B. zusätzlicher Nachtisch), so kann es hilfreich sein, alle Häkchen rauszunehmen. Dadurch wird die Insulinmenge nur auf Basis der neuen Kohlenhydrate berechnet.
 
 #### Fehlerhafte Erkennung der aktiven Kohlenhydrate (COB)
 
@@ -310,9 +310,9 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
 ![Insulin Profil](../images/Screenshot_insulin_profile.png)
 
-* This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
+* Dies zeigt das Aktivitätsprofil des Insulins, das Du im [Konfigurations-Generator](../Configuration/Config-Builder#insulin) ausgewählt hast. 
 * Die LILA Linie zeigt an, wie viel Insulin nach der Injektion verbleibt und wie es im Zeitverlauf abnimmt. Die BLAUE Linie veranschaulicht die Aktivität des Insulins.
-* The important thing to note is that the decay has a long tail. 
+* Wichtig zu beachten ist, dass der Ablauf deutlich länger dauert, als gemein hin angenommen. 
 * Von der klassischen Pumpentherapie bist du es vermutlich gewohnt anzunehmen, dass das Insulin nach ca. 3 1/2 Stunden vollständig abgebaut ist. 
 * Allerdings spielt der langsamere Abbau beim Loopen eine wichtige Rolle, da die Berechnungen deutlich präziser sind und sich diese geringen Mengen unter den rekursiven Berechnungen des AndroidAPS Algorithmus summieren.
 
@@ -320,25 +320,25 @@ Weitere Informationen zu den verschiedenen Insulintypen, ihren Aktivitätsprofil
 
 Du solltest auch einen Blick in diesen exzellenten Blog-Artikel werfen: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-And even more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+Und noch mehr bei: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Status der Pumpe
 
 ![Status der Pumpe](../images/Screenshot_PumpStatus.png)
 
-* Different information on pump status. Displayed information depends on your pump model.
-* See [pumps page](../Hardware/pumps.rst) for details.
+* Verschiedene Informationen über den Status Deiner Pumpe. Die angezeigten Informationen hängen von Deinem Pumpenmodell ab.
+* Weitere Informationen findest Du auf der [Pumpen Seite](../Hardware/pumps.rst).
 
 ## Care Portal (Behandlungen)
 
 Careportal hat die Funktionen repliziert, die auf der Nightscout-Webseite unter dem "+"-Symbol zu finden sind, das es erlaubt, Notizen hinzuzufügen.
 
-### Review carb calculation
+### Kohlenhydrat-Berechnung überprüfen
 
-![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
+![KH-Berechnung auf der Registerkarte "Behandlung" überprüfen](../images/Screenshots_TreatCalc.png)
 
-* If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
-* Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
+* Wenn Du den [Bolus Rechner](../Getting-Started/Screenshots#bolus-wizard) verwendet hast, um die Insulindosierung zu berechnen, kannst Du diese Berechnung später auf der Registerkarte Behandlungen überprüfen.
+* Klicke einfach auf den grünen Text 'Berech.'. (Je nach Pumpe können Insulin und Kohlenhydrate auch in einer einzigen Zeile in Behandlungen gezeigt werden.)
 
 ### Kohlenhydrat Korrektur
 
@@ -360,21 +360,21 @@ Der Behandlungs-Tab kann verwendet werden, um fehlerhafte Kohlenhydrat-Einträge
 
 ## Loop, AMA / SMB
 
-* These tabs show details about the algorithm's calculations and why AAPS acts the way it does.
-* Calculations are each time the system gets a fresh reading from the CGM.
-* For more details see [APS section on config builder page](../Configuration/Config-Builder#aps).
+* Diese Registerkarten enthalten Details zu den Berechnungen des Algorithmus und erklären, warum AAPS so und nicht anders gerechnet hat.
+* Die Berechnung erfolgt jedesmal, wenn das System einen neuen Wert vom CGM erhält.
+* Weitere Details findest Du im [APS-Abschnitt auf der Seite des Konfigurations-Generators](../Configuration/Config-Builder#aps).
 
 ## Profile
 
 ![Profile](../images/Screenshots_Profile.png)
 
-* Profile contains information on your individual diabetes settings:
+* Das Profil enthält Informationen zu Deinen individuellen Diabetes-Einstellungen:
    
-   * DIA (Duration of Insulin Action)
-   * IC or I:C: Insulin to Carb ratio
-   * ISF: Insulin Sensitivity Factor
+   * DIA (Insulinwirkdauer)
+   * IC: Insulin zu Kohlenhydrat-Verhältnis ("BE-Faktor")
+   * ISF: Insulin Sensitivitäts-Faktor ("Korrektur-Faktor")
    * Basalrate
-   * Target: Blood glucose level that you want AAPS to be aiming for
+   * BZ-Ziel: Wert, den die AAPS-Berechnungen anstreben sollen
 
 * You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](/Configuration/Config-Builder.md).
 
