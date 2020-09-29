@@ -16,16 +16,16 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 #### Profile
 
-    ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+    ![verbleibende Dauer Profil Wechsel](../images/Home2020_ProfileSwitch.png)
     
 
 * Das aktuelle Profil wird in der linken Schaltfläche angezeigt.
 * Schaltfläche Profil lange Drücken um Profildetails anzuzeigen oder um [zwischen verschiedenen Profilen zu wechseln](../Usage/Profiles#profilwechsel).
-* If profile switch was made with duration remaining time in minutes is shown in brackets.
+* Falls der Profilwechsel mit Angabe der Dauer durchgeführt wurde, wird die verbleibende Zeit in Minuten in Klammern angezeigt.
 
 #### Ziel
 
-    ![Temp target remaining duration](../images/Home2020_TT.png)
+    ![Verbleibende Dauer temporäres Ziel](../images/Home2020_TT.png)
     
 
 * Current target blood glucose level is displayed in the right bar.
