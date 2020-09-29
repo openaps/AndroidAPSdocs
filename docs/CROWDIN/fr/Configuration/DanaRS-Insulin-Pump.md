@@ -2,7 +2,7 @@
 
 *Ces instructions décrivent la configuration de l’application et de votre pompe si vous avez une DanaRS commercialisée depuis 2017. Visitez la [pompe à insuline Dana R](./DanaR-Insulin-Pump) si vous avez plutôt la pompe initiale DanaR.*
 
-**La DanaRS avec le nouveau firmware v3 ne peut actuellement pas être utilisée avec AndroidAPS !**
+**New Dana RS firmware v3 can be used from AndroidAPS version 2.7 onwards.**
 
 * Sur la pompe DanaRS, pompe « BASAL A » est utilisé par l'application. Les données existantes se font écrasé.
 
@@ -14,16 +14,20 @@
   
   ![Appairage Dana RS avec AAPS](../images/AAPS_DanaRSPairing.png)
 
-* Sélectionnez Mot de passe de la pompe et saisissez votre mot de passe. (Le mot de passe par défaut est 1234)   
-  ** Vous devez confirmer l'appairage sur la pompe ! ** C'est juste la façon dont vous êtes habitués à faire d'autres appairages bluetooth (par ex. le smartphone et l'audio de la voiture).
+* Select Pump password and input your password.
   
-  ![Confirmation d'appairage Dana RS](../images/DanaRS_Pairing.png)
+  * For DanaRS with firmware 1 and 2 the default password is 1234.
+  * For DanaRS with firmware 3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> On your pump open main menu -> review -> information. Non. 3 is production date.
 
-* Sélectionner la vitesse de Bolus pour changer la vitesse de Bolus par défaut souhaitée (12 sec par 1 U, 30 sec par 1 U ou 60 sec par 1 U).
+* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+  
+  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
-* Redémarrez votre téléphone.
+* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
 
-* Régler l'incrément Basale sur pompe à 0,01 U/h en utilisant le menu de Médecins (voir le guide de l’utilisateur de la pompe)
+* Restart your phone.
+
+* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
 
 * Activez les Bolus Étendus sur la pompe
 
