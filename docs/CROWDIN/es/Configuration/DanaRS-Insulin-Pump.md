@@ -2,7 +2,7 @@
 
 *Estas instrucciones son para configurar la app y la bomba si tiene una DanaRS a partir de 2017. Visite [Bomba de insulina DanaR](./DanaR-Insulin-Pump) si en su lugar tiene una DanaR original.*
 
-**DanaRS con nuevo firmware v3 no se puede utilizar actualmente con AndroidAPS!**
+**New Dana RS firmware v3 can be used from AndroidAPS version 2.7 onwards.**
 
 * En la bomba DanaRS la app utiliza el perfil "BASAL A". Los datos existentes se sobrescriben.
 
@@ -14,16 +14,20 @@
   
   ![AAPS empareja con Dana RS](../images/AAPS_DanaRSPairing.png)
 
-* Seleccione la contraseña de la bomba e introduzca su contraseña. (La contraseña predeterminada es 1234)   
-  **Hay que confirmar el emparejamiento en la bomba! ** Es la forma que se utiliza para otros emparejamientos bluetooth (es decir, smartphone y audio de autos).
+* Select Pump password and input your password.
   
-  ![Emparejamiento de confirmación Dana RS](../images/DanaRS_Pairing.png)
+  * For DanaRS with firmware 1 and 2 the default password is 1234.
+  * For DanaRS with firmware 3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> On your pump open main menu -> review -> information. No. 3 is production date.
 
-* Seleccione velocidad de bolo, para cambiar la velocidad predeterminada utilizada (12seg por 1u, 30seg por 1u o 60seg por 1u).
+* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+  
+  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
-* Reinicia tu dispositivo.
+* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
 
-* Establezca la tasa basal en la bomba en 0,01 U/h mediante el menú de Doctores (consulte la guía del usuario de la bomba)
+* Restart your phone.
+
+* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
 
 * Habilitar bolos extendidos en bomba
 
