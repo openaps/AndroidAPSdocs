@@ -44,7 +44,7 @@ If you started using Medtronic driver please add yourself to this [list](https:/
 
 If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
 
-![MDT Settings](../images/Medtronic01.png)
+![MDT Settings](../images/Medtronic01a.png)
 
 You need to set following items: (see picture above)
 
@@ -59,6 +59,7 @@ You need to set following items: (see picture above)
 - ** Κωδικοποίηση Medtronic **: Αυτή είναι η ρύθμιση που καθορίζει αν η κωδικοποίηση 4b6b που κάνουν οι συσκευές της Medtronic θα γίνει στο AndroidAPS ή στο RileyLink. Αν έχετε RileyLink με firmware 2.x, η προεπιλεγμένη τιμή θα είναι να χρησιμοποιήσετε την κωδικοποίηση υλικού (= έγινε από RileyLink), αν έχετε 0.x firmware, αυτή η ρύθμιση θα αγνοηθεί.
 - ** Τύπος μπαταρίας (Power View) **: Αν θέλετε να δείτε την ισχύ της μπαταρίας στην αντλία σας, πρέπει να επιλέξετε τον τύπο μπαταρίας που χρησιμοποιείτε (υποστηρίζεται προς το παρόν Lithium ή Alkaline) υπολογισμένο ποσοστό και βολτ.
 - ** Διαμόρφωση RileyLink **: Θα βρείτε τη συσκευή σας RileyLink / GNARL.
+- **Set neutral temp basals** is an option which can help prevent Medtronic pumps from beeping on the hour. If enabled if will cancel a temp basal before the hour end to prevent this from happening.
 
 ## Καρτέλα MEDTRONIC (MDT)
 
