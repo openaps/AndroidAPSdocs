@@ -118,10 +118,10 @@ Ziel 8: Passe, falls notwendig, Basalraten und Faktoren an und aktiviere dann di
 *Vergiss nicht, dich als Looper in `diesem Formular <http://bit.ly/nowlooping>`_ zu registrieren, wenn du das bisher noch nicht getan hast. Gib AndroidAPS als Art deiner DIY Loop-Software an.*
 
 
-Objective 9: Try additional features for daytime use and gain confidence in your closed loop system
+Ziel 9: Teste zusätzliche Funktionen für den Alltagsgebrauch und gewinne Vertrauen in Dein Closed Loop System
 ====================================================================================================
 * Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_.
-* As `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
+* Da der `advanced meal assist (AMA) <../Usage/Open-APS-features.html#erweiterter-mahlzeit-assistent-ama>`_ ab Version 2.7 der neue Standard-Algorithmus in AAPS ist, kannst Du diese 28 Tage nutzen, um Funktionen zu testen, die Du bisher nicht verwendet hast, und mehr Vertrauen in Dein Closed Loop System zu gewinnen.
 
 
 Ziel 10: Aktiviere zusätzliche oref1 Funktionen zum täglichen Gebrauch, wie z. B. den super micro bolus (SMB)
