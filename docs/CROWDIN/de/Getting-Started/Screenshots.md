@@ -108,8 +108,8 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
    * Reservoirstand (Einheiten)
    * Sensoralter
    * Batteriealter und Ladezustand (%)
-* Bei Überschreitung der Warnschwellen werden die Werte gelb angezeigt.
-* If threshold critical is exceeded, values will be shown in red.
+* Bei Überschreitung der Warnschwelle werden die Werte gelb angezeigt.
+* Wenn die kritische Schwelle überschritten wird, werden die Werte rot angezeigt.
 * Settings can be made in [preferences](../Configuration/Preferences#status-lights).
 
 ### Section F - Main graph
