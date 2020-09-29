@@ -44,7 +44,7 @@ Jestliže jste začali používat ovladač Medtronic, zapište se prosím na ten
 
 Pokud děláte novou instalaci, skočíte přímo do průvodce. Někdy, když vaše připojení BT není plně funkční (nelze se připojit k pumpě), nebudete možná moci úplně dokončit konfiguraci. V takovém případě vyberte virtuální pumpu a po dokončení průvodce můžete použít možnost 2, která obejde detekci pumpy.
 
-![Nastavení MDT](../images/Medtronic01.png)
+![Nastavení MDT](../images/Medtronic01a.png)
 
 Je třeba nastavit následující položky: (viz obrázek výše)
 
@@ -59,6 +59,7 @@ Je třeba nastavit následující položky: (viz obrázek výše)
 - **Kódování Medtronic**: Toto nastavení určuje, zda se kódování 4b6b provádí v AndroidAPS nebo na RileyLink. Máte-li produkt RileyLink s firmwarem verze 2.x, výchozí hodnota bude používat kódování hardwarové (v RileyLinku), pokud máte firmware verze 0.x, toto nastavení bude ignorováno.
 - **Typ baterie (Power View)**: Pokud chcete vidět stav baterie v pumpě, musíte vybrat typ baterie, kterou používáte (momentálně jsou podporované lithiové nebo alkalické), což změní zobrazení vypočítané z procent a voltů.
 - **Konfigurace RieyLink**: Toto vyhledá vaše zařízení RileyLink/GNARL.
+- **Set neutral temp basals** is an option which can help prevent Medtronic pumps from beeping on the hour. If enabled if will cancel a temp basal before the hour end to prevent this from happening.
 
 ## Záložka MEDTRONIC (MDT)
 
