@@ -118,10 +118,10 @@ Objetivo 8: ajustar las basales y proporciones si es necesario, y luego habilita
 *No olvide registrar su lazo en `este formulario <http://bit.ly/nowlooping>`_ registrando AndroidAPS como su tipo de software de bucle DIY, si aún no lo has hecho.*
 
 
-Objetivo 9: Habilitación de funciones adicionales de oref0 para el uso horario, como por ejemplo la ayuda para comidas avanzadas (AMA)
+Objective 9: Try additional features for daytime use and gain confidence in your closed loop system
 ====================================================================================================
-* Ahora usted debe sentirse seguro con cómo AndroidAPS funciona y cuáles son los ajustes que reflejan su diabetes mejor
-* A continuación, durante un período de 28 días, puede probar características adicionales que automatizan aún más el trabajo para usted, como la `asistencia de comida avanzada <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_
+* Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_.
+* As `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
 
 
 Objetivo 10: Habilitación adicional oref1 características para uso durante el día, tales como super micro bolo (SMB)
@@ -129,6 +129,13 @@ Objetivo 10: Habilitación adicional oref1 características para uso durante el 
 * Debe leer el capítulo `SMB en este wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ y `capítulo oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ para entender cómo funciona SMB, especialmente cuál es la idea detrás de cero-temporal.
 * A continuación, usted debe `subir maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ para tener los SMBs trabajando bien. maxIOB ahora incluye todo IOB, no sólo la basal añadida. Es decir, si se le da un bolo de 8 U para una comida y maxIOB es 7 U, no se entregarán SMB hasta que el IOB caiga por debajo de 7 U. Un buen inicio es maxIOB = promedio bolos de comidas + 3x valor máximo diario (máx. basal diario = el valor máximo por hora en cualquier segmento de tiempo del día - vea `objetivo 7 <../Usage/Objectives.html#objective-7-tuning-the-cerró-loop-loop-max-iob-arriba-0-and-gradualmente-lowering-bg-targets>`_ para una ilustración)
 * El valor predeterminado de min_5m_carbimpact en los valores de absorción ha cambiado de 3 a 8 al ir de AMA a SMB. If you are upgrading from AMA to SMB, you have to change it manually.
+
+
+Objective 11: Automation
+====================================================================================================
+* You have to start objective 11 to be able to use `Automation <../Usage/Automation.html>`_.
+* Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-proof-your-knowledge>`_.
+
 
 Go back in objectives
 ====================================================================================================
