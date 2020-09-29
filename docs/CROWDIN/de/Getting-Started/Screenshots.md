@@ -39,29 +39,29 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 * AAPS kann das Ziel dynamisch anhand der Empfindlichkeit (Sensitivity) anpassen, wenn Du den SMB-Algorithmus verwendest.
 * Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
-   * "sensitivity raises target" and/or 
+   * "Sensibilität erhöht den Zielwert" und/oder 
    * "resistenz senkt Zielwert" 
-* If AAPS detects resistance or sensitivity the target will change from what is set from profile. 
-* When it alters the target glucose background will change to green.
+* Falls AAPS Resistenz oder Sensibilität erkennt, wird das aus dem Profil vorgegebene Ziel angepasst. 
+* Falls das Ziel geändert wird, wechselt der Hintergrund der Zielschaltfläche nach grün.
 
-### Section C - BG & loop status
+### Abschnitt C - BZ & Loop-Status
 
-#### Current blood glucose
+#### Aktueller Blutzucker
 
-* Latest blood glucose reading from your CGM is shown on the left side.
+* Der neueste Blutzuckerwert aus Deinem CGM wird auf der linken Seite angezeigt.
 * Color of the BG value reflects the status to the defined [range](../Configuration/Preferences#range-for-visualization). 
-   * green = in range
-   * red = below range
-   * yellow = above range
-* The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
+   * grün = innerhalb des Bereichs
+   * rot = unterhalb des Zielbereichs
+   * gelb = oberhalb des Zielbereichs
+* Der gräuliche Block in der Mitte zeigt die Minuten seit dem Empfang des letzten CGM-Werts an. Darunter findest die Veränderung der CGM-Werte zum vorangegangenen Wert, in den letzten 15 und 40 Minuten.
 
-#### Loop status
+#### Loop Status
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Loop Status](../images/Home2020_LoopStatus.png)
 
-* A new icon shows loop status:
+* Ein neues Symbol zeigt den Status des Loops:
    
-   * green circle = loop running
+   * grüner Kreis = Loop läuft
    * green circle with dotted line = [low glucose suspend (LGS)](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
    * red circled = loop disabled (not working permanently)
    * yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
