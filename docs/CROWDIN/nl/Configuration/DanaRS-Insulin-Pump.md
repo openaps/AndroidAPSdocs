@@ -2,7 +2,7 @@
 
 *Deze instructies zijn voor het instellen van de app en pomp, en gelden voor een DanaRS uit 2017 of jonger. Als je een oudere pomp hebt, ga dan naar de instructies voor de [DanaR insulinepomp](./DanaR-Insulin-Pump).*
 
-**DanaRS met nieuwe firmware v3 kan momenteel niet worden gebruikt met AndroidAPS!**
+**New Dana RS firmware v3 can be used from AndroidAPS version 2.7 onwards.**
 
 * De app gebruikt het profiel "BASAL A" op de pomp. Jouw huidige instellingen van jouw basaalstanden op de pomp zullen worden overschreven.
 
@@ -14,18 +14,22 @@
   
   ![DanaRS aan AAPS koppelen](../images/AAPS_DanaRSPairing.png)
 
-* Selecteer 'Pomp wachtwoord' en voer jouw wachtwoord in. (Standaardwachtwoord is 1234)   
-  **Je moet de koppeling bevestigen dmv de OK knop op de pomp** Net zoals bij andere bluetooth-apparaten (bijv. smartphone en autoradio).
+* Select Pump password and input your password.
   
-  ![Koppeling bevestigen op DanaRS](../images/DanaRS_Pairing.png)
+  * For DanaRS with firmware 1 and 2 the default password is 1234.
+  * For DanaRS with firmware 3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> On your pump open main menu -> review -> information. Nee. 3 is production date.
 
-* Selecteer 'Bolus snelheid' om de standaardsnelheid te wijzigen die de pomp gebruikt bij een bolus (12sec per Eenheid, 30sec per Eenheid of 60sec per Eenheid).
+* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+  
+  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
-* Herstart je telefoon.
+* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
 
-* Stel de stapgrootte van de basaal in op 0.01 E/uur via het artsen menu (Zie de handleiding van de pomp)
+* Restart your phone.
 
-* Activeer de vertraagde bolus-functie (Extended bolus) op de pomp
+* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
+
+* Activeer vertraagde bolussen op de pomp
 
 ## Foutmeldingen specifiek voor de DanaRS
 
