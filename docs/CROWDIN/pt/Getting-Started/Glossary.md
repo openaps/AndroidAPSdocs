@@ -158,7 +158,7 @@
  <td>Github</td>
  <td>web-based hosting service for version control using Git<br>-> storage of source code</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/MilosKozak/AndroidAPS">Github AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td>Glimp</td>
@@ -209,12 +209,6 @@
  <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - ficheiros de registo</a></td>
 </tr>
 <tr>
- <td>MA</td>
- <td>meal assist - standard algorithm to handle carbs</td>
- <td>AMA / SMB</td>
- <td><a href="../Usage/Open-APS-features.html#meal-assist-ma">Wiki - MA</a></td>
-</tr>
-<tr>
  <td>maxIOB</td>
  <td>safety feature - maximum total IOB AAPS can't go over</td>
  <td>&nbsp;</td>
@@ -239,10 +233,10 @@
  <td><a href="http://www.nightscout.info/">Nightscout</a></td>
 </tr>
 <tr>
- <td>Cliente NS</td>
+ <td>NS Client</td>
  <td>part of AAPS to connect to your Nightscout site</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - Cliente NS</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
 <tr>
  <td>Nightscout Reporter</td>
@@ -254,13 +248,13 @@
  <td>Objectivos</td>
  <td>learning program within AAPS guiding you step by step from open to closed loop</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Objectives.html">Wiki - objectivos</a></td>
+ <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
 </tr>
 <tr>
  <td>OpenAPS</td>
  <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pie)<br>AAPS uses some of the OpenAPS features</td>
  <td>&nbsp;</td>
- <td><a href="https://openaps.readthedocs.io">Documentos OpenAPS</a></td>
+ <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
 </tr>
 <tr>
  <td>Open Loop</td>
@@ -275,7 +269,7 @@
  <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - sensitivity detection</a></td>
 </tr>
 <tr>
- <td>Hora do pico</td>
+ <td>Peak time</td>
  <td>time of maximum effect of insulin given</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
@@ -284,25 +278,25 @@
  <td>PH</td>
  <td>pump history (entry in treatments tab)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Capturas de ecrã</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Screenshots</a></td>
 </tr>
 <tr>
  <td>Previsão</td>
  <td>preditions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - linhas de predições</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
 </tr>
 <tr>
  <td>Perfil</td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - perfil</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
 </tr>
 <tr>
  <td>Troca de Perfil</td>
  <td>(temporary) change of profile used or percentual increase/decrease</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Profiles.html">Wiki - mudança de perfil</a></td>
+ <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
 </tr>
 <tr>
  <td>RES</td>
@@ -329,7 +323,7 @@
  <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
- <td>Detecção de Sensibilidade</td>
+ <td>Sensivity detection</td>
  <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
  <td>&nbsp;</td>
  <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
@@ -347,13 +341,13 @@
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td>Super bólus</td>
+ <td>Super bolus</td>
  <td>shift of basal to bolus insulin for faster BG adjustment</td>
  <td>&nbsp;</td>
- <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - O Super Bólus</a></td>
+ <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
 </tr>
 <tr>
- <td>Basal diária</td>
+ <td>TBB</td>
  <td>total base basal (sum of basal rate within 24 hours)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
@@ -383,7 +377,7 @@
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td>Bomba virtual</td>
+ <td>Virtual pump</td>
  <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
  <td>Open Loop</td>
  <td>&nbsp;</td>
