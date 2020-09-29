@@ -2,7 +2,7 @@
 
 *Te instrukcje dotyczą konfiguracji aplikacji i pompy, jeśli masz DanaRS wyprodukowaną po 2017 roku. Odwiedź [ Pompa insulinowa DanaR ](./DanaR-Insulin-Pump), jeśli zamiast niej masz oryginalną pompę DanaR.*
 
-**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
+**New Dana RS firmware v3 can be used from AndroidAPS version 2.7 onwards.**
 
 * W pompie DanaRS jest używana baza „BASAL A”. Istniejące dane zostaną zastąpione.
 
@@ -14,18 +14,22 @@
   
   ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
 
-* Wybierz hasło pompy i wprowadź hasło. (Domyślne hasło to 1234)   
-  ** Musisz potwierdzić powiązanie w pompie! ** Tak jak podczas parowania innych urządzeń po bluetoth (np. Smartfona i car audio).
+* Select Pump password and input your password.
+  
+  * For DanaRS with firmware 1 and 2 the default password is 1234.
+  * For DanaRS with firmware 3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> On your pump open main menu -> review -> information. No. 3 is production date.
+
+* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
   
   ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
-* Wybierz Szybkość bolusa, aby zmienić domyślną prędkość bolusa (12 sek na 1u, 30 sek na 1u lub 60 sek na 1u).
+* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
 
-* Zrestartuj telefon.
+* Restart your phone.
 
-* Ustaw podstawowy krok na pompie na 0,01 U / h za pomocą menu Lekarze (patrz instrukcja obsługi pompy)
+* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
 
-* Uaktywnij bolusy przedłużone w pompie
+* Enable extended boluses on pump
 
 ## Dana RS znane problemy
 
