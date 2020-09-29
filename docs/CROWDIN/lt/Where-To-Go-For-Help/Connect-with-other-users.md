@@ -5,7 +5,7 @@
 * 1 žingsnis: perskaitykite „Wiki“ - dabar mes turime paieškos funkciją, kuri jums padės!
 * 2 etapas: ieškokite Facebook grupėje; jei ten dar nebuvo atsakyta į jūsų klausimą, paklauskite [AndroidAPS Users Facebook group](https://www.facebook.com/groups/1900195340201874/)
 * 3 lygis: jei Facebook nepateikia sprendimo, paklauskite [gitter](https://gitter.im/MilosKozak/AndroidAPS). Abiejų kanalų pranešimų kopijos ignoruojamos/ištrinamos, kad būtų išvengta pasikartojančių atsakymų. Atminkite, kad dauguma kūrėjų yra Europoje, todėl jiems neįmanoma visą parą; skirkite jiems kelias valandas atsakymui, ypač savaitgaliais ir atostogų metu.
-* 4 žingsnis: sukurkite [problemos aprašą](https://github.com/MilosKozak/AndroidAPS/issues) ir pridėkite savo [žurnalo failus](../Usage/Accessing-logfiles.md)
+* level 4: Create an [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../Usage/Accessing-logfiles.md)
 * 5 lygis: Parašykite el. laišką adresu *developers@androidaps.org* (tik jei reikia asmeninių duomenų, kurių nereikėtų skleisti viešajame kanale, ir jei jūsų problema nebuvo išspręsta kitu lygiu)
 
 Norėdami gauti NGJ šaltinių palaikymą, naudokite Facebook grupes ar gitter kanalus konkrečiai sistemai (pvz., [xdrip](https://www.facebook.com/groups/xDripG5/), [600 serijos uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)). Nightscout pagalbai naudokitės [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/), nes ten esantys vartotojai žino daugiau apie konkrečias sistemas nei čia esantys žmonės, kurie visi naudoja skirtingas sistemas.
