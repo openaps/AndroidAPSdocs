@@ -120,7 +120,7 @@ Ziel 8: Passe, falls notwendig, Basalraten und Faktoren an und aktiviere dann di
 
 Ziel 9: Teste zusätzliche Funktionen für den Alltagsgebrauch und gewinne Vertrauen in Dein Closed Loop System
 ====================================================================================================
-* Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_.
+* In Versionen von 2.7 war der Meal Assist (MA) der Standard-Algorithmus für AAPS und das Ziel 8 war notwendig, um den  `advanced meal assist (AMA) <../Usage/Open-APS-features.html#erweiterter-mahlzeit-assistent-ama>`_ zu verwenden.
 * Da der `advanced meal assist (AMA) <../Usage/Open-APS-features.html#erweiterter-mahlzeit-assistent-ama>`_ ab Version 2.7 der neue Standard-Algorithmus in AAPS ist, kannst Du diese 28 Tage nutzen, um Funktionen zu testen, die Du bisher nicht verwendet hast, und mehr Vertrauen in Dein Closed Loop System zu gewinnen.
 
 
@@ -131,16 +131,17 @@ Ziel 10: Aktiviere zusätzliche oref1 Funktionen zum täglichen Gebrauch, wie z.
 * Der Standardwert von min_5m_carbimpact in den Absorptions-Einstellungen muss von 3 auf 8 erhöht werden, wenn du von AMA zum SMB wechselst. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
 
 
-Objective 11: Automation
+Ziel 11: Automatisierung
 ====================================================================================================
-* You have to start objective 11 to be able to use `Automation <../Usage/Automation.html>`_.
-* Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-proof-your-knowledge>`_.
+* Du musst Ziel 11 starten, um `Automatisierungen <../Usage/Automation.html>`_ nutzen zu können.
+* Stelle sicher, dass Du alle vorangegangenen Ziele inkl. des `Wissenstest  <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ abgeschlossen hast.
+* Completing previous objectives will not effect other objectives you have already finished. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 
 Objective (Ziel) neu starten
 ====================================================================================================
 Wenn Du aus welchem Grund auch immer ein Objective (Ziel) neu starten willst, klicke auf "Ziel neu starten".
 
-   .. image:: ../images/Objective_ClearFinished.png
-     :alt: Objective (Ziel) neu starten
+.. image:: ../images/Objective_ClearFinished.png
+  :alt: Objective (Ziel) neu starten
 
