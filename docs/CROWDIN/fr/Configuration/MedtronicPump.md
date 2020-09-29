@@ -44,7 +44,7 @@ Si vous avez commencé à utiliser le pilote Medtronic, merci de vous ajouter à
 
 Si vous faites une nouvelle installation, vous serez directement dans l'assistant. Parfois, si votre connexion BT ne fonctionne pas parfaitement (impossible de se connecter à la pompe), vous ne pourrez pas terminer la configuration. Dans ce cas, sélectionnez la pompe virtuelle et une fois l'assistant terminé, vous pouvez utiliser l'option 2, qui permet de contourner la détection de la pompe.
 
-![Paramètres MDT](../images/Medtronic01.png)
+![Paramètres MDT](../images/Medtronic01a.png)
 
 Vous devez définir les éléments suivants : (voir photo ci-dessus)
 
@@ -59,6 +59,7 @@ Vous devez définir les éléments suivants : (voir photo ci-dessus)
 - **Encodage Medtronic** : Ce paramètre défini si l'encodage 4b6b fait par les appareils Medtronic doit être fait dans AndroidAPS ou dans le RileyLink. Si vous avez un RileyLink avec un firmware 2.x, la valeur par défaut sera d'utiliser l'encodage matériel (= fait par le RileyLink), si vous avez un firmware 0.x, ce paramètre sera ignoré.
 - **Type de batterie (Power View)** : Si vous voulez voir la charge de la pile de votre pompe, vous devez sélectionner le type de pile que vous utilisez (actuellement Lithium ou Alkaline sont supportées), cela changera l'affichage pour afficher le pourcentage et la tension.
 - **Configuration RileyLink** : Vous trouverez votre appareil RileyLink/GNARL.
+- **Set neutral temp basals** is an option which can help prevent Medtronic pumps from beeping on the hour. If enabled if will cancel a temp basal before the hour end to prevent this from happening.
 
 ## Onglet MEDTRONIC (MDT)
 
