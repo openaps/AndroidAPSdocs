@@ -28,16 +28,16 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
     ![Verbleibende Dauer temporäres Ziel](../images/Home2020_TT.png)
     
 
-* Current target blood glucose level is displayed in the right bar.
-* Long press target bar to set a [temporary target](../Usage/temptarget.md).
-* If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
+* Das aktuelle BZ-Ziel wird in der rechten Schaltfläche angezeigt.
+* Schaltfläche Ziel lange drücken, um ein [temporäres Ziel ](../Usage/temptarget.md) festzulegen.
+* Falls ein temporäres Ziel festgelegt ist, wird die Leiste gelb und die verbleibende Zeit in Minuten in Klammern angezeigt.
 
-#### Visualization of Dynamic target adjustment
+#### Anzeige der dynamischen Ziel-Anpassung
 
-    ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+    ![Darstellung der dynamischen Ziel-Anpassung](../images/Home2020_DynamicTargetAdjustment.png)
     
 
-* AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
+* AAPS kann das Ziel dynamisch anhand der Empfindlichkeit (Sensitivity) anpassen, wenn Du den SMB-Algorithmus verwendest.
 * Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
    * "sensitivity raises target" and/or 
    * "resistenz senkt Zielwert" 
