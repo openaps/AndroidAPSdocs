@@ -2,7 +2,7 @@
 
 *Αυτές οι οδηγίες αφορούν τη διαμόρφωση της εφαρμογής και της αντλίας σας εάν έχετε μια DanaRS από το 2017 και μετά. Επισκεφθείτε την  DanaR Αντλία Ινσουλίνης </ 0> αν έχετε την DanaR αντλία.</em></p> 
 
-**DanaRS with new firmware v3 cannot currently be used with AndroidAPS!**
+**New Dana RS firmware v3 can be used from AndroidAPS version 2.7 onwards.**
 
 * Στην αντλία DanaRS χρησιμοποιείται η εφαρμογή "βασικός ρυθμός Α". Τα υπάρχοντα δεδομένα αντικαθίστανται.
 
@@ -14,18 +14,22 @@
   
   ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
 
-* Επιλέξτε τον κωδικό αντλίας και εισαγάγετε τον κωδικό πρόσβασης σας. (Ο προεπιλεγμένος κωδικός πρόσβασης είναι 1234)   
-  ** Πρέπει να επιβεβαιώσετε την σύζευξη στην αντλία! ** Αυτός είναι ο τρόπος με τον οποίο συνηθίζετε να κάνετε και άλλες συνδέσεις bluetooth (δηλαδή smartphone και ηχείο αυτοκινήτου).
+* Select Pump password and input your password.
+  
+  * For DanaRS with firmware 1 and 2 the default password is 1234.
+  * For DanaRS with firmware 3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> On your pump open main menu -> review -> information. Όχι. 3 is production date.
+
+* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
   
   ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
-* Επιλέξτε ταχύτητα Bolus ​​για να αλλάξετε την προεπιλεγμένη ταχύτητα bolus (12sec ανά 1u, 30sec ανά 1u ή 60sec ανά 1u).
+* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
 
-* Επανεκκινήστε το τηλέφωνό σας.
+* Restart your phone.
 
-* Ρυθμίστε το βασικό βήμα στην αντλία σε 0,01 U / h χρησιμοποιώντας το μενού Γιατροί (δείτε το εγχειρίδιο χρήσης της αντλίας)
+* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
 
-* Ενεργοποιήστε τα εκτεταμένα bolus στην αντλία
+* Ενεργοποιήστε το εκτεταμένο bolus στην αντλία
 
 ## Συγκεκριμένες βλάβες της Dana Rs
 
