@@ -5,7 +5,7 @@ Ten projekt opiera się na pracy wolontariuszy, dlatego obowiązują pewne zasad
 * poziom 1: Przeczytaj Wiki - teraz mamy funkcję wyszukiwania, która Ci pomoże!
 * poziom 2: Przeszukuj grupę na Facebooku, jeśli nie ma już odpowiedzi, zadaj pytanie w grupie [AndroidAPS Users na Facebooku ](https://www.facebook.com/groups/1900195340201874/)
 * poziom 3: Jeśli Facebook nie dał rezultatów, zapytaj na [ gitter ](https://gitter.im/MilosKozak/AndroidAPS). Direct crossposts will be ignored/deleted on both channels to avoid duplicate answers. Nie zapominaj, że większość programistów znajduje się w Europie, więc odpowiedź może nie być dostępna 24/7; być może będziesz musiał poczekać kilka godzin, szczególnie w weekendy i święta.
-* poziom 4: Utwórz [ problem](https://github.com/MilosKozak/AndroidAPS/issues) i dołącz [pliki dziennika](../Usage/Accessing-logfiles.md)
+* level 4: Create an [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../Usage/Accessing-logfiles.md)
 * poziom 5: e-mail *developers@androidaps.org* (tylko w przypadku danych osobowych, które nie powinny wejść do publicznej wiadomości, a twoje problemy nie zostały rozwiązane na innych poziomach)
 
 Aby uzyskać pomoc dotyczącą różnych CGM, skorzystaj z grup Facebooka lub kanałów gittter dla konkretnego systemu (np. [xdrip](https://www.facebook.com/groups/xDripG5/), [uploader z serii 600 ](https://www.facebook.com/groups/NightscoutForMedtronic/)) lub wsparcia w korzystaniu z Nightscout [ CGMintheCloud ](https://www.facebook.com/groups/cgminthecloud/) jako użytkownicy będą oni mieli większy poziom wiedzy niż ludzie, którzy używają różnych systemów.
