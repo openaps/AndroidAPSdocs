@@ -135,11 +135,12 @@ Objective 11: Automation
 ====================================================================================================
 * You have to start objective 11 to be able to use `Automation <../Usage/Automation.html>`_.
 * Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-proof-your-knowledge>`_.
+* Completing previous objectives will not effect other objectives you have already finished. You will keep all finished objectives!
 
 
 Go back in objectives
 ====================================================================================================
 If you want to go back in objectives for whatever reason you can do so by clicking at "clear finished".
 
-   .. image:: ../images/Objective_ClearFinished.png
-     :alt: Go back in objectives
+.. image:: ../images/Objective_ClearFinished.png
+  :alt: Go back in objectives
