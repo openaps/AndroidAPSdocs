@@ -20,7 +20,7 @@ Prüfung abschließen
 -----------------------------------------------------------
 * AAPS 2.7 hat ein neues Objective 11 für `Automatisierung <../Usage/Automation.html>`_ bekommen.
 * Du musst die Prüfung erfolgreich beenden (`Objectives 3 und 4 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_), um `Objective 11 <../Usage/Objectives.html#objective-11-automation>`_ starten zu können.
-* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/objective-11-automation>`_. 
+* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. 
 * Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 Master-Passwort festlegen
