@@ -20,7 +20,7 @@ Prüfung abschließen
 -----------------------------------------------------------
 * AAPS 2.7 hat ein neues Objective 11 für `Automatisierung <../Usage/Automation.html>`_ bekommen.
 * Du musst die Prüfung erfolgreich beenden (`Objectives 3 und 4 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_), um `Objective 11 <../Usage/Objectives.html#objective-11-automation>`_ starten zu können.
-* Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Automation.html> starten kannst.`_. 
+* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. 
 * Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 Master-Passwort festlegen
@@ -38,7 +38,7 @@ Exportiere die Einstellungen
 -----------------------------------------------------------
 * AAPS 2.7 verwendet ein neues verschlüsseltes Backup-Format. 
 * Du musst daher nach dem Update auf Version 2.7 `Deine Einstellungen exportieren <../Usage/ExportImportSettings.html>`_.
-* Einstellungen aus früheren Versionen **können nicht** mit AAPS 2.7 und höher verwendet werden.
+* Settings files from previous versions can only be imported in AAPS 2.7. Export will be in new format.
 * Speichere Deine exportierten Einstellungen nicht nur auf Deinem Smartphone, sondern auch an mindestens einem sicheren Ort (PC, Cloud-Speicher ...).
 * Wenn Du die AAPS 2.7 APK mit dem gleichen keystore wie in früheren Versionen erstellst, kannst Du die neue Version installieren, ohne die vorherige Version zu deinstallieren. 
 * Alle Einstellungen sowie abgeschlossenen Objectives (Ziele) bleiben so, wie sie in der Vorgängerversion waren.

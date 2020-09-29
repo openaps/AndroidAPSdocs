@@ -2,7 +2,7 @@
 
 *Tyto pokyny jsou pro konfiguraci aplikace a Vaší pumpy, pokud máte pumpu DanaRS od roku 2017 a výše. Pokud máte původní DanaR, navštivte [Pumpa DanaR](./DanaR-Insulin-Pump).*
 
-**DanuRS s novým firmware v3 nelze v současné době použít s AndroidAPS!**
+**New Dana RS firmware v3 can be used from AndroidAPS version 2.7 onwards.**
 
 * V pumpě DANARS je aplikací používán "BAZÁL A". Existující data budou přepsána.
 
@@ -14,18 +14,22 @@
   
   ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
 
-* Zvolte Heslo k pumpě a vložte své heslo. (Výchozí heslo je 1234)   
-  **Párování musíte potvrdit na pumpě!** Jedná se o stejný postup jako při párování jiných bluetooth zařízení (např. smartphonu nebo rádia v autě).
+* Select Pump password and input your password.
+  
+  * For DanaRS with firmware 1 and 2 the default password is 1234.
+  * For DanaRS with firmware 3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> On your pump open main menu -> review -> information. Ne. 3 is production date.
+
+* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
   
   ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
-* Vyberte rychlost bolusu, abyste změnili výchozí rychlost bolusu (12sec na 1U, 30sec na 1U nebo 60sec na 1U).
+* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
 
-* Restartujte telefon.
+* Restart your phone.
 
-* Nastavte bazální dávkování na 0,01 U/h pomocí lékařského menu (viz uživatelská příručka pumpy)
+* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
 
-* Povolte rozšířené bolusy na pumpě
+* Na pumpě povolte rozšířené bolusy
 
 ## Specifické chyby Dana RS
 

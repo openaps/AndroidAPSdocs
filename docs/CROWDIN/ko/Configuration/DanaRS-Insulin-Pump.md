@@ -2,7 +2,7 @@
 
 *다음은 2017년 이후의 다나 RS 펌프를 사용하는 경우에서 앱과 펌프를 설정하기 위한 안내입니다. 만약 오리지널 다나 R 펌프를 사용하는 경우에는 [DanaR Insulin Pump](./DanaR-Insulin-Pump)를 확인하십시오.*
 
-**새 펌웨어 v3를 사용하는 다나 RS는 현재 AndroidAPS를 사용할 수 없습니다.**
+**New Dana RS firmware v3 can be used from AndroidAPS version 2.7 onwards.**
 
 * 다나 RS 펌프의 "BASAL A"가 앱에서 사용됩니다. 기존 데이터는 덮어쓰여집니다.
 
@@ -14,18 +14,22 @@
   
   ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
 
-* '펌프 비밀번호'에서 비밀번호를 입력하십시오. (초기 비밀번호는 1234입니다)   
-  ** 펌프와 연결되었는지 확인해야합니다!** 다른 블루투스 연결 (예를 들어, 스마트폰과 자동차 오디오)에서 사용하는 방법과 같습니다.
+* Select Pump password and input your password.
   
-  ![다나 RS 연결 확인](../images/DanaRS_Pairing.png)
+  * For DanaRS with firmware 1 and 2 the default password is 1234.
+  * For DanaRS with firmware 3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> On your pump open main menu -> review -> information. 아니오. 3 is production date.
 
-* 'Bolus 속도'에서 설정되어 있는 bolus 속도를 변경할 수 있습니다(1u에 12초, 30초, 60초).
+* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+  
+  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
-* 폰을 재시작합니다.
+* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
 
-* 펌프의 닥터 모드에서 basal step (basal inc)를 0.01로 설정하십시오 (펌프 사용자 가이드를 참고).
+* Restart your phone.
 
-* 펌프에서 확장 bolus 기능을 활성화하십시오.
+* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
+
+* 펌프에서 확장Bolus를 활성화하세요.
 
 ## Dana RS 특정 오류
 

@@ -11,7 +11,7 @@ Funktionen
 * Die Pumpe des Kindes wird vom Smartphone des Kindes durch AndroidAPS gesteuert.
 * Die Eltern können aus der Ferne alle relevanten Daten wie Glukosewerte, aktive Kohlenhydrate, aktives Insulin usw. sehen. Dazu können sie die **NSClient App** auf ihrem Smartphone verwenden. Du musst in AndroidAPS und NSClient die gleichen Einstellungen verwenden.
 * Alarme auf den Smartphones der Eltern sind durch Einsatz **xDrip+ im Follower Modus** möglich.
-* Fernsteuerung von AndroidAPS mittels `SMS Kommandos <../Children/SMS-Commands.html>`_.
+* Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_ secured by two-factor authentication.
 * Profilwechsel und temporäre Ziele aus der Ferne mittels der NSClientApp.
 
 Tools und Apps für die Fernüberwachung
@@ -20,7 +20,7 @@ Tools und Apps für die Fernüberwachung
 *	NSClient App
 * Dexcom Follow App zusammen mit der originalen Dexcom App (nur BZ-Werte)
 *	`xDrip+ <../Configuration/xdrip.html>`_ im Follower Modus (vor allem Datenanzeige und **Alarme**)
-*	`Spike <https://spike-app.com/>`_ auf einem iPhone (vor allem Datenanzeige und **Alarme**)
+*	`Sugarmate <https://sugarmate.io/>`_ or `Spike <https://spike-app.com/>`_ on iOS (mainly BG values and **alarms**)
 
 Dinge, die zu beachten sind
 ==================================================

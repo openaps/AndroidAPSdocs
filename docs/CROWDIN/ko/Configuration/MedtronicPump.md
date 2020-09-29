@@ -44,7 +44,7 @@ If you started using Medtronic driver please add yourself to this [list](https:/
 
 If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
 
-![MDT Settings](../images/Medtronic01.png)
+![MDT Settings](../images/Medtronic01a.png)
 
 You need to set following items: (see picture above)
 
@@ -59,6 +59,7 @@ You need to set following items: (see picture above)
 - **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. If you have a RileyLink with 2.x firmware, default value will be to use Hardware encoding (= done by RileyLink), if you have 0.x firmware this setting will be ignored.
 - **Battery Type (Power View)**: If you want to see battery power in your pump, you need to select type of battery you use (currently supported Lithium or Alkaline), this will in turn change display to display calculated percent and volts.
 - **RileyLink Configuration**: This will find your RileyLink/GNARL device.
+- **Set neutral temp basals** is an option which can help prevent Medtronic pumps from beeping on the hour. If enabled if will cancel a temp basal before the hour end to prevent this from happening.
 
 ## MEDTRONIC (MDT) Tab
 

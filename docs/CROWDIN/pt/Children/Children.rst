@@ -11,7 +11,7 @@ Funções
 * A bomba da criança é controlada pelo telefone da criança usando o AndroidAPS.
 * Os pais podem seguir remotamente vendo todos os dados relevantes, como níveis de glicemia (BG), hidratos de carbono ativos (COB), insulina ativa (IOB), etc. utilizando **app NSClient** no seu telefone. Settings must be the same in AndroidAPS and NSClient.
 * Parents can be alarmed by using **xDrip+ app in follower mode** on their phone.
-* Controle remoto do AndroidAPS usando ` Comandos SMS <../Children/SMS-Commands.html> ` _.
+* Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_ secured by two-factor authentication.
 * Alternador de perfil remoto e metas temporárias através do aplicativo NSClient.
 
 Ferramentas e aplicativos para monitorização remota
@@ -20,7 +20,7 @@ Ferramentas e aplicativos para monitorização remota
 * Aplicação NSClient
 * O Dexcom Follow se estiver a usar a app original da Dexcom (apenas valores BG)
 *	`xDrip+ <../Configuration/xdrip.html>`_ in follower mode (mainly BG values and **alarms**)
-* ` Spike <https://spike-app.com/>` _ no iPhone (principalmente valores glicemia (BG) e ** alarms**)
+*	`Sugarmate <https://sugarmate.io/>`_ or `Spike <https://spike-app.com/>`_ on iOS (mainly BG values and **alarms**)
 
 Considerações a ter
 ==================================================

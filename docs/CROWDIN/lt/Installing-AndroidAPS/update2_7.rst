@@ -20,7 +20,7 @@ Baigti egzaminą
 -----------------------------------------------------------
 * AAPS 2.7 programoje yra naujas Tikslas 11 `Automatizavimas <../Usage/Automation.html>`_.
 * Jūs turite išlaikyti egzaminą (`Tikslas 3 ir 4 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_), kad užbaigtumėte `Tikslą 11 <../Usage/Objectives.html#objective-11-automation>`_.
-* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Automation.html>`_. 
+* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. 
 * This will not effect other objectives you have already finished. You will keep all finished objectives!
 
 Pagrindinio slaptažodžio nustatymas
@@ -38,7 +38,7 @@ Eksportuoti nustatymus
 -----------------------------------------------------------
 * AAPS 2.7 naudoja naują šifruotą atsarginės kopijos formatą. 
 * Jūs turite `eksportuoti savo nustatymus <../Usage/ExportImportSettings.html>`_ po atnaujinimo į versiją 2.7.
-* Nustatymų failai iš ankstesnių versijų ** negali** būti naudojami AAPS 2.7 versijoje ir vėlesnėse.
+* Settings files from previous versions can only be imported in AAPS 2.7. Export will be in new format.
 * Įsitikinkite, kad saugojate savo eksportuotus nustatymus ne tik telefone, bet ir bent vienoje saugioje vietoje (jūsų kompiuteris, debesijos saugykla...).
 * If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version. 
 * All settings as well as finished objectives will remain as they were in the previous version.

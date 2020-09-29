@@ -158,7 +158,7 @@
  <td>GitHub</td>
  <td>žiniatinklio versijos valdymo paslauga Git naudotojams<br> - šaltinio kodo saugykla</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/MilosKozak/AndroidAPS">Github AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td>Glimp</td>
@@ -209,16 +209,10 @@
  <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - žurnalo failai</a></td>
 </tr>
 <tr>
- <td>MA</td>
- <td>maisto asistentas - standartinis algoritmas angliavandeniams tvarkyti</td>
- <td>AMA / SMB</td>
- <td><a href="../Usage/Open-APS-features.html#meal-assist-ma">Wiki - MA</a></td>
-</tr>
-<tr>
- <td>maksAIO</td>
- <td>saugumo funkcija: didžiausias leistinas bendras aktyvaus insulino lygis, kurio AAPS negali viršyti</td>
+ <td>maxIOB</td>
+ <td>safety feature - maximum total IOB AAPS can't go over</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maksAIO</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>MiaoMiao</td>
@@ -228,185 +222,185 @@
 </tr>
 <tr>
  <td>min_5m_AV_įtaka</td>
- <td>saugumo funkcija - standartinis angliavandenių įsisavinimo laikas. Naudojamas, jei jo negalima dinamiškai nustatyti atsižvelgiant į glikemiją</td>
+ <td>saftey feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your bloods reactions</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - konfigūratorius</a></td>
+ <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - config builder</a></td>
 </tr>
 <tr>
  <td>Nightscout</td>
- <td>atvirojo kodo projektas, skirtas prieigai prie NGJ duomenų</td>
+ <td>open source project to access and report CGM data</td>
  <td>Nightscout Reporter</td>
  <td><a href="http://www.nightscout.info/">Nightscout</a></td>
 </tr>
 <tr>
  <td>NS Client</td>
- <td>AAPS dalis, skirta keistis duomenimis su Nightscout serveriu</td>
+ <td>part of AAPS to connect to your Nightscout site</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
 <tr>
  <td>Nightscout Reporter</td>
- <td> Nightscout duomenų PDF ataskaitų kūrimo įrankis</td>
+ <td>Tool from fellow looper to generate PDFs reports from Nightscout data</td>
  <td>Nightscout</td>
- <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NR Reporter @ Facebook</a></td>
+ <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
 <tr>
  <td>Tikslai</td>
- <td>AAPS mokymo programa su palaipsniu perėjimu iš atviro į uždarą ciklą</td>
+ <td>learning program within AAPS guiding you step by step from open to closed loop</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Objectives.html">Wiki - tikslai</a></td>
+ <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
 </tr>
 <tr>
  <td>OpenAPS</td>
- <td>Atvirojo kodo dirbtinės kasos sistema <br>Veikia mažuose kompiuteriuose (pvz., Raspberry PI)<br> AAPS naudoja kai kurias OpenAPS funkcijas</td>
+ <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pie)<br>AAPS uses some of the OpenAPS features</td>
  <td>&nbsp;</td>
- <td><a href="https://openaps.readthedocs.io">OpenAPS dokumentacija</a></td>
+ <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
 </tr>
 <tr>
  <td>Atviras Ciklas</td>
- <td>būsena, kai sistema rekomenduoja rankinius pompos nustatymus</td>
+ <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
  <td>Uždaras Ciklas</td>
- <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - konfigūratorius</a></td>
+ <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
 </tr>
 <tr>
  <td>Oref0 / Oref1</td>
- <td>Jautrumo (insulinui) nustatymas<br> OpenAPS naudojama pagrindinio algoritmo versija 0/1</td>
+ <td>sensitivity detection<br>"reference design implementation version 0/1" - the key algorithm behind OpenAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - Jautrumo nustatymas</a></td>
+ <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - sensitivity detection</a></td>
 </tr>
 <tr>
- <td>Piko laikas</td>
- <td>laikas, po kurio suleisto insulino poveikis tampa maksimalus</td>
+ <td>Peak time</td>
+ <td>time of maximum effect of insulin given</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - konfigūratorius</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
 </tr>
 <tr>
- <td>PI</td>
- <td>pompos istorija (įrašas Terapijos skirtuke)</td>
+ <td>PH</td>
+ <td>pump history (entry in treatments tab)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Ekrano nuotraukos</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Screenshots</a></td>
 </tr>
 <tr>
  <td>Prognozės</td>
- <td>glikemijos prognozės ateityje, remiantis skirtingais skaičiavimo algoritmais</td>
+ <td>preditions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - glikemijos prognozavimo linijos</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
 </tr>
 <tr>
  <td>Profilis</td>
- <td>pagrindiniai terapijos nustatymai (bazė, IVT, IA, JIF, tikslinė glikemija). <br>Galima nustatyti lokaliai arba per Nightscout</td>
+ <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profilis</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
 </tr>
 <tr>
  <td>Profilio keitimas</td>
- <td>(laikinas) profilio pakeitimas arba procentinis padidinimas / sumažinimas</td>
+ <td>(temporary) change of profile used or percentual increase/decrease</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Profiles.html">Wiki - profilio keitimas</a></td>
+ <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
 </tr>
 <tr>
- <td>REZ</td>
- <td>pagrindiniame ekrane pateikiamas būsenos indikatorius, kad laiku nepakeistas rezervuaras</td>
- <td>BAT / KAT / SEN</td>
+ <td>RES</td>
+ <td>status light overdue reservoir change on homescreen</td>
+ <td>BAT / CAN / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Nuostatos</a><br><a href="../Getting-Started/Screenshots.html">Ekrano vaizdai</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
- <td>įtaisas, skirtas mažos energijos Bluetooth (BLE) turinčių prietaisų susiejimui su 916 MHz dažnio įrenginiais (senesnėms Medtronic pompoms)</td>
+ <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz wireless communication (used for old Medtronic pumps)</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>SAMŽ</td>
- <td>sensoriaus amžius - rodomas Nightscout svetainėje, jei informacija įvedama AAPS Priežiūros skirtuke</td>
+ <td>SAGE</td>
+ <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>SEN</td>
- <td>pagrindiniame ekrane pateikiamas būsenos indikatorius, kad laiku nepakeistas sensorius</td>
- <td>BAT / KAT / REZ</td>
+ <td>status light sensor change on homescreen</td>
+ <td>BAT / CAN / RES</td>
  <td><a href="../Configuration/Preferences.html#overview">Nuostatos</a><br><a href="../Getting-Started/Screenshots.html">Ekrano vaizdai</a></td>
 </tr>
 <tr>
- <td>Jautrumo nustatymas</td>
+ <td>Sensivity detection</td>
  <td>jautrumo insulinui pokyčių dėl fizinio krūvio, hormonų ir kt. nustatymas.</td>
  <td>&nbsp;</td>
  <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
- <td>Sensoriaus triukšmas</td>
- <td>nestabilūs NGJ duomenys, pasireiškiantys dideliais glikemijos reikšmių svyravimais</td>
+ <td>Sensor noise</td>
+ <td>unstable CGM readings leading to "jumping" values</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensoriaus triukšmas</a></td>
+ <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
 </tr>
 <tr>
  <td>SMB</td>
- <td>super mikro bolusas<br> pažangi technologija, leidžianti greičiau sureguliuoti glikemijos lygį</td>
- <td>NDM</td>
+ <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
+ <td>UAM</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td>Super bolusas</td>
- <td>bazinio insulino pridėjimas prie boluso greitesnei glikemijos korekcijai</td>
+ <td>Super bolus</td>
+ <td>shift of basal to bolus insulin for faster BG adjustment</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
 </tr>
 <tr>
- <td>PB</td>
- <td>pagrindinė bazė (bazinis insulino kiekis per 24 valandas)</td>
+ <td>TBB</td>
+ <td>total base basal (sum of basal rate within 24 hours)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>LB</td>
- <td>laikina bazė</td>
+ <td>TBR</td>
+ <td>temporary basal rate</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>BPD</td>
- <td>bendra paros dozė = bolusai + bazė per dieną</td>
+ <td>TDD</td>
+ <td>total daily dose (bolus + basal per day)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>LT</td>
- <td>laikinas tikslas <br> laikinas glikemijos tikslo (diapazono) padidinimas / sumažinimas</td>
+ <td>TT</td>
+ <td>temporary target<br>temporary increase/decrease of BG target (range)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.html#temp-targets">Wiki - laikini tikslai</a></td>
+ <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
 </tr>
 <tr>
- <td>NDM</td>
- <td>nedeklaruotas maistas - reikšmingo glikemijos kilimo dėl neįvesto maisto, adrenalino ar kito poveikio nustatymas ir bandymas kompensuoti per SMB mechanizmą</td>
+ <td>UAM</td>
+ <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
  <td>SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td>Virtuali pompa</td>
- <td>galimybė naudoti AAPS su pompa, kuri neturi palaikomos tvarkyklės</td>
+ <td>Virtual pump</td>
+ <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
  <td>Atviras Ciklas</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>Fonas</td>
- <td>AndroidAPS fono paveikslėlis</td>
+ <td>AndroidAPS background image</td>
  <td></td>
- <td><a href="../Getting-Started/Phones.html#phone-background">žr. psl. Telefonai</a></td>
+ <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>
 </tr>
 <tr>
  <td>xDrip / xDrip+</td>
- <td>atviro kodo programinė įranga NGJ duomenų apdorojimui</td>
+ <td>open source software to read CGM systems</td>
  <td>&nbsp;</td>
  <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
- <td>Nulinė bazė</td>
- <td>0% laikina valandinė bazė (insulinas netiekiamas)</td>
+ <td>Zero-temp</td>
+ <td>temporary basal rate with 0% (no basal insulin delivery)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td colspan=4>Taip pat žr. <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
+ <td colspan=4>See also <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
 </tr>
 </table>

@@ -158,7 +158,7 @@
  <td>Github</td>
  <td>webbasierter Hosting-Dienst für die Versionskontrolle mit Git <br>-> Speicherort des Quellcodes</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/MilosKozak/AndroidAPS">Github AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td>Glimp</td>
@@ -209,16 +209,10 @@
  <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - Logfiles erhalten</a></td>
 </tr>
 <tr>
- <td>MA</td>
- <td>Mahlzeiten-Assistent (meal assist) - Standardalgorithmus zum Umgang mit Kohlenhydraten</td>
- <td>AMA / SMB</td>
- <td><a href="../Usage/Open-APS-features.html#meal-assist-ma">Wiki - MA</a></td>
-</tr>
-<tr>
  <td>maxIOB</td>
  <td>Sicherheitsfunktion - Wert für maximales aktives Insulin im Körper, der von AAPS nicht überschritten werden kann</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html##einstellungen-die-bei-umstellung-von-ama-zu-smb-erforderlich-sind">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html##einstellungen-die-bei-umstellung-von-ama-zu-smb-erforderlich-sind">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>MiaoMiao</td>
@@ -239,7 +233,7 @@
  <td><a href="http://www.nightscout.info/">Nightscout</a></td>
 </tr>
 <tr>
- <td>Nightscout-Client</td>
+ <td>NS Client Einstellungen für die Synchronisation deiner AndroidAPS Daten mit Nightscout</td>
  <td>Teil von AAPS zur Verbindung mit Deiner Nightscout-Seite</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>

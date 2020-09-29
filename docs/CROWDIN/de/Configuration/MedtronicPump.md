@@ -44,7 +44,7 @@ So bald Du AAPS mit einer Medtronic Pumpe nutzt, bitten wir um Eintrag in diese 
 
 Bei einer Neuinstallation startet der Assistent automatisch. Falls Deine Bluetooth-Verbindung nicht vollständig funktioniert und das Smartphone sich nicht mit der Pumpe verbinden kann, kannst Du die Konfiguration ggf. nicht abschließen. Wähle in diesem Fall die virtuelle Pumpe und am Ende der Konfiguration des Assistenten die Option 2 , damit die Pumpenerkennung umgangen wird.
 
-![Medtronic (MDT) Einstellungen](../images/Medtronic01.png)
+![Medtronic (MDT) Einstellungen](../images/Medtronic01a.png)
 
 Folgende Einstellungen sind erforderlich (vgl. Bild oben):
 
@@ -59,6 +59,7 @@ Folgende Einstellungen sind erforderlich (vgl. Bild oben):
 - **Medtronic Encoding**: Diese Einstellung legt fest, ob die "4b6b Kodierung" des Medtronic Geräts durch AndroidAPS oder RileyLink erfolgen soll. Wenn Du einen RileyLink mit 2.x Firmware verwendest, ist die Standardeinstellung die Hardware-Kodierung durch den RileyLink. Bei älteren RileyLink mit 0.x firmware wird diese Einstellung ignoriert.
 - **Batterietyp (Ladestandsanzeige)**: Wenn Du den Batteriestand Deiner Pumpe sehen möchtest, musst Du den Batterietyp, den Du verwendest, auswählen. Aktuell werden Lithium oder Alkaline unterstützt. Dies ändert die Anzeige auf berechnete Prozent und Volt.
 - **RileyLink Configuration**: Zur Verbindungsherstellung mit Deinem RileyLink/GNARL.
+- **Set neutral temp basals** is an option which can help prevent Medtronic pumps from beeping on the hour. If enabled if will cancel a temp basal before the hour end to prevent this from happening.
 
 ## MEDTRONIC (MDT) Tab
 
