@@ -62,36 +62,36 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 * Ein neues Symbol zeigt den Status des Loops:
    
    * grüner Kreis = Loop läuft
-   * green circle with dotted line = [low glucose suspend (LGS)](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
-   * red circled = loop disabled (not working permanently)
-   * yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-   * grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-   * Orange circle = super bolus running - remaining time is shown below icon
-   * blue circle with dotted line = open loop
+   * grüner Kreis mit gepunkteter Linie = [Low Glucose Suspend (Reduzierung der Baslarate bei niedrigen Glukosewerten)](../Usage/Objectives#ziel-6-closed-loop-mit-abschaltung-bei-niedrigen-glukose-werten)
+   * roter Kreis = Loop deaktiviert (dauerhaft)
+   * gelber Kreis = Loop ausgesetzt (vorübergehend pausiert, aber Basalinsulin wird weiter abgegeben) - verbleibende Zeit wird unter dem Symbol angezeigt
+   * grauer Kreis = Pumpe getrennt (vorübergehend gar keine Insulinabgabe) - verbleibende Zeit wird unter dem Symbol angezeigt
+   * orangener Kreis = Superbolus läuft - verbleibende Zeit wird unterhalb des Symbols angezeigt
+   * blauer Kreis mit gepunkteten Linien = Open Loop
 
-* Long press the icon to open the menu to disable, suspend, re enable loop or disconnect / reconnect pump.
+* Ein langer Druck auf das Symbol, öffnet das Menü zum Deaktivieren, Unterbrechen und Reaktivieren des Loops sowie um die Pumpe zu trennen / wieder zu verbinden.
    
-   ![Loop status menu](../images/Home2020_LoopStatusMenu.png)
+   ![Statusmenü Loop](../images/Home2020_LoopStatusMenu.png)
 
-### Section D - IOB, COB, BR and AS
+### Abschnitt D - IOB, COB, BR und AS
 
 ![Abschnitt D](../images/Home2020_TBR.png)
 
-* Syringe: insulin on board (IOB) - amount of active insulin inside your body
+* Spritze: Insulin on Bord (IOB) - Menge des aktiven Insulins im Körper
    
    * Das Insulin on Board wäre Null, wenn nur deine Standardbasalrate liefe und kein Insulin aus einem früheren Bolus mehr wirken würde. 
-   * IOB may be negative if there have recently been periods of reduced basal.
-   * Press the icon to see the split of bolus and basal insulin
+   * IOB kann negativ sein, wenn zuvor die Basalrate reduziert worden ist.
+   * Ein Klick auf das Symbol zeigt die Aufteilung von Bolus und Basal-Insulin.
 
-* Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
+* Ähre: [Kohlenhydrate an Bord (COB)](../Usage/COB-calculation.rst) - noch nicht resorbierte Kohlenhydrate, die vorher gegessen wurden -> Symbol blinkt, falls Kohlenhydrate benötigt werden
 
-* Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%) 
+* Violette Linie: Basalrate - Symbol ändert sich bei temporärer Änderung der Basalrate (flach bei 100%) 
    * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
-* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features#autosens) status (enabled or disabled) and value is shown below icon
+* Pfeile nach oben & unten: zeigen den aktuellen [Autosens](../Usage/Open-APS-features#autosens) Status (aktiviert oder deaktiviert) an. Der Wert wird unterhalb des Symbols angezeigt.
 
-#### Carbs required
+#### Kohlenhydrat-Vorschlag
 
-![Carbs required](../images/Home2020_CarbsRequired.png)
+![Kohlenhydrat-Vorschlag](../images/Home2020_CarbsRequired.png)
 
 * Carbs suggestions are given when the reference design detects that it requires carbs.
 * This is when the oref algorithm thinks I can't rescue you by 0 (zero) temping and you will need carbs to fix.
