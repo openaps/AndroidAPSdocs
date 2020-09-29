@@ -44,7 +44,7 @@ Si comenzó a usar el controlador Medtronic por favor añádase a sí mismo a es
 
 Si realiza una instalación nueva, se le lanzará directamente en el asistente. A veces, si la conexión BT no funciona completamente (no se puede conectar a la bomba), es posible que no pueda completar la configuración. En este caso, seleccione la bomba virtual y después de que haya terminado el asistente, puede ir a la opción 2, que omitirá la detección de bomba.
 
-![Configuración MDT](../images/Medtronic01.png)
+![Configuración MDT](../images/Medtronic01a.png)
 
 Usted necesita establecer los siguientes elementos: (ver imagen siguiente)
 
@@ -59,6 +59,7 @@ Usted necesita establecer los siguientes elementos: (ver imagen siguiente)
 - **Codificación Medtronic **: Este es el valor que determina, si 4b6b que codifica los dispositivos Medtronic se hará en AndroidAPS o en RileyLink. Si tiene un RileyLink con el firmware 2.x, el valor predeterminado será: utilizar la codificación de hardware (= realizada por RileyLink), si tiene el firmware de 0.x este valor se ignorará.
 - **Tipo de batería (Power View) **: Si desea ver la alimentación de la batería en la bomba, debe seleccionar el tipo de batería que utiliza (Litio o Alkaline soportado actualmente), esto cambiará la pantalla para mostrar el porcentaje calculado y los voltios.
 - **Configuración de RileyLink **: Buscará el dispositivo RileyLink/GNARL.
+- **Set neutral temp basals** is an option which can help prevent Medtronic pumps from beeping on the hour. If enabled if will cancel a temp basal before the hour end to prevent this from happening.
 
 ## Pestaña MEDTRONIC (MDT)
 
