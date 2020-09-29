@@ -16,7 +16,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 #### Profile
 
-    ![verbleibende Dauer Profil Wechsel](../images/Home2020_ProfileSwitch.png)
+![verbleibende Dauer Profil Wechsel](../images/Home2020_ProfileSwitch.png)
     
 
 * Das aktuelle Profil wird in der linken Schaltfläche angezeigt.
@@ -25,7 +25,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 #### Ziel
 
-    ![Verbleibende Dauer temporäres Ziel](../images/Home2020_TT.png)
+![Verbleibende Dauer temporäres Ziel](../images/Home2020_TT.png)
     
 
 * Das aktuelle BZ-Ziel wird in der rechten Schaltfläche angezeigt.
@@ -34,7 +34,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 #### Anzeige der dynamischen Ziel-Anpassung
 
-    ![Darstellung der dynamischen Ziel-Anpassung](../images/Home2020_DynamicTargetAdjustment.png)
+![Darstellung der dynamischen Ziel-Anpassung](../images/Home2020_DynamicTargetAdjustment.png)
     
 
 * AAPS kann das Ziel dynamisch anhand der Empfindlichkeit (Sensitivity) anpassen, wenn Du den SMB-Algorithmus verwendest.
