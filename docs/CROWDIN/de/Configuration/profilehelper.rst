@@ -6,44 +6,44 @@ Profile helper offers two functions:
 1. Find a profile for kids
 2. Compare two profiles or profile switches in order to clone a new profile
 
-Profile for kids (up to 18 years)
-=======================================
+Profil für Kinder (bis 18 Jahre)
+==================================
 
-**Important note:**
+**Wichtiger Hinweis:**
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**Profil-Helfer soll Dich dabei unterstützen, das anfängliche Profil für Dein Kind zu finden. Auch wenn es auf Datensätzen von zwei verschiedenen Krankenhäusern basiert, besprich es immer mit Deinem medizinischen Team, bevor Du ein neues Profil benutzt!**
 
-Profile helper offers data sets from two different hospitals for children to find initial profile for your kid up to 18 years.
+Profil-Helfer bietet Datensätze von zwei verschiedenen Kinderkrankenhäusern an, um ein anfängliches Profil für Dein Kind (bis 18 Jahre) zu finden.
 
 .. image:: ../images/ProfileHelperKids1.png
   :alt: Profile Helper Kids 1
 
-1. Select 'Profile helper' from three-dot-menu on the top right side of the screen.
-2. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
-3. Change screen by clicking on the grey bar labeled 2 on the right.
-4. Long-press 'Current profile' and select DPV Default profile.
+1. Wähle 'Profil-Helfer' aus dem Drei-Punkte-Menü oben rechts auf dem Bildschirm.
+2. Passe das Standardprofil (basierend auf dem Krankenhausdatensatz) an, indem Du das Alter des Kindes eingibst sowie entweder das Gesamt-TDD **oder** das Gewicht eingibst.
+3. Wechsele den Bildschirm, indem du auf die rechte, graue Schaltfläche mit der Bezeichnung '2' klickst.
+4. Drücke lange auf 'Aktuelles Profil' und wähle das DPV Standardprofil aus.
 
 .. image:: ../images/ProfileHelperKids2.png
   :alt: Profile Helper Kids 2
 
-5. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
-6. Press button 'COMPARE PROFILES' on top of screen.
-7. Comparison of the two adjusted profiles will be displayed.
+5. Passe das DPV-Standardprofil (basierend auf einem anderen Krankenhausdatensatz) an, indem Du das Alter des Kindes, den Prozentsatz der Basalrate sowie entweder das Gesamt-TDD **oder** das Gewicht eingibst.
+6. Drücke die Schaltfläche 'PROFILE VERGLEICHEN' oben auf dem Bildschirm.
+7. Es wird der Vergleich der beiden angepassten Profile angezeigt.
 
-Once you are fine with the profile adjustments you can `clone the profile <.../Configuration/profilehelper.html#clone-profile>`_ as described below.
+Wenn Du mit den Profilanpassungen zufrieden bist, kannst Du das Profil klonen <.../Configuration/profilehelper.html#clone-profile> ` _ wie unten beschrieben.
 
-Compare two profiles
-=======================================
+Vergleiche zwei Profile
+==================================
 
 You can use profile helper also to compare to different profiles or profile switches (percentage of on of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Profile Helper 1
 
-1. Select 'Profile helper' from three-dot-menu on the top right side of the screen.
+1. Wähle 'Profil-Helfer' aus dem Drei-Punkte-Menü oben rechts auf dem Bildschirm.
 2. Long-press 'Default profile' and select 'Available profile' for a list of your existing profiles or 'Profile switch' for a list of latest profile switches used.
 3. Long-Press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
-4. Change screen by clicking on the grey bar labeled 2 on the right.
+4. Wechsele den Bildschirm, indem du auf die rechte, graue Schaltfläche mit der Bezeichnung '2' klickst.
 
 .. image:: ../images/ProfileHelper2.png
   :alt: Profile Helper 2
@@ -51,11 +51,11 @@ You can use profile helper also to compare to different profiles or profile swit
 5. As a standard 'Current profile' is offered as comparison candidate. 
 6. If you want a different profile / profile switch long-press 'Current profile' and select either 'Available profile' or 'Profile switch'.
 7. Long-press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
-8. Press button 'COMPARE PROFILES' on top of screen.
-9. Comparison of the two adjusted profiles will be displayed.
+8. Drücke die Schaltfläche 'PROFILE VERGLEICHEN' oben auf dem Bildschirm.
+9. Es wird der Vergleich der beiden angepassten Profile angezeigt.
 
 Clone profile
-=======================================
+==================================
 
 If you use `local profiles <../Configuration/Config-Builder.html#local-profile-recommended>`_ you can clone a profile / profile switch directly from profile helper.
 
