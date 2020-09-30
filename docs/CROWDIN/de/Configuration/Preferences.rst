@@ -41,7 +41,7 @@ Master-Passwort
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Die `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ sind ab Version 2.7 verschlüsselt.
 
-   **Biometric protection does not work on OnePlus phones. This is a know issue of OnePlus.**
+   ** Biometrischer Schutz funktioniert nicht auf OnePlus-Smartphonen. Dies ist ein bekanntes Problem von OnePlus.**
 
 * Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 * Klicke das Dreieck neben "Allgemein".
@@ -53,44 +53,44 @@ Master-Passwort
   
 Schutz der Einstellungen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Protect your settings with a password or phone's biometric authentication (i.e. `child is using AAPS <../Children/Children.html>`_).
-* Custom password should be used if you want to use master password just for securing `exported settings <../Usage/ExportImportSettings.html>`_.
-* If you are using a custom password click on line "Settings password" to set password as described `above <../Configuration/Preferences2020.html#master-password>`_.
+* Schütze deine Einstellungen mit einem Passwort oder einer biometrischen Authentifizierung (d. h. ` AAPS-Nutzung durch Kinder <../Children/Children.html> ` _).
+* Das 'Benutzerdefinierte Passwort' sollte verwendet werden, wenn Du das Master-Passwort nur für die Sicherung der `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ verwenden möchtest.
+* Wenn du ein 'Benutzerdefiniertes Kennwort' verwendest, klicke auf Zeile 'Passwort für Einstellungen', um das Kennwort wie oben beschrieben festzulegen <../Configuration/Preferences2020.html#master-password> ` _.
 
   .. image:: ../images/Pref2020_Protection.png
     :alt: Protection
 
 Schutz der App
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If app is protected you must enter password or use phone's biometric authentication to open AAPS.
-* App will shut down immediately if wrong password is entered - but still run in the background if it was previously opened successfully.
+* Falls die App geschützt ist, musst du das Kennwort eingeben oder die biometrische Authentifizierung des Smartphones verwenden, um AAPS zu öffnen.
+* Die App wird sofort geschlossen, wenn ein falsches Kennwort eingegeben wurde. AAPS wird aber trotzdem im Hintergrund weiter ausgeführt, wenn AAPS zuvor erfolgreich geöffnet worden war.
 
 Bolus-Schutz
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Bolus protection might be useful if AAPS is used by a small child and you `bolus via SMS <../Children/SMS-Commands.html>`_.
-* In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter master password.
+* Bolus Schutz könnte nützlich sein, wenn AAPS von einem kleinen Kind verwendet wird und Du `SMS für Boli <../Children/SMS-Commands.html>`_ verwendest.
+* Im Beispiel unten siehst du die Aufforderung zur biometrischen Freigabe. Falls die biometrische Authentifizierung nicht funktioniert, klicke in den Bereich oberhalb der weißen Eingabeaufforderung und gib das Master-Passwort ein.
 
   .. image:: ../images/Pref2020_PW.png
     :alt: Prompt biometric protection
 
 Erscheinungsbild
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* You can choose from three types of skins:
+* Du kannst zwischen drei Darstellungsarten wählen:
 
   .. image:: ../images/Pref2020_Skin.png
     :alt: Select skin
 
-* Difference depend of phone's display orientation
+* Der Unterschied hängt von der Ausrichtung des Telefons ab
 
-Portrait orientation
+Hochformat
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-* **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
-* **Large Display** has an increased size of all graphs compare to other skins
+* **Ursprüngliches Erscheinungsbild** und **Schaltflächen werden immer am unteren Rand des Bildschirms angezeigt** sind identisch.
+* ** Großer Bildschirm * * zeigt alle Diagramme größer an.
 
-Landscape orientation
+Querformat
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-* Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
-* **Large Display** has an increased size of all graphs compare to other skins
+* Bei Verwendung von **Ursprüngliches Erscheinungsbild** und **Großer Bildschirm**, musst Du nach unten scrollen, um Schaltflächen am unteren Rand des Bildschirms zu sehen
+* ** Großer Bildschirm * * zeigt alle Diagramme größer an.
 
   .. image:: ../images/Screenshots_Skins.png
     :alt: Skins depending on phone's display orientation
