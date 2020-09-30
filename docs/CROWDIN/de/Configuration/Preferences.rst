@@ -198,21 +198,21 @@ Sicherheitseinstellungen der Behandlungen
 Alter des Patienten
 -----------------------------------------------------------
 * Sicherheitsgrenzwerte werden auf der Grundlage des Alters festgelegt, das Du in dieser Einstellung auswählst. 
-* Wenn du an diese festen Grenzen (z.B.Maximal-Bolus) kommst, ist es an der Zeit, einen Schritt weiter zu gehen. 
+* Wenn du an diese festen Grenzen (z.B. Maximal-Bolus) kommst, ist es an der Zeit, einen Schritt weiter zu gehen. 
 * Es ist keine gute Idee, ein höheres Alter anzugeben als das tatsächliche, weil es zu einer Überdosierung führen kann, wenn ein falscher Wert im Insulin-Dialog eingegeben wird (z. B. beim Weglassen des Kommas). 
-* Wenn du die Werte für diese fest codierten Sicherheitsgrenzen wissen möchtest, scrolle auf der Seite <a> href="../Usage/Open-APS-features.md"</a> zu der Algorithmenfunktion, die Du verwendest.
+* If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on `this page <../Usage/Open-APS-features.html>`_.
 
-Maximal erlaubert Bolus [U]
+Maximal erlaubter Bolus [U]
 -----------------------------------------------------------
 * Definiert die maximale Menge an Bolusinsulin, die AAPS auf einmal liefern darf. 
-* Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhinden. 
+* Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhindern. 
 * Es wird empfohlen, das auf eine vernünftige Menge zu setzen, die ungefähr der maximalen Abgabemenge von Bolus Insulin entspricht, das Du für eine Mahlzeitenkorrektur brauchst. 
 * Diese Einschränkung gilt auch für die Ergebnisse des Bolus-Rechners.
 
 Maximal erlaubte Kohlenhydrate [g]
 -----------------------------------------------------------
 * Dies ist die maximale Menge an Kohlenhydraten, für die der AAPS Bolus-Rechner eine Dosis berechnen darf.
-* Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhinden. 
+* Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhindern. 
 * Es wird empfohlen, das auf eine vernünftige Menge zu setzen, die ungefähr der maximalen Menge an Kohlenhydraten entspricht, die du vermutlich jemals für eine Mahlzeit brauchen wirst.
 
 Loop
@@ -226,7 +226,7 @@ APS-Modus
 
 Minimaler Wert zur Anfrage einer Änderung [%]
 -----------------------------------------------------------
-* Im Open Loop erhälst Du jedes Mal eine Benachrichtigung, wenn AAPS empfiehlt, die Basalrate anzupassen. 
+* Im Open Loop erhältst Du jedes Mal eine Benachrichtigung, wenn AAPS empfiehlt, die Basalrate anzupassen. 
 * Um die Anzahl der Benachrichtigungen zu reduzieren, kannst du entweder einen größeren BZ-Zielbereich verwenden oder den minimalen Wert zur Anfrage einer Änderung erhöhen.
 * Diese definiert, wie hoch die relative Änderung sein muss, damit eine Benachrichtigung erscheint.
 
@@ -246,7 +246,7 @@ Maximale IE/h, die als TBR gesetzt werden können
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. 
 * The value is measured in units per hour (U/h). 
-* Es wird empfohlen, hier etwas vernünftiges einzugeben. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. 
+* Es wird empfohlen, hier etwas Vernünftiges einzugeben. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. 
 * For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
 * See also `detailed feature description <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>`_.
 
@@ -257,9 +257,9 @@ Maximales Basal-IOB, das OpenAPS abgeben darf [U]
 * This value **does not consider bolus IOB**, only basal.
 * Dieser Wert wird unabhängig von deiner normalen Basalrate berechnet und überwacht. Es wird lediglich das zusätzliche Basalinsulin zu der normalen Basalrate berücksichtigt.
 
-When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. Das verhindert, dass AAPS dir generell zusätzliches Basal-Insulin verabreicht. Während dieser Zeit wird AAPS trotzdem in der Lage sein, dein Basalinsulin abzuschalten, um Hypoglykämien zu verhinden. Das ist ein wichtiger Schritt, um:
+When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. Das verhindert, dass AAPS dir generell zusätzliches Basal-Insulin verabreicht. Während dieser Zeit wird AAPS trotzdem in der Lage sein, dein Basalinsulin abzuschalten, um Hypoglykämien zu verhindern. Das ist ein wichtiger Schritt, um:
 
-* Zeit zu haben, sich auf sichere Art mit der Verwendung des AAPS systems vertraut zu machen und zu überwachen, wie es funktioniert.
+* Zeit zu haben, sich auf sichere Art mit der Verwendung des AAPS Systems vertraut zu machen und zu überwachen, wie es funktioniert.
 * Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
 * zu sehen, wie AAPS die Basalrate einschränkt, um Hypoglykämien zu verhindern.
 
