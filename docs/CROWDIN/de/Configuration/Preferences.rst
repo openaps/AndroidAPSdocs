@@ -220,7 +220,7 @@ Loop
 APS-Modus
 -----------------------------------------------------------
 * Umschalten zwischen Closed Loop, Open Loop sowie Unterbrechung der Insulinzufuhr bei niedrigem Blutzucker (LGS - low glucose suspend).
-* **Open looping** means TBR suggestions are made based on your data and appear as a notification. Depending on pump modell you must manually enter them into your pump or command to dose insulin will be transferred to pump after you confirmed the suggestion.  
+* **Open looping** means TBR suggestions are made based on your data and appear as a notification. After manual confirmation the command to dose insulin will be transferred to pump.. Only if you use virtual pump you have to enter it manually.
 * **Closed Loop** bedeutet, dass die TBR Vorschläge automatisch zur Pumpe gesendet werden, ohne dass Du benachrichtigt wirst oder sie bestätigen musst.  
 * **Low glucose suspend** gives you the possibility to enter into Low Glucose Suspend without the need for the reverting an objective.
 
