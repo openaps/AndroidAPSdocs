@@ -220,7 +220,7 @@ Smyčka
 APS mode
 -----------------------------------------------------------
 * Toggle between open and closed looping as well as low glucose suspend (LGS)
-* **Open looping** means TBR suggestions are made based on your data and appear as a notification. Depending on pump modell you must manually enter them into your pump or command to dose insulin will be transferred to pump after you confirmed the suggestion.  
+* **Open looping** means TBR suggestions are made based on your data and appear as a notification. After manual confirmation the command to dose insulin will be transferred to pump.. Only if you use virtual pump you have to enter it manually.
 * **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.  
 * **Low glucose suspend** gives you the possibility to enter into Low Glucose Suspend without the need for the reverting an objective.
 
