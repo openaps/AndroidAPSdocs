@@ -168,21 +168,21 @@ Statusanzeige
       
    * Kanülenalter
    * Insulinalter (Tage Reservoirverwendung)
-   * Reservoir level (units)
-   * Sensor age
-   * Battery age
-   * Battery level (%)
+   * Reservoirstand (Einheiten)
+   * Sensoralter
+   * Batteriealter
+   Batterieladezustand (%)
 
-* If threshold warning is exceeded, values will be shown in yellow.
-* If threshold critical is exceeded, values will be shown in red.
-* In versions prior to AAPS 2.7 settings for status lights had to be made in Nightscout settings.
+* Bei Überschreitung der Warnschwelle werden die Werte gelb angezeigt.
+* Bei Überschreitung der kritischen Warnschwelle werden die Werte rot angezeigt.
+* In Versionen vor AAPS 2.7 mussten Einstellungen für Statusanzeigen in Nightscout-Einstellungen vorgenommen werden.
 
   .. image:: ../images/Pref2020_OV_StatusLights2.png
     :alt: Preferences > Status Lights
 
 Erweiterte Einstellungen
 -----------------------------------------------------------
-Deliver this part of bolus wizard result
+Abgabe nur eines Teils der vom Bolus-Rechner ermittelten Insulinmenge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Systemweite Einstellung, dass nur ein Teil des im Bolus Kalkulator berechneten Insulins abgegeben wird. 
 * Nur der eingestellte prozentuale Anteil (muss zwischen 10 und 100 liegen) wird abgegeben. 
@@ -190,36 +190,36 @@ Deliver this part of bolus wizard result
 
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Option to enable superbolus in bolus wizard.
-* `Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes.
+* Option zur Aktivierung des Superbolus im Bolus-Rechner.
+* ` Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>` _ ist ein Konzept, um in den nächsten zwei Stunden etwas Insulin aus der Basalrate "vorzuziehen", um Spitzen zu verhindern.
 
-Treatment safety
+Sicherheitseinstellungen der Behandlungen
 ===========================================================
 Alter des Patienten
 -----------------------------------------------------------
-* Safety limits are set based on the age you select in this setting. 
-* If you start hitting these hard limits (like max bolus) it's time to move one step up. 
-* It's a bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). 
-* If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on `this page <../Usage/Open-APS-features.html>`_.
+* Sicherheitsgrenzwerte werden auf der Grundlage des Alters festgelegt, das Du in dieser Einstellung auswählst. 
+* Wenn du an diese festen Grenzen (z.B.Maximal-Bolus) kommst, ist es an der Zeit, einen Schritt weiter zu gehen. 
+* Es ist keine gute Idee, ein höheres Alter anzugeben als das tatsächliche, weil es zu einer Überdosierung führen kann, wenn ein falscher Wert im Insulin-Dialog eingegeben wird (z. B. beim Weglassen des Kommas). 
+* Wenn du die Werte für diese fest codierten Sicherheitsgrenzen wissen möchtest, scrolle auf der Seite <a> href="../Usage/Open-APS-features.md"</a> zu der Algorithmenfunktion, die Du verwendest.
 
 Maximal erlaubert Bolus [U]
 -----------------------------------------------------------
-* Defines maximum amount of bolus insulin that AAPS is allowed to deliver at once. 
+* Definiert die maximale Menge an Bolusinsulin, die AAPS auf einmal liefern darf. 
 * Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhinden. 
 * Es wird empfohlen, das auf eine vernünftige Menge zu setzen, die ungefähr der maximalen Abgabemenge von Bolus Insulin entspricht, das Du für eine Mahlzeitenkorrektur brauchst. 
-* This restriction is also applied to the results of the bolus calculator.
+* Diese Einschränkung gilt auch für die Ergebnisse des Bolus-Rechners.
 
 Maximal erlaubte Kohlenhydrate [g]
 -----------------------------------------------------------
-* Defines the maximum amount of carbs that AAPS bolus calculator is allowed to dose for.
+* Dies ist die maximale Menge an Kohlenhydraten, für die der AAPS Bolus-Rechner eine Dosis berechnen darf.
 * Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhinden. 
 * Es wird empfohlen, das auf eine vernünftige Menge zu setzen, die ungefähr der maximalen Menge an Kohlenhydraten entspricht, die du vermutlich jemals für eine Mahlzeit brauchen wirst.
 
 Loop
 ===========================================================
-APS mode
+APS-Modus
 -----------------------------------------------------------
-* Toggle between open and closed looping as well as low glucose suspend (LGS)
+* Umschalten zwischen Closed Loop, Open Loop sowie Unterbrechung der Insulinzufuhr bei niedrigem Blutzucker (LGS - low glucose suspend).
 * **Open looping** means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump.  
 * **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.  
 * **Low glucose suspend** gives you the possibility to enter into Low Glucose Suspend without the need for the reverting an objective.
