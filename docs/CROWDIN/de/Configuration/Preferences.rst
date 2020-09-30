@@ -41,7 +41,7 @@ Master-Passwort
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Die `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ sind ab Version 2.7 verschlüsselt.
 
-   ** Biometrischer Schutz funktioniert nicht auf OnePlus-Smartphonen. Dies ist ein bekanntes Problem von OnePlus.**
+   ** Biometrischer Schutz funktioniert nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus.**
 
 * Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 * Klicke das Dreieck neben "Allgemein".
@@ -111,7 +111,7 @@ Bildschirm aktiv lassen
 Schaltflächen
 -----------------------------------------------------------
 * Lege fest welche Schaltflächen am unteren Rand des Homescreens sichtbar sind.
-* Mit den Erhöhungszahlen kannst du die Schrittweiten definieren, die in den KH- und Insulin-Dialogen benutzt werden und so die dortigen Eingaben vereinachen.
+* Mit den Erhöhungszahlen kannst du die Schrittweiten definieren, die in den KH- und Insulin-Dialogen benutzt werden und so die dortigen Eingaben vereinfachen.
 
   .. image:: ../images/Pref2020_OV_Buttons.png
     :alt: Preferences > Buttons
@@ -133,7 +133,7 @@ Vordefinierte temporäre Ziele
 * Drücke lange auf deinen Zielwert in der oberen rechten Ecke auf dem Home-Bildschirm oder verwende die Shortcuts im orange "Kohlenhydrate" (Carbs)-Button am unteren Rand.
 
   .. image:: ../images/Pref2020_OV_DefaultTT.png
-    :alt: Preferences > Default temp targets
+    :alt: Einstellungen > Vordefinierte temporäre Ziele
   
 Füll-/Vorfüll-Standardmengen
 -----------------------------------------------------------
