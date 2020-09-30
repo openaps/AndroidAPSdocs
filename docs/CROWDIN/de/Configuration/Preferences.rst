@@ -58,7 +58,7 @@ Schutz der Einstellungen
 * Wenn du ein 'Benutzerdefiniertes Kennwort' verwendest, klicke auf Zeile 'Passwort für Einstellungen', um das Kennwort wie oben beschrieben festzulegen <../Configuration/Preferences2020.html#master-password> ` _.
 
   .. image:: ../images/Pref2020_Protection.png
-    :alt: Protection
+    :alt: Schutz
 
 Schutz der App
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -71,14 +71,14 @@ Bolus-Schutz
 * Im Beispiel unten siehst du die Aufforderung zur biometrischen Freigabe. Falls die biometrische Authentifizierung nicht funktioniert, klicke in den Bereich oberhalb der weißen Eingabeaufforderung und gib das Master-Passwort ein.
 
   .. image:: ../images/Pref2020_PW.png
-    :alt: Prompt biometric protection
+    :alt: Freigabe mit biometrischer Authentifizierung
 
 Erscheinungsbild
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Du kannst zwischen drei Darstellungsarten wählen:
 
   .. image:: ../images/Pref2020_Skin.png
-    :alt: Select skin
+    :alt: Darstellungsart wählen
 
 * Der Unterschied hängt von der Ausrichtung des Smartphones ab.
 
@@ -93,7 +93,7 @@ Querformat
 * ** Großer Bildschirm * * zeigt alle Diagramme größer an.
 
   .. image:: ../images/Screenshots_Skins.png
-    :alt: Skins depending on phone's display orientation
+    :alt: Darstellungsart abhängig von der Ausrichtung des Smartphones
 
 Übersicht
 ===========================================================
@@ -101,7 +101,7 @@ Querformat
 * In Übersicht kannst du Einstellungen für den Homescreen festlegen.
 
   .. image:: ../images/Pref2020_OverviewII.png
-    :alt: Preferences > Overview
+    :alt: Einstellungen > Überblick
 
 Bildschirm aktiv lassen
 -----------------------------------------------------------
@@ -114,7 +114,7 @@ Schaltflächen
 * Mit den Erhöhungszahlen kannst du die Schrittweiten definieren, die in den KH- und Insulin-Dialogen benutzt werden und so die dortigen Eingaben vereinfachen.
 
   .. image:: ../images/Pref2020_OV_Buttons.png
-    :alt: Preferences > Buttons
+    :alt: Einstellungen > Buttons
 
 Quick Wizard
 -----------------------------------------------------------
@@ -124,7 +124,7 @@ Quick Wizard
 * Der Vorschlag muss bestätigt werden, bevor Insulin abgegeben wird.
 
   .. image:: ../images/Pref2020_OV_QuickWizard.png
-    :alt: Preferences > Quick Wizard Button
+    :alt: Einstellungen > Quick Wizard Button
   
 Vordefinierte temporäre Ziele
 -----------------------------------------------------------
@@ -145,7 +145,7 @@ Zielbereich für die Grafikanzeige
 * Lege fest, welcher Bereich der Grafik auf dem Startbildschirm der Zielbereich sein und grün hinterlegt werden soll.
 
   .. image:: ../images/Pref2020_OV_Range2.png
-    :alt: Preferences > Range for visualization
+    :alt: Einstellungen > Zielbereich für die Grafikanzeige
 
 Kurze Tab-Überschriften
 -----------------------------------------------------------
@@ -153,14 +153,14 @@ Kurze Tab-Überschriften
 * Zum Beispiel wird die 'OpenAPS AMA' -Registerkarte zu 'OAPS', 'Objectives (Ziele)' wird zu 'ZIEL' usw.
 
   .. image:: ../images/Pref2020_OV_Tabs.png
-    :alt: Preferences > Tabs
+    :alt: Einstellungen > Tabs
 
 Möglichkeit zur Erfassung von Notizen in Behandlungsdialogen
 -----------------------------------------------------------
 * Gibt dir die Möglichkeit, kurze Textnotizen zu Deinen Behandlungen hinzuzufügen (z.B. im Bolus-Rechner, den Buttons für Insulin und Kohlenhydrate etc.) 
 
   .. image:: ../images/Pref2020_OV_Notes.png
-    :alt: Preferences > Notes in treatment dialogs
+    :alt: Einstellungen > Notizen im Behandlungsdialog
   
 Statusanzeige
 -----------------------------------------------------------
@@ -178,7 +178,7 @@ Statusanzeige
 * In Versionen vor AAPS 2.7 mussten Einstellungen für Statusanzeigen in Nightscout-Einstellungen vorgenommen werden.
 
   .. image:: ../images/Pref2020_OV_StatusLights2.png
-    :alt: Preferences > Status Lights
+    :alt: Einstellungen > Status Lights
 
 Erweiterte Einstellungen
 -----------------------------------------------------------
@@ -200,7 +200,7 @@ Alter des Patienten
 * Sicherheitsgrenzwerte werden auf der Grundlage des Alters festgelegt, das Du in dieser Einstellung auswählst. 
 * Wenn du an diese festen Grenzen (z.B. Maximal-Bolus) kommst, ist es an der Zeit, einen Schritt weiter zu gehen. 
 * Es ist keine gute Idee, ein höheres Alter anzugeben als das tatsächliche, weil es zu einer Überdosierung führen kann, wenn ein falscher Wert im Insulin-Dialog eingegeben wird (z. B. beim Weglassen des Kommas). 
-* If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on `this page <../Usage/Open-APS-features.html>`_.
+* Wenn du die Werte für diese fest codierten Sicherheitsgrenzen wissen möchtest, scrolle auf der Seite <a href="../Usage/Open-APS-features.md"</a> zu der Algorithmenfunktion, die Du verwendest.
 
 Maximal erlaubter Bolus [U]
 -----------------------------------------------------------
@@ -220,9 +220,9 @@ Loop
 APS-Modus
 -----------------------------------------------------------
 * Umschalten zwischen Closed Loop, Open Loop sowie Unterbrechung der Insulinzufuhr bei niedrigem Blutzucker (LGS - low glucose suspend).
-* **Open looping** means TBR suggestions are made based on your data and appear as a notification. After manual confirmation the command to dose insulin will be transferred to pump.. Only if you use virtual pump you have to enter it manually.
+* **Open Loop** bedeutet, dass Empfehlungen für temporäre Änderungen der Basalrate als Benachrichtigung auf dem Smartphone gegeben werden. Nach der manuellen Bestätigung wird das Kommando an die Pumpe übertragen und Insulin abgegeben. Nur wenn Du eine virtuelle Pumpe verwendest, musst Du die Änderungen selbst manuell an der Pumpe eingeben.
 * **Closed Loop** bedeutet, dass die TBR Vorschläge automatisch zur Pumpe gesendet werden, ohne dass Du benachrichtigt wirst oder sie bestätigen musst.  
-* **Low glucose suspend** gives you the possibility to enter into Low Glucose Suspend without the need for the reverting an objective.
+* **Low glucose suspend** gibt Dir die Möglichkeit, in den LGS-Modus (Reduzierung der Basalrate bei niedrigen Glukosewerten) zu wechseln ohne dafür eines der Ziele (objectives) zurücksetzen zu müssen.
 
 Minimaler Wert zur Anfrage einer Änderung [%]
 -----------------------------------------------------------
@@ -230,7 +230,7 @@ Minimaler Wert zur Anfrage einer Änderung [%]
 * Um die Anzahl der Benachrichtigungen zu reduzieren, kannst du entweder einen größeren BZ-Zielbereich verwenden oder den minimalen Wert zur Anfrage einer Änderung erhöhen.
 * Diese definiert, wie hoch die relative Änderung sein muss, damit eine Benachrichtigung erscheint.
 
-Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
+Advanced Meal Assist (AMA) oder Super Micro Bolus (SMB)
 ===========================================================
 Abhängig von Deinen Einstellungen im `Konfigurations-Generator <../Configuration/Config-Builder.html>` _ kannst Du zwischen zwei Algorithmen wählen:
 
@@ -239,31 +239,31 @@ Abhängig von Deinen Einstellungen im `Konfigurations-Generator <../Configuratio
 
 OpenAPS AMA-Einstellungen
 -----------------------------------------------------------
-* Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. 
-* More details about the settings and Autosens can be found in the `OpenAPS docs <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`_.
+* Erlaubt AAPS nach einem Essen schneller mit einer Erhöhung der Basalrate zu reagieren - WENN Du die Kohlenhydrate zuverlässig eingibst. 
+* Mehr Details zu den Einstellungen und Autosens findest Du in den `OpenAPS Docs <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`_.
 
 Maximale IE/h, die als TBR gesetzt werden können
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. 
-* The value is measured in units per hour (U/h). 
-* Es wird empfohlen, hier etwas Vernünftiges einzugeben. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. 
-* For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
-* See also `detailed feature description <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>`_.
+Diese Einstellung existiert als Sicherheitsgrenze, um zu verhindern, dass AAPS jemals eine gefährlich hohe Basalrate setzt. 
+* Der Wert wird in IE pro Stunde angegeben (IE/h). 
+* Es wird empfohlen, hier etwas Vernünftiges einzugeben. Eine gute Empfehlung ist, die **höchste Basalrate** in Deinem Profil zu verwenden und diese **mit 4 zu multiplizieren**. 
+* Wenn zum Beispiel die höchste Basalrate in deinem Profil 0.5IE/h war, kannst du das mit 4 multiplizieren, um einen Wert von 2IE/h zu erhalten.
+* Siehe dazu auch die `detaillierte Beschreibung <../Usage/Open-APS-features.html#max-ie-h-die-als-tbr-gesetzt-werden-konnen-openaps-max-basal>`_.
 
 Maximales Basal-IOB, das OpenAPS abgeben darf [U]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Menge an zusätzlichem Basalinsulin (in Einheiten), das deinem Körper zusätzlich zu deiner normalen Basalrate zugeführt werden darf. 
 * Wenn dieser Wert erreicht wird, wird AAPS aufhören, zusätzliches Basalinsulin abzugeben, bis dein Basalinsulin On Board (IOB) wieder unterhalb dieses Wertes liegt. 
-* This value **does not consider bolus IOB**, only basal.
+* Dieser Wert **berücksichtigt kein Bolus-IOB**, nur Basal.
 * Dieser Wert wird unabhängig von deiner normalen Basalrate berechnet und überwacht. Es wird lediglich das zusätzliche Basalinsulin zu der normalen Basalrate berücksichtigt.
 
-When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. Das verhindert, dass AAPS dir generell zusätzliches Basal-Insulin verabreicht. Während dieser Zeit wird AAPS trotzdem in der Lage sein, dein Basalinsulin abzuschalten, um Hypoglykämien zu verhindern. Das ist ein wichtiger Schritt, um:
+Wenn Du anfängst den Loop zu benutzen, wird empfohlen das **maximale Basal-IOB für eine bestimmte Zeit auf 0** zu setzen, während Du Dich mit dem System vertraut machst. Das verhindert, dass AAPS dir generell zusätzliches Basal-Insulin verabreicht. Während dieser Zeit wird AAPS trotzdem in der Lage sein, dein Basalinsulin abzuschalten, um Hypoglykämien zu verhindern. Das ist ein wichtiger Schritt, um:
 
 * Zeit zu haben, sich auf sichere Art mit der Verwendung des AAPS Systems vertraut zu machen und zu überwachen, wie es funktioniert.
-* Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
+* die Gelegenheit zu nutzen, dein Basalratenprofil und die Insulinsensibilitäts-Faktoren (ISF) anzupassen.
 * zu sehen, wie AAPS die Basalrate einschränkt, um Hypoglykämien zu verhindern.
 
-Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches Basalinsulin zu geben, indem du den Wert Max-Basal IOB erhöhst. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 3 to get a value of 1.5 U.
+Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches Basalinsulin zu geben, indem du den Wert Max-Basal IOB erhöhst. Die empfohlene Richtlinie für diesen Wert ist, die **höchste Basalrate** in Deinem Profil zu verwenden und diese **mit 3 zu multiplizieren**. Wenn zum Beispiel die höchste Basalrate in deinem Profil 0.5IE/h war, kannst du das mit 3 multiplizieren, um einen Wert von 1.5IE/h zu erhalten.
 
 * Du kannst konservativ mit diesem Wert starten und ihn im Laufe der Zeit langsam erhöhen. 
 * Das sind aber nur Richtlinien; jeder Körper ist anders. Es kann durchaus sein, dass du mehr oder weniger benötigst als hier empfohlen wurde, aber beginne dennoch konservativ und passe es langsam an.
@@ -272,85 +272,85 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 
 Autosens
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* `Autosens <../Usage/Open-APS-features.html#autosens>`_ looks at blood glucose deviations (positive/negative/neutral).
-* It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
-* If you select "Autosens adjust target, too" the algorithm will also modify your glucose target.
+* `Autosens <../Usage/Open-APS-features.html#autosens>`_ analysiert Deine BZ-Abweichungen (positiv/negativ/neutral).
+* Dabei wird anhand dieser Abweichungen ermittelt, wie empfindlich / resistent Du auf Insulin reagierst und Deine Basalrate und den ISF entsprechend angepasst.
+* Wenn Du "Autosens passt Zielwerte ebenfalls an" auswählst, wird der Algorithmus auch Dein BZ-Ziel entsprechend anpassen.
 
 Erweiterte Einstellungen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Normally you do not have to change the settings in this dialogue!
-* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ and to understand what you are doing.
+* Normalerweise musst Du die Einstellungen in diesem Dialog nicht ändern!
+* Falls Du sie doch ändern willst, lies in jedem Fall vorher die Details dazu in den `OpenAPS Docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ und stelle sicher, dass Du weißt, was Du tust.
 
-OpenAPS SMB settings
+OpenAPS SMB-Einstellungen
 -----------------------------------------------------------
-* In contrast to AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
-* You must have started `objective 10 <../Usage/Objectives.html#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ to use SMB.
-* The first three settings are explained `above <./Configuration/Preferences2020.html#max-u-h-a-temp-basal-can-be-set-to>`_.
-* Details on the different enable options are described in `OpenAPS feature section <../Usage/Open-APS-features.html#enable-smb>`_.
-* *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target being set). You should not change this setting unless you know exactly about consequences. 
-* If 'Sensitivity raises target' or 'Resistance lowers target' is enabled `Autosens <../Usage/Open-APS-features.html#autosens>`_ will modify your glucose target according to your blood glucose deviations.
-* If target is modified it will be displayed with a green background on your home screen.
+* Im Gegensatz zu AMA verwendet ` SMB < ../Usage/Open-APS-features.html#super-micro-bolus-smb> ` _ keine temporären Basalraten, um den Blutzuckerspiegel zu steuern, sondern hauptsächlich kleine Supermicroboli.
+* Du musst `Ziel (objective) 10 <../Usage/Objectives.html#ziel-10-aktiviere-zusatzliche-oref1-funktionen-zum-taglichen-gebrauch-wie-z-b-den-super-micro-bolus-smb>`_ gestartet haben, um SMB nutzen zu können.
+* Die ersten drei Einstellungen sind `oben beschrieben. <./Configuration/Preferences2020.html#maximales-basal-iob-das-openaps-abgeben-darf-u>`_
+* Details zu den verschiedenen Optionen sind auf der Seite `OpenAPS-Funktionen <../Usage/Open-APS-features.html#aktiviere-smb>`_ beschrieben.
+* *Wie häufig SMB abgegeben werden (in Min.)* ist eine Einschränkung für SMB, die standardmäßig nur alle vier Minuten abgegeben werden. Dieser Wert verhindert, dass das System SMB zu häufig abgibt (z. B. wenn Du ein temporäres Ziel setzt). Sie sollten diese Einstellung nicht ändern, außer Du weißt genau über die Folgen Bescheid. 
+* Wenn 'Empfindlichkeit erhöht den Zielwert' oder 'Resistenz senkt den Zielwert' aktiviert ist, passt `Autosens <../Usage/Open-APS-features.html#autosens>`_ Deinen BZ-Zielwert entsprechend der BZ-Abweichungen an.
+* Wenn der Zielwert angepasst wird, wird dies durch einen grünen Hintergrund des Zielwerts angezeigt.
 
   .. image:: ../images/Home2020_DynamicTargetAdjustment.png
-    :alt: Target modified by autosens
+    :alt: Von Autosens angepasster Zielwert
   
-Carb required notification
+Kohlenhydrat-Vorschlag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* This feature is only available if SMB algorithm is selected.
-* Eating of additional carbs will be suggested when the reference design detects that it requires carbs.
-* In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
-* Additionally the required carbs will be displayed in the COB section on your home screen.
-* A threshold can  be defined - minimum amount of carbs needed to trigger notification. 
+* Diese Funktion steht nur zur Verfügung, wenn Du SMB ausgewählt hast.
+* Der Algorithmus empfiehlt Dir, etwas zu essen, wenn er feststellt, dass zusätzliche Kohlenhydrate benötigt werden.
+* In diesem Fall erhältst Du eine Benachrichtigung, die Du für 5, 15 oder 30 Minuten stummschalten kannst.
+* Zusätzlich werden die vorgeschlagenen Kohlenhydrate auf dem Startbildschirm im Bereich COB angezeigt.
+* Ein Schwellenwert lässt sich definieren, damit erst eine Mindest-KH-Menge erreicht werden muss, bevor eine Benachrichtigung erscheint. 
 * Auf Wunsch können die Kohlenhydrat-Vorschläge an Nightscout gesandt werden. In diesem Fall wird eine Ankündigung angezeigt und hochgeladen.
 
   .. image:: ../images/Pref2020_CarbsRequired.png
-    :alt: Display carbs required on home screen
+    :alt: Kohlenhydrat-Vorschlag auf dem Startbildschirm
   
 Erweiterte Einstellungen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Normally you do not have to change the settings in this dialogue!
-* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ and to understand what you are doing.
+* Normalerweise musst Du die Einstellungen in diesem Dialog nicht ändern!
+* Falls Du sie doch ändern willst, lies in jedem Fall vorher die Details dazu in den `OpenAPS Docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ und stelle sicher, dass Du weißt, was Du tust.
 
 Resorptions-Einstellungen
 ===========================================================
 
   .. image:: ../images/Pref2020_Absorption.png
-    :alt: Absorption settings
+    :alt: Resoprtions-Einstellungen
 
 min_5m_carbimpact
 -----------------------------------------------------------
-* The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed. 
-* The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB. 
-* At times when carb absorption can’t be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Im Prinzip ist es eine Notlauffunktion.
-* To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. 
-* Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc. 
-* The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`_.
-* Standard value for AMA is 5, for SMB it's 8.
-* The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+* Der Algorithmus verwendet die Auswirkungen auf den Blutzuckerspiegel (BGI - blood glucose impact), um zu bestimmen, wann Kohlenhydrate absorbiert werden. 
+* Dieser Wert wird nur dann verwendet, wenn keine CGM-Werte empfangen werden oder körperliche Aktivitäten den Blutzuckeranstieg "kompensieren", den AAPS normalerweise zur Berechnung des Kohlenhydratabbaus verwendet. 
+* So lange der Kohlenhydratabbau nicht dynamisch aus den Veränderungen des BZ ermittelt werden kann, wird ein Standardwert für den Abbau angesetzt. Im Prinzip ist es eine Notlauffunktion.
+* Einfach gesagt: Der Algorithmus "weiß", wie sich Deine BZ-Werte unter Berücksichtigung der aktuellen Insulindosis etc. **entwickeln sollten**. 
+* Wenn eine positive Abweichung vom erwarteten Verhalten registriert wird, werden einige Kohlenhydrate absorbiert/aufgenommen. Große Abweichung = viele Kohlenhydrate etc. 
+* Das min_5m_carbimpact definiert die Standard-Kohlenhydrat-Resorptionswirkung pro 5 Minuten. Für weitere Details siehe `OpenAPS Docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`_.
+* Der Standardwert für AMA ist 5, für SMB ist es 8.
+* Im COB-Diagramm auf dem Startbildschirm werden Zeiten, in denen min_5m_impact verwendet wird, mit einem orangenen Punkt auf der Diagrammlinie markiert.
 
   .. image:: ../images/Pref2020_min_5m_carbimpact.png
-    :alt: COB graph
+    :alt: COB-Diagramm
   
-Maximum meal absorption time
+Maximale Dauer des Essens-Resorption
 -----------------------------------------------------------
-* Wenn du oft Mahlzeiten mit viel Fett oder Eiweiss zu dir nimmst, wirst du die Resorptionszeit für das Essen erhöhen müssen.
+* Wenn du oft Mahlzeiten mit viel Fett oder Eiweiß zu dir nimmst, wirst du die Resorptionszeit für das Essen erhöhen müssen.
 
-Advanced settings - autosens ratio
+Erweiterte Einstellungen - Autosens-Faktoren
 -----------------------------------------------------------
-* Define min. and max. `autosens <../Usage/Open-APS-features.html#autosens>`_ ratio.
-* Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+* Definiere einen minimalen und maximalen `Autosens <../Usage/Open-APS-features.html#autosens>`_-Faktor.
+* Die Standardwerte (max. 1.2 und min. 0.7) sollten nicht verändert werden.
 
 Pumpen-Einstellungen
 ===========================================================
-The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`_.  Verbinde Deine Pumpe und richte sie entsprechend der pumpenspezifischen Beschreibung ein:
+Die Einstellungen hier sind je nach Pumpenmodell, das Du im `Konfigurations-Generator <../Configuration/Config-Builder.html#pump>`_ gewählt hast, unterschiedlich.  Verbinde Deine Pumpe und richte sie entsprechend der pumpenspezifischen Beschreibung ein:
 
-* `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ 
-* `DanaRS Insulin Pump <../Configuration/DanaRS-Insulin-Pump.html>`_
-* `Accu Chek Combo Pump <../Configuration/Accu-Chek-Combo-Pump.html>`_
-* `Accu Chek Insight Pump <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
-* `Medtronic Pump <../Configuration/MedtronicPump.html>`_
+* `DanaR Insulinpumpe <../Configuration/DanaR-Insulin-Pump.html>`_ 
+* `DanaRS Insulinpumpe <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `Accu Chek Combo Pumpe <../Configuration/Accu-Chek-Combo-Pump.html>`_
+* `Accu Chek Insight Pumpe <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+* `Medtronic Pumpe <../Configuration/MedtronicPump.html>`_
 
-Stelle sicher, dass du die virtuelle Pumpe im Config-Generator ausgewählt hast, wenn du AndroidAPS als Open Loop betreibst.
+Stelle sicher, dass du die virtuelle Pumpe im Konfigurations-Generator ausgewählt hast, wenn du AndroidAPS als Open Loop betreibst.
 
 Nightscout-Client
 ===========================================================
@@ -358,81 +358,81 @@ Nightscout-Client
   .. image:: ../images/Pref2020_NSClient.png
     :alt: NSClient
 
-* Set your *Nightscout URL* (i.e. https://yourwebsitename.herokuapp.com) and the *API secret* (a 12 character password recorded in your Heroku variables).
-* This enables data to be read and written between both the Nightscout website and AndroidAPS.  
+* Gib Deine *Nightscout URL* (z.B. https://yourwebsitename.herokuapp.com) und das *API secret* (ein 12-stelliges Passwort, dass Du in den Variablen bei Heroku definiert hast) ein.
+* Das versetzt AndroidAPS in die Lage, Daten von Nightscout zu lesen und zu schreiben.  
 * Überprüfe die Eingaben auf Tippfehler, wenn du bei Ziel 1 hängen bleibst.
-* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-* *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS). 
-* If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ are uploaded to your Nightscout site.
+* **Stelle sicher, dass die URL NICHT mit /api/v1/ endet.**
+* *Logge App-Start in Nightscout* schreibt jedes Mal, wenn AAPS startet, eine Notiz in Dein Nightscout Careportal.  Die App sollte maximal einmal am Tag neu gestartet werden. Mehrere Einträge am Tag könnten ein Hinweis auf ein Problem sein (z.B.  Akkuoptimierung für AAPS nicht deaktiviert). 
+* Falls aktiviert, werden Änderungen Deiner `lokalen Profile <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_ zu Nightscout hochgeladen.
 
 Verbindungseinstellungen
 -----------------------------------------------------------
 
   .. image:: ../images/ConfBuild_ConnectionSettings.png
-    :alt: NSClient connection settings  
+    :alt: NSClient Verbindungseinstellungen  
   
-* Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-* If you want to use only a specific WiFi network you can enter its WiFi SSID. 
-* Multiple SSIDs can be separated by semicolon. 
+* Beschränken den Nightscout-Upload auf WLAN-Verbindungen oder sogar auf bestimmte WLAN-SSIDs.
+* Wenn Du nur ein bestimmtes WLAN-Netzwerk verwenden möchtest, kannst du dessen WiFi SSID eingeben. 
+* Mehrere SSIDs können durch Semikolon (Strichpunkt) getrennt werden. 
 * Gib zum Löschen aller SSIDs ein Leerzeichen in das Feld ein.
 
 Alarm-Optionen
 -----------------------------------------------------------
-* Alarm options allows you to select which default Nightscout alarms to use through the app.  
-* For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
-* They will only work whilst you have a connection to Nightscout and are intended for parent/carers. 
-* If you have the CGM source on your phone (i.e. xDrip+ or Dexcom patched app) then use those alarms instead.
+* In den Alarm-Optionen legst Du fest, welche Standard-Nightscout-Alarme in AAPS angezeigt werden sollen.  
+* Damit die Alarme ausgelöst werden können, musst Du in den `Heroku Variablen <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_ Werte für Urgent High, High, Low und Urgent Low Alarme setzen. 
+* Diese funktionieren nur, wenn Du eine Online-Verbindung mit Nightscout hast und sind vor allem für Eltern und Betreuer gedacht. 
+* Wenn Du Deine CGM-Quelle direkt auf dem Smartphone hast (z.B. xDrip+ oder gepatchte Dexcom App) nutze stattdessen deren Alarme.
 
 Erweiterte Einstellungen
 -----------------------------------------------------------
 
   .. image:: ../images/Pref2020_NSClientAdv.png
-    :alt: NS Client advanced settings
+    :alt: NS-Client - erweiterte Einstellungen
 
-* Most options in advanced settings are self-explanatory.
-* *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+. 
+* Die meisten Optionen in den erweiterten Einstellungen sind selbsterklärend.
+* *Aktiviere lokale Broadcasts* teilt deine Daten mit anderen Apps auf dem Smartphone (z. B. xDrip+). 
 
-  * Dexcom patched app does not broadcast directly to xDrip+. 
-  * You need to `go through AAPS <../Configuration/Config-Builder.html#bg-source>`_ and enable local broadcast in AAPS to use xDrip+ alarms.
+  * Die gepatchte Dexcom App übergibt Werte nicht direkt an xDrip+. 
+  * Du musst `über AAPS gehen <../Configuration/Config-Builder.html#bz-quelle>`_ und lokale Broadcast in AAPS aktivieren, um xDrip+ Alarme nutzen zu können.
   
-* *Always use basal absolute values* must be activated if you want to use Autotune properly. See `OpenAPS documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ for more details on Autotune.
+* *Verwende absolute statt prozentuale Basalwerte beim Upload zu NightScout.* muss aktiviert werden, wenn Du Autotune einsetzen willst. In der `OpenAPS Dokumentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ findest Du Details zu Autotune.
 
 SMS Kommunikator
 ===========================================================
-* Options will only be displayed if SMS communicator is selected in `Config Builder <../Configuration/Config-Builder.html#sms-communicator>`_.
-* This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.  
-* Further information is described in `SMS Commands <../Children/SMS-Commands.html>`_.
-* Additional safety is obtained through use of an authenticator app and additional PIN at token end.
+* Einstellmöglichkeiten werden nur angezeigt, wenn Du zuvor den SMS Kommunikator im `Konfigurations-Generator <../Configuration/Config-Builder.html#sms-kommunikator>`_ aktiviert hast.
+* Diese Einstellung erlaubt eine Fernsteuerung der App, indem Anweisungen an das Smartphone des Patienten gesendet werden, die die App ausführt (z.B. Loop oder Bolus anhalten).  
+* Weitere Information findest Du auf der Seite `SMS-Befehle <../Children/SMS-Commands.html>`_.
+* Zusätzliche Sicherheit wird durch die Verwendung einer Authentifikator-App und einer zusätzlichen PIN am Tokenende erreicht.
 
 Automatisierung
 ===========================================================
-Select which location service shall be used:
+Wähle aus, welcher Standortservice verwendet werden soll:
 
 * Passiver Standort: AAPS nutzt nur die Standort, die von andere Apps angefordert werden.
-* Use network location: Location of your Wi-Fi
+* Netzwerkstandort: Bestimmung des Standorts mithilfe der Infrastruktur Deines Mobilfunkanbieters (teilweise recht ungenau)
 * GPS-Standort (Achtung! Kann zu übermäßigen Akkuverbrauch führen!)
 
 Lokale Alarme
 ===========================================================
 
   .. image:: ../images/Pref2020_LocalAlerts.png
-    :alt: Local alerts
+    :alt: Lokale Alarme
 
-* Settings should be self-explanatory.
+* Einstellungen sollten selbsterklärend sein.
 
-Data choices
+Datenübermittlung
 ===========================================================
 
   .. image:: ../images/Pref2020_DataChoice.png
-    :alt: Data choices
+    :alt: Datenübermittlung
 
-* You can help develop AAPS further by sending crash reports to the developers.
+* Du kannst bei der Weiterentwicklung von AAPS unterstützen, indem Du Absturzberichte an die Entwickler sendest.
 
-Maintenance settings
+Wartungseinstellungen
 ===========================================================
 
   .. image:: ../images/Pref2020_Maintenance.png
-    :alt: Maintenance settings
+    :alt: Wartungseinstellungen
 
-* Standard recipient of logs is logs@androidaps.org.
-* If you select *Encrypt exported settings* these are encrypted with your `master password <../Configuration/Preferences.html#master-password>`_. In this case master password has to be entered each time settings are exported or imported.
+* Standardempfänger von Protokollen ist logs@androidaps.org.
+* Wenn Du *Exportierte Daten verschlüsseln* auswählst, werden diese mit Deinem `master password <../Configuration/Preferences.html#master-passwort>`_ verschlüsselt. In diesem Fall muss das Master-Passwort jedesmal eingegeben werden, wenn die Einstellungen ex- oder importiert werden.
