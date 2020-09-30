@@ -70,7 +70,7 @@ Nachteile:
 
 ### Profil-Helfer
 
-Profile helper offers two functions:
+Der Profil-Helfer ermöglicht zwei Funktionen:
 
 1. Find a profile for kids
 2. Compare two profiles or profile switches in order to clone a new profile

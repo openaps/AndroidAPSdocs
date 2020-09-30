@@ -220,7 +220,7 @@ Boucle
 Mode APS
 -----------------------------------------------------------
 * Basculer entre les boucles ouvertes et fermées ainsi que le mode arrêt glycémie basses (AGB)
-* **La Boucle Ouverte** signifie que les suggestions de DBT (Débit de Basal Temporaire) sont calculées à partir de vos données et apparaissent sous forme d’une notification, mais vous devez choisir manuellement de les accepter et de les entrer manuellement sur votre pompe.  
+* **Open looping** means TBR suggestions are made based on your data and appear as a notification. After manual confirmation the command to dose insulin will be transferred to pump.. Only if you use virtual pump you have to enter it manually.
 * **La Boucle fermée** signifie que les suggestions DBT (Débit de Basal Temporaire) sont automatiquement envoyées à votre pompe sans confirmation ou entrée de votre part.  
 * **Arrêt Glycémie Basse** vous donne la possibilité de revenir au mode Arrêt Glycémie basse sans avoir besoin de refaire un objectif.
 
@@ -263,7 +263,7 @@ Lorsque vous commencez à boucler, **il est conseillé de mettre l'IA basal Max 
 * Profiter de l'occasion pour parfaire votre profil basal et votre Sensibilité à l'Insulin (SI).
 * Voir comment AAPS limite votre insuline basale pour prévenir l'hypoglycémie.
 
-Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commencer à vous donner de l'insuline basale supplémentaire, en augmentant la valeur de l'IA basal Max. Une bonne recommandation est de prendre le **débit de basal maximum** de votre profil et de le **multiplier par 3**. Par exemple, si le débit de basal le plus élevé dans votre profil est de 0,5 U/h, vous pourriez le multiplier par 3 pour obtenir la valeur de 1,5 U.
+Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commencer à vous donner de l'insuline basale supplémentaire, en augmentant la valeur de l'IA basal Max. Une bonne recommandation est de prendre le **débit de basal maximum** de votre profil et de le **multiplier par 3**. For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 3 to get a value of 1.5 U/h.
 
 * Vous pouvez commencer prudemment avec cette valeur et l'augmenter lentement avec le temps. 
 * Ce ne sont que des lignes directrices; chacun a un corps différent. Vous trouverez peut-être que vous avez besoin plus ou moins que ce qui est recommandé ici, mais commencez toujours prudemment et ajustez lentement.
@@ -436,3 +436,11 @@ Paramètres de maintenance
 
 * Le destinataire standard des journaux est logs@androidaps.org.
 * Si vous sélectionnez *Chiffrer les paramètres exportés* ces paramètres sont chiffrés avec votre mot de passe principal <../Configuration/Preferences.html#mot-de-passe-principal>`_. Dans ce cas, le mot de passe principal doit être entré à chaque fois que les paramètres sont exportés ou importés.
+
+Open Humans
+===========================================================
+* You can help the community by donating your data to research projects! Details are described on the `Open Humans page <../Configuration/OpenHumans.html>`_.
+* In Preferences you can define when data shall be uploaded
+
+   * only if connected to WiFi
+   * only if charging

@@ -91,6 +91,7 @@ AndroidAPS naudojimas
    Ištęsti angliavandeniai <./Usage/Extended-Carbs.rst>
    Automatizavimas <./Usage/Automation.rst>
    Priežiūros portalas (nutraukta) <./Usage/CPbefore26.rst>
+   Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automatizavimas su 3-ios šalies aplikacijomis <./Usage/automationwithapp.md>
    Android Auto <./Usage/Android-auto.md>  
  

@@ -91,6 +91,7 @@ AndroidAPS Nutzung
    Verzögerte Kohlenhydrate (eCarbs) <./Usage/Extended-Carbs.rst>
    Automation <./Usage/Automation.rst>
    Careportal (eingestellt) <./Usage/CPbefore26.rst>
+   Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automation mit Drittanbieter-Apps <./Usage/automationwithapp.md>
    Android Auto <./Usage/Android-auto.md>  
  

@@ -91,6 +91,7 @@ Použití AndroidAPS
    Extended carbs <./Usage/Extended-Carbs.rst>
    Automatizace <./Usage/Automation.rst>
    Careportal (discontinued) <./Usage/CPbefore26.rst>
+   Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automatizace s aplikacemi třetích stran <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
  
