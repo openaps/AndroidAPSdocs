@@ -52,7 +52,7 @@ Wichtige neue Funktionen
 * Verbesserung Historie @MilosKozak
 * OpenAPS MA Algorithmus entfernt @Tornado-Tim
 * Oref0 Sensitivität entfernt @Tornado-Tim
-* `Biometrischer oder Password-Schutz <..../Configuration/Preferences.html#schutz>`_ ffür Einstellungen und Bolus @MilosKozak
+* `Biometrischer oder Password-Schutz <../Configuration/Preferences.html#schutz>`_ für Einstellungen und Bolus @MilosKozak
 * `Neuer Automation Trigger <../Usage/Automation.html>`_ @PoweRGbg
 * `Open Humans Uploader <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
 * Neue Dokumentation @Achim
