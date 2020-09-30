@@ -361,7 +361,7 @@ Der Behandlungs-Tab kann verwendet werden, um fehlerhafte Kohlenhydrat-Einträge
 ## Loop, AMA / SMB
 
 * Diese Registerkarten enthalten Details zu den Berechnungen des Algorithmus und erklären, warum AAPS so und nicht anders gerechnet hat.
-* Die Berechnung erfolgt jedesmal, wenn das System einen neuen Wert vom CGM erhält.
+* Die Berechnung erfolgt jedes Mal, wenn das System einen neuen Wert vom CGM erhält.
 * Weitere Details findest Du im [APS-Abschnitt auf der Seite des Konfigurations-Generators](../Configuration/Config-Builder#aps).
 
 ## Profile
