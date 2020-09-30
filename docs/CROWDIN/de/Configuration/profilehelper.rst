@@ -1,10 +1,10 @@
 Profil-Helfer
 ****************************************
 
-Profile helper offers two functions:
+Der Profil-Helfer ermöglicht zwei Funktionen:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. Finden eines Profils für Kinder
+2. Vergleichen von zwei Profilen oder von Profilwechseln, um ein neues Profil zu klonen.
 
 Profil für Kinder (bis 18 Jahre)
 ==================================
@@ -35,35 +35,35 @@ Wenn Du mit den Profilanpassungen zufrieden bist, kannst Du das Profil klonen <.
 Vergleiche zwei Profile
 ==================================
 
-You can use profile helper also to compare to different profiles or profile switches (percentage of on of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
+Du kannst den Profil-Helfer auch verwenden, um Profile oder Profilwechsel (um einen Prozentsatz geänderten Profil <.,/Usage/Profiles.html>`) miteinander zu vergleichen.
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Profile Helper 1
 
 1. Wähle 'Profil-Helfer' aus dem Drei-Punkte-Menü oben rechts auf dem Bildschirm.
-2. Long-press 'Default profile' and select 'Available profile' for a list of your existing profiles or 'Profile switch' for a list of latest profile switches used.
-3. Long-Press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
-4. Wechsele den Bildschirm, indem du auf die rechte, graue Schaltfläche mit der Bezeichnung '2' klickst.
+2. Drücke lange auf 'Standard-Profil' und wähle 'Verfügbares Profil' für eine Liste Deiner vorhandenen Profile oder 'Profilwechsel' für eine Liste der zuletzt verwendeten Profilwechsel.
+3. Drücke lange auf den Namen des Profils / Profilwechsels ('Aktuell_LP' im obigen Screenshot) und wähle ein Profil / einen Profilwechsel aus der Liste.
+4. Wechsele den Bildschirm, indem Du auf die rechte, graue Schaltfläche mit der Bezeichnung '2' klickst.
 
 .. image:: ../images/ProfileHelper2.png
   :alt: Profile Helper 2
 
-5. As a standard 'Current profile' is offered as comparison candidate. 
-6. If you want a different profile / profile switch long-press 'Current profile' and select either 'Available profile' or 'Profile switch'.
-7. Long-press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
+5. Standardmäßig wird 'Aktuelles Profil' als Vergleichskandidat angeboten. 
+6. Wenn Du ein anderes Profil / einen anderen Profilwechsel verwenden möchtest, drücke lange auf 'Aktuelles Profil' und wähle entweder 'Verfügbares Profil' oder 'Profilwechsel'.
+7. Drücke lange auf den Namen des Profils / Profilwechsels ('Aktuell_LP' im obigen Screenshot) und wähle ein Profil / einen Profilwechsel aus der Liste.
 8. Drücke die Schaltfläche 'PROFILE VERGLEICHEN' oben auf dem Bildschirm.
 9. Es wird der Vergleich der beiden angepassten Profile angezeigt.
 
-Clone profile
+Profil klonen
 ==================================
 
-If you use `local profiles <../Configuration/Config-Builder.html#local-profile-recommended>`_ you can clone a profile / profile switch directly from profile helper.
+Wenn Du `lokale Profile <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_ verwendest, kannst Du ein Profil / einen Profilwechsel direkt vom Profil-Helfer klonen.
 
 .. image:: ../images/ProfileHelperClone.png
-  :alt: Profile Helper Clone profile / profile switch
+  :alt: Profile Helper Clone Profil / Profilwechsel
   
-1. Select the desired profile / profile switch as described above.
-2. If you are using 'Default profile' or 'DPV Default profile' (based on data sets from hospitals for children) make sure you enter correct settings for age, percentage of basal and TDD / weight.
-3. Press button 'CLONE' on bottom of screen.
-4. Confirm with 'OK'.
-5. Activate new profile in local profile tab.
+1. Wähle das gewünschte Profil / den Profilwechsel aus wie oben beschrieben.
+2. Falls Du 'Standard-Profil' oder 'DPV-Standardprofil' verwendest (basierend auf Datensätzen aus Kinderkrankenhäusern), musst Du sicherstellen, dass Du die richtigen Einstellungen für das Alter, den Prozentsatz der Basalrate und TDD/Gewicht eingibst.
+3. Drücke die Taste 'KLONEN' am unteren Bildschirmrand.
+4. Bestätige mit 'OK'.
+5. Neues Profil auf der Registerkarte 'Lokales Profil' aktivieren.
