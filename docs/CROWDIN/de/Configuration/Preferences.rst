@@ -263,7 +263,7 @@ Wenn Du anfängst den Loop zu benutzen, wird empfohlen das **maximale Basal-IOB 
 * die Gelegenheit zu nutzen, dein Basalratenprofil und die Insulinsensibilitäts-Faktoren (ISF) anzupassen.
 * zu sehen, wie AAPS die Basalrate einschränkt, um Hypoglykämien zu verhindern.
 
-Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches Basalinsulin zu geben, indem du den Wert Max-Basal IOB erhöhst. Die empfohlene Richtlinie für diesen Wert ist, die **höchste Basalrate** in Deinem Profil zu verwenden und diese **mit 3 zu multiplizieren**. Wenn zum Beispiel die höchste Basalrate in deinem Profil 0.5IE/h war, kannst du das mit 3 multiplizieren, um einen Wert von 1.5IE/h zu erhalten.
+Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches Basalinsulin zu geben, indem du den Wert Max-Basal IOB erhöhst. Die empfohlene Richtlinie für diesen Wert ist, die **höchste Basalrate** in Deinem Profil zu verwenden und diese **mit 3 zu multiplizieren**. For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 3 to get a value of 1.5 U/h.
 
 * Du kannst konservativ mit diesem Wert starten und ihn im Laufe der Zeit langsam erhöhen. 
 * Das sind aber nur Richtlinien; jeder Körper ist anders. Es kann durchaus sein, dass du mehr oder weniger benötigst als hier empfohlen wurde, aber beginne dennoch konservativ und passe es langsam an.
@@ -436,3 +436,11 @@ Wartungseinstellungen
 
 * Standardempfänger von Protokollen ist logs@androidaps.org.
 * Wenn Du *Exportierte Daten verschlüsseln* auswählst, werden diese mit Deinem `master password <../Configuration/Preferences.html#master-passwort>`_ verschlüsselt. In diesem Fall muss das Master-Passwort jedesmal eingegeben werden, wenn die Einstellungen ex- oder importiert werden.
+
+Open Humans
+===========================================================
+* You can help the community by donating your data to research projects! Details are described on the `Open Humans page <../Configuration/OpenHumans.html>`_.
+* In Preferences you can define when data shall be uploaded
+
+   * only if connected to WiFi
+   * only if charging
