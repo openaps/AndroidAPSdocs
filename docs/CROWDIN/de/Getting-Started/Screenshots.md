@@ -34,7 +34,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 #### Anzeige der dynamischen Ziel-Anpassung
 
-    ![Darstellung der dynamischen Ziel-Anpassung](../images/Home2020_DynamicTargetAdjustment.png)
+![Darstellung der dynamischen Ziel-Anpassung](../images/Home2020_DynamicTargetAdjustment.png)
     
 
 * AAPS kann das Ziel dynamisch anhand der Empfindlichkeit (Sensitivity) anpassen, wenn Du den SMB-Algorithmus verwendest.
