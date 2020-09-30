@@ -242,7 +242,7 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 
 #### Bolus-Rechner
 
-* Siehe [Details unten](../Configuration/Screenhots#bolus-wizard)
+* Siehe [Details unten](../Configuration/Screenhots#bolus-rechner)
 
 #### Kalibrierungen
 
@@ -304,7 +304,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
 * Wenn Du nach Verwendung des Bolus-Assistenten die obige Warnung siehst, hat AAPS erkannt, dass aktiven Kohlenhydrate (COB) eventuell nicht korrekt berechnet werden konnten. 
 * Wenn Du kurz nach einer vorangegangenen Mahlzeit erneut einen Bolus abgeben willst, solltest Du Dir der Gefahr einer Überdosierung bewusst sein! 
-* Weitere Hinweise findest Du auf der Seite zur [Berechnung der aktiven Kohlenhydrate (COB)](../Usage/COB-calculation#detection-of-wrong-cob-values).
+* Weitere Hinweise findest Du auf der Seite zur [Berechnung der aktiven Kohlenhydrate (COB)](../Usage/COB-calculation#erkennung-fehlerhafter-cob-werte).
 
 ## Insulin Profil
 
@@ -337,7 +337,7 @@ Careportal hat die Funktionen repliziert, die auf der Nightscout-Webseite unter 
 
 ![KH-Berechnung auf der Registerkarte "Behandlung" überprüfen](../images/Screenshots_TreatCalc.png)
 
-* Wenn Du den [Bolus Rechner](../Getting-Started/Screenshots#bolus-wizard) verwendet hast, um die Insulindosierung zu berechnen, kannst Du diese Berechnung später auf der Registerkarte Behandlungen überprüfen.
+* Wenn Du den [Bolus Rechner](../Getting-Started/Screenshots#bolus-rechner) verwendet hast, um die Insulindosierung zu berechnen, kannst Du diese Berechnung später auf der Registerkarte Behandlungen überprüfen.
 * Klicke einfach auf den grünen Text 'Berech.'. (Je nach Pumpe können Insulin und Kohlenhydrate auch in einer einzigen Zeile in Behandlungen gezeigt werden.)
 
 ### Kohlenhydrat Korrektur
