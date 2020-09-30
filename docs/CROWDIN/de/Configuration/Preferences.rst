@@ -80,7 +80,7 @@ Erscheinungsbild
   .. image:: ../images/Pref2020_Skin.png
     :alt: Select skin
 
-* Der Unterschied hängt von der Ausrichtung des Telefons ab
+* Der Unterschied hängt von der Ausrichtung des Smartphones ab.
 
 Hochformat
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -157,7 +157,7 @@ Kurze Tab-Überschriften
 
 Möglichkeit zur Erfassung von Notizen in Behandlungsdialogen
 -----------------------------------------------------------
-* Gibt dir die Möglichkeit, kurze Textnotizen zu deinen Behandlungen hinzuzufügen (z.B. im Bolus-Rechner, den Buttons für Insulin und Kohlenhydrate etc.) 
+* Gibt dir die Möglichkeit, kurze Textnotizen zu Deinen Behandlungen hinzuzufügen (z.B. im Bolus-Rechner, den Buttons für Insulin und Kohlenhydrate etc.) 
 
   .. image:: ../images/Pref2020_OV_Notes.png
     :alt: Preferences > Notes in treatment dialogs
