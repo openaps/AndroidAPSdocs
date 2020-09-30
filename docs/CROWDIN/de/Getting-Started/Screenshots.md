@@ -10,7 +10,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 * Wechsele zwischen den verschiedenen AndroidAPS-Modulen.
 * Alternativ kannst Du die Bildschirme wechseln, indem Du nach links oder rechts wischst.
-* Anzuzeigende Registerkarten können im Konfigurations-Generator[ im Konfigurationsbuilder ](../Configuration/Config-Builder#registerkarte-tab-oder-hamburger-menu)ausgewählt werden.
+* Anzuzeigende Registerkarten können im [Konfigurations-Generator](../Configuration/Config-Builder#registerkarte-tab-oder-hamburger-menu) ausgewählt werden.
 
 ### Abschnitt B - Profil & Ziel
 
@@ -40,7 +40,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 * AAPS kann das Ziel dynamisch anhand der Empfindlichkeit (Sensitivity) anpassen, wenn Du den SMB-Algorithmus verwendest.
 * Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
    * "Sensibilität erhöht den Zielwert" und/oder 
-   * "resistenz senkt Zielwert" 
+   * "Resistenz senkt Zielwert" 
 * Falls AAPS Resistenz oder Sensibilität erkennt, wird das aus dem Profil vorgegebene Ziel angepasst. 
 * Falls das Ziel geändert wird, wechselt der Hintergrund der Zielschaltfläche nach grün.
 
@@ -62,7 +62,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 * Ein neues Symbol zeigt den Status des Loops:
    
    * grüner Kreis = Loop läuft
-   * grüner Kreis mit gepunkteter Linie = [Low Glucose Suspend (Reduzierung der Baslarate bei niedrigen Glukosewerten)](../Usage/Objectives#ziel-6-closed-loop-mit-abschaltung-bei-niedrigen-glukose-werten)
+   * grüner Kreis mit gepunkteter Linie = [Low Glucose Suspend (Reduzierung der Basalrate bei niedrigen Glukosewerten)](../Usage/Objectives#ziel-6-closed-loop-mit-abschaltung-bei-niedrigen-glukose-werten)
    * roter Kreis = Loop deaktiviert (dauerhaft)
    * gelber Kreis = Loop ausgesetzt (vorübergehend pausiert, aber Basalinsulin wird weiter abgegeben) - verbleibende Zeit wird unter dem Symbol angezeigt
    * grauer Kreis = Pumpe getrennt (vorübergehend gar keine Insulinabgabe) - verbleibende Zeit wird unter dem Symbol angezeigt
@@ -293,7 +293,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
 #### Kombinationen von COB und IOB und deren Bedeutung
 
-* Aus Sicherheitsgründen kann die IOB Box nicht deaktiviert werden, wenn die COB Box aktivt ist. Sonst bestünde das Risiko, dass bereits im Körper befindliches Insulin nicht berücksichtigt und daher zu viel Insulin abgegeben würde.
+* Aus Sicherheitsgründen kann die IOB Box nicht deaktiviert werden, wenn die COB Box aktiv ist. Sonst bestünde das Risiko, dass bereits im Körper befindliches Insulin nicht berücksichtigt und daher zu viel Insulin abgegeben würde.
 * Wenn Du COB und IOB aktivierst, werden noch nicht resorbierte Kohlenhydrate, die nicht bereits mit Insulin abgedeckt sind, sowie alles Insulin, das als TBR oder SMB geliefert wurde, berücksichtigt.
 * Falls Du IOB ohne COB auswählst besteht das Risiko, dass zu wenig Insulin abgegeben wird, da der Anteil des IOB, der eigentlich für noch nicht komplett vom Körper aufgenommene Kohlenhydrate vorgesehen ist, von der neuen Insulinmenge abgezogen wird. Das kann auch zur "Fehlend x g" (fehlende Kohlenhydrate führen).
 * Falls Du einen weiteren Bolus wegen **zusätzlichen Essens** kurz nach einem Mahlzeitenbolus abgeben willst (z.B. zusätzlicher Nachtisch), so kann es hilfreich sein, alle Häkchen rauszunehmen. Dadurch wird die Insulinmenge nur auf Basis der neuen Kohlenhydrate berechnet.
@@ -329,7 +329,7 @@ Und noch mehr bei: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017
 * Verschiedene Informationen über den Status Deiner Pumpe. Die angezeigten Informationen hängen von Deinem Pumpenmodell ab.
 * Weitere Informationen findest Du auf der [Pumpen Seite](../Hardware/pumps.rst).
 
-## Care Portal (Behandlungen)
+## Careportal (Behandlungen)
 
 Careportal hat die Funktionen repliziert, die auf der Nightscout-Webseite unter dem "+"-Symbol zu finden sind, das es erlaubt, Notizen hinzuzufügen.
 
