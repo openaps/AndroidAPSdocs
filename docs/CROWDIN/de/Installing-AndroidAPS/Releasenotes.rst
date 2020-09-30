@@ -32,10 +32,10 @@ Wichtige neue Funktionen
 * Zahlreiche Code- und Library-Änderungen, Code neu in Kotlin geschrieben @MilosKozak @AdrianLxM
 * Module für Dana Pumpen @MilosKozak
 * `Neues Layout und Layoutauswahl <../Getting-Started/Screenshots.html>`_ @MilosKozak
-* Neues `Status Lights Layout <../Configuration/Preferences.html#status-lights>`_ @MilosKozak
-* `Unterstützung mehrerer Diagramme <../Getting-Started/Screenshots.html#section-f---main-graph>`_ @MilosKozak
+* Neues `Status Lights Layout <../Configuration/Preferences.html#statusanzeige>`_ @MilosKozak
+* `Unterstützung mehrerer Diagramme <../Getting-Started/Screenshots.html#abschnitt-f-hauptgrafik>`_ @MilosKozak
 * `Profil Helfer <../Configuration/profilehelper.html>`_ @MilosKozak
-* Visualisierung der `dynamischen Ziel-Anpassung <../Getting-Started/Screenshots.html#visualization-of-dynamic-target-adjustment>`_ @Tornado-Tim
+* Visualisierung der `dynamischen Ziel-Anpassung <../Getting-Started/Screenshots.html#anzeige-der -dynamischen-ziel-anpassung>`_ @Tornado-Tim
 * Neues `Layout für die Einstellungen <../Configuration/Preferences.html>`_ @MilosKozak
 * Update des SMB Algorithmus @Tornado-Tim
 * `Low glucose Suspend (Reduzierung der Baslarate bei niedrigen Glukosewerten) Modus <../Configuration/Preferences.html#aps-mode>`_ @Tornado-Tim
