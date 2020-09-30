@@ -220,7 +220,7 @@ Boucle
 Mode APS
 -----------------------------------------------------------
 * Basculer entre les boucles ouvertes et fermées ainsi que le mode arrêt glycémie basses (AGB)
-* **Open looping** means TBR suggestions are made based on your data and appear as a notification. Depending on pump modell you must manually enter them into your pump or command to dose insulin will be transferred to pump after you confirmed the suggestion.  
+* **Open looping** means TBR suggestions are made based on your data and appear as a notification. After manual confirmation the command to dose insulin will be transferred to pump.. Only if you use virtual pump you have to enter it manually.
 * **La Boucle fermée** signifie que les suggestions DBT (Débit de Basal Temporaire) sont automatiquement envoyées à votre pompe sans confirmation ou entrée de votre part.  
 * **Arrêt Glycémie Basse** vous donne la possibilité de revenir au mode Arrêt Glycémie basse sans avoir besoin de refaire un objectif.
 
