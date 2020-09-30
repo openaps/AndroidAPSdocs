@@ -98,76 +98,76 @@ Querformat
 Übersicht
 ===========================================================
 
-* In overview section you can define preferences for home screen.
+* In Übersicht kannst du Einstellungen für den Homescreen festlegen.
 
   .. image:: ../images/Pref2020_OverviewII.png
     :alt: Preferences > Overview
 
 Bildschirm aktiv lassen
 -----------------------------------------------------------
-* Useful while giving a presentation. 
+* Nützlich, wenn du eine Präsentation gibst. 
 * Dies wird ziemlich viel Energie verbrauchen, daher ist es ratsam, Dein Telefon an ein Ladekabel anzuschließen.
 
 Schaltflächen
 -----------------------------------------------------------
-* Define which buttons are visible on the bottom of your home screen.
-* With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
+* Lege fest welche Schaltflächen am unteren Rand des Homescreens sichtbar sind.
+* Mit den Erhöhungszahlen kannst du die Schrittweiten definieren, die in den KH- und Insulin-Dialogen benutzt werden und so die dortigen Eingaben vereinachen.
 
   .. image:: ../images/Pref2020_OV_Buttons.png
     :alt: Preferences > Buttons
 
 Quick Wizard
 -----------------------------------------------------------
-* If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
-* In setup you define during which time period the button will be visible on your home screen - just one button per period.
-* If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up). 
-* The proposal has to be confirmed before insulin is delivered.
+* Bei häufigen Snacks oder Mahlzeiten kannst du über QuickWizard-Schaltflächen einfach die Menge der Kohlenhydrate eingeben und die Berechnungsgrundlagen festlegen.
+* In der Konfiguration legst du fest, in welchem Zeitraum die Schaltfläche auf dem Homescreen zu sehen sein soll. Es ist nur eine Schaltfläche pro Zeitraum möglich.
+* Wenn du auf den QuickWizardf-Button klickst, berechnet AAPS für diese Kohlenhydrate einen Bolus basierend auf Deinen aktuellen Faktoren (unter Berücksichtigung des Blutzuckerwertes oder des Insulins an Bord, wenn eingerichtet) und schlägt diesen vor. 
+* Der Vorschlag muss bestätigt werden, bevor Insulin abgegeben wird.
 
   .. image:: ../images/Pref2020_OV_QuickWizard.png
     :alt: Preferences > Quick Wizard Button
   
-Default temp targets
+Vordefinierte temporäre Ziele
 -----------------------------------------------------------
-* `Temp targets (TT) <../Usage/temptarget.html#temp-targets>`_ allow you to define change your blood glucose target for a certain time period.
-* With setting of default TT you can easily change your target for activity, eating soon etc.
-* Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+* `Temp Targets (TT) <../Usage/temptarget.html#temp-targets>`_ erlauben es dir, dein Blutzuckerziel für einen bestimmten Zeitraum zu ändern.
+* Mit dem Setzen von Standard-TT kannst Du Dein Ziel für Aktivität, Bald essen, usw. einfach verändern.
+* Drücke lange auf deinen Zielwert in der oberen rechten Ecke auf dem Home-Bildschirm oder verwende die Shortcuts im orange "Kohlenhydrate" (Carbs)-Button am unteren Rand.
 
   .. image:: ../images/Pref2020_OV_DefaultTT.png
     :alt: Preferences > Default temp targets
   
 Füll-/Vorfüll-Standardmengen
 -----------------------------------------------------------
-* If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Usage/CPbefore26.html#pump>`_.
-* Pre-set values can be defined in this dialogue.
+* Wenn Du Katheter oder Kanüle über AAPS füllen möchtest, kannst Du dies über den Tab `Aktionen <../Usage/CPbefore26.html#pump>` _ tun.
+* Voreinstellungen für Füllmengen können in diesem Dialog definiert werden.
 
-Range for visualization
+Zielbereich für die Grafikanzeige
 -----------------------------------------------------------
-* Define which part of the graph on the home screen shall be you target range and be filled with green background.
+* Lege fest, welcher Bereich der Grafik auf dem Startbildschirm der Zielbereich sein und grün hinterlegt werden soll.
 
   .. image:: ../images/Pref2020_OV_Range2.png
     :alt: Preferences > Range for visualization
 
 Kurze Tab-Überschriften
 -----------------------------------------------------------
-* See more tab titles on screen. 
-* For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
+* Gleichzeitige Anzeige von mehr Tabs auf dem Bildschirm. 
+* Zum Beispiel wird die 'OpenAPS AMA' -Registerkarte zu 'OAPS', 'Objectives (Ziele)' wird zu 'ZIEL' usw.
 
   .. image:: ../images/Pref2020_OV_Tabs.png
     :alt: Preferences > Tabs
 
-Show notes field in treatments dialogs
+Möglichkeit zur Erfassung von Notizen in Behandlungsdialogen
 -----------------------------------------------------------
-* Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...) 
+* Gibt dir die Möglichkeit, kurze Textnotizen zu deinen Behandlungen hinzuzufügen (z.B. im Bolus-Rechner, den Buttons für Insulin und Kohlenhydrate etc.) 
 
   .. image:: ../images/Pref2020_OV_Notes.png
     :alt: Preferences > Notes in treatment dialogs
   
 Statusanzeige
 -----------------------------------------------------------
-* Status lights give a visual warning for 
+* Status Anzeigen geben eine optische Warnung für 
       
-   * Cannula age
-   * Insulin age (days reservoir is used)
+   * Kanülenalter
+   * Insulinalter (Tage Reservoirverwendung)
    * Reservoir level (units)
    * Sensor age
    * Battery age
