@@ -91,6 +91,7 @@ AndroidAPS Usage
    Extended carbs <./Usage/Extended-Carbs.rst>
    Automation <./Usage/Automation.rst>
    Careportal (discontinued) <./Usage/CPbefore26.rst>
+   Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automation with 3rd party apps <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
  
