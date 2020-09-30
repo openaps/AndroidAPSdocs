@@ -16,8 +16,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 #### Profil
 
-    ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
-    
+![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
 * Le profil actuel est affiché dans la barre de gauche.
 * Un appui long sur la bar de profil permet de voir le détail du profil ou de [changer de profil](../Usage/Profiles#changement-de-profil).
@@ -25,8 +24,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 #### Cible
 
-    ![Temp target remaining duration](../images/Home2020_TT.png)
-    
+![Temp target remaining duration](../images/Home2020_TT.png)
 
 * La cible de glycémie actuelle est affichée dans la barre de droite.
 * Un appui long sur la barre de cible permet de définir une [cible temporaire](../Usage/temptarget.md).
@@ -34,8 +32,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 #### Visualisation de l'ajustement dynamique de la cible
 
-    ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
-    
+![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS peut ajuster dynamiquement votre cible en fonction de la sensibilité si vous utilisez l'algorithme SMB.
 * Activez soit une, soit les deux [options suivantes](../Configuration/Preferences#parametres-openaps-smb) 
@@ -152,7 +149,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
    
    Les Repas Non Signalés signifient qu'une augmentation significative de la glycémie liée aux repas, à l'adrénaline ou à d'autres facteurs est détectée. Cette ligne de prédiction est similaire à la ligne ORANGE GA, mais elle suppose que les déviations diminueront de façon constante (en étendant le taux de réduction actuel).
 
-Généralement votre courbe de glycémie réelle finira au milieu de ces lignes, ou proche de la ligne qui représente le mieux votre situation réelle.
+Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
 
 #### Basals
 
@@ -171,7 +168,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 * Vous pouvez activer jusqu'à quatre graphiques supplémentaires en dessous du graphique principal.
 * Pour ouvrir les paramètres pour des graphiques supplémentaires, cliquez sur le triangle sur le côté droit du [graphique principal](../Getting-Started/Screenshots#section-f-graphique-principal) et faites défiler vers le bas.
 
-![Paramètres graphiques additionnels](../images/Home2020_AdditionalGraphSetting.png)
+![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
 * Pour ajouter un graphique supplémentaire, cochez la case sur le côté gauche de son nom (par ex. \---\---- Graph 1 \---\----).
 
@@ -216,14 +213,14 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 ### Section H - Boutons
 
-![Boutons de l'écran d'accueil](../images/Home2020_Buttons.png)
+![Homescreen buttons](../images/Home2020_Buttons.png)
 
 * Les boutons pour l'Insuline, les Glucides et l'Assistant bolus sont "toujours affichés". 
 * Les autres boutons doivent être configurés dans les [préférences](../Configuration/Preferences#boutons).
 
 #### Insuline
 
-![Bouton Insuline](../images/Home2020_ButtonInsulin.png)
+![Insulin button](../images/Home2020_ButtonInsulin.png)
 
 * Permet d'entrer une certaine quantité d'insuline sans utiliser l'[Assistant bolus](../Configuration/Screenhots#bolus-wizard).
 * En cochant la case, vous pouvez démarrer automatiquement votre [cible temporaire Repas imminent](../Configuration/Preferences#default-temp-targets).
@@ -231,7 +228,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 #### Glucides
 
-![Bouton Glucides](../images/Home2020_ButtonCarbs.png)
+![Carbs button](../images/Home2020_ButtonCarbs.png)
 
 * Permet d'enregistrer les glucides sans faire de bolus.
 * Certaines [cibles temporaires par défaut](../Configuration/Preferences#cibles-temporaires-par-defaut) peuvent être définies directement en cochant la case.
@@ -262,9 +259,9 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 ## Assistant rapide
 
-![Assistant Rapide](../images/Home2020_BolusWizard.png)
+![Bolus wizard](../images/Home2020_BolusWizard.png)
 
-Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le ferez.
+When you want to make a meal bolus this is where you will normally make it from.
 
 ### Section I
 
@@ -300,7 +297,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 #### Détection incorrecte des GA
 
-![Absorption lente des glucides](../images/Calculator_SlowCarbAbsorbtion.png)
+![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
 
 * Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. 
 * Donc si vous voulez faire un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! 
@@ -316,11 +313,11 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 * Si vous êtes habitué à utiliser la pompe manuellement, vous estimez probablement que l'insuline se désintègre en environ 3,5 heures. 
 * Toutefois, lorsque vous bouclez la longue queue est importante, car les calculs sont beaucoup plus précis et ces petites quantités s’additionnent lorsqu’elles sont soumises aux calculs récursifs de l’algorithme AndroidAPS.
 
-Pour plus d'informations sur les différents types d'insuline, leurs profils d'activité et l'importance de tout cela, vous pouvez lire un article ici sur [ Comprendre les nouvelles courbes IA basées sur des courbes d'activité exponentielles ](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-Et vous pouvez lire un excellent article de blog à ce sujet ici: [ Pourquoi nous avons régulièrement tort dans la durée d'action de l'insuline (DAI) que nous utilisons, et pourquoi c'est important… ](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-Et plus encore: [ Courbes d’insuline exponentielle + Fiasp ](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+And even more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Statut de la pompe
 
@@ -335,16 +332,16 @@ Careportal reproduisait les fonctions que vous pouvez trouver dans Nightscout so
 
 ### Revoir le calcul des glucides
 
-![Revoir le calcul des glucides dans l'onglet Traitement](../images/Screenshots_TreatCalc.png)
+![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
 
 * If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
 * Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
 
 ### Correction de Glucides
 
-![Traitement en 1 ou 2 lignes](../images/Treatment_1or2_lines.png)
+![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
 
-L'onglet Traitement peut être utilisé pour corriger les entrées de glucides erronées (par ex. si vous avez surestimé ou sous-estimé les glucides).
+Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
 
 1. Vérifiez et mémorisez les GA et IA actuels sur l'écran d'accueil.
 2. Selon la pompe, dans l'onglet Traitement, les glucides peuvent être affichés avec l'insuline sur une seule ligne ou dans deux lignes séparées (par ex. avec Dana RS).
@@ -391,7 +388,7 @@ History of the following treatments:
 
 ## Source Gly - xDrip, Application Dexcom (patchée)...
 
-![Onglet Source Gly - ici xDrip](../images/Screenshots_BGSource.png)
+![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
 
 * Depending on your BG source settings this tab is named differntly.
 * Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
