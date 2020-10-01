@@ -72,10 +72,10 @@ Nachteile:
 
 Der Profil-Helfer ermöglicht zwei Funktionen:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. Finden eines Profils für Kinder
+2. Vergleichen von zwei Profilen oder von Profilwechseln, um ein neues Profil zu klonen.
 
-Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
+Details werden auf der separaten [Profil-Helfer-Seite](../Configuration/profilehelper.rst) erläutert.
 
 ### Nightscout-Profil
 
@@ -139,8 +139,8 @@ Hier kannst du auswählen, aus welcher Quelle AAPS die BZ-Werte empfangen soll. 
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
-* [Tomato App](http://tomato.cool/) for MiaoMiao device
-* Random BG: Generates random BG data (Demo mode only)
+* [Tomato App](http://tomato.cool/) für MiaoMiao Geräte
+* Zufalls-BZ: Generiert zufällige Blutzuckerdaten (nur im Demo-Modus)
 
 ## Pumpe
 
@@ -148,21 +148,21 @@ Wähle die von dir genutzte Pumpe.
 
 * [Dana R](DanaR-Insulin-Pump.md)
 * DanaR Korean (koreanische Version der DanaR)
-* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
+* Dana Rv2 (DanaR mit inoffiziellem Firmware Upgrade)
 * [Dana RS](DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
-* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Accu Chek Combo ](Accu-Chek-Combo-Pump.md) (erfordert Installation von Ruffy)
 * [Medtronic](MedtronicPump.md)
 * ICT (für OpenLoop mit ICT, AAPS macht nur Behandlungsvorschläge, die du dann selbst mit dem Pen umsetzen musst)
 * Virtuelle Pumpe (für OpenLoop mit nicht unterstützten Pumpen, AAPS macht nur Behandlungsvorschläge, die du dann selbst in deiner Pumpe umsetzen musst)
 
 Wenn Du eine Dana-Pumpe nutzt, kannst Du in den **erweiterten Einstellungen** den Bluetooth Watchdog aktivieren, falls dies notwendig sein sollte. Er deaktiviert Bluetooth für eine Sekunde, falls keine Verbindung zur Pumpe möglich ist. Dies kann helfen, falls bei deinem Smartphone Probleme mit der Bluetooth-Verbindung auftreten.
 
-[Password for Dana RS pump](..Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
+Das [Passwort für die Dana RS Pumpe](..Configuration/DanaRS-Insulin-Pump.md) muss korrekt eingegeben werden. Das Passwort wurde in früheren Versionen nicht überprüft.
 
 ## Empfindlichkeitserkennung
 
-Hier kannst du auswählen, nach welchem Algorythmus AAPS die Insulinempfindlichkeit berechnen soll. For more details of different designs please [read on here](Sensitivity-detection-and-COB.md). Bei der Empfindlichkeitserkennung werden historische Daten "on the go" analysiert und Anpassungen vorgenommen, falls der Algorithmus feststellt, dass du sensibler oder weniger empfindlich auf das Insulin reagierst als üblich. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Hier kannst du auswählen, nach welchem Algorythmus AAPS die Insulinempfindlichkeit berechnen soll. For more details of different designs please [read on here](Sensitivity-detection-and-COB.md). Bei der Empfindlichkeitserkennung werden historische Daten "on the go" analysiert und Anpassungen vorgenommen, falls der Algorithmus feststellt, dass du sensibler oder weniger empfindlich auf das Insulin reagierst als üblich. Mehr Details zum Sensitivitäts Algorithmus findest du in den [OpenAPS Docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
 Die berechnete Insulinempfindlichkeit kannst du verfolgen, indem du auf der Startseite im Auswahlmenü der angezeigten Kurven “Sensitivität” auswählst. Die weiße Linie zeigt dir das graphisch an. Die [Empfindlichkeitserkennung Autosens](../Usage/Open-APS-features.html#autosens) ist erst freigeschaltet, wenn du [Ziel (objective) 8](../Usage/Objectives#ziel-8-passe-falls-notwendig-basalraten-und-faktoren-an-und-aktiviere-dann-die-autosens-funktion) erreicht hast. So lange Du diese Ziel (objective) noch nicht erreicht hast, wird der Autosens-Prozentsatz bzw. die Autosens-Kurve nur zu Deiner Information angezeigt. AAPS nimmt keine Änderungen vor.
 
@@ -181,7 +181,7 @@ Wähle den gewünschten APS-Algorithmus für Therapie-Anpassungen. Die Details z
 
 ## Loop
 
-* Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
+* Wechsel zwischen Open Loop, Closed Loop und Unterbrechung bei niedrigen BZ (LGS).
 
 ![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
 
