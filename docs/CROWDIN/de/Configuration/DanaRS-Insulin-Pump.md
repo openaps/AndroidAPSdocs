@@ -1,6 +1,6 @@
 # DanaRS Insulinpumpe
 
-*Diese Anleitung beschreibt die Einrichtung der App und deiner Pumpe wenn du eine Dana RS (ab 2017) verwendest. Gehe zu [DanaR Insulinpumpe](./DanaR-Insulin-Pump) wenn du die Original DanaR benutzt.*
+*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Gehe zu [DanaR Insulinpumpe](./DanaR-Insulin-Pump) wenn du die Original DanaR benutzt.*
 
 **New Dana RS firmware v3 can be used from AndroidAPS version 2.7 onwards.**
 
@@ -41,7 +41,7 @@ Falls die Verbindung zwischen AAPS und der Dana RS während der Insulinabgabe ab
 
 * In den meisten Fällen handelt es sich nur um ein Kommunikationsproblem und es wurde tatsächlich die korrekte Insulinmenge abgegeben.
 * Prüfe in der Historie der Dana RS (entweder direkt in der Pumpe oder über den Dana Tab > Pumpen-Speicher > Boli), ob die korrekte Bolusmenge abgegeben wurde.
-* Den Fehler kannst Du, falls gewünscht, im CP (Careportal) Tab löschen.
+* Den Fehler kannst Du, falls gewünscht, im Tab Behandlungen löschen.
 * Die tatsächlich abgegebene Insulinmenge wird bei der nächsten Verbindung zwischen AAPS und Dana RS ausgelesen. Um eine Verbindung manuell herzustellen, drücke das Bluetooth Icon auf dem Dana Tab oder warte einfach auf die nächste Verbindung.
 
 ## Wichtiger Hinweis beim Wechsel des Smartphones
