@@ -379,7 +379,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 History of the following treatments:
 
-* Bolus & carbs -> option to [remove entries](..Getting-Started/Screenshots#carb-correction) to correct history
+* Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
 * [Bolus étendu](../Usage/Extended-Carbs#bolus-etendus)
 * Temporary basal rate
 * [Cible temp.](../Usage/temptarget.md)
