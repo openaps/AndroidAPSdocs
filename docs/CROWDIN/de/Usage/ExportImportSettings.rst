@@ -26,7 +26,7 @@ Neben anderen werden folgende Einstellungen exportiert:
 
 Encrypted backup format
 ==================================================
-Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`_ .
+Die Sicherung der Einstellungen wird mit einem Master-Passwort verschlüsselt, das in den `Einstellungen <../Configuration/Preferences.html#master-passwort>`_ festgelegt wird.
 
 
 Exportiere die Einstellungen
