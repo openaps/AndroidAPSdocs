@@ -107,13 +107,13 @@ Das [Kurvendiagramm](../Getting-Started/Screenshots#insulin-profile) unterstütz
 
 * empfohlen für Humalog, Novolog und Novorapid
 * DIA = mindestens 5 Stunden
-* Wirkdauermaximum = 75 Minuten nach Insulingabe (fest eingestellt, nicht anpassbar)
+* Wirkmaximum = 75 Minuten nach Insulingabe (fest eingestellt, nicht anpassbar)
 
 ### Ultra-Rapid Oref
 
 * empfohlen für FIASP
 * DIA = mindestens 5 Stunden
-* Wirkdauermaximum = 55 Minuten nach Insulingabe (fest eingestellt, nicht anpassbar)
+* Wirkmaximum = 55 Minuten nach Insulingabe (fest eingestellt, nicht anpassbar)
 
 Für viele Menschen mit Diabetes gibt es 3 - 4 Stunden nach der Insulingabe nahezu keinen spürbaren Effekt von FIASP mehr, auch wenn dann rechnerisch noch 0.0xx Einheiten vorhanden sind. Die verbleibende Menge kann aber bei Sport und anderen Aktivitäten doch noch einen Einfluss haben. Daher nutzt AAPS eine minimale Wirkdauer von 5 Stunden.
 
