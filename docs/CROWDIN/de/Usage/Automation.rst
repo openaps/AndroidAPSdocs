@@ -9,7 +9,7 @@ Zum Beispiel kann man ein automatisiertes Hypo-Temp-Target erstellen, das bei ei
 
 Bevor Du Automatisierung nutzt, solltest Du Dich mit `Temporären Zielen <./temptarget.html>`_ und/oder `Profil Wechsel <./Profiles.html>`_ auseinander gesetzt haben. 
 
-Stelle sicher, dass Du wirklich verstehst, wie Automation funktioniert bevor Du Deine erste einfache Regel erstellst. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
+Stelle sicher, dass Du wirklich verstehst, wie Automation funktioniert bevor Du Deine erste einfache Regel erstellst. **Verwende eine Benachrichtigung statt der tatsächlichen Aktion.** Wenn Du sicher bist, dass die Automatisierung zum richtigen Zeitpunkt auslöst, kannst Du die Benachrichtigung durch die von Dir gewünschte Aktion ersetzen.
 
 .. image:: ../images/Automation_ConditionAction_RC3.png
   :alt: Automation Bedingung und Aktion
@@ -22,7 +22,7 @@ Wichtiger Hinweis
 --------------------------------------------------
 **Automation bleibt aktiv, wenn Du den Loop deaktivierst!**
 
-So make sure to deactivate automation rules during these occasions if neccessary. You can do so by unticking the box left of the name of your automation rule.
+Schalte daher ggf. die Automation-Regeln aus während Du den Loop deaktiviert hast. Entferne dazu das Häkchen in der Box links vom Namen der Automation-Regel.
 
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Automation Regeln ein- und ausschalten
@@ -45,11 +45,11 @@ Bedingung
 --------------------------------------------------
 Man kann zwischen verschiedenen Bedingungen wählen. Hier sind nur ein paar erwähnt, aber die meisten sind selbsterklärend und werden daher hier nicht beschrieben:
 
-* connect conditions: you can have several conditions and can link them with 
+Verbundene Bedingungen: Du kannst mehrere Bedingungen verwenden und diese wie folgt verbinden: 
 
   * "Und"
   * "Oder"
-  * "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+  * Entweder oder (d.h. eine (und nur eine) der Bedingungen muss zutreffen, damit die Aktion ausgeführt wird)
    
 * Zeit vs. Wiederkehrende Zeit
 
@@ -58,7 +58,7 @@ Man kann zwischen verschiedenen Bedingungen wählen. Hier sind nur ein paar erw�
    
 * Standort: in "Konfiguration" (Automation) kann man auswählen, welchen Standort Service man möchte:
 
-  * Use passive location: AAPS only takes locations when other apps are requesting it
+  * Passiver Standort: AAPS nutzt nur die Standort, die von andere Apps angefordert werden.
   * Netzwerkstandort: Bestimmung des Standorts mithilfe der Infrastruktur Deines Mobilfunkanbieters (teilweise recht ungenau)
   * GPS-Standort (Achtung! Kann zu übermäßigen Akkuverbrauch führen!)
   
@@ -99,13 +99,13 @@ Zum Löschen die Regel einfach nach links oder rechts wegwischen.
 
 Empfehlungen und Vorbehalte
 ==================================================
-* When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
+* Wenn Du Automation zum ersten Mal nutzt oder eine neue Regel erstellst, solltest Du zusätzlich eine Benachrichtigung erstellen bis Du sicher bist, dass die Regel so funktioniert, wie beabsichtigt.
 * Beobachte die Resultate Deiner Regel.
-* Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg < 180 mg/dl)
+* Verwende keine zu einfachen Bedingungen (z.B. WENN BZ > 80 mg/dl UND BZ < 180 mg/dl).
 
   **Doppelt wichtig, wenn die Aktion ein Profilwechsel ist!**
  
-* Try to use Temp Targets instead of Profile Switches. Temporäre Ziele setzen `Autosens <../Usage/Open-APS-features.html#autosens>`_ nicht auf 0 zurück.
+* Verwende temporäre Ziele statt Profilwechseln. Temporäre Ziele setzen `Autosens <../Usage/Open-APS-features.html#autosens>`_ nicht auf 0 zurück.
 * Setze Profilwechsel sparsam und nur als letzte Möglichkeit ein.
 
   * Durch einen Profilwechsel wird `Autosens <../Usage/Open-APS-features.html#autosens>`_ für mind. 6 Stunden unbrauchbar.
@@ -113,14 +113,14 @@ Empfehlungen und Vorbehalte
 * Profilwechsel setzen Dein Profil nicht automatisch auf das Standardprofil zurück.
 
   * Dafür musst Du eine weitere Regel erstellen, um zum Standardprofil zurück zu wechseln, oder es manuell tun!
-  * Increased risk of hypoglycemia if profile switch does not expire or reset back to base profile.
+  * Erhöhtes Hypo-Risiko, wenn der Profilwechsel zeitlich unbegrenzt läuft und nicht auf das Standardprofil zurückgesetzt wird.
 
 Beispiele
 ==================================================
-These are just setup examples, no advises. Don't reproduce them without being aware what you are actually doing or why you need them.
+Dies sind nur Beispiele, keine Ratschläge. Du sollte diese nicht einfach kopieren ohne sicher zu sein, was Du wirklich tust und ohne zu wissen, warum man diese braucht.
 
 * Profilwechsel für Deine täglichen Aktivitäten (z. B. Schule, Sport, Wochenende vs. Arbeitstag) mit Standort, WLAN SSID, Zeit etc.
-* Setting temp target for activities based on time, location, connection to a bluetooth device...
+* Temporäre Ziele basierend auf dem Zeitpunkt, dem Ort, der Verbindung zu einem Bluetooth-Gerät (z.B. Autoradio) etc. starten
 * Bald-Essen-Temp Target auf Basis von Zeit, Standort,...
 
 Temporäres Ziel bei niedrigem Blutzucker
@@ -128,18 +128,18 @@ Temporäres Ziel bei niedrigem Blutzucker
 .. image:: ../images/Automation2.png
   :alt: Automation2
 
-This is made by someone who wants to get a hypo temp target automatically when having low glucose.
+Dies wurde von jemandem erstellt, der bei niedrigen Glukosewerten automatisch ein Hypo-Temp-Target setzen will.
 
 Mittagsessen Temporäres Ziel
 --------------------------------------------------
 .. image:: ../images/Automation3.png
   :alt: Automation3
   
-This example is made by someone who has lunch at work at the same time every day during the week. If he or she stays at a certain time in his or her lunch location, automation will set a low temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the chosen time and if he or she is at the chosen location. So it does not work on any other time at this location or on this time when the person stays at home. 
+In diesem Beispiel isst der Benutzer bei der Arbeit unter der Woche jeden Tag zur selben Zeit zu Mittag. Wenn er sich zu einer bestimmten Zeit in der Kantine aufhält, setzt die Automatisierung ein niedriges temporäres Ziel (Bald essen) während er auf das Mittagessen wartet. Wegen der 'Und'-Verbindung wird das TT nur gesetzt, wenn er zur gewählten Zeit am gewählten Ort ist. Es funktioniert also nicht zu einer anderen Zeit am selben Standort oder zu derselben Zeit an einem anderem Standort (z.B. falls die Person zuhause bleibt oder länger am Arbeitsplatz bleibt). 
 
-Incorrect use of automation
+Fehlerhafte Nutzung
 --------------------------------------------------
-Please be aware to use automation incorrectly. Dies könnte zu Schwierigkeiten und sogar zu einer Gefahr für Deine Gesundheit führen. Beispiele für eine fehlerhafte Verwendung sind z. B.:
+Achte darauf, Automatisierungen nicht falsch einzusetzen. Dies könnte zu Schwierigkeiten und sogar zu einer Gefahr für Deine Gesundheit führen. Beispiele für eine fehlerhafte Verwendung sind z. B.:
 
 * Versuche, den Algorithmus zu überlisten statt ihn nur zu unterstützen (z.B.  Profilwechsel statt Feinanpassung der Basalrate und Faktoren)
 * Profilwechsel zum Ausgleich von Lebensmitteln festlegen
@@ -150,4 +150,4 @@ Please be aware to use automation incorrectly. Dies könnte zu Schwierigkeiten u
 Alternativen
 ==================================================
 
-For advanced users, there are other posibilities to automate tasks using IFTTT or a third party Android app called Automate. Einige Beispiele findest Du `hier <./automationwithapp.html>`_.
+Für fortgeschrittene Benutzer gibt es andere Möglichkeiten, Aufgaben mit IFTTT oder einer Drittanbieter-Android-App namens Automate zu automatisieren. Einige Beispiele findest Du `hier <./automationwithapp.html>`_.
