@@ -272,7 +272,7 @@ Choisissez les valeurs de glycémies hautes et basses du graphique principal sur
 
 #### Raccourcir les titres des onglets
 
-Choisissez si les titres des onglets dans AndroidAPS sont longs (ex: ACTIONS, PROFIL LOCAL, AUTOMATION) ou courts (ex: ACT, PL, AUTO)
+Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
 #### Affiche les notes dans les dialogues
 
@@ -280,7 +280,7 @@ Choisissez si vous voulez avoir un champ Notes lors de la saisie des traitements
 
 #### Voyants d'état
 
-Choisissez si vous voulez avoir des voyants de statut sur l'écran d'accueil avec l'âge de la canule, l'âge du capteur, l'âge de la batterie, le niveau du réservoir ou de la batterie. Lorsque le seuil d'avertissement est atteint, la couleur du voyant d'état passe à jaune. Le seuil critique s'affichera en rouge.
+Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for canula age, insulin age, sensor age, battery age, reservoir level or battery level. Lorsque le seuil d'avertissement est atteint, la couleur du voyant d'état passe à jaune. Le seuil critique s'affichera en rouge.
 
 #### Paramètres Avancés
 
@@ -314,7 +314,7 @@ Certains médecins utilisent - en particulier pour les nouveaux utilisateurs de 
 
 ### Automatisation
 
-Tâches d'automatisation définies par l'utilisateur ('si-alors-sinon'). Veuillez [lire ici](../Usage/Automation.rst)
+Tâches d'automatisation définies par l'utilisateur ('si-alors-sinon'). Please [read on here](../Usage/Automation.rst).
 
 ### Communicateur SMS
 
