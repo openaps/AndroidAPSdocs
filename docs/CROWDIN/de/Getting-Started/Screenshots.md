@@ -16,7 +16,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 #### Profile
 
-![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+![Verbleibende Dauer des Profilwechsels](../images/Home2020_ProfileSwitch.png)
 
 * Das aktuelle Profil wird in der linken Schaltfläche angezeigt.
 * Schaltfläche Profil lange Drücken um Profildetails anzuzeigen oder um [zwischen verschiedenen Profilen zu wechseln](../Usage/Profiles#profilwechsel).
@@ -24,7 +24,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 #### Ziel
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Verbleibende Dauer des temporären Ziels](../images/Home2020_TT.png)
 
 * Das aktuelle BZ-Ziel wird in der rechten Schaltfläche angezeigt.
 * Schaltfläche Ziel lange drücken, um ein [temporäres Ziel ](../Usage/temptarget.md) festzulegen.
@@ -32,7 +32,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 #### Anzeige der dynamischen Ziel-Anpassung
 
-![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+![Anzeige der dynamischen Ziel-Anpassung](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS kann das Ziel dynamisch anhand der Empfindlichkeit (Sensitivity) anpassen, wenn Du den SMB-Algorithmus verwendest.
 * Aktiviere entweder eine oder beide der [folgenden Optionen](../Configuration/Preferences#openaps-smb-einstellungen) 
@@ -72,7 +72,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 ### Abschnitt D - IOB, COB, BR und AS
 
-![Section D](../images/Home2020_TBR.png)
+![Abschnitt D](../images/Home2020_TBR.png)
 
 * Spritze: Insulin on Bord (IOB) - Menge des aktiven Insulins im Körper
    
@@ -97,7 +97,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 ### Abschnitt E - Status Lights
 
-![Section E](../images/Home2020_StatusLights.png)
+![Abschnitt E](../images/Home2020_StatusLights.png)
 
 * Status Lights geben eine optische Warnung für 
    * Kanülenalter
@@ -111,7 +111,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 ### Abschnitt F - Hauptgrafik
 
-![Section F](../images/Home2020_MainGraph.png)
+![Abschnitt F](../images/Home2020_MainGraph.png)
 
 * Grafik zeigt Ihren Blutzuckerspiegel (BZ) wie von Ihrem Glukose-Monitor (CGM) gemessen. 
 * Notizen, die auf der Registerkarte "Aktion" eingegeben werden, wie z. B. die Kalibrierungen nach Messung am Finger, die Kohlenhydrat Einträge sowie die Profilwechsel werden hier angezeigt. 
@@ -149,7 +149,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
    
    Unannounced meals (nicht angekündigte Mahlzeiten) bedeutet, dass ein signifikanter Anstieg des Glukosespiegels durch Mahlzeiten, Adrenalin oder andere Einflüsse festgestellt wird. Die Prognoselinie ähnelt der ORANGE COB-Linie, geht aber davon aus, dass die Abweichungen mit konstanter Rate abnehmen werden (durch Verlängerung der aktuellen Reduktionsrate).
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselinien oder in der Nähe der Linie, die Annahmen macht, die Deiner Situation am nächsten kommen, liegen.
 
 #### Basal
 
@@ -168,7 +168,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Sie können bis zu vier zusätzliche Grafiken unterhalb der Hauptgrafik aktivieren.
 * Um die Einstellungen für zusätzliche Graphen zu öffnen, klicken Sie auf das Dreieck auf der rechten Seite der [Hauptgrafik](../Getting-Started/Screenshots#abschnitt-f-hauptgrafik) und scrollen nach unten.
 
-![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+![Einstellung weiterer Diagramme](../images/Home2020_AdditionalGraphSetting.png)
 
 * Um ein zusätzliches Diagramm hinzuzufügen, markieren Sie das Kästchen auf der linken Seite des Namens (d. h. \---\---- Graph 1 \---\----).
 
@@ -213,14 +213,14 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ### Abschnitt H - Schaltflächen
 
-![Homescreen buttons](../images/Home2020_Buttons.png)
+![Buttons für den Homescreen](../images/Home2020_Buttons.png)
 
 * Schaltflächen für Insulin, Kohlenhydrate und Bolus-Rechner sind "immer an". 
 * Andere Schaltflächen müssen in den [Einstellungen ](../Configuration/Preferences#schaltflachen) konfiguriert werden.
 
 #### Insulin
 
-![Insulin button](../images/Home2020_ButtonInsulin.png)
+![Insulin-Button](../images/Home2020_ButtonInsulin.png)
 
 * Um eine bestimmte Menge Insulin zu geben, ohne den [Bolus Rechner](../Configuration/Screenhots#bolus-rechner) zu verwenden.
 * Durch Aktivieren des Kästchens können Sie automatisch Ihr [temporäres Ziel für bald Essen](../Configuration/Preferences#vordefinierte-temporare-ziele) starten.
@@ -228,7 +228,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Kohlenhydrate
 
-![Carbs button](../images/Home2020_ButtonCarbs.png)
+![Kohlenhydrat-Button](../images/Home2020_ButtonCarbs.png)
 
 * Kohlenhydrate ohne Bolus dokumentieren.
 * Bestimmte [vordefinierte temporäre Ziele](../Configuration/Preferences#vordefinierte-temporare-ziele) können direkt durch Aktivieren des Kästchens gesetzt werden.
@@ -259,9 +259,9 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ## Bolus-Rechner
 
-![Bolus wizard](../images/Home2020_BolusWizard.png)
+![Bolus-Rechner](../images/Home2020_BolusWizard.png)
 
-When you want to make a meal bolus this is where you will normally make it from.
+Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
 ### Abschnitt I
 
@@ -297,7 +297,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 #### Fehlerhafte Erkennung der aktiven Kohlenhydrate (COB)
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
+![Langsamer Kohlenhydrat-Abbau](../images/Calculator_SlowCarbAbsorbtion.png)
 
 * Wenn Du nach Verwendung des Bolus-Assistenten die obige Warnung siehst, hat AAPS erkannt, dass aktiven Kohlenhydrate (COB) eventuell nicht korrekt berechnet werden konnten. 
 * Wenn Du kurz nach einer vorangegangenen Mahlzeit erneut einen Bolus abgeben willst, solltest Du Dir der Gefahr einer Überdosierung bewusst sein! 
@@ -313,11 +313,11 @@ When you want to make a meal bolus this is where you will normally make it from.
 * Von der klassischen Pumpentherapie bist du es vermutlich gewohnt anzunehmen, dass das Insulin nach ca. 3 1/2 Stunden vollständig abgebaut ist. 
 * Allerdings spielt der langsamere Abbau beim Loopen eine wichtige Rolle, da die Berechnungen deutlich präziser sind und sich diese geringen Mengen unter den rekursiven Berechnungen des AndroidAPS Algorithmus summieren.
 
-For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+Weitere Informationen zu den verschiedenen Insulintypen, ihren Aktivitätsprofilen und warum dies alles eine Rolle spielt findest du in diesem Artikel: [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+Du solltest auch einen Blick in diesen exzellenten Blog-Artikel werfen: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-And even more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+Und noch mehr bei: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Status der Pumpe
 
@@ -332,16 +332,16 @@ Careportal hat die Funktionen repliziert, die auf der Nightscout-Webseite unter 
 
 ### Kohlenhydrat-Berechnung überprüfen
 
-![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
+![KH-Berechnung auf der Registerkarte "Behandlung" überprüfen](../images/Screenshots_TreatCalc.png)
 
 * Wenn Du den [Bolus Rechner](../Getting-Started/Screenshots#bolus-rechner) verwendet hast, um die Insulindosierung zu berechnen, kannst Du diese Berechnung später auf der Registerkarte Behandlungen überprüfen.
 * Klicke einfach auf den grünen Text 'Berech.'. (Je nach Pumpe können Insulin und Kohlenhydrate auch in einer einzigen Zeile in Behandlungen gezeigt werden.)
 
 ### Kohlenhydrat Korrektur
 
-![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+![Behandlung in einer oder zwei Zeilen](../images/Treatment_1or2_lines.png)
 
-Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+Der Behandlungs-Tab kann verwendet werden, um fehlerhafte Kohlenhydrat-Einträge zu korrigieren (z.B. wenn Du die KH-Menge über- oder unterschätzt hast).
 
 1. Prüfe und merke Dir die aktuelle COB- und IOB-Menge, die auf dem Startbildschirm angezeigt wird.
 2. Je nach Pumpenmodell werden die Kohlenhydrate entweder zusammen mit dem Insulin in einer Zeile oder als separater Eintrag (z.B. bei der Dana RS) angezeigt.
@@ -377,7 +377,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 ## Bolus
 
-History of the following treatments:
+Historie der folgenden Behandlungen:
 
 * Bolus & Kohlenhydrate -> Option zum [Entfernen von Einträgen](..Getting-Started/Screenshots#kohlenhydrat -korrektur) zur Korrektur der Historie
 * [Verzögerter Bolus](../Usage/Extended-Carbs#id1)
@@ -388,7 +388,7 @@ History of the following treatments:
 
 ## BG Source - xDrip+, Dexcom App (patched) ...
 
-![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
+![Tab BZ-Quelle - hier xDrip+](../images/Screenshots_BGSource.png)
 
 * Abhängig von Deiner BZ-Quelle wird diese Registerkarte unterschiedlich benannt.
 * Zeigt die Historie der CGM Messungen an und bietet die Möglichkeit, Einträge im Fehlerfall zu entfernen (z.B. Niedrigwerte wegen Kompression).
