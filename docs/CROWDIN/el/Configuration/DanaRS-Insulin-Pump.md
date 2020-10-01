@@ -16,8 +16,8 @@
 
 * Select Pump password and input your password.
   
-  * For DanaRS with firmware 1 and 2 the default password is 1234.
-  * For DanaRS with firmware 3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> On your pump open main menu -> review -> information. Όχι. 3 is production date.
+  * For DanaRS with firmware v1 and v2 the default password is 1234.
+  * For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> On your pump open main menu -> review -> information. Όχι. 3 is production date.
 
 * **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
   
@@ -41,7 +41,7 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 * Στις περισσότερες περιπτώσεις πρόκειται για θέμα επικοινωνίας και παρέχεται η σωστή ποσότητα ινσουλίνης.
 * Ελέγξτε το ιστορικό της αντλίας (είτε στην αντλία είτε μέσω της καρτέλας Dana> ιστορικό αντλίας> boluses) αν έχει δοθεί σωστό bolus.
-* Διαγράψτε την καταχώρηση σφάλματος στην καρτέλα CP αν θέλετε.
+* Delete error entry in [treatments tab](..Getting-Started/Screenshots#carb-correction) if you wish.
 * Το πραγματικό ποσό διαβάζεται και καταγράφεται στην επόμενη σύνδεση. Για να ενεργοποιήσετε αυτό, πατήστε το εικονιδίο BT στην καρτέλα dana ή απλά περιμένετε την επόμενη σύνδεση.
 
 ## Ειδική σημείωση για την αλλαγή τηλεφώνου

@@ -16,8 +16,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 #### Profilis
 
-    ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
-    
+![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
 * Current profile is displayed in the left bar.
 * Long press profile bar to view profile details or to [switch between different profiles](../Usage/Profiles#profile-switch).
@@ -25,8 +24,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 #### Tikslas
 
-    ![Temp target remaining duration](../images/Home2020_TT.png)
-    
+![Temp target remaining duration](../images/Home2020_TT.png)
 
 * Current target blood glucose level is displayed in the right bar.
 * Long press target bar to set a [temporary target](../Usage/temptarget.md).
@@ -34,8 +32,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 #### Visualization of Dynamic target adjustment
 
-    ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
-    
+![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
 * Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
@@ -75,7 +72,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 ### Section D - IOB, COB, BR and AS
 
-![Sritis D](../images/Home2020_TBR.png)
+![Section D](../images/Home2020_TBR.png)
 
 * Syringe: insulin on board (IOB) - amount of active insulin inside your body
    
@@ -100,7 +97,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 ### Section E - Status lights
 
-![Sritis E](../images/Home2020_StatusLights.png)
+![Section E](../images/Home2020_StatusLights.png)
 
 * Status lights give a visual warning for 
    * Cannula age
@@ -114,7 +111,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 ### Section F - Main graph
 
-![Sritis F](../images/Home2020_MainGraph.png)
+![Section F](../images/Home2020_MainGraph.png)
 
 * Graph shows your blood glucose (BG) as read from your glucose monitor (CGM). 
 * Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
@@ -262,7 +259,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ## Bolus Wizard
 
-![Boluso patarėjas](../images/Home2020_BolusWizard.png)
+![Bolus wizard](../images/Home2020_BolusWizard.png)
 
 When you want to make a meal bolus this is where you will normally make it from.
 
@@ -382,7 +379,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 History of the following treatments:
 
-* Bolus & carbs -> option to [remove entries](..Getting-Started/Screenshots#carb-correction) to correct history
+* Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
 * [Ištęstas bolusas](../Usage/Extended-Carbs#id1)
 * Temporary basal rate
 * [Temporary target](../Usage/temptarget.md)

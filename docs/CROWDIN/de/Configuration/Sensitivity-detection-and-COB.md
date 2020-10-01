@@ -10,7 +10,7 @@ Aktuell gibt es 3 Modelle zur Empfindlichkeitserkennung:
 
 ### Sensitivität AAPS
 
-Sensitivity is calculated the same way like Oref1 but you can specify time to the past. Die minimale Kohlenhydrat-Absorption wird ausgehend von der maximalen Kohlenhydrat-Absorption, die in den Vorgaben festgelegt werden kann, berechnet.
+Die Empfindlichkeit wird wie bei Oref1 berechnet, aber du kannst einstellen wie weit der Algorithmus in die Vergangenheit "schaut". Die minimale Kohlenhydrat-Absorption wird ausgehend von der maximalen Kohlenhydrat-Absorption, die in den Vorgaben festgelegt werden kann, berechnet.
 
 ### Durchschnittliche Sensitivität
 
@@ -22,4 +22,4 @@ Die Sensitivität wird auf Basis der Daten der vergangenen 8 Stunden oder seit d
 
 ## Mehrere Mahlzeiten gleichzeitig
 
-There is significant difference while using AAPS, WeightedAverage vs Oref1. Die Oref Plugins gehen davon aus, dass nur die Kohlenhydrate einer einzigen Mahlzeit abgebaut werden. Das bedeutet, dass der Abbau einer zweiten Mahlzeit erst dann beginnt, wenn die erste Mahlzeit vollständig abgebaut ist. AAPS mit durchschnittlicher Sensitivität beginnt direkt nach Eingabe der Kohlenhydrate mit deren Abbau. Falls mehr als eine Mahlzeit zu berücksichtigen ist, wird der minimale KH-Abbau entsprechend der Größe der Mahlzeit und der maximalen Absorption angepasst. Die minimale Absorption wird entsprechend höher im Vergleich zu den Oref Plugins.
+Es macht einen großen Unterschied, ob du AAPS/Durchschnittliche Sensititvität oder Oref1 verwendest. Die Oref Plugins gehen davon aus, dass nur die Kohlenhydrate einer einzigen Mahlzeit abgebaut werden. Das bedeutet, dass der Abbau einer zweiten Mahlzeit erst dann beginnt, wenn die erste Mahlzeit vollständig abgebaut ist. AAPS mit durchschnittlicher Sensitivität beginnt direkt nach Eingabe der Kohlenhydrate mit deren Abbau. Falls mehr als eine Mahlzeit zu berücksichtigen ist, wird der minimale KH-Abbau entsprechend der Größe der Mahlzeit und der maximalen Absorption angepasst. Die minimale Absorption wird entsprechend höher im Vergleich zu den Oref Plugins.

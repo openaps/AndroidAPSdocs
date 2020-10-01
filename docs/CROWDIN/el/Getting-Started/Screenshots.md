@@ -16,8 +16,7 @@
 
 #### Προφίλ
 
-    ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
-    
+![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
 * Current profile is displayed in the left bar.
 * Long press profile bar to view profile details or to [switch between different profiles](../Usage/Profiles#profile-switch).
@@ -25,8 +24,7 @@
 
 #### Target
 
-    ![Temp target remaining duration](../images/Home2020_TT.png)
-    
+![Temp target remaining duration](../images/Home2020_TT.png)
 
 * Current target blood glucose level is displayed in the right bar.
 * Long press target bar to set a [temporary target](../Usage/temptarget.md).
@@ -34,8 +32,7 @@
 
 #### Visualization of Dynamic target adjustment
 
-    ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
-    
+![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
 * Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
@@ -382,7 +379,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 History of the following treatments:
 
-* Bolus & carbs -> option to [remove entries](..Getting-Started/Screenshots#carb-correction) to correct history
+* Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
 * [Εκτεταμένο bolus](../Usage/Extended-Carbs#id1)
 * Temporary basal rate
 * [Temporary target](../Usage/temptarget.md)

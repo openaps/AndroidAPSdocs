@@ -89,7 +89,7 @@ AndroidAPS Nutzung
    Profil Wechsel <./Usage/Profiles.md>
    Temporäre Ziele <./Usage/temptarget.md>   
    Verzögerte Kohlenhydrate (eCarbs) <./Usage/Extended-Carbs.rst>
-   Automation <./Usage/Automation.rst>
+   Automatisierungen <./Usage/Automation.rst>
    Careportal (eingestellt) <./Usage/CPbefore26.rst>
    Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automation mit Drittanbieter-Apps <./Usage/automationwithapp.md>
