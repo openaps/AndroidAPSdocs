@@ -272,7 +272,7 @@ Choose the high and low marks for the BG-graph on AndroidAPS overview and smart 
 
 #### Shorten tab titles
 
-Choose either the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
 #### Show notes field in treatment dialogs
 
@@ -280,7 +280,7 @@ Choose if you want to have a notes field when entering treatments or not.
 
 #### Status lights
 
-Choose if you want to have status lights on overview for canula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for canula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
 
 #### Advanced settings
 
@@ -314,7 +314,7 @@ Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Th
 
 ### Automation
 
-User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst)
+User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst).
 
 ### Επικοινωνία με SMS
 
