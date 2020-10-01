@@ -14,20 +14,20 @@
   
   ![Dana RS mit AndroidAPS verbinden](../images/AAPS_DanaRSPairing.png)
 
-* Select Pump password and input your password.
+* Wähle "Pumpen-Passwort" und gib das Passwort ein.
   
   * For DanaRS with firmware 1 and 2 the default password is 1234.
   * For DanaRS with firmware 3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> On your pump open main menu -> review -> information. Leider nein. 3 is production date.
 
 * **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
   
-  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+  ![Bestätigung der Verbindung auf der Dana RS](../images/DanaRS_Pairing.png)
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Klicke auf "Bolus-Geschwindigkeit" um die gewünschte Abgabegeschwindigkeit (12 s/1 IE, 30 s/1 IE oder 60 s/1 IE) einzustellen.
 
-* Restart your phone.
+* Starte dein Smartphone neu.
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
+* Stelle im Arztmenü auf der Pumpe (siehe Bedienungsanleitung der DanaRS) die Basalschritte auf 0,01 IE/h.
 
 * Erlaube die Vewendung von verlängerten Boli auf der Pumpe
 
