@@ -173,8 +173,8 @@ Statusanzeige
    * Batteriealter
    Batterieladezustand (%)
 
-* Bei Überschreitung der Warnschwelle werden die Werte gelb angezeigt.
-* Bei Überschreitung der kritischen Warnschwelle werden die Werte rot angezeigt.
+* Bei Überschreiten der Warnschwelle werden die Werte gelb angezeigt.
+* Bei Überschreiten der kritischen Warnschwelle werden die Werte rot angezeigt.
 * In Versionen vor AAPS 2.7 mussten Einstellungen für Statusanzeigen in Nightscout-Einstellungen vorgenommen werden.
 
   .. image:: ../images/Pref2020_OV_StatusLights2.png
