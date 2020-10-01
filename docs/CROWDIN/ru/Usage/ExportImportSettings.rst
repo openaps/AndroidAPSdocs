@@ -69,10 +69,17 @@ Settings backup is encrypted by a master password that can be set in `Preference
 * Confirm message by clicking 'OK'.
 * AAPS will be restarted in order to activate imported preferences.
 
-* **Примечание для пользователей Dana RS:**
+Note for Dana RS users
+------------------------------------------------------------
+* Поскольку настройки подключения помпы также переносятся на новый телефон, AAPS на новом телефоне уже будет "знать" помпу и не запустит сканирование bluetooth. 
+* Please pair new phone and pump manually.
 
-  * Поскольку настройки подключения помпы также переносятся на новый телефон, AAPS на новом телефоне уже будет "знать" помпу и не запустит сканирование bluetooth. Выполните сопряжение нового телефона и помпы вручную.
-  
+Import settings from previous versions (before AAPS 2.7)
+------------------------------------------------------------
+* The "old" settings file must be in root folder of your smartphone (/storage/emulated/0).
+* Do not put the "old" file in the same folder as the new exported settings (AAPS/preferences).
+* You will find the "old" file on the bottom of the list in the import dialogue.
+
 Transfer settings file
 ==================================================
 * Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
