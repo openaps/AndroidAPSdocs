@@ -272,7 +272,7 @@ Pasirinkite aukštos ir žemos glikemijos ribas grafike. Jos bus matomos Android
 
 #### Naudoti sutrumpintus skirtukų pavadinimus
 
-Pasirinkite ar skirtukų pavadinimai AndroidAPS yra ilgi (pvz. VEIKSMAI, VIETINIS PROFILIS, AUTOMATIZAVIMAS) arba trumpi (pvz., VEIKS, VP, AUTO)
+Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
 #### Rodyti pastabų laukelį terapijos dialoguose
 
@@ -280,7 +280,7 @@ Pasirinkite, ar norite matyti pastabas, kai įvedate terapijas arba ne.
 
 #### Būklės indikatoriai
 
-Pasirinkite, ar norite matyti būsenos indikatorius kaniulės, insulino, sensoriaus, baterijos amžiui, rezervuaro ar baterijos lygiui. Pasiekus įspėjamąjį lygį, būsenos indikatorius taps geltonas. Kritinis lygis bus rodomas raudona spalva.
+Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for canula age, insulin age, sensor age, battery age, reservoir level or battery level. Pasiekus įspėjamąjį lygį, būsenos indikatorius taps geltonas. Kritinis lygis bus rodomas raudona spalva.
 
 #### Papildomi nustatymai
 
@@ -314,7 +314,7 @@ Kai kurie gydytojai rekomenduoja - ypač pradedantiesiems - bazės ir boluso ins
 
 ### Automatizavimas
 
-Vartotojo apibrėžtos automatizavimo užduotys ("jei-tada-jei ne"). Prašome [skaityti čia](../Usage/Automation.rst)
+Vartotojo apibrėžtos automatizavimo užduotys ("jei-tada-jei ne"). Please [read on here](../Usage/Automation.rst).
 
 ### SMS komunikatorius
 
