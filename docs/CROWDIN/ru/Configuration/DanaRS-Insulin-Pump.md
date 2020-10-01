@@ -16,8 +16,8 @@
 
 * Select Pump password and input your password.
   
-  * For DanaRS with firmware 1 and 2 the default password is 1234.
-  * For DanaRS with firmware 3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> On your pump open main menu -> review -> information. Нет. 3 is production date.
+  * For DanaRS with firmware v1 and v2 the default password is 1234.
+  * For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> On your pump open main menu -> review -> information. Нет. 3 is production date.
 
 * **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
   
@@ -41,7 +41,7 @@
 
 * В большинстве случаев это просто проблема связи и нужное количество инсулина все равно подается.
 * Проверьте в истории помпы (либо на помпе, либо через вкладку Dana > история помпы> болюс), был ли подан правильный болюс.
-* Удалите запись ошибки во вкладке ПОРТЛЕЧ, если хотите.
+* Delete error entry in [treatments tab](..Getting-Started/Screenshots#carb-correction) if you wish.
 * Реальный объем читается и записывается при следующем подключении. Чтобы принудительно выполнить действие, нажмите на иконку BT на вкладке Dana или просто подождите следующего подключения.
 
 ## Отдельное замечание при смене телефона
