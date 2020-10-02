@@ -379,7 +379,7 @@ Der Behandlungs-Tab kann verwendet werden, um fehlerhafte Kohlenhydrat-Einträge
 
 Historie der folgenden Behandlungen:
 
-* Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
+* Bolus & Kohlenhydrate -> Option zum [Entfernen von Einträgen](..Getting-Started/Screenshots#kohlenhydrat -korrektur) zur Korrektur der Historie
 * [Verzögerter Bolus](../Usage/Extended-Carbs#id1)
 * Temporäre Basalrate (TBR)
 * [Temporäres Ziel](../Usage/temptarget.md)
