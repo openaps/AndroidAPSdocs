@@ -135,7 +135,7 @@ Ziel 11: Automatisierung
 ====================================================================================================
 * Du musst Ziel 11 starten, um `Automatisierungen <../Usage/Automation.html>`_ nutzen zu können.
 * Stelle sicher, dass Du alle vorangegangenen Ziele inkl. des `Wissenstest  <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ abgeschlossen hast.
-* Completing previous objectives will not effect other objectives you have already finished. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
+* Der Abschluss vorangegangenen Ziele (objectives) beeinflusst nicht die Ziele, die Du bereits abgeschlossen hast. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 
 Objective (Ziel) neu starten

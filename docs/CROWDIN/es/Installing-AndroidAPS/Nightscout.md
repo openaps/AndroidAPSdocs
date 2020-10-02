@@ -25,7 +25,7 @@ Mantenga su teléfono actualizado, tal como se describe en la seguridad [safety 
 
 ## Configuración manual de Nightscout
 
-Se presume que ya usas Nightscout, sino visita la página Nightscout para seguir las instrucciones de montaje. Las siguientes instrucciones son las adiciones que debes hacer a tu sitio. Tu sitio debe ser versión 10 o superior, por lo que comprueba que tengas la última versión de lo contrario recibirás mensajes de error en tu AAPS app.Algunas personas comentan que el lazo cerrado usa más cuota que la gratuita en Azure, por lo que Heroku es la opción preferida.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Tu sitio debe ser versión 10 o superior, por lo que comprueba que tengas la última versión de lo contrario recibirás mensajes de error en tu AAPS app.Algunas personas comentan que el lazo cerrado usa más cuota que la gratuita en Azure, por lo que Heroku es la opción preferida.
 
 * Ve a https://herokuapp.com/
 
@@ -41,15 +41,6 @@ Se presume que ya usas Nightscout, sino visita la página Nightscout para seguir
   * Multitud de alarmas pueden ser configuradas para monitorizar la bomba El % de batería es recomendable: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
-  * Opcional: se pueden habilitar los siguientes 'temporizadores' para colorear en el careportal de AAPS: 
-    * `BAGE_WARN` = `480` (Aviso pasaron x horas desde el último evento de batería cambiada en Careportal)
-  * `BAGE_URGENT` = `504` (advertencia Urgente pasaron x horas desde el último cambio de Batería en Careportal)
-  * `CAGE_WARN` = `40` (Aviso pasaron x horas desde el último cambio de cánula en Careportal)
-  * `CAGE_URGENT` = `48` (Aviso urgente pasaron x horas desde el último cambio de cánula en el portal Careportal)
-  * `IAGE_WARN` = `144` (Aviso pasaron x horas desde el último cambio de cartucho de Insulina en Careportal)
-  * `IAGE_URGENT` = `192` (Aviso urgente pasaron x horas desde la última vez que se cambió el cartucho de Insulina en Careportal)
-  * `SAGE_WARN` = `160` (Advertencia pasaron x horas desde que se insertó el sensor MCG en Careportal)
-  * `SAGE_URGENT` = `168` (Aviso urgente pasaron x horas desde el último suceso de inserción de sensor de MCG en el portal de Careportal)
 
 ![Azure](../../images/nightscout1.png)
 

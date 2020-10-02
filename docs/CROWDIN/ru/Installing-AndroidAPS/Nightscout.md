@@ -25,7 +25,7 @@
 
 ## Установка Nightscout вручную
 
-Предполагается, что у вас уже есть сайт Nightscout, если не посетить страницу [ Nightscout ](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) для получения полных инструкций по настройке, приведенные ниже инструкции являются параметрами, которые вам также потребуется добавить на сайт Nightscout. Сайт Nightscut должен быть по крайней мере версии 10 (отображается как 0.10...), поэтому убедитесь, что вы запускаете [ последнюю версию ](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie); в противном случае появится сообщение об ошибке в приложении AAPS. Некоторые люди находят, что алгоритмы ИПЖ требуют больше трафика, чем квоты Azure, поэтому Heroku предпочтительнее.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Сайт Nightscut должен быть по крайней мере версии 10 (отображается как 0.10...), поэтому убедитесь, что вы запускаете [ последнюю версию ](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie); в противном случае появится сообщение об ошибке в приложении AAPS. Некоторые люди находят, что алгоритмы ИПЖ требуют больше трафика, чем квоты Azure, поэтому Heroku предпочтительнее.
 
 * Перейдите на https://herokuapp.com/
 
@@ -41,15 +41,6 @@
   * Для [ мониторинга помпы ](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring) можно задать различные оповещения, в частности, рекомендуется % заряда батареи: 
     * ` PUMP_WARN_BATT_P ` = ` 51 `
     * ` PUMP_URGENT_BATT_P ` = ` 26 ` 
-  * Необязательно: для цветовой наглядности на портале терапии AAPS можно задать следующие "таймеры": 
-    * ` BAGE_WARN ` = ` 480 ` (Предупреждение после x часов с момента последнего изменения статуса батареи в Careportal)
-  * ` BAGE_WARN ` = ` 504 ` (Оповещение после x часов с момента последнего изменения статуса батареи в Careportal)
-  * ` CAGE_WARN ` = ` 40 ` (Предупреждение после x часов с момента последнего изменения статуса Cannula в портале терапии)
-  * ` CAGE_WARN ` = ` 48 ` (Оповещение после x часов с момента последнего изменения статуса Cannula в портале терапии)
-  * ` IAGE_WARN ` = ` 144 ` (Предупреждение после x часов с момента последнего изменения статуса замены картриджа инсулина в портале терапии)
-  * ` CAGE_WARN ` = ` 192 ` (Оповещение после x часов с момента последнего изменения статуса замены картриджа инсулина в портале терапии)
-  * ` SAGE_WARN ` = ` 160 ` (Предупреждение после x часов с момента последнего изменения статуса установки сенсора в Careportal)
-  * ` SAGE_WARN ` = ` 168 ` (Оповещение после x часов с момента последнего изменения статуса установки сенсора в Careportal)
 
 ![Azure](../../images/nightscout1.png)
 

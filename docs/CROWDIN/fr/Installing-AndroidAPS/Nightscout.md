@@ -25,7 +25,7 @@ Gardez votre téléphone à jour comme c'est décrit dans [La sécurité avant t
 
 ## Manuel d'installation Nightscout
 
-Nous supposons que vous avez déjà un site Nightscout. Si ce n'est pas le cas, rendez-vous sur la page [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) pour suivre les instructions complètes sur la configuration. Les instructions ci-dessous sont les paramètres que vous devrez également ajouter à votre site Nightscout. Votre site Nightscout doit être au moins à la version 10 (affichée comme 0.10...), donc vérifiez que vous utilisez bien la [dernière version](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) sinon vous recevrez un message d'erreur sur votre application AAPS. Certaines personnes trouvent que la boucle utilise plus que le quota gratuit d'azure, donc heroku est le choix à privilégier.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Votre site Nightscout doit être au moins à la version 10 (affichée comme 0.10...), donc vérifiez que vous utilisez bien la [dernière version](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) sinon vous recevrez un message d'erreur sur votre application AAPS. Certaines personnes trouvent que la boucle utilise plus que le quota gratuit d'azure, donc heroku est le choix à privilégier.
 
 * Aller à https://herokuapp.com/
 
@@ -41,15 +41,6 @@ Nous supposons que vous avez déjà un site Nightscout. Si ce n'est pas le cas, 
   * Diverses alarmes peuvent être définies pour [surveiller la pompe](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), les alarmes concernant le niveau de batterie en particulier sont encouragées : 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
-  * Facultatif : Les 'minuteurs' suivants peuvent être définis pour changer les couleurs dans AAPS : 
-    * `BAGE_WARN` = `480` (Alerte x heures après le dernier changement de pile renseigné dans Careportal)
-  * `BAGE_URGENT` = `504` (Alerte urgente x heures après le dernier changement de pile renseigné dans Careportal)
-  * `CAGE_WARN` = `40` (Alerte x heures après le dernier changement de canule renseigné dans Careportal)
-  * `CAGE_URGENT` = `48` (Alerte urgente x heures après le dernier changement de canule renseigné dans Careportal)
-  * `IAGE_WARN` = `144` (Alerte x heures après le dernier changement de réservoir renseigné dans Careportal)
-  * `IAGE_URGENT` = `192` (Alerte urgente x heures après le dernier changement de réservoir renseigné dans Careportal)
-  * `SAGE_WARN` = `160` (Alerte x heures après le dernier changement de capteur renseigné dans Careportal)
-  * `SAGE_URGENT` = `168` (Alerte urgente x heures après le dernier changement de capteur renseigné dans Careportal)
 
 ![Azure](../../images/nightscout1.png)
 

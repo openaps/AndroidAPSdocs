@@ -16,8 +16,8 @@
 
 * Wähle "Pumpen-Passwort" und gib das Passwort ein.
   
-  * For DanaRS with firmware v1 and v2 the default password is 1234.
-  * For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> Öffne auf Deiner Pumpe Hauptmenü -> Prüfen -> Geräteinfo. Nummer 3 ist das Produktionsdatum.
+  * Für die DanaRS mit Firmware v1 und v2 ist das Standard-Passwort 1234.
+  * Für die DanaRS mit Firmware v3 wird das Standard-Passwort durch die Kombination von Produktionsmonat und Produktionsdatum gebildet (z.B. Monat 01 und Tag 24). ==> Öffne auf Deiner Pumpe Hauptmenü -> Prüfen -> Geräteinfo. Nummer 3 ist das Produktionsdatum.
 
 * **Du musst die Verbindung auf der Pumpe bestätigen!** Das funktioniert genau gleich wie Du es von der Verbindung Deines Smartphones mit anderen Bluetooth-Geräten wie z.B. Bluetooth-Kopfhörern kennst.
   
@@ -41,7 +41,7 @@ Falls die Verbindung zwischen AAPS und der Dana RS während der Insulinabgabe ab
 
 * In den meisten Fällen handelt es sich nur um ein Kommunikationsproblem und es wurde tatsächlich die korrekte Insulinmenge abgegeben.
 * Prüfe in der Historie der Dana RS (entweder direkt in der Pumpe oder über den Dana Tab > Pumpen-Speicher > Boli), ob die korrekte Bolusmenge abgegeben wurde.
-* Delete error entry in [treatments tab](..Getting-Started/Screenshots#carb-correction) if you wish.
+* Den Fehler kannst Du bei Bedarf im [Behandlungs-Tab](..Getting-Started/Screenshots#kohlenhydrat-korrektur) löschen.
 * Die tatsächlich abgegebene Insulinmenge wird bei der nächsten Verbindung zwischen AAPS und Dana RS ausgelesen. Um eine Verbindung manuell herzustellen, drücke das Bluetooth Icon auf dem Dana Tab oder warte einfach auf die nächste Verbindung.
 
 ## Wichtiger Hinweis beim Wechsel des Smartphones

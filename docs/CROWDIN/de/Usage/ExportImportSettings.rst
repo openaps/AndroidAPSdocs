@@ -69,10 +69,17 @@ Importiere die Einstellungen
 * Bestätige die Meldung durch Klick auf 'OK'.
 * AAPS wird neu gestartet, um importierte Einstellungen zu aktivieren.
 
-* **Hinweis für Dana RS Nutzer:**
+Hinweis für Dana RS Nutzer
+------------------------------------------------------------
+* Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. 
+* Bitte stelle die Bluetooth-Verbindung zwischen Smartphone und Pumpe manuell her.
 
-  * Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Bitte stelle die Bluetooth-Verbindung zwischen Smartphone und Pumpe manuell her.
-  
+Einstellungen aus früheren Versionen importieren (vor AAPS 2.7)
+------------------------------------------------------------
+* Die "alte" Datei mit den Einstellung muss sich im Stammordner (root folder) des Smartphones befinden (/storage/emulated/0).
+* Lege die "alte" Datei nicht in den gleichen Ordner wie die neuen exportierten Einstellungen (AAPS/Einstellungen).
+* Die "alte" Einstellungs-Datei findest Du am Ende der Liste im Import-Dialog.
+
 Einstellungs-Datei übertragen
 ==================================================
 * Der beste Weg, um Einstellungs-Datei auf ein neues Telefon zu übertragen, ist über ein USB-Kabel oder einen Cloud-Service (z.B. Google Drive).

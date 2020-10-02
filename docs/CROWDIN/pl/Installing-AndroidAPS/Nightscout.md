@@ -25,7 +25,7 @@ Keep your phone up to date as described in [safety first](../Getting-Started/Saf
 
 ## Manual Nightscout setup
 
-Zakładamy, że masz już stronę Nightscout, jeśli nie odwiedź stronę [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) w celu uzyskania pełnych instrukcji dotyczących konfiguracji, poniższe instrukcje są ustawieniami, które musisz dodać do swojej strony Nightscout. Twoja strona Nightscout musi być co najmniej w wersji 10 (wyświetlana jako 0.10 ...), sprawdź, czy korzystasz z najnowszej wersji, w przeciwnym razie pojawi się komunikat o błędzie w twojej aplikacji AAPS.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Twoja strona Nightscout musi być co najmniej w wersji 10 (wyświetlana jako 0.10 ...), sprawdź, czy korzystasz z najnowszej wersji, w przeciwnym razie pojawi się komunikat o błędzie w twojej aplikacji AAPS.
 
 * Przejdź do https://herokuapp.com/
 
@@ -41,15 +41,6 @@ Zakładamy, że masz już stronę Nightscout, jeśli nie odwiedź stronę [Night
   * Można ustawić różne alarmy dla [ monitorowania pompy](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), w szczególności baterii: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
-  * Opcjonalnie: Można ustawić następujące „liczniki” dla kolorystyki w raporcie AAPS: 
-    * ` BAGE_WARN ` = ` 480 ` (Ostrzeżenie po x godzinach od ostatniej zmiany baterii w Careportalu)
-  * ` BAGE_URGENT ` = ` 504 ` (Pilne ostrzeżenie po x godzinach od ostatniej zmiany baterii w Careportalu)
-  * ` CAGE_WARN ` = ` 40 ` (Ostrzeżenie po x godzinach od ostatniej zmiany Kaniuli w wydarzeniu w Careportal)
-  * ` CAGE_URGENT ` = ` 48 ` (Pilne ostrzeżenie po x godzinach od ostatniej zmiany kaniuli w wydarzeniu w Careportal)
-  * ` IAGE_WARN ` = ` 144 ` (Ostrzeżenie po x godzinach od ostatniej zmiany wkładu insulinowego w wydarzeniu w Careportal)
-  * ` IAGE_URGENT ` = ` 192 ` (Pilne ostrzeżenie po x godzinach od ostatniej zmiany wkładu insulinowego w wydarzeniu w Careportal)
-  * ` SAGE_WARN ` = ` 160 ` (Ostrzeżenie po x godzinach od ostatniego wstawienia zdarzenia CGM Sensor w Careportal)
-  * ` SAGE_URGENT ` = ` 168 ` (Pilne ostrzeżenie po x godzinach od ostatniego wstawienia czujnika CGM w Careportal)
 
 ![Azure](../../images/nightscout1.png)
 
