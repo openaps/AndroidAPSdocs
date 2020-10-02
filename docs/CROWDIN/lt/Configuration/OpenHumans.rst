@@ -42,16 +42,16 @@ Sąranka
 .. image:: ../images/OHUploader2.png
   :alt: Open Humans Terms of Use + Login
 
-11. Returning to AAPS you will see a prompt that login succeeded.
-12. Keep Open Humans Uploader plugin and phone turned on for setup to complete.
-13. After clicking close you will see your member ID. Queue sizes > 0 shows that there is still data to be uploaded.
-14. Click 'LOGOUT' if you want to stop uploading data to Open Humans.
-15. Android notification will inform you about running upload.
+10. Returning to AAPS you will see a prompt that login succeeded.
+11. Keep Open Humans Uploader plugin and phone turned on for setup to complete.
+12. After clicking close you will see your member ID. Queue sizes > 0 shows that there is still data to be uploaded.
+13. Click 'LOGOUT' if you want to stop uploading data to Open Humans.
+14. Android notification will inform you about running upload.
 
 .. image:: ../images/OHUploader3.png
   :alt: Open Humans finish setup
 
-16. You can manage your data by logging in to the `Open Humans website <www.openhumans.org>`_.
+15. You can manage your data by logging in to the `Open Humans website <www.openhumans.org>`_.
 
 .. image:: ../images/OHWeb.png
   :alt: Open Humans manage data
