@@ -1,5 +1,9 @@
 Docs updates & changes
 **************************************************
+September 2020
+==================================================
+* Major update for new AAPS version 2.7
+* For details see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
 June 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - more details patched Libre Link app & use of bluetooth transmitters
@@ -57,7 +61,7 @@ November 2019
 * `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Troubleshooting - link collection <../Usage/troubleshooting.html>`_
 * `Update - quick walk-through for experienced users <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
-* Docs - update `edit <../make-a-PR.md#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
+* Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
 
 October 2019
 ==================================================
