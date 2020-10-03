@@ -1,6 +1,6 @@
 # Maak je eerste PR (pull request)
 
-** Deze beschrijving is alleen bedoeld om de Engelstalige versie van de wiki te verbeteren. Wijzigingen moeten altijd eerst in de Engelse versie worden gedaan omdat dit de 'brontekst' is van waaruit de andere talen worden vertaald. De instructie voor het maken van wijzigingen is in het Engels omdat we ervan uitgaan dat je die taal machtig bent als je een wijziging eraan wilt doorvoeren;) Mocht dat een probleem zijn, vraag dan in de Looped-NL-BE Facebook groep om hulp. If you want to translate to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org).**
+** Deze beschrijving is alleen bedoeld om de Engelstalige versie van de wiki te verbeteren. Wijzigingen moeten altijd eerst in de Engelse versie worden gedaan omdat dit de 'brontekst' is van waaruit de andere talen worden vertaald. De instructie voor het maken van wijzigingen is in het Engels omdat we ervan uitgaan dat je die taal machtig bent als je een wijziging eraan wilt doorvoeren;) Mocht dat een probleem zijn, vraag dan in de Looped-NL-BE Facebook groep om hulp. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
 
 Voor hints hoe tekst te formatteren (kop, vet ...) en links instellen, zie de ["code syntax"](./make-a-PR#code-syntax) sectie van deze pagina.
 
