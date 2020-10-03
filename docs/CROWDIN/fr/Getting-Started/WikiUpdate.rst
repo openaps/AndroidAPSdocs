@@ -1,5 +1,9 @@
 Wiki mises à jour et modifications
 **************************************************
+September 2020
+==================================================
+* Major update for new AAPS version 2.7
+* For details see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
 Juin 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - plus de détails sur l'application LibreLink patchée & l'utilisation des transmetteurs bluetooth
