@@ -61,7 +61,7 @@ Lapkritis 2019
 * `Android Studio trikčių šalinimas <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
 * ` Trikčių šalinimas - nuorodos <../Usage/troubleshooting.html> ` _
 * `Atnaujinimas - trumpas vadovas patyrusiems vartotojams <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users> ` _
-* Dokumentai - atnaujinimas 'koregavimas <../make-a-PR.md#code-syntax>`_ ir 'vertimas <../translations.html#translate-wiki-pages>`_.
+* Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
 
 Spalis 2019
 ==================================================
