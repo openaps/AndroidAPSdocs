@@ -48,10 +48,10 @@
 
 ![Capture d'écran des paramètres de cartouche d'insuline](../images/combo/combo-insulin-settings.png)
 
-- Install AndroidAPS as described in the [AndroidAPS docs](../Installing-AndroidAPS/Building-APK.html).
+- Installez AndroidAPS comme décrit dans la [documentation AndroidAPS](../Installing-AndroidAPS/Building-APK.html).
 - Lisez bien le wiki pour comprendre comment configurer AndroidAPS.
 - Sélectionnez le plugin MDI dans AndroidAPS, surtout pas le plugin Combo à ce stade afin d'éviter que le plugin Combo n'interfère avec la Ruffy pendant le processus d'appairage.
-- Clone [ruffy](https://github.com/MilosKozak/ruffy) from github via git.
+- Clonez [ruffy](https://github.com/MilosKozak/ruffy) à partir de github avec git.
 - Installez la Ruffy et utilisez le pour appairer la pompe. Si elle ne fonctionne pas après plusieurs tentatives, passez à la branche `pairing`, appairez la pompe puis reprenez le fil de cette page. Notez que l'appairage doit seulement être lancé une fois, le traitement est un peu fragile et long car il peut y avoir plusieurs tentatives; Acquittez rapidement les notifications et si vous recommencez, supprimez de la liste Bluetooth du téléphone le dispositif pompe au préalable. Une autre option à essayer est d’aller dans le menu Bluetooth après l’initialisation du processus d’appairage (cela permet de maintenir le Bluetooth du téléphone détectable tant que le menu est affiché) et à revenir à Ruffy après la confirmation de l’appairage sur la pompe, lorsque la pompe affiche le code d’autorisation. Si vous n’avez pas réussi l’appairage de la pompe (disons après 10 tentatives), essayez d’attendre jusqu'à 10s avant de confirmer l’appairage sur la pompe (lorsque le nom du téléphone est affiché sur la pompe). Si vous avez configuré ci-dessus le délai d'affichage du menu à 5s, vous devez l'augmenter à nouveau. Certains utilisateurs ont signalé qu'ils avaient eu besoin de le faire. Enfin, envisagez de passer dans une autre pièce en cas d’interférence avec des ondes radio. Au moins un utilisateur a immédiatement résolu les problèmes d'appairage en changeant simplement de pièce.
 - Quand AAPS utilise Ruffy, l'application Ruffy ne peut pas être utilisée. La façon la plus simple est de redémarrer le téléphone après le processus d'appairage et de laisser AAPS démarrer ruffy en arrière-plan.
 - Si la pompe est complètement nouvelle, vous devez faire un bolus sur la pompe pour que celle-ci crée une première entrée dans l'historique.
