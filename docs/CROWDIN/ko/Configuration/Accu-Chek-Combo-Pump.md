@@ -48,10 +48,10 @@
 
 ![인슐린 카드리지 세팅의 스크린 샷](../images/combo/combo-insulin-settings.png)
 
-- [AndroidAPS wiki](http://wiki.AndroidAPS.org)에 표시되었듯이 안드로이드 앱을 설치하세요.
+- Install AndroidAPS as described in the [AndroidAPS docs](../Installing-AndroidAPS/Building-APK.html).
 - 안드로이드 APS를 설정하기 위해서는 Wiki를 필독하세요. 
 - 안드로이드 APS에서 MDI프러그인을 선택하세요. 페어링과정에서 Ruffy인터페이스로부터 Combo플러그인이 사용되지 않도록 주의하세요.
-- Follow the link <http://ruffy.AndroidAPS.org> and clone ruffy via git.
+- Clone [ruffy](https://github.com/MilosKozak/ruffy) from github via git.
 - Ruffy를 설치하고, 펌프와 페어링이 되도록 사용하세요. 다수의 시도에도 작동하지 않을경우, `pairing`기능을 변경하고 펌프를 페어링하세요. 그리고 다시 원래의 기능으로 변경하세요. 페어링 과정이 어떠한 이유에서든지 실패가 잦을 수 있지만, 단 한 번만 성공하면 됩니다. 따라서 몇 번의 시도가 필요할 수도 있으며, 재시도를 할 경우, 블루투스 세팅에서 빨리 펌프장치를 삭제하기 바랍니다. 다른 옵션은 페어링 기능 시작 이후 블루트스 메뉴로 가능 것입니다. 이는 휴대폰의 블루투스가 메뉴가 표시되는 동안 블루투스가 발견될 수 있도록 합니다. 그리고 펌프가 승인코드를 표시할 때, 펌프페어링을 승인한 후 Ruffy로 다시 변경하세요. 10번의 시도 이후에도 펌프승인이 되지 않을 경우, 펌프에 휴대폰이름이 표시될 때, 펌프페어링을 승인하기 전 10초정도 기다려서 시도하기 바랍니다. 메뉴 시간초과 설정을 5초이상으로 하였다면, 다시 시간을 증가해야 합니다. 일부 사용자는 이렇게 하여 문제해결을 하였다고 합니다. 마지막으로 국부적인 전파방해가 있다면, 다른 장소(방)으로 이동하는 것이 도움이 될 수 있습니다. 적어도 한 분의 사용자가 단순히 방을 이동함에 따라서 페어링 문제를 해결한 경우가 있습니다.
 - AAPS가 Ruffy를 사용할 경우, Ruffy App은 사용할 수 없습니다. 가장 쉬운 방법은 페어링과정 후에 휴대폰을 재시작하는 것이며, 이는 AAPS가 Ruffy를 배경에서 시작할 수 있도록 합니다.
 - 만약 펌프가 완전히 신규장치라면, 펌프에서 하나의 Bolus를 해야하며, 펌프는 하나의 새로운 데이타입력을 만들어냅니다.
