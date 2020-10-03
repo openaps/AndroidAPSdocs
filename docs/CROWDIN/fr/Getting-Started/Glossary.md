@@ -77,16 +77,10 @@
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - source Glycémie</a></td>
 </tr>
 <tr>
- <td>BlueReader</td>
- <td>transmetteur bluetooth pour transformer le Freestyle Libre en MGC</td>
- <td>Blukon Nightreader / MiaoMiao</td>
- <td><a href="https://bluetoolz.de/blueorder/#home">BlueReader</a></td>
-</tr>
-<tr>
  <td>Blukon Nightreader</td>
  <td>transmetteur bluetooth pour transformer le Freestyle Libre en MGC</td>
  <td>BlueReader / MiaoMiao</td>
- <td><a href="https://www.ambrosiasys.com/howit"> </a></td>
+ <td><a href="https://www.ambrosiasys.com/howit">Ambrosia Blukon Nightreader</a></td>
 </tr>
 <tr>
  <td>DB (BR)</td>
@@ -95,7 +89,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>CAGE</td>
+ <td>AgeC</td>
  <td>Age Canule - affiché dans Nightscout si l'information a été renseignée dans l'onglet / menu Actions de AAPS ou par l'intermédiaire de l'action 'AMORCER' de l'onglet ACT</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
@@ -128,7 +122,7 @@
  <td>DAI</td>
  <td>Durée d'Action de l'Insuline</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - types d'insulines</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td>heure d'été</td>
@@ -198,15 +192,15 @@
 </tr>
 <tr>
  <td>LineageOS</td>
- <td>Système d'exploitation open-source pour les smartphones, etc. <br> OS alternatifs pour les smartphones ne fonctionnant pas Android 8.1 (Oreo) <br> (lors de l'utilisation de Accu-Chek Combo)</td>
+ <td>free and open-source operating system for smartphones etc.<br>alternative OS for smartphones not running Android 8.1 (Oreo)<br>(when using Accu-Chek Combo)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Pompe Combo</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pump</a></td>
 </tr>
 <tr>
- <td>Fichiers log</td>
- <td>enregistrement de toutes les actions d'AAPS (utiles pour le dépannage et le débogage)</td>
+ <td>Log files</td>
+ <td>record of all AAPS actions (useful for trubbleshooting and debugging)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - fichiers log</a></td>
+ <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - log files</a></td>
 </tr>
 <tr>
  <td>maxIOB</td>
