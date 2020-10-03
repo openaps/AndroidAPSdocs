@@ -1,5 +1,9 @@
 Dokumentų atnaujinimai ir pakeitimai
 **************************************************
+September 2020
+==================================================
+* Major update for new AAPS version 2.7
+* For details see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
 2020 m. birželis
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - detalesnė informacija apie Libre Link programėlę ir bluetooth siųstuvų naudojimą
