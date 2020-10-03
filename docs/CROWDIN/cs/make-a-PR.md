@@ -1,6 +1,6 @@
 # Udělejte svůj první PR (pull request - žádost o změnu)
 
-**Tento popis je pouze pro editaci anglické dokumentace. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org).**
+**Tento popis je pouze pro editaci anglické dokumentace. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
 
 For hints how to format text (headline, bold...) and set links please see the ["code syntax"](./make-a-PR#code-syntax) section of this page.
 
