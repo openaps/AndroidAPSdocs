@@ -48,10 +48,10 @@
 
 ![Captura de ecran das configurações do cartucho de insulina](../images/combo/combo-insulin-settings.png)
 
-- Instale AndroidAPS como describo no [wiki AndroidAPS](http://wiki.AndroidAPS.org).
+- Install AndroidAPS as described in the [AndroidAPS docs](../Installing-AndroidAPS/Building-APK.html).
 - Certifique se de que leu o wiki para entender como se programa o AndroiAPS.
 - Seleccione o plugin MDI em AndroidAPS, não o plugin Combo nesta altura para evitar que o plugin Combo interfira com ruffy durante o processo de emparelhamento.
-- Siga o link <http://ruffy.AndroidAPS.org> e clone ruffy via git.
+- Clone [ruffy](https://github.com/MilosKozak/ruffy) from github via git.
 - Instale ruffy e use- o para emparelhar com a bomba. Se não trabalhar após múltiplas tentativas, troque para o branch `emparelhamento`, emparelhe a bomba e regresse depois ao branch original. Note que o processo de emparelhamento é delicado ( mas só tem de ser feito uma única vez) e poderão ser necessárias algumas tentativas; reconheça rapidamente os alertas e ao iniciar de novo remova a bomba das configurações de blutooth antes de recomeçar. Outra opção a tentar é ir ao menu Bluetooth após inicializar o processo de emparelhamento ( isto mantém o Blutooth do telefone visível enquanto o menu for exibido) e voltar para o ruffy após confirmar o emparelhamento na bomba quando aparecer no écran o código de autorização. Se não conseguir emparelhar a bomba ( após 10 tentativas), tente aguardar 10 segundos antes de confirmar o emparelhamento na bomba ( quando o nome do telefone aparecer na bomba). Se configurou o tempo limite de menu para 5s ou mais, terá de aumentar de novo. Alguns utilizadores relataram a necessidade de fazer isto. Por último, considere mover-se de uma divisão para outra no caso de interferências de rádio locais. Pelo menos um utilizador ultrapassou os problemas de emparelhamento simplesmente mudando de divisão.
 - Quando AAPS está a usar ruffy, a app Ruffy não pode ser usada. A maneira mais simples é simplesmente reiniciar o telefone após o processo e deixar AAPS iniciar ruffy em segundo plano.
 - Se a bomba for completamente nova, precisará de fazer um bólis na bomba para que a bomba crie uma primeira entrada no histórico.
