@@ -16,7 +16,7 @@ Aktivität & Feedback
 Die Altersangaben zu Sensoren, Kanülen, etc. finden sich nun unten auf dem Tab / im Menü "Aktionen".
 BZ Test wurde auf den Tab / in das Menü "Aktionen" verschoben.
 Das temporäres Ziel wurde auf den Tab / in das Menü "Aktionen" verschoben.
-Bewegung wurde auf den Tab / in das Menü "Aktionen" verschoben. (siehe Screenshot im Bereich `Kohlenhydrate & Bolus <#kohlenhydrate--bolus>`_ auf dieser Seite).
+Bewegung wurde auf den Tab / in das Menü "Aktionen" verschoben. (see screenshot in section `carbs & bolus <#id1>`_ on this page).
 
 Kohlenhydrate & Bolus
 ==============================
