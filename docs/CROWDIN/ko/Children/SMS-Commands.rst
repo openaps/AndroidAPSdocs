@@ -69,7 +69,7 @@ Authenticator setup
 
 Use SMS commands
 ==================================================
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands </Children/SMS-Commands.html#commands>`_ below. 
+* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands <../Children/SMS-Commands.html#commands>`_ below. 
 * The AAPS phone will respond to confirm success of command or status requested. 
 * Confirm command by sending the code where necessary. 예시:
 
