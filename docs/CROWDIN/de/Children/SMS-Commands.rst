@@ -69,7 +69,7 @@ Konfiguration des Authentifikators
 
 SMS-Befehle verwenden
 ==================================================
-* Sende eine SMS von Deiner/Deinen erlaubte/n Telefonnummer(n) an das Smartphone, das AndroidAPS ausgeführt und nutze dabei einen der `Befehle </Children/SMS-Commands.html#befehle>`_ unten. 
+* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands <../Children/SMS-Commands.html#commands>`_ below. 
 * Das AAPS-Smartphone wird antworten, um sich die Durchführung des übermittelten Befehls bestätigen zu lassen oder um den angeforderten Status zu übermitteln. 
 * Bestätige falls erforderlich die Durchführung des übermittelten Befehls, indem Du den angegebenen Code zurücksendest. Beispiel:
 
