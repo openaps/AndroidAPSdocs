@@ -52,7 +52,7 @@ Nouvelles fonctionnalités majeures
 * amélioration de l'Historique @MilosKozak
 * suppression de l'algorithme OpenAPS MA @Tornado-Tim
 * suppression de la sensibilité Oref0 @Tornado-Tim
-* `Biometric or password protection <../Configuration/Preferences.html#protection>`_ for settings, bolus @MilosKozak
+* `protection biométrique ou par mot de passe <../Configuration/Preferences.html#protection>`_ pour les paramètres, bolus @MilosKozak
 * `nouveau déclencheur d'automatisation <../Usage/Automation.html>`_ @PoweRGbg
 * `Téléversement Open Humans <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
 * Nouvelle documentation @Achim
