@@ -48,10 +48,10 @@
 
 ![Rezervuaro nustatymų ekrano nuotrauka](../images/combo/combo-insulin-settings.png)
 
-- Įdiegite AndroidAPS, kaip aprašyta [AndroidAPS wiki](http://wiki.AndroidAPS.org).
+- Install AndroidAPS as described in the [AndroidAPS docs](../Installing-AndroidAPS/Building-APK.html).
 - Įsitikinkite, kad viską perskaitėte ir suprantate, kaip sukonfigūruoti AndroidAPS.
 - Šiame AAPS nustatymų etape pasirinkite MDI o ne Combo pompą, kad įskiepis netrukdytų Ruffy programai susijungimo procese.
-- Sekite nuorodą <http://ruffy.AndroidAPS.org> ir klonuokite ruffy per git.
+- Clone [ruffy](https://github.com/MilosKozak/ruffy) from github via git.
 - Įdiekite Ruffy, ir naudokite ją pompos suporavimui. Jei nepavyksta po kelių bandymų, įjunkite `pairing` atšaką, suporuokite pompą ir tada grįžkite į pradinę atšaką. Atkreipkite dėmesį, kad suporavimo procesas yra labai kaprizingas (bet atliekamas tik vieną kartą) ir gali tekti atlikti keletą bandymų; laiku reaguokite į nurodymus ir, jei reikia, pakartokite bandymą, prieš tai pašalinę pompos įrenginį iš telefono Bluetooth sąrašo. Kitas būdas yra bandyti eiti į Bluetooth meniu telefone po to, kai poravimo procesas paleistas (tada telefono Bluetooth aptinkamas tol, kol rodomas pats meniu) ir vėl perjungti atgal į Ruffy, kai pompa parodo autorizavimo kodą ir suporavimas patvirtintas pompoje. Jei nepasiseka suporuoti pompos (sakykime, po 10 bandymų), pabandykite palaukti iki 10 sek. prieš patvirtinant pompos suporavimą (kai telefono pavadinimas matomas pompos ekrane). Kadangi nustatėte, kad meniu išsijungia po 5s, turite šią reikšmę vėl padidinti. Kai kurie vartotojai pranešė, kad jiems šis "triukas" padėjo. Jei niekas nepadeda, pabandykite pereiti į kitą kambarį, nes galbūt veikia kokie nors vietiniai radijo trikdžiai. Mažiausiai vienam vartotojui tai akimirksniu išsprendė suporavimo problemą.
 - Kai AAPS naudoja Ruffy, Ruffy aplikacija negali būti atidaroma. Geriausia tiesiog perkrauti telefoną po suporavimo ir leisti pačiai AAPS įjungti Ruffy fone.
 - Jei pompa visiškai nauja, jūs turite suleisti bent vieną bolusą tiesiogiai iš pompos, kad sukurtumėte pirmą įrašą pompos istorijoje.
