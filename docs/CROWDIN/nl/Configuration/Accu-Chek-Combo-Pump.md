@@ -48,10 +48,10 @@
 
 ![Schermafbeelding van instellingen voor insuline reservoir](../images/combo/combo-insulin-settings.png)
 
-- Installeer AndroidAPS zoals beschreven in de [AndroidAPS wiki](http://wiki.AndroidAPS.org).
+- Install AndroidAPS as described in the [AndroidAPS docs](../Installing-AndroidAPS/Building-APK.html).
 - Zorg ervoor dat je de wiki goed doorleest en begrijpt hoe AndroidAPS ingesteld moet worden.
 - Selecteer de MDI plugin in AndroidAPS, niet de Combo plugin op dit moment om te voorkomen dat de Combo plugin stoort met ruffy tijdens het koppelen.
-- Volg de link <http://ruffy.AndroidAPS.org> en kloon ruffy via git.
+- Clone [ruffy](https://github.com/MilosKozak/ruffy) from github via git.
 - Installeer ruffy en gebruik het om de pomp te koppelen. Als het niet werkt na meerdere pogingen, schakel dan over naar de `koppelings`-versie, koppel de pomp en schakel naar de oorspronkelijke versie terug. Het koppelen van de pomp kan een moeizaam proces zijn (maar hoeft gelukkig slechts één keer gedaan te worden) en mogelijk heb je meerdere pogingen nodi. Zorg in ieder geval dat je de notificaties snel bevestigt en verwijder de pomp van tevoren uit de Bluetooth-instellingen. Een andere optie om te proberen is om naar het Bluetooth-menu te gaan nadat je het koppelingsproces hebt gestart (dit houdt de Bluetooth detectie van de telefoon aan zolang het menu wordt weergegeven). Schakel na het bevestigen van de koppeling op de pomp pas weer terug naar ruffy, wanneer de pomp de autorisatiecode toont. Als het koppelen van de pomp niet gelukt is (zeg na 10 pogingen), probeer tot 10 seconden te wachten voordat je de koppeling bevestigt (wanneer de naam van de telefoon op de pomp wordt weergegeven). Als je de menu time-out hierboven op 5 s hebt ingesteld, moet je deze opnieuw verhogen. Sommige gebruikers hebben gemeld dat ze dit nodig hadden. Tenslotte, overweeg naar een andere ruimte te gaan om atmosferische (radio) storingen uit te sluiten. Ten minste één gebruiker loste direct de koppelingsproblemen op door simpelweg naar een andere ruimte te gaan.
 - Wanneer AAPS ruffy gebruikt kan de ruffy app niet gebruikt worden. De eenvoudigste manier is om de telefoon na het koppelingsproces te herstarten en AAPS ruffy op de achtergrond te laten starten.
 - Als de pomp volledig nieuw is, moet je eerst een bolus op de pomp doen, zodat de pomp een eerste behandeling opslaat.
