@@ -48,10 +48,10 @@
 
 ![Zrzut ekranu ustawień zbiorniczka insuliny](../images/combo/combo-insulin-settings.png)
 
-- Zainstaluj AndroidAPS zgodnie z opisem w [AndroidAPS wiki](http://wiki.AndroidAPS.org).
+- Install AndroidAPS as described in the [AndroidAPS docs](../Installing-AndroidAPS/Building-APK.html).
 - Przeczytaj wiki, aby dowiedzieć się, jak skonfigurować AndroidAPS.
 - Wybierz wtyczkę "pompa wirtualna" w AndroidAPS, a nie wtyczkę Combo w tym miejscu, aby uniknąć próby jednoczesnego dostępu do ruffy podczas procesu parowania.
-- Przejdź na stronę [ http://ruffy.AndroidAPS.org ](http://ruffy.AndroidAPS.org) i sklonuj ruffy poprzez git.
+- Clone [ruffy](https://github.com/MilosKozak/ruffy) from github via git.
 - Zainstaluj ruffy i użyj go do parowania pompy. Przed pierwszą próbą parowania zalecany jest restart smartfona. Jeśli po wielu próbach nadal nie udaje się sparować pompy i telefonu, przejdź do gałęzi `parowanie`, sparuj pompę, a następnie przełącz na pierwotną gałąź. Zwróć uwagę, że proces parowania jest dość trudny (ale trzeba to zrobić tylko raz) i możesz potrzebować kilku prób. Szybko potwierdzaj podpowiedzi, a przed ponownymi próbami najpierw usuń pompę z ustawień Bluetooth. Zalecane jest włączenie wyszukiwania Bluetooth najpierw na pompie, a w drugiej kolejności na telefonie. Inną możliwością do wypróbowania jest przejście do menu Bluetooth, zainicjowanie procesu parowania (dzięki temu Bluetooth telefonu będzie wykrywalny, dopóki wyświetlane jest menu) i powrót do ruffy dopiero po potwierdzeniu parowania na pompie (gdy pompa wyświetli kod autoryzacji). Jeśli nie uda Ci się sparować pompy (powiedzmy po 10 próbach), spróbuj poczekać do 10 sekund przed potwierdzeniem parowania na pompie (gdy nazwa telefonu jest wyświetlana na pompie). Jeśli wcześniej skonfigurowałeś czas wyświetlania menu na 5 s, musisz zwiększyć go ponownie. Niektórzy użytkownicy raportowali, że musieli tak zrobić. Wreszcie, rozważ przejście z jednego pomieszczenia do drugiego w przypadku lokalnych zakłóceń radiowych. Przynajmniej jeden użytkownik natychmiast pokonał problemy z parowaniem, po prostu zmieniając pokoje.
 - Kiedy AAPS używa ruffy, nie można użyć aplikacji ruffy. Najprostszym sposobem jest uruchomienie ponowne telefonu zaraz po zakończeniu procesu parowania i pozwolenie, aby AAPS sam wystartował ruffy w tle.
 - Jeśli pompa jest fabrycznie nowa, należy podać jeden bolus na pompie, tylko po to aby pompa utworzyła pierwszy wpis w historii.
