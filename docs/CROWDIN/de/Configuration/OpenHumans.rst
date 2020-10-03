@@ -62,12 +62,12 @@ Möglichkeiten zum Teilen Deiner Daten
 ---------------------------------------------------------------------------------------  
 Das “OPEN” Projekt besteht aus einem internationalen und bereichsübergreifenden Konsortium, das Patienten-Innovatoren, Kliniker, Sozialwissenschaftler, Informatiker und Patientenorganisationen zusammenführt, um eine Evidenzbasis rund um die Auswirkungen von Do-it-yourself Artificial Pancreas Systemen (DIY APS) auf Menschen mit Diabetes und verschiedene Gesundheitssysteme zu schaffen. Weitere Informationen findest Du auf der `OPEN Website <https://www.open-diabetes.eu/de/>` _.
 
-Im September 2020 hat das 'OPEN' Projekt einen `Fragebogen <https://survey.open-diabetes.eu/>`_ veröffentlich und damit die Möglichkeit verknüpft, Deine zu Open Humans hochgeladenen Daten an das 'OPEN' Projekt zu spenden. A `tutorial <https://open-diabetes.eu/en/open-survey/survey-tutorials/>`_ how to donate your data to the 'OPEN' project is available on their site and within the survey itself.
+Im September 2020 hat das 'OPEN' Projekt einen `Fragebogen <https://survey.open-diabetes.eu/>`_ veröffentlich und damit die Möglichkeit verknüpft, Deine zu Open Humans hochgeladenen Daten an das 'OPEN' Projekt zu spenden. Eine detaillierte `Anleitung <https://open-diabetes.eu/en/open-survey/survey-tutorials/>`_, wie Du Deine Daten teilen kannst ist sowohl im Fragebogen als auch auf der 'OPEN' Webseite verfügbar.
 
 
 `OpenAPS Data Commons <https://www.openhumans.org/activity/openaps-data-commons/>`_
 ---------------------------------------------------------------------------------------  
-Die OpenAPS Data Commons wurden erstellt, um einen einfachen Weg zu schaffen, Daten aus der DIYAPS-Community mit Forschern zu teilen. Die Daten werden sowohl mit traditionellen Forschern, die traditionelle Forschungsstudien erstellen, als auch mit Gruppen oder Einzelpersonen aus der Community, die Daten im Rahmen ihrer eigenen Forschungsprojekte überprüfen wollen, gemeinsam genutzt. The OpenAPS Data Commons uses the 'Open Humans' platform to enable people to easily upload and share their data from DIYAPS including AndroidAPS, Loop, and OpenAPS. 
+Die OpenAPS Data Commons wurden erstellt, um einen einfachen Weg zu schaffen, Daten aus der DIYAPS-Community mit Forschern zu teilen. Die Daten werden sowohl mit traditionellen Forschern, die traditionelle Forschungsstudien erstellen, als auch mit Gruppen oder Einzelpersonen aus der Community, die Daten im Rahmen ihrer eigenen Forschungsprojekte überprüfen wollen, gemeinsam genutzt. OpenAPS Data Commons verwendet die 'Open Humans' -Plattform, um es den Menschen zu ermöglichen, ihre Daten von DIYAPS einschließlich AndroidAPS, Loop und OpenAPS einfach hochzuladen und gemeinsam zu nutzen. 
 
 Du kannst Deine Daten über einen der folgenden drei Wege zu Open Humans hochladen: 
 
