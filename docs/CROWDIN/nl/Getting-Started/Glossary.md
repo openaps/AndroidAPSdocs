@@ -77,12 +77,6 @@
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG bron</a></td>
 </tr>
 <tr>
- <td>BlueReader</td>
- <td>bluetooth-zender om Freestyle Libre als CGM te gebruiken</td>
- <td>Blukon Nightreader / MiaoMiao</td>
- <td><a href="https://bluetoolz.de/blueorder/#home">BlueReader</a></td>
-</tr>
-<tr>
  <td>Blukon Nightreader</td>
  <td>bluetooth-zender om Freestyle Libre als CGM te gebruiken</td>
  <td>BlueReader / MiaoMiao</td>
@@ -102,69 +96,69 @@
 </tr>
 <tr>
  <td>CAN</td>
- <td>statusindicator infuuswissel op Overzichtsscherm</td>
+ <td>status light overdue canula change on homescreen</td>
  <td>BAT / RES / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Instellingen</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>CGM</td>
- <td>Continue Glucose Monitor</td>
+ <td>continuous glucose monitor</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>Closed loop</td>
- <td>Closed loop (gesloten lus) systemen maken automatische aanpassingen aan de hoeveelheid toegediende insuline gebaseerd op een algoritme, zonder dat de gebruiker deze aanpassingen telkens hoeft te bevestigen</td>
+ <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
  <td>Open loop</td>
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
 </tr>
 <tr>
  <td>COB</td>
- <td>koolhydraten aan boord (Carbs On Board), oftewel koolhydraten die zijn opgenomen in het lichaam</td>
+ <td>carbs on board</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>DIA</td>
- <td>duur van insuline activiteit (Duration of Insulin Action)</td>
+ <td>duration of insulin action</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insuline soorten</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA (Engelstalig)</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td>DST</td>
- <td>zomertijd (Daylight Savings Time)</td>
+ <td>daylight savings time</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki DST</a></td>
 </tr>
 <tr>
  <td>eCarbs</td>
- <td>Vertraagde koolhydraten (extended Carbs) - koolhydraten die maar langzaam worden opgenomen (maaltijden met veel vet/eiwit).<br>Omdat de vertraagde bolus functie die je zou gebruiken bij reguliere pomptherapie weinig nut heeft bij het loopen, worden hier eCarbs gebruikt.</td>
+ <td>"extended carbs" - carbs split up over serveral hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki -vertraagde koolhydraten (eCarbs)</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs gebruiksvoorbeeld (Engelstalig)</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
 <tr>
- <td>FSL (of: FGM)</td>
- <td>Freestyle Libre (of: Flash Glucose Monitor)</td>
+ <td>FGM</td>
+ <td>flash glucose monitor (Freestyle Libre)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - BG bron</a></td>
 </tr>
 <tr>
  <td>git</td>
- <td>Versiebeheer systeem voor het bijhouden van veranderingen in computerbestanden. Zodat meerdere mensen tegelijk aan de broncode kunnen werken. <br>-> nodig voor APK updates</td>
+ <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> neccessary for APK updates</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - APK bijwerken</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - update APK</a></td>
 </tr>
 <tr>
  <td>Github</td>
- <td>web-based hosting service voor versiebeheer met Git<br>-> opslag van broncode</td>
+ <td>web-based hosting service for version control using Git<br>-> storage of source code</td>
  <td>&nbsp;</td>
  <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td>Glimp</td>
- <td>app die glucosewaarden van Freestyle Libre ontvangt</td>
+ <td>app to collect values from Freestyle Libre</td>
  <td>&nbsp;</td>
- <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout met Glimp</a> </td>
+ <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout with Glimp</a> </td>
 </tr>
 <tr>
  <td>Heroku</td>
@@ -173,40 +167,40 @@
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
 <tr>
- <td>KH ratio (IC of I:C in het Engels)</td>
- <td>koolhydraat ratio (Insulin to Carb ratio) -hoeveel koolhydraten kun je eten na het geven van één eenheid insuline?</td>
+ <td>IC (or I:C)</td>
+ <td>insulin to carb ratio (How many carbs are covered by one unit of insulin?)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>IOB</td>
- <td>insuline aan boord (Insulin On Board) - hoeveelheid actieve insuline in je lichaam</td>
+ <td>insulin on board -  insulin active in your body</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>ISF</td>
- <td>insuline gevoeligheidsfactor (Insulin Sensitivity Factor) - de verwachte daling in BG als gevolg van één eenheid van insuline</td>
+ <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LGS</td>
- <td>Lage Glucose Stop<br>AAPS zal het basaal verminderen als bloedglucose daalt. Maar als de bloedglucose stijgt, wordt de basaal verhoogd zolang IOB negatief is (van een eerdere LGS), anders geeft hij de basaal uit jouw profiel. Het kan daardoor voorkomen dat je na een hypo een piek krijgt in je glucosewaarde, omdat het systeem op dat moment geen hogere basaalstand zal instellen._</td>
- <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">doel 6</a></td>
+ <td>Low Glucose Suspend<br>AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
+ <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objective 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LineageOS</td>
- <td>gratis en open-source besturingssysteem voor smartphones etc.<br>alternatief besturingssysteem voor smartphones die geen Android 8.1 (Oreo) hebben (bij gebruik van Accu-Chek Combo)</td>
+ <td>free and open-source operating system for smartphones etc.<br>alternative OS for smartphones not running Android 8.1 (Oreo)<br>(when using Accu-Chek Combo)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pomp</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pump</a></td>
 </tr>
 <tr>
- <td>Log bestanden</td>
- <td>registreert alle AAPS acties (voor het oplossen van foutmeldingen en software bugs)</td>
+ <td>Log files</td>
+ <td>record of all AAPS actions (useful for trubbleshooting and debugging)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - logbestanden</a></td>
+ <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - log files</a></td>
 </tr>
 <tr>
  <td>maxIOB</td>
