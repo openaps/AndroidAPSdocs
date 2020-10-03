@@ -68,12 +68,6 @@
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG source</a></td>
 </tr>
 <tr>
- <td>BlueReader</td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
- <td>Blukon Nightreader / MiaoMiao</td>
- <td><a href="https://bluetoolz.de/blueorder/#home">BlueReader</a></td>
-</tr>
-<tr>
  <td>Blukon Nightreader</td>
  <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
  <td>BlueReader / MiaoMiao</td>
