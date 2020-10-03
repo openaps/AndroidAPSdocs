@@ -349,7 +349,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
    * ISF: Insulin Sensitivity Factor
    * Basal rate
    * Target: Blood glucose level that you want AAPS to be aiming for
-   
+
 * You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](/Configuration/Config-Builder.md).
 
 ## Treatment
