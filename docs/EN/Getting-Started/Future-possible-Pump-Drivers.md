@@ -98,7 +98,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 ## Pumps no longer sold (companies no longer operating)
 
-### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage)) 
+### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations)) 
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon. 
 
