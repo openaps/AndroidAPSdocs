@@ -64,6 +64,7 @@ Configuration de l'Authentificateur
    * Entrez 4570512020
    
 * Le texte rouge "WRONG PIN" changera **automatiquement** en vert "OK" si l'entrée est correcte. **Il n'y a aucun bouton à appuyer !**
+* Make sure there is no time difference between phones as this might lead to authentication problems.
 * Utilisez le bouton "RESET AUTHENTICATORS" si vous voulez supprimer les autorisations.
 
 Utiliser les commandes SMS
