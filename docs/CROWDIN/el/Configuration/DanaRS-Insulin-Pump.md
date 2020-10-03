@@ -41,7 +41,7 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 * Στις περισσότερες περιπτώσεις πρόκειται για θέμα επικοινωνίας και παρέχεται η σωστή ποσότητα ινσουλίνης.
 * Ελέγξτε το ιστορικό της αντλίας (είτε στην αντλία είτε μέσω της καρτέλας Dana> ιστορικό αντλίας> boluses) αν έχει δοθεί σωστό bolus.
-* Delete error entry in [treatments tab](..Getting-Started/Screenshots#carb-correction) if you wish.
+* Delete error entry in [treatments tab](../Getting-Started/Screenshots#carb-correction) if you wish.
 * Το πραγματικό ποσό διαβάζεται και καταγράφεται στην επόμενη σύνδεση. Για να ενεργοποιήσετε αυτό, πατήστε το εικονιδίο BT στην καρτέλα dana ή απλά περιμένετε την επόμενη σύνδεση.
 
 ## Ειδική σημείωση για την αλλαγή τηλεφώνου
