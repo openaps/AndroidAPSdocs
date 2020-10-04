@@ -66,7 +66,7 @@ Dexcom G6 specifieke probleemoplossing
 
 General troubleshoothing
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#Troubleshooting>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`_.
 
 Nieuwe zender met lopende sensor
 --------------------------------------------------
