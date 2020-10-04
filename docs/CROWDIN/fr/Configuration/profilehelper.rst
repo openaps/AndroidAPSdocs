@@ -16,7 +16,7 @@ Profil pour les enfants (jusqu'à 18 ans)
 Profile helper offers data sets from two different hospitals for children to find initial profile for your kid up to 18 years.
 
 .. image:: ../images/ProfileHelperKids1.png
-  :alt: Profile Helper Kids 1
+  :alt: Assistant Profil Enfant 1
 
 1. Select 'Profile helper' from three-dot-menu on the top right side of the screen.
 2. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
@@ -24,7 +24,7 @@ Profile helper offers data sets from two different hospitals for children to fin
 4. Long-press 'Current profile' and select DPV Default profile.
 
 .. image:: ../images/ProfileHelperKids2.png
-  :alt: Profile Helper Kids 2
+  :alt: Assistant Profil Enfant 2
 
 5. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
 6. Press button 'COMPARE PROFILES' on top of screen.
@@ -32,13 +32,13 @@ Profile helper offers data sets from two different hospitals for children to fin
 
 Once you are fine with the profile adjustments you can `clone the profile <.../Configuration/profilehelper.html#clone-profile>`_ as described below.
 
-Compare two profiles
+Comparer deux profils
 =======================================
 
-You can use profile helper also to compare to different profiles or profile switches (percentage of on of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
+Vous pouvez également utiliser l'assistant de profil pour comparer à différents profils ou changements de profil (pourcentage d'activation de vos profils utilisés dans un précédent `changement de profil <. /Usage/Profiles.html>`_).
 
 .. image:: ../images/ProfileHelper1.png
-  :alt: Profile Helper 1
+  :alt: Assistant Profil 1
 
 1. Select 'Profile helper' from three-dot-menu on the top right side of the screen.
 2. Long-press 'Default profile' and select 'Available profile' for a list of your existing profiles or 'Profile switch' for a list of latest profile switches used.
