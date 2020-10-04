@@ -6,8 +6,8 @@
 
 ## Remarques importantes
 
-* Please use **[Android Studio Version 4.0.1](https://developer.android.com/studio/)** or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.0.1.
+* Utilisez **[Android Studio Version 4.0.1](https://developer.android.com/studio/)** ou une version plus récente pour construire l'apk.
+* [Les systèmes d'exploitation Windows 10 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) ne sont pas pris en charge par Android Studio 4.0.1.
 
 **Configuration on demand** n'est pas pris en charge par la version actuelle du plug-in Android Gradle !
 
