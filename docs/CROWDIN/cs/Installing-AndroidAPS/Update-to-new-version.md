@@ -36,7 +36,7 @@ Postupujte podle návodu na [stránka instalace gitu](../Installing-AndroidAPS/g
 
 * Klikněte na možnost Pull (žádné změny v dialogovém okně)
     
-    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02.png)
+    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02a.png)
 
 * Počkejte, dokud se stahování nedokončí.
     
