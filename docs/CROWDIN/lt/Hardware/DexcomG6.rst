@@ -66,7 +66,7 @@ Dexcom G6 specifinių trikčių šalinimas
 
 Bendrųjų trikčių šalinimas
 --------------------------------------------------
-Bendrųjų trikčių šalinimą, skirtą NGJ, galite rasti 'čia <./GeneralCGMRecommendation.html#Troubleshooting>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`_.
 
 Naujas siųstuvas su veikiančiu sensoriumi
 --------------------------------------------------
