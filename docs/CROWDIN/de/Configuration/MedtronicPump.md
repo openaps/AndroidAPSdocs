@@ -80,7 +80,7 @@ Anzeige verschiedener Informationen zum aktuellen Pumpenstatus:
 Am unteren Ende gibt es 3 Buttons:
 
 - **Aktualisieren** ist für das Aktualisieren des Status. Dies sollte erst dann verwendet werden, wenn die Verbindung lange nicht vorhanden war, da diese Aktion Daten über die Pumpe zurücksetzt (Verlauf abrufen, get/set time, Profil abrufen, Akkustatus erhalten, etc.).
-- **Pump History**: Anzeige der Pumpen Historie (siehe [unten](../Configuration/MedtronicPump#pump-history))
+- **Pump History**: Anzeige der Pumpen Historie (siehe [unten](../Configuration/MedtronicPump#pumpen-historie))
 - **RL Stats**: Anzeige RileyLink Statistik (siehe [unten](../Configuration/MedtronicPump#rl-status-rileylink-status))
 
 ## Pumpen Historie
