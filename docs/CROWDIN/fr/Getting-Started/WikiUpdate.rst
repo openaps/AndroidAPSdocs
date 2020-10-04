@@ -1,6 +1,6 @@
-Wiki mises à jour et modifications
+Mises à jour et modifications de la documentation
 **************************************************
-September 2020
+Septembre 2020
 ==================================================
 * Major update for new AAPS version 2.7
 * For details see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
