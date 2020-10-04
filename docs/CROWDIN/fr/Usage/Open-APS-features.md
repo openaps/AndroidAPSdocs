@@ -67,7 +67,7 @@ Soyez prudent et patient et modifiez les paramètres petit à petit. C'est diff�
 * Adulte : 12
 * Adulte résistant à l'insuline : 25
 
-Voir aussi la [documentation OpenAPS pour SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Activer AMA Autosens
 
