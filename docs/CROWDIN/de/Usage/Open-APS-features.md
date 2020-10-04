@@ -67,7 +67,7 @@ Sei jedoch vorsichtig und passe deine Einstellungen in kleinen Schritten an. Das
 * Erwachsener: 12
 * Insulinresistenter Erwachsener: 25
 
-Siehe auch [OpenAPS-Dokumentation zu SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Verwende AMA Autosense
 
