@@ -75,7 +75,7 @@ Standortdienste ("GPS") müssen aktiviert sein, damit Bluetooth ordnungsgemäß 
 
 Die Original-App von Dexcom aus dem Google Play Store wird nicht funktionieren, weil sie die Werte nicht an andere Apps weitergibt. Darum ist eine von der Community leicht modifizierte Version erforderlich. Nur sie kann später mit AAPS kommunizieren. Außerdem kann die modifizierte Dexcom App mit allen Android Smartphones verwendet werden, nicht nur mit den in der [Dexcom Kompatibilitätsliste](https://www.dexcom.com/dexcom-international-compatibility) aufgeführten.
 
-Eine mmol/l Version und eine mg/dl Version der modifizierten Dexcom G6 App sind unter <https://github.com/dexcomapp/dexcomapp/tree/master/2.4> verfügbar. Wähle die passende [modifizierte G6 App für Deine Region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app).
+Eine mmol/l Version und eine mg/dl Version der modifizierten Dexcom G6 App sind unter <https://github.com/dexcomapp/dexcomapp/tree/master/2.4> verfügbar. Wähle die passende [modifizierte G6 App für Deine Region](../Hardware/DexcomG6#g6-mit-der-gepatchten-dexcom-app).
 
 Zur Einrichtung im Smartphone folgende Schritte ausführen:
 
@@ -95,8 +95,8 @@ Zur Einrichtung im Smartphone folgende Schritte ausführen:
 
 ## AndroidAPS installieren
 
-1. AndroidAPS APK-Datei wie [hier](../Installing-AndroidAPS/Building-APK#generate-signed-apk) ausführlich und mit Screenshots beschrieben erstellen.
-2. Die erstelle APK-Datei auf das Smartphone [übertragen](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone).
+1. AndroidAPS APK-Datei wie [hier](../Installing-AndroidAPS/Building-APK#signierte-apk-erstellen-generate-signed-apk) ausführlich und mit Screenshots beschrieben erstellen.
+2. Die erstelle APK-Datei auf das Smartphone [übertragen](../Installing-AndroidAPS/Building-APK#ubertrage-die-apk-datei-auf-das-smartphone).
 3. AndroidAPS entsprechend den eigenen Anforderungen mit Hilfe des Einrichtungsassistenten oder manuell [konfigurieren](../Configuration/Config-Builder.md).
 4. In diesem Beispiel haben wir (unter anderem) folgende Einstellungen verwendet:
 
@@ -104,7 +104,7 @@ Zur Einrichtung im Smartphone folgende Schritte ausführen:
 
 ![G5 Einstellungen](../images/SampleSetupG5Settings.png)
 
-* Nightscout Client aktivieren (siehe [Nightscout-Client](../Configuration/Config-Builder#ns-profile) und [Nightscout Setup](../Installing-AndroidAPS/Nightscout.md))
+* Nightscout Client aktivieren (siehe [Nightscout-Client](../Configuration/Config-Builder#nightscout-profil) und [Nightscout Setup](../Installing-AndroidAPS/Nightscout.md))
 
 ## xDrip+ installieren
 
