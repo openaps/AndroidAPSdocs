@@ -32,7 +32,7 @@ Tippe in AndroidAPS auf das Drei-Punkte-Menü am oberen rechten Bildschirmrand u
 
 Tippe in AndroidAPS auf das Drei-Punkte-Menü am oberen rechten Bildschirmrand und gehe auf Einstellungen > Nightscout-Client > Erweiterte Einstellungen und deaktivere 'Zu Nightscout nur hochladen (keine Synchronisation)' und 'kein Upload zu Nightscout'.
 
-Beachte die [Sicherheitsüberlegungen](../Installing-AndroidAPS/Nightscout#sicherheitsuberlegungen) und sei besonders vorsichtig, wenn Du eine [Insight Pumpe](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps) verwendest.
+Beachte die [Sicherheitsüberlegungen](../Installing-AndroidAPS/Nightscout#sicherheitsuberlegungen) und sei besonders vorsichtig, wenn Du eine [Insight Pumpe](../Configuration/Accu-Chek-Insight-Pump#einstellungen-in-androidaps) verwendest.
 
 ![Nightscout download preferences](../images/automate-aaps2.jpg)
 
