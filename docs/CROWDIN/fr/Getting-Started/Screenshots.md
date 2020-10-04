@@ -16,7 +16,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 #### Profil actuel
 
-![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+![Changement de profil, durée restante](../images/Home2020_ProfileSwitch.png)
 
 * Le profil actuel est affiché dans la barre de gauche.
 * Un appui long sur la bar de profil permet de voir le détail du profil ou de [changer de profil](../Usage/Profiles#changement-de-profil).
@@ -24,7 +24,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 #### Cible
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Cible temporaire, durée restante](../images/Home2020_TT.png)
 
 * La cible de glycémie actuelle est affichée dans la barre de droite.
 * Un appui long sur la barre de cible permet de définir une [cible temporaire](../Usage/temptarget.md).
@@ -32,7 +32,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 #### Visualisation de l'ajustement dynamique de la cible
 
-![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+![Visualisation de l'ajustement dynamique de la cible](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS peut ajuster dynamiquement votre cible en fonction de la sensibilité si vous utilisez l'algorithme SMB.
 * Activez soit une, soit les deux [options suivantes](../Configuration/Preferences#parametres-openaps-smb) 
@@ -323,8 +323,8 @@ Et plus encore: [ Courbes d’insuline exponentielle + Fiasp ](http://seemycgm.c
 
 ![Statut de la pompe](../images/Screenshot_PumpStatus.png)
 
-* Different information on pump status. Displayed information depends on your pump model.
-* See [pumps page](../Hardware/pumps.rst) for details.
+* Contient différentes informations sur l'état de la pompe. Les informations affichées dépendent du modèle de votre pompe.
+* Voir la page [Pompes](../Hardware/pumps.rst) pour plus de détails.
 
 ## Careportal
 
@@ -334,8 +334,8 @@ Careportal reproduisait les fonctions que vous pouvez trouver dans Nightscout so
 
 ![Revoir le calcul des glucides dans l'onglet Traitement](../images/Screenshots_TreatCalc.png)
 
-* If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
-* Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
+* Si vous avez utilisé [l'Assistant Bolus](../Getting-Started/Screenshots#assistant-bolus) pour calculer la quantité d'insuline, vous pourrez revoir ce calcul plus tard dans l'onglet traitements.
+* Appuyez simplement sur le lien vert Calc. (Selon la pompe utilisée, l'insuline et les glucides peuvent aussi être affichés sur une seule ligne dans les traitements.)
 
 ### Correction de Glucides
 
@@ -357,46 +357,46 @@ L'onglet Traitement peut être utilisé pour corriger les entrées de glucides e
 
 ## Boucle / AMA / SMB
 
-* These tabs show details about the algorithm's calculations and why AAPS acts the way it does.
-* Calculations are each time the system gets a fresh reading from the CGM.
-* For more details see [APS section on config builder page](../Configuration/Config-Builder#aps).
+* Ces onglets montrent des détails sur les calculs de l'algorithme et pourquoi AAPS agit de cette façon.
+* Les calculs sont fait à chaque fois que le système obtient une nouvelle lecture du MGC.
+* Pour plus de détails, voir la section [APS sur la page du constructeur de configuration](../Configuration/Config-Builder#aps).
 
 ## Profil
 
 ![Profil](../images/Screenshots_Profile.png)
 
-* Profile contains information on your individual diabetes settings:
+* Le profil contient des informations sur vos paramètres individuels du diabète :
    
-   * DIA (Duration of Insulin Action)
-   * IC or I:C: Insulin to Carb ratio
-   * ISF: Insulin Sensitivity Factor
-   * Basal rate
-   * Target: Blood glucose level that you want AAPS to be aiming for
+   * DAI (durée d'action de l'insuline)
+   * G/I : est le rapport quantité de glucides divisé par le nombre d'unité d'insuline
+   * SI : Sensibilité à l'Insuline, appelée également facteur de correction
+   * Débit de Basal
+   * Cible : Niveau de glycémie que vous voulez que AAPS vise
 
-* You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).
+* Vous pouvez soit utiliser un [profil local](../Configuration/Config-Builder#profil-local-recommande) qui peut être édité sur votre smartphone ou un [profil Nightscout](../Configuration/Config-Builder#profil-ns) qui doit être modifié sur votre page NS et ensuite transféré sur votre téléphone. Pour plus de détails, voir les sections correspondantes sur la page du [Générateur de configuration](../Configuration/Config-Builder.md).
 
 ## Traitement
 
-History of the following treatments:
+Historique des traitements suivants :
 
-* Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
+* Bolus (& glucides) -> option permettant de [supprimer des entrées](../Getting-Started/Screenshots#correction-de-glucides) pour corriger l'historique
 * [Bolus étendu](../Usage/Extended-Carbs#bolus-etendus)
-* Temporary basal rate
+* Basal temporaire
 * [Cible temp.](../Usage/temptarget.md)
 * [Changement de profil](../Usage/Profiles.md)
-* [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
+* [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entrées dans l'onglet Action et notes dans les dialogues
 
 ## Source Gly - xDrip, Application Dexcom (patchée)...
 
 ![Onglet Source Gly - ici xDrip](../images/Screenshots_BGSource.png)
 
-* Depending on your BG source settings this tab is named differntly.
-* Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
+* Selon les votre source de glycémie, cet onglet est nommé différemment.
+* Affiche l'historique des lectures MGC et propose l'option de supprimer la lecture en cas d'échec (par ex. sous la limite basse).
 
 ## NSClient
 
 ![NSClient](../images/Screenshots_NSClient.png)
 
-* Displays status of the connection with your Nightscout site.
-* Settings are made in [preferences](../Configuration/Preferences#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
-* For troubleshooting see this [page](../Usage/Troubleshooting-NSClient.md).
+* Affiche l'état de la connexion avec votre site Nightscout.
+* Les paramètres sont effectués dans les [préférences](../Configuration/Preferences#nsclient). Vous pouvez ouvrir la section correspondante en cliquant sur la roue crantée en haut à droite de l'écran.
+* Pour le dépannage, voir [cette page](../Usage/Troubleshooting-NSClient.md).
