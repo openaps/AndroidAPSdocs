@@ -16,7 +16,7 @@ Activité & Feedback
 * Les information d'âge ont été déplacées dans l'onglet/menu Actions.
 * La vérification de glycémie a été déplacée dans l'onglet/menu Actions.
 * Cible temporaire a été déplacée dans l'onglet/menu Actions.
-* Exercice n'est plus disponible, mais vous pouvez utiliser le champ Notes dans les boîtes de dialogue lorsque vous entrez des bolus, insuline etc. (see screenshot in section `carbs & bolus <#id1>`_ on this page).
+* Exercice n'est plus disponible, mais vous pouvez utiliser le champ Notes dans les boîtes de dialogue lorsque vous entrez des bolus, insuline etc. (voir la copie d'écran dans la section `Glucides et bolus <#glucides-et-bolus>`_ de cette page).
 
 Glucides et bolus
 ==============================
