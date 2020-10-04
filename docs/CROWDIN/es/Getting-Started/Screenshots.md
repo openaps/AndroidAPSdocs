@@ -14,7 +14,7 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 
 ### Section B - Profile & target
 
-#### Perfil
+#### Current Profile
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
