@@ -6,8 +6,8 @@
 
 ## Wichtige Hinweise
 
-* Please use **[Android Studio Version 4.0.1](https://developer.android.com/studio/)** or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.0.1.
+* Nutze bitte **[Android Studio Version 4.0.1](https://developer.android.com/studio/)** oder neuer, um die APK-Datei zu erstellen.
+* [Windows 10 32-bit Systeme](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) werden bei Android Studio 4.0.1 nicht unterstützt.
 
 **Konfiguration auf Abruf** (Configuration on demand) wird von der aktuellen Version des Android-Gradle-Plugins nicht unterstützt!
 
@@ -268,7 +268,7 @@ Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. A
 
 ## Identifiziere den Empfänger falls Du xDrip+ verwendest
 
-[Siehe xDrip+ Seite](../Configuration/xdrip#identify-receiver)
+[Siehe xDrip+ Seite](../Configuration/xdrip#identifiziere-empfanger)
 
 ## Problembehandlung
 
