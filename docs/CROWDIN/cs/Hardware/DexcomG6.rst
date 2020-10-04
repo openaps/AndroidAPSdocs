@@ -67,7 +67,7 @@ Dexcom G6 konkrétní řešení problémů
 
 General troubleshoothing
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#Troubleshooting>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`_.
 
 Nový vysílač se spuštěným senzorem
 --------------------------------------------------
