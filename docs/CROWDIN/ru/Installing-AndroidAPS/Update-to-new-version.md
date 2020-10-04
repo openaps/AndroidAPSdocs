@@ -36,7 +36,7 @@
 
 * Нажмите кнопку Pull (без изменений в диалоговом окне)
     
-    ![Android Studio-GIT-Pull 2](../images/AndroidStudio361_Update02.png)
+    ![Android Studio-GIT-Pull 2](../images/AndroidStudio361_Update02a.png)
 
 * Подождите, пока выполняется загрузка.
     
