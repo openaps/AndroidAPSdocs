@@ -55,7 +55,7 @@ Protection des paramètres
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Protégez vos paramètres avec un mot de passe ou l'authentification biométrique du téléphone (par ex. si votre `enfant utilise AAPS <../Children/Children.html>`_).
 * Le mot de passe personnalisé doit être utilisé si vous voulez juste utiliser le mot de passe principal pour sécuriser `les paramètres exportés <../Usage/ExportImportSettings.html>`_.
-* If you are using a custom password click on line "Settings password" to set password as described `above <../Configuration/Preferences.html#master-password>`_.
+* Si vous utilisez un mot de passe personnalisé, cliquez sur la ligne "Mot de passe des paramètres" pour définir le mot de passe comme décrit `ci-dessus <../Configuration/Preferences.html#mot-de-passe-principal>`_.
 
   .. image:: ../images/Pref2020_Protection.png
     :alt: Protection
@@ -220,7 +220,7 @@ Boucle
 Mode APS
 -----------------------------------------------------------
 * Basculer entre les boucles ouvertes et fermées ainsi que le mode arrêt glycémie basses (AGB)
-* **Open looping** means TBR suggestions are made based on your data and appear as a notification. After manual confirmation the command to dose insulin will be transferred to pump.. Only if you use virtual pump you have to enter it manually.
+* **Boucle ouverte** signifie que les suggestions DBT sont faites en fonction de vos données et apparaissent comme une notification. Après confirmation manuelle, la commande d'injection de l'insuline sera transférée à la pompe. Ce n'est que si vous utilisez la pompe virtuelle que vous devez la saisir manuellement.
 * **La Boucle fermée** signifie que les suggestions DBT (Débit de Basal Temporaire) sont automatiquement envoyées à votre pompe sans confirmation ou entrée de votre part.  
 * **Arrêt Glycémie Basse** vous donne la possibilité de revenir au mode Arrêt Glycémie basse sans avoir besoin de refaire un objectif.
 
@@ -263,7 +263,7 @@ Lorsque vous commencez à boucler, **il est conseillé de mettre l'IA basal Max 
 * Profiter de l'occasion pour parfaire votre profil basal et votre Sensibilité à l'Insulin (SI).
 * Voir comment AAPS limite votre insuline basale pour prévenir l'hypoglycémie.
 
-Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commencer à vous donner de l'insuline basale supplémentaire, en augmentant la valeur de l'IA basal Max. Une bonne recommandation est de prendre le **débit de basal maximum** de votre profil et de le **multiplier par 3**. For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 3 to get a value of 1.5 U/h.
+Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commencer à vous donner de l'insuline basale supplémentaire, en augmentant la valeur de l'IA basal Max. Une bonne recommandation est de prendre le **débit de basal maximum** de votre profil et de le **multiplier par 3**. Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, vous pourriez le multiplier par 3 pour obtenir la valeur de 1,5 U/h.
 
 * Vous pouvez commencer prudemment avec cette valeur et l'augmenter lentement avec le temps. 
 * Ce ne sont que des lignes directrices; chacun a un corps différent. Vous trouverez peut-être que vous avez besoin plus ou moins que ce qui est recommandé ici, mais commencez toujours prudemment et ajustez lentement.
@@ -285,7 +285,7 @@ Paramètres OpenAPS SMB
 -----------------------------------------------------------
 * Contrairement à AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ n'utilise pas de les débits de basal temporaires pour contrôler la glycémie, mais principalement les petits super micro-bolus.
 * Vous devez avoir démarré `l'objectif 10 <../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ pour utiliser les SMB.
-* The first three settings are explained `above <./Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to>`_.
+* Les trois premiers paramètres sont expliqués `ci-dessus <../Configuration/Preferences.html#debit-max-en-u-h-pour-une-temp-basal>`_.
 * Les détails sur les différentes options d'activation sont décrits dans la section `Fonctionnalités OpenAPS <../Usage/Open-APS-features.html#activer-smb>`_.
 * *La fréquence à laquelle les SMB seront donnés en min* est une restriction pour que le SMB ne soit distribué que toutes les 4 minutes par défaut. Cette valeur empêche le système d'émettre trop souvent des SMB (par exemple dans le cas où une cible temporaire a été définie). Vous ne devriez pas modifier ce paramètre sauf si vous en connaissez exactement les conséquences. 
 * Si 'Sensibilité augmente la cible' ou 'Résistance diminue la cible' est activée, `Autosens <../Usage/Open-APS-features.html#autosens>`_ modifiera votre cible glycémique en fonction de vos écarts de glycémie.
@@ -439,8 +439,8 @@ Paramètres de maintenance
 
 Open Humans
 ===========================================================
-* You can help the community by donating your data to research projects! Details are described on the `Open Humans page <../Configuration/OpenHumans.html>`_.
-* In Preferences you can define when data shall be uploaded
+* Vous pouvez aider la communauté en faisant don de vos données à des projets de recherche ! Les détails sont décrits sur la `page Open Humans <../Configuration/OpenHumans.html>`_.
+* Dans les préférences, vous pouvez définir quand les données doivent être téléchargées
 
-   * only if connected to WiFi
-   * only if charging
+   * uniquement si connecté au WiFi
+   * uniquement si en charge
