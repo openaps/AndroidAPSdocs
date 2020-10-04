@@ -14,7 +14,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 ### Section B - Profile & target
 
-#### Profilis
+#### Current Profile
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
