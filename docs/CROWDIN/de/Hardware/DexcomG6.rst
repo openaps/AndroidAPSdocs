@@ -66,7 +66,7 @@ Dexcom G6-spezifische Problembehandlung
 
 Allgemeine Problembehandlung
 --------------------------------------------------
-Allgemeine Vorschläge für die Problemlösung bei CGMs findest Du `hier <./GeneralCGMRecommendation.html#Troubleshooting>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`_.
 
 Neuer Transmitter bei laufendem Sensor
 --------------------------------------------------
