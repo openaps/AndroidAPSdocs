@@ -85,7 +85,7 @@ Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. Nor
 
 Nightscout
 --------------------------------------------------
-Nightscout yra atvirojo kodo žiniatinklio programa, galinti registruoti ir rodyti jūsų NGJ ir AndroidAPS duomenis bei generuoti ataskaitas. Daugiau informacijos galite rasti projekto Nightscout tinklalapyje <http://www.nightscout.info/>`_. Galite sukurti savo Nightscout svetainę naudodami `Heroku <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, pusiau automatinę Nightscout sąranką naudodami 'zehn.be <https://ns.10be.de/en/index.html> `_ arba patalpinti savo serveryje (tai skirta IT ekspertams).
+Nightscout yra atvirojo kodo žiniatinklio programa, galinti registruoti ir rodyti jūsų NGJ ir AndroidAPS duomenis bei generuoti ataskaitas. Daugiau informacijos galite rasti projekto Nightscout tinklalapyje <http://www.nightscout.info/>`_. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
 
 Nightscout yra nepriklausomas nuo kitų modulių. Jums jo reikės, kad galėtumėte įvykdyti 1-ą Tikslą.
 
