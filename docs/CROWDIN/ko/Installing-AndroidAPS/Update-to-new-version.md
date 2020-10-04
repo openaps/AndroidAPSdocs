@@ -36,7 +36,7 @@
 
 * 풀을 클릭 (대화 상자 필드의 변경사항 없음)
     
-    ![안드로이드 스튜디오-GIT-Pull 2](../images/AndroidStudio361_Update02.png)
+    ![안드로이드 스튜디오-GIT-Pull 2](../images/AndroidStudio361_Update02a.png)
 
 * Wait while download is in progress.
     
