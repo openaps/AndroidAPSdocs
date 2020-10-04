@@ -2,8 +2,8 @@ Docs Updates & Änderungen
 **************************************************
 September 2020
 ==================================================
-* Major update for new AAPS version 2.7
-* For details see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
+* Großes Update für die neue AAPS Version 2.7
+* Details findest Du in den `Release Notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
 Juni 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - weitere Details zu gepatchten Libre Link App und zu Bluetooth Transmittern
@@ -14,7 +14,7 @@ Mai 2020
 * `Insight Vibration deaktivieren <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (nur Firmware 3.x)
 * `Minimaler Wert zur Anfrage einer Änderung <../Configuration/Preferences.html#minimaler-wert-zur -anfrage-einer-anderung>`_ zur Reduktion der Zahl der Benachrichtigungen im Open Loop
 * `Patched Libre Link App <../Hardware/Libre2.html#schritt-1-erstelle-deine-eigene-gepatchte-librelink-app>`_ - Prüfen, ob die gepatchte App korrekt erstellt wurde
-* `Prediction lines <../Getting-Started/Screenshots.html#prediction-lines>`_ - more details
+* `Vorhersagelinien <../Getting-Started/Screenshots.html#vorhersage-kurven>`_ - zusätzliche Details
 April 2020
 ==================================================
 * `Insulin nachträglich erfassen <../Usage/CPbefore26.html#id1>`_ (z.B. bei Abgabe mit Spritze)
@@ -33,7 +33,7 @@ Februar 2020
 * `Verzögerter Bolus <../Usage/Extended-Carbs.html#id1>`_ - der Closed Loop wird unterbrochen
 * Neues `Plugin Lokales Profil <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_
 * `Konfigurationsbeispiel <../Getting-Started/Sample-Setup.html>`_ - Update Dexcom G6
-* `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - major new features
+* `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - wichtige neue Funktionen
 * `Wear Komplikationen <../Configuration/Watchfaces.html>`_ für Smartwatches
 Januar 2020
 ==================================================
@@ -49,8 +49,8 @@ Dezember 2019
 November 2019
 ==================================================
 * `Automation - bei deaktiviertem Loop ausschalten <../Usage/Automation.html#wichtiger-hinweis>`_
-* `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
-* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#id1>`_
+* `Dexcom G6 Update zum Transmitter-Wechsel <../Configuration/xdrip.html#transmitter-ersetzen>`_
+* `Warum ein verzögerter Bolus beim Loopen nicht funktioniert <../Usage/Extended-Carbs.html#id1>`_
 * `FAQ - Sport <../Getting-Started/FAQ.html#sport>`_
 * `Startbildschirm - Linien im Diagramm <../Getting-Started/Screenshots.html#vorhersage-kurven>`_
 * `Insight - Absolute Werte im NS Client deaktivieren <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps>`_
@@ -61,11 +61,11 @@ November 2019
 * `Fehlerbehebung Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Fehlerbehebungen - Linksammlung <../Usage/troubleshooting.html>`_
 * `Update AAPS - Kurzanleitung für erfahrene Anwender <../Installing-AndroidAPS/Update-to-new-version.html#kurzanleitung-fur-erfahrene-anwender>`_
-* Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
+* Docs - Update `Mitschreiben <../make-a-PR.html#code-syntax>`_ und `Übersetzen <../translations.html#wiki-seiten-ubersetzen>`_.
 
 Oktober 2019
 ==================================================
-* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#id16>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
+* `AAPS Version 2.5 <../Installing-AndroidAPS/Releasenotes.html#id16>`_ - Seitenaktuallisierungen (vor allem auf der Seite `Update auf eine neue Version <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `AccuChek Insight-Log-Optionen <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps>`_
 * `Aktiven Kohlenhydrate (COB) - eigene Seite <../Usage/COB-calculation.html>`_
 *  `Aktiven Kohlenhydrate (COB) - Fehlerhafte Ermittlung <../Usage/COB-calculation.html#erkennung-fehlerhafter-cob-werte>`_
@@ -74,7 +74,7 @@ Oktober 2019
 * `Update Einstellungen <../Configuration/Preferences.html>`_
 * `SGLT-2 Inhibitoren - beim Loopen nicht verwenden <../Module/module.html#keine-verwendung-von-sglt-2-hemmern>`_
 * `SMS-Befehle Problembehandlung <../Children/SMS-Commands.html#problembehandlung>`_
-* `xDrip - update G6 transmitter replacement <../Configuration/xdrip.html#replace-transmitter>`_
+* `xDrip - Update G6 Transmitter ersetzen <../Configuration/xdrip.html#transmitter-ersetzen>`_
 
 September 2019
 ==================================================
