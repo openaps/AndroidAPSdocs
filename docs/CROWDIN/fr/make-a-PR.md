@@ -1,6 +1,6 @@
 # Faire votre premier PR (Pull Request)
 
-**Cette description est juste pour l'édition de la documentation en anglais. Toutes les nouvelles informations doivent être ajoutées d'abord en Anglais. Si vous voulez traduire la documentation dans d'autres langues (merci), utilisez [crowdin](https://wikitranslations.androidaps.org).**
+**Cette description est juste pour l'édition de la documentation en anglais. Toutes les nouvelles informations doivent être ajoutées d'abord en Anglais. Si vous voulez traduire la documentation dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidapsdocs).**
 
 Pour savoir comment formater le texte (titre, gras ...) et définir les liens, reportez-vous à la section ["Syntaxe de code"](./make-a-PR#code-syntax) de cette page.
 

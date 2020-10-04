@@ -77,13 +77,7 @@
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - Fonte Glic</a></td>
 </tr>
 <tr>
- <td>BlueReader</td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
- <td>Blukon Nightreader / MiaoMiao</td>
- <td><a href="https://bluetoolz.de/blueorder/#home">BlueReader</a></td>
-</tr>
-<tr>
- <td>Blucon Nightreader</td>
+ <td>Blukon Nightreader</td>
  <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
  <td>BlueReader / MiaoMiao</td>
  <td><a href="https://www.ambrosiasys.com/howit">Ambrosia Blukon Nightreader</a></td>
@@ -116,7 +110,7 @@
  <td>Closed Loop</td>
  <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
  <td>Open loop</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki loop fechado</a></td>
+ <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
 </tr>
 <tr>
  <td>COB</td>
@@ -185,7 +179,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>FSI</td>
+ <td>ISF</td>
  <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
@@ -193,7 +187,7 @@
 <tr>
  <td>LGS</td>
  <td>Low Glucose Suspend<br>AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
- <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objectivo 6</a></td>
+ <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objective 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
@@ -203,10 +197,10 @@
  <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pump</a></td>
 </tr>
 <tr>
- <td>Ficheiros de registo</td>
+ <td>Log files</td>
  <td>record of all AAPS actions (useful for trubbleshooting and debugging)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - ficheiros de registo</a></td>
+ <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - log files</a></td>
 </tr>
 <tr>
  <td>maxIOB</td>
@@ -278,7 +272,7 @@
  <td>PH</td>
  <td>pump history (entry in treatments tab)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
 </tr>
 <tr>
  <td>Previsão</td>

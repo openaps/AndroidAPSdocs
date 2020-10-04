@@ -3,13 +3,13 @@ Notwendige Überprüfungen nach Aktualisierung auf AndroidAPS 2.7
 
 * Der Programmcode wurde bei der Umstellung auf AAPS 2.7 deutlich verändert. 
 * Daher ist es wichtig, dass Du einige Änderungen vornimmst oder Einstellungen nach der Aktualisierung überprüfst.
-* In den `Release Notes <../Installing-AndroidAPS/Releasenotes.html#version-270>`_ findest Du Details zu allen neuen und verbesserten Funktionen.
+* In den `Release Notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_ findest Du Details zu allen neuen und verbesserten Funktionen.
 
 Prüfe die BZ-Quelle
 -----------------------------------------------------------
 * Prüfe, ob Deine BZ-Quelle nach dem Update noch richtig eingestellt ist.
 * Wenn Du z.B. `xDrip+ <../Configuration/xdrip.html>`_ nutzt, kann es passieren, dass die BZ-Quelle auf die gepatchte Dexcom App geändert wird.
-* Öffne den `Konfigurations-Generator <../Configuration/Config-Builder.htmll#bz-quelle>`_ (Hamburger Menü oben links)
+* Öffne den `Konfigurations-Generator <../Configuration/Config-Builder.html#bz-quelle>`_ (Hamburger Menü oben links)
 * Scrolle nach unten zu "BZ-Quelle".
 * Ändere bei Bedarf die BZ-Quelle.
 
@@ -19,7 +19,7 @@ Prüfe die BZ-Quelle
 Prüfung abschließen
 -----------------------------------------------------------
 * AAPS 2.7 hat ein neues Objective 11 für `Automatisierung <../Usage/Automation.html>`_ bekommen.
-* Du musst die Prüfung erfolgreich beenden (`Objectives 3 und 4 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_), um `Objective 11 <../Usage/Objectives.html#objective-11-automation>`_ starten zu können.
+* Du musst die Prüfung erfolgreich beenden (`Objectives 3 und 4 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_), um `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`_ starten zu können.
 * Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung> starten kannst.`_. 
 * Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 

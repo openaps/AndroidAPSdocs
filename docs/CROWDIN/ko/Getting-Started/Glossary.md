@@ -77,12 +77,6 @@
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG source</a></td>
 </tr>
 <tr>
- <td>BlueReader</td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
- <td>Blukon Nightreader / MiaoMiao</td>
- <td><a href="https://bluetoolz.de/blueorder/#home">BlueReader</a></td>
-</tr>
-<tr>
  <td>Blukon Nightreader</td>
  <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
  <td>BlueReader / MiaoMiao</td>
@@ -278,7 +272,7 @@
  <td>PH</td>
  <td>pump history (entry in treatments tab)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
 </tr>
 <tr>
  <td>Predictions</td>

@@ -41,7 +41,7 @@ Jei ryšys tarp AAPS ir DanaRS pompos nutrūksta boluso suleidimo metu (pvz.: J�
 
 * Dažniausiai tai tik ryšio klaida ir visas insulino kiekis sėkmingai suleidžiamas.
 * Patikrinkite, ar suleistas teisingas insulino kiekis pompos istorijoje (pačioje pompoje arba AAPS skirtuke Dana > Pompos istorija > Bolusai.
-* Delete error entry in [treatments tab](..Getting-Started/Screenshots#carb-correction) if you wish.
+* Delete error entry in [treatments tab](../Getting-Started/Screenshots#carb-correction) if you wish.
 * Kito programos ir pompos susijungimo metu suleisto insulino kiekis bus patikrintas ir įrašytas. Galite tiesiog palaukti kito susijungimo arba jį pagreitinti paspaudę BT ikoną Dana skirtuke.
 
 ## Specialūs veiksmai keičiant telefoną

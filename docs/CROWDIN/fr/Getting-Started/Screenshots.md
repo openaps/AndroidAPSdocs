@@ -14,7 +14,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 ### Section B - Profil & cible
 
-#### Profil
+#### Current Profile
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
@@ -117,7 +117,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 * Les notes saisies dans l'onglet de l'action telles que les calibrations capillaires, les entrées de glucides et les changements de profil sont affichés ici. 
 * Une pression longue sur le graphique permet de changer l'échelle de temps. Vous pouvez choisir 6, 12, 18 ou 24 heures.
 * La zone verte reflète votre fourchette cible. Elle peut être configurée dans les [préférences](../Configuration/Preferences#fourchette-de-visualisation).
-* Les triangles bleus montrent les [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - s'ils sont activés dans les [préférences](.../Configuration/Preferences#parametres-openaps-smb).
+* Blue triangles show [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - if enabled in [preferences](../Configuration/Preferences#openaps-smb-settings).
 * Information optionnelle :
    
    * Prédictions
@@ -222,7 +222,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* Permet d'entrer une certaine quantité d'insuline sans utiliser l'[Assistant bolus](../Configuration/Screenhots#bolus-wizard).
+* To give a certain amount of insulin without using [bolus calculator](../Getting-Started/Screenhots#bolus-wizard).
 * En cochant la case, vous pouvez démarrer automatiquement votre [cible temporaire Repas imminent](../Configuration/Preferences#default-temp-targets).
 * Si vous ne voulez pas injecter de bolus avec la pompe mais juste enregistrer la quantité d'insuline (par ex. pour de l'insuline injectée avec un stylo ou une seringue), cochez la case correspondante.
 
@@ -373,7 +373,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
    * Basal rate
    * Target: Blood glucose level that you want AAPS to be aiming for
 
-* You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](/Configuration/Config-Builder.md).
+* You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).
 
 ## Traitement
 

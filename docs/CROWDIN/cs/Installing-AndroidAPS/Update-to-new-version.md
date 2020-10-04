@@ -8,8 +8,8 @@
 
 * Aktualizujte co nejdříve, jakmile bude k dispozici nová verze. O nové verzi budete [informování na domovské obrazovce AndroidAPS](../Installing-AndroidAPS/Releasenotes#release-notes).
 * Od verze 2.3 je potřeba pro aktualizaci použít git. Aktualizace pomocí zip souboru již nefunguje.
-* Chcete-li sestavit apk, použijte [ Android Studio verze 3.6.1 ](https://developer.android.com/studio/) nebo novější.
-* [32 bitové systémy Windows 10](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) nejsou programem Android Studio 3.6.1. podporovány.
+* Please use [Android Studio Version 4.0.1](https://developer.android.com/studio/) or newer to build the apk.
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.0.1.
 * Používáte-li xDrip, ujistěte se, že máte zapnutou volbu [Identify receiver](../Configuration/xdrip#identify-receiver).
 * Používáte-li Dexcom G6 [ s upravenou Dexcom aplikací ](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app), musíte si stáhnout verzi z adresáře [ 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 

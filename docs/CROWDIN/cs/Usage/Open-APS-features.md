@@ -67,7 +67,7 @@ Při hledání ideálního nastavení buďte opatrní a trpěliví a hodnoty mě
 * Dospělí: 12
 * Dospělí s vyšší rezistencí na inzulín: 25
 
-Viz také [Dokumentace k OpenAPS SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Povolit AMA Autosense
 

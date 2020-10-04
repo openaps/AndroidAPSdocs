@@ -52,7 +52,7 @@ Major new features
 * History browser improvements @MilosKozak
 * removed OpenAPS MA algorithm @Tornado-Tim
 * removed Oref0 sensitivity @Tornado-Tim
-* `Biometric or password protection <..../Configuration/Preferences.html#protection>`_ for settings, bolus @MilosKozak
+* `Biometric or password protection <../Configuration/Preferences.html#protection>`_ for settings, bolus @MilosKozak
 * `new automation trigger <../Usage/Automation.html>`_ @PoweRGbg
 * `Open Humans uploader <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
 * New documentation @Achim

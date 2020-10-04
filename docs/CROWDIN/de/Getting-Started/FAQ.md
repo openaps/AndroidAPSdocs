@@ -272,7 +272,7 @@ Im Gegensatz zum “klassischen” Vorgehen nutzt AndroidAPS nicht die “Kathet
 
 ## Smartphone-Hintergrundbild
 
-Das AndroidAPS Hintergrundbild für Dein Smartphone findest Du auf der [Seite Smartphones](../Getting-Started/Phones#phone-background).
+Das AndroidAPS Hintergrundbild für Dein Smartphone findest Du auf der [Seite Smartphones](../Getting-Started/Phones#handy-hintergrundbild).
 
 ## Alltagsgebrauch
 
@@ -286,7 +286,7 @@ Siehe [ Beschreibung oben ](../Getting-Started/FAQ#disconnect-pump).
 
 ### Arbeit
 
-Je nachdem, welche Art von Arbeit du hast, kann es sein, dass du an Arbeitstagen unterschiedliche Behandlungs-Faktoren verwendest. Als Looper solltest du über einen [Profilwechsel](../Usage/Profiles.md) für die Dauer deines Arbeitstages nachdenken (z.B. mehr als 100% für 8 Stunden, wenn du herumsitzt oder weniger als 100%, wenn du aktiv bist), ein hohes oder niedriges temporäres Ziel setzen oder eine [Zeitverschiebung](../Usage/Profiles#time-shift) deines Profils einstellen, wenn du viel früher oder später aufstehst als sonst. Wenn du [Nightscout Profile](../Configuration/Config-Builder#ns-profile) verwendest, dann kannst du dort auch ein zweites Profil erstellen (z.B. "Daheim" und "Arbeit") und täglich einen Profilwechsel zu dem gerade benötigten Profil machen.
+Je nachdem, welche Art von Arbeit du hast, kann es sein, dass du an Arbeitstagen unterschiedliche Behandlungs-Faktoren verwendest. Als Looper solltest du über einen [Profilwechsel](../Usage/Profiles.md) für die Dauer deines Arbeitstages nachdenken (z.B. mehr als 100% für 8 Stunden, wenn du herumsitzt oder weniger als 100%, wenn du aktiv bist), ein hohes oder niedriges temporäres Ziel setzen oder eine [Zeitverschiebung](../Usage/Profiles#zeitverschiebung) deines Profils einstellen, wenn du viel früher oder später aufstehst als sonst. Wenn du [Nightscout Profile](../Configuration/Config-Builder#nightscout-profil) verwendest, dann kannst du dort auch ein zweites Profil erstellen (z.B. "Daheim" und "Arbeit") und täglich einen Profilwechsel zu dem gerade benötigten Profil machen.
 
 ## Freizeitaktivitäten
 

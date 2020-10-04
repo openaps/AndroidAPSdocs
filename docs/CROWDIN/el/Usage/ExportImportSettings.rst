@@ -76,7 +76,7 @@ Note for Dana RS users
 
 Import settings from previous versions (before AAPS 2.7)
 ------------------------------------------------------------
-* The "old" settings file must be in root folder of your smartphone (/storage/emulated/0).
+* The "old" settings file (called 'AndroidAPSPreferences' - without file extension) must be in root folder of your smartphone (/storage/emulated/0).
 * Do not put the "old" file in the same folder as the new exported settings (AAPS/preferences).
 * You will find the "old" file on the bottom of the list in the import dialogue.
 

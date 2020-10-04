@@ -10,7 +10,7 @@ Du kannst den allgemeinen Zugriff auf Deine Nightscout-Seite mittels [authentica
 
 ### AndroidAPS Einstellungen
 
-In den AAPS-Einstellungen gibt es eine Funktion, nur Daten zu Nightscout hochzuladen (keine Synchronisierung). Wenn Du diese Funktion wählst, wird AAPS keine Änderungen von Nightscout (z.B. temporäre Ziele oder Kohlenhydrateingaben) übernehmen. Falls Du ein [NS Profil](../Configuration/Config-Builder#ns-profile) nutzt, werden die Profildaten dennoch weiter zwischen AAPS und Nightscout synchronisiert.
+In den AAPS-Einstellungen gibt es eine Funktion, nur Daten zu Nightscout hochzuladen (keine Synchronisierung). Wenn Du diese Funktion wählst, wird AAPS keine Änderungen von Nightscout (z.B. temporäre Ziele oder Kohlenhydrateingaben) übernehmen. Falls Du ein [NS Profil](../Configuration/Config-Builder#nightscout-profil) nutzt, werden die Profildaten dennoch weiter zwischen AAPS und Nightscout synchronisiert.
 
 * Tippe oben rechts auf dem Startbildschirm auf das 3-Punkte-Menü.
 * Klicke auf "Einstellungen".
@@ -58,4 +58,4 @@ Dieser Service wird von Looper Martin Schiftan derzeit kostenlos angeboten. Wenn
 * Eine automatisierte Basalratenüberprüfung mit Autotune ist ebenfalls enthalten. 
 * Der Server steht in Deutschland.
 
-<http://ns.10be.de/en/index.html>
+[http://ns.10be.de](http://ns.10be.de/en/index.html)

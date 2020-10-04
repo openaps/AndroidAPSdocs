@@ -1,6 +1,6 @@
 Übersicht der Komponenten 
 **************************************************
-AndroidAPS ist nicht einfach eine (selbst erstellte) App, es ist eines von verschiedenen Modulen Deines Closed Loop Systems. Bevor Du Dich für die einzelnen Komponenten entscheidest, solltest Du einen Blick auf das `Komponenten-Setup <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_, werfen..
+AndroidAPS ist nicht einfach eine (selbst erstellte) App, es ist eines von verschiedenen Modulen Deines Closed Loop Systems. Bevor Du Dich für die einzelnen Komponenten entscheidest, solltest Du einen Blick auf das `Komponenten-Setup <https://androidaps.readthedocs.io/en/dev/EN/index.html#komponenten-setup>`_, werfen..
    
 .. image:: ../images/modules.png
   :alt: Übersicht der Komponenten
@@ -85,7 +85,7 @@ Dies ist nur eine knappe Übersicht über alle kompatiblen CGM/FGM mit AndroidAP
 
 Nightscout
 --------------------------------------------------
-Nightscout ist eine Open Source Web-Anwendung, die Deine CGM-Daten und AndroidAPS-Daten protokollieren und anzeigen kann und Berichte erstellt. Mehr Informationen findest Du auf der `Website des Nightscout-Projekts <http://www.nightscout.info/>`_. Du kannst deine eigene Nightscout-Website mit Hilfe von `Heroko <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_ erstellen, die halbautomatische Nightscout-Einrichtung auf `zehn.be <https://ns.10be.de/en/index.html>`_ oder auf deinem eigenen Server hosten (dies ist für IT-Experten).
+Nightscout ist eine Open Source Web-Anwendung, die Deine CGM-Daten und AndroidAPS-Daten protokollieren und anzeigen kann und Berichte erstellt. Mehr Informationen findest Du auf der `Website des Nightscout-Projekts <http://www.nightscout.info/>`_. Du kannst Deine eigene `Nightscout-Website <https://nightscout.github.io/nightscout/new_user/>`_ erstellen, die halbautomatische Nightscout-Einrichtung auf `zehn.be <https://ns.10be.de/>`_ oder auf Deinem eigenen Server hosten (dies ist für IT-Experten).
 
 Nightscout ist unabhängig von den anderen Modulen. Du brauchst aber auf jeden Fall eine Nightscout-Seite, um das Objetive (Ziel) 1 abzuschließen.
 

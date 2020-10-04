@@ -118,10 +118,10 @@ Objectif 8 : Ajustement des débits Basal et des ratios si nécessaire, puis act
 *N'oubliez pas d'enregistrer votre Bouclage dans `ce formulaire <http://bit.ly/nowlooping>`_ en indiquant AndroidAPS comme votre type de logiciel de boucle DIY, si vous ne l'avez pas déjà fait.*
 
 
-Objective 9: Try additional features for daytime use and gain confidence in your closed loop system
+Objective 9 : Activation de fonctionnalités supplémentaires pour l'utilisation en journée, telles que la fonction SMB
 ====================================================================================================
-* Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_.
-* As `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
+* Avant la version 2.7 de AAPS, l'aide aux repas (MA) était l'algorithme de base pour AAPS et l'accomplissement de l'objectif 8 était nécessaire pour activer `l'Assistance Améliorée Repas AAR (AMA) <. /Utilisation/Open-APS-features.html#assistance-amelioree-repas-aar>`_.
+* Comme l'`Assistance Améliorée Repas (AMA) <../Usage/Open-APS-features.html#assistance-amelioree-repas-aar>`_ est l'algorithme standard de la version 2.7 d'AAPS, utilisez les 28 jours suivants pour essayer des fonctionnalités que vous n'avez pas encore utilisées et acquérir plus de confiance avec votre système de boucle fermée .
 
 
 Objectif 10 : Activation de fonctionnalités supplémentaires pour l'utilisation en journée, telles que la fonction SMB
@@ -131,11 +131,11 @@ Objectif 10 : Activation de fonctionnalités supplémentaires pour l'utilisation
 * la valeur par défaut de min_5m_carbimpact est passée de 3 à 8 entre AMA et SMB. Si vous passez de AMA vers SMB, vous devez la modifier manuellement.
 
 
-Objective 11: Automation
+Objectif 11: Automatisation
 ====================================================================================================
-* You have to start objective 11 to be able to use `Automation <../Usage/Automation.html>`_.
-* Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-proof-your-knowledge>`_.
-* Completing previous objectives will not effect other objectives you have already finished. Vous conserverez tous les objectifs terminés !
+* Vous devez commencer l'objectif 11 pour pouvoir utiliser l'`Automatisation <../Usage/Automation.html>`_.
+* Assurez-vous d'avoir complété tous les objectifs, y compris l'examen `<../Usage/Objectives.html#objective-3-prouvez-ses-connaissances>`_.
+* Compléter les objectifs précédents n’affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
 
 Retour arrière dans les Objectifs

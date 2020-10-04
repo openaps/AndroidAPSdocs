@@ -67,7 +67,7 @@ Sea cuidadoso y paciente, y sólo cambie los valores paso a paso. Es diferente p
 * Adult: 12
 * Insulin resistant adult: 25
 
-Véase también [OpenAPS documentación para SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Habilitar el autosensado de AMA
 

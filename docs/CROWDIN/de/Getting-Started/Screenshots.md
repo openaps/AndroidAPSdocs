@@ -14,7 +14,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 ### Abschnitt B - Profil & Ziel
 
-#### Profile
+#### Aktuelles Profil
 
 ![Verbleibende Dauer des Profilwechsels](../images/Home2020_ProfileSwitch.png)
 
@@ -117,7 +117,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 * Notizen, die auf der Registerkarte "Aktion" eingegeben werden, wie z. B. die Kalibrierungen nach Messung am Finger, die Kohlenhydrat Einträge sowie die Profilwechsel werden hier angezeigt. 
 * Wenn du den angezeigten Zeitraum verändern möchtest, drücke lange auf die Grafik. Du kannst zwischen 6, 12, 18 oder 24 Stunden wählen.
 * Der grüne Bereich spiegelt den Zielbereich wider. Er kann in [Einstellungen](../Configuration/Preferences#zielbereich-fur-die-grafikanzeige) konfiguriert werden.
-* Blaue Dreiecke zeigen [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - falls in [Einstellungen](.../Configuration/Preferences#openaps-smb-einstellungen) aktiviert.
+* Blaue Dreiecke zeigen [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - falls in [Einstellungen](../Configuration/Preferences#openaps-smb-einstellungen) aktiviert.
 * Optionale Informationen:
    
    * Predictions (Vorhersagen)
@@ -145,7 +145,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
    
    Die Prognoselinie zeigt, wie sich die IOB-Kurve ändern würde, wenn die Pumpe die Insulinabgabe komplett stoppen würde (0% TBR).
 
-* **Dunkelgelbe** Zeile: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (nicht ankündigte Mahlzeiten)
+* **Dunkelgelbe** Zeile: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivitat-oref1) (nicht ankündigte Mahlzeiten)
    
    Unannounced meals (nicht angekündigte Mahlzeiten) bedeutet, dass ein signifikanter Anstieg des Glukosespiegels durch Mahlzeiten, Adrenalin oder andere Einflüsse festgestellt wird. Die Prognoselinie ähnelt der ORANGE COB-Linie, geht aber davon aus, dass die Abweichungen mit konstanter Rate abnehmen werden (durch Verlängerung der aktuellen Reduktionsrate).
 
@@ -181,7 +181,7 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 * Zeigt das Insulin, das an Bord ist (= aktives Insulin im Körper). Es enthält Insulin aus Bolus und temporärem Basal (** schließt aber Basalraten aus deinem Profil aus**).
 * Wenn es keine [SMBs](../Usage/Open-APS-features#super-micro-bolus-smb), keine Boli und keine TBR während der DIA-Zeit gäbe, wäre dies Null.
 * Das IOB kann negativ sein, wenn Sie längere Zeit keinen verbleibenden Bolus und keine oder nur niedrige Basalrate hatten.
-* Das Abklingverhalten hängt von den Einstellungen des DIA [und den Einstellungen im Insulinprofil](../Configuration/Config-Builder#local-profile-recommended) ab. 
+* Das Abklingverhalten hängt von den Einstellungen des DIA [und den Einstellungen im Insulinprofil](../Configuration/Config-Builder#lokales-profil-empfohlen) ab. 
 
 #### Aktive Kohlenhydrate
 
@@ -222,7 +222,7 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 
 ![Insulin-Button](../images/Home2020_ButtonInsulin.png)
 
-* Um eine bestimmte Menge Insulin zu geben, ohne den [Bolus Rechner](../Configuration/Screenhots#bolus-rechner) zu verwenden.
+* Um eine bestimmte Menge Insulin zu geben, ohne den [Bolus Rechner](../Getting-Started/Screenhots#bolus-rechner) zu verwenden.
 * Durch Aktivieren des Kästchens können Sie automatisch Ihr [temporäres Ziel für bald Essen](../Configuration/Preferences#vordefinierte-temporare-ziele) starten.
 * Wenn das Insulin nicht durch die Pumpe abgegeben werden soll, sondern Du die Insulinmenge nur erfassen willst (z.B. Insulin mit Spritze gegeben), aktiviere das entsprechende Kästchen.
 
@@ -373,18 +373,18 @@ Der Behandlungs-Tab kann verwendet werden, um fehlerhafte Kohlenhydrat-Einträge
    * Basalrate
    * BZ-Ziel: Wert, den die AAPS-Berechnungen anstreben sollen
 
-* Du kannst entweder ein [lokales Profil](../Configuration/Config-Builder#lokales-profil-empfohlen) verwenden, das auf deinem Smartphone bearbeitet werden kann oder ein [Nightcout Profil](../Configuration/Config-Builder#nightscout-profil), das auf deiner NS-Seite bearbeitet und anschließend auf dein Telefon übertragen werden muss. Details findest Du in den entsprechenden Abschnitten auf der [Konfigurations-Seite](/Configuration/Config-Builder.md).
+* Du kannst entweder ein [lokales Profil](../Configuration/Config-Builder#lokales-profil-empfohlen) verwenden, das auf deinem Smartphone bearbeitet werden kann oder ein [Nightcout Profil](../Configuration/Config-Builder#nightscout-profil), das auf deiner NS-Seite bearbeitet und anschließend auf dein Telefon übertragen werden muss. Details findest Du in den entsprechenden Abschnitten auf der [Konfigurations-Seite](../Configuration/Config-Builder.md).
 
 ## Bolus
 
 Historie der folgenden Behandlungen:
 
-* Bolus & Kohlenhydrate -> Option zum [Entfernen von Einträgen](..Getting-Started/Screenshots#kohlenhydrat -korrektur) zur Korrektur der Historie
+* Bolus & Kohlenhydrate -> Option zum [Entfernen von Einträgen](../Getting-Started/Screenshots#kohlenhydrat -korrektur) zur Korrektur der Historie
 * [Verzögerter Bolus](../Usage/Extended-Carbs#id1)
 * Temporäre Basalrate (TBR)
 * [Temporäres Ziel](../Usage/temptarget.md)
 * [Profilwechsel](../Usage/Profiles.md)
-* [Careportal](../Usage/CPbefore26#careportal-discontinued) - Notizen eingegeben durch Aktions-Tab und Notizen in Dialogen
+* [Careportal](../Usage/CPbefore26#careportal-eingestellt) - Notizen eingegeben durch Aktions-Tab und Notizen in Dialogen
 
 ## BG Source - xDrip+, Dexcom App (patched) ...
 

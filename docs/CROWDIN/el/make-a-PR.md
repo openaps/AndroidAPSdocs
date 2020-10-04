@@ -1,6 +1,6 @@
 # Κάνοντας το πρώτο σας PR (pull request=αίτημα έλξης)
 
-**Αυτή η περιγραφή αφορά μόνο την επεξεργασία της αγγλικής τεκμηρίωσης. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org).**
+**Αυτή η περιγραφή αφορά μόνο την επεξεργασία της αγγλικής τεκμηρίωσης. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
 
 For hints how to format text (headline, bold...) and set links please see the ["code syntax"](./make-a-PR#code-syntax) section of this page.
 

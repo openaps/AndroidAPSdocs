@@ -86,7 +86,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ## Bombas que ya no se venden (las compañías ya no operan)
 
-### Bomba de Cellnovo ([Homepage](https://www.cellnovo.com/en/homepage))
+### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
 **Loop status: ** Actualmente no está soportado por ninguno de los sistemas de lazo cerrado. Se considera una candidata para sistemas de lazo cerrado, pero en la medida que aún no se conoce el protocolo, no se prevé que sea soportada en breve.
 

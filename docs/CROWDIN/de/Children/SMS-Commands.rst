@@ -64,11 +64,12 @@ Konfiguration des Authentifikators
    * Trage 4570512020 ein
    
 * Der rote Text "WRONG PIN" ändert sich **automatisch** in den grünen Text "OK", wenn das Einmal-Passwort korrekt ist. **Es gibt keine Taste, die Du drücken kannst!**
+* Stelle sicher, dass es zwischen den beiden Smartphones keine Zeitdifferenzen gibt, da dies zu Problemen bei der Authentifizierung führen kann.
 * Verwende die Schaltfläche "AUTHENTIKATORS ZURÜCKSETZEN", wenn Du bereits eingerichtete Berechtigungen entfernen möchten.
 
 SMS-Befehle verwenden
 ==================================================
-* Sende eine SMS von Deiner/Deinen erlaubte/n Telefonnummer(n) an das Smartphone, das AndroidAPS ausgeführt und nutze dabei einen der `Befehle </Children/SMS-Commands.html#befehle>`_ unten. 
+* Sende eine SMS von Deiner/Deinen erlaubte/n Telefonnummer(n) an das Smartphone, das AndroidAPS ausgeführt und nutze dabei einen der `Befehle <../Children/SMS-Commands.html#id1>`_ unten. 
 * Das AAPS-Smartphone wird antworten, um sich die Durchführung des übermittelten Befehls bestätigen zu lassen oder um den angeforderten Status zu übermitteln. 
 * Bestätige falls erforderlich die Durchführung des übermittelten Befehls, indem Du den angegebenen Code zurücksendest. Beispiel:
 

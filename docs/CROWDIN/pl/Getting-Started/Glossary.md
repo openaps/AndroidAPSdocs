@@ -77,12 +77,6 @@
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - źródło BG</a></td>
 </tr>
 <tr>
- <td>BlueReader</td>
- <td>transmiter bluetooth dla Freestyle Libre zmieniający go w CGM</td>
- <td>Blukon Nightreader / MiaoMiao</td>
- <td><a href="https://bluetoolz.de/blueorder/#home">BlueReader</a></td>
-</tr>
-<tr>
  <td>Blukon Nightreader</td>
  <td>transmiter bluetooth dla Freestyle Libre zmieniający go w CGM</td>
  <td>BlueReader / MiaoMiao</td>
@@ -102,45 +96,45 @@
 </tr>
 <tr>
  <td>CAN</td>
- <td>lampka stanu zaległa zmiana kaniuli na ekranie głównym</td>
+ <td>status light overdue canula change on homescreen</td>
  <td>BAT / RES / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots.html"> Zrzuty ekranu </a></td>
 </tr>
 <tr>
  <td>CGM</td>
- <td>ciągły monitor glukozy</td>
+ <td>continuous glucose monitor</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>Zamknięta pętla/Closed Loop</td>
- <td>zamknięta pętla - system podejmuje automatyczne zmiany w bazie bez potrzeby aprobaty ze strony użytkownika na podstawie zaimplementowanego algorytmu</td>
- <td>Otwarta pętla</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki zamknięta pętla</a></td>
+ <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
+ <td>Open loop</td>
+ <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
 </tr>
 <tr>
  <td>COB</td>
- <td>carbs on board - aktywne węglowodany</td>
+ <td>carbs on board</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>DIA</td>
- <td>czas aktywności insuliny</td>
+ <td>duration of insulin action</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki typy insuliny</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td>DST</td>
- <td>Czas letni</td>
+ <td>daylight savings time</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki DST</a></td>
 </tr>
 <tr>
  <td>eCarbs</td>
- <td>"przedłużone węglowodany" - węglowodany podzielone na kilka godzin (tj. sporo tłuszczy i białek)<br> przedłużone bolusy które znasz z normalnej terapii pompą insulinową nie mają wiele sensu gdy używasz pętli</td>
+ <td>"extended carbs" - carbs split up over serveral hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs przykład użycia</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
 <tr>
  <td>FGM</td>
@@ -150,21 +144,21 @@
 </tr>
 <tr>
  <td>git</td>
- <td>system kontroli wersji dla śledzenia zmian w plikach komputerowych i koordynowania pracy na tych plikach <br>-> niezbędny do aktualizacji APK</td>
+ <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> neccessary for APK updates</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - aktualizacja APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - update APK</a></td>
 </tr>
 <tr>
  <td>Github</td>
- <td>webowy serwis kontroli wersji wykorzystywany przez Git <br>- składowanie kodu źródłowego</td>
+ <td>web-based hosting service for version control using Git<br>-> storage of source code</td>
  <td>&nbsp;</td>
  <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td>Glimp</td>
- <td>aplikacja do odczytywania wartości z Freestyle Libre</td>
+ <td>app to collect values from Freestyle Libre</td>
  <td>&nbsp;</td>
- <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout z Glimp</a> </td>
+ <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout with Glimp</a> </td>
 </tr>
 <tr>
  <td>Heroku</td>
@@ -173,38 +167,38 @@
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
 <tr>
- <td>IC (lub I:C)</td>
- <td>przeliczniki - stosunek insuliny do węglowodanów (liczba weglowodanów w gramach potrzebna dla jednej jednostki insuliny?)</td>
+ <td>IC (or I:C)</td>
+ <td>insulin to carb ratio (How many carbs are covered by one unit of insulin?)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>IOB</td>
- <td>insulin on board -  aktywna insulina w twoim organizmie</td>
+ <td>insulin on board -  insulin active in your body</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>ISF</td>
- <td>współczynnik czułości insuliny - oczekiwany spadek BG w wyniku podania jednej jednostki insuliny</td>
+ <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LGS</td>
- <td>Zawieszenie niskiej glikemii <br> AAPS zmniejszy poziom dawki podstawowej, jeśli poziom glukozy we krwi spadnie. Jeśli jednak poziom glukozy we krwi wzrasta, to wzrośnie on tylko w przypadku, gdy IOB będzie ujemny (z poprzedniego LGS), w przeciwnym razie dawki podstawowe pozostaną takie same jak wybrany profil. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
+ <td>Low Glucose Suspend<br>AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
  <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objective 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LineageOS</td>
- <td>darmowy i open-source system operacyjny dla smartfonów itp <br>alternatywny system operacyjny dla smartfonów bez systemu Android 8.1 (Oreo) <br>(wymagany dla pompy Accu-Chek combo)</td>
+ <td>free and open-source operating system for smartphones etc.<br>alternative OS for smartphones not running Android 8.1 (Oreo)<br>(when using Accu-Chek Combo)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - pompa Combo</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pump</a></td>
 </tr>
 <tr>
  <td>Log files</td>
- <td>rejestr wszystkich działań AAPS (przydatne dla rozwiązywania problemów i debugowania)</td>
+ <td>record of all AAPS actions (useful for trubbleshooting and debugging)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - log files</a></td>
 </tr>
@@ -278,7 +272,7 @@
  <td>PH</td>
  <td>pump history (entry in treatments tab)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
 </tr>
 <tr>
  <td>Prognozy/Predictions</td>

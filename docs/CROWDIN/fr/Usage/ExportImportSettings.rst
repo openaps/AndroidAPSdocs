@@ -69,16 +69,16 @@ Importez les paramètres
 * Confirmez le message en cliquant sur 'OK'.
 * AAPS sera redémarré afin d'activer les préférences importées.
 
-Note for Dana RS users
+Remarque pour les utilisateurs de Dana RS
 ------------------------------------------------------------
 * Comme les paramètres de connexion de la pompe sont également importés dans AAPS sur votre nouveau téléphone, il va déjà "connaître" la pompe et donc ne démarrera pas une analyse bluetooth. 
-* Please pair new phone and pump manually.
+* Veuillez associer manuellement le nouveau téléphone et la pompe.
 
-Import settings from previous versions (before AAPS 2.7)
+Importer les paramètres des versions précédentes (avant AAPS 2.7)
 ------------------------------------------------------------
-* The "old" settings file must be in root folder of your smartphone (/storage/emulated/0).
-* Do not put the "old" file in the same folder as the new exported settings (AAPS/preferences).
-* You will find the "old" file on the bottom of the list in the import dialogue.
+* L'ancien fichier de paramètres (appelé 'AndroidAPSPreferences' - sans extension de fichier) doit être dans le dossier racine de votre smartphone (/storage/emulated/0).
+* Ne mettez pas l'ancien fichier dans le même dossier que celui des nouveaux paramètres exportés (AAPS/préférences).
+* Vous trouverez l'ancien fichier en bas de la liste dans la boîte de dialogue d'importation.
 
 Transférer les paramètres
 ==================================================

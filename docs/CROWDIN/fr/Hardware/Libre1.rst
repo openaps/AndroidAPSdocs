@@ -14,7 +14,7 @@ Jusqu'à présent, en utilisant le Freestyle Libre 1 comme source Gly, vous ne p
 
 Si vous utilisez xDrip+
 ==================================================
-* Si vous ne l'avez pas déjà configuré, téléchargez xDrip+ et suivez les instructions sur `LimiTTEer <https://github.com/JoernL/LimiTTer>`_,  `Libre Alarm <https://github.com/pimpimmi/LibreAlarm/wiki>`_ ou `BlueReader <https://unendlichkeit.net/wordpress/?p=680&lang=en>`_ (`Hardware <https://bluetoolz.de/wordpress/>`_).
+* If not already set up then download xDrip+ and follow instructions on `LimiTTEer <https://github.com/JoernL/LimiTTer>`_ or  `Libre Alarm <https://github.com/pimpimmi/LibreAlarm/wiki>`_.
 * Dans xDrip allez dans Paramètres > Inter-app settings > Diffusion Locale et sélectionnez ON.
 * Dans xDrip allez dans Paramètres > Inter-app settings > Accept Treatments et sélectionnez OFF.
 * Si vous voulez pouvoir utiliser AndroidAPS pour calibrer, alors dans xDrip, allez dans Paramètres > Inter-app settings > Accept Calibrations et sélectionnez ON.  Vous pouvez également consulter les options dans Paramètres > Paramètres moins courants > Paramètres Avancés de Calibration.

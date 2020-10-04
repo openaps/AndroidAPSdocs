@@ -85,7 +85,7 @@ Voici un bref aperçu de tous les MGC/MGF compatibles avec AndroidAPS. Pour plus
 
 Nightscout
 --------------------------------------------------
-Nightscout est une application Web open source qui peut enregistrer et afficher vos données MGC / AndroidAPS et créer des rapports. Vous pouvez trouver plus d'informations sur le `site web du projet Nightscout <http://www.nightscout.info/>`_. Vous pouvez créer votre propre site web Nightscout `en utilisant Heroku <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, utilisez la configuration semi-automatisée Nightscout sur `zehn.be <https://ns.10be.de/en/index.html>`_ ou l'héberger sur votre propre serveur (c'est pour les experts en informatique).
+Nightscout est une application Web open source qui peut enregistrer et afficher vos données MGC / AndroidAPS et créer des rapports. Vous pouvez trouver plus d'informations sur le `site web du projet Nightscout <http://www.nightscout.info/>`_. Vous pouvez créer votre propre `site web Nightscout <https://nightscout.github.io/nightscout/new_user/>`_, utilisez la configuration semi-automatisée Nightscout sur `zehn.be <https://ns.10be.de/en/index.html>`_ ou l'héberger sur votre propre serveur (c'est pour les experts en informatique).
 
 Nightscout est indépendant des autres modules. Vous en aurez besoin pour réaliser l'objectif 1.
 

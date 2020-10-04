@@ -64,11 +64,12 @@ Autentifikavimo sąrankos nustatymas
    * Įveskite 4570512020
    
 * Raudonas tekstas „NETEISINGAS PIN“ pasikeis **automatiškai** į žalią „Gerai“, jei įvestis teisinga. **Nėra mygtuko, kurį galėtumėte paspausti! **
+* Make sure there is no time difference between phones as this might lead to authentication problems.
 * Naudokite mygtuką "RESET AUTHENTICATORS" (Iš naujo nustatyti autentifikatorius), jei norite pašalinti nuostatas.
 
 SMS komandų naudojimas
 ==================================================
-Siųskite SMS žinutę iš jūsų patvirtinto(-ų) telefono numerio(-ių) į pagrindinį AndroidAPS telefoną, naudodami bet kurią iš toliau nurodytų `komandų </Children/SMS-Commands.html#commands>`_. 
+* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands <../Children/SMS-Commands.html#commands>`_ below. 
 * AAPS telefonas reaguos patvirtindamas komandos ar būsenos prašymą. 
 * Patvirtinkite komandą, jei reikia, nusiųsdami kodą. Pavyzdys:
 

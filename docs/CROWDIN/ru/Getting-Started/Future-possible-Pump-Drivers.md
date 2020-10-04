@@ -86,7 +86,7 @@
 
 ## Помпы, снятые с производства (компании больше не работают)
 
-### Помпа Cellnovo ([Домашняя страница](https://www.cellnovo.com/en/homepage))
+### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
 **Статус реализации:** В настоящее время не поддерживается какой-либо системой ИПЖ. Помпа является кандидатом на работу с ИПЖ, но поскольку протокол ее работы неизвестен, поддержка появится не очень скоро.
 

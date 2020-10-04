@@ -64,11 +64,12 @@ Authenticator setup
    * Enter 4570512020
    
 * Red text "WRONG PIN" will change **automatically** to green "OK" if entry is correct. **There is no button you can press!**
+* Make sure there is no time difference between phones as this might lead to authentication problems.
 * Use button "RESET AUTHENTICATORS" if you want to remove provisions.
 
 Use SMS commands
 == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands </Children/SMS-Commands.html#commands>`_ below. 
+* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands <../Children/SMS-Commands.html#commands>`_ below. 
 * The AAPS phone will respond to confirm success of command or status requested. 
 * Confirm command by sending the code where necessary. Example:
 

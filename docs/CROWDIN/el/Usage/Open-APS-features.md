@@ -67,7 +67,7 @@
 * Adult: 12
 * Insulin resistant adult: 25
 
-Δείτε επίσης [ την τεκμηρίωση OpenAPS για SMB ](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Ενεργοποιήστε το AMA Autosense
 

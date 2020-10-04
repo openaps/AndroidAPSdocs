@@ -41,7 +41,7 @@ En caso de que la conexión entre la AAPS y Dana RS se pierde durante la infusi�
 
 * En la mayoría de los casos, se trata sólo de un problema de comunicación y se inyecta la cantidad correcta de insulina.
 * Compruebe el historial de la bomba (ya sea en la bomba o a través de la pestaña Dana > historial de bomba > bolos) para ver si es correcto bolo inyectado.
-* Delete error entry in [treatments tab](..Getting-Started/Screenshots#carb-correction) if you wish.
+* Delete error entry in [treatments tab](../Getting-Started/Screenshots#carb-correction) if you wish.
 * La cantidad real es leída y grabada en la siguiente conexión. Para forzar esto pulse el icono BT en la pestaña de dana o simplemente espere a la siguiente conexión.
 
 ## Nota especial al cambiar de teléfono

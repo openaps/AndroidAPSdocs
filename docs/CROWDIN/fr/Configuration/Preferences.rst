@@ -55,7 +55,7 @@ Protection des paramètres
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Protégez vos paramètres avec un mot de passe ou l'authentification biométrique du téléphone (par ex. si votre `enfant utilise AAPS <../Children/Children.html>`_).
 * Le mot de passe personnalisé doit être utilisé si vous voulez juste utiliser le mot de passe principal pour sécuriser `les paramètres exportés <../Usage/ExportImportSettings.html>`_.
-* Si vous utilisez un mot de passe personnalisé, cliquez sur la ligne "Mot de passe des paramètres" pour définir le mot de passe comme décrit `ci-dessus <../Configuration/Preferences2020.html#mot-de-passe-principal>`_.
+* If you are using a custom password click on line "Settings password" to set password as described `above <../Configuration/Preferences.html#master-password>`_.
 
   .. image:: ../images/Pref2020_Protection.png
     :alt: Protection
@@ -285,7 +285,7 @@ Paramètres OpenAPS SMB
 -----------------------------------------------------------
 * Contrairement à AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ n'utilise pas de les débits de basal temporaires pour contrôler la glycémie, mais principalement les petits super micro-bolus.
 * Vous devez avoir démarré `l'objectif 10 <../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ pour utiliser les SMB.
-* Les trois premiers paramètres sont expliqués `ci-dessus <./Configuration/Preferences20.html#debit-max-en-u-h-pour-une-temp-basal>`_.
+* The first three settings are explained `above <./Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to>`_.
 * Les détails sur les différentes options d'activation sont décrits dans la section `Fonctionnalités OpenAPS <../Usage/Open-APS-features.html#activer-smb>`_.
 * *La fréquence à laquelle les SMB seront donnés en min* est une restriction pour que le SMB ne soit distribué que toutes les 4 minutes par défaut. Cette valeur empêche le système d'émettre trop souvent des SMB (par exemple dans le cas où une cible temporaire a été définie). Vous ne devriez pas modifier ce paramètre sauf si vous en connaissez exactement les conséquences. 
 * Si 'Sensibilité augmente la cible' ou 'Résistance diminue la cible' est activée, `Autosens <../Usage/Open-APS-features.html#autosens>`_ modifiera votre cible glycémique en fonction de vos écarts de glycémie.

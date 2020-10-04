@@ -67,7 +67,7 @@ OpenAPS SMB를 사용하면, OpenAPS AMA에서와는 다르게 max-IOB가 계산
 * Adult: 12
 * Insulin resistant adult: 25
 
-See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Enable AMA Autosense
 

@@ -59,7 +59,7 @@ Vous devez définir les éléments suivants : (voir photo ci-dessus)
 - **Encodage Medtronic** : Ce paramètre défini si l'encodage 4b6b fait par les appareils Medtronic doit être fait dans AndroidAPS ou dans le RileyLink. Si vous avez un RileyLink avec un firmware 2.x, la valeur par défaut sera d'utiliser l'encodage matériel (= fait par le RileyLink), si vous avez un firmware 0.x, ce paramètre sera ignoré.
 - **Type de batterie (Power View)** : Si vous voulez voir la charge de la pile de votre pompe, vous devez sélectionner le type de pile que vous utilisez (actuellement Lithium ou Alkaline sont supportées), cela changera l'affichage pour afficher le pourcentage et la tension.
 - **Configuration RileyLink** : Vous trouverez votre appareil RileyLink/GNARL.
-- **Set neutral temp basals** is an option which can help prevent Medtronic pumps from beeping on the hour. If enabled if will cancel a temp basal before the hour end to prevent this from happening.
+- **Définir des Basales temporaires neutres** est une option qui peut aider à empêcher les pompes Medtronic de biper à chaque heure. Si cette option est activée, elle annule une basale temporaire avant la fin de l'heure pour éviter que cela ne se produit.
 
 ## Onglet MEDTRONIC (MDT)
 

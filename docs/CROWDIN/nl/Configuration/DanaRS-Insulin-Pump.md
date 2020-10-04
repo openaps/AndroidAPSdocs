@@ -41,7 +41,7 @@ In het geval dat de verbinding tussen AAPS en DanaRS wordt verbroken tijdens het
 
 * In de meeste gevallen krijg je deze foutmelding omdat de communicatie werd verbroken, en is gewoon de juiste hoeveelheid insuline gegeven. Controleer dit eerst voordat je een eventuele nieuwe bolus geeft.
 * Controleer in de geschiedenis van je pomp (op de pomp zelf, of in de app op het Dana tabblad > Historiek > Bolussen > VERNIEUW) of de juiste bolus werd gegeven.
-* Delete error entry in [treatments tab](..Getting-Started/Screenshots#carb-correction) if you wish.
+* Delete error entry in [treatments tab](../Getting-Started/Screenshots#carb-correction) if you wish.
 * De werkelijke hoeveelheid insuline wordt uitgelezen uit de pomp en opgeslagen in de app tijdens de eerstvolgende keer dat ze verbinding maken. Om handmatig te laten verbinden, kun je op het Bluetooth-icoon drukken op het Dana tabblad. Of gewoon afwachten tot de app vanzelf weer verbinding maakt met de pomp.
 
 ## Een andere telefoon gebruiken

@@ -41,7 +41,7 @@ V případě, že dojde k přerušení spojení mezi AAPS a pumpou Dana RS v pr�
 
 * Ve většině případů se jedná pouze o problém s komunikací, který se netýká vydaného inzulinu (je vydáno správné množství).
 * Podívejte se do historie pumpy (buď v pumpě, nebo na kartě Dana > Historie pumpy > Bolusy), zda byl vydán správný bolus.
-* Delete error entry in [treatments tab](..Getting-Started/Screenshots#carb-correction) if you wish.
+* Delete error entry in [treatments tab](../Getting-Started/Screenshots#carb-correction) if you wish.
 * Skutečně vydaný bolus se načte a zaznamená při příštím připojení. Chcete-li vynutit připojení okamžitě, klikněte na ikonu BT na kartě Dana, nebo prostě počkejte na příští připojení.
 
 ## Zvláštní poznámka, pokud měníte telefon

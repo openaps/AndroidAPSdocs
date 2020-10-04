@@ -41,7 +41,7 @@ Bolus 인슐린 주입 중 AAPS와 Dana RS의 연결이 끊기는 경우 (즉, D
 
 * 대부분의 경우 이것은 단지 통신 상의 문제이며, 인슐린 양은 올바르게 주입됩니다.
 * 올바른 bolus가 주입되었는지 (펌프 본체 또는 앱의 Dana 탭 > 펌프 이력 > boluses에서) 펌프의 이력을 확인하십시오.
-* Delete error entry in [treatments tab](..Getting-Started/Screenshots#carb-correction) if you wish.
+* Delete error entry in [treatments tab](../Getting-Started/Screenshots#carb-correction) if you wish.
 * 펌프가 다시 연결될 때 실제 주입된 양이 확인되어 앱에 기록됩니다. 이를 위해 Dana 탭에서 블루투스 아이콘을 누르거나, 다음 접속을 기다리십시오.
 
 ## 폰 교체를 위한 특별 참고 사항

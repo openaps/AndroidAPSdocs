@@ -64,11 +64,12 @@ Configuration de l'Authentificateur
    * Entrez 4570512020
    
 * Le texte rouge "WRONG PIN" changera **automatiquement** en vert "OK" si l'entrée est correcte. **Il n'y a aucun bouton à appuyer !**
+* Assurez-vous qu'il n'y a pas de différence entre les heures des téléphones car cela peut entraîner des problèmes d'authentification.
 * Utilisez le bouton "RESET AUTHENTICATORS" si vous voulez supprimer les autorisations.
 
 Utiliser les commandes SMS
 ==================================================
-* Envoyez depuis votre/vos numéro(s) de téléphone approuvé(s) un SMS au téléphone ayant AndroidAPS lancé en utilisant l'une des `commandes </Children/SMS-Commands.html#commandes>`_ ci-dessous. 
+* Envoyez depuis votre/vos numéro(s) de téléphone approuvé(s) un SMS au téléphone ayant AndroidAPS lancé en utilisant l'une des `commandes <../Children/SMS-Commands.html#commandes>`_ ci-dessous. 
 * Le téléphone AAPS répondra pour confirmer le succès de la commande ou du statut demandé. 
 * Confirmez la commande en envoyant le code si nécessaire. Par exemple :
 

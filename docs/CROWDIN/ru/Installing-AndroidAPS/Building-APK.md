@@ -6,8 +6,8 @@
 
 ## ## Важные Примечания
 
-* Используйте **[ Android Studio версии 3.6.1 ](https://developer.android.com/studio/)** или новее для построения apk.
-* [Windows 10 для 32-разрядных систем](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) не поддерживается в Android Studio 3.6.1.
+* Please use **[Android Studio Version 4.0.1](https://developer.android.com/studio/)** or newer to build the apk.
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.0.1.
 
 ** Конфигурация по требованию ** не поддерживается текущей версией модуля Android Gradle!
 

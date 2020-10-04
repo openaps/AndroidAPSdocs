@@ -86,7 +86,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ## Pompy już nie sprzedawane (firmy już nie działają)
 
-### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
+### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 

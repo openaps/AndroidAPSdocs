@@ -80,7 +80,7 @@ Klicke auf das Zahnrad, um die Einstellungen zu öffnen, wähle "Show" aus und k
 
 ![Crowdin - Anzeige der Linkadressen einschalten](./images/CrowdinShowURL2.png)
 
-Links werden dann im Standard-HTML-Format angezeigt und können wie [oben](./translations#translate-headline-links) beschrieben übersetzt werden.
+Links werden dann im Standard-HTML-Format angezeigt und können wie [oben](./translations#links-zu-uberschriften-ubersetzen) beschrieben übersetzt werden.
 
 ![Crowdin - Anzeige der Linkadressen](./images/CrowdinShowURL3.png)
 

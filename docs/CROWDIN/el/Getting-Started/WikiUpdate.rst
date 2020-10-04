@@ -1,5 +1,9 @@
 Docs updates & changes
 **************************************************
+September 2020
+==================================================
+* Major update for new AAPS version 2.7
+* For details see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
 June 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - more details patched Libre Link app & use of bluetooth transmitters
@@ -10,7 +14,7 @@ May 2020
 * `Insight deactivate vibration <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (firmware 3.x only)
 * `Minimal request rate <../Configuration/Preferences.html#minimal-request-rate>`_ to reduce number of notifications in open loop mode
 * `Patched Libre Link app <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - check if correctly patched
-* `Prediction lines <../Getting-Started/Screenshots.html#section-e>`_ - more details
+* `Prediction lines <../Getting-Started/Screenshots.html#prediction-lines>`_ - more details
 April 2020
 ==================================================
 * `Backdate insulin <../Usage/CPbefore26.html#carbs--bolus>`_ (i.e. given by syringe)
@@ -29,7 +33,7 @@ February 2020
 * `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
 * New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
 * `Sample Setup <../Getting-Started/Sample-Setup.html>`_ - update Dexcom G6
-* `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - major new features
+* `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - major new features
 * `Wear complications <../Configuration/Watchfaces.html>`_
 January 2020
 ==================================================
@@ -46,7 +50,7 @@ November 2019
 ==================================================
 * `Automation - deactivate when disabling loop <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
-* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
+* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#id1>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-e>`_
 * `Insight - Disable absolut values in NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
@@ -57,11 +61,11 @@ November 2019
 * `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Troubleshooting - link collection <../Usage/troubleshooting.html>`_
 * `Update - quick walk-through for experienced users <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
-* Docs - update `edit <../make-a-PR.md#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
+* Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
 
 October 2019
 ==================================================
-* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
+* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#id16>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `AccuChek Insight - log options <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * `COB calculation on separate page <../Usage/COB-calculation.html>`_
 * `COB - wrong COB value detection <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_

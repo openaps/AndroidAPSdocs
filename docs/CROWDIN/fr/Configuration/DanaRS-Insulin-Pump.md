@@ -2,7 +2,7 @@
 
 *Ces instructions décrivent la configuration de l’application et de votre pompe si vous avez une DanaRS commercialisée depuis 2017. Visitez la [pompe à insuline Dana R](./DanaR-Insulin-Pump) si vous avez plutôt la pompe initiale DanaR.*
 
-**New Dana RS firmware v3 can be used from AndroidAPS version 2.7 onwards.**
+**Le nouveau firmware Dana RS v3 peut être utilisé depuis la version 2.7 d'AndroidAPS.**
 
 * Sur la pompe DanaRS, pompe « BASAL A » est utilisé par l'application. Les données existantes se font écrasé.
 
@@ -14,20 +14,20 @@
   
   ![Appairage Dana RS avec AAPS](../images/AAPS_DanaRSPairing.png)
 
-* Select Pump password and input your password.
+* Sélectionnez Mot de passe de la pompe et saisissez votre mot de passe.
   
-  * For DanaRS with firmware v1 and v2 the default password is 1234.
-  * For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> On your pump open main menu -> review -> information. Non. 3 is production date.
+  * Pour les Dana RS avec le firmware v1 et v2, le mot de passe par défaut est 1234.
+  * Pour les Dana RS avec le firmware v3, le mot de passe par défaut est une combinaison du mois de production et de la date de production (par ex. mois 01 et jour 24). ==> Sur votre pompe ouvrez le menu principal -> Rapport -> Info produit. N° 3 est la date de production.
 
-* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+* **Vous devez confirmer l'appairage sur la pompe !** C'est juste la façon dont vous êtes habitués à faire d'autres appairages bluetooth (par ex. le smartphone et l'audio de la voiture).
   
-  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+  ![Confirmation d'appairage Dana RS](../images/DanaRS_Pairing.png)
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Sélectionner la vitesse de Bolus pour changer la vitesse de Bolus par défaut souhaitée (12 sec par 1 U, 30 sec par 1 U ou 60 sec par 1 U).
 
-* Restart your phone.
+* Redémarrez votre téléphone.
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
+* Régler l'incrément Basale sur pompe à 0,01 U/h en utilisant le menu de Médecins (voir le guide de l’utilisateur de la pompe)
 
 * Activez les Bolus Étendus sur la pompe
 
@@ -41,7 +41,7 @@ Dans le cas où la connexion entre AAPS et DanaRS est perdue pendant un bolus d'
 
 * Dans la plupart des cas c'est juste un problème de communication et la quantité d'insuline délivrée est correcte.
 * Vérifiez dans l'historique de la pompe (à la pompe ou à l'aide de l'onglet Dana > historique de la pompe > bolus) si le bolus est correct.
-* Delete error entry in [treatments tab](..Getting-Started/Screenshots#carb-correction) if you wish.
+* Supprimer l'entrée en erreur dans l'onglet [Traitements](../Getting-Started/Screenshots#correction-de-glucides) si vous le souhaitez.
 * Le montant réel est lu et enregistré lors de la prochaine connexion. Pour forcer cette mise à jour, appuyez sur l'icône BT dans l'onglet dana ou attendez juste la prochaine connexion.
 
 ## Remarque spéciale lors du changement de téléphone
