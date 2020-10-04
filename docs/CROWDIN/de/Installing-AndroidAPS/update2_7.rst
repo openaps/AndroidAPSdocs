@@ -3,7 +3,7 @@ Notwendige Überprüfungen nach Aktualisierung auf AndroidAPS 2.7
 
 * Der Programmcode wurde bei der Umstellung auf AAPS 2.7 deutlich verändert. 
 * Daher ist es wichtig, dass Du einige Änderungen vornimmst oder Einstellungen nach der Aktualisierung überprüfst.
-* Please see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_ for details on new and extended features.
+* In den `Release Notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_ findest Du Details zu allen neuen und verbesserten Funktionen.
 
 Prüfe die BZ-Quelle
 -----------------------------------------------------------
