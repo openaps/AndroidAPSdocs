@@ -66,7 +66,7 @@ Dexcom G6 αντιμετώπιση συγκεκριμένων προβλημάτ
 
 General troubleshoothing
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#Troubleshooting>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`_.
 
 Νέος πομπός με αισθητήρα λειτουργίας που λειτουργούσε
 --------------------------------------------------
