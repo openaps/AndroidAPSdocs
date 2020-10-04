@@ -14,7 +14,7 @@ September 2020
 * `Отключение вибрации на помпе Insight < ../Configuration/Accu-Ch-Insight-Pump.html#vibration> ` _ (только на прошивке 3.x)
 * `Минимальный уровень запроса на отключение уведомлений < ../Configuration/Preferences.html#minimal-request-rate> ` _ для сокращения числа уведомлений в режиме открытого цикла
 * `Модифицированное приложение Libre Link < ../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app> ` _- проверьте правильность патча
-* `Линии прогнозирования <../Getting-Started/Screenshots.html#section-e>`_-дополнительные подробности
+* `Prediction lines <../Getting-Started/Screenshots.html#prediction-lines>`_ - more details
 Апрель 2020
 ==================================================
 * `Запись о введении инсулина задним числом < ..//Usage/CPbefore26.html#carbs-- bolus> ` _ (напр. с помощью шприца)
@@ -33,7 +33,7 @@ September 2020
 * `Пролонгированный болюс <../Usage/Extended-Carbs.html > ` _ функция - замкнутый цикл будет отключена
 * Новый плагин `Local Profile <../Configuration/Config-Builder.html#local-profile-recommended>`_
 * `Пример установки <../Getting-Started/Sample-Setup.html>`_ - обновление для Dexcom G6
-* Версия 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - основные новые функции
+* `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - major new features
 * `Усложнения Wear <../Configuration/watchfaces.html>`_
 Январь 2020
 ==================================================
@@ -50,7 +50,7 @@ September 2020
 ==================================================
 * ` Автоматизация-деактивировать при выключении цикла <../Usage/Automation.html#important-note> ` _
 Замена трансмиттера Dexcom G6 - обновление <../Configuration/xdrip.html#replace-transmitter>`_
-Пролонгированный болюс - почему не работает в контексте ИПЖ <../Usage/Extended-Carbs.html#extended-bolus>`_
+* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#id1>`_
 * ` FAQ-занятия спортом <../Начало/FAQ.html#спорт> ` _
 * `Главный экран - линии на графике <../Getting-Started/Screenshots.html#section-e>`_
 * ` Insight-Выключить абсолютные значения в NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
@@ -65,7 +65,7 @@ September 2020
 
 Октябрь 2019
 ==================================================
-* ` AAPS версии 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0> ` _ updates (особенно на странице обновления <../Instaling-AndroidAPS/Update-to-new-version.html> ` _)
+* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#id16>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * ` AccuChek Insight-опции журнала <../Configuration/Accu-Chek-Inight-Pump.html#settings-in-aaps> ` _
 * Расчет активных углеводов COB на отдельной странице <../Usage/COB-calculation.html>`_
 * ` активные углеводы COB-неправильное определение значения COB <../Usage/COB-calculation.html#detection-оф-неправо-cob-values> ` _
