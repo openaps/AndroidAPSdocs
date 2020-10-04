@@ -33,12 +33,12 @@ Februar 2020
 * `Verzögerter Bolus <../Usage/Extended-Carbs.html#id1>`_ - der Closed Loop wird unterbrochen
 * Neues `Plugin Lokales Profil <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_
 * `Konfigurationsbeispiel <../Getting-Started/Sample-Setup.html>`_ - Update Dexcom G6
-* `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - wichtige neue Funktionen
+* `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - wichtige neue Funktionen
 * `Wear Komplikationen <../Configuration/Watchfaces.html>`_ für Smartwatches
 Januar 2020
 ==================================================
 * `Kohlenhydrate manuell korrigieren <../Getting-Started/Screenshots.html#kohlenhydrat-korrektur>`_, falls diese falsch eingegeben wurden
-* `Bildgröße <../make-a-PR.html#bildgrose>`_ beim Bearbeiten des Docs
+* `Bildgröße <../make-a-PR.html#bildgrosze>`_ beim Bearbeiten des Docs
 Dezember 2019
 ==================================================
 * `Android Auto <../Usage/Android-auto.html>`_ - Setup mit Bildschirmfotos
@@ -49,10 +49,10 @@ Dezember 2019
 November 2019
 ==================================================
 * `Automation - bei deaktiviertem Loop ausschalten <../Usage/Automation.html#wichtiger-hinweis>`_
-* `Dexcom G6 Update zum Transmitter-Wechsel <../Configuration/xdrip.html#transmitter-ersetzen>`_
-* `Warum ein verzögerter Bolus beim Loopen nicht funktioniert <../Usage/Extended-Carbs.html#verzogerter-bolus>`_
+* `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
+* `Warum ein verzögerter Bolus beim Loopen nicht funktioniert <../Usage/Extended-Carbs.html#id1>`_
 * `FAQ - Sport <../Getting-Started/FAQ.html#sport>`_
-* `Startbildschirm - Linien im Diagramm <../Getting-Started/Screenshots.html#abschnitt-e>`_
+* `Startbildschirm - Linien im Diagramm <../Getting-Started/Screenshots.html#vorhersage-kurven>`_
 * `Insight - Absolute Werte im NS Client deaktivieren <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps>`_
 * `Medtronic Pumpe - mögliche Doppeleinträge <../Configuration/MedtronicPump.html>`_
 * `Neue Anleitung zum Freestyle Libre 2 <../Hardware/Libre2.html>`_
@@ -65,16 +65,16 @@ November 2019
 
 Oktober 2019
 ==================================================
-* `AAPS Version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ - Seitenaktuallisierungen (vor allem auf der Seite `Update auf eine neue Version <../Installing-AndroidAPS/Update-to-new-version.html>`_)
+* `AAPS Version 2.5 <../Installing-AndroidAPS/Releasenotes.html#id16>`_ - Seitenaktuallisierungen (vor allem auf der Seite `Update auf eine neue Version <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `AccuChek Insight-Log-Optionen <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps>`_
 * `Aktiven Kohlenhydrate (COB) - eigene Seite <../Usage/COB-calculation.html>`_
 *  `Aktiven Kohlenhydrate (COB) - Fehlerhafte Ermittlung <../Usage/COB-calculation.html#erkennung-fehlerhafter-cob-werte>`_
 * `Dexcom G6-spezifische Problembehandlung <../Hardware/DexcomG6.html#dexcom-g6-spezifische-problembehandlung>`_
 * `Ziele (objectives) Update AAPS Version 2.5 <../Usage/Objectives.html>`_
-* `Update Einstellungen <./Configuration/Preferences.html>`_
+* `Update Einstellungen <../Configuration/Preferences.html>`_
 * `SGLT-2 Inhibitoren - beim Loopen nicht verwenden <../Module/module.html#keine-verwendung-von-sglt-2-hemmern>`_
 * `SMS-Befehle Problembehandlung <../Children/SMS-Commands.html#problembehandlung>`_
-* `xDrip - Update G6 Transmitter ersetzen <../Configuration/xdrip.html#replace-transmitter>`_
+* `xDrip - update G6 transmitter replacement <../Configuration/xdrip.html#replace-transmitter>`_
 
 September 2019
 ==================================================
