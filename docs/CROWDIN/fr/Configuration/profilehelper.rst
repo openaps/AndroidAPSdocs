@@ -40,21 +40,21 @@ Vous pouvez également utiliser l'assistant de profil pour comparer à différen
 .. image:: ../images/ProfileHelper1.png
   :alt: Assistant Profil 1
 
-1. Select 'Profile helper' from three-dot-menu on the top right side of the screen.
-2. Long-press 'Default profile' and select 'Available profile' for a list of your existing profiles or 'Profile switch' for a list of latest profile switches used.
-3. Long-Press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
-4. Change screen by clicking on the grey bar labeled 2 on the right.
+1. Sélectionnez 'Assistant profil' dans le menu trois points en haut à droite de l'écran.
+2. Appuyez sur « Profil par défaut » et sélectionnez « Profils disponibles » pour la liste de vos profils existants ou « Changement de profil » pour avoir la liste des derniers changements de profil effectués.
+3. Appuyez sur le nom du profil ('Aktuell_LP' dans la capture d'écran ci-dessus) et sélectionnez un profil dans la liste des changements de profil.
+4. Changez l'écran en cliquant sur la barre grise « 2 » à droite.
 
 .. image:: ../images/ProfileHelper2.png
-  :alt: Profile Helper 2
+  :alt: Assistant Profil 2
 
-5. As a standard 'Current profile' is offered as comparison candidate. 
-6. If you want a different profile / profile switch long-press 'Current profile' and select either 'Available profile' or 'Profile switch'.
-7. Long-press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
-8. Press button 'COMPARE PROFILES' on top of screen.
-9. Comparison of the two adjusted profiles will be displayed.
+5. Par défaut, le « Profil actuel » est proposé pour faire la comparaison. 
+6. Si vous voulez sélectionner un autre, appuyez sur « Profil actuel » et sélectionnez « Profils disponibles » ou « Changement de profil ».
+7. Appuyez sur le nom du profil ('Aktuell_LP' dans la capture d'écran ci-dessus) et sélectionnez un profil dans la liste des changements de profil.
+8. Appuyez sur le bouton 'COMPARER LES PROFILS' en haut de l'écran.
+9. La comparaison des deux profils sélectionnés sera affichée.
 
-Clone profile
+Cloner le profil
 =======================================
 
 If you use `local profiles <../Configuration/Config-Builder.html#local-profile-recommended>`_ you can clone a profile / profile switch directly from profile helper.
