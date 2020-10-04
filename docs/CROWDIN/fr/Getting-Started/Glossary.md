@@ -272,7 +272,7 @@
  <td>HP</td>
  <td>historique de la pompe (entrée dans l'onglet traitements)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Captures d'écran</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment">Captures d'écran</a></td>
 </tr>
 <tr>
  <td>Prédictions</td>
