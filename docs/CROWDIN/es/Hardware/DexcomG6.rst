@@ -66,7 +66,7 @@ Resolución de problemas específica de Dexcom G6
 
 General troubleshoothing
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#Troubleshooting>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`_.
 
 Nuevo transmisor con sensor en ejecución
 --------------------------------------------------
