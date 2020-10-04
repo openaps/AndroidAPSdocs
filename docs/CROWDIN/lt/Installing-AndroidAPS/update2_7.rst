@@ -3,7 +3,7 @@ Būtini patikrinimai po to, kai buvo atnaujinta AndroidAPS 2.7
 
 * Atnaujinant į AAPS 2.7, programos kodas buvo žymiai pakeistas. 
 * Todėl svarbu, kad atnaujinę atliktumėte keletą pakeitimų arba patikrintumėte nustatymus.
-* Prašome peržiūrėti `Išleidimo pastabos <../Installing-AndroidAPS/Releasenotes.html#version-270>`_ dėl detalių apie naujas ir išplėstines funkcijas.
+* Please see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_ for details on new and extended features.
 
 Tikrinti KG šaltinį
 -----------------------------------------------------------
