@@ -14,7 +14,7 @@
 
 ### Section B - Profile & target
 
-#### Профиль
+#### Current Profile
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
