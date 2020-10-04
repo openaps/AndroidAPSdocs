@@ -9,7 +9,7 @@
 * Please use **[Android Studio Version 4.0.1](https://developer.android.com/studio/)** or newer to build the apk.
 * [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.0.1.
 
-** Konfiguration auf Abruf ** (Configuration on demand) wird von der aktuellen Version des Android-Gradle-Plugins nicht unterstützt!
+**Konfiguration auf Abruf** (Configuration on demand) wird von der aktuellen Version des Android-Gradle-Plugins nicht unterstützt!
 
 Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschlägt, dann kannst du folgendes tun:
 
@@ -30,13 +30,13 @@ Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschläg
 Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 
 1. [Git installieren](../Installing-AndroidAPS/git-install.rst)
-2. [Android Studio installieren](../Installing-AndroidAPS/Building-APK#android-tudio-installieren)
+2. [Android Studio installieren](../Installing-AndroidAPS/Building-APK#android-studio-installieren)
 3. [Pfad zu git-exe in den Einstellungen von Android Studio festlegen](../Installing-AndroidAPS/Building-APK#git-pfad-in-android-studio-eintragen)
 4. [AndroidAPS-Code herunterladen](../Installing-AndroidAPS/Building-APK#androidaps-code-herunterladen)
 5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [App erstellen](../Installing-AndroidAPS/Building-APK#signierte-apk-erstellen-generate-signed-apk) (generate signed apk)
 7. [APK-Datei auf das Smartphone übertragen](../Installing-AndroidAPS/Building-APK#ubertrage-die-apk-datei-auf-das-smartphone)
-8. [Identifiziere den Empfänger falls Du xDrip verwendest+](../Installing-AndroidAPS/Building-APK#identifiziere-den-empfanger-falls-du-xDrip-verwendest)
+8. [Identifiziere den Empfänger falls Du xDrip verwendest+](../Installing-AndroidAPS/Building-APK#identifiziere-den-empfanger-falls-du-xdrip-verwendest)
 
 ## Schritt für Schritt Anleitung
 
