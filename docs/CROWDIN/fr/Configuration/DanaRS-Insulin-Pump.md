@@ -17,7 +17,7 @@
 * Sélectionnez Mot de passe de la pompe et saisissez votre mot de passe.
   
   * Pour les Dana RS avec le firmware v1 et v2, le mot de passe par défaut est 1234.
-  * Pour les Dana RS avec le firmware v3, le mot de passe par défaut est une combinaison du mois de production et de la date de production (par ex. mois 01 et jour 24). ==> Sur votre pompe ouvrez le menu principal -> review -> information. N° 3 est la date de production.
+  * Pour les Dana RS avec le firmware v3, le mot de passe par défaut est une combinaison du mois de production et de la date de production (par ex. mois 01 et jour 24). ==> Sur votre pompe ouvrez le menu principal -> Rapport -> Info produit. N° 3 est la date de production.
 
 * **Vous devez confirmer l'appairage sur la pompe !** C'est juste la façon dont vous êtes habitués à faire d'autres appairages bluetooth (par ex. le smartphone et l'audio de la voiture).
   
