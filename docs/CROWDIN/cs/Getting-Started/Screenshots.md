@@ -14,7 +14,7 @@ Toto je první obrazovka, na kterou narazíte, když spustíte aplikaci AndroidA
 
 ### Section B - Profile & target
 
-#### Profil
+#### Current Profile
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
