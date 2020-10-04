@@ -36,7 +36,7 @@ Vykdykite instrukcijas pagal [git instaliavimo puslapį](../Installing-AndroidAP
 
 * Spustelėkite Pull (nėra pasikeitimų dialogo srityje)
     
-    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02.png)
+    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02a.png)
 
 * Palaukite, kol vyksta atsisiuntimas.
     
