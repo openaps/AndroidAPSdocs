@@ -8,8 +8,8 @@
 
 * Пожалуйста, обновите приложение сразу же после выхода новой версии. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes#release-notes) about the new version.
 * Начиная с версии 2.3 для обновления требуется использовать git. Обновление с zip-файла больше не работает.
-* Используйте [](https://developer.android.com/studio/) Android Studio версии 3.6.1 или новее для построения apk.
-* [Windows 10 для 32-разрядных систем](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) не поддерживается в Android Studio 3.6.1.
+* Please use [Android Studio Version 4.0.1](https://developer.android.com/studio/) or newer to build the apk.
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.0.1.
 * Если вы используете xDrip, [identify the receiver](../Configuration/xdrip#identify-receiver).
 * Если вы используете Dexcom G6 с модифицированным приложением [Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) вам понадобится версия из папки [2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
