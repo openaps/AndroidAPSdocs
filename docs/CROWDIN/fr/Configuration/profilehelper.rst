@@ -6,12 +6,12 @@ L'assistant profil a deux fonctions :
 1. Trouver un profil pour les enfants
 2. Comparer deux profils ou changements de profil pour cloner un nouveau profil
 
-Profile for kids (up to 18 years)
+Profil pour les enfants (jusqu'à 18 ans)
 =======================================
 
-**Important note:**
+**Remarques importantes :**
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**L'assistant profil a pour but de vous aider à trouver le profil initial de votre enfant. Même s'il est basée sur un ensemble de données de deux hôpitaux différents, discutez toujours avec votre équipe médicale avant d'utiliser un nouveau profil !**
 
 Profile helper offers data sets from two different hospitals for children to find initial profile for your kid up to 18 years.
 
