@@ -3,7 +3,7 @@ Vérifications nécessaires après la mise à jour vers AndroidAPS 2.7
 
 * Le code du programme a été changé de façon significative lors du passage à AAPS 2.7. 
 * Par conséquent, il est important de faire des changements ou de vérifier les paramètres après la mise à jour.
-* Veuillez consulter les `notes de version <../Installing-AndroidAPS/Releasenotes.html#version-270>`_ pour plus de détails sur les nouvelles fonctions et les améliorations.
+* Please see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_ for details on new and extended features.
 
 Vérifier la source de glycémie
 -----------------------------------------------------------
