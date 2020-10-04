@@ -252,12 +252,12 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 * Le bouton Retour permet de revenir à AAPS.
 * Doit être activé dans les [préférences](../Configuration/Preferences#boutons).
 
-#### Assistant bolus
+#### Assistant rapide
 
 * Entrez facilement la quantité de glucides et définissez les paramètres de calcul.
 * Les détails sont configurés dans les [préférences](../Configuration/Preferences#assistant-rapide).
 
-## Assistant rapide
+## Assistant bolus
 
 ![Assistant Bolus](../images/Home2020_BolusWizard.png)
 
