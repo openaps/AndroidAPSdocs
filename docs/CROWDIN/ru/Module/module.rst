@@ -85,7 +85,7 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 
 Nightscout
 --------------------------------------------------
-Nightscout - веб-приложение с открытым исходным кодом, которое может регистрировать/отображать данные мониторинга и AndroidAPS и создавать отчеты. Вы можете найти больше информации на сайте проекта Nightscout <http://www.nightscout.info/>`_. Вы можете создать свой собственный сайт Nightscout `используя Heroku <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, используйте полуавтоматизированную установку Nightscout на `zehn.be <https://ns.10be.de/en/index.html>`_ или разместите его на вашем собственном сервере (для IT экспертов).
+Nightscout - веб-приложение с открытым исходным кодом, которое может регистрировать/отображать данные мониторинга и AndroidAPS и создавать отчеты. Вы можете найти больше информации на сайте проекта Nightscout <http://www.nightscout.info/>`_. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
 
 Nightscout не зависит от других модулей. Он понадобится для выполнения цели 1.
 
