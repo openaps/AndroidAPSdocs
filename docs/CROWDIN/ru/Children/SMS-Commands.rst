@@ -6,6 +6,8 @@ AndroidAPS позволяет контролировать телефон реб
 * AndroidAPS при помощи смс также сообщит, выполнены ли удаленные команды, такие как болюс или изменения профиля. Рекомендуется сделать такую настройку, чтобы подтверждающие тексты направлялись по меньшей мере на два разных телефона на тот случай, если один из них украден.
 * **Если вы подаете болюс через SMS-команды необходимо вводить углеводы через Nightscout (NSClient, сайт...)!** Если вы этого не сделаете, AAPS учтет правильное количество активного инсулина IOB, и будет считать, что активных углеводов COB слишком мало и, вероятно, не будет подавать корректировочный болюс, полагая, что у вас много активного инсулина.
 * As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
+* Your remote device should be protected with strong password or biometrics.
+* Additionally it is recommended to allow a `second phone number <#authorized-phone-numbers>`_ for SMS commands. So you can use second number to `temporary disable <#other>`_ SMS communicator in case your main remote phone gets lost or stolen.
 
 Setup SMS commands
 ==================================================
