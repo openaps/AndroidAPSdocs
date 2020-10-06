@@ -66,7 +66,7 @@ Authenticator setup
    * Enter 4570512020
    
 * Red text "WRONG PIN" will change **automatically** to green "OK" if entry is correct. **There is no button you can press!**
-* Make sure there is no time difference between phones as this might lead to authentication problems.
+* Time on both phones must be synchronized. Bestpractice is automaticaly from network. Time differences might lead to authentication problems.
 * Use button "RESET AUTHENTICATORS" if you want to remove provisions.
 
 Use SMS commands
