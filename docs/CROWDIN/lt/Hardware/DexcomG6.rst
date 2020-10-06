@@ -23,7 +23,7 @@ Jei naudojate G6 su xDrip+
 ==================================================
 * Dexcom G6 siųstuvą galima vienu metu sujungti su Dexcom imtuvu (arba alternatyviai su t:slim pompa) ir mobiliojo telefono programa.
 * Jei naudojate xDrip+ glikemijos duomenims gauti, pirmiausia pašalinkite Dexcom programą. **Negalite vienu metu prijungti xDrip+ ir Dexcom programos prie vieno siųstuvo!**
-* If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
+* Jei jums reikia Clarity programos ir vis tiek norite naudotis xDrip+ aliarmais, jums reikia `modifikuotos Dexcom programos <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ su įjungta lokalaus duomenų perdavimo funkcija į xDrip+.
 * Jei dar to nepadarėte, atsisiųskite xDrip <https://github.com/NightscoutFoundation/xDrip> _ir vykdykite Nightscout instrukcijas (G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>_).
 * Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite xDrip.
 * Pritaikykite xDrip+ nustatymus pagal 'xDrip+ nustatymų puslapį <../Configuration/xdrip.html>`_
@@ -66,7 +66,7 @@ Dexcom G6 specifinių trikčių šalinimas
 
 Bendrųjų trikčių šalinimas
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`_.
+Bendrųjų trikčių šalinimą, skirtą NGJ, galite rasti 'čia <./GeneralCGMRecommendation.html#troubleshooting>`_.
 
 Naujas siųstuvas su veikiančiu sensoriumi
 --------------------------------------------------
