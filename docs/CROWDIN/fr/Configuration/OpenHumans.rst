@@ -38,11 +38,11 @@ Créez votre compte sur `Open Humans <https://www.openhumans.org>`_ si ce n'est 
 5. Lisez attentivement les informations fournies à propos du téléversement Open Humans et les conditions d'utilisation. 
 6. Confirmez en cochant la case et cliquez sur 'CONNEXION'.
 7. Le site web Open Humans sera ouvert. Veuillez vous connecter avec vos identifiants.
-8. Decide whether you want to hide your AndroidAPS Uploader membership in your public Open Humans profile.
+8. Décidez si vous voulez cacher votre abonnement AndroidAPS dans votre profil public Open Humans.
 9. Cliquez sur le bouton 'Authorize project'.
 
 .. image:: ../images/OHUploader2.png
-  :alt: Open Humans Terms of Use + Login
+  :alt: Conditions d'utilisation d'Open Humans + Connexion
 
 10. En retournant à AAPS, vous verrez un message de connexion réussie.
 11. Garder le plugin Open Humans Uploader et le téléphone activés pour que l'installation se termine.
@@ -51,7 +51,7 @@ Créez votre compte sur `Open Humans <https://www.openhumans.org>`_ si ce n'est 
 14. La notification Android vous informera sur le téléversement en cours.
 
 .. image:: ../images/OHUploader3.png
-  :alt: Open Humans finish setup
+  :alt: Open Humans fin de la configuration
 
 15. Vous pouvez gérer vos données en vous connectant sur le `site web Open Humans <https://www.openhumans.org>`_.
 
@@ -62,14 +62,14 @@ Opportunités de partage
 ========================================
 `Le projet 'OPEN' <https://www.open-diabetes.eu/>`_
 ---------------------------------------------------------------------------------------  
-The 'OPEN' project brings together an international and intersectoral consortium of patient innovators, clinicians, social scientists, computer scientists and patient advocacy organizations in order to investigate various aspects of Do-it-Yourself Artificial Pancreas Systems (DIY APS) that are used by an increasing number of people with diabetes. For more details see their `website <https://www.open-diabetes.eu/>`_.
+Le projet "OPEN" rassemble un consortium international et intersectoriel de patients innovateurs, de médecins, de spécialistes des sciences sociales, d'informaticiens et d'organisations de défense des patients afin d'étudier les divers aspects des systèmes de pancréas artificiels à faire soi-même (DIY APS) qui sont utilisés par un nombre croissant de personnes atteintes de diabète. Pour plus de détails, voir leur `site web <https://www.open-diabetes.eu/>`_.
 
 En septembre 2020, le projet 'OPEN' a lancé une `enquête <https://survey.open-diabetes.eu/>`_ incluant l'option de donner des données que vous avez téléchargées sur Open Humans. Un `tutoriel <https://open-diabetes.eu/en/open-survey/survey-tutorials/>`_ comment faire don de vos données au projet 'OPEN' est disponible sur leur site et dans le cadre de l'enquête.
 
 
 `OpenAPS Data Commons <https://www.openhumans.org/activity/openaps-data-commons/>`_
 ---------------------------------------------------------------------------------------  
-The OpenAPS Data Commons was created to enable a simple way to share data sets from the DIYAPS community for research. The data is shared both with traditional researchers who will create traditional research studies, and with groups or individuals from the community who want to review data as part of their own research projects. The OpenAPS Data Commons uses the 'Open Humans' platform to enable people to easily upload and share their data from DIYAPS including AndroidAPS, Loop, and OpenAPS. 
+OpenAPS Data Commons a été créé pour permettre facilement de partager les jeux de données de la communauté DIYAPS pour la recherche. Les données sont partagées à la fois avec des chercheurs traditionnels qui créeront des études de recherche traditionnelles et avec des groupes ou des individus de la communauté qui souhaitent examiner les données dans le cadre de leurs propres projets de recherche. OpenAPS Data Commons utilise la plateforme "Open Humans" pour permettre aux gens de télécharger et de partager facilement leurs données depuis les DIYAPS, y compris AndroidAPS, Loop et OpenAPS. 
 
 Vous pouvez envoyer vos données dans Open Humans par l'un des trois moyens suivants : 
 
@@ -81,14 +81,14 @@ Une fois que vous avez créé un compte et remonté vos données dans Open Human
 
 Conditions d’Utilisation
 ========================================
-This is an open source tool that will copy your data to `Open Humans <https://www.openhumans.org>`_. We retain no rights to share your data with third parties without your explicit authorization. The data the project and app receive are identified via a random user ID and will only be securely transmitted to an Open Humans account with your authorization of that process.
-You can stop uploading and delete your upload data at any time via `www.openhumans.org <https://www.openhumans.org>`_. Beware that some projects that receive data may not support this.
+Ceci est un outil open source qui copiera vos données dans `Open Humans <https://www.openhumans.org>`_. Nous ne nous réservons aucun droit de partager vos données avec des tiers sans votre autorisation explicite. Les données que le projet et l'application reçoivent sont identifiées via un identifiant utilisateur aléatoire et ne seront transmises de manière sécurisée à un compte Open Humans qu'avec votre autorisation.
+Vous pouvez arrêter le téléchargement et supprimer vos données à tout moment via `www.openhumans.org <https://www.openhumans.org>`_. Ayez conscience que certains projets qui reçoivent les données ne le supportent pas.
 
-Also see `Open Humans Terms of Use <https://www.openhumans.org/terms/>`_.
+Voir aussi les `Conditions d'utilisation Open Humans <https://www.openhumans.org/terms/>`_.
 
-Data Privacy
+Protection des données
 ========================================
-Open Humans takes care of protecting your privacy by assigning a numerical ID to you for each project. This allows projects to recognize but no identify you. The Application ID uploaded by AndroidAPS is similar and only helps administrate the data. More information can be found here:
+Open Humans s'occupe de la protection de votre vie privée en vous assignant un identifiant numérique pour chaque projet. Cela permet aux projets de vous reconnaître mais pas vous identifier. L'ID de l'application téléchargé par AndroidAPS est similaire et ne sert qu'à administrer les données. Plus d'informations peuvent être trouvées ici :
 
 * `Règles d'utilisation des données Open Humans <https://www.openhumans.org/data-use/>`_
 * `Open Humans GDPR <https://www.openhumans.org/gdpr/>`_
