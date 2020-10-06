@@ -14,7 +14,7 @@ Kol kas naudodami Libre 1 kaip KG šaltinį, negalite aktyvuoti 'Įjungti SMB vi
 
 Jei naudojate xDrip+
 ==================================================
-* If not already set up then download xDrip+ and follow instructions on `LimiTTEer <https://github.com/JoernL/LimiTTer>`_ or  `Libre Alarm <https://github.com/pimpimmi/LibreAlarm/wiki>`_.
+* Jei dar neįdiegėte, atsisiųskite xDrip+ ir vadovaukitės instrukcijomis `LimiTTEer <https://github.com/JoernL/LimiTTer>`_, `Libre Alarm <https://github.com/pimpimmi/LibreAlarm/wiki>`_.
 * xDrip+ eikite į Settings > Interapp Compatibility > Broadcast Data Locally ir pasirinkite On.
 * xDrip+ eikite į Settings > Interapp Compatibility > Accept Treatments ir pasirinkite Off.
 *Jei norite naudotis AndroidAPS kalibracijoms, xDrip+ eikite į Settings > Interapp Compatibility > Accept Calibrations ir pasirinkite On.  Taip pat galbūt norėsite peržiūrėti kalibravimo parinktis Nustatymuose > Mažiau įprasti nustatymai > išplėstinės kalibravimo parinktys.
