@@ -6,6 +6,8 @@ Bezpieczeństwo
 * AndroidAPS poinformuje Cię również Sms-em, jeśli Twoje polecenia zdalne, takie jak zmiana bolusa lub profilu, zostały wykonane. Zaleca się takie ustawienie funkcji sterowania pompą poprzez sms, aby teksty potwierdzające były wysyłane na co najmniej dwa różne numery telefonów, w przypadku kradzieży jednego z telefonów odbierających drugi telefon odbierze informację o zmianach.
 * **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 * As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
+* Your remote device should be protected with strong password or biometrics.
+* Additionally it is recommended to allow a `second phone number <#authorized-phone-numbers>`_ for SMS commands. So you can use second number to `temporary disable <#other>`_ SMS communicator in case your main remote phone gets lost or stolen.
 
 Setup SMS commands
 == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
@@ -64,7 +66,7 @@ Authenticator setup
    * Enter 4570512020
    
 * Red text "WRONG PIN" will change **automatically** to green "OK" if entry is correct. **There is no button you can press!**
-* Make sure there is no time difference between phones as this might lead to authentication problems.
+* Time on both phones must be synchronized. Best practice is automatically from network. Time differences might lead to authentication problems.
 * Use button "RESET AUTHENTICATORS" if you want to remove provisions.
 
 Use SMS commands

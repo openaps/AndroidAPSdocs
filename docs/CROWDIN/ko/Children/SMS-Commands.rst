@@ -2,7 +2,8 @@ SMS 명령어
 **************************************************
 안전유의사항
 ==================================================
-* AndroidAPS는 SMS 문자를 통해 아이의 폰을 원격으로 조정할 수 있습니다. SMS 통신기를 활성화 했다면, 원격 명령어를 사용하기 위해 설정된 폰(부모폰)이 도난 될 수도 있는 경우도 발생할 수 있다는것을 항상 유념하세요. 따라서 최소한 PIN 코드이상의 보안으로 본인의 폰을 보호하세요.
+* AndroidAPS는 SMS 문자를 통해 아이의 폰을 원격으로 조정할 수 있습니다. SMS 통신기를 활성화 했다면, 원격 명령어를 사용하기 위해 설정된 폰(부모폰)이 도난 될 수도 있는 경우도 발생할 수 있다는것을 항상 유념하세요. 따라서 최소한 PIN 코드이상의 보안으로 본인의 폰을 보호하세요. A strong password or biometrics are recommended.
+* Additionally it is recommended to allow a `second phone number <#authorized-phone-numbers>`_ for SMS commands. So you can use second number to `temporary disable <#other>`_ SMS communicator in case your main remote phone gets lost or stolen.
 * Bolus 혹은 프로파일 변경 등의 원격 명령들이 수행되었다면 AndroidAPS 역시 SMS 문자로 항상 알려줄 것입니다. 수신 폰 중 하나가 도난당한 경우를 대비하여 적어도 2개 이상의 폰에 확인 SMS 문자가 전송될 수 있도록 설정해놓는 것이 좋습니다.
 * **SMS 원격명령을 통해 Bolus를 주입한 경우 Nightscout (NSClient, 웹사이트...)를 통해 탄수화물양을 항상 입력하여야 합니다!** 그러지 않으면 너무 낮은 COB인 상태에서 IOB가 계산될 것이고 AAPS가 당신이 너무 많은 활성 인슐린을 가지고 있다고 가정하게 되기 때문에 적절한 보정 주입이 되지 않을 수 있습니다.
 * As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
@@ -64,7 +65,7 @@ Authenticator setup
    * Enter 4570512020
    
 * Red text "WRONG PIN" will change **automatically** to green "OK" if entry is correct. **There is no button you can press!**
-* Make sure there is no time difference between phones as this might lead to authentication problems.
+* Time on both phones must be synchronized. Best practice is automatically from network. Time differences might lead to authentication problems.
 * Use button "RESET AUTHENTICATORS" if you want to remove provisions.
 
 Use SMS commands

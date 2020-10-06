@@ -110,7 +110,7 @@
  <td>Boucle Fermée</td>
  <td>les systèmes à boucle fermée font les réglages du débit de base automatiquement, sans avoir besoin de l'approbation de l'utilisateur, en se basant sur un algorithme</td>
  <td>Boucle Ouverte</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki - boucle fermée</a></td>
+ <td><a href="../Configuration/Config-Builder.html#boucle-fermee">Wiki - boucle fermée</a></td>
 </tr>
 <tr>
  <td>GA</td>
@@ -206,7 +206,7 @@
  <td>maxIA (maxIOB)</td>
  <td>fonction de sécurité - niveau d'insuline actvie maximal que AAPS ne peut pas dépasser</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#parametres-a-ajuster-lors-du-passage-d-ama-a-smb">Wiki - maxIA</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#parametres-a-ajuster-lors-du-passage-d-ama-a-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>MiaoMiao</td>
@@ -254,7 +254,7 @@
  <td>Boucle Ouverte</td>
  <td>le système proposera des ajustements recommandés qui doivent être effectués manuellement sur la pompe</td>
  <td>Boucle Fermée</td>
- <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - Générateur de configuration</a></td>
+ <td><a href="../Configuration/Config-Builder.html#boucle-ouverte">Wiki - Générateur de configuration</a></td>
 </tr>
 <tr>
  <td>Oref0 / Oref1</td>
@@ -266,7 +266,7 @@
  <td>Temps du pic</td>
  <td>heure de l'effet maximum de l'insuline injectée</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - Générateur de configuration</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insuline">Wiki - Générateur de configuration</a></td>
 </tr>
 <tr>
  <td>HP</td>
@@ -284,7 +284,7 @@
  <td>Profil</td>
  <td>paramètres de traitement (débits de base, DAI, G/I, SI, cible Gly)<br>peuvent être définis localement ou via Nightscout</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profil</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profil">Wiki - profil</a></td>
 </tr>
 <tr>
  <td>Changement de profil</td>

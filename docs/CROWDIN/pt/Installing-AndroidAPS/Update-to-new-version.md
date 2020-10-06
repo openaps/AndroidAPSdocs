@@ -36,7 +36,7 @@ Follow the manual on the [git installation page](../Installing-AndroidAPS/git-in
 
 * Click Pull (no changes in dialog field)
     
-    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02.png)
+    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02a.png)
 
 * Wait while download is in progress.
     

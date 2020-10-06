@@ -106,7 +106,7 @@ When Medtronic driver is selected, 3 possible actions can be added to Actions Ta
 - **Reset RileyLink Config** - If you reset your RileyLink/GNARL, you need to use this action, so that device can be reconfigured (frequency set, frequency type set, encoding configured).
 - **Clear Bolus Block** - When you start bolus, we set Bolus Block, which prevents any commands to be issued to pump. If you suspend your pump and resume (to cancel bolus), you can then remove that block. Option is only there when bolus is running... 
 
-## Important notes
+## Svarbios pastabos
 
 ### OpenAPS users
 

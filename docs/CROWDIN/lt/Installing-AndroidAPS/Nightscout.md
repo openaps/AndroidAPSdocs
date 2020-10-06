@@ -25,7 +25,7 @@ Nuolat atnaujinkite savo telefoną, kaip aprašyta [Pirmiausia saugumas](../Gett
 
 ## Rankinis Nightscout diegimas
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Jūsų Nightscout svetainė turi būti bent versijos 10 (ekrane rodoma 0.10...), todėl prašome patikrinti, ar turite [naujausią versiją](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie), priešingu atveju gausite klaidos pranešimą, jūsų AAPS programoje. Kai kurie žmonės mano, kad uždaras ciklas išnaudoja daugiau vietos, nei azure suteikiama nemokama kvota, todėl heroku laiko geresniu pasirinkimu.
+Manoma, kad jūs jau turite Nightscout svetainę, jei ne, apsilankykite [Nightscout](http://nightscout.github.io/nightscout/new_user/) puslapyje gauti visas diegimo instrukcijas, instrukcijos žemiau reikalingos pridėti nustatymus į jūsų Nightscout puslapį. Jūsų Nightscout svetainė turi būti bent versijos 10 (ekrane rodoma 0.10...), todėl prašome patikrinti, ar turite [naujausią versiją](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie), priešingu atveju gausite klaidos pranešimą, jūsų AAPS programoje. Kai kurie žmonės mano, kad uždaras ciklas išnaudoja daugiau vietos, nei azure suteikiama nemokama kvota, todėl heroku laiko geresniu pasirinkimu.
 
 * Eikite į https://herokuapp.com/
 

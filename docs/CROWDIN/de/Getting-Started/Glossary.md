@@ -206,7 +206,7 @@
  <td>maxIOB</td>
  <td>Sicherheitsfunktion - Wert für maximales aktives Insulin im Körper, der von AAPS nicht überschritten werden kann</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#einstellungen-die-bei-umstellung-von-ama-zu-smb-erforderlich-sind">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#einstellungen-die-bei-umstellung-von-ama-zu-smb-erforderlich-sind">Wiki - maxIOB</a><br><a href="../Configuration/Preferences.html#openaps-smb-einstellungen">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>MiaoMiao</td>
@@ -278,7 +278,7 @@
  <td>Predictions (Vorhersagen)</td>
  <td>Vorhersage der BZ-Werte basierend auf verschiedenen Berechnungsannahmen</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - Vorhersagelinien</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#vorhersage-kurven">Wiki - Vorhersagelinien</a></td>
 </tr>
 <tr>
  <td>Profile</td>

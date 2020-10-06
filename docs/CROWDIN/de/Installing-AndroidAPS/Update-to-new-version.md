@@ -36,7 +36,7 @@ Die Schritt-für-Schritt-Anleitung findest Du auf der Seite zur [git Installatio
 
 * Klicke auf Pull (keine Änderungen im Dialogfeld erforderlich)
     
-    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02.png)
+    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02a.png)
 
 * Warte während der Download läuft.
     
