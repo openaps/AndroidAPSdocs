@@ -66,7 +66,7 @@ Configuration de l'Authentificateur
    * Entrez 4570512020
    
 * Le texte rouge "WRONG PIN" changera **automatiquement** en vert "OK" si l'entrée est correcte. **Il n'y a aucun bouton à appuyer !**
-* Time on both phones must be synchronized. Bestpractice is automaticaly from network. Time differences might lead to authentication problems.
+* Time on both phones must be synchronized. Best practice is automatically from network. Time differences might lead to authentication problems.
 * Utilisez le bouton "RESET AUTHENTICATORS" si vous voulez supprimer les autorisations.
 
 Utiliser les commandes SMS
