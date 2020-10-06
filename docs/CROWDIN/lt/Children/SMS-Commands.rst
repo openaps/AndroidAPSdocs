@@ -66,7 +66,7 @@ Autentifikavimo sąrankos nustatymas
    * Įveskite 4570512020
    
 * Raudonas tekstas „NETEISINGAS PIN“ pasikeis **automatiškai** į žalią „Gerai“, jei įvestis teisinga. **Nėra mygtuko, kurį galėtumėte paspausti! **
-* Time on both phones must be synchronized. Bestpractice is automaticaly from network. Time differences might lead to authentication problems.
+* Time on both phones must be synchronized. Best practice is automatically from network. Time differences might lead to authentication problems.
 * Naudokite mygtuką "RESET AUTHENTICATORS" (Iš naujo nustatyti autentifikatorius), jei norite pašalinti nuostatas.
 
 SMS komandų naudojimas
