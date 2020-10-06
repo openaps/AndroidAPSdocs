@@ -278,7 +278,7 @@
  <td>Predictions (Vorhersagen)</td>
  <td>Vorhersage der BZ-Werte basierend auf verschiedenen Berechnungsannahmen</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - Vorhersagelinien</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#vorhersage-kurven">Wiki - Vorhersagelinien</a></td>
 </tr>
 <tr>
  <td>Profile</td>
