@@ -60,7 +60,7 @@ Möglichkeiten zum Teilen Deiner Daten
 ========================================
 `Das 'OPEN' Projekt <https://open-diabetes.eu/de//>`_
 ---------------------------------------------------------------------------------------  
-Das “OPEN” Projekt besteht aus einem internationalen und bereichsübergreifenden Konsortium, das Patienten-Innovatoren, Kliniker, Sozialwissenschaftler, Informatiker und Patientenorganisationen zusammenführt, um eine Evidenzbasis rund um die Auswirkungen von Do-it-yourself Artificial Pancreas Systemen (DIY APS) auf Menschen mit Diabetes und verschiedene Gesundheitssysteme zu schaffen. Weitere Informationen findest Du auf der `OPEN Website <https://www.open-diabetes.eu/de/>` _.
+Das “OPEN” Projekt besteht aus einem internationalen und bereichsübergreifenden Konsortium, das Patienten-Innovatoren, Kliniker, Sozialwissenschaftler, Informatiker und Patientenorganisationen zusammenführt, um eine Evidenzbasis rund um die Auswirkungen von Do-it-yourself Artificial Pancreas Systemen (DIY APS) auf Menschen mit Diabetes und verschiedene Gesundheitssysteme zu schaffen. Weitere Informationen findest Du auf der `OPEN Website <https://www.open-diabetes.eu/>`_.
 
 Im September 2020 hat das 'OPEN' Projekt einen `Fragebogen <https://survey.open-diabetes.eu/>`_ veröffentlich und damit die Möglichkeit verknüpft, Deine zu Open Humans hochgeladenen Daten an das 'OPEN' Projekt zu spenden. Eine detaillierte `Anleitung <https://open-diabetes.eu/en/open-survey/survey-tutorials/>`_, wie Du Deine Daten teilen kannst ist sowohl im Fragebogen als auch auf der 'OPEN' Webseite verfügbar.
 
