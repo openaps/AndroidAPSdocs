@@ -66,7 +66,7 @@ Konfiguration des Authentifikators
    * Trage 4570512020 ein
    
 * Der rote Text "WRONG PIN" ändert sich **automatisch** in den grünen Text "OK", wenn das Einmal-Passwort korrekt ist. **Es gibt keine Taste, die Du drücken kannst!**
-* Stelle sicher, dass es zwischen den beiden Smartphones keine Zeitdifferenzen gibt, da dies zu Problemen bei der Authentifizierung führen kann.
+* Time on both phones must be synchronized. Bestpractice is automaticaly from network. Time differences might lead to authentication problems.
 * Verwende die Schaltfläche "AUTHENTIKATORS ZURÜCKSETZEN", wenn Du bereits eingerichtete Berechtigungen entfernen möchten.
 
 SMS-Befehle verwenden
