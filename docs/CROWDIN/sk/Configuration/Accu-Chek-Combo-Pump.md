@@ -18,7 +18,7 @@
 * Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.rst) instead).
 * Only one basal profile is supported.
 * Setting a basal profile other than 1 on the pump or delivering extended boluses or multiwave boluses from the pump interferes with TBRs and forces the loop into low-suspend only mode for 6 hours as the the loop can't run safely under these conditions.
-* It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling.html#accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
+* It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling#accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 * Currently only basal rates in the range of 0.05 to 10 U/h are supported. This also applies when modifying a profile, e.g. when increasing to 200%, the highest basal rate must not exceed 5 U/h since it will be doubled. Similarly, when reducing to 50%, the lowest basal rate must be at least 0.10 U/h.
 * If the loop requests a running TBR to be cancelled the Combo will set a TBR of 90% or 110% for 15 minutes instead. This is because cancelling a TBR causes an alert on the pump which causes a lot of vibrations.
 * Occasionally (every couple of days or so) AAPS might fail to automatically cancel a TBR CANCELLED alert, which the user then needs to deal with (by pressing the refresh button in AAPS to transfer the warning to AAPS or confirming the alert on the pump).
@@ -59,7 +59,7 @@
 
 ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
-* Install AndroidAPS as described in the [AndroidAPS docs](../Installing-AndroidAPS/Building-APK.html).
+* Install AndroidAPS as described in the [AndroidAPS docs](../Installing-AndroidAPS/Building-APK.md).
 * Make sure to read the docs to understand how to setup AndroidAPS.
 * Select the **MDI plugin** in AndroidAPS, not the Combo plugin at this point to avoid the Combo plugin from interfering with ruffy during the pairing process.
 * Clone [ruffy](https://github.com/MilosKozak/ruffy) from github via git.
@@ -76,7 +76,7 @@
 
 * If the pump is completely new, you need to **do one bolus on the pump**, so the pump creates a first history entry.
 * Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump.
-* Then activate the [Combo plugin](../Configuration/Config-Builder.html#pump). 
+* Then activate the [Combo plugin](../Configuration/Config-Builder#pump). 
 * Press the *Refresh* button on the Combo tab to initialize the pump.
 * To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus.
 * The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
@@ -113,7 +113,7 @@ There are several possible reasons. Try the following steps:
 * Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. 
 * It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
 * Read the OpenAPS documentation https://openaps.org to understand the loop algorithm AndroidAPS is based upon.
-* Read the [AAPS docs](..index.html) to learn about and understand AndroidAPS.
+* Read the [AAPS docs](https://androidaps.readthedocs.io/en/latest/) to learn about and understand AndroidAPS.
 * This integration uses the same functionality which the meter provides that comes with the Combo.
 * The meter allows to mirror the pump screen and forwards button presses to the pump. 
 * The connection to the pump and this forwarding is what the ruffy app does. 
