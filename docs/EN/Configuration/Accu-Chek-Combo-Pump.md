@@ -112,7 +112,7 @@ There are several possible reasons. Try the following steps:
 * Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. 
 * It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
 * Read the OpenAPS documentation https://openaps.org to understand the loop algorithm AndroidAPS is based upon.
-* Read the [AAPS docs](..index.html) to learn about and understand AndroidAPS.
+* Read the [AAPS docs](https://androidaps.readthedocs.io/en/latest/) to learn about and understand AndroidAPS.
 * This integration uses the same functionality which the meter provides that comes with the Combo.
 * The meter allows to mirror the pump screen and forwards button presses to the pump. 
 * The connection to the pump and this forwarding is what the ruffy app does. 
