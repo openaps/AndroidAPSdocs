@@ -18,7 +18,7 @@
 * Verzögerter Bolus und Multiwave-Bolus werden nicht unterstützt. (Schaue dir [Extended Carbs](../Usage/Extended-Carbs.rst) als Alternative an.)
 * Es wird nur ein Basalprofil unterstützt.
 * Das Setzen mehrerer Basalprofile oder die Abgabe eines verzögerten Bolus oder eines Multiwave-Bolus an der Pumpe stört das Konzept von temporären Basalraten und setzt den Loop für 6 Stunden in einen “low glucose suspend mode”, da unter diesen Umständen keine sichere Funktion des Closed Loops gewährleistet ist.
-* Derzeit kann man Zeit und Datum auf der Pumpe nicht über das Telefon einstellen, [Sommer-/Winterzeit-Umstellungen](../Usage/Timezone-traveling.html#accu-chek-combo) oder Umstellungen andere Zeitzonen müssen daher händisch vorgenommen werden (automatisches einstellen der Uhr des Telefons am Vorabend abstellen erst wieder einstellen, wenn die Uhrzeit auf der Pumpe angepasst wurde).
+* It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling#accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 * Basalraten werden nur im Bereich von 0,05 bis 10 IE/h unterstützt. Dies gilt auch für Anpassungen des Profiles, welche es erlauben, die Basalrate zu verdoppeln oder zu halbieren. Auch in diesem Fall müssen die Grenzwerte eingehalten werden, so dass die Basalrate maximal 5 IE/h sein darf (da nach Verdoppelung 10 IE/h) bzw. minimal 0,1 iE/h (da nach Halbierung 0,05 iE/h).
 * Wenn der Loop eine laufende Basalrate abbrechen will, wird stattdessen die Basalrate für 15 min. auf 90% oder 110% gesetzt. Das ist nötig, weil das Abbrechen der Basalrate auf der Combo Pumpe einen Alarm (W6 TBR Abbruch) auslöst, der durch starke Vibrationen mitgeteilt wird.
 * Manchmal kann es vorkommen, dass AAPS einen W6 TBR Abbruch Alarm nicht selbst quittiert, dann muss der Benutzer die Warnung selbst bestätigen, entweder durch Bestätigen des Alarms auf der Pumpe oder durch den Aktualisiere-Button im Combo Tab die Warnung an AAPS übergeben, damit AAPS die Warnung bestätigen kann.
@@ -59,7 +59,7 @@
 
 ![Screenshot der Insulinreservoir Einstellungen](../images/combo/combo-insulin-settings.png)
 
-* Installiere AndroidAPS wie in den [AndroidAPS Docs](../Installing-AndroidAPS/Building-APK.html) beschrieben.
+* Install AndroidAPS as described in the [AndroidAPS docs](../Installing-AndroidAPS/Building-APK.md).
 * Lies zuerst das Wiki, um zu verstehen, wie AndroidAPS kompiliert und installiert wird.
 * In AndroidAPS solltest du zuerst das **“MDI”-Pumpen-Plugin** aktivieren - und nicht direkt das für die Combo, damit das Combo-Plugin nicht Ruffy während des Pairings (Bluetooth-Verbindungsaufbau) stört.
 * Clone [ruffy](https://github.com/MilosKozak/ruffy) von github mittels git.
@@ -76,7 +76,7 @@
 
 * Ist die Pumpe neu, muss **zuerst ein Bolus auf der Pumpe** abgegeben werden, damit ein erster Bolus-Eintrag auf der Pumpe erstellt wird.
 * Bevor das Combo-Plugin in AndroidAPS aktiviert wird, muss sichergestellt sein, dass das Basalratenprofil korrekt in AndroidAPS eingestellt ist und aktiviert wurde(!), da AndroidAPS das in der Pumpe programmierte Profil mit den eigenen Einstellungen überschreibt.
-* Aktiviere dann das [Combo Plugin](../Configuration/Config-Builder.html#pumpe). 
+* Then activate the [Combo plugin](../Configuration/Config-Builder#pump). 
 * Drücke nun den *Aktualisieren* Button im Combo Tab um die Pumpe zu initialisieren.
 * **Trenne die Pumpe** um die Konfiguration zu prüfen, setze mit AAPS eine TBR von 500% für 15 Min. und gib einen Bolus ab.
 * Die Pumpe sollte nun die TBR anzeigen und einen Bolus-Eintrag in der Historie haben. AAPS sollte ebenfalls die TBR und den Bolus anzeigen.
@@ -113,7 +113,7 @@ Es sind verschiedene Gründe möglich. Versuche die folgenden Schritte:
 * Denke daran, dass es kein Produkt ist, der Benutzer muss besonders am Anfang das System überwachen und seine Beschränkungen verstehen, sowie erkennen, wie es versagen kann. 
 * Es wird dringend empfohlen, dieses System NICHT zu verwenden, wenn die Person, die es benutzt nicht in der Lage ist, es vollständig zu verstehen.
 * Lies die Dokumentation von OpenAPS auf https://openaps.org, um den Loop Algorithmus zu verstehen, auf dem AndroidAPS basiert.
-* Lies die [AAPS Dokumentation](..index.html) um Dich über AndroidAPS zu informieren und es zu verstehen.
+* Read the [AAPS docs](https://androidaps.readthedocs.io/en/latest/) to learn about and understand AndroidAPS.
 * Diese Implementierung verwendet die gleiche Funktionalität, die das Messgerät verwendet, das mit der Combo geliefert wird.
 * Diese Implementierung ermöglicht es, den Bildschirm der Pumpe zu spiegeln und die Betätigung der Vorwärts-Taste an die Pumpe zu senden. 
 * Die ruffy App sorgt für die Verbindung zur Pumpe und ermöglicht diese Weiterleitung der Aktionen. 
