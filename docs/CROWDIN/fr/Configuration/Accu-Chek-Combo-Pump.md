@@ -18,7 +18,7 @@
 * Les bolus étendus et les bolus mixtes ne sont pas pris en charge (voir [Glucides étendus](../Usage/Extended-Carbs.rst) à la place).
 * Seulement un profil de basal est pris en charge.
 * Sélectionner un profil de basal autre que 'Basal1' sur la pompe, ou délivrer via la pompe des bolus 'carré' et 'mixte', interfère avec les DBT et force la boucle en mode 'AGB' pendant 6 heures car la boucle ne peut pas fonctionner en toute sécurité dans ces conditions.
-* Actuellement, il n'est pas possible de régler l'heure et la date de la pompe, donc [les changements d'heure](../Usage/Timezone-traveling.html#accu-chek-combo) doivent être effectués manuellement (vous pouvez désactiver la mise à jour automatique de l'heure du téléphone la veille au soir, puis changer l'heure le matin du téléphone et de la pompe pour éviter une alarme pendant la nuit).
+* It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling#accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 * Actuellement, seuls les débits de basals de 0,05 à 10 U/h sont supportés. Ceci s'applique également lors de la modification du profil, par exemple, lorsqu'il augmente à 200%, le taux basal le plus élevé ne doit pas dépasser 5 U/h car il sera doublé. De même, en réduisant à 50%, le taux basal le plus bas doit être au moins 0,10 U/h.
 * Si la boucle demande l'annulation d'un DBT en cours, le Combo fixera un DBT de 90% ou 110% pendant 15 minutes à la place. C'est parce que l'annulation d'un DBT provoque une alerte sur la pompe qui cause beaucoup de vibrations.
 * Occasionnellement (tous les deux jours ou plus), AndroidAPS risque de ne pas annuler automatiquement une alerte 'TBR CANCELLED', donc l’utilisateur doit s’en occuper (en appuyant sur le bouton actualiser dans AndroidAPS afin de transférer l’alarme à AAPS, ou en confirmant l’alerte sur la pompe).
@@ -59,7 +59,7 @@
 
 ![Capture d'écran des paramètres de cartouche d'insuline](../images/combo/combo-insulin-settings.png)
 
-* Installez AndroidAPS comme décrit dans la [documentation AndroidAPS](../Installing-AndroidAPS/Building-APK.html).
+* Install AndroidAPS as described in the [AndroidAPS docs](../Installing-AndroidAPS/Building-APK.md).
 * Lisez bien la documentation pour comprendre comment configurer AndroidAPS.
 * Sélectionnez le **plugin MDI** dans AndroidAPS, surtout pas le plugin Combo à ce stade afin d'éviter que le plugin Combo n'interfère avec la Ruffy pendant le processus d'appairage.
 * Clonez [ruffy](https://github.com/MilosKozak/ruffy) à partir de github avec git.
@@ -76,7 +76,7 @@
 
 * Si la pompe est complètement nouvelle, vous devez **faire un bolus sur la pompe** pour que celle-ci crée une première entrée dans l'historique.
 * Avant d'activer le plugin Combo dans AAPS, assurez-vous que votre profil est bien configuré et activé(!) et que votre profil de basal est à jour car AAPS synchronisera le profil basal à la pompe.
-* Ensuite, activez le [Plugin Combo](../Configuration/Config-Builder.html#pompe). 
+* Then activate the [Combo plugin](../Configuration/Config-Builder#pump). 
 * Appuyez sur le bouton *Actualiser* dans l'onglet Combo pour initialiser la pompe.
 * Pour vérifier votre configuration, avec la pompe **déconnectée**, utilisez AAPS pour définir un DBT de 500% pendant 15 min et faite un bolus.
 * La pompe doit normalement avoir un DBT en cours et un bolus dans l'historique. AAPS doit aussi de son côté montrer le DBT actif et le bolus délivré.
@@ -113,7 +113,7 @@ Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
 * Gardez à l'esprit qu'il ne s'agit pas d'un produit, en particulier au début, l'utilisateur doit surveiller et comprendre le système, ses limites et comment il peut échouer. 
 * Il est fortement conseillé de NE PAS utiliser ce système lorsque la personne n'est pas en mesure de bien le comprendre entièrement.
 * Lisez la documentation d'OpenAPS https://openaps.org pour comprendre l'algorithme de boucle sur lequel est basé AndroidAPS.
-* Lisez les [docs AAPS](../index.html) pour en savoir plus sur et comprendre AndroidAPS.
+* Read the [AAPS docs](https://androidaps.readthedocs.io/en/latest/) to learn about and understand AndroidAPS.
 * Cette intégration utilise la même fonctionnalité que le lecteur fournit avec le Combo.
 * Le lecteur permet de reproduire l'écran de la pompe et de transférer à la pompe les appuis sur les touches. 
 * La connexion à la pompe et la redirection des boutons est ce que fait l'application Ruffy. 
