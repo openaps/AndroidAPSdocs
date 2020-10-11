@@ -1,5 +1,8 @@
 Actualizaciones y cambios de Documentos
 **************************************************
+October 2020
+==================================================
+* `SMS commands - time sync <../Children/SMS-Commands.html>`_
 September 2020
 ==================================================
 * Major update for new AAPS version 2.7

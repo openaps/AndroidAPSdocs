@@ -1,5 +1,8 @@
 Docs Updates & Änderungen
 **************************************************
+Oktober 2020
+==================================================
+* `SMS Kommandos - Zeitsynchronisation aller Smartphones <../Children/SMS-Commands.html>`_
 September 2020
 ==================================================
 * Großes Update für die neue AAPS Version 2.7

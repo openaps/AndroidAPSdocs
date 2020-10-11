@@ -59,7 +59,7 @@ Komponentų Nustatymas
    
    Glikemijos duomenų šaltiniai <./Configuration/BG-Source.rst>
    xDrip Nustatymai <./Configuration/xdrip.md>
-   Pumpos <./Hardware/pumps.rst>
+   Pompos <./Hardware/pumps.rst>
    Telefonai <./Hardware/Phoneconfig.rst>
    Nightscout nustatymas <./Installing-AndroidAPS/Nightscout.md>
    Išmanieji laikrodžiai <./Hardware/Smartwatch.rst>

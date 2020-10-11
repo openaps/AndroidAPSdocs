@@ -1,5 +1,8 @@
 Mises à jour et modifications de la documentation
 **************************************************
+Octobre 2020
+==================================================
+* `Commandes SMS - Synchronisation de l'heure <../Children/SMS-commands.html>`_
 Septembre 2020
 ==================================================
 * Mise à jour majeure pour la nouvelle version AAPS 2.7

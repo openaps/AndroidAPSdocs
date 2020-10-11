@@ -2,8 +2,8 @@ Commandes SMS
 **************************************************
 La sécurité avant tout
 ==================================================
-* AndroidAPS vous permet de controler le téléphone d’un enfant à distance via un SMS. Si vous activez le Communicateur SMS, rappelez-vous toujours que le téléphone configuré pour donner des commandes distantes pourrait être volé. Donc, toujours le protéger au minimum par un code PIN. A strong password or biometrics are recommended.
-* Additionally it is recommended to allow a `second phone number <#authorized-phone-numbers>`_ for SMS commands. So you can use second number to `temporary disable <#other>`_ SMS communicator in case your main remote phone gets lost or stolen.
+* AndroidAPS vous permet de controler le téléphone d’un enfant à distance via un SMS. Si vous activez le Communicateur SMS, rappelez-vous toujours que le téléphone configuré pour donner des commandes distantes pourrait être volé. Donc, toujours le protéger au minimum par un code PIN. Un mot de passe robuste ou une identification biométrique sont recommandés.
+* Il est également recommandé d'autoriser un `deuxième numéro de téléphone <#numero-de-tel-autorises>`_ pour les commandes SMS. Vous pouvez donc utiliser le deuxième numéro pour `désactiver temporairement <#autres>`_ la communication SMS dans le cas où votre téléphone principal serait perdu ou volé.
 * AndroidAPS vous informera également par SMS si vos commandes distantes, comme un bolus ou un changement de profil, ont été effectuées. Il est conseillé de le configurer de sorte que les SMS de confirmation soient envoyés à au moins deux numéros de téléphone différents au cas où l'un des téléphones destinataires serait volé.
 * **Si vous faites un bolus au moyen de commandes SMS, vous devez entrer les glucides par Nightscout (NSClient, site Web ...) !** Si vous ne le faites pas, l'IA serait correct mais le GA serait lui trop faible pouvant conduire à ne pas effectuer de bolus de correction car AAPS estimerait que vous avez trop d'insuline active.
 * Depuis AndroidAPS version 2.7, une application d'authentification avec un mot de passe à usage unique basé sur l'heure doit être utilisé pour augmenter la sécurité lors de l'utilisation de commandes SMS.
@@ -65,7 +65,7 @@ Configuration de l'Authentificateur
    * Entrez 4570512020
    
 * Le texte rouge "WRONG PIN" changera **automatiquement** en vert "OK" si l'entrée est correcte. **Il n'y a aucun bouton à appuyer !**
-* Time on both phones must be synchronized. Best practice is automatically from network. Time differences might lead to authentication problems.
+* L'heure des deux téléphones doit être synchronisée. Les mieux est de synchroniser l'heure automatiquement à partir du réseau. Les différences d'heures peuvent entraîner des problèmes d'authentification.
 * Utilisez le bouton "RESET AUTHENTICATORS" si vous voulez supprimer les autorisations.
 
 Utiliser les commandes SMS

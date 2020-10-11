@@ -18,7 +18,7 @@
 * Verzögerter Bolus und Multiwave-Bolus werden nicht unterstützt. (Schaue dir [Extended Carbs](../Usage/Extended-Carbs.rst) als Alternative an.)
 * Es wird nur ein Basalprofil unterstützt.
 * Das Setzen mehrerer Basalprofile oder die Abgabe eines verzögerten Bolus oder eines Multiwave-Bolus an der Pumpe stört das Konzept von temporären Basalraten und setzt den Loop für 6 Stunden in einen “low glucose suspend mode”, da unter diesen Umständen keine sichere Funktion des Closed Loops gewährleistet ist.
-* Derzeit kann man Zeit und Datum auf der Pumpe nicht über das Telefon einstellen, [Sommer-/Winterzeit-Umstellungen](../Usage/Timezone-traveling.html#accu-chek-combo) oder Umstellungen andere Zeitzonen müssen daher händisch vorgenommen werden (automatisches einstellen der Uhr des Telefons am Vorabend abstellen erst wieder einstellen, wenn die Uhrzeit auf der Pumpe angepasst wurde).
+* Derzeit kann man Zeit und Datum auf der Pumpe nicht über das Telefon einstellen, [Sommer-/Winterzeit-Umstellungen](../Usage/Timezone-traveling#accu-chek-combo) oder Umstellungen andere Zeitzonen müssen daher händisch vorgenommen werden (automatisches einstellen der Uhr des Telefons am Vorabend abstellen erst wieder einstellen, wenn die Uhrzeit auf der Pumpe angepasst wurde).
 * Basalraten werden nur im Bereich von 0,05 bis 10 IE/h unterstützt. Dies gilt auch für Anpassungen des Profiles, welche es erlauben, die Basalrate zu verdoppeln oder zu halbieren. Auch in diesem Fall müssen die Grenzwerte eingehalten werden, so dass die Basalrate maximal 5 IE/h sein darf (da nach Verdoppelung 10 IE/h) bzw. minimal 0,1 iE/h (da nach Halbierung 0,05 iE/h).
 * Wenn der Loop eine laufende Basalrate abbrechen will, wird stattdessen die Basalrate für 15 min. auf 90% oder 110% gesetzt. Das ist nötig, weil das Abbrechen der Basalrate auf der Combo Pumpe einen Alarm (W6 TBR Abbruch) auslöst, der durch starke Vibrationen mitgeteilt wird.
 * Manchmal kann es vorkommen, dass AAPS einen W6 TBR Abbruch Alarm nicht selbst quittiert, dann muss der Benutzer die Warnung selbst bestätigen, entweder durch Bestätigen des Alarms auf der Pumpe oder durch den Aktualisiere-Button im Combo Tab die Warnung an AAPS übergeben, damit AAPS die Warnung bestätigen kann.
@@ -59,7 +59,7 @@
 
 ![Screenshot der Insulinreservoir Einstellungen](../images/combo/combo-insulin-settings.png)
 
-* Installiere AndroidAPS wie in den [AndroidAPS Docs](../Installing-AndroidAPS/Building-APK.html) beschrieben.
+* Installiere AndroidAPS wie in den [AndroidAPS Docs](../Installing-AndroidAPS/Building-APK.md) beschrieben.
 * Lies zuerst das Wiki, um zu verstehen, wie AndroidAPS kompiliert und installiert wird.
 * In AndroidAPS solltest du zuerst das **“MDI”-Pumpen-Plugin** aktivieren - und nicht direkt das für die Combo, damit das Combo-Plugin nicht Ruffy während des Pairings (Bluetooth-Verbindungsaufbau) stört.
 * Clone [ruffy](https://github.com/MilosKozak/ruffy) von github mittels git.
@@ -113,7 +113,7 @@ Es sind verschiedene Gründe möglich. Versuche die folgenden Schritte:
 * Denke daran, dass es kein Produkt ist, der Benutzer muss besonders am Anfang das System überwachen und seine Beschränkungen verstehen, sowie erkennen, wie es versagen kann. 
 * Es wird dringend empfohlen, dieses System NICHT zu verwenden, wenn die Person, die es benutzt nicht in der Lage ist, es vollständig zu verstehen.
 * Lies die Dokumentation von OpenAPS auf https://openaps.org, um den Loop Algorithmus zu verstehen, auf dem AndroidAPS basiert.
-* Lies die [AAPS Dokumentation](..index.html) um Dich über AndroidAPS zu informieren und es zu verstehen.
+* Lies die [AAPS Dokumentation](https://androidaps.readthedocs.io/en/latest/CROWDIN/de/index.html) um Dich über AndroidAPS zu informieren und es zu verstehen.
 * Diese Implementierung verwendet die gleiche Funktionalität, die das Messgerät verwendet, das mit der Combo geliefert wird.
 * Diese Implementierung ermöglicht es, den Bildschirm der Pumpe zu spiegeln und die Betätigung der Vorwärts-Taste an die Pumpe zu senden. 
 * Die ruffy App sorgt für die Verbindung zur Pumpe und ermöglicht diese Weiterleitung der Aktionen. 
