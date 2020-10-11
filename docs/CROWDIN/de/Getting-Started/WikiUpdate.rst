@@ -1,6 +1,6 @@
 Docs Updates & Änderungen
 **************************************************
-October 2020
+Oktober 2020
 ==================================================
 * `SMS Kommandos - Zeitsynchronisation aller Smartphones <../Children/SMS-Commands.html>`_
 September 2020
