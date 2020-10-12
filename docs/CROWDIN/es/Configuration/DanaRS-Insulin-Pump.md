@@ -13,65 +13,62 @@
 * Seleccione Menú pulsando los 3 puntos en la parte superior derecha. Seleccione preferencias.
 
 * Select DanaRS Pair New Pump, and click your DanaRS serial number.
-  
-  ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
+    
+    ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
 
 * Select Pump password and input your password.
 
 ### Default password
 
-     * For DanaRS with firmware v1 and v2 the default password is 1234.
-     * For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). Open main menu on pump > review > information. Number 3 is production date.
-    
+* For DanaRS with firmware v1 and v2 the default password is 1234.
+* For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). Open main menu on pump > review > information. Number 3 is production date.
 
 * **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
-  
-  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+    
+    ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
 * Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
 
 * Restart your phone.
-
 * Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
-
 * Habilitar bolos extendidos en bomba
 
 ## Change password on pump
 
 * Press OK button on pump
 * In main menu select "OPTION" (move right by pressing arrow button several times)
-  
-  ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
+    
+    ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
 
 * In options menu select "USER OPTION"
-  
-  ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
+    
+    ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
 
 * Use arrow button to scroll down to "11. password"
-  
-  ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
+    
+    ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
 
 * Press OK to enter old password.
 
 * Enter **old password** (Default password see [above](#default-password)) and press OK
-  
-  ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
+    
+    ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
 
 * If wrong password is entered here there will be no message indicating failure!
 
 * Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
-  
-  ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
+    
+    ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
 
 * Confirm with OK button.
 
 * Save by pressing OK button again.
-  
-  ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
+    
+    ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
 
 * Move down to "14. EXIT" and press OK button.
-  
-  ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
+    
+    ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
 
 ## Dana RS specific errors
 
@@ -90,23 +87,13 @@ En caso de que la conexión entre la AAPS y Dana RS se pierde durante la infusi�
 
 Al cambiar a un teléfono nuevo, los siguientes pasos son necesarios:
 
-* **Export settings** on your old phone
-  
-  * Hamburger menu (top left corner of screen)
-  * Mantenimiento
-  * Exportar ajustes
+* [Export settings](../Usage/ExportImportSettings.html#export-settings) on your old phone
+* Transfer settings from old to new phone
+* **Manually pair** Dana RS with the new phone
     
-    ![AAPS export settings](../images/AAPS_ExportSettings.png)
-
-* **Transfer** settings from old to new phone
-
-* **Manually pair** Dana RS with the new phone 
-  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
-* **Install AndroidAPS** on the new phone.
-* **Importar ajustes** on your new phone 
-  * Hamburger menu (top left corner of screen)
-  * Mantenimiento
-  * Importar ajustes
+    * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
+* Install AndroidAPS on the new phone.
+* [Import settings](../Usage/ExportImportSettings.html#import-settings) on your new phone
 
 ## Timezone traveling with Dana RS pump
 
