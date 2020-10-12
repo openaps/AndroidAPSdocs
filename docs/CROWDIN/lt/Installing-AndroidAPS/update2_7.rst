@@ -61,4 +61,4 @@ Danos RS slaptažodžio nustatymas (jei naudojate Dana RS)
 .. image:: ../images/DanaRSPW.png
   :alt: Nustatyti Dana RS slaptažodį
   
-To change password on Dana RS follow instructions on `DanaRS page <../Configuration/DanaRS-Insulin-Pump.md#change-password-on-pump>`_.
+To change password on Dana RS follow instructions on `DanaRS page <../Configuration/DanaRS-Insulin-Pump.html#change-password-on-pump>`_.
