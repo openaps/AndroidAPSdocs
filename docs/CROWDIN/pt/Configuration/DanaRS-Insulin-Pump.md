@@ -6,6 +6,8 @@
 
 * In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
 
+## Pairing pump
+
 * In AndroidAPS go to Config Builder and select 'DanaRS'
 
 * Select Menu by tapping the 3 dots in the top right. Seleccione Preferências.
@@ -15,9 +17,18 @@
   ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
 
 * Select Pump password and input your password.
-  
-  * For DanaRS with firmware v1 and v2 the default password is 1234.
-  * For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> On your pump open main menu -> review -> information. Não. 3 is production date.
+
+### Default password
+
+     * For DanaRS with firmware v1 and v2 the default password is 1234.
+     * For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). 
+    
+        a. On your pump open main menu 
+    
+        b. review 
+    
+        c. information. Não. 3 is production date.
+    
 
 * **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
   
@@ -31,9 +42,46 @@
 
 * Habilitar bolus estendido na bomba
 
+## Change password on pump
+
+* Press OK button on pump
+* In main menu select "OPTION" (move right by pressing arrow button several times)
+  
+  ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
+
+* In options menu select "USER OPTION"
+  
+  ![DanaRS Main Menu](../images/DanaRSPW_02_OptionMenu.png)
+
+* Use arrow button to scroll down to "11. password"
+  
+  ![DanaRS Main Menu](../images/DanaRSPW_03_11PW.png)
+
+* Press OK to enter old password.
+
+* Enter **old password** (Default password see [above](#default-password)) and press OK
+  
+  ![DanaRS Main Menu](../images/DanaRSPW_04_11PWenter.png)
+
+* If wrong password is entered here there will be no message indicating failure!
+
+* Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
+  
+  ![DanaRS Main Menu](../images/DanaRSPW_05_PWnew.png)
+
+* Confirm with OK button.
+
+* Save by pressing OK button again.
+  
+  ![DanaRS Main Menu](../images/DanaRSPW_06_PWnewSave.png)
+
+* Move down to "14. EXIT" and press OK button.
+  
+  ![DanaRS Main Menu](../images/DanaRSPW_07_Exit.png)
+
 ## Dana RS specific errors
 
-### Erro durante a entrega de insulina
+### Error during insulin delivery
 
 In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
@@ -58,10 +106,10 @@ When switching to a new phone the following steps are neccessary:
 
 * **Transfer** settings from old to new phone
 
-* **Emparelhamento manual** Dana RS com o novo telefone 
+* **Manually pair** Dana RS with the new phone 
   * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
 * **Install AndroidAPS** on the new phone.
-* **Importar configurações** no seu novo telefone 
+* **Importar configurações** on your new phone 
   * Hamburger menu (top left corner of screen)
   * Manutenção
   * Importar configurações
