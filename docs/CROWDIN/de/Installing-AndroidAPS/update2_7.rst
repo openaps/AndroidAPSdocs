@@ -56,9 +56,9 @@ Pumpen-Passwort für Dana RS setzen (wenn Dana RS verwendet wird)
 * Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 * Scrolle nach unten und klicke das Dreieck neben "Dana RS".
 * Klicke auf "Pumpen-Passwort (nur v1)".
-* Enter pump password (`Default password <../Configuration/DanaRS-Insulin-Pump.html#default-password>`_ is different depending on firmware version) and click OK.
+* Gib das Passwort der Pumpe ein (`Standard-Passwort <../Configuration/DanaRS-Insulin-Pump.html#standard-passwort>`_ unterscheidet sich je nach Firmware Version) und klicke OK.
 
 .. image:: ../images/DanaRSPW.png
   :alt: Dana RS Passwort setzen
   
-To change password on Dana RS follow instructions on `DanaRS page <../Configuration/DanaRS-Insulin-Pump.md#change-password-on-pump>`_.
+To change password on Dana RS follow instructions on `DanaRS page <../Configuration/DanaRS-Insulin-Pump.html#change-password-on-pump>`_.
