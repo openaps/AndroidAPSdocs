@@ -113,7 +113,7 @@ Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
 * Gardez à l'esprit qu'il ne s'agit pas d'un produit, en particulier au début, l'utilisateur doit surveiller et comprendre le système, ses limites et comment il peut échouer. 
 * Il est fortement conseillé de NE PAS utiliser ce système lorsque la personne n'est pas en mesure de bien le comprendre entièrement.
 * Lisez la documentation d'OpenAPS https://openaps.org pour comprendre l'algorithme de boucle sur lequel est basé AndroidAPS.
-* Read the [AAPS docs](https://androidaps.readthedocs.io/en/latest/) to learn about and understand AndroidAPS.
+* Lisez les [docs AAPS](https://androidaps.readthedocs.io/en/latest/CROWDIN/fr/) pour en savoir plus et comprendre AndroidAPS.
 * Cette intégration utilise la même fonctionnalité que le lecteur fournit avec le Combo.
 * Le lecteur permet de reproduire l'écran de la pompe et de transférer à la pompe les appuis sur les touches. 
 * La connexion à la pompe et la redirection des boutons est ce que fait l'application Ruffy. 
