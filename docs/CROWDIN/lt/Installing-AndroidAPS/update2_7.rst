@@ -56,19 +56,9 @@ Danos RS slaptažodžio nustatymas (jei naudojate Dana RS)
 * Atidarykite Nustatymus (trijų taškų meniu dešinėje viršutinėje ekrano pusėje)
 * Slinkite žemyn ir spustelėkite trikampį šalia "Dana RS".
 * Paspauskite "Pompos slaptažodis (tik v1)"
-* Įveskite pompos slaptažodį (Numatytasis slaptažodis yra 1234) ir spustelėkite Gerai.
+* Enter pump password (`Default password <../Configuration/DanaRS-Insulin-Pump.html#default-password>`_ is different depending on firmware version) and click OK.
 
 .. image:: ../images/DanaRSPW.png
   :alt: Nustatyti Dana RS slaptažodį
   
-Norėdami pakeisti slaptažodį Dana RS pompoje:
-
-* paspauskite OK mygtuką pompoje
-* Pagrindiniame meniu pasirinkite „OPTION“ (judėkite dešinėn kelis kartus paspausdami rodyklės mygtuką)
-* Meniu Parinktys pasirinkite „USER OPTION“
-* Rodyklės mygtuku slinkite žemyn iki "11. password"
-* Įveskite senąjį slaptažodį (Numatytasis slaptažodis yra 1234)
-* Įveskite naują slaptažodį (Keiskite numerius mygtukais + ir - / Perkelkite į dešinę rodyklės mygtuku).
-* Patvirtinkite paspausdami OK mygtuką.
-* Išsaugokite spausdami OK mygtuką dar kartą.
-* Pereikite žemyn į „14. EXIT" ir paspauskite OK mygtuką.
+To change password on Dana RS follow instructions on `DanaRS page <../Configuration/DanaRS-Insulin-Pump.md#change-password-on-pump>`_.
