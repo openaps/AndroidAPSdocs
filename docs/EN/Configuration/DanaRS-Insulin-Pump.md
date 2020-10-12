@@ -6,6 +6,8 @@ _These instructions are for configuring the app and your pump if you have a Dana
 
 *  In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
 
+## Pairing pump
+
 *  In AndroidAPS go to Config Builder and select 'DanaRS'
 
 *  Select Menu by tapping the 3 dots in the top right. Select Preferences.
@@ -16,8 +18,16 @@ _These instructions are for configuring the app and your pump if you have a Dana
 
 *  Select Pump password and input your password.
 
+### Default password
+
    * For DanaRS with firmware v1 and v2 the default password is 1234.
-   * For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> On your pump open main menu -> review -> information. No. 3 is production date.
+   * For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). 
+   
+      a. On your pump open main menu 
+      
+      b. review 
+      
+      c. information. No. 3 is production date.
 
 * **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
 
@@ -31,6 +41,41 @@ _These instructions are for configuring the app and your pump if you have a Dana
 
 * Enable extended boluses on pump
 
+
+## Change password on pump
+
+* Press OK button on pump
+* In main menu select "OPTION" (move right by pressing arrow button several times)
+
+   ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
+
+* In options menu select "USER OPTION"
+
+   ![DanaRS Main Menu](../images/DanaRSPW_02_OptionMenu.png)
+   
+* Use arrow button to scroll down to "11. password"
+
+   ![DanaRS Main Menu](../images/DanaRSPW_03_11PW.png)
+   
+* Press OK to enter old password.
+
+* Enter **old password** (Default password see [above](#default-password)) and press OK
+
+   ![DanaRS Main Menu](../images/DanaRSPW_04_11PWenter.png)
+
+* If wrong password is entered here there will be no message indicating failure!
+* Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
+
+   ![DanaRS Main Menu](../images/DanaRSPW_05_PWnew.png)
+   
+* Confirm with OK button.
+* Save by pressing OK button again.
+
+   ![DanaRS Main Menu](../images/DanaRSPW_06_PWnewSave.png)
+   
+* Move down to "14. EXIT" and press OK button.
+
+   ![DanaRS Main Menu](../images/DanaRSPW_07_Exit.png)
 
 ## Dana RS specific errors
 
