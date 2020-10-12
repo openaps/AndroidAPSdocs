@@ -56,7 +56,7 @@ Définir le mot de passe de la pompe Dana RS (si vous utilisez une Dana RS)
 * Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
 * Faites défiler vers le bas et cliquez sur triangle à côté de " Dana RS ".
 * Cliquez sur " Mot de passe pompe (v1 uniquement) "
-* Enter pump password (`Default password <../Configuration/DanaRS-Insulin-Pump.html#default-password>`_ is different depending on firmware version) and click OK.
+* Entrez le mot de passe de la pompe (Le `mot de passe par défaut <../Configuration/DanaRS-Insulin-Pump.html#mot-de-passe-par-defaut>`_ est différent selon la version du firmware) et cliquez sur OK.
 
 .. image:: ../images/DanaRSPW.png
   :alt: Définir le mot de passe Dana RS
