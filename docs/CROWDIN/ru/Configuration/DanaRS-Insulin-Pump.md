@@ -4,20 +4,25 @@
 
 **New Dana RS firmware v3 can be used from AndroidAPS version 2.7 onwards.**
 
-* В помпе DanaRS приложением используется переменная "BASAL A". Существующие данные перезаписываются.
+* In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
 
-* В AndroidAPS перейдите в Конфигуратор и выберите 'DanaRS'
+## Pairing pump
+
+* In AndroidAPS go to Config Builder and select 'DanaRS'
 
 * Выберите меню, нажав на 3 точки в правом верхнем углу. Выберите Настройки.
 
-* Выберите Соединиться с новой помпой и нажмите на серийный номер вашей DanaRS.
+* Select DanaRS Pair New Pump, and click your DanaRS serial number.
   
-  ![Сопряжение AAPS с Dana RS](../images/AAPS_DanaRSPairing.png)
+  ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
 
 * Select Pump password and input your password.
-  
-  * For DanaRS with firmware v1 and v2 the default password is 1234.
-  * For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). ==> On your pump open main menu -> review -> information. Нет. 3 is production date.
+
+### Default password
+
+     * For DanaRS with firmware v1 and v2 the default password is 1234.
+     * For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). Open main menu on pump > review > information. Number 3 is production date.
+    
 
 * **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
   
@@ -31,41 +36,78 @@
 
 * Активируйте удлиненные болюсы на помпе
 
-## Специфические ошибки Dana RS
+## Change password on pump
 
-### Ошибка во время подачи инсулина
+* Press OK button on pump
+* In main menu select "OPTION" (move right by pressing arrow button several times)
+  
+  ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
+
+* In options menu select "USER OPTION"
+  
+  ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
+
+* Use arrow button to scroll down to "11. password"
+  
+  ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
+
+* Press OK to enter old password.
+
+* Enter **old password** (Default password see [above](#default-password)) and press OK
+  
+  ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
+
+* If wrong password is entered here there will be no message indicating failure!
+
+* Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
+  
+  ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
+
+* Confirm with OK button.
+
+* Save by pressing OK button again.
+  
+  ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
+
+* Move down to "14. EXIT" and press OK button.
+  
+  ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
+
+## Dana RS specific errors
+
+### Error during insulin delivery
 
 В случае, если связь между AAPS и Dana RS теряется во время подачи болюса (например вы отошли от телефона когда дана RS подает инсулин) вы увидите сообщение и услышите сигнал.
 
 ![Оповещение - подача инсулина](../images/DanaRS_Error_bolus.png)
 
-* В большинстве случаев это просто проблема связи и нужное количество инсулина все равно подается.
-* Проверьте в истории помпы (либо на помпе, либо через вкладку Dana > история помпы> болюс), был ли подан правильный болюс.
+* In most cases this is just a communication issue and the correct amount of insulin is delivered.
+* Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
 * Delete error entry in [treatments tab](../Getting-Started/Screenshots#carb-correction) if you wish.
-* Реальный объем читается и записывается при следующем подключении. Чтобы принудительно выполнить действие, нажмите на иконку BT на вкладке Dana или просто подождите следующего подключения.
+* Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
 
-## Отдельное замечание при смене телефона
+## Special note when switching phone
 
 При переходе на новый телефон необходимы следующие шаги:
 
-* Выполнить **Экспорт настроек** на вашем старом телефоне
+* **Export settings** on your old phone
   
-  * Сэндвич-меню (в верхнем левом углу экрана)
+  * Hamburger menu (top left corner of screen)
   * Тех. обслуживание
   * Экспорт настроек
     
-    ![Экспорт настроек AAPS](../images/AAPS_ExportSettings.png)
+    ![AAPS export settings](../images/AAPS_ExportSettings.png)
 
-* **Перенос настроек** со старого на новый телефон
+* **Transfer** settings from old to new phone
 
-* **Вручную выполните сопряжение** Dana RS с новым телефоном 
-  * Поскольку настройки подключения помпы также переносятся новый телефон, AAPS на новом телефоне уже будет "знать" помпу и не запустит сканирование bluetooth. Поэтому новый телефон и помпа должны сопрягатся вручную.
-* **Установите AndroidAPS** на новом телефоне.
-* **Выполните импорт настроек** на вашем новом телефоне 
-  * Сэндвич-меню (в верхнем левом углу экрана)
+* **Manually pair** Dana RS with the new phone 
+  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
+* **Install AndroidAPS** on the new phone.
+* **Выполните импорт настроек** on your new phone 
+  * Hamburger menu (top left corner of screen)
   * Тех. обслуживание
-  * Импорт настроек
+  * Выполните импорт настроек
 
-## Пересечение часовых поясов с помпой Dana RS
+## Timezone traveling with Dana RS pump
 
 Информацию о пересечении часовых поясов см. в разделе [Пересечение часовых поясов с помпами](../Usage/Timezone-traveling#danarv2-danars).
