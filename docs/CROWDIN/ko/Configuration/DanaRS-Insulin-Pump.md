@@ -45,33 +45,33 @@
 
 * In options menu select "USER OPTION"
   
-  ![DanaRS Main Menu](../images/DanaRSPW_02_OptionMenu.png)
+  ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
 
 * Use arrow button to scroll down to "11. password"
   
-  ![DanaRS Main Menu](../images/DanaRSPW_03_11PW.png)
+  ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
 
 * Press OK to enter old password.
 
 * Enter **old password** (Default password see [above](#default-password)) and press OK
   
-  ![DanaRS Main Menu](../images/DanaRSPW_04_11PWenter.png)
+  ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
 
 * If wrong password is entered here there will be no message indicating failure!
 
 * Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
   
-  ![DanaRS Main Menu](../images/DanaRSPW_05_PWnew.png)
+  ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
 
 * Confirm with OK button.
 
 * Save by pressing OK button again.
   
-  ![DanaRS Main Menu](../images/DanaRSPW_06_PWnewSave.png)
+  ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
 
 * Move down to "14. EXIT" and press OK button.
   
-  ![DanaRS Main Menu](../images/DanaRSPW_07_Exit.png)
+  ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
 
 ## Dana RS specific errors
 
