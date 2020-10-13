@@ -8,10 +8,11 @@
 
 * Wenn eine neue Version erscheint, führe bitte so bald als möglich ein Update durch. Ein [Hinweis auf dem AndroidAPS Startbildschirm](../Installing-AndroidAPS/Releasenotes#release-notes) informiert über die neue Version.
 * Ab Version 2.3 muss für das Update git genutzt werden. Ein Update mittels ZIP-File ist nicht mehr möglich.
-* Nutze bitte [Android Studio Version 4.0.1](https://developer.android.com/studio/) oder neuer, um die APK-Datei zu erstellen.
+* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.html).
+* Please use [Android Studio Version 4.0.1](https://developer.android.com/studio/) or newer to build the apk.
 * [Windows 10 32-bit Systeme](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) werden bei Android Studio 4.0.1 nicht unterstützt.
-* Wenn Du xDrip verdwendet, stelle sicher, dass [identifiziere Empfänger](../Configuration/xdrip#identifiziere-empfanger) gesetzt ist.
-* Wenn Du den Dexcom G6 mit der [gepatchted Dexcom app](../Hardware/DexcomG6#g6-mit-der-gepatchten-dexcom-app) verwendest, dann musst Du die Version aus dem [2.4 Verzeichnis](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) installiert haben.
+* If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
+* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Kurzanleitung für erfahrene Anwender
 
@@ -30,21 +31,22 @@ Die Schritt-für-Schritt-Anleitung findest Du auf der Seite zur [git Installatio
 
 ## Führe ein Update deiner lokalen Version durch
 
-* Klicke: VCS -> Git -> Pull
+* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.html).
+* Click: VCS -> Git -> Pull
     
     ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
 
-* Klicke auf Pull (keine Änderungen im Dialogfeld erforderlich)
+* Click Pull (no changes in dialog field)
     
     ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02a.png)
 
-* Warte während der Download läuft.
+* Wait while download is in progress.
     
-    ![Android Studio - Pull in Bearbeitung](../images/AndroidStudio361_Update03.png)
+    ![Android Studio - Pull in progress](../images/AndroidStudio361_Update03.png)
 
-* Nach erfolgreichem Update der lokalen Dateien zeigt Android Studio "all files are up-to-date" an.
+* When done Android Studio will inform you that "all files are up-to-date".
     
-    ![Alle Dateien sind auf dem neuesten Stand.](../images/AndroidStudio361_Update04.png)
+    ![All files up to date](../images/AndroidStudio361_Update04.png)
 
 ## Signierte APK erstellen (Generate signed APK)
 
