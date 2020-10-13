@@ -8,10 +8,11 @@
 
 * Пожалуйста, обновите приложение сразу же после выхода новой версии. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes#release-notes) about the new version.
 * Начиная с версии 2.3 для обновления требуется использовать git. Обновление с zip-файла больше не работает.
+* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
 * Please use [Android Studio Version 4.0.1](https://developer.android.com/studio/) or newer to build the apk.
 * [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.0.1.
-* Если вы используете xDrip, [identify the receiver](../Configuration/xdrip#identify-receiver).
-* Если вы используете Dexcom G6 с модифицированным приложением [Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) вам понадобится версия из папки [2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
+* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Пошаговая инструкция для опытных пользователей
 
@@ -30,21 +31,22 @@
 
 ## Обновите свою локальную копию
 
-* Выберите: VCS-> Git-> Pull
+* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.html).
+* Click: VCS -> Git -> Pull
     
-    ![Android Studio-GIT-Pull](../images/AndroidStudio361_Update01.png)
+    ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
 
-* Нажмите кнопку Pull (без изменений в диалоговом окне)
+* Click Pull (no changes in dialog field)
     
-    ![Android Studio-GIT-Pull 2](../images/AndroidStudio361_Update02a.png)
+    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02a.png)
 
-* Подождите, пока выполняется загрузка.
+* Wait while download is in progress.
     
-    ![Android Studio-извлечение выполняется](../images/AndroidStudio361_Update03.png)
+    ![Android Studio - Pull in progress](../images/AndroidStudio361_Update03.png)
 
-* По завершении Android Studio сообщит вам, что "все файлы актуальны".
+* When done Android Studio will inform you that "all files are up-to-date".
     
-    ![Все файлы в актуальном состоянии](../images/AndroidStudio361_Update04.png)
+    ![All files up to date](../images/AndroidStudio361_Update04.png)
 
 ## Создание подписанного APK
 
