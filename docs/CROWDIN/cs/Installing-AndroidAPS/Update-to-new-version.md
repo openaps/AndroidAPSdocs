@@ -8,10 +8,11 @@
 
 * Aktualizujte co nejdříve, jakmile bude k dispozici nová verze. O nové verzi budete [informování na domovské obrazovce AndroidAPS](../Installing-AndroidAPS/Releasenotes#release-notes).
 * Od verze 2.3 je potřeba pro aktualizaci použít git. Aktualizace pomocí zip souboru již nefunguje.
+* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
 * Please use [Android Studio Version 4.0.1](https://developer.android.com/studio/) or newer to build the apk.
 * [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.0.1.
-* Používáte-li xDrip, ujistěte se, že máte zapnutou volbu [Identify receiver](../Configuration/xdrip#identify-receiver).
-* Používáte-li Dexcom G6 [ s upravenou Dexcom aplikací ](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app), musíte si stáhnout verzi z adresáře [ 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
+* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Rychlý postup pro pokročilé uživatele
 
@@ -30,21 +31,22 @@ Postupujte podle návodu na [stránka instalace gitu](../Installing-AndroidAPS/g
 
 ## Aktualizace lokální kopie
 
-* Klikněte na: VCS -> Git -> Pull
+* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.html).
+* Click: VCS -> Git -> Pull
     
     ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
 
-* Klikněte na možnost Pull (žádné změny v dialogovém okně)
+* Click Pull (no changes in dialog field)
     
     ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02a.png)
 
-* Počkejte, dokud se stahování nedokončí.
+* Wait while download is in progress.
     
-    ![Android Studio – probíhá stahování](../images/AndroidStudio361_Update03.png)
+    ![Android Studio - Pull in progress](../images/AndroidStudio361_Update03.png)
 
-* Jakmile bude stahování dokončeno, Android Studio vás bude informovat hlášením "all files are up-to-date".
+* When done Android Studio will inform you that "all files are up-to-date".
     
-    ![Všechny soubory jsou aktuální](../images/AndroidStudio361_Update04.png)
+    ![All files up to date](../images/AndroidStudio361_Update04.png)
 
 ## Vytvořte podepsaný soubor APK
 

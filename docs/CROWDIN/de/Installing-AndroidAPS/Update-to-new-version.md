@@ -8,10 +8,11 @@
 
 * Wenn eine neue Version erscheint, führe bitte so bald als möglich ein Update durch. Ein [Hinweis auf dem AndroidAPS Startbildschirm](../Installing-AndroidAPS/Releasenotes#release-notes) informiert über die neue Version.
 * Ab Version 2.3 muss für das Update git genutzt werden. Ein Update mittels ZIP-File ist nicht mehr möglich.
+* Ab Version 2.7 wurde der Speicherort des Repositories auf <https://github.com/nightscout/AndroidAPS> geändert. Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die [App-Erstellung von vorne](../Installing-AndroidAPS/Building-APK.md) beginnst.
 * Nutze bitte [Android Studio Version 4.0.1](https://developer.android.com/studio/) oder neuer, um die APK-Datei zu erstellen.
 * [Windows 10 32-bit Systeme](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) werden bei Android Studio 4.0.1 nicht unterstützt.
 * Wenn Du xDrip verdwendet, stelle sicher, dass [identifiziere Empfänger](../Configuration/xdrip#identifiziere-empfanger) gesetzt ist.
-* Wenn Du den Dexcom G6 mit der [gepatchted Dexcom app](../Hardware/DexcomG6#g6-mit-der-gepatchten-dexcom-app) verwendest, dann musst Du die Version aus dem [2.4 Verzeichnis](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) installiert haben.
+* Wenn Du den Dexcom G6 mit der [gepatchted Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) verwendest, dann musst Du die Version aus dem [2.4 Verzeichnis](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) installiert haben.
 
 ## Kurzanleitung für erfahrene Anwender
 
@@ -30,6 +31,7 @@ Die Schritt-für-Schritt-Anleitung findest Du auf der Seite zur [git Installatio
 
 ## Führe ein Update deiner lokalen Version durch
 
+* Ab Version 2.7 wurde der Speicherort des Repositories auf <https://github.com/nightscout/AndroidAPS> geändert. Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die [App-Erstellung von vorne](../Installing-AndroidAPS/Building-APK.md) beginnst.
 * Klicke: VCS -> Git -> Pull
     
     ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)

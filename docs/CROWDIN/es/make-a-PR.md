@@ -6,7 +6,7 @@ Para obtener sugerencias sobre cómo formatear texto (titulares, audaces ...) y 
 
 ## General
 
-Para cualquier pregunta, respuesta o nuevas ideas, puede ponerse en contacto con el equipo de documentación vía correo electrónico (wiki@androidaps.org). Hacer una PR no es difícil, pero podemos ayudarle a editar la documentación.
+For any questions, feedback or new ideas you can contact the documentation team via [gitter](https://gitter.im/AndroidAPSwiki/Lobby). Hacer una PR no es difícil, pero podemos ayudarle a editar la documentación.
 
 En algún momento se le sugerirá que haga un PR. PR es la abreviatura de solicitud de modificación, y es una manera de agregar o editar la información almacenada en GitHub. En realidad, no es muy difícil hacer una y es una gran forma de contribuir. Esta documentación está aquí porque la gente como tú hizo PRs. No te preocupes por cometer un error o de alguna manera editar los documentos equivocados. Siempre hay un proceso de revisión antes de que los cambios se fusionen en el repositorio de documentación "formal" AndroidAPS. No se pueden estropear los originales a través de cualquier accidente en el proceso de PR. El proceso general es:
 

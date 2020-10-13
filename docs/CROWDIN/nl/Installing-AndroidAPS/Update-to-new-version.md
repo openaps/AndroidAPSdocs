@@ -8,10 +8,11 @@
 
 * Bouw zo snel mogelijk een nieuwe app zodra er een nieuwe versie is uitgebracht. Je zult een [melding op het Overzichtscherm van AndroidAPS](../Installing-AndroidAPS/Releasenotes#release-notes) zien over de nieuwe versie.
 * Vanaf versie 2.3 moet je git gebruiken om te updaten. Bijwerken via zip-bestand werkt niet meer.
+* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
 * Please use [Android Studio Version 4.0.1](https://developer.android.com/studio/) or newer to build the apk.
 * [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.0.1.
-* Als je "xDrip+" gebruikt, zorg dan dat je de instelling voor [Identify receiver](../Configuration/xdrip#identificeer-ontvanger-identify-receiver) (identificeer ontvanger) hebt ingevuld in xDrip+.
-* Als je de Dexcom G6 gebruikt met de [aangepaste Dexcom-app](../Hardware/DexcomG6#g6-met-aangepaste-dexcom-app), dan moet je de versie uit de [2.4 map](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) gebruiken.
+* If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
+* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Snelle methode voor ervaren gebruikers
 
@@ -30,21 +31,22 @@ Volg de handleiding op de [git-installatiepagina](../Installing-AndroidAPS/git-i
 
 ## Bijwerken van jouw lokale kopie
 
-* Klik op: VCS-> Git-> Pull
+* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.html).
+* Click: VCS -> Git -> Pull
     
     ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
 
-* Klik op Pull (laat alles staan zoals het is in het dialoogvenster)
+* Click Pull (no changes in dialog field)
     
     ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02a.png)
 
-* Wacht terwijl het downloaden bezig is.
+* Wait while download is in progress.
     
-    ![Android Studio - Pull wordt uitgevoerd](../images/AndroidStudio361_Update03.png)
+    ![Android Studio - Pull in progress](../images/AndroidStudio361_Update03.png)
 
-* Wanneer Android Studio klaar is zul je een melding krijgen dat alle bestanden up-to-date zijn: "all files are up-to-date".
+* When done Android Studio will inform you that "all files are up-to-date".
     
-    ![Alle bestanden zijn up-to-date](../images/AndroidStudio361_Update04.png)
+    ![All files up to date](../images/AndroidStudio361_Update04.png)
 
 ## Bouwen van de ondertekende APK
 

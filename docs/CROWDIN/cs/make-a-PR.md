@@ -6,7 +6,7 @@ For hints how to format text (headline, bold...) and set links please see the ["
 
 ## Obecné
 
-Máte-li jakékoliv dotazy, můžete kontaktovat dokumentační tým prostřednictvím e-mailu (wiki@androidaps.org). Vytvoření PR není obtížné, ale můžeme vám pomoci editovat dokumentaci.
+For any questions, feedback or new ideas you can contact the documentation team via [gitter](https://gitter.im/AndroidAPSwiki/Lobby). Vytvoření PR není obtížné, ale můžeme vám pomoci editovat dokumentaci.
 
 V určitém okamžiku bude doporučeno, abyste udělali PR. PR je zkratka pro pull request a je to způsob, jak přidat nebo editovat informace uložené v GitHubu. Ve skutečnosti není příliš těžké udělat takový krok a je to skvělý způsob, jak přispět. Tato dokumentace je zde proto, že lidé, jako jste vy, udělali svůj PR. Nebojte se, že uděláte chybu nebo nějak editujete špatné dokumenty. Před sloučením změn do „formálního“ repositáře dokumentace AndroidAPS je zde vždy proces přezkumu. Nějakou chybou nemůžete originál poškodit. Obecný proces je:
 

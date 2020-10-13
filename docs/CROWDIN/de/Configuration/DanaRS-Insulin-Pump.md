@@ -87,7 +87,7 @@ Falls die Verbindung zwischen AAPS und der Dana RS während der Insulinabgabe ab
 
 Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 
-* [Exportiere die Einstellungen](../Usage/ExportImportSettings#exportiere-die-einstellungen) auf Deinem alten Smartphone
+* [Exportiere die Einstellungen](../Usage/ExportImportSettings#export-settings) auf Deinem alten Smartphone
 * Übertrage die Einstellungen vom alten auf das neue Smartphone.
 * Verbinde die Dana RS **manuell** mit dem neuen Smartphone.
     
