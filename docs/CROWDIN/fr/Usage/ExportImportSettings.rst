@@ -46,7 +46,7 @@ Exporter les paramètres
 .. image:: ../images/AAPS_ExportSettings2.png
   :alt: AndroidAPS exporter les paramètres 2
   
-Importez les paramètres
+Importer les paramètres
 ==================================================
 * Menu Hamburger (coin supérieur gauche de l'écran)
 * Maintenance
