@@ -4,11 +4,11 @@
 
 **Le nouveau firmware Dana RS v3 peut être utilisé depuis la version 2.7 d'AndroidAPS.**
 
-* In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
+* Sur la pompe DanaRS, « BASAL A » est utilisé par l'application. Les données existantes sont écrasé.
 
-## Pairing pump
+## Appairage de la pompe
 
-* In AndroidAPS go to Config Builder and select 'DanaRS'
+* Dans AndroidAPS, allez dans Générateur de configuration et sélectionnez « DanaRS »
 
 * Sélectionnez le Menu en appuyant sur les 3 points en haut à droite. Sélectionnez le menu Préférences.
 
