@@ -14,7 +14,7 @@ Yeh ! Regardez les problèmes ("Issues"), demandez dans "gitter", il y a toujour
 
 Excellent, c'est une chose très appréciée et une bonne façon de contribuer en avance !
 
-* L'ancien canal de gitter concernant le wiki se trouve ici : [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). A la place, vous pouvez également contacter l'équipe de documentation via la nouvelle adresse email : wiki@androidaps.org.
+* The old gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). 
 * Un guide sur la façon de faire des "commits" concernant le wiki anglais peut être trouvé ici : [Comment faire un PR](../make-a-PR.md). Les autres langues ne sont que traduites de l'anglais et ne peuvent pas être éditées indépendamment pour des raisons de cohérence.
 
 ## Je parle plusieurs langues et je veux traduire l'application ou la documentation
