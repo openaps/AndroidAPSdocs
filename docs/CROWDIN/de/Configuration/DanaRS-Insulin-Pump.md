@@ -20,17 +20,17 @@
 
 ### Standard-Passwort
 
-* For DanaRS with firmware v1 and v2 the default password is 1234.
-* For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). Open main menu on pump > review > information. Number 3 is production date.
+* Für die DanaRS mit Firmware v1 und v2 ist das Standard-Passwort 1234.
+* Für die DanaRS mit Firmware v3 wird das Standard-Passwort durch die Kombination von Produktionsmonat und Produktionsdatum gebildet (z.B. Monat 01 und Tag 24). Öffne auf der Pumpe das Hauptmenü > Prüfen > Geräte Info. Nummer 3 ist das Produktionsdatum.
 
-* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+* **Du musst die Verbindung auf der Pumpe bestätigen!** Das funktioniert genau gleich wie Du es von der Verbindung Deines Smartphones mit anderen Bluetooth-Geräten wie z.B. Bluetooth-Kopfhörern kennst.
     
-    ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+    ![Bestätigung der Verbindung auf der Dana RS](../images/DanaRS_Pairing.png)
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Klicke auf "Bolus-Geschwindigkeit" um die gewünschte Abgabegeschwindigkeit (12 s/1 IE, 30 s/1 IE oder 60 s/1 IE) einzustellen.
 
-* Restart your phone.
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
+* Starte dein Smartphone neu.
+* Stelle im Arztmenü auf der Pumpe (siehe Bedienungsanleitung der DanaRS) die Basalschritte auf 0,01 IE/h.
 * Erlaube die Vewendung von verlängerten Boli auf der Pumpe
 
 ## Passwort auf Pumpe ändern
@@ -87,13 +87,13 @@ Falls die Verbindung zwischen AAPS und der Dana RS während der Insulinabgabe ab
 
 Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 
-* [Export settings](../Usage/ExportImportSettings.html#export-settings) on your old phone
-* Transfer settings from old to new phone
-* **Manually pair** Dana RS with the new phone
+* [Exportiere die Einstellungen](../Usage/ExportImportSettings.html#export-settings) auf Deinem alten Smartphone
+* Übertrage die Einstellungen vom alten auf das neue Smartphone.
+* Verbinde die Dana RS **manuell** mit dem neuen Smartphone.
     
     * Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Daher müssen das neue Smartphone und die Pumpe manuell verbunden werden.
-* Install AndroidAPS on the new phone.
-* [Import settings](../Usage/ExportImportSettings.html#import-settings) on your new phone
+* Installiere AndroidAPS auf dem neuen Smartphone.
+* [Importiere die Einstellungen](../Usage/ExportImportSettings.html#importiere-die-einstellungen) auf Deinem neuen Smartphone
 
 ## Mit der Dana RS Pumpe über Zeitzonen hinweg reisen
 
