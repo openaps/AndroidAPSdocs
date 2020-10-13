@@ -8,7 +8,7 @@
 
 * Prašome atnaujinti kuo greičiau, kai tik nauja versija yra prieinama. Gausite [informaciją AndroidAPS pagrindiniame ekrane](../Installing-AndroidAPS/Releasenotes#release-notes) apie naują versiją.
 * Nuo versijos 2.3 jūs turite naudoti git atnaujinimui. Atnaujinimas per zip failą daugiau nebeveikia.
-* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.html).
+* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
 * Please use [Android Studio Version 4.0.1](https://developer.android.com/studio/) or newer to build the apk.
 * [Windows 10 32-bitų sistemos](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) nėra palaikomos Android Studio 4.0.1.
 * If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
