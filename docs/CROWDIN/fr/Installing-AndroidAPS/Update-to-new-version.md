@@ -8,7 +8,7 @@
 
 * Veuillez mettre à jour dès que possible quand une nouvelle version est disponible. Vous recevrez une [information dans la page d'accueil AndroidAPS](../Installing-AndroidAPS/Releasenotes#notes-de-version) à propos de la nouvelle version.
 * À partir de la version 2.3, vous devez utiliser git pour la mise à jour. La mise à jour via le fichier zip ne fonctionne plus.
-* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
+* À partir de la version 2.7, l'emplacement du code a été changé pou <https://github.com/nightscout/AndroidAPS>. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un [nouveau clone](../Installing-AndroidAPS/Building-APK.md).
 * Utilisez [Android Studio Version 4.0.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
 * [Les systèmes d'exploitation Windows 10 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) ne sont pas pris en charge par Android Studio 4.0.1.
 * Si vous utilisez xDrip+ assurez vous de bien renseigner [identify receiver](../Configuration/xdrip#identify-receiver).
@@ -31,20 +31,20 @@ Suivez le manuel sur la [page d'installation de git](../Installing-AndroidAPS/gi
 
 ## Mettez à jour votre copie locale
 
-* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
-* Click: VCS -> Git -> Pull
+* À partir de la version 2.7, l'emplacement du code a été changé pou <https://github.com/nightscout/AndroidAPS>. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un [nouveau clone](../Installing-AndroidAPS/Building-APK.md).
+* Cliquez sur : VCS -> Git -> Pull
     
     ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
 
-* Click Pull (no changes in dialog field)
+* Cliquez sur Pull (pas de changements dans la boîte de dialogue)
     
     ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02a.png)
 
-* Wait while download is in progress.
+* Attendez tant que le téléchargement est en cours.
     
     ![Android Studio - Pull en cours](../images/AndroidStudio361_Update03.png)
 
-* When done Android Studio will inform you that "all files are up-to-date".
+* Quand ce sera fini Android Studio vous informera que "tous les fichiers sont à jour".
     
     ![Tous les fichiers sont à jour](../images/AndroidStudio361_Update04.png)
 
