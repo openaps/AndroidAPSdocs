@@ -31,7 +31,7 @@
 
 ## 저장파일을 업데이트 하세요.
 
-* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.html).
+* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
 * Click: VCS -> Git -> Pull
     
     ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
