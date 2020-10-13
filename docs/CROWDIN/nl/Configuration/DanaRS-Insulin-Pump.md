@@ -87,13 +87,13 @@ In het geval dat de verbinding tussen AAPS en DanaRS wordt verbroken tijdens het
 
 Wanneer je een nieuwe telefoon gaat gebruiken, moet je dat doen via de volgende stappen:
 
-* [Export settings](../Usage/ExportImportSettings.html#export-settings) on your old phone
+* [Export settings](../Usage/ExportImportSettings#export-settings) on your old phone
 * Transfer settings from old to new phone
 * **Manually pair** Dana RS with the new phone
     
     * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
 * Install AndroidAPS on the new phone.
-* [Import settings](../Usage/ExportImportSettings.html#import-settings) on your new phone
+* [Import settings](../Usage/ExportImportSettings#import-settings) on your new phone
 
 ## Timezone traveling with Dana RS pump
 
