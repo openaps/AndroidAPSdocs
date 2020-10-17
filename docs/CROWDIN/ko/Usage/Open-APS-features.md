@@ -6,7 +6,7 @@
 * 이 기능은 혈당 편차에 근거하여 사용자가 얼마나 인슐린에 민감한지, 저항성을 띄는지를 파악할 것입니다.
 * **OpenAPS**에서 Oref 구현은 24시간, 8시간 동안의 데이터를 조합하여 실행됩니다. 두 가지 데이터 중 민감도가 더 높은 것을 사용합니다.
 * AAPS 2.7 이전의 버전에서는 사용자가 수동으로 8시간 또는 24시간 중 선택해야 했습니다.
-* From AAPS 2.7 on Autosens in AAPS will switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
+* AAPS 2.7부터는 민감도를 계산하기 위해 AAPS의 Autosens가 24시간과 8시간 사이에서 전환하게 됩니다. 이는 둘 중 더 민감한 것을 선택할 것입니다. 
 * If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
 * Changing a cannula or changing a profile will reset Autosens ratio back to 0%.
 * Autosens adjusts your basal, I:C and ISF for you (i.e.: mimicking what a Profile shift does).
