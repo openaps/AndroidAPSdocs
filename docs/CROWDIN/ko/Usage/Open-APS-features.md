@@ -69,21 +69,21 @@ OpenAPS SMB를 사용하면, OpenAPS AMA에서와는 다르게 max-IOB가 계산
 
 [SMB를 위한 OpenAPS 문서](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb)도 참고하시기 바랍니다.
 
-### Enable AMA Autosense
+### AMA Autosense를 사용하기
 
-Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' or not.
+여기에서 [민감도 감지](../Configuration/Sensitivity-detection-and-COB.md) 'autosense'의 사용 여부를 선택할 수 있습니다.
 
-### Enable SMB
+### SMB를 사용하기
 
-Here you can enable or completely disable SMB feature.
+여기에서 SMB 기능을 활성화하거나 완전히 비활성화할 수 있습니다.
 
-### Enable SMB with COB
+### COB와 함께 SMB를 사용하기
 
-SMB is working when there is COB active.
+SMB는 COB가 활성화 상태일 때 작동합니다.
 
-### Enable SMB with temp targets
+### 임시 목표에서 SMB를 사용하기
 
-SMB is working when there is a low or high temporary target active (eating soon, activity, hypo, custom)
+SMB는 낮거나 높은 임시 목표(식사 직전, 활동 시, 저혈당, 사용자 정의)가 활성화되어 있을 때 작동합니다.
 
 ### Enable SMB with high temp targets
 
@@ -169,7 +169,7 @@ The default value is 2, but you should be rise this parameter slowly to see how 
 * Adult: 7
 * Insulin resistant adult: 12
 
-### Enable AMA Autosense
+### AMA Autosense를 사용하기
 
 Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosense or not.
 
