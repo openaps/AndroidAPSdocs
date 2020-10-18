@@ -61,4 +61,4 @@ Définir le mot de passe de la pompe Dana RS (si vous utilisez une Dana RS)
 .. image:: ../images/DanaRSPW.png
   :alt: Définir le mot de passe Dana RS
   
-To change password on Dana RS follow instructions on `DanaRS page <../Configuration/DanaRS-Insulin-Pump.html#change-password-on-pump>`_.
+Pour changer le mot de passe sur Dana RS, suivez les instructions sur la `page DanaRS <../Configuration/DanaRS-Insulin-Pump.html#changer-de-mot-de-passe-sur-la-pompe>`_.
