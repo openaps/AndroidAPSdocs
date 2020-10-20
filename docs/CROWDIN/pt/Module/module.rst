@@ -35,7 +35,7 @@ SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in th
 
 Telefone
 --------------------------------------------------
-You need an Android smartphone with Google Android 6.0 or above. Next major version AndroidAPS 2.7 will only support Android 7 and above. So if you are thinking about a new phone, Android 8.1 is recommended at least but optimicaly Android 9 or 10.
+You need an Android smartphone with Google Android 7.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at least but optimicaly Android 9 or 10.
 
 Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
