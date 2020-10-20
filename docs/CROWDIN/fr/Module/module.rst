@@ -35,7 +35,7 @@ Les inhibiteurs SGLT-2, aussi appelés gliflozines, empêchent la réabsorption 
 
 Téléphone
 --------------------------------------------------
-You need an Android smartphone with Google Android 7.0 or above. Donc si vous pensez à un nouveau téléphone, un Android 8.1 minimum est recommandé mais choisissez de préférence une version Android 9 ou 10.
+Il vous faut un smartphone Android avec Google Android 7.0 ou supérieur. Donc si vous pensez à un nouveau téléphone, un Android 8.1 minimum est recommandé mais choisissez de préférence une version Android 9 ou 10.
 
 Les utilisateurs sont en train de créer une `liste des téléphones et des montres testées <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
