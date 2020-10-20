@@ -35,7 +35,7 @@ SGLT-2 inhibitoriai, dar vadinami gliflozinais, slopina gliukozės absorbciją (
 
 Telefonas
 --------------------------------------------------
-Jums reikia išmaniojo telefono su Android 6.0 ar naujesne versija. Kita AndroidAPS 2.7 pagrindinė versija palaikys tik Android 7 ir vėlesnes versijas. Taigi, jei jūs galvojate apie naują telefoną, rekomenduojama bent jau Android 8.1, bet optimaliam veikimui reikalinga Android 9 arba 10.
+You need an Android smartphone with Google Android 7.0 or above. Taigi, jei jūs galvojate apie naują telefoną, rekomenduojama bent jau Android 8.1, bet optimaliam veikimui reikalinga Android 9 arba 10.
 
 Vartotojai sukūrė `patikrintų išmaniųjų telefonų ir išmaniųjų laikrodžių, sąrašą:<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
