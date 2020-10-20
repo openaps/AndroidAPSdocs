@@ -35,7 +35,7 @@ SGLT-2 ингибиторы, которые также называются гл
 
 Телефон
 --------------------------------------------------
-Вам нужен смартфон Android с операционной системой Google Android 6.0 или выше. Следующая основная версия AndroidAPS 2.7 будет поддерживать только Android 7 и выше. Так что если вы думаете о новом телефоне, рекомендуем хотя бы Android 8., но оптимально Android 9 или 10.
+You need an Android smartphone with Google Android 7.0 or above. Так что если вы думаете о новом телефоне, рекомендуем хотя бы Android 8., но оптимально Android 9 или 10.
 
 Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
