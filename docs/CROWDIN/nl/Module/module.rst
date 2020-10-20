@@ -35,7 +35,7 @@ SGLT-2 remmers, ook wel glifozines genoemd, remmen de herabsorptie van glucose i
 
 Telefoon
 --------------------------------------------------
-Je hebt een Android-smartphone met Android 6.0 of hoger nodig. De eerstvolgende versie van AndroidAPS die eraan komt (versie 2.7) ondersteunt alleen Android 7 en hoger. Dus als je denkt over een nieuwe telefoon, dan raden we aan om op zijn minst voor Android 8.1 te gaan maar liever Android 9 of 10.
+You need an Android smartphone with Google Android 7.0 or above. Dus als je denkt over een nieuwe telefoon, dan raden we aan om op zijn minst voor Android 8.1 te gaan maar liever Android 9 of 10.
 
 Gebruikers houden een `lijst van geteste telefoons en smartwatches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ bij.
 
