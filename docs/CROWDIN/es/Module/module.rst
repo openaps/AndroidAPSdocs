@@ -35,7 +35,7 @@ Los inhibidores de la SGLT-2, también llamados gliflozinas, inhiben la reabsorc
 
 Teléfono
 --------------------------------------------------
-Necesitas un smartphone Android con Google Android 6.0 o superior. Next major version AndroidAPS 2.7 will only support Android 7 and above. So if you are thinking about a new phone, Android 8.1 is recommended at least but optimicaly Android 9 or 10.
+You need an Android smartphone with Google Android 7.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at least but optimicaly Android 9 or 10.
 
 Los usuarios están creando una "lista de teléfonos probados y relojes <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
