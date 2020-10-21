@@ -1,13 +1,13 @@
 Welcome to the AndroidAPS documentation
 ==================================================
 
-AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. Main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter. 
+AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. The main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter. 
 
-The app does NOT use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into his treatments profile, but they are verified by the system for safety reasons. 
+The app does NOT use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons. 
 
 The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
 
-Main components are:
+The main components are:
 
 .. image:: images/modules-female.png
   :alt: Components
@@ -33,6 +33,7 @@ What do I need
    :glob:
    
    Module <./Module/module.rst>
+   Sample Setup <./Getting-Started/Sample-Setup.md>
 
    
 How to Install AndroidAPS
@@ -43,6 +44,7 @@ How to Install AndroidAPS
 
    Building the APK <./Installing-AndroidAPS/Building-APK.md>
    Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
+   Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Install git <./Installing-AndroidAPS/git-install.rst>
    Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
@@ -70,7 +72,7 @@ Configuration
    :glob:
    
    Config builder <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences.md>
+   Preferences <./Configuration/Preferences.rst>
    
    
 AndroidAPS Usage
@@ -88,6 +90,8 @@ AndroidAPS Usage
    Temp-targets <./Usage/temptarget.md>   
    Extended carbs <./Usage/Extended-Carbs.rst>
    Automation <./Usage/Automation.rst>
+   Careportal (discontinued) <./Usage/CPbefore26.rst>
+   Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automation with 3rd party apps <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
  
