@@ -33,11 +33,15 @@ AndroidAPS is designed to be *controlled* by Android Wear watches. If you want t
 The following functions can be triggered from the watch:
 
 * set a temporary target
-* administer a bolus
-* administer eCarbs
 * use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
-* check the status of loop and pump
-* show TDD (Total daily dose = bolus + basal per day)
+* administer eCarbs
+* administer a bolus (insulin + carbs)
+* watch settings
+* status 
+    * check pump status
+    * check loop status
+    * check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+    * show TDD (Total daily dose = bolus + basal per day)
 
 ## AAPS Watchfaces
 
@@ -141,9 +145,9 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 * **Wizard in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
 * **Prime in Menu** (default `Off`): Allow Prime / Fill action from watch
 * **Single Target** (default `On`):
-  
-  * `On`: you set a single value for TT
-  * `Off`: you set Low target and high target for TT
+    
+    * `On`: you set a single value for TT
+    * `Off`: you set Low target and high target for TT
 
 * **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
 
@@ -194,13 +198,13 @@ Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpa
 ### Complication related settings
 
 * **Complication Tap Action** (default `Default`): Decides which dialog is opened when user taps complication: 
-  * *Default*: action specific to complication type *(see list above)*
-  * *Menu*: AAPS main menu
-  * *Wizard*: bolus wizard - bolus calculator
-  * *Bolus*: direct bolus value entry
-  * *eCarb*: eCarb configuration dialog
-  * *Status*: status sub-menu
-  * *None*: Disables tap action on AAPS complications
+    * *Default*: action specific to complication type *(see list above)*
+    * *Menu*: AAPS main menu
+    * *Wizard*: bolus wizard - bolus calculator
+    * *Bolus*: direct bolus value entry
+    * *eCarb*: eCarb configuration dialog
+    * *Status*: status sub-menu
+    * *None*: Disables tap action on AAPS complications
 * **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
 
 ## Performance and battery life tips
