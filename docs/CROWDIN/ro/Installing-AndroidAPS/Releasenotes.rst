@@ -13,6 +13,150 @@ If you do not update for another 30 days (90 days from new release date) AAPS wi
 
 Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
 
+Version 2.7.0
+================
+Release date: 24-09-2020
+
+Repository location changed to https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
+
+As already `announced some time ago <../Module/module.html#phone>`_, **Android 7 is minimum requirement** for AndroidAPS 2.7.
+
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+**Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`_.
+
+You need at least start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. This will not effect other objectives you have already finished. You will keep all finished objectives!
+
+Major new features
+----------------------
+* internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
+* using modules for Dana pumps @MilosKozak
+* `new layout, layout selection <../Getting-Started/Screenshots.html>`_ @MilosKozak
+* new `status lights layout <../Configuration/Preferences.html#status-lights>`_ @MilosKozak
+* `multiple graphs support <../Getting-Started/Screenshots.html#section-f---main-graph>`_ @MilosKozak
+* `Profile helper <../Configuration/profilehelper.html>`_ @MilosKozak
+* visualization of `dynamic target adjustment <../Getting-Started/Screenshots.html#visualization-of-dynamic-target-adjustment>`_ @Tornado-Tim
+* new `preferences layout <../Configuration/Preferences.html>`_ @MilosKozak
+* SMB algorithm update @Tornado-Tim
+* `Low glucose suspend mode <../Configuration/Preferences.html#aps-mode>`_ @Tornado-Tim
+* `carbs required notifications <../Configuration/Preferences.html#carb-required-notification>`_ @twain47 @Tornado-Tim
+* removed Careportal (moved to Actions) @MilosKozak
+* `new encrypted backup format <../Usage/ExportImportSettings.html>`_ @dlvoy
+* `new SMS TOTP authentication <../Children/SMS-Commands.html>`_ @dlvoy
+* `new SMS PUMP CONNECT, DISCONNECT <../Children/SMS-Commands.html#commands>`_ commands @Lexsus
+* better support for tiny basals on Dana pumps @Mackwe
+* small Insight fixes @TebbeUbben @MilosKozak
+* `"Default language" option <../Configuration/Preferences.html#general>`_ @MilosKozak
+* vector icons @Philoul
+* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phoneandroidaps>`_ @Tornado-Tim
+* History browser improvements @MilosKozak
+* removed OpenAPS MA algorithm @Tornado-Tim
+* removed Oref0 sensitivity @Tornado-Tim
+* `Biometric or password protection <../Configuration/Preferences.html#protection>`_ for settings, bolus @MilosKozak
+* `new automation trigger <../Usage/Automation.html>`_ @PoweRGbg
+* `Open Humans uploader <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
+* New documentation @Achim
+
+Version 2.6.1.4
+================
+Release date: 04-05-2020
+
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+Major new features
+----------------------
+* Insight: Disable vibration on bolus for firmware version 3 - second attempt
+* Otherwise is equal to 2.6.1.3. Update is optional. 
+
+Version 2.6.1.3
+================
+Release date: 03-05-2020
+
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+Major new features
+-----
+* Insight: Disable vibration on bolus for firmware version 3
+* Otherwise is equal to 2.6.1.2. Update is optional. 
+
+Version 2.6.1.2
+================
+Release date: 19-04-2020
+
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+Major new features
+-----
+* Fix crashing in Insight service
+* Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
+
+Version 2.6.1.1
+================
+Release date: 06-04-2020
+
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+Major new features
+-----
+* Resolves SMS CARBS command issue while using Combo pump
+* Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
+
+Version 2.6.1
+==============
+Release date: 21-03-2020
+
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+Major new features
+-----
+* Allow to enter only https:// in NSClient settings
+* Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
+* Fixed small UI bugs
+* Fixed Insight crashes
+* Fixed future carbs with Combo pump
+* Fixed `LocalProfile -> NS sync <../Configuration/Config-Builder.html#upload-local-profiles-to-nightscout>`_
+* Insight alerts improvements
+* Improved detection of boluses from pump history
+* Fixed NSClient connection settings (wifi, charging)
+* Fixed sending of calibrations to xDrip
+
+Version 2.6.0
+==============
+Release date: 29-02-2020
+
+Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+Major new features
+-----
+* Small design changes (startpage...)
+* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`_
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
+
+  * Local profile can hold more than 1 profile
+  * Profiles can be cloned and edited
+  * Ability of upload profiles to NS
+  * Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
+  * Veritical NumberPicker for targets
+* SimpleProfile is removed
+* `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
+* MDT plugin: Fixed bug with duplicated entries
+* Units are not specified in profile but it's global setting
+* Added new settings to startup wizard
+* Different UI and internal improvements
+* `Wear complications <../Configuration/Watchfaces.html>`_
+* New `SMS commands <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
+* Fixed language support
+* Objectives: `Allow to go back <../Usage/Objectives.html#go-back-in-objectives>`_, Time fetching dialog
+* Automation: `allow sorting <../Usage/Automation.html#sort-automation-rules>`_
+* Automation: fixed bug when automation was running with disabled loop
+* New status line for Combo
+* GlucoseStatus improvement
+* Fixed TempTarget NS sync
+* New statistics activity
+* Allow Extended bolus in open loop mode
+* Android 10 alarm support
+* Tons on new translations
+
 Version 2.5.1
 ==================================================
 Release date: 31-10-2019
@@ -30,14 +174,13 @@ Important notes
 * Please use `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ or newer to `build the apk <../Installing-AndroidAPS/Building-APK.html>`_ or `update <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * If you are using xDrip `identify receiver <../Configuration/xdrip.html#identify-receiver>`_ must be set.
 * If you are using Dexcom G6 with the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Glimp is supported from version 4.15.57 and newer.
 
 Is this update for me? Currently is NOT supported
 --------------------------------------------------
 * Android 5 and lower
 * Poctech
 * 600SeriesUploader
-* Glimp
-   Glimp stopps working when offline. Glimp developer must update app to use SDK28 broadcast.
 * Patched Dexcom from 2.3 directory
 
 Major new features
