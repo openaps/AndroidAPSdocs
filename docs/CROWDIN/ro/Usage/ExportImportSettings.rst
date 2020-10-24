@@ -1,6 +1,6 @@
-
 Export & import settings
 **************************************************
+
 When should I export settings?
 ==================================================
 Be prepared for the unforeseen. You might change important settings by accident and have problems to undo the changes. Your phone might break or get stolen. To easily return to status you've been at, settings should be exported on a regular basis.
@@ -11,33 +11,77 @@ Exported settings should be copied to a cloud storage or your computer. So you a
 
 On a Windows 10 computer it looks like this:
   
-  .. image:: ../images/SmartphoneRootLevelWin10.png
-    :alt: AndroidAPS Preferences phone connected to computer
+.. image:: ../images/AAPS_ExImportSettingsWin.png
+  :alt: AndroidAPS Preferences phone connected to computer
 
-
-How to export settings
+Exported information
 ==================================================
-* **Export settings** on your old phone
+Among others the following information is part of the settings export:
 
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Export settings
-  * File location will be shown
-    
-.. image:: ../images/AAPS_ExportSettings.png
-  :alt: AndroidAPS export settings
-       
-* **Transfer** settings from old to new phone using the file location shown during export
+* `Automation <../Usage/Automation.html>`_ events
+* `Config builder <../Configuration/Config-Builder.html>`_ settings
+* `Local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ settings
+* `Objectives <../Usage/Objectives.html>`_ status incl. `exam results <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
+* `Preferences <../Configuration/Preferences.html>`_ incl. `NS Client settings <../Configuration/Preferences.html#ns-client>`_
 
-  The exported file is called "AndroidAPSPreferences" and should be in your root folder in the main storage of the phone (just like C: on your computer).
+Encrypted backup format
+==================================================
+Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`_ .
+
+
+Export settings
+==================================================
+* Hamburger menu (top left corner of screen)
+* Maintenance
+* Export settings
+
+.. image:: ../images/AAPS_ExportSettings1.png
+  :alt: AndroidAPS export settings 1
+
+* Date and time of export will be added to the file name automatically and displayed together with the path.
+* Click 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+* Successful export will be prompted at bottom of the screen.
+
+.. image:: ../images/AAPS_ExportSettings2.png
+  :alt: AndroidAPS export settings 2
   
-* **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone
+Import settings
+==================================================
+* Hamburger menu (top left corner of screen)
+* Maintenance
+* Import settings
 
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Import settings
+.. image:: ../images/AAPS_ImportSettings1.png
+  :alt: AndroidAPS import settings 1
 
-* **Note for Dana RS users:**
+* All files from folder AAPS/preferences/ on your phone will be shown in the list.
+* Select file.
+* Confirm import by clicking 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
 
-  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Please pair new phone and pump manually.
+.. image:: ../images/AAPS_ImportSettings2.png
+  :alt: AndroidAPS import settings 2
+
+* Details on the preference file will be shown.
+* Last option to cancel import.
+* Click 'Import'.
+* Confirm message by clicking 'OK'.
+* AAPS will be restarted in order to activate imported preferences.
+
+Note for Dana RS users
+------------------------------------------------------------
+* As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. 
+* Please pair new phone and pump manually.
+
+Import settings from previous versions (before AAPS 2.7)
+------------------------------------------------------------
+* The "old" settings file (called 'AndroidAPSPreferences' - without file extension) must be in root folder of your smartphone (/storage/emulated/0).
+* Do not put the "old" file in the same folder as the new exported settings (AAPS/preferences).
+* You will find the "old" file on the bottom of the list in the import dialogue.
+
+Transfer settings file
+==================================================
+* Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
+* Manuals can be found on the web, i.e. `Android help pages <https://support.google.com/android/answer/9064445?hl=en>`_.
+* If you experience problems with the transferred file try another way to transfer file.

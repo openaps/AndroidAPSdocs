@@ -283,7 +283,7 @@ Erweiterte Einstellungen
 
 OpenAPS SMB-Einstellungen
 -----------------------------------------------------------
-* Im Gegensatz zu AMA verwendet ` SMB < ../Usage/Open-APS-features.html#super-micro-bolus-smb> ` _ keine temporären Basalraten, um den Blutzuckerspiegel zu steuern, sondern hauptsächlich kleine Supermicroboli.
+* Im Gegensatz zu AMA verwendet `SMB < ../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ keine temporären Basalraten, um den Blutzuckerspiegel zu steuern, sondern hauptsächlich kleine Supermicroboli.
 * Du musst `Ziel (objective) 10 <../Usage/Objectives.html#ziel-10-aktiviere-zusatzliche-oref1-funktionen-zum-taglichen-gebrauch-wie-z-b-den-super-micro-bolus-smb>`_ gestartet haben, um SMB nutzen zu können.
 * Die ersten drei Einstellungen sind `oben beschrieben. <./Configuration/Preferences.html#maximales-basal-iob-das-openaps-abgeben-darf-u>`_
 * Details zu den verschiedenen Optionen sind auf der Seite `OpenAPS-Funktionen <../Usage/Open-APS-features.html#aktiviere-smb>`_ beschrieben.

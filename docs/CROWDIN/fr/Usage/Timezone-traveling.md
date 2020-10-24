@@ -58,22 +58,52 @@ Si vous faites un bolus avec la calculatrice, veuillez désactiver les GA et IA 
 
 ## Accu-Check Combo
 
-AndroidAPS émettra une alarme si l'heure entre la pompe et le téléphone est très différent. En cas de changement d'heure (été ou hiver), cela arrive au milieu de la nuit. Pour éviter cela et profiter de votre sommeil, suivez ces étapes :
+AndroidAPS émettra une alarme si l'heure entre la pompe et le téléphone est très différent. En cas de changement d'heure (été ou hiver), cela arrive au milieu de la nuit. To prevent this and enjoy your sleep instead follow these steps so that you can force the time change at a time convient to yourself:
 
-1) Désactiver l'option 'Date et heure automatiques' dans les paramètres de votre téléphone (changement de fuseau horaire manuel). 2) Trouver un fuseau horaire qui est l'heure cible, mais qui ne fait pas de changement d'heure. Pour l'Europe Centrale (CET), cela pourrait être "Brazzaville" (Kongo). Changez le fuseau horaire de votre téléphone à Kongo. 3) Dans AndroidAPS actualisez votre pompe. 4) Vérifiez l'onglet Traitements... Si vous voyez des traitements en doublon :
+### Actions to take before the clock change
 
-* NE PAS appuyer sur "Supprimer les futurs traitements"
-* Appuyez sur "supprimer" sur tous les traitements futurs et les doublons. Cela devrait invalider les traitements plutôt que de les enlever, donc ils ne seront plus pris en compte pour l'IA. 5) Si la situation n'est pas claire - veuillez désactiver la boucle pour au moins une DAI ou la durée d'absorpsion max des glucides - (le plus grand des deux).
+1. Switch OFF any setting that automatically sets the timezone, so you can force the time change when you want to. How you can do this will depend on your smartphone and Android version.
+   
+   * Some have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the timezone (which you must turn OFF).
+   * Unfortunately some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
 
-Un bon moment pour faire ce changement serait avec des IA faibles. Par ex., une heure avant un repas.
+2. Find a time zone that has the same time as your current location but doesn't use DST.
+   
+   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo.
+
+3. In AndroidAPS refresh your pump.
+
+4. Check the Treatments tab... If you see duplicate any treatments:
+   
+   * DON'T press "delete treatments in the future"
+   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+
+5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+
+### Actions to take after the clock change
+
+A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
+
+1. Change the Android timezone back to your current location and re-enable automatic timezone.
+2. AndroidAPS will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
+3. On the AndroidAPS “Combo” screen, press Refresh.
+4. Then go to the Treatments screen, and look for any events in the future. There shouldn’t be many.
+   
+   * DON'T press "delete treatments in the future"
+   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+
+5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+
+6. Continue as normal.
 
 ## Accu-Chek Insight
 
-* Le changement d'heure est effectué automatiquement. Aucune action requise.
+* Change to DST is done automatically. No action required.
 
 ## Autres pompes - nouvelles depuis AAPS version 2.2
 
-**Vous devez mettre à jour AAPS pour utiliser cette fonctionnalité !**
+**You have to update AAPS to use this feature!**
 
-* Pour éviter toute difficulté, la boucle sera désactivée pendant 3 heures APRES le changement d'heure. Ceci est fait pour des raisons de sécurité (IA trop élevée à cause d'un bolus dupliqué avant le changement d'heure).
-* Vous recevrez une notification sur l'écran principal 24 heures avant le changement d'heure pour vous informer que la boucle sera temporairement désactivée. Ce message apparaîtra sans bip, vibration ou quoi que ce soit.
+* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
+* You will receive a notification on the main screen 24 hours prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.

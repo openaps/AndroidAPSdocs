@@ -58,22 +58,52 @@ Si usted se da bolos con la calculadora por favor no use COB y IOB a menos que e
 
 ## Accu-Check Combo
 
-AndroidAPS emitirá una alarma si el tiempo entre la bomba y el teléfono difiere mucho. En el caso del ajuste horario de DST, se haría en medio de la noche. Para evitar esto y disfrutar de su sueño, siga estos pasos:
+AndroidAPS emitirá una alarma si el tiempo entre la bomba y el teléfono difiere mucho. En el caso del ajuste horario de DST, se haría en medio de la noche. To prevent this and enjoy your sleep instead follow these steps so that you can force the time change at a time convient to yourself:
 
-1) Desactive el huso horario automático en su teléfono. 2) Busque un huso horario que tenga el tiempo de destino pero no utilice DST. Para el Tiempo Central Europeo (CET) esto podría ser "Brazzaville" (Kongo). Cambia la zona horaria de tu teléfono a Kongo. 3) En AndroidAPS refresque la bomba. 4) Revisa la ficha Tratamientos... Si ve los tratamientos duplicados:
+### Actions to take before the clock change
 
-* No presione "suprímase futuros tratamientos"
-* Pulse "remove" en todos los tratamientos futuros y en los duplicados. Esto debe invalidar los tratamientos en lugar de eliminarlos para que ya no se tengan en cuenta para el IOB. 5) Si el estado no está claro, por favor desactive el lazo para por lo menos un DIA y Max-Carb-Time - para el que es más grande.
+1. Switch OFF any setting that automatically sets the timezone, so you can force the time change when you want to. How you can do this will depend on your smartphone and Android version.
+   
+   * Some have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the timezone (which you must turn OFF).
+   * Unfortunately some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
 
-Un buen momento para hacer este interruptor sería con un IOB bajo. Por ejemplo, una hora antes de una comida.
+2. Find a time zone that has the same time as your current location but doesn't use DST.
+   
+   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo.
+
+3. In AndroidAPS refresh your pump.
+
+4. Check the Treatments tab... If you see duplicate any treatments:
+   
+   * DON'T press "delete treatments in the future"
+   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+
+5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+
+### Actions to take after the clock change
+
+A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
+
+1. Change the Android timezone back to your current location and re-enable automatic timezone.
+2. AndroidAPS will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
+3. On the AndroidAPS “Combo” screen, press Refresh.
+4. Then go to the Treatments screen, and look for any events in the future. There shouldn’t be many.
+   
+   * DON'T press "delete treatments in the future"
+   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+
+5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+
+6. Continue as normal.
 
 ## Accu-Chek Insight
 
-* El cambio a DST se realiza automáticamente. No se requiere acción.
+* Change to DST is done automatically. No action required.
 
 ## Otras bombas de la nueva como de la AAPS versión 2.2
 
-**¡Tienes que actualizar AAPS para usar esta función!**
+**You have to update AAPS to use this feature!**
 
-* Para evitar las dificultades, el Lazo se desactivará durante 3 horas después de que el conmutador DST se desactive. Esto se hace por razones de seguridad (IOB demasiado alto debido a duplicados en bolo antes del cambio de DST).
-* Recibirá una notificación en la pantalla principal 24 horas antes del cambio de DST que el lazo se inhabilitará temporalmente. Este mensaje aparecerá sin pitido, vibración o cualquier cosa.
+* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
+* You will receive a notification on the main screen 24 hours prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
