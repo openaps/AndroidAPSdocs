@@ -58,7 +58,7 @@ Si vous faites un bolus avec la calculatrice, veuillez désactiver les GA et IA 
 
 ## Accu-Check Combo
 
-AndroidAPS émettra une alarme si l'heure entre la pompe et le téléphone est très différent. En cas de changement d'heure (été ou hiver), cela arrive au milieu de la nuit. To prevent this and enjoy your sleep instead follow these steps so that you can force the time change at a time convient to yourself:
+AndroidAPS émettra une alarme si l'heure entre la pompe et le téléphone est très différente. En cas de changement d'heure (été ou hiver), cela arrive au milieu de la nuit. To prevent this and enjoy your sleep instead follow these steps so that you can force the time change at a time convient to yourself:
 
 ### Actions to take before the clock change
 
