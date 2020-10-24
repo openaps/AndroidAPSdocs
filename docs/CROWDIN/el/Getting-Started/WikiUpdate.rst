@@ -3,6 +3,7 @@ Docs updates & changes
 October 2020
 ==================================================
 * `SMS commands - time sync <../Children/SMS-Commands.html>`_
+* Update Combo `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
 September 2020
 ==================================================
 * Major update for new AAPS version 2.7
