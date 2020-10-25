@@ -101,9 +101,8 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 
 * Change to DST is done automatically. No action required.
 
-## Other pumps - new as of AAPS version 2.2
+## Other pumps
 
-**You have to update AAPS to use this feature!**
-
+* This feature is available since AndroidAPS version 2.2.
 * To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
-* You will receive a notification on the main screen 24 hours prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.

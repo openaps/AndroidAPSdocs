@@ -103,7 +103,6 @@ Ein guter Zeitpunkt für diese Umstellung ist bei niedrigem IOB Z.B. eine Stunde
 
 ## Andere Pumpen
 
-**Dieses Feature steht seit AndroidAPS Version 2.2 zur Verfügung.**
-
+* Diese Funktion steht seit AndroidAPS Version 2.2 zur Verfügung.
 * Um Schwierigkeiten zu vermeiden, wird der Loop für 3 Stunden nach der Zeitumstellung deaktiviert. Dies geschieht aus Sicherheitsgründen (IOB zu hoch aufgrund von doppeltem Boluseinträgen vor der Zeitumstellung).
 * Du erhältst rechtzeitig vor der Zeitumstellung einen Hinweis auf dem Startbildschirm, dass der Loop vorübergehend pausiert wird. Diese Nachricht erscheint ohne Ton, Vibration oder anderes.
