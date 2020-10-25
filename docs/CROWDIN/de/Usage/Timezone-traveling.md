@@ -101,8 +101,8 @@ Ein guter Zeitpunkt für diese Umstellung ist bei niedrigem IOB Z.B. eine Stunde
 
 * Zeitumstellung erfolgt automatisch. Keine Maßnahme erforderlich.
 
-## Other pumps
+## Andere Pumpen
 
-* This feature is available since AndroidAPS version 2.2.
-* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
-* You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* Diese Funktion steht seit AndroidAPS Version 2.2 zur Verfügung.
+* Um Schwierigkeiten zu vermeiden, wird der Loop für 3 Stunden nach der Zeitumstellung deaktiviert. Dies geschieht aus Sicherheitsgründen (IOB zu hoch aufgrund von doppeltem Boluseinträgen vor der Zeitumstellung).
+* Du erhältst rechtzeitig vor der Zeitumstellung einen Hinweis auf dem Startbildschirm, dass der Loop vorübergehend pausiert wird. Diese Nachricht erscheint ohne Ton, Vibration oder anderes.
