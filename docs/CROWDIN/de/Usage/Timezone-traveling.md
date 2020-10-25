@@ -58,7 +58,7 @@ Nutze den Bolus-Kalkulator erst dann wieder, wenn Du sicher bist, dass COB und I
 
 ## Accu-Chek Combo
 
-AndroidAPS wird Dich alarmieren, wenn die Zeit zwischen Pumpe und Smartphone zu sehr abweicht. Bei der Zeitumstellung wäre dies unerfreulicher Weise mitten in der Nacht. Um dies zu verhindern und stattdessen den Schlaf zu genießen, folge diesen Schritten, so dass Du die Zeitumstellung zu einer Zeit erzwingen kannst, die Dir passt.
+AndroidAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
 
 ### Vor der Zeitumstellung notwendige Maßnahmen
 
@@ -74,7 +74,7 @@ AndroidAPS wird Dich alarmieren, wenn die Zeit zwischen Pumpe und Smartphone zu 
 
 3. Aktualisiere die Pumpe via AndroidAPS.
 
-4. Prüfe den Tab "Behandlungen". Falls Du doppelte Einträge entdecken solltest:
+4. Prüfe den Tab "Behandlungen". If you see any duplicate treatments:
    
    * Klicke NICHT auf "lösche alle Behandlungen in der Zukunft". 
    * Drücke "Löschen" bei allen künftigen und doppelten Behandlungen. Dadurch werden die Behandlungen außer Kraft gesetzt statt nur gelöscht und somit nicht mehr beim IOB berücksichtigt.
