@@ -35,7 +35,7 @@ Erlaubte Telefonnummern
 
 Minuten zwischen Bolus-Kommandos
 -------------------------------------------------
-* Du kannst den minimalen Zeitabstand zwischen über SMS durchgeführte Boli definieren.
+* You can define the minimum delay between two boluses issued via SMS.
 * Aus Sicherheitsgründen musst Du mindestens zwei erlaubte Telefonnummern hinzufügen, um diesen Wert zu bearbeiten.
 
 Zusätzliche obligatorische PIN am Token-Ende
@@ -64,9 +64,9 @@ Konfiguration des Authentifikators
    * TOTP Token von der Authentifizierungs-App ist 457051
    * Trage 4570512020 ein
    
-* Der rote Text "WRONG PIN" ändert sich **automatisch** in den grünen Text "OK", wenn das Einmal-Passwort korrekt ist. **Es gibt keine Taste, die Du drücken kannst!**
-* Die Zeit auf beiden Telefonen muss synchron sein. Am einfachsten erfolgt dies direkt über das Mobilfunknetz. Zeitunterschiede können zu Authentifizierungsproblemen führen.
-* Verwende die Schaltfläche "AUTHENTIKATORS ZURÜCKSETZEN", wenn Du bereits eingerichtete Berechtigungen entfernen möchten.
+* The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **Es gibt keine Taste, die Du drücken kannst!**
+* The time on both phones must be synchronized. Best practice is set automatically from network. Zeitunterschiede können zu Authentifizierungsproblemen führen.
+* Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
 
 SMS-Kommandos verwenden
 ==================================================
@@ -78,11 +78,11 @@ SMS-Kommandos verwenden
    * TOTP Token von der Authentifizierungs-App ist 457051
    * Trage 4570512020 ein
 
-**Hinweis:** Eine SMS-Flat auf beiden Telefonen kann nützlich sein, da u.U. viele SMS hin und her gesandt werden.
+**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
 Kommandos
 ==================================================
-Kommandos müssen in Englisch gesendet werden, die Antwort erhältst Du in Deiner lokalen Sprache, wenn die Zeichenfolge bereits `übersetzt ist <../translations.html#texte-fur-die-androidaps-app-ubersetzen>`_.
+Commands must be sent in English, the response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
 
 .. image:: ../images/SMSCommands.png
   :alt: Beispiele für SMS-Kommandos
@@ -126,7 +126,7 @@ Basal
 
 Bolus
 --------------------------------------------------
-Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAPS oder nach dem letzten SMS-Kommando nicht möglich. Den Wert kannst Du nur anpassen, wenn mind. zwei Rufnummern eingetragen sind. Die Antwort hängt daher davon ab, wann der letzte Bolus abgegeben wurde.
+Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
 
 * BOLUS 1.2
    * Antwort A: Um einen Bolus von 1,2 IE abzugeben, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
@@ -182,13 +182,13 @@ Problembehandlung
 ==================================================
 Mehrfach-SMS
 --------------------------------------------------
-Wenn Du die gleiche SMS immer und immer wieder empfängst (z.B. Profilwechsel), hast Du wahrscheinlich eine Endlosschleife mit einer anderen App eingerichtet. Das könnte zum Beispiel xDrip+ sein. Falls dies der Fall ist, stelle sicher, dass xDrip+ (oder eine andere App, die mit Nightscout verbunden ist), keine Behandlungsdaten hochlädt. 
+Wenn Du die gleiche SMS immer und immer wieder empfängst (z.B. Profilwechsel), hast Du wahrscheinlich eine Endlosschleife mit einer anderen App eingerichtet. Das könnte zum Beispiel xDrip+ sein. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS. 
 
 Wenn die andere App auf mehreren Smartphones installiert ist, musst Du den Upload auf allen deaktivieren.
 
 SMS-Kommandos funktionieren nicht auf Samsung-Smartphones
 --------------------------------------------------
-Es gab einen Hinweis, dass nach einem Update die SMS Kommandos auf einem Galaxy S10 nicht mehr funktioniert haben. Dies konnte durch Abschalten der Option 'als chat message senden' behoben werden.
+Es gab einen Hinweis, dass nach einem Update die SMS Kommandos auf einem Galaxy S10 nicht mehr funktioniert haben. Could be solved by disabling 'send as chat message'.
 
 .. image:: ../images/SMSdisableChat.png
   :alt: SMS als Chatnachricht deaktivieren
