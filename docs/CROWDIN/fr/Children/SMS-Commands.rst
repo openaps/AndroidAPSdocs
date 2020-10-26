@@ -35,7 +35,7 @@ Numéros de tél autorisés
 
 Délai entre les commandes bolus
 -------------------------------------------------
-* Vous pouvez définir un délai minimum entre les bolus envoyés par SMS.
+* You can define the minimum delay between two boluses issued via SMS.
 * Pour des raisons de sécurité, vous devez ajouter au moins deux numéros de téléphone autorisés pour modifier cette valeur.
 
 Code PIN obligatoire à la fin de l'OTP
@@ -64,9 +64,9 @@ Configuration de l'Authentificateur
    * Le jeton TOTP de l'application d'authentification est 457051
    * Entrez 4570512020
    
-* Le texte rouge "WRONG PIN" changera **automatiquement** en vert "OK" si l'entrée est correcte. **Il n'y a aucun bouton à appuyer !**
-* L'heure des deux téléphones doit être synchronisée. Les mieux est de synchroniser l'heure automatiquement à partir du réseau. Les différences d'heures peuvent entraîner des problèmes d'authentification.
-* Utilisez le bouton "RESET AUTHENTICATORS" si vous voulez supprimer les autorisations.
+* The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **Il n'y a aucun bouton à appuyer !**
+* The time on both phones must be synchronized. Best practice is set automatically from network. Les différences d'heures peuvent entraîner des problèmes d'authentification.
+* Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
 
 Utiliser les commandes SMS
 ==================================================
@@ -78,11 +78,11 @@ Utiliser les commandes SMS
    * Le jeton TOTP de l'application d'authentification est 457051
    * Entrez 4570512020
 
-**Astuce**: Il peut être utile d'avoir un forfait SMS pour les deux téléphones si beaucoup de SMS seront envoyés.
+**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
 Commandes
 ==================================================
-Les commandes doivent être envoyées en anglais, la réponse sera dans votre langue locale si la chaîne de réponse a déjà été `traduite <../translations.html#translate-strings-for-androidaps-app>` _.
+Commands must be sent in English, the response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
 
 .. image:: ../images/SMSCommands.png
   :alt: Example de commandes SMS
@@ -126,7 +126,7 @@ Basal
 
 Bolus
 --------------------------------------------------
-Un bolus par SMS n'est pas possible dans les 15 minutes suivant le dernier envoi de bolus dans AAPS ou après la dernière commande SMS. Vous ne pouvez ajuster la durée que si au moins deux numéros de téléphone sont entrés. La réponse dépend donc du moment où le dernier bolus a été administré.
+Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
 
 * BOLUS 1.2
    * Réponse A : Pour injecter le bolus de 1,2 U, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
@@ -182,13 +182,13 @@ Dépannage
 ==================================================
 SMS multiples
 --------------------------------------------------
-Si vous recevez toujours le même message (par ex. changement de profil) vous avez probablement mis en place une boucle infinie avec d'autres applications. Cela peut être xDrip+, par exemple. Si c'est le cas, assurez-vous que xDrip + (ou toute autre application) ne télécharge pas les traitements dans NS. 
+Si vous recevez toujours le même message (par ex. changement de profil) vous avez probablement mis en place une boucle infinie avec d'autres applications. Cela peut être xDrip+, par exemple. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS. 
 
 Si l'autre application est installée sur plusieurs téléphones assurez-vous de désactiver le téléchargement NS sur chacun d'eux.
 
 Les commandes SMS ne fonctionnent pas sur des téléphones Samsung
 --------------------------------------------------
-Il y a eu un signalement sur les commandes SMS s'arrêtant après une mise à jour sur le téléphone Galaxy S10. Peut être résolu en désactivant 'envoyer en tant que message chat'.
+Il y a eu un signalement sur les commandes SMS s'arrêtant après une mise à jour sur le téléphone Galaxy S10. Could be solved by disabling 'send as chat message'.
 
 .. image:: ../images/SMSdisableChat.png
   :alt: Disable SMS as chat message
