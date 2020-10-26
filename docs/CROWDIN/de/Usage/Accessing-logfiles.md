@@ -1,8 +1,13 @@
 # Logdateien erhalten
 
 * Verbinde das Smartphone mit dem Computer im Dateiübertragungsmodus
-* Suche die Logdateien in diesem Verzeichnis oder einem ähnlichen (kann auf verschiedenen Smartphones variieren)
+* Locate the log files in the AndroidAPS data directory
+    
+    * The folder will be at a location similar to ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
+    * The naming of the root storage folder (1) may vary a little depending on the phone.
 
 ![Logdateien](../images/aapslog.png)
 
-* Die aktuelle Logdatei ist eine Datei mit der Erweiterung .log, die auf verschiedene Arten angezeigt werden kann wie [LogCat](https://developer.android.com/studio/debug/am-logcat.html) in AndroidStudio, der Android App Log Viewer oder einfach als normaler Text. Ältere Logdateien werden als Zipdatei komprimiert und in Verzeichnissen gespeichert, die nach Datum/Uhrzeit sortiert sind. Wenn du deine Logdatei in [gitter](https://gitter.im/MilosKozak/AndroidAPS) teilen willst, um über ein mögliches Problem zu berichten, dann entpacke sie und lade das Verzeichnis hoch, dessen Datum dem Auftreten des Fehlers entspricht.
+* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any Log Viewer android app, or simply as plain text. 
+* Previous log files are zipped and stored in folders in date/time order. 
+* If you are sharing your log file in [gitter](https://gitter.im/MilosKozak/AndroidAPS) to talk about a potential bug, please unzip and upload the file dated before the error occurred.
