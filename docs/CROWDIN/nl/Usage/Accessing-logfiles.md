@@ -1,8 +1,13 @@
 # Logbestanden uitlezen
 
 * Verbind je telefoon met een computer in bestandsoverdrachtsmodus
-* In deze map (of iets vergelijkbaars) kun je de logbestanden vinden, kan iets verschillen per telefoon.
+* Locate the log files in the AndroidAPS data directory
+    
+    * The folder will be at a location similar to ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
+    * The naming of the root storage folder (1) may vary a little depending on the phone.
 
 ![logs](../images/aapslog.png)
 
-* Het huidige logbestand is een .log bestand dat kan worden bekeken op een aantal manieren zoals [LogCat](https://developer.android.com/studio/debug/am-logcat.html) in Android Studio, via de android app Log Viewer, of gewoon als platte tekst. Oudere logbestanden worden gezipt en in mappen opgeslagen op volgorde van datum/tijd. Als je je logs deelt in [gitter](https://gitter.im/MilosKozak/AndroidAPS) wanneer je een mogelijke bug meldt, zoek dan de map op voordat die fout optrad, pak hem uit en upload de bestanden.
+* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any Log Viewer android app, or simply as plain text. 
+* Previous log files are zipped and stored in folders in date/time order. 
+* If you are sharing your log file in [gitter](https://gitter.im/MilosKozak/AndroidAPS) to talk about a potential bug, please unzip and upload the file dated before the error occurred.
