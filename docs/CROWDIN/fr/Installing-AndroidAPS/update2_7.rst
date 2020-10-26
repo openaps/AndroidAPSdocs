@@ -3,7 +3,7 @@ Vérifications nécessaires après la mise à jour vers AndroidAPS 2.7
 
 * Le code du programme a été changé de façon significative lors du passage à AAPS 2.7. 
 * Par conséquent, il est important de faire des changements ou de vérifier les paramètres après la mise à jour.
-* Veuillez consulter les `notes de version <../Installing-AndroidAPS/Releasenotes.html#version-270>`_ pour plus de détails sur les nouvelles fonctions et les améliorations.
+* Veuillez consulter les `notes de version <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_ pour plus de détails sur les nouvelles fonctions et les améliorations.
 
 Vérifier la source de glycémie
 -----------------------------------------------------------
@@ -38,7 +38,7 @@ Exporter les paramètres
 -----------------------------------------------------------
 * AAPS 2.7 utilise un nouveau format de sauvegarde chiffré. 
 * Vous devez `exporter vos paramètres <../Usage/ExportImportSettings.html>`_ après la mise à jour vers la version 2.7.
-* Les fichiers de paramètres des versions précédentes **ne peuvent plus** être utilisés dans AAPS 2.7 et les versions suivantes.
+* Les fichiers de paramètres des versions précédentes ne peuvent être que importés dans AAPS 2.7. L'exportation sera dans le nouveau format.
 * Assurez-vous de stocker vos paramètres exportés non seulement sur votre téléphone, mais également dans au moins un autre endroit sûr (votre pc, stockage cloud...).
 * Si vous construisez l'apk AAPS 2.7 avec le même fichier de clés que dans les versions précédentes, vous pouvez installer la nouvelle version sans supprimer la version précédente. 
 * Tous les paramètres ainsi que les objectifs terminés resteront tels qu'ils étaient dans la version précédente.
@@ -56,19 +56,9 @@ Définir le mot de passe de la pompe Dana RS (si vous utilisez une Dana RS)
 * Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
 * Faites défiler vers le bas et cliquez sur triangle à côté de " Dana RS ".
 * Cliquez sur " Mot de passe pompe (v1 uniquement) "
-* Entrez le mot de passe de la pompe (mot de passe par défaut 1234) et cliquez sur OK.
+* Entrez le mot de passe de la pompe (Le `mot de passe par défaut <../Configuration/DanaRS-Insulin-Pump.html#mot-de-passe-par-defaut>`_ est différent selon la version du firmware) et cliquez sur OK.
 
 .. image:: ../images/DanaRSPW.png
   :alt: Définir le mot de passe Dana RS
   
-Pour changer le mot de passe sur Dana RS :
-
-* Appuyez sur le bouton OK de la pompe
-* Dans le menu principal, sélectionnez "OPTION" (déplacer à droite en appuyant sur le bouton flèche plusieurs fois)
-* Dans le menu Options, sélectionnez "OPTION UTILISATEUR"
-* Utilisez le bouton flèche pour faire défiler vers le bas jusqu'à " 11. Mot de passe "
-* Entrez l'ancien mot de passe (mot de passe par défaut 1234)
-* Définissez un nouveau mot de passe (Modifiez les numéros avec les boutons + & - / Déplacez vers la droite avec le bouton flèche).
-* Confirmez avec le bouton OK.
-* Sauvegardez en appuyant à nouveau sur le bouton OK.
-* Déplacer vers le bas jusqu'à " 14. QUITTEZ " et appuyez sur le bouton OK.
+Pour changer le mot de passe sur Dana RS, suivez les instructions sur la `page DanaRS <../Configuration/DanaRS-Insulin-Pump.html#changer-de-mot-de-passe-sur-la-pompe>`_.

@@ -11,7 +11,7 @@ Funciones
 La bomba de insulina de un niño es controlado por el teléfono móvil del niño usando AndroidAPS.
 * Los padres pueden seguir de forma remota todos los datos relevantes, tales como los niveles de glucosa, carbohidratos a bordo, insulina a bordo, etc. utilizando la aplicación ** NSClient * * en su teléfono. Los valores deben ser los mismos en AndroidAPS y NSClient.
 * Los padres pueden visualizar las alarmas usando la aplicación **xDrip en modo seguidor** en su teléfono.
-* Control remoto de AndroidAPS mediante el uso de comandos SMS <../Children/SMS-Commands.html>`_.
+* Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_ secured by two-factor authentication.
 * Cambio de perfil remoto y objetivos temporales a través de la aplicación NSClient.
 
 Herramientas y aplicaciones para monitorización remota
@@ -20,7 +20,7 @@ Herramientas y aplicaciones para monitorización remota
 * Aplicación NSClient
 *	Dexcom seguidor si está usando la aplicación original Dexcom (sólo valores BG)
 * `xDrip <../Configuration/xdrip.html>` _ en modo seguidor (principalmente valores de BG y ** alarmas**)
-* `Spike <https://spike-app.com/>` _ en iPhone (principalmente valores de BG y ** alarmas**)
+*	`Sugarmate <https://sugarmate.io/>`_ or `Spike <https://spike-app.com/>`_ on iOS (mainly BG values and **alarms**)
 
 Puntos a considerar
 ==================================================

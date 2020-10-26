@@ -67,7 +67,7 @@ Wees voorzichtig en geduldig en verander de instellingen stap voor stap. Dat is 
 * Volwassene: 12
 * Insuline-resistente volwassene: 25
 
-Zie ook [OpenAPS documentatie over SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Activeer AMA autosens
 

@@ -11,7 +11,7 @@ Fonctions
 * La pompe de l'enfant est contrôlée par le téléphone de l'enfant à l'aide d'AndroidAPS.
 * Les parents peuvent suivre à distance toutes les données pertinentes telles que les glycémies, les glucides actifs, l'insuline active, etc. en utilisant l'application **NSclient** sur leur téléphone. Les paramètres doivent être identiques dans AndroidAPS et NSClient.
 * Les parents peuvent recevoir des alarmes en utilisant l'application **xDrip+ en mode suiveur** sur leur téléphone.
-* Ils peuvent contrôler à distance AndroidAPS en utilisants les `Commandes SMS <../Children/SMS-Commands.html>`_.
+* Contrôle à distance d'AndroidAPS en utilisant les `commandes SMS <../Children/SMS-Commands.html>`_ sécurisées par l'authentification à deux facteurs.
 * Les changement de profil et cibles temporaires peuvent être effectués à distance via l'application NSClient.
 
 Outils et applications pour la surveillance à distance
@@ -20,7 +20,7 @@ Outils et applications pour la surveillance à distance
 *	Application NSClient
 *	Dexcom Follow si vous utilisez l'application officielle Dexcom (glycémies uniquement)
 *	`xDrip+ <../Configuration/xdrip.html>`_ en mode suiveur (principalement les valeurs de GLY et les **alarmes**)
-*	`Spike <https://spike-app.com/>`_ sur iPhone (principalement les glycémies et les **alarmes**)
+*	`Sugarmate <https://sugarmate.io/>`_ ou `Spike <https://spike-app.com/>`_ sur iOS (principalement les valeur de glycémies et les **alarmes**)
 
 Points à considérer
 ==================================================

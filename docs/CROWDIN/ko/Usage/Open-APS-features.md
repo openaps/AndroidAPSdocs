@@ -5,9 +5,9 @@
 * Autosens는 혈당 편차 (플러스/마이너스/중립)을 관찰하는 알고리즘입니다.
 * 이 기능은 혈당 편차에 근거하여 사용자가 얼마나 인슐린에 민감한지, 저항성을 띄는지를 파악할 것입니다.
 * **OpenAPS**에서 Oref 구현은 24시간, 8시간 동안의 데이터를 조합하여 실행됩니다. 두 가지 데이터 중 민감도가 더 높은 것을 사용합니다.
-* In versions prior to AAPS 2.7 user had to choose between 8 or 24 hours manually.
-* From AAPS 2.7 on Autosens in AAPS will switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
-* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
+* AAPS 2.7 이전의 버전에서는 사용자가 수동으로 8시간 또는 24시간 중 선택해야 했습니다.
+* AAPS 2.7부터는 민감도를 계산하기 위해 AAPS의 Autosens가 8시간과 24시간 사이에서 전환하게 됩니다. 이는 둘 중 더 민감한 것을 선택할 것입니다. 
+* 사용자가 oref1을 사용했을 경우, 8시간 또는 24시간의 민감도 변경으로 인하여 시스템이 변화에 덜 역동적임을 인지할 수 있을 것입니다.
 * Changing a cannula or changing a profile will reset Autosens ratio back to 0%.
 * Autosens adjusts your basal, I:C and ISF for you (i.e.: mimicking what a Profile shift does).
 * If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
@@ -42,7 +42,7 @@ SMB 기능에는 몇 가지 안전 메커니즘이 있습니다:
 
 사용자의 basal 프로파일에서 하루 중 가장 높은 basal 양이 1.00 U/h인 경우입니다. 이 경우 max basal 양으로 3U/h이 추천됩니다.
 
-하지만 사용자가 아무 값이나 선택할 수 있는 것은 아닙니다. 설정에서 선택된 환자의 연령에 따라 이 값은 AAPS에 의해 '엄격한 한계(hard limit)'로 제한됩니다. 허용되는 가장 낮은 값은 어린이를 위한 것이며, 가장 높은 값은 인슐린 저항성이 있는 성인들을 위한 것 입니다.
+하지만 사용자가 아무 값이나 선택할 수 있는 것은 아닙니다. 설정에서 선택된 환자의 연령에 따라 이 값은 AAPS에 의해 '고정된 한계값'으로 제한됩니다. 허용되는 가장 낮은 값은 어린이를 위한 것이며, 가장 높은 값은 인슐린 저항성이 있는 성인들을 위한 것 입니다.
 
 AndroidAPS는 다음과 같이 값을 제한합니다:
 
@@ -67,23 +67,23 @@ OpenAPS SMB를 사용하면, OpenAPS AMA에서와는 다르게 max-IOB가 계산
 * Adult: 12
 * Insulin resistant adult: 25
 
-See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
+[SMB를 위한 OpenAPS 문서](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb)도 참고하시기 바랍니다.
 
-### Enable AMA Autosense
+### AMA Autosense를 사용하기
 
-Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' or not.
+여기에서 [민감도 감지](../Configuration/Sensitivity-detection-and-COB.md) 'autosense'의 사용 여부를 선택할 수 있습니다.
 
-### Enable SMB
+### SMB를 사용하기
 
-Here you can enable or completely disable SMB feature.
+여기에서 SMB 기능을 활성화하거나 완전히 비활성화할 수 있습니다.
 
-### Enable SMB with COB
+### COB와 함께 SMB를 사용하기
 
-SMB is working when there is COB active.
+SMB는 COB가 활성화 상태일 때 작동합니다.
 
-### Enable SMB with temp targets
+### 임시 목표에서 SMB를 사용하기
 
-SMB is working when there is a low or high temporary target active (eating soon, activity, hypo, custom)
+SMB는 낮거나 높은 임시 목표(식사 직전, 활동 시, 저혈당, 사용자 정의)가 활성화되어 있을 때 작동합니다.
 
 ### Enable SMB with high temp targets
 
@@ -169,7 +169,7 @@ The default value is 2, but you should be rise this parameter slowly to see how 
 * Adult: 7
 * Insulin resistant adult: 12
 
-### Enable AMA Autosense
+### AMA Autosense를 사용하기
 
 Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosense or not.
 

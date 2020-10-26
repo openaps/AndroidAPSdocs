@@ -2,7 +2,8 @@ SMS Komandos
 **************************************************
 Saugumas - svarbiausia
 ==================================================
-* AndroidAPS leidžia jums kontroliuoti vaiko telefoną nuotoliniu būdu per tekstinį pranešimą. Jei įgalinate šį SMS komunikatorių, visada prisiminkite, kad telefonas, duodantis nuotolinio valdymo komandas, gali būti pavogtas. Todėl visada jį apsaugokite bent PIN kodu.
+* AndroidAPS leidžia jums kontroliuoti vaiko telefoną nuotoliniu būdu per tekstinį pranešimą. Jei įgalinate šį SMS komunikatorių, visada prisiminkite, kad telefonas, duodantis nuotolinio valdymo komandas, gali būti pavogtas. Todėl visada jį apsaugokite bent PIN kodu. Rekomenduojamas stiprus slaptažodis arba biometriniai duomenys.
+* Be to, rekomenduojama leisti `dar vienam telefono numeriui <#authorized-phone-numbers>`_ siųsti SMS komandas. Taigi, jei bus pamestas ar pavogtas pagrindinį nuotolinis telefonas, antruoju numeriu galite `laikinai išjungti <#other>`_ SMS komunikatorių.
 * AndroidAPS teikia grįžtamąjį ryšį Sms žinute, jei jūsų nuotolinės komandos, tokios kaip buvo atliktas boluso suleidimas ar profilio keitimas, buvo patvirtintos. Patartina tai nustatyti taip, kad patvirtinimo tekstai būtų siunčiami bent dviem skirtingais telefono numeriais, jei pavogtas vienas iš priimančių telefonų.
 * **Jei bolusuojate per SMS Komandas, jūs privalote įvesti angliavandenius per Nightscout (NSClient, Interneto svetainėje...)!** Jei to nepadarysite AIO bus teisingas su per mažai AAO, kas potencialiai lems, kad korekcinis bolusas nebus leidžiamas, nes AAPS preziumuos, kad yra per daug aktyvaus insulino.
 * Su AndroidAPS versija 2.7, siekiant padidinti saugumą naudojant SMS komandas, turi būti naudojama autentifikavimo programa su laike apribotu vienkartiniu slaptažodžiu.
@@ -64,11 +65,12 @@ Autentifikavimo sąrankos nustatymas
    * Įveskite 4570512020
    
 * Raudonas tekstas „NETEISINGAS PIN“ pasikeis **automatiškai** į žalią „Gerai“, jei įvestis teisinga. **Nėra mygtuko, kurį galėtumėte paspausti! **
+* Laikas abiejuose telefonuose turi būti sinchronizuotas. Geriausia praktika - naudoti automatinį tinklo pateiktą laiką. Net ir nežymūs laiko skirtumai gali sukelti autentiškumo nustatymo problemų.
 * Naudokite mygtuką "RESET AUTHENTICATORS" (Iš naujo nustatyti autentifikatorius), jei norite pašalinti nuostatas.
 
 SMS komandų naudojimas
 ==================================================
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands </Children/SMS-Commands.html#commands>`_ below. 
+Siųskite SMS žinutę iš jūsų patvirtinto(-ų) telefono numerio(-ių) į pagrindinį AndroidAPS telefoną, naudodami bet kurią iš toliau nurodytų `komandų <../Children/SMS-Commands.html#commands>`_. 
 * AAPS telefonas reaguos patvirtindamas komandos ar būsenos prašymą. 
 * Patvirtinkite komandą, jei reikia, nusiųsdami kodą. Pavyzdys:
 
@@ -80,7 +82,7 @@ SMS komandų naudojimas
 
 Komandos
 ==================================================
-Commands must be send in English, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Komandos turi būti išsiųstos anglų kalba, atsakymą gausite savo vietine kalba, jei eilutė jau yra išversta <../translations.html#translate-strings-for-androidaps-app>`_.
 
 .. nuotrauka:: ../images/SMSCommands.png
   :alt: SMS komandų pavyzdys

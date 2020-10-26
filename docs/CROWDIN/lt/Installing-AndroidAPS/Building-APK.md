@@ -6,8 +6,8 @@
 
 ## ## Svarbios pastabos
 
-* Norėdami sukurti APK failą, naudokite **[Android Studio 3.6.1 arba naujesnę versiją](https://developer.android.com/studio/)**.
-* [Windows 10 32-bitų sistemos](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) nėra palaikomos Android Studio 3.6.1.
+* Norėdami sukurti APK failą, naudokite **[Android Studio 4.0.1 arba naujesnę versiją](https://developer.android.com/studio/)**.
+* [Windows 10 32-bitų sistemos](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) nėra palaikomos Android Studio 4.0.1.
 
 **Konfigūracija pagal pareikalavimą** nepalaikoma dabartinėje Android Gradle modulio versijoje!
 

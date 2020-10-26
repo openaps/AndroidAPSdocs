@@ -6,8 +6,8 @@
 
 ## Remarques importantes
 
-* Utilisez **[Android Studio Version 3.6.1](https://developer.android.com/studio/)** ou une version plus récente pour construire l'apk.
-* [Les systèmes d'exploitation Windows 10 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#impossible-de-demarrer-le-processus-daemon) ne sont pas pris en charge par Android Studio 3.6.1.
+* Utilisez **[Android Studio Version 4.0.1](https://developer.android.com/studio/)** ou une version plus récente pour construire l'apk.
+* [Les systèmes d'exploitation Windows 10 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) ne sont pas pris en charge par Android Studio 4.0.1.
 
 **Configuration on demand** n'est pas pris en charge par la version actuelle du plug-in Android Gradle !
 
@@ -118,7 +118,7 @@ Sur l'écran d'accueil d'Android Studio, cliquez sur le petit triangle (1. de la
 ### Mac
 
 * N’importe quelle version de git devrait fonctionner. Par exemple <https://git-scm.com/download/mac>.
-* Utilisez homebrew pour installer git: ```$ brew install git```.
+* Utilisez homebrew pour installer git: ```$ brew install git``` 
 * Pour plus de détails sur l'installation de git, voir la [documentation officielle](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * Si vous installez git via homebrew, il n'est pas nécessaire de modifier les préférences. Juste au cas où : on peut y accéder ici : Android Studio - Preferences.
 

@@ -67,7 +67,7 @@ AndroidAPS ограничивает эту величину следующим �
 * Взрослый: 12
 * Инсулинорезистентный взрослый: 25
 
-См. также [документацию OpenAPS по SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Включить autosense AMA
 

@@ -16,7 +16,7 @@ Activity & feedback
 * Age information was moved to actions tab / menu.
 * BG check was moved to actions tab / menu.
 * Temporary target was moved to actions tab / menu.
-* Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section `carbs & bolus <#carbs--bolus>`_ on this page).
+* Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section `carbs & bolus <#id1>`_ on this page).
 
 Carbs & bolus
 ==============================

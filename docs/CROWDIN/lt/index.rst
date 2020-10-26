@@ -59,7 +59,7 @@ Komponentų Nustatymas
    
    Glikemijos duomenų šaltiniai <./Configuration/BG-Source.rst>
    xDrip Nustatymai <./Configuration/xdrip.md>
-   Pumpos <./Hardware/pumps.rst>
+   Pompos <./Hardware/pumps.rst>
    Telefonai <./Hardware/Phoneconfig.rst>
    Nightscout nustatymas <./Installing-AndroidAPS/Nightscout.md>
    Išmanieji laikrodžiai <./Hardware/Smartwatch.rst>
@@ -72,7 +72,7 @@ Konfigūracija
    :glob:
    
    Konfigūratorius <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences.rst>
+   Nustatymai <./Configuration/Preferences.rst>
    
    
 AndroidAPS naudojimas
@@ -91,6 +91,7 @@ AndroidAPS naudojimas
    Ištęsti angliavandeniai <./Usage/Extended-Carbs.rst>
    Automatizavimas <./Usage/Automation.rst>
    Priežiūros portalas (nutraukta) <./Usage/CPbefore26.rst>
+   Įkėlimas į Open Human <./Configuration/OpenHumans.rst>
    Automatizavimas su 3-ios šalies aplikacijomis <./Usage/automationwithapp.md>
    Android Auto <./Usage/Android-auto.md>  
  
@@ -113,7 +114,7 @@ AndroidAPS vaikams
    :glob:
    
    Nuotolinis stebėjimas <./Children/Children.rst>
-   SMS komandos <./Usage/SMS-Commands.rst>
+   SMS komandos <./Children/SMS-Commands.rst>
    
 
 Trikčių šalinimas

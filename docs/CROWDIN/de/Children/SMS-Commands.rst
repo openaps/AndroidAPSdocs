@@ -1,21 +1,22 @@
-SMS-Befehle
+SMS-Kommandos
 **************************************************
 Sicherheitshinweise
 ==================================================
-* AndroidAPS erlaubt es Dir, das Smartphone eines Kindes über SMS-Nachricht aus der Ferne zu steuern. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Befehle eingerichtet ist, gestohlen werden kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code.
-* AndroidAPS gibt Rückmeldung per SMS, wenn Deine Remote-Befehle, wie z.B. ein Bolus oder eine Profiländerung, ausgeführt wurden. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
-* **Wenn Du einen Bolus über  SMS-Befehle abgibst, musst Du die Kohlenhydrate über Nightscout (NSClient, Webseite...) eingeben!** Wenn Du das unterlässt, ist zwar das IOB korrekt, aber die COB sind zu gering. Dies kann dazu führen, dass notwendige Korrekturboli nicht abgegeben werden, da AAPS davon ausgeht, dass Du zu viel aktives Insulin hast.
-* Ab AndroidAPS Version 2.7 muss eine Authentifizierungs-App mit einem zeitbasierten Einmalpasswort verwendet werden, um die Sicherheit bei der Verwendung von SMS-Befehlen zu erhöhen.
+* AndroidAPS erlaubt es Dir, das Smartphone eines Kindes über SMS-Nachricht aus der Ferne zu steuern. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Kommandos eingerichtet ist, gestohlen werden oder verloren gehen kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code. Es wird ein starkes Passwort oder biometrischer Schutz empfohlen.
+* Außerdem ist es empfehlenswert, eine `zweite Telefonnummer <#erlaubte-telefonnummern>`_ für SMS Kommandos einzurichten. Dann kannst Du die zweite Nummer nutzen, um den SMS-Kommunikator `vorübergehend zu deaktivieren <#andere>`_, falls Dein Smartphone verloren geht oder gestohlen wird.
+* AndroidAPS gibt Rückmeldung per SMS, wenn Deine Remote-Kommandos, wie z.B. ein Bolus oder eine Profiländerung, ausgeführt wurden. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
+* **Wenn Du einen Bolus über SMS-Kommandos abgibst, musst Du die Kohlenhydrate über Nightscout (NSClient, Webseite...) eingeben!** Wenn Du das unterlässt, ist zwar das IOB korrekt, aber die COB sind zu gering. Dies kann dazu führen, dass notwendige Korrekturboli nicht abgegeben werden, da AAPS davon ausgeht, dass Du zu viel aktives Insulin hast.
+* Ab AndroidAPS Version 2.7 muss eine Authentifizierungs-App mit einem zeitbasierten Einmalpasswort verwendet werden, um die Sicherheit bei der Verwendung von SMS-Kommandos zu erhöhen.
 
-SMS-Befehle einrichten
+SMS-Kommandos einrichten
 ==================================================
 
 .. image:: ../images/SMSCommandsSetup.png
-  :alt: SMS-Befehle einrichten
+  :alt: SMS-Kommandos einrichten
       
 * Die meisten Anpassungen der temporären Ziele, AAPS folgen etc. können über die `NSClient-App <../Children/Children.html>`_ auf einem Android-Smartphone durchgeführt werden.
-* Boli können nicht über Nightscout abgegeben werden, aber Du kannst dafür SMS-Befehle verwenden.
-* Falls Du als Follower ein iPhone verwendest und daher die NSClient-App nicht nutzen kannst, gibt es weitere SMS-Befehle.
+* Boli können nicht über Nightscout abgegeben werden, aber Du kannst dafür SMS-Kommandos verwenden.
+* Falls Du als Follower ein iPhone verwendest und daher die NSClient-App nicht nutzen kannst, gibt es weitere SMS-Kommandos.
 
 * Gehe dazu in den Systemeinstellungen deines Android-Telefons zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
 
@@ -26,13 +27,13 @@ Erlaubte Telefonnummern
 * Wenn Du mehr als eine Nummer verwenden möchtest:
 
   * Gib nur eine der Telefonnummern ein.
-  * Führe einen SMS-Befehl aus um sicher zu stellen, dass die Kommandos mit dieser Telefonnummer funktionieren.
+  * Führe ein SMS-Kommando aus um sicher zu stellen, dass die Kommandos mit dieser Telefonnummer funktionieren.
   * Gib die zusätzliche(n) Telefonnummer(n) getrennt durch Semikolon ohne Leerzeichen ein.
   
     .. image:: ../images/SMSCommandsSetupSpace2.png
-      :alt: SMS-Befehle Setup mehrerer Nummern
+      :alt: SMS-Kommandos Setup mehrerer Nummern
 
-Minuten zwischen Bolus-Befehlen
+Minuten zwischen Bolus-Kommandos
 -------------------------------------------------
 * Du kannst den minimalen Zeitabstand zwischen über SMS durchgeführte Boli definieren.
 * Aus Sicherheitsgründen musst Du mindestens zwei erlaubte Telefonnummern hinzufügen, um diesen Wert zu bearbeiten.
@@ -64,13 +65,14 @@ Konfiguration des Authentifikators
    * Trage 4570512020 ein
    
 * Der rote Text "WRONG PIN" ändert sich **automatisch** in den grünen Text "OK", wenn das Einmal-Passwort korrekt ist. **Es gibt keine Taste, die Du drücken kannst!**
+* Die Zeit auf beiden Telefonen muss synchron sein. Am einfachsten erfolgt dies direkt über das Mobilfunknetz. Zeitunterschiede können zu Authentifizierungsproblemen führen.
 * Verwende die Schaltfläche "AUTHENTIKATORS ZURÜCKSETZEN", wenn Du bereits eingerichtete Berechtigungen entfernen möchten.
 
-SMS-Befehle verwenden
+SMS-Kommandos verwenden
 ==================================================
-* Sende eine SMS von Deiner/Deinen erlaubte/n Telefonnummer(n) an das Smartphone, das AndroidAPS ausgeführt und nutze dabei einen der `Befehle </Children/SMS-Commands.html#befehle>`_ unten. 
-* Das AAPS-Smartphone wird antworten, um sich die Durchführung des übermittelten Befehls bestätigen zu lassen oder um den angeforderten Status zu übermitteln. 
-* Bestätige falls erforderlich die Durchführung des übermittelten Befehls, indem Du den angegebenen Code zurücksendest. Beispiel:
+* Sende eine SMS von Deiner/Deinen erlaubte/n Telefonnummer(n) an das Smartphone, das AndroidAPS ausgeführt und nutze dabei eines der `Kommandos <../Children/SMS-Commands.html#id1>`_ unten. 
+* Das AAPS-Smartphone wird antworten, um sich die Durchführung des übermittelten Kommandos bestätigen zu lassen oder um den angeforderten Status zu übermitteln. 
+* Bestätige falls erforderlich die Durchführung des übermittelten Kommandos, indem Du den angegebenen Code zurücksendest. Beispiel:
 
    * Deine zwingend erforderliche PIN ist 2020
    * TOTP Token von der Authentifizierungs-App ist 457051
@@ -78,12 +80,12 @@ SMS-Befehle verwenden
 
 **Hinweis:** Eine SMS-Flat auf beiden Telefonen kann nützlich sein, da u.U. viele SMS hin und her gesandt werden.
 
-Befehle
+Kommandos
 ==================================================
-Befehle müssen in Englisch gesendet werden, die Antwort erhältst Du in Deiner lokalen Sprache, wenn die Zeichenfolge bereits `übersetzt ist <../translations.html#texte-fur-die-androidaps-app-ubersetzen>`_.
+Kommandos müssen in Englisch gesendet werden, die Antwort erhältst Du in Deiner lokalen Sprache, wenn die Zeichenfolge bereits `übersetzt ist <../translations.html#texte-fur-die-androidaps-app-ubersetzen>`_.
 
 .. image:: ../images/SMSCommands.png
-  :alt: Beispiele für SMS-Befehle
+  :alt: Beispiele für SMS-Kommandos
 
 Loop
 --------------------------------------------------
@@ -124,7 +126,7 @@ Basal
 
 Bolus
 --------------------------------------------------
-Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAPS oder nach dem letzten SMS-Befehl nicht möglich. Den Wert kannst Du nur anpassen, wenn mind. zwei Rufnummern eingetragen sind. Die Antwort hängt daher davon ab, wann der letzte Bolus abgegeben wurde.
+Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAPS oder nach dem letzten SMS-Kommando nicht möglich. Den Wert kannst Du nur anpassen, wenn mind. zwei Rufnummern eingetragen sind. Die Antwort hängt daher davon ab, wann der letzte Bolus abgegeben wurde.
 
 * BOLUS 1.2
    * Antwort A: Um einen Bolus von 1,2 IE abzugeben, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
@@ -184,7 +186,7 @@ Wenn Du die gleiche SMS immer und immer wieder empfängst (z.B. Profilwechsel), 
 
 Wenn die andere App auf mehreren Smartphones installiert ist, musst Du den Upload auf allen deaktivieren.
 
-SMS-Befehle funktionieren nicht auf Samsung-Smartphones
+SMS-Kommandos funktionieren nicht auf Samsung-Smartphones
 --------------------------------------------------
 Es gab einen Hinweis, dass nach einem Update die SMS Kommandos auf einem Galaxy S10 nicht mehr funktioniert haben. Dies konnte durch Abschalten der Option 'als chat message senden' behoben werden.
 

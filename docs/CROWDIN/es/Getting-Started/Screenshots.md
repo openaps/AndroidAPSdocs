@@ -14,10 +14,9 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 
 ### Section B - Profile & target
 
-#### Perfil
+#### Current Profile
 
-    ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
-    
+![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
 * Current profile is displayed in the left bar.
 * Long press profile bar to view profile details or to [switch between different profiles](../Usage/Profiles#profile-switch).
@@ -25,8 +24,7 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 
 #### Target
 
-    ![Temp target remaining duration](../images/Home2020_TT.png)
-    
+![Temp target remaining duration](../images/Home2020_TT.png)
 
 * Current target blood glucose level is displayed in the right bar.
 * Long press target bar to set a [temporary target](../Usage/temptarget.md).
@@ -34,8 +32,7 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 
 #### Visualization of Dynamic target adjustment
 
-    ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
-    
+![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
 * Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
@@ -95,7 +92,7 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 
 * Carbs suggestions are given when the reference design detects that it requires carbs.
 * This is when the oref algorithm thinks I can't rescue you by 0 (zero) temping and you will need carbs to fix.
-* The carb notifications are much more sophisticated then the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
+* The carb notifications are much more sophisticated than the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
 ### Section E - Status lights
@@ -120,7 +117,7 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 * Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
 * Long press on the graph to change the time scale. You can choose 6, 12, 18 or 24 hours.
 * The green area reflects your target range. It can be configured in [preferences](../Configuration/Preferences#range-for-visualization).
-* Blue triangles show [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - if enabled in [preferences](.../Configuration/Preferences#openaps-smb-settings).
+* Blue triangles show [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - if enabled in [preferences](../Configuration/Preferences#openaps-smb-settings).
 * Optional information:
    
    * Predicciones
@@ -156,8 +153,8 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Basals
 
-* A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time. . 
-* The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs)
+* A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
+* The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
 * In times standard basal rate is given the area under the curve is shown in dark blue.
 * When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
 
@@ -181,9 +178,10 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Insulin on board
 
-* Shows the insulin from bolus (**excludes basals**) you have on board (= active insulin in your body). 
-* If there were no \[SMBs]\](../Usage/Open-APS-features#super-micro-bolus-smb) and no remaining boluses this would be zero. 
-* Decaying depends on your [DIA and insulin profile settings](..Configuration/Config-Builder#local-profile-recommended). 
+* Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
+* If there were no [SMBs](../Usage/Open-APS-features#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+* IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
+* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile-recommended). 
 
 #### Carbs On Board
 
@@ -224,7 +222,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* To give a certain amount of insulin without using [bolus calculator](../Configuration/Screenhots#bolus-wizard).
+* To give a certain amount of insulin without using [bolus calculator](../Getting-Started/Screenhots#bolus-wizard).
 * By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences#default-temp-targets).
 * If you do not want to bolus through pump but record insulin amount (i.e. insulin given by syringe) check the corresponding box.
 
@@ -375,13 +373,13 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
    * Basal rate
    * Target: Blood glucose level that you want AAPS to be aiming for
 
-* You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](/Configuration/Config-Builder.md).
+* You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).
 
 ## Treatment
 
 History of the following treatments:
 
-* Bolus & carbs -> option to [remove entries](..Getting-Started/Screenshots#carb-correction) to correct history
+* Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
 * [Bolo extendido](../Usage/Extended-Carbs#id1)
 * Temporary basal rate
 * [Temporary target](../Usage/temptarget.md)

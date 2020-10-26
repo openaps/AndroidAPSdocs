@@ -11,7 +11,7 @@ Functions
 * Kid's pump is controlled by kid's phone using AndroidAPS.
 * Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone. Settings must be the same in AndroidAPS and NSClient.
 * Parents can be alarmed by using **xDrip+ app in follower mode** on their phone.
-* Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_.
+* Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_ secured by two-factor authentication.
 * Remote profile switch and temp targets through NSClient app.
 
 Tools and apps for remote monitoring
@@ -20,7 +20,7 @@ Tools and apps for remote monitoring
 *	NSClient app
 *	Dexcom follow if you are using original Dexcom app (BG values only)
 *	`xDrip+ <../Configuration/xdrip.html>`_ in follower mode (mainly BG values and **alarms**)
-*	`Spike <https://spike-app.com/>`_ on iPhone (mainly BG values and **alarms**)
+*	`Sugarmate <https://sugarmate.io/>`_ or `Spike <https://spike-app.com/>`_ on iOS (mainly BG values and **alarms**)
 
 Things to consider
 ==================================================

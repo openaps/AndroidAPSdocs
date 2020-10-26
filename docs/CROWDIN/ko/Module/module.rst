@@ -35,7 +35,7 @@ SGLT-2 억제제의 미사용
 
 핸드폰
 --------------------------------------------------
-구글 안드로이드 6.0 이상의 안드로이드 스마트 폰이 필요합니다. Next major version AndroidAPS 2.7 will only support Android 7 and above. So if you are thinking about a new phone, Android 8.1 is recommended at least but optimicaly Android 9 or 10.
+You need an Android smartphone with Google Android 7.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at least but optimicaly Android 9 or 10.
 
 사용자들이 테스트된 핸드폰과 스마트워치 목록을 작성하고 있으며<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_에서 확인하실 수 있습니다.
 
@@ -85,7 +85,7 @@ AndroidAPS와 호환될 수 있는 가능성이 있는 **그외 펌프**는 <../
 
 Nightscout
 --------------------------------------------------
-나이트스카웃은 CGM 데이터 및 안드로이드APS 데이터를 저장하고 표시하며 보고서를 작성할 수 있는 오픈 소스 웹 애플리케이션이다. 더 자세한 사항은 `나이트스카웃 프로젝트 웹페이지 <http://www.nightscout.info/>`_에서 확인할 수 있습니다. 자체적으로 나이트스카웃 웹사이트를 Heroku <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_를 이용하여 만들 수 있으며, `zehn.be <https://ns.10be.de/en/index.html>`에서 기본적으로 설정되어 있는 나이트스카웃 설정을 사용하거나 자체 서버를 호스트하여 (IT 전문가들을 위한 것입니다.)
+나이트스카웃은 CGM 데이터 및 안드로이드APS 데이터를 저장하고 표시하며 보고서를 작성할 수 있는 오픈 소스 웹 애플리케이션이다. 더 자세한 사항은 `나이트스카웃 프로젝트 웹페이지 <http://www.nightscout.info/>`_에서 확인할 수 있습니다. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
 
 나이트스카웃은 독립적인 다른 모듈입니다. 목표 1을 이행해주시기 바랍니다.
 

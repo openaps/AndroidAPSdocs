@@ -77,16 +77,10 @@
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - source Glycémie</a></td>
 </tr>
 <tr>
- <td>BlueReader</td>
- <td>transmetteur bluetooth pour transformer le Freestyle Libre en MGC</td>
- <td>Blukon Nightreader / MiaoMiao</td>
- <td><a href="https://bluetoolz.de/blueorder/#home">BlueReader</a></td>
-</tr>
-<tr>
  <td>Blukon Nightreader</td>
  <td>transmetteur bluetooth pour transformer le Freestyle Libre en MGC</td>
  <td>BlueReader / MiaoMiao</td>
- <td><a href="https://www.ambrosiasys.com/howit"> </a></td>
+ <td><a href="https://www.ambrosiasys.com/howit">Ambrosia Blukon Nightreader</a></td>
 </tr>
 <tr>
  <td>DB (BR)</td>
@@ -95,7 +89,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>CAGE</td>
+ <td>AgeC</td>
  <td>Age Canule - affiché dans Nightscout si l'information a été renseignée dans l'onglet / menu Actions de AAPS ou par l'intermédiaire de l'action 'AMORCER' de l'onglet ACT</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
@@ -116,7 +110,7 @@
  <td>Boucle Fermée</td>
  <td>les systèmes à boucle fermée font les réglages du débit de base automatiquement, sans avoir besoin de l'approbation de l'utilisateur, en se basant sur un algorithme</td>
  <td>Boucle Ouverte</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki - boucle fermée</a></td>
+ <td><a href="../Configuration/Config-Builder.html#boucle-fermee">Wiki - boucle fermée</a></td>
 </tr>
 <tr>
  <td>GA</td>
@@ -128,7 +122,7 @@
  <td>DAI</td>
  <td>Durée d'Action de l'Insuline</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - types d'insulines</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insuline">Wiki - types d'insulines</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td>heure d'été</td>
@@ -158,7 +152,7 @@
  <td>GitHub</td>
  <td>service d'hébergement web pour le contrôle de version utilisant Git<br>-> stockage du code source de AAPS</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/MilosKozak/AndroidAPS">Github AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td>Glimp</td>
@@ -198,7 +192,7 @@
 </tr>
 <tr>
  <td>LineageOS</td>
- <td>Système d'exploitation open-source pour les smartphones, etc. <br> OS alternatifs pour les smartphones ne fonctionnant pas Android 8.1 (Oreo) <br> (lors de l'utilisation de Accu-Chek Combo)</td>
+ <td>Système d'exploitation open-source pour les smartphones, etc.<br>OS alternatifs pour les smartphones ne fonctionnant pas Android 8.1 (Oreo)<br>(lors de l'utilisation de Accu-Chek Combo)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Pompe Combo</a></td>
 </tr>
@@ -209,16 +203,10 @@
  <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - fichiers log</a></td>
 </tr>
 <tr>
- <td>AR (MA)</td>
- <td>Assistance Repas - algorithme standard pour gérer les repas</td>
- <td>AAR / SMB</td>
- <td><a href="../Usage/Open-APS-features.html#meal-assist-ma">Wiki - AR</a></td>
-</tr>
-<tr>
  <td>maxIA (maxIOB)</td>
  <td>fonction de sécurité - niveau d'insuline actvie maximal que AAPS ne peut pas dépasser</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIA</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#parametres-a-ajuster-lors-du-passage-d-ama-a-smb">Wiki - maxIA</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#parametres-a-ajuster-lors-du-passage-d-ama-a-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>MiaoMiao</td>
@@ -248,7 +236,7 @@
  <td>Nightscout Reporter</td>
  <td>Outil permettant aux utilisateurs de la boucle fermée de générer des rapports PDF à partir des données enregistrées dans Nightscout</td>
  <td>Nightscout</td>
- <td><a href="https://nightscout-reporter.zreptil.de/"> Nightscout Reporter </a> <br> <a href="https://www.facebook.com/nightrep/"> NS Reporter @ Facebook </a></td>
+ <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a> <br> <a href="https://www.facebook.com/nightrep/">NS Reporter @Facebook</a></td>
 </tr>
 <tr>
  <td>Objectifs</td>
@@ -258,7 +246,7 @@
 </tr>
 <tr>
  <td>OpenAPS</td>
- <td>système de pancréas artificiel ouvert <br> APS marche sur des petits ordinateurs (ex. Raspberry Pie) <br> AAPS utilise quelques fonctionnalités de OpenAPS</td>
+ <td>système de pancréas artificiel ouvert<br>APS marche sur des petits ordinateurs (ex. Raspberry Pie)<br>AAPS utilise quelques fonctionnalités de OpenAPS</td>
  <td>&nbsp;</td>
  <td><a href="https://openaps.readthedocs.io">Documentation OpenAPS</a></td>
 </tr>
@@ -266,7 +254,7 @@
  <td>Boucle Ouverte</td>
  <td>le système proposera des ajustements recommandés qui doivent être effectués manuellement sur la pompe</td>
  <td>Boucle Fermée</td>
- <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - Générateur de configuration</a></td>
+ <td><a href="../Configuration/Config-Builder.html#boucle-ouverte">Wiki - Générateur de configuration</a></td>
 </tr>
 <tr>
  <td>Oref0 / Oref1</td>
@@ -278,13 +266,13 @@
  <td>Temps du pic</td>
  <td>heure de l'effet maximum de l'insuline injectée</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - Générateur de configuration</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insuline">Wiki - Générateur de configuration</a></td>
 </tr>
 <tr>
  <td>HP</td>
  <td>historique de la pompe (entrée dans l'onglet traitements)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">copie d'écran</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment">Captures d'écran</a></td>
 </tr>
 <tr>
  <td>Prédictions</td>
@@ -296,7 +284,7 @@
  <td>Profil</td>
  <td>paramètres de traitement (débits de base, DAI, G/I, SI, cible Gly)<br>peuvent être définis localement ou via Nightscout</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profil</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profil">Wiki - profil</a></td>
 </tr>
 <tr>
  <td>Changement de profil</td>
@@ -317,7 +305,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>SAGE</td>
+ <td>AgeC</td>
  <td>âge du capteur - affiché dans Nightscout si l'information a été renseignée dans l'onglet / menu Actions de AAPS</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
@@ -342,7 +330,7 @@
 </tr>
 <tr>
  <td>SMB</td>
- <td>Super Micro Bolus <br> fonction avancée pour un ajustement de la glycémie plus rapide</td>
+ <td>Super Micro Bolus<br>fonction avancée pour un ajustement de la glycémie plus rapide</td>
  <td>RNS (UAM)</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki RNS</a></td>
 </tr>
@@ -365,14 +353,14 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>DTI Dosage Total d'Insuline</td>
+ <td>DTI</td>
  <td>Dosage Total d'Insuline (bolus + base par jour)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>CT</td>
- <td>Cible Temporaire <br> augmentation / diminution temporaire de la cible glycémique (plage)</td>
+ <td>Cible Temporaire<br>augmentation / diminution temporaire de la cible glycémique (plage)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/temptarget.html#temp-targets">Wiki - Cibles temp.</a></td>
 </tr>
@@ -398,7 +386,7 @@
  <td>xDrip / xDrip+</td>
  <td>logiciel open source pour lire les systèmes MGC (CGM)</td>
  <td>&nbsp;</td>
- <td><a href="https://jamorham.github.io/#xdrip-plus"> xDrip + </a> <br> <a href="http://stephenblackwasalreadytaken.github.io/xDrip/"> xDrip </a></td>
+ <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip +</a> <br> <a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
  <td>Zéro-temp</td>
@@ -407,6 +395,6 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td colspan=4>Voir aussi <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html"> https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html </a></td>
+ <td colspan=4>Voir aussi <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
 </tr>
 </table>

@@ -25,7 +25,7 @@
   </td>
   
   <td>
-    <a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">Wiki - AMA</a>
+    <a href="../Usage/Open-APS-features.html#erweiterter-mahlzeit-assistent-ama">Wiki - AMA</a>
   </td>
 <tr>
  <td>Android auto</td>
@@ -56,7 +56,7 @@
  <td>BAT</td>
  <td>Statusanzeige niedriger Batteriestand auf dem Startbildschirm</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences.html#ubersicht">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>BZ</td>
@@ -74,13 +74,7 @@
 <td>BZ-Quelle</td>
  <td>Woher kommen Deine Blutzucker-Werte?</td>
  <td>CGM / FGM</td>
- <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BZ-Quelle</a></td>
-</tr>
-<tr>
- <td>BlueReader</td>
- <td>Bluetooth-Sender, um das Freestyle Libre als CGM zu verwenden</td>
- <td>Blukon Nightreader / MiaoMiao</td>
- <td><a href="https://bluetoolz.de/blueorder/#home">BlueReader</a></td>
+ <td><a href="../Configuration/Config-Builder.html#bz-quelle">Wiki - BZ-Quelle</a></td>
 </tr>
 <tr>
  <td>Blukon Nightreader</td>
@@ -104,7 +98,7 @@
  <td>CAN</td>
  <td>Statusanzeige Kanülenwechsel auf dem Startbildschirm</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences.html#ubersicht">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -134,7 +128,7 @@
  <td>DST</td>
  <td>Sommerzeit (daylight savings time)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki Zeitumstellung</a></td>
+ <td><a href="../Usage/Timezone-traveling.html#zeitumstellung-sommer-winterzeit">Wiki Zeitumstellung</a></td>
 </tr>
 <tr>
  <td>eCarbs</td>
@@ -158,7 +152,7 @@
  <td>Github</td>
  <td>webbasierter Hosting-Dienst für die Versionskontrolle mit Git <br>-> Speicherort des Quellcodes</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/MilosKozak/AndroidAPS">Github AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td>Glimp</td>
@@ -193,14 +187,14 @@
 <tr>
  <td>LGS</td>
  <td>Low Glucose Suspend (Reduzierung der Baslarate bei niedrigen Glukosewerten)<br>AAPS wird die Basalrate reduzieren, wenn die BZ-Werte zu stark sinken. Wenn die BZ-Werte aber steigen, wird AAPS die Basalrate nur dann erhöhen, wenn negatives Insulin on board (von einer vorangegangenen Basalratenreduzierung) ist. Sonst bleibt die Basalrate wie in Deinem Profil eingestellt. Wenn du eine Hypo korrigierst, kann es vorkommen, dass danach Spitzen auftreten, die du nicht durch Erhöhung der Basalrate korrigieren kannst.</td>
- <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">Ziel 6</a></td>
+ <td><a href="../Usage/Objectives.html#ziel-6-closed-loop-mit-abschaltung-bei-niedrigen-glukose-werten">Ziel 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LineageOS</td>
  <td>freies OpenSource Betriebssystem für Smartphones und andere Geräte<br>alternatives Betriebssystem für Smartphones, auf denen Android 8.1 (Oreo) nicht betrieben werden kann<br>(bei Benutzung der Accu-Chek Combo)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Akku-Chek Combo Pumpe</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#benotigte-hardware">Wiki - Akku-Chek Combo Pumpe</a></td>
 </tr>
 <tr>
  <td>Logdateien</td>
@@ -209,16 +203,10 @@
  <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - Logfiles erhalten</a></td>
 </tr>
 <tr>
- <td>MA</td>
- <td>Mahlzeiten-Assistent (meal assist) - Standardalgorithmus zum Umgang mit Kohlenhydraten</td>
- <td>AMA / SMB</td>
- <td><a href="../Usage/Open-APS-features.html#meal-assist-ma">Wiki - MA</a></td>
-</tr>
-<tr>
  <td>maxIOB</td>
  <td>Sicherheitsfunktion - Wert für maximales aktives Insulin im Körper, der von AAPS nicht überschritten werden kann</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#einstellungen-die-bei-umstellung-von-ama-zu-smb-erforderlich-sind">Wiki - maxIOB</a><br><a href="../Configuration/Preferences.html#openaps-smb-einstellungen">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>MiaoMiao</td>
@@ -239,7 +227,7 @@
  <td><a href="http://www.nightscout.info/">Nightscout</a></td>
 </tr>
 <tr>
- <td>Nightscout-Client</td>
+ <td>NS Client Einstellungen für die Synchronisation deiner AndroidAPS Daten mit Nightscout</td>
  <td>Teil von AAPS zur Verbindung mit Deiner Nightscout-Seite</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
@@ -284,13 +272,13 @@
  <td>PH</td>
  <td>Pumpenhistorie (Eintrag im Behandlungs-Tab)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
 </tr>
 <tr>
  <td>Predictions (Vorhersagen)</td>
  <td>Vorhersage der BZ-Werte basierend auf verschiedenen Berechnungsannahmen</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - Vorhersagelinien</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#vorhersage-kurven">Wiki - Vorhersagelinien</a></td>
 </tr>
 <tr>
  <td>Profile</td>
@@ -308,7 +296,7 @@
  <td>RES</td>
  <td>Statusanzeige Reservoirwechsel auf dem Startbildschirm</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences.html#ubersicht">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
@@ -326,7 +314,7 @@
  <td>SEN</td>
  <td>Statusanzeige Sensorwechsel auf dem Startbildschirm</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences.html#ubersicht">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>Sensitivitätserkennung</td>

@@ -4,14 +4,15 @@
 
 **Dėl reikalavimų medicininiams įrenginiams, nėra galimybės tiesiog parsisiųsti AndroidAPS programą. Programos kūrimas savo reikmėms yra visiškai teisėtas, tačiau jums neleidžiama perduoti jos kopijos kitiems! Žr. [DUK](../Getting-Started/FAQ.md) dėl išsamesnės informacijos.**
 
-## Important notes
+## Svarbios pastabos
 
 * Prašome atnaujinti kuo greičiau, kai tik nauja versija yra prieinama. Gausite [informaciją AndroidAPS pagrindiniame ekrane](../Installing-AndroidAPS/Releasenotes#release-notes) apie naują versiją.
 * Nuo versijos 2.3 jūs turite naudoti git atnaujinimui. Atnaujinimas per zip failą daugiau nebeveikia.
-* Norėdami sukurti apk failą, naudokite [Android Studio versiją 3.6.1](https://developer.android.com/studio/) arba naujesnę versiją.
-* [Windows 10 32-bitų sistemos](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) nėra palaikomos Android Studio 3.6.1.
-* Jei naudojate xDrip įsitikinkite, kad [nustatote gavėją](../Configuration/xdrip#identify-receiver).
-* Jei naudojate Dexcom G6 su [modifikuota Dexcom programa](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app), jums reikės versijos iš [2.4 aplanko](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
+* Please use [Android Studio Version 4.0.1](https://developer.android.com/studio/) or newer to build the apk.
+* [Windows 10 32-bitų sistemos](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) nėra palaikomos Android Studio 4.0.1.
+* If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
+* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Trumpas vadovas patyrusiems vartotojams
 
@@ -30,21 +31,22 @@ Vykdykite instrukcijas pagal [git instaliavimo puslapį](../Installing-AndroidAP
 
 ## Atnaujinkite savo vietinę kopiją
 
-* Spustelėkite: VCS -> Git -> Pull
+* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
+* Click: VCS -> Git -> Pull
     
     ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
 
-* Spustelėkite Pull (nėra pasikeitimų dialogo srityje)
+* Click Pull (no changes in dialog field)
     
-    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02.png)
+    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02a.png)
 
-* Palaukite, kol vyksta atsisiuntimas.
+* Wait while download is in progress.
     
-    ![Android Studio - Pull vyksta](../images/AndroidStudio361_Update03.png)
+    ![Android Studio - Pull in progress](../images/AndroidStudio361_Update03.png)
 
-* Kai bus atlikta, Android Studio informuos, kad "visi failai yra atnaujinti".
+* When done Android Studio will inform you that "all files are up-to-date".
     
-    ![Visi failai atnaujinti](../images/AndroidStudio361_Update04.png)
+    ![All files up to date](../images/AndroidStudio361_Update04.png)
 
 ## Generuoti pasirašytą APK (Generate signed APK)
 

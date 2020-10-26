@@ -91,6 +91,7 @@ AndroidAPS-приложение с открытым исходным кодом 
    Пролонгированные углеводы <./Usage/Extended-Carbs.rst>
    Автоматизация <./Usage/Automation.rst>
    Careportal (более не поддерживается) <./Usage/CPbefore26.rst>
+   Open Humans Uploader <./Configuration/OpenHumans.rst>
    Автоматизация с приложениями сторонних организаций <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
  

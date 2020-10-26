@@ -25,7 +25,7 @@ Houd jouw telefoon up-to-date zoals beschreven bij [Allereerst de veiligheid](..
 
 ## Nightscout aanmaken
 
-Deze omschrijving is voor het handmatig aanmaken en instellen van jouw eigen Nightscout. Een makkelijke, meer geautomatiseerde manier om dat te doen is via ns.10be.de en staat onderaan deze pagina beschreven. Hoe je verder Nightscout handmatig aanmaakt, staat beschreven op de [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) website. Wanneer je jouw Nightscout site eenmaal hebt aangemaakt, kun je verdergaan met onderstaande instructies. Dit zijn specifieke instellingen voor jouw Nightscout site zodat je hem kunt koppelen aan AndroidAPS. Jouw Nightscout site moet ten minste versie 10 zijn (wordt weergegeven als 0.10...), dus controleer of je werkt met de [nieuwste versie](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) anders krijg je een foutmelding op je AAPS app.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Jouw Nightscout site moet ten minste versie 10 zijn (wordt weergegeven als 0.10...), dus controleer of je werkt met de [nieuwste versie](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) anders krijg je een foutmelding op je AAPS app.
 
 * Ga naar https://herokuapp.com/
 
@@ -41,15 +41,6 @@ Deze omschrijving is voor het handmatig aanmaken en instellen van jouw eigen Nig
   * Je kunt verschillende alarmen instellen voor [monitoring the pump ](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), batterijpercentage raden we sowieso aan om te activeren: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
-  * Optioneel: De volgende 'timers' kunnen worden ingesteld voor de kleuren in de AAPS Careportal: 
-    * `BAGE_WARN` = `480` (Waarschuwing na x uren sinds laatste batterij wissel in careportal)
-  * `BAGE_URGENT` = `504` (Urgente waarschuwing na x uren sinds laatste batterij wissel in careportal)
-  * `CAGE_WARN` = `40` (Waarschuwing na x uren sinds laatste infuus wissel in careportal)
-  * `CAGE_URGENT` = `48` (Urgente waarschuwing na x uren sinds laatste infuus wissel in careportal)
-  * `IAGE_WARN` = `144` (Waarschuwing na x uren sinds laatste insuline ampul wissel in careportal)
-  * `IAGE_URGENT` = `192` (Waarschuwing na x uren sinds laatste insuline ampul wissel in careportal)
-  * `SAGE_WARN` = `160` (Waarschuwing na x uren sinds laatste CGM sensor ingebracht in careportal)
-  * `SAGE_URGENT` = `168` (Urgente Waarschuwing na x uren sinds laatste CGM sensor ingebracht in careportal)
 
 ![Azure](../../images/nightscout1.png)
 

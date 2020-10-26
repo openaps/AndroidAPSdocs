@@ -1,5 +1,13 @@
-Wiki mises à jour et modifications
+Mises à jour et modifications de la documentation
 **************************************************
+Octobre 2020
+==================================================
+* `Commandes SMS - Synchronisation de l'heure <../Children/SMS-commands.html>`_
+* Mise à jour Combo `réglage duchangement d'heure <../Usage/Timezone-traveling.html#changements-d-heure>`_
+Septembre 2020
+==================================================
+* Mise à jour majeure pour la nouvelle version AAPS 2.7
+* Pour plus de détails, voir les `notes de version <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
 Juin 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - plus de détails sur l'application LibreLink patchée & l'utilisation des transmetteurs bluetooth
@@ -10,7 +18,7 @@ Mai 2020
 * `Désactivation des vibrations sur pompes Insight <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (uniquement firmware 3.x)
 * `Changement minimum <../Configuration/Preferences.html#changement-minimum>`_ pour réduire le nombre de notifications en mode boucle ouverte
 * `Application Libre Link patchée <../Hardware/Libre2.html#etape-1-construire-votre-propre-application-librelink-patchee>`_ - vérifier si le patch est correct
-* `Lignes de prédiction <../Getting-Started/Screenshots.html#section-e>`_ - plus de détails
+* `Lignes de prédiction <../Getting-Started/Screenshots.html#lignes-de-prediction>`_ - plus de détails
 Avril 2020
 ==================================================
 * `Antidater l'insulin <../Usage/CPbefore26.html#id1>`_ (par ex. injectée avec une seringue)
@@ -29,7 +37,7 @@ Février 2020
 * La fonction `Bolus étendus <../Usage/Extended-Carbs.html#bolus-etendu>`_ désactive la boucle fermée
 * Nouveau `plugin Profil Local <../Configuration/Config-Builder.html#profil-local-recommande>`_
 * `Exemple de configuration <../Getting-Started/Sample-Setup.html>`_ - mise à jour Dexcom G6
-* `Version 2.6 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - Nouvelles fonctions majeures
+* `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - Nouvelles fonctions majeures
 * `Complications pour la montre <../Configuration/Watchfaces.html>`_
 Janvier 2020
 ==================================================
@@ -57,7 +65,7 @@ Novembre 2019
 * `Dépannage d'Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Dépannage - collection de liens <../Usage/troubleshooting.html>`_
 * `Mise à jour - démarrage rapide pour les utilisateurs expérimentés <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experied-users>`_
-* Wiki - mise à jour `Edition <../make-a-PR.md#syntaxe-du-code>`_ et `Traduction <../translations.html#traduire-les-pages-wiki>`_.
+* Wiki - mise à jour `Edition <../make-a-PR.html#syntaxe-du-code>`_ et `Traduction <../translations.html#traduire-les-pages-wiki>`_.
 
 Octobre 2019
 ==================================================

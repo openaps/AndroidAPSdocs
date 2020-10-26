@@ -16,7 +16,7 @@ Aktivität & Feedback
 Die Altersangaben zu Sensoren, Kanülen, etc. finden sich nun unten auf dem Tab / im Menü "Aktionen".
 BZ Test wurde auf den Tab / in das Menü "Aktionen" verschoben.
 Das temporäres Ziel wurde auf den Tab / in das Menü "Aktionen" verschoben.
-Bewegung wurde auf den Tab / in das Menü "Aktionen" verschoben. (siehe Screenshot im Bereich `Kohlenhydrate & Bolus <#kohlenhydrate--bolus>`_ auf dieser Seite).
+Bewegung wurde auf den Tab / in das Menü "Aktionen" verschoben. (siehe Screenshot im Abschnitt `Kohlenhydrate & Bolus <#id1>`_ auf dieser Seite).
 
 Kohlenhydrate & Bolus
 ==============================
@@ -38,7 +38,7 @@ CGM & OpenAPS
   :alt: Careportal CGM & OpenAPS
   
 * Das Setzen des CGM-Sensors kannst Du jetzt im Tab / Menü "Aktionen" erfassen.
-* Alle anderen Funktionen aus diesem Abschnitt wurden entfernt. Nutze das Notizfeld in der Dialogbox, die erscheint wenn eine Aktion wie z.B. Bolusabgabe durchgeführt wird (siehe Screenshot im Abschnitt `Kohlenhydrate & Bolus <#kohlenhydrate--bolus>`_ auf dieser Seite).
+* Alle anderen Funktionen aus diesem Abschnitt wurden entfernt. Nutze das Notizfeld in der Dialogbox, die erscheint wenn eine Aktion wie z.B. Bolusabgabe durchgeführt wird (siehe Screenshot im Abschnitt `Kohlenhydrate & Bolus <#id1>`_ auf dieser Seite).
 
 Pumpe
 ==============================

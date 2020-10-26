@@ -118,10 +118,10 @@ Objectif 8 : Ajustement des débits Basal et des ratios si nécessaire, puis act
 *N'oubliez pas d'enregistrer votre Bouclage dans `ce formulaire <http://bit.ly/nowlooping>`_ en indiquant AndroidAPS comme votre type de logiciel de boucle DIY, si vous ne l'avez pas déjà fait.*
 
 
-Objectif 9 : Activation de fonctionnalités supplémentaires en journée, comme l'Aide au Repas Améliorée ARA (AMA)
+Objective 9 : Activation de fonctionnalités supplémentaires pour l'utilisation en journée, telles que la fonction SMB
 ====================================================================================================
-* Maintenant, vous devriez avoir confiance dans façon dont AndroidAPS fonctionne et quels sont les paramètres qui conviennent le mieux votre diabète
-* Ensuite, sur une période de 28 jours, vous pouvez essayer des fonctions supplémentaires qui automatisent encore plus votre travail, comme `l'assistance améliorée repas <../Usage/Open-APS-features.html#assistance-amelioree-repas-aar>`_
+* Avant la version 2.7 de AAPS, l'aide aux repas (MA) était l'algorithme de base pour AAPS et l'accomplissement de l'objectif 8 était nécessaire pour activer `l'Assistance Améliorée Repas AAR (AMA) <. /Utilisation/Open-APS-features.html#assistance-amelioree-repas-aar>`_.
+* Comme l'`Assistance Améliorée Repas (AMA) <../Usage/Open-APS-features.html#assistance-amelioree-repas-aar>`_ est l'algorithme standard de la version 2.7 d'AAPS, utilisez les 28 jours suivants pour essayer des fonctionnalités que vous n'avez pas encore utilisées et acquérir plus de confiance avec votre système de boucle fermée .
 
 
 Objectif 10 : Activation de fonctionnalités supplémentaires pour l'utilisation en journée, telles que la fonction SMB
@@ -130,9 +130,17 @@ Objectif 10 : Activation de fonctionnalités supplémentaires pour l'utilisation
 * Puis vous devez `augmenter le maxIA <../Usage/Open-APS-features.html#ia-totale-maximale-pour-openaps-u-openaps-max-ia>`_ pour que les SMB marchent correctement. maxIA inclu maintenant toutes les IA, pas seulement la basale ajoutée. Autrement dit, si vous faites un bolus de 8 U pour un repas et que maxIA est à 7 U, aucun SMB ne sera délivré jusqu'à ce que l'IA redescende en dessous de 7 U. Un bon début est maxIA = bolus moyen des repas + 3 x basale max quotidienne (basale max quotidienne = débit horaire max de basale sur n'importe quelle période de la journée - voir `Objectif 7 <../Usage/Objectives.html#objectif-7-reglage-de-la-boucle-fermee-augmentation-de-l-ia-insuline-active-maximale-au-dessus-de-0-et-abaissement-progressif-des-cibles-glycemiques>`_ pour une illustration)
 * la valeur par défaut de min_5m_carbimpact est passée de 3 à 8 entre AMA et SMB. Si vous passez de AMA vers SMB, vous devez la modifier manuellement.
 
+
+Objectif 11: Automatisation
+====================================================================================================
+* Vous devez commencer l'objectif 11 pour pouvoir utiliser l'`Automatisation <../Usage/Automation.html>`_.
+* Assurez-vous d'avoir complété tous les objectifs, y compris l'examen `<../Usage/Objectives.html#objective-3-prouvez-ses-connaissances>`_.
+* Compléter les objectifs précédents n’affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
+
+
 Retour arrière dans les Objectifs
 ====================================================================================================
 Si vous voulez revenir en arrière sur les objectifs terminés pour quelque raison que ce soit, vous pouvez le faire en cliquant sur "Refaire l'objectif".
 
-   .. image:: ../images/Objective_ClearFinished.png
-     :alt: Retour arrières objectifs
+.. image:: ../images/Objective_ClearFinished.png
+  :alt: Retour arrières objectifs

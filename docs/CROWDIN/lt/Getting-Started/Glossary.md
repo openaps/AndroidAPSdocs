@@ -77,12 +77,6 @@
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - glikemijos šaltinis</a></td>
 </tr>
 <tr>
- <td>BlueReader</td>
- <td>Freestyle Libre sensoriaus Bluetooth siųstuvas, naudojamas kaip NGJ</td>
- <td>Blukon Nightreader / MiaoMiao</td>
- <td><a href="https://bluetoolz.de/blueorder/#home">BlueReader</a></td>
-</tr>
-<tr>
  <td>Blukon Nightreader</td>
  <td>Freestyle Libre sensoriaus Bluetooth siųstuvas, naudojamas kaip NGJ</td>
  <td>BlueReader / MiaoMiao</td>
@@ -158,7 +152,7 @@
  <td>GitHub</td>
  <td>žiniatinklio versijos valdymo paslauga Git naudotojams<br> - šaltinio kodo saugykla</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/MilosKozak/AndroidAPS">Github AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td>Glimp</td>
@@ -209,12 +203,6 @@
  <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - žurnalo failai</a></td>
 </tr>
 <tr>
- <td>MA</td>
- <td>maisto asistentas - standartinis algoritmas angliavandeniams tvarkyti</td>
- <td>AMA / SMB</td>
- <td><a href="../Usage/Open-APS-features.html#meal-assist-ma">Wiki - MA</a></td>
-</tr>
-<tr>
  <td>maksAIO</td>
  <td>saugumo funkcija: didžiausias leistinas bendras aktyvaus insulino lygis, kurio AAPS negali viršyti</td>
  <td>&nbsp;</td>
@@ -246,7 +234,7 @@
 </tr>
 <tr>
  <td>Nightscout Reporter</td>
- <td> Nightscout duomenų PDF ataskaitų kūrimo įrankis</td>
+ <td>Nightscout duomenų PDF ataskaitų kūrimo įrankis</td>
  <td>Nightscout</td>
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NR Reporter @ Facebook</a></td>
 </tr>
@@ -284,7 +272,7 @@
  <td>PI</td>
  <td>pompos istorija (įrašas Terapijos skirtuke)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Ekrano nuotraukos</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment">Ekrano nuotraukos</a></td>
 </tr>
 <tr>
  <td>Prognozės</td>
@@ -396,12 +384,12 @@
 </tr>
 <tr>
  <td>xDrip / xDrip+</td>
- <td>atviro kodo programinė įranga NGJ duomenų apdorojimui</td>
+ <td>atviro kodo programinė įranga skaityti NGJ sistemas</td>
  <td>&nbsp;</td>
  <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
- <td>Nulinė bazė</td>
+ <td>Zero-temp / Laikina nulinė bazė</td>
  <td>0% laikina valandinė bazė (insulinas netiekiamas)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>

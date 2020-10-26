@@ -6,8 +6,8 @@
 
 ## ## Důležité poznámky
 
-* Chcete-li sestavit apk, použijte **[Android Studio Version 3.6.1](https://developer.android.com/studio/)** nebo novější.
-* [32 bitové systémy Windows 10](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) nejsou programem Android Studio 3.6.1. podporovány.
+* Please use **[Android Studio Version 4.0.1](https://developer.android.com/studio/)** or newer to build the apk.
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.0.1.
 
 **Configuration on demand (Konfigurace na vyžádání)** není aktuální verzí plug-inu Android Gradle podporována!
 

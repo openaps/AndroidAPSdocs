@@ -3,13 +3,13 @@ Notwendige Überprüfungen nach Aktualisierung auf AndroidAPS 2.7
 
 * Der Programmcode wurde bei der Umstellung auf AAPS 2.7 deutlich verändert. 
 * Daher ist es wichtig, dass Du einige Änderungen vornimmst oder Einstellungen nach der Aktualisierung überprüfst.
-* In den `Release Notes <../Installing-AndroidAPS/Releasenotes.html#version-270>`_ findest Du Details zu allen neuen und verbesserten Funktionen.
+* In den `Release Notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_ findest Du Details zu allen neuen und verbesserten Funktionen.
 
 Prüfe die BZ-Quelle
 -----------------------------------------------------------
 * Prüfe, ob Deine BZ-Quelle nach dem Update noch richtig eingestellt ist.
 * Wenn Du z.B. `xDrip+ <../Configuration/xdrip.html>`_ nutzt, kann es passieren, dass die BZ-Quelle auf die gepatchte Dexcom App geändert wird.
-* Öffne den `Konfigurations-Generator <../Configuration/Config-Builder.htmll#bz-quelle>`_ (Hamburger Menü oben links)
+* Öffne den `Konfigurations-Generator <../Configuration/Config-Builder.html#bz-quelle>`_ (Hamburger Menü oben links)
 * Scrolle nach unten zu "BZ-Quelle".
 * Ändere bei Bedarf die BZ-Quelle.
 
@@ -19,8 +19,8 @@ Prüfe die BZ-Quelle
 Prüfung abschließen
 -----------------------------------------------------------
 * AAPS 2.7 hat ein neues Objective 11 für `Automatisierung <../Usage/Automation.html>`_ bekommen.
-* Du musst die Prüfung erfolgreich beenden (`Objectives 3 und 4 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_), um `Objective 11 <../Usage/Objectives.html#objective-11-automation>`_ starten zu können.
-* Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Automation.html> starten kannst.`_. 
+* Du musst die Prüfung erfolgreich beenden (`Objectives 3 und 4 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_), um `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`_ starten zu können.
+* Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`_ starten kannst.`_. 
 * Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 Master-Passwort festlegen
@@ -38,7 +38,7 @@ Exportiere die Einstellungen
 -----------------------------------------------------------
 * AAPS 2.7 verwendet ein neues verschlüsseltes Backup-Format. 
 * Du musst daher nach dem Update auf Version 2.7 `Deine Einstellungen exportieren <../Usage/ExportImportSettings.html>`_.
-* Einstellungen aus früheren Versionen **können nicht** mit AAPS 2.7 und höher verwendet werden.
+* Einstellungsdateien aus früheren Versionen können in AAPS 2.7 nur importiert werden. Der Export wird im neuen Format erfolgen.
 * Speichere Deine exportierten Einstellungen nicht nur auf Deinem Smartphone, sondern auch an mindestens einem sicheren Ort (PC, Cloud-Speicher ...).
 * Wenn Du die AAPS 2.7 APK mit dem gleichen keystore wie in früheren Versionen erstellst, kannst Du die neue Version installieren, ohne die vorherige Version zu deinstallieren. 
 * Alle Einstellungen sowie abgeschlossenen Objectives (Ziele) bleiben so, wie sie in der Vorgängerversion waren.
@@ -56,19 +56,9 @@ Pumpen-Passwort für Dana RS setzen (wenn Dana RS verwendet wird)
 * Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 * Scrolle nach unten und klicke das Dreieck neben "Dana RS".
 * Klicke auf "Pumpen-Passwort (nur v1)".
-* Gib das Pumpen-Passwort ein (Standardpasswort ist 1234) und klicke auf OK.
+* Gib das Passwort der Pumpe ein (`Standard-Passwort <../Configuration/DanaRS-Insulin-Pump.html#standard-passwort>`_ unterscheidet sich je nach Firmware Version) und klicke OK.
 
 .. image:: ../images/DanaRSPW.png
   :alt: Dana RS Passwort setzen
   
-So änderst Du das Passwort auf der Dana RS:
-
-* Auf der Pumpe Taste OK drücken.
-* Im Hauptmenü "EINSTELLUNGEN" wählen. (Dazu nach rechts scrollen indem Du mehrfach den Pfeiltaste drückst.)
-* Wähle im Untermenü "ANWENDER MENÜ".
-* Scrolle mit der Pfeiltaste nach unten zu "11. Passwort".
-* Gib das alte Passwort ein (Standard ist 1234).
-* Neues Passwort eingeben. (Ändere die Ziffern mit den + & - Buttons und nutze den Pfeilbutton, um nach rechts zu gehen.)
-* Bestätige mit der OK-Taste.
-* Speichere durch erneutes Drücken der OK-Taste.
-* Scrolle nach unten zu "14. EXIT" und drücke die OK-Taste.
+Wie Du das Passwort Deiner Pumpe ändern kannst, ist auf der `DanaRS Seite <../Configuration/DanaRS-Insulin-Pump.html#passwort-auf-pumpe-andern>`_ beschrieben.

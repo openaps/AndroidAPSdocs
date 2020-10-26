@@ -5,7 +5,7 @@
 * επίπεδο 1: Διαβάστε το Wiki - τώρα έχουμε μια λειτουργία αναζήτησης για να σας βοηθήσουμε!
 * επίπεδο 2: Αναζητήστε την ομάδα Facebook, αν δεν υπάρχει ήδη απάντηση, τότε ρωτήστε την ερώτησή σας στην ομάδα χρηστών [AndroidAPS Users Facebook.](https://www.facebook.com/groups/1900195340201874/)
 * επίπεδο 3: Εάν στο facebook δεν λάβατε αποτελέσματα τότε ρωτήστε στο [gitter](https://gitter.im/MilosKozak/AndroidAPS). Direct crossposts will be ignored/deleted on both channels to avoid duplicate answers. Μην ξεχνάτε ότι η πλειοψηφία των προγραμματιστών είναι στην Ευρώπη, οπότε η απάντηση μπορεί να μην είναι σε πλαίσιο 24/7. ίσως χρειαστεί να περιμένετε αρκετές ώρες, ειδικά τα Σαββατοκύριακα και τις αργίες.
-* επίπεδο 4: Δημιουργήστε ένα αρχείο [προβλήματος](https://github.com/MilosKozak/AndroidAPS/issues) και επισυνάψτε τα αρχεία [καταγραφής](../Usage/Accessing-logfiles.md)
+* level 4: Create an [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../Usage/Accessing-logfiles.md)
 * επίπεδο 5: email στο *developers@androidaps.org* (μόνο εάν εμπλέκονται προσωπικά δεδομένα που δεν πρέπει να μεταβούν σε δημόσιο κανάλι και τα προβλήματά σας δεν έχουν επιλυθεί σε άλλα επίπεδα)
 
 Για υποστήριξη σε συγκεκριμένα CGM, χρησιμοποιήστε τις ομάδες Facebook ή gitter για το συγκεκριμένο σύστημα (π.χ. [xdrip ](https://www.facebook.com/groups/xDripG5/), [600 uploader series](https://www.facebook.com/groups/NightscoutForMedtronic/)) ή υποστήριξη στο Nightscout [CGMintheCloud ](https://www.facebook.com/groups/cgminthecloud/) δεδομένου ότι οι χρήστες θα έχουν μεγαλύτερο επίπεδο εμπειρογνωμοσύνης από τους ανθρώπους εδώ που χρησιμοποιούν πολλά τα διαφορετικά συστήματα.

@@ -3,7 +3,7 @@ Necessary checks after update to AndroidAPS 2.7
 
 * The program code was changed significantly when switching to AAPS 2.7. 
 * Therefore it is important that you make some changes or check settings after the update.
-* Please see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-270>`_ for details on new and extended features.
+* Please see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_ for details on new and extended features.
 
 Check BG source
 -----------------------------------------------------------
@@ -20,7 +20,7 @@ Finish exam
 -----------------------------------------------------------
 * AAPS 2.7 contains new objective 11 for `automation <../Usage/Automation.html>`_.
 * You have to finish exam (`objective 3 and 4 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_) in order to complete `objective 11 <../Usage/Objectives.html#objective-11-automation>`_.
-* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Automation.html>`_. 
+* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. 
 * This will not effect other objectives you have already finished. You will keep all finished objectives!
 
 Set master password
@@ -38,7 +38,7 @@ Exportovat nastavení
 -----------------------------------------------------------
 * AAPS 2.7 uses a new encrypted backup format. 
 * You must `export your settings <../Usage/ExportImportSettings.html>`_ after updating to version 2.7.
-* Settings files from previous versions **cannot** be used in AAPS 2.7 and onwards anymore.
+* Settings files from previous versions can only be imported in AAPS 2.7. Export will be in new format.
 * Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
 * If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version. 
 * All settings as well as finished objectives will remain as they were in the previous version.
@@ -56,19 +56,9 @@ Set Pump Password for Dana RS (if using Dana RS)
 * Open Preferences (three-dot-menu on top right of screen)
 * Scroll down and click triangle next to "Dana RS".
 * Click "Pump password (v1 only)"
-* Enter pump password (Default password is 1234) and click OK.
+* Enter pump password (`Default password <../Configuration/DanaRS-Insulin-Pump.html#default-password>`_ is different depending on firmware version) and click OK.
 
 .. image:: ../images/DanaRSPW.png
   :alt: Set Dana RS password
   
-To change password on Dana RS:
-
-* Press OK button on pump
-* In main menu select "OPTION" (move right by pressing arrow button several times)
-* In options menu select "USER OPTION"
-* Use arrow button to scroll down to "11. password"
-* Enter old password (Default password is 1234)
-* Set new password (Change numbers with + & - buttons / Move right with arrow button).
-* Confirm with OK button.
-* Save by pressing OK button again.
-* Move down to "14. EXIT" and press OK button.
+To change password on Dana RS follow instructions on `DanaRS page <../Configuration/DanaRS-Insulin-Pump.html#change-password-on-pump>`_.

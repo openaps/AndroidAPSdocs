@@ -35,7 +35,7 @@ SGLT-2 ингибиторы, которые также называются гл
 
 Телефон
 --------------------------------------------------
-Вам нужен смартфон Android с операционной системой Google Android 6.0 или выше. Следующая основная версия AndroidAPS 2.7 будет поддерживать только Android 7 и выше. Так что если вы думаете о новом телефоне, рекомендуем хотя бы Android 8., но оптимально Android 9 или 10.
+You need an Android smartphone with Google Android 7.0 or above. Так что если вы думаете о новом телефоне, рекомендуем хотя бы Android 8., но оптимально Android 9 или 10.
 
 Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
@@ -85,7 +85,7 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 
 Nightscout
 --------------------------------------------------
-Nightscout - веб-приложение с открытым исходным кодом, которое может регистрировать/отображать данные мониторинга и AndroidAPS и создавать отчеты. Вы можете найти больше информации на сайте проекта Nightscout <http://www.nightscout.info/>`_. Вы можете создать свой собственный сайт Nightscout `используя Heroku <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, используйте полуавтоматизированную установку Nightscout на `zehn.be <https://ns.10be.de/en/index.html>`_ или разместите его на вашем собственном сервере (для IT экспертов).
+Nightscout - веб-приложение с открытым исходным кодом, которое может регистрировать/отображать данные мониторинга и AndroidAPS и создавать отчеты. Вы можете найти больше информации на сайте проекта Nightscout <http://www.nightscout.info/>`_. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
 
 Nightscout не зависит от других модулей. Он понадобится для выполнения цели 1.
 

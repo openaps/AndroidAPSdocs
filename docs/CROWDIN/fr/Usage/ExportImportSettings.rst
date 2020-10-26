@@ -46,7 +46,7 @@ Exporter les paramètres
 .. image:: ../images/AAPS_ExportSettings2.png
   :alt: AndroidAPS exporter les paramètres 2
   
-Importez les paramètres
+Importer les paramètres
 ==================================================
 * Menu Hamburger (coin supérieur gauche de l'écran)
 * Maintenance
@@ -69,10 +69,17 @@ Importez les paramètres
 * Confirmez le message en cliquant sur 'OK'.
 * AAPS sera redémarré afin d'activer les préférences importées.
 
-* **Remarque pour les utilisateurs de Dana RS :**
+Remarque pour les utilisateurs de Dana RS
+------------------------------------------------------------
+* Comme les paramètres de connexion de la pompe sont également importés dans AAPS sur votre nouveau téléphone, il va déjà "connaître" la pompe et donc ne démarrera pas une analyse bluetooth. 
+* Veuillez associer manuellement le nouveau téléphone et la pompe.
 
-  * Comme les paramètres de connexion de la pompe sont également importés dans AAPS sur votre nouveau téléphone, il va déjà "connaître" la pompe et donc ne démarrera pas une analyse bluetooth. Veuillez associer manuellement le nouveau téléphone et la pompe.
-  
+Importer les paramètres des versions précédentes (avant AAPS 2.7)
+------------------------------------------------------------
+* L'ancien fichier de paramètres (appelé 'AndroidAPSPreferences' - sans extension de fichier) doit être dans le dossier racine de votre smartphone (/storage/emulated/0).
+* Ne mettez pas l'ancien fichier dans le même dossier que celui des nouveaux paramètres exportés (AAPS/préférences).
+* Vous trouverez l'ancien fichier en bas de la liste dans la boîte de dialogue d'importation.
+
 Transférer les paramètres
 ==================================================
 * La meilleure façon de transférer des fichiers de paramètres sur un nouveau téléphone est via un câble USB ou un service cloud (par ex. Google Drive).

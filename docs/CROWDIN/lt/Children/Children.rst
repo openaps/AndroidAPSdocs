@@ -11,7 +11,7 @@ Funkcijos
 * Vaiko pompa yra kontroliuojama per vaiko telefoną naudojant AndroidAPS.
 * Tėvai gali nuotoliniu būdu sekti, matyti visus svarbius duomenis, tokius, kaip gliukozės kiekis, aktyvūs angliavandeniai, aktyvus insulinas, ir pan. naudojant **NSClient app** jų telefone. AndroidAPS ir NSClient parametrai turi būti vienodi.
 * Tėvai gali gauti savo telefone perspėjimus, naudodami **xDrip+ programa sekėjo režime**.
-* AndroidAPS nuotolinis valdymas naudojant `SMS Komandas <../Children/SMS-Commands.html>`_.
+* AndroidAPS nuotolinis valdymas naudojant `SMS Komandas <../Children/SMS-Commands.html>`_ apsaugotas dviem autentifikavimo žingsniais.
 * Profilio perjungimas ir laikinų tikslų nustatymas nuotoliniu būdu per NSClient programą.
 
 Įrankiai ir programos, skirtos nuotoliniam stebėjimui
@@ -20,7 +20,7 @@ Funkcijos
 * NSClient programėlė
 * Dexcom Follow, jei naudojate originalią Dexcom programėlę (tik glikemijos duomenys)
 * `xDrip+ <../Configuration/xdrip.html>`_ sekėjo režime (glikemijos reikšmės ir **aliarmai**)
-*	`Spike <https://spike-app.com/>`_ iPhone telefone (glikemijos reikšmės ir **aliarmai**)
+*	`Sugarmate <https://sugarmate.io/>`_ ar `Spike <https://spike-app.com/>`_ iOS (daugiausia KG reikšmės ir **įspėjimai**)
 
 Būtina atsižvelgti
 ==================================================

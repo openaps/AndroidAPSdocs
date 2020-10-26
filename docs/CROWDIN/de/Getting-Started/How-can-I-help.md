@@ -15,7 +15,7 @@ Juhuu! Schau dir die Issues an, frag im Gitter Channel. Es gibt immer viel zu tu
 
 Großartig, das ist sehr willkommen und eine gute Möglichkeit, etwas beizutragen!
 
-* Den bisher hauptsächlich verwendeten Gitter-Channel über das Wiki findest du hier: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). Alternativ erreichst Du das Dokumentationsteam über die neue Mailadresse wiki@androidaps.org.
+* Den bisher hauptsächlich verwendeten Gitter-Channel über das Wiki findest du hier: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). 
 * Eine Anleitung, wie man Beiträge auf Englisch hinzufügt und bearbeitet, ist hier zu finden: [Am Wiki mitschreiben](../make-a-PR.md). Andere Sprachen können nur übersetzt, aber nicht bearbeitet werden. Dadurch wird die Einheitlichkeit des Wikis in allen Sprachen gewährleistet.
 
 ## Ich spreche mehrere Sprachen und würde gerne bei der Übersetzung der App bzw. des Wikis helfen

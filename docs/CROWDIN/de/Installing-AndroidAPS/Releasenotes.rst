@@ -19,42 +19,42 @@ Erscheinungsdatum: 24.09.2020
 
 Speicherort des Repositories wurde auf https://github.com/nightscout/AndroidAPS geändert. Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die App-Erstellung `von vorne beginnst <../Installing-AndroidAPS/Building-APK.html>`_.
 
-Wie bereits `vor einiger Zeit angekündigt < ../Module/module.html#smartphone> ` _, **  ist Android 7 Mindestvoraussetzung * * für AndroidAPS 2.7.
+Wie bereits `vor einiger Zeit angekündigt < ../Module/module.html#smartphone>` _, **ist Android 7 Mindestvoraussetzung* * für AndroidAPS 2.7.
 
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
-**Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie `hier <../Installing-AndroidAPS/update2_7.html>`_ beschrieben.**
+**Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie** `hier <../Installing-AndroidAPS/update2_7.html>`_ **beschrieben.**
 
-You need at least start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
+Du musst `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`_ zumindest gestartet haben, um die `Automation <../Usage/Automation.html>`_ weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden. Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung> starten kannst`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 Wichtige neue Funktionen
 ----------------------
 * Zahlreiche Code- und Library-Änderungen, Code neu in Kotlin geschrieben @MilosKozak @AdrianLxM
 * Module für Dana Pumpen @MilosKozak
 * `Neues Layout und Layoutauswahl <../Getting-Started/Screenshots.html>`_ @MilosKozak
-* Neues `Status Lights Layout <../Configuration/Preferences.html#status-lights>`_ @MilosKozak
-* `Unterstützung mehrerer Diagramme <../Getting-Started/Screenshots.html#section-f---main-graph>`_ @MilosKozak
+* Neues `Status Lights Layout <../Configuration/Preferences.html#statusanzeige>`_ @MilosKozak
+* `Unterstützung mehrerer Diagramme <../Getting-Started/Screenshots.html#abschnitt-f-hauptgrafik>`_ @MilosKozak
 * `Profil Helfer <../Configuration/profilehelper.html>`_ @MilosKozak
-* Visualisierung der `dynamischen Ziel-Anpassung <../Getting-Started/Screenshots.html#visualization-of-dynamic-target-adjustment>`_ @Tornado-Tim
+* Visualisierung der `dynamischen Ziel-Anpassung <../Getting-Started/Screenshots.html#anzeige-der -dynamischen-ziel-anpassung>`_ @Tornado-Tim
 * Neues `Layout für die Einstellungen <../Configuration/Preferences.html>`_ @MilosKozak
 * Update des SMB Algorithmus @Tornado-Tim
-* `Low glucose Suspend (Reduzierung der Baslarate bei niedrigen Glukosewerten) Modus <../Configuration/Preferences.html#aps-mode>`_ @Tornado-Tim
-* `Benachrichtigung Kohlenhydrate benötigt <../Configuration/Preferences.html#carb-required-notification>`_ @twain47 @Tornado-Tim
+* `Low glucose Suspend (Reduzierung der Baslarate bei niedrigen Glukosewerten) Modus <../Configuration/Preferences.html#aps-modus>`_ @Tornado-Tim
+* `Benachrichtigung Kohlenhydrate benötigt <../Configuration/Preferences.html#kohlenhydrat-vorschlag>`_ @twain47 @Tornado-Tim
 * Careportal entfernt (jetzt im Aktionen-Tab/Menü) @MilosKozak
 * `Neues, verschlüsseltes Exportformat <../Usage/ExportImportSettings.html>`_ @dlvoy
 * `Neue SMS Authentifikation mit Einmalpasswort <../Children/SMS-Commands.html>`_ @dlvoy
-* `Neue SMS Befehle zum Verbinden und Trennen der Pumpe <../Children/SMS-Commands.html#commands>`_ @Lexsus
+* `Neue SMS Befehle zum Verbinden und Trennen der Pumpe <../Children/SMS-Commands.html#id1>`_ @Lexsus
 * Bessere Unterstützung niedriger Basalraten bei Dana Pumpen @Mackwe
 * Small Fehlerbehebungen für Insight Pumpen @TebbeUbben @MilosKozak
-* `Option "Standardsprache" <../Configuration/Preferences.html#general>`_ @MilosKozak
+* `Option "Standardsprache" <../Configuration/Preferences.html#allgemein>`_ @MilosKozak
 * Vector Icons @Philoul
-* `Neutrale Temps für Medtronic Pumpen <../Configuration/MedtronicPump.html#configuration-of-phoneandroidaps>`_ @Tornado-Tim
+* `Neutrale Temps für Medtronic Pumpen <../Configuration/MedtronicPump.html#konfiguration-von-smartphone-androidaps>`_ @Tornado-Tim
 * Verbesserung Historie @MilosKozak
 * OpenAPS MA Algorithmus entfernt @Tornado-Tim
 * Oref0 Sensitivität entfernt @Tornado-Tim
-* `Biometrischer oder Password-Schutz <..../Configuration/Preferences.html#protection>`_ ffür Einstellungen und Bolus @MilosKozak
+* `Biometrischer oder Password-Schutz <../Configuration/Preferences.html#schutz>`_ für Einstellungen und Bolus @MilosKozak
 * `Neuer Automation Trigger <../Usage/Automation.html>`_ @PoweRGbg
-* `Open Humans uploader <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
+* `Open Humans Uploader <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
 * Neue Dokumentation @Achim
 
 Version 2.6.1.4
@@ -172,7 +172,7 @@ Erscheinungsdatum: 26.10.2019
 Wichtige Hinweise
 --------------------------------------------------
 * Verwende `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ oder neuer `um die App zu erstellen <../Installing-AndroidAPS/Building-APK.html>`_ oder `ein Update durchzuführen <../Installing-AndroidAPS/Update-to-new-version.html>`_.
-* Wenn Du xDrip verwendest, muss `identify receiver <../Configuration/xdrip.html#identify-receiver>`_ gesetzt sein.
+* Wenn Du xDrip verwendest, muss `identify receiver <../Configuration/xdrip.html#identifiziere-empfanger>`_ gesetzt sein.
 * Falls Du den Dexcom G6 mit der `gepatchten Dexcom App <../Hardware/DexcomG6.html#g6-mit-der-gepatchten-dexcom-app>`_ verwendest, benötigst Du die Version aus dem `2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Glimp wird ab Version 4.15.57 und neuer unterstützt.
 
@@ -189,7 +189,7 @@ Wichtige neue Funktionen
 * RxJava2, Okhttp3, Retrofit support
 * Alte `Medtronic Pumpen <../Configuration/MedtronicPump.html>`_ werden unterstützt (RileyLink erforderlich)
 * Neues Plugin `Automation <../Usage/Automation.html>`_
-* Möglichkeit, `nur einen Teil des vom Bolus-Rechner ermittelten Bolus <../Configuration/Preferences.html#erweiterte-instellungen>`_ abzugeben.
+* Möglichkeit, `nur einen Teil des vom Bolus-Rechner ermittelten Bolus <../Configuration/Preferences.html#erweiterte-einstellungen>`_ abzugeben.
 * Darstellung der Insulinaktivität
 * Anpassung der IOB-Vorhersagen auf Basis der Autosens Ergebnisse
 * Neue gepatchte Dexcom App (`2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
@@ -289,7 +289,7 @@ Startseite
 --------------------------------------------------
 * Im oberen Menüband (Abschnitt A) kannst du durch langen Fingerdruck den Loop pausieren oder deaktivieren, die Pumpe trennen, das aktuelle Profil anzeigen und einen Profilwechsel machen, sowie temporäre Ziele (temp targets - TT) einstellen. Die temporären Ziele verwenden Standardwerte, die du in den Einstellungen festlegen kannst. Das neue Standard-Ziel “HypoTT” löst ein temporäres Ziel im höheren BZ-Bereich aus, damit der Loop nicht überreagiert nachdem du Korrektur-Kohlenhydrate gegessen hast.
 * Neue Behandlungs-Schaltfläche: die alte Behandlungs-Schaltfläche ist weiterhin verfügbar, aber standardmäßig deaktiviert. Du kannst jetzt selbst einstellen, welche Schaltflächen du auf dem Home-Screen haben willst. Neue Buttons für Insulin und Kohlenhydrate (inkl. `eCarbs/extended carbs <../Usage/Extended-Carbs.html>`_)
-* `Farbige Vorhersagelinien <../Getting-Started/Screenshots.html#abschnitt-e>`_
+* `Farbige Vorhersagelinien <../Getting-Started/Screenshots.html#vorhersage-kurven>`_
 * Option in den Dialogen für Insulin, Kohlenhydrate, Rechner und Füllen/Vorfüllen ein Feld für Bemerkungen, die zu Nightscout hochgeladen werden, anzuzeigen.
 * Überarbeiteter Füllen/Vorfüllen-Dialog. Möglichkeit, gleichzeitig Careportal-Einträge für Katheter- und Reservoirwechsel zu erstellen.
 

@@ -77,12 +77,6 @@
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - источник BG</a></td>
 </tr>
 <tr>
- <td>BlueReader</td>
- <td>bluetooth-передатчик, использующий сенсор Freestyle Libre в качестве CGM</td>
- <td>Blukon Nightreader / MiaoMiao</td>
- <td><a href="https://bluetoolz.de/blueorder/#home">BlueReader</a></td>
-</tr>
-<tr>
  <td>Blukon Nightreader</td>
  <td>bluetooth-передатчик, использующий сенсор Freestyle Libre в качестве CGM</td>
  <td>BlueReader / MiaoMiao</td>
@@ -95,76 +89,76 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>CAGE/ВозрКан</td>
+ <td>CAGE</td>
  <td>canula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
  <td>CAN</td>
- <td>меняющая цвет надпись состояния просроченной/непросроченной канюли на главном экране</td>
+ <td>status light overdue canula change on homescreen</td>
  <td>BAT / RES / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
 </tr>
 <tr>
  <td>CGM/НМГ</td>
- <td>непрерывный мониторинг глюкозы</td>
+ <td>continuous glucose monitor</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>Closed Loop/Замкнутый цикл (петля, контур)</td>
- <td>система замкнутого управления уровнем сахара крови. Система автоматически, без вмешательства пользователя подстраивает количество базального инсулина, основываясь на специальном алгоритме</td>
- <td>Открытый цикл (петля, контур)</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki - замкнутый цикл</a></td>
+ <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
+ <td>Open loop</td>
+ <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
 </tr>
 <tr>
- <td>COB/ Активные углеводы</td>
- <td>активные углеводы COB - углеводы в процессе компенсации </td>
+ <td>COB</td>
+ <td>carbs on board</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>Время действия инсулина DIA</td>
- <td>продолжительность активности инсулина</td>
+ <td>DIA</td>
+ <td>duration of insulin action</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - </a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">разновидности инсулина по времени действия</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td>DST</td>
- <td>летнее/зимнее время (при переводе часов)</td>
+ <td>daylight savings time</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki - DST</a></td>
+ <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki DST</a></td>
 </tr>
 <tr>
  <td>eCarbs</td>
- <td>"долгие углеводы" появляются в организме через несколько часов из избытков жиров/протеинов пищи. Необходимо учитывать при обычной помповой терапии, несущественны при использовании замкнутого цикла.</td>
- <td>Супер микро болюс SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Вики - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs</a></td>
+ <td>"extended carbs" - carbs split up over serveral hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
+ <td>SMB</td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
 <tr>
  <td>FGM</td>
- <td>флеш-мониторинг глюкозы (Libre Freestyle)</td>
+ <td>flash glucose monitor (Freestyle Libre)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - источник BG</a></td>
 </tr>
 <tr>
  <td>git</td>
- <td>система контроля версий для отслеживания изменений в компьютерных файлах и координации работы над этими файлами<br>-> требуется для обновления APK</td>
+ <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> neccessary for APK updates</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - обновление APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - update APK</a></td>
 </tr>
 <tr>
  <td>Github</td>
- <td>веб-хостинг сервис для управления версиями с помощью Git<br>-> хранения исходного кода</td>
+ <td>web-based hosting service for version control using Git<br>-> storage of source code</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/MilosKozak/AndroidAPS">Github AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td>Glimp</td>
- <td>приложение для сбора данных от сенсора Libre Freestyle</td>
+ <td>app to collect values from Freestyle Libre</td>
  <td>&nbsp;</td>
- <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout c Glimp</a> </td>
+ <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout with Glimp</a> </td>
 </tr>
 <tr>
  <td>Heroku</td>
@@ -173,50 +167,44 @@
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
 <tr>
- <td>IC (или I:C)</td>
- <td>Insulin:Carb - коэффициент пересчета инсулин-углеводы (сколько углеводов покрывается одной единицей инсулина).</td>
+ <td>IC (or I:C)</td>
+ <td>insulin to carb ratio (How many carbs are covered by one unit of insulin?)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>Акт инс IOB</td>
- <td>активный инсулин в крови</td>
+ <td>IOB</td>
+ <td>insulin on board -  insulin active in your body</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>ISF (чувствительность к инсулину)</td>
- <td>фактор чувствительности к инсулину, ожидаемое снижение уровня глюкозы крови при введении одной единицы инсулина.</td>
+ <td>ISF</td>
+ <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LGS</td>
- <td>Приостановка подачи базального инсулина при падении ГК ниже заданного уровня. Но если глюкоза крови растет, алгоритм AAPS увеличит базу только если активный инсулин IOB имеет отрицательную величину (от предыдущего LGS), в противном случае скорость базала останется такой, как в выбранном вами профиле. Возможны временные пики вслед за мерами против гипогликемии без возможности увеличить базу на откате._</td>
- <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">цель 6</a></td>
+ <td>Low Glucose Suspend<br>AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
+ <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objective 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LineageOS</td>
- <td>бесплатная и открытая операционная система для смартфонов и т.д.<br>альтернативная ОС для смартфонов, не работающих на Android 8.1 (Oreo)<br>(при использовании Accu-Chek Combo)</td>
+ <td>free and open-source operating system for smartphones etc.<br>alternative OS for smartphones not running Android 8.1 (Oreo)<br>(when using Accu-Chek Combo)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pump</a></td>
 </tr>
 <tr>
- <td>Log files/Файлы журнала</td>
- <td>записи всех действий AAPS. Используется для выяснения, устранения проблем, отладки программного обеспечения.</td>
+ <td>Log files</td>
+ <td>record of all AAPS actions (useful for trubbleshooting and debugging)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - файлы журнала</a></td>
+ <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - log files</a></td>
 </tr>
 <tr>
- <td>MA</td>
- <td>помощник болюса MA -  стандартный алгоритм расчета инсулина для компенсации углеводов</td>
- <td>AMA / SMB</td>
- <td><a href="../Usage/Open-APS-features.html#meal-assist-ma">Wiki - MA</a></td>
-</tr>
-<tr>
- <td>maxIOB/ максимум активного инсулина IOB</td>
- <td>важная системная характеристика: максимально допустимый уровень инсулина в крови (IOB), выше которого AAPS прекращает ввод инсулина.</td>
+ <td>maxIOB</td>
+ <td>safety feature - maximum total IOB AAPS can't go over</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
 </tr>
@@ -228,185 +216,185 @@
 </tr>
 <tr>
  <td>min_5m_carbimpact</td>
- <td>важная системная характеристика: минимальное время усваивания углеводов в тех случаях, когда усваивание не может быть динамически рассчитано на основе реакций крови</td>
+ <td>saftey feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your bloods reactions</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - конфигуратор</a></td>
+ <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - config builder</a></td>
 </tr>
 <tr>
  <td>Nightscout</td>
- <td>проект с открытым исходным кодом для доступа к данным мониторинга и создания отчетов</td>
+ <td>open source project to access and report CGM data</td>
  <td>Nightscout Reporter</td>
  <td><a href="http://www.nightscout.info/">Nightscout</a></td>
 </tr>
 <tr>
- <td>Клиент Nightscout</td>
- <td>клиентская часть AAPS для обмена данными с сервером (сайтом) Nightscout.</td>
+ <td>NS Client</td>
+ <td>part of AAPS to connect to your Nightscout site</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - клиент NS</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
 <tr>
- <td>Nightscout Reporter / Репортер Nightscout</td>
- <td>Средство создания PDF отчетов из данных Nightscout.</td>
+ <td>Nightscout Reporter</td>
+ <td>Tool from fellow looper to generate PDFs reports from Nightscout data</td>
  <td>Nightscout</td>
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
 <tr>
  <td>Цели</td>
- <td>Обучающая программа работы с AAPS, с пошаговой поддержкой перехода от открытого цикла к замкнутому.</td>
+ <td>learning program within AAPS guiding you step by step from open to closed loop</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Objectives.html">Wiki - цели</a></td>
+ <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
 </tr>
 <tr>
  <td>OpenAPS</td>
- <td>Искусственная поджелудочная железа с открытым кодом.<br> Работает на мини-компьютерах (например, RaspBerry PI)<br>проект AAPS использует наработки проекта OpenAPS.</td>
+ <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pie)<br>AAPS uses some of the OpenAPS features</td>
  <td>&nbsp;</td>
- <td><a href="https://openaps.readthedocs.io">Документация OpenAPS</a></td>
+ <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
 </tr>
 <tr>
  <td>Открытый цикл</td>
- <td>Состояние ИПЖ, в котором система рекомендует настройки, выполняемые вручную на помпе.</td>
- <td>Замкнутый цикл</td>
- <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - конфигуратор</a></td>
+ <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
+ <td>Closed Loop/Замкнутый цикл (петля, контур)</td>
+ <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
 </tr>
 <tr>
  <td>Oref0 / Oref1</td>
- <td>Определение чувствительности (к инсулину). Ключевой алгоритм версии 0/1, используемый OpenAPS.</td>
+ <td>sensitivity detection<br>"reference design implementation version 0/1" - the key algorithm behind OpenAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - Определение чувствительности</a></td>
+ <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - sensitivity detection</a></td>
 </tr>
 <tr>
- <td>Peak time/Пик</td>
- <td>Время максимальной активности - время, через которое эффект от введения инсулина становится максимальным.</td>
+ <td>Peak time</td>
+ <td>time of maximum effect of insulin given</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - конфигуратор</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
 </tr>
 <tr>
- <td>PH/История записей помпы</td>
- <td>история помпы (запись во вкладке назначений/лечения)</td>
+ <td>PH</td>
+ <td>pump history (entry in treatments tab)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Снимки экрана</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
 </tr>
 <tr>
  <td>Прогнозирование</td>
- <td>Прогнозы уровня ГК в будущем, основанные на разных алгоритмах расчета.</td>
+ <td>preditions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - линии прогноза ГК</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
 </tr>
 <tr>
  <td>Профиль</td>
- <td>Базовые настройки компенсации (базальный уровень, длительность действия инсулина DIA, соотношение инсулин-углеводы IC, чувствительность к инсулину ISF, целевые значения ГК). Могут задаваться через AAPS или через Nightscout.</td>
+ <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - профиль</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
 </tr>
 <tr>
  <td>Profile switch/смена профиля</td>
- <td>(частичное) изменение профиля или процентное увеличение/уменьшение.</td>
+ <td>(temporary) change of profile used or percentual increase/decrease</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Profiles.html">Wiki - переключатель профиля</a></td>
+ <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
 </tr>
 <tr>
  <td>RES</td>
- <td>меняющая цвет надпись состояния наполненности резервуара на главном экране</td>
+ <td>status light overdue reservoir change on homescreen</td>
  <td>BAT / CAN / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
- <td>Аппаратное устройство для сопряжения устройств Bluetooth Low Energy (BLE) с устройствами на частоте 916 МГц (для старых помп Medtronic)</td>
+ <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz wireless communication (used for old Medtronic pumps)</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>SAGE/Возраст сенсора</td>
+ <td>SAGE</td>
  <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>SEN</td>
- <td>меняющая цвет надпись состояния просроченного/непросроченного сенсора на главном экране</td>
+ <td>status light sensor change on homescreen</td>
  <td>BAT / CAN / RES</td>
  <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
 </tr>
 <tr>
- <td>Определение чувствительности sensitivity</td>
+ <td>Sensivity detection</td>
  <td>расчет чувствительности к инсулину с учетом физической нагрузки, гормонального фона и пр.</td>
  <td>&nbsp;</td>
  <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
- <td>Sensor noise/шум сенсора</td>
- <td>нестабильные данные мониторинга, проявляющиеся в больших колебаниях значений ГК.</td>
+ <td>Sensor noise</td>
+ <td>unstable CGM readings leading to "jumping" values</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - шум сенсора</a></td>
+ <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
 </tr>
 <tr>
- <td>Супер микро болюс SMB</td>
- <td>сверхмалый болюс, новая технология быстрой подстройки уровня ГК.</td>
- <td>незапланированный прием пищи UAM</td>
+ <td>SMB</td>
+ <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
+ <td>UAM</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td>Super bolus/Суперболюс</td>
- <td>переход от базальной к болюсной компенсации для быстрой коррекции ГК.</td>
+ <td>Super bolus</td>
+ <td>shift of basal to bolus insulin for faster BG adjustment</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
 </tr>
 <tr>
- <td>Сумма базала/TBB</td>
- <td>суммарный обьем базального инсулина в течении 24 часов</td>
+ <td>TBB</td>
+ <td>total base basal (sum of basal rate within 24 hours)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>Временный базал/TBR</td>
- <td>временная базальная скорость</td>
+ <td>TBR</td>
+ <td>temporary basal rate</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>TDD/общая суточная доза</td>
- <td>Общая суточная доза = болюс + базал за сутки </td>
+ <td>TDD</td>
+ <td>total daily dose (bolus + basal per day)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>ТТ/Временная цель </td>
- <td>временная цель<br>временное увеличение/уменьшение целевой ГК (диапазон)</td>
+ <td>TT</td>
+ <td>temporary target<br>temporary increase/decrease of BG target (range)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.html#temp-targets">Wiki - временные цели</a></td>
+ <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
 </tr>
 <tr>
- <td>незапланированный прием пищи UAM</td>
- <td>Незапланированный прием пищи - обнаружение значительного повышения уровня глюкозы, как следствие приема пищи, выброса адреналина или других воздействий и попытка компенсации через механизм супер микроболюса SMB</td>
- <td>Супер микро болюс SMB</td>
+ <td>UAM</td>
+ <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
+ <td>SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td>Virtual pump/виртуальная помпа</td>
- <td>Возможность применить AAPS с помпой, не имеющей драйвера для ИПЖ </td>
+ <td>Virtual pump</td>
+ <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
  <td>Открытый цикл</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>Фоновый рисунок</td>
- <td>Фоновое изображение androidAPS</td>
+ <td>AndroidAPS background image</td>
  <td></td>
- <td><a href="../Getting-Started/Phones.html#phone-background">см. страницу телефонов</a></td>
+ <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>
 </tr>
 <tr>
  <td>xDrip / xDrip+</td>
- <td>программное обеспечение с открытым исходным кодом для чтения систем мониторинга CGM</td>
+ <td>open source software to read CGM systems</td>
  <td>&nbsp;</td>
  <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
  <td>Zero-temp</td>
- <td>Нулевой временный базальный уровень (без подачи инсулина)</td>
+ <td>temporary basal rate with 0% (no basal insulin delivery)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td colspan=4>См. также <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/ru/latest/docs/Resources/glossary.html</a></td>
+ <td colspan=4>See also <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
 </tr>
 </table>

@@ -10,7 +10,7 @@ Diese Pumpen benötigen besondere Aufmerksamkeit, weil AndroidAPS die Historie d
 
 Um dies zu vermeiden, gibt es zwei Möglichkeiten:
 
-### Option 1: Heimazteit beibehalten und Time Shift des Profils
+### Option 1: Heimatzeit beibehalten und Time Shift des Profils
 
 * Schalte die automatische Einstellung von Datum und Uhrzeit in Deinem Smartphone aus (manueller Zeitzonen-Wechsel).
 * Dein Smartphone muss für die gesamte Reise auf Datum und Zeit Deines Heimatortes eingestellt bleiben.
@@ -26,7 +26,7 @@ Um dies zu vermeiden, gibt es zwei Möglichkeiten:
    * z.B. Wien -> Sydney: Profilwechsel -8 Stunden
 * Wahrscheinlich keine Option, wenn Du die [gepatchte LibreLink-App](../Hardware/Libre2#reisen-uber-zeitzonen-hinweg) nutzt. Dort muss der automatische Zeitzonenwechsel eingestellt werden, um einen neuen Libre 2 Sensor starten zu können.
 
-### Option : Pumpenhistorie löschen
+### Option 2: Pumpenhistorie löschen
 
 * Schalte die automatische Einstellung von Datum und Uhrzeit in Deinem Smartphone aus (manueller Zeitzonen-Wechsel)
 
@@ -58,22 +58,51 @@ Nutze den Bolus-Kalkulator erst dann wieder, wenn Du sicher bist, dass COB und I
 
 ## Accu-Chek Combo
 
-AndroidAPS wird Dich alarmieren, wenn die Zeit zwischen Pumpe und Smartphone zu sehr abweicht. Bei der Zeitumstellung wäre dies unerfreulicherweise mitten in der Nacht. Um diese nächtliche Alarmierung zu vermeiden und statt dessen durchzuschlafen, solltest Du wie folgt vorgehen:
+AndroidAPS wird Dich alarmieren, wenn die Zeit zwischen Pumpe und Smartphone zu sehr abweicht. Bei der Zeitumstellung wäre dies unerfreulicher Weise mitten in der Nacht. Um dies zu verhindern und stattdessen den Schlaf zu genießen, folge diesen Schritten, so dass Du die Zeitumstellung zu einer Zeit erzwingen kannst, die Dir passt.
 
-1. Schalte den automatischen Wechsel der Zeitzone in deinem Smartphone aus. 2) Wähle eine Zeitzone mit der gewünschten Zeit aber ohne Zeitumstellung. Für die Mitteleuropäische Zeit (MEZ) könnte dies z.B. "Brazzaville" (Kongo) sein. Stelle die Zeitzone deines Smartphones manuell auf Kongo. 3. Aktuallisiere die Pumpe via AndroidAPS. 4. Prüfe den Behandlungs Tab (BEH)... Falls Du doppelte Einträge entdeckst:
+### Vor der Zeitumstellung notwendige Maßnahmen
 
-* KEINESFALLS auf "Lösche Behandlungen in der Zukunft" klicken!
-* Drücke "Löschen" bei allen künftigen und doppelten Behandlungen. Dadurch werden die Behandlungen außer Kraft gesetzt statt nur gelöscht und somit nicht mehr beim IOB berücksichtigt. 5. Falls der Status unklar sein sollte: Pausiere den Loop für mindestens eine DIA (Insulin-Wirkdauer) oder Max-Carb-Time - je nach dem welche Zeitdauer größer ist.
+1. Schalten alle Einstellungen AUS, die die Zeitzone automatisch festlegen, so dass Du die Zeitumstellung durchführen kannst, wann Du es möchtest. Die Vorgehensweise hängt von Deinem Smartphone und der Android-Version ab.
+   
+   * Manche haben zwei Einstellungen, eine für die automatische Zeiteinstellung (die idealerweise AN bleiben sollte) und eine für den automatischen Zeitzonenwechsel (die Du AUSSCHALTEN musst).
+   * Unglücklicherweise haben manche Android-Versionen nur eine Einstellmöglichkeit für beides zusammen. In diesem Fall musst Du eben beide ausschalten.
 
-Ein guter Zeitpunkt für diese Umstellung ist bei niedrigem IOB (z.B. eine Stunde vor dem Essen).
+2. Suche Dir eine Zeitzone, die die selbe Uhrzeit wie Du hat, aber nicht zwischen Winter- und Sommerzeit wechselt.
+   
+   * Eine Liste dieser Länder findest Du z.B. auf [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/).
+   * Für die Mitteleuropäische Zeit (MEZ) könnte dies z.B. "Brazzaville" (Kongo) sein. Stelle die Zeitzone deines Smartphones manuell auf Kongo.
+
+3. Aktualisiere die Pumpe via AndroidAPS.
+
+4. Prüfe den Tab "Behandlungen". Falls Du doppelte Einträge entdecken solltest:
+   
+   * Klicke NICHT auf "lösche alle Behandlungen in der Zukunft". 
+   * Drücke "Löschen" bei allen künftigen und doppelten Behandlungen. Dadurch werden die Behandlungen außer Kraft gesetzt statt nur gelöscht und somit nicht mehr beim IOB berücksichtigt.
+
+5. Wenn die Situation von COB und/oder IOB unklar ist, pausiere den Loop zu Deiner eigenen Sicherheit bitte mindestens für den Zeitraum des DIA oder die Max-Carb-Time - und wähle den größeren der beiden.
+
+### Nach der Zeitumstellung notwendige Maßnahmen
+
+Ein guter Zeitpunkt für diese Umstellung ist bei niedrigem IOB Z.B. eine Stunde vor einer Mahlzeit wie dem Frühstück, denn dann werden alle kürzlich abgegebenen Boli in Deiner Pumpenhistorie kleine SMB Korrekturen sein. Dein COB und IOB sollten beide nahe null sein.
+
+1. Wechsle die Zeitzone in Deinem Smartphone zurück auf Deine eigene Zeitzone und aktiviere die oben deaktivierte Automatik zur Zeitzoneneinstellung wieder.
+2. AndroidAPS wird Dich kurz danach alarmieren, dass die Uhrzeit in der Combo nicht passt. Passe die Uhrzeit manuell auf der Pumpe an.
+3. Klicke im Combo Tab von AndroidAPS auf 'Aktualisieren'. 
+4. Prüfe dann auf dem Behandlungs-Tab, ob es Ereignisse in der Zukunft gibt. Es sollte eigentlich keine geben. Falls doch:
+   
+   * Klicke NICHT auf "lösche alle Behandlungen in der Zukunft". 
+   * Drücke "Löschen" bei allen künftigen und doppelten Behandlungen. Dadurch werden die Behandlungen außer Kraft gesetzt statt nur gelöscht und somit nicht mehr beim IOB berücksichtigt.
+
+5. Wenn die Situation von COB und/oder IOB unklar ist, pausiere den Loop zu Deiner eigenen Sicherheit bitte mindestens für den Zeitraum des DIA oder die Max-Carb-Time - und wähle den größeren der beiden.
+
+6. Mache weiter wie gewohnt.
 
 ## Accu-Chek Insight
 
 * Zeitumstellung erfolgt automatisch. Keine Maßnahme erforderlich.
 
-## Andere Pumpen - neu ab AAPS Version 2.2
+## Andere Pumpen
 
-**Du musst AAPS auf Version 2.2 (oder höher) updaten, um diese Funktion nutzen zu können!**
-
+* Diese Funktion steht seit AndroidAPS Version 2.2 zur Verfügung.
 * Um Schwierigkeiten zu vermeiden, wird der Loop für 3 Stunden nach der Zeitumstellung deaktiviert. Dies geschieht aus Sicherheitsgründen (IOB zu hoch aufgrund von doppeltem Boluseinträgen vor der Zeitumstellung).
-* Du erhälst 24 Stunden vor der Zeitumstellung einen Hinweis auf dem Startbildschirm, dass der Loop vorübergehend pausiert wird. Diese Nachricht erscheint ohne Ton, Vibration oder anderes.
+* Du erhältst rechtzeitig vor der Zeitumstellung einen Hinweis auf dem Startbildschirm, dass der Loop vorübergehend pausiert wird. Diese Nachricht erscheint ohne Ton, Vibration oder anderes.

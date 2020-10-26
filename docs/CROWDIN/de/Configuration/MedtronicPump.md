@@ -14,7 +14,7 @@ So bald Du AAPS mit einer Medtronic Pumpe nutzt, bitten wir um Eintrag in diese 
 
 ## Hardware- und Softwareanforderungen
 
-- **Smartphone:** Der Medtronic sollte mit jedem Smartphone, das Bluetooth Low Energy (BLE) unterstützt, funktionieren. **WICHTIG: Der Treiber funktioniert zwar mit allen Telefonen, Aktivieren/Deaktivieren von Bluetooth aber leider nicht. (Dies ist aber erforderlich, falls die Verbindung zum RileyLink verloren geht und das System sie nicht wieder selbst herstellen kann. Das kann hin und wieder passieren.) Daher solltest Du ein Gerät mit Android 6.0 bis 8.1 verwenden. Im schlimmsten Fall kannst Du darauf LineageOS 15.1 (15.1 oder niedriger erforderlich) installieren. Wir arbeiten an den Problemen mit Android 9, haben bisher aber noch keine Lösung gefunden. (Es scheint, als ob es auf einigen Geräten funktioniert und auf anderen nicht, bei manchen auch nur hin und wieder.)**
+- **Smartphone:** Der Medtronic sollte mit jedem Smartphone, das Bluetooth Low Energy (BLE) unterstützt, funktionieren. **WICHTIG: Der Treiber funktioniert zwar mit allen Telefonen, Aktivieren/Deaktivieren von Bluetooth aber leider nicht. (Dies ist aber erforderlich, falls die Verbindung zum RileyLink verloren geht und das System sie nicht wieder selbst herstellen kann. Das kann hin und wieder passieren.) Daher solltest Du ein Gerät mit Android 7.0 bis 8.1 verwenden. Im schlimmsten Fall kannst Du darauf LineageOS 15.1 (15.1 oder niedriger erforderlich) installieren. Wir arbeiten an den Problemen mit Android 9, haben bisher aber noch keine Lösung gefunden. (Es scheint, als ob es auf einigen Geräten funktioniert und auf anderen nicht, bei manchen auch nur hin und wieder.)**
 - **RileyLink/Gnarl:** Um mit der Pumpe zu kommunizieren benötigst Du ein Gerät, das die Bluetooth Kommandos des Smartphones in Radiosignale übersetzt, damit diese von der Pumpe verstanden werden können. Dieses Gerät nennt man RileyLink. (Du kannst es unter [getrileylink.org](https://getrileylink.org/) bestellen.) Du benötigst eine stabile Geräteversion. Das bedeutet für ältere Modell Firmware 0.9 (ältere Versionen arbeiten evtl. nicht korrekt) und für neuere Modelle 2.2. Auf der RileyLink Seite findest Du Möglichkeiten zum Upgrade. Wenn Du etwas abenteuerlustiger bis, kannst Du auch [Gnarl](https://github.com/ecc1/gnarl), eine Art RileyLink-Clone, verwenden. 
 - **Pumpe:** Der Treiber funktioniert nur mit den folgenden Pumpenmodellen und Firmware-Versionen: 
     - 512/712
@@ -44,7 +44,7 @@ So bald Du AAPS mit einer Medtronic Pumpe nutzt, bitten wir um Eintrag in diese 
 
 Bei einer Neuinstallation startet der Assistent automatisch. Falls Deine Bluetooth-Verbindung nicht vollständig funktioniert und das Smartphone sich nicht mit der Pumpe verbinden kann, kannst Du die Konfiguration ggf. nicht abschließen. Wähle in diesem Fall die virtuelle Pumpe und am Ende der Konfiguration des Assistenten die Option 2 , damit die Pumpenerkennung umgangen wird.
 
-![Medtronic (MDT) Einstellungen](../images/Medtronic01.png)
+![Medtronic (MDT) Einstellungen](../images/Medtronic01a.png)
 
 Folgende Einstellungen sind erforderlich (vgl. Bild oben):
 
@@ -59,6 +59,7 @@ Folgende Einstellungen sind erforderlich (vgl. Bild oben):
 - **Medtronic Encoding**: Diese Einstellung legt fest, ob die "4b6b Kodierung" des Medtronic Geräts durch AndroidAPS oder RileyLink erfolgen soll. Wenn Du einen RileyLink mit 2.x Firmware verwendest, ist die Standardeinstellung die Hardware-Kodierung durch den RileyLink. Bei älteren RileyLink mit 0.x firmware wird diese Einstellung ignoriert.
 - **Batterietyp (Ladestandsanzeige)**: Wenn Du den Batteriestand Deiner Pumpe sehen möchtest, musst Du den Batterietyp, den Du verwendest, auswählen. Aktuell werden Lithium oder Alkaline unterstützt. Dies ändert die Anzeige auf berechnete Prozent und Volt.
 - **RileyLink Configuration**: Zur Verbindungsherstellung mit Deinem RileyLink/GNARL.
+- **Neutrale Temps für Medtronic Pumpen** verhindern, dass Medtronic Pumpen zur vollen Stunde piepen. Wenn diese Option aktiviert ist, wird eine temporäres Basalrate vor dem Ende der Stunde abgebrochen, um zu verhindern, dass dies geschieht.
 
 ## MEDTRONIC (MDT) Tab
 
@@ -79,7 +80,7 @@ Anzeige verschiedener Informationen zum aktuellen Pumpenstatus:
 Am unteren Ende gibt es 3 Buttons:
 
 - **Aktualisieren** ist für das Aktualisieren des Status. Dies sollte erst dann verwendet werden, wenn die Verbindung lange nicht vorhanden war, da diese Aktion Daten über die Pumpe zurücksetzt (Verlauf abrufen, get/set time, Profil abrufen, Akkustatus erhalten, etc.).
-- **Pump History**: Anzeige der Pumpen Historie (siehe [unten](../Configuration/MedtronicPump#pump-history))
+- **Pump History**: Anzeige der Pumpen Historie (siehe [unten](../Configuration/MedtronicPump#pumpen-historie))
 - **RL Stats**: Anzeige RileyLink Statistik (siehe [unten](../Configuration/MedtronicPump#rl-status-rileylink-status))
 
 ## Pumpen Historie

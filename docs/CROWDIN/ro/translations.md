@@ -1,6 +1,6 @@
 # How to translate AndroidAPS and the documentation
 
-* Go to <https://translations.androidaps.org> or <https://wikitranslations.androidaps.org> and login using your Github account
+* Go to <https://crowdin.com/project/androidaps> or <https://crowdin.com/project/androidapsdocs> and login using your Github account
 
 * Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users).
 
@@ -63,6 +63,14 @@ When a proofreader approves a translation it will be added to the next version o
 #### Link translation in Markdown files (.md)
 
 At the moment two [markup languages](./make-a-PR#code-syntax) are used in docs. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
+
+* * *
+
+**Make sure not to use space character at within HTML tags at the beginning or the end!**
+
+![Crodwin - HTML tag without space character](./images/Crowdin_HTMLtag.png)
+
+* * *
 
 If links are displayed like this in Crowdin
 

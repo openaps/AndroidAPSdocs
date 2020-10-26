@@ -118,10 +118,10 @@ Doel 8: Pas basaalstanden en de ratio's aan indien nodig, activeer hierna de Aut
 *Vergeet niet om jezelf als nieuwe looper aan te melden via `dit formulier <http://bit.ly/nowlooping>`_ en AndroidAPS als jouw type loop-software te kiezen, als je dat nog niet gedaan hebt.*
 
 
-Doel 9: Activeren van extra functies overdag zoals AMA (geavanceerde maaltijdhulp, Advanced Meal Assist)
+Objective 9: Try additional features for daytime use and gain confidence in your closed loop system
 ====================================================================================================
-* Nu zou je je vertrouwd moeten voelen met de werking van AndroidAPS, en weten welke instellingen het beste bij jouw diabetes passen
-* Gedurende een periode van 28 dagen kun je extra functies uitproberen die nog meer rekenwerk voor jou uit handen nemen, zoals de `geavanceerde maaltijdhulp (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_
+* Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_.
+* As `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
 
 
 Doel 10: Activeren van extra functies overdag zoals SMB (Super Micro Bolus)
@@ -130,9 +130,17 @@ Je moet het `SMB hoofdstuk in deze wiki <../Usage/Open-APS-features.html#super-m
 * Daarna kun je `maxIOB verhogen <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ zodat SMB goed kan functioneren. maxIOB bevat nu alle IOB, niet alleen de toegediende basale insuline. Als je een bolus van 8E geeft voor een maaltijd en jouw maxIOB is 7E, dan zullen er geen SMBs worden afgegeven totdat IOB onder de 7E komt. Een goede start is maxIOB = gemiddelde maalbolus + 3x max dagelijkse basaal (max dagelijkse basaal = de hoogste waarde van jouw basaal (in eenheden per uur). Zie `Doel 7 <../Usage/Objectives#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_ voor een afbeelding
 Wanneer je van AMA naar SMB wisselt, dan moet je jouw instelling voor min_5m_carbimpact in de Opname instellingen veranderen van 3 naar 8. Je moet dit handmatig doen wanneer je van AMA naar SMB wisselt.
 
+
+Objective 11: Automation
+====================================================================================================
+* You have to start objective 11 to be able to use `Automation <../Usage/Automation.html>`_.
+* Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-proof-your-knowledge>`_.
+* Completing previous objectives will not effect other objectives you have already finished. You will keep all finished objectives!
+
+
 Teruggaan in doelen
 ====================================================================================================
 Als je om welke reden dan ook terug wilt gaan in de leerdoelen druk dan op "voltooiing wissen".
 
-   .. image:: ../images/Objective_ClearFinished.png
-     :alt: Teruggaan in doelen
+.. image:: ../images/Objective_ClearFinished.png
+  :alt: Teruggaan in doelen

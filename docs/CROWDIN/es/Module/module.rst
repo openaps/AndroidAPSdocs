@@ -35,7 +35,7 @@ Los inhibidores de la SGLT-2, también llamados gliflozinas, inhiben la reabsorc
 
 Teléfono
 --------------------------------------------------
-Necesitas un smartphone Android con Google Android 6.0 o superior. Next major version AndroidAPS 2.7 will only support Android 7 and above. So if you are thinking about a new phone, Android 8.1 is recommended at least but optimicaly Android 9 or 10.
+You need an Android smartphone with Google Android 7.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at least but optimicaly Android 9 or 10.
 
 Los usuarios están creando una "lista de teléfonos probados y relojes <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
@@ -85,7 +85,7 @@ Esta es sólo una breve descripción general de todos los MCGs/FGM compatibles c
 
 Nightscout
 --------------------------------------------------
-Nightscout es una aplicación web de código abierto que puede registrar y visualizar los datos de MCG y los datos de AndroidAPS y crea informes. Puede encontrar más información en el " sitio web del proyecto Nightscout <http://www.nightscout.info/>`_. Puede crear su propio sitio web de Nightscout `usando Heroku <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, utilizar la configuración semi-automatizada de Nightscout en `zehn.be <https://ns.10be.de/en/index.html>`_ o alojarla en su propio servidor (esto es para los expertos de TI).
+Nightscout es una aplicación web de código abierto que puede registrar y visualizar los datos de MCG y los datos de AndroidAPS y crea informes. Puede encontrar más información en el " sitio web del proyecto Nightscout <http://www.nightscout.info/>`_. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
 
 Nightscout es independiente de los otros módulos. Lo necesitará para cumplir el Objetivo 1.
 

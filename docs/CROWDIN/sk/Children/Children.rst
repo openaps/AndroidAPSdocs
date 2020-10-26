@@ -11,7 +11,7 @@ Funkcie
 * Pumpa dieťaťa je ovládaná pomocou telefónu dieťaťa používajúceho AndroidAPS.
 * Rodičia môžu na diaľku sledovať všetky dôležité údaje, ako sú glykémia, aktívne sacharidy, aktívny inzulín atď. pomocou aplikácie **NSClient** na svojom telefóne. Settings must be the same in AndroidAPS and NSClient.
 * Parents can be alarmed by using **xDrip+ app in follower mode** on their phone.
-* Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_.
+* Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_ secured by two-factor authentication.
 * Diaľkové prepnutie profilu a spustenie dočasných cieľov prostredníctvom aplikácie NSClient.
 
 Nástroje a aplikácie pre vzdialené monitorovanie
@@ -20,7 +20,7 @@ Nástroje a aplikácie pre vzdialené monitorovanie
 * Aplikácia NSClient
 * Dexcom Follow, pokiaľ používate originálnu aplikáciu Dexcom (iba hodnoty glykémií)
 *	`xDrip+ <../Configuration/xdrip.html>`_ in follower mode (mainly BG values and **alarms**)
-* `Spike <https://spike-app.com/>`_ na iPhonoch (hlavne hodnoty glykémií a **alarmy**)
+*	`Sugarmate <https://sugarmate.io/>`_ or `Spike <https://spike-app.com/>`_ on iOS (mainly BG values and **alarms**)
 
 Veci, ktoré treba zvážiť
 ==================================================

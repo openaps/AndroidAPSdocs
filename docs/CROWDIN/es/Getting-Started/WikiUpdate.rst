@@ -1,5 +1,13 @@
 Actualizaciones y cambios de Documentos
 **************************************************
+October 2020
+==================================================
+* `SMS commands - time sync <../Children/SMS-Commands.html>`_
+* Update Combo `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
+September 2020
+==================================================
+* Major update for new AAPS version 2.7
+* For details see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
 June 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - more details patched Libre Link app & use of bluetooth transmitters
@@ -10,7 +18,7 @@ May 2020
 * `Insight deactivate vibration <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (firmware 3.x only)
 * `Minimal request rate <../Configuration/Preferences.html#minimal-request-rate>`_ to reduce number of notifications in open loop mode
 * `Patched Libre Link app <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - check if correctly patched
-* `Prediction lines <../Getting-Started/Screenshots.html#section-e>`_ - more details
+* `Prediction lines <../Getting-Started/Screenshots.html#prediction-lines>`_ - more details
 April 2020
 ==================================================
 * `Backdate insulin <../Usage/CPbefore26.html#carbs--bolus>`_ (i.e. given by syringe)
@@ -29,7 +37,7 @@ February 2020
 * `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
 * New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
 * `Sample Setup <../Getting-Started/Sample-Setup.html>`_ - update Dexcom G6
-* `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - major new features
+* `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - major new features
 * `Wear complications <../Configuration/Watchfaces.html>`_
 Enero de 2020
 ==================================================
@@ -46,7 +54,7 @@ Noviembre 2019
 ==================================================
 * `Automation - deactivate when disabling loop <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 reemplazar actualización de transmisor <../Configuration/xdrip.html#replace-transmitter>`_
-* `Bolos ampliados - por qué no funcionan en un contexto de bucle <../Usage/Extended-Carbs.html#extended-bolus>` _
+* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#id1>`_
 * ` FAQ - deportes <../Getting-Started/FAQ.html#sports>`_
 * `Pantalla de inicio - las líneas en el gráfico <../Getting-Started/Screenshots.html#section-e>`_
 * `Insight - Inhabilitar valores absolutos en el cliente NS <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>` _
@@ -57,11 +65,11 @@ Noviembre 2019
 * `Resolución de problemas de Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>` _
 * `Resolución de problemas - colección de enlaces <../Usage/troubleshooting.html>`_
 * 'Actualización - de paseo a través de la experiencia de los usuarios <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
-* Actualización - documentos `editar <../make-a-PR.md#code-syntax>`_ y `traducción <../translations.html#translate-wiki-pages>`_.
+* Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
 
 Octubre 2019
 ==================================================
-* `AAPS versión 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ actualizaciones (especialmente en `página de actualizaciones <../Installing-AndroidAPS/Update-to-new-version.html>`_)
+* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#id16>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `Accuchek Insight - opciones de registro <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>` _
 * `Cálculo COB en la página aparte <../Usage/COB-calculation.html>` _
 * `COB - Detección de valor erróneo de COB<../Usage/COB-calculation.html#detection-of-incorrecto-cob-values>` _

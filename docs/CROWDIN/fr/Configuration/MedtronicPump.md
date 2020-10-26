@@ -14,7 +14,7 @@ Si vous avez commencé à utiliser le pilote Medtronic, merci de vous ajouter à
 
 ## Configuration matérielle et logicielle requise
 
-- **Téléphone :** le pilote Medtronic fonctionne avec n'importe quel téléphone qui supporte le BLE. **IMPORTANT : bien que le pilote fonctionne correctement sur tous les téléphones, ce n'est pas le cas pour l'activation/désactivation du Bluetooth (c'est obligatoire si vous perdez la connexion au RileyLink et le système ne peut pas se récupérer automatiquement ce qui arrive de temps en temps). Vous devez donc obtenir un appareil avec Android 6.0 - 8.1, dans le pire des cas, vous pouvez installer LineageOS 15.1 (requis 15.1 ou inférieur) sur votre téléphone. Nous sommes sur le problème avec Android 9, mais jusqu'à présent, nous n'avons pas trouvé de résolution (cela semble fonctionner sur certains modèles et pas sur d'autres, et parfois seulement de temps en temps).**
+- **Téléphone :** le pilote Medtronic fonctionne avec n'importe quel téléphone qui supporte le BLE. **IMPORTANT : bien que le pilote fonctionne correctement sur tous les téléphones, ce n'est pas le cas pour l'activation/désactivation du Bluetooth (c'est obligatoire si vous perdez la connexion au RileyLink et le système ne peut pas se récupérer automatiquement ce qui arrive de temps en temps). Vous devez donc obtenir un appareil avec Android 7.0 - 8.1, dans le pire des cas, vous pouvez installer LineageOS 15.1 (requis 15.1 ou inférieur) sur votre téléphone. Nous sommes sur le problème avec Android 9, mais jusqu'à présent, nous n'avons pas trouvé de résolution (cela semble fonctionner sur certains modèles et pas sur d'autres, et parfois seulement de temps en temps).**
 - **RileyLink/Gnarl :** Pour la communication avec la Pompe dont vous avez besoin dispositif qui convertit les commandes BT du Téléphone en commandes RF que la Pompe comprend. L'appareil qui fait cela s'appelle un RileyLink (vous pouvez l'obtenir ici [getrileylink.org](https://getrileylink.org/)). Vous avez besoin de la version stable de l'appareil, pour les plus anciens modèles c'est avec le firmware 0.9 (les versions plus anciennes peuvent ne pas fonctionner correctement) ou pour les modèles plus récents avec le firmware 2.2 (il y a des options de mise à jour disponible sur site RL). Si vous avez l'âme d'un aventurier, vous pouvez également essayer GNARL ([ici](https://github.com/ecc1/gnarl)), qui est une sorte de clone du RileyLink. 
 - **Pompe :** Le pilote fonctionne uniquement avec les modèles et versions de firmware suivants : 
     - 512/712
@@ -44,7 +44,7 @@ Si vous avez commencé à utiliser le pilote Medtronic, merci de vous ajouter à
 
 Si vous faites une nouvelle installation, vous serez directement dans l'assistant. Parfois, si votre connexion BT ne fonctionne pas parfaitement (impossible de se connecter à la pompe), vous ne pourrez pas terminer la configuration. Dans ce cas, sélectionnez la pompe virtuelle et une fois l'assistant terminé, vous pouvez utiliser l'option 2, qui permet de contourner la détection de la pompe.
 
-![Paramètres MDT](../images/Medtronic01.png)
+![Paramètres MDT](../images/Medtronic01a.png)
 
 Vous devez définir les éléments suivants : (voir photo ci-dessus)
 
@@ -59,6 +59,7 @@ Vous devez définir les éléments suivants : (voir photo ci-dessus)
 - **Encodage Medtronic** : Ce paramètre défini si l'encodage 4b6b fait par les appareils Medtronic doit être fait dans AndroidAPS ou dans le RileyLink. Si vous avez un RileyLink avec un firmware 2.x, la valeur par défaut sera d'utiliser l'encodage matériel (= fait par le RileyLink), si vous avez un firmware 0.x, ce paramètre sera ignoré.
 - **Type de batterie (Power View)** : Si vous voulez voir la charge de la pile de votre pompe, vous devez sélectionner le type de pile que vous utilisez (actuellement Lithium ou Alkaline sont supportées), cela changera l'affichage pour afficher le pourcentage et la tension.
 - **Configuration RileyLink** : Vous trouverez votre appareil RileyLink/GNARL.
+- **Définir des Basales temporaires neutres** est une option qui peut aider à empêcher les pompes Medtronic de biper à chaque heure. Si cette option est activée, elle annule une basale temporaire avant la fin de l'heure pour éviter que cela ne se produit.
 
 ## Onglet MEDTRONIC (MDT)
 

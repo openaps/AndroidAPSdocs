@@ -14,7 +14,7 @@ If you started using Medtronic driver please add yourself to this [list](https:/
 
 ## Απαιτήσεις υλικού και λογισμικού
 
-- ** Τηλέφωνο: ** Ο οδηγός Medtronic θα πρέπει να λειτουργεί με οποιοδήποτε τηλέφωνο που υποστηρίζει BLE. ** ΣΗΜΑΝΤΙΚΟ: Ενώ το πρόγραμμα οδήγησης λειτουργεί σωστά σε όλα τα τηλέφωνα, δεν επιτρέπεται η ενεργοποίηση / απενεργοποίηση του Bluetooth (αυτό απαιτείται όταν χάσετε τη σύνδεση με το RileyLink και το σύστημα δεν μπορεί να ανακτήσει αυτόματα - συμβαίνει κατά διαστήματα). Έτσι πρέπει να πάρετε συσκευή με Android 6.0 - 8.1, στη χειρότερη περίπτωση μπορείτε να εγκαταστήσετε LinegaeOS 15.1 (απαιτείται 15.1 ή χαμηλότερη) στο τηλέφωνό σας. Εξετάζουμε το πρόβλημα με το Android 9, αλλά μέχρι στιγμής δεν έχουμε βρει λύση (φαίνεται ότι λειτουργεί σε μερικά μοντέλα και όχι σε άλλα).**
+- ** Τηλέφωνο: ** Ο οδηγός Medtronic θα πρέπει να λειτουργεί με οποιοδήποτε τηλέφωνο που υποστηρίζει BLE. ** ΣΗΜΑΝΤΙΚΟ: Ενώ το πρόγραμμα οδήγησης λειτουργεί σωστά σε όλα τα τηλέφωνα, δεν επιτρέπεται η ενεργοποίηση / απενεργοποίηση του Bluetooth (αυτό απαιτείται όταν χάσετε τη σύνδεση με το RileyLink και το σύστημα δεν μπορεί να ανακτήσει αυτόματα - συμβαίνει κατά διαστήματα). So you need to get device with Android 7.0 - 8.1, in worst case scenario you can install LinegaeOS 15.1 (required 15.1 or lower) on your phone. Εξετάζουμε το πρόβλημα με το Android 9, αλλά μέχρι στιγμής δεν έχουμε βρει λύση (φαίνεται ότι λειτουργεί σε μερικά μοντέλα και όχι σε άλλα).**
 - ** RileyLink / Gnarl: ** Για επικοινωνία με την αντλία χρειάζεστε συσκευή που μετατρέπει τις εντολές BT από το τηλέφωνο σε RF εντολές που κατανοεί η αντλία. Η συσκευή που λέγεται RileyLink (μπορείτε να την πάρετε εδώ [ getrileylink.org ](https://getrileylink.org/)). Χρειάζεστε σταθερή έκδοση της συσκευής, η οποία είναι για τα παλαιότερα μοντέλα firmware 0.9 (παλαιότερες εκδόσεις μπορεί να μην λειτουργούν σωστά) ή για νεώτερα μοντέλα 2.2 (υπάρχουν επιλογές για αναβάθμιση διαθέσιμες στην τοποθεσία RL). Εάν νιώθετε περιπετειώδης, μπορείτε επίσης να δοκιμάσετε το Gnarl ([ εδώ ](https://github.com/ecc1/gnarl)), το οποίο είναι είδος του RileyLink-clone. 
 - ** Αντλία: ** Το πρόγραμμα οδήγησης λειτουργεί μόνο με τα ακόλουθα μοντέλα και εκδόσεις υλικολογισμικού: 
     - 512/712
@@ -44,7 +44,7 @@ If you started using Medtronic driver please add yourself to this [list](https:/
 
 If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
 
-![MDT Settings](../images/Medtronic01.png)
+![MDT Settings](../images/Medtronic01a.png)
 
 You need to set following items: (see picture above)
 
@@ -59,6 +59,7 @@ You need to set following items: (see picture above)
 - ** Κωδικοποίηση Medtronic **: Αυτή είναι η ρύθμιση που καθορίζει αν η κωδικοποίηση 4b6b που κάνουν οι συσκευές της Medtronic θα γίνει στο AndroidAPS ή στο RileyLink. Αν έχετε RileyLink με firmware 2.x, η προεπιλεγμένη τιμή θα είναι να χρησιμοποιήσετε την κωδικοποίηση υλικού (= έγινε από RileyLink), αν έχετε 0.x firmware, αυτή η ρύθμιση θα αγνοηθεί.
 - ** Τύπος μπαταρίας (Power View) **: Αν θέλετε να δείτε την ισχύ της μπαταρίας στην αντλία σας, πρέπει να επιλέξετε τον τύπο μπαταρίας που χρησιμοποιείτε (υποστηρίζεται προς το παρόν Lithium ή Alkaline) υπολογισμένο ποσοστό και βολτ.
 - ** Διαμόρφωση RileyLink **: Θα βρείτε τη συσκευή σας RileyLink / GNARL.
+- **Set neutral temp basals** is an option which can help prevent Medtronic pumps from beeping on the hour. If enabled if will cancel a temp basal before the hour end to prevent this from happening.
 
 ## Καρτέλα MEDTRONIC (MDT)
 

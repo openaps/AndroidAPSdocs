@@ -91,6 +91,7 @@ AndroidAPS gebruik
    Vertraagde koolhydraten (eCarbs) <./Usage/Extended-Carbs.rst>
    Automatisering <./Usage/Automation.rst>
    Careportal (bestaat niet meer) <./Usage/CPbefore26.rst>
+   Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automatisering met andere apps <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
  

@@ -1,5 +1,13 @@
 Dokumentų atnaujinimai ir pakeitimai
 **************************************************
+October 2020
+==================================================
+* `SMS commands - time sync <../Children/SMS-Commands.html>`_
+* Update Combo `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
+September 2020
+==================================================
+* Major update for new AAPS version 2.7
+* For details see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
 2020 m. birželis
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - detalesnė informacija apie Libre Link programėlę ir bluetooth siųstuvų naudojimą
@@ -10,7 +18,7 @@ Dokumentų atnaujinimai ir pakeitimai
 * `Insight vibracijos išjungimas <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (tik programinė įranga 3.x)
 * `Minimalaus pokyčio lygis <../Configuration/Preferences.html#minimal-request-rate>`_ siekiant sumažinti pranešimų kiekį atviro ciklo režime
 * `Modifikuota Libre Link programėlė <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - patikrinkite ar tinkamai modifikuota
-* `Prognozuojamosios kreivės <../Getting-Started/Screenshots.html#section-e>`_ - daugiau informacijos
+* `Prediction lines <../Getting-Started/Screenshots.html#prediction-lines>`_ - more details
 2020 m. balandis
 ==================================================
 * `Insulino įvedimas atbuliniu laiku <../Usage/CPbefore26.html#carbs--bolus>`_ (t. y. suleista švirkštu)
@@ -29,7 +37,7 @@ Vasaris 2020
 * `Ištęsto boluso <../Usage/Extended-Carbs.html#id1>`_ funkcija - uždaras ciklas bus išjungtas
 * Naujas `Vietinio profilio įskiepis <../Configuration/Config-Builder.html#local-profile-recommended>`_
 * "Pavyzdinis nustatymas <../Getting-Started/Sample-Setup.html>`_ - Dexcom G6 atnaujinimas
-* `Versija 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - pagrindinės naujos funkcijos
+* `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - major new features
 * `Išmaniųjų laikrodžių ekrano elementai <../Configuration/Watchfaces.html>`_
 Sausis 2020
 ==================================================
@@ -46,7 +54,7 @@ Lapkritis 2019
 ==================================================
 * `Automatizavimas - išjungimas, kai sustabdomas ciklas <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 siųstuvo keitimo atnaujinimas <../Configuration/xdrip.html#replace-transmitter>`_
-* Kodėl ištęstas bolusas neveikia cikle <../Usage/Extended-Carbs.html#extended-bolus>`_
+* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#id1>`_
 * 'DUK - sportas <../Getting-Started/FAQ.html#sports>`_
 * `Pradinis ekranas - diagramos eilutės <../Getting-Started/Screenshots.html#section-e>`_
 * ` Insight - Išjunkite absoliučias vertes NS Client programoje <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
@@ -57,11 +65,11 @@ Lapkritis 2019
 * `Android Studio trikčių šalinimas <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
 * ` Trikčių šalinimas - nuorodos <../Usage/troubleshooting.html> ` _
 * `Atnaujinimas - trumpas vadovas patyrusiems vartotojams <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users> ` _
-* Dokumentai - atnaujinimas 'koregavimas <../make-a-PR.md#code-syntax>`_ ir 'vertimas <../translations.html#translate-wiki-pages>`_.
+* Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
 
 Spalis 2019
 ==================================================
-* `AAPS 2.5 versijos <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ atnaujinimai (ypač 'atnaujinimo puslapyje <../Instaling-AndroidAPS/Update-to-new-version.html> ` _)
+* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#id16>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `AccuChek Insight - žurnalo parinktys <../Configuration/Accu-Chek-Inight-Pump.html#settings-in-aaps>`_
 * AAO skaičiavimas atskirame puslapyje <../Usage/COB-calculation.html>`_
 * ` AAO - neteisingas AAO verčių aptikimas <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_

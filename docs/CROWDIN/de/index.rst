@@ -44,7 +44,7 @@ AndroidAPS installieren
 
    App aus Quellcode erstellen <./Installing-AndroidAPS/Building-APK.md>
    Update auf neue Version oder Branch <./Installing-AndroidAPS/Update-to-new-version.md>
-   Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
+   Notwendige Überprüfungen nach Aktualisierung auf AndroidAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Installation git <./Installing-AndroidAPS/git-install.rst>
    Fehlerbehebung Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release Notes <./Installing-AndroidAPS/Releasenotes.rst>
@@ -72,7 +72,7 @@ AndroidAPS einrichten
     
    
    Konfigurations-Generator <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences.rst>
+   Einstellungen im Drei-Punkte-Menü <./Configuration/Preferences.rst>
    
    
 AndroidAPS Nutzung
@@ -89,8 +89,9 @@ AndroidAPS Nutzung
    Profil Wechsel <./Usage/Profiles.md>
    Temporäre Ziele <./Usage/temptarget.md>   
    Verzögerte Kohlenhydrate (eCarbs) <./Usage/Extended-Carbs.rst>
-   Automation <./Usage/Automation.rst>
+   Automatisierungen <./Usage/Automation.rst>
    Careportal (eingestellt) <./Usage/CPbefore26.rst>
+   Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automation mit Drittanbieter-Apps <./Usage/automationwithapp.md>
    Android Auto <./Usage/Android-auto.md>  
  

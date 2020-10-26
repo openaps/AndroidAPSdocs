@@ -25,7 +25,7 @@ Falls die minimale Kohlenhydrat-Resorption (min_5m_carbimpact) statt einem aus d
 Erkennung Fehlerhafter COB-Werte
 ==================================================
 
-AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. In diesem Fall gibt es einen zusätzlichen Hinweis in der Bestätigungsanzeige nach der Nutzung des Bolus-Assistenten. 
+AAPS warnt Dich, wenn Du mit aktiven Kohlenhydraten von einer vorherigen Mahlzeit bolen willst und der Algorithmus davon ausgeht, dass die aktuelle COB-Berechnung falsch sein könnte. In diesem Fall gibt es einen zusätzlichen Hinweis in der Bestätigungsanzeige nach der Nutzung des Bolus-Assistenten. 
 
 Wie erkennt AndroidAPS falsche COB-Werte? 
 --------------------------------------------------

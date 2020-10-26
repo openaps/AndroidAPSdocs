@@ -8,8 +8,9 @@
 
 * Wenn eine neue Version erscheint, führe bitte so bald als möglich ein Update durch. Ein [Hinweis auf dem AndroidAPS Startbildschirm](../Installing-AndroidAPS/Releasenotes#release-notes) informiert über die neue Version.
 * Ab Version 2.3 muss für das Update git genutzt werden. Ein Update mittels ZIP-File ist nicht mehr möglich.
-* Nutze bitte [Android Studio Version 3.6.1](https://developer.android.com/studio/) oder neuer, um die APK-Datei zu erstellen.
-* [Windows 10 32-bit Systeme](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) werden bei Android Studio 3.6.1 nicht unterstützt.
+* Ab Version 2.7 wurde der Speicherort des Repositories auf <https://github.com/nightscout/AndroidAPS> geändert. Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die [App-Erstellung von vorne](../Installing-AndroidAPS/Building-APK.md) beginnst.
+* Nutze bitte [Android Studio Version 4.0.1](https://developer.android.com/studio/) oder neuer, um die APK-Datei zu erstellen.
+* [Windows 10 32-bit Systeme](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) werden bei Android Studio 4.0.1 nicht unterstützt.
 * Wenn Du xDrip verdwendet, stelle sicher, dass [identifiziere Empfänger](../Configuration/xdrip#identifiziere-empfanger) gesetzt ist.
 * Wenn Du den Dexcom G6 mit der [gepatchted Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) verwendest, dann musst Du die Version aus dem [2.4 Verzeichnis](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) installiert haben.
 
@@ -19,9 +20,9 @@ Bitte überspringe diesen Absatz, wenn Du zum ersten Mal aktualisierst. Die Kurz
 
 Wenn Du AAPS bereits in früheren Versionen aktualisiert hast und einen Windows-PC verwendest, kannst Du in vier einfachen Schritten aktualisieren:
 
-1. [Exportiere Deine Einstellungen](../Usage/ExportImportSettings#exportieren-der-einstellungen) von der "alten" AAPS Version auf Deinem Smartphone, um auf der sicheren Seite zu sein.
-2. [Aktualisiere Deine lokale Kopie](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
-3. [Erstelle die signierte APK-Datei](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Generate signed APK - Wähle dabei 'app' statt 'wear' im Dialogfeld!)
+1. [Exportiere Deine Einstellungen](../Usage/ExportImportSettings#exportiere-die-einstellungen) von der "alten" AAPS Version auf Deinem Smartphone, um auf der sicheren Seite zu sein.
+2. [Aktualisiere Deine lokale Kopie](../Installing-AndroidAPS/Update-to-new-version#fuhre-ein-update-deiner-lokalen-version-durch) (VCS->Git->Pull)
+3. [Erstelle die signierte APK-Datei](../Installing-AndroidAPS/Update-to-new-version#signierte-apk-erstellen-generate-signed-apk) (Generate signed APK - Wähle dabei 'app' statt 'wear' im Dialogfeld!)
 4. Je nach [BZ-Quelle](../Configuration/BG-Source.rst) stelle sicher, dass [identifiziere Empfänger](../Configuration/xdrip#identifiziere-empfanger) in xDrip gesetzt ist or verwende die gepatchte Dexcom App aus dem [2.4 Ordner](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Installiere git (falls du es noch nicht hast)
@@ -30,13 +31,14 @@ Die Schritt-für-Schritt-Anleitung findest Du auf der Seite zur [git Installatio
 
 ## Führe ein Update deiner lokalen Version durch
 
+* Ab Version 2.7 wurde der Speicherort des Repositories auf <https://github.com/nightscout/AndroidAPS> geändert. Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die [App-Erstellung von vorne](../Installing-AndroidAPS/Building-APK.md) beginnst.
 * Klicke: VCS -> Git -> Pull
     
     ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
 
 * Klicke auf Pull (keine Änderungen im Dialogfeld erforderlich)
     
-    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02.png)
+    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02a.png)
 
 * Warte während der Download läuft.
     

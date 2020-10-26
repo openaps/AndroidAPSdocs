@@ -3,7 +3,7 @@ Būtini patikrinimai po to, kai buvo atnaujinta AndroidAPS 2.7
 
 * Atnaujinant į AAPS 2.7, programos kodas buvo žymiai pakeistas. 
 * Todėl svarbu, kad atnaujinę atliktumėte keletą pakeitimų arba patikrintumėte nustatymus.
-* Prašome peržiūrėti `Išleidimo pastabos <../Installing-AndroidAPS/Releasenotes.html#version-270>`_ dėl detalių apie naujas ir išplėstines funkcijas.
+* Please see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_ for details on new and extended features.
 
 Tikrinti KG šaltinį
 -----------------------------------------------------------
@@ -20,7 +20,7 @@ Baigti egzaminą
 -----------------------------------------------------------
 * AAPS 2.7 programoje yra naujas Tikslas 11 `Automatizavimas <../Usage/Automation.html>`_.
 * Jūs turite išlaikyti egzaminą (`Tikslas 3 ir 4 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_), kad užbaigtumėte `Tikslą 11 <../Usage/Objectives.html#objective-11-automation>`_.
-* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Automation.html>`_. 
+* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. 
 * This will not effect other objectives you have already finished. You will keep all finished objectives!
 
 Pagrindinio slaptažodžio nustatymas
@@ -38,7 +38,7 @@ Eksportuoti nustatymus
 -----------------------------------------------------------
 * AAPS 2.7 naudoja naują šifruotą atsarginės kopijos formatą. 
 * Jūs turite `eksportuoti savo nustatymus <../Usage/ExportImportSettings.html>`_ po atnaujinimo į versiją 2.7.
-* Nustatymų failai iš ankstesnių versijų ** negali** būti naudojami AAPS 2.7 versijoje ir vėlesnėse.
+* Settings files from previous versions can only be imported in AAPS 2.7. Export will be in new format.
 * Įsitikinkite, kad saugojate savo eksportuotus nustatymus ne tik telefone, bet ir bent vienoje saugioje vietoje (jūsų kompiuteris, debesijos saugykla...).
 * If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version. 
 * All settings as well as finished objectives will remain as they were in the previous version.
@@ -56,19 +56,9 @@ Danos RS slaptažodžio nustatymas (jei naudojate Dana RS)
 * Atidarykite Nustatymus (trijų taškų meniu dešinėje viršutinėje ekrano pusėje)
 * Slinkite žemyn ir spustelėkite trikampį šalia "Dana RS".
 * Paspauskite "Pompos slaptažodis (tik v1)"
-* Įveskite pompos slaptažodį (Numatytasis slaptažodis yra 1234) ir spustelėkite Gerai.
+* Enter pump password (`Default password <../Configuration/DanaRS-Insulin-Pump.html#default-password>`_ is different depending on firmware version) and click OK.
 
 .. image:: ../images/DanaRSPW.png
   :alt: Nustatyti Dana RS slaptažodį
   
-Norėdami pakeisti slaptažodį Dana RS pompoje:
-
-* paspauskite OK mygtuką pompoje
-* Pagrindiniame meniu pasirinkite „OPTION“ (judėkite dešinėn kelis kartus paspausdami rodyklės mygtuką)
-* Meniu Parinktys pasirinkite „USER OPTION“
-* Rodyklės mygtuku slinkite žemyn iki "11. password"
-* Įveskite senąjį slaptažodį (Numatytasis slaptažodis yra 1234)
-* Įveskite naują slaptažodį (Keiskite numerius mygtukais + ir - / Perkelkite į dešinę rodyklės mygtuku).
-* Patvirtinkite paspausdami OK mygtuką.
-* Išsaugokite spausdami OK mygtuką dar kartą.
-* Pereikite žemyn į „14. EXIT" ir paspauskite OK mygtuką.
+To change password on Dana RS follow instructions on `DanaRS page <../Configuration/DanaRS-Insulin-Pump.html#change-password-on-pump>`_.

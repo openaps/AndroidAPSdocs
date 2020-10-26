@@ -55,7 +55,7 @@ Protection des paramètres
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Protégez vos paramètres avec un mot de passe ou l'authentification biométrique du téléphone (par ex. si votre `enfant utilise AAPS <../Children/Children.html>`_).
 * Le mot de passe personnalisé doit être utilisé si vous voulez juste utiliser le mot de passe principal pour sécuriser `les paramètres exportés <../Usage/ExportImportSettings.html>`_.
-* Si vous utilisez un mot de passe personnalisé, cliquez sur la ligne "Mot de passe des paramètres" pour définir le mot de passe comme décrit `ci-dessus <../Configuration/Preferences2020.html#mot-de-passe-principal>`_.
+* Si vous utilisez un mot de passe personnalisé, cliquez sur la ligne "Mot de passe des paramètres" pour définir le mot de passe comme décrit `ci-dessus <../Configuration/Preferences.html#mot-de-passe-principal>`_.
 
   .. image:: ../images/Pref2020_Protection.png
     :alt: Protection
@@ -118,7 +118,7 @@ Boutons
 
 Assistant Rapide
 -----------------------------------------------------------
-* If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
+* Si vous avez une collation ou un repas fréquent, vous pouvez utiliser le bouton Assistant Rapide pour entrer facilement la quantité de glucides et définir les règles de calcul.
 * Dans le paramétrage, vous définissez au cours de quelle période le bouton sera visible sur votre écran d'accueil - ne définissez qu'un bouton par période.
 * Si vous cliquez sur le bouton Assistant Rapide, AAPS calculera et proposera un bolus pour ces glucides en fonction de vos valeurs actuelles (glycémie ou insuline active si configurées). 
 * La proposition doit être confirmée avant l'injection de l'insuline.
@@ -150,7 +150,7 @@ Fourchette de visualisation
 Raccourcir les titres des onglets
 -----------------------------------------------------------
 * Permet de voir plus de onglets à l'écran. 
-* For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
+* Par exemple, l'onglet "OpenAPS AMA" devient "OAPS", "Objectifs" devient "OBJ" etc.
 
   .. image:: ../images/Pref2020_OV_Tabs.png
     :alt: Préférences > Onglets
@@ -191,7 +191,7 @@ Injecter cette partie de Bolus calculée par l’assistant
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Activer les Superbolus dans l'Assistant.
-* `Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes.
+* le principe des `Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ est "d'emprunter" de l'insuline du débit de basal dans les deux prochaines heures pour éviter les pics.
 
 Traitements de sécurité
 ===========================================================
@@ -220,7 +220,7 @@ Boucle
 Mode APS
 -----------------------------------------------------------
 * Basculer entre les boucles ouvertes et fermées ainsi que le mode arrêt glycémie basses (AGB)
-* **La Boucle Ouverte** signifie que les suggestions de DBT (Débit de Basal Temporaire) sont calculées à partir de vos données et apparaissent sous forme d’une notification, mais vous devez choisir manuellement de les accepter et de les entrer manuellement sur votre pompe.  
+* **Boucle ouverte** signifie que les suggestions DBT sont faites en fonction de vos données et apparaissent comme une notification. Après confirmation manuelle, la commande d'injection de l'insuline sera transférée à la pompe. Ce n'est que si vous utilisez la pompe virtuelle que vous devez la saisir manuellement.
 * **La Boucle fermée** signifie que les suggestions DBT (Débit de Basal Temporaire) sont automatiquement envoyées à votre pompe sans confirmation ou entrée de votre part.  
 * **Arrêt Glycémie Basse** vous donne la possibilité de revenir au mode Arrêt Glycémie basse sans avoir besoin de refaire un objectif.
 
@@ -263,7 +263,7 @@ Lorsque vous commencez à boucler, **il est conseillé de mettre l'IA basal Max 
 * Profiter de l'occasion pour parfaire votre profil basal et votre Sensibilité à l'Insulin (SI).
 * Voir comment AAPS limite votre insuline basale pour prévenir l'hypoglycémie.
 
-Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commencer à vous donner de l'insuline basale supplémentaire, en augmentant la valeur de l'IA basal Max. Une bonne recommandation est de prendre le **débit de basal maximum** de votre profil et de le **multiplier par 3**. Par exemple, si le débit de basal le plus élevé dans votre profil est de 0,5 U/h, vous pourriez le multiplier par 3 pour obtenir la valeur de 1,5 U.
+Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commencer à vous donner de l'insuline basale supplémentaire, en augmentant la valeur de l'IA basal Max. Une bonne recommandation est de prendre le **débit de basal maximum** de votre profil et de le **multiplier par 3**. Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, vous pourriez le multiplier par 3 pour obtenir la valeur de 1,5 U/h.
 
 * Vous pouvez commencer prudemment avec cette valeur et l'augmenter lentement avec le temps. 
 * Ce ne sont que des lignes directrices; chacun a un corps différent. Vous trouverez peut-être que vous avez besoin plus ou moins que ce qui est recommandé ici, mais commencez toujours prudemment et ajustez lentement.
@@ -285,11 +285,11 @@ Paramètres OpenAPS SMB
 -----------------------------------------------------------
 * Contrairement à AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ n'utilise pas de les débits de basal temporaires pour contrôler la glycémie, mais principalement les petits super micro-bolus.
 * Vous devez avoir démarré `l'objectif 10 <../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ pour utiliser les SMB.
-* The first three settings are explained `above <./Configuration/Preferences2020.html#max-u-h-a-temp-basal-can-be-set-to>`_.
-* Details on the different enable options are described in `OpenAPS feature section <../Usage/Open-APS-features.html#enable-smb>`_.
-* *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target being set). You should not change this setting unless you know exactly about consequences. 
-* If 'Sensitivity raises target' or 'Resistance lowers target' is enabled `Autosens <../Usage/Open-APS-features.html#autosens>`_ will modify your glucose target according to your blood glucose deviations.
-* If target is modified it will be displayed with a green background on your home screen.
+* Les trois premiers paramètres sont expliqués `ci-dessus <../Configuration/Preferences.html#debit-max-en-u-h-pour-une-temp-basal>`_.
+* Les détails sur les différentes options d'activation sont décrits dans la section `Fonctionnalités OpenAPS <../Usage/Open-APS-features.html#activer-smb>`_.
+* *La fréquence à laquelle les SMB seront donnés en min* est une restriction pour que le SMB ne soit distribué que toutes les 4 minutes par défaut. Cette valeur empêche le système d'émettre trop souvent des SMB (par exemple dans le cas où une cible temporaire a été définie). Vous ne devriez pas modifier ce paramètre sauf si vous en connaissez exactement les conséquences. 
+* Si 'Sensibilité augmente la cible' ou 'Résistance diminue la cible' est activée, `Autosens <../Usage/Open-APS-features.html#autosens>`_ modifiera votre cible glycémique en fonction de vos écarts de glycémie.
+* Si la cible est modifiée, elle sera affichée avec un fond vert sur votre écran d'accueil.
 
   .. image:: ../images/Home2020_DynamicTargetAdjustment.png
     :alt: Cible modifiée par Autosens
@@ -297,11 +297,11 @@ Paramètres OpenAPS SMB
 Notification glucides requis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Cette fonctionnalité n'est disponible que si l'algorithme SMB est sélectionné.
-* Eating of additional carbs will be suggested when the reference design detects that it requires carbs.
-* In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
-* Additionally the required carbs will be displayed in the COB section on your home screen.
-* A threshold can  be defined - minimum amount of carbs needed to trigger notification. 
-* Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+* Il sera suggéré de manger des glucides supplémentaires quand l'algorithme détecte que des glucides sont requis.
+* Dans ce cas, vous recevrez une notification qui peut être reportée pendant 5, 15 ou 30 minutes.
+* De plus, les glucides requis seront affichés dans la section GA sur votre écran d'accueil.
+* Un seuil peut être défini - Glucides minimum requis pour suggestion. 
+* Les notifications Glucides requis peuvent être envoyées sur Nightscout si vous le souhaitez, dans ce cas une annonce sera affichée et diffusée.
 
   .. image:: ../images/Pref2020_CarbsRequired.png
     :alt: Afficher les glucides requis sur l'écran d'accueil
@@ -319,14 +319,14 @@ Paramètres d’absorption
 
 min_5m_carbimpact
 -----------------------------------------------------------
-* The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed. 
-* The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB. 
-* At times when carb absorption can’t be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. De base, c'est une sécurité intégrée.
-* To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. 
-* Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc. 
-* The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. Pour plus de détails, voir la `documentation OpenAPS <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`_.
+* L'algorithme utilise l'IGly (impact glycémique) pour déterminer quand les glucides sont absorbés. 
+* La valeur n'est utilisée que pendant les lacunes dans les lectures MGC ou lorsque l'activité physique "consomme" l'augmentation de la glycémie qui autrement aurai permis la décomposition des GA par AAPS. 
+* Parfois, lorsque l'absorption de glucides ne peut pas être déterminée de façon dynamique en fonction des glycémies, AAPS intègre une décomposition par défaut à vos glucides. De base, c'est une sécurité intégrée.
+* Pour le dire simplement: L'algorithme "sait" comment vos glycémies *devraient* se comporter quand elles sont affectées par la dose actuelle d'insuline, etc. 
+* Chaque fois qu'il y a un écart positif par rapport au comportement attendu, certains glucides sont absorbés/décomposés. Gros changement = beaucoup de glucides, etc. 
+* Le min_5m_carbimpact définit l'impact par défaut de l'absorption des glucides par 5 minutes. Pour plus de détails, voir la `documentation OpenAPS <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`_.
 * La valeur standard pour AMA est de 5, pour SMB c'est 8.
-* The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+* Le graphique GA sur l'écran d'accueil indique quand min_5m_impact est utilisé en plaçant un cercle orange en haut.
 
   .. image:: ../images/Pref2020_min_5m_carbimpact.png
     :alt: Graphique GA
@@ -342,13 +342,13 @@ Paramètres avancés - Ratio autosens
 
 Paramètres de la pompe
 ===========================================================
-The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`_.  Appairez et réglez votre pompe selon les instructions relatives à la pompe :
+Les options ici varient selon le pilote de pompe que vous avez sélectionné dans le `Générateur de configuration <../Configuration/Config-Builder.html#pompe>`_.  Appairez et réglez votre pompe selon les instructions relatives à la pompe :
 
 * `Pompe à Insuline DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 * `Pompe à Insuline DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 * `Pompe Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
 * `Pompe Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
-* `Medtronic Pump <../Configuration/MedtronicPump.html>`_
+* `Pompe Medtronic <../Configuration/MedtronicPump.html>`_
 
 Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sélectionné Pompe virtuelle Pump dans le Générateur de configuration.
 
@@ -358,12 +358,12 @@ NSClient
   .. image:: ../images/Pref2020_NSClient.png
     :alt: NSClient
 
-* Set your *Nightscout URL* (i.e. https://yourwebsitename.herokuapp.com) and the *API secret* (a 12 character password recorded in your Heroku variables).
-* This enables data to be read and written between both the Nightscout website and AndroidAPS.  
+* Définissez votre *URL Nightscout* (par ex. https://yourwebsitename.herokuapp.com) et l'*API secret* (un mot de passe de 12 caractères enregistré dans vos variables Heroku).
+* Cela permet de lire et d'écrire des données entre le site Nightscout et AndroidAPS.  
 * Vérifiez deux fois les fautes de frappe ici si vous êtes coincé dans l'objectif 1.
-* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-* *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS). 
-* If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ are uploaded to your Nightscout site.
+* **Vérifiez bien que l'URL est SANS /api/v1/ à la fin.**
+* *Log app start to NS* enregistre une note dans Careportal Nightscout à chaque démarrage de l'application.  L'application ne devrait pas avoir besoin de démarrer plus d'une fois par jour; si c'est plus souvent, cela suggère un problème (par ex. l'optimisation de la batterie n'est pas désactivée pour AAPS). 
+* Si activé, les modifications du `profil local <../Configuration/Config-Builder.html#profil-local-recommande>`_ sont envoyées sur votre site Nightscout.
 
 Paramètres de connexion
 -----------------------------------------------------------
@@ -371,17 +371,17 @@ Paramètres de connexion
   .. image:: ../images/ConfBuild_ConnectionSettings.png
     :alt: Paramètres de connexion NSClient  
   
-* Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-* If you want to use only a specific WiFi network you can enter its WiFi SSID. 
-* Multiple SSIDs can be separated by semicolon. 
+* Restreignez le téléchargement de Nightscout au Wi-Fi seulement ou même à certains SSID Wi-Fi.
+* Si vous souhaitez utiliser uniquement un réseau WiFi spécifique, vous pouvez entrer son SSID. 
+* Plusieurs SSID peuvent être séparés par un point-virgule. 
 * Pour supprimer tous les SSID, entrez un espace dans la zone.
 
 Options d'alarme
 -----------------------------------------------------------
-* Alarm options allows you to select which default Nightscout alarms to use through the app.  
-* For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
-* They will only work whilst you have a connection to Nightscout and are intended for parent/carers. 
-* If you have the CGM source on your phone (i.e. xDrip+ or Dexcom patched app) then use those alarms instead.
+* Les options d'alarme vous permettent de sélectionner les alarmes Nightscout par défaut à utiliser via l'application.  
+* Pour que les alarmes sonnent, vous devez définir les valeurs de seuil des alarmes Urgent High, High, Low et Urgent Low dans vos `variables Heroku <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
+* Elles ne fonctionneront que si vous avez une connexion avec Nightscout et sont destinées aux parents/aidants. 
+* Si vous avez la source MGC sur votre téléphone (par ex. xDrip+ ou l'application Dexcom patchée), utilisez ces alarmes à la place.
 
 Paramètres Avancés
 -----------------------------------------------------------
@@ -389,21 +389,20 @@ Paramètres Avancés
   .. image:: ../images/Pref2020_NSClientAdv.png
     :alt: Paramètres avancés NSClient
 
-* Most options in advanced settings are self-explanatory.
-* *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+. 
+* La plupart des options dans les paramètres avancés sont explicites.
+* *Activer les transmissions locales* partagera vos données vers d'autres applications sur le téléphone, telles que xDrip+. 
 
-  * Dexcom patched app does not broadcast directly to xDrip+. 
-  * You need to `go through AAPS <../Configuration/Config-Builder.html#bg-source>`_ and enable local broadcast in AAPS to use xDrip+ alarms.
+  * L'application Dexcom patchée ne diffuse pas directement vers xDrip+. 
+  * Vous devez `passer par AAPS <../Configuration/Config-Builder.html#source-gly>`_ et activer la diffusion locale dans AAPS pour utiliser les alarmes xDrip+.
   
-* *Always use basal absolute values* must be activated if you want to use Autotune properly. See `OpenAPS documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ for more details on Autotune.
-* **Do not activate this when using `Insight pump <../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps>`_!**  It would lead to false TBR settings in Insight pump.
+* *Utiliser toujours les valeurs absolues du basal* doit être activé si vous souhaitez utiliser Autotune correctement. Voir la `documentation OpenAPS <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ pour plus de détails sur Autotune.
 
 Communicateur SMS
 ===========================================================
-* Options will only be displayed if SMS communicator is selected in `Config Builder <../Configuration/Config-Builder.html#sms-communicator>`_.
-* This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.  
-* Further information is described in `SMS Commands <../Children/SMS-Commands.html>`_.
-* Additional safety can be obtained through use of an authenticator app or additional PIN at token end.
+* Les options ne seront affichées que si le Communicateur SMS est sélectionné dans le `Générateur de configuration <../Configuration/Config-Builder.html#communicateur-sms>`_.
+* Ce paramètre permet de contrôler à distance de l'application en envoyant des instructions au téléphone du patient que l'application appliquera comme Suspendre la boucle ou un bolus.  
+* De plus amples informations sont décrites dans `Commandes SMS <../Children/SMS-Commands.html>`_.
+* Une sécurité supplémentaire est obtenue grâce à l'utilisation d'une application authentificateur et d'un code confidentiel supplémentaire à la fin du jeton.
 
 Automatisation
 ===========================================================
@@ -437,3 +436,11 @@ Paramètres de maintenance
 
 * Le destinataire standard des journaux est logs@androidaps.org.
 * Si vous sélectionnez *Chiffrer les paramètres exportés* ces paramètres sont chiffrés avec votre mot de passe principal <../Configuration/Preferences.html#mot-de-passe-principal>`_. Dans ce cas, le mot de passe principal doit être entré à chaque fois que les paramètres sont exportés ou importés.
+
+Open Humans
+===========================================================
+* Vous pouvez aider la communauté en faisant don de vos données à des projets de recherche ! Les détails sont décrits sur la `page Open Humans <../Configuration/OpenHumans.html>`_.
+* Dans les préférences, vous pouvez définir quand les données doivent être téléchargées
+
+   * uniquement si connecté au WiFi
+   * uniquement si en charge
