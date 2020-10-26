@@ -1,8 +1,13 @@
 # Zpřístupnění log souborů
 
 * Připojte telefon k počítači v režimu přenosu souborů
-* Lokalizujte log soubory v této nebo podobné složce (umístění se může trochu lišit na různých telefonech)
+* Locate the log files in the AndroidAPS data directory
+    
+    * The folder will be at a location similar to ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
+    * The naming of the root storage folder (1) may vary a little depending on the phone.
 
 ![logy](../images/aapslog.png)
 
-* Aktuální log je .log soubor, který může být zobrazený několika způsoby, např. v [LogCat](https://developer.android.com/studio/debug/am-logcat.html) podokně v Android Studiu, v Log Viewer aplikaci na Androidu nebo prostě jako textový soubor v libovolném editoru. Předcházející log soubory jsou automaticky zazipované a uložené do složek v pořadí podle datumu/času. Pokud chcete sdílet log na [Gitteru](https://gitter.im/MilosKozak/AndroidAPS) při popisování nějaké potenciální chyby, pak rozbalte a nahrajte zip složku datovanou těsně předtím, než se problém objevil.
+* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any Log Viewer android app, or simply as plain text. 
+* Previous log files are zipped and stored in folders in date/time order. 
+* If you are sharing your log file in [gitter](https://gitter.im/MilosKozak/AndroidAPS) to talk about a potential bug, please unzip and upload the file dated before the error occurred.
