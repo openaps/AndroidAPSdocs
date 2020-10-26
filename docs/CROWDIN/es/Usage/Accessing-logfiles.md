@@ -1,8 +1,13 @@
 # Acceder a los logs
 
 * Conecte el teléfono a una computadora en modo de transferencia de archivos
-* Ubique los archivos de registro en este directorio o de manera similar (puede variar un poco en los diferentes teléfonos)
+* Locate the log files in the AndroidAPS data directory
+    
+    * The folder will be at a location similar to ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
+    * The naming of the root storage folder (1) may vary a little depending on the phone.
 
 ![registros](../images/aapslog.png)
 
-* El registro actual es un archivo .log que se puede ver de varias maneras, como LogCat en Android Studio, la aplicación de Android Log Viewer, o simplemente texto sin formato. Los archivos de registro anteriores se comprimen y almacenan en carpetas en orden de fecha / hora. Si comparte su registro en gitter cuando hable de un error potencial, descomprima y cargue la carpeta con fecha anterior al error.
+* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any Log Viewer android app, or simply as plain text. 
+* Previous log files are zipped and stored in folders in date/time order. 
+* If you are sharing your log file in [gitter](https://gitter.im/MilosKozak/AndroidAPS) to talk about a potential bug, please unzip and upload the file dated before the error occurred.
