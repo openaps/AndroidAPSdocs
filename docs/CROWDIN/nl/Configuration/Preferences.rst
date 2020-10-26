@@ -270,7 +270,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 **Note: As a safety feature, Max Basal IOB is hard-limited to 7u.**
 
-Autosens
+Gevoeligheidsdetectie (Autosens)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ looks at blood glucose deviations (positive/negative/neutral).
 * It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
