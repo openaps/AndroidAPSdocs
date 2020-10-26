@@ -35,7 +35,7 @@ Erlaubte Telefonnummern
 
 Minuten zwischen Bolus-Kommandos
 -------------------------------------------------
-* You can define the minimum delay between two boluses issued via SMS.
+* Du kannst den minimalen Zeitabstand zwischen zwei über SMS durchgeführte Boli definieren.
 * Aus Sicherheitsgründen musst Du mindestens zwei erlaubte Telefonnummern hinzufügen, um diesen Wert zu bearbeiten.
 
 Zusätzliche obligatorische PIN am Token-Ende
