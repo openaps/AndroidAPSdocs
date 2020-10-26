@@ -56,10 +56,6 @@ Note: AAPS will write data always in **first basal rate profile in the pump**.
 Note: There will be no permanent connection between pump and phone. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
 
 ## Settings in AAPS
-You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > NSClient > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump. 
-
-Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune. In AAPS go to Preferences > NSClient > Advanced Settings and Enable ‘NS upload only (disabled sync)‘.
-
    ![Screenshot of Insight Settings](../images/Insight_settings.png)
 
 In the Insight settings in AndroidAPS you can enable the following options:
@@ -80,9 +76,9 @@ In the Insight settings in AndroidAPS you can enable the following options:
   **Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.**
   
 * "Disable vibrations on manual bolus delivery": This disables the Insight pump's vibrations when delivering a manual bolus (or extended bolus). This setting is available only with the latest version of Insight firmware (3.x).
-    
+  
 * "Disable vibrations on automated bolus delivery": This disables the Insight pump's vibrations when delivering an automatic bolus (SMB or Temp basal with TBR emulation). This setting is available only with the latest version of Insight firmware (3.x).
-    
+  
 * "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time. 
     <br><br>Example for min. recovery duration = 5 and max. recovery duration = 20
     <br><br>no connection -> wait <b>5</b> sec.
