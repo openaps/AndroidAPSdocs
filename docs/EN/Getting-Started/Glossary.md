@@ -215,7 +215,7 @@
  <td><strong>Nightscout</strong></td>
  <td>open source project to access and report CGM data</td>
  <td>Nightscout Reporter</td>
- <td><a href="http://www.nightscout.info/">Nightscout</a></td>
+ <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
 <tr>
  <td><strong>NS Client</strong></td>
