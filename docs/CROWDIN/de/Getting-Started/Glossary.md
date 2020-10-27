@@ -218,7 +218,7 @@
  <td><strong>min_5m_carbimpact</strong></td>
  <td>Sicherheitsfunktion - Standardzeitangabe für den Abbau der Kohlenhydrate. Wird verwendet wenn dieser nicht durch die Veränderung der BZ-Werte dynamisch ermittelt werden kann.</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - Konfigurations-Generator</a></td>
+ <td><a href="../Configuration/Config-Builder.html#resorptions-einstellungen">Wiki - Konfigurations-Generator</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
@@ -230,7 +230,7 @@
  <td><strong>NS Client Einstellungen für die Synchronisation deiner AndroidAPS Daten mit Nightscout</strong></td>
  <td>Teil von AAPS zur Verbindung mit Deiner Nightscout-Seite</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient.html">Wiki - NS Client</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout Reporter</strong></td>
@@ -260,7 +260,7 @@
  <td><strong>Oref0 / Oref1</strong></td>
  <td>Empfindlichkeitserkennung<br>"reference design implementation version 0/1" - der Schlüsselalgorithmus von OpenAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - Empfindlichkeitserkennung...</a></td>
+ <td><a href="../Configuration/Sensitivity-detection-and-COB.html">Wiki - Empfindlichkeitserkennung...</a></td>
 </tr>
 <tr>
  <td><strong>Peak time (Wirkungshoch)</strong></td>
@@ -272,7 +272,7 @@
  <td><strong>PH</strong></td>
  <td>Pumpenhistorie (Eintrag im Behandlungs-Tab)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#careportal-behandlungen">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>Predictions (Vorhersagen)</strong></td>
@@ -380,7 +380,7 @@
  <td><strong>Smartphone-Hintergrundbild</strong></td>
  <td>AndroidAPS-Hintergrundbild</td>
  <td></td>
- <td><a href="../Getting-Started/Phones.html#phone-background">siehe Seite Smartphones</a></td>
+ <td><a href="../Getting-Started/Phones.html#handy-hintergrundbild">siehe Seite Smartphones</a></td>
 </tr>
 <tr>
  <td><strong>xDrip / xDrip+</strong></td>
