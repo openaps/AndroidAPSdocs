@@ -180,7 +180,7 @@ Statusanzeige
   .. image:: ../images/Pref2020_OV_StatusLights2.png
     :alt: Einstellungen > Status Lights
 
-Erweiterte Einstellungen
+Advanced Settings (Overview)
 -----------------------------------------------------------
 Abgabe nur eines Teils der vom Bolus-Rechner ermittelten Insulinmenge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -276,7 +276,7 @@ Autosens
 * Dabei wird anhand dieser Abweichungen ermittelt, wie empfindlich / resistent Du auf Insulin reagierst und Deine Basalrate und den ISF entsprechend angepasst.
 * Wenn Du "Autosens passt Zielwerte ebenfalls an" auswählst, wird der Algorithmus auch Dein BZ-Ziel entsprechend anpassen.
 
-Erweiterte Einstellungen
+Advanced settings (OpenAPS AMA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normalerweise musst Du die Einstellungen in diesem Dialog nicht ändern!
 * Falls Du sie doch ändern willst, lies in jedem Fall vorher die Details dazu in den `OpenAPS Docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ und stelle sicher, dass Du weißt, was Du tust.
@@ -306,7 +306,7 @@ Kohlenhydrat-Vorschlag
   .. image:: ../images/Pref2020_CarbsRequired.png
     :alt: Kohlenhydrat-Vorschlag auf dem Startbildschirm
   
-Erweiterte Einstellungen
+Advanced settings (OpenAPS SMB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normalerweise musst Du die Einstellungen in diesem Dialog nicht ändern!
 * Falls Du sie doch ändern willst, lies in jedem Fall vorher die Details dazu in den `OpenAPS Docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ und stelle sicher, dass Du weißt, was Du tust.
@@ -383,7 +383,7 @@ Alarm-Optionen
 * Diese funktionieren nur, wenn Du eine Online-Verbindung mit Nightscout hast und sind vor allem für Eltern und Betreuer gedacht. 
 * Wenn Du Deine CGM-Quelle direkt auf dem Smartphone hast (z.B. xDrip+ oder gepatchte Dexcom App) nutze stattdessen deren Alarme.
 
-Erweiterte Einstellungen
+Advanced settings (NSClient)
 -----------------------------------------------------------
 
   .. image:: ../images/Pref2020_NSClientAdv.png
