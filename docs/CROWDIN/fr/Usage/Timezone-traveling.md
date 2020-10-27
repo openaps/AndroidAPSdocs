@@ -58,7 +58,7 @@ Si vous faites un bolus avec la calculatrice, veuillez désactiver les GA et IA 
 
 ## Accu-Check Combo
 
-AndroidAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
+AndroidAPS émettra une alarme si l'heure entre la pompe et le téléphone est très différente. En cas de changement d'heure (été ou hiver), cela arrive au milieu de la nuit. Pour éviter cela et profiter de votre sommeil, suivez ces étapes pour que vous puissiez forcer le changement de temps à une heure convenable pour vous-même :
 
 ### Actions à faire avant le changement d'heure
 
@@ -74,7 +74,7 @@ AndroidAPS will issue an alarm if the time between pump and phone differs too mu
 
 3. Dans AndroidAPS actualisez votre pompe.
 
-4. Vérifiez l'onglet Traitements... If you see any duplicate treatments:
+4. Vérifiez l'onglet Traitements... Si vous voyez des traitements en doublon :
    
    * NE PAS appuyer sur "Supprimer les futurs traitements"
    * Appuyez sur "Supprimer" sur tous les traitements futurs et les doublons. Cela devrait invalider les traitements plutôt que de les enlever, donc ils ne seront plus pris en compte pour l'IA.
