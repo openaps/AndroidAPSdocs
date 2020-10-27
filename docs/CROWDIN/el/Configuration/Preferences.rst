@@ -180,7 +180,7 @@ Status lights
   .. image:: ../images/Pref2020_OV_StatusLights2.png
     :alt: Preferences > Status Lights
 
-Προηγμένες ρυθμίσεις
+Advanced Settings (Overview)
 -----------------------------------------------------------
 Deliver this part of bolus wizard result
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -276,7 +276,7 @@ Autosens
 * It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
 * If you select "Autosens adjust target, too" the algorithm will also modify your glucose target.
 
-Advanced settings
+Advanced settings (OpenAPS AMA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normally you do not have to change the settings in this dialogue!
 * If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ and to understand what you are doing.
@@ -306,7 +306,7 @@ Carb required notification
   .. image:: ../images/Pref2020_CarbsRequired.png
     :alt: Display carbs required on home screen
   
-Advanced settings
+Advanced settings (OpenAPS SMB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normally you do not have to change the settings in this dialogue!
 * If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ and to understand what you are doing.
@@ -383,7 +383,7 @@ Alarm options
 * They will only work whilst you have a connection to Nightscout and are intended for parent/carers. 
 * If you have the CGM source on your phone (i.e. xDrip+ or Dexcom patched app) then use those alarms instead.
 
-Advanced settings
+Advanced settings (NSClient)
 -----------------------------------------------------------
 
   .. image:: ../images/Pref2020_NSClientAdv.png
