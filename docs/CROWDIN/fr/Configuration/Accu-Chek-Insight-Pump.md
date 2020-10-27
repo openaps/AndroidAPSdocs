@@ -52,11 +52,11 @@ Remarque : Il n'y aura pas de connexion permanente entre la pompe et le téléph
 
 ## Paramètres dans AAPS
 
-**Note : it is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to Preferences > NSClient > Advanced Settings).
+**Note : il est maintenant possible (uniquement avec AAPS v2.7.0 et ultérieures) d'utiliser « Utiliser toulours les valeurs absolues du basal » si vous voulez utiliser Autotune avec la pompe Insight, même si la 'syncro est activée' avec Nightscout.** (Dans AAPS, allez dans Préférences > NSClient > Paramètres avancés).
 
 ![Screenshot of Insight Settings](../images/Insight_settings.png)
 
-In the Insight settings in AndroidAPS you can enable the following options:
+Dans les paramètres Insight d'AndroidAPS, vous pouvez activer les options suivantes :
 
 * "Enreg. changement de réservoir": ajoute automatiquement le changement de réservoire quand vous effectuez "Remplir tubulure" sur la pompe.
 
@@ -93,9 +93,9 @@ In the Insight settings in AndroidAPS you can enable the following options:
 
 * "Délai de déconnexion": indique combien de temps (en secondes) AndroidAPS attendra avant de se déconnecter de la pompe une fois l'opération terminée. La valeur par défaut est de 5 secondes.
 
-For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
+Pendant les périodes où la pompe est débranchée, AAPS va enregistrer un débit de basal temporaire avec 0%.
 
-In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
+Dans AndroidAPS, l'onglet Accu-Chek Insight affiche le statut actuel de la pompe et comporte deux boutons :
 
 * Actualiser : Actualise l'état de la pompe
 * "Activer/Désactiver la notification de la fin DBT" : Une pompe Insight émet par défaut une alarme lorsqu'un DBT est terminé. Ce bouton vous permet d'activer ou de désactiver cette alarme sans avoir besoin du logiciel de configuration.
