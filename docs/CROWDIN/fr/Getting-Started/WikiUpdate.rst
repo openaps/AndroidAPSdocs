@@ -2,9 +2,9 @@ Mises à jour et modifications de la documentation
 **************************************************
 Octobre 2020
 ==================================================
-* Accu-Chek Combo - update `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
-* Accu-Chek Insight - Option to `upload absolute values <.. /Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
-* Logs - more details about `folder location <../Usage/Accessing-logfiles.html>`_
+* Accu-Chek Combo - Mise à jour `réglage duchangement d'heure <../Usage/Timezone-traveling.html#changements-d-heure>`_
+* Accu-Chek Insight - Option pour `télécharger des valeurs absolues <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_  
+* Journaux - plus de détails sur `l'emplacement du dossier <../Usage/Accessing-logfiles.html>`_
 * `Commandes SMS - Synchronisation de l'heure <../Children/SMS-commands.html>`_
 Septembre 2020
 ==================================================
