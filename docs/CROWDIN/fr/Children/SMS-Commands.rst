@@ -64,9 +64,9 @@ Configuration de l'Authentificateur
    * Le jeton TOTP de l'application d'authentification est 457051
    * Entrez 4570512020
    
-* The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **Il n'y a aucun bouton à appuyer !**
-* The time on both phones must be synchronized. Best practice is set automatically from network. Les différences d'heures peuvent entraîner des problèmes d'authentification.
-* Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
+* Le texte rouge "WRONG PIN" changera **automatiquement** en vert "OK" si l'entrée est correcte. **Il n'y a aucun bouton à appuyer !**
+* L'heure des deux téléphones doit être synchronisée. Les mieux est de définir l'heure automatiquement à partir du réseau. Les différences d'heures peuvent entraîner des problèmes d'authentification.
+* Utilisez le bouton "RESET AUTHENTICATORS" si vous voulez supprimer les autorisations effectuées.  (En réinitialisant l'authentificateur, vous rendez TOUS les authentificateurs déjà configurés non valides. Vous devrez les configurer à nouveau)
 
 Utiliser les commandes SMS
 ==================================================
@@ -78,11 +78,11 @@ Utiliser les commandes SMS
    * Le jeton TOTP de l'application d'authentification est 457051
    * Entrez 4570512020
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**Astuce** : Il peut être utile d'avoir un forfait SMS illimité (pour chaque téléphone utilisé) si beaucoup de SMS sont envoyés.
 
 Commandes
 ==================================================
-Commands must be sent in English, the response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Les commandes doivent être envoyées en anglais, la réponse sera dans votre langue locale si la chaîne de réponse a déjà été `traduite <../translations.html#traduire-les-textes-de-l-application-androidaps>`_.
 
 .. image:: ../images/SMSCommands.png
   :alt: Example de commandes SMS
