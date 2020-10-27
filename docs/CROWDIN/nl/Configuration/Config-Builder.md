@@ -207,8 +207,8 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 ### Minimal request change
 
-* Bij het gebruik van open loop ontvangt je meldingen telkens wanneer AAPS een suggestie doet om de basaalstand aan te passen. 
-* Om het aantal meldingen te verminderen, kun je een breder bereik voor BG gebruiken of een hoger percentage van het minimale verzoek voor aanpassing.
+* Bij het gebruik van open loop ontvang je telkens meldingen wanneer AAPS een suggestie doet om de basaalstand aan te passen. 
+* Om het aantal meldingen te verminderen, kun je een breder bereik voor BG gebruiken of een hoger percentage van het minimale verzoek voor aanpassing instellen.
 * Hiermee stel je de minimale relatieve TBR aanpassing in waarbij AAPS een suggestie doet.
 
 ## Doelen (leerprogramma)
