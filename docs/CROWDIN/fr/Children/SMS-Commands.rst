@@ -35,7 +35,7 @@ Numéros de tél autorisés
 
 Délai entre les commandes bolus
 -------------------------------------------------
-* You can define the minimum delay between two boluses issued via SMS.
+* Vous pouvez définir un délai minimum entre deux bolus envoyés par SMS.
 * Pour des raisons de sécurité, vous devez ajouter au moins deux numéros de téléphone autorisés pour modifier cette valeur.
 
 Code PIN obligatoire à la fin de l'OTP
@@ -126,7 +126,7 @@ Basal
 
 Bolus
 --------------------------------------------------
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
+Un bolus à distance n'est pas possible dans les 15 minutes suivant le dernier bolus dans AAPS ou à distance (vous ne pouvez ajuster la durée que si au moins 2 numéros de téléphone sont entrés) ! La réponse dépend donc du moment où le dernier bolus a été administré.
 
 * BOLUS 1.2
    * Réponse A : Pour injecter le bolus de 1,2 U, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
@@ -182,13 +182,13 @@ Dépannage
 ==================================================
 SMS multiples
 --------------------------------------------------
-Si vous recevez toujours le même message (par ex. changement de profil) vous avez probablement mis en place une boucle infinie avec d'autres applications. Cela peut être xDrip+, par exemple. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS. 
+Si vous recevez toujours le même message (par ex. changement de profil) vous avez probablement mis en place une boucle infinie avec d'autres applications. Cela peut être xDrip+, par exemple. Si c'est le cas, assurez-vous que xDrip + (ou toute autre application) ne télécharge pas les traitements dans NS. 
 
 Si l'autre application est installée sur plusieurs téléphones assurez-vous de désactiver le téléchargement NS sur chacun d'eux.
 
 Les commandes SMS ne fonctionnent pas sur des téléphones Samsung
 --------------------------------------------------
-Il y a eu un signalement sur les commandes SMS s'arrêtant après une mise à jour sur le téléphone Galaxy S10. Could be solved by disabling 'send as chat message'.
+Il y a eu un signalement sur les commandes SMS s'arrêtant après une mise à jour sur le téléphone Galaxy S10. Peut être résolu en désactivant 'envoyer en tant que message chat'.
 
 .. image:: ../images/SMSdisableChat.png
   :alt: Disable SMS as chat message
