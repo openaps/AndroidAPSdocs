@@ -52,7 +52,7 @@ Remarque : Il n'y aura pas de connexion permanente entre la pompe et le téléph
 
 ## Paramètres dans AAPS
 
-**Note : il est maintenant possible (uniquement avec AAPS v2.7.0 et ultérieures) d'utiliser « Utiliser toulours les valeurs absolues du basal » si vous voulez utiliser Autotune avec la pompe Insight, même si la 'syncro est activée' avec Nightscout.** (Dans AAPS, allez dans Préférences > NSClient > Paramètres avancés).
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences#advanced-settings-nsclient)).
 
 ![Copie d'écran paramètres Insight](../images/Insight_settings.png)
 
