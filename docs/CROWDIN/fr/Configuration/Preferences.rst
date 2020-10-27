@@ -180,7 +180,7 @@ Voyants d'état
   .. image:: ../images/Pref2020_OV_StatusLights2.png
     :alt: Préférences > Voyants d'état
 
-Paramètres Avancés
+Advanced Settings (Overview)
 -----------------------------------------------------------
 Injecter cette partie de Bolus calculée par l’assistant
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -276,7 +276,7 @@ Autosens
 * Il essaiera de comprendre à quel point vous êtes sensible/résistant en fonction de ces écarts et ajustera le débit basal et la SI en fonction de ces écarts.
 * Si vous sélectionnez "Autosens ajuste aussi les cibles" l'algorithme modifiera également votre cible de glycémie.
 
-Paramètres Avancés
+Advanced settings (OpenAPS AMA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normalement, vous n'avez pas à modifier les paramètres dans cette boîte de dialogue !
 * Si vous voulez quand même les changer, lisez en détail la `documentation OpenAPS <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ et assurez-vous de bien comprendre ce que vous faites.
@@ -306,7 +306,7 @@ Notification glucides requis
   .. image:: ../images/Pref2020_CarbsRequired.png
     :alt: Afficher les glucides requis sur l'écran d'accueil
   
-Paramètres Avancés
+Advanced settings (OpenAPS SMB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normalement, vous n'avez pas à modifier les paramètres dans cette boîte de dialogue !
 * Si vous voulez quand même les changer, lisez en détail la `documentation OpenAPS <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ et assurez-vous de bien comprendre ce que vous faites.
@@ -383,7 +383,7 @@ Options d'alarme
 * Elles ne fonctionneront que si vous avez une connexion avec Nightscout et sont destinées aux parents/aidants. 
 * Si vous avez la source MGC sur votre téléphone (par ex. xDrip+ ou l'application Dexcom patchée), utilisez ces alarmes à la place.
 
-Paramètres Avancés
+Advanced settings (NSClient)
 -----------------------------------------------------------
 
   .. image:: ../images/Pref2020_NSClientAdv.png
