@@ -3,13 +3,13 @@ Docs Updates & Änderungen
 Oktober 2020
 ==================================================
 * Accu-Chek Combo - Update `Zeitumstellung (Sommer-/Winterzeit) <../Usage/Timezone-traveling.html#zeitumstellung-sommer-winterzeit>`_
-* Accu-Chek Insight - Option `Verwende absolute statt prozentuale Basalwerte beim Upload zu NightScout‘ <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps >`_
+* Accu-Chek Insight - Option `Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps >`_
 * Logs - weitere Details zum `Speicherort <../Usage/Accessing-logfiles.html>`_
 * `SMS Kommandos - Zeitsynchronisation aller Smartphones <../Children/SMS-Commands.html>`_
 September 2020
 ==================================================
 * Großes Update für die neue AAPS Version 2.7
-* Details findest Du in den `Release Notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
+* Details findest Du in den `Release Notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_
 Juni 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - weitere Details zu gepatchten Libre Link App und zu Bluetooth Transmittern
