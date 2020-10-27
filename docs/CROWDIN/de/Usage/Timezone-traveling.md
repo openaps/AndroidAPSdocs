@@ -74,7 +74,7 @@ AndroidAPS wird Dich alarmieren, wenn die Zeit zwischen Pumpe und Smartphone zu 
 
 3. Aktualisiere die Pumpe via AndroidAPS.
 
-4. Prüfe den Tab "Behandlungen". If you see any duplicate treatments:
+4. Prüfe den Tab "Behandlungen". Falls Du doppelte Einträge entdeckst:
    
    * Klicke NICHT auf "lösche alle Behandlungen in der Zukunft". 
    * Drücke "Löschen" bei allen künftigen und doppelten Behandlungen. Dadurch werden die Behandlungen außer Kraft gesetzt statt nur gelöscht und somit nicht mehr beim IOB berücksichtigt.
