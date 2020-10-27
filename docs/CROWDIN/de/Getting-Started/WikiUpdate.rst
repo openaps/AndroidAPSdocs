@@ -3,7 +3,7 @@ Docs Updates & Änderungen
 Oktober 2020
 ==================================================
 * Accu-Chek Combo - update `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
-* Accu-Chek Insight - Option to `upload absolute values <.. /Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
+* Accu-Chek Insight - Option to `upload absolute values <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * Logs - more details about `folder location <../Usage/Accessing-logfiles.html>`_
 * `SMS Kommandos - Zeitsynchronisation aller Smartphones <../Children/SMS-Commands.html>`_
 September 2020
