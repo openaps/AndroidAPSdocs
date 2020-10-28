@@ -6,89 +6,89 @@
 
 Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa svarbiausia informacija.
 
-### Section A - Tabs
+### Skiltis A - Skirtukai
 
 * Naršyti tarp įvairių AndroidAPS modulių.
 * Arba galite pakeisti ekranus, pasukant į kairę arba į dešinę.
-* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder#tab-or-hamburger-menu).
+* Rodomi skirtukai gali būti pasirenkami [Konfigūratoriuje](../Configuration/Config-Builder#tab-or-hamburger-menu).
 
-### Section B - Profile & target
+### Skiltis B - Profilis & tikslinė glikemija
 
-#### Current Profile
+#### Dabartinis profilis
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
-* Current profile is displayed in the left bar.
-* Long press profile bar to view profile details or to [switch between different profiles](../Usage/Profiles#profile-switch).
-* If profile switch was made with duration remaining time in minutes is shown in brackets.
+* Dabartinis profilis rodomas juostos kairėje.
+* Ilgai paspaudus profilio juostą, galite pamatyti išsamią profilio informaciją arba [ perjungti profilį](../Usage/Profiles#profile-switch).
+* Jei profilio perjungimas buvo atliktas konkrečiam apribotm laikui, skliausteliuose nurodomas likęs laikas minutėmis.
 
 #### Tikslas
 
 ![Temp target remaining duration](../images/Home2020_TT.png)
 
-* Current target blood glucose level is displayed in the right bar.
-* Long press target bar to set a [temporary target](../Usage/temptarget.md).
-* If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
+* Dabartinė tikslinė glikemija rodoma juostoje dešinėje.
+* Ilgai paspaudus tikslo juostą, galite nustatyti [laikiną tikslą](../Usage/temptarget.md).
+* Jei nustatytas laikinas tikslas, juosta tampa geltona, o likęs laikas minutėmis rodomas skliausteliuose.
 
-#### Visualization of Dynamic target adjustment
+#### Dinaminio tikslo koregavimo vizualizavimas
 
 ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
-* AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
-* Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
-   * "sensitivity raises target" and/or 
-   * "resistance lowers target" 
-* If AAPS detects resistance or sensitivity the target will change from what is set from profile. 
-* When it alters the target glucose background will change to green.
+* AAPS gali dinamiškai koreguoti tikslą pagal jautrumą, jei naudojate SMB algoritmą.
+* Suaktyvinkite vieną arba abi [parinktis](../Configuration/Preferences#openaps-smb-settings) 
+   * "jautrumas didina tikslą" ir/arba 
+   * "rezistencija mažina tikslą" 
+* Jei AAPS aptinka jautrumo padidėjimą ar sumažėjimą, tikslas pasikeičia priklausomai nuo to, kas apibrėžta profilyje. 
+* Kai jis pakeičia tikslinę glikemiją, juostos fonas tampa žalias.
 
-### Section C - BG & loop status
+### Skiltis C - Glikemija & ciklo būklė
 
-#### Current blood glucose
+#### Dabartinis gliukozės kiekis kraujyje
 
-* Latest blood glucose reading from your CGM is shown on the left side.
-* Color of the BG value reflects the status to the defined [range](../Configuration/Preferences#range-for-visualization). 
-   * green = in range
-   * red = below range
-   * yellow = above range
-* The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
+* Paskutinis iš jūsų NGJ gautas gliukozės kiekis kraujyje rodomas kairėje pusėje.
+* Gliukozės kiekio kraujyje reikšmės spalva atspindi jo padėtį, palyginti su nustatytu [diapazonu](../Configuration/Preferences#range-for-visualization). 
+   * žalias = normos ribose
+   * raudona = žemiau normos ribų
+   * geltona = virš normos ribų
+* Vidurinis pilkas blokas rodo minutes nuo paskutinių duomenų ir pokyčius nuo ankstesnių duomenų skaitymo, taip pat pokyčius per paskutines 15 ir 40 minučių.
 
-#### Loop status
+#### Ciklo būklė
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Ciklo būklė](../images/Home2020_LoopStatus.png)
 
-* A new icon shows loop status:
+* Naujas ženkliukas rodo ciklo būklę:
    
-   * green circle = loop running
-   * green circle with dotted line = [low glucose suspend (LGS)](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
-   * red circled = loop disabled (not working permanently)
-   * yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-   * grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-   * Orange circle = super bolus running - remaining time is shown below icon
-   * blue circle with dotted line = open loop
+   * žalias apskritimas = ciklas veikia
+   * žalias apskritimas su punktyrine linija = [sustabdymas esant žemai glikemijai](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * raudonas apskritimas = ciklas išjungtas (išjungtas visiškai)
+   * geltonas apskritimas = ciklas laikinai sustabdytas (nustatyta valandinė bazė leidžiama) - likęs laikas rodomas žemiau piktogramos
+   * pilkas apskritimas = pompa atjungta (laikinai nėra leidžimas insulinas) - likęs laikas rodomas žemiau piktogramos
+   * Oranžinis apskritimas = veikia super bolusas - likęs laikas rodomas žemiau piktogramos
+   * mėlynas apskritimas su punktyrine linija = atviras ciklas
 
-* Long press the icon to open the menu to disable, suspend, re enable loop or disconnect / reconnect pump.
+* Ilgai paspauskite apskritimo piktogramą, kad atidarytumėte meniu, leidžiantį išjungti, sustabdyti, vėl įjungti ciklą arba atjungti / vėl prijungti pompą.
    
    ![Loop status menu](../images/Home2020_LoopStatusMenu.png)
 
-### Section D - IOB, COB, BR and AS
+### Skiltis D - AIO, AAO, Bazė ir Jautrumas
 
-![Section D](../images/Home2020_TBR.png)
+![Sritis D](../images/Home2020_TBR.png)
 
-* Syringe: insulin on board (IOB) - amount of active insulin inside your body
+* Švirkšto piktograma: aktyvus insulinas (AIO) - aktyvaus insulino kiekis jūsų kūne
    
-   * The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
-   * IOB may be negative if there have recently been periods of reduced basal.
-   * Press the icon to see the split of bolus and basal insulin
+   * Aktyvaus insulino organizme kiekis yra nulis, jei naudojama tik standartinė bazė ir nėra bolusų insulino. 
+   * AIO gali būti neigiamas, jei paskutiniu metu buvo sumažinta valandinė bazė.
+   * Spustelėkite ant ženkliuko, kad pamatytumėte bolusų ir bazinio insulino paskirstymą
 
-* Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
+* Kviečio grūdas: [aktyvūs angliavandeniai (AAO)](../Usage/COB-calculation.rst) - anksčiau suvalgyti ir dar neįsisavinti angliavandeniai -> piktograma mirksi (oranžinė / raudona), jei apskaičiuojama kad būtina suvartoti angliavandenių
 
-* Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%) 
-   * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
-* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features#autosens) status (enabled or disabled) and value is shown below icon
+* Violetinė linija: valandinė bazė - piktogramos pokyčiai atspindi laikinos valandinės bazės pokyčius (tiesi, kai nustatyta 100%) 
+   * Spustelėkite ant piktogramos, kad peržiūrėtumėte profilio nustatytą valandinę bazę ir išsamią informaciją apie bet kokią laikiną bazę (įskaitant likusį laiką)
+* Rodyklės aukštyn ir žemyn: nurodo [autosens - jautrumo nustatymo](../Usage/Open-APS-features#autosens) būseną (įjungta arba išjungta), o jautrumo reikšmė rodoma po piktograma
 
-#### Carbs required
+#### Būtini angliavandeniai
 
-![Carbs required](../images/Home2020_CarbsRequired.png)
+![Būtini angliavandeniai](../images/Home2020_CarbsRequired.png)
 
 * Carbs suggestions are given when the reference design detects that it requires carbs.
 * This is when the oref algorithm thinks I can't rescue you by 0 (zero) temping and you will need carbs to fix.
@@ -97,7 +97,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 ### Section E - Status lights
 
-![Section E](../images/Home2020_StatusLights.png)
+![Sritis E](../images/Home2020_StatusLights.png)
 
 * Status lights give a visual warning for 
    * Cannula age
@@ -111,7 +111,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 ### Section F - Main graph
 
-![Section F](../images/Home2020_MainGraph.png)
+![Sritis F](../images/Home2020_MainGraph.png)
 
 * Graph shows your blood glucose (BG) as read from your glucose monitor (CGM). 
 * Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
@@ -133,11 +133,11 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 #### Prediction lines
 
-* **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
+* **Oranžinė** linija: [AAO](../Usage/COB-calculation.rst) (oranžinė spalva dažniausiai naudojama angliavandeniams vaizduoti)
    
    Prediction line shows where your BG (not where COB itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
 
-* **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
+* **Mėlyna** linija: AIO (ši spalva įprastai žymi insuliną)
    
    Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
 
@@ -145,7 +145,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
    
    Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
 
-* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals)
+* **Geltona** linija: [NDM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (nedeklaruotas maistas)
    
    Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
 
@@ -186,20 +186,20 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 #### Aktyvūs angliavandeniai
 
 * Shows the carbs you have on board (= active, not yet decayed carbs in your body). 
-* Decaying depends on the deviations the algorithm detects. 
-* If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
+* Jų nykimas priklauso nuo algoritmo apskaičiuotų nuokrypių (deviacijų). 
+* Kai nustatoma didesnė angliavandenių įtaka, nei tikėtasi, sistema suleis daugiau insulino ir AIO padidės (kaip labai padidės priklauso nuo Jūsų saugumo nustatymų). 
 
 #### Nuokrypiai
 
-* **GREY** bars show a deviation due to carbs. 
-* **GREEN** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
-* **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
+* **PILKI** stulpeliai rodo glikemijos svyravimus (nuokrypius arba deviacijas), kuriuos sukelia angliavandeniai. 
+* **ŽALI** stulpeliai rodo, kad glikemija yra didesnė, nei algoritmas apskaičiavo. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
+* **RAUDONI** stulpeliai rodo, kad glikemija yra mažesnė, nei algoritmas apskaičiavo. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
 * **YELLOW** bars show a deviation due to UAM.
 
 #### Jautrumas insulinui
 
 * Shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. 
-* Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+* Tai jautrumo insulinui faktoriaus pokyčiai dėl fizinio aktyvumo, hormonų ir pan.
 
 #### Aktyvumas
 
@@ -244,78 +244,78 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 #### Calibrations
 
 * Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
-* Must be activated in [preferences](../Configuration/Preferences#buttons).
+* Turi būti aktyvuotas [Nustatymuose](../Configuration/Preferences#buttons).
 
 #### NGJ
 
 * Atveria xDrip+.
-* Back button returns to AAPS.
-* Must be activated in [preferences](../Configuration/Preferences#buttons).
+* Atgal mygtukas grįžta į AAPS.
+* Turi būti aktyvuotas [Nustatymuose](../Configuration/Preferences#buttons).
 
-#### Quick Wizard
+#### Greitas vedlys
 
 * Easily enter amount of carbs and set calculation basics.
 * Details are setup in [preferences](../Configuration/Preferences#quick-wizard).
 
 ## Bolus Wizard
 
-![Bolus wizard](../images/Home2020_BolusWizard.png)
+![Boluso patarėjas](../images/Home2020_BolusWizard.png)
 
-When you want to make a meal bolus this is where you will normally make it from.
+Įprastai jis naudojamas maisto bolusams suleisti.
 
 ### Section I
 
-* BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. 
-* In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. 
+* BG field is normally already populated with the latest reading from your CGM. Jei sensorius neveikia, šis langelis bus tuščias. 
+* AV langelyje turite įvesti maisto, kurį valgysite, angliavandenių ar jų atitikmens kiekį. 
 * The CORR field is if you want to modify the end dosage for some reason.
-* The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+* The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Šiame langelyje galite įvesti ir laiką su minuso ženklu, jei angliavandenius jau suvalgėte anksčiau.
 
 ### Section J
 
-* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. 
-* The idea is to deliver the insulin sooner and hopefully reduce spikes.
+* Jei pažymėsite SUPER BOLUSO laukelį, bus suleistas papildomas insulinas, kurio kiekis lygus ateinančių 2 valandų bazei, o bazė taps nulinė. 
+* Tai galbūt padės išvengti didelio glikemijos pakilimo po maisto, nes papildomai "pasiskolinama" insulino iš bazės.
 * For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
 ### Section K
 
-* Shows the calculated bolus. 
-* If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+* Rodo apskaičiuotą bolusą. 
+* Jei aktyvaus, anksčiau suleisto insulino kiekis viršija apskaičiuotą boluso kiekį, bus parodytas tik papildomai reikalingų angliavandenių kiekis.
 * Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#ns-client).
 
 ### Section L
 
 * Details of wizard's bolus calculation.
-* You can deselect any that you do not want to include but you normally wouldn't want to.
+* Jūs galite nuimti žymes nuo bet kurių iš jų, tačiau normaliai neturėtumėte to daryti.
 * For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
 
-#### Combinations of COB and IOB and what they mean
+#### AAO ir AIO kombinacijos ir jų reikšmė
 
 * For safety reasons IOB boxed cannot be unticked when COB box is ticked as you might run the risk of too much insulin as AAPS is not accounting for what’s already given.
 * If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. Todėl matysite pranešimą 'trūkstami angliavandeniai'.
-* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
+* Jei pažymėsite tik AIO be AAO, AAPS skaičiavimuose atsižvelgs į anksčiau suleistą ir aktyvų insuliną, tačiau ne į angliavandenius. Todėl matysite pranešimą 'trūkstami angliavandeniai'.
+* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. Tokiu būdu bus įskaičiuojami tik nauji angliavandeniai, o ne tie, kurie buvo įvesti anksčiau, nes jie nebūtinai tiksliai absorbuoti ir AIO nebūtinai juos tiksliai atitinka.
 
-#### Wrong COB detection
+#### Neteisingo AAO kiekio nustatymas
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
+![Lėtas angliavandenių įsisavinimas](../images/Calculator_SlowCarbAbsorbtion.png)
 
-* If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. 
-* So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
-* For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
+* Jei pasinaudoję skaičiuotuvu matote tokį perspėjimą, reiškia sistema nustatė galimai klaidingą AAO kiekį. 
+* Todėl suleisdami papildomą bolusą po paskutinio valgymo rizikuojate perdozuoti! 
+* Išsamesnės informacijos ieškokite [AAO apskaičiavimo puslapyje](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
 ## Insulino profilis
 
 ![Insulino profilis](../images/Screenshot_insulin_profile.png)
 
 * This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
-* The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
+* VIOLETINĖ kreivė rodo, kiek insulino lieka laikui bėgant po injekcijos, nes jis pamažu ardomas, o MĖLYNA kreivė rodo, kaip kinta jo aktyvumas.
 * The important thing to note is that the decay has a long tail. 
-* If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
-* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
+* Įprastai naudodami pompą Jūs tikriausiai skaičiuodavote, kad insulinas išnyksta po maždaug 3.5 val. 
+* Tačiau uždarame cikle "uodegos" yra labai reikšmingos, nes skaičiavimai yra žymiai preciziškesni, todėl net mažiausi insulino likučiai turi būti įskaičiuojami.
 
-For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+Išsamiau apie skirtingus insulino tipus, aktyvumo profilius ir kam viso to reikia, galite paskaityti čia: [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+Jūs taip pat galite perskaityti puikų blogo straipsnį čia: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
 And even more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
@@ -337,15 +337,15 @@ Careportal replicated the functions you will find on your Nightscout screen unde
 * If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
 * Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
 
-### Carb correction
+### Angliavandenių korekcija
 
-![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+![Įrašai 1 ar 2 eilutėse](../images/Treatment_1or2_lines.png)
 
-Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+Įrašų skiltis gali būti naudojama neteisingam angliavandenių kiekiui ištaisyti (pvz., jei pervertinote ar per mažai įvertinote angliavandenių kiekį).
 
 1. Patikrinkite ir įsidėmėkite esamą aktyvių angliavandenių AAO ir aktyvaus insulino AIO kiekį, rodomą pagrindiniame ekrane.
-2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount.
+2. Priklausomai nuo pompos modelio, angliavandeniai rodomi kartu su insulinu vienoje eilutėje arba kaip atskiras įrašas (pvz., Dana RS).
+3. Ištrinkite neteisingo angliavandenių kiekio įrašą.
 4. Patikrinkite aktyvių angliavandenių kiekio AAO įrašą pagrindiniame ekrane - šitaip įsitikinkite, kad angliavandeniai buvo sėkmingai ištrinti.
 5. Atlikite tą patį su aktyviu insulinu AIO, jei skirtuke „Įrašai“ matote angliavandenius ir insuliną vienoje eilutėje.
    
@@ -370,19 +370,19 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
    * DIA (Duration of Insulin Action)
    * IC or I:C: Insulin to Carb ratio
    * ISF: Insulin Sensitivity Factor
-   * Basal rate
+   * Valandinė bazė
    * Target: Blood glucose level that you want AAPS to be aiming for
 
 * You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).
 
-## Treatment
+## Terapija
 
 History of the following treatments:
 
 * Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
 * [Ištęstas bolusas](../Usage/Extended-Carbs#id1)
 * Temporary basal rate
-* [Temporary target](../Usage/temptarget.md)
+* [Laikinas tikslas](../Usage/temptarget.md)
 * [Profilio keitimas](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
