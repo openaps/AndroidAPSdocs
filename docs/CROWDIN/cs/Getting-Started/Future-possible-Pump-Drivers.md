@@ -16,7 +16,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Java implementace:** Prozatím žádné.
 
-**Stav implementace AAPS:** Práce na nativním Java ovladači pro Omnipod na AAPS pokračují v [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (větev omnipod_eros). Nevyžaduje Raspberry Pi. Vývoj můžete sledovat na [OmniAPS Slack](https://omniaps.slack.com/) na kanálu pro ovladač pro android. A first public test version was released in January 2020, and work is beeing done towards stabilization. Current version 0.3 (March)
+**Stav implementace AAPS:** Práce na nativním Java ovladači pro Omnipod na AAPS pokračují v [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (větev omnipod_eros). Nevyžaduje Raspberry Pi. You can follow progress on Discord (channel #omnipod-eros-testing) with [this invite link](https://discord.com/invite/NhEUtzr). A first public test version was released in January 2020, and work is being done towards stabilization. Current version 0.4 (October 2020)
 
 **Hardwarové požadavky pro AAPS:** RileyLink s Omnipod firmware (2.x) a 433MHz anténou.
 
@@ -112,7 +112,7 @@ Před časem měli firmware zvaný T:AP (zmiňovaný v tomto [článku](https://
 
 ### Animas Ping
 
-**Stav smyčky:** Nelze použít pro smyčku. Dokáže vydávat bolusy, ale ne dočasné bazály. **Poznámka** Přestala se prodávat s příchodem modelu Vibe.
+**Stav smyčky:** Nelze použít pro smyčku. Dokáže vydávat bolusy, ale ne dočasné bazály. **Note** Stopped being sold when Vibe came out.
 
 ## Požadavky na pumpu, aby podporovala smyčku
 
