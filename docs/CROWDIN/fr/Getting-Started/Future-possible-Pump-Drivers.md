@@ -16,7 +16,7 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 **Implémentations Java : **Aucune jusqu'à présent.
 
-**Etat de l'implémentation AAPS :** Le travail sur un pilote Java natif pour Omnipod sur AAPS progresse [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (branche omnipod_eros). Il ne nécessite pas de Raspberry Pi. Vous pouvez suivre la progression sur [le OmniAPS Slack](https://omniaps.slack.com/) sur la chaine android-driver. Une première version d'essai publique a été publiée en janvier 2020, et le travail se poursuit pour la stabiliser. Version actuelle 0.3 (mars)
+**Etat de l'implémentation AAPS :** Le travail sur un pilote Java natif pour Omnipod sur AAPS progresse [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (branche omnipod_eros). Il ne nécessite pas de Raspberry Pi. You can follow progress on Discord (channel #omnipod-eros-testing) with [this invite link](https://discord.com/invite/NhEUtzr). A first public test version was released in January 2020, and work is being done towards stabilization. Current version 0.4 (October 2020)
 
 **Configuration matérielle requise pour AAPS :** RileyLink avec Omnipod firmware (2.x) et une antenne 433 MHz.
 
@@ -112,7 +112,7 @@ Il y quelque temps, il y avait un firmware appelé T:AP (mentionné dans cet [ar
 
 ### Animas Ping
 
-**Etat de la boucle :** Non bouclable. Il a une possibilité de bolus, mais pas de DBT. **Remarque :** n'est plus vendues depuis la sortie de la Vibe.
+**Etat de la boucle :** Non bouclable. Il a une possibilité de bolus, mais pas de DBT. **Note** Stopped being sold when Vibe came out.
 
 ## Exigences pour que les pompes soient bouclables
 
