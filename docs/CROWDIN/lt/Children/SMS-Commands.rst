@@ -35,7 +35,7 @@ Autorizuoti telefono numeriai
 
 Minutės tarp boluso komandų
 --------------------------------------------------
-* You can define the minimum delay between two boluses issued via SMS.
+* Jūs galite nustatyti minimalų laiko tarpą tarp bolusų, suleistų SMS komandomis.
 * Dėl saugumo priežasčių turite pridėti bent du autorizuotus telefono numerius šiai reikšmei redaguoti.
 
 Papildomas privalomas PIN kodas žymeklio gale
@@ -64,9 +64,9 @@ Autentifikavimo sąrankos nustatymas
    * TOTP žymeklis iš autentifikatoriaus programėlės yra 457051
    * Įveskite 4570512020
    
-* The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **Nėra mygtuko, kurį galėtumėte paspausti! **
-* The time on both phones must be synchronized. Best practice is set automatically from network. Net ir nežymūs laiko skirtumai gali sukelti autentiškumo nustatymo problemų.
-* Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
+* Raudonas tekstas „NETEISINGAS PIN“ pasikeis **automatiškai** į žalią „OK“, jei įvestis teisinga. **Nėra mygtuko, kurį galėtumėte paspausti! **
+* Laikas abiejuose telefonuose turi būti sinchronizuotas. Geriausia praktika - naudoti automatinį tinklo pateiktą laiką. Net ir nežymūs laiko skirtumai gali sukelti autentiškumo nustatymo problemų.
+* Naudokite mygtuką "RESET AUTHENTICATORS" (Iš naujo nustatyti autentifikatorius), jei norite pašalinti nuostatas.  (Anuliuojant autentifikaciją, Jūsų sukurti autentifikavimo kodai taps negaliojančiais. Jums reikės juos nustatyti dar kartą)
 
 SMS komandų naudojimas
 ==================================================
@@ -78,11 +78,11 @@ Siųskite SMS žinutę iš jūsų patvirtinto(-ų) telefono numerio(-ių) į pag
    * TOTP žymeklis iš autentifikatoriaus programėlės yra 457051
    * Įveskite 4570512020
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**Patarimas**: jei reikia siųsti didelį kiekį SMS, naudinga abiejuose mobiliuosiuose telefonuose turėti mažos kainos SMS.
 
 Komandos
 ==================================================
-Commands must be sent in English, the response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Komandos turi būti išsiųstos anglų kalba, atsakymą gausite savo vietine kalba, jei eilutė jau yra `išversta <../translations.html#translate-strings-for-androidaps-app>`_.
 
 .. nuotrauka:: ../images/SMSCommands.png
   :alt: SMS komandų pavyzdys
@@ -126,7 +126,7 @@ Valandinė bazė
 
 Bolusas
 --------------------------------------------------
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
+Per 15 minučių po paskutinio AAPS boluso arba po paskutinės SMS komandos, boluso SMS žinute siųsti neįmanoma. Reikšmę galite pakoreguoti tik įvedę bent du telefonų numerius! Taigi atsakymas priklauso nuo to, kada buvo suleistas paskutinis bolusas.
 
 * BOLUS 1.2
    * Atsakymas: Norėdami suleisti 1,2vv bolusą, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
@@ -182,13 +182,13 @@ Trikčių šalinimas
 ==================================================
 Kelios SMS
 --------------------------------------------------
-Jei gaunate tą pačią žinutę, vėl ir vėl iš naujo (t. y. profilio pakeitimas) tikriausiai nustatėte nesibaigiantį ciklą su kita programa. Pavyzdžiui, tai galėtų būti xDrip+. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS. 
+Jei gaunate tą pačią žinutę, vėl ir vėl iš naujo (t. y. profilio pakeitimas) tikriausiai nustatėte nesibaigiantį ciklą su kita programa. Pavyzdžiui, tai galėtų būti xDrip+. Tokiu atveju įsitikinkite, kad xDrip+ (arba kita programa, prijungta prie Nightscout) neįkelia jokių terapijos duomenų. 
 
 Jei kita programa yra įdiegta keliuose telefonuose, būtinai išjunkite įkėlimą į juos visus.
 
 SMS komandos neveikia Samsung telefonuose
 --------------------------------------------------
-Buvo pranešimų, kad po atnaujinimo Galaxy S10 SMS komandos nustojo veikti. Could be solved by disabling 'send as chat message'.
+Buvo pranešimų, kad po atnaujinimo Galaxy S10 SMS komandos nustojo veikti. Tai galima išspręsti išjungiant parinktį "Siųsti kaip pokalbio pranešimą“.
 
 .. image:: ../images/SMSdisableChat.png
   :alt: Išjungti SMS kaip pokalbio pranešimą
