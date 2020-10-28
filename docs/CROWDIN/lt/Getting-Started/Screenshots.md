@@ -16,7 +16,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 #### Dabartinis profilis
 
-![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+![Profilio pakeitimas, likęs laikas](../images/Home2020_ProfileSwitch.png)
 
 * Dabartinis profilis rodomas juostos kairėje.
 * Ilgai paspaudus profilio juostą, galite pamatyti išsamią profilio informaciją arba [ perjungti profilį](../Usage/Profiles#profile-switch).
@@ -24,7 +24,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 #### Tikslas
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Laikinas tikslas, likęs laikas](../images/Home2020_TT.png)
 
 * Dabartinė tikslinė glikemija rodoma juostoje dešinėje.
 * Ilgai paspaudus tikslo juostą, galite nustatyti [laikiną tikslą](../Usage/temptarget.md).
@@ -32,7 +32,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 #### Dinaminio tikslo koregavimo vizualizavimas
 
-![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+![Dinaminio tikslo koregavimo vizualizavimas](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS gali dinamiškai koreguoti tikslą pagal jautrumą, jei naudojate SMB algoritmą.
 * Suaktyvinkite vieną arba abi [parinktis](../Configuration/Preferences#openaps-smb-settings) 
@@ -68,7 +68,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 * Ilgai paspauskite apskritimo piktogramą, kad atidarytumėte meniu, leidžiantį išjungti, sustabdyti, vėl įjungti ciklą arba atjungti / vėl prijungti pompą.
    
-   ![Loop status menu](../images/Home2020_LoopStatusMenu.png)
+   ![Ciklo būsenos meniu](../images/Home2020_LoopStatusMenu.png)
 
 ### Skiltis D - AIO, AAO, Bazė ir Jautrumas
 
@@ -153,35 +153,35 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Bazė
 
-* A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
-* The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
-* In times standard basal rate is given the area under the curve is shown in dark blue.
-* When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
+* Vientisa **mėlyna linija** rodo valandinę bazę, nustatytą pompoje, ir atspindi aktualų insulino suleidimą per tam tikrą laiką.
+* Brūkšniuota **mėlyna linija** būtų buvusi tokia, kokia turėjo būti nustatyta valandinė bazė, jei nebūtų laikinų bazių (TBR) koregavimų.
+* Tuo metu, kai leidžiama nustatyta valandinė bazė, plotas po kreive rodomas tamsiai mėlyna spalva.
+* Laikinai koregavus (padidinus ar sumažinus) valandinę bazę, plotas po kreive rodomas šviesiai mėlyna spalva.
 
 #### Aktyvumas
 
 * **Plona geltona** linija rodo insulino aktyvumą. 
 * Ji remiasi tikėtinu insulino poveikiu glikemijai, kai neveikia kiti veiksniai (pvz.: angliavandeniai).
 
-### Section G - additional graphs
+### Skiltis G - papildomi grafikai
 
-* You can activate up to four additional graphs below the main graph.
-* To open settings for additional graphs click the triangle on the right side of the [main graph](../Getting-Started/Screenshots#section-f-main-graph) and scroll down.
+* Jūs galite aktyvuoti iki keturių papildomų grafikų žemiau pagrindinio grafiko.
+* Norėdami atidaryti papildomų grafikų nustatymus, spustelėkite trikampį dešinėje [pagrindinio grafiko](../Getting-Started/Screenshots#section-f-main-graph) pusėje ir slinkite žemyn.
 
 ![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
-* To add an additional graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
+* Norėdami pridėti papildomą grafiką, pažymėkite langelį kairėje jo pavadinimo pusėje (pvz., \---\--- 1 grafikas \-----).
 
 #### Insulinas absoliučiais vienetais
 
-* Active insulin including boluses **and basal**.
+* Aktyvus insulinas, įskaitant bolusus **ir bazę**.
 
 #### Aktyvus insulinas organizme
 
-* Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
-* If there were no [SMBs](../Usage/Open-APS-features#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
-* IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
-* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile-recommended). 
+* Parodo, kiek insulino turite suleista (= aktyvus insulinas jūsų organizme). Į jį įeina insulino bolusas ir laikina bazė (**bet neįtraukiama valandinė bazė, nustatyta jūsų profilyje**).
+* Jei IVT laikotarpiu nebūtų [SMB](../Usage/Open-APS-features#super-micro-bolus-smb), bolusų ir laikinų bazių, aktyvus insulinas būtų lygus nuliui.
+* AIO gali būti neigiamas, jei nebėra aktyvių bolusų ir ilgesnį laiką buvo nustatyta nulinė/žema laikina bazė.
+* Insulino suskaidymas organizme priklauso nuo jūsų [IVT ir insulino profilio nustatymų](../Configuration/Config-Builder#local-profile-recommended). 
 
 #### Aktyvūs angliavandeniai
 
@@ -192,26 +192,26 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 #### Nuokrypiai
 
 * **PILKI** stulpeliai rodo glikemijos svyravimus (nuokrypius arba deviacijas), kuriuos sukelia angliavandeniai. 
-* **ŽALI** stulpeliai rodo, kad glikemija yra didesnė, nei algoritmas apskaičiavo. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
-* **RAUDONI** stulpeliai rodo, kad glikemija yra mažesnė, nei algoritmas apskaičiavo. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
-* **YELLOW** bars show a deviation due to UAM.
+* **ŽALI** stulpeliai rodo, kad glikemija yra didesnė, nei algoritmas apskaičiavo. Žalius stulpelius naudoja [Autosens](../Usage/Open-APS-features#autosens), kad padidintų atsparumą.
+* **RAUDONI** stulpeliai rodo, kad glikemija yra mažesnė, nei algoritmas apskaičiavo. Raudonąsias juostas naudoja [Autosens](../Usage/Open-APS-features#autosens), kad padidintų jautrumą.
+* **GELTONUOSE** stulpeliuose rodomas nuokrypis dėl nedeklaruoto maisto NDM.
 
 #### Jautrumas insulinui
 
-* Shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. 
+* Rodo jautrumą, kurį aptinka [Autosens](../Usage/Open-APS-features#autosens). 
 * Tai jautrumo insulinui faktoriaus pokyčiai dėl fizinio aktyvumo, hormonų ir pan.
 
 #### Aktyvumas
 
-* Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
+* Rodo insulino aktyvumą, apskaičiuotą pagal jūsų insulino profilį (tai nėra AIO išraiška). 
 * Kreivė tuo aukštesnė, kuo insulino aktyvumo pikas arčiau.
 * AIO mažėjant, aktyvumas gali tapti neigiamas. 
 
 #### Nukrypimo koeficientas
 
-* Internal value used in algorithm.
+* Algoritme naudojama vidinė vertė.
 
-### Section H - Buttons
+### Skiltis H - Mygtukai
 
 ![Homescreen buttons](../images/Home2020_Buttons.png)
 
@@ -263,11 +263,11 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 Įprastai jis naudojamas maisto bolusams suleisti.
 
-### Section I
+### Skiltis I
 
-* BG field is normally already populated with the latest reading from your CGM. Jei sensorius neveikia, šis langelis bus tuščias. 
+* KG (kraujo gliukozės) langelyje matosi paskutinis sensoriaus rodmuo. Jei sensorius neveikia, šis langelis bus tuščias. 
 * AV langelyje turite įvesti maisto, kurį valgysite, angliavandenių ar jų atitikmens kiekį. 
-* The CORR field is if you want to modify the end dosage for some reason.
+* CORR laukas yra, jei norite pakeisti galutinę dozę dėl kokios nors priežasties.
 * The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Šiame langelyje galite įvesti ir laiką su minuso ženklu, jei angliavandenius jau suvalgėte anksčiau.
 
 ### Section J
@@ -330,12 +330,12 @@ And even more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/
 
 Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
 
-### Review carb calculation
+### Peržiūrėkite angliavandenių apskaičivimą
 
 ![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
 
-* If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
-* Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
+* Jei insulino kiekiui apskaičiuoti naudojote [Skaičiuotuvą](../Getting-Started/Screenshots#bolus-wizard), šį skaičiavimą galite peržiūrėti vėliau Terapijos skirtuke.
+* Tiesiog paspauskite žalią Skaič. nuorodą. (Priklausomai nuo naudojamos pompos, insulinas ir angliavandeniai Terapijos skirtuke taip pat gali būti rodomi kaip viena eilutė)
 
 ### Angliavandenių korekcija
 
@@ -355,48 +355,48 @@ Careportal replicated the functions you will find on your Nightscout screen unde
 
 7. Jei skirtuke „Įrašai“ matote vienoje eilutėje angliavandenius ir insuliną, taip pat turite iš naujo įvesti insulino kiekį. Atkreipkite dėmesį į tinkamo laiko pasirinkimą ir tada pradžios ekrane patikrinkite aktyvaus insulino AIO duomenis.
 
-## Loop, AMA / SMB
+## Ciklas, AMA / SMB
 
-* These tabs show details about the algorithm's calculations and why AAPS acts the way it does.
-* Calculations are each time the system gets a fresh reading from the CGM.
-* For more details see [APS section on config builder page](../Configuration/Config-Builder#aps).
+* Šie skirtukai rodo informaciją apie algoritmų skaičiavimus ir kodėl AAPS veikia taip, kaip jis daro.
+* Skaičiavimai vykdomi kiekvieną kartą, kai sistema gauna naujus duomenis iš NGJ.
+* Išsamesnės informacijos ieškokite skyriaus [Konfigūratoriaus APS dalies puslapyje](../Configuration/Config-Builder#aps).
 
 ## Profilis
 
 ![Profilis](../images/Screenshots_Profile.png)
 
-* Profile contains information on your individual diabetes settings:
+* Profilyje yra informacija apie jūsų individualius diabeto parametrus:
    
-   * DIA (Duration of Insulin Action)
-   * IC or I:C: Insulin to Carb ratio
-   * ISF: Insulin Sensitivity Factor
+   * IVT (insulino veikimo trukmė)
+   * IA: insulino ir angliavandenių santykis
+   * ISF: Jautrumo insulinui faktorius
    * Valandinė bazė
-   * Target: Blood glucose level that you want AAPS to be aiming for
+   * Tikslas: Kraujo gliukozės lygis, kurį nustatote ir kurio turi siekti AAPS
 
-* You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).
+* Galite naudoti [vietinį profilį](../Configuration/Config-Builder#local-profile-recommended), kurį galima redaguoti išmaniajame telefone, arba [Nightscout profilį](../Configuration/Config-Builder#ns-profile), kurį reikia redaguoti NS puslapyje ir perkelti į telefoną (aktyvuoti telefone). Išsamesnės informacijos ieškokite atitinkamuose skyriuose [Konfigūratoriaus puslapyje](../Configuration/Config-Builder.md).
 
 ## Terapija
 
-History of the following treatments:
+Šių terapijų istorija:
 
-* Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
+* Bolusas ir angliavandeniai -> parinktis, leidžianti [ištrinti įrašus](../Getting-Started/Screenshots#carb-correction), siekiant koreguoti istoriją
 * [Ištęstas bolusas](../Usage/Extended-Carbs#id1)
-* Temporary basal rate
+* Laikina bazė
 * [Laikinas tikslas](../Usage/temptarget.md)
 * [Profilio keitimas](../Usage/Profiles.md)
-* [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
+* [Priežiūros portalas ](../Usage/CPbefore26#careportal-discontinued) - užrašai, įvesti skirtuke Veiksmas ir užrašai pranešimuose
 
-## BG Source - xDrip, Dexcom App (pateched)...
+## KG Šaltinis - xDrip, modifikuota Dexcom programėlė...
 
 ![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
 
-* Depending on your BG source settings this tab is named differntly.
-* Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
+* Priklausomai nuo jūsų KG šaltinio nustatymų, ši kortelė yra pavadinta skirtingai.
+* Parodo NGJ duomenų istoriją ir siūlo galimybę ištrinti duomenis nesklandumo atveju (pvz., duomenys, esant prispaustam jutikliui).
 
 ## NSClient
 
 ![NSClient](../images/Screenshots_NSClient.png)
 
-* Displays status of the connection with your Nightscout site.
-* Settings are made in [preferences](../Configuration/Preferences#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
-* For troubleshooting see this [page](../Usage/Troubleshooting-NSClient.md).
+* Rodo ryšio su jūsų Nightscout svetaine būseną.
+* Nustatymai atliekami [Nustatymuose](../Configuration/Preferences#nsclient). Atidarykite atitinkamą skyrių spustelėdami krumpliaračio simbolį viršutiniame dešiniajame ekrano kampe.
+* Apie trikčių šalinimą žr. [šį puslapį](../Usage/Troubleshooting-NSClient.md).
