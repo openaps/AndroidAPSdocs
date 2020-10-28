@@ -5,7 +5,7 @@ Oktober 2020
 * Accu-Chek Combo - Update `Zeitumstellung (Sommer-/Winterzeit) <../Usage/Timezone-traveling.html#zeitumstellung-sommer-winterzeit>`_
 * Accu-Chek Insight - Option `Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps>`_
 * Logs - weitere Details zum `Speicherort <../Usage/Accessing-logfiles.html>`_
-* Omnipod Eros - `status update <../Getting-Started/Future-possible-Pump-Drivers.html#insulet-omnipod-with-old-eros-pods-homepage>`_
+* Omnipod Eros - `Status Update <../Getting-Started/Future-possible-Pump-Drivers.html#insulet-omnipod-mit-alten-eros-pods-homepage >`_
 * `SMS Kommandos - Zeitsynchronisation aller Smartphones <../Children/SMS-Commands.html>`_
 September 2020
 ==================================================
