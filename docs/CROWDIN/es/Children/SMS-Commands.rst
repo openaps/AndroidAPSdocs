@@ -35,7 +35,7 @@ Authorized phone numbers
 
 Minutes between bolus commands
 -------------------------------------------------
-* You can define the minimum delay between to boluses issued via SMS.
+* You can define the minimum delay between two boluses issued via SMS.
 * For safety reasons you have to add at least two authorized phone numbers to edit this value.
 
 Additionally mandatory PIN at token end
@@ -64,9 +64,9 @@ Authenticator setup
    * TOTP token from the authenticator app is 457051
    * Enter 4570512020
    
-* Red text "WRONG PIN" will change **automatically** to green "OK" if entry is correct. **There is no button you can press!**
-* Time on both phones must be synchronized. Best practice is automatically from network. Time differences might lead to authentication problems.
-* Use button "RESET AUTHENTICATORS" if you want to remove provisions.
+* The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
+* The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
+* Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
 
 Use SMS commands
 ==================================================
@@ -78,11 +78,11 @@ Use SMS commands
    * TOTP token from the authenticator app is 457051
    * Enter 4570512020
 
-** Importante**: Puede ser útil tener una tarifa plana de SMS para ambos teléfonos, si se envían muchos SMS.
+**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
 Comandos
 ==================================================
-Commands must be send in English, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Commands must be sent in English, the response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
 
 .. imagen:: ../images/SMSCommands.png
   :alt: Ejemplo de comandos SMS
@@ -126,7 +126,7 @@ Dosis Basal
 
 Bolo
 --------------------------------------------------
-El bolo remoto no está permitido dentro de 15 minutos -valor editable sólo si 2 números de teléfono lo añaden- después del último comando de bolo o comandos remotos! *Por lo tanto la respuesta depende del tiempo en que se dio el último bolo.
+Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
 
 * BOLUS 1.2
    * Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN
@@ -182,13 +182,13 @@ Solución de problemas
 ==================================================
 Múltiples SMS
 --------------------------------------------------
-Si recibe el mismo mensaje una y otra vez (es decir, cambio de perfil) probablemente hayas establecido un circulo con otras apps. Podría ser con xDrip +, por ejemplo. Si es así, por favor, asegúrese de que xDrip + (o cualquier otra aplicación) no sube los tratamientos a NS. 
+Si recibe el mismo mensaje una y otra vez (es decir, cambio de perfil) probablemente hayas establecido un circulo con otras apps. Podría ser con xDrip +, por ejemplo. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS. 
 
 If the other app is installed on multiple phones make sure to deactivate upload on all of them.
 
 Los comandos SMS no funcionan en los teléfonos de Samsung
 --------------------------------------------------
-Hubo un reporte sobre los comandos de SMS que se detenían después de una actualización en el teléfono Galaxy S10. Se puede resolver mediante el desetiquetado de 'enviar como mensaje de conversación '.
+Hubo un reporte sobre los comandos de SMS que se detenían después de una actualización en el teléfono Galaxy S10. Could be solved by disabling 'send as chat message'.
 
 .. imagen:: ../images/SMSdisableChat.png
   :alt: Desactivar SMS como mensaje de chat

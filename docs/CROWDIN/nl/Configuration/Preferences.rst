@@ -135,7 +135,7 @@ Default temp targets
   .. image:: ../images/Pref2020_OV_DefaultTT.png
     :alt: Preferences > Default temp targets
   
-Fill/Prime standard insulin amounts
+Ontlucht/Vul standaard insuline hoeveelheden
 -----------------------------------------------------------
 * If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Usage/CPbefore26.html#pump>`_.
 * Pre-set values can be defined in this dialogue.
@@ -147,7 +147,7 @@ Range for visualization
   .. image:: ../images/Pref2020_OV_Range2.png
     :alt: Preferences > Range for visualization
 
-Shorten tab titles
+Afgekorte tab titels
 -----------------------------------------------------------
 * See more tab titles on screen. 
 * For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
@@ -180,7 +180,7 @@ Statusindicatoren
   .. image:: ../images/Pref2020_OV_StatusLights2.png
     :alt: Preferences > Status Lights
 
-Geavanceerde instellingen
+Advanced Settings (Overview)
 -----------------------------------------------------------
 Deliver this part of bolus wizard result
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -270,13 +270,13 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 **Note: As a safety feature, Max Basal IOB is hard-limited to 7u.**
 
-Autosens
+Gevoeligheidsdetectie (Autosens)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ looks at blood glucose deviations (positive/negative/neutral).
 * It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
 * If you select "Autosens adjust target, too" the algorithm will also modify your glucose target.
 
-Advanced settings
+Advanced settings (OpenAPS AMA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normally you do not have to change the settings in this dialogue!
 * If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ and to understand what you are doing.
@@ -306,12 +306,12 @@ Carb required notification
   .. image:: ../images/Pref2020_CarbsRequired.png
     :alt: Display carbs required on home screen
   
-Advanced settings
+Advanced settings (OpenAPS SMB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normally you do not have to change the settings in this dialogue!
 * If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ and to understand what you are doing.
 
-Absorption settings
+Opname instellingen
 ===========================================================
 
   .. image:: ../images/Pref2020_Absorption.png
@@ -321,7 +321,7 @@ min_5m_carbimpact
 -----------------------------------------------------------
 * The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed. 
 * The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB. 
-* At times when carb absorption can’t be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+* At times when carb absorption can’t be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Het is in feite een vangnet.
 * To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. 
 * Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc. 
 * The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`_.
@@ -383,7 +383,7 @@ Alarm options
 * They will only work whilst you have a connection to Nightscout and are intended for parent/carers. 
 * If you have the CGM source on your phone (i.e. xDrip+ or Dexcom patched app) then use those alarms instead.
 
-Advanced settings
+Advanced settings (NSClient)
 -----------------------------------------------------------
 
   .. image:: ../images/Pref2020_NSClientAdv.png

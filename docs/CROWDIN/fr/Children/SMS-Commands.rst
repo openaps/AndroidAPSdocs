@@ -35,7 +35,7 @@ Numéros de tél autorisés
 
 Délai entre les commandes bolus
 -------------------------------------------------
-* Vous pouvez définir un délai minimum entre les bolus envoyés par SMS.
+* Vous pouvez définir un délai minimum entre deux bolus envoyés par SMS.
 * Pour des raisons de sécurité, vous devez ajouter au moins deux numéros de téléphone autorisés pour modifier cette valeur.
 
 Code PIN obligatoire à la fin de l'OTP
@@ -65,8 +65,8 @@ Configuration de l'Authentificateur
    * Entrez 4570512020
    
 * Le texte rouge "WRONG PIN" changera **automatiquement** en vert "OK" si l'entrée est correcte. **Il n'y a aucun bouton à appuyer !**
-* L'heure des deux téléphones doit être synchronisée. Les mieux est de synchroniser l'heure automatiquement à partir du réseau. Les différences d'heures peuvent entraîner des problèmes d'authentification.
-* Utilisez le bouton "RESET AUTHENTICATORS" si vous voulez supprimer les autorisations.
+* L'heure des deux téléphones doit être synchronisée. Les mieux est de définir l'heure automatiquement à partir du réseau. Les différences d'heures peuvent entraîner des problèmes d'authentification.
+* Utilisez le bouton "RESET AUTHENTICATORS" si vous voulez supprimer les autorisations effectuées.  (En réinitialisant l'authentificateur, vous rendez TOUS les authentificateurs déjà configurés non valides. Vous devrez les configurer à nouveau)
 
 Utiliser les commandes SMS
 ==================================================
@@ -78,11 +78,11 @@ Utiliser les commandes SMS
    * Le jeton TOTP de l'application d'authentification est 457051
    * Entrez 4570512020
 
-**Astuce**: Il peut être utile d'avoir un forfait SMS pour les deux téléphones si beaucoup de SMS seront envoyés.
+**Astuce** : Il peut être utile d'avoir un forfait SMS illimité (pour chaque téléphone utilisé) si beaucoup de SMS sont envoyés.
 
 Commandes
 ==================================================
-Les commandes doivent être envoyées en anglais, la réponse sera dans votre langue locale si la chaîne de réponse a déjà été `traduite <../translations.html#translate-strings-for-androidaps-app>` _.
+Les commandes doivent être envoyées en anglais, la réponse sera dans votre langue locale si la chaîne de réponse a déjà été `traduite <../translations.html#traduire-les-textes-de-l-application-androidaps>`_.
 
 .. image:: ../images/SMSCommands.png
   :alt: Example de commandes SMS
@@ -126,7 +126,7 @@ Basal
 
 Bolus
 --------------------------------------------------
-Un bolus par SMS n'est pas possible dans les 15 minutes suivant le dernier envoi de bolus dans AAPS ou après la dernière commande SMS. Vous ne pouvez ajuster la durée que si au moins deux numéros de téléphone sont entrés. La réponse dépend donc du moment où le dernier bolus a été administré.
+Un bolus à distance n'est pas possible dans les 15 minutes suivant le dernier bolus dans AAPS ou à distance (vous ne pouvez ajuster la durée que si au moins 2 numéros de téléphone sont entrés) ! La réponse dépend donc du moment où le dernier bolus a été administré.
 
 * BOLUS 1.2
    * Réponse A : Pour injecter le bolus de 1,2 U, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN

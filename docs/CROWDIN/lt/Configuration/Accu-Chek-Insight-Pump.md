@@ -52,13 +52,11 @@ Pastaba: tarp pompos ir telefono nebus nuolatinio ryšio. Ryšys bus užmegztas 
 
 ## AAPS nustatymai
 
-Jei duomenis įkeliate į Nightscout ir naudojate Insight pompą., neturėtumėte suaktyvinti **„"Visada naudoti bazės absoliučias reikšmes“**. Į AAPS eiti į Nustatymai> NSClient > Papildomi nustatymai, tada įsitikinkite, kad "Visada naudoti bazės absoliučias reikšmes" yra išjungta. Tai gali sukelti neteisingus laikinos bazės nustatymus Insight pompoje.
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences#advanced-settings-nsclient)).
 
-Norėdami išspręsti problemą, šiuo metu galite naudoti tik **Tik įkelti į NS (ne sinchronizuoti)**, jei norite naudoti Autotune (automatinį derinimą). AAPS eikite į Nustatymai> NSClient > Papildomi nustatymai ir aktyvuokite "Tik įkelti į NS (ne sinchronizuoti)".
+![Screenshot of Insight Settings](../images/Insight_settings.png)
 
-![Insight nustatymų ekrano vaizdas](../images/Insight_settings.png)
-
-AndroidAPS Insight nustatymuose suaktyvinkite šiuos parametrus:
+In the Insight settings in AndroidAPS you can enable the following options:
 
 * „Įrašyti rezervuaro keitimus“: Tai automatiškai sukurs insulino rezervuaro pakeitimo įrašą, kai bus paleista "užpildyti kateterio kaniulę" funkcija pompoje.
 
@@ -95,9 +93,9 @@ AndroidAPS Insight nustatymuose suaktyvinkite šiuos parametrus:
 
 * „Atjungimo atidėjimas“: nusako, kiek laiko (sekundėmis) AndroidAPS lauks, kol atsijungs nuo pompos po veiksmo atlikimo. Numatytoji vertė yra 5 sekundės.
 
-Kol pompa sustabdyta, AAPS rodo laikiną bazės dydį 0%.
+For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
 
-AndroidAPS skirtuke Accu-Chek Insight rodoma dabartinė pompos būklė ir du mygtukai:
+In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
 
 * Atnaujinti: Atnaujina pompos būklę
 * „Įgalinti / išjungti pranešimą apie LB“: Standartiškai Insight pompa siunčia aliarmą apie laikinos bazės LB pabaigą. Mygtukas leidžia įjungti arba išjungti šį perspėjimą nekeičiant programinės įrangos konfigūracijos.
@@ -106,44 +104,44 @@ AndroidAPS skirtuke Accu-Chek Insight rodoma dabartinė pompos būklė ir du myg
 
 ## Pompos nustatymai
 
-Signalus pompoje nustatykite taip:
+Configure alarms in the pump as follows:
 
 * Meniu > Nustatymai > Prietaiso nuostatos > Režimo parametrai > Tylus> Signalas > Garsas
 * Meniu > Nustatymai > Prietaiso nuostatos > Režimo parametrai > Tylus > Signalas > 0 (nuimti visus stulpelius)
 * Meniu> Režimo nustatymai> Signalo režimas> Tylus
 
-Tai pašalins visų įspėjimų apie pompą garsą ir leis AndroidAPS nuspręsti, kuris signalas jums aktualus. Jei AndroidAPS neatpažįsta signalo, padidės jo garsas (pirmiausia pypsėjimas, paskui vibracija).
+This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
 
 ### Vibracija
 
-Priklausomai nuo pompos programinės įrangos versijos, Insight trumpai vibruos kiekvieną kartą, kai bus suleistas bolusas (pvz., kai AndroidaAPS suleidžia SMB arba laikinos valandinės bazės emuliacija leis ištęstą bolusą).
+Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus).
 
 * Programinė versija 1.x: Jokios vibracijos.
 * Programinė versija 2.x: Vibracija negali būti išjungta.
 * Programinė versija 3.x: AndroidAPS suleidžia bolusą tyliai. (nuo [versijos 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
 
-Programinės įrangos versiją galima rasti meniu.
+Firmware version can be found in the menu.
 
 ## Baterijos pakeitimas
 
-Insight baterijos veikimo laikas su AAPS yra ne ilgesnis kaip 10–14 dienų, daugiausia 20 dienų. Apie tai pranešę vartotojai naudoja Energizer ličio baterijas.
+Battery life for Insight when looping range from 10 to 14 days, max. 20 days. The user reporting this is using Energizer lithium batteries.
 
-Insight pompoje yra maža vidinė baterija, palaikanti svarbias funkcijas, tokias kaip laikrodis, kuris ir toliau veikia, kol keičiama pompos baterija. Jei baterijos keitimas užima per daug laiko, šios vidinės akumuliatoriaus įkrova gali pasibaigti, laikrodis bus nustatytas iš naujo ir, įdėjus naujas baterijas, jums bus pasiūlyta įvesti naują laiką ir datą. Jei taip atsitiks, visi AndroidAPS įrašai nebebus įtraukti į skaičiavimus, kol nebus pakeista baterija, nes nebus galima identifikuoti tinkamo laiko.
+The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
 
 ## Insight specifinės klaidos
 
 ### Ištęstas bolusas
 
-Rekomenduojama naudoti tik vieną ištęstinį bolusą vienu metu, nes tuo pačiu metu naudojant kelis ištęstinius bolusus gali sukelti klaidas.
+Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
 
 ### Baigėsi laikas
 
-Kartais Insight pompa gali nereaguoti jungimo metu. Tokiu atveju AAPS rodomas šis pranešimas: „Suderinimo laikas baigėsi - nustatykite Bluetooth iš naujo“.
+Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
 
-![Iš naujo nustatyti Bluetooth Insight](../images/Insight_ResetBT.png)
+![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
-Tokiu atveju maždaug 10 sekundžių išjunkite pompos ir išmaniojo telefono Bluetooth, tada vėl įjunkite.
+In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
 
 ## Kelionė per laiko zonas su Insight pompa
 
-Žiūrėkite skyrių [Keliavimas per skirtingas laiko juostas su pompa](../Usage/Timezone-traveling#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).

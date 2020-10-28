@@ -2,8 +2,10 @@ Mises à jour et modifications de la documentation
 **************************************************
 Octobre 2020
 ==================================================
+* Accu-Chek Combo - Mise à jour `réglage duchangement d'heure <../Usage/Timezone-traveling.html#changements-d-heure>`_
+* Accu-Chek Insight - option `Utiliser toujours les valeurs ansolues du basal <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_
+* Journaux - plus de détails sur `l'emplacement du dossier <../Usage/Accessing-logfiles.html>`_
 * `Commandes SMS - Synchronisation de l'heure <../Children/SMS-commands.html>`_
-* Mise à jour Combo `réglage duchangement d'heure <../Usage/Timezone-traveling.html#changements-d-heure>`_
 Septembre 2020
 ==================================================
 * Mise à jour majeure pour la nouvelle version AAPS 2.7

@@ -22,7 +22,7 @@ Repository location changed to https://github.com/nightscout/AndroidAPS . If you
 
 As already `announced some time ago <../Module/module.html#phone>`_, **Android 7 is minimum requirement** for AndroidAPS 2.7.
 
-Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
+Please use `Android Studio 4.0.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 **Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`_.
 

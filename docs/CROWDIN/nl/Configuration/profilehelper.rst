@@ -1,10 +1,10 @@
-Profile helper
+Profiel hulp
 ****************************************
 
-Profile helper offers two functions:
+De Profiel hulp kan je helpen met twee verschillende dingen:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. Een profiel maken voor kinderen
+2. Twee profielen of profielwissels vergelijken, om zo een nieuw profiel te klonen
 
 Profile for kids (up to 18 years)
 =======================================
