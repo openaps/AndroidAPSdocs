@@ -76,7 +76,7 @@
 
 Jei ryšys tarp AAPS ir DanaRS pompos nutrūksta boluso suleidimo metu (pvz.: Jūs nueinate per toli nuo telefono), Jūs matysite klaidos pranešimą ir girdėsite garsinį signalą.
 
-![Insulino tiekimo perspėjimas](../images/DanaRS_Error_bolus.png)
+![Insulino leidimo perspėjimas](../images/DanaRS_Error_bolus.png)
 
 * In most cases this is just a communication issue and the correct amount of insulin is delivered.
 * Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
