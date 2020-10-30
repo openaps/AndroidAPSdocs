@@ -369,7 +369,7 @@ Careportal replicated the functions you will find on your Nightscout screen unde
    
    * IVT (insulino veikimo trukmė)
    * IA: insulino ir angliavandenių santykis
-   * ISF: Jautrumo insulinui faktorius
+   * JIF: Jautrumo insulinui faktorius
    * Valandinė bazė
    * Tikslas: Kraujo gliukozės lygis, kurį nustatote ir kurio turi siekti AAPS
 
