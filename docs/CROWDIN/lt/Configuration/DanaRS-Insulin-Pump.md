@@ -87,14 +87,14 @@ Jei ryšys tarp AAPS ir DanaRS pompos nutrūksta boluso suleidimo metu (pvz.: J�
 
 Kai keičiate seną telefoną į naują, turite atlikti šiuos veiksmus:
 
-* [Export settings](../Usage/ExportImportSettings#export-settings) on your old phone
-* Transfer settings from old to new phone
-* **Manually pair** Dana RS with the new phone
+* [Eksportuokite nustatymus](../Usage/ExportImportSettings#export-settings) senajame telefone
+* Perkelkite nustatymus į naują telefoną
+* **Rankiniu būdu** susiekite Dana RS su nauju telefonu
     
-    * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
-* Install AndroidAPS on the new phone.
-* [Import settings](../Usage/ExportImportSettings#import-settings) on your new phone
+    * Kadangi pompos susiejimo nustatymai persikelia į naują telefoną kartu su kitais, Jūsų naujas telefonas jau "pažįsta" pompą, todėl nepradės BT paieškos. Todėl naują telefoną ir pompą reikia susieti rankiniu būdu.
+* Instaliuokite AndroidAPS naujame telefone.
+* [Importuokite nustatymus](../Usage/ExportImportSettings#import-settings) į naują telefoną
 
-## Timezone traveling with Dana RS pump
+## Keliavimas per skirtingas laiko juostas su DanaRS pompa
 
 Žiūrėkite skyrių [Keliavimas per skirtingas laiko juostas su pompa](../Usage/Timezone-traveling#danarv2-danars).
