@@ -16,7 +16,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 **Java implementaties:** Tot nu toe nog geen.
 
-**AAPS implementatie status:** Er wordt nu aan een Java driver gewerkt zodat Omnipod met AndroidAPS kan worden gebruikt, ga voor de laatste status naar [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). Hierbij is geen Raspberry Pi nodig. De voortgang kun je volgen op het [OmniAPS Slack](https://omniaps.slack.com/) kanaal 'android-driver'. Een eerste publieke testversie werd in januari 2020 uitgebracht en er wordt sindsdien voortdurend verbeterd en getest. Status in maart: versie 0.3 wordt getest.
+**AAPS implementatie status:** Er wordt nu aan een Java driver gewerkt zodat Omnipod met AndroidAPS kan worden gebruikt, ga voor de laatste status naar [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). Hierbij is geen Raspberry Pi nodig. You can follow progress on Discord (channel #omnipod-eros-testing) with [this invite link](https://discord.com/invite/NhEUtzr). A first public test version was released in January 2020, and work is being done towards stabilization. Current version 0.4 (October 2020)
 
 **Hardware eisen voor AAPS:** RileyLink (versie 2.x) met 433MHz antenne.
 
@@ -112,7 +112,7 @@ Voorheen gebruikten ze firmware die T:AP heette (genoemd in dit [artikel](https:
 
 ### Animas Ping
 
-**Status:** Niet loopbaar. Heeft bolus mogelijkheid, maar geen TBR mogelijkheid. **Opmerking** Werd sinds komst van de Vibe niet meer verkocht. En bedrijf is gestopt met alle insulinepomp activiteiten (J&J).
+**Status:** Niet loopbaar. Heeft bolus mogelijkheid, maar geen TBR mogelijkheid. **Note** Stopped being sold when Vibe came out.
 
 ## Eisen aan pompen die loopbaar zijn
 

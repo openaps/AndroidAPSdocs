@@ -5,6 +5,7 @@ Octobre 2020
 * Accu-Chek Combo - Mise à jour `réglage duchangement d'heure <../Usage/Timezone-traveling.html#changements-d-heure>`_
 * Accu-Chek Insight - option `Utiliser toujours les valeurs ansolues du basal <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_
 * Journaux - plus de détails sur `l'emplacement du dossier <../Usage/Accessing-logfiles.html>`_
+* Omnipod Eros - `status update <../Getting-Started/Future-possible-Pump-Drivers.html#insulet-omnipod-with-old-eros-pods-homepage>`_
 * `Commandes SMS - Synchronisation de l'heure <../Children/SMS-commands.html>`_
 Septembre 2020
 ==================================================

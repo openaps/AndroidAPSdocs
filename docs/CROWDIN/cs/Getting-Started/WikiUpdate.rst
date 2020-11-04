@@ -5,6 +5,7 @@ October 2020
 * Accu-Chek Combo - update `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
 * Accu-Chek Insight - Option to `upload absolute values <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * Logs - more details about `folder location <../Usage/Accessing-logfiles.html>`_
+* Omnipod Eros - `status update <../Getting-Started/Future-possible-Pump-Drivers.html#insulet-omnipod-with-old-eros-pods-homepage>`_
 * `SMS commands - time sync <../Children/SMS-Commands.html>`_
 September 2020
 ==================================================

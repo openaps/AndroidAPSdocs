@@ -16,7 +16,7 @@
 
 **Реализации на Java:** Пока нет.
 
-** Состояние реализации AAPS: ** Работа над собственным драйвером Java для Omnipod на AAPS выполняется в [ AAPS-Omnipod/AndroidAPS ](https://github.com/AAPS-Omnipod/AndroidAPS) (ветвь omnpod_eros). Не требует Raspberry Pi. Вы можете следить за ходом выполнения [ OmniAPS Slack ](https://omniaps.slack.com/) на канале android-driver. Первая тест-версия была выпущена в январе 2020 года, работа идет по пути стабилизации. Текущая версия 0.3 (март)
+** Состояние реализации AAPS: ** Работа над собственным драйвером Java для Omnipod на AAPS выполняется в [ AAPS-Omnipod/AndroidAPS ](https://github.com/AAPS-Omnipod/AndroidAPS) (ветвь omnpod_eros). Не требует Raspberry Pi. You can follow progress on Discord (channel #omnipod-eros-testing) with [this invite link](https://discord.com/invite/NhEUtzr). A first public test version was released in January 2020, and work is being done towards stabilization. Current version 0.4 (October 2020)
 
 **Требование к оборудованию для AAPS:** RileyLink с прошивкой Omnipod (2.x) и антенной 433 МГц.
 
@@ -112,7 +112,7 @@
 
 ### Animas Ping
 
-**Статус пригодности:** Не пригодна. Она имеет возможность подачи болюса, но не временного базала ТБР. **Примечание** Была снята с продажи после выхода Animas Vibe.
+**Статус пригодности:** Не пригодна. Она имеет возможность подачи болюса, но не временного базала ТБР. **Note** Stopped being sold when Vibe came out.
 
 ## Требования к пригодности помп для ИПЖ
 

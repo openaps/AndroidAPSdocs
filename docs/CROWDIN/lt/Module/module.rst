@@ -35,7 +35,7 @@ SGLT-2 inhibitoriai, dar vadinami gliflozinais, slopina gliukozės absorbciją (
 
 Telefonas
 --------------------------------------------------
-You need an Android smartphone with Google Android 7.0 or above. Taigi, jei jūs galvojate apie naują telefoną, rekomenduojama bent jau Android 8.1, bet optimaliam veikimui reikalinga Android 9 arba 10.
+Jums reikia išmaniojo telefono su Android 7.0 ar naujesne versija. Taigi, jei jūs galvojate apie naują telefoną, rekomenduojama bent jau Android 8.1, bet optimaliam veikimui reikalinga Android 9 arba 10.
 
 Vartotojai sukūrė `patikrintų išmaniųjų telefonų ir išmaniųjų laikrodžių, sąrašą:<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
@@ -85,7 +85,7 @@ Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. Nor
 
 Nightscout
 --------------------------------------------------
-Nightscout yra atvirojo kodo žiniatinklio programa, galinti registruoti ir rodyti jūsų NGJ ir AndroidAPS duomenis bei generuoti ataskaitas. Daugiau informacijos galite rasti projekto Nightscout tinklalapyje <http://www.nightscout.info/>`_. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
+Nightscout yra atvirojo kodo žiniatinklio programa, galinti registruoti ir rodyti jūsų NGJ ir AndroidAPS duomenis bei generuoti ataskaitas. Daugiau informacijos galite rasti projekto Nightscout tinklalapyje <http://www.nightscout.info/>`_. Galite sukurti savo `Nightscout svetainę <https://nightscout.github.io/nightscout/new_user/>`_, naudodami pusiau automatinę Nightscout sąranką 'zehn.be <https://ns.10be.de/en/index.html> `_ arba patalpinti savo serveryje (tai skirta IT ekspertams).
 
 Nightscout yra nepriklausomas nuo kitų modulių. Jums jo reikės, kad galėtumėte įvykdyti 1-ą Tikslą.
 

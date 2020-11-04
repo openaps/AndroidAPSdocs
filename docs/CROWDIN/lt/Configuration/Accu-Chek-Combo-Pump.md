@@ -18,7 +18,7 @@
 * Ištęstinis bolusas ir dvibangis bolusas negalimi (žr. [Ištęsti angliavandeniai](../Usage/Extended-Carbs.rst)).
 * Galimas tik vienas bazės profilis.
 * Daugiau nei 1 bazinio profilio nustatymas, ištęsto ar daugiabangio boluso suleidimas iš pompos trukdo laikinų bazių nustatymui (TBR) ir išjungia ciklą 6 valandoms, todėl ciklas negali saugiai veikti tokiomis sąlygomis.
-* It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling#accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
+* Šiuo metu nėra galimybės pompoje nustatyti datos ir laiko, todėl [žiemos/vasaros laiko pokyčius](../Usage/Timezone-traveling#accu-chek-combo) turite atlikti rankiniu būdu (galite išjungti telefono automatinį laiko nustatymą iš vakaro, ir nustatyti jį ryte, kad išvengtumėte aliarmų nakties metu).
 * Šiuo metu yra palaikomi baziniai greičiai nuo 0.05 iki 10 vv/h. Tai taip pat taikoma koreguojant profilį, pvz., kai padidinama 200%, didžiausia bazė negali viršyti 5 vv/h, nes ji padvigubės. Analogiškai, kai reikia sumažinti iki 50%, mažiausias bazinis greitis turi būti bent 0.10 vv/h.
 * Jei Ciklas reikalauja atšaukti veikiančią laikiną bazę (TBR), vietoje 100% Combo nustatys 90% arba 110% 15-ai minučių. Taip nustatyta, nes laikinos bazės atšaukimas įjungia pompos aliarmą, kuris sukelia intensyvų vibravimą.
 * Retkarčiais (kartą per keletą dienų) AAPS gali nepasisekti automatiškai išjungti LAIKINOS BAZĖS ATŠAUKIMAS aliarmo, dėl to reikalingi vartotojo veiksmai (paspaudžiant ATNAUJINTI mygtuką AAPS, kad įspėjimas būtų perduotas AAPS, arba patvirtinant aliarmą pompoje).
@@ -59,7 +59,7 @@
 
 ![Rezervuaro nustatymų ekrano nuotrauka](../images/combo/combo-insulin-settings.png)
 
-* Install AndroidAPS as described in the [AndroidAPS docs](../Installing-AndroidAPS/Building-APK.md).
+* Įdiegite AndroidAPS, kaip aprašyta [AndroidAPS wiki](../Installing-AndroidAPS/Building-APK.md).
 * Įsitikinkite, kad viską perskaitėte ir suprantate, kaip sukonfigūruoti AndroidAPS.
 * Šiame AAPS nustatymų etape pasirinkite **MDI** o ne Combo pompą, kad įskiepis netrukdytų Ruffy programai susijungimo procese.
 * Iš github per git klonuokite [ruffy](https://github.com/MilosKozak/ruffy).
@@ -76,7 +76,7 @@
 
 * Jei pompa visiškai nauja, jūs turite suleisti **bent vieną bolusą tiesiogiai iš pompos**, kad sukurtumėte pirmą įrašą pompos istorijoje.
 * Prieš nustatant AAPS Combo pompos įskiepį, įsitikinkite, kad profilis nustatytas teisingai ir aktyvuotas (!), o bazės profilis yra toks, kokio reikia, nes AAPS įrašys šį profilį pompoje.
-* Then activate the [Combo plugin](../Configuration/Config-Builder#pump). 
+* Tada aktyvuokite [Combo įskiepį](../Configuration/Config-Builder#pump). 
 * Paspauskite *Atnaujinti* mygtuką Combo skirtuke, kad inicijuotumėte pompą.
 * Norėdami patikrinti savo nustatymus, su **atjungta** nuo kūno pompa, AAPS nustatykite laikiną bazę 500% 15-ai min. ir suleiskite bolusą (į orą).
 * Pompos istorijoje turi atsirasti įrašai apie laikiną bazę ir bolusą. AAPS taip pat turi rodyti aktyvią laikiną bazę ir suleistą bolusą.
@@ -113,7 +113,7 @@ Gali būti keletas priežasčių. Pabandykite šiuos žingsnius:
 * Turėkite minty, kad tai nėra gatavas produktas, ypač pradžioje vartotojas turi stebėti ir suprasti sistemą, jos ribas ir galimas klaidas. 
 * Griežtai rekomenduojama NENAUDOTI šios sistemos, jei naudojantis asmuo negali pilnai suprasti sistemos.
 * Skaitykite OpenAPS dokumentaciją https://openaps.org, kad suprastumėte ciklo algoritmą, kuris yra AndroidAPS pagrindas.
-* Read the [AAPS docs](https://androidaps.readthedocs.io/en/latest/) to learn about and understand AndroidAPS.
+* Skaitykite [AAPS dokumentaciją](https://androidaps.readthedocs.io/en/latest/), kad sužinotumėte apie AndroidAPS ir ją suprastumėte.
 * Ši integracija naudoja tą patį funkcionalumą, kaip ir pultelis - gliukometras, pridėtas komplekte prie pompos.
 * Gliukometras leidžia dubliuoti pompos ekraną ir perduoda mygtukų paspaudimų komandas į pompą. 
 * Ruffy programėlė taip pat atlieka komandų perdavimą ir užtikrina ryšį su pompa. 

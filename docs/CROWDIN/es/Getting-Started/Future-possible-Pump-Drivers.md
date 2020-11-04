@@ -16,7 +16,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 **Plataformas en Java:** Ninguna hasta ahora.
 
-**AAPS estado de implementación:** Se está trabajando en un controlador nativo de Java para el Omnipod en AAPS en [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (rama omnipod_eros rama). No requiere Raspberry Pi. Puede seguir el progreso en [el OmniAPS Slack ](https://omniaps.slack.com/) en el canal android-driver. Una primera versión de prueba pública se publicó en enero de 2020, y se ha hecho trabajo en una versión estable. Versión actual 0.3 (marzo)
+**AAPS estado de implementación:** Se está trabajando en un controlador nativo de Java para el Omnipod en AAPS en [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (rama omnipod_eros rama). No requiere Raspberry Pi. You can follow progress on Discord (channel #omnipod-eros-testing) with [this invite link](https://discord.com/invite/NhEUtzr). A first public test version was released in January 2020, and work is being done towards stabilization. Current version 0.4 (October 2020)
 
 **Requisitos hardware para AAPS: ** RileyLink con el firmware de Omnipod (2.x) y la antena de 433 MHz.
 
@@ -112,7 +112,7 @@ Hace tiempo que tenían el firmware llamado T:AP (mencionado en este [artículo 
 
 ### Animas Ping
 
-**Loop status:** Incompatible. Tenia posibilidad de bolos, pero no de TBR. **Nota:** Dejo de comercializarse con la salida de Vibe al mercado.
+**Loop status:** Incompatible. Tenia posibilidad de bolos, pero no de TBR. **Note** Stopped being sold when Vibe came out.
 
 ## Requisitos para que una bombas sea compatible
 

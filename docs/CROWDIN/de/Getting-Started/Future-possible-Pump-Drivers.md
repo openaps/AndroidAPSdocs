@@ -16,7 +16,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Java-Implementierungen:** Bisher keine.
 
-**AAPS-Implementierungsstatus:** Die Arbeit an einem nativen Java-Treiber für Omnipod auf AAPS geht weiter auf [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). Es braucht kein Raspberry Pi. Zum Fortschritt siehe [OmniAPS Slack](https://omniaps.slack.com/) im Channel android-driver. Eine erste öffentliche Testversion wurde im Januar 2020 veröffentlicht. Nun wird an der Stabilisierung gearbeitet. Aktuelle Version 0.3 (März)
+**AAPS-Implementierungsstatus:** Die Arbeit an einem nativen Java-Treiber für Omnipod auf AAPS geht weiter auf [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). Es braucht kein Raspberry Pi. Du kannst sie auf Discord (Channel #omnipod-eros-testing) mit [diesem Einladungslink](https://discord.com/invite/NhEUtzr) verfolgen. Eine erste öffentliche Testversion wurde im Januar 2020 veröffentlicht. Nun wird an der Stabilisierung gearbeitet. Aktuelle Version 0.4 (Oktober 2020)
 
 **Hardware Anforderungen für AAPS:** RileyLink mit Omnipod Firmware (2.x) und 433 MHz Antenne.
 

@@ -85,62 +85,62 @@ Tikslas 6: pradėkite Uždaro ciklo (Closed Loop) režimą su pompos stabdymu es
   
 Uždaras ciklas nekoreguos aukštos glikemijos 6 tiksle, nes jį apriboja sustabdymas dėl žemos gliukozės. Todėl jūs turite patys koreguoti aukštą glikemiją!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`_ or by pressing and holding the Open Loop button in the top left of the home screen.
-* Set your target range slightly higher than you usually aim for, just to be safe.
-* Watch  how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
-* Ensure your settings have supported AndroidAPS to avoid having to treat a low glucose over a period of 5 days.  If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios.
-* You don't have to change your settings. During objective 6 maxIOB setting is internally set to zero automatically. This override will be reversed when moving to objective 7.
-* The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.  
+* Pasirinkite Uždaras ciklas `Nustatymai <../Configuration/Preferences.html>`_ arba ilgai spausdami Atviro ciklo mygtuką viršutiniame kairiajame pagrindinio ekrano kampe.
+* Nustatykite tikslinę glikemiją šiek tiek didesnę, nei įprastai, kad užtikrintumėte saugumą.
+* Galite analizuoti laikinų valandinių bazių aktyvumą stebėdami mėlyną tekstą pagrindiniame ekrane arba mėlyną sritį grafike.
+* Įsitikinkite, kad jūsų AndroidAPS nustatymai yra teisingi. Stebėkite jo veikimą per 5 dienas. Jei jums nereikia įsikišti rankiniu būdu ir koreguoti žemą glikemiją, nustatymai yra teisingi.  Jei vis tiek pasikartoja dažna ar sunki hipoglikemija, turėtumėte koreguoti IVT, valandinę bazę, JIF ar insulino ir angliavandenių santykio rodiklius.
+* Jums nereikia keisti nustatymų. Kol esate 6 tiksle, maksimalus aktyvaus insulino kiekis organizame automatiškai nustatomas ties nuliu. Šio parametro pakeitimas nuliu bus atšauktas, kai pasieksite 7 tikslą.
+* Sistema pakeis jūsų maxAIO nustatymus iki nulio, o tai reiškia, kad jei cukraus kiekis kraujyje krinta, tai gali sumažinti jūsų valandinę bazę, tačiau jei cukraus kiekis kraujyje didėja, valandinė bazė bus padidinta tik tuo atveju, jei bazės AIO yra neigiama (iš ankstesnio sustabdymo esant žemai glikemijai), kitu atveju, valandinė bazė išliks tokia pati kaip ir jūsų pasirinktas profilis.  
 
    .. image:: ../images/Objective6_negIOB.png
-     :alt: Example negative IOB
+     :alt: Neigiamo AIO pavyzdys
 
-* If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
+* Jei jūsų bazės AIO yra neigiama (žr. viršuje pateiktą ekrano nuotrauką), 6 tiksle taip pat galima nustatyti laikiną bazė didesnę nei 100%.
 * Dėl to Jūs galite patirti laikinus staigius glikemijos šuolius, ypač po hipoglikemijos korekcijos, nes neturėsite galimybės padidinti valandinės bazės.
 
 Tikslas 7: koreguokite savo uždarąjį ciklą po truputį didindami maks AIO ir mažindami tikslinę glikemijos reikšmę
 ====================================================================================================
-* Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+* Vienai dienai nustatykite „maksimalų bendrą AIO, kurio negalima viršyti“ (OpenAPS vadinamą „max-iob“) reikšmę, didesnę nei 0. Rekomenduojama numatytoji reikšmė yra „vidutinis valgio boliusas + 3 x didžiausia dienos valandinė bazė" (SMB algoritmui) arba 3x didžiausia dienos valandinė bazė (senesniam AMA algoritmui), tačiau turėtumėte palaipsniui artėkite prie šios reikšmės, kol sužinosite, kad nustatymas jums tinka (didžiausia dienos valandinė bazė = didžiausia valandinė bazė per visą paros laikotarpį).
 
-  This recommendation should be seen as a starting point. If you set to the 3x and you are seeing moves that push you to hard and fast then lower that number. If you are very resistant raise it a very little at a time.
+  Ši rekomendacija turėtų būti laikoma atskaitos tašku. Jei naudosite koeficientą 3x ir pastebėsite, kad AAPS veikia per daug agresyviai, sumažinkite šį koeficientą (pvz., 2x, ...). Jei esate rezistentiškas, galite po truputį jį pakelti.
 
    .. image:: ../images/MaxDailyBasal2.png
      :alt: max daily basal
 
-* Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
+* Nustačius jums tinkamo aktyvaus insulino kiekį, sumažinkite savo tikslinę glikemiją iki norimo lygio.
 
 
-Tikslas 8: jei reikia, derinkite valandines bazės reikšmes bei pagrindinius parametrus ir įgalinkite Autosens funkciją
+Tikslas 8: jei reikia, koreguokite valandinės bazės reikšmes bei pagrindinius parametrus ir įgalinkite Autosens funkciją
 ====================================================================================================
-* You can use `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ as a one off to check your basals remain accurate or do a traditional basal test.
-* Enable `autosens <../Usage/Open-APS-features.html>`_ over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
+* Galite naudoti `autotune įrankį <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_, kad patikrintumėte, ar jūsų baziniai nustatymai yra tikslūs, arba atlikti tradicinį bazės patikrinimo testą.
+* 7 dienoms įjunkite `Autosens <../Usage/Open-APS-features.html>`_ ir stebėkite baltą liniją, esančią pagrindinio ekrano grafike, nurodančią, kaip jūsų jautrumas insulinui didėja ar mažėja atsižvelgiant į aktyvumą, hormonų veiklą ir pan. taip pat galima analizuoti informaciją OpenAPS skirtuke, kad sužinotumėte, kaip AndroidAPS koreguoja nustatytą valandinę bazę ir/ar tikslinę glikemiją.
 
-*Don’t forget to record your looping in `this form <http://bit.ly/nowlooping>`_ logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
+* Kaip uždaro ciklo naudojotas, nepamirškite užsiregistruoti naudodamiesi `šia forma <http://bit.ly/nowlooping>`_, ir pažymėti, kad naudojatės AndroidAPS - „pasidaryk pats“ uždaro ciklo programine įranga.*
 
 
-Objective 9: Try additional features for daytime use and gain confidence in your closed loop system
+9 tikslas: Išbandykite papildomas kasdienio naudojimo funkcijas ir įgykite pasitikėjimą uždara ciklo sistema
 ====================================================================================================
-* Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_.
-* As `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
+* Iki AAPS 2.7 versijos maisto asistentas (MA) buvo pagrindinis AAPS algoritmas, o norint užbaigti 8 tikslą, reikėjo aktyvuoti `išmanųjį maisto asistentą AMA <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_.
+* Kadangi `išmanusis maisto asistentas AMA Advanced Advanced Assist Assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ yra jau standartinis algoritmas nuo AAPS 2.7 versijos, ateinančias 28-ias dienas išbandykite funkcijas, kurių dar nenaudojote, ir įgykite daugiau pasitikėjimo uždara ciklo sistema.
 
 
 Tikslas 10: dienos metu aktyvuokite papildomas oref1 funkcijas, tokias kaip super mikro bolusas (SMB)
 ====================================================================================================
-* You must read the `SMB chapter in this wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ and `chapter oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ to understand how SMB works, especially what's the idea behind zero-temping.
-* Then you ought to `rise maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see `objective 7 <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_ for an illustration)
-* min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually.
+* Turite perskaityti šios dokumentacijos `SMB skyrių <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ ir `oref1 skiltį openAPS dokumentacijoje <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_, kad suprastumėte kaip veikia SMB, ypač kokia yra nulinės bazės nustatymo idėja.
+* Tada turėtumėte `padidinti maxAIO <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_, kad SMB veiktų gerai. max AIO dabar apima visą AIO, ne tik pridėtą (pakeltą) valandinę bazę. Tai yra, jei valgymui suleidžiamas 8 vv boliusas, o maksAIO yra 7 vv, SMB nebus leidžiamas tol, kol AIO nenukris žemiau 7 vv. Galima pradėti nuo maxAIO = vidutinis maisto bolusas + 3x maksimali dienos valandinė bazė bet kuriuo paros metu (apie tai rašoma `7 tiksle <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_)
+* pereinant nuo AMA iki SMB, "min_5m_carbimpact" numatytasis absorbcijos parametras pakeičiamas nuo 3 iki 8. Jeigu Jūs pereinate nuo AMA į SMB, turite jį parametrą pakeisti rankiniu būdu.
 
 
-Objective 11: Automation
+Tikslas 11: Automatizavimas
 ====================================================================================================
-* You have to start objective 11 to be able to use `Automation <../Usage/Automation.html>`_.
-* Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-proof-your-knowledge>`_.
-* Completing previous objectives will not effect other objectives you have already finished. You will keep all finished objectives!
+* Jūs turite pradėti tikslą 11, kad galėtumėte naudoti "Automatizavimu <../Usage/Automation.html>`_.
+* Įsitikinkite, kad jūs užbaigėte visus tikslus, įskaitant egzaminą `<../Usage/Objectives.html#objective-3-proof-your-knowledge>`_.
+* Ankstesnių (iki šiol neužbaigtų) tikslų atlikimas neturės įtakos kitiems tikslams, kuriuos jau užbaigėte. Visi užbaigti tikslai bus išsaugoti!
 
 
-Go back in objectives
+Grįžti į tikslus
 ====================================================================================================
-If you want to go back in objectives for whatever reason you can do so by clicking at "clear finished".
+Jei dėl bet kokios priežasties norite grįžti į tikslų pradžią, galite tai padaryti paspaudę "išvalyti užbaigtus".
 
 .. image:: ../images/Objective_ClearFinished.png
-  :alt: Go back in objectives
+  :alt: Grįžti į tikslus
