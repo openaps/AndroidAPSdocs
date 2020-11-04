@@ -35,8 +35,8 @@ Si vous utilisez le G6 avec l'application Dexcom patchée
 
    * Le dossier 2.4 concerne les utilisateurs de la version actuelle, le dossier 2.3 n'est que pour la version obsolète 2.3 d'AndroidAPS.
    * Ouvrir https://play.google.com/store/search?q=dexcom%20g6 sur votre ordinateur. 
-   * Click the link to the Dexcom G6 app on the search results page that is displayed.
-   * Region will be visible in URL.
+   * Cliquez sur le lien vers l'application Dexcom G6 sur la page de résultats de recherche qui s'affiche.
+   * La région sera visible dans l'URL.
    
    .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Region in Dexcom G6 URL
