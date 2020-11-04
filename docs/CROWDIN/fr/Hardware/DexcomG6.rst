@@ -34,7 +34,9 @@ Si vous utilisez le G6 avec l'application Dexcom patchée
 * Téléchargez l'apk ici `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, et choisissez la version correspondant à vos besoins (version G6 en mg/dl ou mmol/l).
 
    * Le dossier 2.4 concerne les utilisateurs de la version actuelle, le dossier 2.3 n'est que pour la version obsolète 2.3 d'AndroidAPS.
-   * Ouvrir https://play.google.com/store/search?q=dexcom%20g6 sur votre ordinateur. La région sera visible dans l'URL.
+   * Ouvrir https://play.google.com/store/search?q=dexcom%20g6 sur votre ordinateur. 
+   * Click the link to the Dexcom G6 app on the search results page that is displayed.
+   * Region will be visible in URL.
    
    .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Region in Dexcom G6 URL
