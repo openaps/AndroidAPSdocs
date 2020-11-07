@@ -133,7 +133,7 @@ Tikslas 10: dienos metu aktyvuokite papildomas oref1 funkcijas, tokias kaip supe
 
 Tikslas 11: Automatizavimas
 ====================================================================================================
-* Jūs turite pradėti tikslą 11, kad galėtumėte naudoti "Automatizavimu <../Usage/Automation.html>`_.
+* Jūs turite pradėti tikslą 11, kad galėtumėte naudoti `Automatizavimu <../Usage/Automation.html>`_.
 * Įsitikinkite, kad jūs užbaigėte visus tikslus, įskaitant egzaminą `<../Usage/Objectives.html#objective-3-proof-your-knowledge>`_.
 * Ankstesnių (iki šiol neužbaigtų) tikslų atlikimas neturės įtakos kitiems tikslams, kuriuos jau užbaigėte. Visi užbaigti tikslai bus išsaugoti!
 
