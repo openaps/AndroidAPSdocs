@@ -34,7 +34,9 @@ Kai naudojate G6 su modifikuota Dexcom programa
 * Atsisiųskite programą iš `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>` _ ir pasirinkite versiją pagal savo poreikius (mg/dl arba mmol/l, G6).
 
    * Aplankas 2.4 dabartinės versijos vartotojams, aplankas 2.3 yra tik pasenusiam AndroidAPS 2.3.
-   * Atidarykite https://play.google.com/store/search?q=dexcom%20g6 savo kompiuteryje. Regionas bus matomas URL adrese.
+   * Atidarykite https://play.google.com/store/search?q=dexcom%20g6 savo kompiuteryje. 
+   * Click the link to the Dexcom G6 app on the search results page that is displayed.
+   * Region will be visible in URL.
    
    .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Regiono Dexcom G6 URL
