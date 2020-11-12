@@ -50,7 +50,7 @@ AndroidAPS **šiuo metu** veikia su
 - `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (papildomai reikia: Ruffy programėlės, LineageOS ar Android 8.1 savo telefone)
 - `Accu-Chek Insight pompa <../Configuration/Accu-Chek-Insight-Pump.md>`_ 
 - `Dana R pompa <../Configuration/DanaR-Insulin-Pump.md>`_ 
-- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_ (išskyrus pompos su nauja programine įranga v3) 
+- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - `kai kurios senos Medtronic pompos <../Configuration/MedtronicPump.html>`_ iš artėjančių, turinčių programinę įrangą 2.4 (papildomai reikia: RileyLink/Gnarl aparatūros, Android telefono su Bluetooth low energy/BLE mikroschema)
 
 ** Kitos pompos**, kurios ateityje gali veikti su AndroidAPS, yra išvardytos puslapyje „Ateityje galimos naudoti pompos" <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
