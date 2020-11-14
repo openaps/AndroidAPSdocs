@@ -158,8 +158,8 @@ REMINDER: **Pod communication occurs at limited ranges for both pod activation a
 * You will see the Fill Pod screen be displayed.  Fill a pod with at least 85U of insulin and listen for two beeps indicating that the pod is ready to be primed.
 * Ensure that pod and RileyLink are within close proximity of each other and click on the Next button [3].
 
-.. image:: ../images/Omnipod_Activate1.png
-  :alt: Omnipod pod activation I
+   .. image:: ../images/Omnipod_Activate1.png
+     :alt: Omnipod pod activation I
   
 * The Initialize Pod screen will begin priming the pod (you will hear a click followed by a series of ticking sounds as the pod primes itself). 
 * You will see a green checkmark, and the Next button [1] will become enabled upon successful priming.
@@ -169,8 +169,8 @@ REMINDER: **Pod communication occurs at limited ranges for both pod activation a
 * The Attach Pod dialog box will now appear. 
 * ONLY click on the OK button [3] if you are ready to deploy the cannula.
 
-.. image:: ../images/Omnipod_Activate2.png
-  :alt: Omnipod pod activation II
+   .. image:: ../images/Omnipod_Activate2.png
+     :alt: Omnipod pod activation II
 
 * After pressing OK, it may take some time before the Omnipod responds and inserts the cannula (1-2 minutes maximum), so **be patient**.
 * If  RileyLink is out of range of the pod being activated, you will receive an error message “No response from Pod”.
@@ -178,16 +178,16 @@ REMINDER: **Pod communication occurs at limited ranges for both pod activation a
 * A green checkmark will appear, and the Next button will become enabled upon successful cannula insertion. 
 * Click on the Next button [2].
 
-.. image:: ../images/Omnipod_Activate3.png
-  :alt: Omnipod pod activation III
+   .. image:: ../images/Omnipod_Activate3.png
+     :alt: Omnipod pod activation III
 
 * You will see the Pod activated screen displayed. 
 * Click on the green Finished button [1]. 
 * You have now started a new pod session. 
 * Click on the back button on your phone to return to the Omnipod (POD) tab screen.
 
-.. image:: ../images/Omnipod_Activate4.png
-  :alt: Omnipod pod activation IV
+   .. image:: ../images/Omnipod_Activate4.png
+     :alt: Omnipod pod activation IV
 
 Deactivating a pod
 ---------------------------------------------------------
