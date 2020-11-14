@@ -30,6 +30,7 @@ Enabling the Omnipod Driver in AAPS
 * You can enable the Omnipod driver in AAPS via two mechanisms:
 
 **1. AAPS Setup Wizard**
+
 * Open setup wizzard through  three-dot menu (top right-hand corner)
 * Follow the wizard menus until you reach the Pump screen.
 * Select Omnipod 
@@ -39,6 +40,7 @@ Enabling the Omnipod Driver in AAPS
   :alt: Omnipod in AAPS Setup Wizzard
 
 **2. Config Builder** (for details see `config builder page <../Configuration/Config-Builder.html>`_)
+
 * Open config builder via hamburger menu (top left corner)
 * Scroll down to pump
 * Select Omnipod
@@ -65,5 +67,6 @@ Identify Riley Link
 Verification of Omnipod Driver Activation
 ---------------------------------------------------------
 Depending on your `settings <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either
+
 * see an Omnipod or POD tab after swiping to the left from homescreen or
 * can enter Omnipod page trough hamburger menu
