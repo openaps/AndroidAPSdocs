@@ -31,20 +31,20 @@ Enabling the Omnipod Driver in AAPS
 
 **1. AAPS Setup Wizard**
 
-* Open setup wizzard through  three-dot menu (top right-hand corner)
+* Open setup wizard through  three-dot menu (top right-hand corner)
 * Follow the wizard menus until you reach the Pump screen.
 * Select Omnipod 
 * Select Pump Setup to open the Omnipod Settings screen
 
 .. image:: ../images/Omnipod_SetupWizard.png
-  :alt: Omnipod in AAPS Setup Wizzard
+  :alt: Omnipod in AAPS Setup Wizard
 
 **2. Config Builder** (for details see `config builder page <../Configuration/Config-Builder.html>`_)
 
 * Open config builder via hamburger menu (top left corner)
 * Scroll down to pump
 * Select Omnipod
-* With the checkbox on the right you can decide wether you want to use Omnipod `via tab or via hamburger menu <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_.
+* With the checkbox on the right you can decide whether you want to use Omnipod `via tab or via hamburger menu <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_.
 * Click cog wheel to enter Omnipod setup
 
 .. image:: ../images/Omnipod_ConfigBuilder.png
@@ -81,7 +81,7 @@ Omnipod Configuration
 
 RileyLink Setup
 ---------------------------------------------------------
-* The Omnipod driver cannot select more than one RileLink device at a time.
+* The Omnipod driver cannot select more than one RileyLink device at a time.
 * Ensure that RileyLink was `successfully identified <../Configuration/OmnipodEros.html#identify-riley-link>`_.
 * Open setup:
 
@@ -90,14 +90,14 @@ RileyLink Setup
    * Select Omnipod
    * Click cog wheel to enter Omnipod setup
 
-* In the section 'RileyLink Configuration' you sould see the RileyLink's MAC address.
+* In the section 'RileyLink Configuration' you should see the RileyLink's MAC address.
 
 .. image:: ../images/Omnipod_RLMac.png
   :alt: Omnipod RileyLink MAC address
 
 Omnipod settings
 ---------------------------------------------------------
-Enable or diasble the options via the toggle switches.
+Enable or disable the options via the toggle switches.
 
 .. image:: ../images/Omnipod_Settings.png
   :alt: Omnipod settings
@@ -118,7 +118,7 @@ Alerts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Alert basics:
 
-   * Provides AAPS alerts and Nighscout announcements for expiration, shutdown, low reservoir based on the defined threshold units. 
+   * Provides AAPS alerts and Nightscout announcements for expiration, shutdown, low reservoir based on the defined threshold units. 
    * Note: An AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. 
    * Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled.
    * To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.
@@ -146,8 +146,10 @@ Other
 * Pulse log button: Hide or display the pulse log button in the Omnipod (POD) tab.
 * DST/Time zone detect on: Allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
 
-Activating a pod
+Activating & deactivating a pod
 ===========================================================
+Activating a pod
+---------------------------------------------------------
 Before you are able to activate a pod please ensure you have properly configured and connected your RileyLink connection in the `Omnipod settings  <../Configuration/OmnipodEros.html#identify-riley-link>`_.
 REMINDER: **Pod communication occurs at limited ranges for both pod activation and deactivation due to security safety measures.**  During these procedures make sure that your pod is within a close proximity (~50cm or less) to the RileyLink.
 
@@ -178,3 +180,14 @@ REMINDER: **Pod communication occurs at limited ranges for both pod activation a
 
 .. image:: ../images/Omnipod_Activate3.png
   :alt: Omnipod pod activation III
+
+* You will see the Pod activated screen displayed. 
+* Click on the green Finished button [1]. 
+* You have now started a new pod session. 
+* Click on the back button on your phone to return to the Omnipod (POD) tab screen.
+
+.. image:: ../images/Omnipod_Activate4.png
+  :alt: Omnipod pod activation IV
+
+Deactivating a pod
+---------------------------------------------------------
