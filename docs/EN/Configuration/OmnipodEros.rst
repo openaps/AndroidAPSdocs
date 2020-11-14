@@ -145,3 +145,36 @@ Other
 * Suspend delivery button: Hide or display the suspend delivery button in the Omnipod (POD) tab.
 * Pulse log button: Hide or display the pulse log button in the Omnipod (POD) tab.
 * DST/Time zone detect on: Allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
+
+Activating a pod
+===========================================================
+Before you are able to activate a pod please ensure you have properly configured and connected your RileyLink connection in the `Omnipod settings  <../Configuration/OmnipodEros.html#identify-riley-link>`_.
+REMINDER: **Pod communication occurs at limited ranges for both pod activation and deactivation due to security safety measures.**  During these procedures make sure that your pod is within a close proximity (~50cm or less) to the RileyLink.
+
+* Click on the Pod Mgmt button [1]
+* Then click on Activate Pod [2]
+* You will see the Fill Pod screen be displayed.  Fill a pod with at least 85U of insulin and listen for two beeps indicating that the pod is ready to be primed.
+* Ensure that pod and RileyLink are within close proximity of each other and click on the Next button [3].
+
+.. image:: ../images/Omnipod_Activate1.png
+  :alt: Omnipod pod activation I
+  
+* The Initialize Pod screen will begin priming the pod (you will hear a click followed by a series of ticking sounds as the pod primes itself). 
+* You will see a green checkmark, and the Next button [1] will become enabled upon successful priming.
+* Click on the Next button [1], and you will see the Attach Pod screen displayed. 
+* Proceed to prepare the infusion site, remove the pod's needle cap and white paper backing from the adhesive and apply the pod to your usually selected site. 
+* Click on the Next button [2].
+* The Attach Pod dialog box will now appear. 
+* ONLY click on the OK button [3] if you are ready to deploy the cannula.
+
+.. image:: ../images/Omnipod_Activate2.png
+  :alt: Omnipod pod activation II
+
+* After pressing OK, it may take some time before the Omnipod responds and inserts the cannula (1-2 minutes maximum), so **be patient**.
+* If  RileyLink is out of range of the pod being activated, you will receive an error message “No response from Pod”.
+* If this occurs, move the RileyLink closer to (~50 cm away or less) but not on top of the Pod and click the Retry button [1].
+* A green checkmark will appear, and the Next button will become enabled upon successful cannula insertion. 
+* Click on the Next button [2].
+
+.. image:: ../images/Omnipod_Activate3.png
+  :alt: Omnipod pod activation III
