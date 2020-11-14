@@ -3,7 +3,7 @@ Omnipod Eros
 
 At present two different Omnipod models are available:
 
-a. `Omnipod Eros <https://www.omnipod.com/en-gb/about/how-to-use>`_ - launched in 2013 - called "omnipod system" by manufacturer
+a. `Omnipod Eros <https://www.omnipod.com/en-gb/about/how-to-use>`_ - launched in 2013 - called 'omnipod system' by manufacturer
 b. `Omnipod Dash <https://www.omnipod.com/en-gb/about-dash>`_ - launched in 2019 - PDM looks like a phone-type device
 
 **Only Omnipod Eros can be used with AndroidAPS!**
@@ -50,7 +50,7 @@ Enabling the Omnipod Driver in AAPS
 .. image:: ../images/Omnipod_ConfigBuilder.png
   :alt: Omnipod in Config Builder
 
-Identify Riley Link
+Identify RileyLink
 ---------------------------------------------------------
 * Make sure you have a charged RileyLink near your phone for AAPS to identify it via its MAC address.
 * After enabling the driver, you must identify your RileyLink.
@@ -70,3 +70,78 @@ Depending on your `settings <../Configuration/Config-Builder.html#tab-or-hamburg
 
 * see an Omnipod or POD tab after swiping to the left from homescreen or
 * can enter Omnipod page trough hamburger menu
+
+If you have `identified RileyLink correctly <../Configuration/OmnipodEros.html#identify-riley-link>`_ you will see its status as 'Connected'.
+
+.. image:: ../images/Omnipod_RLConnected.png
+  :alt: Omnipod tab - RileyLink connected
+
+Omnipod Configuration
+===========================================================
+
+RileyLink Setup
+---------------------------------------------------------
+* The Omnipod driver cannot select more than one RileLink device at a time.
+* Ensure that RileyLink was `successfully identified <../Configuration/OmnipodEros.html#identify-riley-link>`_.
+* Open setup:
+
+   * Open config builder via hamburger menu (top left corner)
+   * Scroll down to pump
+   * Select Omnipod
+   * Click cog wheel to enter Omnipod setup
+
+* In the section 'RileyLink Configuration' you sould see the RileyLink's MAC address.
+
+.. image:: ../images/Omnipod_RLMac.png
+  :alt: Omnipod RileyLink MAC address
+
+Omnipod settings
+---------------------------------------------------------
+Enable or diasble the options via the toggle switches.
+
+.. image:: ../images/Omnipod_Settings.png
+  :alt: Omnipod settings
+
+Confirmation beeps
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Bolus beeps: confirmation beeps when a bolus is delivered
+* Basal beeps: confirmation beeps when 
+
+   * a new basal rate is set,
+   * active basal rate is canceled or 
+   * current basal rate is changed
+
+* SMB beeps: confirmation beeps when a SMB is delivered
+* TBR beeps: confirmation beeps when a TBR is set or cancelled
+
+Alerts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Alert basics:
+
+   * Provides AAPS alerts and Nighscout announcements for expiration, shutdown, low reservoir based on the defined threshold units. 
+   * Note: An AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. 
+   * Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled.
+   * To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.
+
+* Expiration reminder: Pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
+* Hours before shutdown: Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
+* Low reservoir alert: Alert when the pod remaining units low reservoir limit is reached as defined in the number of units field.
+* Number of units: The number of units at which to trigger the pod low reservoir alert.
+* Automatically acknowledge Pod alerts: 
+
+   * When enabled a notification will still be issued.
+   * However immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
+
+Notifications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Provides AAPS and phone sound uncertainty notifications.
+* Sound for uncertain TBR notifications: Trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
+* Sound for uncertain SMB notifications: Trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
+* Sound for uncertain bolus notifications: Trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
+
+Other
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Provides advanced settings to assist debugging.
+* Suspend delivery button: Hide or display the suspend delivery button in the Omnipod (POD) tab.
+* Pulse log button: Hide or display the pulse log button in the Omnipod (POD) tab.
+* DST/Time zone detect on: Allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
