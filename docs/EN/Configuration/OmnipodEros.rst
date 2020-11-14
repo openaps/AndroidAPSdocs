@@ -22,21 +22,48 @@ Hardware and Software Requirements
    
 These instructions will assume that you are **starting a new pod session**. If this is not the case, please be patient and attempt to begin this process on your next pod change. 
 
-Enabling the Omnipod Driver in AAPS
+Omnipod Driver in AAPS
 ===========================================================
+
+Enabling the Omnipod Driver in AAPS
+---------------------------------------------------------
 * You can enable the Omnipod driver in AAPS via two mechanisms:
 
-  * by going to the AAPS Setup Wizard located at the top right-hand corner three-dot menu and selecting Omnipod on the Pump screen.
+**1. AAPS Setup Wizard**
+* Open setup wizzard through  three-dot menu (top right-hand corner)
+* Follow the wizard menus until you reach the Pump screen.
+* Select Omnipod 
+* Select Pump Setup to open the Omnipod Settings screen
 
-    OR
+.. image:: ../images/Omnipod_SetupWizard.png
+  :alt: Omnipod in AAPS Setup Wizzard
 
-  * via the top left-hand corner hamburger menu under Config Builder -> Pump -> Omnipod
-  
-* You can configure all Omnipod driver settings from the top left-hand corner hamburger menu under Config Builder -> Pump -> Omnipod -> Cog wheel (Settings)
-* After enabling the driver, you must identify your RileyLink by going to the top-right hamburger menu and selecting Config Builder -> Pump -> Omnipod -> (Settings) -> RileyLink Configuration -> Scan. 
+**2. Config Builder** (for details see `config builder page <../Configuration/Config-Builder.html>`_)
+* Open config builder via hamburger menu (top left corner)
+* Scroll down to pump
+* Select Omnipod
+* With the checkbox on the right you can decide wether you want to use Omnipod `via tab or via hamburger menu <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_.
+* Click cog wheel to enter Omnipod setup
+
+.. image:: ../images/Omnipod_ConfigBuilder.png
+  :alt: Omnipod in Config Builder
+
+Identify Riley Link
+---------------------------------------------------------
 * Make sure you have a charged RileyLink near your phone for AAPS to identify it via its MAC address.
+* After enabling the driver, you must identify your RileyLink.
+
+   * Open config builder via hamburger menu (top left corner)
+   * Scroll down to pump
+   * Select Omnipod
+   * Click cog wheel to enter Omnipod setup
+   * Select RileyLink Configuration
+   * Click Scan.
+
 * Once selected, you can proceed to activate your first pod session. 
 
 Verification of Omnipod Driver Activation
 ---------------------------------------------------------
-You can verify that you have enabled the Omnipod driver in AAPS by swiping to the left from the Overview tab, where you will now see an Omnipod or POD tab. 
+Depending on your `settings <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either
+* see an Omnipod or POD tab after swiping to the left from homescreen or
+* can enter Omnipod page trough hamburger menu
