@@ -351,3 +351,60 @@ NOTE - If you have enabled the Automatically acknowledge Pod alerts setting in `
    .. image:: ../images/Omnipod_AcknowledgeAlert.png
      :alt: Acknowledge Alert
 
+Troubleshooting Omnipod
+===========================================================
+Pump Unreachable Alerts
+---------------------------------------------------------
+* It is recommended that pump unreachable alerts be configured to 120 minutes.
+
+   * Three-dot menu on top right-hand side
+   * Preferences
+   * Local Alerts
+   * Pump unreachable threshold [min]: 120
+   
+Pod Failures
+---------------------------------------------------------
+* Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself.
+* It is best practice not to call these into Insulet, since AAPS is not an approved use case.
+* A list of fault codes is available on this site `<https://github.com/openaps/openomni/wiki/Fault-event-codes>`_ to help determine the cause.
+
+Import Settings
+---------------------------------------------------------
+* Please note that importing settings may import possibly outdated Pod status. As a result, you may lose any active Pod.
+* It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
+
+   * Deactivate your pod session. Verify that you do not have an active pod session.
+   * Export your settings and store a copy in a safe place.
+   * Uninstall the previous version of AAPS and restart your phone.
+   * Install new version of AAPS and verify that you have no active pod session prior to attempting to import your settings.
+   * For detailes instructions on exporting and importing sessions see `this page <../Usage/ExportImportSettings.html>`_.
+
+Omnipod driver alerts
+---------------------------------------------------------
+Please note that the Omnipod driver presents a variety of unique alerts on the Overview tab, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert.
+
+A summary of the main alerts that you may encounter is listed below:
+* 'No active Pod' - No active Pod session detected.  You may select SNOOZE on this alert which will remain or trigger again until a `Pod session is started <../Configuration/OmnipodEros.html#activating-a-pod>`_.
+* 'Pod suspended' - Informational alert that Pod has been `suspended <../Configuration/OmnipodEros.html#suspending-insulin-delivery>`_.
+* 'Setting basal profile failed. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed.' - Informational alert that the Pod basal profile setting has failed and you will need to hit Refresh on the `Omnipod tab <../Configuration/OmnipodEros.html#omnipod-tab>`_.
+
+Best practice
+===========================================================
+Where to get help for Omnipod driver
+---------------------------------------------------------
+All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerate and use the following guidelines when requesting assistance:
+
+Level 0: Read the relevant section of these docs to make sure you understand how the function you are experiencing difficulty with is supposed to work.
+Level 1: If you are still encountering problems that are not resolvable by these docs, please use the *#androidaps* channel on Discord by using `this invite link <https://discord.com/invite/NhEUtzr>`_.
+Level 2: Search existing `issues <https://github.com/nightscout/AndroidAPS/issues>`_ to see if one exists for your issue; if not, please create an issue and attach your `log files <https://androidaps.readthedocs.io/en/latest/CROWDIN/sk/Usage/Accessing-logfiles.html>`_.
+
+Be patient - most of the community is good-natured in disposition and solving issues often requires time and patience from both users and developers.
+
+Latest development version
+---------------------------------------------------------
+* Instructions on the latest features are often discussed on the Discord channel and documented on the `project's wiki page <https://github.com/AAPS-Omnipod/AndroidAPS/wiki>`_. 
+* Most users' should use the latest AAPS omnipod bundled driver (available as of 2.7.1) for the latest stable release of the omnipod driver.
+* Please also see information about dev branch `here <../Installing-AndroidAPS/Dev_branch.html>`_.
+* If you are interested in development progress, please see the omnipod-eros-testers channel on the WeAreNotWaiting Discord server.  
+* This channel’s intended audience is test users and developers to answer questions or discuss Omnipod driver beta and development versions. 
+* Use the `invite link <https://discord.gg/NhEUtzr>`_ to join this channel.
