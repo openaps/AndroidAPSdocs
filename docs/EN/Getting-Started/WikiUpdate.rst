@@ -1,5 +1,8 @@
 Docs updates & changes
 **************************************************
+November 2020
+==================================================
+* Omnipod Eros - `loopable in AAPS master <../Configuration/OmnipodEros.html>`_
 October 2020
 ==================================================
 * Accu-Chek Combo - update `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
