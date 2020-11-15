@@ -209,8 +209,9 @@ REMINDER: **Pod communication occurs at limited ranges for both pod activation a
    .. image:: ../images/Omnipod_Dectivate2.png
      :alt: Omnipod pod deactivation II
 
-WHERE IS DISCARD BUTTON? SCREENSHOT?
-===========================================================
+'************************************************************************************************************
+**WHERE IS DISCARD BUTTON? SCREENSHOT?**
+'************************************************************************************************************
 
 Deactivating pod failes constantly
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
