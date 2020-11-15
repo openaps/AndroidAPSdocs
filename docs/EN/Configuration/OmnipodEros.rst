@@ -237,9 +237,66 @@ Pod successfully deactivated
 
 Daily usage
 ===========================================================
+Omnipod tab
+---------------------------------------------------------
+
+   .. image:: ../images/Omnipod_Tab.png
+     :alt: Information on Omnipod pod tab
+
+Information fields
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* RileyLink Status: Current connection status of the RileyLink
+
+   * RileyLink Unreachable - RileyLink is either not within Bluetooth range of the phone, powered off or has a failure preventing Bluetooth communication.
+   * RileyLink Ready - RileyLink is powered on and actively initializing the Bluetooth connection
+   * Connected - RileyLink is powered on, connected and actively able to communicate via Bluetooth.
+
+* Pod address: Current address in which the active pod is referenced
+* LOT: LOT number of the active pod
+* TID: Serial number of the pod
+* Firmware Version: Firmware version of the active pod 
+* Time on Pod: Current time on the active pod.
+* Pod expires: Date and time when the active pod will expire
+* Pod status: Status of the active pod.
+* Last connection: Last time communication with the active pod was achieved.
+
+   * Moments ago - less than 20 seconds ago.
+   * Less than a minute ago - more than 20 seconds but less than 60 seconds ago.
+   * 1 minute ago - more than 60 seconds but less than 180 seconds (2 min)
+   * XX minutes ago - more than 2 minutes ago as defined by the value of XX 
+
+* Last bolus: Dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
+* Base Basal rate: Basal rate programmed for the current time from the basal rate profile 
+* Temp basal rate: Currently running Temporary Basal Rate in the following format
+
+   * Units / hour @ time TBR was issued (minutes run / total minutes TBR will be run)
+   * Example:  0.00U/h @18:25 ( 90/120 minutes)
+
+* Reservoir: 'Over 50 U left' when more than 50 units are left in the reservoir.  Below this value the exact units are displayed in yellow text.
+* Total delivered: Displays the total number of units of insulin delivered from the reservoir.
+* Errors: Last error encountered.  Review the Pod history, RileyLink history and log files for past errors and more detailed information.
+* Active pod alerts: Reserved for currently running alerts on the active pod.  Normally during pod expiration past 72 hours and native pod beep alerts are running.
+
+Buttons (Icons)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* REFRESH: Sends a refresh command to the active pod
+* POD MGMT: Navigates to the Pod management interface with these operations
+
+   * `Deactivate Pod <../Configuration/OmnipodEros.html#deactivating-a-pod>`_ - deactivates current pod
+   * `Activate Pod <../Configuration/OmnipodEros.html#activating-a-pod>`_ - primes and activates a new pod
+   * `Pod history <../Configuration/OmnipodEros.html#pod-history>`_ - displays active pod activity history
+
+* RL STATS: Navigates to RileyLink Statistics displaying current settings and RileyLink Connection history
+
+   * Settings - displays RileyLink and active pod settings information
+   * History - displays RileyLink and Pod communication history
+
+* PULSE LOG: Sends the active pod pulse log to the clipboard
+* `SUSPEND <../Configuration/OmnipodEros.html#suspending-insulin-delivery>`_: Suspends the active pod
+
 Suspending Insulin Delivery
 ---------------------------------------------------------
-NOTE: If you do not see a SUSPEND button , then it has not been enabled to be displayed in the Omnipod (POD) tab.  Enable the Suspend delivery button enabled setting in the Omnipod settings under `Other  <../Configuration/OmnipodEros.html#other>`_.
+NOTE: If you do not see a SUSPEND button , then it has not been enabled to be displayed in the Omnipod (POD) tab.  Enable the Suspend delivery button enabled setting in the Omnipod settings under `Other <../Configuration/OmnipodEros.html#other>`_.
 
 Use this command to put the active pod into a suspend state. In this suspend state, the pod will no longer deliver any insulin. This command mimics the suspend function that the original Omnipod PDM issues to an active pod.
 
@@ -289,6 +346,8 @@ NOTE - If you have enabled the Automatically acknowledge Pod alerts setting in `
 * The RileyLink sends the command to deactivate pod expiration warning beeps to the pod and updates the Pod status field with ACKNOWLEDGE ALERTS [3].
 * Upon successful deactivation of the alerts two beeps will be issued by the active pod and a confirmation dialog will be displayed.
 * Click OK [4] to confirm and dismiss the dialog.
+* On the Omnipod (POD) tab the warning message under the Active Pod alerts will no longer be displayed [5] and the active pod will no longer issue pod expiration warning beeps.
 
    .. image:: ../images/Omnipod_AcknowledgeAlert.png
      :alt: Acknowledge Alert
+
