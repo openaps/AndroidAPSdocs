@@ -151,6 +151,7 @@ Activating & deactivating a pod
 Activating a pod
 ---------------------------------------------------------
 Before you are able to activate a pod please ensure you have properly configured and connected your RileyLink connection in the `Omnipod settings  <../Configuration/OmnipodEros.html#identify-riley-link>`_.
+
 REMINDER: **Pod communication occurs at limited ranges for both pod activation and deactivation due to security safety measures.**  During these procedures make sure that your pod is within a close proximity (~50cm or less) to the RileyLink.
 
 * Click on the Pod Mgmt button [1]
@@ -193,7 +194,8 @@ Deactivating a pod
 ---------------------------------------------------------
 REMINDER: **Pod communication occurs at limited ranges for both pod activation and deactivation due to security safety measures.**  During these procedures make sure that your pod is within a close proximity (~50cm or less) to the RileyLink.
 
-* Under normal circumstances, you should be able to get three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
+Under normal circumstances, you should be able to get three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
+
 * To deactivate a pod (either from expiration or from a pod failure) open Omnipod (POD) tab or menu.
 * Click on the Pod Mgmt button [1]
 * Click on the Deactivate Pod button [2]
@@ -230,3 +232,45 @@ Pod successfully deactivated
 * Click on the back button on your phone to return to the Omnipod (POD) tab.
 * Verify that the Pod status field displays a 'No active Pod' message in red.
 
+   .. image:: ../images/Omnipod_Dectivate3.png
+     :alt: Omnipod pod deactivation III
+
+Daily usage
+===========================================================
+Suspending Insulin Delivery
+---------------------------------------------------------
+NOTE: If you do not see a SUSPEND button , then it has not been enabled to be displayed in the Omnipod (POD) tab.  Enable the Suspend delivery button enabled setting in the Omnipod settings under `Other  <../Configuration/OmnipodEros.html#other>`_.
+
+Use this command to put the active pod into a suspend state. In this suspend state, the pod will no longer deliver any insulin. This command mimics the suspend function that the original Omnipod PDM issues to an active pod.
+
+* Open Omnipod (POD) tab or menu
+* Click on the SUSPEND button [1]
+* Suspend command is sent from the RileyLink to the active pod.
+* The suspend button will become greyed out [2] and the Pod status will display SUSPEND DELIVERY [3].
+
+   .. image:: ../images/Omnipod_Suspend1.png
+     :alt: Omnipod suspend insulin delivery  I
+
+* When the suspend command is successfully confirmed by the RileyLink a confirmation dialog will appear.
+* Click OK [1] to confirm and proceed.
+* Your active pod has now suspended all insulin delivery. 
+* The Omnipod (POD) tab will update the Pod status to 'Suspended' [2].
+* The SUSPEND button [3] will change to a new Resume Delivery button.
+
+   .. image:: ../images/Omnipod_Suspend2.png
+     :alt: Omnipod suspend insulin delivery  II
+
+Resumeing Insulin Delivery
+---------------------------------------------------------
+Use this command to instruct the active pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate for the current time from the active basal profile. The pod will again accept commands for bolus, TBR and SMB.  
+
+* Open Omnipod (POD) tab or menu
+* Press the Resume Delivery button [1] to start the process to instruct the current pod to resume normal insulin delivery. 
+* A message RESUME DELIVERY [2] will display in the Pod status field, signifying the RileyLink is actively sending the command to the suspended pod.
+* When the Resume delivery command is successfully confirmed by the RileyLink a confirmation dialog will appear.
+* Click OK [3] to confirm and proceed.
+* The Omnipod (POD) tab will update the Pod status field to 'Running' [4].
+* The Resume Delivery button will now display the SUSPEND button [5].
+
+   .. image:: ../images/Omnipod_Resume.png
+     :alt: Omnipod resume insulin delivery
