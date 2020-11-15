@@ -400,6 +400,18 @@ A summary of the main alerts that you may encounter is listed below:
 
 Best practice
 ===========================================================
+Optimal Omnipod and RileyLink Positioning
+---------------------------------------------------------
+* For security reasons positioning of RileyLink and pod is crucial during activation and deactivation of pod.
+* This includes the distance between the two as well as the orientation of RileyLink's antenna.
+* The pod MUST not be set directly on top of the RileyLink - due to the way the RileyLink's antenna radiates the signal.
+* Both should be less than 50 cm apart - see picture.
+
+   .. image:: ../images/Omnipod_RLDistance.png
+     :alt: Positioning of RileyLink and pod
+
+* A wider range can be used for normal operations once pod has been activated.
+
 Where to get help for Omnipod driver
 ---------------------------------------------------------
 All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerate and use the following guidelines when requesting assistance:
