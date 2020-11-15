@@ -211,14 +211,14 @@ Under normal circumstances, you should be able to get three days (72 hours) and 
 * Click on the Deactivate Pod button [2]
 * Keep pod close to RileyLink and click Next button [3] to begin the process of deactivating the pod.
 
-   .. image:: ../images/Omnipod_Dectivate1.png
+   .. image:: ../images/Omnipod_Deactivate1.png
      :alt: Omnipod pod deactivation I
      
 * Deactivating Pod screen will appear and you will receive a confirmation beep from the pod that deactivation was successful.
 * IF deactivation fails and you do not receive a confirmation beep, you may receive a red “No response from Pod message”. 
 * Please click on the Retry button [1] to attempt deactivation again.
 
-   .. image:: ../images/Omnipod_Dectivate2.png
+   .. image:: ../images/Omnipod_Deactivate2.png
      :alt: Omnipod pod deactivation II
 
 '************************************************************************************************************
@@ -242,7 +242,7 @@ Pod successfully deactivated
 * Click on the back button on your phone to return to the Omnipod (POD) tab.
 * Verify that the Pod status field displays a 'No active Pod' message in red.
 
-   .. image:: ../images/Omnipod_Dectivate3.png
+   .. image:: ../images/Omnipod_Deactivate3.png
      :alt: Omnipod pod deactivation III
 
 Daily usage
