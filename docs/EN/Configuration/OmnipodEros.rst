@@ -191,3 +191,31 @@ REMINDER: **Pod communication occurs at limited ranges for both pod activation a
 
 Deactivating a pod
 ---------------------------------------------------------
+REMINDER: **Pod communication occurs at limited ranges for both pod activation and deactivation due to security safety measures.**  During these procedures make sure that your pod is within a close proximity (~50cm or less) to the RileyLink.
+
+* Under normal circumstances, you should be able to get three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
+* To deactivate a pod (either from expiration or from a pod failure) open Omnipod (POD) tab or menu.
+* Click on the Pod Mgmt button [1]
+* Click on the Deactivate Pod button [2]
+* Keep pod close to RileyLink and click Next button [3] to begin the process of deactivating the pod.
+
+   .. image:: ../images/Omnipod_Dectivate1.png
+     :alt: Omnipod pod deactivation I
+     
+* Deactivating Pod screen will appear and you will receive a confirmation beep from the pod that deactivation was successful.
+* IF deactivation fails and you do not receive a confirmation beep, you may receive a red “No response from Pod message”. 
+* Please click on the Retry button to attempt deactivation again.
+
+***********************************************************
+WHERE IS DISCARD BUTTON? SCREENSHOT?
+***********************************************************
+
+Deactivating pod failes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* If deactivation continues to fail, please click on the Discard Pod button to discard the Pod. 
+* You may now remove your pod as its session has been deactivated. 
+* If your Pod has a screaming alarm, you may need  to manually silence it (using a pin or a paperclip) as the Discard Pod button will not silence it.
+
+   .. image:: ../images/Omnipod_Dectivate2.png
+     :alt: Omnipod pod deactivation II
+
