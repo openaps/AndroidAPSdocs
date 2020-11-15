@@ -205,3 +205,13 @@ REMINDER: **Pod communication occurs at limited ranges for both pod activation a
 * Deactivating Pod screen will appear and you will receive a confirmation beep from the pod that deactivation was successful.
 * IF deactivation fails and you do not receive a confirmation beep, you may receive a red “No response from Pod message”. 
 * Please click on the Retry button to attempt deactivation again.
+
+Deactivating pod failes constantly
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* If deactivation continues to fail, please click on the Discard Pod button to discard the Pod. 
+* You may now remove your pod as its session has been deactivated. 
+* If your Pod has a screaming alarm, you may need  to manually silence it (using a pin or a paperclip) as the Discard Pod button will not silence it.
+
+   .. image:: ../images/Omnipod_Dectivate2.png
+     :alt: Omnipod pod deactivation II
+
