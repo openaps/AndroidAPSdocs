@@ -1,6 +1,16 @@
 Omnipod Eros
 ***********************************************************
 
+Safety first
+===========================================================
+This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.
+
+Do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, charged RileyLink, and phone devices are must-haves).
+
+See also `general safety first page <../Getting-Started/Safety-first.html>`_!
+
+Hardware and Software Requirements
+===========================================================
 At present two different Omnipod models are available:
 
 a. `Omnipod Eros <https://www.omnipod.com/en-gb/about/how-to-use>`_ - launched in 2013 - called 'omnipod system' by manufacturer
@@ -8,8 +18,8 @@ b. `Omnipod Dash <https://www.omnipod.com/en-gb/about-dash>`_ - launched in 2019
 
 **Only Omnipod Eros can be used with AndroidAPS!**
 
-Hardware and Software Requirements
-===========================================================
+What you will need
+---------------------------------------------------------
 * Insulin Delivery Device: a fresh Omnipod (`Eros <https://www.omnipod.com/en-gb/about/how-to-use>`_ generation - NOT DASH) pod
 * `Mobile Phone Device <..\Module\module.html#phone>`_: Supported Omnipod driver Android phone with a version of AAPS 2.7.1 (or newer) and related components setup
 * Pod Communication Device: a 433MHz RileyLink from `getrileylink.org <getrileylink.org>`_, which is the bridge to communicate with Eros generation pods.
@@ -217,7 +227,7 @@ Under normal circumstances, you should be able to get three days (72 hours) and 
 
 '************************************************************************************************************
 
-Deactivating pod failes constantly
+Deactivating pod fails constantly
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * If deactivation continues to fail, please click on the Discard Pod button to discard the Pod. 
 * You may now remove your pod as its session has been deactivated. 
@@ -317,7 +327,7 @@ Use this command to put the active pod into a suspend state. In this suspend sta
    .. image:: ../images/Omnipod_Suspend2.png
      :alt: Omnipod suspend insulin delivery  II
 
-Resumeing Insulin Delivery
+Resuming Insulin Delivery
 ---------------------------------------------------------
 Use this command to instruct the active pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate for the current time from the active basal profile. The pod will again accept commands for bolus, TBR and SMB.  
 
@@ -338,7 +348,7 @@ NOTE - if you do not see a ACK ALERTS button, it is because it is conditionally 
 
 The process below will show you how to manually disable pod beeps that occur when the pod time reaches the defined warning limit in the `'Hours before shutdown' <../Configuration/OmnipodEros.html#alerts>`_ Omnipod alerts setting before the 72 hour (3 days) pod expiration.
 
-NOTE - If you have enabled the Automatically acknowledge Pod alerts setting in `Omnipod Alerts <../Configuration/OmnipodEros.html#alerts>`_, this alert will be handled automatically after the first occurance and you will NOT need to manually disable the alert. 
+NOTE - If you have enabled the Automatically acknowledge Pod alerts setting in `Omnipod Alerts <../Configuration/OmnipodEros.html#alerts>`_, this alert will be handled automatically after the first occurence and you will NOT need to manually disable the alert. 
 
 * When the defined `'Hours before shutdown' <../Configuration/OmnipodEros.html#alerts>`_ limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and a pod change will soon be required. 
 * You can verify this on the Omnipod (POD) tab under the 'Active Pod alerts' [1] field where the status message 'Pod will expire soon' is displayed.
@@ -377,7 +387,7 @@ Import Settings
    * Export your settings and store a copy in a safe place.
    * Uninstall the previous version of AAPS and restart your phone.
    * Install new version of AAPS and verify that you have no active pod session prior to attempting to import your settings.
-   * For detailes instructions on exporting and importing sessions see `this page <../Usage/ExportImportSettings.html>`_.
+   * For details instructions on exporting and importing sessions see `this page <../Usage/ExportImportSettings.html>`_.
 
 Omnipod driver alerts
 ---------------------------------------------------------
