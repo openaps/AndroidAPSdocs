@@ -274,3 +274,21 @@ Use this command to instruct the active pod to resume insulin delivery. After th
 
    .. image:: ../images/Omnipod_Resume.png
      :alt: Omnipod resume insulin delivery
+
+Acknowledging Pod Alerts
+---------------------------------------------------------
+NOTE - if you do not see a ACK ALERTS button, it is because it is conditionally displayed on the Omnipod (POD) tab ONLY when the pod expiration or low reservoir alert has been triggered.
+
+The process below will show you how to manually disable pod beeps that occur when the pod time reaches the defined warning limit in the `'Hours before shutdown' <../Configuration/OmnipodEros.html#alerts>`_ Omnipod alerts setting before the 72 hour (3 days) pod expiration.
+
+NOTE - If you have enabled the Automatically acknowledge Pod alerts setting in `Omnipod Alerts <../Configuration/OmnipodEros.html#alerts>`_, this alert will be handled automatically after the first occurance and you will NOT need to manually disable the alert. 
+
+* When the defined `'Hours before shutdown' <../Configuration/OmnipodEros.html#alerts>`_ limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and a pod change will soon be required. 
+* You can verify this on the Omnipod (POD) tab under the 'Active Pod alerts' [1] field where the status message 'Pod will expire soon' is displayed.
+* Press the ACK ALERTS button (acknowledge alerts) [2].
+* The RileyLink sends the command to deactivate pod expiration warning beeps to the pod and updates the Pod status field with ACKNOWLEDGE ALERTS [3].
+* Upon successful deactivation of the alerts two beeps will be issued by the active pod and a confirmation dialog will be displayed.
+* Click OK [4] to confirm and dismiss the dialog.
+
+   .. image:: ../images/Omnipod_AcknowledgeAlert.png
+     :alt: Acknowledge Alert
