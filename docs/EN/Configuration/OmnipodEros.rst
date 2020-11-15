@@ -206,9 +206,9 @@ REMINDER: **Pod communication occurs at limited ranges for both pod activation a
 * IF deactivation fails and you do not receive a confirmation beep, you may receive a red “No response from Pod message”. 
 * Please click on the Retry button to attempt deactivation again.
 
-***********************************************************
+
 WHERE IS DISCARD BUTTON? SCREENSHOT?
-***********************************************************
+===========================================================
 
 Deactivating pod failes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
