@@ -221,15 +221,13 @@ Under normal circumstances, you should be able to get three days (72 hours) and 
    .. image:: ../images/Omnipod_Deactivate2.png
      :alt: Omnipod pod deactivation II
 
-'************************************************************************************************************
-
-**WHERE IS DISCARD BUTTON? SCREENSHOT?**
-
-'************************************************************************************************************
-
 Deactivating pod fails constantly
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * If deactivation continues to fail, please click on the Discard Pod button to discard the Pod. 
+
+.. image:: ../images/Omnipod_Discard_Button.jpg
+     :alt: Omnipod Discard Button
+
 * You may now remove your pod as its session has been deactivated. 
 * If your Pod has a screaming alarm, you may need  to manually silence it (using a pin or a paperclip) as the Discard Pod button will not silence it.
 
