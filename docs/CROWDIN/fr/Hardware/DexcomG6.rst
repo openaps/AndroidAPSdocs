@@ -3,7 +3,7 @@ Dexcom G6
 Les bases en premier
 ==================================================
 
-* Suivez les recommandations générales relatives à l'hygiène des MGG et du capteur `here <../Hardware/GeneralCGMRecommendation.html>`_.
+* Suivez les recommandations générales relatives à l'hygiène des MGG et du capteur `ici <../Hardware/GeneralCGMRecommendation.html>`_.
 * Pour les transmetteurs G6 fabriqués après l'automne / fin 2018, veuillez vous assurez que vous utilisez bien l'une des dernières versions de xDrip+ <https://github.com/NightscoutFoundation/xDrip/releases>`_. Ces transmetteurs ont un nouveau firmware et la dernière version stable de xDrip+ (10/01/2019) ne fonctionne pas avec.
 
 Conseils généraux pour boucler avec un G6
