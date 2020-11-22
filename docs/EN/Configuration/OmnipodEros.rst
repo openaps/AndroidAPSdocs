@@ -118,11 +118,66 @@ Verification of RileyLink connection
 
 Note: A good visual indicator that the RileyLink is not connected is that the Insulin and Calculator buttons on the homescreen will be missing.  This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.
 
+Omnipod settings
+===========================================================
+* Enter Omnipod settings via hamburger menu > config builder or CONF tab and clicking the cog wheel.
+* Enable or disable the options via the toggle switches.
+
+.. image:: ../images/Omnipod_Settings.png
+  :alt: Omnipod settings
+
+* RileyLink - Allows for `scanning of a RileyLink device <../Configuration/OmnipodEros.html#rileylink-setup>`_. 
+* The Omnipod driver cannot select more than one RileyLink device at a time.
+
+Confirmation beeps
+---------------------------------------------------------
+* Bolus beeps: confirmation beeps when a bolus is delivered
+* Basal beeps: confirmation beeps when 
+
+   * a new basal rate is set,
+   * active basal rate is canceled or 
+   * current basal rate is changed
+
+* SMB beeps: confirmation beeps when a SMB is delivered
+* TBR beeps: confirmation beeps when a TBR is set or cancelled
+
+Alerts
+---------------------------------------------------------
+* Alert basics:
+
+   * Provides AAPS alerts and Nightscout announcements for expiration, shutdown, low reservoir based on the defined threshold units. 
+   * Note: An AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. 
+   * Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled.
+   * To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.
+
+* Expiration reminder: Pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
+* Hours before shutdown: Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
+* Low reservoir alert: Alert when the pod remaining units low reservoir limit is reached as defined in the number of units field.
+* Number of units: The number of units at which to trigger the pod low reservoir alert.
+* Automatically acknowledge Pod alerts: 
+
+   * When enabled a notification will still be issued.
+   * However immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
+
+Notifications
+---------------------------------------------------------
+* Provides AAPS and phone sound uncertainty notifications.
+* Sound for uncertain TBR notifications: Trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
+* Sound for uncertain SMB notifications: Trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
+* Sound for uncertain bolus notifications: Trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
+
+Other
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Provides advanced settings to assist debugging.
+* Suspend delivery button: Hide or display the suspend delivery button in the Omnipod (POD) tab.
+* Pulse log button: Hide or display the pulse log button in the Omnipod (POD) tab.
+* DST/Time zone detect on: Allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
+
 Activating & deactivating a pod
 ===========================================================
 Activating a pod
 ---------------------------------------------------------
-Before you are able to activate a pod please ensure you have properly configured and connected your RileyLink connection in the `Omnipod settings  <../Configuration/OmnipodEros.html#identify-riley-link>`_.
+Before you are able to activate a pod please ensure you have properly configured and connected your RileyLink connection in the `Omnipod settings <../Configuration/OmnipodEros.html#identify-riley-link>`_.
 
 REMINDER: **Pod communication occurs at limited ranges for both pod activation and deactivation due to security safety measures.**  During these procedures make sure that your pod is within a close proximity (~50cm or less) to the RileyLink.
 
@@ -415,6 +470,33 @@ This screen provides information in reverse chronological order for each state o
 
    .. image:: ../images/Omnipod_RLHistory3.png
      :alt: Display RileyLink and pod history
+     
+Actions (ACT) tab
+===========================================================
+In addition to the `general functions <../Usage/CPbefore26.html>`_ there are a few items on this tab that are specific to how the Omnipod pod differs from tube based pumps, especially after the processes of applying a new pod.
+
+Careportal section
+---------------------------------------------------------
+* The following three fields will have their age reset to 0 days and 0 hours after each pod change:  
+
+   * Insulin
+   * Cannula
+   * Pump battery
+   
+* This is done because of how the Omnipod pump is built and operates. The pump battery and insulin reservoir are self contained inside of each pod. 
+* Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps.
+* Therefore after a pod change the age of each of these values will automatically reset to zero.
+
+RESET RILEYLINK CONFIG
+---------------------------------------------------------
+* This button [2] resets the currently connected RileyLink configuration. 
+* When communication is started, specific data is sent to and set in the RileyLink (memory registers are set, communication protocols are set, tuned radio frequency is set). 
+* The primary usage of this feature is when the currently active RileyLink is not responding and communication is in a stuck state.
+* If the RileyLink is turned off and then back on, the RESET RILEYLINK CONFIG [2] button needs to be pressed, so that it sets these communication parameters in the RileyLink configuration. 
+* If this is NOT done then AAPS will need to be restarted after the RileyLink is power cycled.
+
+   .. image:: ../images/Omnipod_ActTab.png
+     :alt: Omnipod specific items on actions (ACT) tab
      
 Troubleshooting Omnipod
 ===========================================================
