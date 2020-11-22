@@ -1,13 +1,37 @@
 Omnipod Eros
 ***********************************************************
 
-Safety first
+Before you begin
 ===========================================================
+Safety first
+---------------------------------------------------------
 This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.
 
 Do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, charged RileyLink, and phone devices are must-haves).
 
 See also `general safety first page <../Getting-Started/Safety-first.html>`_!
+
+Either PDM or AAPS
+---------------------------------------------------------
+* Your PDM will no longer work after the AAPS Omnipod driver activates your pod
+* Previously you used your Omnipod PDM to send commands to your Omnipod Eros pod. 
+* An  Omnipod Eros pod only allows a single device to send communication to it.  
+* The device that successfully activates the pod is the only device allowed to communicate with it from that point forward.  
+* This means that once you activate an Omnipod Eros pod with your RileyLink through the AAPS Omnipod driver, you will no longer be able to use your PDM with your pod. The AAPS Omnipod driver with the RileyLink is now your acting PDM.
+* This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup and for emergencies with AAPS is not working properly.
+
+Multiple RileyLinks
+---------------------------------------------------------
+* Multiple RileyLinks can be configured but only one selected RileyLink at a time can communicate with a pod.
+* The AAPS Omnipod driver supports the ability to add multiple RileyLinks in the RileyLink configuration, however only one RileyLink at a time can be selected to be used for sending and receiving communication.
+
+RileyLink out of range
+---------------------------------------------------------
+* Your pod will **not** shut off when the RileyLink is out of range.
+* When your RileyLink is out of range or the signal is blocked from communicating with the active pod, your pod will continue to deliver basal insulin.
+* Upon activating a pod, the basal profile defined in AAPS will be programmed into the new pod.
+* Should you lose contact with the pod, it will revert to this basal profile.
+* You will not be able to issue new commands until the RileyLink comes back in range and re-establishes the connection. 
 
 Hardware and Software Requirements
 ===========================================================
@@ -41,12 +65,12 @@ Enabling the Omnipod Driver in AAPS
 
 **1. AAPS Setup Wizard**
 
-* Open setup wizard through  three-dot menu (top right-hand corner)
+* Open setup wizard [2] through  three-dot menu (top right-hand corner) [1]
 * Follow the wizard menus until you reach the Pump screen.
-* Select Omnipod 
-* Select Pump Setup to open the Omnipod Settings screen
+* Select Omnipod [3]
+* Select Pump Setup [4] to open the Omnipod Settings screen
 
-.. image:: ../images/Omnipod_SetupWizard.png
+.. image:: ../images/Omnipod_SetupWizard_b.png
   :alt: Omnipod in AAPS Setup Wizard
 
 **2. Config Builder** (for details see `config builder page <../Configuration/Config-Builder.html>`_)
