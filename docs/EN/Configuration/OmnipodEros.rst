@@ -500,6 +500,17 @@ RESET RILEYLINK CONFIG
      
 Troubleshooting Omnipod
 ===========================================================
+Pod Failures
+---------------------------------------------------------
+* Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself.
+* It is best practice not to call these into Insulet, since AAPS is not an approved use case.
+* A list of fault codes is available on this site `<https://github.com/openaps/openomni/wiki/Fault-event-codes>`_ to help determine the cause.
+
+Preventing error 49 pod failures
+---------------------------------------------------------
+* This failure is related to an incorrect pod state for a command or an error during an insulin delivery command.setup.
+* We recommend users to switch to the Nightscout client to `upload only (Disable sync) <../Installing-AndroidAPS/Nightscout.html#androidaps-settings>`_ under the Config Builder -> General > NSClient> Cog wheel > Advanced Settings to prevent possible failures.
+
 Pump Unreachable Alerts
 ---------------------------------------------------------
 * It is recommended that pump unreachable alerts be configured to 120 minutes.
@@ -509,40 +520,75 @@ Pump Unreachable Alerts
    * Local Alerts
    * Pump unreachable threshold [min]: 120
    
-Pod Failures
----------------------------------------------------------
-* Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself.
-* It is best practice not to call these into Insulet, since AAPS is not an approved use case.
-* A list of fault codes is available on this site `<https://github.com/openaps/openomni/wiki/Fault-event-codes>`_ to help determine the cause.
-
 Import Settings
 ---------------------------------------------------------
-* Please note that importing settings may import possibly outdated Pod status. As a result, you may lose any active Pod.
+* Please note that importing settings has the possibility to import an outdated Pod status. 
+* As a result, you may lose an active Pod.
 * It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
 
    * Deactivate your pod session. Verify that you do not have an active pod session.
    * Export your settings and store a copy in a safe place.
    * Uninstall the previous version of AAPS and restart your phone.
-   * Install new version of AAPS and verify that you have no active pod session prior to attempting to import your settings.
-   * For details instructions on exporting and importing sessions see `this page <../Usage/ExportImportSettings.html>`_.
+   * Install the new version of AAPS and verify that you do not have an active pod session prior to attempting to import your settings.
+   * `Import your settings <../Usage/ExportImportSettings.html>`_.
+   * `Activate your new pod <../Configuration/OmnipodEros.html#activating-a-pod>`_.
 
 Omnipod driver alerts
 ---------------------------------------------------------
 Please note that the Omnipod driver presents a variety of unique alerts on the Overview tab, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert.
 
 A summary of the main alerts that you may encounter is listed below:
-* 'No active Pod' - No active Pod session detected.  You may select SNOOZE on this alert which will remain or trigger again until a `Pod session is started <../Configuration/OmnipodEros.html#activating-a-pod>`_.
-* 'Pod suspended' - Informational alert that Pod has been `suspended <../Configuration/OmnipodEros.html#suspending-insulin-delivery>`_.
-* 'Setting basal profile failed. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed.' - Informational alert that the Pod basal profile setting has failed and you will need to hit Refresh on the `Omnipod tab <../Configuration/OmnipodEros.html#omnipod-tab>`_.
+
+No active Pod
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* No active Pod session detected.
+* This alert can temporarily be dismissed by pressing SNOOZE but it will keep triggering as long as a `new pod has not been activated <../Configuration/OmnipodEros.html#activating-a-pod>`_.
+
+Pod suspended
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Informational alert that Pod has been `suspended <../Configuration/OmnipodEros.html#suspending-insulin-delivery>`_.
+
+'Setting basal profile failed. Delivery might be suspended! Please manually refresh the pod status from the Omnipod tab and resume delivery if needed.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Informational alert that the pod basal profile setting has failed and you will need to hit 'Refresh' on the `Omnipod tab <../Configuration/OmnipodEros.html#omnipod-tab>`_.
+
+
+Unable to verify whether SMB bolus succeeded. If you are sure that the bolus didn't succeed, you should manually delete the SMB entry from treatments.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Alert that the SMB bolus success could not be verified.
+* You will need to verify the last bolus field on the `Omnipod tab <../Configuration/OmnipodEros.html#omnipod-tab>`_ to see if SMB bolus succeeded.
+* If not remove the entry from the `treatments tab <../Getting-Started/Screenshots.html#treatment>`_.
+
+Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Alert that success of a task for bolus, temporary basal radte (TBR) or SMB could not be verified.
+* You will need to verify the last bolus / TBR field on the `Omnipod tab <../Configuration/OmnipodEros.html#omnipod-tab>`_ to see if task succeeded.
+* If not remove the entry from the `treatments tab <../Getting-Started/Screenshots.html#treatment>`_.
+
+Pod Time Deviation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* When the time on the pod and the time your phone deviates too much then it is difficult for AAPS loop to function and make accurate predictions and dosage recommendations.
+* If the time deviation between the pod and the phone is more than 5 minutes the AAPS will report the pod is in a suspended state under Pod status with a HANDLE TIME CHANGE message.
+* An additional Set Time icon will appear at the bottom of the `Omnipod (POD) tab <../Configuration/OmnipodEros.html#omnipod-tab>`_.
+* Clicking Set Time will synchronize the time on the pod with the time on the phone and then you can click the RESUME DELIVERY button to continue normal pod operations.
 
 Best practice
 ===========================================================
 Optimal Omnipod and RileyLink Positioning
 ---------------------------------------------------------
-* For security reasons positioning of RileyLink and pod is crucial during activation and deactivation of pod.
-* This includes the distance between the two as well as the orientation of RileyLink's antenna.
-* The pod MUST not be set directly on top of the RileyLink - due to the way the RileyLink's antenna radiates the signal.
-* Both should be less than 50 cm apart - see picture.
+* The antenna used on the RileyLink to communicate with an Omnipod pod is a 433 MHz helical spiral antenna.
+* Due to its construction properties it radiates an omni directional signal like a three dimensional doughnut with the z-axis representing the vertical standing antenna.
+* This means that there are optimal positions for the RileyLink to be placed, especially during pod activation and deactivation routines.
+* Graphical plot of helical spiral antenna in an omnidirectional pattern
+
+   .. image:: ../images/Onipod_RLAntenna.png
+     :alt: Graphical plot of helical spiral antenna in an omnidirectional pattern
+
+* Because of both safety and security concerns, `pod activation <../Configuration/OmnipodEros.html#activating-a-pod>`_ and `deactivation <../Configuration/OmnipodEros.html#deactivating-a-pod>`_ has to be done at a range closer (~50 cm away or less) than other operations such as giving a bolus, setting a TBR or simply refreshing the pod status.
+* Due to the nature of the signal transmission from the RileyLink antenna it is NOT recommended to place the pod directly on top of the RileyLink.
+* The image below shows the optimal way to position the RileyLink during pod activation and deactivation procedures.
+* The pod may activate in other positions but you will have the most success using the position in the image below.
+* Note:  If after positioning the pod and RileyLink optimally communication fails, this may be due to a low battery which decreases the transmission range of the RileyLink antenna. To avoid this issue make sure the RileyLink is properly charged or connected directly to a charging cable during this process.
 
    .. image:: ../images/Omnipod_RLDistance.png
      :alt: Positioning of RileyLink and pod
@@ -553,9 +599,9 @@ Where to get help for Omnipod driver
 ---------------------------------------------------------
 All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerate and use the following guidelines when requesting assistance:
 
-Level 0: Read the relevant section of these docs to make sure you understand how the function you are experiencing difficulty with is supposed to work.
-Level 1: If you are still encountering problems that are not resolvable by these docs, please use the *#androidaps* channel on Discord by using `this invite link <https://discord.com/invite/NhEUtzr>`_.
-Level 2: Search existing `issues <https://github.com/nightscout/AndroidAPS/issues>`_ to see if one exists for your issue; if not, please create an issue and attach your `log files <https://androidaps.readthedocs.io/en/latest/CROWDIN/sk/Usage/Accessing-logfiles.html>`_.
+Level 0: Read the relevant section of these docs to ensure you understand how the functionality you are experiencing difficulty with is supposed to work.
+Level 1: If you are still encountering problems that you are not able to resolve by using these docs, then please go to *#androidaps* channel on Discord by using `this invite link <https://discord.com/invite/NhEUtzr>`_.
+Level 2: Search existing `issues <https://github.com/nightscout/AndroidAPS/issues>`_ to see if your issue has already been reported; if not, please create a new issue and attach your `log files <https://androidaps.readthedocs.io/en/latest/CROWDIN/sk/Usage/Accessing-logfiles.html>`_.
 
 Be patient - most of the community is good-natured in disposition and solving issues often requires time and patience from both users and developers.
 
