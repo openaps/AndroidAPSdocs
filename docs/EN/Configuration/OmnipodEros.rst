@@ -340,6 +340,81 @@ NOTE - If you have enabled the Automatically acknowledge Pod alerts setting in `
    .. image:: ../images/Omnipod_AcknowledgeAlertFailed.png
      :alt: Acknowledge Alert failed
 
+View pod history
+---------------------------------------------------------
+The pod history tool allows you to view the actions and results committed to your currently active pod during its three day (72 - 80 hours) life. 
+
+This feature is useful for verifying boluses, TBRs, basal changes that were given but you may be unsure if they completed. The remaining categories are useful in general for troubleshooting issues and determining the order of events that occurred leading up to a failure.   
+
+* Go to the Omnipod (POD) tab and press the POD MGMT [1] button to access the Pod management screen.
+* Press the Pod history [2] button to access the pod history screen.
+
+   .. image:: ../images/Omnipod_History1.png
+     :alt: Acccess pod history
+     
+* On the Pod history screen the default category of All [1] is displayed showing the Date and Time [2] of all pod Actions [3] and Results [4] in reverse chronological order.  
+* Use your phone’s back button two times to return to the Omnipod (POD) tab in the main AAPS interface.
+
+View RileyLink Settings and History
+---------------------------------------------------------
+The primary use of this feature is when your RileyLink is out of the Bluetooth range of your phone after a period of time and the RileyLink status reports 'RileyLink unreachable'.
+
+The refresh button will manually attempt to re-establish Bluetooth communication with the currently configured RileyLink in the Omnipod settings.
+
+Manually re-establish RileyLink bluetooth communication
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* From the Omnipod (POD) tab when the RileyLink Status: [1] reports 'RileyLink unreachable' press the 'RL STATS' button [2] to access the RileyLink settings page [3].
+* Under the RileyLink section [4] you can confirm both the Bluetooth connection status and error in the Connection Status and Error: fields [5].
+* A Bluetooth Error and RileyLink unreachable status should be shown.
+* Start the manual bluetooth reconnection by pressing the refresh button [6] in the lower right corner.
+* After a successful RileyLink bluetooth reconnection the Connection Status field [7] should report 'RileyLink ready'.  
+
+   .. image:: ../images/Omnipod_RLHistory1.png
+     :alt: Re-establish RileyLink bluetooth connection
+
+RileyLink and Active Pod Settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This screen will provide information, status and settings configuration information for both the currently configured RileyLink and the currently active Omnipod Eros pod.  It will also allow you to `manually refresh the RileyLink Bluetooth connection <../Configuration/OmnipodEros.html#manually-re-establish-rileylink-bluetooth-communication>`_.
+
+* On the Omnipod (POD) tab press the RL STATS [1] button.
+* Currently configured RileyLink [2] and active pod device [3] settings will be displayed.
+
+   .. image:: ../images/Omnipod_RLHistory2.png
+     :alt: Display RileyLink and pod settings
+
+* RileyLink [2] fields
+
+   * Configured Address: MAC address of the selected RileyLink defined in the Omnipod Settings.
+   * Connected Device: Model of the Omnipod pod currently communicating with the RileyLink (currently only eros pods work with the RileyLink)
+   * Connection Status: The current status of the Bluetooth connection between the RileyLink and the phone running AAPS.
+   * Connection Error: If there is an error with the RileyLink Bluetooth connection details will be displayed here.
+   * RL Firmware: Current firmware version installed on the actively connected RileyLink.
+
+* Device [2] fields - Active Pod
+
+   * Device Type: The type of device communicating with the RileyLink (Omnipod pod pump)
+   * Device Model: The model of the active device connected to the RileyLink (the current model name of the Omnipod pod, which is Eros)
+   * Pump Serial Number: Serial number of the currently activated pod
+   * Pump Frequency: Communication radio frequency the RileyLink has tuned to enable communication between itself and the pod.
+   * Last used frequency: Last known radio frequency the pod used to communicate with the RileyLink.
+   * Last device contact: Date and time of the last contact the pod made with the RileyLink.
+   * Refresh button to `manually refresh RileyLink Bluetooth communication <../Configuration/OmnipodEros.html#manually-re-establish-rileylink-bluetooth-communication>`_ with the phone.
+
+RileyLink and active pod History
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This screen provides information in reverse chronological order for each state or action that either the RileyLink or currently connected pod has taken.  The entire history is only available for the currently active pod, after a pod change this history will be erased and only events from the newly activated pod will be recorded and shown.
+
+* On the Omnipod (POD) tab press the RL STATS [1] button to view Settings and History screen.
+* Click on the HISTORY text [2] to display the entire history of the RileyLink and currently active pod session.
+* Fields
+
+   * Date & Time [3]: In reverse chronological order the timestamp of each event.
+   * Device [4]: The device to which the current action or state is referring.
+   * State or Action [5]: The current state or action performed by the device.
+
+   .. image:: ../images/Omnipod_RLHistory3.png
+     :alt: Display RileyLink and pod history
+     
 Troubleshooting Omnipod
 ===========================================================
 Pump Unreachable Alerts
