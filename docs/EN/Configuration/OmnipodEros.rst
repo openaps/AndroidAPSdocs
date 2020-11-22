@@ -322,15 +322,23 @@ The process below will show you how to manually disable pod beeps that occur whe
 NOTE - If you have enabled the Automatically acknowledge Pod alerts setting in `Omnipod Alerts <../Configuration/OmnipodEros.html#alerts>`_, this alert will be handled automatically after the first occurence and you will NOT need to manually disable the alert. 
 
 * When the defined `'Hours before shutdown' <../Configuration/OmnipodEros.html#alerts>`_ limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and a pod change will soon be required. 
-* You can verify this on the Omnipod (POD) tab under the 'Active Pod alerts' [1] field where the status message 'Pod will expire soon' is displayed.
+* You can verify this on the Omnipod (POD) tab under the 'Active Pod alerts' [1] field where the status message 'Pod will expire soon' is displayed. This trigger will display the ACK ALERTS [2] button 
 * Press the ACK ALERTS button (acknowledge alerts) [2].
-* The RileyLink sends the command to deactivate pod expiration warning beeps to the pod and updates the Pod status field with ACKNOWLEDGE ALERTS [3].
-* Upon successful deactivation of the alerts two beeps will be issued by the active pod and a confirmation dialog will be displayed.
+* The RileyLink sends the command to the pod to deactivate pod expiration warning beeps and updates the Pod status field with ACKNOWLEDGE ALERTS [3].
+* Upon successful deactivation of the alerts two beeps will be issued by the active pod and a confirmation dialog will display the message 'Activate alerts have been acknowledged'.
 * Click OK [4] to confirm and dismiss the dialog.
 * On the Omnipod (POD) tab the warning message under the Active Pod alerts will no longer be displayed [5] and the active pod will no longer issue pod expiration warning beeps.
 
    .. image:: ../images/Omnipod_AcknowledgeAlert.png
      :alt: Acknowledge Alert
+
+* If the RileyLink is out of range of the pod while the acknowledge alerts command is being processed a warning message will display 2 options.  
+
+   * Mute [1] will silence this current warning.
+   * OK [2] will confirm this warning and allow the user to try to acknowledging alerts again.
+
+   .. image:: ../images/Omnipod_AcknowledgeAlertFailed.png
+     :alt: Acknowledge Alert failed
 
 Troubleshooting Omnipod
 ===========================================================
