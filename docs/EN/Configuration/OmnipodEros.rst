@@ -75,13 +75,13 @@ Enabling the Omnipod Driver in AAPS
 
 **2. Config Builder** (for details see `config builder page <../Configuration/Config-Builder.html>`_)
 
-* Open config builder via hamburger menu (top left corner)
+* Open config builder [1] via hamburger menu (top left corner)
 * Scroll down to pump
-* Select Omnipod
-* With the checkbox on the right you can decide whether you want to use Omnipod `via tab or via hamburger menu <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_.
-* Click cog wheel to enter Omnipod setup
+* Select Omnipod [2]
+* With the checkbox on the right you can decide whether you want to use Omnipod `via tab or via hamburger menu <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ [4].
+* Click cog wheel to enter Omnipod setup [3].
 
-.. image:: ../images/Omnipod_ConfigBuilder.png
+.. image:: ../images/Omnipod_ConfigBuilder_b.png
   :alt: Omnipod in Config Builder
 
 Identify RileyLink
