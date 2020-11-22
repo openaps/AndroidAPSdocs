@@ -254,7 +254,7 @@ Information fields
 
 * Reservoir: 'Over 50 U left' when more than 50 units are left in the reservoir.  Below this value the exact units are displayed in yellow text.
 * Total delivered: Displays the total number of units of insulin delivered from the reservoir.
-* Errors: Last error encountered.  Review the Pod history, RileyLink history and log files for past errors and more detailed information.
+* Errors: Last error encountered.  Review the `Pod history <../Configuration/OmnipodEros.html#pod-history>`_, `RileyLink history and log files <../Configuration/OmnipodEros.html#view-rileylink-settings-and-history>`_ for past errors and more detailed information.
 * Active pod alerts: Reserved for currently running alerts on the active pod.  Normally during pod expiration past 72 hours and native pod beep alerts are running.
 
 Buttons (Icons)
@@ -266,13 +266,14 @@ Buttons (Icons)
    * `Activate Pod <../Configuration/OmnipodEros.html#activating-a-pod>`_ - primes and activates a new pod
    * `Pod history <../Configuration/OmnipodEros.html#pod-history>`_ - displays active pod activity history
 
-* RL STATS: Navigates to RileyLink Statistics displaying current settings and RileyLink Connection history
+* RL STATS: Navigates to RileyLink Statistics displaying current `settings and RileyLink connection history <../Configuration/OmnipodEros.html#view-rileylink-settings-and-history>`_
 
    * Settings - displays RileyLink and active pod settings information
    * History - displays RileyLink and Pod communication history
 
 * PULSE LOG: Sends the active pod pulse log to the clipboard
 * `SUSPEND <../Configuration/OmnipodEros.html#suspending-insulin-delivery>`_: Suspends the active pod
+* `ACK ALERTS <../Configuration/OmnipodEros.html#acknowledging-pod-alerts>`_: Conditionally displayed when pod time is past 72 hours and native pod warning beeps are actively running.  Allows the user to send a command to the pod to disable the active beeping for pod expiration.  Once successfully disabled this icon is no longer displayed. 
 
 Suspending Insulin Delivery
 ---------------------------------------------------------
@@ -355,7 +356,7 @@ This feature is useful for verifying boluses, TBRs, basal changes that were give
 * On the Pod history screen the default category of All [1] is displayed showing the Date and Time [2] of all pod Actions [3] and Results [4] in reverse chronological order.  
 * Use your phone’s back button two times to return to the Omnipod (POD) tab in the main AAPS interface.
 
-View RileyLink Settings and History
+View RileyLink settings and history
 ---------------------------------------------------------
 The primary use of this feature is when your RileyLink is out of the Bluetooth range of your phone after a period of time and the RileyLink status reports 'RileyLink unreachable'.
 
