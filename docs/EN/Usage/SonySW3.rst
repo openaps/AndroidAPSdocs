@@ -1,5 +1,5 @@
-Troubleshooting Sony Smartwach 3
-#########################################################
+Manual Installation of Google Play Service for  Sony Smartwach 3
+#####################################################################
 
 The Sony Smartwach 3 is one of the most popular watches to be used with AAPS. Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS and above. 
 
