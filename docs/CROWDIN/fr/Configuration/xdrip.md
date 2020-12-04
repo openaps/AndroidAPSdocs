@@ -106,23 +106,24 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 6G, 8H ou 8J, 
    * Ce guide vous aidera lors du paramétrage initial.
    * Vous aurez besoin de votre numéro de série de l'émetteur si c'est la première fois que vous l'avez utilisé.
 
-* Mettre le numéro de série du nouveau transmetteur (présent sur l'emballage du transmetteur ou à l'arrière de celui-ci). Veillez à ne pas confondre 0 (zéro) et O (o majuscule).
+* Mettre le numéro de série du nouveau transmetteur (présent sur l'emballage du transmetteur ou à l'arrière de celui-ci). Be careful not to confuse `0` (zero) and `O` (capital letter o).
    
    ![xDrip+ Numéro de série Transmetteur Dexcom](../images/xDrip_Dexcom_TransmitterSN.png)
 
 * Insérer un nouveau capteur (uniquement en cas de remplacement)
 
 * Placer l'émetteur dans le capteur
-* Ne démarrez pas le nouveau capteur avant que l'information suivante soit présente dans la page Etat du système -> Classic Status Page -> G5/G6 status -> PhoneServiceState :
+* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter, accept it (tap "pair")
+* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
    
    * Numéro de série du transmetteur commençant par 80 ou 81 : "Got data hh:mm" (par ex. "Got data 19:04")
-   * Numéro de série du transmetteur commençant par 8G, 8H ou 8J : "Got glucose hh:mm" (par ex. "Got glucose 19:04") ou "Got now raw hh:mm" (par ex. "Got now raw 19:04")
+   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got no raw 19:04")
    
    ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Insérer un nouveau capteur (uniquement en cas de remplacement)
+* Start sensor (only if replacing)
    
-   -> En bas de l'écran, `Warm Up x,x hours left` doit être affiché après quelques minutes.
+   -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
 
 -> Si le numéro de série de l'émetteur ne commence pas par 8G, 8H ou 8J et qu'il n'y a pas de temps renseigné après plusieurs minutes, arrêtez et redémarrez le capteur.
 
