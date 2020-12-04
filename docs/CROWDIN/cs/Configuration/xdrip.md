@@ -106,23 +106,24 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G nebo 8H 
    * Průvodce vás provede prvotním nastavením.
    * Pokud ho používáte poprvé, budete potřebovat sériové číslo vysílače.
 
-* Vložte výrobní číslo nového vysílače (je napsané na krabičce od vysílače nebo na spodní straně vysílače). Buďte opatrní, abyste nezaměnili 0 (nulu) a O (velké písmeno o).
+* Vložte výrobní číslo nového vysílače (je napsané na krabičce od vysílače nebo na spodní straně vysílače). Be careful not to confuse `0` (zero) and `O` (capital letter o).
    
    ![xDrip+ Výrobní číslo vysílače Dexcom](../images/xDrip_Dexcom_TransmitterSN.png)
 
 * Vložte nový senzor (pouze když ho měníte)
 
 * Nasaďte vysílač na senzor
-* * Nespuštějte nový senzor, dokud nejsou zobrazeny následující informace ve Statusu -> G5/G6 status -> PhoneServiceState:
+* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter, accept it (tap "pair")
+* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
    
    * Sériové číslo vysílače začínající na 80 nebo 81: "Got data hh:mm" (např. "Got data 19:04")
-   * Sériové číslo vysílače začínající na 8G, 8H nebo 8J: "Got glucose hh:mm" (např. "Got glucose 19:04") nebo "nemá raw hh:mm" Got no raw hh:mm" (např. "Got now raw 19:04")
+   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got no raw 19:04")
    
    ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Spusťte senzor (pouze pokud ho měníte)
+* Start sensor (only if replacing)
    
-   -> V dolní části obrazovky se po několika minutách musí zobrazit `Zahřívání zbývá x,x hodin`.
+   -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
 
 -> Jestliže výrobní číslo vašeho vysílače nezačíná znaky 8G, 8H nebo 8J a ani po několika minutách se nezobrazí žádný časový údaj, zastavte senzor a znovu ho restartujte.
 
