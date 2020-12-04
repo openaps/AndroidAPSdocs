@@ -106,23 +106,24 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J 
    * Esto le guiará a través de la configuración inicial.
    * necesitará el número de serie del transmisor si es la primera vez que lo utiliza.
 
-* Ponga el número de serie del nuevo transmisor (en el envase del transmisor o en la parte posterior del transmisor). Tenga cuidado de no confundir 0 (cero) y O (letra o mayúscula).
+* Ponga el número de serie del nuevo transmisor (en el envase del transmisor o en la parte posterior del transmisor). Be careful not to confuse `0` (zero) and `O` (capital letter o).
    
    ![xDrip+ Dexcom número de serie del Transmisor](../images/xDrip_Dexcom_TransmitterSN.png)
 
 * Insertar nuevo sensor (sólo si se sustituye)
 
 * Coloque el transmisor en el sensor
-* No inicie un nuevo sensor antes de que se muestre la información siguiente en la página de estado clásica-> G5/G6 estado-> PhoneServiceState:
+* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter, accept it (tap "pair")
+* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
    
    * Transmisor con número de serie que empieza por 80 o 81: "Obtiene datos hh:mm" (por ejemplo, "Obtiene datos 19:04")
-   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got no raw 19:04")
    
    ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Iniciar sensor (sólo si se reemplaza)
+* Start sensor (only if replacing)
    
-   -> Cerca de la parte inferior de la pantalla `Iniciando x, x horas faltantes` debe aparecer después de unos pocos minutos.
+   -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
 
 -> Si el número de serie de su transmisor does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
 
