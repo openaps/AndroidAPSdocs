@@ -113,7 +113,7 @@ To learn more about the details and reasons for these recommendations read the [
 * Insert new sensor (only if replacing)
 
 * Put transmitter into sensor
-* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter, accept it (tap "pair")
+* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter's serial no., accept it (tap "pair")
 * Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
    
    * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
