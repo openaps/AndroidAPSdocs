@@ -2,50 +2,50 @@
 
 ## Pantalla de inicio
 
-![Homescreen V2.7](../images/Home2020_Homescreen.png)
+![Pantalla de inicio V2.7](../images/Home2020_Homescreen.png)
 
 Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene la mayor parte de la información que necesitarás día a día.
 
-### Section A - Tabs
+### Sección A - Tablas
 
-* Navigate between the various AndroidAPS modules.
-* Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder#tab-or-hamburger-menu).
+* Navegar entre los distintos módulos de AndroidAPS.
+* También puede cambiar las pantallas deslizando a la izquierda o a la derecha.
+* Las pestañas mostradas pueden seleccionarse en [constructor de configuración](../Configuration/Config-Builder#tab-or-hamburger-menu).
 
-### Section B - Profile & target
+### Sección B - Perfil & objetivo
 
 #### Current Profile
 
-![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+![Duración restante del cambio de perfil](../images/Home2020_ProfileSwitch.png)
 
-* Current profile is displayed in the left bar.
-* Long press profile bar to view profile details or to [switch between different profiles](../Usage/Profiles#profile-switch).
-* If profile switch was made with duration remaining time in minutes is shown in brackets.
+* El perfil actual se muestra en la barra izquierda.
+* Mantenga presionada la barra de perfil para ver los detalles del perfil o para [ cambiar entre diferentes perfiles ](../Usage/Profiles#profile-switch).
+* Si el cambio de perfil se realizó con la duración restante, el tiempo en minutos se muestra entre paréntesis.
 
-#### Target
+#### Objetivo
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Duración restante objetivo temporal](../images/Home2020_TT.png)
 
-* Current target blood glucose level is displayed in the right bar.
-* Long press target bar to set a [temporary target](../Usage/temptarget.md).
-* If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
+* El nivel actual de glucosa en la sangre se muestra en la barra derecha.
+* Mantenga presionada la barra de objetivo para establecer un [ objetivo temporal ](../Usage/temptarget.md).
+* Si se establece un objetivo temporal, la barra se vuelve amarilla y el tiempo restante en minutos se muestra entre paréntesis.
 
-#### Visualization of Dynamic target adjustment
+#### Visualización de ajuste de objetivo dinámico
 
-![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+![Visualización del ajuste de objetivo dinámico](../images/Home2020_DynamicTargetAdjustment.png)
 
-* AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
-* Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
-   * "sensitivity raises target" and/or 
-   * "resistance lowers target" 
-* If AAPS detects resistance or sensitivity the target will change from what is set from profile. 
-* When it alters the target glucose background will change to green.
+* AAPS puede ajustar dinámicamente tu objetivo en función de la sensibilidad si está utilizando el algoritmo SMB.
+* Habilitar una o ambas de las [siguientes opciones](../Configuration/Preferences#openaps-smb-settings) 
+   * "sensibilidad aumenta el objetivo" y/o 
+   * "resistencia baja objetivo" 
+* Si AAPS detecta resistencia o sensibilidad, el objetivo cambiará de lo establecido en el perfil. 
+* Cuando cambie el objetivo de glucosa, el fondo se tornará verde.
 
-### Section C - BG & loop status
+### Sección C - BG & estado del bucle
 
-#### Current blood glucose
+#### Glucosa sanguínea actual
 
-* Latest blood glucose reading from your CGM is shown on the left side.
+* La última lectura de glucosa en sangre de su CGM se muestra en el lado izquierdo.
 * Color of the BG value reflects the status to the defined [range](../Configuration/Preferences#range-for-visualization). 
    * green = in range
    * red = below range
