@@ -113,7 +113,7 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. pradedant nuo 8G, 8H ar 8J, naudokite
 * Įdėkite naują sensorių (tik keičiant)
 
 * Uždėkite siųstuvą ant sensoriaus
-* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter, accept it (tap "pair")
+* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter's serial no., accept it (tap "pair")
 * Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
    
    * Siųstuvo serijos numeris prasideda 80 arba 81: „Got data hh:mm“ (pvz., „Got data 19:04“)
