@@ -51,7 +51,7 @@ El sensor recuerda el dispositivo con el que se inició. Sólo este dispositivo 
 
 La primera configuración de la conexión para el sensor es fundamental. La aplicación LibreLink intenta establecer una conexión inalámbrica al sensor cada 30 segundos. Si faltan uno o más valores obligatorios, hay que establecerlos. No tienes límite de tiempo para hacer eso. El sensor está constantemente intentando configurar la conexión. Incluso después de algunas horas. Sea paciente y trate de hacer diferentes ajustes antes incluso de pensar en cambiar el sensor.
 
-As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLink's start screen there is no connection or some other setting blocks LibreLink to signal alarms. Compruebe si el sonido está habilitado y todas las clases de notificaciones de la aplicación de bloqueo están inhabilitadas. When the exclamation mark is gone, the connection should be established and blood sugar values are sent to the smartphone. Esto debería ocurrir después de un máximo de 5 minutos.
+Siempre y cuando vea un signo de exclamación rojo ("!") en la esquina superior izquierda de la pantalla de inicio de LibreLink no hay ninguna conexión o alguna otra configuración de bloques de LibreLink para señales de alarma. Compruebe si el sonido está habilitado y todas las clases de notificaciones de la aplicación de bloqueo están inhabilitadas. Cuando el signo de exclamación desaparezca, la conexión debe haberse reestablecido y los valores de azúcar en sangre se enviarán al smartphone. Esto debería ocurrir después de un máximo de 5 minutos.
 
 .. image:: ../images/Libre2_ExclamationMark.png
   :alt: LibreLink no hay conexión
@@ -64,21 +64,21 @@ Si la marca de exclamación permanece o se obtiene un mensaje de error, esto pue
 - El Bluetooth está apagado, por favor enciendalo
 -el sonido está bloqueado
 -Las notificaciones de la aplicación están bloqueadas
-- idle screen notifications are blocked 
-- you have a faulty Libre 2 sensor from a production LOT number with a 'K' followed by 8 digits. Esto se encuentra impreso en el paquete amarillo. Estos sensores tienen que ser reemplazados ya que no funcionan con bluetooth.
+-las notificaciones para la pantalla de bloqueo están bloqueadas 
+-tiene un sensor Libre 2 defectuoso de un número LOTE de producción con un "K" seguido de 8 dígitos. Esto se encuentra impreso en el paquete amarillo. Estos sensores tienen que ser reemplazados ya que no funcionan con bluetooth.
 
-Reiniciar el teléfono puede ayudar, es posible que tenga que hacerlo varias veces. Tan pronto como se establezca la conexión, desaparece la marca de exclamación roja y se toma el paso más importante. It may happen that depending on system settings the exclamation mark remains but you still get readings. En ambos casos está bien. El sensor y el teléfono están ahora conectados, cada minuto se transmite un valor de azúcar en la sangre.
+Reiniciar el teléfono puede ayudar, es posible que tenga que hacerlo varias veces. Tan pronto como se establezca la conexión, desaparece la marca de exclamación roja y se toma el paso más importante. Puede suceder que dependiendo de la configuración del sistema, el signo de exclamación permanece pero todavía se obtienen lecturas. En ambos casos está bien. El sensor y el teléfono están ahora conectados, cada minuto se transmite un valor de azúcar en la sangre.
 
 .. imagen:: ../images/Libre2_Connected.png
   :alt: Conexión LibreLink establecida
   
-In rare case it could help to empty the bluetooth cache and/or reset all network connections via the system menu. This removes all connected bluetooth devices which may help to setup a proper bluetooth connection. That procedure is save as the started sensor is remembered by the patched LibreLink app. Nothing additional has to be done here. Simplemente espere a que la aplicación parcheada se conecte al sensor.
+En raras ocasiones podría ayudar vaciar el caché bluetooth y/o restablecer todas las conexiones de red a través del menú del sistema. Esto elimina todos los dispositivos bluetooth conectados y puede ayudar a configurar una conexión bluetooth adecuada. Ese procedimiento se guarda como sensor iniciado y es recordado por la aplicación de LibreLink parcheada. No hay que hacer nada adicional aquí. Simplemente espere a que la aplicación parcheada se conecte al sensor.
 
 Después de una conexión exitosa la configuración del smartphone se puede cambiar si es necesario. Esto no es recomendable, pero es posible que desee ahorrar energía. El servicio de ubicación se puede desactivar, el volumen puede establecerse en cero o las alarmas se pueden desactivar de nuevo. Los niveles de azúcar de sangre se transfieren de todos modos.
 
 Al iniciar el siguiente sensor, no obstante, todos los valores deben volver a establecerse!
 
-Remark: The patched app needs the mandatory settings set in that hour after warmup to enable a connection. Durante los 14 días de funcionamiento no son necesarios. In most cases when you have problems with starting a sensor the location service was switched off. For Android it is needed for proper bluetooth operation(!) to connect. Please refer to Google's Android documentation.
+Observación: La aplicación parcheada necesita los ajustes obligatorios establecidos en esa hora después de la preparación para habilitar una conexión. Durante los 14 días de funcionamiento no son necesarios. En la mayoría de los casos, cuando tiene problemas al iniciar un sensores por que el servicio de ubicación se ha desactivado. Para Android es necesario para un correcto bluetooth operativo (!) para conectarse. Por favor, consulte la documentación de Android de Google.
 
 During the 14 days you can use in parallel one or more NFC capable smartphones (not the reader device!) running the original LibreLink app for scanning via NFC. There is no time limitation to start that. You could use a parallel phone for example on day 5 or so. The parallel phones(s) could upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for your diabetes team. Hay muchos padres que necesitan absolutamente esto. 
 
