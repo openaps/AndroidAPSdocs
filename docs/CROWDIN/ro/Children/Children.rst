@@ -1,28 +1,28 @@
-Remote monitoring
+Monitorizarea la distanţă
 **************************************************
 
 .. image:: ../images/KidsMonitoring.png
-  :alt: Monitoring children
+  :alt: Monitorizarea copiilor
   
-AndroidAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
+AndroidAPS oferă mai multe opțiuni pentru monitorizarea la distanță a copiilor și, de asemenea, permite trimiterea de comenzi la distanță. Desigur, se poate folosi monitorizarea de la distanta pentru supravegherea partenerului sau prietenului.
 
-Functions
+Functii
 ==================================================
-* Kid's pump is controlled by kid's phone using AndroidAPS.
-* Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone. Settings must be the same in AndroidAPS and NSClient.
-* Parents can be alarmed by using **xDrip+ app in follower mode** on their phone.
-* Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_ secured by two-factor authentication.
-* Remote profile switch and temp targets through NSClient app.
+* Pompa este controlată de telefonul copilului folosind AndroidAPS.
+* Părinţii pot vedea de la distanţă toate datele importante, cum ar fi valorile glicemiei, carbohidratii din organism, insulina din corp etc. folosind ** NSClient app * * pe telefonul lor. Setările trebuie să fie aceleași pentru AndroidAPS și NSClient.
+* Părinții pot avea alarme pe telefonul lor folosind aplicația **xDrip+ în modul follower**.
+* Control de la distanță al AndroidAPS folosind `SMS Commands <../Children/SMS-Commands.html>`_ securizat prin autentificarea cu doi factori.
+* Schimbarea profilului la distanță și țintele temporare prin aplicația NSClient.
 
-Tools and apps for remote monitoring
+Instrumente și aplicații pentru monitorizare la distanță
 --------------------------------------------------
-* `Nightscout <http://www.nightscout.info/>`_ in web browser (mainly data display)
-*	NSClient app
-*	Dexcom follow if you are using original Dexcom app (BG values only)
-*	`xDrip+ <../Configuration/xdrip.html>`_ in follower mode (mainly BG values and **alarms**)
-*	`Sugarmate <https://sugarmate.io/>`_ or `Spike <https://spike-app.com/>`_ on iOS (mainly BG values and **alarms**)
+* `Nightscout <http://www.nightscout.info/>`_ în browser-ul web (în principal afișare a datelor)
+* Aplicaţia NSClient
+*Aplicația Dexcom Flollow dacă folosiți aplicația Dexcom originală (doar valorile glicemiei)
+*<unk> `xDrip+ <../Configuration/xdrip.html>`_ în modul follower (în principal valori ale glicemiei și **alarme**)
+* ` Sugarmate <https://sugarmate.io/>` _ sau ` Spike <https://spike-app.com/>` _ pe iOS (in principal valori ale glicemiei si ** alarme**)
 
-Things to consider
+Lucrurile de luat în considerare
 ==================================================
 * Setting the correct `treatment factors <../Getting-Started/FAQ.html#how-to-begin>`_ (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved. 
 * Settings must be the same in AndroidAPS and NSClient.
