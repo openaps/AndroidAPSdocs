@@ -1,7 +1,7 @@
-Manual Installation of Google Play Service for  Sony Smartwach 3
+Manuelle Installation der Google Play Service für Sony Smartwach 3
 #####################################################################
 
-Die Sony Smartwach 3 ist eine der beliebtesten Uhren zu Verwendung mit AAPS. Leider hat Google die Unterstützung für Wear OS 1.5 Geräte im Herbst 2020 eingestellt. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above. 
+Die Sony Smartwach 3 ist eine der beliebtesten Uhren zu Verwendung mit AAPS. Leider hat Google die Unterstützung für Wear OS 1.5 Geräte im Herbst 2020 eingestellt. Dies führt zu Problemen bei der Verwendung von Sony SW3 mit AndroidAPS 2.7 und höher. 
 
 Der nachfolgend beschriebene Workaround ermöglicht die Weiternutzung der Sony Smartwatch 3. Behalte aber im Hinterkopf, dass Du über kurz oder lang zu einer Smartwatch mit neuerem Betriebssystem wirst wechseln müssen.
 
@@ -19,42 +19,42 @@ Der nachfolgend beschriebene Workaround ermöglicht die Weiternutzung der Sony S
 2. Lade Dir das Adb-Debugging-Tool herunter und installiere sie auf Deinem PC.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 * Es gibt verschiedene Möglichkeiten, das Adb-Debugging-Tool zu installieren.
-* One of the easiest ways to have it installed and working: Just download and install `'15 seconds adb installer v1.4.3' <https://forum.xda-developers.com/t/official-tool-windows-adb-fastboot-and-drivers-15-seconds-adb-installer-v1-4-3.2588979/>`_
+* Einer der einfachsten Wege: Lade einfach `'15 seconds adb installer v1.4.3' <https://forum.xda-developers.com/t/official-tool-windows-adb-fastboot-and-drivers-15-seconds-adb-installer-v1-4-3.2588979/>`_ herunter und installiere es.
 
-3. Enable ADB Debugging options on your watch
+3. Aktiviere die ADB Debugging Optionen auf Deiner Sony Smartwatch 3
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* Enable developer mode by going to Settings --> About --> Build number
-* Click it 7 times.
-* Now go to Settings --> Developer Options --> ADB Debugging (enable)
+* Aktiviere den Entwicklermodus: Settings (Einstellungen) -> About (Über) -> Build number
+* Klicke 'build number' 7 mal an.
+* Gehe nun zu Settings (Einstellungen) --> Developer Options (Entwickleroptionen) --> ADB Debugging (enable)
 
-4. Connect your watch to your computer
+4. Verbinde Deine Smartwatch mit Deinem Computer
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* Then plug your smartwatch to PC.
-* Rename latest downloaded google services APK using some short and simple name (let's say SW3fix.apk).
-* Place this APK to C: and open Windows PowerShell window in that location (Shift + Right Click).
-* Then using the terminal, type "adb devices".
-* After a moment, you should get a prompt asking for debugging permission on your watch: accept.
-* In the terminal, you should now see something like "14452D11F536B52 device" when typing "adb devices" again.
-* If you see "unauthorized" or else, you're not ready for the next step, go back and try again.
-* If you struggle at this step, you may need specific drivers or else for your watch. Google will be your best friend at this point.
-* Then wait, the installation can take several minutes. 
+* Schließe dann Deine Smartwatch an den PC an.
+* Benenne die heruntergeladenen Google Services APK um. Nimm am besten einen kurzen und einfachen Namen (z.B. SW3fix.apk).
+* Speiche die APK unter C: und öffnen Windows PowerShell für diesen Speicherort (Shift + Rechtsklick).
+* Gib dann im Terminalfenster "adb devices" ein.
+* Nach einem kurzen Moment kommt eine Eingabeaufforderung, ob die Debugging-Berechtigung für die Uhr erteilt werden soll. Gewähre diese.
+* Im Terminalfenster solltest Du nun etwas wie "14452D11F536B52 device" sehen, wenn Du erneut "adb devices" eingibst.
+* Falls Dir "unauthorized" oder eine ähnliche Meldung angezeigt wird, musst Du die vorherigen Schritte wiederholen.
+* Falls Du an dieser Stelle hängen bleibst, benötigst Du ggf. spezifische Treiber oder ähnliches für Deine Smartwatch. Die Google Suche hilft Dir hier weiter.
+* Warte dann ab, die Installation dauert mehrere Minuten. 
 
-5. Send the app to your watch
+5. Sende die App an Deine Smartwatch
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* In terminal enter this command „adb install -r -g aplicationname.apk“ (so in our case „adb install -r -g SW3fix.apk“).
-* Wait for about 4–5 minutes for installation to complete. 
-* Once it's done, restart your watch and you should see the apps beginning to synchronize themself promptly.
+* Gib im Terminalfenster das Kommando „adb install -r -g aplicationname.apk“ (Wenn Du die APK-Datei wie oben vorgeschlagen benannt hast, lautet das korrekte Kommando „adb install -r -g SW3fix.apk“).
+* Warte 4 - 5 Minuten bis die Installation abgeschlossen ist. 
+* Starte Deine Smartwatch neu nachdem die Installation abgeschlossen ist. Die Apps sollten sich dann direkt neu synchronisieren.
 
-6. More
+6. Mehr
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* You can follow this step and install any apk you want, but it is not recommended installing apk not made for Wear OS even if it works ;)
-* More apps installable this way on your watch if you don't want to wait for app sync:
+Mit dieser Anleitung kannst Du jede APK installieren. Es wird aber nicht empfohlen APKs zu installieren, die nicht für Wear OS erstellt wurden - auch wenn es funktioniert.
+* Weitere Apps die Du auf diese Weise installieren kannst, wenn Du den Sync nicht abwarten willst:
 
-   * `Google Messages (SMS), latest is v6.1.095 on 2020-06-25 <https://www.apkmirror.com/apk/google-inc/android-messages-android-wear/android-messages-android-wear-6-1-095-release/messages-wear-os-6-1-095-yeti_rc09-wear_dynamic-android-apk-download/>`_
-   * `Google Maps, latest is v10.35.2 (android 6.0+) on 2020-06-25 <https://www.apkmirror.com/apk/google-inc/maps-navigation-transit-android-wear/maps-navigation-transit-android-wear-10-35-2-release/google-maps-navigate-explore-wear-os-10-35-2-android-apk-download/>`_
+   * `Google Messages (SMS), Stand 25. Juni 2020 ist die neueste Version v6.1.095 <https://www.apkmirror.com/apk/google-inc/android-messages-android-wear/android-messages-android-wear-6-1-095-release/messages-wear-os-6-1-095-yeti_rc09-wear_dynamic-android-apk-download/>`_
+   * `Google Maps, Stand 25. Juni 2020 ist die neueste Version v10.35.2 (Android 6.0 oder neuer)  <https://www.apkmirror.com/apk/google-inc/maps-navigation-transit-android-wear/maps-navigation-transit-android-wear-10-35-2-release/google-maps-navigate-explore-wear-os-10-35-2-android-apk-download/>`_
 
-* The GMaps is a good example about obsolete versions: 
+* Die Google Maps  App ist ein gutes Beispiel für veraltete Versionen: 
 
-   * On 2020-06-25, the real latest available is v10.43.2
-   * But it's android 7.0+ only
-   * So don't expect GMaps to work indefinitely for your watch, it will stop working soon or later.
+   * Stand 25. Juni 2020 ist die neueste Version verfügbare Version v10.43.2
+   * Diese ist aber nur für Android 7.0 und neuer.
+   * Erwarte also nicht, dass Google Maps für immer mit Deiner Smartwatch funktioniert. Das Ende kommt früher oder später.
