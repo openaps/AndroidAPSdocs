@@ -24,9 +24,9 @@ Instrumente și aplicații pentru monitorizare la distanță
 
 Lucrurile de luat în considerare
 ==================================================
-* Setting the correct `treatment factors <../Getting-Started/FAQ.html#how-to-begin>`_ (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved. 
-* Settings must be the same in AndroidAPS and NSClient.
-* Consider time gap between master and follower due to time for up- and download as well as the fact that AAPS master phone will only upload after loop run.
+* Setarea corectă a factorilor de tratament <../Getting-Started/FAQ.html#how-to-begin>`_ (rată bazală, DIA, ISF...) este dificilă pentru copii, în special atunci când sunt implicați hormoni de creștere. 
+* Setările trebuie să fie la fel în AndroidAPS şi NSClient.
+* Luați în considerare decalajul de timp dintre telefonul principal si telefonul urmaritor datorat timpului necesar pentru crestere si scadere, precum și faptul că telefonul principal AAPS se va încărca numai după rularea buclei.
 * So take your time to set those correctly and test them in real life with your kid next to you before starting remote monitoring and remote treatment. School holidays might be a good time for that.
 * What is your emergency plan when remote control does not work (i.e. network problems)?
 * Remote monitoring and treatment can be really helpful in kinder garden and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan. Examples for such care plans can be found in the `files section of AndroidAPS users <https://www.facebook.com/groups/AndroidAPSUsers/files/>`_ on Facebook.
