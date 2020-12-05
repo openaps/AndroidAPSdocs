@@ -113,7 +113,7 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G, 
 * Als je van plan was je sensor te vervangen, doe dit dan nu.
 
 * Plaats zender in de sensor
-* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter, accept it (tap "pair")
+* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter's serial no., accept it (tap "pair")
 * Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
    
    * Zendernummer beginnend met 80 of 81: "Got data hh:mm" (bijvoorbeeld "Got data 19:04")
