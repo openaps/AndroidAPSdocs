@@ -53,7 +53,7 @@ Si desea cambiar de perfil Nightscout a un perfil local, haga un cambio de perfi
 
 #### Cargar los perfiles locales para Nightscout
 
-Los perfiles locales también se pueden subir a Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
+Los perfiles locales también se pueden subir a Nightscout. Los ajustes se pueden encontrar en [NSClient preferences](../Configuration/Preferences#nsclient).
 
 ![Cargar el perfil local de NS](../images/LocalProfile_UploadNS2.png)
 
@@ -68,20 +68,20 @@ Desventajas:
 
 * ninguno
 
-### Profile helper
+### Asistente de perfil
 
-Profile helper offers two functions:
+El ayudante de perfil ofrece dos funciones:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. Encontrar un perfil para niños
+2. Comparar dos perfiles o conmutadores de perfil para clonar un perfil nuevo
 
-Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
+Los detalles se explican por separado en la [página de ayuda de perfil](../Configuration/profilehelper.rst).
 
-### NS Profile
+### Perfil NS
 
-NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+El perfil de NS utiliza los perfiles que guardados en el sitio de Nightscout (https: //[yournightscoutsiteaddress]/profile). Puede usar el [Selector de Perfil](../Usage/Profiles.md) para cambiar cuál de los perfiles está activo, y se escribe ese perfil en la bomba en caso de fallo AndroidAPS. Esto le permite crear fácilmente múltiples perfiles en Nightscout (p.ej.. trabajo, casa, deportes, vacaciones, etc.). Poco después de hacer clic en "Guardar" serán transferidos a AAPS si su smartphone está en línea. Incluso sin conexión a Internet o sin conexión a Nightscout, los perfiles de Nightscout están disponibles en AAPS una vez que se han sincronizado.
 
-Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+Realice un **cambio de perfil** para activar un perfil de Nightscout. Mantén pulsado el perfil actual en la pantalla de inicio AAPS en la parte superior (campo gris entre el campo azul claro "Lazo Abrierto/Cerrado" y el campo azul oscuro Objetivo) > Cambio de perfil > Seleccionar perfil > Aceptar. AAPS también escribe el perfil seleccionado en la bomba después de que el cambio de perfil, de modo que esté disponible sin AAPS en caso de emergencia y continúa su ejecución.
 
 Ventajas:
 
@@ -95,13 +95,13 @@ Desventajas:
 
 ## Insulina
 
-Select the type of insulin curve you are using. The options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak.
+Seleccione el tipo de curva de insulina que está usando. Las opciones 'Rapid-Acting Oref', Ultra-Rapid Oref' y 'Free-Peak Oref' tienen una forma exponencial. Más información disponible en [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), las curvas varían según el DIA y el tiempo de pico de acción.
 
-The DIA is not the same for each person. That's why you have to test it for yourself. But it must always be at least 5 hours. You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page.
+La DIA no es la misma para cada persona. Es por eso que tienes que probarlo por ti mismo. Pero siempre debe ser de al menos 5 horas. Puede leer más sobre esto en la sección Perfil de Insulina de [aqui](../Getting-Started/Screenshots#insulin-profile).
 
-For Rapid-Acting and Ultra-Rapid, the DIA is the only variable you can adjust by yourself, the time to peak is fixed. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings.
+Para Rapid-Acting y Ultra-Rapid, el DIA es la única variable que se puede ajustar por ti mismo, el tiempo de pico es fijo. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings.
 
-The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
+El [gráfico de la curva de insulina](../Getting-Started/Screenshots#insulin-profile) le ayuda a comprender las diferentes curvas. Puede verlo habilitando la casilla de verificación para mostrarla como una pestaña, de lo contrario estará en el menú.
 
 ### Rapid-Acting Oref
 
@@ -115,19 +115,19 @@ The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps 
 * DIA = al menos 5.0h
 * Máximo pico = 55 minutos después de la inyección (fijo, no ajustable)
 
-For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
+For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. Esta cantidad residual puede actuar durante los deportes, por ejemplo. Por lo tanto, AndroidAPS utiliza el mínimo de 5h como DIA.
 
-![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
+![Configuración Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
 
-### Free Peak Oref
+### Free-Peak Oref
 
-With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+Con el perfil "Free Peak 0ref" usted puede ingresar individualmente el tiempo del pico. El DIA se establece automáticamente en 5 horas si no se especifica un valor superior en el perfil.
 
-This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+Este perfil de efecto se recomienda si se utiliza una insulina no respaldada o una mezcla de insulinas diferentes.
 
 ## Fuentes de BG (datos de glucemia)
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
+Seleccione la fuente de glucosa en sangre que está utilizando: consulte la página [BG Fuentes ](BG-Source.rst) para obtener más información de configuración.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient BG
@@ -139,73 +139,73 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
-* [Tomato App](http://tomato.cool/) for MiaoMiao device
-* Random BG: Generates random BG data (Demo mode only)
+* [Tomato App](http://tomato.cool/) para dispositivo MiaoMiao
+* BG aleatorio: genera datos BG aleatorios (sólo demostración)
 
 ## Bomba
 
-Select the pump you are using.
+Seleccione la bomba que está utilizando.
 
 * [Dana R](DanaR-Insulin-Pump.md)
 * Dana R Coreano (para la bomba DanaR)
-* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
+* Dana Rv2 (bomba DanaR con actualización de firmware no oficial)
 * [Dana RS](DanaRS-Insulin-Pump.md)
-* [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
-* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Accu-Chek Insight](Accu-Chek-Insight-Pump.md)
+* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requiere la instalación de ruffy)
 * [Medtronic](MedtronicPump.md)
-* MDI (receive AAPS suggestions for your multiple daily injections therapy)
-* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
+* MDI (recibir sugerencias de AAPS para su terapia de inyecciones múltiples diarias)
+* Bomba virtual (bucle abierto para la bomba que no tiene ningún controlador todavía-sólo sugerencias de AAPS)
 
-For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+Para las bombas dana, utilice ** Valores avanzados ** para activar el control de BT si es necesario. Desactiva bluetooth por un segundo si no es posible ninguna conexión a la bomba. Esto puede ayudar en algunos teléfonos donde la pila (Stack) Bluetooth se congela (freezes).
 
-[Password for Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
+[La contraseña para la bomba de Dana RS](../Configuration/DanaRS-Insulin-Pump.md) debe especificarse correctamente. La contraseña no se ha comprobado en versiones anteriores.
 
 ## Detección de sensibilidad
 
-Select the type of sensitivity detection. For more details of different designs please [read on here](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Seleccione el tipo de detección de sensibilidad. Para más detalles de los diferentes diseños por favor [leer aquí](../Configuration/Sensitivity-detection-and-COB.md). Esto analizará los datos históricos sobre la marcha y realizará ajustes si reconoce que está reaccionando con más sensibilidad (o a la inversa, más resistente) a la insulina de lo habitual. Se pueden leer más detalles sobre el algoritmo de Sensibilidad en el [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
-You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+Usted puede ver su sensibilidad en la pantalla de inicio seleccionando SEN y viendo la línea blanca. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features#autosens) automatically adjust the amount of insulin delivered. Antes de alcanzar ese objetivo, el porcentaje de Autosens/la línea en el gráfico se muestra sólo para información.
 
-### Absorption settings
+### Ajustes absorción
 
-If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.rst) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+Si utiliza Oref1 con SMB, debe cambiar **min_5m_carbimpact ** a 8. El valor sólo se utiliza durante las diferencias en las lecturas de CGM o cuando la actividad física "utiliza" todo el aumento de la glucosa en la sangre, lo que de otra manera causaría que la AAPS descienda a COB. A veces, cuando [ absorción de carbohidratos ](../Usage/COB-calculation.rst) no se puede elaborar dinámicamente basándose en su cambios de glucosa, se inserta un ajuste por medio de los carbohidratos. Básicamente, es un seguro contra fallos.
 
 ## APS
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+Seleccione el algoritmo APS deseado para realizar los ajustes de la terapia. Puede ver los detalles activos del algoritmo elegido en la pestaña OpenAPS(OAPS).
 
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017)  
-    More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably. 
+* OpenAPS AMA (asistencia de comida avanzada, estado del algoritmo en 2017)   
+    Más detalles acerca de OpenAPS AMA se pueden encontrar en [OpenAPS docs ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably. 
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
     Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Loop
 
-* Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
+* Cambie entre Lazo Abierto, Lazo Cerrado y Suspensión con Glucosa Baja (SGB).
 
-![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
+![Asistente de configuración - Modo lazo](../images/ConfigBuilder_LoopLGS.png)
 
 ### Lazo abierto
 
 * AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. 
 * The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
-* This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+* Esta opción es para conocer cómo funciona AndroidAPS o si está usando una bomba no soportada.
 
 ### Lazo cerrado
 
 * AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). 
-* The Closed Loop works within numerous safety limits, which you can be set individually.
-* Closed Loop is only possible if you are in [Objective 6](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
+* El Loop Cerrado funciona dentro de numerosos límites de seguridad, que se pueden establecer individualmente.
+* El Lazo Cerrado sólo es posible si está en [Objetivo 6 ](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) o superior y utiliza una bomba soportada.
 * Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol or 100 mg/dl instead of 5,0 - 7,0 mmol or 90 - 125 mg/dl) is recommended.
 
-### Low Glucose Suspend (LGS)
+### Suspensión por glucosa baja (SGB)
 
-* maxIOB is set to zero
-* This means if blood glucose is dropping it can reduce basal for you.
-* But if blood glucose is rising no automatic correction will be made. Your basal rates will remain the same as your selected profile.
+* maxIOB se establece en cero
+* Esto significa que si la glucosa en sangre está disminuyendo, puede reducir la basal.
+* Pero si la glucosa en sangre está aumentando, no se hará ninguna corrección automática. Sus tasas basales seguirán siendo las mismas que su perfil seleccionado.
 * Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower BG.
 
-### Minimal request change
+### Valor mínimo de cambio
 
 * Cuando se utiliza en lazo abierto recibirás notificaciones cada vez que AAPS recomienda ajustar basal. 
 * Para reducir el número de notificaciones puede usar un rango de objetivo más amplio o aumentar el porcentaje de la tasa mínima de solicitud.
@@ -258,71 +258,71 @@ Note: Button will not be visible if outside the specified time range or if you h
 
 Choose default temp-targets (duration and target). Preset values are:
 
-* eating soon: target 72 mg/dl / 4.0 mmol/l, duration 45 min
-* activity: target 140 mg/dl / 7.8 mmol/l, duration 90 min
-* hypo: target 125 mg/dl / 6.9 mmol/l, duration 45 min
+* comer pronto: objetivo 72 mg/dl / 4,0 mmol/l, duración 45 min
+* actividad: objetivo 140 mg/dl / 7,8 mmol/l, duración 90 min
+* hipo: objetivo 125 mg/dl / 6,9 mmol/l, duración 45 min
 
-#### Fill/Prime standard insulin amounts
+#### Llenar/Rellenar cantidad de insulina estándar
 
-Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+Elija las cantidades predeterminadas de los tres botones en el diálogo de llenado/cebado, según la longitud de su catéter.
 
-#### Range of visualization
+#### Rango de visualización
 
-Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+Elija las marcas altas y bajas para el gráfico BG en la descripción general de AndroidAPS y el reloj inteligente. Es solo la visualización, no el rango objetivo para tu BG. Ejemplo: 70-180 mg/dl ó 3,9-10 mmol/l
 
-#### Shorten tab titles
+#### Título corto en pestaña
 
-Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+Elija si los títulos de las pestañas en AndroidAPS son largos (por ejemplo, ACCIONES, PERFIL LOCAL, AUTOMATIZACIÓN) o cortos (por ejemplo, ACT, LP, AUTO)
 
-#### Show notes field in treatment dialogs
+#### Mostrar el campo notas en diálogos de tratamientos
 
-Choose if you want to have a notes field when entering treatments or not.
+Elige si deseas tener un campo de notas al entrar en tratamientos o no.
 
 #### Luces de estado
 
-Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for canula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+Elige si deseas tener [ luces de estado ](../Configuration/Preferences#status-lights) en la descripción general de la edad de la cánula, la edad de la insulina, la edad del sensor, la edad de la batería, el nivel del depósito o el nivel de la batería. Cuando se alcanza el nivel de advertencia, el color de la luz de estado cambiará a amarillo. La edad crítica se mostrará en rojo.
 
-#### Advanced settings
+#### Ajustes avanzados
 
-**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
+** Administrar esta parte del resultado del asistente de bolo**: cuando se usa SMB, muchas personas no administran el 100% de la insulina necesaria en bolo alimenticio, sino solo una parte (por ejemplo, 75%) y dejan el SMB con UAM (detección de comida sin supervisión) haga el resto. En esta configuración, puede elegir un valor predeterminado para el porcentaje con el que el asistente de bolo debe calcular. Si este ajuste es del 75% y tuvo que administrar un bolo de 10 u, el asistente de bolo le propondrá un bolo de comida de solo 7,5 unidades.
 
-**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Habilite la función de superbolo en el asistente ** (¡Es diferente de * supermicrobolus *!): Use con precaución y no la habilite hasta que sepa lo que realmente hace. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! Si utiliza las funciones de bucle de SMB, AAPS se inhabilitará de acuerdo con los valores en ["Máx minutos de basal para limitar SMB a" ](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), si no utiliza funciones de bucle de SMB se inhabilitarán durante dos horas. ** Detalles de super bolo pueden encontrarse [aquí ](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Acciones
 
-Some buttons to quickly access common features:
+Algunos botones para acceder rápidamente a funciones comunes:
 
-* Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
-* Temporary targets
-* Set / cancel temp. dosis basal
-* Extended bolus (DanaR/RS or Combo pump only)
+* Conmutador de perfiles (consulte el apartado [Página de perfiles](../Usage/Profiles.md) para obtener más información de configuración)
+* Objetivos temporales
+* Establecer / cancelar temporal. dosis basal
+* Bolo extendido (sólo la bomba DanaR/RS o Combo)
 * Record for any specific care entries
     
-    * BG check
-    * Prime / fill - record pump site change and prime (if not done on pump)
-    * CGM sensor insert
-    * Pump battery change
-    * Note
-    * Exercise
-* View the current sensor, insulin, canula and pump battery ages
-* History browser
-* TDD (Total daily dose = bolus + basal per day)
+    * Medir glucosa
+    * Cambio de cánula y llenado - registro de cambio cánula y llenado (si no se hace en la bomba)
+    * Inserción de sensor
+    * Cambio batería bomba
+    * Nota
+    * Ejercicio
+* Ver el tiempo del sensor actual, la insulina, la cánula y la batería de la bomba
+* Historial
+* TDD (dosis diaria total = bolo + basal por día)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Algunos médicos usan -especialmente para los recién iniciados en las bombas- una relación basal-bolo de 50:50. Por lo tanto, la proporción se calcula como TDD / 2 * TBB (Total base basal = suma de la tasa basal en 24 horas). Otros prefieren un rango de 32% a 37% de TDD para TBB. Al igual que la mayoría de estas reglas empíricas, su validez real es limitada. Nota: ¡Tu diabetes puede variar!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions_b.png)
+![Pestaña de acción](../images/ConfBuild_ConfBuild_Actions_b.png)
 
 ### Automatización
 
-User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst).
+Tareas de automatización definidas por el usuario ('si-entonces-si no'). Por favor, [lee aquí](../Usage/Automation.rst).
 
 ### Comunicaciones SMS
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
+Permite a los cuidadores remotos controlar algunas características de AndroidAPS a través de SMS, ver [mandos SMS ](../Children/SMS-Commands.rst) para obtener más información de configuración.
 
-### Food
+### Comida
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Muestra los valores de alimentos definidos en la base de datos de alimentos de Nightscout, consulte el apartado [Información de Nightscout](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) para obtener más información de configuración.
 
 Note: Entries cannot be used in the AndroidAPS calculator. (View only)
 
