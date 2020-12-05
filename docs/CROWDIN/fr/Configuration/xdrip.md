@@ -113,7 +113,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 6G, 8H ou 8J, 
 * Insérer un nouveau capteur (uniquement en cas de remplacement)
 
 * Placer l'émetteur dans le capteur
-* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter, accept it (tap "pair")
+* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter's serial no., accept it (tap "pair")
 * Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
    
    * Numéro de série du transmetteur commençant par 80 ou 81 : "Got data hh:mm" (par ex. "Got data 19:04")
