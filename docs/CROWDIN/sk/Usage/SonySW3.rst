@@ -1,7 +1,7 @@
-Troubleshooting Sony Smartwach 3
-#########################################################
+Manual Installation of Google Play Service for  Sony Smartwach 3
+#####################################################################
 
-The Sony Smartwach 3 is one of the most popular watches to be used with AAPS. Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS and above. 
+The Sony Smartwach 3 is one of the most popular watches to be used with AAPS. Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above. 
 
 The following workaround should extend the time the Sony Smartwatch 3 can be used but keep in mind that the need to switch to a new smartwatch will come sooner or later.
 
@@ -19,30 +19,42 @@ The following workaround should extend the time the Sony Smartwatch 3 can be use
 2. Download/Install adb debugging tools on your computer
 --------------------------------------------------------
 * There are multiple ways to install the adb debugging tool.
-* One of the easiest ways to have it installed and working: Just download an install `'15 seconnds adb installer v1.4.3' <https://forum.xda-developers.com/t/official-tool-windows-adb-fastboot-and-drivers-15-seconds-adb-installer-v1-4-3.2588979/>`_
+* One of the easiest ways to have it installed and working: Just download and install `'15 seconds adb installer v1.4.3' <https://forum.xda-developers.com/t/official-tool-windows-adb-fastboot-and-drivers-15-seconds-adb-installer-v1-4-3.2588979/>`_
 
-3# Enable ADB Debugging options on your watch
-Enable developer mode by going to
-Settings --> About --> Build number (click it 7 times, congrats you are now a developer)
-Now go to Settings --> Developer Options --> ADB Debugging (enable)
+3. Enable ADB Debugging options on your watch
+--------------------------------------------------------
+* Enable developer mode by going to Settings --> About --> Build number
+* Click it 7 times.
+* Now go to Settings --> Developer Options --> ADB Debugging (enable)
 
-4# Connect your watch to your computer
-Then plug your smartwatch to PC.
-Rename latest downloaded google services APK using some short and simple name (lets say SW3fix.apk).
-Place this APK to C: and open Windows PowerShell window in that location (Shift + Right Click).
-Then using the terminal, type "adb devices", after a moment, you should get a prompt asking for debugging permission on your watch: accept.
-In the terminal, you should now see something like "14452D11F536B52 device" when typing "adb devices" again.
-If you see "unauthorized" or else, you're not ready for the next step, go back and try again.
-If you struggle at this step, you may need specific drivers or else for your watch, google will be your best friend at this point.Then wait, the installation can take several minutes. 
+4. Connect your watch to your computer
+--------------------------------------------------------
+* Then plug your smartwatch to PC.
+* Rename latest downloaded google services APK using some short and simple name (let's say SW3fix.apk).
+* Place this APK to C: and open Windows PowerShell window in that location (Shift + Right Click).
+* Then using the terminal, type "adb devices".
+* After a moment, you should get a prompt asking for debugging permission on your watch: accept.
+* In the terminal, you should now see something like "14452D11F536B52 device" when typing "adb devices" again.
+* If you see "unauthorized" or else, you're not ready for the next step, go back and try again.
+* If you struggle at this step, you may need specific drivers or else for your watch. Google will be your best friend at this point.
+* Then wait, the installation can take several minutes. 
 
-5 # Send the app to your watch
-In terminal enter this command „adb install -r -g aplicationname.apk“ (so in our case „adb install -r -g SW3fix.apk“).
-Wait for about 4–5 minutes for installation to complete. Once it's done, restart your watch and you should see the apps beginning to synchronize themself promptly.
+5. Send the app to your watch
+--------------------------------------------------------
+* In terminal enter this command „adb install -r -g aplicationname.apk“ (so in our case „adb install -r -g SW3fix.apk“).
+* Wait for about 4–5 minutes for installation to complete. 
+* Once it's done, restart your watch and you should see the apps beginning to synchronize themself promptly.
 
-6# More
-You can follow this step and install any apk you want, but I don't recommend installing apk not made for Wear OS even if it works ;)
+6. More
+--------------------------------------------------------
+* You can follow this step and install any apk you want, but it is not recommended installing apk not made for Wear OS even if it works ;)
+* More apps installable this way on your watch if you don't want to wait for app sync:
 
-More apps installable this way on your watch if you don't want to wait for app sync:
-- Google Messages (SMS), latest is v6.1.095 on 2020-06-25
-- Google Maps, latest is v10.35.2 (android 6.0+) on 2020-06-25
-The GMaps is a good example about obsolete versions: on 2020-06-25, the real latest available is v10.43.2, but it's android 7.0+ only, so don't expect GMaps to work indefinitely for your watch, it will stop working soon or later.
+   * `Google Messages (SMS), latest is v6.1.095 on 2020-06-25 <https://www.apkmirror.com/apk/google-inc/android-messages-android-wear/android-messages-android-wear-6-1-095-release/messages-wear-os-6-1-095-yeti_rc09-wear_dynamic-android-apk-download/>`_
+   * `Google Maps, latest is v10.35.2 (android 6.0+) on 2020-06-25 <https://www.apkmirror.com/apk/google-inc/maps-navigation-transit-android-wear/maps-navigation-transit-android-wear-10-35-2-release/google-maps-navigate-explore-wear-os-10-35-2-android-apk-download/>`_
+
+* The GMaps is a good example about obsolete versions: 
+
+   * On 2020-06-25, the real latest available is v10.43.2
+   * But it's android 7.0+ only
+   * So don't expect GMaps to work indefinitely for your watch, it will stop working soon or later.
