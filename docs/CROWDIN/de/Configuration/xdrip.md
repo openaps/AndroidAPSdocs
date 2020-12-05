@@ -113,7 +113,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G, 8H oder 8J beginnt, verwen
 * Setze den neuen Sensor (außer Du tauscht den Transmitter während einer laufenden Sensorsitzung).
 
 * Klicke den Transmitter in die Halterung auf dem Sensorpflaster ein.
-* Wenn eine Nachricht Pair with 'DexcomXX' (XX steht dabei für die letzten beiden Stellen der Transmitter-Seriennummer) erscheint, akzeptiere diese und drücke "Pair" (Verbinden).
+* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter's serial no., accept it (tap "pair")
 * * Starte den neuen Sensor NICHT bevor eine der folgenden Informationen auf der Classic Status Page -> G5/G6 status -> PhoneServiceState angezeigt wird:
    
    * Transmitter Seriennummer beginnt mit 80 oder 81: "Got data hh:mm" (z.B. "Got data 19:04")
