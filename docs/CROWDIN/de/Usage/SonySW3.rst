@@ -7,8 +7,10 @@ Der nachfolgend beschriebene Workaround ermöglicht die Weiternutzung der Sony S
 
 1. Lade die neueste Version der GService for Wear OS herunter.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* Mit Hilfe der apkmirror Website kannst Du die aktuellste APK für "Google Play Services (Wear OS)" finden.
-* `Dieser Link <https://www.apkmirror.com/apk/google-inc/google-play-services-android-wear/google-play-services-android-wear-20-21-17-release/google-play-services-wear-os-20-21-17-050300-316502805-android-apk-download/>`_ führt Dich zur Downloadseite von GService v20.21.17. Die ist Stand 25. Juni 2020 die aktuellste Version.
+* Auf der `apkmirror Website <https://www.apkmirror.com/apk/google-inc/google-play-services-android-wear/>`_ findest Du die letzte APK der "Google Play Services (Wear OS)".
+
+   Architecture: armeabi-v7a, Minimum Version: Android 6.0+, Screen DPI: nodpi
+
 * Du musst 2 Dinge sicherstellen:
 
    * Ist es die neueste Version?
@@ -19,7 +21,7 @@ Der nachfolgend beschriebene Workaround ermöglicht die Weiternutzung der Sony S
 2. Lade Dir das Adb-Debugging-Tool herunter und installiere sie auf Deinem PC.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 * Es gibt verschiedene Möglichkeiten, das Adb-Debugging-Tool zu installieren.
-* Einer der einfachsten Wege: Lade einfach `'15 seconds adb installer v1.4.3' <https://forum.xda-developers.com/t/official-tool-windows-adb-fastboot-and-drivers-15-seconds-adb-installer-v1-4-3.2588979/>`_ herunter und installiere es.
+* Wir empfehlen, die  `SDK Platform Tools <https://developer.android.com/studio/releases/platform-tools>`_ zu verwenden: Einfach runterladen und in einem Verzeichnis Deiner Wahl extrahierten (entzippen).
 
 3. Aktiviere die ADB Debugging Optionen auf Deiner Sony Smartwatch 3
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -31,8 +33,10 @@ Der nachfolgend beschriebene Workaround ermöglicht die Weiternutzung der Sony S
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 * Schließe dann Deine Smartwatch an den PC an.
 * Benenne die heruntergeladenen Google Services APK um. Nimm am besten einen kurzen und einfachen Namen (z.B. SW3fix.apk).
-* Speiche die APK unter C: und öffnen Windows PowerShell für diesen Speicherort (Shift + Rechtsklick).
-* Gib dann im Terminalfenster "adb devices" ein.
+* Lege diese APK in das gleiche Verzeichnis wie das adb Tool (in Deinem Fall das Verzeichnis des entpackten SDK Platform Tools).
+* Öffne das Windows-Terminal mit dem Befehl "cmd" im Windows-Startmenü.
+*	Wechsle im Terminal in das Verzeichnis, das Dein adb Tool und die Google Services APK enthält (tippe „cd [Pfad zu Deinem Verzeichnis]“, z.B. „cd C:\Users\SWR50looper\sdktools“).
+* Gib dann "adb devices" ein.
 * Nach einem kurzen Moment kommt eine Eingabeaufforderung, ob die Debugging-Berechtigung für die Uhr erteilt werden soll. Gewähre diese.
 * Im Terminalfenster solltest Du nun etwas wie "14452D11F536B52 device" sehen, wenn Du erneut "adb devices" eingibst.
 * Falls Dir "unauthorized" oder eine ähnliche Meldung angezeigt wird, musst Du die vorherigen Schritte wiederholen.
@@ -42,19 +46,13 @@ Der nachfolgend beschriebene Workaround ermöglicht die Weiternutzung der Sony S
 5. Sende die App an Deine Smartwatch
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 * Gib im Terminalfenster das Kommando „adb install -r -g aplicationname.apk“ (Wenn Du die APK-Datei wie oben vorgeschlagen benannt hast, lautet das korrekte Kommando „adb install -r -g SW3fix.apk“).
+
+   .. image:: ../images/SonySW3_Terminal1.png
+     :alt: Terminal Befehl
+
 * Warte 4 - 5 Minuten bis die Installation abgeschlossen ist. 
+
+.. image:: ../images/SonySW3_Terminal2.png
+     :alt: Terminal erfolgreiche Installation
+
 * Starte Deine Smartwatch neu nachdem die Installation abgeschlossen ist. Die Apps sollten sich dann direkt neu synchronisieren.
-
-6. Mehr
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Mit dieser Anleitung kannst Du jede APK installieren. Es wird aber nicht empfohlen APKs zu installieren, die nicht für Wear OS erstellt wurden - auch wenn es funktioniert.
-* Weitere Apps die Du auf diese Weise installieren kannst, wenn Du den Sync nicht abwarten willst:
-
-   * `Google Messages (SMS), Stand 25. Juni 2020 ist die neueste Version v6.1.095 <https://www.apkmirror.com/apk/google-inc/android-messages-android-wear/android-messages-android-wear-6-1-095-release/messages-wear-os-6-1-095-yeti_rc09-wear_dynamic-android-apk-download/>`_
-   * `Google Maps, Stand 25. Juni 2020 ist die neueste Version v10.35.2 (Android 6.0 oder neuer)  <https://www.apkmirror.com/apk/google-inc/maps-navigation-transit-android-wear/maps-navigation-transit-android-wear-10-35-2-release/google-maps-navigate-explore-wear-os-10-35-2-android-apk-download/>`_
-
-* Die Google Maps  App ist ein gutes Beispiel für veraltete Versionen: 
-
-   * Stand 25. Juni 2020 ist die neueste Version verfügbare Version v10.43.2
-   * Diese ist aber nur für Android 7.0 und neuer.
-   * Erwarte also nicht, dass Google Maps für immer mit Deiner Smartwatch funktioniert. Das Ende kommt früher oder später.
