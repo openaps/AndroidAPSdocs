@@ -99,7 +99,7 @@ Seleccione el tipo de curva de insulina que está usando. Las opciones 'Rapid-Ac
 
 La DIA no es la misma para cada persona. Es por eso que tienes que probarlo por ti mismo. Pero siempre debe ser de al menos 5 horas. Puede leer más sobre esto en la sección Perfil de Insulina de [aqui](../Getting-Started/Screenshots#insulin-profile).
 
-Para Rapid-Acting y Ultra-Rapid, el DIA es la única variable que se puede ajustar por ti mismo, el tiempo de pico es fijo. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings.
+Para Rapid-Acting y Ultra-Rapid, el DIA es la única variable que se puede ajustar por ti mismo, el tiempo de pico es fijo. Free-Peak te permite ajustar tanto el DIA como el tiempo hasta el pico, y sólo debe ser utilizado por los usuarios avanzados que conocen los efectos de estos ajustes.
 
 El [gráfico de la curva de insulina](../Getting-Started/Screenshots#insulin-profile) le ayuda a comprender las diferentes curvas. Puede verlo habilitando la casilla de verificación para mostrarla como una pestaña, de lo contrario estará en el menú.
 
