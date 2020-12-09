@@ -7,6 +7,8 @@ Le capteur peut être étalonné de -40 mg/dl à +20 mg/dl (-2,2 mmol/l à +1,1 
 
 Les glycémies peuvent également être transmise avec un émetteur BT comme avec le Libre1.
 
+Important note : This does not work with the US version of the Freestyle 2 sensor ! The US version will only connect to a reader, not a phone.
+
 Étape 1 : Construire votre propre application Librelink patchée
 ==================================================
 
