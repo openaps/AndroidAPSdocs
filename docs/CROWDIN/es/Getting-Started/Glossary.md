@@ -90,7 +90,7 @@
 </tr>
 <tr>
  <td><strong>CAGE</strong></td>
- <td>canula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
+ <td>edad de la cánula: se muestra en Nightscout si la información se ingresó en la pestaña de acciones / pestaña de menú o a través de la pestaña de acciones de AAPS 'principal'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -108,7 +108,7 @@
 </tr>
 <tr>
  <td><strong>Lazo cerrado</strong></td>
- <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
+ <td>los sistemas de lazo cerrado hacen ajustes automáticos a la dosis basal, sin necesidad de aprobación del usuario, en base a un algoritmo</td>
  <td>Lazo abierto</td>
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Lazo cerrado de Wiki</a></td>
 </tr>
