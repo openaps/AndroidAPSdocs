@@ -196,14 +196,14 @@ Seleccione el algoritmo APS deseado para realizar los ajustes de la terapia. Pue
 * AAPS evalúa continuamente todos los datos disponibles (IOB, COB, BG...) y ajusta automáticamente el tratamiento si es necesario (es decir, sin intervención adicional) para alcanzar el rango o valor de destino establecido (entrega en bolo, velocidad basal temporal, cambio de insulina para evitar la hipoglucemia, etc.). 
 * El Loop Cerrado funciona dentro de numerosos límites de seguridad, que se pueden establecer individualmente.
 * El Lazo Cerrado sólo es posible si está en [Objetivo 6 ](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) o superior y utiliza una bomba soportada.
-* Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol or 100 mg/dl instead of 5,0 - 7,0 mmol or 90 - 125 mg/dl) is recommended.
+* Tenga en cuenta: En el modo de bucle cerrado, se recomienda un solo objetivo en lugar del rango objetivo (es decir, 5,5 mmol o 100 mg/dl en lugar de 5,0 - 7,0 mmol o 90 - 125 mg/dl).
 
 ### Suspensión por glucosa baja (SGB)
 
 * maxIOB se establece en cero
 * Esto significa que si la glucosa en sangre está disminuyendo, puede reducir la basal.
 * Pero si la glucosa en sangre está aumentando, no se hará ninguna corrección automática. Sus tasas basales seguirán siendo las mismas que su perfil seleccionado.
-* Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower BG.
+* Sólo si el IOB basal es negativo (después de una suspensión de glucosa baja previa) se administrará insulina adicional a la parte baja de BG.
 
 ### Valor mínimo de cambio
 
@@ -213,50 +213,50 @@ Seleccione el algoritmo APS deseado para realizar los ajustes de la terapia. Pue
 
 ## Objetivos (programa de aprendizaje)
 
-AndroidAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+AndroidAPS tiene un programa de aprendizaje (objetivos) que debes cumplir paso a paso. Esto debe guiarle de forma segura hacia la configuración de un sistema de bucle cerrado. Esto garantiza que usted tiene configurado todo correctamente y que entienda lo que el sistema hace exactamente. Esta es la única forma en la que puede confiar en el sistema.
 
-You should [export your settings](../Usage/ExportImportSettings.rst) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+Debería [exportar sus ajustes](../Usage/ExportImportSettings.rst) (incluyendo el progreso de los objetivos) regularmente. En caso de que tenga que reemplazar su móvil más tarde (compra de uno nuevo, daños de pantalla, etc.), simplemente puede importar estos ajustes.
 
-See [Objectives](../Usage/Objectives.rst) page for more information.
+Consulte la página [Objetivos](../Usage/Objectives.rst) para obtener más información de configuración.
 
 ## Tratamientos
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots#carb-correction).
+Si ve la pestaña Tratamientos (Trat), usted puede ver los tratamientos que se han subido a nightscout. Si desea editar o borrar una entrada (por ejemplo, comió menos carbohidratos de lo que esperaba), seleccione 'Eliminar' y especifique el nuevo valor (cambie la hora si es necesario) a través del botón [ carbohidratos en la pantalla inicial ](../Getting-Started/Screenshots#carb-correction).
 
 ## General
 
 ### Inicio
 
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
+Muestra el estado actual de su lazo y los botones para las acciones más comunes (ver [sección de La Pantalla de inicio](../Getting-Started/Screenshots.md) para obtener más detalles). Se puede acceder a los valores haciendo clic en el icono rueda dentada.
 
 #### Mantener pantalla activa
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+La opción 'Mantener pantalla encendida' obligará a Android a mantener la pantalla encendida en todo momento. Esto es útil para presentaciones, etc. Pero consume una gran cantidad de energía de la batería. Por lo tanto, se recomienda conectar el móvil con un cable a un cargador.
 
 #### Botones
 
-Define which Buttons are shown on the home screen.
+Definir los Botones que se muestran en la pantalla de inicio.
 
 * Tratamientos
 * Calculadora
 * Insulina
 * Carbohidratos [g]
-* CGM (opens xDrip+)
+* MCG (abre xDrip +)
 * Calibración
 
-Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
+Además, puede establecer accesos directos para los incrementos de insulina y carbohidratos y decidir si el campo de notas debe mostrarse en los diálogos de tratamiento.
 
 #### Asistente configuración
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Usar para comidas que se consumen con frecuencia. Si se especifican diferentes horas para las diferentes comidas, siempre tendrá el botón de comida adecuado en la pantalla de inicio, dependiendo de la hora del día.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Nota: el botón, no será visible si se encuentra fuera del intervalo de tiempo especificado, o si usted tiene suficiente IOB para cubrir los hidratos de carbono definidos en el botón asistente rápido (QuickWizard).
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Configuración del asistente rápido](../images/ConfBuild_QuickWizard.png)
 
-#### Default Temp-Targets
+#### Objetivo temporal por defecto
 
-Choose default temp-targets (duration and target). Preset values are:
+Elegir objetivos temporales por defecto (duración y objetivo). Los valores preestablecidos son:
 
 * comer pronto: objetivo 72 mg/dl / 4,0 mmol/l, duración 45 min
 * actividad: objetivo 140 mg/dl / 7,8 mmol/l, duración 90 min
@@ -286,7 +286,7 @@ Elige si deseas tener [ luces de estado ](../Configuration/Preferences#status-li
 
 ** Administrar esta parte del resultado del asistente de bolo**: cuando se usa SMB, muchas personas no administran el 100% de la insulina necesaria en bolo alimenticio, sino solo una parte (por ejemplo, 75%) y dejan el SMB con UAM (detección de comida sin supervisión) haga el resto. En esta configuración, puede elegir un valor predeterminado para el porcentaje con el que el asistente de bolo debe calcular. Si este ajuste es del 75% y tuvo que administrar un bolo de 10 u, el asistente de bolo le propondrá un bolo de comida de solo 7,5 unidades.
 
-**Habilite la función de superbolo en el asistente ** (¡Es diferente de * supermicrobolus *!): Use con precaución y no la habilite hasta que sepa lo que realmente hace. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! Si utiliza las funciones de bucle de SMB, AAPS se inhabilitará de acuerdo con los valores en ["Máx minutos de basal para limitar SMB a" ](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), si no utiliza funciones de bucle de SMB se inhabilitarán durante dos horas. ** Detalles de super bolo pueden encontrarse [aquí ](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Habilite la función de superbolo en el asistente ** (¡Es diferente de * supermicrobolus *!): Use con precaución y no la habilite hasta que sepa lo que realmente hace. Básicamente, el basal para las próximas dos horas se añade al bolo y se activa un tiempo cero de dos horas. **Las funciones de bucle AAPS se inhabilitarán, por lo que se debe utilizar con precaución! Si utiliza las funciones de bucle de SMB, AAPS se inhabilitará de acuerdo con los valores en ["Máx minutos de basal para limitar SMB a" ](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), si no utiliza funciones de bucle de SMB se inhabilitarán durante dos horas. ** Detalles de super bolo pueden encontrarse [aquí ](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Acciones
 
@@ -296,7 +296,7 @@ Algunos botones para acceder rápidamente a funciones comunes:
 * Objetivos temporales
 * Establecer / cancelar temporal. dosis basal
 * Bolo extendido (sólo la bomba DanaR/RS o Combo)
-* Record for any specific care entries
+* Registro para cualquier entrada de cuidados
     
     * Medir glucosa
     * Cambio de cánula y llenado - registro de cambio cánula y llenado (si no se hace en la bomba)
@@ -324,15 +324,15 @@ Permite a los cuidadores remotos controlar algunas características de AndroidAP
 
 Muestra los valores de alimentos definidos en la base de datos de alimentos de Nightscout, consulte el apartado [Información de Nightscout](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) para obtener más información de configuración.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Nota: Las entradas no se pueden utilizar en la calculadora AndroidAPS. (Ver solamente)
 
-### Wear
+### Reloj
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Utilice la configuración (engranaje) para definir las variables que deben tenerse en cuenta a la hora de calcular el bolo dado a través de su reloj (por ejemplo, la tendencia de 15min, COB...).
 
 Si desea bolo etc. desde el reloj entonces dentro de "Configuración de Reloj" que necesitas para activar "Controles desde el Reloj".
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Ajustes reloj](../images/ConfBuild_Wear.png)
 
 Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
