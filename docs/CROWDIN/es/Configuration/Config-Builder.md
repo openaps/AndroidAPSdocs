@@ -334,24 +334,24 @@ Si desea bolo etc. desde el reloj entonces dentro de "Configuración de Reloj" q
 
 ![Ajustes reloj](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+A través de la pestaña Reloj o el menú de hamburguesa (la parte superior izquierda de la pantalla, si no se visualiza el tabulador) puede
 
-* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
+* Reenviar todos los datos. Puede ser útil si el reloj no estuvo conectado durante algún tiempo y desea enviar la información al reloj.
+* Abre los ajustes en tu reloj directamente desde tu teléfono.
 
-### xDrip Statusline (watch)
+### Linea de estado xDrip (reloj)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Visualizar información de bucle en el reloj de xDrip + (si no está utilizando AAPS/[AAPSv2 watchface ](../Configuration/Watchfaces.md)
 
 ### NSClient
 
-* Setup sync of your AndroidAPS data with Nightscout.
-* Settings in [preferences](../Configuration/Preferences#nsclient) can be opened by clicking the cog wheel.
+* Configuración de la sincronización de datos de su AndroidAPS con Nightscout.
+* Los ajustes en [preferencias](../Configuration/Preferences#nsclient) se pueden abrir haciendo clic en la rueda del engranaje.
 
 ### Mantenimiento
 
-Email and number of logs to be send. Normally no change necessary.
+Correo electrónico y número de registros que se van a enviar. Normalmente no es necesario ningún cambio.
 
 ### Configuraciones
 
-Use tab for config builder instead of hamburger menu.
+Utilice la pestaña para configuraciones en lugar del menú hamburgesa.
