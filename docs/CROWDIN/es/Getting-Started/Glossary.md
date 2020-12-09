@@ -132,31 +132,31 @@
 </tr>
 <tr>
  <td><strong>eCarbs</strong></td>
- <td>"extended carbs" - carbs split up over serveral hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
+ <td>"carbohidratos extendidos"-los carbohidratos se reparten durante varias horas (por ejemplo, mucha grasa/proteína) <br>los bolos extendidos que podría conocer de la terapia regular de la bomba no tienen mucho sentido cuando se utiliza un lazo cerrado</td>
  <td>SMB</td>
  <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - Carbohidratos extendidos</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs caso de uso</a></td>
 </tr>
 <tr>
  <td><strong>FGM</strong></td>
- <td>flash glucose monitor (Freestyle Libre)</td>
+ <td>monitor de glucosa flash (Freestyle Libre)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - Fuentes de BG</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> neccessary for APK updates</td>
+ <td>sistema de control de versiones para realizar un seguimiento de los cambios en los archivos de sistema y coordinar el trabajo en esos archivos <br>-> necesario para actualizaciones de APK</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - actualización APK</a></td>
 </tr>
 <tr>
  <td><strong>Github</strong></td>
- <td>web-based hosting service for version control using Git<br>-> storage of source code</td>
+ <td>servicio de alojamiento basado en la web para el control de versiones utilizando Git <br>-> almacenamiento de código fuente</td>
  <td>&nbsp;</td>
  <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td><strong>Glimp</strong></td>
- <td>app to collect values from Freestyle Libre</td>
+ <td>aplicación para recopilar valores de Freestyle Libre</td>
  <td>&nbsp;</td>
  <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout con Glimp</a> </td>
 </tr>
@@ -168,7 +168,7 @@
 </tr>
 <tr>
  <td><strong>IC (o I:C)</strong></td>
- <td>insulin to carb ratio (How many carbs are covered by one unit of insulin?)</td>
+ <td>relación de insulina a carbohidratos (¿Cuántos carbohidratos están cubiertos por una unidad de insulina?)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -180,13 +180,13 @@
 </tr>
 <tr>
  <td><strong>ISF (Factor Sensibilidad Insulina)</strong></td>
- <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
+ <td>factor de sensibilidad a la insulina - el descenso esperado en el BG como resultado de una unidad de insulina</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>LGS</strong></td>
- <td>Low Glucose Suspend<br>AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
+ <td>Suspensión Baja Glucosa <br>AAPS reducirá el basal si la glucosa en sangre está bajando. Pero si la glucosa en sangre aumenta entonces sólo incrementará el basal si el IOB es negativo (desde un bajo anterior), en el otro caso las tasas basales seguirán siendo las mismas que el perfil seleccionado. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
  <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objetivo 6</a></td>
  <td>&nbsp;</td>
 </tr>
