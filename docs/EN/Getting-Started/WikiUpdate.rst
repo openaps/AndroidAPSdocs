@@ -2,6 +2,7 @@ Docs updates & changes
 **************************************************
 December 2020
 ==================================================
+* `Libre 2 <../Hardware/Libre2.html>`_ - patched app does not work with US sensors
 * Sony Smartwatch 3 `Manual Installation of Google Play Service <../Usage/SonySW3.html>`_
 October 2020
 ==================================================
