@@ -115,7 +115,7 @@ El [gráfico de la curva de insulina](../Getting-Started/Screenshots#insulin-pro
 * DIA = al menos 5.0h
 * Máximo pico = 55 minutos después de la inyección (fijo, no ajustable)
 
-For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. Esta cantidad residual puede actuar durante los deportes, por ejemplo. Por lo tanto, AndroidAPS utiliza el mínimo de 5h como DIA.
+Para mucha gente no hay prácticamente ningún efecto visible de FIASP después de 3-4 horas, incluso si las unidades 0.0xx están disponibles como regla en ese momento. Esta cantidad residual puede actuar durante los deportes, por ejemplo. Por lo tanto, AndroidAPS utiliza el mínimo de 5h como DIA.
 
 ![Configuración Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
 
@@ -164,7 +164,7 @@ Para las bombas dana, utilice ** Valores avanzados ** para activar el control de
 
 Seleccione el tipo de detección de sensibilidad. Para más detalles de los diferentes diseños por favor [leer aquí](../Configuration/Sensitivity-detection-and-COB.md). Esto analizará los datos históricos sobre la marcha y realizará ajustes si reconoce que está reaccionando con más sensibilidad (o a la inversa, más resistente) a la insulina de lo habitual. Se pueden leer más detalles sobre el algoritmo de Sensibilidad en el [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
-Usted puede ver su sensibilidad en la pantalla de inicio seleccionando SEN y viendo la línea blanca. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features#autosens) automatically adjust the amount of insulin delivered. Antes de alcanzar ese objetivo, el porcentaje de Autosens/la línea en el gráfico se muestra sólo para información.
+Usted puede ver su sensibilidad en la pantalla de inicio seleccionando SEN y viendo la línea blanca. Tenga en cuenta que debe estar en el [ Objetivo 8 ](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) para permitir que la detección de sensibilidad/[ Autosens ](../Usage/Open-APS-features#autosens) ajuste automáticamente la cantidad de insulina suministrada. Antes de alcanzar ese objetivo, el porcentaje de Autosens/la línea en el gráfico se muestra sólo para información.
 
 ### Ajustes absorción
 
@@ -175,9 +175,9 @@ Si utiliza Oref1 con SMB, debe cambiar **min_5m_carbimpact ** a 8. El valor sól
 Seleccione el algoritmo APS deseado para realizar los ajustes de la terapia. Puede ver los detalles activos del algoritmo elegido en la pestaña OpenAPS(OAPS).
 
 * OpenAPS AMA (asistencia de comida avanzada, estado del algoritmo en 2017)   
-    Más detalles acerca de OpenAPS AMA se pueden encontrar en [OpenAPS docs ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably. 
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
-    Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+    Más detalles acerca de OpenAPS AMA se pueden encontrar en [OpenAPS docs ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). En términos simples los beneficios son después de que usted se ponga un bolo de comida el sistema puede programar una basal temporal alta más rápidamente SI introduce los carbohidratos de manera fiable. 
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolo, el más reciente algoritmo para usuarios avanzados)  
+    Nota: debe estar en [Objetivo 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) para utilizar OpenAPS SMB y min_5m_carbimpact debe estar ajustado a 8 en el Config builder > Sensibilidad de detección > Valor de sensibilidad Oref1.
 
 ## Loop
 
@@ -187,13 +187,13 @@ Seleccione el algoritmo APS deseado para realizar los ajustes de la terapia. Pue
 
 ### Lazo abierto
 
-* AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. 
-* The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
+* AAPS evalúa continuamente todos los datos disponibles (IOB, COB, BG...) y hace sugerencias de tratamiento sobre cómo ajustar su terapia si es necesario. 
+* Las sugerencias no se ejecutarán automáticamente (como en el bucle cerrado) deben introducirse manualmente en la bomba o usando un botón en caso de que esté usando una bomba compatible (Dana R/RS o Accu Chek Combo). 
 * Esta opción es para conocer cómo funciona AndroidAPS o si está usando una bomba no soportada.
 
 ### Lazo cerrado
 
-* AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). 
+* AAPS evalúa continuamente todos los datos disponibles (IOB, COB, BG...) y ajusta automáticamente el tratamiento si es necesario (es decir, sin intervención adicional) para alcanzar el rango o valor de destino establecido (entrega en bolo, velocidad basal temporal, cambio de insulina para evitar la hipoglucemia, etc.). 
 * El Loop Cerrado funciona dentro de numerosos límites de seguridad, que se pueden establecer individualmente.
 * El Lazo Cerrado sólo es posible si está en [Objetivo 6 ](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) o superior y utiliza una bomba soportada.
 * Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol or 100 mg/dl instead of 5,0 - 7,0 mmol or 90 - 125 mg/dl) is recommended.
