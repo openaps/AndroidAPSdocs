@@ -8,6 +8,8 @@ Der Sensor kann im Bereich von -40 mg/dl bis +20 mg/dl (-2,2 mmol/l bis +1,1 mmo
 
 Werte können wie beim Libre1 auch mit einem Bluetooth-Transmitter übermittelt werden.
 
+Important note : This does not work with the US version of the Freestyle 2 sensor ! The US version will only connect to a reader, not a phone.
+
 Schritt 1: Erstelle Deine eigene gepatchte LibreLink-App
 ==================================================
 
