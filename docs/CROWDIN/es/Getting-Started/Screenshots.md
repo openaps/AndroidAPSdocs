@@ -47,52 +47,52 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 
 * La última lectura de glucosa en sangre de su CGM se muestra en el lado izquierdo.
 * Color of the BG value reflects the status to the defined [range](../Configuration/Preferences#range-for-visualization). 
-   * green = in range
-   * red = below range
-   * yellow = above range
-* The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
+   * verde = en rango
+   * rojo = por debajo del rango
+   * amarillo = por encima del rango
+* El bloque gris en el medio muestra minutos desde la última lectura y cambios desde la última lectura, en los últimos 15 y 40 minutos.
 
-#### Loop status
+#### Estado del bucle
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Estado del bucle](../images/Home2020_LoopStatus.png)
 
-* A new icon shows loop status:
+* Un nuevo icono muestra el estado del bucle:
    
-   * green circle = loop running
-   * green circle with dotted line = [low glucose suspend (LGS)](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
-   * red circled = loop disabled (not working permanently)
-   * yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-   * grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-   * Orange circle = super bolus running - remaining time is shown below icon
-   * blue circle with dotted line = open loop
+   * círculo verde = bucle funcionando
+   * círculo verde con línea punteada = [suspensión por bajada de glucosa (SBG)](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * círculo rojo = bucle desactivado (no funciona permanentemente)
+   * círculo amarillo = ciclo suspendido (temporalmente pausado pero la insulina basal será administrada) - el tiempo restante se muestra debajo del icono
+   * círculo gris = bomba desconectada (temporalmente sin dosis de insulina en absoluto) - el tiempo restante se muestra debajo del icono
+   * Círculo naranja = superbolo en ejecución-el tiempo restante se muestra debajo del icono
+   * círculo azul con línea punteada = bucle abierto
 
-* Long press the icon to open the menu to disable, suspend, re enable loop or disconnect / reconnect pump.
+* Mantenga pulsado el icono para abrir el menú para desactivar, suspender, volver a activar el bucle o desconectar / volver a conectar la bomba.
    
-   ![Loop status menu](../images/Home2020_LoopStatusMenu.png)
+   ![Menú de estado de bucle](../images/Home2020_LoopStatusMenu.png)
 
-### Section D - IOB, COB, BR and AS
+### Sección D - IOB, COB, BR y AS
 
-![Section D](../images/Home2020_TBR.png)
+![Sección D](../images/Home2020_TBR.png)
 
-* Syringe: insulin on board (IOB) - amount of active insulin inside your body
+* Jeringa: insulina a bordo (IOB) - cantidad de insulina activa dentro de su cuerpo
    
-   * The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
-   * IOB may be negative if there have recently been periods of reduced basal.
-   * Press the icon to see the split of bolus and basal insulin
+   * La insulina a bordo sería cero si su basal estándar estuviera en funcionamiento y no hubiera ninguna insulina restante de los bolos anteriores. 
+   * El IOB puede ser negativo si recientemente ha habido períodos de reducción basal.
+   * Pulsa el icono para ver la división del bolo y la insulina basal
 
-* Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
+* Grano: [ carbohidratos a bordo (COB) ](../Usage/COB-calculation.rst), carbohidratos no absorbidos que ha comido anteriormente -> el icono parpadea si se requieren carbohidratos
 
-* Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%) 
-   * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
-* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features#autosens) status (enabled or disabled) and value is shown below icon
+* Línea morada: índice basal: cambios en el icono que reflejan cambios temporales en el índice basal (plano al 100%) 
+   * Pulse el icono para ver la tasa basal base y los detalles de cualquier basal temporal (incluida la duración restante)
+* Flechas hacia arriba& y hacia abajo: indican el estado real del [autosens ](../Usage/Open-APS-features#autosens) (habilitado o deshabilitado) y el valor se muestra debajo del icono
 
-#### Carbs required
+#### Carbohidratos requeridos
 
-![Carbs required](../images/Home2020_CarbsRequired.png)
+![Carbohidratos requeridos](../images/Home2020_CarbsRequired.png)
 
-* Carbs suggestions are given when the reference design detects that it requires carbs.
-* This is when the oref algorithm thinks I can't rescue you by 0 (zero) temping and you will need carbs to fix.
-* The carb notifications are much more sophisticated than the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
+* Las sugerencias de carbohidratos se dan cuando el algoritmo de referencia detecta que requiere carbohidratos.
+* Esto es cuando el algoritmo oref cree que no puedr salvarle con 0 (cero) temping y necesitará carbohidratos para arreglarlo.
+* Las notificaciones de carbohidratos son mucho más sofisticadas que las de la calculadora de bolo. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
 ### Section E - Status lights
