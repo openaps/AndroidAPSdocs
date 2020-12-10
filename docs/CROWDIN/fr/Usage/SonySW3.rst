@@ -1,4 +1,4 @@
-Manual Installation of Google Play Service for  Sony Smartwatch 3
+Installation manuelle du service Google Play pour Sony Smartwatch 3
 #####################################################################
 
 The Sony Smartwatch 3 is one of the most popular watches to be used with AAPS. Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above. 
