@@ -255,18 +255,18 @@ Max IOB que OpenAPS puede proporcionar [U]
 * Cantidad de insulina basal adicional (en unidades) que se acumula en el cuerpo, además de su perfil basal normal. 
 * Una vez que se alcanza este valor, AAPS dejará de administrar insulina basal adicional hasta que la insulina a bordo (IOB) basal vuelva a estar dentro de este rango. 
 * This value **does not consider bolus IOB**, only basal.
-* Este valor se calcula y se vigila independientemente de su tasa basal normal. Solo se considera la insulina basal adicional además de la tasa normal.
+* Este valor se calcula y se vigila independientemente de su tasa basal normal. Solo se considera la insulina basal adicional por encima de la tasa normal.
 
-When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia. This is an important step in order to:
+When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. Esto evita que AAPS administre insulina basal adicional. Durante este tiempo, AAPS aún podrá limitar o cortar su insulina basal para ayudar a prevenir la hipoglucemia. Este es un paso importante para:
 
-* Have a period of time to safely get used to the AAPS system and monitor how it works.
-* Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
-* See how AAPS limits your basal insulin to prevent hypoglycaemia.
+* Disponer de un período de tiempo para acostumbrarse de manera segura al sistema AAPS y vigilar cómo funciona.
+* Aproveche la oportunidad para perfeccionar su perfil basal y el factor de sensibilidad a la insulina (FSI).
+* Vea cómo AAPS limita su insulina basal para prevenir la hipoglucemia.
 
-When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 3 to get a value of 1.5 U/h.
+Cuando se sienta cómodo, puede permitir que el sistema comience a administrarle insulina basal adicional, aumentando el valor de IOB basal máxima. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 3 to get a value of 1.5 U/h.
 
-* You can start conservatively with this value and increase it slowly over time. 
-* These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
+* Puede comenzar de manera reservada con este valor y aumentarlo lentamente con el tiempo. 
+* Estas son solo pautas; el cuerpo de cada uno es diferente. Puede encontrar que necesita más o menos de lo que se recomienda aquí, pero siempre comience de manera reservada y ajuste lentamente.
 
 **Nota: Como medida de seguridad, Max Basal IOB está limitada a 7.**
 
