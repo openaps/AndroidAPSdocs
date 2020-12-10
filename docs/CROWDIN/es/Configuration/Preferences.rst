@@ -35,9 +35,9 @@ General
 
 * Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
 
-Protection
+Protección
 -----------------------------------------------------------
-Master password
+Contraseña maestra
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
 
@@ -51,7 +51,7 @@ Master password
   .. image:: ../images/MasterPW.png
     :alt: Set master password
   
-Settings protection
+Protección de ajustes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Protect your settings with a password or phone's biometric authentication (i.e. `child is using AAPS <../Children/Children.html>`_).
 * Custom password should be used if you want to use master password just for securing `exported settings <../Usage/ExportImportSettings.html>`_.
@@ -60,12 +60,12 @@ Settings protection
   .. image:: ../images/Pref2020_Protection.png
     :alt: Protection
 
-Application protection
+Protección de aplicación
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * If app is protected you must enter password or use phone's biometric authentication to open AAPS.
 * App will shut down immediately if wrong password is entered - but still run in the background if it was previously opened successfully.
 
-Bolus protection
+Protección de bolo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Bolus protection might be useful if AAPS is used by a small child and you `bolus via SMS <../Children/SMS-Commands.html>`_.
 * In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter master password.
@@ -73,7 +73,7 @@ Bolus protection
   .. image:: ../images/Pref2020_PW.png
     :alt: Prompt biometric protection
 
-Skin
+Tema
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * You can choose from three types of skins:
 
@@ -106,7 +106,7 @@ Inicio
 Mantener pantalla activa
 -----------------------------------------------------------
 * Useful while giving a presentation. 
-* It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
+* Va a consumir una gran cantidad de energía, por lo que es recomendable tener el teléfono conectado a un cargador.
 
 Botones
 -----------------------------------------------------------
@@ -184,35 +184,35 @@ Advanced Settings (Overview)
 -----------------------------------------------------------
 Deliver this part of bolus wizard result
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* General setting to deliver only part of bolus wizard result. 
+* Configuración general para entregar sólo parte del resultado del asistente de bolo. 
 * Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. 
-* The percentage is shown in bolus wizard.
+* El porcentaje se muestra en el asistente de bolos.
 
-Superbolus
+Superbolo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Option to enable superbolus in bolus wizard.
 * `Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes.
 
 Treatment safety
 ===========================================================
-Patient age
+Edad paciente
 -----------------------------------------------------------
 * Safety limits are set based on the age you select in this setting. 
 * If you start hitting these hard limits (like max bolus) it's time to move one step up. 
 * It's a bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). 
 * If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on `this page <../Usage/Open-APS-features.html>`_.
 
-Max allowed bolus [U]
+Max bolo permitido [U]
 -----------------------------------------------------------
 * Defines maximum amount of bolus insulin that AAPS is allowed to deliver at once. 
-* This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. 
+* Esta configuración existe como un límite de seguridad para evitar la administración de un bolo masivo debido a una entrada accidental o error del usuario. 
 * It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. 
 * This restriction is also applied to the results of the bolus calculator.
 
 Max allowed carbs [g]
 -----------------------------------------------------------
 * Defines the maximum amount of carbs that AAPS bolus calculator is allowed to dose for.
-* This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. 
+* Esta configuración existe como un límite de seguridad para evitar la administración de un bolo masivo debido a una entrada accidental o error del usuario. 
 * It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
 
 Loop
@@ -268,7 +268,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 * You can start conservatively with this value and increase it slowly over time. 
 * These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
 
-**Note: As a safety feature, Max Basal IOB is hard-limited to 7u.**
+**Nota: Como medida de seguridad, Max Basal IOB está limitada a 7.**
 
 Autosens
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -333,16 +333,16 @@ min_5m_carbimpact
   
 Maximum meal absorption time
 -----------------------------------------------------------
-* If you often eat high fat or protein meals you will need to increase your meal absorption time.
+* Si come comidas con alto contenido de grasas o proteínas, necesitará aumentar el tiempo de absorción de las comidas.
 
 Advanced settings - autosens ratio
 -----------------------------------------------------------
 * Define min. and max. `autosens <../Usage/Open-APS-features.html#autosens>`_ ratio.
 * Normally standard values (max. 1.2 and min. 0.7) should not be changed.
 
-Pump settings
+Configuración de la bomba
 ===========================================================
-The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`_.  Pair and set your pump up according to the pump related instructions:
+The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`_.  Empareje y configure su bomba de según las instrucciones relacionadas con la misma:
 
 * `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ 
 * `DanaRS Insulin Pump <../Configuration/DanaRS-Insulin-Pump.html>`_
@@ -350,7 +350,7 @@ The options here will vary depending on which pump driver you have selected in `
 * `Accu Chek Insight Pump <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 * `Medtronic Pump <../Configuration/MedtronicPump.html>`_
 
-If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+Si usa AndroidAPS en lazo abierto, asegúrese de haber seleccionado bomba virtual en config builder.
 
 NSClient
 ===========================================================
@@ -360,12 +360,12 @@ NSClient
 
 * Set your *Nightscout URL* (i.e. https://yourwebsitename.herokuapp.com) and the *API secret* (a 12 character password recorded in your Heroku variables).
 * This enables data to be read and written between both the Nightscout website and AndroidAPS.  
-* Double check for typos here if you are stuck in Objective 1.
+* Verifique si hay errores tipográficos aquí sí está atrapado en el Objetivo 1.
 * **Make sure that the URL is WITHOUT /api/v1/ at the end.**
 * *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS). 
 * If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ are uploaded to your Nightscout site.
 
-Connection settings
+Ajustes conexión
 -----------------------------------------------------------
 
   .. image:: ../images/ConfBuild_ConnectionSettings.png
@@ -374,9 +374,9 @@ Connection settings
 * Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
 * If you want to use only a specific WiFi network you can enter its WiFi SSID. 
 * Multiple SSIDs can be separated by semicolon. 
-* To delete all SSIDs enter a blank space in the field.
+* Para borrar todos los SSID, introduzca un espacio en blanco en el campo.
 
-Alarm options
+Opciones de alarma
 -----------------------------------------------------------
 * Alarm options allows you to select which default Nightscout alarms to use through the app.  
 * For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
@@ -408,11 +408,11 @@ Automatización
 ===========================================================
 Select which location service shall be used:
 
-* Use passive location: AAPS only takes locations if other apps are requesting it
+* Usar ubicación pasiva: AAPS sólo toma ubicaciones si otras aplicaciones lo están solicitando
 * Use network location: Location of your Wi-Fi
 * Usar localización GPS (Atención! ¡ Puede provocar una descarga excesiva de la batería!)
 
-Local alerts
+Alarma local
 ===========================================================
 
   .. image:: ../images/Pref2020_LocalAlerts.png
