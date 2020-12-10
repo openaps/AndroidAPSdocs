@@ -354,47 +354,47 @@
 </tr>
 <tr>
  <td><strong>DDT</strong></td>
- <td>total daily dose (bolus + basal per day)</td>
+ <td>dosis diaria total (bolo + basal por día)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TT</strong></td>
- <td>temporary target<br>temporary increase/decrease of BG target (range)</td>
+ <td><strong>OT</strong></td>
+ <td>objetivo temporal<br>aumento/disminución temporal del BG objetivo (rango)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
+ <td><a href="../Usage/temptarget.html#temp-targets">Wiki - objetivos temporarios</a></td>
 </tr>
 <tr>
  <td><strong>UAM</strong></td>
- <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
+ <td>comidas sin previo aviso - detección de aumento significativo en los niveles de glucosa debido a comidas, adrenalina u otras influencias e intento de ajustar esto con SMB</td>
  <td>SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki-SMB</a></td>
 </tr>
 <tr>
- <td><strong>Virtual pump</strong></td>
- <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
+ <td><strong>Bomba virtual</strong></td>
+ <td>opción para probar las funciones de AAPS o PWD utilizando un modelo de bomba sin el controlador AndroidAPS para el lazo</td>
  <td>Lazo abierto</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>Fondo de pantalla</strong></td>
- <td>AndroidAPS background image</td>
+ <td>Imagen de fondo AndroidAPS</td>
  <td></td>
- <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>
+ <td><a href="../Getting-Started/Phones.html#phone-background">ver la página de teléfonos</a></td>
 </tr>
 <tr>
  <td><strong>xDrip / xDrip+</strong></td>
- <td>open source software to read CGM systems</td>
+ <td>software de código abierto para leer sistemas CGM</td>
  <td>&nbsp;</td>
- <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
+ <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip + </a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip </a></td>
 </tr>
 <tr>
  <td><strong>Zero-temp</strong></td>
- <td>temporary basal rate with 0% (no basal insulin delivery)</td>
+ <td>tasa basal temporal con 0% (sin suministro de insulina basal)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td colspan=4>See also <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
+ <td colspan=4>Consulte también <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html </a></td>
 </tr>
 </table>
