@@ -92,18 +92,18 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 
 * Las sugerencias de carbohidratos se dan cuando el algoritmo de referencia detecta que requiere carbohidratos.
 * Esto es cuando el algoritmo oref cree que no puedr salvarle con 0 (cero) temping y necesitará carbohidratos para arreglarlo.
-* Las notificaciones de carbohidratos son mucho más sofisticadas que las de la calculadora de bolo. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
+* Las notificaciones de carbohidratos son mucho más sofisticadas que las de la calculadora de bolo. Es posible que vea una sugerencia de carbohidratos mientras que la calculadora de bolo no muestra los carbohidratos faltantes.
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
 ### Section E - Status lights
 
-![Section E](../images/Home2020_StatusLights.png)
+![Sección E](../images/Home2020_StatusLights.png)
 
 * Status lights give a visual warning for 
    * Cannula age
    * Insulin age (days reservoir is used)
    * Reservoir level (units)
-   * Sensor age
+   * Edad sensor
    * Battery age and level (%)
 * If threshold warning is exceeded, values will be shown in yellow.
 * If threshold critical is exceeded, values will be shown in red.
@@ -111,17 +111,17 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 
 ### Section F - Main graph
 
-![Section F](../images/Home2020_MainGraph.png)
+![Sección F](../images/Home2020_MainGraph.png)
 
 * Graph shows your blood glucose (BG) as read from your glucose monitor (CGM). 
 * Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
-* Long press on the graph to change the time scale. You can choose 6, 12, 18 or 24 hours.
+* Pulsación larga en el gráfico para cambiar la escala de tiempo. You can choose 6, 12, 18 or 24 hours.
 * The green area reflects your target range. It can be configured in [preferences](../Configuration/Preferences#range-for-visualization).
 * Blue triangles show [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - if enabled in [preferences](../Configuration/Preferences#openaps-smb-settings).
 * Optional information:
    
    * Predicciones
-   * Basals
+   * Basales
    * Activity - insulin activity curve
 
 #### Activate optional information
@@ -133,35 +133,35 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 
 #### Prediction lines
 
-* **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
+* **Naranja** línea: [COB](../Usage/COB-calculation.rst) (color que se utiliza generalmente para representar a los COB y los hidratos de carbono)
    
-   Prediction line shows where your BG (not where COB itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
+   Prediction line shows where your BG (not where COB itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. Esta línea sólo aparece si se conoce COB.
 
-* **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
+* **Azul oscuro** línea: IOB (color que se utiliza generalmente para representar IOB e insulina)
    
-   Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
+   La línea de predicción muestra lo que ocurriría bajo la influencia de la insulina solamente. Por ejemplo, si usted se ha administrado alguna insulina y luego no ha comido carbohidratos.
 
-* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* **Azul claro** línea: cero-temp (predicción de BG si se establecería una tasa basal temporal en 0%)
    
-   Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+   La línea de predicción muestra cómo la línea de trayectoria del IOB cambiaría si la bomba detuviera toda la entrega de insulina (0% TBR).
 
-* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals)
+* **Amarillo oscuro** line: [UAM ](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (comidas no anunciadas)
    
-   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+   Las comidas no anunciadas significan que se detecta un aumento significativo en los niveles de glucosa debido a las comidas, adrenalina u otras influencias. La línea de predicción es similar a la línea ORANGE COB pero supone que las desviaciones se recortarán a un ritmo constante (ampliando la tasa actual de reducción).
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+Por lo general, su verdadera curva de glucosa termina en el medio de estas líneas, o cerca de la que hace suposiciones que se asemejan más a su situación.
 
-#### Basals
+#### Basales
 
 * A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
 * The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
 * In times standard basal rate is given the area under the curve is shown in dark blue.
 * When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
 
-#### Activity
+#### Actividad
 
-* The **thin yellow** line shows the activity of Insulin. 
-* It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+* La línea de **amarillo delgado** muestra la actividad de la Insulina. 
+* Se basa en la bajada esperada de BG por la insulina en su sistema sin otros factores (como carbohidratos) presentes.
 
 ### Section G - additional graphs
 
@@ -201,7 +201,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. 
 * Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
 
-#### Activity
+#### Actividad
 
 * Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
 * The value is higher for insulin closer to peak time.
