@@ -186,13 +186,13 @@
 </tr>
 <tr>
  <td><strong>LGS</strong></td>
- <td>Suspensión Baja Glucosa <br>AAPS reducirá el basal si la glucosa en sangre está bajando. Pero si la glucosa en sangre aumenta entonces sólo incrementará el basal si el IOB es negativo (desde un bajo anterior), en el otro caso las tasas basales seguirán siendo las mismas que el perfil seleccionado. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
+ <td>Suspensión Baja Glucosa <br>AAPS reducirá el basal si la glucosa en sangre está bajando. Pero si la glucosa en sangre aumenta entonces sólo incrementará el basal si el IOB es negativo (desde un bajo anterior), en el otro caso las tasas basales seguirán siendo las mismas que el perfil seleccionado. Puede experimentar temporalmente picos después de los hipos tratados sin la posibilidad de aumentar basal en el rebote.</td>
  <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objetivo 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>LineageOS</strong></td>
- <td>free and open-source operating system for smartphones etc.<br>alternative OS for smartphones not running Android 8.1 (Oreo)<br>(when using Accu-Chek Combo)</td>
+ <td>sistema operativo libre y de código abierto para móviles, etc. <br>alternativo de sistema operativo para móviles que no ejecutan Android 8.1 (Oreo) <br>(cuando se utiliza Accu-Chek Combo)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Bomba Combo</a></td>
 </tr>
