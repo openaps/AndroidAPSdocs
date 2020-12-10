@@ -206,14 +206,14 @@ Max bolo permitido [U]
 -----------------------------------------------------------
 * Defines maximum amount of bolus insulin that AAPS is allowed to deliver at once. 
 * Esta configuración existe como un límite de seguridad para evitar la administración de un bolo masivo debido a una entrada accidental o error del usuario. 
-* It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. 
+* Se recomienda establecer esto en una cantidad razonable que corresponda aproximadamente a la cantidad máxima de insulina en bolo que probablemente necesitará para una dosis de comida o corrección. 
 * This restriction is also applied to the results of the bolus calculator.
 
-Max allowed carbs [g]
+Máx. carbohidratos permitidos [g]
 -----------------------------------------------------------
 * Defines the maximum amount of carbs that AAPS bolus calculator is allowed to dose for.
 * Esta configuración existe como un límite de seguridad para evitar la administración de un bolo masivo debido a una entrada accidental o error del usuario. 
-* It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+* Se recomienda establecer esto en una cantidad razonable que corresponda aproximadamente a la cantidad máxima de carbohidratos que probablemente necesite para una comida.
 
 Loop
 ===========================================================
@@ -224,11 +224,11 @@ APS mode
 * **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.  
 * **Low glucose suspend** gives you the possibility to enter into Low Glucose Suspend without the need for the reverting an objective.
 
-Minimal request change [%]
+Valor mínimo de cambio [%]
 -----------------------------------------------------------
-* When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. 
+* Cuando se utiliza en lazo abierto recibirás notificaciones cada vez que AAPS recomienda ajustar basal. 
 * To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
-* This defines the relative change required to trigger a notification.
+* Esto define el cambio relativo necesario para lanzar una notificación.
 
 Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
 ===========================================================
@@ -242,20 +242,20 @@ OpenAPS AMA settings
 * Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. 
 * More details about the settings and Autosens can be found in the `OpenAPS docs <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`_.
 
-Max U/h a Temp Basal can be set to
+Max U/h para la basal temporal
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. 
 * The value is measured in units per hour (U/h). 
-* It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. 
+* Se aconseja establecer esto en algo sensato. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. 
 * For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
 * See also `detailed feature description <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>`_.
 
-Maximum basal IOB OpenAPS can deliver [U]
+Max IOB que OpenAPS puede proporcionar [U]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. 
-* Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again. 
+* Cantidad de insulina basal adicional (en unidades) que se acumula en el cuerpo, además de su perfil basal normal. 
+* Una vez que se alcanza este valor, AAPS dejará de administrar insulina basal adicional hasta que la insulina a bordo (IOB) basal vuelva a estar dentro de este rango. 
 * This value **does not consider bolus IOB**, only basal.
-* This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
+* Este valor se calcula y se vigila independientemente de su tasa basal normal. Solo se considera la insulina basal adicional además de la tasa normal.
 
 When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia. This is an important step in order to:
 
