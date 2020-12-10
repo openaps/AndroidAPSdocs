@@ -46,7 +46,7 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 #### Glucosa sanguínea actual
 
 * La última lectura de glucosa en sangre de su CGM se muestra en el lado izquierdo.
-* Color of the BG value reflects the status to the defined [range](../Configuration/Preferences#range-for-visualization). 
+* El color del valor de glucosa en sangre refleja el estado del [ rango ](../Configuration/Preferences#range-for-visualization) definido. 
    * verde = en rango
    * rojo = por debajo del rango
    * amarillo = por encima del rango
@@ -172,7 +172,7 @@ Por lo general, su verdadera curva de glucosa termina en el medio de estas líne
 
 * To add an additional graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
 
-#### Absolute insulin
+#### Insulina en total
 
 * Active insulin including boluses **and basal**.
 
@@ -183,7 +183,7 @@ Por lo general, su verdadera curva de glucosa termina en el medio de estas líne
 * IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
 * Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile-recommended). 
 
-#### Carbs On Board
+#### Carbohidratos activos COB
 
 * Shows the carbs you have on board (= active, not yet decayed carbs in your body). 
 * Decaying depends on the deviations the algorithm detects. 
