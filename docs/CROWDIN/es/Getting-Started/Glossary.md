@@ -198,7 +198,7 @@
 </tr>
 <tr>
  <td><strong>Archivos de Log</strong></td>
- <td>record of all AAPS actions (useful for trubbleshooting and debugging)</td>
+ <td>registro de todas las acciones de AAPS (útil para problemas y la depuración)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - archivos de registro (Log)</a></td>
 </tr>
@@ -216,7 +216,7 @@
 </tr>
 <tr>
  <td><strong>min_5m_carbimpact</strong></td>
- <td>saftey feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your bloods reactions</td>
+ <td>función de seguridad - disminución por defecto de los carbohidratos, cuando la absorción de los carbohidros no puede calcularse dinámicamente en base a sus reacciones de sangre</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - configuración</a></td>
 </tr>
@@ -228,25 +228,25 @@
 </tr>
 <tr>
  <td><strong>NS Client</strong></td>
- <td>part of AAPS to connect to your Nightscout site</td>
+ <td>parte de AAPS para conectarse a su página de Nightscout</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki-Cliente NS</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout Reporter</strong></td>
- <td>Tool from fellow looper to generate PDFs reports from Nightscout data</td>
+ <td>Herramienta de seguidores del looper, para generar informes PDFs a partir de datos de Nightscout</td>
  <td>Nightscout</td>
- <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
+ <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter </a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook </a></td>
 </tr>
 <tr>
  <td><strong>Objetivos</strong></td>
- <td>learning program within AAPS guiding you step by step from open to closed loop</td>
+ <td>programa de aprendizaje dentro de AAPS que te guiará paso a paso de lazo abierto a lazo cerrado</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
+ <td><a href="../Usage/Objectives.html">Wiki - objetivos</a></td>
 </tr>
 <tr>
  <td><strong>OpenAPS</strong></td>
- <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pie)<br>AAPS uses some of the OpenAPS features</td>
+ <td>El sistema abierto de páncreas artificial (OpenAPS) <br>APS se ejecuta en ordenadores pequeños (es decir, Raspberry Pie) <br>AAPS utiliza algunas de las funciones de OpenAPS</td>
  <td>&nbsp;</td>
  <td><a href="https://openaps.readthedocs.io">Documentos de OpenAPS</a></td>
 </tr>
@@ -258,13 +258,13 @@
 </tr>
 <tr>
  <td><strong>Oref0 / Oref1</strong></td>
- <td>sensitivity detection<br>"reference design implementation version 0/1" - the key algorithm behind OpenAPS</td>
+ <td>detección de sensibilidad <br>"referencia de diseño implementación de versión 0/1" - es el algoritmo clave detrás de OpenAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - Detección sensibilidad</a></td>
 </tr>
 <tr>
  <td><strong>Tiempo del pico (Peak time)</strong></td>
- <td>time of maximum effect of insulin given</td>
+ <td>tiempo en el que ocurre el efecto máximo de la insulina administrada</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - configuración</a></td>
 </tr>
@@ -276,15 +276,15 @@
 </tr>
 <tr>
  <td><strong>Predicciones</strong></td>
- <td>preditions for BG in the future based on different calculations</td>
+ <td>predicciones de BG futuras, basadas en diferentes cálculos</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - líneas de predicción</a></td>
 </tr>
 <tr>
  <td><strong>Perfil</strong></td>
- <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
+ <td>valores básicos del tratamiento (tasa basal, DIA, IC, ISF, BG objetivo) <br>se pueden definir por el perfil local o a través de Nightscout</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profile">Wiki - perfil</a></td>
 </tr>
 <tr>
  <td><strong>Cambio de perfil</strong></td>
@@ -300,33 +300,33 @@
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
- <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz wireless communication (used for old Medtronic pumps)</td>
+ <td>dispositivo de hardware de código abierto para conectar Bluetooth Low Energy (BLE) a la comunicación inalámbrica 916 MHz (utilizada para las bombas Medtronic antiguas)</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>SAGE</strong></td>
- <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
+ <td>edad del sensor: se muestra en Nightscout si se ingresó información en la pestaña / menú de acciones</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>SEN</strong></td>
- <td>status light sensor change on homescreen</td>
+ <td>luz de cambio de sensor, en la pantalla de inicio</td>
  <td>BAT / CAN / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Preferencias </a><br><a href="../Getting-Started/Screenshots.html">Capturas de pantalla </a></td>
 </tr>
 <tr>
- <td><strong>Sensivity detection</strong></td>
+ <td><strong>Detección sensibilidad</strong></td>
  <td>cálculo de la sensibilidad a la insulina como resultado del ejercicio, las hormonas, etc.</td>
  <td>&nbsp;</td>
  <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH-Autosens</a></td>
 </tr>
 <tr>
- <td><strong>Sensor noise</strong></td>
- <td>unstable CGM readings leading to "jumping" values</td>
+ <td><strong>Ruido de Sensor</strong></td>
+ <td>lecturas de CGM inestables que llevan a valores "erráticos"</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
+ <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - ruido del sensor</a></td>
 </tr>
 <tr>
  <td><strong>SMB</strong></td>
@@ -336,24 +336,24 @@
 </tr>
 <tr>
  <td><strong>Súper bolo</strong></td>
- <td>shift of basal to bolus insulin for faster BG adjustment</td>
+ <td>cambio de la insulina basal a la insulina de bolo, para un ajuste más rápido de BG</td>
  <td>&nbsp;</td>
- <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
+ <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - El Super Bolo</a></td>
 </tr>
 <tr>
  <td><strong>TBB</strong></td>
- <td>total base basal (sum of basal rate within 24 hours)</td>
+ <td>base basal total (suma de la tasa basal en un plazo de 24 horas)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>TBR</strong></td>
- <td>temporary basal rate</td>
+ <td>tasa basal temporal</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TDD</strong></td>
+ <td><strong>DDT</strong></td>
  <td>total daily dose (bolus + basal per day)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
