@@ -186,28 +186,28 @@ Por lo general, su verdadera curva de glucosa termina en el medio de estas líne
 #### Carbohidratos activos COB
 
 * Shows the carbs you have on board (= active, not yet decayed carbs in your body). 
-* Decaying depends on the deviations the algorithm detects. 
-* If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
+* La reducción depende de las desviaciones que el algoritmo detecta. 
+* Si detecta una mayor absorción de carbohidratos a lo esperado, se administrará la insulina y esto incrementará el IOB (más o menos, en función de sus valores de seguridad). 
 
-#### Deviations
+#### Desviaciones
 
-* **GREY** bars show a deviation due to carbs. 
-* **GREEN** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
-* **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
+* **GRIS** barras que muestran una desviación debido a los carbohidratos. 
+* **VERDE** barras que muestran un BG mayor al que el algoritmo esperaba. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
+* **RED ** barras que muestran que BG es menor al que el algoritmo esperaba. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
 * **YELLOW** bars show a deviation due to UAM.
 
-#### Sensitivity
+#### Sensibilidad
 
 * Shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. 
-* Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+* La Sensibilidad es el cálculo de la respuesta a la insulina como resultado del ejercicio, las hormonas, etc.
 
 #### Actividad
 
 * Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
-* The value is higher for insulin closer to peak time.
-* It would mean to be negative when IOB is decreasing. 
+* El valor es más alto para la insulina más próxima a la hora punta.
+* Esto significaría un valor negativo cuando el IOB está disminuyendo. 
 
-#### Deviation slope
+#### Pendiente de desviación
 
 * Internal value used in algorithm.
 
@@ -259,39 +259,39 @@ Por lo general, su verdadera curva de glucosa termina en el medio de estas líne
 
 ## Bolus Wizard
 
-![Bolus wizard](../images/Home2020_BolusWizard.png)
+![Asistente Bolus](../images/Home2020_BolusWizard.png)
 
-When you want to make a meal bolus this is where you will normally make it from.
+Cuando usted quiere hacer un bolo para comida, aquí es de donde normalmente lo hará.
 
 ### Section I
 
-* BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. 
-* In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. 
+* BG field is normally already populated with the latest reading from your CGM. Si no tienes una CGM que funcione, entonces estará en blanco. 
+* En el campo CARBS se añade su estimación de la cantidad de carbohidratos (o equivalente) a los que desea realizar el bolo. 
 * The CORR field is if you want to modify the end dosage for some reason.
-* The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+* The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Puede poner un número negativo en este campo si está colocando un bolo para los carbohidratos ya ingeridos.
 
 ### Section J
 
-* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. 
-* The idea is to deliver the insulin sooner and hopefully reduce spikes.
+* SUPER BOLO es el lugar en el que se añade la insulina basal para las próximas dos horas junto al bolo inmediato y basal temporal de cero durante las dos horas siguientes para recuperar la insulina adicional. 
+* La idea es entregar la insulina antes y esperadamente reducir los picos.
 * For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
 ### Section K
 
-* Shows the calculated bolus. 
-* If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+* Muestra el bolo calculado. 
+* Si la cantidad de insulina a bordo sobrepasa ya el bolo calculado, entonces sólo se mostrará la cantidad de carbohidratos que todavía se necesitan.
 * Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#ns-client).
 
 ### Section L
 
 * Details of wizard's bolus calculation.
-* You can deselect any that you do not want to include but you normally wouldn't want to.
+* Puede anular la selección de cualquier que no desee incluir, pero normalmente no es algo que realizaría.
 * For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
 
-#### Combinations of COB and IOB and what they mean
+#### Combinaciones de COB e IOB y lo que significan
 
 * For safety reasons IOB boxed cannot be unticked when COB box is ticked as you might run the risk of too much insulin as AAPS is not accounting for what’s already given.
-* If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
+* Si marca COB e IOB, los carbohidratos no absorbidos que aún no están cubiertos con insulina + toda la insulina que ha sido suministrada como Basal temporal o SMB serán tenidos en cuenta.
 * If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
 * If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
 
