@@ -7,24 +7,24 @@
 ..
 	Omnipod (POD) Overview Tab
 
-.. |ack_alerts|                    image:: ../ICONS/omnipod_overview_ack_alerts.png
-.. |pod_management|                image:: ../ICONS/omnipod_overview_pod_management.png
-.. |refresh_pod_status|            image:: ../ICONS/omnipod_overview_refresh_pod_status.png
-.. |overview_resume|               image:: ../ICONS/omnipod_overview_resume.png
-.. |set_time|                      image:: ../ICONS/omnipod_overview_set_time.png
-.. |suspend|                       image:: ../ICONS/omnipod_overview_suspend.png
+.. |ack_alerts|                    image:: ICONS/omnipod_overview_ack_alerts.png
+.. |pod_management|                image:: ICONS/omnipod_overview_pod_management.png
+.. |refresh_pod_status|            image:: ICONS/omnipod_overview_refresh_pod_status.png
+.. |overview_resume|               image:: ICONS/omnipod_overview_resume.png
+.. |set_time|                      image:: ICONS/omnipod_overview_set_time.png
+.. |suspend|                       image:: ICONS/omnipod_overview_suspend.png
 
 ..
 	Pod Management Tab
 
-.. |activate_pod|                  image:: ../ICONS/omnipod_overview_pod_management_activate_pod.png
-.. |deactivate_pod|                image:: ../ICONS/omnipod_overview_pod_management_deactivate_pod.png
-.. |discard_pod|                   image:: ../ICONS/omnipod_overview_pod_management_discard_pod.png
-.. |play_test_beep|                image:: ../ICONS/omnipod_overview_pod_management_play_test_beep.png
-.. |pod_history|                   image:: ../ICONS/omnipod_overview_pod_management_pod_history.png
-.. |pulse_log|                     image:: ../ICONS/omnipod_overview_pod_management_pulse_log.png
-.. |reset_rileylink_config|        image:: ../ICONS/omnipod_overview_pod_management_reset_rileylink_config.png
-.. |rileylink_stats|               image:: ../ICONS/omnipod_overview_pod_management_rileylink_stats.png
+.. |activate_pod|                  image:: ICONS/omnipod_overview_pod_management_activate_pod.png
+.. |deactivate_pod|                image:: ICONS/omnipod_overview_pod_management_deactivate_pod.png
+.. |discard_pod|                   image:: ICONS/omnipod_overview_pod_management_discard_pod.png
+.. |play_test_beep|                image:: ICONS/omnipod_overview_pod_management_play_test_beep.png
+.. |pod_history|                   image:: ICONS/omnipod_overview_pod_management_pod_history.png
+.. |pulse_log|                     image:: ICONS/omnipod_overview_pod_management_pulse_log.png
+.. |reset_rileylink_config|        image:: ICONS/omnipod_overview_pod_management_reset_rileylink_config.png
+.. |rileylink_stats|               image:: ICONS/omnipod_overview_pod_management_rileylink_stats.png
 
 
 ..
@@ -145,3 +145,166 @@
 .. |Suspend_Insulin_Delivery_2|         image:: Suspend_Insulin_Delivery_2.png
 .. |Suspend_Insulin_Delivery_3|         image:: Suspend_Insulin_Delivery_3.png
 .. |Suspend_Insulin_Delivery_4|         image:: Suspend_Insulin_Delivery_4.png
+
+
+Omnipod image aliases resource reference test
+
+
+Interface Icons
+
+
+Omnipod (POD) Overview Tab
+
+|ack_alerts|                  
+|pod_management|              
+|refresh_pod_status|          
+|overview_resume|             
+|set_time|                    
+|suspend|                     
+
+
+Pod Management Tab
+
+|activate_pod|                
+|deactivate_pod|              
+|discard_pod|                 
+|play_test_beep|              
+|pod_history|                 
+|pulse_log|                   
+|reset_rileylink_config|      
+|rileylink_stats|             
+
+
+
+Instructional Section Images
+
+
+Acknowledge Alerts
+
+|Acknowledge_Alerts_1|              
+|Acknowledge_Alerts_2|              
+|Acknowledge_Alerts_3|              
+|Acknowledge_Alerts_4|              
+|Acknowledge_Alerts_5|              
+
+
+Actions Tab
+
+|Actions_Tab|                  		
+
+
+Activate Pod
+
+|Activate_Pod_1|                    
+|Activate_Pod_2|                    
+|Activate_Pod_3|                    
+|Activate_Pod_4|                    
+|Activate_Pod_5|                    
+|Activate_Pod_6|                    
+|Activate_Pod_7|                    
+|Activate_Pod_8|                    
+|Activate_Pod_9|                    
+|Activate_Pod_10|                   
+|Activate_Pod_11|                   
+|Activate_Pod_12|                   
+|Activate_Pod_13|                   
+|Activate_Pod_14|                   
+|Activate_Pod_15|                   
+
+
+Deactivate Pod
+
+|Deactivate_Pod_1|                  
+|Deactivate_Pod_2|                  
+|Deactivate_Pod_3|                  
+|Deactivate_Pod_4|                  
+|Deactivate_Pod_5|                  
+|Deactivate_Pod_6|                  
+|Deactivate_Pod_7|                  
+|Deactivate_Pod_8|                  
+|Deactivate_Pod_9|                  
+|Deactivate_Pod_10|                 
+
+
+Enabling the Omnipod Driver in AAPS
+
+|Enable_Omnipod_Driver_1|           
+|Enable_Omnipod_Driver_2|           
+|Enable_Omnipod_Driver_3|           
+|Enable_Omnipod_Driver_4|           
+|Enable_Omnipod_Driver_5|           
+
+
+Optimally Positioning the RileyLink
+
+|Omnipod_pod_and_RileyLink_Position|
+|Toroid_w_CS|                  		
+
+
+Omnipod Settings
+
+|Omnipod_Settings_1|                
+|Omnipod_Settings_2|                
+|Omnipod_Settings_3|                
+
+
+Omnipod Tab
+
+|Omnipod_Tab|                  		
+|Omnipod_Tab_Pod_Management|        
+
+
+Pod History
+
+|Pod_History_1|                  	
+|Pod_History_2|                  	
+|Pod_History_3|                  	
+|Pod_History_4|                  	
+
+
+Resume Insulin Delivery
+
+|Resume_Insulin_Delivery_1|         
+|Resume_Insulin_Delivery_2|         
+|Resume_Insulin_Delivery_3|         
+|Resume_Insulin_Delivery_3|         
+
+
+RileyLink Bluetooth Reset
+
+|RileyLink_Bluetooth_Reset_1|       
+|RileyLink_Bluetooth_Reset_2|       
+|RileyLink_Bluetooth_Reset_3|       
+|RileyLink_Bluetooth_Reset_4|       
+|RileyLink_Bluetooth_Reset_5|       
+
+
+RileyLink Setup
+
+|RileyLink_Setup_1|                 
+|RileyLink_Setup_2|                 
+|RileyLink_Setup_3|                 
+|RileyLink_Setup_4|                 
+|RileyLink_Setup_5|                 
+
+
+RileyLink Statistics History
+
+|RileyLink_Statistics_History_1|    
+|RileyLink_Statistics_History_2|    
+|RileyLink_Statistics_History_3|    
+
+
+RileyLink Statistics Settings
+
+|RileyLink_Statistics_Settings_1|   
+|RileyLink_Statistics_Settings_2|   
+|RileyLink_Statistics_Settings_3|   
+
+
+Suspend Insulin Delivery
+
+|Suspend_Insulin_Delivery_1|        
+|Suspend_Insulin_Delivery_2|        
+|Suspend_Insulin_Delivery_3|        
+|Suspend_Insulin_Delivery_4|        
