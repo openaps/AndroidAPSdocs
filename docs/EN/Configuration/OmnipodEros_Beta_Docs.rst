@@ -3,43 +3,15 @@
 Image Testing
 =============
 
-Inline Image
-
-.. image:: ../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png
-
-
 Normal image
 
-.. image:: ../images/omnipod/Enable_Omnipod_Driver_1.png
+|refresh_pod_status|
+
 
 2 Images
 
-.. image:: ../images/omnipod/Enable_Omnipod_Driver_1.png  .. image:: ../images/omnipod/Enable_Omnipod_Driver_2.png
+|ack_alerts|  |pod_management|
 
-Image with pixel definition and alt tags
-
-.. image:: ../images/omnipod/Enable_Omnipod_Driver_1.png
-  :width: 400
-  :alt: Alternative text
-  
-Testing an alias to see if it can be nested in a table to display the image
-
-..
-       Icon Aliases
-.. |ack_alerts|                    image:: ../images/omnipod/ICONS/omnipod_overview_ack_alerts.png
-.. |pod_management|                image:: ../images/omnipod/ICONS/omnipod_overview_pod_management.png
-.. |activate_pod|                  image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png
-.. |deactivate_pod|                image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png
-.. |discard_pod|                   image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_discard_pod.png
-.. |play_test_beep|                image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png
-.. |pod_history|                   image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_pod_history.png
-.. |pulse_log|                     image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_pulse_log.png
-.. |reset_rileylink_config|        image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_reset_rileylink_config.png
-.. |rileylink_stats|               image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_rileylink_stats.png
-.. |refresh_pod_status|            image:: ../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png
-.. |overview_resume|               image:: ../images/omnipod/ICONS/omnipod_overview_resume.png
-.. |set_time|                      image:: ../images/omnipod/ICONS/omnipod_overview_set_time.png
-.. |suspend|                       image:: ../images/omnipod/ICONS/omnipod_overview_suspend.png
 
 Testing aliases Image references
 
@@ -79,8 +51,6 @@ Pod Management Menu
 |rileylink_stats|
 
 
-
-
 Table with images
 
 |ack_alerts|  |pod_management|
@@ -88,11 +58,6 @@ Table with images
 +------------------+-----------+
 | |pod_management| | |refresh| |
 +------------------+-----------+
-
-
-
-  
-
 
 
 
