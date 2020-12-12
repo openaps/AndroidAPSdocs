@@ -9,7 +9,7 @@
 
 .. |ack_alerts|                    image:: ICONS/omnipod_overview_ack_alerts.png
 .. |pod_management|                image:: ICONS/omnipod_overview_pod_management.png
-.. |refresh_pod_status|            image:: ICONS/omnipod_overview_refresh_pod_status.png
+.. |refresh_pod_status|            image:: /docs/EN/images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png
 .. |overview_resume|               image:: ICONS/omnipod_overview_resume.png
 .. |set_time|                      image:: ICONS/omnipod_overview_set_time.png
 .. |suspend|                       image:: ICONS/omnipod_overview_suspend.png
