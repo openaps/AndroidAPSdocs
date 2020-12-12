@@ -80,7 +80,7 @@ You can enable the Omnipod driver in AAPS in **two ways**:
        select the **Omnipod radio button (3)** and select **Pump Setup
        (4)** to open the Omnipod Settings screen.
 
-       .. image:: ../images/omnipod/Enable_Omnipod_Driver_1.png
+       .. |customsub| .. image:: ../images/omnipod/Enable_Omnipod_Driver_1.png
     |image1|\ |image2|
 
 **OR**
