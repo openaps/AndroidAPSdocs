@@ -1,3 +1,101 @@
+.. include:: ../images/omnipod/omnipod_image_aliases.rst
+
+Image Testing
+=============
+
+Inline Image
+
+.. image:: ../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png
+
+
+Normal image
+
+.. image:: ../images/omnipod/Enable_Omnipod_Driver_1.png
+
+2 Images
+
+.. image:: ../images/omnipod/Enable_Omnipod_Driver_1.png  .. image:: ../images/omnipod/Enable_Omnipod_Driver_2.png
+
+Image with pixel definition and alt tags
+
+.. image:: ../images/omnipod/Enable_Omnipod_Driver_1.png
+  :width: 400
+  :alt: Alternative text
+  
+Testing an alias to see if it can be nested in a table to display the image
+
+..
+       Icon Aliases
+.. |ack_alerts|                    image:: ../images/omnipod/ICONS/omnipod_overview_ack_alerts.png
+.. |pod_management|                image:: ../images/omnipod/ICONS/omnipod_overview_pod_management.png
+.. |activate_pod|                  image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png
+.. |deactivate_pod|                image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png
+.. |discard_pod|                   image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_discard_pod.png
+.. |play_test_beep|                image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png
+.. |pod_history|                   image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_pod_history.png
+.. |pulse_log|                     image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_pulse_log.png
+.. |reset_rileylink_config|        image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_reset_rileylink_config.png
+.. |rileylink_stats|               image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_rileylink_stats.png
+.. |refresh_pod_status|            image:: ../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png
+.. |overview_resume|               image:: ../images/omnipod/ICONS/omnipod_overview_resume.png
+.. |set_time|                      image:: ../images/omnipod/ICONS/omnipod_overview_set_time.png
+.. |suspend|                       image:: ../images/omnipod/ICONS/omnipod_overview_suspend.png
+
+Testing aliases Image references
+
+Omnipod Overview Tab
+
+|ack_alerts|
+
+|pod_management|
+
+|refresh_pod_status|
+
+|overview_resume|
+
+|set_time|
+
+|suspend|
+
+
+
+
+Pod Management Menu
+
+|activate_pod|
+
+|deactivate_pod|
+
+|discard_pod|
+
+|play_test_beep|
+
+|pod_history|
+
+|pulse_log|
+
+|reset_rileylink_config|
+
+|rileylink_stats|
+
+
+
+
+Table with images
+
+|ack_alerts|  |pod_management|
+
++------------------+-----------+
+| |pod_management| | |refresh| |
++------------------+-----------+
+
+
+
+  
+
+
+
+
 These instructions are for configuring the Omnipod Eros generation pump
 (**NOT Omnipod Dash**). The Omnipod driver is available as part of
 AndroidAPS (AAPS) as of version 2.8.
@@ -80,7 +178,17 @@ You can enable the Omnipod driver in AAPS in **two ways**:
        select the **Omnipod radio button (3)** and select **Pump Setup
        (4)** to open the Omnipod Settings screen.
 
-       .. |customsub| .. image:: ../images/omnipod/Enable_Omnipod_Driver_1.png
+.. image:: ../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png
+   :alt: Left floating image
+   :target: http://www.google.com
+   :class: with-shadow float-left
+   :width: 250px
+   
+   TESTING Some text ... (will be displayed on the right of the image)
+   
+   .. rst-class::  clear-both
+
+       .. image:: ../images/omnipod/Enable_Omnipod_Driver_1.png
     |image1|\ |image2|
 
 **OR**
