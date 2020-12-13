@@ -557,23 +557,10 @@ Where to get help for Omnipod driver
 
 All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerateand use the following guidelines when requesting assistance:
 
--  **Level 0:** Read the relevant section of this wiki to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this wiki, then please go to the *#androidaps* channel on **Discord** by using `this invite link <https://discord.com/invite/NhEUtzr>`__.
+-  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
+-  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using `this invite link <https://discord.com/invite/NhEUtzr>`__.
 -  **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new `issue <https://github.com/nightscout/AndroidAPS/issues>`__ and attach your `log files <https://androidaps.readthedocs.io/en/latest/CROWDIN/sk/Usage/Accessing-logfiles.html>`__.
 -  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
-
-Latest development version
-==========================
-
-Instructions on the latest features are often discussed on the Discord channel and documented on the `project wiki <https://github.com/AAPS-Omnipod/AndroidAPS/wiki>`__ page. Most users should use the latest AAPS omnipod bundled driver (available as of 2.8) for the latest stable release of the omnipod driver.
-
-If you are interested in development progress, please see the *omnipod-eros-testers* channel on the WeAreNotWaiting **Discord server**. This channel’s intended audience is *test users and developers* to answer questions or discuss Omnipod driver beta and development versions. Use the invite link below to join this channel:
-
--  `Join the omnipod-eros-testing channel on Discord <https://discord.gg/NhEUtzr>`__
-
-
-
-
 
 
 
