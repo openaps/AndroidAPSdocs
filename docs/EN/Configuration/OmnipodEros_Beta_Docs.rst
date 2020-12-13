@@ -117,9 +117,9 @@ Please **swipe left** to the **Omnipod (POD)** tab where you will be
 able to manage all pod and RileyLink functions (some of these functions
 are not enabled or visible without an active pod session):
 
-    |image8| Refresh Pod connectivity and status
+    |refresh_pod_status| Refresh Pod connectivity and status
 
-    |image9| Pod Management (Activate, Deactivate, Play test beep,
+    |pod_management| Pod Management (Activate, Deactivate, Play test beep,
     RileyLink Stats and Pod history)
 
 RileyLink Setup
@@ -145,7 +145,8 @@ as it is actively connecting to the RileyLink.*
     pod session. Use the back button on your phone to return to the main
     AAPS interface.
 
-    |image11| |image12|\ |image13| |image14|
+    |RileyLink_Setup_1| |RileyLink_Setup_2|
+    |RileyLink_Setup_4| |RileyLink_Setup_5|
 
 1. Verify that in the **Omnipod (POD)** tab that the **RileyLink Status
        (1)** appears as **Connected.** The **Pod status (2)** field
@@ -153,7 +154,7 @@ as it is actively connecting to the RileyLink.*
        previous step or exit AAPS to see if this refreshes the
        connection.
 
-    |image15|
+    |RileyLink_Setup_5|
 
 Activating a Pod
 ----------------
@@ -170,13 +171,13 @@ or less) to the RileyLink.*
 1. Navigate to the **Omnipod (POD)** tab and click on the **POD MGMT
        (1)** button, and then click on **Activate Pod (2)**.
 
-    |image16| |image17|
+    |Activate_Pod_1| |Activate_Pod_2|
 
 1. The **Fill Pod** screen is displayed. Fill a new pod with at least 85
        units of insulin and listen for two beeps indicating that the pod
        is ready to be primed.
 
-    |image18|
+    |Activate_Pod_3|
 
     Ensure the new pod and RileyLink are within close proximity of each
     other (~50cm or less) and click the **Next** button.
@@ -190,26 +191,26 @@ or less) to the RileyLink.*
        away or less) to but not on top of the Pod and click the **Retry
        (1)** button.
 
-    |image19| |image20|
+    |Activate_Pod_4| |Activate_Pod_5|
 
 1. Upon successful priming a green checkmark will be shown and the
        **Next** button will become enabled. Click on the **Next** button
        to complete the pod priming initialization and display the
        **Attach Pod** screen.
 
-    |image21|
+    |Activate_Pod_6|
 
 1. Next, prepare the infusion site of the new pod. Remove the pod's
        plastic needle cap and white paper backing from the adhesive and
        apply the pod to your usually selected site on your body. When
        finished, click on the **Next** button.
 
-    |image22|
+    |Activate_Pod_7|
 
 1. The **Attach Pod** dialog box will now appear. ***ONLY click on the
        OK button if you are ready to deploy the cannula***.
 
-    |image23|
+    |Activate_Pod_8|
 
 1. After pressing **OK**, it may take some time before the Omnipod
        responds and inserts the cannula (1-2 minutes maximum), so be
@@ -230,18 +231,20 @@ or less) to the RileyLink.*
     insertion of the needle and will decrease your chances of developing
     occlusions.*
 
-    |image24|
+    |Activate_Pod_9|
 
-    |image25| |image26|
+    |Activate_Pod_10| |Activate_Pod_11|
 
 1. A green checkmark appears, and the **Next** button becomes enabled
        upon successful cannula insertion. Click on the **Next** button.
 
-    |image27|
+    |Activate_Pod_12|
 
 1. The **Pod activated** screen is displayed. Click on the green
        **Finished** button. Congratulations! You have now started a new
-       active pod session. |image28|
+       active pod session. 
+       
+    |Activate_Pod_13|
 
 2. The **Pod management** menu screen should now display with the
        **Activate Pod (1)** button *disabled* and the **Deactivate Pod
@@ -257,7 +260,7 @@ or less) to the RileyLink.*
     For more details on the information displayed go to the `*Omnipod
     (POD) Tab* <#omnipod-pod-tab>`__ section of this document.
 
-    |image29| |image30|
+    |Activate_Pod_14| |Activate_Pod_15|
 
 Deactivating a Pod
 ------------------
@@ -278,19 +281,19 @@ To deactivate a pod (either from expiration or from a pod failure):
        button, on the **Pod management** screen click on the
        **Deactivate Pod (2)** button.
 
-    |image31| |image32|
+    |Deactivate_Pod_1| |Deactivate_Pod_2|
 
 1. On the **Deactivate Pod** screen, first, make sure the RileyLink is
        in close proximity (~50 cm away or less) to the pod but not on
        top of the pod, then click on the **Next** button to begin the
        process of deactivating the pod.
 
-    |image33|
+    |Deactivate_Pod_3|
 
 1. The **Deactivating Pod** screen will appear, and you will receive a
        confirmation beep from the pod that deactivation was successful.
 
-    |image34|
+    |Deactivate_Pod_4|
 
 a. **IF deactivation fails** and you do not receive a confirmation beep,
        you may receive a **No response from RileyLink** or **No response
@@ -302,19 +305,19 @@ a. **IF deactivation fails** and you do not receive a confirmation beep,
        manually silence it (using a pin or a paperclip) as the **Discard
        Pod (2)** button will not silence it.
 
-    |image35| |image36|
+    |Deactivate_Pod_5| |Deactivate_Pod_6|
 
 1. A green checkmark will appear upon successful deactivation. Click on
        the **Next** button to display the pod deactivated screen. You
        may now remove your pod as the active session has been
        deactivated.
 
-    |image37|
+    |Deactivate_Pod_7|
 
 1. Click on the green |image38|\ button to return to the **Pod
        management** screen.
 
-    |image39|
+    |Deactivate_Pod_8|
 
 1. You are now returned to the **Pod management** menu press the back
        button on your phone to return to the **Omnipod (POD)** tab.
@@ -322,7 +325,7 @@ a. **IF deactivation fails** and you do not receive a confirmation beep,
        and the **Pod status:** field displays a **No active Pod**
        message.
 
-    |image40| |image41|
+    |Deactivate_Pod_9| |Deactivate_Pod_10|
 
 Suspending and Resuming Insulin Delivery
 ----------------------------------------
@@ -349,21 +352,21 @@ to an active pod.
        greyed out. The **Pod status (2)** will display **SUSPEND
        DELIVERY**.
 
-    |image44| |image45|
+    |Suspend_Insulin_Delivery_1| |Suspend_Insulin_Delivery_2|
 
 1. When the suspend command is successfully confirmed by the RileyLink a
        confirmation dialog will display the message **All insulin
        delivery has been suspended**. Click **OK** to confirm and
        proceed.
 
-    |image46|
+    |Suspend_Insulin_Delivery_3|
 
 1. Your active pod has now suspended all insulin delivery. The **Omnipod
        (POD)** tab will update the **Pod status (1)** to **Suspended**.
        The **SUSPEND** button |image47| will change to a new **Resume
        Delivery (2)** button |image48|
 
-    |image49|
+    |Suspend_Insulin_Delivery_4|
 
 Resuming Insulin Delivery
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -382,20 +385,20 @@ accept commands for bolus, TBR, and SMB.
        signifying the RileyLink is actively sending the command to the
        suspended pod.
 
-    |image51| |image52|
+    |Resume_Insulin_Delivery_1| |Resume_Insulin_Delivery_2|
 
 1. When the Resume delivery command is successfully confirmed by the
        RileyLink a confirmation dialog will display the message
        **Insulin delivery has been resumed**. Click **OK** to confirm
        and proceed.
 
-    |image53|
+    |Resume_Insulin_Delivery_3|
 
 1. The **Omnipod (POD)** tab will update the **Pod status (1)** field to
        display **RUNNING,** and the **Resume Delivery** button |image54|
        will now display the **SUSPEND (2)** button |image55|.
 
-    |image56|
+    |Resume_Insulin_Delivery_4|
 
 Acknowledging Pod Alerts
 ------------------------
@@ -428,7 +431,7 @@ alert.*
        button |image58|. A **system notification (4)** will also inform
        you of the upcoming pod expiration
 
-    |image59| |image60|
+    |Acknowledge_Alerts_1| |Acknowledge_Alerts_2|
 
 1. Go to the **Omnipod (POD)** tab and press the **ACK ALERTS** **(2)**
        button |image61| (acknowledge alerts). The RileyLink sends the
@@ -436,14 +439,14 @@ alert.*
        and updates the **Pod status (1)** field with **ACKNOWLEDGE
        ALERTS**.
 
-    |image62|
+    |Acknowledge_Alerts_3|
 
 1. Upon **successful deactivation** of the alerts, **2 beeps** will be
        issued by the active pod and a confirmation dialog will display
        the message **Activate alerts have been acknowledged**. Click the
        **OK** button to confirm and dismiss the dialog.
 
-    |image63|
+    |Acknowledge_Alerts_4|
 
 a. If the RileyLink is out of range of the pod while the acknowledge
        alerts command is being processed a warning message will display
@@ -451,7 +454,7 @@ a. If the RileyLink is out of range of the pod while the acknowledge
        (2)** will confirm this warning and allow the user to try to
        acknowledge alerts again.
 
-    |image64|
+    |Acknowledge_Alerts_5|
 
 1. Go to the **Omnipod (POD)** tab, under the **Active Pod alerts**
        field, the warning message is no longer displayed and the active
@@ -474,7 +477,7 @@ determining the order of events that occurred leading up to a failure.
        to access the **Pod management** menu and then press the **Pod
        history (2)** button to access the pod history screen.
 
-    |image65| |image66|
+    |Pod_History_1| |Pod_History_2|
 
 1. On the **Pod history** screen, the default category of **All (1)** is
        displayed showing the **Date and Time (2)** of all pod **Actions
@@ -482,7 +485,7 @@ determining the order of events that occurred leading up to a failure.
        your phone’s **back button 2 times** to return to the **Omnipod
        (POD)** tab in the main AAPS interface.
 
-    |image67| |image68|
+    |Pod_History_3| |Pod_History_4|
 
 View RileyLink Settings and History
 -----------------------------------
@@ -507,7 +510,7 @@ Manually Re-establish RileyLink Bluetooth Communication
        searching for a RileyLink connection, press the **RileyLink stats
        (3)** button to access the **RileyLink settings** screen.
 
-    |image70| |image71|
+    |RileyLink_Bluetooth_Reset_1| |RileyLink_Bluetooth_Reset_2|
 
 1. On the **RileyLink Settings (1)** screen under the **RileyLink (2)**
        section you can confirm both the Bluetooth connection status and
@@ -516,7 +519,7 @@ Manually Re-establish RileyLink Bluetooth Communication
        shown. Start the manual Bluetooth reconnection by pressing the
        **refresh** |image72| **(4)** button in the lower right corner.
 
-    |image73|
+    |RileyLink_Bluetooth_Reset_3|
 
 a. If the RileyLink is unresponsive or out of range of the phone while
        the Bluetooth refresh command is being processed a warning
@@ -531,14 +534,14 @@ b. If the Bluetooth connection does not re-establish, try manually
        turning off and then back on the Bluetooth function on your
        phone.
 
-    |image74|
+    |RileyLink_Bluetooth_Reset_4|
 
 1. After a successful RileyLink Bluetooth reconnection the **Connection
        Status: (1)** field should report **RileyLink ready**.
        Congratulations, you have now reconnected your configured
        RileyLink to AAPS!
 
-    |image75|
+    |RileyLink_Bluetooth_Reset_5|
 
 RileyLink and Active Pod Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -553,9 +556,9 @@ refresh the RileyLink Bluetooth connection.
        stats (2)** button to view your currently configured **RileyLink
        (3)** and active pod **Device (4)** settings.
 
-    |image76| |image77|
+    |RileyLink_Statistics_Settings_1| |RileyLink_Statistics_Settings_2|
 
-    |image78|
+    |RileyLink_Statistics_Settings_3|
 
     *RileyLink (2) fields*
 
@@ -613,9 +616,9 @@ events from the newly activated pod will be recorded and shown.
        screen. Click on the **HISTORY (3)** text to display the entire
        history of the RileyLink and currently active pod session.
 
-    |image80| |image81|
+    |RileyLink_Statistics_History_1| |RileyLink_Statistics_History_2|
 
-    |image82|
+    |RileyLink_Statistics_History_3|
 
     *Fields*
 
@@ -638,7 +641,7 @@ status fields on the **Omnipod (POD)** tab in the main AAPS interface.
 (uncertain) then you will need to press the Refresh button to clear it
 and refresh the pod status.*
 
-|image83|
+|Omnipod_Tab|
 
 *Fields*
 
@@ -719,7 +722,7 @@ and refresh the pod status.*
 
 *Icons*
 
-    |image84|
+    |refresh_pod_status|
 
     **REFRESH:** Sends a refresh command to the active pod to update
     communication and status.
@@ -728,9 +731,9 @@ and refresh the pod status.*
        the text (uncertain). See the `**Troubleshooting
        section** <#troubleshooting>`__ below for additional information.
 
-    |image85| **POD MGMT:** Navigates to the Pod management menu
+    |pod_management| **POD MGMT:** Navigates to the Pod management menu
 
-    |image86|
+    |ack_alerts|
 
     **ACK ALERTS:** Conditionally displayed when the active pod time is
     past 72 hours and native pod warning beeps are actively running.
@@ -738,14 +741,14 @@ and refresh the pod status.*
     beeping for pod expiration. Once successfully dismissed this icon is
     no longer displayed.
 
-    |image87|
+    |set_time|
 
     **SET TIME:** When pressed this will update the time on the pod with
     the current time on your phone.
 
-    |image88| **SUSPEND:** Suspends the active pod
+    |suspend| **SUSPEND:** Suspends the active pod
 
-    |image89| **RESUME DELIVERY:** Resumes the currently suspended,
+    |resume| **RESUME DELIVERY:** Resumes the currently suspended,
     active pod
 
 Pod Management Menu
@@ -754,11 +757,11 @@ Pod Management Menu
 Below is an explanation of the layout and meaning of the icons on the
 **Pod Management** menu accessed from the **Omnipod (POD)** tab.
 
-|image90|
+|Omnipod_Tab_Pod_Management|
 
-    |image91| **Activate Pod** - primes and activates a new pod
+    |activate_pod| **Activate Pod** - primes and activates a new pod
 
-|image92| **Deactivate Pod** - deactivates the currently active pod.
+|deactivate_pod| **Deactivate Pod** - deactivates the currently active pod.
 
     *NOTES:*
 
@@ -768,10 +771,10 @@ Below is an explanation of the layout and meaning of the icons on the
 
 -  *If the button is disabled (greyed out) use the Discard Pod button.*
 
-    |image93| **Play test beep** - plays a single test beep on the pod
+    |play_test_beep| **Play test beep** - plays a single test beep on the pod
     when pressed.
 
-    |image94|
+    |discard_pod|
 
     **Discard pod** - deactivates and discards the pod state of an
     unresponsive pod when pressed.
@@ -785,9 +788,9 @@ Below is an explanation of the layout and meaning of the icons on the
 
 -  A **pod simply does not pair at all.**
 
-    |image95| **Pod history** - displays the active pod activity history
+    |pod_history| **Pod history** - displays the active pod activity history
 
-    |image96|
+    |rileylink_stats|
 
     **RileyLink stats:** Navigates to the RileyLink Statistics screen
     displaying current settings and RileyLink Connection history
@@ -796,7 +799,7 @@ Below is an explanation of the layout and meaning of the icons on the
 
 -  *History* - displays RileyLink and Pod communication history
 
-    |image97|
+    |reset_rileylink_config|
 
     **Reset RileyLink Config** - This button resets the currently
     connected RileyLink configuration. When communication is started,
@@ -812,7 +815,7 @@ Below is an explanation of the layout and meaning of the icons on the
        configuration. If this is NOT done then AAPS will need to be
        restarted after the RileyLink is power cycled.
 
-    |image98| **Read pulse log:** Sends the active pod pulse log to the
+    |pulse_log| **Read pulse log:** Sends the active pod pulse log to the
     clipboard
 
 Omnipod Settings
@@ -827,19 +830,19 @@ Gear** |image101|\ **(2)** will allow the Omnipod menu to be displayed
 as a tab in the AAPS interface titled **OMNIPOD** or **POD**. This is
 referred to in this documentation as the **Omnipod (POD)** tab.
 
-|image102|
+|Omnipod_Settings_1|
 
 **NOTE:** A faster way to access the **Omnipod settings** is by
 accessing the **3 dot menu** |image103|\ **(1)** in the upper right hand
 corner of the **Omnipod (POD)** tab and selecting **Plugin preferences
 (2)** from the dropdown menu.
 
-|image104|
+|Omnipod_Settings_2|
 
 The settings groups are listed below; you can enable or disable via a
 toggle switch for most entries described below:
 
-|image105|
+|Omnipod_Settings_3|
 
 *NOTE: An asterisk (\*) denotes the default for a setting is enabled.*
 
@@ -950,7 +953,7 @@ pod.
        the age of each of these values will automatically reset to
        zero.*
 
-    |image106|
+    |Actions_Tab|
 
 Troubleshooting
 ===============
@@ -1066,7 +1069,7 @@ with the z-axis representing the vertical standing antenna. This means
 that there are optimal positions for the RileyLink to be placed,
 especially during pod activation and deactivation routines.
 
-|image107|
+|Toroid_w_CS|
 
     *(Fig 1. Graphical plot of helical spiral antenna in an
     omnidirectional pattern*)
@@ -1089,7 +1092,7 @@ the transmission range of the RileyLink antenna. To avoid this issue
 make sure the RileyLink is properly charged or connected directly to a
 charging cable during this process.*
 
-|image108|
+|Omnipod_pod_and_RileyLink_Position|
 
 Where to get help for Omnipod driver
 ====================================
@@ -1149,7 +1152,7 @@ development versions. Use the invite link below to join this channel:
 .. |ack_alerts|                    image:: ../images/omnipod/ICONS/omnipod_overview_ack_alerts.png
 .. |pod_management|                image:: ../images/omnipod/ICONS/omnipod_overview_pod_management.png
 .. |refresh_pod_status|            image:: ../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png
-.. |overview_resume|               image:: ../images/omnipod/ICONS/omnipod_overview_resume.png
+.. |resume|               	   image:: ../images/omnipod/ICONS/omnipod_overview_resume.png
 .. |set_time|                      image:: ../images/omnipod/ICONS/omnipod_overview_set_time.png
 .. |suspend|                       image:: ../images/omnipod/ICONS/omnipod_overview_suspend.png
 
