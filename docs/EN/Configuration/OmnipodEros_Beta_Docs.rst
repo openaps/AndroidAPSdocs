@@ -385,14 +385,24 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 *Icons*
 
-    |refresh_pod_status| **REFRESH:** Sends a refresh command to the active pod to update communication and status.
+    |refresh_pod_status| 
+    **REFRESH:** Sends a refresh command to the active pod to update communication and status.
 	-  Use to refresh the pod status and dismiss status fields that contain the text (uncertain). See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
-    |pod_management| **POD MGMT:** Navigates to the Pod management menu
+	
+    |pod_management|
+    **POD MGMT:** Navigates to the Pod management menu
 
-    |ack_alerts| **ACK ALERTS:** Conditionally displayed when the active pod time is past 72 hours and native pod warning beeps are actively running. Allows the user to send a command to the pod to disable the active beeping for pod expiration. Once successfully dismissed this icon is no longer displayed.
-    |set_time| **SET TIME:** When pressed this will update the time on the pod with the current time on your phone.
-    |suspend| **SUSPEND:** Suspends the active pod
-    |resume| **RESUME DELIVERY:** Resumes the currently suspended, active pod
+    |ack_alerts|
+    **ACK ALERTS:** Conditionally displayed when the active pod time is past 72 hours and native pod warning beeps are actively running. Allows the user to send a command to the pod to disable the active beeping for pod expiration. Once successfully dismissed this icon is no longer displayed.
+    
+    |set_time|
+    **SET TIME:** When pressed this will update the time on the pod with the current time on your phone.
+    
+    |suspend|
+    **SUSPEND:** Suspends the active pod
+    
+    |resume|
+    **RESUME DELIVERY:** Resumes the currently suspended, active pod
 
 Pod Management Menu
 -------------------
@@ -402,28 +412,34 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 |Omnipod_Tab_Pod_Management|
 
 	|activate_pod| **Activate Pod** - primes and activates a new pod
+	
 	|deactivate_pod| **Deactivate Pod** - deactivates the currently active pod.
 	    *NOTES:*
 		-  *A partially paired pod ignores this command.*
 		-  *Use this command to deactivate a screaming pod (error 49).*
 		-  *If the button is disabled (greyed out) use the Discard Pod button.*
+		
     	|play_test_beep| **Play test beep** - plays a single test beep on the pod when pressed.
+	
     	|discard_pod| **Discard pod** - deactivates and discards the pod state of an unresponsive pod when pressed.
 	This button is only displayed when very specific cases are met because proper deactivation is no longer possible:
 
 		-  A **pod is not fully paired** and thus ignores deactivate commands.
 		-  A **pod is stuck** during the pairing process between steps
 		-  A **pod simply does not pair at all.**
-    |pod_history| **Pod history** - displays the active pod activity history
-    |rileylink_stats| **RileyLink stats:** Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
+		
+    	|pod_history| **Pod history** - displays the active pod activity history
+    
+    	|rileylink_stats| **RileyLink stats:** Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
 
 		-  *Settings* - displays RileyLink and active pod settings information
 		-  *History* - displays RileyLink and Pod communication history
 
-    |reset_rileylink_config| **Reset RileyLink Config** - This button resets the currently connected RileyLink configuration. When communication is started,    specific data is sent to and set in the RileyLink (memory registers are set, communication protocols are set, tuned radio frequency is set).
+    	|reset_rileylink_config| **Reset RileyLink Config** - This button resets the currently connected RileyLink configuration. When communication is started,    specific data is sent to and set in the RileyLink (memory registers are set, communication protocols are set, tuned radio frequency is set).
 
 		-  The primary usage of this feature is when the currently active RileyLink is not responding and communication is in a stuck state. If the RileyLink is turned off and then back on, the **Reset RileyLink Config** button needs to be pressed, so that it sets these communication parameters in the RileyLink configuration. If this is NOT done then AAPS will need to be restarted after the RileyLink is power cycled.
-    |pulse_log| **Read pulse log:** Sends the active pod pulse log to the clipboard
+		
+    	|pulse_log| **Read pulse log:** Sends the active pod pulse log to the clipboard
 
 Omnipod Settings
 ================
@@ -444,9 +460,10 @@ The settings groups are listed below; you can enable or disable via a toggle swi
 
 -  *RileyLink* - Allows for scanning of a RileyLink device. The Omnipod driver cannot select more than one RileyLink device at a time.
 -  *Confirmation beeps* - provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
-   -  **Bolus beeps enabled\:** Enable or disable confirmation beeps when a bolus is delivered.
-   -  **Basal beeps enabled\:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
-   -  **SMB beeps enabled\:** Enable or disable confirmation beeps when a SMB is delivered.
+
+   -  **Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
+   -  **Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
+   -  **SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
    -  **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
 -  *Alerts* - provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
@@ -670,7 +687,7 @@ If you are interested in development progress, please see the *omnipod-eros-test
 .. |Resume_Insulin_Delivery_1|          image:: ../images/omnipod/Resume_Insulin_Delivery_1.png
 .. |Resume_Insulin_Delivery_2|          image:: ../images/omnipod/Resume_Insulin_Delivery_2.png
 .. |Resume_Insulin_Delivery_3|          image:: ../images/omnipod/Resume_Insulin_Delivery_3.png
-.. |Resume_Insulin_Delivery_3|          image:: ../images/omnipod/Resume_Insulin_Delivery_4.png
+.. |Resume_Insulin_Delivery_4|          image:: ../images/omnipod/Resume_Insulin_Delivery_4.png
 
 ..
 	RileyLink Bluetooth Reset
