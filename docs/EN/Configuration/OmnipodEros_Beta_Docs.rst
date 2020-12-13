@@ -75,7 +75,7 @@ RileyLink Setup
     Ensure your RileyLink battery is charged and it is `positioned in close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~50 cm away or less) to your phone for AAPS to identify it by its MAC address. Once selected, you can proceed to activate your first pod session. Use the back button on your phone to return to the main AAPS interface.
 
     |RileyLink_Setup_1| |RileyLink_Setup_2|
-    |RileyLink_Setup_4| |RileyLink_Setup_5|
+    |RileyLink_Setup_3| |RileyLink_Setup_4|
 
 1. Verify that in the **Omnipod (POD)** tab that the **RileyLink Status (1)** appears as **Connected.** The **Pod status (2)** field should show **No active Pod**; if not, please attempt the previous step or exit AAPS to see if this refreshes the connection.
 
