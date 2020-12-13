@@ -43,7 +43,7 @@ You can enable the Omnipod driver in AAPS in **two ways**:
 
 1. Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will display the Omnipod menu as a tab in the AAPS interface titled **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
 
-    **NOTE:** A faster way to access the **Omnipod settings** can be found below in the `***Omnipod Settings section*** <#omnipod-settings>`__ of this document.
+    **NOTE:** A faster way to access the **Omnipod settings** can be found below in the `Omnipod Settings section <#omnipod-settings>`__ of this document.
 
     |Enable_Omnipod_Driver_3| |Enable_Omnipod_Driver_4|
 
@@ -98,7 +98,7 @@ Before you can activate a pod please ensure you have properly configured and con
 
     Ensure the new pod and RileyLink are within close proximity of each other (~50cm or less) and click the **Next** button.
 
-1. On the **Initialize Pod** screen, the pod will begin priming (you       will hear a click followed by a series of ticking sounds as the pod primes itself). If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, `*move the RileyLink closer* <#optimal-omnipod-and-rileylink-positioning>`__ (~50 cm away or less) to but not on top of the Pod and click the **Retry (1)** button.
+1. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself). If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, `move the RileyLink closer <#optimal-omnipod-and-rileylink-positioning>`__ (~50 cm away or less) to but not on top of the Pod and click the **Retry (1)** button.
 
     |Activate_Pod_4| |Activate_Pod_5|
 
@@ -147,7 +147,7 @@ Deactivating a Pod
 
 Under normal circumstances, the life of a pod should run for three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
 
-*REMINDER: Pod communication occurs at limited ranges for both pod activation and deactivation due to security safety measures. During these procedures make sure that your pod is `within close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~50cm or less) to the RileyLink.*
+*REMINDER: Pod communication occurs at limited ranges for both pod activation and deactivation due to security safety measures. During these procedures make sure that your pod is* `within close proximity <#optimal-omnipod-and-rileylink-positioning>`__ *(~50cm or less) to the RileyLink.*
 
 To deactivate a pod (either from expiration or from a pod failure):
 
@@ -229,7 +229,7 @@ The process below will show you how to acknowledge and dismiss pod beeps that oc
 
 *NOTE - If you have enabled the "Automatically acknowledge Pod alerts" setting in Omnipod Alerts, this alert will be handled automatically after the first occurrence and you will NOT need to manually dismiss the alert.*
 
-1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and a pod change will soon be required. You can verify this on the **Omnipod (POD)** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation) and the text will turn **red** after this time has passed, under the **Active Pod alerts (2)** field where the status message **Pod will expire soon** is displayed. This trigger will display the **ACK ALERTS (3)** button |image58|. A **system notification (4)** will also inform you of the upcoming pod expiration
+1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and a pod change will soon be required. You can verify this on the **Omnipod (POD)** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation) and the text will turn **red** after this time has passed, under the **Active Pod alerts (2)** field where the status message **Pod will expire soon** is displayed. This trigger will display the **ACK ALERTS (3)** button. A **system notification (4)** will also inform you of the upcoming pod expiration
 
     |Acknowledge_Alerts_1| |Acknowledge_Alerts_2|
 
@@ -386,7 +386,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 *Icons*
 
     |refresh_pod_status| **REFRESH:** Sends a refresh command to the active pod to update communication and status.
-	-  Use to refresh the pod status and dismiss status fields that contain the text (uncertain). See the `**Troubleshooting section** <#troubleshooting>`__ below for additional information.
+	-  Use to refresh the pod status and dismiss status fields that contain the text (uncertain). See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
     |pod_management| **POD MGMT:** Navigates to the Pod management menu
 
     |ack_alerts| **ACK ALERTS:** Conditionally displayed when the active pod time is past 72 hours and native pod warning beeps are actively running. Allows the user to send a command to the pod to disable the active beeping for pod expiration. Once successfully dismissed this icon is no longer displayed.
@@ -451,9 +451,9 @@ The settings groups are listed below; you can enable or disable via a toggle swi
 -  *Alerts* - provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
     *Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.*
--  **Expiration reminder enabled\:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
+-  **Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
 -  **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
--  **Low reservoir alert enabled\:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
+-  **Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
 -  **Number of units:** The number of units at which to trigger the pod low reservoir alert.
 -  **Automatically acknowledge Pod alerts:** When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
 
@@ -462,14 +462,14 @@ Provides AAPS notifications and audible phone alerts when it is uncertain if TBR
 *NOTE: These are notifications only, no audible beep alerts are made.*
 
    -  **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
-   -  **Sound for uncertain SMB notifications enabled\:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
-   -  **Sound for uncertain bolus notifications enabled\:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
+   -  **Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
+   -  **Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
    
 -  *Other* - provides advanced settings to assist debugging.
    -  **Show Suspend Delivery button in Omnipod tab:** Hide or display the suspend delivery button in the **Omnipod (POD)** tab.
    -  **Show Pulse log button in Pod Management menu:** Hide or display the pulse log button in the **Pod Management** menu.
    -  **Show RileyLink Stats button in Pod Management menu:** Hide or display the RileyLink Stats button in the **Pod Management** menu.
-   -  **DST/Time zone detect on enabled\:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
+   -  **DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
 
 Actions (ACT) Tab
 =================
@@ -485,13 +485,13 @@ This tab is well documented in the main AAPS documentation but there are a few i
 Troubleshooting
 ===============
 
--  **Pod Failures -** Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be found `here <https://github.com/openaps/openomni/wiki/Fault-event-codes>`__ to help determine the cause.
+-  **Pod Failures** - Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be found `here <https://github.com/openaps/openomni/wiki/Fault-event-codes>`__ to help determine the cause.
 
 -  **Preventing error 49 pod failures** - This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the ***Config Builder**\ ➜\ **General**\ ➜\ **NSClient**\ ➜\ **cog wheel**\ ➜\ **Advanced Settings*** to prevent possible failures.
 
 -  **Pump Unreachable Alerts** - It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]*** and setting this to ***120***.
 
--  **Import Settings from previous AAPS** - Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you ***do not import settings while on an active Pod session***.
+-  **Import Settings from previous AAPS** - Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
 
    1. Deactivate your pod session. Verify that you do not have an active pod session.
    2. Export your settings and store a copy in a safe place.
@@ -546,7 +546,7 @@ All of the development work for the Omnipod driver is done by the community on a
 Latest development version
 ==========================
 
-Instructions on the latest features are often discussed on the Discord channel and documented on the `project's wiki <https://github.com/AAPS-Omnipod/AndroidAPS/wiki>`__ page. Most users should use the latest AAPS omnipod bundled driver (available as of 2.8) for the latest stable release of the omnipod driver.
+Instructions on the latest features are often discussed on the Discord channel and documented on the `project wiki <https://github.com/AAPS-Omnipod/AndroidAPS/wiki>`__ page. Most users should use the latest AAPS omnipod bundled driver (available as of 2.8) for the latest stable release of the omnipod driver.
 
 If you are interested in development progress, please see the *omnipod-eros-testers* channel on the WeAreNotWaiting **Discord server**. This channel’s intended audience is *test users and developers* to answer questions or discuss Omnipod driver beta and development versions. Use the invite link below to join this channel:
 
