@@ -306,6 +306,7 @@ This screen will provide information, status, and settings configuration informa
     |RileyLink_Statistics_Settings_3|
     
 *RileyLink (3) fields*
+	
 	- **Configured Address:** MAC address of the selected RileyLink defined in the Omnipod Settings.
 	- **Connected Device:** Model of the Omnipod pod currently communicating with the RileyLink (currently only eros pods work with the RileyLink
 	- **Connection Status**: The current status of the Bluetooth connection between the RileyLink and the phone running AAPS.
@@ -333,7 +334,8 @@ This screen provides information in reverse chronological order of each state or
 
     |RileyLink_Statistics_History_3|
     
- *Fields*
+    *Fields*
+    
 	- **Date & Time**: In reverse chronological order the timestamp of each event.
 	- **Device:** The device to which the current action or state is referring.
 	- **State or Action:** The current state or action performed by the device.
@@ -526,7 +528,9 @@ Troubleshooting
 	- **Setting basal profile failed. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..** - Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
 	- **Unable to verify whether SMB bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments.** - Alert that the SMB bolus success could not be verified, you will need to verify the *Last bolus* field on the Omnipod tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
 	- **Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.** - Due to the way that the RileyLink and Omnipod communicate, situations can occur where it is *uncertain* if a command was successfully processed. The need to inform the user of this uncertainty was necessary.
-    Below are a few examples of when an uncertain notification can occur.
+	
+        Below are a few examples of when an uncertain notification can occur.
+    
     - **Boluses** - Uncertain boluses cannot be automatically verified. The notification will remain until the next bolus but a manual pod refresh will clear the message. *By default alerts beeps are enabled for this notification type as the user will manually need to verify them.*
     - **TBRs, Pod Statuses, Profile Switches, Time Changes** - a manual pod refresh will clear the message. By default alert beeps are disabled for this notification type.
     - **Pod Time Deviation -** When the time on the pod and the time your phone deviates too much then it is difficult for AAPS loop to function and make accurate predictions and dosage recommendations. If the time deviation between the pod and the phone is more than 5 minutes then AAPS will report the pod is in a Suspended state under Pod status with a HANDLE TIME CHANGE message. An additional **Set Time** icon will appear at the bottom of the Omnipod (POD) tab. Clicking Set Time will synchronize the time on the pod with the time on the phone and then you can click the RESUME DELIVERY button to continue normal pod operations.
