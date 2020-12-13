@@ -1,63 +1,3 @@
-.. include:: ../images/omnipod/omnipod_image_aliases.rst
-
-Image Testing
-=============
-
-Normal image
-
-|refresh_pod_status|
-
-
-2 Images
-
-|ack_alerts|  |pod_management|
-
-
-Testing aliases Image references
-
-Omnipod Overview Tab
-
-|ack_alerts|
-
-|pod_management|
-
-|refresh_pod_status|
-
-|overview_resume|
-
-|set_time|
-
-|suspend|
-
-
-
-
-Pod Management Menu
-
-|activate_pod|
-
-|deactivate_pod|
-
-|discard_pod|
-
-|play_test_beep|
-
-|pod_history|
-
-|pulse_log|
-
-|reset_rileylink_config|
-
-|rileylink_stats|
-
-
-Table with images
-
-|ack_alerts|  |pod_management|
-
-+------------------+-----------+
-| |pod_management| | |refresh| |
-+------------------+-----------+
 
 
 
@@ -143,18 +83,7 @@ You can enable the Omnipod driver in AAPS in **two ways**:
        select the **Omnipod radio button (3)** and select **Pump Setup
        (4)** to open the Omnipod Settings screen.
 
-.. image:: ../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png
-   :alt: Left floating image
-   :target: http://www.google.com
-   :class: with-shadow float-left
-   :width: 250px
-   
-   TESTING Some text ... (will be displayed on the right of the image)
-   
-   .. rst-class::  clear-both
-
-       .. image:: ../images/omnipod/Enable_Omnipod_Driver_1.png
-    |image1|\ |image2|
+    |Enable_Omnipod_Driver_1|  |Enable_Omnipod_Driver_2|
 
 **OR**
 
@@ -170,7 +99,7 @@ You can enable the Omnipod driver in AAPS in **two ways**:
     found below in the `***Omnipod Settings
     section*** <#omnipod-settings>`__ of this document.
 
-    |image5| |image6|
+    |Enable_Omnipod_Driver_3| |Enable_Omnipod_Driver_4|
 
 Verification of Omnipod Driver Selection
 ----------------------------------------
@@ -179,7 +108,7 @@ To verify that you have enabled the Omnipod driver in AAPS **swipe to
 the left** from the **Overview** tab, where you will now see an
 **Omnipod** or **POD** tab.
 
-|image7|
+|Enable_Omnipod_Driver_5|
 
 Omnipod Configuration
 ======================
@@ -1206,330 +1135,152 @@ development versions. Use the invite link below to join this channel:
 -  `*Join the omnipod-eros-testing channel on
        Discord* <https://discord.gg/NhEUtzr>`__
 
-.. |image0| image:: media/image50.png
-   :width: 0.15300in
-   :height: 0.17000in
-.. |image1| image:: media/image3.png
-   :width: 2.48000in
-   :height: 4.27000in
-.. |image2| image:: media/image72.png
-   :width: 2.48000in
-   :height: 4.27000in
-.. |image3| image:: media/image10.png
-   :width: 0.20000in
-   :height: 0.17000in
-.. |image4| image:: media/image56.png
-   :width: 0.20000in
-   :height: 0.16667in
-.. |image5| image:: media/image76.png
-   :width: 2.48000in
-   :height: 4.27000in
-.. |image6| image:: media/image27.png
-   :width: 2.48000in
-   :height: 4.27000in
-.. |image7| image:: media/image86.png
-   :width: 2.48000in
-   :height: 4.27000in
-.. |image8| image:: media/image95.png
-   :width: 0.37083in
-   :height: 0.45030in
-.. |image9| image:: media/image66.png
-   :width: 0.37000in
-   :height: 0.45000in
-.. |image10| image:: media/image56.png
-   :width: 0.20000in
-   :height: 0.16667in
-.. |image11| image:: media/image63.png
-   :width: 2.48000in
-   :height: 4.26560in
-.. |image12| image:: media/image59.png
-   :width: 2.48000in
-   :height: 4.23584in
-.. |image13| image:: media/image81.png
-   :width: 2.48000in
-   :height: 4.24576in
-.. |image14| image:: media/image57.png
-   :width: 2.48000in
-   :height: 4.24576in
-.. |image15| image:: media/image85.png
-   :width: 2.48000in
-   :height: 4.26560in
-.. |image16| image:: media/image40.png
-   :width: 2.48000in
-   :height: 4.24576in
-.. |image17| image:: media/image91.png
-   :width: 2.48000in
-   :height: 4.26560in
-.. |image18| image:: media/image22.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image19| image:: media/image19.png
-   :width: 2.48438in
-   :height: 4.27312in
-.. |image20| image:: media/image53.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image21| image:: media/image49.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image22| image:: media/image68.png
-   :width: 2.48000in
-   :height: 4.26560in
-.. |image23| image:: media/image74.png
-   :width: 2.48000in
-   :height: 4.23584in
-.. |image24| image:: media/image18.png
-   :width: 2.48438in
-   :height: 4.25325in
-.. |image25| image:: media/image9.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image26| image:: media/image60.png
-   :width: 2.47232in
-   :height: 4.26000in
-.. |image27| image:: media/image51.png
-   :width: 2.48000in
-   :height: 4.24576in
-.. |image28| image:: media/image36.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image29| image:: media/image89.png
-   :width: 2.48000in
-   :height: 4.27000in
-.. |image30| image:: media/image78.png
-   :width: 2.48924in
-   :height: 4.27000in
-.. |image31| image:: media/image88.png
-   :width: 2.48000in
-   :height: 4.24576in
-.. |image32| image:: media/image31.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image33| image:: media/image37.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image34| image:: media/image23.png
-   :width: 2.48000in
-   :height: 4.23584in
-.. |image35| image:: media/image12.png
-   :width: 2.47917in
-   :height: 4.25716in
-.. |image36| image:: media/image15.png
-   :width: 2.48000in
-   :height: 4.24576in
-.. |image37| image:: media/image48.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image38| image:: media/image20.png
-   :width: 0.42429in
-   :height: 0.18000in
-.. |image39| image:: media/image90.png
-   :width: 2.48000in
-   :height: 4.23584in
-.. |image40| image:: media/image80.png
-   :width: 2.48000in
-   :height: 4.24576in
-.. |image41| image:: media/image26.png
-   :width: 2.48000in
-   :height: 4.25415in
-.. |image42| image:: media/image44.png
-   :width: 0.45000in
-   :height: 0.45000in
-.. |image43| image:: media/image44.png
-   :width: 0.45000in
-   :height: 0.45000in
-.. |image44| image:: media/image94.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image45| image:: media/image2.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image46| image:: media/image70.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image47| image:: media/image44.png
-   :width: 0.45000in
-   :height: 0.45000in
-.. |image48| image:: media/image14.png
-   :width: 0.41327in
-   :height: 0.45000in
-.. |image49| image:: media/image61.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image50| image:: media/image14.png
-   :width: 0.41327in
-   :height: 0.45000in
-.. |image51| image:: media/image73.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image52| image:: media/image84.png
-   :width: 2.48000in
-   :height: 4.24576in
-.. |image53| image:: media/image35.png
-   :width: 2.48000in
-   :height: 4.23584in
-.. |image54| image:: media/image14.png
-   :width: 0.41327in
-   :height: 0.45000in
-.. |image55| image:: media/image44.png
-   :width: 0.45000in
-   :height: 0.45000in
-.. |image56| image:: media/image29.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image57| image:: media/image52.png
-   :width: 0.45000in
-   :height: 0.45000in
-.. |image58| image:: media/image52.png
-   :width: 0.45000in
-   :height: 0.45000in
-.. |image59| image:: media/image82.png
-   :width: 2.48000in
-   :height: 4.24576in
-.. |image60| image:: media/image67.png
-   :width: 2.60417in
-   :height: 4.62500in
-.. |image61| image:: media/image52.png
-   :width: 0.45000in
-   :height: 0.45000in
-.. |image62| image:: media/image62.png
-   :width: 2.48000in
-   :height: 4.24576in
-.. |image63| image:: media/image16.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image64| image:: media/image6.png
-   :width: 2.48000in
-   :height: 4.26560in
-.. |image65| image:: media/image45.png
-   :width: 2.48000in
-   :height: 4.27552in
-.. |image66| image:: media/image32.png
-   :width: 2.48000in
-   :height: 4.26560in
-.. |image67| image:: media/image33.png
-   :width: 2.48000in
-   :height: 4.26560in
-.. |image68| image:: media/image1.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image69| image:: media/image34.png
-   :width: 0.29602in
-   :height: 0.29887in
-.. |image70| image:: media/image4.png
-   :width: 2.48000in
-   :height: 4.24576in
-.. |image71| image:: media/image7.png
-   :width: 2.48000in
-   :height: 4.25733in
-.. |image72| image:: media/image34.png
-   :width: 0.29602in
-   :height: 0.29887in
-.. |image73| image:: media/image46.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image74| image:: media/image43.png
-   :width: 2.60417in
-   :height: 4.47917in
-.. |image75| image:: media/image42.png
-   :width: 2.48000in
-   :height: 4.24576in
-.. |image76| image:: media/image93.png
-   :width: 2.48000in
-   :height: 4.27552in
-.. |image77| image:: media/image64.png
-   :width: 2.48000in
-   :height: 4.27000in
-.. |image78| image:: media/image77.png
-   :width: 2.48000in
-   :height: 4.25320in
-.. |image79| image:: media/image34.png
-   :width: 0.29602in
-   :height: 0.29887in
-.. |image80| image:: media/image13.png
-   :width: 2.48000in
-   :height: 4.27552in
-.. |image81| image:: media/image5.png
-   :width: 2.48000in
-   :height: 4.27000in
-.. |image82| image:: media/image17.png
-   :width: 2.48000in
-   :height: 4.26767in
-.. |image83| image:: media/image79.png
-   :width: 2.48000in
-   :height: 4.25568in
-.. |image84| image:: media/image28.png
-   :width: 0.63650in
-   :height: 0.71383in
-.. |image85| image:: media/image25.png
-   :width: 0.64000in
-   :height: 0.71776in
-.. |image86| image:: media/image87.png
-   :width: 0.64000in
-   :height: 0.71776in
-.. |image87| image:: media/image58.png
-   :width: 0.64000in
-   :height: 0.71776in
-.. |image88| image:: media/image47.png
-   :width: 0.64000in
-   :height: 0.71776in
-.. |image89| image:: media/image8.png
-   :width: 0.64000in
-   :height: 0.71776in
-.. |image90| image:: media/image41.png
-   :width: 2.60417in
-   :height: 4.47917in
-.. |image91| image:: media/image39.png
-   :width: 1.05000in
-   :height: 0.54600in
-.. |image92| image:: media/image11.png
-   :width: 1.05000in
-   :height: 0.53550in
-.. |image93| image:: media/image30.png
-   :width: 1.05000in
-   :height: 0.53550in
-.. |image94| image:: media/image55.png
-   :width: 1.05000in
-   :height: 0.54600in
-.. |image95| image:: media/image69.png
-   :width: 1.05000in
-   :height: 0.53550in
-.. |image96| image:: media/image21.png
-   :width: 1.05000in
-   :height: 0.52500in
-.. |image97| image:: media/image38.png
-   :width: 1.05000in
-   :height: 0.54600in
-.. |image98| image:: media/image75.png
-   :width: 1.05000in
-   :height: 0.54600in
-.. |image99| image:: media/image10.png
-   :width: 0.20000in
-   :height: 0.17000in
-.. |image100| image:: media/image56.png
-   :width: 0.20000in
-   :height: 0.16667in
-.. |image101| image:: media/image56.png
-   :width: 0.20000in
-   :height: 0.16667in
-.. |image102| image:: media/image71.png
-   :width: 2.48000in
-   :height: 4.23584in
-.. |image103| image:: media/image50.png
-   :width: 0.20838in
-   :height: 0.23071in
-.. |image104| image:: media/image24.png
-   :width: 2.48000in
-   :height: 4.27552in
-.. |image105| image:: media/image65.png
-   :width: 2.26000in
-   :height: 7.37664in
-.. |image106| image:: media/image54.png
-   :width: 2.48000in
-   :height: 5.97184in
-.. |image107| image:: media/image83.png
-   :width: 4.33000in
-   :height: 3.12163in
-.. |image108| image:: media/image92.png
-   :width: 6.50000in
-   :height: 3.65278in
+
+..
+	Omnipod image aliases resource for referencing images by name with more positioning flexibility
+
+
+..
+	Interface Icons
+
+..
+	Omnipod (POD) Overview Tab
+
+.. |ack_alerts|                    image:: ../images/omnipod/ICONS/omnipod_overview_ack_alerts.png
+.. |pod_management|                image:: ../images/omnipod/ICONS/omnipod_overview_pod_management.png
+.. |refresh_pod_status|            image:: ../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png
+.. |overview_resume|               image:: ../images/omnipod/ICONS/omnipod_overview_resume.png
+.. |set_time|                      image:: ../images/omnipod/ICONS/omnipod_overview_set_time.png
+.. |suspend|                       image:: ../images/omnipod/ICONS/omnipod_overview_suspend.png
+
+..
+	Pod Management Tab
+
+.. |activate_pod|                  image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png
+.. |deactivate_pod|                image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png
+.. |discard_pod|                   image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_discard_pod.png
+.. |play_test_beep|                image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png
+.. |pod_history|                   image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_pod_history.png
+.. |pulse_log|                     image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_pulse_log.png
+.. |reset_rileylink_config|        image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_reset_rileylink_config.png
+.. |rileylink_stats|               image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_rileylink_stats.png
+
+
+..
+	Instructional Section Images
+	
+..
+		Acknowledge Alerts
+.. |Acknowledge_Alerts_1|               image:: ../images/omnipod/Acknowledge_Alerts_1.png
+.. |Acknowledge_Alerts_2|               image:: ../images/omnipod/Acknowledge_Alerts_2.png
+.. |Acknowledge_Alerts_3|               image:: ../images/omnipod/Acknowledge_Alerts_3.png
+.. |Acknowledge_Alerts_4|               image:: ../images/omnipod/Acknowledge_Alerts_4.png
+.. |Acknowledge_Alerts_5|               image:: ../images/omnipod/Acknowledge_Alerts_5.png
+
+..
+	Actions Tab
+.. |Actions_Tab|                  		image:: ../images/omnipod/Actions_Tab.png
+
+..
+	Activate Pod
+.. |Activate_Pod_1|                     image:: ../images/omnipod/Activate_Pod_1.png
+.. |Activate_Pod_2|                     image:: ../images/omnipod/Activate_Pod_2.png
+.. |Activate_Pod_3|                     image:: ../images/omnipod/Activate_Pod_3.png
+.. |Activate_Pod_4|                     image:: ../images/omnipod/Activate_Pod_4.png
+.. |Activate_Pod_5|                     image:: ../images/omnipod/Activate_Pod_5.png
+.. |Activate_Pod_6|                     image:: ../images/omnipod/Activate_Pod_6.png
+.. |Activate_Pod_7|                     image:: ../images/omnipod/Activate_Pod_7.png
+.. |Activate_Pod_8|                     image:: ../images/omnipod/Activate_Pod_8.png
+.. |Activate_Pod_9|                     image:: ../images/omnipod/Activate_Pod_9.png
+.. |Activate_Pod_10|                    image:: ../images/omnipod/Activate_Pod_10.png
+.. |Activate_Pod_11|                    image:: ../images/omnipod/Activate_Pod_11.png
+.. |Activate_Pod_12|                    image:: ../images/omnipod/Activate_Pod_12.png
+.. |Activate_Pod_13|                    image:: ../images/omnipod/Activate_Pod_13.png
+.. |Activate_Pod_14|                    image:: ../images/omnipod/Activate_Pod_14.png
+.. |Activate_Pod_15|                    image:: ../images/omnipod/Activate_Pod_15.png
+
+..
+	Deactivate Pod
+.. |Deactivate_Pod_1|                   image:: ../images/omnipod/Deactivate_Pod_1.png
+.. |Deactivate_Pod_2|                   image:: ../images/omnipod/Deactivate_Pod_2.png
+.. |Deactivate_Pod_3|                   image:: ../images/omnipod/Deactivate_Pod_3.png
+.. |Deactivate_Pod_4|                   image:: ../images/omnipod/Deactivate_Pod_4.png
+.. |Deactivate_Pod_5|                   image:: ../images/omnipod/Deactivate_Pod_5.png
+.. |Deactivate_Pod_6|                   image:: ../images/omnipod/Deactivate_Pod_6.png
+.. |Deactivate_Pod_7|                   image:: ../images/omnipod/Deactivate_Pod_7.png
+.. |Deactivate_Pod_8|                   image:: ../images/omnipod/Deactivate_Pod_8.png
+.. |Deactivate_Pod_9|                   image:: ../images/omnipod/Deactivate_Pod_9.png
+.. |Deactivate_Pod_10|                  image:: ../images/omnipod/Deactivate_Pod_10.png
+
+..
+	Enabling the Omnipod Driver in AAPS
+.. |Enable_Omnipod_Driver_1|            image:: ../images/omnipod/Enable_Omnipod_Driver_1.png
+.. |Enable_Omnipod_Driver_2|            image:: ../images/omnipod/Enable_Omnipod_Driver_2.png
+.. |Enable_Omnipod_Driver_3|            image:: ../images/omnipod/Enable_Omnipod_Driver_3.png
+.. |Enable_Omnipod_Driver_4|            image:: ../images/omnipod/Enable_Omnipod_Driver_4.png
+.. |Enable_Omnipod_Driver_5|            image:: ../images/omnipod/Enable_Omnipod_Driver_5.png
+
+..
+	Optimally Positioning the RileyLink and Omnipod pod
+.. |Omnipod_pod_and_RileyLink_Position|	image:: ../images/omnipod/Omnipod_pod_and_RileyLink_Position.png
+.. |Toroid_w_CS|                  		image:: ../images/omnipod/Toroid_w_CS.png
+
+..
+	Omnipod Settings
+.. |Omnipod_Settings_1|                 image:: ../images/omnipod/Omnipod_Settings_1.png
+.. |Omnipod_Settings_2|                 image:: ../images/omnipod/Omnipod_Settings_2.png
+.. |Omnipod_Settings_3|                 image:: ../images/omnipod/Omnipod_Settings_3.png
+
+..
+	Omnipod Tab
+.. |Omnipod_Tab|                  		image:: ../images/omnipod/Omnipod_Tab.png
+.. |Omnipod_Tab_Pod_Management|         image:: ../images/omnipod/Omnipod_Tab_Pod_Management.png
+
+..
+	Pod History
+.. |Pod_History_1|                  	image:: ../images/omnipod/Pod_History_1.png
+.. |Pod_History_2|                  	image:: ../images/omnipod/Pod_History_2.png
+.. |Pod_History_3|                  	image:: ../images/omnipod/Pod_History_3.png
+.. |Pod_History_4|                  	image:: ../images/omnipod/Pod_History_4.png
+
+..
+	Resume Insulin Delivery
+.. |Resume_Insulin_Delivery_1|          image:: ../images/omnipod/Resume_Insulin_Delivery_1.png
+.. |Resume_Insulin_Delivery_2|          image:: ../images/omnipod/Resume_Insulin_Delivery_2.png
+.. |Resume_Insulin_Delivery_3|          image:: ../images/omnipod/Resume_Insulin_Delivery_3.png
+.. |Resume_Insulin_Delivery_3|          image:: ../images/omnipod/Resume_Insulin_Delivery_4.png
+
+..
+	RileyLink Bluetooth Reset
+.. |RileyLink_Bluetooth_Reset_1|        image:: ../images/omnipod/RileyLink_Bluetooth_Reset_1.png
+.. |RileyLink_Bluetooth_Reset_2|        image:: ../images/omnipod/RileyLink_Bluetooth_Reset_2.png
+.. |RileyLink_Bluetooth_Reset_3|        image:: ../images/omnipod/RileyLink_Bluetooth_Reset_3.png
+.. |RileyLink_Bluetooth_Reset_4|        image:: ../images/omnipod/RileyLink_Bluetooth_Reset_4.png
+.. |RileyLink_Bluetooth_Reset_5|        image:: ../images/omnipod/RileyLink_Bluetooth_Reset_5.png
+
+..
+	RileyLink Setup
+.. |RileyLink_Setup_1|                  image:: ../images/omnipod/RileyLink_Setup_1.png
+.. |RileyLink_Setup_2|                  image:: ../images/omnipod/RileyLink_Setup_2.png
+.. |RileyLink_Setup_3|                  image:: ../images/omnipod/RileyLink_Setup_3.png
+.. |RileyLink_Setup_4|                  image:: ../images/omnipod/RileyLink_Setup_4.png
+.. |RileyLink_Setup_5|                  image:: ../images/omnipod/RileyLink_Setup_5.png
+
+..
+	RileyLink Statistics History
+.. |RileyLink_Statistics_History_1|     image:: ../images/omnipod/RileyLink_Statistics_History_1.png
+.. |RileyLink_Statistics_History_2|     image:: ../images/omnipod/RileyLink_Statistics_History_2.png
+.. |RileyLink_Statistics_History_3|     image:: ../images/omnipod/RileyLink_Statistics_History_3.png
+
+..
+	RileyLink Statistics Settings
+.. |RileyLink_Statistics_Settings_1|    image:: ../images/omnipod/RileyLink_Statistics_Settings_1.png
+.. |RileyLink_Statistics_Settings_2|    image:: ../images/omnipod/RileyLink_Statistics_Settings_2.png
+.. |RileyLink_Statistics_Settings_3|    image:: ../images/omnipod/RileyLink_Statistics_Settings_3.png
+
+..
+	Suspend Insulin Delivery
+.. |Suspend_Insulin_Delivery_1|         image:: ../images/omnipod/Suspend_Insulin_Delivery_1.png
+.. |Suspend_Insulin_Delivery_2|         image:: ../images/omnipod/Suspend_Insulin_Delivery_2.png
+.. |Suspend_Insulin_Delivery_3|         image:: ../images/omnipod/Suspend_Insulin_Delivery_3.png
+.. |Suspend_Insulin_Delivery_4|         image:: ../images/omnipod/Suspend_Insulin_Delivery_4.png
