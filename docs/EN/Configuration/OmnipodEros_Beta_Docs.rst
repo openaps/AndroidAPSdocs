@@ -1,5 +1,5 @@
-.. toctree::
-   :maxdepth: 2
+.. contents:: Table of Contents
+   :depth: 2
 
 These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). The Omnipod driver is available as part of AndroidAPS (AAPS) as of version 2.8.
 
