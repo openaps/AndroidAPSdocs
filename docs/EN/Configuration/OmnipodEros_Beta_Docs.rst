@@ -86,7 +86,7 @@ RileyLink Setup
 
 2. After selecting the Omnipod driver, next you will identify and select your RileyLink from **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Gear Icon (Settings) (2)** ➜\ **RileyLink Configuration (3)** by pressing the **Scan (4)** button and **selecting your RileyLink (5)** .
 
-	Ensure your RileyLink battery is charged and it is `positioned in close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~50 cm away or less) to your phone for AAPS to identify it by its MAC address. Once selected, you can proceed to activate your first pod session. Use the back button on your phone to return to the main AAPS interface.
+    Ensure your RileyLink battery is charged and it is `positioned in close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~50 cm away or less) to your phone for AAPS to identify it by its MAC address. Once selected, you can proceed to activate your first pod session. Use the back button on your phone to return to the main AAPS interface.
 
     |RileyLink_Setup_1| |RileyLink_Setup_2|
     
@@ -125,7 +125,7 @@ Before you can activate a pod please ensure you have properly configured and con
 
     |Activate_Pod_7|
 
-6. The **Attach Pod** dialog box will now appear. ***ONLY click on the OK button if you are ready to deploy the cannula***.
+6. The **Attach Pod** dialog box will now appear. **ONLY click on the OK button if you are ready to deploy the cannula**.
 
     |Activate_Pod_8|
 
@@ -178,7 +178,7 @@ To deactivate a pod (either from expiration or from a pod failure):
 
     |Deactivate_Pod_4|
 
-	- **IF deactivation fails** and you do not receive a confirmation beep, you may receive a **No response from RileyLink** or **No response from Pod message**. Please click on the **Retry (1)** button to attempt deactivation again. If deactivation continues to fail, please click on the **Discard Pod (2)** button to discard the Pod. You may now remove your pod as the active session has been deactivated. If your Pod has a screaming alarm, you may need to manually silence it (using a pin or a paperclip) as the **Discard Pod (2)** button will not silence it.
+    **IF deactivation fails** and you do not receive a confirmation beep, you may receive a **No response from RileyLink** or **No response from Pod message**. Please click on the **Retry (1)** button to attempt deactivation again. If deactivation continues to fail, please click on the **Discard Pod (2)** button to discard the Pod. You may now remove your pod as the active session has been deactivated. If your Pod has a screaming alarm, you may need to manually silence it (using a pin or a paperclip) as the **Discard Pod (2)** button will not silence it.
 	
 	|Deactivate_Pod_5| |Deactivate_Pod_6|
 
@@ -256,7 +256,7 @@ The process below will show you how to acknowledge and dismiss pod beeps that oc
 
     |Acknowledge_Alerts_4|
 
-	- If the RileyLink is out of range of the pod while the acknowledge alerts command is being processed a warning message will display 2 options. **Mute (1)** will silence this current warning. **OK (2)** will confirm this warning and allow the user to try to acknowledge alerts again.
+    If the RileyLink is out of range of the pod while the acknowledge alerts command is being processed a warning message will display 2 options. **Mute (1)** will silence this current warning. **OK (2)** will confirm this warning and allow the user to try to acknowledge alerts again.
 	
 	|Acknowledge_Alerts_5|
 
@@ -295,12 +295,12 @@ Manually Re-establish RileyLink Bluetooth Communication
 
     |RileyLink_Bluetooth_Reset_3|
     
-    - If the RileyLink is unresponsive or out of range of the phone while the Bluetooth refresh command is being processed a warning message will display 2 options.
+    If the RileyLink is unresponsive or out of range of the phone while the Bluetooth refresh command is being processed a warning message will display 2 options.
 
-   	- **Mute (1)** will silence this current warning.
-   	- **OK (2)** will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
+   	+ **Mute (1)** will silence this current warning.
+   	+ **OK (2)** will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
 	
-- If the Bluetooth connection does not re-establish, try manually turning off and then back on the Bluetooth function on your phone.
+    If the Bluetooth connection does not re-establish, try manually turning off and then back on the Bluetooth function on your phone.
 
     |RileyLink_Bluetooth_Reset_4|
 
@@ -319,15 +319,17 @@ This screen will provide information, status, and settings configuration informa
 
     |RileyLink_Statistics_Settings_3|
     
-*RileyLink (3) fields*
-	
+RileyLink (3) fields
+++++++++++++++++++++
+
 	- **Configured Address:** MAC address of the selected RileyLink defined in the Omnipod Settings.
 	- **Connected Device:** Model of the Omnipod pod currently communicating with the RileyLink (currently only eros pods work with the RileyLink
 	- **Connection Status**: The current status of the Bluetooth connection between the RileyLink and the phone running AAPS.
 	- **Connection Error:** If there is an error with the RileyLink Bluetooth connection details will be displayed here.
 	- **RL Firmware:** Current firmware version installed on the actively connected RileyLink.
 
-*Device (4) fields - Active Pod*
+Device (4) fields - Active Pod
+++++++++++++++++++++++++++++++
 
 	- **Device Type:** The type of device communicating with the RileyLink (Omnipod pod pump)
 	- **Device Model:** The model of the active device connected to the RileyLink (the current model name of the Omnipod pod, which is Eros)
