@@ -181,7 +181,59 @@ Icon Table Layouts
    
 			 Resumes the currently suspended, active pod
    ====================  ===========================================
+ 
+
+Pod Management Icons
+
+.. table:: 
+
+   =========================  ===========================================
+   |activate_pod|	      **Activate Pod**
    
+   			      Primes and activates a new pod
+
+   |deactivate_pod|	      **Deactivate Pod**
+ 
+ 			      Deactivates the currently active pod.
+			      *NOTES:*
+			 
+		   	      *  *A partially paired pod ignores this command.*
+			      *  *Use this command to deactivate a screaming pod (error 49).*
+			      *  *If the button is disabled (greyed out) use the Discard Pod button.*
+
+   |play_test_beep| 	      **Play test beep**
+ 
+ 			      Plays a single test beep on the pod when pressed.
+
+   |discard_pod|	      **Discard pod**
+
+			      Deactivates and discards the pod state of an unresponsive pod when pressed. This button is only displayed when very specific cases are met because proper deactivation is no longer possible:
+
+			      * A **pod is not fully paired** and thus ignores deactivate commands.
+			      * A **pod is stuck** during the pairing process between steps
+	 		      * A **pod simply does not pair at all.**
+
+   |pod_history| 	      **Pod history** 
+   
+   			      Displays the active pod activity history
+
+   |rileylink_stats| 	      **RileyLink stats:**
+   
+   			      Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
+
+			      * *Settings* - displays RileyLink and active pod settings information
+			      * *History* - displays RileyLink and Pod communication history
+
+   |reset_rileylink_config|   **Reset RileyLink Config** 
+   
+   			      This button resets the currently connected RileyLink configuration. When communication is started, specific data is sent to and set in the RileyLink (memory registers are set, communication protocols are set, tuned radio frequency is set).
+	
+			      * The primary usage of this feature is when the currently active RileyLink is not responding and communication is in a stuck state. If the RileyLink is turned off and then back on, the **Reset RileyLink Config** button needs to be pressed, so that it sets these communication parameters in the RileyLink configuration. If this is NOT done then AAPS will need to be restarted after the RileyLink is power cycled.
+
+   |pulse_log|		      **Read pulse log:** 
+    
+    			      Sends the active pod pulse log to the clipboard
+   =========================  ===========================================			    
 
 Interface Icons
 
