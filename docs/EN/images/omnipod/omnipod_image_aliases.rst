@@ -244,9 +244,9 @@ Pod Management Icons
 
 *Reset RileyLink Config Notes*
 
-	* The primary usage of this feature is when the currently active RileyLink is not responding and communication is in a stuck state.
-	* If the RileyLink is turned off and then back on, the **Reset RileyLink Config** button needs to be pressed, so that it sets these communication parameters in the RileyLink configuration.
-	* If this is NOT done then AAPS will need to be restarted after the RileyLink is power cycled.
+* The primary usage of this feature is when the currently active RileyLink is not responding and communication is in a stuck state.
+* If the RileyLink is turned off and then back on, the **Reset RileyLink Config** button needs to be pressed, so that it sets these communication parameters in the RileyLink configuration.
+* If this is NOT done then AAPS will need to be restarted after the RileyLink is power cycled.
 
 Interface Icons
 
