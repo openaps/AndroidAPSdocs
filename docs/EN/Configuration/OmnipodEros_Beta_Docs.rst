@@ -17,13 +17,13 @@ Hardware and Software Requirements
 
    -  Other hardware options are available.
 
-      -  *RileyLink with modified Balun Antenna* - Untested
       -  `Emalink <https://github.com/sks01/EmaLink>`__ 
       -  `LoopLink <https://jameswedding.substack.com/>`__ - Untested
+      -  *RileyLink with modified Balun Antenna* - Untested      
 
 -  **Mobile Phone Device:** Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <https://androidaps.readthedocs.io/en/latest/EN/index.html#component-setup>`__
 
--  **Insulin Delivery Device:** a fresh Omnipod (Eros generation - **NOT DASH**) pod
+-  **Insulin Delivery Device:** a new Omnipod (Eros generation - **NOT DASH**) pod
 
 These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and attempt to begin this process on your next pod change.
 
@@ -43,15 +43,15 @@ Enabling the Omnipod Driver in AAPS
 
 You can enable the Omnipod driver in AAPS in **two ways**:
 
-1. Via the **AAPS Setup Wizard (2)** located at the top right-hand corner **three-dot menu (1)** and proceeding through the wizard menus until you arrive at the **Pump** screen. Then select the **Omnipod radio button (3)** and select **Pump Setup (4)** to open the Omnipod Settings screen.
+A. Via the **AAPS Setup Wizard (2)** located at the top right-hand corner **three-dot menu (1)** and proceeding through the wizard menus until you arrive at the **Pump** screen. Then select the **Omnipod radio button (3)** and select **Pump Setup (4)** to open the Omnipod Settings screen.
 
     |Enable_Omnipod_Driver_1|  |Enable_Omnipod_Driver_2|
 
 **OR**
 
-2. Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will display the Omnipod menu as a tab in the AAPS interface titled **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
+B. Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will display the Omnipod menu as a tab in the AAPS interface titled **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
 
-**NOTE:** A faster way to access the **Omnipod settings** can be found below in the `Omnipod Settings section <#omnipod-settings>`__ of this document.
+    **NOTE:** A faster way to access the **Omnipod settings** can be found below in the `Omnipod Settings section <#omnipod-settings>`__ of this document.
 
     |Enable_Omnipod_Driver_3| |Enable_Omnipod_Driver_4|
 
