@@ -148,7 +148,7 @@ Before you can activate a pod please ensure you have properly configured and con
 9. The **Pod activated** screen is displayed. Click on the green **Finished** button. Congratulations! You have now started a new active pod session.
 
     |Activate_Pod_13|
-    
+
 10. The **Pod management** menu screen should now display with the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. This is because a pod is now active and you cannot activate an additional pod without deactivating the currently active pod first.
 
     Click on the back button on your phone to return to the **Omnipod (POD)** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
@@ -403,6 +403,43 @@ Fields
 
 Icons
 -----
+
++-------------------------+-------------------------------------------------------------------+
+|                         | **REFRESH:**                                                      | 
+|                         | Sends a refresh command to the active pod to update communication |
+|                         | and status.                                                       |
+|                         |                                                                   |
+| |refresh_pod_status|    | * Use to refresh the pod status and dismiss status fields that    |
+|                         |   contain the text (uncertain).                                   |
+|                         | * See the `Troubleshooting section <#troubleshooting>`__ below    |
+|                         |   for additional information.                                     |
++-------------------------+-------------------------------------------------------------------+
+| |pod_management|        | **POD MGMT:**                                                     | 
+|                         |                                                                   |
+|                         | Navigates to the Pod management menu                              |
++-------------------------+-------------------------------------------------------------------+
+| |ack_alerts|            | **ACK ALERTS:**                                                   |
+|                         |                                                                   |
+|                         | Conditionally displayed when the active pod time is past 72 hours |
+|                         | and native pod warning beeps are actively running. Allows the     |
+|                         | user to send a command to the pod to disable the active beeping   |
+|                         | for pod expiration. Once successfully dismissed this icon is no   |
+|                         | longer displayed.                                                 |
++-------------------------+-------------------------------------------------------------------+
+| |set_time|              | **SET TIME:**                                                     |
+|                         |                                                                   |
+|                         | When pressed this will update the time on the pod with the        |
+|                         | current time on your phone.                                       |
++-------------------------+-------------------------------------------------------------------+
+| |suspend|               | **SUSPEND:**                                                      |
+|                         |                                                                   |
+|                         | Suspends the active pod                                           |
++-------------------------+-------------------------------------------------------------------+
+| |resume|                | **RESUME DELIVERY:**                                              |
+|                         |                                                                   |
+|                         | Resumes the currently suspended, active pod                       |
++-------------------------+-------------------------------------------------------------------+
+
 
 |refresh_pod_status|
 
