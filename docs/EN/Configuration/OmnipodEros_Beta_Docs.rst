@@ -257,8 +257,8 @@ The process below will show you how to acknowledge and dismiss pod beeps that oc
     |Acknowledge_Alerts_4|
 
     If the RileyLink is out of range of the pod while the acknowledge alerts command is being processed a warning message will display 2 options. **Mute (1)** will silence this current warning. **OK (2)** will confirm this warning and allow the user to try to acknowledge alerts again.
-	
-	|Acknowledge_Alerts_5|
+
+    |Acknowledge_Alerts_5|
 
 4. Go to the **Omnipod (POD)** tab, under the **Active Pod alerts** field, the warning message is no longer displayed and the active pod will no longer issue pod expiration warning beeps.
 
