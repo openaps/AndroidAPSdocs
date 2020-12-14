@@ -367,7 +367,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 |Omnipod_Tab|
 
 Fields
-++++++
+------
 
 * **RileyLink Status:** Displays the current connection status of the RileyLink
 
