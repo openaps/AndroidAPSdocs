@@ -101,7 +101,7 @@ Activating a Pod
 
 Before you can activate a pod please ensure you have properly configured and connected your RileyLink connection in the Omnipod settings
 
-*REMINDER: Pod communication occurs at limited ranges for both pod activation and deactivation due to security safety measures. During these procedures, make sure that your pod is `within close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~50 cm away or less) to the RileyLink.*
+*REMINDER: Pod communication occurs at limited ranges for both pod activation and deactivation due to security safety measures. During these procedures, make sure that your pod is* `within close proximity <#optimal-omnipod-and-rileylink-positioning>`__ *(~50 cm away or less) to the RileyLink.*
 
 1. Navigate to the **Omnipod (POD)** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
 
@@ -145,8 +145,7 @@ Before you can activate a pod please ensure you have properly configured and con
 
     |Activate_Pod_12|
 
-9. The **Pod activated** screen is displayed. Click on the green **Finished** button. Congratulations! You have now started a new active pod session. 
-       
+9. The **Pod activated** screen is displayed. Click on the green **Finished** button. Congratulations! You have now started a new active pod session.
     |Activate_Pod_13|
 
 10. The **Pod management** menu screen should now display with the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. This is because a pod is now active and you cannot activate an additional pod without deactivating the currently active pod first.
