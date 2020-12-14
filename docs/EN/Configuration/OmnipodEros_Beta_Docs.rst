@@ -43,11 +43,17 @@ Enabling the Omnipod Driver in AAPS
 
 You can enable the Omnipod driver in AAPS in **two ways**:
 
+Option 1: The Setup Wizard
+**************************
+
 Via the **AAPS Setup Wizard (2)** located at the top right-hand corner **three-dot menu (1)** and proceeding through the wizard menus until you arrive at the **Pump** screen. Then select the **Omnipod radio button (3)** and select **Pump Setup (4)** to open the Omnipod Settings screen.
 
     |Enable_Omnipod_Driver_1|  |Enable_Omnipod_Driver_2|
 
 **OR**
+
+Option 2: The Config Builder
+****************************
 
 Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will display the Omnipod menu as a tab in the AAPS interface titled **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
 
