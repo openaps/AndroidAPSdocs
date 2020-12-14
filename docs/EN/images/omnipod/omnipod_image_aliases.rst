@@ -149,6 +149,39 @@
 
 Omnipod image aliases resource reference test
 
+Icon Table Layouts
+
+.. table:: 
+
+   ====================  ===========================================
+   |refresh_pod_status|  **REFRESH:** 
+   			 
+			 Sends a refresh command to the active pod to update communication
+			 
+			 * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
+			 * See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+
+   |pod_management|   	 **POD MGMT:**
+
+			 Navigates to the Pod management menu
+   |ack_alerts|		 **ACK ALERTS:**
+   			 
+			 When pressed this will disable the pod expiration beeps and notifications. 
+			 
+			 * Button is displayed only when pod time is past expiration warning time
+			 * Upon successful dismissal, this icon will no longer appear.
+			 
+   |set_time|		 **SET TIME:**
+   
+			 When pressed this will update the time on the pod with the current time on your phone.
+   |suspend|  		 **SUSPEND:**
+   
+			 Suspends the active pod
+   |resume| 		 **RESUME DELIVERY:**
+   
+			 Resumes the currently suspended, active pod
+   ====================  ===========================================
+   
 
 Interface Icons
 
