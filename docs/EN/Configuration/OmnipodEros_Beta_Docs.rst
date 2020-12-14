@@ -366,41 +366,43 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 |Omnipod_Tab|
 
-*Fields*
+Fields
+------
 
-- **RileyLink Status:** Displays the current connection status of the RileyLink
+* **RileyLink Status:** Displays the current connection status of the RileyLink
 
    - *RileyLink Unreachable* - RileyLink is either not within Bluetooth range of the phone, powered off or has a failure preventing Bluetooth communication.
    - *RileyLink Ready* - RileyLink is powered on and actively initializing the Bluetooth connection
    - *Connected* - RileyLink is powered on, connected and actively able to communicate via Bluetooth.
 
-- **Pod address:** Displays the current address in which the active pod is referenced
-- **LOT:** Displays the LOT number of the active pod
-- **TID:** Displays the serial number of the pod.
-- **Firmware Version:** Displays the firmware version of the active pod.
-- **Time on Pod:** Displays the current time on the active pod.
-- **Pod expires:** Displays the date and time when the active pod will expire.
-- **Pod status:** Displays the status of the active pod.
-- **Last connection:** Displays the last time communication with the active pod was achieved.
+* **Pod address:** Displays the current address in which the active pod is referenced
+* **LOT:** Displays the LOT number of the active pod
+* **TID:** Displays the serial number of the pod.
+* **Firmware Version:** Displays the firmware version of the active pod.
+* **Time on Pod:** Displays the current time on the active pod.
+* **Pod expires:** Displays the date and time when the active pod will expire.
+* **Pod status:** Displays the status of the active pod.
+* **Last connection:** Displays the last time communication with the active pod was achieved.
 
    - *Moments ago* - less than 20 seconds ago.
    - *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
    - *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
    - *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
 
-- **Last bolus:** Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
-- **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
-- **Temp basal rate:** Displays the currently running Temporary Basal Rate in the following format
+* **Last bolus:** Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
+* **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
+* **Temp basal rate:** Displays the currently running Temporary Basal Rate in the following format
 
    - Units / hour @ time TBR was issued (minutes run / total minutes TBR will be run)
    - *Example:* 0.00U/h @18:25 ( 90/120 minutes)
 
-- **Reservoir:** Displays over 50 U left when more than 50 units are left in the reservoir. Below this value the exact units are displayed in yellow text.
-- **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. *Note this is an approximation as priming and filling the pod is not an exact process.*
-- **Errors:** Displays the last error encountered. Review the `Pod history <#view-pod-history>`__, `RileyLink history <#rileylink-and-active-pod-history>`__ and log files for past errors and more detailed information.
--  **Active pod alerts:** Reserved for currently running alerts on the active pod. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
+* **Reservoir:** Displays over 50 U left when more than 50 units are left in the reservoir. Below this value the exact units are displayed in yellow text.
+* **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. *Note this is an approximation as priming and filling the pod is not an exact process.*
+* **Errors:** Displays the last error encountered. Review the `Pod history <#view-pod-history>`__, `RileyLink history <#rileylink-and-active-pod-history>`__ and log files for past errors and more detailed information.
+*  **Active pod alerts:** Reserved for currently running alerts on the active pod. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
 
-*Icons*
+Icons
+-----
 
 |refresh_pod_status|
 **REFRESH:** Sends a refresh command to the active pod to update communication and status.
