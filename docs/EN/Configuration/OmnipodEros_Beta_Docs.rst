@@ -13,17 +13,17 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 Hardware and Software Requirements
 ==================================
 
--  **Pod Communication Device:** a 433MHz RileyLink from `getrileylink.org <https://getrileylink.org/product/rileylink433>`__, which is the bridge to communicate with Eros generation pods
+*  **Pod Communication Device:** a 433MHz RileyLink from `getrileylink.org <https://getrileylink.org/product/rileylink433>`__, which is the bridge to communicate with Eros generation pods
 
    -  Other hardware options are available.
 
-      -  `Emalink <https://github.com/sks01/EmaLink>`__ 
-      -  `LoopLink <https://jameswedding.substack.com/>`__ - Untested
-      -  *RileyLink with modified Balun Antenna* - Untested      
+      +  `Emalink <https://github.com/sks01/EmaLink>`__ 
+      +  `LoopLink <https://jameswedding.substack.com/>`__ - Untested
+      +  *RileyLink with modified Balun Antenna* - Untested      
 
--  **Mobile Phone Device:** Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <https://androidaps.readthedocs.io/en/latest/EN/index.html#component-setup>`__
+*  **Mobile Phone Device:** Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <https://androidaps.readthedocs.io/en/latest/EN/index.html#component-setup>`__
 
--  **Insulin Delivery Device:** a new Omnipod (Eros generation - **NOT DASH**) pod
+*  **Insulin Delivery Device:** a new Omnipod (Eros generation - **NOT DASH**) pod
 
 These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and attempt to begin this process on your next pod change.
 
@@ -297,8 +297,8 @@ Manually Re-establish RileyLink Bluetooth Communication
     
     If the RileyLink is unresponsive or out of range of the phone while the Bluetooth refresh command is being processed a warning message will display 2 options.
 
-   	+ **Mute (1)** will silence this current warning.
-   	+ **OK (2)** will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
+   	* **Mute (1)** will silence this current warning.
+   	* **OK (2)** will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
 	
     |RileyLink_Bluetooth_Reset_4|	
 	
@@ -322,22 +322,22 @@ This screen will provide information, status, and settings configuration informa
 RileyLink (3) fields
 ++++++++++++++++++++
 
-	- **Configured Address:** MAC address of the selected RileyLink defined in the Omnipod Settings.
-	- **Connected Device:** Model of the Omnipod pod currently communicating with the RileyLink (currently only eros pods work with the RileyLink
-	- **Connection Status**: The current status of the Bluetooth connection between the RileyLink and the phone running AAPS.
-	- **Connection Error:** If there is an error with the RileyLink Bluetooth connection details will be displayed here.
-	- **RL Firmware:** Current firmware version installed on the actively connected RileyLink.
+	* **Configured Address:** MAC address of the selected RileyLink defined in the Omnipod Settings.
+	* **Connected Device:** Model of the Omnipod pod currently communicating with the RileyLink (currently only eros pods work with the RileyLink
+	* **Connection Status**: The current status of the Bluetooth connection between the RileyLink and the phone running AAPS.
+	* **Connection Error:** If there is an error with the RileyLink Bluetooth connection details will be displayed here.
+	* **RL Firmware:** Current firmware version installed on the actively connected RileyLink.
 
 Device (4) fields - With an Active Pod
 ++++++++++++++++++++++++++++++++++++++
 
-	- **Device Type:** The type of device communicating with the RileyLink (Omnipod pod pump)
-	- **Device Model:** The model of the active device connected to the RileyLink (the current model name of the Omnipod pod, which is Eros)
-	- **Pump Serial Number:** Serial number of the currently activated pod
-	- **Pump Frequency:** Communication radio frequency the RileyLink has tuned to enable communication between itself and the pod.
-	- **Last used frequency:** Last known radio frequency the pod used to communicate with the RileyLink.
-	- **Last device contact:** Date and time of the last contact the pod made with the RileyLink.
-	- **Refresh button** to manually refresh RileyLink Bluetooth communication with the phone.
+	* **Device Type:** The type of device communicating with the RileyLink (Omnipod pod pump)
+	* **Device Model:** The model of the active device connected to the RileyLink (the current model name of the Omnipod pod, which is Eros)
+	* **Pump Serial Number:** Serial number of the currently activated pod
+	* **Pump Frequency:** Communication radio frequency the RileyLink has tuned to enable communication between itself and the pod.
+	* **Last used frequency:** Last known radio frequency the pod used to communicate with the RileyLink.
+	* **Last device contact:** Date and time of the last contact the pod made with the RileyLink.
+	* **Refresh button** to manually refresh RileyLink Bluetooth communication with the phone.
 
 RileyLink and Active Pod History
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -353,9 +353,9 @@ This screen provides information in reverse chronological order of each state or
 Fields
 ++++++
     
-    - **Date & Time**: In reverse chronological order the timestamp of each event.
-    - **Device:** The device to which the current action or state is referring.
-    - **State or Action:** The current state or action performed by the device.
+    * **Date & Time**: In reverse chronological order the timestamp of each event.
+    * **Device:** The device to which the current action or state is referring.
+    * **State or Action:** The current state or action performed by the device.
 
 Omnipod (POD) Tab
 =================
