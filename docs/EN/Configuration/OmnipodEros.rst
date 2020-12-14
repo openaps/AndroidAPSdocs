@@ -353,9 +353,9 @@ This screen provides information in reverse chronological order of each state or
 Fields
 ++++++
     
-    * **Date & Time**: In reverse chronological order the timestamp of each event.
-    * **Device:** The device to which the current action or state is referring.
-    * **State or Action:** The current state or action performed by the device.
+   * **Date & Time**: In reverse chronological order the timestamp of each event.
+   * **Device:** The device to which the current action or state is referring.
+   * **State or Action:** The current state or action performed by the device.
 
 Omnipod (POD) Tab
 =================
@@ -367,7 +367,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 |Omnipod_Tab|
 
 Fields
-------
+++++++
 
 * **RileyLink Status:** Displays the current connection status of the RileyLink
 
