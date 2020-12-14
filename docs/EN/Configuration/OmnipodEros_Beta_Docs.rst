@@ -444,9 +444,9 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 |deactivate_pod|
 **Deactivate Pod** - deactivates the currently active pod.
 *NOTES:*
-	-  *A partially paired pod ignores this command.*
-	-  *Use this command to deactivate a screaming pod (error 49).*
-	-  *If the button is disabled (greyed out) use the Discard Pod button.*
+	*  *A partially paired pod ignores this command.*
+	*  *Use this command to deactivate a screaming pod (error 49).*
+	*  *If the button is disabled (greyed out) use the Discard Pod button.*
 
 |play_test_beep|
 **Play test beep** - plays a single test beep on the pod when pressed.
@@ -454,20 +454,20 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 |discard_pod|
 **Discard pod** - deactivates and discards the pod state of an unresponsive pod when pressed. This button is only displayed when very specific cases are met because proper deactivation is no longer possible:
 
-	- A **pod is not fully paired** and thus ignores deactivate commands.
-	- A **pod is stuck** during the pairing process between steps
-	- A **pod simply does not pair at all.**
+	* A **pod is not fully paired** and thus ignores deactivate commands.
+	* A **pod is stuck** during the pairing process between steps
+	* A **pod simply does not pair at all.**
 
 |pod_history| **Pod history** - displays the active pod activity history
 
 |rileylink_stats| **RileyLink stats:** Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
 
-	- *Settings* - displays RileyLink and active pod settings information
-	- *History* - displays RileyLink and Pod communication history
+	* *Settings* - displays RileyLink and active pod settings information
+	* *History* - displays RileyLink and Pod communication history
 
 |reset_rileylink_config|
-**Reset RileyLink Config** - This button resets the currently connected RileyLink configuration. When communication is started,    specific data is sent to and set in the RileyLink (memory registers are set, communication protocols are set, tuned radio frequency is set).
-	- The primary usage of this feature is when the currently active RileyLink is not responding and communication is in a stuck state. If the RileyLink is turned off and then back on, the **Reset RileyLink Config** button needs to be pressed, so that it sets these communication parameters in the RileyLink configuration. If this is NOT done then AAPS will need to be restarted after the RileyLink is power cycled.
+**Reset RileyLink Config** - This button resets the currently connected RileyLink configuration. When communication is started, specific data is sent to and set in the RileyLink (memory registers are set, communication protocols are set, tuned radio frequency is set).
+	* The primary usage of this feature is when the currently active RileyLink is not responding and communication is in a stuck state. If the RileyLink is turned off and then back on, the **Reset RileyLink Config** button needs to be pressed, so that it sets these communication parameters in the RileyLink configuration. If this is NOT done then AAPS will need to be restarted after the RileyLink is power cycled.
 
 |pulse_log|
 **Read pulse log:** Sends the active pod pulse log to the clipboard
@@ -493,33 +493,33 @@ The settings groups are listed below; you can enable or disable via a toggle swi
 
 *Confirmation beeps* - provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
-   - **Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
-   - **Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
-   - **SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
-   - **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
+   * **Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
+   * **Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
+   * **SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
+   * **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
 
 *Alerts* - provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
 *Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.*
-	- **Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
-	- **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
-	- **Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
-	- **Number of units:** The number of units at which to trigger the pod low reservoir alert.
-	- **Automatically acknowledge Pod alerts:** When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
+	* **Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
+	* **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
+	* **Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
+	* **Number of units:** The number of units at which to trigger the pod low reservoir alert.
+	* **Automatically acknowledge Pod alerts:** When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
 
 *Notifications* - Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful. 
 
 *NOTE: These are notifications only, no audible beep alerts are made.*
 
-	- **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
-	- **Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
-	- **Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
+	* **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
+	* **Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
+	* **Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
    
 *Other* - provides advanced settings to assist debugging.
-	- **Show Suspend Delivery button in Omnipod tab:** Hide or display the suspend delivery button in the **Omnipod (POD)** tab.
-	- **Show Pulse log button in Pod Management menu:** Hide or display the pulse log button in the **Pod Management** menu.
-	- **Show RileyLink Stats button in Pod Management menu:** Hide or display the RileyLink Stats button in the **Pod Management** menu.
-	- **DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
+	* **Show Suspend Delivery button in Omnipod tab:** Hide or display the suspend delivery button in the **Omnipod (POD)** tab.
+	* **Show Pulse log button in Pod Management menu:** Hide or display the pulse log button in the **Pod Management** menu.
+	* **Show RileyLink Stats button in Pod Management menu:** Hide or display the RileyLink Stats button in the **Pod Management** menu.
+	* **DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
 
 Actions (ACT) Tab
 =================
@@ -535,21 +535,21 @@ This tab is well documented in the main AAPS documentation but there are a few i
 Troubleshooting
 ===============
 
-- **Pod Failures** - Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be found `here <https://github.com/openaps/openomni/wiki/Fault-event-codes>`__ to help determine the cause.
+* **Pod Failures** - Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be found `here <https://github.com/openaps/openomni/wiki/Fault-event-codes>`__ to help determine the cause.
 
-- **Preventing error 49 pod failures** - This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the **Config Builder**\ ➜\ **General**\ ➜\ **NSClient**\ ➜\ **cog wheel**\ ➜\ **Advanced Settings** to prevent possible failures.
+* **Preventing error 49 pod failures** - This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the **Config Builder**\ ➜\ **General**\ ➜\ **NSClient**\ ➜\ **cog wheel**\ ➜\ **Advanced Settings** to prevent possible failures.
 
-- **Pump Unreachable Alerts** - It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]** and setting this to **120**.
+* **Pump Unreachable Alerts** - It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]** and setting this to **120**.
 
-- **Import Settings from previous AAPS** - Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
+* **Import Settings from previous AAPS** - Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
 
-    1. Deactivate your pod session. Verify that you do not have an active pod session.
-    2. Export your settings and store a copy in a safe place.
-    3. Uninstall the previous version of AAPS and restart your phone.
-    4. Install the new version of AAPS and verify that you do not have an active pod session.
-    5. Import your settings and activate your new pod.
+1. Deactivate your pod session. Verify that you do not have an active pod session.
+2. Export your settings and store a copy in a safe place.
+3. Uninstall the previous version of AAPS and restart your phone.
+4. Install the new version of AAPS and verify that you do not have an active pod session.
+5. Import your settings and activate your new pod.
 
-- **Omnipod driver alerts** - please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
+* **Omnipod driver alerts** - please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
 	- **No active Pod** - No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically silenced.
 	- **Pod suspended** - Informational alert that Pod has been suspended.
 	- **Setting basal profile failed. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..** - Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
@@ -558,9 +558,9 @@ Troubleshooting
 	
         Below are a few examples of when an uncertain notification can occur.
     
-    - **Boluses** - Uncertain boluses cannot be automatically verified. The notification will remain until the next bolus but a manual pod refresh will clear the message. *By default alerts beeps are enabled for this notification type as the user will manually need to verify them.*
-    - **TBRs, Pod Statuses, Profile Switches, Time Changes** - a manual pod refresh will clear the message. By default alert beeps are disabled for this notification type.
-    - **Pod Time Deviation -** When the time on the pod and the time your phone deviates too much then it is difficult for AAPS loop to function and make accurate predictions and dosage recommendations. If the time deviation between the pod and the phone is more than 5 minutes then AAPS will report the pod is in a Suspended state under Pod status with a HANDLE TIME CHANGE message. An additional **Set Time** icon will appear at the bottom of the Omnipod (POD) tab. Clicking Set Time will synchronize the time on the pod with the time on the phone and then you can click the RESUME DELIVERY button to continue normal pod operations.
+    + **Boluses** - Uncertain boluses cannot be automatically verified. The notification will remain until the next bolus but a manual pod refresh will clear the message. *By default alerts beeps are enabled for this notification type as the user will manually need to verify them.*
+    + **TBRs, Pod Statuses, Profile Switches, Time Changes** - a manual pod refresh will clear the message. By default alert beeps are disabled for this notification type.
+    + **Pod Time Deviation -** When the time on the pod and the time your phone deviates too much then it is difficult for AAPS loop to function and make accurate predictions and dosage recommendations. If the time deviation between the pod and the phone is more than 5 minutes then AAPS will report the pod is in a Suspended state under Pod status with a HANDLE TIME CHANGE message. An additional **Set Time** icon will appear at the bottom of the Omnipod (POD) tab. Clicking Set Time will synchronize the time on the pod with the time on the phone and then you can click the RESUME DELIVERY button to continue normal pod operations.
 
 Best Practices
 ==============
