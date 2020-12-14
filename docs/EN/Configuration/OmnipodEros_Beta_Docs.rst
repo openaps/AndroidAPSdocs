@@ -405,22 +405,30 @@ Icons
 -----
 
 |refresh_pod_status|
+
 **REFRESH:** Sends a refresh command to the active pod to update communication and status.
--  Use to refresh the pod status and dismiss status fields that contain the text (uncertain). See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+
+    * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
+    * See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
 
 |pod_management|
+
 **POD MGMT:** Navigates to the Pod management menu
 
 |ack_alerts|
+
 **ACK ALERTS:** Conditionally displayed when the active pod time is past 72 hours and native pod warning beeps are actively running. Allows the user to send a command to the pod to disable the active beeping for pod expiration. Once successfully dismissed this icon is no longer displayed.
 
 |set_time|
+
 **SET TIME:** When pressed this will update the time on the pod with the current time on your phone.
 
 |suspend|
+
 **SUSPEND:** Suspends the active pod
 
 |resume|
+
 **RESUME DELIVERY:** Resumes the currently suspended, active pod
 
 Pod Management Menu
