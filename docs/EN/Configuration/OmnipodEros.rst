@@ -297,8 +297,8 @@ Manually Re-establish RileyLink Bluetooth Communication
     
     If the RileyLink is unresponsive or out of range of the phone while the Bluetooth refresh command is being processed a warning message will display 2 options.
 
-   	* **Mute (1)** will silence this current warning.
-   	* **OK (2)** will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
+   * **Mute (1)** will silence this current warning.
+   * **OK (2)** will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
 	
     |RileyLink_Bluetooth_Reset_4|	
 	
