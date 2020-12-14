@@ -300,11 +300,11 @@ Manually Re-establish RileyLink Bluetooth Communication
    	+ **Mute (1)** will silence this current warning.
    	+ **OK (2)** will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
 	
-    If the Bluetooth connection does not re-establish, try manually turning off and then back on the Bluetooth function on your phone.
+    |RileyLink_Bluetooth_Reset_4|	
+	
+3. If the Bluetooth connection does not re-establish, try manually turning off and then back on the Bluetooth function on your phone.
 
-    |RileyLink_Bluetooth_Reset_4|
-
-3. After a successful RileyLink Bluetooth reconnection the **Connection Status: (1)** field should report **RileyLink ready**. Congratulations, you have now reconnected your configured RileyLink to AAPS!
+4. After a successful RileyLink Bluetooth reconnection the **Connection Status: (1)** field should report **RileyLink ready**. Congratulations, you have now reconnected your configured RileyLink to AAPS!
 
     |RileyLink_Bluetooth_Reset_5|
 
