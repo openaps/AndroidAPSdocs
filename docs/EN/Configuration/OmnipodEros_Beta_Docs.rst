@@ -302,7 +302,7 @@ Manually Re-establish RileyLink Bluetooth Communication
 	
     |RileyLink_Bluetooth_Reset_4|	
 	
-3. If the Bluetooth connection does not re-establish, try manually turning off and then back on the Bluetooth function on your phone.
+3. If the **Bluetooth connection** does not re-establish, try manually turning **off** and then back **on** the Bluetooth function on your phone.
 
 4. After a successful RileyLink Bluetooth reconnection the **Connection Status: (1)** field should report **RileyLink ready**. Congratulations, you have now reconnected your configured RileyLink to AAPS!
 
@@ -328,8 +328,8 @@ RileyLink (3) fields
 	- **Connection Error:** If there is an error with the RileyLink Bluetooth connection details will be displayed here.
 	- **RL Firmware:** Current firmware version installed on the actively connected RileyLink.
 
-Device (4) fields - Active Pod
-++++++++++++++++++++++++++++++
+Device (4) fields - With an Active Pod
+++++++++++++++++++++++++++++++++++++++
 
 	- **Device Type:** The type of device communicating with the RileyLink (Omnipod pod pump)
 	- **Device Model:** The model of the active device connected to the RileyLink (the current model name of the Omnipod pod, which is Eros)
@@ -350,11 +350,12 @@ This screen provides information in reverse chronological order of each state or
 
     |RileyLink_Statistics_History_3|
     
-    *Fields*
+Fields
+++++++
     
-	- **Date & Time**: In reverse chronological order the timestamp of each event.
-	- **Device:** The device to which the current action or state is referring.
-	- **State or Action:** The current state or action performed by the device.
+    - **Date & Time**: In reverse chronological order the timestamp of each event.
+    - **Device:** The device to which the current action or state is referring.
+    - **State or Action:** The current state or action performed by the device.
 
 Omnipod (POD) Tab
 =================
