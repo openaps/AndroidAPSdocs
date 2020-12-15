@@ -86,7 +86,7 @@ RileyLink Setup
 
 2. After selecting the Omnipod driver, next you will identify and select your RileyLink from **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Gear Icon (Settings) (2)** ➜\ **RileyLink Configuration (3)** by pressing the **Scan (4)** button and **selecting your RileyLink (5)** .
 
-    Ensure your RileyLink battery is charged and it is `positioned in close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~50 cm away or less) to your phone for AAPS to identify it by its MAC address. Once selected, you can proceed to activate your first pod session. Use the back button on your phone to return to the main AAPS interface.
+    Ensure your RileyLink battery is charged and it is `positioned in close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Once selected, you can proceed to activate your first pod session. Use the back button on your phone to return to the main AAPS interface.
 
     |RileyLink_Setup_1| |RileyLink_Setup_2|
     
@@ -168,7 +168,7 @@ To deactivate a pod (either from expiration or from a pod failure):
 
     |Deactivate_Pod_1| |Deactivate_Pod_2|
 
-2. On the **Deactivate Pod** screen, first, make sure the RileyLink is in close proximity (~50 cm away or less) to the pod but not on top of the pod, then click on the **Next** button to begin the process of deactivating the pod.
+2. On the **Deactivate Pod** screen, first, make sure the RileyLink is in close proximity to the pod but not on top of or right next to the pod, then click on the **Next** button to begin the process of deactivating the pod.
 
     |Deactivate_Pod_3|
 
@@ -662,7 +662,7 @@ The antenna used on the RileyLink to communicate with an Omnipod pod is a 433 MH
 
     *(Fig 1. Graphical plot of helical spiral antenna in an omnidirectional pattern*)
 
-Because of both safety and security concerns, pod *activation* and *deactivation* has to be done at a range *closer (~50 cm away or less)* than other operations such as giving a bolus, setting a TBR or simply refreshing the pod status. Due to the nature of the signal transmission from the RileyLink antenna it is NOT recommended to place the pod directly on top of the RileyLink.
+Because of both safety and security concerns, pod *activation* has to be done at a range *closer (~30 cm away or less)* than other operations such as giving a bolus, setting a TBR or simply refreshing the pod status. Due to the nature of the signal transmission from the RileyLink antenna it is NOT recommended to place the pod directly on top of or right next to the RileyLink.
 
 The image below shows the optimal way to position the RileyLink during pod activation and deactivation procedures. The pod may activate in other positions but you will have the most success using the position in the image below.
 
