@@ -268,7 +268,7 @@ This section shows you how to review your active pod history and filter by diffe
 This feature is useful for verifying boluses, TBRs, basal changes that were given but you may be unsure if they completed. The remaining categories are useful in general for troubleshooting issues and determining the order of events that occurred leading up to a failure.
 
 *NOTE:*
-This feature will **not** be helpful for verifying **uncertain** boluses, TBRs, basal changes, etc.  However, **uncertain** commands will appear in the pod history.
+This feature will **not** be helpful relating **uncertain** boluses, TBRs, basal changes, etc.  However, **uncertain** commands will appear in the pod history.
 
 1. Go to the **Omnipod (POD**) tab and press the **POD MGMT (1)** button to access the **Pod management** menu and then press the **Pod history (2)** button to access the pod history screen.
 
