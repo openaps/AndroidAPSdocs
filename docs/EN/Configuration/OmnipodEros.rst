@@ -113,7 +113,7 @@ Before you can activate a pod please ensure you have properly configured and con
 
     Ensure the new pod and RileyLink are within close proximity of each other (~50cm or less) and click the **Next** button.
 
-3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself). If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, `move the RileyLink closer <#optimal-omnipod-and-rileylink-positioning>`__ (~50 cm away or less) to but not on top of the Pod and click the **Retry (1)** button.
+3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself). If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, `move the RileyLink closer <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
 
     |Activate_Pod_4| |Activate_Pod_5|
 
@@ -131,7 +131,7 @@ Before you can activate a pod please ensure you have properly configured and con
 
 7. After pressing **OK**, it may take some time before the Omnipod responds and inserts the cannula (1-2 minutes maximum), so be patient.
 
-    If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, move the RileyLink closer (~50 cm away or less) to but not on top of the Pod and click the **Retry** button.
+    If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, move the RileyLink closer (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry** button.
 
     If the RileyLink is out of Bluetooth range or does not have an active connection to the phone, you will receive an error message **No response from RileyLink**. If this occurs, move the RileyLink closer to the phone and click the **Retry** button.
 
@@ -161,8 +161,6 @@ Deactivating a Pod
 ------------------
 
 Under normal circumstances, the life of a pod should run for three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
-
-*REMINDER: Pod communication occurs at limited ranges for both pod activation and deactivation due to security safety measures. During these procedures make sure that your pod is* `within close proximity <#optimal-omnipod-and-rileylink-positioning>`__ *(~50cm or less) to the RileyLink.*
 
 To deactivate a pod (either from expiration or from a pod failure):
 
@@ -268,6 +266,9 @@ View Pod History
 This section shows you how to review your active pod history and filter by different action categories. The pod history tool allows you to view the actions and results committed to your currently active pod during its three day (72 - 80 hours) life.
 
 This feature is useful for verifying boluses, TBRs, basal changes that were given but you may be unsure if they completed. The remaining categories are useful in general for troubleshooting issues and determining the order of events that occurred leading up to a failure.
+
+*NOTE:*
+This feature will **not** be helpful for verifying **uncertain** boluses, TBRs, basal changes, etc.  However, **uncertain** commands will appear in the pod history.
 
 1. Go to the **Omnipod (POD**) tab and press the **POD MGMT (1)** button to access the **Pod management** menu and then press the **Pod history (2)** button to access the pod history screen.
 
