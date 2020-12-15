@@ -25,7 +25,19 @@ Please use `Android Studio 4.0.1 <https://developer.android.com/studio/>`_ or ne
 
 Major new features
 ----------------------
-* Omnipod driver
+* `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @teleriddler @vanelsberg @eurenda
+* New watchface @rICTx-T1D
+* Dana RS connection improvements @MilosKozak
+* Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
+* New LowRes skin
+* New "Pregnant" patient type @brian Quinion
+* New NSClient tablet layout @MilosKozak
+* NSClient copy insulin, senstivity and display settings directly from main AAPS @MilosKozak
+* Preferences filter @brian Quinion
+* New pump icons @Rig22 @@teleriddler @osodebailar
+* SetupWizard improvements @MilosKozak
+* Security improvements @dlvoy
+* Various improvements and fixes @AdrianLxM @Philoul @swissalpine @MilosKozak @brian Quinion
 
 Version 2.7.0
 ================
