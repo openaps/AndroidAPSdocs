@@ -101,7 +101,7 @@ Activating a Pod
 
 Before you can activate a pod please ensure you have properly configured and connected your RileyLink connection in the Omnipod settings
 
-*REMINDER: Pod communication occurs at limited ranges for both pod activation and deactivation due to security safety measures. During these procedures, make sure that your pod is* `within close proximity <#optimal-omnipod-and-rileylink-positioning>`__ *(~50 cm away or less) to the RileyLink.*
+*REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Before pairing the Pod's radio signal is weaker, however after it has been paired it will operate at full signal power. During these procedures, make sure that your pod is* `within close proximity <#optimal-omnipod-and-rileylink-positioning>`__ *(~30 cm away or less) but not on top of or right next to the RileyLink.  
 
 1. Navigate to the **Omnipod (POD)** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
 
@@ -111,7 +111,7 @@ Before you can activate a pod please ensure you have properly configured and con
 
     |Activate_Pod_3|
 
-    Ensure the new pod and RileyLink are within close proximity of each other (~50cm or less) and click the **Next** button.
+    Ensure the new pod and RileyLink are within close proximity of each other (~30cm or less) and click the **Next** button.
 
 3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself). If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, `move the RileyLink closer <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
 
