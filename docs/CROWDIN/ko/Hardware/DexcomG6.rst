@@ -9,7 +9,7 @@ Basics first
 General hints for looping with G6
 ==================================================
 
-Dexcom G6를 사용하는 것은 맨 처음 육안으로 보여지는 것 보다 좀더 복잡합니다. 그것을 안전하게 사용하기 위해서는 , 몇가지 인지하고 넘어갈 것들이 있습니다. 
+Dexcom G6를 사용하는 것은 맨 처음 제시된 것 보다 좀더 복잡할 수 있다는 것이 확실합니다. 안전하게 사용하기 위해 몇 가지 알아야 할 사항들이 있습니다: 
 
 * If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
 * If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
