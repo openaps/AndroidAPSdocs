@@ -17,7 +17,7 @@ Hardware and Software Requirements
 
    -  Other hardware options are available.
    
-      +  `OrangeLink <https://getrileylink.org/product-category/orangelink-parts>`_ 
+      +  `OrangeLink <https://getrileylink.org/product/orangelink>`_ 
       +  `Emalink <https://github.com/sks01/EmaLink>`__ 
       +  `LoopLink <https://jameswedding.substack.com/>`__ - Untested
       +  *RileyLink with modified Balun Antenna* - Untested      
