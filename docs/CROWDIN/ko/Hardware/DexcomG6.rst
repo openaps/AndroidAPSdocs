@@ -44,7 +44,7 @@ If using G6 with patched Dexcom app
 * 오리지날 Dexcom 앱이 남아 있는 경우 센서를 스탑하고 삭제합니다.
 * 다운로드 된 apk를 설치합니다.
 * 센서를 시작합니다.
-* Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
+* 구성 관리자 (AndroidAPS의 설정)에서 Dexcom 앱 (패치버전)을 선택합니다.
 * If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
 * There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.
 
