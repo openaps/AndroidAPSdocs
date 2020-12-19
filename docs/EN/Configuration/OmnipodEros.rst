@@ -16,7 +16,8 @@ Hardware and Software Requirements
 *  **Pod Communication Device:** a 433MHz RileyLink from `getrileylink.org <https://getrileylink.org/product/rileylink433>`__, which is the bridge to communicate with Eros generation pods
 
    -  Other hardware options are available.
-
+   
+      +  `OrangeLink <https://getrileylink.org/product-category/orangelink-parts>`_ 
       +  `Emalink <https://github.com/sks01/EmaLink>`__ 
       +  `LoopLink <https://jameswedding.substack.com/>`__ - Untested
       +  *RileyLink with modified Balun Antenna* - Untested      
