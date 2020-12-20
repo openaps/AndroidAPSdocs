@@ -13,8 +13,9 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 Hardware and Software Requirements
 ==================================
 
-*  **Pod Communication Device:** a 433MHz RileyLink from `getrileylink.org <https://getrileylink.org/product/rileylink433>`__, which is the bridge to communicate with Eros generation pods
-	|RileyLink|
+*  **Pod Communication Device:** 
+
+   -  |RileyLink| 433MHz RileyLink from `getrileylink.org <https://getrileylink.org/product/rileylink433>`__, which is the bridge to communicate with Eros generation pods
 
    -  Other hardware options are available.
    
