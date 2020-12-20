@@ -33,7 +33,8 @@
 ..
 	Hardware and Software Requirements
 .. |OrangeLink|				image:: OrangeLink.png	
-	
+.. |LoopLink|				image:: LoopLink.png
+
 ..
 		Acknowledge Alerts
 .. |Acknowledge_Alerts_1|               image:: Acknowledge_Alerts_1.png
@@ -284,6 +285,7 @@ Instructional Section Images
 Hardware and Software Requirements
 
 |OrangeLink|
+|LoopLink|
 
 Acknowledge Alerts
 
