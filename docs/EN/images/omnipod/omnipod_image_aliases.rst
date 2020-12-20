@@ -285,6 +285,7 @@ Instructional Section Images
 Hardware and Software Requirements
 
 |OrangeLink|
+
 |LoopLink|
 
 Acknowledge Alerts
