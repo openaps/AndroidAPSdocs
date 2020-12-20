@@ -31,6 +31,10 @@
 	Instructional Section Images
 	
 ..
+	Hardware and Software Requirements
+.. |OrangeLink|               image:: OrangeLink.png	
+	
+..
 		Acknowledge Alerts
 .. |Acknowledge_Alerts_1|               image:: Acknowledge_Alerts_1.png
 .. |Acknowledge_Alerts_2|               image:: Acknowledge_Alerts_2.png
