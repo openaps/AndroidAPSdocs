@@ -17,7 +17,7 @@ Hardware and Software Requirements
 
    -  Other hardware options are available.
    
-      +  `OrangeLink <https://getrileylink.org/product/orangelink>`_ 
+      +  |OrangeLink|  `OrangeLink <https://getrileylink.org/product/orangelink>`_ 
       +  `Emalink <https://github.com/sks01/EmaLink>`__ 
       +  `LoopLink <https://jameswedding.substack.com/>`__ - Untested
       +  *RileyLink with modified Balun Antenna* - Untested      
@@ -715,6 +715,10 @@ All of the development work for the Omnipod driver is done by the community on a
 
 ..
 	Instructional Section Images
+	
+..
+	Hardware and Software Requirements
+.. |OrangeLink|				image:: ../images/omnipod/OrangeLink.png		
 	
 ..
 		Acknowledge Alerts
