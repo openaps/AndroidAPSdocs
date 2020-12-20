@@ -19,7 +19,7 @@ Hardware and Software Requirements
 
    -  Other hardware options are available.
    
-      +  `Emalink Website <https://github.com/sks01/EmaLink>`__    
+      +  `Emalink Website <https://github.com/sks01/EmaLink>`__     
       +  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
       +  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_ 
       +  *RileyLink with modified Balun Antenna* - Untested      
