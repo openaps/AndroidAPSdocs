@@ -19,7 +19,7 @@ Hardware and Software Requirements
    
       +  |OrangeLink|  `OrangeLink <https://getrileylink.org/product/orangelink>`_ 
       +  `Emalink <https://github.com/sks01/EmaLink>`__ 
-      +  `LoopLink <https://jameswedding.substack.com/>`__ - Untested
+      +  |LoopLink|  `LoopLink <https://jameswedding.substack.com/>`__ - Untested
       +  *RileyLink with modified Balun Antenna* - Untested      
 
 *  **Mobile Phone Device:** Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <https://androidaps.readthedocs.io/en/latest/EN/index.html#component-setup>`__
@@ -719,6 +719,7 @@ All of the development work for the Omnipod driver is done by the community on a
 ..
 	Hardware and Software Requirements
 .. |OrangeLink|				image:: ../images/omnipod/OrangeLink.png		
+.. |LoopLink|				image:: ../images/omnipod/LoopLink.png
 	
 ..
 		Acknowledge Alerts
