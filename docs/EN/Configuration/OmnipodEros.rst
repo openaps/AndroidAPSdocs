@@ -14,12 +14,13 @@ Hardware and Software Requirements
 ==================================
 
 *  **Pod Communication Device:** a 433MHz RileyLink from `getrileylink.org <https://getrileylink.org/product/rileylink433>`__, which is the bridge to communicate with Eros generation pods
+	|RileyLink|
 
    -  Other hardware options are available.
    
-      +  |OrangeLink|  `OrangeLink <https://getrileylink.org/product/orangelink>`_ 
-      +  `Emalink <https://github.com/sks01/EmaLink>`__ 
-      +  |LoopLink|  `LoopLink <https://jameswedding.substack.com/>`__ - Untested
+      +  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_ 
+      +  `Emalink Website <https://github.com/sks01/EmaLink>`__ 
+      +  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
       +  *RileyLink with modified Balun Antenna* - Untested      
 
 *  **Mobile Phone Device:** Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <https://androidaps.readthedocs.io/en/latest/EN/index.html#component-setup>`__
@@ -718,8 +719,9 @@ All of the development work for the Omnipod driver is done by the community on a
 	
 ..
 	Hardware and Software Requirements
-.. |OrangeLink|				image:: ../images/omnipod/OrangeLink.png		
 .. |LoopLink|				image:: ../images/omnipod/LoopLink.png
+.. |OrangeLink|				image:: ../images/omnipod/OrangeLink.png		
+.. |RileyLink|				image:: ../images/omnipod/RileyLink.png
 	
 ..
 		Acknowledge Alerts
