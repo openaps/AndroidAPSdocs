@@ -32,7 +32,7 @@
 	
 ..
 	Hardware and Software Requirements
-.. |OrangeLink|               image:: OrangeLink.png	
+.. |OrangeLink|				image:: OrangeLink.png	
 	
 ..
 		Acknowledge Alerts
@@ -44,7 +44,7 @@
 
 ..
 	Actions Tab
-.. |Actions_Tab|                  		image:: Actions_Tab.png
+.. |Actions_Tab|                  	image:: Actions_Tab.png
 
 ..
 	Activate Pod
@@ -98,7 +98,7 @@
 
 ..
 	Omnipod Tab
-.. |Omnipod_Tab|                  		image:: Omnipod_Tab.png
+.. |Omnipod_Tab|                  	image:: Omnipod_Tab.png
 .. |Omnipod_Tab_Pod_Management|         image:: Omnipod_Tab_Pod_Management.png
 
 ..
@@ -281,6 +281,8 @@ Pod Management Tab
 
 Instructional Section Images
 
+Hardware and Software Requirements
+|OrangeLink|
 
 Acknowledge Alerts
 
