@@ -19,7 +19,7 @@ Hardware and Software Requirements
 
    -  Other hardware options are available.
    
-      +  `Emalink Website <https://github.com/sks01/EmaLink>`__     
+      +  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__     
       +  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
       +  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
 
@@ -723,6 +723,7 @@ All of the development work for the Omnipod driver is done by the community on a
 	
 ..
 	Hardware and Software Requirements
+.. |EmaLink|				image:: ../images/omnipod/EmaLink.png
 .. |LoopLink|				image:: ../images/omnipod/LoopLink.png
 .. |OrangeLink|				image:: ../images/omnipod/OrangeLink.png		
 .. |RileyLink|				image:: ../images/omnipod/RileyLink.png
