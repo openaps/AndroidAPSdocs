@@ -32,6 +32,7 @@
 	
 ..
 	Hardware and Software Requirements
+.. |EmaLink|				image:: EmaLink.png
 .. |LoopLink|				image:: LoopLink.png
 .. |OrangeLink|				image:: OrangeLink.png	
 .. |RileyLink|				image:: RileyLink.png	
@@ -286,6 +287,8 @@ Pod Management Tab
 Instructional Section Images
 
 Hardware and Software Requirements
+
+|EmaLink|
 
 |LoopLink|
 
