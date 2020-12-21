@@ -35,6 +35,8 @@
 .. |LoopLink|				image:: LoopLink.png
 .. |OrangeLink|				image:: OrangeLink.png	
 .. |RileyLink|				image:: RileyLink.png	
+.. |Android_phone|			image:: Android_phone.png	
+.. |Omnipod_Pod|			image:: Omnipod_Pod.png
 
 ..
 		Acknowledge Alerts
@@ -290,6 +292,10 @@ Hardware and Software Requirements
 |OrangeLink|
 
 |RileyLink|
+
+|Android_phone|
+
+|Omnipod_Pod|
 
 Acknowledge Alerts
 
