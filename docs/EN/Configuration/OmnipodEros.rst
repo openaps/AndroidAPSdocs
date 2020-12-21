@@ -541,9 +541,9 @@ Confirmation beeps
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
-* **Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
-* **Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
-* **SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
+* **\*Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
+* **\*Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
+* **\*SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
 * **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
 
 Alerts
@@ -553,9 +553,9 @@ Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, 
 
 *Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.*
 	
-* **Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
+* **\*Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
 * **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
-* **Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
+* **\*Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
 * **Number of units:** The number of units at which to trigger the pod low reservoir alert.
 * **Automatically acknowledge Pod alerts:** When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
 
@@ -567,8 +567,8 @@ Provides AAPS notifications and audible phone alerts when it is uncertain if TBR
 *NOTE: These are notifications only, no audible beep alerts are made.*
 
 * **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
-* **Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
-* **Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
+* **\*Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
+* **\*Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
    
 Other
 -----
@@ -578,7 +578,11 @@ Provides advanced settings to assist debugging.
 * **Show Suspend Delivery button in Omnipod tab:** Hide or display the suspend delivery button in the **Omnipod (POD)** tab.
 * **Show Pulse log button in Pod Management menu:** Hide or display the pulse log button in the **Pod Management** menu.
 * **Show RileyLink Stats button in Pod Management menu:** Hide or display the RileyLink Stats button in the **Pod Management** menu.
-* **DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
+* **Use battery level reported by EmaLink/OrangeLink** Reports the actual battery level of the EmaLink/OrangeLink. 
+
+	+  DOES NOT work with the original RileyLink.
+	+  May not work with RileyLink alternatives.
+* **\*DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
 
 Actions (ACT) Tab
 =================
