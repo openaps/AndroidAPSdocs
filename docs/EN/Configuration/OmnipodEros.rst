@@ -19,7 +19,7 @@ Hardware and Software Requirements
 
    -  Other hardware options are available.
    
-      +  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__     
+      +  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__     
       +  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
       +  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
 
