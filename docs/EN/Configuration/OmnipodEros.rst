@@ -13,7 +13,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 Hardware and Software Requirements
 ==================================
 
-*  **Pod Communication Device:** 
+*  **Pod Communication Device** 
 
    -  |RileyLink| 433MHz RileyLink from `getrileylink.org <https://getrileylink.org/product/rileylink433>`__, which is the bridge to communicate with Eros generation pods
 
@@ -23,9 +23,13 @@ Hardware and Software Requirements
       +  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
       +  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
 
-*  **Mobile Phone Device:** Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <https://androidaps.readthedocs.io/en/latest/EN/index.html#component-setup>`__
+*  |Android_Phone|  **Mobile Phone Device** 
 
-*  **Insulin Delivery Device:** a new Omnipod (Eros generation - **NOT DASH**) pod
+      +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <https://androidaps.readthedocs.io/en/latest/EN/index.html#component-setup>`__
+
+*  |Omnipod_Pod|  **Insulin Delivery Device** 
+
+      +  A new Omnipod pod (Eros generation - **NOT DASH**)
 
 These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and attempt to begin this process on your next pod change.
 
@@ -722,6 +726,8 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |LoopLink|				image:: ../images/omnipod/LoopLink.png
 .. |OrangeLink|				image:: ../images/omnipod/OrangeLink.png		
 .. |RileyLink|				image:: ../images/omnipod/RileyLink.png
+.. |Android_phone|			image:: ../images/omnipod/Android_phone.png	
+.. |Omnipod_Pod|			image:: ../images/omnipod/Omnipod_Pod.png
 	
 ..
 		Acknowledge Alerts
