@@ -15,13 +15,10 @@ Hardware and Software Requirements
 
 *  **Pod Communication Device** 
 
+   -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
    -  |RileyLink| 433MHz RileyLink from `getrileylink.org <https://getrileylink.org/product/rileylink433>`__, which is the bridge to communicate with Eros generation pods
-
-   -  Other hardware options are available.
-   
-      +  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__     
-      +  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
-      +  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__     
+   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
 
 *  |Android_Phone|  **Mobile Phone Device** 
 
