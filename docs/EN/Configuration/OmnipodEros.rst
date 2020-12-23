@@ -15,16 +15,22 @@ Hardware and Software Requirements
 
 *  **Pod Communication Device** 
 
+  Component that bridges communication from your AndroidAPS enabled phone to Eros generation pods.
+
    -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
-   -  |RileyLink| 433MHz RileyLink from `getrileylink.org <https://getrileylink.org/product/rileylink433>`__, which is the bridge to communicate with Eros generation pods
+   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
    -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__     
    -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
 
 *  |Android_Phone|  **Mobile Phone Device** 
 
+  Component that will operate AndroidAPS and send control commands to the Pod communication device.
+
       +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <https://androidaps.readthedocs.io/en/latest/EN/index.html#component-setup>`__
 
 *  |Omnipod_Pod|  **Insulin Delivery Device** 
+
+  Component that will interpret commands received from the Pod communication device originating from your AndroidAPS enable phone.
 
       +  A new Omnipod pod (Eros generation - **NOT DASH**)
 
