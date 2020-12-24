@@ -408,7 +408,7 @@ Fields
    - Units / hour @ time TBR was issued (minutes run / total minutes TBR will be run)
    - *Example:* 0.00U/h @18:25 ( 90/120 minutes)
 
-* **Reservoir:** Displays over 50 U left when more than 50 units are left in the reservoir. Below this value the exact units are displayed in yellow text.
+* **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below this value the exact units are displayed in yellow text.
 * **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. *Note this is an approximation as priming and filling the pod is not an exact process.*
 * **Errors:** Displays the last error encountered. Review the `Pod history <#view-pod-history>`__, `RileyLink history <#rileylink-and-active-pod-history>`__ and log files for past errors and more detailed information.
 *  **Active pod alerts:** Reserved for currently running alerts on the active pod. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
@@ -587,6 +587,8 @@ Provides advanced settings to assist debugging.
 
 	+  DOES NOT work with the original RileyLink.
 	+  May not work with RileyLink alternatives.
+	+  Enabled - Reports the current battery level for supported pod communication devices.
+	+  Disabled - Reports a value of n/a.
 * **\*DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
 
 Actions (ACT) Tab
@@ -596,9 +598,34 @@ This tab is well documented in the main AAPS documentation but there are a few i
 
 1. Go to the **Actions (ACT)** tab in the main AAPS interface.
 
-2. Under the **Careportal (1)** section the following 3 fields will have their **age reset** to 0 days and 0 hours **after each pod change**: **Insulin**, **Cannula** and **Pump battery**. This is done because of how the Omnipod pump is built and operates. The **pump battery** and **insulin reservoir** are self contained inside of each pod. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.*
+2. Under the **Careportal (1)** section the following 3 fields will have their **age reset** to 0 days and 0 hours **after each pod change**: **Insulin** and **Cannula**. This is done because of how the Omnipod pump is built and operates. The **pump battery** and **insulin reservoir** are self contained inside of each pod. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours).
 
-    |Actions_Tab|
+  |Actions_Tab|
+
+Levels
+------
+
+**Insuln Level**
+
+Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This is because it is not known exactly how much insulin was put in the pod, only that when the 2 beeps are triggered while filling the pod that over 85 units have been injected. A Pod can hold a maximum of 200 units. Priming can also introduce variance as it is not and exact process.  With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remainin in the reservoir.  
+
+  * **Abover 50 Units** - Reports a value of 50+U when more than 50 units are currently in the reservoir.
+  * **Below 50 Units** - Reports an approximate calculated value of insulin remaining in the reservoir. 
+  * **SMS** - Returns value or 50+U for SMS responses
+  * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
+
+
+**Battery Level**
+
+Battery level reporting is a setting that can be enabled to return the current battery level of pod communicaton devices like the OrangeLink and EmaLink.  The RileyLink hardware is not capable of reporting its battery level.  The battery level is reported after each communication with the pod, so when charging a linear increase may not be observed.  A manual refresh will update the current battery level.  When a supported Pod communicaton device is disconnected a value of 0% will be reported.
+
+  * **RileyLink hardware is NOT capable of report battery level** 
+  * **Use battery level reported by OrangeLink/EmaLink Setting MUST be enabled in the Omnipod settings to reporting battery level values**
+  * **Battery Level ONLY works for OrangeLink and EmaLink Devices**
+  * **Battery Level reporting MAY work for other devices (excluding RileyLink)**
+  * **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned.
+  * **Nightscout** - Battery level is reported when an actual level exists, value of n/a will not be reported
+
 
 Troubleshooting
 ===============
