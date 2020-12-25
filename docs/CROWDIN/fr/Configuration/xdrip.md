@@ -106,13 +106,14 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 6G, 8H ou 8J, 
    * Ce guide vous aidera lors du paramétrage initial.
    * Vous aurez besoin de votre numéro de série de l'émetteur si c'est la première fois que vous l'avez utilisé.
 
-* Mettre le numéro de série du nouveau transmetteur (présent sur l'emballage du transmetteur ou à l'arrière de celui-ci). Veillez à ne pas confondre 0 (zéro) et O (o majuscule).
+* Mettre le numéro de série du nouveau transmetteur (présent sur l'emballage du transmetteur ou à l'arrière de celui-ci). Attention à ne pas confondre `0` (zéro) et `O` (o majuscule).
    
    ![xDrip+ Numéro de série Transmetteur Dexcom](../images/xDrip_Dexcom_TransmitterSN.png)
 
 * Insérer un nouveau capteur (uniquement en cas de remplacement)
 
 * Placer l'émetteur dans le capteur
+* Si un message apparaît demandant de faire ls'appairage avec "DexcomXX", où "XX" sont les deux derniers caractères du numéro de série de l'émetteur. acceptez-le (appuyez sur "appairer")
 * Ne démarrez pas le nouveau capteur avant que l'information suivante soit présente dans la page Etat du système -> Classic Status Page -> G5/G6 status -> PhoneServiceState :
    
    * Numéro de série du transmetteur commençant par 80 ou 81 : "Got data hh:mm" (par ex. "Got data 19:04")

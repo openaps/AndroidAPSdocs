@@ -1,8 +1,8 @@
 Open Humans Uploader
 ****************************************
-Donate your data for science
-========================================
-You can help the community by donating your data to research projects! This helps scientists to pay it forward, develop new scientific ideas and broaden the open mind of open source closed loop systems.
+Dona tus datos a la ciencia
+======================================
+¡Puedes ayudar a la comunidad donando tus datos a proyectos de investigación científicos! This helps scientists to pay it forward, develop new scientific ideas and broaden the open mind of open source closed loop systems.
 AndroidAPS is ready to synchronize your data with `Open Humans <https://www.openhumans.org>`_, a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data. 
 
 You retain full control about what happens to your data and what projects you want to support by giving them access to your data. Depending on the project you have joined, data is evaluated and used by them in different ways and extent.
@@ -24,7 +24,7 @@ The following data will be uploaded to your Open Humans account:
 Secret or private information such as your Nightscout URL or API secret will not be uploaded.
 
 Configuración
-========================================
+======================================
 1. Create your account on `Open Humans <https://www.openhumans.org>`_ if not already done. You can reuse your existing Google or Facebook accounts if you wish to.
 2. Enable the “Open Humans” plugin in `Config Builder <../Configuration/Config-Builder.html>`_.
 3. Open its setting using the cog wheel button. You can restrict upload to times when phone uses Wi-Fi and/or is charged. 
@@ -57,7 +57,7 @@ Configuración
   :alt: Open Humans manage data
      
 Sharing Opportunities
-========================================
+======================================
 `The 'OPEN' project <https://www.open-diabetes.eu/>`_
 ---------------------------------------------------------------------------------------  
 The 'OPEN' project brings together an international and intersectoral consortium of patient innovators, clinicians, social scientists, computer scientists and patient advocacy organizations in order to investigate various aspects of Do-it-Yourself Artificial Pancreas Systems (DIY APS) that are used by an increasing number of people with diabetes. For more details see their `website <https://www.open-diabetes.eu/>`_.
@@ -77,15 +77,15 @@ You can get your data into Open Humans via one of three ways:
 
 Once you've created an account and gotten your data flowing into Open Humans, make sure to also join the OpenAPS Data Commons in order to donate your data for research if you choose.
 
-Terms of Use
-========================================
+Condiciones de Uso
+======================================
 This is an open source tool that will copy your data to `Open Humans <https://www.openhumans.org>`_. We retain no rights to share your data with third parties without your explicit authorization. The data the project and app receive are identified via a random user ID and will only be securely transmitted to an Open Humans account with your authorization of that process.
 You can stop uploading and delete your upload data at any time via `www.openhumans.org <https://www.openhumans.org>`_. Beware that some projects that receive data may not support this.
 
 Also see `Open Humans Terms of Use <https://www.openhumans.org/terms/>`_.
 
 Data Privacy
-========================================
+======================================
 Open Humans takes care of protecting your privacy by assigning a numerical ID to you for each project. This allows projects to recognize but no identify you. The Application ID uploaded by AndroidAPS is similar and only helps administrate the data. More information can be found here:
 
 * `Open Humans Data Use Policy <https://www.openhumans.org/data-use/>`_

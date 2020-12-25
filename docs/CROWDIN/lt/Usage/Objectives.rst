@@ -26,7 +26,7 @@ Tikslas 2: išmokite valdyti AndroidAPS
    .. image:: ../images/Objective2_V2_5.png
      :alt: 2 tikslo ekrano vaizdas
 
-Tikslas 3: Patvirtinkite, kad jūs suprantate
+Objective 3: Prove your knowledge
 ==================================================
 * Atsakykite į testo klausimus su atsakymų variantais įvairiomis AndroidAPS temomis.
 * Spustelėkite oranžinį tekstą „Dar nebaigta“, kad eitumėte į klausimų ir atsakymų puslapį.

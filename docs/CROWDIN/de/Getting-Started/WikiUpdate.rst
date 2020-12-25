@@ -1,5 +1,9 @@
 Docs Updates & Änderungen
 **************************************************
+Dezember 2020
+==================================================
+* `Libre 2 <../Hardware/Libre2.html>`_ - gepatche App funktioniert nicht mit US-Sensoren
+* Sony Smartwatch 3 ` Manuelle Installation des Google Play Service <../Usage/SonySW3.html> ` _
 Oktober 2020
 ==================================================
 * Accu-Chek Combo - Update `Zeitumstellung (Sommer-/Winterzeit) <../Usage/Timezone-traveling.html#zeitumstellung-sommer-winterzeit>`_

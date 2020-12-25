@@ -26,7 +26,7 @@ Doel 2: Leer hoe AndroidAPS te gebruiken
    .. image:: ../images/Objective2_V2_5.png
      :alt: Screenshot doel 2
 
-Doel 3: Bewijs jouw kennis
+Objective 3: Prove your knowledge
 ==================================================
 * Zorg dat je slaagt voor de multiple-choice test van jouw AndroidAPS kennis.
 * Klik op de oranje tekst "Nog niet voltooid" om toegang te krijgen tot de pagina met de vraag en antwoordopties.

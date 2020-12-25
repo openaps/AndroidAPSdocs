@@ -7,6 +7,8 @@ The sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2,2 mmol/l
 
 BG readings can also be done using a BT transmitter like with the Libre1.
 
+Important note : This does not work with the US version of the Freestyle 2 sensor ! The US version will only connect to a reader, not a phone.
+
 Step 1: Build your own patched LibreLink-App
 ==================================================
 

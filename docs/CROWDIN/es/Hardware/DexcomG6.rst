@@ -24,7 +24,7 @@ Si se utiliza G6 con xdrip+
 * El transmisor Dexcom G6 puede conectarse simultáneamente al receptor Dexcom (o alternativamente a la bomba t:slim) y a una aplicación en tu teléfono.
 * Para usar xDrip+ como receptor, desinstala primero la aplicación Dexcom. **No se puede conectar la aplicación xDrip+ y Dexcom con el transmisor al mismo tiempo!**
 * If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
-* If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
+* Si todavía no se ha configurado, descargue `xdrip <https://github.com/NightscoutFoundation/xDrip>` _ y siga las instrucciones de nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>` _).
 * Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
 * Ajuste los valores en xDrip+ según la página de valores de `xDrip+ <../Configuration/xdrip.html>` _
 * Si AAPS no recibe los valores de BG cuando el teléfono está en el modo de avión, utilice ` Identificar receptor ', como se describe en la página' xDrip+ settings <../Configuration/xdrip.html>` _.
@@ -36,7 +36,7 @@ Si utiliza G6 con la aplicación Dexcom parcheada
    * Carpeta 2.4 para los usuarios de la versión actual, la carpeta 2.3 es sólo para la anticuada AndroidAPS 2.3.
    * Abrir https://play.google.com/store/search?q=dexcom%20g6 en tu ordenador. 
    * Click the link to the Dexcom G6 app on the search results page that is displayed.
-   * Region will be visible in URL.
+   * La región estará visible en el URL.
    
    .. imagen:: ../images/DexcomG6regionURL.PNG
      :alt: Region en el URL de Dexcom G6
@@ -66,7 +66,7 @@ Resolución de problemas específica de Dexcom G6
 .. imagen:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
 
-General troubleshoothing
+Resolver problemas generales
 --------------------------------------------------
 General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`_.
 

@@ -11,7 +11,7 @@ La seguridad Primero
 Setup SMS commands
 ==================================================
 
-.. image:: ../images/SMSCommandsSetup.png
+.. imagen:: ../images/SMSCommandsSetup.png
   :alt: Configuración de comandos SMS
       
 * La mayoría de los ajustes de los objetivos temporales, después de AAPS, etc. can be done on `NSClient app <../Children/Children.html>`_ on an Android phone with an internet connection.
@@ -47,7 +47,7 @@ Additionally mandatory PIN at token end
    * not same digits (i.e. 1111)
    * not in a row (i.e. 1234)
 
-Authenticator setup
+Configuración de autentificación
 -------------------------------------------------
 * Two-factor authentication is used to improve safety.
 * You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
