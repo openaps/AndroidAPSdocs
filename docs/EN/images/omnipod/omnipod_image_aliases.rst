@@ -31,6 +31,15 @@
 	Instructional Section Images
 	
 ..
+	Hardware and Software Requirements
+.. |EmaLink|				image:: EmaLink.png
+.. |LoopLink|				image:: LoopLink.png
+.. |OrangeLink|				image:: OrangeLink.png	
+.. |RileyLink|				image:: RileyLink.png	
+.. |Android_phone|			image:: Android_phone.png	
+.. |Omnipod_Pod|			image:: Omnipod_Pod.png
+
+..
 		Acknowledge Alerts
 .. |Acknowledge_Alerts_1|               image:: Acknowledge_Alerts_1.png
 .. |Acknowledge_Alerts_2|               image:: Acknowledge_Alerts_2.png
@@ -40,7 +49,7 @@
 
 ..
 	Actions Tab
-.. |Actions_Tab|                  		image:: Actions_Tab.png
+.. |Actions_Tab|                  	image:: Actions_Tab.png
 
 ..
 	Activate Pod
@@ -94,7 +103,7 @@
 
 ..
 	Omnipod Tab
-.. |Omnipod_Tab|                  		image:: Omnipod_Tab.png
+.. |Omnipod_Tab|                  	image:: Omnipod_Tab.png
 .. |Omnipod_Tab_Pod_Management|         image:: Omnipod_Tab_Pod_Management.png
 
 ..
@@ -277,6 +286,19 @@ Pod Management Tab
 
 Instructional Section Images
 
+Hardware and Software Requirements
+
+|EmaLink|
+
+|LoopLink|
+
+|OrangeLink|
+
+|RileyLink|
+
+|Android_phone|
+
+|Omnipod_Pod|
 
 Acknowledge Alerts
 
