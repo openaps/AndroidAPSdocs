@@ -21,12 +21,12 @@ Primeros Pasos
    :glob:
    
    La seguridad primero <./Getting-Started/Safety-first>
-   Qué es un sistema de lazo cerrado <./Getting-Started/ClosedLoop.rst>
-   ¿Qué es un sistema de lazo cerrado con AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   What is a closed loop system? <./Getting-Started/ClosedLoop.rst>
+   ¿Qué es un sistema de lazo cerrado con AndroidAPS? <./Getting-Started/WhatisAndroidAPS.rst>  
    Actualizaciones y cambios en documentos <./Getting-Started/WikiUpdate.rst>
    
    
-Lo que necesitas 
+What do I need? 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
