@@ -26,7 +26,7 @@ Ziel 2: Lerne, wie AndroidAPS bedient wird
    .. image:: ../images/Objective2_V2_5.png
      :alt: Screenshot Ziel 2
 
-Objective 3: Prove your knowledge
+Ziel 3: Belege Dein Wissen
 ==================================================
 * Beantworte Multiple-Choice-Fragen zu verschiedenen AndroidAPS- und Closed-Loop-Themen.
 * Klicke auf den orangenen Text "Noch nicht abgeschlossen", um zur Seite mit den Fragen und Antwortmöglichkeiten zu kommen.
