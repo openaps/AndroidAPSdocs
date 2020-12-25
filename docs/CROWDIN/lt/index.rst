@@ -21,12 +21,12 @@ Pradėkite
    :glob:
    
    Saugumas pirmiausia <./Getting-Started/Safety-first.rst>
-   Kas yra uždaro ciklo sistema <./Getting-Started/ClosedLoop.rst>
-   Kas yra uždaro ciklo sistema su AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   What is a closed loop system? <./Getting-Started/ClosedLoop.rst>
+   Kas yra uždaro ciklo sistema su AndroidAPS? <./Getting-Started/WhatisAndroidAPS.rst>  
    Dokumentacijos atnaujinimai ir pakeitimai <./Getting-Started/WikiUpdate.rst>
    
    
-Ko man reikia 
+What do I need? 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
