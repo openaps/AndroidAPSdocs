@@ -21,12 +21,12 @@ The main components are:
    :glob:
    
    Πρώτα η ασφάλεια <./Getting-Started/Safety-first.rst>
-   Τι είναι ένα κλειστό σύστημα κυκλώματος <./Getting-Started/ClosedLoop.rst>
-   Τι είναι ένα κλειστό σύστημα κυκλώματος με AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   What is a closed loop system? <./Getting-Started/ClosedLoop.rst>
+   Τι είναι ένα κλειστό σύστημα κυκλώματος με AndroidAPS; <./Getting-Started/WhatisAndroidAPS.rst>  
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
    
    
-* `Τι χρειάζομαι 
+What do I need? 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
