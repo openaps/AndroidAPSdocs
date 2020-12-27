@@ -21,8 +21,8 @@ Pradėkite
    :glob:
    
    Saugumas pirmiausia <./Getting-Started/Safety-first.rst>
-   What is a closed loop system? <./Getting-Started/ClosedLoop.rst>
-   Kas yra uždaro ciklo sistema su AndroidAPS? <./Getting-Started/WhatisAndroidAPS.rst>  
+   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
+   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    Dokumentacijos atnaujinimai ir pakeitimai <./Getting-Started/WikiUpdate.rst>
    
    
