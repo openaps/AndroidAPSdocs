@@ -21,8 +21,8 @@ AndroidAPS-приложение с открытым исходным кодом 
    :glob:
    
    Главное- безопасность <./Getting-Started/Safety-first.rst>
-   What is a closed loop system? <./Getting-Started/ClosedLoop.rst>
-   Что такое система замкнутого цикла с AndroidAPS? <./Getting-Started/WhatisAndroidAPS.rst>  
+   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
+   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    Обновления и изменения документации <./Getting-Started/WikiUpdate.rst>
    
    
