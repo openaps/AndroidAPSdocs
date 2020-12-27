@@ -21,8 +21,8 @@ Pierwsze kroki
    :glob:
    
    Bezpieczeństwo przede wszystkim <./Getting-Started/Safety-first.rst>
-   What is a closed loop system? <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS? <./Getting-Started/WhatisAndroidAPS.rst>  
+   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
+   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
    
    
