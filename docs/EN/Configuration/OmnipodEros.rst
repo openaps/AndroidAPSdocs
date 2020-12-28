@@ -95,17 +95,19 @@ RileyLink Setup
 
 1. Ensure that your RileyLink is fully charged and powered on.
 
-2. After selecting the Omnipod driver, next you will identify and select your RileyLink from **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Gear Icon (Settings) (2)** ➜\ **RileyLink Configuration (3)** by pressing the **Scan (4)** button and **selecting your RileyLink (5)** .
+2. After selecting the Omnipod driver, next you will identify and select your RileyLink from **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Gear Icon (Settings) (2)** ➜\ **RileyLink Configuration (3)** by pressing the **Not Set** or **MAC Address (if present)** text. On the next screen press the **Scan (4)** button to initiate a bluetooth scan for all available pod communication devices and **selecting your RileyLink (5)** .  You will then be returned to the Omnipod Settings page listing your currently selected RileyLink. 
 
     Ensure your RileyLink battery is charged and it is `positioned in close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Once selected, you can proceed to activate your first pod session. Use the back button on your phone to return to the main AAPS interface.
 
     |RileyLink_Setup_1| |RileyLink_Setup_2|
     
     |RileyLink_Setup_3| |RileyLink_Setup_4|
+    
+    |RileyLink_Setup_5|
 
 3. Verify that in the **Omnipod (POD)** tab that the **RileyLink Status (1)** appears as **Connected.** The **Pod status (2)** field should show **No active Pod**; if not, please attempt the previous step or exit AAPS to see if this refreshes the connection.
 
-    |RileyLink_Setup_5|
+    |RileyLink_Setup_6|
 
 Activating a Pod
 ----------------
