@@ -135,6 +135,7 @@
 .. |RileyLink_Setup_3|                  image:: RileyLink_Setup_3.png
 .. |RileyLink_Setup_4|                  image:: RileyLink_Setup_4.png
 .. |RileyLink_Setup_5|                  image:: RileyLink_Setup_5.png
+.. |RileyLink_Setup_6|                  image:: RileyLink_Setup_6.png
 
 ..
 	RileyLink Statistics History
@@ -407,6 +408,7 @@ RileyLink Setup
 |RileyLink_Setup_3|                 
 |RileyLink_Setup_4|                 
 |RileyLink_Setup_5|                 
+|RileyLink_Setup_6|  
 
 
 RileyLink Statistics History
