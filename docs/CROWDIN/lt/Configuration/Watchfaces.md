@@ -18,9 +18,18 @@ Norint sukurti AAPS Wear OS versiją, jums reikia pasirinkti variantą "fullRele
 
 Įsitikinkite, kad telefono ir laikrodžio AAPS versijos yra pasirašytos tais pačiais raktais!
 
-Laikrodžio APK versija turi būti įdiegta laikrodyje tuo pačiu būdu, kaip ir telefono APK telefone. Tai gali pareikalauti įjungti *kūrėjo režimą* laikrodyje ir įkelti bei įdiegti APK laikrodyje su `adb install wear-full-release.apk`
+To install the APK on Android Wear smartwatch, follow these steps:
 
-Naudojant laikrodžio AAPS versiją, visada atnaujinkite ją kartu su telefono programėlės versija - paikykite jų versijas sinchroniškai.
+1. Enable developer mode on the watch. Press button on watch and click `settings` then `system` then `about` and repeatedly click the `build number` at least 7 times until it confirms you are a developer.
+2. Enable ADB on watch. Press button on watch and click `settings` then `developer options` then `adb debugging` and `debug over wifi`. Note down the IP address you get next to this, it will be in the form of an IP address followed by :5555.
+3. On PC, note down the file location of `wear-full-release.apk` (will be in the same folder as `app-full-release.apk` which you installed on your phone).
+4. On PC, get the command prompt (type `command` in the search box). 
+5. In command prompt: `cd c:\Program Files (x86)\Android\android-sdk\platform-tools`.
+6. In command prompt: `adb connect [enter the IP address from step 2 including the :5555]`.
+7. In command prompt: `adb install -r [enter path from step 3]\wear-full-release.apk`.
+8. That will install AAPS on the watch, and AAPS watchfaces will be available to select.
+
+When using wear version of AAPS, always update it together with phone version of app - keep their versions in sync. To do this you'll need to follow the steps above again, although you won't need to reenable developer mode.
 
 ### Nustatymas telefone
 
@@ -236,6 +245,11 @@ AndroidAPS pateikia šiuos ekrano elementus:
     * Kartais padeda pakartotinis programų sinchronizavimas su laikrodžiu, nes kartais jis gali tai atlikti per lėtai: Android Wear > krumpliaračio piktograma (apačia)> laikrodžio pavadinimas> sinchronizuoti programas dar kartą.
     * Laikrodžio kūrėjo parinktyse įjunkite ADB derinimo funkciją, prijunkite laikrodį prie kompiuterio per USB ir vieną kartą paleiskite Wear programoje Android Studio.
     * Jei ekrano elementai neatnaujina duomenų, iš pradžių patikrinkite ar AAPS ciferblatas veikia iš viso.
+    ### Sony Smartwatch 3
+    
+    * The Sony Smartwach 3 is one of the most popular watches to be used with AAPS. 
+    * Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS and above.
+    * A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.rst).
     ## Peržiūrėti Nightscout duomenis
     
     Jei naudojate kitokią ciklo sistemą arba norite *pamatyti* savo vaiko ciklo informaciją laikrodyje, galite tiesiog sukurti/parsisiųsti NSClient APK. Eikite į [APK kūrimo instrukcijos](../Installing-AndroidAPS/Building-APK.md) ir pasirinkite kūrimo variantą NSClientRelease. Yra keletas skaitmeninių ciferblatų, kurie rodo vidutinį delta pokytį, aktyvų insuliną IOB, esamą laikiną bazinę TBR ir bazinį profilį bei CGM duomenų grafiką.
