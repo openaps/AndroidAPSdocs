@@ -18,9 +18,18 @@ To build Wear OS version of AAPS you needed to select the build variant "fullRel
 
 Make sure both phone and wear versions of AAPS are signed with same keys!
 
-Wear variant of APK need to be installed on watch in the same way you will install phone APK on phone. It may require enabling *developer mode* on watch and uploading and installing APK on watch with: `adb install wear-full-release.apk`
+To install the APK on Android Wear smartwatch, follow these steps:
 
-When using wear version of AAPS, always update it together with phone version of app - keep their versions in sync.
+1. Enable developer mode on the watch. Press button on watch and click `settings` then `system` then `about` and repeatedly click the `build number` at least 7 times until it confirms you are a developer.
+2. Enable ADB on watch. Press button on watch and click `settings` then `developer options` then `adb debugging` and `debug over wifi`. Note down the IP address you get next to this, it will be in the form of an IP address followed by :5555.
+3. On PC, note down the file location of `wear-full-release.apk` (will be in the same folder as `app-full-release.apk` which you installed on your phone).
+4. On PC, get the command prompt (type `command` in the search box). 
+5. In command prompt: `cd c:\Program Files (x86)\Android\android-sdk\platform-tools`.
+6. In command prompt: `adb connect [enter the IP address from step 2 including the :5555]`.
+7. In command prompt: `adb install -r [enter path from step 3]\wear-full-release.apk`.
+8. That will install AAPS on the watch, and AAPS watchfaces will be available to select.
+
+When using wear version of AAPS, always update it together with phone version of app - keep their versions in sync. To do this you'll need to follow the steps above again, although you won't need to reenable developer mode.
 
 ### Setup on the Phone
 
@@ -238,6 +247,12 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
 * Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 * If Complications does not update data - check first if AAPS watchfaces work at all.
+
+### Sony Smartwatch 3
+
+* The Sony Smartwach 3 is one of the most popular watches to be used with AAPS. 
+* Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS and above.
+* A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.rst).
 
 ## Ver dados do Nightscout
 
