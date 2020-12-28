@@ -18,9 +18,18 @@ Chcete-li sestavit verzi AAPS pro Wear OS, je nutné při [sestavování APK](..
 
 Ověřte, že obě verze AAPS pro telefon i pro hodinky jsou podepsány pomocí stejného klíče!
 
-Wear verzi APK je třeba nainstalovat do hodinek stejným způsobem, jakým do telefonu instalujete APK pro telefon. Na hodinkách může být potřeba povolit *vývojářský režim* a nahrát do nich a nainstalovat APK pomocí: `adb install wear-full-release.apk`
+To install the APK on Android Wear smartwatch, follow these steps:
 
-Jestliže používáte verzi AAPS pro hodinky, vždy ji aktualizujte společně s aplikací pro telefon – vždy mějte obě verze synchronizované.
+1. Enable developer mode on the watch. Press button on watch and click `settings` then `system` then `about` and repeatedly click the `build number` at least 7 times until it confirms you are a developer.
+2. Enable ADB on watch. Press button on watch and click `settings` then `developer options` then `adb debugging` and `debug over wifi`. Note down the IP address you get next to this, it will be in the form of an IP address followed by :5555.
+3. On PC, note down the file location of `wear-full-release.apk` (will be in the same folder as `app-full-release.apk` which you installed on your phone).
+4. On PC, get the command prompt (type `command` in the search box). 
+5. In command prompt: `cd c:\Program Files (x86)\Android\android-sdk\platform-tools`.
+6. In command prompt: `adb connect [enter the IP address from step 2 including the :5555]`.
+7. In command prompt: `adb install -r [enter path from step 3]\wear-full-release.apk`.
+8. That will install AAPS on the watch, and AAPS watchfaces will be available to select.
+
+When using wear version of AAPS, always update it together with phone version of app - keep their versions in sync. To do this you'll need to follow the steps above again, although you won't need to reenable developer mode.
 
 ### Nastavení na telefonu
 
@@ -238,6 +247,12 @@ Protože nemůžeme ohrozit komunikaci (potřebujeme aktuální data) a chceme, 
 * Někdy pomůže znovu synchronizovat aplikace do hodinek, i když to ručně může být poněkud zdlouhavé: Wear OS > Rozšířená nastavení (Ikona ozubeného kola) > Znovu synchronizovat aplikace.
 * Povolte ADB ladění ve vývojářských možnostech (na hodinkách), připojte hodinky k počítači přes USB a spusťte Wear aplikaci, až budete mít na počítači otevřené Android Studio.
 * Pokud se komplikace neaktualizují – nejdříve zkontrolujte, zda vůbec AAPS ciferník funguje.
+
+### Sony Smartwatch 3
+
+* The Sony Smartwach 3 is one of the most popular watches to be used with AAPS. 
+* Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS and above.
+* A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.rst).
 
 ## Zobrazení dat z Nightscoutu
 
