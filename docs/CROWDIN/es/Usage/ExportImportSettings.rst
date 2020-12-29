@@ -48,6 +48,8 @@ Exportar ajustes
   
 Importar ajustes
 ==================================================
+**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings>`_.
+
 * Menú Hamburguesa (esquina superior izquierda de la pantalla)
 * Mantenimiento
 * Importar ajustes
