@@ -1,8 +1,11 @@
 Docs Updates & Änderungen
 **************************************************
+
 Dezember 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - gepatche App funktioniert nicht mit US-Sensoren
+* `Objectives <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ - new questions
+* Omnipod Eros - `loopable in AAPS master <../Configuration/OmnipodEros.html>`_
 * Sony Smartwatch 3 ` Manuelle Installation des Google Play Service <../Usage/SonySW3.html> ` _
 Oktober 2020
 ==================================================
