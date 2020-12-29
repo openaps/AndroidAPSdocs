@@ -72,7 +72,7 @@ AndroidAPS instellingen
    :glob:
    
    Configurator <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences.rst>
+   Instellingen <./Configuration/Preferences.rst>
    
    
 AndroidAPS gebruik
