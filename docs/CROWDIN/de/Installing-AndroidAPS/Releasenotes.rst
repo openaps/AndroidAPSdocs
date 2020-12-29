@@ -13,15 +13,36 @@ Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualis
 
 Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln, sondern aus Sicherheitsgründen erfolgt. Neue Versionen von AndroidAPS bieten nicht nur neue Funktionen, sondern auch wichtige Sicherheitsfixes. Deshalb ist es notwendig, dass jeder Anwender so schnell wie möglich aktualisiert. Leider gibt es noch Fehlerberichte aus sehr alten Versionen, so dass dies ein Versuch ist, die Sicherheit für jeden einzelnen Benutzer und die gesamte DIY-Community zu verbessern. Danke für dein Verständnis.
 
+Version 2.8.0
+================
+Release date: 30-12-2020
+
+Repository location still on https://github.com/nightscout/AndroidAPS . Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die App-Erstellung `von vorne beginnst <../Installing-AndroidAPS/Building-APK.html>`_.
+
+**Objectives have changed. Finish not completed objectives before updating.**
+
+Please use `Android Studio 4 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+Wichtige neue Funktionen
+----------------------
+* `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org 
+* bolus advisor & eating reminder @MilosKozak 
+* new watchface @rICTx-T1D
+* Dana RS connection improvements @MilosKozak 
+* Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
+* New LowRes skin
+* New "Pregnant" patient type @Brian Quinion
+* New NSClient tablet layout @MilosKozak 
+* NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak 
+* Preferences filter @Brian Quinion
+* New pump icons @Rig22 @@teleriddler @osodebailar
+* SetupWizard improvements @MilosKozak 
+* Security improvements @dlvoy 
+* Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
+
 Version 2.7.0
 ================
 Erscheinungsdatum: 24.09.2020
-
-Speicherort des Repositories wurde auf https://github.com/nightscout/AndroidAPS geändert. Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die App-Erstellung `von vorne beginnst <../Installing-AndroidAPS/Building-APK.html>`_.
-
-Wie bereits `vor einiger Zeit angekündigt < ../Module/module.html#smartphone>` _, **ist Android 7 Mindestvoraussetzung* * für AndroidAPS 2.7.
-
-Nutze bitte `Android Studio 4.0.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 **Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie** `hier <../Installing-AndroidAPS/update2_7.html>`_ **beschrieben.**
 
