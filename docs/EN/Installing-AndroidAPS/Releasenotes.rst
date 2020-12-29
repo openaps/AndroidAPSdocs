@@ -13,31 +13,32 @@ If you do not update for another 30 days (90 days from new release date) AAPS wi
 
 Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
 
-Version 2.7.1
+Version 2.8.0
 ================
-Release date: 
+Release date: 30-12-2020
 
-Repository location changed to https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
+Repository location still on https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
 
-As already `announced some time ago <../Module/module.html#phone>`_, **Android 7 is minimum requirement** for AndroidAPS 2.7.
+**Objectives have changed. Finish not completed objectives before updating.**
 
-Please use `Android Studio 4.0.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+Please use `Android Studio 4 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Major new features
 ----------------------
-* `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @teleriddler @vanelsberg @eurenda
-* New watchface @rICTx-T1D
-* Dana RS connection improvements @MilosKozak
+* `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org 
+* bolus advisor & eating reminder @MilosKozak 
+* new watchface @rICTx-T1D
+* Dana RS connection improvements @MilosKozak 
 * Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
 * New LowRes skin
-* New "Pregnant" patient type @brian Quinion
-* New NSClient tablet layout @MilosKozak
-* NSClient copy insulin, senstivity and display settings directly from main AAPS @MilosKozak
-* Preferences filter @brian Quinion
+* New "Pregnant" patient type @Brian Quinion
+* New NSClient tablet layout @MilosKozak 
+* NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak 
+* Preferences filter @Brian Quinion
 * New pump icons @Rig22 @@teleriddler @osodebailar
-* SetupWizard improvements @MilosKozak
-* Security improvements @dlvoy
-* Various improvements and fixes @AdrianLxM @Philoul @swissalpine @MilosKozak @brian Quinion
+* SetupWizard improvements @MilosKozak 
+* Security improvements @dlvoy 
+* Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
 
 Version 2.7.0
 ================
