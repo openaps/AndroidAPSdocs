@@ -48,6 +48,8 @@ Exportiere die Einstellungen
   
 Importiere die Einstellungen
 ==================================================
+**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings>`_.
+
 * Hamburger Menü (drei Striche oben links am Bildschirm)
 * Wartung
 * Einstellungen importieren
