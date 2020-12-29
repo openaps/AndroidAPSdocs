@@ -37,7 +37,7 @@ Algemeen
 
 Protection
 -----------------------------------------------------------
-Master password
+Masterwachtwoord
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
 
