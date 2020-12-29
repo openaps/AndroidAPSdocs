@@ -52,6 +52,7 @@ AndroidAPS **šiuo metu** veikia su
 - `Dana R pompa <../Configuration/DanaR-Insulin-Pump.md>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - `kai kurios senos Medtronic pompos <../Configuration/MedtronicPump.html>`_ iš artėjančių, turinčių programinę įrangą 2.4 (papildomai reikia: RileyLink/Gnarl aparatūros, Android telefono su Bluetooth low energy/BLE mikroschema)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
 
 ** Kitos pompos**, kurios ateityje gali veikti su AndroidAPS, yra išvardytos puslapyje „Ateityje galimos naudoti pompos" <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
