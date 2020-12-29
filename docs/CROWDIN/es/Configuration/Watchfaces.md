@@ -29,7 +29,7 @@ To install the APK on Android Wear smartwatch, follow these steps:
 7. In command prompt: `adb install -r [enter path from step 3]\wear-full-release.apk`.
 8. That will install AAPS on the watch, and AAPS watchfaces will be available to select.
 
-When using wear version of AAPS, always update it together with phone version of app - keep their versions in sync. To do this you'll need to follow the steps above again, although you won't need to reenable developer mode.
+Cuando use la versión de Wear de AAPS, actualícela siempre junto con la versión del teléfono de la aplicación; mantenga sus versiones sincronizadas. To do this you'll need to follow the steps above again, although you won't need to reenable developer mode.
 
 ### Configuración en el teléfono
 
