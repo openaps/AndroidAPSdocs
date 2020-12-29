@@ -21,8 +21,8 @@ Erste Schritte
        
    
    Sicherheitshinweise <./Getting-Started/Safety-first.rst>
-   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Was ist ein Closed Loop System <./Getting-Started/ClosedLoop.rst>
+   Was ist ein Closed Loop System mit AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    Docs Updates & Änderungen <./Getting-Started/WikiUpdate.rst>
    
    
