@@ -40,7 +40,7 @@
 .. |Omnipod_Pod|			image:: Omnipod_Pod.png
 
 ..
-		Acknowledge Alerts
+		Confirmar Alertas
 .. |Acknowledge_Alerts_1|               image:: Acknowledge_Alerts_1.png
 .. |Acknowledge_Alerts_2|               image:: Acknowledge_Alerts_2.png
 .. |Acknowledge_Alerts_3|               image:: Acknowledge_Alerts_3.png
@@ -52,7 +52,7 @@
 .. |Actions_Tab|                  	image:: Actions_Tab.png
 
 ..
-	Activate Pod
+	Activar Pod
 .. |Activate_Pod_1|                     image:: Activate_Pod_1.png
 .. |Activate_Pod_2|                     image:: Activate_Pod_2.png
 .. |Activate_Pod_3|                     image:: Activate_Pod_3.png
@@ -70,7 +70,7 @@
 .. |Activate_Pod_15|                    image:: Activate_Pod_15.png
 
 ..
-	Deactivate Pod
+	Desactivar Pod
 .. |Deactivate_Pod_1|                   image:: Deactivate_Pod_1.png
 .. |Deactivate_Pod_2|                   image:: Deactivate_Pod_2.png
 .. |Deactivate_Pod_3|                   image:: Deactivate_Pod_3.png
@@ -107,7 +107,7 @@
 .. |Omnipod_Tab_Pod_Management|         image:: Omnipod_Tab_Pod_Management.png
 
 ..
-	Pod History
+	Historial de Pod
 .. |Pod_History_1|                  	image:: Pod_History_1.png
 .. |Pod_History_2|                  	image:: Pod_History_2.png
 .. |Pod_History_3|                  	image:: Pod_History_3.png
@@ -300,7 +300,7 @@ Hardware and Software Requirements
 
 |Omnipod_Pod|
 
-Acknowledge Alerts
+Confirmar Alertas
 
 |Acknowledge_Alerts_1|              
 |Acknowledge_Alerts_2|              
@@ -314,7 +314,7 @@ Actions Tab
 |Actions_Tab|                  		
 
 
-Activate Pod
+Activar Pod
 
 |Activate_Pod_1|                    
 |Activate_Pod_2|                    
@@ -333,7 +333,7 @@ Activate Pod
 |Activate_Pod_15|                   
 
 
-Deactivate Pod
+Desactivar Pod
 
 |Deactivate_Pod_1|                  
 |Deactivate_Pod_2|                  
@@ -375,7 +375,7 @@ Omnipod Tab
 |Omnipod_Tab_Pod_Management|        
 
 
-Pod History
+Historial de Pod
 
 |Pod_History_1|                  	
 |Pod_History_2|                  	
