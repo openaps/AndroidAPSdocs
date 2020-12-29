@@ -2,25 +2,7 @@
 
 Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, status ich wsparcia w dowolnym systemie pętlowym, oraz status dla systemu AAPS. Na końcu jest trochę informacji, jakie są wymagania, aby pompa nadawała się do pracy w pętli.
 
-## Pompy, których wsparcie jest w fazie rozwoju
-
-### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
-
-**Loop status:** Not supported natively by AAPS at the moment. Decoding of the Omnipod protocol is finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
-
-**Other implementations:**
-
-- Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink, and specially modified AndroidAPS) 
-- OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project).
-- [iOS Loop](https://loopkit.github.io/loopdocs/) (stable, released, requires RileyLink).
-
-**Java implementations:** None till now.
-
-**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on Discord (channel #omnipod-eros-testing) with [this invite link](https://discord.com/invite/NhEUtzr). A first public test version was released in January 2020, and work is being done towards stabilization. Current version 0.4 (October 2020)
-
-**Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.x) and 433 MHz antenna.
-
-## Pompy, które nadają się do pętli
+## Pumps that are Loopable
 
 ### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
 
@@ -84,7 +66,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 * * *
 
-## Pompy już nie sprzedawane (firmy już nie działają)
+## Pumps no longer sold (companies no longer operating)
 
 ### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
@@ -94,7 +76,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 **Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
-## Pompy, które nie są odpowiednie dla pętli
+## Pumps that aren't Loopable
 
 ### Tandem:(any) ([Homepage](https://www.tandemdiabetes.com/))
 
@@ -114,7 +96,7 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 
 **Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
 
-## Wymagania dotyczące możliwości zapętlenia pomp
+## Requirements for pumps being loopable
 
 **Prerequisite**
 
