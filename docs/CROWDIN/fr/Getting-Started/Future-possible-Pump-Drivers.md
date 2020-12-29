@@ -2,151 +2,133 @@
 
 Voici une liste de certaines pompes et leur statut de prise en charge dans l'un des systèmes en boucle, puis leur statut dans AAPS. En fin de compte, il y a quelques informations de ce qui est nécessaire pour qu'une pompe soit "bouclable".
 
-## Pompes dont le support est en développement
+## Pumps that are Loopable
 
-### Insulet Omnipod (avec les "anciens" Pods Eros) ([Page d'accueil](https://www.myomnipod.com/en-gb/about/how-to-use))
+### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
 
-**Etat de la boucle :** Non pris en charge nativement par AAPS pour le moment. Le décodage du protocole Omnipod est terminé : [OpenOmni](http://www.openomni.org/) et [OmniAPS Slack](https://omniaps.slack.com/)
-
-**Autres implémentations :**
-
-- Omnipy pour AndroidAPS (stable lors des tests, nécessite un Raspberry Pi ainsi qu'un RileyLink, et une version spécialement modifiées d'AndroidAPS) 
-- OmniCore pour AndroidAPS (pas encore publié, le code C# fonctionne "nativement" sur Android, ne nécessite que le RileyLink et une version spécialement modifiées d'AndroidAPS - prochaine version du projet Omnipy).
-- [iOS Loop](https://loopkit.github.io/loopdocs/) (stable, validée, nécessite un RileyLink).
-
-**Implémentations Java : **Aucune jusqu'à présent.
-
-**Etat de l'implémentation AAPS :** Le travail sur un pilote Java natif pour Omnipod sur AAPS progresse [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (branche omnipod_eros). Il ne nécessite pas de Raspberry Pi. Vous pouvez suivre les progrès sur Discord (canal #omnipod-eros-testing) avec [ce lien d'invitation](https://discord.com/invite/NhEUtzr). Une première version d'essai publique a été publiée en janvier 2020, et le travail se poursuit pour la stabiliser. Version actuelle 0.4 (Octobre 2020)
-
-**Configuration matérielle requise pour AAPS :** RileyLink avec Omnipod firmware (2.x) et une antenne 433 MHz.
-
-## Pompes qui sont Bouclable
-
-### Omnipod DASH ([Page d'accueil](https://www.myomnipod.com/DASH))
-
-**Etat de la boucle :** Actuellement non prise en charge par aucun système de boucle. La pompe est compatible de la Boucle, mais le protocole est inconnu à l'heure actuelle. La vente de la pompe a démarré officiellement en janvier 2019.
+**Etat de la boucle :** Actuellement non prise en charge par aucun système de boucle. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump officially started in January 2019.
 
 **Configuration matérielle requise pour AAPS :** Probablement aucune. Elle dispose du Bluetooth.
 
-**Commentaires :** Nous étudions le développement d'Omnipod DASH, mais le problème en ce moment est que Dash n'est pas encore disponible en Europe (où sont la plupart des développeurs de AAPS) et que le protocole de communication est inconnu. Nous allons essayer de procéder à un reverse engineering du fichier APK de l'application Dash officielle, afin de déterminer le fonctionnement de la communication, puis de la mettre en œuvre sur la base de ces résultats. Vous pouvez suivre ce qui se passe ici : [DashAAPS](https://github.com/andyrozman/DashAAPS/projects/1), mais ne vous attendez pas à ce que cela soit disponible rapidement. C'est à l'heure actuelle uniquement le Proof Of Concept (jusqu'à la fin du jalon 2).
+**Comments:** We are looking into development of Omnipod DASH, but problem at the moment is, that Dash is not yet available in Europe (where most of AAPS developers are) and that communciation protocol is unknown. We will try to reverse engineer official Dash APK, to determine how communication works and then implementation based on that findings. You can follow what is happening here: [DashAAPS](https://github.com/andyrozman/DashAAPS/projects/1), but don't expect this to be available anytime soon. This is at the moment only Proof Of Concept (until Milestone 2 is completed).
 
 * * *
 
-### Pompe Ypsomed ([Page d'accueil](https://www.ypsomed.com/en/diabetes-care-mylife.html))
+### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Etat de la boucle :** Version 1-1.5 (2ème trimestre 2018) ne sont pas candidates à la boucle. Bien qu'elles aient une communication bluetooth, il semble que la communication soit très limitée (unidirectionnelle : Pompe->Appli). Peut-être que cela changera dans les prochaines versions. Il semble que nous aurons une version bouclable début 2021, voir cet [article](https://www.ypsomed.com/en/media/details/ypsomed-and-dexcom-enter-into-partnership-to-drive-closed-loop-system.html?fbclid=IwAR3gYSMz8dvPARYgbj5djm4Yxa7JdFthfzOrrg94C9Bigj6RGeycxSfGHyg).
+**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions. It seems that we will get loopable version in begining of 2021, see this [article](https://www.ypsomed.com/en/media/details/ypsomed-and-dexcom-enter-into-partnership-to-drive-closed-loop-system.html?fbclid=IwAR3gYSMz8dvPARYgbj5djm4Yxa7JdFthfzOrrg94C9Bigj6RGeycxSfGHyg).
 
 **Configuration matérielle requise pour AAPS :** Probablement aucune. Elle dispose du Bluetooth.
 
 * * *
 
-### Kaleido ([Page d'accueil](https://www.hellokaleido.com/))
+### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
-**Etat de la boucle :** Actuellement non prise en charge par aucun système de boucle. La pompe est un candidat à la boucle, mais comme le protocole est inconnu à l'heure actuelle, je ne vois pas cette pompe prise en charge rapidement.
+**Etat de la boucle :** Actuellement non prise en charge par aucun système de boucle. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **Configuration matérielle requise pour AAPS :** Probablement aucune. Elle dispose du Bluetooth.
 
 * * *
 
-### Medtrum A6/P6/C6 ([Page d'accueil](http://www.medtrum.com/P6.html))
+### Medtrum A6/P6/C6 ([Homepage](http://www.medtrum.com/P6.html))
 
-**Etat de la boucle :** Candidat à la boucle. L'entreprise dispose de son propre système de demi-boucle limité (A6). Controlable via une application iPhone. Aucune application Android disponible pour le moment.
+**Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
 
 **Configuration matérielle requise pour AAPS :** Probablement aucune. Il semble qu'elle dispose du Bluetooth.
 
 * * *
 
-### EOFLOW ([Page d'accueil](http://www.eoflow.com/eng/main/main.html))
+### EOFLOW ([Homepage](http://www.eoflow.com/eng/main/main.html))
 
-**Etat de la boucle :** Candidat à la boucle. La télécommande qu'ils utilisent est en fait un périphérique Android modifié. (La pompe n'est actuellement disponible qu'en Corée).
+**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
 
 **Configuration matérielle requise pour AAPS :** Probablement aucune. Il semble qu'elle dispose du Bluetooth.
 
 * * *
 
-### Accu-Chek Solo ([Page d'accueil](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
+### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Etat de la boucle :** Candidat à la boucle. La vente de la pompe commencera fin de 2018, dans une sélection de pays de l'UE. Elle disposerai, selon la rumeur, d'une application Android sur un appareil spécifique pour la contrôler.
+**Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app on special controler device for control.
 
 **Configuration matérielle requise pour AAPS :** Probablement aucune. Il semble qu'elle dispose du Bluetooth.
 
 ### Medtronic Bluetooth
 
-**Commentaires :** Cette pompe sortira dans les prochaines années et devrait être prise en charge par le logiciel Tidepool Loop ([voir cet article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
+**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
 
-### Pompe Insuline Willcare ([Homepage](http://en.shinmyungmedi.com))
+### Willcare Insulin pump ([Homepage](http://en.shinmyungmedi.com))
 
-**Etat de la boucle :** Pour le moment non candidat à la boucle, mais nous avons contacté leurs équipes et ils sont intéresser à étendre les fonctionnalités de leur pompe pour la rendre bouclable (pour le moment, je pense qu'il ne manque que les commandes de récupération et de définition des profils).
+**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
 
-**Configuration matérielle requise pour AAPS :** Aucune. Il semble qu'elle dispose du Bluetooth.
+**Hardware requirement for AAPS:** None. Il semble qu'elle dispose du Bluetooth.
 
-**Remarque :** Comme l'entreprise est intéressée elle même à l'intégration à AAPS, elle pourrait mettre en œuvre cette implémentation elle-même.
+**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
 
 * * *
 
-## Pompes plus vendues (les entreprises ne fonctionnent plus)
+## Pumps no longer sold (companies no longer operating)
 
-### Pompe Cellnovo ([voir businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
+### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
-**Etat de la boucle :** Actuellement non prise en charge par aucun système de boucle. La pompe est un candidat à la boucle, mais comme le protocole est inconnu à l'heure actuelle, je ne vois pas cette pompe prise en charge rapidement.
+**Etat de la boucle :** Actuellement non prise en charge par aucun système de boucle. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **Configuration matérielle requise pour AAPS :** Probablement aucune. Elle dispose du Bluetooth.
 
-**Remarque sur le produit :** Il semble que l'entreprise ait décidé d'abandonner le business des pompes. Vous pouvez en voir plus dans cet [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
-## Pompes qui ne sont pas bouclable
+## Pumps that aren't Loopable
 
-### Tandem : (toutes) ([Page d'accueil](https://www.tandemdiabetes.com/))
+### Tandem:(any) ([Homepage](https://www.tandemdiabetes.com/))
 
-**Etat de la boucle :** Non bouclable.
+**Loop status:** Not loopable.
 
-Il y quelque temps, il y avait un firmware appelé T:AP (mentionné dans cet [article](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&)), qui pouvait être utilisé en boucle (il n'est plus disponible car la pompe a été mise à niveau vers x2), mais il n'était pas destiné à un usage commercial, uniquement à titre expérimental (projets de recherche). J'ai parlé avec un des directeurs de l'entreprise et il m'a assuré que la pompe Tandem ne sera jamais ouverte, mais qu'ils ont créé leur propre système de boucle fermée, qu'ils appellent Contrôle-IQ (je pense qu'elle est déjà disponible aux USA, et devrait être disponible en 2020 en Europe).
+While ago they had firmware called T:AP (mentioned in this [article](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), which could be used in loop (its no longer available, since pump was upgraded to x2), but that was not intended for commercial use, just for experimental use only (research projects). I talked with one of directors of company and he assured my that Tandem pump will never be open, but they have created their own closed loop system, which they are calling Control-IQ (I think it is already available in USA, and should be available in 2020 in Eu).
 
 * * *
 
 ### Animas Vibe
 
-**Etat de la boucle :** Non bouclable. Aucune possibilité de contrôle à distance. **Remarque :** La pompe n'est plus vendue. L'entreprise a abandonné le business de la pompe (J&J).
+**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
 
 * * *
 
 ### Animas Ping
 
-**Etat de la boucle :** Non bouclable. Il a une possibilité de bolus, mais pas de DBT. **Remarque** N'est plus vendue depuis la sortie de la Vibe.
+**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
 
-## Exigences pour que les pompes soient bouclables
+## Requirements for pumps being loopable
 
-**Pré-requis**
+**Prerequisite**
 
-- La pompe doit prendre en charge un contrôle à distance (Bluetooth, fréquence radio, etc.).
-- Le protocole est piraté/documenté/etc.
+- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
+- Protocol is hacked/documented/etc.
 
-**Exigences minimales**
+**Minimal requirement**
 
-- Définir le Débit de Basal Temporaire
-- Obtenir l'état de la pompe
-- Annuler le Débit de Basal Temporaire
+- Set Temporary Basal Rate
+- Get Status
+- Cancel Temporary Basal Rate
 
-**Pour oref1 (SMB) :**
+**For oref1(SMB) or Bolusing:**
 
-- Définir le Bolus
+- Set Bolus
 
-**Préférable d'avoir**
+**Good to have**
 
-- Annuler le Bolus en cours
-- Obtenir le profil de basal (presque requis)
-- Définir le profil de basal (souhaitable)
-- Lire l'historique 
+- Cancel Bolus
+- Get Basal Profile (almost requirement)
+- Set Basal Profile (nice to have)
+- Read History 
 
-**Autres (pas nécessaire, mais souhaitable)**
+**Other (not required but good to have)**
 
-- Définir un bolus étendu
-- Annuler un bolus étendu
-- Lire l'historique
-- Lire le TDI
+- Set Extended Bolus
+- Cancel Extended Bolus
+- Read History
+- Read TDD
 
 * * *
 
-### Prise en charge d'autres pompes
+### Other pumps support
 
-Si vous avez d'autres pompes dont vous aimeriez voir l'état de bouclage, veuillez me contacter (@andyrozman sur gitter). Dans les versions à venir, de nombreuses configurations de pompe seront ajoutées afin de permettre une boucle ouverte (vous pourrez sélectionner un type de pompe virtuel dans la configuration et vos paramètres seront chargés - [Demande de fonctionnalité #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
+If you have any other pumps you would like to see status on, please contact me (@andyrozman on gitter). In future release a lot of Pump configurations will be added to be Open loopable (you will be able to select Virtual Pump Type in configuration and your settings will be loaded - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
