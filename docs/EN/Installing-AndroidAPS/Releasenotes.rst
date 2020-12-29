@@ -19,6 +19,8 @@ Release date: 30-12-2020
 
 Repository location still on https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
 
+Objectives have changed. Finish not completed objectives.
+
 Please use `Android Studio 4 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Major new features
