@@ -13,6 +13,31 @@ If you do not update for another 30 days (90 days from new release date) AAPS wi
 
 Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
 
+Version 2.8.0
+================
+Release date: 30-12-2020
+
+Repository location still on https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
+
+Please use `Android Studio 4 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+Major new features
+----------------------
+* Omnipod support @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, verybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org 
+* bolus advisor & eating reminder @MilosKozak 
+* new watchface @rICTx-T1D
+* RS connection improvements @MilosKozak 
+* removed "Unchanged CGM values" behavior in SMB for dexcom native app
+* new LowRes skin
+* new "Pregnant" patient type @Brian Quinion
+* new NSClient tablet layout @MilosKozak 
+* NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak 
+* preferences filter @Brian Quinion
+* new pump icons @Rig22 @@teleriddler @osodebailar
+* SetupWizard improvements @MilosKozak 
+* security improvements @dlvoy 
+* various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
+
 Version 2.7.0
 ================
 Release date: 24-09-2020
