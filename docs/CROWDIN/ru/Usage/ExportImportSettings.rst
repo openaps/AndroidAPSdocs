@@ -48,6 +48,8 @@ Settings backup is encrypted by a master password that can be set in `Preference
   
 Выполните импорт настроек
 ==================================================
+**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings>`_.
+
 * Сэндвич-меню (в верхнем левом углу экрана)
 * Обслуживание
 * Выполните импорт настроек
