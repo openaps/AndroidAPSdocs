@@ -26,7 +26,7 @@ Onder andere de volgende gegevens uit jouw instellingen worden ge-exporteerd:
 
 Encrypted backup format
 ==================================================
-Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`_ .
+Het bestand met jouw instellingen wordt versleuteld opgeslagen. Het masterwachtwoord kun je instellen via `Instellingen <../Configuration/Voorkeuren.html#masterwachtwoord>`_ .
 
 
 Exporteer instellingen
@@ -40,7 +40,7 @@ Exporteer instellingen
 
 * Date and time of export will be added to the file name automatically and displayed together with the path.
 * Click 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+* Voer `masterwachtwoord <../Configuration/Preferences.html#masterwachtwoord>`_ in en klik op 'OK'.
 * Successful export will be prompted at bottom of the screen.
 
 .. image:: ../images/AAPS_ExportSettings2.png
@@ -58,7 +58,7 @@ Importeer instellingen
 * All files from folder AAPS/preferences/ on your phone will be shown in the list.
 * Select file.
 * Confirm import by clicking 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+* Voer `masterwachtwoord <../Configuration/Preferences.html#masterwachtwoord>`_ in en klik op 'OK'.
 
 .. image:: ../images/AAPS_ImportSettings2.png
   :alt: AndroidAPS import settings 2
