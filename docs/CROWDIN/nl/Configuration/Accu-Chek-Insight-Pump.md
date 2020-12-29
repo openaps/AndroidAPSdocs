@@ -52,7 +52,7 @@ Opmerking: Er zal geen permanente verbinding zijn tussen pomp en telefoon. Een v
 
 ## Instellingen in AAPS
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences#advanced-settings-nsclient)).
+**Opmerking: Vanaf nu kun je (alleen met AAPS v2.7.0 en hoger) de 'Gebruik altijd absolute basale waarden' aanzetten, zodat je Autotune kunt gebruiken met de Insight pomp, zelfs als 'sync is ingeschakeld' voor Nightscout.** (In AAPS ga naar [Voorkeuren > NSClient > Geavanceerde instellingen](../Configuration/Preferences#geavanceerde-instellingen-nsclient)). De bug uit eerdere versies is opgelost:)
 
 ![Screenshot of Insight Settings](../images/Insight_settings.png)
 
