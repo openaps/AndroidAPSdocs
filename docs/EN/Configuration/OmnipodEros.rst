@@ -61,9 +61,9 @@ Via the **AAPS Setup Wizard (2)** located at the top right-hand corner **three-d
 
     |Enable_Omnipod_Driver_1|  |Enable_Omnipod_Driver_2|
 
-On the same screen, below the pump selection, you will see the **Omnipod Driver Settings**.  Here you will select your RileyLink by scanning for all available Bluetooth devices and selecting in the list.  When properly selected you will return to the pump driver selection screen displaying the Omnipod driver settings showing your selected RileyLink with the MAC address listed.
+On the same screen, below the pump selection, the **Omnipod Driver Settings** are displayed. Select your RileyLink by scanning for all available Bluetooth devices and selecting your RileyLink from the list.  When properly selected you are returned to the pump driver selection screen displaying the Omnipod driver settings showing your selected RileyLink with the MAC address listed.
 
-Detailed steps on how to accomplish this are listed below in the `RileyLink Setup Section <#rileylink-setup>`__ .
+Detailed steps on how to accomplish setup your pod communication device are listed below in the `RileyLink Setup Section <#rileylink-setup>`__.
 
 **OR**
 
@@ -99,17 +99,17 @@ RileyLink Setup
 
 1. Ensure that your RileyLink is fully charged and powered on.
 
-2. After selecting the Omnipod driver, next you will identify and select your RileyLink from **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Gear Icon (Settings) (2)** ➜\ **RileyLink Configuration (3)** by pressing the **Not Set** or **MAC Address (if present)** text.   
+2. After selecting the Omnipod driver, identify and select your RileyLink from **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Gear Icon (Settings) (2)** ➜\ **RileyLink Configuration (3)** by pressing the **Not Set** or **MAC Address (if present)** text.   
 
     Ensure your RileyLink battery is charged and it is `positioned in close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Once selected, you can proceed to activate your first pod session. Use the back button on your phone to return to the main AAPS interface.
 
     |RileyLink_Setup_1| |RileyLink_Setup_2|
 
-3. On the **RileyLink Selection** screen press the **Scan (4)** button to initiate a bluetooth scan for all available pod communication devices. **Select your RileyLink (5)**  from the list of available Bluetooth devices.
+3. On the **RileyLink Selection** screen press the **Scan (4)** button to initiate a bluetooth scan. **Select your RileyLink (5)**  from the list of available Bluetooth devices.
 
     |RileyLink_Setup_3| |RileyLink_Setup_4|
 
-4. You will then be returned to the Omnipod Settings page listing your **currently selected RileyLink\'s MAC Address (6)** . 
+4. After successful selection you are returned to the Omnipod Settings page listing your **currently selected RileyLink\'s MAC Address (6).** 
 
     |RileyLink_Setup_5|
 
