@@ -12,4 +12,5 @@ Daugiau informacijos rasite čia:
    Sąrašas išbandytų išmaniųjų telefonų ir laikrodžių <../Getting-Started/Phones.md>
    Telefono ekrano fonas <../Getting-Started/Phones.md#telefonas-background>
    Laikrodžio Wear OS ekranai <../Configuration/Watchfaces.md>
+   Troubleshooting Sony Smartwatch SW 3 <..Usage/SonySW3.rst>
    Pebble <../Sąranka/Watchfaces.md#pebble>

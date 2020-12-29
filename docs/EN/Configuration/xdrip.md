@@ -114,16 +114,17 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J try [ni
 * Use the Source Wizard Button which ensures default settings including OB1 & Native Mode
    - This guides you through the initial set up.
    - you will need your transmitter serial number if this is the first time you've used it.
-* Put in serial number of new transmitter (on the transmitter packaging or on the back of the transmitter). Be careful not to confuse 0 (zero) and O (capital letter o).
+* Put in serial number of new transmitter (on the transmitter packaging or on the back of the transmitter). Be careful not to confuse `0` (zero) and `O` (capital letter o).
 
    ![xDrip+ Dexcom Transmitter Serial No](../images/xDrip_Dexcom_TransmitterSN.png)
 
 * Insert new sensor (only if replacing)
 * Put transmitter into sensor
+* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter's serial no., accept it (tap "pair")
 * Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
 
   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-  * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+  * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got no raw 19:04")
 
    ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 

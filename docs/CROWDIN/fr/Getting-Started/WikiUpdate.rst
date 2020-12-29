@@ -1,5 +1,9 @@
 Mises à jour et modifications de la documentation
 **************************************************
+Décembre 2020
+==================================================
+* `Libre 2 <../Hardware/Libre2.html>`_ - l'application patchée ne fonctionne pas avec les capteurs US
+* Sony Smartwatch 3 `Installation manuelle du service Google Play <../Usage/SonySW3.html>`_
 Octobre 2020
 ==================================================
 * Accu-Chek Combo - Mise à jour `réglage duchangement d'heure <../Usage/Timezone-traveling.html#changements-d-heure>`_

@@ -9,12 +9,12 @@ Basics first
 General hints for looping with G6
 ==================================================
 
-Dexcom G6를 사용하는 것은 맨 처음 육안으로 보여지는 것 보다 좀더 복잡합니다. 그것을 안전하게 사용하기 위해서는 , 몇가지 인지하고 넘어갈 것들이 있습니다. 
+Dexcom G6를 사용하는 것은 맨 처음 제시된 것 보다 좀더 복잡할 수 있다는 것이 확실합니다. 안전하게 사용하기 위해 몇 가지 알아야 할 사항들이 있습니다: 
 
 * If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
 * If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
 * If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
-* Pre-soaking of the G6 with factory calibration is likely to give variation in results. 만일 당신이 Pre-soak을 한다면,  가장 정확한 결과값을 얻기위해  센서보정을 할 필요가 있습니다.
+* Pre-soaking of the G6 with factory calibration is likely to give variation in results. 만일 pre-soak을 한다면, 가장 정확한 결과값을 얻기 위해 센서를 보정할 필요가 있습니다.
 * If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
 
 To learn more about the details and reasons for these recommendations read the `complete article <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ published by Tim Street at `www.diabettech.com <http://www.diabettech.com>`_.
@@ -25,7 +25,7 @@ If using G6 with xDrip+
 * When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
 * If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
 * If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
-* Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
+* 구성 관리자 (AndroidAPS의 세팅)에서 xDrip+를 선택합니다.
 * Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`_
 * If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
@@ -44,7 +44,7 @@ If using G6 with patched Dexcom app
 * 오리지날 Dexcom 앱이 남아 있는 경우 센서를 스탑하고 삭제합니다.
 * 다운로드 된 apk를 설치합니다.
 * 센서를 시작합니다.
-* Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
+* 구성 관리자 (AndroidAPS의 설정)에서 Dexcom 앱 (패치버전)을 선택합니다.
 * If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
 * There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.
 

@@ -70,20 +70,20 @@ AndroidAPS will issue an alarm if the time between pump and phone differs too mu
 2. Find a time zone that has the same time as your current location but doesn't use DST.
    
    * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo.
+   * Para el Tiempo Central Europeo (CET) esto podría ser "Brazzaville" (Kongo). Cambia la zona horaria de tu teléfono a Kongo.
 
 3. In AndroidAPS refresh your pump.
 
 4. Check the Treatments tab... If you see any duplicate treatments:
    
    * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * Pulse "remove" en todos los tratamientos futuros y en los duplicados. Esto debe invalidar los tratamientos en lugar de eliminarlos para que ya no se tengan en cuenta para el IOB.
 
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
 ### Actions to take after the clock change
 
-A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
+Un buen momento para hacer este interruptor sería con un IOB bajo. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
 
 1. Change the Android timezone back to your current location and re-enable automatic timezone.
 2. AndroidAPS will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
@@ -91,7 +91,7 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 4. Then go to the Treatments screen, and look for any events in the future. There shouldn’t be many.
    
    * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * Pulse "remove" en todos los tratamientos futuros y en los duplicados. Esto debe invalidar los tratamientos en lugar de eliminarlos para que ya no se tengan en cuenta para el IOB.
 
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
@@ -99,10 +99,10 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 
 ## Accu-Chek Insight
 
-* Change to DST is done automatically. No action required.
+* El cambio a DST se realiza automáticamente. No se requiere acción.
 
 ## Other pumps
 
 * This feature is available since AndroidAPS version 2.2.
-* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
-* You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* Para evitar las dificultades, el Lazo se desactivará durante 3 horas después de que el conmutador DST se desactive. Esto se hace por razones de seguridad (IOB demasiado alto debido a duplicados en bolo antes del cambio de DST).
+* You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. Este mensaje aparecerá sin pitido, vibración o cualquier cosa.

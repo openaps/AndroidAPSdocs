@@ -106,23 +106,24 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G, 
    * Deze wizard helpt je stap voor stap door de initiële instellingen.
    * Het serienummer van je zender heb je hierbij nodig
 
-* Het serienummer van een nieuwe zender vind je op de doos van de zender, en ook op de achterkant van de zender zelf. Let erop dat je een 0 (nul) en O (hoofdletter o) niet met elkaar verwart.
+* Het serienummer van een nieuwe zender vind je op de doos van de zender, en ook op de achterkant van de zender zelf. Be careful not to confuse `0` (zero) and `O` (capital letter o).
    
    ![xDrip+ Dexcom zender-serienummer](../images/xDrip_Dexcom_TransmitterSN.png)
 
 * Als je van plan was je sensor te vervangen, doe dit dan nu.
 
 * Plaats zender in de sensor
-* Start geen nieuwe sensor voordat de volgende informatie wordt weergegeven in Classic Status Page-> G5/G6 status-> PhoneServiceState:
+* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter's serial no., accept it (tap "pair")
+* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
    
    * Zendernummer beginnend met 80 of 81: "Got data hh:mm" (bijvoorbeeld "Got data 19:04")
-   * Zendernummer beginnnend met 8G, 8H of 8J: "Got glucose hh:mm" (bijvoorbeeld "Got glucose 19:04") of "Got no raw hh:mm" (bijvoorbeeld "Got no raw 19:04")
+   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got no raw 19:04")
    
    ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Start sensor (alleen indien je zojuist een nieuwe sensor hebt geplaatst)
+* Start sensor (only if replacing)
    
-   -> Ergens onderaan het scherm hoort na enkele minuten `Warm Up x,x hours left` te verschijnen.
+   -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
 
 -> Als je zendernummer niet begint met 8G, 8H of 8J én hij laat na een paar minuten nog geen tijdsspecificatie zien, dan moet je de sensor stoppen en weer starten.
 
