@@ -383,7 +383,7 @@ Alarm options
 * They will only work whilst you have a connection to Nightscout and are intended for parent/carers. 
 * If you have the CGM source on your phone (i.e. xDrip+ or Dexcom patched app) then use those alarms instead.
 
-Advanced settings (NSClient)
+Geavanceerde instellingen (NSClient)
 -----------------------------------------------------------
 
   .. image:: ../images/Pref2020_NSClientAdv.png
