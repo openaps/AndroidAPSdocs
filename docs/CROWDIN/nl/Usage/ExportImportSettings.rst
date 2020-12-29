@@ -48,6 +48,8 @@ Exporteer instellingen
   
 Importeer instellingen
 ==================================================
+**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings>`_.
+
 * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
 * Onderhoud
 * Importeer instellingen
