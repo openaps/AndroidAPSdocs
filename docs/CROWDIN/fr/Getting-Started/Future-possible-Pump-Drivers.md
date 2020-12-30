@@ -109,26 +109,26 @@ Il y quelque temps, il y avait un firmware appelé T:AP (mentionné dans cet [ar
 - Obtenir l'état de la pompe
 - Annuler le Débit de Basal Temporaire
 
-**For oref1(SMB) or Bolusing:**
+**Pour oref1 (SMB) :**
 
-- Set Bolus
+- Définir le Bolus
 
-**Good to have**
+**Préférable d'avoir**
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Annuler le Bolus en cours
+- Obtenir le profil de basal (presque requis)
+- Définir le profil de basal (souhaitable)
+- Lire l'historique 
 
-**Other (not required but good to have)**
+**Autres (pas nécessaire, mais souhaitable)**
 
-- Set Extended Bolus
-- Cancel Extended Bolus
-- Read History
-- Read TDD
+- Définir un bolus étendu
+- Annuler Bolus étendu
+- Lire l'historique
+- Lire le TDI
 
 * * *
 
-### Other pumps support
+### Prise en charge d'autres pompes
 
-If you have any other pumps you would like to see status on, please contact me (@andyrozman on gitter). In future release a lot of Pump configurations will be added to be Open loopable (you will be able to select Virtual Pump Type in configuration and your settings will be loaded - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
+Si vous avez d'autres pompes dont vous aimeriez voir l'état de bouclage, veuillez me contacter (@andyrozman sur gitter). Dans les versions à venir, de nombreuses configurations de pompe seront ajoutées afin de permettre une boucle ouverte (vous pourrez sélectionner un type de pompe virtuel dans la configuration et vos paramètres seront chargés - [Demande de fonctionnalité #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
