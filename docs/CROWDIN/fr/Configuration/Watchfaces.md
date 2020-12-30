@@ -18,18 +18,18 @@ Pour compiler la version Wear OS de AAPS vous devez choisir la version "fullRele
 
 Assurez vous que les deux versions de AAPS (téléphone et montre) sont signées avec la même clé !
 
-To install the APK on Android Wear smartwatch, follow these steps:
+Pour installer APK sur une montre connectée Android Wear, procédez comme suit :
 
-1. Enable developer mode on the watch. Press button on watch and click `settings` then `system` then `about` and repeatedly click the `build number` at least 7 times until it confirms you are a developer.
-2. Enable ADB on watch. Press button on watch and click `settings` then `developer options` then `adb debugging` and `debug over wifi`. Note down the IP address you get next to this, it will be in the form of an IP address followed by :5555.
-3. On PC, note down the file location of `wear-full-release.apk` (will be in the same folder as `app-full-release.apk` which you installed on your phone).
-4. On PC, get the command prompt (type `command` in the search box). 
-5. In command prompt: `cd c:\Program Files (x86)\Android\android-sdk\platform-tools`.
-6. In command prompt: `adb connect [enter the IP address from step 2 including the :5555]`.
-7. In command prompt: `adb install -r [enter path from step 3]\wear-full-release.apk`.
-8. That will install AAPS on the watch, and AAPS watchfaces will be available to select.
+1. Activer le mode développeur sur la montre. Appuyez sur le bouton sur la montre et cliquez sur `paramètres` puis `système` puis `à propos` et cliquez sur le `numéro de build` au moins 7 fois jusqu'à ce qu'il confirme que vous êtes en mode développeur.
+2. Activer ADB sur la montre. Appuyez sur le bouton sur la montre et cliquez sur `paramètres` puis `options développeur` puis `débogage ADB` et `débogage sur le wifi`. Notez l'adresse IP que vous obtenez à côté de cela, il sera sous la forme d'une adresse IP suivie par :5555.
+3. Sur PC, notez l'emplacement du fichier `wear-full-release.apk` (il est dans le même dossier que `app-full-release.apk` que vous avez installé sur votre téléphone).
+4. Sur PC, ouvrez l'invite de commande (tapez `commande` dans la zone de recherche). 
+5. Dans l'invite de commande : `cd c:\Program Files (x86)\Android\android-sdk\platform-tools`.
+6. Dans l'invite de commande : `adb connect [entrez l'adresse IP de l'étape 2 y compris le :5555]`.
+7. Dans l'invite de commande : `adb install -r [entrez le chemin à partir de l'étape 3]\wear-full-release.apk`.
+8. Cela installera AAPS sur la montre, et les cadrans AAPS seront disponibles pour être sélectionné.
 
-When using wear version of AAPS, always update it together with phone version of app - keep their versions in sync. To do this you'll need to follow the steps above again, although you won't need to reenable developer mode.
+Lorsque vous utilisez la version montre d'AAPS, mettez toujours à jour l'application de la montre en même temps que celle du téléphone - synchronisez toujours les mises à jour. Pour cela, vous devrez suivre à nouveau les étapes ci-dessus, mais vous n'aurez pas besoin de réactiver le mode développeur.
 
 ### Configuration sur le téléphone
 
