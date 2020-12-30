@@ -15,30 +15,30 @@ Veuillez comprendre que cette modification n'a pas pour but de vous corriger mai
 
 Version 2.8.0
 ================
-Release date: 30-12-2020
+Date de sortie : 30-12-2020
 
-Repository location still on https://github.com/nightscout/AndroidAPS . Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un `nouveau clone <../Installing-AndroidAPS/Building-APK.html>`_.
+Le dossier github toujours sur https://github.com/nightscout/AndroidAPS. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un `nouveau clone <../Installing-AndroidAPS/Building-APK.html>`_.
 
-**Objectives have changed. Finish not completed objectives before updating.**
+**Les objectifs ont changé. Finissez les objectifs non terminés avant la mise à jour.**
 
-Please use `Android Studio 4 <https://developer.android.com/studio/>`_ or newer to build the apk.
+Utilisez `Android Studio 4 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
 ----------------------
-* `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org 
-* bolus advisor & eating reminder @MilosKozak 
-* new watchface @rICTx-T1D
-* Dana RS connection improvements @MilosKozak 
-* Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
-* New LowRes skin
-* New "Pregnant" patient type @Brian Quinion
-* New NSClient tablet layout @MilosKozak 
-* NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak 
-* Preferences filter @Brian Quinion
-* New pump icons @Rig22 @@teleriddler @osodebailar
-* SetupWizard improvements @MilosKozak 
-* Security improvements @dlvoy 
-* Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
+* `Support de l'Omnipod Eros <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda et merci spécial à @ps2 @itsmojo, et à toutes les autres personnes impliquées dans le développement du driver pour Omnipod ainsi que @jlucasvt de GetRileyLink.org 
+* assistant bolus et rappel de repas @MilosKozak 
+* nouveau cadran de montre @rICTx-T1D
+* Améliorations de la connexion Dana RS @MilosKozak 
+* Suppression de "Valeurs MGC inchangées" pour les SMB pour l'application native Dexcom
+* Nouveau thème Basse résolution
+* Nouveau type de patient "Enceinte" @Brian Quinion
+* Nouvelle présentation tablette de NSClient @MilosKozak 
+* NSClient transfert des paramètres insuline, sensibilité et les paramètres d'affichage directement à partir de l'écran principal AAPS @MilosKozak 
+* Filtre des préférences @Brian Quinion
+* Nouvelles icônes de pompe @Rig22 @teleriddler @osodebailar
+* Améliorations de l'assistant de configuration @MilosKozak 
+* Améliorations de la sécurité @dlvoy 
+* Améliorations diverses et correctifs @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
 
 Version 2.7.0
 ================
