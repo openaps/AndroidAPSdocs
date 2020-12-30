@@ -129,7 +129,7 @@
 .. |RileyLink_Bluetooth_Reset_5|        image:: RileyLink_Bluetooth_Reset_5.png
 
 ..
-	RileyLink Setup
+	Configuration RileyLink
 .. |RileyLink_Setup_1|                  image:: RileyLink_Setup_1.png
 .. |RileyLink_Setup_2|                  image:: RileyLink_Setup_2.png
 .. |RileyLink_Setup_3|                  image:: RileyLink_Setup_3.png
@@ -400,7 +400,7 @@ RileyLink Bluetooth Reset
 |RileyLink_Bluetooth_Reset_5|       
 
 
-RileyLink Setup
+Configuration RileyLink
 
 |RileyLink_Setup_1|                 
 |RileyLink_Setup_2|                 
