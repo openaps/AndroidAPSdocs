@@ -4,7 +4,7 @@
 
 These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). The Omnipod driver is available as part of AndroidAPS (AAPS) as of version 2.8.
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.**
+**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
 
 .. contents:: 
    :backlinks: entry
@@ -36,7 +36,7 @@ Hardware and Software Requirements
 
 These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and attempt to begin this process on your next pod change.
 
-Before You Begin
+Avant de commencer
 ================
 
 **SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, charged RileyLink, and phone devices are must-haves).
