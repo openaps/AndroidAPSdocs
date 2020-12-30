@@ -424,6 +424,19 @@ RileyLink Setup
 |RileyLink_Setup_5|                 
 |RileyLink_Setup_6|  
 
+RileyLink Setup Add Device
+
+|RileyLink_Setup_Add_1|
+|RileyLink_Setup_Add_2|
+|RileyLink_Setup_Add_3|
+|RileyLink_Setup_Add_4|
+
+RileyLInk Setup Remove Device
+
+|RileyLink_Setup_Remove_1|
+|RileyLink_Setup_Remove_2|
+|RileyLink_Setup_Remove_3|
+|RileyLink_Setup_Remove_4|
 
 RileyLink Statistics History
 
