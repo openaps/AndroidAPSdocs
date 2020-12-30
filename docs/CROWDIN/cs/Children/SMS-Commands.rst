@@ -35,7 +35,7 @@ Authorized phone numbers
 
 Minutes between bolus commands
 -------------------------------------------------
-* You can define the minimum delay between to boluses issued via SMS.
+* You can define the minimum delay between two boluses issued via SMS.
 * For safety reasons you have to add at least two authorized phone numbers to edit this value.
 
 Additionally mandatory PIN at token end
@@ -64,9 +64,9 @@ Authenticator setup
    * TOTP token from the authenticator app is 457051
    * Enter 4570512020
    
-* Red text "WRONG PIN" will change **automatically** to green "OK" if entry is correct. **There is no button you can press!**
-* Time on both phones must be synchronized. Best practice is automatically from network. Time differences might lead to authentication problems.
-* Use button "RESET AUTHENTICATORS" if you want to remove provisions.
+* The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
+* The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
+* Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
 
 Use SMS commands
 ==================================================
@@ -78,11 +78,11 @@ Use SMS commands
    * TOTP token from the authenticator app is 457051
    * Enter 4570512020
 
-**Tip: Jestliže budete posílat větší množství SMS, je výhodné mít na obou mobilech SMS paušál.
+**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
 Příkazy
 ==================================================
-Commands must be send in English, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Commands must be sent in English, the response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
 
 .. image:: ../images/SMSCommands.png
   :alt: příklad SMS příkazu
@@ -126,7 +126,7 @@ Bazál
 
 Bolus
 --------------------------------------------------
-V případě, že jsou nastavena 2 telefonní čísla, není do 15 minut od poslání předchozího bolusu nebo vzdáleného příkazu povolen další bolus! Odpověď závisí na době, která uplynula od posledního podání bolusu.
+Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
 
 * BOLUS 1.2
    * Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN
@@ -182,13 +182,13 @@ Poradce při potížích
 ==================================================
 Duplicitní SMS
 --------------------------------------------------
-Obdržíte-li stejnou zprávu znovu a znovu (např. přepnutí profilu), je pravděpodobné, že se jedná o zacyklení s jinými aplikacemi. Například xDrip+. Pokud je to tak, ujistěte se prosím, že xDrip+ (nebo jakákoliv jiná aplikace) nenahrává ošetření do NS. 
+Obdržíte-li stejnou zprávu znovu a znovu (např. přepnutí profilu), je pravděpodobné, že se jedná o zacyklení s jinými aplikacemi. Například xDrip+. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS. 
 
 If the other app is installed on multiple phones make sure to deactivate upload on all of them.
 
 Nefunkční SMS příkazy na telefonech Samsung
 --------------------------------------------------
-Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Lze to vyřešit vypnutím možnosti „odeslání zprávy jako konverzace“.
+Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Could be solved by disabling 'send as chat message'.
 
 .. image:: ../images/SMSdisableChat.png
   :alt: Zakázat odesílání SMS jako konverzace

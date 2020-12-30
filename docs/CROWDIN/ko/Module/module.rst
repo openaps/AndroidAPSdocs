@@ -50,7 +50,7 @@ You need an Android smartphone with Google Android 7.0 or above. So if you are t
 * 아큐첵 콤보 <../Configuration/Accu-Chek-Combo-Pump.html>`_ (추가적으로 필요한 사항: Ruffy 애플리케이션, LineageOS 또는 안드로이드 8.1 스마트폰)
 - 아큐첵 인사이트 <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - 다나R <../Configuration/DanaR-Insulin-Pump.html>`_ 
-- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_ (except pumps with new firmware v3) 
+- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - 몇 개의 예전 메드트로닉 펌프 <../Configuration/MedtronicPump.html>`_ 2.4버젼 이상부터 (추가 필요 사항: RileyLink/Gnarl 하드웨어, 블루투스 저에너지 / BLE 칩셋 안드로이드폰)
 
 AndroidAPS와 호환될 수 있는 가능성이 있는 **그외 펌프**는 <../Getting-Started/Future-possible-Pump-Drivers.html>`_ 페이지 '미래(가능한) 펌프'에 목록이 나와있습니다.

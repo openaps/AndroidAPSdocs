@@ -21,7 +21,7 @@ Le dossier github à été déplacé vers https://github.com/nightscout/AndroidA
 
 Comme déjà `annoncé il y a quelque temps <../Module/module.html#telephone>`_, **Android 7 est un minimum requis** pour AndroidAPS 2.7.
 
-Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
+Utilisez `Android Studio 4.0.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 **Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 2.7 comme c'est décrit ici** `ici <../Installing-AndroidAPS/update2_7.html>`_.
 

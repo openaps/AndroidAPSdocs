@@ -79,7 +79,7 @@ This workflow will listen to the xDrip+ notification channel. If there is trigge
 
 First, you must add a BG high alert in xDrip+ as follows:
 
-![xDrip+ alert settings](../images/automate-xdrip1.png)
+![valores de alerta de xDrip+](../images/automate-xdrip1.png)
 
 Alert name: (Pay attention on it!) This name is essential for firing the trigger. It should be unmistakable and not similar to other alert names. Example: '180alarm' should not exist next to '80alarm'.
 
@@ -87,7 +87,7 @@ Threshold: BG value that should fire the high alert.
 
 Default Snooze: Insert the duration you are planning to set for your low TT here, as the alert will come up again and maybe extend the duration of the low TT.
 
-![xDrip+ alert settings](../images/automate-xdrip2.png)
+![valores de alerta de xDrip+](../images/automate-xdrip2.png)
 
 ##### Automate
 

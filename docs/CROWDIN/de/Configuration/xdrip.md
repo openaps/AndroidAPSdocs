@@ -106,17 +106,18 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G, 8H oder 8J beginnt, verwen
    * Du wirst durch die Grundeinstellungen geführt.
    * Wenn Du den Transmitter zum ersten Mal verbindest, benötigst Du die Transmitter-Seriennummer.
 
-* Gib die Seriennummer des Transmitters, die Du auf der Transmitter-Verpackung und auf der Rückseite des Transmitters findest, ein. Achte darauf, 0 (Null) und O (Großbuchstabe o) korrekt auseinander zu halten.
+* Gib die Seriennummer des Transmitters, die Du auf der Transmitter-Verpackung und auf der Rückseite des Transmitters findest, ein. Achte darauf, `0` (null) und `O` (Großbuchstabe o) nicht zu verwechseln.
    
    ![xDrip+ Dexcom Transmitter Seriennummer](../images/xDrip_Dexcom_TransmitterSN.png)
 
 * Setze den neuen Sensor (außer Du tauscht den Transmitter während einer laufenden Sensorsitzung).
 
 * Klicke den Transmitter in die Halterung auf dem Sensorpflaster ein.
+* Wenn eine Nachricht Pair with 'DexcomXX' (XX steht dabei für die letzten beiden Stellen der Transmitter-Seriennummer) erscheint, akzeptiere diese und drücke "Pair" (Verbinden).
 * * Starte den neuen Sensor NICHT bevor eine der folgenden Informationen auf der Classic Status Page -> G5/G6 status -> PhoneServiceState angezeigt wird:
    
    * Transmitter Seriennummer beginnt mit 80 oder 81: "Got data hh:mm" (z.B. "Got data 19:04")
-   * Transmitter Seriennummer beginnt mit 8G, 8H oder 8J: "Got glucose hh:mm" (z.B. "Got glucose 19:04") oder "Got no raw hh:mm" (z.B. "Got now raw 19:04")
+   * Transmitter Seriennummer beginnt mit 8G, 8H oder 8J: "Got glucose hh:mm" (z.B. "Got glucose 19:04") oder "Got no raw hh:mm" (z.B. "Got no raw 19:04")
    
    ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 

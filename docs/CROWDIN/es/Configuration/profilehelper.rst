@@ -1,10 +1,10 @@
-Profile helper
+Asistente de perfil
 ****************************************
 
-Profile helper offers two functions:
+El ayudante de perfil ofrece dos funciones:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. Encontrar un perfil para niños
+2. Comparar dos perfiles o conmutadores de perfil para clonar un perfil nuevo
 
 Profile for kids (up to 18 years)
 =======================================

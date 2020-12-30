@@ -52,9 +52,7 @@ Pastaba: tarp pompos ir telefono nebus nuolatinio ryšio. Ryšys bus užmegztas 
 
 ## AAPS nustatymai
 
-Jei duomenis įkeliate į Nightscout ir naudojate Insight pompą., neturėtumėte suaktyvinti **„"Visada naudoti bazės absoliučias reikšmes“**. Į AAPS eiti į Nustatymai> NSClient > Papildomi nustatymai, tada įsitikinkite, kad "Visada naudoti bazės absoliučias reikšmes" yra išjungta. Tai gali sukelti neteisingus laikinos bazės nustatymus Insight pompoje.
-
-Norėdami išspręsti problemą, šiuo metu galite naudoti tik **Tik įkelti į NS (ne sinchronizuoti)**, jei norite naudoti Autotune (automatinį derinimą). AAPS eikite į Nustatymai> NSClient > Papildomi nustatymai ir aktyvuokite "Tik įkelti į NS (ne sinchronizuoti)".
+** Pastaba: dabar (tik su AAPS v2.7.0 ir vėlesnėmis versijomis) galima naudoti „Visada naudoti absoliučias bazines reikšmes“, jei norite naudoti Autotune su Insight pompa, net jei sinchronizavimas su Nightscout įgalintas.** (AAPS eikite į [ Nustatymai > NSClient > Papildomi nustatymai](../Configuration/Preferences#advanced-settings-nsclient)).
 
 ![Insight nustatymų ekrano vaizdas](../images/Insight_settings.png)
 
@@ -97,7 +95,7 @@ AndroidAPS Insight nustatymuose suaktyvinkite šiuos parametrus:
 
 Kol pompa sustabdyta, AAPS rodo laikiną bazės dydį 0%.
 
-AndroidAPS skirtuke Accu-Chek Insight rodoma dabartinė pompos būklė ir du mygtukai:
+AndroidAPS skirtuke „Accu-Chek Insight“ rodoma dabartinė pompos būklė ir du mygtukai:
 
 * Atnaujinti: Atnaujina pompos būklę
 * „Įgalinti / išjungti pranešimą apie LB“: Standartiškai Insight pompa siunčia aliarmą apie laikinos bazės LB pabaigą. Mygtukas leidžia įjungti arba išjungti šį perspėjimą nekeičiant programinės įrangos konfigūracijos.
@@ -112,7 +110,7 @@ Signalus pompoje nustatykite taip:
 * Meniu > Nustatymai > Prietaiso nuostatos > Režimo parametrai > Tylus > Signalas > 0 (nuimti visus stulpelius)
 * Meniu> Režimo nustatymai> Signalo režimas> Tylus
 
-Tai pašalins visų įspėjimų apie pompą garsą ir leis AndroidAPS nuspręsti, kuris signalas jums aktualus. Jei AndroidAPS neatpažįsta signalo, padidės jo garsas (pirmiausia pypsėjimas, paskui vibracija).
+Tai pašalins visų įspėjimų apie siurblį garsą ir leis AndroidAPS nuspręsti, kuris signalas jums aktualus. Jei AndroidAPS neatpažįsta signalo, padidės jos garsas (pirmiausia pypsėjimas, paskui vibracija).
 
 ### Vibracija
 
@@ -128,7 +126,7 @@ Programinės įrangos versiją galima rasti meniu.
 
 Insight baterijos veikimo laikas su AAPS yra ne ilgesnis kaip 10–14 dienų, daugiausia 20 dienų. Apie tai pranešę vartotojai naudoja Energizer ličio baterijas.
 
-Insight pompoje yra maža vidinė baterija, palaikanti svarbias funkcijas, tokias kaip laikrodis, kuris ir toliau veikia, kol keičiama pompos baterija. Jei baterijos keitimas užima per daug laiko, šios vidinės akumuliatoriaus įkrova gali pasibaigti, laikrodis bus nustatytas iš naujo ir, įdėjus naujas baterijas, jums bus pasiūlyta įvesti naują laiką ir datą. Jei taip atsitiks, visi AndroidAPS įrašai nebebus įtraukti į skaičiavimus, kol nebus pakeista baterija, nes nebus galima identifikuoti tinkamo laiko.
+Insight pompoje yra maža vidinė baterija, palaikanti svarbias funkcijas, tokias kaip laikrodis, kuris ir toliau veikia kol keičiama pompos baterija. Jei baterijos keitimas užima per daug laiko, šios vidinės akumuliatoriaus įkrova gali pasibaigti, laikrodis bus nustatytas iš naujo ir, įdėjus naujas baterijas, jums bus pasiūlyta įvesti naują laiką ir datą. Jei taip atsitiks, visi AndroidAPS įrašai nebebus įtraukti į skaičiavimus, kol nebus pakeista baterija, nes nebus galima identifikuoti tinkamo laiko.
 
 ## Insight specifinės klaidos
 
@@ -142,7 +140,7 @@ Kartais Insight pompa gali nereaguoti jungimo metu. Tokiu atveju AAPS rodomas š
 
 ![Iš naujo nustatyti Bluetooth Insight](../images/Insight_ResetBT.png)
 
-Tokiu atveju maždaug 10 sekundžių išjunkite pompos ir išmaniojo telefono Bluetooth, tada vėl įjunkite.
+Tokiu atveju maždaug 10 sekundžių išjunkite pompos ir išmaniojo telefono Bluetooth, tada vėl atgal įjunkite.
 
 ## Kelionė per laiko zonas su Insight pompa
 

@@ -1,13 +1,20 @@
 Dokumentų atnaujinimai ir pakeitimai
 **************************************************
-October 2020
+December 2020
 ==================================================
-* `SMS commands - time sync <../Children/SMS-Commands.html>`_
-* Update Combo `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
-September 2020
+* `Libre 2 <../Hardware/Libre2.html>`_ - patched app does not work with US sensors
+* Sony Smartwatch 3 `Manual Installation of Google Play Service <../Usage/SonySW3.html>`_
+Spalis 2020
 ==================================================
-* Major update for new AAPS version 2.7
-* For details see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
+* Accu-Chek Combo - atnaujinimas `laiko nustatymas keičiantis vasaros/žiemos laikui <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
+* AccuChek Insight - parinktis dėl `absoliučių reikšmių įkėlimo <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
+* Žurnalų įrašai - daugiau detalių apie `katalogo vietą <../Usage/Accessing-logfiles.html>`_
+* Omnipod Eros - `būklės atnaujinimas <../Getting-Started/Future-possible-Pump-Drivers.html#insulet-omnipod-with-old-eros-pods-homepage>`_
+* `SMS komandos - laiko sinchronizacija <../Children/SMS-Commands.html>`_
+Rugsėjis 2020
+==================================================
+* Pagrindinis atnaujinimas naujai AAPS 2.7 versijai
+* Dėl išsamesnės informacijos žr. `išleidimo pastabos <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
 2020 m. birželis
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - detalesnė informacija apie Libre Link programėlę ir bluetooth siųstuvų naudojimą
@@ -18,7 +25,7 @@ September 2020
 * `Insight vibracijos išjungimas <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (tik programinė įranga 3.x)
 * `Minimalaus pokyčio lygis <../Configuration/Preferences.html#minimal-request-rate>`_ siekiant sumažinti pranešimų kiekį atviro ciklo režime
 * `Modifikuota Libre Link programėlė <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - patikrinkite ar tinkamai modifikuota
-* `Prediction lines <../Getting-Started/Screenshots.html#prediction-lines>`_ - more details
+* `Prognozuojamosios kreivės <../Getting-Started/Screenshots.html#prediction-lines>`_ - daugiau informacijos
 2020 m. balandis
 ==================================================
 * `Insulino įvedimas atbuliniu laiku <../Usage/CPbefore26.html#carbs--bolus>`_ (t. y. suleista švirkštu)
@@ -37,7 +44,7 @@ Vasaris 2020
 * `Ištęsto boluso <../Usage/Extended-Carbs.html#id1>`_ funkcija - uždaras ciklas bus išjungtas
 * Naujas `Vietinio profilio įskiepis <../Configuration/Config-Builder.html#local-profile-recommended>`_
 * "Pavyzdinis nustatymas <../Getting-Started/Sample-Setup.html>`_ - Dexcom G6 atnaujinimas
-* `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - major new features
+* `Versija 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - pagrindinės naujos funkcijos
 * `Išmaniųjų laikrodžių ekrano elementai <../Configuration/Watchfaces.html>`_
 Sausis 2020
 ==================================================
@@ -54,7 +61,7 @@ Lapkritis 2019
 ==================================================
 * `Automatizavimas - išjungimas, kai sustabdomas ciklas <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 siųstuvo keitimo atnaujinimas <../Configuration/xdrip.html#replace-transmitter>`_
-* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#id1>`_
+* Kodėl ištęstas bolusas neveikia uždaame cikle <../Usage/Extended-Carbs.html#id1>`_
 * 'DUK - sportas <../Getting-Started/FAQ.html#sports>`_
 * `Pradinis ekranas - diagramos eilutės <../Getting-Started/Screenshots.html#section-e>`_
 * ` Insight - Išjunkite absoliučias vertes NS Client programoje <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
@@ -65,11 +72,11 @@ Lapkritis 2019
 * `Android Studio trikčių šalinimas <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
 * ` Trikčių šalinimas - nuorodos <../Usage/troubleshooting.html> ` _
 * `Atnaujinimas - trumpas vadovas patyrusiems vartotojams <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users> ` _
-* Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
+* Dokumentai - atnaujinimas 'koregavimas <../make-a-PR.html#code-syntax>`_ ir 'vertimas <../translations.html#translate-wiki-pages>`_.
 
 Spalis 2019
 ==================================================
-* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#id16>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
+* `AAPS 2.5 versija <../Installing-AndroidAPS/Releasenotes.html#id16>`_ atnaujinimai (ypač 'atnaujinimo puslapyje <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `AccuChek Insight - žurnalo parinktys <../Configuration/Accu-Chek-Inight-Pump.html#settings-in-aaps>`_
 * AAO skaičiavimas atskirame puslapyje <../Usage/COB-calculation.html>`_
 * ` AAO - neteisingas AAO verčių aptikimas <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_

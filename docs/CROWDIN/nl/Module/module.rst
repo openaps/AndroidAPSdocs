@@ -50,7 +50,7 @@ AndroidAPS werkt momenteel met
 - `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (extra nodig: Ruffy app, minimaal Android 8.1 of anders LineageOS op jouw telefoon)
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
-- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_ (met uitzondering van pompen met nieuwe firmware v3) 
+- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - `bepaalde oudere Medtronic modellen <../Configuration/MedtronicPump.html>`_ (extra nodig: RileyLink/Gnarl hardware, Android telefoon met Bluetooth Low Energy / BLE-chipset)
 
 **Andere pompen** die mogelijk in de toekomst geschikt zullen zijn vind je op de `Mogelijk toekomstige insulinepompen <../Getting-Started/Future-possible-Pump-Drivers.html>`_ pagina.

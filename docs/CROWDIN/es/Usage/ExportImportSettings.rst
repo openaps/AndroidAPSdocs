@@ -14,7 +14,7 @@ En un sistema Windows 10, se ve así:
 .. image:: ../images/AAPS_ExImportSettingsWin.png
   :alt: AndroidAPS Preferencias del teléfono conectado a una computadora
 
-Exported information
+Información exportada
 ==================================================
 Among others the following information is part of the settings export:
 
@@ -72,7 +72,7 @@ Importar ajustes
 Note for Dana RS users
 ------------------------------------------------------------
 * La configuración de conexión de la bomba y también se importa AAPS en su nuevo teléfono con esto ya "conoce" la bomba y por lo tanto no es necesario iniciar un escaneo bluetooth. 
-* Please pair new phone and pump manually.
+* Por favor, empareja el nuevo teléfono y la bomba manualmente.
 
 Import settings from previous versions (before AAPS 2.7)
 ------------------------------------------------------------

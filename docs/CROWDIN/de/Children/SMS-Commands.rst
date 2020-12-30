@@ -35,7 +35,7 @@ Erlaubte Telefonnummern
 
 Minuten zwischen Bolus-Kommandos
 -------------------------------------------------
-* Du kannst den minimalen Zeitabstand zwischen über SMS durchgeführte Boli definieren.
+* Du kannst den minimalen Zeitabstand zwischen zwei über SMS durchgeführte Boli definieren.
 * Aus Sicherheitsgründen musst Du mindestens zwei erlaubte Telefonnummern hinzufügen, um diesen Wert zu bearbeiten.
 
 Zusätzliche obligatorische PIN am Token-Ende
@@ -66,7 +66,7 @@ Konfiguration des Authentifikators
    
 * Der rote Text "WRONG PIN" ändert sich **automatisch** in den grünen Text "OK", wenn das Einmal-Passwort korrekt ist. **Es gibt keine Taste, die Du drücken kannst!**
 * Die Zeit auf beiden Telefonen muss synchron sein. Am einfachsten erfolgt dies direkt über das Mobilfunknetz. Zeitunterschiede können zu Authentifizierungsproblemen führen.
-* Verwende die Schaltfläche "AUTHENTIKATORS ZURÜCKSETZEN", wenn Du bereits eingerichtete Berechtigungen entfernen möchten.
+* Verwende die Schaltfläche "AUTHENTIKATORS ZURÜCKSETZEN", wenn Du bereits eingerichtete Berechtigungen entfernen möchten.  (Durch das Zurücksetzen des Authentikators werden ALLE erteilten Berechtigungen ungültig. Du musst sie alle neu einrichten.)
 
 SMS-Kommandos verwenden
 ==================================================
@@ -78,7 +78,7 @@ SMS-Kommandos verwenden
    * TOTP Token von der Authentifizierungs-App ist 457051
    * Trage 4570512020 ein
 
-**Hinweis:** Eine SMS-Flat auf beiden Telefonen kann nützlich sein, da u.U. viele SMS hin und her gesandt werden.
+**Hinweis**: Eine SMS-Flat auf beiden Telefonen kann nützlich sein, da u.U. viele SMS hin und her gesandt werden.
 
 Kommandos
 ==================================================
@@ -188,7 +188,7 @@ Wenn die andere App auf mehreren Smartphones installiert ist, musst Du den Uploa
 
 SMS-Kommandos funktionieren nicht auf Samsung-Smartphones
 --------------------------------------------------
-Es gab einen Hinweis, dass nach einem Update die SMS Kommandos auf einem Galaxy S10 nicht mehr funktioniert haben. Dies konnte durch Abschalten der Option 'als chat message senden' behoben werden.
+Es gab einen Hinweis, dass nach einem Update die SMS Kommandos auf einem Galaxy S10 nicht mehr funktioniert haben. Dies konnte durch Abschalten der Option 'als Chat Message senden' behoben werden.
 
 .. image:: ../images/SMSdisableChat.png
   :alt: SMS als Chatnachricht deaktivieren

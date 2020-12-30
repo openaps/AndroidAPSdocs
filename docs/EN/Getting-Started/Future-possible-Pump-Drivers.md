@@ -2,27 +2,7 @@
 
 This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
 
-## Pumps whose support is in development
-
-### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
-
-**Loop status:** Not supported natively by AAPS at the moment. Decoding of the Omnipod protocol is finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
-
-**Other implementations:** 
-- Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink, and specially modified AndroidAPS) 
-- OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project).
-- [iOS Loop](https://loopkit.github.io/loopdocs/) (stable, released, requires RileyLink).
-
-**Java implementations:**  None till now.
-
-**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version was released in January 2020, and work is beeing done towards stabilization. Current version 0.3 (March)
-
-**Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.x) and 433 MHz antenna.
-
-
-
 ## Pumps that are Loopable
-
 
 ### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
 
@@ -133,7 +113,7 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 ### Animas Ping
 
 **Loop status:** Not loopable. It has bolus possibility, but no TBR one. 
-**Note** Stopped beeing sold when Vibe came out.
+**Note** Stopped being sold when Vibe came out.
 
 
 

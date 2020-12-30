@@ -1,9 +1,16 @@
 Mises à jour et modifications de la documentation
 **************************************************
+Décembre 2020
+==================================================
+* `Libre 2 <../Hardware/Libre2.html>`_ - l'application patchée ne fonctionne pas avec les capteurs US
+* Sony Smartwatch 3 `Installation manuelle du service Google Play <../Usage/SonySW3.html>`_
 Octobre 2020
 ==================================================
+* Accu-Chek Combo - Mise à jour `réglage duchangement d'heure <../Usage/Timezone-traveling.html#changements-d-heure>`_
+* Accu-Chek Insight - option `Utiliser toujours les valeurs ansolues du basal <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_
+* Journaux - plus de détails sur `l'emplacement du dossier <../Usage/Accessing-logfiles.html>`_
+* Omnipod Eros - `mise à jour du statut <../Getting-Started/Future-possible-Pump-Drivers.html#insulet-omnipod-avec-les-anciens-pods-eros-page-d-acceuil>`_
 * `Commandes SMS - Synchronisation de l'heure <../Children/SMS-commands.html>`_
-* Mise à jour Combo `réglage duchangement d'heure <../Usage/Timezone-traveling.html#changements-d-heure>`_
 Septembre 2020
 ==================================================
 * Mise à jour majeure pour la nouvelle version AAPS 2.7
