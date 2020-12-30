@@ -79,7 +79,7 @@ To verify that you have enabled the Omnipod driver in AAPS **swipe to the left**
 
 |Enable_Omnipod_Driver_5|
 
-Omnipod Configuration
+Configuration Omnipod
 ======================
 
 Please **swipe left** to the **Omnipod (POD)** tab where you will be able to manage all pod and RileyLink functions (some of these functions are not enabled or visible without an active pod session):
@@ -88,7 +88,7 @@ Please **swipe left** to the **Omnipod (POD)** tab where you will be able to man
 
     |pod_management| Pod Management (Activate, Deactivate, Play test beep, RileyLink Stats and Pod history)
 
-RileyLink Setup
+Configuration RileyLink
 ---------------
 
 *Note: A good visual indicator that the RileyLink is not connected is that the Insulin and Calculator buttons on the HOME tab will be missing. This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.*
@@ -107,7 +107,7 @@ RileyLink Setup
 
     |RileyLink_Setup_5|
 
-Activating a Pod
+Activation d’un Pod
 ----------------
 
 Before you can activate a pod please ensure you have properly configured and connected your RileyLink connection in the Omnipod settings
@@ -168,7 +168,7 @@ Before you can activate a pod please ensure you have properly configured and con
 
     |Activate_Pod_14| |Activate_Pod_15|
 
-Deactivating a Pod
+Désactivation du Pod
 ------------------
 
 Under normal circumstances, the life of a pod should run for three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
@@ -271,7 +271,7 @@ The process below will show you how to acknowledge and dismiss pod beeps that oc
 
 4. Go to the **Omnipod (POD)** tab, under the **Active Pod alerts** field, the warning message is no longer displayed and the active pod will no longer issue pod expiration warning beeps.
 
-View Pod History
+Voir l'historique du Pod
 ----------------
 
 This section shows you how to review your active pod history and filter by different action categories. The pod history tool allows you to view the actions and results committed to your currently active pod during its three day (72 - 80 hours) life.
@@ -369,7 +369,7 @@ Fields
    * **Device:** The device to which the current action or state is referring.
    * **State or Action:** The current state or action performed by the device.
 
-Omnipod (POD) Tab
+Onglet Omnipod (POD)
 =================
 
 Below is an explanation of the layout and meaning of the icons and status fields on the **Omnipod (POD)** tab in the main AAPS interface.
@@ -591,7 +591,7 @@ Provides advanced settings to assist debugging.
 	+  Disabled - Reports a value of n/a.
 * **\*DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
 
-Actions (ACT) Tab
+Onglet Actions (ACT)
 =================
 
 This tab is well documented in the main AAPS documentation but there are a few items on this tab that are specific to how the Omnipod pod differs from tube based pumps, especially after the processes of applying a new pod.
@@ -602,7 +602,7 @@ This tab is well documented in the main AAPS documentation but there are a few i
 
   |Actions_Tab|
 
-Levels
+Niveaux
 ------
 
 **Insuln Level**
@@ -645,7 +645,7 @@ Pump Unreachable Alerts
 
 It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]** and setting this to **120**.
 
-Import Settings from previous AAPS
+Importer les paramètres AAPS de versions précédentes
 ----------------------------------
 
 Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
@@ -661,12 +661,12 @@ Omnipod driver alerts
 
 please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
 
-No active Pod
+Pas de Pod actif
 ~~~~~~~~~~~~~
 
 No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically silenced.
 
-Pod suspended
+Pod suspendu
 ~~~~~~~~~~~~~
 
 Informational alert that Pod has been suspended.
@@ -856,7 +856,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |RileyLink_Bluetooth_Reset_5|        image:: ../images/omnipod/RileyLink_Bluetooth_Reset_5.png
 
 ..
-	RileyLink Setup
+	Configuration RileyLink
 .. |RileyLink_Setup_1|                  image:: ../images/omnipod/RileyLink_Setup_1.png
 .. |RileyLink_Setup_2|                  image:: ../images/omnipod/RileyLink_Setup_2.png
 .. |RileyLink_Setup_3|                  image:: ../images/omnipod/RileyLink_Setup_3.png
