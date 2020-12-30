@@ -61,9 +61,9 @@ Via the **AAPS Setup Wizard (2)** located at the top right-hand corner **three-d
 
     |Enable_Omnipod_Driver_1|  |Enable_Omnipod_Driver_2|
 
-On the same screen, below the pump selection, the **Omnipod Driver Settings** are displayed. Select your RileyLink by scanning for all available Bluetooth devices and selecting your RileyLink from the list.  When properly selected you are returned to the pump driver selection screen displaying the Omnipod driver settings showing your selected RileyLink with the MAC address listed.
+On the same screen, below the pump selection, the **Omnipod Driver Settings** are displayed. Select your RileyLink by scanning for all available Bluetooth devices and selecting your RileyLink from the list.  When properly selected you are returned to the pump driver selection screen displaying the Omnipod driver settings showing your selected RileyLink with the MAC address listed.  Press the **Next** button to proceed with the rest of the **Setup Wizard.**
 
-Detailed steps on how to accomplish setup your pod communication device are listed below in the `RileyLink Setup Section <#rileylink-setup>`__.
+Detailed steps on how to setup your pod communication device are listed below in the `RileyLink Setup Section <#rileylink-setup>`__.
 
 **OR**
 
@@ -78,6 +78,8 @@ Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜
 
 Verification of Omnipod Driver Selection
 ----------------------------------------
+
+*Note: If you have exited the Setup Wizard early without selecting your RileyLink, the Omnipod Driver is enabled but you will still need to select your RileyLink.  You may see the Omnipod (POD) tab appear as it does below*
 
 To verify that you have enabled the Omnipod driver in AAPS **swipe to the left** from the **Overview** tab, where you will now see an **Omnipod** or **POD** tab.
 
@@ -94,6 +96,8 @@ Please **swipe left** to the **Omnipod (POD)** tab where you will be able to man
 
 RileyLink Setup
 ---------------
+
+If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the `Activating a Pod Section <#activating-a-pod>`__ below.
 
 *Note: A good visual indicator that the RileyLink is not connected is that the Insulin and Calculator buttons on the HOME tab will be missing. This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.*
 
@@ -345,6 +349,7 @@ RileyLink (3) fields
 ++++++++++++++++++++
 
 	* **Configured Address:** MAC address of the selected RileyLink defined in the Omnipod Settings.
+	* **Configured RileyLink Name:** Bluetooth identification name of the selected RileyLink defined in your phone's Bluetooth settings.
 	* **Connected Device:** Model of the Omnipod pod currently communicating with the RileyLink (currently only eros pods work with the RileyLink
 	* **Connection Status**: The current status of the Bluetooth connection between the RileyLink and the phone running AAPS.
 	* **Connection Error:** If there is an error with the RileyLink Bluetooth connection details will be displayed here.
