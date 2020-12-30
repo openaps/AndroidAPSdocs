@@ -96,7 +96,7 @@
 .. |Toroid_w_CS|                  		image:: Toroid_w_CS.png
 
 ..
-	Omnipod Settings
+	Paramètres Omnipod
 .. |Omnipod_Settings_1|                 image:: Omnipod_Settings_1.png
 .. |Omnipod_Settings_2|                 image:: Omnipod_Settings_2.png
 .. |Omnipod_Settings_3|                 image:: Omnipod_Settings_3.png
@@ -362,7 +362,7 @@ Optimally Positioning the RileyLink
 |Toroid_w_CS|                  		
 
 
-Omnipod Settings
+Paramètres Omnipod
 
 |Omnipod_Settings_1|                
 |Omnipod_Settings_2|                
