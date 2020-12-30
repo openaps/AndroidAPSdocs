@@ -2,13 +2,13 @@ SMS-команды
 **************************************************
 Безопасность прежде всего
 ==================================================
-AndroidAPS позволяет контролировать телефон ребенка удаленно посредством текстовых сообщений (смс). Если смс-коммуникатор активирован, не забывайте, что телефон, настроенный на подачу удаленных команд, может быть украден. Поэтому всегда защищайте смартфон хотя бы ПИН-кодом. A strong password or biometrics are recommended.
-* Additionally it is recommended to allow a `second phone number <#authorized-phone-numbers>`_ for SMS commands. So you can use second number to `temporary disable <#other>`_ SMS communicator in case your main remote phone gets lost or stolen.
+AndroidAPS позволяет контролировать телефон ребенка удаленно посредством текстовых сообщений (смс). Если смс-коммуникатор активирован, не забывайте, что телефон, настроенный на подачу удаленных команд, может быть украден. Поэтому всегда защищайте смартфон хотя бы ПИН-кодом. Рекомендуется использовать надежный пароль или биометрические данные.
+* Кроме того, рекомендуется разрешить `второй номер телефона <#authorized-phone numbers>` _ для команд SMS. В том случае, если основной удаленный телефон будет потерян или украден, можно командой со второго телефона `временно отключить <#other> ` _ коммуникатор SMS.
 * AndroidAPS при помощи смс также сообщит, выполнены ли удаленные команды, такие как болюс или изменения профиля. Рекомендуется сделать такую настройку, чтобы подтверждающие тексты направлялись по меньшей мере на два разных телефона на тот случай, если один из них украден.
 * **Если вы подаете болюс через SMS-команды необходимо вводить углеводы через Nightscout (NSClient, сайт...)!** Если вы этого не сделаете, AAPS учтет правильное количество активного инсулина IOB, и будет считать, что активных углеводов COB слишком мало и, вероятно, не будет подавать корректировочный болюс, полагая, что у вас много активного инсулина.
-* As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
+* Начиная с версии AndroidAPS 2.7 при использовании SMS-команд необходимо использовать приложение-аутентификатор с одноразовым паролем.
 
-Setup SMS commands
+Настройка SMS-команд
 ==================================================
 
 .. image:: ../images/SMSCommandsSetup.png
@@ -35,7 +35,7 @@ Authorized phone numbers
 
 Minutes between bolus commands
 -------------------------------------------------
-* You can define the minimum delay between to boluses issued via SMS.
+* You can define the minimum delay between two boluses issued via SMS.
 * For safety reasons you have to add at least two authorized phone numbers to edit this value.
 
 Additionally mandatory PIN at token end
@@ -64,9 +64,9 @@ Authenticator setup
    * TOTP token from the authenticator app is 457051
    * Enter 4570512020
    
-* Red text "WRONG PIN" will change **automatically** to green "OK" if entry is correct. **There is no button you can press!**
-* Time on both phones must be synchronized. Best practice is automatically from network. Time differences might lead to authentication problems.
-* Use button "RESET AUTHENTICATORS" if you want to remove provisions.
+* The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
+* The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
+* Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
 
 Use SMS commands
 ==================================================
@@ -78,11 +78,11 @@ Use SMS commands
    * TOTP token from the authenticator app is 457051
    * Enter 4570512020
 
-**Подсказка: Если отправляется много SMS, полезно держать функцию SMS незанятой на обоих телефонах,.
+**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
 Команды
 ==================================================
-Commands must be send in English, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Commands must be sent in English, the response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
 
 .. изображение:: ../images/SMSCommandsSetup.png
   :alt: Пример команд SMS
@@ -126,7 +126,7 @@ Commands must be send in English, response will be in your local language if the
 
 болюс
 --------------------------------------------------
-Удаленный болюс не допускается в пределах 15 минут -значение редактируемое только в том случае, если добавлено 2 номера телефонов-после последней команды болюс или удаленных команд! * Поэтому ответ зависит от времени последнего болюса.
+Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
 
 * Болюс 1.2
    * Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN
@@ -182,13 +182,13 @@ Commands must be send in English, response will be in your local language if the
 ==================================================
 Множество SMS
 --------------------------------------------------
-Если вы получаете одно и то же сообщение снова и снова (напр. переключение профиля), вероятно, у вас произошло закольцовывание с другими приложениями. Это может быть xDrip+, например. Если это так, убедитесь, что xDrip+ (или любое другое приложение) не загружает назначения в NS. 
+Если вы получаете одно и то же сообщение снова и снова (напр. переключение профиля), вероятно, у вас произошло закольцовывание с другими приложениями. Это может быть xDrip+, например. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS. 
 
 If the other app is installed on multiple phones make sure to deactivate upload on all of them.
 
 Команды SMS не работают на телефонах Samsung
 --------------------------------------------------
-Была жалоба на остановку работы SMS команд после обновления на телефоне Galaxy S10. Решается путем отключения опции "отправлять как сообщения чата".
+Была жалоба на остановку работы SMS команд после обновления на телефоне Galaxy S10. Could be solved by disabling 'send as chat message'.
 
 .. изображение:: ../images/SMSdisableChat.png
   :alt: Отключить SMS как сообщение чата

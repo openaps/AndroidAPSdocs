@@ -69,16 +69,16 @@ Importuokite nustatymus
 * Patvirtinkite žinutę paspausdami 'OK'.
 * AAPS bus perkrauta iš naujo, kad būtų aktyvuoti importuoti parametrai.
 
-Note for Dana RS users
+Pastaba Dana RS vartotojams
 ------------------------------------------------------------
 * Kadangi pompos susiejimo nustatymai persikelia į naują telefoną kartu su kitais, Jūsų naujas telefonas jau "pažįsta" pompą, todėl nepradės BT paieškos. 
-* Please pair new phone and pump manually.
+* Rankiniu būdu Bluetooth ryšiu suporuokite išmanųjį telefoną ir pompą.
 
-Import settings from previous versions (before AAPS 2.7)
+Importo nustatymai iš ankstesnių versijų (prieš AAPS 2.7)
 ------------------------------------------------------------
-* The "old" settings file (called 'AndroidAPSPreferences' - without file extension) must be in root folder of your smartphone (/storage/emulated/0).
-* Do not put the "old" file in the same folder as the new exported settings (AAPS/preferences).
-* You will find the "old" file on the bottom of the list in the import dialogue.
+* Senasis nustatymų failas (vadinamas 'AndroidAPSPreferences' - be failo plėtinio) turi būti išmaniojo telefono pagrindiniame aplanke (/storage/emulated/0).
+* Neperkelkite senojo failo į tą patį aplanką kaip ir nauji eksportuoti nustatymai (AAPS/preferences).
+* Importavimo dialogo lange sąrašo apačioje rasite seną failą.
 
 Nustatymų failo perkėlimas
 ==================================================

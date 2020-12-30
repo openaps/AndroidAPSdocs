@@ -1,29 +1,29 @@
 # Cómo ayudar con AndroidAPS
 
-## AndroidAPS operates entirely on volunteer efforts and has no paid staff.
+## AndroidAPS opera enteramente en esfuerzos voluntarios y sin personal remunerado.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Los desarrolladores son los padres, guardianes, seres queridos y personas con diabetes trabajando juntos para desarrollar y mejorar una solución a una falta muy común. Los desarrolladores de donan su tiempo gratis, pero es un poco injusto esperar que enfrenten costos para hacer algo tan sorprende con código abierto y libre para todos.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*Para probar totalmente una nueva plataforma los desarrolladores necesitan tener un teléfono de repuesto y una bomba de repuesto que no puede utilizarse en un ser humano, hasta que esté estable. Nuevos modelos necesitan pruebas según estén disponibles. Parte del dinero donado es necesario también para los costos logísticos de transporte de estas piezas desde los países origen a los desarrolladores. A veces también es bueno contribuir a los costos de los desarrolladores para que abandonen sus habitaciones oscuras y vayan a conocerse en conferencias y eventos para dejar sus cerebros creativos y analíticos rebotan entre sí.*
 
-## I can write code! How do I participate?
+## Puedo escribir código! ¿Cómo puedo participar?
 
-Yay! Look at the issues, ask in the gitter channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+¡Síiiii! Mira los temas, pregunta en el canal de gitter, ¡ siempre hay mucho que hacer! ¡Elige una pequeña tarea al principio y haz tu primera solicitud de pull! :)
 
-## I know the system and can write documentation!
+## Conozco el sistema y puedo escribir documentación!
 
-Great, this is a highly appreciated thing and a good way to pay it foreward!
+¡Genial, esto es una cosa muy apreciada y una buena manera de pagarlo de antemano!
 
-* The old gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). 
+* El canal de gitter antiguo relativo a la wiki se puede encontrar aquí: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). 
 * Puede encontrar una guía sobre cómo realizar confirmaciones en el wiki inglés: [Cómo hacer un PR](../make-a-PR.md). Los demás idiomas sólo se traducen del inglés y no se pueden editar por razones de coherencia.
 
-## I do speak multiple languages and whant to translate the app or the documentation
+## Yo hablo varios idiomas y quiero traducir la aplicación o la documentación
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
-* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
+* Si desea traducir **la aplicación** a otros idiomas (gracias), utilice [crowdin](https://crowdin.com/project/androidaps).
+* Si desea traducir **los documentos** a otros idiomas (gracias), por favor use [crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Sólo tiene que registrarse en CROWDIN, hacer clic en su idioma, esperar a la autorización del administrador y seguir adelante!
 
-## Are there other ways to help?
+## ¿Hay otras formas de ayudar?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+Las habilidades necesarias incluyen diseño gráfico, diseño de UX, traductores, editores de wiki o simplemente pay it forward al responder las preguntas simples en el gitter & Facebook para permitir a los desarrolladores el tiempo y el espacio para enfocarse en las cosas más difíciles.

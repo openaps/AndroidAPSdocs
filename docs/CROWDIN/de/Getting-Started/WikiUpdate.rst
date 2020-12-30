@@ -1,13 +1,20 @@
 Docs Updates & Änderungen
 **************************************************
+Dezember 2020
+==================================================
+* `Libre 2 <../Hardware/Libre2.html>`_ - gepatche App funktioniert nicht mit US-Sensoren
+* Sony Smartwatch 3 ` Manuelle Installation des Google Play Service <../Usage/SonySW3.html> ` _
 Oktober 2020
 ==================================================
+* Accu-Chek Combo - Update `Zeitumstellung (Sommer-/Winterzeit) <../Usage/Timezone-traveling.html#zeitumstellung-sommer-winterzeit>`_
+* Accu-Chek Insight - Option `Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps>`_
+* Logs - weitere Details zum `Speicherort <../Usage/Accessing-logfiles.html>`_
+* Omnipod Eros - `Status Update <../Getting-Started/Future-possible-Pump-Drivers.html#insulet-omnipod-mit-alten-eros-pods-homepage >`_
 * `SMS Kommandos - Zeitsynchronisation aller Smartphones <../Children/SMS-Commands.html>`_
-* Update Combo `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
 September 2020
 ==================================================
 * Großes Update für die neue AAPS Version 2.7
-* Details findest Du in den `Release Notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
+* Details findest Du in den `Release Notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_
 Juni 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - weitere Details zu gepatchten Libre Link App und zu Bluetooth Transmittern

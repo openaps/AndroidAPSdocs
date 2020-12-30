@@ -26,7 +26,7 @@ Objective 2: Learn how to control AndroidAPS
    .. image:: ../images/Objective2_V2_5.png
      :alt: Screenshot objective 2
 
-Objective 3: Proof your knowledge
+Objective 3: Prove your knowledge
 ==================================================
 * Pass a multiple-choice exam testing your AndroidAPS knowledge.
 * Click on the orange text "Not completed yet" to access the page with the question and answering options.

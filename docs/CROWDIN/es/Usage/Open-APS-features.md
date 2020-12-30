@@ -12,7 +12,7 @@
 * Autosens adjusts your basal, I:C and ISF for you (i.e.: mimicking what a Profile shift does).
 * If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
 
-## Super Micro Bolus (SMB)
+## Super Micro Bolo (SMB)
 
 SMB, la forma abreviada de 'super micro bolo ', es la última característica de OpenAPS (desde 2018) dentro del algoritmo Oref1. En contraste con AMA, SMB no utiliza las tasas basales temporales para controlar los niveles de glucosa, pero principalmente usa **super pequeños microbolos**. En situaciones en las que la AMA añadiría 1,0 UI de insulina utilizando una tasa basal temporal, SMB entrega varios microbolos en pequeños pasos a intervalos de **5 minutos**, por ejemplo, 0,4 UI, 0,3 UI, 0,2 UI y 0,1 UI. Al mismo tiempo (por razones de seguridad), la tasa basal real se fija en 0 UI/ h durante un período determinado para evitar la sobredosis (**'cero-temporal'**). Esto permite que el sistema ajuste la glucosa en sangre más rápido que con el incremento temporal de la tasa basal en AMA.
 
@@ -46,10 +46,10 @@ Pero no se puede elegir ningún valor. AAPS limita el valor como un límite seg�
 
 AndroidAPS limita el valor de la forma siguiente:
 
-* Child: 2
+* Niños: 2
 * Adolescentes: 5
-* Adult: 10
-* Insulin-resistant adult: 12
+* Adultos: 10
+* Adultos resistente a la insulina: 12
 
 ### El número máximo de IOB que OpenAPS no puede sobrepasar (OpenAPS "max-iob")
 
@@ -62,12 +62,12 @@ Al utilizar OpenAPS SMB, max-IOB se calcula de forma diferente que en OpenAPS AM
 
 Sea cuidadoso y paciente, y sólo cambie los valores paso a paso. Es diferente para distintas personas y también depende de la dosis diaria total diaria (TDD). Por razones de seguridad, hay un límite, que depende de la edad del paciente. El 'límite ' para maxIOB es superior al de AMA.
 
-* Child: 3
-* Teenage: 7
-* Adult: 12
-* Insulin resistant adult: 25
+* Niños: 3
+* Adolescentes: 7
+* Adultos: 12
+* Adultos resistente a la insulina: 25
 
-See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
+Véase también [OpenAPS documentación para SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Habilitar el autosensado de AMA
 
@@ -139,43 +139,43 @@ Valor predeterminado: 4 (no se debe cambiar a menos que realmente necesite y sep
 
 * * *
 
-## Advanced Meal Assist (AMA)
+## Asistente de comida avanzada (AMA)
 
 AMA, la forma abreviada de "asistencia avanzada para comidas" es una función OpenAPS a partir de 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) permite que el sistema de alta temporal sea más rápido después de un bolo de comida si ingresa a los carbohidratos de forma fiable.
 
-You can find more information in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+Usted puede encontrar más información en la documentación [Documentación de OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 ### Max U/h una basal temporal puede establecerse en (OpenAPS “max-basal")
 
-This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. It is advised to set this to something sensible. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
+Esta configuración de seguridad ayuda a AndroidAPS a nunca ser capaz de dar una tasa basal peligrosamente alta y la limita a x U/h. Se aconseja establecer esto en algo sensato. Una buena recomendación es tomar la más alta tasa basal en su perfil y multiplicarla por 4 o por lo menos 3. Por ejemplo, si la tasa basal más alta de su perfil es de 1,0 U/h, podría multiplicar por 4 para obtener un valor de 4 U/h y establecer el 4 como su parámetro de seguridad.
 
-You cannot chose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
+No se puede elegir ningún valor: por razones de seguridad, existe un "límite duro", que depende de la edad del paciente. El límite para maxIOB es más bajo en AMA que en SMB. Para los niños, el valor es el más bajo mientras que para los adultos resistentes a la insulina, es el más grande.
 
-The hardcoded parameters in AndroidAPS are:
+Los parámetros codificados en AndroidAPS son los siguientes:
 
-* Child: 2
+* Niños: 2
 * Adolescentes: 5
-* Adult: 10
+* Adultos: 10
 * Adultos resistente a la insulina: 12
 
 ### El máximo basal IOB que OpenAPS puede entregar \[U\] (OpenAPS "max-iob")
 
-This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+Este parámetro limita el máximo de IOB basal donde todavía funciona AndroidAPS. Si el IOB es más alto, deja de inyectar insulina basal adicional hasta que el basal IOB esté bajo el límite.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Es diferente para distintas personas y también depende de la dosis diaria total diaria (TDD). Por razones de seguridad, hay un límite, que depende de la edad del paciente. The 'hard limit' for maxIOB is lower in AMA than in SMB.
+El valor predeterminado es 2, pero debe aumentar este parámetro lentamente para ver lo mucho que le afecta y qué valor se ajusta mejor. Es diferente para distintas personas y también depende de la dosis diaria total diaria (TDD). Por razones de seguridad, hay un límite, que depende de la edad del paciente. El límite para maxIOB es más bajo en AMA que en SMB.
 
-* Child: 3
+* Niños: 3
 * Adolescentes: 5
-* Adult: 7
+* Adultos: 7
 * Adultos resistente a la insulina: 12
 
 ### Habilitar el autosensado de AMA
 
-Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosense or not.
+Aquí, puede elegir, si desea utilizar la [detección de sensibilidad](../Configuration/Sensitivity-detection-and-COB.md) autosensado o no.
 
 ### El autosensado ajusta los objetivos temporales también
 
-If you have this option enabled, autosense can adjust targets (next to basal, ISF and IC), too. This lets AndroidAPS work more 'aggressive' or not. The actual target might be reached faster with this.
+Si tiene esta opción habilitada, el autosensado puede ajustar los objetivos (junto a basal, ISF e IC), también. Esto permite a AndroidAPS trabajar más 'agresivo' o no. Es posible que el destino real se alcance más rápido con esto.
 
 ### Ajustes avanzados
 
@@ -189,6 +189,6 @@ Valor predeterminado: 3 (no se debe cambiar a menos que realmente necesite y sep
 
 Valor predeterminado: 4 (no se debe cambiar a menos que realmente necesite y sepa, lo que está haciendo)
 
-**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+**Bouso snooze dia divisor** La función "bolus snooze" funciona después de un bolo de comida. AAPS no establece las bajas tasas basales temporales después de una comida en el período de la DIA dividida por el parámetro "bolus snooze". El valor predeterminado es 2. Eso significa que con un DIA de 5h, el "bolus snooze" sería 5h: 2 = 2.5h de tiempo.
 
-Default value: 2
+Valor predeterminado: 2

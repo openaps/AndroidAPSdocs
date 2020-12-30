@@ -12,4 +12,5 @@
    Список проверенных телефонов <../Getting-Started/Phones.md>
    Фон телефона <../Getting-Started/Phones.md#phone-background>
    Циферблаты <../Configuration/Watchfaces.md>
+   Troubleshooting Sony Smartwatch SW 3 <..Usage/SonySW3.rst>
    Pebble <../Configuration/Watchfaces.md#pebble>

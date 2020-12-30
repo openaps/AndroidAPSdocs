@@ -58,7 +58,7 @@ Jeśli używasz kalkulatora bolusa, nie używaj COB i IOB, chyba że upewnisz si
 
 ## Accu-Chek Combo
 
-AndroidAPS wyemituje alarm, jeśli czas między pompą a telefonem różni się znacznie. W przypadku regulacji czasu DST byłoby to w środku nocy. To prevent this and enjoy your sleep instead follow these steps so that you can force the time change at a time convient to yourself:
+AndroidAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
 
 ### Actions to take before the clock change
 
@@ -74,7 +74,7 @@ AndroidAPS wyemituje alarm, jeśli czas między pompą a telefonem różni się 
 
 3. In AndroidAPS refresh your pump.
 
-4. Check the Treatments tab... If you see duplicate any treatments:
+4. Check the Treatments tab... If you see any duplicate treatments:
    
    * DON'T press "delete treatments in the future"
    * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.

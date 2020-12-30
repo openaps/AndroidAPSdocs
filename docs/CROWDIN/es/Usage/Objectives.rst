@@ -26,7 +26,7 @@ Objetivo 2: Aprender a controlar AndroidAPS
    .. imagen:: ../images/Objective2_V2_5.png
      :alt: Captura de pantalla de objetivo 2
 
-Objective 3: Proof your knowledge
+Objective 3: Prove your knowledge
 ==================================================
 * Pasar un examen de múltiples opciones probando su conocimiento de AndroidAPS.
 * Haga clic en el texto naranja "No completado todavía" para acceder a la página con las opciones de preguntas y respuestas.

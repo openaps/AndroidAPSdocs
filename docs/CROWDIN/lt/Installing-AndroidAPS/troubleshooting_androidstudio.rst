@@ -1,61 +1,61 @@
-Troubleshooting Android Studio
+Android Studio trikčių diagnostika
 **************************************************
-Lost keystore
+Prarasta raktų saugykla
 ==================================================
-If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
+Jei atnaujindami AndroidAPS naudojate tą pačią raktų saugyklą, savo išmaniajame telefone nereikia pašalinti ankstesnės AAPS versijos. Todėl raktų saugyklą rekomenduojama išsaugoti saugioje vietoje.
 
-In case you cannot find your old keystore anymore, proceed as follows:
+Jei vis dėlto nerandate ankstesnės raktų saugyklos, galite elgtis taip:
 
-1. `Export settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ on your phone.
-2. Copy settings from your phone to an external location (i.e. your computer, cloud storage service...).
-3. Make sure settings file "AndroidAPS Preferences" is stored safely.
-4. Generate signed apk of new version as described on the `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_.
-5. Uninstall previous AAPS version on your phone.
-6. Install new AAPS version on your phone.
-7. `Import settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ - if you can't find them on your phone copy them from the external storage.
-8. Keep on looping.
+1. `Eksportuokite nustatymus <../Usage/ExportImportSettings.html#how-to-export-settings>`_ savo telefone.
+2. Nukopijuokite failą su nustatymais iš savo išmaniojo telefono į išorinės saugyklos vietą (pvz. jūsų kompiuteryje, debesijos saugykloje...).
+3. Įsitikinkite, kad failas „AndroidAPS Preferences“ išsaugotas saugiai.
+4. Sukurkite naujos versijos pasirašomą apk failą, kaip aprašyta puslapyje `Atnaujinimas <../Installing-AndroidAPS/Update-to-new-version.html>`_.
+5. Pašalinkite ankstesnę AAPS versiją iš savo išmaniojo telefono.
+6. Įdiekite naują AAPS versiją į savo išmanųjį telefoną.
+7. `Importuokite savo nustatymus <../Usage/ExportImportSettings.html#how-to-export-settings>`_ - jei jų nerandate savo išmaniajame telefone, tiesiog nukopijuokite juos iš išorinės saugyklos vietos į išmanųjį telefoną.
+8. Toliau naudokitės uždaru ciklu.
 
-Kotlin compiler warning
+Kotlin compiler perspėjimas
 ==================================================
-If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings. 
+Jei kūrimas buvo sėkmingai baigtas, bet jūs gaunate įspėjimą iš Kotlin Compiler, galite jo ignoruoti. 
 
-App was build successfully and can be transferred to phone.
+Programa buvo sėkmingai sukurta ir ją galima perkelti į išmanųjį telefoną.
 
 .. image:: ../images/GIT_WarningIgnore.PNG
-  :alt: ignore Kotline compiler warning
+  :alt: ignoruoti Kotline compiler perspėjimą
 
-Key was created with errors
+Raktas sukurtas su klaidomis
 ==================================================
-When creating a new keystore for building the signed APK, on Windows the following error message might appear
+Kuriant naują raktų saugyklą, kad sukurtumėte pasirašytą APK, Windows gali pasirodyti šis klaidos pranešimas
 
 .. image:: ../images/AndroidStudio35SigningKeys.png
-  :alt: Key was created with errors
+  :alt: Raktas sukurtas su klaidomis
 
-This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
+Atrodo, kad tai yra Android Studio 3.5.1 ir jo Java aplinkos, pateiktos naudojant Windows, klaida. Raktas sukurtas teisingai, tačiau rekomendacija neteisingai rodoma kaip klaida. Šiuo metu to galima nepaisyti.
 
-Could not download… / Offline Work
+Nepavyko atsisiųsti… / Darbas neprisijungus
 ==================================================
-If you get a failure message like this
+Jei gausite klaidos pranešimą, kuri atrodo panašiai
 
 .. image:: ../images/GIT_Offline1.jpg
-  :alt: Warning could not download
+  :alt: Įspėjimas nepavyko parsisiųsti
 
-make sure that ‘Offline work’ is disabled.
+įsitikinkite, kad „darbas neprisijungus“ yra išjungtas.
 
-File -> Settings
+Spustelėkite File > Settings
 
 .. image:: ../images/GIT_Offline2.jpg
-  :alt: Settings offline work
+  :alt: Nustatymų neprisijungus nustatymai
 
-Error: buildOutput.apkData must not be null
+Klaida: buildOutput.apkData neturi būti tuščia
 ==================================================
-Sometimes you might get an error message when building the apk saying
+Kartais kurdami APK failą galite gauti šį klaidos pranešimą
 
-  `Errors while building APK.`
+  `Klaidos kuriant APK.`
    
-  `Cause: buildOutput.apkData must not be null`
+  `Klaida: buildOutput.apkData neturi būti tuščia`
 
-This is a known bug in Android Studio 3.5 and will probably not be fixed before Android Studio 3.6. Three options:
+Tai yra žinoma Android Studio 3.5 klaida ir greičiausiai bus ištaisyta tik Android Studio 3.6. Trys variantai:
 
 1. Manually delete the three build folders (normal "build", build folder in "app" and build folder in "wear") and generate signed apk again.
 2. Set destination folder to project folder instead of app folder as described in `this video <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.

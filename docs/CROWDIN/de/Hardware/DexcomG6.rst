@@ -34,7 +34,9 @@ G6 mit der gepatchten Dexcom App
 * Lade die APK von `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_ herunter und wähle die Version, die Du benötigst (mg/dl oder mmol/l Version, G6).
 
    * Ordner 2.4 für alle Nutzer der aktuellen Version. Ordner 2.3 nur für die Nutzer der veralteten AAPS-Version 2.3.
-   *  Öffne https://play.google.com/store/search?q=dexcom%20g6 auf Deinem Computer. Die Region wird in der URL angezeigt.
+   *  Öffne https://play.google.com/store/search?q=dexcom%20g6 auf Deinem Computer. 
+   Klicke den Link zur Dexcom G6 App in den angezeigten Suchergebnissen.
+   * Die Region wird in der URL angezeigt.
    
    .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Region in der Dexcom G6 URL

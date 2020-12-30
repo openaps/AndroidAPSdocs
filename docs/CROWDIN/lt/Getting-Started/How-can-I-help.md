@@ -14,7 +14,7 @@ Super! Tyrinėkite problemas, klauskite gitter kanale, visada yra daug ką nuvei
 
 Puiku, tai yra labai vertinama ir yra geras būdas dalyvauti!
 
-* The old gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). 
+* Senasis gitter kanalas AAPS žinių bazei aptarti yra čia: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). 
 * Nurodymus, kaip pateikti aprašymus anglų kalba, galite rasti čia: [Kaip daryti PR](../make-a-PR.md). Kitos kalbos yra išverstos tik iš anglų kalbos ir dėl vientisumo ir nuoseklumo jų taisyti negalima.
 
 ## Aš kalbu keliomis kalbomis ir noriu išversti programą ar dokumentus

@@ -1,9 +1,16 @@
 Docs updates & changes
 **************************************************
+December 2020
+==================================================
+* `Libre 2 <../Hardware/Libre2.html>`_ - patched app does not work with US sensors
+* Sony Smartwatch 3 `Manual Installation of Google Play Service <../Usage/SonySW3.html>`_
 October 2020
 ==================================================
+* Accu-Chek Combo - update `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
+* Accu-Chek Insight - Option to `upload absolute values <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
+* Logs - more details about `folder location <../Usage/Accessing-logfiles.html>`_
+* Omnipod Eros - `status update <../Getting-Started/Future-possible-Pump-Drivers.html#insulet-omnipod-with-old-eros-pods-homepage>`_
 * `SMS commands - time sync <../Children/SMS-Commands.html>`_
-* Update Combo `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
 September 2020
 ==================================================
 * Major update for new AAPS version 2.7

@@ -26,7 +26,7 @@ Cíl 2: Naučte se ovládat AndroidAPS
    .. image:: ../images/Objective2_V2_5.png
      :alt: Screenshot cíl 2
 
-3. cíl: Prokažte své znalosti
+Objective 3: Prove your knowledge
 ==================================================
 * Správně zodpovězte otázky s výběrem možných odpovědí a prokažte znalost AndroidAPS.
 * Klikněte na oranžový text „Nedokončeno“ pro přístup na stránku s otázkou a možnými odpověďmi.

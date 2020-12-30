@@ -194,7 +194,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 * barres **GRISES** montrent un écart dû aux glucides. 
 * barres **VERTES** montrent que la Gly est supérieure à l'attendu de l'algorithme Les barres vertes sont utilisées par [Autosens](../Usage/Open-APS-features#autosens) pour augmenter la résistance.
 * barres **ROUGES** montrent que la Gly est inférieur à l'attendu de l'algorithme. Les barres rouges sont utilisées par [Autosens](../Usage/Open-APS-features#autosens) pour augmenter la sensibilité.
-* **Les barres YELLOW** montrent une déviation due aux RNS.
+* **Les barres JAUNES** montrent une déviation due aux RNS.
 
 #### Sensibilité
 

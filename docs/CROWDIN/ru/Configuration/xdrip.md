@@ -106,23 +106,24 @@
    * Мастер позволит провести начальную настройку.
    * Вам понадобится серийный номер трансмиттера, если вы пользуетесь им впервые.
 
-* Введите серийный номер нового трансмиттера (на упаковке трансмиттера или на его обратной стороне). Будьте внимательны и не перепутайте 0 (ноль) и O (заглавная буква o).
+* Введите серийный номер нового трансмиттера (на упаковке трансмиттера или на его обратной стороне). Be careful not to confuse `0` (zero) and `O` (capital letter o).
    
    ![серийный № трансмиттера Dexcom](../images/xDrip_Dexcom_TransmitterSN.png)
 
 * Вставьте новый сенсор (только при замене)
 
 * Поместите трансмиттер в платформу сенсора
-* Не запускайте новый сенсор прежде чем на классической странице состояния не появится следующая информация Страница-> Состояние G5/G6-> PhoneServiceState:
+* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter's serial no., accept it (tap "pair")
+* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
    
    * С трансмиттерами, серийный номер которых начинается с 80 или 81: "Got data hh:mm" (напр. "Got data 19:04 ")
-   * С трансмиттерами, серийный номер которых начинается с 8G, 8H или 8J: "Got glucose hh:mm" (напр. "Got glucose 19:04 ") или "Got no raw hh:mm" (i.e. "Got no raw 19:04")
+   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got no raw 19:04")
    
    ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Нажмите старт сенсора (только при смене сенсора)
+* Start sensor (only if replacing)
    
-   -> В нижней части экрана через несколько минут появится предупреждение о прогреве сенсора `Осталось x,x часов`.
+   -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
 
 -> Если серийный номер трансмиттера не начинается с 8G, 8H или 8J и в течение нескольких минут не появляется никаких указаний о времени прогрева сенсора, остановите и перезапустите сенсор.
 
