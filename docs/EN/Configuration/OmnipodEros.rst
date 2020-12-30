@@ -308,7 +308,9 @@ View RileyLink Settings and History
 
 This section shows you how to review the settings of your active pod and RileyLink along with the communication history of each. This feature, once accessed, is split into two sections: **Settings** and **History**.
 
-The primary use of this feature is when your RileyLink is out of the Bluetooth range of your phone after a period of time and the **RileyLink status** reports **RileyLink unreachable**. The **refresh** button will manually attempt to re-establish Bluetooth communication with the currently configured RileyLink in the Omnipod settings.
+The primary use of this feature is when your RileyLink is out of the Bluetooth range of your phone after a period of time and the **RileyLink status** reports **RileyLink unreachable**. The **REFRESH** button will manually attempt to re-establish Bluetooth communication with the currently configured RileyLink in the Omnipod settings.
+
+In the event the **REFRESH** button does not restore the connection to the RileyLink, please follow the additional steps below for a manual reconnection.
 
 Manually Re-establish RileyLink Bluetooth Communication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
