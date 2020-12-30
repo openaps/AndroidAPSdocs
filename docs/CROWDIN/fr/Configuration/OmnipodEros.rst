@@ -519,7 +519,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 * If the RileyLink is turned off and then back on, the **Reset RileyLink Config** button needs to be pressed, so that it sets these communication parameters in the RileyLink configuration.
 * If this is NOT done then AAPS will need to be restarted after the RileyLink is power cycled.
 
-Omnipod Settings
+Paramètres Omnipod
 ================
 
 The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayedas a tab in the AAPS interface titled **OMNIPOD** or **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
@@ -541,7 +541,7 @@ RileyLink
 
 Allows for scanning of a RileyLink device. The Omnipod driver cannot select more than one RileyLink device at a time.
 
-Confirmation beeps
+Bips de confirmation
 ------------------
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
@@ -551,7 +551,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 * **\*SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
 * **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
 
-Alerts
+Alertes
 ------
 
 Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
@@ -823,7 +823,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |Toroid_w_CS|                  		image:: ../images/omnipod/Toroid_w_CS.png
 
 ..
-	Omnipod Settings
+	Paramètres Omnipod
 .. |Omnipod_Settings_1|                 image:: ../images/omnipod/Omnipod_Settings_1.png
 .. |Omnipod_Settings_2|                 image:: ../images/omnipod/Omnipod_Settings_2.png
 .. |Omnipod_Settings_3|                 image:: ../images/omnipod/Omnipod_Settings_3.png
