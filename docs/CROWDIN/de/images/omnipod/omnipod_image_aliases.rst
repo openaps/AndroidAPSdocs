@@ -31,7 +31,7 @@
 	Instructional Section Images
 	
 ..
-	Hardware and Software Requirements
+	Hardware- und Software-Anforderungen
 .. |EmaLink|				image:: EmaLink.png
 .. |LoopLink|				image:: LoopLink.png
 .. |OrangeLink|				image:: OrangeLink.png	
@@ -83,7 +83,7 @@
 .. |Deactivate_Pod_10|                  image:: Deactivate_Pod_10.png
 
 ..
-	Enabling the Omnipod Driver in AAPS
+	Aktivieren des Omnipod-Treibers in AAPS
 .. |Enable_Omnipod_Driver_1|            image:: Enable_Omnipod_Driver_1.png
 .. |Enable_Omnipod_Driver_2|            image:: Enable_Omnipod_Driver_2.png
 .. |Enable_Omnipod_Driver_3|            image:: Enable_Omnipod_Driver_3.png
@@ -129,7 +129,7 @@
 .. |RileyLink_Bluetooth_Reset_5|        image:: RileyLink_Bluetooth_Reset_5.png
 
 ..
-	RileyLink Setup
+	RileyLink-Setup
 .. |RileyLink_Setup_1|                  image:: RileyLink_Setup_1.png
 .. |RileyLink_Setup_2|                  image:: RileyLink_Setup_2.png
 .. |RileyLink_Setup_3|                  image:: RileyLink_Setup_3.png
@@ -301,7 +301,7 @@ Pod Management Tab
 
 Instructional Section Images
 
-Hardware and Software Requirements
+Hardware- und Software-Anforderungen
 
 |EmaLink|
 
@@ -362,13 +362,13 @@ Deactivate Pod
 |Deactivate_Pod_10|                 
 
 
-Enabling the Omnipod Driver in AAPS
+Aktivieren des Omnipod-Treibers in AAPS
 
 |Enable_Omnipod_Driver_1|           
 |Enable_Omnipod_Driver_2|           
 |Enable_Omnipod_Driver_3|           
 |Enable_Omnipod_Driver_4|           
-|Enable_Omnipod_Driver_5|           
+|Aktiviere _Omnipod_Driver_5|           
 
 
 Optimally Positioning the RileyLink
@@ -415,7 +415,7 @@ RileyLink Bluetooth Reset
 |RileyLink_Bluetooth_Reset_5|       
 
 
-RileyLink Setup
+RileyLink-Setup
 
 |RileyLink_Setup_1|                 
 |RileyLink_Setup_2|                 
