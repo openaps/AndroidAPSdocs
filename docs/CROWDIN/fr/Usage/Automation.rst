@@ -92,7 +92,7 @@ Pour trier les règles d'automatisation, cliquez et maintenez l'icone sur la dro
   
 Suppression des règles d'automatisation
 -----
-Pour supprimer une règle d'automatisation, faites-la glisser vers la gauche ou vers la droite.
+Pour supprimer une règle d'automatisation, cliquez sur l'icône Corbeille.
 
 .. image:: ../images/Automation_Delete.png
   :alt: Suppression des règles d'automatisation
