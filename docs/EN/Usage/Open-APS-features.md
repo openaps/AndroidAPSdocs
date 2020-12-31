@@ -44,9 +44,12 @@ But you cannot choose any value. AAPS limits the value as a 'hard limit' accordi
 AndroidAPS limits the value as follows:
 
 * Child: 2
-* Teenage: 5
+* Teenager: 5
 * Adult: 10
 * Insulin-resistant adult: 12
+* Pregnant: 25
+
+*See also [overview of hard-coded settings](../Usage/Open-APS-features.html#overview-of-hard-coded-settings).*
 
 ### Maximum total IOB OpenAPS can’t go over (OpenAPS "max-iob")
 This value determines which maxIOB has to be considered by AAPS running in closed loop mode. If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
@@ -55,12 +58,15 @@ Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In
 
     maxIOB = average mealbolus + 3x max daily basal
 
-Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in AMA.
+Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features.html#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 * Child: 3
-* Teenage: 7
+* Teenager: 7
 * Adult: 12
 * Insulin resistant adult: 25
+* Pregnant: 40
+
+*See also [overview of hard-coded settings](../Usage/Open-APS-features.html#overview-of-hard-coded-settings).*
 
 See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
@@ -136,9 +142,12 @@ You cannot chose any value: For safety reason, there is a 'hard limit', which de
 The hardcoded parameters in AndroidAPS are:
 
 * Child: 2
-* Teenage: 5
+* Teenager: 5
 * Adult: 10
 * Insulin resistant adult: 12
+* Pregnant: 25
+
+*See also [overview of hard-coded settings](../Usage/Open-APS-features.html#overview-of-hard-coded-settings).*
 
 ### Maximum basal IOB OpenAPS can deliver [U] (OpenAPS "max-iob")
 This parameter limits the maximum of basal IOB where  AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
@@ -146,9 +155,12 @@ This parameter limits the maximum of basal IOB where  AndroidAPS still works. If
 The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 * Child: 3
-* Teenage: 5
+* Teenager: 5
 * Adult: 7
 * Insulin resistant adult: 12
+* Pregnant: 25
+
+*See also [overview of hard-coded settings](../Usage/Open-APS-features.html#overview-of-hard-coded-settings).*
 
 ### Enable AMA Autosense
 Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosense or not.
@@ -172,3 +184,16 @@ Default value: 4 (shouldn’t be changed unless you really need to and know, wha
 The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
 
 Default value: 2
+
+## Overview of hard-coded settings
+
+|  	| Child 	| Teenager 	| Adult 	| Insulin resistant adult 	| Pregnant 	|
+|-	|-	|-	|-	|-	|-	|
+| MAXBOLUS 	| 5,0 	| 10,0 	| 17,0 	| 25,0 	| 60,0 	|
+| MINDIA 	| 5,0 	| 5,0 	| 5,0 	| 5,0 	| 5,0 	|
+| MAXDIA 	| 7,0 	| 7,0 	| 7,0 	| 7,0 	| 10,0 	|
+| MINIC 	| 2,0 	| 2,0 	| 2,0 	| 2,0 	| 0,3 	|
+| MAXIC 	| 100,0 	| 100,0 	| 100,0 	| 100,0 	| 100,0 	|
+| MAXIOB_AMA 	| 3,0 	| 3,5 	| 7,0 	| 12,0 	| 25,0 	|
+| MAXIOB_SMB 	| 3,0 	| 7,0 	| 12,0 	| 25,0 	| 45,0 	|
+| MAXBASAL 	| 2,0 	| 5,0 	| 10,0 	| 12,0 	| 25,0 	|
