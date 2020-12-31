@@ -92,7 +92,7 @@ So make sure to deactivate automation rules during these occasions if neccessary
   
 Удаление правил автоматизации
 -----
-Чтобы удалить правило автоматизации, просто смахните его влево или вправо.
+To delete an automation rule click on trash icon.
 
 .. изображение:: ../images/Automation_Deletet.png
   :alt: Выбор правила автоматизации
