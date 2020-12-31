@@ -6,12 +6,12 @@ Avec « Cibles Temporaires » (ou CT), vous pouvez changer votre objectif glycé
 
 ![Définir les cibles temp. par défaut](../images/TempTarget_Default.png)
 
-To use one of the set “Default-Temp-Targets”, you can short click on your target in the right corner on the top in the overview-tab to show Temp Target dialog and click on Eating Soon, Activity or Hypo button, or use the shortcuts in the orange “Carbs” button. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration), short click on your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
+Pour utiliser une de ces « Cibles temporaires par défaut », vous pouvez faire un appui court sur votre cible dans le coin droit en haut de l'onglet Aperçu (ou Accueil) pour afficher la boite de dialogue Cible Temporaire ou encore utiliser les raccourcis dans le bouton orange « Glucides ». Pour définir manuellement une [ "Cible Temporaire personnalisée"](../Usage/temptarget. html#cible-temporaire-personnalise) (valeur de Gly et/ou durée), faites un appui court sur votre cible dans le coin en haut à droite ou utilisez le bouton "Cible temp." dans l'[onglet / menu Actions](../Configuration/Config-Builder#actions).
 
 ![Définir une cible temp.](../images/TempTarget_Set2.png)
 
-- If you want to slightly adjust the values of a default temp target, you can long press the Eating Soon, Activity or Hypo button and then edit the values in the Target or Duration fields.
-- If a Temp target is running, an additional "Cancel" button is shown in dialog to cancel it
+- Si vous voulez ajuster légèrement les valeurs d'une cible temporaire par défaut, vous pouvez faire un appui long sur un des boutons Repas imminent, Activité ou Hypo puis modifier les valeurs dans les champs Cible ou Durée.
+- Si une cible temporaire est en cours d'exécution, un bouton supplémentaire "Annuler" est affiché dans la boîte de dialogue pour l'annuler
 
 ## Cible temporaire Hypo
 
@@ -38,6 +38,6 @@ Avancés, [Objectif 10](../Usage/Objectives#objective-10-enabling-additional-ore
 
 ## Cible temporaire Personnalisé
 
-Parfois, vous voulez juste avoir une cible temporaire autre que celles par défaut. You can set one by short pressing on the target (range) on the right corner in overview or in the “Action”-Tab.
+Parfois, vous voulez juste avoir une cible temporaire autre que celles par défaut. Vous pouvez en définir une en faisant un appui court sur la cible en haut à droite dans la vue principale ou dans l'onglet "Actions".
 
 ![Définir une cible temp. via l'onglet Action](../images/TempTarget_ActionTab.png)
