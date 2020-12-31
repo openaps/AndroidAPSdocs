@@ -6,9 +6,12 @@ Naudodami laikinus taikinius (LT), galite patys pakeisti glikemijos tikslinę re
 
 ![Nustatyti numatytus laikinus tikslus](../images/TempTarget_Default.png)
 
-Norėdami naudoti vieną iš šių "Numatytųjų laikinų tikslų“, galite ilgai paspausti tikslą viršutiniame dešiniajame pagrindinio ekrano kampe arba naudoti oranžinio mygtuko „Angliavandeniai“ sparčiąsias nuorodas. Norėdami rankiniu būdu nustatyti ["Pasirinktinį laikiną tikslą"](../Usage/temptarget#custom-temp-target) (kraujo glikemiją reikšmę ir/ar trukmę), ilgai paspauskite ant savo tikslo viršutiniame dešiniajame pagrindinio ekrano kampe ir pasirinkite "Pasirinktinis" arba naudokite "Laikinas Tikslas" mygtuką [Veiksmų skirtuke/meniu](../Configuration/Config-Builder#actions).
+To use one of the set “Default-Temp-Targets”, you can short click on your target in the right corner on the top in the overview-tab to show Temp Target dialog and click on Eating Soon, Activity or Hypo button, or use the shortcuts in the orange “Carbs” button. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration), short click on your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
 
 ![Nustatyti laikiną tikslą](../images/TempTarget_Set2.png)
+
+- If you want to slightly adjust the values of a default temp target, you can long press the Eating Soon, Activity or Hypo button and then edit the values in the Target or Duration fields.
+- If a Temp target is running, an additional "Cancel" button is shown in dialog to cancel it
 
 ## Hipo Laikinas tikslas
 
@@ -35,6 +38,6 @@ Pažangus, [10 tikslas](../Usage/Objectives#objective-10-enabling-additional-ore
 
 ## Pasirinktinis Laikinas tikslas
 
-Kartais, jūs tiesiog norite nustatyti kitokį laikiną tikslą, nei numatytieji. Tai nustatysite ilgai nuspaudę tikslinę reikšmę viršutiniame dešiniajame pagrindinio ekrano kampe, arba skirtuke „Veiksmai“.
+Kartais, jūs tiesiog norite nustatyti kitokį laikiną tikslą, nei numatytieji. You can set one by short pressing on the target (range) on the right corner in overview or in the “Action”-Tab.
 
 ![Nustatyti laikiną tikslą per Veiksmų skirtuką](../images/TempTarget_ActionTab.png)
