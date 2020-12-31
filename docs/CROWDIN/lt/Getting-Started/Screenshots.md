@@ -19,15 +19,16 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 ![Profilio pakeitimas, likęs laikas](../images/Home2020_ProfileSwitch.png)
 
 * Dabartinis profilis rodomas juostos kairėje.
-* Ilgai paspaudus profilio juostą, galite pamatyti išsamią profilio informaciją arba [ perjungti profilį](../Usage/Profiles#profile-switch).
-* Jei profilio perjungimas buvo atliktas konkrečiam apribotm laikui, skliausteliuose nurodomas likęs laikas minutėmis.
+* Short press profile bar to view profile details
+* Long press profile bar to [switch between different profiles](../Usage/Profiles#profile-switch).
+* If profile switch was made with duration remaining time in minutes is shown in brackets.
 
 #### Tikslas
 
 ![Laikinas tikslas, likęs laikas](../images/Home2020_TT.png)
 
 * Dabartinė tikslinė glikemija rodoma juostoje dešinėje.
-* Ilgai paspaudus tikslo juostą, galite nustatyti [laikiną tikslą](../Usage/temptarget.md).
+* Short press target bar to set a [temporary target](../Usage/temptarget.md).
 * Jei nustatytas laikinas tikslas, juosta tampa geltona, o likęs laikas minutėmis rodomas skliausteliuose.
 
 #### Dinaminio tikslo koregavimo vizualizavimas
@@ -66,9 +67,11 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
    * Oranžinis apskritimas = veikia super bolusas - likęs laikas rodomas žemiau piktogramos
    * mėlynas apskritimas su punktyrine linija = atviras ciklas
 
-* Ilgai paspauskite apskritimo piktogramą, kad atidarytumėte meniu, leidžiantį išjungti, sustabdyti, vėl įjungti ciklą arba atjungti / vėl prijungti pompą.
+* Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
    
-   ![Ciklo būsenos meniu](../images/Home2020_LoopStatusMenu.png)
+   * If short press on Loop icon, a validation is required after selection in Loop Dialog
+   
+   ![Ciklo būsenos meniu](../images/Home2020_Loop_Dialog.png)
 
 ### Skiltis D - AIO, AAO, Bazė ir Jautrumas
 
@@ -195,6 +198,7 @@ Paprastai faktinė glikemijos kreivė baigsis šių eilučių viduryje arba neto
 * **ŽALI** stulpeliai rodo, kad glikemija yra didesnė, nei algoritmas apskaičiavo. Žalius stulpelius naudoja [Autosens](../Usage/Open-APS-features#autosens), kad padidintų atsparumą.
 * **RAUDONI** stulpeliai rodo, kad glikemija yra mažesnė, nei algoritmas apskaičiavo. Raudonąsias juostas naudoja [Autosens](../Usage/Open-APS-features#autosens), kad padidintų jautrumą.
 * **GELTONUOSE** stulpeliuose rodomas nuokrypis dėl nedeklaruoto maisto NDM.
+* **BLACK** bars show small deviations not taken into account for sensitivity
 
 #### Jautrumas insulinui
 
