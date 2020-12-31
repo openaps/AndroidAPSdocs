@@ -6,9 +6,12 @@ Mit temporären Zielen (oder kurz - aus dem Englischen - TT von temp Targets) ka
 
 ![Standards für temporäre Ziele festlegen](../images/TempTarget_Default.png)
 
-Vordefinierte temporäre Ziele kannst du auswählen und aktivieren, indem du entweder lange auf das Zielbereich-Feld auf der "Home"-Seite drückst oder auf den orangen "Kohlenhydrate"-Button. Um manuell ein [ "Benutzerdefiniertes Temporäres Ziel" ](../Usage/temptarget#benutzerdefiniertes-temp-target) (BG-Wert und/oder Dauer) zu setzen, verwende "Benutzerdefiniert", nachdem Du Dein Ziel in der oberen rechten Ecke lang gedrückt hast oder verwende die Schaltfläche "Temporäres Ziel" auf der Registerkarte (Tab) ["Aktionen"](../Configuration/Config-Builder#aktionen).
+To use one of the set “Default-Temp-Targets”, you can short click on your target in the right corner on the top in the overview-tab to show Temp Target dialog and click on Eating Soon, Activity or Hypo button, or use the shortcuts in the orange “Carbs” button. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration), short click on your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
 
 ![Temporäres Ziel (TT) setzen](../images/TempTarget_Set2.png)
+
+- If you want to slightly adjust the values of a default temp target, you can long press the Eating Soon, Activity or Hypo button and then edit the values in the Target or Duration fields.
+- If a Temp target is running, an additional "Cancel" button is shown in dialog to cancel it
 
 ## Hypo Temp-Target
 
@@ -35,6 +38,6 @@ Für Fortgeschrittene, [Ziel (objective) 10](../Usage/Objectives#objective-10-en
 
 ## Benutzerdefiniertes Temp-Target
 
-Manchmal benötigst du ein temporäres Ziel, das von den Standard-Tt abweicht. Dieses setzt du, indem du entweder lang auf den Zielwert oben rechts auf dem Startbildschirm drückst oder auf dem "Aktionen" Tab.
+Manchmal benötigst du ein temporäres Ziel, das von den Standard-Tt abweicht. You can set one by short pressing on the target (range) on the right corner in overview or in the “Action”-Tab.
 
 ![Temporäres Ziel durch Registerkarte 'Aktion' festlegen](../images/TempTarget_ActionTab.png)
