@@ -4,7 +4,7 @@ Lors du démarrage de votre AndroidAPS et de la sélection de votre profil, vous
 
 En interne, AAPS crée une capture instantanée du profil avec la date et la durée et l’utilise dans la période sélectionnée. La durée zéro signifie infinie. Ce profil est actif jusqu'à ce qu'il y ait un nouveau "Changement de Profil".
 
-To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below).
+Pour effectuer un changement de profil, faites un appui long sur le nom de votre profil ("Tuned 03/11" dans l'image ci-dessous).
 
 ![Faire un changement de profil](../images/ProfileSwitch_HowTo.png)
 
