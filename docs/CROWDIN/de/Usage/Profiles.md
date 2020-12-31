@@ -4,7 +4,7 @@ Wenn du dein AndroidAPS startest und dein Profil auswählst, wirst du einen "Pro
 
 AAPS erzeugt intern eine Momentaufnahme des Profils mit dem Startdatum und der Dauer und verwendet es für den angegebenen Zeitraum. Eine Dauer von 0 bedeutet unendlich. Dadurch ist dieses Profil bis zu einem erneuten Profilwechsel aktiv.
 
-To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below).
+Drücke lange auf den Namen Deines Profils ("Tuned 03/11" im Bild unten), um einen Profilwechsel durchzuführen.
 
 ![Profilwechsel durchführen](../images/ProfileSwitch_HowTo.png)
 
@@ -21,7 +21,7 @@ Bei einem Profilwechsel kannst Du zwei zusätzliche Optionen wählen, die frühe
   
   ![Beispiel Profilwechsel mit Prozentsatz](../images/ProfileSwitchPercentageD.png)
 
-* Das wird an die Pumpe gesendet und ist dann die standardmässig verwendete Basalrate.
+* Das wird an die Pumpe gesendet und ist dann die standardmäßig verwendete Basalrate.
 
 * Der Loop Algorithmus (Open Loop oder Closed Loop) wird von da an mit dem ausgewählten prozentualen Profil arbeiten. So können zum Beispiel unterschiedliche prozentuale Profile für die verschiedene Phasen des hormonellen Zyklus eingerichtet werden.
 
