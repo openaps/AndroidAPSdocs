@@ -187,13 +187,81 @@ Default value: 2
 
 ## Overview of hard-coded limits
 
-|  	| Child 	| Teenager 	| Adult 	| Insulin resistant adult 	| Pregnant 	|
-|-	|-	|-	|-	|-	|-	|
-| MAXBOLUS 	| 5,0 	| 10,0 	| 17,0 	| 25,0 	| 60,0 	|
-| MINDIA 	| 5,0 	| 5,0 	| 5,0 	| 5,0 	| 5,0 	|
-| MAXDIA 	| 7,0 	| 7,0 	| 7,0 	| 7,0 	| 10,0 	|
-| MINIC 	| 2,0 	| 2,0 	| 2,0 	| 2,0 	| 0,3 	|
-| MAXIC 	| 100,0 	| 100,0 	| 100,0 	| 100,0 	| 100,0 	|
-| MAXIOB_AMA 	| 3,0 	| 3,5 	| 7,0 	| 12,0 	| 25,0 	|
-| MAXIOB_SMB 	| 3,0 	| 7,0 	| 12,0 	| 25,0 	| 45,0 	|
-| MAXBASAL 	| 2,0 	| 5,0 	| 10,0 	| 12,0 	| 25,0 	|
+<table>
+<thead>
+  <tr>
+    <th></th>
+    <th>Child</th>
+    <th>Teenager</th>
+    <th>Adult</th>
+    <th>Insulin resistant adult</th>
+    <th>Pregnant</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>MAXBOLUS</td>
+    <td>5,0</td>
+    <td>10,0</td>
+    <td>17,0</td>
+    <td>25,0</td>
+    <td>60,0</td>
+  </tr>
+  <tr>
+    <td>MINDIA</td>
+    <td>5,0</td>
+    <td>5,0</td>
+    <td>5,0</td>
+    <td>5,0</td>
+    <td>5,0</td>
+  </tr>
+  <tr>
+    <td>MAXDIA</td>
+    <td>7,0</td>
+    <td>7,0</td>
+    <td>7,0</td>
+    <td>7,0</td>
+    <td>10,0</td>
+  </tr>
+  <tr>
+    <td>MINIC</td>
+    <td>2,0</td>
+    <td>2,0</td>
+    <td>2,0</td>
+    <td>2,0</td>
+    <td>0,3</td>
+  </tr>
+  <tr>
+    <td>MAXIC</td>
+    <td>100,0</td>
+    <td>100,0</td>
+    <td>100,0</td>
+    <td>100,0</td>
+    <td>100,0</td>
+  </tr>
+  <tr>
+    <td>MAXIOB_AMA</td>
+    <td>3,0</td>
+    <td>3,5</td>
+    <td>7,0</td>
+    <td>12,0</td>
+    <td>25,0</td>
+  </tr>
+  <tr>
+    <td>MAXIOB_SMB</td>
+    <td>3,0</td>
+    <td>7,0</td>
+    <td>12,0</td>
+    <td>25,0</td>
+    <td>45,0</td>
+  </tr>
+  <tr>
+    <td>MAXBASAL</td>
+    <td>2,0</td>
+    <td>5,0</td>
+    <td>10,0</td>
+    <td>12,0</td>
+    <td>25,0</td>
+  </tr>
+</tbody>
+</table>
