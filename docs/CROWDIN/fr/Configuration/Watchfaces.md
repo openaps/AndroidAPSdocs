@@ -250,9 +250,9 @@ Puisque nous ne pouvons pas transiger sur la communication (nous avons besoin de
 
 ### Sony Smartwatch 3
 
-* The Sony Smartwach 3 is one of the most popular watches to be used with AAPS. 
-* Malheureusement, Google a abandonné la prise en charge des appareils sous Wear OS 1.5 à l'automne 2020. This leads to problems when using Sony SW3 with AndroidAPS and above.
-* A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.rst).
+* La montre Sony Smartwatch 3 est l'une des plus populaires utilisée avec AAPS. 
+* Malheureusement, Google a abandonné la prise en charge des appareils sous Wear OS 1.5 à l'automne 2020. Cela entraîne des problèmes lors de l'utilisation de Sony SW3 avec AndroidAPS et plus.
+* Une solution de contournement possible peut être trouvée sur cette [page de dépannage](../Usage/SonySW3.rst).
 
 ## Afficher les données Nightscout
 
