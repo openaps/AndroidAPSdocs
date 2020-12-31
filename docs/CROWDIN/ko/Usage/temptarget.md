@@ -6,9 +6,12 @@
 
 ![임시 목표 기본값 설정하기](../images/TempTarget_Default.png)
 
-홈 화면 탭에서 우측 상단 코너에 있는 목표를 길게 누르거나 주황색 "탄수화물" 단축키를 눌러 임시 목표 기본값"을 설정할 수 있습니다. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration) use “Custom“ after long-pressing your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
+To use one of the set “Default-Temp-Targets”, you can short click on your target in the right corner on the top in the overview-tab to show Temp Target dialog and click on Eating Soon, Activity or Hypo button, or use the shortcuts in the orange “Carbs” button. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration), short click on your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
 
 ![임시 목표 설정하기](../images/TempTarget_Set2.png)
+
+- If you want to slightly adjust the values of a default temp target, you can long press the Eating Soon, Activity or Hypo button and then edit the values in the Target or Duration fields.
+- If a Temp target is running, an additional "Cancel" button is shown in dialog to cancel it
 
 ## 저혈당 임시 목표
 
@@ -35,6 +38,6 @@
 
 ## 사용자 지정 임시 목표
 
-때로는 기본값이 아닌 임시 목표를 사용하고자 할 수 있습니다. 홈 화면의 우측 코너에 있는 목표(범위) 를 길게 누르거나 "실행" 탭에서 설정할 수 있습니다.
+때로는 기본값이 아닌 임시 목표를 사용하고자 할 수 있습니다. You can set one by short pressing on the target (range) on the right corner in overview or in the “Action”-Tab.
 
 ![실행 탭을 통해 임시 목표 설정하기](../images/TempTarget_ActionTab.png)
