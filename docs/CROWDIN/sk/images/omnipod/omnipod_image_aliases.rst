@@ -135,6 +135,21 @@
 .. |RileyLink_Setup_3|                  image:: RileyLink_Setup_3.png
 .. |RileyLink_Setup_4|                  image:: RileyLink_Setup_4.png
 .. |RileyLink_Setup_5|                  image:: RileyLink_Setup_5.png
+.. |RileyLink_Setup_6|                  image:: RileyLink_Setup_6.png
+
+..
+	RileyLink Setup Add Device
+.. |RileyLink_Setup_Add_1|                  image:: RileyLink_Setup_Add_1.png
+.. |RileyLink_Setup_Add_2|                  image:: RileyLink_Setup_Add_2.png
+.. |RileyLink_Setup_Add_3|                  image:: RileyLink_Setup_Add_3.png
+.. |RileyLink_Setup_Add_4|                  image:: RileyLink_Setup_Add_4.png
+
+..
+	RileyLink Setup Remove Device
+.. |RileyLink_Setup_Remove_1|                  image:: RileyLink_Setup_Remove_1.png
+.. |RileyLink_Setup_Remove_2|                  image:: RileyLink_Setup_Remove_2.png
+.. |RileyLink_Setup_Remove_3|                  image:: RileyLink_Setup_Remove_3.png
+.. |RileyLink_Setup_Remove_4|                  image:: RileyLink_Setup_Remove_4.png
 
 ..
 	RileyLink Statistics History
@@ -407,7 +422,21 @@ RileyLink Setup
 |RileyLink_Setup_3|                 
 |RileyLink_Setup_4|                 
 |RileyLink_Setup_5|                 
+|RileyLink_Setup_6|  
 
+RileyLink Setup Add Device
+
+|RileyLink_Setup_Add_1|
+|RileyLink_Setup_Add_2|
+|RileyLink_Setup_Add_3|
+|RileyLink_Setup_Add_4|
+
+RileyLInk Setup Remove Device
+
+|RileyLink_Setup_Remove_1|
+|RileyLink_Setup_Remove_2|
+|RileyLink_Setup_Remove_3|
+|RileyLink_Setup_Remove_4|
 
 RileyLink Statistics History
 
