@@ -618,9 +618,52 @@ Provides advanced settings to assist debugging.
 Switching or Removing an Active Pod Communication Device (RileyLink)
 --------------------------------------------------------------------
 
-With many alternative models to the original RileyLink available or you have multiple versions of the same pod communication device (RileyLink), it becomes necessary to switch or remove the selected pod communication device (RileyLink) from Omnipod Setting configuration.  The 
+With many alternative models to the original RileyLink available or the need have multiple/backup versions of the same pod communication device (RileyLink), it becomes necessary to switch or remove the selected pod communication device (RileyLink) from Omnipod Setting configuration. 
 
+The following steps will show how to **Remove** and existing pod communication device (RileyLink) as well as **Add** a new pod communication device.  Executing both **Remove** and **Add** steps will switch your device.
 
+1. Access the **RileyLink Selection** menu by selecting the **3 dot menu (1)** in the upper right hand corner of the **Omnipod (POD)** tab and selecting **Omnipod preferences (2)** from the dropdown menu. On the **Omnipod Settings** menu under **RileyLink Configuration (3)** press the **Not Set** (if no device is selected) or **MAC Address** (if a device is present) text to open the **RileyLink Selection** menu. 
+
+    |Omnipod_Settings_2| |RileyLink_Setup_2|  
+
+Remove Currently Selected Pod Communication Device (RileyLink)
+--------------------------------------------------------------
+
+This process will show how to remove the currently selected pod communication device (RileyLink) from the Omnipod Driver settings.
+
+1. Under **RileyLink Configuration** press the **MAC Address (1)** text to open the **RileyLink Selection** menu. 
+
+    |RileyLink_Setup_Remove_1|
+
+2. On the **RileyLink Selection** menu the press **Remove (2)** button to remove **your currently selected RileyLink (3)**
+
+    |RileyLink_Setup_Remove_2|
+
+3. At the confirmation prompt press **Yes (4)** to confirm the removal of your device.
+
+    |RileyLink_Setup_Remove_3|
+    
+4. You are returned to the **Omnipod Setting** menu where under **RileyLink Configuration** you will now see the device is **Not Set (5)**.  Congratulations, you have now successfully removed your selected pod communication device (RileyLink).
+
+    |RileyLink_Setup_Remove_4|
+
+Add Currently Selected Pod Communication Device (RileyLink)
+-----------------------------------------------------------
+
+This process will show how to add a new pod communication device (RileyLink) to the Omnipod Driver settings.
+
+1. Under **RileyLink Configuration** press the **Not Set (1)** text to open the **RileyLink Selection** menu. 
+
+    |RileyLink_Setup_Add_1|
+    
+2. Press the **Scan (2)** button to start scanning for all available Bluetooth devices.
+
+    |RileyLink_Setup_Add_2|
+
+3. Select **your RileyLink (3)** from the list of available devices and you will be returned to the **Omnipod Settings** menu displaying the **MAC Address (4)** of your newly selected device.  Congratulations you have successfully selected your pod communication device (RileyLink).
+
+    |RileyLink_Setup_Add_3| |RileyLink_Setup_Add_4|
+    
 
 Actions (ACT) Tab
 =================
@@ -894,6 +937,20 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |RileyLink_Setup_4|                  image:: ../images/omnipod/RileyLink_Setup_4.png
 .. |RileyLink_Setup_5|                  image:: ../images/omnipod/RileyLink_Setup_5.png
 .. |RileyLink_Setup_6|                  image:: ../images/omnipod/RileyLink_Setup_6.png
+
+..
+	RileyLink Setup Add Device
+.. |RileyLink_Setup_Add_1|                  image:: ../images/omnipod/RileyLink_Setup_Add_1.png
+.. |RileyLink_Setup_Add_2|                  image:: ../images/omnipod/RileyLink_Setup_Add_2.png
+.. |RileyLink_Setup_Add_3|                  image:: ../images/omnipod/RileyLink_Setup_Add_3.png
+.. |RileyLink_Setup_Add_4|                  image:: ../images/omnipod/RileyLink_Setup_Add_4.png
+
+..
+	RileyLink Setup Remove Device
+.. |RileyLink_Setup_Remove_1|                  image:: ../images/omnipod/RileyLink_Setup_Remove_1.png
+.. |RileyLink_Setup_Remove_2|                  image:: ../images/omnipod/RileyLink_Setup_Remove_2.png
+.. |RileyLink_Setup_Remove_3|                  image:: ../images/omnipod/RileyLink_Setup_Remove_3.png
+.. |RileyLink_Setup_Remove_4|                  image:: ../images/omnipod/RileyLink_Setup_Remove_4.png
 
 ..
 	RileyLink Statistics History
