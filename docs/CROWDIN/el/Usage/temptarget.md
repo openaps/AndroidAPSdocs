@@ -6,9 +6,12 @@
 
 ![Ορίστε προεπιλεγμένους προσωρινούς στόχους](../images/TempTarget_Default.png)
 
-Για να ορίσετε "Προεπιλεγμένες τιμές-Προσωρινοί-Στόχοι", μπορείτε να πατήσετε παρατεταμένα τον στόχο σας στη δεξιά γωνία στην κορυφή της καρτέλας επισκόπησης ή στο πορτοκαλί κουμπί "Υδατάνθρακες". To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration) use “Custom“ after long-pressing your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
+To use one of the set “Default-Temp-Targets”, you can short click on your target in the right corner on the top in the overview-tab to show Temp Target dialog and click on Eating Soon, Activity or Hypo button, or use the shortcuts in the orange “Carbs” button. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration), short click on your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
 
 ![Ορίστε προσωρινό στόχο](../images/TempTarget_Set2.png)
+
+- If you want to slightly adjust the values of a default temp target, you can long press the Eating Soon, Activity or Hypo button and then edit the values in the Target or Duration fields.
+- If a Temp target is running, an additional "Cancel" button is shown in dialog to cancel it
 
 ## Υπογλυκαιμικός Ρυθμός-Στόχος
 
@@ -35,6 +38,6 @@ Advanced, [objective 10](../Usage/Objectives#objective-10-enabling-additional-or
 
 ## Διαμορφόμενος Ρυθμός-Στόχος
 
-Μερικές φορές, θέλετε απλώς να έχετε έναν στόχο ρυθμό διαφορετικό από τους προεπιλεγμένους. Μπορείτε να ορίσετε ένα πατώντας μακροπρόθεσμα τον στόχο (εύρος) στη δεξιά γωνία της επισκόπησης ή στο κουμπί "Δράση".
+Μερικές φορές, θέλετε απλώς να έχετε έναν στόχο ρυθμό διαφορετικό από τους προεπιλεγμένους. You can set one by short pressing on the target (range) on the right corner in overview or in the “Action”-Tab.
 
 ![Ορίστε ρυθμό στόχου μέσω της καρτέλας Δράσης](../images/TempTarget_ActionTab.png)
