@@ -49,7 +49,7 @@ AndroidAPS limits the value as follows:
 * Insulin-resistant adult: 12
 * Pregnant: 25
 
-*See also [overview of hard-coded settings](../Usage/Open-APS-features.html#overview-of-hard-coded-settings).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
 
 ### Maximum total IOB OpenAPS can’t go over (OpenAPS "max-iob")
 This value determines which maxIOB has to be considered by AAPS running in closed loop mode. If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
@@ -66,7 +66,7 @@ Be careful and patient and only change the settings step by step. It is differen
 * Insulin resistant adult: 25
 * Pregnant: 40
 
-*See also [overview of hard-coded settings](../Usage/Open-APS-features.html#overview-of-hard-coded-settings).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
 
 See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
@@ -147,7 +147,7 @@ The hardcoded parameters in AndroidAPS are:
 * Insulin resistant adult: 12
 * Pregnant: 25
 
-*See also [overview of hard-coded settings](../Usage/Open-APS-features.html#overview-of-hard-coded-settings).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
 
 ### Maximum basal IOB OpenAPS can deliver [U] (OpenAPS "max-iob")
 This parameter limits the maximum of basal IOB where  AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
@@ -160,7 +160,7 @@ The default value is 2, but you should be rise this parameter slowly to see how 
 * Insulin resistant adult: 12
 * Pregnant: 25
 
-*See also [overview of hard-coded settings](../Usage/Open-APS-features.html#overview-of-hard-coded-settings).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
 
 ### Enable AMA Autosense
 Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosense or not.
@@ -185,7 +185,7 @@ The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low 
 
 Default value: 2
 
-## Overview of hard-coded settings
+## Overview of hard-coded limits
 
 |  	| Child 	| Teenager 	| Adult 	| Insulin resistant adult 	| Pregnant 	|
 |-	|-	|-	|-	|-	|-	|
