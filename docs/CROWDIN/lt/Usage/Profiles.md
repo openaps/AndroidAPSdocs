@@ -4,7 +4,7 @@ Paleidę AndroidAPS ir pasirinkę profilį, turėsite atlikti „profilio pakeit
 
 AAPS susikuria profilio momentinį vaizdą su pradžios data ir trukme ir naudoja jį nurodytu laikotarpiu. Trukmė "0" reiškia "neribotai". Toks profilis yra aktyvus, kol bus perjungtas naujas profilis.
 
-Atlikite profilio pakeitimą: ilgai paspauskite profilio pavadinimą (žemiau pateiktame paveikslėlyje „Aktualus (Rad)“) ir pasirinkite Profilio keitimas.
+To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below).
 
 ![Profilio keitimas](../images/ProfileSwitch_HowTo.png)
 
