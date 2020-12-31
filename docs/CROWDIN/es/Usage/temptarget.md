@@ -6,9 +6,12 @@ Con "Objetivo-Temporal" (o TT corto), puede cambiar su objetivo de glucosa en sa
 
 ![Establecer objetivos temporales por defecto](../images/TempTarget_Default.png)
 
-Para utilizar uno de los conjuntos "Por defecto-Objetivos-Temporales", puede presionar mucho tiempo en su objetivo en la esquina derecha de la parte superior de la pestaña de visión general o utilizar los accesos directos en el botón "Carbs" de color naranja. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration) use “Custom“ after long-pressing your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
+To use one of the set “Default-Temp-Targets”, you can short click on your target in the right corner on the top in the overview-tab to show Temp Target dialog and click on Eating Soon, Activity or Hypo button, or use the shortcuts in the orange “Carbs” button. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration), short click on your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
 
 ![Establecer el objetivo temporal](../images/TempTarget_Set2.png)
+
+- If you want to slightly adjust the values of a default temp target, you can long press the Eating Soon, Activity or Hypo button and then edit the values in the Target or Duration fields.
+- If a Temp target is running, an additional "Cancel" button is shown in dialog to cancel it
 
 ## Objetivo temporal ante Hipoglucemia
 
@@ -35,6 +38,6 @@ Avanzado, [objetivo 10](../Usage/Objectives#objective-10-enabling-additional-ore
 
 ## Objetivo-Temporal personalizado
 
-A veces, sólo quieres tener un objetivo temporal que no sea el de los valores por defecto. Puede establecer una pulsando una vez sobre el objetivo (rango) en la esquina derecha en la visión general o en la Pestaña Acción.
+A veces, sólo quieres tener un objetivo temporal que no sea el de los valores por defecto. You can set one by short pressing on the target (range) on the right corner in overview or in the “Action”-Tab.
 
 ![Establecer el objetivo temporal a través de la pestaña Acción](../images/TempTarget_ActionTab.png)
