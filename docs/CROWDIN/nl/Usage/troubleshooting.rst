@@ -47,3 +47,7 @@ Telefoons
 ==================================================
 * `Jelly <../Usage/jelly.html>`_
 * `Huawei bluetooth & batterij optimalisatie <../Usage/huawei.html>`_
+
+Smartwaches
+==================================================
+* `Sony Smartwatch 3 <../Usage/SonySW3.html>`_
