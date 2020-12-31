@@ -19,15 +19,16 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 ![Verbleibende Dauer des Profilwechsels](../images/Home2020_ProfileSwitch.png)
 
 * Das aktuelle Profil wird in der linken Schaltfläche angezeigt.
-* Schaltfläche Profil lange Drücken um Profildetails anzuzeigen oder um [zwischen verschiedenen Profilen zu wechseln](../Usage/Profiles#profilwechsel).
-* Falls der Profilwechsel mit Angabe der Dauer durchgeführt wurde, wird die verbleibende Zeit in Minuten in Klammern angezeigt.
+* Short press profile bar to view profile details
+* Long press profile bar to [switch between different profiles](../Usage/Profiles#profile-switch).
+* If profile switch was made with duration remaining time in minutes is shown in brackets.
 
 #### Ziel
 
 ![Verbleibende Dauer des temporären Ziels](../images/Home2020_TT.png)
 
 * Das aktuelle BZ-Ziel wird in der rechten Schaltfläche angezeigt.
-* Schaltfläche Ziel lange drücken, um ein [temporäres Ziel ](../Usage/temptarget.md) festzulegen.
+* Short press target bar to set a [temporary target](../Usage/temptarget.md).
 * Falls ein temporäres Ziel festgelegt ist, wird die Leiste gelb und die verbleibende Zeit in Minuten in Klammern angezeigt.
 
 #### Anzeige der dynamischen Ziel-Anpassung
@@ -66,9 +67,11 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
    * orangener Kreis = Superbolus läuft - verbleibende Zeit wird unterhalb des Symbols angezeigt
    * blauer Kreis mit gepunkteten Linien = Open Loop
 
-* Ein langer Druck auf das Symbol, öffnet das Menü zum Deaktivieren, Unterbrechen und Reaktivieren des Loops sowie um die Pumpe zu trennen / wieder zu verbinden.
+* Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
    
-   ![Statusmenü Loop](../images/Home2020_LoopStatusMenu.png)
+   * If short press on Loop icon, a validation is required after selection in Loop Dialog
+   
+   ![Statusmenü Loop](../images/Home2020_Loop_Dialog.png)
 
 ### Abschnitt D - IOB, COB, BR und AS
 
@@ -195,6 +198,7 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 * **GRÜNE** Balken zeigen, dass der BZ höher ist als der Algorithmus es erwartet. Grüne Balken werden verwendet, um die Resistenz in [Autosens](../Usage/Open-APS-features#autosens) zu erhöhen.
 * **ROTE** Balken zeigen, dass der BZ niedriger ist als der Algorithmus erwartet. Rote Balken werden verwendet, um die Sensitivität in [Autosens](../Usage/Open-APS-features#autosens) zu erhöhen.
 * **GELB** Balken zeigen eine Abweichung aufgrund von UAM an.
+* **BLACK** bars show small deviations not taken into account for sensitivity
 
 #### Sensitivität
 
