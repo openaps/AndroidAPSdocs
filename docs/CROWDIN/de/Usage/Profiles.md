@@ -4,7 +4,7 @@ Wenn du dein AndroidAPS startest und dein Profil auswählst, wirst du einen "Pro
 
 AAPS erzeugt intern eine Momentaufnahme des Profils mit dem Startdatum und der Dauer und verwendet es für den angegebenen Zeitraum. Eine Dauer von 0 bedeutet unendlich. Dadurch ist dieses Profil bis zu einem erneuten Profilwechsel aktiv.
 
-Profilwechsel durchführen: Drücke lange auf den Namen des Profils ("Aktuell (Rad)" im Bild unten) und wähle Profilwechsel.
+To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below).
 
 ![Profilwechsel durchführen](../images/ProfileSwitch_HowTo.png)
 
