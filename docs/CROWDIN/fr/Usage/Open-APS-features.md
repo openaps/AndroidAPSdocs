@@ -52,7 +52,7 @@ AndroidAPS limite la valeur ainsi :
 * Adulte résistant à l'insuline : 12
 * Grossesse : 25
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
+*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur).*
 
 ### IA totale maximale pour OpenAPS \[U\] (OpenAPS "max-IA")
 
@@ -63,7 +63,7 @@ En utilisant OpenAPS SMB, maxIA est calculé différemment de OpenAPS AMA. Dans 
     maxIA = moyenne bolus repas + 3 x max basal quotidien
     
 
-Soyez prudent et patient et modifiez les paramètres petit à petit. C'est différent pour tout le monde et dépend aussi de la Dose Totale d'Insuline (DTI) moyenne quotidienne. Pour des raisons de sécurité, il y a une limite, qui dépend de l'âge du patient. The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features.html#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
+Soyez prudent et patient et modifiez les paramètres petit à petit. C'est différent pour tout le monde et dépend aussi de la Dose Totale d'Insuline (DTI) moyenne quotidienne. Pour des raisons de sécurité, il y a une limite, qui dépend de l'âge du patient. La 'limite en dur' pour maxIA est supérieure à la limite [AMA](../Usage/Open-APS-features.html#max-u-h-pour-le-debit-temp-basal-openaps-max-basal).
 
 * Enfant : 3
 * Adolescent : 7
@@ -71,7 +71,7 @@ Soyez prudent et patient et modifiez les paramètres petit à petit. C'est diff�
 * Adulte résistant à l'insuline : 25
 * Grossesse : 40
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
+*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur).*
 
 Voir aussi la [documentation OpenAPS pour SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
@@ -165,13 +165,13 @@ Les paramètres codés en dur dans AndroidAPS sont les suivants :
 * Adulte résistant à l'insuline : 12
 * Grossesse : 25
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
+*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur).*
 
 ### IA basale max que OpenAPS pourra délivrer \[U\] (OpenAPS "max-iob")
 
-Ce paramètre limite la quantité maximale d'IA basale pour AndroidAPS. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+Ce paramètre limite la quantité maximale d'IA basale pour AndroidAPS. Si l'IA est plus élevée, AAPS arrête de délivrer de l'insuline basale additionnelle jusqu'à ce que l'IA de basale repasse sous la limite.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. C'est différent pour tout le monde et dépend aussi de la Dose Totale d'Insuline (DTI) moyenne quotidienne. Pour des raisons de sécurité, il y a une limite, qui dépend de l'âge du patient. Cette 'limite en dur' pour maxIA est plus basse avec AMA (AAR) qu'avec SMB.
+La valeur par défaut est 2, mais vous pouvez augmenter ce paramètre lentement pour voir comment cela vous affecte et trouver quelle valeur vous convient le mieux. C'est différent pour tout le monde et dépend aussi de la Dose Totale d'Insuline (DTI) moyenne quotidienne. Pour des raisons de sécurité, il y a une limite, qui dépend de l'âge du patient. Cette 'limite en dur' pour maxIA est plus basse avec AMA (AAR) qu'avec SMB.
 
 * Enfant : 3
 * Adolescent : 5
@@ -179,15 +179,15 @@ The default value is 2, but you should be rise this parameter slowly to see how 
 * Adulte résistant à l'insuline : 12
 * Grossesse : 25
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
+*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur).*
 
 ### Activer AMA Autosens
 
-Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosense or not.
+Ici, vous pouvez choisir si vous voulez utiliser la [détection de sensibilité](../Configuration/Sensitivity-detection-and-COB.md) autosense ou non.
 
 ### Autosens ajuste aussi les cibles temp
 
-If you have this option enabled, autosense can adjust targets (next to basal, ISF and IC), too. This lets AndroidAPS work more 'aggressive' or not. The actual target might be reached faster with this.
+Si cette option est activée, autosens peut également ajuster les cibles (à côté du débit de base, SI et G/I). Cela permet à AndroidAPS d'être plus ou moins "agressif". La cible réelle peut être atteinte plus rapidement avec ceci.
 
 ### Paramètres Avancés
 
@@ -201,27 +201,27 @@ Valeur par défaut : 3 (ne doit pas être modifié sauf si vous en avez vraiment
 
 Valeur par défaut : 4 (ne doit pas être modifié sauf si vous en avez vraiment besoin et que vous savez ce que vous faites)
 
-**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+**Snooze bolus Diviseur de DAI** La fonction “Snooze bolus” marche après un bolus repas. AAPS ne définit pas de débits de base temporaires bas après un repas pendant une durée égale à la DAI divisée par le paramètre « bolus snooze ». La valeur par défaut est 2. Cela signifie qu'avec un DAI de 5h, le "bolus snooze" serait d'une durée de 5h/2 = 2,5h.
 
-Default value: 2
+Valeur par défaut : 2
 
-## Overview of hard-coded limits
+## Aperçu des limites codées en dur
 
 <table>
   
 <thead>
   <tr>
     <th></th>
-    <th>Child</th>
+    <th> Enfant</th>
     <th>Adolescent</th>
-    <th>Adult</th>
-    <th>Insulin resistant adult</th>
-    <th>Pregnant</th>
+    <th>Adulte</th>
+    <th>Adulte résistant à l'insuline</th>
+    <th>Femme enceinte</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>MAXBOLUS</td>
+    <td>BOLUS MAX</td>
     <td>5,0</td>
     <td>10,0</td>
     <td>17,0</td>
@@ -229,7 +229,7 @@ Default value: 2
     <td>60,0</td>
   </tr>
   <tr>
-    <td>MINDIA</td>
+    <td>DAI MIN</td>
     <td>5,0</td>
     <td>5,0</td>
     <td>5,0</td>
@@ -237,7 +237,7 @@ Default value: 2
     <td>5,0</td>
   </tr>
   <tr>
-    <td>MAXDIA</td>
+    <td>DAI MAX</td>
     <td>7,0</td>
     <td>7,0</td>
     <td>7,0</td>
@@ -245,7 +245,7 @@ Default value: 2
     <td>10,0</td>
   </tr>
   <tr>
-    <td>MINIC</td>
+    <td>G/I MIN</td>
     <td>2,0</td>
     <td>2,0</td>
     <td>2,0</td>
@@ -253,7 +253,7 @@ Default value: 2
     <td>0,3</td>
   </tr>
   <tr>
-    <td>MAXIC</td>
+    <td>G/I MAX</td>
     <td>100,0</td>
     <td>100,0</td>
     <td>100,0</td>
@@ -261,7 +261,7 @@ Default value: 2
     <td>100,0</td>
   </tr>
   <tr>
-    <td>MAXIOB_AMA</td>
+    <td>IA MAX AMA</td>
     <td>3,0</td>
     <td>3,5</td>
     <td>7,0</td>
@@ -269,7 +269,7 @@ Default value: 2
     <td>25,0</td>
   </tr>
   <tr>
-    <td>MAXIOB_SMB</td>
+    <td>IA MAX SMB</td>
     <td>3,0</td>
     <td>7,0</td>
     <td>12,0</td>
@@ -277,7 +277,7 @@ Default value: 2
     <td>45,0</td>
   </tr>
   <tr>
-    <td>MAXBASAL</td>
+    <td>BASAL MAX</td>
     <td>2,0</td>
     <td>5,0</td>
     <td>10,0</td>
