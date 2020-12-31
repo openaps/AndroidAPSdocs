@@ -57,9 +57,19 @@ You can enable the Omnipod driver in AAPS in **two ways**:
 Option 1: The Setup Wizard
 --------------------------
 
-Via the **AAPS Setup Wizard (2)** located at the top right-hand corner **three-dot menu (1)** and proceeding through the wizard menus until you arrive at the **Pump** screen. Then select the **Omnipod radio button (3)** and select **Pump Setup (4)** to open the Omnipod Settings screen.
+After installing a new version of AndroidAPS, the **Setup Wizard** will start automatically.  This will also occur during in place upgrades.  If you already have exported your settings from a previous installation you can exit the Setup Wizard and import your old settings.  For new installations proceed below.
+
+Via the **AAPS Setup Wizard (2)** located at the top right-hand corner **three-dot menu (1)** and proceeding through the wizard menus until you arrive at the **Pump** screen. Then select the **Omnipod radio button (3)** .
 
     |Enable_Omnipod_Driver_1|  |Enable_Omnipod_Driver_2|
+
+On the same screen, below the pump selection, the **Omnipod Driver Settings** are displayed, under the **RileyLink Configuration** add your RileyLink device by pressing the **Not Set** text. 
+
+On the **RileyLink Selection** screen press the **Scan** button and select your RileyLink by scanning for all available Bluetooth devices and selecting your RileyLink from the list. When properly selected you are returned to the pump driver selection screen displaying the Omnipod driver settings showing your selected RileyLink with the MAC address listed. 
+
+Press the **Next** button to proceed with the rest of the **Setup Wizard.**  It can take up to one minute for the selected RileyLink to initialize and the **Next** button to become active.
+
+Detailed steps on how to setup your pod communication device are listed below in the `RileyLink Setup Section <#rileylink-setup>`__.
 
 **OR**
 
@@ -74,6 +84,8 @@ Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜
 
 Verification of Omnipod Driver Selection
 ----------------------------------------
+
+*Note: If you have exited the Setup Wizard early without selecting your RileyLink, the Omnipod Driver is enabled but you will still need to select your RileyLink.  You may see the Omnipod (POD) tab appear as it does below*
 
 To verify that you have enabled the Omnipod driver in AAPS **swipe to the left** from the **Overview** tab, where you will now see an **Omnipod** or **POD** tab.
 
@@ -91,21 +103,29 @@ Please **swipe left** to the **Omnipod (POD)** tab where you will be able to man
 RileyLink Setup
 ---------------
 
+If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the `Activating a Pod Section <#activating-a-pod>`__ below.
+
 *Note: A good visual indicator that the RileyLink is not connected is that the Insulin and Calculator buttons on the HOME tab will be missing. This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.*
 
 1. Ensure that your RileyLink is fully charged and powered on.
 
-2. After selecting the Omnipod driver, next you will identify and select your RileyLink from **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Gear Icon (Settings) (2)** ➜\ **RileyLink Configuration (3)** by pressing the **Scan (4)** button and **selecting your RileyLink (5)** .
+2. After selecting the Omnipod driver, identify and select your RileyLink from **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Gear Icon (Settings) (2)** ➜\ **RileyLink Configuration (3)** by pressing the **Not Set** or **MAC Address (if present)** text.   
 
     Ensure your RileyLink battery is charged and it is `positioned in close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Once selected, you can proceed to activate your first pod session. Use the back button on your phone to return to the main AAPS interface.
 
     |RileyLink_Setup_1| |RileyLink_Setup_2|
-    
+
+3. On the **RileyLink Selection** screen press the **Scan (4)** button to initiate a bluetooth scan. **Select your RileyLink (5)**  from the list of available Bluetooth devices.
+
     |RileyLink_Setup_3| |RileyLink_Setup_4|
 
-3. Verify that in the **Omnipod (POD)** tab that the **RileyLink Status (1)** appears as **Connected.** The **Pod status (2)** field should show **No active Pod**; if not, please attempt the previous step or exit AAPS to see if this refreshes the connection.
+4. After successful selection you are returned to the Omnipod Settings page listing your **currently selected RileyLink\'s MAC Address (6).** 
 
     |RileyLink_Setup_5|
+
+5. Verify that in the **Omnipod (POD)** tab that the **RileyLink Status (1)** appears as **Connected.** The **Pod status (2)** field should show **No active Pod**; if not, please attempt the previous step or exit AAPS to see if this refreshes the connection.
+
+    |RileyLink_Setup_6|
 
 Activating a Pod
 ----------------
@@ -294,7 +314,9 @@ View RileyLink Settings and History
 
 This section shows you how to review the settings of your active pod and RileyLink along with the communication history of each. This feature, once accessed, is split into two sections: **Settings** and **History**.
 
-The primary use of this feature is when your RileyLink is out of the Bluetooth range of your phone after a period of time and the **RileyLink status** reports **RileyLink unreachable**. The **refresh** button will manually attempt to re-establish Bluetooth communication with the currently configured RileyLink in the Omnipod settings.
+The primary use of this feature is when your RileyLink is out of the Bluetooth range of your phone after a period of time and the **RileyLink status** reports **RileyLink unreachable**. The **REFRESH** button on the main **Omnipod (POD)** tab will manually attempt to re-establish Bluetooth communication with the currently configured RileyLink in the Omnipod settings.
+
+In the event the **REFRESH** button on the main **Omnipod (POD)** tab does not restore the connection to the RileyLink, please follow the additional steps below for a manual reconnection.
 
 Manually Re-establish RileyLink Bluetooth Communication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -335,6 +357,7 @@ RileyLink (3) fields
 ++++++++++++++++++++
 
 	* **Configured Address:** MAC address of the selected RileyLink defined in the Omnipod Settings.
+	* **Configured RileyLink Name:** Bluetooth identification name of the selected RileyLink defined in your phone's Bluetooth settings.
 	* **Connected Device:** Model of the Omnipod pod currently communicating with the RileyLink (currently only eros pods work with the RileyLink
 	* **Connection Status**: The current status of the Bluetooth connection between the RileyLink and the phone running AAPS.
 	* **Connection Error:** If there is an error with the RileyLink Bluetooth connection details will be displayed here.
@@ -518,6 +541,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 * The primary usage of this feature is when the currently active RileyLink is not responding and communication is in a stuck state.
 * If the RileyLink is turned off and then back on, the **Reset RileyLink Config** button needs to be pressed, so that it sets these communication parameters in the RileyLink configuration.
 * If this is NOT done then AAPS will need to be restarted after the RileyLink is power cycled.
+* This button **DOES NOT** need to be pressed when switching between different pod communication devices (RileyLinks)
 
 Omnipod Settings
 ================
@@ -526,7 +550,7 @@ The Omnipod driver settings are configurable from the top-left hand corner **ham
 
 |Omnipod_Settings_1|
 
-**NOTE:** A faster way to access the **Omnipod settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **Omnipod (POD)** tab and selecting **Plugin preferences (2)** from the dropdown menu.
+**NOTE:** A faster way to access the **Omnipod settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **Omnipod (POD)** tab and selecting **Omnipod preferences (2)** from the dropdown menu.
 
 |Omnipod_Settings_2|
 
@@ -583,13 +607,63 @@ Provides advanced settings to assist debugging.
 * **Show Suspend Delivery button in Omnipod tab:** Hide or display the suspend delivery button in the **Omnipod (POD)** tab.
 * **Show Pulse log button in Pod Management menu:** Hide or display the pulse log button in the **Pod Management** menu.
 * **Show RileyLink Stats button in Pod Management menu:** Hide or display the RileyLink Stats button in the **Pod Management** menu.
-* **Use battery level reported by EmaLink/OrangeLink** Reports the actual battery level of the EmaLink/OrangeLink. 
+* **Use battery level reported by OrangeLink/EmaLink:** Reports the actual battery level of the OrangeLink/EmaLink. We **strongly recommend** that all OrangeLink/EmaLink users enable this setting.
 
 	+  DOES NOT work with the original RileyLink.
 	+  May not work with RileyLink alternatives.
 	+  Enabled - Reports the current battery level for supported pod communication devices.
 	+  Disabled - Reports a value of n/a.
 * **\*DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
+
+Switching or Removing an Active Pod Communication Device (RileyLink)
+--------------------------------------------------------------------
+
+With many alternative models to the original RileyLink available or the need have multiple/backup versions of the same pod communication device (RileyLink), it becomes necessary to switch or remove the selected pod communication device (RileyLink) from Omnipod Setting configuration. 
+
+The following steps will show how to **Remove** and existing pod communication device (RileyLink) as well as **Add** a new pod communication device.  Executing both **Remove** and **Add** steps will switch your device.
+
+1. Access the **RileyLink Selection** menu by selecting the **3 dot menu (1)** in the upper right hand corner of the **Omnipod (POD)** tab and selecting **Omnipod preferences (2)** from the dropdown menu. On the **Omnipod Settings** menu under **RileyLink Configuration (3)** press the **Not Set** (if no device is selected) or **MAC Address** (if a device is present) text to open the **RileyLink Selection** menu. 
+
+    |Omnipod_Settings_2| |RileyLink_Setup_2|  
+
+Remove Currently Selected Pod Communication Device (RileyLink)
+--------------------------------------------------------------
+
+This process will show how to remove the currently selected pod communication device (RileyLink) from the Omnipod Driver settings.
+
+1. Under **RileyLink Configuration** press the **MAC Address (1)** text to open the **RileyLink Selection** menu. 
+
+    |RileyLink_Setup_Remove_1|
+
+2. On the **RileyLink Selection** menu the press **Remove (2)** button to remove **your currently selected RileyLink (3)**
+
+    |RileyLink_Setup_Remove_2|
+
+3. At the confirmation prompt press **Yes (4)** to confirm the removal of your device.
+
+    |RileyLink_Setup_Remove_3|
+    
+4. You are returned to the **Omnipod Setting** menu where under **RileyLink Configuration** you will now see the device is **Not Set (5)**.  Congratulations, you have now successfully removed your selected pod communication device (RileyLink).
+
+    |RileyLink_Setup_Remove_4|
+
+Add Currently Selected Pod Communication Device (RileyLink)
+-----------------------------------------------------------
+
+This process will show how to add a new pod communication device (RileyLink) to the Omnipod Driver settings.
+
+1. Under **RileyLink Configuration** press the **Not Set (1)** text to open the **RileyLink Selection** menu. 
+
+    |RileyLink_Setup_Add_1|
+    
+2. Press the **Scan (2)** button to start scanning for all available Bluetooth devices.
+
+    |RileyLink_Setup_Add_2|
+
+3. Select **your RileyLink (3)** from the list of available devices and you will be returned to the **Omnipod Settings** menu displaying the **MAC Address (4)** of your newly selected device.  Congratulations you have successfully selected your pod communication device (RileyLink).
+
+    |RileyLink_Setup_Add_3| |RileyLink_Setup_Add_4|
+    
 
 Actions (ACT) Tab
 =================
@@ -862,6 +936,21 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |RileyLink_Setup_3|                  image:: ../images/omnipod/RileyLink_Setup_3.png
 .. |RileyLink_Setup_4|                  image:: ../images/omnipod/RileyLink_Setup_4.png
 .. |RileyLink_Setup_5|                  image:: ../images/omnipod/RileyLink_Setup_5.png
+.. |RileyLink_Setup_6|                  image:: ../images/omnipod/RileyLink_Setup_6.png
+
+..
+	RileyLink Setup Add Device
+.. |RileyLink_Setup_Add_1|                  image:: ../images/omnipod/RileyLink_Setup_Add_1.png
+.. |RileyLink_Setup_Add_2|                  image:: ../images/omnipod/RileyLink_Setup_Add_2.png
+.. |RileyLink_Setup_Add_3|                  image:: ../images/omnipod/RileyLink_Setup_Add_3.png
+.. |RileyLink_Setup_Add_4|                  image:: ../images/omnipod/RileyLink_Setup_Add_4.png
+
+..
+	RileyLink Setup Remove Device
+.. |RileyLink_Setup_Remove_1|                  image:: ../images/omnipod/RileyLink_Setup_Remove_1.png
+.. |RileyLink_Setup_Remove_2|                  image:: ../images/omnipod/RileyLink_Setup_Remove_2.png
+.. |RileyLink_Setup_Remove_3|                  image:: ../images/omnipod/RileyLink_Setup_Remove_3.png
+.. |RileyLink_Setup_Remove_4|                  image:: ../images/omnipod/RileyLink_Setup_Remove_4.png
 
 ..
 	RileyLink Statistics History
