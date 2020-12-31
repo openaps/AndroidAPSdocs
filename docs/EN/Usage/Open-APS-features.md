@@ -187,15 +187,15 @@ Default value: 2
 
 ## Overview of hard-coded limits
 
-<table>
+<table border="1">
 <thead>
   <tr>
-    <th></th>
-    <th>Child</th>
-    <th>Teenager</th>
-    <th>Adult</th>
-    <th>Insulin resistant adult</th>
-    <th>Pregnant</th>
+    <th width="200"></th>
+    <th width="75">Child</th>
+    <th width="75">Teenager</th>
+    <th width="75">Adult</th>
+    <th width="75">Insulin resistant adult</th>
+    <th width="75">Pregnant</th>
   </tr>
 </thead>
 <tbody>
