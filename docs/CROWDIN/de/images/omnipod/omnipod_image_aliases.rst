@@ -333,16 +333,16 @@ Activate Pod
 
 |Activate_Pod_1|                    
 |Activate_Pod_2|                    
-|Activate_Pod_3|                    
+|Aktiviere_Pod_3|                    
 |Activate_Pod_4|                    
 |Activate_Pod_5|                    
-|Activate_Pod_6|                    
-|Activate_Pod_7|                    
-|Activate_Pod_8|                    
-|Activate_Pod_9|                    
+|Aktiviere_Pod_6|                    
+|Aktiviere_Pod_7|                    
+|Aktiviere_Pod_8|                    
+|Aktiviere_Pod_9|                    
 |Activate_Pod_10|                   
 |Activate_Pod_11|                   
-|Activate_Pod_12|                   
+|Aktiviere_Pod_12|                   
 |Activate_Pod_13|                   
 |Activate_Pod_14|                   
 |Activate_Pod_15|                   
