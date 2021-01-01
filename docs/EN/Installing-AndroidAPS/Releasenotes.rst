@@ -15,7 +15,9 @@ Please understand that this change is not intended to bug you but is due to safe
 
 Version 2.8.0
 ================
-Release date: 31-12-2020
+Release date: 1-1-2021
+
+Minimum Android version is 8.0 now
 
 Repository location still on https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
 
