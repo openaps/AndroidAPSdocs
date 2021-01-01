@@ -31,7 +31,7 @@
 	Instructional Section Images
 	
 ..
-	Hardware and Software Requirements
+	Configuration matérielle et logicielle requise
 .. |EmaLink|				image:: EmaLink.png
 .. |LoopLink|				image:: LoopLink.png
 .. |OrangeLink|				image:: OrangeLink.png	
@@ -83,7 +83,7 @@
 .. |Deactivate_Pod_10|                  image:: Deactivate_Pod_10.png
 
 ..
-	Enabling the Omnipod Driver in AAPS
+	Activation du pilote Omnipod dans AAPS
 .. |Enable_Omnipod_Driver_1|            image:: Enable_Omnipod_Driver_1.png
 .. |Enable_Omnipod_Driver_2|            image:: Enable_Omnipod_Driver_2.png
 .. |Enable_Omnipod_Driver_3|            image:: Enable_Omnipod_Driver_3.png
@@ -301,7 +301,7 @@ Pod Management Tab
 
 Instructional Section Images
 
-Hardware and Software Requirements
+Configuration matérielle et logicielle requise
 
 |EmaLink|
 
@@ -362,7 +362,7 @@ Désactiver Pod
 |Deactivate_Pod_10|                 
 
 
-Enabling the Omnipod Driver in AAPS
+Activation du pilote Omnipod dans AAPS
 
 |Enable_Omnipod_Driver_1|           
 |Enable_Omnipod_Driver_2|           
