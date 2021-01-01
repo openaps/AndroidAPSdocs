@@ -283,30 +283,30 @@ Geavanceerde instellingen (OpenAPS AMA)
 
 OpenAPS SMB instellingen
 -----------------------------------------------------------
-* In contrast to AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
-* You must have started `objective 10 <../Usage/Objectives.html#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ to use SMB.
-* The first three settings are explained `above <./Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to>`_.
-* Details on the different enable options are described in `OpenAPS feature section <../Usage/Open-APS-features.html#enable-smb>`_.
-* *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target being set). You should not change this setting unless you know exactly about consequences. 
-* If 'Sensitivity raises target' or 'Resistance lowers target' is enabled `Autosens <../Usage/Open-APS-features.html#autosens>`_ will modify your glucose target according to your blood glucose deviations.
-* If target is modified it will be displayed with a green background on your home screen.
+* In tegenstelling tot AMA gebruikt `SMB <../Usage/Open-APS-functies.html#super-micro-bolus-smb>`_ meestal geen tijdelijke basaalstanden om glucosewaarden bij te sturen, maar voornamelijk kleine bolusen: de zgn super micro bolussen.
+* Je moet `Doel 10 <../Usage/Objectives.html#doel-10-activeren-van-extra-functies-overdag-zoals-smb-super-micro-bolus>`_ hebben voltooid om SMB te kunnen gebruiken.
+* De eerste drie instellingen worden `hierboven <./Configuration/Preferences.html#max-basaal-iob-dat-openaps-kan-toedienen-e-openaps-max-iob>`_ uitgelegd.
+* De verschillende opties voor inschakelen van SMB worden beschreven op de pagina met `OpenAPS functies <../Usage/Open-APS-features.html#activeer-smb>`_.
+* *Tijdsinterval in minuten tussen afgeven van SMBs* is een beperking voor hoe snel na elkaar twee SMBs mogen worden gegeven, dit staat standaard op 4 min. Deze waarde voorkomt dat het systeem te vaak SMB afgeeft (bijvoorbeeld in geval van een tijdelijk streefdoel). Wijzig deze instelling alleen als je precies weet wat de gevolgen zijn. 
+* Als 'Gevoeligheid verhoogt het doel' of 'Resistentie verlaagt het doel' is ingeschakeld dan zal `Autosens <../Usage/Open-APS-features.html#gevoeligheidsdetectie-autosens>`_ jouw BG streefdoel overeenkomstig aanpassen.
+* Als Autosens het streefdoel wijzigt, dan wordt het streefdoel op jouw Overzicht scherm in groen weergegeven.
 
   .. image:: ../images/Home2020_DynamicTargetAdjustment.png
-    :alt: Target modified by autosens
+    :alt: Streefdoel gewijzigd door autosens
   
-Carb required notification
+Waarschuwing 'koolhydraten nodig'
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* This feature is only available if SMB algorithm is selected.
-* Eating of additional carbs will be suggested when the reference design detects that it requires carbs.
-* In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
-* Additionally the required carbs will be displayed in the COB section on your home screen.
-* A threshold can  be defined - minimum amount of carbs needed to trigger notification. 
-* Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+* Deze functie is alleen beschikbaar als je het SMB-algoritme gebruikt.
+* Wanneer het algoritme denkt dat je extra koolhydraten nodig hebt om te voorkomen dat je een hypo krijgt, zal hij een waarschuwing geven.
+* Je hebt de mogelijkheid om deze waarschuwing te snoozen voor 5, 15 of 30 minuten.
+* De benodigde hoeveelheid koolhydraten wordt ook weergegeven in de COB sectie op het Overzicht scherm.
+* Je kunt zelf een drempelwaarde kiezen: de minimumhoeveelheid koolhydraten die nodig is voor het activeren van de waarschuwing. 
+* 'Koolydraten nodig' meldingen kunnen worden gepusht naar Nightscout als je dat wenst, dan zal er een notitie worden gemaakt en naar Nightscout gestuurd.
 
   .. image:: ../images/Pref2020_CarbsRequired.png
-    :alt: Display carbs required on home screen
+    :alt: Koolhydraten nodig op het startscherm
   
-Advanced settings (OpenAPS SMB)
+Geavanceerde instellingen (OpenAPS SMB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normaal gesproken hoef je deze instellingen niet te wijzigen!
 * Als je ze toch wilt veranderen, zorg er dan voor dat je de details in de `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ leest en begrijpt wat je doet.
@@ -315,40 +315,40 @@ Opname instellingen
 ===========================================================
 
   .. image:: ../images/Pref2020_Absorption.png
-    :alt: Absorption settings
+    :alt: Opname instellingen
 
 min_5m_carbimpact
 -----------------------------------------------------------
-* The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed. 
-* The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB. 
-* At times when carb absorption can’t be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Het is in feite een vangnet.
-* To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. 
-* Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc. 
-* The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`_.
-* Standard value for AMA is 5, for SMB it's 8.
-* The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+* Het algoritme maakt gebruik van BGI (bloedglucose impact) om te bepalen wanneer koolhydraten zijn geabsorbeerd. 
+Deze waarde wordt gebruikt om de hoeveelheid opgenomen koolhydraten (Carbs On Board, COB) te laten afnemen wanneer jouw bloedsuiker niet zoveel stijgt als het algoritme had verwacht nadat je koolhydraten hebt gegeten. Deze waarde wordt alleen gebruikt in speciale gevallen: wanneer jouw CGM geen gegevens doorgeeft, of wanneer bijv. fysieke activiteit de koolhydraten "opeet". 
+* In dit soort gevallen, wanneer jouw koolhydraat absorptie niet kan worden bepaald op basis van hoe jouw bloedglucose reageert, dan zal AAPS terugvallen op deze waarde voor de afname van COB. Het is in feite een vangnet.
+* Om het simpel te stellen: Het algoritme "weet" hoe jouw BGs zich *zouden* moeten gedragen, adhv jouw huidige hoeveelheid insuline icm ISF. 
+* Wanneer jouw BG sneller daalt dan het algoritme had verwacht, dan betekent dit dat er koolhydraten worden geabsorbeerd (COB neemt af). Hierbij geldt: grote verandering = veel koolhydraten. 
+* De min_5m_carbimpact is wat het algoritme gebruikt als minimale hoeveel koolhydraten die per 5 minuten worden geabsorbeerd. Zie voor meer informatie `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`_.
+* Standaard waarde voor AMA is 5, voor SMB is het 8.
+* De COB-grafiek op het Overzicht scherm geeft dmv een oranje stip op de COB lijn weer wanneer min_5m_impact wordt gebruikt.
 
   .. image:: ../images/Pref2020_min_5m_carbimpact.png
-    :alt: COB graph
+    :alt: COB grafiek
   
-Maximum meal absorption time
+Maximale maaltijd absorptie tijd
 -----------------------------------------------------------
 * Als je vaak maaltijden met een hoog vet- of eiwitgehalte eet, moet je de opnametijd verhogen.
 
-Advanced settings - autosens ratio
+Geavanceerde instellingen - autosens ratio
 -----------------------------------------------------------
-* Define min. and max. `autosens <../Usage/Open-APS-features.html#autosens>`_ ratio.
-* Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+* Stel jouw min. en max. `autosens <../Usage/Open-APS-features.html#autosens>`_ ratio in.
+* Standaard waarden (max. 1,2 en min. 0,7) zouden niet gewijzigd hoeven worden. NB: deze getallen komen overeen met 120% en 70%.
 
 Pomp instellingen
 ===========================================================
-The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`_.  Koppel en stel je pomp in volgens de instructies van jouw pomp:
+De opties hier zijn afhankelijk van welke pomp je hebt geselecteerd in de `Configurator <../Configuration/Config-Builder.html#pomp>`_.  Koppel en stel je pomp in volgens de instructies van jouw pomp:
 
-* `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ 
-* `DanaRS Insulin Pump <../Configuration/DanaRS-Insulin-Pump.html>`_
-* `Accu Chek Combo Pump <../Configuration/Accu-Chek-Combo-Pump.html>`_
-* `Accu Chek Insight Pump <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
-* `Medtronic Pump <../Configuration/MedtronicPump.html>`_
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
+* `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `Accu Chek Combo pomp <../Configuration/Accu-Chek-Combo-Pump.html>`_
+* `Accu Chek Insight pomp <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+* `Medtronic pomp <../Configuration/MedtronicPump.html>`_
 
 Als je AndroidAPS gebruikt in 'open loop' modus, zorg er dan voor dat je Virtuele Pomp hebt geselecteerd in de Configurator.
 
@@ -358,89 +358,89 @@ NSClient
   .. image:: ../images/Pref2020_NSClient.png
     :alt: NSClient
 
-* Set your *Nightscout URL* (i.e. https://yourwebsitename.herokuapp.com) and the *API secret* (a 12 character password recorded in your Heroku variables).
-* This enables data to be read and written between both the Nightscout website and AndroidAPS.  
+* Stel de *Nightscout URL* in (bijv. https://yourwebsitename.herokuapp.com) en het *API geheim* (een wachtwoord van 12 tekens dat is vastgelegd in jouw Heroku-variabelen).
+* Hierdoor kunnen gegevens zowel worden uitgelezen als weggeschreven tussen de Nightscout website en AndroidAPS.  
 * Als je vastzit in Doel 1, controleer dan goed of je hier geen typfouten hebt gemaakt.
-* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-* *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS). 
-* If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ are uploaded to your Nightscout site.
+* **Zorg ervoor dat de URL is ingevuld ZONDER /api/v1/ aan het eind.**
+* *Log app start naar Nightscout' zal elke keer dat de app is gestart, een notitie maken.  De app zou niet vaker dan één keer per dag opnieuw moeten starten; gebeurt dit vaker dan wijst dat op een probleem. Vaak wordt dit veroorzaakt doordat de accubesparings-functie van jouw telefoon steeds de app afsluit. Los dit op door de accubesparings-instellingen van jouw telefoon aan te passen. Het kan ook zijn dat jouw telefoon te weinig (werk)geheugen beschikbaar heeft. Zorg dan dat je niet teveel zware apps draait of maak geheugenruimte vrij.   
+* Je kunt hier instellen dat wijzigingen in jouw `lokaal profiel <../Configuration/Config-Builder.html#llokale-profielen-uploaden-naar-nightscout>`_ worden geüpload naar Nightscout.
 
 Verbindings instellingen
 -----------------------------------------------------------
 
   .. image:: ../images/ConfBuild_ConnectionSettings.png
-    :alt: NSClient connection settings  
+    :alt: NSClient verbindingsinstellingen  
   
-* Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-* If you want to use only a specific WiFi network you can enter its WiFi SSID. 
-* Multiple SSIDs can be separated by semicolon. 
+* Beperk Nightscout upload naar alleen Wi-Fi of zelfs naar bepaalde Wi-Fi SSID's.
+* Als je alleen een specifiek WiFi-netwerk wil gebruiken, kun je de WiFi SSID invoeren. 
+* Meerdere SSID's kunnen worden gescheiden door puntkomma's. 
 * Om alle SSIDs te verwijderen vul je een spatie in in dit veld.
 
 Alarm opties
 -----------------------------------------------------------
-* Alarm options allows you to select which default Nightscout alarms to use through the app.  
-* For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
-* They will only work whilst you have a connection to Nightscout and are intended for parent/carers. 
-* If you have the CGM source on your phone (i.e. xDrip+ or Dexcom patched app) then use those alarms instead.
+* Met de alarmopties kun je kiezen welke standaard Nightscout alarmen via de AAPS app moeten binnenkomen.  
+* Om een alarm te laten klinken moet je de Urgent High, High, Low en Urgent Low (Urgent Hoog, Hoog, Laag en Urgent Laag) alarmwaarden in jouw `Heroku variabelen <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_ instellen. 
+* Ze zullen alleen werken terwijl je een verbinding hebt met Nightscout en zijn bedoeld voor ouders/verzorgers die hun kind met diabetes willen volgen. 
+* Als jij zelf de CGM-bron op je telefoon hebt (bijv. de xDrip+ or Dexcom app), gebruik dan die alarmen in plaats van Nightscout alarmen. Dan ben je niet afhankelijk van een internetverbinding voor jouw glucosealarmen (wel zo veilig!).
 
 Geavanceerde instellingen (NSClient)
 -----------------------------------------------------------
 
   .. image:: ../images/Pref2020_NSClientAdv.png
-    :alt: NS Client advanced settings
+    :alt: NSClient geavanceerde instellingen
 
-* Most options in advanced settings are self-explanatory.
-* *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+. 
+* De meeste opties in geavanceerde instellingen spreken voor zich.
+* *Activeer lokaal delen* zal jouw gegevens doorsturen naar andere apps op je telefoon, zoals xDrip+. 
 
-  * Dexcom patched app does not broadcast directly to xDrip+. 
-  * You need to `go through AAPS <../Configuration/Config-Builder.html#bg-source>`_ and enable local broadcast in AAPS to use xDrip+ alarms.
+  * Niet alle versies van de aangepaste Dexcom app stuurt zijn gegevens rechtstreeks naar xDrip+. Terwijl sommigen liever hun alarmen instellen in xDrip+ vanwege de uitgebreidere opties. 
+  * Daarom kun je `via AAPS <../Configuration/Config-Builder.html#bg-bron>`_ de Activeer lokaal delen optie aanzetten, en op die manier jouw gegevens naar xDrip+ sturen.
   
-* *Always use basal absolute values* must be activated if you want to use Autotune properly. See `OpenAPS documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ for more details on Autotune.
+* *Gebruik altijd absolute basale waarden* moet geactiveerd worden als je Autotune correct wilt gebruiken. Zie `OpenAPS documentatie <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ voor meer informatie over Autotune.
 
 SMS Communicator
 ===========================================================
-* Options will only be displayed if SMS communicator is selected in `Config Builder <../Configuration/Config-Builder.html#sms-communicator>`_.
-* This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.  
-* Further information is described in `SMS Commands <../Children/SMS-Commands.html>`_.
-* Additional safety is obtained through use of an authenticator app and additional PIN at token end.
+* Opties worden alleen weergegeven als de SMS-communicator is geselecteerd in `Configurator <../Configuration/Config-Builder.html#sms-communicator>`_.
+* Deze instelling maakt het mogelijk om de AAPS app op afstand (vanaf een andere telefoon) te bedienen, door SMS instructies te sturen naar de telefoon die de patiënt bij zich heeft. Bijvoorbeeld het uitschakelen van de loop of het geven van een bolus.  
+* Meer informatie in `SMS Commando's <../Children/SMS-Commands.html>`_.
+* Bediening via SMS is beveiligd dmv een authenticator app en een extra PIN code die achter het token moet worden gezet.
 
 Automatisering
 ===========================================================
-Select which location service shall be used:
+Selecteer welke locatieservice moet worden gebruikt:
 
 * Gebruik passieve locatie: AAPS neemt alleen locaties als andere apps erom vragen
-* Use network location: Location of your Wi-Fi
+* Gebruik netwerk locatie: Locatie van jouw Wifi
 * Gebruik GPS-locatie (Let op! Dit kan veel batterijverbruik geven!)
 
 Lokaal gegenereerde waarschuwingen
 ===========================================================
 
   .. image:: ../images/Pref2020_LocalAlerts.png
-    :alt: Local alerts
+    :alt: Lokale waarschuwingen
 
-* Settings should be self-explanatory.
+* Instellingen spreken voor zich.
 
-Data choices
+Data Keuzes
 ===========================================================
 
   .. image:: ../images/Pref2020_DataChoice.png
-    :alt: Data choices
+    :alt: Data keuzes
 
-* You can help develop AAPS further by sending crash reports to the developers.
+* Je kunt AAPS helpen verder te ontwikkelen door crashrapporten naar de ontwikkelaars te laten sturen.
 
-Maintenance settings
+Onderhoud instellingen
 ===========================================================
 
   .. image:: ../images/Pref2020_Maintenance.png
-    :alt: Maintenance settings
+    :alt: Onderhoud instellingen
 
-* Standard recipient of logs is logs@androidaps.org.
-* If you select *Encrypt exported settings* these are encrypted with your `master password <../Configuration/Preferences.html#master-password>`_. In this case master password has to be entered each time settings are exported or imported.
+* Standaard mailadres om de logs heen te sturen is logs@androidaps.org.
+* Als je *Encrypt geëxporteerde instellingen* selecteert, worden deze versleuteld met uw jouw `masterwachtwoord<../Configuration/Preferences.html#masterwachtwoord>`_. In dat geval moet het masterwachtwoord elke keer dat de instellingen worden geëxporteerd of geïmporteerd, worden ingevoerd.
 
 Open Humans
 ===========================================================
-* You can help the community by donating your data to research projects! Details are described on the `Open Humans page <../Configuration/OpenHumans.html>`_.
-* In Preferences you can define when data shall be uploaded
+* Je kunt de community helpen door je gegevens te doneren aan onderzoeksprojecten! Details kun je nalezen op de `Open Humans pagina <../Configuration/OpenHumans.html>`_.
+* In Instellingen kun je definiëren wanneer gegevens moeten worden geüpload
 
-   * only if connected to WiFi
-   * only if charging
+   * alleen uploaden indien verbonden met WiFi
+   * enkel tijdens opladen
