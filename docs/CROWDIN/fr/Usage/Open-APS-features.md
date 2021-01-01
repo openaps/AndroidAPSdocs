@@ -32,7 +32,7 @@ La fonctionnalité SMB contient des mécanismes de sécurité:
 
 **Vous devez avoir démarré [l'objectif 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) pour utiliser les SMB.**
 
-Voir aussi : [Documentation OpenAPS pour oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) et [Tim's Info sur les SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
+Voir aussi : [Documentation OpenAPS pour oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) et [les infos de Tim sur les SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
 ### Max. U/h pour le débit temp Basal (OpenAPS "max-basal")
 
