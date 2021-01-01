@@ -15,7 +15,9 @@ You will receive the following information as soon as a new update is available:
 
 Version 2.8.0
 ================
-Release date: 30-12-2020
+Release date: 1-1-2021
+
+**Minimum Android version is 8.0 now**
 
 Repository location still on https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
 
@@ -31,7 +33,7 @@ Please use `Android Studio 4 <https://developer.android.com/studio/>`_ or newer 
 * Dana RS connection improvements @MilosKozak 
 * Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
 * New LowRes skin
-* New "Pregnant" patient type @Brian Quinion
+* New `"Pregnant" patient type <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_ @Brian Quinion
 * New NSClient tablet layout @MilosKozak 
 * NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak 
 * Preferences filter @Brian Quinion
