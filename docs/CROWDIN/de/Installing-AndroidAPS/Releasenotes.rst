@@ -17,7 +17,7 @@ Version 2.8.0
 ================
 Release date: 1-1-2021
 
-**Minimum Android version is 8.0 now**
+**Minimum Android version is 8.0 now. For older Android versions you can still use 2.6.1.4 from old repo**
 
 Repository weiterhin auf https://github.com/nightscout/AndroidAPS . Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die App-Erstellung `von vorne beginnst <../Installing-AndroidAPS/Building-APK.html>`_.
 
