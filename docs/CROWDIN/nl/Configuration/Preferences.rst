@@ -1,16 +1,16 @@
 Instellingen
 ***********************************************************
-* Open preferences by clicking three-dot-menu on top right side of home screen.
+* Open de instellingen door te klikken op de 3 stipjes in de rechterbovenhoek van het Overzicht scherm.
 
   .. image:: ../images/Pref2020_Open.png
-    :alt: Open preferences
+    :alt: Open instellingen
 
-* You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and click Plugin preferences.
+* Je kunt direct naar voorkeuren springen voor een bepaald tabblad (bijv. pomp tabblad) door dit tabblad te openen en op Plugin voorkeuren te klikken.
 
   .. image:: ../images/Pref2020_OpenPlugin.png
-    :alt: Open plugin preferences
+    :alt: Open plugin instellingen
     
-* Sub-menus can be opened by clicking the triangle below the sub-menu title.
+* Submenu's kun je openen door te klikken op de driehoek onder de sub-menu titel.
 
   .. image:: ../images/Pref2020_Submenu.png
     :alt: Open submenu
@@ -18,270 +18,270 @@ Instellingen
 Algemeen
 ===========================================================
 
-**Units**
+**Eenheden**
 
-* Set units to mmol/l or mg/dl depending on your preferences.
+* Stel eenheden in op mmol/l of mg/dl, afhankelijk van wat je gewend bent.
 
-**Language**
+**Taal**
 
-* New option to use phone's default language (recommended). 
-* In case you want AAPS in different language than standard phone language you can choose from a broad variety.
-* If you use different languages you might sometimes see a language mix. This is due to an android issue that overriding default android language sometimes doesn't work.
+* Nieuwe optie om de standaard ingestelde taal van jouw telefoon te gebruiken (aanbevolen). 
+* Mocht je AAPS in een andere taal willen hebben dan de standaardtaal van jouw telefoon, kun je hier elke taal kiezen die je maar wil.
+* Let op: Als je een andere taal kiest dan de standaardtaal van jouw telefoon, dan zie je soms een mix van talen. Dit komt door een Android probleem, waarbij het overschrijven van de standaard taalinstelling soms niet werkt, helaas is daar geen oplossing voor.
 
   .. image:: ../images/Pref2020_General.png
-    :alt: Preferences > General
+    :alt: Instellingen > Algemeen
 
-**Patient name**
+**Naam patiënt**
 
-* Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+* Handig als je onderscheid moet maken tussen meerdere setups (er zijn bijvoorbeeld twee kinderen met diabetes in jouw gezin).
 
-Protection
+Beveiliging
 -----------------------------------------------------------
 Masterwachtwoord
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
+* Noodzakelijk om instellingen te kunnen `exporteren <../Usage/ExportImportSettings.html>`_ als ze zijn versleuteld. (Geldt vanaf AAPS versie 2.7).
 
-   **Biometric protection does not work on OnePlus phones. This is a know issue of OnePlus.**
+   ** Biometrische beveiliging werkt niet op OnePlus-telefoons. Dit is een bekend probleem van OnePlus. **
 
-* Open Preferences (three-dot-menu on top right of home screen)
-* Click triangle below "General"
-* Click "Master-Password"
-* Enter password, confirm password and click ok.
+* Open de Instellingen door te klikken op de 3 stipjes in de rechterbovenhoek van het Overzicht scherm
+* Klik op de driehoek onder "Algemeen"
+* Klik op "Masterwachtwoord"
+* Voer het wachtwoord in, bevestig het wachtwoord en klik op ok.
 
   .. image:: ../images/MasterPW.png
-    :alt: Set master password
+    :alt: Masterwachtwoord instellen
   
-Settings protection
+Instellingenbeveiliging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Protect your settings with a password or phone's biometric authentication (i.e. `child is using AAPS <../Children/Children.html>`_).
-* Custom password should be used if you want to use master password just for securing `exported settings <../Usage/ExportImportSettings.html>`_.
-* If you are using a custom password click on line "Settings password" to set password as described `above <../Configuration/Preferences.html#master-password>`_.
+* Bescherm jouw instellingen met een wachtwoord of met de biometrische verificatie van jouw telefoon (bijv. `een kind gebruikt AAPS <../Children/Children.html>`_).
+* Er moet een aangepast wachtwoord worden gebruikt als je het masterwachtwoord alleen wilt gebruiken voor het beveiligen van `geëxporteerde instellingen <../Usage/ExportImportSettings.html>`_.
+* Als je een aangepast wachtwoord gebruikt, klik op de regel "Instellingen wachtwoord" om het wachtwoord in te stellen zoals `boven <../Configuration/Preferences.html#masterwachtwoord>`_beschreven.
 
   .. image:: ../images/Pref2020_Protection.png
-    :alt: Protection
+    :alt: Beveiliging
 
-Application protection
+App beveiliging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If app is protected you must enter password or use phone's biometric authentication to open AAPS.
-* App will shut down immediately if wrong password is entered - but still run in the background if it was previously opened successfully.
+* Als de app is beveiligd moet je het wachtwoord invoeren of de biometrische verificatie van de telefoon gebruiken om AAPS te openen.
+* De app zal onmiddellijk worden afgesloten als er een verkeerd wachtwoord is ingevoerd-maar nog steeds op de achtergrond worden uitgevoerd als de app al succesvol geopend was.
 
-Bolus protection
+Bolus beveiliging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Bolus protection might be useful if AAPS is used by a small child and you `bolus via SMS <../Children/SMS-Commands.html>`_.
-* In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter master password.
+* Bolus beveiliging kan nuttig zijn als AAPS wordt gebruikt door een klein kind en u `bolus via SMS <../Children/SMS-Commands.html>`_gebruikt.
+* In het voorbeeld hieronder zie je dat de app vraagt om biometrische verificatie. Mocht de biometrische verificatie niet werken, klikt dan in de ruimte boven het witte venster en voer het masterwachtwoord in.
 
   .. image:: ../images/Pref2020_PW.png
-    :alt: Prompt biometric protection
+    :alt: Vraag biometrische verificatie
 
 Skin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* You can choose from three types of skins:
+* Je kunt kiezen uit drie soorten skins:
 
   .. image:: ../images/Pref2020_Skin.png
-    :alt: Select skin
+    :alt: Selecteer skin
 
-* Difference depend of phone's display orientation
+* Dit verschilt, afhankelijk van de oriëntatie van de telefoon
 
-Portrait orientation
+Staande stand
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-* **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
-* **Large Display** has an increased size of all graphs compare to other skins
+* **Klassiek weergave thema** en **Knoppen worden altijd weergegeven aan de onderkant van het scherm** zijn identiek
+* **Groot scherm** geeft alle grafieken groter weer dan bij andere skins
 
-Landscape orientation
+Liggende stand
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-* Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
-* **Large Display** has an increased size of all graphs compare to other skins
+* Wanneer je voor **Klassiek weergave thema** en **Groot scherm**, moet je naar beneden scrollen om de knoppen onder aan het scherm te zien
+* **Groot scherm** geeft alle grafieken groter weer dan bij andere skins
 
   .. image:: ../images/Screenshots_Skins.png
-    :alt: Skins depending on phone's display orientation
+    :alt: Skins afhankelijk van de oriëntatie van de telefoon
 
 Overzicht
 ===========================================================
 
-* In overview section you can define preferences for home screen.
+* In deze sectie kun je instellen hoe het Overzicht scherm eruit ziet.
 
   .. image:: ../images/Pref2020_OverviewII.png
-    :alt: Preferences > Overview
+    :alt: Instellingen > Overzicht
 
 Laat scherm aan
 -----------------------------------------------------------
-* Useful while giving a presentation. 
-* It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
+* Handig wanneer je een presentatie geeft. 
+* Het verbruikt wel veel energie, dus het is verstandig om je telefoon hierbij aan een lader te hebben.
 
 Knoppen
 -----------------------------------------------------------
-* Define which buttons are visible on the bottom of your home screen.
-* With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
+* Kies welke knoppen zichtbaar zijn onderaan jouw Overzicht-scherm.
+* Je vind hier ook enkele keuzeopties voor het dialoogvenster dat je gaat zien na het indrukken van zo'n knop.
 
   .. image:: ../images/Pref2020_OV_Buttons.png
-    :alt: Preferences > Buttons
+    :alt: Instellingen > Knoppen
 
-Quick Wizard
+Vaste maaltijd
 -----------------------------------------------------------
-* If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
-* In setup you define during which time period the button will be visible on your home screen - just one button per period.
-* If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up). 
-* The proposal has to be confirmed before insulin is delivered.
+* Via Vaste maaltijd instellingen kun je een knop toevoegen aan het Overzicht-scherm voor een snack of maaltijd die je vaker eet. Je kunt instellen hoeveel koolhydraten de maaltijd bevat, en instellen hoe AAPS de bolus moet berekenen.
+* Je kunt maar één Vaste maaltijdknop tegelijkertijd op het Overzicht scherm laten weergeven. In de instellingen stel je in gedurende welk tijdsvak een bepaalde maaltijdknop wordt weergegeven.
+* Als je op op jouw Overzicht scherm op de Vaste maaltijdknop hebt gedrukt, dan zal AAPS een bolus voorstellen voor de koolhydraten uit die maaltijd. AAPS gebruikt hiervoor jouw actieve profiel instellingen (hij neemt hierbij jouw bloedglucose of insuline aan boord mee in zijn berekeinging, als je dat zo hebt ingesteld). 
+* Je moet het voorstel bevestigen voordat de insuline wordt afgeleverd.
 
   .. image:: ../images/Pref2020_OV_QuickWizard.png
-    :alt: Preferences > Quick Wizard Button
+    :alt: Instellingen > Vaste maaltijdknop
   
-Default temp targets
+Standaard tijdelijke streefdoelen
 -----------------------------------------------------------
-* `Temp targets (TT) <../Usage/temptarget.html#temp-targets>`_ allow you to define change your blood glucose target for a certain time period.
-* With setting of default TT you can easily change your target for activity, eating soon etc.
-* Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+* Dmv `Tijdelijk streefdoel (Temp Target, TT) <../Usage/temptarget.html#tijdelijk-streefdoel>`_ kun je vaste waardes instellen om jouw bloedglucose streefdoel gedurende een zelfgekozen tijdsduur te wijzigen.
+* Je kunt zelf instellen welke BG waarde en welke tijdsduur AAPS gebruikt bij de verschillende standaard tijdelijke streefdoelen: activiteit, eet binnenkort en hypo.
+* Om een bepaald tijdelijk streefoel te activeren heb je drie opties: houd het streefdoel in de rechterbovenhoek van jouw Overzicht scherm lang ingedrukt, of gebruik de knop op het Activiteit tabblad, of zet een vinkje via de oranje "Koolhydraten" knop aan de onderkant. Alledrie hebben hetzelfde resultaat.
 
   .. image:: ../images/Pref2020_OV_DefaultTT.png
-    :alt: Preferences > Default temp targets
+    :alt: Instellingen > Standaard tijdelijke streefdoelen
   
 Ontlucht/Vul standaard insuline hoeveelheden
 -----------------------------------------------------------
-* If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Usage/CPbefore26.html#pump>`_.
-* Pre-set values can be defined in this dialogue.
+* Als je jouw infuusslang of kanule via AAPS wilt vullen dan kan dat via de knop op de `Acties tab <../Usage/CPbefore26.html#pomp>`_.
+* Je kunt zelf kiezen welke standaardhoeveelheden AAPS laat zien in het dialoogvenster dat ontlucht/vul knop zit.
 
-Range for visualization
+Bereik voor visualisatie
 -----------------------------------------------------------
-* Define which part of the graph on the home screen shall be you target range and be filled with green background.
+* Bepaal tussen welke waardes de BG grafiek op het Overzicht scherm het voor jou 'groene gebied' weergeeft. NB: dit bepaalt alleen het uiterlijk van jouw grafiek, verwar deze waardes niet met het BG streefdoel uit jouw profiel!
 
   .. image:: ../images/Pref2020_OV_Range2.png
-    :alt: Preferences > Range for visualization
+    :alt: Instellingen > Bereik voor visualisatie
 
 Afgekorte tab titels
 -----------------------------------------------------------
-* See more tab titles on screen. 
-* For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
+* Hiermee passen er meer tabbladen naast elkaar op je scherm. 
+* Bijvoorbeeld het 'CONFIGURATOR' tabblad wordt 'CONF', 'ACTIES' wordt 'ACT' etc.
 
   .. image:: ../images/Pref2020_OV_Tabs.png
-    :alt: Preferences > Tabs
+    :alt: Instellingen > Tabbladen
 
-Show notes field in treatments dialogs
+Toon notities veld in behandeling dialoogvensters
 -----------------------------------------------------------
-* Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...) 
+* Hiermee krijg je de optie om notities toe te voegen wanneer je een behandeling invoert via één van de dialoogvensters (bolus calculator, koolhydraten, insuline, ...) 
 
   .. image:: ../images/Pref2020_OV_Notes.png
-    :alt: Preferences > Notes in treatment dialogs
+    :alt: Instellingen > Notities in behandeldialogen
   
 Statusindicatoren
 -----------------------------------------------------------
-* Status lights give a visual warning for 
+* Statusindicatoren geven een visuele waarschuwing voor 
       
-   * Cannula age
-   * Insulin age (days reservoir is used)
-   * Reservoir level (units)
-   * Sensor age
-   * Battery age
-   * Battery level (%)
+   * Infuus leeftijd
+   * Insuline leeftijd (aantal dagen dat reservoir wordt gebruikt)
+   * Reservoir niveau (eenheden)
+   Sensor Leeftijd
+   * Batterij leeftijd
+   * Batterij niveau (%)
 
-* If threshold warning is exceeded, values will be shown in yellow.
-* If threshold critical is exceeded, values will be shown in red.
-* In versions prior to AAPS 2.7 settings for status lights had to be made in Nightscout settings.
+* Als de drempelwaarde voor waarschuwing wordt overschreden, worden de waarden in geel weergegeven.
+* Als de drempelwaarde voor alarm wordt overschreden, worden de waarden in rood weergegeven.
+* In versies ouder dan AAPS 2.7 moest je de instellingen voor statusindicatoren nog aanpassen in Nightscout, nu kan dit direct hier in AAPS.
 
   .. image:: ../images/Pref2020_OV_StatusLights2.png
-    :alt: Preferences > Status Lights
+    :alt: Istellingen > Statusindicatoren
 
-Advanced Settings (Overview)
+Geavanceerde instellingen (Overzicht)
 -----------------------------------------------------------
-Deliver this part of bolus wizard result
+Voer dit deel van het boluscalculator resultaat uit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* General setting to deliver only part of bolus wizard result. 
-* Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. 
-* The percentage is shown in bolus wizard.
+* Met deze instelling laat je slechts een deel toedienen van de uitkomst van de boluscalculator. 
+* Alleen het ingestelde percentage (moet tussen 10 en 100 liggen) van de berekende bolus wordt afgeleverd wanneer de boluscalculator wordt gebruikt. 
+* Het percentage zie je terug in de boluscalculator.
 
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Option to enable superbolus in bolus wizard.
-* `Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes.
+* Geeft de superbolus optie weer in de boluswizard.
+* Dmv `Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ kun je wat insuline "naar voren halen" van de basaal die je de komende twee uur zou hebben gekregen. Dit om (maaltijd)pieken te voorkomen.
 
-Treatment safety
+Behandelingen veiligheid
 ===========================================================
-Patient age
+Leeftijd Patiënt
 -----------------------------------------------------------
-* Safety limits are set based on the age you select in this setting. 
-* If you start hitting these hard limits (like max bolus) it's time to move one step up. 
-* It's a bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). 
-* If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on `this page <../Usage/Open-APS-features.html>`_.
+* Veiligheidslimieten worden ingesteld op basis van de leeftijd die je in deze instelling selecteert. 
+* Als je tegen de beperkingen van zo'n zogenaamde 'harde limiet' (zoals max bolus) aanloopt, dan is het tijd om te kiezen voor de daaropvolgende categorie. 
+* Het is een slecht idee om hogere categorie te kiezen dan past bij jouw echte leeftijd/resistentie, omdat het kan leiden tot een overdosis als je de verkeerde waarde in het insulin-dialoogvenster intypt (bijv. als je de komma verkeerd zet). 
+* Als je wilt weten wat de precieze getallen zijn voor deze veiligheidslimieten, ga dan naar `deze pagina <../Usage/Open-APS-features.html>`_ en scroll naar het algoritme dat jij gebruikt.
 
-Max allowed bolus [U]
+Max toegestane bolus [E]
 -----------------------------------------------------------
-* Defines maximum amount of bolus insulin that AAPS is allowed to deliver at once. 
-* This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. 
-* It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. 
-* This restriction is also applied to the results of the bolus calculator.
+Dit is de maximale hoeveelheid bolus insuline die AAPS mag leveren. 
+* Deze instelling is een veiligheidslimiet om te voorkomen dat er per ongeluk een enorme bolus wordt afgegeven door een misrekening of typfout van de gebruiker. 
+* Het wordt aangeraden om deze in te stellen op de maximale hoeveelheid bolus insuline die je ooit voor een maaltijd of correctie nodig zult hebben. 
+* Deze beperking wordt ook toegepast op de resultaten van de Boluscalculator.
 
-Max allowed carbs [g]
+Max toegestane koolhydraten [g]
 -----------------------------------------------------------
-* Defines the maximum amount of carbs that AAPS bolus calculator is allowed to dose for.
-* This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. 
-* It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+* Dit is de maximale hoeveelheid koolhydraten waarvoor de Boluscalculator insuline mag geven.
+* Deze instelling is een veiligheidslimiet om te voorkomen dat er per ongeluk een enorme bolus wordt afgegeven door een misrekening of typfout van de gebruiker. 
+* Het wordt aangeraden om deze in te stellen op de maximale hoeveelheid koolhydraten die je ooit zult eten bij een maaltijd.
 
 Loop
 ===========================================================
-APS mode
+APS Mode
 -----------------------------------------------------------
-* Toggle between open and closed looping as well as low glucose suspend (LGS)
-* **Open looping** means TBR suggestions are made based on your data and appear as a notification. After manual confirmation the command to dose insulin will be transferred to pump.. Only if you use virtual pump you have to enter it manually.
-* **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.  
-* **Low glucose suspend** gives you the possibility to enter into Low Glucose Suspend without the need for the reverting an objective.
+* Schakelt tussen open loop, gesloten loop en 'stop bij laag'
+* **Open loop** betekent dat AAPS indien nodig suggesties doet voor hogere/lagere basaalstanden. Dit wordt weergegeven als melding, jij als gebruiker moet iets doen om deze suggestie ook daadwerkelijk op je pomp uit te voeren.  
+* **Closed loop (gesloten loop) betekent dat hogere/lagere basaalstanden (en SMBs, als je dat aan hebt staan) automatisch naar je pomp worden verzonden zonder bevestiging of invoer van jou.  
+* **Stop bij laag** betekent dat AAPS wél lagere basaalstanden instelt als je BG teveel zakt, maar als je BG teveel stijgt, zal hij geen hogere basaalstand instellen (tenzij IOB<0).
 
-Minimal request change [%]
+Minimale verzoek voor aanpassing [%]
 -----------------------------------------------------------
-* When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. 
-* To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
-* This defines the relative change required to trigger a notification.
+* Bij het gebruik van open loop ontvangt je meldingen telkens wanneer AAPS een suggestie doet om de basaalstand aan te passen. 
+* Om het aantal meldingen te verminderen, kun je een breder bereik voor BG gebruiken of een hier hoger percentage van het minimale verzoek voor aanpassing instellen.
+* Hiermee stel je de minimale relatieve TBR aanpassing in waarbij AAPS een suggestie doet.
 
-Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
+Advanced Meal Assist (AMA) of Super Micro Bolus (SMB)
 ===========================================================
-Depending on your settings in `config builder <../Configuration/Config-Builder.html>`_ you can choose between two algorithms:
+Afhankelijk van jouw instellingen in de `Configurator <../Configuration/Config-Builder.html>`_ kun je kiezen tussen twee algoritmes:
 
-* `Advanced meal assist (OpenAPS AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ - state of the algorithm in 2017
-* `Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - most recent algorithm for advanced users
+* `Advanced Meal Assist (OpenAPS AMA) <../Usage/Open-APS-features.html#geavanceerde-maaltijdhulp-ama>`_ (Geavanceerde maaltijdhulp) - status van het algoritme in 2017
+* ` Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - meest recente algoritme voor ervaren gebruikers
 
-OpenAPS AMA settings
+OpenAPS AMA instellingen
 -----------------------------------------------------------
-* Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. 
-* More details about the settings and Autosens can be found in the `OpenAPS docs <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`_.
+Dankzij de geavanceerde maaltijdhulp (Advanced Meal Assist, AMA) kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd. 
+* Zie ook de `OpenAPS documentatie <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`_.
 
-Max U/h a Temp Basal can be set to
+Maximaal instelbaar basaal E/u
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. 
-* The value is measured in units per hour (U/h). 
-* It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. 
-* For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
-* See also `detailed feature description <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>`_.
+Deze instelling is een veiligheidslimiet om te voorkomen dat AAPS ooit een gevaarlijk hoge basaalstand kan instellen. 
+* Dit getal wordt weergegeven in eenheden per uur (E/uur). 
+* We raden je aan je verstand te gebruiken bij het invullen van deze waarde. Een goede aanbeveling is om de hoogste basaalstand in je profiel te nemen en die te **vermenigvuldigen met 4**. 
+* Als de hoogste basaalstand in je profiel bijvoorbeeld 0,5 E/uur is, dan moet je dat vermenigvuldigen met 4 om een waarde van 2 E/uur te krijgen.
+* Zie ook de `gedetailleerde functiebeschrijving <../Usage/Open-APS-features.html#maximale-e-uur-dat-een-tijdelijke-basaalstand-kan-toedienen-openaps-max-basal>`_.
 
-Maximum basal IOB OpenAPS can deliver [U]
+Max totaal IOB dat OpenAPS niet kan overschrijden [E]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. 
-* Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again. 
-* This value **does not consider bolus IOB**, only basal.
-* This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
+* Hoeveelheid extra basale insuline (in eenheden) tot waaraan OpenAPS de hoeveelheid insuline in jouw lichaam mag laten oplopen, bovenop je normale basale insuline. 
+* Zodra deze waarde is bereikt, zal AAPS stoppen met het geven van extra basale insuline totdat jouw basale Insulin On Board (IOB, insuline aan boord) naar binnen dit bereik is teruggelopen. 
+* Deze waarde **laat bolus IOB buiten beschouwing**, alleen basale insuline wordt meegerekend.
+* Het berekenen en sturen op deze waarde gebeurt onafhankelijk van jouw normale basale insuline. Alleen de extra basale insuline die werd afgegeven bovenop je normale basaalstand, wordt meenomen.
 
-When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia. This is an important step in order to:
+Wanneer je begint met loopen, wordt tijdens een van de leerdoelen een tijd lang Max Basal IOB beperkt naar 0, zodat je gewend raakt aan het systeem. Dit zorgt ervoor dat AAPS helemaal geen extra basale insuline kan geven. Terwijl AAPS wel je basale insuline naar beneden kan bijstellen, of zelfs helemaal uitschakelen om een hypo te helpen voorkomen. Dit is een belangrijke stap omdat:
 
-* Have a period of time to safely get used to the AAPS system and monitor how it works.
-* Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
-* See how AAPS limits your basal insulin to prevent hypoglycaemia.
+* Je de tijd krijgt om veilig gebruik te maken van het AAPS-systeem en rustig kunt observeren hoe het werkt.
+Je nu de kans hebt om jouw basaalprofiel en insuline gevoeligheidsfactor (ISF, Insulin Sensitivity Factor) perfect te maken.
+* Je kunt zien hoe AAPS jouw basale insuline naar beneden bijstelt om hypo's te voorkomen.
 
-When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 3 to get a value of 1.5 U/h.
+Pas na een tijd mag je het systeem toestaan om extra basale insuline te geven door de Max Basal IOB waarde te verhogen. Als eerste start wordt aangeraden om de hoogste basaalstand in je profiel te nemen en die te **vermenigvuldigen met 3**. Als de hoogste basaalstand in je profiel bijvoorbeeld 0,5 E/uur is, dan moet je dat vermenigvuldigen met 3 om een waarde van 1.5 E/uur te krijgen.
 
-* You can start conservatively with this value and increase it slowly over time. 
-* These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
+* Je kunt voorzichtig beginnen met deze waarde en deze langzaam verhogen. 
+* Dit zijn alleen richtlijnen; ieder mens is anders. Je kunt onderweg merken dat jij zelf minder of meer nodig hebt dan wat hier wordt aanbevolen, begin altijd voorzichtig en pas langzaam aan.
 
-**Note: As a safety feature, Max Basal IOB is hard-limited to 7u.**
+**Opmerking: om veiligheidsredenen geldt er voor Max Basal IOB een 'harde limiet' (voor volwassenen is die 7E). Zie ook de pagina over "OpenAPS functies" elders in deze wiki.**
 
 Gevoeligheidsdetectie (Autosens)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* `Autosens <../Usage/Open-APS-features.html#autosens>`_ looks at blood glucose deviations (positive/negative/neutral).
-* It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
-* If you select "Autosens adjust target, too" the algorithm will also modify your glucose target.
+* `Autosens <../Usage/Open-APS-features.html#autosens>`_ kijkt naar bloedglucoseafwijkingen (positieve/negative/neutrale).
+* Op basis van deze afwijkingen kijkt AAPS of je gevoeliger (of, juist ongevoeliger) bent voor insuline, en zal vervolgens jouw basaalstanden en ISF aanpassen.
+* Als je "Autosens past ook het streefdoel aan" selecteert, zal het algoritme ook je BG streefdoel wijzigen.
 
-Advanced settings (OpenAPS AMA)
+Geavanceerde instellingen (OpenAPS AMA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Normally you do not have to change the settings in this dialogue!
-* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ and to understand what you are doing.
+* Normaal gesproken hoef je deze instellingen niet te wijzigen!
+* Als je ze toch wilt veranderen, zorg er dan voor dat je de details in de `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ leest en begrijpt wat je doet.
 
-OpenAPS SMB settings
+OpenAPS SMB instellingen
 -----------------------------------------------------------
 * In contrast to AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 * You must have started `objective 10 <../Usage/Objectives.html#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ to use SMB.
@@ -308,8 +308,8 @@ Carb required notification
   
 Advanced settings (OpenAPS SMB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Normally you do not have to change the settings in this dialogue!
-* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ and to understand what you are doing.
+* Normaal gesproken hoef je deze instellingen niet te wijzigen!
+* Als je ze toch wilt veranderen, zorg er dan voor dat je de details in de `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ leest en begrijpt wat je doet.
 
 Opname instellingen
 ===========================================================
@@ -333,16 +333,16 @@ min_5m_carbimpact
   
 Maximum meal absorption time
 -----------------------------------------------------------
-* If you often eat high fat or protein meals you will need to increase your meal absorption time.
+* Als je vaak maaltijden met een hoog vet- of eiwitgehalte eet, moet je de opnametijd verhogen.
 
 Advanced settings - autosens ratio
 -----------------------------------------------------------
 * Define min. and max. `autosens <../Usage/Open-APS-features.html#autosens>`_ ratio.
 * Normally standard values (max. 1.2 and min. 0.7) should not be changed.
 
-Pump settings
+Pomp instellingen
 ===========================================================
-The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`_.  Pair and set your pump up according to the pump related instructions:
+The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`_.  Koppel en stel je pomp in volgens de instructies van jouw pomp:
 
 * `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ 
 * `DanaRS Insulin Pump <../Configuration/DanaRS-Insulin-Pump.html>`_
@@ -350,7 +350,7 @@ The options here will vary depending on which pump driver you have selected in `
 * `Accu Chek Insight Pump <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 * `Medtronic Pump <../Configuration/MedtronicPump.html>`_
 
-If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+Als je AndroidAPS gebruikt in 'open loop' modus, zorg er dan voor dat je Virtuele Pomp hebt geselecteerd in de Configurator.
 
 NSClient
 ===========================================================
@@ -360,12 +360,12 @@ NSClient
 
 * Set your *Nightscout URL* (i.e. https://yourwebsitename.herokuapp.com) and the *API secret* (a 12 character password recorded in your Heroku variables).
 * This enables data to be read and written between both the Nightscout website and AndroidAPS.  
-* Double check for typos here if you are stuck in Objective 1.
+* Als je vastzit in Doel 1, controleer dan goed of je hier geen typfouten hebt gemaakt.
 * **Make sure that the URL is WITHOUT /api/v1/ at the end.**
 * *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS). 
 * If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ are uploaded to your Nightscout site.
 
-Connection settings
+Verbindings instellingen
 -----------------------------------------------------------
 
   .. image:: ../images/ConfBuild_ConnectionSettings.png
@@ -374,9 +374,9 @@ Connection settings
 * Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
 * If you want to use only a specific WiFi network you can enter its WiFi SSID. 
 * Multiple SSIDs can be separated by semicolon. 
-* To delete all SSIDs enter a blank space in the field.
+* Om alle SSIDs te verwijderen vul je een spatie in in dit veld.
 
-Alarm options
+Alarm opties
 -----------------------------------------------------------
 * Alarm options allows you to select which default Nightscout alarms to use through the app.  
 * For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
@@ -408,11 +408,11 @@ Automatisering
 ===========================================================
 Select which location service shall be used:
 
-* Use passive location: AAPS only takes locations if other apps are requesting it
+* Gebruik passieve locatie: AAPS neemt alleen locaties als andere apps erom vragen
 * Use network location: Location of your Wi-Fi
 * Gebruik GPS-locatie (Let op! Dit kan veel batterijverbruik geven!)
 
-Local alerts
+Lokaal gegenereerde waarschuwingen
 ===========================================================
 
   .. image:: ../images/Pref2020_LocalAlerts.png
