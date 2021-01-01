@@ -92,7 +92,7 @@ Zum Sortieren von Automation-Regeln klicke und halte die Schaltfläche mit den v
   
 Automation-Regeln löschen
 -----
-To delete an automation rule click on trash icon.
+Klicke auf das Papierkorbsymbol, um eine Automatisierungsregel zu löschen.
 
 .. image:: ../images/Automation_Delete.png
   :alt: Automation-Regeln löschen
