@@ -47,3 +47,7 @@ Telefones
 ==================================================
 * `Jelly <../Usage/jelly.html>`_
 * `Huawei bluetooth & battery optimization <../Usage/huawei.html>`_
+
+Smartwaches
+==================================================
+* `Sony Smartwatch 3 <../Usage/SonySW3.html>`_

@@ -48,6 +48,8 @@ Settings backup is encrypted by a master password that can be set in `Preference
   
 설정 불러오기
 ==================================================
+**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings>`_.
+
 * 화면 좌측 상단부의  三아이콘을 누릅니다
 * 정비를 누릅니다
 * 설정 불러오기

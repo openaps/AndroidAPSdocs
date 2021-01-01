@@ -5,6 +5,7 @@ AndroidAPS는 현재 아래의 펌프와 호환됩니다.
 * Accu-Chek Combo (아큐첵 콤보)
 * Accu-Chek Insight (아큐첵 인사이트)
 * some old Medtronic
+* Insulet Omnipod (Eros not DASH)
 * DanaR (다나알)
 * DanaRS(다나알에스) 
 

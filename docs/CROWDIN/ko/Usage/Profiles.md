@@ -4,7 +4,7 @@ AndroidAPS를 시작하고 프로파일을 선택할 때 사용자는 zero durat
 
 내부적으로 AAPS는 시작 날짜와 지속 시간으로 프로파일 스냅샵을 생성고 선택된 기간내에서 사용한다. Duration of zero는 기간이 없음을 의미한다. 그러한 프로파일은 새로운 "프로파일 변경"을 할 때까지 유효하다.
 
-프로파일을 교체하기 위해서는 사용자 프로파일 명을 길게 누르고 프로파일 변경 메뉴를 선택하면 된다.
+To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below).
 
 ![프로파일 변경하기](../images/ProfileSwitch_HowTo.png)
 

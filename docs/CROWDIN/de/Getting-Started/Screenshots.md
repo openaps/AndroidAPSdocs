@@ -19,7 +19,8 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 ![Verbleibende Dauer des Profilwechsels](../images/Home2020_ProfileSwitch.png)
 
 * Das aktuelle Profil wird in der linken Schaltfläche angezeigt.
-* Schaltfläche Profil lange Drücken um Profildetails anzuzeigen oder um [zwischen verschiedenen Profilen zu wechseln](../Usage/Profiles#profilwechsel).
+* Drücke kurz auf die Profil-Schaltfläche, für die Anzeige der Profildetails.
+* Drücke lange auf die Profilschaltfläche, um [zwischen verschiedenen Profilen zu wechseln](../Usage/Profiles#profilwechsel).
 * Falls der Profilwechsel mit Angabe der Dauer durchgeführt wurde, wird die verbleibende Zeit in Minuten in Klammern angezeigt.
 
 #### Ziel
@@ -27,7 +28,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 ![Verbleibende Dauer des temporären Ziels](../images/Home2020_TT.png)
 
 * Das aktuelle BZ-Ziel wird in der rechten Schaltfläche angezeigt.
-* Schaltfläche Ziel lange drücken, um ein [temporäres Ziel ](../Usage/temptarget.md) festzulegen.
+* Drücke kurz auf die Zielwert-Schaltfläche, um ein [temporäres Ziel](../Usage/temptarget.md) zu setzen.
 * Falls ein temporäres Ziel festgelegt ist, wird die Leiste gelb und die verbleibende Zeit in Minuten in Klammern angezeigt.
 
 #### Anzeige der dynamischen Ziel-Anpassung
@@ -66,9 +67,11 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
    * orangener Kreis = Superbolus läuft - verbleibende Zeit wird unterhalb des Symbols angezeigt
    * blauer Kreis mit gepunkteten Linien = Open Loop
 
-* Ein langer Druck auf das Symbol, öffnet das Menü zum Deaktivieren, Unterbrechen und Reaktivieren des Loops sowie um die Pumpe zu trennen / wieder zu verbinden.
+* Drücke kurz oder lang auf das Icon um den Dialog zum Wechsel des Loop-Modus (Close loop, Low Glucose Suspend [Reduzierung der Basalrate bei niedrigen Glukosewerten], Open Loop, Abschalten), zum Pausieren / wieder Einschalten des Loop oder zum Trennen / erneuten Verbinden der Pumpe.
    
-   ![Statusmenü Loop](../images/Home2020_LoopStatusMenu.png)
+   * Wenn Du kurz drückst, muss die Auswahl im Loop-Dialog zusätzlich bestätigt werden.
+   
+   ![Statusmenü Loop](../images/Home2020_Loop_Dialog.png)
 
 ### Abschnitt D - IOB, COB, BR und AS
 
@@ -195,6 +198,7 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 * **GRÜNE** Balken zeigen, dass der BZ höher ist als der Algorithmus es erwartet. Grüne Balken werden verwendet, um die Resistenz in [Autosens](../Usage/Open-APS-features#autosens) zu erhöhen.
 * **ROTE** Balken zeigen, dass der BZ niedriger ist als der Algorithmus erwartet. Rote Balken werden verwendet, um die Sensitivität in [Autosens](../Usage/Open-APS-features#autosens) zu erhöhen.
 * **GELB** Balken zeigen eine Abweichung aufgrund von UAM an.
+* **SCHWARZE** Balken zeigen kleine Abweichungen, die bei der Berechnung der Sensitivität nicht berücksichtigt werden.
 
 #### Sensitivität
 
@@ -373,7 +377,7 @@ Der Behandlungs-Tab kann verwendet werden, um fehlerhafte Kohlenhydrat-Einträge
    * Basalrate
    * BZ-Ziel: Wert, den die AAPS-Berechnungen anstreben sollen
 
-* Du kannst entweder ein [lokales Profil](../Configuration/Config-Builder#lokales-profil-empfohlen) verwenden, das auf deinem Smartphone bearbeitet werden kann oder ein [Nightcout Profil](../Configuration/Config-Builder#nightscout-profil), das auf deiner NS-Seite bearbeitet und anschließend auf dein Telefon übertragen werden muss. Details findest Du in den entsprechenden Abschnitten auf der [Konfigurations-Seite](../Configuration/Config-Builder.md).
+* Du kannst entweder ein [lokales Profil](../Configuration/Config-Builder#lokales-profil-empfohlen) verwenden, das auf deinem Smartphone bearbeitet werden kann oder ein [Nightscout Profil](../Configuration/Config-Builder#nightscout-profil), das auf deiner NS-Seite bearbeitet und anschließend auf dein Telefon übertragen werden muss. Details findest Du in den entsprechenden Abschnitten auf der [Konfigurations-Seite](../Configuration/Config-Builder.md).
 
 ## Bolus
 

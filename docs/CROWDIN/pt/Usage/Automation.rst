@@ -92,7 +92,7 @@ To sort automation rules click and hold the four-lines-button on the right side 
   
 Delete automation rules
 -----
-To delete an automation rule just swipe it left or right.
+To delete an automation rule click on trash icon.
 
 .. image:: ../images/Automation_Delete.png
   :alt: Delete automation rule

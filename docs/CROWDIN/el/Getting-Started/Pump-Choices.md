@@ -5,6 +5,7 @@
 * Accu-Check Combo
 * Accu-Check Insight
 * some old Medtronic
+* Insulet Omnipod (Eros not DASH)
 * DanaR
 * DanaRS 
 

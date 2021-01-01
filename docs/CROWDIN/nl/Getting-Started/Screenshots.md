@@ -19,7 +19,8 @@ Dit is het eerste scherm dat je ziet wanneer je AndroidAPS opent en je vindt er 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
 * Current profile is displayed in the left bar.
-* Long press profile bar to view profile details or to [switch between different profiles](../Usage/Profiles#profile-switch).
+* Short press profile bar to view profile details
+* Long press profile bar to [switch between different profiles](../Usage/Profiles#profile-switch).
 * If profile switch was made with duration remaining time in minutes is shown in brackets.
 
 #### Target
@@ -27,7 +28,7 @@ Dit is het eerste scherm dat je ziet wanneer je AndroidAPS opent en je vindt er 
 ![Temp target remaining duration](../images/Home2020_TT.png)
 
 * Current target blood glucose level is displayed in the right bar.
-* Long press target bar to set a [temporary target](../Usage/temptarget.md).
+* Short press target bar to set a [temporary target](../Usage/temptarget.md).
 * If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
 
 #### Visualization of Dynamic target adjustment
@@ -66,9 +67,11 @@ Dit is het eerste scherm dat je ziet wanneer je AndroidAPS opent en je vindt er 
    * Orange circle = super bolus running - remaining time is shown below icon
    * blue circle with dotted line = open loop
 
-* Long press the icon to open the menu to disable, suspend, re enable loop or disconnect / reconnect pump.
+* Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
    
-   ![Loop status menu](../images/Home2020_LoopStatusMenu.png)
+   * If short press on Loop icon, a validation is required after selection in Loop Dialog
+   
+   ![Loop status menu](../images/Home2020_Loop_Dialog.png)
 
 ### Section D - IOB, COB, BR and AS
 
@@ -195,6 +198,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * **GREEN** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
 * **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
 * **YELLOW** bars show a deviation due to UAM.
+* **BLACK** bars show small deviations not taken into account for sensitivity
 
 #### Sensitivity
 

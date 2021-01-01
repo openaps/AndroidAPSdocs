@@ -1,8 +1,11 @@
 Обновления и изменения в документации
 **************************************************
+
 December 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - patched app does not work with US sensors
+* `Objectives <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ - new questions
+* Omnipod Eros - `loopable in AAPS master <../Configuration/OmnipodEros.html>`_
 * Sony Smartwatch 3 `Manual Installation of Google Play Service <../Usage/SonySW3.html>`_
 October 2020
 ==================================================

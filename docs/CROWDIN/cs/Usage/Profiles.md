@@ -4,7 +4,7 @@ Po prvním spuštění AndroidAPS a výběru profilu budete potřebovat ještě 
 
 AAPS si vnitřně dělá snímek profilu s datumem zahájení a s trváním a používá ho v rámci stanovené doby. Nulové trvání znamená nekonečně (pořád). Takový profil je platný až do dalšího "Přepnutí profilu".
 
-Chcete-li provést přepnutí profilu, dlouze stiskněte tlačítko ("Aktuell (Rad)" na níže uvedeném obrázku) a vyberte Přepnutí profilu.
+To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below).
 
 ![Přepínání profilu](../images/ProfileSwitch_HowTo.png)
 

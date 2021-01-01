@@ -1,8 +1,11 @@
 Mises à jour et modifications de la documentation
 **************************************************
+
 Décembre 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - l'application patchée ne fonctionne pas avec les capteurs US
+* `Objectifs <../Usage/Objectives.html#objective-3-prouver-ses-connaissances>`_ - nouvelles questions
+* Omnipod Eros - `bouclable dans le master AAPS <../Configuration/OmnipodEros.html>`_
 * Sony Smartwatch 3 `Installation manuelle du service Google Play <../Usage/SonySW3.html>`_
 Octobre 2020
 ==================================================

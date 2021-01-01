@@ -52,6 +52,7 @@ You need an Android smartphone with Google Android 7.0 or above. So if you are t
 - 다나R <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - 몇 개의 예전 메드트로닉 펌프 <../Configuration/MedtronicPump.html>`_ 2.4버젼 이상부터 (추가 필요 사항: RileyLink/Gnarl 하드웨어, 블루투스 저에너지 / BLE 칩셋 안드로이드폰)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
 
 AndroidAPS와 호환될 수 있는 가능성이 있는 **그외 펌프**는 <../Getting-Started/Future-possible-Pump-Drivers.html>`_ 페이지 '미래(가능한) 펌프'에 목록이 나와있습니다.
 

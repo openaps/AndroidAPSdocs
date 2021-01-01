@@ -13,15 +13,38 @@ You will receive the following information as soon as a new update is available:
 
 Σας παρακαλούμε να καταλάβετε ότι αυτή η αλλαγή δεν έχει σκοπό να σας δυσκολέψει, αλλά γίνετε για λόγους ασφαλείας. Οι νέες εκδόσεις του AndroidAPS δεν παρέχουν μόνο νέες λειτουργίες αλλά και σημαντικές διορθώσεις ασφαλείας. Ως εκ τούτου, είναι απαραίτητο κάθε χρήστης να ενημερώνει όσων το δυνατό πιο γρήγορα.. Δυστυχώς υπάρχουν ακόμα αναφορές σφαλμάτων από πολύ παλιές εκδόσεις, γι 'αυτό προσπαθείστε να βελτιώσετε την ασφάλεια για κάθε χρήστη και ολόκληρη την κοινότητα του DIY. Ευχαριστώ για την κατανόηση.
 
+Version 2.8.0
+================
+Release date: 1-1-2021
+
+**Minimum Android version is 8.0 now**
+
+Repository location still on https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
+
+**Objectives have changed. Finish not completed objectives before updating.**
+
+Please use `Android Studio 4 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+Σημαντικά νέα χαρακτηριστικά
+----------------------
+* `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org 
+* bolus advisor & eating reminder @MilosKozak 
+* new watchface @rICTx-T1D
+* Dana RS connection improvements @MilosKozak 
+* Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
+* New LowRes skin
+* New `"Pregnant" patient type <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_ @Brian Quinion
+* New NSClient tablet layout @MilosKozak 
+* NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak 
+* Preferences filter @Brian Quinion
+* New pump icons @Rig22 @@teleriddler @osodebailar
+* SetupWizard improvements @MilosKozak 
+* Security improvements @dlvoy 
+* Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
+
 Version 2.7.0
 ================
 Release date: 24-09-2020
-
-Repository location changed to https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
-
-As already `announced some time ago <../Module/module.html#phone>`_, **Android 7 is minimum requirement** for AndroidAPS 2.7.
-
-Please use `Android Studio 4.0.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 **Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`_.
 

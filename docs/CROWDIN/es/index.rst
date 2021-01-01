@@ -26,7 +26,7 @@ Primeros Pasos
    Actualizaciones y cambios en documentos <./Getting-Started/WikiUpdate.rst>
    
    
-Lo que necesitas 
+¿Qué necesito? 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1

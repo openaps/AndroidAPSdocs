@@ -47,43 +47,49 @@ SMB 기능에는 몇 가지 안전 메커니즘이 있습니다:
 AndroidAPS는 다음과 같이 값을 제한합니다:
 
 * 어린이: 2
-* 청소년: 5
+* Teenager: 5
 * 성인: 10
 * 인슐린 저항성이 있는 성인: 12
+* Pregnant: 25
+
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
 
 ### OpenAPS가 주입할 수 있는 최대 basal IOB (OpenAPS "max-iob")
 
-이 값은 closed loop 모드에서 실행되는 AAPS가 고려해야하는 maxIOB를 결정합니다. 현재 IOB가 이 값을 초과하는 경우 (예를 들어, 식사 bolus 후), 루프는 IOB 한계가 주어진 값보다 낮아질 때까지 인슐린 주입을 중단시킵니다.
+This value determines which maxIOB has to be considered by AAPS running in closed loop mode. If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
 
-OpenAPS SMB를 사용하면, OpenAPS AMA에서와는 다르게 max-IOB가 계산됩니다. MaxIOB는 AMA에서 basal IOB에 대한 안전 기준이며, SMB-모드에서는 bolus IOB를 포함한 기준입니다. 좋은 시작값은
+Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In AMA, maxIOB was just a safety-parameter for basal IOB, while in SMB-mode, it also includes bolus IOB. A good start is
 
     maxIOB = 평균 식사 bolus + 하루 최대 basal의 3배 양
     
 
-조심하면서 참을성 있게 한 단계 한 단계 설정을 변경해야만 합니다. 이 값은 사용자마다 다르며, 평균 총 하루 용량 (TDD)에 따라 달라지게 됩니다. 안전상의 이유로, 환자 나이에 따른 제한이 있습니다. The 'hard limit' for maxIOB is higher than in AMA.
+Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features.html#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 * Child: 3
-* Teenage: 7
+* Teenager: 7
 * Adult: 12
 * Insulin resistant adult: 25
+* Pregnant: 40
 
-[SMB를 위한 OpenAPS 문서](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb)도 참고하시기 바랍니다.
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
+
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### AMA Autosense를 사용하기
 
-여기에서 [민감도 감지](../Configuration/Sensitivity-detection-and-COB.md) 'autosense'의 사용 여부를 선택할 수 있습니다.
+Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' or not.
 
 ### SMB를 사용하기
 
-여기에서 SMB 기능을 활성화하거나 완전히 비활성화할 수 있습니다.
+Here you can enable or completely disable SMB feature.
 
 ### COB와 함께 SMB를 사용하기
 
-SMB는 COB가 활성화 상태일 때 작동합니다.
+SMB is working when there is COB active.
 
 ### 임시 목표에서 SMB를 사용하기
 
-SMB는 낮거나 높은 임시 목표(식사 직전, 활동 시, 저혈당, 사용자 정의)가 활성화되어 있을 때 작동합니다.
+SMB is working when there is a low or high temporary target active (eating soon, activity, hypo, custom)
 
 ### Enable SMB with high temp targets
 
@@ -154,20 +160,26 @@ You cannot chose any value: For safety reason, there is a 'hard limit', which de
 The hardcoded parameters in AndroidAPS are:
 
 * 어린이: 2
-* 청소년: 5
+* Teenager: 5
 * 성인: 10
 * Insulin resistant adult: 12
+* Pregnant: 25
+
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
 
 ### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
 
 This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. 이 값은 사용자마다 다르며, 평균 총 하루 용량 (TDD)에 따라 달라지게 됩니다. 안전상의 이유로, 환자 나이에 따른 제한이 있습니다. The 'hard limit' for maxIOB is lower in AMA than in SMB.
+The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 * Child: 3
-* 청소년: 5
+* Teenager: 5
 * Adult: 7
 * Insulin resistant adult: 12
+* Pregnant: 25
+
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
 
 ### AMA Autosense를 사용하기
 
@@ -192,3 +204,85 @@ Default value: 4 (shouldn’t be changed unless you really need to and know, wha
 **Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
 
 Default value: 2
+
+## Overview of hard-coded limits
+
+<table>
+  
+<thead>
+  <tr>
+    <th></th>
+    <th>Child</th>
+    <th>Teenager</th>
+    <th>Adult</th>
+    <th>Insulin resistant adult</th>
+    <th>Pregnant</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>MAXBOLUS</td>
+    <td>5,0</td>
+    <td>10,0</td>
+    <td>17,0</td>
+    <td>25,0</td>
+    <td>60,0</td>
+  </tr>
+  <tr>
+    <td>MINDIA</td>
+    <td>5,0</td>
+    <td>5,0</td>
+    <td>5,0</td>
+    <td>5,0</td>
+    <td>5,0</td>
+  </tr>
+  <tr>
+    <td>MAXDIA</td>
+    <td>7,0</td>
+    <td>7,0</td>
+    <td>7,0</td>
+    <td>7,0</td>
+    <td>10,0</td>
+  </tr>
+  <tr>
+    <td>MINIC</td>
+    <td>2,0</td>
+    <td>2,0</td>
+    <td>2,0</td>
+    <td>2,0</td>
+    <td>0,3</td>
+  </tr>
+  <tr>
+    <td>MAXIC</td>
+    <td>100,0</td>
+    <td>100,0</td>
+    <td>100,0</td>
+    <td>100,0</td>
+    <td>100,0</td>
+  </tr>
+  <tr>
+    <td>MAXIOB_AMA</td>
+    <td>3,0</td>
+    <td>3,5</td>
+    <td>7,0</td>
+    <td>12,0</td>
+    <td>25,0</td>
+  </tr>
+  <tr>
+    <td>MAXIOB_SMB</td>
+    <td>3,0</td>
+    <td>7,0</td>
+    <td>12,0</td>
+    <td>25,0</td>
+    <td>45,0</td>
+  </tr>
+  <tr>
+    <td>MAXBASAL</td>
+    <td>2,0</td>
+    <td>5,0</td>
+    <td>10,0</td>
+    <td>12,0</td>
+    <td>25,0</td>
+  </tr>
+</tbody>
+</table>

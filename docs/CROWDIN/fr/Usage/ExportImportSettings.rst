@@ -48,6 +48,8 @@ Exporter les paramètres
   
 Importer les paramètres
 ==================================================
+**Ne pas importer les paramètres pendant une session Pod active** - voir la page `Omnipod pour plus de détails <../Configuration/OmnipodEros.html#importer-les-parametres-aaps-de-versions-precedentes>`_.
+
 * Menu Hamburger (coin supérieur gauche de l'écran)
 * Maintenance
 * Importez les paramètres

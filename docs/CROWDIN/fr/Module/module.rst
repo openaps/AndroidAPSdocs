@@ -52,6 +52,7 @@ AndroidAPS fonctionne **actuellement** avec
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - `quelques vieilles pompes Medtronic <../Configuration/MedtronicPump.html>`_ à partir de la version 2.4 (également nécessaires : RileyLink/Gnarl, téléphone Android avec bluetooth basse énergie / puce BLE)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
 
 **D'autres pompes**, qui peuvent potentiellement fonctionner avec AndroidAPS, sont listées sur la page `Futures pompes (possible) <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 

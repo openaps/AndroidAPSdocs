@@ -18,9 +18,18 @@ Wähle beim [Erstellen von AAPS](../Installing-AndroidAPS/Building-APK.md) build
 
 Stelle sicher, dass sowohl beide Versionen von AAPS (Smartphone und Smartwatch) mit den gleichen Keys signiert sind!
 
-Die Installation der Wear-Version der APK auf Deiner Smartwatch unterscheidet sich nicht von der Installation auf Deinem Smartphone. Evtl. musst Du den *Entwicklermodus* auf der Smartwacht aktivieren und die APK mit `adb install wear-full-release.apk` auf hochladen und installieren.
+Um die APK auf einer Android Wear Smartwatch zu installieren, folge den folgenden Schritten:
 
-Wenn Du AAPS auf der Smartwatch verwendest, müssen die AAPS Versionen auf Uhr und Smartphone die gleichen sein. Führe ein Update immer auf beiden gleichzeitig aus.
+1. Aktiviere den Entwicklermodus auf der Uhr. Drücke einen Button der Uhr und klicke `Einstellungen (settings)`, dann `System`, dann `Über (about)` und klicke mind. 7 Mal auf die `build number` bis Du die Bestätigung erhältst, dass Du Entwickler bist.
+2. Aktiviere ADB auf der Uhr. Drücke einen Button der Uhr und klicke `Einstellungen (settings)`, dann `Entwickler-Optionen (developer options)`, dann `adb debugging` und `debug over wifi`. Notiere Dir die IP-Adresse, die Dir angezeigt wird. Es handelt sich um die klassische Form einer IP-Adresse gefolgt von :5555.
+3. Notiere Dir am PC den Speicherort der `wear-full-release.apk` (befindet sich im gleichen Ordner wie die `app-full-release.apk`, die Du auf Deinem Smartphone installiert hast).
+4. Öffne am PC die Eingabeaufforderung (tippe `command` in das Suchfeld). 
+5. Gib in der Eingabeaufforderung folgendes ein: `cd c:\Program Files (x86)\Android\android-sdk\platform-tools`.
+6. Gib in der Eingabeaufforderung folgendes ein: `adb connect [Gib hier die IP-Adresse aus Schritt 2 mit :5555 ein.]`.
+7. Gib in der Eingabeaufforderung folgendes ein: `adb install -r [Gib hier den Pfad aus Schritt 3 ein.]\wear-full-release.apk`.
+8. Dadurch wird AAPS auf der Uhr installiert und das AAPS Watchface kann ausgewählt werden.
+
+Wenn Du AAPS auf der Smartwatch verwendest, müssen die AAPS Versionen auf Uhr und Smartphone die gleichen sein. Führe ein Update immer auf beiden gleichzeitig aus. Dazu musst Du die Schritte oben nochmals durchführen, musst aber den Entwicklermodus nicht nochmals aktivieren.
 
 ### Einrichten auf dem Smartphone
 
@@ -238,6 +247,12 @@ Da wir bei der Kommunikation keine Kompromisse eingehen können (wir brauchen ak
 * Manchmal hilft es, Apps erneut mit der Uhr zu synchronisieren, da es manchmal ein bisschen langsam sein kann, bis der Sync automatisch erfolgt: Wear Os > Zahnrad-Symbol (ganz unten) > Name deiner Uhr > Apps erneut synchronisieren.
 * Schalte ADB Debuggen in den Entwickleroptionen der Uhr ein, verbinde die Uhr via USB mit dem PC und starte die Wear App einmal in Android Studio.
 * Wenn die Daten in Komplikationen nicht aktualisiert werden, prüfe zuerst, ob AAPS-Watchfaces überhaupt funktionieren.
+
+### Sony Smartwatch 3
+
+* Die Sony Smartwach 3 ist eine der beliebtesten Uhren zu Verwendung mit AAPS. 
+* Leider hat Google die Unterstützung für Wear OS 1.5 Geräte im Herbst 2020 eingestellt. Dies führt zu Problemen bei der Verwendung von Sony SW3 mit AndroidAPS 2.7 und höher.
+* Einen Workaround findest Du auf der Seite zur [Problembehandlung](../Usage/SonySW3.rst).
 
 ## Nightscout Daten anzeigen
 

@@ -4,7 +4,7 @@ Al iniciar el AndroidAPS y seleccionar su perfil, tendrá que hacer un evento de
 
 Internamente, AAPS crea una instantánea de perfil con fecha de inicio y duración y se la está utilizando en el periodo seleccionado. Duración de cero significa infinito. Este perfil es válido hasta el nuevo "Cambio de perfil".
 
-Para hacer un cambio de perfil de larga duración en el nombre de su perfil ("Aktuell (Rad)" en la imagen siguiente) y seleccione el cambio de perfil.
+To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below).
 
 ![Realizar un cambio de perfil](../images/ProfileSwitch_HowTo.png)
 

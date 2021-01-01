@@ -92,7 +92,7 @@ Om jouw automatiseringsregels te sorteren, houd je de vier-streepjes-knop aan de
   
 Automatiseringsregels verwijderen
 -----
-Om een automatiseringsregel te verwijderen houd je de regel ingedrukt en veeg je hem simpelweg naar links of naar rechts.
+To delete an automation rule click on trash icon.
 
 .. image:: ../images/Automation_Delete.png
   :alt: Automatiseringsregels verwijderen

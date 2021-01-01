@@ -19,7 +19,8 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 ![Changement de profil, durée restante](../images/Home2020_ProfileSwitch.png)
 
 * Le profil actuel est affiché dans la barre de gauche.
-* Un appui long sur la bar de profil permet de voir le détail du profil ou de [changer de profil](../Usage/Profiles#changement-de-profil).
+* Un appui court sur le profil permet de voir les détails du profil
+* Un appui long sur le profil permet de [changer de profil](../Usage/Profiles#changement-de-profil).
 * Si le changement de profil a été effectué avec une durée, le temps restant en minutes est indiqué entre parenthèses.
 
 #### Cible
@@ -27,7 +28,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 ![Cible temporaire, durée restante](../images/Home2020_TT.png)
 
 * La cible de glycémie actuelle est affichée dans la barre de droite.
-* Un appui long sur la barre de cible permet de définir une [cible temporaire](../Usage/temptarget.md).
+* Un appui court sur la barre de cible permet de définir une [cible temporaire](../Usage/temptarget.md).
 * Si une cible temporaire est définie, la barre devient jaune et le temps restant en minutes est affiché entre parenthèses.
 
 #### Visualisation de l'ajustement dynamique de la cible
@@ -66,9 +67,11 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
    * cercle orange = super bolus en cours - le temps restant est affiché sous l'icône
    * cercle bleu avec pointillés = boucle ouverte
 
-* Faites un appui long sur l'icône pour ouvrir le menu permettant de désactiver, suspendre, réactiver la boucle ou déconnecter / reconnecter la pompe.
+* Un appui court ou long sur l'icône de la boucle permet d'ouvrir une boite de dialogue pour changer la boucle (Fermée, Mode Arrêt Glycémie Basse, Ouverte), suspendre/réactiver la boucle ou déconnecter/reconnecter la pompe.
    
-   ![Menu état de la boucle](../images/Home2020_LoopStatusMenu.png)
+   * En cas d'appui court sur l'icône de la boucle, une validation est nécessaire après la sélection dans la boite de dialogue
+   
+   ![Menu état de la boucle](../images/Home2020_Loop_Dialog.png)
 
 ### Section D - IA, GA, Basal et AS
 
@@ -194,7 +197,8 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 * barres **GRISES** montrent un écart dû aux glucides. 
 * barres **VERTES** montrent que la Gly est supérieure à l'attendu de l'algorithme Les barres vertes sont utilisées par [Autosens](../Usage/Open-APS-features#autosens) pour augmenter la résistance.
 * barres **ROUGES** montrent que la Gly est inférieur à l'attendu de l'algorithme. Les barres rouges sont utilisées par [Autosens](../Usage/Open-APS-features#autosens) pour augmenter la sensibilité.
-* **Les barres JAUNES** montrent une déviation due aux RNS.
+* barres **JAUNES** montrent une déviation due aux RNS.
+* barres **NOIRES** montrent de petites déviations non prises en compte pour la sensibilité
 
 #### Sensibilité
 

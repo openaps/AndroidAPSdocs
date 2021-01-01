@@ -21,12 +21,12 @@ Aan de slag
    :glob:
    
    Allereerst de veiligheid <./Getting-Started/Safety-first.rst>
-   Wat is een closed loop systeem <./Getting-Started/ClosedLoop.rst>
-   Wat is een closed loop systeem met AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
+   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
    
    
-Wat heb ik nodig 
+What do I need? 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
@@ -72,7 +72,7 @@ AndroidAPS instellingen
    :glob:
    
    Configurator <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences.rst>
+   Instellingen <./Configuration/Preferences.rst>
    
    
 AndroidAPS gebruik

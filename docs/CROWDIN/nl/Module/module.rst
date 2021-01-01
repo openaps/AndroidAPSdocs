@@ -52,6 +52,7 @@ AndroidAPS werkt momenteel met
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - `bepaalde oudere Medtronic modellen <../Configuration/MedtronicPump.html>`_ (extra nodig: RileyLink/Gnarl hardware, Android telefoon met Bluetooth Low Energy / BLE-chipset)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
 
 **Andere pompen** die mogelijk in de toekomst geschikt zullen zijn vind je op de `Mogelijk toekomstige insulinepompen <../Getting-Started/Future-possible-Pump-Drivers.html>`_ pagina.
 

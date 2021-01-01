@@ -13,15 +13,38 @@ Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à par
 
 Veuillez comprendre que cette modification n'a pas pour but de vous corriger mais est due à des raisons de sécurité. Les nouvelles versions d'AndroidAPS fournissent non seulement de nouvelles fonctionnalités, mais aussi d'importants correctifs de sécurité. Il est donc nécessaire que chaque utilisateur mette à jour a.s.a.p.. Malheureusement, il y a toujours des remontés de bug provenant de très anciennes versions, donc il s'agit d'une tentative d'améliorer la sécurité pour chaque utilisateur et toute la communauté DIY. Merci pour votre compréhension.
 
+Version 2.8.0
+================
+Date de sortie : 1-1-2021
+
+**La version minimale d'Android est maintenant 8.0**
+
+Le dossier github toujours sur https://github.com/nightscout/AndroidAPS. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un `nouveau clone <../Installing-AndroidAPS/Building-APK.html>`_.
+
+**Les objectifs ont changé. Finissez les objectifs non terminés avant la mise à jour.**
+
+Utilisez `Android Studio 4 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
+
+Nouvelles fonctionnalités majeures
+----------------------
+* `Support de l'Omnipod Eros <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda et merci spécial à @ps2 @itsmojo, et à toutes les autres personnes impliquées dans le développement du driver pour Omnipod ainsi que @jlucasvt de GetRileyLink.org 
+* assistant bolus et rappel de repas @MilosKozak 
+* nouveau cadran de montre @rICTx-T1D
+* Améliorations de la connexion Dana RS @MilosKozak 
+* Suppression de "Valeurs MGC inchangées" pour les SMB pour l'application native Dexcom
+* Nouveau thème Basse résolution
+* Nouveau type de patient `"Grossesse" <../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur>`_ @Brian Quinion
+* Nouvelle présentation tablette de NSClient @MilosKozak 
+* NSClient transfert des paramètres insuline, sensibilité et les paramètres d'affichage directement à partir de l'écran principal AAPS @MilosKozak 
+* Filtre des préférences @Brian Quinion
+* Nouvelles icônes de pompe @Rig22 @teleriddler @osodebailar
+* Améliorations de l'assistant de configuration @MilosKozak 
+* Améliorations de la sécurité @dlvoy 
+* Améliorations diverses et correctifs @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
+
 Version 2.7.0
 ================
 Date de sortie : 24-09-2020
-
-Le dossier github à été déplacé vers https://github.com/nightscout/AndroidAPS. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un `nouveau clone <../Installing-AndroidAPS/Building-APK.html>`_.
-
-Comme déjà `annoncé il y a quelque temps <../Module/module.html#telephone>`_, **Android 7 est un minimum requis** pour AndroidAPS 2.7.
-
-Utilisez `Android Studio 4.0.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 **Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 2.7 comme c'est décrit ici** `ici <../Installing-AndroidAPS/update2_7.html>`_.
 

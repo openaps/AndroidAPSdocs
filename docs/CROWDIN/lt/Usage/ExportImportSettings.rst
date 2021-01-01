@@ -48,6 +48,8 @@ Eksportuoti nustatymus
   
 Importuokite nustatymus
 ==================================================
+**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings>`_.
+
 * Paspauskite trijų linijų meniu (viršutiniame kairiajame kampe)
 * Servisas
 * Importuokite nustatymus

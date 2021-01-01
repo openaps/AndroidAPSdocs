@@ -19,15 +19,16 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 ![Duración restante del cambio de perfil](../images/Home2020_ProfileSwitch.png)
 
 * El perfil actual se muestra en la barra izquierda.
-* Mantenga presionada la barra de perfil para ver los detalles del perfil o para [ cambiar entre diferentes perfiles ](../Usage/Profiles#profile-switch).
-* Si el cambio de perfil se realizó con la duración restante, el tiempo en minutos se muestra entre paréntesis.
+* Short press profile bar to view profile details
+* Long press profile bar to [switch between different profiles](../Usage/Profiles#profile-switch).
+* If profile switch was made with duration remaining time in minutes is shown in brackets.
 
 #### Objetivo
 
 ![Duración restante objetivo temporal](../images/Home2020_TT.png)
 
 * El nivel actual de glucosa en la sangre se muestra en la barra derecha.
-* Mantenga presionada la barra de objetivo para establecer un [ objetivo temporal ](../Usage/temptarget.md).
+* Short press target bar to set a [temporary target](../Usage/temptarget.md).
 * Si se establece un objetivo temporal, la barra se vuelve amarilla y el tiempo restante en minutos se muestra entre paréntesis.
 
 #### Visualización de ajuste de objetivo dinámico
@@ -66,9 +67,11 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
    * Círculo naranja = superbolo en ejecución-el tiempo restante se muestra debajo del icono
    * círculo azul con línea punteada = bucle abierto
 
-* Mantenga pulsado el icono para abrir el menú para desactivar, suspender, volver a activar el bucle o desconectar / volver a conectar la bomba.
+* Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
    
-   ![Menú de estado de bucle](../images/Home2020_LoopStatusMenu.png)
+   * If short press on Loop icon, a validation is required after selection in Loop Dialog
+   
+   ![Menú de estado de bucle](../images/Home2020_Loop_Dialog.png)
 
 ### Sección D - IOB, COB, BR y AS
 
@@ -195,6 +198,7 @@ Por lo general, su verdadera curva de glucosa termina en el medio de estas líne
 * **VERDE** barras que muestran un BG mayor al que el algoritmo esperaba. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
 * **RED ** barras que muestran que BG es menor al que el algoritmo esperaba. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
 * **YELLOW** bars show a deviation due to UAM.
+* **BLACK** bars show small deviations not taken into account for sensitivity
 
 #### Sensibilidad
 

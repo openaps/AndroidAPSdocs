@@ -92,7 +92,7 @@ Norint rūšiuoti automatizavimo taisykles, paspauskite ir palaikykite keturių 
   
 Ištrinti automatizavimo taisykles
 -----
-Norėdami ištrinti automatizavimo taisyklę, tiesiog braukite į kairę arba į dešinę.
+To delete an automation rule click on trash icon.
 
 .. image:: ../images/Automation_Delete.png
   :alt: Ištrinti automatizavimo taisyklę

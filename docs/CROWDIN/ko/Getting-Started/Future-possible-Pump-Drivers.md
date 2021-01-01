@@ -2,24 +2,6 @@
 
 아래는 현재 유효한 펌프리스트이며, AAPS의 상태 및 루핑시스템의 지원과 관련된 것입니다. 펌프에서 루프를 가능하게 하기 위해서 요구되는 정보들이 포함되어있습니다.
 
-## Pumps whose support is in development
-
-### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
-
-**Loop status:** Not supported natively by AAPS at the moment. Decoding of the Omnipod protocol is finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
-
-**Other implementations:**
-
-- Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink, and specially modified AndroidAPS) 
-- OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project).
-- [iOS Loop](https://loopkit.github.io/loopdocs/) (stable, released, requires RileyLink).
-
-**Java implementations:** None till now.
-
-**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on Discord (channel #omnipod-eros-testing) with [this invite link](https://discord.com/invite/NhEUtzr). A first public test version was released in January 2020, and work is being done towards stabilization. Current version 0.4 (October 2020)
-
-**Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.x) and 433 MHz antenna.
-
 ## Pumps that are Loopable
 
 ### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
@@ -149,4 +131,4 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 
 ### Other pumps support
 
-If you have any other pumps you would like to see status on, please contact me (@andyrozman on gitter). In future release a lot of Pump configurations will be added to be Open loopable (you will be able to select Virtual Pump Type in configuration and your settings will be loaded - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
+If you have any other pumps you would like to see status on, please contact me (@andyrozman on gitter). In future release a lot of Pump configurations will be added to be Open loopable (you will be able to select Virtual Pump Type in configuration and your settings will be loaded - [Feature request #157](https://github.com/nightscout/AndroidAPS/issues/157)).

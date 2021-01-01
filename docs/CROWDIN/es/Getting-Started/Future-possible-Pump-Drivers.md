@@ -2,24 +2,6 @@
 
 Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado de soporte a las mismas en cualquiera de los sistemas de Lazo cerrado y, a continuación, su situación respecto en AAPS. Al final hay alguna información, de lo que se requiere para que una bomba pueda ser utilizada para "Lazos Cerrados".
 
-## Bombas con soporte en desarrollo
-
-### Insulet Omnipod (con los viejos Eros Pods) ([Página de inicio ](https://www.myomnipod.com/en-gb/about/how-to-use))
-
-**Loop status:** En este momento no soportado de forma nativa por parte de AAPS. La decodificación del protocolo Omnipod ha finalizado-[OpenOmni ](http://www.openomni.org/) y [OmniAPS Slack ](https://omniaps.slack.com/)
-
-**Otras implementaciones:**
-
-- Omnipy para AndroidAPS (estable en las pruebas, se requiere de Raspberry Pi especialmente modificado para RileyLink y AndroidAPS) Omnipy 
-- OmniCore para AndroidAPS (sin versión todavía, código C# que se ejecuta en modo nativo en Android, sólo requiere RileyLink y de AndroidAPS especialmente modificado -la próxima versión del proyecto Omnipy).
-- [iOS Loop](https://loopkit.github.io/loopdocs/) (estable, distribuida, requere RileyLink).
-
-**Plataformas en Java:** Ninguna hasta ahora.
-
-**AAPS estado de implementación:** Se está trabajando en un controlador nativo de Java para el Omnipod en AAPS en [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (rama omnipod_eros rama). No requiere Raspberry Pi. You can follow progress on Discord (channel #omnipod-eros-testing) with [this invite link](https://discord.com/invite/NhEUtzr). A first public test version was released in January 2020, and work is being done towards stabilization. Current version 0.4 (October 2020)
-
-**Requisitos hardware para AAPS: ** RileyLink con el firmware de Omnipod (2.x) y la antena de 433 MHz.
-
 ## Bombas compatibles
 
 ### Omnipod DASH ([Homepage ](https://www.myomnipod.com/DASH))
@@ -42,7 +24,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
-**Loop status: ** Actualmente no está soportado por ninguno de los sistemas de lazo cerrado. Se considera una candidata para sistemas de lazo cerrado, pero en la medida que aún no se conoce el protocolo, no se prevé que sea soportada en breve.
+**Loop status: ** Actualmente no está soportado por ninguno de los sistemas de lazo cerrado. Se considera una candidata para sistemas de bucle cerrado, pero en la medida que aún no se conoce el protocolo, no se prevé que sea soportada en breve.
 
 **Requisitos de hardware para AAPS: ** Probablemente ninguno. Está habilitada para BT.
 
@@ -50,7 +32,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### Medtrum A6/P6/C6 ([Homepage](http://www.medtrum.com/P6.html))
 
-**Loop status:** Es candidata a ser utilizada en sistemas de Bucle Cerrado. La empresa tiene su propio sistema de medio-lazo limitado (A6). Controlable a través de la apps iPhone. No hay ninguna app de Android disponible en este momento.
+**Loop status:** Es candidata a ser utilizada en sistemas de bucle cerrado. La empresa tiene su propio sistema de medio-bucle limitado (A6). Controlable a través de la apps iPhone. No hay ninguna app de Android disponible en este momento.
 
 **Requisitos de hardware para AAPS: ** Probablemente ninguno. Parece estar habilitado para BT.
 
@@ -58,7 +40,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### EOFLOW ([Homepage](http://www.eoflow.com/eng/main/main.html))
 
-**Loop status:** Es candidata a ser utilizada en sistemas de Bucle Cerrado. El control remoto que utilizan es realmente un dispositivo Android modificado. (La bomba, actualmente, sólo está disponible en Corea).
+**Loop status:** Es candidata a ser utilizada en sistemas de bucle cerrado. El control remoto que utilizan es realmente un dispositivo Android modificado. (La bomba, actualmente, sólo está disponible en Corea).
 
 **Requisitos de hardware para AAPS: ** Probablemente ninguno. Parece estar habilitado para BT.
 
@@ -66,7 +48,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Loop status:** Es candidata a ser utilizada en sistemas de Bucle Cerrado. La bomba se empezará a vender a finales de 2018 en algunos países de la UE. Se rumorea que tiene Android en un dispositivo de control dedicado.
+**Loop status:** Es candidata a ser utilizada en sistemas de bucle cerrado. La bomba se empezará a vender a finales de 2018 en algunos países de la UE. Se rumorea que tiene Android en un dispositivo de control dedicado.
 
 **Requisitos de hardware para AAPS: ** Probablemente ninguno. Parece estar habilitado para BT.
 
@@ -76,7 +58,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### Bomba de insulina Willcare ([página web](http://en.shinmyungmedi.com))
 
-** Estado del lazo: ** Por el momento, no es candidato de Loop, pero su personal nos ha contactado y están interesados en que su bomba sea loopeable (por el momento, creo que faltan sólo los mandatos de perfil get/set).
+** Estado del bucle: ** Por el momento, no es candidato de Loop, pero su personal nos ha contactado y están interesados en que su bomba sea loopeable (por el momento, creo que faltan sólo los mandatos de perfil get/set).
 
 **Requisitos hardware para AAPS: ** ninguno. Parece estar habilitado para BT.
 
@@ -88,7 +70,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
-**Loop status: ** Actualmente no está soportado por ninguno de los sistemas de lazo cerrado. Se considera una candidata para sistemas de lazo cerrado, pero en la medida que aún no se conoce el protocolo, no se prevé que sea soportada en breve.
+**Loop status: ** Actualmente no está soportado por ninguno de los sistemas de lazo cerrado. Se considera una candidata para sistemas de bucle cerrado, pero en la medida que aún no se conoce el protocolo, no se prevé que sea soportada en breve.
 
 **Requisitos de hardware para AAPS: ** Probablemente ninguno. Está habilitada para BT.
 
@@ -98,21 +80,21 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### Tandem:(cualquiera) ([Homepage](https://www.tandemdiabetes.com/))
 
-**Loop status:** Incompatible.
+**Estado bucle:** Incompatible.
 
-Hace tiempo que tenían el firmware llamado T:AP (mencionado en este [artículo ](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), que podría haber sido utilizado para sistemas de lazo cerrado (ya no está disponible, desde que la bomba se actualizó a x2), pero además, no estaba destinado para uso comercial, sólo para uso experimental (proyectos de investigación). Hablé con uno de los directores de la empresa y me ha asegurado que la bomba de Tandem nunca estará abierta, pero han creado su propio sistema de lazo cerrado, que están llamando Control-IQ (creo que ya está disponible en USA, y que debería estar disponible en 2020 en Eu).
+Hace tiempo que tenían el firmware llamado T:AP (mencionado en este [artículo ](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), que podría haber sido utilizado para sistemas de bucle cerrado (ya no está disponible, desde que la bomba se actualizó a x2), pero además, no estaba destinado para uso comercial, sólo para uso experimental (proyectos de investigación). Hablé con uno de los directores de la empresa y me ha asegurado que la bomba de Tandem nunca estará abierta, pero han creado su propio sistema de bucle cerrado, que están llamando Control-IQ (creo que ya está disponible en USA, y que debería estar disponible en 2020 en Eu).
 
 * * *
 
 ### Animas Vibe
 
-**Loop status:** Incompatible. No hay posibilidad de control remoto. **Nota: ** La bomba ya no se comercializa. La compañía dejó de trabajar en el negocio de las bombas (J&J).
+**Estado bucle:** Incompatible. No hay posibilidad de control remoto. **Nota: ** La bomba ya no se comercializa. La compañía dejó de trabajar en el negocio de las bombas (J&J).
 
 * * *
 
 ### Animas Ping
 
-**Loop status:** Incompatible. Tenia posibilidad de bolos, pero no de TBR. **Note** Stopped being sold when Vibe came out.
+**Estado bucle:** Incompatible. Tiene posibilidad de bolos, pero no de TBR. **Note** Stopped being sold when Vibe came out.
 
 ## Requisitos para que una bombas sea compatible
 
@@ -133,7 +115,7 @@ Hace tiempo que tenían el firmware llamado T:AP (mencionado en este [artículo 
 
 **Recomendable**
 
-- Cancelar Bolus
+- Cancelar Bolo
 - Obtener perfil basal (casi un requisito)
 - Establecer Perfil Basal (recomendable)
 - Leer historial 
@@ -149,4 +131,4 @@ Hace tiempo que tenían el firmware llamado T:AP (mencionado en este [artículo 
 
 ### Soporte para otras bombas
 
-Si tienes alguna otra bomba de la que te gustaría ver el estado, por favor, ponte en contacto conmigo (@andyrozman en gitter). En próximas versiones, un buen número de configuraciones de bombas se incluirán como compatibles (podrás seleccionar Bomba Virtual en la configuración y se cargarán tus ajustes - [Petición de mejora #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
+Si tienes alguna otra bomba de la que te gustaría ver el estado, por favor, ponte en contacto conmigo (@andyrozman en gitter). In future release a lot of Pump configurations will be added to be Open loopable (you will be able to select Virtual Pump Type in configuration and your settings will be loaded - [Feature request #157](https://github.com/nightscout/AndroidAPS/issues/157)).

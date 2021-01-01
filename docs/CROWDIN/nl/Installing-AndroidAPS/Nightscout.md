@@ -25,7 +25,7 @@ Houd jouw telefoon up-to-date zoals beschreven bij [Allereerst de veiligheid](..
 
 ## Nightscout aanmaken
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Jouw Nightscout site moet ten minste versie 10 zijn (wordt weergegeven als 0.10...), dus controleer of je werkt met de [nieuwste versie](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) anders krijg je een foutmelding op je AAPS app.
+We gaan er vanuit dat je al een Nightscout site hebt, zo niet dan moet je dat eerst nog doen (een makkelijke manier om dat te doen is via ns.10be.de en staat onderaan deze pagina beschreven). Een andere manier om Nightscout aan te maken staat beschreven op de [Nightscout](http://nightscout.github.io/nightscout/new_user/) website. Vraag zo nodig hulp in de facebook groep "CGM in the cloud Nederlands". Voor sommige mensen verbruikt Azure meer data dan hun gratis versie toelaat, dus raden we aan om Heroku te gebruiken. Wanneer je jouw Nightscout site eenmaal hebt aangemaakt, kun je verdergaan met onderstaande instructies. Dit zijn specifieke instellingen voor jouw Nightscout site zodat je hem kunt koppelen aan AndroidAPS. Jouw Nightscout site moet ten minste versie 10 zijn (wordt weergegeven als 0.10...), dus controleer of je werkt met de [nieuwste versie](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) anders krijg je een foutmelding op je AAPS app.
 
 * Ga naar https://herokuapp.com/
 

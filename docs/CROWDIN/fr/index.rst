@@ -26,7 +26,7 @@ Pour commencer
    Wiki mises à jour et modifications <./Getting-Started/WikiUpdate.rst>
    
    
-Ce dont j'ai besoin 
+De quoi ai-je besoin ? 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1

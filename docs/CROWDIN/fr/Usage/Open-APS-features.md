@@ -32,7 +32,7 @@ La fonctionnalité SMB contient des mécanismes de sécurité:
 
 **Vous devez avoir démarré [l'objectif 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) pour utiliser les SMB.**
 
-Voir aussi : [Documentation OpenAPS pour oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) et [Tim's Info sur les SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
+Voir aussi : [Documentation OpenAPS pour oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) et [les infos de Tim sur les SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
 ### Max. U/h pour le débit temp Basal (OpenAPS "max-basal")
 
@@ -50,6 +50,9 @@ AndroidAPS limite la valeur ainsi :
 * Adolescent : 5
 * Adulte : 10
 * Adulte résistant à l'insuline : 12
+* Grossesse : 25
+
+*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur).*
 
 ### IA totale maximale pour OpenAPS \[U\] (OpenAPS "max-IA")
 
@@ -60,12 +63,15 @@ En utilisant OpenAPS SMB, maxIA est calculé différemment de OpenAPS AMA. Dans 
     maxIA = moyenne bolus repas + 3 x max basal quotidien
     
 
-Soyez prudent et patient et modifiez les paramètres petit à petit. C'est différent pour tout le monde et dépend aussi de la Dose Totale d'Insuline (DTI) moyenne quotidienne. Pour des raisons de sécurité, il y a une limite, qui dépend de l'âge du patient. La limite "en dur" de maxIA est plus élevée que celle de l'AMA.
+Soyez prudent et patient et modifiez les paramètres petit à petit. C'est différent pour tout le monde et dépend aussi de la Dose Totale d'Insuline (DTI) moyenne quotidienne. Pour des raisons de sécurité, il y a une limite, qui dépend de l'âge du patient. La 'limite en dur' pour maxIA est supérieure à la limite [AMA](../Usage/Open-APS-features.html#max-u-h-pour-le-debit-temp-basal-openaps-max-basal).
 
 * Enfant : 3
 * Adolescent : 7
 * Adulte : 12
 * Adulte résistant à l'insuline : 25
+* Grossesse : 40
+
+*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur).*
 
 Voir aussi la [documentation OpenAPS pour SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
@@ -147,7 +153,7 @@ Vous pouvez trouver plus d'informations dans la [documentation OpenAPS](http://o
 
 ### Max. U/h pour le débit temp Basal (OpenAPS "max-basal")
 
-Ce paramètre de sécurité aide AndroidAPS à ne jamais diffuser des débits de base dangereusement élevé et limite les débits des basals temp à x U/h. Il est conseillé de definir cette valuer de facon raisonnable et sensée. Une bonne recommandation est de prendre le plus haut débit de votre profil de basal et de le multiplier par 4 et d'au moins 3. Par exemple, si le débit le plus élevé de votre profil est de 1,0 U/h vous pouvez la multiplier par 4 ce qui vous fait 4 U/h que vous définissez comme paramètre de sécurité.
+Ce paramètre de sécurité aide AndroidAPS à ne jamais diffuser des débits de base dangereusement élevé et limite les débits des basals temp à x U/h. Il est conseillé de definir cette valuer de facon raisonnable et sensée. Une bonne recommandation est de prendre le plus haut débit de votre profil de basal et de le multiplier par 4 et d'au moins 3. Pa exemple, si le débit le plus élevé de votre profil est de 1,0 U/h vous pouvez la multiplier par 4 ce qui vous fait 4 U/h que vous définissez comme paramètre de sécurité.
 
 Vous ne pouvez pas choisir n'importe quelle valeur : Pour des raison de sécurité, il y a une 'limite en dur' qui dépend de l'age du patient. Cette 'limite en dur' pour maxIA est plus basse avec AMA (AAR) qu'avec SMB. La valeur la plus faible est pour les enfants et la valeur la plus élevée est pour les adultes résistants à l'insuline.
 
@@ -157,6 +163,9 @@ Les paramètres codés en dur dans AndroidAPS sont les suivants :
 * Adolescent : 5
 * Adulte : 10
 * Adulte résistant à l'insuline : 12
+* Grossesse : 25
+
+*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur).*
 
 ### IA basale max que OpenAPS pourra délivrer \[U\] (OpenAPS "max-iob")
 
@@ -168,6 +177,9 @@ La valeur par défaut est 2, mais vous pouvez augmenter ce paramètre lentement 
 * Adolescent : 5
 * Adulte : 7
 * Adulte résistant à l'insuline : 12
+* Grossesse : 25
+
+*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur).*
 
 ### Activer AMA Autosens
 
@@ -192,3 +204,85 @@ Valeur par défaut : 4 (ne doit pas être modifié sauf si vous en avez vraiment
 **Snooze bolus Diviseur de DAI** La fonction “Snooze bolus” marche après un bolus repas. AAPS ne définit pas de débits de base temporaires bas après un repas pendant une durée égale à la DAI divisée par le paramètre « bolus snooze ». La valeur par défaut est 2. Cela signifie qu'avec un DAI de 5h, le "bolus snooze" serait d'une durée de 5h/2 = 2,5h.
 
 Valeur par défaut : 2
+
+## Aperçu des limites codées en dur
+
+<table>
+  
+<thead>
+  <tr>
+    <th></th>
+    <th> Enfant</th>
+    <th>Adolescent</th>
+    <th>Adulte</th>
+    <th>Adulte résistant à l'insuline</th>
+    <th>Femme enceinte</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>BOLUS MAX</td>
+    <td>5,0</td>
+    <td>10,0</td>
+    <td>17,0</td>
+    <td>25,0</td>
+    <td>60,0</td>
+  </tr>
+  <tr>
+    <td>DAI MIN</td>
+    <td>5,0</td>
+    <td>5,0</td>
+    <td>5,0</td>
+    <td>5,0</td>
+    <td>5,0</td>
+  </tr>
+  <tr>
+    <td>DAI MAX</td>
+    <td>7,0</td>
+    <td>7,0</td>
+    <td>7,0</td>
+    <td>7,0</td>
+    <td>10,0</td>
+  </tr>
+  <tr>
+    <td>G/I MIN</td>
+    <td>2,0</td>
+    <td>2,0</td>
+    <td>2,0</td>
+    <td>2,0</td>
+    <td>0,3</td>
+  </tr>
+  <tr>
+    <td>G/I MAX</td>
+    <td>100,0</td>
+    <td>100,0</td>
+    <td>100,0</td>
+    <td>100,0</td>
+    <td>100,0</td>
+  </tr>
+  <tr>
+    <td>IA MAX AMA</td>
+    <td>3,0</td>
+    <td>3,5</td>
+    <td>7,0</td>
+    <td>12,0</td>
+    <td>25,0</td>
+  </tr>
+  <tr>
+    <td>IA MAX SMB</td>
+    <td>3,0</td>
+    <td>7,0</td>
+    <td>12,0</td>
+    <td>25,0</td>
+    <td>45,0</td>
+  </tr>
+  <tr>
+    <td>BASAL MAX</td>
+    <td>2,0</td>
+    <td>5,0</td>
+    <td>10,0</td>
+    <td>12,0</td>
+    <td>25,0</td>
+  </tr>
+</tbody>
+</table>

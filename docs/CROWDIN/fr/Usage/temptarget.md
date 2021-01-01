@@ -6,9 +6,12 @@ Avec « Cibles Temporaires » (ou CT), vous pouvez changer votre objectif glycé
 
 ![Définir les cibles temp. par défaut](../images/TempTarget_Default.png)
 
-Pour utiliser une de ces « Cibles temporaires par défault », vous pouvez appuyer longuement sur votre cible dans le coin droit en haut de l'onglet Aperçu (ou Accueil) ou encore utiliser les raccourcis dans le bouton orange « Glucides ». Pour définir manuellement une [ "Cible Temporaire personnalisée"](../Usage/temptarget. html#cible-temporaire-personnalise) (valeur de Gly et/ou durée), utilisez "Personnalisé" après avoir fait un appui long sur votre cible dans le coin en haut à droite ou utilisez le bouton "Cible temp." dans l'[onglet / menu Actions](../Configuration/Config-Builder#actions).
+Pour utiliser une de ces « Cibles temporaires par défaut », vous pouvez faire un appui court sur votre cible dans le coin droit en haut de l'onglet Aperçu (ou Accueil) pour afficher la boite de dialogue Cible Temporaire ou encore utiliser les raccourcis dans le bouton orange « Glucides ». Pour définir manuellement une [ "Cible Temporaire personnalisée"](../Usage/temptarget. html#cible-temporaire-personnalise) (valeur de Gly et/ou durée), faites un appui court sur votre cible dans le coin en haut à droite ou utilisez le bouton "Cible temp." dans l'[onglet / menu Actions](../Configuration/Config-Builder#actions).
 
 ![Définir une cible temp.](../images/TempTarget_Set2.png)
+
+- Si vous voulez ajuster légèrement les valeurs d'une cible temporaire par défaut, vous pouvez faire un appui long sur un des boutons Repas imminent, Activité ou Hypo puis modifier les valeurs dans les champs Cible ou Durée.
+- Si une cible temporaire est en cours d'exécution, un bouton supplémentaire "Annuler" est affiché dans la boîte de dialogue pour l'annuler
 
 ## Cible temporaire Hypo
 
@@ -35,6 +38,6 @@ Avancés, [Objectif 10](../Usage/Objectives#objective-10-enabling-additional-ore
 
 ## Cible temporaire Personnalisé
 
-Parfois, vous voulez juste avoir une cible temporaire autre que celles par défaut. Vous pouvez en définir une en appuyant sur la cible en haut à droite dans la vue principale ou dans l'onglet "Actions".
+Parfois, vous voulez juste avoir une cible temporaire autre que celles par défaut. Vous pouvez en définir une en faisant un appui court sur la cible en haut à droite dans la vue principale ou dans l'onglet "Actions".
 
 ![Définir une cible temp. via l'onglet Action](../images/TempTarget_ActionTab.png)
