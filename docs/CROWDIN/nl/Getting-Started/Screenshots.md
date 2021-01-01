@@ -341,7 +341,7 @@ De Careportal had dezelfde functies als wat je in Nightscout ziet wanneer je daa
 * If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
 * Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
 
-### Carb correction
+### Koolhydraten correctie
 
 ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
 
