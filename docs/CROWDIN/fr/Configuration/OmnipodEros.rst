@@ -769,7 +769,7 @@ Below are a few examples of when an uncertain notification can occur.
 Best Practices
 ==============
 
-Optimal Omnipod and RileyLink Positioning
+Positionnement optimal Omnipod et RileyLink
 -----------------------------------------
 
 The antenna used on the RileyLink to communicate with an Omnipod pod is a 433 MHz helical spiral antenna. Due to its construction properties it radiates an omni directional signal like a three dimensional doughnut with the z-axis representing the vertical standing antenna. This means that there are optimal positions for the RileyLink to be placed, especially during pod activation and deactivation routines.
