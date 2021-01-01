@@ -4,55 +4,55 @@
 
 Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod Dash**). Le pilote Omnipod est disponible dans AndroidAPS (AAPS) depuis la version 2.8.
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
+**Ce logiciel est une partie d'un système de pancréas artificiel "Do it yourself" (faire soi-même), et ce n’est pas un produit fini destiné à la mise sur le marché. VOUS devez obligatoirement lire, apprendre et comprendre ce système, y compris la façon de l’utiliser. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
 
-.. contents:: 
-   :backlinks: entry
+.. contenus:: 
+   :backlinks: entrée
    :depth: 2
 
-Hardware and Software Requirements
+Configuration matérielle et logicielle requise
 ==================================
 
-*  **Pod Communication Device** 
+* **Périphérique de communication Pod** 
 
-  Component that bridges communication from your AndroidAPS enabled phone to Eros generation pods.
+  Composant qui permet la communication entre votre téléphone avec AndroidAPS et les Pods de génération Eros.
 
-   -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
-   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__     
-   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
+   -  |OrangeLink|  `Site internet OrangeLink <https://getrileylink.org/product/orangelink>`_    
+   - |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+   -  |EmaLink|  `Site internet Emalink <https://github.com/sks01/EmaLink>`__ - `Contact <mailto:getemalink@gmail.com>`__     
+   -  |LoopLink|  `Site internet LoopLink <https://www.getlooplink.org/>`__ - `Contact <https://jameswedding.substack.com/>`__ - Non testé
 
-*  |Android_Phone|  **Mobile Phone Device** 
+* |Android_Phone| **Téléphone Mobile** 
 
-  Component that will operate AndroidAPS and send control commands to the Pod communication device.
+  Composant qui utilisera AndroidAPS et enverra des commandes de contrôle au périphérique de communication Pod.
 
-      +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <https://androidaps.readthedocs.io/en/latest/EN/index.html#component-setup>`__
+      +  Smartphone compatible du `driver Omnipod Android <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ avec une version AAPS 2.8 et `composants <https://androidaps.readthedocs.io/en/latest/EN/index.html#composants>`__ associés
 
-*  |Omnipod_Pod|  **Insulin Delivery Device** 
+* |Omnipod_Pod| **Dispositif d'injection d'Insuline** 
 
-  Component that will interpret commands received from the Pod communication device originating from your AndroidAPS enable phone.
+  Composant qui interprétera les commandes reçues du périphérique de communication Pod en provenance de votre téléphone AndroidAPS.
 
-      +  A new Omnipod pod (Eros generation - **NOT DASH**)
+      + Un nouveau pod Omnipod (génération Eros - **PAS DASH**)
 
-These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and attempt to begin this process on your next pod change.
+Ces instructions supposent que vous commencez une nouvelle session pod; si ce n'est pas le cas, soyez patient et essayez de commencer ce processus lors de votre prochain changement de pod.
 
 Avant de commencer
 ================
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, charged RileyLink, and phone devices are must-haves).
+**SÉCURITÉ D'ABORD** - ne pas essayer ce processus dans un environnement où vous ne pouvez pas récupérer une erreur (pods supplémentaires, insuline, RileyLink chargé et les smartphones sont nécessaires).
 
-**Your Omnipod PDM will no longer work after the AAPS Omnipod driver activates your pod**. Previously you used your Omnipod PDM to send commands to your Omnipod Eros pod. An Omnipod Eros pod only allows a single device to send communication to it. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate an Omnipod Eros pod with your RileyLink through the AAPS Omnipod driver, **you will no longer be able to use your PDM with your pod**. The AAPS Omnipod driver with the RileyLink is now your acting PDM. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies with AAPS is not working correctly.*
+**Votre PDM Omnipod ne fonctionnera plus après l'activation de votre pod par le driver AAPS Omnipod**. Vous avez précédemment utilisé votre PDM Omnipod pour envoyer des commandes à votre pod Omnipod Eros. Un pod Omnipod Eros ne permet qu'à un seul appareil de la communiquer avec lui. L'appareil qui active le pod avec succès est le seul appareil autorisé à communiquer avec lui à partir de ce moment. Cela signifie qu'une fois que vous activez un pod Omnipod Eros avec votre RileyLink via le pilote AAPS Omnipod, **vous ne pourrez plus utiliser votre PDM avec votre pod**. Le pilote AAPS Omnipod avec le RileyLink est maintenant votre PDM. *Cela ne veut pas dire que vous pouvez jeter votre PDM, il est recommandé de le garder comme une sauvegarde, et en cas d'urgence dans le cas où AAPS ne fonctionne pas correctement.*
 
-**You can configure multiple RileyLinks, but only one selected RileyLink at a time can communicate with a pod.** The AAPS Omnipod driver supports the ability to add multiple RileyLinks in the RileyLink configuration, however, only one RileyLink at a time can be selected to be used for sending and receiving communication.
+**Vous pouvez configurer plusieurs RileyLinks, mais un seul RileyLink à la fois peut communiquer avec un pod.** Le pilote AAPS Omnipod supporte la possibilité d'ajouter plusieurs RileyLinks dans la configuration de RileyLink, cependant, un seul RileyLink à la fois peut être sélectionné pour la communication.
 
-**Your pod will not shut off when the RileyLink is out of range.** When your RileyLink is out of range or the signal is blocked from communicating with the active pod, your pod will continue to deliver basal insulin. Upon activating a pod, the basal profile defined in AAPS will be programmed into the new pod. Should you lose contact with the pod, it will revert to this basal profile. You will not be able to issue new commands until the RileyLink comes back in range and re-establishes the connection.
+**Votre pod ne s'arrêtera pas lorsque le RileyLink sera hors de portée.** Lorsque votre RileyLink est hors de portée ou que le signal est bloqué pour communiquer avec le pod actif, votre pod continuera à injecter l'insuline basale. Lors de l'activation d'un pod, le profil basal défini dans AAPS sera programmé dans le nouveau pod. Si vous perdez le contact avec le pod, il retournera à ce profil de basal. Vous ne serez pas en mesure d'émettre de nouvelles commandes tant que le RileyLink ne reviendra pas à portée et rétablira la connexion.
 
-**30 min Basal Rate Profiles are NOT supported in AndroidAPS.** If you are new to AndroidAPS and are setting up your basal rate profile for the first time please be aware that basal rates starting on a half hour are not supported and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of say 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 10:30, this will not work.  You will need to update this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00.  Even though the 30 min basal rate profile increments are supported by the Omnipod hardware itself, AndroidAPS is not able to take them into account with its algorithms currently.
+**Les profils de débit de base de 30 min ne sont PAS pris en charge dans AndroidAPS.** Si vous êtes nouveau sur AndroidAPS et que vous configurez votre profil de débit de basal pour la première fois, veuillez noter que les débits de basal commençant par une demi-heure ne sont pas pris en charge et que vous devrez ajuster votre profil de débit de basal pour démarrer sur les heures. Par exemple, si vous avez un débit de basal de 1,1 unités qui commence à 09h30 et a une durée de 2 heures se terminant à 11h30, cela ne marchera pas.  Vous devrez mettre à jour ce taux de basal de 1,1 sur une plage horaire de 9h00 à 11h00 ou de 10h00 à 12h00.  Même si les changements de débit de basal du profil toutes les 30 min sont supportés par le matériel Omnipod lui-même, AndroidAPS n'est pas en mesure de les prendre en compte avec ses algorithmes actuellement.
 
-Enabling the Omnipod Driver in AAPS
+Activation du pilote Omnipod dans AAPS
 ===================================
 
-You can enable the Omnipod driver in AAPS in **two ways**:
+Vous pouvez activer le pilote Omnipod dans AAPS de **deux façons**:
 
 Option 1: The Setup Wizard
 --------------------------
@@ -832,7 +832,7 @@ All of the development work for the Omnipod driver is done by the community on a
 	Instructional Section Images
 	
 ..
-	Hardware and Software Requirements
+	Configuration matérielle et logicielle requise
 .. |EmaLink|				image:: ../images/omnipod/EmaLink.png
 .. |LoopLink|				image:: ../images/omnipod/LoopLink.png
 .. |OrangeLink|				image:: ../images/omnipod/OrangeLink.png		
@@ -884,7 +884,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |Deactivate_Pod_10|                  image:: ../images/omnipod/Deactivate_Pod_10.png
 
 ..
-	Enabling the Omnipod Driver in AAPS
+	Activation du pilote Omnipod dans AAPS
 .. |Enable_Omnipod_Driver_1|            image:: ../images/omnipod/Enable_Omnipod_Driver_1.png
 .. |Enable_Omnipod_Driver_2|            image:: ../images/omnipod/Enable_Omnipod_Driver_2.png
 .. |Enable_Omnipod_Driver_3|            image:: ../images/omnipod/Enable_Omnipod_Driver_3.png
