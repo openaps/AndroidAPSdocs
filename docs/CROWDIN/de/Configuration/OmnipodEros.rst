@@ -57,7 +57,7 @@ Du kannst den Omnipod-Treiber in AAPS auf **zwei Wegen** aktivieren:
 Option 1: Der Einrichtungsassistent
 --------------------------
 
-After installing a new version of AndroidAPS, the **Setup Wizard** will start automatically.  This will also occur during in place upgrades.  If you already have exported your settings from a previous installation you can exit the Setup Wizard and import your old settings.  For new installations proceed below.
+Nach der Installation einer neuen Version von AndroidAPS startet der **Einrichtungsassistent** automatisch.  Dies wird auch nach einem Upgrade geschehen.  If you already have exported your settings from a previous installation you can exit the Setup Wizard and import your old settings.  For new installations proceed below.
 
 Über den **AAPS Einrichtungsassistenten (2)** der sich in der oberen rechten Ecke befindet. Klicke auf das **Drei-Punkte-Menü (1)** und fahre durch das Assistenten-Menü bis zum Erreichen des Bildschirms **Pumpe** fort. Then select the **Omnipod radio button (3)** .
 
