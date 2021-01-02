@@ -141,7 +141,7 @@ Valor predeterminado: 3 (no se debe cambiar a menos que realmente necesite y sep
 
 **Current Basal safety multiplier** Este es otro límite de seguridad importante. El valor predeterminado (que también es poco probable que necesite ajustar) es 4. Esto significa que a AndroidAPS nunca se le permitirá establecer una tasa basal temporal que sea más de 4x la tasa basal horaria actual programada en la bomba de un usuario.
 
-Valor predeterminado: 4 (no se debe cambiar a menos que realmente necesite y sepa, lo que está haciendo)
+Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing)
 
 * * *
 
@@ -155,7 +155,7 @@ Usted puede encontrar más información en la documentación [Documentación de 
 
 Esta configuración de seguridad ayuda a AndroidAPS a nunca ser capaz de dar una tasa basal peligrosamente alta y la limita a x U/h. Se aconseja establecer esto en algo sensato. Una buena recomendación es tomar la más alta tasa basal en su perfil y multiplicarla por 4 o por lo menos por 3. Por ejemplo, si la tasa basal más alta de su perfil es de 1,0 U/h, podría multiplicar por 4 para obtener un valor de 4 U/h y establecer el 4 como su parámetro de seguridad.
 
-No se puede elegir ningún valor: por razones de seguridad, existe un "límite duro", que depende de la edad del paciente. El límite para maxIOB es más bajo en AMA que en SMB. Para los niños, el valor es el más bajo mientras que para los adultos resistentes a la insulina, es el más grande.
+No se puede elegir ningún valor: por razones de seguridad, existe un "límite duro", que depende de la edad del paciente. The 'hard limit' for maxIOB is lower in AMA than in SMB. Para los niños, el valor es el más bajo mientras que para los adultos resistentes a la insulina, es el más grande.
 
 Los parámetros codificados en AndroidAPS son los siguientes:
 
@@ -171,7 +171,7 @@ Los parámetros codificados en AndroidAPS son los siguientes:
 
 Este parámetro limita el máximo de IOB basal donde todavía funciona AndroidAPS. Si el IOB es más alto, deja de inyectar insulina basal adicional hasta que el basal IOB esté bajo el límite.
 
-El valor predeterminado es 2, pero debe aumentar este parámetro lentamente para ver cuanto le afecta y qué valor se ajusta mejor. Es diferente para distintas personas y también depende de la dosis diaria total (TDD). Por razones de seguridad, hay un límite, que depende de la edad del paciente. El límite para maxIOB es más bajo en AMA que en SMB.
+El valor predeterminado es 2, pero debe aumentar este parámetro lentamente para ver cuanto le afecta y qué valor se ajusta mejor. Es diferente para distintas personas y también depende de la dosis diaria total (TDD). Por razones de seguridad, hay un límite, que depende de la edad del paciente. The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 * Niños: 3
 * Teenager: 5
@@ -183,11 +183,11 @@ El valor predeterminado es 2, pero debe aumentar este parámetro lentamente para
 
 ### Habilitar el autosensado de AMA
 
-Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosense or not.
+Aquí, puede elegir, si desea utilizar la [detección de sensibilidad](../Configuration/Sensitivity-detection-and-COB.md) autosensibilidad o no.
 
 ### El autosensado ajusta los objetivos temporales también
 
-If you have this option enabled, autosense can adjust targets (next to basal, ISF and IC), too. This lets AndroidAPS work more 'aggressive' or not. The actual target might be reached faster with this.
+Si tiene esta opción habilitada, la autosensibilidad puede ajustar los objetivos (junto a basal, ISF e IC), también. Esto permite a AndroidAPS trabajar más 'agresivo' o no. Es posible que el objectivo actual se alcance más rápido con esto.
 
 ### Ajustes avanzados
 
@@ -199,11 +199,11 @@ Valor predeterminado: 3 (no se debe cambiar a menos que realmente necesite y sep
 
 **Current Basal safety multiplier** Este es otro límite de seguridad importante. El valor predeterminado (que también es poco probable que necesite ajustar) es 4. Esto significa que a AndroidAPS nunca se le permitirá establecer una tasa basal temporal que sea más de 4x la tasa basal horaria actual programada en la bomba de un usuario.
 
-Valor predeterminado: 4 (no se debe cambiar a menos que realmente necesite y sepa, lo que está haciendo)
+Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing)
 
-**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+**Bolo snooze dia divisor** La función "bolus snooze" funciona después de un bolo de comida. AAPS no establece las bajas tasas basales temporales después de una comida en el período de DIA dividida por el parámetro "bolus snooze". El valor predeterminado es 2. Eso significa que con un DIA de 5h, el "bolus snooze" sería 5h: 2 = 2.5h de tiempo.
 
-Default value: 2
+Valor predeterminado: 2
 
 ## Overview of hard-coded limits
 
@@ -212,10 +212,10 @@ Default value: 2
 <thead>
   <tr>
     <th></th>
-    <th>Child</th>
+    <th>Menor de edad</th>
     <th>Teenager</th>
-    <th>Adult</th>
-    <th>Insulin resistant adult</th>
+    <th>Adulto</th>
+    <th>Adulto resistente a la insulina</th>
     <th>Pregnant</th>
   </tr>
 </thead>
