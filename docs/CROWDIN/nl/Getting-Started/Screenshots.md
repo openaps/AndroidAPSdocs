@@ -2,111 +2,111 @@
 
 ## Overzicht-scherm
 
-![Homescreen V2.7](../images/Home2020_Homescreen.png)
+![Overzicht-scherm V2.7](../images/Home2020_Homescreen.png)
 
 Dit is het eerste scherm dat je ziet wanneer je AndroidAPS opent en je vindt er de meeste dingen die je dagelijks nodig hebt.
 
-### Section A - Tabs
+### Sectie A - Tabbladen
 
-* Navigate between the various AndroidAPS modules.
-* Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder#tab-or-hamburger-menu).
+* Schakel tussen de verschillende AndroidAPS-tabbladen door erop te tikken.
+* Je kunt overigens ook van het ene naar het andere tabblad gaan door je huidige scherm naar links of rechts te swipen.
+* Je kunt in de [Configurator](../Configuration/Config-Builder#tabblad-of-hamburger-menu) zelf bepalen welke onderdelen van AAPS worden weergegeven als tabbladen.
 
-### Section B - Profile & target
+### Sectie B - Profiel & streefdoel
 
-#### Current Profile
+#### Huidig profiel
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
-* Current profile is displayed in the left bar.
-* Short press profile bar to view profile details
-* Long press profile bar to [switch between different profiles](../Usage/Profiles#profile-switch).
-* If profile switch was made with duration remaining time in minutes is shown in brackets.
+* Jouw actieve profiel wordt links weergegeven.
+* Druk kort op de profielnaam om jouw profielgegevens te bekijken
+* Houd de profielnaam lang ingedrukt om [ te wisselen tussen verschillende profielen](../Usage/Profiles#profiel-wissel).
+* Als je had gekozen voor een profiel wissel met een beperkte tijdsduur, dan wordt de resterende tijd (in minuten) tussen haakjes weergegeven.
 
-#### Target
+#### Streefdoel
 
 ![Temp target remaining duration](../images/Home2020_TT.png)
 
-* Current target blood glucose level is displayed in the right bar.
-* Short press target bar to set a [temporary target](../Usage/temptarget.md).
-* If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
+* Het huidige bloedglucose streefdoel wordt weergegeven aan de rechterkant.
+* Druk kort op het streefdoel om een [tijdelijk streefdoel](../Usage/temptarget.md) in te stellen.
+* Als je een tijdelijk streefdoel hebt ingesteld, dan wordt de balk geel en wordt de resterende tijd (in minuten) tussen haakjes weergegeven.
 
-#### Visualization of Dynamic target adjustment
+#### Weergave van dynamisch aangepast streefdoel
 
 ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
-* AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
-* Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
-   * "sensitivity raises target" and/or 
-   * "resistance lowers target" 
-* If AAPS detects resistance or sensitivity the target will change from what is set from profile. 
-* When it alters the target glucose background will change to green.
+* AAPS kan jouw streefdoel dynamisch aanpassen op basis van jouw insulinegevoeligheid (geldt alleen als je het SMB-algoritme hebt gekozen).
+* Schakel hiervoor één of meerdere van de [volgende opties](../Configuration/Preferences#openaps-smb-instellingen) in: 
+   * "Gevoeligheid verhoogt het doel" 
+   * "Resistentie verlaagt het doel" 
+* Als AAPS gevoeligheid of resistentie detecteert, zal het streefdoel dat in jouw profiel is ingesteld, worden aangepast. 
+* Bij een dynamisch aangepast streefdoel kleurt de balk groen.
 
-### Section C - BG & loop status
+### Sectie C - BG & loop status
 
-#### Current blood glucose
+#### Huidige bloedglucose
 
-* Latest blood glucose reading from your CGM is shown on the left side.
-* Color of the BG value reflects the status to the defined [range](../Configuration/Preferences#range-for-visualization). 
-   * green = in range
-   * red = below range
-   * yellow = above range
-* The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
+* Laatste bloedglucosewaarde van jouw CGM staat aan de linkerkant.
+* De kleur van de BG-waarde geeft aan of je binnen of buiten de [door jou ingestelde range](../Configuration/Preferences#bereik-voor-visualisatie) zit. 
+   * groen = in range
+   * rood = eronder
+   * geel = erboven
+* In het midden zie je het aantal minuten sinds de laatste CGM meting en ook het verschil tov de laatste meting, tov 15 minuten geleden en tov 40 minuten geleden.
 
 #### Loop status
 
 ![Loop status](../images/Home2020_LoopStatus.png)
 
-* A new icon shows loop status:
+* Een pictogram geeft de status van de loop weer:
    
-   * green circle = loop running
-   * green circle with dotted line = [low glucose suspend (LGS)](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
-   * red circled = loop disabled (not working permanently)
-   * yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-   * grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-   * Orange circle = super bolus running - remaining time is shown below icon
-   * blue circle with dotted line = open loop
+   * groene cirkel = closed loop modus ingeschakeld
+   * groene cirkel met stippellijn = [stop voor laag](../Usage/Objectives#doel-6-starten-in-closed-loop-met-bescherming-tegen-lage-bg) modus
+   * rode cirkel = loop uitgeschakeld (zonder eindtijd), je krijgt je normale basaal
+   * gele cirkel = loop uitgeschakeld (tijdelijk onderbroken - resterende tijd wordt weergegeven onder het pictogram), je krijgt je normale basaal
+   * grijze cirkel = pomp losgekoppeld (tijdelijk - de resterende tijd wordt weergegeven onder het pictogram), de pomp geeft geen insuline af
+   * oranje cirkel = super bolus afgegeven - resterende tijd wordt weergegeven onder het pictogram
+   * blauwe cirkel met stippellijn = open loop
 
-* Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
+* Druk kort of lang op het pictogram om te schakelen naar een andere loop-modus (Open, Closed, Stop Bij Laag of Uitschakelen), je kunt dit ook doen vóórdat de resterende tijd van een bepaalde modus afloopt, om de loop weer in te schakelen.
    
-   * If short press on Loop icon, a validation is required after selection in Loop Dialog
+   * Als je kort drukt op het loop-pictogram, moet je je keuze bevestigen in het dialoogvenster.
    
    ![Loop status menu](../images/Home2020_Loop_Dialog.png)
 
-### Section D - IOB, COB, BR and AS
+### Sectie D - IOB, COB, BR en AS
 
-![Section D](../images/Home2020_TBR.png)
+![Sectie D](../images/Home2020_TBR.png)
 
-* Syringe: insulin on board (IOB) - amount of active insulin inside your body
+* Injectiespuit: insuline aan boord (IOB) - hoeveelheid actieve insuline in jouw lichaam
    
-   * The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
-   * IOB may be negative if there have recently been periods of reduced basal.
-   * Press the icon to see the split of bolus and basal insulin
+   * De nog werkzame insuline (IOB) staat op nul als de loop in de afgelopen tijd jouw ingestelde basaalstand heeft afgegeven en er geen insuline meer over is van een eerdere bolus. 
+   * IOB zal negatief zijn, als je afgelopen tijd lagere tijdelijke basaalstanden hebt gehad.
+   * Druk op het pictogram om jouw IOB uitgesplitst te zien tussen bolus en basale insuline
 
-* Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
+* Graan: [koolhydraten aan boord (COB)](../Usage/COB-calculation.rst) -nog niet opgenomen koolhydraten die je eerder hebt gegeten -> dit pictogram flikkert als koolhydraten nodig zijn om een hypo te voorkomen
 
-* Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%) 
-   * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
-* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features#autosens) status (enabled or disabled) and value is shown below icon
+* Paarse lijn: huidige basaalstand (ookwel BR, Basaal Ratio genoemd) - het pictogram verandert van vorm als gevolg van tijdelijke veranderingen in basaalstand (als hij plat is, staat jouw basaal op 100%) 
+   * Druk op het pictogram om meer details te zien over jouw normale basaal en eventuele tijdelijke basaal (inclusief de resterende tijdsduur)
+* Pijltjes omhoog & naar beneden: autosens. Een kruis naast het pictogram geeft aan dat [autosens](../Usage/Open-APS-features#gevoeligheidsdetectie-autosens) is uitgeschakeld. De waarde wordt altijd weergegeven onder het pictogram (ter info, maakt niet uit of het is ingeschakeld of uitgeschakeld)
 
-#### Carbs required
+#### Koolhydraten benodigd
 
-![Carbs required](../images/Home2020_CarbsRequired.png)
+![Koolhydraten benodigd](../images/Home2020_CarbsRequired.png)
 
-* Carbs suggestions are given when the reference design detects that it requires carbs.
-* This is when the oref algorithm thinks I can't rescue you by 0 (zero) temping and you will need carbs to fix.
-* The carb notifications are much more sophisticated than the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
-* Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+* Wanneer het algoritme denkt dat je extra koolhydraten nodig hebt om te voorkomen dat je een hypo krijgt, zal hij een waarschuwing geven.
+* Dit is het geval wanneer het algoritme denkt dat een tijdelijke basaal van 0 (nul) niet voldoende zal zijn.
+* De berekening achter de waarschuwing voor benodigde koolhydraten is veel geavanceerder dan de berekening achter de bolus calculator. De bolus calculator houdt alleen rekening met jouw profiel instellingen, icm COB/IOB. De koolhydraat waarschuwing houdt ook rekening met de voorspelde BG. Daarom kan het gebeuren dat je een koolhydraten waarschuwing krijgt, terwijl de boluscalculator geen ontbrekende koolhydraten toont.
+* * 'Koolydraten nodig' meldingen kunnen worden gepusht naar Nightscout als je dat wenst, dan zal er een notitie worden gemaakt en naar Nightscout gestuurd.
 
-### Section E - Status lights
+### Sectie E - Statusindicatoren
 
-![Section E](../images/Home2020_StatusLights.png)
+![Sectie E](../images/Home2020_StatusLights.png)
 
 * Status lights give a visual warning for 
    * Cannula age
    * Insulin age (days reservoir is used)
    * Reservoir level (units)
-   * Sensor age
+   * Sensor Leeftijd
    * Battery age and level (%)
 * If threshold warning is exceeded, values will be shown in yellow.
 * If threshold critical is exceeded, values will be shown in red.
@@ -114,7 +114,7 @@ Dit is het eerste scherm dat je ziet wanneer je AndroidAPS opent en je vindt er 
 
 ### Section F - Main graph
 
-![Section F](../images/Home2020_MainGraph.png)
+![Sectie F](../images/Home2020_MainGraph.png)
 
 * Graph shows your blood glucose (BG) as read from your glucose monitor (CGM). 
 * Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
@@ -124,7 +124,7 @@ Dit is het eerste scherm dat je ziet wanneer je AndroidAPS opent en je vindt er 
 * Optional information:
    
    * Voorspellingslijnen
-   * Basals
+   * Basalen
    * Activity - insulin activity curve
 
 #### Activate optional information
@@ -136,35 +136,35 @@ Dit is het eerste scherm dat je ziet wanneer je AndroidAPS opent en je vindt er 
 
 #### Prediction lines
 
-* **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
+* ** Oranje ** lijn: [COB](../Usage/COB-calculation.rst) (kleur wordt gebruikt om COB en koolhydraten weer te geven)
    
-   Prediction line shows where your BG (not where COB itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
+   Prediction line shows where your BG (not where COB itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. Deze lijn wordt alleen getoond als je COB hebt.
 
-* **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
+* ** Donker blauwe ** lijn: IOB (kleur wordt gebruikt om IOB en insuline weer te geven)
    
-   Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
+   Deze voorspellingslijn laat zien waar jouw BG heengaat, alleen rekening houdend met de insuline die je aan boord hebt. Alsof je wel insuline hebt gebolusd maar vervolgens geen koolhydraten hebt gegeten.
 
-* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* **Licht blauwe** lijn: zero-temp (voorspelde BG als tijdelijke basaalstand op 0% zou worden ingesteld)
    
-   Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+   Deze voorspellingslijn is vergelijkbaar met IOB, maar gaat ervan uit dat er geen insuline meer wordt afgegeven door jouw pomp (0% TBR vanaf nu).
 
-* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals)
+* **Donker gele** lijn: [UAM](../Configuration/Sensitivity-detection-and-COB#gevoeligheid-oref1) (un-announced meals, onaangekondigde maaltijden)
    
-   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+   Onaangekondigde maaltijden (Un Announced Meals) - het algoritme heeft een aanzienlijke toename van je glucosewaardes gedetecteerd. Bijvoorbeeld door maaltijden, adrenaline of andere invloeden. Deze voorspellingslijn is vergelijkbaar met de oranje COB lijn, maar veronderstelt dat de afwijkingen met een constante snelheid zullen afnemen (dmv het doortrekken van de huidige afnamesnelheid van de afwijkingen).
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+Bovenstaande voorspellingslijnen rekenen met verschillende (extreme) scenario's. Meestal eindigt je werkelijke bloedglucose curve ergens in het midden van deze lijnen, of dicht bij de lijn die aannames maakt die het meest lijken op jouw situatie van dat moment.
 
-#### Basals
+#### Basalen
 
 * A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
 * The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
 * In times standard basal rate is given the area under the curve is shown in dark blue.
 * When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
 
-#### Activity
+#### Activiteit
 
-* The **thin yellow** line shows the activity of Insulin. 
-* It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+* De ** dunne gele ** lijn is de insuline activiteit. 
+* Het is gebaseerd op de verwachte daling in BG, alleen veroorzaakt door de aanwezige insuline, alsof er geen andere invloeden (zoals koolhydraten) aanwezig zijn.
 
 ### Section G - additional graphs
 
@@ -175,7 +175,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 * To add an additional graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
 
-#### Absolute insulin
+#### Absolute insuline
 
 * Active insulin including boluses **and basal**.
 
@@ -189,29 +189,29 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 #### Carbs On Board
 
 * Shows the carbs you have on board (= active, not yet decayed carbs in your body). 
-* Decaying depends on the deviations the algorithm detects. 
-* If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
+* Hoe snel de COB afneemt, hangt af van de werkelijke BG stijging/daling die het algoritme detecteert tov de verwachte BG. 
+* Als hij een hogere koolhydraat-absorptie detecteert dan verwacht, dan zal hij insuline afgegeven en zal de IOB toenemen (e.e.a. is afhankelijk van jouw veiligheidsinstellingen). 
 
-#### Deviations
+#### Afwijkingen
 
-* **GREY** bars show a deviation due to carbs. 
-* **GREEN** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
-* **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
+* **GRIJZE** balken zijn een afwijking door koolhydraten. 
+* **GROEN** is wanneer de BG hoger is dan het algoritme verwacht. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
+* **ROOD** is wanneer de BG lager is dan het algoritme verwacht. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
 * **YELLOW** bars show a deviation due to UAM.
 * **BLACK** bars show small deviations not taken into account for sensitivity
 
-#### Sensitivity
+#### Gevoeligheid
 
 * Shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. 
-* Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+* Berekent veranderingen aan jouw insuline gevoeligheid veroorzaakt door sporten, hormonen, etc.
 
-#### Activity
+#### Activiteit
 
 * Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
-* The value is higher for insulin closer to peak time.
-* It would mean to be negative when IOB is decreasing. 
+* De waarde is hoger wanneer het werkingsprofiel van jouw insuline dichter bij zijn piektijd zit.
+* Wanneer de IOB afneemt dan wordt de waarde negatief. 
 
-#### Deviation slope
+#### Richtingscoëfficiënt afwijking
 
 * Internal value used in algorithm.
 
@@ -265,61 +265,61 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ![Bolus wizard](../images/Home2020_BolusWizard.png)
 
-When you want to make a meal bolus this is where you will normally make it from.
+Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scherm.
 
 ### Section I
 
-* BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. 
-* In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. 
+* BG field is normally already populated with the latest reading from your CGM. Wanneer jouw CGM het niet doet, dan is dit veld leeg. 
+* In het Koolhydraten veld voer je de hoeveelheid koolhydraten (in grammen) in die je wilt gaan eten. NB: Wanneer je gewend bent om 'broodwaarden' oid te gebruiken, zul je dus eerst naar grammen moeten omrekenen. 
 * The CORR field is if you want to modify the end dosage for some reason.
-* The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+* The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Je kunt ook een negatieve waarde in dit veld invullen als je bolust na je maaltijd.
 
 ### Section J
 
-* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. 
-* The idea is to deliver the insulin sooner and hopefully reduce spikes.
+* Bij een SUPER BOLUS wordt de basale insuline voor de komende twee uur toegevoegd aan de maaltijdbolus, gevolgd door een tijdelijke basaalstand van nul voor de komende twee uur om te compenseren voor de extra insuline. 
+* Hiermee wordt de insuline 'naar voren gehaald', zodat je een minder hoge glucosepiek zult hebben na de maaltijd.
 * For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
 ### Section K
 
-* Shows the calculated bolus. 
-* If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+* Toont de berekende bolus. 
+* Wanneer je al meer insuline aan boord (IOB) hebt dan de berekende bolus, dan zal hier alleen de ontbrekende hoeveelheid koolhydraten te zien zijn.
 * Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#ns-client).
 
 ### Section L
 
 * Details of wizard's bolus calculation.
-* You can deselect any that you do not want to include but you normally wouldn't want to.
+* Je kunt variabelen uitschakelen die je niet wilt laten meenemen in de berekening, maar meestal zul je hier niets van aanpassen.
 * For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
 
-#### Combinations of COB and IOB and what they mean
+#### Combinaties van COB en IOB en hun betekenis
 
 * For safety reasons IOB boxed cannot be unticked when COB box is ticked as you might run the risk of too much insulin as AAPS is not accounting for what’s already given.
 * If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
-* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
+* Wanneer je IOB aanvinkt en COB niet, dan loop je het risico om te weinig insuline te krijgen. Want AAPS houdt wel rekening met insuline die eerder is afgegeven maar niet met koolhydraten die nog moeten worden opgenomen. Dan kun je een melding "Te weinig ... g" krijgen (ontbrekende koolhydraten).
+* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. Dat komt omdat er hierboven steeds wordt gesproken over 'koolhydraten die nog niet zijn opgenomen'. Zo kort na je maaltijdbolus zijn de koolhydraten van je hoofdgerecht waarschijnlijk nog niet opgenomen, en dus komt op dat moment de hoeveelheid IOB niet overeen met de hoeveelheid COB. Door alle vinkjes uit te zetten, berekent AAPS de nieuwe bolus met alleen de koolhydraten uit je nagerecht.
 
-#### Wrong COB detection
+#### Verkeerde COB-detectie
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
+![Langzame koolhydraat absorptie](../images/Calculator_SlowCarbAbsorbtion.png)
 
-* If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. 
-* So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
-* For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
+* Als je de waarschuwing hierboven ziet na het gebruik van de boluswizard, dan heeft AndroidAPS vastgesteld dat de berekende COB-waarde misschien onjuist is. 
+* Dit betekent dat, als je weer wilt bolussen en je hebt nog COB van een vorige maaltijd, je moet uitkijken voor overdosering! 
+* Zie voor meer informatie de [COB Berekening](../Usage/COB-calculation#detectie-van-verkeerde-cob-waarden) pagina.
 
 ## Insuline curve
 
 ![Insuline curve](../images/Screenshot_insulin_profile.png)
 
 * This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
-* The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
+* De PAARSE lijn laat zien hoeveel insuline er nog over is na een injectie, je ziet hoe die steeds verder afneemt als de tijd voorbijgaat. De BLAUWE lijn laat zien hoe actief de insuline is.
 * The important thing to note is that the decay has a long tail. 
-* If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
-* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
+* Wanneer je eerder een insulinepomp hebt gebruikt, ben je waarschijnlijk gewend om in te stellen dat de activiteit van de insuline ongeveer 3,5 uur is. 
+* Alleen, wanneer je gaat loopen dan is de langere activiteit (ook al is deze activiteit maar heel weinig aan het einde) weldegelijk belangrijk om mee te laten nemen in berekeningen. Omdat al deze kleine beetjes zich gaan optellen, door de vele recursieve berekeningen die het AAPS algoritme doet.
 
-For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+Meer uitleg over de verschillende soorten insuline, hun werkingsprofielen en waarom dit allemaal belangrijk is, staat in dit artikel: [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
 
-And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+En meer hierover staat in dit uitstekende blog: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
 And even more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
@@ -343,13 +343,13 @@ De Careportal had dezelfde functies als wat je in Nightscout ziet wanneer je daa
 
 ### Koolhydraten correctie
 
-![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+![Behandeling in 1 of 2 regels](../images/Treatment_1or2_lines.png)
 
-Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+De Behandelingen tab kan worden gebruikt om foutieve koolhydraat-invoer te corrigeren, bijvoorbeeld als je de hoeveelheid koolhydraten hebt onderschat, of juist minder hebt gegeten dan gepland.
 
 1. Bekijk en onthoud de werkelijke COB en IOB op Overzichtscherm.
-2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount.
+2. Afhankelijk van de pomp op het behandelingen-tabblad kunnen koolhydraten samen met insuline op één regel staan, of als een aparte regel (dit laatste is zo bij de DanaRS).
+3. Verwijder de regel met de foutieve koolhydraten-invoer.
 4. Controleer op het Overzicht scherm of de koolhydraten inderdaad zijn verwijderd, het aantal COB zou moeten zijn aangepast.
 5. Doe hetzelfde voor de IOB als er slechts één regel is op het Behandelingen-tabblad voor koolhydraten en insuline.
    
@@ -374,19 +374,19 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
    * DIA (Duration of Insulin Action)
    * IC or I:C: Insulin to Carb ratio
    * ISF: Insulin Sensitivity Factor
-   * Basal rate
+   * Basaal
    * Target: Blood glucose level that you want AAPS to be aiming for
 
 * You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).
 
-## Treatment
+## Bolus
 
 History of the following treatments:
 
 * Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
 * [Vertraagde bolus](../Usage/Extended-Carbs#id1)
 * Temporary basal rate
-* [Temporary target](../Usage/temptarget.md)
+* [Tijdelijk streefdoel](../Usage/temptarget.md)
 * [Profiel wissel](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
