@@ -52,7 +52,7 @@
 .. |Actions_Tab|                  	image:: Actions_Tab.png
 
 ..
-	Activate Pod
+	Pod aktivieren
 .. |Activate_Pod_1|                     image:: Activate_Pod_1.png
 .. |Activate_Pod_2|                     image:: Activate_Pod_2.png
 .. |Activate_Pod_3|                     image:: Activate_Pod_3.png
@@ -70,7 +70,7 @@
 .. |Activate_Pod_15|                    image:: Activate_Pod_15.png
 
 ..
-	Deactivate Pod
+	Pod deaktivieren
 .. |Deactivate_Pod_1|                   image:: Deactivate_Pod_1.png
 .. |Deactivate_Pod_2|                   image:: Deactivate_Pod_2.png
 .. |Deactivate_Pod_3|                   image:: Deactivate_Pod_3.png
@@ -107,7 +107,7 @@
 .. |Omnipod_Tab_Pod_Management|         image:: Omnipod_Tab_Pod_Management.png
 
 ..
-	Pod History
+	Pod Historie
 .. |Pod_History_1|                  	image:: Pod_History_1.png
 .. |Pod_History_2|                  	image:: Pod_History_2.png
 .. |Pod_History_3|                  	image:: Pod_History_3.png
@@ -178,7 +178,7 @@ Icon Table Layouts
 .. table:: 
 
    ====================  ===========================================
-   |refresh_pod_status|  **REFRESH:** 
+   |refresh_pod_status|  **Aktualisieren:** 
    			 
 			 Sends a refresh command to the active pod to update communication
 			 
@@ -188,20 +188,20 @@ Icon Table Layouts
    |pod_management|   	 **POD MGMT:**
 
 			 Navigates to the Pod management menu
-   |ack_alerts|		 **ACK ALERTS:**
+   |ack_alerts|		 **Alarm bestätigen:**
    			 
 			 When pressed this will disable the pod expiration beeps and notifications. 
 			 
 			 * Button is displayed only when pod time is past expiration warning time
 			 * Upon successful dismissal, this icon will no longer appear.
 			 
-   |set_time|		 **SET TIME:**
+   |set_time|		 **Zeit einstellen:**
    
 			 When pressed this will update the time on the pod with the current time on your phone.
-   |suspend|  		 **SUSPEND:**
+   |suspend|  		 **Unterbrechen:**
    
 			 Suspends the active pod
-   |resume| 		 **RESUME DELIVERY:**
+   |resume| 		 **Abgabe fortsetzen:**
    
 			 Resumes the currently suspended, active pod
    ====================  ===========================================
@@ -212,11 +212,11 @@ Pod Management Icons
 .. table:: 
 
    =========================  ===========================================
-   |activate_pod|	      **Activate Pod**
+   |activate_pod|	      **Pod aktivieren**
    
    			      Primes and activates a new pod
 
-   |deactivate_pod|	      **Deactivate Pod**
+   |deactivate_pod|	      **Pod deaktivieren**
  
  			      Deactivates the currently active pod.
 			 
@@ -224,11 +224,11 @@ Pod Management Icons
 			      *  Use this command to deactivate a screaming pod (error 49).
 			      *  If the button is disabled (greyed out) use the Discard Pod button.
 
-   |play_test_beep| 	      **Play test beep**
+   |play_test_beep| 	      **Testton abspielen**
  
  			      Plays a single test beep on the pod when pressed.
 
-   |discard_pod|	      **Discard pod**
+   |discard_pod|	      **Pod ablegen**
 
 			      Deactivates and discards the pod state of an unresponsive pod when pressed.
 			      
@@ -238,18 +238,18 @@ Pod Management Icons
 			      * A **pod is stuck** during the pairing process between steps
 	 		      * A **pod simply does not pair at all.**
 
-   |pod_history| 	      **Pod history** 
+   |pod_history| 	      **Pod Historie** 
    
    			      Displays the active pod activity history
 
-   |rileylink_stats| 	      **RileyLink stats:**
+   |rileylink_stats| 	      **RileyLink-Statistiken:**
    
    			      Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
 
 			      * **Settings** - displays RileyLink and active pod settings information
 			      * **History** - displays RileyLink and Pod communication history
 
-   |reset_rileylink_config|   **Reset RileyLink Config** 
+   |reset_rileylink_config|   **RileyLink-Konfiguration zurücksetzen** 
    
    			      When presssed this button resets the currently connected RileyLink configuration. 
 			      
@@ -261,7 +261,7 @@ Pod Management Icons
 				
 			      * See `addtional notes <#reset-rileylink-config-notes>`__ at the end of this table
 
-   |pulse_log|		      **Read pulse log:** 
+   |pulse_log|		      **Pulse-Log lesen:** 
     
     			      Sends the active pod pulse log to the clipboard
    =========================  ===========================================			    
@@ -329,26 +329,26 @@ Actions Tab
 |Actions_Tab|                  		
 
 
-Activate Pod
+Pod aktivieren
 
 |Activate_Pod_1|                    
 |Activate_Pod_2|                    
-|Aktiviere_Pod_3|                    
+|Activate_Pod_3|                    
 |Activate_Pod_4|                    
 |Activate_Pod_5|                    
-|Aktiviere_Pod_6|                    
-|Aktiviere_Pod_7|                    
-|Aktiviere_Pod_8|                    
-|Aktiviere_Pod_9|                    
+|Activate_Pod_6|                    
+|Activate_Pod_7|                    
+|Activate_Pod_8|                    
+|Activate_Pod_9|                    
 |Activate_Pod_10|                   
 |Activate_Pod_11|                   
-|Aktiviere_Pod_12|                   
+|Activate_Pod_12|                   
 |Activate_Pod_13|                   
 |Activate_Pod_14|                   
 |Activate_Pod_15|                   
 
 
-Deactivate Pod
+Pod deaktivieren
 
 |Deactivate_Pod_1|                  
 |Deactivate_Pod_2|                  
@@ -368,7 +368,7 @@ Aktivieren des Omnipod-Treibers in AAPS
 |Enable_Omnipod_Driver_2|           
 |Enable_Omnipod_Driver_3|           
 |Enable_Omnipod_Driver_4|           
-|Aktiviere _Omnipod_Driver_5|           
+|Enable_Omnipod_Driver_5|           
 
 
 Optimally Positioning the RileyLink
@@ -390,7 +390,7 @@ Omnipod Tab
 |Omnipod_Tab_Pod_Management|        
 
 
-Pod History
+Pod Historie
 
 |Pod_History_1|                  	
 |Pod_History_2|                  	

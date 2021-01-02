@@ -6,12 +6,12 @@ Met een Tijdelijk streefdoel ("Temp-Target” of TT in het Engels), kun je het s
 
 ![Standaard Tijdelijke streefdoelen instellen](../images/TempTarget_Default.png)
 
-To use one of the set “Default-Temp-Targets”, you can short click on your target in the right corner on the top in the overview-tab to show Temp Target dialog and click on Eating Soon, Activity or Hypo button, or use the shortcuts in the orange “Carbs” button. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration), short click on your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
+Om vervolgens een Tijdelijk streefdoel te gebruiken, zijn er verschillende manieren. Druk op het Overzicht-scherm op het vlak rechtsboven met jouw streefdoel. Of druk op het Overzicht-scherm op de oranje 'Koolhydraten' knop of op de blauwe 'Insuline' knop onderin beeld. Voor het instellen van een ["Aangepast Tijdelijk streefdoel"](../Usage/temptarget#aangepast-tijdelijk-streefdoel) (BG-waarde en/of duur), druk op jouw streefdoel in de rechter bovenhoek en kies "Aangepast" of gebruik de "Tijdelijk Streefdoel" knop in de "Acties"-tab.
 
 ![Start Tijdelijk streefdoel](../images/TempTarget_Set2.png)
 
-- If you want to slightly adjust the values of a default temp target, you can long press the Eating Soon, Activity or Hypo button and then edit the values in the Target or Duration fields.
-- If a Temp target is running, an additional "Cancel" button is shown in dialog to cancel it
+- Als je de waarden van een standaard tijdelijk streefdoel iets wilt aanpassen, kun je de Eet Binnenkort, Activiteit of Hypo-knop lang indrukken en vervolgens de waarden in de velden Doel of Duur bewerken.
+- Als een tijdelijk streefdoel actief is, wordt er een extra "Annuleren" knop weergegeven in het dialoogvenster om het te annuleren
 
 ## Hypo Tijdelijk streefdoel
 
@@ -38,6 +38,6 @@ Vanaf [leerdoel 10](../Usage/Objectives#objective-10-enabling-additional-oref1-f
 
 ## Aangepast Tijdelijk streefdoel
 
-Soms wil je gewoon een Tijdelijk streefdoel hebben dat anders is dan de standaard ingestelde Tijdelijke streefdoelen. You can set one by short pressing on the target (range) on the right corner in overview or in the “Action”-Tab.
+Soms wil je gewoon een Tijdelijk streefdoel hebben dat anders is dan de standaard ingestelde Tijdelijke streefdoelen. Je kunt er één instellen door kort te drukken op het doel (bereik) in de rechterbovenhoek in het Overzichtscherm of in het tabblad "Acties".
 
 ![Tijdelijk streefdoel instellen via Actie tabblad](../images/TempTarget_ActionTab.png)

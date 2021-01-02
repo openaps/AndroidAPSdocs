@@ -9,8 +9,8 @@
 * Bouw zo snel mogelijk een nieuwe app zodra er een nieuwe versie is uitgebracht. Je zult een [melding op het Overzichtscherm van AndroidAPS](../Installing-AndroidAPS/Releasenotes#release-notes) zien over de nieuwe versie.
 * Vanaf versie 2.3 moet je git gebruiken om te updaten. Bijwerken via zip-bestand werkt niet meer.
 * Vanaf versie 2.7 is de locatie waar de code staat, gewijzigd in <https://github.com/nightscout/AndroidAPS>. Als je niet precies weet hoe git werkt, dan is het het gemakkelijkst om de map (directory) waarin AndroidAPS staat, te verwijderen. Gebruik daarna de instructies voor het nieuw [bouwen van de APK](../Installing-AndroidAPS/Building-APK.md).
-* Gebruik [](https://developer.android.com/studio/)Android Studio Versie 4.0.1 of nieuwer om de apk te bouwen.
-* [Windows 10 32-bits systemen](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) worden niet ondersteund door Android Studio 4.0.1.
+* Gebruik [](https://developer.android.com/studio/)Android Studio Versie 4.1.1 of nieuwer om de apk te bouwen.
+* [Windows 10 32-bits systemen](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) worden niet ondersteund door Android Studio 4.1.1.
 * Als je "xDrip+" gebruikt, zorg dan dat je de instelling voor [Identify receiver](../Configuration/xdrip#identify-receiver) (identificeer ontvanger) hebt ingevuld in xDrip+.
 * Als je de Dexcom G6 gebruikt met de [aangepaste Dexcom-app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app), dan moet je de versie uit de [2.4 map](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) gebruiken.
 

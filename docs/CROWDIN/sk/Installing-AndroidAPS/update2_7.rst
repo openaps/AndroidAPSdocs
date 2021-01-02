@@ -1,4 +1,4 @@
-Necessary checks after update to AndroidAPS 2.7
+Necessary checks after update coming from AndroidAPS 2.6
 ***********************************************************
 
 * The program code was changed significantly when switching to AAPS 2.7. 

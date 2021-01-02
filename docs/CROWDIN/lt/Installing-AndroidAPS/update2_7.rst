@@ -1,4 +1,4 @@
-Būtini patikrinimai po to, kai buvo atnaujinta AndroidAPS 2.7
+Necessary checks after update coming from AndroidAPS 2.6
 ***********************************************************
 
 * Atnaujinant į AAPS 2.7, programos kodas buvo žymiai pakeistas. 
