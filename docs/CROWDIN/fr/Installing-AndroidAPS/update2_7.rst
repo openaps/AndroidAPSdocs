@@ -1,4 +1,4 @@
-Vérifications nécessaires après la mise à jour vers AndroidAPS 2.7
+Necessary checks after update coming from AndroidAPS 2.6
 ***********************************************************
 
 * Le code du programme a été changé de façon significative lors du passage à AAPS 2.7. 
