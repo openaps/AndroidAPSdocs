@@ -21,12 +21,12 @@ Aan de slag
    :glob:
    
    Allereerst de veiligheid <./Getting-Started/Safety-first.rst>
-   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Wat is een closed loop systeem <./Getting-Started/ClosedLoop.rst>
+   Wat is een closed loop systeem met AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
    
    
-What do I need? 
+Wat heb ik nodig? 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
@@ -44,7 +44,7 @@ AndroidAPS installeren
 
    Bouwen van de app <./Installing-AndroidAPS/Building-APK.md>
    Bijwerken naar een nieuwe versie <./Installing-AndroidAPS/Update-to-new-version.md>
-   Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
+   Controles na bijwerken naar AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Git installeren <./Installing-AndroidAPS/git-install.rst>
    Problemen in Android Studio oplossen <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
