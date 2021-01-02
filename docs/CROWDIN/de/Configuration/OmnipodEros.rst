@@ -111,7 +111,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 2. After selecting the Omnipod driver, identify and select your RileyLink from **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Gear Icon (Settings) (2)** ➜\ **RileyLink Configuration (3)** by pressing the **Not Set** or **MAC Address (if present)** text.   
 
-    Ensure your RileyLink battery is charged and it is `positioned in close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Einmal ausgewählt, kannst du deine erste Pod Session aktivieren. Benutze die Zurück-Taste auf deinem Handy, um zum AAPS-Haupt-Bildschirm zurückzukehren.
+    Stelle sicher, dass dein RileyLink-Akku geladen ist und sich `in unmittelbarer Nähe befindet <#optimale-positionierung-von-omnipod-und-rileylink>`__ (~30 cm entfernt oder weniger) zu deinem Handy positioniert, damit AAPS es durch seine MAC-Adresse identifizieren kann. Einmal ausgewählt, kannst du deine erste Pod Session aktivieren. Benutze die Zurück-Taste auf deinem Handy, um zum AAPS-Haupt-Bildschirm zurückzukehren.
 
     |RileyLink_Setup_1| |RileyLink_Setup_2|
 
@@ -132,7 +132,7 @@ Einen Pod aktivieren
 
 Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Verbindung in den Omnipod-Einstellungen richtig konfiguriert und verbunden hast.
 
-*REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Vor dem Pairing des Pods ist das Funksignal schwächer, aber nachdem es verbunden wurde, wird es mit voller Signalleistung funktionieren. During these procedures, make sure that your pod is* `within close proximity <#optimal-omnipod-and-rileylink-positioning>`__ *(~30 cm away or less) but not on top of or right next to the RileyLink.  
+*REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Vor dem Pairing des Pods ist das Funksignal schwächer, aber nachdem es verbunden wurde, wird es mit voller Signalleistung funktionieren. Stelle sicher, dass dein Pod während dieser Prozedur `in der Nähe<#optimale-positionierung-von-omnipod-und-rileylink>`__ *(~30 cm entfernt oder weniger)* ist, aber nicht oben oder direkt neben dem RileyLink.  
 
 1. Navigiere zur Registerkarte **Omnipod (POD)** und klicke auf den **POD MGMT (1)** Button und dann auf **Pod aktivieren (2)**.
 
@@ -144,7 +144,7 @@ Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Ver
 
     Stelle sicher, dass der neue Pod und RileyLink in der Nähe von einander liegen (~ 30cm oder weniger), und klicke auf die Schaltfläche ** Weiter**.
 
-3. Auf dem Bildschirm ** Initializiere Pod * * beginnt der Pod zu entlüften (du wirst einen Klick hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst). Wenn der RileyLink außerhalb der Reichweite des zu aktivierenden Pods ist, erhältst du die Fehlermeldung **Keine Antwort vom Pod**. If this occurs, `move the RileyLink closer <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
+3. Auf dem Bildschirm ** Initializiere Pod * * beginnt der Pod zu entlüften (du wirst einen Klick hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst). Wenn der RileyLink außerhalb der Reichweite des zu aktivierenden Pods ist, erhältst du die Fehlermeldung **Keine Antwort vom Pod**. Wenn dies geschieht, `schiebe den RileyLink näher <#optimale-positionierung-von-omnipod-und-rileylink>`_ (~ 30 cm weg oder weniger) ran, aber nicht auf den Pod oder direkt neben den Pod und klicke auf die Schaltfläche **Wiederholen (1)* *.
 
     |Aktiviere_Pod_4| |Aktiviere_Pod_5|
 
@@ -162,7 +162,7 @@ Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Ver
 
 7. Nach dem Drücken von **OK** dauert es eventuell etwas, bevor der Omnipod antwortet und die Kanüle setzt (1-2 Minuten maximal) also habe Geduld.
 
-    Wenn der RileyLink außerhalb der Reichweite des zu aktivierenden Pods ist, erhältst du die Fehlermeldung **Keine Antwort vom Pod**. If this occurs, move the RileyLink closer (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry** button.
+    Wenn der RileyLink außerhalb der Reichweite des zu aktivierenden Pods ist, erhältst du die Fehlermeldung **Keine Antwort vom Pod**. Wenn dies geschieht, bewegen Sie den RileyLink näher (~ 30 cm weg oder weniger) zu, aber nicht auf der Oberseite oder direkt neben dem Pod und klicken Sie auf die ** Retry** Schaltfläche.
 
     Wenn der RileyLink außerhalb der Bluetoothreichweite oder keine aktive Verbindung zum Smartphone hat, bekommt man eine Fehlermeldung **Keine Antwort von RileyLink**. Wenn diese Fehlermeldung auftritt, verringere die Distanz vom RileyLink und dem Smartphone und klicke auf den **Wiederholen** Button.
 
@@ -184,7 +184,7 @@ Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Ver
 
     Click on the back button on your phone to return to the **Omnipod (POD)** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
 
-    For more details on the information displayed go to the `Omnipod (POD) Tab <#omnipod-pod-tab>`__ section of this document.
+    Weitere Details zu den angezeigten Informationen findest du im Tab `Omnipod (POD) <#omnipod-pod-tab>`_ dieses Dokuments.
 
     |Activate_Pod_14| |Activate_Pod_15|
 
@@ -769,7 +769,7 @@ Below are a few examples of when an uncertain notification can occur.
 Best Practices
 ==============
 
-Optimal Omnipod and RileyLink Positioning
+Optimale Positionierung von Omnipod und RileyLink
 -----------------------------------------
 
 The antenna used on the RileyLink to communicate with an Omnipod pod is a 433 MHz helical spiral antenna. Due to its construction properties it radiates an omni directional signal like a three dimensional doughnut with the z-axis representing the vertical standing antenna. This means that there are optimal positions for the RileyLink to be placed, especially during pod activation and deactivation routines.
