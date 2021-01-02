@@ -15,7 +15,7 @@ Por favor, entienda que este cambio no tiene la intención de molestarlo, sino q
 
 Versión 2.8.0
 ================
-Release date: 01-01-2021
+Fecha de lanzamiento: 01-01-2021
 
 Important hints
 ----------------------
