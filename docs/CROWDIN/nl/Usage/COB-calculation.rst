@@ -25,7 +25,7 @@ Als de door jou ingestelde minimale koolhydraten absorptie (min_5min_carbimpact)
 Detectie van verkeerde COB-waarden
 ==================================================
 
-AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. In dat geval zie je een extra hint op het bevestigingsscherm nadat je op OK hebt gedrukt in de bolus wizard. 
+AAPS waarschuwt je als je op het punt staat om een bolus te gaan geven wanneer je nog COB van een vorige maaltijd hebt, en als het algoritme denkt dat de huidige COB berekening verkeerd kan zijn. In dat geval zie je een extra hint op het bevestigingsscherm nadat je op OK hebt gedrukt in de bolus wizard. 
 
 Hoe detecteert AndroidAPS verkeerde COB waarden? 
 --------------------------------------------------
@@ -55,4 +55,4 @@ Waarom detect het algoritme COB niet goed?
 
 Handmatige correctie van ingevoerde koolhydraten
 ==================================================
-If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.
+Als je de hoeveelheid koolhydraten hebt over/onderschat dan kun je dit corrigeren via het Behandelingen-tabblad en het Acties-tabblad, zoals `hier <../Getting-Started/Screenshots.html#koolhydraten-correctie>`_ beschreven.
