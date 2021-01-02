@@ -343,7 +343,7 @@ Activate Pod
 |Activate_Pod_10|                   
 |Activate_Pod_11|                   
 |Aktiviere_Pod_12|                   
-|Activate_Pod_13|                   
+|Aktiviere_Pod_13|                   
 |Activate_Pod_14|                   
 |Activate_Pod_15|                   
 
@@ -352,7 +352,7 @@ Deactivate Pod
 
 |Deactivate_Pod_1|                  
 |Deactivate_Pod_2|                  
-|Deactivate_Pod_3|                  
+|Deaktiviere_Pod_3|                  
 |Deactivate_Pod_4|                  
 |Deactivate_Pod_5|                  
 |Deactivate_Pod_6|                  
