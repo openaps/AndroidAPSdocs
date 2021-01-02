@@ -15,7 +15,7 @@ Veuillez comprendre que cette modification n'a pas pour but de vous corriger mai
 
 Version 2.8.0
 ================
-Release date: 03-01-2021
+Date de sortie : 03-01-2021
 
 **La version minimale d'Android est maintenant 8.0. Pour les anciennes versions d'Android, vous pouvez toujours utiliser la version 2.6.1.4 à partir de l'ancien dépôt**
 
