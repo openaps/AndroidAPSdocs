@@ -234,7 +234,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#ns-client).
 
 #### Calculator
-* See [details below](../Configuration/Screenhots#bolus-wizard)
+* See Bolus Wizard [section below](../Configuration/Screenhots#bolus-wizard)
 
 #### Calibrations
 * Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
