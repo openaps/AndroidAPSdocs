@@ -56,7 +56,7 @@ AndroidAPS limita el valor de la forma siguiente:
 
 ### El número máximo de IOB que OpenAPS no puede sobrepasar (OpenAPS "max-iob")
 
-This value determines which maxIOB has to be considered by AAPS running in closed loop mode. If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
+Este valor determina qué maxIOB tiene que ser considerado por AAPS funcionando en bucle cerrado. Si el IOB actual (por ejemplo, después de un bolo de comida) está por encima del valor definido, el bucle para la dosificación de insulina hasta que el límite de IOB esté por debajo del valor determinado.
 
 Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In AMA, maxIOB was just a safety-parameter for basal IOB, while in SMB-mode, it also includes bolus IOB. A good start is
 
