@@ -136,29 +136,29 @@ Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Ver
 
 1. Navigiere zur Registerkarte **Omnipod (POD)** und klicke auf den **POD MGMT (1)** Button und dann auf **Pod aktivieren (2)**.
 
-    |Activiere_Pod_1| |Activiere_Pod_2|
+    |Activate_Pod_1| |Activate_Pod_2|
 
 2. Die Anzeige ** Pod füllen* * wird angezeigt. Fülle deinen neuen Pod mit mindestens 85 Einheiten Insulin und achte auf zwei Signaltöne, die anzeigen, dass der Pod bereit ist, gestartet zu werden.
 
-    |Aktiviere_Pod_3|
+    |Activate_Pod_3|
 
     Stelle sicher, dass der neue Pod und RileyLink in der Nähe von einander liegen (~ 30cm oder weniger), und klicke auf die Schaltfläche ** Weiter**.
 
 3. Auf dem Bildschirm ** Initializiere Pod * * beginnt der Pod zu entlüften (du wirst einen Klick hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst). Wenn der RileyLink außerhalb der Reichweite des zu aktivierenden Pods ist, erhältst du die Fehlermeldung **Keine Antwort vom Pod**. If this occurs, `move the RileyLink closer <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
 
-    |Aktiviere_Pod_4| |Aktiviere_Pod_5|
+    |Activate_Pod_4| |Activate_Pod_5|
 
 4. Bei erfolgreicher Befüllung wird ein grünes Häkchen angezeigt und der **Weiter** Button wird aktiviert. Klicke auf den Button ** Weiter**, um die Initialisierung des Pods abzuschließen, und die Anzeige **Pod anbringen** zu sehen.
 
-    |Aktiviere_Pod_6|
+    |Activate_Pod_6|
 
 5. Bereite anschließend die Infusionsstelle des neuen Pods vor. Entferne die Nadelkappe aus Kunststoff und den weißen Papierträger von der Klebefläche und setze den Pod auf die ausgewählte Stelle Deines Körpers auf. Wenn du fertig bist, klicke auf den **Weiter** Button.
 
-    |Aktiviere_Pod_7|
+    |Activate_Pod_7|
 
 6. Das Dialogfenster **Pod-anbringen** wird jetzt angezeigt. **NUR auf OK klicken, wenn du bereit bist, die Kanülen einzuführen.**
 
-    |Aktiviere_Pod_8|
+    |Activate_Pod_8|
 
 7. Nach dem Drücken von **OK** dauert es eventuell etwas, bevor der Omnipod antwortet und die Kanüle setzt (1-2 Minuten maximal) also habe Geduld.
 
@@ -168,13 +168,13 @@ Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Ver
 
     *HINWEIS: Bevor die Kanüle eingesetzt wird, ist es ratsam, die Haut in der Nähe des Kanülensetzpunktes zu kneifen. Dies sorgt für eine sanfte Einführung der Nadel und verringert die Gefahr einer Verstopfung.*
 
-    |Aktiviere_Pod_9|
+    |Activate_Pod_9|
 
-    |Aktiviere Pod_10| |Aktiviere Pod_11|
+    |Activate_Pod_10| |Activate_Pod_11|
 
 8. Es wird ein grünes Häkchen angezeigt, und die Schaltfläche **Weiter** wird bei erfolgreicher Kanüleneinführung aktiviert. Klicke auf die Schaltfläche **Weiter**.
 
-    |Aktiviere_Pod_12|
+    |Activate_Pod_12|
 
 9. Der **Pod aktiviert** Bildschirm wird angezeigt. Click on the green **Finished** button. Congratulations! You have now started a new active pod session.
 
