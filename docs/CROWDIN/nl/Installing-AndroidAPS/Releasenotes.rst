@@ -15,14 +15,14 @@ Deze harde beperkingen zijn uiteraard niet bedoeld om je te pesten, maar zijn er
 
 Version 2.8.0
 ================
-Release date: 02-01-2021
+Release date: 01-01-2021
 
 Important hints
 ----------------------
 * **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo. 
 * Objectives have changed. **Finish not completed objectives before updating.**
 * Repository location still on https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
-* Please use `Android Studio 4 <https://developer.android.com/studio/>`_ or newer to build the apk.
+* Please use `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Belangrijkste nieuwe functies
 ----------------------
