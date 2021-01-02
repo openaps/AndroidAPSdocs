@@ -58,51 +58,51 @@ Als je de boluscalculator gebruikt, haal dan de vinkjes weg bij COB en IOB tenzi
 
 ## Accu-Chek Combo
 
-AndroidAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
+AndroidAPS zal een alarm afgeven als de tijd tussen pomp en telefoon sterk verschilt. In het geval van zomer/wintertijd wisselingen zou dit midden in de nacht zijn. Om zo'n alarm te voorkomen en ongestoord door te kunnen slapen, staat hier uitgelegd wat je moet doen de dag/avond ervoor:
 
-### Actions to take before the clock change
+### Acties voorafgaand aan tijdswissel
 
-1. Switch OFF any setting that automatically sets the timezone, so you can force the time change when you want to. How you can do this will depend on your smartphone and Android version.
+1. Schakel automatische tijdzone UIT in jouw telefooninstellingen, zodat het niet automatisch (en dus 's nachts) gebeurt. Hoe je dit precies moet doen hangt af van je smartphone en Android versie. Meestal te vinden onder Instellingen > Datum en tijd oid.
    
-   * Some have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the timezone (which you must turn OFF).
-   * Unfortunately some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
+   * Sommige telefoons hebben twee instellingen: één voor automatische instelling van de tijd (die gewoon aan kan blijven) en één voor automatische instelling van de tijdzone (die moet je UIT zetten).
+   * Sommige Android-versies hebben één enkele instelling voor automatische instelling van zowel de tijd als tijdzone. Zet dan die instelling UIT.
 
-2. Find a time zone that has the same time as your current location but doesn't use DST.
+2. Zoek een tijdzone die dezelfde tijd gebruikt als jouw huidige locatie, maar die geen zomer/wintertijd gebruikt.
    
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo.
+   * Een lijst van deze landen is beschikbaar op [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * Voor Nederland/België zou je "Brazzaville" (Congo) kunnen kiezen op de avond voordat de zomertijd ingaat, en "Amman" (Jordanië) op de avond voordat de wintertijd ingaat. Verander de tijdzone van jouw telefoon naar Congo/Jordanië.
 
-3. In AndroidAPS refresh your pump.
+3. In AndroidAPS ga je naar het pomp-tabblad en vernieuw de status.
 
-4. Check the Treatments tab... If you see any duplicate treatments:
+4. Ga naar het tabblad Behandelingen... Als je dubbele behandelingen ziet:
    
-   * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * Druk NIET (!) op "verwijder behandelingen in de toekomst"
+   * Klik één voor één op "verwijder" voor alle dubbele en toekomstige behandelingen. Dit zou de behandelingen ongeldig moeten maken in plaats van ze te verwijderen, zodat ze niet meer voor IOB / COB worden meegenomen.
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. Als de je niet goed weet of jouw huidige IOB/COB correct is - schakel voor jouw eigen veiligheid de loop voor ten minste één DIA of Max-Carb-time uit - welk van de twee het grootste is.
 
-### Actions to take after the clock change
+### Acties na afloop van tijdswissel
 
-A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
+Een goed moment om deze omschakeling te maken zou zijn wanneer jouw IOB laag is. Bijv. een uur voor een maaltijd zoals ontbijt, (eventuele recente bolussen in de pompgeschiedenis zullen kleine SMB correcties zijn geweest. Je COB en IOB moeten beide dicht bij nul zijn.)
 
-1. Change the Android timezone back to your current location and re-enable automatic timezone.
-2. AndroidAPS will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
-3. On the AndroidAPS “Combo” screen, press Refresh.
-4. Then go to the Treatments screen, and look for any events in the future. There shouldn’t be many.
+1. Verander de Android tijdzone terug naar je huidige locatie en schakel de automatische tijdzone opnieuw in.
+2. AndroidAPS zal je snel beginnen te waarschuwen dat de tijdsinstelling van de Combo niet overeenkomt met jouw telefoon. Dus werk de klok van de pomp handmatig bij via de knoppen van de pomp.
+3. Op het AndroidAPS "Combo" scherm, klik op Vernieuwen.
+4. Ga dan naar tabblad Behandelingen en kijk of daar behandelingen in de toekomst tussen staan. Er zouden er niet veel moeten zijn.
    
-   * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * Druk NIET (!) op "verwijder behandelingen in de toekomst"
+   * Klik één voor één op "verwijder" voor alle dubbele en toekomstige behandelingen. Dit zou de behandelingen ongeldig moeten maken in plaats van ze te verwijderen, zodat ze niet meer voor IOB / COB worden meegenomen.
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. Als de je niet goed weet of jouw huidige IOB/COB correct is - schakel voor jouw eigen veiligheid de loop voor ten minste één DIA of Max-Carb-time uit - welk van de twee het grootste is.
 
-6. Continue as normal.
+6. Je bent klaar.
 
 ## Accu-Chek Insight
 
-* Change to DST is done automatically. No action required.
+* Wisselingen tussen zomer/wintertijd worden automatisch gedaan. Geen actie vereist.
 
-## Other pumps
+## Andere pompen
 
-* This feature is available since AndroidAPS version 2.2.
-* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
-* You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* Deze functie is beschikbaar sinds AndroidAPS versie 2.2.
+* Gedurende de nacht wordt er automatisch omgeschakeld. Om problemen te voorkomen zal de loop worden gedeactiveerd gedurende 3 uur NA de zomer/wintertijd wissel. Dit gebeurt om veiligheidsredenen (te hoge IOB als gevolg van dubbele bolus-invoer vóór tijdswisseling).
+* Je ontvangt een melding op het hoofdscherm voorafgaand aan de tijdswissel, dat de loop tijdelijk zal worden uitgeschakeld. Dit bericht zal verschijnen zonder geluid, trilling oid.
