@@ -379,7 +379,7 @@ De Behandelingen tab kan worden gebruikt om foutieve koolhydraat-invoer te corri
 
 * You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).
 
-## Bolus
+## Behandelingen
 
 History of the following treatments:
 
