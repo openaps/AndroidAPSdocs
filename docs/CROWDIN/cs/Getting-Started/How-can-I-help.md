@@ -1,29 +1,29 @@
 # Jak pomoci s AndroidAPS
 
-## AndroidAPS operates entirely on volunteer efforts and has no paid staff.
+## AndroidAPS funguje díky úsilí dobrovolníků a nemá žádné placené zaměstnance.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Vývojáři jsou rodiče, pečovatelé, blízcí a lidé s cukrovkou, kteří společně pracují na vývoji a vylepšení řešení. Vývojáři investují zdarma svůj volný čas a je tak nespravedlivé očekávat, že budou sami čelit dodatečným nákladům, když tvoří tak úžasné řešení, které je open source a zdarma pro všechny.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*Pro otestování nových zařízení vývojáři potřebují testovací telefon a testovací pumpu - zařízení nelze testovat na člověku, dokud není stabilní. Novější modely se musí testovat, jakmile budou k dispozici. Jsou také zapotřebí finanční dary pro uhrazení cestovních a přepravních nákladů těchto dodávek mezi zeměmi vývojářů. Někdy je také pěkné přispět na pokrytí cestovních nákladů pro vývojáře - aby mohli opustit svoje tmavé pokoje, aby mohli uspořádat vzájemná setkání na konferencích a srazech - a aby mohli dát od všeho jejich tvůrčím a analytickým mozkům odpočinout.*
 
-## I can write code! How do I participate?
+## Můžu napsat kód! Jak mohu přispět?
 
-Yay! Look at the issues, ask in the gitter channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+Yay! Podívejte se na problémy, zeptejte se na gitteru - tam je toho vždy mnoho, co udělat! Najděte nejprve malý úkol a proveďte první pull request! :)
 
-## I know the system and can write documentation!
+## Znám systém a můžu psát dokumentaci!
 
-Great, this is a highly appreciated thing and a good way to pay it foreward!
+Skvělé, to se cení - dobrý způsob, jak podpořit!
 
-* The old gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). 
+* Starý gitter kanál týkající se wiki lze najít zde: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). 
 * Návod, jak se to dělá na anglické wiki, lze nalézt zde: [How to make a PR](../make-a-PR.md). Jiné jazyky jsou pouze překladem z angličtiny a nelze je upravovat z důvodů konzistence.
 
-## I do speak multiple languages and whant to translate the app or the documentation
+## Mluvím několika jazyky a chci překládat aplikaci nebo dokumentaci
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
-* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
+* Pokud chcete přeložit **aplikaci** do jiných jazyků (děkuji), použijte prosím [crowdin](https://crowdin.com/project/androidaps).
+* Pokud chcete přeložit **wiki** do jiných jazyků (děkuji), použijte prosím [crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Prostě se přihlaště na CROWDIN, vyberte Váš jazyk, počkejte na schálení adminem a hurá do toho!
 
-## Are there other ways to help?
+## Jsou další možnosti, jak pomoci?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+Potřebujeme lidi ovládající grafický design, UX design, překladatele, wiki editory nebo jen osoby odpovídající na jednoduché otázky na gitteru. Facebook umožňuje vývojáři šetřit čas a prostor a zaměřit na složitější věci.
