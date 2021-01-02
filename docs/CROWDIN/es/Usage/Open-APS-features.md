@@ -58,12 +58,12 @@ AndroidAPS limita el valor de la forma siguiente:
 
 Este valor determina qué maxIOB tiene que ser considerado por AAPS funcionando en bucle cerrado. Si el IOB actual (por ejemplo, después de un bolo de comida) está por encima del valor definido, el bucle para la dosificación de insulina hasta que el límite de IOB esté por debajo del valor determinado.
 
-Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In AMA, maxIOB was just a safety-parameter for basal IOB, while in SMB-mode, it also includes bolus IOB. A good start is
+Al utilizar OpenAPS SMB, max-IOB se calcula de forma diferente que en OpenAPS AMA. En AMA, maxIOB era sólo un parámetro de seguridad para basal IOB, mientras que en el modo SMB, también incluye el Bolo IOB. Un buen comienzo es
 
     maxIOB = promedio bolos de comidas + 3x basal máx
     
 
-Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features.html#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
+Sea cuidadoso y paciente, y sólo cambie los valores paso a paso. Es diferente para distintas personas y también depende de la dosis diaria total (TDD). Por razones de seguridad, hay un límite, que depende de la edad del paciente. The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features.html#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 * Niños: 3
 * Teenager: 7
@@ -73,31 +73,31 @@ Be careful and patient and only change the settings step by step. It is differen
 
 *See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
 
-See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
+Véase también [OpenAPS documentación para SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Habilitar el autosensado de AMA
 
-Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' or not.
+Aquí, puede elegir si desea utilizar la detección de sensibilidad [](../Configuration/Sensitivity-detection-and-COB.md) 'autosensibilidad' o no.
 
 ### Activar SMB
 
-Here you can enable or completely disable SMB feature.
+Aquí puede habilitar o inhabilitar completamente la característica SMB.
 
 ### Habilitar SMB con COB
 
-SMB is working when there is COB active.
+SMB está trabajando cuando hay COB activos.
 
 ### Habilitar SMB con Objetivos Temporales
 
-SMB is working when there is a low or high temporary target active (eating soon, activity, hypo, custom)
+SMB está trabajando cuando hay un objetivo temporal bajo o alto activo (comer pronto, actividad, hipo, personalizado)
 
 ### Habilitar SMB con Objetivo Temporal Alto
 
-SMB is working when there is a high temporary target active (activity, hypo). This option can limit other SMB Settings, i.e. if ‘SMB with temp targets’ is enabled and ‘SMB with high temp targets’ is deactivated, SMB just works with low and not with high temp targets. It is the same for enabled SMB with COB: if 'SMB with high temp target' is deactivated, there is no SMB with high temp target even if COB is active.
+SMB está trabajando cuando hay un objetivo temporal alto activo (actividad, hipo). Esta opción puede limitar otros valores de SMB, es decir, si 'SMB con objetivos temporales' está habilitado y 'SMB con objetivos temporales altos' está desactivado, SMB sólo funciona con objectivos bajos y no con obj. altos temporales. Es lo mismo para SMB habilitado con COB: si se desactiva 'SMB con objetivos temporales altos', no hay ningún SMB con un obj. alto temporal, incluso con COB activos.
 
 ### Habilitar SMB siempre
 
-SMB is working always (independent of COB, temp targets or boluses). Por razones de seguridad, esta opción es solamente para fuentes de BG con un buen sistema de filtrado para los datos ruidosos. Por ahora, sólo funciona con Dexcom G5, si utiliza la aplicación Dexcom (parcheado) o "modalidad nativa" en xDrip+. Si un valor BG tiene una desviación demasiado grande, el G5 no lo envía y espera a que el siguiente valor se haga en 5 minutos.
+SMB está trabajando siempre (independientemente de COB, objetivos temporales o bolos). Por razones de seguridad, esta opción es solamente para fuentes de BG con un buen sistema de filtrado para los datos ruidosos. Por ahora, sólo funciona con Dexcom G5, si utiliza la aplicación Dexcom (parcheado) o "modalidad nativa" en xDrip+. Si un valor BG tiene una desviación demasiado grande, el G5 no lo envía y espera a que el siguiente valor se haga en 5 minutos.
 
 For other CGM/FGM like Freestyle Libre, ‘SMB always’ is deactivated until xDrip+ has a better noise smoothing plugin. You can find more [here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
@@ -171,7 +171,7 @@ The hardcoded parameters in AndroidAPS are:
 
 This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
+The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Es diferente para distintas personas y también depende de la dosis diaria total (TDD). Por razones de seguridad, hay un límite, que depende de la edad del paciente. The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 * Niños: 3
 * Teenager: 5
