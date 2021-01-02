@@ -719,7 +719,7 @@ Pump Unreachable Alerts
 
 It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]** and setting this to **120**.
 
-Import Settings from previous AAPS
+Importeer instellingen van vorige AAPS
 ----------------------------------
 
 Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
