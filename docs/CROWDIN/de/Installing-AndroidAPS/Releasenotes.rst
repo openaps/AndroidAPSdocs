@@ -15,9 +15,9 @@ Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln,
 
 Version 2.8.0
 ================
-Release date: 1-1-2021
+Release date: 03-01-2021
 
-**Minimum Android version is 8.0 now**
+**Minimale Android-Version ist 8.0 jetzt. Falls Du ein Smartphone mit einer älteren Android-Version nutzt, kannst Du weiter AAPS 2.6.1.4 aus dem alten Repository verwenden.
 
 Repository weiterhin auf https://github.com/nightscout/AndroidAPS . Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die App-Erstellung `von vorne beginnst <../Installing-AndroidAPS/Building-APK.html>`_.
 
