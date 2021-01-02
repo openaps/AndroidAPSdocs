@@ -40,7 +40,7 @@
 .. |Omnipod_Pod|			image:: Omnipod_Pod.png
 
 ..
-		Acknowledge Alerts
+		Alarme quittieren
 .. |Acknowledge_Alerts_1|               image:: Acknowledge_Alerts_1.png
 .. |Acknowledge_Alerts_2|               image:: Acknowledge_Alerts_2.png
 .. |Acknowledge_Alerts_3|               image:: Acknowledge_Alerts_3.png
@@ -52,7 +52,7 @@
 .. |Actions_Tab|                  	image:: Actions_Tab.png
 
 ..
-	Activate Pod
+	Pod aktivieren
 .. |Activate_Pod_1|                     image:: Activate_Pod_1.png
 .. |Activate_Pod_2|                     image:: Activate_Pod_2.png
 .. |Activate_Pod_3|                     image:: Activate_Pod_3.png
@@ -70,7 +70,7 @@
 .. |Activate_Pod_15|                    image:: Activate_Pod_15.png
 
 ..
-	Deactivate Pod
+	Pod deaktivieren
 .. |Deactivate_Pod_1|                   image:: Deactivate_Pod_1.png
 .. |Deactivate_Pod_2|                   image:: Deactivate_Pod_2.png
 .. |Deactivate_Pod_3|                   image:: Deactivate_Pod_3.png
@@ -107,7 +107,7 @@
 .. |Omnipod_Tab_Pod_Management|         image:: Omnipod_Tab_Pod_Management.png
 
 ..
-	Pod History
+	Pod Historie
 .. |Pod_History_1|                  	image:: Pod_History_1.png
 .. |Pod_History_2|                  	image:: Pod_History_2.png
 .. |Pod_History_3|                  	image:: Pod_History_3.png
@@ -315,7 +315,7 @@ Hardware- und Software-Anforderungen
 
 |Omnipod_Pod|
 
-Acknowledge Alerts
+Alarme quittieren
 
 |Acknowledge_Alerts_1|              
 |Acknowledge_Alerts_2|              
@@ -329,7 +329,7 @@ Actions Tab
 |Actions_Tab|                  		
 
 
-Activate Pod
+Pod aktivieren
 
 |Activate_Pod_1|                    
 |Activate_Pod_2|                    
@@ -348,16 +348,16 @@ Activate Pod
 |Activate_Pod_15|                   
 
 
-Deactivate Pod
+Pod deaktivieren
 
 |Deactivate_Pod_1|                  
 |Deactivate_Pod_2|                  
 |Deaktiviere_Pod_3|                  
-|Deactivate_Pod_4|                  
+|Deaktiviere_Pod_4|                  
 |Deactivate_Pod_5|                  
 |Deactivate_Pod_6|                  
-|Deactivate_Pod_7|                  
-|Deactivate_Pod_8|                  
+|Deaktiviere_Pod_7|                  
+|Deaktiviere_Pod_8|                  
 |Deactivate_Pod_9|                  
 |Deactivate_Pod_10|                 
 
@@ -368,7 +368,7 @@ Aktivieren des Omnipod-Treibers in AAPS
 |Enable_Omnipod_Driver_2|           
 |Enable_Omnipod_Driver_3|           
 |Enable_Omnipod_Driver_4|           
-|Aktiviere _Omnipod_Driver_5|           
+|Enable_Omnipod_Driver_5|           
 
 
 Optimally Positioning the RileyLink
@@ -390,7 +390,7 @@ Omnipod Tab
 |Omnipod_Tab_Pod_Management|        
 
 
-Pod History
+Pod Historie
 
 |Pod_History_1|                  	
 |Pod_History_2|                  	
