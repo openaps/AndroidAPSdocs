@@ -21,7 +21,7 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 * El perfil actual se muestra en la barra izquierda.
 * Short press profile bar to view profile details
 * Long press profile bar to [switch between different profiles](../Usage/Profiles#profile-switch).
-* If profile switch was made with duration remaining time in minutes is shown in brackets.
+* Si el cambio de perfil se realizó con la duración restante, el tiempo en minutos se muestra entre paréntesis.
 
 #### Objetivo
 
