@@ -136,29 +136,29 @@ Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Ver
 
 1. Navigiere zur Registerkarte **Omnipod (POD)** und klicke auf den **POD MGMT (1)** Button und dann auf **Pod aktivieren (2)**.
 
-    |Activiere_Pod_1| |Activiere_Pod_2|
+    |Activate_Pod_1| |Activate_Pod_2|
 
 2. Die Anzeige ** Pod füllen* * wird angezeigt. Fülle deinen neuen Pod mit mindestens 85 Einheiten Insulin und achte auf zwei Signaltöne, die anzeigen, dass der Pod bereit ist, gestartet zu werden.
 
-    |Aktiviere_Pod_3|
+    |Activate_Pod_3|
 
     Stelle sicher, dass der neue Pod und RileyLink in der Nähe von einander liegen (~ 30cm oder weniger), und klicke auf den Button **Weiter**.
 
 3. Der Bildschirm **Initializiere Pod** wird angezeigt und der Pod beginnt zu entlüften. (Du wirst einen Klick hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst). Wenn der RileyLink außerhalb der Reichweite des zu aktivierenden Pods ist, erhältst du die Fehlermeldung **Keine Antwort vom Pod**. Wenn dies geschieht, `schiebe den RileyLink näher <#optimale-positionierung-von-omnipod-und-rileylink>`_ (~ 30 cm weg oder weniger) ran, aber nicht auf den Pod oder direkt neben den Pod und klicke auf den Button **Erneut versuchen (1)* *.
 
-    |Aktiviere_Pod_4| |Aktiviere_Pod_5|
+    |Activate_Pod_4| |Activate_Pod_5|
 
 4. Bei erfolgreicher Befüllung wird ein grünes Häkchen angezeigt und der **Weiter** Button wird aktiviert. Klicke auf den Button **Weiter**, um die Initialisierung des Pods abzuschließen, und die Anzeige **Pod anbringen** zu sehen.
 
-    |Aktiviere_Pod_6|
+    |Activate_Pod_6|
 
 5. Bereite anschließend die Infusionsstelle des neuen Pods vor. Entferne die Nadelkappe aus Kunststoff und den weißen Papierträger von der Klebefläche und setze den Pod auf die ausgewählte Stelle Deines Körpers auf. Wenn du fertig bist, klicke auf den **Weiter** Button.
 
-    |Aktiviere_Pod_7|
+    |Activate_Pod_7|
 
 6. Das Dialogfenster **Pod anlegen** wird jetzt angezeigt. **NUR auf OK klicken, wenn du bereit bist, die Kanülen einzuführen.**
 
-    |Aktiviere_Pod_8|
+    |Activate_Pod_8|
 
 7. Nach dem Drücken von **OK** dauert es eventuell etwas, bevor der Omnipod antwortet und die Kanüle setzt (1-2 Minuten maximal) also habe Geduld.
 
@@ -168,17 +168,17 @@ Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Ver
 
     *HINWEIS: Bevor die Kanüle eingesetzt wird, ist es ratsam, die Haut in der Nähe des Kanülensetzpunktes zu kneifen. Dies sorgt für eine sanfte Einführung der Nadel und verringert die Gefahr einer Verstopfung.*
 
-    |Aktiviere_Pod_9|
+    |Activate_Pod_9|
 
-    |Aktiviere Pod_10| |Aktiviere Pod_11|
+    |Activate_Pod_10| |Activate_Pod_11|
 
 8. Es wird ein grünes Häkchen angezeigt, und der Button **Weiter** wird bei erfolgreicher Kanüleneinführung aktiviert. Klicke auf den Button **Weiter**.
 
-    |Aktiviere_Pod_12|
+    |Activate_Pod_12|
 
 9. Der **Pod aktiviert** Bildschirm wird angezeigt. Drücke auf das grüne **Beenden** Feld. Glückwunsch! Du hast jetzt eine neuen Pod aktiviert.
 
-    |Aktiviere_Pod_13|
+    |Activate_Pod_13|
 
 10. Der Menübildschirm **Pod Management** sollte nun den **Aktiviere Pod (1)** Button als *deaktiviert* und den **Deaktiviere Pod (2)** Button als *aktiviert* angezeigen. Dies liegt daran, dass jetzt ein Pod aktiv ist und du keinen zusätzlichen Pod aktivieren kannst, ohne zuerst den aktuell aktiven Pod zu deaktivieren.
 
@@ -186,7 +186,7 @@ Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Ver
 
     Weitere Details zu den angezeigten Informationen findest du im Tab `Omnipod (POD) <#omnipod-pod-tab>`_ dieses Dokuments.
 
-    |Aktiviere_Pod_14| |Aktiviere_Pod_15|
+    |Activate_Pod_14| |Activate_Pod_15|
 
 Deaktiviere einen Pod
 ------------------
@@ -197,31 +197,31 @@ Gehe wie folgt vor, um einen Pod zu deaktivieren (entweder vor dem Ablaufen der 
 
 1. Gehe zur Registerkarte **Omnipod (POD)**, klicke auf den Button **POD MGMT (1)** und dann auf dem Bildschirm **Pod Management** auf den Button **Deaktiviere Pod (2)**.
 
-    | Deactiviere_Pod_1 | | Deactiviere_Pod_2 |
+    |Deactivate_Pod_1| |Deactivate_Pod_2|
 
 2. Stelle sicher, dass sich der RileyLink in unmittelbarer Nähe zum Pod befindet, aber nicht direkt darauf oder direkt neben dem Pod liegt. Dann klicke auf dem **Deaktiviere Pod ** Bildschirm den **Weiter** -Button, um den Prozess der Deaktivierung des Pods zu starten.
 
-    |Deaktiviere_Pod_3|
+    |Deactivate_Pod_3|
 
 3. Der **Deaktiviere Pod** Bildschirm erscheint und du erhältst einen Bestätigungspiepton, dass die Deaktivierung erfolgreich war.
 
-    |Deaktiviere_Pod_4|
+    |Deactivate_Pod_4|
 
     **WENN die Deaktivierung scheitert** und du keinen Bestätigungspiepton erhältst, kommt evlt. die Meldung **Keine Antwort von RileyLink** oder **Keine Antwort vom Pod**. Bitte klicke auf den Button **Erneut versuchen (1)**, um die Deaktivierung erneut zu versuchen. If deactivation continues to fail, please click on the **Discard Pod (2)** button to discard the Pod. Du kannst nun deinen Pod entfernen, da die aktive Sitzung beendet wurde. If your Pod has a screaming alarm, you may need to manually silence it (using a pin or a paperclip) as the **Discard Pod (2)** button will not silence it.
 	
-	|Deaktiviere_Pod_5| |Deaktiviere_Pod_6|
+	|Deactivate_Pod_5| |Deactivate_Pod_6|
 
 4. Nach erfolgreicher Deaktivierung wird ein grünes Häkchen angezeigt. Klicke auf den Button **Weiter**, um den Pod zu deaktivieren. Du kannst nun deinen Pod entfernen, da die aktive Sitzung beendet wurde.
 
-    |Deaktiviere_Pod_7|
+    |Deactivate_Pod_7|
 
 5. Klicke auf den grünen Knopf, um zum Bildschirm **Pod Management** zurückzukehren.
 
-    |Deaktiviere_Pod_8|
+    |Deactivate_Pod_8|
 
 6. Du bist nun zum **Pod Management** im Menü zurückgekehrt. Drücke die Zurück-Taste auf deinem Smartphone um zum Reiter **Omnipod (POD)** zurückzukehren. Überprüfe, ob das Feld **RileyLink Status:** *Verbunden* anzeigt und das Feld **Pod Sstatus:** die Nachricht *Keine aktiver Pod* anzeigt.
 
-    |Deaktiviere_Pod_9| |Deaktiviere_Pod_10|
+    |Deactivate_Pod_9| |Deactivate_Pod_10|
 
 Insulinlieferung stoppen und fortsetzen
 ----------------------------------------
@@ -285,7 +285,7 @@ In dem folgenden Prozess wird gezeigt, wie Warntöne bestätigt und quittiert we
 
     |Acknowledge_Alerts_4|
 
-    Wenn sich der RileyLink außerhalb des Bereichs des Pods befindet während der Befehl zum Bestätigen des Alarms gerade verarbeitet wird, werden 2 Optionen angezeigt: **Mute (1)** wird diese aktuelle Warnung zum Schweigen bringen. **OK (2)** will confirm this warning and allow the user to try to acknowledge alerts again.
+    Wenn sich der RileyLink außerhalb des Bereichs des Pods befindet während der Befehl zum Bestätigen des Alarms gerade verarbeitet wird, werden 2 Optionen angezeigt: **Mute (1)** wird diese aktuelle Warnung zum Schweigen bringen. **OK (2)** bestätigt diese Warnung und ermöglicht es dem Nutzer, Warnungen erneut zu bestätigen.
 
     |Acknowledge_Alerts_5|
 
@@ -329,16 +329,16 @@ RileyLink Bluetooth-Kommunikation manuell wiederherstellen
 
     |RileyLink_Bluetooth_Reset_3|
     
-    If the RileyLink is unresponsive or out of range of the phone while the Bluetooth refresh command is being processed a warning message will display 2 options.
+    Wenn der RileyLink nicht reagiert oder außer Reichweite des Smartphones ist während der Bluetooth-Aktualisierungsbefehl gerade verarbeitet wird, erscheint eine Warnmeldung, die 2 Optionen ermöglicht.
 
-   * **Mute (1)** will silence this current warning.
-   * **OK (2)** will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
+   **Mute (1)** lässt diese aktuelle Warnung verstummen.
+   **OK (2)** bestätigt diese aktuelle Warnung und ermöglicht es dem Nutzer zu versuchen die Bluetooth-Verbindung erneut wieder herzustellen.
 	
     |RileyLink_Bluetooth_Reset_4|	
 	
-3. If the **Bluetooth connection** does not re-establish, try manually turning **off** and then back **on** the Bluetooth function on your phone.
+3. Wenn die **Bluetooth-Verbindung** nicht wieder hergestellt wird, dann versuche die Bluetooth-Funktion auf deinem Smartphone manuell **aus-** und dann wieder **anzuschalten**.
 
-4. After a successful RileyLink Bluetooth reconnection the **Connection Status: (1)** field should report **RileyLink ready**. Congratulations, you have now reconnected your configured RileyLink to AAPS!
+4. Nach einer erfolgreichen RileyLink Bluetooth-Wiederverbindung sollte das Feld **Verbindungsstatus: (1)** **RileyLink bereit** anzeigen. Herzlichen Glückwunsch, du hast jetzt erneut deinen konfigurierten RileyLink mit AAPS verbunden!
 
     |RileyLink_Bluetooth_Reset_5|
 
@@ -442,7 +442,7 @@ Icons
 .. table:: 
 
    ====================  ===========================================
-   |refresh_pod_status|  **REFRESH:** 
+   |refresh_pod_status|  **Aktualisieren:** 
    			 
 			 Sends a refresh command to the active pod to update communication
 			 
@@ -452,20 +452,20 @@ Icons
    |pod_management|   	 **POD MGMT:**
 
 			 Navigates to the Pod management menu
-   |ack_alerts|		 **ACK ALERTS:**
+   |ack_alerts|		 **Alarm bestätigen:**
    			 
 			 When pressed this will disable the pod expiration beeps and notifications. 
 			 
 			 * Button is displayed only when pod time is past expiration warning time
 			 * Upon successful dismissal, this icon will no longer appear.
 			 
-   |set_time|		 **SET TIME:**
+   |set_time|		 **Zeit einstellen:**
    
 			 When pressed this will update the time on the pod with the current time on your phone.
-   |suspend|  		 **SUSPEND:**
+   |suspend|  		 **Unterbrechen:**
    
 			 Suspends the active pod
-   |resume| 		 **RESUME DELIVERY:**
+   |resume| 		 **Abgabe fortsetzen:**
    
 			 Resumes the currently suspended, active pod
    ====================  ===========================================
@@ -481,11 +481,11 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 .. table:: 
 
    =========================  ===========================================
-   |activate_pod|	      **Activate Pod**
+   |activate_pod|	      **Pod aktivieren**
    
    			      Primes and activates a new pod
 
-   |deactivate_pod|	      **Deactivate Pod**
+   |deactivate_pod|	      **Pod deaktivieren**
  
  			      Deactivates the currently active pod.
 			 
@@ -493,11 +493,11 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 			      *  Use this command to deactivate a screaming pod (error 49).
 			      *  If the button is disabled (greyed out) use the Discard Pod button.
 
-   |play_test_beep| 	      **Play test beep**
+   |play_test_beep| 	      **Testton abspielen**
  
  			      Plays a single test beep on the pod when pressed.
 
-   |discard_pod|	      **Discard pod**
+   |discard_pod|	      **Pod ablegen**
 
 			      Deactivates and discards the pod state of an unresponsive pod when pressed.
 			      
@@ -507,18 +507,18 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 			      * A **pod is stuck** during the pairing process between steps
 	 		      * A **pod simply does not pair at all.**
 
-   |pod_history| 	      **Pod history** 
+   |pod_history| 	      **Pod Historie** 
    
    			      Displays the active pod activity history
 
-   |rileylink_stats| 	      **RileyLink stats:**
+   |rileylink_stats| 	      **RileyLink-Statistiken:**
    
    			      Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
 
 			      * **Settings** - displays RileyLink and active pod settings information
 			      * **History** - displays RileyLink and Pod communication history
 
-   |reset_rileylink_config|   **Reset RileyLink Config** 
+   |reset_rileylink_config|   **RileyLink-Konfiguration zurücksetzen** 
    
    			      When presssed this button resets the currently connected RileyLink configuration. 
 			      
@@ -530,7 +530,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 				
 			      * See `addtional notes <#reset-rileylink-config-notes>`__ at the end of this table
 
-   |pulse_log|		      **Read pulse log:** 
+   |pulse_log|		      **Pulse-Log lesen:** 
     
     			      Sends the active pod pulse log to the clipboard
    =========================  ===========================================			    
@@ -841,7 +841,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |Omnipod_Pod|			image:: ../images/omnipod/Omnipod_Pod.png
 	
 ..
-		Alarme quittieren
+		Acknowledge Alerts
 .. |Acknowledge_Alerts_1|               image:: ../images/omnipod/Acknowledge_Alerts_1.png
 .. |Acknowledge_Alerts_2|               image:: ../images/omnipod/Acknowledge_Alerts_2.png
 .. |Acknowledge_Alerts_3|               image:: ../images/omnipod/Acknowledge_Alerts_3.png
