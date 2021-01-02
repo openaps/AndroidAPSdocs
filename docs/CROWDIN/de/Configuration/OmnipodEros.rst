@@ -13,7 +13,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 Hardware- und Software-Anforderungen
 ==================================
 
-* ** Pod-Kommunikationsgerät ** 
+* **Pod-Kommunikationsgerät** 
 
   Komponente, die die Kommunikation von deinem AndroidAPS-Gerät zu deinen Pods der Eros Generation ermöglicht.
 
@@ -132,7 +132,7 @@ Einen Pod aktivieren
 
 Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Verbindung in den Omnipod-Einstellungen richtig konfiguriert und verbunden hast.
 
-*REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Vor dem Pairing des Pods ist das Funksignal schwächer, aber nachdem es verbunden wurde, wird es mit voller Signalleistung funktionieren. Stelle sicher, dass dein Pod während dieser Prozedur `in der Nähe<#optimale-positionierung-von-omnipod-und-rileylink>`__ *(~30 cm entfernt oder weniger)* ist, aber nicht oben oder direkt neben dem RileyLink.  
+*HINWEIS: Für die Verbindung mit dem Pod steht aus Sicherheitsgründen nur ein kleinerer Kommunikationsbereich zur Verfügung. Vor dem Pairing des Pods ist das Funksignal schwächer, aber nachdem es verbunden wurde, wird es mit voller Signalleistung funktionieren. Stelle sicher, dass dein Pod während dieser Prozedur `in der Nähe<#optimale-positionierung-von-omnipod-und-rileylink>`__ *(~30 cm entfernt oder weniger)* ist, aber nicht oben oder direkt neben dem RileyLink.  
 
 1. Navigiere zur Registerkarte **Omnipod (POD)** und klicke auf den **POD MGMT (1)** Button und dann auf **Pod aktivieren (2)**.
 
@@ -142,13 +142,13 @@ Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Ver
 
     |Aktiviere_Pod_3|
 
-    Stelle sicher, dass der neue Pod und RileyLink in der Nähe von einander liegen (~ 30cm oder weniger), und klicke auf die Schaltfläche ** Weiter**.
+    Stelle sicher, dass der neue Pod und RileyLink in der Nähe von einander liegen (~ 30cm oder weniger), und klicke auf den Button **Weiter**.
 
-3. Auf dem Bildschirm ** Initializiere Pod * * beginnt der Pod zu entlüften (du wirst einen Klick hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst). Wenn der RileyLink außerhalb der Reichweite des zu aktivierenden Pods ist, erhältst du die Fehlermeldung **Keine Antwort vom Pod**. Wenn dies geschieht, `schiebe den RileyLink näher <#optimale-positionierung-von-omnipod-und-rileylink>`_ (~ 30 cm weg oder weniger) ran, aber nicht auf den Pod oder direkt neben den Pod und klicke auf die Schaltfläche **Wiederholen (1)* *.
+3. Der Bildschirm **Initializiere Pod** wird angezeigt und der Pod beginnt zu entlüften. (Du wirst einen Klick hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst). Wenn der RileyLink außerhalb der Reichweite des zu aktivierenden Pods ist, erhältst du die Fehlermeldung **Keine Antwort vom Pod**. Wenn dies geschieht, `schiebe den RileyLink näher <#optimale-positionierung-von-omnipod-und-rileylink>`_ (~ 30 cm weg oder weniger) ran, aber nicht auf den Pod oder direkt neben den Pod und klicke auf den Button **Erneut versuchen (1)* *.
 
     |Aktiviere_Pod_4| |Aktiviere_Pod_5|
 
-4. Bei erfolgreicher Befüllung wird ein grünes Häkchen angezeigt und der **Weiter** Button wird aktiviert. Klicke auf den Button ** Weiter**, um die Initialisierung des Pods abzuschließen, und die Anzeige **Pod anbringen** zu sehen.
+4. Bei erfolgreicher Befüllung wird ein grünes Häkchen angezeigt und der **Weiter** Button wird aktiviert. Klicke auf den Button **Weiter**, um die Initialisierung des Pods abzuschließen, und die Anzeige **Pod anbringen** zu sehen.
 
     |Aktiviere_Pod_6|
 
@@ -156,15 +156,15 @@ Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Ver
 
     |Aktiviere_Pod_7|
 
-6. Das Dialogfenster **Pod-anbringen** wird jetzt angezeigt. **NUR auf OK klicken, wenn du bereit bist, die Kanülen einzuführen.**
+6. Das Dialogfenster **Pod anlegen** wird jetzt angezeigt. **NUR auf OK klicken, wenn du bereit bist, die Kanülen einzuführen.**
 
     |Aktiviere_Pod_8|
 
 7. Nach dem Drücken von **OK** dauert es eventuell etwas, bevor der Omnipod antwortet und die Kanüle setzt (1-2 Minuten maximal) also habe Geduld.
 
-    Wenn der RileyLink außerhalb der Reichweite des zu aktivierenden Pods ist, erhältst du die Fehlermeldung **Keine Antwort vom Pod**. Wenn dies geschieht, bewegen Sie den RileyLink näher (~ 30 cm weg oder weniger) zu, aber nicht auf der Oberseite oder direkt neben dem Pod und klicken Sie auf die ** Retry** Schaltfläche.
+    Wenn der RileyLink außerhalb der Reichweite des zu aktivierenden Pods ist, erhältst du die Fehlermeldung **Keine Antwort vom Pod**. Wenn dies geschieht, bewegen Sie den RileyLink näher (~ 30 cm weg oder weniger) zu, aber nicht auf der Oberseite oder direkt neben dem Pod und klicken Sie auf den Button **Erneut versuchen**.
 
-    Wenn der RileyLink außerhalb der Bluetoothreichweite oder keine aktive Verbindung zum Smartphone hat, bekommt man eine Fehlermeldung **Keine Antwort von RileyLink**. Wenn diese Fehlermeldung auftritt, verringere die Distanz vom RileyLink und dem Smartphone und klicke auf den **Wiederholen** Button.
+    Wenn der RileyLink außerhalb der Bluetoothreichweite oder keine aktive Verbindung zum Smartphone hat, bekommt man eine Fehlermeldung **Keine Antwort von RileyLink**. Wenn diese Fehlermeldung auftritt, verringere die Distanz vom RileyLink und dem Smartphone und klicke auf den Button **Erneut versuchen**.
 
     *HINWEIS: Bevor die Kanüle eingesetzt wird, ist es ratsam, die Haut in der Nähe des Kanülensetzpunktes zu kneifen. Dies sorgt für eine sanfte Einführung der Nadel und verringert die Gefahr einer Verstopfung.*
 
@@ -172,46 +172,46 @@ Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Ver
 
     |Aktiviere Pod_10| |Aktiviere Pod_11|
 
-8. Es wird ein grünes Häkchen angezeigt, und die Schaltfläche **Weiter** wird bei erfolgreicher Kanüleneinführung aktiviert. Klicke auf die Schaltfläche **Weiter**.
+8. Es wird ein grünes Häkchen angezeigt, und der Button **Weiter** wird bei erfolgreicher Kanüleneinführung aktiviert. Klicke auf den Button **Weiter**.
 
     |Aktiviere_Pod_12|
 
-9. Der **Pod aktiviert** Bildschirm wird angezeigt. Click on the green **Finished** button. Congratulations! You have now started a new active pod session.
+9. Der **Pod aktiviert** Bildschirm wird angezeigt. Drücke auf das grüne **Beenden** Feld. Glückwunsch! Du hast jetzt eine neuen Pod aktiviert.
 
-    |Activate_Pod_13|
+    |Aktiviere_Pod_13|
 
-10. The **Pod management** menu screen should now display with the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. This is because a pod is now active and you cannot activate an additional pod without deactivating the currently active pod first.
+10. Der Menübildschirm **Pod Management** sollte nun den **Aktiviere Pod (1)** Button als *deaktiviert* und den **Deaktiviere Pod (2)** Button als *aktiviert* angezeigen. Dies liegt daran, dass jetzt ein Pod aktiv ist und du keinen zusätzlichen Pod aktivieren kannst, ohne zuerst den aktuell aktiven Pod zu deaktivieren.
 
-    Click on the back button on your phone to return to the **Omnipod (POD)** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
+    Klicke auf den Zurück-Knopf auf deinem Smartphone, um zum Tab-Bildschirm **Omnipod (POD)** zurückzukehren, auf dem jetzt Informationen zu deiner aktiven Pod-Sitzung angezeigt werden, einschließlich der aktuellen Basalrate, Pod Reservoir Level, abgegebenem Insulin, Pod Fehler und Warnungen.
 
     Weitere Details zu den angezeigten Informationen findest du im Tab `Omnipod (POD) <#omnipod-pod-tab>`_ dieses Dokuments.
 
-    |Activate_Pod_14| |Activate_Pod_15|
+    |Aktiviere_Pod_14| |Aktiviere_Pod_15|
 
-Deactivating a Pod
+Deaktiviere einen Pod
 ------------------
 
-Under normal circumstances, the life of a pod should run for three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
+Unter normalen Umständen beträgt die Lebensdauer eines Pods drei Tage (72 Stunden) und zusätzlich 8 Stunden nach der Pod-Ablaufwarnung und somit insgesamt 80 Stunden.
 
-To deactivate a pod (either from expiration or from a pod failure):
+Gehe wie folgt vor, um einen Pod zu deaktivieren (entweder vor dem Ablaufen der Nutzungsdauer oder wegen eines Pod-Fehlers):
 
-1. Go to the **Omnipod (POD)** tab, click on the **POD MGMT (1)** button, on the **Pod management** screen click on the **Deactivate Pod (2)** button.
+1. Gehe zur Registerkarte **Omnipod (POD)**, klicke auf den Button **POD MGMT (1)** und dann auf dem Bildschirm **Pod Management** auf den Button **Deaktiviere Pod (2)**.
 
-    |Deactivate_Pod_1| |Deactivate_Pod_2|
+    | Deactiviere_Pod_1 | | Deactiviere_Pod_2 |
 
-2. On the **Deactivate Pod** screen, first, make sure the RileyLink is in close proximity to the pod but not on top of or right next to the pod, then click on the **Next** button to begin the process of deactivating the pod.
+2. Stelle sicher, dass sich der RileyLink in unmittelbarer Nähe zum Pod befindet, aber nicht direkt darauf oder direkt neben dem Pod liegt. Dann klicke auf dem **Deaktiviere Pod ** Bildschirm den **Weiter** -Button, um den Prozess der Deaktivierung des Pods zu starten.
 
-    |Deactivate_Pod_3|
+    |Deaktiviere_Pod_3|
 
-3. The **Deactivating Pod** screen will appear, and you will receive a confirmation beep from the pod that deactivation was successful.
+3. Der **Deaktiviere Pod** Bildschirm erscheint und du erhältst einen Bestätigungspiepton, dass die Deaktivierung erfolgreich war.
 
     |Deactivate_Pod_4|
 
-    **IF deactivation fails** and you do not receive a confirmation beep, you may receive a **No response from RileyLink** or **No response from Pod message**. Please click on the **Retry (1)** button to attempt deactivation again. If deactivation continues to fail, please click on the **Discard Pod (2)** button to discard the Pod. You may now remove your pod as the active session has been deactivated. If your Pod has a screaming alarm, you may need to manually silence it (using a pin or a paperclip) as the **Discard Pod (2)** button will not silence it.
+    **WENN die Deaktivierung scheitert** und du keinen Bestätigungspiepton erhältst, kommt evlt. die Meldung **Keine Antwort von RileyLink** oder **Keine Antwort vom Pod**. Bitte klicke auf den Button **Erneut versuchen (1)**, um die Deaktivierung erneut zu versuchen. If deactivation continues to fail, please click on the **Discard Pod (2)** button to discard the Pod. You may now remove your pod as the active session has been deactivated. If your Pod has a screaming alarm, you may need to manually silence it (using a pin or a paperclip) as the **Discard Pod (2)** button will not silence it.
 	
 	|Deactivate_Pod_5| |Deactivate_Pod_6|
 
-4. A green checkmark will appear upon successful deactivation. Click on the **Next** button to display the pod deactivated screen. You may now remove your pod as the active session has been deactivated.
+4. A green checkmark will appear upon successful deactivation. Klicke auf den Button **Weiter**, um den Pod zu deaktivieren. You may now remove your pod as the active session has been deactivated.
 
     |Deactivate_Pod_7|
 
@@ -219,7 +219,7 @@ To deactivate a pod (either from expiration or from a pod failure):
 
     |Deactivate_Pod_8|
 
-6. You are now returned to the **Pod management** menu press the back button on your phone to return to the **Omnipod (POD)** tab. Verify that the **RileyLink Status:** field reports **Connected** and the **Pod status:** field displays a **No active Pod** message.
+6. You are now returned to the **Pod management** menu press the back button on your phone to return to the **Omnipod (POD)** tab. Überprüfe, ob das Feld **RileyLink Status:** *Verbunden* anzeigt und das Feld **Pod Sstatus:** die Nachricht *Keine aktiver Pod* anzeigt.
 
     |Deactivate_Pod_9| |Deactivate_Pod_10|
 
