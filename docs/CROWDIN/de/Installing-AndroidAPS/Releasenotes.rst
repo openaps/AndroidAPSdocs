@@ -15,7 +15,7 @@ Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln,
 
 Version 2.8.0
 ================
-Erscheinungsdatum: 1.1.2021
+Release date: 03-01-2021
 
 **Minimale Android-Version ist 8.0 jetzt. Falls Du ein Smartphone mit einer älteren Android-Version nutzt, kannst Du weiter AAPS 2.6.1.4 aus dem alten Repository verwenden.
 
