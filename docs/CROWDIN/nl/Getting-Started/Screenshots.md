@@ -243,7 +243,7 @@ Bovenstaande voorspellingslijnen rekenen met verschillende (extreme) scenario's.
 
 #### Boluscalculator
 
-* Zie [details hieronder](../Configuration/Screenhots#bolus-calculator)
+* See Bolus Wizard [section below](../Configuration/Screenhots#bolus-wizard)
 
 #### Kalibraties
 
@@ -263,7 +263,7 @@ Bovenstaande voorspellingslijnen rekenen met verschillende (extreme) scenario's.
 
 ## Bolus calculator
 
-![Bolus wizard](../images/Home2020_BolusWizard.png)
+![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
 
 Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scherm.
 
@@ -273,6 +273,7 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 * In het Koolhydraten veld voer je de hoeveelheid koolhydraten (in grammen) in die je wilt gaan eten. NB: Wanneer je gewend bent om 'broodwaarden' oid te gebruiken, zul je dus eerst naar grammen moeten omrekenen. 
 * Het CORR-veld kun je gebruiken als je om wat voor reden dan ook de einddosis wilt aanpassen.
 * In het KH tijdsduur veld kun je een pre-bolus tijd invoeren, dwz dat er tijd tussen bolussen en eten zit. Je kunt ook een negatieve waarde in dit veld invullen als je bolust na je maaltijd.
+* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
 
 ### Sectie J
 
