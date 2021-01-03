@@ -339,12 +339,12 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 * Les libellés "âge" et "niveaux" ne seront pas affichés si le thème [Basse résolution](../Configuration/Preferences#theme) est utilisé.
 
-#### Sensor level (battery)
+#### Niveau du capteur (batterie)
 
-* Needs xDrip+ nightly build Dec. 10, 2020 or newer.
-* Works for CGM with additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level information to xDrip+.)
-* Thresholds can be set in [preferences](../Configuration/Preferences#status-lights).
-* If sensor level is the same as phone battery level you xDrip+ version is probably too old and needs an update.
+* Nécessite xDrip+ nightly build du 10 décembre 2020 ou plus récent.
+* Fonctionne pour les MGC qui ont des émetteurs supplémentaires tels que MiaoMiao (Techniquement le capteur doit envoyer les informations de niveau de pile à xDrip+).
+* Les limites peuvent être définies dans [les préférences](../Configuration/Preferences#voyants-d-etat).
+* Si le niveau du capteur est le même que celui de la batterie du téléphone, la version xDrip+ est probablement trop ancienne et nécessite une mise à jour.
    
    ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
 
@@ -358,11 +358,11 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 #### Historique
 
-* Allows you to ride back in AAPS hsitory.
+* Vous permet de revoir l'historique des données AAPS.
 
 #### DTI
 
-* Total daily dose = bolus + basal per day
+* Dosage Total d'Insuline = bolus + base par jour
 * Certains médecins utilisent - en particulier pour les nouveaux utilisateurs de pompes - une proportion basal-bolus de 50:50. 
 * Par conséquent, le rapport est calculé ainsi DTI/(2*DTB) (Dose Totale de Basale = somme des débits de basal en 24 heures). 
 * D'autres préfèrent une fourchette allant de 32% à 37% de DTI pour DTB. 
