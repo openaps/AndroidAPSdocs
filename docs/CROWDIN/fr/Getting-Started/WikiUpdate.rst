@@ -1,17 +1,17 @@
 Mises à jour et modifications de la documentation
 **************************************************
 
-January 2021
+Janvier 2021
 ==================================================
-* Dexcom G6 with `Build Your Own Dexcom App <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_
-* Libre smart reader `battery level <../Getting-Started/Screenshots.html#sensor-level-battery>`_
+* Dexcom G6 avec `Votre propre application Dexcom <../Hardware/DexcomG6.html#si-vous-utilisez-g6-avec-votre-propre-application-dexcom>`_
+* Information sur le `niveau batterie capteur <../Getting-Started/Screenshots.html#sensor-level-battery>`_
 * `Objectifs <../Usage/Objectives.html#objective-3-prouver-ses-connaissances>`_ - nouvelles questions
 * Omnipod Eros - `bouclable dans le master AAPS <../Configuration/OmnipodEros.html>`_
-* Other `new AndroidAPS 2.8.0 functions <../Installing-AndroidAPS/Releasenotes.html#version-2-8-0>`_
+* Autres `nouvelles fonctions d'AndroidAPS 2.8.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-8-0>`_
 Décembre 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - l'application patchée ne fonctionne pas avec les capteurs US
-* `OpenAPS hard-coded limits <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_
+* `Limites OpenAPS codées en dur <../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur>`_
 * Sony Smartwatch 3 `Installation manuelle du service Google Play <../Usage/SonySW3.html>`_
 Octobre 2020
 ==================================================
