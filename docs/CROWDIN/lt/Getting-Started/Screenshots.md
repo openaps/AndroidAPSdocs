@@ -273,50 +273,55 @@ Paprastai faktinė glikemijos kreivė baigsis šių eilučių viduryje arba neto
 * AV langelyje turite įvesti maisto, kurį valgysite, angliavandenių ar jų atitikmens kiekį. 
 * CORR laukas yra, jei norite pakeisti galutinę dozę dėl kokios nors priežasties.
 * Laukas Laiko poslinkis skirtas išankstiniam bolusui, todėl galite nurodyti, kad angliavandeniai bus valgomi vėliau. Šiame langelyje galite įvesti ir laiką su minuso ženklu, jei angliavandenius jau suvalgėte anksčiau.
+
+#### Eating reminder
+
 * For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
+   
+   ![BolusWizard with Eating Reminder](..images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Skiltis J
 
-* Jei pažymėsite SUPER BOLUSO laukelį, bus suleistas papildomas insulinas, kurio kiekis lygus ateinančių 2 valandų bazei, o bazė taps nulinė. 
-* Tai galbūt padės išvengti didelio glikemijos pakilimo po maisto, nes papildomai "pasiskolinama" insulino iš bazės.
-* Išsamesnę informaciją skaitykite [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
+* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. 
+* The idea is to deliver the insulin sooner and hopefully reduce spikes.
+* For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
 ### Skiltis K
 
-* Rodo apskaičiuotą bolusą. 
-* Jei aktyvaus, anksčiau suleisto insulino kiekis viršija apskaičiuotą boluso kiekį, bus parodytas tik papildomai reikalingų angliavandenių kiekis.
+* Shows the calculated bolus. 
+* If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
 * Pastabos bus įkeltos į Nightscout - priklausomai nuo jūsų [NS client](../Configuration/Preferences#ns-client) nustatymų.
 
 ### Skiltis L
 
-* Informacija apie boluso skaičiuotuvo apskaičiavimo parametrus.
-* Jūs galite nuimti žymes nuo bet kurių iš jų, tačiau normaliai neturėtumėte to daryti.
-* Saugumo sumetimais langelį **LT (laikinas tikslas) reikia pažymėti rankiniu būdu**, jei norite, kad boluso skaičiuotuvas atsižvelgtų į nustatytą laikiną tikslą.
+* Details of wizard's bolus calculation.
+* You can deselect any that you do not want to include but you normally wouldn't want to.
+* For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
 
-#### AAO ir AIO kombinacijos ir jų reikšmė
+#### Combinations of COB and IOB and what they mean
 
-* Saugumo sumetimais, pažymėjus AAO laukelį, negalima panaikinti AIO žymėjimo. Kitu atveju insulino gali būti suleista per daug, jei AAPS neatsižvelgs į tai, kiek insulino jau buvo suleista.
-* Jei pažymėsite ir AAO, ir AIO, į skaičiavimus bus įtraukti visi dar aktyvūs angliavandeniai ir visas aktyvus insulinas (suleistas kaip laikina bazė ar SMB).
-* Jei pažymėsite tik AIO be AAO, AAPS skaičiavimuose atsižvelgs į anksčiau suleistą ir aktyvų insuliną, tačiau ne į angliavandenius. Todėl matysite pranešimą 'trūkstami angliavandeniai'.
-* Jei norite suleisti bolusą **papildomam maistui**, kurį valgėte tuoj po jau įvesto maisto (pvz.: užsimanėte deserto), naudinga **nuimti žymes nuo visų laukelių**. Tokiu būdu bus įskaičiuojami tik nauji angliavandeniai, o ne tie, kurie buvo įvesti anksčiau, nes jie nebūtinai tiksliai absorbuoti ir AIO nebūtinai juos tiksliai atitinka.
+* For safety reasons IOB boxed cannot be unticked when COB box is ticked as you might run the risk of too much insulin as AAPS is not accounting for what’s already given.
+* If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
+* If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
+* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
 
-#### Neteisingo AAO kiekio nustatymas
+#### Wrong COB detection
 
 ![Lėtas angliavandenių įsisavinimas](../images/Calculator_SlowCarbAbsorbtion.png)
 
-* Jei pasinaudoję skaičiuotuvu matote tokį perspėjimą, reiškia sistema nustatė galimai klaidingą AAO kiekį. 
-* Todėl suleisdami papildomą bolusą po paskutinio valgymo rizikuojate perdozuoti! 
-* Išsamesnės informacijos ieškokite [AAO apskaičiavimo puslapyje](../Usage/COB-calculation#detection-of-wrong-cob-values).
+* If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. 
+* So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
+* For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
 ## Insulino profilis
 
 ![Insulino profilis](../images/Screenshot_insulin_profile.png)
 
-* Tai rodo insulino aktyvumo profilį, kurį pasirinkote [Konfigūratoriuje](../Configuration/Config-Builder#insulin). 
-* VIOLETINĖ kreivė rodo, kiek insulino lieka laikui bėgant po injekcijos, nes jis pamažu ardomas, o MĖLYNA kreivė rodo, kaip kinta jo aktyvumas.
-* Svarbu atkreipti dėmesį į tai, kad insulino veikimo laikas yra labai ilgas. 
-* Įprastai naudodami pompą Jūs tikriausiai skaičiuodavote, kad insulinas išnyksta po maždaug 3.5 val. 
-* Tačiau uždarame cikle "uodegos" yra labai reikšmingos, nes skaičiavimai yra žymiai preciziškesni, todėl net mažiausi insulino likučiai turi būti įskaičiuojami.
+* This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
+* The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
+* The important thing to note is that the decay has a long tail. 
+* If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
+* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
 
 Išsamiau apie skirtingus insulino tipus, aktyvumo profilius ir kam viso to reikia, galite paskaityti čia: [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
@@ -328,8 +333,8 @@ Ir dar daugiau čia: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/20
 
 ![Pompos statusas](../images/Screenshot_PumpStatus.png)
 
-* Pateikiama įvairi informacija apie pompos būklę. Rodoma informacija priklauso nuo jūsų pompos modelio.
-* Žr. [Pompų puslapį](../Hardware/pumps.rst) dėl išsamesnės informacijos.
+* Different information on pump status. Displayed information depends on your pump model.
+* See [pumps page](../Hardware/pumps.rst) for details.
 
 ## Priežiūra
 
@@ -339,8 +344,8 @@ Priežiūros skiltyje rasite tas pačias funkcijas, kaip Jūsų Nightscout pusla
 
 ![Peržiūrėkite angliavandenių kiekį skirtuke Terapija](../images/Screenshots_TreatCalc.png)
 
-* Jei insulino kiekiui apskaičiuoti naudojote [Skaičiuotuvą](../Getting-Started/Screenshots#bolus-wizard), šį skaičiavimą galite peržiūrėti vėliau Terapijos skirtuke.
-* Tiesiog paspauskite žalią Skaič. nuorodą. (Priklausomai nuo naudojamos pompos, insulinas ir angliavandeniai Terapijos skirtuke taip pat gali būti rodomi kaip viena eilutė)
+* If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
+* Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
 
 ### Angliavandenių korekcija
 
@@ -362,46 +367,46 @@ Priežiūros skiltyje rasite tas pačias funkcijas, kaip Jūsų Nightscout pusla
 
 ## Ciklas, AMA / SMB
 
-* Šie skirtukai rodo informaciją apie algoritmų skaičiavimus ir kodėl AAPS veikia taip, kaip jis daro.
-* Skaičiavimai vykdomi kiekvieną kartą, kai sistema gauna naujus duomenis iš NGJ.
-* Išsamesnės informacijos ieškokite skyriaus [Konfigūratoriaus APS dalies puslapyje](../Configuration/Config-Builder#aps).
+* These tabs show details about the algorithm's calculations and why AAPS acts the way it does.
+* Calculations are each time the system gets a fresh reading from the CGM.
+* For more details see [APS section on config builder page](../Configuration/Config-Builder#aps).
 
 ## Profilis
 
 ![Profilis](../images/Screenshots_Profile.png)
 
-* Profilyje yra informacija apie jūsų individualius diabeto parametrus:
+* Profile contains information on your individual diabetes settings:
    
-   * IVT (insulino veikimo trukmė)
-   * IA: insulino ir angliavandenių santykis
-   * JIF: Jautrumo insulinui faktorius
-   * Valandinė bazė
-   * Tikslas: Kraujo gliukozės lygis, kurį nustatote ir kurio turi siekti AAPS
+   * DIA (Duration of Insulin Action)
+   * IC or I:C: Insulin to Carb ratio
+   * ISF: Insulin Sensitivity Factor
+   * Basal rate
+   * Target: Blood glucose level that you want AAPS to be aiming for
 
-* Galite naudoti [vietinį profilį](../Configuration/Config-Builder#local-profile-recommended), kurį galima redaguoti išmaniajame telefone, arba [Nightscout profilį](../Configuration/Config-Builder#ns-profile), kurį reikia redaguoti NS puslapyje ir perkelti į telefoną (aktyvuoti telefone). Išsamesnės informacijos ieškokite atitinkamuose skyriuose [Konfigūratoriaus puslapyje](../Configuration/Config-Builder.md).
+* You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).
 
 ## Terapija
 
 Šių terapijų istorija:
 
-* Bolusas ir angliavandeniai -> parinktis, leidžianti [ištrinti įrašus](../Getting-Started/Screenshots#carb-correction), siekiant koreguoti istoriją
+* Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
 * [Ištęstas bolusas](../Usage/Extended-Carbs#id1)
-* Laikina bazė
-* [Laikinas tikslas](../Usage/temptarget.md)
+* Temporary basal rate
+* [Temporary target](../Usage/temptarget.md)
 * [Profilio keitimas](../Usage/Profiles.md)
-* [Priežiūros portalas ](../Usage/CPbefore26#careportal-discontinued) - užrašai, įvesti skirtuke Veiksmas ir užrašai pranešimuose
+* [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
 ## KG Šaltinis - xDrip, modifikuota Dexcom programėlė...
 
 ![KG Šaltinio skirtukas - čia xDrip](../images/Screenshots_BGSource.png)
 
-* Priklausomai nuo jūsų KG šaltinio nustatymų, ši kortelė yra pavadinta skirtingai.
-* Parodo NGJ duomenų istoriją ir siūlo galimybę ištrinti duomenis nesklandumo atveju (pvz., duomenys, esant prispaustam jutikliui).
+* Depending on your BG source settings this tab is named differntly.
+* Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
 
 ## NSClient
 
 ![NSClient](../images/Screenshots_NSClient.png)
 
-* Rodo ryšio su jūsų Nightscout svetaine būseną.
-* Nustatymai atliekami [Nustatymuose](../Configuration/Preferences#nsclient). Atidarykite atitinkamą skyrių spustelėdami krumpliaračio simbolį viršutiniame dešiniajame ekrano kampe.
-* Apie trikčių šalinimą žr. [šį puslapį](../Usage/Troubleshooting-NSClient.md).
+* Displays status of the connection with your Nightscout site.
+* Settings are made in [preferences](../Configuration/Preferences#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
+* For troubleshooting see this [page](../Usage/Troubleshooting-NSClient.md).
