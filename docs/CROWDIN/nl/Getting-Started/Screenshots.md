@@ -273,50 +273,55 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 * In het Koolhydraten veld voer je de hoeveelheid koolhydraten (in grammen) in die je wilt gaan eten. NB: Wanneer je gewend bent om 'broodwaarden' oid te gebruiken, zul je dus eerst naar grammen moeten omrekenen. 
 * Het CORR-veld kun je gebruiken als je om wat voor reden dan ook de einddosis wilt aanpassen.
 * In het KH tijdsduur veld kun je een pre-bolus tijd invoeren, dwz dat er tijd tussen bolussen en eten zit. Je kunt ook een negatieve waarde in dit veld invullen als je bolust na je maaltijd.
+
+#### Eating reminder
+
 * For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
+   
+   ![BolusWizard with Eating Reminder](..images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Sectie J
 
-* Bij een SUPER BOLUS wordt de basale insuline voor de komende twee uur toegevoegd aan de maaltijdbolus, gevolgd door een tijdelijke basaalstand van nul voor de komende twee uur om te compenseren voor de extra insuline. 
-* Hiermee wordt de insuline 'naar voren gehaald', zodat je een minder hoge glucosepiek zult hebben na de maaltijd.
-* Voor details [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
+* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. 
+* The idea is to deliver the insulin sooner and hopefully reduce spikes.
+* For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
 ### Sectie K
 
-* Toont de berekende bolus. 
-* Wanneer je al meer insuline aan boord (IOB) hebt dan de berekende bolus, dan zal hier alleen de ontbrekende hoeveelheid koolhydraten te zien zijn.
+* Shows the calculated bolus. 
+* If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
 * Notities zullen worden geüpload naar Nightscout - afhankelijk van je instellingen voor [NS client](../Configuration/Preferences#ns-client).
 
 ### Sectie L
 
-* Details van de bolusberekening.
-* Je kunt variabelen uitschakelen die je niet wilt laten meenemen in de berekening, maar meestal zul je hier niets van aanpassen.
-* Om veiligheidsredenen moet de **TT-box handmatig worden aangevinkt** als je wilt dat de bolus wordt berekend op basis van een tijdelijk streefdoel.
+* Details of wizard's bolus calculation.
+* You can deselect any that you do not want to include but you normally wouldn't want to.
+* For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
 
-#### Combinaties van COB en IOB en hun betekenis
+#### Combinations of COB and IOB and what they mean
 
-* Om veiligheidsredenen kan de IOB niet uitgevinkt worden wanneer COB is aangevinkt, omdat je het risico zou kunnen lopen dat je te veel insuline krijgt. Dit omdat AAPS de eerder afgegeven IOB dan niet zou meeneemen in de berekening.
-* Wanneer je COB en IOB hebt aangevinkt, dan worden meegenomen: koolhydraten die nog niet zijn opgenomen en waarvoor nog geen insuline is afgegeven + alle insuline die eerder is afgegeven (dit zijn zowel tijdelijke basaalstanden als SMB).
-* Wanneer je IOB aanvinkt en COB niet, dan loop je het risico om te weinig insuline te krijgen. Want AAPS houdt wel rekening met insuline die eerder is afgegeven maar niet met koolhydraten die nog moeten worden opgenomen. Dan kun je een melding "Te weinig ... g" krijgen (ontbrekende koolhydraten).
-* Wanneer je een bolus wilt geven voor **extra koolhydraten**, vlak na een maaltijdbolus (bijv. je neemt toch wél een nagerecht) dan kan het verstandig zijn om **alle vinkjes weg te halen**. Dat komt omdat er hierboven steeds wordt gesproken over 'koolhydraten die nog niet zijn opgenomen'. Zo kort na je maaltijdbolus zijn de koolhydraten van je hoofdgerecht waarschijnlijk nog niet opgenomen, en dus komt op dat moment de hoeveelheid IOB niet overeen met de hoeveelheid COB. Door alle vinkjes uit te zetten, berekent AAPS de nieuwe bolus met alleen de koolhydraten uit je nagerecht.
+* For safety reasons IOB boxed cannot be unticked when COB box is ticked as you might run the risk of too much insulin as AAPS is not accounting for what’s already given.
+* If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
+* If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
+* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
 
-#### Verkeerde COB-detectie
+#### Wrong COB detection
 
 ![Langzame koolhydraat absorptie](../images/Calculator_SlowCarbAbsorbtion.png)
 
-* Als je de waarschuwing hierboven ziet na het gebruik van de boluswizard, dan heeft AndroidAPS vastgesteld dat de berekende COB-waarde misschien onjuist is. 
-* Dit betekent dat, als je weer wilt bolussen en je hebt nog COB van een vorige maaltijd, je moet uitkijken voor overdosering! 
-* Zie voor meer informatie de [COB Berekening](../Usage/COB-calculation#detectie-van-verkeerde-cob-waarden) pagina.
+* If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. 
+* So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
+* For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
 ## Insuline curve
 
 ![Insuline curve](../images/Screenshot_insulin_profile.png)
 
-* Dit toont het activiteitsprofiel van de insuline die je hebt geselecteerd in de [configurator](../Configuration/Config-Builder#insuline). 
-* De PAARSE lijn laat zien hoeveel insuline er nog over is na een injectie, je ziet hoe die steeds verder afneemt als de tijd voorbijgaat. De BLAUWE lijn laat zien hoe actief de insuline is.
-* Hier zie je ook hoe lang de insuline nog doorwerkt, dat kan langer zijn dan je eerder dacht / gehoord hebt. 
-* Wanneer je eerder een insulinepomp hebt gebruikt, ben je waarschijnlijk gewend om in te stellen dat de activiteit van de insuline ongeveer 3,5 uur is. 
-* Alleen, wanneer je gaat loopen dan is de langere activiteit (ook al is deze activiteit maar heel weinig aan het einde) weldegelijk belangrijk om mee te laten nemen in berekeningen. Omdat al deze kleine beetjes zich gaan optellen, door de vele recursieve berekeningen die het AAPS algoritme doet.
+* This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
+* The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
+* The important thing to note is that the decay has a long tail. 
+* If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
+* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
 
 Meer uitleg over de verschillende soorten insuline, hun werkingsprofielen en waarom dit allemaal belangrijk is, staat in dit artikel: [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
 
@@ -328,8 +333,8 @@ En nog meer in: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10
 
 ![Pompstatus](../images/Screenshot_PumpStatus.png)
 
-* Allerlei informatie over de pomp status. De weergegeven informatie is afhankelijk van jouw pompmodel.
-* Zie de [pompen pagina](../Hardware/pumps.rst) voor details.
+* Different information on pump status. Displayed information depends on your pump model.
+* See [pumps page](../Hardware/pumps.rst) for details.
 
 ## Care Portal
 
@@ -339,8 +344,8 @@ De Careportal had dezelfde functies als wat je in Nightscout ziet wanneer je daa
 
 ![Bekijk koolhydraten berekening op behandelings tab](../images/Screenshots_TreatCalc.png)
 
-* Als je de [Bolus calculator](../Getting-Started/Screenshots#bolus-calculator) hebt gebruikt om insuline dosering te berekenen, kun je deze berekening later terugkijken op het tabblad Behandelingen.
-* Druk simpelweg op de groene Calc link. (Afhankelijk van welke pomp je gebruikt kan het zijn dat insuline en koolhydraten op één regel worden weergegeven in Behandelingen.)
+* If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
+* Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
 
 ### Koolhydraten correctie
 
@@ -362,46 +367,46 @@ De Behandelingen tab kan worden gebruikt om foutieve koolhydraat-invoer te corri
 
 ## Loop, AMA / SMB
 
-* Deze tabbladen tonen details over de berekeningen van het algoritme en waarom AAPS doet wat het doet.
-* Berekeningen worden telkens gedaan als het systeem een nieuwe meting van de CGM binnenkrijgt.
-* Zie voor meer details [APS sectie op de configurator pagina](../Configuration/Config-Builder#aps).
+* These tabs show details about the algorithm's calculations and why AAPS acts the way it does.
+* Calculations are each time the system gets a fresh reading from the CGM.
+* For more details see [APS section on config builder page](../Configuration/Config-Builder#aps).
 
 ## Profiel
 
 ![Profiel](../images/Screenshots_Profile.png)
 
-* Het profiel bevat informatie over jouw individuele diabetesinstellingen:
+* Profile contains information on your individual diabetes settings:
    
-   * DIA (Duur van Insuline Activiteit)
-   * KH ratio: is de koolhydraatratio - het aantal grammen koolhydraten waarvoor jij één eenheid insuline nodig hebt
-   * ISF: Insuline gevoeligheidsfactor (Insulin Sensitivity Factor in het Engels)
-   * Basaal
-   * Streefdoel: bloedglucosewaarde waar AAPS naar moet streven
+   * DIA (Duration of Insulin Action)
+   * IC or I:C: Insulin to Carb ratio
+   * ISF: Insulin Sensitivity Factor
+   * Basal rate
+   * Target: Blood glucose level that you want AAPS to be aiming for
 
-* Je kunt een [lokaal profiel](../Configuration/Config-Builder#lokaal-profiel-aanbevolen) gebruiken dat op je smartphone bewerkt kan worden, of een [Nightscout profiel](../Configuration/Config-Builder#ns-profiel) dat op je NS pagina bewerkt moet worden en daarna naar je telefoon moet worden overgebracht. 
+* You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).
 
 ## Behandelingen
 
 Geschiedenis van de volgende behandelingen:
 
-* Bolus & koolhydraten-> met optie voor het [verwijderen van items](../Getting-Started/Screenshots#koolhydraten-correctie) om foutieve informatie weg te halen
+* Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
 * [Vertraagde bolus](../Usage/Extended-Carbs#id1)
-* Tijdelijke basaalstand (Temporary Basal Rate)
-* [Tijdelijk streefdoel](../Usage/temptarget.md)
+* Temporary basal rate
+* [Temporary target](../Usage/temptarget.md)
 * [Profiel wissel](../Usage/Profiles.md)
-* [Careportal](../Usage/CPbefore26#careportal-discontinued) - hier vind je notities terug die zijn ingevoerd via het Acties tabblad of via het notities veld in dialoogvensters
+* [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
 ## BG bron - xDrip, Dexcom App (aangepast)...
 
 ![BG Bron tabblad - hier xDrip](../images/Screenshots_BGSource.png)
 
-* Afhankelijk van de BG bron die je gebruikt, heeft dit tabblad de bijbehorende naam.
-* Toont geschiedenis van CGM metingen en heeft de optie om foutieve metingen te verwijderen (bijv. compressie laag).
+* Depending on your BG source settings this tab is named differntly.
+* Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
 
 ## NSClient
 
 ![NSClient](../images/Screenshots_NSClient.png)
 
-* Hier wordt de status van de verbinding met jouw Nightscout-site weergegeven.
-* De instellingen zijn te vinden in [NSClient instellingen](../Configuration/Preferences#nsclient). Je kunt het bijbehorende gedeelte openen door op het tandwiel aan de rechterbovenzijde van het scherm te klikken.
-* Voor het oplossen van problemen zie deze [pagina](../Usage/Troubleshooting-NSClient.md).
+* Displays status of the connection with your Nightscout site.
+* Settings are made in [preferences](../Configuration/Preferences#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
+* For troubleshooting see this [page](../Usage/Troubleshooting-NSClient.md).
