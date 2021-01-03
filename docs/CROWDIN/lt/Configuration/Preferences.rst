@@ -83,8 +83,8 @@ Skin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * You can choose from four types of skins:
 
-  .. image:: ../images/Pref2021_Skin.png
-    :alt: Select skin
+  .. image:: ../images/Pref2021_SkinWExample.png
+    :alt: Select skin + examples
 
 * 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
 * Difference of other skins depend of phone's display orientation.
@@ -173,12 +173,13 @@ Būklės indikatoriai
 -----------------------------------------------------------
 * Status lights give a visual warning for 
       
-   * Cannula age
+   * Sensor age
+   * Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots#sensor-level-battery) for details.
    * Insulin age (days reservoir is used)
    * Reservoir level (units)
-   * Sensor age
-   * Battery age
-   * Battery level (%)
+   * Cannula age
+   * Pump battery age
+   * Pump battery level (%)
 
 * If threshold warning is exceeded, values will be shown in yellow.
 * If threshold critical is exceeded, values will be shown in red.
@@ -189,11 +190,25 @@ Būklės indikatoriai
 
 Advanced Settings (Overview)
 -----------------------------------------------------------
+
+  .. image:: ../images/Pref2021_OV_Adv.png
+    :alt: Preferences > Status Lights
+
 Deliver this part of bolus wizard result
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * General setting to deliver only part of bolus wizard result. 
 * Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. 
 * The percentage is shown in bolus wizard.
+
+Bolus advisor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and you glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+* If correction bolus is accepted **no carbs** will recorded.
+* An alarm will be started when glucose value is in good level to start eating.
+* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ again and enter the amount of carbs you want to eat.
+
+  .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
+    :alt: Bolus advisor message
 
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
