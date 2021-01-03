@@ -290,58 +290,39 @@ Choisissez si vous voulez avoir des [voyants d'état](../Configuration/Preferenc
 
 ### Actions
 
-Quelques boutons pour accéder rapidement aux fonctions communes:
-
-* Changement de profils (voir la page [Changement de profil](../Usage/Profiles.md) pour plus d'informations sur la configuration)
-* Cibles temporaires
-* Définir/Annuler des Débit de Base
-* Bolus étendu (pompe DanaR/RS ou Combo uniquement)
-* Enregistrement de tous les soins spécifiques
-    
-    * Contrôle de la glycémie
-    * Amorcer/Remplir - enregistrement d'un changement de site et d'un changement de cartouche (si pas fait sur la pompe)
-    * Pose du capteur MGC
-    * Changement de la pile de pompe
-    * Remarque
-    * Activité Physique
-* Affichage des informations capteur, insuline, canule et age de la pile de pompe
-* Historique
-* DTI (Dosage Total d'Insuline quotidien = bolus + basale par jour)
-
-Certains médecins utilisent - en particulier pour les nouveaux utilisateurs de pompes - une proportion basal-bolus de 50:50. Par conséquent, le rapport est calculé ainsi DTI/(2*DTB) (Dose Totale de Basale = somme des débits de basal en 24 heures). D'autres préfèrent une fourchette allant de 32% à 37% de DTI pour DTB. Comme la plupart de ces règles empiriques, leur validité réelle est limitée. Remarque : Votre diabète peut varier!
-
-![Onglet Actions](../images/ConfBuild_ConfBuild_Actions_b.png)
+* Some buttons to quickly access common features.
+* See [AAPS screenshots](..//Getting-Started/Screenshots#actions-tab) for details.
 
 ### Automatisation
 
-Tâches d'automatisation définies par l'utilisateur ('si-alors-sinon'). Veuillez [lire ici](../Usage/Automation.rst).
+User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst).
 
 ### Communicateur SMS
 
-Permet aux aidants à distance de contrôler certaines fonctionnalités d'AndroidAPS via SMS, voir [Commandes SMS](../Children/SMS-Commands.rst) pour plus d'informations sur la configuration.
+Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
 
 ### Aliments
 
-Affiche les préréglages alimentaires définis dans la base de données Nightscout, voir [Nightscout Lisez-moi](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) pour plus d'informations sur la configuration.
+Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-Remarque : Les entrées ne peuvent pas être utilisées dans la calculatrice AndroidAPS. (Affichage uniquement)
+Note: Entries cannot be used in the AndroidAPS calculator. (View only)
 
 ### Wear
 
-Contrôler et contrôler AAPS à l'aide de votre montre Android Wear (voir la page [AAPS sur montres Wear OS](../Configuration/Watchfaces.md)). Utilisez les paramètres (roue crantée) pour définir quelles variables doivent être prises en compte lors du calcul du bolus donné par votre montre (par ex. tendance de 15min, GA...).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
 Si vous voulez commander AAPS depuis la montre (bolus etc) alors dans les "Paramètres Wear" vous devez activer "Commandes depuis la montre".
 
-![Paramètres Wear](../images/ConfBuild_Wear.png)
+![Wear settings](../images/ConfBuild_Wear.png)
 
-Via l'onglet Wear ou le menu hamburger (en haut à gauche de l'écran, si l'onglet n'est pas affiché), vous pouvez
+Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
 * Renvoyer toutes les données. Cela peut être utile si la montre n'est pas connectée pendant un certain temps et que vous voulez envoyer toutes les informations à la montre.
 * Ouvrez le menu Paramètres de votre montre directement depuis votre téléphone.
 
 ### Barre d'état pour xDrip (Montre)
 
-Affiche les informations de la boucle sur votre cadran xDrip+ (si vous n'utilisez pas les cadrans AAPS/[cadran AAPSv2](../Configuration/Watchfaces.md)
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
 ### NSClient
 
@@ -350,8 +331,8 @@ Affiche les informations de la boucle sur votre cadran xDrip+ (si vous n'utilise
 
 ### Maintenance
 
-E-mail et le nombre de journaux à envoyer. Normalement pas de changement nécessaire.
+Email and number of logs to be send. Normally no change necessary.
 
 ### Générateur de configuration
 
-Utilisez l'onglet pour le générateur de configuration au lieu du menu hamburger.
+Use tab for config builder instead of hamburger menu.
