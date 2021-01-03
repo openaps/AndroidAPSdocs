@@ -278,7 +278,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
    
-   ![BolusWizard with Eating Reminder](..images/Home2021_BolusWizard_EatingReminder.png)
+   ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Section J
 
@@ -339,11 +339,20 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * Less information will be shown if [low resolution skin](../Configuration/Preferences#skin) is used.
 
+#### Sensor level (battery)
+
+* Needs xDrip+ nightly build Dec. 10, 2020 or newer.
+* Works for CGM with additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level information to xDrip+.)
+* Thresholds can be set in [preferences](../Configuration/Preferences#status-lights).
+* If sensor level is the same as phone battery level you xDrip+ version is probably too old and needs an update.
+   
+   ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
+
 ### Careporal - section O
 
 * BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
 * Prime/Fill allows you to record pump site and insulin cartridge change.
-* Section = reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+* Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
 
 ### Tools - section P
 
