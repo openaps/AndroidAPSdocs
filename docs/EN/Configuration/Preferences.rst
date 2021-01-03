@@ -173,12 +173,13 @@ Status lights
 -----------------------------------------------------------
 * Status lights give a visual warning for 
       
-   * Cannula age
+   * Sensor age
+   * Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots#sensor-level-battery) for details.
    * Insulin age (days reservoir is used)
    * Reservoir level (units)
-   * Sensor age
-   * Battery age
-   * Battery level (%)
+   * Cannula age
+   * Pump battery age
+   * Pump battery level (%)
 
 * If threshold warning is exceeded, values will be shown in yellow.
 * If threshold critical is exceeded, values will be shown in red.
