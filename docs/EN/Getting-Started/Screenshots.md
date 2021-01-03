@@ -264,7 +264,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 #### Eating reminder
 * For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
 
-   ![BolusWizard with Eating Reminder](..images/Home2021_BolusWizard_EatingReminder.png)
+   ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Section J
 * SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. 
