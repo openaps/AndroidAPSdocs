@@ -243,7 +243,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Калькулятор
 
-* See [details below](../Configuration/Screenhots#bolus-wizard)
+* See Bolus Wizard [section below](../Configuration/Screenhots#bolus-wizard)
 
 #### Calibrations
 
@@ -263,7 +263,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ## Bolus Wizard
 
-![Bolus wizard](../images/Home2020_BolusWizard.png)
+![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
 
 When you want to make a meal bolus this is where you will normally make it from.
 
@@ -273,6 +273,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 * In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. 
 * The CORR field is if you want to modify the end dosage for some reason.
 * The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
 
 ### Section J
 
