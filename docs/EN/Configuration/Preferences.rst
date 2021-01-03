@@ -174,7 +174,7 @@ Status lights
 * Status lights give a visual warning for 
       
    * Sensor age
-   * Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots#sensor-level-battery) for details.
+   * Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots#sensor-level-battery) for details).
    * Insulin age (days reservoir is used)
    * Reservoir level (units)
    * Cannula age
