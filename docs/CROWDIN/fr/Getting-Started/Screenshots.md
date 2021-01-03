@@ -243,7 +243,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 #### Assistant
 
-* Voir [ci-dessous](../Configuration/Screenhots#assistant-rapide)
+* See Bolus Wizard [section below](../Configuration/Screenhots#bolus-wizard)
 
 #### Étalonnages
 
@@ -263,7 +263,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 ## Assistant bolus
 
-![Assistant Bolus](../images/Home2020_BolusWizard.png)
+![Assistant Bolus](../images/Home2020_BolusWizard_v2.png)
 
 Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le ferez.
 
@@ -273,6 +273,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 * Dans le champ "Glucides", vous indiquez votre estimation de la quantité de glucides pour laquelle vous voulez faire le bolus. 
 * Le champ "Corr" vous permet de modifier le dosage final pour une raison quelconque.
 * Le champ "Décalage horaire" est destiné au pré-bolus pour que vous puissiez renseigner qu'il y aura un délai avant que les glucides ne soient mangés. Vous pouvez mettre un nombre négatif dans ce champ si vous faites un bolus pour des glucides déjà consommés.
+* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
 
 ### Section J
 
