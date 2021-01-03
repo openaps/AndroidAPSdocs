@@ -1,6 +1,6 @@
 Einstellungen
 ***********************************************************
-* **Open preferences** by clicking three-dot-menu on top right side of home screen.
+* **Öffne die Einstellungen** durch einen Klick auf das 3-Punkte-Menü rechts oben auf dem Startbildschirm.
 
   .. image:: ../images/Pref2020_Open2.png
     :alt: Einstellungen öffnen
@@ -10,15 +10,15 @@ Einstellungen
   .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Plugin-Einstellungen öffnen
 
-* **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+* **Untermenüs** können geöffnet werden, indem Du auf das Dreieck unter dem Untermenü-Titel klicken.
 
   .. image:: ../images/Pref2020_Submenu2.png
     :alt: Untermenü öffnen
 
-* With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+* Mit der **Filter-Funktion** ganz oben auf dieser Seite kannst Du schnell die gesuchten Einstellungen finden. Beginne einfach mit der Eingabe eines Teils des Textes, nach dem du suchst.
 
   .. image:: ../images/Pref2021_Filter.png
-    :alt: Preferences filter
+    :alt: Filter in Einstellungen
 
 
 Allgemein
@@ -81,13 +81,13 @@ Bolus-Schutz
 
 Erscheinungsbild
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* You can choose from four types of skins:
+* Du kannst zwischen vier Darstellungsarten wählen:
 
-  .. image:: ../images/Pref2021_Skin.png
-    :alt: Darstellungsart wählen
+  .. image:: ../images/Pref2021_SkinWExample.png
+    :alt: Auswahl der Darstellungsart + Beispiel Unterschied niedrige Auflösung
 
-* 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
-* Difference of other skins depend of phone's display orientation.
+* Bei der 'Darstellung für niedrige Auflösungen' werden die Beschriftungen kürzer dargestellt und im Careportal einige Angaben entfernt, um auf Bildschirmen mit sehr niedriger Auflösung mehr Platz zu gewinnen.
+* Der Unterschied der anderen Darstellungsarten hängt von der Ausrichtung des Smartphones ab.
 
 Hochformat
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -127,7 +127,7 @@ Quick Wizard
 -----------------------------------------------------------
 * Bei häufigen Snacks oder Mahlzeiten kannst du über QuickWizard-Schaltflächen einfach die Menge der Kohlenhydrate eingeben und die Berechnungsgrundlagen festlegen.
 * In der Konfiguration legst du fest, in welchem Zeitraum die Schaltfläche auf dem Homescreen zu sehen sein soll. Es ist nur eine Schaltfläche pro Zeitraum möglich.
-* Wenn du auf den QuickWizardf-Button klickst, berechnet AAPS für diese Kohlenhydrate einen Bolus basierend auf Deinen aktuellen Faktoren (unter Berücksichtigung des Blutzuckerwertes oder des Insulins an Bord, wenn eingerichtet) und schlägt diesen vor. 
+* Wenn du auf den QuickWizard-Button klickst, berechnet AAPS für diese Kohlenhydrate einen Bolus basierend auf Deinen aktuellen Faktoren (unter Berücksichtigung des Blutzuckerwertes oder des Insulins an Bord, wenn eingerichtet) und schlägt diesen vor. 
 * Der Vorschlag muss bestätigt werden, bevor Insulin abgegeben wird.
 
   .. image:: ../images/Pref2020_OV_QuickWizard.png
@@ -173,12 +173,13 @@ Statusanzeige
 -----------------------------------------------------------
 * Status Anzeigen geben eine optische Warnung für 
       
-   * Kanülenalter
+   * Sensoralter
+   * Batteriestand des Sensor-Smart-Readers für bestimmte Geräte (weitere Details auf der Seite [AndroidAPS Bildschirme](../Getting-Started/Screenshots#sensor-level-batterie)).
    * Insulinalter (Tage Reservoirverwendung)
    * Reservoirstand (Einheiten)
-   * Sensoralter
-   * Batteriealter
-   Batterieladezustand (%)
+   * Kanülenalter
+   * Alter der Pumpenbatterie
+   * Stand (%) der Pumpenbatterie
 
 * Bei Überschreiten der Warnschwelle werden die Werte gelb angezeigt.
 * Bei Überschreiten der kritischen Warnschwelle werden die Werte rot angezeigt.
@@ -189,11 +190,25 @@ Statusanzeige
 
 Erweiterte Einstellungen (Übersicht)
 -----------------------------------------------------------
+
+  .. image:: ../images/Pref2021_OV_Adv.png
+    :alt: Einstellungen > Status Lights
+
 Abgabe nur eines Teils der vom Bolus-Rechner ermittelten Insulinmenge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Systemweite Einstellung, dass nur ein Teil des im Bolus Kalkulator berechneten Insulins abgegeben wird. 
 * Nur der eingestellte prozentuale Anteil (muss zwischen 10 und 100 liegen) wird abgegeben. 
 * Der Prozentsatz wird auch im Bolus Kalkulator angezeigt.
+
+Bolus-Berater
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Wenn du den `Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`_ verwendest und dein Glukosewert über 180 mg/dl (10 mmol ) liegt, wird ein Korrekturbolus vorgeschlagen.
+* Wenn Du den Vorschlag akzeptierst, werden **keine Kohlenhydrate** aufgezeichnet.
+* Wenn den Glukosewert auf einem guten Level für das Essen liegt, wirst Du benachrichtigt.
+* Du musst erneut den Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`_ aufrufen und die Menge der Kohlenhydrate, die du essen möchtest, eingeben.
+
+  .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
+    :alt: Nachricht des Bolus-Beraters
 
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -322,7 +337,7 @@ Resorptions-Einstellungen
 ===========================================================
 
   .. image:: ../images/Pref2020_Absorption.png
-    :alt: Resoprtions-Einstellungen
+    :alt: Resorptions-Einstellungen
 
 min_5m_carbimpact
 -----------------------------------------------------------
@@ -442,7 +457,7 @@ Wartungseinstellungen
     :alt: Wartungseinstellungen
 
 * Standardempfänger von Protokollen ist logs@androidaps.org.
-* Wenn Du *Exportierte Daten verschlüsseln* auswählst, werden diese mit Deinem `master password <../Configuration/Preferences.html#master-passwort>`_ verschlüsselt. In diesem Fall muss das Master-Passwort jedesmal eingegeben werden, wenn die Einstellungen ex- oder importiert werden.
+* Wenn Du *Exportierte Daten verschlüsseln* auswählst, werden diese mit Deinem `master password <../Configuration/Preferences.html#master-passwort>`_ verschlüsselt. In diesem Fall muss das Master-Passwort jedes Mal eingegeben werden, wenn die Einstellungen ex- oder importiert werden.
 
 Open Humans
 ===========================================================
