@@ -248,7 +248,7 @@ Choose if you want to have [status lights](../Configuration/Preferences#status-l
 
 ### Actions
 * Some buttons to quickly access common features.
-* See [AAPS screenshots](..//Getting-Started/Screenshots#actions-tab) for details.
+* See [AAPS screenshots](../Getting-Started/Screenshots#action-tab) for details.
 
 ### Automation
 User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst).
