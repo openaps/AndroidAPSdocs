@@ -48,6 +48,22 @@ Dexcom G6
 * Если хотите использовать xDrip-оповещения через локальную трансляцию: в сэндвич-меню xDrip > настройки > источник данных глюкозы > 640G /EverSense.
 * Из модифицированного приложения Dexcom нет локальной трансляции непосредственно в xDrip +. Трансляция должна пройти через ААПС, как описано выше.
 
+If using G6 with Build Your Own Dexcom App
+==================================================
+* As of December 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA)also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
+* This app lets you use your Dexcom G6 with any Android smartphone.
+* In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
+
+Settings for AndroidAPS
+--------------------------------------------------
+* Select 'Dexcom App (patched)' in config builder.
+* If you don't recieve any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+
+Settings for xDrip+
+--------------------------------------------------
+* Select '640G/Eversense' as data source.
+* Command 'start sensor' must be performed in xDrip+ in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
+   
 Устранение неполадок с G6
 ==================================================
 Устранение неполадок, связанных с dexcom G6
