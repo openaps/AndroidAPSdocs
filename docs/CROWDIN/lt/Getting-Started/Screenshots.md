@@ -243,7 +243,7 @@ Paprastai faktinė glikemijos kreivė baigsis šių eilučių viduryje arba neto
 
 #### Skaičiuotuvas
 
-* Žr. [informaciją žemiau](../Configuration/Screenhots#bolus-wizard)
+* See Bolus Wizard [section below](../Configuration/Screenhots#bolus-wizard)
 
 #### Kalibravimas
 
@@ -263,7 +263,7 @@ Paprastai faktinė glikemijos kreivė baigsis šių eilučių viduryje arba neto
 
 ## Boluso skaičiuotuvas
 
-![Boluso patarėjas](../images/Home2020_BolusWizard.png)
+![Boluso patarėjas](../images/Home2020_BolusWizard_v2.png)
 
 Įprastai jis naudojamas maisto bolusams suleisti.
 
@@ -273,6 +273,7 @@ Paprastai faktinė glikemijos kreivė baigsis šių eilučių viduryje arba neto
 * AV langelyje turite įvesti maisto, kurį valgysite, angliavandenių ar jų atitikmens kiekį. 
 * CORR laukas yra, jei norite pakeisti galutinę dozę dėl kokios nors priežasties.
 * Laukas Laiko poslinkis skirtas išankstiniam bolusui, todėl galite nurodyti, kad angliavandeniai bus valgomi vėliau. Šiame langelyje galite įvesti ir laiką su minuso ženklu, jei angliavandenius jau suvalgėte anksčiau.
+* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
 
 ### Skiltis J
 
