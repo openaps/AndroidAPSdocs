@@ -313,9 +313,57 @@ Paprastai faktinė glikemijos kreivė baigsis šių eilučių viduryje arba neto
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
 * For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
-## Insulino profilis
+## Action tab
 
-![Insulino profilis](../images/Screenshot_insulin_profile.png)
+![Veiksmų skirtukas](../images/Home2021_Action.png)
+
+### Actions - section M
+
+* Button [profile switch](../Usage/Profiles#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
+* Button [temporary target](../Usage/temptarget#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
+* Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
+* Even though [extended boluses](../Usage/Extended-Carbs#id1) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+   
+   * This option is only available for Dana RS and Insight pumps. 
+   * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
+   * Make sure to read the [details](../Usage/Extended-Carbs#id1) before using this option.
+
+### Careporal - section N
+
+* Displays information on
+   
+   * sensor age & level (battery percentage)
+   * insulin age & level (units)
+   * canula age
+   * pump battery age & level (percentage
+
+* Less information will be shown if [low resolution skin](../Configuration/Preferences#skin) is used.
+
+### Careporal - section O
+
+* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
+* Prime/Fill allows you to record pump site and insulin cartridge change.
+* Section = reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+
+### Tools - section P
+
+#### History Browser
+
+* Allows you to ride back in AAPS hsitory.
+
+#### BPD
+
+* Total daily dose = bolus + basal per day
+* Kai kurie gydytojai rekomenduoja - ypač pradedantiesiems - bazės ir boluso insulino santykį 50:50. 
+* Todėl santykis apskaičiuojamas kaip bendra BPD / 2 * BPB paros dozė (BPB bendra paros bazė = valandinių bazių suma per 24 valandas). 
+* Kiti labiau linkę apskaičiuoti paros BPB dozę kaip 32–37% paros insulino BPD. 
+* Kaip ir dauguma jų, jie turi ribotą praktinę reikšmę. Pastaba: Jūsų diabetas gali skirtis!
+
+![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
+
+## Insulin Profile
+
+![Insulin Profile](../images/Screenshot_insulin_profile.png)
 
 * This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
 * The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
@@ -323,35 +371,35 @@ Paprastai faktinė glikemijos kreivė baigsis šių eilučių viduryje arba neto
 * If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
 * However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
 
-Išsamiau apie skirtingus insulino tipus, aktyvumo profilius ir kam viso to reikia, galite paskaityti čia: [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-Jūs taip pat galite perskaityti puikų blogo straipsnį čia: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-Ir dar daugiau čia: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+And even more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
-## Pompos statusas
+## Pump Status
 
-![Pompos statusas](../images/Screenshot_PumpStatus.png)
+![Pump Status](../images/Screenshot_PumpStatus.png)
 
 * Different information on pump status. Displayed information depends on your pump model.
 * See [pumps page](../Hardware/pumps.rst) for details.
 
-## Priežiūra
+## Care Portal
 
 Priežiūros skiltyje rasite tas pačias funkcijas, kaip Jūsų Nightscout puslapyje po "+" simboliu, ir galėsite pridėti pastabų prie savo duomenų.
 
-### Peržiūrėkite angliavandenių apskaičivimą
+### Review carb calculation
 
-![Peržiūrėkite angliavandenių kiekį skirtuke Terapija](../images/Screenshots_TreatCalc.png)
+![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
 
 * If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
 * Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
 
-### Angliavandenių korekcija
+### Carb correction
 
-![Įrašai 1 ar 2 eilutėse](../images/Treatment_1or2_lines.png)
+![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
 
-Įrašų skiltis gali būti naudojama neteisingam angliavandenių kiekiui ištaisyti (pvz., jei pervertinote ar per mažai įvertinote angliavandenių kiekį).
+Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
 
 1. Patikrinkite ir įsidėmėkite esamą aktyvių angliavandenių AAO ir aktyvaus insulino AIO kiekį, rodomą pagrindiniame ekrane.
 2. Priklausomai nuo pompos modelio, angliavandeniai rodomi kartu su insulinu vienoje eilutėje arba kaip atskiras įrašas (pvz., Dana RS).
@@ -365,7 +413,7 @@ Priežiūros skiltyje rasite tas pačias funkcijas, kaip Jūsų Nightscout pusla
 
 7. Jei skirtuke „Įrašai“ matote vienoje eilutėje angliavandenius ir insuliną, taip pat turite iš naujo įvesti insulino kiekį. Atkreipkite dėmesį į tinkamo laiko pasirinkimą ir tada pradžios ekrane patikrinkite aktyvaus insulino AIO duomenis.
 
-## Ciklas, AMA / SMB
+## Loop, AMA / SMB
 
 * These tabs show details about the algorithm's calculations and why AAPS acts the way it does.
 * Calculations are each time the system gets a fresh reading from the CGM.
@@ -385,9 +433,9 @@ Priežiūros skiltyje rasite tas pačias funkcijas, kaip Jūsų Nightscout pusla
 
 * You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).
 
-## Terapija
+## Treatment
 
-Šių terapijų istorija:
+History of the following treatments:
 
 * Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
 * [Ištęstas bolusas](../Usage/Extended-Carbs#id1)
@@ -396,9 +444,9 @@ Priežiūros skiltyje rasite tas pačias funkcijas, kaip Jūsų Nightscout pusla
 * [Profilio keitimas](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
-## KG Šaltinis - xDrip, modifikuota Dexcom programėlė...
+## BG Source - xDrip, Dexcom App (pateched)...
 
-![KG Šaltinio skirtukas - čia xDrip](../images/Screenshots_BGSource.png)
+![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
 
 * Depending on your BG source settings this tab is named differntly.
 * Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
