@@ -81,12 +81,13 @@ Bolus protection
 
 Skin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* You can choose from three types of skins:
+* You can choose from four types of skins:
 
-  .. image:: ../images/Pref2020_Skin.png
+  .. image:: ../images/Pref2021_Skin.png
     :alt: Select skin
 
-* Difference depend of phone's display orientation
+* 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
+* Difference of other skins depend of phone's display orientation.
 
 Portrait orientation
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
