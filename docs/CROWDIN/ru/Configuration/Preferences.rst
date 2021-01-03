@@ -1,19 +1,25 @@
 Настройки
 ***********************************************************
-* Open preferences by clicking three-dot-menu on top right side of home screen.
+* **Open preferences** by clicking three-dot-menu on top right side of home screen.
 
-  .. image:: ../images/Pref2020_Open.png
+  .. image:: ../images/Pref2020_Open2.png
     :alt: Open preferences
 
 * You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and click Plugin preferences.
 
-  .. image:: ../images/Pref2020_OpenPlugin.png
+  .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Open plugin preferences
-    
-* Sub-menus can be opened by clicking the triangle below the sub-menu title.
 
-  .. image:: ../images/Pref2020_Submenu.png
+* **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+
+  .. image:: ../images/Pref2020_Submenu2.png
     :alt: Open submenu
+
+* With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+
+  .. image:: ../images/Pref2021_Filter.png
+    :alt: Preferences filter
+
 
 Общие настройки
 ===========================================================
@@ -75,12 +81,13 @@ Bolus protection
 
 Skin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* You can choose from three types of skins:
+* You can choose from four types of skins:
 
-  .. image:: ../images/Pref2020_Skin.png
+  .. image:: ../images/Pref2021_Skin.png
     :alt: Select skin
 
-* Difference depend of phone's display orientation
+* 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
+* Difference of other skins depend of phone's display orientation.
 
 Portrait orientation
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
