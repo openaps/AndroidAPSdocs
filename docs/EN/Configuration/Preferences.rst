@@ -144,7 +144,7 @@ Default temp targets
   
 Fill/Prime standard insulin amounts
 -----------------------------------------------------------
-* If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Usage/CPbefore26.html#pump>`_.
+* If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
 * Pre-set values can be defined in this dialogue.
 
 Range for visualization
