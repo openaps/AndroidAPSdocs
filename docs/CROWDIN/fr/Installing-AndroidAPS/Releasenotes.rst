@@ -20,7 +20,7 @@ Date de sortie : 01-01-2021
 Conseils importants
 ----------------------
 * **La version minimale d'Android est 8.0 maintenant.** Pour les anciennes versions d'Android, vous pouvez toujours utiliser la version 2.6.1.4 de l'ancien dépôt. 
-* `Objectives have changed. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before updating.**
+* `Les objectifs ont changé. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before updating.**
 * Le dossier github est toujours sur https://github.com/nightscout/AndroidAPS. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un `nouveau clone <../Installing-AndroidAPS/Building-APK.html>`_.
 * Utilisez `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
@@ -31,11 +31,11 @@ Nouvelles fonctionnalités majeures
 * nouveau cadran de montre @rICTx-T1D
 * Améliorations de la connexion Dana RS @MilosKozak 
 * Suppression de "Valeurs MGC inchangées" pour les SMB pour l'application native Dexcom
-* New `Low Ressolution Skin <../Configuration/Preferences.html#skin>`_
+* Nouveau thème `Basse résolution <../Configuration/Preferences.html#theme>`_
 * Nouveau type de patient `"Grossesse" <../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur>`_ @Brian Quinion
 * Nouvelle présentation tablette de NSClient @MilosKozak 
 * NSClient transfert des paramètres insuline, sensibilité et les paramètres d'affichage directement à partir de l'écran principal AAPS @MilosKozak 
-* `Preferences filter <../Configuration/Preferences.html>`_ @Brian Quinion
+* `Filtre des préférences <../Configuration/Preferences.html>`_ @Brian Quinion
 * Nouvelles icônes de pompe @Rig22 @teleriddler @osodebailar
 * Améliorations de l'assistant de configuration @MilosKozak 
 * Améliorations de la sécurité @dlvoy 
