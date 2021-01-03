@@ -6,8 +6,8 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 
 **Diese Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein kommerzielles Produkt. Daher bist DU gefordert. DU musst lesen, lernen und verstehen, was das System macht und wie du es bedienst. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.**
 
-.. Inhalte: 
-   :backlinks: Eintrag
+.. contents:: 
+   :backlinks: entry
    :depth: 2
 
 Hardware- und Software-Anforderungen
