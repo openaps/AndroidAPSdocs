@@ -18,7 +18,7 @@ Configuration matérielle et logicielle requise
   Composant qui permet la communication entre votre téléphone avec AndroidAPS et les Pods de génération Eros.
 
    -  |OrangeLink|  `Site internet OrangeLink <https://getrileylink.org/product/orangelink>`_    
-   - |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
    -  |EmaLink|  `Site internet Emalink <https://github.com/sks01/EmaLink>`__ - `Contact <mailto:getemalink@gmail.com>`__     
    -  |LoopLink|  `Site internet LoopLink <https://www.getlooplink.org/>`__ - `Contact <https://jameswedding.substack.com/>`__ - Non testé
 

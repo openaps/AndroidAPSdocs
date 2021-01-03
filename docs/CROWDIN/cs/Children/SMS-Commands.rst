@@ -2,25 +2,25 @@ SMS příkazy
 **************************************************
 Bezpečnost především
 ==================================================
-* AndroidAPS vám umožňuje kontrolovat telefon vašeho dítěte na dálku prostřednictvím textových zpráv. Pokud povolíte SMS komunikátor, vždy pamatujte na to, že telefon nastavený k vydávání vzdálených příkazů, může být ukraden. Proto vždy chraňte telefon alespoň pomocí kódu PIN. A strong password or biometrics are recommended.
-* Additionally it is recommended to allow a `second phone number <#authorized-phone-numbers>`_ for SMS commands. So you can use second number to `temporary disable <#other>`_ SMS communicator in case your main remote phone gets lost or stolen.
+* AndroidAPS vám umožňuje kontrolovat telefon vašeho dítěte na dálku prostřednictvím textových zpráv. Pokud povolíte SMS komunikátor, vždy pamatujte na to, že telefon nastavený k vydávání vzdálených příkazů, může být ukraden. Proto vždy chraňte telefon alespoň pomocí kódu PIN. Doporučuje se zvolit si silné heslo nebo biometrické údaje.
+* Navíc se pro SMS příkazy doporučuje povolit `druhé telefonní číslo <#autorized-phone-numbers>`_. Pokud dojde ke ztrátě nebo ukradení mobilu, můžete z druhého čísla `dočasně vypnout <#other>`_ SMS komunikátor.
 * Systém AndroidAPS vás rovněž bude informovat textovou zprávou o tom, jestli váš vzdálený příkaz, např. bolus nebo změna profilu, byl proveden. Je proto vhodné nastavit, aby byly potvrzovací zprávy odesílány alespoň na dvě různá telefonní čísla pro případ, že by došlo ke zcizení jednoho z rodičovských telefonů.
 * **Pokud jste zadali bolus prostřednictvím SMS příkazů, musíte přes Nightscout (NSClient, webovou stránku...) zadat odpovídající množství sacharidů!** Jestliže to neuděláte, bude IOB kalkulováno oproti nízkému COB. Případný korekční bolus pak nemusí být vydán, protože AAPS předpokládá, že máte příliš mnoho aktivního inzulínu.
-* As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
+* Od AndroidAPS verze 2.7 musí být kvůli zvýšení bezpečnosti při posílání SMS použita autentizační aplikace s časově omezeným jednorázovým heslem.
 
-Setup SMS commands
+Nastavení SMS příkazů
 ==================================================
 
 .. image:: ../images/SMSCommandsSetup.png
   :alt: Nastavení SMS příkazů
       
-* Většinu úprav dočasných cílů, se kterými pracuje AAPS apod., can be done on `NSClient app <../Children/Children.html>`_ on an Android phone with an internet connection.
+* Většinu úprav dočasných cílů, se kterými pracuje AAPS apod., můžete provést přes `aplikaci NSClient <../Children/Children.html>`_ na telefonu s Androidem připojenému k internetu.
 * Bolusy přes Nightscout nepošlete. Můžete to ale provést pomocí SMS příkazů.
-* If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
+* Používáte-li ke sledování iPhone, nemůžete použít NSClient. Pak máte k dispozici pouze SMS příkazy.
 
 * Ve vašem Android telefonu přejděte do jeho systémového nastavení, následně do Aplikace > AndroidAPS > Oprávnění a povolte SMS
 
-Authorized phone numbers
+Schválená telefonní čísla
 -------------------------------------------------
 * In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679) 
 * Enable 'Allow remote commands via SMS'.
