@@ -290,58 +290,39 @@ Kies of je [statusindicatoren](../Configuration/Preferences#statusindicatoren) w
 
 ### Acties
 
-Een aantal knoppen voor snelle toegang tot algemene functies:
-
-* Profiel wissel (Zie [Profiel wissel pagina](../Usage/Profiles.md) voor meer informatie)
-* Tijdelijk streefdoel
-* Zet / annuleer Tijdelijke basaalstand
-* Vertraagde bolus (alleen DanaR/RS of Combo pomp)
-* Opslaan specifieke zorg gegevens
-    
-    * BG controle
-    * Voorvullen / vullen - wissel canulle en voorvullen (indien niet gedaan door pomp)
-    * CGM sensor start
-    * Pomp batterij vervangen
-    * Notitie
-    * Sport
-* Bekijk de huidige sensor, insuline, canule en pomp batterij status
-* Historiek venster
-* TDD (Totale Dagelijkse Dosis = bolus + basale insuline per dag)
-
-Sommige artsen gebruiken - met name voor nieuwe pompgebruikers- een basaal:bolus ratio van 50:50. Daarom wordt de ratio berekend als TDD / 2 * TBB (Totale Basis Basaal = som van alle basale insuline binnen 24 uur). Anderen geven de voorkeur aan 32% tot 37% van de TDD voor TBB. Zoals de meeste van deze vuistregels hoeft ook deze in het echte leven niet persé te kloppen. Ieder mens is anders!
-
-![Acties tabblad](../images/ConfBuild_ConfBuild_Actions_b.png)
+* Some buttons to quickly access common features.
+* See [AAPS screenshots](..//Getting-Started/Screenshots#actions-tab) for details.
 
 ### Automatisering
 
-Door de gebruiker gedefinieerde automatiseringstaken ("als-dan-anders"). [Hier](../Usage/Automation.rst) kun je meer lezen.
+User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst).
 
 ### SMS Communicator
 
-Hiermee kunt je toestaan dat zorgverleners vanaf afstand (bijv. ouders van schoolgaande kinderen) sommige functies van AndroidAPS kunnen laten uitvoeren via SMS. Op de pagina over [SMS-commando's](../Children/SMS-Commands.rst) kun je lezen hoe je dit instelt.
+Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
 
 ### Voeding
 
-Toont de instellingen voor voeding die zijn gemaakt in de Nightscout food database, zie de [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) voor meer informatie.
+Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-Opmerking: Invoer uit Nightscout kan niet worden gebruikt in de AndroidAPS calculator. Het kan alleen worden bekeken (view only).
+Note: Entries cannot be used in the AndroidAPS calculator. (View only)
 
 ### Wear (voor smartwatches)
 
-Gebruik je Android Wear smartwatch om AndroidAPS te bekijken en te besturen (zie [pagina Smartwatch instellingen](../Configuration/Watchfaces.md)). Via de instellingen (tandwiel-icoontje) kun je aanvinken welke variabelen moeten worden meegenomen bij het berekenen van een bolus via je horloge (bijv. 15min-trend, COB...).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
 Als je wilt bolussen etc. vanaf je horloge, dan moet je bij "Wear instellingen" de optie "Bedieningen via horloge" geactiveerd hebben.
 
-![Wear instellingen](../images/ConfBuild_Wear.png)
+![Wear settings](../images/ConfBuild_Wear.png)
 
-Via het Wear tabblad of via het hamburger menu (3 streepjes linksboven in het Overzicht-scherm als het Wear tabblad niet wordt weergegeven) kun je:
+Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
 * "Update Wear gegevens" kiezen. Kan handig zijn als je horloge enige tijd niet verbonden is geweest, en je wilt de informatie naar je horloge sturen.
 * "Open instellingen op Wear" kiezen. Dit opent de instellingen van je horloge direct vanaf je telefoon.
 
 ### xDrip Statuslijn (Horloge)
 
-Toont informatie over jouw loop op je xDrip+ watchface (als je de AAPS/[AAPv2 watchface niet gebruikt](../Configuration/Watchfaces.md)).
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
 ### NSClient
 
@@ -350,8 +331,8 @@ Toont informatie over jouw loop op je xDrip+ watchface (als je de AAPS/[AAPv2 wa
 
 ### Onderhoud
 
-Kies het aantal te verzenden logbestanden, en het e-mailadres waarheen ze verstuurd worden. Normaal gesproken geen verandering nodig.
+Email and number of logs to be send. Normally no change necessary.
 
 ### Configurator
 
-Gebruik tabblad voor Configurator in plaats van het hambuger menu.
+Use tab for config builder instead of hamburger menu.
