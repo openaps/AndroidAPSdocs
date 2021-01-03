@@ -27,15 +27,15 @@ Important hints
 Major new features
 ----------------------
 * `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org 
-* bolus advisor & eating reminder @MilosKozak 
+* `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
 * new watchface @rICTx-T1D
 * Dana RS connection improvements @MilosKozak 
 * Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
-* New LowRes skin
+* New `Low Ressolution Skin <../Configuration/Preferences.html#skin>`_
 * New `"Pregnant" patient type <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_ @Brian Quinion
 * New NSClient tablet layout @MilosKozak 
 * NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak 
-* Preferences filter @Brian Quinion
+* `Preferences filter <../Configuration/Preferences.html>`_ @Brian Quinion
 * New pump icons @Rig22 @@teleriddler @osodebailar
 * SetupWizard improvements @MilosKozak 
 * Security improvements @dlvoy 
