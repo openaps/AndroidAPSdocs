@@ -83,8 +83,8 @@ Thème
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * You can choose from four types of skins:
 
-  .. image:: ../images/Pref2021_Skin.png
-    :alt: Sélectionnez le thème
+  .. image:: ../images/Pref2021_SkinWExample.png
+    :alt: Select skin + examples
 
 * 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
 * Difference of other skins depend of phone's display orientation.
@@ -173,12 +173,13 @@ Voyants d'état
 -----------------------------------------------------------
 * Les voyants d'état donnent une alerte visuelle pour 
       
-   * Âge de la canule
+   * Âge du capteur
+   * Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots#sensor-level-battery) for details.
    * Âge de l'insuline (jours d'utilisation du réservoir)
    * Niveau du réservoir (unités)
-   * Âge du capteur
-   * Âge de la pile
-   * Niveau de la pile (%)
+   * Âge de la canule
+   * Pump battery age
+   * Pump battery level (%)
 
 * Si le seuil d'alerte est dépassé, les valeurs seront affichées en jaune.
 * Si le seuil critique est dépassé, les valeurs seront affichées en rouge.
@@ -189,11 +190,25 @@ Voyants d'état
 
 Paramètres avancés (Aperçu)
 -----------------------------------------------------------
+
+  .. image:: ../images/Pref2021_OV_Adv.png
+    :alt: Préférences > Voyants d'état
+
 Injecter cette partie de Bolus calculée par l’assistant
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Paramètre général permettant de ne livrer qu'une partie du résultat de l'assistant de bolus. 
 * Seul le pourcentage défini (doit être compris entre 10 et 100) du bolus calculé est délivré lors de l'utilisation de l'assistant bolus. 
 * Le pourcentage est affiché dans l'assistant de bolus.
+
+Bolus advisor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and you glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+* If correction bolus is accepted **no carbs** will recorded.
+* An alarm will be started when glucose value is in good level to start eating.
+* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ again and enter the amount of carbs you want to eat.
+
+  .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
+    :alt: Bolus advisor message
 
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
