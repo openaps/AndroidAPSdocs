@@ -5,6 +5,7 @@ January 2021
 ==================================================
 * `Objectives <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ - new questions
 * Omnipod Eros - `loopable in AAPS master <../Configuration/OmnipodEros.html>`_
+* Other `new AndroidAPS 2.8.0 functions <../Installing-AndroidAPS/Releasenotes.html#version-2-8-0>`_
 December 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - patched app does not work with US sensors
