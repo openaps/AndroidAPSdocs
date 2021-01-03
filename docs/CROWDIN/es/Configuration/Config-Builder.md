@@ -290,58 +290,39 @@ Elige si deseas tener [ luces de estado ](../Configuration/Preferences#status-li
 
 ### Acciones
 
-Algunos botones para acceder rápidamente a funciones comunes:
-
-* Conmutador de perfiles (consulte el apartado [Página de perfiles](../Usage/Profiles.md) para obtener más información de configuración)
-* Objetivos temporales
-* Establecer / cancelar temporal. dosis basal
-* Bolo extendido (sólo la bomba DanaR/RS o Combo)
-* Registro para cualquier entrada de cuidados
-    
-    * Medir glucosa
-    * Cambio de cánula y llenado - registro de cambio cánula y llenado (si no se hace en la bomba)
-    * Inserción de sensor
-    * Cambio batería bomba
-    * Nota
-    * Ejercicio
-* Ver el tiempo del sensor actual, la insulina, la cánula y la batería de la bomba
-* Historial
-* TDD (dosis diaria total = bolo + basal por día)
-
-Algunos médicos usan -especialmente para los recién iniciados en las bombas- una relación basal-bolo de 50:50. Por lo tanto, la proporción se calcula como TDD / 2 * TBB (Total base basal = suma de la tasa basal en 24 horas). Otros prefieren un rango de 32% a 37% de TDD para TBB. Al igual que la mayoría de estas reglas empíricas, su validez real es limitada. Nota: ¡Tu diabetes puede variar!
-
-![Pestaña de acción](../images/ConfBuild_ConfBuild_Actions_b.png)
+* Some buttons to quickly access common features.
+* See [AAPS screenshots](..//Getting-Started/Screenshots#actions-tab) for details.
 
 ### Automatización
 
-Tareas de automatización definidas por el usuario ('si-entonces-si no'). Por favor, [lee aquí](../Usage/Automation.rst).
+User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst).
 
 ### Comunicaciones SMS
 
-Permite a los cuidadores remotos controlar algunas características de AndroidAPS a través de SMS, ver [mandos SMS ](../Children/SMS-Commands.rst) para obtener más información de configuración.
+Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
 
 ### Comida
 
-Muestra los valores de alimentos definidos en la base de datos de alimentos de Nightscout, consulte el apartado [Información de Nightscout](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) para obtener más información de configuración.
+Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-Nota: Las entradas no se pueden utilizar en la calculadora AndroidAPS. (Ver solamente)
+Note: Entries cannot be used in the AndroidAPS calculator. (View only)
 
 ### Reloj
 
-Vigile y controle AAPS con su reloj Android Wear (vea [pagina de pantallas de reloj](../Configuration/Watchfaces.md)). Utilice la configuración (engranaje) para definir las variables que deben tenerse en cuenta a la hora de calcular el bolo dado a través de su reloj (por ejemplo, la tendencia de 15min, COB...).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
 Si desea bolo etc. desde el reloj entonces dentro de "Configuración de Reloj" que necesitas para activar "Controles desde el Reloj".
 
-![Ajustes reloj](../images/ConfBuild_Wear.png)
+![Wear settings](../images/ConfBuild_Wear.png)
 
-A través de la pestaña Reloj o el menú de hamburguesa (la parte superior izquierda de la pantalla, si no se visualiza el tabulador) puede
+Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
 * Reenviar todos los datos. Puede ser útil si el reloj no estuvo conectado durante algún tiempo y desea enviar la información al reloj.
 * Abre los ajustes en tu reloj directamente desde tu teléfono.
 
 ### Linea de estado xDrip (reloj)
 
-Visualizar información de bucle en el reloj de xDrip + (si no está utilizando AAPS/[AAPSv2 watchface ](../Configuration/Watchfaces.md)
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
 ### NSClient
 
@@ -350,8 +331,8 @@ Visualizar información de bucle en el reloj de xDrip + (si no está utilizando 
 
 ### Mantenimiento
 
-Correo electrónico y número de registros que se van a enviar. Normalmente no es necesario ningún cambio.
+Email and number of logs to be send. Normally no change necessary.
 
 ### Configuraciones
 
-Utilice la pestaña para configuraciones en lugar del menú hamburgesa.
+Use tab for config builder instead of hamburger menu.
