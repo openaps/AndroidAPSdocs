@@ -1,10 +1,6 @@
 Preferences
 ***********************************************************
-Basics
-===========================================================
-Two ways to open preferences
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Open preferences by clicking three-dot-menu on top right side of home screen.
+* **Open preferences** by clicking three-dot-menu on top right side of home screen.
 
   .. image:: ../images/Pref2020_Open2.png
     :alt: Open preferences
@@ -14,16 +10,12 @@ Two ways to open preferences
   .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Open plugin preferences
 
-Sub-menus
-
-* Sub-menus can be opened by clicking the triangle below the sub-menu title.
+* **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
 
   .. image:: ../images/Pref2020_Submenu2.png
     :alt: Open submenu
 
-Filter
-
-* With the filter on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+* With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
 
   .. image:: ../images/Pref2021_Filter.png
     :alt: Preferences filter
