@@ -313,9 +313,57 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
 * For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
-## Profil d'Insuline
+## Action tab
 
-![Profil d'Insuline](../images/Screenshot_insulin_profile.png)
+![Onglet Actions](../images/Home2021_Action.png)
+
+### Actions - section M
+
+* Button [profile switch](../Usage/Profiles#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
+* Button [temporary target](../Usage/temptarget#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
+* Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
+* Even though [extended boluses](../Usage/Extended-Carbs#id1) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+   
+   * This option is only available for Dana RS and Insight pumps. 
+   * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
+   * Make sure to read the [details](../Usage/Extended-Carbs#id1) before using this option.
+
+### Careporal - section N
+
+* Displays information on
+   
+   * sensor age & level (battery percentage)
+   * insulin age & level (units)
+   * canula age
+   * pump battery age & level (percentage
+
+* Less information will be shown if [low resolution skin](../Configuration/Preferences#skin) is used.
+
+### Careporal - section O
+
+* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
+* Prime/Fill allows you to record pump site and insulin cartridge change.
+* Section = reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+
+### Tools - section P
+
+#### History Browser
+
+* Allows you to ride back in AAPS hsitory.
+
+#### DTI
+
+* Total daily dose = bolus + basal per day
+* Certains médecins utilisent - en particulier pour les nouveaux utilisateurs de pompes - une proportion basal-bolus de 50:50. 
+* Par conséquent, le rapport est calculé ainsi DTI/(2*DTB) (Dose Totale de Basale = somme des débits de basal en 24 heures). 
+* D'autres préfèrent une fourchette allant de 32% à 37% de DTI pour DTB. 
+* Comme la plupart de ces règles empiriques, leur validité réelle est limitée. Remarque : Votre diabète peut varier!
+
+![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
+
+## Insulin Profile
+
+![Insulin Profile](../images/Screenshot_insulin_profile.png)
 
 * This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
 * The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
@@ -323,35 +371,35 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 * If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
 * However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
 
-Pour plus d'informations sur les différents types d'insuline, leurs profils d'activité et l'importance de tout cela, vous pouvez lire un article ici sur [ Comprendre les nouvelles courbes IA basées sur des courbes d'activité exponentielles ](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-Et vous pouvez lire un excellent article de blog à ce sujet ici: [ Pourquoi nous avons régulièrement tort dans la durée d'action de l'insuline (DAI) que nous utilisons, et pourquoi c'est important… ](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-Et plus encore: [ Courbes d’insuline exponentielle + Fiasp ](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+And even more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
-## Statut de la pompe
+## Pump Status
 
-![Statut de la pompe](../images/Screenshot_PumpStatus.png)
+![Pump Status](../images/Screenshot_PumpStatus.png)
 
 * Different information on pump status. Displayed information depends on your pump model.
 * See [pumps page](../Hardware/pumps.rst) for details.
 
-## Careportal
+## Care Portal
 
 Careportal reproduisait les fonctions que vous pouvez trouver dans Nightscout sous le symbole “+” et qui vous permet d'ajouter des remarques à vos enregistrements.
 
-### Revoir le calcul des glucides
+### Review carb calculation
 
-![Revoir le calcul des glucides dans l'onglet Traitement](../images/Screenshots_TreatCalc.png)
+![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
 
 * If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
 * Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
 
-### Correction de Glucides
+### Carb correction
 
-![Traitement en 1 ou 2 lignes](../images/Treatment_1or2_lines.png)
+![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
 
-L'onglet Traitement peut être utilisé pour corriger les entrées de glucides erronées (par ex. si vous avez surestimé ou sous-estimé les glucides).
+Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
 
 1. Vérifiez et mémorisez les GA et IA actuels sur l'écran d'accueil.
 2. Selon la pompe, dans l'onglet Traitement, les glucides peuvent être affichés avec l'insuline sur une seule ligne ou dans deux lignes séparées (par ex. avec Dana RS).
@@ -365,7 +413,7 @@ L'onglet Traitement peut être utilisé pour corriger les entrées de glucides e
 
 7. S'il n'y a qu'une seule ligne dans l'onglet Traitement, contenant les glucides et l'insuline, vous devez remettre la quantité d'insuline qui a été injectée. Assurez-vous de régler correctement l'heure de l'événement et vérifiez bien l'IA sur l'écran d'accueil après avoir confirmé la nouvelle entrée.
 
-## Boucle / AMA / SMB
+## Loop, AMA / SMB
 
 * These tabs show details about the algorithm's calculations and why AAPS acts the way it does.
 * Calculations are each time the system gets a fresh reading from the CGM.
@@ -385,9 +433,9 @@ L'onglet Traitement peut être utilisé pour corriger les entrées de glucides e
 
 * You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).
 
-## Traitement
+## Treatment
 
-Historique des traitements suivants :
+History of the following treatments:
 
 * Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
 * [Bolus étendu](../Usage/Extended-Carbs#id1)
@@ -396,9 +444,9 @@ Historique des traitements suivants :
 * [Changement de profil](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
-## Source Gly - xDrip, Application Dexcom (patchée)...
+## BG Source - xDrip, Dexcom App (pateched)...
 
-![Onglet Source Gly - ici xDrip](../images/Screenshots_BGSource.png)
+![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
 
 * Depending on your BG source settings this tab is named differntly.
 * Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
