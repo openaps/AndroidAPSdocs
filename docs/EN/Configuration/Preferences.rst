@@ -189,11 +189,25 @@ Status lights
 
 Advanced Settings (Overview)
 -----------------------------------------------------------
+
+  .. image:: ../images/Pref2021_OV_Adv.png
+    :alt: Preferences > Status Lights
+
 Deliver this part of bolus wizard result
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * General setting to deliver only part of bolus wizard result. 
 * Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. 
 * The percentage is shown in bolus wizard.
+
+Bolus advisor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* If you run `Bolus wizard <../Screenshots.html#bolus-wizard>`_ and you glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+* If correction bolus is accepted **no carbs** will recorded.
+* An alarm will be started when glucose value is in good level to start eating.
+* You have to enter `Bolus wizard <../Screenshots.html#bolus-wizard>`_ again and enter the amount of carbs you want to eat.
+
+  .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
+    :alt: Bolus advisor message
 
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
