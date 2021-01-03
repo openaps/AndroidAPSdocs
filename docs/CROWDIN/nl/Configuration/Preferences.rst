@@ -83,8 +83,8 @@ Skin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * You can choose from four types of skins:
 
-  .. image:: ../images/Pref2021_Skin.png
-    :alt: Selecteer skin
+  .. image:: ../images/Pref2021_SkinWExample.png
+    :alt: Select skin + examples
 
 * 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
 * Difference of other skins depend of phone's display orientation.
@@ -173,12 +173,13 @@ Statusindicatoren
 -----------------------------------------------------------
 * Statusindicatoren geven een visuele waarschuwing voor 
       
-   * Infuus leeftijd
+   Sensor Leeftijd
+   * Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots#sensor-level-battery) for details.
    * Insuline leeftijd (aantal dagen dat reservoir wordt gebruikt)
    * Reservoir niveau (eenheden)
-   Sensor Leeftijd
-   * Batterij leeftijd
-   * Batterij niveau (%)
+   * Infuus leeftijd
+   * Pump battery age
+   * Pump battery level (%)
 
 * Als de drempelwaarde voor waarschuwing wordt overschreden, worden de waarden in geel weergegeven.
 * Als de drempelwaarde voor alarm wordt overschreden, worden de waarden in rood weergegeven.
@@ -189,11 +190,25 @@ Statusindicatoren
 
 Geavanceerde instellingen (Overzicht)
 -----------------------------------------------------------
+
+  .. image:: ../images/Pref2021_OV_Adv.png
+    :alt: Istellingen > Statusindicatoren
+
 Voer dit deel van het boluscalculator resultaat uit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Met deze instelling laat je slechts een deel toedienen van de uitkomst van de boluscalculator. 
 * Alleen het ingestelde percentage (moet tussen 10 en 100 liggen) van de berekende bolus wordt afgeleverd wanneer de boluscalculator wordt gebruikt. 
 * Het percentage zie je terug in de boluscalculator.
+
+Bolus advisor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and you glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+* If correction bolus is accepted **no carbs** will recorded.
+* An alarm will be started when glucose value is in good level to start eating.
+* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ again and enter the amount of carbs you want to eat.
+
+  .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
+    :alt: Bolus advisor message
 
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
