@@ -1,6 +1,6 @@
 Préférences
 ***********************************************************
-* **Open preferences** by clicking three-dot-menu on top right side of home screen.
+* **Ouvrez les préférences** en cliquant sur le menu trois points en haut à droite de l'écran.
 
   .. image:: ../images/Pref2020_Open2.png
     :alt: Ouvrir les préférences
@@ -10,15 +10,15 @@ Préférences
   .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Ouvrir les préférences du plugin
 
-* **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+* **Les sous-menus** peuvent être ouverts en cliquant sur le triangle situé sous le titre du sous-menu.
 
   .. image:: ../images/Pref2020_Submenu2.png
     :alt: Ouvrir le sous-menu
 
-* With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+* Avec le **filtre** en haut de l'écran des préférences, vous pouvez accéder rapidement à certaines préférences. Il suffit de taper une partie du texte que vous cherchez.
 
   .. image:: ../images/Pref2021_Filter.png
-    :alt: Preferences filter
+    :alt: Filtre des préferences
 
 
 Général
@@ -81,13 +81,13 @@ Protection des bolus
 
 Thème
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* You can choose from four types of skins:
+* Vous pouvez choisir parmi quatre thèmes :
 
   .. image:: ../images/Pref2021_SkinWExample.png
-    :alt: Select skin + examples
+    :alt: Sélection du theme + exemples
 
-* 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
-* Difference of other skins depend of phone's display orientation.
+* Le thème 'Basse résolution' a des étiquettes plus courte et "âge/niveau" ont été enlevé dans la zone Careportal de l'onglet Action pour avoir plus d'espace disponible sur un écran de très basse résolution.
+* La différence entre les autres thèmes dépend de l'orientation du téléphone.
 
 Orientation portrait
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -174,12 +174,12 @@ Voyants d'état
 * Les voyants d'état donnent une alerte visuelle pour 
       
    * Âge du capteur
-   * Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots#sensor-level-battery) for details.
+   * Niveau de batterie capteurs pour certains MGC utilisant des transmetteurs externe (voir les [Ecrans AndroidAPS](../Getting-Started/Screenshots#niveau-du-capteur-batterie) pour plus de détails.
    * Âge de l'insuline (jours d'utilisation du réservoir)
    * Niveau du réservoir (unités)
    * Âge de la canule
-   * Pump battery age
-   * Pump battery level (%)
+   * Âge Pile Pompe
+   * Âge Pile Pompe (%)
 
 * Si le seuil d'alerte est dépassé, les valeurs seront affichées en jaune.
 * Si le seuil critique est dépassé, les valeurs seront affichées en rouge.
@@ -200,15 +200,15 @@ Injecter cette partie de Bolus calculée par l’assistant
 * Seul le pourcentage défini (doit être compris entre 10 et 100) du bolus calculé est délivré lors de l'utilisation de l'assistant bolus. 
 * Le pourcentage est affiché dans l'assistant de bolus.
 
-Bolus advisor
+Assistant bolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and you glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
-* If correction bolus is accepted **no carbs** will recorded.
-* An alarm will be started when glucose value is in good level to start eating.
-* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ again and enter the amount of carbs you want to eat.
+* Si vous exécutez `l'assistant de Bolus <../Getting-Started/Screenshots.html#assistant-bolus>`_ et que la glycémie est supérieure à 10 mmol (180 mg/dl) un bolus de correction sera proposé.
+* Si le bolus de correction est accepté, **aucun glucide** ne sera enregistré.
+* Une alarme sera déclenchée lorsque la glycémie est au bon niveau pour commencer à manger.
+* Vous devez à nouveau sélectionner l'`Assistant Bolus <../Getting-Started/Screenshots.html#assistant-bolus>`_ et entrer la quantité de glucides que vous voulez manger.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
-    :alt: Bolus advisor message
+    :alt: Message assistant bolus
 
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
