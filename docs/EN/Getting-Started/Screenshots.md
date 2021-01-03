@@ -260,6 +260,8 @@ When you want to make a meal bolus this is where you will normally make it from.
 * In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. 
 * The CORR field is if you want to modify the end dosage for some reason.
 * The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+
+#### Eating reminder
 * For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
 
    ![BolusWizard with Eating Reminder](..images/Home2021_BolusWizard_EatingReminder.png)
