@@ -144,7 +144,7 @@ Vordefinierte temporäre Ziele
   
 Füll-/Vorfüll-Standardmengen
 -----------------------------------------------------------
-* Wenn Du Katheter oder Kanüle über AAPS füllen möchtest, kannst Du dies über den Tab `Aktionen <../Usage/CPbefore26.html#pumpe>` _ tun.
+* Wenn Du Katheter oder Kanüle über AAPS füllen möchtest, kannst Du dies über den Tab `Aktionen <../Getting-Started/Screenshots.html#aktionen-tab>` _ tun.
 * Voreinstellungen für Füllmengen können in diesem Dialog definiert werden.
 
 Zielbereich für die Grafikanzeige
