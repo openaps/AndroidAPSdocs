@@ -323,6 +323,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 #### Sensor level (battery)
 * Needs xDrip+ nightly build Dec. 10, 2020 or newer.
 * Works for CGM with additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level  information to xDrip+.)
+* Thresholds can be set in [preferences](../Configuration/Preferences#status-lights).
 * If sensor level is the same as phone battery level you xDrip+ version is probably too old and needs an update.
 
    ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
