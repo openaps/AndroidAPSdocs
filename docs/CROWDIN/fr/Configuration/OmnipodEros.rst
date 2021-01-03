@@ -6,8 +6,8 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 
 **Ce logiciel est une partie d'un système de pancréas artificiel "Do it yourself" (faire soi-même), et ce n’est pas un produit fini destiné à la mise sur le marché. VOUS devez obligatoirement lire, apprendre et comprendre ce système, y compris la façon de l’utiliser. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
 
-.. contents:: 
-   :backlinks: entry
+.. contenus:: 
+   :backlinks: entrée
    :depth: 2
 
 Configuration matérielle et logicielle requise
@@ -156,7 +156,7 @@ Avant de pouvoir activer un pod, veuillez vous assurer que vous avez correctemen
 
     |Activate_Pod_7|
 
-6. The **Attach Pod** dialog box will now appear. **ONLY click on the OK button if you are ready to deploy the cannula**.
+6. The **Attach Pod** dialog box will now appear. **Ne cliquez sur le bouton Ok QUE si vous êtes prêt à déployer la canule**.
 
     |Activate_Pod_8|
 
