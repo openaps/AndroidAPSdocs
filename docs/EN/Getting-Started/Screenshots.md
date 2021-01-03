@@ -320,6 +320,13 @@ When you want to make a meal bolus this is where you will normally make it from.
    
 * Less information will be shown if [low resolution skin](../Configuration/Preferences#skin) is used.
 
+#### Sensor level (battery)
+* Needs xDrip+ nightly build Dec. 10, 2020 or newer.
+* Works for CGM with additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level  information to xDrip+.)
+* If sensor level is the same as phone battery level you xDrip+ version is probably too old and needs an update.
+
+   ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
+
 ### Careporal - section O
 
 * BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
