@@ -3,7 +3,7 @@ Docs updates & changes
 
 January 2021
 ==================================================
-* Libre smart reader `battery level <../Getting-Started/Screenshots.html#sensor-level-battery>`
+* Libre smart reader `battery level <../Getting-Started/Screenshots.html#sensor-level-battery>`_
 * `Objectives <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ - new questions
 * Omnipod Eros - `loopable in AAPS master <../Configuration/OmnipodEros.html>`_
 * Other `new AndroidAPS 2.8.0 functions <../Installing-AndroidAPS/Releasenotes.html#version-2-8-0>`_
