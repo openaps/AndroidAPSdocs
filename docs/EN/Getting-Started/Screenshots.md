@@ -332,7 +332,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
 * Prime/Fill allows you to record pump site and insulin cartridge change.
-* Section = reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+* Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
 
 ### Tools - section P
 
