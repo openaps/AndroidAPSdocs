@@ -1,19 +1,25 @@
 Préférences
 ***********************************************************
-* Ouvrez les préférences en cliquant sur le menu trois points en haut à droite de l'écran.
+* **Open preferences** by clicking three-dot-menu on top right side of home screen.
 
-  .. image:: ../images/Pref2020_Open.png
+  .. image:: ../images/Pref2020_Open2.png
     :alt: Ouvrir les préférences
 
 * Vous pouvez accéder directement aux préférences d'un certain onglet (par ex. onglet pompe) en sélectionnant cet onglet et en cliquant sur Préférences du plugin.
 
-  .. image:: ../images/Pref2020_OpenPlugin.png
+  .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Ouvrir les préférences du plugin
-    
-* Les sous-menus peuvent être ouverts en cliquant sur le triangle situé sous le titre du sous-menu.
 
-  .. image:: ../images/Pref2020_Submenu.png
+* **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+
+  .. image:: ../images/Pref2020_Submenu2.png
     :alt: Ouvrir le sous-menu
+
+* With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+
+  .. image:: ../images/Pref2021_Filter.png
+    :alt: Preferences filter
+
 
 Général
 ===========================================================
@@ -75,12 +81,13 @@ Protection des bolus
 
 Thème
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Vous pouvez choisir parmi trois thèmes :
+* You can choose from four types of skins:
 
-  .. image:: ../images/Pref2020_Skin.png
+  .. image:: ../images/Pref2021_Skin.png
     :alt: Sélectionnez le thème
 
-* La différence dépend de l'orientation du téléphone
+* 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
+* Difference of other skins depend of phone's display orientation.
 
 Orientation portrait
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
