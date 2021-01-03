@@ -320,6 +320,26 @@ When you want to make a meal bolus this is where you will normally make it from.
    
 * Less information will be shown if [low resolution skin](../Configuration/Preferences#skin) is used.
 
+### Careporal - section O
+
+* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
+* Prime/Fill allows you to record pump site and insulin cartridge change.
+* Section = reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+
+### Tools - section P
+
+#### History Browser
+* Allows you to ride back in AAPS hsitory.
+
+#### TDD
+* Total daily dose = bolus + basal per day
+* Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
+* Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 
+* Others prefer range of 32% to 37% of TDD for TBB. 
+* Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+
+![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
+
 ## Insulin Profile
 
 ![Insulin Profile](../images/Screenshot_insulin_profile.png)
