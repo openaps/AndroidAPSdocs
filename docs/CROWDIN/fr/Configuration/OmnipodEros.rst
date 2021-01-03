@@ -6,8 +6,8 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 
 **Ce logiciel est une partie d'un système de pancréas artificiel "Do it yourself" (faire soi-même), et ce n’est pas un produit fini destiné à la mise sur le marché. VOUS devez obligatoirement lire, apprendre et comprendre ce système, y compris la façon de l’utiliser. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
 
-.. contenus:: 
-   :backlinks: entrée
+.. contents:: 
+   :backlinks: entry
    :depth: 2
 
 Configuration matérielle et logicielle requise
