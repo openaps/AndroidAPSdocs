@@ -1,11 +1,15 @@
 Docs Updates & Änderungen
 **************************************************
 
+January 2021
+==================================================
+* `Objectives (Ziele) <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ - neue Fragen
+* Omnipod Eros - ` Einrichtung in AAPS <../Configuration/OmnipodEros.html> ` _
+* Other `new AndroidAPS 2.8.0 functions <../Installing-AndroidAPS/Releasenotes.html#version-2-8-0>`_
 Dezember 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - gepatche App funktioniert nicht mit US-Sensoren
-* `Objectives (Ziele) <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ - neue Fragen
-* Omnipod Eros - ` Einrichtung in AAPS <../Configuration/OmnipodEros.html> ` _
+* `OpenAPS hard-coded limits <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_
 * Sony Smartwatch 3 ` Manuelle Installation des Google Play Service <../Usage/SonySW3.html> ` _
 Oktober 2020
 ==================================================
