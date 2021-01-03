@@ -243,7 +243,7 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 
 #### Bolus-Rechner
 
-* Siehe [Details unten](../Configuration/Screenhots#bolus-rechner)
+* See Bolus Wizard [section below](../Configuration/Screenhots#bolus-wizard)
 
 #### Kalibrierungen
 
@@ -263,7 +263,7 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 
 ## Bolus-Rechner
 
-![Bolus-Rechner](../images/Home2020_BolusWizard.png)
+![Bolus-Rechner](../images/Home2020_BolusWizard_v2.png)
 
 Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
@@ -273,6 +273,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 * Unter CARBS (Kohlenhydrate) trägst Du Deine Schätzung der Kohlenhydrate - oder deren Äquivalent - ein. 
 * Das Korr-Feld (CORR) wird benutzt, wenn Du die vorgeschlagene Dosis ändern möchtest.
 * Das Feld KH-Zeit (CARB TIME) ist für einen Spritz-Ess-Abstand gedacht, so dass Du dem System mitteilen kannst, dass die Kohlenhydrate erst später gegessen werden. Gib einen negativen Wert ein, wenn Du nach dem Essen spritzt, die Kohlenhydrate also schon zu Dir genommen hast.
+* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
 
 ### Abschnitt J
 
