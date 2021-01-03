@@ -243,7 +243,7 @@ Por lo general, su verdadera curva de glucosa termina en el medio de estas líne
 
 #### Calculadora
 
-* See [details below](../Configuration/Screenhots#bolus-wizard)
+* See Bolus Wizard [section below](../Configuration/Screenhots#bolus-wizard)
 
 #### Calibrations
 
@@ -263,7 +263,7 @@ Por lo general, su verdadera curva de glucosa termina en el medio de estas líne
 
 ## Bolus Wizard
 
-![Asistente Bolus](../images/Home2020_BolusWizard.png)
+![Asistente Bolus](../images/Home2020_BolusWizard_v2.png)
 
 Cuando usted quiere hacer un bolo para comida, aquí es de donde normalmente lo hará.
 
@@ -273,6 +273,7 @@ Cuando usted quiere hacer un bolo para comida, aquí es de donde normalmente lo 
 * En el campo CARBS se añade su estimación de la cantidad de carbohidratos (o equivalente) a los que desea realizar el bolo. 
 * The CORR field is if you want to modify the end dosage for some reason.
 * The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Puede poner un número negativo en este campo si está colocando un bolo para los carbohidratos ya ingeridos.
+* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
 
 ### Section J
 
