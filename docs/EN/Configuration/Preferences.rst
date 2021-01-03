@@ -202,7 +202,7 @@ Deliver this part of bolus wizard result
 
 Bolus advisor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and you glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
 * If correction bolus is accepted **no carbs** will recorded.
 * An alarm will be started when glucose value is in good level to start eating.
 * You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ again and enter the amount of carbs you want to eat.
