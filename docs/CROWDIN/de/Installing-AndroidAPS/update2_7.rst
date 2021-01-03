@@ -1,4 +1,4 @@
-Necessary checks after update coming from AndroidAPS 2.6
+Notwendige Überprüfungen nach einem Update von AndroidAPS 2.6
 ***********************************************************
 
 * Der Programmcode wurde bei der Umstellung auf AAPS 2.7 deutlich verändert. 
