@@ -278,7 +278,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 * Pour les glucides dans le futur, la case à cocher "alarme" peut être sélectionnée (cochée par défaut lorsqu'un décalage horaire positif est renseigné) afin de vous rappeler quand vous avez prévu de manger les glucides entrés dans AndroidAPS
    
-   ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
+   ![Assistant bolus avec rappel alimentation](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Section J
 
@@ -346,13 +346,13 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 * Les limites peuvent être définies dans [les préférences](../Configuration/Preferences#voyants-d-etat).
 * Si le niveau du capteur est le même que celui de la batterie du téléphone, la version xDrip+ est probablement trop ancienne et nécessite une mise à jour.
    
-   ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
+   ![Le niveau de la batterie du capteur est égal au niveau de la batterie du téléphone](../images/Home2021_ActionSensorBat.png)
 
 ### Careporal - section O
 
-* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
-* Prime/Fill allows you to record pump site and insulin cartridge change.
-* Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+* Contrôle glycémie, Amorcer/Remplir, Insertion capteur MGC et Changement pile pompe sont les données d'entrées des informations affichées dans la [section N](#careportal-section-n).
+* Amocer/Remplir vous permet d'enregistrer le changement de site et de la cartouche d'insuline de la pompe.
+* La section O vous permet de renseigner les infos Careportal de Nightscout. Ainsi, Activité physique, Notification et Question sont des formes spéciales de Remarques ou Notes.
 
 ### Outils - section P
 
@@ -368,7 +368,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 * D'autres préfèrent une fourchette allant de 32% à 37% de DTI pour DTB. 
 * Comme la plupart de ces règles empiriques, leur validité réelle est limitée. Remarque : Votre diabète peut varier!
 
-![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
+![Historique + DTI](../images/Home2021_Action_HB_TDD.png)
 
 ## Profil d'Insuline
 
