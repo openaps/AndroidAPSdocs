@@ -81,7 +81,7 @@ Los detalles se explican por separado en la [página de ayuda de perfil](../Conf
 
 El perfil de NS utiliza los perfiles que guardados en el sitio de Nightscout (https: //[yournightscoutsiteaddress]/profile). Puede usar el [Selector de Perfil](../Usage/Profiles.md) para cambiar cuál de los perfiles está activo, y se escribe ese perfil en la bomba en caso de fallo AndroidAPS. Esto le permite crear fácilmente múltiples perfiles en Nightscout (p.ej.. trabajo, casa, deportes, vacaciones, etc.). Poco después de hacer clic en "Guardar" serán transferidos a AAPS si su smartphone está en línea. Incluso sin conexión a Internet o sin conexión a Nightscout, los perfiles de Nightscout están disponibles en AAPS una vez que se han sincronizado.
 
-Do a [profile switch](../Getting-Started/Screenshots.md#current-profile) to activate a profile from Nightscout. AAPS will write the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+Realice un [cambio de perfil](../Getting-Started/Screenshots.md#current-profile) para activar un perfil de Nightscout. AAPS will write the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
 Ventajas:
 
@@ -290,39 +290,39 @@ Elige si deseas tener [ luces de estado ](../Configuration/Preferences#status-li
 
 ### Acciones
 
-* Some buttons to quickly access common features.
+* Algunos botones para acceder rápidamente a funciones comunes.
 * See [AAPS screenshots](../Getting-Started/Screenshots#action-tab) for details.
 
 ### Automatización
 
-User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst).
+Tareas de automatización definidas por el usuario ('si-entonces-si no'). Por favor, [lee aquí](../Usage/Automation.rst).
 
 ### Comunicaciones SMS
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
+Permite a los cuidadores remotos controlar algunas características de AndroidAPS a través de SMS, ver [mandos SMS ](../Children/SMS-Commands.rst) para obtener más información de configuración.
 
 ### Comida
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Muestra los valores de alimentos definidos en la base de datos de alimentos de Nightscout, consulte el apartado [Información de Nightscout](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) para obtener más información de configuración.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Nota: Las entradas no se pueden utilizar en la calculadora AndroidAPS. (Ver solamente)
 
 ### Reloj
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Observe y controle AAPS con su reloj Android Wear (vea [pagina de pantallas de reloj](../Configuration/Watchfaces.md)). Utilice la configuración (engranaje) para definir las variables que deben tenerse en cuenta a la hora de calcular el bolo dado a través de su reloj (por ejemplo, la tendencia de 15min, COB...).
 
 Si desea bolo etc. desde el reloj entonces dentro de "Configuración de Reloj" que necesitas para activar "Controles desde el Reloj".
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Ajustes reloj](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+A través de la pestaña Reloj o el menú de hamburguesas (la parte superior izquierda de la pantalla, si no se visualiza el tabulador) puede
 
 * Reenviar todos los datos. Puede ser útil si el reloj no estuvo conectado durante algún tiempo y desea enviar la información al reloj.
 * Abre los ajustes en tu reloj directamente desde tu teléfono.
 
 ### Linea de estado xDrip (reloj)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Visualizar información de bucle en el reloj de xDrip + (si no está utilizando AAPS/[AAPSv2 watchface ](../Configuration/Watchfaces.md)
 
 ### NSClient
 
@@ -331,8 +331,8 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 
 ### Mantenimiento
 
-Email and number of logs to be send. Normally no change necessary.
+Correo electrónico y logs a enviar. Normalmente no es necesario ningún cambio.
 
 ### Configuraciones
 
-Use tab for config builder instead of hamburger menu.
+Utilice la pestaña para configuraciones en lugar del menú hamburgesa.
