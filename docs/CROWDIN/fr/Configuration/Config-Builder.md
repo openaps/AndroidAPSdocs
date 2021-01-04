@@ -81,7 +81,7 @@ Les détails sont expliqués sur la [page d'aide des profils](../Configuration/p
 
 NS Profile utilise les profils que vous avez enregistrés sur votre site Nightscout (https: //[yournightscoutsiteaddress]/profile). Vous pouvez utiliser le [changement de profil](../Usage/Profiles.md) pour définir lequel de ces profils est actif, ceci écrit le profil dans la pompe en cas de problème avec AndroidAPS. Cela vous permet de créer facilement plusieurs profils dans Nightscout (par ex. travail, maison, sports, vacances, etc.). Peu après avoir cliqué sur "Sauver", ils seront transférés à AAPS si votre smartphone est en ligne. Même sans connexion Internet ou sans connexion avec Nightscout, les profils Nightscout sont disponibles dans AAPS une fois qu'ils ont été synchronisés.
 
-Do a [profile switch](../Getting-Started/Screenshots.md#current-profile) to activate a profile from Nightscout. AAPS will write the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+Effectuez un [changement de profil](../Getting-Started/Screenshots.md#profil-actuel) pour activer un profil de Nightscout. AAPS va écrire le profil sélectionné dans la pompe après le changement de profil, de sorte qu'il soit disponible sans AAPS en cas d'urgence et qu'il continue de s'exécuter.
 
 Avantages :
 
@@ -291,7 +291,7 @@ Choisissez si vous voulez avoir des [voyants d'état](../Configuration/Preferenc
 ### Actions
 
 * Quelques boutons pour accéder rapidement aux fonctions communes.
-* See [AAPS screenshots](../Getting-Started/Screenshots#action-tab) for details.
+* Voir les [captures d'écran AAPS](../Getting-Started/Screenshots#onglet-actions) pour plus de détails.
 
 ### Automatisation
 
