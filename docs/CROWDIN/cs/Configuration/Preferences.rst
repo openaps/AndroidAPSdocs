@@ -1,19 +1,25 @@
 Nastavení
 ***********************************************************
-* Open preferences by clicking three-dot-menu on top right side of home screen.
+* **Open preferences** by clicking three-dot-menu on top right side of home screen.
 
-  .. image:: ../images/Pref2020_Open.png
+  .. image:: ../images/Pref2020_Open2.png
     :alt: Open preferences
 
 * You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and click Plugin preferences.
 
-  .. image:: ../images/Pref2020_OpenPlugin.png
+  .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Open plugin preferences
-    
-* Sub-menus can be opened by clicking the triangle below the sub-menu title.
 
-  .. image:: ../images/Pref2020_Submenu.png
+* **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+
+  .. image:: ../images/Pref2020_Submenu2.png
     :alt: Open submenu
+
+* With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+
+  .. image:: ../images/Pref2021_Filter.png
+    :alt: Preferences filter
+
 
 Obecné
 ===========================================================
@@ -75,12 +81,13 @@ Bolus protection
 
 Skin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* You can choose from three types of skins:
+* You can choose from four types of skins:
 
-  .. image:: ../images/Pref2020_Skin.png
-    :alt: Select skin
+  .. image:: ../images/Pref2021_SkinWExample.png
+    :alt: Select skin + examples
 
-* Difference depend of phone's display orientation
+* 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
+* Difference of other skins depend of phone's display orientation.
 
 Portrait orientation
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -135,7 +142,7 @@ Default temp targets
   .. image:: ../images/Pref2020_OV_DefaultTT.png
     :alt: Preferences > Default temp targets
   
-Fill/Prime standard insulin amounts
+Standardní množství inzulinu pro Plnění/Doplňování
 -----------------------------------------------------------
 * If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Usage/CPbefore26.html#pump>`_.
 * Pre-set values can be defined in this dialogue.
@@ -147,7 +154,7 @@ Range for visualization
   .. image:: ../images/Pref2020_OV_Range2.png
     :alt: Preferences > Range for visualization
 
-Shorten tab titles
+Krátké názvy modulů
 -----------------------------------------------------------
 * See more tab titles on screen. 
 * For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
@@ -166,12 +173,13 @@ Stavové indikátory
 -----------------------------------------------------------
 * Status lights give a visual warning for 
       
-   * Cannula age
+   * Sensor age
+   * Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots#sensor-level-battery) for details.
    * Insulin age (days reservoir is used)
    * Reservoir level (units)
-   * Sensor age
-   * Battery age
-   * Battery level (%)
+   * Cannula age
+   * Pump battery age
+   * Pump battery level (%)
 
 * If threshold warning is exceeded, values will be shown in yellow.
 * If threshold critical is exceeded, values will be shown in red.
@@ -182,11 +190,25 @@ Stavové indikátory
 
 Advanced Settings (Overview)
 -----------------------------------------------------------
+
+  .. image:: ../images/Pref2021_OV_Adv.png
+    :alt: Preferences > Status Lights
+
 Deliver this part of bolus wizard result
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * General setting to deliver only part of bolus wizard result. 
 * Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. 
 * The percentage is shown in bolus wizard.
+
+Bolus advisor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and you glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+* If correction bolus is accepted **no carbs** will recorded.
+* An alarm will be started when glucose value is in good level to start eating.
+* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ again and enter the amount of carbs you want to eat.
+
+  .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
+    :alt: Bolus advisor message
 
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -311,7 +333,7 @@ Advanced settings (OpenAPS SMB)
 * Normally you do not have to change the settings in this dialogue!
 * If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ and to understand what you are doing.
 
-Absorption settings
+Nastavení absorpce sacharidů
 ===========================================================
 
   .. image:: ../images/Pref2020_Absorption.png
@@ -321,7 +343,7 @@ min_5m_carbimpact
 -----------------------------------------------------------
 * The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed. 
 * The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB. 
-* At times when carb absorption can’t be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+* At times when carb absorption can’t be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. V podstatě jde o bezpečnostní pojistku.
 * To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. 
 * Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc. 
 * The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`_.

@@ -243,7 +243,7 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 
 #### Bolus-Rechner
 
-* Siehe [Details unten](../Configuration/Screenhots#bolus-rechner)
+* Siehe Bolus-Rechner [weiter unten](../Configuration/Screenhots#bolus-rechner).
 
 #### Kalibrierungen
 
@@ -263,7 +263,7 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 
 ## Bolus-Rechner
 
-![Bolus-Rechner](../images/Home2020_BolusWizard.png)
+![Bolus-Rechner](../images/Home2020_BolusWizard_v2.png)
 
 Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
@@ -273,6 +273,12 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 * Unter CARBS (Kohlenhydrate) trägst Du Deine Schätzung der Kohlenhydrate - oder deren Äquivalent - ein. 
 * Das Korr-Feld (CORR) wird benutzt, wenn Du die vorgeschlagene Dosis ändern möchtest.
 * Das Feld KH-Zeit (CARB TIME) ist für einen Spritz-Ess-Abstand gedacht, so dass Du dem System mitteilen kannst, dass die Kohlenhydrate erst später gegessen werden. Gib einen negativen Wert ein, wenn Du nach dem Essen spritzt, die Kohlenhydrate also schon zu Dir genommen hast.
+
+#### Essens-Erinnerung
+
+* Falls du einen Spritz-Ess-Abstand verwendest, kannst Du die Alarmfunktion verwenden. (Diese wird bei der Eingabe von Kohlenhydraten in der Zukunft automatisch aktiviert.) Du wirst dann nach Ablauf der eingebenen Zeit ans Essen erinnert.
+   
+   ![Bolus-Rechner mit Essenserinnerung](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Abschnitt J
 
@@ -305,7 +311,64 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
 * Wenn Du nach Verwendung des Bolus-Assistenten die obige Warnung siehst, hat AAPS erkannt, dass aktiven Kohlenhydrate (COB) eventuell nicht korrekt berechnet werden konnten. 
 * Wenn Du kurz nach einer vorangegangenen Mahlzeit erneut einen Bolus abgeben willst, solltest Du Dir der Gefahr einer Überdosierung bewusst sein! 
-* Weitere Hinweise findest Du auf der Seite zur [Berechnung der aktiven Kohlenhydrate (COB)](../Usage/COB-calculation#erkennung-fehlerhafter-cob-werte).
+* Weitere Hinweise findest Du auf der Seite zur [Berechnung der aktiven Kohlenhydrate (COB)](../Usage/COB-calculation#detection-of-wrong-cob-values).
+
+## Aktionen Tab
+
+![Aktionen Tab](../images/Home2021_Action.png)
+
+### Aktionen - Abschnitt M
+
+* Button [Profilwechsel](../Usage/Profiles#profilwechsel) als Alternative zum Klicken des [aktuellen Profils](../Getting-Started/Screenshots#abschnitt-b-profil-ziel) auf dem Startbildschirm.
+* Button [Temporäres Ziel](../Usage/temptarget#temporare-ziele) als Alternative zum Klicken des [aktuellen Zielwerts](../Getting-Started/Screenshots#abschnitt-b-profil-ziel) auf dem Startbildschirm.
+* Button zum Starten oder Abbrechen einer temporären Basalrate. Beachte, dass sich die Bezeichnung der Schaltfläche von "TBR" zu "Abbrechen X%" ändert, wenn eine temporäre Basalrate abgegeben wird.
+* Auch wenn [verzögerte Boli](../Usage/Extended-Carbs#id1) im Closed Loop nicht wirklich funktionieren, haben einige Nutzer nach einer Option gefragt, um verzögerte Boli dennoch verwenden zu können.
+   
+   * Diese Option ist nur für Dana RS und Insight Pumpen verfügbar. 
+   * Der Closed Loop wird automatisch gestoppt und für die Laufzeit des verzögerten Bolus zum Open Loop gewechselt.
+   * Lies vor Verwendung dieser Option unbedingt die [-Details](../Usage/Extended-Carbs#id1).
+
+### Careporal - Abschnitt N
+
+* Zeigt Informationen zu
+   
+   * Sensoralter & -level (Batterieladestand in %)
+   * Insulinalter & Reservoirstand (Einheiten)
+   * Kanülenalter
+   * Alter & Ladestand (in %) der Pumpenbatterie
+
+* Falls Du die [Darstellung für niedrige Auflösungen](../Configuration/Preferences#erscheinungsbild) gewählt hast, werden weniger Informationen angezeigt.
+
+#### Sensor Level (Batterie)
+
+* Benötigt xDrip+ Nightly Build vom 10.12.2020 oder neuer.
+* Verfügbar für CGM-Systeme mit zusätzlichem Transmitter wie z.B. MiaoMiao 2. (Technisch gesehen muss der Sensor cat level Informationen an xDrip+ senden.)
+* Die Warnschwellen können in den [Einstellungen](../Configuration/Preferences#statusanzeige) definiert werden.
+* Wenn der Batterieladestand des Sensors und des Smartphones identisch sind, ist die xDrip+ Version wahrscheinlich zu alt und benötigt ein Update.
+   
+   ![Batterieladestand Sensor und Smartphone stimmen überein](../images/Home2021_ActionSensorBat.png)
+
+### Careporal - Abschnitt O
+
+* BZ-Test, Katheterwechsel, CGM-Sensor setzen, Pumpenbatterie-Wechsel sind die Grundlage für die in [Abschnitt N](#careportal-abschnitt-n) angezeigten Daten.
+* Mit dem Button 'Katheterwechsel' kannst Du sowohl einen Katheter- (Schlauch) als auch einen Kanülenwechsel (Nadel) aufzeichnen.
+* Abschnitt O spiegelt das Careportal aus Nightscout wider. Bewegung, Ankündigung und Frage sind daher spezielle Formen der Notiz.
+
+### Tools - Abschnitt P
+
+#### Historie
+
+* Ermöglicht dir, durch deine AAPS Historie zu blättern.
+
+#### TDD
+
+* Total daily dose = Bolus + Basal pro Tag
+* Einige Ärzte nutzen, gerade für neue Pumpenbenutzer, ein Basal-Bolus-Verhältnis von 50:50. 
+* Daher wird das Verhältnis als TDD / 2 * TBB (Total base basal = Summe der Basalrate innerhalb von 24 Stunden) berechnet. 
+* Andere bevorzugen einen Anteil von 32% bis 37% des Basalinsulins (TBB) am Gesamtinsulin (TDD). 
+* Wie die meisten Faustregeln gilt, dass dies nicht allgemeingültig ist. Hinweis: Bei dir und deinem Diabetes kann es ganz anders sein!
+
+![Historie + TDD](../images/Home2021_Action_HB_TDD.png)
 
 ## Insulin Profil
 
@@ -392,7 +455,7 @@ Historie der folgenden Behandlungen:
 
 ## BG Source - xDrip+, Dexcom App (patched) ...
 
-![Tab BZ-Quelle - hier xDrip+](../images/Screenshots_BGSource.png)
+![Tab BG-Quelle - hier xDrip+](../images/Screenshots_BGSource.png)
 
 * Abhängig von Deiner BZ-Quelle wird diese Registerkarte unterschiedlich benannt.
 * Zeigt die Historie der CGM Messungen an und bietet die Möglichkeit, Einträge im Fehlerfall zu entfernen (z.B. Niedrigwerte wegen Kompression).

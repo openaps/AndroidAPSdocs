@@ -289,27 +289,8 @@ Aktiviere wenn gewünscht die [Statusanzeige](../Configuration/Preferences#statu
 
 ### Aktionen
 
-Einige Schaltflächen, um auf häufig verwendete Funktionen zugreifen zu können.
-
-* Profilwechsel (Profil Switch - weitere Informationen dazu siehe Seite [Profile](../Usage/Profiles.md))
-* Temporäres Ziel
-* Temporäre Basalrate starten / Basalrate
-* Verzögerter Bolus (nur für DanaR/RS und Combo)
-* Tagebucheinträge
-    
-    * BZ Test
-    * Katheterwechsel - Katheter- und Reservoirwechsel dokumentieren, Katheter und Kanüle füllen
-    * CGM-Sensor setzen
-    * Pumpenbatterie Wechsel
-    * Notiz
-    * Bewegung
-* Anzeige des Alters von Sensor, Kanüle und Pumpenbatterie
-* Historie
-* TDD (Total daily dose = Bolus + Basal pro Tag)
-
-Einige Ärzte nutzen, gerade für neue Pumpenbenutzer, ein Basal-Bolus-Verhältnis von 50:50. Daher wird das Verhältnis als TDD / 2 * TBB (Total base basal = Summe der Basalrate innerhalb von 24 Stunden) berechnet. Andere bevorzugen einen Anteil von 32% bis 37% des Basalinsulins (TBB) am Gesamtinsulin (TDD). Wie bei den meisten Faustregeln gilt, dass dies nicht allgemeingültig ist. Hinweis: Bei dir und deinem Diabetes kann es ganz anders sein!
-
-![Aktionen Tab](../images/ConfBuild_ConfBuild_Actions_b.png)
+* Einige Schaltflächen, um auf häufig verwendete Funktionen zugreifen zu können.
+* Details findest Du auf der Seite [AndroidAPS Bildschirme](..//Getting-Started/Screenshots#aktionen-tab).
 
 ### Automatisierung
 

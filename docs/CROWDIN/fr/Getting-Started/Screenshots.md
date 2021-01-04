@@ -243,7 +243,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 #### Assistant
 
-* Voir [ci-dessous](../Configuration/Screenhots#assistant-rapide)
+* Voir Assistant bolus [ci-dessous](../Configuration/Screenhots#assistant-rapide)
 
 #### Étalonnages
 
@@ -263,7 +263,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 ## Assistant bolus
 
-![Assistant Bolus](../images/Home2020_BolusWizard.png)
+![Assistant Bolus](../images/Home2020_BolusWizard_v2.png)
 
 Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le ferez.
 
@@ -273,6 +273,12 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 * Dans le champ "Glucides", vous indiquez votre estimation de la quantité de glucides pour laquelle vous voulez faire le bolus. 
 * Le champ "Corr" vous permet de modifier le dosage final pour une raison quelconque.
 * Le champ "Décalage horaire" est destiné au pré-bolus pour que vous puissiez renseigner qu'il y aura un délai avant que les glucides ne soient mangés. Vous pouvez mettre un nombre négatif dans ce champ si vous faites un bolus pour des glucides déjà consommés.
+
+#### Rappel repas
+
+* Pour les glucides dans le futur, la case à cocher "alarme" peut être sélectionnée (cochée par défaut lorsqu'un décalage horaire positif est renseigné) afin de vous rappeler quand vous avez prévu de manger les glucides entrés dans AndroidAPS
+   
+   ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Section J
 
@@ -307,6 +313,63 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 * Donc si vous voulez faire un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! 
 * Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation.html#detection-de-ga-errones).
 
+## Onglet Actions
+
+![Onglet Actions](../images/Home2021_Action.png)
+
+### Actions - section M
+
+* Le bouton [Changement de profil](../Usage/Profiles#changement-de-profil) en tant qu'alternative à un appui long sur le [profil actuel](../Getting-Started/Screenshots#section-b-profil-cible) de l'écran d'accueil.
+* Le bouton [cible temporaire](../Usage/temptarget#cibles-temporaires) en tant qu'alternative à un appui court sur la [cible actuelle](../Getting-Started/Screenshots#section-b-profil-cible) de l'écran d'accueil.
+* Le bouton pour démarrer ou annuler un débit basal temporaire. Veuillez noter que le bouton passe de "BASAL TEMPORAIRE" à "ANNULER x%" lorsqu'un débit de base temporaire est défini.
+* Même si les [bolus étendus](../Usage/Extended-Carbs#bolus-etendu) ne fonctionnent pas vraiment dans un environnement de boucle fermée, certaines personnes demandaient une option pour utiliser un bolus étendu de toute façon.
+   
+   * Cette option n'est disponible que pour les pompes Dana RS et Insight. 
+   * La boucle fermée sera automatiquement arrêtée et basculera en mode boucle ouverte pour la durée du bolus étendu.
+   * Assurez-vous de lire les [détails](../Usage/Extended-Carbs#bolus-etendu) avant d'utiliser cette option.
+
+### Careporal - section N
+
+* Afficher les informations
+   
+   * âge du capteur & niveau (pourcentage de la batterie)
+   * âge & niveau d'insuline (unités)
+   * âge canule
+   * âge de la batterie de la pompe & niveau (pourcentage)
+
+* Les libellés "âge" et "niveaux" ne seront pas affichés si le thème [Basse résolution](../Configuration/Preferences#theme) est utilisé.
+
+#### Niveau du capteur (batterie)
+
+* Nécessite xDrip+ nightly build du 10 décembre 2020 ou plus récent.
+* Fonctionne pour les MGC qui ont des émetteurs supplémentaires tels que MiaoMiao (Techniquement le capteur doit envoyer les informations de niveau de pile à xDrip+).
+* Les limites peuvent être définies dans [les préférences](../Configuration/Preferences#voyants-d-etat).
+* Si le niveau du capteur est le même que celui de la batterie du téléphone, la version xDrip+ est probablement trop ancienne et nécessite une mise à jour.
+   
+   ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
+
+### Careporal - section O
+
+* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
+* Prime/Fill allows you to record pump site and insulin cartridge change.
+* Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+
+### Outils - section P
+
+#### Historique
+
+* Vous permet de revoir l'historique des données AAPS.
+
+#### DTI
+
+* Dosage Total d'Insuline = bolus + base par jour
+* Certains médecins utilisent - en particulier pour les nouveaux utilisateurs de pompes - une proportion basal-bolus de 50:50. 
+* Par conséquent, le rapport est calculé ainsi DTI/(2*DTB) (Dose Totale de Basale = somme des débits de basal en 24 heures). 
+* D'autres préfèrent une fourchette allant de 32% à 37% de DTI pour DTB. 
+* Comme la plupart de ces règles empiriques, leur validité réelle est limitée. Remarque : Votre diabète peut varier!
+
+![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
+
 ## Profil d'Insuline
 
 ![Profil d'Insuline](../images/Screenshot_insulin_profile.png)
@@ -314,7 +377,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 * Ceci montre le profil d'activité de l'insuline que vous avez choisie dans le [Générateur de configuration](../Configuration/Config-Builder#insuline). 
 * La ligne MAUVE indique la quantité d’insuline restante après son injection car elle décroît avec le temps, tandis que la ligne BLEUE indique son activité.
 * Le point important à noter est que la décomposition a une longue queue. 
-* Si vous êtes habitué à utiliser la pompe manuellement, vous estimez probablement que l'insuline se désintègre en environ 3,5 heures. 
+* Si vous êtes habitué à la pompe manuellement, vous êtes probablement habitué à supposer que l'insuline se désintègre en environ 3,5 heures. 
 * Toutefois, lorsque vous bouclez la longue queue est importante, car les calculs sont beaucoup plus précis et ces petites quantités s’additionnent lorsqu’elles sont soumises aux calculs récursifs de l’algorithme AndroidAPS.
 
 Pour plus d'informations sur les différents types d'insuline, leurs profils d'activité et l'importance de tout cela, vous pouvez lire un article ici sur [ Comprendre les nouvelles courbes IA basées sur des courbes d'activité exponentielles ](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
@@ -384,7 +447,7 @@ L'onglet Traitement peut être utilisé pour corriger les entrées de glucides e
 Historique des traitements suivants :
 
 * Bolus (& glucides) -> option permettant de [supprimer des entrées](../Getting-Started/Screenshots#correction-de-glucides) pour corriger l'historique
-* [Bolus étendu](../Usage/Extended-Carbs#bolus-etendus)
+* [Bolus étendu](../Usage/Extended-Carbs#id1)
 * Basal temporaire
 * [Cible temp.](../Usage/temptarget.md)
 * [Changement de profil](../Usage/Profiles.md)

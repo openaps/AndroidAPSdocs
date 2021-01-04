@@ -243,7 +243,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Υπολογιτής
 
-* See [details below](../Configuration/Screenhots#bolus-wizard)
+* See Bolus Wizard [section below](../Configuration/Screenhots#bolus-wizard)
 
 #### Calibrations
 
@@ -263,7 +263,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ## Bolus Wizard
 
-![Bolus wizard](../images/Home2020_BolusWizard.png)
+![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
 
 When you want to make a meal bolus this is where you will normally make it from.
 
@@ -273,6 +273,12 @@ When you want to make a meal bolus this is where you will normally make it from.
 * In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. 
 * The CORR field is if you want to modify the end dosage for some reason.
 * The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+
+#### Eating reminder
+
+* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
+   
+   ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Section J
 
@@ -307,9 +313,66 @@ When you want to make a meal bolus this is where you will normally make it from.
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
 * For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
-## Προφίλ ινσουλίνης
+## Action tab
 
-![Προφίλ ινσουλίνης](../images/Screenshot_insulin_profile.png)
+![Actions tab](../images/Home2021_Action.png)
+
+### Actions - section M
+
+* Button [profile switch](../Usage/Profiles#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
+* Button [temporary target](../Usage/temptarget#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
+* Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
+* Even though [extended boluses](../Usage/Extended-Carbs#id1) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+   
+   * This option is only available for Dana RS and Insight pumps. 
+   * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
+   * Make sure to read the [details](../Usage/Extended-Carbs#id1) before using this option.
+
+### Careporal - section N
+
+* Displays information on
+   
+   * sensor age & level (battery percentage)
+   * insulin age & level (units)
+   * canula age
+   * pump battery age & level (percentage
+
+* Less information will be shown if [low resolution skin](../Configuration/Preferences#skin) is used.
+
+#### Sensor level (battery)
+
+* Needs xDrip+ nightly build Dec. 10, 2020 or newer.
+* Works for CGM with additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level information to xDrip+.)
+* Thresholds can be set in [preferences](../Configuration/Preferences#status-lights).
+* If sensor level is the same as phone battery level you xDrip+ version is probably too old and needs an update.
+   
+   ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
+
+### Careporal - section O
+
+* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
+* Prime/Fill allows you to record pump site and insulin cartridge change.
+* Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+
+### Tools - section P
+
+#### History Browser
+
+* Allows you to ride back in AAPS hsitory.
+
+#### TDD
+
+* Total daily dose = bolus + basal per day
+* Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
+* Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 
+* Others prefer range of 32% to 37% of TDD for TBB. 
+* Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+
+![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
+
+## Insulin Profile
+
+![Insulin Profile](../images/Screenshot_insulin_profile.png)
 
 * This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
 * The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
@@ -323,14 +386,14 @@ And you can read an excellent blog article about it here: [Why we are regularly 
 
 And even more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
-## Κατάσταση Αντλίας
+## Pump Status
 
-![Κατάσταση Αντλίας](../images/Screenshot_PumpStatus.png)
+![Pump Status](../images/Screenshot_PumpStatus.png)
 
 * Different information on pump status. Displayed information depends on your pump model.
 * See [pumps page](../Hardware/pumps.rst) for details.
 
-## Πύλη φροντίδας
+## Care Portal
 
 Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
 

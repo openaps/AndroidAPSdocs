@@ -1,10 +1,10 @@
-Profile helper
+Pomocník s profilem
 ****************************************
 
-Profile helper offers two functions:
+Pomocník s profilem nabízí dvě funkce:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. Najít profil pro děti
+2. Porovnání dvou profilů nebo přepnutí profilů za účelem naklonování nového profilu
 
 Profile for kids (up to 18 years)
 =======================================

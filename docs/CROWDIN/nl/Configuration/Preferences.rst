@@ -1,19 +1,25 @@
 Instellingen
 ***********************************************************
-* Open de instellingen door te klikken op de 3 stipjes in de rechterbovenhoek van het Overzicht scherm.
+* **Open preferences** by clicking three-dot-menu on top right side of home screen.
 
-  .. image:: ../images/Pref2020_Open.png
+  .. image:: ../images/Pref2020_Open2.png
     :alt: Open instellingen
 
 * Je kunt direct naar voorkeuren springen voor een bepaald tabblad (bijv. pomp tabblad) door dit tabblad te openen en op Plugin voorkeuren te klikken.
 
-  .. image:: ../images/Pref2020_OpenPlugin.png
+  .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Open plugin instellingen
-    
-* Submenu's kun je openen door te klikken op de driehoek onder de sub-menu titel.
 
-  .. image:: ../images/Pref2020_Submenu.png
+* **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+
+  .. image:: ../images/Pref2020_Submenu2.png
     :alt: Open submenu
+
+* With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+
+  .. image:: ../images/Pref2021_Filter.png
+    :alt: Preferences filter
+
 
 Algemeen
 ===========================================================
@@ -75,12 +81,13 @@ Bolus beveiliging
 
 Skin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Je kunt kiezen uit drie soorten skins:
+* You can choose from four types of skins:
 
-  .. image:: ../images/Pref2020_Skin.png
-    :alt: Selecteer skin
+  .. image:: ../images/Pref2021_SkinWExample.png
+    :alt: Select skin + examples
 
-* Dit verschilt, afhankelijk van de oriëntatie van de telefoon
+* 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
+* Difference of other skins depend of phone's display orientation.
 
 Staande stand
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -166,12 +173,13 @@ Statusindicatoren
 -----------------------------------------------------------
 * Statusindicatoren geven een visuele waarschuwing voor 
       
-   * Infuus leeftijd
+   Sensor Leeftijd
+   * Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots#sensor-level-battery) for details.
    * Insuline leeftijd (aantal dagen dat reservoir wordt gebruikt)
    * Reservoir niveau (eenheden)
-   Sensor Leeftijd
-   * Batterij leeftijd
-   * Batterij niveau (%)
+   * Infuus leeftijd
+   * Pump battery age
+   * Pump battery level (%)
 
 * Als de drempelwaarde voor waarschuwing wordt overschreden, worden de waarden in geel weergegeven.
 * Als de drempelwaarde voor alarm wordt overschreden, worden de waarden in rood weergegeven.
@@ -182,11 +190,25 @@ Statusindicatoren
 
 Geavanceerde instellingen (Overzicht)
 -----------------------------------------------------------
+
+  .. image:: ../images/Pref2021_OV_Adv.png
+    :alt: Istellingen > Statusindicatoren
+
 Voer dit deel van het boluscalculator resultaat uit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Met deze instelling laat je slechts een deel toedienen van de uitkomst van de boluscalculator. 
 * Alleen het ingestelde percentage (moet tussen 10 en 100 liggen) van de berekende bolus wordt afgeleverd wanneer de boluscalculator wordt gebruikt. 
 * Het percentage zie je terug in de boluscalculator.
+
+Bolus advisor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and you glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+* If correction bolus is accepted **no carbs** will recorded.
+* An alarm will be started when glucose value is in good level to start eating.
+* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ again and enter the amount of carbs you want to eat.
+
+  .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
+    :alt: Bolus advisor message
 
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

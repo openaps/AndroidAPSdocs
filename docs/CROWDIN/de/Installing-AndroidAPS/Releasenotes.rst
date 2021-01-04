@@ -15,27 +15,27 @@ Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln,
 
 Version 2.8.0
 ================
-Release date: 01-01-2021
+Erscheinungsdatum: 01.01.2021
 
 Wichtige Hinweise
 ----------------------
 * **Mindestvoraussetzung ist nun Android 8.0.** Falls Du ein Smartphone mit einer älteren AndroidVersion verwendest, kannst Du immer noch die Version 2.6.1.4 aus dem alten Repository verwenden. 
-* Objectives (Ziele) wurden geändert. **Beende nicht abgeschlossene Ziele vor dem Update auf AAPS 2.8.0.**
+* `Objectives (Ziele) wurden geändert. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives after update.**
 * Repository weiterhin auf https://github.com/nightscout/AndroidAPS . Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die App-Erstellung `von vorne beginnst <../Installing-AndroidAPS/Building-APK.html>`_.
-* Please use `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+* Nutze bitte `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
 ----------------------
-* `Omnipod Eros Unterstützung <../Configuration/OmnipodEros. tml>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda und besonderer Dank an @ps2 @itsmojo, alle anderen am Loop-Treiber für Omnipod Beteiligten, sowie @jlucasvt von GetRileyLink.org 
-* Bolus-Berater & Essens-Erinnerung @MilosKozak 
+* `Omnipod Eros Unterstützung <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda und besonderer Dank an @ps2 @itsmojo, alle anderen am Loop-Treiber für Omnipod Beteiligten, sowie @jlucasvt von GetRileyLink.org 
+* `Bolus-Berater <../Configuration/Preferences.html#bolus-berater>`_ & `Essens-Erinnerung <../Getting-Started/Screenshots.html#essens-erinnerung>`_ @MilosKozak 
 * neues Watchface @rICTx-T1D
 * Verbesserung der Verbindung zur Dana RS @MilosKozak 
 * Bei Verwendung der nativen Dexcom App werden über mehr als 45 Minuten unveränderte CGM-Werte in SMB weiter berücksichtigt.
-* Neuer Skin für niedrige Auflösungen
+* Neues `Erscheinungsbild für niedrige Bildschirmauflösungen <../Configuration/Preferences.html#erscheinungsbild>`_
 * Neuer Patiententyp `"Schwanger" <../Usage/Open-APS-features.html#ubersicht-der-fest-programmierten-limits>`_ @Brian Quinion
 * Neues NSClient-Layout für Tablets @MilosKozak 
 * NSClient überträgt Insulin, Senstivität und Anzeige-Einstellungen direkt von AAPS @MilosKozak 
-* Filter für die Einstellungen @Brian Quinion
+* `Filter für Einstellungen im 3-Punkte-Menü <../Configuration/Preferences.html>`_ @Brian Quinion
 * Neue Pumpensymbole @Rig22 @@teleriddler @osodebailar
 * Verbesserungen im Einrichtungsassitenten @MilosKozak 
 * Verbesserung der Sicherheit @dlvoy 

@@ -290,58 +290,39 @@ Pasirinkite, ar norite matyti [būsenos indikatorius](../Configuration/Preferenc
 
 ### Veiksmai
 
-Mygtukai greitesniam pagrindinių funkcijų paleidimui:
-
-* Profilio keitimas (profilio perjungimas - daugiau informacijos rasite [Profiliai](../Usage/Profiles.md))
-* Laikinas tikslas
-* Nustatyti / atšaukti laikiną valandinė bazė
-* Ištęstas bolusas (tik DanaR/RS arba Combo pompa)
-* Įrašykite specifinius terapijos veiksmus
-    
-    * KG testas
-    * Pirminis užpildymas / pildymas - įrašyti kateterio kaniulės keitimą ir ją užpildyti (jei nėra atlikta pompoje)
-    * NGJ sensoriaus įvedimas
-    * Pompos baterijos keitimas
-    * Pastaba
-    * Aktyvumas
-* Peržiūrėti jutiklio, insulino rezervuaro, kaniulės ir pompos baterijos naudojimo laiką
-* Istorija
-* BPD (Bendra paros dozė = bolusas + bazė per dieną)
-
-Kai kurie gydytojai rekomenduoja - ypač pradedantiesiems - bazės ir boluso insulino santykį 50:50. Todėl santykis apskaičiuojamas kaip bendra BPD / 2 * BPB paros dozė (BPB bendra paros bazė = valandinių bazių suma per 24 valandas). Kiti labiau linkę apskaičiuoti paros BPB dozę kaip 32–37% paros insulino BPD. Kaip ir dauguma jų, jie turi ribotą praktinę reikšmę. Pastaba: Jūsų diabetas gali skirtis!
-
-![Veiksmų skirtukas](../images/ConfBuild_ConfBuild_Actions_b.png)
+* Some buttons to quickly access common features.
+* See [AAPS screenshots](..//Getting-Started/Screenshots#actions-tab) for details.
 
 ### Automatizavimas
 
-Vartotojo apibrėžtos automatizavimo užduotys ("jei-tada-jei ne"). Prašome [skaityti čia](../Usage/Automation.rst).
+User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst).
 
 ### SMS komunikatorius
 
-Leidžia nuotoliniu būdu valdyti kai kurias AndroidAPS funkcijas SMS žinutėmis, daugiau informacijos apie konfigūraciją žr. [ SMS komandos ](../Children/SMS-Commands.rst).
+Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
 
 ### Maistas
 
-Parodo iš anksto nustatytas maisto savybes, apibrėžtas Nightscout duomenų bazėje, daugiau informacijos apie parinktis žr. [ Nightscout ](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods).
+Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-Pastaba: įrašų negalima naudoti AndroidAPS skaičiuotuve. (Tik peržiūra)
+Note: Entries cannot be used in the AndroidAPS calculator. (View only)
 
 ### Išmanieji laikrodžiai
 
-Android Wear laikrodyje galima peržiūrėti AAPS duomenis ir valdyti kai kurias funkcijas (žr. [ Laikrodžiai](../Configuration/Watchfaces.md)). Nustatymuose (krumpliaračio piktograma) galite nustatyti kintamuosius, į kuriuos reikia atsižvelgti apskaičiuojant bolusą atsižvelgiant į laikrodį (pavyzdžiui, 15 min. tendencija, aktyvūs angliavandeniai AAO...).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
 Pavyzdžiui, jei norite suleisti boliusą, tuomet laikrodžio nustatymuose turėtumėte įjungti „Valdymas iš laikrodžio“.
 
-![Išmaniojo laikrodžio nustatymai](../images/ConfBuild_Wear.png)
+![Wear settings](../images/ConfBuild_Wear.png)
 
-Naudodamiesi skirtuku „Išmanieji laikrodžiai“ arba trijų linijų meniu (ekrano viršutiniame kairiajame kampe, jei skirtukas nerodomas), galite
+Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
 * Pakartotinai siųsti visus duomenis. Gali būti naudinga, jei laikrodis nebuvo prijungtas šiek tiek laiko ir norite perduoti informaciją į laikrodį.
 * Atidaryti laikrodžio nustatymus tiesiai iš savo telefono.
 
 ### xDrip būsenos juosta (laikrodyje)
 
-Rodyti informaciją apie algoritmo būseną xDrip+ laikrodžio ekrane (jei nenaudojate AAPS /[AAPSv2 laikrodžio ekrane](../Configuration/Watchfaces.md)
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
 ### NSClient
 
@@ -350,8 +331,8 @@ Rodyti informaciją apie algoritmo būseną xDrip+ laikrodžio ekrane (jei nenau
 
 ### Servisas
 
-El. Pašto adresas ir siunčiamų protokolų skaičius. Paprastai nereikia jokių pakeitimų.
+Email and number of logs to be send. Normally no change necessary.
 
 ### Konfigūracija
 
-Vietoje trijų linijų meniu kairėje galite naudoti konfigūratoriaus skirtuką.
+Use tab for config builder instead of hamburger menu.

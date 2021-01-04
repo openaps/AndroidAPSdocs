@@ -48,6 +48,22 @@ G6 mit der gepatchten Dexcom App
 * xDrip+ Alarme kannst Du über den lokalen Broadcast nutzen: In xDrip > Hamburger Menü > Einstellungen > Datenquelle > 640G / EverSense.
 * Der lokale Broadcast funktioniert nicht direkt von der gepatchten Dexcom App zu xDrip+. Der Broadcast muss über AAPS laufen.
 
+G6 mit Build Your Own Dexcom App
+==================================================
+* Seit Dezember 2020 unterstützt die `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA - "Erstelle deine eigene Dexcom App") auch die lokale Datenweitergabe an AAPS und/oder xDrip+ (nicht für G5 Sensoren!)
+* Mit dieser App kannst du den Dexcom G6 mit jedem Android Smartphone verwenden.
+* Gehe in den Einstellungen des Smartphone zu Apps > Dexcom G6 > Berechtigungen > Weitere Berechtigungen und drücke 'Zugriff Dexcom App'.
+
+Einstellungen für AndroidAPS
+--------------------------------------------------
+* Wähle 'gepatchte Dexcom App' im Konfigurationsgenerator.
+* Falls AAPS keine Werte erhält, wechsle auf eine andere BZ-Quelle und dann wieder zurück zur 'gepatchte Dexcom App', um die Abfrage für die Genehmigung des Datenaustauschs zwischen AAPS und BYODA aufzurufen.
+
+Einstellungen für xDrip+
+--------------------------------------------------
+* Wähle '640G/Eversense' als Datenquelle.
+* Führe den Befehl 'Sensor starten' in xDrip+ aus, damit Werte empfangen werden. Dies hat keinen Einfluss auf den laufenden Sensor.
+   
 Problembehandlung G6
 ==================================================
 Dexcom G6-spezifische Problembehandlung

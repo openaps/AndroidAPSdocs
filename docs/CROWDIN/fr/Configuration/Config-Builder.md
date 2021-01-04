@@ -290,31 +290,12 @@ Choisissez si vous voulez avoir des [voyants d'état](../Configuration/Preferenc
 
 ### Actions
 
-Quelques boutons pour accéder rapidement aux fonctions communes:
-
-* Changement de profils (voir la page [Changement de profil](../Usage/Profiles.md) pour plus d'informations sur la configuration)
-* Cibles temporaires
-* Définir/Annuler des Débit de Base
-* Bolus étendu (pompe DanaR/RS ou Combo uniquement)
-* Enregistrement de tous les soins spécifiques
-    
-    * Contrôle de la glycémie
-    * Amorcer/Remplir - enregistrement d'un changement de site et d'un changement de cartouche (si pas fait sur la pompe)
-    * Pose du capteur MGC
-    * Changement de la pile de pompe
-    * Remarque
-    * Activité Physique
-* Affichage des informations capteur, insuline, canule et age de la pile de pompe
-* Historique
-* DTI (Dosage Total d'Insuline quotidien = bolus + basale par jour)
-
-Certains médecins utilisent - en particulier pour les nouveaux utilisateurs de pompes - une proportion basal-bolus de 50:50. Par conséquent, le rapport est calculé ainsi DTI/(2*DTB) (Dose Totale de Basale = somme des débits de basal en 24 heures). D'autres préfèrent une fourchette allant de 32% à 37% de DTI pour DTB. Comme la plupart de ces règles empiriques, leur validité réelle est limitée. Remarque : Votre diabète peut varier!
-
-![Onglet Actions](../images/ConfBuild_ConfBuild_Actions_b.png)
+* Quelques boutons pour accéder rapidement aux fonctions communes.
+* Voir les [captures d'écran AAPS](../Getting-Started/Screenshots#onglet-actions) pour plus de détails.
 
 ### Automatisation
 
-Tâches d'automatisation définies par l'utilisateur ('si-alors-sinon'). Veuillez [lire ici](../Usage/Automation.rst).
+Tâches d'automatisation définies par l'utilisateur (si-alors-sinon). Veuillez [lire ici](../Usage/Automation.rst).
 
 ### Communicateur SMS
 
