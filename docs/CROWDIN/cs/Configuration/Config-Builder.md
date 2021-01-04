@@ -81,7 +81,7 @@ Podrobnosti jsou vysvětleny na stránce nápovědy [pomocník s profilem](../Co
 
 NS profil používá profily, které jste uložili na webu nightscout (https://[adresavašehoprofilu]/profile). K přepnutí profilu, který bude aktivní, můžete použít tlačítko [Přepnout profil](../Usage/Profiles.md). Tato akce zapíše profil do pumpy, kde bude použit v případě selhání AndroidAPS. Takto si v Nightscoutu můžete vytvořit více profilů (např.. práce, doma, sport, prázdniny atd.). Je-li váš mobil online, budou profily po stisknutí tlačítka „Uložit“ odeslány do AAPS. Pokud nemáte připojení k internetu nebo k Nightscoutu, budou profily uloženy pouze v AAPS, a to do té doby, dokud nebudou synchronizované.
 
-Vybráním tlačítka **Přepnout profil** se aktivuje vybraný profil z Nightscoutu. V horní části hlavní obrazovky AAPS stiskněte a podržte tlačítko s názvem aktuálního profilu (šedé pole vlevo nahoře vedle polem s hodnotami cíle vpravo) > Přepnutí profilu > Vybrat profil > OK. Po změně profilu zapíše AAPS vybraný profil do pumpy, takže zde bude k dispozici pro případ nouze a pumpa bude moci pokračovat.
+Do a [profile switch](../Getting-Started/Screenshots.md#current-profile) to activate a profile from Nightscout. AAPS will write the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
 Výhody:
 
@@ -291,7 +291,7 @@ Vyberte, zda chcete mít v přehledu [stavové indikátory](../Configuration/Pre
 ### Akce
 
 * Tlačítka k běžně používaným úkonům.
-* See [AAPS screenshots](..//Getting-Started/Screenshots#actions-tab) for details.
+* See [AAPS screenshots](../Getting-Started/Screenshots#action-tab) for details.
 
 ### Automatizace
 
