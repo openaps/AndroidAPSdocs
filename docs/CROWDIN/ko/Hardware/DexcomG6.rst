@@ -1,18 +1,18 @@
 Dexcom G6
 **************************************************
-Basics first
+우선적인 기본 사항
 ==================================================
 
-* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`_.
-* For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the `latest nightly built xDrip+ versions <https://github.com/NightscoutFoundation/xDrip/releases>`_. Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+* '이 문서<../Hardware/GeneralCGMRecommendation.html>`의 일반적인 CGM 위생과 센서 설정 권장사항을 따르십시오.
+* 2018년 가을 이후 제조된 G6 트랜스미터의 경우 `latest nightly built xDrip+버전들<https://github.com/NightscoutFoundation/xDrip/releases>`중 하나를 사용해야 합니다. 이러한 트랜스미터들은 새로운 펌웨어를 가지고 있으며, xDrip+의 안정적인 최신 버전(2019/01/10)에서 사용할 수 없습니다.
 
-General hints for looping with G6
+Dexcom G6로 loop을 사용하기 위한 일반적인 정보
 ==================================================
 
-Dexcom G6를 사용하는 것은 맨 처음 제시된 것 보다 좀더 복잡할 수 있다는 것이 확실합니다. 안전하게 사용하기 위해 몇 가지 알아야 할 사항들이 있습니다: 
+Dexcom G6를 사용하는 것은 맨 처음 제시된 것 보다 좀 더 복잡할 수 있다는 것이 확실합니다. 안전하게 사용하기 위해 몇 가지 알아야 할 사항들이 있습니다: 
 
-* If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
-* If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
+* xDrip+이나 Spike에서 보정 코드를 사용하여 native data를 사용한다면, 안전을 위해 센서 재시작(preemptive restarts)를 사용하지 마십시오.
+* 만일 불가피하게 센서 재시작(preemptive restarts)를 사용하여야 한다면, 혈당값 변화를 확인할 수 있으면서 필요한 경우 혈당값을 보정할 수 있을 때 진행해야 합니다. 
 * If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
 * Pre-soaking of the G6 with factory calibration is likely to give variation in results. 만일 pre-soak을 한다면, 가장 정확한 결과값을 얻기 위해 센서를 보정할 필요가 있습니다.
 * If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
