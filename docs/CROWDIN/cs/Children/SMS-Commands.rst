@@ -108,41 +108,41 @@ CGM data
 * BG
    * Odpověď: poslední BG: 5.6 před 4min Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)
 * CAL 5.6
-   * Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN
+   * Odpověď: Pro odeslání kalibrace 5.6 odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
    * Odpověď po přijetí správného potvrzovacího kódu: Kalibrace odeslána (*je-li instalovaný xDrip. V xDrip+ musí být povolen příjem kalibrací**)
 
 Bazál
 --------------------------------------------------
 * BASAL STOP/CANCEL
-   * Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
+   * Odpověď: Pro zastavení dočasného bazálu odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * BASAL 0.3
-   * Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
+   * Odpověď: Pro spuštění bazálu 0.3U/h odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * BASAL 0.3 20
-   * Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
+   * Odpověď: Pro spuštění bazálu 0.3U/h na 20 min odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * BASAL 30%
-   * Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
+   * Odpověď: Pro spuštění bazálu 30% na 30 minut odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * BASAL 30% 50
-   * Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
+   * Odpověď: Pro spuštění bazálu 30% na 50 minut odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 
 Bolus
 --------------------------------------------------
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
+Vzdálený bolus není povolen do 15 minut (tato hodnota je upravitelná pouze v případě, že jsou přidána 2 telefonní čísla) po posledním bolusu nebo vzdálených příkazech! Odpověď závisí na době, která uplynula od posledního podání bolusu.
 
 * BOLUS 1.2
-   * Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN
+   * Odpověď A: Pro podani bolusu 1.2U odpovez SMS s kodem z aplikace Authenticator pro User nasledovano kodem PIN
    * Odpověď B: Vzdálený bolus není k dispozici. Zkuste to později.
 * BOLUS 0.60 MEAL
    * Zadáte-li volitelný parametr MEAL, nastaví se dočasný cíl PŘED JÍDLEM (výchozí hodnoty jsou: 90 mg/dL, 5,0 mmol/l na 45 minut).
-   * Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN
+   * Odpověď A: Pro podání bolusu na jídlo 0.60U odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
    * Odpověď B: Vzdálený bolus není k dispozici. 
 * CARBS 5
-   * Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
+   * Odpověď: Pro zapsání 5g v 12:45/5:35PM odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * CARBS 5 17:35/5:35PM
-   * Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
+   * Odpověď: Pro zapsání 5g v 17:35/5:35PM odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * EXTENDED STOP/CANCEL
-   * Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
+   * Odpověď: Pro zastaveni rozšířeného bolusu odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * EXTENDED 2 120
-   * Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
+   * Odpověď: Pro spuštění prodlouženého bolusu 2U na 120 min odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 
 Profil
 --------------------------------------------------
@@ -151,9 +151,9 @@ Profil
 * PROFILE LIST
    * Odpověď : 1.`Profile1` 2.`Profile2`
 * PROFILE 1
-   * Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
+   * Odpověď: Pro přepnutí profilu na Profil1 100% odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * PROFILE 2 30
-   * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+   * Odpověď: Pro přepnutí profilu na Profil2 30% odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 
 Jiné
 --------------------------------------------------
@@ -162,17 +162,17 @@ Jiné
 * NSCLIENT RESTART
    * Odpověď: NSCLIENT RESTART 1 příjemce
 * PUMP
-   * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+   * Odpověď: Posl. spojení: 1 min zpět Doč. bazál: 0.00U/h @11:38 5/30min IOB: 0.5U Zás: 34U Baterie: 100
 * PUMP CONNECT
-   * Response: Pump reconnected
+   * Odpověď: Pumpa znovu připojena
 * PUMP DISCONNECT *30*
-   * Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
+   * Odpověď: Pro odpojení pumpy na *30* minut odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * SMS DISABLE/STOP
    * Odpověď: Pro vypnutí vzdálené SMS služby odpovězte pomocí SMS s kódem Any. Mějte na paměti, že ji budete moci opětovně reaktivovat pouze z hlavního smartphonu s AAPS.
 * TARGET MEAL/ACTIVITY/HYPO   
-   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
+   * Odpověď: Pro nastaveni dočasneho cíle PŘED JÍDLEM/AKTIVITA/HYPO odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 TARGET STOP/CANCEL   
-   * Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
+   * Odpověď: Pro zastaveni dočasného cíle odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * HELP
    * Odpověď: BG, LOOP, TREATMENTS, .....
 * HELP BOLUS
@@ -182,13 +182,13 @@ Poradce při potížích
 ==================================================
 Duplicitní SMS
 --------------------------------------------------
-Obdržíte-li stejnou zprávu znovu a znovu (např. přepnutí profilu), je pravděpodobné, že se jedná o zacyklení s jinými aplikacemi. Například xDrip+. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS. 
+Obdržíte-li stejnou zprávu znovu a znovu (např. přepnutí profilu), je pravděpodobné, že se jedná o zacyklení s jinými aplikacemi. Například xDrip+. Pokud je to tak, ujistěte se prosím, že xDrip+ (nebo jakákoliv jiná aplikace) nenahrává ošetření do NS. 
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+Je-li tato jiná aplikace nainstalovaná na více telefonech, deaktivujte upload u všech instancí.
 
 Nefunkční SMS příkazy na telefonech Samsung
 --------------------------------------------------
-Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Could be solved by disabling 'send as chat message'.
+Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Lze to vyřešit vypnutím "odeslání zprávy jako konverzace".
 
 .. image:: ../images/SMSdisableChat.png
   :alt: Zakázat odesílání SMS jako konverzace
