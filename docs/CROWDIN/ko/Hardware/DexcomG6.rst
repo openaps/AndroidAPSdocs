@@ -64,7 +64,7 @@ Settings for xDrip+
 * Select '640G/Eversense' as data source.
 * Command 'start sensor' must be performed in xDrip+ in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
    
-Troubleshooting G6
+G6의 문제 해결
 ==================================================
 Dexcom G6 specific troubleshooting
 --------------------------------------------------
