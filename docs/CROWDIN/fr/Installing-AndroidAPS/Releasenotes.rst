@@ -20,7 +20,7 @@ Date de sortie : 01-01-2021
 Conseils importants
 ----------------------
 * **La version minimale d'Android est 8.0 maintenant.** Pour les anciennes versions d'Android, vous pouvez toujours utiliser la version 2.6.1.4 de l'ancien dépôt. 
-* `Les objectifs ont changé. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives after update.**
+* `Les objectifs ont changé. <../Usage/Objectives.html#objectif-3-prouver-ses-connaissances>`_ **Finissez les objectifs non terminés après la mise à jour.**
 * Le dossier github est toujours sur https://github.com/nightscout/AndroidAPS. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un `nouveau clone <../Installing-AndroidAPS/Building-APK.html>`_.
 * Utilisez `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
