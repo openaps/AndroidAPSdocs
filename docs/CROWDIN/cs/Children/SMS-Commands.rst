@@ -22,8 +22,8 @@ Nastavení SMS příkazů
 
 Schválená telefonní čísla
 -------------------------------------------------
-* In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679) 
-* Enable 'Allow remote commands via SMS'.
+* V AndroidAPS přejděte do **Nastavení > SMS komunikátor** a zadejte telefonní číslo(a), ze kterých umožníte přijímat SMS příkazy (oddělené středníkem – např. +6412345678;+6412345679) 
+* Povolte možnost 'Povolit posílání příkazů přes SMS'.
 * Chcete-li nastavit více než jedno číslo:
 
   * Zadejte pouze jedno číslo.
@@ -31,58 +31,58 @@ Schválená telefonní čísla
   * Přidejte další číslo(a) oddělené středníkem, bez mezery.
   
     .. image:: ../images/SMSCommandsSetupSpace2.png
-      :alt: SMS Commands Setup multiple numbers
+      :alt: SMS příkazy - nastavení více čísel
 
-Minutes between bolus commands
+Minut mezi příkazy pro bolus
 -------------------------------------------------
-* You can define the minimum delay between two boluses issued via SMS.
-* For safety reasons you have to add at least two authorized phone numbers to edit this value.
+* Můžete nastavit minimální dobu, která musí uběhnout mezi dvěma po sobě jdoucími příkazy k poslání bolusu přes SMS.
+* Z bezpečnostních důvodů musíte k úpravě této hodnoty přidat alespoň dvě autorizovaná telefonní čísla.
 
-Additionally mandatory PIN at token end
+Dodatečný povinný kód PIN na konci tokenu
 -------------------------------------------------
-* For safety reasons the reply code must be followed by a PIN.
-* PIN rules:
+* Z bezpečnostních důvodů musí být kód odpovědi ukončen kódem PIN.
+* Pravidla pro PIN:
 
-   * 3 to 6 digits
-   * not same digits (i.e. 1111)
-   * not in a row (i.e. 1234)
+   * 3 až 6 číslic
+   * nesmí obsahovat stejné číslice (tj. 1111)
+   * nesmí obsahovat posloupnost (tj. 1234)
 
-Authenticator setup
+Nastavení Autentikátoru
 -------------------------------------------------
-* Two-factor authentication is used to improve safety.
-* You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
+* Dvoufaktorové ověření se používá ke zvýšení bezpečnosti.
+* Můžete použít libovolnou aplikaci Authenticator, která podporuje tokeny RFC 6238 TOTP. Oblíbené bezplatné aplikace jsou:
 
-   * `Authy <https://authy.com/download/>`_
+   * ` Authy <https://authy.com/download/>` _
    * Google Authenticator - `Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>`_ / `iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>`_
    * `LastPass Authenticator <https://lastpass.com/auth/>`_
    * `FreeOTP Authenticator <https://freeotp.github.io/>`_
 
-* Install the authenticator app of your choice on your follower phone and scan the QR code shown in AAPS.
-* Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. Příklad:
+* Do sledovacího mobilu si nainstalujte vybraný autentikátor a naskenujte v něm QR kod, který se zobrazuje v AAPS.
+* Otestujte jednorázové heslo zadáním tokenu zobrazeného ve vaší ověřovací aplikaci a kódu PIN, který jste si nastavili v AAPS. Příklad:
 
-   * Your mandatory PIN is 2020
-   * TOTP token from the authenticator app is 457051
-   * Enter 4570512020
+   * Váš povinný PIN je 2020
+   * TOTP token z autentizační aplikace je 457051
+   * Zadejte 4570512020
    
-* The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
-* The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
-* Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
+* Je-li zadání správné, změní se **automaticky** červený text "WRONG PIN" na zelené "OK". **Není třeba stisknout žádné tlačítko!**
+* Na obou telefonech musí být synchronizovaný čas. Nejlepší způsob je synchronizovat čas automaticky prostřednictvím sítě. Časové rozdíly mohou vést k problémům s ověřováním.
+* Chcete-li odebrat všechny autentikátory, stiskněte tlačítko "RESETOVAT AUTENTIKÁTORY".  (resetování autentikátorů způsobíte, že VŠECHNY používané autentikátory budou neplatné. Budete je muset nastavit znovu)
 
-Use SMS commands
+Použití SMS příkazů
 ==================================================
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands <../Children/SMS-Commands.html#commands>`_ below. 
-* The AAPS phone will respond to confirm success of command or status requested. 
-* Confirm command by sending the code where necessary. Příklad:
+* Pošlete SMS na telefon s běžícím AndroidAPS ze schváleného telefonního čísla pomocí některého z `příkazů <../Children/SMS-Commands.html#commands>`_ níže. 
+* Mobil s AAPS odpoví pro potvrzení požadovaného stavu nebo příkazu. 
+* Pokud je to požadováno, potvrďte příkaz odesláním kódu. Příklad:
 
-   * Your mandatory PIN is 2020
-   * TOTP token from the authenticator app is 457051
-   * Enter 4570512020
+   * Váš povinný PIN je 2020
+   * TOTP token z autentizační aplikace je 457051
+   * Zadejte 4570512020
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**Tip: Jestliže budete posílat větší množství SMS, je výhodné mít na obou mobilech SMS paušál.
 
 Příkazy
 ==================================================
-Commands must be sent in English, the response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Příkazy musí být odeslány v angličtině. Pokud je řetězec odpovědi `přeložen <../translations.html#translate-řetězce-pro-androidaps-app> ` _, bude odpověď ve vašem jazyce.
 
 .. image:: ../images/SMSCommands.png
   :alt: příklad SMS příkazu
