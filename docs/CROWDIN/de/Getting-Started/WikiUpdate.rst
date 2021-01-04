@@ -3,6 +3,7 @@ Docs Updates & Änderungen
 
 Januar 2021
 ==================================================
+* `Aktionen-Tab <../Getting-Started/Screenshots.html#aktionen-tab>`_ - zusätzliche Informationen auf der Seite 'AndroidAPS Bildschirme'
 * Dexcom G6 mit `Build Your Own Dexcom App <../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app>`_ ("Erstelle dir deine eigene Dexcom App")
 * Libre Smart Reader `Batteriestand <../Getting-Started/Screenshots.html#sensor-level-batterie>`_
 * `Objectives (Ziele) <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ - neue Fragen
