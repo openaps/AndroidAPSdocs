@@ -53,7 +53,7 @@ Jestliže chcete přepnout z Nightscout profilu na místní profil, jednoduše u
 
 #### Nahrávání místních profilů do Nighscoutu
 
-Místní profily lze také nahrát do Nightscoutu. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
+Místní profily lze také nahrát do Nightscoutu. Nastavení najdete v [preferencích NSClientu](../Configuration/Preferences#nsclient).
 
 ![Nahrávání místního profilu do Nighscoutu](../images/LocalProfile_UploadNS2.png)
 
@@ -68,18 +68,18 @@ Nevýhody:
 
 * nic
 
-### Profile helper
+### Pomocník s profilem
 
-Profile helper offers two functions:
+Pomocník s profilem nabízí dvě funkce:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. Najít profil pro děti
+2. Porovnání dvou profilů nebo přepnutí profilů za účelem naklonování nového profilu
 
-Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
+Podrobnosti jsou vysvětleny na stránce nápovědy [pomocník s profilem](../Configuration/profilehelper.rst).
 
-### NS Profile
+### NS profil
 
-NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+NS profil používá profily, které jste uložili na webu nightscout (https://[adresavašehoprofilu]/profile). K přepnutí profilu, který bude aktivní, můžete použít tlačítko [Přepnout profil](../Usage/Profiles.md). Tato akce zapíše profil do pumpy, kde bude použit v případě selhání AndroidAPS. Takto si v Nightscoutu můžete vytvořit více profilů (např.. práce, doma, sport, prázdniny atd.). Je-li váš mobil online, budou profily po stisknutí tlačítka „Uložit“ odeslány do AAPS. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
 
 Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
