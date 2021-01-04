@@ -3,7 +3,7 @@ Mises à jour et modifications de la documentation
 
 Janvier 2021
 ==================================================
-* `Action tab <../Getting-Started/Screenshots.html#action-tab>`_ - more details on page 'AndroidAPS screens'
+* `Onglet Actions <../Getting-Started/Screenshots.html#onglet-actions>`_ - plus de détails dans la page des 'Écrans AndroidAPS'
 * Dexcom G6 avec `Votre propre application Dexcom <../Hardware/DexcomG6.html#si-vous-utilisez-g6-avec-votre-propre-application-dexcom>`_
 * Information sur le `niveau batterie capteur <../Getting-Started/Screenshots.html#sensor-level-battery>`_
 * `Objectifs <../Usage/Objectives.html#objective-3-prouver-ses-connaissances>`_ - nouvelles questions
