@@ -21,15 +21,15 @@ Dexcom G6를 사용하는 것은 맨 처음 제시된 것 보다 좀 더 복잡�
 
 Dexcom G6를 xdrip+와 사용하는 경우
 ==================================================
-* The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-* When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
-* If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
-* If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
+* 덱스콤 G6 트랜스미터는 덱스콤 리시버 (또는 t:slim 펌프로 대체 가능)과 한 개의 핸드폰 앱에 동시 연결할 수 있습니다.
+* xDrip+를 리시버로 사용하는 경우 Dexcom 공식 앱을 먼저 제거합니다. ** 트랜스미터로 xDrip+와 Dexcom 공식 앱에 동시 연결은 할 수 없습니다! **
+* Clarity가 필요하고 xDrip+ 알람 사용을 원하는 경우, '덱스콤 앱(패치버전)<../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>'을 xDrip+에 로컬 브로드캐스트로 연결하여 사용하십시오.
+* 만약 아직 'xDrip'을 설치하지 않았다면 <https://github.com/NightscoutFoundation/xDrip>에서 다운로드하고, nightscout ('G5' <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>)의 지시사항을 따르십시오.
 * 구성 관리자 (AndroidAPS의 세팅)에서 xDrip+를 선택합니다.
-* Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`_
-* If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* 'xDrip+ 설정 페이지 <../Configuration/xdrip.html>'를 따라 xDrip+의 설정을 조정하십시오.
+* 비행기 모드에서 AAPS가 혈당값을 수신하지 못하는 경우 'xDrip+ 설정 페이지' <../Configuration/xdrip.html>에 설명된 'Identify receiver'를 이용합니다.
 
-If using G6 with patched Dexcom app
+Dexcom G6를 Dexcom 앱(패치버전)과 사용하는 경우
 ==================================================
 * Download the apk from `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, and choose the version that fits your needs (mg/dl or mmol/l version, G6).
 
