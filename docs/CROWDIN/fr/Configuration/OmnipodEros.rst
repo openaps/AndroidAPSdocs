@@ -191,42 +191,42 @@ Avant de pouvoir activer un pod, veuillez vous assurer que vous avez correctemen
 Désactivation du Pod
 ------------------
 
-Under normal circumstances, the life of a pod should run for three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
+En utilisation normale, la durée de vie d'un pod est de l'ordre de trois jours (72 heures) et de 8 heures supplémentaires après l'expiration du pod soit un total de 80 heures d'utilisation du pod.
 
-To deactivate a pod (either from expiration or from a pod failure):
+Pour désactiver un pod (soit après son expiration soit à cause d'une erreur du pod) :
 
-1. Go to the **Omnipod (POD)** tab, click on the **POD MGMT (1)** button, on the **Pod management** screen click on the **Deactivate Pod (2)** button.
+1. Allez dans l'onglet **Omnipod (POD)**, cliquez sur le bouton **GEST. POD (1)** sur l'écran **Gestion du Pod** cliquez sur le bouton **Désactiver Pod (2)**.
 
     |Deactivate_Pod_1| |Deactivate_Pod_2|
 
-2. On the **Deactivate Pod** screen, first, make sure the RileyLink is in close proximity to the pod but not on top of or right next to the pod, then click on the **Next** button to begin the process of deactivating the pod.
+2. Sur l'écran **Désactiver Pod**, commencez par vérifier que le RileyLink se trouve à proximité du pod mais ni au dessus' ni juste à côté du pod, puis cliquez sur le bouton **Suivant** pour commencer le processus de désactivation du Pod.
 
     |Deactivate_Pod_3|
 
-3. The **Deactivating Pod** screen will appear, and you will receive a confirmation beep from the pod that deactivation was successful.
+3. L'écran **Désactivation Pod** apparaîtra et vous recevrez un bip de confirmation du pod que la désactivation a réussi.
 
     |Deactivate_Pod_4|
 
-    **IF deactivation fails** and you do not receive a confirmation beep, you may receive a **No response from RileyLink** or **No response from Pod message**. Please click on the **Retry (1)** button to attempt deactivation again. If deactivation continues to fail, please click on the **Discard Pod (2)** button to discard the Pod. You may now remove your pod as the active session has been deactivated. If your Pod has a screaming alarm, you may need to manually silence it (using a pin or a paperclip) as the **Discard Pod (2)** button will not silence it.
+    **SI la désactivation échoue** et que vous ne recevez pas de bip de confirmation, vous pouvez recevoir un message **Pas de réponse du RileyLink** ou **Pas de réponse du Pod**. Veuillez cliquer sur le bouton **Réessayer (1)** pour essayer à nouveau de le désactiver. Si la désactivation continue à échouer, veuillez cliquer sur le bouton **Supprimer Pod (2)** pour le supprimer. Vous pouvez maintenant supprimer votre pod car la session active a été désactivée. Si votre Pod se met à hurler, vous devrez peut-être couper le son manuellement (à l'aide d'une épingle ou d'un trombone) car le bouton **Supprimer Pod (2)** ne le fera pas taire.
 	
 	|Deactivate_Pod_5| |Deactivate_Pod_6|
 
-4. A green checkmark will appear upon successful deactivation. Click on the **Next** button to display the pod deactivated screen. You may now remove your pod as the active session has been deactivated.
+4. Une coche verte apparaîtra une fois la désactivation réussie. Cliquez sur le bouton **Suivant** pour afficher l'écran de Pod désactivé. Vous pouvez maintenant supprimer votre pod car la session active a été désactivée.
 
     |Deactivate_Pod_7|
 
-5. Click on the green button to return to the **Pod management** screen.
+5. Cliquez sur le bouton vert pour retourner à l'écran **Gestion du pod**.
 
     |Deactivate_Pod_8|
 
-6. You are now returned to the **Pod management** menu press the back button on your phone to return to the **Omnipod (POD)** tab. Verify that the **RileyLink Status:** field reports **Connected** and the **Pod status:** field displays a **No active Pod** message.
+6. Vous êtes maintenant retourné dans le menu de **Gestion du pod**, appuyez sur le bouton retour de votre téléphone pour retourner à l'onglet **Omnipod (POD)**. Vérifiez que le champ **État du RileyLink :** indique **Connecté** et que le champ **État du Pod :** affiche un message **Pas de Pod actif**.
 
     |Deactivate_Pod_9| |Deactivate_Pod_10|
 
-Suspending and Resuming Insulin Delivery
+Suspendre et reprendre l'injection d'Insuline
 ----------------------------------------
 
-The process below will show you how to suspend and resume insulin pump delivery.
+Le processus ci-dessous vous montrera comment suspendre et reprendre l'injection d'insuline par la pompe.
 
 *NOTE - if you do not see a SUSPEND button*, then it has not been enabled to display in the Omnipod (POD) tab. Enable the **Show Suspend Delivery button in Omnipod tab** setting in the `Omnipod settings <#omnipod-settings>`__ under **Other**.
 
