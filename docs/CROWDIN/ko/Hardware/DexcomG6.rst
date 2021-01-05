@@ -13,11 +13,11 @@ Dexcom G6를 사용하는 것은 맨 처음 제시된 것 보다 좀 더 복잡�
 
 * xDrip+이나 Spike에서 보정 코드를 사용하여 native data를 사용한다면, 안전을 위해 센서 재시작(preemptive restarts)를 사용하지 마십시오.
 * 만일 불가피하게 센서 재시작(preemptive restarts)를 사용하여야 한다면, 혈당값 변화를 확인할 수 있으면서 필요한 경우 혈당값을 보정할 수 있을 때 진행해야 합니다. 
-* If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
-* Pre-soaking of the G6 with factory calibration is likely to give variation in results. 만일 pre-soak을 한다면, 가장 정확한 결과값을 얻기 위해 센서를 보정할 필요가 있습니다.
-* If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
+* 만일 센서를 재시작하는 경우에는 안전한 결과를 위해 11일, 12일에 자동 보정 없이 진행하거나, 혈당 변화를 계속해서 관찰하면서 보정할 준비가 되어 있어야 합니다.
+* 자동 보정이 되어있는 G6의 센서를 미리 삽입하는 것은 결과적으로 혈당값의 편차를 발생시킬 수 있습니다. 만약 센서를 미리 삽입하는 경우, 가장 정확한 결과값을 얻기 위해 센서를 보정할 필요가 있습니다.
+* 혈당값 변화를 관찰하는 것이 불가하다면, 자동 보정 모드를 사용하지 않는 방식으로 바꾸고, G5와 같은 시스템을 사용하는 것이 바람직합니다.
 
-To learn more about the details and reasons for these recommendations read the `complete article <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ published by Tim Street at `www.diabettech.com <http://www.diabettech.com>`_.
+이러한 권장사항의 세부적인 내용들과 이유들에 대해 더 알고자 하신다면, 'www.diabettech.com <http://www.diabettech.com>'에서 Tim Street이 게시한 '전체 문서 <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>'를 읽어보시기 바랍니다.
 
 If using G6 with xDrip+
 ==================================================
