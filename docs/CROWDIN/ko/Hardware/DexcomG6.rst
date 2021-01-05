@@ -19,7 +19,7 @@ Dexcom G6를 사용하는 것은 맨 처음 제시된 것 보다 좀 더 복잡�
 
 이러한 권장사항의 세부적인 내용들과 이유들에 대해 더 알고자 하신다면, 'www.diabettech.com <http://www.diabettech.com>'에서 Tim Street이 게시한 '전체 문서 <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>'를 읽어보시기 바랍니다.
 
-If using G6 with xDrip+
+Dexcom G6를 xdrip+와 사용하는 경우
 ==================================================
 * The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
 * When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
