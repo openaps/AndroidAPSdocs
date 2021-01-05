@@ -35,6 +35,7 @@ Compatible `pumps <../Hardware/pumps.html>`_ are:
 * DanaR / DanaRS
 * Accu-Chek Combo
 * Accu-Chek Insight
+* Omnipod Eros
 * some old Medtronic pumps (as of version 2.4)
 
 OpenAPS
