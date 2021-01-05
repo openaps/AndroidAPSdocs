@@ -31,22 +31,22 @@ Dexcom G6를 xdrip+와 사용하는 경우
 
 Dexcom G6를 Dexcom 앱(패치버전)과 사용하는 경우
 ==================================================
-* Download the apk from `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, and choose the version that fits your needs (mg/dl or mmol/l version, G6).
+* 'https://github.com/dexcomapp/dexcomapp<https://github.com/dexcomapp/dexcomapp>'에서 apk를 다운로드하고 필요에 따라 알맞은 버전을 선택하십시오 (mg/dl 또는 mmol/l, G6).
 
-   * Folder 2.4 for users of the current version, folder 2.3 is only for the outdated AndroidAPS 2.3.
-   * Open https://play.google.com/store/search?q=dexcom%20g6 on your computer. 
-   * Click the link to the Dexcom G6 app on the search results page that is displayed.
-   * Region will be visible in URL.
+   * 폴더 2.4는 현재 버전의 사용자를 위한 것입니다. 폴더 2.3은 오래된 AndroidAPS 2.3에만 해당됩니다.
+   * 컴퓨터에서 https://play.google.com/store/search?q=dexcom%20g6 사이트를 엽니다. 
+   * 검색 결과 페이지에서 보여지는 덱스콤 G6 앱 링크를 클릭하십시오.
+   * URL에서 region이 표시됩니다.
    
    .. image:: ../images/DexcomG6regionURL.PNG
-     :alt: Region in Dexcom G6 URL
+     :alt: Dexcom G6 URL의 region
 
-* 오리지날 Dexcom 앱이 남아 있는 경우 센서를 스탑하고 삭제합니다.
-* 다운로드 된 apk를 설치합니다.
+* Dexcom 공식 앱이 남아 있는 경우, 센서를 스탑하고 앱을 삭제합니다.
+* 다운로드 한 apk를 설치합니다.
 * 센서를 시작합니다.
-* 구성 관리자 (AndroidAPS의 설정)에서 Dexcom 앱 (패치버전)을 선택합니다.
-* If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
-* There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.
+* (AndroidAPS의 설정 중) 구성 관리자에서 Dexcom 앱 (패치버전)을 선택합니다.
+* 로컬 브로드캐스트를 통해 xDrip+ 알람을 사용하려면: xDrip+ 메뉴 > 설정 > 하드웨어 데이터 출처 > 640G /EverSense를 선택하십시오.
+* 덱스콤 앱 (패치 버전)에서 xDrip+에 직접적인 로컬 브로드캐스트 연결은 할 수 없습니다. Broadcast has to go through AAPS as described above.
 
 If using G6 with Build Your Own Dexcom App
 ==================================================
