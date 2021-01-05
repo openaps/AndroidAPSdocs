@@ -46,11 +46,11 @@ Dexcom G6를 Dexcom 앱(패치버전)과 사용하는 경우
 * 센서를 시작합니다.
 * (AndroidAPS의 설정 중) 구성 관리자에서 Dexcom 앱 (패치버전)을 선택합니다.
 * 로컬 브로드캐스트를 통해 xDrip+ 알람을 사용하려면: xDrip+ 메뉴 > 설정 > 하드웨어 데이터 출처 > 640G /EverSense를 선택하십시오.
-* 덱스콤 앱 (패치 버전)에서 xDrip+에 직접적인 로컬 브로드캐스트 연결은 할 수 없습니다. Broadcast has to go through AAPS as described above.
+* 덱스콤 앱 (패치 버전)에서 xDrip+에 직접적인 로컬 브로드캐스트 연결은 할 수 없습니다. 위에서 설명한 방법으로 AAPS에 브로드캐스트 연결을 해야 합니다.
 
-If using G6 with Build Your Own Dexcom App
+Dexcom G6를 직접 빌드한 덱스컴 앱과 사용하는 경우
 ==================================================
-* As of December 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA)also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
+* 2020년 12월에 나온 "직접 덱스컴 앱을 빌드하기<https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>` (Build Your Own Dexcom App; BYODA)는 AAPS 와/또는 xDrip+에 로컬 브로드캐스트 연결을 지원합니다(G5 센서는 아님).
 * This app lets you use your Dexcom G6 with any Android smartphone.
 * In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
 
