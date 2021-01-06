@@ -207,16 +207,16 @@ Valeur par défaut : 2
 
 ## Aperçu des limites codées en dur
 
-<table>
+<table border="1">
   
 <thead>
   <tr>
-    <th></th>
-    <th> Enfant</th>
-    <th>Adolescent</th>
-    <th>Adulte</th>
-    <th>Adulte résistant à l'insuline</th>
-    <th>Femme enceinte</th>
+    <th width="200"></th>
+    <th width="75"> Enfant</th>
+    <th width="75">Adolescent</th>
+    <th width="75">Adulte</th>
+    <th width="75">Adulte résistant à l'insuline</th>
+    <th width="75">Femme enceinte</th>
   </tr>
 </thead>
 <tbody>
