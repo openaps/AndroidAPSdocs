@@ -28,7 +28,7 @@ Major new features
 ----------------------
 * `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org 
 * `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
-* new watchface @rICTx-T1D
+* `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-28>`_ @rICTx-T1D
 * Dana RS connection improvements @MilosKozak 
 * Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
 * New `Low Ressolution Skin <../Configuration/Preferences.html#skin>`_
