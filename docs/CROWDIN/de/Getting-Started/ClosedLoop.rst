@@ -36,7 +36,7 @@ Kompatible `Insulinpumpen <../Hardware/pumps.html>`_ sind:
 * `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_
 * `Omnipod Eros <../Configuration/OmnipodEros.html>`_
-* some old `Medtronic pumps <../Configuration/MedtronicPump.html>`_
+* einige alte `Medtronic Pumpen <../Configuration/MedtronicPump.html>`_
 
 OpenAPS
 --------------------------------------------------
