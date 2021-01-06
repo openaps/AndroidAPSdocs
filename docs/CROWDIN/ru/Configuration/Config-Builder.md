@@ -95,47 +95,64 @@ Do a [profile switch](../Getting-Started/Screenshots.md#current-profile) to acti
 
 ## Инсулин
 
-Select the type of insulin curve you are using. The options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak.
+![Insulin type](../images/ConfBuild_Insulin.png)
 
-The DIA is not the same for each person. That's why you have to test it for yourself. But it must always be at least 5 hours. You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page.
+* Select the type of insulin curve you are using.
+* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
+* The curves will vary based on the DIA and the time to peak.
+    
+    * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
+    * BLUE line shows **how active** insulin is.
 
-For Rapid-Acting and Ultra-Rapid, the DIA is the only variable you can adjust by yourself, the time to peak is fixed. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings.
+### DIA
 
-The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
+* The DIA is not the same for each person. That's why you have to test it for yourself. 
+* But it must always be at least 5 hours.
+* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
+* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page. 
 
-### Rapid-Acting Oref
+### Insulin type differences
 
-* рекомендуется для Humalog, Novolog и Novorapid
-* DIA (длительность действия инсулина) = по крайней мере 5.0 часов
-* Макс. пик = 75 мин после инъекции (фиксированный, не регулируется)
+* For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
+* Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
+* The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. 
+* You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
 
-### Ultra-Rapid Oref
+#### Rapid-Acting Oref
 
-* рекомендуется для FIASP
-* DIA (длительность действия инсулина) = по крайней мере 5.0 часов
-* Макс. пик = 55 мин после инъекции (фиксированный, не регулируется)
+* recommended for Humalog, Novolog and Novorapid
+* DIA = at least 5.0h
+* Max. peak = 75 minutes after injection (fixed, not adjustable)
 
-For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
+#### Ultra-Rapid Oref
 
-![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
+* recommended for FIASP
+* DIA = at least 5.0h
+* Max. peak = 55 minutes after injection (fixed, not adjustable)
 
-### Free Peak Oref
+#### Lyumjev
 
-With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+* special insulin profile for Lyumjev
+* DIA = at least 5.0h
+* Max. peak = 45 minutes after injection (fixed, not adjustable)
 
-This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+#### Free Peak Oref
+
+* With the "Free Peak 0ref" profile you can individually enter the peak time.
+* The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+* This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
 ## Источник данных гликемии
 
 Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
 
 * [xDrip +](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
-* СК с клиента Nightscout
+* NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [ Glimp ](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)-поддерживается только версия 4.15.57 и более поздние
-* Модифицированное приложение [Dexcom](https://github.com/dexcomapp/dexcomapp/) - выберите «Отправлять данные ГК на xDrip +», если хотите пользоваться оповещениями от xDrip +.
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
+* [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
     
-    ![Источник ГК в конфигураторе](../images/ConfBuild_BGSource.png)
+    ![Config Builder BG source](../images/ConfBuild_BGSource.png)
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
@@ -147,7 +164,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 Select the pump you are using.
 
 * [Dana R](DanaR-Insulin-Pump.md)
-* DanaR Корея (DanaR для корейского рынка)
+* Dana R Korean (for domestic DanaR pump)
 * Dana Rv2 (DanaR pump with unofficial firmware upgrade)
 * [Dana RS](DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
@@ -207,9 +224,9 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 ### Minimal request change
 
-* При открытогм цикле вы будете получать уведомления каждый раз, когда AAPS рекомендует скорректировать базальную скорость. 
-* Чтобы уменьшить число уведомлений, можно либо использовать более широкий диапазон целевой ГК, либо увеличить процент минимального запроса на изменения.
-* Он определяет относительное изменение, необходимое для активации уведомления.
+* When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. 
+* To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate.
+* This defines the relative change required to trigger a notification.
 
 ## Цели (обучающая программа)
 
@@ -246,7 +263,7 @@ Define which Buttons are shown on the home screen.
 
 Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
 
-#### Настройки мастера болюса
+#### QuickWizard settings
 
 Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
 
@@ -329,7 +346,7 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 * Setup sync of your AndroidAPS data with Nightscout.
 * Settings in [preferences](../Configuration/Preferences#nsclient) can be opened by clicking the cog wheel.
 
-### Тех. обслуживание
+### Maintenance
 
 Email and number of logs to be send. Normally no change necessary.
 
