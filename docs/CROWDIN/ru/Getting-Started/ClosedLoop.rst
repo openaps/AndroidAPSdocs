@@ -32,10 +32,11 @@ AndroidAPS подробно описан в этой документации <.
 
 Совместимые ` помпы <../Hardware/pumps.html> ` _:
 
-* DanaR / DanaRS
-* Accu Chek Combo
-* Accu-Chek Insight
-* некоторые старые помпы Medtronic (начиная с версии 2.4)
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
+* `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_
+* some old `Medtronic pumps <../Configuration/MedtronicPump.html>`_
 
 OpenAPS
 --------------------------------------------------
