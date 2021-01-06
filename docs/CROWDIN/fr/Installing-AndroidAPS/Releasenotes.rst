@@ -20,7 +20,7 @@ Date de sortie : 01-01-2021
 Conseils importants
 ----------------------
 * **La version minimale d'Android est 8.0 maintenant.** Pour les anciennes versions d'Android, vous pouvez toujours utiliser la version 2.6.1.4 de l'ancien dépôt. 
-* `Les objectifs ont changé. <../Usage/Objectives.html#objectif-3-prouver-ses-connaissances>`_ **Finissez les objectifs non terminés après la mise à jour.**
+* `Les objectifs ont changé. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
 * Le dossier github est toujours sur https://github.com/nightscout/AndroidAPS. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un `nouveau clone <../Installing-AndroidAPS/Building-APK.html>`_.
 * Utilisez `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
@@ -28,7 +28,7 @@ Nouvelles fonctionnalités majeures
 ----------------------
 * `Support de l'Omnipod Eros <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda et merci spécial à @ps2 @itsmojo, et à toutes les autres personnes impliquées dans le développement du driver pour Omnipod ainsi que @jlucasvt de GetRileyLink.org 
 * `Assistant bolus <../Configuration/Preferences.html#assistant-bolus>`_ & `Rappel repas <../Getting-Started/Screenshots.html#rappel-repas>`_ @MilosKozak 
-* nouveau cadran de montre @rICTx-T1D
+* `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-28>`_ @rICTx-T1D
 * Améliorations de la connexion Dana RS @MilosKozak 
 * Suppression de "Valeurs MGC inchangées" pour les SMB pour l'application native Dexcom
 * Nouveau thème `Basse résolution <../Configuration/Preferences.html#theme>`_
