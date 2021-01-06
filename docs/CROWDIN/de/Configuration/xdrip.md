@@ -338,6 +338,11 @@ Bitte beachte, dass die folgende Methode evtl. nicht funktioniert, wenn die Seri
    
    ![xDrip+ Libre Bluetooth Einstellungen 2](../images/xDrip_Libre_BTSettings2.png)
 
+### Batteriestand Libre Smart Reader
+
+* Der Batteriestand eines Smart Readers wie z.B. des MiaoMiao 2 kann in AAPS angezeigt werden.
+* Weitere Details auf der Seite [AndroidAPS Bildschirme](../Getting-Started/Screenshots#sensor-level-batterie).
+
 ### Libre Transmitter verbinden und Sensor starten
 
 ![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
