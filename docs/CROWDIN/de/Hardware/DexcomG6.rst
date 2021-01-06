@@ -41,9 +41,10 @@ G6 mit der gepatchten Dexcom App
    .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Region in der Dexcom G6 URL
 
-* Stoppe den Sensor und deinstalliere die originale Dexcom App, falls du das noch nicht gemacht hast.
+* Uninstall the original Dexcom app.
 * Installiere die heruntergeladene apk
-* Starte den Sensor
+* Enter sensor code and transmitter serial no. in patched app.
+* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
 * Wähle gepatchte Dexcom App im Konfigurations-Generator (Konfiguration in AndroidAPS).
 * xDrip+ Alarme kannst Du über den lokalen Broadcast nutzen: In xDrip > Hamburger Menü > Einstellungen > Datenquelle > 640G / EverSense.
 * Der lokale Broadcast funktioniert nicht direkt von der gepatchten Dexcom App zu xDrip+. Der Broadcast muss über AAPS laufen.
@@ -52,7 +53,11 @@ G6 mit Build Your Own Dexcom App
 ==================================================
 * Seit Dezember 2020 unterstützt die `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA - "Erstelle deine eigene Dexcom App") auch die lokale Datenweitergabe an AAPS und/oder xDrip+ (nicht für G5 Sensoren!)
 * Mit dieser App kannst du den Dexcom G6 mit jedem Android Smartphone verwenden.
+* Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously.
+* Installiere die heruntergeladene apk
+* Enter sensor code and transmitter serial no. in patched app.
 * Gehe in den Einstellungen des Smartphone zu Apps > Dexcom G6 > Berechtigungen > Weitere Berechtigungen und drücke 'Zugriff Dexcom App'.
+* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
 
 Einstellungen für AndroidAPS
 --------------------------------------------------
