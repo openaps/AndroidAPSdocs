@@ -37,6 +37,7 @@ Major new features
 * NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak 
 * `Preferences filter <../Configuration/Preferences.html>`_ @Brian Quinion
 * New pump icons @Rig22 @@teleriddler @osodebailar
+* New `insulin type Lyumjev <../Configuration/Config-Builder.html#lyumjev>`_
 * SetupWizard improvements @MilosKozak 
 * Security improvements @dlvoy 
 * Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
