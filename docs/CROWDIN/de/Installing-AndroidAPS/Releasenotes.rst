@@ -37,6 +37,7 @@ Wichtige neue Funktionen
 * NSClient überträgt Insulin, Senstivität und Anzeige-Einstellungen direkt von AAPS @MilosKozak 
 * `Filter für Einstellungen im 3-Punkte-Menü <../Configuration/Preferences.html>`_ @Brian Quinion
 * Neue Pumpensymbole @Rig22 @@teleriddler @osodebailar
+* Neuer `Insulintyp Lyumjev <../Configuration/Config-Builder.html#lyumjev>`_
 * Verbesserungen im Einrichtungsassitenten @MilosKozak 
 * Verbesserung der Sicherheit @dlvoy 
 * Verschiedene Verbesserungen und Fehlerbehebungen @AdrianLxM @Philoul @swissalpine @MilosKozak @Brian Quinion 
