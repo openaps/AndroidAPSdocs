@@ -1,138 +1,138 @@
 Poznámky k vydání
 **************************************************
-Please follow the instructions in the `update manual <../Installing-AndroidAPS/Update-to-new-version.html>`_. Na stránce popisující aktualizaci také můžete najít sekci řešení problémů, která řeší nejčastější problémy při aktualizaci.
+Postupujte prosím podle pokynů v `návodu k aktualizaci <../Installing-AndroidAPS/Update-to-new-version.html>`_. Na stránce popisující aktualizaci také můžete najít sekci řešení problémů, která řeší nejčastější problémy při aktualizaci.
 
 Jakmile bude k dispozici nová aktualizace, obdržíte následující informace:
 
 .. image:: ../images/AAPS_LoopDisable90days.png
-  :alt: Update info
+  :alt: Informace o aktualizaci
 
-Pak máte 60 dnů na aktualizaci. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 6 <../Usage/Objectives.html>`_.
+Pak máte 60 dnů na aktualizaci. Pokud do těchto 60 dnů neaktualizujete AAPS, přepne se do LGS (low glucose suspend - viz `slovník <../Getting-Started/Glossary.html>`_) jako v `6. cíli <../Usage/Objectives.html>`_.
 
 Pokud neaktualizujete do dalších 30 dní (90 dní od nového vydání) přejde AAPS na otevřenou smyčku.
 
 Prosím pochopte, že tato změna není určena, aby vás otravovala, ale je to kvůli bezpečnostním důvodům. Nové verze AndroidAPS neposkytují pouze nové funkce, ale také důležité bezpečnostní opravy. Proto je důležité, aby každý uživatel aktualizoval co nejdříve.. Bohužel stále existují hlášení o chybách z velmi starých verzí, takže se jedná o pokus zlepšit bezpečnost pro každého uživatele a celou komunitu DIY. Děkujeme za pochopení.
 
-Version 2.8.0
+Verze 2.8.0
 ================
-Release date: 01-01-2021
+Datum vydání: 01. 01. 2021
 
-Important hints
+Důležitá poznámky
 ----------------------
-* **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo. 
-* `Objectives have changed. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
-* Repository location still on https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
-* Please use `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+* **Minimální verze Androidu je teď 8.0.** Pro starší verze Androidu lze stále použít verzi 2.6.1.4 ze starého úložiště kódů. 
+* `Cíle byly změněny. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
+Umístění kódů bylo změněno na https://github.com/nightscout/AndroidAPS . Pokud se nevyznáte v práci s nástrojem git, nejjednodušší způsob aktualizace je odstranění staré verze a vytvoření `nového klonu kódu<../Installing-AndroidAPS/Building-APK.html>`_.
+* K sestavení APK použijte `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
 ----------------------
-* `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org 
+* `podpora Omnipod Eros <../Configuration/OmnipodEros.html>` _ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and zvláštní díky @ps2 @itsmojo, dalším, kteří se ůčastnili vývoje ovladače pro Loop a @jlucasvt z GetRileyLink.org 
 * `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
 * `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-28>`_ @rICTx-T1D
-* Dana RS connection improvements @MilosKozak 
-* Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
+* Vylepšení připojení Dana RS @MilosKozak 
+* Odstraněno chování "Nezměněné hodnoty CGM" v SMB pro nativní aplikaci Dexcom
 * New `Low Ressolution Skin <../Configuration/Preferences.html#skin>`_
-* New `"Pregnant" patient type <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_ @Brian Quinion
-* New NSClient tablet layout @MilosKozak 
-* NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak 
+* Nový "Těhotný" typ pacienta <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_ @Brian Quinon
+* Nové rozložení NSClient pro tablety @MilosKozak 
+* NSClient přenáší nastavení inzulinu, senzitivity a zobrazení přímo z hlavní AAPS @MilosKozak 
 * `Preferences filter <../Configuration/Preferences.html>`_ @Brian Quinion
-* New pump icons @Rig22 @@teleriddler @osodebailar
+* Nové ikony pumpy@Rig22 @@teleriddler @osodebailar
 * New `insulin type Lyumjev <../Configuration/Config-Builder.html#lyumjev>`_
-* SetupWizard improvements @MilosKozak 
-* Security improvements @dlvoy 
-* Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
+* Vylepšení instalačního průvodce @MilosKozak 
+* Zlepšení zabezpečení @dlvoy 
+* Různé vylepšení a opravy @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Chinon 
 
-Version 2.7.0
+Verze 2.7.0
 ================
-Release date: 24-09-2020
+Datum vydání: 24. 09. 2020
 
-**Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`_.
+**Ujistěte se, že jste zkontrolovali a upravili nastavení po přechodu na verzi 2.7, jak je popsáno** `zde <../Installing-AndroidAPS/update2_7.html>`_.
 
-You need at least start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. This will not effect other objectives you have already finished. Splněné cíle zůstanou zachovány!
+Abyste mohli pokračovat v používání `Automatizace <../Usage/Automation.html>`_, potřebujete alespoň spustit plnění `cíle 11 <../Usage/Objectives.html#objective-11-automation>`_ (všechny předchozí cíle musí být splněny, aby šlo spustit cíl 11). Pokud jste například nedokončili zkoušku v `Cíli 3 <../Usage/Objectives. tml#objective-3-proof-your-knowledge>`_ budete ji muset dokončit dříve, než budete moci spustit `Cíl 11 <../Usage/Objectives.html#objektive-11-automation>`_. Neovlivní to cíle, které jste již dokončili. Splněné cíle zůstanou zachovány!
 
 Hlavní nové funkce
 ----------------------
-* internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
-* using modules for Dana pumps @MilosKozak
-* `new layout, layout selection <../Getting-Started/Screenshots.html>`_ @MilosKozak
-* new `status lights layout <../Configuration/Preferences.html#status-lights>`_ @MilosKozak
-* `multiple graphs support <../Getting-Started/Screenshots.html#section-f---main-graph>`_ @MilosKozak
-* `Profile helper <../Configuration/profilehelper.html>`_ @MilosKozak
-* visualization of `dynamic target adjustment <../Getting-Started/Screenshots.html#visualization-of-dynamic-target-adjustment>`_ @Tornado-Tim
-* new `preferences layout <../Configuration/Preferences.html>`_ @MilosKozak
-* SMB algorithm update @Tornado-Tim
-* `Low glucose suspend mode <../Configuration/Preferences.html#aps-mode>`_ @Tornado-Tim
-* `carbs required notifications <../Configuration/Preferences.html#carb-required-notification>`_ @twain47 @Tornado-Tim
-* removed Careportal (moved to Actions) @MilosKozak
-* `new encrypted backup format <../Usage/ExportImportSettings.html>`_ @dlvoy
-* `new SMS TOTP authentication <../Children/SMS-Commands.html>`_ @dlvoy
-* `new SMS PUMP CONNECT, DISCONNECT <../Children/SMS-Commands.html#commands>`_ commands @Lexsus
-* better support for tiny basals on Dana pumps @Mackwe
-* small Insight fixes @TebbeUbben @MilosKozak
-* `"Default language" option <../Configuration/Preferences.html#general>`_ @MilosKozak
-* vector icons @Philoul
-* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phoneandroidaps>`_ @Tornado-Tim
-* History browser improvements @MilosKozak
-* removed OpenAPS MA algorithm @Tornado-Tim
-* removed Oref0 sensitivity @Tornado-Tim
-* `Biometric or password protection <../Configuration/Preferences.html#protection>`_ for settings, bolus @MilosKozak
-* `new automation trigger <../Usage/Automation.html>`_ @PoweRGbg
-* `Open Humans uploader <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
-* New documentation @Achim
+* interní použití vkládání závislostí, aktualizací knihoven, kódu přepsaného do kotlinu @MilosKozak @AdrianLxM
+* využití modulů pro pumpy Dana @MilosKozak
+* `nový vzhled, výběr vzhledu <../Getting-Started/Screenshots.html>`_ @MilosKozak
+* nový `vzhled stavových indikátorů <../Configuration/Preferences.html#status-lights>`_ @MilosKozak
+* `podpora více grafů <../Getting-Started/Screenshots.html#section-f---main-graph>`_ @MilosKozak
+* `Pomocník s profilem <../Configuration/profilehelper.html>`_ @MilosKozak
+* vizualizace `dynamického nastavení cílové glykémie <../Getting-Started/Screenshots.html#visualization-of-dynamic-target-adjustment>`_ @Tornado-Tim
+* nový `vzhled Nastavení <../Configuration/Preferences.html>`_ @MilosKozak
+* vylepšení SMB algoritmu @Tornado-Tim
+* `Režim pozastavení nízké glykémie <../Configuration/Preferences.html#aps-mode>`_ @Tornado-Tim
+* `oznámení vyžadovaných sacharidů <../Configuration/Preferences.html#carb-required-notification>`_ @twain47 @Tornado-Tim
+* odstraněn plugin Ošetření (přesunut do pluginu Akce) @MilosKozak
+* `nový šifrovaný formát zálohy nastavení <../Usage/ExportImportSettings.html>`_ @dlvoy
+* `nová SMS TOTP autentizace <../Children/SMS-Commands.html>`_ @dlvoy
+* `nové SMS příkazy - PUMP CONNECT, DISCONNECT <../Children/SMS-Commands.html#commands>`_ @Lexsus
+* lepší podpora nízkých bazálů na pumpách Dana @Mackwe
+* drobná vylepšení pro pumpu Insight @TebbeUbben @MilosKozak
+* `"System default" volba jazyka nastaveného v telefonu <../Configuration/Preferences.html#general>`_ @MilosKozak
+* vektorové ikony @Philoul
+* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phoneanandroidaps>`_ @Tornado-Tim
+* vylepšení prohlížení historie @MilosKozak
+* odstraněn OpenAPS MA algoritmus @Tornado-Tim
+* odstraněna Oref0 senzitivita @Tornado-Tim
+* `Zabezpečení heslem nebo biometrií <../Configuration/Preferences.html#protection>`_ pro nastavení, bolus @MilosKozak
+* `nový spouštěč automatizace (trigger) <../Usage/Automation.html>`_ @PoweRGbg
+* `Open Humans nahrávač dat <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
+* Nová dokumentace @Achim
 
-Version 2.6.1.4
+Verze 2.6.1.4
 ================
-Release date: 04-05-2020
+Datum vydání: 04. 05. 2020
 
-Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
 ----------------------
-* Insight: Disable vibration on bolus for firmware version 3 - second attempt
-* Otherwise is equal to 2.6.1.3. Update is optional. 
+* Insight: Deaktivace vibrací na bolus pro firmware verze 3 - druhý pokus
+* Jinak je stejná jako verze 2.6.1.3. Aktualizace není povinná. 
 
-Version 2.6.1.3
+Verze 2.6.1.3
 ================
-Release date: 03-05-2020
+Datum vydání: 03. 05. 2020
 
-Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
 -----
-* Insight: Disable vibration on bolus for firmware version 3
-* Otherwise is equal to 2.6.1.2. Update is optional. 
+* Insight: Deaktivace vibrací na bolus pro firmware verze 3
+* Jinak je stejná jako verze 2.6.1.2. Aktualizace není povinná. 
 
-Version 2.6.1.2
+Verze 2.6.1.2
 ================
-Release date: 19-04-2020
+Datum vydání: 19. 04. 2020
 
-Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
 -----
-* Fix crashing in Insight service
-* Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
+* Oprava pádů pro Insight
+* Jinak je stejná jako verze 2.6.1.1. Pokud nejste ovlivněni touto chybou, nemusíte provádět upgrade.
 
-Version 2.6.1.1
+Verze 2.6.1.1
 ================
-Release date: 06-04-2020
+Datum vydání: 06. 04. 2020
 
-Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
 -----
-* Resolves SMS CARBS command issue while using Combo pump
-* Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
+* Řeší problém s příkazem SMS CARBS při použití Combo pumpy
+* Jinak je stejná jako verze 2.6.1. Pokud nejste ovlivněni touto chybou, nemusíte provádět upgrade.
 
-Version 2.6.1
+Verze 2.6.1
 ==============
-Release date: 21-03-2020
+Datum vydání: 21. 03. 2020
 
-Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
 -----
-* Allow to enter only https:// in NSClient settings
+* Povolit zadání pouze adresy https:// v nastavení NSClient
 * Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
 * Fixed small UI bugs
 * Fixed Insight crashes
@@ -147,7 +147,7 @@ Verze 2.6.0
 ==============
 Datum vydání: 29. 02. 2020
 
-Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
 -----
@@ -165,20 +165,20 @@ Hlavní nové funkce
 * Plugin MDT: Opravena chyba s duplicitními záznamy
 * Jednotky se nezadávají v profilu, ale v obecném nastavení aplikace
 * Přidáno nové nastavení do průvodce spuštěním
-* Different UI and internal improvements
-* `Wear complications <../Configuration/Watchfaces.html>`_
-* New `SMS commands <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
-* Fixed language support
-* Objectives: `Allow to go back <../Usage/Objectives.html#go-back-in-objectives>`_, Time fetching dialog
-* Automation: `allow sorting <../Usage/Automation.html#sort-automation-rules>`_
-* Automation: fixed bug when automation was running with disabled loop
-* New status line for Combo
-* GlucoseStatus improvement
-* Fixed TempTarget NS sync
-* New statistics activity
-* Allow Extended bolus in open loop mode
-* Android 10 alarm support
-* Tons on new translations
+* Jiné UI a interní vylepšení
+* `Komplikace pro Wear <../Configuration/Watchfaces.html>`_
+* Nové `SMS příkazy <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
+* Opravená podpora jazyků
+* Cíle: `Možnost vrátit se zpět <../Usage/Objectives.html#go-back-in-objectives>`_, Dialogové okno s ukazatelem průběhu
+* Automatizace: `možnost třídění <../Usage/Automation.html#sort-automation-rules>`_
+* Automatizace: opravena chyba, kdy byla automatizace spuštěna s vypnutou smyčkou
+* Nový stavový řádek pro Combo
+* Vylepšení trendových šipek
+* Opravena synchronizace dočasných cílů s NS
+* Nová položka Statistika
+* Povolen Rozložený bolus v režimu otevřené smyčky
+* Podpora výstrah systému Android 10
+* Nové překlady
 
 Verze 2.5.1
 ==================================================
@@ -262,7 +262,7 @@ Hlavní nové funkce
 * `DST fix <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
 * Aktualizace Wear
 * `SMS plugin <../Children/SMS-Commands.html>`_ update
-* Go back in objectives.
+* Návrat k předchozímu cíli.
 * Zastavení smyčky, je-li úložiště telefonu plné
 
 
