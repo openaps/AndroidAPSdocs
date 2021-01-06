@@ -20,7 +20,7 @@ Release date: 01-01-2021
 Important hints
 ----------------------
 * **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo. 
-* `Objectives have changed. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives after update.**
+* `Objectives have changed. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
 * Repository location still on https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
 * Please use `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -28,7 +28,7 @@ Hlavní nové funkce
 ----------------------
 * `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org 
 * `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
-* new watchface @rICTx-T1D
+* `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-28>`_ @rICTx-T1D
 * Dana RS connection improvements @MilosKozak 
 * Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
 * New `Low Ressolution Skin <../Configuration/Preferences.html#skin>`_
@@ -37,6 +37,7 @@ Hlavní nové funkce
 * NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak 
 * `Preferences filter <../Configuration/Preferences.html>`_ @Brian Quinion
 * New pump icons @Rig22 @@teleriddler @osodebailar
+* New `insulin type Lyumjev <../Configuration/Config-Builder.html#lyumjev>`_
 * SetupWizard improvements @MilosKozak 
 * Security improvements @dlvoy 
 * Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 

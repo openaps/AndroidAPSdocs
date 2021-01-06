@@ -53,7 +53,7 @@
 
 ### Проверьте прошивку смартфона
 
-* Меню > Настройки > Настройки > Информация о телефоне > Информация о Программном обеспечении: не ниже "Android-Version 7.0" (успешно протестирована до версии 8.0.0 Oreo - Samsung Experience Version 9.0) 
+* Menu > Settings > Phone info > Software info: At least "Android-Version 8.0" (successfully tested up to Android version 8.0.0 Oreo - Samsung Experience Version 9.0) 
 * Для обновления прошивки: меню > Настройки > Обновление программы
 
 ### Разрешите установку приложений из неизвестных источников

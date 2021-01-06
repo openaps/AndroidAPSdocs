@@ -338,7 +338,12 @@ V log souborech v xDrip+ ověřte, že xDrip+ začne počítat „Trvání: 1 mi
    
    ![xDrip+ Libre nastavení bluetooth 2](../images/xDrip_Libre_BTSettings2.png)
 
-### Připojte Libre vysílač & spusťte senzor
+### Libre smart reader battery level
+
+* Battery level of smart readers such as MiaoMiao 2 can be displayed in AAPS.
+* Details can be found on [screenshots page](../Getting-Started/Screenshots#sensor-level-battery).
+
+### Connect Libre Transmitter & start sensor
 
 ![xDrip+ Spustit vysílač a senzor Libre 1](../images/xDrip_Libre_Transmitter01.png)
 

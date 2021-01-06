@@ -20,7 +20,7 @@ Erscheinungsdatum: 01.01.2021
 Wichtige Hinweise
 ----------------------
 * **Mindestvoraussetzung ist nun Android 8.0.** Falls Du ein Smartphone mit einer älteren AndroidVersion verwendest, kannst Du immer noch die Version 2.6.1.4 aus dem alten Repository verwenden. 
-* `Objectives (Ziele) wurden geändert. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives after update.**
+* `Objectives (Ziele) wurden geändert. <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ **Wenn du dein aktuelles Ziel noch nicht abgeschlossen hast, so beende dieses vor dem Update.**
 * Repository weiterhin auf https://github.com/nightscout/AndroidAPS . Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die App-Erstellung `von vorne beginnst <../Installing-AndroidAPS/Building-APK.html>`_.
 * Nutze bitte `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
@@ -28,7 +28,7 @@ Wichtige neue Funktionen
 ----------------------
 * `Omnipod Eros Unterstützung <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda und besonderer Dank an @ps2 @itsmojo, alle anderen am Loop-Treiber für Omnipod Beteiligten, sowie @jlucasvt von GetRileyLink.org 
 * `Bolus-Berater <../Configuration/Preferences.html#bolus-berater>`_ & `Essens-Erinnerung <../Getting-Started/Screenshots.html#essens-erinnerung>`_ @MilosKozak 
-* neues Watchface @rICTx-T1D
+* `Neues Watchface <../Configuration/Watchfaces.html#neues-watchface-ab-version-28>`_ @rICTx-T1D
 * Verbesserung der Verbindung zur Dana RS @MilosKozak 
 * Bei Verwendung der nativen Dexcom App werden über mehr als 45 Minuten unveränderte CGM-Werte in SMB weiter berücksichtigt.
 * Neues `Erscheinungsbild für niedrige Bildschirmauflösungen <../Configuration/Preferences.html#erscheinungsbild>`_

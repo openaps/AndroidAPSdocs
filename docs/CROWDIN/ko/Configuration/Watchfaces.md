@@ -64,6 +64,12 @@ To get faster to the AAPS menu, do a double tap on your BG. With a double tap on
 
 ![Available watchfaces](../images/Watchface_Types.png)
 
+### New watchface as of AndroidAPS 2.8
+
+![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
+
+* Color, lines and circle are configurable in setting menu on cog-sign of watchface chooser menu.
+
 ## AAPSv2 watchface - Legend
 
 ![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)

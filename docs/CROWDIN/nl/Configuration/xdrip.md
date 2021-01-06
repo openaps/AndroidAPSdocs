@@ -338,7 +338,12 @@ Controleer in xDrip+ logs of xDrip+ begint met het tellen van de duur "Duration:
    
    ![xDrip+ Libre Bluetooth-instellingen 2](../images/xDrip_Libre_BTSettings2.png)
 
-### Verbind Libre zender & start sensor
+### Libre smart reader battery level
+
+* Battery level of smart readers such as MiaoMiao 2 can be displayed in AAPS.
+* Details can be found on [screenshots page](../Getting-Started/Screenshots#sensor-level-battery).
+
+### Connect Libre Transmitter & start sensor
 
 ![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 

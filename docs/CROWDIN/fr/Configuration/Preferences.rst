@@ -144,7 +144,7 @@ Cibles Temporaires par défaut
   
 Insuline par défaut pour Amorcer/Remplir
 -----------------------------------------------------------
-* Si vous voulez remplir la tubulure ou amorcer la canule avec AAPS, vous pouvez le faire via `l'onglet actions <../Usage/CPbefore26.html#pump>`_.
+* If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
 * Les valeurs prédéfinies peuvent être configurées dans cette boite de dialogue.
 
 Fourchette de visualisation
@@ -174,7 +174,7 @@ Voyants d'état
 * Les voyants d'état donnent une alerte visuelle pour 
       
    * Âge du capteur
-   * Niveau de batterie capteurs pour certains MGC utilisant des transmetteurs externe (voir les [Ecrans AndroidAPS](../Getting-Started/Screenshots#niveau-du-capteur-batterie) pour plus de détails.
+   * Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots#sensor-level-battery) for details).
    * Âge de l'insuline (jours d'utilisation du réservoir)
    * Niveau du réservoir (unités)
    * Âge de la canule
@@ -202,7 +202,7 @@ Injecter cette partie de Bolus calculée par l’assistant
 
 Assistant bolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Si vous exécutez `l'assistant de Bolus <../Getting-Started/Screenshots.html#assistant-bolus>`_ et que la glycémie est supérieure à 10 mmol (180 mg/dl) un bolus de correction sera proposé.
+* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
 * Si le bolus de correction est accepté, **aucun glucide** ne sera enregistré.
 * Une alarme sera déclenchée lorsque la glycémie est au bon niveau pour commencer à manger.
 * Vous devez à nouveau sélectionner l'`Assistant Bolus <../Getting-Started/Screenshots.html#assistant-bolus>`_ et entrer la quantité de glucides que vous voulez manger.

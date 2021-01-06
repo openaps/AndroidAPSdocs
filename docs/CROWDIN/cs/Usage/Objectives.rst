@@ -35,6 +35,9 @@ Objective 3: Prove your knowledge
      :alt: Screenshot cíl 3
 
 * Odkazy budou poskytnuty jako vodítko pro případ, že si nejste jisti odpovědí.
+* The questions for objective 3 have been completely rewritten by native speakers as of AAPS 2.8. The new ones cover the same basic topics plus a few new ones.
+* These new questions will lead to some not answered questions even though you have successfully completed objective 3 in previous versions.
+* Unanswered questions will affect you only if you start a new objective. In other words: If you have already completed all objectives you can wait and answer the new questions later without loosing AAPS functions.
 
 Cíl 4: Začít s otevřenou smyčkou
 ==================================================

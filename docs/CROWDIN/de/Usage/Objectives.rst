@@ -35,6 +35,9 @@ Ziel 3: Belege Dein Wissen
      :alt: Screenshot Ziel 3
 
 * Links zum Wiki helfen Dir weiter, falls Du an der einen oder anderen Stelle noch nicht so sicher sein solltest.
+* Für Version 2.8 wurde Objective 3 komplett von Muttersprachlern überarbeitet. Die neuen Fragen decken die bisherigen ab und fügen ein paar neue hinzu.
+* Diese neuen Fragen führen dazu, dass einige Fragen unbeantwortet sind, obwohl du Ziel (objective) 3 in der Vergangenheit bereits erfolgreich abgeschlossen hast.
+* Diese unbeantworteten Fragen betreffen dich nur, wenn du ein neues Ziel (objective) starten möchtest. Anders gesagt: Wenn du alle Ziele (objectives) bereits erfolgreich abgeschlossen hast, verlierst du keine Funktionen in AAPS, wenn du die neuen Fragen nicht beantwortest.
 
 Ziel 4: Starte den Open Loop
 ==================================================

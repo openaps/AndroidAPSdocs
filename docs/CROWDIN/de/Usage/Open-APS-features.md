@@ -207,16 +207,16 @@ Standardwert: 2
 
 ## Übersicht der fest programmierten Limits
 
-<table>
+<table border="1">
   
 <thead>
   <tr>
-    <th></th>
-    <th>Kind</th>
-    <th>Jugendlicher</th>
-    <th>Erwachsener</th>
-    <th>Insulinresistenter Erwachsener</th>
-    <th>Schwangere</th>
+    <th width="200"></th>
+    <th width="75">Kind</th>
+    <th width="75">Jugendlicher</th>
+    <th width="75">Erwachsener</th>
+    <th width="75">Insulinresistenter Erwachsener</th>
+    <th width="75">Schwangere</th>
   </tr>
 </thead>
 <tbody>

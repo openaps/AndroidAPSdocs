@@ -53,7 +53,7 @@ Diegdami Android Studio būkite kantrūs, nes programa į savo kompiuterį atsis
 
 ### Patikrinkite išmaniojo telefono programinę įrangą
 
-* Meniu > Nustatymai> Telefono informacija > Programinė įranga: bent jau Android Versija 7.0 (sėkmingai išbandytas iki Android versijos 8.0.0 Oreo - Samsung Patirties Versija 9.0) 
+* Menu > Settings > Phone info > Software info: At least "Android-Version 8.0" (successfully tested up to Android version 8.0.0 Oreo - Samsung Experience Version 9.0) 
 * Norėdami atnaujinti programinę įrangą: Meniu > Nustatymai > Programos atnaujinimas
 
 ### Leisti diegti iš nežinomų šaltinių
