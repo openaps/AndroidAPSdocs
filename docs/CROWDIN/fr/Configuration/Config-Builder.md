@@ -97,7 +97,7 @@ Inconvénients :
 
 ![Insulin type](../images/ConfBuild_Insulin.png)
 
-* Select the type of insulin curve you are using.
+* Sélectionnez le type de courbe d'insuline que vous utilisez.
 * The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
 * The curves will vary based on the DIA and the time to peak.
     
@@ -106,82 +106,82 @@ Inconvénients :
 
 ### DAI
 
-* The DIA is not the same for each person. That's why you have to test it for yourself. 
-* But it must always be at least 5 hours.
-* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
-* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page. 
+* La DAI n'est pas la même pour chaque personne. C'est pourquoi vous devez la tester par vous-même. 
+* Mais elle doit toujours être au minimum de 5 heures.
+* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. Cette quantité résiduelle peut encore être perceptible pendant le sport, par exemple. Par conséquent, AndroidAPS utilise au moins 5h comme DAI.
+* Vous pouvez en savoir plus à ce sujet dans la section Profil d'Insuline de [cette page](../Getting-Started/Screenshots#insulin-profile). 
 
 ### Insulin type differences
 
 * For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
-* Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
-* The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. 
-* You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
+* Le Profil d'insuline ajustable vous permet d'ajuster à la fois la DAI et le temps du pic, et ne doit être utilisé que par les utilisateurs confirmés qui connaissent les effets de ces paramètres. 
+* Le [graphique de courbe d'insuline](../Getting-Started/Screenshots#insulin-profile) vous aide à comprendre les différentes courbes. 
+* Vous pouvez le voir en activant la case à cocher pour l'afficher sous forme d'onglet, sinon il se trouve dans le menu hamburger.
 
-#### Rapid-Acting Oref
+#### Insuline à Action Rapide Oref 
 
-* recommended for Humalog, Novolog and Novorapid
-* DIA = at least 5.0h
-* Max. peak = 75 minutes after injection (fixed, not adjustable)
+* recommandé pour Humalog, Novolog et Novorapid
+* DAI = au moins 5.0h
+* Pic maxi = 75 minutes après l'injection (fixe, non réglable)
 
-#### Ultra-Rapid Oref
+#### Insuline Ultra Rapide Oref
 
-* recommended for FIASP
-* DIA = at least 5.0h
-* Max. peak = 55 minutes after injection (fixed, not adjustable)
+* recommendé pour FIASP
+* DAI = au moins 5.0h
+* Pic maxi = 55 minutes après l'injection (fixe, non réglable)
 
 #### Lyumjev
 
 * special insulin profile for Lyumjev
-* DIA = at least 5.0h
-* Max. peak = 45 minutes after injection (fixed, not adjustable)
+* DAI = au moins 5.0h
+* Pic maxi = 45 minutes après l'injection (fixe, non réglable)
 
-#### Free Peak Oref
+#### Profil d'insuline ajustable Oref
 
-* With the "Free Peak 0ref" profile you can individually enter the peak time.
-* The DIA is automatically set to 5 hours if it is not specified higher in the profile.
-* This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+* Avec le "Profil d'insuline ajustable 0ref" vous pouvez entrer individuellement l'heure du pic.
+* La DAI est automatiquement définie à 5 heures s'il n'est pas spécifié plus haut dans le profil.
+* Ce profil est recommandé si une insuline non soutenue ou un mélange d'insulines différentes est utilisé.
 
 ## Source GLY
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
+Sélectionnez la source de glycémie que vous utilisez - consultez la page [Source Gly](BG-Source.rst) pour plus d'informations sur la configuration.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
-* NSClient BG
-* [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
-* [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
+* Glycémie NSClient
+* [Medtronic 640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - seule la version 4.15.57 et plus récentes sont prise en charge
+* [App Dexcom (patché)](https://github.com/dexcomapp/dexcomapp/) - Sélectionnez "Envoyer des données Gly à xDrip+" si vous voulez utiliser des alarmes xDrip+.
     
-    ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+    ![Générateur de Configuration Source de Glycémie](../images/ConfBuild_BGSource.png)
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
-* [Tomato App](http://tomato.cool/) for MiaoMiao device
-* Random BG: Generates random BG data (Demo mode only)
+* [Application Tomato](http://tomato.cool/) pour les transmetteurs MiaoMiao
+* Gly Aléatoire : Génère des données de glycémie aléatoires (mode Démo uniquement)
 
 ## Pompe
 
-Select the pump you are using.
+Sélectionner la pompe que vous utilisez.
 
-* [Dana R](DanaR-Insulin-Pump.md)
-* Dana R Korean (for domestic DanaR pump)
-* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
-* [Dana RS](DanaRS-Insulin-Pump.md)
+* [DanaR](DanaR-Insulin-Pump.md)
+* DanaR coréenne (pour la pompe DanaR domestique)
+* DanaRv2 (pompe DanaR avec mise à niveau du firmware non officiel)
+* [DanaRS](DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
-* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (nécessite l'installation de ruffy)
 * [Medtronic](MedtronicPump.md)
-* MDI (receive AAPS suggestions for your multiple daily injections therapy)
-* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
+* MIQ (Permet de recevoir des suggestions de AAPS pour des thérapies avec de Multiples Injection Quotidiennes)
+* Pompe virtuelle (boucle ouverte pour les pompes qui n'ont pas encore de pilote - suggestions AAPS uniquement)
 
-For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+Pour les pompes Dana, utilisez **Paramètres avancés** pour activer le "Watchdog BT" si nécessaire. Il éteint le Bluetooth pendant une seconde si aucune connexion à la pompe n'est possible. Cela peut être utile sur certains téléphones où la puce bluetooth se bloque.
 
-[Password for Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
+[Le mot de passe pour les pompes Dana RS](../Configuration/DanaRS-Insulin-Pump.md) doit être entré correctement. Le mot de passe n'était vérifié dans les versions précédentes.
 
 ## Estimation de Sensibilité
 
-Select the type of sensitivity detection. For more details of different designs please [read on here](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Sélectionnez le type de calcul pour la sensibilité. Pour plus de détails sur la conception, veuillez [lire ceci](../Configuration/Sensitivity-detection-and-COB.md). Cela analysera les données historiques au fur et à mesure et fera des ajustements si elle détecte que vous réagissez de façon plus sensible (ou plus résistante) à l'insuline que d'habitude. Plus de détails sur l'algorithme de la Sensitibilité peuvent être lus dans la [documentation OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
-You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+Vous pouvez voir votre sensibilité sur l'écran d'accueil en sélectionnant Sensibilité dans les paramètres du graphique et en observant la ligne blanche. Remarque, vous devez être à l'[Objectif 8](../Usage/Objectives#objectif-8-ajustement-des-debits-basal-et-des-ratios-si-necessaire-puis-activation-de-la-fonction-auto-sens) pour que la détection de sensibilité / [Autosens](../Usage/Open-APS-features#autosens) ajuste automatiquement la quantité d'insuline délivrée. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
 ### Paramètres d’absorption
 
