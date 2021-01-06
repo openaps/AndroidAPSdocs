@@ -32,10 +32,11 @@ AndroidAPS는 '이 문서<./WhatisAndroidAPS.html>'에 자세히 설명되어 �
 
 호환 가능한 '펌프<../Hardware/pumps.html>`는 다음과 같습니다:
 
-* 다나 R / 다나 RS
-* 아큐-첵 콤보
-* 아큐-첵 인사이트
-* 일부 오래된 메드트로닉 펌프 (버전 2.4의 경우)
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
+* `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_
+* some old `Medtronic pumps <../Configuration/MedtronicPump.html>`_
 
 OpenAPS
 --------------------------------------------------
