@@ -20,7 +20,7 @@ Una nota de cautela: los AndroidAPS no están regulados por ninguna autoridad m�
 
 	* Todos los productos y nombres de compañias, marcas, servicios, marcas registradas y servicios registrados son propiedad de sus respectivos tenedores. Su uso aquí es informativo y no implica afiliación o pago por ello.
 
-	Tenga en cuenta que este proyecto no tiene ninguna relación con y no está respaldado por: ` SOOIL <http://www.sooil.com/eng/>` _, ` Dexcom <http://www.dexcom.com/>` _, ` Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>` _ o ` Medtronic <http://www.medtronic.com/>` _.
+	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_, `Insulet <https://www.insulet.com/>`_ or `Medtronic <https://www.medtronic.com/>`_.
 	
 Si estás listo para el reto, por favor lee en. 
 

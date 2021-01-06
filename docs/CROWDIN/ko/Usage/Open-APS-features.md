@@ -8,7 +8,7 @@
 * AAPS 2.7 이전의 버전에서는 사용자가 수동으로 8시간 또는 24시간 중 선택해야 했습니다.
 * AAPS 2.7부터는 민감도를 계산하기 위해 AAPS의 Autosens가 8시간과 24시간 사이에서 전환하게 됩니다. 이는 둘 중 더 민감한 것을 선택할 것입니다. 
 * 사용자가 oref1을 사용했을 경우, 8시간 또는 24시간의 민감도 변경으로 인하여 시스템이 변화에 덜 역동적임을 인지할 수 있을 것입니다.
-* Changing a cannula or changing a profile will reset Autosens ratio back to 0%.
+* Changing a cannula or changing a profile will reset Autosens ratio back to 100%.
 * Autosens adjusts your basal, I:C and ISF for you (i.e.: mimicking what a Profile shift does).
 * If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
 

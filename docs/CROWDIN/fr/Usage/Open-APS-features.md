@@ -8,7 +8,7 @@
 * Dans les versions antérieures à AAPS 2.7, l'utilisateur devait choisir manuellement entre 8 heures ou 24 heures.
 * A partir de la version 2.7 d'AAPS, l'Autosens basculera entre une fenêtre de 24 heures et 8 heures pour calculer la sensibilité. Il choisira celle qui est le plus sensible. 
 * Les utilisateurs qui utilisaient oref1 remarqueront probablement que le système peut être moins dynamique en raison de la variation de sensibilité entre 24 heures et 8 heures.
-* Le changement de canule ou le changement de profil réinitialisera le ratio Autosens à 0%.
+* Changing a cannula or changing a profile will reset Autosens ratio back to 100%.
 * Autosens ajuste votre basal, votre ratio G/I et votre SI pour vous (c'est à dire qu'il imite ce que fait un changement de profil).
 * Si vous mangez continuellement des glucides sur une période prolongée, l'Autosens sera moins efficace pendant cette période car les glucides sont exclus les calculs des écarts de glycémie.
 
