@@ -41,9 +41,10 @@ If using G6 with xDrip+
    .. εικόνα:: ../images/DexcomG6regionURL.PNG
      :alt: Περιοχή Dexcom G6 URL
 
-* Απενεργοποιήστε τον αισθητήρα και καταργήστε την εγκατάσταση της αρχικής εφαρμογής Dexcom, εάν δεν το έχετε κάνει ήδη.
+* Uninstall the original Dexcom app.
 * Εγκαταστήστε το κατεβασμένο apk
-* Ξεκινήστε τον αισθητήρα
+* Enter sensor code and transmitter serial no. in patched app.
+* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
 * Επιλέξτε το DexcomG App (patched) στο μενού διαμόρφωσης (ρύθμιση στο AndroidAPS).
 * If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
 * There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.
@@ -52,7 +53,11 @@ If using G6 with Build Your Own Dexcom App
 ==================================================
 * As of December 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA)also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
 * This app lets you use your Dexcom G6 with any Android smartphone.
+* Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously.
+* Εγκαταστήστε το κατεβασμένο apk
+* Enter sensor code and transmitter serial no. in patched app.
 * In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
+* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
 
 Settings for AndroidAPS
 --------------------------------------------------
