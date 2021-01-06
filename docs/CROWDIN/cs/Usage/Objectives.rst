@@ -26,7 +26,7 @@ Cíl 2: Naučte se ovládat AndroidAPS
    .. image:: ../images/Objective2_V2_5.png
      :alt: Screenshot cíl 2
 
-Objective 3: Prove your knowledge
+Cíl 3: Prokázat své znalosti
 ==================================================
 * Správně zodpovězte otázky s výběrem možných odpovědí a prokažte znalost AndroidAPS.
 * Klikněte na oranžový text „Nedokončeno“ pro přístup na stránku s otázkou a možnými odpověďmi.
@@ -99,7 +99,7 @@ U 6. cíle nebude uzavřená smyčka korigovat vysokou glykémii, bude pouze zas
      :alt: Example negative IOB
 
 * If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
-* You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.
+* Bez možnosti zvýšit bazál při srovnání křivky glykémie se vám dočasně může stávat, že po vyřešení hypoglykémie bude následovat přílišný vzestup glykémie.
 
 Cíl 7: Vyladit uzavřenou smyčku, zvyšovat max IOB nad 0 a postupně snižovat cílovou glykémii
 ====================================================================================================
