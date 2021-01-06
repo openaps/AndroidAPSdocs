@@ -53,7 +53,7 @@
 
 ### Ελέγξτε το υλικολογισμικό του smartphone
 
-* Μενού> Ρυθμίσεις> Πληροφορίες τηλεφώνου> Πληροφορίες λογισμικού: Τουλάχιστον "Android-Version 7.0" (δοκιμάστηκε με επιτυχία μέχρι την έκδοση Android 8.0.0 Oreo - Samsung Experience Version 9.0) 
+* Menu > Settings > Phone info > Software info: At least "Android-Version 8.0" (successfully tested up to Android version 8.0.0 Oreo - Samsung Experience Version 9.0) 
 * Για ενημέρωση υλικολογισμικού: μενού> Προτιμήσεις> ενημέρωση λογισμικού
 
 ### Να επιτρέπεται η εγκατάσταση από άγνωστες πηγές
