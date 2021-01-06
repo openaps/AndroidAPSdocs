@@ -28,7 +28,7 @@ Wichtige neue Funktionen
 ----------------------
 * `Omnipod Eros Unterstützung <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda und besonderer Dank an @ps2 @itsmojo, alle anderen am Loop-Treiber für Omnipod Beteiligten, sowie @jlucasvt von GetRileyLink.org 
 * `Bolus-Berater <../Configuration/Preferences.html#bolus-berater>`_ & `Essens-Erinnerung <../Getting-Started/Screenshots.html#essens-erinnerung>`_ @MilosKozak 
-* neues Watchface @rICTx-T1D
+* `Neues Watchface <../Configuration/Watchfaces.html#neues-watchface-ab-version-28>`_ @rICTx-T1D
 * Verbesserung der Verbindung zur Dana RS @MilosKozak 
 * Bei Verwendung der nativen Dexcom App werden über mehr als 45 Minuten unveränderte CGM-Werte in SMB weiter berücksichtigt.
 * Neues `Erscheinungsbild für niedrige Bildschirmauflösungen <../Configuration/Preferences.html#erscheinungsbild>`_
