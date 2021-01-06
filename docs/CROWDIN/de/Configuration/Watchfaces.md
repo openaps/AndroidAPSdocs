@@ -64,6 +64,12 @@ Um schneller zu AndroidAPS zu kommen, kannst du den angezeigten CGM-Wert auf der
 
 ![Verfügbare Watchfaces](../images/Watchface_Types.png)
 
+### Neues Watchface ab Version 2.8
+
+![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
+
+* Farbe, Linien und der Kreis sind im Einstellungsmenü (Zahnradsymbol) des Watchface-Auswahl-Menüs konfigurierbar.
+
 ## AAPSv2 Watchface - Legende
 
 ![Legende AndroidAPSv2 watchface](../images/Watchface_Legend.png)
