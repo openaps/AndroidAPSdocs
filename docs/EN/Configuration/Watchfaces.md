@@ -63,6 +63,10 @@ With a double tap onto the BG curve you can change the time scale..
 
 ![Available watchfaces](../images/Watchface_Types.png)
 
+### New watchface as of AndroidAPS 2.8
+
+![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
+
 ## AAPSv2 watchface - Legend
 
 ![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
