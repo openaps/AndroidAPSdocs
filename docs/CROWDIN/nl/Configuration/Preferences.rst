@@ -144,7 +144,7 @@ Standaard tijdelijke streefdoelen
   
 Ontlucht/Vul standaard insuline hoeveelheden
 -----------------------------------------------------------
-* Als je jouw infuusslang of kanule via AAPS wilt vullen dan kan dat via de knop op de `Acties tab <../Usage/CPbefore26.html#pomp>`_.
+* If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
 * Je kunt zelf kiezen welke standaardhoeveelheden AAPS laat zien in het dialoogvenster dat ontlucht/vul knop zit.
 
 Bereik voor visualisatie
@@ -174,7 +174,7 @@ Statusindicatoren
 * Statusindicatoren geven een visuele waarschuwing voor 
       
    Sensor Leeftijd
-   * Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots#sensor-level-battery) for details.
+   * Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots#sensor-level-battery) for details).
    * Insuline leeftijd (aantal dagen dat reservoir wordt gebruikt)
    * Reservoir niveau (eenheden)
    * Infuus leeftijd
@@ -202,7 +202,7 @@ Voer dit deel van het boluscalculator resultaat uit
 
 Bolus advisor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and you glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
 * If correction bolus is accepted **no carbs** will recorded.
 * An alarm will be started when glucose value is in good level to start eating.
 * You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ again and enter the amount of carbs you want to eat.
