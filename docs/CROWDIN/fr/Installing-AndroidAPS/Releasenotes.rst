@@ -37,6 +37,7 @@ Nouvelles fonctionnalités majeures
 * NSClient transfert des paramètres insuline, sensibilité et les paramètres d'affichage directement à partir de l'écran principal AAPS @MilosKozak 
 * `Filtre des préférences <../Configuration/Preferences.html>`_ @Brian Quinion
 * Nouvelles icônes de pompe @Rig22 @teleriddler @osodebailar
+* New `insulin type Lyumjev <../Configuration/Config-Builder.html#lyumjev>`_
 * Améliorations de l'assistant de configuration @MilosKozak 
 * Améliorations de la sécurité @dlvoy 
 * Améliorations diverses et correctifs @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
