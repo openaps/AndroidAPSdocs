@@ -53,7 +53,7 @@ Při instalaci Android Studia buďte trpěliví, software potřebuje stáhnout s
 
 ### Zkontrolujte firmware telefonu
 
-* Menu > Settings > Phone info > Software info: At least "Android-Version 8.0" (successfully tested up to Android version 8.0.0 Oreo - Samsung Experience Version 9.0) 
+* Nabídka > Nastavení> Info o telefonu > Info o softwaru: Je potřeba alespoň „Android-verze 8.0“ (úspěšně testované do Android verze 8.0.0 Oreo - Samsung Experience verze 9.0) 
 * Chcete-li aktualizovat firmware: Nabídka > Nastavení > Aktualizace softwaru
 
 ### Povolit instalaci aplikací z neznámých zdrojů
