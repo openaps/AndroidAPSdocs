@@ -21,12 +21,12 @@ Začínáme
    :glob:
    
    Bezpečnost především <./Getting-Started/Safety-first.rst>
-   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Co je systém uzavřené smyčky <./Getting-Started/ClosedLoop.rst>
+   Co je systém uzavřené smyčky s AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
    
    
-What do I need? 
+Co potřebuji? 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
