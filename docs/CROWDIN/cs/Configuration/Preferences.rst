@@ -45,17 +45,17 @@ Protection
 -----------------------------------------------------------
 Master password
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
+* Abyste mohli `exportovat nastavení <../Usage/ExportImportSettings.html>`_, je nutné nastavit hlavní heslo. Od verze 2.7 jsou totiž exporty šifrované.
 
    **Biometric protection does not work on OnePlus phones. This is a know issue of OnePlus.**
 
-* Open Preferences (three-dot-menu on top right of home screen)
-* Click triangle below "General"
-* Click "Master-Password"
-* Enter password, confirm password and click ok.
+* Klepnutím na tři tečky v pravém horním rohu hlavní obrazovky otevřete Nastavení
+* Klepněte na trojúhelník pod "Obecné"
+* Klepněte na položku "Hlavní heslo"
+* Zadejte heslo, potvrďte ho, a klepněte na tlačítko Ok.
 
   .. image:: ../images/MasterPW.png
-    :alt: Set master password
+    :alt: Nastavení hlavního hesla
   
 Settings protection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
