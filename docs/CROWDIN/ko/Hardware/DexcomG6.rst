@@ -41,9 +41,10 @@ Dexcom G6를 Dexcom 앱(패치버전)과 사용하는 경우
    .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Dexcom G6 URL의 region
 
-* Dexcom 공식 앱이 남아 있는 경우, 센서를 스탑하고 앱을 삭제합니다.
+* Uninstall the original Dexcom app.
 * 다운로드 한 apk를 설치합니다.
-* 센서를 시작합니다.
+* Enter sensor code and transmitter serial no. in patched app.
+* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
 * (AndroidAPS의 설정 중) 구성 관리자에서 Dexcom 앱 (패치버전)을 선택합니다.
 * 로컬 브로드캐스트를 통해 xDrip+ 알람을 사용하려면: xDrip+ 메뉴 > 설정 > 하드웨어 데이터 출처 > 640G /EverSense를 선택하십시오.
 * 덱스콤 앱 (패치 버전)에서 xDrip+에 직접적인 로컬 브로드캐스트 연결은 할 수 없습니다. 위에서 설명한 방법으로 AAPS에 브로드캐스트 연결을 해야 합니다.
@@ -52,7 +53,11 @@ Dexcom G6를 직접 빌드한 덱스컴 앱과 사용하는 경우
 ==================================================
 * 2020년 12월에 나온 "직접 덱스컴 앱을 빌드하기<https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>` (Build Your Own Dexcom App; BYODA)는 AAPS 와/또는 xDrip+에 로컬 브로드캐스트 연결을 지원합니다(G5 센서는 아님).
 * This app lets you use your Dexcom G6 with any Android smartphone.
+* Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously.
+* 다운로드 된 apk를 설치합니다.
+* Enter sensor code and transmitter serial no. in patched app.
 * In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
+* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
 
 Settings for AndroidAPS
 --------------------------------------------------
