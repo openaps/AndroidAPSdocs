@@ -207,16 +207,16 @@ Standaardwaarde: 2
 
 ## Overzicht van harde limieten
 
-<table>
+<table border="1">
   
 <thead>
   <tr>
-    <th></th>
-    <th>Kind</th>
-    <th>Tiener</th>
-    <th>Volwassene</th>
-    <th>insuline resistente volwassene</th>
-    <th>Zwangere</th>
+    <th width="200"></th>
+    <th width="75">Kind</th>
+    <th width="75">Tiener</th>
+    <th width="75">Volwassene</th>
+    <th width="75">insuline resistente volwassene</th>
+    <th width="75">Zwangere</th>
   </tr>
 </thead>
 <tbody>
