@@ -41,9 +41,10 @@ Si vous utilisez le G6 avec l'application Dexcom patchée
    .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Region in Dexcom G6 URL
 
-* Arrêter le capteur et désinstaller l'application Dexcom d'origine, si ce n'est pas déjà fait.
+* Uninstall the original Dexcom app.
 * Installer l'APK téléchargé
-* Démarrer le capteur
+* Enter sensor code and transmitter serial no. in patched app.
+* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
 * Sélectionner App Dexcom (patchée) dans le Générateur de configuration (paramètre dans AndroidAPS).
 * Si vous voulez utiliser les alarmes xDrip via une diffusion locale, allez dans xDrip, Menu hamburger > Paramètres > Source de données matérielles > 640G / EverSense.
 * Il n'y a pas de diffusion locale de l'application Dexcom patchée directement vers xDrip+. La diffusion doit passer par AAPS, comme décrit ci-dessus.
@@ -52,7 +53,11 @@ Si vous utilisez G6 avec votre propre application Dexcom
 ==================================================
 * Depuis Décembre 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA) prend également en charge la diffusion locale vers AAPS et/ou xDrip+ (sauf pour les capteurs G5 !)
 * Cette application vous permet d'utiliser votre Dexcom G6 avec n'importe quel smartphone Android.
+* Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously.
+* Installer l'APK téléchargé
+* Enter sensor code and transmitter serial no. in patched app.
 * Dans les paramètres du téléphone, allez dans Applications > Dexcom G6 > Autorisations > Autorisations supplémentaires et appuyez sur 'Access Dexcom app'.
+* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
 
 Paramètres pour AndroidAPS
 --------------------------------------------------
