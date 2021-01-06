@@ -67,6 +67,8 @@ With a double tap onto the BG curve you can change the time scale..
 
 ![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
 
+* Color, lines and circle are configurable in setting menu on cog-sign of watchface chooser menu.
+
 ## AAPSv2 watchface - Legend
 
 ![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
