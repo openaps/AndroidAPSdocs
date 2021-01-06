@@ -64,13 +64,19 @@ To get faster to the AAPS menu, do a double tap on your BG. With a double tap on
 
 ![Available watchfaces](../images/Watchface_Types.png)
 
+### New watchface as of AndroidAPS 2.8
+
+![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
+
+* Color, lines and circle are configurable in setting menu on cog-sign of watchface chooser menu.
+
 ## AAPSv2 watchface - Legend
 
-![Legenda AndroidAPSv2 watchface](../images/Watchface_Legend.png)
+![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
 
 A - time since last loop run
 
-B - Leitura CGM
+B - CGM reading
 
 C - minutes since last CGM reading
 
@@ -78,7 +84,7 @@ D - change compared to last CGM reading (in mmol or mg/dl)
 
 E - average change CGM reading last 15 minutes
 
-F - bateria do telefone
+F - phone battery
 
 G - basal rate (shown in U/h during standard rate and in % during TBR)
 
@@ -206,7 +212,7 @@ Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpa
 
 ### Complication related settings
 
-* **Complicação de Toque** (default `Default`): Decides which dialog is opened when user taps complication: 
+* **Complication Tap Action** (default `Default`): Decides which dialog is opened when user taps complication: 
     * *Default*: action specific to complication type *(see list above)*
     * *Menu*: AAPS main menu
     * *Wizard*: bolus wizard - bolus calculator
@@ -243,7 +249,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ## Troubleshooting the wear app:
 
-* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Também ativar a atualização automática. 
+* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
 * Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
 * Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 * If Complications does not update data - check first if AAPS watchfaces work at all.
