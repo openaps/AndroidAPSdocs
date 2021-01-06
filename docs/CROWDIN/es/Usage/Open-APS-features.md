@@ -207,16 +207,16 @@ Valor predeterminado: 2
 
 ## Overview of hard-coded limits
 
-<table>
+<table border="1">
   
 <thead>
   <tr>
-    <th></th>
-    <th>Menor de edad</th>
-    <th>Teenager</th>
-    <th>Adulto</th>
-    <th>Adulto resistente a la insulina</th>
-    <th>Pregnant</th>
+    <th width="200"></th>
+    <th width="75">Menor de edad</th>
+    <th width="75">Teenager</th>
+    <th width="75">Adulto</th>
+    <th width="75">Adulto resistente a la insulina</th>
+    <th width="75">Pregnant</th>
   </tr>
 </thead>
 <tbody>
