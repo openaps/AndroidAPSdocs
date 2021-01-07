@@ -33,10 +33,10 @@ Systém AndroidAPS je podrobně popsán v `této dokumentaci <./WhatisAndroidAPS
 Kompatibilní pumpy jsou:
 
 * `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-* `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
+* `Accu-Chek Combo <./Configuration/Accu-Chek-Combo-Pump.html>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_
 * `Omnipod Eros <../Configuration/OmnipodEros.html>`_
-* some old `Medtronic pumps <../Configuration/MedtronicPump.html>`_
+* některé staré `Medtronic pumpy <../Configuration/MedtronicPump.html>`_
 
 OpenAPS
 --------------------------------------------------
