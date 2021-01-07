@@ -72,31 +72,31 @@ Pour accéder plus rapidement au menu AAPS, appuyez deux fois sur votre Gly. Ave
 
 ## Cadran AAPSv2 - Légende
 
-![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
+![Légende du cadran AndroidAPSv2](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A - temps écoulé depuis le dernier calcul de la boucle
 
-B - CGM reading
+B - lecture du capteur MGC
 
-C - minutes since last CGM reading
+C - nombre de minutes depuis la dernière lecture MGC
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - changement par rapport à la dernière lecture MGC (en mmol ou mg/dl)
 
-E - average change CGM reading last 15 minutes
+E - variation moyenne des lectures MGC depuis 15 minutes
 
-F - phone battery
+F - niveau de batterie du téléphone
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - débits de basal (en U/h ou en % pendant un DBT)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - IG (BGI) Impact Glycémique -> l'augmentation ou diminution que "devrait" avoir la glycémie en fonction de l'activité de l'insuline seule.
 
-I - carbs (carbs on board | e-carbs in the future)
+I - glucides (glucides actifs | e-glucides à venir)
 
-J - insulin on board (from bolus | from basal)
+J - Insuline Active (de bolus | de basal)
 
 ## Accès menu principal de AAPS
 
-To access main menu of AAPS you can use on of following options:
+Pour accéder au menu principal d'AAPS, vous pouvez utiliser les options suivantes :
 
 * double tap on your BG value
 * select AAPS icon in watch applications menu
