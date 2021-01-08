@@ -27,6 +27,10 @@ So make sure to deactivate automation rules during these occasions if neccessary
 .. imagen:: ../images/Automation_ActivateDeactivate.png
   :alt: Activación y desactivación de la regla de automatización
 
+Where to find Automation
+--------------------------------------------------
+Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `_Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+
 General
 --------------------------------------------------
 Hay algunos límites:
