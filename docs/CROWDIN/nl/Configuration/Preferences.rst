@@ -1,6 +1,6 @@
 Instellingen
 ***********************************************************
-* **Open preferences** by clicking three-dot-menu on top right side of home screen.
+* **Open de instellingen** door te klikken op de 3 stipjes in de rechterbovenhoek van het Overzicht scherm.
 
   .. image:: ../images/Pref2020_Open2.png
     :alt: Open instellingen
@@ -15,10 +15,10 @@ Instellingen
   .. image:: ../images/Pref2020_Submenu2.png
     :alt: Open submenu
 
-* With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+* Met de ** filter** functie bovenaan het instellingenscherm kun je snel naar bepaalde voorkeuren gaan. Begin simpelweg een deel van de tekst die je zoekt, te typen.
 
   .. image:: ../images/Pref2021_Filter.png
-    :alt: Preferences filter
+    :alt: Instellingen filter
 
 
 Algemeen
@@ -81,13 +81,13 @@ Bolus beveiliging
 
 Skin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* You can choose from four types of skins:
+* Je kunt kiezen uit drie soorten skins:
 
   .. image:: ../images/Pref2021_SkinWExample.png
-    :alt: Select skin + examples
+    :alt: Kies skin + voorbeelden
 
-* 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
-* Difference of other skins depend of phone's display orientation.
+* 'Lage resolutie skin' komt met korter label en leeftijds/niveau verwijderd om meer beschikbare ruimte te hebben op een zeer laag resolutie scherm.
+* Dit verschilt, afhankelijk van de oriëntatie van de telefoon.
 
 Staande stand
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -144,7 +144,7 @@ Standaard tijdelijke streefdoelen
   
 Ontlucht/Vul standaard insuline hoeveelheden
 -----------------------------------------------------------
-* If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
+* Als je jouw infuusslang of canule via AAPS wilt vullen dan kan dat via de knop op de `Acties tab <../Getting-Started/Screenshots.html#acties-tabblad>`_.
 * Je kunt zelf kiezen welke standaardhoeveelheden AAPS laat zien in het dialoogvenster dat ontlucht/vul knop zit.
 
 Bereik voor visualisatie
@@ -174,12 +174,12 @@ Statusindicatoren
 * Statusindicatoren geven een visuele waarschuwing voor 
       
    Sensor Leeftijd
-   * Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots#sensor-level-battery) for details).
+   * Sensor batterijniveau voor bepaalde sensor-opzetstukken (zie [screenshots pagina](../Getting-Started/Screenshots#sensorniveau-batterij) voor details).
    * Insuline leeftijd (aantal dagen dat reservoir wordt gebruikt)
    * Reservoir niveau (eenheden)
    * Infuus leeftijd
-   * Pump battery age
-   * Pump battery level (%)
+   * Pompbatterij leeftijd
+   * Pompbatterij niveau (%)
 
 * Als de drempelwaarde voor waarschuwing wordt overschreden, worden de waarden in geel weergegeven.
 * Als de drempelwaarde voor alarm wordt overschreden, worden de waarden in rood weergegeven.
@@ -200,15 +200,15 @@ Voer dit deel van het boluscalculator resultaat uit
 * Alleen het ingestelde percentage (moet tussen 10 en 100 liggen) van de berekende bolus wordt afgeleverd wanneer de boluscalculator wordt gebruikt. 
 * Het percentage zie je terug in de boluscalculator.
 
-Bolus advisor
+Bolusadviseur
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
-* If correction bolus is accepted **no carbs** will recorded.
-* An alarm will be started when glucose value is in good level to start eating.
-* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ again and enter the amount of carbs you want to eat.
+* Als je de `Bolus calculator<../Getting-Started/Screenshots.html#bolus-calculator>`_ gebruikt en je glucose waarde is hoger dan 10 mmol/l (180 mg/dl) wordt een correctie bolus voorgesteld.
+* Als de correctie bolus wordt geaccepteerd zullen er **geen koolhydraten** worden geregistreerd.
+* Er zal een alarm afgaan wanneer de glucosewaarde genoeg is gedaald om te beginnen met eten.
+* Je moet op dat moment de `Bolus calculator <../Getting-Started/Screenshots.html#bolus-calculator>`_ opnieuw gebruiken en daar de hoeveelheid koolhydraten invoeren die je wilt eten.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
-    :alt: Bolus advisor message
+    :alt: Bolusadviseur bericht
 
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
