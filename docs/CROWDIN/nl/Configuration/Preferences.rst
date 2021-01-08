@@ -39,7 +39,7 @@ Algemeen
 
 **Naam patiënt**
 
-* Handig als je onderscheid moet maken tussen meerdere setups (er zijn bijvoorbeeld twee kinderen met diabetes in jouw gezin).
+* Handig als je onderscheid moet maken tussen meerdere setups (er zijn bijvoorbeeld twee mensen met diabetes in jouw gezin).
 
 Beveiliging
 -----------------------------------------------------------
