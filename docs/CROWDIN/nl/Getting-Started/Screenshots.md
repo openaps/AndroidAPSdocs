@@ -313,7 +313,7 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
 * For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
-## Action tab
+## Acties tabblad
 
 ![Acties tabblad](../images/Home2021_Action.png)
 
