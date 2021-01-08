@@ -36,7 +36,7 @@ Te gebruiken `pompen <../Hardware/pumps.html>`_ zijn:
 * `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_
 * `Omnipod Eros <../Configuration/OmnipodEros.html>`_
-* some old `Medtronic pumps <../Configuration/MedtronicPump.html>`_
+* specifieke oudere `Medtronic <../Configuration/MedtronicPump.html>`_ modellen
 
 OpenAPS
 --------------------------------------------------
