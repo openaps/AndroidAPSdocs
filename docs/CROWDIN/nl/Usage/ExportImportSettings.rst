@@ -55,7 +55,7 @@ Importeer instellingen
 * Importeer instellingen
 
 .. image:: ../images/AAPS_ImportSettings1.png
-  :alt: AndroidAPS import settings 1
+  :alt: AndroidAPS instellingen importeren 1
 
 * Alle bestanden in de map AAPS/preferences/ op jouw telefoon worden getoond in de lijst.
 * Selecteer bestand.
