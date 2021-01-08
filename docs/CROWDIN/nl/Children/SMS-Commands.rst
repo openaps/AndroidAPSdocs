@@ -97,7 +97,7 @@ Loop
    * De respons is afhankelijk van de werkelijke status:
       * Loop is uitgeschakeld (disabled)
       * Loop is ingeschakeld (enabled)
-      * Gepauzeerd (10 min)
+      * Onderbroken (10 min)
 * LOOP SUSPEND 20
    * Reactie: Loop wordt onderbroken gedurende 20 minuten (Loop suspended for 20 minutes)
 * LOOP RESUME
@@ -106,7 +106,7 @@ Loop
 CGM gegevens
 --------------------------------------------------
 * BG
-   * Reactie: Laatste BG: 5.6 4min geleden, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basaal: 0.10U)
+   * Laatste BG: 5,6 4min geleden, Verschil:-0,2 mmol, IOB: 0,20E (Bolus: 0,10E Basaal: 0,10E)
 * CAL 5.6
    * Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN
    * Reactie na correcte code ontvangen: Calibration verzonden (**Als xDrip is geïnstalleerd. In de xDrip+ instellingen moet je aangevinkt hebben dat kalibraties van volgers geaccepteerd worden**)
