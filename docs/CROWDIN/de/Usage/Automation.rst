@@ -27,9 +27,9 @@ Schalte daher ggf. die Automation-Regeln aus während Du den Loop deaktiviert ha
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Automation Regeln ein- und ausschalten
 
-Where to find Automation
+Automatisierung aufrufen
 --------------------------------------------------
-Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `_Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+Abhängig von deinen `Einstellungen im Konfigurationsgenerator <../Configuration/Config-Builder.html#registerkarte-tab-oder-hamburger-menu>`_ findest du `_Automation <../Configuration/Config-Builder.html#automatisierung>`_ entweder im Hamburger.Menü oder als Registerkarte (Tab).
 
 Allgemein
 --------------------------------------------------
