@@ -2,28 +2,28 @@ SMS-commando's
 **************************************************
 Safety First
 ==================================================
-* AndroidAPS heeft de optie om de telefoon (van bijvoorbeeld een kind) op afstand te kunnen bedienen via SMS-berichten. Bedenk wel, dat de telefoon die is ingesteld om externe commando's te geven, kan worden gestolen. Beveilig die telefoon dus goed, met op z'n minst een pincode. A strong password or biometrics are recommended.
-* Additionally it is recommended to allow a `second phone number <#authorized-phone-numbers>`_ for SMS commands. So you can use second number to `temporary disable <#other>`_ SMS communicator in case your main remote phone gets lost or stolen.
+* AndroidAPS heeft de optie om de telefoon (van bijvoorbeeld een kind) op afstand te kunnen bedienen via SMS-berichten. Bedenk wel, dat de telefoon die is ingesteld om externe commando's te geven, kan worden gestolen. Beveilig die telefoon dus goed, met op z'n minst een pincode. Een sterk wachtwoord of biometrische beveiliging is natuurlijk beter, en raden we aan.
+* Daarnaast is het aan te raden om een `tweede telefoonnummer toe te voegen <#geautoriseerde-telefoonnummers>`_ voor SMS-opdrachten. Zodat je het tweede nummer kunt gebruiken om de SMS-commando's `tijdelijk uit te schakelen <#andere>`_ voor het geval dat de primaire telefoon verloren of gestolen raakt.
 * Nadat jouw externe commando (bijv. bolus geven, profiel aanpassen) is uitgevoerd, zal AndroidAPS een bevestigings-SMS sturen. Het wordt aangeraden om ten minste 2 telefoonnummers te koppelen in de SMS communicator instellingen. Mocht één van de gekoppelde telefoons worden gestolen, dan zul je deze bevestigings-SMS'jes evengoed nog op het tweede telefoonnummer binnenkrijgen.
 * **Als je bolus via SMS commando's gebruikt, moet je koolhydraten invoeren via Nightscout (NSClient, Website...)!** Als je dit niet doet, dan zou IOB correct zijn met te weinig COB waardoor de correctie bolus mogelijk niet zal worden uitgevoerd, aangezien AAPS ervan uitgaat dat je al te veel actieve insuline hebt.
-* As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
+* Vanaf AndroidAPS versie 2.7 moet een authenticator app met een op tijd gebaseerd eenmalig wachtwoord worden gebruikt, dit voor een verbeterde veiligheid bij het gebruik van SMS-commando's.
 
-Setup SMS commands
+Instellen van SMS-commando's
 ==================================================
 
 .. image:: ../images/SMSCommandsSetup.png
   :alt: SMS Commando's Instellen
       
-* De meeste aanpassingen zoals tijdelijke streefdoelen, AAPS volgen etc. can be done on `NSClient app <../Children/Children.html>`_ on an Android phone with an internet connection.
+* De meeste aanpassingen zoals tijdelijke streefdoelen, AAPS volgen etc. kunnen gedaan worden via de `NSclient-app <../Children/Children.html>`_ op een Android-telefoon met een internetverbinding.
 * Bolussen kunnen niet worden gegeven via Nightscout, hiervoor kun je wel SMS-opdrachten gebruiken.
-* If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
+* Wanneer je als volger een iPhone gebruikt en dus geen NSClient app op je telefoon kunt zetten, dan kun je ter vervanging van veel NSClient functies, SMS-commando's gebruiken.
 
 * Ga bij een Android telefoon bij instellingen naar Applicaties > AndroidAPS > Machtigingen en schakel SMS in
 
-Authorized phone numbers
+Geautoriseerde telefoonnummers
 -------------------------------------------------
-* In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679) 
-* Enable 'Allow remote commands via SMS'.
+* Ga in AndroidAPS naar Configurator > SMS Commando's en voer de telefoonnummer(s) in waar je SMS-commando's van wilt ontvangen (gescheiden door puntkomma's en ZONDER spatie's) - d.w.z. +612345678;+612345679) 
+* Zet 'Sta SMS commando's toe' aan.
 * Als je meer dan één nummer wilt gebruiken:
 
   * Voer slechts één nummer in.
@@ -31,58 +31,58 @@ Authorized phone numbers
   * Geef extra nummer(s) op, gescheiden door puntkomma, geen spatie.
   
     .. image:: ../images/SMSCommandsSetupSpace2.png
-      :alt: SMS Commands Setup multiple numbers
+      :alt: SMS-commando's instellen van meerdere nummers
 
-Minutes between bolus commands
+Minuten tussen bolus opdrachten
 -------------------------------------------------
-* You can define the minimum delay between two boluses issued via SMS.
-* For safety reasons you have to add at least two authorized phone numbers to edit this value.
+* Je kunt de minimale vertraging definiëren tussen twee bolussen afgegeven via SMS.
+* Om veiligheidsredenen moet je ten minste twee geautoriseerde telefoonnummers toevoegen om deze waarde te kunnen veranderen.
 
-Additionally mandatory PIN at token end
+Extra verplichte PIN aan einde van token
 -------------------------------------------------
-* For safety reasons the reply code must be followed by a PIN.
-* PIN rules:
+* Om veiligheidsredenen moet de antwoordcode worden gevolgd door een PIN code.
+* PIN code regels:
 
-   * 3 to 6 digits
-   * not same digits (i.e. 1111)
-   * not in a row (i.e. 1234)
+   * 3 tot 6 cijfers
+   * niet dezelfde cijfers (d.w.z. 1111)
+   * niet op een rij (d.w.z. 1234)
 
-Authenticator setup
+Authentificatie instellingen
 -------------------------------------------------
-* Two-factor authentication is used to improve safety.
-* You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
+* Tweestapsverificatie wordt gebruikt om de veiligheid te verbeteren.
+* Je kunt elke Authenticator-app gebruiken die RFC 6238 TOTP-tokens ondersteunt. Populaire gratis apps zijn:
 
    * `Authy <https://authy.com/download/>`_
    * Google Authenticator - `Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>`_ / `iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>`_
    * `LastPass Authenticator <https://lastpass.com/auth/>`_
    * `FreeOTP Authenticator <https://freeotp.github.io/>`_
 
-* Install the authenticator app of your choice on your follower phone and scan the QR code shown in AAPS.
-* Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. Voorbeeld:
+* Installeer de door jou gekozen authenticator app op jouw volger telefoon en scan de QR-code in AAPS.
+* Test het eenmalige wachtwoord door de token in te voeren die getoond wordt in de authenticator app en de pincode die je zojuist hebt ingesteld in AAPS. Voorbeeld:
 
-   * Your mandatory PIN is 2020
-   * TOTP token from the authenticator app is 457051
-   * Enter 4570512020
+   * Je verplichte PIN code is 2020
+   * TOTP-token van de authenticatie-app is 457051
+   * Voer 4570512020 in
    
-* The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
-* The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
-* Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
+* De rode tekst "WRONG PIN" zal **automatisch** veranderen in een groene "OK" als de invoer juist is. **Er is geen knop waarop je kunt drukken!**
+* De tijd op beide telefoons moet gesynchroniseerd zijn. De beste manier hiervoor is om te kiezen voor automatische tijdsingstellingen ingesteld vanuit het netwerk. Tijdverschillen kunnen leiden tot authentificatieproblemen.
+* Gebruik de knop "HERSTEL AUTHENTICATORS" als je eerder aangemaakte authenticatoren wilt verwijderen.  (Bij het verwijderen van de authenticator maak je ALLE reeds geconfigureerde authenticators ongeldig. Je moet ze daarna opnieuw instellen)
 
-Use SMS commands
+SMS-commando's gebruiken
 ==================================================
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands <../Children/SMS-Commands.html#commands>`_ below. 
-* The AAPS phone will respond to confirm success of command or status requested. 
-* Confirm command by sending the code where necessary. Voorbeeld:
+* Stuur een SMS naar de telefoon met AndroidAPS die draait vanaf je goedgekeurde telefoonnummer(s) met behulp van een van de `commando's<../Children/SMS-Commands.html#commandos>`_ hieronder. 
+* De AAPS telefoon zal bevestigen dat de opgevraagde opdracht is uitgevoerd of dat de status succesvol is aangevraagd. 
+* Bevestig de opdracht door de code indien nodig te verzenden. Voorbeeld:
 
-   * Your mandatory PIN is 2020
-   * TOTP token from the authenticator app is 457051
-   * Enter 4570512020
+   * Je verplichte PIN code is 2020
+   * TOTP-token van de authenticatie-app is 457051
+   * Voer 4570512020 in
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**Hint**: Het kan verstandig zijn om een abbonnement met onbeperkte SMS te hebben voor beide telefoons omdat er veel SMS'jes gestuurd zullen worden.
 
 Commando‘s
 ==================================================
-Commands must be sent in English, the response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Opdrachten moeten in het Engels worden verzonden, de respons zal in jouw lokale taal zijn als de antwoordzin al is `vertaald <../translations.html#translate-strings-for-androidaps-app>`_.
 
 .. image:: ../images/SMSCommands.png
   :alt: SMS Commando's voorbeeld
@@ -153,7 +153,7 @@ Profiel
 * PROFILE 1
    * Reactie: Om naar profiel Profile1 100% te wisselen antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * PROFILE 2 30
-   * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+   * Reactie: Om naar profiel Profile2 30% te wisselen antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 
 Andere
 --------------------------------------------------
@@ -162,11 +162,11 @@ Andere
 * NSCLIENT RESTART
    * Reactie: NSCLIENT RESTART 1 ontvangers
 * PUMP
-   * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+   * Reactie: Laatste Verbinding: 1 min geleden Temp: 0,00E/uur @11:38 5/30min IOB: 0,5E Reservoir: 34E Batterij: 100
 * PUMP CONNECT
-   * Response: Pump reconnected
+   * Reactie: Pomp opnieuw verbonden
 * PUMP DISCONNECT *30*
-   * Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
+   * Reactie: Om de pomp te ontkoppelen gedurende *30* minuten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * SMS DISABLE/STOP
    * Reactie: Om de SMS Remote Service uit te schakelen, antwoord met code Any. Houd er rekening mee dat je het gebruik van SMS commando's alleen direct vanaf de AAPS master smartphone kunt heractiveren.
 * TARGET MEAL/ACTIVITY/HYPO   
@@ -182,13 +182,13 @@ Problemen oplossen
 ==================================================
 Meerdere SMS
 --------------------------------------------------
-Als je hetzelfde bericht steeds opnieuw ontvangt (d.w.z. profiel wissel) dan heb je waarschijnlijk een cirkel gemaakt met andere apps. Dit kan bijvoorbeeld xDrip+ zijn. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS. 
+Als je hetzelfde bericht steeds opnieuw ontvangt (d.w.z. profiel wissel) dan heb je waarschijnlijk een cirkel gemaakt met andere apps. Dit kan bijvoorbeeld xDrip+ zijn. Als dat zo is, zorg er dan voor dat xDrip+ (of een andere app) geen behandelingen naar NS uploadt. 
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+Als de andere app is geïnstalleerd op meerdere telefoons, zorg ervoor dat upload is uitgeschakeld bij al die telefoons.
 
 SMS-commando's doen het niet op mijn Samsung, wat nu?
 --------------------------------------------------
-Er is een melding gemaakt van SMS-commando's die niet meer werkten na een update op een Galaxy S10 telefoon. Could be solved by disabling 'send as chat message'.
+Er is een melding gemaakt van SMS-commando's die niet meer werkten na een update op een Galaxy S10 telefoon. Dit kon worden opgelost door 'verzenden als chatbericht' uit te schakelen.
 
 .. image:: ../images/SMSdisableChat.png
   :alt: Uitschakelen SMS als chatbericht
