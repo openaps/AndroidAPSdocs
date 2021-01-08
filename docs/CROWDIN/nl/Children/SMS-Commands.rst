@@ -116,33 +116,33 @@ Basaal
 * BASAL STOP/CANCEL
    * Reactie: Om het tijdelijke basaal te stoppen antwoord met de code van Authenticator app voor gebruiker gevolgd door PIN
 * BASAL 0.3
-   * Reactie: Om basaal van 0.3E/u gedurende 30 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
+   * Reactie: Om een basaal van 0.3E/u gedurende 30 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * BASAL 0.3 20
    * Reactie: Om een basaal van 0.3E/u gedurende 20 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * BASAL 30%
-   * Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
+   * Reactie: Om een basaal van 30% gedurende 30 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * BASAL 30% 50
-   * Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
+   * Reactie: Om een basaal van 30% gedurende 50 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 
 Bolus
 --------------------------------------------------
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
+Bolus op afstand is niet toegestaan binnen 15 min (deze waarde is alleen aan te passenn als 2 telefoonnummers zijn toegevoegd) na laatste bolus opdracht of extern commando! Daarom is de respons afhankelijk van de tijd sinds de laatste bolus werd gegeven.
 
 * BOLUS 1.2
-   * Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN
+   * Reactie A: Om een bolus van 1.2E te geven antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
    * Reactie B: Externe bolus niet beschikbaar. Probeer het later opnieuw.
 * BOLUS 0.60 MEAL
    * Als je de optionele parameter MEAL opgeeft, dan wordt het tijdelijke streefdoel "eet binnenkort" ingesteld (standaard waarden zijn: 90 mg/dL, 5.0 mmol/l voor 45 min).
-   * Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN
+   * Reactie A: Om een maaltijd bolus van 0.60E te geven antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
    * Reactie B: Externe bolus niet beschikbaar. 
 * CARBS 5
-   * Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
+   * Reactie: Om 5g in te voeren om 12:45 antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * CARBS 5 17:35/5:35PM
-   * Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
+   * Reactie: Om 5g in te voeren om 17:35 antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * EXTENDED STOP/CANCEL
-   * Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
+   * Reactie: Om de vertraagde bolus te stoppen antwoord met de code van de Authenticator app voor de gebruiker gevolgd door PIN
 * EXTENDED 2 120
-   * Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
+   * Reactie: Om vertraagde bolus 2E gedurende 120 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 
 Profiel
 --------------------------------------------------
@@ -151,7 +151,7 @@ Profiel
 * PROFILE LIST
    * Reactie: 1.`Profiiel1` 2.`Profiel2`
 * PROFILE 1
-   * Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
+   * Reactie: Om naar profiel Profile1 100% te wisselen antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * PROFILE 2 30
    * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
 
@@ -170,9 +170,9 @@ Andere
 * SMS DISABLE/STOP
    * Reactie: Om de SMS Remote Service uit te schakelen, antwoord met code Any. Houd er rekening mee dat je het gebruik van SMS commando's alleen direct vanaf de AAPS master smartphone kunt heractiveren.
 * TARGET MEAL/ACTIVITY/HYPO   
-   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
+   * Reactie: Om tijdelijk streefdoel MEAL/ACTIVITY/HYPO in te stellen antwoord in met code van Authenticator app voor gebruiker gevolgd door PIN
 * TARGET STOP/CANCEL   
-   * Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
+   * Reactie: Om tijdelijk streefdoel te annuleren antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * HELP
    * Reactie: BG, LOOP, BEHANDELINGEN, .....
 * HELP BOLUS
