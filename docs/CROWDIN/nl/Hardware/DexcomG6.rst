@@ -41,33 +41,33 @@ G6 met aangepaste Dexcom app
    .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Regio in Dexcom G6 URL
 
-* Uninstall the original Dexcom app.
+* Verwijder de originele Dexcom app van je telefoon.
 * Installeer de gedownloade apk
-* Enter sensor code and transmitter serial no. in patched app.
-* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
+* Voer de sensorcode en het serienummer van de zender in in de aangepaste app.
+* Na korte tijd zal de aangepaste app het signaal van de zender oppikken. (Zo niet, dan moet je de sensor stoppen en een nieuwe starten.)
 * Selecteer Dexcom App (aangepast) in ConfigBuilder (instelling in AndroidAPS).
 * Als je de Dexcom app wilt gebruiken om aan de zender te koppelen, maar ook gebruik wilt maken van xDrip alarmen zet dan óók de xDrip+ app op je telefoon en kies in xDrip hamburger menu > instellingen > hardware gegevensbron > 640G /EverSense.
 De Dexcom app stuurt de waardes door dmv 'local broadcast' (lokaal uitzenden) naar AndroidAPS. AndroidAPS stuurt het dmv 'local broadcast' dan door naar xDrip+. De local broadcast vindt plaats tussen de apps op jouw telefoon, je hebt hierbij geen internet nodig.
 
-If using G6 with Build Your Own Dexcom App
+Wanneer je de G6 gebruikt met de Bouw Je Eigen Dexcom App
 ==================================================
-* As of December 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA)also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
-* This app lets you use your Dexcom G6 with any Android smartphone.
-* Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously.
+* Sinds december 2020 ondersteunt de `Bouw Je Eigen Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (Build Your Own Dexcom App, BYODA) ook het lokaal delen (local broadcast) van BG gegevens met AAPS en/of xDrip+ (Let op: niet voor G5 sensors!).
+* Met deze app kun je jouw Dexcom G6 gebruiken met elke Android smartphone.
+* Als je eerder de originele Dexcom app of de aangepaste Dexcom app hebt gebruikt, moet je die eerst van je telefoon verwijderen voordat je de Bouw Je Eigen Dexcom App erop zet.
 * Installeer de gedownloade apk
-* Enter sensor code and transmitter serial no. in patched app.
-* In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
-* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
+* Voer de sensorcode en het serienummer van de zender in in de aangepaste app.
+* Ga in de telefoon instellingen naar apps > Dexcom G6 > machtigingen > extra rechten en druk op 'Toegang tot Dexcom app'.
+* Na korte tijd zal de aangepaste app het signaal van de zender oppikken. (Zo niet, dan moet je de sensor stoppen en een nieuwe starten.)
 
-Settings for AndroidAPS
+Instellingen voor AndroidAPS
 --------------------------------------------------
-* Select 'Dexcom App (patched)' in config builder.
-* If you don't recieve any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+* Selecteer 'Dexcom App (aangepast)' in de configurator.
+* Als je geen waarden ontvangt, selecteer dan een andere gegevensbron, en selecteer daarna 'Dexcom App (aangepast) opnieuw om te zorgen dat de app opnieuw om een machtiging vraagt en daarmee de AAPS app de BG waardes zal ontvangen van de de Bouw Je Eigen Dexcom app.
 
-Settings for xDrip+
+Instellingen voor xDrip+
 --------------------------------------------------
-* Select '640G/Eversense' as data source.
-* Command 'start sensor' must be performed in xDrip+ in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
+* Selecteer '640G/Eversense' als gegevensbron.
+* Druk op 'start sensor' in xDrip+ om waarden te kunnen ontvangen. Dit zal geen invloed hebben op jouw lopende sensor sessie, aangezien die alleen gekoppeld is met de Bouw Je Eigen Dexcom App.
    
 Problemen oplossen
 ==================================================
