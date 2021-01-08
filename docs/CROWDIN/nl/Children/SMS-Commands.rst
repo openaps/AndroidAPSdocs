@@ -108,17 +108,17 @@ CGM gegevens
 * BG
    * Laatste BG: 5,6 4min geleden, Verschil:-0,2 mmol, IOB: 0,20E (Bolus: 0,10E Basaal: 0,10E)
 * CAL 5.6
-   * Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN
+   * Reactie: Om calibratie 5.6 te verzenden antwoord met de code van Authenticator app voor gebruiker gevolgd door PIN
    * Reactie na correcte code ontvangen: Calibration verzonden (**Als xDrip is geïnstalleerd. In de xDrip+ instellingen moet je aangevinkt hebben dat kalibraties van volgers geaccepteerd worden**)
 
 Basaal
 --------------------------------------------------
 * BASAL STOP/CANCEL
-   * Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
+   * Reactie: Om het tijdelijke basaal te stoppen antwoord met de code van Authenticator app voor gebruiker gevolgd door PIN
 * BASAL 0.3
-   * Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
+   * Reactie: Om basaal van 0.3E/u gedurende 30 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * BASAL 0.3 20
-   * Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
+   * Reactie: Om een basaal van 0.3E/u gedurende 20 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * BASAL 30%
    * Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
 * BASAL 30% 50
