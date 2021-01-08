@@ -15,7 +15,7 @@ Setup SMS commands
   :alt: SMS Commando's Instellen
       
 * De meeste aanpassingen zoals tijdelijke streefdoelen, AAPS volgen etc. can be done on `NSClient app <../Children/Children.html>`_ on an Android phone with an internet connection.
-* Bolussen kunnen niet worden gegeven via Nightscout, maar u kunt wel SMS-opdrachten gebruiken.
+* Bolussen kunnen niet worden gegeven via Nightscout, hiervoor kun je wel SMS-opdrachten gebruiken.
 * If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
 
 * Ga bij een Android telefoon bij instellingen naar Applicaties > AndroidAPS > Machtigingen en schakel SMS in
