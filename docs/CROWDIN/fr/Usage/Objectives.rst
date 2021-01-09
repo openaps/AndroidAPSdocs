@@ -35,9 +35,9 @@ Objectif 3 : Prouver ses connaissances
      :alt: Screenshot objective 3
 
 * Des liens sont fournis pour vous guider si vous n'êtes pas certain d'avoir les bonnes réponses.
-* The questions for objective 3 have been completely rewritten by native speakers as of AAPS 2.8. The new ones cover the same basic topics plus a few new ones.
-* These new questions will lead to some not answered questions even though you have successfully completed objective 3 in previous versions.
-* Unanswered questions will affect you only if you start a new objective. In other words: If you have already completed all objectives you can wait and answer the new questions later without loosing AAPS functions.
+* Les questions pour l'objectif 3 ont été entièrement réécrites par des locuteurs natifs depuis AAPS 2.8. Les nouvelles questions couvrent les mêmes sujets de base et quelques nouveaux sujets.
+* Même si vous avez réussi l'objectif 3 dans les versions précédentes, cet objectif contiendra de nouvelles questions non répondues.
+* Les questions non répondues ne vous affecteront que si vous commencez un nouvel objectif. En d'autres termes, si vous avez déjà terminé tous les objectifs, vous pouvez attendre et répondre aux nouvelles questions un peu plus tard sans perdre de fonctions AAPS.
 
 Objectif 4 : Démarrage de la boucle ouverte
 ==================================================
