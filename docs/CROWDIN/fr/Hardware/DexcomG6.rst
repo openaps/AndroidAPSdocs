@@ -55,7 +55,7 @@ Si vous utilisez G6 avec votre propre application Dexcom
 * Cette application vous permet d'utiliser votre Dexcom G6 avec n'importe quel smartphone Android.
 * Désinstallez l'application Dexcom d'origine ou l'application Dexcom patchée si vous en avez utilisé une auparavant.
 * Installez l'apk téléchargé
-* Entrez le code du capteur et le numéro de série du transmetteur. dans l'application patchée.
+* Entrez le code du capteur et le numéro de série du transmetteur dans l'application patchée.
 * Dans les paramètres du téléphone, allez dans Applications > Dexcom G6 > Autorisations > Autorisations supplémentaires et appuyez sur 'Access Dexcom app'.
 * Après une courte période l'application patchée devrait recevoir le signal du transmetteur. (Si ce n'est pas le cas, vous devrez arrêter le capteur et en démarrer un nouveau.)
 
