@@ -27,9 +27,9 @@ Veillez donc à désactiver les règles d'automatisation pendant ces moments si 
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Activer et désactiver une règle d'automatisation
 
-Where to find Automation
+Où trouver l'automatisation
 --------------------------------------------------
-Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `_Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+Selon vos `paramètres dans le Générateur de configuration <../Configuration/Config-Builder.html#onglet-ou-menu-hamburger>`_ vous trouverez soit `_Automatisation <../Configuration/Config-Builder.html#automatisation>`_ dans le menu hamburger soit comme un onglet.
 
 Généralités
 --------------------------------------------------
