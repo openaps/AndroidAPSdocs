@@ -174,7 +174,7 @@ Statusindicatoren
 * Statusindicatoren geven een visuele waarschuwing voor 
       
    Sensor Leeftijd
-   * Sensor batterijniveau voor bepaalde sensor-opzetstukken (zie [screenshots pagina](../Getting-Started/Screenshots#sensorniveau-batterij) voor details).
+   * Sensor battery level for certain smart readers (see `screenshots page <../Getting-Started/Screenshots#sensor-level-battery>`_ for details).
    * Insuline leeftijd (aantal dagen dat reservoir wordt gebruikt)
    * Reservoir niveau (eenheden)
    * Infuus leeftijd
