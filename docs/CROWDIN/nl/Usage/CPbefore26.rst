@@ -4,7 +4,7 @@ De Careportal had dezelfde functies als wat je in Nightscout ziet wanneer je daa
 
 De code die ervoor zorgde dat de Careportal in AndroidAPS offline kon worden gebruikt, hield bepaalde ontwikkelingen in de AndroidAPS code tegen. **Daarom is besloten om de Careportal te verwijderen uit AAPS versie 2.6.**
 
-De meeste functies van Careportal zijn nog beschikbaar, ze zijn verhuisd naar Acties of naar het Overzichtscherm. Het onderdeel Acties kun je vinden onder het tabblad Acties of in het hamburgermenu (afhankelijk van jouw instellingen in de 'Configurator <../Configuration/Config-Builder.html>`_).
+De meeste functies van Careportal zijn nog beschikbaar, ze zijn verhuisd naar Acties of naar het Overzichtscherm. Het onderdeel Acties kun je vinden onder het tabblad Acties of in het hamburgermenu (afhankelijk van jouw instellingen in de `Configurator <../Configuration/Config-Builder.html>`_).
 
 Hieronder staat een overzicht van waar je de verschillende functies kunt vinden die voorheen in de Careportal stonden.
 
