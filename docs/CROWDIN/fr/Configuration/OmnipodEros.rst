@@ -331,8 +331,8 @@ Manually Re-establish RileyLink Bluetooth Communication
     
     If the RileyLink is unresponsive or out of range of the phone while the Bluetooth refresh command is being processed a warning message will display 2 options.
 
-   * **Mute (1)** will silence this current warning.
-   * **OK (2)** will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
+   **Coupure son (1)** fera taire cette alerte.
+   * **OK (2)** confirmera cette alerte et permettra à l'utilisateur d'essayer de ré-établir la connexion Bluetooth à nouveau.
 	
     |RileyLink_Bluetooth_Reset_4|	
 	
@@ -353,7 +353,7 @@ This screen will provide information, status, and settings configuration informa
 
     |RileyLink_Statistics_Settings_3|
     
-RileyLink (3) fields
+Champs RileyLink (3)
 ++++++++++++++++++++
 
 	* **Configured Address:** MAC address of the selected RileyLink defined in the Omnipod Settings.
@@ -401,7 +401,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 |Omnipod_Tab|
 
-Fields
+Champs
 ------
 
 * **RileyLink Status:** Displays the current connection status of the RileyLink
@@ -436,13 +436,13 @@ Fields
 * **Errors:** Displays the last error encountered. Review the `Pod history <#view-pod-history>`__, `RileyLink history <#rileylink-and-active-pod-history>`__ and log files for past errors and more detailed information.
 *  **Active pod alerts:** Reserved for currently running alerts on the active pod. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
 
-Icons
+Icônes
 -----
 
 .. table:: 
 
    ====================  ===========================================
-   |refresh_pod_status|  **REFRESH:** 
+   |refresh_pod_status|  **ACTUALISER:** 
    			 
 			 Sends a refresh command to the active pod to update communication
 			 
@@ -452,7 +452,7 @@ Icons
    |pod_management|   	 **POD MGMT:**
 
 			 Navigates to the Pod management menu
-   |ack_alerts|		 **ACK ALERTS:**
+   |ack_alerts|		 **ACCEPTER ALERTES:**
    			 
 			 When pressed this will disable the pod expiration beeps and notifications. 
 			 
@@ -462,7 +462,7 @@ Icons
    |set_time|		 **SET TIME:**
    
 			 When pressed this will update the time on the pod with the current time on your phone.
-   |suspend|  		 **SUSPEND:**
+   |suspend|  		 **SUSPENDRE:**
    
 			 Suspends the active pod
    |resume| 		 **RESUME DELIVERY:**
@@ -481,7 +481,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 .. table:: 
 
    =========================  ===========================================
-   |activate_pod|	      **Activate Pod**
+   |activate_pod|	      **Activer Pod**
    
    			      Primes and activates a new pod
 
@@ -849,7 +849,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |Acknowledge_Alerts_5|               image:: ../images/omnipod/Acknowledge_Alerts_5.png
 
 ..
-	Actions Tab
+	Onglet Actions
 .. |Actions_Tab|                  		image:: ../images/omnipod/Actions_Tab.png
 
 ..
@@ -892,7 +892,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |Enable_Omnipod_Driver_5|            image:: ../images/omnipod/Enable_Omnipod_Driver_5.png
 
 ..
-	Optimally Positioning the RileyLink and Omnipod pod
+	Positionnement optimal du RileyLink et du pod Omnipod
 .. |Omnipod_pod_and_RileyLink_Position|	image:: ../images/omnipod/Omnipod_pod_and_RileyLink_Position.png
 .. |Toroid_w_CS|                  		image:: ../images/omnipod/Toroid_w_CS.png
 
@@ -903,7 +903,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |Omnipod_Settings_3|                 image:: ../images/omnipod/Omnipod_Settings_3.png
 
 ..
-	Omnipod Tab
+	Onglet Omnipod
 .. |Omnipod_Tab|                  		image:: ../images/omnipod/Omnipod_Tab.png
 .. |Omnipod_Tab_Pod_Management|         image:: ../images/omnipod/Omnipod_Tab_Pod_Management.png
 
@@ -915,14 +915,14 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |Pod_History_4|                  	image:: ../images/omnipod/Pod_History_4.png
 
 ..
-	Resume Insulin Delivery
+	Reprendre l'injection d'insuline
 .. |Resume_Insulin_Delivery_1|          image:: ../images/omnipod/Resume_Insulin_Delivery_1.png
 .. |Resume_Insulin_Delivery_2|          image:: ../images/omnipod/Resume_Insulin_Delivery_2.png
 .. |Resume_Insulin_Delivery_3|          image:: ../images/omnipod/Resume_Insulin_Delivery_3.png
 .. |Resume_Insulin_Delivery_4|          image:: ../images/omnipod/Resume_Insulin_Delivery_4.png
 
 ..
-	RileyLink Bluetooth Reset
+	Réinitialisation Bluetooth RileyLink
 .. |RileyLink_Bluetooth_Reset_1|        image:: ../images/omnipod/RileyLink_Bluetooth_Reset_1.png
 .. |RileyLink_Bluetooth_Reset_2|        image:: ../images/omnipod/RileyLink_Bluetooth_Reset_2.png
 .. |RileyLink_Bluetooth_Reset_3|        image:: ../images/omnipod/RileyLink_Bluetooth_Reset_3.png
@@ -953,19 +953,19 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |RileyLink_Setup_Remove_4|                  image:: ../images/omnipod/RileyLink_Setup_Remove_4.png
 
 ..
-	RileyLink Statistics History
+	Historique Statistiques RileyLink
 .. |RileyLink_Statistics_History_1|     image:: ../images/omnipod/RileyLink_Statistics_History_1.png
 .. |RileyLink_Statistics_History_2|     image:: ../images/omnipod/RileyLink_Statistics_History_2.png
 .. |RileyLink_Statistics_History_3|     image:: ../images/omnipod/RileyLink_Statistics_History_3.png
 
 ..
-	RileyLink Statistics Settings
+	État RileyLink - Paramètres
 .. |RileyLink_Statistics_Settings_1|    image:: ../images/omnipod/RileyLink_Statistics_Settings_1.png
 .. |RileyLink_Statistics_Settings_2|    image:: ../images/omnipod/RileyLink_Statistics_Settings_2.png
 .. |RileyLink_Statistics_Settings_3|    image:: ../images/omnipod/RileyLink_Statistics_Settings_3.png
 
 ..
-	Suspend Insulin Delivery
+	Suspendre l'injection d’Insuline
 .. |Suspend_Insulin_Delivery_1|         image:: ../images/omnipod/Suspend_Insulin_Delivery_1.png
 .. |Suspend_Insulin_Delivery_2|         image:: ../images/omnipod/Suspend_Insulin_Delivery_2.png
 .. |Suspend_Insulin_Delivery_3|         image:: ../images/omnipod/Suspend_Insulin_Delivery_3.png
