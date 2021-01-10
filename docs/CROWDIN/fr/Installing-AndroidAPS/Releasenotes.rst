@@ -28,7 +28,7 @@ Nouvelles fonctionnalités majeures
 ----------------------
 * `Support de l'Omnipod Eros <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda et merci spécial à @ps2 @itsmojo, et à toutes les autres personnes impliquées dans le développement du driver pour Omnipod ainsi que @jlucasvt de GetRileyLink.org 
 * `Assistant bolus <../Configuration/Preferences.html#assistant-bolus>`_ & `Rappel repas <../Getting-Started/Screenshots.html#rappel-repas>`_ @MilosKozak 
-* `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-28>`_ @rICTx-T1D
+* `Nouveau cadran <../Configuration/Watchfaces.html#nouveau-cadran-depuis-androidaps-28>`_ @rICTx-T1D
 * Améliorations de la connexion Dana RS @MilosKozak 
 * Suppression de "Valeurs MGC inchangées" pour les SMB pour l'application native Dexcom
 * Nouveau thème `Basse résolution <../Configuration/Preferences.html#theme>`_
