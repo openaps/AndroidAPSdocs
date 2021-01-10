@@ -3,8 +3,8 @@ Dexcom G5
 If using G5 with xdrip+
 ==================================================
 * If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_.
-* No xdrip ir a configurações > Interapp Compatibility > Broadcast Data Locally and select ON.
-* No xdrip ir a configurações> Interapp Compatibility > Accept Treatments e seleccionar OFF.
+* In xdrip go to Settings > Inter-app settings > Broadcast Data Locally and select ON.
+* In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
 * Se você quiser utilizar AndoidAPS para calibrar no xdrip seleccionar Settings > Interapp Compatibility > Accept Calibrations e seleccione ON.  Também poderá querer rever as opções em Settings > Less Common Settings > Advanced Calibration Settings.
 * Seleccione xdrip no ConfigBuilder (configuração em AndroidAPS).
 * If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on [xDrip+ settings page](../Configuration/xdrip.md).
