@@ -47,7 +47,7 @@ Masterwachtwoord
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Noodzakelijk om instellingen te kunnen `exporteren <../Usage/ExportImportSettings.html>`_ als ze zijn versleuteld. (Geldt vanaf AAPS versie 2.7).
 
-   ** Biometrische beveiliging werkt niet op OnePlus-telefoons. Dit is een bekend probleem van OnePlus. **
+   **Biometrische beveiliging werkt niet op OnePlus-telefoons. Dit is een bekend probleem van OnePlus.**
 
 * Open de Instellingen door te klikken op de 3 stipjes in de rechterbovenhoek van het Overzicht scherm
 * Klik op de driehoek onder "Algemeen"
@@ -61,7 +61,7 @@ Instellingenbeveiliging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Bescherm jouw instellingen met een wachtwoord of met de biometrische verificatie van jouw telefoon (bijv. `een kind gebruikt AAPS <../Children/Children.html>`_).
 * Er moet een aangepast wachtwoord worden gebruikt als je het masterwachtwoord alleen wilt gebruiken voor het beveiligen van `geëxporteerde instellingen <../Usage/ExportImportSettings.html>`_.
-* Als je een aangepast wachtwoord gebruikt, klik op de regel "Instellingen wachtwoord" om het wachtwoord in te stellen zoals `boven <../Configuration/Preferences.html#masterwachtwoord>`_beschreven.
+* Als je een aangepast wachtwoord gebruikt, klik op de regel "Instellingen wachtwoord" om het wachtwoord in te stellen zoals `boven <../Configuration/Preferences.html#masterwachtwoord>`_ beschreven.
 
   .. image:: ../images/Pref2020_Protection.png
     :alt: Beveiliging
@@ -73,7 +73,7 @@ App beveiliging
 
 Bolus beveiliging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Bolus beveiliging kan nuttig zijn als AAPS wordt gebruikt door een klein kind en u `bolus via SMS <../Children/SMS-Commands.html>`_gebruikt.
+* Bolus beveiliging kan nuttig zijn als AAPS wordt gebruikt door een klein kind en u `bolus via SMS <../Children/SMS-Commands.html>`_ gebruikt.
 * In het voorbeeld hieronder zie je dat de app vraagt om biometrische verificatie. Mocht de biometrische verificatie niet werken, klikt dan in de ruimte boven het witte venster en voer het masterwachtwoord in.
 
   .. image:: ../images/Pref2020_PW.png
@@ -243,7 +243,7 @@ APS Mode
 -----------------------------------------------------------
 * Schakelt tussen open loop, gesloten loop en 'stop bij laag'
 * **Open loop** betekent dat AAPS indien nodig suggesties doet voor hogere/lagere basaalstanden. Dit wordt weergegeven als melding, jij als gebruiker moet iets doen om deze suggestie ook daadwerkelijk op je pomp uit te voeren.  
-* **Closed loop (gesloten loop) betekent dat hogere/lagere basaalstanden (en SMBs, als je dat aan hebt staan) automatisch naar je pomp worden verzonden zonder bevestiging of invoer van jou.  
+* **Closed loop** (gesloten loop) betekent dat hogere/lagere basaalstanden (en SMBs, als je dat aan hebt staan) automatisch naar je pomp worden verzonden zonder bevestiging of invoer van jou.  
 * **Stop bij laag** betekent dat AAPS wél lagere basaalstanden instelt als je BG teveel zakt, maar als je BG teveel stijgt, zal hij geen hogere basaalstand instellen (tenzij IOB<0).
 
 Minimale verzoek voor aanpassing [%]
@@ -257,7 +257,7 @@ Advanced Meal Assist (AMA) of Super Micro Bolus (SMB)
 Afhankelijk van jouw instellingen in de `Configurator <../Configuration/Config-Builder.html>`_ kun je kiezen tussen twee algoritmes:
 
 * `Advanced Meal Assist (OpenAPS AMA) <../Usage/Open-APS-features.html#geavanceerde-maaltijdhulp-ama>`_ (Geavanceerde maaltijdhulp) - status van het algoritme in 2017
-* ` Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - meest recente algoritme voor ervaren gebruikers
+* `Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - meest recente algoritme voor ervaren gebruikers
 
 OpenAPS AMA instellingen
 -----------------------------------------------------------
@@ -266,7 +266,7 @@ Dankzij de geavanceerde maaltijdhulp (Advanced Meal Assist, AMA) kan het systeem
 
 Maximaal instelbaar basaal E/u
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Deze instelling is een veiligheidslimiet om te voorkomen dat AAPS ooit een gevaarlijk hoge basaalstand kan instellen. 
+* Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. 
 * Dit getal wordt weergegeven in eenheden per uur (E/uur). 
 * We raden je aan je verstand te gebruiken bij het invullen van deze waarde. Een goede aanbeveling is om de hoogste basaalstand in je profiel te nemen en die te **vermenigvuldigen met 4**. 
 * Als de hoogste basaalstand in je profiel bijvoorbeeld 0,5 E/uur is, dan moet je dat vermenigvuldigen met 4 om een waarde van 2 E/uur te krijgen.
