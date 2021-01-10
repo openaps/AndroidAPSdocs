@@ -174,7 +174,7 @@ Statusindicatoren
 * Statusindicatoren geven een visuele waarschuwing voor 
       
    Sensor Leeftijd
-   * Sensor battery level for certain smart readers (see `screenshots page <../Getting-Started/Screenshots#sensor-level-battery>`_ for details).
+   * Sensor batterijniveau voor bepaalde sensor-opzetstukken (bijv Miaomiao) Zie `screenshots pagina <../Getting-Started/Screenshots#sensorniveau-batterij>`_ voor details.
    * Insuline leeftijd (aantal dagen dat reservoir wordt gebruikt)
    * Reservoir niveau (eenheden)
    * Infuus leeftijd
@@ -261,12 +261,12 @@ Afhankelijk van jouw instellingen in de `Configurator <../Configuration/Config-B
 
 OpenAPS AMA instellingen
 -----------------------------------------------------------
-Dankzij de geavanceerde maaltijdhulp (Advanced Meal Assist, AMA) kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd. 
+* Dankzij de geavanceerde maaltijdhulp (Advanced Meal Assist, AMA) kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd. 
 * Zie ook de `OpenAPS documentatie <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`_.
 
 Maximaal instelbaar basaal E/u
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. 
+* Deze instelling is een veiligheidslimiet om te voorkomen dat AAPS ooit een gevaarlijk hoge basaalstand kan instellen. 
 * Dit getal wordt weergegeven in eenheden per uur (E/uur). 
 * We raden je aan je verstand te gebruiken bij het invullen van deze waarde. Een goede aanbeveling is om de hoogste basaalstand in je profiel te nemen en die te **vermenigvuldigen met 4**. 
 * Als de hoogste basaalstand in je profiel bijvoorbeeld 0,5 E/uur is, dan moet je dat vermenigvuldigen met 4 om een waarde van 2 E/uur te krijgen.
@@ -282,7 +282,7 @@ Max totaal IOB dat OpenAPS niet kan overschrijden [E]
 Wanneer je begint met loopen, wordt tijdens een van de leerdoelen een tijd lang Max Basal IOB beperkt naar 0, zodat je gewend raakt aan het systeem. Dit zorgt ervoor dat AAPS helemaal geen extra basale insuline kan geven. Terwijl AAPS wel je basale insuline naar beneden kan bijstellen, of zelfs helemaal uitschakelen om een hypo te helpen voorkomen. Dit is een belangrijke stap omdat:
 
 * Je de tijd krijgt om veilig gebruik te maken van het AAPS-systeem en rustig kunt observeren hoe het werkt.
-Je nu de kans hebt om jouw basaalprofiel en insuline gevoeligheidsfactor (ISF, Insulin Sensitivity Factor) perfect te maken.
+* Je nu de kans hebt om jouw basaalprofiel en insuline gevoeligheidsfactor (ISF, Insulin Sensitivity Factor) perfect te maken.
 * Je kunt zien hoe AAPS jouw basale insuline naar beneden bijstelt om hypo's te voorkomen.
 
 Pas na een tijd mag je het systeem toestaan om extra basale insuline te geven door de Max Basal IOB waarde te verhogen. Als eerste start wordt aangeraden om de hoogste basaalstand in je profiel te nemen en die te **vermenigvuldigen met 3**. Als de hoogste basaalstand in je profiel bijvoorbeeld 0,5 E/uur is, dan moet je dat vermenigvuldigen met 3 om een waarde van 1.5 E/uur te krijgen.
@@ -342,7 +342,7 @@ Opname instellingen
 min_5m_carbimpact
 -----------------------------------------------------------
 * Het algoritme maakt gebruik van BGI (bloedglucose impact) om te bepalen wanneer koolhydraten zijn geabsorbeerd. 
-Deze waarde wordt gebruikt om de hoeveelheid opgenomen koolhydraten (Carbs On Board, COB) te laten afnemen wanneer jouw bloedsuiker niet zoveel stijgt als het algoritme had verwacht nadat je koolhydraten hebt gegeten. Deze waarde wordt alleen gebruikt in speciale gevallen: wanneer jouw CGM geen gegevens doorgeeft, of wanneer bijv. fysieke activiteit de koolhydraten "opeet". 
+* Deze waarde wordt gebruikt om de hoeveelheid opgenomen koolhydraten (Carbs On Board, COB) te laten afnemen wanneer jouw bloedsuiker niet zoveel stijgt als het algoritme had verwacht nadat je koolhydraten hebt gegeten. Deze waarde wordt alleen gebruikt in speciale gevallen: wanneer jouw CGM geen gegevens doorgeeft, of wanneer bijv. fysieke activiteit de koolhydraten "opeet". 
 * In dit soort gevallen, wanneer jouw koolhydraat absorptie niet kan worden bepaald op basis van hoe jouw bloedglucose reageert, dan zal AAPS terugvallen op deze waarde voor de afname van COB. Het is in feite een vangnet.
 * Om het simpel te stellen: Het algoritme "weet" hoe jouw BGs zich *zouden* moeten gedragen, adhv jouw huidige hoeveelheid insuline icm ISF. 
 * Wanneer jouw BG sneller daalt dan het algoritme had verwacht, dan betekent dit dat er koolhydraten worden geabsorbeerd (COB neemt af). Hierbij geldt: grote verandering = veel koolhydraten. 
@@ -457,7 +457,7 @@ Onderhoud instellingen
     :alt: Onderhoud instellingen
 
 * Standaard mailadres om de logs heen te sturen is logs@androidaps.org.
-* Als je *Encrypt geëxporteerde instellingen* selecteert, worden deze versleuteld met uw jouw `masterwachtwoord<../Configuration/Preferences.html#masterwachtwoord>`_. In dat geval moet het masterwachtwoord elke keer dat de instellingen worden geëxporteerd of geïmporteerd, worden ingevoerd.
+* Als je *Encrypt geëxporteerde instellingen* selecteert, worden deze versleuteld met uw jouw `masterwachtwoord <../Configuration/Preferences.html#masterwachtwoord>`_. In dat geval moet het masterwachtwoord elke keer dat de instellingen worden geëxporteerd of geïmporteerd, worden ingevoerd.
 
 Open Humans
 ===========================================================
