@@ -338,12 +338,12 @@ Vérifiez dans les journaux xDrip+ si xDrip+ commence à compter "Duration: 1 mi
    
    ![Paramètres xDrip+ Libre Bluetooth 2](../images/xDrip_Libre_BTSettings2.png)
 
-### Libre smart reader battery level
+### Niveau de batterie du transmetteur Freestyle Libre
 
-* Battery level of smart readers such as MiaoMiao 2 can be displayed in AAPS.
-* Details can be found on [screenshots page](../Getting-Started/Screenshots#sensor-level-battery).
+* Le niveau de batterie de certains transmetteurs comme le MiaoMiao 2 est affiché dans AAPS.
+* Les détails peuvent être trouvés sur la page [Écrans AndroidAPS](../Getting-Started/Screenshots#niveau-du-capteur-batterie).
 
-### Connect Libre Transmitter & start sensor
+### Connectez l'émetteur du Freestyle Libre & démarrez le capteur
 
 ![xDrip+ Démarrer Transmetteur Libre & Capteur 1](../images/xDrip_Libre_Transmitter01.png)
 
