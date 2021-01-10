@@ -7,7 +7,7 @@ Voor bepaalde veelvoorkomende gebeurtenissen moet je wellicht altijd dezelfde in
 
 Bijv. wanneer jouw BG te laag is, kun je besluiten om automatisch een hoger tijdelijk streefdoel in te stellen. Of als je in het sportcentrum bent, wordt er automatisch een tijdelijk streefdoel voor je ingesteld. 
 
-Voordat je automatisering gebruikt, moet je ruime ervaring hebben met de handmatige 'tijdelijke streefdoelen <./temptarget.html>`_ of handmatige profiel wissels die je toepast. 
+Voordat je automatisering gebruikt, moet je ruime ervaring hebben met de handmatige `tijdelijke streefdoelen <./temptarget.html>`_ of handmatige profiel wissels die je toepast. 
 
 Zorg ervoor dat je goed begrijpt hoe automatisering werkt voordat je jouw eerste eenvoudige regel aanmaakt. **In plaats van de regel een actie te laten uitvoeren, laat hem alleen een notificatie tonen.** Pas als je zeker weet dat de automatisering op het juiste moment wordt geactiveerd, vervang je de melding door een echte actie.
 
