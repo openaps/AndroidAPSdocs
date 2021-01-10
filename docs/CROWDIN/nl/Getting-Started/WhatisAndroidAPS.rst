@@ -24,7 +24,7 @@ Opmerking: AndroidAPS wordt in geen enkel land door regelgevers voor medische hu
 	
 Als je klaar bent voor deze uitdaging, lees dan verder. 
 
-** Belangrijkste doelen van AndroidAPS: **
+Belangrijkste uitgangspunten van AndroidAPS:
 ==================================================
 
 * Een app waarbij de veiligheid ingebouwd zit. Om meer te lezen over de veiligheids-functies van de oref0 en oref1 algoritmen, klik hier (https://openaps.org/reference-design/)
