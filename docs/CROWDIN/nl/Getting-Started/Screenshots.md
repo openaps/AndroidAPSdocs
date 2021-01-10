@@ -163,7 +163,7 @@ Bovenstaande voorspellingslijnen rekenen met verschillende (extreme) scenario's.
 
 #### Activiteit
 
-* De ** dunne gele ** lijn is de insuline activiteit. 
+* The **thin yellow** line shows the activity of Insulin. 
 * Het is gebaseerd op de verwachte daling in BG, alleen veroorzaakt door de aanwezige insuline, alsof er geen andere invloeden (zoals koolhydraten) aanwezig zijn.
 
 ### Sectie G - aanvullende grafieken
