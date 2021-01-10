@@ -3,8 +3,8 @@ Dexcom G5
 Si se utiliza G5 con xdrip+
 ==================================================
 * Si todavía no se ha configurado, descargue `xdrip <https://github.com/NightscoutFoundation/xDrip>` _ y siga las instrucciones en nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>` _.
-* En xdrip vaya a Configuración > Interapp Compatibilidad > Datos de Difusión a nivel Local y seleccione ON.
-* En xdrip vaya a Configuración > Interapp Compatibilidad > Aceptar Tratamientos y seleccione OFF.
+* In xdrip go to Settings > Inter-app settings > Broadcast Data Locally and select ON.
+* In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
 * Si usted quiere ser capaz de utilizar AndroidAPS para calibrar, a continuación, en xdrip vaya a Configuración > Interapp Compatibilidad > Aceptar Calibraciones y seleccione ON.  Puede que también desee revisar las opciones en Ajustes > Ajustes Menos Comunes > Ajustes Avanzados de Calibración.
 * Seleccione xdrip en ConfigBuilder (seteos en AndroidAPS).
 * Si AAPS no recibe valores de glucosa, cuando el teléfono está en modo avión el uso de `Identificar receptor`, tal como se describe en [xDrip+ configuración de página](../Configuración/xdrip.md).
