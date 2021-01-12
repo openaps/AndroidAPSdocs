@@ -13,27 +13,30 @@ Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualis
 
 Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln, sondern aus Sicherheitsgründen erfolgt. Neue Versionen von AndroidAPS bieten nicht nur neue Funktionen, sondern auch wichtige Sicherheitsfixes. Deshalb ist es notwendig, dass jeder Anwender so schnell wie möglich aktualisiert. Leider gibt es noch Fehlerberichte aus sehr alten Versionen, so dass dies ein Versuch ist, die Sicherheit für jeden einzelnen Benutzer und die gesamte DIY-Community zu verbessern. Danke für dein Verständnis.
 
-Version 2.8.1
+Version 2.8.1.1
 ================
-Release date: 12-01-2021
+Erscheinungsdatum: 12.01.2021
 
 Wichtige Hinweise
 ----------------------
-* Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users. If you use NSClient to enter TT, carbs or Profile switches you must turn it in AAPS off but only in case your synchronization is working well (ie. you don't see unwanted data changes like self modification of TT, TBR etc). ATTENTION: do NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...). It's possible only in engineering mode
+* Option **Zu Nightscout nur hochladen** ist verpflichtend für alle 2.8.1.1 Nutzer aktiviert. 
+* Falls du den NSClient zur Eingabe von temporären Zielen, Kohlenhydraten oder Profilwechseln verwendest, musst du diese Option in AAPS deaktivieren - **aber nur dann, wenn deine Synchronisierung gut funktioniert** (z.B. keine unerwünschten Änderungen wie selbstständige Änderungen der temporären Ziele, temporären Basalraten etc.). 
+* ACHTUNG: KEINESFALLS deaktivieren, wenn irgendeine andere App Behandlungen zu Nightscout hochlädt (z.B. xDrip+ broadcast/upload/sync).
+* Die Option kann nur deaktiviert werden, wenn der engineering mode aktiviert ist.
 
-Major changes
+Wesentliche Änderungen
 ----------------------
-* RileyLink, Omnipod and MDT pump improvements and fixes
-* forced NS_UPLOAD_ONLY
-* fix for SMB & Dexcom app
-* watchface fixes
-* crash reporting improved
-* gradle reverted to allow direct watchface instalation
-* automation fixes
-* RS driver improvement
-* various crashes fixed
-* UI fixes and improvements
-* new translations
+* Verbesserungen und Fehlerbehebungen für RileyLink, Omnipod und Medtronic Pumpen
+* 'Zu Nightscout nur hochladen' verpflichtend
+* Fehlerbehebung für SMB & Dexcom App
+* Watchface Korrekturen
+* Verbesserte Crash-Reports
+* Gradle zurückgesetzt, um direkte Installation des Watchfaces zu ermöglichen
+* Fehlerbehebung bei Automatisierungen
+* Verbesserung Dana RS Treiber
+* Verschiedene Absturzursachen behoben
+* Fehlerkorrekturen und Verbesserungen der Benutzeroberfläche
+* neue Übersetzungen
 
 Version 2.8.0
 ================

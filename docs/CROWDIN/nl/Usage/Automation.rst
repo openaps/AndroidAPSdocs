@@ -29,7 +29,7 @@ Dus zorg ervoor dat je de Automation-regels deactiveert indien nodig. Je kunt di
 
 Waar vind je Automatisering
 --------------------------------------------------
-Afhankelijk van jouw `instellingen in de configurator <../Configuration/Config-Builder.html#tabblad-of-hamburger-menu>`_ vind je `_Automatiisering <../Configuration/Config-Builder.html#automatisering>`_ in het hamburger menu of als een tabblad.
+Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
 
 Algemeen
 --------------------------------------------------

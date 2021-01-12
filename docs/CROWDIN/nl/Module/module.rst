@@ -87,7 +87,7 @@ Dit is slechts een kort overzicht van alle compatibele CGMs/FGM met AndroidAPS. 
 
 Nightscout
 --------------------------------------------------
-Nightscout is een open source web-applicatie die jouw CGM-gegevens en AndroidAPS gegevens kan opslaan, weergeven en rapporten kan maken. Meer informatie vind je op de `website van het Nightscout project <http://www.nightscout.info/>`_. Je kunt je eigen Nightscout website `maken <https://nightscout.github.io/nightscout/new_user/>`_, gebruik de semi-geautomatiseerde Nightscout setup op `zehn.be <https://ns.10be.de/en/index.html>`_ of host het op jouw eigen server (dit laatste is voor IT experts).
+Nightscout is een open source web-applicatie die jouw CGM-gegevens en AndroidAPS gegevens kan opslaan, weergeven en rapporten kan maken. You can find more information on the `website of the Nightscout project <http://nightscout.github.io/>`_. Je kunt je eigen Nightscout website `maken <https://nightscout.github.io/nightscout/new_user/>`_, gebruik de semi-geautomatiseerde Nightscout setup op `zehn.be <https://ns.10be.de/en/index.html>`_ of host het op jouw eigen server (dit laatste is voor IT experts).
 
 Nightscout werkt onafhankelijk van de andere onderdelen. Je hebt het nodig om voorbij Doel 1 te komen.
 
