@@ -11,35 +11,35 @@ AndroidAPS позволяет контролировать телефон реб
 Настройка SMS-команд
 ==================================================
 
-.. image:: ../images/SMSCommandsSetup.png
+.. изображение:: ../images/SMSCommandsSetup.png
   :alt: Настройка SMS команд
       
-* Большинство корректировок временных целей, слежение за работой ААПС и т. д. can be done on `NSClient app <../Children/Children.html>`_ on an Android phone with an internet connection.
+* Большинство корректировок временных целей, слежение за работой ААПС и т. д. может выполняться в приложении ` NSclient <../Children/Children.html> ` _ на Android-телефоне с подключением к Интернету.
 * Болюсы не могут подаваться через Nightscout, но можно использовать SMS-команды.
-* If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
+* Если у вас для слежения iPhone и, следовательно, нет возможности использовать NSclient, доступны дополнительные SMS-команды.
 
 * В настройках Android телефон перейдите в приложения > AndroidAPS > Разрешения и включите SMS
 
-Authorized phone numbers
--------------------------------------------------
-* In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679) 
-* Enable 'Allow remote commands via SMS'.
+Авторизованные номера телефонов
+--------------------------------------------------
+* В AndroidAPS перейдите в Настройки > SMS коммуникатор и введите номер(а) телефона(ов), от которых разрешаете получать SMS команды (разделив их точками с запятыми), например + 6412345678; + 6412345679) 
+* Включите «Разрешить удаленные команды при помощи SMS».
 * Если вы хотите использовать более одного номера:
 
   * Введите только один номер.
   * Убедитесь, что этот телефон работает с алгоритмом путем отправки и подтверждения команды SMS.
   * Введите дополнительные номера, разделенные точкой с запятой, без пробела.
   
-    .. image:: ../images/SMSCommandsSetupSpace2.png
-      :alt: SMS Commands Setup multiple numbers
+    .. изображение:: ../images/SMSCommandsSetupSpace2.png
+      :alt: Команды SMS с нескольких номеров
 
-Minutes between bolus commands
--------------------------------------------------
-* You can define the minimum delay between two boluses issued via SMS.
-* For safety reasons you have to add at least two authorized phone numbers to edit this value.
+Минуты между командами на болюс
+--------------------------------------------------
+* Можно определить минимальную задержку между двумя болюсами, поданными при помощи SMS.
+* Из соображений безопасности следует добавить хотя бы два авторизованных номера телефона для изменения этого значения.
 
 Additionally mandatory PIN at token end
--------------------------------------------------
+--------------------------------------------------
 * For safety reasons the reply code must be followed by a PIN.
 * PIN rules:
 
@@ -48,7 +48,7 @@ Additionally mandatory PIN at token end
    * not in a row (i.e. 1234)
 
 Authenticator setup
--------------------------------------------------
+--------------------------------------------------
 * Two-factor authentication is used to improve safety.
 * You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
 
