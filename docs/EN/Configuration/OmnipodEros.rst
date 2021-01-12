@@ -565,6 +565,14 @@ RileyLink
 
 Allows for scanning of a RileyLink device. The Omnipod driver cannot select more than one RileyLink device at a time.
 
+* **Use battery level reported by OrangeLink/EmaLink:** Reports the actual battery level of the OrangeLink/EmaLink. It is **strongly recommend** that all OrangeLink/EmaLink users enable this setting.
+
+	+  DOES NOT work with the original RileyLink.
+	+  May not work with RileyLink alternatives.
+	+  Enabled - Reports the current battery level for supported pod communication devices.
+	+  Disabled - Reports a value of n/a.
+* **Enable battery change logging in Actions:** In the Actions menu the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Some pod communication devices now have the ability to use regular batteries which can be changed.  This option allows you to note that and reset battery age timers.
+
 Confirmation beeps
 ------------------
 
@@ -607,12 +615,6 @@ Provides advanced settings to assist debugging.
 * **Show Suspend Delivery button in Omnipod tab:** Hide or display the suspend delivery button in the **Omnipod (POD)** tab.
 * **Show Pulse log button in Pod Management menu:** Hide or display the pulse log button in the **Pod Management** menu.
 * **Show RileyLink Stats button in Pod Management menu:** Hide or display the RileyLink Stats button in the **Pod Management** menu.
-* **Use battery level reported by OrangeLink/EmaLink:** Reports the actual battery level of the OrangeLink/EmaLink. We **strongly recommend** that all OrangeLink/EmaLink users enable this setting.
-
-	+  DOES NOT work with the original RileyLink.
-	+  May not work with RileyLink alternatives.
-	+  Enabled - Reports the current battery level for supported pod communication devices.
-	+  Disabled - Reports a value of n/a.
 * **\*DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
 
 Switching or Removing an Active Pod Communication Device (RileyLink)
