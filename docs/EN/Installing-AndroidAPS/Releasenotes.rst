@@ -15,7 +15,7 @@ Please understand that this change is not intended to bug you but is due to safe
 
 Version 2.8.1
 ================
-Release date: 11-01-2021
+Release date: 12-01-2021
 
 Important hints
 ----------------------
