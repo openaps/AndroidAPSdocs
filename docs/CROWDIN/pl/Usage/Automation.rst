@@ -29,7 +29,7 @@ So make sure to deactivate automation rules during these occasions if neccessary
 
 Where to find Automation
 --------------------------------------------------
-Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `_Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
 
 Ogólnie
 --------------------------------------------------
