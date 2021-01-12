@@ -15,7 +15,7 @@ Veuillez comprendre que cette modification n'a pas pour but de vous corriger mai
 
 Version 2.8.1.1
 ================
-Release date: 12-01-2021
+Date de sortie : 12-01-2021
 
 Conseils importants
 ----------------------
