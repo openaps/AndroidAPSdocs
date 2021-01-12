@@ -174,7 +174,7 @@ Statusanzeige
 * Status Anzeigen geben eine optische Warnung für 
       
    * Sensoralter
-   * Batteriestand des Sensor-Smart-Readers für bestimmte Geräte (weitere Details auf der Seite [AndroidAPS Bildschirme](../Getting-Started/Screenshots#sensor-level-batterie)).
+   * Batteriestand des Sensor-Smart-Readers für bestimmte Geräte (weitere Details auf der Seite `AndroidAPS Bildschirme <../Getting-Started/Screenshots#sensor-level-batterie>`_).
    * Insulinalter (Tage Reservoirverwendung)
    * Reservoirstand (Einheiten)
    * Kanülenalter

@@ -174,7 +174,7 @@ Stavové indikátory
 Stavové indikátory zobrazují vizuální varování pro 
       
    * Stáří senzoru
-   * Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots#sensor-level-battery) for details).
+   * Sensor battery level for certain smart readers (see `screenshots page <../Getting-Started/Screenshots#sensor-level-battery>`_ for details).
    * Stáří inzulínu (doba použití aktuálního zásobníku)
    * Stav zásobníku (jednotky)
    * Stáří kanyly

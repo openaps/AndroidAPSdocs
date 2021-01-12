@@ -174,7 +174,7 @@ Voyants d'état
 * Les voyants d'état donnent une alerte visuelle pour 
       
    * Âge du capteur
-   * Niveau de batterie du capteur pour certains MGC utilisant des transmetteurs externe (voir les [Ecrans AndroidAPS](../Getting-Started/Screenshots#niveau-du-capteur-batterie) pour plus de détails).
+   * Niveau de batterie capteurs pour certains MGC utilisant des transmetteurs externe (voir les `Écrans AndroidAPS <../Getting-Started/Screenshots#niveau-du-capteur-batterie>`_ pour plus de détails).
    * Âge de l'insuline (jours d'utilisation du réservoir)
    * Niveau du réservoir (unités)
    * Âge de la canule

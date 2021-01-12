@@ -48,7 +48,7 @@
 .. |Acknowledge_Alerts_5|               image:: Acknowledge_Alerts_5.png
 
 ..
-	Actions Tab
+	Onglet Actions
 .. |Actions_Tab|                  	image:: Actions_Tab.png
 
 ..
@@ -91,7 +91,7 @@
 .. |Enable_Omnipod_Driver_5|            image:: Enable_Omnipod_Driver_5.png
 
 ..
-	Optimally Positioning the RileyLink and Omnipod pod
+	Positionnement optimal du RileyLink et du pod Omnipod
 .. |Omnipod_pod_and_RileyLink_Position|	image:: Omnipod_pod_and_RileyLink_Position.png
 .. |Toroid_w_CS|                  		image:: Toroid_w_CS.png
 
@@ -102,7 +102,7 @@
 .. |Omnipod_Settings_3|                 image:: Omnipod_Settings_3.png
 
 ..
-	Omnipod Tab
+	Onglet Omnipod
 .. |Omnipod_Tab|                  	image:: Omnipod_Tab.png
 .. |Omnipod_Tab_Pod_Management|         image:: Omnipod_Tab_Pod_Management.png
 
@@ -114,14 +114,14 @@
 .. |Pod_History_4|                  	image:: Pod_History_4.png
 
 ..
-	Resume Insulin Delivery
+	Reprendre l'injection d'insuline
 .. |Resume_Insulin_Delivery_1|          image:: Resume_Insulin_Delivery_1.png
 .. |Resume_Insulin_Delivery_2|          image:: Resume_Insulin_Delivery_2.png
 .. |Resume_Insulin_Delivery_3|          image:: Resume_Insulin_Delivery_3.png
 .. |Resume_Insulin_Delivery_4|          image:: Resume_Insulin_Delivery_4.png
 
 ..
-	RileyLink Bluetooth Reset
+	Réinitialisation Bluetooth RileyLink
 .. |RileyLink_Bluetooth_Reset_1|        image:: RileyLink_Bluetooth_Reset_1.png
 .. |RileyLink_Bluetooth_Reset_2|        image:: RileyLink_Bluetooth_Reset_2.png
 .. |RileyLink_Bluetooth_Reset_3|        image:: RileyLink_Bluetooth_Reset_3.png
@@ -152,19 +152,19 @@
 .. |RileyLink_Setup_Remove_4|                  image:: RileyLink_Setup_Remove_4.png
 
 ..
-	RileyLink Statistics History
+	Historique Statistiques RileyLink
 .. |RileyLink_Statistics_History_1|     image:: RileyLink_Statistics_History_1.png
 .. |RileyLink_Statistics_History_2|     image:: RileyLink_Statistics_History_2.png
 .. |RileyLink_Statistics_History_3|     image:: RileyLink_Statistics_History_3.png
 
 ..
-	RileyLink Statistics Settings
+	État RileyLink - Paramètres
 .. |RileyLink_Statistics_Settings_1|    image:: RileyLink_Statistics_Settings_1.png
 .. |RileyLink_Statistics_Settings_2|    image:: RileyLink_Statistics_Settings_2.png
 .. |RileyLink_Statistics_Settings_3|    image:: RileyLink_Statistics_Settings_3.png
 
 ..
-	Suspend Insulin Delivery
+	Suspendre l'injection d’Insuline
 .. |Suspend_Insulin_Delivery_1|         image:: Suspend_Insulin_Delivery_1.png
 .. |Suspend_Insulin_Delivery_2|         image:: Suspend_Insulin_Delivery_2.png
 .. |Suspend_Insulin_Delivery_3|         image:: Suspend_Insulin_Delivery_3.png
@@ -178,7 +178,7 @@ Icon Table Layouts
 .. table:: 
 
    ====================  ===========================================
-   |refresh_pod_status|  **REFRESH:** 
+   |refresh_pod_status|  **ACTUALISER:** 
    			 
 			 Sends a refresh command to the active pod to update communication
 			 
@@ -188,7 +188,7 @@ Icon Table Layouts
    |pod_management|   	 **POD MGMT:**
 
 			 Navigates to the Pod management menu
-   |ack_alerts|		 **ACK ALERTS:**
+   |ack_alerts|		 **ACCEPTER ALERTES:**
    			 
 			 When pressed this will disable the pod expiration beeps and notifications. 
 			 
@@ -198,7 +198,7 @@ Icon Table Layouts
    |set_time|		 **SET TIME:**
    
 			 When pressed this will update the time on the pod with the current time on your phone.
-   |suspend|  		 **SUSPEND:**
+   |suspend|  		 **SUSPENDRE:**
    
 			 Suspends the active pod
    |resume| 		 **RESUME DELIVERY:**
@@ -212,7 +212,7 @@ Pod Management Icons
 .. table:: 
 
    =========================  ===========================================
-   |activate_pod|	      **Activate Pod**
+   |activate_pod|	      **Activer Pod**
    
    			      Primes and activates a new pod
 
@@ -324,7 +324,7 @@ Valider les alertes
 |Acknowledge_Alerts_5|              
 
 
-Actions Tab
+Onglet Actions
 
 |Actions_Tab|                  		
 
@@ -384,7 +384,7 @@ Paramètres Omnipod
 |Omnipod_Settings_3|                
 
 
-Omnipod Tab
+Onglet Omnipod
 
 |Omnipod_Tab|                  		
 |Omnipod_Tab_Pod_Management|        
@@ -398,7 +398,7 @@ Historique Pod
 |Pod_History_4|                  	
 
 
-Resume Insulin Delivery
+Reprendre l'injection d'insuline
 
 |Resume_Insulin_Delivery_1|         
 |Resume_Insulin_Delivery_2|         
@@ -406,7 +406,7 @@ Resume Insulin Delivery
 |Resume_Insulin_Delivery_3|         
 
 
-RileyLink Bluetooth Reset
+Réinitialisation Bluetooth RileyLink
 
 |RileyLink_Bluetooth_Reset_1|       
 |RileyLink_Bluetooth_Reset_2|       
@@ -438,21 +438,21 @@ RileyLInk Setup Remove Device
 |RileyLink_Setup_Remove_3|
 |RileyLink_Setup_Remove_4|
 
-RileyLink Statistics History
+Historique Statistiques RileyLink
 
 |RileyLink_Statistics_History_1|    
 |RileyLink_Statistics_History_2|    
 |RileyLink_Statistics_History_3|    
 
 
-RileyLink Statistics Settings
+État RileyLink - Paramètres
 
 |RileyLink_Statistics_Settings_1|   
 |RileyLink_Statistics_Settings_2|   
 |RileyLink_Statistics_Settings_3|   
 
 
-Suspend Insulin Delivery
+Suspendre l'injection d’Insuline
 
 |Suspend_Insulin_Delivery_1|        
 |Suspend_Insulin_Delivery_2|        

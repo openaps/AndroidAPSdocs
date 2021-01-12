@@ -4,7 +4,7 @@ De Careportal had dezelfde functies als wat je in Nightscout ziet wanneer je daa
 
 De code die ervoor zorgde dat de Careportal in AndroidAPS offline kon worden gebruikt, hield bepaalde ontwikkelingen in de AndroidAPS code tegen. **Daarom is besloten om de Careportal te verwijderen uit AAPS versie 2.6.**
 
-De meeste functies van Careportal zijn nog beschikbaar, ze zijn verhuisd naar Acties of naar het Overzichtscherm. Het onderdeel Acties kun je vinden onder het tabblad Acties of in het hamburgermenu (afhankelijk van jouw instellingen in de 'Configurator <../Configuration/Config-Builder.html>`_).
+De meeste functies van Careportal zijn nog beschikbaar, ze zijn verhuisd naar Acties of naar het Overzichtscherm. Het onderdeel Acties kun je vinden onder het tabblad Acties of in het hamburgermenu (afhankelijk van jouw instellingen in de `Configurator <../Configuration/Config-Builder.html>`_).
 
 Hieronder staat een overzicht van waar je de verschillende functies kunt vinden die voorheen in de Careportal stonden.
 
@@ -16,7 +16,7 @@ Activiteit & feedback
 * Ouderdom van sensor/canule etc is verplaatst naar Acties.
 * BG controle is verplaatst naar Acties.
 * Tijd. streefdoel is verplaatst naar Acties.
-* Sport is niet langer beschikbaar, maar je kunt het notitie-veld gebruiken dat naar voren komt wanneer je een actie invoert, bijv. bij het geven van bolus. (see screenshot in section `carbs & bolus <#id1>`_ on this page).
+* Sport is niet langer beschikbaar, maar je kunt het notitie-veld gebruiken dat naar voren komt wanneer je een actie invoert, bijv. bij het geven van bolus. (zie screenshot in sectie `Koolhydraten & bolus <#id1>`_ op deze pagina).
 
 Koolhydraten & bolus
 ==============================
