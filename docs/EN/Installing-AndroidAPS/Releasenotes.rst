@@ -19,12 +19,12 @@ Release date: 11-01-2021
 
 Important hints
 ----------------------
-* Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users. If you use NSClient to enter TT, carbs or Profile switches you must turn it in AAPS off but only in case your synchronization is working well (ie. you don't see unwanted data changes like self modification of TT, TBR etc). It's possible only in engineering mode
+* Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users. If you use NSClient to enter TT, carbs or Profile switches you must turn it in AAPS off but only in case your synchronization is working well (ie. you don't see unwanted data changes like self modification of TT, TBR etc). ATTENTION: do NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...). It's possible only in engineering mode
 
 Major changes
 ----------------------
 * RileyLink, Omnipod and MDT pump improvements and fixes
-* forced NS_UPLOAD_ONLY (must be reenabled if control from NSClient is used)
+* forced NS_UPLOAD_ONLY
 * fix for SMB & Dexcom app
 * watchface fixes
 * crash reporting improved
