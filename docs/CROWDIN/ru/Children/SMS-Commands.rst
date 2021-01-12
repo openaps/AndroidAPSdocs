@@ -38,16 +38,16 @@ AndroidAPS позволяет контролировать телефон реб
 * Можно определить минимальную задержку между двумя болюсами, поданными при помощи SMS.
 * Из соображений безопасности следует добавить хотя бы два авторизованных номера телефона для изменения этого значения.
 
-Additionally mandatory PIN at token end
+Дополнительно обязательный пин-код в конце маркера
 --------------------------------------------------
-* For safety reasons the reply code must be followed by a PIN.
-* PIN rules:
+* По соображениям безопасности за кодом ответа должен следовать PIN.
+* Правила установки PIN:
 
-   * 3 to 6 digits
-   * not same digits (i.e. 1111)
-   * not in a row (i.e. 1234)
+   * от 3 до 6 цифр
+   * не одинаковые цифры (напр. 1111)
+   * не подряд (например, 1234)
 
-Authenticator setup
+Настройка аутентификации
 --------------------------------------------------
 * Two-factor authentication is used to improve safety.
 * You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
