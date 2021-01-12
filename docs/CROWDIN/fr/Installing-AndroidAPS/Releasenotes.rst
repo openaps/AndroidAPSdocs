@@ -19,24 +19,24 @@ Date de sortie : 12-01-2021
 
 Conseils importants
 ----------------------
-* Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users. 
-* If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc). 
-* ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
-* NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
+* L'option **NS_UPLOAD_ONLY** a été forcée à ON pour tous les utilisateurs de la version 2.8.1. 
+* Si vous utilisez NSClient pour entrer les CT, les glucides ou les changements de profil, vous devez le désactiver dans AAPS mais **seulement dans le cas où votre synchronisation fonctionne bien** (càd. vous ne voyez pas de changements de données indésirables tels que la modification automatique de CT, DBT etc.). 
+* ATTENTION : NE PAS le faire si vous avez une autre application qui gère les traitements (comme xDrip broadcast/upload/sync...).
+* NS_UPLOAD_ONLY ne peut être désactivé que si le mode ingénierie est activé.
 
-Major changes
+Changements majeurs
 ----------------------
-* RileyLink, Omnipod and MDT pump improvements and fixes
-* forced NS_UPLOAD_ONLY
-* fix for SMB & Dexcom app
-* watchface fixes
-* crash reporting improved
-* gradle reverted to allow direct watchface instalation
-* automation fixes
-* RS driver improvement
-* various crashes fixed
-* UI fixes and improvements
-* new translations
+* RileyLink, Omnipod et la pompe MDT améliorations et corrections
+* NS_UPLOAD_ONLY forcé
+* correction pour SMB & appli. Dexcom
+* corrections cadrans montres connectées
+* rapport de plantage amélioré
+* gradle restauré pour permettre l'installation directe des cdrans de montres
+* corrections de l'automatisation
+* amélioration du driver RS
+* divers plantages corrigés
+* corrections de bugs et améliorations de l'Interface Utilisateur
+* nouvelles traductions
 
 Version 2.8.0
 ================
