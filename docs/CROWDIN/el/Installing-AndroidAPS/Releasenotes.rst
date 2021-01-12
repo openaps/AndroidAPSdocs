@@ -13,6 +13,28 @@ You will receive the following information as soon as a new update is available:
 
 Σας παρακαλούμε να καταλάβετε ότι αυτή η αλλαγή δεν έχει σκοπό να σας δυσκολέψει, αλλά γίνετε για λόγους ασφαλείας. Οι νέες εκδόσεις του AndroidAPS δεν παρέχουν μόνο νέες λειτουργίες αλλά και σημαντικές διορθώσεις ασφαλείας. Ως εκ τούτου, είναι απαραίτητο κάθε χρήστης να ενημερώνει όσων το δυνατό πιο γρήγορα.. Δυστυχώς υπάρχουν ακόμα αναφορές σφαλμάτων από πολύ παλιές εκδόσεις, γι 'αυτό προσπαθείστε να βελτιώσετε την ασφάλεια για κάθε χρήστη και ολόκληρη την κοινότητα του DIY. Ευχαριστώ για την κατανόηση.
 
+Version 2.8.1
+================
+Release date: 12-01-2021
+
+Important hints
+----------------------
+* Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users. If you use NSClient to enter TT, carbs or Profile switches you must turn it in AAPS off but only in case your synchronization is working well (ie. you don't see unwanted data changes like self modification of TT, TBR etc). ATTENTION: do NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...). It's possible only in engineering mode
+
+Major changes
+----------------------
+* RileyLink, Omnipod and MDT pump improvements and fixes
+* forced NS_UPLOAD_ONLY
+* fix for SMB & Dexcom app
+* watchface fixes
+* crash reporting improved
+* gradle reverted to allow direct watchface instalation
+* automation fixes
+* RS driver improvement
+* various crashes fixed
+* UI fixes and improvements
+* new translations
+
 Version 2.8.0
 ================
 Release date: 01-01-2021
