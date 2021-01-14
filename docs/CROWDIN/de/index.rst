@@ -14,33 +14,28 @@ Die Hauptkomponenten sind:
 
 Für weitere Details lies bitte hier weiter.
 
-Erste Schritte
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
-       
-   
+   :glob:
+   :caption: Erste Schritte
+
    Sicherheitshinweise <./Getting-Started/Safety-first.rst>
    Was ist ein Closed Loop System <./Getting-Started/ClosedLoop.rst>
    Was ist ein Closed Loop System mit AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    Docs Updates & Änderungen <./Getting-Started/WikiUpdate.rst>
-   
-   
-Was brauche ich? 
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Was brauche ich? 
+
    Module <./Module/module.rst>
    Konfigurationsbeispiel <./Getting-Started/Sample-Setup.md>
 
-   
-AndroidAPS installieren
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: AndroidAPS installieren
 
    App aus Quellcode erstellen <./Installing-AndroidAPS/Building-APK.md>
    Update auf neue Version oder Branch <./Installing-AndroidAPS/Update-to-new-version.md>
@@ -49,38 +44,30 @@ AndroidAPS installieren
    Fehlerbehebung Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release Notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch (nur für Entwickler) <./Installing-AndroidAPS/Dev_branch.md>
-   
-   
-Komponenten-Setup
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Komponenten-Setup
+
    CGM/FGM <./Configuration/BG-Source.rst>
    xDrip Einstellungen <./Configuration/xdrip.md>
    Pumpen <./Hardware/pumps.rst>
    Smartphones <./Hardware/Phoneconfig.rst>
    Nightscout Installation <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
-   
 
-AndroidAPS einrichten 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
-    
-   
+   :caption: AndroidAPS einrichten 
+
    Konfigurations-Generator <./Configuration/Config-Builder.md>
    Einstellungen im Drei-Punkte-Menü <./Configuration/Preferences.rst>
-   
-   
-AndroidAPS Nutzung
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
-       
-    
+   :caption: AndroidAPS Nutzung
+
    AndroidAPS-Bildschirme <./Getting-Started/Screenshots.md>
    Objectives (Ziele) <./Usage/Objectives.rst>
    OpenAPS-Funktionen <./Usage/Open-APS-features.md>   
@@ -94,80 +81,58 @@ AndroidAPS Nutzung
    Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automation mit Drittanbieter-Apps <./Usage/automationwithapp.md>
    Android Auto <./Usage/Android-auto.md>  
- 
-Allgemeine Hinweise 
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
-       
-   
+   :caption: Allgemeine Hinweise 
+
    Zeitzonenwechsel auf Reisen <./Usage/Timezone-traveling.md>
    Logfiles erhalten <./Usage/Accessing-logfiles.md>
    Accu Chek Combo - Tipps <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Export/Import von Einstellungen <./Usage/ExportImportSettings.rst>
-   
 
-AndroidAPS für Kinder
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
-       
-   
+   :caption: AndroidAPS für Kinder
+
    Kontrolle aus der Ferne <./Children/Children.rst>
    SMS-Befehle <./Children/SMS-Commands.rst>
-   
 
-Problembehandlung
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
-       
-  
+   :caption: Problembehandlung
+
    Problembehandlung <./Usage/troubleshooting.rst>
-   
 
-FAQ 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
-       
-  
+   :caption: FAQ
+
    FAQ <./Getting-Started/FAQ.md>
 
-   
-Glossar
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
-       
-  
-   Glossar <./Getting-Started/Glossary.md>
-  
+   :caption: Glossar
 
-Hilfe durch die Community 
---------------------------------------------------
+   Glossar <./Getting-Started/Glossary.md>
+
 .. toctree::
    :maxdepth: 1
-       
+   :caption: Hilfe durch die Community 
 
    Nützliche Informationsquellen vor dem Start <./Where-To-Go-For-Help/Background-reading.md>
    Hilfe <./Where-To-Go-For-Help/Connect-with-other-users.md>
    Docs Updates & Änderungen <./Getting-Started/WikiUpdate.rst>
 
-Für Mediziner & Fachpersonal
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
-       
-            
+   :caption: Für Mediziner & Fachpersonal
+
    Für Mediziner & Fachpersonal <./Resources/clinician-guide-to-AndroidAPS>
 
-
-Mithelfen in der Community
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
-       
+   :caption: Mithelfen in der Community
 
    Wie ich helfen kann <./Getting-Started/How-can-I-help.md>
    App oder Docs übersetzen <./translations.md>
