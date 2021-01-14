@@ -8,7 +8,7 @@
 * In versies voorafgaand aan AAPS 2.7 moest de gebruiker kiezen tussen 8 of 24 uur.
 * Van AAPS 2.7 zal Autosens in AAPS schakelen tussen een 24 en 8 uur venster voor het berekenen van de gevoeligheid. Hij kiest voor welke het gevoeligst is. 
 * Als je voorheen oref1 gebruikte, zul je waarschijnlijk merken dat het systeem minder dynamisch omgaat met veranderingen, als gevolg van het gebruiken van 24 ofwel 8 uur.
-* Changing a cannula or changing a profile will reset Autosens ratio back to 100%.
+* Het plaatsen van een nieuw infuus of het doen van een profielwissel (zonder tijdsduur) zal de Gevoeligheidsdetectie ratio terugzetten naar 100%.
 * Gevoeligheidsdetectie past jouw basaal, KH ratio en ISF aan (daarmee bootst het na wat een profielwissel doet).
 * Wanneer je gedurende een langere tijd telkens koolhydraten eet, dan zal de Gevoeligheidsdetectie minder goed zijn werk kunnen doen, omdat periodes met COB worden uitgesloten van BG delta berekeningen.
 

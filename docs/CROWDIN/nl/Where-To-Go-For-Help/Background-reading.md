@@ -28,7 +28,9 @@ Voordat je begint met bouwen, heb je nog wat leeswerk te doen om te begrijpen ho
 
 ## Achtergrondinformatie en artikelen over doe-het-zelf closed loopen
 
-[ https://www.diabetestype1.nl/bibliotheek/behandeling/577-loopen-zelf-je-eigen-hybrid-closed-loop-bouwen-met-een-pomp-cgm-en-app   
+[ https://eendiabetes.nl/2020/12/20/loopen-voor-beginners-faq/   
+  
+https://www.diabetestype1.nl/bibliotheek/behandeling/577-loopen-zelf-je-eigen-hybrid-closed-loop-bouwen-met-een-pomp-cgm-en-app   
   
 https://www.diabetestype1.nl/blogs/behandeling/146-closed-loop-doe-het-zelf-maar-niet-alleen   
   

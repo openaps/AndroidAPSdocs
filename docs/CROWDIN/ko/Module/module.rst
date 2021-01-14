@@ -87,7 +87,7 @@ AndroidAPS와 호환될 수 있는 가능성이 있는 **그외 펌프**는 <../
 
 Nightscout
 --------------------------------------------------
-나이트스카웃은 CGM 데이터 및 안드로이드APS 데이터를 저장하고 표시하며 보고서를 작성할 수 있는 오픈 소스 웹 애플리케이션이다. 더 자세한 사항은 `나이트스카웃 프로젝트 웹페이지 <http://www.nightscout.info/>`_에서 확인할 수 있습니다. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
+나이트스카웃은 CGM 데이터 및 안드로이드APS 데이터를 저장하고 표시하며 보고서를 작성할 수 있는 오픈 소스 웹 애플리케이션이다. You can find more information on the `website of the Nightscout project <http://nightscout.github.io/>`_. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
 
 나이트스카웃은 독립적인 다른 모듈입니다. 목표 1을 이행해주시기 바랍니다.
 

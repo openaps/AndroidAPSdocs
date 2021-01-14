@@ -27,6 +27,10 @@ Todėl, jei reikia, išjunkite automatizavimo taisykles, kai išjungiate ciklą.
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Įjungti ir išjungti automatizavimo taisyklę
 
+Where to find Automation
+--------------------------------------------------
+Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+
 Bendrieji
 --------------------------------------------------
 Yra kai kurie apribojimai:

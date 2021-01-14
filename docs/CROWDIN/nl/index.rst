@@ -113,7 +113,7 @@ AndroidAPS voor kinderen
    :maxdepth: 1
    :glob:
    
-   Monitoren op afstand <./Children/Children.rst>
+   Volgen op afstand <./Children/Children.rst>
    SMS Comando's <./Children/SMS-Commands.rst>
    
 

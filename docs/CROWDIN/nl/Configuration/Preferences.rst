@@ -1,6 +1,6 @@
 Instellingen
 ***********************************************************
-* **Open preferences** by clicking three-dot-menu on top right side of home screen.
+* **Open de instellingen** door te klikken op de 3 stipjes in de rechterbovenhoek van het Overzicht scherm.
 
   .. image:: ../images/Pref2020_Open2.png
     :alt: Open instellingen
@@ -15,10 +15,10 @@ Instellingen
   .. image:: ../images/Pref2020_Submenu2.png
     :alt: Open submenu
 
-* With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+* Met de ** filter** functie bovenaan het instellingenscherm kun je snel naar bepaalde voorkeuren gaan. Begin simpelweg een deel van de tekst die je zoekt, te typen.
 
   .. image:: ../images/Pref2021_Filter.png
-    :alt: Preferences filter
+    :alt: Instellingen filter
 
 
 Algemeen
@@ -39,7 +39,7 @@ Algemeen
 
 **Naam patiënt**
 
-* Handig als je onderscheid moet maken tussen meerdere setups (er zijn bijvoorbeeld twee kinderen met diabetes in jouw gezin).
+* Handig als je onderscheid moet maken tussen meerdere setups (er zijn bijvoorbeeld twee mensen met diabetes in jouw gezin).
 
 Beveiliging
 -----------------------------------------------------------
@@ -47,7 +47,7 @@ Masterwachtwoord
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Noodzakelijk om instellingen te kunnen `exporteren <../Usage/ExportImportSettings.html>`_ als ze zijn versleuteld. (Geldt vanaf AAPS versie 2.7).
 
-   ** Biometrische beveiliging werkt niet op OnePlus-telefoons. Dit is een bekend probleem van OnePlus. **
+   **Biometrische beveiliging werkt niet op OnePlus-telefoons. Dit is een bekend probleem van OnePlus.**
 
 * Open de Instellingen door te klikken op de 3 stipjes in de rechterbovenhoek van het Overzicht scherm
 * Klik op de driehoek onder "Algemeen"
@@ -61,7 +61,7 @@ Instellingenbeveiliging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Bescherm jouw instellingen met een wachtwoord of met de biometrische verificatie van jouw telefoon (bijv. `een kind gebruikt AAPS <../Children/Children.html>`_).
 * Er moet een aangepast wachtwoord worden gebruikt als je het masterwachtwoord alleen wilt gebruiken voor het beveiligen van `geëxporteerde instellingen <../Usage/ExportImportSettings.html>`_.
-* Als je een aangepast wachtwoord gebruikt, klik op de regel "Instellingen wachtwoord" om het wachtwoord in te stellen zoals `boven <../Configuration/Preferences.html#masterwachtwoord>`_beschreven.
+* Als je een aangepast wachtwoord gebruikt, klik op de regel "Instellingen wachtwoord" om het wachtwoord in te stellen zoals `boven <../Configuration/Preferences.html#masterwachtwoord>`_ beschreven.
 
   .. image:: ../images/Pref2020_Protection.png
     :alt: Beveiliging
@@ -73,7 +73,7 @@ App beveiliging
 
 Bolus beveiliging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Bolus beveiliging kan nuttig zijn als AAPS wordt gebruikt door een klein kind en u `bolus via SMS <../Children/SMS-Commands.html>`_gebruikt.
+* Bolus beveiliging kan nuttig zijn als AAPS wordt gebruikt door een klein kind en u `bolus via SMS <../Children/SMS-Commands.html>`_ gebruikt.
 * In het voorbeeld hieronder zie je dat de app vraagt om biometrische verificatie. Mocht de biometrische verificatie niet werken, klikt dan in de ruimte boven het witte venster en voer het masterwachtwoord in.
 
   .. image:: ../images/Pref2020_PW.png
@@ -81,13 +81,13 @@ Bolus beveiliging
 
 Skin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* You can choose from four types of skins:
+* Je kunt kiezen uit drie soorten skins:
 
   .. image:: ../images/Pref2021_SkinWExample.png
-    :alt: Select skin + examples
+    :alt: Kies skin + voorbeelden
 
-* 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
-* Difference of other skins depend of phone's display orientation.
+* 'Lage resolutie skin' komt met korter label en leeftijds/niveau verwijderd om meer beschikbare ruimte te hebben op een zeer laag resolutie scherm.
+* Dit verschilt, afhankelijk van de oriëntatie van de telefoon.
 
 Staande stand
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -144,7 +144,7 @@ Standaard tijdelijke streefdoelen
   
 Ontlucht/Vul standaard insuline hoeveelheden
 -----------------------------------------------------------
-* If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
+* Als je jouw infuusslang of canule via AAPS wilt vullen dan kan dat via de knop op de `Acties tab <../Getting-Started/Screenshots.html#acties-tabblad>`_.
 * Je kunt zelf kiezen welke standaardhoeveelheden AAPS laat zien in het dialoogvenster dat ontlucht/vul knop zit.
 
 Bereik voor visualisatie
@@ -174,12 +174,12 @@ Statusindicatoren
 * Statusindicatoren geven een visuele waarschuwing voor 
       
    Sensor Leeftijd
-   * Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots#sensor-level-battery) for details).
+   * Sensor batterijniveau voor bepaalde sensor-opzetstukken (bijv Miaomiao) Zie `screenshots pagina <../Getting-Started/Screenshots#sensorniveau-batterij>`_ voor details.
    * Insuline leeftijd (aantal dagen dat reservoir wordt gebruikt)
    * Reservoir niveau (eenheden)
    * Infuus leeftijd
-   * Pump battery age
-   * Pump battery level (%)
+   * Pompbatterij leeftijd
+   * Pompbatterij niveau (%)
 
 * Als de drempelwaarde voor waarschuwing wordt overschreden, worden de waarden in geel weergegeven.
 * Als de drempelwaarde voor alarm wordt overschreden, worden de waarden in rood weergegeven.
@@ -200,15 +200,15 @@ Voer dit deel van het boluscalculator resultaat uit
 * Alleen het ingestelde percentage (moet tussen 10 en 100 liggen) van de berekende bolus wordt afgeleverd wanneer de boluscalculator wordt gebruikt. 
 * Het percentage zie je terug in de boluscalculator.
 
-Bolus advisor
+Bolusadviseur
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
-* If correction bolus is accepted **no carbs** will recorded.
-* An alarm will be started when glucose value is in good level to start eating.
-* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ again and enter the amount of carbs you want to eat.
+* Als je de `Bolus calculator<../Getting-Started/Screenshots.html#bolus-calculator>`_ gebruikt en je glucose waarde is hoger dan 10 mmol/l (180 mg/dl) wordt een correctie bolus voorgesteld.
+* Als de correctie bolus wordt geaccepteerd zullen er **geen koolhydraten** worden geregistreerd.
+* Er zal een alarm afgaan wanneer de glucosewaarde genoeg is gedaald om te beginnen met eten.
+* Je moet op dat moment de `Bolus calculator <../Getting-Started/Screenshots.html#bolus-calculator>`_ opnieuw gebruiken en daar de hoeveelheid koolhydraten invoeren die je wilt eten.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
-    :alt: Bolus advisor message
+    :alt: Bolusadviseur bericht
 
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -243,7 +243,7 @@ APS Mode
 -----------------------------------------------------------
 * Schakelt tussen open loop, gesloten loop en 'stop bij laag'
 * **Open loop** betekent dat AAPS indien nodig suggesties doet voor hogere/lagere basaalstanden. Dit wordt weergegeven als melding, jij als gebruiker moet iets doen om deze suggestie ook daadwerkelijk op je pomp uit te voeren.  
-* **Closed loop (gesloten loop) betekent dat hogere/lagere basaalstanden (en SMBs, als je dat aan hebt staan) automatisch naar je pomp worden verzonden zonder bevestiging of invoer van jou.  
+* **Closed loop** (gesloten loop) betekent dat hogere/lagere basaalstanden (en SMBs, als je dat aan hebt staan) automatisch naar je pomp worden verzonden zonder bevestiging of invoer van jou.  
 * **Stop bij laag** betekent dat AAPS wél lagere basaalstanden instelt als je BG teveel zakt, maar als je BG teveel stijgt, zal hij geen hogere basaalstand instellen (tenzij IOB<0).
 
 Minimale verzoek voor aanpassing [%]
@@ -257,16 +257,16 @@ Advanced Meal Assist (AMA) of Super Micro Bolus (SMB)
 Afhankelijk van jouw instellingen in de `Configurator <../Configuration/Config-Builder.html>`_ kun je kiezen tussen twee algoritmes:
 
 * `Advanced Meal Assist (OpenAPS AMA) <../Usage/Open-APS-features.html#geavanceerde-maaltijdhulp-ama>`_ (Geavanceerde maaltijdhulp) - status van het algoritme in 2017
-* ` Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - meest recente algoritme voor ervaren gebruikers
+* `Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - meest recente algoritme voor ervaren gebruikers
 
 OpenAPS AMA instellingen
 -----------------------------------------------------------
-Dankzij de geavanceerde maaltijdhulp (Advanced Meal Assist, AMA) kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd. 
+* Dankzij de geavanceerde maaltijdhulp (Advanced Meal Assist, AMA) kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd. 
 * Zie ook de `OpenAPS documentatie <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`_.
 
 Maximaal instelbaar basaal E/u
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Deze instelling is een veiligheidslimiet om te voorkomen dat AAPS ooit een gevaarlijk hoge basaalstand kan instellen. 
+* Deze instelling is een veiligheidslimiet om te voorkomen dat AAPS ooit een gevaarlijk hoge basaalstand kan instellen. 
 * Dit getal wordt weergegeven in eenheden per uur (E/uur). 
 * We raden je aan je verstand te gebruiken bij het invullen van deze waarde. Een goede aanbeveling is om de hoogste basaalstand in je profiel te nemen en die te **vermenigvuldigen met 4**. 
 * Als de hoogste basaalstand in je profiel bijvoorbeeld 0,5 E/uur is, dan moet je dat vermenigvuldigen met 4 om een waarde van 2 E/uur te krijgen.
@@ -282,7 +282,7 @@ Max totaal IOB dat OpenAPS niet kan overschrijden [E]
 Wanneer je begint met loopen, wordt tijdens een van de leerdoelen een tijd lang Max Basal IOB beperkt naar 0, zodat je gewend raakt aan het systeem. Dit zorgt ervoor dat AAPS helemaal geen extra basale insuline kan geven. Terwijl AAPS wel je basale insuline naar beneden kan bijstellen, of zelfs helemaal uitschakelen om een hypo te helpen voorkomen. Dit is een belangrijke stap omdat:
 
 * Je de tijd krijgt om veilig gebruik te maken van het AAPS-systeem en rustig kunt observeren hoe het werkt.
-Je nu de kans hebt om jouw basaalprofiel en insuline gevoeligheidsfactor (ISF, Insulin Sensitivity Factor) perfect te maken.
+* Je nu de kans hebt om jouw basaalprofiel en insuline gevoeligheidsfactor (ISF, Insulin Sensitivity Factor) perfect te maken.
 * Je kunt zien hoe AAPS jouw basale insuline naar beneden bijstelt om hypo's te voorkomen.
 
 Pas na een tijd mag je het systeem toestaan om extra basale insuline te geven door de Max Basal IOB waarde te verhogen. Als eerste start wordt aangeraden om de hoogste basaalstand in je profiel te nemen en die te **vermenigvuldigen met 3**. Als de hoogste basaalstand in je profiel bijvoorbeeld 0,5 E/uur is, dan moet je dat vermenigvuldigen met 3 om een waarde van 1.5 E/uur te krijgen.
@@ -342,7 +342,7 @@ Opname instellingen
 min_5m_carbimpact
 -----------------------------------------------------------
 * Het algoritme maakt gebruik van BGI (bloedglucose impact) om te bepalen wanneer koolhydraten zijn geabsorbeerd. 
-Deze waarde wordt gebruikt om de hoeveelheid opgenomen koolhydraten (Carbs On Board, COB) te laten afnemen wanneer jouw bloedsuiker niet zoveel stijgt als het algoritme had verwacht nadat je koolhydraten hebt gegeten. Deze waarde wordt alleen gebruikt in speciale gevallen: wanneer jouw CGM geen gegevens doorgeeft, of wanneer bijv. fysieke activiteit de koolhydraten "opeet". 
+* Deze waarde wordt gebruikt om de hoeveelheid opgenomen koolhydraten (Carbs On Board, COB) te laten afnemen wanneer jouw bloedsuiker niet zoveel stijgt als het algoritme had verwacht nadat je koolhydraten hebt gegeten. Deze waarde wordt alleen gebruikt in speciale gevallen: wanneer jouw CGM geen gegevens doorgeeft, of wanneer bijv. fysieke activiteit de koolhydraten "opeet". 
 * In dit soort gevallen, wanneer jouw koolhydraat absorptie niet kan worden bepaald op basis van hoe jouw bloedglucose reageert, dan zal AAPS terugvallen op deze waarde voor de afname van COB. Het is in feite een vangnet.
 * Om het simpel te stellen: Het algoritme "weet" hoe jouw BGs zich *zouden* moeten gedragen, adhv jouw huidige hoeveelheid insuline icm ISF. 
 * Wanneer jouw BG sneller daalt dan het algoritme had verwacht, dan betekent dit dat er koolhydraten worden geabsorbeerd (COB neemt af). Hierbij geldt: grote verandering = veel koolhydraten. 
@@ -457,7 +457,7 @@ Onderhoud instellingen
     :alt: Onderhoud instellingen
 
 * Standaard mailadres om de logs heen te sturen is logs@androidaps.org.
-* Als je *Encrypt geëxporteerde instellingen* selecteert, worden deze versleuteld met uw jouw `masterwachtwoord<../Configuration/Preferences.html#masterwachtwoord>`_. In dat geval moet het masterwachtwoord elke keer dat de instellingen worden geëxporteerd of geïmporteerd, worden ingevoerd.
+* Als je *Encrypt geëxporteerde instellingen* selecteert, worden deze versleuteld met uw jouw `masterwachtwoord <../Configuration/Preferences.html#masterwachtwoord>`_. In dat geval moet het masterwachtwoord elke keer dat de instellingen worden geëxporteerd of geïmporteerd, worden ingevoerd.
 
 Open Humans
 ===========================================================

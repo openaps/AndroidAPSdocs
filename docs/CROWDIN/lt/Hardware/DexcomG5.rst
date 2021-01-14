@@ -3,8 +3,8 @@ Dexcom G5
 Jei naudojate G5 su xDrip+
 ==================================================
 * Jei dar to nepadarėte, atsisiųskite xDrip <https://github.com/NightscoutFoundation/xDrip> _ir vykdykite Nightscout instrukcijas (G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>_.
-* xDrip eikite į Nustatymus > Programinės įrangos suderinamumas > Vietinis transliavimas ir pasirinkite Įjungta.
-* xDrip eikite į Nustatymus > Programinės įrangos suderinamumas > Priimti terapijas ir pasirinkite Išjungta.
+* In xdrip go to Settings > Inter-app settings > Broadcast Data Locally and select ON.
+* In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
 Jei norite naudotis AndroidAPS kalibracijoms, xDrip+ eikite į Nustatymus> Programinės įrangos suderinamumas> Priimti kalibracijas ir pasirinkite Įjungti.  Taip pat galbūt norėsite peržiūrėti kalibravimo parinktis Nustatymuose > Mažiau įprasti nustatymai > išplėstinės kalibravimo parinktys.
 * Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite xDrip.
 Jei AAPS negauna glikemijos duomenų, kai telefonas veikia skrydžio režimu, naudokite funkciją Nustatyti gavėją, [kaip aprašyta xDrip + nustatymų puslapyje] (../Configuration/xdrip.md).

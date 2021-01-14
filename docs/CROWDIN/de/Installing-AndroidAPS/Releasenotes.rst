@@ -13,6 +13,31 @@ Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualis
 
 Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln, sondern aus Sicherheitsgründen erfolgt. Neue Versionen von AndroidAPS bieten nicht nur neue Funktionen, sondern auch wichtige Sicherheitsfixes. Deshalb ist es notwendig, dass jeder Anwender so schnell wie möglich aktualisiert. Leider gibt es noch Fehlerberichte aus sehr alten Versionen, so dass dies ein Versuch ist, die Sicherheit für jeden einzelnen Benutzer und die gesamte DIY-Community zu verbessern. Danke für dein Verständnis.
 
+Version 2.8.1.1
+================
+Erscheinungsdatum: 12.01.2021
+
+Wichtige Hinweise
+----------------------
+* Option **Zu Nightscout nur hochladen** ist verpflichtend für alle 2.8.1.1 Nutzer aktiviert. 
+* Falls du den NSClient zur Eingabe von temporären Zielen, Kohlenhydraten oder Profilwechseln verwendest, musst du diese Option in AAPS deaktivieren - **aber nur dann, wenn deine Synchronisierung gut funktioniert** (z.B. keine unerwünschten Änderungen wie selbstständige Änderungen der temporären Ziele, temporären Basalraten etc.). 
+* ACHTUNG: KEINESFALLS deaktivieren, wenn irgendeine andere App Behandlungen zu Nightscout hochlädt (z.B. xDrip+ broadcast/upload/sync).
+* Die Option kann nur deaktiviert werden, wenn der engineering mode aktiviert ist.
+
+Wesentliche Änderungen
+----------------------
+* Verbesserungen und Fehlerbehebungen für RileyLink, Omnipod und Medtronic Pumpen
+* 'Zu Nightscout nur hochladen' verpflichtend
+* Fehlerbehebung für SMB & Dexcom App
+* Watchface Korrekturen
+* Verbesserte Crash-Reports
+* Gradle zurückgesetzt, um direkte Installation des Watchfaces zu ermöglichen
+* Fehlerbehebung bei Automatisierungen
+* Verbesserung Dana RS Treiber
+* Verschiedene Absturzursachen behoben
+* Fehlerkorrekturen und Verbesserungen der Benutzeroberfläche
+* neue Übersetzungen
+
 Version 2.8.0
 ================
 Erscheinungsdatum: 01.01.2021
