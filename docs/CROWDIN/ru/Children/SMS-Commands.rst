@@ -64,8 +64,8 @@ AndroidAPS позволяет контролировать телефон реб
    * Маркер TOTP из приложения идентификации-457051
    * Введите 4570512020
    
-* Красный текст "НЕПРАВИЛЬНЫЙ ПИН" изменится ** автоматически ** на зеленый "OK", если запись правильная. **There is no button you can press!**
-* The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
+* Красный текст "НЕПРАВИЛЬНЫЙ ПИН" изменится ** автоматически ** на зеленый "OK", если запись правильная. ** Никаких кнопок нажимать не надо**
+* Время на обоих телефонах должно быть синхронизировано. Оптимальный вариант - установить на автоматическую настройку из сети. Различия во времени могут привести к проблемам аутентификации.
 * Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
 
 Use SMS commands
