@@ -1,6 +1,6 @@
 import os
 
-exec (open("../../conf.py").read())
+exec (open("../../shared.conf.py").read())
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -18,3 +18,8 @@ html_favicon = '../../favicon.ico'
 #   'da', 'de', 'en', 'es', 'fi', 'fr', 'hu', 'it', 'ja'
 #   'nl', 'no', 'pt', 'ro', 'ru', 'sv', 'tr'
 html_search_language = 'ru'
+
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
+html_static_path = ['../../_static']
