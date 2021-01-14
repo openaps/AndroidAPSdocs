@@ -49,22 +49,22 @@ AndroidAPS позволяет контролировать телефон реб
 
 Настройка аутентификации
 --------------------------------------------------
-* Two-factor authentication is used to improve safety.
-* You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
+* Для повышения безопасности используется двухфакторная аутентификация.
+* Можно использовать любое приложение Authenticator, которое поддерживает маркеры TOTP RFC 6238. Популярные бесплатные приложения:
 
-   * `Authy <https://authy.com/download/>`_
-   * Google Authenticator - `Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>`_ / `iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>`_
-   * `LastPass Authenticator <https://lastpass.com/auth/>`_
-   * `FreeOTP Authenticator <https://freeotp.github.io/>`_
+   * ` Authy <https://authy.com/download/>` _
+   * Google Authenticator-` Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>` _/` iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>` _
+   * ` LastPass Authenticator <https://lastpass.com/auth/>` _
+   * " FreeOTP Authenticator <https://freeotp.github.io/>` _
 
-* Install the authenticator app of your choice on your follower phone and scan the QR code shown in AAPS.
-* Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. Пример:
+* Установите на телефоне-фолловере приложение идентификации по выбору и просканируйте QR-код, показанный в AAPS.
+* Протестируйте одноразовый пароль, введя маркер, показанный в приложении идентификации, и ПИН, который вы только что настроили в AAPS. Пример:
 
-   * Your mandatory PIN is 2020
-   * TOTP token from the authenticator app is 457051
-   * Enter 4570512020
+   * Ваш обязательный PIN-код 2020
+   * Маркер TOTP из приложения идентификации-457051
+   * Введите 4570512020
    
-* The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
+* Красный текст "НЕПРАВИЛЬНЫЙ ПИН" изменится ** автоматически ** на зеленый "OK", если запись правильная. **There is no button you can press!**
 * The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
 * Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
 
@@ -74,9 +74,9 @@ Use SMS commands
 * The AAPS phone will respond to confirm success of command or status requested. 
 * Confirm command by sending the code where necessary. Пример:
 
-   * Your mandatory PIN is 2020
-   * TOTP token from the authenticator app is 457051
-   * Enter 4570512020
+   * Ваш обязательный PIN-код 2020
+   * Маркер TOTP из приложения идентификации-457051
+   * Введите 4570512020
 
 **Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
