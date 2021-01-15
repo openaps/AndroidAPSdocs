@@ -66,9 +66,9 @@ AndroidAPS позволяет контролировать телефон реб
    
 * Красный текст "НЕПРАВИЛЬНЫЙ ПИН" изменится ** автоматически ** на зеленый "OK", если запись правильная. ** Никаких кнопок нажимать не надо**
 * Время на обоих телефонах должно быть синхронизировано. Оптимальный вариант - установить на автоматическую настройку из сети. Различия во времени могут привести к проблемам аутентификации.
-* Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
+* Используйте кнопку "RESET AUTHENTICATORS", если хотите удалить предоставленные аутентификаторы.  (При сброс аутентификации вы делаете ВСЕ уже предоставленные аутентификаторы недействительными. Вам придется их снова настроить)
 
-Use SMS commands
+Отправка SMS-Команд
 ==================================================
 * Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands <../Children/SMS-Commands.html#commands>`_ below. 
 * The AAPS phone will respond to confirm success of command or status requested. 
