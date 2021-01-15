@@ -43,7 +43,7 @@ extensions = [
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['../../_templates'] # path relative to languages conf.py
 
 source_parsers = {
   '.md': CommonMarkParser,
@@ -166,16 +166,19 @@ html_theme_path = []
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 #html_logo = None
+html_logo = '../../drawing.png' # path relative to languages conf.py
 
 # The name of an image file (relative to this directory) to use as a favicon of
 # the docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
 #html_favicon = None
+html_favicon = '../../favicon.ico' # path relative to languages conf.py
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+#html_static_path = ['_static']
+html_static_path = ['../../_static'] # path relative to languages conf.py
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -361,11 +364,6 @@ epub_exclude_files = ['search.html']
 
 # If false, no index is generated.
 #epub_use_index = True
-
-# A list of CSS files. The entry must be a filename string or a tuple containing the filename string and the attributes
-# dictionary. The filename must be relative to the html_static_path, or a full URI with scheme 
-# like http://example.org/style.css. The attributes is used for attributes of <link> tag. It defaults to an empty list.
-html_css_files = ['css/custom.css']
 
 github_doc_root = 'https://github.com/openaps/AndroidAPSdocs/tree/master/'
 hosted_root = 'http://localhost:8000/'

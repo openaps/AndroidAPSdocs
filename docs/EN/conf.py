@@ -13,13 +13,11 @@ html_logo = '../drawing.png'
 #html_favicon = None
 html_favicon = '../favicon.ico'
 
-# Language to be used for generating the HTML full-text search index.
-# Sphinx supports the following languages:
-#   'da', 'de', 'en', 'es', 'fi', 'fr', 'hu', 'it', 'ja'
-#   'nl', 'no', 'pt', 'ro', 'ru', 'sv', 'tr'
-html_search_language = 'en'
-
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['../_static']
+
+# A list of paths that contain extra templates (or templates that overwrite builtin/theme-specific templates). Relative paths
+# are taken as relative to the configuration directory.
+templates_path = ['../_templates']
