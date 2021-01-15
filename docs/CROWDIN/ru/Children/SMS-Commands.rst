@@ -70,15 +70,15 @@ AndroidAPS позволяет контролировать телефон реб
 
 Отправка SMS-Команд
 ==================================================
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands <../Children/SMS-Commands.html#commands>`_ below. 
-* The AAPS phone will respond to confirm success of command or status requested. 
-* Confirm command by sending the code where necessary. Пример:
+* Отправьте SMS на телефон с AndroidAPS с подтвержденных номеров телефона(ов) используя любую из `команд <../Children/SMS-Commands.html#commands>`_ ниже. 
+* Телефон с AAPS ответит чтобы подтвердить успешное выполнение команды или запрашиваемого статуса. 
+* Подтвердите команду, при необходимости отправив код. Пример:
 
    * Ваш обязательный PIN-код 2020
    * Маркер TOTP из приложения идентификации-457051
    * Введите 4570512020
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**Подсказка: Если отправляется много SMS, полезно держать функцию SMS незанятой на обоих телефонах,.
 
 Команды
 ==================================================
