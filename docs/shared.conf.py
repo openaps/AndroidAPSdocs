@@ -370,7 +370,11 @@ hosted_root = 'http://localhost:8000/'
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd:
   rtd_version = os.environ.get('READTHEDOCS_VERSION')
-  hosted_root = 'https://AndroidAPS.readthedocs.org/en/%s/' % rtd_version
+  rtd_lang = os.environ.get('READTHEDOCS_LANGUAGE')
+  rtd_sub = os.environ.get('SUB_DOMAIN') or 'AndroidAPS'
+
+  hosted_root = 'https://%s.readthedocs.org/%s/%s/' % (rtd_sub, rtd_lang, rtd_version)
+
 def setup(app):
     app.add_config_value('recommonmark_config', {
             # 'url_resolver': lambda url: github_doc_root + url,
