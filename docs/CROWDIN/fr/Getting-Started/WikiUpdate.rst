@@ -94,21 +94,21 @@ Octobre 2019
 * `Mise à jour des objectifs version 2.5 <../Usage/Objectives.html>`_
 * ` Mise à jour des préférences <../Configuration/Preferences.html> ` _
 * `Inhibiteurs SGLT-2 - ne pas utiliser lors de la boucle <../Module/module.html#ne-pas-utiliser-d-inhibiteurs-sglt-2>`_
-* `Dépannage des commandes SMS <../Children/SMS-Commands.html#troubleshooting>`_
-* `xDrip - Mise à jour du remplacement de l'émetteur G6 <../Configuration/xdrip.html#replace-transmitter>`_
+* `Dépannage des commandes SMS <../Children/SMS-Commands.html#depannage>`_
+* `xDrip - Mise à jour du remplacement de l'émetteur G6 <../Configuration/xdrip.html#remplacement-du-transmetteur>`_
 
 Septembre 2019
 ==================================================
 * `Automatisation <../Usage/Automation.html>`_
 * `Calculatrice Bolus <../Getting-Started/Screenshots.html#detection-incorrecte-des-ga>`_ - absorption lente des glucides
-* `Sécurité Nightscout <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
+* `Sécurité Nightscout <../Installing-AndroidAPS/Nightscout.html#remarques-sur-la-securite>`_
 * `Décalage horaire du profil <../Usage/Profiles.html#decalage-horaire>`_ (plus de détails)
 * `Surveillance à distance <../Children/Children.html>`_
 * `Qu'est-ce qu'un système à boucle fermée ? <../Getting-Started/ClosedLoop.html>`_
 
 Août 2019
 ==================================================
-* `Application Dexcom G6 patchée par region <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
-* `Nouvel émetteur Dexcom G6 <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
+* `Application Dexcom G6 patchée par region <../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee>`_
+* `Nouvel émetteur Dexcom G6 <../Configuration/xdrip.html#connecter-l-emetteur-g6-pour-la-premiere-fois>`_ ("firefly" / 8G...)
 * `Ce dont j'ai besoin? <../index.html#what-do-i-need>`_ - nouvelle structure & informations supplémentaires
 * Nouvelle structure
