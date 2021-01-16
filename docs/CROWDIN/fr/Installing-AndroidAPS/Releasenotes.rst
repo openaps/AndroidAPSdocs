@@ -96,7 +96,7 @@ Nouvelles fonctionnalités majeures
 * petits correctifs Insight @TebbeUbben @MilosKozak
 * option `"Langue par défaut" <../Configuration/Preferences.html#general>`_ @MilosKozak
 * icônes vectorielles @Philoul
-* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phone-androidaps>`_ @Tornado-Tim
+* `définir une basal temp neutre pour les pompes MDT <../Configuration/MedtronicPump.html#configuration-du-telephone-androidaps>`_ @Tornado-Tim
 * amélioration de l'Historique @MilosKozak
 * suppression de l'algorithme OpenAPS MA @Tornado-Tim
 * suppression de la sensibilité Oref0 @Tornado-Tim
@@ -237,7 +237,7 @@ Nouvelles fonctionnalités majeures
 * Prise en charge de RxJava2, Okhttp3, Retrofit
 * Support des anciennes `pompes Medtronic <../Configuration/MedtronicPump.html>`_ (besoin de RileyLink)
 * Nouveau `plugin d'Automatisation <../Usage/Automation.html>`_
-* Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings-overview>`_ from bolus wizard calculation
+* Autoriser `uniquement la partie bolus <../Configuration/Preferences.html#parametres-avances-apercu>`_ à partir de l'assistant bolus (calculatrice)
 * Affichage de l'activité de l'insuline
 * Ajustement des prévisions de l'IA par le résultat autosense
 * Nouveau support pour les apk des applications Dexcom patchées (`dossier 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
@@ -337,7 +337,7 @@ Onglet Vue d'ensemble
 --------------------------------------------------
 * Le ruban du haut donne accès à Suspendre/Désactiver la boucle, consulter/changer le profil et démarrer/arrêter les cibles temp. (CT). Les CT utilisent des paramètres par défauts configurés dans les préférences. La nouvelle option CT Hypo est une cible temp. haute pour empêcher la boucle de corriger trop agressivement les glucides de secours.
 * Boutons de traitement : l'ancien bouton de traitement est encore disponible, mais masqué par défaut. La visibilité des boutons peut maintenant être configurée. Ajout de deux nouveaux boutons insuline et glucides (qui inclut `eGluc/glucides étendus <../Usage/Extended-Carbs.html>`_)
-* `Colored prediction lines <../Getting-Started/Screenshots.html#prediction-lines>`_
+* `Lignes de prédiction <../Getting-Started/Screenshots.html#lignes-de-prediction>`_ - plus de détails
 * Option pour afficher un champ de notes dans les boites de dialogue insuline/glucides/calculatrice et amorcer+remplir, qui sont téléchargées dans NS
 * Mise à jour de la boîte de dialogue amorcer/remplir qui permet l'amorçage et créé une entrée Careportal pour le changement de site et le changement de cartouche
 
