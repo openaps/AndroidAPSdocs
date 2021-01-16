@@ -146,7 +146,7 @@
  <td><strong>git</strong></td>
  <td>sistema de control de versiones para realizar un seguimiento de los cambios en los archivos de sistema y coordinar el trabajo en esos archivos <br>-> necesario para actualizaciones de APK</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - actualización APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - actualización APK</a></td>
 </tr>
 <tr>
  <td><strong>Github</strong></td>
