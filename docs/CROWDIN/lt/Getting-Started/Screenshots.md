@@ -328,7 +328,7 @@ Paprastai faktinė glikemijos kreivė baigsis šių eilučių viduryje arba neto
    * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
    * Make sure to read the [details](../Usage/Extended-Carbs#id1) before using this option.
 
-### Careporal - section N
+### Careportal - section N
 
 * Displays information on
    
@@ -348,7 +348,7 @@ Paprastai faktinė glikemijos kreivė baigsis šių eilučių viduryje arba neto
    
    ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
 
-### Careporal - section O
+### Careportal - section O
 
 * BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
 * Prime/Fill allows you to record pump site and insulin cartridge change.
