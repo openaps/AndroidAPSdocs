@@ -86,14 +86,14 @@ Novembre 2019
 
 Octobre 2019
 ==================================================
-* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ mises à jour (en particulier sur la `page de mise à jour <../Installing-AndroidAPS/Update-to-new-version.html>`_)
+* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#id15>`_ mises à jour (en particulier sur la `page de mise à jour <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `AccuChek Insight - options d'enregistrement <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * `Le calcul des GA sur une page distincte <../Usage/COB-calculation.html>`_
-* `GA - mauvaise detection de la valeur des GA <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
-* `Dépannages spécifiques du Dexcom G6 <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_
+* `GA - mauvaise detection de la valeur des GA <../Usage/COB-calculation.html#detection-de-ga-errones>`_
+* `Dépannages spécifiques du Dexcom G6 <../Hardware/DexcomG6.html#depannages-specifiques-a-dexcom-g6>`_
 * `Mise à jour des objectifs version 2.5 <../Usage/Objectives.html>`_
 * ` Mise à jour des préférences <../Configuration/Preferences.html> ` _
-* `Inhibiteurs SGLT-2 - ne pas utiliser lors de la boucle <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
+* `Inhibiteurs SGLT-2 - ne pas utiliser lors de la boucle <../Module/module.html#ne-pas-utiliser-d-inhibiteurs-sglt-2>`_
 * `Dépannage des commandes SMS <../Children/SMS-Commands.html#troubleshooting>`_
 * `xDrip - Mise à jour du remplacement de l'émetteur G6 <../Configuration/xdrip.html#replace-transmitter>`_
 
