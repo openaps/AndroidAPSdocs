@@ -16,7 +16,7 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 ### Pompe Ypsomed ([Page d'accueil](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Etat de la boucle :** Version 1-1.5 (2Q/2018) ne sont pas candidates à la boucle. Bien qu'elles aient une communication bluetooth, il semble que la communication soit très limitée (unidirectionnelle : Pompe->Appli). Company is planning to extend the pump to support remote bolusing (update planned for end of 2021) and later on they plan to add other functions required to create a Loop. Their official app will support that in the future (planned for 2022 no exact date known). As they plan to have their own Loop system see this [page](https://www.mylife-diabetescare.com/en/loop-program.html), they won't be offering any support to any developers on any DIY loop, at least for now.
+**Etat de la boucle :** Version 1-1.5 (2Q/2018) ne sont pas candidates à la boucle. Bien qu'elles aient une communication bluetooth, il semble que la communication soit très limitée (unidirectionnelle : Pompe->Appli). L'entreprise prévoit d'étendre la pompe pour prendre en charge les bolus à distance (mise à jour prévue pour fin 2021) et plus tard elle prévoit d'ajouter d'autres fonctions nécessaires pour créer une boucle. Leur application officielle le supportera dans le futur (prévue pour 2022 aucune date exacte). Comme ils prévoient d'avoir leur propre système de boucles voir cette page [](https://www.mylife-diabetescare.com/en/loop-program.html), Ils n'offriront pas de support aux développeurs de boucles DIY, du moins pas pour l'instant.
 
 **Configuration matérielle requise pour AAPS :** Probablement aucune. Elle dispose du Bluetooth.
 
