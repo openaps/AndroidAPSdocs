@@ -52,7 +52,7 @@ AndroidAPS limita el valor de la forma siguiente:
 * Adultos resistente a la insulina: 12
 * Pregnant: 25
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
 ### El número máximo de IOB que OpenAPS no puede sobrepasar (OpenAPS "max-iob")
 
@@ -63,7 +63,7 @@ Al utilizar OpenAPS SMB, max-IOB se calcula de forma diferente que en OpenAPS AM
     maxIOB = promedio bolos de comidas + 3x basal máx
     
 
-Sea cuidadoso y paciente, y sólo cambie los valores paso a paso. Es diferente para distintas personas y también depende de la dosis diaria total (TDD). Por razones de seguridad, hay un límite, que depende de la edad del paciente. The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features.html#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
+Sea cuidadoso y paciente, y sólo cambie los valores paso a paso. Es diferente para distintas personas y también depende de la dosis diaria total (TDD). Por razones de seguridad, hay un límite, que depende de la edad del paciente. The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 * Niños: 3
 * Teenager: 7
@@ -71,9 +71,9 @@ Sea cuidadoso y paciente, y sólo cambie los valores paso a paso. Es diferente p
 * Adultos resistente a la insulina: 25
 * Pregnant: 40
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
-Véase también [OpenAPS documentación para SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1#understanding-super-micro-bolus-smb).
 
 ### Habilitar el autosensado de AMA
 
@@ -149,7 +149,7 @@ Default value: 4 (shouldn’t be changed unless you really need to and know, wha
 
 AMA, la forma abreviada de "asistencia avanzada para comidas" es una función OpenAPS a partir de 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) permite que el sistema sea más rápido al ejecutar una alta tasa basal temporal después de un bolo de comida si ingresa a los carbohidratos de forma fiable.
 
-Usted puede encontrar más información en la documentación [Documentación de OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+You can find more information in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features#advanced-meal-assist-or-ama).
 
 ### Max U/h una basal temporal puede establecerse en (OpenAPS “max-basal")
 
@@ -165,7 +165,7 @@ Los parámetros codificados en AndroidAPS son los siguientes:
 * Adultos resistente a la insulina: 12
 * Pregnant: 25
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
 ### El máximo basal IOB que OpenAPS puede entregar \[U\] (OpenAPS "max-iob")
 
