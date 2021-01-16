@@ -63,7 +63,7 @@ Janvier 2020
 Décembre 2019
 ==================================================
 * `Android auto <../Usage/Android-auto.html>`_ - paramétrage avec copies d'écran
-* `Accu-Chek Insight & Autotune <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_ - contournement pour pouvoir l'utiliser
+* `Accu-Chek Insight & Autotune <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_ - contournement pour pouvoir l'utiliser
 * `Glimp <../Configuration/Config-Builder.html#source-gly>`_ - version 4.15.57 et plus récente supportée
 * `Watchfaces <../Configuration/Watchfaces.html>`_ - mise à jour majeure, beaucoup plus de détails
 * `Complications sur les montres connectées <../Configuration/Watchfaces.html#complications>`_ - utilisez vos cadrans favoris avec les données AAPS
@@ -74,14 +74,14 @@ Novembre 2019
 * `Bolus étendus - pourquoi ils ne fonctionnent pas dans le cadre d'une boucle <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
 * `Écran d'accueil - lignes sur le graphique <../Getting-Started/Screenshots.html#section-f-graphique-principal>`_
-* `Insight - Désactiver les valeurs absolues dans NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
+* `Insight - Désactiver les valeurs absolues dans NS Client <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_
 * `Pompe Medtronic - doubles entrées possibles <../Configuration/MedtronicPump.html>`_
 * `Nouveau tutoriel Freestyle Libre 2 <../Hardware/Libre2.html> ` _
 * `Changement de profil avec pourcentage - example <../Usage/Profiles.html>`_
 * `Mise à jour commandes SMS <../Children/SMS-Commands.html>`_
 * `Dépannage d'Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Dépannage - collection de liens <../Usage/troubleshooting.html>`_
-* `Mise à jour - démarrage rapide pour les utilisateurs expérimentés <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experied-users>`_
+* `Mise à jour - démarrage rapide pour les utilisateurs expérimentés <../Installing-AndroidAPS/Update-to-new-version.html#acces-rapide-aux-utilisateurs-experimentes>`_
 * Wiki - mise à jour `Edition <../make-a-PR.html#syntaxe-du-code>`_ et `Traduction <../translations.html#traduire-les-pages-de-documentation>`_.
 
 Octobre 2019
