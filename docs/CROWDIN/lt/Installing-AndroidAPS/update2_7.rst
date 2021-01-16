@@ -19,8 +19,8 @@ Tikrinti KG šaltinį
 Baigti egzaminą
 -----------------------------------------------------------
 * AAPS 2.7 programoje yra naujas Tikslas 11 `Automatizavimas <../Usage/Automation.html>`_.
-* Jūs turite išlaikyti egzaminą (`Tikslas 3 ir 4 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_), kad užbaigtumėte `Tikslą 11 <../Usage/Objectives.html#objective-11-automation>`_.
-* Jei, pavyzdžiui, jūs dar neišlaikėte egzamino `Tiksle 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_, jums reikės išlaikyti egzaminą, prieš pradedant `Tikslą 11 <../Usage/Objectives.html#objective-11-automation>`_. 
+* You have to finish exam (`objective 3 and 4 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_) in order to complete `objective 11 <../Usage/Objectives.html#objective-11-automation>`_.
+* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. 
 * Tai nepaveiks kitų tikslų, kuriuos jau baigėte. Visi užbaigti tikslai bus išsaugoti!
 
 Pagrindinio slaptažodžio nustatymas
