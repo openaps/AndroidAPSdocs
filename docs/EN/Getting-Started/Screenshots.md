@@ -309,7 +309,7 @@ When you want to make a meal bolus this is where you will normally make it from.
    * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
    * Make sure to read the [details](../Usage/Extended-Carbs#id1) before using this option.
 
-### Careporal - section N
+### Careportal - section N
 
 * Displays information on
 
@@ -328,7 +328,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
    ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
 
-### Careporal - section O
+### Careportal - section O
 
 * BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
 * Prime/Fill allows you to record pump site and insulin cartridge change.
