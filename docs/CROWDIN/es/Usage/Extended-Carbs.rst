@@ -39,7 +39,7 @@ Cuando los eCarbs son generados, se genera una nota en el Careportal para docume
 
 Bolo extendido
 ==================================================
-Como se ha mencionado anteriormente, los bolos extendidos o de onda múltiple no funcionan realmente en un entorno de lazo cerrado. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-wont-work-in-a-closed-loop-environment>`_ for details
+Como se ha mencionado anteriormente, los bolos extendidos o de onda múltiple no funcionan realmente en un entorno de lazo cerrado. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ for details
 
 Extended bolus and switch to open loop - Dana and Insight pump only
 ---------------------------------------------------------------------
