@@ -53,7 +53,7 @@ Soyez patient lors de l'installation d'Android Studio car le logiciel téléchar
 
 ### Vérifier le firmware (logiciel interne) du smartphone
 
-* Menu > Paramètres > A propose du téléphone > Informations sur le logiciel : au moins "Android-Version 7.0" (testé avec succès jusqu'à Android version 8.0.0 Oreo - Samsung Experience Version 9.0) 
+* Menu > Paramètres > A propose du téléphone > Informations sur le logiciel : au moins "Android-Version 8.0" (testé avec succès jusqu'à Android version 8.0.0 Oreo - Samsung Experience Version 9.0) 
 * Pour la mise à jour du firmware : menu > paramètres > mise à jour du logiciel
 
 ### Autoriser l'installation d'applications issues de sources inconnues

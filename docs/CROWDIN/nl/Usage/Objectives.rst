@@ -26,7 +26,7 @@ Doel 2: Leer hoe AndroidAPS te gebruiken
    .. image:: ../images/Objective2_V2_5.png
      :alt: Screenshot doel 2
 
-Objective 3: Prove your knowledge
+Doel 3: Bewijs jouw kennis
 ==================================================
 * Zorg dat je slaagt voor de multiple-choice test van jouw AndroidAPS kennis.
 * Klik op de oranje tekst "Nog niet voltooid" om toegang te krijgen tot de pagina met de vraag en antwoordopties.
@@ -35,6 +35,9 @@ Objective 3: Prove your knowledge
      :alt: Screenshot doel 3
 
 * Er staan links naar deze wiki om je op weg te helpen als je het antwoord niet meteen weet.
+* De vragen voor doelstelling 3 voor AAPS versie 2.8 zijn volledig herschreven door gebruikers van wie Engels de moedertaal is, en vervolgens vertaald naar o.a. het Nederlands. Dit om te voorkomen dat je een vraag niet begrijpt door onduidelijke bewoordingen. De vernieuwde vragen gaan grotendeels over dezelfde inhoud, en er zijn een paar nieuwe vragen toegevoegd.
+* Voor mensen die de vragen uit Doel 3 in een vorige versie hadden afgerond, is Doel 3 weer op 'nog niet voltooid' komen te staan omdat deze nieuwe vragen nog beantwoord moeten worden.
+* Voor hen geldt dat zij niet aan een nieuw Doel kunnen beginnen totdat ze de nieuwe vragen ook beantwoord hebben. Voor mensen die in een vorige versie alle Doelen al hadden afgerond, geldt dat zij ruim de tijd hebben om deze nieuwe vragen te beantwoorden. Er worden bij hen geen AAPS-functies gedeactiveerd nu deze vragen nog openstaan. Het is wel verstandig om er binnenkort mee aan de slag te gaan; wanneer een volgende versie uitkomt, die wellicht nieuwe functies (en bijbehorende nieuwe Doelen) heeft, dan zou je niet aan een nieuw Doel kunnen beginnen totdat je alle vragen hebt beantwoord.
 
 Doel 4: Beginnen met een open loop
 ==================================================
@@ -115,13 +118,13 @@ Doel 8: Pas basaalstanden en de ratio's aan indien nodig, activeer hierna de Aut
 * Je kunt `Autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ gebruiken om eenmalig te laten berekenen of jouw basaalstanden goed zijn ingesteld, of een traditionele basaaltest doen. Zie ook de "Veelgestelde vragen" sectie van deze wiki.
 * Schakel `Autosens <../Usage/Open-APS-features.html>`_ in gedurende een periode van 7 dagen en bekijk de witte lijn in de grafiek op het Overzichts-scherm. Die lijn geeft weer hoe jouw gevoeligheid voor insuline kan verhogen of verminderen als gevolg van beweging, hormonen etc. Bekijk ook af en toe de OpenAPS tab om te zien hoe AndroidAPS je basaalstanden en/of BG streefdoelen aanpast adhv jouw gevoeligheid op dat moment. en houd op de OpenAPS tab in de gaten hoe AndroidAPS de basaalstanden en/of streefdoelen dienovereenkomstig aanpast.
 
-*Vergeet niet om jezelf als nieuwe looper aan te melden via `dit formulier <http://bit.ly/nowlooping>`_ en AndroidAPS als jouw type loop-software te kiezen, als je dat nog niet gedaan hebt.*
+*Vergeet niet om jezelf als nieuwe looper aan te melden via 'dit formulier <http://bit.ly/nowlooping>'_ en AndroidAPS als jouw type loop-software te kiezen, als je dat nog niet gedaan hebt.*
 
 
-Objective 9: Try additional features for daytime use and gain confidence in your closed loop system
+Doel 9: Probeer extra functies voor gebruik overdag en krijg vertrouwen in jouw closed loop systeem
 ====================================================================================================
-* Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_.
-* As `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
+* Vóór de AAPS versie 2.7 was maaltijd assist (MA) het basisalgoritme voor AAPS en je moest doel 8 hebben afgerond om `advanced meal assist (AMA) <../Usage/Open-APS-features.html#geavanceeerde-maaltijdhulp-ama>`_ te activeren.
+* Omdat `advanced meal assist (AMA) <../Usage/Open-APS-features.html#geavanceerde-maaltijdhulp-ama>`_ inmiddels het standaard algoritme is bij AAPS versie 2.7, kun je de komende 28 dagen gebruiken om functies uit te proberen die je nog niet hebt gebruikt en om meer vertrouwen te krijgen in je gesloten loop systeem.
 
 
 Doel 10: Activeren van extra functies overdag zoals SMB (Super Micro Bolus)
@@ -131,11 +134,11 @@ Je moet het `SMB hoofdstuk in deze wiki <../Usage/Open-APS-features.html#super-m
 Wanneer je van AMA naar SMB wisselt, dan moet je jouw instelling voor min_5m_carbimpact in de Opname instellingen veranderen van 3 naar 8. Je moet dit handmatig doen wanneer je van AMA naar SMB wisselt.
 
 
-Objective 11: Automation
+Doel 11: Automatisering
 ====================================================================================================
-* You have to start objective 11 to be able to use `Automation <../Usage/Automation.html>`_.
-* Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-proof-your-knowledge>`_.
-* Completing previous objectives will not effect other objectives you have already finished. You will keep all finished objectives!
+* Je moet Doel 11 starten om `Automatisering <../Usage/Automation.html>`_ te kunnen gebruiken.
+* Zorg ervoor dat je alle doelen hebt voltooid, inclusief `examen <../Usage/Objectives.html#doel-3-bewijs-jouw-kennis>`_.
+* Het behalen van eerdere doelen zal geen effect hebben op andere doelen die je al hebt behaald. Je behoudt alle reeds afgeronde doelen!
 
 
 Teruggaan in doelen

@@ -53,7 +53,7 @@ Prosimy o cierpliwość podczas instalacji Android Studio, aplikacja ta pobiera 
 
 ### Sprawdź wersje oprogramowania na telefonie
 
-* Ustawienia > Informacje o telefonie > wersja androida: "Wymagana przynajmniej wersja Android 7.0" (przetestowano pomyślnie do wersji Android 8.0.0 Oreo - Samsung Experience Wersja 9.0) 
+* Menu > Settings > Phone info > Software info: At least "Android-Version 8.0" (successfully tested up to Android version 8.0.0 Oreo - Samsung Experience Version 9.0) 
 * Aby przeprowadzić update oprogramowania: Ustawienia -> Informacje o telefonie -> Aktualizacja systemu
 
 ### Zezwól na instalację aplikacji z nieznanych źródeł

@@ -4,7 +4,7 @@ On starting your AndroidAPS and selecting your profile, you will need to do a "P
 
 Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period. Duration of zero means infinite. Such profile is valid until new "Profile switch".
 
-To do a profile switch long-press on the name of your profile ("Aktuell (Rad)" in the picture below) and select profile switch.
+To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below).
 
 ![Do profile switch](../images/ProfileSwitch_HowTo.png)
 

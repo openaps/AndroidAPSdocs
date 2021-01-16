@@ -8,7 +8,7 @@
 * In den Versionen vor AAPS 2.7 musste der Benutzer manuell zwischen 8 oder 24 Stunden wählen.
 * Ab AAPS Version 2.7 wechselt Autosens in AAPS zwischen einem 24- und 8-Stunden-Fenster zur Berechnung der Empfindlichkeit. Dabei wird das empfindlichere Ergebnis verwendet. 
 * Wenn Du bisher oref1 genutzt hast, wirst Du wahrscheinlich bemerken, dass das System weniger dynamisch auf Veränderungen reagiert, da zwischen 8 und 24 Stunden gewechselt wird.
-* Das Wechseln einer Kanüle oder ein Profilwechsel setzt Autosens wieder auf 0 zurück.
+* Das Wechseln einer Kanüle oder ein Profilwechsel setzt Autosens wieder auf 100% zurück.
 * Autosens passt Deine Basalrate, Deinen I:C und den ISF für Dich an (d.h. Nachahmen der Effekte einer Profilverschiebung).
 * Wenn Du über einen längeren Zeitraum kontinuierlich Kohlenhydrate zu Dir nimmst, ist Autosens während dieses Zeitraums weniger effektiv, da Kohlenhydrate aus den Berechnungen der BZ-Abweichungen ausgenommen werden.
 
@@ -47,9 +47,12 @@ Du kannst aber keinen beliebigen Wert wählen. AAPS begrenzt als “hard limit�
 AndroidAPS beschränkt den Wert wie folgt:
 
 * Kind: 2
-* Teenager: 5
+* Jugendlicher: 5
 * Erwachsener: 10
 * Insulinresistenter Erwachsener: 12
+* Schwangere: 25
+
+*Siehe dazu auch die [Übersicht der fest programmierten Limits](../Usage/Open-APS-features.html#ubersicht-der-fest-programmierten-limits).*
 
 ### Maximales Basal-IOB, das OpenAPS abgeben darf (OpenAPS “max-iob”)
 
@@ -60,12 +63,15 @@ Wenn du OpenAPS SMB verwendest, wird max-IOB anders berechnet, als in OpenAPS AM
     maxIOB = mittlerer Mahlzeitenbolus + 3x höchste tägliche Basalrate
     
 
-Sei jedoch vorsichtig und passe deine Einstellungen in kleinen Schritten an. Das ist sehr individuell und hängt stark vom durchschnittlichen Gesamtinsulinbedarf ab (total daily dose = TDD). Zur Sicherheit gibt es ein Limit, das auf dem Patientenalter basiert. Das "hard limit" für maxIOB ist höher als in AMA.
+Sei jedoch vorsichtig und passe deine Einstellungen in kleinen Schritten an. Das ist sehr individuell und hängt stark vom durchschnittlichen Gesamtinsulinbedarf ab (total daily dose = TDD). Zur Sicherheit gibt es ein Limit, das auf dem Patientenalter basiert. Das “hard limit” für maxIOB ist höher als in [AMA](../Usage/Open-APS-features.html#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 * Kind: 3
 * Jugendlicher: 7
 * Erwachsener: 12
 * Insulinresistenter Erwachsener: 25
+* Schwangere: 40
+
+*Siehe dazu auch die [Übersicht der fest programmierten Limits](../Usage/Open-APS-features.html#ubersicht-der-fest-programmierten-limits).*
 
 Siehe auch [OpenAPS-Dokumentation zu SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
@@ -147,16 +153,19 @@ Siehe auch: [OpenAPS-Dokumentation (englisch)](http://openaps.readthedocs.io/en/
 
 ### Max IE/h, die als temporäre Basalrate gesetzt werden können (OpenAPS “max-basal”)
 
-Diese Sicherheitseinstellung hindert AndroidAPS daran, jemals eine gefährlich hohe Basalrate zu setzen und begrenzt die temporäre Basalrate auf x IE/h. Es wird empfohlen, hier etwas Vernünftiges einzugeben. Eine gute Empfehlung ist, den höchsten stündlichen Basalratenwert in deinem Profil zu verwenden und diesen mit 4 oder mindestens mit 3 zu multiplizieren. Beispiel: wenn der höchste stündliche Basalratenwert in deinem Profil 1.0 IE/h ist, kannst du diesen mit 4 multiplizieren, wodurch du einen Wert von 4 IE/h erhältst, so dass du "4" als Sicherheitseinstellung setzen kannst.
+Diese Sicherheitseinstellung hindert AndroidAPS daran, jemals eine gefährlich hohe Basalrate zu setzen und begrenzt die temporäre Basalrate auf x IE/h. Es wird empfohlen, hier etwas vernünftiges einzugeben. Eine gute Empfehlung ist, den höchsten stündlichen Basalratenwert in deinem Profil zu verwenden und diesen mit 4 oder mindestens mit 3 zu multiplizieren. Beispiel: wenn der höchste stündliche Basalratenwert in deinem Profil 1.0 IE/h ist, kannst du diesen mit 4 multiplizieren, wodurch du einen Wert von 4 IE/h erhältst, so dass du "4" als Sicherheitseinstellung setzen kannst.
 
 Du kannst aber keinen beliebigen Wert wählen: AAPS begrenzt als “hard limit” den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Das "hard limit" für maxIOB ist bei AMA niedriger als bei SMB. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höchsten.
 
 AndroidAPS hat folgende "hard limits":
 
 * Kind: 2
-* Teenager: 5
+* Jugendlicher: 5
 * Erwachsener: 10
 * Insulinresistenter Erwachsener: 12
+* Schwangere: 25
+
+*Siehe dazu auch die [Übersicht der fest programmierten Limits](../Usage/Open-APS-features.html#ubersicht-der-fest-programmierten-limits).*
 
 ### Maximales Basal-IOB, das OpenAPS abgeben darf \[IE\] (OpenAPS “max-iob”)
 
@@ -165,9 +174,12 @@ Dieser Parameter begrenzt das maximale Basal-IOB, bis zu dem AndroidAPS noch fun
 Der Standardwert ist 2, aber du solltest diesen Parameter in kleinen Schritten erhöhen um zu sehen, wie stark sich das bei dir auswirkt und welcher Wert am besten passt. Das ist sehr individuell und hängt stark vom durchschnittlichen Gesamtinsulinbedarf ab (total daily dose = TDD). Zur Sicherheit gibt es ein Limit, das auf dem Patientenalter basiert. Das "hard limit" für maxIOB ist bei AMA niedriger als bei SMB.
 
 * Kind: 3
-* Teenager: 5
+* Jugendlicher: 5
 * Erwachsener: 7
 * Insulinresistenter Erwachsener: 12
+* Schwangere: 25
+
+*Siehe dazu auch die [Übersicht der fest programmierten Limits](../Usage/Open-APS-features.html#ubersicht-der-fest-programmierten-limits).*
 
 ### Verwende AMA Autosense
 
@@ -192,3 +204,85 @@ Standardwert: 4 (sollte nur in Ausnahmefällen geändert werden und wenn du wei�
 **Bolus snooze dia divisor** Die Funktion “Bolus snooze” wird dann aktiviert, wenn du einen Essensbolus gegeben hast. AAPS reagiert nach den Mahlzeiten für die Dauer des DIA geteilt durch den "bolus-snooze" Parameter nicht mit einer niedrigen temporären Basalrate. Der Standardwert ist 2. Dies bedeutet: Bei einem DIA von 5 Stunden wird der “Bolus snooze” über 5 : 2 = 2,5 Stunden geradlinig auslaufen.
 
 Standardwert: 2
+
+## Übersicht der fest programmierten Limits
+
+<table border="1">
+  
+<thead>
+  <tr>
+    <th width="200"></th>
+    <th width="75">Kind</th>
+    <th width="75">Jugendlicher</th>
+    <th width="75">Erwachsener</th>
+    <th width="75">Insulinresistenter Erwachsener</th>
+    <th width="75">Schwangere</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>MAXBOLUS</td>
+    <td>5,0</td>
+    <td>10,0</td>
+    <td>17,0</td>
+    <td>25,0</td>
+    <td>60,0</td>
+  </tr>
+  <tr>
+    <td>MINDIA</td>
+    <td>5,0</td>
+    <td>5,0</td>
+    <td>5,0</td>
+    <td>5,0</td>
+    <td>5,0</td>
+  </tr>
+  <tr>
+    <td>MAXDIA</td>
+    <td>7,0</td>
+    <td>7,0</td>
+    <td>7,0</td>
+    <td>7,0</td>
+    <td>10,0</td>
+  </tr>
+  <tr>
+    <td>MINIC</td>
+    <td>2,0</td>
+    <td>2,0</td>
+    <td>2,0</td>
+    <td>2,0</td>
+    <td>0,3</td>
+  </tr>
+  <tr>
+    <td>MAXIC</td>
+    <td>100,0</td>
+    <td>100,0</td>
+    <td>100,0</td>
+    <td>100,0</td>
+    <td>100,0</td>
+  </tr>
+  <tr>
+    <td>MAXIOB_AMA</td>
+    <td>3,0</td>
+    <td>3,5</td>
+    <td>7,0</td>
+    <td>12,0</td>
+    <td>25,0</td>
+  </tr>
+  <tr>
+    <td>MAXIOB_SMB</td>
+    <td>3,0</td>
+    <td>7,0</td>
+    <td>12,0</td>
+    <td>25,0</td>
+    <td>45,0</td>
+  </tr>
+  <tr>
+    <td>MAXBASAL</td>
+    <td>2,0</td>
+    <td>5,0</td>
+    <td>10,0</td>
+    <td>12,0</td>
+    <td>25,0</td>
+  </tr>
+</tbody>
+</table>

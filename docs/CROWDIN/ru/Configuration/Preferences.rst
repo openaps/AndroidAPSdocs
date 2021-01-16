@@ -1,19 +1,25 @@
 Настройки
 ***********************************************************
-* Open preferences by clicking three-dot-menu on top right side of home screen.
+* **Open preferences** by clicking three-dot-menu on top right side of home screen.
 
-  .. image:: ../images/Pref2020_Open.png
+  .. image:: ../images/Pref2020_Open2.png
     :alt: Open preferences
 
 * You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and click Plugin preferences.
 
-  .. image:: ../images/Pref2020_OpenPlugin.png
+  .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Open plugin preferences
-    
-* Sub-menus can be opened by clicking the triangle below the sub-menu title.
 
-  .. image:: ../images/Pref2020_Submenu.png
+* **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+
+  .. image:: ../images/Pref2020_Submenu2.png
     :alt: Open submenu
+
+* With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+
+  .. image:: ../images/Pref2021_Filter.png
+    :alt: Preferences filter
+
 
 Общие настройки
 ===========================================================
@@ -75,12 +81,13 @@ Bolus protection
 
 Skin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* You can choose from three types of skins:
+* You can choose from four types of skins:
 
-  .. image:: ../images/Pref2020_Skin.png
-    :alt: Select skin
+  .. image:: ../images/Pref2021_SkinWExample.png
+    :alt: Select skin + examples
 
-* Difference depend of phone's display orientation
+* 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
+* Difference of other skins depend of phone's display orientation.
 
 Portrait orientation
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -137,7 +144,7 @@ Default temp targets
   
 Fill/Prime standard insulin amounts
 -----------------------------------------------------------
-* If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Usage/CPbefore26.html#pump>`_.
+* If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
 * Pre-set values can be defined in this dialogue.
 
 Range for visualization
@@ -166,12 +173,13 @@ Show notes field in treatments dialogs
 -----------------------------------------------------------
 * Status lights give a visual warning for 
       
-   * Cannula age
+   * Sensor age
+   * Sensor battery level for certain smart readers (see `screenshots page <../Getting-Started/Screenshots#sensor-level-battery>`_ for details).
    * Insulin age (days reservoir is used)
    * Reservoir level (units)
-   * Sensor age
-   * Battery age
-   * Battery level (%)
+   * Cannula age
+   * Pump battery age
+   * Pump battery level (%)
 
 * If threshold warning is exceeded, values will be shown in yellow.
 * If threshold critical is exceeded, values will be shown in red.
@@ -182,11 +190,25 @@ Show notes field in treatments dialogs
 
 Advanced Settings (Overview)
 -----------------------------------------------------------
+
+  .. image:: ../images/Pref2021_OV_Adv.png
+    :alt: Preferences > Status Lights
+
 Deliver this part of bolus wizard result
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * General setting to deliver only part of bolus wizard result. 
 * Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. 
 * The percentage is shown in bolus wizard.
+
+Bolus advisor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+* If correction bolus is accepted **no carbs** will recorded.
+* An alarm will be started when glucose value is in good level to start eating.
+* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ again and enter the amount of carbs you want to eat.
+
+  .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
+    :alt: Bolus advisor message
 
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

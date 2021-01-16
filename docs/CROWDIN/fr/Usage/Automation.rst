@@ -27,6 +27,10 @@ Veillez donc à désactiver les règles d'automatisation pendant ces moments si 
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Activer et désactiver une règle d'automatisation
 
+Où trouver l'automatisation
+--------------------------------------------------
+Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+
 Généralités
 --------------------------------------------------
 Il y a des limites :
@@ -92,7 +96,7 @@ Pour trier les règles d'automatisation, cliquez et maintenez l'icone sur la dro
   
 Suppression des règles d'automatisation
 -----
-Pour supprimer une règle d'automatisation, faites-la glisser vers la gauche ou vers la droite.
+Pour supprimer une règle d'automatisation, cliquez sur l'icône Corbeille.
 
 .. image:: ../images/Automation_Delete.png
   :alt: Suppression des règles d'automatisation

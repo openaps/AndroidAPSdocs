@@ -53,7 +53,7 @@ Het installeren van Android Studio kost wat tijd, wacht geduldig af terwijl de s
 
 ### Smartphone firmware controleren
 
-* Menu > instellingen > telefoon info > software info: ten minste "Android-versie 7.0" (getest tot Android versie 8.0.0 Oreo - Samsung Experience versie 9.0) 
+* Menu > instellingen > telefoon info > software info: ten minste "Android-versie 8.0" (getest tot Android versie 8.0.0 Oreo - Samsung Experience versie 9.0) 
 * Voor de firmware-update: menu > instellingen > software-update
 
 ### Toestaan dat apps uit onbekende bronnen worden geïnstalleerd

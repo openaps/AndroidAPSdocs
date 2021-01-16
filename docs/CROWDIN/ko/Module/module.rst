@@ -35,7 +35,8 @@ SGLT-2 억제제의 미사용
 
 핸드폰
 --------------------------------------------------
-You need an Android smartphone with Google Android 7.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at least but optimicaly Android 9 or 10.
+The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
+Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>_`
 
 사용자들이 테스트된 핸드폰과 스마트워치 목록을 작성하고 있으며<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_에서 확인하실 수 있습니다.
 
@@ -52,6 +53,7 @@ You need an Android smartphone with Google Android 7.0 or above. So if you are t
 - 다나R <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - 몇 개의 예전 메드트로닉 펌프 <../Configuration/MedtronicPump.html>`_ 2.4버젼 이상부터 (추가 필요 사항: RileyLink/Gnarl 하드웨어, 블루투스 저에너지 / BLE 칩셋 안드로이드폰)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
 
 AndroidAPS와 호환될 수 있는 가능성이 있는 **그외 펌프**는 <../Getting-Started/Future-possible-Pump-Drivers.html>`_ 페이지 '미래(가능한) 펌프'에 목록이 나와있습니다.
 
@@ -85,7 +87,7 @@ AndroidAPS와 호환될 수 있는 가능성이 있는 **그외 펌프**는 <../
 
 Nightscout
 --------------------------------------------------
-나이트스카웃은 CGM 데이터 및 안드로이드APS 데이터를 저장하고 표시하며 보고서를 작성할 수 있는 오픈 소스 웹 애플리케이션이다. 더 자세한 사항은 `나이트스카웃 프로젝트 웹페이지 <http://www.nightscout.info/>`_에서 확인할 수 있습니다. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
+나이트스카웃은 CGM 데이터 및 안드로이드APS 데이터를 저장하고 표시하며 보고서를 작성할 수 있는 오픈 소스 웹 애플리케이션이다. You can find more information on the `website of the Nightscout project <http://nightscout.github.io/>`_. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
 
 나이트스카웃은 독립적인 다른 모듈입니다. 목표 1을 이행해주시기 바랍니다.
 

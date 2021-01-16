@@ -18,9 +18,18 @@ Om een Wear OS versie van AAPS te maken, heb je de build variant "fullRelease" n
 
 Zorg ervoor dat zowel de telefoon als de wear versies van AAPS zijn ondertekend met dezelfde "key"!
 
-De Wear APK moet op dezelfde manier op het horloge geïnstalleerd worden als de AAPS APK op de telefoon. Het inschakelen van *developer mode* is mogelijk noodzakelijk voor het bekijken, uploaden en installeren van de APK op het horloge met: `adb install wear-full-release.apk`
+Om de APK te installeren op Android Wear smartwatch, volg je de volgende stappen:
 
-Wanneer je de wear versie van AAPS gebruikt, update deze altijd gelijktijdig met de telefoonversie van de app houd hun versies gesynchroniseerd.
+1. Schakel de ontwikkelaarsmodus in op het horloge. Druk op de knop op het horloge en klik op `instellingen` dan `systeem` dan `over` en klik herhaaldelijk op het `build-nummer`, minstens 7 keer totdat een melding verschijnt dat je een ontwikkelaar bent.
+2. ADB inschakelen op horloge. Druk op de knop op het horloge en klik op `instellingen` dan `ontwikkelaar opties` dan `adb debugging` en `debug over wifi`. Noteer het IP-adres dat u hiernaast staat, dit zal in de vorm zijn van een IP-adres gevolgd door :5555.
+3. Op PC, noteer de bestandslocatie van `wear-full-release. pk` (zal in dezelfde map zitten als `app-full-release.apk` die je op je telefoon hebt geïnstalleerd).
+4. Op PC, open de opdrachtprompt (typ `commando` in het zoekvak). 
+5. In opdrachtprompt: `cd c:\Program Files (x86)\Android\android-sdk\platform-tools`.
+6. In opdrachtprompt: `adb connect [geef het IP-adres op van stap 2, inclusief de: 5555]`.
+7. In opdrachtprompt: `adb install -r [geef het pad op van stap 3]\wear-full-release.apk`.
+8. Dit zal AAPS op het horloge installeren en dan zal AAPS watchfaces beschikbaar zijn om te selecteren.
+
+Wanneer je de wear versie van AAPS gebruikt, update deze altijd gelijktijdig met de telefoonversie van de app - houd hun versies gesynchroniseerd. Om dit te doen moet je de bovenstaande stappen opnieuw volgen, maar je hoeft de ontwikkelaarsmodus niet opnieuw aan te zetten.
 
 ### Instellen op de telefoon
 
@@ -54,6 +63,12 @@ Voer een double-tap uit op je BG om sneller naar het AAPS-menu te gaan. Voer een
 ## Beschikbare watchfaces
 
 ![Beschikbare wijzerplaten](../images/Watchface_Types.png)
+
+### Nieuw watchface vanaf AndroidAPS 2.8
+
+![Watchface digitale stijl](../images/Watchface_DigitalStyle.png)
+
+* Als je in het instellingen menu op het tandwiel-icoontje drukt bij het watchface keuzemenu, dan kun je de kleuren, lijnen, en cirkel zelf aanpassen.
 
 ## AAPSv2 wijzerplaat - Legend
 
@@ -239,10 +254,16 @@ Omdat we geen compromissen kunnen sluiten op het gebied van communicatie (we heb
 * Schakel ADB-foutopsporing in onder Ontwikkelaars Opties (op het horloge), verbind het horloge via USB en start de Wear app eenmaal in Android Studio.
 * Als gegevens van Complicaties niet ge-updatet worden - controleer eerst of de AAPS watchfaces überhaupt werken.
 
+### Sony Smartwatch 3
+
+* De Sony Smartwach 3 is een van de meest populaire horloges om te gebruiken met AAPS. 
+* Helaas heeft Google de ondersteuning voor Wear OS 1,5 apparaten in 2020 beëindigd. Dit leidt tot problemen bij het gebruik van Sony SW3 met AndroidAPS.
+* Een mogelijke workaround is te vinden op deze [probleemoplossings pagina](../Usage/SonySW3.rst).
+
 ## Bekijken van gegevens in Nightscout
 
 Als je een ander looping systeem gebruikt en je wilt de loop details *bekijken* op een Android Wear horloge, of als je wilt kijken naar de looping van uw kind, dan kunt u alleen de NSClient APK bouwen/downloaden. Om dit te doen volg de [APK build instructies](../Installing-AndroidAPS/Building-APK.md) waarbij je de build variant "NSClientRelease" selecteert. Er zijn verschillende watchfaces om uit te kiezen die de gemiddelde delta, IOB, momenteel actieve tijdelijke basaal en basale profielen + een CGM grafiek kunnen weergeven.
 
 # Pebble
 
-Pebble gebruikers kunnen de [Urchin watchface gebruiken](https://github.com/mddub/urchin-cgm) om de loopdata (indien geüpload naar Nightscout) *te bekijken*, maar je kunt niet via het horloge met AndroidAPS communiceren. Je kunt verschillende velden kiezen om te tonen zoals IOB, en momenteel actief tijdelijk basaal en voorspellingen. Als je een open loop gebruikt kun je [IFTTT](https://ifttt.com/) gebruiken om een applet te maken die zegt als Notificatie wordt ontvangen van AndroidAPS verzend dan een SMS of pushover notificatie.
+Pebble gebruikers kunnen de [Urchin watchface gebruiken](https://github.com/mddub/urchin-cgm) om de loopdata (indien geüpload naar Nightscout) *te bekijken*, maar je kunt niet via het horloge met AndroidAPS communiceren. U kunt verschillende velden kiezen om te tonen zoals IOB, en momenteel actief tijdelijk basaal en voorspellingen. Als u een open loop gebruikt kunt u [IFTTT](https://ifttt.com/) gebruiken om een applet te maken die zegt als Notificatie wordt ontvangen van AndroidAPS verzend dan een SMS of pushover notificatie.

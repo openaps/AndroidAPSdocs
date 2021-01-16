@@ -1,19 +1,25 @@
 Préférences
 ***********************************************************
-* Ouvrez les préférences en cliquant sur le menu trois points en haut à droite de l'écran.
+* **Ouvrez les préférences** en cliquant sur le menu trois points en haut à droite de l'écran.
 
-  .. image:: ../images/Pref2020_Open.png
+  .. image:: ../images/Pref2020_Open2.png
     :alt: Ouvrir les préférences
 
 * Vous pouvez accéder directement aux préférences d'un certain onglet (par ex. onglet pompe) en sélectionnant cet onglet et en cliquant sur Préférences du plugin.
 
-  .. image:: ../images/Pref2020_OpenPlugin.png
+  .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Ouvrir les préférences du plugin
-    
-* Les sous-menus peuvent être ouverts en cliquant sur le triangle situé sous le titre du sous-menu.
 
-  .. image:: ../images/Pref2020_Submenu.png
+* **Les sous-menus** peuvent être ouverts en cliquant sur le triangle situé sous le titre du sous-menu.
+
+  .. image:: ../images/Pref2020_Submenu2.png
     :alt: Ouvrir le sous-menu
+
+* Avec le **filtre** en haut de l'écran des préférences, vous pouvez accéder rapidement à certaines préférences. Il suffit de taper une partie du texte que vous cherchez.
+
+  .. image:: ../images/Pref2021_Filter.png
+    :alt: Filtre des préferences
+
 
 Général
 ===========================================================
@@ -75,12 +81,13 @@ Protection des bolus
 
 Thème
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Vous pouvez choisir parmi trois thèmes :
+* Vous pouvez choisir parmi quatre thèmes :
 
-  .. image:: ../images/Pref2020_Skin.png
-    :alt: Sélectionnez le thème
+  .. image:: ../images/Pref2021_SkinWExample.png
+    :alt: Sélection du theme + exemples
 
-* La différence dépend de l'orientation du téléphone
+* Le thème 'Basse résolution' a des étiquettes plus courte et "âge/niveau" ont été enlevé dans la zone Careportal de l'onglet Action pour avoir plus d'espace disponible sur un écran de très basse résolution.
+* La différence entre les autres thèmes dépend de l'orientation du téléphone.
 
 Orientation portrait
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -137,7 +144,7 @@ Cibles Temporaires par défaut
   
 Insuline par défaut pour Amorcer/Remplir
 -----------------------------------------------------------
-* Si vous voulez remplir la tubulure ou amorcer la canule avec AAPS, vous pouvez le faire via `l'onglet actions <../Usage/CPbefore26.html#pump>`_.
+* Si vous voulez remplir la tubulure ou amorcer la canule avec AAPS, vous pouvez le faire via `l'onglet actions <../Getting-Started/Screenshots.html#onglet-actions>`_.
 * Les valeurs prédéfinies peuvent être configurées dans cette boite de dialogue.
 
 Fourchette de visualisation
@@ -166,12 +173,13 @@ Voyants d'état
 -----------------------------------------------------------
 * Les voyants d'état donnent une alerte visuelle pour 
       
-   * Âge de la canule
+   * Âge du capteur
+   * Niveau de batterie capteurs pour certains MGC utilisant des transmetteurs externe (voir les `Écrans AndroidAPS <../Getting-Started/Screenshots#niveau-du-capteur-batterie>`_ pour plus de détails).
    * Âge de l'insuline (jours d'utilisation du réservoir)
    * Niveau du réservoir (unités)
-   * Âge du capteur
-   * Âge de la pile
-   * Niveau de la pile (%)
+   * Âge de la canule
+   * Âge Pile Pompe
+   * Âge Pile Pompe (%)
 
 * Si le seuil d'alerte est dépassé, les valeurs seront affichées en jaune.
 * Si le seuil critique est dépassé, les valeurs seront affichées en rouge.
@@ -182,11 +190,25 @@ Voyants d'état
 
 Paramètres avancés (Aperçu)
 -----------------------------------------------------------
+
+  .. image:: ../images/Pref2021_OV_Adv.png
+    :alt: Préférences > Voyants d'état
+
 Injecter cette partie de Bolus calculée par l’assistant
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Paramètre général permettant de ne livrer qu'une partie du résultat de l'assistant de bolus. 
 * Seul le pourcentage défini (doit être compris entre 10 et 100) du bolus calculé est délivré lors de l'utilisation de l'assistant bolus. 
 * Le pourcentage est affiché dans l'assistant de bolus.
+
+Assistant bolus
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Si vous exécutez `l'assistant de Bolus <../Getting-Started/Screenshots.html#assistant-bolus>`_ et que la glycémie est supérieure à 10 mmol (180 mg/dl) un bolus de correction sera proposé.
+* Si le bolus de correction est accepté, **aucun glucide** ne sera enregistré.
+* Une alarme sera déclenchée lorsque la glycémie est au bon niveau pour commencer à manger.
+* Vous devez à nouveau sélectionner l'`Assistant Bolus <../Getting-Started/Screenshots.html#assistant-bolus>`_ et entrer la quantité de glucides que vous voulez manger.
+
+  .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
+    :alt: Message assistant bolus
 
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -26,7 +26,7 @@ Začínáme
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
    
    
-Co potřebuji 
+Co potřebuji? 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1

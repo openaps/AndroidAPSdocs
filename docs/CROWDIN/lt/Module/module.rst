@@ -35,7 +35,8 @@ SGLT-2 inhibitoriai, dar vadinami gliflozinais, slopina gliukozės absorbciją (
 
 Telefonas
 --------------------------------------------------
-Jums reikia išmaniojo telefono su Android 7.0 ar naujesne versija. Taigi, jei jūs galvojate apie naują telefoną, rekomenduojama bent jau Android 8.1, bet optimaliam veikimui reikalinga Android 9 arba 10.
+The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
+Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>_`
 
 Vartotojai sukūrė `patikrintų išmaniųjų telefonų ir išmaniųjų laikrodžių, sąrašą:<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
@@ -52,6 +53,7 @@ AndroidAPS **šiuo metu** veikia su
 - `Dana R pompa <../Configuration/DanaR-Insulin-Pump.md>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - `kai kurios senos Medtronic pompos <../Configuration/MedtronicPump.html>`_ iš artėjančių, turinčių programinę įrangą 2.4 (papildomai reikia: RileyLink/Gnarl aparatūros, Android telefono su Bluetooth low energy/BLE mikroschema)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
 
 ** Kitos pompos**, kurios ateityje gali veikti su AndroidAPS, yra išvardytos puslapyje „Ateityje galimos naudoti pompos" <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
@@ -85,7 +87,7 @@ Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. Nor
 
 Nightscout
 --------------------------------------------------
-Nightscout yra atvirojo kodo žiniatinklio programa, galinti registruoti ir rodyti jūsų NGJ ir AndroidAPS duomenis bei generuoti ataskaitas. Daugiau informacijos galite rasti projekto Nightscout tinklalapyje <http://www.nightscout.info/>`_. Galite sukurti savo `Nightscout svetainę <https://nightscout.github.io/nightscout/new_user/>`_, naudodami pusiau automatinę Nightscout sąranką 'zehn.be <https://ns.10be.de/en/index.html> `_ arba patalpinti savo serveryje (tai skirta IT ekspertams).
+Nightscout yra atvirojo kodo žiniatinklio programa, galinti registruoti ir rodyti jūsų NGJ ir AndroidAPS duomenis bei generuoti ataskaitas. You can find more information on the `website of the Nightscout project <http://nightscout.github.io/>`_. Galite sukurti savo `Nightscout svetainę <https://nightscout.github.io/nightscout/new_user/>`_, naudodami pusiau automatinę Nightscout sąranką 'zehn.be <https://ns.10be.de/en/index.html> `_ arba patalpinti savo serveryje (tai skirta IT ekspertams).
 
 Nightscout yra nepriklausomas nuo kitų modulių. Jums jo reikės, kad galėtumėte įvykdyti 1-ą Tikslą.
 

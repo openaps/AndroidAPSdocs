@@ -26,7 +26,7 @@ Aan de slag
    Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
    
    
-Wat heb ik nodig 
+Wat heb ik nodig? 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
@@ -44,7 +44,7 @@ AndroidAPS installeren
 
    Bouwen van de app <./Installing-AndroidAPS/Building-APK.md>
    Bijwerken naar een nieuwe versie <./Installing-AndroidAPS/Update-to-new-version.md>
-   Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
+   Controles na bijwerken naar AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Git installeren <./Installing-AndroidAPS/git-install.rst>
    Problemen in Android Studio oplossen <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
@@ -72,7 +72,7 @@ AndroidAPS instellingen
    :glob:
    
    Configurator <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences.rst>
+   Instellingen <./Configuration/Preferences.rst>
    
    
 AndroidAPS gebruik
@@ -113,7 +113,7 @@ AndroidAPS voor kinderen
    :maxdepth: 1
    :glob:
    
-   Monitoren op afstand <./Children/Children.rst>
+   Volgen op afstand <./Children/Children.rst>
    SMS Comando's <./Children/SMS-Commands.rst>
    
 

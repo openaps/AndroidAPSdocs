@@ -2,29 +2,11 @@
 
 Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã©Ã©n van de beschikbare doe-het-zelf closed loop systemen (AndroidAPS, OpenAPS of Loop). Op het einde van deze pagina staat algemene info over welke software-mogelijkheden een pomp moet beschikken om Ã¼berhaupt "loopbaar" te kunnen zijn.
 
-## Pompen waaraan wordt gewerkt
-
-### Insulet Omnipod (met "oude" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
-
-**Status:** (Opmerking: de Omnipod Eros is de oude versie pods) Op dit moment nog niet ondersteund door de master-versie van AAPS. Daar wordt wel al een tijd aan gewerkt. Het Omnipod communicatieprotocol is al gedecodeerd, zie [OpenOmni](http://www.openomni.org/) en [OmniAPS Slack](https://omniaps.slack.com/). De Eros pods kunnen nu al worden gebruikt met andere systemen (zie hieronder), de precieze status voor AAPS lees je ook verderop (onder AAPS status).
-
-**Andere implementaties:**
-
-- Omnipy voor AndroidAPS (stabiel in tests, vereist Raspberry Pi en RileyLink, en een speciale versie van AndroidAPS. Enkele tientalen mensen gebruiken dit al in het dagelijks leven.) Lees meer op github, zoek op Omnipy 
-- OmniCore voor AndroidAPS (nog niet vrijgegeven, is geschreven in C# programmeertaal die "native" op Android draait. Heeft alleen een RileyLink nodig en een speciale versie van AndroidAPS. NB: dit is de opvolger van het Omnipy project).
-- [iOS Loop](https://loopkit.github.io/loopdocs/) (stabiel, released, vereist RileyLink).
-
-**Java implementaties:** Tot nu toe nog geen.
-
-**AAPS implementatie status:** Er wordt nu aan een Java driver gewerkt zodat Omnipod met AndroidAPS kan worden gebruikt, ga voor de laatste status naar [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). Hierbij is geen Raspberry Pi nodig. You can follow progress on Discord (channel #omnipod-eros-testing) with [this invite link](https://discord.com/invite/NhEUtzr). A first public test version was released in January 2020, and work is being done towards stabilization. Current version 0.4 (October 2020)
-
-**Hardware eisen voor AAPS:** RileyLink (versie 2.x) met 433MHz antenne.
-
 ## 
 
 ### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
 
-**Status:** Wordt momenteel niet ondersteund door doe-het-zelf closed loop systemen. De DASH is een Loop-kandidaat, maar het communicatie-protocol van deze nieuwe pomp is momenteel onbekend. De verkoop van de DASH is officieel in januari 2019 gestart in Amerika. In Nederland is hij sinds december 2019 verkrijgbaar.
+**Status:** Wordt momenteel niet ondersteund door doe-het-zelf closed loop systemen. De DASH is een Loop-kandidaat, maar het communicatie-protocol van deze nieuwe pomp is momenteel onbekend. De verkoop van de DASH is officieel in januari 2019 gestart in Amerika. In Nederland is hij sinds december 2019 verkrijgbaar. In Belgie komt hij in 2021.
 
 **Hardware eisen voor AAPS:** Waarschijnlijk geen. Want gebruikt Bluetooth.
 
@@ -66,7 +48,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Status:** Is een Loop kandidaat. Pomp zal eind 2018 in een beperkt aantal EU landen verkocht gaan worden. Er gaan geruchten dat hij kan worden bediend via een Android-app op speciale daarvoor aangepaste device.
+**Status:** Is een Loop kandidaat. Pump zal eind 2018 in een beperkt aantal EU landen verkocht gaan worden. Er gaan geruchten dat hij kan worden bediend via een Android-app op speciale daarvoor aangepaste device.
 
 **Hardware eisen voor AAPS:** Waarschijnlijk geen. Het lijkt erop dat hij Bluetooth gebruikt.
 
@@ -86,7 +68,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 ## Pompen die niet meer worden verkocht (fabrikanten zijn gestopt)
 
-### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
+### Cellnovo Pomp ([zie businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
 **Status:** Wordt momenteel niet ondersteund door doe-het-zelf closed loop systemen. De pomp is een Loop-kandidaat, maar aangezien het communicatie-protocol op dit moment onbekend is, zie ik het niet snel gebeuren dat deze pomp wordt ondersteund.
 
@@ -112,7 +94,7 @@ Voorheen gebruikten ze firmware die T:AP heette (genoemd in dit [artikel](https:
 
 ### Animas Ping
 
-**Status:** Niet loopbaar. Heeft bolus mogelijkheid, maar geen TBR mogelijkheid. **Note** Stopped being sold when Vibe came out.
+**Status:** Niet loopbaar. Heeft bolus mogelijkheid, maar geen TBR mogelijkheid. **Opmerking** Werd sinds komst van de Vibe niet meer verkocht. En bedrijf is gestopt met alle insulinepomp activiteiten (J&J).
 
 ## Eisen aan pompen die loopbaar zijn
 
@@ -143,10 +125,10 @@ Voorheen gebruikten ze firmware die T:AP heette (genoemd in dit [artikel](https:
 - Vertraagde bolus instellen
 - Vertraagde bolus annuleren
 - Lees geschiedenis uit
-- Lees TDD uit
+- 
 
 * * *
 
 ### Ondersteuning overige pompen
 
-Als je andere pompen hebt waarvan je wilt weten wat de status is, neem dan contact met mij op (@andyrozman op gitter). In toekomstige releases zullen een heleboel pomp configuraties worden toegevoegd aan de opties voor open loop (Je kunt die pompen dan kiezen in AAPS als Virtuele pomp en jouw instellingen worden geladen, zie [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
+Als je andere pompen hebt waarvan je wilt weten wat de status is, neem dan contact met mij op (@andyrozman op gitter). In toekomstige releases zullen een heleboel pomp configuraties worden toegevoegd aan de opties voor open loop (Je kunt die pompen dan kiezen in AAPS als Virtuele pomp en jouw instellingen worden geladen, zie [Feature request #157](https://github.com/nightscout/AndroidAPS/issues/157)).

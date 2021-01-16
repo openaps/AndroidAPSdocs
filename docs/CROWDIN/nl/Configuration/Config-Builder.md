@@ -81,7 +81,7 @@ Details worden uitgelegd op de aparte [profiel hulp pagina](../Configuration/pro
 
 NS Profiel maakt gebruik van de profielen die je hebt opgeslagen op jouw Nightscout site (https://[jouwnightscoutpagina]/profile). Je kunt de [Profiel wissel](../Usage/Profiles.md) gebruiken om te kiezen welk van jouw profielen actief wordt, dit profiel zal vervolgens naar jouw pomp worden gestuurd en in het pompgeheugen worden opgeslagen. Zodat je pomp hierop terugvalt wanneer AndroidAPS niet zou werken. Hierdoor kunt je heel makkelijk meerdere profielen gebruiken in Nightscout (dat wil zeggen werk, thuis, sport, vakantie, etc.). Kort nadat je klikt op "Opslaan" zullen deze profielen worden overgedragen naar AAPS als jouw smartphone online is. Zelfs zonder een internetverbinding of zonder een verbinding met Nightscout zijn de Nightscout-profielen beschikbaar in AAPS zodra ze zijn gesynchroniseerd.
 
-Gebruik een **Profiel wissel** om een profiel van Nightscout te activeren. Houd het huidige profiel in het AAPS Overzicht-scherm aan de bovenkant ingedrukt (middelste grijze knop tussen de grijze "Open/Closed Loop"-knop en de grijze streefdoel-knop) > Profiel wissel > Profiel selecteren > OK. AAPS schrijft nu het geselecteerde profiel naar de pomp na de profiel wissel, zodat het beschikbaar blijft zonder AAPS (in noodgevallen) en je pomp dus gewoon blijft doorlopen.
+Gebruik een [Profiel wissel](../Getting-Started/Screenshots.md#current-profile) om een profiel van Nightscout te activeren. Dmv het maken van een profiel wissel stuurt AAPS het geselecteerde profiel naar de pomp, zodat dit profiel nog steeds actief blijft als (door onvoorziene omstandigheden) AAPS de verbinding met de pomp verliest.
 
 Voordelen:
 
@@ -95,35 +95,52 @@ Nadelen:
 
 ## Insuline
 
-Kies het werkingsprofiel van de insuline die jij gebruikt. De werkingsprofielen voor 'Rapid-Acting Oref', Ultra-Rapid Oref' en 'Free-Peak Oref' hebben allemaal een exponentiële vorm. Meer informatie staat in de [OpenAPS documenten](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). Het werkingsprofiel zal variëren op basis van de DIA (Duration of Insulin Action, duur van insulineactiviteit) en de piektijd.
+![Insuline soort](../images/ConfBuild_Insulin.png)
 
-De DIA is niet voor iedereen hetzelfde. Daarom moet je het voor jouzelf testen. Maar het moet altijd minstens 5 uur zijn. Meer informatie hierover vind je in de sectie Insuline Profiel van [deze](../Getting-Started/Screenshots#insulin-profile) pagina.
+* Kies het werkingsprofiel van de insuline die jij gebruikt.
+* De werkingsprofielen voor 'Snel-werkende Oref', Ultra-Rapid Oref', Lyumjev' en 'Free-Peak Oref' hebben allemaal een exponentiële vorm. Meer informatie staat in de [OpenAPS documenten](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
+* Het werkingsprofiel zal variëren op basis van de DIA (Duration of Insulin Action, duur van insulineactiviteit) en de piektijd.
+    
+    * PAARSE lijn laat zien hoeveel **insuline overblijft** na het moment van bolussen, en neemt af naarmate de tijd verstrijkt.
+    * BLAUWE lijn laat zien **hoe actief** de insuline is.
 
-Voor Snel-werkende en Ultra-Rapid is de DIA de enige variabele die je zelf kunt aanpassen, de piektijd is voorgeprogrammeerd en dus niet aan te passen. Bij Free-Peak kun je zowel de DIA als de piektijd aanpassen, en deze optie mag alleen worden gebruikt door geavanceerde gebruikers die de effecten van deze instellingen begrijpen.
+### DIA
 
-De [insuline werkingsgrafiek](../Getting-Started/Screenshots#insulin-profile) laat zien hoe de concentratie en activiteit van jouw insuline verandert versus de tijd. Je kunt deze grafiek bekijken door in de Configurator een vinkje te zetten om het als een tabblad te laten zien, zonder dit vinkje kun je de grafiek bekijken via het hamburger menu (3 streepjes in linkerbovenhoek).
+* De DIA is niet voor iedereen hetzelfde. Daarom moet je het voor jouzelf testen. 
+* Maar het moet altijd minstens 5 uur zijn.
+* Voor veel mensen is er praktisch geen merkbaar effect van Fiasp na 3-4 uur, zelfs als er dan nog maar 0,0xx eenheden zijn overgebleven. Dit kleine restje kan nog wel steeds een merkbaar effect hebben, bijvoorbeeld tijdens het sporten. Daarom gebruikt AndroidAPS een minimum van 5u als DIA.
+* Meer informatie hierover vind je in de sectie Insuline Profiel van [deze](../Getting-Started/Screenshots#insulin-profile) pagina. 
 
-### Snel-werkende Oref
+### Verschillende werkingsprofielen
+
+* Voor Snel-werkende, Ultra-Rapid en Lyumjev is de DIA de enige variabele die je zelf kunt aanpassen, de piektijd is voorgeprogrammeerd en dus niet aan te passen. 
+* Bij Free-Peak kun je zowel de DIA als de piektijd aanpassen, en deze optie mag alleen worden gebruikt door geavanceerde gebruikers die de effecten van deze instellingen begrijpen. 
+* De [insuline werkingsgrafiek](../Getting-Started/Screenshots#insulin-profile) laat zien hoe de concentratie en activiteit van jouw insuline verandert versus de tijd. 
+* Je kunt deze grafiek bekijken door in de Configurator een vinkje te zetten om het als een tabblad te laten zien, zonder dit vinkje kun je de grafiek bekijken via het hamburger menu (3 streepjes in linkerbovenhoek).
+
+#### Snel-werkende Oref
 
 * Aanbevolen voor Humalog, Novolog en Novorapid
 * DIA = ten minste 5,0 uur
 * Max. piek = 75 minuten na injectie (vast, niet instelbaar)
 
-### Ultra-snelle Oref
+#### Ultra-Rapid Oref
 
 * Aanbevolen voor Fiasp
 * DIA = ten minste 5,0 uur
 * Max. piek = 55 minuten na injectie (vast, niet instelbaar)
 
-Voor veel mensen is er praktisch geen merkbaar effect van Fiasp na 3-4 uur, zelfs als er dan nog maar 0,0xx eenheden zijn overgebleven. Dit kleine restje kan nog wel steeds een merkbaar effect hebben, bijvoorbeeld tijdens het sporten. Daarom gebruikt AndroidAPS een minimum van 5u als DIA.
+#### Lyumjev
 
-![Configurator Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
+* Speciaal insulineprofiel voor Lyumjev
+* DIA = ten minste 5,0 uur
+* Max. piek = 45 minuten na injectie (vast, niet instelbaar)
 
-### Free-Peak Oref
+#### Free-Peak Oref
 
-Met het Free-Peak Oref (Vrije-Piek Oref) kun je zelf het tijdstip kiezen waarop de werkzaamheid van je insuline zijn piek heeft. De DIA wordt automatisch ingesteld op 5 uur, tenzij je hem in jouw profiel hoger hebt ingesteld (dan wordt de waarde uit jouw profiel gebruikt).
-
-Dit profiel wordt aanbevolen als de insuline bij jou een werkingsprofiel heeft dat helemaal niet overeenkomt met de standaarden, of wanneer je een mengsel van verschillende insulines gebruikt.
+* Met het Free-Peak Oref (Vrije-Piek Oref) kun je zelf het tijdstip kiezen waarop de werkzaamheid van je insuline zijn piek heeft.
+* De DIA wordt automatisch ingesteld op 5 uur, tenzij je hem in jouw profiel hoger hebt ingesteld (dan wordt de waarde uit jouw profiel gebruikt).
+* Dit profiel wordt aanbevolen als de insuline bij jou een werkingsprofiel heeft dat helemaal niet overeenkomt met de standaarden, of wanneer je een mengsel van verschillende insulines gebruikt.
 
 ## BG bron
 
@@ -207,8 +224,8 @@ Selecteer het gewenste APS (Artificial Pancreas System, kunstmatig alvleesklier 
 
 ### Minimale verzoek voor aanpassing
 
-* Bij het gebruik van open loop ontvang je telkens meldingen wanneer AAPS een suggestie doet om de basaalstand aan te passen. 
-* Om het aantal meldingen te verminderen, kun je een breder bereik voor BG gebruiken of een hoger percentage van het minimale verzoek voor aanpassing instellen.
+* Bij het gebruik van open loop ontvangt je meldingen telkens wanneer AAPS een suggestie doet om de basaalstand aan te passen. 
+* Om het aantal meldingen te verminderen, kun je een breder bereik voor BG gebruiken of een hoger percentage van het minimale verzoek voor aanpassing.
 * Hiermee stel je de minimale relatieve TBR aanpassing in waarbij AAPS een suggestie doet.
 
 ## Doelen (leerprogramma)
@@ -274,7 +291,7 @@ Kies de hoge en lage grens voor het 'groene gebied' in jouw BG-grafiek op het An
 
 Kies ervoor of je de tabtitels in AndroidAPS lang wilt (bijvoorbeeld ACTIES, LOKAAL PROFIEL, AUTOMATISERING) of kort (bijvoorbeeld ACT, LP, AUTO)
 
-#### Toon het notities veld in het behandeling dialoogvenster
+#### Toon notities veld in behandeling dialoogvensters
 
 Kies of je een notes-veld wilt hebben bij het invoeren van een behandeling of niet.
 
@@ -286,31 +303,12 @@ Kies of je [statusindicatoren](../Configuration/Preferences#statusindicatoren) w
 
 **Voer dit deel van het boluswizard resultaat uit**: Veel mensen die SMB gebruiken, kiezen ervoor om niet 100% van de maaltijdbolus in één keer af te geven. Vaak kiezen ze ervoor om maar een deel (bijv. 75%) van de maaltijdbolus meteen af te laten geven, en de rest over te laten aan het SMB algoritme. Kies hier het standaardpercentage waarmee jij wilt dat de boluswizard rekent. Als je bijvoorbeeld 75% invult, en je zou een bolus van 10E nodig hebben, dan stelt de boluswizard voor om slechts 7,5E te geven.
 
-**Schakel super bolus functionaliteit in wizard** (Dit is iets anders dan de *super micro bolus*!): Gebruik met voorzichtigheid en schakel dit pas in als je weet wat het precies doet. Kort gezegd wordt hiermee jouw basale insuline voor de komende twee uur toegevoegd aan de bolus, waarna jouw basaal voor langere tijd op nul wordt gezet (zero-temp). **De AAPS closed loop-functies worden hiermee tijdelijk uitgeschakeld - wees je hiervan bewust! Als je SMB gebruikt, dan wordt de loop uitgeschakeld zoals aangegeven in jouw instellingen voor ["Max minuten basaal om SMB tot te limiteren"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to). Als je geen SMB gebruikt, dan zal de loop gedurende twee uur uitgeschakeld worden.** Details over superbolus kun je [hier](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus) vinden.
+**Schakel super bolus functionaliteit in wizard** (Dit is iets anders dan de *super micro bolus*!): Gebruik met voorzichtigheid en schakel dit pas in als je weet wat het precies doet. Kort gezegd wordt hiermee jouw basale insuline voor de komende twee uur toegevoegd aan de bolus, waarna jouw basaal voor twee uur op nul wordt gezet (zero-temp). **De AAPS closed loop-functies worden hiermee tijdelijk uitgeschakeld - dus weet wat je doet! Als je SMB gebruikt, dan wordt de loop uitgeschakeld zoals aangegeven in jouw instellingen voor ["Max minuten basaal om SMB tot te limiteren"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to). Als je geen SMB gebruikt, dan zal de loop gedurende twee uur uitgeschakeld worden.** Details over superbolus kun je [hier](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus) vinden.
 
 ### Acties
 
-Een aantal knoppen voor snelle toegang tot algemene functies:
-
-* Profiel wissel (Zie [Profiel wissel pagina](../Usage/Profiles.md) voor meer informatie)
-* Tijdelijk streefdoel
-* Zet / annuleer Tijdelijke basaalstand
-* Vertraagde bolus (alleen DanaR/RS of Combo pomp)
-* Opslaan specifieke zorg gegevens
-    
-    * BG controle
-    * Voorvullen / vullen - wissel canulle en voorvullen (indien niet gedaan door pomp)
-    * CGM sensor start
-    * Pomp batterij vervangen
-    * Notitie
-    * Sport
-* Bekijk de huidige sensor, insuline, canule en pomp batterij status
-* Historiek venster
-* TDD (Totale Dagelijkse Dosis = bolus + basale insuline per dag)
-
-Sommige artsen gebruiken - met name voor nieuwe pompgebruikers- een basaal:bolus ratio van 50:50. Daarom wordt de ratio berekend als TDD / 2 * TBB (Totale Basis Basaal = som van alle basale insuline binnen 24 uur). Anderen geven de voorkeur aan 32% tot 37% van de TDD voor TBB. Zoals de meeste van deze vuistregels hoeft ook deze in het echte leven niet persé te kloppen. Ieder mens is anders!
-
-![Acties tabblad](../images/ConfBuild_ConfBuild_Actions_b.png)
+* Een aantal knoppen voor snelle toegang tot algemene functies.
+* Zie [AAPS screenshots](../Getting-Started/Screenshots#acties-tabblad) voor meer informatie.
 
 ### Automatisering
 

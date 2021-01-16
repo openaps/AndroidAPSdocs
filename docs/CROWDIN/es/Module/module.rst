@@ -35,7 +35,8 @@ Los inhibidores de la SGLT-2, también llamados gliflozinas, inhiben la reabsorc
 
 Teléfono
 --------------------------------------------------
-Necesitas un móvil Android con Google Android 7.0 o superior. So if you are thinking about a new phone, Android 8.1 is recommended at least but optimicaly Android 9 or 10.
+The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
+Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>_`
 
 Los usuarios están creando una "lista de teléfonos probados y relojes <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
@@ -52,6 +53,7 @@ AndroidAPS **actualmente** funciona con
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - `algunas bombas de Medtronic <../Configuration/MedtronicPump.html>` _ de la versión 2.4 (adicionalmente necesaria: hardware de RileyLink/Gnarl, teléfono Android con bluetooth de baja energía / BLE-chipset)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
 
 **Otras bombas** que pueden tener el potencial de trabajar con AndroidAPS se listan en la página `Futuras (posibles) Bombas <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
@@ -85,7 +87,7 @@ Esta es sólo una breve descripción general de todos los MCGs/FGM compatibles c
 
 Nightscout
 --------------------------------------------------
-Nightscout es una aplicación web de código abierto que puede registrar y visualizar los datos de MCG y los datos de AndroidAPS y crea informes. Puede encontrar más información en el " sitio web del proyecto Nightscout <http://www.nightscout.info/>`_. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
+Nightscout es una aplicación web de código abierto que puede registrar y visualizar los datos de MCG y los datos de AndroidAPS y crea informes. You can find more information on the `website of the Nightscout project <http://nightscout.github.io/>`_. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
 
 Nightscout es independiente de los otros módulos. Lo necesitará para cumplir el Objetivo 1.
 

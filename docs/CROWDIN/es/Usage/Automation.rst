@@ -27,6 +27,10 @@ So make sure to deactivate automation rules during these occasions if neccessary
 .. imagen:: ../images/Automation_ActivateDeactivate.png
   :alt: Activación y desactivación de la regla de automatización
 
+Where to find Automation
+--------------------------------------------------
+Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+
 General
 --------------------------------------------------
 Hay algunos límites:
@@ -92,7 +96,7 @@ To sort automation rules click and hold the four-lines-button on the right side 
   
 Borrar reglas de automatización
 -----
-To delete an automation rule just swipe it left or right.
+To delete an automation rule click on trash icon.
 
 .. image:: ../images/Automation_Delete.png
   :alt: Delete automation rule

@@ -13,15 +13,63 @@ If you do not update for another 30 days (90 days from new release date) AAPS wi
 
 Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
 
+Version 2.8.1.1
+================
+Release date: 12-01-2021
+
+Important hints
+----------------------
+* Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users. 
+* If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc). 
+* ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
+* NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
+
+Major changes
+----------------------
+* RileyLink, Omnipod and MDT pump improvements and fixes
+* forced NS_UPLOAD_ONLY
+* fix for SMB & Dexcom app
+* watchface fixes
+* crash reporting improved
+* gradle reverted to allow direct watchface instalation
+* automation fixes
+* RS driver improvement
+* various crashes fixed
+* UI fixes and improvements
+* new translations
+
+Version 2.8.0
+================
+Release date: 01-01-2021
+
+Important hints
+----------------------
+* **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo. 
+* `Objectives have changed. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
+* Repository location still on https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
+* Please use `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+
+Major new features
+----------------------
+* `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org 
+* `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
+* `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-28>`_ @rICTx-T1D
+* Dana RS connection improvements @MilosKozak 
+* Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
+* New `Low Ressolution Skin <../Configuration/Preferences.html#skin>`_
+* New `"Pregnant" patient type <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_ @Brian Quinion
+* New NSClient tablet layout @MilosKozak 
+* NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak 
+* `Preferences filter <../Configuration/Preferences.html>`_ @Brian Quinion
+* New pump icons @Rig22 @@teleriddler @osodebailar
+* New `insulin type Lyumjev <../Configuration/Config-Builder.html#lyumjev>`_
+* SetupWizard improvements @MilosKozak 
+* Security improvements @dlvoy 
+* Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
+
 Version 2.7.0
 ================
 Release date: 24-09-2020
-
-Repository location changed to https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
-
-As already `announced some time ago <../Module/module.html#phone>`_, **Android 7 is minimum requirement** for AndroidAPS 2.7.
-
-Please use `Android Studio 4.0.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 **Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`_.
 

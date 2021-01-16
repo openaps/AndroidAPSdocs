@@ -35,7 +35,8 @@ Inhibitory SGLT-2, též nazývané glifloziny, inhibují reabsorpci glukózy v 
 
 Telefon
 --------------------------------------------------
-You need an Android smartphone with Google Android 7.0 or above. Takže pokud přemýšlíte o novém telefonu, doporučuje se Android 8.1, ale optimisticky Android 9 nebo 10.
+The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
+Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>_`
 
 Uživatelé průběžné doplňují `seznam otestovaných telefonů a hodinek <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
@@ -52,6 +53,7 @@ AndroidAPS **v současné době** funguje s
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - `některé staré pumpy Medtronic <../Configuration/MedtronicPump.html>`_ od připravované verze 2.4 (vyžaduje navíc: hardware RileyLink/Gnarl, telefon s Androidem s čipovou sadou s BLE)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
 
 **Ostatní pumpy**, které potenciálně mohou fungovat s AndroidAPS, jsou uvedeny na stránce `Pumpy potenciálně použitelné v budoucnu <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
@@ -85,7 +87,7 @@ Toto je jen krátký přehled všech CGM/FGM kompatibilních s AndroidAPS. Dalš
 
 Nightscout
 --------------------------------------------------
-Nightscout je open source webová aplikace, která může zaznamenávat a zobrazovat vaše údaje z CGM a údaje z AndroidAPS a vytvářet zprávy. Další informace najdete na webové stránce Nightscout project <http://www.nightscout.info/>`_. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
+Nightscout je open source webová aplikace, která může zaznamenávat a zobrazovat vaše údaje z CGM a údaje z AndroidAPS a vytvářet zprávy. You can find more information on the `website of the Nightscout project <http://nightscout.github.io/>`_. Vlastní `Nightscout <https://nightscout.github.io/nightscout/new_user/>`_ můžete vytvořit za pomoci poloautomatizovaného nastavení na `zehn.be <https://ns.10be.de/en/index.html>`_, nebo ho můžete hostovat na vlastním severu (pro IT experty).
 
 Nightscout je nezávislý na ostatních modulech. Budete jej potřebovat ke splnění Cíle 1.
 

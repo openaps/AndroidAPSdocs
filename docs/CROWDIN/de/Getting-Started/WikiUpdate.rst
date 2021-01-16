@@ -1,8 +1,18 @@
 Docs Updates & Änderungen
 **************************************************
+
+Januar 2021
+==================================================
+* `Aktionen-Tab <../Getting-Started/Screenshots.html#aktionen-tab>`_ - zusätzliche Informationen auf der Seite 'AndroidAPS Bildschirme'
+* Dexcom G6 mit `Build Your Own Dexcom App <../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app>`_ ("Erstelle dir deine eigene Dexcom App")
+* Libre Smart Reader `Batteriestand <../Getting-Started/Screenshots.html#sensor-level-batterie>`_
+* `Objectives (Ziele) <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ - neue Fragen
+* Omnipod Eros - ` Einrichtung in AAPS <../Configuration/OmnipodEros.html> ` _
+* Weitere `neue AndroidAPS 2.8.0 Funktionen <../Installing-AndroidAPS/Releasenotes.html#version-2-8-0>`_
 Dezember 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - gepatche App funktioniert nicht mit US-Sensoren
+* `OpenAPS Übersicht der fest programmierten Limits <../Usage/Open-APS-features.html#ubersicht-der-fest-programmierten-limits>`_
 * Sony Smartwatch 3 ` Manuelle Installation des Google Play Service <../Usage/SonySW3.html> ` _
 Oktober 2020
 ==================================================

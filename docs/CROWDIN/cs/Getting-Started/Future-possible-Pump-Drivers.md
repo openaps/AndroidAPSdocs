@@ -2,24 +2,6 @@
 
 Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jejich podpory vůči jakémukoliv systému uzavřené smyčky a stav podpory vůči AAPS. Na konci stránky jsou informace, co je po pumpě vyžadováno, aby byla použitelná pro uzavřenou smyčku.
 
-## Pumpy, na jejichž podpoře se pracuje
-
-### Insulet Omnipod (se „starými“ Eros Pods) ([Domovská stránka](https://www.myomnipod.com/en-gb/about/how-to-use))
-
-**Stav smyčky:** V současnosti chybí nativní podpora AAPS. Dekódování protokolu Omnipod je dokončeno- [OpenOmni](http://www.openomni.org/) a [OmniAPS Slack](https://omniaps.slack.com/)
-
-**Ostatní implementace:**
-
-- Omnipy for AndroidAPS (stabilní verze se testuje, vyžaduje Raspberry Pi i RileyLink a speciálně upravenou verzi AndroidAPS) 
-- OmniCore for AndroidAPS (dosud nevydáno, C# kód běžící "nativně" na Androidu, vyžaduje pouze RileyLink a speciálně upravenou verzi AndroidAPS - příští verze projektu Omnipy).
-- [iOS Loop](https://loopkit.github.io/loopdocs/) (stabilní verze, vydaná, vyžaduje RileyLink).
-
-**Java implementace:** Prozatím žádné.
-
-**Stav implementace AAPS:** Práce na nativním Java ovladači pro Omnipod na AAPS pokračují v [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (větev omnipod_eros). Nevyžaduje Raspberry Pi. You can follow progress on Discord (channel #omnipod-eros-testing) with [this invite link](https://discord.com/invite/NhEUtzr). A first public test version was released in January 2020, and work is being done towards stabilization. Current version 0.4 (October 2020)
-
-**Hardwarové požadavky pro AAPS:** RileyLink s Omnipod firmware (2.x) a 433MHz anténou.
-
 ## Pumpy, které lze provozovat se smyčkou
 
 ### Omnipod DASH ([Domovská stránka](https://www.myomnipod.com/DASH))
@@ -118,8 +100,8 @@ Před časem měli firmware zvaný T:AP (zmiňovaný v tomto [článku](https://
 
 **Předpoklady**
 
-- Pumpa musí podporovat dálkové ovládání (nějakou formou) (BT, rádiovou frekvencí atd.)
-- Komunikační protokol je hacknutý/zdokumentovaný/atd.
+- Pumpa musí podporovat vzdálené ovládání (nějakou formou) (BT, Rádiovou frekvencí, atd.)
+- Protokol komunikace je hacknutý/dokumentovaný/atd.
 
 **Minimální požadavky**
 
@@ -140,8 +122,8 @@ Před časem měli firmware zvaný T:AP (zmiňovaný v tomto [článku](https://
 
 **Ostatní (není vyžadováno, ale hodí se)**
 
-- Nastavit prodloužený bolus
-- Zrušit prodloužený bolus
+- Nastavit rozšířený bolus
+- Zrušit rozšířený bolus
 - Číst historii
 - Číst TDD
 
@@ -149,4 +131,4 @@ Před časem měli firmware zvaný T:AP (zmiňovaný v tomto [článku](https://
 
 ### Podpora ostatních pump
 
-Jestliže máte jinou pumpu a chtěli byste k ní znát stav podpory, kontaktujte mě, prosím (@andyrozman na gitteru). Řada pump (a jejich konfigurací) bude v budoucím vydání přidána v režimu otevřené smyčky (budete moci vybrat typ virtuální pumpy v konfiguraci a vaše nastavení bude načteno - [Požadavek #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
+Jestliže máte jinou pumpu a chtěli byste k ní znát stav podpory, kontaktujte mě, prosím (@andyrozman na gitteru). Řada pump (a jejich konfigurací) bude v budoucím vydání přidána jako s Open smyčkou (budete moci vybrat typ virtuální pumpy v konfiguraci a vaše nastavení bude načteno - [Požadavek #157](https://github.com/nightscout/AndroidAPS/issues/157)).

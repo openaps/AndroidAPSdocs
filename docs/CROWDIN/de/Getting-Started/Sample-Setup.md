@@ -53,7 +53,7 @@ Bei der Erstinstallation von Android Studio ist einige Geduld erforderlich, da d
 
 ### Firmware des Smartphones prüfen
 
-* Menü > Einstellungen > Telefoninfo > Softwareinfo: Hier sollte mindestens die Firmware-Version stehen: "Android-Version 7.0" (erfolgreich getestet bis Android-Version 8.0.0 Oreo - Samsung Experience Version 9.0) 
+* Menü > Einstellungen > Telefoninfo > Softwareinfo: Hier sollte mindestens die Firmware-Version stehen: "Android-Version 8.0" (erfolgreich getestet bis Android-Version 8.0.0 Oreo - Samsung Experience Version 9.0) 
 * Falls nicht: Menü > Einstellungen > Software-Update durchführen
 
 ### Installation von Apps aus unbekannten Quellen zulassen

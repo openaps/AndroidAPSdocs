@@ -26,7 +26,7 @@ Erste Schritte
    Docs Updates & Änderungen <./Getting-Started/WikiUpdate.rst>
    
    
-Was brauche ich 
+Was brauche ich? 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1

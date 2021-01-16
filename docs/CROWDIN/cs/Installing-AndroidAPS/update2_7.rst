@@ -1,64 +1,64 @@
-Necessary checks after update to AndroidAPS 2.7
+Nezbytné kontroly po aktualizaci na AndroidAPS 2.6
 ***********************************************************
 
-* The program code was changed significantly when switching to AAPS 2.7. 
-* Therefore it is important that you make some changes or check settings after the update.
-* Please see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_ for details on new and extended features.
+* U verze AAPS 2.7 byl kód programu významně změněn. 
+* Proto je důležité, abyste po aktualizaci provedli nějaké změny, nebo zkontrolovali nastavení.
+* Podrobnosti o nových a rozšířených funkcích naleznete v `Poznámkách k vydání <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_.
 
-Check BG source
+Zkontrolujte zdroj glykémií
 -----------------------------------------------------------
-* Check if BG source is correct after update.
-* Especially when using `xDrip+ <../Configuration/xdrip.html>`_ it might happen, that BG source is changed to Dexcom app (patched).
-* Open `Config builder <../Configuration/Config-Builder.html#bg-source>`_ (hamburger menu on top left side of home screen)
-* Scroll down to "BG source".
-* Select correct BG source if changes are necessary.
+* Zkontrolujte, zda je zdroj glykémií po aktualizaci správný.
+* Zejména při použití `xDrip+ <../Configuration/xdrip.html>`_ se může stát, že zdroj glykémie se změní na Dexcom aplikace (upravená).
+* Otevřete `Konfigurace <../Configuration/Config-Builder.html#bg-source>`_ (hamburger menu v levém horním rohu hlavní obrazovky)
+* Sjeďte dolů na "Zdroj glykémie".
+* Je-li to nutné, nastavte správný zdroj glykémie.
 
 .. image:: ../images/ConfBuild_BG.png
-  :alt: BG source
+  :alt: Zdroj glykémie
 
-Finish exam
+Dokončit cíle
 -----------------------------------------------------------
-* AAPS 2.7 contains new objective 11 for `automation <../Usage/Automation.html>`_.
-* You have to finish exam (`objective 3 and 4 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_) in order to complete `objective 11 <../Usage/Objectives.html#objective-11-automation>`_.
-* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. 
-* This will not effect other objectives you have already finished. You will keep all finished objectives!
+* AAPS 2.7 obsahuje nový cíl 11 pro `automatizaci <../Usage/Automation.html>`_.
+* Pro dokončení `cíle 11 <../Usage/Objectives.html#objective-11-automation>`_ musíte mít hotové předchozí zkoušky (`cíle 3 a 4 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_).
+* Pokud jste například nedokončili zkoušku v `Cíli 3 <../Usage/Objectives. tml#objective-3-proof-your-knowledge>`_ budete ji muset dokončit dříve, než budete moci spustit `Cíl 11 <../Usage/Objectives.html#objektive-11-automation>`_. 
+* Neovlivní to cíle, které jste již dokončili. Splněné cíle zůstanou zachovány!
 
-Set master password
+Nastavit hlavní heslo
 -----------------------------------------------------------
-* Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
-* Open Preferences (three-dot-menu on top right of home screen)
-* Click triangle below "General"
-* Click "Master-Password"
-* Enter password, confirm password and click ok.
+* Abyste mohli `exportovat nastavení <../Usage/ExportImportSettings.html>`_, je nutné nastavit hlavní heslo. Od verze 2.7 jsou totiž exporty šifrované.
+* Klepnutím na tři tečky v pravém horním rohu hlavní obrazovky otevřete Nastavení
+* Klepněte na trojúhelník pod "Obecné"
+* Klepněte na položku "Hlavní heslo"
+* Zadejte heslo, potvrďte ho, a klepněte na tlačítko Ok.
 
 .. image:: ../images/MasterPW.png
-  :alt: Set master password
+  :alt: Nastavení hlavního hesla
   
 Exportovat nastavení
 -----------------------------------------------------------
-* AAPS 2.7 uses a new encrypted backup format. 
-* You must `export your settings <../Usage/ExportImportSettings.html>`_ after updating to version 2.7.
-* Settings files from previous versions can only be imported in AAPS 2.7. Export will be in new format.
-* Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
-* If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version. 
-* All settings as well as finished objectives will remain as they were in the previous version.
-* In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the `troubleshooting section <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_.
+* AAPS 2.7 používá nový šifrovaný formát zálohy. 
+* Po aktualizaci na verzi 2.7 musíte `exportovat nastavení <../Usage/ExportImportSettings.html>`_.
+* Soubory se zálohou vytvořenou v předchozích verzích mohou být v AAPS 2.7 pouze naimportované. Export bude už v novém formátu.
+* Ujistěte se, že jste uložili exportovaná nastavení nejen na vašem telefonu, ale také alespoň na jednom bezpečném místě (pc, cloudové úložiště...).
+* Pokud sestavujete apk AAPS 2.7 za použití stejného podpisového klíče jako u předchozích verzí, můžete instalovat novou verzi bez odstranění předchozí verze. 
+* Všechna nastavení i dokončené cíle zůstanou tak, jak byly v předchozí verzi.
+* V případě, že jste ztratili svůj podpisový klíč, sestavte verzi 2.7 za použití nového klíče a importem z předchozí verze tak, jak je popsáno v sekci `odstraňování problémů <../Installing-AndroidAPS/troubleshooting_androidstedio.html#lost-keystore> ` _.
 
-Autosens (Hint - no action necessary)
+Autosens (Tip - není nutná žádná akce)
 -----------------------------------------------------------
-* Autosens is changed to a dynamic switching model which replicates the reference design.
-* Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
-* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
+* Autosens je změněn na dynamický přepínací model, který replikuje referenční design.
+* Autosens se nyní pro výpočet citlivosti přepíná mezi 24 a 8 hodinovým úsekem. Vybere, která z nich je citlivější. 
+* Pokud uživatelé pocházejí z Oref1, pravděpodobně si všimnou toho, že systém může být méně dynamický na změny, v závislosti na citlivosti za 24 nebo 8 hodin.
 
-Set Pump Password for Dana RS (if using Dana RS)
+Nastavení hesla pumpy Dana RS (pokud používáte Dana RS)
 -----------------------------------------------------------
-* Pump password for `Dana RS <../Configuration/DanaRS-Insulin-Pump.html>`_ was not checked in previous versions.
-* Open Preferences (three-dot-menu on top right of screen)
-* Scroll down and click triangle next to "Dana RS".
-* Click "Pump password (v1 only)"
-* Enter pump password (`Default password <../Configuration/DanaRS-Insulin-Pump.html#default-password>`_ is different depending on firmware version) and click OK.
+* V předchozích verzích nebylo heslo pumpy `Dana RS <../Configuration/DanaRS-Insulin-Pump.html>`_ kontrolováno.
+* Klepnutím na tři tečky v pravém horním rohu hlavní obrazovky otevřete Nastavení
+* Přejděte dolů a klikněte na trojúhelník vedle "Dana RS".
+* Klikněte na "Heslo pumpy (pouze v1)"
+* Zadejte heslo pumpy (`Výchozí heslo <../Configuration/DanaRS-Insulin-Pump.html#default-password>`_ se liší v závislosti na verzi firmwaru), a klikněte na tlačítko OK.
 
 .. image:: ../images/DanaRSPW.png
-  :alt: Set Dana RS password
+  :alt: Nastavení hesla Dana RS
   
-To change password on Dana RS follow instructions on `DanaRS page <../Configuration/DanaRS-Insulin-Pump.html#change-password-on-pump>`_.
+Chcete-li změnit heslo na Dana RS, postupujte podle pokynů na stránce `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#change-password-on-pump>`_.

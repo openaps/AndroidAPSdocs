@@ -13,15 +13,63 @@ Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualis
 
 Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln, sondern aus Sicherheitsgründen erfolgt. Neue Versionen von AndroidAPS bieten nicht nur neue Funktionen, sondern auch wichtige Sicherheitsfixes. Deshalb ist es notwendig, dass jeder Anwender so schnell wie möglich aktualisiert. Leider gibt es noch Fehlerberichte aus sehr alten Versionen, so dass dies ein Versuch ist, die Sicherheit für jeden einzelnen Benutzer und die gesamte DIY-Community zu verbessern. Danke für dein Verständnis.
 
+Version 2.8.1.1
+================
+Erscheinungsdatum: 12.01.2021
+
+Wichtige Hinweise
+----------------------
+* Option **Zu Nightscout nur hochladen** ist verpflichtend für alle 2.8.1.1 Nutzer aktiviert. 
+* Falls du den NSClient zur Eingabe von temporären Zielen, Kohlenhydraten oder Profilwechseln verwendest, musst du diese Option in AAPS deaktivieren - **aber nur dann, wenn deine Synchronisierung gut funktioniert** (z.B. keine unerwünschten Änderungen wie selbstständige Änderungen der temporären Ziele, temporären Basalraten etc.). 
+* ACHTUNG: KEINESFALLS deaktivieren, wenn irgendeine andere App Behandlungen zu Nightscout hochlädt (z.B. xDrip+ broadcast/upload/sync).
+* Die Option kann nur deaktiviert werden, wenn der engineering mode aktiviert ist.
+
+Wesentliche Änderungen
+----------------------
+* Verbesserungen und Fehlerbehebungen für RileyLink, Omnipod und Medtronic Pumpen
+* 'Zu Nightscout nur hochladen' verpflichtend
+* Fehlerbehebung für SMB & Dexcom App
+* Watchface Korrekturen
+* Verbesserte Crash-Reports
+* Gradle zurückgesetzt, um direkte Installation des Watchfaces zu ermöglichen
+* Fehlerbehebung bei Automatisierungen
+* Verbesserung Dana RS Treiber
+* Verschiedene Absturzursachen behoben
+* Fehlerkorrekturen und Verbesserungen der Benutzeroberfläche
+* neue Übersetzungen
+
+Version 2.8.0
+================
+Erscheinungsdatum: 01.01.2021
+
+Wichtige Hinweise
+----------------------
+* **Mindestvoraussetzung ist nun Android 8.0.** Falls Du ein Smartphone mit einer älteren AndroidVersion verwendest, kannst Du immer noch die Version 2.6.1.4 aus dem alten Repository verwenden. 
+* `Objectives (Ziele) wurden geändert. <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ **Wenn du dein aktuelles Ziel noch nicht abgeschlossen hast, so beende dieses vor dem Update.**
+* Repository weiterhin auf https://github.com/nightscout/AndroidAPS . Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die App-Erstellung `von vorne beginnst <../Installing-AndroidAPS/Building-APK.html>`_.
+* Nutze bitte `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
+
+Wichtige neue Funktionen
+----------------------
+* `Omnipod Eros Unterstützung <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda und besonderer Dank an @ps2 @itsmojo, alle anderen am Loop-Treiber für Omnipod Beteiligten, sowie @jlucasvt von GetRileyLink.org 
+* `Bolus-Berater <../Configuration/Preferences.html#bolus-berater>`_ & `Essens-Erinnerung <../Getting-Started/Screenshots.html#essens-erinnerung>`_ @MilosKozak 
+* `Neues Watchface <../Configuration/Watchfaces.html#neues-watchface-ab-version-28>`_ @rICTx-T1D
+* Verbesserung der Verbindung zur Dana RS @MilosKozak 
+* Bei Verwendung der nativen Dexcom App werden über mehr als 45 Minuten unveränderte CGM-Werte in SMB weiter berücksichtigt.
+* Neues `Erscheinungsbild für niedrige Bildschirmauflösungen <../Configuration/Preferences.html#erscheinungsbild>`_
+* Neuer Patiententyp `"Schwanger" <../Usage/Open-APS-features.html#ubersicht-der-fest-programmierten-limits>`_ @Brian Quinion
+* Neues NSClient-Layout für Tablets @MilosKozak 
+* NSClient überträgt Insulin, Senstivität und Anzeige-Einstellungen direkt von AAPS @MilosKozak 
+* `Filter für Einstellungen im 3-Punkte-Menü <../Configuration/Preferences.html>`_ @Brian Quinion
+* Neue Pumpensymbole @Rig22 @@teleriddler @osodebailar
+* Neuer `Insulintyp Lyumjev <../Configuration/Config-Builder.html#lyumjev>`_
+* Verbesserungen im Einrichtungsassitenten @MilosKozak 
+* Verbesserung der Sicherheit @dlvoy 
+* Verschiedene Verbesserungen und Fehlerbehebungen @AdrianLxM @Philoul @swissalpine @MilosKozak @Brian Quinion 
+
 Version 2.7.0
 ================
 Erscheinungsdatum: 24.09.2020
-
-Speicherort des Repositories wurde auf https://github.com/nightscout/AndroidAPS geändert. Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die App-Erstellung `von vorne beginnst <../Installing-AndroidAPS/Building-APK.html>`_.
-
-Wie bereits `vor einiger Zeit angekündigt < ../Module/module.html#smartphone>` _, **ist Android 7 Mindestvoraussetzung* * für AndroidAPS 2.7.
-
-Nutze bitte `Android Studio 4.0.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 **Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie** `hier <../Installing-AndroidAPS/update2_7.html>`_ **beschrieben.**
 

@@ -1,8 +1,18 @@
 Docs updates & changes
 **************************************************
+
+January 2021
+==================================================
+* `Action tab <../Getting-Started/Screenshots.html#action-tab>`_ - more details on page 'AndroidAPS screens'
+* Dexcom G6 with `Build Your Own Dexcom App <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_
+* Libre smart reader `battery level <../Getting-Started/Screenshots.html#sensor-level-battery>`_
+* `Objectives <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ - new questions
+* Omnipod Eros - `loopable in AAPS master <../Configuration/OmnipodEros.html>`_
+* Other `new AndroidAPS 2.8.0 functions <../Installing-AndroidAPS/Releasenotes.html#version-2-8-0>`_
 December 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - patched app does not work with US sensors
+* `OpenAPS hard-coded limits <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_
 * Sony Smartwatch 3 `Manual Installation of Google Play Service <../Usage/SonySW3.html>`_
 October 2020
 ==================================================
@@ -45,7 +55,7 @@ February 2020
 * Nový `plugin Místního profilu <../Configuration/Config-Builder.html#local-profile-recommended>`_
 * `Sample Setup <../Getting-Started/Sample-Setup.html>`_ - update Dexcom G6
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - major new features
-* `Wear complications <../Configuration/Watchfaces.html>`_
+* `Komplikace pro Wear <../Configuration/Watchfaces.html>`_
 January 2020
 ==================================================
 * `Manual carb correction <../Getting-Started/Screenshots.html#carb-correction>`_ for faulty carb entries

@@ -28,14 +28,15 @@ Op dit moment zijn er drie grote open-source closed loop systemen beschikbaar:
 
 AndroidAPS (AAPS)
 --------------------------------------------------
-AndroidAPS wordt in detail beschreven in `deze documentatie <./WhatisAndroidAPS.html>`_. Het maakt gebruik van een Android Smartphone voor de berekening en controle van uw insulinepomp. Het is in nauwe samenwerking met OpenAPS (d.w.z. ze delen algoritmen).
+AndroidAPS wordt in detail beschreven in `deze documentatie <./WhatisAndroidAPS.html>`_. Alle berekeningen en bediening gaat via een Android smartphone. Ook ontvangt de smartphone jouw sensorgegevens en stuurt jouw insulinepomp aan. Het is gebaseerd op OpenAPS (ze they share algorithms).
 
 Te gebruiken `pompen <../Hardware/pumps.html>`_ zijn:
 
-* DanaR / DanaRS
-* Accu-Chek Combo
-* Accu-Chek Insight
-* enkele oude Medtronic pompen (vanaf AAPS versie 2.4)
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
+* `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_
+* bepaalde oudere `Medtronic <../Configuration/MedtronicPump.html>`_ modellen
 
 OpenAPS
 --------------------------------------------------
@@ -43,7 +44,7 @@ OpenAPS
 
 Te gebruiken pompen zijn:
 
-* enkele oude Medtronic pompen
+* bepaalde oudere modellen Medtronic pompen
 
 Loop voor iOS
 --------------------------------------------------
@@ -52,4 +53,4 @@ Loop voor iOS
 Te gebruiken pompen zijn:
 
 * Omnipod Eros
-* enkele oude Medtronic pompen
+* bepaalde oudere modellen Medtronic pompen

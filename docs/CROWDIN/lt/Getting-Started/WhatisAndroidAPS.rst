@@ -20,7 +20,7 @@ Atsargiai: nei vienos šalies medicininis reguliatorius nereglamentuoja AndroidA
 
 	* Visi gaminių ir gamintojų pavadinimai, prekės ženklai, paslaugų ženklai, prekių ženklai ir registruoti paslaugų ženklai yra atitinkamų savininkų nuosavybė ir naudojami tik informaciniais tikslais, o ne reklamai ar rinkodarai. Jie naudojami tik informaciniais tikslais ir nereiškia, kad AAPS priklauso jiems ir kad jie yra palaikomi.
 
-	Atkreipkite dėmesį: Šis projektas nėra susijęs su SOOIL <http://www.sooil.com/eng/>, Dexcom <http://www.dexcom.com/>, Accu-Chek, „Roche Diabetes Care“ <http://www.accu-chek.com/> ar Medtronic <http://www.medtronic.com/>.
+	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_, `Insulet <https://www.insulet.com/>`_ or `Medtronic <https://www.medtronic.com/>`_.
 	
 Jei esate pasirengęs priimti šį iššūkį, skaitykite toliau. 
 

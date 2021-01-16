@@ -35,7 +35,8 @@ SGLT-2 Hemmer, auch Gliflozins genannt, hemmen die Resorption (Aufnahme) von Glu
 
 Smartphone
 --------------------------------------------------
-Du benötigst ein Android Smartphone mit Android 7.0 oder höher. Solltest Du also über ein neues Telefon nachdenken, wird mindestens Android 8.1 idealerweise aber Android 9 oder 10 empfohlen.
+Die aktuelle Version von AndroidAPS benötigt ein Smartphone mit Google Android 8.0 oder höher. Solltest Du also über ein neues Telefon nachdenken, wird mindestens Android 8.1, idealerweise aber Android 9 oder 10 empfohlen.
+Benutzern wird dringend empfohlen, ihren Build von AndroidAPS aus Sicherheitsgründen auf dem neuesten Stand zu halten. Für Benutzer, die kein Gerät mit einer Mindestversion von Android 8.0 verwenden können, bleibt AndroidAPS Version 2.6.1.4, die für ältere Android-Versionen geeignet ist, im `alten Repository verfügbar. <https://github.com/miloskozak/androidaps>_`
 
 Es gibt eine von AAPS Anwendern erstellte `Liste mit getesteten Smartphones und Smartwatches: <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
@@ -52,6 +53,7 @@ AndroidAPS funktioniert **derzeit** mit
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - `einigen alten Medtronic Pumpen <../Configuration/MedtronicPump.html>`_ ab der neuen Version 2.4 (zusätzlich werden RileyLink/Gnarl Hardware und ein Android Smartphone mit Bluetooth Low Energy (BLE-Chipset) benötigt.)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
 
 **Andere Pumpen,** die zukünftig möglicherweise von AndroidAPS unterstützt werden können, sind auf der Seite `Zukünftig ggf. loopbare Pumpen <../Getting-Started/Future-possible-Pump-Drivers.html>`_ aufgeführt.
 
@@ -85,7 +87,7 @@ Dies ist nur eine knappe Übersicht über alle kompatiblen CGM/FGM mit AndroidAP
 
 Nightscout
 --------------------------------------------------
-Nightscout ist eine Open Source Web-Anwendung, die Deine CGM-Daten und AndroidAPS-Daten protokollieren und anzeigen kann und Berichte erstellt. Mehr Informationen findest Du auf der `Website des Nightscout-Projekts <http://www.nightscout.info/>`_. Du kannst Deine eigene `Nightscout-Website <https://nightscout.github.io/nightscout/new_user/>`_ erstellen, die halbautomatische Nightscout-Einrichtung auf `zehn.be <https://ns.10be.de/>`_ oder auf Deinem eigenen Server hosten (dies ist für IT-Experten).
+Nightscout ist eine Open Source Web-Anwendung, die Deine CGM-Daten und AndroidAPS-Daten protokollieren und anzeigen kann und Berichte erstellt. You can find more information on the `website of the Nightscout project <http://nightscout.github.io/>`_. Du kannst Deine eigene `Nightscout-Website <https://nightscout.github.io/nightscout/new_user/>`_ erstellen, die halbautomatische Nightscout-Einrichtung auf `zehn.be <https://ns.10be.de/>`_ oder auf Deinem eigenen Server hosten (dies ist für IT-Experten).
 
 Nightscout ist unabhängig von den anderen Modulen. Du brauchst aber auf jeden Fall eine Nightscout-Seite, um das Objetive (Ziel) 1 abzuschließen.
 

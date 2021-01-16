@@ -2,25 +2,7 @@
 
 Αυτή είναι μια λίστα με ορισμένες Αντλίες που επιπλέουν γύρω από αυτό, και την κατάσταση υποστήριξης γι 'αυτούς σε οποιοδήποτε από τα συστήματα κυκλώματος και στη συνέχεια την κατάσταση στο AAPS. Στο τέλος υπάρχουν κάποιες πληροφορίες, τι απαιτείται για να είναι μια αντλία "ικανή για κύκλωμα".
 
-## Αντλίες των οποίων η στήριξη βρίσκεται σε εξέλιξη
-
-### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
-
-**Loop status:** Not supported natively by AAPS at the moment. Decoding of the Omnipod protocol is finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
-
-**Other implementations:**
-
-- Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink, and specially modified AndroidAPS) 
-- OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project).
-- [iOS Loop](https://loopkit.github.io/loopdocs/) (stable, released, requires RileyLink).
-
-**Java implementations:** None till now.
-
-**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on Discord (channel #omnipod-eros-testing) with [this invite link](https://discord.com/invite/NhEUtzr). A first public test version was released in January 2020, and work is being done towards stabilization. Current version 0.4 (October 2020)
-
-**Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.x) and 433 MHz antenna.
-
-## Αντλίες που είναι για κύκλωμα
+## Pumps that are Loopable
 
 ### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
 
@@ -84,7 +66,7 @@
 
 * * *
 
-## Οι αντλίες που δεν πωλούνται πλέον (εταιρείες που δεν λειτουργούν πλέον)
+## Pumps no longer sold (companies no longer operating)
 
 ### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
@@ -94,7 +76,7 @@
 
 **Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
-## Αντλίες που δεν είναι για κύκλωμα
+## Pumps that aren't Loopable
 
 ### Tandem:(any) ([Homepage](https://www.tandemdiabetes.com/))
 
@@ -114,39 +96,39 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 
 **Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
 
-## Απαιτήσεις αντλιών για να είναι συμβατές με κύκλωμα
+## Requirements for pumps being loopable
 
 **Prerequisite**
 
-- Η αντλία πρέπει να υποστηρίζει κάποιο είδος τηλεχειρισμού. (BlueTooth, ραδιοφωνική συχνότητα κλπ)
-- Το πρωτόκολλο παραβιάζεται / τεκμηριώνεται / κλπ.
+- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
+- Protocol is hacked/documented/etc.
 
 **Minimal requirement**
 
-- Ορισμός συχνότητας προσωρινού βασικού ρυθμού
-- Δες την κατάσταση
-- Ακύρωση συχνότητας προσωρινού βασικού ρυθμού
+- Set Temporary Basal Rate
+- Get Status
+- Cancel Temporary Basal Rate
 
 **For oref1(SMB) or Bolusing:**
 
-- Όρισε bolus
+- Set Bolus
 
 **Good to have**
 
-- Ακύρωση του Bolus
-- Αποκτήστε βασικό προφίλ (σχεδόν απαραίτητο)
-- Ορίστε βασικό προφίλ (ωραίο να έχετε)
-- Διαβάστε το Ιστορικό 
+- Cancel Bolus
+- Get Basal Profile (almost requirement)
+- Set Basal Profile (nice to have)
+- Read History 
 
 **Other (not required but good to have)**
 
-- Ορίστε εκτεταμένο bolus
-- Ακύρωση εκτεταμένου Bolus
-- Διαβάστε το Ιστορικό
-- Διαβάστε TDD
+- Set Extended Bolus
+- Cancel Extended Bolus
+- Read History
+- Read TDD
 
 * * *
 
 ### Other pumps support
 
-If you have any other pumps you would like to see status on, please contact me (@andyrozman on gitter). In future release a lot of Pump configurations will be added to be Open loopable (you will be able to select Virtual Pump Type in configuration and your settings will be loaded - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
+If you have any other pumps you would like to see status on, please contact me (@andyrozman on gitter). In future release a lot of Pump configurations will be added to be Open loopable (you will be able to select Virtual Pump Type in configuration and your settings will be loaded - [Feature request #157](https://github.com/nightscout/AndroidAPS/issues/157)).

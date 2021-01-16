@@ -6,8 +6,8 @@
 
 ## Wichtige Hinweise
 
-* Nutze bitte **[Android Studio Version 4.0.1](https://developer.android.com/studio/)** oder neuer, um die APK-Datei zu erstellen.
-* [Windows 10 32-bit Systeme](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) werden bei Android Studio 4.0.1 nicht unterstützt.
+* Nutze bitte **[Android Studio Version 4.1.1](https://developer.android.com/studio/)** oder neuer, um die APK-Datei zu erstellen.
+* [Windows 10 32-bit Systeme](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) werden bei Android Studio 4.1.1 nicht unterstützt.
 
 **Konfiguration auf Abruf** (Configuration on demand) wird von der aktuellen Version des Android-Gradle-Plugins nicht unterstützt!
 

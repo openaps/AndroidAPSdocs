@@ -26,7 +26,7 @@ Cíl 2: Naučte se ovládat AndroidAPS
    .. image:: ../images/Objective2_V2_5.png
      :alt: Screenshot cíl 2
 
-Objective 3: Prove your knowledge
+Cíl 3: Prokázat své znalosti
 ==================================================
 * Správně zodpovězte otázky s výběrem možných odpovědí a prokažte znalost AndroidAPS.
 * Klikněte na oranžový text „Nedokončeno“ pro přístup na stránku s otázkou a možnými odpověďmi.
@@ -35,6 +35,9 @@ Objective 3: Prove your knowledge
      :alt: Screenshot cíl 3
 
 * Odkazy budou poskytnuty jako vodítko pro případ, že si nejste jisti odpovědí.
+* The questions for objective 3 have been completely rewritten by native speakers as of AAPS 2.8. The new ones cover the same basic topics plus a few new ones.
+* These new questions will lead to some not answered questions even though you have successfully completed objective 3 in previous versions.
+* Unanswered questions will affect you only if you start a new objective. In other words: If you have already completed all objectives you can wait and answer the new questions later without loosing AAPS functions.
 
 Cíl 4: Začít s otevřenou smyčkou
 ==================================================
@@ -96,7 +99,7 @@ U 6. cíle nebude uzavřená smyčka korigovat vysokou glykémii, bude pouze zas
      :alt: Example negative IOB
 
 * If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
-* You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.
+* Bez možnosti zvýšit bazál při srovnání křivky glykémie se vám dočasně může stávat, že po vyřešení hypoglykémie bude následovat přílišný vzestup glykémie.
 
 Cíl 7: Vyladit uzavřenou smyčku, zvyšovat max IOB nad 0 a postupně snižovat cílovou glykémii
 ====================================================================================================
@@ -135,7 +138,7 @@ Objective 11: Automation
 ====================================================================================================
 * You have to start objective 11 to be able to use `Automation <../Usage/Automation.html>`_.
 * Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-proof-your-knowledge>`_.
-* Completing previous objectives will not effect other objectives you have already finished. You will keep all finished objectives!
+* Completing previous objectives will not effect other objectives you have already finished. Splněné cíle zůstanou zachovány!
 
 
 Návrat k předchozímu cíli

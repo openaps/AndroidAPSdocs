@@ -18,9 +18,18 @@ Pour compiler la version Wear OS de AAPS vous devez choisir la version "fullRele
 
 Assurez vous que les deux versions de AAPS (téléphone et montre) sont signées avec la même clé !
 
-La variante Wear de APK doit être installée sur la montre de la même façon que l'installation d'un APK sur le téléphone. Il peut être nécessaire d'activer le *mode développeur* sur la montre et de télécharger et installer l'APK avec la commande : `adb install wear-full-release.apk`
+Pour installer APK sur une montre connectée Android Wear, procédez comme suit :
 
-Lorsque vous utilisez la version montre d'AAPS, mettez toujours à jour l'application de la montre en même temps que celle du téléphone - synchronisez toujours les mises à jour.
+1. Activer le mode développeur sur la montre. Appuyez sur le bouton sur la montre et cliquez sur `paramètres` puis `système` puis `à propos` et cliquez sur le `numéro de build` au moins 7 fois jusqu'à ce qu'il confirme que vous êtes en mode développeur.
+2. Activer ADB sur la montre. Appuyez sur le bouton sur la montre et cliquez sur `paramètres` puis `options développeur` puis `débogage ADB` et `débogage sur le wifi`. Notez l'adresse IP que vous obtenez à côté de cela, il sera sous la forme d'une adresse IP suivie par :5555.
+3. Sur PC, notez l'emplacement du fichier `wear-full-release.apk` (il est dans le même dossier que `app-full-release.apk` que vous avez installé sur votre téléphone).
+4. Sur PC, ouvrez l'invite de commande (tapez `commande` dans la zone de recherche). 
+5. Dans l'invite de commande : `cd c:\Program Files (x86)\Android\android-sdk\platform-tools`.
+6. Dans l'invite de commande : `adb connect [entrez l'adresse IP de l'étape 2 y compris le :5555]`.
+7. Dans l'invite de commande : `adb install -r [entrez le chemin à partir de l'étape 3]\wear-full-release.apk`.
+8. Cela installera AAPS sur la montre, et les cadrans AAPS seront disponibles pour être sélectionné.
+
+Lorsque vous utilisez la version montre d'AAPS, mettez toujours à jour l'application de la montre en même temps que celle du téléphone - synchronisez toujours les mises à jour. Pour cela, vous devrez suivre à nouveau les étapes ci-dessus, mais vous n'aurez pas besoin de réactiver le mode développeur.
 
 ### Configuration sur le téléphone
 
@@ -54,6 +63,12 @@ Pour accéder plus rapidement au menu AAPS, appuyez deux fois sur votre Gly. Ave
 ## Cadrans disponibles
 
 ![Cadrans disponibles](../images/Watchface_Types.png)
+
+### Nouveau cadran depuis AndroidAPS 2.8
+
+![Cadran Digital](../images/Watchface_DigitalStyle.png)
+
+* La couleur, les lignes et le cercle sont personnalisables via la roue crantée du menu de sélection du cadran.
 
 ## Cadran AAPSv2 - Légende
 
@@ -211,9 +226,9 @@ De plus, il y a trois complications de type `IMAGE LARGE` : **Fond d'écran noir
 
 Les montres Wear OS sont des appareils très limités en énergie. La taille de la montre limite la capacité de la batterie incluse. Même avec les progrès récents tant du côté matériel que du côté logiciel, les montres Wear OS nécessitent toujours une charge quotidienne.
 
-Si la durée de vie de la batterie est inférieure à une journée (de l'aube au crépuscule), voici quelques conseils pour résoudre les problèmes.
+Si la durée de vie de la batterie est inférieure à une journée (du matin au soir), voici quelques conseils pour résoudre les problèmes.
 
-Les principaux consomateurs de batterie sont :
+Les principaux consommateurs de batterie sont :
 
 * Affichage actif avec rétroéclairage (pour LED) ou en mode pleine intensité (pour OLED)
 * Le rendu à l'écran
@@ -238,6 +253,12 @@ Puisque nous ne pouvons pas transiger sur la communication (nous avons besoin de
 * Parfois, cela peut aider de resynchroniser AAPS avec la montre car cela peut être un peu lent quand il le fait tout seul : Wear / Renvoyer toutes les données
 * Activez le débogage ADB dans les Options Développeur (sur la montre), connectez la montre via l'USB et démarrez l'application Wear une fois dans Android Studio.
 * Si les Complications ne mettent pas à jour les données - vérifiez d'abord si les cadrans AAPS fonctionnent correctement.
+
+### Sony Smartwatch 3
+
+* La montre Sony Smartwatch 3 est l'une des plus populaires utilisée avec AAPS. 
+* Malheureusement, Google a abandonné la prise en charge des appareils sous Wear OS 1.5 à l'automne 2020. Cela entraîne des problèmes lors de l'utilisation de Sony SW3 avec AndroidAPS et plus.
+* Une solution de contournement possible peut être trouvée sur cette [page de dépannage](../Usage/SonySW3.rst).
 
 ## Afficher les données Nightscout
 

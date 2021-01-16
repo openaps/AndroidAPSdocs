@@ -106,24 +106,24 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G, 
    * Deze wizard helpt je stap voor stap door de initiële instellingen.
    * Het serienummer van je zender heb je hierbij nodig
 
-* Het serienummer van een nieuwe zender vind je op de doos van de zender, en ook op de achterkant van de zender zelf. Be careful not to confuse `0` (zero) and `O` (capital letter o).
+* Het serienummer van een nieuwe zender vind je op de doos van de zender, en ook op de achterkant van de zender zelf. Let op dat je een `0` (nul) en `O` (hoofdletter o) niet door elkaar haalt.
    
    ![xDrip+ Dexcom zender-serienummer](../images/xDrip_Dexcom_TransmitterSN.png)
 
 * Als je van plan was je sensor te vervangen, doe dit dan nu.
 
 * Plaats zender in de sensor
-* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter's serial no., accept it (tap "pair")
-* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+* Als er een bericht verschijnt met een koppelingsverzoek voor "DexcomXX", waarbij "XX" de laatste twee tekens van het serienummer van de zender is, accepteer het dan (tik op "koppelen")
+* Start geen nieuwe sensor voordat de volgende informatie wordt weergegeven in Classic Status Page-> G5/G6 status-> PhoneServiceState:
    
    * Zendernummer beginnend met 80 of 81: "Got data hh:mm" (bijvoorbeeld "Got data 19:04")
-   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got no raw 19:04")
+   * Zendernummer beginnnend met 8G, 8H of 8J: "Got glucose hh:mm" (bijvoorbeeld "Got glucose 19:04") of "Got no raw hh:mm" (bijvoorbeeld "Got no raw 19:04")
    
    ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Start sensor (only if replacing)
+* Start sensor (alleen indien je zojuist een nieuwe sensor hebt geplaatst)
    
-   -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
+   -> Ergens onderaan het scherm hoort na enkele minuten `Warm Up x,x hours left` te verschijnen.
 
 -> Als je zendernummer niet begint met 8G, 8H of 8J én hij laat na een paar minuten nog geen tijdsspecificatie zien, dan moet je de sensor stoppen en weer starten.
 
@@ -338,7 +338,12 @@ Controleer in xDrip+ logs of xDrip+ begint met het tellen van de duur "Duration:
    
    ![xDrip+ Libre Bluetooth-instellingen 2](../images/xDrip_Libre_BTSettings2.png)
 
-### Verbind Libre zender & start sensor
+### Batterijniveau van opzetapparaatje voor FSL
+
+* Het batterijniveau van opzetapparaatjes zoals MiaoMiao 2 kan in AAPS worden weergegeven.
+* Meer info vind je op de [screenshots pagina](../Getting-Started/Screenshots#sensorniveau-batterij).
+
+### Verbind Libre opzetapparaatje & start sensor
 
 ![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 

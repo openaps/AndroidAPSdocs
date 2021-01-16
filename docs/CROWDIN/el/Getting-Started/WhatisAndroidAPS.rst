@@ -20,7 +20,7 @@ AndroidAPS is an app that acts as an artificial pancreas system (APS) on an Andr
 
 	* Όλα τα ονόματα των προϊόντων και των εταιρειών, τα εμπορικά σήματα, τα κατατεθέντα εμπορικά σήματα και τα καταχωρημένα λογότυπα υπηρεσίας αποτελούν ιδιοκτησία των αντίστοιχων κατόχων τους. Η χρήση τους είναι για ενημερωτικούς σκοπούς και δεν συνεπάγεται καμία προσχώρηση ή έγκριση από αυτούς.
 
-	Παρακαλώ σημειώστε - αυτό το έργο δεν έχει καμία σχέση και δεν υποστηρίζεται από: `SOOIL <http://www.sooil.com/eng/>` _, `Dexcom <http://www.dexcom.com/>` _, «Accu-Chek<http://www.accu-chek.com/>, Roche Diabetes Care <2/>» _. ή Medtronic <http://www.medtronic.com/>'_.
+	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_, `Insulet <https://www.insulet.com/>`_ or `Medtronic <https://www.medtronic.com/>`_.
 	
 Εάν είστε έτοιμοι για την πρόκληση, παρακαλώ διαβάστε το. 
 

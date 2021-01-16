@@ -35,7 +35,8 @@ SGLT-2 remmers, ook wel glifozines genoemd, remmen de herabsorptie van glucose i
 
 Telefoon
 --------------------------------------------------
-You need an Android smartphone with Google Android 7.0 or above. Dus als je denkt over een nieuwe telefoon, dan raden we aan om op zijn minst voor Android 8.1 te gaan maar liever Android 9 of 10.
+Voor de huidige versie van AndroidAPS is een Android smartphone nodig met Google Android 8.0 of hoger. Dus als je denkt over een nieuwe telefoon, dan raden we aan om op zijn minst voor Android 8.1 te gaan maar liever Android 9 of 10.
+Gebruikers worden met klem geadviseerd om hun AndroidAPS om veiligheidsredenen up-to-date te houden. Maar voor gebruikers die geen telefoon hebben met minimaal Android 8, is versie 2.6.1.4 van AndroidAPS nog beschikbaar vanuit de 'oude' repository, deze is geschikt voor telefoons met Android 7 of lager `zie hier <https://github.com/miloskozak/androidaps>_`
 
 Gebruikers houden een `lijst van geteste telefoons en smartwatches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ bij.
 
@@ -52,6 +53,7 @@ AndroidAPS werkt momenteel met
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - `bepaalde oudere Medtronic modellen <../Configuration/MedtronicPump.html>`_ (extra nodig: RileyLink/Gnarl hardware, Android telefoon met Bluetooth Low Energy / BLE-chipset)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
 
 **Andere pompen** die mogelijk in de toekomst geschikt zullen zijn vind je op de `Mogelijk toekomstige insulinepompen <../Getting-Started/Future-possible-Pump-Drivers.html>`_ pagina.
 
@@ -85,7 +87,7 @@ Dit is slechts een kort overzicht van alle compatibele CGMs/FGM met AndroidAPS. 
 
 Nightscout
 --------------------------------------------------
-Nightscout is een open source web-applicatie die jouw CGM-gegevens en AndroidAPS gegevens kan opslaan, weergeven en rapporten kan maken. Meer informatie vind je op de `website van het Nightscout project <http://www.nightscout.info/>`_. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
+Nightscout is een open source web-applicatie die jouw CGM-gegevens en AndroidAPS gegevens kan opslaan, weergeven en rapporten kan maken. You can find more information on the `website of the Nightscout project <http://nightscout.github.io/>`_. Je kunt je eigen Nightscout website `maken <https://nightscout.github.io/nightscout/new_user/>`_, gebruik de semi-geautomatiseerde Nightscout setup op `zehn.be <https://ns.10be.de/en/index.html>`_ of host het op jouw eigen server (dit laatste is voor IT experts).
 
 Nightscout werkt onafhankelijk van de andere onderdelen. Je hebt het nodig om voorbij Doel 1 te komen.
 

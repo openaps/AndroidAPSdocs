@@ -5,6 +5,7 @@ AndroidAPS funktioniert derzeit mit
 * Accu-Chek Combo
 * Accu-Chek Insight
 * einige alte Medtronic-Pumpen
+* Insulet Omnipod (Eros nicht DASH)
 * Dana R
 * Dana RS 
 

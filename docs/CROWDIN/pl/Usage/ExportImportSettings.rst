@@ -48,6 +48,8 @@ Eksport ustawień
   
 Zaimportuj ustawienia
 == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings>`_.
+
 * Menu "hamburger" (trzy poziome kreski w lewym górnym narożniku ekranu)
 * Konserwacja
 * Zaimportuj ustawienia

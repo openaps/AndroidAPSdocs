@@ -6,9 +6,12 @@ Met een Tijdelijk streefdoel ("Temp-Target” of TT in het Engels), kun je het s
 
 ![Standaard Tijdelijke streefdoelen instellen](../images/TempTarget_Default.png)
 
-Om vervolgens een Tijdelijk streefdoel te gebruiken, zijn er verschillende manieren. Houd op het Overzicht-scherm het vlak rechtsboven met jouw streefdoel lang ingedrukt. Of druk op het Overzicht-scherm op de oranje 'Koolhydraten' knop onderin beeld. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration) use “Custom“ after long-pressing your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
+Om vervolgens een Tijdelijk streefdoel te gebruiken, zijn er verschillende manieren. Druk op het Overzicht-scherm op het vlak rechtsboven met jouw streefdoel. Of druk op het Overzicht-scherm op de oranje 'Koolhydraten' knop of op de blauwe 'Insuline' knop onderin beeld. Voor het instellen van een ["Aangepast Tijdelijk streefdoel"](../Usage/temptarget#aangepast-tijdelijk-streefdoel) (BG-waarde en/of duur), druk op jouw streefdoel in de rechter bovenhoek en kies "Aangepast" of gebruik de "Tijdelijk Streefdoel" knop in de "Acties"-tab.
 
 ![Start Tijdelijk streefdoel](../images/TempTarget_Set2.png)
+
+- Als je de waarden van een standaard tijdelijk streefdoel iets wilt aanpassen, kun je de Eet Binnenkort, Activiteit of Hypo-knop lang indrukken en vervolgens de waarden in de velden Doel of Duur bewerken.
+- Als een tijdelijk streefdoel actief is, wordt er een extra "Annuleren" knop weergegeven in het dialoogvenster om het te annuleren
 
 ## Hypo Tijdelijk streefdoel
 
@@ -35,6 +38,6 @@ Vanaf [leerdoel 10](../Usage/Objectives#objective-10-enabling-additional-oref1-f
 
 ## Aangepast Tijdelijk streefdoel
 
-Soms wil je gewoon een Tijdelijk streefdoel hebben dat anders is dan de standaard ingestelde Tijdelijke streefdoelen. Wanneer je die optie kiest, kun je de streefwaarde voor je bloedglucose en ook de tijdsduur zelf kiezen. Je kunt een Aangepast tijdelijk streefdoel inschakelen via de 'Acties' tab of door op het Overzicht-scherm je streefwaarde in de rechter bovenhoek lang ingedrukt te houden (kies 'Aangepast').
+Soms wil je gewoon een Tijdelijk streefdoel hebben dat anders is dan de standaard ingestelde Tijdelijke streefdoelen. Je kunt er één instellen door kort te drukken op het doel (bereik) in de rechterbovenhoek in het Overzichtscherm of in het tabblad "Acties".
 
 ![Tijdelijk streefdoel instellen via Actie tabblad](../images/TempTarget_ActionTab.png)

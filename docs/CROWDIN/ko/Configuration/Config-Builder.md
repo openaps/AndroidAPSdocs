@@ -81,7 +81,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 
 NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
 
-Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+Do a [profile switch](../Getting-Started/Screenshots.md#current-profile) to activate a profile from Nightscout. AAPS will write the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
 장점:
 
@@ -95,47 +95,64 @@ Do a **profile switch** to activate a profile from Nightscout. Press and hold th
 
 ## 인슐린
 
-Select the type of insulin curve you are using. The options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak.
+![Insulin type](../images/ConfBuild_Insulin.png)
 
-The DIA is not the same for each person. That's why you have to test it for yourself. But it must always be at least 5 hours. You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page.
+* Select the type of insulin curve you are using.
+* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
+* The curves will vary based on the DIA and the time to peak.
+    
+    * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
+    * BLUE line shows **how active** insulin is.
 
-For Rapid-Acting and Ultra-Rapid, the DIA is the only variable you can adjust by yourself, the time to peak is fixed. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings.
+### DIA
 
-The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
+* The DIA is not the same for each person. That's why you have to test it for yourself. 
+* But it must always be at least 5 hours.
+* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
+* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page. 
 
-### Rapid-Acting Oref
+### Insulin type differences
 
-* 휴마로그, 노보로그, 노보래피드에 권장됨
-* DIA = 최소 5시간
-* 최대 피크 타임 = 주사 후 75분 (고정된 값으로 조정할 수 없음)
+* For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
+* Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
+* The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. 
+* You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
 
-### Ultra-Rapid Oref
+#### Rapid-Acting Oref
 
-* 피아스프에 권장됨
-* DIA = 최소 5시간
-* 최대 피크 타임 = 주사 후 55분 (고정된 값으로 조정할 수 없음)
+* recommended for Humalog, Novolog and Novorapid
+* DIA = at least 5.0h
+* Max. peak = 75 minutes after injection (fixed, not adjustable)
 
-For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
+#### Ultra-Rapid Oref
 
-![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
+* recommended for FIASP
+* DIA = at least 5.0h
+* Max. peak = 55 minutes after injection (fixed, not adjustable)
 
-### Free Peak Oref
+#### Lyumjev
 
-With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+* special insulin profile for Lyumjev
+* DIA = at least 5.0h
+* Max. peak = 45 minutes after injection (fixed, not adjustable)
 
-This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+#### Free Peak Oref
+
+* With the "Free Peak 0ref" profile you can individually enter the peak time.
+* The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+* This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
 ## 혈당 출처
 
 Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
-* NSClient 혈당
-* [미니메드640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - 4.15.57 및 최신 버전만 지원됨
-* [덱스콤 앱 (패치용)](https://github.com/dexcomapp/dexcomapp/) - xDrip+ 알람을 사용하고 싶은 경우 '혈당 데이터를 xDrip+로 보내기' 선택.
+* NSClient BG
+* [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
+* [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
     
-    ![구성 관리자 혈당 출처](../images/ConfBuild_BGSource.png)
+    ![Config Builder BG source](../images/ConfBuild_BGSource.png)
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
@@ -146,10 +163,10 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 
 Select the pump you are using.
 
-* [다나 R](DanaR-Insulin-Pump.md)
-* 다나 R 한국어 (국내용 다나 R 펌프)
+* [Dana R](DanaR-Insulin-Pump.md)
+* Dana R Korean (for domestic DanaR pump)
 * Dana Rv2 (DanaR pump with unofficial firmware upgrade)
-* [다나 RS](DanaRS-Insulin-Pump.md)
+* [Dana RS](DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
 * [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
 * [Medtronic](MedtronicPump.md)
@@ -246,7 +263,7 @@ Define which Buttons are shown on the home screen.
 
 Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
 
-#### 빠른 마법사 설정
+#### QuickWizard settings
 
 Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
 
@@ -290,27 +307,8 @@ Choose if you want to have [status lights](../Configuration/Preferences#status-l
 
 ### 실행
 
-Some buttons to quickly access common features:
-
-* Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
-* Temporary targets
-* Set / cancel temp. basal양
-* Extended bolus (DanaR/RS or Combo pump only)
-* Record for any specific care entries
-    
-    * BG check
-    * Prime / fill - record pump site change and prime (if not done on pump)
-    * CGM sensor insert
-    * Pump battery change
-    * Note
-    * Exercise
-* View the current sensor, insulin, canula and pump battery ages
-* History browser
-* TDD (Total daily dose = bolus + basal per day)
-
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
-
-![Actions tab](../images/ConfBuild_ConfBuild_Actions_b.png)
+* Some buttons to quickly access common features.
+* See [AAPS screenshots](../Getting-Started/Screenshots#action-tab) for details.
 
 ### Automation
 
@@ -348,7 +346,7 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 * Setup sync of your AndroidAPS data with Nightscout.
 * Settings in [preferences](../Configuration/Preferences#nsclient) can be opened by clicking the cog wheel.
 
-### 정비
+### Maintenance
 
 Email and number of logs to be send. Normally no change necessary.
 

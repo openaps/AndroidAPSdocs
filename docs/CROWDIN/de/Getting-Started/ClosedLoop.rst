@@ -32,10 +32,11 @@ AndroidAPS wird in `dieser Dokumentation <./WhatisAndroidAPS.html>`_ ausführlic
 
 Kompatible `Insulinpumpen <../Hardware/pumps.html>`_ sind:
 
-* DanaR / DanaRS
-* Accu-Chek Combo
-* Accu-Chek Insight
-* einige alte Medtronic Pumpen (ab AAPS-Version 2.4)
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
+* `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_
+* einige alte `Medtronic Pumpen <../Configuration/MedtronicPump.html>`_
 
 OpenAPS
 --------------------------------------------------

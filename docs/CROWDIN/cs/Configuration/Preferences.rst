@@ -1,234 +1,256 @@
 Nastavení
 ***********************************************************
-* Open preferences by clicking three-dot-menu on top right side of home screen.
+* **Otevřete nastavení** klepnutím na tři tečky v pravém horním rohu hlavní obrazovky.
 
-  .. image:: ../images/Pref2020_Open.png
-    :alt: Open preferences
+  .. image:: ../images/Pref2020_Open2.png
+    :alt: Otevřít nastavení
 
-* You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and click Plugin preferences.
+* Do nastavení příslušného pluginu (např. záložka pumpa) se dostanete klepnutím na Nastavení plugginu.
 
-  .. image:: ../images/Pref2020_OpenPlugin.png
-    :alt: Open plugin preferences
-    
-* Sub-menus can be opened by clicking the triangle below the sub-menu title.
+  .. image:: ../images/Pref2020_OpenPlugin2.png
+    :alt: Otevřít nastavení pluginu
 
-  .. image:: ../images/Pref2020_Submenu.png
-    :alt: Open submenu
+* **Podmenu** může být otevřeno kliknutím na trojúhelník pod nadpisem menu.
+
+  .. image:: ../images/Pref2020_Submenu2.png
+    :alt: Otevřít submenu
+
+* With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+
+  .. image:: ../images/Pref2021_Filter.png
+    :alt: Předvolby > Filtry
+
 
 Obecné
 ===========================================================
 
-**Units**
+**Jednotky**
 
-* Set units to mmol/l or mg/dl depending on your preferences.
+* V závislosti na vašich preferencích nastavte jednotky na mmol/l nebo mg/dl.
 
-**Language**
+**Jazyk**
 
-* New option to use phone's default language (recommended). 
-* In case you want AAPS in different language than standard phone language you can choose from a broad variety.
-* If you use different languages you might sometimes see a language mix. This is due to an android issue that overriding default android language sometimes doesn't work.
+* Nová možnost je používat výchozí jazyk telefonu (doporučeno). 
+* V případě, že chcete mít AAPS v jiném jazyce než je standardní jazyk telefonu si můžete vybrat z široké nabídky dalších jazyků.
+* Pokud používáte různé jazyky, můžete se někdy setkat s jazykovým mixem. To je způsobeno chybou androida, kdy v některých případech nefunguje přepsání výchozího jazyka.
 
   .. image:: ../images/Pref2020_General.png
-    :alt: Preferences > General
+    :alt: Nastavení > Obecné
 
-**Patient name**
+**Jméno pacienta**
 
-* Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+* Hodí se v případě, že používáte víc nastavení (např. u rodin se 2 diabetickými dětmi).
 
-Protection
+Ochrana
 -----------------------------------------------------------
-Master password
+Hlavní heslo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
+* Abyste mohli `exportovat nastavení <../Usage/ExportImportSettings.html>`_, je nutné nastavit hlavní heslo. Od verze 2.7 jsou totiž exporty šifrované.
 
-   **Biometric protection does not work on OnePlus phones. This is a know issue of OnePlus.**
+   ** Biometrická ochrana nefunguje na telefonech OnePlus. Jde o známý problém OnePlus.**
 
-* Open Preferences (three-dot-menu on top right of home screen)
-* Click triangle below "General"
-* Click "Master-Password"
-* Enter password, confirm password and click ok.
+* Klepnutím na tři tečky v pravém horním rohu hlavní obrazovky otevřete Nastavení
+* Klepněte na trojúhelník pod "Obecné"
+* Klepněte na položku "Hlavní heslo"
+* Zadejte heslo, potvrďte ho, a klepněte na tlačítko Ok.
 
   .. image:: ../images/MasterPW.png
-    :alt: Set master password
+    :alt: Nastavení hlavního hesla
   
-Settings protection
+Ochrana nastavení
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Protect your settings with a password or phone's biometric authentication (i.e. `child is using AAPS <../Children/Children.html>`_).
-* Custom password should be used if you want to use master password just for securing `exported settings <../Usage/ExportImportSettings.html>`_.
-* If you are using a custom password click on line "Settings password" to set password as described `above <../Configuration/Preferences.html#master-password>`_.
+* Chraňte své nastavení pomocí hesla nebo biometrického ověření telefonu (t.j. `AndroidAPS pro děti <../Children/Children.html>`_).
+* Pokud chcete použít hlavní heslo pouze pro zabezpečení `exportovaného nastavení <../Usage/ExportImportSettings.html> ` _, můžete si vytvořit Vlastní heslo.
+* Pokud používáte vlastní heslo, klepněte na řádek "Nastavení hesla", a nastavte heslo tak, jak je popsáno výše, `nad <../Configuration/Preferences.html#master-password>`_.
 
   .. image:: ../images/Pref2020_Protection.png
-    :alt: Protection
+    :alt: Ochrana
 
-Application protection
+Ochrana aplikace
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If app is protected you must enter password or use phone's biometric authentication to open AAPS.
-* App will shut down immediately if wrong password is entered - but still run in the background if it was previously opened successfully.
+* Je-li aplikace chráněna, musíte k otevření AAPS zadat heslo nebo použít biometrické ověření telefonu.
+* Je-li zadáno chybné heslo, aplikace se okamžitě vypne. Pokud byla předtím úspěšně spuštěna, zůstává stále běžet na pozadí.
 
-Bolus protection
+Ochrana bolusu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Bolus protection might be useful if AAPS is used by a small child and you `bolus via SMS <../Children/SMS-Commands.html>`_.
-* In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter master password.
+* Ochrana bolusu je užitečná, pokud AAPS používá malé dítě, a vy podáváte `bolus prostřednictvím SMS <../Children/SMS-Commands.html>`_.
+* V níže uvedeném příkladu vidíte výzvu k biometrické ochraně. Pokud biometrické ověření nefunguje, klepněte na místo nad bílou výzvou k zadání, a zadejte hlavní heslo.
 
   .. image:: ../images/Pref2020_PW.png
-    :alt: Prompt biometric protection
+    :alt: Výzva pro biometrickou ochranu
 
-Skin
+Vzhled
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* You can choose from three types of skins:
+* Můžete si vybrat ze čtyř typů vzhledů:
 
-  .. image:: ../images/Pref2020_Skin.png
-    :alt: Select skin
+  .. image:: ../images/Pref2021_SkinWExample.png
+    :alt: Výběr vzhledu + příklady
 
-* Difference depend of phone's display orientation
+* 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
+* Rozdíly mezi ostatními vzhledy závisí na orientaci telefonu.
 
-Portrait orientation
+Na výšku
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-* **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
-* **Large Display** has an increased size of all graphs compare to other skins
+* ** Původní vzhled** a **Tlačítka jsou vždy zobrazena na spodní části obrazovky** jsou stejné
+* **Velký displej** v porovnání s ostatními vzhledy má větší velikost grafů
 
-Landscape orientation
+Na šířku
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-* Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
-* **Large Display** has an increased size of all graphs compare to other skins
+* Při použití **Původní vzhled** a **Velký displej**, musíte posouvat dolů, abyste zobrazili tlačítka v dolní části obrazovky
+* **Velký displej** v porovnání s ostatními vzhledy má větší velikost grafů
 
   .. image:: ../images/Screenshots_Skins.png
-    :alt: Skins depending on phone's display orientation
+    :alt: Vzhledy v závislosti na orientaci telefonu
 
 Přehled
 ===========================================================
 
-* In overview section you can define preferences for home screen.
+* V sekci Přehled můžete nastavit preference pro domácí obrazovku.
 
   .. image:: ../images/Pref2020_OverviewII.png
-    :alt: Preferences > Overview
+    :alt: Předvolby > Přehled
 
 Nechat obrazovku zapnutou
 -----------------------------------------------------------
-* Useful while giving a presentation. 
-* It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
+* Užitečné při předvádění. 
+* Tento režim spotřebovává velké množství energie, takže je nutné připojit mobil do nabíječky.
 
 Tlačítka
 -----------------------------------------------------------
-* Define which buttons are visible on the bottom of your home screen.
-* With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
+* Určete, která tlačítka se zobrazí ve spodní části domovské obrazovky.
+* Podle vyznačených souvislostí na obrázcích můžete nadefinovat hodnoty trlačítek sacharidů a inzulínu pro snadnější zadávání v dialogových oknech.
 
   .. image:: ../images/Pref2020_OV_Buttons.png
-    :alt: Preferences > Buttons
+    :alt: Nastavení > Tlačítka
 
 Quick Wizard
 -----------------------------------------------------------
-* If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
-* In setup you define during which time period the button will be visible on your home screen - just one button per period.
-* If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up). 
-* The proposal has to be confirmed before insulin is delivered.
+* Pokud máte často svačinu nebo jídlo, můžete použít Rychlý bolus pro snadnější vkládání hodnot sacharidů a nastavení základních výpočtů.
+* V nastavení si určíte, v jakém časovém období se má tlačítko zobrazit na domácí obrazovce - právě jedno tlačítko na jedno období.
+* Když kliknete na tlačítko Rychlý bolus, AAPS provede výpočty a navrhne bolus pro zadané množství sacharidů s ohledem na aktuální hodnoty (glykémie nebo aktivního inzulínu, pokud je nastaven). 
+* Navržený bolus musí být potvrzen, aby byl následně vydán.
 
   .. image:: ../images/Pref2020_OV_QuickWizard.png
-    :alt: Preferences > Quick Wizard Button
+    :alt: Předvolby > Tlačítko průvodce
   
-Default temp targets
+Výchozí nastavení dočasných cílů
 -----------------------------------------------------------
-* `Temp targets (TT) <../Usage/temptarget.html#temp-targets>`_ allow you to define change your blood glucose target for a certain time period.
-* With setting of default TT you can easily change your target for activity, eating soon etc.
-* Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+* `Dočasné cíle (DC) <../Usage/temptarget.html#temp-targets>`_ vám umožní nastavit na určitou dobu změněnou cílovou hodnotu glykémie.
+* S nastavením základních hodnot DC můžete jednodušeji měnit své cílové hodnoty glykémie pro aktivity, blížící se jídlo atd.
+* Dlouze stiskněte cíl v pravém horním rohu domácí obrazovky nebo použijte zaškrtávací políčka v dialogu Sacharidy po kliknutí na oranžové tlačítko Sacharidy na domovské obrazovce.
 
   .. image:: ../images/Pref2020_OV_DefaultTT.png
-    :alt: Preferences > Default temp targets
+    :alt: Nastavení > Výchozí dočasné cíle
   
-Fill/Prime standard insulin amounts
+Standardní množství inzulinu pro Plnění/Doplňování
 -----------------------------------------------------------
-* If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Usage/CPbefore26.html#pump>`_.
-* Pre-set values can be defined in this dialogue.
+* If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
+* Přednastavené hodnoty se dají měnit v tomto dialogu.
 
-Range for visualization
+Rozsah zobrazování
 -----------------------------------------------------------
-* Define which part of the graph on the home screen shall be you target range and be filled with green background.
+* Určuje, jaká část grafu na domácí obrazovce bude bude vaším cílovým rozsahem a bude podbarvena zeleně.
 
   .. image:: ../images/Pref2020_OV_Range2.png
-    :alt: Preferences > Range for visualization
+    :alt: Předvolby > Rozsah vizualizace
 
-Shorten tab titles
+Krátké názvy modulů
 -----------------------------------------------------------
-* See more tab titles on screen. 
-* For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
+* Umožňuje vidět víc názvů obrazovek na obrazovce najednou. 
+* Například název "OpenAPS AMA" bude zobrazen jako "OAPS" a "NS CLIENT" jako "NSCL" atd.
 
   .. image:: ../images/Pref2020_OV_Tabs.png
-    :alt: Preferences > Tabs
+    :alt: Předvolby > Karty
 
-Show notes field in treatments dialogs
+Zobrazovat kolonku poznámky v dialozích ošetření
 -----------------------------------------------------------
-* Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...) 
+* Přidává možnost doplňovat k záznamům o ošetření krátkou textovou poznámku v dialozích, kde se zadávají (Bolusová kalkulačka, Sacharidy, Inzulín...) 
 
   .. image:: ../images/Pref2020_OV_Notes.png
-    :alt: Preferences > Notes in treatment dialogs
+    :alt: Předvolby > Poznámky v dialogových oknech ošetření
   
 Stavové indikátory
 -----------------------------------------------------------
-* Status lights give a visual warning for 
+Stavové indikátory zobrazují vizuální varování pro 
       
-   * Cannula age
-   * Insulin age (days reservoir is used)
-   * Reservoir level (units)
-   * Sensor age
-   * Battery age
-   * Battery level (%)
+   * Stáří senzoru
+   * Sensor battery level for certain smart readers (see `screenshots page <../Getting-Started/Screenshots#sensor-level-battery>`_ for details).
+   * Stáří inzulínu (doba použití aktuálního zásobníku)
+   * Stav zásobníku (jednotky)
+   * Stáří kanyly
+   * Stáří baterie v pumpě
+   * Úroveň nabití baterie pumpy (%)
 
-* If threshold warning is exceeded, values will be shown in yellow.
-* If threshold critical is exceeded, values will be shown in red.
-* In versions prior to AAPS 2.7 settings for status lights had to be made in Nightscout settings.
+* Pokud dojde k dosažení prahové hodnoty, zobrazí se hodnoty žlutě.
+* Pokud dojde k dosažení kritické prahové hodnoty, hodnoty se zobrazí červeně.
+* Ve verzích předcházejících AAPS 2.7 muselo být nastavení stavových indikátorů provedeno v nastavení Nightscoutu.
 
   .. image:: ../images/Pref2020_OV_StatusLights2.png
-    :alt: Preferences > Status Lights
+    :alt: Předvolby > Stavové indikátory
 
-Advanced Settings (Overview)
+Rozšířená nastavení (přehled)
 -----------------------------------------------------------
-Deliver this part of bolus wizard result
+
+  .. image:: ../images/Pref2021_OV_Adv.png
+    :alt: Předvolby > Stavové indikátory
+
+Podat tuto část z výsledku kalkulace [%]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* General setting to deliver only part of bolus wizard result. 
-* Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. 
-* The percentage is shown in bolus wizard.
+* Obecné nastavení umožňující zvolit, že bude vydána jen určitá část z vypočteného bolusu. 
+* Použijete-li bolusovou kalkulačku, bude vydána pouze procentuální část (musí být mezi 10 a 100) z vypočítaného bolusu. 
+* Procentuální hodnota je zobrazena v kalkulačce.
+
+Poradce pro bolus
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+* If correction bolus is accepted **no carbs** will recorded.
+* An alarm will be started when glucose value is in good level to start eating.
+* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ again and enter the amount of carbs you want to eat.
+
+  .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
+    :alt: Bolus advisor message
 
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Option to enable superbolus in bolus wizard.
-* `Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes.
+* Volba pro povolení superbolusu v bolusové kalkulačce.
+* `Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ se používá jako prevence proti prudkému růstu glykémie po jídle, a spočívá ve "vypůjčení" bazálního inzulínu z následujících 2 hodin.
 
-Treatment safety
+Bezpečnostní omezení ošetření
 ===========================================================
-Patient age
+Věk pacienta
 -----------------------------------------------------------
-* Safety limits are set based on the age you select in this setting. 
-* If you start hitting these hard limits (like max bolus) it's time to move one step up. 
-* It's a bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). 
-* If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on `this page <../Usage/Open-APS-features.html>`_.
+* Bezpečnostní limity jsou nastaveny na základě věku, který jste zvolili v tomto nastavení. 
+* Pokud začnete narážet na pevně nastavené limity (jako například na maximální bolus), je čas posunout se o stupeň výš. 
+* Nastavení vyššího věku než je ve skutečnosti může vést k předávkování inzulínem při chybném nastavení množství inzulínu (například vynecháním desetinné čárky v dialogu). 
+* Chcete-li zjistit, jaké máte pevně nastavené bezpečnostní limity, podívejte se na popis Vámi používaného algoritmu `na této stránce <../Usage/Open-APS-features.html>`_.
 
-Max allowed bolus [U]
+Maximální povolený bolus [U]
 -----------------------------------------------------------
-* Defines maximum amount of bolus insulin that AAPS is allowed to deliver at once. 
-* This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. 
-* It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. 
-* This restriction is also applied to the results of the bolus calculator.
+* Určuje maximální velikost bolusu, jakou může AAPS poslat najednou. 
+* Nastavení slouží jako bezpečnostní limit pro zabránění odeslání příliš velkého bolusu vzhledem k množství zadaných sacharidů, nebo k ohlídání chyby uživatele. 
+* Doporučuje se nastavit ho na rozumnou hodnotu zhruba odpovídající maximálnímu bolusu, který jste kdy poslali na jídlo. 
+* Toto omezení se vztahuje i na výsledky bolusové kalkulačky.
 
-Max allowed carbs [g]
+Maximální povolené sacharidy [g]
 -----------------------------------------------------------
-* Defines the maximum amount of carbs that AAPS bolus calculator is allowed to dose for.
-* This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. 
-* It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+* Určuje maximální množství sacharidů, se kterým může bolusový kalkulátor AAPS počítat.
+* Nastavení slouží jako bezpečnostní limit pro zabránění odeslání příliš velkého bolusu vzhledem k množství zadaných sacharidů, nebo k ohlídání chyby uživatele. 
+* Je doporučeno nastavit limit na nějakou rozumnou hodnotu, která odpovídá maximálnímu množství sacharidů, které jste kdy v jídle snědli.
 
 Smyčka
 ===========================================================
-APS mode
+Typ smyčky
 -----------------------------------------------------------
-* Toggle between open and closed looping as well as low glucose suspend (LGS)
-* **Open looping** means TBR suggestions are made based on your data and appear as a notification. After manual confirmation the command to dose insulin will be transferred to pump.. Only if you use virtual pump you have to enter it manually.
-* **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.  
+* Přepíná mezi uzavřenou, otevřenou smyčkou i pozastavením při nízké glykémii (LGS)
+* **Otevřená smyčka** znamená, že návrhy dočasného bazálu jsou provedeny na základě vašich dat, a zobrazí se jako oznámení. Po manuálním potvrzení bude příkaz pro podání inzulinu odeslán do pumpy. Pouze v případě že máte nastavenou virtuální pumpu je nutné inzulín aplikovat ručně.
+* **Uzavřená smyčka** znamená, že dočasné bazály jsou automaticky, bez jakéhokoliv potvrzení z vaší strany, posílány přímo do pumpy.  
 * **Low glucose suspend** gives you the possibility to enter into Low Glucose Suspend without the need for the reverting an objective.
 
-Minimal request change [%]
+Minimální změna pro výzvu [%]
 -----------------------------------------------------------
-* When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. 
-* To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
-* This defines the relative change required to trigger a notification.
+* Při použití otevřené smyčky budete dostávat oznámení pokaždé, když AAPS doporučí úpravu bazální dávky. 
+* Ke snížení počtu oznámení můžete zadat buď širší rozsah cílové glykemie, nebo vyšší procento minimální změny pro výzvu.
+* Toto definuje relativní změnu, která je požadována pro spuštění oznámení.
 
 Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
 ===========================================================
@@ -242,33 +264,33 @@ OpenAPS AMA settings
 * Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. 
 * More details about the settings and Autosens can be found in the `OpenAPS docs <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`_.
 
-Max U/h a Temp Basal can be set to
+Max. U/h, které lze nastavit pro dočas. bazál
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. 
 * The value is measured in units per hour (U/h). 
-* It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. 
+* Doporučuje se nastavit toto na rozumnou hodnotu. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. 
 * For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
 * See also `detailed feature description <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>`_.
 
-Maximum basal IOB OpenAPS can deliver [U]
+Maximální bazální IOB [U]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. 
-* Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again. 
+* Maximální hodnota dodatečného bazálního inzulínu (v jednotkách), o který může smyčka navýšit Váš normální bazál. 
+* Jakmile je tato hodnota dosažena, AAPS zastaví přidávání dodatečného bazálu, dokud hodnota inzulínu v těle (IOB) opět neklesne pod tuto hodnotu. 
 * This value **does not consider bolus IOB**, only basal.
-* This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
+* Tato hodnota je počítána a monitorována nezávisle na vašem normálním bazálu. V úvahu je brán pouze dodatečný bazální inzulín převyšující normální bazál.
 
-When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia. This is an important step in order to:
+When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. Toto zabrání AndroidAPS v tom, aby přidal dodatečný bazální inzulín. Během této doby bude AndoidAPS pořád schopná omezit či vypnout Váš bazální inzulín, aby se pomohlo předejít hypoglykémii. To je důležitý krok pro:
 
-* Have a period of time to safely get used to the AAPS system and monitor how it works.
-* Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
-* See how AAPS limits your basal insulin to prevent hypoglycaemia.
+* získání dostatečného času na to, abyste naučili AndroidAPS ovládat a vysledovat, jak funguje.
+* perfektní vyladění nastavení Vašeho bazálního profilu a faktoru citlivosti na inzulín (ISF).
+* zjištění, jak AndroidAPS omezuje Váš bazální inzulín, aby se předešlo hypoglykémii.
 
-When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 3 to get a value of 1.5 U/h.
+Když se na to už budete cítit, můžete dovolit systému, aby začal přidávat bazální inzulín, a to navýšením hodnoty maximálního množství bazálního inzulínu v těle. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 3 to get a value of 1.5 U/h.
 
-* You can start conservatively with this value and increase it slowly over time. 
-* These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
+* Začněte tedy s touto hodnotou, a postupem času ji opatrně navyšujte. 
+* Toto jsou samozřejmě pouze návrhy; u každého člověka to je jiné. Možná zjistíte, že potřebujete méně nebo více, než je zde doporučeno. Vždy ale začněte opatrně, a přidávejte pomalu.
 
-**Note: As a safety feature, Max Basal IOB is hard-limited to 7u.**
+**Poznámka: Jako bezpečnostní prvek je u dospělého pacienta natvrdo nastaveno maximální bazální IOB na 7U.**
 
 Autosens
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -311,7 +333,7 @@ Advanced settings (OpenAPS SMB)
 * Normally you do not have to change the settings in this dialogue!
 * If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ and to understand what you are doing.
 
-Absorption settings
+Nastavení absorpce sacharidů
 ===========================================================
 
   .. image:: ../images/Pref2020_Absorption.png
@@ -321,7 +343,7 @@ min_5m_carbimpact
 -----------------------------------------------------------
 * The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed. 
 * The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB. 
-* At times when carb absorption can’t be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+* At times when carb absorption can’t be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. V podstatě jde o bezpečnostní pojistku.
 * To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. 
 * Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc. 
 * The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`_.
@@ -333,24 +355,24 @@ min_5m_carbimpact
   
 Maximum meal absorption time
 -----------------------------------------------------------
-* If you often eat high fat or protein meals you will need to increase your meal absorption time.
+* Pokud často jíte jídla s vysokým obsahem tuků nebo bílkovin, budete si muset nastavit delší čas absorpce jídla.
 
 Advanced settings - autosens ratio
 -----------------------------------------------------------
 * Define min. and max. `autosens <../Usage/Open-APS-features.html#autosens>`_ ratio.
 * Normally standard values (max. 1.2 and min. 0.7) should not be changed.
 
-Pump settings
+Nastavení pumpy
 ===========================================================
-The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`_.  Pair and set your pump up according to the pump related instructions:
+Tyto volby se budou lišit v závislosti na tom, který ovladač inzulínové pumpy jste vybrali v konfiguračním programu ' Konfigurace <../Configuration/Config-Buil-Builder.html#pump> ` _.  Spárujte a nastavte svou pumpu podle pokynů pro jednotlivé pumpy:
 
-* `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ 
-* `DanaRS Insulin Pump <../Configuration/DanaRS-Insulin-Pump.html>`_
-* `Accu Chek Combo Pump <../Configuration/Accu-Chek-Combo-Pump.html>`_
-* `Accu Chek Insight Pump <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
-* `Medtronic Pump <../Configuration/MedtronicPump.html>`_
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
+* `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `Accu Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
+* `Accu Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+* `Medtronic <../Configuration/MedtronicPump.html>`_
 
-If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+Používáte-li AndroidAPS pouze jako otevřenou smyčku, vyberte v nastavení Virtuální pumpu.
 
 NSClient
 ===========================================================
@@ -360,12 +382,12 @@ NSClient
 
 * Set your *Nightscout URL* (i.e. https://yourwebsitename.herokuapp.com) and the *API secret* (a 12 character password recorded in your Heroku variables).
 * This enables data to be read and written between both the Nightscout website and AndroidAPS.  
-* Double check for typos here if you are stuck in Objective 1.
+* Pokud jste uvízli v cíli 1, prověřte možné překlepy.
 * **Make sure that the URL is WITHOUT /api/v1/ at the end.**
 * *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS). 
 * If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ are uploaded to your Nightscout site.
 
-Connection settings
+Nastavení připojení
 -----------------------------------------------------------
 
   .. image:: ../images/ConfBuild_ConnectionSettings.png
@@ -374,9 +396,9 @@ Connection settings
 * Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
 * If you want to use only a specific WiFi network you can enter its WiFi SSID. 
 * Multiple SSIDs can be separated by semicolon. 
-* To delete all SSIDs enter a blank space in the field.
+* Chcete-li smazat všechny SSID, nechte políčko prázdné.
 
-Alarm options
+Nastavení alarmů
 -----------------------------------------------------------
 * Alarm options allows you to select which default Nightscout alarms to use through the app.  
 * For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
@@ -406,13 +428,13 @@ SMS komunikátor
 
 Automatizace
 ===========================================================
-Select which location service shall be used:
+Vyberte, jaká služba určování polohy se použije:
 
-* Use passive location: AAPS only takes locations if other apps are requesting it
-* Use network location: Location of your Wi-Fi
+* Používat pasivní polohu: AAPS zjistí polohu pouze v případě, že ji budou požadovat ostatní aplikace
+* Používat zjištění polohy podle sítě: Poloha podle vaší Wi-Fi sítě
 * Use GPS location (Attention! May cause excessive battery drain!)
 
-Local alerts
+Místní výstrahy
 ===========================================================
 
   .. image:: ../images/Pref2020_LocalAlerts.png
@@ -439,7 +461,7 @@ Maintenance settings
 
 Open Humans
 ===========================================================
-* You can help the community by donating your data to research projects! Details are described on the `Open Humans page <../Configuration/OpenHumans.html>`_.
+* Můžete pomoci komunitě tím, že daruje vaše data do výzkumných projektů! Details are described on the `Open Humans page <../Configuration/OpenHumans.html>`_.
 * In Preferences you can define when data shall be uploaded
 
    * only if connected to WiFi

@@ -53,7 +53,7 @@ Por favor, ten paciencia al instalar Android Studio, ya que el software descarga
 
 ### Comprobar firmware del smartphone
 
-* Menú > Valores > Teléfono info > Información de software: Al menos "Android-Versión 7.0" (se ha probado con éxito en Android versión 8.0.0 Oreo-Samsung Experience Versión 9.0) 
+* Menu > Settings > Phone info > Software info: At least "Android-Version 8.0" (successfully tested up to Android version 8.0.0 Oreo - Samsung Experience Version 9.0) 
 * Para actualizar el firmware: menú > Preferencias > actualización de software
 
 ### Permitir la instalación de aplicaciones de fuentes desconocidas

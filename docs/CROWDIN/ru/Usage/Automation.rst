@@ -27,6 +27,10 @@ So make sure to deactivate automation rules during these occasions if neccessary
 .. изображение:: ../images/Automation_ActivateDeactivate.png
   :alt: Активировать и деактивировать правило автоматизации
 
+Where to find Automation
+--------------------------------------------------
+Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+
 Общие настройки
 --------------------------------------------------
 Есть некоторые ограничения:
@@ -92,7 +96,7 @@ So make sure to deactivate automation rules during these occasions if neccessary
   
 Удаление правил автоматизации
 -----
-Чтобы удалить правило автоматизации, просто смахните его влево или вправо.
+To delete an automation rule click on trash icon.
 
 .. изображение:: ../images/Automation_Deletet.png
   :alt: Выбор правила автоматизации

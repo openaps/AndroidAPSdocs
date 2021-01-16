@@ -1,4 +1,4 @@
-Bewaking op afstand
+Volgen op afstand
 **************************************************
 
 .. image:: ../images/KidsMonitoring.png
@@ -11,7 +11,7 @@ Functies
 * De pomp van het kind wordt aangestuurd door de AndroidAPS app op de telefoon van het kind.
 * Ouders kunnen op afstand volgen en alle relevante gegevens bekijken, zoals bloedglucose, koolhydraten aan boord, insuline aan boord etc. door middel van de ** NSClient app** op hun telefoon. De instellingen in zowel AndroidAPS en in NSClient moeten exact hetzelfde zijn.
 * Ouders kunnen glucose alarmen op hun telefoon ontvangen via de **xDrip+ app in 'follower' modus** op hun telefoon.
-* Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_ secured by two-factor authentication.
+* Besturing van AndroidAPS op afstand, met behulp van `SMS Commando's <../Children/SMS-Commands.html>`_ beveiligd door tweestaps authenticatie.
 * Profiel wissels en tijdelijke streefdoelen kunnen op afstand worden ingesteld via de NSClient app.
 
 Hulpmiddelen en apps voor controle op afstand
@@ -20,11 +20,11 @@ Hulpmiddelen en apps voor controle op afstand
 *	NSClient app
 * Dexcom follow als je de originele Dexcom app gebruikt (alleen BG waarden)
 * `xDrip+ <../Configuration/xdrip.html>`_ in 'follow'modus (voornamelijk BG waarden en **alarmen**)
-*	`Sugarmate <https://sugarmate.io/>`_ or `Spike <https://spike-app.com/>`_ on iOS (mainly BG values and **alarms**)
+*    `Sugarmate <https://sugarmate.io/>`_ of `Spike <https://spike-app.com/>`_ op iOS (voornamelijk voor BG waarden en **alarmen**)
 
 Belangrijke keuzes vooraf
 ==================================================
-* Het instellen van de juiste ` behandelingsfactoren <../Getting-Started/FAQ.html#how-begin> ` _ (basaal, DIA, ISF...) is moeilijk bij kinderen, vooral wanneer er groeihormonen in het spel zijn. 
+* Het instellen van de juiste `behandelingsfactoren <../Getting-Started/FAQ.html#hoe-begin-ik>`_ (basaal, DIA, ISF...) is moeilijk bij kinderen, vooral wanneer er groeihormonen in het spel zijn. 
 * De instellingen in zowel AndroidAPS en in NSClient moeten exact hetzelfde zijn.
 * Houd rekening met tijdsvertraging tussen master en volger. Dit vanwege de tijd die nodig is voor zowel up- als download, en het feit dat de hoofd AAPS telefoon even niet zal uploaden tijdens het uitvoeren van een loop-berekening.
 * Neem dus de tijd om de loop correct in te stellen en in "real life" met jouw kind binnen handbereik te testen, voordat je begint met het op afstand monitoren en behandelen. Schoolvakanties kunnen daar een goed moment voor zijn.

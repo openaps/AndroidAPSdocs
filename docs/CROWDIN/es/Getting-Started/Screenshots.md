@@ -19,7 +19,8 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 ![Duración restante del cambio de perfil](../images/Home2020_ProfileSwitch.png)
 
 * El perfil actual se muestra en la barra izquierda.
-* Mantenga presionada la barra de perfil para ver los detalles del perfil o para [ cambiar entre diferentes perfiles ](../Usage/Profiles#profile-switch).
+* Short press profile bar to view profile details
+* Long press profile bar to [switch between different profiles](../Usage/Profiles#profile-switch).
 * Si el cambio de perfil se realizó con la duración restante, el tiempo en minutos se muestra entre paréntesis.
 
 #### Objetivo
@@ -27,7 +28,7 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 ![Duración restante objetivo temporal](../images/Home2020_TT.png)
 
 * El nivel actual de glucosa en la sangre se muestra en la barra derecha.
-* Mantenga presionada la barra de objetivo para establecer un [ objetivo temporal ](../Usage/temptarget.md).
+* Short press target bar to set a [temporary target](../Usage/temptarget.md).
 * Si se establece un objetivo temporal, la barra se vuelve amarilla y el tiempo restante en minutos se muestra entre paréntesis.
 
 #### Visualización de ajuste de objetivo dinámico
@@ -66,9 +67,11 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
    * Círculo naranja = superbolo en ejecución-el tiempo restante se muestra debajo del icono
    * círculo azul con línea punteada = bucle abierto
 
-* Mantenga pulsado el icono para abrir el menú para desactivar, suspender, volver a activar el bucle o desconectar / volver a conectar la bomba.
+* Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
    
-   ![Menú de estado de bucle](../images/Home2020_LoopStatusMenu.png)
+   * If short press on Loop icon, a validation is required after selection in Loop Dialog
+   
+   ![Menú de estado de bucle](../images/Home2020_Loop_Dialog.png)
 
 ### Sección D - IOB, COB, BR y AS
 
@@ -195,6 +198,7 @@ Por lo general, su verdadera curva de glucosa termina en el medio de estas líne
 * **VERDE** barras que muestran un BG mayor al que el algoritmo esperaba. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
 * **RED ** barras que muestran que BG es menor al que el algoritmo esperaba. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
 * **YELLOW** bars show a deviation due to UAM.
+* **BLACK** bars show small deviations not taken into account for sensitivity
 
 #### Sensibilidad
 
@@ -239,7 +243,7 @@ Por lo general, su verdadera curva de glucosa termina en el medio de estas líne
 
 #### Calculadora
 
-* See [details below](../Configuration/Screenhots#bolus-wizard)
+* See Bolus Wizard [section below](../Configuration/Screenhots#bolus-wizard)
 
 #### Calibrations
 
@@ -259,7 +263,7 @@ Por lo general, su verdadera curva de glucosa termina en el medio de estas líne
 
 ## Bolus Wizard
 
-![Asistente Bolus](../images/Home2020_BolusWizard.png)
+![Asistente Bolus](../images/Home2020_BolusWizard_v2.png)
 
 Cuando usted quiere hacer un bolo para comida, aquí es de donde normalmente lo hará.
 
@@ -270,63 +274,126 @@ Cuando usted quiere hacer un bolo para comida, aquí es de donde normalmente lo 
 * The CORR field is if you want to modify the end dosage for some reason.
 * The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Puede poner un número negativo en este campo si está colocando un bolo para los carbohidratos ya ingeridos.
 
+#### Eating reminder
+
+* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
+   
+   ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
+
 ### Section J
 
-* SUPER BOLO es el lugar en el que se añade la insulina basal para las próximas dos horas junto al bolo inmediato y basal temporal de cero durante las dos horas siguientes para recuperar la insulina adicional. 
-* La idea es entregar la insulina antes y esperadamente reducir los picos.
+* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable [superbolus](../Configuration/Preferences.html#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences.html#overview).
+* La idea es entregar la insulina antes y esperar que reduzca los picos.
 * For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
 ### Section K
 
 * Muestra el bolo calculado. 
-* Si la cantidad de insulina a bordo sobrepasa ya el bolo calculado, entonces sólo se mostrará la cantidad de carbohidratos que todavía se necesitan.
+* Si la cantidad de insulina a bordo sobrepasa ya el bolo calculado, entonces sólo se mostrará la cantidad de carbohidratos faltantes.
 * Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#ns-client).
 
 ### Section L
 
 * Details of wizard's bolus calculation.
-* Puede anular la selección de cualquier que no desee incluir, pero normalmente no es algo que realizaría.
+* Puede anular la selección de cualquier valo que no desee incluir, pero normalmente es algo que no querá hacer.
 * For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
 
 #### Combinaciones de COB e IOB y lo que significan
 
 * For safety reasons IOB boxed cannot be unticked when COB box is ticked as you might run the risk of too much insulin as AAPS is not accounting for what’s already given.
-* Si marca COB e IOB, los carbohidratos no absorbidos que aún no están cubiertos con insulina + toda la insulina que ha sido suministrada como Basal temporal o SMB serán tenidos en cuenta.
-* Si se marca IOB sin COB, AAPS tiene en cuenta la insulina ya entregada, pero no lo cubrirá frente a los carbohidratos que aún ESTÁN por absorber. Esto lanza un aviso de 'carbohidratos necesarios '.
-* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. De esta manera se añaden los nuevos carbohidratos ya que la comida principal no necesariamente esta absorbida, por lo que la IOB no coincide con los COB después del bolo de comida.
+* Si marca COB e IOB, los carbohidratos no absorbidos que aún no están cubiertos con insulina + toda la insulina que ha sido suministrada como basal temporal o SMB serán tenidos en cuenta.
+* Si se marca IOB sin COB, AAPS tiene en cuenta la insulina ya entregada, pero no lo cubrirá frente a los carbohidratos que aún estan por absorber. Esto da lugar a un aviso de 'carbohidratos faltantes'.
+* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. De esta manera se añaden solo los nuevos carbohidratos ya que la comida principal no necesariamente está absorbida, por lo que la IOB no coincide con los COB después del bolo de comida.
 
 #### Detección de COB incorrecta
 
 ![Absorción lenta de carbohidratos](../images/Calculator_SlowCarbAbsorbtion.png)
 
 * Si ve el aviso anterior después de utilizar el asistente de bolos, AndroidAPS ha detectado que el valor COB calculado puede ser incorrecto. 
-* Así que si quieres administrar un bolo de nuevo después de una comida previa con COB, debes ser consciente de una posible sobredosis! 
-* Para obtener detalles, consulte las sugerencias sobre [página de cálculo de COB](../Usage/COB-calculation#detection-of-wrong-cob-values).
+* Así que si quieres dar un bolo de nuevo después de una comida previa con COB, debes ser consciente de una posible sobredosis! 
+* Para más informaciónes, consulte las sugerencias sobre [página de cálculo de COB](../Usage/COB-calculation#detection-of-wrong-cob-values).
+
+## Action tab
+
+![Pestaña de acción](../images/Home2021_Action.png)
+
+### Actions - section M
+
+* Button [profile switch](../Usage/Profiles#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
+* Button [temporary target](../Usage/temptarget#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
+* Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
+* Even though [extended boluses](../Usage/Extended-Carbs#id1) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+   
+   * This option is only available for Dana RS and Insight pumps. 
+   * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
+   * Make sure to read the [details](../Usage/Extended-Carbs#id1) before using this option.
+
+### Careporal - section N
+
+* Displays information on
+   
+   * sensor age & level (battery percentage)
+   * insulin age & level (units)
+   * edad cánula
+   * pump battery age & level (percentage
+
+* Less information will be shown if [low resolution skin](../Configuration/Preferences#skin) is used.
+
+#### Sensor level (battery)
+
+* Needs xDrip+ nightly build Dec. 10, 2020 or newer.
+* Works for CGM with additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level information to xDrip+.)
+* Thresholds can be set in [preferences](../Configuration/Preferences#status-lights).
+* If sensor level is the same as phone battery level you xDrip+ version is probably too old and needs an update.
+   
+   ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
+
+### Careporal - section O
+
+* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
+* Prime/Fill allows you to record pump site and insulin cartridge change.
+* Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+
+### Tools - section P
+
+#### History Browser
+
+* Allows you to ride back in AAPS hsitory.
+
+#### DDT
+
+* Total daily dose = bolus + basal per day
+* Algunos médicos usan -especialmente para los recién iniciados en las bombas- una relación basal-bolo de 50:50. 
+* Por lo tanto, la proporción se calcula como TDD / 2 * TBB (Total base basal = suma de la tasa basal en 24 horas). 
+* Otros prefieren un rango de 32% a 37% de TDD para TBB. 
+* Al igual que la mayoría de estas reglas empíricas, su validez real es limitada. Nota: ¡Tu diabetes puede variar!
+
+![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
 
 ## Perfil de Insulina
 
 ![Perfil de Insulina](../images/Screenshot_insulin_profile.png)
 
 * This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
-* La línea MORADA muestra cuánta insulina queda después de que se ha inyectado mientras declina con el tiempo y la línea AZUL muestra cuanta activa hay.
+* La línea PURPURA muestra cuánta insulina queda después de que se ha inyectado mientras declina con el tiempo y la línea AZUL muestra su actividad.
 * The important thing to note is that the decay has a long tail. 
-* Si ha utilizado la bomba en modo manual, probablemente se ha utilizado asumiendo que la insulina decae durante unas 3,5 horas. 
-* Sin embargo, cuando se está usando el bucle cerrado el tiempo la actividad de la insulina al final importa mucho como los cálculos son mucho más precisos y estas pequeñas cantidades se suman cuando son sometidas a los cálculos recursivos en el algoritmo AndroidAPS.
+* Si ha estado inyectando manualmente, probablemente se ha asumido que la insulina decae durante unas 3,5 horas. 
+* Sin embargo, cuando se está usando el bucle cerrado el tiempo de cola importa como los cálculos son mucho más precisos y estas pequeñas cantidades se suman cuando son sometidas a los cálculos recursivos en el algoritmo AndroidAPS.
 
 Para una discusión más detallada sobre los diferentes tipos de insulina, sus perfiles de actividad y por qué todos estos asuntos importan puede leer un artículo aquí en [Comprender las nuevas curvas de IOB basadas en las Curvas de Actividad Exponencial](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-Y puede leer un artículo excelente acerca de esto aquí: [Por qué nos equivocamos regularmente en la duración de la acción de insulina (DIA) duraciónes que usamos, y por qué importa…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+Y puede leer un artículo excelente acerca de esto aquí: [Por qué nos equivocamos regularmente en la duración de la acción de insulina (DIA) que usamos, y por qué importa…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
 And even more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
-## Estado de Infusora
+## Estado de infusora
 
-![Estado de Infusora](../images/Screenshot_PumpStatus.png)
+![Estado de infusora](../images/Screenshot_PumpStatus.png)
 
 * Different information on pump status. Displayed information depends on your pump model.
 * See [pumps page](../Hardware/pumps.rst) for details.
 
-## Portal de Atención (Care Portal)
+## Portal de atención (Care Portal)
 
 Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
 
@@ -337,11 +404,11 @@ Careportal replicated the functions you will find on your Nightscout screen unde
 * If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
 * Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
 
-### Corrección de Carbohidratos
+### Corrección de carbohidratos
 
 ![Tratamiento en 1 o 2 líneas](../images/Treatment_1or2_lines.png)
 
-La pestaña de tratamiento se puede utilizar para corregir las entradas de HC erróneas (es decir, los carbohidratos sobrantes o subestimados).
+La pestaña de tratamiento se puede utilizar para corregir las entradas de Hc defectuosas (es decir, los carbohidratos sobrantes o subestimados).
 
 1. Compruebe y recuerde el COB y el IOB actuales en la pantalla de inicio.
 2. Dependiendo de la bomba en la pestaña de tratamiento, los carbohidratos pueden mostrarse junto con la insulina en una sola línea o como una entrada separada (por ejemplo, en la Dana RS).
@@ -370,7 +437,7 @@ La pestaña de tratamiento se puede utilizar para corregir las entradas de HC er
    * DIA (Duration of Insulin Action)
    * IC or I:C: Insulin to Carb ratio
    * ISF: Insulin Sensitivity Factor
-   * Tasa Basal
+   * Tasa basal
    * Target: Blood glucose level that you want AAPS to be aiming for
 
 * You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).

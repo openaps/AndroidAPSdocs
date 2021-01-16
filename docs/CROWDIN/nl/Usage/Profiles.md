@@ -4,7 +4,7 @@ Bij het in gebruik nemen van AndroidAPS, moet je een profiel selecteren en ook e
 
 Wanneer je een Profiel wissel doet, dan maakt AAPS een momentopname van jouw profiel, met een startdatum en een tijdsduur en gebruikt dit profiel binnen deze door jou gespecificeerde periode. Een tijdsduur van nul betekent 'oneindig lang'. Dan wordt dat profiel gebruikt totdat je een volgende Profiel wissel doet. Je hoeft overigens geen nul in te vullen, het vakje leeg laten kan ook.
 
-Om een Profiel wissel te doen, houd de de naam van jouw profiel ("Aktuell (Rad)" in de foto hieronder) lang ingedrukt en selecteer Profiel wissel.
+Om een Profiel wissel te doen, houd de de naam van jouw profiel ("Tuned 03/11" in de foto hieronder) lang ingedrukt.
 
 ![Profiel wissel](../images/ProfileSwitch_HowTo.png)
 

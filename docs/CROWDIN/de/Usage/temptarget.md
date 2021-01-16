@@ -6,9 +6,12 @@ Mit temporären Zielen (oder kurz - aus dem Englischen - TT von temp Targets) ka
 
 ![Standards für temporäre Ziele festlegen](../images/TempTarget_Default.png)
 
-Vordefinierte temporäre Ziele kannst du auswählen und aktivieren, indem du entweder lange auf das Zielbereich-Feld auf der "Home"-Seite drückst oder auf den orangen "Kohlenhydrate"-Button. Um manuell ein [ "Benutzerdefiniertes Temporäres Ziel" ](../Usage/temptarget#benutzerdefiniertes-temp-target) (BG-Wert und/oder Dauer) zu setzen, verwende "Benutzerdefiniert", nachdem Du Dein Ziel in der oberen rechten Ecke lang gedrückt hast oder verwende die Schaltfläche "Temporäres Ziel" auf der Registerkarte (Tab) ["Aktionen"](../Configuration/Config-Builder#aktionen).
+Drücke kurz auf die Schaltfläche mit Deinem Zielwert/-bereich, um eines der vordefinierten temporären Ziele zu verwenden. Im TT Dialog kannst Du 'Bald essen', 'Aktivität' oder 'Hypo' auswählen. Alternativ kannst Du die entsprechenden Ziele auch bei der Eingabe von Kohlenhydraten (orangener Kohlenhydrate-Button unten auf dem Startbildschirm) aktivieren. Um einen [“benutzerdefiniertes TT”](../Usage/temptarget#benutzerdefiniertes-temp-target) (BZ-Wert und/oder Dauer) zu setzen, drücke kurz auf die Schaltfläche mit dem Zielwert/-bereich oder verwende den Button 'Temporäres Ziel' im [Aktionen-Tab (AKT) / Menü](../Configuration/Config-Builder#aktionen).
 
 ![Temporäres Ziel (TT) setzen](../images/TempTarget_Set2.png)
+
+- Wenn Du die vordefinierten Werte geringfügig anpassen willst, kannst Du lange auf den 'Bald essen'-, 'Aktivität'- oder 'Hypo'-Button drücken und dann Zielwert und Dauer verändern.
+- Wenn gerade ein temporäres Ziel aktiv ist, wird zusätzlich ein Button 'Abbrechen' angezeigt.
 
 ## Hypo Temp-Target
 
@@ -35,6 +38,6 @@ Für Fortgeschrittene, [Ziel (objective) 10](../Usage/Objectives#objective-10-en
 
 ## Benutzerdefiniertes Temp-Target
 
-Manchmal benötigst du ein temporäres Ziel, das von den Standard-Tt abweicht. Dieses setzt du, indem du entweder lang auf den Zielwert oben rechts auf dem Startbildschirm drückst oder auf dem "Aktionen" Tab.
+Manchmal benötigst du ein temporäres Ziel, das von den Standard-TT abweicht. Dieses setzt du, indem du entweder kurz auf den Zielwert oben rechts auf dem Startbildschirm drückst oder auf dem "Aktionen" Tab.
 
 ![Temporäres Ziel durch Registerkarte 'Aktion' festlegen](../images/TempTarget_ActionTab.png)

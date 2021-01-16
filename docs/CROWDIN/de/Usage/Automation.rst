@@ -27,6 +27,10 @@ Schalte daher ggf. die Automation-Regeln aus während Du den Loop deaktiviert ha
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Automation Regeln ein- und ausschalten
 
+Automatisierung aufrufen
+--------------------------------------------------
+Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+
 Allgemein
 --------------------------------------------------
 Es gibt ein paar Einschränkungen:
@@ -92,7 +96,7 @@ Zum Sortieren von Automation-Regeln klicke und halte die Schaltfläche mit den v
   
 Automation-Regeln löschen
 -----
-Zum Löschen die Regel einfach nach links oder rechts wegwischen.
+Klicke auf das Papierkorbsymbol, um eine Automatisierungsregel zu löschen.
 
 .. image:: ../images/Automation_Delete.png
   :alt: Automation-Regeln löschen

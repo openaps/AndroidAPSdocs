@@ -27,6 +27,10 @@ Todėl, jei reikia, išjunkite automatizavimo taisykles, kai išjungiate ciklą.
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Įjungti ir išjungti automatizavimo taisyklę
 
+Where to find Automation
+--------------------------------------------------
+Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+
 Bendrieji
 --------------------------------------------------
 Yra kai kurie apribojimai:
@@ -92,7 +96,7 @@ Norint rūšiuoti automatizavimo taisykles, paspauskite ir palaikykite keturių 
   
 Ištrinti automatizavimo taisykles
 -----
-Norėdami ištrinti automatizavimo taisyklę, tiesiog braukite į kairę arba į dešinę.
+To delete an automation rule click on trash icon.
 
 .. image:: ../images/Automation_Delete.png
   :alt: Ištrinti automatizavimo taisyklę

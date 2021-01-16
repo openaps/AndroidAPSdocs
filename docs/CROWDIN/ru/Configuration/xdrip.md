@@ -338,7 +338,12 @@
    
    ![xDrip+ настройки Libre Bluetooth 2](../images/xDrip_Libre_BTSettings2.png)
 
-### Подключите трансмиттер Libre и запустите сенсор
+### Libre smart reader battery level
+
+* Battery level of smart readers such as MiaoMiao 2 can be displayed in AAPS.
+* Details can be found on [screenshots page](../Getting-Started/Screenshots#sensor-level-battery).
+
+### Connect Libre Transmitter & start sensor
 
 ![xDrip+ запуск трансмиттера Libre & Сенсор 1](../images/xDrip_Libre_Transmitter01.png)
 

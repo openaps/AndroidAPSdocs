@@ -35,7 +35,8 @@ SGLT-2 ингибиторы, которые также называются гл
 
 Телефон
 --------------------------------------------------
-You need an Android smartphone with Google Android 7.0 or above. Так что если вы думаете о новом телефоне, рекомендуем хотя бы Android 8., но оптимально Android 9 или 10.
+The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
+Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>_`
 
 Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
@@ -52,6 +53,7 @@ AndroidAPS **на данный момент** работает с
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - `некоторые старые помпы Medtronic <./Configuration/MedtronicPump.html>`_ начиная с [предстоящей[ версии 2.4 (дополнительно необходимо: RileyLink/Gnarl аппаратное обеспечение, телефон на Android с чипом Bluetooth LE / BLE-chipset)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
 
 **Другие помпы** которые потенциально могут работать с AndroidAPS перечислены на `Будущие (возможные) помпы <../Getting-Started/Future-possible-Pump-Drivers.html>`_ странице.
 
@@ -85,7 +87,7 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 
 Nightscout
 --------------------------------------------------
-Nightscout - веб-приложение с открытым исходным кодом, которое может регистрировать/отображать данные мониторинга и AndroidAPS и создавать отчеты. Вы можете найти больше информации на сайте проекта Nightscout <http://www.nightscout.info/>`_. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
+Nightscout - веб-приложение с открытым исходным кодом, которое может регистрировать/отображать данные мониторинга и AndroidAPS и создавать отчеты. You can find more information on the `website of the Nightscout project <http://nightscout.github.io/>`_. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
 
 Nightscout не зависит от других модулей. Он понадобится для выполнения цели 1.
 

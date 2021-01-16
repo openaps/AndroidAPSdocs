@@ -19,7 +19,8 @@ This is the first screen you will come across when you open AndroidAPS and it co
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
 * Current profile is displayed in the left bar.
-* Long press profile bar to view profile details or to [switch between different profiles](../Usage/Profiles#profile-switch).
+* Short press profile bar to view profile details
+* Long press profile bar to [switch between different profiles](../Usage/Profiles#profile-switch).
 * If profile switch was made with duration remaining time in minutes is shown in brackets.
 
 #### Target
@@ -27,7 +28,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
 ![Temp target remaining duration](../images/Home2020_TT.png)
 
 * Current target blood glucose level is displayed in the right bar.
-* Long press target bar to set a [temporary target](../Usage/temptarget.md).
+* Short press target bar to set a [temporary target](../Usage/temptarget.md).
 * If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
 
 #### Visualization of Dynamic target adjustment
@@ -66,9 +67,11 @@ This is the first screen you will come across when you open AndroidAPS and it co
    * Orange circle = super bolus running - remaining time is shown below icon
    * blue circle with dotted line = open loop
 
-* Long press the icon to open the menu to disable, suspend, re enable loop or disconnect / reconnect pump.
+* Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
    
-   ![Loop status menu](../images/Home2020_LoopStatusMenu.png)
+   * If short press on Loop icon, a validation is required after selection in Loop Dialog
+   
+   ![Loop status menu](../images/Home2020_Loop_Dialog.png)
 
 ### Section D - IOB, COB, BR and AS
 
@@ -195,6 +198,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * **GREEN** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
 * **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
 * **YELLOW** bars show a deviation due to UAM.
+* **BLACK** bars show small deviations not taken into account for sensitivity
 
 #### Sensitivity
 
@@ -239,7 +243,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Calculadora
 
-* See [details below](../Configuration/Screenhots#bolus-wizard)
+* See Bolus Wizard [section below](../Configuration/Screenhots#bolus-wizard)
 
 #### Calibrations
 
@@ -259,7 +263,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ## Bolus Wizard
 
-![Bolus wizard](../images/Home2020_BolusWizard.png)
+![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
 
 When you want to make a meal bolus this is where you will normally make it from.
 
@@ -270,9 +274,15 @@ When you want to make a meal bolus this is where you will normally make it from.
 * The CORR field is if you want to modify the end dosage for some reason.
 * The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
 
+#### Eating reminder
+
+* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
+   
+   ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
+
 ### Section J
 
-* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. 
+* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable [superbolus](../Configuration/Preferences.html#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences.html#overview).
 * The idea is to deliver the insulin sooner and hopefully reduce spikes.
 * For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -303,9 +313,66 @@ When you want to make a meal bolus this is where you will normally make it from.
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
 * For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
-## Perfil Insulina
+## Action tab
 
-![Perfil Insulina](../images/Screenshot_insulin_profile.png)
+![Actions tab](../images/Home2021_Action.png)
+
+### Actions - section M
+
+* Button [profile switch](../Usage/Profiles#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
+* Button [temporary target](../Usage/temptarget#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
+* Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
+* Even though [extended boluses](../Usage/Extended-Carbs#id1) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+   
+   * This option is only available for Dana RS and Insight pumps. 
+   * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
+   * Make sure to read the [details](../Usage/Extended-Carbs#id1) before using this option.
+
+### Careporal - section N
+
+* Displays information on
+   
+   * sensor age & level (battery percentage)
+   * insulin age & level (units)
+   * canula age
+   * pump battery age & level (percentage
+
+* Less information will be shown if [low resolution skin](../Configuration/Preferences#skin) is used.
+
+#### Sensor level (battery)
+
+* Needs xDrip+ nightly build Dec. 10, 2020 or newer.
+* Works for CGM with additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level information to xDrip+.)
+* Thresholds can be set in [preferences](../Configuration/Preferences#status-lights).
+* If sensor level is the same as phone battery level you xDrip+ version is probably too old and needs an update.
+   
+   ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
+
+### Careporal - section O
+
+* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
+* Prime/Fill allows you to record pump site and insulin cartridge change.
+* Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+
+### Tools - section P
+
+#### History Browser
+
+* Allows you to ride back in AAPS hsitory.
+
+#### TDD
+
+* Total daily dose = bolus + basal per day
+* Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
+* Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 
+* Others prefer range of 32% to 37% of TDD for TBB. 
+* Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+
+![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
+
+## Insulin Profile
+
+![Insulin Profile](../images/Screenshot_insulin_profile.png)
 
 * This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
 * The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
@@ -319,9 +386,9 @@ And you can read an excellent blog article about it here: [Why we are regularly 
 
 And even more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
-## Estado da Bomba
+## Pump Status
 
-![Estado da Bomba](../images/Screenshot_PumpStatus.png)
+![Pump Status](../images/Screenshot_PumpStatus.png)
 
 * Different information on pump status. Displayed information depends on your pump model.
 * See [pumps page](../Hardware/pumps.rst) for details.

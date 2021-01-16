@@ -338,7 +338,12 @@ Consulte los registros de xDrip+ si xDrip+ inicia el conteo de "Duración: 1 min
    
    ![xDrip+ Libre Configuración 2 de Bluetooth](../images/xDrip_Libre_BTSettings2.png)
 
-### Conectar el transmisor de Libre & iniciar sensor
+### Libre smart reader battery level
+
+* Battery level of smart readers such as MiaoMiao 2 can be displayed in AAPS.
+* Details can be found on [screenshots page](../Getting-Started/Screenshots#sensor-level-battery).
+
+### Connect Libre Transmitter & start sensor
 
 ![xDrip+ iniciar transmisor Libre & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 

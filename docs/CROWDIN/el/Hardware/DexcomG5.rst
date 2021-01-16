@@ -3,8 +3,8 @@ Dexcom G5
 Εάν χρησιμοποιείτε το G5 με xdrip+
 ==================================================
 * Εάν δεν έχετε ήδη ρυθμίσει, κάντε λήψη του `xdrip <https://github.com/NightscoutFoundation/xDrip>` και ακολουθήστε τις οδηγίες στο nightcout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_.
-* Στο xdrip, μεταβείτε στις Ρυθμίσεις> Συμβατότητα Interapp> Δυνατότητα τοπικής μετάδοσης δεδομένων και επιλέξτε ΕΝΕΡΓΟΠΟΊΗΣΗ.
-* Στο xdrip πηγαίνετε στο Ρυθμίσεις> Συμβατότητα Interapp> Αποδοχή θεραπειών και επιλέξτε OFF.
+* In xdrip go to Settings > Inter-app settings > Broadcast Data Locally and select ON.
+* In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
 * Εάν θέλετε να μπορείτε να χρησιμοποιήσετε το AndroidAPS για τη βαθμονόμηση, στη συνέχεια στο xdrip μεταβείτε στις Ρυθμίσεις> Συμβατότητα Interapp> Αποδοχή βαθμονομίσεων και επιλέξτε ΕΝΕΡΓΟΠΟΊΗΣΗ.  Ενδέχεται επίσης να θέλετε να ελέγξετε τις επιλογές στις Ρυθμίσεις> Λιγότερες κοινές ρυθμίσεις> Ρυθμίσεις βελτιωμένης βαθμονόμησης.
 * Επιλέξτε xdrip στο Configbuilder ( είναι ρύθμιση στο androidAPS).
 Αν το AAPS δεν λαμβάνει τιμές BG όταν το τηλέφωνο βρίσκεται σε κατάσταση λειτουργίας αεροπλάνου, χρησιμοποιήστε Προσδιορισμός δέκτη όπως περιγράφεται στη[ σελίδα ρυθμίσεων xDrip](../Configuration/xdrip.md).

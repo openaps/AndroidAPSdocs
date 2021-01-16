@@ -8,7 +8,7 @@
 * In versions prior to AAPS 2.7 user had to choose between 8 or 24 hours manually.
 * From AAPS 2.7 on Autosens in AAPS will switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
 * If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
-* Changing a cannula or changing a profile will reset Autosens ratio back to 0%.
+* Changing a cannula or changing a profile will reset Autosens ratio back to 100%.
 * Autosens adjusts your basal, I:C and ISF for you (i.e.: mimicking what a Profile shift does).
 * If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
 
@@ -47,9 +47,12 @@ But you cannot choose any value. AAPS limits the value as a 'hard limit' accordi
 AndroidAPS limits the value as follows:
 
 * Child: 2
-* Adolescente: 5
+* Teenager: 5
 * Adult: 10
 * Insulin-resistant adult: 12
+* Pregnant: 25
+
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
 
 ### Maximum total IOB OpenAPS can’t go over (OpenAPS "max-iob")
 
@@ -60,12 +63,15 @@ Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In
     maxIOB = average mealbolus + 3x max daily basal
     
 
-Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in AMA.
+Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features.html#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 * Child: 3
-* Teenage: 7
+* Teenager: 7
 * Adult: 12
 * Insulin resistant adult: 25
+* Pregnant: 40
+
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
 
 See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
@@ -154,9 +160,12 @@ You cannot chose any value: For safety reason, there is a 'hard limit', which de
 The hardcoded parameters in AndroidAPS are:
 
 * Child: 2
-* Adolescente: 5
+* Teenager: 5
 * Adult: 10
 * Adulto insulino-resistente: 12
+* Pregnant: 25
+
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
 
 ### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
 
@@ -165,9 +174,12 @@ This parameter limits the maximum of basal IOB where AndroidAPS still works. If 
 The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 * Child: 3
-* Adolescente: 5
+* Teenager: 5
 * Adult: 7
 * Adulto insulino-resistente: 12
+* Pregnant: 25
+
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
 
 ### Enable AMA Autosense
 
@@ -192,3 +204,85 @@ Default value: 4 (shouldn’t be changed unless you really need to and know, wha
 **Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
 
 Default value: 2
+
+## Overview of hard-coded limits
+
+<table border="1">
+  
+<thead>
+  <tr>
+    <th width="200"></th>
+    <th width="75">Child</th>
+    <th width="75">Teenager</th>
+    <th width="75">Adult</th>
+    <th width="75">Insulin resistant adult</th>
+    <th width="75">Pregnant</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>MAXBOLUS</td>
+    <td>5,0</td>
+    <td>10,0</td>
+    <td>17,0</td>
+    <td>25,0</td>
+    <td>60,0</td>
+  </tr>
+  <tr>
+    <td>MINDIA</td>
+    <td>5,0</td>
+    <td>5,0</td>
+    <td>5,0</td>
+    <td>5,0</td>
+    <td>5,0</td>
+  </tr>
+  <tr>
+    <td>MAXDIA</td>
+    <td>7,0</td>
+    <td>7,0</td>
+    <td>7,0</td>
+    <td>7,0</td>
+    <td>10,0</td>
+  </tr>
+  <tr>
+    <td>MINIC</td>
+    <td>2,0</td>
+    <td>2,0</td>
+    <td>2,0</td>
+    <td>2,0</td>
+    <td>0,3</td>
+  </tr>
+  <tr>
+    <td>MAXIC</td>
+    <td>100,0</td>
+    <td>100,0</td>
+    <td>100,0</td>
+    <td>100,0</td>
+    <td>100,0</td>
+  </tr>
+  <tr>
+    <td>MAXIOB_AMA</td>
+    <td>3,0</td>
+    <td>3,5</td>
+    <td>7,0</td>
+    <td>12,0</td>
+    <td>25,0</td>
+  </tr>
+  <tr>
+    <td>MAXIOB_SMB</td>
+    <td>3,0</td>
+    <td>7,0</td>
+    <td>12,0</td>
+    <td>25,0</td>
+    <td>45,0</td>
+  </tr>
+  <tr>
+    <td>MAXBASAL</td>
+    <td>2,0</td>
+    <td>5,0</td>
+    <td>10,0</td>
+    <td>12,0</td>
+    <td>25,0</td>
+  </tr>
+</tbody>
+</table>
