@@ -39,7 +39,7 @@ Laikantis mitybos, kuriojee mažai angliavandenių, ir daugiau riebalų bei balt
 
 Ištęstas bolusas
 ==================================================
-Kaip jau minėta aukščiau, ištęstas arba vadinamasis daugiabangis bolusas neveikia su uždaru ciklu. `Dėl daugiau informacijos, skaitykite žemiau <../Usage/Extended-Carbs.html#why-extended-boluses-wont-work-in-a-closed-loop-environment>`_
+Kaip jau minėta aukščiau, ištęstas arba vadinamasis daugiabangis bolusas neveikia su uždaru ciklu. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ for details
 
 Ištęstinis bolusas ir perjungimas į atvirą ciklą - tik Dana ir Insight pompoms
 -----------------------------------------------------------------------------
