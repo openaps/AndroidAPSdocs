@@ -6,13 +6,13 @@ Si vous utilisez le même fichier de clés lors de la mise à jour d'AndroidAPS,
 
 Si vous ne trouvez plus votre ancien fichier de clés, procédez comme suit :
 
-1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`_ on your phone.
+1. `Exporter les paramètres <../Usage/ExportImportSettings.html#exporter-les-parametres>`_ sur votre téléphone.
 2. Copiez les paramètres de votre téléphone vers un emplacement externe (par ex. dans votre ordinateur, un service de stockage cloud...).
 3. Assurez-vous que le fichier de paramètres "AndroidAPS Preferences" est stocké en toute sécurité.
 4. Générez un apk signé de la nouvelle version comme c'est décrit dans la page `Mise à jour vers une nouvelle version <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 5. Désinstaller la précédente version de AAPS sur votre téléphone.
 6. Installez la nouvelle version de AAPS sur votre téléphone.
-7. `Import settings <../Usage/ExportImportSettings.html#export-settings>`_ - if you can't find them on your phone copy them from the external storage.
+7. `Importez les paramètres <../Usage/ExportImportSettings.html#exporter-les-parametres>`_ - si vous ne trouvez pas le fichier sur votre téléphone, copiez le depuis votre stockage externe.
 8. Pousuivez la boucle.
 
 Avertissement du compilateur Kotlin
@@ -136,7 +136,7 @@ Si aucun des conseils ci-dessus ne vous a aidé, vous pourriez envisager de repa
 1. `Exporter les paramètres <../Usage/ExportImportSettings.html>`_ (dans la version AAPS déjà installée sur votre téléphone)
 2. Ayez vos mots de passe pour la clé et le fichier de clés sous la main
     Si vous avez oublié ces mots de passe vous pouvez essayer de les retrouver dans les fichiers du projet comme c'est décrit `ici <https://youtu.be/nS3wxnLgZOo>`_. Ou vous pouvez recréer un nouveau fichier de clés. 
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
+3. Construisez l'application à partir de zéro comme c'est décrit `ici <../Installing-AndroidAPS/Building-APK.html#telecharger-le-code-androidaps>`_.
 4.	Quand vous avez construit l'APK avec succès, supprimez l'application existante sur votre téléphone, transférez le nouvel apk sur votre téléphone et installez le.
 5. `Importer les paramètres <../Usage/ExportImportSettings.html>`_
 
