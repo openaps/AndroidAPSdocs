@@ -209,7 +209,7 @@ Version 2.5.1
 ==================================================
 Date de sortie : 31-10-2019
 
-Veuillez lire les `Remarques importantes <../Installing-AndroidAPS/Releasenotes.html#remarques-importantes>`_ et`limitations <../Installing-AndroidAPS/Releasenotes.html#cette-mise-a-jour-est-elle-pour-moi-n-est-actuellement-pas-pris-en-charge>`_ listées pour la `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
+Veuillez lire les `Remarques importantes <../Installing-AndroidAPS/Releasenotes.html#id16>`_ et`limitations <../Installing-AndroidAPS/Releasenotes.html#cette-mise-a-jour-est-elle-pour-moi-n-est-actuellement-pas-pris-en-charge>`_ listées pour la `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#id15>`_. 
 * Correction d'un bug dans le statut du réseau qui entraînait des plantages fréquent (pas critique mais gaspillerait beaucoup d'énergie).
 * Nouvelle gestion des versions qui permettra de faire des mises à jour mineures sans déclencher la notification de mise à jour.
 
@@ -221,7 +221,7 @@ Remarques importantes
 --------------------------------------------------
 * Veuillez utiliser `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ ou plus récent pour `construire l'apk <../Installing-AndroidAPS/Building-APK.html>`_ ou le `mettre à jour <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Si vous utilisez xDrip `identify receiver <../Configuration/xdrip.html#identifier-le-recepteur>`_ doit être défini.
-* Si vous utilisez Dexcom G6 avec l'application `Dexcom patchée <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ vous aurez besoin de la version du `Dossier 2.4<https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Si vous utilisez Dexcom G6 avec l'application `Dexcom patchée <../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee>`_ vous aurez besoin de la version du `Dossier 2.4<https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Glimp est pris en charge à partir de la version 4.15.57 et plus récente.
 
 Cette mise à jour est-elle pour moi? N'est actuellement PAS pris en charge
@@ -284,7 +284,7 @@ Date de sortie : 29-03-2019
 
 Nouvelles fonctionnalités majeures
 --------------------------------------------------
-* `Correctif changement d'heure <../Usage/Timezone-traveling.html##changements-heure-d-ete-heure-d-hiver>`_
+* `Correctif changement d'heure <../Usage/Timezone-traveling.html#changements-d-heure>`_
 * Correctif Wear
 * `Correctif plugin SMS <../Children/SMS-Commands.html>`_
 * Retour arrière dans les Objectifs.
