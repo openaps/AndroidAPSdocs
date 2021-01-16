@@ -39,7 +39,7 @@ Pomp
 ==================================================
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#foutmeldingen-specifiek-voor-de-danars>`_
 * `Accu-Chek Combo algemeen <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_
-* `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#waarom-werkt-de-koppeling-met-de-pomp-niet-met-de-app-ruffy>`_
+* `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#why-does-pairing-with-the-pump-not-work-with-the-app-ruffy>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html#insight-specifieke-foutmeldingen>`_
 * `Medtronic + RileyLink <../Configuration/MedtronicPump.html#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump>`_
 
