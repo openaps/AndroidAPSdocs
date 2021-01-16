@@ -39,7 +39,7 @@ Lorsque des eGlucides sont générés, une note Careportal est également créé
 
 Bolus étendu
 ==================================================
-Comme mentionné ci-dessus, les bolus étendus ou mixtes ne fonctionnent pas vraiment dans un environnement en boucle fermée. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ for details
+Comme mentionné ci-dessus, les bolus étendus ou mixtes ne fonctionnent pas vraiment dans un environnement en boucle fermée. `Voir ci-dessous <#pourquoi-les-bolus-etendus-ne-marchent-pas-avec-une-boucle-fermee>`_ pour plus de détails
 
 Bolus étendus et passage en boucle ouverte - uniquement pour les pompesDana et Insight
 -----------------------------------------------------------------------------
