@@ -19,8 +19,8 @@ Octobre 2020
 * Accu-Chek Combo - Mise à jour `réglage duchangement d'heure <../Usage/Timezone-traveling.html#changements-d-heure>`_
 * Accu-Chek Insight - option `Utiliser toujours les valeurs ansolues du basal <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_
 * Journaux - plus de détails sur `l'emplacement du dossier <../Usage/Accessing-logfiles.html>`_
-* Omnipod Eros - `mise à jour du statut <../Getting-Started/Future-possible-Pump-Drivers.html#insulet-omnipod-avec-les-anciens-pods-eros-page-d-acceuil>`_
-* `Commandes SMS - Synchronisation de l'heure <../Children/SMS-commands.html>`_
+* Omnipod Eros - `status update <../Getting-Started/Future-possible-Pump-Drivers.html#pumps-that-are-loopable>`_
+* `Commandes SMS - Synchronisation de l'heure <../Children/SMS-Commands.html>`_
 Septembre 2020
 ==================================================
 * Mise à jour majeure pour la nouvelle version AAPS 2.7
@@ -31,9 +31,9 @@ Juin 2020
 * `Changement de fuseau horaire <../Usage/Timezone-traveling.html>`_ avec Libre 2
 Mai 2020
 ==================================================
-* `Bolus étendus uniquement pour les pompes Dana + Insight <../Usage/Extended-Carbs.html#bolus-etendus-et-passage-en-boucle-ouverte-uniquement-pour-les-pompesdana-et-insight>`_
+* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `Désactivation des vibrations sur pompes Insight <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (uniquement firmware 3.x)
-* `Changement minimum <../Configuration/Preferences.html#changement-minimum>`_ pour réduire le nombre de notifications en mode boucle ouverte
+* `Minimal request rate <../Configuration/Preferences.html#minimal-request-change>`_ to reduce number of notifications in open loop mode
 * `Application Libre Link patchée <../Hardware/Libre2.html#etape-1-construire-votre-propre-application-librelink-patchee>`_ - vérifier si le patch est correct
 * `Lignes de prédiction <../Getting-Started/Screenshots.html#lignes-de-prediction>`_ - plus de détails
 Avril 2020
@@ -44,11 +44,11 @@ Mars 2020
 ==================================================
 * `Générer l'apk avec Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
 * `La DanaRS avec le firmware v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **ne peut actuellement pas être utilisée avec AndroidAPS !**
-* `Bolus étendu et passage en boucle ouverte <../Usage/Extended-Carbs.html#bolus-etendus-et-passage-a-en-boucle-ouverte>`_
+* `Extended bolus and switch to open loop <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `Mettre à jour l'apk avec Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
 Février 2020
 ==================================================
-* `Avertissement pour l'automatisation <../Usage/Automation.html#bonnes-pratiques-et-avertissements>`_
+* `Automation caveats <../Usage/Automation.html#good-practice-caveats>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - courte explication
 * `Alternatives à Careportal <../Usage/CPbefore26.html>`_
 * La fonction `Bolus étendus <../Usage/Extended-Carbs.html#bolus-etendu>`_ désactive la boucle fermée
@@ -73,16 +73,16 @@ Novembre 2019
 * `Remplacement du transmetteur Dexcom G6 <../Configuration/xdrip.html#replace-transmitter>`_
 * `Bolus étendus - pourquoi ils ne fonctionnent pas dans le cadre d'une boucle <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
-* `Écran d'accueil - lignes sur le graphique <../Getting-Started/Captures d'écran.html#section-e>`_
+* `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-f-main-graph>`_
 * `Insight - Désactiver les valeurs absolues dans NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * `Pompe Medtronic - doubles entrées possibles <../Configuration/MedtronicPump.html>`_
 * `Nouveau tutoriel Freestyle Libre 2 <../Hardware/Libre2.html> ` _
 * `Changement de profil avec pourcentage - example <../Usage/Profiles.html>`_
-* `Mise à jour commandes SMS <../Children/SMS-commandshtml>`_
+* `Mise à jour commandes SMS <../Children/SMS-Commands.html>`_
 * `Dépannage d'Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Dépannage - collection de liens <../Usage/troubleshooting.html>`_
 * `Mise à jour - démarrage rapide pour les utilisateurs expérimentés <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experied-users>`_
-* Wiki - mise à jour `Edition <../make-a-PR.html#syntaxe-du-code>`_ et `Traduction <../translations.html#traduire-les-pages-wiki>`_.
+* Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-docs-pages>`_.
 
 Octobre 2019
 ==================================================
@@ -100,9 +100,9 @@ Octobre 2019
 Septembre 2019
 ==================================================
 * `Automatisation <../Usage/Automation.html>`_
-* `Calculatrice Bolus <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - absorption lente des glucides
+* `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorbtion
 * `Sécurité Nightscout <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
-* `Décalage horaire du profil <../Usage/Profiles.html#timeshift>`_ (plus de détails)
+* `Profile timeshift <../Usage/Profiles.html#time-shift>`_ (more details)
 * `Surveillance à distance <../Children/Children.html>`_
 * `Qu'est-ce qu'un système à boucle fermée ? <../Getting-Started/ClosedLoop.html>`_
 
