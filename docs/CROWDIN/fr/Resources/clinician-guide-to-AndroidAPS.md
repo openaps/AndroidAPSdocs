@@ -8,7 +8,7 @@ Ce guide contient des informations de haut niveau sur la boucle fermée DIY et p
 
 Pour commencer à utiliser AndroidAPS, les étapes suivantes doivent être faites :
 
-* Trouver une [pompe compatible](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), un [équipement Android compatible](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), et une [source MGC compatible](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started-with-androidaps).
+* Find a [compatible pump](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
 * [Télécharger le code source AndroidAPS et compiler le logiciel](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
 * [Configurer le logiciel pour qu'il dialogue avec ses périphériques et définir les préférences et les paramètres de sécurité](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
 
