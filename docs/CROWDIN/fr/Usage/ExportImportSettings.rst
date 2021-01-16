@@ -21,8 +21,8 @@ Entre autres, les informations suivantes font partie des paramètres exportés :
 * `Evènement d'automatisation <../Usage/Automation.html>`_
 * Paramètres du `Générateur de configuration <../Configuration/Config-Builder.html>`_
 * Paramètres des `Profils locaux <../Configuration/Config-Builder.html#profil-local-recommande>`_
-* Résultats des `Objectifs <../Usage/Objectives.html>`_ y compris les résultats de l'objectif 3 `Prouver ses connaissances <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
-* `Préférences <../Configuration/Preferences.html>`_ y compris les paramètres `NSClient <../Configuration/Preferences.html#ns-client>`_
+* Résultats des `Objectifs <../Usage/Objectives.html>`_ y compris `exam results <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
+* `Préférences <../Configuration/Preferences.html>`_ y compris `NS Client settings <../Configuration/Preferences.html#nsclient>`_
 
 Format de sauvegarde chiffré
 ==================================================
@@ -48,7 +48,7 @@ Exporter les paramètres
   
 Importer les paramètres
 ==================================================
-**Ne pas importer les paramètres pendant une session Pod active** - voir la page `Omnipod pour plus de détails <../Configuration/OmnipodEros.html#importer-les-parametres-aaps-de-versions-precedentes>`_.
+**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings-from-previous-aaps>`_.
 
 * Menu Hamburger (coin supérieur gauche de l'écran)
 * Maintenance
