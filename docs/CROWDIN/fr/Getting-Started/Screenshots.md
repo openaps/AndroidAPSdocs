@@ -328,7 +328,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
    * La boucle fermée sera automatiquement arrêtée et basculera en mode boucle ouverte pour la durée du bolus étendu.
    * Assurez-vous de lire les [détails](../Usage/Extended-Carbs#bolus-etendu) avant d'utiliser cette option.
 
-### Careporal - section N
+### Careportal - section N
 
 * Afficher les informations
    
@@ -348,7 +348,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
    
    ![Le niveau de la batterie du capteur est égal au niveau de la batterie du téléphone](../images/Home2021_ActionSensorBat.png)
 
-### Careporal - section O
+### Careportal - section O
 
 * Contrôle glycémie, Amorcer/Remplir, Insertion capteur MGC et Changement pile pompe sont les données d'entrées des informations affichées dans la [section N](#careportal-section-n).
 * Amocer/Remplir vous permet d'enregistrer le changement de site et de la cartouche d'insuline de la pompe.
