@@ -85,7 +85,7 @@
 <tr>
  <td><strong>BR</strong></td>
  <td>Basalrate</td>
- <td>TBR</td>
+ <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
@@ -144,9 +144,9 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>Versionskontrollsystem für die Nachverfolgung von Änderungen in Computerdateien und Koordinierung der Arbeit an diesen Dateien <br>-> für APK-Updates notwendig</td>
+ <td>Versionskontrollsystem für die Nachverfolgung von Änderungen in Computerdateien und Koordinierung der Arbeit an diese Dateien <br>-> für APK-Updates notwendig</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - Update auf neue Version...</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - Update auf neue Version...</a></td>
 </tr>
 <tr>
  <td><strong>Github</strong></td>
@@ -186,7 +186,7 @@
 </tr>
 <tr>
  <td><strong>LGS</strong></td>
- <td>Low Glucose Suspend (Reduzierung der Basalrate bei niedrigen Glukosewerten)<br>AAPS wird die Basalrate reduzieren, wenn die BZ-Werte zu stark sinken. Wenn die BZ-Werte aber steigen, wird AAPS die Basalrate nur dann erhöhen, wenn negatives Insulin on board (von einer vorangegangenen Basalratenreduzierung) ist. Sonst bleibt die Basalrate wie in Deinem Profil eingestellt. Wenn du eine Hypo korrigierst, kann es vorkommen, dass danach Spitzen auftreten, die du nicht durch Erhöhung der Basalrate korrigieren kannst.</td>
+ <td>Low Glucose Suspend (Reduzierung der Baslarate bei niedrigen Glukosewerten)<br>AAPS wird die Basalrate reduzieren, wenn die BZ-Werte zu stark sinken. Wenn die BZ-Werte aber steigen, wird AAPS die Basalrate nur dann erhöhen, wenn negatives Insulin on board (von einer vorangegangenen Basalratenreduzierung) ist. Sonst bleibt die Basalrate wie in Deinem Profil eingestellt. Wenn du eine Hypo korrigierst, kann es vorkommen, dass danach Spitzen auftreten, die du nicht durch Erhöhung der Basalrate korrigieren kannst.</td>
  <td><a href="../Usage/Objectives.html#ziel-6-closed-loop-mit-abschaltung-bei-niedrigen-glukose-werten">Ziel 6</a></td>
  <td>&nbsp;</td>
 </tr>
@@ -240,7 +240,7 @@
 </tr>
 <tr>
  <td><strong>Objectives (Ziele)</strong></td>
- <td>Ziele - Lernprogramm innerhalb von AAPS um Dich Schritt für Schritt vom Open Loop zum Closed Loop zu führen.</td>
+ <td>Ziele - Lenrprogramm innerhalb von AAPS um Dich Schritt für Schritt vom Open Loop zum Closed Loop zu führen.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Objectives.html">Wiki - Objectives (Ziele)</a></td>
 </tr>
@@ -252,7 +252,7 @@
 </tr>
 <tr>
  <td><strong>Open Loop</strong></td>
- <td>Open-Loop-Systeme machen Vorschläge zur Anpassung der Basalrate basierend auf einem Algorithmus. Diese müssen vom Nutzer händisch in der Pumpe umgesetzt werden.</td>
+ <td>Open-loop-Systeme machen Vorschläge zur Anpassung der Basalrate basierend auf einem Algorithmus. Diese müssen vom Nutzer händisch in der Pumpe umgesetzt werden.</td>
  <td>Closed Loop</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - Konfigurations-Generator</a></td>
 </tr>
@@ -300,7 +300,7 @@
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
- <td>Open Source Hardware zur Umwandlung von Bluetooth Low Energy (BLE) in 916 MHz Funksignale (wird für ältere Medtronic-Pumpen verwendet) bzw. in 433MHz (für Omnipod Eros)</td>
+ <td>Open Source Hardware zur Umwandlung von Bluetooth Low Energy (BLE) in 916 MHz Funksignale (wird für ältere Medtronic-Pumpen verwendet)</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>
@@ -343,7 +343,7 @@
 <tr>
  <td><strong>TBB</strong></td>
  <td>Gesamtbasalmenge (total base basal) - Summe des über 24 Stunden über die Basalrate abgegebenen Insulins</td>
- <td>TDD</td>
+ <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
@@ -372,7 +372,7 @@
 </tr>
 <tr>
  <td><strong>Virtuelle Pumpe</strong></td>
- <td>Möglichkeit, AAPS Funktionen auszuprobieren oder um mit Pumpen, für die noch kein Treiber zur Verfügung steht, manuell loopen zu können</td>
+ <td>Möglichkeit, AAPS Funktionen auszuprobieren oder für um mit Pumpen, für die noch kein Treiber zur Verfügung steht, manuell loopen zu können</td>
  <td>Open Loop</td>
  <td>&nbsp;</td>
 </tr>
