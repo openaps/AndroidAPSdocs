@@ -30,7 +30,7 @@ L'assistant de profil propose un ensemble de données d'enfants provenant de deu
 6. Appuyez sur le bouton 'COMPARER LES PROFILS' en haut de l'écran.
 7. La comparaison des deux profils sélectionnés sera affichée.
 
-Once you are fine with the profile adjustments you can `clone the profile <../Configuration/profilehelper.html#clone-profile>`_ as described below.
+Une fois que vous êtes d'accord avec les réglages du profil, vous pouvez `dupliquer le profil <../Configuration/profilehelper.html#id1>`_ comme décrit ci-dessous.
 
 Comparer deux profils
 =======================================
