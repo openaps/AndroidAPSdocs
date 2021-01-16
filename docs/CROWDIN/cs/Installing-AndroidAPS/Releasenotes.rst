@@ -53,7 +53,7 @@ Hlavní nové funkce
 ----------------------
 * `podpora Omnipod Eros <../Configuration/OmnipodEros.html>` _ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and zvláštní díky @ps2 @itsmojo, dalším, kteří se ůčastnili vývoje ovladače pro Loop a @jlucasvt z GetRileyLink.org 
 * `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
-* `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-28>`_ @rICTx-T1D
+* `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-2-8>`_ @rICTx-T1D
 * Vylepšení připojení Dana RS @MilosKozak 
 * Odstraněno chování "Nezměněné hodnoty CGM" v SMB pro nativní aplikaci Dexcom
 * New `Low Ressolution Skin <../Configuration/Preferences.html#skin>`_
@@ -73,7 +73,7 @@ Datum vydání: 24. 09. 2020
 
 **Ujistěte se, že jste zkontrolovali a upravili nastavení po přechodu na verzi 2.7, jak je popsáno** `zde <../Installing-AndroidAPS/update2_7.html>`_.
 
-Abyste mohli pokračovat v používání `Automatizace <../Usage/Automation.html>`_, potřebujete alespoň spustit plnění `cíle 11 <../Usage/Objectives.html#objective-11-automation>`_ (všechny předchozí cíle musí být splněny, aby šlo spustit cíl 11). Pokud jste například nedokončili zkoušku v `Cíli 3 <../Usage/Objectives. tml#objective-3-proof-your-knowledge>`_ budete ji muset dokončit dříve, než budete moci spustit `Cíl 11 <../Usage/Objectives.html#objektive-11-automation>`_. Neovlivní to cíle, které jste již dokončili. Splněné cíle zůstanou zachovány!
+Abyste mohli pokračovat v používání `Automatizace <../Usage/Automation.html>`_, potřebujete alespoň spustit plnění `cíle 11 <../Usage/Objectives.html#objective-11-automation>`_ (všechny předchozí cíle musí být splněny, aby šlo spustit cíl 11). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. Neovlivní to cíle, které jste již dokončili. Splněné cíle zůstanou zachovány!
 
 Hlavní nové funkce
 ----------------------
@@ -81,7 +81,7 @@ Hlavní nové funkce
 * využití modulů pro pumpy Dana @MilosKozak
 * `nový vzhled, výběr vzhledu <../Getting-Started/Screenshots.html>`_ @MilosKozak
 * nový `vzhled stavových indikátorů <../Configuration/Preferences.html#status-lights>`_ @MilosKozak
-* `podpora více grafů <../Getting-Started/Screenshots.html#section-f---main-graph>`_ @MilosKozak
+* `multiple graphs support <../Getting-Started/Screenshots.html#section-f-main-graph>`_ @MilosKozak
 * `Pomocník s profilem <../Configuration/profilehelper.html>`_ @MilosKozak
 * vizualizace `dynamického nastavení cílové glykémie <../Getting-Started/Screenshots.html#visualization-of-dynamic-target-adjustment>`_ @Tornado-Tim
 * nový `vzhled Nastavení <../Configuration/Preferences.html>`_ @MilosKozak
@@ -96,7 +96,7 @@ Hlavní nové funkce
 * drobná vylepšení pro pumpu Insight @TebbeUbben @MilosKozak
 * `"System default" volba jazyka nastaveného v telefonu <../Configuration/Preferences.html#general>`_ @MilosKozak
 * vektorové ikony @Philoul
-* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phoneanandroidaps>`_ @Tornado-Tim
+* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phone-androidaps>`_ @Tornado-Tim
 * vylepšení prohlížení historie @MilosKozak
 * odstraněn OpenAPS MA algoritmus @Tornado-Tim
 * odstraněna Oref0 senzitivita @Tornado-Tim
@@ -237,7 +237,7 @@ Hlavní nové funkce
 * RxJava2, Okthttp3, podpora Retrofit
 * Old `Medtronic pumps <../Configuration/MedtronicPump.html>`_ support (RileyLink need)
 * New `Automation plugin <../Usage/Automation.html>`_
-* Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings>`_ from bolus wizard calculation
+* Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings-overview>`_ from bolus wizard calculation
 * Vykreslování aktivity inzulínu
 * Úprava předpovědí IOB podle výsledku detekce senzitivity
 * New support for patched Dexcom apks (`2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
@@ -337,7 +337,7 @@ Hlavní stránka
 --------------------------------------------------
 * Horní pruh umožňuje pozastavení/zakázání smyčky, zobrazení/úpravu profilu a k zahájení/ukončení dočasných cílů (DC). DC používají výchozí nastavení. Nová možnost DC Hypoglykémie je vysoký dočasný cíl, který má smyčce zabránit, aby příliš agresivně překorigovala dokrmové sacharidy na odvrácení hypoglykémie.
 * Tlačítka ošetření: staré tlačítko ošetření je stále dostupné, ale ve výchozím nastavení je skryté. Viditelnost tlačítek může být nově nastavitelná. New insulin button, new carbs button (including `eCarbs/extended carbs <../Usage/Extended-Carbs.html>`_)
-* `Colored prediction lines <../Getting-Started/Screenshots.html#section-e>`_
+* `Colored prediction lines <../Getting-Started/Screenshots.html#prediction-lines>`_
 * Možnost zobrazit pole poznámky v dialogových oknech inzulínu/sacharidů/kalkulátoru/plnění, poznámka se pak nahrává do NS
 * Aktualizované dialogové okno plnění umožňuje plnění samotné a navíc vložení ošetřujících vstupů pro výměnu kanyly a výměnu zásobníku
 
