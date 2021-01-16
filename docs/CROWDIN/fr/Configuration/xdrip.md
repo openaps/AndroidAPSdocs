@@ -173,7 +173,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 6G, 8H ou 8J, 
 
 * Le nombre de jours du transmetteur doit être à 0 après l'extension réussie de l'émetteur et le démarrage du capteur.
 
-### Remplacement de l'émetteur
+### Remplacement du transmetteur
 
 Pour les émetteurs G6 fabriqués après l’automne/fin 2018 (c.a.d. N° de série commençant par 80 ou 81) vous pouvez utiliser la version [master](https://jamorham.github.io/#xdrip-plus).
 
