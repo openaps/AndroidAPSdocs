@@ -52,7 +52,7 @@ AndroidAPS limite la valeur ainsi :
 * Adulte résistant à l'insuline : 12
 * Grossesse : 25
 
-*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
 ### IA totale maximale pour OpenAPS \[U\] (OpenAPS "max-IA")
 
@@ -63,7 +63,7 @@ En utilisant OpenAPS SMB, maxIA est calculé différemment de OpenAPS AMA. Dans 
     maxIA = moyenne bolus repas + 3 x max basal quotidien
     
 
-Soyez prudent et patient et modifiez les paramètres petit à petit. C'est différent pour tout le monde et dépend aussi de la Dose Totale d'Insuline (DTI) moyenne quotidienne. Pour des raisons de sécurité, il y a une limite, qui dépend de l'âge du patient. La 'limite en dur' pour maxIA est supérieure à la limite [AMA](../Usage/Open-APS-features.html#max-u-h-pour-le-debit-temp-basal-openaps-max-basal).
+Soyez prudent et patient et modifiez les paramètres petit à petit. C'est différent pour tout le monde et dépend aussi de la Dose Totale d'Insuline (DTI) moyenne quotidienne. Pour des raisons de sécurité, il y a une limite, qui dépend de l'âge du patient. The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 * Enfant : 3
 * Adolescent : 7
@@ -71,9 +71,9 @@ Soyez prudent et patient et modifiez les paramètres petit à petit. C'est diff�
 * Adulte résistant à l'insuline : 25
 * Grossesse : 40
 
-*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
-Voir aussi la [documentation OpenAPS pour SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1#understanding-super-micro-bolus-smb).
 
 ### Activer AMA Autosens
 
@@ -149,7 +149,7 @@ Valeur par défaut : 4 (ne doit pas être modifié sauf si vous en avez vraiment
 
 AAR, la version abrégée de "Assistance Améliorée Repas" est une fonctionnalité OpenAPS de 2017 (oref0). L'Assistance Améliorée Repas (AAR) de OpenAPS permet au système de réagir plus rapidement après un bolus repas si vous entrez les Glucides de façon fiable.
 
-Vous pouvez trouver plus d'informations dans la [documentation OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+You can find more information in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features#advanced-meal-assist-or-ama).
 
 ### Max. U/h pour le débit temp Basal (OpenAPS "max-basal")
 
@@ -165,7 +165,7 @@ Les paramètres codés en dur dans AndroidAPS sont les suivants :
 * Adulte résistant à l'insuline : 12
 * Grossesse : 25
 
-*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
 ### IA basale max que OpenAPS pourra délivrer \[U\] (OpenAPS "max-iob")
 

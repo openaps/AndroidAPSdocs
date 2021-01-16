@@ -52,7 +52,7 @@ Limity jsou nastaveny takto:
 * Dospělí s vyšší rezistencí na inzulín: 12
 * Těhotná: 25
 
-*Viz také [přehled pevně zakódovaných limitů](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
 ### Nastavenou maximální hodnotu IOB nelze překročit (OpenAPS "max-iob")
 
@@ -63,7 +63,7 @@ Při použití OpenAPS SMB se maximální IOB počítá jinak než s OpenAPS AMA
     max IOB = průměrná hodnota bolusů podávaných před jídlem + 3násobek nejvyšší hodnoty v bazálním profilu
     
 
-Při hledání ideálního nastavení buďte opatrní a trpěliví a hodnoty měňte postupně. Nastavení je individuální a mj. vychází i z výše celkové denní dávky inzulínu. Z bezpečnostních důvodů jsou nastaveny limity vycházející z věku pacientů. Hodnota 'hard limit' pro maxIOB je vyšší než v [AMA](../Usage/Open-APS-features.html#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
+Při hledání ideálního nastavení buďte opatrní a trpěliví a hodnoty měňte postupně. Nastavení je individuální a mj. vychází i z výše celkové denní dávky inzulínu. Z bezpečnostních důvodů jsou nastaveny limity vycházející z věku pacientů. The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 * Děti: 3
 * Dospívající: 7
@@ -71,9 +71,9 @@ Při hledání ideálního nastavení buďte opatrní a trpěliví a hodnoty mě
 * Dospělí s vyšší rezistencí na inzulín: 25
 * Těhotná: 40
 
-*Viz také [přehled pevně zakódovaných limitů](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
-Viz také [Dokumentace k OpenAPS SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1#understanding-super-micro-bolus-smb).
 
 ### Povolit AMA Autosense
 
@@ -149,7 +149,7 @@ Výchozí hodnota: 4 (neměňte, pokud si opravdu nejste jisti tím, co děláte
 
 AMA je zkratka pro "advanced meal assist", což je funkce OpenAPS od roku 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) umožňuje systému rychleji reagovat po bolusu na jídlo, pokud zadáte sacharidy správně.
 
-Více informací najdete v [dokumentaci k OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+You can find more information in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features#advanced-meal-assist-or-ama).
 
 ### Max. povolený bazál U/h (OpenAPS "max-basal")
 
@@ -165,7 +165,7 @@ Pevně zadané parametry v AndroidAPS jsou:
 * Dospělí s vyšší rezistencí na inzulín: 12
 * Těhotná: 25
 
-*Viz také [přehled pevně zakódovaných limitů](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
 ### Maximální hodnota IOB, kterou OpenAPS může vydat \[U\] (OpenAPS "max-iob")
 

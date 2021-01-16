@@ -11,104 +11,104 @@ AndroidAPS позволяет контролировать телефон реб
 Настройка SMS-команд
 ==================================================
 
-.. image:: ../images/SMSCommandsSetup.png
+.. изображение:: ../images/SMSCommandsSetup.png
   :alt: Настройка SMS команд
       
-* Большинство корректировок временных целей, слежение за работой ААПС и т. д. can be done on `NSClient app <../Children/Children.html>`_ on an Android phone with an internet connection.
+* Большинство корректировок временных целей, слежение за работой ААПС и т. д. может выполняться в приложении ` NSclient <../Children/Children.html> ` _ на Android-телефоне с подключением к Интернету.
 * Болюсы не могут подаваться через Nightscout, но можно использовать SMS-команды.
-* If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
+* Если у вас для слежения iPhone и, следовательно, нет возможности использовать NSclient, доступны дополнительные SMS-команды.
 
 * В настройках Android телефон перейдите в приложения > AndroidAPS > Разрешения и включите SMS
 
-Authorized phone numbers
--------------------------------------------------
-* In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679) 
-* Enable 'Allow remote commands via SMS'.
+Авторизованные номера телефонов
+--------------------------------------------------
+* В AndroidAPS перейдите в Настройки > SMS коммуникатор и введите номер(а) телефона(ов), от которых разрешаете получать SMS команды (разделив их точками с запятыми), например + 6412345678; + 6412345679) 
+* Включите «Разрешить удаленные команды при помощи SMS».
 * Если вы хотите использовать более одного номера:
 
   * Введите только один номер.
   * Убедитесь, что этот телефон работает с алгоритмом путем отправки и подтверждения команды SMS.
   * Введите дополнительные номера, разделенные точкой с запятой, без пробела.
   
-    .. image:: ../images/SMSCommandsSetupSpace2.png
-      :alt: SMS Commands Setup multiple numbers
+    .. изображение:: ../images/SMSCommandsSetupSpace2.png
+      :alt: Команды SMS с нескольких номеров
 
-Minutes between bolus commands
--------------------------------------------------
-* You can define the minimum delay between two boluses issued via SMS.
-* For safety reasons you have to add at least two authorized phone numbers to edit this value.
+Минуты между командами на болюс
+--------------------------------------------------
+* Можно определить минимальную задержку между двумя болюсами, поданными при помощи SMS.
+* Из соображений безопасности следует добавить хотя бы два авторизованных номера телефона для изменения этого значения.
 
-Additionally mandatory PIN at token end
--------------------------------------------------
-* For safety reasons the reply code must be followed by a PIN.
-* PIN rules:
+Дополнительно обязательный пин-код в конце маркера
+--------------------------------------------------
+* По соображениям безопасности за кодом ответа должен следовать PIN.
+* Правила установки PIN:
 
-   * 3 to 6 digits
-   * not same digits (i.e. 1111)
-   * not in a row (i.e. 1234)
+   * от 3 до 6 цифр
+   * не одинаковые цифры (напр. 1111)
+   * не подряд (например, 1234)
 
-Authenticator setup
--------------------------------------------------
-* Two-factor authentication is used to improve safety.
-* You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
+Настройка аутентификации
+--------------------------------------------------
+* Для повышения безопасности используется двухфакторная аутентификация.
+* Можно использовать любое приложение Authenticator, которое поддерживает маркеры TOTP RFC 6238. Популярные бесплатные приложения:
 
-   * `Authy <https://authy.com/download/>`_
-   * Google Authenticator - `Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>`_ / `iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>`_
-   * `LastPass Authenticator <https://lastpass.com/auth/>`_
-   * `FreeOTP Authenticator <https://freeotp.github.io/>`_
+   * ` Authy <https://authy.com/download/>` _
+   * Google Authenticator-` Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>` _/` iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>` _
+   * ` LastPass Authenticator <https://lastpass.com/auth/>` _
+   * " FreeOTP Authenticator <https://freeotp.github.io/>` _
 
-* Install the authenticator app of your choice on your follower phone and scan the QR code shown in AAPS.
-* Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. Пример:
+* Установите на телефоне-фолловере приложение идентификации по выбору и просканируйте QR-код, показанный в AAPS.
+* Протестируйте одноразовый пароль, введя маркер, показанный в приложении идентификации, и ПИН, который вы только что настроили в AAPS. Пример:
 
-   * Your mandatory PIN is 2020
-   * TOTP token from the authenticator app is 457051
-   * Enter 4570512020
+   * Ваш обязательный PIN-код 2020
+   * Маркер TOTP из приложения идентификации-457051
+   * Введите 4570512020
    
-* The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
-* The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
-* Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
+* Красный текст "НЕПРАВИЛЬНЫЙ ПИН" изменится ** автоматически ** на зеленый "OK", если запись правильная. ** Никаких кнопок нажимать не надо**
+* Время на обоих телефонах должно быть синхронизировано. Оптимальный вариант - установить на автоматическую настройку из сети. Различия во времени могут привести к проблемам аутентификации.
+* Используйте кнопку "RESET AUTHENTICATORS", если хотите удалить предоставленные аутентификаторы.  (При сброс аутентификации вы делаете ВСЕ уже предоставленные аутентификаторы недействительными. Вам придется их снова настроить)
 
-Use SMS commands
+Отправка SMS-Команд
 ==================================================
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands <../Children/SMS-Commands.html#commands>`_ below. 
-* The AAPS phone will respond to confirm success of command or status requested. 
-* Confirm command by sending the code where necessary. Пример:
+* Отправьте SMS на телефон с AndroidAPS с подтвержденных номеров телефона(ов) используя любую из `команд <../Children/SMS-Commands.html#commands>`_ ниже. 
+* Телефон с AAPS ответит чтобы подтвердить успешное выполнение команды или запрашиваемого статуса. 
+* Подтвердите команду, при необходимости отправив код. Пример:
 
-   * Your mandatory PIN is 2020
-   * TOTP token from the authenticator app is 457051
-   * Enter 4570512020
+   * Ваш обязательный PIN-код 2020
+   * Маркер TOTP из приложения идентификации-457051
+   * Введите 4570512020
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**Подсказка: Если отправляется много SMS, полезно держать функцию SMS незанятой на обоих телефонах,.
 
 Команды
 ==================================================
-Commands must be sent in English, the response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Команды должны отправляться на английском языке, ответ будет получен на русском языке, если строка ответа уже " переведена <../translations.html#translate-strings-pl-androidaps-app> ` _.
 
 .. изображение:: ../images/SMSCommandsSetup.png
   :alt: Пример команд SMS
 
 Замкнутый цикл
 --------------------------------------------------
-* ОТКЛЮЧИТЬ ЗЦ
+* LOOP STOP/DISABLE (* ОТКЛЮЧИТЬ ЗЦ)
    * Ответ: цикл отключен
-* ВКЛЮЧИТЬ ЗЦ
+* LOOP START/ENABLE (* ВКЛЮЧИТЬ ЗЦ)
    * Ответ: цикл включен
-* СТАТУС ЗЦ
+* LOOP STATUS (* СТАТУС ЗЦ)
    * Ответ зависит от фактического состояния
-      * зцикл не работает
-      * зцикл работает
+      * цикл не работает
+      * цикл работает
       * Остановлен (на 10 мин)
-* ОСТАНОВИТЬ ЗЦ 20
+* LOOP SUSPEND 20 (* ОСТАНОВИТЬ ЗЦ на 20)
    * Зцикл остановлен на 20 минут
-* ВОЗОБНОВИТЬ ЗЦ
+* LOOP RESUME (* ВОЗОБНОВИТЬ ЗЦ)
    * Ответ: Цикл возобновлен
 
 Данные мониторинга
 --------------------------------------------------
-* BG/ГК
+* BG (ГК)
    * Ответ: новая ГК: 5.6 4мин назад, дельта: -0,2 ммоль, активный инсулин IOB: 0.20 ед (болюс: 0.10 ед базал: 0.10 ед)
-* CAL 5.6
-   * Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN
+* CAL 5.6 (калибровка 5.6)
+   * Ответ: Для отправки калибровки 5.6 ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
    * Ответ после получения правильного кода: Калибровка отправлена / Calibration sent (* *Если установлен xDrip. Разрешение на прием калибровок должно быть включено в xDrip+**)
 
 базал
