@@ -19,7 +19,7 @@ Octubre 2020
 * Accu-Chek Combo - update `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
 * Accu-Chek Insight - Option to `upload absolute values <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * Logs - more details about `folder location <../Usage/Accessing-logfiles.html>`_
-* Omnipod Eros - `status update <../Getting-Started/Future-possible-Pump-Drivers.html#insulet-omnipod-with-old-eros-pods-homepage>`_
+* Omnipod Eros - `status update <../Getting-Started/Future-possible-Pump-Drivers.html#pumps-that-are-loopable>`_
 * `SMS commands - time sync <../Children/SMS-Commands.html>`_
 Septiembre 2020
 ==================================================
@@ -31,9 +31,9 @@ June 2020
 * `Time zone travelling <../Usage/Timezone-traveling.html>`_ with Libre 2
 May 2020
 ==================================================
-* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
+* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `Insight deactivate vibration <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (firmware 3.x only)
-* `Minimal request rate <../Configuration/Preferences.html#minimal-request-rate>`_ to reduce number of notifications in open loop mode
+* `Minimal request rate <../Configuration/Preferences.html#minimal-request-change>`_ to reduce number of notifications in open loop mode
 * `Patched Libre Link app <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - check if correctly patched
 * `Prediction lines <../Getting-Started/Screenshots.html#prediction-lines>`_ - more details
 April 2020
@@ -44,11 +44,11 @@ March 2020
 ==================================================
 * `Build apk with Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
 * `DanaRS with firmware v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **cannot currently be used with AndroidAPS!**
-* `Extended bolus and switch to open loop <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
+* `Extended bolus and switch to open loop <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `Update apk with Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
 February 2020
 ==================================================
-* `Automation caveats <../Usage/Automation.html#good-practice--caveats>`_
+* `Automation caveats <../Usage/Automation.html#good-practice-caveats>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - short explanation
 * `Careportal alternatives <../Usage/CPbefore26.html>`_
 * `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
@@ -73,7 +73,7 @@ Noviembre 2019
 * `Dexcom G6 reemplazar actualización de transmisor <../Configuration/xdrip.html#replace-transmitter>`_
 * `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#id1>`_
 * ` FAQ - deportes <../Getting-Started/FAQ.html#sports>`_
-* `Pantalla de inicio - las líneas en el gráfico <../Getting-Started/Screenshots.html#section-e>`_
+* `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-f-main-graph>`_
 * `Insight - Inhabilitar valores absolutos en el cliente NS <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>` _
 * `Bomba medtronics - posibles entradas dobles <../Configuration/MedtronicPump.html>`_
 * 'Nuevo Freestyle Libre 2 tutorial <../Hardware/Libre2.html>`_
@@ -82,7 +82,7 @@ Noviembre 2019
 * `Resolución de problemas de Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>` _
 * `Resolución de problemas - colección de enlaces <../Usage/troubleshooting.html>`_
 * 'Actualización - de paseo a través de la experiencia de los usuarios <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
-* Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
+* Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-docs-pages>`_.
 
 Octubre 2019
 ==================================================
@@ -100,9 +100,9 @@ Octubre 2019
 Septiembre 2019
 ==================================================
 * 'Automatizar <../Usage/Automation.html>`_
-* `Calculadora de Bolos <../Getting-Started/Screenshots.html#slow-carb-absorción>` _ - absorbción de carbohidros lenta
+* `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorbtion
 * `Nightscout security <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
-* `Perfil de intervalo <../Usage/Profiles.html#timeshift>`_ (más detalles)
+* `Profile timeshift <../Usage/Profiles.html#time-shift>`_ (more details)
 * `Supervisión remota <../Children/Children.html>` _
 * ¿Qué es un sistema de lazo cerrado? <../Getting-Started/ClosedLoop.html>` _
 
