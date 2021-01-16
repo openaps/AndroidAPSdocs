@@ -53,7 +53,7 @@ Nouvelles fonctionnalités majeures
 ----------------------
 * `Support de l'Omnipod Eros <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda et merci spécial à @ps2 @itsmojo, et à toutes les autres personnes impliquées dans le développement du driver pour Omnipod ainsi que @jlucasvt de GetRileyLink.org 
 * `Assistant bolus <../Configuration/Preferences.html#assistant-bolus>`_ & `Rappel repas <../Getting-Started/Screenshots.html#rappel-repas>`_ @MilosKozak 
-* `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-2-8>`_ @rICTx-T1D
+* `Nouveau cadran <../Configuration/Watchfaces.html#nouveau-cadran-depuis-androidaps-2-8>`_ @rICTx-T1D
 * Améliorations de la connexion Dana RS @MilosKozak 
 * Suppression de "Valeurs MGC inchangées" pour les SMB pour l'application native Dexcom
 * Nouveau thème `Basse résolution <../Configuration/Preferences.html#theme>`_
@@ -73,7 +73,7 @@ Date de sortie : 24-09-2020
 
 **Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 2.7 comme c'est décrit ici** `ici <../Installing-AndroidAPS/update2_7.html>`_.
 
-Vous devez au moins démarrer l'`objectif 11 <../Usage/Objectives.html#objective-11-automation>`_ afin de continuer à utiliser la `fonction d'automatisation <../Usage/Automation.html>`_ (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 11 n'est pas possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
+Vous devez au moins démarrer l'`objectif 11 <../Usage/Objectives.html#objective-11-automation>`_ afin de continuer à utiliser la `fonction d'automatisation <../Usage/Automation.html>`_ (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 11 n'est pas possible). Si par exemple vous n'avez pas encore terminé l'examen dans l'`objective 3 <../Usage/Objectives. tml#objectif-3-prouver-ses-connaissances>`_ , vous devrez terminer l'examen avant de pouvoir commencer l'`objective 11 <../Usage/Objectives.html#objectif-11-automatisation>`_. Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
 Nouvelles fonctionnalités majeures
 ----------------------
@@ -81,7 +81,7 @@ Nouvelles fonctionnalités majeures
 * utilisation de modules pour les pompes Dana @MilosKozak
 * `nouvelle mise en page, selection de thème <../Getting-Started/Screenshots.html>`_ @MilosKozak
 * nouvelle `mise en page des voyants d'états <../Configuration/Preferences.html#voyants-d-etat>`_ @MilosKozak
-* `multiple graphs support <../Getting-Started/Screenshots.html#section-f-main-graph>`_ @MilosKozak
+* `support de graphiques multiples <../Getting-Started/Screenshots.html#section-f-graphique-principal>`_ @MilosKozak
 * `Assistant Profil <../Configuration/profilehelper.html>`_ @MilosKozak
 * visualisation du `réglage dynamique de la cible <../Getting-Started/Screenshots.html#visualisation-de-l-ajustement-dynamique-de-la-cible>`_ @Tornado-Tim
 * nouvelle `mise en page des préférences <../Configuration/Preferences.html>`_ @MilosKozak
