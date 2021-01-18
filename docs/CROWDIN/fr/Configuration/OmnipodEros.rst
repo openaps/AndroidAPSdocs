@@ -450,7 +450,7 @@ Icônes
 			 * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
 			 * See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
 
-   |pod_management|   	 **POD MGMT:**
+   |pod_management|   	 **GEST. POD :**
 
 			 Navigates to the Pod management menu
    |ack_alerts|		 **ACCEPTER ALERTES:**
@@ -460,7 +460,7 @@ Icônes
 			 * Button is displayed only when pod time is past expiration warning time
 			 * Upon successful dismissal, this icon will no longer appear.
 			 
-   |set_time|		 **SET TIME:**
+   |set_time|		 **DÉFINIR L'HEURE :**
    
 			 When pressed this will update the time on the pod with the current time on your phone.
    |suspend|  		 **SUSPENDRE:**
@@ -472,7 +472,7 @@ Icônes
    ====================  ===========================================
 
 
-Pod Management Menu
+Menu de Gestion du pod
 -------------------
 
 Below is an explanation of the layout and meaning of the icons on the **Pod Management** menu accessed from the **Omnipod (POD)** tab.
@@ -486,7 +486,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
    
    			      Primes and activates a new pod
 
-   |deactivate_pod|	      **Deactivate Pod**
+   |deactivate_pod|	      **Désactiver Pod**
  
  			      Deactivates the currently active pod.
 			 
@@ -494,11 +494,11 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 			      *  Use this command to deactivate a screaming pod (error 49).
 			      *  If the button is disabled (greyed out) use the Discard Pod button.
 
-   |play_test_beep| 	      **Play test beep**
+   |play_test_beep| 	      **Tester bips**
  
  			      Plays a single test beep on the pod when pressed.
 
-   |discard_pod|	      **Discard pod**
+   |discard_pod|	      **Supprimer Pod**
 
 			      Deactivates and discards the pod state of an unresponsive pod when pressed.
 			      
@@ -508,18 +508,18 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 			      * A **pod is stuck** during the pairing process between steps
 	 		      * A **pod simply does not pair at all.**
 
-   |pod_history| 	      **Pod history** 
+   |pod_history| 	      **Historique Pod** 
    
    			      Displays the active pod activity history
 
-   |rileylink_stats| 	      **RileyLink stats:**
+   |rileylink_stats| 	      **Stats RileyLink :**
    
    			      Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
 
 			      * **Settings** - displays RileyLink and active pod settings information
 			      * **History** - displays RileyLink and Pod communication history
 
-   |reset_rileylink_config|   **Reset RileyLink Config** 
+   |reset_rileylink_config|   **Réinit config. RileyLink** 
    
    			      When presssed this button resets the currently connected pod communication device configuration. 
 			      
@@ -529,20 +529,20 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 				- Communication Protocols are set
 				- Tuned Radio Frequency is set
 				
-			      * See `addtional notes <#reset-rileylink-config-notes>`__ at the end of this table
+			      * Voir les `remarques additionnelles <#remarque-concernant-reinit-config-rileyLink>`__ à la fin de ce tableau
 
-   |pulse_log|		      **Read pulse log:** 
+   |pulse_log|		      **Lire journal d'impulsion :** 
     
     			      Sends the active pod pulse log to the clipboard
    =========================  ===========================================			    
 
-*Reset RileyLink Config Notes*
+*Remarque concernant Réinit config. RileyLink*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* The primary usage of this feature is when the currently active pod communication device is not responding and communication is in a stuck state.
-* If the pod communication device is turned off and then back on, the **Reset RileyLink Config** button needs to be pressed, so that it sets these communication parameters in the pod communication device configuration.
-* If this is NOT done then AAPS will need to be restarted after the pod communication device is power cycled.
-* This button **DOES NOT** need to be pressed when switching between different pod communication devices
+* L'utilisation principale de cette fonction est lorsque le dispositif de communication de pod actuellement actif ne répond pas et que la communication est dans un état bloqué.
+* Si le périphérique de communication du pod est éteint puis rallumé, le bouton **Réinit config. RileyLink** doit être appuyé, afin de définir les paramètres dans le périphérique de communication pod.
+* Si cela n'est PAS fait, AAPS devra être redémarré après la mise sous tension du périphérique de communication pod.
+* Ce bouton **NE DOIT PAS** être appuyé lors du basculement entre les différents périphériques de communication du pod
 
 Paramètres Omnipod
 ================
@@ -682,7 +682,7 @@ This tab is well documented in the main AAPS documentation but there are a few i
 Niveaux
 ------
 
-**Insuln Level**
+**Niveau d'insuline**
 
 Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This is because it is not known exactly how much insulin was put in the pod, only that when the 2 beeps are triggered while filling the pod that over 85 units have been injected. A Pod can hold a maximum of 200 units. Priming can also introduce variance as it is not and exact process.  With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remainin in the reservoir.  
 
@@ -692,7 +692,7 @@ Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This i
   * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
 
 
-**Battery Level**
+**Niveau batterie**
 
 Battery level reporting is a setting that can be enabled to return the current battery level of pod communicaton devices like the OrangeLink and EmaLink.  The RileyLink hardware is not capable of reporting its battery level.  The battery level is reported after each communication with the pod, so when charging a linear increase may not be observed.  A manual refresh will update the current battery level.  When a supported Pod communicaton device is disconnected a value of 0% will be reported.
 
@@ -707,7 +707,7 @@ Battery level reporting is a setting that can be enabled to return the current b
 Dépannage
 ===============
 
-Pod Failures
+Erreurs Pod
 ------------
 
 Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be found `here <https://github.com/openaps/openomni/wiki/Fault-event-codes>`__ to help determine the cause.
@@ -717,7 +717,7 @@ Preventing error 49 pod failures
 
 This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the **Config Builder**\ ➜\ **General**\ ➜\ **NSClient**\ ➜\ **cog wheel**\ ➜\ **Advanced Settings** to prevent possible failures.
 
-Pump Unreachable Alerts
+Alertes Pompe hors de portée
 -----------------------
 
 It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]** and setting this to **120**.
@@ -733,7 +733,7 @@ Please note that importing settings has the possibility to import an outdated Po
 4. Install the new version of AAPS and verify that you do not have an active pod session.
 5. Import your settings and activate your new pod.
 
-Omnipod driver alerts
+Alertes Pilote Omnipod
 ---------------------
 
 please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
@@ -769,7 +769,7 @@ Below are a few examples of when an uncertain notification can occur.
 * **TBRs, Pod Statuses, Profile Switches, Time Changes** - a manual pod refresh will clear the message. By default alert beeps are disabled for this notification type.
 * **Pod Time Deviation -** When the time on the pod and the time your phone deviates too much then it is difficult for AAPS loop to function and make accurate predictions and dosage recommendations. If the time deviation between the pod and the phone is more than 5 minutes then AAPS will report the pod is in a Suspended state under Pod status with a HANDLE TIME CHANGE message. An additional **Set Time** icon will appear at the bottom of the Omnipod (POD) tab. Clicking Set Time will synchronize the time on the pod with the time on the phone and then you can click the RESUME DELIVERY button to continue normal pod operations.
 
-Best Practices
+Bonnes pratiques
 ==============
 
 Positionnement optimal Omnipod et RileyLink
@@ -789,7 +789,7 @@ The image below shows the optimal way to position the RileyLink during pod activ
 
 |Omnipod_pod_and_RileyLink_Position|
 
-Where to get help for Omnipod driver
+Où trouver de l'aide pour le pilote Omnipod
 ====================================
 
 All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerateand use the following guidelines when requesting assistance:
