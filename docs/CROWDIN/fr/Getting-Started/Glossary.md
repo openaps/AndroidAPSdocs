@@ -194,19 +194,19 @@
  <td><strong>LineageOS</strong></td>
  <td>Système d'exploitation open-source pour les smartphones, etc.<br>OS alternatifs pour les smartphones ne fonctionnant pas Android 8.1 (Oreo)<br>(lors de l'utilisation de Accu-Chek Combo)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#configuration-materielle-requise">Wiki - Pompe Combo</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#configuration-materielle-requise">Docs - Pompe Combo</a></td>
 </tr>
 <tr>
  <td><strong>Fichiers log</strong></td>
  <td>enregistrement de toutes les actions d'AAPS (utiles pour le dépannage et le débogage)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles.html#acces-aux-fichiers-log">Wiki - fichiers log</a></td>
+ <td><a href="../Usage/Accessing-logfiles.html#acces-aux-fichiers-log">Docs - fichiers log</a></td>
 </tr>
 <tr>
  <td><strong>maxIA (maxIOB)</strong></td>
  <td>fonction de sécurité - niveau d'insuline actvie maximal que AAPS ne peut pas dépasser</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#parametres-a-ajuster-lors-du-passage-d-ama-a-smb">Wiki - maxIA</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#parametres-a-ajuster-lors-du-passage-d-ama-a-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#parametres-a-ajuster-lors-du-passage-d-ama-a-smb">Docs - maxIA</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#parametres-a-ajuster-lors-du-passage-d-ama-a-smb">Docs - SMB</a></td>
 </tr>
 <tr>
  <td><strong>MiaoMiao</strong></td>
@@ -242,7 +242,7 @@
  <td><strong>Objectifs</strong></td>
  <td>programme d'apprentissage au sein d'AAPS qui vous guide étape par étape, de la boucle ouverte à la boucle fermée</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Objectives.html">Wiki - objectifs</a></td>
+ <td><a href="../Usage/Objectives.html">Docs - objectifs</a></td>
 </tr>
 <tr>
  <td><strong>OpenAPS</strong></td>
@@ -362,7 +362,7 @@
  <td><strong>CT</strong></td>
  <td>Cible Temporaire<br>augmentation / diminution temporaire de la cible glycémique (plage)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.html#cibles-temporaires">Wiki - Cibles temp.</a></td>
+ <td><a href="../Usage/temptarget.html#cibles-temporaires">Docs - Cibles temp.</a></td>
 </tr>
 <tr>
  <td><strong>RNS (UAM)</strong></td>
