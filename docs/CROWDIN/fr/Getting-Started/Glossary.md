@@ -25,7 +25,7 @@
   </td>
   
   <td>
-    <a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">Wiki - AAR</a>
+    <a href="../Usage/Open-APS-features.html#assistance-amelioree-repas-aar">Docs - AAR</a>
   </td>
 <tr>
  <td><strong>Android Auto</strong></td>
@@ -74,7 +74,7 @@
 <td><strong>Source des glycémies</strong></td>
  <td>D'où proviennent vos valeurs de glycémie?</td>
  <td>MGC / MGF</td>
- <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - source Glycémie</a></td>
+ <td><a href="../Configuration/Config-Builder.html#source-gly">Wiki - source Glycémie</a></td>
 </tr>
 <tr>
  <td><strong>Blucon Nightreader</strong></td>
