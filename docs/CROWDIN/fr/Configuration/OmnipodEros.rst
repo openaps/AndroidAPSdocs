@@ -226,7 +226,7 @@ Pour désactiver un pod (soit après son expiration soit à cause d'une erreur d
 Suspendre et reprendre l'injection d'Insuline
 ----------------------------------------
 
-Le processus ci-dessous vous montrera comment suspendre et reprendre l'injection d'insuline par la pompe.
+Le processus ci-dessous vous montre comment suspendre et reprendre l'injection d'insuline par la pompe.
 
 *REMARQUE : si vous ne voyez pas de bouton SUSPENDRE*, son affichage n'a pas été activé dans l'onglet Omnipod (POD). Activez **Montrer le bouton Suspendre l'injection dans l'onglet Omnipod** dans les paramètres `Omnipod <#parametres-omnipod>`__ sous **Autres**.
 
