@@ -305,23 +305,23 @@ Les commandes **incertaines** apparaîtront dans l'historique du pod, cependant 
 
     |Pod_History_1| |Pod_History_2|
 
-2. On the **Pod history** screen, the default category of **All (1)** is displayed showing the **Date and Time (2)** of all pod **Actions (3)** and **Results (4)** in reverse chronological order. Use your phone’s **back button 2 times** to return to the **Omnipod (POD)** tab in the main AAPS interface.
+2. Sur l'écran **Historique Pod** la catégorie par défaut **Tous (1)** est affichée avec la **Date / Heure (2)** de tous les pods **Actions (3)** et **Résultats (4)** dans l'ordre chronologique inverse. Utilisez le **bouton retour** de votre téléphone **2 fois** pour retourner à l'onglet **Omnipod (POD)** dans l'interface principale AAPS.
 
     |Pod_History_3| |Pod_History_4|
 
-View RileyLink Settings and History
+Voir les paramètres et l'historique du RileyLink
 -----------------------------------
 
-This section shows you how to review the settings of your active pod and RileyLink along with the communication history of each. This feature, once accessed, is split into two sections: **Settings** and **History**.
+Cette section vous montre comment revoir les paramètres de votre pod actif et du RileyLink ainsi que l'historique de la communication de chacun d'eux. Cette fonctionnalité, une fois sélectionnée, est divisée en deux sections : **Paramètres** et **Historique**.
 
-The primary use of this feature is when your pod communication device is out of the Bluetooth range of your phone after a period of time and the **RileyLink status** reports **RileyLink unreachable**. The **REFRESH** button on the main **Omnipod (POD)** tab will manually attempt to re-establish Bluetooth communication with the currently configured RileyLink in the Omnipod settings.
+L'utilisation principale de cette fonction est lorsque votre périphérique de communication pod est hors de la portée Bluetooth de votre téléphone après une période de temps et que l'**État du RileyLink** signale **RileyLink hors de portée**. Le bouton **ACTUALISER** de l'onglet principal **Omnipod (POD)** va essayer de rétablir manuellement la communication Bluetooth avec le RileyLink actuellement configuré dans les paramètres Omnipod.
 
-In the event the **REFRESH** button on the main **Omnipod (POD)** tab does not restore the connection to the pod communication device, please follow the additional steps below for a manual reconnection.
+Dans le cas où le bouton **ACTUALISER** de l'onglet principal **Omnipod (POD)** ne restaure pas la connexion avec le périphérique de communication pod, suivez les étapes supplémentaires ci-dessous pour une reconnexion manuelle.
 
-Manually Re-establish Pod Communication Device Bluetooth Communication
+Réétablir manuellement la communication Bluetooth du périphérique de communication Pod
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. From the **Omnipod (POD)** tab when the **RileyLink Status: (1)** reports **RileyLink unreachable** press the **POD MGMT (2)** button to navigate to the **Pod Management** menu. On the **Pod Management** menu you will see a notification appear actively searching for a RileyLink connection, press the **RileyLink stats (3)** button to access the **RileyLink settings** screen.
+1. Depuis l'onglet **Omnipod (POD)** lorsque l'**État du RileyLink : (1)** signale **RileyLink hors de portée** appuyez sur le bouton **GEST. POD (2)** pour accéder au menu de **Gestion du Pod**. Dans le menu de **Gestion du pod** vous verrez une notification montrant une recherche active d'une connexion RileyLink, appuyez sur le bouton **Stats RileyLink (3)** pour accéder à l'écran **Paramètres RileyLink**.
 
     |RileyLink_Bluetooth_Reset_1| |RileyLink_Bluetooth_Reset_2|
 
@@ -386,7 +386,7 @@ This screen provides information in reverse chronological order of each state or
 
     |RileyLink_Statistics_History_3|
     
-Fields
+Champs
 ++++++
     
    * **Date & Time**: In reverse chronological order the timestamp of each event.
@@ -443,7 +443,7 @@ Icônes
 .. table:: 
 
    ====================  ===========================================
-   |refresh_pod_status|  **ACTUALISER:** 
+   |refresh_pod_status|  **ACTUALISER :** 
    			 
 			 Sends a refresh command to the active pod to update communication
 			 
