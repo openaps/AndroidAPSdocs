@@ -31,14 +31,14 @@
  <td><strong>Android Auto</strong></td>
  <td>Affichage des notifications AAPS sur l'écran intégré au tableau de bord de votre voiture</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Android-auto.html">Wiki - Android Auto</a></td>
+ <td><a href="../Usage/Android-auto.html">Docs - Android Auto</a></td>
 </tr>
 </tr>
 <tr>
  <td><strong>APK</strong></td>
  <td>Fichier d'installation du logiciel (package d’application Android)</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - Construire le fichier APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Building-APK.html">Docs - Construire le fichier APK</a></td>
 </tr>
 <tr>
  <td><strong>Autosens</strong></td>
