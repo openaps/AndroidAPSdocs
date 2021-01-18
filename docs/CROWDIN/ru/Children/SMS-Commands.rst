@@ -126,10 +126,10 @@ AndroidAPS позволяет контролировать телефон реб
 
 болюс
 --------------------------------------------------
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
+Удаленный болюс разрешается только через 15 минут после предыдущей команды болюс или других удаленных команд (значение редактируется если для передачи команд добавлено 2 номера телефона)! * Поэтому ответ зависит от времени последнего болюса.
 
 * Болюс 1.2
-   * Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN
+   * Response A: Чтобы подать болюс 1.2 ед. ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
    * Ответ B: Удаленный болюс недоступен. Повторите позже.
 * БОЛЮС на 0.60 ЕДЫ
    * Если вы зададите необязательный параметр прием пищи MEAL, то будет задано значение временная цель прием пищи MEAL (значения по умолчанию: 90 мг/дл, 5,0 ммоль/л на 45 мин).
