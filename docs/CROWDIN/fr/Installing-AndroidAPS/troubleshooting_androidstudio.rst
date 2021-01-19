@@ -74,7 +74,7 @@ Il y a beaucoup de liens sur Internet pour déterminer si vous avez un système 
 Aucune donnée MGC
 ==================================================
 * Si vous utilisez xDrip+ : identifiez le récepteur comme c'est indiqué dans la page `Paramètres xDrip+ <../Configuration/xdrip.html#identifier-le-recepteur>`_.
-* Si vous utilisez `l'application Dexcom G6 patchée <../Hardware/DexcomG6.html#si-vous-utilisez-le-G6-avec-l-application-dexcom-patchee>`_ : Assurez vous que vous utilisez bien la version provenant du `dossier 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Si vous utilisez `l'application Dexcom G6 patchée <../latest/Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee>`_ : Assurez vous que vous utilisez bien la version provenant du `dossier 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 
 Modifications non validées
 ==================================================
@@ -88,7 +88,7 @@ Option 1 - Vérifier l'installation de git
 * git peut ne pas être installé correctement (doit être globalement disponible)
 * quand vous êtes sur Windows et que git vient juste d'être installés, vous devez redémarrer votre ordinateur ou au moins vous déconnecter et vous reconnecter une fois, pour rendre git disponible après l'installation
 * `Vérifiez l'installation de git <../Installing-AndroidAPS/git-install.html#verifier-les-parametres-de-git-dans-android-studio>`_
-* S'il n'y a aucune version de git indiquée mais que git est installé sur l'ordinateur, assurez vous que Android Studio sais où `git est installé <../Installing-AndroidAPS/git-install.html#definir-le-chemin-d-acces-git-dans-android-studio>`_ sur votre ordinateur.
+* S'il n'y a aucune version de git indiquée mais que git est installé sur l'ordinateur, assurez vous que Android Studio sais où `git est installé <../Installing-AndroidAPS/git-install.html#definir-le-chemin-dacces-git-dans-android-studio>`_ sur votre ordinateur.
 
 Option 2 - Recharger le code source
 --------------------------------------------------
