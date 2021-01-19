@@ -380,7 +380,7 @@ RileyLink et historique du Pod Actif
 
 Cet écran montre les informations dans l'ordre chronologique inverse de chaque état ou action que le RileyLink ou le pod actuellement connecté fait ou a fait. L'historique complet n'est disponible que pour le pod actuellement actif, après un changement de pod, cet historique sera effacé et seuls les événements du pod nouvellement activé seront enregistrés et affichés.
 
-1. Go to the **Omnipod (POD**) tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view the **Settings** and **History** screen. Click on the **HISTORY (3)** text to display the entire history of the RileyLink and currently active pod session.
+1. Allez dans l'onglet **Omnipod (POD)** et appuyez sur le bouton **GEST. POD (1)** pour accéder au menu de **Gestion du pod** puis appuyez sur le bouton **Stats Rileylink (2)** pour accéder à l'écran **Paramètres** et **Historique**. Cliquez sur le texte **HISTORIQUE (3)** pour afficher l'historique complet du RileyLink et de la session du pod actif.
 
     |RileyLink_Statistics_History_1| |RileyLink_Statistics_History_2|
 
@@ -389,16 +389,16 @@ Cet écran montre les informations dans l'ordre chronologique inverse de chaque 
 Champs
 ++++++
     
-   * **Date & Time**: In reverse chronological order the timestamp of each event.
-   * **Device:** The device to which the current action or state is referring.
-   * **State or Action:** The current state or action performed by the device.
+   * **Date & Heure** : horodatage de chaque événement dans l'ordre chronologique inverse.
+   * **Appareil :** L'appareil concerné par l'action ou l'état courant.
+   * **État ou Action :** L'état courant ou l'action effectuée par l'appareil.
 
 Onglet Omnipod (POD)
 =================
 
-Below is an explanation of the layout and meaning of the icons and status fields on the **Omnipod (POD)** tab in the main AAPS interface.
+Vous trouverez ci-dessous une explication de la mise en page et la signification des champs et icônes de l'onglet **Omnipod (POD)** de l'interface principale AAPS.
 
-*NOTE: If any message in the Omnipod (POD) tab status fields report (uncertain) then you will need to press the Refresh button to clear it and refresh the pod status.*
+*REMARQUE : Si un message dans les champs d'état de l'onglet Omnipod (POD) indique (incertain), vous devez appuyer sur le bouton Actualiser pour l'effacer et actualiser l'état du pod.*
 
 |Omnipod_Tab|
 
