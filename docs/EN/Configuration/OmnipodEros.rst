@@ -26,7 +26,7 @@ Hardware and Software Requirements
 
   Component that will operate AndroidAPS and send control commands to the Pod communication device.
 
-      +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <https://androidaps.readthedocs.io/en/latest/EN/index.html#component-setup>`__
+      +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <../index.html#component-setup>`__
 
 *  |Omnipod_Pod|  **Insulin Delivery Device** 
 
