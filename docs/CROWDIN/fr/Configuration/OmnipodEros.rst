@@ -405,11 +405,11 @@ Vous trouverez ci-dessous une explication de la mise en page et la signification
 Champs
 ------
 
-* **RileyLink Status:** Displays the current connection status of the RileyLink
+* **État RileyLink :** Affiche l'état actuel de la connexion du RileyLink
 
-   - *RileyLink Unreachable* - pod communication device is either not within Bluetooth range of the phone, powered off or has a failure preventing Bluetooth communication.
-   - *RileyLink Ready* - pod communication device is powered on and actively initializing the Bluetooth connection
-   - *Connected* - pod communication device is powered on, connected and actively able to communicate via Bluetooth.
+   - *RileyLink hors de portée* - Le périphérique de communication pod n'est pas à portée Bluetooth du téléphone, éteint ou a un problème empêchant la communication Bluetooth.
+   - *RileyLink Prêt* - le périphérique de communication pod est allumé et initialise la connexion Bluetooth
+   - *Connecté* - Le périphérique de communication pod est allumé, connecté et capable de communiquer via Bluetooth.
 
 * **Pod address:** Displays the current address in which the active pod is referenced
 * **LOT:** Displays the LOT number of the active pod
@@ -425,17 +425,17 @@ Champs
    - *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
    - *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
 
-* **Last bolus:** Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
-* **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
-* **Temp basal rate:** Displays the currently running Temporary Basal Rate in the following format
+* **Dernier bolus :** Affiche le dernier bolus envoyé au pod actif et il y a combien de temps entre parenthèses.
+* **Débit de Basal :** Affiche le débit Basal courant en ce moment, à partir du débit de basal du profil.
+* **Débit de Basal Temp. :** Affiche le débit de basal Temporaire actuellement en cours d'exécution dans le format suivant
 
-   - Units / hour @ time TBR was issued (minutes run / total minutes TBR will be run)
-   - *Example:* 0.00U/h @18:25 ( 90/120 minutes)
+   - Unités/heure @ heure du DBT (minutes exécutées/minutes totales prévues du DBT)
+   - *Exemple :* 0.00U/h @18:25 (90/120 minutes)
 
-* **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below this value the exact units are displayed in yellow text.
-* **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. *Note this is an approximation as priming and filling the pod is not an exact process.*
-* **Errors:** Displays the last error encountered. Consulter l'historique du `Pod <#voir-l-historique-du-pod>`__, `l'historique du RileyLink <#rileylink-et-historique-du-pod-actif>`__ et les fichiers log pour les erreurs passées et des informations plus détaillées.
-*  **Active pod alerts:** Reserved for currently running alerts on the active pod. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
+* **Réservoir:** Affiche Plus de 50 U restantes à gauche lorsque plus de 50 unités sont dans le réservoir. Sous cette valeur, les unités exactes sont affichées en jaune.
+* **Total injecté :** Affiche le nombre total d'unités d'insuline injectées depuis le réservoir du pod actif. *Notez que c'est une approximation comme amorçage et le remplissage du pod n'est pas un processus exact.*
+* **Erreurs :** Affiche la dernière erreur rencontrée. Consulter l'historique du `Pod <#voir-l-historique-du-pod>`__, `l'historique du RileyLink <#rileylink-et-historique-du-pod-actif>`__ et les fichiers log pour les erreurs passées et des informations plus détaillées.
+* **Alertes Pod actif :** Réservées pour les alertes en cours sur le pod actif. Normalement utilisé lorsque la date d'expiration du pod est au delà de 72 heures et que des alertes sonores natives sont en cours d'exécution.
 
 Icônes
 -----
