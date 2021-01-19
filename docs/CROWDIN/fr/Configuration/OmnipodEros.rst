@@ -411,14 +411,14 @@ Champs
    - *RileyLink Prêt* - le périphérique de communication pod est allumé et initialise la connexion Bluetooth
    - *Connecté* - Le périphérique de communication pod est allumé, connecté et capable de communiquer via Bluetooth.
 
-* **Pod address:** Displays the current address in which the active pod is referenced
-* **LOT:** Displays the LOT number of the active pod
-* **TID:** Displays the serial number of the pod.
-* **Firmware Version:** Displays the firmware version of the active pod.
-* **Time on Pod:** Displays the current time on the active pod.
-* **Pod expires:** Displays the date and time when the active pod will expire.
-* **Pod status:** Displays the status of the active pod.
-* **Last connection:** Displays the last time communication with the active pod was achieved.
+* **Adresse Pod :** Affiche l'adresse courante dans laquelle le pod actif est référencé
+* **LOT :** Affiche le numéro de LOT du pod actif
+* **TID :** Affiche le numéro de série du pod.
+* **Version du firmware :** Affiche la version du firmware du pod actif.
+* **Heure du Pod :** Affiche l'heure actuelle sur le pod actif.
+* **Expiration Pod :** Affiche la date et l'heure à laquelle le pod actif expirera.
+* **État du Pod :** Affiche l'état du pod actif.
+* **Dernière connexion :** Affiche l'heure de la dernière communication avec le pod actif.
 
    - *Moments ago* - less than 20 seconds ago.
    - *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
