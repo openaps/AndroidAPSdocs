@@ -282,7 +282,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 ### Section J
 
-* SUPER BOLUS : permet d'ajouter l'insuline basale des 2 prochaines heures au bolus immédiat, et un débit basal temporaire (DBT) à 0 est défini pour les 2 prochaines heures afin de ne pas avoir d'insuline supplémentaire. L'option n'est disponible que lorsque "[Activer les superbolus dans l'Assistant](../Configuration/Preferences.html#superbolus)" est activé dans les [préférences](../Configuration/Preferences.html#apercu).
+* SUPER BOLUS : permet d'ajouter l'insuline basale des 2 prochaines heures au bolus immédiat, et un débit basal temporaire (DBT) à 0 est défini pour les 2 prochaines heures afin de ne pas avoir d'insuline supplémentaire. The option only shows when "Enable [superbolus](../Configuration/Preferences#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences#overview).
 * L'idée est de fournir l'insuline plus tôt et, espérons-le, de réduire les pointes.
 * Pour plus de détails, voir [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
