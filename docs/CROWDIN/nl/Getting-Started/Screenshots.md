@@ -282,7 +282,7 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 
 ### Sectie J
 
-* Bij een SUPER BOLUS wordt de basale insuline voor de komende twee uur toegevoegd aan de maaltijdbolus, gevolgd door een tijdelijke basaalstand van nul voor de komende twee uur om te compenseren voor de extra insuline. De optie is alleen zichtbaar wanneer "Inschakelen [superbolus](../Configuration/Preferences.html#superbolus) is ingeschakeld in de [instellingen](../Configuration/Preferences.html#geavanceerde-instellingen-overzicht), onder Overzicht > Geavanceerd.
+* Bij een SUPER BOLUS wordt de basale insuline voor de komende twee uur toegevoegd aan de maaltijdbolus, gevolgd door een tijdelijke basaalstand van nul voor de komende twee uur om te compenseren voor de extra insuline. The option only shows when "Enable [superbolus](../Configuration/Preferences#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences#overview).
 * Hiermee wordt de insuline 'naar voren gehaald', zodat je een minder hoge glucosepiek zult hebben na de maaltijd.
 * Voor details [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
