@@ -43,7 +43,7 @@ extensions = [
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['../../_templates'] # path relative to languages conf.py
 
 source_parsers = {
   '.md': CommonMarkParser,
@@ -166,18 +166,19 @@ html_theme_path = []
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 #html_logo = None
-html_logo = 'drawing.png'
+html_logo = '../../drawing.png' # path relative to languages conf.py
 
 # The name of an image file (relative to this directory) to use as a favicon of
 # the docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
 #html_favicon = None
-html_favicon = 'favicon.ico'
+html_favicon = '../../favicon.ico' # path relative to languages conf.py
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+#html_static_path = ['_static']
+html_static_path = ['../../_static'] # path relative to languages conf.py
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -369,7 +370,11 @@ hosted_root = 'http://localhost:8000/'
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd:
   rtd_version = os.environ.get('READTHEDOCS_VERSION')
-  hosted_root = 'https://AndroidAPS.readthedocs.org/en/%s/' % rtd_version
+  rtd_lang = os.environ.get('READTHEDOCS_LANGUAGE')
+  rtd_sub = os.environ.get('SUB_DOMAIN') or 'AndroidAPS'
+
+  hosted_root = 'https://%s.readthedocs.org/%s/%s/' % (rtd_sub, rtd_lang, rtd_version)
+
 def setup(app):
     app.add_config_value('recommonmark_config', {
             # 'url_resolver': lambda url: github_doc_root + url,
