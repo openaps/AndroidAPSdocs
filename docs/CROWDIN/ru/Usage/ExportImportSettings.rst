@@ -21,8 +21,8 @@
 * ` Автоматизация <../Usage/Automation.html> ` _события
 * `Конфигуратор <../Configuration/Config-Builder.html>`_ настройки
 * `Локальный профиль <../Configuration/Config-Builder.html#local-profile-recommended>`_ настройки
-* `Цели <../Usage/Objectives.html>`_ статус включая `результаты экзамена <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
-* ` Параметры конфигурации <../Configuration/Preferences.html> ` _ включая ` Параметры клиента NS <../Configuration/Preferences.html#ns-client> ` _
+* `Цели <../Usage/Objectives.html>`_ статус включая `exam results <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
+* ` Параметры конфигурации <../Configuration/Preferences.html> ` _ включая `NS Client settings <../Configuration/Preferences.html#nsclient>`_
 
 Encrypted backup format
 ==================================================
@@ -48,7 +48,7 @@ Settings backup is encrypted by a master password that can be set in `Preference
   
 Выполните импорт настроек
 ==================================================
-**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings>`_.
+**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings-from-previous-aaps>`_.
 
 * Сэндвич-меню (в верхнем левом углу экрана)
 * Обслуживание

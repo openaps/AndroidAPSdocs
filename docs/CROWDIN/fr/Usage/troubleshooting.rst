@@ -8,7 +8,7 @@ Application AndroidAPS
 ==================================================
 Génération et mise à jour
 -----
-* `Certificats perdus <../Installing-AndroidAPS/troubleshooting_androidstudio.html#certificats-perdus>`_
+* `Certificats perdus <../Installing-AndroidAPS/troubleshooting_androidstudio.html#fichier-de-cles-perdu>`_
 * `Dépannage AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 Paramètres
 --------------------------------------------------
@@ -29,7 +29,7 @@ Utilisation
 
 MGC
 ==================================================
-* `Généralités <../Hardware/GeneralCGMRecommendation.rst>`_
+* `Généralités <../Hardware/GeneralCGMRecommendation.html#depannage>`_
 * `Dexcom G6 <../Hardware/DexcomG6.html#depannage-g6>`_
 * `Libre 2 <../Hardware/Libre2.html#astuces-et-depannages>`_
 * `xDrip - pas de données MGC <../Configuration/xdrip.html#identifier-le-recepteur>`_

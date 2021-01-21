@@ -6,13 +6,13 @@ Si utiliza el mismo almacén de claves a la hora de actualizar AndroidAPS usted 
 
 En caso de que ya no pueda encontrar el almacén de claves antiguo, haga lo siguiente:
 
-1. `Exportar valores <../Usage/ExportImportSettings.html#how-to-export-settings>`_ en su teléfono.
+1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`_ on your phone.
 2. Copie la configuración desde su teléfono a una ubicación externa (es decir,. su computadora, almacenamiento en la nube...).
 3. Asegúrese de que el archivo de configuración "AndroidAPS Preferences" se almacena de forma segura.
 4. Generar apk firmado de la nueva versión tal y como se describe en la página `página de actualización <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 5. Desinstale la versión anterior de AAPS en su teléfono.
 6. Instale la nueva versión de AAPS en el teléfono.
-7. ` Importar valores <../Usage/ExportImportSettings.html#how-to-export-settings>`_ - si no puede encontrarlos en su teléfono copiándolos desde el almacenamiento externo.
+7. `Import settings <../Usage/ExportImportSettings.html#export-settings>`_ - if you can't find them on your phone copy them from the external storage.
 8. Continuar con el lazo.
 
 Avisos del compilador Kotlin
@@ -136,7 +136,7 @@ Si ninguno de los consejos anteriores lo ha ayudado podría considerar la creaci
 1. `Exportar ajustes <../Usage/ExportImportSettings.html>`_ (en la versión AAPS ya instalada en tu teléfono)
 2. Preparar la contraseña de clave y la contraseña del almacén de claves
     En caso de que haya olvidado las contraseñas, puede intentar encontrarlas en los archivos del proyecto, tal como se describe en "aquí <https://youtu.be/nS3wxnLgZOo>"_. O simplemente utiliza un almacén de claves nuevo. 
-3. Cree la aplicación desde cero, tal como se describe en 'aqui <../Installing-AndroidAPS/Building-APK.html#download-code-and-adicional-components>` _.
+3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
 4.	Cuando hayas creado el APK exitosamente borra la app existente de su teléfono, transfiere la nueva apk al teléfono e instálela.
 5. `Importar valores <../Usage/ExportImportSettings.html>`_
 

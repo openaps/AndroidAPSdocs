@@ -12,7 +12,7 @@ Funkcje
 * Rodzice mogą zdalnie śledzić wszystkie istotne dane, takie jak poziom glukozy, węglowodany na pokładzie, insulina na pokładzie itp. przy użyciu aplikacji ** NSClient * * na swoim telefonie. Ustawienia muszą być takie same w AndroidAPS i NSClient.
 * Rodzice mogą być alarmowani za pomocą aplikacji ** xDrip w trybie follower ** na swoim telefonie.
 * Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_ secured by two-factor authentication.
-* Zdalna zmiana profilu i celów tymczasowych za pośrednictwem aplikacji NSClient.
+* Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see 'release notes for Version 2.8.1.1 <https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#important-hints>'_ for further details.
 
 Narzędzia i aplikacje do zdalnego monitorowania
 --------------------------------------------------

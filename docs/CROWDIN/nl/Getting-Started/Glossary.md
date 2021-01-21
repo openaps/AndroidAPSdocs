@@ -146,7 +146,7 @@
  <td><strong>git</strong></td>
  <td>Versiebeheer systeem voor het bijhouden van veranderingen in computerbestanden. Zodat meerdere mensen tegelijk aan de broncode kunnen werken. <br>-> nodig voor APK updates</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - APK bijwerken</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - APK bijwerken</a></td>
 </tr>
 <tr>
  <td><strong>Github</strong></td>

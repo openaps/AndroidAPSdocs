@@ -30,7 +30,7 @@ Pomocník s profilem nabízí datové sady dětských pacientů do 18 let ze dvo
 6. Klikněte na tlačítko "POROVNAT PROFILY" nahoře na obrazovce.
 7. Zobrazí se porovnání dvou upravených profilů.
 
-Až budete spokojeni s úpravami profilu, můžete `klonovat profil <.../Configuration/profilehelper.html#clone-profile>`_, jak je popsáno níže.
+Once you are fine with the profile adjustments you can `clone the profile <../Configuration/profilehelper.html#clone-profile>`_ as described below.
 
 Porovnání dvou profilů
 =======================================

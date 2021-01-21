@@ -13,7 +13,7 @@ Tikslas 1: vizualizacijos ir monitoringo nustatymai, bazės ir koeficientų anal
 * Pasirinkite tinkamą pompą Konfigūracijoje (pasirinkite Virtualią pompą, jei naudojate pompos modelį, kurio AndroidAPS sistema nepalaiko), kad būtų užtikrinta jos komunikacija su AndroidAPS.  
 * Jei naudojate DanaR pompą, įsitikinkite, kad laikėtės `DanaR insulino pompos <../Configuration/DanaR-Insulin-Pump.html>`_ instrukcijų, kad užtikrintumėte gerą ryšį tarp pompos ir AndroidAPS.
 * Vykdykite instrukcijas `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ puslapyje, kad įsitikintumėte, kad Nightscout gali priimti ir rodyti šiuos duomenis.
-NSClient URL turi būti įvestas **BE /api/v1/** pabaigoje - žr. `NSClient nustatymai <../Configuration/Preferences.html#ns-client>`_.
+* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#nsclient>`_.
 
 *Jums gali tekti palaukti, kol bus perskaityta kita glikemijos reikšmė, kol AndroidAPS ją atpažins.*
 
@@ -58,7 +58,7 @@ Sumažinti pranešimų skaičių
 
 Tikslas 5: perpraskite atvirojo ciklo veikimą bei laikinos bazės rekomendacijas
 ====================================================================================================
-* Pradėkite suprasti kiekvienos laikinos valandinės bazės rekomendacijos argumentus, peržiūrėdami `Pagrindinės logikos supratimo straipsnį <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_, taip pat `Prognozavimo kreives pagrindiniame AndroidAPS ekrane <../Getting-Started/Screenshots.html#section-e>`_/Nightscout ir skaičiavimo rezultatų santrauką jūsų OpenAPS skirtuke.
+* Start to understand the thinking behind the temp basal recommendations by looking at the `determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ and both the `forecast line in AndroidAPS homescreen <../Getting-Started/Screenshots.html#prediction-lines>`_/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
  
 Tikslinę glikemiją greičiausiai norėsite nustatyti aukštesnę nei įprastai, kol įsitikinsite skaičiavimais ir nustatymais.  Sistema leidžia
 
@@ -78,7 +78,7 @@ Pagrindinio ekrano grafike (žalios linijos), kuriame norite palaikyti gliukozė
 Jei naudojate virtualią pomp ir atvirą ciklą - nespauskite Patvirtinti šio tikslo pabaigoje.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. image:: ./images/blank.png
+.. image:: ../images/blank.png
   :alt: tuščias
 
 Tikslas 6: pradėkite Uždaro ciklo (Closed Loop) režimą su pompos stabdymu esant žemai gliukozei
@@ -137,7 +137,7 @@ Tikslas 10: dienos metu aktyvuokite papildomas oref1 funkcijas, tokias kaip supe
 Tikslas 11: Automatizavimas
 ====================================================================================================
 * Jūs turite pradėti tikslą 11, kad galėtumėte naudoti `Automatizavimu <../Usage/Automation.html>`_.
-* Įsitikinkite, kad jūs užbaigėte visus tikslus, įskaitant egzaminą `<../Usage/Objectives.html#objective-3-proof-your-knowledge>`_.
+* Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-prove-your-knowledge>`_.
 * Ankstesnių (iki šiol neužbaigtų) tikslų atlikimas neturės įtakos kitiems tikslams, kuriuos jau užbaigėte. Visi užbaigti tikslai bus išsaugoti!
 
 

@@ -19,7 +19,7 @@ Spalis 2020
 * Accu-Chek Combo - atnaujinimas `laiko nustatymas keičiantis vasaros/žiemos laikui <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
 * AccuChek Insight - parinktis dėl `absoliučių reikšmių įkėlimo <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * Žurnalų įrašai - daugiau detalių apie `katalogo vietą <../Usage/Accessing-logfiles.html>`_
-* Omnipod Eros - `būklės atnaujinimas <../Getting-Started/Future-possible-Pump-Drivers.html#insulet-omnipod-with-old-eros-pods-homepage>`_
+* Omnipod Eros - `status update <../Getting-Started/Future-possible-Pump-Drivers.html#pumps-that-are-loopable>`_
 * `SMS komandos - laiko sinchronizacija <../Children/SMS-Commands.html>`_
 Rugsėjis 2020
 ==================================================
@@ -31,9 +31,9 @@ Rugsėjis 2020
 * `Keliavimas per laiko juostas <../Usage/Timezone-traveling.html>`_ su Libre 2
 2020 m. gegužė
 ==================================================
-* "Ištęstas bolusas tik Dana ir Insight pompose <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
+* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `Insight vibracijos išjungimas <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (tik programinė įranga 3.x)
-* `Minimalaus pokyčio lygis <../Configuration/Preferences.html#minimal-request-rate>`_ siekiant sumažinti pranešimų kiekį atviro ciklo režime
+* `Minimal request rate <../Configuration/Preferences.html#minimal-request-change>`_ to reduce number of notifications in open loop mode
 * `Modifikuota Libre Link programėlė <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - patikrinkite ar tinkamai modifikuota
 * `Prognozuojamosios kreivės <../Getting-Started/Screenshots.html#prediction-lines>`_ - daugiau informacijos
 2020 m. balandis
@@ -44,11 +44,11 @@ Rugsėjis 2020
 ==================================================
 * 'Kurti apk su "Android" Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
 * `DanaRS su programien įranga v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **šiuo metu negali būti naudojama su AndroidAPS!**
-* "Ištęstas bolusas ir perėjimas prie tviro ciklo <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
+* `Extended bolus and switch to open loop <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * 'Atnaujinti apk su "Android" Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
 Vasaris 2020
 ==================================================
-* `Automatikos apribojimai <../Usage/Automation.html#good-practice--caveats>`_
+* `Automation caveats <../Usage/Automation.html#good-practice-caveats>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - trumpas paaiškinimas
 * 'Priežiūros alternatyvos <../Usage/CPbefore26.html>`_
 * `Ištęsto boluso <../Usage/Extended-Carbs.html#id1>`_ funkcija - uždaras ciklas bus išjungtas
@@ -73,7 +73,7 @@ Lapkritis 2019
 * `Dexcom G6 siųstuvo keitimo atnaujinimas <../Configuration/xdrip.html#replace-transmitter>`_
 * Kodėl ištęstas bolusas neveikia uždaame cikle <../Usage/Extended-Carbs.html#id1>`_
 * 'DUK - sportas <../Getting-Started/FAQ.html#sports>`_
-* `Pradinis ekranas - diagramos eilutės <../Getting-Started/Screenshots.html#section-e>`_
+* `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-f-main-graph>`_
 * ` Insight - Išjunkite absoliučias vertes NS Client programoje <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * ` Medtronic pompa - galimi dvigubi įrašai <../Configuration/MedtronicPump.html> `_
 * ` Naujos Freestyle Libre 2 instrukcijos <../Hardware/Libre2.html>`_
@@ -82,7 +82,7 @@ Lapkritis 2019
 * `Android Studio trikčių šalinimas <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
 * ` Trikčių šalinimas - nuorodos <../Usage/troubleshooting.html> ` _
 * `Atnaujinimas - trumpas vadovas patyrusiems vartotojams <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users> ` _
-* Dokumentai - atnaujinimas 'koregavimas <../make-a-PR.html#code-syntax>`_ ir 'vertimas <../translations.html#translate-wiki-pages>`_.
+* Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-docs-pages>`_.
 
 Spalis 2019
 ==================================================
@@ -100,9 +100,9 @@ Spalis 2019
 Rugsėjis 2019
 ==================================================
 * `Automatizavimas <../Usage/Automation.html>`_
-* `Bolus skaičiuoklė <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - lėtai įsisavinami angliavandeniai
+* `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorbtion
 * `Nightscout saugumas <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
-* `Profilio laiko perstūmimas <../Usage/Profiles.html#timeshift>`_ (daugiau informacijos)
+* `Profile timeshift <../Usage/Profiles.html#time-shift>`_ (more details)
 * `Nuotolinis stebėjimas<../Children/Children.html>`_
 * `Kas yra uždaro ciklo sistema? <../Getting-Started/ClosedLoop.html>`_
 

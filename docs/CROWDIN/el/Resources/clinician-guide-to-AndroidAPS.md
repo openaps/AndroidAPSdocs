@@ -8,7 +8,7 @@
 
 Για να ξεκινήσετε να χρησιμοποιείτε το AndroidAPS, ακολουθήστε τα παρακάτω βήματα:
 
-* Βρείτε μια [ συμβατή αντλία ](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), μια [ συμβατή συσκευή Android ](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) και μια[ συμβατή πηγή CGM ](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started-with-androidaps).
+* Find a [compatible pump](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
 * [ Κάντε λήψη του πηγαίου κώδικα AndroidAPS και δημιουργήστε το λογισμικό ](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
 * [ Διαμορφώστε το λογισμικό για να μιλήσετε στις συσκευές διαβήτη και καθορίστε τις ρυθμίσεις και τις προτιμήσεις ασφαλείας ](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
 

@@ -6,13 +6,13 @@ Jei atnaujindami AndroidAPS naudojate tą pačią raktų saugyklą, savo išmani
 
 Jei vis dėlto nerandate ankstesnės raktų saugyklos, galite elgtis taip:
 
-1. `Eksportuokite nustatymus <../Usage/ExportImportSettings.html#how-to-export-settings>`_ savo telefone.
+1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`_ on your phone.
 2. Nukopijuokite failą su nustatymais iš savo išmaniojo telefono į išorinės saugyklos vietą (pvz. jūsų kompiuteryje, debesijos saugykloje...).
 3. Įsitikinkite, kad failas „AndroidAPS Preferences“ išsaugotas saugiai.
 4. Sukurkite naujos versijos pasirašomą apk failą, kaip aprašyta puslapyje `Atnaujinimas <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 5. Pašalinkite ankstesnę AAPS versiją iš savo išmaniojo telefono.
 6. Įdiekite naują AAPS versiją į savo išmanųjį telefoną.
-7. `Importuokite savo nustatymus <../Usage/ExportImportSettings.html#how-to-export-settings>`_ - jei jų nerandate savo išmaniajame telefone, tiesiog nukopijuokite juos iš išorinės saugyklos vietos į išmanųjį telefoną.
+7. `Import settings <../Usage/ExportImportSettings.html#export-settings>`_ - if you can't find them on your phone copy them from the external storage.
 8. Toliau naudokitės uždaru ciklu.
 
 Kotlin compiler perspėjimas
@@ -136,7 +136,7 @@ If non of the above tips helped you might consider building the app from scratch
 1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
 2. Have your key password and key store password ready
     In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components>`_.
+3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
 4.	When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
 5. `Import settings <../Usage/ExportImportSettings.html>`_
 

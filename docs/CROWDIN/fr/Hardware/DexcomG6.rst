@@ -89,7 +89,7 @@ Dépannages spécifiques à Dexcom G6
 
 Dépannage général
 --------------------------------------------------
-Les dépannages généraux concernant les MGC peuvent être trouvés `ici <../GeneralCGMRecommendation.html#depannage>`_.
+Les dépannages généraux concernant les MGC peuvent être trouvés `ici <./GeneralCGMRecommendation.html#depannage>`_.
 
 Nouvel émetteur avec capteur en cours
 --------------------------------------------------

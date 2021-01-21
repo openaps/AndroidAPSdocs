@@ -146,7 +146,7 @@
  <td><strong>git</strong></td>
  <td>versijos valdymo sistema, skirta kompiuterių failų pokyčių stebėjimui ir darbui su šiais failais koordinuoti <br> -> būtina, kai reikia atnaujinti APK</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - atnaujinti APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - atnaujinti APK</a></td>
 </tr>
 <tr>
  <td><strong>GitHub</strong></td>

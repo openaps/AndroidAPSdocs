@@ -21,8 +21,8 @@ Be kita ko, eksportuojami šie parametrai:
 * `Automatizavimo įvykiai <../Usage/Automation.html>`_
 * `Konfigūratoriaus <../Configuration/Config-Builder.html>`_ parametrai
 * 'Vietinio profilio <../Configuration/Config-Builder.html#local-profile-recommended>`_ parametrai
-* `Tikslų <../Usage/Objectives.html>`_ statusas, įskaitant egzaminų rezultatus <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
-* `Nustatymai <../Configuration/Preferences.html>`_, įskaitant `NS Kliento nustatymus <../Configuration/Preferences.html#ns-client>`_
+* `Tikslų <../Usage/Objectives.html>`_ statusas, įskaitant `exam results <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
+* `Nustatymai <../Configuration/Preferences.html>`_, įskaitant `NS Client settings <../Configuration/Preferences.html#nsclient>`_
 
 Šifruotas kopijos formatas
 ==================================================
@@ -48,7 +48,7 @@ Eksportuoti nustatymus
   
 Importuokite nustatymus
 ==================================================
-**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings>`_.
+**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings-from-previous-aaps>`_.
 
 * Paspauskite trijų linijų meniu (viršutiniame kairiajame kampe)
 * Servisas

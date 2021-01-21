@@ -30,7 +30,7 @@ AAPS vous avertit si vous êtes sur le point de faire un bolus avec des GA d'un 
 Comment AndroidAPS détecte-t-il les mauvaises valeurs de GA ? 
 --------------------------------------------------
 
-Normalement, AAPS détecte l'absorption des glucides par des écarts de glycémie. Si vous avez entré des glucides, mais que AAPS ne peut pas voir leur absorption estimée via les variations de GLY, il utilisera la méthode `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#parametres-d-absorption>`_ pour calculer l'absorption à la place (appelée 'fallback'). Comme cette méthode ne calcule que l'absorption minimale de glucides sans tenir compte des écarts de GLY, elle peut conduire à des valeurs de GA incorrectes.
+Normalement, AAPS détecte l'absorption des glucides par des écarts de glycémie. Si vous avez entré des glucides, mais que AAPS ne peut pas voir leur absorption estimée via les variations de GLY, il utilisera la méthode `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#parametres-dabsorption>`_ pour calculer l'absorption à la place (appelée 'fallback'). Comme cette méthode ne calcule que l'absorption minimale de glucides sans tenir compte des écarts de GLY, elle peut conduire à des valeurs de GA incorrectes.
 
 .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
   :alt: soupçon de GA erronés
