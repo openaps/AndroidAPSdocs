@@ -12,7 +12,7 @@ Funktionen
 * Die Eltern können aus der Ferne alle relevanten Daten wie Glukosewerte, aktive Kohlenhydrate, aktives Insulin usw. sehen. Dazu können sie die **NSClient App** auf ihrem Smartphone verwenden. Du musst in AndroidAPS und NSClient die gleichen Einstellungen verwenden.
 * Alarme auf den Smartphones der Eltern sind durch Einsatz **xDrip+ im Follower Modus** möglich.
 * Die Fernsteuerung von AndroidAPS mittels `SMS-Befehlen <../Children/SMS-Commands.html>`_ ist durch eine Zwei-Faktor-Authentifizierung abgesichert.
-* Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see 'release notes for Version 2.8.1.1 <https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#important-hints>'_ for further details.
+* Fernsteuerung über NSClient-App wird nur empfohlen, wenn Deine Synchronisation gut funktioniert (d.h. Du siehst keine unerwünschten Datenänderungen, wie z.B. Modifikation von TT, TBR usw.). Siehe `Release Notes für Version 2.8.1.1 <https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#wichtige-hinweise>`_ für weitere Details.
 
 Tools und Apps für die Fernüberwachung
 --------------------------------------------------
