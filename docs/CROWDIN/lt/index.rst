@@ -115,6 +115,7 @@ AndroidAPS vaikams
    
    Nuotolinis stebėjimas <./Children/Children.rst>
    SMS komandos <./Children/SMS-Commands.rst>
+   Profile helper <.//Configuration/profilehelper.rst>
    
 
 Trikčių šalinimas
