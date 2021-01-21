@@ -8,7 +8,7 @@
 
 Norėdami naudoti AndroidAPS, turite atlikti šiuos veiksmus:
 
-* Find a [compatible pump](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
+* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
 * [Atsisiųsti AndroidAPS programinį kodą ir „sukurti“ programinę įrangą ](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
 * [Konfigūruoti programinę įrangą taip, kad ji "susikalbėtų" su diabeto priežiūros prietaisais, nustatyti asmeninius bei saugos parametrus](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
 
