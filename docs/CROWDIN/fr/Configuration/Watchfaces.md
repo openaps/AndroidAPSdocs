@@ -16,17 +16,17 @@ Vous pouvez installer l'application AndroidAPS sur votre montre connectée **Wea
 
 Pour compiler la version Wear OS de AAPS vous devez choisir la version "fullRelease" quans vous [générez l'APK](../Installing-AndroidAPS/Building-APK.md) (ou "pumpRelease" qui permet juste de contrôler à distance la pompe sans boucle).
 
-You can then update or install the watchface via the PlayStore on your watch.
+Vous pouvez ensuite mettre à jour ou installer les cadrans via le Play Store sur votre montre.
 
 ### Configuration sur le téléphone
 
-Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder#wear).
+Dans AndroidAPS, dans le Générateur de configuration, vous devez [activer Wear](../Configuration/Config-Builder#wear).
 
 ## Contrôler AAPS depuis la montre
 
-AndroidAPS is designed to be *controlled* by Android Wear watches. Si vous voulez commander AAPS depuis la montre (bolus etc) alors dans les "Paramètres Wear" vous devez activer "Commandes depuis la montre".
+AndroidAPS est conçu pour être *contrôlé* par les montres Android Wear. Si vous voulez commander AAPS depuis la montre (bolus etc) alors dans les "Paramètres Wear" vous devez activer "Commandes depuis la montre".
 
-The following functions can be triggered from the watch:
+Les fonctions suivantes peuvent être déclenchées à partir de la montre :
 
 * définir une cible temporaire
 * utiliser l'assistant bolus (les paramètres à prendre en compte dans le calculs peuvent être définis dans [Paramètres de l'Assistant](../Configuration/Config-Builder#wear) sur le téléphone)
@@ -41,49 +41,49 @@ The following functions can be triggered from the watch:
 
 ## Cadrans AAPS
 
-There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+Il y a plusieurs cadrans à choisir qui incluent le delta moyen, l'IA, le débit temporaire de basal actuel et les profils de basal + le graphique de lecture MGC.
 
-Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+Vérifiez que les notifications d'AndroidAPS ne sont pas bloquées sur la montre. La confirmation de l'action (par ex. bolus, cible temporaire) est envoyée par une notification que vous devrez glisser et cocher.
 
-To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
+Pour accéder plus rapidement au menu AAPS, appuyez deux fois sur votre Gly. Avec un double appui sur la courbe Gly vous pouvez changer l'échelle de temps.
 
 ## Cadrans disponibles
 
-![Available watchfaces](../images/Watchface_Types.png)
+![Cadrans disponibles](../images/Watchface_Types.png)
 
 ### Nouveau cadran depuis AndroidAPS 2.8
 
-![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
+![Cadran Digital](../images/Watchface_DigitalStyle.png)
 
 * La couleur, les lignes et le cercle sont personnalisables via la roue crantée du menu de sélection du cadran.
 
 ## Cadran AAPSv2 - Légende
 
-![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
+![Légende du cadran AndroidAPSv2](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A - temps écoulé depuis le dernier calcul de la boucle
 
-B - CGM reading
+B - lecture du capteur MGC
 
-C - minutes since last CGM reading
+C - nombre de minutes depuis la dernière lecture MGC
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - changement par rapport à la dernière lecture MGC (en mmol ou mg/dl)
 
-E - average change CGM reading last 15 minutes
+E - variation moyenne des lectures MGC depuis 15 minutes
 
-F - phone battery
+F - niveau de batterie du téléphone
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - débits de basal (en U/h ou en % pendant un DBT)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - IG (BGI) Impact Glycémique -> l'augmentation ou diminution que "devrait" avoir la glycémie en fonction de l'activité de l'insuline seule.
 
-I - carbs (carbs on board | e-carbs in the future)
+I - glucides (glucides actifs | e-glucides à venir)
 
-J - insulin on board (from bolus | from basal)
+J - Insuline Active (de bolus | de basal)
 
 ## Accès menu principal de AAPS
 
-To access main menu of AAPS you can use on of following options:
+Pour accéder au menu principal d'AAPS, vous pouvez utiliser les options suivantes :
 
 * double appui sur votre valeur de glycémie
 * sélectionnez l'icône AAPS dans les applications de la montre
@@ -91,11 +91,11 @@ To access main menu of AAPS you can use on of following options:
 
 ## Paramètres (dans la montre)
 
-To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+Pour accéder aux paramètres du cadran, entrez dans le menu principal AAPS, faites glisser vers le haut et sélectionnez "Paramètres".
 
-Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
+L'étoile remplie est pour l'état activé (**On**), et l'étoile vide indique que le paramètre est désactivé (**Off**) :
 
-![Settings on/off](../images/Watchface_Settings_On_Off.png)
+![Paramètres On/Off](../images/Watchface_Settings_On_Off.png)
 
 ### Paramètres du compagnon AAPS
 
@@ -249,7 +249,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ## Afficher les données Nightscout
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Il y a plusieurs cadrans à choisir qui incluent le delta moyen, l'IA, le débit temporaire de basal actuel et les profils de basal + le graphique de lecture MGC.
 
 # Pebble
 
