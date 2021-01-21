@@ -39,7 +39,7 @@ Iedere keer dat je eCarbs invoert, wordt er in jouw Careportal automatisch een o
 
 Vertraagde bolus
 ==================================================
-Zoals hierboven vermeld, werken vertraagde of multiwave bolussen niet echt in een closed loop. `Lees verderop <../Usage/Extended-Carbs.html#waarom-vertraagde-bolussen-niet-werken-in-een-closed-loop>`_ waarom
+Zoals hierboven vermeld, werken vertraagde of multiwave bolussen niet echt in een closed loop. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ for details
 
 Vertraagde bolus en overschakelen naar open loop - alleen voor Dana en Insight pomp
 -----------------------------------------------------------------------------

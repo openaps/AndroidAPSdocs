@@ -6,13 +6,13 @@
 
 На случай, если вы не можете найти свое старое хранилище ключей, выполните следующие действия:
 
-1. `Экспорт настроек <../Usage/ExportImportSettings.html#how-to-export-settings>`_ на вашем телефоне.
+1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`_ on your phone.
 2. Скопируйте настройки вашего телефона во внешнее местоположение (напр. ваш компьютер, служба облачного хранения...).
 3. Убедитесь, что файл параметров "Параметры AndroidAPS" сохранен.
 4. Сгенерируйте подписанный apk новой версии, как описано на странице обновления <../Instaling-AndroidAPS/Update-to-new-version.html> ` _.
 5. Деинсталлируйте предыдущую версию AAPS на вашем телефоне.
 6. Установите новую версию AAPS на свой телефон.
-7. `Импортируйте настройки <../Usage/ExportImportSettings.html#how-to-export-settings>`_ - если не можете найти их на вашем телефоне, скопируйте их из внешнего хранилища.
+7. `Import settings <../Usage/ExportImportSettings.html#export-settings>`_ - if you can't find them on your phone copy them from the external storage.
 8. Продолжайте пользоваться циклом.
 
 Предупреждение компилятора Kotlin
@@ -137,7 +137,7 @@ ContextEdit.
 1. `Экспортируйте параметры <../Usage/ExportImportSettings.html>`_ (в версии AAPS, уже установленной на телефоне)
 2. Подготовьте пароль ключа и пароль хранилища
     В случае, если вы забыле пароли, вы можете попытаться найти их в файлах проекта, как описано здесь <https://youtu.be/nS3wxnLgZOo>` _. Или просто создайте новый файл хранения ключей. 
-3. Постройте приложение с нуля, как описано `здесь <../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components>`_.
+3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
 4.	Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на ваш телефон и установите.
 5. `Импортируйте настройки <../Usage/ExportImportSettings.html>`_
 

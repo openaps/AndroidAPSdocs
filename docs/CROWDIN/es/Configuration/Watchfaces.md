@@ -16,30 +16,17 @@ Puede instalar la aplicación AndroidAPS en su reloj **basado en Wear OS**. La v
 
 Para construir la version de AAPS para Wear OS necesitas seleccionar la variante de la build "fullRelease" cuando [Construyes la APK](../Installing-AndroidAPS/Building-APK.md) (o la variante "pumpRelease" que te permitirá controlar la bomba de forma remota sin ejecutar el lazo).
 
-¡Asegúrese de que las versiones de teléfono y de Wear de AAPS están firmadas con las mismas claves!
-
-To install the APK on Android Wear smartwatch, follow these steps:
-
-1. Enable developer mode on the watch. Press button on watch and click `settings` then `system` then `about` and repeatedly click the `build number` at least 7 times until it confirms you are a developer.
-2. Enable ADB on watch. Press button on watch and click `settings` then `developer options` then `adb debugging` and `debug over wifi`. Note down the IP address you get next to this, it will be in the form of an IP address followed by :5555.
-3. On PC, note down the file location of `wear-full-release.apk` (will be in the same folder as `app-full-release.apk` which you installed on your phone).
-4. On PC, get the command prompt (type `command` in the search box). 
-5. In command prompt: `cd c:\Program Files (x86)\Android\android-sdk\platform-tools`.
-6. In command prompt: `adb connect [enter the IP address from step 2 including the :5555]`.
-7. In command prompt: `adb install -r [enter path from step 3]\wear-full-release.apk`.
-8. That will install AAPS on the watch, and AAPS watchfaces will be available to select.
-
-Cuando use la versión de Wear de AAPS, actualícela siempre junto con la versión del teléfono de la aplicación; mantenga sus versiones sincronizadas. To do this you'll need to follow the steps above again, although you won't need to reenable developer mode.
+You can then update or install the watchface via the PlayStore on your watch.
 
 ### Configuración en el teléfono
 
-Dentro de AndroidAPS, en la "Tabla de configuraciones" necesitas activar ["habilitar Wear"](../Configuration/Config-Builder#wear).
+Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder#wear).
 
 ## Control AAPS desde el reloj
 
-AndroidAPS está diseñado para ser controlado por relojes Android Wear. Si desea bolo etc. desde el reloj entonces dentro de "Configuración de Reloj" que necesitas para activar "Controles desde el Reloj".
+AndroidAPS is designed to be *controlled* by Android Wear watches. Si desea bolo etc. desde el reloj entonces dentro de "Configuración de Reloj" que necesitas para activar "Controles desde el Reloj".
 
-Las siguientes funciones pueden activarse desde el reloj:
+The following functions can be triggered from the watch:
 
 * Establecer un objetivo temporal
 * utilizar el calculador de bolos (las variables de cálculo se pueden definir en [configuración ](../Configuration/Config-Builder#wear) en el teléfono)
@@ -54,15 +41,15 @@ Las siguientes funciones pueden activarse desde el reloj:
 
 ## Esferas de AAPS
 
-Hay varias pantallas para elegir que incluyen datos como: delta promedio, IOB, dosis basal temporal activa, perfiles basales o gráfico de lecturas del medidor contínuo (CGM).
+There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
-Asegúrate de que las notificaciones de AndroidAPS no estén bloqueadas en el reloj. Para poder confirmar cada acción (por ejemplo, administrar bolo, fijar objetivo temporal, etc.) recibirás una notificación que tendrás que deslizar y aceptar.
+Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
 
-Para ir más rápido al menú de AAPS, haga una doble pulsación en su BG. Con una doble pulsación en la curva de BG, puede cambiar la escala de tiempo..
+To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
 ## Pantallas disponibles
 
-![Pantallas disponibles](../images/Watchface_Types.png)
+![Available watchfaces](../images/Watchface_Types.png)
 
 ### New watchface as of AndroidAPS 2.8
 
@@ -262,7 +249,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ## Ver datos de Nightscout
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Hay varias pantallas para elegir que incluyen datos como: delta promedio, IOB, dosis basal temporal activa, perfiles basales o gráfico de lecturas del medidor contínuo (CGM).
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
 # Pebble
 

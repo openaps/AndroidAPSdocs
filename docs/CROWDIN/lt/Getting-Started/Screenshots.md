@@ -282,7 +282,7 @@ Paprastai faktinė glikemijos kreivė baigsis šių eilučių viduryje arba neto
 
 ### Skiltis J
 
-* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable [superbolus](../Configuration/Preferences.html#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences.html#overview).
+* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable [superbolus](../Configuration/Preferences#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences#overview).
 * The idea is to deliver the insulin sooner and hopefully reduce spikes.
 * For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -328,7 +328,7 @@ Paprastai faktinė glikemijos kreivė baigsis šių eilučių viduryje arba neto
    * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
    * Make sure to read the [details](../Usage/Extended-Carbs#id1) before using this option.
 
-### Careporal - section N
+### Careportal - section N
 
 * Displays information on
    
@@ -348,7 +348,7 @@ Paprastai faktinė glikemijos kreivė baigsis šių eilučių viduryje arba neto
    
    ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
 
-### Careporal - section O
+### Careportal - section O
 
 * BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
 * Prime/Fill allows you to record pump site and insulin cartridge change.

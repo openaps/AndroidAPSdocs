@@ -7,7 +7,6 @@ January 2021
 * Dexcom G6 with `Build Your Own Dexcom App <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_
 * Libre smart reader `battery level <../Getting-Started/Screenshots.html#sensor-level-battery>`_
 * `Objectives <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ - new questions
-* Omnipod Eros - `loopable in AAPS master <../Configuration/OmnipodEros.html>`_
 * Other `new AndroidAPS 2.8.0 functions <../Installing-AndroidAPS/Releasenotes.html#version-2-8-0>`_
 December 2020
 ==================================================

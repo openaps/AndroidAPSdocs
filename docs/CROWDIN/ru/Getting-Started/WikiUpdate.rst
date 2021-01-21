@@ -19,7 +19,7 @@ October 2020
 * Accu-Chek Combo - update `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
 * Accu-Chek Insight - Option to `upload absolute values <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * Logs - more details about `folder location <../Usage/Accessing-logfiles.html>`_
-* Omnipod Eros - `status update <../Getting-Started/Future-possible-Pump-Drivers.html#insulet-omnipod-with-old-eros-pods-homepage>`_
+* Omnipod Eros - `status update <../Getting-Started/Future-possible-Pump-Drivers.html#pumps-that-are-loopable>`_
 * `SMS commands - time sync <../Children/SMS-Commands.html>`_
 September 2020
 ==================================================
@@ -31,9 +31,9 @@ September 2020
 * `Пересечение часовых поясов <../Usage/Timezon-traveling.html> ` _ с Libre 2
 Май 2020
 ==================================================
-* `Пролонгированный болюс только для помп Dana + Insight <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
+* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `Отключение вибрации на помпе Insight < ../Configuration/Accu-Ch-Insight-Pump.html#vibration> ` _ (только на прошивке 3.x)
-* `Минимальный уровень запроса на отключение уведомлений < ../Configuration/Preferences.html#minimal-request-rate> ` _ для сокращения числа уведомлений в режиме открытого цикла
+* `Minimal request rate <../Configuration/Preferences.html#minimal-request-change>`_ to reduce number of notifications in open loop mode
 * `Модифицированное приложение Libre Link < ../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app> ` _- проверьте правильность патча
 * `Prediction lines <../Getting-Started/Screenshots.html#prediction-lines>`_ - more details
 Апрель 2020
@@ -44,11 +44,11 @@ September 2020
 ==================================================
 * Построение APK в Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
 * `DanaRS с прошивкой v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **в настоящее время не может использоваться для AndroidAPS!**
-* `Пролонгированный болюс и переключение на открытый цикл <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop>`_
+* `Extended bolus and switch to open loop <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `Обновление APK в Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
 Февраль 2020
 ==================================================
-Пояснения по автоматизации
+* `Automation caveats <../Usage/Automation.html#good-practice-caveats>`_
 * ` Autosens <../Usage/Open-APS-features.html#autosens> ` _-краткое объяснение
 * '' Альтернативы порталу терапии <../Usage/CPbefore26.html> ` _
 * `Пролонгированный болюс <../Usage/Extended-Carbs.html > ` _ функция - замкнутый цикл будет отключена
@@ -73,7 +73,7 @@ September 2020
 Замена трансмиттера Dexcom G6 - обновление <../Configuration/xdrip.html#replace-transmitter>`_
 * `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#id1>`_
 * ` FAQ-занятия спортом <../Начало/FAQ.html#спорт> ` _
-* `Главный экран - линии на графике <../Getting-Started/Screenshots.html#section-e>`_
+* `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-f-main-graph>`_
 * ` Insight-Выключить абсолютные значения в NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * ` Помпа Medtronic - возможные двойные записи <../Configuration/MedtronicPump.html> ` _
 * ` Новые инструкции по Freestyle Libre 2 <../Hardware/Libre2.html> ` _
@@ -82,7 +82,7 @@ September 2020
 * ` Устранение неполадок Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
 * ` Устранение неполадок- ссылки <../Usage/troubleshooting.html> ` _
 * `Обновление - краткое руководство для опытных пользователей <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users> ` _
-* Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
+* Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-docs-pages>`_.
 
 Октябрь 2019
 ==================================================
@@ -100,9 +100,9 @@ September 2020
 Сентябрь 2019 года
 ==================================================
 * ` Автоматизация <../Usage/Automation.html> ` _
-* `Калькулятор болюса <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - медленное усвоение углеводов
+* `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorbtion
 * " Безопасность Nightscout <../Installing-AndroidAPS/Nightscout.html#security-considerations> `
-* `Сдвиг времени профиля <../Usage/Profiles.html#timeshift>`_ (подробнее)
+* `Profile timeshift <../Usage/Profiles.html#time-shift>`_ (more details)
 * `Удаленный мониторинг <../Children/Children.html>`_
 * `Что такое система замкнутого цикла? <../StartStarted/ClosedLoop.html> ` _
 

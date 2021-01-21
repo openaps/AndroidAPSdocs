@@ -39,7 +39,7 @@ Když jsou eSacharidy generovány, je také založena poznámka do ošetření, 
 
 Prodloužený bolus
 ==================================================
-As mentioned above extended or multiwave boluses do not really work in a closed loop environment. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-wont-work-in-a-closed-loop-environment>`_ for details
+As mentioned above extended or multiwave boluses do not really work in a closed loop environment. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ for details
 
 Extended bolus and switch to open loop - Dana and Insight pump only
 -----------------------------------------------------------------------------

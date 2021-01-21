@@ -21,8 +21,8 @@ Mezi jinými jsou součástí exportu tato nastavení:
 * Akce `Automatizace <../Usage/Automation.html>`_
 * `Konfigurace <../Configuration/Config-Builder.html>`_
 * `Lokální profil <../Configuration/Config-Builder.html#local-profile-recommended>`_
-* `Cíle <../Usage/Objectives.html>`_ vč. `odpovědi na testové otázky <../Usage/Objectives.html#objective-3-proof-your-knowledge> ` _
-* `Nastavení <../Configuration/Preferences.html>`_ vč. `nastavení NSClienta <../Configuration/Preferences.html#ns-client>`_
+* `Cíle <../Usage/Objectives.html>`_ vč. `exam results <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
+* `Nastavení <../Configuration/Preferences.html>`_ vč. `NS Client settings <../Configuration/Preferences.html#nsclient>`_
 
 Encrypted backup format
 ==================================================
@@ -48,7 +48,7 @@ Exportovat nastavení
   
 Importujte nastavení
 ==================================================
-**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings>`_.
+**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings-from-previous-aaps>`_.
 
 * Hamburger menu (v levém horním rohu obrazovky)
 * Údržba

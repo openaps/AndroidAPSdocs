@@ -19,8 +19,8 @@ Zkontrolujte zdroj glykémií
 Dokončit cíle
 -----------------------------------------------------------
 * AAPS 2.7 obsahuje nový cíl 11 pro `automatizaci <../Usage/Automation.html>`_.
-* Pro dokončení `cíle 11 <../Usage/Objectives.html#objective-11-automation>`_ musíte mít hotové předchozí zkoušky (`cíle 3 a 4 <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_).
-* Pokud jste například nedokončili zkoušku v `Cíli 3 <../Usage/Objectives. tml#objective-3-proof-your-knowledge>`_ budete ji muset dokončit dříve, než budete moci spustit `Cíl 11 <../Usage/Objectives.html#objektive-11-automation>`_. 
+* You have to finish exam (`objective 3 and 4 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_) in order to complete `objective 11 <../Usage/Objectives.html#objective-11-automation>`_.
+* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. 
 * Neovlivní to cíle, které jste již dokončili. Splněné cíle zůstanou zachovány!
 
 Nastavit hlavní heslo

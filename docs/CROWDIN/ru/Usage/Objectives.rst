@@ -13,7 +13,7 @@ AndroidAPS ставит ряд Целей, которые необходимо �
 * Выбираем нужную помпу в Конфигураторе (если к помпе нет драйвера, можно пользоваться виртуальной помпой) чтобы пома могла вести коммуникацию с AndroidAPS.  
 * При работе с помпой Dana R следуйте инструкциям `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ по привязке помпы к AndroidAPS.
 * Следуйте инструкциям по настройке `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_чтобы Nightscout мог получать и отображать данные ГК.
-* Обратите внимание, что URL-адрес в NSClient должны быть **БЕЗ /api/v1/** в конце - см. параметры NSClient в настройках <../Configuration/Preferences.html#ns-client>`_.
+* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#nsclient>`_.
 
 *Возможно, придется подождать следующего значения глюкозы крови, чтобы AndroidAPS принял его.*
 
@@ -58,7 +58,7 @@ Objective 3: Prove your knowledge
 
 Глубже понимаем незамкнутую систему Open Loop, включая ее рекомендации по временным базалам
 ====================================================================================================
-* Начинаем вникать в логику рекомендаций по временным базалам изучив <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html> и логику определения базала по линии прогнозируемой гликемии на главном экране AndroidAPS / Nightscout <../Getting-Started/Screenshots.html#section-e>`_ и итогам вычислений на вкладке OpenAPS.
+* Start to understand the thinking behind the temp basal recommendations by looking at the `determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ and both the `forecast line in AndroidAPS homescreen <../Getting-Started/Screenshots.html#prediction-lines>`_/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
  
 До тех пор, пока мы не убедимся в правильности вычислений и настроек, целевые значения гликемии следует несколько завышать.  Система позволяет
 
@@ -78,7 +78,7 @@ Objective 3: Prove your knowledge
 Остановитесь здесь, если пользуетесь незамкнутым циклом с виртуальной помпой - не нажимайте на кнопку «Верифицировать» в конце цели.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. изображение:../images/blank.png
+.. image:: ../images/blank.png
   :alt: пусто
 
 Цель 6: Начинаем замыкать цикл с Low Glucose Suspend (прекращением подачи инсулина на низких сахарах)
@@ -137,7 +137,7 @@ Objective 9: Try additional features for daytime use and gain confidence in your
 Objective 11: Automation
 ====================================================================================================
 * You have to start objective 11 to be able to use `Automation <../Usage/Automation.html>`_.
-* Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-proof-your-knowledge>`_.
+* Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-prove-your-knowledge>`_.
 * Completing previous objectives will not effect other objectives you have already finished. You will keep all finished objectives!
 
 

@@ -13,7 +13,7 @@ Objetivo 1: Establecimiento de la visualización y la supervisión, análisis de
 * Seleccione la bomba correcta en ConfigBuilder (seleccione Virtual Pump si utiliza un modelo de bomba sin el controlador AndroidAPS para bucles) para asegurarse de que el estado de la bomba se puede comunicar con AndroidAPS.  
 * Si utiliza la bomba DanaR asegúrese de haber seguido las instrucciones `DanaR Insulin Bump <../Configuration/DanaR-Insulin-Pump.html>`_ para asegurar el enlace entre la bomba y AndroidAPS.
 * Siga las instrucciones en la página `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ para asegurar que Nightscout pueda recibir y mostrar estos datos.
-* Tenga en cuenta que la URL en NSClient debe ser **SIN /api/v1/** al final - vea `NSClient settings in Preferences <../Configuration/Preferences.html#ns-client>`_.
+* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#nsclient>`_.
 
 *Es posible que tengas que esperar a que llegue la próxima lectura de glucosa en sangre para que AndroidAPS la reconozca.*
 
@@ -58,7 +58,7 @@ Reducir el número de notificaciones
 
 Objetivo 5: Comprensión de su lazo abierto, incluidas sus recomendaciones basales temporales
 ====================================================================================================
-* Comience a entender el pensamiento detrás de las recomendaciones basales temporales, mirando la `lógica para determinar basales <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ y también la `línea de pronóstico en la pantalla de inicio de AndroidAPS <../Getting-Started/Screenshots.html#section-e>`_/Nightscout y el resumen de salidas de los cálculos en la pestaña OpenAPS.
+* Start to understand the thinking behind the temp basal recommendations by looking at the `determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ and both the `forecast line in AndroidAPS homescreen <../Getting-Started/Screenshots.html#prediction-lines>`_/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
  
 Usted querrá establecer su objetivo más alto de lo normal hasta que esté seguro en los cálculos y los ajustes.  El sistema permite
 
@@ -78,7 +78,7 @@ Puede ver un rango más amplio (líneas verdes) en el gráfico para los valores 
 Parar aquí si usted está lazo abierto con una bomba virtual - no haga clic en Comprobar al final de este objetivo.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. imagen:: ../images/blank.png
+.. image:: ../images/blank.png
   :alt: en blanco
 
 Objetivo 6: Empezando a cerrar el lazo con Baja Glucosa Suspender
@@ -137,7 +137,7 @@ Objetivo 10: Habilitación adicional oref1 características para uso durante el 
 Objective 11: Automation
 ====================================================================================================
 * You have to start objective 11 to be able to use `Automation <../Usage/Automation.html>`_.
-* Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-proof-your-knowledge>`_.
+* Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-prove-your-knowledge>`_.
 * Completing previous objectives will not effect other objectives you have already finished. You will keep all finished objectives!
 
 

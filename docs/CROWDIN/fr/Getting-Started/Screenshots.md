@@ -282,7 +282,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 ### Section J
 
-* SUPER BOLUS : permet d'ajouter l'insuline basale des 2 prochaines heures au bolus immédiat, et un débit basal temporaire (DBT) à 0 est défini pour les 2 prochaines heures afin de ne pas avoir d'insuline supplémentaire. L'option n'est disponible que lorsque "[Activer les superbolus dans l'Assistant](../Configuration/Preferences.html#superbolus)" est activé dans les [préférences](../Configuration/Preferences.html#apercu).
+* SUPER BOLUS : permet d'ajouter l'insuline basale des 2 prochaines heures au bolus immédiat, et un débit basal temporaire (DBT) à 0 est défini pour les 2 prochaines heures afin de ne pas avoir d'insuline supplémentaire. The option only shows when "Enable [superbolus](../Configuration/Preferences#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences#overview).
 * L'idée est de fournir l'insuline plus tôt et, espérons-le, de réduire les pointes.
 * Pour plus de détails, voir [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -328,7 +328,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
    * La boucle fermée sera automatiquement arrêtée et basculera en mode boucle ouverte pour la durée du bolus étendu.
    * Assurez-vous de lire les [détails](../Usage/Extended-Carbs#bolus-etendu) avant d'utiliser cette option.
 
-### Careporal - section N
+### Careportal - section N
 
 * Afficher les informations
    
@@ -348,7 +348,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
    
    ![Le niveau de la batterie du capteur est égal au niveau de la batterie du téléphone](../images/Home2021_ActionSensorBat.png)
 
-### Careporal - section O
+### Careportal - section O
 
 * Contrôle glycémie, Amorcer/Remplir, Insertion capteur MGC et Changement pile pompe sont les données d'entrées des informations affichées dans la [section N](#careportal-section-n).
 * Amocer/Remplir vous permet d'enregistrer le changement de site et de la cartouche d'insuline de la pompe.

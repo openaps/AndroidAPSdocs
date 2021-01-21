@@ -13,7 +13,7 @@ Cíl 1: Nastavit vizualizaci a monitoring, analyzovat bazály a poměry
 * Vyberte správnou pumpu na kartě Konfigurace (zvolte Virtuální pumpu, pokud používáte model pumpy bez ovladače v AndroidAPS – pouze pro otevřenou smyčku) a na kartě pumpy ověřte, že váš model pumpy dokáže komunikovat s aplikací AndroidAPS a přenášet do ní svůj stav.  
 * Pokud používáte pumpu DanaR, ujistěte se, že jste postupovali podle pokynů v části `Inzulinová pumpa DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ a že je propojená s AndroidAPS.
 * Postupujte podle pokynů na stránce `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ a ověřte, že Nightscout může přijímat a zobrazovat tato data.
-* Všimněte si, že adresa URL v NSClientovi musí být ** BEZ /api/v1 /** na konci - viz `Nastavení NSClienta v předvolbách <../Configuration/Preferences.html#ns-client>`_.
+* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#nsclient>`_.
 
 *Možná bude nutné počkat na další odečet glykémie, než AndroidAPS změnu zaregistruje.*
 
@@ -58,7 +58,7 @@ Pro snížení počtu rozhodnutí, která mají být provedena v režimu otevře
 
 Cíl 5: Porozumění otevřené smyčce, včetně doporučení pro dočasné bazály
 ====================================================================================================
-* Začněte chápat úvahy, které se skrývají za doporučeními dočasných bazálních dávek, tím, že si projdete `logiku <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ a budete sledovat graf předpovědí na `domovské obrazovce AndroidAPS <../Getting-Started/Screenshots.html#sekce-e>`_/ v Nightscoutu. Také si v aplikaci procházejte výstupy z výpočtů na záložce OpenAPS.
+* Start to understand the thinking behind the temp basal recommendations by looking at the `determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ and both the `forecast line in AndroidAPS homescreen <../Getting-Started/Screenshots.html#prediction-lines>`_/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
  
 Cíl nastavte o něco výše než obvykle, dokud si nebudete jisti správností výpočtů a nastavení.  Systém umožňuje
 
@@ -78,7 +78,7 @@ Cílový rozsah hodnot v grafu na hlavní obrazovce (zelené linky), ve kterých
 Zastavte se zde, pokud používáte otevřenou smyčku s virtuální pumpou – neklikejte na tlačítko Zkontrolovat na konci tohoto cíle.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. image:: ./images/blank.png
+.. image:: ../images/blank.png
   :alt: prázdný
 
 Cíl 6: Začátek uzavřené smyčky - s pozastavením pumpy při nízké glykémii
@@ -137,7 +137,7 @@ Cíl 10: Povolit další funkce oref1 pro běžné používání, jako je SMB (s
 Objective 11: Automation
 ====================================================================================================
 * You have to start objective 11 to be able to use `Automation <../Usage/Automation.html>`_.
-* Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-proof-your-knowledge>`_.
+* Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-prove-your-knowledge>`_.
 * Completing previous objectives will not effect other objectives you have already finished. Splněné cíle zůstanou zachovány!
 
 

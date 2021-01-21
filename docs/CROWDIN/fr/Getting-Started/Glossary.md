@@ -25,20 +25,20 @@
   </td>
   
   <td>
-    <a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">Wiki - AAR</a>
+    <a href="../Usage/Open-APS-features.html#assistance-amelioree-repas-aar">Docs - AAR</a>
   </td>
 <tr>
  <td><strong>Android Auto</strong></td>
  <td>Affichage des notifications AAPS sur l'écran intégré au tableau de bord de votre voiture</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Android-auto.html">Wiki - Android Auto</a></td>
+ <td><a href="../Usage/Android-auto.html">Docs - Android Auto</a></td>
 </tr>
 </tr>
 <tr>
  <td><strong>APK</strong></td>
  <td>Fichier d'installation du logiciel (package d’application Android)</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - Construire le fichier APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Building-APK.html">Docs - Construire le fichier APK</a></td>
 </tr>
 <tr>
  <td><strong>Autosens</strong></td>
@@ -56,7 +56,7 @@
  <td><strong>BAT</strong></td>
  <td>alerte de batterie faible de la pompe sur l'écran d'accueil</td>
  <td>CAN / INS / RES /SEN</td>
- <td><a href="../Configuration/Preferences.html#overview"> Préférences </a> <br> <a href="../Getting-Started/Screenshots.html"> Copie d'écran </a></td>
+ <td><a href="../Configuration/Preferences.html#apercu"> Préférences </a> <br> <a href="../Getting-Started/Screenshots.html"> Copie d'écran </a></td>
 </tr>
 <tr>
  <td><strong>Gly</strong></td>
@@ -74,7 +74,7 @@
 <td><strong>Source des glycémies</strong></td>
  <td>D'où proviennent vos valeurs de glycémie?</td>
  <td>MGC / MGF</td>
- <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - source Glycémie</a></td>
+ <td><a href="../Configuration/Config-Builder.html#source-gly">Docs - source Glycémie</a></td>
 </tr>
 <tr>
  <td><strong>Blucon Nightreader</strong></td>
@@ -98,7 +98,7 @@
  <td><strong>CAN</strong></td>
  <td>alerte de changement de la canule sur l'écran d'accueil</td>
  <td>INS / RES / SEN / BAT</td>
- <td><a href="../Configuration/Preferences.html#overview"> Préférences </a> <br> <a href="../Getting-Started/Screenshots.html"> Copie d'écran </a></td>
+ <td><a href="../Configuration/Preferences.html#apercu"> Préférences </a> <br> <a href="../Getting-Started/Screenshots.html"> Copie d'écran </a></td>
 </tr>
 <tr>
  <td><strong>MGC</strong></td>
@@ -110,7 +110,7 @@
  <td><strong>Boucle Fermée</strong></td>
  <td>les systèmes à boucle fermée font les réglages du débit de base automatiquement, sans avoir besoin de l'approbation de l'utilisateur, en se basant sur un algorithme</td>
  <td>Boucle Ouverte</td>
- <td><a href="../Configuration/Config-Builder.html#boucle-fermee">Wiki - boucle fermée</a></td>
+ <td><a href="../Configuration/Config-Builder.html#boucle-fermee">Docs- boucle fermée</a></td>
 </tr>
 <tr>
  <td><strong>GA</strong></td>
@@ -122,31 +122,31 @@
  <td><strong>DAI</strong></td>
  <td>Durée d'Action de l'Insuline</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insuline">Wiki - types d'insulines</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insuline">Docs - types d'insulines</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td><strong>heure d'été</strong></td>
  <td>changement d'heure</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki - heure d'été</a></td>
+ <td><a href="../Usage/Timezone-traveling.html#changements-d-heure">Docs - heure d'été</a></td>
 </tr>
 <tr>
  <td><strong>eGLUC</strong></td>
  <td>"Glucides Etendus" - glucides mettant plusieurs heures à être assimilés (notamment avec beaucoup de graisses ou de protéines)<br>les bolus étendus que vous pourriez connaître da,s le cas d'une thérapie sous pompe à insuline n'ont pas beaucoup d'intérêt dans le cas d'une boucle fermée</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eGLUC</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">Cas d'utilisation des glucides étendus</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#glucides-etendus-eglucides">Docs - eGLUC</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">Cas d'utilisation des glucides étendus</a></td>
 </tr>
 <tr>
  <td><strong>MGF</strong></td>
  <td>Mesure de Glycémie Flash (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - source Glycémie</a></td>
+ <td><a href="../Configuration/BG-Source.html?highlight=Libre%201#source-gly">Docs - source Glycémie</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
  <td>système de contrôle des versions pour le suivi des modifications dans les fichiers informatiques et la coordination des travaux sur les fichiers <br>-> nécessaire pour les mises à jour APK</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - mettre à jour le fichier APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#mise-a-jour-vers-une-nouvelle-version-ou-une-branche">Wiki - mettre à jour le fichier APK</a></td>
 </tr>
 <tr>
  <td><strong>GitHub</strong></td>
@@ -187,26 +187,26 @@
 <tr>
  <td><strong>AGB (LGS)</strong></td>
  <td>Arrêt Glycémie Basse<br>AAPS réduira le débit de base si la glycémie baisse rapidement. Mais si la glycémie augmente, il ne fera qu'augmenter le débit de base si l'IA (IOB) est négatif (à partir d'un AGB précédent), sinon les débits de base resteront les mêmes que ceux de votre profil sélectionné. Vous pouvez subir temporairement des pics de glycémie à la suite d'hypos sans pouvoir augmenter le débit de base sur le rebond.</td>
- <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objectif 6</a></td>
+ <td><a href="../Usage/Objectives.html#objectif-6-demarrage-de-la-boucle-fermee-avec-le-systeme-agb-arret-pour-glycemie-basse">objectif 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>LineageOS</strong></td>
  <td>Système d'exploitation open-source pour les smartphones, etc.<br>OS alternatifs pour les smartphones ne fonctionnant pas Android 8.1 (Oreo)<br>(lors de l'utilisation de Accu-Chek Combo)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Pompe Combo</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#configuration-materielle-requise">Docs - Pompe Combo</a></td>
 </tr>
 <tr>
  <td><strong>Fichiers log</strong></td>
  <td>enregistrement de toutes les actions d'AAPS (utiles pour le dépannage et le débogage)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - fichiers log</a></td>
+ <td><a href="../Usage/Accessing-logfiles.html#acces-aux-fichiers-log">Docs - fichiers log</a></td>
 </tr>
 <tr>
  <td><strong>maxIA (maxIOB)</strong></td>
  <td>fonction de sécurité - niveau d'insuline actvie maximal que AAPS ne peut pas dépasser</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#parametres-a-ajuster-lors-du-passage-d-ama-a-smb">Wiki - maxIA</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#parametres-a-ajuster-lors-du-passage-d-ama-a-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#parametres-a-ajuster-lors-du-passage-d-ama-a-smb">Docs - maxIA</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#parametres-a-ajuster-lors-du-passage-d-ama-a-smb">Docs - SMB</a></td>
 </tr>
 <tr>
  <td><strong>MiaoMiao</strong></td>
@@ -218,7 +218,7 @@
  <td><strong>min_5m_carbimpact</strong></td>
  <td>fonction de sécurité - quantité de glucides assimilés par défaut lorsque l’absorption ne peut pas être calculée dynamiquement en fonction de vos glycémies</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - Générateur de configuration</a></td>
+ <td><a href="../Configuration/Config-Builder.html#parametres-dabsorption">Docs - Générateur de configuration</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
@@ -230,7 +230,7 @@
  <td><strong>NS Client</strong></td>
  <td>fait partie d'AAPS pour se connecter à votre site Nightscout</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient.html#depannage-nsclient">Docs - NS Client</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout Reporter</strong></td>
@@ -242,7 +242,7 @@
  <td><strong>Objectifs</strong></td>
  <td>programme d'apprentissage au sein d'AAPS qui vous guide étape par étape, de la boucle ouverte à la boucle fermée</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Objectives.html">Wiki - objectifs</a></td>
+ <td><a href="../Usage/Objectives.html">Docs - objectifs</a></td>
 </tr>
 <tr>
  <td><strong>OpenAPS</strong></td>
@@ -254,49 +254,49 @@
  <td><strong>Boucle Ouverte</strong></td>
  <td>le système proposera des ajustements recommandés qui doivent être effectués manuellement sur la pompe</td>
  <td>Boucle Fermée</td>
- <td><a href="../Configuration/Config-Builder.html#boucle-ouverte">Wiki - Générateur de configuration</a></td>
+ <td><a href="../Configuration/Config-Builder.html#boucle-ouverte">Docs - Générateur de configuration</a></td>
 </tr>
 <tr>
  <td><strong>Oref0 / Oref1</strong></td>
  <td>détection de sensibilité<br>"implémentation de la conception de référence version 0/1" - l'algorithme clé derrière OpenAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - détection de sensibilité</a></td>
+ <td><a href="../Configuration/Sensitivity-detection-and-COB.html#estimation-de-sensibilite">Docs - détection de sensibilité</a></td>
 </tr>
 <tr>
  <td><strong>Temps du pic</strong></td>
  <td>heure de l'effet maximum de l'insuline injectée</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insuline">Wiki - Générateur de configuration</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insuline">Docs - Générateur de configuration</a></td>
 </tr>
 <tr>
  <td><strong>HP</strong></td>
  <td>historique de la pompe (entrée dans l'onglet traitements)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment">Captures d'écran</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#traitement">Captures d'écran</a></td>
 </tr>
 <tr>
  <td><strong>Prédictions</strong></td>
  <td>préditions pour les futures glycémies se basant sur différents calculs</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - courbes de préditions</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#onglet-vue-d-ensemble">Docs - courbes de préditions</a></td>
 </tr>
 <tr>
  <td><strong>Profil</strong></td>
  <td>paramètres de traitement (débits de base, DAI, G/I, SI, cible Gly)<br>peuvent être définis localement ou via Nightscout</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profil">Wiki - profil</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profil">Docs - profil</a></td>
 </tr>
 <tr>
  <td><strong>Changement de profil</strong></td>
  <td>(temporaire) changement du profil utilisé ou augmentation / diminution du pourcentage</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Profiles.html">Wiki - changement de profil</a></td>
+ <td><a href="../Usage/Profiles.html">Docs - changement de profil</a></td>
 </tr>
 <tr>
  <td><strong>RES</strong></td>
  <td>alerte de changement de réservoir sur l'écran d'accueil</td>
  <td>CAN / INS / BAT</td>
- <td><a href="../Configuration/Preferences.html#overview"> Préférences </a> <br> <a href="../Getting-Started/Screenshots.html"> Copie d'écran </a></td>
+ <td><a href="../Configuration/Preferences.html#apercu"> Préférences </a> <br> <a href="../Getting-Started/Screenshots.html"> Copie d'écran </a></td>
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
@@ -314,7 +314,7 @@
  <td><strong>SEN</strong></td>
  <td>alerte de changement de capteur sur l'écran d'accueil</td>
  <td>CAN / INS / RES / BAT</td>
- <td><a href="../Configuration/Preferences.html#overview"> Préférences </a> <br> <a href="../Getting-Started/Screenshots.html"> Copie d'écran </a></td>
+ <td><a href="../Configuration/Preferences.html#apercu"> Préférences </a> <br> <a href="../Getting-Started/Screenshots.html"> Copie d'écran </a></td>
 </tr>
 <tr>
  <td><strong>Détection de sensibilité</strong></td>
@@ -326,13 +326,13 @@
  <td><strong>Bruit Capteur</strong></td>
  <td>lectures MGC instables conduisant à des "sauts" de glycémies</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - bruit capteur</a></td>
+ <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#lissage-des-donnees-de-glycemie">Docs - bruit capteur</a></td>
 </tr>
 <tr>
  <td><strong>SMB</strong></td>
  <td>Super Micro Bolus<br>fonction avancée pour un ajustement de la glycémie plus rapide</td>
  <td>RNS (UAM)</td>
- <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki RNS</a></td>
+ <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Docs RNS</a></td>
 </tr>
 <tr>
  <td><strong>Super bolus</strong></td>
@@ -362,13 +362,13 @@
  <td><strong>CT</strong></td>
  <td>Cible Temporaire<br>augmentation / diminution temporaire de la cible glycémique (plage)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.html#temp-targets">Wiki - Cibles temp.</a></td>
+ <td><a href="../Usage/temptarget.html#cibles-temporaires">Docs - Cibles temp.</a></td>
 </tr>
 <tr>
  <td><strong>RNS (UAM)</strong></td>
  <td>Repas Non Signalés - détection d'une augmentation significative de la glycémie dûe aux repas, à l'adrénaline ou à d'autres influences et tentative d'ajustement avec SMB</td>
  <td>SMB</td>
- <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki RNS</a></td>
+ <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Docs RNS</a></td>
 </tr>
 <tr>
  <td><strong>Pompe virtuelle</strong></td>
@@ -380,7 +380,7 @@
  <td><strong>Fonds d'écran</strong></td>
  <td>Image d'arrière-plan de AndroidAPS</td>
  <td></td>
- <td><a href="../Getting-Started/Phones.html#phone-background">voir la page des smartphones</a></td>
+ <td><a href="../Getting-Started/Phones.html#fond-d-ecran">voir la page des smartphones</a></td>
 </tr>
 <tr>
  <td><strong>xDrip / xDrip+</strong></td>

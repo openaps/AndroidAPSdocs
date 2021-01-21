@@ -113,23 +113,23 @@ AndroidAPS позволяет контролировать телефон реб
 
 базал
 --------------------------------------------------
-* BASAL STOP/CANCEL
-   * Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
-* BASAL 0.3
-   * Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
-* BASAL 0.3 20
-   * Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
-* BASAL 30%
-   * Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
+* BASAL STOP/CANCEL (остановить/отменить) базал
+   * Ответ: Для остановки временного базала ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
+* BASAL 0.3 (база 0,3)
+   * Ответ: Для постановки базала на 0.3 ед/ч ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
+* BASAL 0.3 20 (базал 0,3 20)
+   * Ответ: Для постановки базала на 0.3 ед/ч на 20 мин ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
+* BASAL 30% (базал 30%)
+   * Ответ: Для постановки базала на 30% ед/ч на 30 мин. ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
 * БАЗАЛ 30% 50
-   * Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
+   * Ответ: Для постановки базала на 30% ед/ч на 50 мин. ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
 
 болюс
 --------------------------------------------------
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
+Удаленный болюс разрешается только через 15 минут после предыдущей команды болюс или других удаленных команд (значение редактируется если для передачи команд добавлено 2 номера телефона)! * Поэтому ответ зависит от времени последнего болюса.
 
 * Болюс 1.2
-   * Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN
+   * Response A: Чтобы подать болюс 1.2 ед. ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
    * Ответ B: Удаленный болюс недоступен. Повторите позже.
 * БОЛЮС на 0.60 ЕДЫ
    * Если вы зададите необязательный параметр прием пищи MEAL, то будет задано значение временная цель прием пищи MEAL (значения по умолчанию: 90 мг/дл, 5,0 ммоль/л на 45 мин).

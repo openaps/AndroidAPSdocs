@@ -21,8 +21,8 @@ Entre autres, les informations suivantes font partie des paramètres exportés :
 * `Evènement d'automatisation <../Usage/Automation.html>`_
 * Paramètres du `Générateur de configuration <../Configuration/Config-Builder.html>`_
 * Paramètres des `Profils locaux <../Configuration/Config-Builder.html#profil-local-recommande>`_
-* Résultats des `Objectifs <../Usage/Objectives.html>`_ y compris les résultats de l'objectif 3 `Prouver ses connaissances <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
-* `Préférences <../Configuration/Preferences.html>`_ y compris les paramètres `NSClient <../Configuration/Preferences.html#ns-client>`_
+* Résultats des `Objectifs <../Usage/Objectives.html>`_ y compris les résultats de l'objectif 3 `Prouver ses connaissances <../Usage/Objectives.html#objectif-3-prouver-ses-connaissances>`_
+* `Préférences <../Configuration/Preferences.html>`_ y compris les paramètres `NSClient <../Configuration/Preferences.html#nsclient>`_
 
 Format de sauvegarde chiffré
 ==================================================

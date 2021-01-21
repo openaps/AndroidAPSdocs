@@ -6,13 +6,13 @@ Het is het makkelijkste om steeds hetzelfde keystore-bestand te gebruiken bij he
 
 Mocht je jouw oude keystore bestand toch niet meer kunnen vinden, dan heb je een paar extra stappen nodig bij het updaten van de app, om de instellingen in jouw AAPS app te behouden:
 
-1. `Exporteer de instellingen <../Usage/ExportImportSettings.html#instellingen-exporteren>`_ op jouw telefoon.
+1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`_ on your phone.
 2. Kopieer jouw instellingen bestand van jouw telefoon naar een externe locatie (zoals je computer, cloudopslag service...).
 3. Zorg ervoor dat je het bestand met instellingen "AndroidAPS Preferences" opslaat op een veilige plek die je later kunt terugvinden.
 4. Bouwen van de ondertekende apk zoals beschreven op de pagina `Bijwerken naar een nieuwe versie <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 5. Verwijder de vorige AAPS-versie van jouw telefoon.
 6. Installeer de nieuwe AAPS-versie op jouw telefoon.
-7. `Instellingen importeren <../Usage/ExportImportSettings.html#instellingen-exporteren>`_ - mocht je ze op je telefoon niet kunnen vinden, kopieer ze dan vanaf de externe plek (computer, cloudopslag) waar je ze eerder had opgeslagen.
+7. `Import settings <../Usage/ExportImportSettings.html#export-settings>`_ - if you can't find them on your phone copy them from the external storage.
 8. En je kunt weer doorloopen!
 
 Kotlin compiler warning
@@ -136,7 +136,7 @@ Als geen van de bovenstaande tips je geholpen heeft, dan zou je de de app helema
 1. `Instellingen exporteren <../Usage/ExportImportSettings.html>`_ (in AAPS-app die al op jouw telefoon is geïnstalleerd)
 2. Houd jouw keystore file (digitale handtekening) en keystore wachtwoord bij de hand.
     In het geval dat je het bestand kwijt bent en/of het wachtwoord bent vergeten dan kun je proberen om ze te vinden in de projectbestanden zoals `hier <https://youtu.be/nS3wxnLgZOo>`_beschreven. Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan. 
-3. Bouw app vanaf het begin zoals `hier <../Installing-AndroidAPS/Update-to-new-version.html#bijwerken-van-jouw-lokale-kopie>`_ beschreven.
+3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
 4.	Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
 5. `Instellingen importeren <./Usage/ExportImportSettings.html>`_
 

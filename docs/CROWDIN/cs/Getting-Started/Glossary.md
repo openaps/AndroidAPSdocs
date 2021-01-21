@@ -146,7 +146,7 @@
  <td><strong>git</strong></td>
  <td>Systém pro správu verzí a sledování změn v počítačových souborech a pro koordinaci prací na těchto souborech<br>-> nezbytný pro aktualizace APK</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - aktualizace APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - aktualizace APK</a></td>
 </tr>
 <tr>
  <td><strong>Github</strong></td>

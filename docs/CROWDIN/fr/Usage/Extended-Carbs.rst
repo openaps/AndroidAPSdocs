@@ -32,14 +32,14 @@ Une façon de gérer les graisses et les protéines avec cette fonctionnalité e
 
 La configuration recommandée est d'utiliser le plug-in OpenAPS SMB, avec les SMB activés ainsi que le paramètre _Activer SMB avec les glucides_ activé.
 
-Un scénario par ex. pour une pizza pourrait être de donner un bolus (partiel) à l'avance via la _Calculatrice_ puis d'utiliser le bouton _Glucides_ pour entrer les glucides restants pendant une durée de 4-6 heures, en commençant après 1 ou 2 heures. Vous devrez essayer et voir quelles sont les valeurs qui marchent pour vous bien sûr. Vous pouvez également ajuster soigneusement le paramètre _Max minutes de basal pour limiter SMB_ pour rendre l'algorithme plus ou moins agressif.
+Un scénario par ex. pour une pizza pourrait être de donner un bolus (partiel) à l'avance via la Calculatrice puis d'utiliser le bouton Glucides pour entrer les glucides restants pendant une durée de 4-6 heures, en commençant après 1 ou 2 heures. Vous devrez essayer et voir quelles sont les valeurs qui marchent pour vous bien sûr. Vous pouvez également ajuster soigneusement le paramètre Max minutes de basal pour limiter SMB pour rendre l'algorithme plus ou moins agressif.
 Avec des repas faibles en glucides et riches en graisses/protéines, il peut être suffisant d'utiliser uniquement des eGlucides sans bolus manuels (voir le blog ci-dessus).
 
 Lorsque des eGlucides sont générés, une note Careportal est également créée pour pouvoir documenter toutes les entrées, et faciliter les itérations et l'amélioration des entrées.
 
 Bolus étendu
 ==================================================
-Comme mentionné ci-dessus, les bolus étendus ou mixtes ne fonctionnent pas vraiment dans un environnement en boucle fermée. `Voir ci-dessous <../Usage/Extended-Carbs.html#pourquoi-les-bolus-etendus-ne-marchent-pas-avec-une-boucle-fermee>`_ pour plus de détails
+Comme mentionné ci-dessus, les bolus étendus ou mixtes ne fonctionnent pas vraiment dans un environnement en boucle fermée. `Voir ci-dessous <#pourquoi-les-bolus-etendus-ne-marchent-pas-avec-une-boucle-fermee>`_ pour plus de détails
 
 Bolus étendus et passage en boucle ouverte - uniquement pour les pompesDana et Insight
 -----------------------------------------------------------------------------
