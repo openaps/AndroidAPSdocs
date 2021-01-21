@@ -8,7 +8,7 @@ We geven u achtergrondinformatie over doe-het-zelf closed loop systemen, en gaan
 
 Om AndroidAPS te kunnen gebruiken, moet iemand de volgende dingen doen:
 
-* Find a [compatible pump](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
+* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
 * [Download de AndroidAPS broncode en bouw de app](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
 * [Koppel de app aan CGM en pomp en geef alle instellingen en veiligheidsgrenzen in](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
 
