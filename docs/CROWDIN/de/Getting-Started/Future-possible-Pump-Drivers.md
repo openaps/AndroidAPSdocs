@@ -16,7 +16,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 ### Ypsomed Pumpe ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop status:** Version 1 - 1.5 (2. Quartal 2018) sind keine Kandiadaten für den Loop. Obwohl sie über Bluetooth kommuniziert, scheint die Datenübertrag sehr limitiert zu sein (nur in eine Richtung: Pumpe zu App). Company is planning to extend the pump to support remote bolusing (update planned for end of 2021) and later on they plan to add other functions required to create a Loop. Their official app will support that in the future (planned for 2022 no exact date known). As they plan to have their own Loop system see this [page](https://www.mylife-diabetescare.com/en/loop-program.html), they won't be offering any support to any developers on any DIY loop, at least for now.
+**Loop status:** Version 1 - 1.5 (2. Quartal 2018) sind keine Kandiadaten für den Loop. Obwohl sie über Bluetooth kommuniziert, scheint die Datenübertrag sehr limitiert zu sein (nur in eine Richtung: Pumpe zu App). Das Unternehmen plant, die Pumpe zur Unterstützung der Bolus-Fernabgabe zu erweitern (Update geplant für Ende 2021). Später planen sie, weitere Funktionen hinzuzufügen, die fürs Loopen erforderlich sind. Die offizielle App wird das in Zukunft unterstützen (geplant für 2022, kein genaues Datum bekannt). Da sie ihr eigenes Loop-System planen (siehe Informationen auf [dieser Seite](https://www.mylife-diabetescare.com/en/loop-program.html), werden sie keine Unterstützung für Entwickler von DIY-Loop-Systemen anbieten, zumindest aktuell nicht.
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert.
 
