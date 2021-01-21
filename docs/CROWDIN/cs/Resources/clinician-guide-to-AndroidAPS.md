@@ -8,7 +8,7 @@ Tato příručka obsahuje souhrnné informace o DIY uzavřené smyčce a zejmén
 
 Chcete-li začít používat systém AndroidAPS, je třeba provést následující kroky:
 
-* Opatřete si [kompatibilní pumpu](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), [kompatibilní zařízení se systémem Android](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) a [kompatibilní senzor](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
+* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
 * [Stáhněte si zdrojový kód AndroidAPS a sestavte si software](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
 * [Nakonfigurujte software tak, aby komunikoval s ostatními zařízeními a upravte nastavení a bezpečnostní opatření](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
 
