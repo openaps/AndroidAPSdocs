@@ -420,10 +420,10 @@ Champs
 * **État du Pod :** Affiche l'état du pod actif.
 * **Dernière connexion :** Affiche l'heure de la dernière communication avec le pod actif.
 
-   - *Moments ago* - less than 20 seconds ago.
-   - *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
-   - *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
-   - *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
+   - *À l'instant* - il y a moins de 20 secondes.
+   - *Moins d'une minute* - il y a plus de 20 secondes mais moins de 60 secondes.
+   - Il y a *1 minute* - plus de 60 secondes mais moins de 120 secondes (2 min)
+   - Il y a *XX minutes* - il y a plus de 2 minutes comme indiqué par la valeur de XX
 
 * **Dernier bolus :** Affiche le dernier bolus envoyé au pod actif et il y a combien de temps entre parenthèses.
 * **Débit de Basal :** Affiche le débit Basal courant en ce moment, à partir du débit de basal du profil.
@@ -445,37 +445,37 @@ Icônes
    ====================  ===========================================
    |refresh_pod_status|  **ACTUALISER :** 
    			 
-			 Sends a refresh command to the active pod to update communication
+			 Envoie une commande d'actualisation au pod actif pour mettre à jour la communication
 			 
-			 * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
-			 * See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+			 * A utiliser pour actualiser l'état du pod et rejeter les champs qui contiennent le texte (incertain).
+			 * Voir la section `Dépannage <#depannage>`__ ci-dessous pour plus d'informations.
 
    |pod_management|   	 **GEST. POD :**
 
-			 Navigates to the Pod management menu
+			 Permet d'accéder au menu de gestion du pod
    |ack_alerts|		 **ACCEPTER ALERTES:**
    			 
-			 When pressed this will disable the pod expiration beeps and notifications. 
+			 Lorsque vous cliquez dessus, cela désactivera les bips d'expiration du pod et les notifications. 
 			 
-			 * Button is displayed only when pod time is past expiration warning time
-			 * Upon successful dismissal, this icon will no longer appear.
+			 * Le bouton ne s'affiche que lorsque la durée d'utilisation du pod dépasse le seuil d'alerte d'expiration
+			 * En cas de désactivation réussi, cette icône n'apparaîtra plus.
 			 
    |set_time|		 **DÉFINIR L'HEURE :**
    
-			 When pressed this will update the time on the pod with the current time on your phone.
+			 Lorsque vous cliquez dessus, cela mettra à jour l'heure du pod avec l'heure actuelle de votre téléphone.
    |suspend|  		 **SUSPENDRE:**
    
-			 Suspends the active pod
-   |resume| 		 **RESUME DELIVERY:**
+			 Suspend le pod actif
+   |resume| 		 **REPRENDRE L'INJECTION :**
    
-			 Resumes the currently suspended, active pod
+			 Réactive l'injection d'insuline du pod actif actuellement suspendu
    ====================  ===========================================
 
 
 Menu de Gestion du pod
 -------------------
 
-Below is an explanation of the layout and meaning of the icons on the **Pod Management** menu accessed from the **Omnipod (POD)** tab.
+Vous trouverez ci-dessous une explication de la mise en page et de la signification des icônes de la page **Gestion du Pod** accessible depuis l'onglet **Omnipod (POD)**.
 
 |Omnipod_Tab_Pod_Management|
 
@@ -484,56 +484,56 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
    =========================  ===========================================
    |activate_pod|	      **Activer Pod**
    
-   			      Primes and activates a new pod
+   			      Amorce et active un nouveau pod
 
    |deactivate_pod|	      **Désactiver Pod**
  
- 			      Deactivates the currently active pod.
+ 			      Désactive le pod actuellement actif.
 			 
-		   	      *  A partially paired pod ignores this command.
-			      *  Use this command to deactivate a screaming pod (error 49).
-			      *  If the button is disabled (greyed out) use the Discard Pod button.
+		   	      * Un pod partiellement appairé ignore cette commande.
+			      * Utilisez cette commande pour désactiver un pod urlant (erreur 49).
+			      * Si le bouton est désactivé (grisé), utilisez le bouton Supprimer Pod.
 
    |play_test_beep| 	      **Tester bips**
  
- 			      Plays a single test beep on the pod when pressed.
+ 			      Joue un bip de test unique sur le pod quand vous cliquez dessus.
 
    |discard_pod|	      **Supprimer Pod**
 
-			      Deactivates and discards the pod state of an unresponsive pod when pressed.
+			      Désactive et supprime l'état d'un pod qui ne répond pas lorsque vous cliquez dessus.
 			      
-			      Button is only displayed when very specific cases are met as proper deactivation is no longer possible:
+			      Le bouton ne s'affiche que dans des cas très particuliers où la désactivation correcte n'est plus possible :
 
-			      * A **pod is not fully paired** and thus ignores deactivate commands.
-			      * A **pod is stuck** during the pairing process between steps
-	 		      * A **pod simply does not pair at all.**
+			      * Un **pod n'est pas complètement appairé** et ignore donc les commandes de désactivation.
+			      * Un **pod est bloqué** pendant le processus d'appairage entre deux étapes
+	 		      * Un **pod ne s'appaire tout simplement pas.**
 
    |pod_history| 	      **Historique Pod** 
    
-   			      Displays the active pod activity history
+   			      Affiche l'historique de l'activité du pod actif
 
    |rileylink_stats| 	      **Stats RileyLink :**
    
-   			      Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
+   			      Naviguer vers l'écran des statistiques du RileyLink qui affiche les paramètres actuels et l'historique de la connexion du RileyLink
 
-			      * **Settings** - displays RileyLink and active pod settings information
-			      * **History** - displays RileyLink and Pod communication history
+			      * **Paramètres** - affiche les paramètres du RileyLink et du pod actif
+			      * **Historique** - affiche l'historique de communication du RileyLink et du Pod
 
    |reset_rileylink_config|   **Réinit config. RileyLink** 
    
-   			      When presssed this button resets the currently connected pod communication device configuration. 
+   			      Lorsque vous cliquez dessus, ce bouton réinitialise la configuration du périphérique de communication pod actuellement connecté. 
 			      
-			      * When communication is started, specific data is sent to and set in the RileyLink 
+			      * Lorsque la communication est démarrée, des données spécifiques sont envoyées et placées dans le RileyLink 
 			      
-			        - Memory Registers are set
-				- Communication Protocols are set
-				- Tuned Radio Frequency is set
+			        - Les registres de mémoire sont définis
+				- Les protocoles de communication sont définis
+				- La fréquence radio réglée est définie
 				
 			      * Voir les `remarques additionnelles <#remarque-concernant-reinit-config-rileyLink>`__ à la fin de ce tableau
 
    |pulse_log|		      **Lire journal d'impulsion :** 
     
-    			      Sends the active pod pulse log to the clipboard
+    			      Copie le journal d'impulsion du pod actif dans le presse-papiers
    =========================  ===========================================			    
 
 *Remarque concernant Réinit config. RileyLink*
@@ -547,7 +547,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 Paramètres Omnipod
 ================
 
-The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayedas a tab in the AAPS interface titled **OMNIPOD** or **POD**. C'est ce que l'on appelle dans cette documentation l'onglet **Omnipod (POD)**.
+Les paramètres du pilote Omnipod sont configurables à partir du **menu hamburger** en haut à gauche sous **Générateur de configuration**\ ➜\ **Pompe**\ ➜\ **Omnipod**\ ➜\ **Roue crantée (2)** en sélectionnant le **bouton radio (1)** intitulé **Omnipod**. En sélectionnant la **case à cocher (3)** à côté de la **roue crantée (2)** cela affichera le menu Omnipod sous la forme d'un onglet intitulé **OMNIPOD** ou **POD** dans l'interface AAPS. C'est ce que l'on appelle dans cette documentation l'onglet **Omnipod (POD)**.
 
 |Omnipod_Settings_1|
 
