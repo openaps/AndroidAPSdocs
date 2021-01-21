@@ -115,6 +115,7 @@ AndroidAPS voor kinderen
    
    Volgen op afstand <./Children/Children.rst>
    SMS Comando's <./Children/SMS-Commands.rst>
+   Profile helper <.//Configuration/profilehelper.rst>
    
 
 Problemen oplossen
