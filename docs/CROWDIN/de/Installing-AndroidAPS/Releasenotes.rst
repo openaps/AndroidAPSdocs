@@ -53,7 +53,7 @@ Wichtige neue Funktionen
 ----------------------
 * `Omnipod Eros Unterstützung <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda und besonderer Dank an @ps2 @itsmojo, alle anderen am Loop-Treiber für Omnipod Beteiligten, sowie @jlucasvt von GetRileyLink.org 
 * `Bolus-Berater <../Configuration/Preferences.html#bolus-berater>`_ & `Essens-Erinnerung <../Getting-Started/Screenshots.html#essens-erinnerung>`_ @MilosKozak 
-* `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-2-8>`_ @rICTx-T1D
+* `Neues Watchface <../Configuration/Watchfaces.html#neues-watchface-ab-version-2-8>`_ @rICTx-T1D
 * Verbesserung der Verbindung zur Dana RS @MilosKozak 
 * Bei Verwendung der nativen Dexcom App werden über mehr als 45 Minuten unveränderte CGM-Werte in SMB weiter berücksichtigt.
 * Neues `Erscheinungsbild für niedrige Bildschirmauflösungen <../Configuration/Preferences.html#erscheinungsbild>`_
@@ -73,7 +73,7 @@ Erscheinungsdatum: 24.09.2020
 
 **Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie** `hier <../Installing-AndroidAPS/update2_7.html>`_ **beschrieben.**
 
-Du musst `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`_ zumindest gestartet haben, um die `Automation <../Usage/Automation.html>`_ weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden. If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
+Du musst `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`_ zumindest gestartet haben, um die `Automation <../Usage/Automation.html>`_ weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden. Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung> starten kannst`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 Wichtige neue Funktionen
 ----------------------
@@ -81,7 +81,7 @@ Wichtige neue Funktionen
 * Module für Dana Pumpen @MilosKozak
 * `Neues Layout und Layoutauswahl <../Getting-Started/Screenshots.html>`_ @MilosKozak
 * Neues `Status Lights Layout <../Configuration/Preferences.html#statusanzeige>`_ @MilosKozak
-* `multiple graphs support <../Getting-Started/Screenshots.html#section-f-main-graph>`_ @MilosKozak
+* `Unterstützung mehrerer Diagramme <../Getting-Started/Screenshots.html#abschnitt-f-hauptgrafik>`_ @MilosKozak
 * `Profil Helfer <../Configuration/profilehelper.html>`_ @MilosKozak
 * Visualisierung der `dynamischen Ziel-Anpassung <../Getting-Started/Screenshots.html#anzeige-der -dynamischen-ziel-anpassung>`_ @Tornado-Tim
 * Neues `Layout für die Einstellungen <../Configuration/Preferences.html>`_ @MilosKozak
@@ -96,7 +96,7 @@ Wichtige neue Funktionen
 * Small Fehlerbehebungen für Insight Pumpen @TebbeUbben @MilosKozak
 * `Option "Standardsprache" <../Configuration/Preferences.html#allgemein>`_ @MilosKozak
 * Vector Icons @Philoul
-* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phone-androidaps>`_ @Tornado-Tim
+* `Neutrale Temps für Medtronic Pumpen <../Configuration/MedtronicPump.html#konfiguration-von-smartphone-androidaps>`_ @Tornado-Tim
 * Verbesserung Historie @MilosKozak
 * OpenAPS MA Algorithmus entfernt @Tornado-Tim
 * Oref0 Sensitivität entfernt @Tornado-Tim
@@ -237,7 +237,7 @@ Wichtige neue Funktionen
 * RxJava2, Okhttp3, Retrofit support
 * Alte `Medtronic Pumpen <../Configuration/MedtronicPump.html>`_ werden unterstützt (RileyLink erforderlich)
 * Neues Plugin `Automation <../Usage/Automation.html>`_
-* Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings-overview>`_ from bolus wizard calculation
+* Möglichkeit, `nur einen Teil des vom Bolus-Rechner ermittelten Bolus <../Configuration/Preferences.html#erweiterte-einstellungen-ubersicht>`_ abzugeben.
 * Darstellung der Insulinaktivität
 * Anpassung der IOB-Vorhersagen auf Basis der Autosens Ergebnisse
 * Neue gepatchte Dexcom App (`2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
@@ -337,7 +337,7 @@ Startseite
 --------------------------------------------------
 * Im oberen Menüband (Abschnitt A) kannst du durch langen Fingerdruck den Loop pausieren oder deaktivieren, die Pumpe trennen, das aktuelle Profil anzeigen und einen Profilwechsel machen, sowie temporäre Ziele (temp targets - TT) einstellen. Die temporären Ziele verwenden Standardwerte, die du in den Einstellungen festlegen kannst. Das neue Standard-Ziel “HypoTT” löst ein temporäres Ziel im höheren BZ-Bereich aus, damit der Loop nicht überreagiert nachdem du Korrektur-Kohlenhydrate gegessen hast.
 * Neue Behandlungs-Schaltfläche: die alte Behandlungs-Schaltfläche ist weiterhin verfügbar, aber standardmäßig deaktiviert. Du kannst jetzt selbst einstellen, welche Schaltflächen du auf dem Home-Screen haben willst. Neue Buttons für Insulin und Kohlenhydrate (inkl. `eCarbs/extended carbs <../Usage/Extended-Carbs.html>`_)
-* `Colored prediction lines <../Getting-Started/Screenshots.html#prediction-lines>`_
+* `Farbige Vorhersagelinien <../Getting-Started/Screenshots.html#vorhersage-kurven>`_
 * Option in den Dialogen für Insulin, Kohlenhydrate, Rechner und Füllen/Vorfüllen ein Feld für Bemerkungen, die zu Nightscout hochgeladen werden, anzuzeigen.
 * Überarbeiteter Füllen/Vorfüllen-Dialog. Möglichkeit, gleichzeitig Careportal-Einträge für Katheter- und Reservoirwechsel zu erstellen.
 
