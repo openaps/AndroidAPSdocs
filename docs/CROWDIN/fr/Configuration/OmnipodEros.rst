@@ -796,20 +796,20 @@ Tout le travail de développement du pilote Omnipod est fait par la communauté 
 
 - **Niveau 0 :** Lisez la section correspondante de cette documentation pour vous assurer que vous comprenez comment la fonctionnalité avec laquelle vous avez des difficultés est censée fonctionner.
 - **Niveau 1 :** Si vous rencontrez toujours des problèmes que vous n'arrivez pas à résoudre en utilisant ce document, alors veuillez aller sur la chaine `AndroidAPS <https://gitter.im/MilosKozak/AndroidAPS>`__ sur **Gitter** ou sur la chaine *#androidaps* sur **Discord** en utilisant `ce lien d'invitation <https://discord.com/invite/NhEUtzr>`__.
--  **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new `issue <https://github.com/nightscout/AndroidAPS/issues>`__ and attach your `log files <https://androidaps.readthedocs.io/en/latest/CROWDIN/sk/Usage/Accessing-logfiles.html>`__.
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+- **Niveau 2 :** Rechercher dans les problèmes existants pour voir si votre problème a déjà été signalé; si ce n'est pas le cas, veuillez créer une nouvelle `fiche <https://github.com/nightscout/AndroidAPS/issues>`__ et joignez vos `fichiers log <../Usage/Accessing-logfiles.html>`__.
+- **Soyez patient - la plupart des membres de notre communauté sont des bénévoles de bonne nature, et résoudre les problèmes nécessite souvent du temps et de la patience de la part des utilisateurs et des développeurs.**
 
 
 
 ..
-	Omnipod image aliases resource for referencing images by name with more positioning flexibility
+	Alias des ressources d'images Omnipod pour référencer les images par leur nom avec plus de flexibilité de positionnement
 
 
 ..
-	Interface Icons
+	Icônes de l'interface
 
 ..
-	Omnipod (POD) Overview Tab
+	Aperçu de l'onglet Omnipod (POD)
 
 .. |ack_alerts|                    image:: ../images/omnipod/ICONS/omnipod_overview_ack_alerts.png
 .. |pod_management|                image:: ../images/omnipod/ICONS/omnipod_overview_pod_management.png
@@ -819,7 +819,7 @@ Tout le travail de développement du pilote Omnipod est fait par la communauté 
 .. |suspend|                       image:: ../images/omnipod/ICONS/omnipod_overview_suspend.png
 
 ..
-	Pod Management Tab
+	Onglet de Gestion du pod
 
 .. |activate_pod|                  image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png
 .. |deactivate_pod|                image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png
@@ -832,7 +832,7 @@ Tout le travail de développement du pilote Omnipod est fait par la communauté 
 
 
 ..
-	Instructional Section Images
+	Images de la section pédagogique
 	
 ..
 	Configuration matérielle et logicielle requise
@@ -942,14 +942,14 @@ Tout le travail de développement du pilote Omnipod est fait par la communauté 
 .. |RileyLink_Setup_6|                  image:: ../images/omnipod/RileyLink_Setup_6.png
 
 ..
-	RileyLink Setup Add Device
+	Configuration RileyLink Ajouter un Appareil
 .. |RileyLink_Setup_Add_1|                  image:: ../images/omnipod/RileyLink_Setup_Add_1.png
 .. |RileyLink_Setup_Add_2|                  image:: ../images/omnipod/RileyLink_Setup_Add_2.png
 .. |RileyLink_Setup_Add_3|                  image:: ../images/omnipod/RileyLink_Setup_Add_3.png
 .. |RileyLink_Setup_Add_4|                  image:: ../images/omnipod/RileyLink_Setup_Add_4.png
 
 ..
-	RileyLink Setup Remove Device
+	Configuration RileyLink Supprimer un Appareil
 .. |RileyLink_Setup_Remove_1|                  image:: ../images/omnipod/RileyLink_Setup_Remove_1.png
 .. |RileyLink_Setup_Remove_2|                  image:: ../images/omnipod/RileyLink_Setup_Remove_2.png
 .. |RileyLink_Setup_Remove_3|                  image:: ../images/omnipod/RileyLink_Setup_Remove_3.png
