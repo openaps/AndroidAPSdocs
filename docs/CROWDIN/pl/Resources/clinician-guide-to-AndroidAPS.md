@@ -8,7 +8,7 @@ Ten przewodnik zawiera trochę specjalistycznych informacji na temat zamkniętej
 
 Aby rozpocząć korzystanie z AndroidAPS, należy podjąć następujące kroki:
 
-* Find a [compatible pump](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
+* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
 * [Pobierz kod źródłowy AndroidAPS i skompiluj oprogramowanie](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
 * [Skonfiguruj oprogramowanie tak, aby komunikowało się z urządzeniami używanymi w intesywnej insulinoterapi (pompa,CGM), wybierz ustawienia i zasady dotyczące bezpieczeństwa](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
 
