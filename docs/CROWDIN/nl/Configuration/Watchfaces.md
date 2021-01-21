@@ -16,30 +16,17 @@ Je kunt de AndroidAPS app installeren op je **Wear OS based** smartwatch. Met de
 
 Om een Wear OS versie van AAPS te maken, heb je de build variant "fullRelease" nodig deze is te selecteren wanneer [de APK](../Installing-AndroidAPS/Building-APK.md) bouwt (met de versie "pumpRelease" kun je de pomp wel op afstand bedienen, maar je hebt geen "closed loop").
 
-Zorg ervoor dat zowel de telefoon als de wear versies van AAPS zijn ondertekend met dezelfde "key"!
-
-Om de APK te installeren op Android Wear smartwatch, volg je de volgende stappen:
-
-1. Schakel de ontwikkelaarsmodus in op het horloge. Druk op de knop op het horloge en klik op `instellingen` dan `systeem` dan `over` en klik herhaaldelijk op het `build-nummer`, minstens 7 keer totdat een melding verschijnt dat je een ontwikkelaar bent.
-2. ADB inschakelen op horloge. Druk op de knop op het horloge en klik op `instellingen` dan `ontwikkelaar opties` dan `adb debugging` en `debug over wifi`. Noteer het IP-adres dat u hiernaast staat, dit zal in de vorm zijn van een IP-adres gevolgd door :5555.
-3. Op PC, noteer de bestandslocatie van `wear-full-release. pk` (zal in dezelfde map zitten als `app-full-release.apk` die je op je telefoon hebt geïnstalleerd).
-4. Op PC, open de opdrachtprompt (typ `commando` in het zoekvak). 
-5. In opdrachtprompt: `cd c:\Program Files (x86)\Android\android-sdk\platform-tools`.
-6. In opdrachtprompt: `adb connect [geef het IP-adres op van stap 2, inclusief de: 5555]`.
-7. In opdrachtprompt: `adb install -r [geef het pad op van stap 3]\wear-full-release.apk`.
-8. Dit zal AAPS op het horloge installeren en dan zal AAPS watchfaces beschikbaar zijn om te selecteren.
-
-Wanneer je de wear versie van AAPS gebruikt, update deze altijd gelijktijdig met de telefoonversie van de app - houd hun versies gesynchroniseerd. Om dit te doen moet je de bovenstaande stappen opnieuw volgen, maar je hoeft de ontwikkelaarsmodus niet opnieuw aan te zetten.
+You can then update or install the watchface via the PlayStore on your watch.
 
 ### Instellen op de telefoon
 
-Schakel in de AndroidAPS Configurator [de Wear plugin in](../Configuration/Config-Builder#wear).
+Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder#wear).
 
 ## AAPS aansturen vanaf het horloge
 
-AndroidAPS is ontworpen om *te worden bediend* vanaf Android Wear horloges. Als je wilt bolussen etc. vanaf je horloge, dan moet je bij "Wear instellingen" de optie "Bedieningen via horloge" geactiveerd hebben.
+AndroidAPS is designed to be *controlled* by Android Wear watches. Als je wilt bolussen etc. vanaf je horloge, dan moet je bij "Wear instellingen" de optie "Bedieningen via horloge" geactiveerd hebben.
 
-De volgende functies kunnen vanaf het horloge worden geactiveerd:
+The following functions can be triggered from the watch:
 
 * een tijdelijk BG doel (TT) instellen
 * de bolus calculator gebruiken (in [instellingen](../Configuration/Config-Builder#wear) op de telefoon is geconfigureerd welke variabelen in de berekening worden meegenomen)
@@ -54,49 +41,49 @@ De volgende functies kunnen vanaf het horloge worden geactiveerd:
 
 ## AAPS wijzerplaaten
 
-Er zijn verschillende watchfaces om uit te kiezen die de gemiddelde delta, IOB, momenteel actieve tijdelijke basaal en basale profielen + een CGM grafiek kunnen weergeven.
+There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
-Zorg er voor dat meldingen van AndroidAPS niet geblokkeerd zijn op het horloge. Een actie (bijv. bolus, tijdelijk BG doel) moet door middel van een notificatie worden bevestigd. Pas na swipen en herbevestiging wordt deze uitgevoerd.
+Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
 
-Voer een double-tap uit op je BG om sneller naar het AAPS-menu te gaan. Voer een double-tap uit op de BG grafiek om de tijdschaal ervan te wijzigen.
+To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
 ## Beschikbare watchfaces
 
-![Beschikbare wijzerplaten](../images/Watchface_Types.png)
+![Available watchfaces](../images/Watchface_Types.png)
 
 ### Nieuw watchface vanaf AndroidAPS 2.8
 
-![Watchface digitale stijl](../images/Watchface_DigitalStyle.png)
+![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
 
 * Als je in het instellingen menu op het tandwiel-icoontje drukt bij het watchface keuzemenu, dan kun je de kleuren, lijnen, en cirkel zelf aanpassen.
 
 ## AAPSv2 wijzerplaat - Legend
 
-![Legenda AndroidAPSv2 watchface](../images/Watchface_Legend.png)
+![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
 
-A - tijd sinds laatste uitvoering loop
+A - time since last loop run
 
-B - CGM-uitlezing
+B - CGM reading
 
-C - minuten sinds laatste CGM-uitlezing
+C - minutes since last CGM reading
 
-D - wijziging in vergelijking met de laatste CGM-uitlezing (in mmol of mg/dl)
+D - change compared to last CGM reading (in mmol or mg/dl)
 
-Gemiddelde wijziging in de CGM-uitlezing in de laatste 15 minuten
+E - average change CGM reading last 15 minutes
 
-F - telefoon batterij
+F - phone battery
 
-G - basaal (getoond in E/uur tijdens standaard patroon en in % tijdens TBR)
+G - basal rate (shown in U/h during standard rate and in % during TBR)
 
-H - BGI (bloed glucose interactie) -> de mate waarin BG zou moeten stijgen of dalen uitgaande van enkel de insuline activiteit.
+H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
-I - koolhydraten (koolhydraten aan boord | e-carbs in de toekomst)
+I - carbs (carbs on board | e-carbs in the future)
 
-J - insuline aan boord (van bolus | van basaal)
+J - insulin on board (from bolus | from basal)
 
 ## Toegang tot het hoofdmenu van AAPS
 
-Om het AAPS hoofdmenu te openen kunt u gebruik maken van de volgende opties:
+To access main menu of AAPS you can use on of following options:
 
 * dubbel tik op je BG-waarde
 * selecteer het AAPS icoon in het applicatie menu van het horloge
@@ -104,11 +91,11 @@ Om het AAPS hoofdmenu te openen kunt u gebruik maken van de volgende opties:
 
 ## Instellingen (in Android Wear horloge)
 
-Om naar de wijzerplaat instellingen te gaan, ga naar het AAPS hoofdmenu swipe omhoog en selecteer "Instellingen".
+To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
 
-Een gevulde ster geeft aan ingeschakeld (**Aan**), een lege ster geeft aan dat instelling is uitgeschakeld (**Uit**):
+Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
 
-![Instellingen aan/uit](../images/Watchface_Settings_On_Off.png)
+![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
 ### AAPS-parameters
 
@@ -138,7 +125,7 @@ Een gevulde ster geeft aan ingeschakeld (**Aan**), een lege ster geeft aan dat i
 
 * **Invoer uiterlijk**: met deze parameter kun je de positie van "+" en "- knoppen selecteren voor wanneer je opdrachten in AAPS (TT, Insuline, khd...) invoert
 
-![Opties voor invoerontwerp](../images/Watchface_InputDesign.png)
+![Input design options](../images/Watchface_InputDesign.png)
 
 ### Specifieke watchface parameters
 
@@ -146,7 +133,7 @@ Een gevulde ster geeft aan ingeschakeld (**Aan**), een lege ster geeft aan dat i
 
 * **Delta Korrelgrootte** (standaard `Medium`)
 
-![Steampunk_meter](../images/Watchface_Steampunk_Gauge.png)
+![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
 #### Cirkel Watchface
 
@@ -168,17 +155,17 @@ Een gevulde ster geeft aan ingeschakeld (**Aan**), een lege ster geeft aan dat i
 
 ## Complications
 
-*Complication* is een term afkomstig van traditionele horloges, waarbij een toevoeging aan de wijzerplaat wordt beschreven als extra klein venster of een subwijzerplaat (met datum, dag van de week, maanfase, enz.). Wear OS 2.0 biedt deze optie om extra invoering mogelijk te maken voor meldingen zoals weer, notificaties, fitnesstellers etc. Deze zijn toe te voegen aan alle wijzerplaten die "Complication" ondersteunen.
+*Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
 
-De AndroidAPS Wear OS-app ondersteunt complicaties sinds build nummer `2.6`, dit maakt het mogelijk om alle watchfaces die complicaties ondersteunen, AAPS gerelateerde gegevens te laten weergeven (BG met trend, IOB, COB, enz.).
+AndroidAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
 
-Complicaties kunnen ook dienen als **snelkoppeling** naar AAPS functies. Door te tikken op een complicatie kun je AAPS menu's en dialoogvensters openen (afhankelijk van type complicatie en configuratie).
+Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
 
-![Complications_Op_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
+![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
 
 ### Complicatie types
 
-De AAPS Wear OS-app geeft alleen ruwe gegevens door, in een vooraf gedefinieerde standaard-opmaak. Het is aan het watchface om te bepalen waar en hoe deze complicaties worden weergegeven, denk daarbij aan de lay-out, de rand, kleur en het lettertype. Van de vele beschikbare Wear OS-complicatietypes, gebruikt AAPS:
+AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
 
 * `SHORT TEXT` - Bevat twee regels tekst, 7 tekens elk, soms aangeduid als waarde en label. Meestal weergegeven in een cirkel of kleine 'pill' - de één onder de ander, of naast elkaar. Het is een zeer ruimtebesparende complicatie. AAPS probeert onnodige tekens te verwijderen om deze complicatie in te passen: door het afronden van waarden, het verwijderen van voorafgaande en afsluitende nullen uit waarden, enz.
 * `LONG TEXT` - Bevat twee regels tekst, elk ongeveer 20 tekens. Meestal weergegeven in een rechthoek of lange pill - de één onder de ander. Het wordt gebruikt voor extra details en voor de status uitgeschreven in tekst.
@@ -187,13 +174,13 @@ De AAPS Wear OS-app geeft alleen ruwe gegevens door, in een vooraf gedefinieerde
 
 ### Complicaties instellen
 
-Om een complicatie toe te voegen aan een watchface, houd hem lang ingedrukt en klik op het tandwiel-icoon eronder. Afhankelijk van hoe het specifieke watchface werkt: ofwel klik op de betreffende plaats ofwel ga naar het complicaties setup menu. AAPS-complicaties zijn gegroepeerd onder het AAPS menu item.
+To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
 
-Bij het instellen van complicaties op de watchface, zal Wear OS de lijst van complicaties die geschikt zijn voor de geselecteerde plaats op het watchface weergeven en filteren. Als je een bepaalde complicatie niet kunt vinden in de lijst, komt dat waarschijnlijk doordat die complicatie niet kan worden gebruikt voor de geselecteerde plaats.
+When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
 
 ### Complicaties van AAPS
 
-AndroidAPS biedt de volgende complicaties:
+AndroidAPS provides following complications:
 
 ![AAPS_Complications_List](../images/Watchface_Complications_List.png)
 
@@ -208,7 +195,7 @@ AndroidAPS biedt de volgende complicaties:
 * **IoB Icon** (`SHORT TEXT`, opent *Bolus*): Geeft *Insulin on Board* waarde weer met een statisch pictogram.
 * **Uploader/Telefoon Batterij** (`RANGED VALUE`, opent *Status*): Geeft het batterij percentage van de AAPS telefoon (uploader) weer, zoals gerapporteerd door AAPS. Afgebeeld als percentagemeter met een batterijpictogram dat de waarde weergeeft. Het kan zijn dat het niet real-time wordt bijgewerkt, maar slechts wanneer andere belangrijke AAPS gegevens veranderen (meestal: elke ~ 5 minuten met nieuwe *Blood Glucose* meting).
 
-Daarnaast zijn er drie complicaties van het `LARGE IMAGE` soort: **Donkere Achtergrond**, **Grijze Achtergrond** en **Lichte Achtergrond**, zij laten een statische AAPS achtergrond zien.
+Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
 
 ### Instellingen voor complicaties
 
@@ -224,17 +211,17 @@ Daarnaast zijn er drie complicaties van het `LARGE IMAGE` soort: **Donkere Achte
 
 ## Prestaties en levensduur van de batterij
 
-Wear OS horloges hebben vaak een zeer beperkte batterijduur. Het formaat van het horloge bepaalt de maximale grootte (en daarmee capaciteit) van de ingebouwde batterij. Zelfs met recente ontwikkelingen zowel op hardware als software gebied, zullen Wear OS horloges nog steeds dagelijks moeten worden opgeladen.
+Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
 
-Als jouw batterij minder dan een dag (van dageraad tot schemering) meegaat, zijn hier enkele tips.
+If an experienced battery span is shorter than a day (from dusk to dawn), here are some tips to troubleshoot the issues.
 
-De belangrijkste batterijverslinders zijn:
+Main battery-demanding areas are:
 
 * Actief beeldscherm met achtergrondverlichting aan (voor LED) of in volledige lichtsterktemodus (voor OLED)
 * Weergave op het scherm
 * Radiocommunicatie via Bluetooth
 
-Omdat we geen compromissen kunnen sluiten op het gebied van communicatie (we hebben up-to-date data nodig) en willen de meest recente gegevens weergegeven worden, kunnen de meeste optimalisaties worden gedaan op *schermweergave tijd* gebied:
+Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in *display time* area:
 
 * Meegeleverde watchfaces zijn meestal beter geoptimaliseerd dan aangepaste, gedownload van de playstore.
 * Het is beter om watchfaces te gebruiken die de hoeveelheid weergegeven data beperken in inactieve/gedimde modus.
@@ -262,8 +249,8 @@ Omdat we geen compromissen kunnen sluiten op het gebied van communicatie (we heb
 
 ## Bekijken van gegevens in Nightscout
 
-Als je een ander looping systeem gebruikt en je wilt de loop details *bekijken* op een Android Wear horloge, of als je wilt kijken naar de looping van uw kind, dan kunt u alleen de NSClient APK bouwen/downloaden. Om dit te doen volg de [APK build instructies](../Installing-AndroidAPS/Building-APK.md) waarbij je de build variant "NSClientRelease" selecteert. Er zijn verschillende watchfaces om uit te kiezen die de gemiddelde delta, IOB, momenteel actieve tijdelijke basaal en basale profielen + een CGM grafiek kunnen weergeven.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
 # Pebble
 
-Pebble gebruikers kunnen de [Urchin watchface gebruiken](https://github.com/mddub/urchin-cgm) om de loopdata (indien geüpload naar Nightscout) *te bekijken*, maar je kunt niet via het horloge met AndroidAPS communiceren. U kunt verschillende velden kiezen om te tonen zoals IOB, en momenteel actief tijdelijk basaal en voorspellingen. Als u een open loop gebruikt kunt u [IFTTT](https://ifttt.com/) gebruiken om een applet te maken die zegt als Notificatie wordt ontvangen van AndroidAPS verzend dan een SMS of pushover notificatie.
+Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
