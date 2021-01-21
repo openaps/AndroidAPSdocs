@@ -16,30 +16,17 @@ Galite instaliuoti AndroidAPS programėlę savo **Wear OS pagrindu** veikiančia
 
 Norint sukurti AAPS Wear OS versiją, jums reikia pasirinkti variantą "fullRelease", kai [kuriate APK](../Installing-AndroidAPS/Building-APK.md) (arba versiją "pumpRelease", kuri leis jums tiesiog nuotoliniu būdu valdyti pompą be ciklo).
 
-Įsitikinkite, kad telefono ir laikrodžio AAPS versijos yra pasirašytos tais pačiais raktais!
-
-To install the APK on Android Wear smartwatch, follow these steps:
-
-1. Enable developer mode on the watch. Press button on watch and click `settings` then `system` then `about` and repeatedly click the `build number` at least 7 times until it confirms you are a developer.
-2. Enable ADB on watch. Press button on watch and click `settings` then `developer options` then `adb debugging` and `debug over wifi`. Note down the IP address you get next to this, it will be in the form of an IP address followed by :5555.
-3. On PC, note down the file location of `wear-full-release.apk` (will be in the same folder as `app-full-release.apk` which you installed on your phone).
-4. On PC, get the command prompt (type `command` in the search box). 
-5. In command prompt: `cd c:\Program Files (x86)\Android\android-sdk\platform-tools`.
-6. In command prompt: `adb connect [enter the IP address from step 2 including the :5555]`.
-7. In command prompt: `adb install -r [enter path from step 3]\wear-full-release.apk`.
-8. That will install AAPS on the watch, and AAPS watchfaces will be available to select.
-
-When using wear version of AAPS, always update it together with phone version of app - keep their versions in sync. To do this you'll need to follow the steps above again, although you won't need to reenable developer mode.
+You can then update or install the watchface via the PlayStore on your watch.
 
 ### Nustatymas telefone
 
-AndroidAPS konfigūratoriuje turite [aktyvuoti Wear įskiepį](../Configuration/Config-Builder#wear).
+Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder#wear).
 
 ## AAPS kontrolė laikrodyje
 
-AndroidAPS galima *valdyti* naudojant Android Wear išmanųjį laikrodį. Pavyzdžiui, jei norite suleisti boliusą, tuomet laikrodžio nustatymuose turėtumėte įjungti „Valdymas iš laikrodžio“.
+AndroidAPS is designed to be *controlled* by Android Wear watches. Pavyzdžiui, jei norite suleisti boliusą, tuomet laikrodžio nustatymuose turėtumėte įjungti „Valdymas iš laikrodžio“.
 
-Iš laikrodžio galite paleisti šias funkcijas:
+The following functions can be triggered from the watch:
 
 * nustatyti laikiną tikslą
 * naudoti boluso skaičiuoklę (skaičiavimo kintamieji gali būti apibrėžti telefono [nustatymuose](../Configuration/Config-Builder#wear))
@@ -54,15 +41,15 @@ Iš laikrodžio galite paleisti šias funkcijas:
 
 ## AAPS ciferblatai
 
-Yra keletas skaitmeninių ciferblatų, kurie rodo vidutinį delta pokytį, aktyvų insuliną IOB, esamą laikiną bazinę TBR ir bazinį profilį bei CGM duomenų grafiką.
+There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
-Įsitikinkite, kad AndroidAPS pranešimai nėra užblokuoti laikrodyje. Veiksmo patvirtinimas (pavyzdžiui, bolusas, laikini tikslai) įvyksta per pranešimus, kuriuos reikia patempti į šoną ir paspausti varnelę.
+Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
 
-Norėdami greičiau patekti į AAPS meniu, du kartus spustelėkite ant glikemijos. Dukart spustelėję glikemijos kreivę, galite pakeisti laiko skalę.
+To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
 ## Galimi ciferblatai
 
-![Galimi ciferblatai](../images/Watchface_Types.png)
+![Available watchfaces](../images/Watchface_Types.png)
 
 ### New watchface as of AndroidAPS 2.8
 
@@ -262,7 +249,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ## Peržiūrėti Nightscout duomenis
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Yra keletas skaitmeninių ciferblatų, kurie rodo vidutinį delta pokytį, aktyvų insuliną IOB, esamą laikiną bazinę TBR ir bazinį profilį bei CGM duomenų grafiką.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
 # Pebble
 
