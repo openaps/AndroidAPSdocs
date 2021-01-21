@@ -39,7 +39,7 @@ Wenn eCarbs eingegeben werden, wird im Careportal automatisch eine Notiz angeleg
 
 Verzögerter Bolus
 ==================================================
-Wie oben bereits erwähnt sind verzögerte oder sog. Multi-Wave-Boli beim Loopen nicht sinnvoll. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ for details
+Wie oben bereits erwähnt sind verzögerte oder sog. Multi-Wave-Boli beim Loopen nicht sinnvoll. `Weiter unten <../Usage/Extended-Carbs.html#warum-ein-verzogerter-bolus-beim-loopen-nicht-funktioniert>`_ wird beschrieben, warum.
 
 Verzögerter Bolus und Wechsel zum Open Loop - nur für Dana- und Insight-Pumpe
 -----------------------------------------------------------------------------
