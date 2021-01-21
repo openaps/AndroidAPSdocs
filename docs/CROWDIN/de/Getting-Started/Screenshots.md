@@ -282,7 +282,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
 ### Abschnitt J
 
-* Beim SUPER BOLUS wird das Basalinsulin der kommenden zwei Stunden zum berechneten Bolus addiert und die Basalrate für die kommenden zwei Stunden auf Null gesetzt, um das extra Insulin wieder heraus zu nehmen. The option only shows when "Enable [superbolus](../Configuration/Preferences#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences#overview).
+* Beim SUPER BOLUS wird das Basalinsulin der kommenden zwei Stunden zum berechneten Bolus addiert und die Basalrate für die kommenden zwei Stunden auf Null gesetzt, um das extra Insulin wieder heraus zu nehmen. Die Option ist nur verfügbar, wenn in den [Einstellungen der Übersicht](../Configuration/Preferences.html#ubersicht) bei den erweiterten Einstellungen "Aktiviere [Superbolus](../Configuration/Preferences.html#superbolus) im Wizard" aktiviert ist.
 * Damit soll kurzfristig mehr Insulin zur Verfügung stehen und dadurch hoffentlich Spitzen vermieden werden.
 * Weitere Informationen findest Du unter [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -328,7 +328,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
    * Der Closed Loop wird automatisch gestoppt und für die Laufzeit des verzögerten Bolus zum Open Loop gewechselt.
    * Lies vor Verwendung dieser Option unbedingt die [-Details](../Usage/Extended-Carbs#id1).
 
-### Careportal - section N
+### Careporal - Abschnitt N
 
 * Zeigt Informationen zu
    
@@ -348,7 +348,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
    
    ![Batterieladestand Sensor und Smartphone stimmen überein](../images/Home2021_ActionSensorBat.png)
 
-### Careportal - section O
+### Careporal - Abschnitt O
 
 * BZ-Test, Katheterwechsel, CGM-Sensor setzen, Pumpenbatterie-Wechsel sind die Grundlage für die in [Abschnitt N](#careportal-abschnitt-n) angezeigten Daten.
 * Mit dem Button 'Katheterwechsel' kannst Du sowohl einen Katheter- (Schlauch) als auch einen Kanülenwechsel (Nadel) aufzeichnen.
