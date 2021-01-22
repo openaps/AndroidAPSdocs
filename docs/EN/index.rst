@@ -17,6 +17,12 @@ For more details, please read on here.
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Change language
+   Change language <changelanguage.rst>
+   
+.. toctree::
+   :maxdepth: 1
+   :glob:
    :caption: Getting started
 
    Safety first <./Getting-Started/Safety-first.rst>
