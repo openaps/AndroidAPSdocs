@@ -1,7 +1,7 @@
 ¿Qué es un Sistema de Lazo Cerrado?
 **************************************************
 
-.. imagen:: ../images/autopilot.png
+.. image:: ../images/autopilot.png
   :alt: AAPS es como un autopiloto
 
 Un sistema de páncreas artificial de lazo cerrado combina diferentes componentes para facilitarte la gestión de la diabetes. 

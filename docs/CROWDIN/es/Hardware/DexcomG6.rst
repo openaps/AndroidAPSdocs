@@ -38,7 +38,7 @@ Si utiliza G6 con la aplicación Dexcom parcheada
    * Click the link to the Dexcom G6 app on the search results page that is displayed.
    * La región estará visible en el URL.
    
-   .. imagen:: ../images/DexcomG6regionURL.PNG
+   .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Region en el URL de Dexcom G6
 
 * Uninstall the original Dexcom app.
@@ -84,7 +84,7 @@ Resolución de problemas específica de Dexcom G6
   * Transmisor con número de serie que empieza por 80 o 81: "Obtiene datos hh:mm" (por ejemplo, "Obtiene datos. "Obtiene datos 19:04")
   * Transmisor de serie empezando con 8G o 8H: "Obengo la glucosa hh:mm" (es decir, "Obtuviste la glucosa 19:04") o "No hay datos hh:mm" (por ejemplo. "Obtenidos ahora en bruto 19:04")
 
-.. imagen:: ../images/xDrip_Dexcom_PhoneServiceState.png
+.. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
 
 Resolver problemas generales

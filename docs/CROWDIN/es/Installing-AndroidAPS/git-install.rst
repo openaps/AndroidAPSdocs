@@ -8,14 +8,14 @@ Windows
 * Cualquier versión de git sirve. Por ejemplo, `https://git-scm.com/download/win <https://git-scm.com/download/win>`_.
 * Asegúrese de tomar nota de la ruta de acceso de instalación. Lo necesitará en el siguiente paso.
 
-.. imagen:: ../images/Update_GitPath.png
+.. image:: ../images/Update_GitPath.png
   :alt: Ruta de acceso de instalación de Git
 
 2. Establecer ruta de acceso de git en Android Studio
 --------------------------------------------------
 * Open File > Settings 
 
-  .. imagen:: ../images/Update_GitSettings1.png
+  .. image:: ../images/Update_GitSettings1.png
     :alt: Android Studio - abrir la configuración
 
 * Click the small triangle next to Version Control (1.) to open the sub-menu.
@@ -49,12 +49,12 @@ Windows
 * Abrir ventana de terminal en Android Studio
 * Enter "`git - -version`" (without quotation marks and no spaces between the two - [minus sign]!) and press Return
 
-  .. imagen:: ../images/AndroidStudio_gitversión1.png
+  .. image:: ../images/AndroidStudio_gitversión1.png
     :alt: git - -version
 
 * Si git está instalado y conectado correctamente, recibirá una información sobre la versión instalada que se muestra de la siguiente manera:
 
-  .. imagen:: ../images/AndroidStudio_gitversión2.png
+  .. image:: ../images/AndroidStudio_gitversión2.png
     :alt: resultado git-version
 
 Mac

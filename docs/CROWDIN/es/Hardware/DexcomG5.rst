@@ -16,7 +16,7 @@ Si utiliza G5 con la aplicación Dexcom parcheada
    * Carpeta 2.3 es para los usuarios de AndroidAPS 2.3, carpeta 2.4 para los usuarios de la AAPS 2.5.
    * Abrir https://play.google.com/store/search?q=dexcom%20g5 en tu ordenador. La región estará visible en el URL.
    
-   .. imagen:: ../images/DexcomG5regionURL.PNG
+   .. image:: ../images/DexcomG5regionURL.PNG
      :alt: Region en el URL Dexcom G5
 
 * Detener el sensor y desinstalar el app de Dexcom original, si no lo ha hecho ya.

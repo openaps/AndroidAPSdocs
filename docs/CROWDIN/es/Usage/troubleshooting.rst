@@ -14,7 +14,7 @@ Configuración
 --------------------------------------------------
 * `Perfil <../Usage/Profiles.html#troubleshooting-profile-errors>`_
 
-  .. imagen:: ../images/BasalNotAlignedToHours2.png
+  .. image:: ../images/BasalNotAlignedToHours2.png
     :alt: Error: Basal no alineado con las horas
 
 * ` Nightscout Cliente <../Usage/Troubleshooting-NSClient.html>`_
@@ -22,7 +22,7 @@ Uso
 --------------------------------------------------
 * `Valores de carbohidratos erróneos <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 
-  .. imagen:: ../images/Calculator_SlowCarbAbsorbtion.png
+  .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
     :alt: Error: absorbción lenta de carbohidratos
 
 * `Comandos SMS <../Children/SMS-Commands.html#troubleshooting>`_

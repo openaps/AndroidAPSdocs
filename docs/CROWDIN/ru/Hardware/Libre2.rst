@@ -25,7 +25,7 @@ Important note : This does not work with the US version of the Freestyle 2 senso
 
 Другими индикаторами может быть логотип Linux penguin с тремя точками меню-> Info или шрифт модифицированного приложения. Эти критерии являются необязательными в зависимости от того, какой источник приложения вы выбрали.
 
-.. изображение:: ../images/LibreLinkPatchedCheck.
+.. image:: ../images/LibreLinkPatchedCheck.png
   :alt: Проверка шрифтов LibreLink
 
 Убедитесь, что активирована NFC, включите разрешение на память и геолокацию для модифицированного приложения, включите автоматическое время и часовой пояс и задайте хотя бы одно оповещение в этом приложении. 
@@ -42,7 +42,7 @@ Important note : This does not work with the US version of the Freestyle 2 senso
 
 Обратите внимание, что служба определения расположения является центральным параметром. Это не разрешение на доступ к геолокации в приложении, которое также должно быть активировано!
 
-.. изображение:: ../images/Libre2_AppPermissionsAndLocation.png
+.. image:: ../images/Libre2_AppPermissionsAndLocation.png
   :alt: LibrreLink-разрешение на доступ к памяти и расположению
   
   

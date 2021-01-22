@@ -25,7 +25,7 @@ La aplicación parcheada se puede identificar mediante la notificación de autor
 
 Otras indicaciones podrían ser el logotipo del pingüino de Linux tres puntos del menú-> Info o la fuente de la aplicación parcheada. Estos criterios son opcionales en función de la fuente de aplicación que elija.
 
-.. imagen:: ../images/LibreLinkPatchedCheck.png
+.. image:: ../images/LibreLinkPatchedCheck.png
   :alt: Comprobación de fuentes de LibreLink
 
 Asegúrese de que NFC esté activado, habilite el permiso de memoria y ubicación para la aplicación parcheada, habilite el tiempo y el huso horario automáticos y establezca al menos una alarma en la aplicación parcheada. 
@@ -71,7 +71,7 @@ Si la marca de exclamación permanece o se obtiene un mensaje de error, esto pue
 
 Reiniciar el teléfono puede ayudar, es posible que tenga que hacerlo varias veces. Tan pronto como se establezca la conexión, desaparece la marca de exclamación roja y se toma el paso más importante. Puede suceder que dependiendo de la configuración del sistema, el signo de exclamación permanece pero todavía se obtienen lecturas. En ambos casos está bien. El sensor y el teléfono están ahora conectados, cada minuto se transmite un valor de azúcar en la sangre.
 
-.. imagen:: ../images/Libre2_Connected.png
+.. image:: ../images/Libre2_Connected.png
   :alt: Conexión LibreLink establecida
   
 En raras ocasiones podría ayudar vaciar el caché bluetooth y/o restablecer todas las conexiones de red a través del menú del sistema. Esto elimina todos los dispositivos bluetooth conectados y puede ayudar a configurar una conexión bluetooth adecuada. Ese procedimiento se guarda como sensor iniciado y es recordado por la aplicación de LibreLink parcheada. No hay que hacer nada adicional aquí. Simplemente espere a que la aplicación parcheada se conecte al sensor.
@@ -134,7 +134,7 @@ Técnicamente, el valor de azúcar en sangre actual se transmite a xDrip+ cada m
 
 Los valores crudos son muy útiles cuando el azúcar en sangre se está moviendo rápido. Even if the dots are jumpier you would detect the tendency much better as using the smoothed line to make proper therapy decisions.
 
-.. imagen:: ../images/Libre2_RawValues.png
+.. image:: ../images/Libre2_RawValues.png
   :alt: xDrip+ advanced settings Libre 2 & raw values
 
 Sensor runtime
@@ -152,7 +152,7 @@ Si no es así, compruebe la configuración del teléfono y continúe con el prim
 
 Una vez que tenga éxito, por favor seleccione "Parada de Sensor" y "Borrar calibración solamente" en xDrip. Esto le indica a xDrip+ que un nuevo sensor está enviando los niveles de azúcar en la sangre y las calibraciones antiguas ya no son válidas y por lo tanto tienen que ser eliminadas. No se realiza ninguna interacción real con el sensor de Libre2 aquí! No es necesario que inicie el sensor en xDrip+.
 
-.. imagen:: ../images/Libre2_GapNewSensor.png
+.. image:: ../images/Libre2_GapNewSensor.png
   :alt: xDrip+ falta datos al cambiar el sensor de Libre 2
 
 Calibración

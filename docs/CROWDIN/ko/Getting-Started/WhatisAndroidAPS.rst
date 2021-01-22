@@ -11,7 +11,7 @@ APS가 실제 췌장과 동일한 역할을 하진 못하지만, 1형당뇨인�
 * Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
 * 시스템이 올바르게 작동하는지 확인하고 관리하세요.
 
-.. 참고:: 
+.. note:: 
 	**Disclaimer and Warning**
 
 	이곳에 설명된 모든 정보, 생각, 코드는 오직 정보제공 및 교육적 목적으로만 제공된 것입니다. Nightscout은 현재 HIPAA 개인 정보 보호 준수 규약을 따르지 않습니다. Nightscout와 AndroidAPS를 본인의 책임하에 사용하세요. 의학적 결정을 위해 이 정보와 코드를 사용하지 마세요.

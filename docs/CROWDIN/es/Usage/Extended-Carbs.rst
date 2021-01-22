@@ -10,17 +10,17 @@ los eCarbs no están limitados a las comidas pesadas grasosas / proteicas: tambi
 
 Para especificar eCarbs, establezca una duración en el cuadro de diálogo _Carbs_ en la pestaña de visión general, los carbohidratos totales y, opcionalmente, un tiempo de duración:
 
-.. imagen:: ../images/eCarbs_Dialog.png
+.. image:: ../images/eCarbs_Dialog.png
   :alt: Introducir carbohidratos
 
 Los eCarbs en la pestaña de información general, tenga en cuenta los carbohidratos entre paréntesis en el campo COB, que muestra los carbohidratos en el futuro:
 
-.. imagen:: ../images/eCarbs_Graph.png
+.. image:: ../images/eCarbs_Graph.png
   :alt: eCarbs en la gráfica
 
 Las entradas de carbohidratos en el futuro están coloreadas en naranja oscuro en la pestaña de tratamiento:
 
-.. imagen:: ../images/eCarbs_Treatment.png
+.. image:: ../images/eCarbs_Treatment.png
   :alt: eCarbs en el futuro en la pestaña de tratamiento
 
 
