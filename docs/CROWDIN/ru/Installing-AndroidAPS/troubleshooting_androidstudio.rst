@@ -21,14 +21,14 @@
 
 Приложение успешно построено и может быть перенесено на телефон.
 
-.. изображение:: ../images/GIT_WarningIgnore.PNG
+.. image:: ../images/GIT_WarningIgnore.PNG
   :alt: игнорировать предупреждение компилятора Koline
 
 Ключ создан с ошибками
 ==================================================
 При создании нового хранилища ключей для построения подписанного APK в Windows может появиться следующее сообщение об ошибке
 
-.. изображение:: ../images/AndroidStudio35SigningKeys.png
+.. image:: ../images/AndroidStudio35SigningKeys.png
   :alt: Ключ создан с ошибками
 
 Это, кажется, ошибка в Android Studio 3.5.1 и в среде Java в Windows. Ключ создается правильно, но рекомендация выводится как ошибка. В настоящее время это можно игнорировать.
@@ -37,14 +37,14 @@
 ==================================================
 Если вы получите подобное сообщение об ошибке
 
-.. изображение:: ../images/GIT_Offline1.jpg
+.. image:: ../images/GIT_Offline1.jpg
   :alt: Не удалось загрузить предупреждение
 
 убедитесь, что 'Автономная работа' выключена.
 
 Файл -> параметры
 
-.. изображение:: ../images/GIT_Offline2.jpg
+.. image:: ../images/GIT_Offline2.jpg
   :alt: Параметры автономной работы
 
 Ошибка: buildOutput.apkData не может быть пустым
@@ -67,7 +67,7 @@
 
 В интернете много руководств, как определить, у вас 32-или 64-битная ОС- например " это <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>` _.
 
-.. изображение:: ../images/AndroidStudioWin10_32bitError.png
+.. image:: ../images/AndroidStudioWin10_32bitError.png
   :alt: снимок экрана не удалось запустить процесс демона
   
 
@@ -81,7 +81,7 @@ ContextEdit.
 ==================================================
 Если вы получите сообщение об ошибке, как это
 
-.. изображение:: ../images/GIT_TerminalCheckOut0.PNG
+.. image:: ../images/GIT_TerminalCheckOut0.PNG
   :alt: отказ: незафиксированные изменения
 
 Вариант 1 - Проверить установку git
@@ -95,7 +95,7 @@ ContextEdit.
 --------------------------------------------------
 * В Android Studio выберите VCS -> GIT -> Сбросить HEAD
 
-.. изображение:: ../images/GIT_TerminalCheckOut3.PNG
+.. image:: ../images/GIT_TerminalCheckOut3.PNG
   :alt: Сбросить HEAD
    
 Вариант 3 - проверить наличие обновлений
@@ -103,17 +103,17 @@ ContextEdit.
 * Скопируйте «git checkout --» в буфер обмена (без кавычек)
 * Переключитесь на терминал в Android Studio (слева с нижней стороны окна Android Studio)
 
-  .. изображение:: ../images/GIT_TerminalCheckOut1.PNG
+  .. image:: ../images/GIT_TerminalCheckOut1.PNG
   :alt: Терминал Android Studio
    
 * Вставьте скопированный текст и нажмите ввод
 
-  .. изображение:: ../images/GIT_TerminalCheckOut2.PNG
+  .. image:: ../images/GIT_TerminalCheckOut2.PNG
     :alt: Проверка GIT успешно завершена
 
 Приложение не установлено
 ==================================================
-.. изображение:: ../images/Update_AppNotInstalled.png
+.. image:: ../images/Update_AppNotInstalled.png
   :alt: приложение не установлено
 
 * Убедитесь, что вы передали файл «full-release.apk» на ваш телефон.

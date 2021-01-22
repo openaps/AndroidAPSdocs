@@ -2,7 +2,7 @@ Descripción General De Los Componentes
 **************************************************
 AndroidAPS no es sólo una aplicación (auto-construida), es sólo uno de los módulos de su sistema de lazo cerrado. Antes de tomar una decisión sobre los componentes, sería una buena idea echar un vistazo a "configuración de componentes <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>", también.
    
-.. imagen:: ../images/modules.png
+.. image:: ../images/modules.png
   :alt: Visión general de Compontes
 
 .. note:: 

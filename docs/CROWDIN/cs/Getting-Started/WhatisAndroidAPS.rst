@@ -11,7 +11,7 @@ Upozornění: Systém AndroidAPS není v žádné zemi regulován žádným zdra
 * Nastavil svůj individuální algoritmus dávkování ve spolupráci s lékařem nebo pomocným personálem tak, aby fungoval téměř dokonale
 * Správně obsluhoval systém a dohlížel na to, zda správně funguje
 
-.. poznámka:: 
+.. note:: 
 	**Disclaimer and Warning**
 
 	* Všechny informace, myšlenky a kód zde popsané slouží pouze pro informační a vzdělávací účely. Nightscout se nesnaží v současné době dodržovat zákon HIPAA. Používejte Nightscout a AndroidAPS na vaše vlastní riziko a nepoužívejte informace nebo kód k provádění lékařských rozhodnutí.

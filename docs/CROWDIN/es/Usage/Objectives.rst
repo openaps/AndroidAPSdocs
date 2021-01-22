@@ -23,7 +23,7 @@ Objetivo 2: Aprender a controlar AndroidAPS
 * Haga clic en el texto naranja "Aún no completado" para acceder a los tareas.
 * Se proporcionarán enlaces para guiarle en caso de que aún no esté familiarizado con una acción específica.
 
-   .. imagen:: ../images/Objective2_V2_5.png
+   .. image:: ../images/Objective2_V2_5.png
      :alt: Captura de pantalla de objetivo 2
 
 Objetivo 3: Demuestra tus conocimientos
@@ -31,7 +31,7 @@ Objetivo 3: Demuestra tus conocimientos
 * Pasar un examen de múltiples opciones probando su conocimiento de AndroidAPS.
 * Haga clic en el texto naranja "No completado todavía" para acceder a la página con las opciones de preguntas y respuestas.
 
-   .. imagen:: ../images/Objective3_V2_5.png
+   .. image:: ../images/Objective3_V2_5.png
      :alt: Captura de pantalla de objetivo 3
 
 * Se proporcionarán enlaces para guiarle en caso de que no esté seguro de las respuestas correctas todavía.
@@ -51,7 +51,7 @@ Reducir el número de notificaciones
 * Para reducir el número de decisiones que se tomarán mientras se encuentra en Lazo abierto se establece un rango de objetivo de alcance amplio como 90-150 mg/dl o 5,0-8,5 mmol/l. * Es posible que incluso desee ampliar el límite superior (o inhabilitar el Lazo Abierto) en la noche. 
 * En Preferencias, puede establecer un porcentaje mínimo para la sugerencia de cambio de tasa basal.
 
-   .. imagen:: ../images/OpenLoop_MinimalRequestChange2.png
+   .. image:: ../images/OpenLoop_MinimalRequestChange2.png
      :alt: Open Loop minimal request change
      
 * Además, no hace falta que actúe cada 5 minutos en todas las sugerencias...
@@ -72,7 +72,7 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 Puede ver un rango más amplio (líneas verdes) en el gráfico para los valores que tiene como objetivo mantener su nivel de glucosa en sangre entrando valores diferentes en `Preferencias <../Configuration/Preferences.html>`_ > Rango para la visualización.
  
-.. imagen:: ../images/sign_stop.png
+.. image:: ../images/sign_stop.png
   :alt: Señal de parada
 
 Parar aquí si usted está lazo abierto con una bomba virtual - no haga clic en Comprobar al final de este objetivo.
@@ -83,7 +83,7 @@ Parar aquí si usted está lazo abierto con una bomba virtual - no haga clic en 
 
 Objetivo 6: Empezando a cerrar el lazo con Baja Glucosa Suspender
 ====================================================================================================
-.. imagen:: ../images/sign_warning.png
+.. image:: ../images/sign_warning.png
   :alt: Señal de advertencia
   
 El lazo cerrado no corregirá los valores de bg alto en el objetivo 6, ya que se limita a la suspensión por baja glucosa. ¡Los valores altos de BG tienen que ser corregidos manualmente por usted!
@@ -107,7 +107,7 @@ Objetivo 7: Ajustar el lazo cerrado, elevando el IOB máximo por encima de 0 y r
 
   Esta recomendación debe considerarse como un punto de partida. Si se establece en el 3x y se están viendo movimientos que le empuja a cambios fuertes y rápidos, a continuación, baje ese número. Si eres muy resistente, levanta un poco a la vez.
 
-   .. imagen:: ../images/MaxDailyBasal2.png
+   .. image:: ../images/MaxDailyBasal2.png
      :alt: max basal diaria
 
 * Una vez que este seguro de cuánta IOB se adapta a su lazo de patrones, a continuación, reduzca sus objetivos al nivel deseado.

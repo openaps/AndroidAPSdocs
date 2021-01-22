@@ -4,7 +4,7 @@ Siga las instrucciones en el manual ` manual de actualización <../Installing-An
 
 Recibirá la siguiente información tan pronto como se disponga de una nueva actualización:
 
-.. imagen:: ../images/AAPS_LoopDisable90days.png
+.. image:: ../images/AAPS_LoopDisable90days.png
   :alt: Información de actualización
 
 Entonces tienes 60 días para actualizarte. Si no actualiza dentro de estos 60 días, la AAPS retrocederá a LGS (suspensión de glucosa baja -ver `glosario <../Getting-Started/Glossary.html>`_) como en el `objetivo 6 <../Usage/Objectives.html>`_.

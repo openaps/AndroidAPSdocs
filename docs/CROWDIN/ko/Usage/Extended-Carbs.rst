@@ -10,17 +10,17 @@ eCarbs는 지방/단백질 함량이 높은 식사에만 제한되지 않고 'co
 
 eCarbs는 홈 탭의 '탄수화물' 메뉴에서 기간, 전체 탄수화물양을 입력하고 선택적으로 시간 이동을 입력하면 된다.
 
-.. 이미지:: ../images/eCarbs_Dialog.png
+.. image:: ../images/eCarbs_Dialog.png
   :alt: 탄수화물 입력
 
 홈 탭의 eCarbs는 COB 항목에서 괄호안의 수치로 향후 소화될 탄수화물의 양을 보여준다.
 
-.. 이미지:: ../images/eCarbs_Graph.png
+.. image:: ../images/eCarbs_Graph.png
   :alt: 그래프에서 eCarbs
 
 향후 소화될 탄수화물 양은 관리 탭에서 진한 오렌지 색으로 표시된다.
 
-.. 이미지:: ../images/eCarbs_Treatment.png
+.. image:: ../images/eCarbs_Treatment.png
   :alt: 관리 탭에서 eCarbs
 
 

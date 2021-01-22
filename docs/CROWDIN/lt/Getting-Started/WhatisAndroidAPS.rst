@@ -11,7 +11,7 @@ Atsargiai: nei vienos šalies medicininis reguliatorius nereglamentuoja AndroidA
 * Kiek įmanoma geriau suderina individualias diabeto nuostatas su savo diabeto komanda
 * Prižiūri, nuolat atnaujina ir stebi sistemą, kad įsitikintų, jog ji veikia tinkamai
 
-.. pastaba:: 
+.. note:: 
 	**Atsakomybės Ir Įspėjimas**
 
 	* Visa informacija, mintys ir šaltinio kodas yra skirti tik informaciniams ir moksliniams tikslams. Nightscout neatitinka jokių privatumo reikalavimų sveikatos priežiūros srityje. Savo rizika naudokite Nightscout ir AndroidAPS ir nenaudokite jų priimdami medicininius sprendimus.

@@ -11,7 +11,7 @@ La seguridad Primero
 Setup SMS commands
 ==================================================
 
-.. imagen:: ../images/SMSCommandsSetup.png
+.. image:: ../images/SMSCommandsSetup.png
   :alt: Configuración de comandos SMS
       
 * La mayoría de los ajustes de los objetivos temporales, después de AAPS, etc. can be done on `NSClient app <../Children/Children.html>`_ on an Android phone with an internet connection.
@@ -84,7 +84,7 @@ Comandos
 ==================================================
 Commands must be sent in English, the response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
 
-.. imagen:: ../images/SMSCommands.png
+.. image:: ../images/SMSCommands.png
   :alt: Ejemplo de comandos SMS
 
 Loop
@@ -190,5 +190,5 @@ Los comandos SMS no funcionan en los teléfonos de Samsung
 --------------------------------------------------
 Hubo un reporte sobre los comandos de SMS que se detenían después de una actualización en el teléfono Galaxy S10. Could be solved by disabling 'send as chat message'.
 
-.. imagen:: ../images/SMSdisableChat.png
+.. image:: ../images/SMSdisableChat.png
   :alt: Desactivar SMS como mensaje de chat

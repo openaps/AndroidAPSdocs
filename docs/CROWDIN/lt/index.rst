@@ -149,7 +149,7 @@ Norėdami gauti daugiau informacijos, prašome perskaityti čia.
    Kaip redaguoti dokumentaciją <./make-a-PR>
 
 
-.. pastaba:: 
+.. note:: 
 	**Atsakomybės Ir Įspėjimas**
 
 	* Visa informacija, mintys ir šaltinio kodas yra skirti tik informaciniams ir moksliniams tikslams. Nightscout neatitinka jokių privatumo reikalavimų sveikatos priežiūros srityje. Savo rizika naudokite Nightscout ir AndroidAPS ir nenaudokite jų priimdami medicininius sprendimus.
