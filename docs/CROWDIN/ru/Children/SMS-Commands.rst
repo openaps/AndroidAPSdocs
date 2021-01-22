@@ -11,7 +11,7 @@ AndroidAPS позволяет контролировать телефон реб
 Настройка SMS-команд
 ==================================================
 
-.. изображение:: ../images/SMSCommandsSetup.png
+.. image:: ../images/SMSCommandsSetup.png
   :alt: Настройка SMS команд
       
 * Большинство корректировок временных целей, слежение за работой ААПС и т. д. может выполняться в приложении ` NSclient <../Children/Children.html> ` _ на Android-телефоне с подключением к Интернету.
@@ -30,7 +30,7 @@ AndroidAPS позволяет контролировать телефон реб
   * Убедитесь, что этот телефон работает с алгоритмом путем отправки и подтверждения команды SMS.
   * Введите дополнительные номера, разделенные точкой с запятой, без пробела.
   
-    .. изображение:: ../images/SMSCommandsSetupSpace2.png
+    .. image:: ../images/SMSCommandsSetupSpace2.png
       :alt: Команды SMS с нескольких номеров
 
 Минуты между командами на болюс
@@ -84,7 +84,7 @@ AndroidAPS позволяет контролировать телефон реб
 ==================================================
 Команды должны отправляться на английском языке, ответ будет получен на русском языке, если строка ответа уже " переведена <../translations.html#translate-strings-pl-androidaps-app> ` _.
 
-.. изображение:: ../images/SMSCommandsSetup.png
+.. image:: ../images/SMSCommandsSetup.png
   :alt: Пример команд SMS
 
 Замкнутый цикл
@@ -190,5 +190,5 @@ If the other app is installed on multiple phones make sure to deactivate upload 
 --------------------------------------------------
 Была жалоба на остановку работы SMS команд после обновления на телефоне Galaxy S10. Could be solved by disabling 'send as chat message'.
 
-.. изображение:: ../images/SMSdisableChat.png
+.. image:: ../images/SMSdisableChat.png
   :alt: Отключить SMS как сообщение чата

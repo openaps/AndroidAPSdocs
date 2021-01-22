@@ -5,7 +5,7 @@ AndroidAPS není jen (uživatelem sestavená) aplikace, je to jeden z několika 
 .. obrázek:: ../images/modules.png
   :alt: Přehled komponent
 
-.. poznámka:: 
+.. note:: 
    **DŮLEŽITÉ BEZPEČNOSTNÍ UPOZORNĚNÍ**
 
    Základy bezpečnosti AndroidAPS zmíněné v této dokumentaci jsou postaveny na bezpečnostních vlastnostech hardwaru používaného k vybudování vašeho systému. Je zásadně důležité, abyste používali pouze testované, plně funkční a pro uzavřenou smyčku schválené inzulinové pumpy a CGM. Hardwarové nebo softwarové úpravy těchto komponent mohou způsobit neočekávané dávkování inzulínu, což může znamenat pro uživatele významné riziko. Pokud najdete nebo získáte rozbité, upravené nebo doma vyrobené inzulínové pumpy nebo CGM, NEPOUŽÍVEJTE JE pro vytvoření systému AndroidAPS.

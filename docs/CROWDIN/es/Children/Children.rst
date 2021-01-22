@@ -1,7 +1,7 @@
 Seguimiento remoto
 **************************************************
 
-.. imagen:: ../images/KidsMonitoring.png
+.. image:: ../images/KidsMonitoring.png
   Tema: Supervisión de los niños
   
 AndroidAPS ofrece varias opciones para el monitorización remota de los parámetros de niños y también permite enviar comandos remotos. Por supuesto, también puedes usar la monitorización remota para seguir los datos de tu pareja o amigo.

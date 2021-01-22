@@ -174,7 +174,7 @@ Jak pomoci
    How to edit the docs <./make-a-PR>
 
 
-.. poznámka:: 
+.. note::
 	** Upozornění a varování **
 
 	* Všechny informace, myšlenky a kód zde popsané slouží pouze pro informační a vzdělávací účely. Nightscout se nesnaží v současné době dodržovat zákon HIPAA. Používejte Nightscout a AndroidAPS na vaše vlastní riziko a nepoužívejte informace nebo kód k provádění lékařských rozhodnutí.

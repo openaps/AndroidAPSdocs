@@ -174,7 +174,7 @@ Hoe je zelf kunt helpen
    De wiki verbeteren <./make-a-PR>
 
 
-.. opmerking:: 
+.. note:: 
 	**Disclaimer en waarschuwing**
 
 	* Alle informatie, gedachten, en de code die hier beschreven staan zijn alleen voor informatieve en educatieve doeleinden. Nightscout probeert zich op geen enkele wijze te houden aan gegevensbewaking van medische gegevens. Gebruik van Nightscout en AndroidAPS is op eigen risico, en gebruik de informatie of code niet om behandelbeslissingen te nemen.

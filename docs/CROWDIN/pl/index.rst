@@ -174,7 +174,7 @@ Jak pomóc
    How to edit the docs <./make-a-PR>
 
 
-.. notatka:: 
+.. note::
 	** Wyłączenie odpowiedzialności i ostrzeżenie **
 
 	* Wszystkie informacje, przemyślenia i kod opisane tutaj są przeznaczone wyłącznie do celów informacyjnych i edukacyjnych. Nightscout obecnie nie podejmuje prób zachowania zgodności z zasadami ochrony prywatności HIPAA. Korzystasz z Nightscout i AndroidAPS na własne ryzyko i nie używaj informacji ani kodu do podejmowania decyzji medycznych.

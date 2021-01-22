@@ -11,7 +11,7 @@ Antes de utilizar Automatización, debe tener confianza en los `objetivos tempor
 
 Make sure you really understand how automation works before setting up your first simple rule. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
 
-.. imagen:: ../images/Automation_ConditionAction_RC3.png
+.. image:: ../images/Automation_ConditionAction_RC3.png
   :alt: Condición de automatización + acción
 
 Cómo se usa
@@ -24,7 +24,7 @@ Nota importante
 
 So make sure to deactivate automation rules during these occasions if neccessary. You can do so by unticking the box left of the name of your automation rule.
 
-.. imagen:: ../images/Automation_ActivateDeactivate.png
+.. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Activación y desactivación de la regla de automatización
 
 Where to find Automation
@@ -84,7 +84,7 @@ Puede elegir una o varias acciones:
 
 Después de añadir la acción, **no olvide cambiar los valores por defecto** a lo que necesita pulsando en los valores predeterminados.
  
-.. imagen:: ../images/Automation_Default_V2_5.png
+.. image:: ../images/Automation_Default_V2_5.png
   :alt: Valor por omisión de automatización frente a. valores del usuario
 
 Sort automation rules
@@ -129,14 +129,14 @@ These are just setup examples, no advises. Don't reproduce them without being aw
 
 Objetivo temporal de glucosa baja
 --------------------------------------------------
-.. imagen:: ../images/Automation2.png
+.. image:: ../images/Automation2.png
   :alt: Automation2
 
 This is made by someone who wants to get a hypo temp target automatically when having low glucose.
 
 Objetivo temporal para hora de almuerzo
 --------------------------------------------------
-.. imagen:: ../images/Automation3.png
+.. image:: ../images/Automation3.png
   :alt: Automation3
   
 This example is made by someone who has lunch at work at the same time every day during the week. If he or she stays at a certain time in his or her lunch location, automation will set a low temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the chosen time and if he or she is at the chosen location. So it does not work on any other time at this location or on this time when the person stays at home. 

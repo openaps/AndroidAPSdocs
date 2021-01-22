@@ -39,7 +39,7 @@ Puede tratar de cambiar la configuración del bloqueo de ruido en xdrip (Setting
 
 Edad de sensor negativa
 --------------------------------------------------
-.. imagen:: ../images/Troubleshooting_SensorAge.png
+.. image:: ../images/Troubleshooting_SensorAge.png
   :alt: Edad de sensor negativa
 
 This occurs if there is either a double "CGM Sensor Insert" entry in `actions tab / menu <../Configuration/Config-Builder.html#actions>`_ or a sensor insert with wrong date. Vaya a pestaña tratamientos > careportal y suprima la entrada errónea.

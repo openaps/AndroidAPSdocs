@@ -21,14 +21,14 @@ Si la compilación se ha completado satisfactoriamente, pero se obtienen avisos 
 
 La aplicación se ha creado correctamente y se puede transferir al teléfono.
 
-.. imagen:: ../images/GIT_WarningIgnore.PNG
+.. image:: ../images/GIT_WarningIgnore.PNG
   :alt: ignora el aviso del compilador Kotlin
 
 La clave fue creada con errores
 ==================================================
 Al crear un nuevo almacén de claves para la creación del APK firmado, en Windows puede aparecer el siguiente mensaje de error
 
-.. imagen:: ../images/AndroidStudio35SigningKeys.png
+.. image:: ../images/AndroidStudio35SigningKeys.png
   :alt: La clave fue creada con errores
 
 Esto parece ser un error con Android Studio 3.5.1 y su entorno Java en Windows. La clave se ha creado correctamente, pero una recomendación se muestra falsamente como un error. Esto se puede ignorar actualmente.
@@ -37,14 +37,14 @@ No es posible descargar… / Trabajar sin conexión
 ==================================================
 Si se obtiene un mensaje de error como este
 
-.. imagen:: ../images/GIT_Offline1.jpg
+.. image:: ../images/GIT_Offline1.jpg
   :alt: Aviso no se ha podido descargar
 
 asegúrese de que el 'Trabajo fuera de línea ' está inhabilitado.
 
 Archivo -> Ajustes
 
-.. imagen:: ../images/GIT_Offline2.jpg
+.. image:: ../images/GIT_Offline2.jpg
   :alt: Configuración fuera de línea
 
 Error: buildOutput.apkData no debe ser nulo
@@ -67,7 +67,7 @@ Si ve un mensaje de error como el que aparece a continuación, probablemente uti
 
 Hay muchos manuales en Internet sobre cómo determinar si tienes un SO de 32 o 64 bits, es decir, de 64 bits. `este <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
 
-.. imagen:: ../images/AndroidStudioWin10_32bitError.png
+.. image:: ../images/AndroidStudioWin10_32bitError.png
   :alt: Captura de pantalla no se puede iniciar el proceso daemon
   
 
@@ -80,7 +80,7 @@ Cambios no confirmados
 ==================================================
 Si se obtiene un mensaje de error como este
 
-.. imagen:: ../images/GIT_TerminalCheckOut0.PNG
+.. image:: ../images/GIT_TerminalCheckOut0.PNG
   :alt: Falla cambios no confirmados
 
 Opción 1-Comprobar instalación de git
@@ -94,7 +94,7 @@ Opción 2 - Volver a cargar código fuente
 --------------------------------------------------
 * En Android Studio, seleccione VCS-> GIT -> Restablecer HEAD
 
-.. imagen:: ../images/GIT_TerminalCheckOut3.PNG
+.. image:: ../images/GIT_TerminalCheckOut3.PNG
   :alt: Reiniciar HEAD
    
 Opción 3 - Comprobar actualizaciones
@@ -102,17 +102,17 @@ Opción 3 - Comprobar actualizaciones
 * Copiar 'git checkout --' en el portapapeles (sin signos de comillas)
 * Conmutar a Terminal en Android Studio (lado izquierdo inferior de la ventana de Android Studio)
 
-  .. imagen:: ../images/GIT_TerminalCheckOut1.PNG
+  .. image:: ../images/GIT_TerminalCheckOut1.PNG
   :alt: Android Studio Terminal
    
 * Pegar texto copiado y pulsar retorno
 
-  .. imagen:: ../images/GIT_TerminalCheckOut2.jpg
+  .. image:: ../images/GIT_TerminalCheckOut2.jpg
     :alt: GIT checkout satisfactorio
 
 Aplicación no instalada
 ==================================================
-.. imagen:: ../images/Update_AppNotInstalled.png
+.. image:: ../images/Update_AppNotInstalled.png
   :alt: aplicación de teléfono nota instalada
 
 * Asegúrate de haber transferido el archivo "app-full-release.apk" a tu teléfono.

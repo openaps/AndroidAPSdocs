@@ -5,7 +5,7 @@ AndroidAPS is not just a (self-built) application, it is just one of serveral mo
 .. image:: ../images/modules.png
   :alt: Compontents overview
 
-.. nota:: 
+.. note:: 
    **IMPORTANT SAFETY NOTICE**
 
    The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.

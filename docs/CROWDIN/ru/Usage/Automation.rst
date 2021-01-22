@@ -11,7 +11,7 @@
 
 Убедитесь, что вы понимаете, как работает автоматизация перед настройкой первого простого правила. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
 
-.. изображение:: ../images/Automation_ConditionAction_RC3.png
+.. image:: ../images/Automation_ConditionAction_RC3.png
   :alt: условие автоматизации + действие
 
 Как пользоваться
@@ -24,7 +24,7 @@
 
 So make sure to deactivate automation rules during these occasions if neccessary. You can do so by unticking the box left of the name of your automation rule.
 
-.. изображение:: ../images/Automation_ActivateDeactivate.png
+.. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Активировать и деактивировать правило автоматизации
 
 Where to find Automation
@@ -84,21 +84,21 @@ Depending on your `settings in config builder <../Configuration/Config-Builder.h
 
 После добавления ваших действий, **не забудьте изменить значения по умолчанию** на те, которые требуются, нажав на значения по умолчанию.
  
-.. образ:: ../images/Automation_Default_V2_5.png
+.. image:: ../images/Automation_Default_V2_5.png
   :alt: автоматизация по умолчанию vs. задать значения
 
 Выбор правил автоматизации
 -----
 Для отбора правил автоматизации нажмите и удерживайте кнопку с четырьмя строками в правой части экрана и двигайтесь вверх или вниз.
 
-.. изображение:: ../images/Automation_Sort.png
+.. image:: ../images/Automation_Sort.png
   :alt: Выбор правил автоматизации
   
 Удаление правил автоматизации
 -----
 To delete an automation rule click on trash icon.
 
-.. изображение:: ../images/Automation_Deletet.png
+.. image:: ../images/Automation_Deletet.png
   :alt: Выбор правила автоматизации
 
 Рекомендации и предостережения
@@ -129,14 +129,14 @@ These are just setup examples, no advises. Don't reproduce them without being aw
 
 Временная Цель Низкая ГК
 --------------------------------------------------
-.. изображение:: ../images/Automation2.png
+.. image:: ../images/Automation2.png
   :alt: Автоматизация2
 
 This is made by someone who wants to get a hypo temp target automatically when having low glucose.
 
 Временная Цель Время Обеда
 --------------------------------------------------
-.. изображение:: ../images/Automation3.png
+.. image:: ../images/Automation3.png
   :alt: Автоматизация3
   
 This example is made by someone who has lunch at work at the same time every day during the week. If he or she stays at a certain time in his or her lunch location, automation will set a low temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the chosen time and if he or she is at the chosen location. So it does not work on any other time at this location or on this time when the person stays at home. 

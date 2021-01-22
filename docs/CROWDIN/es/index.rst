@@ -9,7 +9,7 @@ La aplicación no se proporciona en Google Play - tienes que construirla a parti
 
 The main components are:
 
-.. imagen:: ./images/modules-female.png
+.. image:: ./images/modules-female.png
   :alt: Componentes
 
 Para más detalles, por favor lee aquí.
