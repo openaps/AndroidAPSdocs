@@ -1,12 +1,6 @@
 Welcome to the AndroidAPS documentation
 ==================================================
 
-.. note ::
-   The language selection have been moved to the bottom drawer of the left menu. Please click on the bottom bar to open language selection menu.
-.. image:: images/documentation_language_menu.png
-   :width: 350
-   :alt: Open language menu
-
 AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. The main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter. 
 
 The app does NOT use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons. 
