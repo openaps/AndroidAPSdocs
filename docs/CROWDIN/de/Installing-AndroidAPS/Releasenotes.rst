@@ -15,18 +15,18 @@ Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln,
 
 Version 2.8.2
 ================
-Release date: 23-01-2021
+Erscheinungsdatum: 23.01.2021
 
-* Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
+* Beachte bitte auch die `wichtigen Hinweise zur Version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#id1>`_ weiter unten.
 
-Changes
+Änderungen
 ----------------------
-* stability improvements
-* more tweaking for Android 8+
-* improved icons
-* watch improvements
-* NSClient fixes
-* Bolus advisor now works with Pumpcontrol and NSClient
+* Stabilitätsverbesserungen
+* Weitere Anpassungen für Android 8+
+* verbesserte Symbole
+* Verbesserung für Smartwatches
+* NSClient-Korrekturen
+* Bolus-Berater funktioniert jetzt auch mit Pumpcontrol und NSClient
 
 Version 2.8.1.1
 ================
