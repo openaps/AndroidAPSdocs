@@ -13,6 +13,21 @@ Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à par
 
 Veuillez comprendre que cette modification n'a pas pour but de vous corriger mais est due à des raisons de sécurité. Les nouvelles versions d'AndroidAPS fournissent non seulement de nouvelles fonctionnalités, mais aussi d'importants correctifs de sécurité. Il est donc nécessaire que chaque utilisateur mette à jour a.s.a.p.. Malheureusement, il y a toujours des remontés de bug provenant de très anciennes versions, donc il s'agit d'une tentative d'améliorer la sécurité pour chaque utilisateur et toute la communauté DIY. Merci pour votre compréhension.
 
+Version 2.8.2
+================
+Release date: 23-01-2021
+
+* Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
+
+Changes
+----------------------
+* stability improvements
+* more tweaking for Android 8+
+* improved icons
+* watch improvements
+* NSClient fixes
+* Bolus advisor now works with Pumpcontrol and NSClient
+
 Version 2.8.1.1
 ================
 Date de sortie : 12-01-2021
