@@ -13,6 +13,21 @@ Als je daarna nog eens 30 dagen wacht met bijwerken (dus 90 dagen vanaf de datum
 
 Deze harde beperkingen zijn uiteraard niet bedoeld om je te pesten, maar zijn er om veiligheidsredenen. Nieuwe versies van AndroidAPS bevatten niet alleen nieuwe handige functies, maar ook belangrijke veiligheidsupdates. Daarom is het noodzakelijk dat elke gebruiker zijn app bijwerkt zodra een nieuwe versie beschikbaar komt. Helaas zijn er nog steeds signalen dat sommige gebruikers een hele oude versie van hun app gebruiken, dus dit is een poging om de veiligheid voor individuele gebruikers en de hele doe-het-zelf loop-gemeenschap te verbeteren.  
 
+Version 2.8.2
+================
+Release date: 23-01-2021
+
+* Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
+
+Changes
+----------------------
+* stability improvements
+* more tweaking for Android 8+
+* improved icons
+* watch improvements
+* NSClient fixes
+* Bolus advisor now works with Pumpcontrol and NSClient
+
 Version 2.8.1.1
 ================
 Release date: 12-01-2021
