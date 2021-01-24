@@ -746,28 +746,28 @@ No active Pod session detected. This alert can temporarily be dismissed by press
 Pod suspendu
 ~~~~~~~~~~~~~
 
-Informational alert that Pod has been suspended.
+Alerte informative que le Pod a été suspendu.
 
-Echec Paramétrage Profil Basal. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
+Echec Paramétrage Profil Basal. La livraison peut être suspendue ! Veuillez actualiser manuellement l'état du Pod à partir de l'onglet Omnipod et reprendre l'injection si nécessaire..
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
+Alerte informative que le réglage du profil basal du Pod a échoué, et vous devrez appuyer sur *Actualiser* dans l'onglet Omnipod.
 
-Unable to verify whether SMB bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments.
+Impossible de vérifier si le bolus SMB a réussi. Si vous êtes sûr que le Bolus n'a pas réussi, vous devez supprimer manuellement l'entrée SMB dans les traitements.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Alert that the SMB bolus success could not be verified, you will need to verify the *Last bolus* field on the Omnipod tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
+Alerte que le bolus SMB n'a pas pu être vérifié, vous devrez vérifier le champ *Dernier bolus* dans l'onglet Omnipod pour voir si le bolus SMB a bien été fait et dans le cas contraire supprimer l'entrée dans l'onglet Traitements.
 
-Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
+Incertain si l'action "Bolus/DBT/SMB" est terminée, merci de vérifier manuellement s'il a réussi.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Due to the way that the RileyLink and Omnipod communicate, situations can occur where it is *uncertain* if a command was successfully processed. The need to inform the user of this uncertainty was necessary.
+En raison de la façon dont le RileyLink et l'Omnipod communiquent, des situations peuvent se produire où le fait qu'une commande ait été traitée avec succès est *incertain*. La nécessité d'informer l'utilisateur de cette incertitude était nécessaire.
 
-Below are a few examples of when an uncertain notification can occur.
+Voici quelques exemples de cas où une notification incertaine peut se produire.
 
-* **Boluses** - Uncertain boluses cannot be automatically verified. The notification will remain until the next bolus but a manual pod refresh will clear the message. *By default alerts beeps are enabled for this notification type as the user will manually need to verify them.*
-* **TBRs, Pod Statuses, Profile Switches, Time Changes** - a manual pod refresh will clear the message. By default alert beeps are disabled for this notification type.
-* **Pod Time Deviation -** When the time on the pod and the time your phone deviates too much then it is difficult for AAPS loop to function and make accurate predictions and dosage recommendations. If the time deviation between the pod and the phone is more than 5 minutes then AAPS will report the pod is in a Suspended state under Pod status with a HANDLE TIME CHANGE message. An additional **Set Time** icon will appear at the bottom of the Omnipod (POD) tab. Clicking Set Time will synchronize the time on the pod with the time on the phone and then you can click the RESUME DELIVERY button to continue normal pod operations.
+* **Bolus** - Les bolus incertains ne peuvent pas être vérifiés automatiquement. La notification restera jusqu'au prochain bolus mais un rafraîchissement manuel du pod effacera le message. *Par défaut, les bips d'alertes sont activés pour ce type de notification car l'utilisateur devra les vérifier manuellement.*
+* **DBT, états du Pod, changements de profil, changements d'heure** - un rafraîchissement manuel du pod effacera le message. Par défaut, les bips d'alerte sont désactivés pour ce type de notification.
+* **Décalage de l'heure du pod -** Lorsque l'heure du pod et l'heure de votre téléphone sont décalés, il est difficile pour la boucle AAPS de fonctionner et de faire des prédictions et des recommandations de posologie précises. If the time deviation between the pod and the phone is more than 5 minutes then AAPS will report the pod is in a Suspended state under Pod status with a HANDLE TIME CHANGE message. Une icône supplémentaire **Définir l'heure** apparaîtra au bas de l'onglet Omnipod (POD). Cliquer sur Définir l'heure synchronisera l'heure sur le pod avec l'heure sur le téléphone, puis vous pouvez cliquer sur le bouton REPRENDRE L'INJECTION pour continuer les opérations normales de pod.
 
 Bonnes pratiques
 ==============
