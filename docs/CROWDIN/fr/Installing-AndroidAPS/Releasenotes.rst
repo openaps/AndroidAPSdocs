@@ -15,7 +15,7 @@ Veuillez comprendre que cette modification n'a pas pour but de vous corriger mai
 
 Version 2.8.2
 ================
-Release date: 23-01-2021
+Date de sortie : 23-01-2021
 
 * Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
 
