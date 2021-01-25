@@ -226,7 +226,7 @@ Obvykle vaše skutečná křivka glykémie končí uprostřed těchto linek nebo
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* To give a certain amount of insulin without using [bolus calculator](../Getting-Started/Screenhots#bolus-wizard).
+* To give a certain amount of insulin without using [bolus calculator](../Getting-Started/Screenshots#bolus-wizard).
 * By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences#default-temp-targets).
 * If you do not want to bolus through pump but record insulin amount (i.e. insulin given by syringe) check the corresponding box.
 
