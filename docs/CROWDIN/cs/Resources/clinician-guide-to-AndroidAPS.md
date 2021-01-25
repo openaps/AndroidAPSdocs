@@ -2,15 +2,15 @@
 
 Tato stránka je určena lékařům, kteří projevili zájem o open source technologie umělé slinivky, jako je AndroidAPS, nebo pro pacienty, kteří chtějí sdílet tyto informace se svým lékařem.
 
-Tato příručka obsahuje souhrnné informace o DIY uzavřené smyčce a zejména o tom, jak systém AndroidAPS funguje. Další podrobnosti o všech těchto tématech získáte v [kompletní online dokumentaci k AndroidAPS](http://androidaps.readthedocs.io/en/latest/index.html). Máte-li otázky, zeptejte se prosím svého pacienta na další podrobnosti nebo se s dotazem obraťte na komunitu. (Jestliže nepoužíváte sociální sítě (např. [Twitter](https://twitter.com/kozakmilos) nebo Facebook), obraťte se prostřednictvím e-mailu přímo na vývojáře (developers@AndroidAPS.org). [Pod tímto odkazem rovněž najdete nejnovější studie a jejich výsledky a související data](https://openaps.org/outcomes/).
+Tato příručka obsahuje souhrnné informace o DIY uzavřené smyčce a zejména o tom, jak systém AndroidAPS funguje. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](../index.rst). Máte-li otázky, zeptejte se prosím svého pacienta na další podrobnosti nebo se s dotazem obraťte na komunitu. (Jestliže nepoužíváte sociální sítě (např. [Twitter](https://twitter.com/kozakmilos) nebo Facebook), obraťte se prostřednictvím e-mailu přímo na vývojáře (developers@AndroidAPS.org). [Pod tímto odkazem rovněž najdete nejnovější studie a jejich výsledky a související data](https://openaps.org/outcomes/).
 
 ### Kroky nutné pro sestavení DIY uzavřené smyčky:
 
 Chcete-li začít používat systém AndroidAPS, je třeba provést následující kroky:
 
-* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
-* [Stáhněte si zdrojový kód AndroidAPS a sestavte si software](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
-* [Nakonfigurujte software tak, aby komunikoval s ostatními zařízeními a upravte nastavení a bezpečnostní opatření](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
+* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../index.rst#getting-started).
+* [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.rst#configuration).
 
 ### Jak DIY uzavřená smyčka funguje
 
