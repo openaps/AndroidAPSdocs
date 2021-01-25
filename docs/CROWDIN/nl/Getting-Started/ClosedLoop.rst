@@ -28,7 +28,7 @@ Op dit moment zijn er drie grote open-source closed loop systemen beschikbaar:
 
 AndroidAPS (AAPS)
 --------------------------------------------------
-AndroidAPS wordt in detail beschreven in `deze documentatie <./WhatisAndroidAPS.html>`_. Alle berekeningen en bediening gaat via een Android smartphone. Ook ontvangt de smartphone jouw sensorgegevens en stuurt jouw insulinepomp aan. Het is gebaseerd op OpenAPS (ze they share algorithms).
+AndroidAPS wordt in detail beschreven in `deze documentatie <./WhatisAndroidAPS.html>`_. Alle berekeningen en bediening gaat via een Android smartphone. Ook ontvangt de smartphone jouw sensorgegevens en stuurt jouw insulinepomp aan. Het is gebaseerd op OpenAPS (ze gebruiken dezelfde algoritmen).
 
 Te gebruiken `pompen <../Hardware/pumps.html>`_ zijn:
 
