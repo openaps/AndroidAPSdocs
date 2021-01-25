@@ -135,7 +135,7 @@ AndroidAPS позволяет контролировать телефон реб
   * Ответ B: Удаленный болюс недоступен. Повторите позже.
 * БОЛЮС на 0.60 ЕДЫ
   * Если вы зададите необязательный параметр прием пищи MEAL, то будет задано значение временная цель прием пищи MEAL (значения по умолчанию: 90 мг/дл, 5,0 ммоль/л на 45 мин).
-  * Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN
+  * Response A: Чтобы подать болюс 0.60 ед. ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
   * Ответ B: Удаленный болюс недоступен. 
 * УГЛИ 5
   * Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
