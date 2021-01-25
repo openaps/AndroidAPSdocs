@@ -17,7 +17,7 @@ AndroidAPS is meer dan de (zelfgebouwde) app alleen, er zijn ook andere onderdel
 Benodigde onderdelen
 ==================================================
 Correcte insulineprofiel instellingen voor jouw diabetesbehandeling
---------------------------------------------------
+----------------------------------------------------------
 Dit is misschien niet het eerste waar je aan denkt bij een 'onderdeel'. Toch is het waarschijnlijk het meest belangrijke onderdeel van jouw closed loop. Wanneer je de behandeling van jouw diabetes overlaat aan een algoritme, dan is het cruciaal dat je dit algoritme de juiste instellingen geeft. Anders kunnen er grote fouten optreden in de beslissingen die het algoritme neemt.
 Wanneer je de andere onderdelen van jouw closed loop nog niet bij elkaar hebt, dan kun je de tussenliggende tijd benutten om, samen met jouw behandelaars, jouw instellingen te perfectioneren. 
 De meeste loopers maken gebruik van basaalstanden, ISF en KH ratios die zijn aangepast aan een variërende insulinegevoeligheid gedurende de dag (zgn. circadiaans ritme).
