@@ -46,8 +46,7 @@ Ochrana
 Hlavní heslo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Abyste mohli `exportovat nastavení <../Usage/ExportImportSettings.html>`_, je nutné nastavit hlavní heslo. Od verze 2.7 jsou totiž exporty šifrované.
-
-   ** Biometrická ochrana nefunguje na telefonech OnePlus. Jde o známý problém OnePlus.**
+  ** Biometrická ochrana nefunguje na telefonech OnePlus. Jde o známý problém OnePlus.**
 
 * Klepnutím na tři tečky v pravém horním rohu hlavní obrazovky otevřete Nastavení
 * Klepněte na trojúhelník pod "Obecné"
@@ -172,14 +171,14 @@ Zobrazovat kolonku poznámky v dialozích ošetření
 Stavové indikátory
 -----------------------------------------------------------
 Stavové indikátory zobrazují vizuální varování pro 
-      
-   * Stáří senzoru
-   * Úroveň baterie pro některé chytré čtečky (další podrobnosti naleznete na stránce `screenshoty <../Getting-Started/Screenshots.html#sensor-level-battery>`_).
-   * Stáří inzulínu (doba použití aktuálního zásobníku)
-   * Stav zásobníku (jednotky)
-   * Stáří kanyly
-   * Stáří baterie v pumpě
-   * Úroveň nabití baterie pumpy (%)
+
+  * Stáří senzoru
+  * Úroveň baterie pro některé chytré čtečky (další podrobnosti naleznete na stránce `screenshoty <../Getting-Started/Screenshots.html#sensor-level-battery>`_).
+  * Stáří inzulínu (doba použití aktuálního zásobníku)
+  * Stav zásobníku (jednotky)
+  * Stáří kanyly
+  * Stáří baterie v pumpě
+  * Úroveň nabití baterie pumpy (%)
 
 * Pokud dojde k dosažení prahové hodnoty, zobrazí se hodnoty žlutě.
 * Pokud dojde k dosažení kritické prahové hodnoty, hodnoty se zobrazí červeně.
@@ -191,8 +190,8 @@ Stavové indikátory zobrazují vizuální varování pro
 Rozšířená nastavení (přehled)
 -----------------------------------------------------------
 
-  .. image:: ../images/Pref2021_OV_Adv.png
-    :alt: Předvolby > Stavové indikátory
+.. image:: ../images/Pref2021_OV_Adv.png
+  :alt: Předvolby > Stavové indikátory
 
 Podat tuto část z výsledku kalkulace [%]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -336,8 +335,8 @@ Pokročilé nastavení (OpenAPS AMA)
 Nastavení absorpce sacharidů
 ===========================================================
 
-  .. image:: ../images/Pref2020_Absorption.png
-    :alt: Nastavení absorpce sacharidů
+.. image:: ../images/Pref2020_Absorption.png
+  :alt: Nastavení absorpce sacharidů
 
 min_5m_carbimpact
 -----------------------------------------------------------
@@ -377,8 +376,8 @@ Používáte-li AndroidAPS pouze jako otevřenou smyčku, vyberte v nastavení V
 NSClient
 ===========================================================
 
-  .. image:: ../images/Pref2020_NSClient.png
-    :alt: NSClient
+.. image:: ../images/Pref2020_NSClient.png
+  :alt: NSClient
 
 * Nastavte si *URL Nightscoutu* (např. https://vasejmeno.herokuapp.com) a *API heslo* (12 znakové heslo uložené v proměnných Heroku).
 * Toto umožní komunikaci (zápis i čtení) mezi Nightscoutem a AndroidAPS.  
@@ -390,8 +389,8 @@ NSClient
 Nastavení připojení
 -----------------------------------------------------------
 
-  .. image:: ../images/ConfBuild_ConnectionSettings.png
-    :alt: Nastavení připojení NSClient  
+.. image:: ../images/ConfBuild_ConnectionSettings.png
+  :alt: Nastavení připojení NSClient
   
 * Omezit nahrávání do Nightscoutu pouze na Wi-Fi nebo dokonce na některé Wi-Fi SSID.
 * Chcete-li používat pouze konkrétní síť Wi-Fi, můžete zadat její WiFi SSID. 
@@ -408,8 +407,8 @@ Nastavení alarmů
 Rozšířená nastavení (NSClient)
 -----------------------------------------------------------
 
-  .. image:: ../images/Pref2020_NSClientAdv.png
-    :alt: Rozšířené nastavení NSClient
+.. image:: ../images/Pref2020_NSClientAdv.png
+  :alt: Rozšířené nastavení NSClient
 
 * Většina možností v pokročilém nastavení je samovysvětlující.
 * *Povolení lokálního odesílání* zajistí odesílání dat i do jiných aplikací v mobilu, např. xDrip+. 
@@ -437,24 +436,24 @@ Vyberte, jaká služba určování polohy se použije:
 Místní výstrahy
 ===========================================================
 
-  .. image:: ../images/Pref2020_LocalAlerts.png
-    :alt: Místní upozornění
+.. image:: ../images/Pref2020_LocalAlerts.png
+  :alt: Místní upozornění
 
 * Nastavení by mělo být samovysvětlující.
 
 Možnosti dat
 ===========================================================
 
-  .. image:: ../images/Pref2020_DataChoice.png
-    :alt: Možnosti dat
+.. image:: ../images/Pref2020_DataChoice.png
+  :alt: Možnosti dat
 
 * Můžete pomáhat s vývojem AAPS zasláním hlášení o pádu vývojářům.
 
 Nastavení údržby
 ===========================================================
 
-  .. image:: ../images/Pref2020_Maintenance.png
-    :alt: Nastavení údržby
+.. image:: ../images/Pref2020_Maintenance.png
+  :alt: Nastavení údržby
 
 * Standardní příjemce logů je logs@androidaps.org.
 * Pokud vyberete *Šifrovat exportovaná nastavení*, jsou zašifrována pomocí vašeho `hlavního hesla <../Configuration/Preferences.html#master-password>`_. V tomto případě je nutné při každém exportu nebo importu nastavení zadat hlavní heslo.
@@ -464,5 +463,5 @@ Open Humans
 * Můžete pomoci komunitě tím, že daruje vaše data do výzkumných projektů! Podrobnosti jsou popsány na stránce `Open Humans <../Configuration/OpenHumans.html>`_.
 * V předvolbách můžete definovat, kdy budou data odeslána
 
-   * pouze v případě připojení k WiFi
-   * pouze při nabíjení
+  * pouze v případě připojení k WiFi
+  * pouze při nabíjení
