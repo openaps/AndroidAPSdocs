@@ -226,7 +226,7 @@ Bovenstaande voorspellingslijnen rekenen met verschillende (extreme) scenario's.
 
 ![Insuline knop](../images/Home2020_ButtonInsulin.png)
 
-* Om een bepaalde hoeveelheid insuline te geven zonder gebruik te maken van de [bolus calculator](../Getting-Started/Screenhots#bolus-calculator).
+* To give a certain amount of insulin without using [bolus calculator](../Getting-Started/Screenshots#bolus-wizard).
 * Ook kun je dmv een vinkje in één moeite jouw [eet binnenkort tijdelijk streefdoel](../Configuration/Preferences#standaard-tijdelijke-streefdoelen) aanzetten.
 * Als je niet wilt dat de pomp insuline gaat afgeven (omdat je met de pen bijspuit) kun je dit dmv een vinkje aangeven in dit scherm. Zo kun je AAPS laten weten dat je insuline hebt genomen.
 
