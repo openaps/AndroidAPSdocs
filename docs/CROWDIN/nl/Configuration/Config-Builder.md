@@ -191,10 +191,8 @@ Als je Oref1 met SMB gebruikt moet je **min_5m_carbimpact** op 8 instellen. Als 
 
 Selecteer het gewenste APS (Artificial Pancreas System, kunstmatig alvleesklier systeem) algoritme. Je kunt de actuele details van jouw gekozen algoritme laten weergeven op het tabblad OpenAPS(OAPS). Daar zie je het resultaat van de meest recente berekening die het algoritme maakte.
 
-* OpenAPS AMA (geavanceerde maaltijdhulp, onderdeel van het algoritme in 2017)  
-    Meer details over OpenAPS AMA kun je vinden in de [OpenAPS documenten](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Voordeel van AMA tov zijn voorganger is dat het systeem sneller een hogere tijdelijke basaalstand af kan geven als je jezelf net een maaltijdbolus hebt gegeven (let op: dit geldt wanneer je je koolhydraten nauwkeurig invoert). 
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (Super Micro Bolus). Dit is het meest recente algoritme, bedoeld voor gevorderde gebruikers.   
-    Je moet minimaal in [Doel 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) zijn om OpenAPS SMB te gebruiken, en vergeet niet om je min_5m_carbimpact op 8 in te stellen via Configurator > gevoeligheid detectie > gevoeligheid Oref1 instellingen.
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Voordeel van AMA tov zijn voorganger is dat het systeem sneller een hogere tijdelijke basaalstand af kan geven als je jezelf net een maaltijdbolus hebt gegeven (let op: dit geldt wanneer je je koolhydraten nauwkeurig invoert).
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Loop
 
