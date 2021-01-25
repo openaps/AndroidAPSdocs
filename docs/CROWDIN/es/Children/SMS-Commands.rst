@@ -43,26 +43,26 @@ Additionally mandatory PIN at token end
 * For safety reasons the reply code must be followed by a PIN.
 * PIN rules:
 
-   * 3 to 6 digits
-   * not same digits (i.e. 1111)
-   * not in a row (i.e. 1234)
+  * 3 to 6 digits
+  * not same digits (i.e. 1111)
+  * not in a row (i.e. 1234)
 
 Configuración de autentificación
 -------------------------------------------------
 * Two-factor authentication is used to improve safety.
 * You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
 
-   * `Authy <https://authy.com/download/>`_
-   * Google Authenticator - `Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>`_ / `iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>`_
-   * `LastPass Authenticator <https://lastpass.com/auth/>`_
-   * `FreeOTP Authenticator <https://freeotp.github.io/>`_
+  * `Authy <https://authy.com/download/>`_
+  * Google Authenticator - `Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>`_ / `iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>`_
+  * `LastPass Authenticator <https://lastpass.com/auth/>`_
+  * `FreeOTP Authenticator <https://freeotp.github.io/>`_
 
 * Install the authenticator app of your choice on your follower phone and scan the QR code shown in AAPS.
 * Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. Ejemplo:
 
-   * Your mandatory PIN is 2020
-   * TOTP token from the authenticator app is 457051
-   * Enter 4570512020
+  * Your mandatory PIN is 2020
+  * TOTP token from the authenticator app is 457051
+  * Enter 4570512020
    
 * The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
 * The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
@@ -74,9 +74,9 @@ Use SMS commands
 * The AAPS phone will respond to confirm success of command or status requested. 
 * Confirm command by sending the code where necessary. Ejemplo:
 
-   * Your mandatory PIN is 2020
-   * TOTP token from the authenticator app is 457051
-   * Enter 4570512020
+  * Your mandatory PIN is 2020
+  * TOTP token from the authenticator app is 457051
+  * Enter 4570512020
 
 **Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
@@ -90,93 +90,95 @@ Commands must be sent in English, the response will be in your local language if
 Loop
 --------------------------------------------------
 * LOOP STOP/DISABLE
-   * Respuesta: El lazo se ha inhabilitado
+  * Respuesta: El lazo se ha inhabilitado
 * LOOP START/ENABLE
-   * Respuesta: El lazo se ha habilitado
+  * Respuesta: El lazo se ha habilitado
 * LOOP STATUS
-   * La respuesta depende del estado actual
-      * Lazo inactivo
-      * Lazo activo
-      * Suspendido (10 min)
+
+  * La respuesta depende del estado actual
+
+    * Lazo inactivo
+    * Lazo activo
+    * Suspendido (10 min)
 * LOOP SUSPEND 20
-   * Respuesta: El lazo esta suspendido durante 20 minutos
+  * Respuesta: El lazo esta suspendido durante 20 minutos
 * LOOP REINICIADO
-   * Respuesta: El lazo se ha reanudado
+  * Respuesta: El lazo se ha reanudado
 
 Datos de CGM
 --------------------------------------------------
 * BG
-   * Respuesta: Último BG: 5,6 4min atrás, Delta: -0,2 mmol, IOB: 0,20U (Bolo: 0,10U Basal: 0,10U)
+  * Respuesta: Último BG: 5,6 4min atrás, Delta: -0,2 mmol, IOB: 0,20U (Bolo: 0,10U Basal: 0,10U)
 * CAL 5.6
-   * Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN
-   * Respuesta después de recibir el código correcto: Calibración enviada (**Si xDrip está instalado. Debe estar habilitado aceptar calibración en xDdrip+**)
+  * Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN
+  * Respuesta después de recibir el código correcto: Calibración enviada (**Si xDrip está instalado. Debe estar habilitado aceptar calibración en xDdrip+**)
 
 Dosis Basal
 --------------------------------------------------
 * BASAL STOP/CANCEL
-   * Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
+  * Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
 * BASAL 0.3
-   * Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
+  * Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
 * BASAL 0.3 20
-   * Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
+  * Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
 * BASAL 30%
-   * Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
+  * Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
 * BASAL 30% 50
-   * Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
+  * Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
 
 Bolo
 --------------------------------------------------
 Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
 
 * BOLUS 1.2
-   * Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN
-   * Respuesta B: Los bolos remotos no están disponibles. Vuelve a intentarlo más tarde.
+  * Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN
+  * Respuesta B: Los bolos remotos no están disponibles. Vuelve a intentarlo más tarde.
 * BOLUS 0,60 MEAL
-   * Si especifica el parámetro opcional MEAL, esto establece el objetivo temporal MEAL (valores por defecto son: 90 mg/dL, 5,0 mmol/l para 45 minutos).
-   * Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN
-   * Respuesta B: Los bolos remotos no están disponibles. 
+  * Si especifica el parámetro opcional MEAL, esto establece el objetivo temporal MEAL (valores por defecto son: 90 mg/dL, 5,0 mmol/l para 45 minutos).
+  * Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN
+  * Respuesta B: Los bolos remotos no están disponibles. 
 * CARBS 5
-   * Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
+  * Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
 * CARBS 5 17:35/5:35PM
-   * Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
+  * Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
 * EXTENDED STOP/CANCEL
-   * Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
+  * Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
 * EXTENDED 2 120
-   * Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
+  * Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
 
 Perfil
 --------------------------------------------------
 * PROFILE STATUS
-   * Respuesta: Perfil1
+  * Respuesta: Perfil1
 * LISTADO DE PERFILES
-   * Respuesta: 1. ` Profile1 ` 2. ` Profile2 `
+  * Respuesta: 1. ` Profile1 ` 2. ` Profile2 `
 * PERFIL 1
-   * Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
+  * Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
 * PROFILE 2 30
-   * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+  * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
 
 Otros
 --------------------------------------------------
 *Actualizar tratamientos
-   * Respuesta: Actualizar los tratamientos desde NS
+  * Respuesta: Actualizar los tratamientos desde NS
 *REINICIAR NSCLIENT
-   * Respuesta: NSCLIENT REINICIAR de 1 receptor
+  * Respuesta: NSCLIENT REINICIAR de 1 receptor
 * BOMBA
-   * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+  * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 * PUMP CONNECT
-   * Response: Pump reconnected
+  * Response: Pump reconnected
 * PUMP DISCONNECT *30*
-   * Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
+  * Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
 * SMS DISHABILITADO/STOP
-   * Respuesta: Para inhabilitar la respuesta de servicio remoto de SMS responda con el código Any. Ten en cuenta que puedes reactivarlo directamente desde el smartphone maestro AAPS solamente.
+  * Respuesta: Para inhabilitar la respuesta de servicio remoto de SMS responda con el código Any. Ten en cuenta que puedes reactivarlo directamente desde el smartphone maestro AAPS solamente.
 * TARGET MEAL/ACTIVITY/HYPO   
-   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
+  * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
 * TARGET STOP/CANCEL   
-   * Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
+  * Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
 * AYUDA
-   * Respuesta: BG, LOOP, TRATAMIENTOS, .....
+  * Respuesta: BG, LOOP, TRATAMIENTOS, .....
 * AYUDA BOLUS
-   * Respuesta: BOLUS 1.2 BOLUS 1.2 MEAL
+  * Respuesta: BOLUS 1.2 BOLUS 1.2 MEAL
 
 Solución de problemas
 ==================================================
