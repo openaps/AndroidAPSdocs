@@ -17,7 +17,7 @@ AndroidAPS není jen (uživatelem sestavená) aplikace, je to jeden z několika 
 Nezbytné moduly
 ==================================================
 Správný individuální algoritmus dávkování pro léčbu vašeho diabetu
---------------------------------------------------
+----------------------------------------------------------
 I když to není něco, co by bylo možné vytvořit nebo koupit, je to "modul", který je pravděpodobně nejvíce podceňován, je však nejdůležitější. Když necháte algoritmus zasahovat do léčby vašeho diabetu, musí znát správná nastavení, aby nedělal vážné chyby.
 I když vám stále chybí další moduly, již nyní můžete ve spolupráci se svým diabetologem ověřit a upravit svůj 'profil'. 
 Většina uživatelů uzavřené smyčky používá cirkadiánní bazální dávkování, citlivost a sacharidový poměr, které se přizpůsobují hormonální aktivitě inzulinu v průběhu dne.
