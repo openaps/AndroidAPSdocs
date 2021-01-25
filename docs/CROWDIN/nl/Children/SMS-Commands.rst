@@ -43,26 +43,26 @@ Extra verplichte PIN aan einde van token
 * Om veiligheidsredenen moet de antwoordcode worden gevolgd door een PIN code.
 * PIN code regels:
 
-   * 3 tot 6 cijfers
-   * niet dezelfde cijfers (d.w.z. 1111)
-   * niet op een rij (d.w.z. 1234)
+  * 3 tot 6 cijfers
+  * niet dezelfde cijfers (d.w.z. 1111)
+  * niet op een rij (d.w.z. 1234)
 
 Authentificatie instellingen
 -------------------------------------------------
 * Tweestapsverificatie wordt gebruikt om de veiligheid te verbeteren.
 * Je kunt elke Authenticator-app gebruiken die RFC 6238 TOTP-tokens ondersteunt. Populaire gratis apps zijn:
 
-   * `Authy <https://authy.com/download/>`_
-   * Google Authenticator - `Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>`_ / `iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>`_
-   * `LastPass Authenticator <https://lastpass.com/auth/>`_
-   * `FreeOTP Authenticator <https://freeotp.github.io/>`_
+  * `Authy <https://authy.com/download/>`_
+  * Google Authenticator - `Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>`_ / `iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>`_
+  * `LastPass Authenticator <https://lastpass.com/auth/>`_
+  * `FreeOTP Authenticator <https://freeotp.github.io/>`_
 
 * Installeer de door jou gekozen authenticator app op jouw volger telefoon en scan de QR-code in AAPS.
 * Test het eenmalige wachtwoord door de token in te voeren die getoond wordt in de authenticator app en de pincode die je zojuist hebt ingesteld in AAPS. Voorbeeld:
 
-   * Je verplichte PIN code is 2020
-   * TOTP-token van de authenticatie-app is 457051
-   * Voer 4570512020 in
+  * Je verplichte PIN code is 2020
+  * TOTP-token van de authenticatie-app is 457051
+  * Voer 4570512020 in
    
 * De rode tekst "WRONG PIN" zal **automatisch** veranderen in een groene "OK" als de invoer juist is. **Er is geen knop waarop je kunt drukken!**
 * De tijd op beide telefoons moet gesynchroniseerd zijn. De beste manier hiervoor is om te kiezen voor automatische tijdsingstellingen ingesteld vanuit het netwerk. Tijdverschillen kunnen leiden tot authentificatieproblemen.
@@ -74,9 +74,9 @@ SMS-commando's gebruiken
 * De AAPS telefoon zal bevestigen dat de opgevraagde opdracht is uitgevoerd of dat de status succesvol is aangevraagd. 
 * Bevestig de opdracht door de code indien nodig te verzenden. Voorbeeld:
 
-   * Je verplichte PIN code is 2020
-   * TOTP-token van de authenticatie-app is 457051
-   * Voer 4570512020 in
+  * Je verplichte PIN code is 2020
+  * TOTP-token van de authenticatie-app is 457051
+  * Voer 4570512020 in
 
 **Hint**: Het kan verstandig zijn om een abbonnement met onbeperkte SMS te hebben voor beide telefoons omdat er veel SMS'jes gestuurd zullen worden.
 
@@ -90,93 +90,95 @@ Opdrachten moeten in het Engels worden verzonden, de respons zal in jouw lokale 
 Loop
 --------------------------------------------------
 * LOOP STOP/DISABLE
-   * Reactie: Loop is uitgeschakeld (disabled)
+  * Reactie: Loop is uitgeschakeld (disabled)
 * LOOP START/ENABLE
-   * Reactie: Loop is ingeschakeld (enabled)
+  * Reactie: Loop is ingeschakeld (enabled)
 * LOOP STATUS
-   * De respons is afhankelijk van de werkelijke status:
-      * Loop is uitgeschakeld (disabled)
-      * Loop is ingeschakeld (enabled)
-      * Onderbroken (10 min)
+
+  * De respons is afhankelijk van de werkelijke status:
+
+    * Loop is uitgeschakeld (disabled)
+    * Loop is ingeschakeld (enabled)
+    * Onderbroken (10 min)
 * LOOP SUSPEND 20
-   * Reactie: Loop wordt onderbroken gedurende 20 minuten (Loop suspended for 20 minutes)
+  * Reactie: Loop wordt onderbroken gedurende 20 minuten (Loop suspended for 20 minutes)
 * LOOP RESUME
-   * Reactie: Loop hervat (resumed)
+  * Reactie: Loop hervat (resumed)
 
 CGM gegevens
 --------------------------------------------------
 * BG
-   * Laatste BG: 5,6 4min geleden, Verschil:-0,2 mmol, IOB: 0,20E (Bolus: 0,10E Basaal: 0,10E)
+  * Laatste BG: 5,6 4min geleden, Verschil:-0,2 mmol, IOB: 0,20E (Bolus: 0,10E Basaal: 0,10E)
 * CAL 5.6
-   * Reactie: Om calibratie 5.6 te verzenden antwoord met de code van Authenticator app voor gebruiker gevolgd door PIN
-   * Reactie na correcte code ontvangen: Calibration verzonden (**Als xDrip is geïnstalleerd. In de xDrip+ instellingen moet je aangevinkt hebben dat kalibraties van volgers geaccepteerd worden**)
+  * Reactie: Om calibratie 5.6 te verzenden antwoord met de code van Authenticator app voor gebruiker gevolgd door PIN
+  * Reactie na correcte code ontvangen: Calibration verzonden (**Als xDrip is geïnstalleerd. In de xDrip+ instellingen moet je aangevinkt hebben dat kalibraties van volgers geaccepteerd worden**)
 
 Basaal
 --------------------------------------------------
 * BASAL STOP/CANCEL
-   * Reactie: Om het tijdelijke basaal te stoppen antwoord met de code van Authenticator app voor gebruiker gevolgd door PIN
+  * Reactie: Om het tijdelijke basaal te stoppen antwoord met de code van Authenticator app voor gebruiker gevolgd door PIN
 * BASAL 0.3
-   * Reactie: Om een basaal van 0.3E/u gedurende 30 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
+  * Reactie: Om een basaal van 0.3E/u gedurende 30 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * BASAL 0.3 20
-   * Reactie: Om een basaal van 0.3E/u gedurende 20 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
+  * Reactie: Om een basaal van 0.3E/u gedurende 20 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * BASAL 30%
-   * Reactie: Om een basaal van 30% gedurende 30 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
+  * Reactie: Om een basaal van 30% gedurende 30 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * BASAL 30% 50
-   * Reactie: Om een basaal van 30% gedurende 50 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
+  * Reactie: Om een basaal van 30% gedurende 50 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 
 Bolus
 --------------------------------------------------
 Bolus op afstand is niet toegestaan binnen 15 min (deze waarde is alleen aan te passenn als 2 telefoonnummers zijn toegevoegd) na laatste bolus opdracht of extern commando! Daarom is de respons afhankelijk van de tijd sinds de laatste bolus werd gegeven.
 
 * BOLUS 1.2
-   * Reactie A: Om een bolus van 1.2E te geven antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
-   * Reactie B: Externe bolus niet beschikbaar. Probeer het later opnieuw.
+  * Reactie A: Om een bolus van 1.2E te geven antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
+  * Reactie B: Externe bolus niet beschikbaar. Probeer het later opnieuw.
 * BOLUS 0.60 MEAL
-   * Als je de optionele parameter MEAL opgeeft, dan wordt het tijdelijke streefdoel "eet binnenkort" ingesteld (standaard waarden zijn: 90 mg/dL, 5.0 mmol/l voor 45 min).
-   * Reactie A: Om een maaltijd bolus van 0.60E te geven antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
-   * Reactie B: Externe bolus niet beschikbaar. 
+  * Als je de optionele parameter MEAL opgeeft, dan wordt het tijdelijke streefdoel "eet binnenkort" ingesteld (standaard waarden zijn: 90 mg/dL, 5.0 mmol/l voor 45 min).
+  * Reactie A: Om een maaltijd bolus van 0.60E te geven antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
+  * Reactie B: Externe bolus niet beschikbaar. 
 * CARBS 5
-   * Reactie: Om 5g in te voeren om 12:45 antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
+  * Reactie: Om 5g in te voeren om 12:45 antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * CARBS 5 17:35/5:35PM
-   * Reactie: Om 5g in te voeren om 17:35 antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
+  * Reactie: Om 5g in te voeren om 17:35 antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * EXTENDED STOP/CANCEL
-   * Reactie: Om de vertraagde bolus te stoppen antwoord met de code van de Authenticator app voor de gebruiker gevolgd door PIN
+  * Reactie: Om de vertraagde bolus te stoppen antwoord met de code van de Authenticator app voor de gebruiker gevolgd door PIN
 * EXTENDED 2 120
-   * Reactie: Om vertraagde bolus 2E gedurende 120 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
+  * Reactie: Om vertraagde bolus 2E gedurende 120 min te starten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 
 Profiel
 --------------------------------------------------
 * PROFILE STATUS
-   * Reactie: Profiel1
+  * Reactie: Profiel1
 * PROFILE LIST
-   * Reactie: 1.`Profiiel1` 2.`Profiel2`
+  * Reactie: 1.`Profiiel1` 2.`Profiel2`
 * PROFILE 1
-   * Reactie: Om naar profiel Profile1 100% te wisselen antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
+  * Reactie: Om naar profiel Profile1 100% te wisselen antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * PROFILE 2 30
-   * Reactie: Om naar profiel Profile2 30% te wisselen antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
+  * Reactie: Om naar profiel Profile2 30% te wisselen antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 
 Andere
 --------------------------------------------------
 * TREATMENTS REFRESH
-   * Reactie: Haal behandelingen op van NS
+  * Reactie: Haal behandelingen op van NS
 * NSCLIENT RESTART
-   * Reactie: NSCLIENT RESTART 1 ontvangers
+  * Reactie: NSCLIENT RESTART 1 ontvangers
 * PUMP
-   * Reactie: Laatste Verbinding: 1 min geleden Temp: 0,00E/uur @11:38 5/30min IOB: 0,5E Reservoir: 34E Batterij: 100
+  * Reactie: Laatste Verbinding: 1 min geleden Temp: 0,00E/uur @11:38 5/30min IOB: 0,5E Reservoir: 34E Batterij: 100
 * PUMP CONNECT
-   * Reactie: Pomp opnieuw verbonden
+  * Reactie: Pomp opnieuw verbonden
 * PUMP DISCONNECT *30*
-   * Reactie: Om de pomp te ontkoppelen gedurende *30* minuten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
+  * Reactie: Om de pomp te ontkoppelen gedurende *30* minuten antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * SMS DISABLE/STOP
-   * Reactie: Om de SMS Remote Service uit te schakelen, antwoord met code Any. Houd er rekening mee dat je het gebruik van SMS commando's alleen direct vanaf de AAPS master smartphone kunt heractiveren.
+  * Reactie: Om de SMS Remote Service uit te schakelen, antwoord met code Any. Houd er rekening mee dat je het gebruik van SMS commando's alleen direct vanaf de AAPS master smartphone kunt heractiveren.
 * TARGET MEAL/ACTIVITY/HYPO   
-   * Reactie: Om tijdelijk streefdoel MEAL/ACTIVITY/HYPO in te stellen antwoord in met code van Authenticator app voor gebruiker gevolgd door PIN
+  * Reactie: Om tijdelijk streefdoel MEAL/ACTIVITY/HYPO in te stellen antwoord in met code van Authenticator app voor gebruiker gevolgd door PIN
 * TARGET STOP/CANCEL   
-   * Reactie: Om tijdelijk streefdoel te annuleren antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
+  * Reactie: Om tijdelijk streefdoel te annuleren antwoord met code van Authenticator app voor gebruiker gevolgd door PIN
 * HELP
-   * Reactie: BG, LOOP, BEHANDELINGEN, .....
+  * Reactie: BG, LOOP, BEHANDELINGEN, .....
 * HELP BOLUS
-   * Reactie: BOLUS 1.2 BOLUS 1.2 MAALTIJD
+  * Reactie: BOLUS 1.2 BOLUS 1.2 MAALTIJD
 
 Problemen oplossen
 ==================================================
