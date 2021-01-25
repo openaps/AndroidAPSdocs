@@ -43,26 +43,26 @@ Dodatečný povinný kód PIN na konci tokenu
 * Z bezpečnostních důvodů musí být kód odpovědi ukončen kódem PIN.
 * Pravidla pro PIN:
 
-   * 3 až 6 číslic
-   * nesmí obsahovat stejné číslice (tj. 1111)
-   * nesmí obsahovat posloupnost (tj. 1234)
+  * 3 až 6 číslic
+  * nesmí obsahovat stejné číslice (tj. 1111)
+  * nesmí obsahovat posloupnost (tj. 1234)
 
 Nastavení Autentikátoru
 -------------------------------------------------
 * Dvoufaktorové ověření se používá ke zvýšení bezpečnosti.
 * Můžete použít libovolnou aplikaci Authenticator, která podporuje tokeny RFC 6238 TOTP. Oblíbené bezplatné aplikace jsou:
 
-   * ` Authy <https://authy.com/download/>` _
-   * Google Authenticator - `Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>`_ / `iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>`_
-   * `LastPass Authenticator <https://lastpass.com/auth/>`_
-   * `FreeOTP Authenticator <https://freeotp.github.io/>`_
+  * ` Authy <https://authy.com/download/>` _
+  * Google Authenticator - `Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>`_ / `iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>`_
+  * `LastPass Authenticator <https://lastpass.com/auth/>`_
+  * `FreeOTP Authenticator <https://freeotp.github.io/>`_
 
 * Do sledovacího mobilu si nainstalujte vybraný autentikátor a naskenujte v něm QR kod, který se zobrazuje v AAPS.
 * Otestujte jednorázové heslo zadáním tokenu zobrazeného ve vaší ověřovací aplikaci a kódu PIN, který jste si nastavili v AAPS. Příklad:
 
-   * Váš povinný PIN je 2020
-   * TOTP token z autentizační aplikace je 457051
-   * Zadejte 4570512020
+  * Váš povinný PIN je 2020
+  * TOTP token z autentizační aplikace je 457051
+  * Zadejte 4570512020
    
 * Je-li zadání správné, změní se **automaticky** červený text "WRONG PIN" na zelené "OK". **Není třeba stisknout žádné tlačítko!**
 * Na obou telefonech musí být synchronizovaný čas. Nejlepší způsob je synchronizovat čas automaticky prostřednictvím sítě. Časové rozdíly mohou vést k problémům s ověřováním.
@@ -74,9 +74,9 @@ Použití SMS příkazů
 * Mobil s AAPS odpoví pro potvrzení požadovaného stavu nebo příkazu. 
 * Pokud je to požadováno, potvrďte příkaz odesláním kódu. Příklad:
 
-   * Váš povinný PIN je 2020
-   * TOTP token z autentizační aplikace je 457051
-   * Zadejte 4570512020
+  * Váš povinný PIN je 2020
+  * TOTP token z autentizační aplikace je 457051
+  * Zadejte 4570512020
 
 **Tip: Jestliže budete posílat větší množství SMS, je výhodné mít na obou mobilech SMS paušál.
 
@@ -90,93 +90,95 @@ Příkazy musí být odeslány v angličtině. Pokud je řetězec odpovědi `př
 Smyčka
 --------------------------------------------------
 * LOOP STOP/DISABLE
-   * Odpověď: Smyčka byla zakázána
+  * Odpověď: Smyčka byla zakázána
 * LOOP START/ENABLE
-   * Odpověď: Smyčka byla povolena
+  * Odpověď: Smyčka byla povolena
 * LOOP STATUS
-   * Odpověď záleží na aktuálním stavu
-      * Smyčka je zakázána
-      * Smyčka je povolena
-      * Pozastavena (10 minut)
+
+  * Odpověď záleží na aktuálním stavu
+
+    * Smyčka je zakázána
+    * Smyčka je povolena
+    * Pozastavena (10 minut)
 * LOOP SUSPEND 20
-   * Odpověď: Smyčka pozastavena na 20 minut
+  * Odpověď: Smyčka pozastavena na 20 minut
 * LOOP RESUME
-   * Odpověď: Smyčka obnovena
+  * Odpověď: Smyčka obnovena
 
 CGM data
 --------------------------------------------------
 * BG
-   * Odpověď: poslední BG: 5.6 před 4min Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)
+  * Odpověď: poslední BG: 5.6 před 4min Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)
 * CAL 5.6
-   * Odpověď: Pro odeslání kalibrace 5.6 odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
-   * Odpověď po přijetí správného potvrzovacího kódu: Kalibrace odeslána (*je-li instalovaný xDrip. V xDrip+ musí být povolen příjem kalibrací**)
+  * Odpověď: Pro odeslání kalibrace 5.6 odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+  * Odpověď po přijetí správného potvrzovacího kódu: Kalibrace odeslána (*je-li instalovaný xDrip. V xDrip+ musí být povolen příjem kalibrací**)
 
 Bazál
 --------------------------------------------------
 * BASAL STOP/CANCEL
-   * Odpověď: Pro zastavení dočasného bazálu odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+  * Odpověď: Pro zastavení dočasného bazálu odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * BASAL 0.3
-   * Odpověď: Pro spuštění bazálu 0.3U/h odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+  * Odpověď: Pro spuštění bazálu 0.3U/h odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * BASAL 0.3 20
-   * Odpověď: Pro spuštění bazálu 0.3U/h na 20 min odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+  * Odpověď: Pro spuštění bazálu 0.3U/h na 20 min odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * BASAL 30%
-   * Odpověď: Pro spuštění bazálu 30% na 30 minut odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+  * Odpověď: Pro spuštění bazálu 30% na 30 minut odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * BASAL 30% 50
-   * Odpověď: Pro spuštění bazálu 30% na 50 minut odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+  * Odpověď: Pro spuštění bazálu 30% na 50 minut odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 
 Bolus
 --------------------------------------------------
 Vzdálený bolus není povolen do 15 minut (tato hodnota je upravitelná pouze v případě, že jsou přidána 2 telefonní čísla) po posledním bolusu nebo vzdálených příkazech! Odpověď závisí na době, která uplynula od posledního podání bolusu.
 
 * BOLUS 1.2
-   * Odpověď A: Pro podani bolusu 1.2U odpovez SMS s kodem z aplikace Authenticator pro User nasledovano kodem PIN
-   * Odpověď B: Vzdálený bolus není k dispozici. Zkuste to později.
+  * Odpověď A: Pro podani bolusu 1.2U odpovez SMS s kodem z aplikace Authenticator pro User nasledovano kodem PIN
+  * Odpověď B: Vzdálený bolus není k dispozici. Zkuste to později.
 * BOLUS 0.60 MEAL
-   * Zadáte-li volitelný parametr MEAL, nastaví se dočasný cíl PŘED JÍDLEM (výchozí hodnoty jsou: 90 mg/dL, 5,0 mmol/l na 45 minut).
-   * Odpověď A: Pro podání bolusu na jídlo 0.60U odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
-   * Odpověď B: Vzdálený bolus není k dispozici. 
+  * Zadáte-li volitelný parametr MEAL, nastaví se dočasný cíl PŘED JÍDLEM (výchozí hodnoty jsou: 90 mg/dL, 5,0 mmol/l na 45 minut).
+  * Odpověď A: Pro podání bolusu na jídlo 0.60U odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+  * Odpověď B: Vzdálený bolus není k dispozici. 
 * CARBS 5
-   * Odpověď: Pro zapsání 5g v 12:45/5:35PM odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+  * Odpověď: Pro zapsání 5g v 12:45/5:35PM odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * CARBS 5 17:35/5:35PM
-   * Odpověď: Pro zapsání 5g v 17:35/5:35PM odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+  * Odpověď: Pro zapsání 5g v 17:35/5:35PM odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * EXTENDED STOP/CANCEL
-   * Odpověď: Pro zastaveni rozšířeného bolusu odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+  * Odpověď: Pro zastaveni rozšířeného bolusu odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * EXTENDED 2 120
-   * Odpověď: Pro spuštění prodlouženého bolusu 2U na 120 min odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+  * Odpověď: Pro spuštění prodlouženého bolusu 2U na 120 min odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 
 Profil
 --------------------------------------------------
 * PROFILE STATUS
-   *Odpověď: Profile1
+  *Odpověď: Profile1
 * PROFILE LIST
-   * Odpověď : 1.`Profile1` 2.`Profile2`
+  * Odpověď : 1.`Profile1` 2.`Profile2`
 * PROFILE 1
-   * Odpověď: Pro přepnutí profilu na Profil1 100% odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+  * Odpověď: Pro přepnutí profilu na Profil1 100% odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * PROFILE 2 30
-   * Odpověď: Pro přepnutí profilu na Profil2 30% odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+  * Odpověď: Pro přepnutí profilu na Profil2 30% odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 
 Jiné
 --------------------------------------------------
 * TREATMENTS REFRESH
-   * Odpověď: Obnovit ošetření z NS
+  * Odpověď: Obnovit ošetření z NS
 * NSCLIENT RESTART
-   * Odpověď: NSCLIENT RESTART 1 příjemce
+  * Odpověď: NSCLIENT RESTART 1 příjemce
 * PUMP
-   * Odpověď: Posl. spojení: 1 min zpět Doč. bazál: 0.00U/h @11:38 5/30min IOB: 0.5U Zás: 34U Baterie: 100
+  * Odpověď: Posl. spojení: 1 min zpět Doč. bazál: 0.00U/h @11:38 5/30min IOB: 0.5U Zás: 34U Baterie: 100
 * PUMP CONNECT
-   * Odpověď: Pumpa znovu připojena
+  * Odpověď: Pumpa znovu připojena
 * PUMP DISCONNECT *30*
-   * Odpověď: Pro odpojení pumpy na *30* minut odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+  * Odpověď: Pro odpojení pumpy na *30* minut odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * SMS DISABLE/STOP
-   * Odpověď: Pro vypnutí vzdálené SMS služby odpovězte pomocí SMS s kódem Any. Mějte na paměti, že ji budete moci opětovně reaktivovat pouze z hlavního smartphonu s AAPS.
+  * Odpověď: Pro vypnutí vzdálené SMS služby odpovězte pomocí SMS s kódem Any. Mějte na paměti, že ji budete moci opětovně reaktivovat pouze z hlavního smartphonu s AAPS.
 * TARGET MEAL/ACTIVITY/HYPO   
-   * Odpověď: Pro nastaveni dočasneho cíle PŘED JÍDLEM/AKTIVITA/HYPO odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+  * Odpověď: Pro nastaveni dočasneho cíle PŘED JÍDLEM/AKTIVITA/HYPO odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 TARGET STOP/CANCEL   
-   * Odpověď: Pro zastaveni dočasného cíle odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+  * Odpověď: Pro zastaveni dočasného cíle odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 * HELP
-   * Odpověď: BG, LOOP, TREATMENTS, .....
+  * Odpověď: BG, LOOP, TREATMENTS, .....
 * HELP BOLUS
-   * Odpověď: BOLUS 1.2 BOLUS 1.2 MEAL
+  * Odpověď: BOLUS 1.2 BOLUS 1.2 MEAL
 
 Poradce při potížích
 ==================================================
