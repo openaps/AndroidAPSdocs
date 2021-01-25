@@ -6,7 +6,7 @@
 * Vždy se snažte mít baterii v pumpě plnou jak nejvíce je to možné. Přečtěte si kapitolu baterie, pro tipy jak toho nejlépe dosáhnout.
 * **Nespouštějte aplikaci ruffy**, pokud používáte AAPS. Pokud je aplikace spuštěna znova, zpravidla dojde k přerušení komunikace s pumpou. Jakmile je jednou pumpa spojena s ruffy, není potřeba provádět žádné opětovné spojení. A to ani v případě, že byl telefon restartován. Pumpa se připojí automaticky. Je doporučeno přesunout aplikaci ruffy na nepoužívanou obrazovku nebo do složky, kterou nepoužíváte, abyste předešli nechtěnému spuštění.
 * Pokud omylem spustíte ruffy při běžící smyčce, nejsnazším řešením pro nápravu situace je restart celého telefonu.
-* Kdykoliv je to možné, ovládejte pumpu jen pomocí AndroidAPS. Doporučujeme používat zámek klávesnice pumpy **NASTAVENÍ PUMPY/ ZÁMEK TLAČÍTEK / ZAPNOUT**. Ovládat pumpu přímo je zpravidla potřeba pouze při výměně baterie nebo zásobníku. ![Zámek](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/keylock.png?raw=true)
+* Kdykoliv je to možné, ovládejte pumpu jen pomocí AndroidAPS. Doporučujeme používat zámek klávesnice pumpy **NASTAVENÍ PUMPY/ ZÁMEK TLAČÍTEK / ZAPNOUT**. Ovládat pumpu přímo je zpravidla potřeba pouze při výměně baterie nebo zásobníku. ![Zámek](../images/combo/combo-tips-keylock.png)
 
 ## Pumpa není dostupná. Co s tím?
 
@@ -25,7 +25,7 @@
 
 * Na telefonech, které mají **málo paměti** (nebo nastavenou **agresivní úsporu energie**), může být aplikace AndroidAPS často zastavována. Můžete to poznat podle toho, že není zobrazeno tlačítko Bolus a Kalkulačky. Je to z toho důvodu, že systém teprve nabíhá. Kvůli těmto zastavením může být při startu vyvolán alarm „pumpa nedostupná“. Na záložce Combo, položka **Poslední spojení** můžete ověřit, kdy naposled se aplikace AndroidAPS úspěšně spojila s pumpou. 
 
-![Pumpa nedostupná](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Pump_Unreachable.png) ![Žádné připojení k pumpě](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/No_connection_to_pump.png)
+![Pumpa nedostupná](../images/combo/combo-tips-pump-unreachable.png) ![Žádné připojení k pumpě](../images/combo/combo-tips-no-connection-to-pump.png)
 
 * Tato chyba může způsobit rychlejší vybíjení baterie, protože při každém startu aplikace je znovu načítán celý bazální profil.
 * Také zvyšuje riziko, že pumpa nebude chtít provádět žádné příkazy s AndroidAPS do doby, než bude stisknuto nějaké tlačítko přímo na pumpě (Jak je popsáno výše). 
@@ -43,7 +43,7 @@
 * Chcete-li vyměnit baterii, dlouze přidržte **Uzavřená smyčka** na hlavní obrazovce a zvolte **Pozastavit smyčku na 1 h**. 
 * Wait for the pump to communicate with the phone and the Bluetooth logo on the pump has faded.
 
-![Bluetooth povoleno](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/Compo.png?raw=true)
+![Bluetooth povoleno](../images/combo/combo-tips-combo-tips-compo.png)
 
 * Odemkněte pumpu, přepněte pumpu do režimu STOP, potvrďte případný alarm konce dočasné bazální dávky a vyměňte baterii.
 * Then put the pump back in run mode select **Resume** when long-pressing on **Suspended** on the main screen.
@@ -53,7 +53,7 @@
 
 * Intezivní komunikace prostřednictvím bluetooth spotřebovává velké množství energie, používejte pouze **velmi kvalitní baterie**, jako jsou Energizer Ultimate Lithium nebo baterie ze velkého servisního balíčku Accu-Chek Combo. Pokud se rozhodnete používat dobíjecí NiMH baterie, používejte baterie Eneloop. 
 
-![Energizer](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/energizer-l91aa---image.jpg?raw=true) ![OnePower](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/PowerOne.png?raw=true)
+![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
 Typická doba výdrže baterie dle typu:
 
@@ -82,15 +82,15 @@ Algoritmus OpenAPS nepodporuje paralelní rozložený bolus nebo kombinovaný bo
 
 * If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
 
-![Zakázaná smyčka po kombinovaném bolusu](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
+![Zakázaná smyčka po kombinovaném bolusu](../images/combo/combo-tips-multiwave-bolus.png)
 
 ## Poplachy při bolusu
 
 * If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical number of insulin units. If you really want to bolus the same insulin twice in short succession, just wait two more minutes and then deliver the bolus again. If the first bolus has been interrupted or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
 * Na pozadí je bezpečnostní mechanismus, který čte bolusovou historii pumpy před posláním nového bolusu, aby se správně spočítalo IOB, a to i tehdy, je-li bolus podán přímo z pumpy. Musí být zabráněno nerozpoznatelným položkám.
 
-![Dvojitý bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/Doppelbolus.png)
+![Dvojitý bolus](../images/combo/combo-tips-doppelbolus.png)
 
 * Tento mechanismus je také zodpovědný za druhou příčinu chyby: Pokud během používání bolusové kalkulačky dojde k dodání jiného bolusu přes pumpu a tím ke změně historie, je kalkulace bolusu špatná a bolus se předčasně ukončí. 
 
-![Zrušený bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/History_changed.png)
+![Zrušený bolus](../images/combo/combo-tips-history-changed.png)
