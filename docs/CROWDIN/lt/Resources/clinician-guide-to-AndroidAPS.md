@@ -2,15 +2,15 @@
 
 Šis puslapis yra skirtas gydytojams, besidomintiems atvirojo kodo dirbtinės kasos technologijomis, tokiomis kaip AndroidAPS, ir pacientams, norintiems pasidalinti šia informacija su savo gydytojais ir diabetologais.
 
-Šiame vadove yra tam tikros svarbios informacijos apie „pasidaryk pats“ uždarojo tipo ciklą ir konkrečiai kaip veikia AndroidAPS. Norėdami gauti daugiau informacijos apie visas šias temas, skaitykite [išsamią AndroidAPS dokumentaciją internete](http://androidaps.readthedocs.io/en/latest/index.html). Jei turite klausimų, susisiekite su savo pacientu dėl išsamesnės informacijos arba nedvejodami susisiekite su bendruomene. (Jei nesinaudojate socialiniais tinklais (pvz., [Twitter](https://twitter.com/kozakmilos) ar Facebook), galite atsiųsti el. laišką adresu developers@AndroidAPS.org). [ Šioje nuorodoje galite rasti keletą naujausių tyrimų & ir duomenų, susijusių su rezultatais](https://openaps.org/outcomes/).
+Šiame vadove yra tam tikros svarbios informacijos apie „pasidaryk pats“ uždarojo tipo ciklą ir konkrečiai kaip veikia AndroidAPS. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](../index.rst). Jei turite klausimų, susisiekite su savo pacientu dėl išsamesnės informacijos arba nedvejodami susisiekite su bendruomene. (Jei nesinaudojate socialiniais tinklais (pvz., [Twitter](https://twitter.com/kozakmilos) ar Facebook), galite atsiųsti el. laišką adresu developers@AndroidAPS.org). [ Šioje nuorodoje galite rasti keletą naujausių tyrimų & ir duomenų, susijusių su rezultatais](https://openaps.org/outcomes/).
 
 ### „Pasidaryk pats“ uždaro ciklo kūrimo veiksmai:
 
 Norėdami naudoti AndroidAPS, turite atlikti šiuos veiksmus:
 
-* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
-* [Atsisiųsti AndroidAPS programinį kodą ir „sukurti“ programinę įrangą ](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
-* [Konfigūruoti programinę įrangą taip, kad ji "susikalbėtų" su diabeto priežiūros prietaisais, nustatyti asmeninius bei saugos parametrus](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
+* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../index.rst#getting-started).
+* [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.rst#configuration).
 
 ### Kaip veikia „pasidaryk pats“ uždaras ciklas
 
