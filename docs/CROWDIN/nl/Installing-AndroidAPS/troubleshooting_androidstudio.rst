@@ -103,8 +103,8 @@ Optie 3 - Controleren op updates
 * Schakel over naar Terminal in Android Studio (linkerbenedenhoek van Android Studio venster)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
-   
+    :alt: Android Studio Terminal
+
 * Plak gekopieerde tekst en druk op return
 
   .. image:: ../images/GIT_TerminalCheckOut2.jpg
@@ -134,10 +134,9 @@ Geen van de bovengenoemde
 Als geen van de bovenstaande tips je geholpen heeft, dan zou je de de app helemaal vanaf nul kunnen bouwen:
 
 1. `Instellingen exporteren <../Usage/ExportImportSettings.html>`_ (in AAPS-app die al op jouw telefoon is geïnstalleerd)
-2. Houd jouw keystore file (digitale handtekening) en keystore wachtwoord bij de hand.
-    In het geval dat je het bestand kwijt bent en/of het wachtwoord bent vergeten dan kun je proberen om ze te vinden in de projectbestanden zoals `hier <https://youtu.be/nS3wxnLgZOo>`_beschreven. Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan. 
+2. Have your key password and key store password ready. In het geval dat je het bestand kwijt bent en/of het wachtwoord bent vergeten dan kun je proberen om ze te vinden in de projectbestanden zoals `hier <https://youtu.be/nS3wxnLgZOo>`_beschreven. Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan. 
 3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
-4.	Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
+4. Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
 5. `Instellingen importeren <./Usage/ExportImportSettings.html>`_
 
 In het ergste geval
