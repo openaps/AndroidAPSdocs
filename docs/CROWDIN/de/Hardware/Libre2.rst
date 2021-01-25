@@ -100,7 +100,7 @@ Die Blutzuckerwerte werden von der xDrip + App auf dem Smartphone empfangen.
 * Ggf. unter Less Common Settings->Extra Logging Settings->Extra tags for logging „BgReading:d,xdrip libre_receiver:v“ eintragen. Damit werden evtl. Fehlermeldungen protokolliert.
 * In xDrip+ gehe zu Einstellungen > Inter-App Einstellungen > Lokaler Broadcast und wähle AN.
 * In xDrip+ gehe zu Einstellungen > Inter-App Einstellungen > Behandlungen annehmen und wähle AUS.
-* Um in AndroidAPS (ab Version 2.5) CGM-Werte von xDrip+ empfangen zu können, identifiziere den Empfänger in xDrip `(Einstellungen > Inter-App Einstellungen > Identifiziere Empfänger und gib info.nightscout.androidaps ein) <https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Configuration/xdrip.html#identifiziere-empfanger>`_
+* to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <../Configuration/xdrip.html#identify-receiver>`_
 * Falls du mit AndroidAPS kalibrieren willst dann gehe in xDrip+ zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN.  Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
 
 .. image:: ../images/Libre2_Tags.png
