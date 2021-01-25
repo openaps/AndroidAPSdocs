@@ -26,7 +26,7 @@ Hardware- und Software-Anforderungen
 
   Komponente, die AndroidAPS betreibt und Steuerungsbefehle an das Pod-Kommunikationsgerät sendet.
 
-      + Unterstützte `Android-Smartphones <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ mit AAPS 2.8 oder höher und zugehörigem `Komponenten-Setup <https://androidaps.readthedocs.io/en/latest/CROWDIN/de/index.html#komponenten-setup>`__
+      +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <../index.html#component-setup>`__
 
 * |Omnipod_Pod| **Insulin-Pumpe** 
 
@@ -132,7 +132,7 @@ Einen Pod aktivieren
 
 Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Verbindung in den Omnipod-Einstellungen richtig konfiguriert und verbunden hast.
 
-*HINWEIS: Für die Verbindung mit dem Pod steht aus Sicherheitsgründen nur ein kleinerer Kommunikationsbereich zur Verfügung. Vor dem Pairing des Pods ist das Funksignal schwächer, aber nachdem es verbunden wurde, wird es mit voller Signalleistung funktionieren. Stelle sicher, dass dein Pod während dieser Prozedur `in der Nähe<#optimale-positionierung-von-omnipod-und-rileylink>`__ *(~30 cm entfernt oder weniger)* ist, aber nicht oben oder direkt neben dem RileyLink.  
+*HINWEIS: Für die Verbindung mit dem Pod steht aus Sicherheitsgründen nur ein kleinerer Kommunikationsbereich zur Verfügung. Vor dem Pairing des Pods ist das Funksignal schwächer, aber nachdem es verbunden wurde, wird es mit voller Signalleistung funktionieren. During these procedures, make sure that your pod is* `within close proximity <#optimal-omnipod-and-rileylink-positioning>`__ *(~30 cm away or less) but not on top of or right next to the RileyLink.*
 
 1. Navigiere zur Registerkarte **Omnipod (POD)** und klicke auf den **POD MGMT (1)** Button und dann auf **Pod aktivieren (2)**.
 
@@ -749,7 +749,7 @@ Pod angehalten
 Informational alert that Pod has been suspended.
 
 Setzen des Basal-Profils fehlgeschlagen. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
 
