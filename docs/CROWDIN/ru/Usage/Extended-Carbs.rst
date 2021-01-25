@@ -30,9 +30,9 @@ ECarbs на вкладке обзора, обратите внимание на 
 
 -----
 
-Рекомендуется использовать модуль OpenAPS SMB APS, с поддержкой SMB, а также включить параметр _Enable SMB с COB_.
+The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
 
-Сценарий, например, на пиццу может быть такой: дать (частично) болюс заранее через калькулятор болюса а затем через 1 или 2 часа нажать кнопку углеводы чтобы ввести оставшиеся углеводы на последующие 4-6 часов. Нужно приспособиться, чтобы понять какие конкретные величины подходят для вас. Можно также подстроить параметр _max minutes of basal для ограничения SMB чтобы сделать алгоритм более или менее агрессивным.
+Сценарий, например, for a Pizza might be to give a (partial) bolus up front via the *calculator* and then use the *carbs* button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours. Нужно приспособиться, чтобы понять какие конкретные величины подходят для вас. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive.
 При низком содержании углеводов, высоким содержании жиров и белков, eCarbs может быть достаточен, чтобы обойтись без дополнительного контроля болюсов (см. пост блога выше).
 
 При создании eCarbs в портале терапии создается также запись для документирования, упрощающая итерацию и ввод данных.
