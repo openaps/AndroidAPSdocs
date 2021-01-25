@@ -226,7 +226,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 ![Bouton Insuline](../images/Home2020_ButtonInsulin.png)
 
-* Permet d'entrer une certaine quantité d'insuline sans utiliser l'[Assistant rapide](../Getting-Started/Screenshots#assistant-rapide).
+* To give a certain amount of insulin without using [bolus calculator](../Getting-Started/Screenshots#bolus-wizard).
 * En cochant la case, vous pouvez démarrer automatiquement votre [cible temporaire Repas imminent](../Configuration/Preferences#default-temp-targets).
 * Si vous ne voulez pas injecter de bolus avec la pompe mais juste enregistrer la quantité d'insuline (par ex. pour de l'insuline injectée avec un stylo ou une seringue), cochez la case correspondante.
 
