@@ -103,8 +103,8 @@ Option 3 - Vérifier les mises à jour
 * Basculez dans le Terminal dans Android Studio (en bas à gauche dans la fenêtre Android Studio)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
-   
+    :alt: Android Studio Terminal
+
 * Collez le texte copié et appuyer sur entrer
 
   .. image:: ../images/GIT_TerminalCheckOut2.jpg
@@ -134,10 +134,9 @@ Rien ci-dessus n'a marché
 Si aucun des conseils ci-dessus ne vous a aidé, vous pourriez envisager de repartir de zéro pour reconstruire l'application :
 
 1. `Exporter les paramètres <../Usage/ExportImportSettings.html>`_ (dans la version AAPS déjà installée sur votre téléphone)
-2. Ayez vos mots de passe pour la clé et le fichier de clés sous la main
-    Si vous avez oublié ces mots de passe vous pouvez essayer de les retrouver dans les fichiers du projet comme c'est décrit `ici <https://youtu.be/nS3wxnLgZOo>`_. Ou vous pouvez recréer un nouveau fichier de clés. 
+2. Have your key password and key store password ready. Si vous avez oublié ces mots de passe vous pouvez essayer de les retrouver dans les fichiers du projet comme c'est décrit `ici <https://youtu.be/nS3wxnLgZOo>`_. Ou vous pouvez recréer un nouveau fichier de clés. 
 3. Construisez l'application à partir de zéro comme c'est décrit `ici <../Installing-AndroidAPS/Building-APK.html#telecharger-le-code-androidaps>`_.
-4.	Quand vous avez construit l'APK avec succès, supprimez l'application existante sur votre téléphone, transférez le nouvel apk sur votre téléphone et installez le.
+4. Quand vous avez construit l'APK avec succès, supprimez l'application existante sur votre téléphone, transférez le nouvel apk sur votre téléphone et installez le.
 5. `Importer les paramètres <../Usage/ExportImportSettings.html>`_
 
 Pire scénario
