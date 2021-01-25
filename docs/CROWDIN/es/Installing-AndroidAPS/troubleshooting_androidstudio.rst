@@ -103,8 +103,8 @@ Opción 3 - Comprobar actualizaciones
 * Conmutar a Terminal en Android Studio (lado izquierdo inferior de la ventana de Android Studio)
 
   .. imagen:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
-   
+    :alt: Android Studio Terminal
+
 * Pegar texto copiado y pulsar retorno
 
   .. imagen:: ../images/GIT_TerminalCheckOut2.jpg
@@ -134,10 +134,9 @@ Ninguna de las anteriores funcionó
 Si ninguno de los consejos anteriores lo ha ayudado podría considerar la creación de la aplicación desde cero:
 
 1. `Exportar ajustes <../Usage/ExportImportSettings.html>`_ (en la versión AAPS ya instalada en tu teléfono)
-2. Preparar la contraseña de clave y la contraseña del almacén de claves
-    En caso de que haya olvidado las contraseñas, puede intentar encontrarlas en los archivos del proyecto, tal como se describe en "aquí <https://youtu.be/nS3wxnLgZOo>"_. O simplemente utiliza un almacén de claves nuevo. 
+2. Have your key password and key store password ready. En caso de que haya olvidado las contraseñas, puede intentar encontrarlas en los archivos del proyecto, tal como se describe en "aquí <https://youtu.be/nS3wxnLgZOo>"_. O simplemente utiliza un almacén de claves nuevo. 
 3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
-4.	Cuando hayas creado el APK exitosamente borra la app existente de su teléfono, transfiere la nueva apk al teléfono e instálela.
+4. Cuando hayas creado el APK exitosamente borra la app existente de su teléfono, transfiere la nueva apk al teléfono e instálela.
 5. `Importar valores <../Usage/ExportImportSettings.html>`_
 
 El peor escenario
