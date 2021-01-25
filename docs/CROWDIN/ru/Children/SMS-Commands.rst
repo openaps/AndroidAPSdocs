@@ -138,13 +138,13 @@ AndroidAPS позволяет контролировать телефон реб
   * Response A: Чтобы подать болюс 0.60 ед. ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
   * Ответ B: Удаленный болюс недоступен. 
 * УГЛИ 5
-  * Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
+  * Ответ: Чтобы ввести 5 г в 12:45 ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
 * УГЛИ 5 17:35/5:35PM
-  * Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
+  * Ответ: Чтобы ввести 5 г в 17:35 ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
 * EXTENDED STOP/CANCEL
-  * Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
+  * Ответ: Для прекращения пролонгированного болюса ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
 * EXTENDED 2 120
-  * Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
+  * Ответ: Чтоб начать пролонгированный болюс 2ед на 120 минут ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
 
 Профиль
 --------------------------------------------------
