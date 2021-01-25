@@ -42,7 +42,7 @@ Předpokládá se, že Nightscout stránky už máte, pokud ne, tak navštivte s
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
-![Azure](../../images/nightscout1.png)
+![Azure](../images/nightscout1.png)
 
 * Klikněte na "Save" ve vrchní části panelu.
 

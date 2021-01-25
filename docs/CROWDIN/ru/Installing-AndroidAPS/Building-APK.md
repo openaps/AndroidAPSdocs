@@ -204,11 +204,11 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 * Нажмите "Build" в строке меню и выберите "Generate Signed Bundle / APK...".
     
-    ![Построение apk](изображение::../images/AndroidStudio361_27.png)
+    ![Построение apk](../images/AndroidStudio361_27.png)
 
 * Выберите "APK" (1.) вместо "Android App Bundle" и нажмите кнопку "Далее" (2.).
     
-    ![Apk вместо пакета](изображение::../images/AndroidStudio361_28.png)
+    ![Apk вместо пакета](../images/AndroidStudio361_28.png)
 
 * Make sure that module is set to "app" (1.).
 
@@ -243,22 +243,22 @@ Signing means that you indicate your app to be your own creation but in a digita
 * Отметьте флажки V1 и V2 для подписи версий (2.).
 * Нажмите ``Finish``. (3.)
     
-    ![Завершение сборки](изображение::../images/AndroidStudio361_32.png)
+    ![Завершение сборки](../images/AndroidStudio361_32.png)
 
 * После завершения сборки Android Studio покажет информацию "APK (s) сгенерировано успешно ...".
 
 * В случае, если сборка не удалась, обратитесь к разделу [поиск и устранение неисправностей ](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
 * Самый простой способ найти apk это нажать на кнопку "журнал событий".
     
-    ![Построено успешно - журнал событий](изображение::../images/AndroidStudio361_33.png)
+    ![Построено успешно - журнал событий](../images/AndroidStudio361_33.png)
 
 * В секции журнала событий нажмите «locate».
     
-    ![Журнал событий - обнаружить apk](изображение::../images/AndroidStudio361_34.png)
+    ![Журнал событий - обнаружить apk](../images/AndroidStudio361_34.png)
 
 * app-full-release.apk это файл, который вы ищете.
     
-    ![Расположение файла apk](изображение::../images/AndroidStudio361_35.png)
+    ![Расположение файла apk](../images/AndroidStudio361_35.png)
 
 ## Перенос приложения на смартфон
 

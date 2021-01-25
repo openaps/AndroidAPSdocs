@@ -42,7 +42,7 @@ Wir gehen davon aus, dass du bereits eine Nightscout Seite hast. Falls nicht, ge
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
-![Azure](../../images/nightscout1.png)
+![Azure](../images/nightscout1.png)
 
 * Klicke auf "Speichern" am oberen Rand des Fensters.
 

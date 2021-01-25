@@ -74,7 +74,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 Stop here if you are open looping with a virtual pump - do not click Verify at the end of this objective.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. image:: ./images/blank.png
+.. image:: ../images/blank.png
   :alt: blank
 
 Objective 6: Starting to close the loop with Low Glucose Suspend
