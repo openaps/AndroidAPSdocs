@@ -138,7 +138,7 @@ Datum vydání: 03. 05. 2020
 K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
------
+------------------
 * Insight: Deaktivace vibrací na bolus pro firmware verze 3
 * Jinak je stejná jako verze 2.6.1.2. Aktualizace není povinná. 
 
@@ -149,7 +149,7 @@ Datum vydání: 19. 04. 2020
 K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
------
+------------------
 * Oprava pádů pro Insight
 * Jinak je stejná jako verze 2.6.1.1. Pokud nejste ovlivněni touto chybou, nemusíte provádět upgrade.
 
@@ -160,7 +160,7 @@ Datum vydání: 06. 04. 2020
 K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
------
+------------------
 * Řeší problém s příkazem SMS CARBS při použití Combo pumpy
 * Jinak je stejná jako verze 2.6.1. Pokud nejste ovlivněni touto chybou, nemusíte provádět upgrade.
 
@@ -171,7 +171,7 @@ Datum vydání: 21. 03. 2020
 K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
------
+------------------
 * Povolit zadání pouze adresy https:// v nastavení NSClient
 * Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
 * Fixed small UI bugs
@@ -190,7 +190,7 @@ Datum vydání: 29. 02. 2020
 K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
------
+------------------
 * Drobné úpravy vzhledu (úvodní obrazovka...)
 * Odstraněna karta/nabídka Péče - další podrobnosti `zde <../Usage/CPbefore26.html>`_
 * Nový `plugin Místního profilu <../Configuration/Config-Builder.html#local-profile-recommended>`_
@@ -343,10 +343,10 @@ Nastavení k přizpůsobení při přechodu od AMA k SMB
 * výchozí hodnota min_5m_carbimpact se změnila z 3 na 8 při přechodu od AMA k SMB. Pokud přecházíte z AMA na SMB, musíte toto nastavení změnit ručně
 * Při vytváření AndroidAPS 2.0 apk mějte na paměti: Konfigurace na vyžádání není aktuální verzí pluginu Android Gradle podporována! Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
 
-   * Otevřete okno Preferences klepnutím na File > Settings (na platformě Mac, Android Studio > Preferences).
-   * V levé části pak na Build, Execution, Deployment > Compiler.
-   * Odtrhněte Configure on demand.
-   * Klikněte na Apply nebo OK.
+  * Otevřete okno Preferences klepnutím na File > Settings (na platformě Mac, Android Studio > Preferences).
+  * V levé části pak na Build, Execution, Deployment > Compiler.
+  * Odtrhněte Configure on demand.
+  * Klikněte na Apply nebo OK.
 
 Hlavní stránka
 --------------------------------------------------
@@ -375,7 +375,7 @@ Různé
 * Přepracovaná Konfigurace a Cíle, přídány popisky
 * Nová ikona aplikace
 * Spousty vylepšení a oprav chyb
-* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see _Local alerts_ in settings)
+* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Možnost ponechat obrazovku trvale zapnutou
 * Možnost zobrazovat upozornění jako Android notifikace
 * Rozšířené filtrování (dovolující mít povolené SMB i více než 6 h po jídle) je podporováno Dexcom upravenou aplikací a xDripem v nativním módu.
