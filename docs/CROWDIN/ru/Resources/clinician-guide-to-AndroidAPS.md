@@ -2,15 +2,15 @@
 
 Эта страница предназначена для клиницистов, которые проявили интерес к технологии искусственной поджелудочной железы, такой как AndroidAPS, или для пациентов, которые хотят делиться такой информацией со своими лечащими врачами.
 
-В этом руководстве содержится первоочередная информация о самодеятельных алгоритмах замкнутого цикла и, в частности, о том, как работает AndroidAPS. Более подробную информацию по всем этим темам можно найти во [ всеобъемлющей интернет-документации по AndroidAPS ](http://androidaps.readthedocs.io/en/latest/index.html). Если у вас есть вопросы, узнайте подробности у вашего пациента или обратитесь с вопросом к сообществу. (Если вы не в социальных сетях (например, [ Twitter ](https://twitter.com/kozakmilos) или Facebook), пишите разработчиками по электронной почте @AndroidAPS.org). [ Здесь также можно найти некоторые из последних исследований и связанных с ними данными ](https://openaps.org/outcomes/).
+В этом руководстве содержится первоочередная информация о самодеятельных алгоритмах замкнутого цикла и, в частности, о том, как работает AndroidAPS. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](../index.rst). Если у вас есть вопросы, узнайте подробности у вашего пациента или обратитесь с вопросом к сообществу. (Если вы не в социальных сетях (например, [ Twitter ](https://twitter.com/kozakmilos) или Facebook), пишите разработчиками по электронной почте @AndroidAPS.org). [ Здесь также можно найти некоторые из последних исследований и связанных с ними данными ](https://openaps.org/outcomes/).
 
 ### Этапы самостоятельного построения системы замкнутого цикла:
 
 Для начала работы с AndroidAPS необходимо выполнить следующие действия:
 
-* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
-* [ Загрузите исходный код AndroidAPS и создайте программное обеспечение ](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
-* [ Сконфигурируйте программу для работы с устройствами, настройте и задайте параметры защиты ](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
+* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../index.rst#getting-started).
+* [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.rst#configuration).
 
 ### Как работает замкнутый цикл
 
