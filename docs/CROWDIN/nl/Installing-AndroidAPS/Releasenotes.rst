@@ -138,7 +138,7 @@ Release date: 03-05-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Belangrijkste nieuwe functies
------
+------------------
 * Insight: Disable vibration on bolus for firmware version 3
 * Otherwise is equal to 2.6.1.2. Update is optional. 
 
@@ -149,7 +149,7 @@ Release date: 19-04-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Belangrijkste nieuwe functies
------
+------------------
 * Fix crashing in Insight service
 * Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
 
@@ -160,7 +160,7 @@ Release date: 06-04-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Belangrijkste nieuwe functies
------
+------------------
 * Resolves SMS CARBS command issue while using Combo pump
 * Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
 
@@ -171,7 +171,7 @@ Release date: 21-03-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Belangrijkste nieuwe functies
------
+------------------
 * Allow to enter only https:// in NSClient settings
 * Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
 * Fixed small UI bugs
@@ -190,7 +190,7 @@ Release date: 29-02-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Belangrijkste nieuwe functies
------
+------------------
 * Small design changes (startpage...)
 * Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`_
 * New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
@@ -343,10 +343,10 @@ Instellingen die je moet aanpassen bij het overschakelen van AMA naar SMB
 * min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. Je moet dit handmatig doen wanneer je van AMA naar SMB wisselt.
 * Let op bij het bouwen van de AndroidAPS 2.0 apk: Configuration on demand wordt niet ondersteund door de huidige versie van de Android Gradle plugin! Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het volgende doen:
 
-   * Open het Preferences (Voorkeuren) venster door op File > Settings (Bestand > Instellingen) te klikken (op Mac, Android Studio > Voorkeuren).
-   * In het linkerscherm, klik op Build, Execution, Deployment > Compiler.
-   * Vink de Configure on demand checkbox uit.
-   * Klik op Apply (Toepassen) of OK.
+  * Open het Preferences (Voorkeuren) venster door op File > Settings (Bestand > Instellingen) te klikken (op Mac, Android Studio > Voorkeuren).
+  * In het linkerscherm, klik op Build, Execution, Deployment > Compiler.
+  * Vink de Configure on demand checkbox uit.
+  * Klik op Apply (Toepassen) of OK.
 
 Tabblad Overzicht
 --------------------------------------------------
@@ -375,7 +375,7 @@ Overig
 * Configurator en doelen tabbladen gewijzigd waarbij beschrijvingen zijn toegevoegd
 * Nieuw app icoon
 * Veel verbeteringen en bugfixes
-* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see _Local alerts_ in settings)
+* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Optie om het scherm aan te houden
 * Optie om meldingen als Android melding te tonen
 * Geavanceerde filtering (wat het mogelijk maakt om SMB altijd in te schakelen en 6 uur na maaltijden) ondersteund voor gepatchte Dexcom app of xDrip met G5 native mode als BG-bron.
