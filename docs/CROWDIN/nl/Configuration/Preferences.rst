@@ -173,7 +173,7 @@ Statusindicatoren
 * Statusindicatoren geven een visuele waarschuwing voor 
 
   Sensor Leeftijd
-  * Sensor battery level for certain smart readers (see `screenshots page <../Getting-Started/Screenshots.html#sensor-level-battery>`_ for details).
+  * Sensor batterijniveau voor bepaalde sensor-opzetstukken (bijv Miaomiao) Zie `screenshots pagina <../Getting-Started/Screenshots.html#sensorniveau-batterij>`_ voor details.
   * Insuline leeftijd (aantal dagen dat reservoir wordt gebruikt)
   * Reservoir niveau (eenheden)
   * Infuus leeftijd
@@ -306,7 +306,7 @@ OpenAPS SMB instellingen
 -----------------------------------------------------------
 * In tegenstelling tot AMA gebruikt `SMB <../Usage/Open-APS-functies.html#super-micro-bolus-smb>`_ meestal geen tijdelijke basaalstanden om glucosewaarden bij te sturen, maar voornamelijk kleine bolusen: de zgn super micro bolussen.
 * Je moet `Doel 10 <../Usage/Objectives.html#doel-10-activeren-van-extra-functies-overdag-zoals-smb-super-micro-bolus>`_ hebben voltooid om SMB te kunnen gebruiken.
-* The first three settings are explained `above <../Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to>`_.
+* De eerste drie instellingen worden `hierboven <../Configuration/Preferences.html#maximaal-instelbaar-basaal-e-u>`_ uitgelegd.
 * De verschillende opties voor inschakelen van SMB worden beschreven op de pagina met `OpenAPS functies <../Usage/Open-APS-features.html#activeer-smb>`_.
 * *Tijdsinterval in minuten tussen afgeven van SMBs* is een beperking voor hoe snel na elkaar twee SMBs mogen worden gegeven, dit staat standaard op 4 min. Deze waarde voorkomt dat het systeem te vaak SMB afgeeft (bijvoorbeeld in geval van een tijdelijk streefdoel). Wijzig deze instelling alleen als je precies weet wat de gevolgen zijn. 
 * Als 'Gevoeligheid verhoogt het doel' of 'Resistentie verlaagt het doel' is ingeschakeld dan zal `Autosens <../Usage/Open-APS-features.html#gevoeligheidsdetectie-autosens>`_ jouw BG streefdoel overeenkomstig aanpassen.
