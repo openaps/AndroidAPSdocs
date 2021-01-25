@@ -43,26 +43,26 @@ Additionally mandatory PIN at token end
 * For safety reasons the reply code must be followed by a PIN.
 * PIN rules:
 
-   * 3 to 6 digits
-   * not same digits (i.e. 1111)
-   * not in a row (i.e. 1234)
+  * 3 to 6 digits
+  * not same digits (i.e. 1111)
+  * not in a row (i.e. 1234)
 
 Authenticator setup
 -------------------------------------------------
 * Two-factor authentication is used to improve safety.
 * You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
 
-   * `Authy <https://authy.com/download/>`_
-   * Google Authenticator - `Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>`_ / `iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>`_
-   * `LastPass Authenticator <https://lastpass.com/auth/>`_
-   * `FreeOTP Authenticator <https://freeotp.github.io/>`_
+  * `Authy <https://authy.com/download/>`_
+  * Google Authenticator - `Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>`_ / `iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>`_
+  * `LastPass Authenticator <https://lastpass.com/auth/>`_
+  * `FreeOTP Authenticator <https://freeotp.github.io/>`_
 
 * Install the authenticator app of your choice on your follower phone and scan the QR code shown in AAPS.
 * Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. 예시:
 
-   * Your mandatory PIN is 2020
-   * TOTP token from the authenticator app is 457051
-   * Enter 4570512020
+  * Your mandatory PIN is 2020
+  * TOTP token from the authenticator app is 457051
+  * Enter 4570512020
    
 * The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
 * The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
@@ -74,9 +74,9 @@ Use SMS commands
 * The AAPS phone will respond to confirm success of command or status requested. 
 * Confirm command by sending the code where necessary. 예시:
 
-   * Your mandatory PIN is 2020
-   * TOTP token from the authenticator app is 457051
-   * Enter 4570512020
+  * Your mandatory PIN is 2020
+  * TOTP token from the authenticator app is 457051
+  * Enter 4570512020
 
 **Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
@@ -90,93 +90,95 @@ Commands must be sent in English, the response will be in your local language if
 Loop
 --------------------------------------------------
 * LOOP STOP/DISABLE
-   * 응답: Loop가 중지되었습니다
+  * 응답: Loop가 중지되었습니다
 * LOOP START/ENABLE
-   * 응답: Loop가 실행되었습니다
+  * 응답: Loop가 실행되었습니다
 * LOOP STATUS
-   * 현재의 Loop의 상태에 따라 응답됩니다
-      * Loop가 중지중입니다
-      * Loop가 실행중입니다
-      * 일시중지중 (10분)
+
+  * 현재의 Loop의 상태에 따라 응답됩니다
+
+    * Loop가 중지중입니다
+    * Loop가 실행중입니다
+    * 일시중지중 (10분)
 * LOOP SUSPEND 20
-   * 응답: Loop가 20분동안 일시중지되었습니다
+  * 응답: Loop가 20분동안 일시중지되었습니다
 * LOOP RESUME
-   * 응답: Loop가 재실행되었습니다
+  * 응답: Loop가 재실행되었습니다
 
 CGM 데이터
 --------------------------------------------------
 * BG
-   * 응답: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+  * 응답: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 120
-   * Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN
-   * 코드 전송 후 응답: 보정 전송됨 (**xDrip이 설치되었다면 xDrip+에서 Accept Calibrations가 활성화 되어 있어야만 합니다**)
+  * Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN
+  * 코드 전송 후 응답: 보정 전송됨 (**xDrip이 설치되었다면 xDrip+에서 Accept Calibrations가 활성화 되어 있어야만 합니다**)
 
 Basal
 --------------------------------------------------
 * BASAL STOP/CANCEL
-   * Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
+  * Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
 * BASAL 0.3
-   * Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
+  * Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
 * BASAL 0.3 20
-   * Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
+  * Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
 * BASAL 30%
-   * Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
+  * Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
 * BASAL 30% 50
-   * Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
+  * Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
 
 Bolus
 --------------------------------------------------
 Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
 
 * BOLUS 1.2
-   * Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN
-   * 응답 B: 원격 주입이 불가능합니다. 나중에 다시 시도해주세요.
+  * Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN
+  * 응답 B: 원격 주입이 불가능합니다. 나중에 다시 시도해주세요.
 * BOLUS 0.60 MEAL
-   * MEAL 옵션을 지정하는 경우 MEAL 임시목표가 설정됩니다 (기본값은 45분동안 목표값 90 mg/dL입니다).
-   * Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN
-   * 응답 B: 원격 주입이 불가능합니다. 
+  * MEAL 옵션을 지정하는 경우 MEAL 임시목표가 설정됩니다 (기본값은 45분동안 목표값 90 mg/dL입니다).
+  * Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN
+  * 응답 B: 원격 주입이 불가능합니다. 
 * CARBS 5
-   * Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
+  * Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
 * CARBS 5 17:35/5:35PM
-   * Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
+  * Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
 * EXTENDED STOP/CANCEL
-   * Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
+  * Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
 * EXTENDED 2 120
-   * Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
+  * Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
 
 프로파일
 --------------------------------------------------
 * PROFILE STATUS
-   * 응답: Profile1
+  * 응답: Profile1
 * PROFILE LIST
-   * 응답: 1.`Profile1` 2.`Profile2`
+  * 응답: 1.`Profile1` 2.`Profile2`
 * PROFILE 1
-   * Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
+  * Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
 * PROFILE 2 30
-   * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+  * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
 
 기타
 --------------------------------------------------
 * TREATMENTS REFRESH
-   * 응답: NS에서 관리 새로고침
+  * 응답: NS에서 관리 새로고침
 * NSCLIENT RESTART
-   * 응답: NSCLIENT RESTART 1 receivers
+  * 응답: NSCLIENT RESTART 1 receivers
 * PUMP
-   * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+  * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 * PUMP CONNECT
-   * Response: Pump reconnected
+  * Response: Pump reconnected
 * PUMP DISCONNECT *30*
-   * Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
+  * Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
 * SMS DISABLE/STOP
-   * 응답: SMS 원격 기능을 비활성화려면 Any를 입력하고 답장하세요. AAPS 마스터폰을 통해서만 다시 활성화할 수 있습니다.
+  * 응답: SMS 원격 기능을 비활성화려면 Any를 입력하고 답장하세요. AAPS 마스터폰을 통해서만 다시 활성화할 수 있습니다.
 * TARGET MEAL/ACTIVITY/HYPO   
-   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
+  * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
 * TARGET STOP/CANCEL   
-   * Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
+  * Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
 * HELP
-   * 응답: BG, LOOP, TREATMENTS, .....
+  * 응답: BG, LOOP, TREATMENTS, .....
 * HELP BOLUS
-   * 응답: BOLUS 1.2 BOLUS 1.2 MEAL
+  * 응답: BOLUS 1.2 BOLUS 1.2 MEAL
 
 문제해결
 ==================================================
