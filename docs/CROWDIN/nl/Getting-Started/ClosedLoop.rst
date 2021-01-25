@@ -23,7 +23,7 @@ Net zoals de automatische piloot afhankelijk is van de sensorwaarden en de aanst
 
 
 Open Source Closed Loop Systemen
-==================================================
+===================================================
 Op dit moment zijn er drie grote open-source closed loop systemen beschikbaar:
 
 AndroidAPS (AAPS)
