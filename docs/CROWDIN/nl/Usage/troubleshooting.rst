@@ -6,10 +6,12 @@ Mocht je jouw probleem niet terugvinden in de linkjes in dit overzicht, dan vind
 
 AndroidAPS app
 ==================================================
+
 Bouwen & bijwerken
------
+-------------------
 * `Keystore kwijt <../Installing-AndroidAPS/troubleshooting_androidstudio.html#keystore-digitale-handtekening-kwijt>`_
 * `Problemen met Android Studio oplossen <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+
 Instellingen
 --------------------------------------------------
 * `Profiel <../Usage/Profiles.html#profiel-foutmeldingen-oplossen>`_
@@ -18,6 +20,7 @@ Instellingen
     :alt: fout: Basaal profiel niet ingesteld in hele uren
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
+
 Gebruik
 --------------------------------------------------
 * `COB - Detectie van verkeerde COB waarden <../Usage/COB-calculation.html#detectie-van-verkeerde-cob-waarden>`_
