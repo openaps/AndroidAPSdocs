@@ -6,10 +6,12 @@ También es posible que haya información útil adicional disponible en la publi
 
 Aplicación AndroidAPS
 ==================================================
+
 Construir y actualizar
------
+-------------------
 * "Perdida del almacén de claves <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
 * `Resolución de problemas de Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+
 Configuración
 --------------------------------------------------
 * `Perfil <../Usage/Profiles.html#troubleshooting-profile-errors>`_
@@ -18,6 +20,7 @@ Configuración
     :alt: Error: Basal no alineado con las horas
 
 * ` Nightscout Cliente <../Usage/Troubleshooting-NSClient.html>`_
+
 Uso
 --------------------------------------------------
 * `Valores de carbohidratos erróneos <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
