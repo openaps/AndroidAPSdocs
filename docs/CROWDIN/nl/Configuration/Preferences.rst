@@ -46,8 +46,7 @@ Beveiliging
 Masterwachtwoord
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Noodzakelijk om instellingen te kunnen `exporteren <../Usage/ExportImportSettings.html>`_ als ze zijn versleuteld. (Geldt vanaf AAPS versie 2.7).
-
-   **Biometrische beveiliging werkt niet op OnePlus-telefoons. Dit is een bekend probleem van OnePlus.**
+  **Biometrische beveiliging werkt niet op OnePlus-telefoons. Dit is een bekend probleem van OnePlus.**
 
 * Open de Instellingen door te klikken op de 3 stipjes in de rechterbovenhoek van het Overzicht scherm
 * Klik op de driehoek onder "Algemeen"
@@ -172,14 +171,14 @@ Toon notities veld in behandeling dialoogvensters
 Statusindicatoren
 -----------------------------------------------------------
 * Statusindicatoren geven een visuele waarschuwing voor 
-      
-   Sensor Leeftijd
-   * Sensor battery level for certain smart readers (see `screenshots page <../Getting-Started/Screenshots.html#sensor-level-battery>`_ for details).
-   * Insuline leeftijd (aantal dagen dat reservoir wordt gebruikt)
-   * Reservoir niveau (eenheden)
-   * Infuus leeftijd
-   * Pompbatterij leeftijd
-   * Pompbatterij niveau (%)
+
+  Sensor Leeftijd
+  * Sensor battery level for certain smart readers (see `screenshots page <../Getting-Started/Screenshots.html#sensor-level-battery>`_ for details).
+  * Insuline leeftijd (aantal dagen dat reservoir wordt gebruikt)
+  * Reservoir niveau (eenheden)
+  * Infuus leeftijd
+  * Pompbatterij leeftijd
+  * Pompbatterij niveau (%)
 
 * Als de drempelwaarde voor waarschuwing wordt overschreden, worden de waarden in geel weergegeven.
 * Als de drempelwaarde voor alarm wordt overschreden, worden de waarden in rood weergegeven.
@@ -191,8 +190,8 @@ Statusindicatoren
 Geavanceerde instellingen (Overzicht)
 -----------------------------------------------------------
 
-  .. image:: ../images/Pref2021_OV_Adv.png
-    :alt: Istellingen > Statusindicatoren
+.. image:: ../images/Pref2021_OV_Adv.png
+  :alt: Istellingen > Statusindicatoren
 
 Voer dit deel van het boluscalculator resultaat uit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -336,8 +335,8 @@ Geavanceerde instellingen (OpenAPS SMB)
 Opname instellingen
 ===========================================================
 
-  .. image:: ../images/Pref2020_Absorption.png
-    :alt: Opname instellingen
+.. image:: ../images/Pref2020_Absorption.png
+  :alt: Opname instellingen
 
 min_5m_carbimpact
 -----------------------------------------------------------
@@ -377,8 +376,8 @@ Als je AndroidAPS gebruikt in 'open loop' modus, zorg er dan voor dat je Virtuel
 NSClient
 ===========================================================
 
-  .. image:: ../images/Pref2020_NSClient.png
-    :alt: NSClient
+.. image:: ../images/Pref2020_NSClient.png
+  :alt: NSClient
 
 * Stel de *Nightscout URL* in (bijv. https://yourwebsitename.herokuapp.com) en het *API geheim* (een wachtwoord van 12 tekens dat is vastgelegd in jouw Heroku-variabelen).
 * Hierdoor kunnen gegevens zowel worden uitgelezen als weggeschreven tussen de Nightscout website en AndroidAPS.  
@@ -390,8 +389,8 @@ NSClient
 Verbindings instellingen
 -----------------------------------------------------------
 
-  .. image:: ../images/ConfBuild_ConnectionSettings.png
-    :alt: NSClient verbindingsinstellingen  
+.. image:: ../images/ConfBuild_ConnectionSettings.png
+  :alt: NSClient verbindingsinstellingen
   
 * Beperk Nightscout upload naar alleen Wi-Fi of zelfs naar bepaalde Wi-Fi SSID's.
 * Als je alleen een specifiek WiFi-netwerk wil gebruiken, kun je de WiFi SSID invoeren. 
@@ -408,8 +407,8 @@ Alarm opties
 Geavanceerde instellingen (NSClient)
 -----------------------------------------------------------
 
-  .. image:: ../images/Pref2020_NSClientAdv.png
-    :alt: NSClient geavanceerde instellingen
+.. image:: ../images/Pref2020_NSClientAdv.png
+  :alt: NSClient geavanceerde instellingen
 
 * De meeste opties in geavanceerde instellingen spreken voor zich.
 * *Activeer lokaal delen* zal jouw gegevens doorsturen naar andere apps op je telefoon, zoals xDrip+. 
@@ -437,24 +436,24 @@ Selecteer welke locatieservice moet worden gebruikt:
 Lokaal gegenereerde waarschuwingen
 ===========================================================
 
-  .. image:: ../images/Pref2020_LocalAlerts.png
-    :alt: Lokale waarschuwingen
+.. image:: ../images/Pref2020_LocalAlerts.png
+  :alt: Lokale waarschuwingen
 
 * Instellingen spreken voor zich.
 
 Data Keuzes
 ===========================================================
 
-  .. image:: ../images/Pref2020_DataChoice.png
-    :alt: Data keuzes
+.. image:: ../images/Pref2020_DataChoice.png
+  :alt: Data keuzes
 
 * Je kunt AAPS helpen verder te ontwikkelen door crashrapporten naar de ontwikkelaars te laten sturen.
 
 Onderhoud instellingen
 ===========================================================
 
-  .. image:: ../images/Pref2020_Maintenance.png
-    :alt: Onderhoud instellingen
+.. image:: ../images/Pref2020_Maintenance.png
+  :alt: Onderhoud instellingen
 
 * Standaard mailadres om de logs heen te sturen is logs@androidaps.org.
 * Als je *Encrypt geëxporteerde instellingen* selecteert, worden deze versleuteld met uw jouw `masterwachtwoord <../Configuration/Preferences.html#masterwachtwoord>`_. In dat geval moet het masterwachtwoord elke keer dat de instellingen worden geëxporteerd of geïmporteerd, worden ingevoerd.
@@ -464,5 +463,5 @@ Open Humans
 * Je kunt de community helpen door je gegevens te doneren aan onderzoeksprojecten! Details kun je nalezen op de `Open Humans pagina <../Configuration/OpenHumans.html>`_.
 * In Instellingen kun je definiëren wanneer gegevens moeten worden geüpload
 
-   * alleen uploaden indien verbonden met WiFi
-   * enkel tijdens opladen
+  * alleen uploaden indien verbonden met WiFi
+  * enkel tijdens opladen
