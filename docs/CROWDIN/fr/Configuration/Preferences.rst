@@ -46,8 +46,7 @@ Protection
 Mot de passe principal
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Nécessaire pour pouvoir `exporter les paramètres <../Usage/ExportImportSettings.html>`_ car ils sont chiffrés depuis la version 2.7.
-
-   **La protection biométrique ne fonctionne pas sur les téléphones OnePlus. C'est un problème connu de OnePlus.**
+  **La protection biométrique ne fonctionne pas sur les téléphones OnePlus. C'est un problème connu de OnePlus.**
 
 * Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
 * Cliquez sur le triangle sous " Général "
@@ -172,14 +171,14 @@ Afficher les notes dans les boîtes de dialogue
 Voyants d'état
 -----------------------------------------------------------
 * Les voyants d'état donnent une alerte visuelle pour 
-      
-   * Âge du capteur
-   * Niveau de batterie capteurs pour certains MGC utilisant des transmetteurs externe (voir les `Écrans AndroidAPS <../Getting-Started/Screenshots.html#niveau-du-capteur-batterie>`_ pour plus de détails).
-   * Âge de l'insuline (jours d'utilisation du réservoir)
-   * Niveau du réservoir (unités)
-   * Âge de la canule
-   * Âge Pile Pompe
-   * Âge Pile Pompe (%)
+
+  * Âge du capteur
+  * Niveau de batterie capteurs pour certains MGC utilisant des transmetteurs externe (voir les `Écrans AndroidAPS <../Getting-Started/Screenshots.html#niveau-du-capteur-batterie>`_ pour plus de détails).
+  * Âge de l'insuline (jours d'utilisation du réservoir)
+  * Niveau du réservoir (unités)
+  * Âge de la canule
+  * Âge Pile Pompe
+  * Âge Pile Pompe (%)
 
 * Si le seuil d'alerte est dépassé, les valeurs seront affichées en jaune.
 * Si le seuil critique est dépassé, les valeurs seront affichées en rouge.
@@ -191,8 +190,8 @@ Voyants d'état
 Paramètres avancés (Aperçu)
 -----------------------------------------------------------
 
-  .. image:: ../images/Pref2021_OV_Adv.png
-    :alt: Préférences > Voyants d'état
+.. image:: ../images/Pref2021_OV_Adv.png
+  :alt: Préférences > Voyants d'état
 
 Injecter cette partie de Bolus calculée par l’assistant
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -336,8 +335,8 @@ Paramètres avancés (OpenAPS SMB)
 Paramètres d’absorption
 ===========================================================
 
-  .. image:: ../images/Pref2020_Absorption.png
-    :alt: Paramètres d'absorption
+.. image:: ../images/Pref2020_Absorption.png
+  :alt: Paramètres d'absorption
 
 min_5m_carbimpact
 -----------------------------------------------------------
@@ -377,8 +376,8 @@ Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sé
 NSClient
 ===========================================================
 
-  .. image:: ../images/Pref2020_NSClient.png
-    :alt: NSClient
+.. image:: ../images/Pref2020_NSClient.png
+  :alt: NSClient
 
 * Définissez votre *URL Nightscout* (par ex. https://yourwebsitename.herokuapp.com) et l'*API secret* (un mot de passe de 12 caractères enregistré dans vos variables Heroku).
 * Cela permet de lire et d'écrire des données entre le site Nightscout et AndroidAPS.  
@@ -390,8 +389,8 @@ NSClient
 Paramètres de connexion
 -----------------------------------------------------------
 
-  .. image:: ../images/ConfBuild_ConnectionSettings.png
-    :alt: Paramètres de connexion NSClient  
+.. image:: ../images/ConfBuild_ConnectionSettings.png
+  :alt: Paramètres de connexion NSClient
   
 * Restreignez le téléchargement de Nightscout au Wi-Fi seulement ou même à certains SSID Wi-Fi.
 * Si vous souhaitez utiliser uniquement un réseau WiFi spécifique, vous pouvez entrer son SSID. 
@@ -408,8 +407,8 @@ Options d'alarme
 Paramètres avancés (NSClient)
 -----------------------------------------------------------
 
-  .. image:: ../images/Pref2020_NSClientAdv.png
-    :alt: Paramètres avancés NSClient
+.. image:: ../images/Pref2020_NSClientAdv.png
+  :alt: Paramètres avancés NSClient
 
 * La plupart des options dans les paramètres avancés sont explicites.
 * *Activer les transmissions locales* partagera vos données vers d'autres applications sur le téléphone, telles que xDrip+. 
@@ -437,24 +436,24 @@ Sélectionnez le service de localisation à utiliser :
 Alertes locales
 ===========================================================
 
-  .. image:: ../images/Pref2020_LocalAlerts.png
-    :alt: Alertes locales
+.. image:: ../images/Pref2020_LocalAlerts.png
+  :alt: Alertes locales
 
 * Les paramètres doivent être explicites.
 
 Choix de données
 ===========================================================
 
-  .. image:: ../images/Pref2020_DataChoice.png
-    :alt: Choix de données
+.. image:: ../images/Pref2020_DataChoice.png
+  :alt: Choix de données
 
 * Vous pouvez aider davantage au développement d'AAPS en envoyant des rapports de plantage aux développeurs.
 
 Paramètres de maintenance
 ===========================================================
 
-  .. image:: ../images/Pref2020_Maintenance.png
-    :alt: Paramètres de maintenance
+.. image:: ../images/Pref2020_Maintenance.png
+  :alt: Paramètres de maintenance
 
 * Le destinataire standard des journaux est logs@androidaps.org.
 * Si vous sélectionnez *Chiffrer les paramètres exportés* ces paramètres sont chiffrés avec votre mot de passe principal <../Configuration/Preferences.html#mot-de-passe-principal>`_. Dans ce cas, le mot de passe principal doit être entré à chaque fois que les paramètres sont exportés ou importés.
@@ -464,5 +463,5 @@ Open Humans
 * Vous pouvez aider la communauté en faisant don de vos données à des projets de recherche ! Les détails sont décrits sur la `page Open Humans <../Configuration/OpenHumans.html>`_.
 * Dans les préférences, vous pouvez définir quand les données doivent être téléchargées
 
-   * uniquement si connecté au WiFi
-   * uniquement si en charge
+  * uniquement si connecté au WiFi
+  * uniquement si en charge
