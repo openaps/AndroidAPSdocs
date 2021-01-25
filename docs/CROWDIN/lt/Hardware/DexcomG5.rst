@@ -13,9 +13,9 @@ Kai naudojate G5 su modifikuota Dexcom programa
 ==================================================
 * Atsisiųskite programą iš `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>` _ ir pasirinkite versiją pagal savo poreikius (mg/dl arba mmol/l, G5).
 
-   * 2.3 aplankas skirtas AndroidAPS 2.3 vartotojams, 2.4 aplankas yra skirtas AAPS 2.5 vartotojams.
-   * Atidarykite https://play.google.com/store/search?q=dexcom%20g5 kompiuteryje. Regionas bus matomas URL adrese.
-   
+  * 2.3 aplankas skirtas AndroidAPS 2.3 vartotojams, 2.4 aplankas yra skirtas AAPS 2.5 vartotojams.
+  * Atidarykite https://play.google.com/store/search?q=dexcom%20g5 kompiuteryje. Regionas bus matomas URL adrese.
+
    .. image:: ../images/DexcomG5regionURL.PNG
      :alt: Regiono Dexcom G5 URL
 
