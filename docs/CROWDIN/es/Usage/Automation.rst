@@ -88,14 +88,14 @@ Después de añadir la acción, **no olvide cambiar los valores por defecto** a 
   :alt: Valor por omisión de automatización frente a. valores del usuario
 
 Sort automation rules
------
+---------------------
 To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
 
 .. image:: ../images/Automation_Sort.png
   :alt: Sort automation rules
   
 Borrar reglas de automatización
------
+-----------------------
 To delete an automation rule click on trash icon.
 
 .. image:: ../images/Automation_Delete.png
