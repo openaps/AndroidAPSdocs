@@ -88,14 +88,14 @@ Depending on your `settings in config builder <../Configuration/Config-Builder.h
   :alt: автоматизация по умолчанию vs. задать значения
 
 Выбор правил автоматизации
------
+---------------------
 Для отбора правил автоматизации нажмите и удерживайте кнопку с четырьмя строками в правой части экрана и двигайтесь вверх или вниз.
 
 .. изображение:: ../images/Automation_Sort.png
   :alt: Выбор правил автоматизации
   
 Удаление правил автоматизации
------
+-----------------------
 To delete an automation rule click on trash icon.
 
 .. изображение:: ../images/Automation_Deletet.png
