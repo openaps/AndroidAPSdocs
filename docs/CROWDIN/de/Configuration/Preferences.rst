@@ -46,8 +46,7 @@ Schutz
 Master-Passwort
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Die `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ sind ab Version 2.7 verschlüsselt.
-
-   ** Biometrischer Schutz funktioniert nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus.**
+  ** Biometrischer Schutz funktioniert nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus.**
 
 * Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 * Klicke das Dreieck neben "Allgemein".
@@ -172,14 +171,14 @@ Möglichkeit zur Erfassung von Notizen in Behandlungsdialogen
 Statusanzeige
 -----------------------------------------------------------
 * Status Anzeigen geben eine optische Warnung für 
-      
-   * Sensoralter
-   * Batteriestand des Sensor-Smart-Readers für bestimmte Geräte (weitere Details auf der Seite `AndroidAPS Bildschirme <../Getting-Started/Screenshots.html#sensor-level-batterie>`_).
-   * Insulinalter (Tage Reservoirverwendung)
-   * Reservoirstand (Einheiten)
-   * Kanülenalter
-   * Alter der Pumpenbatterie
-   * Stand (%) der Pumpenbatterie
+
+  * Sensoralter
+  * Batteriestand des Sensor-Smart-Readers für bestimmte Geräte (weitere Details auf der Seite `AndroidAPS Bildschirme <../Getting-Started/Screenshots.html#sensor-level-batterie>`_).
+  * Insulinalter (Tage Reservoirverwendung)
+  * Reservoirstand (Einheiten)
+  * Kanülenalter
+  * Alter der Pumpenbatterie
+  * Stand (%) der Pumpenbatterie
 
 * Bei Überschreiten der Warnschwelle werden die Werte gelb angezeigt.
 * Bei Überschreiten der kritischen Warnschwelle werden die Werte rot angezeigt.
@@ -191,8 +190,8 @@ Statusanzeige
 Erweiterte Einstellungen (Übersicht)
 -----------------------------------------------------------
 
-  .. image:: ../images/Pref2021_OV_Adv.png
-    :alt: Einstellungen > Status Lights
+.. image:: ../images/Pref2021_OV_Adv.png
+  :alt: Einstellungen > Status Lights
 
 Abgabe nur eines Teils der vom Bolus-Rechner ermittelten Insulinmenge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -336,8 +335,8 @@ Erweiterte Einstellungen (OpenAPS SMB)
 Resorptions-Einstellungen
 ===========================================================
 
-  .. image:: ../images/Pref2020_Absorption.png
-    :alt: Resorptions-Einstellungen
+.. image:: ../images/Pref2020_Absorption.png
+  :alt: Resorptions-Einstellungen
 
 min_5m_carbimpact
 -----------------------------------------------------------
@@ -377,8 +376,8 @@ Stelle sicher, dass du die virtuelle Pumpe im Konfigurations-Generator ausgewäh
 Nightscout-Client
 ===========================================================
 
-  .. image:: ../images/Pref2020_NSClient.png
-    :alt: NSClient
+.. image:: ../images/Pref2020_NSClient.png
+  :alt: NSClient
 
 * Gib Deine *Nightscout URL* (z.B. https://yourwebsitename.herokuapp.com) und das *API secret* (ein 12-stelliges Passwort, dass Du in den Variablen bei Heroku definiert hast) ein.
 * Das versetzt AndroidAPS in die Lage, Daten von Nightscout zu lesen und zu schreiben.  
@@ -390,8 +389,8 @@ Nightscout-Client
 Verbindungseinstellungen
 -----------------------------------------------------------
 
-  .. image:: ../images/ConfBuild_ConnectionSettings.png
-    :alt: NSClient Verbindungseinstellungen  
+.. image:: ../images/ConfBuild_ConnectionSettings.png
+  :alt: NSClient Verbindungseinstellungen
   
 * Beschränken den Nightscout-Upload auf WLAN-Verbindungen oder sogar auf bestimmte WLAN-SSIDs.
 * Wenn Du nur ein bestimmtes WLAN-Netzwerk verwenden möchtest, kannst du dessen WiFi SSID eingeben. 
@@ -408,8 +407,8 @@ Alarm-Optionen
 Erweiterte Einstellungen (Nightscout-Client)
 -----------------------------------------------------------
 
-  .. image:: ../images/Pref2020_NSClientAdv.png
-    :alt: NS-Client - erweiterte Einstellungen
+.. image:: ../images/Pref2020_NSClientAdv.png
+  :alt: NS-Client - erweiterte Einstellungen
 
 * Die meisten Optionen in den erweiterten Einstellungen sind selbsterklärend.
 * *Aktiviere lokale Broadcasts* teilt deine Daten mit anderen Apps auf dem Smartphone (z. B. xDrip+). 
@@ -437,24 +436,24 @@ Wähle aus, welcher Standortservice verwendet werden soll:
 Lokale Alarme
 ===========================================================
 
-  .. image:: ../images/Pref2020_LocalAlerts.png
-    :alt: Lokale Alarme
+.. image:: ../images/Pref2020_LocalAlerts.png
+  :alt: Lokale Alarme
 
 * Einstellungen sollten selbsterklärend sein.
 
 Datenübermittlung
 ===========================================================
 
-  .. image:: ../images/Pref2020_DataChoice.png
-    :alt: Datenübermittlung
+.. image:: ../images/Pref2020_DataChoice.png
+  :alt: Datenübermittlung
 
 * Du kannst bei der Weiterentwicklung von AAPS unterstützen, indem Du Absturzberichte an die Entwickler sendest.
 
 Wartungseinstellungen
 ===========================================================
 
-  .. image:: ../images/Pref2020_Maintenance.png
-    :alt: Wartungseinstellungen
+.. image:: ../images/Pref2020_Maintenance.png
+  :alt: Wartungseinstellungen
 
 * Standardempfänger von Protokollen ist logs@androidaps.org.
 * Wenn Du *Exportierte Daten verschlüsseln* auswählst, werden diese mit Deinem `master password <../Configuration/Preferences.html#master-passwort>`_ verschlüsselt. In diesem Fall muss das Master-Passwort jedes Mal eingegeben werden, wenn die Einstellungen ex- oder importiert werden.
@@ -464,5 +463,5 @@ Open Humans
 * Du kannst die Community unterstützen, indem Du Deine Daten für Forschungsprojekte zur Verfügung stellst. Weitere Informationen dazu findest Du auf der `Open Humans Seite <../Configuration/OpenHumans.html>`_.
 * In den Einstellungen kannst Du festlegen, wann Daten hochgeladen werden sollen
 
-   * nur über WLAN-Verbindungen
-   * nur während des Ladens
+  * nur über WLAN-Verbindungen
+  * nur während des Ladens
