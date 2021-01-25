@@ -23,7 +23,7 @@ Así como el piloto automático de un avión depende de los valores de los senso
 
 
 Sistemas de Páncreas Artificial con Lazo cerrado en Código Abierto (Open Source)
-==================================================
+===================================================
 Actualmente hay tres grandes sistemas de circuito cerrado de código abierto disponibles:
 
 AndroidAPS (AAPS)
