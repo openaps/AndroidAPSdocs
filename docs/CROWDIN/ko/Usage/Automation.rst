@@ -88,14 +88,14 @@ After adding your action, **don't forget to change the default values** to what 
   :alt: Automation default vs. set values
 
 Sort automation rules
------
+---------------------
 To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
 
 .. image:: ../images/Automation_Sort.png
   :alt: Sort automation rules
   
 Delete automation rules
------
+-----------------------
 To delete an automation rule click on trash icon.
 
 .. image:: ../images/Automation_Delete.png
