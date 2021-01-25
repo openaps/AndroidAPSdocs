@@ -7,28 +7,32 @@ Janvier 2021
 * Dexcom G6 avec `Votre propre application Dexcom <../Hardware/DexcomG6.html#si-vous-utilisez-g6-avec-votre-propre-application-dexcom>`_
 * Information sur le `niveau batterie capteur <../Getting-Started/Screenshots.html#sensor-level-battery>`_
 * `Objectifs <../Usage/Objectives.html#objectif-3-prouver-ses-connaissances>`_ - nouvelles questions
-* Omnipod Eros - `bouclable dans le master AAPS <../Configuration/OmnipodEros.html>`_
 * Autres `nouvelles fonctions d'AndroidAPS 2.8.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-8-0>`_
+
 Décembre 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - l'application patchée ne fonctionne pas avec les capteurs US
 * `Limites OpenAPS codées en dur <../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur>`_
 * Sony Smartwatch 3 `Installation manuelle du service Google Play <../Usage/SonySW3.html>`_
+
 Octobre 2020
 ==================================================
 * Accu-Chek Combo - Mise à jour `réglage duchangement d'heure <../Usage/Timezone-traveling.html#changements-d-heure>`_
 * Accu-Chek Insight - option `Utiliser toujours les valeurs ansolues du basal <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_
 * Journaux - plus de détails sur `l'emplacement du dossier <../Usage/Accessing-logfiles.html>`_
-* Omnipod Eros - `mise à jour du statut <../Getting-Started/Future-possible-Pump-Drivers.html#pompes-qui-sont-bouclable>`_
+* Omnipod Eros - status update
 * `Commandes SMS - Synchronisation de l'heure <../Children/SMS-Commands.html>`_
+
 Septembre 2020
 ==================================================
 * Mise à jour majeure pour la nouvelle version AAPS 2.7
 * Pour plus de détails, voir les `notes de version <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
+
 Juin 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - plus de détails sur l'application LibreLink patchée & l'utilisation des transmetteurs bluetooth
 * `Changement de fuseau horaire <../Usage/Timezone-traveling.html>`_ avec Libre 2
+
 Mai 2020
 ==================================================
 * `Bolus étendus uniquement pour les pompes Dana + Insight <../Usage/Extended-Carbs.html#bolus-etendus-et-passage-en-boucle-ouverte-uniquement-pour-les-pompesdana-et-insight>`_
@@ -36,16 +40,19 @@ Mai 2020
 * `Changement minimum <../Configuration/Preferences.html#changement-minimum>`_ pour réduire le nombre de notifications en mode boucle ouverte
 * `Application Libre Link patchée <../Hardware/Libre2.html#etape-1-construire-votre-propre-application-librelink-patchee>`_ - vérifier si le patch est correct
 * `Lignes de prédiction <../Getting-Started/Screenshots.html#lignes-de-prediction>`_ - plus de détails
+
 Avril 2020
 ==================================================
 * `Antidater l'insulin <../Usage/CPbefore26.html#id1>`_ (par ex. injectée avec une seringue)
 * `La prise en charge Android 6 sera interrompue dans la prochaine version majeure <../Module/module.html#telephone>`_
+
 Mars 2020
 ==================================================
 * `Générer l'apk avec Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
 * `La DanaRS avec le firmware v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **ne peut actuellement pas être utilisée avec AndroidAPS !**
 * `Bolus étendus uniquement pour les pompes Dana + Insight <../Usage/Extended-Carbs.html#bolus-etendus-et-passage-en-boucle-ouverte-uniquement-pour-les-pompesdana-et-insight>`_
 * `Mettre à jour l'apk avec Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
+
 Février 2020
 ==================================================
 * `Avertissement pour l'automatisation <../Usage/Automation.html#bonnes-pratiques-et-avertissements>`_
@@ -56,10 +63,12 @@ Février 2020
 * `Exemple de configuration <../Getting-Started/Sample-Setup.html>`_ - mise à jour Dexcom G6
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - Nouvelles fonctions majeures
 * `Complications pour la montre <../Configuration/Watchfaces.html>`_
+
 Janvier 2020
 ==================================================
 * `Correction manuelle des glucides <../Getting-Started/Screenshots.html#correction-de-glucides>`_ pour des entrées erronées de glucides
 * `Dimension des images <../make-a-PR.html#taille-des-images>`_ lors de l'édition de la documentation
+
 Décembre 2019
 ==================================================
 * `Android auto <../Usage/Android-auto.html>`_ - paramétrage avec copies d'écran
@@ -67,6 +76,7 @@ Décembre 2019
 * `Glimp <../Configuration/Config-Builder.html#source-gly>`_ - version 4.15.57 et plus récente supportée
 * `Watchfaces <../Configuration/Watchfaces.html>`_ - mise à jour majeure, beaucoup plus de détails
 * `Complications sur les montres connectées <../Configuration/Watchfaces.html#complications>`_ - utilisez vos cadrans favoris avec les données AAPS
+
 Novembre 2019
 ==================================================
 * `Automatisation - Désactiver quand vous désactivez la boucle <../Usage/Automation.html#remarque-importante>`_
