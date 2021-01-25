@@ -43,26 +43,26 @@ AndroidAPS позволяет контролировать телефон реб
 * По соображениям безопасности за кодом ответа должен следовать PIN.
 * Правила установки PIN:
 
-   * от 3 до 6 цифр
-   * не одинаковые цифры (напр. 1111)
-   * не подряд (например, 1234)
+  * от 3 до 6 цифр
+  * не одинаковые цифры (напр. 1111)
+  * не подряд (например, 1234)
 
 Настройка аутентификации
 --------------------------------------------------
 * Для повышения безопасности используется двухфакторная аутентификация.
 * Можно использовать любое приложение Authenticator, которое поддерживает маркеры TOTP RFC 6238. Популярные бесплатные приложения:
 
-   * ` Authy <https://authy.com/download/>` _
-   * Google Authenticator-` Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>` _/` iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>` _
-   * ` LastPass Authenticator <https://lastpass.com/auth/>` _
-   * " FreeOTP Authenticator <https://freeotp.github.io/>` _
+  * ` Authy <https://authy.com/download/>` _
+  * Google Authenticator-` Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>` _/` iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>` _
+  * ` LastPass Authenticator <https://lastpass.com/auth/>` _
+  * " FreeOTP Authenticator <https://freeotp.github.io/>` _
 
 * Установите на телефоне-фолловере приложение идентификации по выбору и просканируйте QR-код, показанный в AAPS.
 * Протестируйте одноразовый пароль, введя маркер, показанный в приложении идентификации, и ПИН, который вы только что настроили в AAPS. Пример:
 
-   * Ваш обязательный PIN-код 2020
-   * Маркер TOTP из приложения идентификации-457051
-   * Введите 4570512020
+  * Ваш обязательный PIN-код 2020
+  * Маркер TOTP из приложения идентификации-457051
+  * Введите 4570512020
    
 * Красный текст "НЕПРАВИЛЬНЫЙ ПИН" изменится ** автоматически ** на зеленый "OK", если запись правильная. ** Никаких кнопок нажимать не надо**
 * Время на обоих телефонах должно быть синхронизировано. Оптимальный вариант - установить на автоматическую настройку из сети. Различия во времени могут привести к проблемам аутентификации.
@@ -74,9 +74,9 @@ AndroidAPS позволяет контролировать телефон реб
 * Телефон с AAPS ответит чтобы подтвердить успешное выполнение команды или запрашиваемого статуса. 
 * Подтвердите команду, при необходимости отправив код. Пример:
 
-   * Ваш обязательный PIN-код 2020
-   * Маркер TOTP из приложения идентификации-457051
-   * Введите 4570512020
+  * Ваш обязательный PIN-код 2020
+  * Маркер TOTP из приложения идентификации-457051
+  * Введите 4570512020
 
 **Подсказка: Если отправляется много SMS, полезно держать функцию SMS незанятой на обоих телефонах,.
 
@@ -90,93 +90,95 @@ AndroidAPS позволяет контролировать телефон реб
 Замкнутый цикл
 --------------------------------------------------
 * LOOP STOP/DISABLE (* ОТКЛЮЧИТЬ ЗЦ)
-   * Ответ: цикл отключен
+  * Ответ: цикл отключен
 * LOOP START/ENABLE (* ВКЛЮЧИТЬ ЗЦ)
-   * Ответ: цикл включен
+  * Ответ: цикл включен
 * LOOP STATUS (* СТАТУС ЗЦ)
-   * Ответ зависит от фактического состояния
-      * цикл не работает
-      * цикл работает
-      * Остановлен (на 10 мин)
+
+  * Ответ зависит от фактического состояния
+
+    * цикл не работает
+    * цикл работает
+    * Остановлен (на 10 мин)
 * LOOP SUSPEND 20 (* ОСТАНОВИТЬ ЗЦ на 20)
-   * Зцикл остановлен на 20 минут
+  * Зцикл остановлен на 20 минут
 * LOOP RESUME (* ВОЗОБНОВИТЬ ЗЦ)
-   * Ответ: Цикл возобновлен
+  * Ответ: Цикл возобновлен
 
 Данные мониторинга
 --------------------------------------------------
 * BG (ГК)
-   * Ответ: новая ГК: 5.6 4мин назад, дельта: -0,2 ммоль, активный инсулин IOB: 0.20 ед (болюс: 0.10 ед базал: 0.10 ед)
+  * Ответ: новая ГК: 5.6 4мин назад, дельта: -0,2 ммоль, активный инсулин IOB: 0.20 ед (болюс: 0.10 ед базал: 0.10 ед)
 * CAL 5.6 (калибровка 5.6)
-   * Ответ: Для отправки калибровки 5.6 ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
-   * Ответ после получения правильного кода: Калибровка отправлена / Calibration sent (* *Если установлен xDrip. Разрешение на прием калибровок должно быть включено в xDrip+**)
+  * Ответ: Для отправки калибровки 5.6 ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
+  * Ответ после получения правильного кода: Калибровка отправлена / Calibration sent (* *Если установлен xDrip. Разрешение на прием калибровок должно быть включено в xDrip+**)
 
 базал
 --------------------------------------------------
 * BASAL STOP/CANCEL (остановить/отменить) базал
-   * Ответ: Для остановки временного базала ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
+  * Ответ: Для остановки временного базала ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
 * BASAL 0.3 (база 0,3)
-   * Ответ: Для постановки базала на 0.3 ед/ч ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
+  * Ответ: Для постановки базала на 0.3 ед/ч ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
 * BASAL 0.3 20 (базал 0,3 20)
-   * Ответ: Для постановки базала на 0.3 ед/ч на 20 мин ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
+  * Ответ: Для постановки базала на 0.3 ед/ч на 20 мин ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
 * BASAL 30% (базал 30%)
-   * Ответ: Для постановки базала на 30% ед/ч на 30 мин. ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
+  * Ответ: Для постановки базала на 30% ед/ч на 30 мин. ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
 * БАЗАЛ 30% 50
-   * Ответ: Для постановки базала на 30% ед/ч на 50 мин. ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
+  * Ответ: Для постановки базала на 30% ед/ч на 50 мин. ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
 
 болюс
 --------------------------------------------------
 Удаленный болюс разрешается только через 15 минут после предыдущей команды болюс или других удаленных команд (значение редактируется если для передачи команд добавлено 2 номера телефона)! * Поэтому ответ зависит от времени последнего болюса.
 
 * Болюс 1.2
-   * Response A: Чтобы подать болюс 1.2 ед. ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
-   * Ответ B: Удаленный болюс недоступен. Повторите позже.
+  * Response A: Чтобы подать болюс 1.2 ед. ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
+  * Ответ B: Удаленный болюс недоступен. Повторите позже.
 * БОЛЮС на 0.60 ЕДЫ
-   * Если вы зададите необязательный параметр прием пищи MEAL, то будет задано значение временная цель прием пищи MEAL (значения по умолчанию: 90 мг/дл, 5,0 ммоль/л на 45 мин).
-   * Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN
-   * Ответ B: Удаленный болюс недоступен. 
+  * Если вы зададите необязательный параметр прием пищи MEAL, то будет задано значение временная цель прием пищи MEAL (значения по умолчанию: 90 мг/дл, 5,0 ммоль/л на 45 мин).
+  * Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN
+  * Ответ B: Удаленный болюс недоступен. 
 * УГЛИ 5
-   * Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
+  * Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
 * УГЛИ 5 17:35/5:35PM
-   * Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
+  * Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
 * EXTENDED STOP/CANCEL
-   * Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
+  * Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
 * EXTENDED 2 120
-   * Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
+  * Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
 
 Профиль
 --------------------------------------------------
 * СТАТУС ПРОФИЛЯ
-   * Ответ: Профиль1
+  * Ответ: Профиль1
 * СПИСОК ПРОФИЛЕЙ
-   * Ответ: 1. ` Profile1 ` 2. ` Profile2 `
+  * Ответ: 1. ` Profile1 ` 2. ` Profile2 `
 * PROFILE 1
-   * Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
+  * Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
 * PROFILE 2 30
-   * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+  * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
 
 Другое
 --------------------------------------------------
 * ОБНОВИТЬ НАЗНАЧЕНИЯ
-   * Ответ: Синхронизировать назначения с NS
+  * Ответ: Синхронизировать назначения с NS
 * ПЕРЕЗАПУСТИТЬ NSCLIENT
-   * Ответ: Перезапуск NSCLIENT 1 получатель
+  * Ответ: Перезапуск NSCLIENT 1 получатель
 * ПОМПА
-   * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+  * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 * PUMP CONNECT
-   * Response: Pump reconnected
+  * Response: Pump reconnected
 * PUMP DISCONNECT *30*
-   * Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
+  * Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
 * ОТКЛЮЧИТЬ/ОСТАНОВИТЬ СМС
-   * Ответ: Чтобы отключить удаленную службу SMS ответьте кодом Any. Имей в виду, что вы сможете его повторно активировать только непосредственно с главного смартфона AAPS.
+  * Ответ: Чтобы отключить удаленную службу SMS ответьте кодом Any. Имей в виду, что вы сможете его повторно активировать только непосредственно с главного смартфона AAPS.
 * ЦЕЛЬ ПРИЕМ ПИЩИ/НАГРУЗКА/ГИПО MEAL/ACTIVITY/HYPO   
-   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
+  * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
 * ЦЕЛЬ ОСТАНОВИТЬ/ОТМЕНИТЬ   
-   * Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
+  * Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
 * СПРАВКА
-   * Ответ: ГК, ПЕТЛЯ, НАЗНАЧЕНИЯ, .....
+  * Ответ: ГК, ПЕТЛЯ, НАЗНАЧЕНИЯ, .....
 * СПРАВКА БОЛЮС
-   * Ответ: БОЛЮС 1.2 БОЛЮС 1.2 НА ЕДУ
+  * Ответ: БОЛЮС 1.2 БОЛЮС 1.2 НА ЕДУ
 
 Устранение неполадок
 ==================================================
