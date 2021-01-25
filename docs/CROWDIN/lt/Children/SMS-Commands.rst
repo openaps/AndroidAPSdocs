@@ -84,7 +84,7 @@ Komandos
 ==================================================
 Komandos turi būti išsiųstos anglų kalba, atsakymą gausite savo vietine kalba, jei eilutė jau yra `išversta <../translations.html#translate-strings-for-androidaps-app>`_.
 
-.. nuotrauka:: ../images/SMSCommands.png
+.. image:: ../images/SMSCommands.png
   :alt: SMS komandų pavyzdys
 
 Ciklas

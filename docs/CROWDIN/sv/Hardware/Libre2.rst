@@ -84,7 +84,7 @@ The blood sugar values are received on the smartphone by the xDrip+ App.
   
 .. image:: ../images/fsl2pic7a.jpg
   :alt: xDrip+ log
-  #
+
 Step 3: Start sensor
 ==================================================
 

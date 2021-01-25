@@ -1,11 +1,11 @@
 Что такое система замкнутого цикла?
 **************************************************
 
-.. изображение:../images/autopilot.png
+.. image:: ../images/autopilot.png
   :alt: AAPS-как автопилот
 
 Искусственная поджелудочная железа замкнутой системы сочетает в себе различные компоненты чтобы облегчить управление диабетом. 
-В своей книге " Automated Insulin Delivery <https://www.artificialpancreasbook.com/>` _ Dana M. Lewis, одна из основателей движения ИПЖ с открытым исходным кодом, назвала алгоритм системы "автопилот для диабета" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>` _. Что это означает?
+В своей книге `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, одна из основателей движения ИПЖ с открытым исходным кодом, назвала алгоритм системы `автопилот для диабета <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. Что это означает?
 
 **Автопилот в самолете**
 
@@ -28,9 +28,9 @@
 
 AndroidAPS (AAPS)
 --------------------------------------------------
-AndroidAPS подробно описан в этой документации <./WhatisAndroidAPS.html> ` _. Он использует смартфон Android для вычислений и контроля инсулиновой помпы. Он создан в тесном взаимодействии с OpenAPS (т.е. у них общие алгоритмы).
+AndroidAPS подробно описан в `этой документации <./WhatisAndroidAPS.html>`_. Он использует смартфон Android для вычислений и контроля инсулиновой помпы. Он создан в тесном взаимодействии с OpenAPS (т.е. у них общие алгоритмы).
 
-Совместимые ` помпы <../Hardware/pumps.html> ` _:
+Совместимые `помпы <../Hardware/pumps.html>`_:
 
 * `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 * `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
@@ -40,7 +40,7 @@ AndroidAPS подробно описан в этой документации <.
 
 OpenAPS
 --------------------------------------------------
-` OpenAPS <https://openaps.readthedocs.io>` _-это первая закольцованная система с открытым исходным кодом. Она использует мини-компьютер, Raspberry Pi или Intel Edison.
+`OpenAPS <https://openaps.readthedocs.io>`_ -это первая закольцованная система с открытым исходным кодом. Она использует мини-компьютер, Raspberry Pi или Intel Edison.
 
 Совместимые помпы:
 
@@ -48,7 +48,7 @@ OpenAPS
 
 Петля iOS
 --------------------------------------------------
-` Петля для iOS <https://loopkit.github.io/loopdocs/>` _-это замкнутая система Loop для Apple iPhone.
+`Петля для iOS <https://loopkit.github.io/loopdocs/>`_ -это замкнутая система Loop для Apple iPhone.
 
 Совместимые помпы:
 

@@ -52,7 +52,7 @@ AndroidAPS **actualmente** funciona con
 - `Bomba Accu-ChekInsight <../Configuration/Accu-Chek-Insight-Pump.md>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `algunas bombas de Medtronic <../Configuration/MedtronicPump.html>` _ de la versión 2.4 (adicionalmente necesaria: hardware de RileyLink/Gnarl, teléfono Android con bluetooth de baja energía / BLE-chipset)
+- `algunas bombas de Medtronic <../Configuration/MedtronicPump.html>`_ de la versión 2.4 (adicionalmente necesaria: hardware de RileyLink/Gnarl, teléfono Android con bluetooth de baja energía / BLE-chipset)
 - `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
 
 **Otras bombas** que pueden tener el potencial de trabajar con AndroidAPS se listan en la página `Futuras (posibles) Bombas <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
@@ -101,7 +101,7 @@ Módulos opcionales
 ==================================================
 Smartwatches (Relojes inteligentes)
 --------------------------------------------------
-Puede elegir cualquier smartwatch con Android Wear 1.x y superior. La mayoría de los loopers llevan un Sony Smartwatch 3 (SWR50), ya que es el único reloj que puede obtener lecturas de Dexcom G5/G5 cuando el teléfono está fuera de rango. Algunos otros relojes pueden ser parcheados para funcionar como un receptor autónomo también (consulte `esta documentación <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>` _ para más detalles).
+Puede elegir cualquier smartwatch con Android Wear 1.x y superior. La mayoría de los loopers llevan un Sony Smartwatch 3 (SWR50), ya que es el único reloj que puede obtener lecturas de Dexcom G5/G5 cuando el teléfono está fuera de rango. Algunos otros relojes pueden ser parcheados para funcionar como un receptor autónomo también (consulte `esta documentación <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ para más detalles).
 
 Los usuarios están creando una "lista de teléfonos probados y relojes <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. Hay diferentes caras de observación para su uso con AndroidAPS, que puede encontrar `aquí <../Configuration/Watchfaces.html>`_.
 

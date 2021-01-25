@@ -38,7 +38,7 @@ Dexcom G6
    * Click the link to the Dexcom G6 app on the search results page that is displayed.
    * Region will be visible in URL.
    
-   .. изображение:../images/DexcomG6regionURL.PNG
+   .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Регион в URL Dexcom G6
 
 * Uninstall the original Dexcom app.

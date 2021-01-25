@@ -58,7 +58,7 @@ A veces, es posible que obtenga un mensaje de error al generar el apk diciendo
 Este es un error conocido en Android Studio 3.5 y probablemente no se arreglará antes de Android Studio 3.6. Tres opciones:
 
 1. Suprima manualmente las tres carpetas de compilación (normal "build", build folder en "app" y "build" en "wear") y genere el apk firmado de nuevo.
-2. Establezca la carpeta de destino en la carpeta del proyecto en lugar de la carpeta de aplicación tal como se describe en 'este vídeo <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
+2. Establezca la carpeta de destino en la carpeta del proyecto en lugar de la carpeta de aplicación tal como se describe en `este vídeo <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
 3. Cambie la carpeta de destino de apk (ubicación distinta).
 
 No se puede iniciar el proceso daemon
@@ -74,7 +74,7 @@ Hay muchos manuales en Internet sobre cómo determinar si tienes un SO de 32 o 6
 No hay datos de MCG
 ==================================================
 * En caso de que esté utilizando xDrip+: Identifique el receptor tal como se describe en la página `xDrip + página de ajustes <../Configuration/xdrip.html#identify-receiver>`_.
-* En caso de que esté utilizando `app parcheada Dexcom G6 <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>` _: asegúrese de que está utilizando la versión correcta de ` 2.4 carpeta <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>` _.
+* En caso de que esté utilizando `app parcheada Dexcom G6 <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: asegúrese de que está utilizando la versión correcta de ` 2.4 carpeta <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 
 Cambios no confirmados
 ==================================================
@@ -127,7 +127,7 @@ Aplicación no instalada
 
 Aplicación instalada pero antigua
 ==================================================
-Si crea la aplicación satisfactoriamente, la transfiere al teléfono y la instala correctamente, pero el número de versión permanece igual, es posible que no haya podido `actualizar la copia local <../Update-to-new-version.html#update-your-local-copy>".
+Si crea la aplicación satisfactoriamente, la transfiere al teléfono y la instala correctamente, pero el número de versión permanece igual, es posible que no haya podido `actualizar la copia local <../Update-to-new-version.html#update-your-local-copy>`_.
 
 Ninguna de las anteriores funcionó
 ==================================================

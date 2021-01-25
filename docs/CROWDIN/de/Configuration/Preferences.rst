@@ -59,9 +59,9 @@ Master-Passwort
   
 Schutz der Einstellungen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Schütze deine Einstellungen mit einem Passwort oder einer biometrischen Authentifizierung (d. h. ` AAPS-Nutzung durch Kinder <../Children/Children.html> ` _).
+* Schütze deine Einstellungen mit einem Passwort oder einer biometrischen Authentifizierung (d. h. `AAPS-Nutzung durch Kinder <../Children/Children.html>`_).
 * Das 'Benutzerdefinierte Passwort' sollte verwendet werden, wenn Du das Master-Passwort nur für die Sicherung der `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ verwenden möchtest.
-* Wenn du ein 'Benutzerdefiniertes Kennwort' verwendest, klicke auf Zeile 'Passwort für Einstellungen', um das Kennwort wie oben beschrieben festzulegen <../Configuration/Preferences.html#master-passwort> ` _.
+* Wenn du ein 'Benutzerdefiniertes Kennwort' verwendest, klicke auf Zeile 'Passwort für Einstellungen', um das `Kennwort wie oben beschrieben festzulegen <../Configuration/Preferences.html#master-passwort>`_.
 
   .. image:: ../images/Pref2020_Protection.png
     :alt: Schutz
@@ -205,7 +205,7 @@ Bolus-Berater
 * Wenn du den `Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`_ verwendest und dein Glukosewert über 180 mg/dl (10 mmol ) liegt, wird ein Korrekturbolus vorgeschlagen.
 * Wenn Du den Vorschlag akzeptierst, werden **keine Kohlenhydrate** aufgezeichnet.
 * Wenn den Glukosewert auf einem guten Level für das Essen liegt, wirst Du benachrichtigt.
-* Du musst erneut den Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`_ aufrufen und die Menge der Kohlenhydrate, die du essen möchtest, eingeben.
+* Du musst erneut den `Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`_ aufrufen und die Menge der Kohlenhydrate, die du essen möchtest, eingeben.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
     :alt: Nachricht des Bolus-Beraters
@@ -213,7 +213,7 @@ Bolus-Berater
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Option zur Aktivierung des Superbolus im Bolus-Rechner.
-* ` Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>` _ ist ein Konzept, um in den nächsten zwei Stunden etwas Insulin aus der Basalrate "vorzuziehen", um Spitzen zu verhindern.
+* `Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ ist ein Konzept, um in den nächsten zwei Stunden etwas Insulin aus der Basalrate "vorzuziehen", um Spitzen zu verhindern.
 
 Sicherheitseinstellungen der Behandlungen
 ===========================================================
@@ -254,7 +254,7 @@ Minimaler Wert zur Anfrage einer Änderung [%]
 
 Advanced Meal Assist (AMA) oder Super Micro Bolus (SMB)
 ===========================================================
-Abhängig von Deinen Einstellungen im `Konfigurations-Generator <../Configuration/Config-Builder.html>` _ kannst Du zwischen zwei Algorithmen wählen:
+Abhängig von Deinen Einstellungen im `Konfigurations-Generator <../Configuration/Config-Builder.html>`_ kannst Du zwischen zwei Algorithmen wählen:
 
 * `Advanced meal assist (OpenAPS AMA) <../Usage/Open-APS-features.html#erweiterter-mahlzeit-assistent-ama>`_ - Stand des Algorithmus in 2017
 * `Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - Der aktuellste Algorithmus für erfahrene Nutzer

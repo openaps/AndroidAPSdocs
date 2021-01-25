@@ -16,7 +16,7 @@ Dexcom G5
    * Φάκελος 2.3 είναι για τους χρήστες του AndroidAPS 2.3, φάκελος 2.4 για τους χρήστες του AAPS 2.5.
    * Ανοίξτε https://play.google.com/store/search?q=dexcom%20g5 στον υπολογιστή σας. Η περιοχή θα είναι ορατή στη διεύθυνση URL.
    
-   .. εικόνα:: ../images/DexcomG5regionURL.PNG
+   .. image:: ../images/DexcomG5regionURL.PNG
      :alt: Περιοχή Dexcom G5 URL
 
 * Απενεργοποιήστε τον αισθητήρα και καταργήστε την εγκατάσταση της αρχικής εφαρμογής Dexcom, εάν δεν το έχετε κάνει ήδη.

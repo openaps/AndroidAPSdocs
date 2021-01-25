@@ -2,7 +2,7 @@ Přehled komponent
 **************************************************
 AndroidAPS není jen (uživatelem sestavená) aplikace, je to jeden z několika modulů vašeho systému uzavřené smyčky. Dříve než se rozhodnete pro konkrétní komponenty, bylo by dobré podívat se také na `nastavení komponent <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_,.
    
-.. obrázek:: ../images/modules.png
+.. image:: ../images/modules.png
   :alt: Přehled komponent
 
 .. note:: 

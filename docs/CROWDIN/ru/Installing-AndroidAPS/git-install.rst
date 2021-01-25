@@ -5,10 +5,10 @@ Windows
 1. Загрузите git
 --------------------------------------------------
 * ** Вы должны быть в сети когда Android Studio загружает обновления! **
-* Любая версия git должна работать. Например <https://git-scm.com/download/win>https://git-scm.com/download/win`_.
+* Любая версия git должна работать. Например `https://git-scm.com/download/win <https://git-scm.com/download/win>`_.
 * Убедитесь, что знаете путь установки. Он понадобится на следующем шаге.
 
-.. изображение: ../images/Update_GitPath.png
+.. image:: ../images/Update_GitPath.png
   Путь установки Git
 
 2. Задайте путь к git в параметрах Android Studio

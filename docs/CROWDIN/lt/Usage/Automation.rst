@@ -109,7 +109,7 @@ Rekomendacijos ir išlygos
 
   ** Ypač svarbu, jei veiksmas keičia profilį! **
  
-* Stenkitės naudoti laikinus tikslus, o ne profilių keitimą. Laikini tikslai negrąžina `Autosens <../Usage/Open-APS-features.html#autosens>` _ reikšmės į 0.
+* Stenkitės naudoti laikinus tikslus, o ne profilių keitimą. Laikini tikslai negrąžina `Autosens <../Usage/Open-APS-features.html#autosens>`_ reikšmės į 0.
 * Profilio pakeitimus naudokite saikingai ir tik kaip paskutinę galimybę.
 
   * Pakeitus profilį, `Autosens <../Usage/Open-APS-features.html#autosens>`_ bus nenaudojamas mažiausiai 6 valandas.

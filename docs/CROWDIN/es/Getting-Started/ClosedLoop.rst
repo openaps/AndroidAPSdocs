@@ -5,7 +5,7 @@
   :alt: AAPS es como un autopiloto
 
 Un sistema de páncreas artificial de lazo cerrado combina diferentes componentes para facilitarte la gestión de la diabetes. 
-En su gran libro ` Automated Insulin Delivery <https://www.artificialpancreasbook.com/>` _ Dana M. Lewis, una de las fundadoras del movimiento colaborativo de "lazos cerrados", lo llama un "piloto automático para su diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. ¿Qué quiere decir eso?
+En su gran libro ` Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, una de las fundadoras del movimiento colaborativo de "lazos cerrados", lo llama un `piloto automático para su diabetes <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. ¿Qué quiere decir eso?
 
 **Piloto automático de un avión**
 
@@ -28,7 +28,7 @@ Actualmente hay tres grandes sistemas de circuito cerrado de código abierto dis
 
 AndroidAPS (AAPS)
 --------------------------------------------------
-AndroidAPS se describe en detalle en " esta documentación <./WhatisAndroidAPS.html>`_. Utiliza un Smartphone Android para el cálculo y el control de su bomba de insulina. Está en estrecha colaboración con OpenAPS (p.e. comparten algoritmos).
+AndroidAPS se describe en detalle en `esta documentación <./WhatisAndroidAPS.html>`_. Utiliza un Smartphone Android para el cálculo y el control de su bomba de insulina. Está en estrecha colaboración con OpenAPS (p.e. comparten algoritmos).
 
 Las bombas compatibles <../Hardware/pumps.html>`_ son:
 
@@ -40,7 +40,7 @@ Las bombas compatibles <../Hardware/pumps.html>`_ son:
 
 OpenAPS
 --------------------------------------------------
-` OpenAPS <https://openaps.readthedocs.io>` _ fue el primer Sistema de Bucle Cerrado de Código Abierto. Utiliza un ordenador pequeño como Raspberry Pi o Intel Edison.
+` OpenAPS <https://openaps.readthedocs.io>`_ fue el primer Sistema de Bucle Cerrado de Código Abierto. Utiliza un ordenador pequeño como Raspberry Pi o Intel Edison.
 
 Las bombas compatibles son:
 

@@ -60,7 +60,7 @@ Hlavní heslo
 Ochrana nastavení
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Chraňte své nastavení pomocí hesla nebo biometrického ověření telefonu (t.j. `AndroidAPS pro děti <../Children/Children.html>`_).
-* Pokud chcete použít hlavní heslo pouze pro zabezpečení `exportovaného nastavení <../Usage/ExportImportSettings.html> ` _, můžete si vytvořit Vlastní heslo.
+* Pokud chcete použít hlavní heslo pouze pro zabezpečení `exportovaného nastavení <../Usage/ExportImportSettings.html>`_, můžete si vytvořit Vlastní heslo.
 * Pokud používáte vlastní heslo, klepněte na řádek "Nastavení hesla", a nastavte heslo tak, jak je popsáno výše, `nad <../Configuration/Preferences.html#master-password>`_.
 
   .. image:: ../images/Pref2020_Protection.png
@@ -254,7 +254,7 @@ Minimální změna pro výzvu [%]
 
 Vylepšený asistent pro jídlo (AMA) nebo Super Micro bolus (SMB)
 ===========================================================
-V závislosti na nastavení v ' konfiguraci <../Configuration/Config-Builder.html> ` _ si můžete vybrat mezi dvěma algoritmy:
+V závislosti na nastavení v ' konfiguraci <../Configuration/Config-Builder.html>`_ si můžete vybrat mezi dvěma algoritmy:
 
 * `Advanced meal assist (OpenAPS AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ - stav algoritmu v roce 2017
 * `Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - nejnovější algoritmul pro pokročilé uživatele
@@ -262,7 +262,7 @@ V závislosti na nastavení v ' konfiguraci <../Configuration/Config-Builder.htm
 Nastavení OpenAPS AMA
 -----------------------------------------------------------
 * Jsou-li sacharidy zadány správně, reaguje systém po bolusu na jídlo rychleji, a to díky aplikování vysoké dočasné bazální dávky. 
-* Více podrobností o nastavení a Autosens můžete najít v `Dokumentaci OpenAPS <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>` _.
+* Více podrobností o nastavení a Autosens můžete najít v `Dokumentaci OpenAPS <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`_.
 
 Max. U/h, které lze nastavit pro dočas. bazál
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -364,7 +364,7 @@ Pokročilé nastavení - autosens ratio
 
 Nastavení pumpy
 ===========================================================
-Tyto volby se budou lišit v závislosti na tom, který ovladač inzulínové pumpy jste vybrali v konfiguračním programu ' Konfigurace <../Configuration/Config-Buil-Builder.html#pump> ` _.  Spárujte a nastavte svou pumpu podle pokynů pro jednotlivé pumpy:
+Tyto volby se budou lišit v závislosti na tom, který ovladač inzulínové pumpy jste vybrali v konfiguračním programu ' Konfigurace <../Configuration/Config-Buil-Builder.html#pump>`_.  Spárujte a nastavte svou pumpu podle pokynů pro jednotlivé pumpy:
 
 * `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
@@ -421,7 +421,7 @@ Rozšířená nastavení (NSClient)
 
 SMS komunikátor
 ===========================================================
-* Volba se zobrazí pouze v případě, je-li v konfiguraci povolen SMS komunikátor' Config Builder <../Configuration/Config-Buil-Builder.html#sms-communicator> ` _.
+* Volba se zobrazí pouze v případě, je-li v konfiguraci povolen SMS komunikátor' Config Builder <../Configuration/Config-Buil-Builder.html#sms-communicator>`_.
 * Toto nastavení umožňuje vzdálené ovládání telefonu s AAPS posláním SMS s textem jako je zastavení smyčky, nebo poslání bolusu.  
 * Další informace jsou popsány v `SMS příkazech <../Children/SMS-Commands.html>`_.
 * Dodatečná bezpečnost je zajištěna použitím autentizační aplikace a dodatečného PIN na konci tokenu.

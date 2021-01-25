@@ -52,7 +52,7 @@ Nastavení Autentikátoru
 * Dvoufaktorové ověření se používá ke zvýšení bezpečnosti.
 * Můžete použít libovolnou aplikaci Authenticator, která podporuje tokeny RFC 6238 TOTP. Oblíbené bezplatné aplikace jsou:
 
-   * ` Authy <https://authy.com/download/>` _
+   * ` Authy <https://authy.com/download/>`_
    * Google Authenticator - `Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>`_ / `iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>`_
    * `LastPass Authenticator <https://lastpass.com/auth/>`_
    * `FreeOTP Authenticator <https://freeotp.github.io/>`_
@@ -82,7 +82,7 @@ Použití SMS příkazů
 
 Příkazy
 ==================================================
-Příkazy musí být odeslány v angličtině. Pokud je řetězec odpovědi `přeložen <../translations.html#translate-řetězce-pro-androidaps-app> ` _, bude odpověď ve vašem jazyce.
+Příkazy musí být odeslány v angličtině. Pokud je řetězec odpovědi `přeložen <../translations.html#translate-řetězce-pro-androidaps-app>`_, bude odpověď ve vašem jazyce.
 
 .. image:: ../images/SMSCommands.png
   :alt: příklad SMS příkazu

@@ -26,7 +26,7 @@ Vertrauliche oder private Informationen wie z. B. Deine Nightscout-URL oder das 
 Einrichtung
 ========================================
 1. Erstelle ein Konto bei `Open Humans <https://www.openhumans.org>`_, falls Du dies noch nicht getan hast. Zur Anmeldung kannst Du auch Dein Google- oder Facebook-Konto verwenden, wenn Du dies möchtest. Zur Anmeldung kannst Du auch Dein Google- oder Facebook-Konto verwenden, wenn Du dies möchtest.
-2. Aktiviere das Plugin "Open Humans" im `Konfigurations-Generator <../Configuration/Config-Builder.html>` _.
+2. Aktiviere das Plugin "Open Humans" im `Konfigurations-Generator <../Configuration/Config-Builder.html>`_.
 3. Öffne dessen Einstellungen durch einen Klick auf das Zahnradsymbol. Du kannst das Hochladen auf die Zeiten beschränken, in denen Du Dich im WLAN befindest und/oder zu denen das Smartphone geladen wird. 
 4. Öffne das Open-Humans-Plugin (entweder über den OH Tab oder Hamburger-Menü) und klicke auf 'LOGIN'.
 
@@ -58,7 +58,7 @@ Einrichtung
      
 Möglichkeiten zum Teilen Deiner Daten
 ========================================
-`Das 'OPEN' Projekt <https://open-diabetes.eu/de//>`_
+`Das 'OPEN' Projekt <https://open-diabetes.eu/de/>`_
 ---------------------------------------------------------------------------------------  
 Das “OPEN” Projekt besteht aus einem internationalen und bereichsübergreifenden Konsortium, das Patienten-Innovatoren, Kliniker, Sozialwissenschaftler, Informatiker und Patientenorganisationen zusammenführt, um eine Evidenzbasis rund um die Auswirkungen von Do-it-yourself Artificial Pancreas Systemen (DIY APS) auf Menschen mit Diabetes und verschiedene Gesundheitssysteme zu schaffen. Weitere Informationen findest Du auf der `OPEN Website <https://www.open-diabetes.eu/>`_.
 

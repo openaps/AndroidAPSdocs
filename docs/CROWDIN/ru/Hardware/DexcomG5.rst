@@ -16,7 +16,7 @@ Dexcom G5
    * Папка 2.3 предназначена для пользователей AndroidAPS 2.3, папка 2.4 для пользователей AAPS 2.5.
    * Откройте https://play.google.com/store/search?q=dexcom%20g5 на вашем компьютере. Регион будет виден в URL.
    
-   .. изображение:../images/DexcomG5regionURL.PNG
+   .. image:: ../images/DexcomG5regionURL.PNG
      :alt: Регион в URL Dexcom G5
 
 * Oстановите сенсор и удалите оригинальное приложение Dexcom.

@@ -15,7 +15,7 @@ Source GLY
    Libre 2 <../Hardware/Libre2.rst>
    Libre 1 <../Hardware/Libre1.rst>
    Eversense <../Hardware/Eversense.rst>
-   MM640g/MM630g  <../Hardware/MM640g.rst>
+   MM640g/MM630g <../Hardware/MM640g.rst>
    PocTech <../Hardware/PocTech.rst>   
-   Nightscout en tant que Source de GLY<../Hardware/CGMNightscoutUpload.rst>
+   Nightscout en tant que Source de GLY <../Hardware/CgmNightscoutUpload.rst>
    

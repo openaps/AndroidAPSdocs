@@ -7,7 +7,7 @@ Para los mismos sucesos frecuentes, es posible que siempre tenga que cambiar los
 
 P.e. cuando su BG es demasiado bajo, puede decidir tener automáticamente un objetivo temporal alto. O si estás en tu centro de fitness, obtienes automáticamente un objetivo temporal. 
 
-Antes de utilizar Automatización, debe tener confianza en los `objetivos temporales <./temptarget.html>` _ o en los conmutadores de perfil. 
+Antes de utilizar Automatización, debe tener confianza en los `objetivos temporales <./temptarget.html>`_ o en los conmutadores de perfil. 
 
 Make sure you really understand how automation works before setting up your first simple rule. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
 

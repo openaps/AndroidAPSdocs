@@ -17,5 +17,5 @@ BZ-Quelle
    Eversense <../Hardware/Eversense.rst>
    MM640g/MM630g <../Hardware/MM640g.rst>
    PocTech <../Hardware/PocTech.rst>   
-   Nachtcout als BZ-Quelle <../Hardware/CGMNightscoutUpload.rst>
+   Nachtcout als BZ-Quelle <../Hardware/CgmNightscoutUpload.rst>
    

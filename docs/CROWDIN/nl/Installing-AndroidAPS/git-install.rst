@@ -61,5 +61,5 @@ Mac
 ==================================================
 * Elke versie van Git zou moeten werken. Bijvoorbeeld `https://git-scm.com/download/mac <https://git-scm.com/download/mac>`_. Volg de instructies op die site om Git te installeren.
 * Gebruik homebrew om git: ```$brew install git``` te installeren.
-* Voor meer informatie over het installeren van git zie de `officiële git documentatie <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>` _.
+* Voor meer informatie over het installeren van git zie de `officiële git documentatie <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.
 * Als je git installeert via homebrew, hoef je niets aan de instellingen te wijzigen. Voor het geval je ze toch zoekt: je vind ze hier: Android Studio - Preferences.
