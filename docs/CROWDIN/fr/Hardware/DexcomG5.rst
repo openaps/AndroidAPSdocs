@@ -13,9 +13,9 @@ Si vous utilisez le G5 avec l'application Dexcom patché
 ==================================================
 * Télécharger l'apk sur `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, et choisissez la version correspondant à vos besoins (version G5, mg/dl ou mmol/l).
 
-   * Le dossier 2.3 est destiné aux utilisateurs d'AndroidAPS 2.3, le dossier 2.4 pour les utilisateurs de AAPS 2.5.
-   * Ouvrez https://play.google.com/store/search?q=dexcom%20g5 sur votre ordinateur. La région sera visible dans l'URL.
-   
+  * Le dossier 2.3 est destiné aux utilisateurs d'AndroidAPS 2.3, le dossier 2.4 pour les utilisateurs de AAPS 2.5.
+  * Ouvrez https://play.google.com/store/search?q=dexcom%20g5 sur votre ordinateur. La région sera visible dans l'URL.
+
    .. image:: ../images/DexcomG5regionURL.PNG
      :alt: Region in Dexcom G5 URL
 
