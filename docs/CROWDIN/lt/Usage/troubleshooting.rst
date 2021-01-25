@@ -6,10 +6,12 @@ Daugiau naudingos informacijos rasite DUK <../Getting-Started/FAQ.html>`_.
 
 AndroidAPS programa
 ==================================================
+
 Kūrimas ir atnaujinimas
------
+-------------------
 * `Prarastas rakto failas <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
 * `Android Studio trikčių šalinimas <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
+
 Parametrai
 --------------------------------------------------
 * `Profilis <../Usage/Profiles.html#troubleshooting-profile-errors>`_
@@ -18,6 +20,7 @@ Parametrai
     :alt: Error: Basal not aligned to hours
 
 * `Nightscout klientas <../Usage/Troubleshooting-NSClient.html>`_
+
 Naudojimas
 --------------------------------------------------
 * `Neteisingos angliavandenių vertės <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
