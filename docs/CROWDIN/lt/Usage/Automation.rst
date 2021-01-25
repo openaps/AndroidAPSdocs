@@ -88,14 +88,14 @@ Pridėję savo veiksmus, **nepamirškite pakeisti numatytųjų reikšmių** spus
   :alt: Automatizavimo numatytosios prieš nustatytos reikšmės
 
 Rūšiuoti automatizavimo taisykles
------
+---------------------
 Norint rūšiuoti automatizavimo taisykles, paspauskite ir palaikykite keturių linijų mygtuką ekrano dešinėje pusėje ir tempkite žemyn ar aukštyn.
 
 .. image:: ../images/Automation_Sort.png
   :alt: Rūšiuoti automatizavimo taisykles
   
 Ištrinti automatizavimo taisykles
------
+-----------------------
 To delete an automation rule click on trash icon.
 
 .. image:: ../images/Automation_Delete.png
