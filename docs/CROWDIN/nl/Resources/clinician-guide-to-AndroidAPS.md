@@ -2,7 +2,7 @@
 
 Deze pagina is bedoeld voor zorgprofessionals (zoals artsen en diabetesverpleegkundigen) die meer willen weten over 'open source' kunstmatige alvleesklier-technologie zoals AndroidAPS, of voor patiënten die informatie zoeken om te delen met hun arts/diabetesverpleegkundige.
 
-We geven u achtergrondinformatie over doe-het-zelf closed loop systemen, en gaan wat dieper in op hoe AndroidAPS werkt. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](../index.rst). Als u vragen hebt, dan kunt u uw patiënt benaderen, of stel uw vraag aan één van de gebruikersgroepen. Als u niet actief bent op sociale media (bijv. [Twitter](https://twitter.com/kozakmilos) of Facebook), schroom dan niet om een email te sturen naar de ontwikkelaars: developers@AndroidAPS.org Verder kunt u [op deze website](https://openaps.org/outcomes/) een aantal van de laatste studies vinden & gegevens over de resultaten van closed loopen.
+We geven u achtergrondinformatie over doe-het-zelf closed loop systemen, en gaan wat dieper in op hoe AndroidAPS werkt. Voor meer details over al deze onderwerpen, bekijk de [uitgebreide AndroidAPS documentatie online](../index.rst). Als u vragen hebt, dan kunt u uw patiënt benaderen, of stel uw vraag aan één van de gebruikersgroepen. Als u niet actief bent op sociale media (bijv. [Twitter](https://twitter.com/kozakmilos) of Facebook), schroom dan niet om een email te sturen naar de ontwikkelaars: developers@AndroidAPS.org Verder kunt u [op deze website](https://openaps.org/outcomes/) een aantal van de laatste studies vinden & gegevens over de resultaten van closed loopen.
 
 ### Het bouwen van een doe-het-zelf closed loop
 
