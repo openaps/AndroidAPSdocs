@@ -13,7 +13,7 @@ Doel 1: Instellen van visualisatie en monitoring en analyseren van basaal en rat
 * Selecteer de juiste pomp in Configurator (Selecteer 'virtuele pomp' als je een pomp gebruikt waar geen AndroidAPS driver voor bestaat) om ervoor te zorgen dat jouw pomp kan communiceren met AndroidAPS.  
 * Als je de DanaR pomp gebruikt, volg dan de `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ instructies om de pomp te koppelen aan AndroidAPS.
 * Volg de instructies van de `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ pagina om ervoor te zorgen dat Nightscout gegevens kan ontvangen en weergeven.
-* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#nsclient>`_.
+* Opmerking: URL in NSClient moet worden ingevuld **ZONDER /api/v1/** aan het einde - zie `NSClient-instellingen in Instellingen <../Configuration/Preferences.html#nsclient>`_.
 
 *Het kan zijn dat je even moet wachten tot de volgende bloedglucose-waarde binnenkomt voordat AndroidAPS de wijzigingen opmerkt.*
 
@@ -58,7 +58,7 @@ Verminder het aantal meldingen
 
 Doel 5: De Open Loop begrijpen, inclusief de voorgestelde tijdelijke basaalstanden
 ====================================================================================================
-* Start to understand the thinking behind the temp basal recommendations by looking at the `determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ and both the `forecast line in AndroidAPS homescreen <../Getting-Started/Screenshots.html#prediction-lines>`_/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+* Leer de reden achter een suggestie voor tijdelijke basaalstand kennen. Kijk naar de `determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ en naar de `voorspelling in de glucosegrafiek van het AndroidAPS Overzichts-scherm <../Getting-Started/Screenshots.html#voorspellingslijnen>`_ of Nightscout, en naar de berekening in je OpenAPS tab.
  
 Je wilt beginnen met een streefdoel dat hoger is dan normaal, totdat je vertrouwen in de berekeningen en de instellingen hebt gekregen.  Het systeem staat toe
 
@@ -137,7 +137,7 @@ Wanneer je van AMA naar SMB wisselt, dan moet je jouw instelling voor min_5m_car
 Doel 11: Automatisering
 ====================================================================================================
 * Je moet Doel 11 starten om `Automatisering <../Usage/Automation.html>`_ te kunnen gebruiken.
-* Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-prove-your-knowledge>`_.
+* Zorg ervoor dat je alle doelen hebt voltooid, inclusief het `examen <../Usage/Objectives.html#doel-3-bewijs-jouw-kennis>`_.
 * Het behalen van eerdere doelen zal geen effect hebben op andere doelen die je al hebt behaald. Je behoudt alle reeds afgeronde doelen!
 
 
