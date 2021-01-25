@@ -33,11 +33,11 @@ Dexcom G6를 Dexcom 앱(패치버전)과 사용하는 경우
 ==================================================
 * 'https://github.com/dexcomapp/dexcomapp<https://github.com/dexcomapp/dexcomapp>'에서 apk를 다운로드하고 필요에 따라 알맞은 버전을 선택하십시오 (mg/dl 또는 mmol/l, G6).
 
-   * 폴더 2.4는 현재 버전의 사용자를 위한 것입니다. 폴더 2.3은 오래된 AndroidAPS 2.3에만 해당됩니다.
-   * 컴퓨터에서 https://play.google.com/store/search?q=dexcom%20g6 사이트를 엽니다. 
-   * 검색 결과 페이지에서 보여지는 덱스콤 G6 앱 링크를 클릭하십시오.
-   * URL에서 region이 표시됩니다.
-   
+  * 폴더 2.4는 현재 버전의 사용자를 위한 것입니다. 폴더 2.3은 오래된 AndroidAPS 2.3에만 해당됩니다.
+  * 컴퓨터에서 https://play.google.com/store/search?q=dexcom%20g6 사이트를 엽니다. 
+  * 검색 결과 페이지에서 보여지는 덱스콤 G6 앱 링크를 클릭하십시오.
+  * URL에서 region이 표시됩니다.
+
    .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Dexcom G6 URL의 region
 
