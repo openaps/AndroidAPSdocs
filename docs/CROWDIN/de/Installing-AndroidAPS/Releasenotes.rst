@@ -138,7 +138,7 @@ Erscheinungsdatum: 03.05.2020
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
------
+------------------
 * Insight: Vibration bei Bolus deaktivieren (Nur Firmware Version 3.x)
 * Sonst identisch mit 2.6.1.2. Update ist optional. 
 
@@ -149,7 +149,7 @@ Erscheinungsdatum: 19.04.2020
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
------
+------------------
 * Fehlerbehebung Insight Service
 * Sonst identisch mit 2.6.1.1. Wenn Dich der Fehler nicht betrifft, musst Du nicht updaten.
 
@@ -160,7 +160,7 @@ Erscheinungsdatum: 06.04.2020
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
------
+------------------
 * Fehlerbehebung SMS CARBS Kommando in Zusammenhang mit der Combo Pumpe
 * Sonst identisch mit 2.6.1. Wenn Dich der Fehler nicht betrifft, musst Du nicht updaten.
 
@@ -171,7 +171,7 @@ Erscheinungsdatum: 21.03.2020
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
------
+------------------
 * Nur https:// in Nightscout-Client Einstellungen erlaubt
 * Fehlerbehebung `BGI <../Getting-Started/Glossary.html>`_ Anzeige auf der Smartwatch
 * Kleiner Anzeigefehler behoben
@@ -190,7 +190,7 @@ Erscheinungsdatum: 29.02.2020
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
------
+------------------
 * Kleinere Designänderungen (Startseite...)
 * Careportal Tab / Menü entfernt - weitere Details dazu `hier <../Usage/CPbefore26.html>`_
 * Neues `Plugin Lokales Profil <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_
@@ -343,10 +343,10 @@ Einstellungen, die bei Umstellung von AMA zu SMB erforderlich sind
 * Der Standardwert von min_5m_carbimpact erhöht sich von 3 bei AMA auf 8 beim SMB. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
 * Bitte beachte beim Erstellen einer AndroidAPS 2.0 apk: Configuration on demand wird in der aktuellen Version des Android Gradle Plugins nicht unterstützt! Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschlägt, dann kannst du folgendes tun:
 
-   * Das Einstellungen-Fenster öffnen, indem du auf Datei > Einstellungen (auf dem Mac: Android Studio > Preferences) klickst.
-   * Klicke im linken Fensterbereich auf Build, Execution, Deployment > Compiler.
-   * Deaktiviere die "Configure on demand" Checkbox.
-   * Klicke Apply oder OK.
+  * Das Einstellungen-Fenster öffnen, indem du auf Datei > Einstellungen (auf dem Mac: Android Studio > Preferences) klickst.
+  * Klicke im linken Fensterbereich auf Build, Execution, Deployment > Compiler.
+  * Deaktiviere die "Configure on demand" Checkbox.
+  * Klicke Apply oder OK.
 
 Startseite
 --------------------------------------------------
@@ -375,7 +375,7 @@ Verschiedenes
 * Überarbeitung des Konfigurations-Generators und des Objectives-Reiters. Beschreibungen hinzugefügt.
 * Neues App-Icon
 * Viele weitere Verbesserungen und Fehlerbehebungen.
-* Von Nightscout unabhängige Alarme wenn die Pumpe über längere Zeit nicht erreichbar ist (z.B.  schwache Pumpenbatterie) und bei verpassten CGM-Werte (siehe lokale Alarme in den Einstellungen).
+* Von Nightscout unabhängige Alarme wenn die Pumpe über längere Zeit nicht erreichbar ist (z.B.  depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Option, das Display immer an zu lassen.
 * Option, die Hinweise als Systemmeldungen anzuzeigen.
 * Advanced filtering (das erlaubt die Nutzung von “SMB immer an” und “6 Stunden nach dem Essen”) wird unterstützt mit der gepatchten Dexcom App (nicht mit der originalen Dexcom App!) oder xDrip mit dem G5 native mode als BZ-Quelle.
