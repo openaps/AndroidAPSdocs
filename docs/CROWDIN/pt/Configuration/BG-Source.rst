@@ -17,5 +17,4 @@ Fonte de Glic.
    Eversense <../Hardware/Eversense.rst>
    MM640g/MM630g <../Hardware/MM640g.rst>
    PocTech <../Hardware/PocTech.rst>   
-   Nightscout como Fonte de Glic. <../Hardware/CGMNightscoutUpload.rst>
-   
+   Nightscout as BG Source <../Hardware/CgmNightscoutUpload.rst>
