@@ -17,7 +17,7 @@ AndroidAPS no es sólo una aplicación (auto-construida), es sólo uno de los m�
 Módulos necesarios
 ==================================================
 Algoritmo de dosificación individual bueno para su tratamiento con diabetes
---------------------------------------------------
+----------------------------------------------------------
 A pesar de que esto no es algo para crear o comprar, este es el "módulo" que probablemente se subestime mas pero es esencial. Cuando dejas que un algoritmo ayude a manejar tu diabetes, necesita saber los ajustes correctos para no cometer errores severos.
 Incluso si aún le faltan otros módulos, ya puede verificar y adaptar su 'perfil' en colaboración con su equipo de diabetes. 
 La mayoría de los loopers utilizan el BR circadiano, ISF y CR, que adaptan la sensibilidad de la insulina hormonal durante el día.
