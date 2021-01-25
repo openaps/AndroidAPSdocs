@@ -138,7 +138,7 @@ Date de sortie : 03-05-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
------
+------------------
 * Insight: Désactivation de la vibration sur bolus pour le firmware version 3
 * Sinon, identique à 2.6.1.2. La mise à jour est facultative. 
 
@@ -149,7 +149,7 @@ Date de sortie : 19-04-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
------
+------------------
 * Correction du plantage dans le service Insight
 * Sinon, identique à 2.6.1.1. Si vous n'êtes pas affecté par ce bug, vous n'avez pas besoin de mettre à niveau.
 
@@ -160,7 +160,7 @@ Date de sortie : 06-04-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
------
+------------------
 * Résout le problème de commande SMS CARBS avec la pompe Combo
 * Sinon, identique à 2.6.1. Si vous n'êtes pas affecté par ce bug, vous n'avez pas besoin de mettre à niveau.
 
@@ -171,7 +171,7 @@ Date de sortie : 21-03-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
------
+------------------
 * Permet de ne rentrer que https:// dans les paramètres NSClient
 * Correction bug d'affichage `Impact Glycémique <../Getting-Started/Glossary.html>`_ sur les montres
 * Correction de petits bugs de l'interface utilisateur
@@ -190,7 +190,7 @@ Date de sortie : 29-02-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
------
+------------------
 * Petites modifications de l'affichage (page d'accueil...)
 * Onglet/Menu Careportal supprimé - plus de détails `ici <../Usage/CPbefore26.html>`_
 * Nouveau `plugin Profil Local <../Configuration/Config-Builder.html#profil-local-recommande>`_
@@ -343,10 +343,10 @@ Paramètres à ajuster lors du passage d'AMA à SMB
 * la valeur par défaut de min_5m_carbimpact est passée de 3 à 8 entre AMA et SMB. Si vous effectuez une mise à niveau depuis AMA vers SMB, vous devez la modifier manuellement
 * Remarque lors de la construction de l'apk d'AndroidAPS 2.0 : Configuration on demand n'est pas supporté par la version actuelle du plugin Android Gradle ! Si votre construction échoue avec une erreur concernant la "configuration sur demande", faites les actions suivantes :
 
-   * Ouvrez la fenêtre Préférences en cliquant sur File > Settings (sur Mac, Android Studio > Preferences).
-   * Dans le panneau de gauche, cliquez sur Build, Execution, Deployment > Compiler.
-   * Décochez la case Configure on demand.
-   * Cliquez sur Appliquer ou OK.
+  * Ouvrez la fenêtre Préférences en cliquant sur File > Settings (sur Mac, Android Studio > Preferences).
+  * Dans le panneau de gauche, cliquez sur Build, Execution, Deployment > Compiler.
+  * Décochez la case Configure on demand.
+  * Cliquez sur Appliquer ou OK.
 
 Onglet Vue d'ensemble
 --------------------------------------------------
@@ -375,7 +375,7 @@ Divers
 * Remplacement des onglets du générateur de configuration et des objectifs, ajout de descriptions
 * Nouvelle icône d'application
 * Beaucoup d'améliorations et de correctifs
-* Alerte indépendante de Nightscout si la pompe est injoignable pendant une durée longue (par ex. si la pile de la pompe est à plat) et pour des lectures de GLY manquées (voir _Alertes locales_ dans les paramètres)
+* Alerte indépendante de Nightscout si la pompe est injoignable pendant une durée longue (par ex. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Option pour garder l'écran allumé
 * Option pour afficher les notifications AAPS comme des notifications Android
 * Filtrage avancé (permettant de toujours activer SMB et pendant 6h après les repas) pris en charge avec l'application Dexcom patchée ou xDrip+ avec le mode natif G5 en tant que source GLY.
