@@ -18,4 +18,3 @@ BZ-Quelle
    MM640g/MM630g <../Hardware/MM640g.rst>
    PocTech <../Hardware/PocTech.rst>   
    Nachtcout als BZ-Quelle <../Hardware/CGMNightscoutUpload.rst>
-   
