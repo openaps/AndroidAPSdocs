@@ -46,8 +46,7 @@ Protection
 Master password
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
-
-   **Biometric protection does not work on OnePlus phones. This is a know issue of OnePlus.**
+  **Biometric protection does not work on OnePlus phones. This is a know issue of OnePlus.**
 
 * Open Preferences (three-dot-menu on top right of home screen)
 * Click triangle below "General"
@@ -172,14 +171,14 @@ Show notes field in treatments dialogs
 Индикаторы состояния
 -----------------------------------------------------------
 * Status lights give a visual warning for 
-      
-   * Sensor age
-   * Sensor battery level for certain smart readers (see `screenshots page <../Getting-Started/Screenshots.html#sensor-level-battery>`_ for details).
-   * Insulin age (days reservoir is used)
-   * Reservoir level (units)
-   * Cannula age
-   * Pump battery age
-   * Pump battery level (%)
+
+  * Sensor age
+  * Sensor battery level for certain smart readers (see `screenshots page <../Getting-Started/Screenshots.html#sensor-level-battery>`_ for details).
+  * Insulin age (days reservoir is used)
+  * Reservoir level (units)
+  * Cannula age
+  * Pump battery age
+  * Pump battery level (%)
 
 * If threshold warning is exceeded, values will be shown in yellow.
 * If threshold critical is exceeded, values will be shown in red.
@@ -191,8 +190,8 @@ Show notes field in treatments dialogs
 Advanced Settings (Overview)
 -----------------------------------------------------------
 
-  .. image:: ../images/Pref2021_OV_Adv.png
-    :alt: Preferences > Status Lights
+.. image:: ../images/Pref2021_OV_Adv.png
+  :alt: Preferences > Status Lights
 
 Deliver this part of bolus wizard result
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -336,8 +335,8 @@ Advanced settings (OpenAPS SMB)
 Absorption settings
 ===========================================================
 
-  .. image:: ../images/Pref2020_Absorption.png
-    :alt: Absorption settings
+.. image:: ../images/Pref2020_Absorption.png
+  :alt: Absorption settings
 
 min_5m_carbimpact
 -----------------------------------------------------------
@@ -377,8 +376,8 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 NSClient
 ===========================================================
 
-  .. image:: ../images/Pref2020_NSClient.png
-    :alt: NSClient
+.. image:: ../images/Pref2020_NSClient.png
+  :alt: NSClient
 
 * Set your *Nightscout URL* (i.e. https://yourwebsitename.herokuapp.com) and the *API secret* (a 12 character password recorded in your Heroku variables).
 * This enables data to be read and written between both the Nightscout website and AndroidAPS.  
@@ -390,8 +389,8 @@ NSClient
 Connection settings
 -----------------------------------------------------------
 
-  .. image:: ../images/ConfBuild_ConnectionSettings.png
-    :alt: NSClient connection settings  
+.. image:: ../images/ConfBuild_ConnectionSettings.png
+  :alt: NSClient connection settings
   
 * Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
 * If you want to use only a specific WiFi network you can enter its WiFi SSID. 
@@ -408,8 +407,8 @@ Alarm options
 Advanced settings (NSClient)
 -----------------------------------------------------------
 
-  .. image:: ../images/Pref2020_NSClientAdv.png
-    :alt: NS Client advanced settings
+.. image:: ../images/Pref2020_NSClientAdv.png
+  :alt: NS Client advanced settings
 
 * Most options in advanced settings are self-explanatory.
 * *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+. 
@@ -437,24 +436,24 @@ Select which location service shall be used:
 Local alerts
 ===========================================================
 
-  .. image:: ../images/Pref2020_LocalAlerts.png
-    :alt: Local alerts
+.. image:: ../images/Pref2020_LocalAlerts.png
+  :alt: Local alerts
 
 * Settings should be self-explanatory.
 
 Data choices
 ===========================================================
 
-  .. image:: ../images/Pref2020_DataChoice.png
-    :alt: Data choices
+.. image:: ../images/Pref2020_DataChoice.png
+  :alt: Data choices
 
 * You can help develop AAPS further by sending crash reports to the developers.
 
 Maintenance settings
 ===========================================================
 
-  .. image:: ../images/Pref2020_Maintenance.png
-    :alt: Maintenance settings
+.. image:: ../images/Pref2020_Maintenance.png
+  :alt: Maintenance settings
 
 * Standard recipient of logs is logs@androidaps.org.
 * If you select *Encrypt exported settings* these are encrypted with your `master password <../Configuration/Preferences.html#master-password>`_. In this case master password has to be entered each time settings are exported or imported.
@@ -464,5 +463,5 @@ Open Humans
 * You can help the community by donating your data to research projects! Details are described on the `Open Humans page <../Configuration/OpenHumans.html>`_.
 * In Preferences you can define when data shall be uploaded
 
-   * only if connected to WiFi
-   * only if charging
+  * only if connected to WiFi
+  * only if charging
