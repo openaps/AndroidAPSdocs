@@ -6,7 +6,7 @@
 * Πάντα βεβαιωθείτε ότι η μπαταρία της αντλίας είναι όσο το δυνατόν πληρέστερη. Ανατρέξτε στο τμήμα της μπαταρίας για συμβουλές σχετικά με την μπαταρία.
 * Είναι καλύτερο** να μην αγγίξετε την εφαρμογή ruffy **όταν το σύστημα εκτελείται. Εάν ξαναρχίσει η εφαρμογή, η σύνδεση με την αντλία μπορεί να διακοπεί. Μόλις η αντλία είναι συνδεδεμένη με το ruffy, δεν υπάρχει ανάγκη επανασύνδεσης. Ακόμα και μετά την επανεκκίνηση του τηλεφώνου, η σύνδεση επαναφέρεται αυτόματα. Αν είναι δυνατόν, μετακινήστε την εφαρμογή σε οθόνη που δεν χρησιμοποιείται ή σε φάκελο στο smartphone σας, ώστε να μην την ανοίξετε τυχαία.
 * Αν ανοίξετε ακούσια την εφαρμογή κατά τη διάρκεια του κυκλώματος, είναι καλύτερο να επανεκινήσετε αμέσως το smartphone.
-* Όποτε είναι δυνατόν, ενεργοποιήστε την αντλία μόνο μέσω της εφαρμογής AndroidAPS. Για να το διευκολύνετε, ενεργοποιήστε το κλείδωμα πλήκτρων στην αντλία κάτω από τα ** ΡΥΘΜΙΣΕΙΣ ΑΝΤΛΙΑΣ / ΚΛΕΙΔΩΜΑ ΠΛΗΚΤΡΩΝ/ ΕΝΕΡΓΟ **. Μόνο όταν αλλάζετε την μπαταρία ή την κασέτα, είναι απαραίτητο να χρησιμοποιήσετε τα πλήκτρα της αντλίας. ![Κλείδωμα](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/keylock.png?raw=true)
+* Όποτε είναι δυνατόν, ενεργοποιήστε την αντλία μόνο μέσω της εφαρμογής AndroidAPS. Για να το διευκολύνετε, ενεργοποιήστε το κλείδωμα πλήκτρων στην αντλία κάτω από τα ** ΡΥΘΜΙΣΕΙΣ ΑΝΤΛΙΑΣ / ΚΛΕΙΔΩΜΑ ΠΛΗΚΤΡΩΝ/ ΕΝΕΡΓΟ **. Μόνο όταν αλλάζετε την μπαταρία ή την κασέτα, είναι απαραίτητο να χρησιμοποιήσετε τα πλήκτρα της αντλίας. ![Κλείδωμα](../images/combo/combo-tips-keylock.png)
 
 ## Η αντλία δεν είναι προσβάσιμη. Τι να κάνετε;
 
@@ -25,7 +25,7 @@
 
 * Στα τηλέφωνα με ** χαμηλή μνήμη ** (ή ** επιθετικής εξοικονόμησης ενέργειας **ρύθμιση), το AndroidAPS συχνά τερματίζεται. Μπορείτε να το δείτε από το γεγονός ότι τα Bolus και η αριθμομηχανή στην Αρχική οθόνη δεν εμφανίζονται όταν ανοίξετε το AAPS επειδή αρχικοποιείται το σύστημα. Αυτό μπορεί να προκαλέσει "συναγερμούς απρόσιτης αντλίας " κατά την εκκίνηση. Στο πεδίο ** Τελευταία σύνδεση ** της καρτέλας Combo, μπορείτε να ελέγξετε πότε το AndroidAPS τελευταία επικοινωνούσε με την αντλία. 
 
-![Αντλία απρόσιτη](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Pump_Unreachable.png) ![Δεν υπάρχει σύνδεση με την αντλία](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/No_connection_to_pump.png)
+![Αντλία απρόσιτη](../images/combo/combo-tips-pump-unreachable.png) ![Δεν υπάρχει σύνδεση με την αντλία](../images/combo/combo-tips-no-connection-to-pump.png)
 
 * Αυτό το σφάλμα μπορεί να εξαντλήση την μπαταρία της αντλίας γρηγορότερα, επειδή το βασικό προφίλ διαβάζεται από την αντλία όταν ξαναρχίσει η εφαρμογή.
 * Αυξάνει επίσης την πιθανότητα να προκαλέσει το σφάλμα που προκαλεί την απόρριψη της αντλίας από όλες τις εισερχόμενες συνδέσεις μέχρι να πιεστεί ένα κουμπί στην αντλία. 
@@ -43,7 +43,7 @@
 * Για να το κάνετε αυτό, πατήστε παρατεταμένα το ** Κλειστό κύκλωμα ** στην κύρια οθόνη και επιλέξτε **κύκλωμα αναστελμένο για 1 ώρα **. 
 * Wait for the pump to communicate with the phone and the Bluetooth logo on the pump has faded.
 
-![Η δυνατότητα Bluetooth είναι ενεργοποιημένη](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/Compo.png?raw=true)
+![Η δυνατότητα Bluetooth είναι ενεργοποιημένη](../images/combo/combo-tips-combo-tips-compo.png)
 
 * Απελευθερώστε το κλείδωμα πλήκτρων στην αντλία, θέστε την αντλία σε λειτουργία διακοπής, επιβεβαιώστε πιθανώς ακυρωμένο προσωρινό βασικό ρυθμό και αλλάξτε την μπαταρία.
 * Then put the pump back in run mode select **Resume** when long-pressing on **Suspended** on the main screen.
@@ -53,7 +53,7 @@
 
 * Επειδή η εντατική επικοινωνία Bluetooth καταναλώνει πολλή ενέργεια, χρησιμοποιείτε μόνο ** μπαταρίες υψηλής ποιότητας ** όπως το Energizer Ultimate Lithium, το "power one" από το "μεγάλο" service pack Accu-Chek ή εάν πρόκειται για μια επαναφορτιζόμενη μπαταρία, χρησιμοποιήστε μπαταρίες Eneloop. 
 
-![Energizer](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/energizer-l91aa---image.jpg?raw=true) ![OnePower](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/PowerOne.png?raw=true)
+![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
 Το εύρος για το τυπικό χρόνο ζωής των διαφορετικών τύπων μπαταριών είναι οι εξής:
 
@@ -82,15 +82,15 @@ If your battery life is significantly shorter than the ranges given above, pleas
 
 * If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
 
-![Απενεργοποιημένο κύκλωμα μετά από πολλαπλό bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
+![Απενεργοποιημένο κύκλωμα μετά από πολλαπλό bolus](../images/combo/combo-tips-multiwave-bolus.png)
 
 ## Συναγερμοί κατά την χορήγηση bolus
 
 * If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical number of insulin units. If you really want to bolus the same insulin twice in short succession, just wait two more minutes and then deliver the bolus again. If the first bolus has been interrupted or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
 * Background is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Εδώ πρέπει να αποφευχθούν οι δυσδιάκριτες καταχωρήσεις.
 
-![Διπλό bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/Doppelbolus.png)
+![Διπλό bolus](../images/combo/combo-tips-doppelbolus.png)
 
 * Αυτός ο μηχανισμός είναι επίσης υπεύθυνος για μια δεύτερη αιτία του σφάλματος: Εάν κατά τη χρήση του υπολογισμού των bolus χορηγηθεί ένα άλλο bolus μέσω της αντλίας με τον τρόπο αυτό αλλάζει το ιστορικό των bolus, η βάση του υπολογισμού του bolus είναι λάθος και το bolus ακυρώνετε. 
 
-![Ακυρωμένο bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/History_changed.png)
+![Ακυρωμένο bolus](../images/combo/combo-tips-history-changed.png)
