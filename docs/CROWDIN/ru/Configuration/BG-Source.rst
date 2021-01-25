@@ -17,5 +17,4 @@
    Eversense <../Hardware/Eversense.rst>
    MM640g/MM630g  <../Hardware/MM640g.rst>
    PocTech <../Hardware/PocTech.rst>   
-   Nightscout как источник ГК <../Hardware/CGMNightscoutUpload.rst>
-   
+   Nightscout as BG Source <../Hardware/CgmNightscoutUpload.rst>
