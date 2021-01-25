@@ -138,7 +138,7 @@ Fecha de lanzamiento: 03-05-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
------
+------------------
 * Insight: Disable vibration on bolus for firmware version 3
 * Otherwise is equal to 2.6.1.2. La actualización es opcional. 
 
@@ -149,7 +149,7 @@ Fecha de lanzamiento: 19-04-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
------
+------------------
 * Fix crashing in Insight service
 * Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
 
@@ -160,7 +160,7 @@ Fecha de lanzamiento: 06-04-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
------
+------------------
 * Resolves SMS CARBS command issue while using Combo pump
 * Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
 
@@ -171,7 +171,7 @@ Fecha de lanzamiento: 21-03-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
------
+------------------
 * Allow to enter only https:// in NSClient settings
 * Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
 * Fixed small UI bugs
@@ -190,7 +190,7 @@ Fecha de lanzamiento: 29-02-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
------
+------------------
 * Small design changes (startpage...)
 * Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`_
 * New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
@@ -343,10 +343,10 @@ Valores para ajustar cuando se cambia de AMA a SMB
 * El valor predeterminado de min_5m_carbimpact ha cambiado de 3 a 8 llendo de AMA a SMB. Si está actualizando desde AMA a SMB, tiene que cambiarlo manualmente
 * Nota cuando se construya AndroidAPS 2.0 apk: La configuración personalizada no está soportada por la versión actual del plugin de Android Gradle! Si la compilación falla con un error en la configuración personalizada, puede realizar lo siguiente:
 
-   * Abra la ventana de Preferencias, haga clic en Archivo > Configuración (en Mac, Android Studio > Preferencias).
-   * En el panel de la izquierda, pulse Compilar, Ejecución, Deployment > Compilador.
-   * Desmarque la casilla de verificación Configurar bajo demanda.
-   * Haga clic en Aplicar o en Aceptar.
+  * Abra la ventana de Preferencias, haga clic en Archivo > Configuración (en Mac, Android Studio > Preferencias).
+  * En el panel de la izquierda, pulse Compilar, Ejecución, Deployment > Compilador.
+  * Desmarque la casilla de verificación Configurar bajo demanda.
+  * Haga clic en Aplicar o en Aceptar.
 
 Pestaña general
 --------------------------------------------------
@@ -375,7 +375,7 @@ Misceláneo
 * Revisión para las pestañas del constructor de configuración y objetivos, añadiendo descripciones
 * Nuevo icono de la aplicación
 * Muchas mejoras y correcciones de errores
-* Alertas independientes de Nightscout si la bomba es inalcanzable durante más tiempo (p.ej. batería de bomba agotada) y lecturas de BG perdidas (ver _Local alerts_ en configuración)
+* Alertas independientes de Nightscout si la bomba es inalcanzable durante más tiempo (p.ej. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Opción para mantener la pantalla encendida
 * Opción de mostrar notificaciónes como notificación Android
 * Filtrado avanzado (que permite siempre habilitar SMB y 6h después de las comidas) soportado con el app de Dexcom o xDrip patched con el modo nativo G5 como fuente BG.
