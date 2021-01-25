@@ -42,7 +42,7 @@ Manoma, kad jūs jau turite Nightscout svetainę, jei ne, apsilankykite [Nightsc
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
-![Azure](../../images/nightscout1.png)
+![Azure](../images/nightscout1.png)
 
 * Spustelėkite "Išsaugoti" skydelio viršuje.
 
