@@ -21,7 +21,7 @@ Onder andere de volgende gegevens uit jouw instellingen worden ge-exporteerd:
 * `Automation <../Usage/Automation.html>`_ instellingen
 * `Configurator <../Configuration/Config-Builder.html>`_ instellingen
 * `Lokaal profiel <../Configuration/Config-Builder.html#lokaal-profiele-aanbevolen>`_ instellingen
-* Jouw voortgang door de `Doelen <../Usage/Objectives.html>`_ incl. `exam results <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
+* Jouw voortgang door de `Doelen <../Usage/Objectives.html>`_ incl. `examen resultaten <../Usage/Objectives.html#doel-3-bewijs-jouw-kennis>`_
 * `Instellingen <../Configuration/Preferences.html>`_ incl. `NS Client settings <../Configuration/Preferences.html#nsclient>`_
 
 Versleuteld instellingen-bestand
