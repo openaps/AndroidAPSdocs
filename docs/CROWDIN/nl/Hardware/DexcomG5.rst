@@ -13,9 +13,9 @@ G5 met aangepaste Dexcom G5 app
 ==================================================
 * Download de apk van `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, en kies de versie die je nodig hebt (mg/dl of mmol/l versie, voor G5).
 
-   * Map 2.3 is voor gebruikers van AndroidAPS 2.3, map 2.4 voor gebruikers van AAPS 2.5.1.
-   * Open https://play.google.com/store/search?q=dexcom%20g5 op jouw computer. Regio wordt weergegeven in URL.
-   
+  * Map 2.3 is voor gebruikers van AndroidAPS 2.3, map 2.4 voor gebruikers van AAPS 2.5.1.
+  * Open https://play.google.com/store/search?q=dexcom%20g5 op jouw computer. Regio wordt weergegeven in URL.
+
    .. image:: ../images/DexcomG5regionURL.PNG
      :alt: Regio in Dexcom G5 URL
 
