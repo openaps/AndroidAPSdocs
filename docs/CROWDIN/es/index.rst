@@ -115,7 +115,7 @@ AndroidAPS para niños
    
    Supervisión remota <./Children/Children.rst>
    Comandos SMS <./Children/SMS-Commands.rst>
-   Profile helper <.//Configuration/profilehelper.rst>
+   Profile helper <./Configuration/profilehelper.rst>
    
 
 Solución de problemas
