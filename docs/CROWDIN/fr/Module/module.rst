@@ -17,7 +17,7 @@ AndroidAPS n'est pas seulement une application (faite vous même), c'est juste u
 Composants Nécessaires
 ==================================================
 Un bon algorithme de dosage individuel pour votre diabète
---------------------------------------------------
+----------------------------------------------------------
 Même si ce n'est pas quelque chose à créer ou à acheter, c'est le "composant" qui est probablement le plus sous-estimé, mais essentiel. Quand vous laissez un algorithme vous aider à gérer votre diabète, il doit en connaître les bons réglages pour ne pas faire de graves erreurs.
 Même si d'autres composants vous manquent, vous pouvez déjà vérifier et adapter votre « profil » en collaboration avec votre équipe médicale. 
 La plupart des "boucleurs" utilisent le rythme circadien pour les DB, la SI et le G/I, qui adaptent la sensibilité à l'insuline hormonale durant la journée.
