@@ -2,7 +2,7 @@ Volgen op afstand
 **************************************************
 
 .. image:: ../images/KidsMonitoring.png
-  :alt: Toezicht op kinderen
+  :alt: Kinderen volgen
   
 AndroidAPS biedt verschillende opties voor het vanaf afstand volgen van kinderen en kan ook behandelings opdrachten verzenden vanaf afstand. Deze functies kun je natuurlijk ook gebruiken om jouw partner of andere dierbare op afstand te volgen.
 
@@ -12,7 +12,7 @@ Functies
 * Ouders kunnen op afstand volgen en alle relevante gegevens bekijken, zoals bloedglucose, koolhydraten aan boord, insuline aan boord etc. door middel van de ** NSClient app** op hun telefoon. De instellingen in zowel AndroidAPS en in NSClient moeten exact hetzelfde zijn.
 * Ouders kunnen glucose alarmen op hun telefoon ontvangen via de **xDrip+ app in 'follower' modus** op hun telefoon.
 * Besturing van AndroidAPS op afstand, met behulp van `SMS Commando's <../Children/SMS-Commands.html>`_ beveiligd door tweestaps authenticatie.
-* Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see 'release notes for Version 2.8.1.1 <https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#important-hints>'_ for further details.
+* Op afstand besturen via de NSClient app wordt alleen aanbevolen als synchronisatie naar behoren werkt (dwz je ziet geen ongewenste veranderingen in gegevens, zoals een TT, TBR etc die 'uit zichzelf' lijkt te zijn ingesteld) zie je `release-notes voor versie 2.8.1.1 <https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#important-hints>`_ voor meer details.
 
 Hulpmiddelen en apps voor controle op afstand
 --------------------------------------------------
