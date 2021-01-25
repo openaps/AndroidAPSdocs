@@ -103,8 +103,8 @@ Option 3 - Check for updates
 * Přepněte v Android Studiu na Terminal (ve spodní části vlevo v okně Android Studia)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
-   
+    :alt: Android Studio Terminal
+
 * Paste copied text and press return
 
   .. image:: ../images/GIT_TerminalCheckOut2.jpg
@@ -134,10 +134,9 @@ Nic z výše uvedeného nefunguje
 Jestliže žádný z uvedených tipů nepomáhá, zvažte sestavení aplikace úplně od začátku:
 
 1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
-2. Have your key password and key store password ready
-    In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
+2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
 3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
-4.	Jestliže jste úspěšně sestavili APK, odstraňte stávající aplikaci z telefonu a přeneste do něj a nainstalujte nový soubor apk.
+4. Jestliže jste úspěšně sestavili APK, odstraňte stávající aplikaci z telefonu a přeneste do něj a nainstalujte nový soubor apk.
 5. `Import settings <../Usage/ExportImportSettings.html>`_
 
 Nejčernější scénář
