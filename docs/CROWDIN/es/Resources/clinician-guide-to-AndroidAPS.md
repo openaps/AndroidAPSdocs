@@ -2,15 +2,15 @@
 
 Esta página está pensada para los profesionales que han expresado su interés en la tecnología de páncreas artificial de código abierto, como AndroidAPS, o para pacientes que desean compartir dicha información con sus médicos.
 
-Esta guía tiene alguna información de alto nivel sobre el lazo cerrado de DIY y específicamente cómo funciona AndroidAPS. Para obtener más detalles sobre todos estos temas, por favor vea la documentación completa de AndroidAPS [ en línea](http://androidaps.readthedocs.io/en/latest/index.html). Si tiene alguna pregunta, por favor pida a su paciente más detalles, o siempre sientase libre para llegar a la comunidad con alguna pregunta. (Si no estás en los medios sociales (por ejemplo, [Twitter](https://twitter.com/kozakmilos) o Facebook), se siente libre de enviar por correo electrónico a developers@AndroidAPS.org). [También puede encontrar algunos de los estudios más recientes & resultados relacionados aquí](https://openaps.org/outcomes/).
+Esta guía tiene alguna información de alto nivel sobre el lazo cerrado de DIY y específicamente cómo funciona AndroidAPS. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](../index.rst). Si tiene alguna pregunta, por favor pida a su paciente más detalles, o siempre sientase libre para llegar a la comunidad con alguna pregunta. (Si no estás en los medios sociales (por ejemplo, [Twitter](https://twitter.com/kozakmilos) o Facebook), se siente libre de enviar por correo electrónico a developers@AndroidAPS.org). [También puede encontrar algunos de los estudios más recientes & resultados relacionados aquí](https://openaps.org/outcomes/).
 
 ### Los pasos para crear un lazo cerrado de DIY:
 
 Para empezar a utilizar AndroidAPS, se deben realizar los pasos siguientes:
 
-* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
-* [Descarga el código fuente de AndroidAPS y construya el software](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
-* [Configure el software para que hable con sus dispositivos de diabetes y especifique los valores y las preferencias de seguridad](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
+* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../index.rst#getting-started).
+* [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.rst#configuration).
 
 ### Cómo funciona un lazo cerrado DIY
 
