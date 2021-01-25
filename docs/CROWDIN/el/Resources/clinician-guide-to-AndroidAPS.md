@@ -2,15 +2,15 @@
 
 Αυτή η σελίδα προορίζεται για κλινικούς ιατρούς που έχουν εκδηλώσει ενδιαφέρον για τεχνολογία τεχνητού παγκρέατος ανοιχτού κώδικα όπως το AndroidAPS ή για ασθενείς που επιθυμούν να μοιραστούν αυτές τις πληροφορίες με τους κλινικούς γιατρούς τους.
 
-Αυτός ο οδηγός περιέχει ορισμένες πληροφορίες υψηλού επιπέδου σχετικά με το κλειστό κύκλωμα DIY και συγκεκριμένα τον τρόπο λειτουργίας του AndroidAPS. Για περισσότερες λεπτομέρειες σχετικά με όλα αυτά τα θέματα, ανατρέξτε [στην πλήρη τεκμηρίωση του AndroidAPS online ](http://androidaps.readthedocs.io/en/latest/index.html). Εάν έχετε ερωτήσεις, ρωτήστε τον ασθενή σας για περισσότερες λεπτομέρειες ή αισθανθείτε ελεύθερος να απευθυνθείτε στην κοινότητα με ερώτησης. (Εάν δεν είστε σε κοινωνικά μέσα (π.χ. [ Twitter ](https://twitter.com/kozakmilos) ή Facebook), μην διστάσετε να στείλετε email στο developers@AndroidAPS.org). [ Μπορείτε επίσης να βρείτε μερικές από τις τελευταίες μελέτες & δεδομένα σχετικά με τα αποτελέσματα εδώ ](https://openaps.org/outcomes/).
+Αυτός ο οδηγός περιέχει ορισμένες πληροφορίες υψηλού επιπέδου σχετικά με το κλειστό κύκλωμα DIY και συγκεκριμένα τον τρόπο λειτουργίας του AndroidAPS. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](../index.rst). Εάν έχετε ερωτήσεις, ρωτήστε τον ασθενή σας για περισσότερες λεπτομέρειες ή αισθανθείτε ελεύθερος να απευθυνθείτε στην κοινότητα με ερώτησης. (Εάν δεν είστε σε κοινωνικά μέσα (π.χ. [ Twitter ](https://twitter.com/kozakmilos) ή Facebook), μην διστάσετε να στείλετε email στο developers@AndroidAPS.org). [ Μπορείτε επίσης να βρείτε μερικές από τις τελευταίες μελέτες & δεδομένα σχετικά με τα αποτελέσματα εδώ ](https://openaps.org/outcomes/).
 
 ### Τα βήματα για την οικοδόμηση ενός DIY κλειστού κυκλώματος:
 
 Για να ξεκινήσετε να χρησιμοποιείτε το AndroidAPS, ακολουθήστε τα παρακάτω βήματα:
 
-* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
-* [ Κάντε λήψη του πηγαίου κώδικα AndroidAPS και δημιουργήστε το λογισμικό ](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
-* [ Διαμορφώστε το λογισμικό για να μιλήσετε στις συσκευές διαβήτη και καθορίστε τις ρυθμίσεις και τις προτιμήσεις ασφαλείας ](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
+* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../index.rst#getting-started).
+* [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.rst#configuration).
 
 ### Πώς λειτουργεί ένα κλειστό κύκλωμα DIY
 
