@@ -23,7 +23,7 @@ Tout comme le pilote automatique dépend des valeurs du capteur ainsi que des sp
 
 
 Systèmes de boucle fermée de pancréas artificiels en Open Source
-==================================================
+===================================================
 À l'heure actuelle, il existe trois grands systèmes de boucle fermée en Open Source :
 
 AndroidAPS (AAPS)
