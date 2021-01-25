@@ -6,10 +6,12 @@ Additional useful information might also be available in the `FAQ <../Getting-St
 
 AndroidAPS app
 ==================================================
+
 Building & updating
------
+-------------------
 * `Lost keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
 * `Troubleshooting AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+
 Configurações
 --------------------------------------------------
 * `Profile <../Usage/Profiles.html#troubleshooting-profile-errors>`_
@@ -18,6 +20,7 @@ Configurações
     :alt: Error: Basal not aligned to hours
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
+
 Utilização
 --------------------------------------------------
 * `Wrong carb values <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
