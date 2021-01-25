@@ -2,15 +2,15 @@
 
 Deze pagina is bedoeld voor zorgprofessionals (zoals artsen en diabetesverpleegkundigen) die meer willen weten over 'open source' kunstmatige alvleesklier-technologie zoals AndroidAPS, of voor patiënten die informatie zoeken om te delen met hun arts/diabetesverpleegkundige.
 
-We geven u achtergrondinformatie over doe-het-zelf closed loop systemen, en gaan wat dieper in op hoe AndroidAPS werkt. Voor meer details over al deze onderwerpen, bekijk de [uitgebreide AndroidAPS documentatie online](http://androidaps.readthedocs.io/en/latest/index.html). Als u vragen hebt, dan kunt u uw patiënt benaderen, of stel uw vraag aan één van de gebruikersgroepen. Als u niet actief bent op sociale media (bijv. [Twitter](https://twitter.com/kozakmilos) of Facebook), schroom dan niet om een email te sturen naar de ontwikkelaars: developers@AndroidAPS.org Verder kunt u [op deze website](https://openaps.org/outcomes/) een aantal van de laatste studies vinden & gegevens over de resultaten van closed loopen.
+We geven u achtergrondinformatie over doe-het-zelf closed loop systemen, en gaan wat dieper in op hoe AndroidAPS werkt. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](../index.rst). Als u vragen hebt, dan kunt u uw patiënt benaderen, of stel uw vraag aan één van de gebruikersgroepen. Als u niet actief bent op sociale media (bijv. [Twitter](https://twitter.com/kozakmilos) of Facebook), schroom dan niet om een email te sturen naar de ontwikkelaars: developers@AndroidAPS.org Verder kunt u [op deze website](https://openaps.org/outcomes/) een aantal van de laatste studies vinden & gegevens over de resultaten van closed loopen.
 
 ### Het bouwen van een doe-het-zelf closed loop
 
 Om AndroidAPS te kunnen gebruiken, moet iemand de volgende dingen doen:
 
-* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
-* [Download de AndroidAPS broncode en bouw de app](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
-* [Koppel de app aan CGM en pomp en geef alle instellingen en veiligheidsgrenzen in](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
+* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../index.rst#getting-started).
+* [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.rst#configuration).
 
 ### Hoe een doe-het-zelf closed loop werkt
 
