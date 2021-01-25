@@ -13,9 +13,9 @@ Si utiliza G5 con la aplicación Dexcom parcheada
 ==================================================
 * Descargar el apk desde `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, y elegir la versión que más se adapte a sus necesidades (mg/dl o mmol/l versión, G5).
 
-   * Carpeta 2.3 es para los usuarios de AndroidAPS 2.3, carpeta 2.4 para los usuarios de la AAPS 2.5.
-   * Abrir https://play.google.com/store/search?q=dexcom%20g5 en tu ordenador. La región estará visible en el URL.
-   
+  * Carpeta 2.3 es para los usuarios de AndroidAPS 2.3, carpeta 2.4 para los usuarios de la AAPS 2.5.
+  * Abrir https://play.google.com/store/search?q=dexcom%20g5 en tu ordenador. La región estará visible en el URL.
+
    .. imagen:: ../images/DexcomG5regionURL.PNG
      :alt: Region en el URL Dexcom G5
 
