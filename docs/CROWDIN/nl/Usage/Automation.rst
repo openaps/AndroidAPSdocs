@@ -88,14 +88,14 @@ Na het toevoegen van jouw actie, **vergeet niet om de standaardwaarden** te vera
   :alt: Automatisering standaard vs. ingestelde waardes
 
 Automatiseringsregels sorteren
------
+---------------------
 Om jouw automatiseringsregels te sorteren, houd je de vier-streepjes-knop aan de rechterkant van het scherm ingedrukt en sleep je de regel omhoog of omlaag.
 
 .. image:: ../images/Automation_Sort.png
   :alt: Automatiseringsregels sorteren
   
 Automatiseringsregels verwijderen
------
+-----------------------
 Om een automatiseringsregel te verwijderen, klik op het prullenbak-icoon.
 
 .. image:: ../images/Automation_Delete.png
