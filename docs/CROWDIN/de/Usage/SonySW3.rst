@@ -9,12 +9,12 @@ Der nachfolgend beschriebene Workaround ermöglicht die Weiternutzung der Sony S
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 * Auf der `apkmirror Website <https://www.apkmirror.com/apk/google-inc/google-play-services-android-wear/>`_ findest Du die letzte APK der "Google Play Services (Wear OS)".
 
-   Architecture: armeabi-v7a, Minimum Version: Android 6.0+, Screen DPI: nodpi
+  Architecture: armeabi-v7a, Minimum Version: Android 6.0+, Screen DPI: nodpi
 
 * Du musst 2 Dinge sicherstellen:
 
-   * Ist es die neueste Version?
-   * Ist es kompatibel mit Android 6.0+? Da es die Android Wear Version ist, werden Version 7.0 und neuer nicht funktionieren.
+  * Ist es die neueste Version?
+  * Ist es kompatibel mit Android 6.0+? Da es die Android Wear Version ist, werden Version 7.0 und neuer nicht funktionieren.
 
 * Früher oder später wird Google Android 6.0 nicht mehr unterstützen. Ab diesem Zeitpunkt wird die letzte Version nicht mehr für Android 6.0 zur Verfügung stehen und damit die Nutzung der Sony Smartwatch 3 nicht mehr möglich sein.
 
@@ -47,12 +47,12 @@ Der nachfolgend beschriebene Workaround ermöglicht die Weiternutzung der Sony S
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 * Gib im Terminalfenster das Kommando „adb install -r -g aplicationname.apk“ (Wenn Du die APK-Datei wie oben vorgeschlagen benannt hast, lautet das korrekte Kommando „adb install -r -g SW3fix.apk“).
 
-   .. image:: ../images/SonySW3_Terminal1.png
-     :alt: Terminal Befehl
+  .. image:: ../images/SonySW3_Terminal1.png
+    :alt: Terminal Befehl
 
 * Warte 4 - 5 Minuten bis die Installation abgeschlossen ist. 
 
-.. image:: ../images/SonySW3_Terminal2.png
-     :alt: Terminal erfolgreiche Installation
+  .. image:: ../images/SonySW3_Terminal2.png
+    :alt: Terminal erfolgreiche Installation
 
 * Starte Deine Smartwatch neu nachdem die Installation abgeschlossen ist. Die Apps sollten sich dann direkt neu synchronisieren.
