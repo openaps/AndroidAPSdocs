@@ -13,9 +13,9 @@ Dexcom G5를 Dexcom 앱(패치버전)과 사용하는 경우
 ==================================================
 * 'https://github.com/dexcomapp/dexcomapp<https://github.com/dexcomapp/dexcomapp>'에서 apk를 다운로드하고 알맞은 버전을 선택하십시오 (G5의 mg/dl 또는 mmol/l 버전 중 선택).
 
-   * AndroidAPS 2.3 사용자는 폴더 2.3을, AAPS 2.5 이용자는 폴더 2.4를 사용하십시오.
-   * 컴퓨터에서 https://play.google.com/store/search?q=dexcom%20g5 사이트를 엽니다. Region will be visible in URL.
-   
+  * AndroidAPS 2.3 사용자는 폴더 2.3을, AAPS 2.5 이용자는 폴더 2.4를 사용하십시오.
+  * 컴퓨터에서 https://play.google.com/store/search?q=dexcom%20g5 사이트를 엽니다. Region will be visible in URL.
+
    .. image:: ../images/DexcomG5regionURL.PNG
      :alt: Region in Dexcom G5 URL
 
