@@ -87,9 +87,9 @@ Si usa imágenes por favor use tamaños razonables. Las imágenes de captura de 
 #### Enlaces
 
 * enlace externo: `[alt text](www.url.tld)`
-* enlace interno a archivo .md: `[alt text](.../folder/file.md)`
-* enlace interno a archivo .rst: `[alt text](.../folder/file.rst)`
-* enlace interno a tíyulo: `[alt text](.../folder/file#headline)`
+* internal link to .md page: `[alt text](../folder/file.md)`
+* internal link to .rst page: `[alt text](../folder/file.rst)`
+* internal link to headline: `[alt text](../folder/file#headline)`
 
 ### Archivos .rst
 
