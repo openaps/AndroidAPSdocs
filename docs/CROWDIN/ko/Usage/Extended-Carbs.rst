@@ -31,9 +31,9 @@ eCarbs는 홈 탭의 '탄수화물' 메뉴에서 기간, 전체 탄수화물양�
 
 -----
 
-OpenAPS SMB APS 플러그인을 사용해야 하고 SMBs는 SMB 활성화, COB 설정으로 활성화 된다.
+The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
 
-시나리오 예. 피자는 계산기 메뉴로 앞에 부분적인 bolus를 입력하고 1시간 또는 2시간 후에 소화될 4-6시간 동안 남아있는 탄수화물을 입력한다. 적절한 수치는 구체적인 값을 입력해 보고 그것을 확인하여 찾아야 한다. 또한 알고리즘을 더 안정적으로 만들거나 덜 공격적으로 만들기 위해 SMB를 제한하는 basal의 최대 분(max minutes) 을 신중하게 설정해야 한다.
+시나리오 예. for a Pizza might be to give a (partial) bolus up front via the *calculator* and then use the *carbs* button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours. 적절한 수치는 구체적인 값을 입력해 보고 그것을 확인하여 찾아야 한다. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive.
 저탄수화물, 고지방/고단백질 음식은 수동적인 bolus 없이 eCarbs만 사용해도 된다.(위의 블로그 포스트를 참고)
 
 eCarbs가 입력되면, 케어포털 메뉴는 더 쉽게 입력하게 만들어주고 모든 입력 내용을 문서화 한다.
