@@ -23,7 +23,7 @@ Stejně jako autopilot závisí na hodnotách ze senzorů i specifikacích pilot
 
 
 Open source systémy uzavřené smyčky APS
-==================================================
+===================================================
 V současnosti jsou k dispozici tři hlavní oper source systémy uzavřené smyčky:
 
 AndroidAPS (AAPS)
