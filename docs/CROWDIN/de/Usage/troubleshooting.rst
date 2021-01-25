@@ -6,10 +6,12 @@ Weitere nützliche Informationen findest Du auch in den `FAQ <../Getting-Started
 
 AndroidAPS app
 ==================================================
+
 Erstellen & Update
------
+-------------------
 * `Verlorener Keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.html#verlorener-keystore>`_
 * `Fehlerbehebung Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+
 Einstellungen
 --------------------------------------------------
 * `Profile <../Usage/Profiles.html#fehlerbehebung-bei-profil-fehlern>`_
@@ -18,6 +20,7 @@ Einstellungen
     :alt: Fehler: Basal ist nicht auf Stunden ausgerichtet
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
+
 Nutzung
 --------------------------------------------------
 * `Erkennung Fehlerhafter COB-Werte <../Usage/COB-calculation.html#erkennung-fehlerhafter-cob-werte>`_
