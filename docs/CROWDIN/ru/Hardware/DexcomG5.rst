@@ -13,9 +13,9 @@ Dexcom G5
 ==================================================
 * Скачайте приложение из `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, и выберите версию по вашим потребностям (mg/dl или mmol/l, G5).
 
-   * Папка 2.3 предназначена для пользователей AndroidAPS 2.3, папка 2.4 для пользователей AAPS 2.5.
-   * Откройте https://play.google.com/store/search?q=dexcom%20g5 на вашем компьютере. Регион будет виден в URL.
-   
+  * Папка 2.3 предназначена для пользователей AndroidAPS 2.3, папка 2.4 для пользователей AAPS 2.5.
+  * Откройте https://play.google.com/store/search?q=dexcom%20g5 на вашем компьютере. Регион будет виден в URL.
+
    .. изображение:../images/DexcomG5regionURL.PNG
      :alt: Регион в URL Dexcom G5
 
