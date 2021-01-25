@@ -226,7 +226,7 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 
 ![Insulin-Button](../images/Home2020_ButtonInsulin.png)
 
-* Um eine bestimmte Menge Insulin zu geben, ohne den [Bolus Rechner](../Getting-Started/Screenhots#bolus-rechner) zu verwenden.
+* Um eine bestimmte Menge Insulin zu geben, ohne den [Bolus Rechner](../Getting-Started/Screenshots#bolus-rechner) zu verwenden.
 * Durch Aktivieren des Kästchens können Sie automatisch Ihr [temporäres Ziel für bald Essen](../Configuration/Preferences#vordefinierte-temporare-ziele) starten.
 * Wenn das Insulin nicht durch die Pumpe abgegeben werden soll, sondern Du die Insulinmenge nur erfassen willst (z.B. Insulin mit Spritze gegeben), aktiviere das entsprechende Kästchen.
 
