@@ -103,8 +103,8 @@ Option 3 - Check for updates
 * Switch to Terminal in Android Studio (lower left side of Android Studio window)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
-   
+    :alt: Android Studio Terminal
+
 * Paste copied text and press return
 
   .. image:: ../images/GIT_TerminalCheckOut2.jpg
@@ -134,10 +134,9 @@ If you build the app successfully, transferred it to your phone and installed it
 Εάν δεν βοηθηθήκατε από τις παραπάνω συμβουλές, μπορείτε να εξετάσετε το ενδεχόμενο να δημιουργήσετε την εφαρμογή από την αρχή:
 
 1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
-2. Have your key password and key store password ready
-    In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
+2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
 3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
-4.	Όταν έχετε δημιουργήσει το APK, διαγράψτε με επιτυχία την εξερχόμενη εφαρμογή στο τηλέφωνό σας, μεταφέρετε το νέο APK στο τηλέφωνό σας και εγκαταστήστε το.
+4. Όταν έχετε δημιουργήσει το APK, διαγράψτε με επιτυχία την εξερχόμενη εφαρμογή στο τηλέφωνό σας, μεταφέρετε το νέο APK στο τηλέφωνό σας και εγκαταστήστε το.
 5. `Import settings <../Usage/ExportImportSettings.html>`_
 
 Στη χειρότερη περίπτωση
