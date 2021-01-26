@@ -164,8 +164,8 @@ AndroidAPS позволяет контролировать телефон реб
 * ПЕРЕЗАПУСТИТЬ NSCLIENT
   * Ответ: Перезапуск NSCLIENT 1 получатель
 * ПОМПА
-  * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
-* PUMP CONNECT
+  * Ответ: Последнее соед: 1 мин. назад -- Врем базал: 0.00ед/ч @11:38 5/30мин IOB: 0.5ед Резервуар: 34ед Бат: 100
+* СВЯЗЬ С ПОМПОЙ
   * Response: Pump reconnected
 * PUMP DISCONNECT *30*
   * Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
