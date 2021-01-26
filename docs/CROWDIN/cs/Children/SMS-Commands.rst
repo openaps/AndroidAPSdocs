@@ -147,7 +147,7 @@ Vzdálený bolus není povolen do 15 minut (tato hodnota je upravitelná pouze v
 Profil
 --------------------------------------------------
 * PROFILE STATUS
-   *Odpověď: Profile1
+   * Odpověď: Profile1
 * PROFILE LIST
    * Odpověď : 1.`Profile1` 2.`Profile2`
 * PROFILE 1

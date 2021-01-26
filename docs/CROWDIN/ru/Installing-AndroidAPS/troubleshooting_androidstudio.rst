@@ -89,7 +89,7 @@ ContextEdit.
 * возможно, git установлен неправильно (должен быть доступен по всему миру)
 * после установки Git в Windows и, нужно перезапустить компьютер или хотя бы раз выйти и снова войти в систему, чтобы сделать git глобально доступным
 * `Проверьте установку git <../Installing-AndroidAPS/git-install.html#check-git-settings-in-android-studio>`_
-* Если на вашем компьютере не отображается версия gti, но git установлен, убедитесь, что Android Studio знает, где находится `git. /Installing-AndroidAPS/git-install.html#set-git-path-in-android-studio>`_ на своем компьютере.
+* Если на вашем компьютере не отображается версия gti, но git установлен, убедитесь, что Android Studio знает, где находится `git <../Installing-AndroidAPS/git-install.html#set-git-path-in-android-studio>`_ на своем компьютере.
 
 Вариант 2 - Перезагрузка исходного кода
 --------------------------------------------------

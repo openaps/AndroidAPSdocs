@@ -27,7 +27,7 @@ Si vous utilisez le G6 avec xdrip+
 * Si vous ne l'avez pas déjà configuré, téléchargez `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ et suivez les instructions sur nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Sélectionnez xDrip dans le Générateur de configuration (dans AndroidAPS).
 * Réglez les paramètres dans xDrip+ comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_
-* Si AAPS ne reçoit pas de GLY quand le téléphone est en mode avion, utilisez `Identify receiver` comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_.
+* Si AAPS ne reçoit pas de GLY quand le téléphone est en mode avion, utilisez 'Identify receiver' comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_.
 
 Si vous utilisez le G6 avec l'application Dexcom patchée
 ==================================================

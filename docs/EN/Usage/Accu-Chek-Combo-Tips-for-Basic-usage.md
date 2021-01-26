@@ -40,7 +40,7 @@
 * To do this, long-press on **Closed Loop** on the main screen and select **Suspend loop for 1h**. 
 * Wait for the pump to communicate with the phone and the Bluetooth logo on the pump has faded.
 
-![Bluetooth enabled](../images/combo/combo-tips-combo-tips-compo.png)
+![Bluetooth enabled](../images/combo/combo-tips-compo.png)
 
 * Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery.
 * Then put the pump back in run mode select **Resume** when long-pressing on **Suspended** on the main screen.

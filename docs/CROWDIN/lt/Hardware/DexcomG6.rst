@@ -14,10 +14,10 @@ Naudoti G6 yra šiek tiek sudėtingiau, nei atrodė anksčiau. Norint jį naudot
 * Jei xDrip ar Spike naudojate natyvinius duomenis su kalibravimo kodu, saugumo sumetimais neturėtumėte leisti pakartotinio paleidimo iš naujo.
 * Jei vis dėlto naudojatės pakartotiniu paleidimu, tada jis turėtų būti daromas tokiu metu, kai galima stebėti pokyčius ir prireikus kalibruoti. 
 * Jei iš naujo paleisite sensorių, atlikite tai be gamyklinio kalibravimo, kad rezultatai būtų saugūs 11-ą ir 12-ą dieną, arba būkite pasirengę kalibruoti ir stebėti pokyčius.
-„Išankstinis įmirkymas“ (sensoriaus įvedimas daug anksčiau nei jo pradžia programoje) G6 su gamykliniu kalibravimu gali sukelti duomenų nukrypimus. Jei sensorių įvedate anksčiau, nei jį startuojate, gali reikėti jį kalibruoti, kad gautumėte geriausius rezultatus.
+  „Išankstinis įmirkymas“ (sensoriaus įvedimas daug anksčiau nei jo pradžia programoje) G6 su gamykliniu kalibravimu gali sukelti duomenų nukrypimus. Jei sensorių įvedate anksčiau, nei jį startuojate, gali reikėti jį kalibruoti, kad gautumėte geriausius rezultatus.
 * Jei neplanuojate sekti visų galimų nukrypimų, geriau grįžti į tradicinį kalibravimo režimą ir naudoti sistemą kaip G5.
 
-Norėdami gauti daugiau informacijos ir šių rekomendacijų priežastis, skaitykite `Tim Street <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ visą straipsnį svetainėje `www.diabettech.com<http://www.diabettech.com>`_.
+Norėdami gauti daugiau informacijos ir šių rekomendacijų priežastis, skaitykite `Tim Street <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ visą straipsnį svetainėje `www.diabettech.com <http://www.diabettech.com>`_.
 
 Jei naudojate G6 su xDrip+
 ==================================================

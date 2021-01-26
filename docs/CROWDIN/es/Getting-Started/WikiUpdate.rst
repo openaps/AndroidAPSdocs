@@ -89,11 +89,11 @@ Octubre 2019
 * `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#id16>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `Accuchek Insight - opciones de registro <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * `Cálculo COB en la página aparte <../Usage/COB-calculation.html>`_
-* `COB - Detección de valor erróneo de COB<../Usage/COB-calculation.html#detection-of-incorrecto-cob-values>`_
-* `Dexcom G6 específico resolución de problemas<../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_
+* `COB - Detección de valor erróneo de COB <../Usage/COB-calculation.html#detection-of-incorrecto-cob-values>`_
+* `Dexcom G6 específico resolución de problemas <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_
 * `Objetivos de la actualización de la versión 2.5 <../Usage/Objectives.html>`_
 * `Las preferencias de actualización <../Configuration/Preferences.html>`_
-* 'Los inhibidores de la SGLT-2 - no se utilizan cuando se está en lazo<../Module/module.html#no-use-of-sglt-2-inhibitors>`_
+* `Los inhibidores de la SGLT-2 - no se utilizan cuando se está en lazo <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
 * `Comandos SMS resolución de problemas <../Children/SMS-Commands.html#troubleshooting>`_
 * `xDrip - actualizar G6 reemplazo del transmisor <../Configuration/xdrip.html#replace-transmitter>`_
 

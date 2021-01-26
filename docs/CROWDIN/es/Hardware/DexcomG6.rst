@@ -17,7 +17,7 @@ Lo que está claro es que el uso del G6 es tal vez un poco más complejo que lo 
 * La preabsorción del G6 con calibración de fábrica es probable que dé variaciones en los resultados. Si haces preconfiguración, entonces para obtener los mejores resultados, probablemente necesitarás calibrar el sensor.
 * Si no estás observando los cambios que pueden estar teniendo lugar, puede ser mejor volver al modo no calibrado en fábrica y usar el sistema como un G5.
 
-Para obtener más información acerca de los detalles y las razones de estas recomendaciones, lea `el artículo completo <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ publicado por Tim Street en `www.diabettech.com<http://www.diabettech.com>`_.
+Para obtener más información acerca de los detalles y las razones de estas recomendaciones, lea `el artículo completo <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ publicado por Tim Street en `www.diabettech.com <http://www.diabettech.com>`_.
 
 Si se utiliza G6 con xdrip+
 ==================================================

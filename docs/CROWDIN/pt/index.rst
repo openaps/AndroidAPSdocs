@@ -59,7 +59,7 @@ Configuração do Componente
    
    CGM/FGM <./Configuration/BG-Source.rst>
    xDrip Settings <./Configuration/xdrip.md>
-   Bombas de Insulina<./Hardware/pumps.rst>
+   Bombas de Insulina <./Hardware/pumps.rst>
    Telefones <./Hardware/Phoneconfig.rst>
    Configuração do Nightscout <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch  <./Hardware/Smartwatch.rst>

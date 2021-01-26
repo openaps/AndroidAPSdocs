@@ -38,17 +38,17 @@ SGLT-2 억제제의 미사용
 The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
 Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>`_
 
-사용자들이 테스트된 핸드폰과 스마트워치 목록을 작성하고 `있으며<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_에서 확인하실 수 있습니다.
+사용자들이 테스트된 핸드폰과 스마트워치 목록을 작성하고 `있으며 <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ 에서 확인하실 수 있습니다.
 
-시트에 기록되어 있지 않은 핸드폰 혹은 시계를 추가하기 `위해서는 <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_에서 신청서를 작성해주시기 바랍니다.
+시트에 기록되어 있지 않은 핸드폰 혹은 시계를 추가하기 `위해서는 <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_ 에서 신청서를 작성해주시기 바랍니다.
 
-시트에 문제가 있는 경우에는 `hardware@androidaps.org <mailto:hardware@androidaps.org>`_으로 메일을 보내주시바랍니다. 핸드폰/시계를 기부하시는 경우에는 테스트가 필요함으로 `donations@androidaps.org <mailto:hardware@androidaps.org>`_으로 메일 보내주시기 바랍니다.
+시트에 문제가 있는 경우에는 `hardware@androidaps.org <mailto:hardware@androidaps.org>`_ 으로 메일을 보내주시바랍니다. 핸드폰/시계를 기부하시는 경우에는 테스트가 필요함으로 `donations@androidaps.org <mailto:hardware@androidaps.org>`_ 으로 메일 보내주시기 바랍니다.
 
 인슐린 펌프
 --------------------------------------------------
 안드로이드APS는 **현재** 아래의 펌프와 호환됩니다. 
 
-* `아큐첵 콤보 <../Configuration/Accu-Chek-Combo-Pump.html>`_ (추가적으로 필요한 사항: Ruffy 애플리케이션, LineageOS 또는 안드로이드 8.1 스마트폰)
+- `아큐첵 콤보 <../Configuration/Accu-Chek-Combo-Pump.html>`_ (추가적으로 필요한 사항: Ruffy 애플리케이션, LineageOS 또는 안드로이드 8.1 스마트폰)
 - `아큐첵 인사이트 <../Configuration/Accu-Chek-Insight-Pump.html>`_
 - `다나R <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
@@ -57,7 +57,7 @@ Users are strongly encouraged to keep their build of AndroidAPS up to date for s
 
 AndroidAPS와 호환될 수 있는 `가능성이 있는 **그외 펌프**는 <../Getting-Started/Future-possible-Pump-Drivers.html>`_ 페이지 '미래(가능한) 펌프'에 목록이 나와있습니다.
 
-만약 **개인적으로 구매**를 해야하는 경우에는 다양한 업자의 정보를 `이 스프레드시트<https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_'에서 찾을 수 있습니다. 만약 본인의 구매경로가 목록에 없는 경우에는 세부사항을 공유 부탁 드리겠습니다.
+만약 **개인적으로 구매**를 해야하는 경우에는 다양한 업자의 정보를 `이 스프레드시트 <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_ 에서 찾을 수 있습니다. 만약 본인의 구매경로가 목록에 없는 경우에는 세부사항을 공유 부탁 드리겠습니다.
 
 ** 그래서 어떤 펌프가 AndroidAPS의 최적된 펌프일까요?**
 
@@ -103,11 +103,11 @@ AAPS -.apk 파일
 --------------------------------------------------
 안드로이드 웨어 1.x이상의 스마트워치를 선택할 수 있습니다. 대부분의 loop사용자들은 소니 스마트 워치 3 (SWR50) 을 착용합니다. 그 이유는 폰이 범위 밖에 있을 때 덱스컴 G5/G5에서 혈당을 읽어올수 있기 때문입니다. 일부 다른 워치 중에서도 패치 이후에 독립형 수신기로 작동할 수 있습니다. (좀 더 자세한 사항은여기를 `this documentation <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ 참고해주시기 바랍니다.)
 
-사용자들이 테스트된 핸드폰과 시계 목록을 작성하고 `있으며<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_에서 확인하실 수 있습니다. Android Aps와 함께 사용할 수 있는 다른 워치들은 `여기서 <../Configuration/Watchfaces.html>`_ 확인하실 수 있습니다.
+사용자들이 테스트된 핸드폰과 시계 목록을 작성하고 `있으며 <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_에서 확인하실 수 있습니다. Android Aps와 함께 사용할 수 있는 다른 워치들은 `여기서 <../Configuration/Watchfaces.html>`_ 확인하실 수 있습니다.
 
-시트에 기록되어 있지 않은 핸드폰 혹은 시계를 추가하기 `위해서는 <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_에서 신청서를 작성해주시기 바랍니다.
+시트에 기록되어 있지 않은 핸드폰 혹은 시계를 추가하기 `위해서는 <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_ 에서 신청서를 작성해주시기 바랍니다.
 
-시트에 문제가 있는 경우에는 `hardware@androidaps.org <mailto:hardware@androidaps.org>`_으로 메일을 보내주시바랍니다. 핸드폰/시계를 기부하시는 경우에는 테스트가 필요함으로 `donations@androidaps.org <mailto:hardware@androidaps.org>`_으로 메일 보내주시기 바랍니다.
+시트에 문제가 있는 경우에는 `hardware@androidaps.org <mailto:hardware@androidaps.org>`_ 으로 메일을 보내주시바랍니다. 핸드폰/시계를 기부하시는 경우에는 테스트가 필요함으로 `donations@androidaps.org <mailto:hardware@androidaps.org>`_으로 메일 보내주시기 바랍니다.
 
 xDrip+
 --------------------------------------------------
@@ -121,14 +121,14 @@ Xdrip앱을 혈당소스로 해야할 필요는 없지만 예시로 사용해볼
    :maxdepth: 1
    :glob:
    
-   샘플 설정<../Getting-Started/Sample-Setup.rst>
+   샘플 설정 <../Getting-Started/Sample-Setup.rst>
  
   
 모듈을 대기하는 동안 수행할 작업들
 ==================================================
 Loop를 close하기 위해 모든 모듈을 가져오는데 가끔은 시간이 걸릴 수 있습니다. 하지만 기다리는 동안 이행해야 하는 작업들이 많기 때문에 걱정하지 마시기 바랍니다. 적응된 basal rate (BR), 인슐린-탄수화물비율 (IC), 인슐린 민감도 (ISF) 등 사용전에 꼭 확인해보시기 바랍니다. AdroidAPS에 익숙해지기 위해 시스템을 테스트 해보기 위해서는 open loop를 사용해보시는 것이 좋습니다. 이 모드를 사용하면 안드로이드APS가 제공하는 조언들을 수동으로 실행할 수 있습니다.
 
-여기서 문서를 계속 읽을 수 있고, 온라인 또는 오프라인의 다른 사용자들과 연락을 수 있으며, `<https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_에 있는 자료 및 다른 사용자들이 기록하는 사항들을 읽을 수 있습니다. (잘못된 정보도 있을 수 있으며 도움이 되지 않는 정보들도 있을 수 있으니 주의해주시기 바랍니다)
+여기서 문서를 계속 읽을 수 있고, 온라인 또는 오프라인의 다른 사용자들과 연락을 수 있으며, `<https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ 에 있는 자료 및 다른 사용자들이 기록하는 사항들을 읽을 수 있습니다. (잘못된 정보도 있을 수 있으며 도움이 되지 않는 정보들도 있을 수 있으니 주의해주시기 바랍니다)
 
 **모두 완료되셨나요?**
 AAPS 구성이 모두 완료되었거나(축하드립니다!) 혹은 open loop모드를 사용할 수 있을 정도로 완성 되셨다면 각각 새로운 목표를 이행 및 `하드웨어 <../index.html#component-setup>`_를 설정하시기 전에 `목표 설명 <../Usage/Objectives.html>`_을 먼저 읽어 보시길 추천드립니다.

@@ -17,7 +17,7 @@ Jei naudojate xDrip+
 * Jei dar neįdiegėte, atsisiųskite xDrip+ ir vadovaukitės instrukcijomis `LimiTTEer <https://github.com/JoernL/LimiTTer>`_, `Libre Alarm <https://github.com/pimpimmi/LibreAlarm/wiki>`_.
 * xDrip+ eikite į Settings > Interapp Compatibility > Broadcast Data Locally ir pasirinkite On.
 * xDrip+ eikite į Settings > Interapp Compatibility > Accept Treatments ir pasirinkite Off.
-*Jei norite naudotis AndroidAPS kalibracijoms, xDrip+ eikite į Settings > Interapp Compatibility > Accept Calibrations ir pasirinkite On.  Taip pat galbūt norėsite peržiūrėti kalibravimo parinktis Nustatymuose > Mažiau įprasti nustatymai > išplėstinės kalibravimo parinktys.
+* Jei norite naudotis AndroidAPS kalibracijoms, xDrip+ eikite į Settings > Interapp Compatibility > Accept Calibrations ir pasirinkite On.  Taip pat galbūt norėsite peržiūrėti kalibravimo parinktis Nustatymuose > Mažiau įprasti nustatymai > išplėstinės kalibravimo parinktys.
 * Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite xDrip.
 * xDrip+ nustatymus su ekranvaizdžiais žiūrėkite `xDrip+ nustatymų puslapyje <../Configuration/xdrip.html>`__. Tai yra dalis bazinių xDrip+ nustatymų bei xDrip+ nustatymų Freestyle Libre.
 * Jei AAPS negauna glikemijos duomenų, kai telefonas veikia skrydžio režimu, naudokite funkciją 'Nustatyti gavėją', kaip aprašyta `xDrip + nustatymų puslapyje <../Configuration/xdrip.html>`_.

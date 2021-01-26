@@ -47,7 +47,7 @@ Important hints
 ----------------------
 * **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo. 
 * `Objectives have changed. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
-* Repository location still on https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
+* Repository location still on `https://github.com/nightscout/AndroidAPS`_ . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
 * Please use `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Новые возможности
@@ -236,16 +236,15 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 --------------------------------------------------
 * Внутреннее изменение targetSDK на 28 (Android 9), поддержка jetpack
 * Поддержка RxJava2, Okhttp3, Retrofit
-*Поддержка старых помп `Medtronic <../Configuration/MedtronicPump.html>`_ поддержка (нужен RileyLink)
+* Поддержка старых помп `Medtronic <../Configuration/MedtronicPump.html>`_ поддержка (нужен RileyLink)
 * Новый модуль `Автоматизация <../Usage/Automation.html>`_
 * Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings-overview>`_ from bolus wizard calculation
 * Рендеринг активности инсулина
 * Корректировка прогнозов IOB с помощью результата autosense
-Новая поддержка модифицированных приложений Dexcom (<https://github.com/dexcomapp/dexcomapp/tree/master/2.4> папка 2.4)
+  Новая поддержка модифицированных приложений Dexcom `<https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_ папка 2.4)
 * Верификатор подписи
 * Возможность обойти цели пользователям OpenAPS
 * `Новые цели <../Usage/Objectives.html>`_-экзамен, обработка приложений
-   
    (Если вы начали хотя бы цель "открытый цикл" в предыдущих версиях экзамен не является обязательным.)
 * Исправлена ошибка в драйверах Dana*, где сообщалось о ложной разнице во времени
 * Исправлена ошибка в `SMS коммуникаторе <../Children/SMS-Commands.html>`_
@@ -319,7 +318,7 @@ ContextEdit
 
 Новые возможности
 --------------------------------------------------
-* Поддержка oref1/SMB (<https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>документация oref1). Обязательно прочтите документацию, чтобы знать, чего ожидать от SMB, как он себя поведет, чего может достичь и как добиться его ровной работы.
+* Поддержка `oref1/SMB <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ документация oref1). Обязательно прочтите документацию, чтобы знать, чего ожидать от SMB, как он себя поведет, чего может достичь и как добиться его ровной работы.
 * ` _Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ Поддержка помпы
 * Мастер установки: направляет вас через процесс настройки AndroidAPS
 
@@ -332,7 +331,7 @@ ContextEdit
 
    * Откройте окно настроек, нажав Файл > Настройки (на Mac, Android Studio > Настройки).
    * В левой панели нажмите Сборка, Выполнение, Развертывание > Компилятор.
-   Снимите флажок с ячейки "выборочная конфигурация".
+      Снимите флажок с ячейки "выборочная конфигурация".
    * Нажмите Применить или OK.
 
 Вкладка обзора

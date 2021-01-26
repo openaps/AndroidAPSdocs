@@ -27,12 +27,12 @@ Používáte-li G6 s aplikací xDrip+
 * If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
 * Nastavte `xDrip+ podle popisu konfigurace na stránce <../Configuration/xdrip.html>`_
-* Pokud AndroidAPS nepřijímá v režimu letadlo hodnoty glykémie, musíte nastavit `Identify receiver` tak, jak je popsáno v `nastavení xDrip+ <../Configuration/xdrip.html>`_.
+* Pokud AndroidAPS nepřijímá v režimu letadlo hodnoty glykémie, musíte nastavit 'Identify receiver' tak, jak je popsáno v `nastavení xDrip+ <../Configuration/xdrip.html>`_.
 
 Používáte-li G6 s upravenou Dexcom aplikací
 ==================================================
 * Stáhněte si apk z `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, 
-kde si podle používaných jednotek glykémie vyberte odpovídající G6 verzi (mg/dl nebo mmol/l).
+  kde si podle používaných jednotek glykémie vyberte odpovídající G6 verzi (mg/dl nebo mmol/l).
 
    * Folder 2.4 for users of the current version, folder 2.3 is only for the outdated AndroidAPS 2.3.
    * Otevřete https://play.google.com/store/search?q=dexcom%20g6 na svém počítači. 

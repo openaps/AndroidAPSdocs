@@ -323,7 +323,7 @@ Oznámení vyžadovaných sacharidů
 * V tomto případě obdržíte oznámení, které může být odloženo na 5, 15 nebo 30 minut.
 * Kromě toho se na domovské obrazovce v sekci COB zobrazí požadované sacharidy.
 * Prahovou hodnotu lze nastavit - minimální množství sacharidů potřebných ke spuštění oznámení. 
-*V případě potřeby může být notifikace vyžadovaných sacharidů odeslána do Nightscoutu. Notifikace se pak zobrazí v Nightscoutu a bude vysílána.
+* V případě potřeby může být notifikace vyžadovaných sacharidů odeslána do Nightscoutu. Notifikace se pak zobrazí v Nightscoutu a bude vysílána.
 
   .. image:: ../images/Pref2020_CarbsRequired.png
     :alt: Zobrazení požadovaných sacharidů na domovské obrazovce

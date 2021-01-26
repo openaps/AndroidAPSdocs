@@ -103,7 +103,7 @@ Rugsėjis 2019
 * `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorbtion
 * `Nightscout saugumas <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
 * `Profile timeshift <../Usage/Profiles.html#time-shift>`_ (more details)
-* `Nuotolinis stebėjimas<../Children/Children.html>`_
+* `Nuotolinis stebėjimas <../Children/Children.html>`_
 * `Kas yra uždaro ciklo sistema? <../Getting-Started/ClosedLoop.html>`_
 
 Rugpjūtis 2019

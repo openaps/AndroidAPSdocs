@@ -8,7 +8,7 @@ Fonte de Glic.
    
    Geral <../Hardware/GeneralCGMRecommendation.rst>
    Suavização de Dados <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
-   xDrip+ Configurações<./xdrip.md>
+   xDrip+ Configurações <./xdrip.md>
    Dexcom G6 <../Hardware/DexcomG6.rst>
    Dexcom G5 <../Hardware/DexcomG5.rst>
    Dexcom G4 <../Hardware/DexcomG4.rst>

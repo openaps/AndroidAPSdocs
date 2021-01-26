@@ -46,7 +46,7 @@ Důležitá poznámky
 ----------------------
 * **Minimální verze Androidu je teď 8.0.** Pro starší verze Androidu lze stále použít verzi 2.6.1.4 ze starého úložiště kódů. 
 * `Cíle byly změněny. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
-Umístění kódů bylo změněno na https://github.com/nightscout/AndroidAPS . Pokud se nevyznáte v práci s nástrojem git, nejjednodušší způsob aktualizace je odstranění staré verze a vytvoření `nového klonu kódu<../Installing-AndroidAPS/Building-APK.html>`_.
+  Umístění kódů bylo změněno na https://github.com/nightscout/AndroidAPS . Pokud se nevyznáte v práci s nástrojem git, nejjednodušší způsob aktualizace je odstranění staré verze a vytvoření `nového klonu kódu <../Installing-AndroidAPS/Building-APK.html>`_.
 * K sestavení APK použijte `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
@@ -360,7 +360,7 @@ Různé
 * Přepracovaná Konfigurace a Cíle, přídány popisky
 * Nová ikona aplikace
 * Spousty vylepšení a oprav chyb
-* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see _Local alerts_ in settings)
+* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Možnost ponechat obrazovku trvale zapnutou
 * Možnost zobrazovat upozornění jako Android notifikace
 * Rozšířené filtrování (dovolující mít povolené SMB i více než 6 h po jídle) je podporováno Dexcom upravenou aplikací a xDripem v nativním módu.

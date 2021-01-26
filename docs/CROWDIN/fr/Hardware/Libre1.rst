@@ -20,10 +20,10 @@ Si vous utilisez xDrip+
 * Si vous voulez pouvoir utiliser AndroidAPS pour calibrer, alors dans xDrip, allez dans Paramètres > Inter-app settings > Accept Calibrations et sélectionnez ON.  Vous pouvez également consulter les options dans Paramètres > Paramètres moins courants > Paramètres Avancés de Calibration.
 * Sélectionnez xDrip dans le Générateur de configuration (dans AndroidAPS).
 * Pour paramétrer xDrip+ voir la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_ avec les copies d'écrans. Il y a une partie pour les paramètres de base xDrip+ et une pour les paramètres spécifiques au Freestyle Libre.
-* Si AAPS ne reçoit pas de Glycémie lorsque le téléphone est en mode avion, utilisez `Identify receiver` comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_.
+* Si AAPS ne reçoit pas de Glycémie lorsque le téléphone est en mode avion, utilisez 'Identify receiver' comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_.
 
 Si vous utilisez Glimp
 ==================================================
 * Vous aurez besoin de Glimp version 4.15.57 ou plus récente. Les versions plus anciennes ne sont pas prises en charge.
-* Si vous ne l'avez pas déjà configuré, téléchargez Glimp et suivez les instructions sur `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>Nightscout`_.
+* Si vous ne l'avez pas déjà configuré, téléchargez Glimp et suivez les instructions sur `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_.
 * Sélectionnez Glimp dans ConfigBuilder (Menu Paramètres dans AndroidAPS).

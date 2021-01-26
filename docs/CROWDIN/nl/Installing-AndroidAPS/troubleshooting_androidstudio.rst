@@ -2,7 +2,7 @@ Problemen met Android Studio oplossen
 **************************************************
 Keystore (digitale handtekening) kwijt
 ==================================================
-Het is het makkelijkste om steeds hetzelfde keystore-bestand te gebruiken bij het updaten van AndroidAPS, omdat jouw telefoon dan de nieuwe versie van de app herkent als update van jouw bestaande app. Je laat de bestaande app gewoon op je telefoon staan, je installeert de nieuwe eroverheen en al jouw instellingen blijven behouden. Daarom moet je jouw keystore bestand (eindigt op *.jks) opslaan en bewaren op jouw computer.
+Het is het makkelijkste om steeds hetzelfde keystore-bestand te gebruiken bij het updaten van AndroidAPS, omdat jouw telefoon dan de nieuwe versie van de app herkent als update van jouw bestaande app. Je laat de bestaande app gewoon op je telefoon staan, je installeert de nieuwe eroverheen en al jouw instellingen blijven behouden. Daarom moet je jouw keystore bestand (eindigt op .jks) opslaan en bewaren op jouw computer.
 
 Mocht je jouw oude keystore bestand toch niet meer kunnen vinden, dan heb je een paar extra stappen nodig bij het updaten van de app, om de instellingen in jouw AAPS app te behouden:
 
@@ -19,7 +19,7 @@ Kotlin compiler warning
 ==================================================
 Als je de app succesvol hebt gebouwd, maar je krijgt een Kotlin compiler waarschuwing dan kun je deze negeren. 
 
-Je kunt verdergaan met het overzetten van de app (*.apk bestand) naar je telefoon.
+Je kunt verdergaan met het overzetten van de app (.apk bestand) naar je telefoon.
 
 .. image:: ../images/GIT_WarningIgnore.PNG
   :alt: negeer Kotlin compiler waarschuwing

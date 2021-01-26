@@ -35,11 +35,11 @@ DIY CGM 소프트웨어 또는 공식 앱을 사용하든 사용하지 않든, �
 
 튀는 혈당값
 --------------------------------------------------
-노이즈 차단을 위해 xDrip에서 설정을 바꿔볼 수 있습니다 (설정 - Inter-app settings - Noise Blocking). "Block Very High noise and worse" 을 선택합니다. `혈당 데이터의 평탄화<../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_내용도 확인하십시오.
+노이즈 차단을 위해 xDrip에서 설정을 바꿔볼 수 있습니다 (설정 - Inter-app settings - Noise Blocking). "Block Very High noise and worse" 을 선택합니다. `혈당 데이터의 평탄화 <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ 내용도 확인하십시오.
 
 잘못된 sensor 사용 기간 (마이너스 값)
 --------------------------------------------------
 .. image:: ../images/Troubleshooting_SensorAge.png
   :alt: 잘못된 센서 사용 기간 (마이너스 값)
 
-이는 실행 탭 / 메뉴<../Configuration/Config-Builder.html#actions"에서 "CGM 센서 삽입"을 이중으로 입력했거나 잘못된 날짜를 입력한 경우에 발생합니다. 관리 탭 > 케어포털에서 잘못 입력한 내용을 삭제하십시오.
+이는 실행 `탭 / 메뉴 <../Configuration/Config-Builder.html#actions>`_ 에서 "CGM 센서 삽입"을 이중으로 입력했거나 잘못된 날짜를 입력한 경우에 발생합니다. 관리 탭 > 케어포털에서 잘못 입력한 내용을 삭제하십시오.

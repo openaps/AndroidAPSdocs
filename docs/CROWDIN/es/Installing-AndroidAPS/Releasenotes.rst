@@ -360,7 +360,7 @@ Misceláneo
 * Revisión para las pestañas del constructor de configuración y objetivos, añadiendo descripciones
 * Nuevo icono de la aplicación
 * Muchas mejoras y correcciones de errores
-* Alertas independientes de Nightscout si la bomba es inalcanzable durante más tiempo (p.ej. batería de bomba agotada) y lecturas de BG perdidas (ver _Local alerts_ en configuración)
+* Alertas independientes de Nightscout si la bomba es inalcanzable durante más tiempo (p.ej. batería de bomba agotada) y lecturas de BG perdidas (ver *Local alerts* en configuración)
 * Opción para mantener la pantalla encendida
 * Opción de mostrar notificaciónes como notificación Android
 * Filtrado avanzado (que permite siempre habilitar SMB y 6h después de las comidas) soportado con el app de Dexcom o xDrip patched con el modo nativo G5 como fuente BG.
