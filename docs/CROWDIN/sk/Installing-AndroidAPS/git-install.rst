@@ -34,7 +34,7 @@ Windows
 
 * In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
 * Use `search function <https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html>`_ in windows explorer to find "git.exe" if you are unsure where it can be found. You are looking for git.exe located in \bin\ folder.
-* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
+* Select path to git.exe and make sure you selected the one in **\\bin\\** folder (3.) and click "OK" (4.).
 * Close settings window by clicking "OK" button (5.).
 
   .. image:: ../images/AndroidStudio361_11.png

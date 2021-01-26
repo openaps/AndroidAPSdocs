@@ -9,7 +9,7 @@ AndroidAPS oferă mai multe opțiuni pentru monitorizarea la distanță a copiil
 Functii
 ==================================================
 * Pompa este controlată de telefonul copilului folosind AndroidAPS.
-* Părinţii pot vedea de la distanţă toate datele importante, cum ar fi valorile glicemiei, carbohidratii din organism, insulina din corp etc. folosind ** NSClient app * * pe telefonul lor. Setările trebuie să fie aceleași pentru AndroidAPS și NSClient.
+* Părinţii pot vedea de la distanţă toate datele importante, cum ar fi valorile glicemiei, carbohidratii din organism, insulina din corp etc. folosind **NSClient app** pe telefonul lor. Setările trebuie să fie aceleași pentru AndroidAPS și NSClient.
 * Părinții pot avea alarme pe telefonul lor folosind aplicația **xDrip+ în modul follower**.
 * Control de la distanță al AndroidAPS folosind `SMS Commands <../Children/SMS-Commands.html>`_ securizat prin autentificarea cu doi factori.
 * Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see `release notes for Version 2.8.1.1 <https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for further details.
@@ -20,7 +20,7 @@ Instrumente și aplicații pentru monitorizare la distanță
 * Aplicaţia NSClient
 * Aplicația Dexcom Flollow dacă folosiți aplicația Dexcom originală (doar valorile glicemiei)
 * <unk> `xDrip+ <../Configuration/xdrip.html>`_ în modul follower (în principal valori ale glicemiei și **alarme**)
-* `Sugarmate <https://sugarmate.io/>`_ sau ` Spike <https://spike-app.com/>`_ pe iOS (in principal valori ale glicemiei si ** alarme**)
+* `Sugarmate <https://sugarmate.io/>`_ sau ` Spike <https://spike-app.com/>`_ pe iOS (in principal valori ale glicemiei si **alarme**)
 
 Lucrurile de luat în considerare
 ==================================================

@@ -17,7 +17,7 @@ Autopilotas priima signalus iš įvairių jutiklių, kompiuteris juos įvertina 
 
 Tas pats pasakytina ir apie dirbtinę kasos sistemą. Ji neatlieka visų darbų, vis tiek turite kontroliuoti savo diabetą. Uždaro ciklo sistema sujungia stebėjimo sensoriaus duomenis su diabeto valdymo parametrais, tokiais kaip valandinė bazė, jautrumo insulinui faktorius ir angliavandenių santykis. Remdamasi tuo, ji apskaičiuoja terapijos pasiūlymus ir atlieka nuolatinius mažus koregavimus, kad diabetas išliktų tiksliniame diapazone ir išgelbėtų jus nuo šios priežiūros. Tai palieka daugiau laiko GYVENTI sergant diabetu.
 
-Lygiai taip pat, kaip niekas nenori patekti į lėktuvą, kurį valdo tik autopilotas be žmogaus kontrolės, uždaro ciklo sistema padeda mums valdyti diabetą, tačiau visada reikia mūsų palaikymo! ** Net ir uždaro ciklo režime jūs negalite tiesiog pamiršti savo diabeto! **
+Lygiai taip pat, kaip niekas nenori patekti į lėktuvą, kurį valdo tik autopilotas be žmogaus kontrolės, uždaro ciklo sistema padeda mums valdyti diabetą, tačiau visada reikia mūsų palaikymo! **Net ir uždaro ciklo režime jūs negalite tiesiog pamiršti savo diabeto!**
 
 Panašiai, kaip autopilotas priklauso nuo jutiklių ir pilotų nustatytų parametrų, norint sėkmingai palaikyti jūsų kūną, uždaro ciklo sistemai reikalingi atitinkami įvesties duomenys, tokie kaip valandinė bazė, jautrumo insulinui faktorius ir angliavandenių santykis.
 

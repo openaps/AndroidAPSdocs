@@ -47,7 +47,7 @@ Hlavní heslo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Abyste mohli `exportovat nastavení <../Usage/ExportImportSettings.html>`_, je nutné nastavit hlavní heslo. Od verze 2.7 jsou totiž exporty šifrované.
 
-   ** Biometrická ochrana nefunguje na telefonech OnePlus. Jde o známý problém OnePlus.**
+   **Biometrická ochrana nefunguje na telefonech OnePlus. Jde o známý problém OnePlus.**
 
 * Klepnutím na tři tečky v pravém horním rohu hlavní obrazovky otevřete Nastavení
 * Klepněte na trojúhelník pod "Obecné"
@@ -91,7 +91,7 @@ Vzhled
 
 Na výšku
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-* ** Původní vzhled** a **Tlačítka jsou vždy zobrazena na spodní části obrazovky** jsou stejné
+* **Původní vzhled** a **Tlačítka jsou vždy zobrazena na spodní části obrazovky** jsou stejné
 * **Velký displej** v porovnání s ostatními vzhledy má větší velikost grafů
 
 Na šířku

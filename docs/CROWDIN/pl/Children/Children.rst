@@ -9,8 +9,8 @@ AndroidAPS oferuje kilka opcji do zdalnego monitorowania dzieci, a także pozwal
 Funkcje
 == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 * Pompa dziecka jest kontrolowana przez telefon dziecka z AndroidAPS.
-* Rodzice mogą zdalnie śledzić wszystkie istotne dane, takie jak poziom glukozy, węglowodany na pokładzie, insulina na pokładzie itp. przy użyciu aplikacji ** NSClient * * na swoim telefonie. Ustawienia muszą być takie same w AndroidAPS i NSClient.
-* Rodzice mogą być alarmowani za pomocą aplikacji ** xDrip w trybie follower ** na swoim telefonie.
+* Rodzice mogą zdalnie śledzić wszystkie istotne dane, takie jak poziom glukozy, węglowodany na pokładzie, insulina na pokładzie itp. przy użyciu aplikacji **NSClient** na swoim telefonie. Ustawienia muszą być takie same w AndroidAPS i NSClient.
+* Rodzice mogą być alarmowani za pomocą aplikacji **xDrip w trybie follower** na swoim telefonie.
 * Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_ secured by two-factor authentication.
 * Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see `release notes for Version 2.8.1.1 <https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for further details.
 
@@ -19,7 +19,7 @@ Narzędzia i aplikacje do zdalnego monitorowania
 * `Nightscout <http://www.nightscout.info/>`_ w przeglądarce internetowej (głównie wyświetlanie danych)
 * Aplikacja NSClient
 * Dexcom follow, jeśli korzystasz z oryginalnej aplikacji Dexcom (tylko wartości BG)
-* `xDrip + <../ Configuration / xdrip.html>`_ w trybie follower (głównie wartości BG i ** alarmy **)
+* `xDrip + <../ Configuration / xdrip.html>`_ w trybie follower (głównie wartości BG i **alarmy**)
 *	`Sugarmate <https://sugarmate.io/>`_ or `Spike <https://spike-app.com/>`_ on iOS (mainly BG values and **alarms**)
 
 Zagadnienia do rozważenia

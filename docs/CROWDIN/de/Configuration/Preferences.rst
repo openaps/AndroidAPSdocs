@@ -47,7 +47,7 @@ Master-Passwort
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Die `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ sind ab Version 2.7 verschlüsselt.
 
-   ** Biometrischer Schutz funktioniert nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus.**
+   **Biometrischer Schutz funktioniert nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus.**
 
 * Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 * Klicke das Dreieck neben "Allgemein".
@@ -92,12 +92,12 @@ Erscheinungsbild
 Hochformat
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * **Ursprüngliches Erscheinungsbild** und **Schaltflächen werden immer am unteren Rand des Bildschirms angezeigt** sind identisch.
-* ** Großer Bildschirm * * zeigt alle Diagramme größer an.
+* **Großer Bildschirm** zeigt alle Diagramme größer an.
 
 Querformat
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * Bei Verwendung von **Ursprüngliches Erscheinungsbild** und **Großer Bildschirm**, musst Du nach unten scrollen, um Schaltflächen am unteren Rand des Bildschirms zu sehen
-* ** Großer Bildschirm * * zeigt alle Diagramme größer an.
+* **Großer Bildschirm** zeigt alle Diagramme größer an.
 
   .. image:: ../images/Screenshots_Skins.png
     :alt: Darstellungsart abhängig von der Ausrichtung des Smartphones

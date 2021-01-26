@@ -78,7 +78,7 @@ Použití SMS příkazů
    * TOTP token z autentizační aplikace je 457051
    * Zadejte 4570512020
 
-**Tip: Jestliže budete posílat větší množství SMS, je výhodné mít na obou mobilech SMS paušál.
+**Tip**: Jestliže budete posílat větší množství SMS, je výhodné mít na obou mobilech SMS paušál.
 
 Příkazy
 ==================================================
@@ -109,7 +109,7 @@ CGM data
    * Odpověď: poslední BG: 5.6 před 4min Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)
 * CAL 5.6
    * Odpověď: Pro odeslání kalibrace 5.6 odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
-   * Odpověď po přijetí správného potvrzovacího kódu: Kalibrace odeslána (*je-li instalovaný xDrip. V xDrip+ musí být povolen příjem kalibrací**)
+   * Odpověď po přijetí správného potvrzovacího kódu: Kalibrace odeslána (**je-li instalovaný xDrip. V xDrip+ musí být povolen příjem kalibrací**)
 
 Bazál
 --------------------------------------------------

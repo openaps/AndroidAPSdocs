@@ -13,7 +13,7 @@ El piloto automático no hace el trabajo completo y no permite al piloto de dorm
 
 El piloto automático recibe señales de varios sensores, un ordenador los evalúa junto con las especificaciones del piloto y luego realiza los ajustes necesarios. El piloto ya no tiene que preocuparse por ir ajustando constantemente.
 
-** Sistema de Lazo Cerrado * *
+**Sistema de Lazo Cerrado**
 
 Lo mismo se aplica a un páncreas artificial con sistema de lazo cerrado. No hace todo el trabajo, todavía tienes que cuidar de tu diabetes. Un sistema de lazo cerrado combina los datos del sensor de un MCG/FGM con tus especificaciones de gestión de diabetes, como la tasa basal, el factor de sensibilidad a insulina y los ratios de hidratos. A partir de esto calcula sugerencias de tratamiento e implementa pequeños ajustes constantemente para mantener tu diabetes dentro del rango objetivo y para ayudarte en ese trabajo. Esto deja más tiempo para el lado "no diabético" de tu vida.
 

@@ -373,7 +373,7 @@ Champs Appareil (4) - Avec un Pod actif
 	* **Fréquence de pompe :** Fréquence radio que le périphérique de communication pod a ajustée pour communiquer avec le pod.
 	* **Dernière fréquence utilisée :** Dernière fréquence radio connue que le pod a utilisé pour communiquer avec le périphérique de communication pod.
 	* **Dernier contact appareil :** Date et heure du dernier contact que le périphérique de communication pod a eu avec le pod.
-	* ** Bouton Actualiser** Actualiser manuellement les informations de cette page.
+	* **Bouton Actualiser** Actualiser manuellement les informations de cette page.
 
 RileyLink et historique du Pod Actif
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

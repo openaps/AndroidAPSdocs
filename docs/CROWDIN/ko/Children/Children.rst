@@ -8,15 +8,15 @@ AndroidAPS는 아이들을 모니터링 하기 위한 몇가지 옵션을 제공
 
 기능
 ==================================================
-AndroidAPS를 사용하면 아이들의 펌프는 아이들의 폰으로 제어될 수 있다.
-부모는 원격에서 혈당, COB 그리고 IOB 등과 같은 수치를 볼 수 있다. 부모폰의 **NSClient app**을 통해. AndroidAPS와 NSClient에서의 설정은 동일해야 합니다.
-* 부모님폰에서 **xDrip+의 팔로워 모드**를 이용하면 알람을 받을 수 있습니다.
+* AndroidAPS를 사용하면 아이들의 펌프는 아이들의 폰으로 제어될 수 있다.
+* 부모는 원격에서 혈당, COB 그리고 IOB 등과 같은 수치를 볼 수 있다. 부모폰의 **NSClient app** 을 통해. AndroidAPS와 NSClient에서의 설정은 동일해야 합니다.
+* 부모님폰에서 **xDrip+의 팔로워 모드** 를 이용하면 알람을 받을 수 있습니다.
 * Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_ secured by two-factor authentication.
 * Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see `release notes for Version 2.8.1.1 <https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for further details.
 
 원격 모니터링을 위한 도구와 앱
 --------------------------------------------------
-* `Nightscout 앱 <http://www.nightscout.info/>`_웹 브라우저 (주로 출력되는 데이터)
+* `Nightscout 앱 <http://www.nightscout.info/>`_ 웹 브라우저 (주로 출력되는 데이터)
 *	NSClient 앱
 *	만약 Dexcom follow 앱을 이용한다면 (혈당 값만)
 * `xDrip+ <../Configuration/xdrip.html>`_ 팔로워 모드 (주로 혈당과 **알람**)

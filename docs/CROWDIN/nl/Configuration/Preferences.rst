@@ -15,7 +15,7 @@ Instellingen
   .. image:: ../images/Pref2020_Submenu2.png
     :alt: Open submenu
 
-* Met de ** filter** functie bovenaan het instellingenscherm kun je snel naar bepaalde voorkeuren gaan. Begin simpelweg een deel van de tekst die je zoekt, te typen.
+* Met de **filter** functie bovenaan het instellingenscherm kun je snel naar bepaalde voorkeuren gaan. Begin simpelweg een deel van de tekst die je zoekt, te typen.
 
   .. image:: ../images/Pref2021_Filter.png
     :alt: Instellingen filter

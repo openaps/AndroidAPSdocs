@@ -57,7 +57,7 @@ AndroidAPS **šiuo metu** veikia su
 
 ** Kitos pompos**, kurios ateityje gali veikti su AndroidAPS, yra išvardytos puslapyje `Ateityje galimos naudoti pompos <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
-Jei norite įsigyti pompą ** savo lėšomis **, tiekėjų adresus skirtingose šalyse galite rasti `šioje lentelėje <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_. Prašome užpildyti savo pardavėjo informaciją, jei ji dar nėra joje nurodyta.
+Jei norite įsigyti pompą **savo lėšomis**, tiekėjų adresus skirtingose šalyse galite rasti `šioje lentelėje <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_. Prašome užpildyti savo pardavėjo informaciją, jei ji dar nėra joje nurodyta.
 
 **Kuri pompa labiausiai tinka uždaro ciklo sistemai su AndroidAPS?**
 

@@ -17,7 +17,7 @@ Closed loop 시스템이란 어떤 것일까요?
 
 인공 췌장 closed loop 시스템은 오토파일럿과 유사하다고 볼 수 있습니다. 이 시스템이 모든 관리를 대신 해주는 것이 아니며, 사용자는 계속해서 당뇨병 관리에 신경써야합니다. Closed loop 시스템은 CGM/FGM의 센서 데이터와 사용자의 당뇨병 관리 인자(basal 양, 인슐린 민감도 인자 (ISF), 인슐린 탄수화물 비율 (IC) 등)을 결합하여 작동합니다. From this it calculates treatment suggestions and implements these permanent small adjustments in order to keep your diabetes within the target range and to relieve you. 이것은 당뇨병 관리에 "함께 해줌으로써" 사용자의 삶에 시간 여유를 만들어 줍니다.
 
-우리가 사람 관리자 없이 오토파일럿만 있는 비행기에 탑승하고 싶지 않은 것처럼, closed loop 시스템은 당뇨병 관리를 도와주지만 반드시 사용자의 도움이 필요합니다! **Closed loop을 사용할지라도 당뇨병 관리를 완전히 잊어서는 안됩니다! **
+우리가 사람 관리자 없이 오토파일럿만 있는 비행기에 탑승하고 싶지 않은 것처럼, closed loop 시스템은 당뇨병 관리를 도와주지만 반드시 사용자의 도움이 필요합니다! **Closed loop을 사용할지라도 당뇨병 관리를 완전히 잊어서는 안됩니다!**
 
 오토파일럿이 조종사의 설정 뿐만 아니라 센서 값들에 의존하는 것과 같이, AAPS에서도 적절한 basal 양, ISF, 인슐린 탄수화물 비율 (CR) 등을 적절하게 입력해야 closed loop 시스템이 사용자를 성공적으로 보조할 수 있습니다.
 

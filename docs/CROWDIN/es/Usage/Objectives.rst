@@ -48,7 +48,8 @@ Objetivo 4: Iniciar en un lazo abierto
 
 Reducir el número de notificaciones
 --------------------------------------------------
-* Para reducir el número de decisiones que se tomarán mientras se encuentra en Lazo abierto se establece un rango de objetivo de alcance amplio como 90-150 mg/dl o 5,0-8,5 mmol/l. * Es posible que incluso desee ampliar el límite superior (o inhabilitar el Lazo Abierto) en la noche. 
+* Para reducir el número de decisiones que se tomarán mientras se encuentra en Lazo abierto se establece un rango de objetivo de alcance amplio como 90-150 mg/dl o 5,0-8,5 mmol/l. 
+* Es posible que incluso desee ampliar el límite superior (o inhabilitar el Lazo Abierto) en la noche. 
 * En Preferencias, puede establecer un porcentaje mínimo para la sugerencia de cambio de tasa basal.
 
    .. image:: ../images/OpenLoop_MinimalRequestChange2.png

@@ -41,8 +41,8 @@ Hay algunos límites:
 
 **Por favor, tenga cuidado:**
 
-* ** menos de -2 significa: -3 e inferiores (-4, -10, etc)**
-* ** más de 2 significa: -1 y superiores (-1, 0, + 10, etc)**
+* **menos de -2 significa: -3 e inferiores (-4, -10, etc)**
+* **más de 2 significa: -1 y superiores (-1, 0, + 10, etc)**
 
 
 Condición
