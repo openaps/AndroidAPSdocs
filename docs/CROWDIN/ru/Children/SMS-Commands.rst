@@ -153,9 +153,9 @@ AndroidAPS позволяет контролировать телефон реб
 * СПИСОК ПРОФИЛЕЙ
   * Ответ: 1. ` Profile1 ` 2. ` Profile2 `
 * PROFILE 1
-  * Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
+  * Ответ: Для переключения профиля на Profile1 100% ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
 * PROFILE 2 30
-  * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+  * Ответ: Для переключения профиля на Profile2 30% ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
 
 Другое
 --------------------------------------------------
