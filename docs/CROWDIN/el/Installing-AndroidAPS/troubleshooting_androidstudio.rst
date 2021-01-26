@@ -127,7 +127,7 @@ Option 3 - Check for updates
 
 Η εφαρμογή έχει εγκατασταθεί αλλά είναι παλαιά έκδοση
 ==================================================
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`.
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`_.
 
 Κανένα από τα παραπάνω δεν δούλεψε
 ==================================================

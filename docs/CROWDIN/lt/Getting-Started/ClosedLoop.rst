@@ -5,7 +5,7 @@ Kas yra uždaro ciklo sistema?
   :alt: AAPS yra tarsi autopilotas
 
 Dirbtinės kasos uždaro ciklo sistema sujungia įvairius komponentus, kad būtų lengviau valdyti diabetą. 
-Dana M. Lewis, viena iš atvirojo kodo uždaro ciklo judėjimo įkūrėjų, savo puikioje knygoje „Automatizuotas insulino suleidimas“, <https://www.artificialpancreasbook.com/>`, vadina ją „jūsų diabeto autopilotu" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>. Bet ką tai reiškia?
+Dana M. Lewis, viena iš atvirojo kodo uždaro ciklo judėjimo įkūrėjų, savo puikioje knygoje `Automatizuotas insulino suleidimas <https://www.artificialpancreasbook.com/>`_, vadina ją `jūsų diabeto autopilotu <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. Bet ką tai reiškia?
 
 **Autopilotas lėktuve**
 
@@ -28,9 +28,9 @@ Atvirojo kodo Dirbtinės kasos Uždaro ciklo sistemos
 
 AndroidAPS (AAPS)
 --------------------------------------------------
-AndroidAPS yra išsamiai aprašyta šioje dokumentacijoje <./WhatisAndroidAPS.html>`_. Insulino pompai valdyti bei skaičiavimams atlikti naudojamas Android išmanusis telefonas. Jis sukurtas glaudžiai bendradarbiaujant su OpenAPS (t. y. jie dalijasi algoritmais).
+AndroidAPS yra išsamiai aprašyta `šioje dokumentacijoje <./WhatisAndroidAPS.html>`_. Insulino pompai valdyti bei skaičiavimams atlikti naudojamas Android išmanusis telefonas. Jis sukurtas glaudžiai bendradarbiaujant su OpenAPS (t. y. jie dalijasi algoritmais).
 
-Suderinamos pompos <../Hardware/pumps.html>`_ yra:
+Suderinamos `pompos <../Hardware/pumps.html>`_ yra:
 
 * `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 * `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
@@ -40,7 +40,7 @@ Suderinamos pompos <../Hardware/pumps.html>`_ yra:
 
 OpenAPS
 --------------------------------------------------
-OpenAPS <https://openaps.readthedocs.io>`_ buvo pirmoji Atvirojo kodo Uždaro Ciklo Sistema. Ji naudoja mažąjį kompiuterį, tokį kaip Raspberry Pi ar Intel Edison.
+`OpenAPS <https://openaps.readthedocs.io>`_ buvo pirmoji Atvirojo kodo Uždaro Ciklo Sistema. Ji naudoja mažąjį kompiuterį, tokį kaip Raspberry Pi ar Intel Edison.
 
 Suderinamos pompos yra:
 
@@ -48,7 +48,7 @@ Suderinamos pompos yra:
 
 Loop - iOS sistemai
 --------------------------------------------------
-Loop iOS sistemai <https://loopkit.github.io/loopdocs/>`_ yra Atvirojo kodo Uždaro Ciklo Sistema, naudojama su Apple iPhone telefonais.
+`Loop iOS sistemai <https://loopkit.github.io/loopdocs/>`_ yra Atvirojo kodo Uždaro Ciklo Sistema, naudojama su Apple iPhone telefonais.
 
 Suderinamos pompos yra:
 

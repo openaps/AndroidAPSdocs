@@ -12,7 +12,7 @@ Funkce
 * Rodiče mohou na dálku sledovat všechny důležité údaje, jako jsou glykémie, zbývající sacharidy, inzulin atd. pomocí aplikace **NSClient** v jejich telefonu. V AndroidAPS a NSCinetu musí být stejné nastavení.
 * Rodiče mohou být na svém mobilu varováni alarmy v aplikaci **xDrip v režimu follower**.
 * Vzdálené ovládání AndroidAPS pomocí `SMS příkazů <../Children/SMS-Commands.html>`_ je zabezpečeno dvoufaktorovým ověřením.
-* Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see 'release notes for Version 2.8.1.1 <https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#important-hints>'_ for further details.
+* Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see `release notes for Version 2.8.1.1 <https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for further details.
 
 Nástroje a aplikace pro vzdálené monitorování
 --------------------------------------------------

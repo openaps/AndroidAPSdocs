@@ -5,4 +5,4 @@ Ressourcen
    :maxdepth: 4
        
 
-   Für medizinische Fachkräfte
+   Für medizinische Fachkräfte <./clinician-guide-to-AndroidAPS.md>

@@ -5,7 +5,7 @@ Closed loop 시스템이란 어떤 것일까요?
   :alt: AAPS는 오토파일럿과 유사합니다.
 
 인공 췌장 closed loop 시스템은 당뇨병 관리를 좀 더 편리하게 하기 위해 다양한 구성 요소들을 결합한 것입니다. 
-오픈 소스 closed loop 활동의 창립자 중 한 명인 Dana M. Lewis는 그의 훌륭한 책 'Automated Insulin Delivery (자동으로 인슐린 주입하기)<https://www.artificialpancreasbook.com/>' 에서 이를 당뇨병을 위한 오토파일럿(자동조종장치)'<https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>'라고 명명했습니다. 과연 이게 무엇을 의미할까요?
+오픈 소스 closed loop 활동의 창립자 중 한 명인 Dana M. Lewis는 그의 훌륭한 책 `Automated Insulin Delivery (자동으로 인슐린 주입하기)<https://www.artificialpancreasbook.com/>`_ 에서 이를 당뇨병을 위한 오토파일럿`(자동조종장치)<https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_라고 명명했습니다. 과연 이게 무엇을 의미할까요?
 
 **비행기에서의 오토파일럿(자동조종장치)**
 
@@ -28,9 +28,9 @@ Closed loop 시스템이란 어떤 것일까요?
 
 AndroidAPS (AAPS)
 --------------------------------------------------
-AndroidAPS는 '이 문서<./WhatisAndroidAPS.html>'에 자세히 설명되어 있습니다. 이는 안드로이드 스마트폰을 사용하여 인슐린 펌프 사용을 계산하고 제어합니다. 이는 OpenAPS와 강력하게 연동되어 있습니다 (즉, 알고리즘을 공유합니다).
+AndroidAPS는 `이 문서<./WhatisAndroidAPS.html>` 에 자세히 설명되어 있습니다. 이는 안드로이드 스마트폰을 사용하여 인슐린 펌프 사용을 계산하고 제어합니다. 이는 OpenAPS와 강력하게 연동되어 있습니다 (즉, 알고리즘을 공유합니다).
 
-호환 가능한 '펌프<../Hardware/pumps.html>`는 다음과 같습니다:
+호환 가능한 '펌프<../Hardware/pumps.html>`_는 다음과 같습니다:
 
 * `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 * `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_

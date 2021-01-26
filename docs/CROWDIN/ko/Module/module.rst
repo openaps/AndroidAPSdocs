@@ -1,6 +1,6 @@
 구성 요소 개요 
 **************************************************
-AndroidAPS 은 단순한 (self-built) 응용 프로그램이 아니며, 여러개의 모듈 중 하나인 closed loop 시스템입니다. 컴포넌트를 결정하기 전에 <https://androidaps. readthedocs. io/en/dev/En/index. html#component-setup>" _을 먼저 살펴보는 것이 좋다.
+AndroidAPS 은 단순한 (self-built) 응용 프로그램이 아니며, 여러개의 모듈 중 하나인 closed loop 시스템입니다. 컴포넌트를 `결정하기 전에 <https://androidaps.readthedocs.io/en/dev/En/index.html#component-setup>`_ 을 먼저 살펴보는 것이 좋다.
    
 .. image:: ../images/modules.png
   :alt: 구성 요소 개요
@@ -36,11 +36,11 @@ SGLT-2 억제제의 미사용
 핸드폰
 --------------------------------------------------
 The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
-Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>_`
+Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>`_
 
-사용자들이 테스트된 핸드폰과 스마트워치 목록을 작성하고 있으며<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_에서 확인하실 수 있습니다.
+사용자들이 테스트된 핸드폰과 스마트워치 목록을 작성하고 `있으며<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_에서 확인하실 수 있습니다.
 
-시트에 기록되어 있지 않은 핸드폰 혹은 시계를 추가하기 위해서는 <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_에서 신청서를 작성해주시기 바랍니다.
+시트에 기록되어 있지 않은 핸드폰 혹은 시계를 추가하기 `위해서는 <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_에서 신청서를 작성해주시기 바랍니다.
 
 시트에 문제가 있는 경우에는 `hardware@androidaps.org <mailto:hardware@androidaps.org>`_으로 메일을 보내주시바랍니다. 핸드폰/시계를 기부하시는 경우에는 테스트가 필요함으로 `donations@androidaps.org <mailto:hardware@androidaps.org>`_으로 메일 보내주시기 바랍니다.
 
@@ -48,16 +48,16 @@ Users are strongly encouraged to keep their build of AndroidAPS up to date for s
 --------------------------------------------------
 안드로이드APS는 **현재** 아래의 펌프와 호환됩니다. 
 
-* 아큐첵 콤보 <../Configuration/Accu-Chek-Combo-Pump.html>`_ (추가적으로 필요한 사항: Ruffy 애플리케이션, LineageOS 또는 안드로이드 8.1 스마트폰)
-- 아큐첵 인사이트 <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
-- 다나R <../Configuration/DanaR-Insulin-Pump.html>`_ 
+* `아큐첵 콤보 <../Configuration/Accu-Chek-Combo-Pump.html>`_ (추가적으로 필요한 사항: Ruffy 애플리케이션, LineageOS 또는 안드로이드 8.1 스마트폰)
+- `아큐첵 인사이트 <../Configuration/Accu-Chek-Insight-Pump.html>`_
+- `다나R <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- 몇 개의 예전 메드트로닉 펌프 <../Configuration/MedtronicPump.html>`_ 2.4버젼 이상부터 (추가 필요 사항: RileyLink/Gnarl 하드웨어, 블루투스 저에너지 / BLE 칩셋 안드로이드폰)
+- `몇 개의 예전 메드트로닉 펌프 <../Configuration/MedtronicPump.html>`_ 2.4버젼 이상부터 (추가 필요 사항: RileyLink/Gnarl 하드웨어, 블루투스 저에너지 / BLE 칩셋 안드로이드폰)
 - `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
 
-AndroidAPS와 호환될 수 있는 가능성이 있는 **그외 펌프**는 <../Getting-Started/Future-possible-Pump-Drivers.html>`_ 페이지 '미래(가능한) 펌프'에 목록이 나와있습니다.
+AndroidAPS와 호환될 수 있는 `가능성이 있는 **그외 펌프**는 <../Getting-Started/Future-possible-Pump-Drivers.html>`_ 페이지 '미래(가능한) 펌프'에 목록이 나와있습니다.
 
-만약 **개인적으로 구매**를 해야하는 경우에는 다양한 업자의 정보를 '이 스프레드시트<https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_'에서 찾을 수 있습니다. 만약 본인의 구매경로가 목록에 없는 경우에는 세부사항을 공유 부탁 드리겠습니다.
+만약 **개인적으로 구매**를 해야하는 경우에는 다양한 업자의 정보를 `이 스프레드시트<https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_'에서 찾을 수 있습니다. 만약 본인의 구매경로가 목록에 없는 경우에는 세부사항을 공유 부탁 드리겠습니다.
 
 ** 그래서 어떤 펌프가 AndroidAPS의 최적된 펌프일까요?**
 
@@ -78,11 +78,11 @@ AndroidAPS와 호환될 수 있는 가능성이 있는 **그외 펌프**는 <../
 
 * `덱스콤 G6 <../Hardware/DexcomG6.html>`_: xdrip앱이나 패치된 덱스콤앱에서 작동합니다.
 * `덱스콤 G5 <../Hardware/DexcomG5.html>`_: xdrip앱이나 패치된 덱스콤앱에서 작동합니다.
-* 덱스콤 G4 <../Hardware/DexcomG4.html>`_: 이 센서들은 꽤 오래되었지만, xdrip에서 어떻게 사용하는 방법에 대한 설명을 찾아볼 수 있습니다.
-* 리브레 2 <../Hardware/Libre2.html>`_: xdrip+(트란스미터가 필요하지 않음)에서 작동하지만 스스로 패치앱을 빌드해야 합니다.
+* `덱스콤 G4 <../Hardware/DexcomG4.html>`_: 이 센서들은 꽤 오래되었지만, xdrip에서 어떻게 사용하는 방법에 대한 설명을 찾아볼 수 있습니다.
+* `리브레 2 <../Hardware/Libre2.html>`_: xdrip+(트란스미터가 필요하지 않음)에서 작동하지만 스스로 패치앱을 빌드해야 합니다.
 * `리브레 1 <../Hardware/Libre1.html>`_: Bluecon 혹은 MiaoMaio같은 트란스미터(빌드하거나 만들거나)와 xdrip이 필요합니다.
 * `에버센스 <../Hardware/Eversense.html>`_: ESEL앱과 패치된 에버센스 앱에서만 작동합니다. (다나RS와 LineageOS에서는 작동을 하지 않지만 다나RS와 안드로이드 혹은 콤보와 LineageOS에서는 잘 작동합니다.)
-* 엔라이트 <../Hardware/MM640g.html>`_: 추가적인 부분들과 함께 상당히 복잡합니다.
+* `엔라이트 <../Hardware/MM640g.html>`_: 추가적인 부분들과 함께 상당히 복잡합니다.
 
 
 Nightscout
@@ -91,11 +91,11 @@ Nightscout
 
 나이트스카웃은 독립적인 다른 모듈입니다. 목표 1을 이행해주시기 바랍니다.
 
-AndroidAPS와 나이트스카웃 구성하는 방벙에 대해 추가적인 정보는 '여기서 <../Installing-AndroidAPS/Nightscout.html>`_확인하실 수 있습니다.
+AndroidAPS와 나이트스카웃 구성하는 방벙에 대해 추가적인 정보는 `여기서 <../Installing-AndroidAPS/Nightscout.html>`_확인하실 수 있습니다.
 
 AAPS -.apk 파일
 --------------------------------------------------
-기본 구성 요소의 시스템입니다. 앱을 설치하시기 전에는 apk-파일을 직접 빌드하셔야 합니다.(Android앱을 위한 확장파일명) 설명은  `여기에 <../Installing-AndroidAPS/Building-APK.html>`_있습니다.  
+기본 구성 요소의 시스템입니다. 앱을 설치하시기 전에는 apk-파일을 직접 빌드하셔야 합니다.(Android앱을 위한 확장파일명) 설명은  `여기에 <../Installing-AndroidAPS/Building-APK.html>`_있습니다.
 
 선택적 모듈
 ==================================================
@@ -103,9 +103,9 @@ AAPS -.apk 파일
 --------------------------------------------------
 안드로이드 웨어 1.x이상의 스마트워치를 선택할 수 있습니다. 대부분의 loop사용자들은 소니 스마트 워치 3 (SWR50) 을 착용합니다. 그 이유는 폰이 범위 밖에 있을 때 덱스컴 G5/G5에서 혈당을 읽어올수 있기 때문입니다. 일부 다른 워치 중에서도 패치 이후에 독립형 수신기로 작동할 수 있습니다. (좀 더 자세한 사항은여기를 `this documentation <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ 참고해주시기 바랍니다.)
 
-사용자들이 테스트된 핸드폰과 시계 목록을 작성하고 있으며<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_에서 확인하실 수 있습니다. Android Aps와 함께 사용할 수 있는 다른 워치들은 `여기서 <../Configuration/Watchfaces.html>`_ 확인하실 수 있습니다.
+사용자들이 테스트된 핸드폰과 시계 목록을 작성하고 `있으며<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_에서 확인하실 수 있습니다. Android Aps와 함께 사용할 수 있는 다른 워치들은 `여기서 <../Configuration/Watchfaces.html>`_ 확인하실 수 있습니다.
 
-시트에 기록되어 있지 않은 핸드폰 혹은 시계를 추가하기 위해서는 <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_에서 신청서를 작성해주시기 바랍니다.
+시트에 기록되어 있지 않은 핸드폰 혹은 시계를 추가하기 `위해서는 <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_에서 신청서를 작성해주시기 바랍니다.
 
 시트에 문제가 있는 경우에는 `hardware@androidaps.org <mailto:hardware@androidaps.org>`_으로 메일을 보내주시바랍니다. 핸드폰/시계를 기부하시는 경우에는 테스트가 필요함으로 `donations@androidaps.org <mailto:hardware@androidaps.org>`_으로 메일 보내주시기 바랍니다.
 

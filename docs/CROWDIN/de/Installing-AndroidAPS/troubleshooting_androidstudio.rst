@@ -103,7 +103,7 @@ Option 3 - Prüfe den Code auf Aktualisierungen
 * Wechsle zum Terminal in Android Studio (linke untere Seite des Android Studio-Fensters)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
+    :alt: Android Studio Terminal
    
 * Paste copied text and press return
 

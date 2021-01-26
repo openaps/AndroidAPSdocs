@@ -2,7 +2,7 @@ Dexcom G5
 **************************************************
 При использовании G5 с xdrip+
 ==================================================
-* Если это еще не сделано, скачайте <https://github.com/NightscoutFoundation/xDrip>_и следуйте инструкциям на Nightscout (G5<http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>_.
+* Если это еще не сделано, скачайте <https://github.com/NightscoutFoundation/xDrip>`_и следуйте инструкциям на Nightscout (G5<http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_.
 * In xdrip go to Settings > Inter-app settings > Broadcast Data Locally and select ON.
 * In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
 Если хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принимать калибровки (Accept calibrations) и выберите ВКЛ (ON).  Возможно вы также захотите рассмотреть варианты калибровки в настройках > менее распространенные параметры > дополнительные параметры калибровки.

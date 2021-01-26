@@ -35,7 +35,7 @@ Once you are fine with the profile adjustments you can `clone the profile <../Co
 Vergleiche zwei Profile
 ==================================
 
-Du kannst den Profil-Helfer auch verwenden, um Profile oder Profilwechsel (um einen Prozentsatz geänderten Profil <.,/Usage/Profiles.html>`) miteinander zu vergleichen.
+Du kannst den Profil-Helfer auch verwenden, um Profile oder Profilwechsel (um einen Prozentsatz geänderten `Profil <./Usage/Profiles.html>`_) miteinander zu vergleichen.
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Profile Helper 1

@@ -1,6 +1,6 @@
 Примечания к изменениям в версиях
 **************************************************
-Пожалуйста, следуйте инструкциям по обновлению <../Installing-AndroidAPS/Update-to-new-version.html>`_. На ее страницах решаются наиболее распространенные проблемы связанные с обновлениями.
+Пожалуйста, следуйте `инструкциям по обновлению <../Installing-AndroidAPS/Update-to-new-version.html>`_. На ее страницах решаются наиболее распространенные проблемы связанные с обновлениями.
 
 Как только будет доступно новое обновление вы получите следующую информацию:
 
@@ -163,7 +163,7 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 * Исправлены мелкие ошибки интерфейса
 * Исправлены сбои Insight
 * Исправлены углеводы в будущем с помпой Combo
-* Исправленo LocalProfile -> NS sync <../Configuration/Config-Builder.html#upload-local-profiles-to-nightscout>`_
+* Исправленo `LocalProfile -> NS sync <../Configuration/Config-Builder.html#upload-local-profiles-to-nightscout>`_
 * Улучшения оповещений Insight
 * Улучшено обнаружение болюсов в истории помпы
 * Исправлены параметры соединения NSClient (wifi, зарядка)
@@ -210,7 +210,7 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 ==================================================
 Дата выпуска: 31-10-2019
 
-Обратите внимание на " важные примечания <../Instaling-AndroidAPS/Releasenotes.html#important-notes>`_ и ` ограничения <../Instaling-AndroidAPS/Releasenotes.html#is-this-update-for-me-is-not-supported>`_ для ` версии 2.5.0 <../Instaling-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
+Обратите внимание на `важные примечания <../Instaling-AndroidAPS/Releasenotes.html#important-notes>`_ и ` ограничения <../Instaling-AndroidAPS/Releasenotes.html#is-this-update-for-me-is-not-supported>`_ для ` версии 2.5.0 <../Instaling-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
 * Исправлена ошибка в сетевом состоянии, которые приводят к ошибкам (не критично, но будет тратить много энергии на пересчет).
 * Новая иерархия версий, позволяющая выполнять незначительные обновления без уведомлений об обновлении.
 
@@ -244,7 +244,7 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 Новая поддержка модифицированных приложений Dexcom (<https://github.com/dexcomapp/dexcomapp/tree/master/2.4> папка 2.4)
 * Верификатор подписи
 * Возможность обойти цели пользователям OpenAPS
-* Новые цели <../Usage/Objectives.html>`_-экзамен, обработка приложений
+* `Новые цели <../Usage/Objectives.html>`_-экзамен, обработка приложений
    
    (Если вы начали хотя бы цель "открытый цикл" в предыдущих версиях экзамен не является обязательным.)
 * Исправлена ошибка в драйверах Dana*, где сообщалось о ложной разнице во времени
@@ -299,7 +299,7 @@ ContextEdit
 
 Новые возможности
 --------------------------------------------------
-* `Поддержка Аccu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>'_(от Tebbe Ubben и JamOrHam)
+* `Поддержка Аccu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_(от Tebbe Ubben и JamOrHam)
 * Индикаторы состояния на главном экране (Nico Schmitz)
 * Помощник перехода на летнее время (Румен Георгиев)
 * Исправлеие обработки имен профилей, поступивших от NS (Johannes Mockenhaupt)

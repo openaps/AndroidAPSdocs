@@ -35,7 +35,7 @@ DIY CGM 소프트웨어 또는 공식 앱을 사용하든 사용하지 않든, �
 
 튀는 혈당값
 --------------------------------------------------
-노이즈 차단을 위해 xDrip에서 설정을 바꿔볼 수 있습니다 (설정 - Inter-app settings - Noise Blocking). "Block Very High noise and worse" 을 선택합니다.  `혈당 데이터의 평탄화<../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`내용도 확인하십시오.
+노이즈 차단을 위해 xDrip에서 설정을 바꿔볼 수 있습니다 (설정 - Inter-app settings - Noise Blocking). "Block Very High noise and worse" 을 선택합니다. `혈당 데이터의 평탄화<../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_내용도 확인하십시오.
 
 잘못된 sensor 사용 기간 (마이너스 값)
 --------------------------------------------------
