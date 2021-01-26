@@ -9,7 +9,7 @@ Windows
 * Убедитесь, что знаете путь установки. Он понадобится на следующем шаге.
 
 .. image:: ../images/Update_GitPath.png
-  Путь установки Git
+  :alt: установки Git
 
 2. Задайте путь к git в параметрах Android Studio
 --------------------------------------------------
@@ -59,7 +59,7 @@ Windows
 
 Mac
 ==================================================
-* Любая версия git должна работать. Например <https://git-scm.com/download/mac>https://git-scm.com/download/mac`_
+* Любая версия git должна работать. `Например <https://git-scm.com/download/mac>https://git-scm.com/download/mac`_
 * Используйте homebrew для установки git: ```$ brew install git```.
 * Подробнее об установке git читайте в `официальной документации git <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.
 * Если вы устанавливаете git через homebrew, то нет необходимости изменять какие-либо настройки. На всякий случай: Их можно найти здесь: Android Studio - Настройки.

@@ -98,7 +98,7 @@ Depending on your `settings in config builder <../Configuration/Config-Builder.h
 -----
 To delete an automation rule click on trash icon.
 
-.. image:: ../images/Automation_Deletet.png
+.. image:: ../images/Automation_Delete.png
   :alt: Выбор правила автоматизации
 
 Рекомендации и предостережения

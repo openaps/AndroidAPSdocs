@@ -103,7 +103,7 @@ Option 3 - Check for updates
 * Switch to Terminal in Android Studio (lower left side of Android Studio window)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
+    :alt: Android Studio Terminal
    
 * Paste copied text and press return
 

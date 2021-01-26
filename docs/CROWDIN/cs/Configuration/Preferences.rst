@@ -270,7 +270,7 @@ Toto nastavení funguje jako bezpečnostní limit, aby se zabránilo AndroidAPS 
 * Hodnota se udává v jednotkách za hodinu (U/h). 
 * Doporučuje se nastavit toto na rozumnou hodnotu. Je doporučeno vzít si ze svého profilu **nejvyšší hodnotu bazálu** a **vynásobit jí 4**. 
 * Například: máte-li ve svém profilu nejvyšší hodnotu bazálu 0.5U/h, dostanete po vynásobení 4 hodnotu 2U/h.
-* Viz také " podrobný popis funkce <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>`_.
+* Viz také `podrobný popis funkce <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>`_.
 
 Maximální bazální IOB [U]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -401,7 +401,7 @@ Nastavení připojení
 Nastavení alarmů
 -----------------------------------------------------------
 * Volby alarmu umožňují vybrat, jaké výchozí alarmy Nightscoutu se mají v aplikaci používat.  
-* Aby alarmy fungovaly, je třeba nastavit v proměnných Nightscoutu (Heroku...) hodnoty glykémie pro Urgentní, Vysokou, Nízkou a Urgentní nízkou glykémii <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
+* Aby alarmy fungovaly, je třeba nastavit v proměnných Nightscoutu (Heroku...) hodnoty glykémie pro Urgentní, Vysokou, Nízkou a Urgentní `nízkou glykémii <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
 * Budou fungovat pouze v případě že budete mít připojení k Nightscoutu, a jsou určeny pro rodiče/pečovatele. 
 * Pokud máte v telefonu zdroj CGM (např. xDrip + nebo upravenou Dexcomalikaci), pak místo nich použijte tyto alarmy.
 
@@ -421,7 +421,7 @@ Rozšířená nastavení (NSClient)
 
 SMS komunikátor
 ===========================================================
-* Volba se zobrazí pouze v případě, je-li v konfiguraci povolen SMS komunikátor' Config Builder <../Configuration/Config-Buil-Builder.html#sms-communicator>`_.
+* Volba se zobrazí pouze v případě, je-li v konfiguraci povolen SMS komunikátor `Config Builder <../Configuration/Config-Buil-Builder.html#sms-communicator>`_.
 * Toto nastavení umožňuje vzdálené ovládání telefonu s AAPS posláním SMS s textem jako je zastavení smyčky, nebo poslání bolusu.  
 * Další informace jsou popsány v `SMS příkazech <../Children/SMS-Commands.html>`_.
 * Dodatečná bezpečnost je zajištěna použitím autentizační aplikace a dodatečného PIN na konci tokenu.

@@ -38,7 +38,7 @@ Teléfono
 The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
 Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>`_
 
-Los usuarios están creando una "lista de teléfonos probados y relojes <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
+Los usuarios están creando una "lista de teléfonos `probados y relojes <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
 Para registrar un teléfono o un reloj que no está ya listado en la hoja de cálculo, por favor rellene la `forma <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
@@ -48,7 +48,7 @@ Bomba de insulina
 --------------------------------------------------
 AndroidAPS **actualmente** funciona con 
 
--`Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (necesita adicionalmente: Ruffy app, LineageOS o Android 8.1 en su teléfono)
+- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (necesita adicionalmente: Ruffy app, LineageOS o Android 8.1 en su teléfono)
 - `Bomba Accu-ChekInsight <../Configuration/Accu-Chek-Insight-Pump.md>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
@@ -111,7 +111,7 @@ Cualquier problema con la hoja de cálculo por favor envíe un correo electróni
 
 xDrip+
 --------------------------------------------------
-Incluso si no necesitas tener la aplicación xDrip + como fuente de BG, todavía puedes usarla para esto. alarmas o una buena muestra de glucosa en sangre. Puede tener el número de alarmas que desee, especificar la hora en la que la alarma debe estar activa, se puede alterar temporalmente la modalidad silenciosa, etc. Se puede encontrar alguna información de xDrip+ "aqui <../Configuration/xdrip.html>`_. Por favor, tenga en cuenta que las documentaciones de esta aplicación no siempre están al día, ya que su progreso es bastante rápido.
+Incluso si no necesitas tener la aplicación xDrip + como fuente de BG, todavía puedes usarla para esto. alarmas o una buena muestra de glucosa en sangre. Puede tener el número de alarmas que desee, especificar la hora en la que la alarma debe estar activa, se puede alterar temporalmente la modalidad silenciosa, etc. Se puede encontrar alguna información de xDrip+ `aqui <../Configuration/xdrip.html>`_. Por favor, tenga en cuenta que las documentaciones de esta aplicación no siempre están al día, ya que su progreso es bastante rápido.
 
 Configuración de ejemplo
 ==================================================

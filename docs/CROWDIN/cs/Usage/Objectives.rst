@@ -5,7 +5,7 @@ AndroidAPS má sadu Cílů, které musíte dokončit a které vás provedou jeho
 
 Pokud měníte telefon, můžete si `exportovat své nastavení <../Usage/ExportImportSettings.html>`_ a váš postup (již splněné cíle) bude zachován. Kromě vašeho postupu se exportem/importem uloží řada jiných nastavení, například vaše bezpečnostní nastavení jako maximální bolus apod.  Pokud neabsolvujete export/import svých nastavení, pak budete muset začít plnit cíle znovu od začátku.  Je dobrý nápad `zálohovat Vaše nastavení <../Usage/ExportImportSettings.html>`_ často jen tak pro jistotu.
 
-Pokud se chcete v cílech vrátit zpět, podívejte se na vysvětlení pod <../Usage/Objectives.html#go-back-in-objectives>`_.
+Pokud se chcete v cílech vrátit zpět, podívejte se na `vysvětlení pod <../Usage/Objectives.html#go-back-in-objectives>`_.
  
 Cíl 1: Nastavit vizualizaci a monitoring, analyzovat bazály a poměry
 ====================================================================================================

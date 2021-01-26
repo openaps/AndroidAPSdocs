@@ -103,7 +103,7 @@ Opción 3 - Comprobar actualizaciones
 * Conmutar a Terminal en Android Studio (lado izquierdo inferior de la ventana de Android Studio)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
+    :alt: Android Studio Terminal
    
 * Pegar texto copiado y pulsar retorno
 

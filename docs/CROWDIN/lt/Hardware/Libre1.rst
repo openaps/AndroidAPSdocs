@@ -10,7 +10,7 @@ Norint naudoti jūsų Libre kaip NGJ, kuris gauna GK rodiklius kas 5 minutes, pi
 Be to, galima naudoti specialų laikrodį Sony Smartwatch 3, kuris turi NFC lustą, kurį galima suaktyvinti ir kuris gali būti naudojamas kaip NFC skaitytuvas. Tačiau pirmiau minėti NFC Bluetooth siųstuvams siūlo ne tokį sudėtingą sprendimą ir juo naudosis dauguma norinčių naudoti Libre 1 kaip nuolatinį gliukozės jutiklį.
 * Sony Smartwatch 3 (SWR50) `https://github.com/pimpimmi/LibreAlarm/wiki/ <https://github.com/pimpimmi/LibreAlarm/wiki/>`_
 
-Kol kas naudodami Libre 1 kaip KG šaltinį, negalite aktyvuoti 'Įjungti SMB visada' ir 'Įjungti SMB po angliavandenių' per SMB algoritmą. Libre 1 nėra pakankamai tikslus, kad būtų saugu naudoti šias funkcijas. Žiūrėkite "Lyginti kraujo gliukozės duomenis <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_, jei norite sužinoti daugiau.
+Kol kas naudodami Libre 1 kaip KG šaltinį, negalite aktyvuoti 'Įjungti SMB visada' ir 'Įjungti SMB po angliavandenių' per SMB algoritmą. Libre 1 nėra pakankamai tikslus, kad būtų saugu naudoti šias funkcijas. Žiūrėkite `Lyginti kraujo gliukozės duomenis <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_, jei norite sužinoti daugiau.
 
 Jei naudojate xDrip+
 ==================================================
@@ -19,8 +19,8 @@ Jei naudojate xDrip+
 * xDrip+ eikite į Settings > Interapp Compatibility > Accept Treatments ir pasirinkite Off.
 *Jei norite naudotis AndroidAPS kalibracijoms, xDrip+ eikite į Settings > Interapp Compatibility > Accept Calibrations ir pasirinkite On.  Taip pat galbūt norėsite peržiūrėti kalibravimo parinktis Nustatymuose > Mažiau įprasti nustatymai > išplėstinės kalibravimo parinktys.
 * Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite xDrip.
-* xDrip+ nustatymus su ekranvaizdžiais žiūrėkite 'xDrip+ nustatymų puslapyje <../Configuration/xdrip.html>`__. Tai yra dalis bazinių xDrip+ nustatymų bei xDrip+ nustatymų Freestyle Libre.
-* Jei AAPS negauna glikemijos duomenų, kai telefonas veikia skrydžio režimu, naudokite funkciją 'Nustatyti gavėją', kaip aprašyta xDrip + nustatymų puslapyje <../Configuration/xdrip.html>`_.
+* xDrip+ nustatymus su ekranvaizdžiais žiūrėkite `xDrip+ nustatymų puslapyje <../Configuration/xdrip.html>`__. Tai yra dalis bazinių xDrip+ nustatymų bei xDrip+ nustatymų Freestyle Libre.
+* Jei AAPS negauna glikemijos duomenų, kai telefonas veikia skrydžio režimu, naudokite funkciją 'Nustatyti gavėją', kaip aprašyta `xDrip + nustatymų puslapyje <../Configuration/xdrip.html>`_.
 
 Jei naudojate Glimp
 ==================================================
