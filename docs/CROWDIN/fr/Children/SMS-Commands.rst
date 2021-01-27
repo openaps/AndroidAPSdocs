@@ -189,7 +189,7 @@ Si vous recevez toujours le même message (par ex. changement de profil) vous av
 Si l'autre application est installée sur plusieurs téléphones assurez-vous de désactiver le téléchargement NS sur chacun d'eux.
 
 Les commandes SMS ne fonctionnent pas sur des téléphones Samsung
---------------------------------------------------
+----------------------------------------------------------------
 Il y a eu un signalement sur les commandes SMS s'arrêtant après une mise à jour sur le téléphone Galaxy S10. Peut être résolu en désactivant 'envoyer en tant que message chat'.
 
 .. image:: ../images/SMSdisableChat.png

@@ -45,7 +45,7 @@ Windows
 * Start de PC opnieuw op om de systeemomgeving bij te werken.
 
 4. Controleer de git-instellingen in Android Studio
---------------------------------------------------
+---------------------------------------------------
 * Open Terminal venster in Android Studio
 * Voer "` git--version `" (zonder aanhalingstekens en geen spaties tussen de twee-[ minus teken]!) in en druk op Return
 

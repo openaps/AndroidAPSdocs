@@ -15,7 +15,7 @@ Fonctions
 * Remote control through NSClient app is only recommended if your synchronization is working well (ie. (vous ne voyez pas de changement de données indésirables comme la modification automatique de CT, DBT, etc.) voir les `notes de version pour la version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#conseils-importants>`_ pour plus de détails.
 
 Outils et applications pour la surveillance à distance
-==================================================
+------------------------------------------------------
 *	`Nightscout <http://www.nightscout.info/>`_ dans le navigateur web (principalement affichage des données)
 * L'application NSClient est une version réduite d'AAPS capable de suivre quelqu'un, de faire des changements de profil, de régler des CTs et d'entrer des glucides. Il y a 2 applications: `NSClient & NSClient2 que vous pouvez télécharger <https://github.com/nightscout/AndroidAPS/releases/>`_. La seule différence est le nom de l'application. De cette façon, vous pouvez installer l'application deux fois sur le même téléphone, pour pouvoir suivre 2 personnes/nightscout différentes.
 *	Dexcom Follow si vous utilisez l'application officielle Dexcom (glycémies uniquement)

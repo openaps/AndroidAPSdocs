@@ -2,7 +2,7 @@ Instellingen exporteren & importeren
 **************************************************
 
 Wanneer zou ik mijn instellingen moeten exporteren?
-==================================================
+===================================================
 Wees voorbereid op onvoorziene omstandigheden. Je kunt belangrijke instellingen per ongeluk veranderen en problemen hebben om weer terug te gaan naar de juiste instellingen. Je telefoon kan stuk gaan of gestolen worden. Om makkelijk terug te keren naar instellingen die voor jou goed werkten (en ook: als je de Doelen die je eerder hebt afgerond, niet opnieuw wilt moeten doen) dan moet je jouw instellingen regelmatig exporteren.
 
 Het is goed om jouw instellingen steeds te exporteren na het wijzigen van instellingen of na het voltooien van een Doel. 

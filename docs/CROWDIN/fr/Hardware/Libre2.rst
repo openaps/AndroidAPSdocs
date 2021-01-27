@@ -10,7 +10,7 @@ Les glycémies peuvent également être transmise avec un émetteur BT comme ave
 Remarque importante : Ceci ne fonctionne pas avec la version US du capteur Freestyle 2 ! La version US ne se connectera qu'à un lecteur, pas à un téléphone.
 
 Étape 1 : Construire votre propre application Librelink patchée
-==================================================
+===============================================================
 
 Pour des raisons légales, le soi-disant correctifs doit être fait par vous-même. Utilisez les moteurs de recherche pour trouver les liens correspondants. Il y a deux principales variantes : L'application patchée d'origine recommandée bloque tout trafic Internet pour éviter le suivi. L'autre variante supporte LibreView qui peut être nécessaire pour votre médecin.
 
@@ -90,7 +90,7 @@ Cependant, il existe une variante de l'application patchée supportant LibreView
 
 
 Étape 2 : Installer et configurer l'application xDrip+
-==================================================
+======================================================
 
 Les glycémies sont reçues sur le smartphone par l'application xDrip+. 
 
@@ -115,7 +115,7 @@ En fait, cela ne démarre aucun capteur Libre2 ou n'interagit en aucun cas avec 
 Après un changement de capteur, xDrip+ détectera automatiquement le nouveau capteur et supprimera toutes les données d'étalonnage. Vous pouvez vérifier la glycémie capillaire après l'activation et effectuer un nouvel étalonnage initial.
 
 Étape 4 : Configurer AndroidAPS (pour la boucle uniquement)
-==================================================
+===========================================================
 * Dans AndroidAPS allez dans le Générateur de configuration > Source des glycémies et cochez 'xDrip+' 
 * If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
 

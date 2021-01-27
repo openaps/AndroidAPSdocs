@@ -1,5 +1,5 @@
 Vérifications nécessaires après la mise à jour vers AndroidAPS 2.6
-***********************************************************
+******************************************************************
 
 * Le code du programme a été changé de façon significative lors du passage à AAPS 2.7. 
 * Par conséquent, il est important de faire des changements ou de vérifier les paramètres après la mise à jour.
@@ -51,7 +51,7 @@ Autosens (un indice - aucune action nécessaire)
 * Les utilisateurs qui utilisaient oref1 remarqueront probablement que le système peut être moins dynamique en raison de la variation de sensibilité entre 24 heures et 8 heures.
 
 Définir le mot de passe de la pompe Dana RS (si vous utilisez une Dana RS)
------------------------------------------------------------
+--------------------------------------------------------------------------
 * Le mot de passe Pump pour `Dana RS <../Configuration/DanaRS-Insulin-Pump.html>`_ n'était pas été vérifié dans les versions précédentes.
 * Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
 * Faites défiler vers le bas et cliquez sur triangle à côté de " Dana RS ".

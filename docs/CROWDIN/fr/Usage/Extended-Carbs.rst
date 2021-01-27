@@ -42,7 +42,7 @@ Bolus étendu
 Comme mentionné ci-dessus, les bolus étendus ou mixtes ne fonctionnent pas vraiment dans un environnement en boucle fermée. `Voir ci-dessous <#pourquoi-les-bolus-etendus-ne-marchent-pas-avec-une-boucle-fermee>`_ pour plus de détails
 
 Bolus étendus et passage en boucle ouverte - uniquement pour les pompesDana et Insight
------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
 Certaines personnes ont demandé une option pour utiliser des bolus étendus dans AAPS, car ils voulaient traiter les aliments spéciaux comme ils avaient l'habitude de le faire. 
 
 C'est pourquoi à partir de la version 2.6, il y a une option pour un bolus étendu pour les utilisateurs de pompes Dana et Insight. 

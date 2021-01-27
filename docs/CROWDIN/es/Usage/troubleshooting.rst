@@ -8,7 +8,7 @@ Aplicación AndroidAPS
 ==================================================
 
 Construir y actualizar
--------------------
+----------------------
 * "Perdida del almacén de claves <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
 * `Resolución de problemas de Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 

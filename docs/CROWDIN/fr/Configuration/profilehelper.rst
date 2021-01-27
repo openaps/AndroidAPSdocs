@@ -7,7 +7,7 @@ L'assistant profil a deux fonctions :
 2. Comparer deux profils ou changements de profil pour dupliquer un nouveau profil
 
 Profil pour les enfants (jusqu'à 18 ans)
-=======================================
+========================================
 
 **Remarques importantes :**
 

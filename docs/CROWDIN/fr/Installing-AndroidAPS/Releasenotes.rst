@@ -65,7 +65,7 @@ Conseils importants
 * Utilisez `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
-----------------------
+----------------------------------
 * `Support de l'Omnipod Eros <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda et merci spécial à @ps2 @itsmojo, et à toutes les autres personnes impliquées dans le développement du driver pour Omnipod ainsi que @jlucasvt de GetRileyLink.org 
 * `Assistant bolus <../Configuration/Preferences.html#assistant-bolus>`_ & `Rappel repas <../Getting-Started/Screenshots.html#rappel-repas>`_ @MilosKozak 
 * `Nouveau cadran <../Configuration/Watchfaces.html#nouveau-cadran-depuis-androidaps-2-8>`_ @rICTx-T1D
@@ -91,7 +91,7 @@ Date de sortie : 24-09-2020
 Vous devez au moins démarrer l'`objectif 11 <../Usage/Objectives.html#objectif-11-automation>`_ afin de continuer à utiliser la `fonction d'automatisation <../Usage/Automation.html>`_ (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 11 n'est pas possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
 Nouvelles fonctionnalités majeures
-----------------------
+----------------------------------
 * utilisation interne de l'injection de dépendance, bibliothèques mises à jour, code réécrit en kotlin @MilosKozak @AdrianLxM
 * utilisation de modules pour les pompes Dana @MilosKozak
 * `nouvelle mise en page, selection de thème <../Getting-Started/Screenshots.html>`_ @MilosKozak
@@ -127,7 +127,7 @@ Date de sortie : 04-05-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
-----------------------
+----------------------------------
 * Insight: Désactivation de la vibration sur bolus pour le firmware version 3 - Deuxième tentative
 * Sinon, identique à 2.6.1.3. La mise à jour est facultative. 
 
@@ -138,7 +138,7 @@ Date de sortie : 03-05-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
-------------------
+----------------------------------
 * Insight: Désactivation de la vibration sur bolus pour le firmware version 3
 * Sinon, identique à 2.6.1.2. La mise à jour est facultative. 
 
@@ -149,7 +149,7 @@ Date de sortie : 19-04-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
-------------------
+----------------------------------
 * Correction du plantage dans le service Insight
 * Sinon, identique à 2.6.1.1. Si vous n'êtes pas affecté par ce bug, vous n'avez pas besoin de mettre à niveau.
 
@@ -160,7 +160,7 @@ Date de sortie : 06-04-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
-------------------
+----------------------------------
 * Résout le problème de commande SMS CARBS avec la pompe Combo
 * Sinon, identique à 2.6.1. Si vous n'êtes pas affecté par ce bug, vous n'avez pas besoin de mettre à niveau.
 
@@ -171,7 +171,7 @@ Date de sortie : 21-03-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
-------------------
+----------------------------------
 * Permet de ne rentrer que https:// dans les paramètres NSClient
 * Correction bug d'affichage `Impact Glycémique <../Getting-Started/Glossary.html>`_ sur les montres
 * Correction de petits bugs de l'interface utilisateur
@@ -190,7 +190,7 @@ Date de sortie : 29-02-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
-------------------
+----------------------------------
 * Petites modifications de l'affichage (page d'accueil...)
 * Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
 * Nouveau `plugin Profil Local <../Configuration/Config-Builder.html#profil-local-recommande>`_
@@ -240,7 +240,7 @@ Remarques importantes
 * Glimp est pris en charge à partir de la version 4.15.57 et plus récente.
 
 Cette mise à jour est-elle pour moi? N'est actuellement PAS pris en charge
---------------------------------------------------
+--------------------------------------------------------------------------
 * Android 5 and inférieurs
 * Poctech
 * 600SeriesUploader

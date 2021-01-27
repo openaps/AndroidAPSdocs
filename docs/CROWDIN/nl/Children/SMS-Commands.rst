@@ -189,7 +189,7 @@ Als je hetzelfde bericht steeds opnieuw ontvangt (d.w.z. profiel wissel) dan heb
 Als de andere app is geïnstalleerd op meerdere telefoons, zorg ervoor dat upload is uitgeschakeld bij al die telefoons.
 
 SMS-commando's doen het niet op mijn Samsung, wat nu?
---------------------------------------------------
+-----------------------------------------------------
 Er is een melding gemaakt van SMS-commando's die niet meer werkten na een update op een Galaxy S10 telefoon. Dit kon worden opgelost door 'verzenden als chatbericht' uit te schakelen.
 
 .. image:: ../images/SMSdisableChat.png

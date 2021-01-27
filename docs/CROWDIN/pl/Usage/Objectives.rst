@@ -18,7 +18,7 @@ Cel 1: Ustawienie wizualizacji i monitorowania, analizowanie profilu podstawoweg
 *You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
 
 Objective 2: Learn how to control AndroidAPS
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 * Perform several actions in AndroidAPS as described in this objective.
 * Click on the orange text "Not completed yet" to access the to-dos.
 * Links will be provided to guide you in case you are not familiar with a specific action yet.
@@ -27,7 +27,7 @@ Objective 2: Learn how to control AndroidAPS
      :alt: Screenshot objective 2
 
 Objective 3: Prove your knowledge
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 * Pass a multiple-choice exam testing your AndroidAPS knowledge.
 * Click on the orange text "Not completed yet" to access the page with the question and answering options.
 
@@ -40,7 +40,7 @@ Objective 3: Prove your knowledge
 * Unanswered questions will affect you only if you start a new objective. In other words: If you have already completed all objectives you can wait and answer the new questions later without loosing AAPS functions.
 
 Objective 4: Starting on an open loop
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 * Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
 * Work through the `Preferences <../Configuration/Preferences.html>`__ to set up for you.
 * Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Ensure this data shows in AndroidAPS and Nightscout.

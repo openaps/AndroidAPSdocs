@@ -609,7 +609,7 @@ Provides AAPS notifications and audible phone alerts when it is uncertain if TBR
 * **\*Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
    
 Другое
------
+------
 
 Provides advanced settings to assist debugging.
 	
@@ -705,7 +705,7 @@ Battery level reporting is a setting that can be enabled to return the current b
 
 
 Устранение неполадок
-===============
+====================
 
 Pod Failures
 ------------

@@ -1,5 +1,5 @@
 Achtergrondinformatie
----------
+---------------------
 
 .. toctree::
    :maxdepth: 4

@@ -77,7 +77,7 @@ Remarque pour les utilisateurs de Dana RS
 * Veuillez associer manuellement le nouveau téléphone et la pompe.
 
 Importer les paramètres des versions précédentes (avant AAPS 2.7)
-------------------------------------------------------------
+-----------------------------------------------------------------
 * L'ancien fichier de paramètres (appelé 'AndroidAPSPreferences' - sans extension de fichier) doit être dans le dossier racine de votre smartphone (/storage/emulated/0).
 * Ne mettez pas l'ancien fichier dans le même dossier que celui des nouveaux paramètres exportés (AAPS/préférences).
 * Vous trouverez l'ancien fichier en bas de la liste dans la boîte de dialogue d'importation.

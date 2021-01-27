@@ -126,7 +126,7 @@ Option 3 - Check for updates
 6. Ενεργοποιήστε ξανά το bluetooth και απενεργοποιήστε τη λειτουργία του αεροπλάνου
 
 Η εφαρμογή έχει εγκατασταθεί αλλά είναι παλαιά έκδοση
-==================================================
+=====================================================
 If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`_.
 
 Κανένα από τα παραπάνω δεν δούλεψε

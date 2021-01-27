@@ -142,7 +142,7 @@ Default temp targets
     :alt: Preferences > Default temp targets
   
 Standartiniai insulino kiekiai kateterio/kaniulės užpildymui
------------------------------------------------------------
+------------------------------------------------------------
 * If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
 * Pre-set values can be defined in this dialogue.
 

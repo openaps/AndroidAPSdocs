@@ -38,7 +38,7 @@ With low carb, high fat/protein meals it may be enough to only use eCarbs withou
 When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
 
 Bolus Przedłużony
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 As mentioned above extended or multiwave boluses do not really work in a closed loop environment. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ for details
 
 Extended bolus and switch to open loop - Dana and Insight pump only

@@ -1,6 +1,6 @@
-=====================================================
+===========================================================
  Dokumentation zum AndroidAPS Omnipod Insulinpumpen-Treiber
-=====================================================
+===========================================================
 
 Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe (**NICHT Omnipod Dash**). Der Omnipod-Treiber ist als Teil von AndroidAPS (AAPS) ab Version 2.8 verfügbar.
 
@@ -11,7 +11,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
    :depth: 2
 
 Hardware- und Software-Anforderungen
-==================================
+====================================
 
 * **Pod-Kommunikationsgerät** 
 
@@ -37,7 +37,7 @@ Hardware- und Software-Anforderungen
 Diese Anleitung geht davon aus, dass Du eine neue Pod-Sitzung startest. Falls dies nicht der Fall ist, habe bitte Geduld und beginne diesen Prozess erst bei Deinem nächsten Starten eines neuen Pods.
 
 Bevor du anfängst
-================
+==================
 
 **Sicherheit geht vor** - Stelle sicher, dass Du auf eventuell auftretende Fehler reagieren kannst, bevor Du diesen Prozess beginnst: zusätzliche Pods, Insulin, geladener RileyLink und Smartphone mit vollem Akku sind unbedingt notwendig.
 
@@ -50,12 +50,12 @@ Bevor du anfängst
 **Basalraten-Profile mit 30-Minuten-Schritten werden in AndroidAPS NICHT unterstützt.** Wenn Du neu bei AndroidAPS bist und zum ersten Mal Dein Basalprofil einrichtest, beachte bitte, dass Basalprofile, die mit einer halben Stunde beginnen, nicht unterstützt werden und Du Dein Basalprofil anpassen musst. Basalraten müssen immer zur vollen Stunde starten. Wenn Du zum Beispiel eine Basalrate von 1,1 Einheiten hast, die um 9:30 Uhr startet und zwei Stunden bis 11:30 Uhr läuft, wird dies nicht funktionieren.  Du muss diese 1,1 IE Basalrate auf einen Zeitraum von entweder 9:00 - 11:00 Uhr oder 10:00 - 12:00 Uhr einstellen.  Obwohl die Omnipod-Hardware selbst Basalratenwechsel zur halben Stunde unterstützt, ist AndroidAPS derzeit nicht in der Lage, sie mit seinen Algorithmen zu berücksichtigen.
 
 Aktivieren des Omnipod-Treibers in AAPS
-===================================
+=======================================
 
 Du kannst den Omnipod-Treiber in AAPS auf **zwei Wegen** aktivieren:
 
 Option 1: Der Einrichtungsassistent
---------------------------
+-----------------------------------
 
 Nach der Installation einer neuen Version von AndroidAPS startet der **Einrichtungsassistent** automatisch.  Dies wird auch nach einem Upgrade geschehen.  Wenn du die Einstellungen von einer vorherigen Installation exportiert hast, kannst du den Einrichtungsassistenten beenden und deine alten Einstellungen importieren.  Für Neuinstallationen fahre unten fort.
 
@@ -74,7 +74,7 @@ Detailed steps on how to setup your pod communication device are listed below in
 **ODER**
 
 Option 2: Der Konfigurations-Generator
-----------------------------
+--------------------------------------
 
 Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Wenn du das **Kontrollkästchen (4)** neben dem **Einstellungsrädchen (3)** wählst, wird das Omnipod-Menü als Registerkarte im AAPS-Interface mit dem Titel **POD** angezeigt. Dies wird in dieser Dokumentation als Registerkarte **Omnipod (POD)** bezeichnet.
 
@@ -83,7 +83,7 @@ Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜
     |Enable_Omnipod_Driver_3| |Enable_Omnipod_Driver_4|
 
 Überprüfung der Omnipod-Treiberauswahl
-----------------------------------------
+---------------------------------------
 
 *Note: If you have exited the Setup Wizard early without selecting your RileyLink, the Omnipod Driver is enabled but you will still need to select your RileyLink.  You may see the Omnipod (POD) tab appear as it does below*
 
@@ -128,7 +128,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
     |RileyLink_Setup_6|
 
 Einen Pod aktivieren
-----------------
+--------------------
 
 Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Verbindung in den Omnipod-Einstellungen richtig konfiguriert und verbunden hast.
 
@@ -189,7 +189,7 @@ Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Ver
     |Activate_Pod_14| |Activate_Pod_15|
 
 Deaktiviere einen Pod
-------------------
+---------------------
 
 Unter normalen Umständen beträgt die Lebensdauer eines Pods drei Tage (72 Stunden) und zusätzlich 8 Stunden nach der Pod-Ablaufwarnung und somit insgesamt 80 Stunden.
 
@@ -231,7 +231,7 @@ Die folgenden Schritte zeigen dir, wie du die Insulinzufuhr aussetzen und fortse
 *HINWEIS - wenn du keinen Button 'Unterbrechen' siehst*, ist dessen Anzeige im Register Omnipod (POD) nicht aktiviert. Enable the **Show Suspend Delivery button in Omnipod tab** setting in the `Omnipod settings <#omnipod-settings>`__ under **Other**.
 
 Insulinabgabe unterbrechen
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Verwende diesen Befehl, um den aktiven Pod in den Status 'unterbrochen' zu versetzen. In diesem ausgesetzten Zustand wird der Pod kein Insulin liefern. Dieser Befehl ahmt die Suspend-Funktion nach, die der originale Omnipod PDM an einen aktiven Pod sendet.
 
@@ -292,7 +292,7 @@ In dem folgenden Prozess wird gezeigt, wie Warntöne bestätigt und quittiert we
 4. Go to the **Omnipod (POD)** tab, under the **Active Pod alerts** field, the warning message is no longer displayed and the active pod will no longer issue pod expiration warning beeps.
 
 Anzeige Pod-Historie
-----------------
+--------------------
 
 In diesem Abschnitt wird gezeigt, wie du deine Pod-Historie überprüfen und nach verschiedenen Aktionskategorien filtern kannst. Mit diesem Werkzeug kannst du die Aktionen und Ergebnisse deines jeweils aktiven Pod während dessen dreitägigem Lebenszyklus (72 - 80 Stunden) ansehen.
 
@@ -310,7 +310,7 @@ Diese Funktion ist hilfreich bei der Überprüfung von Boli, Temporären Basalra
     |Pod_History_3| |Pod_History_4|
 
 Zeige RileyLink Einstellungen und Historie an
------------------------------------
+---------------------------------------------
 
 Dieser Abschnitt zeigt, wie die Einstellungen des aktiven Pods und RileyLinks zusammen mit der Kommunikationshistorie der beiden überprüft werden können. Diese Funktion wird nach dem Aufrufen in zwei Abschnitte unterteilt: **Einstellungen** und **Historie**.
 
@@ -545,7 +545,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 * This button **DOES NOT** need to be pressed when switching between different pod communication devices
 
 Omnipod-Einstellungen
-================
+=====================
 
 The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayedas a tab in the AAPS interface titled **OMNIPOD** or **POD**. Dies wird in dieser Dokumentation als Registerkarte **Omnipod (POD)** bezeichnet.
 
@@ -598,7 +598,7 @@ Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, 
 * **Automatically acknowledge Pod alerts:** When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
 
 Benachrichtigungen
--------------
+------------------
 
 Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful. 
 
@@ -609,7 +609,7 @@ Provides AAPS notifications and audible phone alerts when it is uncertain if TBR
 * **\*Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
    
 Andere
------
+------
 
 Provides advanced settings to assist debugging.
 	
@@ -705,7 +705,7 @@ Battery level reporting is a setting that can be enabled to return the current b
 
 
 Problembehandlung
-===============
+=================
 
 Pod Failures
 ------------
@@ -739,17 +739,17 @@ Omnipod driver alerts
 please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
 
 Kein aktiver Pod
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically silenced.
 
 Pod angehalten
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 Informational alert that Pod has been suspended.
 
 Setzen des Basal-Profils fehlgeschlagen. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
 
@@ -773,7 +773,7 @@ Best Practices
 ==============
 
 Optimale Positionierung von Omnipod und RileyLink
------------------------------------------
+-------------------------------------------------
 
 Die Antenne, die auf dem RileyLink zur Kommunikation mit einem Omnipod-Pod verwendet wird, ist eine 433 MHz-Wendelspiralantenne. Aufgrund seiner Konstruktion strahlt er ein omnidirektionales Signal wie ein dreidimensionaler Donut ab, wobei die Z-Achse die vertikal stehende Antenne darstellt. Das bedeutet, dass es optimale Positionen für die Platzierung des RileyLink gibt, insbesondere bei der Pod-Aktivierung und Deaktivierung.
 

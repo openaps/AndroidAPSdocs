@@ -1,8 +1,8 @@
 Docs updates & changes
-**************************************************
+**********************
 
 January 2021
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+============
 * `Action tab <../Getting-Started/Screenshots.html#action-tab>`_ - more details on page 'AndroidAPS screens'
 * Dexcom G6 with `Build Your Own Dexcom App <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_
 * Libre smart reader `battery level <../Getting-Started/Screenshots.html#sensor-level-battery>`_
@@ -10,13 +10,13 @@ January 2021
 * Other `new AndroidAPS 2.8.0 functions <../Installing-AndroidAPS/Releasenotes.html#version-2-8-0>`_
 
 December 2020
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+=============
 * `Libre 2 <../Hardware/Libre2.html>`_ - patched app does not work with US sensors
 * `OpenAPS hard-coded limits <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_
 * Sony Smartwatch 3 `Manual Installation of Google Play Service <../Usage/SonySW3.html>`_
 
 October 2020
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+============
 * Accu-Chek Combo - update `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
 * Accu-Chek Insight - Option to `upload absolute values <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * Logs - more details about `folder location <../Usage/Accessing-logfiles.html>`_
@@ -24,17 +24,17 @@ October 2020
 * `SMS commands - time sync <../Children/SMS-Commands.html>`_
 
 September 2020
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============
 * Major update for new AAPS version 2.7
 * For details see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
 
 June 2020
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+=========
 * `Libre 2 <../Hardware/Libre2.html>`_ - more details patched Libre Link app & use of bluetooth transmitters
 * `Time zone travelling <../Usage/Timezone-traveling.html>`_ with Libre 2
 
 May 2020
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+========
 * `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `Insight deactivate vibration <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (firmware 3.x only)
 * `Minimal request rate <../Configuration/Preferences.html#minimal-request-change>`_ to reduce number of notifications in open loop mode
@@ -42,19 +42,19 @@ May 2020
 * `Prediction lines <../Getting-Started/Screenshots.html#prediction-lines>`_ - more details
 
 April 2020
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 * `Backdate insulin <../Usage/CPbefore26.html#carbs--bolus>`_ (i.e. given by syringe)
 * `Android 6 support will be discontinued in next master version <../Module/module.html#phone>`_
 
 March 2020
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==========
 * `Build apk with Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
 * `DanaRS with firmware v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **cannot currently be used with AndroidAPS!**
 * `Extended bolus and switch to open loop <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `Update apk with Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
 
 February 2020
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+=============
 * `Automation caveats <../Usage/Automation.html#good-practice-caveats>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - short explanation
 * `Careportal alternatives <../Usage/CPbefore26.html>`_
@@ -65,12 +65,12 @@ February 2020
 * `Wear complications <../Configuration/Watchfaces.html>`_
 
 January 2020
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 * `Manual carb correction <../Getting-Started/Screenshots.html#carb-correction>`_ for faulty carb entries
 * `Image size <../make-a-PR.html#image-size>`_ when editing docs
 
 December 2019
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+=============
 * `Android auto <../Usage/Android-auto.html>`_ - setup with screenshots
 * `Accu-Chek Insight & Autotune <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_ - workaround for usage
 * `Glimp <../Configuration/Config-Builder.html#bg-source>`_ - version 4.15.57 and newer supported
@@ -78,7 +78,7 @@ December 2019
 * `Watchface complications <../Configuration/Watchfaces.html#complications>`_ - use your favorite watchface with AAPS data
 
 November 2019
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+=============
 * `Automation - deactivate when disabling loop <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
 * `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#id1>`_
@@ -95,7 +95,7 @@ November 2019
 * Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-docs-pages>`_.
 
 October 2019
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+============
 * `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#id16>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `AccuChek Insight - log options <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * `COB calculation on separate page <../Usage/COB-calculation.html>`_
@@ -108,7 +108,7 @@ October 2019
 * `xDrip - update G6 transmitter replacement <../Configuration/xdrip.html#replace-transmitter>`_
 
 September 2019
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============
 * `Automate <../Usage/Automation.html>`_
 * `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorbtion
 * `Nightscout security <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
@@ -117,7 +117,7 @@ September 2019
 * `What is a closed loop system? <../Getting-Started/ClosedLoop.html>`_
 
 August 2019
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+===========
 * `Dexcom G6 patched app region <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
 * `Dexcom G6 new transmitter <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
 * `What do I need? <../index.html#what-do-i-need>`_ - new structure & additional information

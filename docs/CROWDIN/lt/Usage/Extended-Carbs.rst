@@ -42,7 +42,7 @@ Ištęstas bolusas
 Kaip jau minėta aukščiau, ištęstas arba vadinamasis daugiabangis bolusas neveikia su uždaru ciklu. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ for details
 
 Ištęstinis bolusas ir perjungimas į atvirą ciklą - tik Dana ir Insight pompoms
------------------------------------------------------------------------------
+------------------------------------------------------------------------------
 Kai kurie žmonės vis dar prašė parinkties AAPS naudoti ištęstinius bolusus, nes jie norėjo su specialiu maistu elgtis taip, kaip įpratę. 
 
 Štai kodėl 2.6 versijoje yra galimybė nustatyti ištęstą bolusą Danos ir Insight pompose. 

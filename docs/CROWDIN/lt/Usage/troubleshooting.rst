@@ -8,7 +8,7 @@ AndroidAPS programa
 ==================================================
 
 Kūrimas ir atnaujinimas
--------------------
+-----------------------
 * `Prarastas rakto failas <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
 * `Android Studio trikčių šalinimas <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
 

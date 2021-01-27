@@ -1,5 +1,5 @@
 Išmanieji laikrodžiai
-*************
+*********************
 
 Išmanieji laikrodžiai nėra būtini, bet naudingi kai kuriems vartotojams.
 Daugiau informacijos rasite čia:

@@ -15,7 +15,7 @@ La bomba de insulina de un niño es controlado por el teléfono móvil del niño
 * Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see `release notes for Version 2.8.1.1 <https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for further details.
 
 Herramientas y aplicaciones para monitorización remota
-==================================================
+------------------------------------------------------
 * `Nightscout <http://www.nightscout.info/>`_ en el navegador web (principalmente para visualización de datos)
 *	NSClient app is a stripped down version of AAPS capable of following somebody, making profile switches, setting TTs and entering carbs. There are 2 apps:  `NSClient & NSClient2 to download <https://github.com/nightscout/AndroidAPS/releases/>`_. The only difference is the app name. This way you can install the app twice on the same phone, to be able to follow 2 different persons/nightscouts with it.
 *	Dexcom seguidor si está usando la aplicación original Dexcom (sólo valores BG)

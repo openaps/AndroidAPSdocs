@@ -15,10 +15,9 @@ AndroidAPS предлагает несколько опций для удале�
 * Удаленный контроль через приложение NSClient рекомендуется только в том случае, если синхронизация работает хорошо (т. е. you don’t see unwanted data changes like self modification of TT, TBR etc) see `release notes for Version 2.8.1.1 <https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for further details.
 
 Инструменты и приложения для удаленного мониторинга
-==================================================
-* " Nightscout <http://www.nightscout.info/>` _ в браузере (в основном отображение данных)
-*	NSClient app is a stripped down version of AAPS capable of following somebody, making profile switches, setting TTs and entering carbs. There are 2 apps:  `NSClient & NSClient2 to download <https://github.com/nightscout/AndroidAPS/releases/>`_. The only difference is the app name. This way you can install the app twice on the same phone, to be able to follow 2 different persons/nightscouts with it.
-*Приложение Dexcom Follow, если вы используете оригинальное приложение Dexcom (только ГК)
+* ` Nightscout <http://www.nightscout.info/>`_ в браузере (в основном отображение данных)
+* ГК с клиента Nightscout
+* Приложение Dexcom Follow, если вы используете оригинальное приложение Dexcom (только ГК)
 * `xDrip <../Configuration/xdrip.html>`_ в режиме слежения follower (в основном значения ГК и **оповещения**)
 * ` Sugarmate <https://sugarmate.io/>_ или ` Spike <https://spike-app.com/> _ на iOS (в основном значения ГК и ** оповещения**)
 

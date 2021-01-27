@@ -2,7 +2,7 @@ Hardwarekonfiguration
 =======================
 
 AndroidAPS einrichten
---------------
+---------------------
    
 BZ-Quelle
 -----------
@@ -20,7 +20,7 @@ Pumpen
 * `Medtronic Pumpe <../MedtronicPump.html>`_
 
 Smartphones
--------
+-----------
 * `Jelly Pro Einstellungen <../../Usage/jelly.html>`_
 * `Huawei Einstellungen <../../Usage/huawei.html>`_
 

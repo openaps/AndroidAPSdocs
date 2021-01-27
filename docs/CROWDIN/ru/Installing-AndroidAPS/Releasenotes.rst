@@ -139,7 +139,7 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
 
 Новые возможности
-------------------
+-----------------
 * Insight: Выключение вибрации при болюсах на версии прошивки 3
 * В остальном эквивалентна 2.6.1.2. Обновление не является обязательным. 
 
@@ -150,7 +150,7 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
 
 Новые возможности
-------------------
+-----------------
 * Исправлен сбой в службе Insight
 * В остальном эквивалентна 2.6.1.1. Если эта ошибка не влияет на вас, обновление не требуется.
 
@@ -161,7 +161,7 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
 
 Новые возможности
-------------------
+-----------------
 * Исправлена ошибка команды SMS CARBS при использовании помпы Combo
 * В остальном эквивалентна 2.6.1. Если эта ошибка не влияет на вас, обновление не требуется.
 
@@ -172,7 +172,7 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
 
 Новые возможности
-------------------
+-----------------
 * Позволяет вводить только HTTPS:// в настройках NSClient
 * Исправлено ` BGI <../Getting-Started/Glossary.html> ` _ отображение ошибок в часах
 * Исправлены мелкие ошибки интерфейса
@@ -191,7 +191,7 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
 
 Новые возможности
-------------------
+-----------------
 * Небольшие изменения дизайна (стартовая страница...)
 * Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
 * Новый плагин `Local Profile <../Configuration/Config-Builder.html#local-profile-recommended>`_
@@ -241,7 +241,7 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 * Поддержка Glimp версии 4.15.57 и новее.
 
 Это обновление для меня? В настоящее время НЕ поддерживается
---------------------------------------------------
+------------------------------------------------------------
 * Android 5 и ниже
 * Poctech
 * 600SeriesUploader

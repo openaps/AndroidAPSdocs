@@ -25,7 +25,7 @@ Je kunt verdergaan met het overzetten van de app (*.apk bestand) naar je telefoo
   :alt: negeer Kotlin compiler waarschuwing
 
 Key was created with errors (digitale handtekening bevat een fout)
-==================================================
+==================================================================
 Bij het maken van een nieuw keystore-bestand (digitale handtekening) voor het bouwen van de ondertekende APK, kun je het volgende foutbericht krijgen (in Windows)
 
 .. image:: ../images/AndroidStudio35SigningKeys.png
@@ -62,7 +62,7 @@ Dit is een bekende bug in Android Studio 3.5 en zal waarschijnlijk niet worden o
 3. Wijzig de doel map (destination folder) voor jouw apk-bestand (naar een andere map op jouw computer).
 
 Unable to start daemon process (Kan daemon proces niet starten)
-==================================================
+===============================================================
 Als je een foutmelding ziet zoals hieronder dan heb je waarschijnlijk een 32-bit versie van Windows 10. Deze versie werkt helaas niet met Android Studio 3.5.1 en hoger. Alleen de 64-bit versie van Windows 10 werkt. Je zult dus op jacht moeten naar een computer met de 64-bit versie, of op jouw eigen computer de 64-bit versie moeten installeren.
 
 Er zijn veel handleidingen op internet te vinden hoe je kunt checken of jouw computer een 32-bit of 64-bit versie heeft, zoals `deze <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
@@ -84,7 +84,7 @@ Als je een foutmelding ziet zoals
   :alt: Failure uncommitted changes
 
 Optie 1 - Controleer of git correct geinstalleerd is
---------------------------------------------------
+-----------------------------------------------------
 * git is wellicht niet correct geïnstalleerd (moet geïnstalleerd zijn op een locatie waar Android Studio bij kan)
 * wanneer je Windows gebruikt en je hebt git zonet geïnstalleerd, dan moet je je computer opnieuw opstarten of in ieder geval afmelden en opnieuw aanmelden, om git voor andere programma's beschikbaar te maken na de installatie
 * `Controleer git instellingen <../Installing-AndroidAPS/git-install.html#controleer-de-git-instellingen-in-android-studio>`_

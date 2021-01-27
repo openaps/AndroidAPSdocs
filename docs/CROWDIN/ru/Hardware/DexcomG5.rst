@@ -10,7 +10,7 @@ Dexcom G5
 * If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.md>`_ .
 
 При пользовании G5 с помощью модифицированного приложения Dexcom
-==================================================
+================================================================
 * Скачайте приложение из `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, и выберите версию по вашим потребностям (mg/dl или mmol/l, G5).
 
   * Папка 2.3 предназначена для пользователей AndroidAPS 2.3, папка 2.4 для пользователей AAPS 2.5.

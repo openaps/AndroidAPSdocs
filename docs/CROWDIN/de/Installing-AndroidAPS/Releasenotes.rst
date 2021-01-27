@@ -65,7 +65,7 @@ Wichtige Hinweise
 * Nutze bitte `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
-----------------------
+------------------------
 * `Omnipod Eros Unterstützung <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda und besonderer Dank an @ps2 @itsmojo, alle anderen am Loop-Treiber für Omnipod Beteiligten, sowie @jlucasvt von GetRileyLink.org 
 * `Bolus-Berater <../Configuration/Preferences.html#bolus-berater>`_ & `Essens-Erinnerung <../Getting-Started/Screenshots.html#essens-erinnerung>`_ @MilosKozak 
 * `Neues Watchface <../Configuration/Watchfaces.html#neues-watchface-ab-version-2-8>`_ @rICTx-T1D
@@ -91,7 +91,7 @@ Erscheinungsdatum: 24.09.2020
 Du musst `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`_ zumindest gestartet haben, um die `Automation <../Usage/Automation.html>`_ weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden. Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung> starten kannst`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 Wichtige neue Funktionen
-----------------------
+------------------------
 * Zahlreiche Code- und Library-Änderungen, Code neu in Kotlin geschrieben @MilosKozak @AdrianLxM
 * Module für Dana Pumpen @MilosKozak
 * `Neues Layout und Layoutauswahl <../Getting-Started/Screenshots.html>`_ @MilosKozak
@@ -127,7 +127,7 @@ Erscheinungsdatum: 04.05.2020
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
-----------------------
+------------------------
 * Insight: Vibration bei Bolus deaktivieren (Nur Firmware Version 3.x) - zweiter Versuch
 * Sonst identisch mit 2.6.1.3. Update ist optional. 
 
@@ -138,7 +138,7 @@ Erscheinungsdatum: 03.05.2020
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
-------------------
+------------------------
 * Insight: Vibration bei Bolus deaktivieren (Nur Firmware Version 3.x)
 * Sonst identisch mit 2.6.1.2. Update ist optional. 
 
@@ -149,7 +149,7 @@ Erscheinungsdatum: 19.04.2020
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
-------------------
+------------------------
 * Fehlerbehebung Insight Service
 * Sonst identisch mit 2.6.1.1. Wenn Dich der Fehler nicht betrifft, musst Du nicht updaten.
 
@@ -160,7 +160,7 @@ Erscheinungsdatum: 06.04.2020
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
-------------------
+------------------------
 * Fehlerbehebung SMS CARBS Kommando in Zusammenhang mit der Combo Pumpe
 * Sonst identisch mit 2.6.1. Wenn Dich der Fehler nicht betrifft, musst Du nicht updaten.
 
@@ -171,7 +171,7 @@ Erscheinungsdatum: 21.03.2020
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
-------------------
+------------------------
 * Nur https:// in Nightscout-Client Einstellungen erlaubt
 * Fehlerbehebung `BGI <../Getting-Started/Glossary.html>`_ Anzeige auf der Smartwatch
 * Kleiner Anzeigefehler behoben
@@ -190,7 +190,7 @@ Erscheinungsdatum: 29.02.2020
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
-------------------
+------------------------
 * Kleinere Designänderungen (Startseite...)
 * Careportal Tab / Menü entfernt - weitere Details dazu `hier <../Usage/CPbefore26.html>`__
 * Neues `Plugin Lokales Profil <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_
@@ -240,7 +240,7 @@ Wichtige Hinweise
 * Glimp wird ab Version 4.15.57 und neuer unterstützt.
 
 Kann ich dieses Update nutzen? Aktuell werden NOCH NICHT unterstützt:
---------------------------------------------------
+---------------------------------------------------------------------
 * Android 5 oder niedriger
 * Poctech
 * 600SeriesUploader
@@ -337,7 +337,7 @@ Wichtige neue Funktionen
 * Setup Wizard: Der neue Assistent führt dich durch die Einrichtung von AndroidAPS.
 
 Einstellungen, die bei Umstellung von AMA zu SMB erforderlich sind
---------------------------------------------------
+------------------------------------------------------------------
 * Objective 10 muss gestartet sein, damit die SMB-Funktion zur Verfügung steht (der SMB-Reiter zeigt dir, welche Beschränkungen bestehen).
 * maxIOB enthält nun das gesamte IOB, nicht nur das hinzugefügte Basalinsulin. Das bedeutet: Wenn du einen Bolus von 8 IE gegeben hast und maxIOB ist 7, dann wird kein SMB ausgelöst, solange das Gesamt-IOB nicht wieder auf unter 7 IE abgefallen ist.
 * Der Standardwert von min_5m_carbimpact erhöht sich von 3 bei AMA auf 8 beim SMB. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.

@@ -12,7 +12,7 @@ Windows
   :alt: Ruta de acceso de instalación de Git
 
 2. Establecer ruta de acceso de git en Android Studio
---------------------------------------------------
+-----------------------------------------------------
 * Open File > Settings 
 
   .. imagen:: ../images/Update_GitSettings1.png
@@ -45,7 +45,7 @@ Windows
 * Rearranque el PC para actualizar el entorno del sistema.
 
 4. Comprobar configuración de git en Android Studio
---------------------------------------------------
+---------------------------------------------------
 * Abrir ventana de terminal en Android Studio
 * Enter "`git - -version`" (without quotation marks and no spaces between the two - [minus sign]!) and press Return
 

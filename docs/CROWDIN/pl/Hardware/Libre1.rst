@@ -13,7 +13,7 @@ Additionally it is possible to use a specific watch, the Sony Smartwatch 3 which
 As it currently stands, if using Libre 1 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within the SMB algorithm. The BG values of Libre 1 are not smooth enough to use it safely. See `Smoothing blood glucose data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ for more details.
 
 If using xDrip+
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 * If not already set up then download xDrip+ and follow instructions on `LimiTTEer <https://github.com/JoernL/LimiTTer>`_ or  `Libre Alarm <https://github.com/pimpimmi/LibreAlarm/wiki>`_.
 * In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
 * In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
@@ -23,7 +23,7 @@ If using xDrip+
 * If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
 If using Glimp
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 * You will need Glimp version 4.15.57 or newer. Older versions are not supported.
 * If not already set up then download Glimp and follow instructions on `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_.
 * Select Glimp in ConfigBuilder (setting in AndroidAPS).

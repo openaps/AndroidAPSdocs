@@ -1,5 +1,5 @@
 Montres connectées
-*************
+******************
 
 Les montrées connectées sont optionnelles, mais très utiles pour certains utilisateurs.
 Plus de détails ici :
