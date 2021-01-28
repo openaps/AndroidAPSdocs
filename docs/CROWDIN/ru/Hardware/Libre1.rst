@@ -20,7 +20,7 @@ As it currently stands, if using Libre 1 as BG source you cannot activate ‘Ena
 Если хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принимать калибровки (Accept calibrations) и выберите ВКЛ (ON).  Возможно вы также захотите рассмотреть варианты калибровки в настройках > менее распространенные параметры > дополнительные параметры калибровки.
 В конфигуратоге (настройки AndroidAPS) выберите xdrip+.
 * Настройте параметры в xDrip+ в соответствии со страницей настроек `xDrip+ со снимками экрана <../Configuration/xdrip.html>`__. Существует раздел базовых настроек xDrip+ и для параметров Freestyle Libre xDrip+.
-Если AAPS не получает значения ГК, когда телефон находится в режиме авиаперелета пользуйтесь функцией Идентифицировать приемник в соответствии с описанием на странице настроек `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
 При использовании Glimp
 ==================================================
