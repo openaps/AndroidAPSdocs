@@ -3,7 +3,7 @@ Dexcom G6
 Lo básico primero
 ==================================================
 
-* Siga la higiene general de la CGM y establezca la recomendación del sensor ` Aquí <../Hardware/GeneralCGMRecommendation.html>` _.
+* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`__.
 * Para los transmisores G6 fabricados después del final del otoño de 2018, asegúrese de utilizar una de las ` última versión nightly de xDrip+ <https://github.com/NightscoutFoundation/xDrip/releases>` _. Dichos transmisores tienen un nuevo firmware y la última versión estable de xDrip+ (2019/01/10) no puede tratar con él.
 
 Consejos generales para el bucle con G6
@@ -27,7 +27,7 @@ Si se utiliza G6 con xdrip+
 * Si todavía no se ha configurado, descargue `xdrip <https://github.com/NightscoutFoundation/xDrip>` _ y siga las instrucciones de nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>` _).
 * Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
 * Ajuste los valores en xDrip+ según la página de valores de `xDrip+ <../Configuration/xdrip.html>` _
-* Si AAPS no recibe los valores de BG cuando el teléfono está en el modo de avión, utilice ` Identificar receptor ', como se describe en la página' xDrip+ settings <../Configuration/xdrip.html>` _.
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
 Si utiliza G6 con la aplicación Dexcom parcheada
 ==================================================
@@ -89,7 +89,7 @@ Resolución de problemas específica de Dexcom G6
 
 Resolver problemas generales
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
 
 Nuevo transmisor con sensor en ejecución
 --------------------------------------------------
