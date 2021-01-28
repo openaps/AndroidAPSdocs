@@ -43,7 +43,7 @@
 * Για να το κάνετε αυτό, πατήστε παρατεταμένα το ** Κλειστό κύκλωμα ** στην κύρια οθόνη και επιλέξτε **κύκλωμα αναστελμένο για 1 ώρα **. 
 * Wait for the pump to communicate with the phone and the Bluetooth logo on the pump has faded.
 
-![Η δυνατότητα Bluetooth είναι ενεργοποιημένη](../images/combo/combo-tips-combo-tips-compo.png)
+![Η δυνατότητα Bluetooth είναι ενεργοποιημένη](../images/combo/combo-tips-compo.png)
 
 * Απελευθερώστε το κλείδωμα πλήκτρων στην αντλία, θέστε την αντλία σε λειτουργία διακοπής, επιβεβαιώστε πιθανώς ακυρωμένο προσωρινό βασικό ρυθμό και αλλάξτε την μπαταρία.
 * Then put the pump back in run mode select **Resume** when long-pressing on **Suspended** on the main screen.
