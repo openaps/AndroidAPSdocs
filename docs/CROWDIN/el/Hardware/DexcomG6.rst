@@ -3,7 +3,7 @@ Dexcom G6
 Πρώτα τα βασικά
 ==================================================
 
-* Ακολουθήστε τη γενική υγιεινή CGM και ρυθμίστε των αισθητήρα `εδώ <../Υλικό / Γενικές συστάσεις CGM>` _.
+* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`__.
 * Για πομπούς G6 που κατασκευάζονται μετά το πέρας / τέλος του 2018, βεβαιωθείτε ότι έχετε χρησιμοποιήσει μία από τις πιο πρόσφατες εκδόσεις xDrip + <https://github.com/NightscoutFoundation/xDrip/releases> _ _. Αυτοί οι πομποί έχουν ένα νέο firmware και η τελευταία σταθερή έκδοση του xDrip + (2019/01/10) δεν μπορεί να το αντιμετωπίσει.
 
 Γενικές συμβουλές για το κύκλωμα με το G6
@@ -27,7 +27,7 @@ If using G6 with xDrip+
 * If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
 * Προσαρμογή των ρυθμίσεων στο xDrip + σύμφωνα με τη σελίδα ρυθμίσεων xDrip + <../ Configuration / xdrip.html> `_
-Αν το AAPS δεν λαμβάνει τιμές BG όταν το τηλέφωνο βρίσκεται σε κατάσταση λειτουργίας αεροπλάνου, χρησιμοποιήστε Προσδιορισμός δέκτη όπως περιγράφεται στη[ σελίδα ρυθμίσεων xDrip](../Configuration/xdrip.html).
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
 Εάν χρησιμοποιείτε το G6 με την εφαρμογή patched Dexcom
 ==================================================
@@ -89,7 +89,7 @@ Dexcom G6 αντιμετώπιση συγκεκριμένων προβλημάτ
 
 General troubleshoothing
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
 
 Νέος πομπός με αισθητήρα λειτουργίας που λειτουργούσε
 --------------------------------------------------
