@@ -36,7 +36,7 @@ SGLT-2 억제제의 미사용
 핸드폰
 --------------------------------------------------
 The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
-Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>_`
+Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>`_
 
 사용자들이 테스트된 핸드폰과 스마트워치 목록을 작성하고 있으며<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_에서 확인하실 수 있습니다.
 
@@ -74,7 +74,7 @@ AndroidAPS와 호환될 수 있는 가능성이 있는 **그외 펌프**는 <../
 
 혈당정보
 --------------------------------------------------
-다음은 AndroidAPS와 호환이 가능한 CGM/ FGM의 짧은 개요입니다. 좀 더 자세한 내용은 `이곳에서 <../Configuration/BG-Source.html>`_ 확인해주시기 바랍니다. 짧은 힌트: 만약 혈당 정보가 xdrip 앱 혹은 나이트스카운트 웹에서 보여지고 있는 경우에는 AAPS에서 xdrip (혹은 인터넷이 연결된 상태에서 나이트스카웃) 을 혈당 소스로 선택할수 있습니다.
+다음은 AndroidAPS와 호환이 가능한 CGM/ FGM의 짧은 개요입니다. For further details, look `here <../Configuration/BG-Source.html>`__. 짧은 힌트: 만약 혈당 정보가 xdrip 앱 혹은 나이트스카운트 웹에서 보여지고 있는 경우에는 AAPS에서 xdrip (혹은 인터넷이 연결된 상태에서 나이트스카웃) 을 혈당 소스로 선택할수 있습니다.
 
 * `덱스콤 G6 <../Hardware/DexcomG6.html>`_: xdrip앱이나 패치된 덱스콤앱에서 작동합니다.
 * `덱스콤 G5 <../Hardware/DexcomG5.html>`_: xdrip앱이나 패치된 덱스콤앱에서 작동합니다.
@@ -91,11 +91,11 @@ Nightscout
 
 나이트스카웃은 독립적인 다른 모듈입니다. 목표 1을 이행해주시기 바랍니다.
 
-AndroidAPS와 나이트스카웃 구성하는 방벙에 대해 추가적인 정보는 '여기서 <../Installing-AndroidAPS/Nightscout.html>`_확인하실 수 있습니다.
+Additional information on how to configure Nightscout for use with AndroidAPS can be found `here <../Installing-AndroidAPS/Nightscout.html>`__.
 
 AAPS -.apk 파일
 --------------------------------------------------
-기본 구성 요소의 시스템입니다. 앱을 설치하시기 전에는 apk-파일을 직접 빌드하셔야 합니다.(Android앱을 위한 확장파일명) 설명은  `여기에 <../Installing-AndroidAPS/Building-APK.html>`_있습니다.  
+기본 구성 요소의 시스템입니다. 앱을 설치하시기 전에는 apk-파일을 직접 빌드하셔야 합니다.(Android앱을 위한 확장파일명) Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`__.  
 
 선택적 모듈
 ==================================================
@@ -103,7 +103,7 @@ AAPS -.apk 파일
 --------------------------------------------------
 안드로이드 웨어 1.x이상의 스마트워치를 선택할 수 있습니다. 대부분의 loop사용자들은 소니 스마트 워치 3 (SWR50) 을 착용합니다. 그 이유는 폰이 범위 밖에 있을 때 덱스컴 G5/G5에서 혈당을 읽어올수 있기 때문입니다. 일부 다른 워치 중에서도 패치 이후에 독립형 수신기로 작동할 수 있습니다. (좀 더 자세한 사항은여기를 `this documentation <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ 참고해주시기 바랍니다.)
 
-사용자들이 테스트된 핸드폰과 시계 목록을 작성하고 있으며<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_에서 확인하실 수 있습니다. Android Aps와 함께 사용할 수 있는 다른 워치들은 `여기서 <../Configuration/Watchfaces.html>`_ 확인하실 수 있습니다.
+사용자들이 테스트된 핸드폰과 시계 목록을 작성하고 있으며<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_에서 확인하실 수 있습니다. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`__.
 
 시트에 기록되어 있지 않은 핸드폰 혹은 시계를 추가하기 위해서는 <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_에서 신청서를 작성해주시기 바랍니다.
 
@@ -111,7 +111,7 @@ AAPS -.apk 파일
 
 xDrip+
 --------------------------------------------------
-Xdrip앱을 혈당소스로 해야할 필요는 없지만 예시로 사용해볼 수 있습니다. 알림과 혈당이 보여지는 것이 좋습니다. 원하는 만큼의 알림을 설정할 수 있고, 알림의 활성 시간을 구체적으로 설정할 수 있으며 무음모드 또한 무시할 수 있는 기능이 있습니다. 일부 xdrip의 정보는 `여기서 <../Configuration/xdrip.html>`_ 확인하실 수 있습니다. 이 앱에 대한 진행상태가 상당히 빠르기 때문에 문서가 항상 최신으로 업데이트가 되어 있지 않을 수 있음을 유의해주시기 바랍니다.
+Xdrip앱을 혈당소스로 해야할 필요는 없지만 예시로 사용해볼 수 있습니다. 알림과 혈당이 보여지는 것이 좋습니다. 원하는 만큼의 알림을 설정할 수 있고, 알림의 활성 시간을 구체적으로 설정할 수 있으며 무음모드 또한 무시할 수 있는 기능이 있습니다. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`__. 이 앱에 대한 진행상태가 상당히 빠르기 때문에 문서가 항상 최신으로 업데이트가 되어 있지 않을 수 있음을 유의해주시기 바랍니다.
 
 샘플 설정
 ==================================================
