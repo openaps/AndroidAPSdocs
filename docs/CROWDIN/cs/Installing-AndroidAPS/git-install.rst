@@ -34,7 +34,7 @@ Klikněte na "OK" v dialogovém okně (1.) a pak na "OK" v okně s nastavením (
 
 * Pokud soubor git.exe nebyl automatickým testem nalezen, klikněte na "OK" v dialogovém okně (1.) a pak na tlačítko se třemi tečkami (2.).
 * Použijte funkci <a href="https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html">vyhledávání</a> v programu Průzkumník souborů pro nalezení souboru "git.exe" pokud si nejste jisti, kde lze soubor najít. Hledáte soubor git.exe ve složce \bin\.
-* Vyberte cestu k souboru git.exe a ujistěte se, že vybraný soubor je ve složce ** \bin\ ** (3.) a klikněte na tlačítko "OK" (4.).
+* Select path to git.exe and make sure you selected the one in **\\bin\\** folder (3.) and click "OK" (4.).
 Zavřete okno nastavení kliknutím na tlačítko "OK" (5.).
 
   .. image:: ../images/AndroidStudio361_11.png
