@@ -7,7 +7,7 @@ Jei naudojate G5 su xDrip+
 * In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
 Jei norite naudotis AndroidAPS kalibracijoms, xDrip+ eikite į Nustatymus> Programinės įrangos suderinamumas> Priimti kalibracijas ir pasirinkite Įjungti.  Taip pat galbūt norėsite peržiūrėti kalibravimo parinktis Nustatymuose > Mažiau įprasti nustatymai > išplėstinės kalibravimo parinktys.
 * Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite xDrip.
-Jei AAPS negauna glikemijos duomenų, kai telefonas veikia skrydžio režimu, naudokite funkciją Nustatyti gavėją, [kaip aprašyta xDrip + nustatymų puslapyje] (../Configuration/xdrip.md).
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.md>`_ .
 
 Kai naudojate G5 su modifikuota Dexcom programa
 ==================================================
