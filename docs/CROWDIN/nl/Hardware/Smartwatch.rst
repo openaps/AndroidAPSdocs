@@ -10,7 +10,7 @@ Meer details vind je hier:
    :glob:
    
    Lijst van geteste smartwatches <../Getting-Started/Phones.md>
-   Telefoonachtergrond <../Getting-Started/Phones.md#phone-background>
+   Phone background <../Getting-Started/Phones.html#phone-background>
    Smartwatch instellingen <../Configuration/Watchfaces.md>
    Problemen oplossen voor Sony Smartwatch SW 3 <..Usage/SonySW3.rst>
-   Pebble <../Configuration/Watchfaces.md#pebble>
+   Pebble <../Configuration/Watchfaces.html#pebble>
