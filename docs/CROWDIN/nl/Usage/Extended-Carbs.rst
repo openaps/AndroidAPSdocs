@@ -8,7 +8,7 @@ eCarbs zijn koolhydraten die over meerdere uren worden uitgespreid. Voor standaa
 
 Het nut van eCarbs is niet beperkt tot vette / eiwitrijke maaltijden. Ze zijn ook handig als door andere invloeden de bloedglucose gedurende meerdere uren flink stijgt, bijvoorbeeld bij medicijnen zoals corticosteroïden.
 
-Voor het invoeren van eCarbs gebruik je de knop Koolhydraten op het Overzicht-scherm. Vul de duur in, het aantal koolhydraten en desgewenst een timeshift. In dit voorbeeld zie je dat iemand 25 gram koolhydraten wil 'uitsmeren' tussen 15:43 en 17:43 (het screenshot is om 14:43 gemaakt):
+To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift:
 
 .. image:: ../images/eCarbs_Dialog.png
   :alt: Koolhydraten invoeren
