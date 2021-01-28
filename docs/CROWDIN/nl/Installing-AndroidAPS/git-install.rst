@@ -34,7 +34,7 @@ Windows
 
 * Als hij het bestand git.exe niet heeft kunnen vinden klik "OK" in het dialoogvenster (1.) en dan de knop met de drie stipjes (2.).
 * Gebruik `zoekfunctie in windows verkenner <https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html>`_ om "git.exe" te vinden als je niet zeker weet waar op jouw computer het git bestand staat. Je moet zoeken naar git.exe in een map die \bin\ heet.
-* Selecteer het pad naar git.exe en zorg ervoor dat je de map hebt geselecteerd in de ** \bin\ ** map (3.) en klik op "OK" (4.).
+* Select path to git.exe and make sure you selected the one in **\\bin\\** folder (3.) and click "OK" (4.).
 * Sluit het instellingen venster door te klikken op de "OK" knop (5.).
 
   .. image:: ../images/AndroidStudio361_11.png
