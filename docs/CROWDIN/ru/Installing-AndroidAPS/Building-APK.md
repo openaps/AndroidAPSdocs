@@ -4,7 +4,7 @@
 
 **AndroidAPS недоступен для скачивания из-за законодательства, касающегося медицинских устройств. Построить приложение для собственного использования вполне законно, но вам не разрешается передавать копию другим! См. раздел [ FAQ ](../Getting-Started/FAQ.md).**
 
-## ## Важные Примечания
+## Важные Примечания
 
 * Please use **[Android Studio Version 4.1.1](https://developer.android.com/studio/)** or newer to build the apk.
 * [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.1.1.
