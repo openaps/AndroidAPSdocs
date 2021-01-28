@@ -10,7 +10,7 @@ Mehr Infos hier
        
    
    Liste der getesteten Telefone und Smartphones <../Getting-Started/Phones.md>
-   Hintergrundbild für das Samrtphone < ../Getting-Started/Phones.md#handy-hintergrundbild>
+   Phone background <../Getting-Started/Phones.html#phone-background>
    Watchfaces Wear OS <../Configuration/Watchfaces.md>
    Problembehandlung Sony Smartwatch SW 3 <../Usage/SonySW3.rst>
-   Pebble <../Configuration/Watchfaces.md#pebble>
+   Pebble <../Configuration/Watchfaces.html#pebble>
