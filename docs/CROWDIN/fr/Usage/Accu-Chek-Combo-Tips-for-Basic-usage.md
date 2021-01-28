@@ -43,7 +43,7 @@
 * Pour ce faire, faites un appui long sur **Boucle Fermée** dans l'écran principal et sélectionnez **Suspendre la Boucle pour 1h**. 
 * Attendez que la pompe communique avec le téléphone et que le logo Bluetooth sur la pompe se soit estompé.
 
-![Bluetooth activé](../images/combo/combo-tips-combo-tips-compo.png)
+![Bluetooth activé](../images/combo/combo-tips-compo.png)
 
 * Déverrouillez les touches de la pompe, mettez la pompe à l'arrêt, confirmez si nécessaire l'annulation du débit de base temporaire changez la pile.
 * Ensuite, redémarrez la pompe, faites un appui long sur **Suspendu** dans l'écran principal d'AAPS et sélectionnez **Reprendre**.
