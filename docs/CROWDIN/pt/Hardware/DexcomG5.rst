@@ -7,7 +7,7 @@ If using G5 with xdrip+
 * In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
 * Se você quiser utilizar AndoidAPS para calibrar no xdrip seleccionar Settings > Interapp Compatibility > Accept Calibrations e seleccione ON.  Também poderá querer rever as opções em Settings > Less Common Settings > Advanced Calibration Settings.
 * Seleccione xdrip no ConfigBuilder (configuração em AndroidAPS).
-* If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on [xDrip+ settings page](../Configuration/xdrip.md).
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.md>`_ .
 
 If using G5 with patched Dexcom app
 ==================================================
