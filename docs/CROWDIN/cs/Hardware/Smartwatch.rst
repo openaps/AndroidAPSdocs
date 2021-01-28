@@ -10,7 +10,7 @@ Více informací naleznete zde:
    :glob:
    
    Seznam otestovaných telefonů a hodinek <../Getting-Started/Phones.md>
-   Phone background <../Getting-Started/Phones.md#phone-background>
+   Phone background <../Getting-Started/Phones.html#phone-background>
    Watchfaces Wear OS <../Configuration/Watchfaces.md>
    Troubleshooting Sony Smartwatch SW 3 <../Usage/SonySW3.rst>
-   Pebble <../Configuration/Watchfaces.md#pebble>
+   Pebble <../Configuration/Watchfaces.html#pebble>
