@@ -7,7 +7,7 @@ Dexcom G5
 * In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
 Если хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принимать калибровки (Accept calibrations) и выберите ВКЛ (ON).  Возможно вы также захотите рассмотреть варианты калибровки в настройках > менее распространенные параметры > дополнительные параметры калибровки.
 В конфигуратоге (настройки AndroidAPS) выберите xdrip.
-Если AAPS не получает значения ГК, когда телефон находится в режиме авиаперелета пользуйтесь функцией Идентифицировать приемник в соответствии с описанием на странице настроек xDrip+ [xDrip+ settings page](../Configuration/xdrip.md).
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.md>`_ .
 
 При пользовании G5 с помощью модифицированного приложения Dexcom
 ==================================================
