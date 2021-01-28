@@ -34,7 +34,7 @@ Windows
 
 * Falls git.exe nicht gefunden werden kann, schließe das Dialogfenster mit "OK" (1.) und klicke dann auf den Button mit den drei Punkten (2.).
 * Du kannst auch die <a href="https://www.computerwoche.de/a/suchfunktion-optimal-nutzen,3331986,2">Suchfunktion  im Windows Explorer verwenden, um "git.exe" zu finden wenn Du Dir nicht sicher bist, wo diese gespeichert ist. Du brauchst die git.exe, die im Ordner \bin\ gespeichert ist.
-* Wähle den Pfad zu git.exe aus, stelle sicher, dass Du den Ordner ** \bin\ ** ausgewählt hast (3.), und klicke auf "OK" (4.).
+* Select path to git.exe and make sure you selected the one in **\\bin\\** folder (3.) and click "OK" (4.).
 * Schließe das Einstellungs-Fenster durch Klick auf "OK" (5.).
 
   .. image:: ../images/AndroidStudio361_11.png
