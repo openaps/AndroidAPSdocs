@@ -7,7 +7,7 @@ Používáte-li G5 s xDrip+
 * In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
 * Chcete-li, aby bylo možné přes AndroidAPS kalibrovat senzor, jděte v xDripu do Nastavení > Komunikace mezi aplikacemi > Accept Calibrations a vyberte zapnout.  Můžete také zkontrolovat v xDripu nastavení v částí Nastavení > Méně častá nastavení > Rozšířené kalibrace.
 * Na kartě Konfigurace (v AndroidAPS) vyberte xDrip.
-Pokud AndroidAPS nepřijímá v režimu letadlo hodnoty glykémie, musíte nastavit `Identify receiver` tak, jak je popsáno v [nastavení xDrip+](../Configuration/xdrip.md).
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.md>`_ .
 
 Používáte-li G5 s upravenou Dexcom aplikací
 ==================================================
