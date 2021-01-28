@@ -6,7 +6,7 @@ Si utiliza el mismo almacén de claves a la hora de actualizar AndroidAPS usted 
 
 En caso de que ya no pueda encontrar el almacén de claves antiguo, haga lo siguiente:
 
-1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`_ on your phone.
+1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`__ on your phone.
 2. Copie la configuración desde su teléfono a una ubicación externa (es decir,. su computadora, almacenamiento en la nube...).
 3. Asegúrese de que el archivo de configuración "AndroidAPS Preferences" se almacena de forma segura.
 4. Generar apk firmado de la nueva versión tal y como se describe en la página `página de actualización <../Installing-AndroidAPS/Update-to-new-version.html>`_.
@@ -118,26 +118,26 @@ Aplicación no instalada
 * Asegúrate de haber transferido el archivo "app-full-release.apk" a tu teléfono.
 * Si se muestra "App not installed" en el teléfono, siga estos pasos:
   
-1. `Exportar ajustes <../Usage/ExportImportSettings.html>`_ (en la versión AAPS ya instalada en tu teléfono)
+1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
 2. Desinstale AAPS en su teléfono.
 3. Habilite el modo de avión y desactive bluetooth.
 4. Instale la nueva versión ("app-full-release.apk ")
-5. `Importar valores <../Usage/ExportImportSettings.html>`_
+5. `Import settings <../Usage/ExportImportSettings.html>`__
 6. Volver a activar el bluetooth y desactivar el modo avión
 
 Aplicación instalada pero antigua
 ==================================================
-Si crea la aplicación satisfactoriamente, la transfiere al teléfono y la instala correctamente, pero el número de versión permanece igual, es posible que no haya podido `actualizar la copia local <../Update-to-new-version.html#update-your-local-copy>".
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`_.
 
 Ninguna de las anteriores funcionó
 ==================================================
 Si ninguno de los consejos anteriores lo ha ayudado podría considerar la creación de la aplicación desde cero:
 
-1. `Exportar ajustes <../Usage/ExportImportSettings.html>`_ (en la versión AAPS ya instalada en tu teléfono)
-2. Have your key password and key store password ready. En caso de que haya olvidado las contraseñas, puede intentar encontrarlas en los archivos del proyecto, tal como se describe en "aquí <https://youtu.be/nS3wxnLgZOo>"_. O simplemente utiliza un almacén de claves nuevo. 
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
+1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
+2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`__. O simplemente utiliza un almacén de claves nuevo. 
+3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`__.
 4. Cuando hayas creado el APK exitosamente borra la app existente de su teléfono, transfiere la nueva apk al teléfono e instálela.
-5. `Importar valores <../Usage/ExportImportSettings.html>`_
+5. `Import settings <../Usage/ExportImportSettings.html>`__
 
 El peor escenario
 ==================================================
