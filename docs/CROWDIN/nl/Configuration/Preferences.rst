@@ -60,7 +60,7 @@ Instellingenbeveiliging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Bescherm jouw instellingen met een wachtwoord of met de biometrische verificatie van jouw telefoon (bijv. `een kind gebruikt AAPS <../Children/Children.html>`_).
 * Er moet een aangepast wachtwoord worden gebruikt als je het masterwachtwoord alleen wilt gebruiken voor het beveiligen van `geëxporteerde instellingen <../Usage/ExportImportSettings.html>`_.
-* Als je een aangepast wachtwoord gebruikt, klik op de regel "Instellingen wachtwoord" om het wachtwoord in te stellen zoals `boven <../Configuration/Preferences.html#masterwachtwoord>`_ beschreven.
+* If you are using a custom password click on line "Settings password" to set password as described `above <../Configuration/Preferences.html#master-password>`__.
 
   .. image:: ../images/Pref2020_Protection.png
     :alt: Beveiliging
@@ -253,7 +253,7 @@ Minimale verzoek voor aanpassing [%]
 
 Advanced Meal Assist (AMA) of Super Micro Bolus (SMB)
 ===========================================================
-Afhankelijk van jouw instellingen in de `Configurator <../Configuration/Config-Builder.html>`_ kun je kiezen tussen twee algoritmes:
+Depending on your settings in `config builder <../Configuration/Config-Builder.html>`__ you can choose between two algorithms:
 
 * `Advanced Meal Assist (OpenAPS AMA) <../Usage/Open-APS-features.html#geavanceerde-maaltijdhulp-ama>`_ (Geavanceerde maaltijdhulp) - status van het algoritme in 2017
 * `Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - meest recente algoritme voor ervaren gebruikers
@@ -261,7 +261,7 @@ Afhankelijk van jouw instellingen in de `Configurator <../Configuration/Config-B
 OpenAPS AMA instellingen
 -----------------------------------------------------------
 * Dankzij de geavanceerde maaltijdhulp (Advanced Meal Assist, AMA) kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd. 
-* Zie ook de `OpenAPS documentatie <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`_.
+* More details about the settings and Autosens can be found in the `OpenAPS docs <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
 
 Maximaal instelbaar basaal E/u
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -300,13 +300,13 @@ Gevoeligheidsdetectie (Autosens)
 Geavanceerde instellingen (OpenAPS AMA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normaal gesproken hoef je deze instellingen niet te wijzigen!
-* Als je ze toch wilt veranderen, zorg er dan voor dat je de details in de `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ leest en begrijpt wat je doet.
+* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ and to understand what you are doing.
 
 OpenAPS SMB instellingen
 -----------------------------------------------------------
 * In tegenstelling tot AMA gebruikt `SMB <../Usage/Open-APS-functies.html#super-micro-bolus-smb>`_ meestal geen tijdelijke basaalstanden om glucosewaarden bij te sturen, maar voornamelijk kleine bolusen: de zgn super micro bolussen.
 * Je moet `Doel 10 <../Usage/Objectives.html#doel-10-activeren-van-extra-functies-overdag-zoals-smb-super-micro-bolus>`_ hebben voltooid om SMB te kunnen gebruiken.
-* De eerste drie instellingen worden `hierboven <../Configuration/Preferences.html#maximaal-instelbaar-basaal-e-u>`_ uitgelegd.
+* The first three settings are explained `above <../Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to>`__.
 * De verschillende opties voor inschakelen van SMB worden beschreven op de pagina met `OpenAPS functies <../Usage/Open-APS-features.html#activeer-smb>`_.
 * *Tijdsinterval in minuten tussen afgeven van SMBs* is een beperking voor hoe snel na elkaar twee SMBs mogen worden gegeven, dit staat standaard op 4 min. Deze waarde voorkomt dat het systeem te vaak SMB afgeeft (bijvoorbeeld in geval van een tijdelijk streefdoel). Wijzig deze instelling alleen als je precies weet wat de gevolgen zijn. 
 * Als 'Gevoeligheid verhoogt het doel' of 'Resistentie verlaagt het doel' is ingeschakeld dan zal `Autosens <../Usage/Open-APS-features.html#gevoeligheidsdetectie-autosens>`_ jouw BG streefdoel overeenkomstig aanpassen.
@@ -330,7 +330,7 @@ Waarschuwing 'koolhydraten nodig'
 Geavanceerde instellingen (OpenAPS SMB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normaal gesproken hoef je deze instellingen niet te wijzigen!
-* Als je ze toch wilt veranderen, zorg er dan voor dat je de details in de `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ leest en begrijpt wat je doet.
+* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ and to understand what you are doing.
 
 Opname instellingen
 ===========================================================
@@ -345,7 +345,7 @@ min_5m_carbimpact
 * In dit soort gevallen, wanneer jouw koolhydraat absorptie niet kan worden bepaald op basis van hoe jouw bloedglucose reageert, dan zal AAPS terugvallen op deze waarde voor de afname van COB. Het is in feite een vangnet.
 * Om het simpel te stellen: Het algoritme "weet" hoe jouw BGs zich *zouden* moeten gedragen, adhv jouw huidige hoeveelheid insuline icm ISF. 
 * Wanneer jouw BG sneller daalt dan het algoritme had verwacht, dan betekent dit dat er koolhydraten worden geabsorbeerd (COB neemt af). Hierbij geldt: grote verandering = veel koolhydraten. 
-* De min_5m_carbimpact is wat het algoritme gebruikt als minimale hoeveel koolhydraten die per 5 minuten worden geabsorbeerd. Zie voor meer informatie `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`_.
+* De min_5m_carbimpact is wat het algoritme gebruikt als minimale hoeveel koolhydraten die per 5 minuten worden geabsorbeerd. For more details see `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`__.
 * Standaard waarde voor AMA is 5, voor SMB is het 8.
 * De COB-grafiek op het Overzicht scherm geeft dmv een oranje stip op de COB lijn weer wanneer min_5m_impact wordt gebruikt.
 
@@ -363,7 +363,7 @@ Geavanceerde instellingen - autosens ratio
 
 Pomp instellingen
 ===========================================================
-De opties hier zijn afhankelijk van welke pomp je hebt geselecteerd in de `Configurator <../Configuration/Config-Builder.html#pomp>`_.  Koppel en stel je pomp in volgens de instructies van jouw pomp:
+The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`__.  Koppel en stel je pomp in volgens de instructies van jouw pomp:
 
 * `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
@@ -420,7 +420,7 @@ Geavanceerde instellingen (NSClient)
 
 SMS Communicator
 ===========================================================
-* Opties worden alleen weergegeven als de SMS-communicator is geselecteerd in `Configurator <../Configuration/Config-Builder.html#sms-communicator>`_.
+* Options will only be displayed if SMS communicator is selected in `Config Builder <../Configuration/Config-Builder.html#sms-communicator>`__.
 * Deze instelling maakt het mogelijk om de AAPS app op afstand (vanaf een andere telefoon) te bedienen, door SMS instructies te sturen naar de telefoon die de patiënt bij zich heeft. Bijvoorbeeld het uitschakelen van de loop of het geven van een bolus.  
 * Meer informatie in `SMS Commando's <../Children/SMS-Commands.html>`_.
 * Bediening via SMS is beveiligd dmv een authenticator app en een extra PIN code die achter het token moet worden gezet.
