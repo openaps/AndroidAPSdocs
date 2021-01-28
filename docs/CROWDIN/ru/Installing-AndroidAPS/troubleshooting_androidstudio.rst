@@ -6,7 +6,7 @@
 
 На случай, если вы не можете найти свое старое хранилище ключей, выполните следующие действия:
 
-1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`_ on your phone.
+1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`__ on your phone.
 2. Скопируйте настройки вашего телефона во внешнее местоположение (напр. ваш компьютер, служба облачного хранения...).
 3. Убедитесь, что файл параметров "Параметры AndroidAPS" сохранен.
 4. Сгенерируйте подписанный apk новой версии, как описано на странице обновления <../Instaling-AndroidAPS/Update-to-new-version.html> ` _.
@@ -119,26 +119,26 @@ ContextEdit.
 * Убедитесь, что вы передали файл «full-release.apk» на ваш телефон.
 * Если на вашем телефоне появилось сообщение "приложение не установлено", то выполните следующее:
   
-1. `Экспортируйте параметры <../Usage/ExportImportSettings.html>`_ (в версии AAPS, уже установленной на телефоне)
+1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
 2. Удалите AAPS с телефона.
 3. Включите режим полета и выключите Bluetooth.
 4. Установите новую версию («app-full-release.apk»)
-5. `Импортируйте настройки <../Usage/ExportImportSettings.html>`_
+5. `Import settings <../Usage/ExportImportSettings.html>`__
 6. Снова включите Bluetooth и отключите режим самолета
 
 Приложение установлено, но старая версия
 ==================================================
-Если вы успешно построили приложение, перенесли его на телефон и установили его, но номер версии остается прежним, то вы могли пропустить шаг обновления `update your local copy <../Update-to-new-version.html#update-your-local-copy>`.
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`_.
 
 Ничего из вышеперечисленного не сработало
 ==================================================
 Если вышеперечисленные советы не помогли попробуйте начать сборку приложения с нуля:
 
-1. `Экспортируйте параметры <../Usage/ExportImportSettings.html>`_ (в версии AAPS, уже установленной на телефоне)
-2. Have your key password and key store password ready. В случае, если вы забыле пароли, вы можете попытаться найти их в файлах проекта, как описано здесь <https://youtu.be/nS3wxnLgZOo>` _. Или просто создайте новый файл хранения ключей. 
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
+1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
+2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`__. Или просто создайте новый файл хранения ключей. 
+3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`__.
 4. Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на ваш телефон и установите.
-5. `Импортируйте настройки <../Usage/ExportImportSettings.html>`_
+5. `Import settings <../Usage/ExportImportSettings.html>`__
 
 Сценарий худшего варианта
 ==================================================
