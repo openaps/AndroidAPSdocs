@@ -8,7 +8,7 @@ eCarbs(확장 탄수화물) 는 여러 시간에 걸쳐 나뉜 탄수화물양�
 
 eCarbs는 지방/단백질 함량이 높은 식사에만 제한되지 않고 'corticosteroids'와 같이 혈당을 상승시키는 약을 복용한 상황에도 도움이 될 수 있다.  
 
-eCarbs는 홈 탭의 '탄수화물' 메뉴에서 기간, 전체 탄수화물양을 입력하고 선택적으로 시간 이동을 입력하면 된다.
+To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift:
 
 .. 이미지:: ../images/eCarbs_Dialog.png
   :alt: 탄수화물 입력
