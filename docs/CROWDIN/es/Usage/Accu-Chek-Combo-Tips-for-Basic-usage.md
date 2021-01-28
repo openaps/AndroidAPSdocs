@@ -43,7 +43,7 @@
 * Para ello, pulse la tecla **Closed Loop** en la pantalla principal y seleccione **Suspend loop for 1h**. 
 * Wait for the pump to communicate with the phone and the Bluetooth logo on the pump has faded.
 
-![Bluetooth habilitado](../images/combo/combo-tips-combo-tips-compo.png)
+![Bluetooth habilitado](../images/combo/combo-tips-compo.png)
 
 * Suelte la tecla de bloqueo en la bomba, coloque la bomba en el modo de parada, confirmar una posible cancelación de basal temporal, y cambiar la batería.
 * Then put the pump back in run mode select **Resume** when long-pressing on **Suspended** on the main screen.
