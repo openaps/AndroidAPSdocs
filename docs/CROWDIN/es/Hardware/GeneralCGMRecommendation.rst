@@ -35,7 +35,7 @@ A menudo un "Error de Sensor" puede ser corregido de inmediato bebiendo líquido
 
 Valores inestables
 --------------------------------------------------
-Puede tratar de cambiar la configuración del bloqueo de ruido en xdrip (Settings - Inter-App Settings - Noise Blocking), es decir,. "Bloque de Muy Alto nivel de ruido y peor".  Véase también " Suavizado datos de BG <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
+Puede tratar de cambiar la configuración del bloqueo de ruido en xdrip (Settings - Inter-App Settings - Noise Blocking), es decir,. "Bloque de Muy Alto nivel de ruido y peor".  Véase también `Suavizado datos de BG <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
 Edad de sensor negativa
 --------------------------------------------------

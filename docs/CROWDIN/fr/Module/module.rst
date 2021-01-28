@@ -36,7 +36,7 @@ Les inhibiteurs SGLT-2, aussi appelés gliflozines, empêchent la réabsorption 
 Téléphone
 --------------------------------------------------
 La version actuelle d'AndroidAPS nécessite un smartphone Android avec Google Android 8.0 ou supérieur. Donc si vous pensez à un nouveau téléphone, un Android 8.1 minimum est recommandé mais choisissez de préférence une version Android 9 ou 10.
-Les utilisateurs sont fortement encouragés à maintenir leur version d'AndroidAPS à jour pour des raisons de sécurité. Cependant pour les utilisateurs qui ne peuvent pas utiliser d'appareil avec Android 8 minimum, la version 2.6.1.4 d'AndroidAPS, adaptée aux versions plus anciennes d'Android, reste disponible sur l'`ancien dépôt. <https://github.com/miloskozak/androidaps>_`
+Les utilisateurs sont fortement encouragés à maintenir leur version d'AndroidAPS à jour pour des raisons de sécurité. Cependant pour les utilisateurs qui ne peuvent pas utiliser d'appareil avec Android 8 minimum, la version 2.6.1.4 d'AndroidAPS, adaptée aux versions plus anciennes d'Android, reste disponible sur l'`ancien dépôt. <https://github.com/miloskozak/androidaps>`_
 
 Les utilisateurs sont en train de créer une `liste des téléphones et des montres testées <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
@@ -65,7 +65,7 @@ La Combo, l'Insight et les anciennes Medtronics sont des pompes solides et boucl
 
 Les avantages de la DanaR/RS vs. la Combo comme choix de pompe de choix sont :
 
-- La pompe Dana *R/RS se connecte à presque tous les téléphones avec Android >= 5.1 sans avoir besoin de flasher le Lineage OS. Si votre téléphone se casse, vous pouvez trouver facilement en remplacement n'importe quel téléphone qui fonctionne avec les pompes DanaR/RS... ce n'est pas aussi facile avec la Combo. (Cela pourrait changer à l'avenir quand Android 8.1 sera plus populaire)
+- La pompe Dana R/RS se connecte à presque tous les téléphones avec Android >= 5.1 sans avoir besoin de flasher le Lineage OS. Si votre téléphone se casse, vous pouvez trouver facilement en remplacement n'importe quel téléphone qui fonctionne avec les pompes DanaR/RS... ce n'est pas aussi facile avec la Combo. (Cela pourrait changer à l'avenir quand Android 8.1 sera plus populaire)
 - L'appairement initial est plus simple avec la Dana* RS. Mais en général, vous ne le faites qu'une seule fois, cela n'a d'impact que si vous voulez tester une nouvelle fonctionnalité avec des pompes différentes.
 - Jusqu'à présent, le Combo fonctionne avec l'écran en veille. En général, cela fonctionne bien, mais c'est lent. Pour le bouclage, cela n'a pas d'importance car tout fonctionne en arrière-plan. Il y a beaucoup plus de connections BT, donc plus de risques où la connexion BT pourrait se rompre, ce qui n'est pas si facile si vous vous éloignez de votre téléphone par ex. en faisant votre bolus tout en cuisinant. 
 - La Combo vibre à la fin des DBTs (Basal Temporaire), la Dana* R vibre (ou bips) sur les SMB. La nuit, vous êtes susceptibles de plus utiliser les DBT que les SMB.  Le Dana * RS est configurable pour ne pas émettre de bip ni vibrer.

@@ -2,4 +2,4 @@
 ==============================
 Combo
 -----------
-Έχετε ήδη διαβάσει " αυτό <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_;
+Έχετε ήδη διαβάσει `αυτό <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_;

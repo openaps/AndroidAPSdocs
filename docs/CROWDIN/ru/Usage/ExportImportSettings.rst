@@ -18,11 +18,11 @@
 ==================================================
 Среди прочего следующая информация является частью экспорта настроек:
 
-* ` Автоматизация <../Usage/Automation.html> ` _события
+* `Автоматизация <../Usage/Automation.html>`_ события
 * `Конфигуратор <../Configuration/Config-Builder.html>`_ настройки
 * `Локальный профиль <../Configuration/Config-Builder.html#local-profile-recommended>`_ настройки
 * `Цели <../Usage/Objectives.html>`_ статус включая `exam results <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
-* ` Параметры конфигурации <../Configuration/Preferences.html> ` _ включая `NS Client settings <../Configuration/Preferences.html#nsclient>`_
+* `Параметры конфигурации <../Configuration/Preferences.html>`_ включая `NS Client settings <../Configuration/Preferences.html#nsclient>`_
 
 Encrypted backup format
 ==================================================

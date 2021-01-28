@@ -58,7 +58,7 @@ A veces, es posible que obtenga un mensaje de error al generar el apk diciendo
 Este es un error conocido en Android Studio 3.5 y probablemente no se arreglará antes de Android Studio 3.6. Tres opciones:
 
 1. Suprima manualmente las tres carpetas de compilación (normal "build", build folder en "app" y "build" en "wear") y genere el apk firmado de nuevo.
-2. Establezca la carpeta de destino en la carpeta del proyecto en lugar de la carpeta de aplicación tal como se describe en 'este vídeo <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
+2. Establezca la carpeta de destino en la carpeta del proyecto en lugar de la carpeta de aplicación tal como se describe en `este vídeo <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
 3. Cambie la carpeta de destino de apk (ubicación distinta).
 
 No se puede iniciar el proceso daemon
@@ -74,7 +74,7 @@ Hay muchos manuales en Internet sobre cómo determinar si tienes un SO de 32 o 6
 No hay datos de MCG
 ==================================================
 * En caso de que esté utilizando xDrip+: Identifique el receptor tal como se describe en la página `xDrip + página de ajustes <../Configuration/xdrip.html#identify-receiver>`_.
-* En caso de que esté utilizando `app parcheada Dexcom G6 <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>` _: asegúrese de que está utilizando la versión correcta de ` 2.4 carpeta <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>` _.
+* En caso de que esté utilizando `app parcheada Dexcom G6 <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: asegúrese de que está utilizando la versión correcta de ` 2.4 carpeta <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 
 Cambios no confirmados
 ==================================================
@@ -103,7 +103,7 @@ Opción 3 - Comprobar actualizaciones
 * Conmutar a Terminal en Android Studio (lado izquierdo inferior de la ventana de Android Studio)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
+    :alt: Android Studio Terminal
    
 * Pegar texto copiado y pulsar retorno
 
@@ -127,7 +127,7 @@ Aplicación no instalada
 
 Aplicación instalada pero antigua
 ==================================================
-Si crea la aplicación satisfactoriamente, la transfiere al teléfono y la instala correctamente, pero el número de versión permanece igual, es posible que no haya podido `actualizar la copia local <../Update-to-new-version.html#update-your-local-copy>".
+Si crea la aplicación satisfactoriamente, la transfiere al teléfono y la instala correctamente, pero el número de versión permanece igual, es posible que no haya podido `actualizar la copia local <../Update-to-new-version.html#update-your-local-copy>`_.
 
 Ninguna de las anteriores funcionó
 ==================================================
@@ -135,7 +135,7 @@ Si ninguno de los consejos anteriores lo ha ayudado podría considerar la creaci
 
 1. `Exportar ajustes <../Usage/ExportImportSettings.html>`_ (en la versión AAPS ya instalada en tu teléfono)
 2. Preparar la contraseña de clave y la contraseña del almacén de claves
-    En caso de que haya olvidado las contraseñas, puede intentar encontrarlas en los archivos del proyecto, tal como se describe en "aquí <https://youtu.be/nS3wxnLgZOo>"_. O simplemente utiliza un almacén de claves nuevo. 
+    En caso de que haya olvidado las contraseñas, puede intentar encontrarlas en los archivos del proyecto, tal como se describe en "aquí <https://youtu.be/nS3wxnLgZOo>`_. O simplemente utiliza un almacén de claves nuevo. 
 3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
 4.	Cuando hayas creado el APK exitosamente borra la app existente de su teléfono, transfiere la nueva apk al teléfono e instálela.
 5. `Importar valores <../Usage/ExportImportSettings.html>`_

@@ -42,7 +42,7 @@ Jak nainstalovat AndroidAPS
    :maxdepth: 1
    :glob:
 
-   Vytvoření APK<./Installing-AndroidAPS/Building-APK.md>
+   Vytvoření APK <./Installing-AndroidAPS/Building-APK.md>
    Jak aktualizovat na novou verzi <./Installing-AndroidAPS/Update-to-new-version.md>
    Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Install git <./Installing-AndroidAPS/git-install.rst>

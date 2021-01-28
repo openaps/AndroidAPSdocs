@@ -2,7 +2,7 @@ Poradce při potížích
 **************************************************
 Informace o odstraňování problémů můžete najít na mnoha stránkách wiki. Tato stránka obsahuje řadu odkazů, které vám mohou pomoci při hledání informací k řešení vašeho problému.
 
-Další užitečné informace mohou být k dispozici také v sekci " FAQ <../Getting-Started/FAQ.html> ` _.
+Další užitečné informace mohou být k dispozici také v sekci `FAQ <../Getting-Started/FAQ.html>`_.
 
 Aplikace AndroidAPS
 ==================================================

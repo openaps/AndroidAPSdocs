@@ -24,7 +24,7 @@ Octobre 2020
 Septembre 2020
 ==================================================
 * Mise à jour majeure pour la nouvelle version AAPS 2.7
-* Pour plus de détails, voir les `notes de version <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
+* Pour plus de détails, voir les `notes de version <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_
 Juin 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - plus de détails sur l'application LibreLink patchée & l'utilisation des transmetteurs bluetooth
@@ -76,7 +76,7 @@ Novembre 2019
 * `Écran d'accueil - lignes sur le graphique <../Getting-Started/Screenshots.html#section-f-graphique-principal>`_
 * `Insight - Désactiver les valeurs absolues dans NS Client <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_
 * `Pompe Medtronic - doubles entrées possibles <../Configuration/MedtronicPump.html>`_
-* `Nouveau tutoriel Freestyle Libre 2 <../Hardware/Libre2.html> ` _
+* `Nouveau tutoriel Freestyle Libre 2 <../Hardware/Libre2.html>`_
 * `Changement de profil avec pourcentage - example <../Usage/Profiles.html>`_
 * `Mise à jour commandes SMS <../Children/SMS-Commands.html>`_
 * `Dépannage d'Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
@@ -92,7 +92,7 @@ Octobre 2019
 * `GA - mauvaise detection de la valeur des GA <../Usage/COB-calculation.html#detection-de-ga-errones>`_
 * `Dépannages spécifiques du Dexcom G6 <../Hardware/DexcomG6.html#depannages-specifiques-a-dexcom-g6>`_
 * `Mise à jour des objectifs version 2.5 <../Usage/Objectives.html>`_
-* ` Mise à jour des préférences <../Configuration/Preferences.html> ` _
+* ` Mise à jour des préférences <../Configuration/Preferences.html>`_
 * `Inhibiteurs SGLT-2 - ne pas utiliser lors de la boucle <../Module/module.html#ne-pas-utiliser-d-inhibiteurs-sglt-2>`_
 * `Dépannage des commandes SMS <../Children/SMS-Commands.html#depannage>`_
 * `xDrip - Mise à jour du remplacement de l'émetteur G6 <../Configuration/xdrip.html#remplacement-du-transmetteur>`_

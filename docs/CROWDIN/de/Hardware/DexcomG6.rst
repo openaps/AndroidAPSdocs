@@ -27,7 +27,7 @@ Dexcom G6 mit xDrip+
 * Lade `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ herunter und folge den Anleitungen auf Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xDrip+.
 * Passe die Einstellungen von xDrip+ entsprechend den Angaben auf der `Seite xDrip+ Einstellungen  <../Configuration/xdrip.html>`_ an.
-* Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze `Identify receiver` wie auf der Seite `xDrip+ Einstellungen <../Configuration/xdrip.html>`_ beschrieben.
+* Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze 'Identify receiver' wie auf der Seite `xDrip+ Einstellungen <../Configuration/xdrip.html>`_ beschrieben.
 
 G6 mit der gepatchten Dexcom App
 ==================================================
@@ -35,7 +35,7 @@ G6 mit der gepatchten Dexcom App
 
    * Ordner 2.4 für alle Nutzer der aktuellen Version. Ordner 2.3 nur für die Nutzer der veralteten AAPS-Version 2.3.
    *  Öffne https://play.google.com/store/search?q=dexcom%20g6 auf Deinem Computer. 
-   Klicke den Link zur Dexcom G6 App in den angezeigten Suchergebnissen.
+      Klicke den Link zur Dexcom G6 App in den angezeigten Suchergebnissen.
    * Die Region wird in der URL angezeigt.
    
    .. image:: ../images/DexcomG6regionURL.PNG

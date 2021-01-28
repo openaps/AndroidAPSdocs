@@ -2,14 +2,14 @@ Trikčių šalinimas
 **************************************************
 Jūs galite rasti trikčių diagnostikos informaciją daugelyje puslapių šioje wiki. Šis puslapis yra nuorodų rinkinys, padėsiantis rasti informaciją, galinčią išspręsti jūsų problemą.
 
-Daugiau naudingos informacijos rasite DUK <../Getting-Started/FAQ.html>`_.
+Daugiau naudingos informacijos rasite `DUK <../Getting-Started/FAQ.html>`_.
 
 AndroidAPS programa
 ==================================================
 Kūrimas ir atnaujinimas
 -----
 * `Prarastas rakto failas <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
-* `Android Studio trikčių šalinimas <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
+* `Android Studio trikčių šalinimas <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 Parametrai
 --------------------------------------------------
 * `Profilis <../Usage/Profiles.html#troubleshooting-profile-errors>`_
@@ -30,7 +30,7 @@ Naudojimas
 NGJ
 ==================================================
 * `Bendrieji <../Hardware/GeneralCGMRecommendation.html#troubleshooting>`_
-* `Dexcom G6 <../Hardware/DexcomG6.html#troubleshooting-g6>`
+* `Dexcom G6 <../Hardware/DexcomG6.html#troubleshooting-g6>`_
 * `Libre 2 <../Hardware/Libre2.html#experiences-and-troubleshooting>`_
 * `xDrip - nėra NGJ duomenų <../Configuration/xdrip.html#identify-receiver>`_
 * `xDrip - Dexcom trikčių šalinimas <../Configuration/xdrip.html#troubleshooting-dexcom-g5-g6-and-xdrip>`_

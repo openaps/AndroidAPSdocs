@@ -6,8 +6,8 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 
 **Ce logiciel est une partie d'un système de pancréas artificiel "Do it yourself" (faire soi-même), et ce n’est pas un produit fini destiné à la mise sur le marché. VOUS devez obligatoirement lire, apprendre et comprendre ce système, y compris la façon de l’utiliser. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
 
-.. contenus:: 
-   :backlinks: entrée
+.. contents:: 
+   :backlinks: entry
    :depth: 2
 
 Configuration matérielle et logicielle requise
@@ -132,13 +132,13 @@ Activation d’un Pod
 
 Avant de pouvoir activer un pod, veuillez vous assurer que vous avez correctement configuré et connecté votre connexion RileyLink dans les paramètres d'Omnipod
 
-*RAPPEL : La communication avec le Pod pour l'activation de celui-ci se fait sur des périodes limitées pour des raisons de sécurité. Avant d'être appairé le signal radio du Pod est plus faible, mais après l'appairage, il fonctionnera à pleine puissance. Lors de ces procédures, assurez-vous que votre pod est* `à proximité immédiate <#positionnement-optimal-omnipod-et-rileylink>`__ *(~30 cm de distance ou moins) mais pas au dessus ou juste à côté du RileyLink.  
+*RAPPEL : La communication avec le Pod pour l'activation de celui-ci se fait sur des périodes limitées pour des raisons de sécurité. Avant d'être appairé le signal radio du Pod est plus faible, mais après l'appairage, il fonctionnera à pleine puissance. Lors de ces procédures, assurez-vous que votre pod est* `à proximité immédiate <#positionnement-optimal-omnipod-et-rileylink>`__ (~30 cm de distance ou moins) mais pas au dessus ou juste à côté du RileyLink.  
 
 1. Naviguez vers l'onglet **Omnipod (POD)** et cliquez sur le bouton **GEST. POD (1)**, puis cliquez sur **Activer Pod (2)**.
 
     |Activate_Pod_1| |Activate_Pod_2|
 
-2. L'écran **Remplir Pod ** s'affiche. Remplissez le nouveau pod avec au moins 85 unités d'insuline et écoutez le deux bips indiquant que le pod est prêt à être amorcé.
+2. L'écran **Remplir Pod** s'affiche. Remplissez le nouveau pod avec au moins 85 unités d'insuline et écoutez le deux bips indiquant que le pod est prêt à être amorcé.
 
     |Activate_Pod_3|
 
@@ -373,7 +373,7 @@ Champs Appareil (4) - Avec un Pod actif
 	* **Fréquence de pompe :** Fréquence radio que le périphérique de communication pod a ajustée pour communiquer avec le pod.
 	* **Dernière fréquence utilisée :** Dernière fréquence radio connue que le pod a utilisé pour communiquer avec le périphérique de communication pod.
 	* **Dernier contact appareil :** Date et heure du dernier contact que le périphérique de communication pod a eu avec le pod.
-	* ** Bouton Actualiser** Actualiser manuellement les informations de cette page.
+	* **Bouton Actualiser** Actualiser manuellement les informations de cette page.
 
 RileyLink et historique du Pod Actif
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

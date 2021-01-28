@@ -5,4 +5,4 @@ Recursos
    :maxdepth: 4
    :glob:
 
-   guía-clínica-para-AndroidAPS
+   guía-clínica-para-AndroidAPS <./clinician-guide-to-AndroidAPS.md>

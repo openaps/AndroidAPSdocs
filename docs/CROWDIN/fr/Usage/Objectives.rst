@@ -48,7 +48,8 @@ Objectif 4 : Démarrage de la boucle ouverte
 
 Réduire le nombre de notifications
 --------------------------------------------------
-* Pour réduire le nombre de décisions à prendre en mode Boucle Ouverte, définissez une large plage cible comme 90 - 150 mg/dl ou 5,0 - 8,5 mmol/l. * Vous pouvez même augmenter encore la limite supérieure (ou désactiver la Boucle ouverte) pendant la nuit. 
+* Pour réduire le nombre de décisions à prendre en mode Boucle Ouverte, définissez une large plage cible comme 90 - 150 mg/dl ou 5,0 - 8,5 mmol/l.
+* Vous pouvez même augmenter encore la limite supérieure (ou désactiver la Boucle ouverte) pendant la nuit. 
 * Dans les Préférences, vous pouvez définir un pourcentage minimum pour suggérer un changement de débit de basal.
 
    .. image:: ../images/OpenLoop_MinimalRequestChange2.png

@@ -40,5 +40,5 @@ AndroidAPS is an app that acts as an artificial pancreas system (APS) on an Andr
 Πώς να ξεκινήσω
 ==================================================
 Φυσικά, όλο αυτό το περιεχόμενο εδώ είναι πολύ σημαντικό, αλλά μπορεί να είναι στην αρχή αρκετά συγκεχυμένο.
-Ένας καλός προσανατολισμός δίνεται από την Επισκόπηση μονάδων </ Module / module.html> `_ και τους` Στόχους <./ Usage / Objectives.html> `_. Μπορείτε επίσης να ρίξετε μια ματιά στο `πρότυπο setup 'με τις Dana, Dexcom και Sony Smartwatch <../ Getting Started / Sample-Setup.html> _ _.
+Ένας καλός προσανατολισμός δίνεται από την Επισκόπηση μονάδων </ Module / module.html>`_ και τους` Στόχους <./ Usage / Objectives.html>`_. Μπορείτε επίσης να ρίξετε μια ματιά στο `πρότυπο setup 'με τις Dana, Dexcom και Sony Smartwatch <../ Getting Started / Sample-Setup.html> _ _.
  

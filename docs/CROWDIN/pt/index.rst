@@ -59,7 +59,7 @@ Configuração do Componente
    
    CGM/FGM <./Configuration/BG-Source.rst>
    xDrip Settings <./Configuration/xdrip.md>
-   Bombas de Insulina<./Hardware/pumps.rst>
+   Bombas de Insulina <./Hardware/pumps.rst>
    Telefones <./Hardware/Phoneconfig.rst>
    Configuração do Nightscout <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
@@ -169,7 +169,7 @@ Como ajudar
    :maxdepth: 1
    :glob:
 
-   Como ajudar <./Getting-Started/How-can-help.md>
+   Como ajudar <./Getting-Started/How-can-I-help.md>
    How to translate the app and docs <./translations.md>
    How to edit the docs <./make-a-PR>
 

@@ -49,7 +49,7 @@ Kai kurie žmonės vis dar prašė parinkties AAPS naudoti ištęstinius bolusus
 
 * Uždaras ciklas bus automatiškai sustabdytas ir ištęsto boluso metu pereis į atviro ciklo režimą. 
 * Pradiniame ekrane bus rodomas boluso insulino kiekis, likęs laikas ir visas laikas.
-* Ištęstas bolusas *negalimas* su Insight pompa, jei naudojama laikinos valandinės bazės emuliacija <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_. 
+* Ištęstas bolusas *negalimas* su Insight pompa, jei naudojama laikinos `valandinės bazės emuliacija <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_. 
 
 .. image:: ../images/ExtendedBolus2_6.png
   :alt: Ištęstas bolusas AAPS 2.6

@@ -34,8 +34,8 @@ La solution de contournement suivante devrait prolonger la durée d'utilisation 
 * Ensuite, branchez votre smartwatch au PC.
 * Renommez le dernier APK téléchargé des Services Google en utilisant un nom court et simple (par ex. SW3fix.apk).
 * Placez cet APK dans le répertoire de votre outil adb (dans notre cas : le répertoire où ont été décompressés les outils de plate-forme SDK).
-*Ouvrez le terminal Windows en utilisant la commande "cmd" dans le menu Démarrer de Windows.
-*Dans la fenêtre "terminal", allez dans le répertoire qui contient l'outil adb et le fichier apk des Services Google (tapez la commande "cd [votre chemin]", par ex. "cd C:\Users\SWR50looper\sdktools").
+* Ouvrez le terminal Windows en utilisant la commande "cmd" dans le menu Démarrer de Windows.
+* Dans la fenêtre "terminal", allez dans le répertoire qui contient l'outil adb et le fichier apk des Services Google (tapez la commande "cd [votre chemin]", par ex. "cd C:\Users\SWR50looper\sdktools").
 * Tapez ensuite "adb devices".
 * Au bout d'un moment, vous devriez obtenir une demande d'autorisation de débogage sur votre montre : accepter.
 * Dans le terminal, vous devriez maintenant voir quelque chose qui ressemble à "14452D11F536B52 device" lorsque vous tapez à nouveau "adb devices".

@@ -24,7 +24,7 @@ Spalis 2020
 Rugsėjis 2020
 ==================================================
 * Pagrindinis atnaujinimas naujai AAPS 2.7 versijai
-* Dėl išsamesnės informacijos žr. `išleidimo pastabos <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
+* Dėl išsamesnės informacijos žr. `išleidimo pastabos <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_
 2020 m. birželis
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - detalesnė informacija apie Libre Link programėlę ir bluetooth siųstuvų naudojimą
@@ -42,10 +42,10 @@ Rugsėjis 2020
 * `Android 6 palaikymas bus nutrauktas kitoje programinėje versijoje <../Module/module.html#phone>`_
 2020 m. kovas
 ==================================================
-* 'Kurti apk su "Android" Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
+* `Kurti apk su "Android" Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
 * `DanaRS su programien įranga v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **šiuo metu negali būti naudojama su AndroidAPS!**
 * `Extended bolus and switch to open loop <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
-* 'Atnaujinti apk su "Android" Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
+* `Atnaujinti apk su "Android" Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
 Vasaris 2020
 ==================================================
 * `Automation caveats <../Usage/Automation.html#good-practice-caveats>`_
@@ -53,13 +53,13 @@ Vasaris 2020
 * 'Priežiūros alternatyvos <../Usage/CPbefore26.html>`_
 * `Ištęsto boluso <../Usage/Extended-Carbs.html#id1>`_ funkcija - uždaras ciklas bus išjungtas
 * Naujas `Vietinio profilio įskiepis <../Configuration/Config-Builder.html#local-profile-recommended>`_
-* "Pavyzdinis nustatymas <../Getting-Started/Sample-Setup.html>`_ - Dexcom G6 atnaujinimas
+* `Pavyzdinis nustatymas <../Getting-Started/Sample-Setup.html>`_ - Dexcom G6 atnaujinimas
 * `Versija 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - pagrindinės naujos funkcijos
 * `Išmaniųjų laikrodžių ekrano elementai <../Configuration/Watchfaces.html>`_
 Sausis 2020
 ==================================================
-* "Rankinė angliavandenių korekcija <../Getting-Started/Screenshots.html#carb-correction>`_ neteisingiems angliavandenių įrašams
-* Vaizdo dydis <../make-a-PR.html#image-size>`_ redaguojant dokumentus
+* `Rankinė angliavandenių korekcija <../Getting-Started/Screenshots.html#carb-correction>`_ neteisingiems angliavandenių įrašams
+* `Vaizdo dydis <../make-a-PR.html#image-size>`_ redaguojant dokumentus
 Gruodis 2019
 ==================================================
 * 'Android auto <../Usage/Android-auto.html>`_ - nustatymai su ekrano vaizdais
@@ -71,29 +71,29 @@ Lapkritis 2019
 ==================================================
 * `Automatizavimas - išjungimas, kai sustabdomas ciklas <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 siųstuvo keitimo atnaujinimas <../Configuration/xdrip.html#replace-transmitter>`_
-* Kodėl ištęstas bolusas neveikia uždaame cikle <../Usage/Extended-Carbs.html#id1>`_
-* 'DUK - sportas <../Getting-Started/FAQ.html#sports>`_
+* `Kodėl ištęstas bolusas neveikia uždaame cikle <../Usage/Extended-Carbs.html#id1>`_
+* `DUK - sportas <../Getting-Started/FAQ.html#sports>`_
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-f-main-graph>`_
-* ` Insight - Išjunkite absoliučias vertes NS Client programoje <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
-* ` Medtronic pompa - galimi dvigubi įrašai <../Configuration/MedtronicPump.html> `_
-* ` Naujos Freestyle Libre 2 instrukcijos <../Hardware/Libre2.html>`_
+* `Insight - Išjunkite absoliučias vertes NS Client programoje <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
+* `Medtronic pompa - galimi dvigubi įrašai <../Configuration/MedtronicPump.html>`_
+* `Naujos Freestyle Libre 2 instrukcijos <../Hardware/Libre2.html>`_
 * Pasirinkite profilį su procentais, pavyzdys <../Usage/Profiles.html>`_
-* ` SMS komandų atnaujinimas <../Children/SMS-Commands.html> ` _
-* `Android Studio trikčių šalinimas <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
-* ` Trikčių šalinimas - nuorodos <../Usage/troubleshooting.html> ` _
-* `Atnaujinimas - trumpas vadovas patyrusiems vartotojams <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users> ` _
+* `SMS komandų atnaujinimas <../Children/SMS-Commands.html>`_
+* `Android Studio trikčių šalinimas <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* `Trikčių šalinimas - nuorodos <../Usage/troubleshooting.html>`_
+* `Atnaujinimas - trumpas vadovas patyrusiems vartotojams <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
 * Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-docs-pages>`_.
 
 Spalis 2019
 ==================================================
 * `AAPS 2.5 versija <../Installing-AndroidAPS/Releasenotes.html#id16>`_ atnaujinimai (ypač 'atnaujinimo puslapyje <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `AccuChek Insight - žurnalo parinktys <../Configuration/Accu-Chek-Inight-Pump.html#settings-in-aaps>`_
-* AAO skaičiavimas atskirame puslapyje <../Usage/COB-calculation.html>`_
-* ` AAO - neteisingas AAO verčių aptikimas <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
-* ` Dexcom G6 specifinių trikčių šalinimas <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting> ` _
-* ` Tikslų atnaujinimas versijai 2.5 <../Usage/Objectives.html> ` _
+* `AAO skaičiavimas atskirame puslapyje <../Usage/COB-calculation.html>`_
+* `AAO - neteisingas AAO verčių aptikimas <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
+* `Dexcom G6 specifinių trikčių šalinimas <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_
+* `Tikslų atnaujinimas versijai 2.5 <../Usage/Objectives.html>`_
 * `Nustatymų atnaujinimas <../Configuration/Preferences.html>`_
-* "SGLT-2 inhibitoriai - nenaudokite su AAPS <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
+* `SGLT-2 inhibitoriai - nenaudokite su AAPS <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
 * `SMS komandų trikčių šalinimas <../Children/SMS-Commands.html#troubleshooting>`_
 * `xDrip+ - Dexcom G6 siųstuvo keitimo atnaujinimas <../Configuration/xdrip.html#replacee-transmitter>`_
 
@@ -103,7 +103,7 @@ Rugsėjis 2019
 * `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorbtion
 * `Nightscout saugumas <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
 * `Profile timeshift <../Usage/Profiles.html#time-shift>`_ (more details)
-* `Nuotolinis stebėjimas<../Children/Children.html>`_
+* `Nuotolinis stebėjimas <../Children/Children.html>`_
 * `Kas yra uždaro ciklo sistema? <../Getting-Started/ClosedLoop.html>`_
 
 Rugpjūtis 2019

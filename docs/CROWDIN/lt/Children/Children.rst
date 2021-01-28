@@ -12,7 +12,7 @@ Funkcijos
 * Tėvai gali nuotoliniu būdu sekti, matyti visus svarbius duomenis, tokius, kaip gliukozės kiekis, aktyvūs angliavandeniai, aktyvus insulinas, ir pan. naudojant **NSClient app** jų telefone. AndroidAPS ir NSClient parametrai turi būti vienodi.
 * Tėvai gali gauti savo telefone perspėjimus, naudodami **xDrip+ programa sekėjo režime**.
 * AndroidAPS nuotolinis valdymas naudojant `SMS Komandas <../Children/SMS-Commands.html>`_ apsaugotas dviem autentifikavimo žingsniais.
-* Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see 'release notes for Version 2.8.1.1 <https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#important-hints>'_ for further details.
+* Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see `release notes for Version 2.8.1.1 <https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for further details.
 
 Įrankiai ir programos, skirtos nuotoliniam stebėjimui
 --------------------------------------------------

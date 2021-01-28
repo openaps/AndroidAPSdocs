@@ -44,7 +44,8 @@ Objective 4: Starting on an open loop
 
 Reduce number of notifications
 --------------------------------------------------
-* To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l. * You might even want to wider upper limit (or disable Open Loop) at night. 
+* To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l. 
+* You might even want to wider upper limit (or disable Open Loop) at night. 
 * In Preferences you can set a minimum percentage for suggestion of basal rate change.
 
    .. image:: ../images/OpenLoop_MinimalRequestChange2.png

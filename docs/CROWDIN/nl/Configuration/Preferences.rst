@@ -15,7 +15,7 @@ Instellingen
   .. image:: ../images/Pref2020_Submenu2.png
     :alt: Open submenu
 
-* Met de ** filter** functie bovenaan het instellingenscherm kun je snel naar bepaalde voorkeuren gaan. Begin simpelweg een deel van de tekst die je zoekt, te typen.
+* Met de **filter** functie bovenaan het instellingenscherm kun je snel naar bepaalde voorkeuren gaan. Begin simpelweg een deel van de tekst die je zoekt, te typen.
 
   .. image:: ../images/Pref2021_Filter.png
     :alt: Instellingen filter
@@ -202,7 +202,7 @@ Voer dit deel van het boluscalculator resultaat uit
 
 Bolusadviseur
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Als je de `Bolus calculator<../Getting-Started/Screenshots.html#bolus-calculator>`_ gebruikt en je glucose waarde is hoger dan 10 mmol/l (180 mg/dl) wordt een correctie bolus voorgesteld.
+* Als je de `Bolus calculator <../Getting-Started/Screenshots.html#bolus-calculator>`_ gebruikt en je glucose waarde is hoger dan 10 mmol/l (180 mg/dl) wordt een correctie bolus voorgesteld.
 * Als de correctie bolus wordt geaccepteerd zullen er **geen koolhydraten** worden geregistreerd.
 * Er zal een alarm afgaan wanneer de glucosewaarde genoeg is gedaald om te beginnen met eten.
 * Je moet op dat moment de `Bolus calculator <../Getting-Started/Screenshots.html#bolus-calculator>`_ opnieuw gebruiken en daar de hoeveelheid koolhydraten invoeren die je wilt eten.
@@ -384,7 +384,7 @@ NSClient
 * Hierdoor kunnen gegevens zowel worden uitgelezen als weggeschreven tussen de Nightscout website en AndroidAPS.  
 * Als je vastzit in Doel 1, controleer dan goed of je hier geen typfouten hebt gemaakt.
 * **Zorg ervoor dat de URL is ingevuld ZONDER /api/v1/ aan het eind.**
-* *Log app start naar Nightscout' zal elke keer dat de app is gestart, een notitie maken.  De app zou niet vaker dan één keer per dag opnieuw moeten starten; gebeurt dit vaker dan wijst dat op een probleem. Vaak wordt dit veroorzaakt doordat de accubesparings-functie van jouw telefoon steeds de app afsluit. Los dit op door de accubesparings-instellingen van jouw telefoon aan te passen. Het kan ook zijn dat jouw telefoon te weinig (werk)geheugen beschikbaar heeft. Zorg dan dat je niet teveel zware apps draait of maak geheugenruimte vrij.   
+* Log app start naar Nightscout' zal elke keer dat de app is gestart, een notitie maken.  De app zou niet vaker dan één keer per dag opnieuw moeten starten; gebeurt dit vaker dan wijst dat op een probleem. Vaak wordt dit veroorzaakt doordat de accubesparings-functie van jouw telefoon steeds de app afsluit. Los dit op door de accubesparings-instellingen van jouw telefoon aan te passen. Het kan ook zijn dat jouw telefoon te weinig (werk)geheugen beschikbaar heeft. Zorg dan dat je niet teveel zware apps draait of maak geheugenruimte vrij.   
 * Je kunt hier instellen dat wijzigingen in jouw `lokaal profiel <../Configuration/Config-Builder.html#llokale-profielen-uploaden-naar-nightscout>`_ worden geüpload naar Nightscout.
 
 Verbindings instellingen

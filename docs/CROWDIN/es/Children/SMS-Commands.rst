@@ -157,9 +157,9 @@ Perfil
 
 Otros
 --------------------------------------------------
-*Actualizar tratamientos
+* Actualizar tratamientos
    * Respuesta: Actualizar los tratamientos desde NS
-*REINICIAR NSCLIENT
+* REINICIAR NSCLIENT
    * Respuesta: NSCLIENT REINICIAR de 1 receptor
 * BOMBA
    * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100

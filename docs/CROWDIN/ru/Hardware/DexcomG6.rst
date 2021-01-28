@@ -17,7 +17,7 @@ Dexcom G6
 "Предварительное замачивание" (установка сенсора намного раньше его старта в приложении) G6 с заводской калибровкой приведет к отклонениям в данных. Если вы все же делаете "предварительное погружение", то для получения лучших результатов вам, вероятно, придется калибровать сенсор.
 * Если вы не планируете отслеживать все возможные отклонения, то лучше вернуться к традиционному режиму калибровки и использовать систему как G5.
 
-Подробнее о деталях и причинах этих рекомендаций читайте полную статью <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>_опубликованную в Tim Street на`www.diabettech.com <http://www.diabettech.com>_.
+Подробнее о деталях и причинах этих рекомендаций читайте `полную статью <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_опубликованную в Tim Street на`www.diabettech.com <http://www.diabettech.com>`_.
 
 При использовании G6 с xdrip+
 ==================================================
@@ -38,7 +38,7 @@ Dexcom G6
    * Click the link to the Dexcom G6 app on the search results page that is displayed.
    * Region will be visible in URL.
    
-   .. изображение:../images/DexcomG6regionURL.PNG
+   .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Регион в URL Dexcom G6
 
 * Uninstall the original Dexcom app.
@@ -84,7 +84,7 @@ Settings for xDrip+
   * Серийный номер передатчика начинается с 80 или 81: "Got data hh:mm" (напр. "Got data 19:04")
   * Серийный номер трансмиттера, который начинается с 8G: "Got glucose hh:mm" (напр. "Got glucose 19:04") или "Got no raw hh:mm" (напр. "Got now raw 19:04")
 
-.. image:../images/xDrip_Dexcom_PhoneServiceState.png
+.. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
 
 General troubleshoothing

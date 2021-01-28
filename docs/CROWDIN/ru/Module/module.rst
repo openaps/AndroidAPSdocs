@@ -2,7 +2,7 @@
 **************************************************
 AndroidAPS - это не просто (самостоятельно собранное) приложение, это один из модулей закрытой системы ИПЖ. Прежде чем выбрать компоненты, было неплохо рассмотреть их также в `комплексе компонентов <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_.
    
-.. изображение:../images/modules.png
+.. image:: ../images/modules.png
   :alt: Обзор компонентов
 
 .. note:: 
@@ -36,7 +36,7 @@ SGLT-2 ингибиторы, которые также называются гл
 Телефон
 --------------------------------------------------
 The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
-Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>_`
+Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>`_
 
 Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
@@ -57,7 +57,7 @@ AndroidAPS **на данный момент** работает с
 
 **Другие помпы** которые потенциально могут работать с AndroidAPS перечислены на `Будущие (возможные) помпы <../Getting-Started/Future-possible-Pump-Drivers.html>`_ странице.
 
-Если вам нужно **купить частным образом** помпу, то вы можете найти дистрибьюторов в `этой таблице <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>_, делитесь информацией о вашем, если не указан.
+Если вам нужно **купить частным образом** помпу, то вы можете найти дистрибьюторов в `этой таблице <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_, делитесь информацией о вашем, если не указан.
 
 **Какая же самая лучшая помпа для работы с AndroidAPS?**
 
@@ -76,12 +76,12 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 --------------------------------------------------
 Это всего лишь краткий обзор совместимых с AndroidAPS систем мониторинга ГК. Для получения дополнительной информации смотрите `здесь <../Configuration/BG-Source.html>`_. Или если проще: если данные ГК могут приниматься приложением xDrip+ или на веб-сайте Nightscout, вы можете выбрать xDrip+ (или Nightscout с интернет-соединением) как источник ГК в AAPS.
 
-* ` Dexcom G6 <../Hardware/DexcomG6.html> ` _: Он работает с приложением xDrip + или модифицированным приложением Dexcom
-* ` Dexcom G5 <../Hardware/DexcomG5.html> ` _: Он работает с приложением xDrip + или модифицированным приложением Dexcom
+* ` Dexcom G6 <../Hardware/DexcomG6.html>`_: Он работает с приложением xDrip + или модифицированным приложением Dexcom
+* ` Dexcom G5 <../Hardware/DexcomG5.html>`_: Он работает с приложением xDrip + или модифицированным приложением Dexcom
 * Dexcom G4: Эти системы достаточно старые, но вы можете найти инструкции по их использованию с приложением xDrip+
-* ` Libre 2 <../Hardware/Libre2.html> ` _: Он работает с xDrip + (не требуется передатчик), но вы должны собрать собственное модифицированное приложение.
-* `Libre 1: -Нужен передатчик, такой как Bluecon или MiaoMiao (сборка или покупка) и приложение xDrip+
-* `Eversense: Он работает до сих пор только в сочетании с модифицированными приложениями ESEL и Eversense-App (не работает с Dana RS и LineageOS, но Dana RS и Android или Combo и Lineage OS работают прекрасно)
+* ` Libre 2 <../Hardware/Libre2.html>`_: Он работает с xDrip + (не требуется передатчик), но вы должны собрать собственное модифицированное приложение.
+* Libre 1: -Нужен передатчик, такой как Bluecon или MiaoMiao (сборка или покупка) и приложение xDrip+
+* Eversense: Он работает до сих пор только в сочетании с модифицированными приложениями ESEL и Eversense-App (не работает с Dana RS и LineageOS, но Dana RS и Android или Combo и Lineage OS работают прекрасно)
 * `Enlite <../Hardware/MM640g.html>`_: довольно сложная система с большим количеством дополнительных материалов
 
 
@@ -121,7 +121,7 @@ xDrip +
    :maxdepth: 1
    :glob:
    
-   Пример системы <../Getting-Started/Sample-Setup.html>
+   Пример системы <../Getting-Started/Sample-Setup.rst>
  
   
 Что делать во время ожидания модулей
@@ -131,4 +131,4 @@ xDrip +
 Вы можете продолжать читать документацию здесь <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>, общаться с другими пользователями в сети или offline, узнавать мнение людей (при этом учитывая, что не все рекомендации вам подходят).
 
 **Готово?**
-Если у вас собраны все компоненты AAPS (поздравляем!) или, по крайней мере, их достаточно, чтобы начать работу в режиме незамкнутого цикла, сначала следует прочитать `Описание Целей<../Usage/Objectives.html>`_ (Обзор) перед каждой новой целью и настроить `компоненты <./index.html#component-setup>`_.
+Если у вас собраны все компоненты AAPS (поздравляем!) или, по крайней мере, их достаточно, чтобы начать работу в режиме незамкнутого цикла, сначала следует прочитать `Описание Целей <../Usage/Objectives.html>`_ (Обзор) перед каждой новой целью и настроить `компоненты <./index.html#component-setup>`_.

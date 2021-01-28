@@ -9,7 +9,7 @@ AndroidAPS-приложение с открытым исходным кодом 
 
 Основными компонентами являются:
 
-.. изображение:../images/modules-female.png
+.. image:: images/modules-female.png
   :alt: Компоненты
 
 Более подробную информацию смотрите здесь.
@@ -33,7 +33,7 @@ What do I need?
    :glob:
    
    Модуль <./Module/module.rst>
-   Пример системы <../Getting-Started/Sample-Setup.html>
+   Пример системы <./Getting-Started/Sample-Setup.md>
 
    
 Как установить AndroidAPS
@@ -42,13 +42,13 @@ What do I need?
    :maxdepth: 1
    :glob:
 
-   Построение APK <./Instaling-AndroidAPS/Building-APK.md>
-   Обновление до новой версии или ветви <./Instaling-AndroidAPS/Update-to-new-version.md>
+   Построение APK <./Installing-AndroidAPS/Building-APK.md>
+   Обновление до новой версии или ветви <./Installing-AndroidAPS/Update-to-new-version.md>
    Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
-   Установка git <./Instaling-AndroidAPS/git-install.rst>
+   Установка git <./Installing-AndroidAPS/git-install.rst>
    Устранение неполадок Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Примечания к выпуску <./Installing-AndroidAPS/Releasenotes.rst>
-   Ветка разработчика <./Instaling-AndroidAPS/Dev_branch.md>
+   Ветка разработчика <./Installing-AndroidAPS/Dev_branch.md>
    
    
 Настройка компонентов
@@ -61,7 +61,7 @@ What do I need?
    параметры xDrip <./Configuration/xdrip.md>
    Помпы <./Hardware/pumps.rst>
    Телефоны <./Hardware/Phoneconfig.rst>
-   Настройка Nightscout <./Instaling-AndroidAPS/Nightscout.md>
+   Настройка Nightscout <./Installing-AndroidAPS/Nightscout.md>
    Смарт-часы <./Hardware/Smartwatch.rst>
    
 
@@ -71,7 +71,7 @@ What do I need?
    :maxdepth: 1
    :glob:
    
-   Конфигуратор <../Configuration/Config-Builder.html>`_ настройки>
+   Конфигуратор <./Configuration/Config-Builder.md>
    Preferences <./Configuration/Preferences.rst>
    
    
@@ -85,7 +85,7 @@ What do I need?
    Цели <./Usage/Objectives.rst>
    Функции OpenAPS <./Usage/Open-APS-features.md>   
    Вычисление COB <./Usage/COB-calculation.rst>
-   Обнаружение чувствительности <./Configuration/Sensitivity-detection-COB.md>
+   Обнаружение чувствительности <./Configuration/Sensitivity-detection-and-COB.md>
    Переключение профиля <./Usage/Profiles.md>
    Временные цели <./Usage/temptarget.md>   
    Пролонгированные углеводы <./Usage/Extended-Carbs.rst>
@@ -101,7 +101,7 @@ What do I need?
    :maxdepth: 1
    :glob:
    
-   Пересечение часовых поясов с помпами <./Usage/Timezon-traveling.md>
+   Пересечение часовых поясов с помпами <./Usage/Timezone-traveling.md>
    Доступ к файлам журнала <./Usage/Accessing-logfiles.md>
    Accu-Chek Combo советы для простого использования <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Параметры экспорта/импорта <./Usage/ExportImportSettings.rst>
@@ -113,7 +113,7 @@ AndroidAPS для детей
    :maxdepth: 1
    :glob:
    
-   Удаленный мониторинг <../Children/Children.html>
+   Удаленный мониторинг <./Children/Children.rst>
    Команды SMS <./Children/SMS-Commands.rst>
    
 
@@ -132,7 +132,7 @@ AndroidAPS для детей
    :maxdepth: 1
    :glob:
   
-   Часто задаваемые вопросы <./Getting-started/FAQ.md>
+   Часто задаваемые вопросы <./Getting-Started/FAQ.md>
 
    
 Глоссарий
@@ -151,7 +151,7 @@ AndroidAPS для детей
    :glob:
 
    Полезные ресурсы для чтения перед запуском <./Where-To-Go-For-Help/Background-reading.md>
-   Куда обратиться за справкой <./Where-To-Go-For-Help/Connect-wit-other-users.md>
+   Куда обратиться за справкой <./Where-To-Go-For-Help/Connect-with-other-users.md>
    Обновления и изменения документации <./Getting-Started/WikiUpdate.rst>
 
 Для клиницистов
@@ -171,7 +171,7 @@ AndroidAPS для детей
 
    Как помочь <./Getting-Started/How-can-I-help.md>
    Как перевести приложение и документы <./translations.md>
-   Как редактировать документы <./сделать-это-пиар>
+   Как редактировать документы <./make-a-PR>
 
 
 .. note:: 
@@ -179,8 +179,8 @@ AndroidAPS для детей
 
 	* Вся информация, идеи, и описанный здесь код предназначен только для ознакомительных и образовательных целей. Nightscout в настоящее время не пытается соответствовать принципам конфиденциальности HIPAA. Вы применяете Nightscout и AndroidAPS на свой собственный риск и пожалуйста не используйте информацию или код для принятия медицинских решений.
 
-	*Вы пользуетесь кодом github.com без гарантии и какой-либо официальной поддержки. Пожалуйста, ознакомьтесь с ЛИЦЕНЗИЕЙ этого репозитория.
+	* Вы пользуетесь кодом github.com без гарантии и какой-либо официальной поддержки. Пожалуйста, ознакомьтесь с ЛИЦЕНЗИЕЙ этого репозитория.
 
 	* Все наименования продуктов и компаний, товарные знаки, услуги по обслуживанию, зарегистрированные товарные знаки и зарегистрированные службы являются собственностью соответствующих владельцев. Их использование - в информационных целях и не подразумевает какой-либо принадлежности к ним или их одобрения.
 
-	Обратите внимание, что этот проект не имеет связи с и одобрения от: ` SOOIL <http://www.sooil.com/eng/>` _, ` Dexcom <http://www.dexcom.com/>` _, ` Accu-Chek, Roche Diabet Care <http://www.accu-chek.com/>` _ или ` Medtronic <http://www.medtronic.com/>` _
+	Обратите внимание, что этот проект не имеет связи с и одобрения от: `SOOIL <http://www.sooil.com/eng/>`_, ` Dexcom <http://www.dexcom.com/>`_, ` Accu-Chek, Roche Diabet Care <http://www.accu-chek.com/>`_ или ` Medtronic <http://www.medtronic.com/>`_

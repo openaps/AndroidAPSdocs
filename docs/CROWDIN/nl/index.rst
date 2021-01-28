@@ -48,7 +48,7 @@ AndroidAPS installeren
    Git installeren <./Installing-AndroidAPS/git-install.rst>
    Problemen in Android Studio oplossen <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
-   Dev branch (voor ontwikkelaars) <./Installing-AndroidAPS/Dev-branch.md>
+   Dev branch (voor ontwikkelaars) <./Installing-AndroidAPS/Dev_branch.md>
    
    
 Onderdelen instellen

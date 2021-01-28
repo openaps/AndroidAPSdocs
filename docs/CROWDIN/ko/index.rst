@@ -169,7 +169,7 @@ For Clinicians
    :maxdepth: 1
    :glob:
 
-   도움주기
+   도움주기 <./Getting-Started/How-can-I-help.md>
    How to translate the app and docs <./translations.md>
    How to edit the docs <./make-a-PR>
 
