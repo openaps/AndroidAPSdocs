@@ -4,7 +4,7 @@
 
 **AndroidAPS no está disponible como descarga debido a la regulación de los dispositivos mediales. ¡Es legal construir la aplicación para su propio uso, pero no debe dar una copia a los demás! Consulte la página [FAQ](../Getting-Started/FAQ.md) para obtener detalles.**
 
-## ## Notas importantes
+## Notas importantes
 
 * Por favor utilice **[Android Studio Versión 4.1.1](https://developer.android.com/studio/)** o más reciente para construir el apk.
 * [Windows 10 sistemas de 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) no son compatibles con Android Studio 4.1.1.
