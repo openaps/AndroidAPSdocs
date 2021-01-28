@@ -3,7 +3,7 @@ Dexcom G6
 Pirmiausia pagrindai
 ==================================================
 
-* Laikykitės pagrindinių NGJ higienos ir nustatymų rekomendacijų, kurios pateiktos čia: <../Hardware/GeneralCGMRecommendation.html>`_.
+* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`__.
 * G6 siųstuvams, pagamintiems nuo 2018 metų rudens/pabaigos, prašome įsitikinkite, kad naudojate vieną naujausių xDrip+ versijų <https://github.com/NightscoutFoundation/xDrip/releases>`_. Šie siųstuvai turi naują programinę įrangą, o vėliausia stabili xDrip+ versija (2019/01/10) su ja neveikia.
 
 Bendrieji patarimai naudojant uždarą ciklą su G6
@@ -27,7 +27,7 @@ Jei naudojate G6 su xDrip+
 * Jei dar to nepadarėte, atsisiųskite xDrip <https://github.com/NightscoutFoundation/xDrip> _ir vykdykite Nightscout instrukcijas (G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>_).
 * Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite xDrip.
 * Pritaikykite xDrip+ nustatymus pagal 'xDrip+ nustatymų puslapį <../Configuration/xdrip.html>`_
-* Jei AAPS negauna glikemijos duomenų, kai telefonas veikia skrydžio režimu, naudokite funkciją 'Nustatyti gavėją', kaip aprašyta xDrip+ nustatymų puslapyje <../Configuration/xdrip.html>`_.
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
 Kai naudojate G6 su modifikuota Dexcom programa
 ==================================================
@@ -89,7 +89,7 @@ Dexcom G6 specifinių trikčių šalinimas
 
 Bendrųjų trikčių šalinimas
 --------------------------------------------------
-Bendrųjų trikčių šalinimą, skirtą NGJ, galite rasti 'čia <./GeneralCGMRecommendation.html#troubleshooting>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
 
 Naujas siųstuvas su veikiančiu sensoriumi
 --------------------------------------------------
