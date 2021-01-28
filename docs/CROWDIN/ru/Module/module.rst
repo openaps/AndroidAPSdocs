@@ -36,7 +36,7 @@ SGLT-2 ингибиторы, которые также называются гл
 Телефон
 --------------------------------------------------
 The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
-Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>_`
+Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>`_
 
 Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
@@ -74,7 +74,7 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 
 Источник данных гликемии
 --------------------------------------------------
-Это всего лишь краткий обзор совместимых с AndroidAPS систем мониторинга ГК. Для получения дополнительной информации смотрите `здесь <../Configuration/BG-Source.html>`_. Или если проще: если данные ГК могут приниматься приложением xDrip+ или на веб-сайте Nightscout, вы можете выбрать xDrip+ (или Nightscout с интернет-соединением) как источник ГК в AAPS.
+Это всего лишь краткий обзор совместимых с AndroidAPS систем мониторинга ГК. For further details, look `here <../Configuration/BG-Source.html>`__. Или если проще: если данные ГК могут приниматься приложением xDrip+ или на веб-сайте Nightscout, вы можете выбрать xDrip+ (или Nightscout с интернет-соединением) как источник ГК в AAPS.
 
 * ` Dexcom G6 <../Hardware/DexcomG6.html> ` _: Он работает с приложением xDrip + или модифицированным приложением Dexcom
 * ` Dexcom G5 <../Hardware/DexcomG5.html> ` _: Он работает с приложением xDrip + или модифицированным приложением Dexcom
@@ -91,11 +91,11 @@ Nightscout - веб-приложение с открытым исходным к
 
 Nightscout не зависит от других модулей. Он понадобится для выполнения цели 1.
 
-Дополнительную информацию о том, как настроить Nightscout для использования с AndroidAPS можно найти `здесь <../Installing-AndroidAPS/Nightscout.html>`_.
+Additional information on how to configure Nightscout for use with AndroidAPS can be found `here <../Installing-AndroidAPS/Nightscout.html>`__.
 
 Файл AAPS-.apk
 --------------------------------------------------
-Основной компонент системы. Перед установкой приложения необходимо создать apk-файл ( расширение имен файлов для приложений Android). Инструкции `здесь <./../Installing-AndroidAPS/Building-APK.html>`_.  
+Основной компонент системы. Перед установкой приложения необходимо создать apk-файл ( расширение имен файлов для приложений Android). Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`__.  
 
 Дополнительные модули
 ==================================================
@@ -103,7 +103,7 @@ Nightscout не зависит от других модулей. Он понад
 --------------------------------------------------
 Вы можете выбрать смарт-часы с Android Wear 1.x и выше. Большинство пользователей носят Sony Smartwatch 3 (SWR50), поскольку это единственные смарт-часы, которые могут получать данные от Dexcom G5/G5, когда телефон вне доступа. Некоторые другие часы могут быть пропатчены как самостоятельный коллектор (см. `эту документацию <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ подробно).
 
-Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. Есть разные часы для использования с AndroidAPS, которые вы можете найти `здесь <../Configuration/Watchfaces.html>`_.
+Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`__.
 
 Для того, чтобы включить в список телефон, который не занесен в таблицу, заполните форму <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>.
 
@@ -111,7 +111,7 @@ Nightscout не зависит от других модулей. Он понад
 
 xDrip +
 --------------------------------------------------
-Даже если приложение xDrip+ вам не нужно как источник данных ГК, вы все равно можете использовать его например для оповещений или хороший дисплей ГК. Вы можете иметь столько оповещений сколько хотите, указать время, когда оповещениям разрешено работать, должны ли они иметь приоритет в режиме тишины и т. п. Некоторую информацию об xDrip+ можно найти `здесь <../Configuration/xdrip.html>`_. Пожалуйста, имейте в виду, что документация к этому приложению не всегда актуальна, так как проект развивается довольно быстро.
+Даже если приложение xDrip+ вам не нужно как источник данных ГК, вы все равно можете использовать его например для оповещений или хороший дисплей ГК. Вы можете иметь столько оповещений сколько хотите, указать время, когда оповещениям разрешено работать, должны ли они иметь приоритет в режиме тишины и т. п. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`__. Пожалуйста, имейте в виду, что документация к этому приложению не всегда актуальна, так как проект развивается довольно быстро.
 
 Пример настройки
 ==================================================
