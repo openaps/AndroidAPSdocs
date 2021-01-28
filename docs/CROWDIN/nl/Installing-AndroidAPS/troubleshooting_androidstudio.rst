@@ -6,7 +6,7 @@ Het is het makkelijkste om steeds hetzelfde keystore-bestand te gebruiken bij he
 
 Mocht je jouw oude keystore bestand toch niet meer kunnen vinden, dan heb je een paar extra stappen nodig bij het updaten van de app, om de instellingen in jouw AAPS app te behouden:
 
-1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`_ on your phone.
+1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`__ on your phone.
 2. Kopieer jouw instellingen bestand van jouw telefoon naar een externe locatie (zoals je computer, cloudopslag service...).
 3. Zorg ervoor dat je het bestand met instellingen "AndroidAPS Preferences" opslaat op een veilige plek die je later kunt terugvinden.
 4. Bouwen van de ondertekende apk zoals beschreven op de pagina `Bijwerken naar een nieuwe versie <../Installing-AndroidAPS/Update-to-new-version.html>`_.
@@ -118,26 +118,26 @@ App niet geïnstalleerd
 * Zorg ervoor dat je het bestand "app-full-release.apk" naar jouw telefoon hebt overgebracht.
 * Als "App niet geïnstalleerd" wordt weergegeven op jouw telefoon volg dan deze stappen:
   
-1. `Instellingen exporteren <../Usage/ExportImportSettings.html>`_ (in AAPS-app die al op jouw telefoon is geïnstalleerd)
+1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
 2. Verwijder de AndroidAPS app van jouw telefoon.
 3. Schakel vliegtuigmodus in & schakel bluetooth uit.
 4. Installeer nieuwe versie ("app-full-release.apk”)
-5. `Instellingen importeren <./Usage/ExportImportSettings.html>`_
+5. `Import settings <../Usage/ExportImportSettings.html>`__
 6. Zet bluetooth weer aan en schakel de vliegtuigmodus uit
 
 App geïnstalleerd maar oude versie
 ==================================================
-Wanneer je de app succesvol hebt gebouwd, hem naar jouw telefoon hebt overgebracht en geïnstalleerd, maar het versienummer blijft hetzelfde, dan heb je waarschijnlijk de `bijwerken van jouw lokale kopie <../Update-to-new-version.html#bijwerken-van-jouw-lokale-kopie>`_ stap gemist. Bouw de app opnieuw en vergeet deze stap niet;)
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`_.
 
 Geen van de bovengenoemde
 ==================================================
 Als geen van de bovenstaande tips je geholpen heeft, dan zou je de de app helemaal vanaf nul kunnen bouwen:
 
-1. `Instellingen exporteren <../Usage/ExportImportSettings.html>`_ (in AAPS-app die al op jouw telefoon is geïnstalleerd)
-2. Have your key password and key store password ready. In het geval dat je het bestand kwijt bent en/of het wachtwoord bent vergeten dan kun je proberen om ze te vinden in de projectbestanden zoals `hier <https://youtu.be/nS3wxnLgZOo>`_beschreven. Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan. 
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
+1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
+2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`__. Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan. 
+3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`__.
 4. Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
-5. `Instellingen importeren <./Usage/ExportImportSettings.html>`_
+5. `Import settings <../Usage/ExportImportSettings.html>`__
 
 In het ergste geval
 ==================================================
