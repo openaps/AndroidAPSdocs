@@ -43,7 +43,7 @@
 * Norėdami tai padaryti paspauskite ir palaikykite **Uždaras Ciklas** pagrindiniame ekrane ir pasirinkite **Sustabdyti ciklą 1 val.**. 
 * Palaukite, kol telefonas susisieks su pompa ir bluetooth ženkliukas išnyks pompos ekrane.
 
-![Bluetooth įjungtas](../images/combo/combo-tips-combo-tips-compo.png)
+![Bluetooth įjungtas](../images/combo/combo-tips-compo.png)
 
 * Atrakinkite pompos klaviatūrą, sustabdykite pompą, patvirtinkite galimai atšauktą laikiną bazę ir pakeiskite bateriją.
 * Tada iš naujo paleiskite pompą, pasirinkite **Atnaujinti** ilgai paspaudus ir palaikius ant **Sustabdyta** pagrindiniame ekrane.
