@@ -13,7 +13,7 @@ If you want to go back in objectives see `explanation below <../Usage/Objectives
 * Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.  
 * If using DanaR pump then ensure you have followed `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ instructions to ensure the link between pump and AndroidAPS.
 * Follow instructions in `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ page to ensure Nightscout can receive and display this data.
-* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#nsclient>`_.
+* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#nsclient>`__.
 
 *You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
 
@@ -42,13 +42,14 @@ Objective 3: Prove your knowledge
 Objective 4: Starting on an open loop
 ==================================================
 * Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-* Work through the `Preferences <../Configuration/Preferences.html>`_ to set up for you.
+* Work through the `Preferences <../Configuration/Preferences.html>`__ to set up for you.
 * Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Βεβαιωθείτε ότι τα δεδομένα αυτά εμφανίζονται σε AndroidAPS και Nightscout.
 * Enable `temp targets <../Usage/temptarget.html>`_ if necessary. Χρησιμοποιήστε στόχους υπογλυκαιμίας για να αποφύγετε ότι το σύστημα θα διορθώσει πολύ έντονα λόγω αύξησης της γλυκόζης αίματος μετά από υπογλυκαιμία. 
 
 Reduce number of notifications
 --------------------------------------------------
-* To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l. * You might even want to wider upper limit (or disable Open Loop) at night. 
+* To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l.
+* You might even want to wider upper limit (or disable Open Loop) at night. 
 * In Preferences you can set a minimum percentage for suggestion of basal rate change.
 
    .. image:: ../images/OpenLoop_MinimalRequestChange2.png
@@ -70,7 +71,7 @@ Objective 5: Understanding your open loop, including its temp basal recommendati
 
 You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol [20 mg/dl or less] wide) and observe how the behavior of your system changes as a result.  
 
-You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in `Preferences <../Configuration/Preferences.html>`_ > Range for Visualisation.
+You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in `Preferences <../Configuration/Preferences.html>`__ > Range for Visualisation.
  
 .. image:: ../images/sign_stop.png
   :alt: Stop sign
@@ -88,7 +89,7 @@ Objective 6: Starting to close the loop with Low Glucose Suspend
   
 Closed loop will not correct high bg values in objective 6 as it is limited to low glucose suspend. Οι υψηλές τιμές BG πρέπει να διορθωθούν χειροκίνητα από εσάς!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`_ or by pressing and holding the Open Loop button in the top left of the home screen.
+* Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`__ or by pressing and holding the Open Loop button in the top left of the home screen.
 * Set your target range slightly higher than you usually aim for, just to be safe.
 * Watch  how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
 * Ensure your settings have supported AndroidAPS to avoid having to treat a low glucose over a period of 5 days.  Εάν εξακολουθείτε να εμφανίζετε συχνά ή σοβαρά επεισόδια χαμηλής γλυκόζης, εξετάστε το ενδεχόμενο αλλαγής των αναλογιών DIA, βασικών, ISF και υδατανθράκων.
