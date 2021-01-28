@@ -8,7 +8,7 @@ los eCarbs son carbohidratos que se introducen durante varias horas. Esto simula
 
 los eCarbs no están limitados a las comidas pesadas grasosas / proteicas: también pueden ser utilizados para ayudar en cualquier situación en la que haya influencias que aumenten el nivel de azúcar en la sangre, por ejemplo,. otros medicamentos como los corticosteroides.
 
-Para especificar eCarbs, establezca una duración en el cuadro de diálogo _Carbs_ en la pestaña de visión general, los carbohidratos totales y, opcionalmente, un tiempo de duración:
+To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift:
 
 .. imagen:: ../images/eCarbs_Dialog.png
   :alt: Introducir carbohidratos
