@@ -8,7 +8,7 @@ iAV yra angliavandeniai, kurie pasiskirsto per kelias valandas. Įprastam maistu
 
 iAV neapsiriboja maistu, kuriame yra daug riebalų / baltymų: ši funkcija taip pat gali būti naudojama padėti kitose situacijose, kuriose yra padidėjęs cukraus kiekis kraujyje, pvz. vartojant kitus vaistus, pavyzdžiui, kortikosteroidus.
 
-Norėdami įvesti iAV, pagrindiniame ekrane esančiame dialogo lange mygtuku AV turite nustatyti trukmę, angliavandenių kiekį ir pasirinktinai laiko postūmį:
+To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift:
 
 .. image:: ../images/eCarbs_Dialog.png
   :alt: Įveskite angliavandenius
