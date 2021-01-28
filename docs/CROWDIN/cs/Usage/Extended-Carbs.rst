@@ -8,7 +8,7 @@ eSacharady jsou sacharidy, jejichž působení se rozlévá do několika hodin. 
 
 eCarbs aren't limited to fatty / protein heavy meals: they can be also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
 
-To enter eCarbs, set a duration in the _Carbs_ dialog on the overview tab, the total carbs and optionally a time shift:
+To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift:
 
 .. image:: ../images/eCarbs_Dialog.png
   :alt: Enter carbs
