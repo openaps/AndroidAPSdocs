@@ -3,7 +3,7 @@ Dexcom G6
 Základní nastavení
 ==================================================
 
-* Postupujte podle obecných opatření při používání CGM a doporučení pro nastavení senzoru `zde <../Hardware/GeneralCGMRecommendation.html>`_.
+* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`__.
 * U G6 vysílačů vyrobených na/po konci roku 2018 se ujistěte, že používáte jednu z,nejnovějších verzí z xDrip+ (tzn. night build) <https://github.com/NightscoutFoundation/xDrip/releases>`_. Tyto vysílače mají nový firmware, a poslední stabilní verze xDrip+ (2019/01/10) si s ním neporadí.
 
 Obecné tipy pro použití smyčky s G6
@@ -27,7 +27,7 @@ Používáte-li G6 s aplikací xDrip+
 * If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
 * Nastavte xDrip+ podle popisu konfigurace na stránce <../Configuration/xdrip.html>`_
-* Pokud AndroidAPS nepřijímá v režimu letadlo hodnoty glykémie, musíte nastavit `Identify receiver` tak, jak je popsáno v `nastavení xDrip+ <../Configuration/xdrip.html>`_.
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
 Používáte-li G6 s upravenou Dexcom aplikací
 ==================================================
@@ -90,7 +90,7 @@ Dexcom G6 konkrétní řešení problémů
 
 General troubleshoothing
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
 
 Nový vysílač se spuštěným senzorem
 --------------------------------------------------
