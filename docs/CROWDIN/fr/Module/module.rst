@@ -36,7 +36,7 @@ Les inhibiteurs SGLT-2, aussi appelés gliflozines, empêchent la réabsorption 
 Téléphone
 --------------------------------------------------
 La version actuelle d'AndroidAPS nécessite un smartphone Android avec Google Android 8.0 ou supérieur. Donc si vous pensez à un nouveau téléphone, un Android 8.1 minimum est recommandé mais choisissez de préférence une version Android 9 ou 10.
-Les utilisateurs sont fortement encouragés à maintenir leur version d'AndroidAPS à jour pour des raisons de sécurité. Cependant pour les utilisateurs qui ne peuvent pas utiliser d'appareil avec Android 8 minimum, la version 2.6.1.4 d'AndroidAPS, adaptée aux versions plus anciennes d'Android, reste disponible sur l'`ancien dépôt. <https://github.com/miloskozak/androidaps>_`
+Les utilisateurs sont fortement encouragés à maintenir leur version d'AndroidAPS à jour pour des raisons de sécurité. Cependant pour les utilisateurs qui ne peuvent pas utiliser d'appareil avec Android 8 minimum, la version 2.6.1.4 d'AndroidAPS, adaptée aux versions plus anciennes d'Android, reste disponible sur l'`ancien dépôt. <https://github.com/miloskozak/androidaps>`_
 
 Les utilisateurs sont en train de créer une `liste des téléphones et des montres testées <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
@@ -74,7 +74,7 @@ Les avantages de la DanaR/RS vs. la Combo comme choix de pompe de choix sont :
 
 Source GLY
 --------------------------------------------------
-Voici un bref aperçu de tous les MGC/MGF compatibles avec AndroidAPS. Pour plus de détails, consultez `ceci <../Configuration/BG-Source.html>`_. Juste une petite astuce : si vous voulez afficher vos glycémies dans l'application xDrip+ ou dans le site web Nightscout, vous pouvez choisir xDrip+ (ou Nightscout avec connexion web) comme source de glycémie dans AAPS.
+Voici un bref aperçu de tous les MGC/MGF compatibles avec AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`__. Juste une petite astuce : si vous voulez afficher vos glycémies dans l'application xDrip+ ou dans le site web Nightscout, vous pouvez choisir xDrip+ (ou Nightscout avec connexion web) comme source de glycémie dans AAPS.
 
 * `Dexcom G6 <../Hardware/DexcomG6.html>`_ : Il fonctionne avec l'application xDrip+ ou l'application Dexcom patchée
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_ : Il fonctionne avec l'application xDrip+ ou l'application Dexcom patchée
@@ -91,11 +91,11 @@ Nightscout est une application Web open source qui peut enregistrer et afficher 
 
 Nightscout est indépendant des autres modules. Vous en aurez besoin pour réaliser l'objectif 1.
 
-Des informations supplémentaires sur la configuration de Nightscout pour l'utiliser avec AndroidAPS peuvent être trouvées `ici <../Installing-AndroidAPS/Nightscout.html>`_.
+Additional information on how to configure Nightscout for use with AndroidAPS can be found `here <../Installing-AndroidAPS/Nightscout.html>`__.
 
 Fichier apk de AAPS
 --------------------------------------------------
-Le composant de base du système. Avant d'installer l'application, vous devez d'abord construire le fichier apk (qui est l'extension pour une application Android). Les instructions sont `ici <../Installing-AndroidAPS/Building-APK.html>`_.  
+Le composant de base du système. Avant d'installer l'application, vous devez d'abord construire le fichier apk (qui est l'extension pour une application Android). Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`__.  
 
 Composants optionnels
 ==================================================
@@ -103,7 +103,7 @@ Montres connectées
 --------------------------------------------------
 Vous pouvez choisir n'importe quelle montre connectée avec Android Wear 1.x et plus. La plupart des boucleurs portent une montre Sony Smartwatch 3 (SWR50) car c'est la seule montre qui peut obtenir des lectures de Dexcom G5/G6 quand le téléphone est hors de portée. D'autres montres peuvent également être patchées pour fonctionner comme récepteur indépendant (voir `cette documentation <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ pour plus de détails).
 
-Les utilisateurs sont en train de créer une `liste des téléphones et des montres testées <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. Ils y a plusieurs cadrans disponibles pour AndroidAPS que vous pouvez trouver `ici <../Configuration/Watchfaces.html>`_.
+Les utilisateurs sont en train de créer une `liste des téléphones et des montres testées <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`__.
 
 Pour enregistrer un téléphone ou une montre qui n'est pas déjà dans la feuille de calcul, veuillez remplir le `formulaire <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
@@ -111,7 +111,7 @@ En cas de problème avec la feuille de calcul, merci d'envoyer un mail à `hardw
 
 xDrip+
 --------------------------------------------------
-Même si vous n'avez pas besoin d'avoir l'application xDrip+ en tant que Source GLY, vous pouvez toujours l'utiliser par ex. pour les alertes ou pour un bon affichage des glycémies. Vous pouvez avoir autant d'alarmes que vous le souhaitez, spécifier l'heure à laquelle l'alarme doit être active, si elle peut remplacer le mode silencieux, etc. Certaines informations xDrip+ peuvent être trouvées `ici <../Configuration/xdrip.html>`_. Veuillez noter que les documentations de cette application ne sont pas toujours à jour car leur progression est assez rapide.
+Même si vous n'avez pas besoin d'avoir l'application xDrip+ en tant que Source GLY, vous pouvez toujours l'utiliser par ex. pour les alertes ou pour un bon affichage des glycémies. Vous pouvez avoir autant d'alarmes que vous le souhaitez, spécifier l'heure à laquelle l'alarme doit être active, si elle peut remplacer le mode silencieux, etc. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`__. Veuillez noter que les documentations de cette application ne sont pas toujours à jour car leur progression est assez rapide.
 
 Exemple de configuration
 ==================================================
