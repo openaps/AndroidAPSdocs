@@ -20,7 +20,7 @@ Si vous utilisez xDrip+
 * Si vous voulez pouvoir utiliser AndroidAPS pour calibrer, alors dans xDrip, allez dans Paramètres > Inter-app settings > Accept Calibrations et sélectionnez ON.  Vous pouvez également consulter les options dans Paramètres > Paramètres moins courants > Paramètres Avancés de Calibration.
 * Sélectionnez xDrip dans le Générateur de configuration (dans AndroidAPS).
 * Pour paramétrer xDrip+ voir la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_ avec les copies d'écrans. Il y a une partie pour les paramètres de base xDrip+ et une pour les paramètres spécifiques au Freestyle Libre.
-* Si AAPS ne reçoit pas de Glycémie lorsque le téléphone est en mode avion, utilisez `Identify receiver` comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_.
+* If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
 Si vous utilisez Glimp
 ==================================================
