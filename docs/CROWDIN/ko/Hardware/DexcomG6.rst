@@ -3,7 +3,7 @@ Dexcom G6
 우선적인 기본 사항
 ==================================================
 
-* '이 문서<../Hardware/GeneralCGMRecommendation.html>`의 일반적인 CGM 위생과 센서 설정 권장사항을 따르십시오.
+* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`__.
 * 2018년 가을 이후 제조된 G6 트랜스미터의 경우 `latest nightly built xDrip+버전들<https://github.com/NightscoutFoundation/xDrip/releases>`중 하나를 사용해야 합니다. 이러한 트랜스미터들은 새로운 펌웨어를 가지고 있으며, xDrip+의 안정적인 최신 버전(2019/01/10)에서 사용할 수 없습니다.
 
 Dexcom G6로 loop을 사용하기 위한 일반적인 정보
@@ -27,7 +27,7 @@ Dexcom G6를 xdrip+와 사용하는 경우
 * 만약 아직 'xDrip'을 설치하지 않았다면 <https://github.com/NightscoutFoundation/xDrip>에서 다운로드하고, nightscout ('G5' <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>)의 지시사항을 따르십시오.
 * 구성 관리자 (AndroidAPS의 세팅)에서 xDrip+를 선택합니다.
 * 'xDrip+ 설정 페이지 <../Configuration/xdrip.html>'를 따라 xDrip+의 설정을 조정하십시오.
-* 비행기 모드에서 AAPS가 혈당값을 수신하지 못하는 경우 'xDrip+ 설정 페이지' <../Configuration/xdrip.html>에 설명된 'Identify receiver'를 이용합니다.
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
 Dexcom G6를 Dexcom 앱(패치버전)과 사용하는 경우
 ==================================================
@@ -89,7 +89,7 @@ Dexcom G6 specific troubleshooting
 
 General troubleshoothing
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
 
 New transmitter with running sensor
 --------------------------------------------------
