@@ -7,7 +7,7 @@ Dexcom G5를 Xdrip+와 사용하는 경우
 * In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
 * xDrip 대신 AndroidAPS에서 보정 기능을 사용하려면 xDrip의 세팅 > Inter-app settings > Accept Calibrations를 활성화합니다.  세팅 > 추가 세팅 > Advanced Calibration 설정에서 선택사항들을 검토할 수 있습니다.
 * 구성 관리자 (AndroidAPS의 세팅)에서 xDrip을 선택합니다.
-* 비행기 모드에서 AAPS가 혈당값을 수신하지 못하는 경우 [xDrip+ 설정 페이지](../Configuration/xdrip.md)에 설명된 'Identify receiver'를 이용합니다.
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.md>`_ .
 
 Dexcom G5를 Dexcom 앱(패치버전)과 사용하는 경우
 ==================================================
