@@ -43,7 +43,7 @@
 * Chcete-li vyměnit baterii, dlouze přidržte **Uzavřená smyčka** na hlavní obrazovce a zvolte **Pozastavit smyčku na 1 h**. 
 * Wait for the pump to communicate with the phone and the Bluetooth logo on the pump has faded.
 
-![Bluetooth povoleno](../images/combo/combo-tips-combo-tips-compo.png)
+![Bluetooth povoleno](../images/combo/combo-tips-compo.png)
 
 * Odemkněte pumpu, přepněte pumpu do režimu STOP, potvrďte případný alarm konce dočasné bazální dávky a vyměňte baterii.
 * Then put the pump back in run mode select **Resume** when long-pressing on **Suspended** on the main screen.
