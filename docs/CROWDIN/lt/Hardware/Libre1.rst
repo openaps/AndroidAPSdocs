@@ -20,7 +20,7 @@ Jei naudojate xDrip+
 *Jei norite naudotis AndroidAPS kalibracijoms, xDrip+ eikite į Settings > Interapp Compatibility > Accept Calibrations ir pasirinkite On.  Taip pat galbūt norėsite peržiūrėti kalibravimo parinktis Nustatymuose > Mažiau įprasti nustatymai > išplėstinės kalibravimo parinktys.
 * Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite xDrip.
 * xDrip+ nustatymus su ekranvaizdžiais žiūrėkite 'xDrip+ nustatymų puslapyje <../Configuration/xdrip.html>`__. Tai yra dalis bazinių xDrip+ nustatymų bei xDrip+ nustatymų Freestyle Libre.
-* Jei AAPS negauna glikemijos duomenų, kai telefonas veikia skrydžio režimu, naudokite funkciją 'Nustatyti gavėją', kaip aprašyta xDrip + nustatymų puslapyje <../Configuration/xdrip.html>`_.
+* If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
 Jei naudojate Glimp
 ==================================================
