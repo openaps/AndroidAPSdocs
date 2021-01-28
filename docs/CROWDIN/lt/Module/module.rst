@@ -36,7 +36,7 @@ SGLT-2 inhibitoriai, dar vadinami gliflozinais, slopina gliukozės absorbciją (
 Telefonas
 --------------------------------------------------
 The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
-Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>_`
+Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>`_
 
 Vartotojai sukūrė `patikrintų išmaniųjų telefonų ir išmaniųjų laikrodžių, sąrašą:<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
@@ -74,7 +74,7 @@ Visos pompos, palaikančio AndroidAPS, yra atsparios vandeniui (bent jau naujos)
 
 Glikemijos šaltinis
 --------------------------------------------------
-Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. Norėdami gauti daugiau informacijos, žr. `čia <../Configuration/BG-Source.html>`_. Tiesiog trumpa pastaba: jei galite pateikti gliukozės duomenis xDrip+ programoje ar Nightscout svetainėje, galite pasirinkti xDrip+ (arba Nightscout su interneto ryšiu) kaip AAPS KG šaltinį.
+Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. For further details, look `here <../Configuration/BG-Source.html>`__. Tiesiog trumpa pastaba: jei galite pateikti gliukozės duomenis xDrip+ programoje ar Nightscout svetainėje, galite pasirinkti xDrip+ (arba Nightscout su interneto ryšiu) kaip AAPS KG šaltinį.
 
 * `Dexcom G6 <../Hardware/DexcomG6.html>`_: Veikia su xDrip+ arba modifikuota Dexcom programa
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Veikia su xDrip+ arba modifikuota Dexcom programa
@@ -91,11 +91,11 @@ Nightscout yra atvirojo kodo žiniatinklio programa, galinti registruoti ir rody
 
 Nightscout yra nepriklausomas nuo kitų modulių. Jums jo reikės, kad galėtumėte įvykdyti 1-ą Tikslą.
 
-Norėdami gauti daugiau informacijos apie Nightscout konfigūravimą, kad galėtumėte naudoti su AndroidAPS, skaitykite `čia <../Installing-AndroidAPS/Nightscout.html>`_.
+Additional information on how to configure Nightscout for use with AndroidAPS can be found `here <../Installing-AndroidAPS/Nightscout.html>`__.
 
 AAPS-.apk failas
 --------------------------------------------------
-Pagrindiniai sistemos komponentai. Prieš diegdami programą, pirmiausia turite sukurti apk failą (kuris yra Android programos failo pavadinimo plėtinys). Instrukcijas rasite `čia  <../Installing-AndroidAPS/Building-APK.html>`_.  
+Pagrindiniai sistemos komponentai. Prieš diegdami programą, pirmiausia turite sukurti apk failą (kuris yra Android programos failo pavadinimo plėtinys). Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`__.  
 
 Pasirenkamieji Moduliai
 ==================================================
@@ -103,7 +103,7 @@ Išmanieji laikrodžiai
 --------------------------------------------------
 Bet koks išmanusis laikrodis su Android Wear 1.x ar naujesne versija veikia. Daugelis uždaro ciklo vartotojai naudoja Sony Smartwatch 3 (SWR50), nes taip pat galima priimti reikšmes iš Dexcom G5/G6, kai išmaniojo telefono nėra diapazone. Kai kuriuos kitus išmaniuosius laikrodžius galima pritaikyti, kad juos būtų galima naudoti kaip autonominį imtuvą (žr. `dokumentaciją <<https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_, jei norite gauti daugiau informacijos).
 
-Vartotojai sukūrė `patikrintų išmaniųjų telefonų ir išmaniųjų laikrodžių, sąrašą:<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. Yra įvairių laikrodžių ekranų, skirtų naudoti su AndroidAPS, daugiau informacijos galite rasti `čia <../Configuration/Watchfaces.html>`_.
+Vartotojai sukūrė `patikrintų išmaniųjų telefonų ir išmaniųjų laikrodžių, sąrašą:<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`__.
 
 Norėdami įvesti mobilųjį telefoną ar išmanųjį laikrodį, kurio dar nėra sąraše, užpildykite formą <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewfor>'_.
 
@@ -111,7 +111,7 @@ Praneškite apie bet kokias lentelės problemas el. paštu `hardware@androidaps.
 
 xDrip+
 --------------------------------------------------
-Net jei jums nereikia xDrip+ programos kaip KG duomenų šaltinio, vis tiek galite ja naudotis aliarmams arba patogų glikemijos duomenų rodymą. xDrip+ galite nustatyti norimus įspėjimo signalų, apibrėžti laiką, kada jie turėtų būti aktyvūs, ar jie gali nepaisyti išmaniojo telefono nutildymo ir pan. Kai kurią xDrip+ informaciją galima rasti `čia <../Configuration/xdrip.html>`_. Atminkite, kad xDrip+ tobulinimas yra labai aktyvus ir dokumentacija kartais negali jo sekti, todėl ne visada gali būti atnaujinta.
+Net jei jums nereikia xDrip+ programos kaip KG duomenų šaltinio, vis tiek galite ja naudotis aliarmams arba patogų glikemijos duomenų rodymą. xDrip+ galite nustatyti norimus įspėjimo signalų, apibrėžti laiką, kada jie turėtų būti aktyvūs, ar jie gali nepaisyti išmaniojo telefono nutildymo ir pan. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`__. Atminkite, kad xDrip+ tobulinimas yra labai aktyvus ir dokumentacija kartais negali jo sekti, todėl ne visada gali būti atnaujinta.
 
 Pavyzdinis nustatymas
 ==================================================
