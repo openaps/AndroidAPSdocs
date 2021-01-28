@@ -86,7 +86,7 @@ Verze 2.7.0
 ================
 Datum vydání: 24. 09. 2020
 
-**Ujistěte se, že jste zkontrolovali a upravili nastavení po přechodu na verzi 2.7, jak je popsáno** `zde <../Installing-AndroidAPS/update2_7.html>`_.
+**Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`__.
 
 Abyste mohli pokračovat v používání `Automatizace <../Usage/Automation.html>`_, potřebujete alespoň spustit plnění `cíle 11 <../Usage/Objectives.html#objective-11-automation>`_ (všechny předchozí cíle musí být splněny, aby šlo spustit cíl 11). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. Neovlivní to cíle, které jste již dokončili. Splněné cíle zůstanou zachovány!
 
@@ -192,7 +192,7 @@ K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/
 Hlavní nové funkce
 ------------------
 * Drobné úpravy vzhledu (úvodní obrazovka...)
-* Odstraněna karta/nabídka Péče - další podrobnosti `zde <../Usage/CPbefore26.html>`_
+* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
 * Nový `plugin Místního profilu <../Configuration/Config-Builder.html#local-profile-recommended>`_
 
   * Do místního profilu lze nyní uložit více než 1 profil
