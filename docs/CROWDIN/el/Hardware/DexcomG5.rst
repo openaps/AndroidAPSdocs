@@ -7,7 +7,7 @@ Dexcom G5
 * In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
 * Εάν θέλετε να μπορείτε να χρησιμοποιήσετε το AndroidAPS για τη βαθμονόμηση, στη συνέχεια στο xdrip μεταβείτε στις Ρυθμίσεις> Συμβατότητα Interapp> Αποδοχή βαθμονομίσεων και επιλέξτε ΕΝΕΡΓΟΠΟΊΗΣΗ.  Ενδέχεται επίσης να θέλετε να ελέγξετε τις επιλογές στις Ρυθμίσεις> Λιγότερες κοινές ρυθμίσεις> Ρυθμίσεις βελτιωμένης βαθμονόμησης.
 * Επιλέξτε xdrip στο Configbuilder ( είναι ρύθμιση στο androidAPS).
-Αν το AAPS δεν λαμβάνει τιμές BG όταν το τηλέφωνο βρίσκεται σε κατάσταση λειτουργίας αεροπλάνου, χρησιμοποιήστε Προσδιορισμός δέκτη όπως περιγράφεται στη[ σελίδα ρυθμίσεων xDrip](../Configuration/xdrip.md).
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.md>`_ .
 
 Εάν χρησιμοποιείτε το G5 με την εφαρμογή patched Dexcom
 ==================================================
