@@ -13,7 +13,7 @@ Objetivo 1: Establecimiento de la visualización y la supervisión, análisis de
 * Seleccione la bomba correcta en ConfigBuilder (seleccione Virtual Pump si utiliza un modelo de bomba sin el controlador AndroidAPS para bucles) para asegurarse de que el estado de la bomba se puede comunicar con AndroidAPS.  
 * Si utiliza la bomba DanaR asegúrese de haber seguido las instrucciones `DanaR Insulin Bump <../Configuration/DanaR-Insulin-Pump.html>`_ para asegurar el enlace entre la bomba y AndroidAPS.
 * Siga las instrucciones en la página `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ para asegurar que Nightscout pueda recibir y mostrar estos datos.
-* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#nsclient>`_.
+* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#nsclient>`__.
 
 *Es posible que tengas que esperar a que llegue la próxima lectura de glucosa en sangre para que AndroidAPS la reconozca.*
 
@@ -42,13 +42,14 @@ Objetivo 3: Demuestra tus conocimientos
 Objetivo 4: Iniciar en un lazo abierto
 ==================================================
 * Seleccione Abrir lazo desde Preferencias, o pulsando y manteniendo pulsado el botón de Lazo en la parte superior izquierda de la pantalla de inicio.
-* Trabaje a través de `Preferencias <../Configuration/Preferences.html>`_ para configurarlo para usted.
+* Work through the `Preferences <../Configuration/Preferences.html>`__ to set up for you.
 * Promulgar manualmente al menos 20 de las sugerencias de la tasa basal temporal durante un período de 7 días; póngalos en su bomba y confirme en AndroidAPS que los ha aceptado.  Asegúrese de que estos datos se muestran en AndroidAPS y Nightscout.
 * Activar `objetivos temporales <../Usage/temptarget.html>`_ si es necesario. Utilice los objetivos temporales de hipoglucemia para evitar que el sistema se corrija demasiado fuerte debido a un aumento de la glucosa en sangre tras una hipoglucemia. 
 
 Reducir el número de notificaciones
 --------------------------------------------------
-* Para reducir el número de decisiones que se tomarán mientras se encuentra en Lazo abierto se establece un rango de objetivo de alcance amplio como 90-150 mg/dl o 5,0-8,5 mmol/l. * Es posible que incluso desee ampliar el límite superior (o inhabilitar el Lazo Abierto) en la noche. 
+* Para reducir el número de decisiones que se tomarán mientras se encuentra en Lazo abierto se establece un rango de objetivo de alcance amplio como 90-150 mg/dl o 5,0-8,5 mmol/l.
+* Es posible que incluso desee ampliar el límite superior (o inhabilitar el Lazo Abierto) en la noche. 
 * En Preferencias, puede establecer un porcentaje mínimo para la sugerencia de cambio de tasa basal.
 
    .. imagen:: ../images/OpenLoop_MinimalRequestChange2.png
@@ -70,7 +71,7 @@ El objetivo es el valor en el que se basan los cálculos, y no es el mismo que a
 
 You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol [20 mg/dl or less] wide) and observe how the behavior of your system changes as a result.  
 
-Puede ver un rango más amplio (líneas verdes) en el gráfico para los valores que tiene como objetivo mantener su nivel de glucosa en sangre entrando valores diferentes en `Preferencias <../Configuration/Preferences.html>`_ > Rango para la visualización.
+You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in `Preferences <../Configuration/Preferences.html>`__ > Range for Visualisation.
  
 .. imagen:: ../images/sign_stop.png
   :alt: Señal de parada
@@ -88,7 +89,7 @@ Objetivo 6: Empezando a cerrar el lazo con Baja Glucosa Suspender
   
 El lazo cerrado no corregirá los valores de bg alto en el objetivo 6, ya que se limita a la suspensión por baja glucosa. ¡Los valores altos de BG tienen que ser corregidos manualmente por usted!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* Seleccionar lazo cerrado desde `Preferencias <../Configuration/Preferences.html>`_ o pulsando y manteniendo pulsado el botón Abrir Lazo en la parte superior izquierda de la pantalla de inicio.
+* Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`__ or by pressing and holding the Open Loop button in the top left of the home screen.
 * Establezca el rango de destino un poco más alto de lo que normalmente pretende, sólo para estar seguros.
 * Vea cómo las basales temporales están activas al visualizar el texto basal azul en la pantalla de inicio o en la representación basal azul en el gráfico de pantalla.
 * Asegúrese de que sus ajustes han soportado AndroidAPS para evitar tener que tratar una glucosa baja durante un período de 5 días.  Si sigue teniendo episodios frecuentes o graves de glucosa baja, considere la posibilidad de ajustar las proporciones de DIA, basal, ISF y tasa de carbohidratos.
