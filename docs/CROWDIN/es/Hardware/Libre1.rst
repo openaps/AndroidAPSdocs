@@ -20,7 +20,7 @@ If using xDrip+
 * If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON.  Puede que también desee revisar las opciones en Ajustes > Ajustes Menos Comunes > Ajustes Avanzados de Calibración.
 * Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
 * Para los valores de xDrip+ con capturas de pantalla, consulte la sección `xDrip+ página de ajustes <../Configuration/xdrip.html>`__. Hay una parte para los valores básicos de xDrip+ y para los valores de Freestyle Libre xDrip+.
-* Si AAPS no recibe los valores de BG cuando el teléfono está en el modo de avión, utilice `Identificar receptor', como se describe en la página 'xDrip+ ajustes <../Configuration/xdrip.html>`_.
+* If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
 Si utiliza Glimp
 ==================================================
