@@ -86,7 +86,7 @@ Version 2.7.0
 ================
 Erscheinungsdatum: 24.09.2020
 
-**Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie** `hier <../Installing-AndroidAPS/update2_7.html>`_ **beschrieben.**
+**Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`__.
 
 Du musst `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`_ zumindest gestartet haben, um die `Automation <../Usage/Automation.html>`_ weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden. Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung> starten kannst`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
@@ -192,7 +192,7 @@ Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder
 Wichtige neue Funktionen
 ------------------
 * Kleinere Designänderungen (Startseite...)
-* Careportal Tab / Menü entfernt - weitere Details dazu `hier <../Usage/CPbefore26.html>`_
+* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
 * Neues `Plugin Lokales Profil <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_
 
   * Im lokalen Profil können mehrere Profile gespeichert werden.
