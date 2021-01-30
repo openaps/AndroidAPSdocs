@@ -7,7 +7,7 @@ Si vous utilisez le G5 avec xdrip +
 * Dans xDrip allez dans Paramètres > Paramètres Inter applications > Accepter les traitements et sélectionnez OFF.
 * Si vous voulez pouvoir utiliser AndroidAPS pour calibrer, alors dans xDrip, allez dans Paramètres > Compatibilité Interapp > Accepter les Calibrations et sélectionnez ON.  Vous pouvez également consulter les options dans Paramètres > Paramètres moins courants > Paramètres Avancés de Calibration.
 * Sélectionnez xDrip dans ConfigBuilder (Menu Paramètres dans AndroidAPS).
-* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.md>`_ .
+* Si AAPS ne reçoit pas de GLY quand le téléphone est en mode avion, utilisez "Identify receiver" comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.md>`_ .
 
 Si vous utilisez le G5 avec l'application Dexcom patché
 ==================================================
