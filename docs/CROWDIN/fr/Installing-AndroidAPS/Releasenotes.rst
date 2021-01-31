@@ -375,7 +375,7 @@ Divers
 * Remplacement des onglets du générateur de configuration et des objectifs, ajout de descriptions
 * Nouvelle icône d'application
 * Beaucoup d'améliorations et de correctifs
-* Alerte indépendante de Nightscout si la pompe est injoignable pendant une durée longue (par ex. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
+* Alerte indépendante de Nightscout si la pompe est injoignable pendant une durée longue (par ex. si la pile de la pompe est à plat) et pour des lectures de GLY manquées (voir *Alertes locales* dans les paramètres)
 * Option pour garder l'écran allumé
 * Option pour afficher les notifications AAPS comme des notifications Android
 * Filtrage avancé (permettant de toujours activer SMB et pendant 6h après les repas) pris en charge avec l'application Dexcom patchée ou xDrip+ avec le mode natif G5 en tant que source GLY.
