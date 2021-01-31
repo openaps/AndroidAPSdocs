@@ -8,7 +8,7 @@ eCarbs sind Kohlenhydrate, die sich über mehrere Stunden verteilen. Bei einer S
 
 eCarbs beschränken sich nicht auf fett-/eiweißlastige Mahlzeiten: sie können auch eingesetzt werden, um in anderen Situationen zu helfen, in denen es blutzuckererhöhende Einflüsse gibt, z.B. andere Medikamente wie Kortison.
 
-To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift:
+Um eCarbs einzugeben, musst du auf dem Homescreen im Dialogfeld *Kohlenhydrate* die Dauer, die Kohlenhydratmenge und optional eine Zeitverschiebung festlegen:
 
 .. image:: ../images/eCarbs_Dialog.png
   :alt: Eingabe Kohlenhydrate
