@@ -3,7 +3,7 @@ Dexcom G6
 Grundsätzliches vorab
 ==================================================
 
-* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`__.
+* Beachte die allgemeinen Empfehlungen zur CGM Hygiene und zum Setzen des Sensors, die Du `hier <../Hardware/GeneralCGMRecommendation.html>`__ findest.
 * Für G6 Transmitter, die nach Herbst / Ende 2018 produziert wurden, musst Du eine der letzten `nightly built xDrip+ versions <https://github.com/NightscoutFoundation/xDrip/releases>`_ verwenden. Diese Transmitter haben eine neue Firmware und die letzte stabile Version von xDrip+ vom 10.01.2019 kann mit diesen noch nicht korrekt umgehen.
 
 Allgemeine Hinweise zum Closed Loop mit dem Dexcom G6
@@ -27,7 +27,7 @@ Dexcom G6 mit xDrip+
 * Lade `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ herunter und folge den Anleitungen auf Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xDrip+.
 * Passe die Einstellungen von xDrip+ entsprechend den Angaben auf der `Seite xDrip+ Einstellungen  <../Configuration/xdrip.html>`_ an.
-* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze `identify receiver` wie auf der Seite `xDrip+ Einstellungen <../Configuration/xdrip.html>`__ beschrieben.
 
 G6 mit der gepatchten Dexcom App
 ==================================================
@@ -89,7 +89,7 @@ Dexcom G6-spezifische Problembehandlung
 
 Allgemeine Problembehandlung
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
+Allgemeine Vorschläge für die Problemlösung bei CGMs findest Du `hier <./GeneralCGMRecommendation.html#problembehandlung>`__.
 
 Neuer Transmitter bei laufendem Sensor
 --------------------------------------------------
