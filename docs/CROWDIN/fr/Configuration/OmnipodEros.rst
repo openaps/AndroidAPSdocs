@@ -618,7 +618,7 @@ Provides advanced settings to assist debugging.
 * **Show RileyLink Stats button in Pod Management menu:** Hide or display the RileyLink Stats button in the **Pod Management** menu.
 * **\*DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
 
-Switching or Removing an Active Pod Communication Device (RileyLink)
+Changement ou suppression d'un périphérique de communication pod actif (RileyLink)
 --------------------------------------------------------------------
 
 With many alternative models to the original RileyLink available or the need have multiple/backup versions of the same pod communication device (RileyLink), it becomes necessary to switch or remove the selected pod communication device (RileyLink) from Omnipod Setting configuration. 
@@ -712,7 +712,7 @@ Erreurs Pod
 
 Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be found `here <https://github.com/openaps/openomni/wiki/Fault-event-codes>`__ to help determine the cause.
 
-Preventing error 49 pod failures
+Empêcher l'erreur 49 échecs du pod
 --------------------------------
 
 This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the **Config Builder**\ ➜\ **General**\ ➜\ **NSClient**\ ➜\ **cog wheel**\ ➜\ **Advanced Settings** to prevent possible failures.
