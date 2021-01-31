@@ -20,7 +20,7 @@ Libre mit xDrip+
 * Falls du mit AndroidAPS kalibrieren willst dann gehe in xDrip+ zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN.  Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xDrip+.
 * Passe die Einstellungen von xDrip+ entsprechend den Angaben auf der `Seite xDrip+ Einstellungen <../Configuration/xdrip.html>`_ an. Es gibt einen Teil für grundlegende xDrip+ Einstellungen und für Freestyle Libre xDrip+ Einstellungen.
-* If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze `identify receiver` wie auf der Seite `xDrip+ Einstellungen <../Configuration/xdrip.html>`__ beschrieben.
 
 Libre mit Glimp
 ==================================================
