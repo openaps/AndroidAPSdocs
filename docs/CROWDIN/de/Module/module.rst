@@ -74,7 +74,7 @@ Die Vorteile der Dana R/RS gegenüber  der Combo sind aber:
 
 BZ-Quelle
 --------------------------------------------------
-Dies ist nur eine knappe Übersicht über alle kompatiblen CGM/FGM mit AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`__. Nur ein kurzer Hinweis: Wenn Du Deine Glukose-Daten in der xDrip+ App oder Deiner Nightscout-Website anzeigen kannst, kannst Du xDrip+ (oder Nightscout mit Webverbindung) als BZ-Quelle in AAPS wählen.
+Dies ist nur eine knappe Übersicht über alle kompatiblen CGM/FGM mit AndroidAPS. Weitere Details findest Du `hier <../Configuration/BG-Source.html>`__. Nur ein kurzer Hinweis: Wenn Du Deine Glukose-Daten in der xDrip+ App oder Deiner Nightscout-Website anzeigen kannst, kannst Du xDrip+ (oder Nightscout mit Webverbindung) als BZ-Quelle in AAPS wählen.
 
 * ` Dexcom G6 <../Hardware/DexcomG6.html>`_: Funktioniert mit xDrip+ oder der gepatchten Dexcom App
 * ` Dexcom G5 <../Hardware/DexcomG5.html>`_: Funktioniert mit xDrip+ oder der gepatchten Dexcom App
@@ -91,11 +91,11 @@ Nightscout ist eine Open Source Web-Anwendung, die Deine CGM-Daten und AndroidAP
 
 Nightscout ist unabhängig von den anderen Modulen. Du brauchst aber auf jeden Fall eine Nightscout-Seite, um das Objetive (Ziel) 1 abzuschließen.
 
-Additional information on how to configure Nightscout for use with AndroidAPS can be found `here <../Installing-AndroidAPS/Nightscout.html>`__.
+Weitere Informationen zur Konfiguration von Nightscout für die Verwendung mit AndroidAPS findest Du `hier <../Installing-AndroidAPS/Nightscout.html>`__.
 
 AAPS-.apk Datei
 --------------------------------------------------
-Die grundlegende Komponente des Systems. Bevor Du die App installierst, musst Du zuerst die apk-Datei (das ist Dateinamenerweiterung für eine Android-App) erstellen. Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`__.  
+Die grundlegende Komponente des Systems. Bevor Du die App installierst, musst Du zuerst die apk-Datei (das ist Dateinamenerweiterung für eine Android-App) erstellen. Die Anleitung dazu findest Du  `hier <../Installing-AndroidAPS/Building-APK.html>`__.  
 
 Optionale Komponenten
 ==================================================
@@ -103,7 +103,7 @@ Smartwatch
 --------------------------------------------------
 Jede Smartwatch mit Android 1.x oder höher funktioniert. Viele Looper verwenden eine Sony Smartwatch 3 (SWR50), da diese auch Werte vom Dexcom G5/G6 empfangen kann, wenn sich das Smartphone nicht in Reichweite befindet. Einige andere Smartwatches können so gepatched werden, dass sie als 'Standalone receiver' verwendet werden können (siehe `diese Dokumentation <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ für weitere Details).
 
-Es gibt eine von AAPS Anwendern erstellte `Liste mit getesteten Smartphones und Smartwatches: <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`__.
+Es gibt eine von AAPS Anwendern erstellte `Liste mit getesteten Smartphones und Smartwatches: <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. Es gibt verschiedene Watchfaces zur Nutzung mit AndroidAPS, weitere Informationen findest Du `hier <../Configuration/Watchfaces.html>`__.
 
 Um ein Handy oder eine Smartwatch einzutragen welches noch nicht in der Liste ist, bitte das  `Formular <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_ ausfüllen.
 
@@ -111,7 +111,7 @@ Probleme mit der Tabelle bitte per E-Mail an `hardware@androidaps.org <mailto:ha
 
 xDrip+
 --------------------------------------------------
-Auch wenn Du die xDrip+ App nicht als BZ-Datenquelle benötigst, kannst Du sie dennoch für  Alarme oder eine gute Anzeige der Glukosewerte verwenden. Du kannst in xDrip+ beliebig viele Alarme einreichten, festlegen zu welchen Zeiten diese aktiv sein sollen, ob sie die Stummschaltung des Smartphones überschreiben können etc. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`__. Beachte bitte, dass die Entwicklung von xDrip+ sehr agil ist und die Dokumentation damit teilweise nicht Schritt halten und entsprechend nicht immer aktuell sein kann.
+Auch wenn Du die xDrip+ App nicht als BZ-Datenquelle benötigst, kannst Du sie dennoch für  Alarme oder eine gute Anzeige der Glukosewerte verwenden. Du kannst in xDrip+ beliebig viele Alarme einreichten, festlegen zu welchen Zeiten diese aktiv sein sollen, ob sie die Stummschaltung des Smartphones überschreiben können etc. Weitere Hinweise zu den xDrip+ Einstellungen findest Du `hier <../Configuration/xdrip.html>`__. Beachte bitte, dass die Entwicklung von xDrip+ sehr agil ist und die Dokumentation damit teilweise nicht Schritt halten und entsprechend nicht immer aktuell sein kann.
 
 Konfigurationsbeispiel
 ==================================================
