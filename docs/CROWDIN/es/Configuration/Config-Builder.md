@@ -97,7 +97,7 @@ Desventajas:
 
 ![Insulin type](../images/ConfBuild_Insulin.png)
 
-* Select the type of insulin curve you are using.
+* Seleccione el tipo de curva de insulina que está usando.
 * The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
 * The curves will vary based on the DIA and the time to peak.
     
@@ -106,8 +106,8 @@ Desventajas:
 
 ### DIA (Duración Insulina Activa)
 
-* The DIA is not the same for each person. That's why you have to test it for yourself. 
-* But it must always be at least 5 hours.
+* La DIA no es la misma para cada persona. Es por eso que tienes que probarlo por ti mismo. 
+* Pero siempre debe ser de al menos 5 horas.
 * For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
 * You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page. 
 
