@@ -10,7 +10,7 @@ Plus de détails ici :
    :glob:
    
    Liste des smartphones testé et des montrées connectées <../Getting-Started/Phones.md>
-   Phone background <../Getting-Started/Phones.html#phone-background>
+   Arrière plan du téléphone <../Getting-Started/Phones.html#phone-background>
    AAPS sur montres Wear OS <../Configuration/Watchfaces.md>
-   Troubleshooting Sony Smartwatch SW 3 <../Usage/SonySW3.rst>
+   Dépannage de Sony Smartwatch SW 3 <../Usage/SonySW3.rst>
    Pebble <../Configuration/Watchfaces.html#pebble>
