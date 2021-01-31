@@ -7,7 +7,7 @@ Dexcom G5 mit xdrip+
 * In xDrip+ gehe zu Einstellungen > Inter-App Einstellungen > Behandlungen annehmen und wähle AUS.
 * Falls du mit AndroidAPS kalibrieren willst dann gehe in xdrip zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN.  Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xdrip.
-* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.md>`_ .
+* Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze `identify receiver` wie auf der Seite `xDrip+ Einstellungen <../Configuration/xdrip.md>`_ beschrieben.
 
 G5 mit der gepatchten Dexcom App
 ==================================================
