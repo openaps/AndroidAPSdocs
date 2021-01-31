@@ -86,7 +86,7 @@ Version 2.7.0
 ================
 Erscheinungsdatum: 24.09.2020
 
-**Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`__.
+**Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie** `hier <../Installing-AndroidAPS/update2_7.html>`__ **beschrieben.**
 
 Du musst `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`_ zumindest gestartet haben, um die `Automation <../Usage/Automation.html>`_ weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden. Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung> starten kannst`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
@@ -192,7 +192,7 @@ Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder
 Wichtige neue Funktionen
 ------------------
 * Kleinere Designänderungen (Startseite...)
-* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
+* Careportal Tab / Menü entfernt - weitere Details dazu `hier <../Usage/CPbefore26.html>`__
 * Neues `Plugin Lokales Profil <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_
 
   * Im lokalen Profil können mehrere Profile gespeichert werden.
@@ -375,7 +375,7 @@ Verschiedenes
 * Überarbeitung des Konfigurations-Generators und des Objectives-Reiters. Beschreibungen hinzugefügt.
 * Neues App-Icon
 * Viele weitere Verbesserungen und Fehlerbehebungen.
-* Von Nightscout unabhängige Alarme wenn die Pumpe über längere Zeit nicht erreichbar ist (z.B.  depleted pump battery) and missed BG readings (see *Local alerts* in settings)
+* Von Nightscout unabhängige Alarme wenn die Pumpe über längere Zeit nicht erreichbar ist (z.B.  schwache Pumpenbatterie) und bei verpassten CGM-Werte (siehe *lokale Alarme* in den Einstellungen).
 * Option, das Display immer an zu lassen.
 * Option, die Hinweise als Systemmeldungen anzuzeigen.
 * Advanced filtering (das erlaubt die Nutzung von “SMB immer an” und “6 Stunden nach dem Essen”) wird unterstützt mit der gepatchten Dexcom App (nicht mit der originalen Dexcom App!) oder xDrip mit dem G5 native mode als BZ-Quelle.
