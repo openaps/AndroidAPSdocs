@@ -99,7 +99,7 @@ Les glycémies sont reçues sur le smartphone par l'application xDrip+.
 * Si nécessaire, entrez "BgReading:d,xdrip libre_receiver:v" dans Paramètres moins courants -> Extra Logging Settings -> Balises supplémentaires pour le log. Cela permettra de consigner des messages d'erreur supplémentaires pour le dépannage.
 * Dans xDrip allez dans Paramètres > Inter-app settings > Diffusion Locale et sélectionnez ON.
 * Dans xDrip allez dans Paramètres > Inter-app settings > Accept Treatments et sélectionnez OFF.
-* to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <../Configuration/xdrip.html#identify-receiver>`_
+* pour permettre à AAPS de recevoir les glycémies (version 2.5.x et supérieures) de la part de xDrip+ veuillez renseigner dans `Paramètres > Inter-app settings > Identify receiver "info.nightscout.androidaps" <../Configuration/xdrip.html#identifier-le-recepteur>`__
 * Si vous voulez pouvoir utiliser AndroidAPS pour calibrer, alors dans xDrip, allez dans Paramètres > Inter-app settings > Accept Calibrations et sélectionnez ON.  Vous pouvez également consulter les options dans Paramètres > Paramètres moins courants > Paramètres Avancés de Calibration.
 
 .. image:: ../images/Libre2_Tags.png
@@ -117,7 +117,7 @@ Après un changement de capteur, xDrip+ détectera automatiquement le nouveau ca
 Étape 4 : Configurer AndroidAPS (pour la boucle uniquement)
 ==================================================
 * Dans AndroidAPS allez dans le Générateur de configuration > Source des glycémies et cochez 'xDrip+' 
-* If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
+* Si AndroidAPS ne reçoit pas de GLY quand le téléphone est en mode avion, utilisez "Identify receiver" comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html#identify-receiver>`_.
 
 Jusqu'à présent, en utilisant le Freestyle Libre 2 comme source Gly, vous ne pouvez pas activer les fonctions 'Activer SMB toujours' et 'Activer SMB après les glucides' dans l'algorithme SMB. Les valeurs de GLY du Freestyle Libre 2 ne sont pas assez lisses pour l'utiliser en toute sécurité. Voir `Lissage des données de glycémie <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ pour plus de détails.
 
