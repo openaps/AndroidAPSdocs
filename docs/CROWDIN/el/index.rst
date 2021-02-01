@@ -14,33 +14,34 @@ The main components are:
 
 Για περισσότερες λεπτομέρειες, παρακαλούμε διαβάστε εδώ.
 
-Ξεκινώντας
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Change language
+   Change language <changelanguage.rst>
    
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Getting started
+
    Πρώτα η ασφάλεια <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
-   
-   
-What do I need? 
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: What do I need? 
+
    Module <./Module/module.rst>
    Sample Setup <./Getting-Started/Sample-Setup.md>
 
-   
-Πώς να Εγκαταστήσετε AndroidAPS
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: How to Install AndroidAPS
 
    Χτίζοντας το APK <./Installing-AndroidAPS/Building-APK.md>
    Ενημέρωση σε νέα έκδοση ή υποκατάστημα <./Installing-AndroidAPS/Update-to-new-version.md>
@@ -49,38 +50,32 @@ What do I need?
    Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev υποκατάστημα <./Installing-AndroidAPS/Dev_branch.md>
-   
-   
-Ρυθμίσεις συστατικών
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Component Setup
+
    CGM/FGM <./Configuration/BG-Source.rst>
    xDrip Ρυθμίσεις <./Configuration/xdrip.md>
    Αντλίες <./Hardware/pumps.rst>
    Τηλέφωνα <./Hardware/Phoneconfig.rst>
    Ρύθμιση Nightscout <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
-   
 
-Ρύθμιση παραμέτρων 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Configuration
+
    Config builder <./Configuration/Config-Builder.md>
    Preferences <./Configuration/Preferences.rst>
-   
-   
-AndroidAPS Χρήση
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-    
+   :caption: AndroidAPS Usage
+
    AndroidAPS οθόνες <./Getting-Started/Screenshots.md>
    Objectives <./Usage/Objectives.rst>
    OpenAPS χαρακτηριστικά <./Usage/Open-APS-features.md>   
@@ -94,81 +89,68 @@ AndroidAPS Χρήση
    Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automation with 3rd party apps <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
- 
-Γενικές Συμβουλές 
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: General Hints 
+
    Διασχίζοντας ζώνες ώρας με αντλίες <./Usage/Timezone-traveling.md>
    Πρόσβαση σε αρχεία καταγραφής <./Usage/Accessing-logfiles.md>
    Accu-Chek Combo συμβουλές για την βασική χρήση <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Εισαγωγή/Εξαγωγή Ρυθμίσεων <./Usage/ExportImportSettings.rst>
-   
 
-AndroidAPS για τα παιδιά
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: AndroidAPS for children
+
    * "Εξ αποστάσεως παρακολούθηση <./Children/Children.rst>
    SMS commands <./Children/SMS-Commands.rst>
    Profile helper <./Configuration/profilehelper.rst>
    
-
-Αντιμετώπιση προβλημάτων
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
+   :caption: Troubleshooting
+
    Troubleshooting <./Usage/troubleshooting.rst>
-   
 
-Συχνές ερωτήσεις 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
+   :caption: FAQ
+
    Συχνές ΕΡΩΤΉΣΕΙΣ <./Getting-Started/FAQ.md>
 
-   
-Γλωσσάριο
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
-   Γλωσσάρι <./Getting-Started/Glossary.md>
-  
+   :caption: Glossary
 
-Πού να πάτε για βοήθεια 
---------------------------------------------------
+   Γλωσσάρι <./Getting-Started/Glossary.md>
+
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Where to go for help 
 
    Χρήσιμους πόρους για να διαβάσετε πριν ξεκινήσετε <./Where-To-Go-For-Help/Background-reading.md>
    Πού να πάτε για βοήθεια <./Where-To-Go-For-Help/Connect-with-other-users.md>
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 
-Για Τους Κλινικούς Ιατρούς
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-            
+   :caption: For Clinicians
+
    Για Τους Κλινικούς Ιατρούς <./Resources/clinician-guide-to-AndroidAPS>
 
 
-Πώς να βοηθήσετε
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: How to help
 
    Πώς να βοηθήσετε <./Getting-Started/How-can-I-help.md>
    How to translate the app and docs <./translations.md>
