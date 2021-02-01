@@ -62,27 +62,27 @@ Dexcom G6를 직접 빌드한 덱스컴 앱과 사용하는 경우
 AndroidAPS에 대한 설정
 --------------------------------------------------
 * 구성 관리자에서 'Dexcom App (패치버전)'을 선택합니다.
-* If you don't recieve any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+* 만약 혈당값을 수신하지 못하면, 임의로 다른 데이터 소스를 선택한 뒤 'Dexcom App (패치버전)'을 다시 선택합니다. 이는 AAPS와 BYODA-브로드캐스트의 연결 설정을 위한 권한 요청을 작동시킵니다.
 
-Settings for xDrip+
+xDrip+에 대한 설정
 --------------------------------------------------
-* Select '640G/Eversense' as data source.
-* Command 'start sensor' must be performed in xDrip+ in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
+* 데이터 소스로 '640G/Eversense'를 선택합니다.
+* 혈당값을 수신하기 위하여 xDrip+에서 '센서 시작하기' 명령을 수행해야 합니다. 이는 직접 빌드한 덱스컴 앱(BYODA)로 제어하는 현재 센서에는 영향을 주지 않습니다.
    
 G6의 문제 해결
 ==================================================
-Dexcom G6 specific troubleshooting
+덱스콤 G6의 특이적인 문제 해결
 --------------------------------------------------
-* Transmitters with serial no. starting with 80 or 81 need at least last stable xDrip+ version from May 2019 or a newer nightly build.
-* Transmitters with serial no. starting with 8G need at least nightly build from July 25th, 2019 or newer.
-* xDrip+ and Dexcom app cannot be connected with the transmitter at the same time.
-* Wait at least 15 min. between stopping and starting a sensor.
-* Do not rewind back time of insertion. Answer question "Did you insert it today?" always with "Yes, today".
-* Do not enable "restart sensors" while setting a new sensor
-* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+* 트랜스미터의 시리얼 넘버가 80 또는 81로 시작하는 경우, 2019년 5월 이후에 배포된 최신의 안정적인 xDrip+ 버전 또는 새로운 nightly build 버전이 필요합니다.
+* 트랜스미터의 시리얼 넘버가 8G로 시작하는 경우, 2019년 7월 25일 이후의 nightly build 버전 또는 더 최신의 버전이 필요합니다.
+* xDrip+와 Dexcom 공식앱은 동시에 트랜스미터와 연결될 수 없습니다.
+* 센서를 중지하고 시작할 때 적어도 15분 이상 기다려야합니다.
+* 센서 삽입 시간을 뒤로 되돌리지 마십시오. "오늘 센서를 삽입했습니까?" 라는 질문에 항상 "예, 오늘입니다." 를 선택해야 합니다.
+* 새 센서를 설정하는 동안 "센서를 다시 시작하기"를 사용하지 마십시오.
+* 클래식 상태 페이지 - > G5/G6 상태 - > PhoneServiceState에서 다음의 내용이 표시되기 전에 새 센서를 시작하지 마십시오:
 
-  * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-  * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+  * 트랜스미터 시리얼 넘버가 80 또는 81로 시작하는 경우: "Got data hh:mm" (예를 들어, "Got data: 19:04")
+  * 트랜스미터 시리얼 넘버가 8G 또는 8H로 시작하는 경우: "Got glucose hh:mm" (예를 들어, "Got glucose 19:04") 또는 "Got now raw hh:mm" (예를 들어, "Got now raw: 19:04")
 
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip+ PhoneServiceState
