@@ -589,7 +589,7 @@ Alertes
 
 Fournit des alertes AAPS et des notifications Nightscout pour l'arrêt, l'expiration des pod, le niveau de réservoir bas, en fonction des seuils définis.
 
-* Notez qu'une notification AAPS sera TOUJOURS émise pour toute alerte après une première communication avec le pod qui a déclenchée l'alerte. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.*
+* Notez qu'une notification AAPS sera TOUJOURS émise pour toute alerte après une première communication avec le pod qui a déclenchée l'alerte. Rejeter la notification ne rejettera PAS l'alerte SAUF SI Accepter automatiquement les alertes Pod est activé. Pour rejeter MANUELLEMENT l'alerte, vous devez aller dans l'onglet Omnipod (POD) et appuyez sur le bouton ACCEPTER ALERTES*
 	
 * **\*Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
 * **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
@@ -710,38 +710,38 @@ Dépannage
 Erreurs Pod
 ------------
 
-Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be found `here <https://github.com/openaps/openomni/wiki/Fault-event-codes>`__ to help determine the cause.
+Les pods échouent occasionnellement en raison de problèmes variés, y compris des problèmes matériels avec le Pod lui-même. Il est préférable de ne pas les appeler dans Insulet, car l'utilisation d'AndroidAPS n'est pas approuvée. Une liste de codes défaut peut être trouvée `ici <https://github.com/openaps/openomni/wiki/Fault-event-codes>`__ pour aider à trouver les causes.
 
 Empêcher l'erreur 49 échecs du pod
 --------------------------------
 
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the **Config Builder**\ ➜\ **General**\ ➜\ **NSClient**\ ➜\ **cog wheel**\ ➜\ **Advanced Settings** to prevent possible failures.
+Cet échec est lié à un état du pod incorrect pour une commande ou à une erreur lors d'une commande d'injection d'insuline. Il est vivement recommandé aux utilisateurs d'activer dans le client Nightscout *Envoi NS uniquement* dans le **Générateur de configuration**\ ➜\ **Général**\ ➜\ **NSClient**\ ➜\ **roue crantée**\ ➜\ **Paramètres Avancés** pour prévenir les éventuels échecs.
 
 Alertes Pompe hors de portée
 -----------------------
 
-It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]** and setting this to **120**.
+Il est recommandé de configurer les alertes de la pompe sur **120 minutes** en allant dans le menu trois points en haut à droite puis en sélectionnant **Préférences**\ ➜ \ **Alertes locales**\ ➜ \ **Seuil d'alerte pompe hors de portée [min]** et en réglant **120**.
 
 Importer les paramètres AAPS de versions précédentes
 ----------------------------------
 
-Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
+Veuillez noter qu'il est possible d'importer un état du Pod périmé lors de l'importation des paramètres. Par conséquent, vous pourriez perdre un Pod actif. Il est donc fortement recommandé de **ne pas importer de paramètres pendant une session de Pod actif**.
 
-1. Deactivate your pod session. Verify that you do not have an active pod session.
-2. Export your settings and store a copy in a safe place.
-3. Uninstall the previous version of AAPS and restart your phone.
-4. Install the new version of AAPS and verify that you do not have an active pod session.
-5. Import your settings and activate your new pod.
+1. Désactiver votre session pod. Vérifiez que vous n'avez pas de session de pod actif.
+2. Exportez vos paramètres et stockez en une copie dans un endroit sûr.
+3. Désinstallez la version précédente d'AAPS et redémarrez votre téléphone.
+4. Installez la nouvelle version d'AAPS et vérifiez que vous n'avez pas de session pod actif.
+5. Importez vos paramètres et activez votre nouveau pod.
 
 Alertes Pilote Omnipod
 ---------------------
 
-please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
+Veuillez noter que le pilote Omnipod présente une variété d'alertes uniques dans l'onglet **Aperçu (Accueil)**, la plupart d'entre elles sont juste une information et peuvent être rejetées tandis que certaines indiquent à l'utilisateur une action à faire pour traiter la cause de l'alerte déclenchée. Un résumé des principales alertes que vous pouvez rencontrer est listé ci-dessous:
 
 Pas de Pod actif
 ~~~~~~~~~~~~~
 
-No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically silenced.
+Aucune session de Pod actif détectée. Cette alerte peut être temporairement rejetée en appuyant sur **REPORT ALARME** mais elle se déclenchera tant qu'un nouveau pod n'a pas été activé. Une fois activé, cette alerte disparait automatiquement.
 
 Pod suspendu
 ~~~~~~~~~~~~~
