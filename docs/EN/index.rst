@@ -18,7 +18,7 @@ For more details, please read on here.
    :maxdepth: 1
    :glob:
    :caption: Change language
-   Change language <changelanguage.rst>
+   Change language <./changelanguage.rst>
    
 .. toctree::
    :maxdepth: 1
