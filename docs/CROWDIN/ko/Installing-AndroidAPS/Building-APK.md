@@ -270,6 +270,6 @@ On your phone you have to allow installation from unknown sources. Manuals how t
 
 [See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
-## 문제해결
+## 문제 해결
 
 별도의 [Android Studio 문제해결](../Installing-AndroidAPS/troubleshooting_androidstudio.rst) 페이지를 보세요.
