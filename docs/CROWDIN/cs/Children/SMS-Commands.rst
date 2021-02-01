@@ -180,7 +180,7 @@ TARGET STOP/CANCEL
 * HELP BOLUS
   * Odpověď: BOLUS 1.2 BOLUS 1.2 MEAL
 
-Poradce při potížích
+Řešení problémů
 ==================================================
 Duplicitní SMS
 --------------------------------------------------
