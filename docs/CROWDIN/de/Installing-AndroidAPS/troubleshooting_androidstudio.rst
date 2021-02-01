@@ -103,7 +103,7 @@ Option 3 - Prüfe den Code auf Aktualisierungen
 * Wechsle zum Terminal in Android Studio (linke untere Seite des Android Studio-Fensters)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
+    :alt: Android Studio Terminal
    
 * Paste copied text and press return
 
@@ -127,7 +127,7 @@ App not installed / Installation fehlgeschlagen
 
 App installiert, aber weiter die alte Version auf dem Smartphone
 ==================================================
-Wenn Du die App erfolgreich erstellt, sie auf Dein Smartphone übertragen und dort erfolgreich installiert hast jedoch weiter die alte Versionsnummer angezeigt wird, so hast Du wahrscheinlich versäumt, Deine `lokale Kopie zu aktualisieren <../Update-to-new-version.html#fuhre-ein-update-deiner-lokalen-version-durch>`.
+Wenn Du die App erfolgreich erstellt, sie auf Dein Smartphone übertragen und dort erfolgreich installiert hast jedoch weiter die alte Versionsnummer angezeigt wird, so hast Du wahrscheinlich versäumt, Deine `lokale Kopie zu aktualisieren <../Update-to-new-version.html#fuhre-ein-update-deiner-lokalen-version-durch>`_.
 
 Keiner der oben genannten Lösungsvorschläge funktioniert
 ==================================================
@@ -135,7 +135,7 @@ Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, 
 
 1. `Exportiere Deine Einstellungen <../Usage/ExportImportSettings.html>`_ (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
 2. Halte Dein key Passwort und Dein key store Passwort bereit.
-    Falls Du die Passwörter vergessen hast, kannst Du versuchen, sie  wie `hier <https://youtu.be/nS3wxnLgZOo>` _ beschrieben in den Projektdateien zu finden. Oder verwende einfach einen neuen keystore. 
+    Falls Du die Passwörter vergessen hast, kannst Du versuchen, sie  wie `hier <https://youtu.be/nS3wxnLgZOo>`_ beschrieben in den Projektdateien zu finden. Oder verwende einfach einen neuen keystore. 
 3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
 4.	Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
 5. `Export/Import von Einstellungen <../Usage/ExportImportSettings.html>`_
@@ -144,6 +144,6 @@ Worst case scenario
 ==================================================
 Falls auch die Neuerstellung der App von Grund auf Dein Problem nicht löst, könntest Du versuchen, Android Studio komplett neu zu installieren. Einige Benutzer berichteten, dass dies ihr Problem gelöst hat.
 
-**Stelle sicher, dass Du beim Deinstallieren von Android Studio alle damit in Verbindung stehenden Dateien entfernst. ** Wenn Du Android Studio und seine versteckten Dateien nicht komplett entfernt werden, kann die Deinstallation neue Schwierigkeiten verursachen statt Deine bestehenden Probleme zu lösen. Anleitungen zur kompletten Deinstallation findest Du online z.B. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
+**Stelle sicher, dass Du beim Deinstallieren von Android Studio alle damit in Verbindung stehenden Dateien entfernst.** Wenn Du Android Studio und seine versteckten Dateien nicht komplett entfernt werden, kann die Deinstallation neue Schwierigkeiten verursachen statt Deine bestehenden Probleme zu lösen. Anleitungen zur kompletten Deinstallation findest Du online z.B. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
 
 Installiere Android Studio von Grund auf wie `hier <../Installing-AndroidAPS/Building-APK.html#android-studio-installieren>`_ beschrieben und **führe kein gradle Update durch**.

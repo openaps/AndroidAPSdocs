@@ -2,7 +2,7 @@ Problembehandlung
 **************************************************
 Informationen zur Behebung von Problemen findest Du auf vielen Seiten im Wiki. Auf dieser Seite sind Links zu den entsprechenden Abschnitten zusammengetragen, so dass Du schneller eine Lösung für Dein Problem finden kannst.
 
-Weitere nützliche Informationen findest Du auch in den `FAQ <../Getting-Started/FAQ.html>` _ (Frequently asked questions - häufig gestellte Fragen).
+Weitere nützliche Informationen findest Du auch in den `FAQ <../Getting-Started/FAQ.html>`_ (Frequently asked questions - häufig gestellte Fragen).
 
 AndroidAPS app
 ==================================================

@@ -52,7 +52,7 @@ Nastavení Autentikátoru
 * Dvoufaktorové ověření se používá ke zvýšení bezpečnosti.
 * Můžete použít libovolnou aplikaci Authenticator, která podporuje tokeny RFC 6238 TOTP. Oblíbené bezplatné aplikace jsou:
 
-   * ` Authy <https://authy.com/download/>` _
+   * ` Authy <https://authy.com/download/>`_
    * Google Authenticator - `Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>`_ / `iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>`_
    * `LastPass Authenticator <https://lastpass.com/auth/>`_
    * `FreeOTP Authenticator <https://freeotp.github.io/>`_
@@ -78,11 +78,11 @@ Použití SMS příkazů
    * TOTP token z autentizační aplikace je 457051
    * Zadejte 4570512020
 
-**Tip: Jestliže budete posílat větší množství SMS, je výhodné mít na obou mobilech SMS paušál.
+**Tip**: Jestliže budete posílat větší množství SMS, je výhodné mít na obou mobilech SMS paušál.
 
 Příkazy
 ==================================================
-Příkazy musí být odeslány v angličtině. Pokud je řetězec odpovědi `přeložen <../translations.html#translate-řetězce-pro-androidaps-app> ` _, bude odpověď ve vašem jazyce.
+Příkazy musí být odeslány v angličtině. Pokud je řetězec odpovědi `přeložen <../translations.html#translate-řetězce-pro-androidaps-app>`_, bude odpověď ve vašem jazyce.
 
 .. image:: ../images/SMSCommands.png
   :alt: příklad SMS příkazu
@@ -109,7 +109,7 @@ CGM data
    * Odpověď: poslední BG: 5.6 před 4min Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)
 * CAL 5.6
    * Odpověď: Pro odeslání kalibrace 5.6 odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
-   * Odpověď po přijetí správného potvrzovacího kódu: Kalibrace odeslána (*je-li instalovaný xDrip. V xDrip+ musí být povolen příjem kalibrací**)
+   * Odpověď po přijetí správného potvrzovacího kódu: Kalibrace odeslána (**je-li instalovaný xDrip. V xDrip+ musí být povolen příjem kalibrací**)
 
 Bazál
 --------------------------------------------------
@@ -147,7 +147,7 @@ Vzdálený bolus není povolen do 15 minut (tato hodnota je upravitelná pouze v
 Profil
 --------------------------------------------------
 * PROFILE STATUS
-   *Odpověď: Profile1
+   * Odpověď: Profile1
 * PROFILE LIST
    * Odpověď : 1.`Profile1` 2.`Profile2`
 * PROFILE 1

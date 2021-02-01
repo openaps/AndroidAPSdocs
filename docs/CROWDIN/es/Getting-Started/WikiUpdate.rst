@@ -58,7 +58,7 @@ February 2020
 * `Wear complications <../Configuration/Watchfaces.html>`_
 Enero de 2020
 ==================================================
-* `Corrección manual de carbohidratos <../Getting-Started/Screenshots.html#carb-corrección>` _ para las entradas de carbohidratos erróneas
+* `Corrección manual de carbohidratos <../Getting-Started/Screenshots.html#carb-corrección>`_ para las entradas de carbohidratos erróneas
 * `Tamaño de imagen <../make-a-PR.html#image-size>`_ cuando se editan dcumentos
 Diciembre 2019
 ==================================================
@@ -72,43 +72,43 @@ Noviembre 2019
 * `Automation - deactivate when disabling loop <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 reemplazar actualización de transmisor <../Configuration/xdrip.html#replace-transmitter>`_
 * `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#id1>`_
-* ` FAQ - deportes <../Getting-Started/FAQ.html#sports>`_
+* `FAQ - deportes <../Getting-Started/FAQ.html#sports>`_
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-f-main-graph>`_
-* `Insight - Inhabilitar valores absolutos en el cliente NS <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>` _
+* `Insight - Inhabilitar valores absolutos en el cliente NS <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * `Bomba medtronics - posibles entradas dobles <../Configuration/MedtronicPump.html>`_
-* 'Nuevo Freestyle Libre 2 tutorial <../Hardware/Libre2.html>`_
+* `Nuevo Freestyle Libre 2 tutorial <../Hardware/Libre2.html>`_
 * `Cambio de perfil con porcentaje - ejemplo <../Usage/Profiles.html>`_
 * `Actualización de comandos SMS <../Children/SMS-Commands.html>`_
-* `Resolución de problemas de Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>` _
+* `Resolución de problemas de Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Resolución de problemas - colección de enlaces <../Usage/troubleshooting.html>`_
-* 'Actualización - de paseo a través de la experiencia de los usuarios <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
+* `Actualización - de paseo a través de la experiencia de los usuarios <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
 * Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-docs-pages>`_.
 
 Octubre 2019
 ==================================================
 * `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#id16>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
-* `Accuchek Insight - opciones de registro <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>` _
-* `Cálculo COB en la página aparte <../Usage/COB-calculation.html>` _
-* `COB - Detección de valor erróneo de COB<../Usage/COB-calculation.html#detection-of-incorrecto-cob-values>` _
-* `Dexcom G6 específico resolución de problemas<../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>` _
-* 'Objetivos de la actualización de la versión 2.5 <../Usage/Objectives.html>`_
-* 'Las preferencias de actualización <../Configuration/Preferences.html>`_
-* 'Los inhibidores de la SGLT-2 - no se utilizan cuando se está en lazo<../Module/module.html#no-use-of-sglt-2-inhibitors>` _
-* `Comandos SMS resolución de problemas <../Children/SMS-Commands.html#troubleshooting>` _
+* `Accuchek Insight - opciones de registro <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
+* `Cálculo COB en la página aparte <../Usage/COB-calculation.html>`_
+* `COB - Detección de valor erróneo de COB <../Usage/COB-calculation.html#detection-of-incorrecto-cob-values>`_
+* `Dexcom G6 específico resolución de problemas <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_
+* `Objetivos de la actualización de la versión 2.5 <../Usage/Objectives.html>`_
+* `Las preferencias de actualización <../Configuration/Preferences.html>`_
+* `Los inhibidores de la SGLT-2 - no se utilizan cuando se está en lazo <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
+* `Comandos SMS resolución de problemas <../Children/SMS-Commands.html#troubleshooting>`_
 * `xDrip - actualizar G6 reemplazo del transmisor <../Configuration/xdrip.html#replace-transmitter>`_
 
 Septiembre 2019
 ==================================================
-* 'Automatizar <../Usage/Automation.html>`_
+* `Automatizar <../Usage/Automation.html>`_
 * `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorbtion
 * `Nightscout security <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
 * `Profile timeshift <../Usage/Profiles.html#time-shift>`_ (more details)
-* `Supervisión remota <../Children/Children.html>` _
-* ¿Qué es un sistema de lazo cerrado? <../Getting-Started/ClosedLoop.html>` _
+* `Supervisión remota <../Children/Children.html>`_
+* ¿Qué es un sistema de lazo cerrado? <../Getting-Started/ClosedLoop.html>`_
 
 Agosto 2019
 ==================================================
 * `Dexcom G6 aplicación parchada de región <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
-* `Dexcom G6 nuevo transmisor <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>` _ ("firefly" / 8G...)
+* `Dexcom G6 nuevo transmisor <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
 * `Lo que necesitas? <../index.html#what-do-i-need>`_ - nueva estructura e información adicional
 Nueva estructura

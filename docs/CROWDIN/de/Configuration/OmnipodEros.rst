@@ -123,7 +123,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
     |RileyLink_Setup_5|
 
-5. Vergewissern dich, dass im Tab **Omnipod (POD)** der **RileyLink Status (1)** als **verbunden erscheint. * Das **Pod Status (2)** Feld sollte **Kein aktiver Pod** anzeigen; Falls nicht, wiederhole bitte den vorherigen Schritt oder verlasse AAPS, um zu sehen, ob dies die Verbindung aktualisiert.
+5. Vergewissern dich, dass im Tab **Omnipod (POD)** der **RileyLink Status (1)** als **verbunden erscheint.** Das **Pod Status (2)** Feld sollte **Kein aktiver Pod** anzeigen; Falls nicht, wiederhole bitte den vorherigen Schritt oder verlasse AAPS, um zu sehen, ob dies die Verbindung aktualisiert.
 
     |RileyLink_Setup_6|
 
@@ -132,19 +132,19 @@ Einen Pod aktivieren
 
 Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Verbindung in den Omnipod-Einstellungen richtig konfiguriert und verbunden hast.
 
-*HINWEIS: Für die Verbindung mit dem Pod steht aus Sicherheitsgründen nur ein kleinerer Kommunikationsbereich zur Verfügung. Vor dem Pairing des Pods ist das Funksignal schwächer, aber nachdem es verbunden wurde, wird es mit voller Signalleistung funktionieren. Stelle sicher, dass dein Pod während dieser Prozedur `in der Nähe<#optimale-positionierung-von-omnipod-und-rileylink>`__ *(~30 cm entfernt oder weniger)* ist, aber nicht oben oder direkt neben dem RileyLink.  
+*HINWEIS: Für die Verbindung mit dem Pod steht aus Sicherheitsgründen nur ein kleinerer Kommunikationsbereich zur Verfügung. Vor dem Pairing des Pods ist das Funksignal schwächer, aber nachdem es verbunden wurde, wird es mit voller Signalleistung funktionieren. Stelle sicher, dass dein Pod während dieser Prozedur `in der Nähe <#optimale-positionierung-von-omnipod-und-rileylink>`__ (~30 cm entfernt oder weniger)* ist, aber nicht oben oder direkt neben dem RileyLink.  
 
 1. Navigiere zur Registerkarte **Omnipod (POD)** und klicke auf den **POD MGMT (1)** Button und dann auf **Pod aktivieren (2)**.
 
     |Activate_Pod_1| |Activate_Pod_2|
 
-2. Die Anzeige ** Pod füllen* * wird angezeigt. Fülle deinen neuen Pod mit mindestens 85 Einheiten Insulin und achte auf zwei Signaltöne, die anzeigen, dass der Pod bereit ist, gestartet zu werden.
+2. Die Anzeige **Pod füllen** wird angezeigt. Fülle deinen neuen Pod mit mindestens 85 Einheiten Insulin und achte auf zwei Signaltöne, die anzeigen, dass der Pod bereit ist, gestartet zu werden.
 
     |Activate_Pod_3|
 
     Stelle sicher, dass der neue Pod und RileyLink in der Nähe von einander liegen (~ 30cm oder weniger), und klicke auf den Button **Weiter**.
 
-3. Der Bildschirm **Initializiere Pod** wird angezeigt und der Pod beginnt zu entlüften. (Du wirst einen Klick hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst). Wenn der RileyLink außerhalb der Reichweite des zu aktivierenden Pods ist, erhältst du die Fehlermeldung **Keine Antwort vom Pod**. Wenn dies geschieht, `schiebe den RileyLink näher <#optimale-positionierung-von-omnipod-und-rileylink>`_ (~ 30 cm weg oder weniger) ran, aber nicht auf den Pod oder direkt neben den Pod und klicke auf den Button **Erneut versuchen (1)* *.
+3. Der Bildschirm **Initializiere Pod** wird angezeigt und der Pod beginnt zu entlüften. (Du wirst einen Klick hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst). Wenn der RileyLink außerhalb der Reichweite des zu aktivierenden Pods ist, erhältst du die Fehlermeldung **Keine Antwort vom Pod**. Wenn dies geschieht, `schiebe den RileyLink näher <#optimale-positionierung-von-omnipod-und-rileylink>`_ (~ 30 cm weg oder weniger) ran, aber nicht auf den Pod oder direkt neben den Pod und klicke auf den Button **Erneut versuchen (1)**.
 
     |Activate_Pod_4| |Activate_Pod_5|
 
@@ -199,7 +199,7 @@ Gehe wie folgt vor, um einen Pod zu deaktivieren (entweder vor dem Ablaufen der 
 
     |Deactivate_Pod_1| |Deactivate_Pod_2|
 
-2. Stelle sicher, dass sich der RileyLink in unmittelbarer Nähe zum Pod befindet, aber nicht direkt darauf oder direkt neben dem Pod liegt. Dann klicke auf dem **Deaktiviere Pod ** Bildschirm den **Weiter** -Button, um den Prozess der Deaktivierung des Pods zu starten.
+2. Stelle sicher, dass sich der RileyLink in unmittelbarer Nähe zum Pod befindet, aber nicht direkt darauf oder direkt neben dem Pod liegt. Dann klicke auf dem **Deaktiviere Pod** Bildschirm den **Weiter** -Button, um den Prozess der Deaktivierung des Pods zu starten.
 
     |Deactivate_Pod_3|
 

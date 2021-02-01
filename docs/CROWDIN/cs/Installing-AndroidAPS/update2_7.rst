@@ -42,7 +42,7 @@ Exportovat nastavení
 * Ujistěte se, že jste uložili exportovaná nastavení nejen na vašem telefonu, ale také alespoň na jednom bezpečném místě (pc, cloudové úložiště...).
 * Pokud sestavujete apk AAPS 2.7 za použití stejného podpisového klíče jako u předchozích verzí, můžete instalovat novou verzi bez odstranění předchozí verze. 
 * Všechna nastavení i dokončené cíle zůstanou tak, jak byly v předchozí verzi.
-* V případě, že jste ztratili svůj podpisový klíč, sestavte verzi 2.7 za použití nového klíče a importem z předchozí verze tak, jak je popsáno v sekci `odstraňování problémů <../Installing-AndroidAPS/troubleshooting_androidstedio.html#lost-keystore> ` _.
+* V případě, že jste ztratili svůj podpisový klíč, sestavte verzi 2.7 za použití nového klíče a importem z předchozí verze tak, jak je popsáno v sekci `odstraňování problémů <../Installing-AndroidAPS/troubleshooting_androidstedio.html#lost-keystore>`_.
 
 Autosens (Tip - není nutná žádná akce)
 -----------------------------------------------------------

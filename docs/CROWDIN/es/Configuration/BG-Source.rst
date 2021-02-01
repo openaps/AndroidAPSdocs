@@ -17,5 +17,5 @@ Fuentes de datos de glucemia (BG)
    Eversense <../Hardware/Eversense.rst>
    MM640g/MM630g <../Hardware/MM640g.rst>
    PocTech <../Hardware/PocTech.rst>   
-   Nightscout como origen BG <../Hardware/CGMNightscoutUpload.rst>
+   Nightscout como origen BG <../Hardware/CgmNightscoutUpload.rst>
    

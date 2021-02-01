@@ -40,5 +40,5 @@ Pagrindiniai AndroidAPS tikslai
 Kaip pradėti
 ==================================================
 Žinoma, visa čia pateikiama informacija yra labai svarbi jūsų uždarojo ciklo sistemai, tačiau taip pat normalu, kad daugelis naujų dalykų iš pradžių atrodo painūs.
-Geras orientyras yra pateiktas Modulio Apžvalgoje <./Module/module.html>` ir Tiksluose <./Usage/Objectives.html>`. Visų pirma, galite patikrinti pavyzdinę sąranką with pompa Dana, Dexcom and Sony Smartwatch <../ Getting-Started / Sample-Setup.md>`.
+Geras orientyras yra pateiktas `Modulio Apžvalgoje <./Module/module.html>`_ ir `Tiksluose <./Usage/Objectives.html>`_. Visų pirma, galite patikrinti pavyzdinę sąranką with `pompa Dana, Dexcom and Sony Smartwatch <../Getting-Started/Sample-Setup.md>`_.
  

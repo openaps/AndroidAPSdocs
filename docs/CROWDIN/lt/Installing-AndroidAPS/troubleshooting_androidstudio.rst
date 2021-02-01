@@ -103,7 +103,7 @@ Option 3 - Check for updates
 * Switch to Terminal in Android Studio (lower left side of Android Studio window)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
+    :alt: Android Studio Terminal
    
 * Paste copied text and press return
 
@@ -127,7 +127,7 @@ App not installed
 
 App installed but old version
 ==================================================
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`.
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`_.
 
 None of the above worked
 ==================================================

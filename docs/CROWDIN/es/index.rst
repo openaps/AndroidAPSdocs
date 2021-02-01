@@ -38,7 +38,7 @@ Para más detalles, por favor lee aquí.
    :caption: Instalando AndroidAPS
 
    Compilando la APK <./Installing-AndroidAPS/Building-APK.md>
-   Actualice a una nueva versión o rama<./Installing-AndroidAPS/Update-to-new-version.md>
+   Actualice a una nueva versión o rama <./Installing-AndroidAPS/Update-to-new-version.md>
    Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Instale git <./Installing-AndroidAPS/git-install.rst>
    Resolución de problemas de Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>

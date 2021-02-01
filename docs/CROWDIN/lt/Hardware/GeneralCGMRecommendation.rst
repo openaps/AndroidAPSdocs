@@ -35,11 +35,11 @@ Dažnai „Sensoriaus klaidą“ galima ištaisyti geriant daug vandens ir masa�
 
 Šokinėjantys duomenys
 --------------------------------------------------
-Galite pabandyti pakeisti triukšmo slopinimo parametrus xdrip (Nustatymai - Nustatymai tarp programų - Triukšmo blokavimas), t.y. "Užblokuokite labai didelį ir blogesnį triukšmą".  Taip pat žr. "Duomenų išlyginimas: <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>`_.
+Galite pabandyti pakeisti triukšmo slopinimo parametrus xdrip (Nustatymai - Nustatymai tarp programų - Triukšmo blokavimas), t.y. "Užblokuokite labai didelį ir blogesnį triukšmą".  Taip pat žr. `Duomenų išlyginimas: <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>`_.
 
 Neigiamas sensoriaus amžius
 --------------------------------------------------
-.. nuotrauka:: ../images/Troubleshooting_SensorAge.png
+.. image:: ../images/Troubleshooting_SensorAge.png
   :alt: Neigiamas jutiklis amžius
 
-Tai nutinka, kai arba yra įvestas dvigubas "NGS jutiklis įvestas" įrašas veiksmų skirtuke / meniu <../Configuration/Config-Builder.html#actions>`_ arba jutiklis įvestas su bloga data. Eikite į terapijos nustatymus > priežiūra ir ištrinkite klaidingą įrašą.
+Tai nutinka, kai arba yra įvestas dvigubas "NGS jutiklis įvestas" įrašas veiksmų `skirtuke / meniu <../Configuration/Config-Builder.html#actions>`_ arba jutiklis įvestas su bloga data. Eikite į terapijos nustatymus > priežiūra ir ištrinkite klaidingą įrašą.

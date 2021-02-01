@@ -80,7 +80,7 @@ Pour plus de détails, lisez la suite ici.
    Glucides étendus <./Usage/Extended-Carbs.rst>
    Automatisation <./Usage/Automation.rst>
    Careportal (supprimé) <./Usage/CPbefore26.rst>
-   Téléversement Open Humans <../Configuration/OpenHumans.rst>
+   Téléversement Open Humans <./Configuration/OpenHumans.rst>
    Automatisation avec des applications tierces <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
 

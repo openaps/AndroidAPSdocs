@@ -64,7 +64,7 @@ Autentifikavimo sąrankos nustatymas
    * TOTP žymeklis iš autentifikatoriaus programėlės yra 457051
    * Įveskite 4570512020
    
-* Raudonas tekstas „NETEISINGAS PIN“ pasikeis **automatiškai** į žalią „OK“, jei įvestis teisinga. **Nėra mygtuko, kurį galėtumėte paspausti! **
+* Raudonas tekstas „NETEISINGAS PIN“ pasikeis **automatiškai** į žalią „OK“, jei įvestis teisinga. **Nėra mygtuko, kurį galėtumėte paspausti!**
 * Laikas abiejuose telefonuose turi būti sinchronizuotas. Geriausia praktika - naudoti automatinį tinklo pateiktą laiką. Net ir nežymūs laiko skirtumai gali sukelti autentiškumo nustatymo problemų.
 * Naudokite mygtuką "RESET AUTHENTICATORS" (Iš naujo nustatyti autentifikatorius), jei norite pašalinti nuostatas.  (Anuliuojant autentifikaciją, Jūsų sukurti autentifikavimo kodai taps negaliojančiais. Jums reikės juos nustatyti dar kartą)
 
@@ -84,7 +84,7 @@ Komandos
 ==================================================
 Komandos turi būti išsiųstos anglų kalba, atsakymą gausite savo vietine kalba, jei eilutė jau yra `išversta <../translations.html#translate-strings-for-androidaps-app>`_.
 
-.. nuotrauka:: ../images/SMSCommands.png
+.. image:: ../images/SMSCommands.png
   :alt: SMS komandų pavyzdys
 
 Ciklas

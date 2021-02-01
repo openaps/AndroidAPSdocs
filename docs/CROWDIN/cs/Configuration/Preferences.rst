@@ -47,7 +47,7 @@ Hlavní heslo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Abyste mohli `exportovat nastavení <../Usage/ExportImportSettings.html>`_, je nutné nastavit hlavní heslo. Od verze 2.7 jsou totiž exporty šifrované.
 
-   ** Biometrická ochrana nefunguje na telefonech OnePlus. Jde o známý problém OnePlus.**
+   **Biometrická ochrana nefunguje na telefonech OnePlus. Jde o známý problém OnePlus.**
 
 * Klepnutím na tři tečky v pravém horním rohu hlavní obrazovky otevřete Nastavení
 * Klepněte na trojúhelník pod "Obecné"
@@ -60,7 +60,7 @@ Hlavní heslo
 Ochrana nastavení
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Chraňte své nastavení pomocí hesla nebo biometrického ověření telefonu (t.j. `AndroidAPS pro děti <../Children/Children.html>`_).
-* Pokud chcete použít hlavní heslo pouze pro zabezpečení `exportovaného nastavení <../Usage/ExportImportSettings.html> ` _, můžete si vytvořit Vlastní heslo.
+* Pokud chcete použít hlavní heslo pouze pro zabezpečení `exportovaného nastavení <../Usage/ExportImportSettings.html>`_, můžete si vytvořit Vlastní heslo.
 * Pokud používáte vlastní heslo, klepněte na řádek "Nastavení hesla", a nastavte heslo tak, jak je popsáno výše, `nad <../Configuration/Preferences.html#master-password>`_.
 
   .. image:: ../images/Pref2020_Protection.png
@@ -91,7 +91,7 @@ Vzhled
 
 Na výšku
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-* ** Původní vzhled** a **Tlačítka jsou vždy zobrazena na spodní části obrazovky** jsou stejné
+* **Původní vzhled** a **Tlačítka jsou vždy zobrazena na spodní části obrazovky** jsou stejné
 * **Velký displej** v porovnání s ostatními vzhledy má větší velikost grafů
 
 Na šířku
@@ -254,7 +254,7 @@ Minimální změna pro výzvu [%]
 
 Vylepšený asistent pro jídlo (AMA) nebo Super Micro bolus (SMB)
 ===========================================================
-V závislosti na nastavení v ' konfiguraci <../Configuration/Config-Builder.html> ` _ si můžete vybrat mezi dvěma algoritmy:
+V závislosti na nastavení v ' konfiguraci <../Configuration/Config-Builder.html>`_ si můžete vybrat mezi dvěma algoritmy:
 
 * `Advanced meal assist (OpenAPS AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ - stav algoritmu v roce 2017
 * `Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - nejnovější algoritmul pro pokročilé uživatele
@@ -262,7 +262,7 @@ V závislosti na nastavení v ' konfiguraci <../Configuration/Config-Builder.htm
 Nastavení OpenAPS AMA
 -----------------------------------------------------------
 * Jsou-li sacharidy zadány správně, reaguje systém po bolusu na jídlo rychleji, a to díky aplikování vysoké dočasné bazální dávky. 
-* Více podrobností o nastavení a Autosens můžete najít v `Dokumentaci OpenAPS <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>` _.
+* Více podrobností o nastavení a Autosens můžete najít v `Dokumentaci OpenAPS <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`_.
 
 Max. U/h, které lze nastavit pro dočas. bazál
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -270,7 +270,7 @@ Toto nastavení funguje jako bezpečnostní limit, aby se zabránilo AndroidAPS 
 * Hodnota se udává v jednotkách za hodinu (U/h). 
 * Doporučuje se nastavit toto na rozumnou hodnotu. Je doporučeno vzít si ze svého profilu **nejvyšší hodnotu bazálu** a **vynásobit jí 4**. 
 * Například: máte-li ve svém profilu nejvyšší hodnotu bazálu 0.5U/h, dostanete po vynásobení 4 hodnotu 2U/h.
-* Viz také " podrobný popis funkce <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>`_.
+* Viz také `podrobný popis funkce <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>`_.
 
 Maximální bazální IOB [U]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -306,7 +306,7 @@ Pokročilé nastavení (OpenAPS AMA)
 Nastavení OpenAPS SMB
 -----------------------------------------------------------
 * Na rozdíl od AMA `SMB <../Usage/Open-APS-features.html#super-microbolus-smb>`_ nepoužívá SMB pro kontrolu hladiny glukózy dočasné bazály, ale převážně malých super mikrobolusů.
-* Abyste mohli začít používat SMB, musíte mít dokončen `cíl 10 <../Usage/Objectives.html#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`.
+* Abyste mohli začít používat SMB, musíte mít dokončen `cíl 10 <../Usage/Objectives.html#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_.
 * První tři nastavení jsou vysvětleny `výše <../Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to>`_.
 * Podrobnosti o různých volbách jsou popsány v sekci `Funkce OpenAPS <../Usage/Open-APS-features.html#enable-smb>`_.
 * *Jak často budou SMB podávány v minutách** je omezení které určuje, že SMB budou vydávané pouze každé 4 minuty (defaultní hodnota). Tato hodnota brání systému vydávat SMB příliš často (např. v případě nastavení dočasného cíle). Toto nastavení byste neměli změnit, pokud přesně nevíte, jaké mohou být následky. 
@@ -323,7 +323,7 @@ Oznámení vyžadovaných sacharidů
 * V tomto případě obdržíte oznámení, které může být odloženo na 5, 15 nebo 30 minut.
 * Kromě toho se na domovské obrazovce v sekci COB zobrazí požadované sacharidy.
 * Prahovou hodnotu lze nastavit - minimální množství sacharidů potřebných ke spuštění oznámení. 
-*V případě potřeby může být notifikace vyžadovaných sacharidů odeslána do Nightscoutu. Notifikace se pak zobrazí v Nightscoutu a bude vysílána.
+* V případě potřeby může být notifikace vyžadovaných sacharidů odeslána do Nightscoutu. Notifikace se pak zobrazí v Nightscoutu a bude vysílána.
 
   .. image:: ../images/Pref2020_CarbsRequired.png
     :alt: Zobrazení požadovaných sacharidů na domovské obrazovce
@@ -364,7 +364,7 @@ Pokročilé nastavení - autosens ratio
 
 Nastavení pumpy
 ===========================================================
-Tyto volby se budou lišit v závislosti na tom, který ovladač inzulínové pumpy jste vybrali v konfiguračním programu ' Konfigurace <../Configuration/Config-Buil-Builder.html#pump> ` _.  Spárujte a nastavte svou pumpu podle pokynů pro jednotlivé pumpy:
+Tyto volby se budou lišit v závislosti na tom, který ovladač inzulínové pumpy jste vybrali v konfiguračním programu ' Konfigurace <../Configuration/Config-Buil-Builder.html#pump>`_.  Spárujte a nastavte svou pumpu podle pokynů pro jednotlivé pumpy:
 
 * `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
@@ -401,7 +401,7 @@ Nastavení připojení
 Nastavení alarmů
 -----------------------------------------------------------
 * Volby alarmu umožňují vybrat, jaké výchozí alarmy Nightscoutu se mají v aplikaci používat.  
-* Aby alarmy fungovaly, je třeba nastavit v proměnných Nightscoutu (Heroku...) hodnoty glykémie pro Urgentní, Vysokou, Nízkou a Urgentní nízkou glykémii <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
+* Aby alarmy fungovaly, je třeba nastavit v proměnných Nightscoutu (Heroku...) hodnoty glykémie pro Urgentní, Vysokou, Nízkou a Urgentní `nízkou glykémii <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
 * Budou fungovat pouze v případě že budete mít připojení k Nightscoutu, a jsou určeny pro rodiče/pečovatele. 
 * Pokud máte v telefonu zdroj CGM (např. xDrip + nebo upravenou Dexcomalikaci), pak místo nich použijte tyto alarmy.
 
@@ -421,7 +421,7 @@ Rozšířená nastavení (NSClient)
 
 SMS komunikátor
 ===========================================================
-* Volba se zobrazí pouze v případě, je-li v konfiguraci povolen SMS komunikátor' Config Builder <../Configuration/Config-Buil-Builder.html#sms-communicator> ` _.
+* Volba se zobrazí pouze v případě, je-li v konfiguraci povolen SMS komunikátor `Config Builder <../Configuration/Config-Buil-Builder.html#sms-communicator>`_.
 * Toto nastavení umožňuje vzdálené ovládání telefonu s AAPS posláním SMS s textem jako je zastavení smyčky, nebo poslání bolusu.  
 * Další informace jsou popsány v `SMS příkazech <../Children/SMS-Commands.html>`_.
 * Dodatečná bezpečnost je zajištěna použitím autentizační aplikace a dodatečného PIN na konci tokenu.

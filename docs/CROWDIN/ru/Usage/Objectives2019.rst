@@ -62,7 +62,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 Остановитесь здесь, если пользуетесь незамкнутым циклом с виртуальной помпой - не нажимайте на кнопку «Верифицировать» в конце цели.
 --------------------------
 
-.. image:: ./images/blank.png
+.. image:: ../images/blank.png
   :alt: blank
 
 Objective 6: Starting to close the loop with Low Glucose Suspend

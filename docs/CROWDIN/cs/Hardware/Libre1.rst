@@ -19,8 +19,8 @@ If using xDrip+
 * In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
 * If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON.  Můžete také zkontrolovat v xDripu nastavení v částí Nastavení > Méně častá nastavení > Rozšířené kalibrace.
 * Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
-* Nastavení xDrip+ podle snímků obrazovky najdete na stránce `Nastavení xDrip+ <../Configuration/xdrip.html>`__. Je zde část pro základní nastavení xDrip+ a pro nastavení xDrip_ s Freestyle Libre.
-* Pokud AndroidAPS nepřijímá v režimu letadlo hodnoty glykémie, musíte nastavit `Identify receiver` tak, jak je popsáno na stránce `nastavení xDrip+ <../Configuration/xdrip.html>`_.
+* Nastavení xDrip+ podle snímků obrazovky najdete na stránce `Nastavení xDrip+ <../Configuration/xdrip.html>`__. Je zde část pro základní nastavení xDrip+ a pro nastavení xDrip s Freestyle Libre.
+* Pokud AndroidAPS nepřijímá v režimu letadlo hodnoty glykémie, musíte nastavit 'Identify receiver' tak, jak je popsáno na stránce `nastavení xDrip+ <../Configuration/xdrip.html>`_.
 
 Pokud používáte Glimp
 ==================================================

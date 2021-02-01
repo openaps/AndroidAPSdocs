@@ -127,7 +127,7 @@ Aplikace není nainstalována
 
 Aplikace je nainstalována, ale ve staré verzi
 ==================================================
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`.
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`_.
 
 Nic z výše uvedeného nefunguje
 ==================================================

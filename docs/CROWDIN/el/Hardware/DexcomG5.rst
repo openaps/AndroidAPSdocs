@@ -2,12 +2,13 @@ Dexcom G5
 **************************************************
 Εάν χρησιμοποιείτε το G5 με xdrip+
 ==================================================
-* Εάν δεν έχετε ήδη ρυθμίσει, κάντε λήψη του `xdrip <https://github.com/NightscoutFoundation/xDrip>` και ακολουθήστε τις οδηγίες στο nightcout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_.
+* Εάν δεν έχετε ήδη ρυθμίσει, κάντε λήψη του `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ και ακολουθήστε τις οδηγίες στο nightcout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_.
 * In xdrip go to Settings > Inter-app settings > Broadcast Data Locally and select ON.
 * In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
 * Εάν θέλετε να μπορείτε να χρησιμοποιήσετε το AndroidAPS για τη βαθμονόμηση, στη συνέχεια στο xdrip μεταβείτε στις Ρυθμίσεις> Συμβατότητα Interapp> Αποδοχή βαθμονομίσεων και επιλέξτε ΕΝΕΡΓΟΠΟΊΗΣΗ.  Ενδέχεται επίσης να θέλετε να ελέγξετε τις επιλογές στις Ρυθμίσεις> Λιγότερες κοινές ρυθμίσεις> Ρυθμίσεις βελτιωμένης βαθμονόμησης.
 * Επιλέξτε xdrip στο Configbuilder ( είναι ρύθμιση στο androidAPS).
-Αν το AAPS δεν λαμβάνει τιμές BG όταν το τηλέφωνο βρίσκεται σε κατάσταση λειτουργίας αεροπλάνου, χρησιμοποιήστε Προσδιορισμός δέκτη όπως περιγράφεται στη[ σελίδα ρυθμίσεων xDrip](../Configuration/xdrip.md).
+
+Αν το AAPS δεν λαμβάνει τιμές BG όταν το τηλέφωνο βρίσκεται σε κατάσταση λειτουργίας αεροπλάνου, χρησιμοποιήστε Προσδιορισμός δέκτη όπως περιγράφεται στη `σελίδα ρυθμίσεων xDrip <../Configuration/xdrip.md>`_.
 
 Εάν χρησιμοποιείτε το G5 με την εφαρμογή patched Dexcom
 ==================================================
@@ -16,7 +17,7 @@ Dexcom G5
    * Φάκελος 2.3 είναι για τους χρήστες του AndroidAPS 2.3, φάκελος 2.4 για τους χρήστες του AAPS 2.5.
    * Ανοίξτε https://play.google.com/store/search?q=dexcom%20g5 στον υπολογιστή σας. Η περιοχή θα είναι ορατή στη διεύθυνση URL.
    
-   .. εικόνα:: ../images/DexcomG5regionURL.PNG
+   .. image:: ../images/DexcomG5regionURL.PNG
      :alt: Περιοχή Dexcom G5 URL
 
 * Απενεργοποιήστε τον αισθητήρα και καταργήστε την εγκατάσταση της αρχικής εφαρμογής Dexcom, εάν δεν το έχετε κάνει ήδη.

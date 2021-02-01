@@ -360,7 +360,7 @@ Misc
 * Overhaul for config builder and objectives tabs, adding descriptions
 * New app icon
 * Lots of improvements and bugfixes
-* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see _Local alerts_ in settings)
+* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Option to keep screen on
 * Option to show notification as Android notification
 * Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.

@@ -117,7 +117,7 @@ Après un changement de capteur, xDrip+ détectera automatiquement le nouveau ca
 Étape 4 : Configurer AndroidAPS (pour la boucle uniquement)
 ==================================================
 * Dans AndroidAPS allez dans le Générateur de configuration > Source des glycémies et cochez 'xDrip+' 
-* Si AAPS ne reçoit pas de Glycémie lorsque le téléphone est en mode avion, utilisez `Identify receiver` comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html#identify-receiver>`_.
+* Si AAPS ne reçoit pas de Glycémie lorsque le téléphone est en mode avion, utilisez 'Identify receiver' comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html#identify-receiver>`_.
 
 Jusqu'à présent, en utilisant le Freestyle Libre 2 comme source Gly, vous ne pouvez pas activer les fonctions 'Activer SMB toujours' et 'Activer SMB après les glucides' dans l'algorithme SMB. Les valeurs de GLY du Freestyle Libre 2 ne sont pas assez lisses pour l'utiliser en toute sécurité. Voir `Lissage des données de glycémie <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ pour plus de détails.
 

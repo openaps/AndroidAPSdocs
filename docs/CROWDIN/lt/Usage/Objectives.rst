@@ -48,7 +48,8 @@ Tikslas 4: pradėkite naudoti Atvirą ciklą
 
 Sumažinti pranešimų skaičių
 --------------------------------------------------
-* Norėdami sumažinti pasiūlymų, kuriuos reikia patvirtinti atvirajame cikle, skaičių, nustatykite platų tikslinį diapazoną, pvz., 90–150 mg/dl arba 5,0–8,5 mmol/l. * Jei reikia naktį taip pat galite nustatyti aukštesnę viršutinę ribą arba visiškai pristabdyti atvirą ciklą. 
+* Norėdami sumažinti pasiūlymų, kuriuos reikia patvirtinti atvirajame cikle, skaičių, nustatykite platų tikslinį diapazoną, pvz., 90–150 mg/dl arba 5,0–8,5 mmol/l.
+* Jei reikia naktį taip pat galite nustatyti aukštesnę viršutinę ribą arba visiškai pristabdyti atvirą ciklą. 
 * Nustatymuose galite nustatyti mažiausią procentą, kurį reikia pasiekti prieš pasiūlant pakeisti laikiną valandinę bazę.
 
    .. image:: ../images/OpenLoop_MinimalRequestChange2.png

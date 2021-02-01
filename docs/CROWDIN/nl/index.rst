@@ -43,8 +43,8 @@ Hieronder volgt de inhoudsopgave.
    Git installeren <./Installing-AndroidAPS/git-install.rst>
    Problemen in Android Studio oplossen <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
-   Dev branch (voor ontwikkelaars) <./Installing-AndroidAPS/Dev-branch.md>
-
+   Dev branch (voor ontwikkelaars) <./Installing-AndroidAPS/Dev_branch.md>
+   
 .. toctree::
    :maxdepth: 1
    :glob:

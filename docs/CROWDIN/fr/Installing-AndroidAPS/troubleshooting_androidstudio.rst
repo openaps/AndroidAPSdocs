@@ -127,7 +127,7 @@ Application non installée.
 
 Application installée mais ancienne version
 ==================================================
-Si vous avez compilé l'application, que vous l'avez transferrée dans votre téléphone et installée avec succès mais que le numéro de version est resté le même, vous avez peut-être opis de `meetre à jour votre copie locale <../Update-to-new-version.html#mettez-a-jour-votre-copie-locale>`.
+Si vous avez compilé l'application, que vous l'avez transferrée dans votre téléphone et installée avec succès mais que le numéro de version est resté le même, vous avez peut-être opis de `meetre à jour votre copie locale <../Update-to-new-version.html#mettez-a-jour-votre-copie-locale>`_.
 
 Rien ci-dessus n'a marché
 ==================================================

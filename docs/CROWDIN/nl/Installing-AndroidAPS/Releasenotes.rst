@@ -360,7 +360,7 @@ Overig
 * Configurator en doelen tabbladen gewijzigd waarbij beschrijvingen zijn toegevoegd
 * Nieuw app icoon
 * Veel verbeteringen en bugfixes
-* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see _Local alerts_ in settings)
+* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Optie om het scherm aan te houden
 * Optie om meldingen als Android melding te tonen
 * Geavanceerde filtering (wat het mogelijk maakt om SMB altijd in te schakelen en 6 uur na maaltijden) ondersteund voor gepatchte Dexcom app of xDrip met G5 native mode als BG-bron.

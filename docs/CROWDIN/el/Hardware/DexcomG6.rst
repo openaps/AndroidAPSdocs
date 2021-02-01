@@ -3,7 +3,7 @@ Dexcom G6
 Πρώτα τα βασικά
 ==================================================
 
-* Ακολουθήστε τη γενική υγιεινή CGM και ρυθμίστε των αισθητήρα `εδώ <../Υλικό / Γενικές συστάσεις CGM>` _.
+* Ακολουθήστε τη γενική υγιεινή CGM και ρυθμίστε των αισθητήρα `εδώ <../Υλικό / Γενικές συστάσεις CGM>`_.
 * Για πομπούς G6 που κατασκευάζονται μετά το πέρας / τέλος του 2018, βεβαιωθείτε ότι έχετε χρησιμοποιήσει μία από τις πιο πρόσφατες εκδόσεις xDrip + <https://github.com/NightscoutFoundation/xDrip/releases> _ _. Αυτοί οι πομποί έχουν ένα νέο firmware και η τελευταία σταθερή έκδοση του xDrip + (2019/01/10) δεν μπορεί να το αντιμετωπίσει.
 
 Γενικές συμβουλές για το κύκλωμα με το G6
@@ -17,7 +17,7 @@ Dexcom G6
 * Η προ-εμβάπτιση του G6 με εργοστασιακή βαθμονόμηση είναι πιθανό να προκαλέσει διακύμανση στα αποτελέσματα. Αν κάνετε προ-εμβάπτιση, τότε για να έχετε τα καλύτερα αποτελέσματα, πιθανόν να χρειαστεί να βαθμονομήσετε τον αισθητήρα.
 * Αν δεν είστε προσεκτικοί σχετικά με τις αλλαγές που ενδεχομένως να πραγματοποιηθούν, ίσως είναι καλύτερο να επιστρέψετε στη μη βαθμονομημένη από το εργοστάσιο λειτουργία και να χρησιμοποιήσετε το σύστημα όπως το G5.
 
-Για να μάθετε περισσότερα σχετικά με τις λεπτομέρειες και τους λόγους που γίνονται αυτές οι συστάσεις διαβάστε το πλήρες άρθρο <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/> που δημοσιεύτηκε από την Tim Street στο www.diabettech.com <http://www.diabettech.com>`_.
+Για να μάθετε περισσότερα σχετικά με τις λεπτομέρειες και τους λόγους που γίνονται αυτές οι συστάσεις διαβάστε το `πλήρες άρθρο <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ που δημοσιεύτηκε από την Tim Street στο `www.diabettech.com <http://www.diabettech.com>`_.
 
 If using G6 with xDrip+
 ==================================================
@@ -26,8 +26,9 @@ If using G6 with xDrip+
 * If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
 * If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
-* Προσαρμογή των ρυθμίσεων στο xDrip + σύμφωνα με τη σελίδα ρυθμίσεων xDrip + <../ Configuration / xdrip.html> `_
-Αν το AAPS δεν λαμβάνει τιμές BG όταν το τηλέφωνο βρίσκεται σε κατάσταση λειτουργίας αεροπλάνου, χρησιμοποιήστε Προσδιορισμός δέκτη όπως περιγράφεται στη[ σελίδα ρυθμίσεων xDrip](../Configuration/xdrip.html).
+* Προσαρμογή των ρυθμίσεων στο xDrip + σύμφωνα με τη σελίδα ρυθμίσεων `xDrip + <../Configuration/xdrip.html>`_
+
+Αν το AAPS δεν λαμβάνει τιμές BG όταν το τηλέφωνο βρίσκεται σε κατάσταση λειτουργίας αεροπλάνου, χρησιμοποιήστε Προσδιορισμός δέκτη όπως περιγράφεται στη `σελίδα ρυθμίσεων xDrip <../Configuration/xdrip.html>`_ .
 
 Εάν χρησιμοποιείτε το G6 με την εφαρμογή patched Dexcom
 ==================================================
@@ -38,7 +39,7 @@ If using G6 with xDrip+
    * Click the link to the Dexcom G6 app on the search results page that is displayed.
    * Region will be visible in URL.
    
-   .. εικόνα:: ../images/DexcomG6regionURL.PNG
+   .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Περιοχή Dexcom G6 URL
 
 * Uninstall the original Dexcom app.
@@ -84,7 +85,7 @@ Dexcom G6 αντιμετώπιση συγκεκριμένων προβλημάτ
   * Πομπός με σειριακό αριθμό που ξεκινάει με 80 ή 81: "Έχεις δεδομένα ώρες: λεπτά" (δηλ. "Τα δεδομένα 19:04")
   * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
 
-.. εικόνα:: ../images/xDrip_Dexcom_PhoneServiceState.png
+.. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip+ PhoneServiceState
 
 General troubleshoothing

@@ -6,6 +6,6 @@
    :glob:
    
    Список проверенных телефонов <../Getting-Started/Phones.md>
-   Настройки Jelly Pro <./../../Usage/jelly.md>
-   Настройки Huuawei <../../Usage/huawei.md>и 
+   Настройки Jelly Pro <../Usage/jelly.md>
+   Настройки Huuawei <../Usage/huawei.md>
    

@@ -117,9 +117,9 @@ After a sensor change xDrip+ will automatically detect the new sensor and will d
 Step 4: Configure AndroidAPS (for looping only)
 ==================================================
 * En AndroidAPS vaya a Config Builder > Fuente de BG y compruebe 'xDrip+' 
-* Si AAPS no recibe los valores de BG cuando el teléfono está en el modo de avión, utilice `Identificar receptor', como se describe en la página 'xDrip+ ajustes <../Configuration/xdrip.html#identify-receiver>`_.
+* Si AAPS no recibe los valores de BG cuando el teléfono está en el modo de avión, utilice 'Identificar receptor', como se describe en la página `xDrip+ ajustes <../Configuration/xdrip.html#identify-receiver>`_.
 
-Hasta ahora, usando Libre 2 como fuente BG usted no puede activar 'Habilitar SMB siempre' y 'Habilitar SMB después de los carbohidratos' dentro del algoritmo SMB. Los valores de BG de Libre 2 no son lo suficientemente estables para usarlo de forma segura. Consulte ' Suavizar los datos de glucosa en sangre <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ para más detalles.
+Hasta ahora, usando Libre 2 como fuente BG usted no puede activar 'Habilitar SMB siempre' y 'Habilitar SMB después de los carbohidratos' dentro del algoritmo SMB. Los valores de BG de Libre 2 no son lo suficientemente estables para usarlo de forma segura. Consulte `Suavizar los datos de glucosa en sangre <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ para más detalles.
 
 Consejos y solución de problemas
 ==================================================
@@ -165,7 +165,7 @@ Los sensores Libre2 contienen comprobaciones de plausibilidad para detectar valo
 
 Zona horaria viajando
 --------------------------------------------------
-En otros `husos horarios <../Usage/Timezone-traveling.html>` _ hay dos estrategias para el hacer lazo cerrado: 
+En otros `husos horarios <../Usage/Timezone-traveling.html>`_ hay dos estrategias para el hacer lazo cerrado: 
 
 Cualquiera 
 

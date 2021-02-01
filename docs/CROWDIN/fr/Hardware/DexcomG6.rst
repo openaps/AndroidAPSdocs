@@ -4,7 +4,7 @@ Les bases en premier
 ==================================================
 
 * Suivez les recommandations générales relatives à l'hygiène des MGG et du capteur `ici <../Hardware/GeneralCGMRecommendation.html>`_.
-* Pour les transmetteurs G6 fabriqués après l'automne / fin 2018, veuillez vous assurez que vous utilisez bien l'une des dernières versions de xDrip+ <https://github.com/NightscoutFoundation/xDrip/releases>`_. Ces transmetteurs ont un nouveau firmware et la dernière version stable de xDrip+ (10/01/2019) ne fonctionne pas avec.
+* Pour les transmetteurs G6 fabriqués après l'automne / fin 2018, veuillez vous assurez que vous utilisez bien l'une des `dernières versions de xDrip+ <https://github.com/NightscoutFoundation/xDrip/releases>`_. Ces transmetteurs ont un nouveau firmware et la dernière version stable de xDrip+ (10/01/2019) ne fonctionne pas avec.
 
 Conseils généraux pour boucler avec un G6
 ==================================================
@@ -27,7 +27,7 @@ Si vous utilisez le G6 avec xdrip+
 * Si vous ne l'avez pas déjà configuré, téléchargez `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ et suivez les instructions sur nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Sélectionnez xDrip dans le Générateur de configuration (dans AndroidAPS).
 * Réglez les paramètres dans xDrip+ comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_
-* Si AAPS ne reçoit pas de GLY quand le téléphone est en mode avion, utilisez `Identify receiver` comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_.
+* Si AAPS ne reçoit pas de GLY quand le téléphone est en mode avion, utilisez 'Identify receiver' comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_.
 
 Si vous utilisez le G6 avec l'application Dexcom patchée
 ==================================================

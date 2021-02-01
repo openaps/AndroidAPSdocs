@@ -3,7 +3,7 @@ Dexcom G6
 Basics first
 ==================================================
 
-* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`_.
+* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`__.
 * For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the `latest nightly built xDrip+ versions <https://github.com/NightscoutFoundation/xDrip/releases>`_. Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
 
 General hints for looping with G6
@@ -27,17 +27,17 @@ If using G6 with xDrip+
 * If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
 * Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`_
-* If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
 If using G6 with patched Dexcom app
 ==================================================
 * Download the apk from `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, and choose the version that fits your needs (mg/dl or mmol/l version, G6).
 
-   * Folder 2.4 for users of the current version, folder 2.3 is only for the outdated AndroidAPS 2.3.
-   * Open https://play.google.com/store/search?q=dexcom%20g6 on your computer. 
-   * Click the link to the Dexcom G6 app on the search results page that is displayed.
-   * Region will be visible in URL.
-   
+  * Folder 2.4 for users of the current version, folder 2.3 is only for the outdated AndroidAPS 2.3.
+  * Open https://play.google.com/store/search?q=dexcom%20g6 on your computer. 
+  * Click the link to the Dexcom G6 app on the search results page that is displayed.
+  * Region will be visible in URL.
+
    .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Region in Dexcom G6 URL
 
@@ -89,7 +89,7 @@ Dexcom G6 specific troubleshooting
 
 General troubleshoothing
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
 
 New transmitter with running sensor
 --------------------------------------------------

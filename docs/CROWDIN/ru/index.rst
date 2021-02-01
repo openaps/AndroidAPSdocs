@@ -9,7 +9,7 @@ AndroidAPS-приложение с открытым исходным кодом 
 
 Основными компонентами являются:
 
-.. изображение:../images/modules-female.png
+.. image:: images/modules-female.png
   :alt: Компоненты
 
 Более подробную информацию смотрите здесь.
@@ -30,20 +30,20 @@ AndroidAPS-приложение с открытым исходным кодом 
    :caption: What do I need? 
 
    Модуль <./Module/module.rst>
-   Пример системы <../Getting-Started/Sample-Setup.html>
+   Пример системы <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
    :caption: Как установить AndroidAPS
 
-   Построение APK <./Instaling-AndroidAPS/Building-APK.md>
-   Обновление до новой версии или ветви <./Instaling-AndroidAPS/Update-to-new-version.md>
+   Построение APK <./Installing-AndroidAPS/Building-APK.md>
+   Обновление до новой версии или ветви <./Installing-AndroidAPS/Update-to-new-version.md>
    Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
-   Установка git <./Instaling-AndroidAPS/git-install.rst>
+   Установка git <./Installing-AndroidAPS/git-install.rst>
    Устранение неполадок Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Примечания к выпуску <./Installing-AndroidAPS/Releasenotes.rst>
-   Ветка разработчика <./Instaling-AndroidAPS/Dev_branch.md>
+   Ветка разработчика <./Installing-AndroidAPS/Dev_branch.md>
 
 .. toctree::
    :maxdepth: 1
@@ -54,7 +54,7 @@ AndroidAPS-приложение с открытым исходным кодом 
    параметры xDrip <./Configuration/xdrip.md>
    Помпы <./Hardware/pumps.rst>
    Телефоны <./Hardware/Phoneconfig.rst>
-   Настройка Nightscout <./Instaling-AndroidAPS/Nightscout.md>
+   Настройка Nightscout <./Installing-AndroidAPS/Nightscout.md>
    Смарт-часы <./Hardware/Smartwatch.rst>
 
 .. toctree::
@@ -62,7 +62,7 @@ AndroidAPS-приложение с открытым исходным кодом 
    :glob:
    :caption: Конфигурация 
 
-   Конфигуратор <../Configuration/Config-Builder.html>`_ настройки>
+   Конфигуратор <./Configuration/Config-Builder.md>
    Preferences <./Configuration/Preferences.rst>
 
 .. toctree::
@@ -74,7 +74,7 @@ AndroidAPS-приложение с открытым исходным кодом 
    Цели <./Usage/Objectives.rst>
    Функции OpenAPS <./Usage/Open-APS-features.md>   
    Вычисление COB <./Usage/COB-calculation.rst>
-   Обнаружение чувствительности <./Configuration/Sensitivity-detection-COB.md>
+   Обнаружение чувствительности <./Configuration/Sensitivity-detection-and-COB.md>
    Переключение профиля <./Usage/Profiles.md>
    Временные цели <./Usage/temptarget.md>   
    Пролонгированные углеводы <./Usage/Extended-Carbs.rst>
@@ -88,8 +88,8 @@ AndroidAPS-приложение с открытым исходным кодом 
    :maxdepth: 1
    :glob:
    :caption: Общие советы
-
-   Пересечение часовых поясов с помпами <./Usage/Timezon-traveling.md>
+   
+   Пересечение часовых поясов с помпами <./Usage/Timezone-traveling.md>
    Доступ к файлам журнала <./Usage/Accessing-logfiles.md>
    Accu-Chek Combo советы для простого использования <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Параметры экспорта/импорта <./Usage/ExportImportSettings.rst>
@@ -98,8 +98,8 @@ AndroidAPS-приложение с открытым исходным кодом 
    :maxdepth: 1
    :glob:
    :caption: AndroidAPS для детей
-
-   Удаленный мониторинг <../Children/Children.html>
+   
+   Удаленный мониторинг <./Children/Children.rst>
    Команды SMS <./Children/SMS-Commands.rst>
 
 .. toctree::
@@ -114,7 +114,7 @@ AndroidAPS-приложение с открытым исходным кодом 
    :glob:
    :caption: Часто задаваемые вопросы
 
-   Часто задаваемые вопросы <./Getting-started/FAQ.md>
+   Часто задаваемые вопросы <./Getting-Started/FAQ.md>
 
 .. toctree::
    :maxdepth: 1
@@ -129,7 +129,7 @@ AndroidAPS-приложение с открытым исходным кодом 
    :caption: Куда обращаться за помощью
 
    Полезные ресурсы для чтения перед запуском <./Where-To-Go-For-Help/Background-reading.md>
-   Куда обратиться за справкой <./Where-To-Go-For-Help/Connect-wit-other-users.md>
+   Куда обратиться за справкой <./Where-To-Go-For-Help/Connect-with-other-users.md>
    Обновления и изменения документации <./Getting-Started/WikiUpdate.rst>
 
 .. toctree::
@@ -146,7 +146,7 @@ AndroidAPS-приложение с открытым исходным кодом 
 
    Как помочь <./Getting-Started/How-can-I-help.md>
    Как перевести приложение и документы <./translations.md>
-   Как редактировать документы <./сделать-это-пиар>
+   Как редактировать документы <./make-a-PR>
 
 
 .. note:: 
@@ -154,8 +154,8 @@ AndroidAPS-приложение с открытым исходным кодом 
 
 	* Вся информация, идеи, и описанный здесь код предназначен только для ознакомительных и образовательных целей. Nightscout в настоящее время не пытается соответствовать принципам конфиденциальности HIPAA. Вы применяете Nightscout и AndroidAPS на свой собственный риск и пожалуйста не используйте информацию или код для принятия медицинских решений.
 
-	*Вы пользуетесь кодом github.com без гарантии и какой-либо официальной поддержки. Пожалуйста, ознакомьтесь с ЛИЦЕНЗИЕЙ этого репозитория.
+	* Вы пользуетесь кодом github.com без гарантии и какой-либо официальной поддержки. Пожалуйста, ознакомьтесь с ЛИЦЕНЗИЕЙ этого репозитория.
 
 	* Все наименования продуктов и компаний, товарные знаки, услуги по обслуживанию, зарегистрированные товарные знаки и зарегистрированные службы являются собственностью соответствующих владельцев. Их использование - в информационных целях и не подразумевает какой-либо принадлежности к ним или их одобрения.
 
-	Обратите внимание, что этот проект не имеет связи с и одобрения от: ` SOOIL <http://www.sooil.com/eng/>` _, ` Dexcom <http://www.dexcom.com/>` _, ` Accu-Chek, Roche Diabet Care <http://www.accu-chek.com/>` _ или ` Medtronic <http://www.medtronic.com/>` _
+	Обратите внимание, что этот проект не имеет связи с и одобрения от: `SOOIL <http://www.sooil.com/eng/>`_, ` Dexcom <http://www.dexcom.com/>`_, ` Accu-Chek, Roche Diabet Care <http://www.accu-chek.com/>`_ или ` Medtronic <http://www.medtronic.com/>`_

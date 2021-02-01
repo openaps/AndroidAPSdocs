@@ -26,7 +26,7 @@ Hardware and Software Requirements
 
   Component that will operate AndroidAPS and send control commands to the Pod communication device.
 
-      +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <https://androidaps.readthedocs.io/en/latest/EN/index.html#component-setup>`__
+      +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <../index.html#component-setup>`__
 
 *  |Omnipod_Pod|  **Insulin Delivery Device** 
 
@@ -132,7 +132,7 @@ Activating a Pod
 
 Before you can activate a pod please ensure you have properly configured and connected your RileyLink connection in the Omnipod settings
 
-*REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Before pairing the Pod's radio signal is weaker, however after it has been paired it will operate at full signal power. During these procedures, make sure that your pod is* `within close proximity <#optimal-omnipod-and-rileylink-positioning>`__ *(~30 cm away or less) but not on top of or right next to the RileyLink.  
+*REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Before pairing the Pod's radio signal is weaker, however after it has been paired it will operate at full signal power. During these procedures, make sure that your pod is* `within close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) but not on top of or right next to the RileyLink.*
 
 1. Navigate to the **Omnipod (POD)** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
 
@@ -440,36 +440,38 @@ Fields
 Icons
 -----
 
-.. table:: 
+.. list-table:: 
+      
+    * - |refresh_pod_status|
+      - **REFRESH:** 
+			
+	Sends a refresh command to the active pod to update communication
+			 
+	* Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
+	* See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+    * - |pod_management|  	 
+      - **POD MGMT:**
 
-   ====================  ===========================================
-   |refresh_pod_status|  **REFRESH:** 
+	Navigates to the Pod management menu   
+    * - |ack_alerts|		 
+      - **ACK ALERTS:**
    			 
-			 Sends a refresh command to the active pod to update communication
+	When pressed this will disable the pod expiration beeps and notifications. 
 			 
-			 * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
-			 * See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
-
-   |pod_management|   	 **POD MGMT:**
-
-			 Navigates to the Pod management menu
-   |ack_alerts|		 **ACK ALERTS:**
-   			 
-			 When pressed this will disable the pod expiration beeps and notifications. 
-			 
-			 * Button is displayed only when pod time is past expiration warning time
-			 * Upon successful dismissal, this icon will no longer appear.
-			 
-   |set_time|		 **SET TIME:**
+	* Button is displayed only when pod time is past expiration warning time
+	* Upon successful dismissal, this icon will no longer appear.			 
+    * - |set_time|	 
+      - **SET TIME:**
    
-			 When pressed this will update the time on the pod with the current time on your phone.
-   |suspend|  		 **SUSPEND:**
+	When pressed this will update the time on the pod with the current time on your phone.
+    * - |suspend|  		 
+      - **SUSPEND:**
    
-			 Suspends the active pod
-   |resume| 		 **RESUME DELIVERY:**
+	Suspends the active pod
+    * - |resume|	 
+      - **RESUME DELIVERY:**
    
-			 Resumes the currently suspended, active pod
-   ====================  ===========================================
+	Resumes the currently suspended, active pod
 
 
 Pod Management Menu
@@ -479,62 +481,61 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 
 |Omnipod_Tab_Pod_Management|
 
-.. table:: 
+.. list-table:: 
 
-   =========================  ===========================================
-   |activate_pod|	      **Activate Pod**
+    * - |activate_pod|
+      - **Activate Pod**
    
-   			      Primes and activates a new pod
-
-   |deactivate_pod|	      **Deactivate Pod**
+        Primes and activates a new pod
+    * - |deactivate_pod|
+      - **Deactivate Pod**
  
- 			      Deactivates the currently active pod.
-			 
-		   	      *  A partially paired pod ignores this command.
-			      *  Use this command to deactivate a screaming pod (error 49).
-			      *  If the button is disabled (greyed out) use the Discard Pod button.
-
-   |play_test_beep| 	      **Play test beep**
+        Deactivates the currently active pod.
+		 
+	*  A partially paired pod ignores this command.
+	*  Use this command to deactivate a screaming pod (error 49).
+	*  If the button is disabled (greyed out) use the Discard Pod button.
+    * - |play_test_beep|
+      - **Play test beep**
  
- 			      Plays a single test beep on the pod when pressed.
+ 	Plays a single test beep on the pod when pressed.
+    * - |discard_pod|
+      - **Discard pod**
 
-   |discard_pod|	      **Discard pod**
-
-			      Deactivates and discards the pod state of an unresponsive pod when pressed.
+	Deactivates and discards the pod state of an unresponsive pod when pressed.
 			      
-			      Button is only displayed when very specific cases are met as proper deactivation is no longer possible:
+	Button is only displayed when very specific cases are met as proper deactivation is no longer possible:
 
-			      * A **pod is not fully paired** and thus ignores deactivate commands.
-			      * A **pod is stuck** during the pairing process between steps
-	 		      * A **pod simply does not pair at all.**
-
-   |pod_history| 	      **Pod history** 
+	* A **pod is not fully paired** and thus ignores deactivate commands.
+	* A **pod is stuck** during the pairing process between steps
+	* A **pod simply does not pair at all.**
+    * - |pod_history|
+      - **Pod history** 
    
-   			      Displays the active pod activity history
-
-   |rileylink_stats| 	      **RileyLink stats:**
+   	Displays the active pod activity history
+    * - |rileylink_stats|
+      - **RileyLink stats:**
    
-   			      Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
+        Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
 
-			      * **Settings** - displays RileyLink and active pod settings information
-			      * **History** - displays RileyLink and Pod communication history
-
-   |reset_rileylink_config|   **Reset RileyLink Config** 
+	* **Settings** - displays RileyLink and active pod settings information
+	* **History** - displays RileyLink and Pod communication history
+    * - |reset_rileylink_config|
+      - **Reset RileyLink Config** 
    
-   			      When presssed this button resets the currently connected pod communication device configuration. 
+   	When presssed this button resets the currently connected pod communication device configuration. 
 			      
-			      * When communication is started, specific data is sent to and set in the RileyLink 
+	* When communication is started, specific data is sent to and set in the RileyLink 
 			      
-			        - Memory Registers are set
-				- Communication Protocols are set
-				- Tuned Radio Frequency is set
+	    - Memory Registers are set
+	    - Communication Protocols are set
+	    - Tuned Radio Frequency is set
 				
-			      * See `addtional notes <#reset-rileylink-config-notes>`__ at the end of this table
-
-   |pulse_log|		      **Read pulse log:** 
+	* See `addtional notes <#reset-rileylink-config-notes>`__ at the end of this table
+    * - |pulse_log|
+      - **Read pulse log:** 
     
-    			      Sends the active pod pulse log to the clipboard
-   =========================  ===========================================			    
+    	Sends the active pod pulse log to the clipboard		    
 
 *Reset RileyLink Config Notes*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -749,7 +750,7 @@ Pod suspended
 Informational alert that Pod has been suspended.
 
 Setting basal profile failed. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
 
