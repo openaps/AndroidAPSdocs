@@ -3,7 +3,7 @@ Dexcom G6
 우선적인 기본 사항
 ==================================================
 
-* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`__.
+* '이 문서<../Hardware/GeneralCGMRecommendation.html>`의 일반적인 CGM 위생과 센서 설정 권장사항을 따르십시오.
 * 2018년 가을 이후 제조된 G6 트랜스미터의 경우 `latest nightly built xDrip+버전들<https://github.com/NightscoutFoundation/xDrip/releases>`중 하나를 사용해야 합니다. 이러한 트랜스미터들은 새로운 펌웨어를 가지고 있으며, xDrip+의 안정적인 최신 버전(2019/01/10)에서 사용할 수 없습니다.
 
 Dexcom G6로 loop을 사용하기 위한 일반적인 정보
@@ -27,7 +27,7 @@ Dexcom G6를 xdrip+와 사용하는 경우
 * 만약 아직 'xDrip'을 설치하지 않았다면 <https://github.com/NightscoutFoundation/xDrip>에서 다운로드하고, nightscout ('G5' <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>)의 지시사항을 따르십시오.
 * 구성 관리자 (AndroidAPS의 세팅)에서 xDrip+를 선택합니다.
 * 'xDrip+ 설정 페이지 <../Configuration/xdrip.html>'를 따라 xDrip+의 설정을 조정하십시오.
-* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* 비행기 모드에서 AAPS가 혈당값을 수신하지 못하는 경우 'xDrip+ 설정 페이지' <../Configuration/xdrip.html>에 설명된 'Identify receiver'를 이용합니다.
 
 Dexcom G6를 Dexcom 앱(패치버전)과 사용하는 경우
 ==================================================
@@ -53,15 +53,15 @@ Dexcom G6를 직접 빌드한 덱스컴 앱과 사용하는 경우
 ==================================================
 * 2020년 12월에 나온 "직접 덱스컴 앱을 빌드하기<https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>` (Build Your Own Dexcom App; BYODA)는 AAPS 와/또는 xDrip+에 로컬 브로드캐스트 연결을 지원합니다(G5 센서는 아님).
 * 이 앱은 덱스콤 G6를 모든 종류의 안드로이드 스마트폰과 함께 사용 가능하도록 해줍니다.
-* Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously.
+* 이전에 덱스콤 공식앱 또는 덱스콤 앱(패치버전)을 사용하셨으면 제거하십시오.
 * 다운로드 된 apk를 설치합니다.
 * 센서 코드 및 트랜스미터 일련 번호를 앱 (패치버전)에서 입력하십시오.
-* In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
+* 휴대폰 설정에서 앱 > 덱스콤 G6 > 사용권한 > 추가 권한에서 '덱스콤 앱에 엑세스하기'를 누르십시오.
 * 짧은 시간 안에 앱 (패치버전)은 트랜스미터 신호를 인식합니다. (인식하지 못할 경우 센서를 중지하고 새 센서를 시작해야 합니다.)
 
-Settings for AndroidAPS
+AndroidAPS에 대한 설정
 --------------------------------------------------
-* Select 'Dexcom App (patched)' in config builder.
+* 구성 관리자에서 'Dexcom App (패치버전)'을 선택합니다.
 * If you don't recieve any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
 
 Settings for xDrip+
