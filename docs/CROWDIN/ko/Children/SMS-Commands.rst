@@ -180,7 +180,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 * HELP BOLUS
   * 응답: BOLUS 1.2 BOLUS 1.2 MEAL
 
-문제해결
+문제 해결
 ==================================================
 무한 SMS
 --------------------------------------------------
