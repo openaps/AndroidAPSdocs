@@ -14,33 +14,34 @@ De belangrijkste onderdelen zijn:
 
 Hieronder volgt de inhoudsopgave.
 
-Aan de slag
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Change language
+   Change language <changelanguage.rst>
    
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Getting started
+
    Allereerst de veiligheid <./Getting-Started/Safety-first.rst>
    Wat is een closed loop systeem <./Getting-Started/ClosedLoop.rst>
    Wat is een closed loop systeem met AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
-   
-   
-Wat heb ik nodig? 
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: What do I need? 
+
    Onderdelen <./Module/module.rst>
    Gebruiksvoorbeeld <./Getting-Started/Sample-Setup.md>
 
-   
-AndroidAPS installeren
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: How to Install AndroidAPS
 
    Bouwen van de app <./Installing-AndroidAPS/Building-APK.md>
    Bijwerken naar een nieuwe versie <./Installing-AndroidAPS/Update-to-new-version.md>
@@ -49,38 +50,32 @@ AndroidAPS installeren
    Problemen in Android Studio oplossen <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch (voor ontwikkelaars) <./Installing-AndroidAPS/Dev-branch.md>
-   
-   
-Onderdelen instellen
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Component Setup
+
    BG bron <./Configuration/BG-Source.rst>
    xDrip+ instellingen <./Configuration/xdrip.md>
    Pompen <./Hardware/pumps.rst>
    Telefoons <./Hardware/Phoneconfig.rst>
    Nightscout instellen <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch <./Hardware/Smartwatch.rst>
-   
 
-AndroidAPS instellingen 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Configuration
+
    Configurator <./Configuration/Config-Builder.md>
    Instellingen <./Configuration/Preferences.rst>
-   
-   
-AndroidAPS gebruik
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-    
+   :caption: AndroidAPS Usage
+
    AndroidAPS Screenshots <./Getting-Started/Screenshots.md>
    Doelen <./Usage/Objectives.rst>
    OpenAPS functies <./Usage/Open-APS-features.md>   
@@ -94,81 +89,68 @@ AndroidAPS gebruik
    Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automatisering met andere apps <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
- 
-Algemene Tips 
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: General Hints 
+
    Wisselen van tijdzone <./Usage/Timezone-traveling.md>
    Toegang tot logbestanden <./Usage/Accessing-logfiles.md>
    AccuChek Combo - tips <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Instellingen exporteren/importeren <./Usage/ExportImportSettings.rst>
-   
 
-AndroidAPS voor kinderen
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: AndroidAPS for children
+
    Volgen op afstand <./Children/Children.rst>
    SMS Comando's <./Children/SMS-Commands.rst>
    Profielhelper <./Configuration/profilehelper.rst>
    
-
-Problemen oplossen
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
+   :caption: Troubleshooting
+
    Problemen oplossen <./Usage/troubleshooting.rst>
-   
 
-Veelgestelde vragen 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
+   :caption: FAQ
+
    Veelgestelde vragen <./Getting-Started/FAQ.md>
 
-   
-Veelgebruikte woordenlijst
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
-   Veelgebruikte woordenlijst <./Getting-Started/Glossary.md>
-  
+   :caption: Glossary
 
-Waar je hulp kunt vinden 
---------------------------------------------------
+   Veelgebruikte woordenlijst <./Getting-Started/Glossary.md>
+
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Where to go for help 
 
    Leestips voordat je begint <./Where-To-Go-For-Help/Background-reading.md>
    Contact met anderen <./Where-To-Go-For-Help/Connect-with-other-users.md>
    Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
 
-Zorgprofessionals
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-            
+   :caption: For Clinicians
+
    Voor zorgprofessionals <./Resources/clinician-guide-to-AndroidAPS>
 
 
-Hoe je zelf kunt helpen
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: How to help
 
    Hoe kan je helpen <./Getting-Started/How-can-I-help.md>
    De app of wiki vertalen <./translations.md>
