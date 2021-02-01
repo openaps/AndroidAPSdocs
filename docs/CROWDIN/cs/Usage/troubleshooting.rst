@@ -1,4 +1,4 @@
-Poradce při potížích
+Řešení problémů
 **************************************************
 Informace o odstraňování problémů můžete najít na mnoha stránkách wiki. Tato stránka obsahuje řadu odkazů, které vám mohou pomoci při hledání informací k řešení vašeho problému.
 
