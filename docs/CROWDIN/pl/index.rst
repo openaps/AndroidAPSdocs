@@ -14,33 +14,28 @@ The main components are:
 
 Aby uzyskać więcej informacji, czytaj dalej.
 
-Pierwsze kroki
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Pierwsze kroki
+
    Bezpieczeństwo przede wszystkim <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
-   
-   
-What do I need? 
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: What do I need?
+
    Moduł <./Module/module.rst>
    Sample Setup <./Getting-Started/Sample-Setup.md>
 
-   
-Jak zainstalować AndroidAPS
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Jak zainstalować AndroidAPS
 
    Tworzenie pakietu APK <./Installing-AndroidAPS/Building-APK.md>
    Aktualizacja do nowej wersji lub innego branch <./Installing-AndroidAPS/Update-to-new-version.md>
@@ -49,38 +44,32 @@ Jak zainstalować AndroidAPS
    Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Wersja developerska <./Installing-AndroidAPS/Dev_branch.md>
-   
-   
-Ustawienia składników systemu
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Ustawienia składników systemu
+
    CGM/FGM <./Configuration/BG-Source.rst>
    Ustawienia xDrip <./Configuration/xdrip.md>
    Pompy <./Hardware/pumps.rst>
    Telefony <./Hardware/Phoneconfig.rst>
    Konfiguracja Nightscout <./Installing-AndroidAPS/Nightscout.md>
    Zegarki/Smartwatche  <./Hardware/Smartwatch.rst>
-   
 
-Konfiguracja 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Konfiguracja 
+
    Narzędzie do konfiguracji <./Configuration/Config-Builder.md>
    Preferences <./Configuration/Preferences.rst>
-   
-   
-Użytkowanie AndroidAPS
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-    
+   :caption: Użytkowanie AndroidAPS
+
    Zrzuty ekranów AndroidAPS <./Getting-Started/Screenshots.md>
    Objectives <./Usage/Objectives.rst>
    Funkcje OpenAPS <./Usage/Open-APS-features.md>   
@@ -94,80 +83,66 @@ Użytkowanie AndroidAPS
    Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automatyzacja z aplikacjami innych firm <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
- 
-Porady ogólne 
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Porady ogólne
+
    Przekraczania stref czasowych z pompami <./Usage/Timezone-traveling.md>
    Dostęp do pliku logu <./Usage/Accessing-logfiles.md>
    Wskazówki dotyczące podstawowego użytkowania Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Eksport/Import wstawień <./Usage/ExportImportSettings.rst>
-   
 
-AndroidAPS dla dzieci
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: AndroidAPS dla dzieci
+
    Zdalne monitorowanie <./Children/Children.rst>
    SMS commands <./Children/SMS-Commands.rst>
-   
 
-Rozwiązywanie problemów
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
+   :caption: Rozwiązywanie problemów
+
    Troubleshooting <./Usage/troubleshooting.rst>
-   
 
-FAQ 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
+   :caption: FAQ
+
    FAQ <./Getting-Started/FAQ.md>
 
-   
-Słowniczek pojęć
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
-   Słowniczek pojęć <./Getting-Started/Glossary.md>
-  
+   :caption: Słowniczek pojęć
 
-Gdzie szukać pomocy 
---------------------------------------------------
+   Słowniczek pojęć <./Getting-Started/Glossary.md>
+
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Gdzie szukać pomocy
 
    Przydatne zasoby do przeczytania zanim rozpoczniesz <./Where-To-Go-For-Help/Background-reading.md>
    Gdzie można znaleźć pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 
-Dla lekarzy specjalistów
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-            
+   :caption: Dla lekarzy specjalistów
+
    Dla lekarzy specjalistów <./Resources/clinician-guide-to-AndroidAPS>
 
-
-Jak pomóc
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Jak pomóc
 
    Jak pomóc <./Getting-Started/How-can-I-help.md>
    How to translate the app and docs <./translations.md>

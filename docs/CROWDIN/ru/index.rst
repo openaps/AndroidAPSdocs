@@ -14,33 +14,28 @@ AndroidAPS-приложение с открытым исходным кодом 
 
 Более подробную информацию смотрите здесь.
 
-Начало работы
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Начало работы
+
    Главное- безопасность <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    Обновления и изменения документации <./Getting-Started/WikiUpdate.rst>
-   
-   
-What do I need? 
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: What do I need? 
+
    Модуль <./Module/module.rst>
    Пример системы <./Getting-Started/Sample-Setup.md>
 
-   
-Как установить AndroidAPS
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Как установить AndroidAPS
 
    Построение APK <./Installing-AndroidAPS/Building-APK.md>
    Обновление до новой версии или ветви <./Installing-AndroidAPS/Update-to-new-version.md>
@@ -49,38 +44,32 @@ What do I need?
    Устранение неполадок Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Примечания к выпуску <./Installing-AndroidAPS/Releasenotes.rst>
    Ветка разработчика <./Installing-AndroidAPS/Dev_branch.md>
-   
-   
-Настройка компонентов
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Настройка компонентов
+
    CGM/FGM <./Configuration/BG-Source.rst>
    параметры xDrip <./Configuration/xdrip.md>
    Помпы <./Hardware/pumps.rst>
    Телефоны <./Hardware/Phoneconfig.rst>
    Настройка Nightscout <./Installing-AndroidAPS/Nightscout.md>
    Смарт-часы <./Hardware/Smartwatch.rst>
-   
 
-Конфигурация 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Конфигурация 
+
    Конфигуратор <./Configuration/Config-Builder.md>
    Preferences <./Configuration/Preferences.rst>
-   
-   
-Использование androidAPS
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-    
+   :caption: Использование androidAPS
+
    Экраны androidAPS <./Getting-Started/Screenshots.md>
    Цели <./Usage/Objectives.rst>
    Функции OpenAPS <./Usage/Open-APS-features.md>   
@@ -94,80 +83,66 @@ What do I need?
    Open Humans Uploader <./Configuration/OpenHumans.rst>
    Автоматизация с приложениями сторонних организаций <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
- 
-Общие советы 
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Общие советы
    
    Пересечение часовых поясов с помпами <./Usage/Timezone-traveling.md>
    Доступ к файлам журнала <./Usage/Accessing-logfiles.md>
    Accu-Chek Combo советы для простого использования <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Параметры экспорта/импорта <./Usage/ExportImportSettings.rst>
-   
 
-AndroidAPS для детей
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: AndroidAPS для детей
    
    Удаленный мониторинг <./Children/Children.rst>
    Команды SMS <./Children/SMS-Commands.rst>
-   
 
-Устранение неполадок
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Устранение неполадок
   
    Устранение неполадок <./Usage/troubleshooting.rst>
-   
 
-Часто задаваемые вопросы 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
+   :caption: Часто задаваемые вопросы
+
    Часто задаваемые вопросы <./Getting-Started/FAQ.md>
 
-   
-Глоссарий
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Глоссарий
   
    Глоссарий <./Getting-Started/Glossary.md>
-  
 
-Куда обращаться за помощью 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Куда обращаться за помощью
 
    Полезные ресурсы для чтения перед запуском <./Where-To-Go-For-Help/Background-reading.md>
    Куда обратиться за справкой <./Where-To-Go-For-Help/Connect-with-other-users.md>
    Обновления и изменения документации <./Getting-Started/WikiUpdate.rst>
 
-Для клиницистов
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-            
+   :caption: Для клиницистов
+
    Для клиницистов <./Resources/clinician-guide-to-AndroidAPS>
 
-
-Как помочь
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Для клиницистов
 
    Как помочь <./Getting-Started/How-can-I-help.md>
    Как перевести приложение и документы <./translations.md>

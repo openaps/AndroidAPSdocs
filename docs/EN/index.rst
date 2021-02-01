@@ -14,33 +14,34 @@ The main components are:
 
 For more details, please read on here.
 
-Getting started
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Change language
+   Change language <changelanguage.rst>
    
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Getting started
+
    Safety first <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
-   
-   
-What do I need? 
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: What do I need? 
+
    Module <./Module/module.rst>
    Sample Setup <./Getting-Started/Sample-Setup.md>
 
-   
-How to Install AndroidAPS
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: How to Install AndroidAPS
 
    Building the APK <./Installing-AndroidAPS/Building-APK.md>
    Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
@@ -49,38 +50,32 @@ How to Install AndroidAPS
    Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch <./Installing-AndroidAPS/Dev_branch.md>
-   
-   
-Component Setup
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Component Setup
+
    CGM/FGM <./Configuration/BG-Source.rst>
    xDrip Settings <./Configuration/xdrip.md>
    Pumps <./Hardware/pumps.rst>
    Phones <./Hardware/Phoneconfig.rst>
    Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
-   
 
-Configuration 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Configuration
+
    Config builder <./Configuration/Config-Builder.md>
    Preferences <./Configuration/Preferences.rst>
-   
-   
-AndroidAPS Usage
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-    
+   :caption: AndroidAPS Usage
+
    AndroidAPS screens <./Getting-Started/Screenshots.md>
    Objectives <./Usage/Objectives.rst>
    OpenAPS features <./Usage/Open-APS-features.md>   
@@ -94,81 +89,68 @@ AndroidAPS Usage
    Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automation with 3rd party apps <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
- 
-General Hints 
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: General Hints 
+
    Crossing timezones with pumps <./Usage/Timezone-traveling.md>
    Accessing logfiles <./Usage/Accessing-logfiles.md>
    Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Export/Import Settings <./Usage/ExportImportSettings.rst>
-   
 
-AndroidAPS for children
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: AndroidAPS for children
+
    Remote monitoring <./Children/Children.rst>
    SMS commands <./Children/SMS-Commands.rst>
    Profile helper <./Configuration/profilehelper.rst>
    
-
-Troubleshooting
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
+   :caption: Troubleshooting
+
    Troubleshooting <./Usage/troubleshooting.rst>
-   
 
-FAQ 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
+   :caption: FAQ
+
    FAQ <./Getting-Started/FAQ.md>
 
-   
-Glossary
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
-   Glossary <./Getting-Started/Glossary.md>
-  
+   :caption: Glossary
 
-Where to go for help 
---------------------------------------------------
+   Glossary <./Getting-Started/Glossary.md>
+
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Where to go for help 
 
    Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 
-For Clinicians
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-            
+   :caption: For Clinicians
+
    For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
 
 
-How to help
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: How to help
 
    How to help <./Getting-Started/How-can-I-help.md>
    How to translate the app and docs <./translations.md>

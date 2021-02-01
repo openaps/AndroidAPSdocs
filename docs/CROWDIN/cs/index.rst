@@ -14,33 +14,28 @@ The main components are:
 
 Další informace naleznete zde.
 
-Začínáme
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Začínáme
+
    Bezpečnost především <./Getting-Started/Safety-first.rst>
    Co je systém uzavřené smyčky <./Getting-Started/ClosedLoop.rst>
    Co je systém uzavřené smyčky s AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
-   
-   
-Co potřebuji? 
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Co potřebuji? 
+
    Modul <./Module/module.rst>
    Sample Setup <./Getting-Started/Sample-Setup.md>
 
-   
-Jak nainstalovat AndroidAPS
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Jak nainstalovat AndroidAPS
 
    Vytvoření APK <./Installing-AndroidAPS/Building-APK.md>
    Jak aktualizovat na novou verzi <./Installing-AndroidAPS/Update-to-new-version.md>
@@ -49,38 +44,32 @@ Jak nainstalovat AndroidAPS
    Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch <./Installing-AndroidAPS/Dev_branch.md>
-   
-   
-Nastavení komponent
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Nastavení komponent
+
    CGM/FGM <./Configuration/BG-Source.rst>
    Nastavení xDrip <./Configuration/xdrip.md>
    Pumpy <./Hardware/pumps.rst>
    Telefony <./Hardware/Phoneconfig.rst>
    Nastavení Nightscoutu <./Installing-AndroidAPS/Nightscout.md>
    Chytré hodinky <./Hardware/Smartwatch.rst>
-   
 
-Konfigurace 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Konfigurace 
+
    Konfigurace <./Configuration/Config-Builder.md>
    Preferences <./Configuration/Preferences.rst>
-   
-   
-Použití AndroidAPS
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-    
+   :caption: Použití AndroidAPS
+
    Obrazovky AndroidAPS <./Getting-Started/Screenshots.md>
    Objectives <./Usage/Objectives.rst>
    Možnosti OpenAPS <./Usage/Open-APS-features.md>   
@@ -94,80 +83,65 @@ Použití AndroidAPS
    Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automatizace s aplikacemi třetích stran <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
- 
-Obecné tipy 
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Obecné tipy 
    
    Cestování s pumpou mezi časovými pásmy <./Usage/Timezone-traveling.md>
    Přístup k log souborům <./Usage/Accessing-logfiles.md>
    Tipy pro základní používání pumpy Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Export/Import nastavení <./Usage/ExportImportSettings.rst>
-   
 
-AndroidAPS pro děti
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: AndroidAPS pro děti
+
    Vzdálené monitorování <./Children/Children.rst>
    SMS commands <./Children/SMS-Commands.rst>
-   
 
-Poradce při potížích
---------------------------------------------------
-.. toctree::
    :maxdepth: 1
    :glob:
-  
+   :caption: Poradce při potížích
+
    Troubleshooting <./Usage/troubleshooting.rst>
-   
 
-Nejčastější dotazy 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
+   :caption: Nejčastější dotazy 
+
    Nejčastější dotazy <./Getting-Started/FAQ.md>
 
-   
-Slovníček
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
-   Glosář <./Getting-Started/Glossary.md>
-  
+   :caption: Slovníček
 
-Kam pro pomoc 
---------------------------------------------------
+   Glosář <./Getting-Started/Glossary.md>
+
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Kam pro pomoc 
 
    Užitečné zdroje informací než začnete <./Where-To-Go-For-Help/Background-reading.md>
    Kam jít pro pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 
-Pro lékaře
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-            
+   :caption: Pro lékaře
+
    Pro lékaře <./Resources/clinician-guide-to-AndroidAPS>
 
-
-Jak pomoci
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Jak pomoci
 
    Jak mohu pomoci <./Getting-Started/How-can-I-help.md>
    How to translate the app and docs <./translations.md>
