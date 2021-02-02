@@ -32,7 +32,7 @@ AAPS warns you if you are about to bolus with COB from a previous meal and the a
 
 Normalmente, AAPS detecta la absorción de carbohidros a través de desviaciones de BG. En caso de que haya especificado carbohidratos, pero AAPS no puede ver su absorción estimada a través de las desviaciones BG, utilizará el método `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings>`_ para calcular la absorción en su lugar (lo que se denomina 'fallback'). Como este método calcula sólo la absorción mínima de carbohidratos sin considerar desviaciones de BG, podría llevar a valores de COB incorrectos.
 
-.. imagen:: ../images/Calculator_SlowCarbAbsorbtion.png
+.. image:: ../images/Calculator_SlowCarbAbsorbtion.png
   :alt: Pista de un valor COB incorrecto
 
 En la captura de pantalla de arriba, 41% de 1 vez que la absorción de carbohidratos fue calculada matemáticamente por el min_5m_carbimpacto en lugar del valor detectado de las desviaciones.  Esto significa que tal vez tenga menos carbohidratos a bordo que los calculados por el algoritmo. 
