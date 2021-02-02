@@ -25,7 +25,7 @@ Uso
 --------------------------------------------------
 * `Valores de carbohidratos erróneos <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 
-  .. imagen:: ../images/Calculator_SlowCarbAbsorbtion.png
+  .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
     :alt: Error: absorbción lenta de carbohidratos
 
 * `Comandos SMS <../Children/SMS-Commands.html#troubleshooting>`_
