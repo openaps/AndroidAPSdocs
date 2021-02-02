@@ -40,5 +40,5 @@ Objetivos principales detrás de AndroidAPS
 Como empezar
 ==================================================
 Por supuesto, todo este contenido es muy importante, pero puede ser en el principio muy confuso.
-Se proporciona una buena orientación por medio de la ` Visión general del módulo <../Module/module.html>` _ y los ` Objetivos <../Usage/Objectives.html>` _. También puede echar un vistazo a la "configuración de ejemplo con Dana, Dexcom y Sony Smartwatch <../Getting-Started/Sample-Setup.html>` _.
+Se proporciona una buena orientación por medio de la ` Visión general del módulo <../Module/module.html>`_ y los ` Objetivos <../Usage/Objectives.html>`_. También puede echar un vistazo a la `configuración de ejemplo con Dana, Dexcom y Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_.
  
