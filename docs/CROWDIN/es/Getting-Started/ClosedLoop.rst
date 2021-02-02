@@ -5,7 +5,7 @@
   :alt: AAPS es como un autopiloto
 
 Un sistema de páncreas artificial de lazo cerrado combina diferentes componentes para facilitarte la gestión de la diabetes. 
-En su gran libro ` Automated Insulin Delivery <https://www.artificialpancreasbook.com/>` _ Dana M. Lewis, una de las fundadoras del movimiento colaborativo de "lazos cerrados", lo llama un "piloto automático para su diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. ¿Qué quiere decir eso?
+En su gran libro ` Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, una de las fundadoras del movimiento colaborativo de "lazos cerrados", lo llama un `piloto automático para su diabetes <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. ¿Qué quiere decir eso?
 
 **Piloto automático de un avión**
 
@@ -13,7 +13,7 @@ El piloto automático no hace el trabajo completo y no permite al piloto de dorm
 
 El piloto automático recibe señales de varios sensores, un ordenador los evalúa junto con las especificaciones del piloto y luego realiza los ajustes necesarios. El piloto ya no tiene que preocuparse por ir ajustando constantemente.
 
-** Sistema de Lazo Cerrado * *
+**Sistema de Lazo Cerrado**
 
 Lo mismo se aplica a un páncreas artificial con sistema de lazo cerrado. No hace todo el trabajo, todavía tienes que cuidar de tu diabetes. Un sistema de lazo cerrado combina los datos del sensor de un MCG/FGM con tus especificaciones de gestión de diabetes, como la tasa basal, el factor de sensibilidad a insulina y los ratios de hidratos. A partir de esto calcula sugerencias de tratamiento e implementa pequeños ajustes constantemente para mantener tu diabetes dentro del rango objetivo y para ayudarte en ese trabajo. Esto deja más tiempo para el lado "no diabético" de tu vida.
 
@@ -23,12 +23,12 @@ Así como el piloto automático de un avión depende de los valores de los senso
 
 
 Sistemas de Páncreas Artificial con Lazo cerrado en Código Abierto (Open Source)
-===================================================
+==================================================
 Actualmente hay tres grandes sistemas de circuito cerrado de código abierto disponibles:
 
 AndroidAPS (AAPS)
 --------------------------------------------------
-AndroidAPS se describe en detalle en " esta documentación <./WhatisAndroidAPS.html>`_. Utiliza un Smartphone Android para el cálculo y el control de su bomba de insulina. Está en estrecha colaboración con OpenAPS (p.e. comparten algoritmos).
+AndroidAPS se describe en detalle en `esta documentación <./WhatisAndroidAPS.html>`_. Utiliza un Smartphone Android para el cálculo y el control de su bomba de insulina. Está en estrecha colaboración con OpenAPS (p.e. comparten algoritmos).
 
 Las bombas compatibles <../Hardware/pumps.html>`_ son:
 
@@ -40,7 +40,7 @@ Las bombas compatibles <../Hardware/pumps.html>`_ son:
 
 OpenAPS
 --------------------------------------------------
-` OpenAPS <https://openaps.readthedocs.io>` _ fue el primer Sistema de Bucle Cerrado de Código Abierto. Utiliza un ordenador pequeño como Raspberry Pi o Intel Edison.
+` OpenAPS <https://openaps.readthedocs.io>`_ fue el primer Sistema de Bucle Cerrado de Código Abierto. Utiliza un ordenador pequeño como Raspberry Pi o Intel Edison.
 
 Las bombas compatibles son:
 
