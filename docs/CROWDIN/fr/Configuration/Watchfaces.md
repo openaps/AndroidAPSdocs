@@ -108,7 +108,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 * **Afficher IA** (par défaut `On`) : afficher ou non la valeur de l'IA (le paramétrage de l'affichage des valeurs détaillées est dans les paramètres Wear du Générateur de configurations de AAPS)
 * **Afficher GA** (par défaut `On`) : afficher ou non la valeur GA
 * **Afficher Delta** (par défaut `On`) : afficher ou non la variation de Gly des 5 dernières minutes
-* ** Afficher Delta Moyen** (par défaut `On`) : afficher ou non la variation moyenne des Gly des 15 dernières minutes
+* **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
 * **Afficher Batterie Téléphone** (par défaut `On`) : batterie du téléphone en %. Rouge si en dessous de 30%.
 * **Afficher Batterie Système** (par défaut `Off`) : la batterie système est une synthèse de la batterie du Téléphone, de la pompe et de la pile du capteur (en général la plus faible des 3 valeurs)
 * **Afficher Basale** (par défaut `On`) : afficher ou non le débit de basal (en U/h ou en % si DBT)
