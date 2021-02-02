@@ -2,7 +2,7 @@ Résolution de problèmes
 **************************************************
 Vous pouvez trouver des informations de dépannage sur de nombreuses pages dans le wiki. Cette page est une collection de liens pour vous aider à trouver les informations nécessaires pour résoudre votre problème.
 
-D'autres informations utiles peuvent également être disponibles dans la rubrique "FAQ <../Getting-Started/FAQ.html>".
+D'autres informations utiles peuvent également être disponibles dans la rubrique `FAQ <../Getting-Started/FAQ.html>`_.
 
 Application AndroidAPS
 ==================================================
