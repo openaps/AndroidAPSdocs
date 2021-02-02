@@ -104,7 +104,7 @@ Pour ce faire, effectuez les étapes suivantes sur votre smartphone :
 
 ![Paramètres G5](../images/SampleSetupG5Settings.png)
 
-* NS Client activé (voir [NS Client](../Configuration/Config-Builder#ns-profile) et [Configuration de Nightscout](../Installing-AndroidAPS/Nightscout.md))
+* Source GLY : `App Dexcom G6 (patché)` -- cliquez sur la roue crantée et activez `Remonter les Gly vers NS` et `Transmettre les Gly vers xDrip+` (voir [ source GLY ](../Configuration/BG-Source.rst))
 
 ## Installer xDrip+
 
@@ -138,13 +138,13 @@ Sur votre Samsung Galaxy S7 allez dans Menu > Paramètres > Maintenance de l'app
 
 ## Optionnel : Configurer la Sony Smartwatch 3 (SWR50)
 
-Avec une montre Android Wear, vivre avec son diabète peut être encore plus discrèt. La montre peut être utilisée pour afficher le niveau de glycémie actuel, l'état de la boucle, etc sur le poignet. La montre peut même être utilisée pour contrôler AndroidAPS (par ex. pour lancer discrètement un bolus de repas). Pour ce faire, appuyez deux fois sur la valeur MGC du cadran d'AAPSv2. Le SWR50 fonctionne généralement pour une journée complète jusqu'à ce que la batterie ait besoin d'être rechargée (même chargeur que le Samsung Galaxy S7 : microUSB).
+Avec une montre Android Wear, vivre avec son diabète peut être encore plus discrèt. La montre peut être utilisée pour afficher le niveau de glycémie actuel, l'état de la boucle, etc sur le poignet. sur le poignet. La montre peut même être utilisée pour contrôler AndroidAPS (par ex. pour lancer discrètement un bolus de repas). Pour ce faire, appuyez deux fois sur la valeur MGC du cadran d'AAPSv2. Le SWR50 fonctionne généralement pour une journée complète jusqu'à ce que la batterie ait besoin d'être rechargée (même chargeur que le Samsung Galaxy S7 : microUSB).
 
 ![Montres connectées](../images/SampleSetupSmartwatch.png)
 
-Pour plus d'informations sur les informations affichées sur le cadran, voir [ici](../Configuration/Watchfaces.md).
+voir [pompe Dana RS](../Configuration/DanaRS-Insulin-Pump.md)
 
-* Installez l'application "Android Wear" sur votre smartphone via le Google Play Store et connectez la smartwatch selon les instructions qui y sont données.
+* NS Client activé (voir [NS Client](../Configuration/Config-Builder#ns-profile) et [Configuration de Nightscout](../Installing-AndroidAPS/Nightscout.md))
 * Dans AAPS, choisissez le menu hamburger (coin supérieur gauche) > Générateur de configuration > Général (en bas de la liste) > Wear > Activez sur le côté gauche, cliquez sur la roue crantée > Paramètres de Wear et activez `Commandes depuis la montre`
 * Sur votre montre: faites un appui long sur l'afficheur pour changer de cadran et sélectionnez `AAPSv2`
 * Si nécessaire redémarrer les deux appareils une fois.
