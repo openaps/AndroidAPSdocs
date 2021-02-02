@@ -16,7 +16,7 @@ Activité & Feedback
 * Les information d'âge ont été déplacées dans l'onglet/menu Actions.
 * La vérification de glycémie a été déplacée dans l'onglet/menu Actions.
 * Cible temporaire a été déplacée dans l'onglet/menu Actions.
-* Exercice n'est plus disponible, mais vous pouvez utiliser le champ Notes dans les boîtes de dialogue lorsque vous entrez des bolus, insuline etc. (voir la copie d'écran dans la section `Glucides et bolus <#glucides-et-bolus>`__ de cette page).
+* Exercice n'est plus disponible, mais vous pouvez utiliser le champ Notes dans les boîtes de dialogue lorsque vous entrez des bolus, insuline etc. (voir la copie d'écran dans la section `Glucides et bolus <#id1>`_ de cette page).
 
 Glucides et bolus
 ==============================
@@ -38,7 +38,7 @@ MGC et OpenAPS
   :alt: Careportal MGC et OpenAPS
   
 * L'insertion d'un capteur MGC est maintenant dans l'onglet/menu Actions.
-* Toutes les autres fonctions de cette section ont été supprimées. Vous pouvez utiliser le champ Notes dans les boîtes de dialogue lorsque vous entrez des bolus, insuline etc. (voir la copie d'écran dans la section `Glucides et bolus <#glucides-et-bolus>`__ de cette page).
+* Toutes les autres fonctions de cette section ont été supprimées. Vous pouvez utiliser le champ Notes dans les boîtes de dialogue lorsque vous entrez des bolus, insuline etc. (voir la copie d'écran dans la section `Glucides et bolus <#id1>`_ de cette page).
 
 Pompe
 ==============================
