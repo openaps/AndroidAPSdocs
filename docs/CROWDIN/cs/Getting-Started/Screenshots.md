@@ -130,7 +130,7 @@ Toto je první obrazovka, na kterou narazíte, když spustíte aplikaci AndroidA
 #### Activate optional information
 
 * Click the triangle on the right side of the main graph to select which information will be displayed in the main graph.
-* For the main graph just the three options above the line "\---\-\--- Graph 1 \---\-\---" are available.
+* For the main graph just the three options above the line "\---\---- Graph 1 \---\----" are available.
    
    ![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
@@ -173,7 +173,7 @@ Obvykle vaše skutečná křivka glykémie končí uprostřed těchto linek nebo
 
 ![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
-* To add an additional graph check the box on the left side of its name (i.e. \---\-\--- Graph 1 \---\-\---).
+* To add an additional graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
 
 #### Absolutní inzulin
 
@@ -226,7 +226,7 @@ Obvykle vaše skutečná křivka glykémie končí uprostřed těchto linek nebo
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* To give a certain amount of insulin without using [bolus calculator](../Getting-Started/Screenhots#bolus-wizard).
+* To give a certain amount of insulin without using [bolus calculator](../Getting-Started/Screenshots#bolus-wizard).
 * By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences#default-temp-targets).
 * If you do not want to bolus through pump but record insulin amount (i.e. insulin given by syringe) check the corresponding box.
 
