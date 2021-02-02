@@ -150,7 +150,7 @@ Ve con cuidado, a menudo este parámetro se establece demasido bajo. Demasiado b
 * ISF = 30 => 90/30 = 3 unidades de insulina
 * ISF = 45 => 90/45 = 2 unidades de insulina
 
-Un factos de sensibilidad a la insulina (ISF) demasiado bajo puede resultar en sobre-correcciones ya que AAPS piensa que necesita más insulina, para corregir BGs altas, de la que realmente necesita. Esto puede derivar en "montañas rusas" de BG ( especialmente en ayunas). En estas circunstancias necesitas aumentar tu ISF. Esto significará que AAPS corregirá con dosis más pequeñas, evitando que las sobre-correcciones de BG altas provoquen BG demasiado bajas Esto significa que AAPS entregará dosis de corrección más pequeñas evitando provocar bajadas de BG al sobrecorregir BG altos.
+Un factos de sensibilidad a la insulina (ISF) demasiado bajo puede resultar en sobre-correcciones ya que AAPS piensa que necesita más insulina, para corregir BGs altas, de la que realmente necesita. Esto puede derivar en "montañas rusas" de BG ( especialmente en ayunas). En estas circunstancias necesitas aumentar tu ISF. En estas circunstancias necesitas aumentar tu ISF. Esto significará que AAPS corregirá con dosis más pequeñas, evitando que las sobre-correcciones de BG altas provoquen BG demasiado bajas Esto significa que AAPS entregará dosis de corrección más pequeñas evitando provocar bajadas de BG al sobrecorregir BG altos.
 
 Por el contrario, un ISF demasiado alto puede resultar en correcciones insuficientes, provocando que tu BG se mantenga por encima del objetivo – especialmente durante la noche.
 
@@ -162,7 +162,7 @@ Gramos de carbohidratos por unidad de insulina.
 
 Algunas personas también utilizan I:C en lugar de IC o hablan de la proporción de carbohidratos (CR).
 
-Suponiendo una basal correcta, puedes comprobar el parámetro: con una IOB de cero, estando en rango, si comes una cantidad conocida de carbohidratos y tomas la cantidad de insulina calculada con el IC actual (es recomendable que comas en tu horario habitual y que cuentes los hidratos con precisión).
+Suponiendo una basal correcta, puedes comprobar el parámetro: con una IOB de cero, estando en rango, si comes una cantidad conocida de carbohidratos y tomas la cantidad de insulina calculada con el IC actual (es recomendable que comas en tu horario habitual y que cuentes los hidratos con precisión). (es recomendable que comas en tu horario habitual y que cuentes los hidratos con precisión).
 
 > **NOTA:**
 > 
@@ -212,7 +212,7 @@ En primer lugar, comprueba tu basal y realiza una prueba de basal sin hidratos. 
 
 ### ¿Qué causa picos postprandiales elevados en lazo cerrado?
 
-En primer lugar, comprueba tu basal y realiza una prueba de basal sin hidratos. Si es correcta, y tu BG se acerca a tu objetivo una vez se han absorbido completamente los hidratos, prueba de poner un objetivo temporal "comida en breve" ('eating soon') en AndroidAPS un rato antes de comer, o piensa en un pre-bolus adecuando con la ayuda de tu endocrino. Si tu BG es demasiado alta despues de comer y aún demasiado alta despues de que los hidratos se hayan absorbido completamente, piensa en reducir tu IC con la ayuda de tu endocrino. Si tu BG es demasiado alta mientras haya COB y demasiado baja una vez absorbidos todos los hidratos, piensa en incrementar tu IC y en un pre-bolus apropiado con la ayuda de tu endocrino.
+En primer lugar, comprueba tu basal y realiza una prueba de basal sin hidratos. Si es correcta, y tu BG se acerca a tu objetivo una vez se han absorbido completamente los hidratos, prueba de poner un objetivo temporal "comida en breve" ('eating soon') en AndroidAPS un rato antes de comer, o piensa en un pre-bolus adecuando con la ayuda de tu endocrino. Si tu BG es demasiado alta despues de comer y aún demasiado alta despues de que los hidratos se hayan absorbido completamente, piensa en reducir tu IC con la ayuda de tu endocrino. Si tu BG es demasiado alta mientras haya COB y demasiado baja una vez absorbidos todos los hidratos, piensa en incrementar tu IC y en un pre-bolus apropiado con la ayuda de tu endocrino. Si tu BG es demasiado alta despues de comer y aún demasiado alta despues de que los hidratos se hayan absorbido completamente, piensa en reducir tu IC con la ayuda de tu endocrino. Si tu BG es demasiado alta mientras haya COB y demasiado baja una vez absorbidos todos los hidratos, piensa en incrementar tu IC y en un pre-bolus apropiado con la ayuda de tu endocrino.
 
 # Otros ajustes
 
@@ -240,7 +240,7 @@ El lazo puede reducir la batería de la bomba más rápido que el uso normal por
 
 * dismunir el tiempo que pasa la pantalla LCD encendida(desde el menú de configuración de la bomba)
 * reducir la duración de la iluminación de fondo (desde el menú de configuración de la bomba)
-* seleccionar los ajustes de notificación para que suene en lugar de que vibre (desde el menú de configuración de la bomba) 
+* seleccionar los ajustes de notificación para que suene en lugar de que vibre (desde el menú de configuración de la bomba)
 * sólo utilizar los botones de la bomba para recargar, usa AndroidAPS para visualizar el historial, el nivel de la bateria o la cantidad de insulina restante.
 * Puede que la app AndroidAPS se cierre a menudo para ahorrar bateria o liberar memoria RAM en algunos móvies. Cuando AndroidAPS se reinicializa en cada arranque, vueleve a establecer la conexión Bluetooth con la bomba y descarga la basal actual y el historial de bolus. Esto consume batería. Para ver si esto esta sucediendo, ve a Preferencias > NSClient y habilita "Registro de inicio de la app en NS'. Nightscout va a recibir un aviso en cada reinicio de AndroidAPS, lo que facilitará identificar el problema. Para evitar que esto suceda, añade AndroidAPS en la lista de excepciones en "ajustes de batería" de tu móvil, así el modo "Ahorro de batería" no cerrará la app.
     
