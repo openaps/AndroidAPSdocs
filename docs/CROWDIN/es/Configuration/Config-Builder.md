@@ -109,37 +109,37 @@ Desventajas:
 * La DIA no es la misma para cada persona. Es por eso que tienes que probarlo por ti mismo. 
 * Pero siempre debe ser de al menos 5 horas.
 * For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
-* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page. 
+* Puede leer más sobre esto en la sección Perfil de Insulina de [aquí](../Getting-Started/Screenshots#insulin-profile). 
 
 ### Insulin type differences
 
 * For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
 * Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
-* The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. 
-* You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
+* El [gráfico de la curva de insulina](../Getting-Started/Screenshots#insulin-profile) le ayuda a comprender las diferentes curvas. 
+* Puede verlo habilitando la casilla de verificación para mostrarla como una pestaña, de lo contrario estará en el menú hamburgesa.
 
 #### Rapid-Acting Oref
 
-* recommended for Humalog, Novolog and Novorapid
-* DIA = at least 5.0h
-* Max. peak = 75 minutes after injection (fixed, not adjustable)
+* recomendado para Humalog, Novolog y Novorapid
+* DIA = al menos 5.0h
+* Máx. pico = 75 minutos después de la inyección (fijo, no ajustable)
 
 #### Ultra-Rapid Oref
 
-* recommended for FIASP
-* DIA = at least 5.0h
-* Max. peak = 55 minutes after injection (fixed, not adjustable)
+* recomendado para FIASP
+* DIA = al menos 5.0h
+* Máx. pico = 55 minutos después de la inyección (fijo, no ajustable)
 
 #### Lyumjev
 
 * special insulin profile for Lyumjev
-* DIA = at least 5.0h
-* Max. peak = 45 minutes after injection (fixed, not adjustable)
+* DIA = al menos 5.0h
+* Máx. pico = 45 minutos después de la inyección (fijo, no ajustable)
 
-#### Free Peak Oref
+#### Free-Peak Oref
 
 * With the "Free Peak 0ref" profile you can individually enter the peak time.
-* The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+* El DIA se establece automáticamente en 5 horas si no se especifica un valor superior en el perfil.
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
 ## Fuentes de BG (datos de glucemia)
@@ -150,30 +150,30 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 * NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
-* [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
+* [Dexcom App (parcheada) ](https://github.com/dexcomapp/dexcomapp/) -Seleccione 'Enviar datos de BG a xDrip +' si desea utilizar las alarmas xDrip +.
     
     ![Config Builder BG source](../images/ConfBuild_BGSource.png)
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
-* [Tomato App](http://tomato.cool/) for MiaoMiao device
-* Random BG: Generates random BG data (Demo mode only)
+* [Tomato App](http://tomato.cool/) para dispositivo MiaoMiao
+* BG aleatorio: genera datos BG aleatorios (sólo demostración)
 
 ## Bomba
 
-Select the pump you are using.
+Seleccione la bomba que está utilizando.
 
 * [Dana R](DanaR-Insulin-Pump.md)
-* Dana R Korean (for domestic DanaR pump)
-* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
+* Dana R Coreano (para la bomba doméstica DanaR)
+* Dana Rv2 (bomba DanaR con actualización de firmware no oficial)
 * [Dana RS](DanaRS-Insulin-Pump.md)
-* [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
-* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Accu-Chek Insight](Accu-Chek-Insight-Pump.md)
+* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requiere la instalación de ruffy)
 * [Medtronic](MedtronicPump.md)
-* MDI (receive AAPS suggestions for your multiple daily injections therapy)
-* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
+* MDI (recibir sugerencias de AAPS para su terapia de inyecciones múltiples diarias)
+* Bomba virtual (bucle abierto para bombas todavía sin controlador - AAPS sólo sugerencias)
 
-For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. Desactiva bluetooth por un segundo si no es posible ninguna conexión a la bomba. This may help on some phones where the bluetooth stack freezes.
 
 [Password for Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
 
