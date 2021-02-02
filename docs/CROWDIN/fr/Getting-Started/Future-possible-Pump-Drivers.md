@@ -100,7 +100,7 @@ Il y quelque temps, il y avait un firmware appelé T:AP (mentionné dans cet [ar
 
 **Pré-requis**
 
-- La pompe doit prendre en charge un contrôle à distance (Bluetooth, fréquence radio, etc.).
+- La pompe doit prendre en charge un contrôle à distance (Bluetooth, fréquence radio, etc.). (Bluetooth, fréquence radio, etc.).
 - Le protocole est piraté/documenté/etc.
 
 **Exigences minimales**
