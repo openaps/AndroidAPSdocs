@@ -130,7 +130,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 #### Activation des informations optionnelles
 
 * Cliquez sur le triangle situé sur le côté droit du graphique principal pour sélectionner les informations qui seront affichées dans le graphique principal.
-* Pour le graphique principal, juste les trois options au-dessus de la ligne "\---\---- Graph 1 \---\----" sont disponibles.
+* Pour le graphique principal, juste les trois options au-dessus de la ligne "\---\-\--- Graph 1 \---\-\---" sont disponibles.
    
    ![Réglage du graphique principal](../images/Home2020_MainGraphSetting.png)
 
@@ -173,7 +173,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 ![Paramètres graphiques additionnels](../images/Home2020_AdditionalGraphSetting.png)
 
-* Pour ajouter un graphique supplémentaire, cochez la case sur le côté gauche de son nom (par ex. \---\---- Graph 1 \---\----).
+* Pour ajouter un graphique supplémentaire, cochez la case sur le côté gauche de son nom (par ex. \---\-\--- Graph 1 \---\-\---).
 
 #### Insuline absolue
 
@@ -195,8 +195,8 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 #### Déviations
 
 * barres **GRISES** montrent un écart dû aux glucides. 
-* barres **VERTES** montrent que la Gly est supérieure à l'attendu de l'algorithme Les barres vertes sont utilisées par [Autosens](../Usage/Open-APS-features#autosens) pour augmenter la résistance.
 * barres **ROUGES** montrent que la Gly est inférieur à l'attendu de l'algorithme. Les barres rouges sont utilisées par [Autosens](../Usage/Open-APS-features#autosens) pour augmenter la sensibilité.
+* barres **ROUGES** montrent que la Gly est inférieur à l'attendu de l'algorithme. barres **VERTES** montrent que la Gly est supérieure à l'attendu de l'algorithme Les barres vertes sont utilisées par [Autosens](../Usage/Open-APS-features#autosens) pour augmenter la résistance.
 * barres **JAUNES** montrent une déviation due aux RNS.
 * barres **NOIRES** montrent de petites déviations non prises en compte pour la sensibilité
 
@@ -226,9 +226,9 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 ![Bouton Insuline](../images/Home2020_ButtonInsulin.png)
 
-* Permet d'entrer une certaine quantité d'insuline sans utiliser l'[Assistant bolus](../Getting-Started/Screenshots#assistant-bolus).
+* Permet d'entrer une certaine quantité d'insuline sans utiliser l'[Assistant rapide](../Getting-Started/Screenshots#assistant-rapide).
 * En cochant la case, vous pouvez démarrer automatiquement votre [cible temporaire Repas imminent](../Configuration/Preferences#default-temp-targets).
-* Si vous ne voulez pas injecter de bolus avec la pompe mais juste enregistrer la quantité d'insuline (par ex. pour de l'insuline injectée avec un stylo ou une seringue), cochez la case correspondante.
+* Si vous ne voulez pas injecter de bolus avec la pompe mais juste enregistrer la quantité d'insuline (par ex.
 
 #### Glucides
 
@@ -282,7 +282,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 ### Section J
 
-* SUPER BOLUS : permet d'ajouter l'insuline basale des 2 prochaines heures au bolus immédiat, et un débit basal temporaire (DBT) à 0 est défini pour les 2 prochaines heures afin de ne pas avoir d'insuline supplémentaire. L'option n'est disponible que lorsque "[Activer les superbolus dans l'Assistant](../Configuration/Preferences#superbolus)" est activé dans les [préférences](../Configuration/Preferences#apercu).
+* SUPER BOLUS : permet d'ajouter l'insuline basale des 2 prochaines heures au bolus immédiat, et un débit basal temporaire (DBT) à 0 est défini pour les 2 prochaines heures afin de ne pas avoir d'insuline supplémentaire. The option only shows when "Enable [superbolus](../Configuration/Preferences#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences#overview).
 * L'idée est de fournir l'insuline plus tôt et, espérons-le, de réduire les pointes.
 * Pour plus de détails, voir [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -341,8 +341,8 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 #### Niveau du capteur (batterie)
 
-* Nécessite xDrip+ nightly build du 10 décembre 2020 ou plus récent.
-* Fonctionne pour les MGC qui ont des émetteurs supplémentaires tels que MiaoMiao (Techniquement le capteur doit envoyer les informations de niveau de pile à xDrip+).
+* Nécessite xDrip+ nightly build du 10 décembre 2020 ou plus récent. 10 décembre 2020 ou plus récent.
+* Fonctionne pour les MGC qui ont des émetteurs supplémentaires tels que MiaoMiao Fonctionne pour les MGC qui ont des émetteurs supplémentaires tels que MiaoMiao (Techniquement le capteur doit envoyer les informations de niveau de pile à xDrip+).
 * Les limites peuvent être définies dans [les préférences](../Configuration/Preferences#voyants-d-etat).
 * Si le niveau du capteur est le même que celui de la batterie du téléphone, la version xDrip+ est probablement trop ancienne et nécessite une mise à jour.
    
@@ -408,7 +408,7 @@ Careportal reproduisait les fonctions que vous pouvez trouver dans Nightscout so
 
 ![Traitement en 1 ou 2 lignes](../images/Treatment_1or2_lines.png)
 
-L'onglet Traitement peut être utilisé pour corriger les entrées de glucides erronées (par ex. si vous avez surestimé ou sous-estimé les glucides).
+L'onglet Traitement peut être utilisé pour corriger les entrées de glucides erronées (par ex.
 
 1. Vérifiez et mémorisez les GA et IA actuels sur l'écran d'accueil.
 2. Selon la pompe, dans l'onglet Traitement, les glucides peuvent être affichés avec l'insuline sur une seule ligne ou dans deux lignes séparées (par ex. avec Dana RS).
