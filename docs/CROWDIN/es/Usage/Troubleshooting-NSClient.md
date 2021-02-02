@@ -6,7 +6,7 @@ Si nadie te está siguiendo en Nightscout puede pausar NSClient para guardar (mu
 
 * ¿Cómo detectar la conexión inestable?
 
-Vaya a la pestaña NSClient en AAPS y vea el registro. Comportamiento común es recibir PING cada ~ 30s y casi ninguno de los mensajes de reconexiones. Si ve muchas reconexiones, hay un problema. Desde AndroidAPS 2.0 cuando tal comportamiento se detecta NSClient se pausa por 15 minutos y el mensaje "NSClient mal funcionamiento" se muestra en información general.
+Vaya a la pestaña NSClient en AAPS y vea el registro. Si ve muchas reconexiones, hay un problema. Comportamiento común es recibir PING cada ~ 30s y casi ninguno de los mensajes de reconexiones. Desde AndroidAPS 2.0 cuando tal comportamiento se detecta NSClient se pausa por 15 minutos y el mensaje "NSClient mal funcionamiento" se muestra en información general.
 
 * Reiniciar
 
