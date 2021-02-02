@@ -2,15 +2,15 @@
 
 Esta página está pensada para los profesionales que han expresado su interés en la tecnología de páncreas artificial de código abierto, como AndroidAPS, o para pacientes que desean compartir dicha información con sus médicos.
 
-Esta guía tiene alguna información de alto nivel sobre el lazo cerrado de DIY y específicamente cómo funciona AndroidAPS. Para obtener más detalles sobre todos estos temas, por favor vea la documentación completa de AndroidAPS [ en línea](http://androidaps.readthedocs.io/en/latest/index.html). Si tiene alguna pregunta, por favor pida a su paciente más detalles, o siempre sientase libre para llegar a la comunidad con alguna pregunta. (Si no estás en los medios sociales (por ejemplo, [Twitter](https://twitter.com/kozakmilos) o Facebook), se siente libre de enviar por correo electrónico a developers@AndroidAPS.org). [También puede encontrar algunos de los estudios más recientes & resultados relacionados aquí](https://openaps.org/outcomes/).
+Esta guía tiene alguna información de alto nivel sobre el lazo cerrado de DIY y específicamente cómo funciona AndroidAPS. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](../index.rst). Si tiene alguna pregunta, por favor pida a su paciente más detalles, o siempre sientase libre para llegar a la comunidad con alguna pregunta. (Si no estás en los medios sociales (por ejemplo, [Twitter](https://twitter.com/kozakmilos) o Facebook), se siente libre de enviar por correo electrónico a developers@AndroidAPS.org). [También puede encontrar algunos de los estudios más recientes & resultados relacionados aquí](https://openaps.org/outcomes/).
 
 ### Los pasos para crear un lazo cerrado de DIY:
 
 Para empezar a utilizar AndroidAPS, se deben realizar los pasos siguientes:
 
-* Find a [compatible pump](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
-* [Descarga el código fuente de AndroidAPS y construya el software](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
-* [Configure el software para que hable con sus dispositivos de diabetes y especifique los valores y las preferencias de seguridad](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
+* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../index.rst#getting-started).
+* [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.rst#configuration).
 
 ### Cómo funciona un lazo cerrado DIY
 
@@ -35,7 +35,7 @@ También recogerá cualquier información sobre los bolos, el consumo de hidrato
 
 ### ¿Cómo sabe qué hacer?
 
-El software de código abierto está diseñado para que sea fácil para el dispositivo hacer el trabajo que la gente realiza (en el modo manual) para calcular cómo se debe ajustar la entrega de insulina. Primero recopila datos de todos los dispositivos de soporte y de la nube, prepara los datos y ejecuta los cálculos, hace que las predicciones de los niveles esperados de BG durante las próximas horas se espera que hagan en diferentes escenarios, y calcula los ajustes necesarios para mantener o llevar a BG de nuevo al rango de destino. A continuación, se envían los ajustes necesarios a la bomba. A continuación, se envían los ajustes necesarios a la bomba. Luego lee los datos de nuevo y lo hace una y otra vez.
+El software de código abierto está diseñado para que sea fácil para el dispositivo hacer el trabajo que la gente realiza (en el modo manual) para calcular cómo se debe ajustar la entrega de insulina. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of expected BG-levels during the next hours will be expected to do in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. A continuación, se envían los ajustes necesarios a la bomba. Luego lee los datos de nuevo y lo hace una y otra vez.
 
 Como el parámetro de entrada más importante es el nivel de glucosa en sangre procedente de la MCG, es importante disponer de datos de MCG de alta calidad.
 
@@ -43,7 +43,7 @@ AndroidAPS se ha diseñado para realizar un seguimiento transparente de todos lo
 
 ### Ejemplos de la toma de decisiones del algoritmo AndroidAPS:
 
-AndroidAPS utiliza el mismo algoritmo de núcleo y el mismo conjunto de características que OpenAPS. El algoritmo hace varias predicciones (basadas en valores, y la situación) que representan diferentes escenarios de lo que podría suceder en el futuro. En Nightscout, estos se muestran como "líneas púrpuras". En los registros, describirá cuál de estas predicciones y qué marco de tiempo está llevando a cabo las acciones necesarias. AndroidAPS utiliza diferentes colores para separar estas líneas de predicción [](../Installing-AndroidAPS/Releasenotes#overview-tab).
+AndroidAPS utiliza el mismo algoritmo de núcleo y el mismo conjunto de características que OpenAPS. El algoritmo hace varias predicciones (basadas en valores, y la situación) que representan diferentes escenarios de lo que podría suceder en el futuro. En Nightscout, estos se muestran como "líneas púrpuras". AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes#overview-tab). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
 
 #### A continuación se muestran ejemplos de las líneas de predicción púrpura, y cómo pueden diferir:
 
@@ -87,7 +87,7 @@ Adicionalmente, el comportamiento humano (aprendido de la forma manual de la dia
 
 ### OpenAPS
 
-**Esta guía se adoptó de [La guía del médico de OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS es un sistema desarrollado para ser ejecutado en una pequeña computadora portátil (generalmente conocida como la "rig"). AndroidAPS utiliza muchas de las técnicas implementadas en OpenAPS, y comparte gran parte de la lógica y los algoritmos, por lo que esta guía es muy parecida a la guía original. Gran parte de la información acerca de OpenAPS se puede adaptar fácilmente a AndroidAPS, con la diferencia principal siendo la plataforma de hardware donde se ejecuta cada pieza de software.
+**This guide was adopted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AndroidAPS utiliza muchas de las técnicas implementadas en OpenAPS, y comparte gran parte de la lógica y los algoritmos, por lo que esta guía es muy parecida a la guía original. Gran parte de la información acerca de OpenAPS se puede adaptar fácilmente a AndroidAPS, con la diferencia principal siendo la plataforma de hardware donde se ejecuta cada pieza de software.
 
 ### Resumen
 
