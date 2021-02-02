@@ -21,8 +21,8 @@ Entre autres, les informations suivantes font partie des paramètres exportés :
 * `Evènement d'automatisation <../Usage/Automation.html>`_
 * Paramètres du `Générateur de configuration <../Configuration/Config-Builder.html>`_
 * Paramètres des `Profils locaux <../Configuration/Config-Builder.html#profil-local-recommande>`_
-* Résultats des `Objectifs <../Usage/Objectives.html>`_ y compris les résultats de l'objectif 3 `Prouver ses connaissances <../Usage/Objectives.html#objectif-3-prouver-ses-connaissances>`_ les résultats de l'objectif 3 `Prouver ses connaissances <../Usage/Objectives.html#objectif-3-prouver-ses-connaissances>`_
-* `Préférences <../Configuration/Preferences.html>`_ y compris les paramètres `NSClient <../Configuration/Preferences.html#nsclient>`_ les paramètres `NSClient <../Configuration/Preferences.html#nsclient>`_
+* `Objectives <../Usage/Objectives.html>`_ status incl. les résultats de l'objectif 3 `Prouver ses connaissances <../Usage/Objectives.html#objectif-3-prouver-ses-connaissances>`_
+* `Preferences <../Configuration/Preferences.html>`_ incl. les paramètres `NSClient <../Configuration/Preferences.html#nsclient>`_
 
 Format de sauvegarde chiffré
 ==================================================
@@ -84,6 +84,6 @@ Importer les paramètres des versions précédentes (avant AAPS 2.7)
 
 Transférer les paramètres
 ==================================================
-* La meilleure façon de transférer des fichiers de paramètres sur un nouveau téléphone est via un câble USB ou un service cloud (par ex.
+* Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
 * Des aides peuvent être trouvées sur le web, par ex. `Aide Android <https://support.google.com/android/answer/9064445?hl=fr>`_.
 * Si vous rencontrez des problèmes avec le fichier transféré, essayez de transférer le fichier par d'une autre façon.
