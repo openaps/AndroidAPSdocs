@@ -36,9 +36,9 @@ Les inhibiteurs SGLT-2, aussi appelés gliflozines, empêchent la réabsorption 
 Téléphone
 --------------------------------------------------
 La version actuelle d'AndroidAPS nécessite un smartphone Android avec Google Android 8.0 ou supérieur. Donc si vous pensez à un nouveau téléphone, un Android 8.1 minimum est recommandé mais choisissez de préférence une version Android 9 ou 10.
-Cependant pour les utilisateurs qui ne peuvent pas utiliser d'appareil avec Android 8 minimum, la version 2.6.1.4 d'AndroidAPS, adaptée aux versions plus anciennes d'Android, reste disponible sur l'`ancien dépôt. <https://github.com/miloskozak/androidaps>`_
+Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>`_
 
-Les utilisateurs sont en train de créer une `liste des téléphones et des montres testées <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_.
+Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
 Pour enregistrer un téléphone ou une montre qui n'est pas déjà dans la feuille de calcul, veuillez remplir le `formulaire <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
@@ -65,16 +65,16 @@ La Combo, l'Insight et les anciennes Medtronics sont des pompes solides et boucl
 
 Les avantages de la DanaR/RS vs. la Combo comme choix de pompe de choix sont :
 
-- La pompe Dana R/RS se connecte à presque tous les téléphones avec Android >= 5.1 sans avoir besoin de flasher le Lineage OS. Si votre téléphone se casse, vous pouvez trouver facilement en remplacement n'importe quel téléphone qui fonctionne avec les pompes DanaR/RS... ce n'est pas aussi facile avec la Combo. (Cela pourrait changer à l'avenir quand Android 8.1 sera plus populaire)
+- The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. Si votre téléphone se casse, vous pouvez trouver facilement en remplacement n'importe quel téléphone qui fonctionne avec les pompes DanaR/RS... ce n'est pas aussi facile avec la Combo. (Cela pourrait changer à l'avenir quand Android 8.1 sera plus populaire)
 - L'appairement initial est plus simple avec la Dana* RS. Mais en général, vous ne le faites qu'une seule fois, cela n'a d'impact que si vous voulez tester une nouvelle fonctionnalité avec des pompes différentes.
-- Jusqu'à présent, le Combo fonctionne avec l'écran en veille. En général, cela fonctionne bien, mais c'est lent. Pour le bouclage, cela n'a pas d'importance car tout fonctionne en arrière-plan. Il y a beaucoup plus de connections BT, donc plus de risques où la connexion BT pourrait se rompre, ce qui n'est pas si facile si vous vous éloignez de votre téléphone par ex. 
+- Jusqu'à présent, le Combo fonctionne avec l'écran en veille. En général, cela fonctionne bien, mais c'est lent. Pour le bouclage, cela n'a pas d'importance car tout fonctionne en arrière-plan. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking. 
 - La Combo vibre à la fin des DBTs (Basal Temporaire), la Dana* R vibre (ou bips) sur les SMB. La nuit, vous êtes susceptibles de plus utiliser les DBT que les SMB.  Le Dana * RS est configurable pour ne pas émettre de bip ni vibrer.
 - La lecture de l'historique sur le RS en quelques secondes avec des glucides permet de changer facilement de téléphone en mode hors connexion et de poursuivre la boucle dès que des valeurs de MGC sont lues.
 - Toutes les pompes avec lesquelles AndroidAPS peut parler sont étanches à la livraison. Seules les pompes Dana sont également "étanches par garantie" en raison du compartiment de batteries scellées et du système de remplissage du réservoir. 
 
 Source GLY
 --------------------------------------------------
-Voici un bref aperçu de tous les MGC/MGF compatibles avec AndroidAPS. Pour plus de détails, consultez `ceci <../Configuration/BG-Source.html>`_. Juste une petite astuce : si vous voulez afficher vos glycémies dans l'application xDrip+ ou dans le site web Nightscout, vous pouvez choisir xDrip+ (ou Nightscout avec connexion web) comme source de glycémie dans AAPS.
+Voici un bref aperçu de tous les MGC/MGF compatibles avec AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`__. Juste une petite astuce : si vous voulez afficher vos glycémies dans l'application xDrip+ ou dans le site web Nightscout, vous pouvez choisir xDrip+ (ou Nightscout avec connexion web) comme source de glycémie dans AAPS.
 
 * `Dexcom G6 <../Hardware/DexcomG6.html>`_ : Il fonctionne avec l'application xDrip+ ou l'application Dexcom patchée
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_ : Il fonctionne avec l'application xDrip+ ou l'application Dexcom patchée
@@ -91,11 +91,11 @@ Nightscout est une application Web open source qui peut enregistrer et afficher 
 
 Nightscout est indépendant des autres modules. Vous en aurez besoin pour réaliser l'objectif 1.
 
-Des informations supplémentaires sur la configuration de Nightscout pour l'utiliser avec AndroidAPS peuvent être trouvées `ici <../Installing-AndroidAPS/Nightscout.html>`_.
+Additional information on how to configure Nightscout for use with AndroidAPS can be found `here <../Installing-AndroidAPS/Nightscout.html>`__.
 
 Fichier apk de AAPS
 --------------------------------------------------
-Le composant de base du système. Avant d'installer l'application, vous devez d'abord construire le fichier apk (qui est l'extension pour une application Android). Les instructions sont `ici <../Installing-AndroidAPS/Building-APK.html>`_.  
+Le composant de base du système. Avant d'installer l'application, vous devez d'abord construire le fichier apk (qui est l'extension pour une application Android). Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`__.  
 
 Composants optionnels
 ==================================================
@@ -103,7 +103,7 @@ Montres connectées
 --------------------------------------------------
 Vous pouvez choisir n'importe quelle montre connectée avec Android Wear 1.x et plus. La plupart des boucleurs portent une montre Sony Smartwatch 3 (SWR50) car c'est la seule montre qui peut obtenir des lectures de Dexcom G5/G6 quand le téléphone est hors de portée. D'autres montres peuvent également être patchées pour fonctionner comme récepteur indépendant (voir `cette documentation <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ pour plus de détails).
 
-Les utilisateurs sont en train de créer une `liste des téléphones et des montres testées <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ Ils y a plusieurs cadrans disponibles pour AndroidAPS que vous pouvez trouver `ici <../Configuration/Watchfaces.html>`_.
+Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`__.
 
 Pour enregistrer un téléphone ou une montre qui n'est pas déjà dans la feuille de calcul, veuillez remplir le `formulaire <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
@@ -111,7 +111,7 @@ En cas de problème avec la feuille de calcul, merci d'envoyer un mail à `hardw
 
 xDrip+
 --------------------------------------------------
-Même si vous n'avez pas besoin d'avoir l'application xDrip+ en tant que Source GLY, vous pouvez toujours l'utiliser par ex. pour les alertes ou pour un bon affichage des glycémies. Vous pouvez avoir autant d'alarmes que vous le souhaitez, spécifier l'heure à laquelle l'alarme doit être active, si elle peut remplacer le mode silencieux, etc. Certaines informations xDrip+ peuvent être trouvées `ici <../Configuration/xdrip.html>`_. Veuillez noter que les documentations de cette application ne sont pas toujours à jour car leur progression est assez rapide.
+Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. Vous pouvez avoir autant d'alarmes que vous le souhaitez, spécifier l'heure à laquelle l'alarme doit être active, si elle peut remplacer le mode silencieux, etc. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`__. Veuillez noter que les documentations de cette application ne sont pas toujours à jour car leur progression est assez rapide.
 
 Exemple de configuration
 ==================================================
