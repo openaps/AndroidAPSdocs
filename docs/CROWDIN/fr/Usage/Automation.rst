@@ -7,7 +7,7 @@ Pour des évènements identiques et fréquents, vous devrez peut-être toujours 
 
 Par ex. lorsque votre Gly est trop faible, vous pouvez décider d'avoir automatiquement une cible temporaire haute. Ou si vous êtes à votre centre de fitness, vous activez automatiquement une cible temp. 
 
-Avant d'utiliser l'Automatisation, vous devez être à l'aise avec l'utilisation des `cibles temp. 
+Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
 
 Assurez-vous de bien comprendre comment l'automatisation fonctionne avant de configurer votre première règle simple. **Au lieu de l'action, laisser AAPS n'afficher qu'une notification.** Quand vous êtes sûr que l'automatisation est déclenchée au bon moment, remplacez la notification par une action réelle.
 
@@ -109,7 +109,7 @@ Bonnes pratiques et avertissements
 
   **C'est doublement important si l'action est un changement de profil!**
  
-* Essayez de privilégier l'utilisation de Cibles Temp. Les Cibles temporaires ne réinitialisent pas `Autosens <../Usage/Open-APS-features.html#autosens>`_ à 0.
+* Try to use Temp Targets instead of Profile Switches. Les Cibles temporaires ne réinitialisent pas `Autosens <../Usage/Open-APS-features.html#autosens>`_ à 0.
 * Assurez-vous que les cchangements de profil sont faits avec parcimonie et de préférence en dernier recours.
 
   * Les changements de profil rendent `Autosens <../Usage/Open-APS-features.html#autosens>`_ inutilisable pendant au minimum 6 heures.
@@ -127,14 +127,14 @@ Ce ne sont que des exemplesde configuration, pas des conseils. Ne les reproduise
 * Définition d'une cible temporaire pour les activités en fonction du temps, de l'emplacement, de la connexion à un périphérique Bluetooth ...
 * Définition d'une cible temporaire repas imminent basée sur l'heure et la localisation...
 
-Glycémie basse
+Low Glucose Temp Target
 --------------------------------------------------
 .. image:: ../images/Automation2.png
   :alt: Automatisation2
 
 Ceci est pour quelqu'un qui veut avoir automatiquement une cible temporaire d'hypo lorsque sa glycémie est basse.
 
-heure du repas
+Lunch Time Temp Target
 --------------------------------------------------
 .. image:: ../images/Automation3.png
   :alt: Automatisation3
@@ -143,7 +143,7 @@ Cet exemple est pour quelqu'un qui déjeune au travail tous les jours à la mêm
 
 Utilisation incorrecte de l'automatisation
 --------------------------------------------------
-Veuillez noter que si vous n'utilisez pas correctement l'automatisation, cela pourrait entraîner des difficultés et même être dangereux pour votre santé. cela pourrait entraîner des difficultés et même être dangereux pour votre santé. Des exemples d'utilisation incorrecte sont :
+Please be aware to use automation incorrectly. cela pourrait entraîner des difficultés et même être dangereux pour votre santé. Des exemples d'utilisation incorrecte sont :
 
 * Essayer de surcharger l'algorithme au lieu de l'utiliser simplement comme une aide (par ex. en changeant de profil au lieu d'ajuster le débit de basal, le G/I etc.)
 * Régler le profil pour compenser la nourriture
