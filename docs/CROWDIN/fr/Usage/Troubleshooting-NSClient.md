@@ -6,7 +6,7 @@ Si personne ne vous suit sur Nightscout vous pouvez faire une pause NSClient pou
 
 * Comment détecter une connexion instable ?
 
-Allez dans l'onglet NSClient dans AAPS et regardez le journal. Le comportement habituel est de recevoir une commande PING toutes les ~ 30 secondes et presque aucun message de reconnexion. Si vous voyez beaucoup de reconnexions il y a un problème. Depuis andoridAPS 2.0 quand un tel comportement est détecté NSClient est mis en pause pendant 15 minutes et le message "Dysfonctionnement NSClient." s'affiche dans l'aperçu.
+Allez dans l'onglet NSClient dans AAPS et regardez le journal. Si vous voyez beaucoup de reconnexions il y a un problème. Le comportement habituel est de recevoir une commande PING toutes les ~ 30 secondes et presque aucun message de reconnexion. Depuis andoridAPS 2.0 quand un tel comportement est détecté NSClient est mis en pause pendant 15 minutes et le message "Dysfonctionnement NSClient." s'affiche dans l'aperçu.
 
 * Redémarrer
 
