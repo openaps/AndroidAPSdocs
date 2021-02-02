@@ -6,7 +6,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### Omnipod DASH ([Homepage ](https://www.myomnipod.com/DASH))
 
-**Loop status: ** Actualmente no está soportado por ninguno de los sistemas de lazo cerrado. La bomba es candidata, pero el protocolo aún se desconoce. La venta de la bomba se inició oficialmente en enero de 2019.
+**Loop status:** Currently not supported by any of loop system. La bomba es candidata, pero el protocolo aún se desconoce. La venta de la bomba se inició oficialmente en enero de 2019.
 
 **Requisitos de hardware para AAPS: ** Probablemente ninguno. Está habilitada para BT.
 
@@ -24,7 +24,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
-**Loop status: ** Actualmente no está soportado por ninguno de los sistemas de lazo cerrado. Se considera una candidata para sistemas de bucle cerrado, pero en la medida que aún no se conoce el protocolo, no se prevé que sea soportada en breve.
+**Loop status:** Currently not supported by any of loop system. Se considera una candidata para sistemas de bucle cerrado, pero en la medida que aún no se conoce el protocolo, no se prevé que sea soportada en breve.
 
 **Requisitos de hardware para AAPS: ** Probablemente ninguno. Está habilitada para BT.
 
@@ -54,15 +54,15 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### Medtronic Bluetooth
 
-**Comentarios: ** Esto es la bomba que se presentará en los próximos años y se ha planificado para que sea compatible con el software Tidepool Loop ([ver este artículo ](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration)).
+**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
 
 ### Bomba de insulina Willcare ([página web](http://en.shinmyungmedi.com))
 
-** Estado del bucle: ** Por el momento, no es candidato de Loop, pero su personal nos ha contactado y están interesados en que su bomba sea loopeable (por el momento, creo que faltan sólo los mandatos de perfil get/set).
+**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
 
 **Requisitos hardware para AAPS: ** ninguno. Parece estar habilitado para BT.
 
-** Comentarios: ** Puesto que la empresa está interesada en la integración con AAPS, es posible que lo hagan ellos mismos.
+**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
 
 * * *
 
@@ -70,7 +70,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
-**Loop status: ** Actualmente no está soportado por ninguno de los sistemas de lazo cerrado. Se considera una candidata para sistemas de bucle cerrado, pero en la medida que aún no se conoce el protocolo, no se prevé que sea soportada en breve.
+**Loop status:** Currently not supported by any of loop system. Se considera una candidata para sistemas de bucle cerrado, pero en la medida que aún no se conoce el protocolo, no se prevé que sea soportada en breve.
 
 **Requisitos de hardware para AAPS: ** Probablemente ninguno. Está habilitada para BT.
 
