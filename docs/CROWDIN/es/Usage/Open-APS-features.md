@@ -93,7 +93,7 @@ SMB está trabajando cuando hay un objetivo temporal bajo o alto activo (comer p
 
 ### Habilitar SMB con Objetivo Temporal Alto
 
-SMB está trabajando cuando hay un objetivo temporal alto activo (actividad, hipo). Esta opción puede limitar otros valores de SMB, es decir, si 'SMB con objetivos temporales' está habilitado y 'SMB con objetivos temporales altos' está desactivado, SMB sólo funciona con objectivos bajos y no con obj. Es lo mismo para SMB habilitado con COB: si se desactiva 'SMB con objetivos temporales altos', no hay ningún SMB con un obj. alto temporal, incluso con COB activos.
+SMB está trabajando cuando hay un objetivo temporal alto activo (actividad, hipo). This option can limit other SMB Settings, i.e. if ‘SMB with temp targets’ is enabled and ‘SMB with high temp targets’ is deactivated, SMB just works with low and not with high temp targets. Es lo mismo para SMB habilitado con COB: si se desactiva 'SMB con objetivos temporales altos', no hay ningún SMB con un obj. alto temporal, incluso con COB activos.
 
 ### Habilitar SMB siempre
 
@@ -167,7 +167,7 @@ Los parámetros codificados en AndroidAPS son los siguientes:
 
 *See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
-### El máximo basal IOB que OpenAPS puede entregar \[U\] (OpenAPS "max-iob")
+### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
 
 Este parámetro limita el máximo de IOB basal donde todavía funciona AndroidAPS. Si el IOB es más alto, deja de inyectar insulina basal adicional hasta que el basal IOB esté bajo el límite.
 
@@ -187,7 +187,7 @@ Aquí, puede elegir, si desea utilizar la [detección de sensibilidad](../Config
 
 ### El autosensado ajusta los objetivos temporales también
 
-Si tiene esta opción habilitada, la autosensibilidad puede ajustar los objetivos (junto a basal, ISF e IC), también. Esto permite a AndroidAPS trabajar más 'agresivo' o no. Es posible que el objectivo actual se alcance más rápido con esto. Es posible que el objectivo actual se alcance más rápido con esto.
+Si tiene esta opción habilitada, la autosensibilidad puede ajustar los objetivos (junto a basal, ISF e IC), también. This lets AndroidAPS work more 'aggressive' or not. Es posible que el objectivo actual se alcance más rápido con esto.
 
 ### Ajustes avanzados
 
@@ -201,7 +201,7 @@ Valor predeterminado: 3 (no se debe cambiar a menos que realmente necesite y sep
 
 Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing)
 
-**Bolo snooze dia divisor** La función "bolus snooze" funciona después de un bolo de comida. AAPS no establece las bajas tasas basales temporales después de una comida en el período de DIA dividida por el parámetro "bolus snooze". El valor predeterminado es 2. Eso significa que con un DIA de 5h, el "bolus snooze" sería 5h: 2 = 2.5h de tiempo.
+**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS no establece las bajas tasas basales temporales después de una comida en el período de DIA dividida por el parámetro "bolus snooze". El valor predeterminado es 2. Eso significa que con un DIA de 5h, el "bolus snooze" sería 5h: 2 = 2.5h de tiempo.
 
 Valor predeterminado: 2
 
