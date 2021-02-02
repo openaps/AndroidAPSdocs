@@ -54,7 +54,7 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 ### Medtronic Bluetooth
 
-**Commentaires :** Cette pompe sortira dans les prochaines années et devrait être prise en charge par le logiciel Tidepool Loop ([voir cet article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
+**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
 
 ### Pompe Insuline Willcare ([Page d'accueil](http://en.shinmyungmedi.com))
 
@@ -100,7 +100,7 @@ Il y quelque temps, il y avait un firmware appelé T:AP (mentionné dans cet [ar
 
 **Pré-requis**
 
-- La pompe doit prendre en charge un contrôle à distance (Bluetooth, fréquence radio, etc.). (Bluetooth, fréquence radio, etc.).
+- Pump has to support some kind of remote control. (Bluetooth, fréquence radio, etc.).
 - Le protocole est piraté/documenté/etc.
 
 **Exigences minimales**
