@@ -38,6 +38,6 @@ Antes de comenzar tu rig, necesitarás muchas horas de lectura para comprender c
 
 ## En YouTube
 
-[Tim Omer: empoderando usuarios "Hackers de salud"- No estamos esperando¡ - https://www.youtube.com/watch?v=RjhkRmL1wOI - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
+[Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
 
 [Entrevista en directo con Dana Lewis, creador de hágalo usted mismo sistema de páncreas - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)
