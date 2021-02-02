@@ -14,18 +14,18 @@ Paso 1: Construye tu propia Librelink-App parcheada
 
 Por razones legales, el llamado parche tiene que ser hecho por usted mismo. Utilizar motores de búsqueda para encontrar los enlaces correspondientes. Hay principalmente dos variantes: La aplicación parcheada bloquea cualquier tráfico de Internet para evitar el rastreo. La otra variante es compatible con LibreView que puede ser necesario para su médico.
 
-La aplicación parcheada tiene que ser instalada en lugar de la app original. El siguiente sensor iniciado con él transmitirá los valores actuales de BG a la aplicación xDrip + que se ejecuta en su smartphone a través de Bluetooth.
+El siguiente sensor iniciado con él transmitirá los valores actuales de BG a la aplicación xDrip + que se ejecuta en su smartphone a través de Bluetooth.
 
 Importante: Para evitar posibles problemas puede ayudar a instalar y desinstalar la aplicación original en un smartphone con capacidad NFC. NFC tiene que estar habilitado. Esto no suma consumo a la batería. A continuación, instale la aplicación parcheada. 
 
-La aplicación parcheada se puede identificar mediante la notificación de autorización de primer plano. El servicio de autorización de primer plano mejora la estabilidad de la conexión en comparación con la aplicación original que no utiliza este servicio.
+La aplicación parcheada se puede identificar mediante la notificación de autorización de primer plano. El servicio de autorización de primer plano mejora la estabilidad de la conexión en comparación con la aplicación original que no utiliza este servicio. El servicio de autorización de primer plano mejora la estabilidad de la conexión en comparación con la aplicación original que no utiliza este servicio.
 
 .. image:: ../images/Libre2_ForegroundServiceNotification.png
   :alt: LibreLink Servicio en segundo plano
 
-Otras indicaciones podrían ser el logotipo del pingüino de Linux tres puntos del menú-> Info o la fuente de la aplicación parcheada. Estos criterios son opcionales en función de la fuente de aplicación que elija.
+Otras indicaciones podrían ser el logotipo del pingüino de Linux tres puntos del menú-> Info o la fuente de la aplicación parcheada.
 
-.. imagen:: ../images/LibreLinkPatchedCheck.png
+.. image:: ../images/LibreLinkPatchedCheck.png
   :alt: Comprobación de fuentes de LibreLink
 
 Asegúrese de que NFC esté activado, habilite el permiso de memoria y ubicación para la aplicación parcheada, habilite el tiempo y el huso horario automáticos y establezca al menos una alarma en la aplicación parcheada. 
@@ -71,10 +71,10 @@ Si la marca de exclamación permanece o se obtiene un mensaje de error, esto pue
 
 Reiniciar el teléfono puede ayudar, es posible que tenga que hacerlo varias veces. Tan pronto como se establezca la conexión, desaparece la marca de exclamación roja y se toma el paso más importante. Puede suceder que dependiendo de la configuración del sistema, el signo de exclamación permanece pero todavía se obtienen lecturas. En ambos casos está bien. El sensor y el teléfono están ahora conectados, cada minuto se transmite un valor de azúcar en la sangre.
 
-.. imagen:: ../images/Libre2_Connected.png
+.. image:: ../images/Libre2_Connected.png
   :alt: Conexión LibreLink establecida
   
-En raras ocasiones podría ayudar vaciar el caché bluetooth y/o restablecer todas las conexiones de red a través del menú del sistema. Esto elimina todos los dispositivos bluetooth conectados y puede ayudar a configurar una conexión bluetooth adecuada. Ese procedimiento se guarda como sensor iniciado y es recordado por la aplicación de LibreLink parcheada. No hay que hacer nada adicional aquí. Simplemente espere a que la aplicación parcheada se conecte al sensor.
+En raras ocasiones podría ayudar vaciar el caché bluetooth y/o restablecer todas las conexiones de red a través del menú del sistema. Esto elimina todos los dispositivos bluetooth conectados y puede ayudar a configurar una conexión bluetooth adecuada. Ese procedimiento se guarda como sensor iniciado y es recordado por la aplicación de LibreLink parcheada. Simplemente espere a que la aplicación parcheada se conecte al sensor.
 
 Después de una conexión exitosa la configuración del smartphone se puede cambiar si es necesario. Esto no es recomendable, pero es posible que desee ahorrar energía. El servicio de ubicación se puede desactivar, el volumen puede establecerse en cero o las alarmas se pueden desactivar de nuevo. Los niveles de azúcar de sangre se transfieren de todos modos.
 
@@ -99,7 +99,7 @@ Los valores de azúcar en sangre son recibidos en el smartphone por la aplicaci�
 * Si es necesario, ingrese "BgReading:d,xdrip libre_receiver:v" en Ajustes menos comunes->Ajustes adicionales de conexión->Etiquetas extras para conexión. Esto registrará mensajes de error adicionales ante problemas.
 * In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
 * In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
-* to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <../Configuration/xdrip.html#identify-receiver>`_
+* to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <https://androidaps.readthedocs.io/en/latest/EN/Configuration/xdrip.html#identify-receiver>`_
 * If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON.  Puede que también desee revisar las opciones en Ajustes > Ajustes Menos Comunes > Ajustes Avanzados de Calibración.
 
 .. image:: ../images/Libre2_Tags.png
@@ -117,16 +117,16 @@ After a sensor change xDrip+ will automatically detect the new sensor and will d
 Step 4: Configure AndroidAPS (for looping only)
 ==================================================
 * En AndroidAPS vaya a Config Builder > Fuente de BG y compruebe 'xDrip+' 
-* If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
+* Si AAPS no recibe los valores de BG cuando el teléfono está en el modo de avión, utilice 'Identificar receptor', como se describe en la página `xDrip+ ajustes <../Configuration/xdrip.html#identify-receiver>`_.
 
-Hasta ahora, usando Libre 2 como fuente BG usted no puede activar 'Habilitar SMB siempre' y 'Habilitar SMB después de los carbohidratos' dentro del algoritmo SMB. Los valores de BG de Libre 2 no son lo suficientemente estables para usarlo de forma segura. Consulte ' Suavizar los datos de glucosa en sangre <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ para más detalles.
+Hasta ahora, usando Libre 2 como fuente BG usted no puede activar 'Habilitar SMB siempre' y 'Habilitar SMB después de los carbohidratos' dentro del algoritmo SMB. Los valores de BG de Libre 2 no son lo suficientemente estables para usarlo de forma segura. Consulte `Suavizar los datos de glucosa en sangre <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ para más detalles.
 
-Consejos y solución de problemas
+Experiencias
 ==================================================
 
 Conectividad
 --------------------------------------------------
-La conectividad es extraordinariamente buena. Con la excepción de los teléfonos móviles Huawei, todos los teléfonos inteligentes actuales parecen funcionar bien. La reconexión en caso de pérdida de conexión es fenomenal. La conexión se puede romper si el teléfono móvil está en el bolsillo opuesto al sensor o si está al aire libre. Cuando estoy en jardinería, coloco mi teléfono en el lado del sensor de mi cuerpo. In rooms, where Bluetooth spreads over reflections, no problems should occur. Si tiene problemas de conectividad, por favor pruebe otro teléfono. También puede ayudar a establecer el sensor con la antena interna BT apuntando hacia abajo. The slit on the applicator must be pointing down when setting the sensor.
+La conectividad es extraordinariamente buena. Con la excepción de los teléfonos móviles Huawei, todos los teléfonos inteligentes actuales parecen funcionar bien. La reconexión en caso de pérdida de conexión es fenomenal. La conexión se puede romper si el teléfono móvil está en el bolsillo opuesto al sensor o si está al aire libre. Cuando estoy en jardinería, coloco mi teléfono en el lado del sensor de mi cuerpo. In rooms, where Bluetooth spreads over reflections, no problems should occur. Si tiene problemas de conectividad, por favor pruebe otro teléfono. También puede ayudar a establecer el sensor con la antena interna BT apuntando hacia abajo. También puede ayudar a establecer el sensor con la antena interna BT apuntando hacia abajo. The slit on the applicator must be pointing down when setting the sensor.
 
 Valor suavizado y valores en bruto
 --------------------------------------------------
@@ -134,25 +134,25 @@ Técnicamente, el valor de azúcar en sangre actual se transmite a xDrip+ cada m
 
 Los valores crudos son muy útiles cuando el azúcar en sangre se está moviendo rápido. Even if the dots are jumpier you would detect the tendency much better as using the smoothed line to make proper therapy decisions.
 
-.. imagen:: ../images/Libre2_RawValues.png
+.. image:: ../images/Libre2_RawValues.png
   :alt: xDrip+ advanced settings Libre 2 & raw values
 
 Sensor runtime
 --------------------------------------------------
-El tiempo de trabajo del sensor se fija en 14 días. Las 12 horas adicionales de Libre1 ya no existen. xDrip+ shows additional sensor information after enabling Advanced Settings for Libre2 > "show Sensors Infos" in the system menu like the starting time. El tiempo restante del sensor también se puede ver en la aplicación Parcheada LibreLink. Tanto en la pantalla principal como en el tiempo restante de la pantalla como en la hora de inicio del sensor en el menú de tres puntos->Ayuda->Registro de eventos en "Nuevo sensor encontrado".
+El tiempo de trabajo del sensor se fija en 14 días. Las 12 horas adicionales de Libre1 ya no existen. xDrip+ shows additional sensor information after enabling Advanced Settings for Libre2 > "show Sensors Infos" in the system menu like the starting time. Tanto en la pantalla principal como en el tiempo restante de la pantalla como en la hora de inicio del sensor en el menú de tres puntos->Ayuda->Registro de eventos en "Nuevo sensor encontrado".
 
 .. image:: ../images/Libre2_Starttime.png
   :alt: Libre 2 hora de inicio
 
 Nuevo Sensor
 --------------------------------------------------
-Un intercambio de sensores tiene lugar al vuelo: ponga el nuevo sensor poco antes de su activación. Tan pronto como xDrip+ no recibe más datos del viejo sensor, inicie el nuevo sensor con la aplicación parcheada. Después de una hora, los valores nuevos deben aparecer automáticamente en xDrip+. 
+Un intercambio de sensores tiene lugar al vuelo: ponga el nuevo sensor poco antes de su activación. Tan pronto como xDrip+ no recibe más datos del viejo sensor, inicie el nuevo sensor con la aplicación parcheada. 
 
 Si no es así, compruebe la configuración del teléfono y continúe con el primer inicio. Usted no tiene límite de tiempo. Trate de encontrar los ajustes correctos. No es necesario sustituir inmediatamente el sensor antes de intentar combinaciones diferentes. Los sensores son robustos e intentan establecer de forma permanente una conexión. Por favor, toma tu tiempo. En la mayoría de los casos cambió accidentalmente una configuración que ahora causa problemas. 
 
 Una vez que tenga éxito, por favor seleccione "Parada de Sensor" y "Borrar calibración solamente" en xDrip. Esto le indica a xDrip+ que un nuevo sensor está enviando los niveles de azúcar en la sangre y las calibraciones antiguas ya no son válidas y por lo tanto tienen que ser eliminadas. No se realiza ninguna interacción real con el sensor de Libre2 aquí! No es necesario que inicie el sensor en xDrip+.
 
-.. imagen:: ../images/Libre2_GapNewSensor.png
+.. image:: ../images/Libre2_GapNewSensor.png
   :alt: xDrip+ falta datos al cambiar el sensor de Libre 2
 
 Calibración
@@ -165,7 +165,7 @@ Los sensores Libre2 contienen comprobaciones de plausibilidad para detectar valo
 
 Zona horaria viajando
 --------------------------------------------------
-En otros `husos horarios <../Usage/Timezone-traveling.html>` _ hay dos estrategias para el hacer lazo cerrado: 
+En otros `husos horarios <../Usage/Timezone-traveling.html>`_ hay dos estrategias para el hacer lazo cerrado: 
 
 Cualquiera 
 
