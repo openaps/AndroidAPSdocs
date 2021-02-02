@@ -50,7 +50,7 @@ Siga el manual en [git página de instalación](../Installing-AndroidAPS/git-ins
 
 Las siguientes capturas de pantalla se han tomado de Android Studio Versión 3.6.1. Es posible que la pantalla parezca un poco diferente si utiliza una versión más reciente de Android Studio. Pero deberías ser capaz de encontrar el camino a través del proceso. [ Se proporciona ayuda de la comunidad ](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
-Una de las cosas más importantes al instalar Android Studio: ** Be patient! ** Durante la instalación y configurar Android Studio está descargando un montón de cosas que se tomarán su tiempo.
+One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
 
 Instale [Android Studio](https://developer.android.com/studio/install.html) y configurelo durante el primer inicio.
 
@@ -117,7 +117,7 @@ En la pantalla de bienvenida de Android Studio, haga clic en el triángulo peque
 
 ### Mac
 
-* Cualquier versión de git sirve. Por ejemplo, `https://git-scm.com/download/mac <https://git-scm.com/download/mac>.
+* Cualquier versión de git sirve. For example <https://git-scm.com/download/mac>.
 * Utilice homebrew para instalar git: ```$brew install git```.
 * Para más detalles sobre la instalación de git, consulte la documentación oficial del [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * Si instala git a través de un homebrew, no es necesario cambiar ninguna preferencia. Solo por caso: se puedan encontrar aquí: Android Studio - Preferencias.
@@ -192,7 +192,7 @@ En la pantalla de bienvenida de Android Studio, haga clic en el triángulo peque
     
     ![Finalizar la instalación del SDK](../images/AndroidStudio361_25.png)
 
-* Android Studio might recommend to update the gradle system. **Nunca actualice gradle! ** Esto podría llevar a dificultades!
+* Android Studio might recommend to update the gradle system. **Never update gradle!** This might lead to difficulties!
 
 * If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1.) and in the dialog box on "Don't remind me again for this project" (2.).
     
