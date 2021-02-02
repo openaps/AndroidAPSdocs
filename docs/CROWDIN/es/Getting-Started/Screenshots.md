@@ -95,7 +95,7 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 
 * Las sugerencias de carbohidratos se dan cuando el algoritmo de referencia detecta que requiere carbohidratos.
 * Esto es cuando el algoritmo oref cree que no puedr salvarle con 0 (cero) temping y necesitará carbohidratos para arreglarlo.
-* Es posible que vea una sugerencia de carbohidratos mientras que la calculadora de bolo no muestra los carbohidratos faltantes. Las notificaciones de carbohidratos son mucho más sofisticadas que las de la calculadora de bolo.
+* The carb notifications are much more sophisticated than the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
 ### Section E - Status lights
@@ -130,7 +130,7 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 #### Activate optional information
 
 * Click the triangle on the right side of the main graph to select which information will be displayed in the main graph.
-* For the main graph just the three options above the line "\---\-\--- Graph 1 \---\-\---" are available.
+* For the main graph just the three options above the line "\---\---- Graph 1 \---\----" are available.
    
    ![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
@@ -173,7 +173,7 @@ Por lo general, su verdadera curva de glucosa termina en el medio de estas líne
 
 ![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
-* To add an additional graph check the box on the left side of its name (i.e. \---\-\--- Graph 1 \---\-\---).
+* To add an additional graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
 
 #### Insulina en total
 
@@ -196,7 +196,7 @@ Por lo general, su verdadera curva de glucosa termina en el medio de estas líne
 
 * **GRIS** barras que muestran una desviación debido a los carbohidratos. 
 * **VERDE** barras que muestran un BG mayor al que el algoritmo esperaba. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
-* **RED ** barras que muestran que BG es menor al que el algoritmo esperaba. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
+* **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
 * **YELLOW** bars show a deviation due to UAM.
 * **BLACK** bars show small deviations not taken into account for sensitivity
 
@@ -226,7 +226,7 @@ Por lo general, su verdadera curva de glucosa termina en el medio de estas líne
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* To give a certain amount of insulin without using [bolus calculator](../Getting-Started/Screenhots#bolus-wizard).
+* To give a certain amount of insulin without using [bolus calculator](../Getting-Started/Screenshots#bolus-wizard).
 * By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences#default-temp-targets).
 * If you do not want to bolus through pump but record insulin amount (i.e. insulin given by syringe) check the corresponding box.
 
