@@ -13,7 +13,7 @@ Objetivo 1: Establecimiento de la visualización y la supervisión, análisis de
 * Seleccione la bomba correcta en ConfigBuilder (seleccione Virtual Pump si utiliza un modelo de bomba sin el controlador AndroidAPS para bucles) para asegurarse de que el estado de la bomba se puede comunicar con AndroidAPS.  
 * Si utiliza la bomba DanaR asegúrese de haber seguido las instrucciones `DanaR Insulin Bump <../Configuration/DanaR-Insulin-Pump.html>`_ para asegurar el enlace entre la bomba y AndroidAPS.
 * Siga las instrucciones en la página `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ para asegurar que Nightscout pueda recibir y mostrar estos datos.
-* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#nsclient>`__.
+* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#nsclient>`_.
 
 *Es posible que tengas que esperar a que llegue la próxima lectura de glucosa en sangre para que AndroidAPS la reconozca.*
 
@@ -31,7 +31,7 @@ Objetivo 3: Demuestra tus conocimientos
 * Pasar un examen de múltiples opciones probando su conocimiento de AndroidAPS.
 * Haga clic en el texto naranja "No completado todavía" para acceder a la página con las opciones de preguntas y respuestas.
 
-   .. imagen:: ../images/Objective3_V2_5.png
+   .. image:: ../images/Objective3_V2_5.png
      :alt: Captura de pantalla de objetivo 3
 
 * Se proporcionarán enlaces para guiarle en caso de que no esté seguro de las respuestas correctas todavía.
@@ -42,7 +42,7 @@ Objetivo 3: Demuestra tus conocimientos
 Objetivo 4: Iniciar en un lazo abierto
 ==================================================
 * Seleccione Abrir lazo desde Preferencias, o pulsando y manteniendo pulsado el botón de Lazo en la parte superior izquierda de la pantalla de inicio.
-* Work through the `Preferences <../Configuration/Preferences.html>`__ to set up for you.
+* Trabaje a través de `Preferencias <../Configuration/Preferences.html>`_ para configurarlo para usted.
 * Promulgar manualmente al menos 20 de las sugerencias de la tasa basal temporal durante un período de 7 días; póngalos en su bomba y confirme en AndroidAPS que los ha aceptado.  Asegúrese de que estos datos se muestran en AndroidAPS y Nightscout.
 * Activar `objetivos temporales <../Usage/temptarget.html>`_ si es necesario. Utilice los objetivos temporales de hipoglucemia para evitar que el sistema se corrija demasiado fuerte debido a un aumento de la glucosa en sangre tras una hipoglucemia. 
 
@@ -52,7 +52,7 @@ Reducir el número de notificaciones
 * Es posible que incluso desee ampliar el límite superior (o inhabilitar el Lazo Abierto) en la noche. 
 * En Preferencias, puede establecer un porcentaje mínimo para la sugerencia de cambio de tasa basal.
 
-   .. imagen:: ../images/OpenLoop_MinimalRequestChange2.png
+   .. image:: ../images/OpenLoop_MinimalRequestChange2.png
      :alt: Open Loop minimal request change
      
 * Además, no hace falta que actúe cada 5 minutos en todas las sugerencias...
@@ -71,9 +71,9 @@ El objetivo es el valor en el que se basan los cálculos, y no es el mismo que a
 
 You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol [20 mg/dl or less] wide) and observe how the behavior of your system changes as a result.  
 
-You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in `Preferences <../Configuration/Preferences.html>`__ > Range for Visualisation.
+Puede ver un rango más amplio (líneas verdes) en el gráfico para los valores que tiene como objetivo mantener su nivel de glucosa en sangre entrando valores diferentes en `Preferencias <../Configuration/Preferences.html>`_ > Rango para la visualización.
  
-.. imagen:: ../images/sign_stop.png
+.. image:: ../images/sign_stop.png
   :alt: Señal de parada
 
 Parar aquí si usted está lazo abierto con una bomba virtual - no haga clic en Comprobar al final de este objetivo.
@@ -84,12 +84,12 @@ Parar aquí si usted está lazo abierto con una bomba virtual - no haga clic en 
 
 Objetivo 6: Empezando a cerrar el lazo con Baja Glucosa Suspender
 ====================================================================================================
-.. imagen:: ../images/sign_warning.png
+.. image:: ../images/sign_warning.png
   :alt: Señal de advertencia
   
 El lazo cerrado no corregirá los valores de bg alto en el objetivo 6, ya que se limita a la suspensión por baja glucosa. ¡Los valores altos de BG tienen que ser corregidos manualmente por usted!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`__ or by pressing and holding the Open Loop button in the top left of the home screen.
+* Seleccionar lazo cerrado desde `Preferencias <../Configuration/Preferences.html>`_ o pulsando y manteniendo pulsado el botón Abrir Lazo en la parte superior izquierda de la pantalla de inicio.
 * Establezca el rango de destino un poco más alto de lo que normalmente pretende, sólo para estar seguros.
 * Vea cómo las basales temporales están activas al visualizar el texto basal azul en la pantalla de inicio o en la representación basal azul en el gráfico de pantalla.
 * Asegúrese de que sus ajustes han soportado AndroidAPS para evitar tener que tratar una glucosa baja durante un período de 5 días.  Si sigue teniendo episodios frecuentes o graves de glucosa baja, considere la posibilidad de ajustar las proporciones de DIA, basal, ISF y tasa de carbohidratos.
@@ -108,7 +108,7 @@ Objetivo 7: Ajustar el lazo cerrado, elevando el IOB máximo por encima de 0 y r
 
   Esta recomendación debe considerarse como un punto de partida. Si se establece en el 3x y se están viendo movimientos que le empuja a cambios fuertes y rápidos, a continuación, baje ese número. Si eres muy resistente, levanta un poco a la vez.
 
-   .. imagen:: ../images/MaxDailyBasal2.png
+   .. image:: ../images/MaxDailyBasal2.png
      :alt: max basal diaria
 
 * Una vez que este seguro de cuánta IOB se adapta a su lazo de patrones, a continuación, reduzca sus objetivos al nivel deseado.
@@ -131,7 +131,7 @@ Objective 9: Try additional features for daytime use and gain confidence in your
 Objetivo 10: Habilitación adicional oref1 características para uso durante el día, tales como super micro bolo (SMB)
 ====================================================================================================
 * Debe leer el capítulo `SMB en este wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ y `capítulo oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ para entender cómo funciona SMB, especialmente cuál es la idea detrás de cero-temporal.
-* A continuación, usted debe `subir maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ para tener los SMBs trabajando bien. maxIOB ahora incluye todo IOB, no sólo la basal añadida. Es decir, si se le da un bolo de 8 U para una comida y maxIOB es 7 U, no se entregarán SMB hasta que el IOB caiga por debajo de 7 U. Un buen inicio es maxIOB = promedio bolos de comidas + 3x valor máximo diario (máx. basal diario = el valor máximo por hora en cualquier segmento de tiempo del día - vea `objetivo 7 <../Usage/Objectives.html#objective-7-tuning-the-cerró-loop-loop-max-iob-arriba-0-and-gradualmente-lowering-bg-targets>`_ para una ilustración)
+* A continuación, usted debe `subir maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ para tener los SMBs trabajando bien. maxIOB ahora incluye todo IOB, no sólo la basal añadida. Es decir, si se le da un bolo de 8 U para una comida y maxIOB es 7 U, no se entregarán SMB hasta que el IOB caiga por debajo de 7 U. Un buen inicio es maxIOB = promedio bolos de comidas + 3x valor máximo diario (máx.
 * El valor predeterminado de min_5m_carbimpact en los valores de absorción ha cambiado de 3 a 8 al ir de AMA a SMB. If you are upgrading from AMA to SMB, you have to change it manually.
 
 
