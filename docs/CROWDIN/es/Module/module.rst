@@ -1,6 +1,6 @@
 Descripción General De Los Componentes 
 **************************************************
-AndroidAPS no es sólo una aplicación (auto-construida), es sólo uno de los módulos de su sistema de lazo cerrado. Antes de tomar una decisión sobre los componentes, sería una buena idea echar un vistazo a `configuración de componentes <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_, también.
+AndroidAPS no es sólo una aplicación (auto-construida), es sólo uno de los módulos de su sistema de lazo cerrado. Before deciding for components, it would be a good idea to have a look at the `component setup <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_, too.
    
 .. imagen:: ../images/modules.png
   :alt: Visión general de Compontes
@@ -8,7 +8,7 @@ AndroidAPS no es sólo una aplicación (auto-construida), es sólo uno de los m�
 .. note:: 
    **AVISO DE SEGURIDAD IMPORTANTE**
 
-   La base de las características de seguridad de AndroidAPS discutidas en esta documentación se basan en las características de seguridad del hardware utilizado para construir su sistema. Es importante que sólo utilice una bomba de insulina y una bomba de insulina y MCG aprobados por la FDA o CE, para cerrar un lazo de dosificación de insulina automatizado. Las modificaciones de hardware o software a estos componentes pueden causar una dosificación inesperada de la insulina, causando un riesgo significativo para el usuario. Si encuentra o recibe una oferta rota, modificada o autofabricada de las bombas de insulina o de los receptores de MCG, *no las utilice* para crear un sistema AndroidAPS.
+   La base de las características de seguridad de AndroidAPS discutidas en esta documentación se basan en las características de seguridad del hardware utilizado para construir su sistema. Es importante que sólo utilice una bomba de insulina y una bomba de insulina y MCG aprobados por la FDA o CE, para cerrar un lazo de dosificación de insulina automatizado. Las modificaciones de hardware o software a estos componentes pueden causar una dosificación inesperada de la insulina, causando un riesgo significativo para el usuario. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
 
    Además, es igualmente importante utilizar los suministros originales, como los insertadores, las canulas y los recipientes de insulina aprobados por el fabricante para su uso con la bomba o MCG. El uso de suministros no probados o modificados puede provocar inexactitud del MCG y errores de dosificación de la insulina. Insulina es muy peligrosa cuando se malinterpreta-por favor, no juegas con tu vida hackeando con tus suministros.
    
@@ -38,7 +38,7 @@ Teléfono
 The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
 Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>`_
 
-Los usuarios están creando una "lista de teléfonos probados y relojes <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_.
+Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
 Para registrar un teléfono o un reloj que no está ya listado en la hoja de cálculo, por favor rellene la `forma <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
@@ -48,11 +48,11 @@ Bomba de insulina
 --------------------------------------------------
 AndroidAPS **actualmente** funciona con 
 
-- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (necesita adicionalmente: Ruffy app, LineageOS o Android 8.1 en su teléfono)
+- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
 - `Bomba Accu-ChekInsight <../Configuration/Accu-Chek-Insight-Pump.md>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `algunas bombas de Medtronic <../Configuration/MedtronicPump.html>`_ de la versión 2.4 (adicionalmente necesaria: hardware de RileyLink/Gnarl, teléfono Android con bluetooth de baja energía / BLE-chipset)
+- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (additionally needed: RileyLink/Gnarl hardware, Android Phone with bluetooth low energy / BLE-chipset)
 - `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
 
 **Otras bombas** que pueden tener el potencial de trabajar con AndroidAPS se listan en la página `Futuras (posibles) Bombas <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
@@ -74,7 +74,7 @@ Las ventajas de la DanaR/RS vs. la Combo como la bomba de elección, sin embargo
 
 Fuentes de datos de glucemia (BG)
 --------------------------------------------------
-Esta es sólo una breve descripción general de todos los MCGs/FGM compatibles con AndroidAPS. Para obtener más detalles, busque `aquí <../Configuration/BG-Source.html>`_. Solo una breve sugerencia: si puedes visualizar tus datos de glucosa en la aplicación xDrip+ o en el sitio web de Nightscout, puedes elegir xDrip+ (o Nightscout con la conexión web) como fuente BG en AAPS.
+Esta es sólo una breve descripción general de todos los MCGs/FGM compatibles con AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`__. Solo una breve sugerencia: si puedes visualizar tus datos de glucosa en la aplicación xDrip+ o en el sitio web de Nightscout, puedes elegir xDrip+ (o Nightscout con la conexión web) como fuente BG en AAPS.
 
 * `Dexcom G6 <../Hardware/DexcomG6.html>`_: Funciona con la aplicación xDrip+ ó con la aplicación Dexcom parchada
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Se trabaja con app xDrip+ 'o app parchada Dexcom
@@ -91,19 +91,19 @@ Nightscout es una aplicación web de código abierto que puede registrar y visua
 
 Nightscout es independiente de los otros módulos. Lo necesitará para cumplir el Objetivo 1.
 
-Se puede encontrar información adicional sobre cómo configurar Nightscout para su uso con AndroidAPS `aquí <../Installing-AndroidAPS/Nightscout.html>`_.
+Additional information on how to configure Nightscout for use with AndroidAPS can be found `here <../Installing-AndroidAPS/Nightscout.html>`__.
 
 Archivo AAPS-.apk
 --------------------------------------------------
-El componente básico del sistema. Antes de instalar la aplicación, tienes que construir el archivo apk (que es la extensión de nombre de archivo para una aplicación Android) primero. Las instrucciones están `aquí <../Installing-AndroidAPS/Building-APK.html>`_.  
+El componente básico del sistema. Antes de instalar la aplicación, tienes que construir el archivo apk (que es la extensión de nombre de archivo para una aplicación Android) primero. Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`__.  
 
 Módulos opcionales
 ==================================================
 Smartwatches (Relojes inteligentes)
 --------------------------------------------------
-Puede elegir cualquier smartwatch con Android Wear 1.x y superior. La mayoría de los loopers llevan un Sony Smartwatch 3 (SWR50), ya que es el único reloj que puede obtener lecturas de Dexcom G5/G5 cuando el teléfono está fuera de rango. Algunos otros relojes pueden ser parcheados para funcionar como un receptor autónomo también (consulte `esta documentación <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ para más detalles).
+Puede elegir cualquier smartwatch con Android Wear 1.x y superior. La mayoría de los loopers llevan un Sony Smartwatch 3 (SWR50), ya que es el único reloj que puede obtener lecturas de Dexcom G5/G5 cuando el teléfono está fuera de rango. Some other watches can be patched to work as a standalone receiver as well (see `this documentation <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ for more details).
 
-Los usuarios están creando una "lista de teléfonos `probados y relojes <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ Hay diferentes caras de observación para su uso con AndroidAPS, que puede encontrar `aquí <../Configuration/Watchfaces.html>`_.
+Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`__.
 
 Para registrar un teléfono o un reloj que no está ya listado en la hoja de cálculo, por favor rellene la `forma <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
@@ -111,7 +111,7 @@ Cualquier problema con la hoja de cálculo por favor envíe un correo electróni
 
 xDrip+
 --------------------------------------------------
-Incluso si no necesitas tener la aplicación xDrip + como fuente de BG, todavía puedes usarla para esto. alarmas o una buena muestra de glucosa en sangre. Puede tener el número de alarmas que desee, especificar la hora en la que la alarma debe estar activa, se puede alterar temporalmente la modalidad silenciosa, etc. Se puede encontrar alguna información de xDrip+ `aqui <../Configuration/xdrip.html>`_. Por favor, tenga en cuenta que las documentaciones de esta aplicación no siempre están al día, ya que su progreso es bastante rápido.
+Incluso si no necesitas tener la aplicación xDrip + como fuente de BG, todavía puedes usarla para esto. alarmas o una buena muestra de glucosa en sangre. Puede tener el número de alarmas que desee, especificar la hora en la que la alarma debe estar activa, se puede alterar temporalmente la modalidad silenciosa, etc. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`__. Por favor, tenga en cuenta que las documentaciones de esta aplicación no siempre están al día, ya que su progreso es bastante rápido.
 
 Configuración de ejemplo
 ==================================================
