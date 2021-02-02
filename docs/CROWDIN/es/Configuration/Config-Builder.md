@@ -24,7 +24,7 @@ Seleccione el perfil basal que desea utilizar. Consulte la página [Perfiles](..
 
 ### Perfil local (recomendado)
 
-El "perfil local" utiliza el perfil basal manualmente ingresado en el teléfono. Tan pronto como se selecciona, aparece una nueva pestaña en AAPS, donde puede cambiar los datos de perfil leídos de la bomba si es necesario. Con la tecla siguiente, el perfil se escriben en la bomba en el perfil 1. Este perfil se recomienda ya que no depende de la conectividad a Internet.
+El "perfil local" utiliza el perfil basal manualmente ingresado en el teléfono. El "perfil local" utiliza el perfil basal manualmente ingresado en el teléfono. Tan pronto como se selecciona, aparece una nueva pestaña en AAPS, donde puede cambiar los datos de perfil leídos de la bomba si es necesario. Con la tecla siguiente, el perfil se escriben en la bomba en el perfil 1. Este perfil se recomienda ya que no depende de la conectividad a Internet.
 
 Los perfiles locales forman parte de [ valores exportados ](../Usage/ExportImportSettings.rst). Así que asegúrese de tener una copia de seguridad en un lugar seguro.
 
@@ -97,7 +97,7 @@ Desventajas:
 
 ![Insulin type](../images/ConfBuild_Insulin.png)
 
-* Seleccione el tipo de curva de insulina que está usando.
+* Select the type of insulin curve you are using.
 * The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
 * The curves will vary based on the DIA and the time to peak.
     
@@ -106,40 +106,40 @@ Desventajas:
 
 ### DIA (Duración Insulina Activa)
 
-* La DIA no es la misma para cada persona. Es por eso que tienes que probarlo por ti mismo. 
-* Pero siempre debe ser de al menos 5 horas.
+* The DIA is not the same for each person. That's why you have to test it for yourself. 
+* But it must always be at least 5 hours.
 * For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
-* Puede leer más sobre esto en la sección Perfil de Insulina de [aquí](../Getting-Started/Screenshots#insulin-profile). 
+* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page. 
 
 ### Insulin type differences
 
 * For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
 * Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
-* El [gráfico de la curva de insulina](../Getting-Started/Screenshots#insulin-profile) le ayuda a comprender las diferentes curvas. 
-* Puede verlo habilitando la casilla de verificación para mostrarla como una pestaña, de lo contrario estará en el menú hamburgesa.
+* The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. 
+* You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
 
 #### Rapid-Acting Oref
 
-* recomendado para Humalog, Novolog y Novorapid
-* DIA = al menos 5.0h
-* Máx. pico = 75 minutos después de la inyección (fijo, no ajustable)
+* recommended for Humalog, Novolog and Novorapid
+* DIA = at least 5.0h
+* Max. peak = 75 minutes after injection (fixed, not adjustable)
 
 #### Ultra-Rapid Oref
 
-* recomendado para FIASP
-* DIA = al menos 5.0h
-* Máx. pico = 55 minutos después de la inyección (fijo, no ajustable)
+* recommended for FIASP
+* DIA = at least 5.0h
+* Max. peak = 55 minutes after injection (fixed, not adjustable)
 
 #### Lyumjev
 
 * special insulin profile for Lyumjev
-* DIA = al menos 5.0h
-* Máx. pico = 45 minutos después de la inyección (fijo, no ajustable)
+* DIA = at least 5.0h
+* Max. peak = 45 minutes after injection (fixed, not adjustable)
 
-#### Free-Peak Oref
+#### Free Peak Oref
 
 * With the "Free Peak 0ref" profile you can individually enter the peak time.
-* El DIA se establece automáticamente en 5 horas si no se especifica un valor superior en el perfil.
+* The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
 ## Fuentes de BG (datos de glucemia)
@@ -150,30 +150,30 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 * NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
-* [Dexcom App (parcheada) ](https://github.com/dexcomapp/dexcomapp/) -Seleccione 'Enviar datos de BG a xDrip +' si desea utilizar las alarmas xDrip +.
+* [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
     
     ![Config Builder BG source](../images/ConfBuild_BGSource.png)
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
-* [Tomato App](http://tomato.cool/) para dispositivo MiaoMiao
-* BG aleatorio: genera datos BG aleatorios (sólo demostración)
+* [Tomato App](http://tomato.cool/) for MiaoMiao device
+* Random BG: Generates random BG data (Demo mode only)
 
 ## Bomba
 
-Seleccione la bomba que está utilizando.
+Select the pump you are using.
 
 * [Dana R](DanaR-Insulin-Pump.md)
-* Dana R Coreano (para la bomba doméstica DanaR)
-* Dana Rv2 (bomba DanaR con actualización de firmware no oficial)
+* Dana R Korean (for domestic DanaR pump)
+* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
 * [Dana RS](DanaRS-Insulin-Pump.md)
-* [Accu-Chek Insight](Accu-Chek-Insight-Pump.md)
-* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requiere la instalación de ruffy)
+* [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
+* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
 * [Medtronic](MedtronicPump.md)
-* MDI (recibir sugerencias de AAPS para su terapia de inyecciones múltiples diarias)
-* Bomba virtual (bucle abierto para bombas todavía sin controlador - AAPS sólo sugerencias)
+* MDI (receive AAPS suggestions for your multiple daily injections therapy)
+* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
-For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. Desactiva bluetooth por un segundo si no es posible ninguna conexión a la bomba. This may help on some phones where the bluetooth stack freezes.
+For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
 
 [Password for Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
 
@@ -191,8 +191,10 @@ If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value 
 
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017)  
+    More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
+    Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Loop
 
