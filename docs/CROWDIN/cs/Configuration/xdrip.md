@@ -60,7 +60,7 @@ Pokud váš telefon používá systém Android 10 a máte potíže s aplikací x
 
 ### Dexcom specifická nastavení
 
-* Otevřete G5/G6 Debug Settings -> Hamburger Menu (pravý horní roh domácí obrazovky) -> nastavení -> G5/G6 Debug Settings ![Otevřete nastavení xDrip+](../images/xDrip_Dexcom_SettingsCall.png)
+* Open G5/G6 Debug Settings -> Hamburger Menu (top left of homescreen) -> Settings -> G5/G6 Debug Settings ![Otevřete nastavení xDrip+](../images/xDrip_Dexcom_SettingsCall.png)
 
 * Zvolte následující nastavení
    
@@ -324,7 +324,7 @@ V log souborech v xDrip+ ověřte, že xDrip+ začne počítat „Trvání: 1 mi
 
 ### Speciální nastavení Libre
 
-* Otevřete nastavení Bluetooth -> Hamburger menu (levý horní roh hlavní obrazovky) -> Nastavení -> sjeďte dolů -> Méně častá nastavení -> Nastavení BT
+* Open Bluetooth Settings -> Hamburger Menu (top left of homescreen) -> Settings -> scroll down -> Less common settings -> Bluetooth Settings
    
    ![xDrip+ Libre nastavení bluetooth 1](../images/xDrip_Libre_BTSettings1.png)
 
