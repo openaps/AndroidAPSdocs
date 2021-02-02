@@ -87,9 +87,9 @@ Si vous utilisez des images, veuillez utiliser des tailles raisonnables. Les ima
 #### Liens
 
 * lien externe : `[alt text](www.url.tld)`
-* lien interne vers une page .md : `[texte alternatif](.../folder/file.md)`
-* lien interne vers une page .rst : `[texte alternatif](.../folder/file.rst)`
-* lien interne vers un titre : `[texte alternatif](.../folder/file#titre)`
+* internal link to .md page: `[alt text](../folder/file.md)`
+* internal link to .rst page: `[alt text](../folder/file.rst)`
+* internal link to headline: `[alt text](../folder/file#headline)`
 
 ### Fichiers .rst
 
@@ -117,7 +117,7 @@ Si vous utilisez des images, veuillez utiliser des tailles raisonnables. Les ima
 * images:
   
   `.. image:: ../images/modules.png`  
-  `:alt: texte alternatif`
+  `:alt: alt text`
 
 #### Liens
 
@@ -139,9 +139,9 @@ Si vous voulez définir un lien interne dans la documentation AndroidAPS, n'util
 
 #### Dans les fichiers se terminant par **.rst** :
 
-* `` `Texte <../Usage/Test.hmtl>`_ `` va définir un lien hypertexte un répertoire au dessus de celui où vous êtes puis dans le sous-répertoire /Usage. L'extension du fichier cible doit être .html.
+* `` `Text <../Usage/Test.hmtl>`_ `` will set a hyperlink one directory up from where you are and then into the subdirectory /Usage. L'extension du fichier cible doit être .html.
   
-  Sauf si vous êtes dans un toctree. Dans ce cas vous devez l'écrire comme ceci : `Texte <../Usage/Test.md>` avec .md ou .rst (pas .html).
+  Sauf si vous êtes dans un toctree. Then you have to write it like this: `Text <../Usage/Test.md>` with .md or .rst (not .html).
 
 * `Texte <./Usage/Test.md>` va définir un lien hypertexte de là où vous êtes dans le sous-répertoire /Usage.
 
@@ -152,7 +152,7 @@ Si vous voulez définir un lien interne dans la documentation AndroidAPS, n'util
 
 Si vous prévoyez de faire beaucoup de modifications, y compris d'ajouter des images pour illustrer certaines parties de la documentation (merci !), vous pouvez adopter l'approche suivante :
 
-* Au fur et à mesure que vous enregistrez des captures d'écran, renommez les avec un nom descriptif, mais n'utilisez pas d'espaces car Github n'aime pas cela. Utilisez à la place des underscores. Exemple_lots_images_upload.png au lieu de "Exemple lots images upload.png". 
+* Au fur et à mesure que vous enregistrez des captures d'écran, renommez les avec un nom descriptif, mais n'utilisez pas d'espaces car Github n'aime pas cela. Utilisez à la place des underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png". 
 * Veuillez utiliser des tailles raisonnables. Les images de capture d'écran doivent être de **250 pixels de largeur**.
 * Vous pouvez télécharger des images par lots facilement en :
   
@@ -168,9 +168,9 @@ Si vous prévoyez de faire beaucoup de modifications, y compris d'ajouter des im
   
   6. Pour voir des exemples sur la façon d'ajouter des images, vous pouvez regarder le code "brut" d'une page qui contient déjà des images intégrées avec succès. Assurez-vous d'utiliser le [code correct](./make-a-PR#syntaxe-du-code) pour la page sur laquelle vous êtes (.md or .rst). L'essentiel est d'avoir une description en texte clair, suivie d'un lien avec un chemin relatif vers l'image, comme ceci :
     
-    * Pour les pages .md : `![Exemple de téléchargement d'images par lots](../images/Example_batch_images_upload.png)` (Ce code est exactement la façon dont l'image ci-dessous est intégrée pour être affichée.)
+    * For .md pages: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)` (That code is exactly how the image below is embedded to be displayed.)
     * Pour les pages .rst : `.. image:: ../images/Example_batch_images_upload.png`  
-      `:alt: Exemple de téléchargement d'images par lots`
+      `:alt: Example of uploading images in batches`
 
 ![Exemple de téléchargement d'images par lots](./images/Example_batch_images_upload.png)
 
