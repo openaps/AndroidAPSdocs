@@ -17,7 +17,7 @@ Pour plus de détails, lisez la suite ici.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Changer de langue
+   :caption: Dépannage
    Changer de langue <changelanguage.rst>
    
 .. toctree::
@@ -33,7 +33,7 @@ Pour plus de détails, lisez la suite ici.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: De quoi ai-je besoin 
+   :caption: De quoi ai-je besoin ? 
 
    Composants <./Module/module.rst>
    Exemple de configuration <./Getting-Started/Sample-Setup.md>
@@ -86,7 +86,7 @@ Pour plus de détails, lisez la suite ici.
    Glucides étendus <./Usage/Extended-Carbs.rst>
    Automatisation <./Usage/Automation.rst>
    Careportal (supprimé) <./Usage/CPbefore26.rst>
-   Téléversement Open Humans <../Configuration/OpenHumans.rst>
+   Téléversement Open Humans <./Configuration/OpenHumans.rst>
    Automatisation avec des applications tierces <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
 
@@ -112,7 +112,7 @@ Pour plus de détails, lisez la suite ici.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Dépannage
+   :caption: Comment aider
 
    Dépannage <./Usage/troubleshooting.rst>
 
