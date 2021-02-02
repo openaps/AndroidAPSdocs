@@ -9,10 +9,10 @@ AndroidAPS offre plusieurs options pour la surveillance à distance des enfants 
 Fonctions
 ==================================================
 * La pompe de l'enfant est contrôlée par le téléphone de l'enfant à l'aide d'AndroidAPS.
-* Les parents peuvent suivre à distance toutes les données pertinentes telles que les glycémies, les glucides actifs, l'insuline active, etc. en utilisant l'application **NSclient** sur leur téléphone. Les paramètres doivent être identiques dans AndroidAPS et dans l'application NSClient.
+* Les parents peuvent suivre à distance toutes les données pertinentes telles que les glycémies, les glucides actifs, l'insuline active, etc. en utilisant l'application **NSclient** sur leur téléphone. Les paramètres doivent être identiques dans AndroidAPS et NSClient.
 * Les parents peuvent recevoir des alarmes en utilisant l'application **xDrip+ en mode suiveur** sur leur téléphone.
 * Contrôle à distance d'AndroidAPS en utilisant les `commandes SMS <../Children/SMS-Commands.html>`_ sécurisées par l'authentification à deux facteurs.
-* Le contrôle à distance via l'application NSClient n'est recommandé que si votre synchronisation fonctionne bien (vous ne voyez pas de changement de données indésirables comme la modification automatique de CT, DBT, etc.) voir les `notes de version pour la version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#conseils-importants>`_ pour plus de détails.
+* Le contrôle à distance via l'application NSClient n'est recommandé que si votre synchronisation fonctionne bien (vous ne voyez pas de changement de données indésirables comme la modification automatique de CT, DBT, etc.) voir les `notes de version pour la version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#conseils-importants>`_ pour plus de détails. (vous ne voyez pas de changement de données indésirables comme la modification automatique de CT, DBT, etc.) voir les `notes de version pour la version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#conseils-importants>`_ pour plus de détails.
 
 Outils et applications pour la surveillance à distance
 ==================================================
@@ -25,7 +25,7 @@ Outils et applications pour la surveillance à distance
 Points à considérer
 ==================================================
 * Définir les bons `paramètres de traitement <../Getting-Started/FAQ.html#comment-faire-pour-commencer>`_ (débits de basal, DAI, SI...) est difficile pour les enfants, surtout lorsque les hormones de croissance sont impliquées. 
-* Les paramètres doivent être identiques dans AndroidAPS et dans l'application NSClient.
+* Les paramètres doivent être identiques dans AndroidAPS et NSClient.
 * Considérez un décalage de temps entre le maître et le suiveur dû au temps de téléchargement, et parce que le téléphone principal AAPS ne remontera les données qu'après l'exécution de la boucle.
 * Alors prenez le temps de les configurer correctement et de les tester dans la vrai vie avec votre enfant à côté de vous avant de commencer la surveillance et le traitement à distance. Les vacances scolaires pourraient être un bon moment pour cela.
 * Quel est votre plan d'urgence lorsque le contrôle à distance ne fonctionne pas (par ex. en cas de problèmes réseaux)?
