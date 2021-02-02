@@ -167,7 +167,7 @@ Pevně zadané parametry v AndroidAPS jsou:
 
 *See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
-### Maximální hodnota IOB, kterou OpenAPS může vydat \[U\] (OpenAPS "max-iob")
+### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
 
 Tento parametr omezuje maximální bazální IOB, kde AndroidAPS stále funguje. Pokud je IOB vyšší, zastaví se výdej dalšího bazálního inzulínu, dokud je IOB z bazálu pod limitem.
 
