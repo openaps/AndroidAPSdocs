@@ -2,15 +2,15 @@
 
 Cette page est destinée aux professionels de santé qui ont exprimé leur intérêt pour la technologie du pancréas artificiel en open source comme AndroidAPS, ou pour les patients qui veulent partager ces informations avec leur équipe médicale.
 
-Ce guide contient des informations de haut niveau sur la boucle fermée DIY et plus précisément sur la façon dont AndroidAPS fonctionne. Pour plus de détails sur tous ces sujets, veuillez consulter la [documentation complète AndroidAPS en ligne](../index.rst). Si vous avez des questions, demandez à votre patient pour plus de détails, ou n'hésitez pas à rejoindre la communauté. (Si vous n'êtes pas sur les réseaux sociaux (par ex. [Twitter](https://twitter.com/kozakmilos) ou Facebook), n'hésitez pas à envoyer un email à developers@AndroidAPS.org). [Vous pouvez également trouver quelques-unes des dernières études & et les données relatives aux résultats ici](https://openaps.org/outcomes/).
+Ce guide contient des informations de haut niveau sur la boucle fermée DIY et plus précisément sur la façon dont AndroidAPS fonctionne. Pour plus de détails sur tous ces sujets, veuillez consulter la [documentation complète AndroidAPS en ligne](http://androidaps.readthedocs.io/en/latest/index.html). Si vous avez des questions, demandez à votre patient pour plus de détails, ou n'hésitez pas à rejoindre la communauté. (Si vous n'êtes pas sur les réseaux sociaux (par ex. [Twitter](https://twitter.com/kozakmilos) ou Facebook), n'hésitez pas à envoyer un email à developers@AndroidAPS.org). [Vous pouvez également trouver quelques-unes des dernières études & et les données relatives aux résultats ici](https://openaps.org/outcomes/).
 
 ### Les étapes pour construire une boucle fermée DIY :
 
 Pour commencer à utiliser AndroidAPS, les étapes suivantes doivent être faites :
 
-* Trouver une [pompe compatible](../Hardware/pumps.rst), un [équipement Android compatible](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), et une [source MGC compatible](../index.rst#getting-started).
-* [Télécharger le code source AndroidAPS et compiler le logiciel](../Installing-AndroidAPS/Building-APK.md).
-* [Configurer le logiciel pour qu'il dialogue avec ses périphériques et définir les préférences et les paramètres de sécurité](../index.rst#configuration).
+* Trouver une [pompe compatible](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), un [équipement Android compatible](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), et une [source MGC compatible](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started).
+* [Télécharger le code source AndroidAPS et compiler le logiciel](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
+* [Configurer le logiciel pour qu'il dialogue avec ses périphériques et définir les préférences et les paramètres de sécurité](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
 
 ### Comment fonctionne une boucle fermée DIY
 
@@ -43,7 +43,7 @@ AndroidAPS est conçu pour suivre de façon transparente toutes les données d'e
 
 ### Exemples de prise de décision de l'algorithme AndroidAPS :
 
-AndroidAPS utilise les mêmes algorithmes et les mêmes jeux de fonctions que OpenAPS. L'algorithme fait des prédictions multiples (basées sur les paramètres et la situation) représentant différents scénarios de ce qui pourrait arriver à l'avenir. Dans Nightscout, ces lignes sont affichées sous la forme de "lignes violettes". AndroidAPS utilise différentes couleurs pour séparer ces [lignes de prédiction](../Installing-AndroidAPS/Releasenotes#overview-tab). Dans les logs, il décrira laquelle de ces prédictions et quelle période est à l'origine des actions nécessaires.
+AndroidAPS utilise les mêmes algorithmes et les mêmes jeux de fonctions que OpenAPS. L'algorithme fait des prédictions multiples (basées sur les paramètres et la situation) représentant différents scénarios de ce qui pourrait arriver à l'avenir. Dans Nightscout, ces lignes sont affichées sous la forme de "lignes violettes". Dans les logs, il décrira laquelle de ces prédictions et quelle période est à l'origine des actions nécessaires. AndroidAPS utilise différentes couleurs pour séparer ces [lignes de prédiction](../Installing-AndroidAPS/Releasenotes#overview-tab).
 
 #### Voici des exemples de lignes de prédiction pourpres et de la façon dont elles peuvent varier :
 
