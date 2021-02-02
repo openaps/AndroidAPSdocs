@@ -60,15 +60,15 @@ Dans les paramètres Insight d'AndroidAPS, vous pouvez activer les options suiva
 
 * "Enreg. changement de réservoir": ajoute automatiquement le changement de réservoire quand vous effectuez "Remplir tubulure" sur la pompe.
 
-* "Enreg. changement de tubulure": ajoute une note dans la base de données AndroidAPS quand vous exécutez "Remplir tubulure" sur la pompe.
+* changement de tubulure": ajoute une note dans la base de données AndroidAPS quand vous exécutez "Remplir tubulure" sur la pompe.
 
-* "Enreg. changement de site": ajoute une note dans la base de données AndroidAPS lorsque vous exécutez "Remplir canule" sur la pompe. Remarque: Une modification de canule réinitialise également Autosens. **Remarque : un changement de site réinitialise également Autosens.**
+* changement de site": ajoute une note dans la base de données AndroidAPS lorsque vous exécutez "Remplir canule" sur la pompe. **Remarque : un changement de site réinitialise également Autosens.**
 
-* "Enreg. changements de batterie" : Ceci enregistre un changement de pile quand vous en mettez une nouvelle dans la pompe.
+* changements de batterie" : Ceci enregistre un changement de pile quand vous en mettez une nouvelle dans la pompe.
 
-* "Enreg. changement mode de fonctionnement" : ajoute une note dans la base de données AndroidAPS quand vous démarrez, arrêtez ou mettez en pause la pompe.
+* changement mode de fonctionnement" : ajoute une note dans la base de données AndroidAPS quand vous démarrez, arrêtez ou mettez en pause la pompe.
 
-* "Enreg. alertes" : ajoute une note dans la base de données AndroidAPS chaque fois que la pompe émet une alerte (sauf les rappels, annulations de bolus et annulations de DBT - ceux-ci ne sont pas enregistrés).
+* alertes" : ajoute une note dans la base de données AndroidAPS chaque fois que la pompe émet une alerte (sauf les rappels, annulations de bolus et annulations de DBT - ceux-ci ne sont pas enregistrés).
 
 * "Activer l'émulation de DBT": La pompe Insight ne faire des débits de base temporaires (DBT) que jusqu'à 250%. Pour contourner cette restriction, l'émulation DBT demandera à la pompe de fournir un bolus étendu pour l'insuline supplémentaire si vous demandez un DBT supérieur à 250%.
     
@@ -78,14 +78,18 @@ Dans les paramètres Insight d'AndroidAPS, vous pouvez activer les options suiva
 
 * "Désactiver les vibrations des bolus automatiques": cela désactive les vibrations de la pompe Insight quand un bolus automatique (SMB ou basal temp avec émulation DBT) est délivré. Ce paramètre est disponible uniquement avec la dernière version du firmware Insight (3.x).
 
-* "Durée min./max. de récupération [s]": définit les durées d'attente d'AndroidAPS avant d'essayer à nouveau après une tentative de connexion échouée. Vous pouvez choisir entre 0 et 20 secondes. Si vous rencontrez des problèmes de connexion, choisissez un temps d'attente plus long.   
-      
-    Exemple pour durée min. de récupération = 5 et durée max. de récupération = 20   
+* de récupération [s]": définit les durées d'attente d'AndroidAPS avant d'essayer à nouveau après une tentative de connexion échouée. Vous pouvez choisir entre 0 et 20 secondes. Si vous rencontrez des problèmes de connexion, choisissez un temps d'attente plus long. Exemple pour durée min. de récupération = 5 et durée max. de récupération = 20   
       
     aucune connexion -> attendre **5** sec.   
     réessayer -> aucune connexion -> attendre **6** sec.   
-    réessayer -> aucune connexion -> attendre **7** sec.   
-    réessayer -> aucune connexion -> attendre **8** sec.   
+    réessayer -> aucune connexion -> attendre **7** sec. aucune connexion -> attendre **5** sec.  
+    réessayer -> aucune connexion -> attendre **6** sec.  
+    réessayer -> aucune connexion -> attendre **7** sec.  
+    réessayer -> aucune connexion -> attendre **8** sec.  
+    ...  
+    réessayer -> aucune connexion -> attendre **20** sec.  
+    réessayer -> aucune connexion -> attendre **20** sec.  
+    ...   
     ...   
     réessayer -> aucune connexion -> attendre **20** sec.   
     réessayer -> aucune connexion -> attendre **20** sec.   
@@ -93,7 +97,7 @@ Dans les paramètres Insight d'AndroidAPS, vous pouvez activer les options suiva
 
 * "Délai de déconnexion": indique combien de temps (en secondes) AndroidAPS attendra avant de se déconnecter de la pompe une fois l'opération terminée. La valeur par défaut est de 5 secondes.
 
-Pendant les périodes où la pompe est débranchée, AAPS va enregistrer un débit de basal temporaire avec 0%.
+Pendant les périodes où la pompe est débranchée, AAPS va enregistrer un débit de basal temporaire avec 0%. de basal temporaire avec 0%.
 
 Dans AndroidAPS, l'onglet Accu-Chek Insight affiche le statut actuel de la pompe et comporte deux boutons :
 
@@ -124,7 +128,7 @@ La version du firmware se trouve dans le menu Appairage de Insight / Version du 
 
 ## Remplacement de pile
 
-La durée de vie de la pile de l'Insight, lorsque vous bouclez, est comprise entre 10 et 14 jours, et au maximum 20 jours. L'utilisateur qui a déclaré cela utilise des piles Energizer ultimate lithium.
+La durée de vie de la pile de l'Insight, lorsque vous bouclez, est comprise entre 10 et 14 jours, et au maximum 20 jours. 20 jours. L'utilisateur qui a déclaré cela utilise des piles Energizer ultimate lithium.
 
 La pompe Insight dispose d'une petite batterie interne pour garder les fonctions essentielles comme l'horloge en cours d'exécution pendant que vous changez la pile. Si le changement de la pile prend trop de temps, cette batterie interne peut manquer d'énergie, l'heure sera remise à zéro, et il vous sera demandé d'entrer un nouveau la date et l'heure après avoir mis la nouvelle pile. Si cela se produit, toutes les entrées mémorisées dans AndroidAPS avant le changement de pile ne seront plus intégrées dans les calculs car le temps réel ne peut pas être identifié correctement.
 
