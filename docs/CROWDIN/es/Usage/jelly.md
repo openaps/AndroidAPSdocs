@@ -42,8 +42,8 @@ Siga estas reglas para permanecer con Andorid 7.0:
 * Jelly no necesita una tarjeta SIM, pero si la utiliza asegurese de desactivar los datos móviles. La forma más fácil es activar el modo de vuelo.
 * También, si usted no utiliza una tarjeta SIM activar los datos móviles.
 * El Bluetooth debe estar encendido, por supuesto. Si la bomba no está dentro del rango durante un periodo de tiempo más largo, la "búsqueda" consumirá mucha energía de la batería.
-* DURASPEED ON (Ajustes > Dispositivo > Duraspeed on). La lista blanca AAPS, WearOS y xDrip+ a ejecutar en segundo plano. Todas las demás aplicaciones no deben ejecutarse en segundo plano. Todas las demás aplicaciones no deben ejecutarse en segundo plano.
-* Poner fin a todas las demás tareas en segundo plano. Poner fin a todas las demás tareas en segundo plano. Ajustes > asistente Inteligente > Salir de tareas en segundo plano > Deshabilitar todas las otras aplicaciones (a excepto de AAPS, WearOS y xDrip+).
+* DURASPEED ON (Ajustes > Dispositivo > Duraspeed on). Whitelist AAPS, WearOS and xDrip+ to run in background. Todas las demás aplicaciones no deben ejecutarse en segundo plano.
+* Poner fin a todas las demás tareas en segundo plano. Settings > Intelligent assistant > Exit tasks in background > Disable all other apps (despite AAPS, WearOS and xDrip+).
 * Los servicios de localización deben estar encendidos pero en modo de ahorro de energía (Ajustes > Usuario > Ubicación > Modo > Modo de Ahorro Energético).
 * El brillo de pantalla se establece en 0%, sleep 15 -30 seg. (Configuración > Dispositivo > Pantalla).
 * Las operaciones diarias sólo a través del reloj. Otros valores y uso de pantalla sólo durante la carga. 
