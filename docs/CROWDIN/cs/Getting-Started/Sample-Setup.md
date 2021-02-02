@@ -104,7 +104,7 @@ Chcete-li to provést, proveďte na svém smartphonu následující kroky:
 
 ![Nastavení G5](../images/SampleSetupG5Settings.png)
 
-* Zdroj glykémie: `Dexcom G6 App (upravená)` -- zapněte `Nahrávat glykémie do NS` a `Posílat glykémie do xDrip+` (Více [Zdroj glykémií ](../Configuration/BG-Source.rst))
+* NS Client activated (see [NS Client](../Configuration/Config-Builder#ns-profile) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
 
 ## Nainstalujte xDrip+
 
@@ -142,9 +142,9 @@ S hodinkami s Wear OS může být život s diabetem ještě nenápadnější. Ho
 
 ![Chytré hodinky](../images/SampleSetupSmartwatch.png)
 
-viz [pumpa Dana RS ](../Configuration/DanaRS-Insulin-Pump.md)
+Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
 
-* NS Client aktivován (viz [NS Client](../Configuration/Config-Builder#ns-profile) a [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
+* Install the app "Android Wear" on your smartphone via the Google Play Store and connect the smartwatch according to the instructions there.
 * V AAPS zvolte hamburger menu (levý horní roh) > Konfigurace > Obecné (v dolní části seznamu) > Wear > Aktivovat na levé straně, klepněte na ozubené kolečko > Nastavení hodinek a aktivujte možnost `Řízení z hodinek Wear`
 * Na hodinkách: chcete-li změnit ciferník, dlouze podržte displej hodinek a vyberte `AAPSv2`
 * V případě potřeby restartujte obě zařízení.
