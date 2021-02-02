@@ -7,7 +7,7 @@ Para los mismos sucesos frecuentes, es posible que siempre tenga que cambiar los
 
 P.e. cuando su BG es demasiado bajo, puede decidir tener automáticamente un objetivo temporal alto. O si estás en tu centro de fitness, obtienes automáticamente un objetivo temporal. 
 
-Antes de utilizar Automatización, debe tener confianza en los `objetivos temporales <./temptarget.html>`_ o en los conmutadores de perfil. 
+Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
 
 Make sure you really understand how automation works before setting up your first simple rule. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
 
@@ -25,7 +25,7 @@ Nota importante
 So make sure to deactivate automation rules during these occasions if neccessary. You can do so by unticking the box left of the name of your automation rule.
 
 .. imagen:: ../images/Automation_ActivateDeactivate.png
-  :alt: Valor por omisión de automatización frente a.
+  :alt: Activate and deactivaten automation rule
 
 Where to find Automation
 --------------------------------------------------
@@ -41,8 +41,8 @@ Hay algunos límites:
 
 **Por favor, tenga cuidado:**
 
-* **menos de -2 significa: -3 e inferiores (-4, -10, etc)**
-* **más de 2 significa: -1 y superiores (-1, 0, + 10, etc)**
+* **less than -2 means: -3 and lower (-4,-10, etc)**
+* **more than -2 means: -1 and higher (-1, 0, +10, etc)**
 
 
 Condición
@@ -85,7 +85,7 @@ Puede elegir una o varias acciones:
 Después de añadir la acción, **no olvide cambiar los valores por defecto** a lo que necesita pulsando en los valores predeterminados.
  
 .. image:: ../images/Automation_Default_V2_5.png
-  :alt: Activación y desactivación de la regla de automatización valores del usuario
+  :alt: Automation default vs. valores del usuario
 
 Sort automation rules
 ---------------------
