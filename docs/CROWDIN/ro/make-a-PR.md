@@ -87,9 +87,9 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 #### Links
 
 * external link: `[alt text](www.url.tld)`
-* internal link to .md page: `[alt text](../folder/file.md)`
-* internal link to .rst page: `[alt text](../folder/file.rst)`
-* internal link to headline: `[alt text](../folder/file#headline)`
+* internal link to .md page: `[alt text](.../folder/file.md)`
+* internal link to .rst page: `[alt text](.../folder/file.rst)`
+* internal link to headline: `[alt text](.../folder/file#headline)`
 
 ### .rst files
 
