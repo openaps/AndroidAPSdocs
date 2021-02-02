@@ -104,7 +104,7 @@ Para ello, realice los pasos siguientes en el smartphone:
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
-* Cliente de NS activado (consulte [NS Client](../Configuration/Config-Builder#ns-profile) y [Configuración de Nightscout](../Installing-AndroidAPS/Nightscout.md))
+* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
 
 ## Instalar xDrip+
 
@@ -138,13 +138,13 @@ On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery >
 
 ## Opcional: Configuración de Sony Smartwatch 3 (SWR50)
 
-With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. El reloj también puede ser utilizado para controlar AndroidAPS (por ejemplo, poner discretamente un bolus de comida). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
+With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. El reloj también puede ser utilizado para controlar AndroidAPS (por ejemplo, poner discretamente un bolus de comida). El reloj también puede ser utilizado para controlar AndroidAPS (por ejemplo, poner discretamente un bolus de comida). To do this, double tap the CGM value of the AAPSv2 watchface.
 
 ![Smartwatches (Relojes inteligentes)](../images/SampleSetupSmartwatch.png)
 
 Detalles sobre la información mostrada en el watchface se pueden encontrar [aquí](../Configuration/Watchfaces.md).
 
-* Instale la aplicación "Android Wear" en su smartphone a través de Google Play Store y conecte el smartwatch de acuerdo con las instrucciones allí.
+* Cliente de NS activado (consulte [NS Client](../Configuration/Config-Builder#ns-profile) y [Configuración de Nightscout](../Installing-AndroidAPS/Nightscout.md))
 * En AAPS elija el menú de hamburguesa (esquina superior izquierda) > Configurar Builder > General (al final de la lista) > Usar > activar en el lado izquierdo, haga clic en el engranaje > Usar ajustes y activar `Controles desde el reloj`
 * En tu reloj inteligente: Pulsación larga para cambiar el watchface y selecciona `AAPSv2`
 * Si es necesario reiniciar ambos dispositivos una vez.
