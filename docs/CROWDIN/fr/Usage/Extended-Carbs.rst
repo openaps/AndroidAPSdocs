@@ -8,7 +8,7 @@ Les eGlucides sont des glucides qui sont actifs pendant plusieurs heures. Pour l
 
 Les eGlucides ne sont pas limités aux repas lourds en graisses/protéines : ils peuvent également être utilisés pour aider dans toutes les situations où il y a des influences qui augmentent les glycémies, par ex. lors de la prise d'autres médicaments comme les corticostéroïdes.
 
-Pour entrer les eGlucidess, définissez une durée dans la boîte de dialogue *Glucides* de l'onglet Accueil, le nombre total de glucides et si nécessaire un décalage horaire :
+Pour entrer les eGlucidess, définissez une durée dans la boîte de dialogue _Glucides_ de l'onglet Accueil, le nombre total de glucides et si nécessaire un décalage horaire :
 
 .. image:: ../images/eCarbs_Dialog.png
   :alt: Entrer les glucides
@@ -30,9 +30,9 @@ Une façon de gérer les graisses et les protéines avec cette fonctionnalité e
 
 -----
 
-La configuration recommandée est d'utiliser le plug-in OpenAPS SMB, avec les SMB activés ainsi que le paramètre *Activer SMB avec les glucides* activé.
+La configuration recommandée est d'utiliser le plug-in OpenAPS SMB, avec les SMB activés ainsi que le paramètre _Activer SMB avec les glucides_ activé.
 
-Un scénario par ex. pour une pizza pourrait être de donner un bolus (partiel) à l'avance via l'*Assistant* puis d'utiliser le bouton *Glucides* pour entrer les glucides restants pendant une durée de 4-6 heures, en commençant après 1 ou 2 heures. Vous devrez essayer et voir quelles sont les valeurs qui marchent pour vous bien sûr. Vous pouvez également ajuster soigneusement le paramètre *Max minutes de basal pour limiter SMB* pour rendre l'algorithme plus ou moins agressif.
+Un scénario par ex. pour une pizza pourrait être de donner un bolus (partiel) à l'avance via la Calculatrice puis d'utiliser le bouton Glucides pour entrer les glucides restants pendant une durée de 4-6 heures, en commençant après 1 ou 2 heures. Vous devrez essayer et voir quelles sont les valeurs qui marchent pour vous bien sûr. Vous pouvez également ajuster soigneusement le paramètre Max minutes de basal pour limiter SMB pour rendre l'algorithme plus ou moins agressif.
 Avec des repas faibles en glucides et riches en graisses/protéines, il peut être suffisant d'utiliser uniquement des eGlucides sans bolus manuels (voir le blog ci-dessus).
 
 Lorsque des eGlucides sont générés, une note Careportal est également créée pour pouvoir documenter toutes les entrées, et faciliter les itérations et l'amélioration des entrées.
