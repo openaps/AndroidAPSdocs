@@ -87,9 +87,9 @@ Si vous utilisez des images, veuillez utiliser des tailles raisonnables. Les ima
 #### Liens
 
 * lien externe : `[alt text](www.url.tld)`
-* lien interne vers une page .md : `[texte alternatif](../folder/file.md)`
-* lien interne vers une page .rst : `[texte alternatif](../folder/file.rst)`
-* lien interne vers un titre : `[texte alternatif](../folder/file#titre)`
+* lien interne vers une page .md : `[texte alternatif](.../folder/file.md)`
+* lien interne vers une page .rst : `[texte alternatif](.../folder/file.rst)`
+* lien interne vers un titre : `[texte alternatif](.../folder/file#titre)`
 
 ### Fichiers .rst
 
@@ -152,7 +152,7 @@ Si vous voulez définir un lien interne dans la documentation AndroidAPS, n'util
 
 Si vous prévoyez de faire beaucoup de modifications, y compris d'ajouter des images pour illustrer certaines parties de la documentation (merci !), vous pouvez adopter l'approche suivante :
 
-* Au fur et à mesure que vous enregistrez des captures d'écran, renommez les avec un nom descriptif, mais n'utilisez pas d'espaces car Github n'aime pas cela. Utilisez à la place des underscores. Par ex. Exemple_lots_images_upload.png au lieu de "Exemple lots images upload.png". 
+* Au fur et à mesure que vous enregistrez des captures d'écran, renommez les avec un nom descriptif, mais n'utilisez pas d'espaces car Github n'aime pas cela. Utilisez à la place des underscores. Exemple_lots_images_upload.png au lieu de "Exemple lots images upload.png". 
 * Veuillez utiliser des tailles raisonnables. Les images de capture d'écran doivent être de **250 pixels de largeur**.
 * Vous pouvez télécharger des images par lots facilement en :
   
