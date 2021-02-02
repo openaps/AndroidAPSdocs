@@ -4,7 +4,7 @@ Windows
 ==================================================
 1. Descargar git
 --------------------------------------------------
-* ** Usted tiene que estar en línea todo el tiempo ya que Android Studio descarga varias actualizaciones! **
+* **Usted tiene que estar en línea todo el tiempo ya que Android Studio descarga varias actualizaciones!**
 * Cualquier versión de git sirve. Por ejemplo, `https://git-scm.com/download/win <https://git-scm.com/download/win>`_.
 * Asegúrese de tomar nota de la ruta de acceso de instalación. Lo necesitará en el siguiente paso.
 
@@ -49,12 +49,12 @@ Windows
 * Abrir ventana de terminal en Android Studio
 * Enter "`git - -version`" (without quotation marks and no spaces between the two - [minus sign]!) and press Return
 
-  .. imagen:: ../images/AndroidStudio_gitversión1.png
+  .. image:: ../images/AndroidStudio_gitversión1.png
     :alt: git - -version
 
 * Si git está instalado y conectado correctamente, recibirá una información sobre la versión instalada que se muestra de la siguiente manera:
 
-  .. imagen:: ../images/AndroidStudio_gitversión2.png
+  .. image:: ../images/AndroidStudio_gitversión2.png
     :alt: resultado git-version
 
 Mac
