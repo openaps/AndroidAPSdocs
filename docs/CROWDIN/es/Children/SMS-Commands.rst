@@ -84,15 +84,15 @@ Comandos
 ==================================================
 Commands must be sent in English, the response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
 
-.. imagen:: ../images/SMSCommands.png
+.. image:: ../images/SMSCommands.png
   :alt: Ejemplo de comandos SMS
 
 Loop
 --------------------------------------------------
 * LOOP STOP/DISABLE
-  * Respuesta: El lazo se ha inhabilitado
-* LOOP START/ENABLE
   * Respuesta: El lazo se ha habilitado
+* LOOP START/ENABLE
+  * Respuesta: El lazo se ha inhabilitado
 * LOOP STATUS
 
   * La respuesta depende del estado actual
@@ -151,7 +151,7 @@ Perfil
 * PROFILE STATUS
   * Respuesta: Perfil1
 * LISTADO DE PERFILES
-  * Respuesta: 1. ` Profile1 ` 2. ` Profile2 `
+  * Respuesta: 1.
 * PERFIL 1
   * Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
 * PROFILE 2 30
@@ -159,9 +159,9 @@ Perfil
 
 Otros
 --------------------------------------------------
-*Actualizar tratamientos
+* Actualizar tratamientos
   * Respuesta: Actualizar los tratamientos desde NS
-*REINICIAR NSCLIENT
+* REINICIAR NSCLIENT
   * Respuesta: NSCLIENT REINICIAR de 1 receptor
 * BOMBA
   * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
@@ -184,7 +184,7 @@ Solución de problemas
 ==================================================
 Múltiples SMS
 --------------------------------------------------
-Si recibe el mismo mensaje una y otra vez (es decir, cambio de perfil) probablemente hayas establecido un circulo con otras apps. Podría ser con xDrip +, por ejemplo. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS. 
+Si recibe el mismo mensaje una y otra vez (es decir, cambio de perfil) probablemente hayas establecido un circulo con otras apps. cambio de perfil) probablemente hayas establecido un circulo con otras apps. Podría ser con xDrip +, por ejemplo. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS. 
 
 If the other app is installed on multiple phones make sure to deactivate upload on all of them.
 
@@ -192,5 +192,5 @@ Los comandos SMS no funcionan en los teléfonos de Samsung
 --------------------------------------------------
 Hubo un reporte sobre los comandos de SMS que se detenían después de una actualización en el teléfono Galaxy S10. Could be solved by disabling 'send as chat message'.
 
-.. imagen:: ../images/SMSdisableChat.png
+.. image:: ../images/SMSdisableChat.png
   :alt: Desactivar SMS como mensaje de chat
