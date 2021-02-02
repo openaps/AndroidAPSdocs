@@ -1,6 +1,6 @@
 # Pompe Accu-Chek Insight
 
-**Ce logiciel fait partie d'une solution de pancréas artificiel DIY (Faire soi même) et n'est pas un produit, mais exige que VOUS oblige à lire, apprendre et comprendre le système, y compris comment l'utiliser. Ce n'est pas quelque chose qui gère tout votre gestion du diabète à votre place, mais il vous permet d'améliorer votre diabète et votre qualité de vie, si vous êtes prêt à y mettre le temps nécessaire. Ne vous précipitez pas, mais laissez vous le temps d’apprendre. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
+**This software is part of a DIY artificial pancreas solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you but allows you to improve your diabetes and your quality of life, if you're willing to put in the time required. Ne vous précipitez pas, mais laissez vous le temps d’apprendre. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
 
 * * *
 
@@ -60,15 +60,15 @@ Dans les paramètres Insight d'AndroidAPS, vous pouvez activer les options suiva
 
 * "Enreg. changement de réservoir": ajoute automatiquement le changement de réservoire quand vous effectuez "Remplir tubulure" sur la pompe.
 
-* changement de tubulure": ajoute une note dans la base de données AndroidAPS quand vous exécutez "Remplir tubulure" sur la pompe.
+* "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
 
-* changement de site": ajoute une note dans la base de données AndroidAPS lorsque vous exécutez "Remplir canule" sur la pompe. **Remarque : un changement de site réinitialise également Autosens.**
+* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Remarque : un changement de site réinitialise également Autosens.**
 
-* changements de batterie" : Ceci enregistre un changement de pile quand vous en mettez une nouvelle dans la pompe.
+* "Log battery changes": This records a battery change when you put a new battery in the pump.
 
-* changement mode de fonctionnement" : ajoute une note dans la base de données AndroidAPS quand vous démarrez, arrêtez ou mettez en pause la pompe.
+* "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
 
-* alertes" : ajoute une note dans la base de données AndroidAPS chaque fois que la pompe émet une alerte (sauf les rappels, annulations de bolus et annulations de DBT - ceux-ci ne sont pas enregistrés).
+* "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
 
 * "Activer l'émulation de DBT": La pompe Insight ne faire des débits de base temporaires (DBT) que jusqu'à 250%. Pour contourner cette restriction, l'émulation DBT demandera à la pompe de fournir un bolus étendu pour l'insuline supplémentaire si vous demandez un DBT supérieur à 250%.
     
@@ -78,18 +78,14 @@ Dans les paramètres Insight d'AndroidAPS, vous pouvez activer les options suiva
 
 * "Désactiver les vibrations des bolus automatiques": cela désactive les vibrations de la pompe Insight quand un bolus automatique (SMB ou basal temp avec émulation DBT) est délivré. Ce paramètre est disponible uniquement avec la dernière version du firmware Insight (3.x).
 
-* de récupération [s]": définit les durées d'attente d'AndroidAPS avant d'essayer à nouveau après une tentative de connexion échouée. Vous pouvez choisir entre 0 et 20 secondes. Si vous rencontrez des problèmes de connexion, choisissez un temps d'attente plus long. Exemple pour durée min. de récupération = 5 et durée max. de récupération = 20   
+* "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. Vous pouvez choisir entre 0 et 20 secondes. Si vous rencontrez des problèmes de connexion, choisissez un temps d'attente plus long.   
+      
+    Example for min. de récupération = 5 et durée max. de récupération = 20   
       
     aucune connexion -> attendre **5** sec.   
     réessayer -> aucune connexion -> attendre **6** sec.   
-    réessayer -> aucune connexion -> attendre **7** sec. aucune connexion -> attendre **5** sec.  
-    réessayer -> aucune connexion -> attendre **6** sec.  
-    réessayer -> aucune connexion -> attendre **7** sec.  
-    réessayer -> aucune connexion -> attendre **8** sec.  
-    ...  
-    réessayer -> aucune connexion -> attendre **20** sec.  
-    réessayer -> aucune connexion -> attendre **20** sec.  
-    ...   
+    réessayer -> aucune connexion -> attendre **7** sec.   
+    retry -> no connection -> wait **8** sec.   
     ...   
     réessayer -> aucune connexion -> attendre **20** sec.   
     réessayer -> aucune connexion -> attendre **20** sec.   
@@ -97,7 +93,7 @@ Dans les paramètres Insight d'AndroidAPS, vous pouvez activer les options suiva
 
 * "Délai de déconnexion": indique combien de temps (en secondes) AndroidAPS attendra avant de se déconnecter de la pompe une fois l'opération terminée. La valeur par défaut est de 5 secondes.
 
-Pendant les périodes où la pompe est débranchée, AAPS va enregistrer un débit de basal temporaire avec 0%. de basal temporaire avec 0%.
+For periods when pump was stopped AAPS will log a temp. de basal temporaire avec 0%.
 
 Dans AndroidAPS, l'onglet Accu-Chek Insight affiche le statut actuel de la pompe et comporte deux boutons :
 
@@ -128,7 +124,7 @@ La version du firmware se trouve dans le menu Appairage de Insight / Version du 
 
 ## Remplacement de pile
 
-La durée de vie de la pile de l'Insight, lorsque vous bouclez, est comprise entre 10 et 14 jours, et au maximum 20 jours. 20 jours. L'utilisateur qui a déclaré cela utilise des piles Energizer ultimate lithium.
+Battery life for Insight when looping range from 10 to 14 days, max. 20 jours. L'utilisateur qui a déclaré cela utilise des piles Energizer ultimate lithium.
 
 La pompe Insight dispose d'une petite batterie interne pour garder les fonctions essentielles comme l'horloge en cours d'exécution pendant que vous changez la pile. Si le changement de la pile prend trop de temps, cette batterie interne peut manquer d'énergie, l'heure sera remise à zéro, et il vous sera demandé d'entrer un nouveau la date et l'heure après avoir mis la nouvelle pile. Si cela se produit, toutes les entrées mémorisées dans AndroidAPS avant le changement de pile ne seront plus intégrées dans les calculs car le temps réel ne peut pas être identifié correctement.
 
