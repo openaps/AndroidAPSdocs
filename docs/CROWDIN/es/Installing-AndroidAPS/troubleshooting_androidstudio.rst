@@ -6,7 +6,7 @@ Si utiliza el mismo almacén de claves a la hora de actualizar AndroidAPS usted 
 
 En caso de que ya no pueda encontrar el almacén de claves antiguo, haga lo siguiente:
 
-1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`_ on your phone.
+1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`__ on your phone.
 2. Copie la configuración desde su teléfono a una ubicación externa (es decir,. su computadora, almacenamiento en la nube...).
 3. Asegúrese de que el archivo de configuración "AndroidAPS Preferences" se almacena de forma segura.
 4. Generar apk firmado de la nueva versión tal y como se describe en la página `página de actualización <../Installing-AndroidAPS/Update-to-new-version.html>`_.
@@ -58,7 +58,7 @@ A veces, es posible que obtenga un mensaje de error al generar el apk diciendo
 Este es un error conocido en Android Studio 3.5 y probablemente no se arreglará antes de Android Studio 3.6. Tres opciones:
 
 1. Suprima manualmente las tres carpetas de compilación (normal "build", build folder en "app" y "build" en "wear") y genere el apk firmado de nuevo.
-2. Establezca la carpeta de destino en la carpeta del proyecto en lugar de la carpeta de aplicación tal como se describe en `este vídeo <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
+2. Set destination folder to project folder instead of app folder as described in `this video <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
 3. Cambie la carpeta de destino de apk (ubicación distinta).
 
 No se puede iniciar el proceso daemon
@@ -74,7 +74,7 @@ Hay muchos manuales en Internet sobre cómo determinar si tienes un SO de 32 o 6
 No hay datos de MCG
 ==================================================
 * En caso de que esté utilizando xDrip+: Identifique el receptor tal como se describe en la página `xDrip + página de ajustes <../Configuration/xdrip.html#identify-receiver>`_.
-* En caso de que esté utilizando `app parcheada Dexcom G6 <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: asegúrese de que está utilizando la versión correcta de ` 2.4 carpeta <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* In case you are using `patched Dexcom G6 app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Make sure you are using the correct version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 
 Cambios no confirmados
 ==================================================
@@ -118,26 +118,26 @@ Aplicación no instalada
 * Asegúrate de haber transferido el archivo "app-full-release.apk" a tu teléfono.
 * Si se muestra "App not installed" en el teléfono, siga estos pasos:
   
-1. `Exportar ajustes <../Usage/ExportImportSettings.html>`_ (en la versión AAPS ya instalada en tu teléfono)
+1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
 2. Desinstale AAPS en su teléfono.
 3. Habilite el modo de avión y desactive bluetooth.
 4. Instale la nueva versión ("app-full-release.apk ")
-5. `Importar valores <../Usage/ExportImportSettings.html>`_
+5. `Import settings <../Usage/ExportImportSettings.html>`__
 6. Volver a activar el bluetooth y desactivar el modo avión
 
 Aplicación instalada pero antigua
 ==================================================
-Si crea la aplicación satisfactoriamente, la transfiere al teléfono y la instala correctamente, pero el número de versión permanece igual, es posible que no haya podido `actualizar la copia local <../Update-to-new-version.html#update-your-local-copy>`_.
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`_.
 
 Ninguna de las anteriores funcionó
 ==================================================
 Si ninguno de los consejos anteriores lo ha ayudado podría considerar la creación de la aplicación desde cero:
 
-1. `Exportar ajustes <../Usage/ExportImportSettings.html>`_ (en la versión AAPS ya instalada en tu teléfono)
-2. Preparar la contraseña de clave y la contraseña del almacén de claves En caso de que haya olvidado las contraseñas, puede intentar encontrarlas en los archivos del proyecto, tal como se describe en "aquí <https://youtu.be/nS3wxnLgZOo>`_. O simplemente utiliza un almacén de claves nuevo. 
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
+1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
+2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`__. O simplemente utiliza un almacén de claves nuevo. 
+3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`__.
 4. Cuando hayas creado el APK exitosamente borra la app existente de su teléfono, transfiere la nueva apk al teléfono e instálela.
-5. `Importar valores <../Usage/ExportImportSettings.html>`_
+5. `Import settings <../Usage/ExportImportSettings.html>`__
 
 El peor escenario
 ==================================================
