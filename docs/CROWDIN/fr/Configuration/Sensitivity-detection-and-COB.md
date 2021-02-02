@@ -4,11 +4,11 @@
 
 Actuellement, nous avons 3 modèles de détection de sensibilité:
 
-* Sensibilité AAPS
+* Sensitivity AAPS
 * Sensibilité avec moyenne pondérée
 * Sensibilité Oref1
 
-### Sensibilité AAPS
+### Sensitivity AAPS
 
 La sensibilité est calculée de la même façon que Oref1, mais vous pouvez spécifier la durée prise en compte. L'absorption minimale des glucides est calculée à partir du temps d'absorption maximale des glucides renseigné dans les préférences
 
