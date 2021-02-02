@@ -15,7 +15,7 @@ Si vous devez choisir une pompe pour une mise à niveau ou pour acheter, vous vo
 
 La Combo et l'Insight sont des pompes solides, compatibles avec la boucle fermée. Cependant les avantages de la Dana R/RS comme choix de pompe sont :
 
-* Le Dana * R/RS se connecte à presque n'importe quel téléphone avec Android > = 5.1 sans avoir besoin de flasher le code. Si vous cassez votre téléphone, vous pouvez trouver facilement n'importe quel téléphone de remplacement qui fonctionne avec les pompes Dana *R/RS ... ce n'est pas aussi facile avec la Combo. (Cela pourrait changer à l'avenir quand Android 8.1 sera plus populaire)
+* The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... ce n'est pas aussi facile avec la Combo. (Cela pourrait changer à l'avenir quand Android 8.1 sera plus populaire)
 
 * L'appairement initial est plus simple avec la Dana * RS. Mais en général, vous ne le faites qu'une seule fois, cela n'a d'impact que si vous voulez tester une nouvelle fonctionnalité avec des pompes différentes.
 
