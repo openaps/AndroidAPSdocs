@@ -44,8 +44,8 @@ Code PIN obligatoire à la fin de l'OTP
 * Règles du code PIN :
 
   * 3 à 6 chiffres
-  * ne pas utiliser les mêmes chiffres (par ex. 1111)
-  * ne pas utiliser des chiffres qui se suivent (par ex. 1234)
+  * ne pas utiliser les mêmes chiffres (par ex.
+  * ne pas utiliser des chiffres qui se suivent (par ex.
 
 Configuration de l'Authentificateur
 -------------------------------------------------
@@ -111,7 +111,7 @@ Données MGC
   * Réponse: Dernière G: 5,6 il y a 4 min, Delta: 2 mmol, IA: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
   * Réponse : Pour envoyer la calibration 5.6, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
-  * Réponse après réception du code correct : Étalonnage envoyé. La réception doit être activée dans xDrip. (**Si xDrip est installé. L'acceptation des calibrations doit être activée dans xDrip+**)
+  * Réponse après réception du code correct : Étalonnage envoyé. L'acceptation des calibrations doit être activée dans xDrip+**)
 
 Basal
 --------------------------------------------------
@@ -180,7 +180,7 @@ Autres
 * HELP BOLUS
   * Réponse : BOLUS 1.2 BOLUS 1.2 MEAL
 
-Dépannage
+Problèmes de connexion
 ==================================================
 SMS multiples
 --------------------------------------------------
