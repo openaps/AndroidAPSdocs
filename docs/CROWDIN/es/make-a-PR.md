@@ -87,9 +87,9 @@ Si usa imágenes por favor use tamaños razonables. Las imágenes de captura de 
 #### Enlaces
 
 * enlace externo: `[alt text](www.url.tld)`
-* internal link to .md page: `[alt text](../folder/file.md)`
-* internal link to .rst page: `[alt text](../folder/file.rst)`
-* internal link to headline: `[alt text](../folder/file#headline)`
+* enlace interno a archivo .md: `[alt text](.../folder/file.md)`
+* enlace interno a archivo .rst: `[alt text](.../folder/file.rst)`
+* enlace interno a tíyulo: `[alt text](.../folder/file#headline)`
 
 ### Archivos .rst
 
@@ -116,7 +116,7 @@ Si usa imágenes por favor use tamaños razonables. Las imágenes de captura de 
 
 * imagenes:
   
-  `.. imagen:: ../images/modules.png`  
+  `.. image:: ../images/modules.png`  
   `:alt: alt text`
 
 #### Enlaces
@@ -169,7 +169,7 @@ Si usted está planeando hacer un montón de modificaciones, incluyendo la adici
   6. Para ver ejemplos de cómo añadir las imágenes, puede ver el código "raw" de una página para ver un ejemplo de una página que ya tiene las imágenes incrustadas correctamente. Asegúrese de utilizar el [código correcto](./make-a-PR#code-syntax) para el tipo de página sobre la que está (.md o .rst). Lo principal es tener una simple descripción de texto, seguido por un enlace con una ruta de acceso relativa a la imagen, como este:
     
     * Para páginas .md: `![ Ejemplo de carga de imágenes en lotes](../images/Example_batch_images_upload.png)` (Este código es exactamente la forma en que se incorpora la imagen siguiente)
-    * Para páginas .rst: `.. imagen:: ../images/Example_batch_images_upload.png`  
+    * Para páginas .rst: `.. image:: ../images/Example_batch_images_upload.png`  
       `:alt: Ejemplo de carga de imágenes en lotes`
 
 ![Ejemplo de carga de imágenes en lotes](./images/Example_batch_images_upload.png)
