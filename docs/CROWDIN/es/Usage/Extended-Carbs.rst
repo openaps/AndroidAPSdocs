@@ -8,7 +8,7 @@ los eCarbs son carbohidratos que se introducen durante varias horas. Esto simula
 
 los eCarbs no están limitados a las comidas pesadas grasosas / proteicas: también pueden ser utilizados para ayudar en cualquier situación en la que haya influencias que aumenten el nivel de azúcar en la sangre, por ejemplo,. otros medicamentos como los corticosteroides.
 
-Para especificar eCarbs, establezca una duración en el cuadro de diálogo *Carbs* en la pestaña de visión general, los carbohidratos totales y, opcionalmente, un tiempo de duración:
+To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift:
 
 .. imagen:: ../images/eCarbs_Dialog.png
   :alt: Introducir carbohidratos
@@ -30,9 +30,9 @@ Una forma de controlar la grasa y de la proteína con la que cuentan se describe
 
 -----
 
-La configuración recomendada es utilizar el complemento OpenAPS SMB APS, con las SMB habilitadas y la habilitación de SMB con COB habilitada.
+The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
 
-Un escenario, por ejemplo. para una pizza puede ser administrar un bolo (parcial) por adelantado a través del _calculador_ y luego usar el botón *carbs* para ingresar los carbohidratos restantes durante un período de 4 a 6 horas, comenzando después de 1 o 2 horas. Tendrá que probar y ver qué valores concretos funcionan para usted, por supuesto. También es posible ajustar cuidadosamente el valor _máx minutos de basal para limitar SMB a _ para hacer que el algoritmo sea más o menos agresivo.
+Un escenario, por ejemplo. for a Pizza might be to give a (partial) bolus up front via the *calculator* and then use the *carbs* button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours. Tendrá que probar y ver qué valores concretos funcionan para usted, por supuesto. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive.
 Con comidas bajas en carbohidratos, altas en grasas y proteínas, puede ser suficiente usar solo eCarbs sin bolos manuales (consulte el post arriba mencionado).
 
 Cuando los eCarbs son generados, se genera una nota en el Careportal para documentar los inputs, para así hacer más fácil la iteración y mejorar los inputs.
