@@ -45,7 +45,7 @@ Suivre ces règles pour rester sous Andorid 7.0 :
 * DURASPEED ON (Paramètres > Appareil > Duraspeed on). Mettre en liste blanche AAPS, WearOS et xDrip+ pour s'exécuter en arrière-plan. Toutes les autres applications ne doivent pas s'exécuter en arrière-plan.
 * Fermer toutes les autres tâches en arrière-plan. Paramètres > Assistant intelligent > Quitter les tâches en arrière-plan > Désactiver toutes les autres applications (sauf AAPS, WearOS et xDrip+).
 * Les services de localisation doit être activé mais en mode d'économie d'énergie (Paramètres > Utilisateur > Localisation > Mode > Mode économie d'Énergie).
-* Reglez la luminosité de l'écran à 0%, la mise en veille sur 15-30 secondes (Paramètres > Appareil > Affichage).
+* Reglez la luminosité de l'écran à 0%, la mise en veille sur 15-30 secondes (Paramètres > Appareil > Affichage). (Paramètres > Appareil > Affichage).
 * Faites les opérations quotidiennes uniquement via la montre. Les autres paramètres et l'afficheur ne sont utilisés que pendant la charge. 
 * Le Jelly, tout comme la pompe, ne doit pas être touché et reste sous les vêtements toute la journée.
 
