@@ -3,8 +3,8 @@ Dexcom G6
 Les bases en premier
 ==================================================
 
-* Suivez les recommandations générales relatives à l'hygiène des MGG et du capteur `ici <../Hardware/GeneralCGMRecommendation.html>`_.
-* Pour les transmetteurs G6 fabriqués après l'automne / fin 2018, veuillez vous assurez que vous utilisez bien l'une des `dernières versions de xDrip+ <https://github.com/NightscoutFoundation/xDrip/releases>`_. Ces transmetteurs ont un nouveau firmware et la dernière version stable de xDrip+ (10/01/2019) ne fonctionne pas avec.
+* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`__.
+* For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the `latest nightly built xDrip+ versions <https://github.com/NightscoutFoundation/xDrip/releases>`_. Ces transmetteurs ont un nouveau firmware et la dernière version stable de xDrip+ (10/01/2019) ne fonctionne pas avec.
 
 Conseils généraux pour boucler avec un G6
 ==================================================
@@ -27,7 +27,7 @@ Si vous utilisez le G6 avec xdrip+
 * Si vous ne l'avez pas déjà configuré, téléchargez `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ et suivez les instructions sur nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Sélectionnez xDrip dans le Générateur de configuration (dans AndroidAPS).
 * Réglez les paramètres dans xDrip+ comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_
-* Si AAPS ne reçoit pas de GLY quand le téléphone est en mode avion, utilisez 'Identify receiver' comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_.
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
 Si vous utilisez le G6 avec l'application Dexcom patchée
 ==================================================
@@ -43,7 +43,7 @@ Si vous utilisez le G6 avec l'application Dexcom patchée
 
 * Désinstallez l'application Dexcom d'origine.
 * Installez l'apk téléchargé
-* Entrez le code du capteur et le numéro de série du transmetteur dans l'application patchée. dans l'application patchée.
+* Enter sensor code and transmitter serial no. dans l'application patchée.
 * Après une courte période l'application patchée devrait recevoir le signal du transmetteur. (Si ce n'est pas le cas, vous devrez arrêter le capteur et en démarrer un nouveau.)
 * Sélectionnez App Dexcom (patchée) dans le Générateur de configuration (paramètre dans AndroidAPS).
 * Si vous voulez utiliser les alarmes xDrip via une diffusion locale, allez dans xDrip, Menu hamburger > Paramètres > Source de données matérielles > 640G / EverSense.
@@ -73,7 +73,7 @@ Dépannage G6
 ==================================================
 Dépannages spécifiques à Dexcom G6
 --------------------------------------------------
-* Entrez le code du capteur et le numéro de série du transmetteur dans l'application patchée. * Les transmetteurs avec les numéros de série commençant par 80 ou 81 ont besoin au minimum de la dernière version stable de xDrip datée de Mai 2019 (ou d'une mise à jour plus récente).
+* Transmitters with serial no. starting with 80 or 81 need at least last stable xDrip+ version from May 2019 or a newer nightly build.
 * Transmetteurs avec les numéros de série commençant par 8G ont besoin de la version du 25 juillet ou plus récente.
 * xDrip+ et l'Application Dexcom ne peuvent pas être connectés à l'émetteur en même temps.
 * Attendre au moins 15 min. entre l'arrêt et le démarrage d'un capteur.
@@ -89,7 +89,7 @@ Dépannages spécifiques à Dexcom G6
 
 Dépannage général
 --------------------------------------------------
-Les dépannages généraux concernant les MGC peuvent être trouvés `ici <./GeneralCGMRecommendation.html#depannage>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
 
 Nouvel émetteur avec capteur en cours
 --------------------------------------------------
