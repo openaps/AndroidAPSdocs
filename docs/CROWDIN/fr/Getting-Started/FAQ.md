@@ -40,7 +40,7 @@ Si vous envisagez d'utiliser l'application Android Wear pour créer un bolus ou 
 
 ### Débrancher la pompe
 
-Si vous débranchez votre pompe pour une douche / bain / piscine / sport etc., vous devez informer AndroidAPS qu'aucune insuline n'est délivrée pour avoir l'IA correcte.
+Si vous débranchez votre pompe pour une douche / bain / piscine / sport etc., Si vous débranchez votre pompe pour une douche / bain / piscine / sport etc., vous devez informer AndroidAPS qu'aucune insuline n'est délivrée pour avoir l'IA correcte.
 
 * Appuyez longuement sur le bouton "Boucle fermée" (qui sera appelé "Boucle Ouverte" si vous n'êtes pas en boucle fermée en ce moment) sur le dessus de l'écran d'accueil. 
 * Sélectionnez **'Déconnecter la pompe X min (ou h)'**
