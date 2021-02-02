@@ -4,7 +4,7 @@
 
 * Envoyez une demande d'adhésion à l'équipe Wiki. Pour le faire, cliquez sur le drapeau de la langue souhaitée, puis sur le bouton "Join" dans le coin supérieur droit de la page suivante. Veuillez renseigner la langue, donner quelques informations sur vous et votre expérience AAPS et si vous voulez être un traducteur ou un correcteur (seulement les personnes qualifiées pour traduire + les utilisateurs avancés d'AndroidAPS).
 
-* Lorsque nous vous approuvons, cliquez sur le drapeau ![Lorsque nous vous approuvons, cliquez sur le drapeau](./images/translation_flags2019.png)
+* When we approve you, click the flag ![Lorsque nous vous approuvons, cliquez sur le drapeau](./images/translation_flags2019.png)
 
 ## Traduire les textes de l'application AndroidAPS
 
@@ -54,9 +54,9 @@ Lorsqu'un correcteur approuve une traduction, elle sera ajoutée à la prochaine
     
     Voici quelques exemples :
     
-    * Qu’est ce qu’un Système de boucle fermée ? \---> #qu-est-ce-qu-un-systeme-de-boucle-fermee
-    * Wiki mises à jour & modifications \---> #wiki-mises-a-jour-modifications
-    * Fichier AAPS-.apk \---> #fichier-aaps-apk
+    * Qu’est ce qu’un Système de boucle fermée ? \---> #was-ist-ein-closed-loop-system-mit-androidaps
+    * Docs Updates & Änderungen \---> #docs-updates-anderungen
+    * AAPS-.apk Datei \---> #aaps-apk-datei
 
 * Vérifiez si votre lien fonctionne comme prévu. S'il s'agit d'un lien vers un nouveau titre traduit, vous devrez peut-être attendre la prochaine génération de la documentation pour vérifier si la syntaxe du lien est correcte. Dans ce cas n'oubliez pas de faire un rappel dans votre agenda.
 
