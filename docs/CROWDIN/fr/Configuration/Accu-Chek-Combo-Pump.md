@@ -19,7 +19,7 @@
 * Seulement un profil de basal est pris en charge.
 * Sélectionner un profil de basal autre que 'Basal1' sur la pompe, ou délivrer via la pompe des bolus 'carré' et 'mixte', interfère avec les DBT et force la boucle en mode 'AGB' pendant 6 heures car la boucle ne peut pas fonctionner en toute sécurité dans ces conditions.
 * Actuellement, il n'est pas possible de régler l'heure et la date de la pompe, donc [les changements d'heure](../Usage/Timezone-traveling#accu-chek-combo) doivent être effectués manuellement (vous pouvez désactiver la mise à jour automatique de l'heure du téléphone la veille au soir, puis changer l'heure le matin du téléphone et de la pompe pour éviter une alarme pendant la nuit).
-* Actuellement, seuls les débits de basals de 0,05 à 10 U/h sont supportés. Ceci s'applique également lors de la modification du profil, par exemple, lorsqu'il augmente à 200%, le taux basal le plus élevé ne doit pas dépasser 5 U/h car il sera doublé. De même, en réduisant à 50%, le taux basal le plus bas doit être au moins 0,10 U/h.
+* Actuellement, seuls les débits de basals de 0,05 à 10 U/h sont supportés. De même, en réduisant à 50%, le taux basal le plus bas doit être au moins 0,10 U/h. Ceci s'applique également lors de la modification du profil, par exemple, lorsqu'il augmente à 200%, le taux basal le plus élevé ne doit pas dépasser 5 U/h car il sera doublé.
 * Si la boucle demande l'annulation d'un DBT en cours, le Combo fixera un DBT de 90% ou 110% pendant 15 minutes à la place. C'est parce que l'annulation d'un DBT provoque une alerte sur la pompe qui cause beaucoup de vibrations.
 * Occasionnellement (tous les deux jours ou plus), AndroidAPS risque de ne pas annuler automatiquement une alerte 'TBR CANCELLED', donc l’utilisateur doit s’en occuper (en appuyant sur le bouton actualiser dans AndroidAPS afin de transférer l’alarme à AAPS, ou en confirmant l’alerte sur la pompe).
 * La stabilité de la connexion Bluetooth varie en fonction des téléphones utilisés. La perte de connection provoque des alertes "pompe injoignable", pendant laquelle aucune connexion avec la pompe n'est établie. 
@@ -33,7 +33,7 @@
 ## Paramètres
 
 * Configurez la pompe en utilisant le logiciel de configuration Accu-Chek 360. 
-* Si vous n’avez pas le logiciel, veuillez contacter votre prestataire en france ou la hotline Accu-Chek dans les autres pays. Ils envoient généralement aux utilisateurs enregistrés un CD ou une clé USB avec le logiciel de configuration de la pompe et un périphérique de connexion infrarouge USB SmartPix (le périphérique Realtyme fonctionne aussi si vous en avez). Ou cherchez sur un forum de votre pays.
+* Si vous n’avez pas le logiciel, veuillez contacter votre prestataire en france ou la hotline Accu-Chek dans les autres pays. Ils envoient généralement aux utilisateurs enregistrés un CD ou une clé USB avec le logiciel de configuration de la pompe et un périphérique de connexion infrarouge USB SmartPix (le périphérique Realtyme fonctionne aussi si vous en avez).
 * **Paramètres requis** (marqués en vert dans les captures d'écran) :
     
     * Choisissez ou laissez la configuration du menu sur "Standard", cela affichera uniquement les menus et actions pris en charge sur la pompe, et masquera ceux qui ne sont pas supportés par AAPS (bolus duo/carré, débits de base multiples) et qui entraînent une limitation du fonctionnement de la boucle lors de leurs utilisation, et donc ne permet pas une exécution sécurisée de la boucle.
@@ -104,13 +104,13 @@ Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
 * Plus tard, vous devrez le redéfinir sur 5 s pour répondre aux paramètrage du combo dans AAPS.
 * Si la pompe n'affiche pas du tout le téléphone comme appareil de couplage, la puce Bluetooth de votre téléphone n'est probablement pas compatible avec la pompe. Vérifiez que vous exécutez une version de **LineageOS ≥ 14.1** ou **Android ≥ 8.1 (Oreo)**. Si possible, essayez un autre smartphone. Vous pouvez trouver la liste des téléphones déjà utilisés avec succès sous \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
 
-9. Ensuite la pompe doit afficher un code de sécurité à 10 chiffres, et Ruffy affiche un écran pour le renseigner. Donc entrez le dans Ruffy et vous devriez être prêt à partir.
+9. Ensuite la pompe doit afficher un code de sécurité à 10 chiffres, et Ruffy affiche un écran pour le renseigner. et Ruffy affiche un écran pour le renseigner. Donc entrez le dans Ruffy et vous devriez être prêt à partir.
 10. Redémarrer le téléphone.
 11. Maintenant, vous pouvez redémarrer la boucle AAPS.
 
 ## Utilisation
 
-* Gardez à l'esprit qu'il ne s'agit pas d'un produit, en particulier au début, l'utilisateur doit surveiller et comprendre le système, ses limites et comment il peut échouer. 
+* Gardez à l'esprit qu'il ne s'agit pas d'un produit, en particulier Gardez à l'esprit qu'il ne s'agit pas d'un produit, en particulier au début, l'utilisateur doit surveiller et comprendre le système, ses limites et comment il peut échouer. 
 * Il est fortement conseillé de NE PAS utiliser ce système lorsque la personne n'est pas en mesure de bien le comprendre entièrement.
 * Lisez la documentation d'OpenAPS https://openaps.org pour comprendre l'algorithme de boucle sur lequel est basé AndroidAPS.
 * Lisez les [docs AAPS](https://androidaps.readthedocs.io/en/latest/CROWDIN/fr/) pour en savoir plus et comprendre AndroidAPS.
