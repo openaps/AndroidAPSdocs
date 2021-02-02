@@ -174,11 +174,11 @@ Za předpokladu, že máte správný bazál, můžete tento parametr otestovat t
 > 
 > Příklad:
 > 
-> Množství inzulinu na 1 výměnnou jednotku (VJ = 12 g sacharidů): 2,4 U/VJ -> Na 1 VJ potřebujete 2,4 jednotky inzulinu.
+> Bread unit fatcor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
-> Odpovídající inzulino-sacharidový poměr: I:C - 12 g / 2,4 U = 5,0 g/U -> 5,0 g sacharidů pokryje 1 jednotka inzulinu.
+> Corresponding IC: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
 > 
-> VJ faktor 2,4 U / 12g ===> IC = 12g / 2,4 U = 5,0 g/U
+> BU factor 2,4 U / 12g ===> IC = 12g / 2,4 U = 5,0 g/U
 > 
 > Převodní tabulky jsou k dispozici online, např. [zde](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
