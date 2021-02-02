@@ -4,7 +4,7 @@
 
 * * *
 
-## ***AVISO: ** Si ha estado utilizando la bomba con **SightRemote ** en el pasado, por favor, **actualice a la versión más reciente de AAPS ** y **desinstale SightRemote **.*
+## **AVISO: ** Si ha estado utilizando la bomba con **SightRemote ** en el pasado, por favor, **actualice a la versión más reciente de AAPS ** y **desinstale SightRemote **.**
 
 ## Requisitos hardware y software
 
@@ -48,7 +48,7 @@ Nota: AAPS escribirá los datos siempre en **primer perfil de tasa basal en la b
     
     ![Pantalla de información de emparejamiento Insight](../images/Insight_PairingInformation.png)
 
-Nota: No habrá una conexión permanente entre la bomba y el teléfono. Sólo se establecerá una conexión si es necesario (por ejemplo, fijar la tasa basal temporal, dar bolo, leer la historia de la bomba...). De lo contrario, la batería del teléfono y de la bomba se agotarían demasiado rápido.
+Nota: No habrá una conexión permanente entre la bomba y el teléfono. Sólo se establecerá una conexión si es necesario (por ejemplo, fijar la tasa basal temporal, dar bolo, leer la historia de la bomba...). Sólo se establecerá una conexión si es necesario (por ejemplo, fijar la tasa basal temporal, dar bolo, leer la historia de la bomba...). De lo contrario, la batería del teléfono y de la bomba se agotarían demasiado rápido.
 
 ## Valores en AAPS
 
@@ -78,9 +78,7 @@ En los valores de Insight en AndroidAPS, puede habilitar las opciones siguientes
 
 * "Disable vibrations on automated bolus delivery": This disables the Insight pump's vibrations when delivering an automatic bolus (SMB or Temp basal with TBR emulation). This setting is available only with the latest version of Insight firmware (3.x).
 
-* "Tiempo de recuperación": Esto define cuánto tiempo esperará el AndroidAPS antes de volver a intentarlo, después de un intento de conexión fallido. Puede elegir entre 0 y 20 segundos. Si experimenta problemas de conexión, elija un tiempo de espera más largo.   
-      
-    Ejemplo de min. tiempo de recuperación = 5 y max. tiempo de recuperación = 20   
+* "Tiempo de recuperación": Esto define cuánto tiempo esperará el AndroidAPS antes de volver a intentarlo, después de un intento de conexión fallido. Puede elegir entre 0 y 20 segundos. Si experimenta problemas de conexión, elija un tiempo de espera más largo. Ejemplo de min. tiempo de recuperación = 5 y max. tiempo de recuperación = 20   
       
     no conexión-> espere **5 ** seg.   
     reintento-> sin conexión-> espera **6 ** seg.   
