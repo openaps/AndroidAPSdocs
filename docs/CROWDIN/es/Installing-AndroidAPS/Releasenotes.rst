@@ -11,13 +11,13 @@ Entonces tienes 60 días para actualizarte. Si no actualiza dentro de estos 60 d
 
 Si no se actualiza durante otros 30 días (90 días a partir de la fecha de la nueva versión), AAPS cambiará a Lazo Abierto.
 
-Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Por lo tanto, son necesarias que todas las actualizaciones de usuario a.s.a.p. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
+Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Therefore it is neccessary that every user updates a.s.a.p.. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
 
 Version 2.8.2
 ================
 Release date: 23-01-2021
 
-**Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`_.
+* Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
 
 Changes
 ----------------------
@@ -192,7 +192,7 @@ Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or ne
 Nuevas características importantes
 ------------------
 * Small design changes (startpage...)
-* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`_
+* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
 * New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
 
   * Local profile can hold more than 1 profile
@@ -224,7 +224,7 @@ Versión 2.5.1
 ==================================================
 Fecha de lanzamiento: 31-10-2019
 
-Tenga en cuenta las `notas importantes <../Installing-AndroidAPS/Releasenotes.html#important-notes>`_ y `limitaciones <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-actualmente-is-not-soportado>`_ listados para `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
+Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
 * Se corrigió un error en el receptor de estado de red que conduce a muchos fallos (no críticos, sino que desperdiciarían mucha energía en el recálculo de cosas).
 * Nuevo mantenimiento de versiones que permitirá realizar actualizaciones menores sin activar la notificación de actualización.
 
@@ -234,9 +234,9 @@ Fecha de lanzamiento: 26-10-2019
 
 Notas importantes
 --------------------------------------------------
-* Utilice `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ o más reciente para `crear el apk <../Installing-AndroidAPS/Building-APK.html>`_ o `actualización <../Installing-AndroidAPS/Update-to-new-version.html>`_.
+* Please use `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ or newer to `build the apk <../Installing-AndroidAPS/Building-APK.html>`_ or `update <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Si está utilizando xDrip `identificar el receptor <../Configuration/xdrip.html#identify-receiver>`_ debe establecerse.
-* Si utiliza Dexcom G6 con el `la app Dexcom parchada <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ necesitará la versión de la `carpeta 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* If you are using Dexcom G6 with the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Glimp is supported from version 4.15.57 and newer.
 
 ¿Es esta actualización para mí? Actualmente NO es soportado
@@ -375,7 +375,7 @@ Misceláneo
 * Revisión para las pestañas del constructor de configuración y objetivos, añadiendo descripciones
 * Nuevo icono de la aplicación
 * Muchas mejoras y correcciones de errores
-* Alertas independientes de Nightscout si la bomba es inalcanzable durante más tiempo (p.ej. batería de bomba agotada) y lecturas de BG perdidas (ver *Local alerts* en configuración)
+* Alertas independientes de Nightscout si la bomba es inalcanzable durante más tiempo (p.ej. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Opción para mantener la pantalla encendida
 * Opción de mostrar notificaciónes como notificación Android
 * Filtrado avanzado (que permite siempre habilitar SMB y 6h después de las comidas) soportado con el app de Dexcom o xDrip patched con el modo nativo G5 como fuente BG.
