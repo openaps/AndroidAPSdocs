@@ -93,7 +93,7 @@ Hay varias razones posibles. Realice los siguientes pasos:
 3. Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until **NO DEVICE** is shown.
 4. Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device "**SpiritCombo**"
 5. Asegúrese que el lazo de AAPS no está en ejecución. Desactive el lazo en AAPS.
-6. Ahora inicie ruffy en el teléfono. Debe pulsar Reset! eliminar el antiguo emparejamiento. Y por último pulsar en Connectar!.
+6. Ahora inicie ruffy en el teléfono. Debe pulsar Reset! Debe pulsar Reset! eliminar el antiguo emparejamiento. Y por último pulsar en Connectar!.
 7. El el menú Bluetooth de la bomba, ir a **ADD DEVICE / ADD CONNECTION**. Press *CONNECT!**
     
     * Step 6 and 7 have to be done in a short timing.
