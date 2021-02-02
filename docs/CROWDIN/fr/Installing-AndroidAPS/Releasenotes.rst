@@ -7,7 +7,7 @@ Vous recevrez les informations suivantes dès qu'une nouvelle mise à jour sera 
 .. image:: ../images/AAPS_LoopDisable90days.png
   :alt: Update info
 
-Ensuite, vous avez 60 jours pour mettre à jour. Si vous ne faites pas de mise à jour au cours de ces 60 jours, AAPS retournera en mode AGB (Arrêt Glycémie Basse - cf.
+Ensuite, vous avez 60 jours pour mettre à jour. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 6 <../Usage/Objectives.html>`_.
 
 Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à partir de la nouvelle date de sortie), AAPS passe à Boucle Ouverte.
 
@@ -17,9 +17,9 @@ Version 2.8.2
 ================
 Date de sortie : 23-01-2021
 
-**Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 2.7 comme c'est décrit ici** `ici <../Installing-AndroidAPS/update2_7.html>`_.
+* Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
 
-Divers
+Changes
 ----------------------
 * améliorations de la stabilité
 * plus de réglages pour Android 8+
@@ -43,7 +43,7 @@ Changements majeurs
 ----------------------
 * RileyLink, Omnipod et la pompe MDT améliorations et corrections
 * NS_UPLOAD_ONLY forcé
-* correction pour SMB & appli.
+* fix for SMB & Dexcom app
 * corrections cadrans montres connectées
 * rapport de plantage amélioré
 * gradle restauré pour permettre l'installation directe des cdrans de montres
@@ -51,7 +51,7 @@ Changements majeurs
 * amélioration du driver RS
 * divers plantages corrigés
 * corrections de bugs et améliorations de l'Interface Utilisateur
-* Nouvelles traductions&nbsp;
+* new translations
 
 Version 2.8.0
 ================
@@ -88,7 +88,7 @@ Date de sortie : 24-09-2020
 
 **Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 2.7 comme c'est décrit ici** `ici <../Installing-AndroidAPS/update2_7.html>`__.
 
-Vous devez au moins démarrer l'`objectif 11 <../Usage/Objectives.html#objectif-11-automation>`_ afin de continuer à utiliser la `fonction d'automatisation <../Usage/Automation.html>`_ (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 11 n'est pas possible). tml#objectif-3-prouver-ses-connaissances>`_ , vous devrez terminer l'examen avant de pouvoir commencer l'`objective 11 <../Usage/Objectives.html#objectif-11-automatisation>`_. Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
+Vous devez au moins démarrer l'`objectif 11 <../Usage/Objectives.html#objectif-11-automation>`_ afin de continuer à utiliser la `fonction d'automatisation <../Usage/Automation.html>`_ (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 11 n'est pas possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
 Nouvelles fonctionnalités majeures
 ----------------------
@@ -192,7 +192,7 @@ Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une 
 Nouvelles fonctionnalités majeures
 ------------------
 * Petites modifications de l'affichage (page d'accueil...)
-* Onglet/Menu Careportal supprimé - plus de détails `ici <../Usage/CPbefore26.html>`_
+* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
 * Nouveau `plugin Profil Local <../Configuration/Config-Builder.html#profil-local-recommande>`_
 
   * Le profil local peut contenir plusieurs profils
@@ -236,7 +236,7 @@ Remarques importantes
 --------------------------------------------------
 * Veuillez utiliser `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ ou plus récent pour `construire l'apk <../Installing-AndroidAPS/Building-APK.html>`_ ou le `mettre à jour <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Si vous utilisez xDrip `identify receiver <../Configuration/xdrip.html#identifier-le-recepteur>`_ doit être défini.
-* Si vous utilisez Dexcom G6 avec l'application `Dexcom patchée <../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee>`_ vous aurez besoin de la version du `Dossier 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* If you are using Dexcom G6 with the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Glimp est pris en charge à partir de la version 4.15.57 et plus récente.
 
 Cette mise à jour est-elle pour moi? N'est actuellement PAS pris en charge
@@ -288,7 +288,7 @@ Date de sortie : 07-04-2019
 Nouvelles fonctionnalités majeures
 --------------------------------------------------
 * Correctif Autosens : désactiver CT réhausse/diminue la cible
-* nouvelles traductions
+* New translations
 * Correctifs du pilote Insight
 * Correctif plugin SMS
 
@@ -350,7 +350,7 @@ Paramètres à ajuster lors du passage d'AMA à SMB
 
 Onglet Vue d'ensemble
 --------------------------------------------------
-* Le ruban du haut donne accès à Suspendre/Désactiver la boucle, consulter/changer le profil et démarrer/arrêter les cibles temp. Les CT utilisent des paramètres par défauts configurés dans les préférences. La nouvelle option CT Hypo est une cible temp. haute pour empêcher la boucle de corriger trop agressivement les glucides de secours.
+* Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). Les CT utilisent des paramètres par défauts configurés dans les préférences. La nouvelle option CT Hypo est une cible temp. haute pour empêcher la boucle de corriger trop agressivement les glucides de secours.
 * Boutons de traitement : l'ancien bouton de traitement est encore disponible, mais masqué par défaut. La visibilité des boutons peut maintenant être configurée. Ajout de deux nouveaux boutons insuline et glucides (qui inclut `eGluc/glucides étendus <../Usage/Extended-Carbs.html>`_)
 * `Lignes de prédiction <../Getting-Started/Screenshots.html#lignes-de-prediction>`_ - plus de détails
 * Option pour afficher un champ de notes dans les boites de dialogue insuline/glucides/calculatrice et amorcer+remplir, qui sont téléchargées dans NS
@@ -375,7 +375,7 @@ Divers
 * Remplacement des onglets du générateur de configuration et des objectifs, ajout de descriptions
 * Nouvelle icône d'application
 * Beaucoup d'améliorations et de correctifs
-* Alerte indépendante de Nightscout si la pompe est injoignable pendant une durée longue (par ex. si la pile de la pompe est à plat) et pour des lectures de GLY manquées (voir _Alertes locales_ dans les paramètres)
+* Alerte indépendante de Nightscout si la pompe est injoignable pendant une durée longue (par ex. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Option pour garder l'écran allumé
 * Option pour afficher les notifications AAPS comme des notifications Android
 * Filtrage avancé (permettant de toujours activer SMB et pendant 6h après les repas) pris en charge avec l'application Dexcom patchée ou xDrip+ avec le mode natif G5 en tant que source GLY.
