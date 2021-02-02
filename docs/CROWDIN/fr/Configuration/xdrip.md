@@ -14,7 +14,7 @@ Si votre téléphone tourne Android 10 et que vous avez des difficultés avec la
 
 * Assurez-vous de définir correctement l'URL de base incluant **S** à la fin de http**s**:// (et non http://)
    
-   par ex. https://API_SECRET@your-app-name.herokuapp.com/api/v1/
+   https://API_SECRET@your-app-name.herokuapp.com/api/v1/
    
    -> Menu Hamburger (en haut à gauche de l'écran d'accueil) -> Paramètres-> Cloud Upload -> Syncchronisation Nightscout (REST-API) -> URL de base
 
@@ -76,7 +76,7 @@ Si votre téléphone tourne Android 10 et que vous avez des difficultés avec la
 
 ### Redémarrages préventifs non recommandés
 
-**Pour les émetteurs Dexcom dont le numéro de série commence par 8G, 8H ou 8J le redémarrage préventif ne fonctionnent pas et pourrait tuer complètement le capteur !**
+**Pour les émetteurs Dexcom dont le numéro de série Pour les émetteurs Dexcom dont le numéro de série commence par 8G, 8H ou 8J le redémarrage préventif ne fonctionnent pas et pourrait tuer complètement le capteur !**
 
 L'extension automatique des détecteurs Dexcom (`preemptive restarts`) n'est pas recommandée car cela peut entraîner des "sauts" dans les valeurs Gly le 9ème jour après le redémarrage.
 
@@ -113,7 +113,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 6G, 8H ou 8J, 
 * Insérer un nouveau capteur (uniquement en cas de remplacement)
 
 * Placer l'émetteur dans le capteur
-* Si un message apparaît demandant de faire ls'appairage avec "DexcomXX", où "XX" sont les deux derniers caractères du numéro de série de l'émetteur. acceptez-le (appuyez sur "appairer")
+* Oubliez le périphérique dans l'état du système xDrip+ (Forget Device) ET dans les réglages BT du smartphone (sera affiché comme DexcomXX où XX sont les deux derniers chiffres du numéro de série du transmetteur)
 * Ne démarrez pas le nouveau capteur avant que l'information suivante soit présente dans la page Etat du système -> Classic Status Page -> G5/G6 status -> PhoneServiceState :
    
    * Numéro de série du transmetteur commençant par 80 ou 81 : "Got data hh:mm" (par ex. "Got data 19:04")
@@ -125,7 +125,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 6G, 8H ou 8J, 
    
    -> En bas de l'écran, `Warm Up x,x hours left` doit être affiché après quelques minutes.
 
--> Si le numéro de série de l'émetteur ne commence pas par 8G, 8H ou 8J et qu'il n'y a pas de temps renseigné après plusieurs minutes, arrêtez et redémarrez le capteur.
+-> Si le numéro de série de l'émetteur -> Si le numéro de série de l'émetteur ne commence pas par 8G, 8H ou 8J et qu'il n'y a pas de temps renseigné après plusieurs minutes, arrêtez et redémarrez le capteur.
 
 * Redémarrer le transmetteur (état du système - si pas de remplacement du capteur)
 * Ne rallumez pas le récepteur Dexcom d'origine (si utilisé) avant que xDrip+ affiche les premières lectures.
@@ -151,9 +151,9 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 6G, 8H ou 8J, 
 
 ### Étendre la durée de vie de l'émetteur
 
-* Pour l'instant la durée de vie des émetteurs dont le numéro de série commence par 8G, 8H ou 8J ne peut pas être étendue. Même chose pour les émetteurs dont le numéro de série commence par 81 avec le firmware 1.6.5.**27** (voir Etat du système - Statut G5/G6 dans la [copie d'écran](../Configuration/xdrip.html#etat-de-la-batterie-de-l-emetteur) ci-dessus).
+* Pour l'instant la durée de vie des émetteurs dont le numéro de série commence par 8G, 8H ou 8J ne peut pas être étendue. Même chose pour les émetteurs dont le numéro de série Même chose pour les émetteurs dont le numéro de série commence par 81 avec le firmware 1.6.5.**27** (voir Etat du système - Statut G5/G6 dans la [copie d'écran](../Configuration/xdrip.html#etat-de-la-batterie-de-l-emetteur) ci-dessus).
 * Pour éviter les difficultés de démarrage de capteurs il est fortement recommandé d'étendre la durée de vie de l'émetteur avant le jour 100 de la première utilisation.
-* L'utilisation d'émetteurs dont le numéro de série commence par 81 et avec un firmware 1.6.5.**27** est possible au delà de 100 jour uniquement si le mode 'engineering mode' est activé et le 'mode natif' est désactivé (menu hamburger -> paramètres -> G5/G6 debug settings -> native algorithm) car un reset hard de l'émetteur n'est PAS possible.
+* L'utilisation d'émetteurs dont le numéro de série L'utilisation d'émetteurs dont le numéro de série commence par 81 et avec un firmware 1.6.5.**27** est possible au delà de 100 jour uniquement si le mode 'engineering mode' est activé et le 'mode natif' est désactivé (menu hamburger -> paramètres -> G5/G6 debug settings -> native algorithm) car un reset hard de l'émetteur n'est PAS possible.
 * La session en cours du capteur sera stoppée lors de l'extension de la durée de vie de l'émetteur. Donc étendre la durée de vie avant un changement de capteur, ou soyez conscient qu'il y aura une nouvelle phase de démarrage du capteur d'une durée de 2h.
 * Arrêtez le capteur manuellement via le menu hamburger.
 * Basculez dans le mode `engineering` : 
@@ -209,7 +209,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G, 8H ou 8J, 
 * Insérez un nouveau capteur (uniquement en cas de remplacement).
 * Placez le transmetteur dans le capteur - **Ne pas démarrer immédiatement le capteur !**
 * Les nouveaux "Transmetteurs Firefly" (numéros de série commençant par 8G, 8H ou 8J) ne peuvent être utilisés que dans le mode natif.
-* Les options suivantes ne doivent pas être activées pour les nouveaux "transmetteurs Firefly" (numéro de série commençant par 8G, 8H ou 8J) :
+* Les options suivantes ne doivent pas être activées pour les nouveaux "transmetteurs Firefly" (numéro de série commençant par 8G, 8H ou 8J) : commençant par 8G, 8H ou 8J) :
    
    * Redémarrage préemptif (désactivé !)
    * Redémarrage du capteur (désactivé !)
@@ -265,7 +265,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G, 8H ou 8J, 
 
 * Démarrez le capteur
    
-   **Pour les nouveaux transmetteurs Firefly** (numéros de série commençant par 8G, 8H ou 8J) **c'est obligatoire, pour tous les autres transmetteurs il est recommandé d'attendre environ 15 minutes entre l'arrêt et le démarrage du nouveau capteur (jusqu'à ce que `Sensor Status: Stopped` soit affiché sur la deuxième page de l'état du système). NE PAS ANTIDATER !**
+   **Pour les nouveaux transmetteurs Firefly** (numéros de série **Pour les nouveaux transmetteurs Firefly** (numéros de série commençant par 8G, 8H ou 8J) **c'est obligatoire, pour tous les autres transmetteurs il est recommandé d'attendre environ 15 minutes entre l'arrêt et le démarrage du nouveau capteur (jusqu'à ce que `Sensor Status: Stopped` soit affiché sur la deuxième page de l'état du système). NE PAS ANTIDATER !**
 
 * Réglez l'heure de l'insertion
    
@@ -300,7 +300,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G, 8H ou 8J, 
 ### Problème de connexion du transmetteur
 
 * Le transmetteur doit être affiché dans les paramètres bluetooth de votre smartphone.
-* Le transmetteur sera affiché comme DexcomXX où XX sont les deux derniers chiffres du numéro de série du transmetteur) (par ex. DexcomHY).
+* Le transmetteur sera affiché comme DexcomXX où XX Le transmetteur sera affiché comme DexcomXX où XX sont les deux derniers chiffres du numéro de série du transmetteur) (par ex. DexcomHY).
 * Ouvrez l'Etat du système dans xDrip+ (menu hamburger sur le côté gauche de l'écran).
 * Vérifiez si votre transmetteur est affiché sur la première page d'état ("Classic Status Page").
 * Si non : Supprimez le transmetteur dans les paramètres Bluetooth du smartphone et redémarrez le transmetteur.
@@ -308,7 +308,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G, 8H ou 8J, 
 
 ### Problème lors du démarrage du nouveau capteur
 
-Veuillez noter que la méthode suivante risque de ne pas fonctionner si le numéro de série de votre transmetteur Dexcom G6 commence par 8G, 8H ou 8J.
+Veuillez noter que la méthode suivante risque de ne pas fonctionner si le numéro de série de votre transmetteur Dexcom G6 commence par 8G, 8H ou 8J. commence par 8G, 8H ou 8J.
 
 * Le capteur natif est indiqué comme "FAILED: Sensor Failed Start"
 * Arrêter le capteur
