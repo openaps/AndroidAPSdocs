@@ -6,7 +6,7 @@ Si vous utilisez le même fichier de clés lors de la mise à jour d'AndroidAPS,
 
 Si vous ne trouvez plus votre ancien fichier de clés, procédez comme suit :
 
-1. `Exporter les paramètres <../Usage/ExportImportSettings.html#exporter-les-parametres>`__ sur votre téléphone.
+1. `Exporter les paramètres <../Usage/ExportImportSettings.html#exporter-les-parametres>`_ sur votre téléphone.
 2. Copiez les paramètres de votre téléphone vers un emplacement externe (par ex. dans votre ordinateur, un service de stockage cloud...).
 3. Assurez-vous que le fichier de paramètres "AndroidAPS Preferences" est stocké en toute sécurité.
 4. Générez un apk signé de la nouvelle version comme c'est décrit dans la page `Mise à jour vers une nouvelle version <../Installing-AndroidAPS/Update-to-new-version.html>`_.
@@ -118,26 +118,26 @@ Application non installée.
 * Assurez-vous d'avoir transféré le fichier “app-full-release.apk” sur votre téléphone.
 * Si vous avez le message "Application non installée" affiché sur votre téléphone, suivez les étapes suivantes :
   
-1. `Exporter les paramètres <../Usage/ExportImportSettings.html>`__ (dans la version AAPS déjà installée sur votre téléphone)
+1. `Exporter les paramètres <../Usage/ExportImportSettings.html>`_ (dans la version AAPS déjà installée sur votre téléphone)
 2. Désinstaller AAPS sur votre téléphone.
-3. Activez le mode Avion & éteignez le bluetooth.
+3. Activer le bluetooth et désactiver le mode avion
 4. Installer la nouvelle version (« app-full-release.apk »)
-5. `Importer les paramètres <../Usage/ExportImportSettings.html>`__
-6. Activer le bluetooth et désactiver le mode avion
+5. `Importer les paramètres <../Usage/ExportImportSettings.html>`_
+6. Activez le mode Avion & éteignez le bluetooth.
 
 Application installée mais ancienne version
 ==================================================
-Si vous avez compilé l'application, que vous l'avez transferrée dans votre téléphone et installée avec succès mais que le numéro de version est resté le même, vous avez peut-être omis de `mettre à jour votre copie locale <../Update-to-new-version.html#mettez-a-jour-votre-copie-locale>`_.
+Si vous avez compilé l'application, que vous l'avez transferrée dans votre téléphone et installée avec succès mais que le numéro de version est resté le même, vous avez peut-être opis de `meetre à jour votre copie locale <../Update-to-new-version.html#mettez-a-jour-votre-copie-locale>`_.
 
 Rien ci-dessus n'a marché
 ==================================================
 Si aucun des conseils ci-dessus ne vous a aidé, vous pourriez envisager de repartir de zéro pour reconstruire l'application :
 
-1. `Exporter les paramètres <../Usage/ExportImportSettings.html>`__ (dans la version AAPS déjà installée sur votre téléphone)
-2. Ayez vos mots de passe pour la clé et le fichier de clés sous la main. Si vous avez oublié ces mots de passe vous pouvez essayer de les retrouver dans les fichiers du projet comme c'est décrit `ici <https://youtu.be/nS3wxnLgZOo>`__. Ou vous pouvez recréer un nouveau fichier de clés. 
-3. Construisez l'application à partir de zéro comme c'est décrit `ici <../Installing-AndroidAPS/Building-APK.html#telecharger-le-code-androidaps>`__.
+1. `Exporter les paramètres <../Usage/ExportImportSettings.html>`_ (dans la version AAPS déjà installée sur votre téléphone)
+2. Ayez vos mots de passe pour la clé et le fichier de clés sous la main Si vous avez oublié ces mots de passe vous pouvez essayer de les retrouver dans les fichiers du projet comme c'est décrit `ici <https://youtu.be/nS3wxnLgZOo>`_. Ou vous pouvez recréer un nouveau fichier de clés. 
+3. Construisez l'application à partir de zéro comme c'est décrit `ici <../Installing-AndroidAPS/Building-APK.html#telecharger-le-code-androidaps>`_.
 4. Quand vous avez construit l'APK avec succès, supprimez l'application existante sur votre téléphone, transférez le nouvel apk sur votre téléphone et installez le.
-5. `Importer les paramètres <../Usage/ExportImportSettings.html>`__
+5. `Importer les paramètres <../Usage/ExportImportSettings.html>`_
 
 Pire scénario
 ==================================================
