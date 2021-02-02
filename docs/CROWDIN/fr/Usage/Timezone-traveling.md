@@ -22,8 +22,8 @@ Pour éviter cela, il y a deux possibilités :
    
    ![Changement de profil avec décalage horaire](../images/ProfileSwitchTimeShift2.png)
    
-   * Vienne -> New York : Changement de profil +6 heures
-   * Vienne -> Sydney : Changement de profil -8 heures
+   * i.e. Vienna -> New York: profile switch +6 hours
+   * i.e. Vienna -> Sydney: profile switch -8 hours
 * Probablement pas une option si vous utilisez [l'application LibreLink patchée](../Hardware/Libre2#changement-de-fuseau-horaire) car la Date et heure automatique doit être activé pour démarrer un nouveau capteur Libre 2.
 
 ### Option 2: Supprimer l'historique de la pompe
@@ -83,9 +83,9 @@ AndroidAPS émettra une alarme si l'heure entre la pompe et le téléphone est t
 
 ### Actions à faire apès le changement d'heure
 
-Un bon moment pour faire ce changement serait avec des IA faibles. une heure avant un repas tel que le petit-déjeuner, (tous les bolus récents dans l'histoire de la pompe auront été de petites corrections avec des SMB, votre GA et votre IA devraient tous les deux être proches de zéro). votre GA et votre IA devraient tous les deux être proches de zéro).
+Un bon moment pour faire ce changement serait avec des IA faibles. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. votre GA et votre IA devraient tous les deux être proches de zéro).
 
-1. Trouvez un fuseau horaire qui a la même heure que la votre actuellement mais qui n'a pas de changement d'heure.
+1. Change the Android timezone back to your current location and re-enable automatic timezone.
 2. AndroidAPS va bientôt vous avertir que l'heure du Combo ne correspond pas. Mettez à jour l’heure de la pompe manuellement via l’écran et les boutons de la pompe.
 3. Sur l'écran « Combo » d'AndroidAPS, appuyez sur Rafraîchir.
 4. Allez ensuite à l'écran Traitements et cherchez des événements dans le futur. Il ne devrait pas y en avoir beaucoup.
@@ -103,6 +103,6 @@ Un bon moment pour faire ce changement serait avec des IA faibles. une heure ava
 
 ## Autres pompes
 
-* Une liste de ces pays est disponible : [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+* This feature is available since AndroidAPS version 2.2.
 * Pour éviter toute difficulté, la boucle sera désactivée pendant 3 heures APRES le changement d'heure. Ceci est fait pour des raisons de sécurité (IA trop élevée à cause d'un bolus dupliqué avant le changement d'heure).
 * Vous recevrez une notification sur l'écran principal avant le changement d'heure pour vous informer que la boucle sera temporairement désactivée. Ce message apparaîtra sans bip, vibration ou quoi que ce soit.
