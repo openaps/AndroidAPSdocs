@@ -22,11 +22,11 @@ En primer lugar, necesitas **obtener componentes de hardware utilizables**:
 * un [smartphone Android ](Phones.md) (Apple iOS no es compatible con AndroidAPS, puedes probar con [iOS Loop ](https://loopkit.github.io/loopdocs/)) y 
 * un [sistema de monitorización continua de glucosa](../Configuration/BG-Source.rst) (Mcg). 
 
-En segundo lugar, tienes que **configurar el hardware **. Ver el ejemplo del [tutorial de configuración paso a paso](Sample-Setup.md).
+Secondly, you have to **setup your hardware**. Ver el ejemplo del [tutorial de configuración paso a paso](Sample-Setup.md).
 
-En tercer lugar, tienes que **configurar los componentes de software **: AndroidAPS y la fuente MCG/FGM.
+Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
 
-En cuarto lugar, tienes que aprender y **entender el "diseño de referencia" de OpenAPS para comprobar los parámetros de tu tratamiento **. El principio fundamental del lazo cerrado es que tu basal y tus ratios de hidratos sean precisos. Todas las recomendaciones presuponen que tus necesidades basales están ajustadas y que cualquier pico o bajada observados vienen provocados por otros factores y que por lo tanto requieren de ajustes esporádicos (ejercicio, estrés, etc.). Los ajustes que el lazo cerrado puede realizar han sido limitados por seguridad (ver basal temporal máxima permitida en [OpenAPS Reference Design](https://openaps.org/reference-design/)), es preferible no utilizar las dosis disponibles para corregir basales mal ajustadas. Si por ejemplo usted frecuentemente esta bajo al aproximarse a una comida, entonces es probable que su basal tenga que ajustarse. Puedes usar [autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) para analizar tus registros de datos y comprobar si es necesario (y con que valores) modificar tus basales, tu factor de sensibilidad (ISF) o los ratios de hidratos. O puedes probar y establecer tu basal [con el método tradicional](http://integrateddiabetes.com/basal-testing/).
+Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. El principio fundamental del lazo cerrado es que tu basal y tus ratios de hidratos sean precisos. Todas las recomendaciones presuponen que tus necesidades basales están ajustadas y que cualquier pico o bajada observados vienen provocados por otros factores y que por lo tanto requieren de ajustes esporádicos (ejercicio, estrés, etc.). Los ajustes que el lazo cerrado puede realizar han sido limitados por seguridad (ver basal temporal máxima permitida en [OpenAPS Reference Design](https://openaps.org/reference-design/)), es preferible no utilizar las dosis disponibles para corregir basales mal ajustadas. Si por ejemplo usted frecuentemente esta bajo al aproximarse a una comida, entonces es probable que su basal tenga que ajustarse. Puedes usar [autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) para analizar tus registros de datos y comprobar si es necesario (y con que valores) modificar tus basales, tu factor de sensibilidad (ISF) o los ratios de hidratos. O puedes probar y establecer tu basal [con el método tradicional](http://integrateddiabetes.com/basal-testing/).
 
 ## ¿Qué aspectos prácticos de lazo tengo?
 
@@ -45,7 +45,7 @@ Si te quitas la bomba para ducharte/bañarte/nadar/hacer deporte/ etc. debes ind
 * Mantén pulsado el botón "Lazo Cerrado" ( "Lazo Abierto" si aún no lo has cerrado) en la parte superior de la pantalla. 
 * Selecciona **'Desconectar bomba XY min'**
 * Esto establecerá tu basal a cero durante ese periodo de tiempo.
-* La duración mínima de la desconexión vendrá fijada por la duración mínima de basales temporales (TBR) que permita la bomba. Por lo tanto, si deseas desconectarte durante un periodo de tiempo más corto, deberás utilizar el tiempo de desconexión más corto disponible en tu bomba y volver a conectarte manualmente tal como se describe a continuación.
+* La duración mínima de la desconexión vendrá fijada por la duración mínima de basales temporales (TBR) que permita la bomba. So, if you wish to disconnect for a shorter period of time you have to use the shortest disconnection time available for your pump and reconnect manually as described below.
 * El botón 'Lazo Cerrado' (o 'Lazo Abierto') aparecerá en rojo con el texto 'Desconectado (xx m)' mostrando el tiempo restante de desconexión.
 * AAPS volverá a conectar la bomba, automáticamente, una vez haya transcurrido el tiempo seleccionado y el lazo cerrado empezará a funcionar de nuevo.
     
@@ -150,7 +150,7 @@ Ve con cuidado, a menudo este parámetro se establece demasido bajo. Demasiado b
 * ISF = 30 => 90/30 = 3 unidades de insulina
 * ISF = 45 => 90/45 = 2 unidades de insulina
 
-Un factos de sensibilidad a la insulina (ISF) demasiado bajo puede resultar en sobre-correcciones ya que AAPS piensa que necesita más insulina, para corregir BGs altas, de la que realmente necesita. Esto puede derivar en "montañas rusas" de BG ( especialmente en ayunas). En estas circunstancias necesitas aumentar tu ISF. En estas circunstancias necesitas aumentar tu ISF. Esto significará que AAPS corregirá con dosis más pequeñas, evitando que las sobre-correcciones de BG altas provoquen BG demasiado bajas Esto significa que AAPS entregará dosis de corrección más pequeñas evitando provocar bajadas de BG al sobrecorregir BG altos.
+Un factos de sensibilidad a la insulina (ISF) demasiado bajo puede resultar en sobre-correcciones ya que AAPS piensa que necesita más insulina, para corregir BGs altas, de la que realmente necesita. Esto puede derivar en "montañas rusas" de BG ( especialmente en ayunas). En estas circunstancias necesitas aumentar tu ISF. In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
 
 Por el contrario, un ISF demasiado alto puede resultar en correcciones insuficientes, provocando que tu BG se mantenga por encima del objetivo – especialmente durante la noche.
 
@@ -162,7 +162,7 @@ Gramos de carbohidratos por unidad de insulina.
 
 Algunas personas también utilizan I:C en lugar de IC o hablan de la proporción de carbohidratos (CR).
 
-Suponiendo una basal correcta, puedes comprobar el parámetro: con una IOB de cero, estando en rango, si comes una cantidad conocida de carbohidratos y tomas la cantidad de insulina calculada con el IC actual (es recomendable que comas en tu horario habitual y que cuentes los hidratos con precisión). (es recomendable que comas en tu horario habitual y que cuentes los hidratos con precisión).
+Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. (es recomendable que comas en tu horario habitual y que cuentes los hidratos con precisión).
 
 > **NOTA:**
 > 
@@ -174,9 +174,9 @@ Suponiendo una basal correcta, puedes comprobar el parámetro: con una IOB de ce
 > 
 > Ejemplo:
 > 
-> Unidad de pan (BU = 12g carbohidratos): 2,4 U/BU -> Necesita 2,4 unidades de insulina cuando come una unidad de pan.
+> Bread unit fatcor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
-> IC correspondiente: 12/2,4 = 5,2 -> 5,2 g de carbohidratos pueden cubirse con una sola unidad de insulina.
+> Corresponding IC: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
 > 
 > Factor de BU 2,4 U/12g == = > IC = 12g/2,4 U = 5,0 g/U
 > 
@@ -196,7 +196,7 @@ Si, una vez digerida la comida y con la IOB a cero, tu BG continua más alta que
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-En AMA, DIA en realidad no significa la "duración de la actividad de la insulina ". Es un parámetro que tiene cierta relacion con DIA. En este caso significa, "el tiempo en le que la corrección debería haber acabado". No participan en el cáclulo de la IOB. En OpenAPS SMB, este parámetro ya no es necesario.
+En AMA, DIA en realidad no significa la "duración de la actividad de la insulina ". Es un parámetro que tiene cierta relacion con DIA. Now, it means, 'in which time should the correction be finished'. No participan en el cáclulo de la IOB. En OpenAPS SMB, este parámetro ya no es necesario.
 
 ## Perfil
 
@@ -212,7 +212,7 @@ En primer lugar, comprueba tu basal y realiza una prueba de basal sin hidratos. 
 
 ### ¿Qué causa picos postprandiales elevados en lazo cerrado?
 
-En primer lugar, comprueba tu basal y realiza una prueba de basal sin hidratos. Si es correcta, y tu BG se acerca a tu objetivo una vez se han absorbido completamente los hidratos, prueba de poner un objetivo temporal "comida en breve" ('eating soon') en AndroidAPS un rato antes de comer, o piensa en un pre-bolus adecuando con la ayuda de tu endocrino. Si tu BG es demasiado alta despues de comer y aún demasiado alta despues de que los hidratos se hayan absorbido completamente, piensa en reducir tu IC con la ayuda de tu endocrino. Si tu BG es demasiado alta mientras haya COB y demasiado baja una vez absorbidos todos los hidratos, piensa en incrementar tu IC y en un pre-bolus apropiado con la ayuda de tu endocrino. Si tu BG es demasiado alta despues de comer y aún demasiado alta despues de que los hidratos se hayan absorbido completamente, piensa en reducir tu IC con la ayuda de tu endocrino. Si tu BG es demasiado alta mientras haya COB y demasiado baja una vez absorbidos todos los hidratos, piensa en incrementar tu IC y en un pre-bolus apropiado con la ayuda de tu endocrino.
+En primer lugar, comprueba tu basal y realiza una prueba de basal sin hidratos. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. Si tu BG es demasiado alta despues de comer y aún demasiado alta despues de que los hidratos se hayan absorbido completamente, piensa en reducir tu IC con la ayuda de tu endocrino. Si tu BG es demasiado alta mientras haya COB y demasiado baja una vez absorbidos todos los hidratos, piensa en incrementar tu IC y en un pre-bolus apropiado con la ayuda de tu endocrino.
 
 # Otros ajustes
 
@@ -240,7 +240,7 @@ El lazo puede reducir la batería de la bomba más rápido que el uso normal por
 
 * dismunir el tiempo que pasa la pantalla LCD encendida(desde el menú de configuración de la bomba)
 * reducir la duración de la iluminación de fondo (desde el menú de configuración de la bomba)
-* seleccionar los ajustes de notificación para que suene en lugar de que vibre (desde el menú de configuración de la bomba)
+* select notification settings to a beep rather than vibrate (within pump settings menu)
 * sólo utilizar los botones de la bomba para recargar, usa AndroidAPS para visualizar el historial, el nivel de la bateria o la cantidad de insulina restante.
 * Puede que la app AndroidAPS se cierre a menudo para ahorrar bateria o liberar memoria RAM en algunos móvies. Cuando AndroidAPS se reinicializa en cada arranque, vueleve a establecer la conexión Bluetooth con la bomba y descarga la basal actual y el historial de bolus. Esto consume batería. Para ver si esto esta sucediendo, ve a Preferencias > NSClient y habilita "Registro de inicio de la app en NS'. Nightscout va a recibir un aviso en cada reinicio de AndroidAPS, lo que facilitará identificar el problema. Para evitar que esto suceda, añade AndroidAPS en la lista de excepciones en "ajustes de batería" de tu móvil, así el modo "Ahorro de batería" no cerrará la app.
     
@@ -284,7 +284,7 @@ Consulta el [procedimiento anterior ](../Getting-Started/FAQ#disconnect-pump).
 
 ### Trabajo
 
-Dependiendo del tipo de su trabajo, quizás uses pautas diferentes en los días de trabajo. Como "looper" deberias considerar: - un [cambio de perfil](../Usage/Profiles.md) para la duración de tu jornada de trabajo (p.e. más de un 100% durante 8 horas si estas sentado o menos de un 100% si estás activo) - objetivos temporales altos o bajos - [desplazamiento temporal de tu perfil](../Usage/Profiles#time-shift) cuando te levantes mucho más tarde o mucho más temprano de lo normal. Si estás usando [perfiles de Nightscout](../Configuration/Config-Builder#ns-profile), tienes la opción de crear un segundo perfil (p.e. "trabajo" y "casa") y realizar un cambio de perfil diario según lo que vayas a necesitar.
+Dependiendo del tipo de su trabajo, quizás uses pautas diferentes en los días de trabajo. As a looper you should think of a [profile switch](../Usage/Profiles.md) for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when standing up much earlier or later than regular. Si estás usando [perfiles de Nightscout](../Configuration/Config-Builder#ns-profile), tienes la opción de crear un segundo perfil (p.e. "trabajo" y "casa") y realizar un cambio de perfil diario según lo que vayas a necesitar.
 
 ## Actividades de ocio
 
