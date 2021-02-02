@@ -93,7 +93,7 @@ SMB está trabajando cuando hay un objetivo temporal bajo o alto activo (comer p
 
 ### Habilitar SMB con Objetivo Temporal Alto
 
-SMB está trabajando cuando hay un objetivo temporal alto activo (actividad, hipo). Esta opción puede limitar otros valores de SMB, es decir, si 'SMB con objetivos temporales' está habilitado y 'SMB con objetivos temporales altos' está desactivado, SMB sólo funciona con objectivos bajos y no con obj. altos temporales. Es lo mismo para SMB habilitado con COB: si se desactiva 'SMB con objetivos temporales altos', no hay ningún SMB con un obj. alto temporal, incluso con COB activos.
+SMB está trabajando cuando hay un objetivo temporal alto activo (actividad, hipo). Esta opción puede limitar otros valores de SMB, es decir, si 'SMB con objetivos temporales' está habilitado y 'SMB con objetivos temporales altos' está desactivado, SMB sólo funciona con objectivos bajos y no con obj. Es lo mismo para SMB habilitado con COB: si se desactiva 'SMB con objetivos temporales altos', no hay ningún SMB con un obj. alto temporal, incluso con COB activos.
 
 ### Habilitar SMB siempre
 
@@ -187,7 +187,7 @@ Aquí, puede elegir, si desea utilizar la [detección de sensibilidad](../Config
 
 ### El autosensado ajusta los objetivos temporales también
 
-Si tiene esta opción habilitada, la autosensibilidad puede ajustar los objetivos (junto a basal, ISF e IC), también. Esto permite a AndroidAPS trabajar más 'agresivo' o no. Es posible que el objectivo actual se alcance más rápido con esto.
+Si tiene esta opción habilitada, la autosensibilidad puede ajustar los objetivos (junto a basal, ISF e IC), también. Esto permite a AndroidAPS trabajar más 'agresivo' o no. Es posible que el objectivo actual se alcance más rápido con esto. Es posible que el objectivo actual se alcance más rápido con esto.
 
 ### Ajustes avanzados
 
