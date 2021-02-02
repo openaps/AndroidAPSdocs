@@ -4,7 +4,7 @@ Si todavía no lo has hecho, descarga [xDrip+](https://jamorham.github.io/#xdrip
 
 **Esta documentación es para xDrip + sólo para Android.** Hay una app "xDrip para iOS" que nada tiene que ver con el xDrip + original para Android.
 
-Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus).
+Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus). a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus).
 
 Si el número de serie de su transmisor Dexcom G6 que empieza por 8G o 8H... or 8J... utiliza una de las [últimas compilaciones ](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -32,11 +32,11 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
    
    ![xDrip+ Ajustes Básicos 2](../images/xDrip_Basic2.png)
 
-* **Configuración InterApps** Si vas a utilizar AndroidAPS es necesario activar <0>Difusión local</0> dentro de las opciones InterApps de xDrip+ para que los datos sean emitidos y AndroidAPS pueda leerlos.
+* dentro de las opciones InterApps de xDrip+ para que los datos sean emitidos y AndroidAPS pueda leerlos.
 
 * Para que los valores sean consistentes, debes activar `Enviar el valor de glucosa visualizado`.
 
-* Si has activado `Aceptar tratamientos` en xDrip+ y <0>Difusión de datos</0> en AndroidAPS, entonces xDrip+ recibirá los datos de insulina, carbohidratos y dosis basal desde AndroidAPS para poder realizar predicciones de hipoglucemia, etc. con mayor precisión.
+* en AndroidAPS, entonces xDrip+ recibirá los datos de insulina, carbohidratos y dosis basal desde AndroidAPS para poder realizar predicciones de hipoglucemia, etc. con mayor precisión.
    
    ![xDrip+ Ajustes Básicos 3](../images/xDrip_Basic3.png)
 
@@ -55,8 +55,8 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### La versión de xDrip+ a utilizar depende del número de serie de los transmisores G6.
 
-* Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus). 
-* Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+* Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus). a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus). 
+* Si el número de serie de su transmisor Dexcom G6 Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ### Ajustes específicos de Dexcom
 
@@ -76,7 +76,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### No se recomiendan reinicios preventivos
 
-**With Dexcom transmitters who's serial no. que empieza por 8G o 8H, los reinicios preventivos no funcionan y podrían matar el sensor completamente!**
+**With Dexcom transmitters who's serial no. -> Si el número de serie de su transmisor does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.**
 
 No se recomienda la extensión automática de los sensores Dexcom (`reinicios preventivos`) ya que esto podría conducir a "saltos" en los valores BG el día 9 después del reinicio.
 
@@ -96,9 +96,9 @@ Para obtener más información acerca de los detalles y las razones de estas rec
 
 **Para el segundo y los siguientes transmisores ver [Extender la vida del transmisor](../Configuration/xdrip#extend-transmitter-life) a continuación.**
 
-Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus).
+Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus). a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus).
 
-Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+Si el número de serie de su transmisor Dexcom G6 Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Desactive el receptor Dexcom original (si se utiliza).
 * Pulse el icono xDrip+ en la gota de sangre de color rojo en la pantalla principal para habilitar el botón `Asistente de Origen`.
@@ -125,7 +125,7 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J 
    
    -> Cerca de la parte inferior de la pantalla `Iniciando x, x horas faltantes` debe aparecer después de unos pocos minutos.
 
--> Si el número de serie de su transmisor does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
+With Dexcom transmitters who's serial no. que empieza por 8G o 8H, los reinicios preventivos no funcionan y podrían matar el sensor completamente!
 
 * Reiniciar el colector (estado del sistema - si no se reemplaza el sensor}
 * No encienda el receptor original de Dexcom (si lo utiliza) de nuevo antes de xDrip+ muestre las primeras lecturas.
@@ -175,9 +175,9 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J 
 
 ### Sustituir transmisor
 
-Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus).
+Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus). a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus).
 
-Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Si el número de serie de su transmisor Dexcom G6 Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Desactive el receptor Dexcom original (si se utiliza).
 * Detener sensor (sólo si sustituye el sensor)
@@ -208,8 +208,8 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8Ju
 * Introducir el número de serie del transmisor nuevo. Tenga cuidado de no confundir 0 (cero) y O (letra o mayúscula).
 * Insertar nuevo sensor (sólo si se sustituye).
 * Coloque el transmisor en el sensor - **No iniciar el sensor inmediatamente!**
-* Nuevos "Transmisores Firefly" (número de serie starting with 8G, 8H or 8J) can only be used in native mode.
-* Las opciones siguientes no deben activarse para los nuevos "Transmisores Firefly" (número de serie starting with 8G, 8H or 8J):
+* Nuevos "Transmisores Firefly" (número de serie Nuevos "Transmisores Firefly" (número de serie starting with 8G, 8H or 8J) can only be used in native mode.
+* Las opciones siguientes no deben activarse para los nuevos "Transmisores Firefly" (número de serie starting with 8G, 8H or 8J): starting with 8G, 8H or 8J):
    
    * Reinicio preventivo (inhabilitar)
    * Reiniciar el sensor (deshabilitar!)
@@ -265,7 +265,7 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8Ju
 
 * Iniciar Sensor
    
-   **Para los nuevos transmisores Firefly** (número de serie starting with 8G, 8H or 8J) **it is mandatory, for all other transmitters it is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen). NO PREDATE FECHAS!**
+   **Para los nuevos transmisores Firefly** (número de serie **Para los nuevos transmisores Firefly** (número de serie starting with 8G, 8H or 8J) **it is mandatory, for all other transmitters it is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen). NO PREDATE FECHAS!**
 
 * Establecer tiempo insertado
    
@@ -308,7 +308,7 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8Ju
 
 ### Problema al iniciar un nuevo sensor
 
-Por favor, tenga en cuenta que es posible que el siguiente método no funcione si el transmisor Dexcom G6 tiene el número de serie is starting with 8G, 8H or 8J.
+Por favor, tenga en cuenta que es posible que el siguiente método no funcione si el transmisor Dexcom G6 tiene el número de serie is starting with 8G, 8H or 8J. is starting with 8G, 8H or 8J.
 
 * El sensor nativo se marca como "FAILED: Sensor Failed Start"
 * Detener Sensor
