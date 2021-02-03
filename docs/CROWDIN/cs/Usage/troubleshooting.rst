@@ -1,15 +1,17 @@
-Poradce při potížích
+Řešení problémů
 **************************************************
 Informace o odstraňování problémů můžete najít na mnoha stránkách wiki. Tato stránka obsahuje řadu odkazů, které vám mohou pomoci při hledání informací k řešení vašeho problému.
 
-Další užitečné informace mohou být k dispozici také v sekci `FAQ <../Getting-Started/FAQ.html>`_.
+Další užitečné informace mohou být k dispozici také v sekci " FAQ <../Getting-Started/FAQ.html> ` _.
 
 Aplikace AndroidAPS
 ==================================================
+
 Vytváření a aktualizace
------
+-------------------
 * `Lost keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
 * `Troubleshooting AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+
 Nastavení
 --------------------------------------------------
 * `Profile <../Usage/Profiles.html#troubleshooting-profile-errors>`_
@@ -18,6 +20,7 @@ Nastavení
     :alt: Error: Basal not aligned to hours
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
+
 Používání
 --------------------------------------------------
 * `Wrong carb values <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
