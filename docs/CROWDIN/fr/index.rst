@@ -17,8 +17,14 @@ Pour plus de détails, lisez la suite ici.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Pour commencer
+   :caption: Change language
+   Changer de langue <changelanguage.rst>
    
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Pour commencer
+
    Sécurité avant tout <./Getting-Started/Safety-first.rst>
    Qu'est-ce qu'un système en boucle fermée <./Getting-Started/ClosedLoop.rst>
    Qu'est-ce qu'une boucle fermée avec AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
@@ -27,8 +33,8 @@ Pour plus de détails, lisez la suite ici.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: De quoi ai-je besoin ? 
-   
+   :caption: De quoi ai-je besoin 
+
    Composants <./Module/module.rst>
    Exemple de configuration <./Getting-Started/Sample-Setup.md>
 
@@ -49,7 +55,7 @@ Pour plus de détails, lisez la suite ici.
    :maxdepth: 1
    :glob:
    :caption: Configuration des composants
-   
+
    MGC/MGF <./Configuration/BG-Source.rst>
    Paramètres xDrip <./Configuration/xdrip.md>
    Pompes à insuline <./Hardware/pumps.rst>
@@ -60,8 +66,8 @@ Pour plus de détails, lisez la suite ici.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Générateur de configuration 
-   
+   :caption: Générateur de configuration
+
    Générateur de configuration <./Configuration/Config-Builder.md>
    Préférences <./Configuration/Preferences.rst>
 
@@ -69,7 +75,7 @@ Pour plus de détails, lisez la suite ici.
    :maxdepth: 1
    :glob:
    :caption: Utilisation d'AndroidAPS
-    
+
    Les écrans d'AndroidAPS <./Getting-Started/Screenshots.md>
    Objectifs <./Usage/Objectives.rst>
    Fonctionnalités d'OpenAPS <./Usage/Open-APS-features.md>   
@@ -80,7 +86,7 @@ Pour plus de détails, lisez la suite ici.
    Glucides étendus <./Usage/Extended-Carbs.rst>
    Automatisation <./Usage/Automation.rst>
    Careportal (supprimé) <./Usage/CPbefore26.rst>
-   Téléversement Open Humans <./Configuration/OpenHumans.rst>
+   Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automatisation avec des applications tierces <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
 
@@ -88,7 +94,7 @@ Pour plus de détails, lisez la suite ici.
    :maxdepth: 1
    :glob:
    :caption: Conseils généraux 
-   
+
    Fuseaux horaires <./Usage/Timezone-traveling.md>
    Acces aux fichiers journaux <./Usage/Accessing-logfiles.md>
    Conseils d'utilisation de l'Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
@@ -98,29 +104,30 @@ Pour plus de détails, lisez la suite ici.
    :maxdepth: 1
    :glob:
    :caption: AndroidAPS pour les enfants
-   
+
    Surveillance à distance <./Children/Children.rst>
    Commandes SMS <./Children/SMS-Commands.rst>
-
+   Assistant Profil <./Configuration/profilehelper.rst>
+   
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Dépannage
-  
+   :caption: Troubleshooting
+
    Dépannage <./Usage/troubleshooting.rst>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Questions fréquentes 
-  
+   :caption: Questions fréquentes
+
    Questions fréquentes <./Getting-Started/FAQ.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
    :caption: Glossaire
-  
+
    Glossaire <./Getting-Started/Glossary.md>
 
 .. toctree::
@@ -138,6 +145,7 @@ Pour plus de détails, lisez la suite ici.
    :caption: Pour les professionnels de santé
 
    Pour les professionnels de santé <./Resources/clinician-guide-to-AndroidAPS>
+
 
 .. toctree::
    :maxdepth: 1
