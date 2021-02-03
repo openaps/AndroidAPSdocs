@@ -52,7 +52,7 @@
 
 * Entrez **l'ancien mot de passe** (mot de passe par défaut voir [au-dessus](#mot-de-passe-par-defaut)) et appuyez sur OK
     
-    ![DanaRS Entrez l"ancien mot de passe](../images/DanaRSPW_04_11PWenter.png)
+    ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
 
 * Si un mauvais mot de passe est entré ici, il n'y aura pas de message indiquant l'échec !
 
