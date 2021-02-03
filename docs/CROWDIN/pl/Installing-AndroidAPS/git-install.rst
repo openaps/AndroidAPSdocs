@@ -1,7 +1,7 @@
 Install git
 **************************************************
 Windows
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 1. Download git
 --------------------------------------------------
 * **You have to be online all of the time as Android Studio downloads several updates!**
@@ -58,7 +58,7 @@ Windows
     :alt: result git-version
 
 Mac
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 * Any git version should work. For example `https://git-scm.com/download/mac <https://git-scm.com/download/mac>`_
 * Use homebrew to install git: ```$ brew install git```.
 * For details on installing git see the `official git documentation <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.

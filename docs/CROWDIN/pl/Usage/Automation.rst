@@ -2,7 +2,7 @@ Automation
 **************************************************
 
 What is Automation
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. 
 
 I.e. when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. 
@@ -15,7 +15,7 @@ Make sure you really understand how automation works before setting up your firs
   :alt: Automation condition + action
 
 How to use it
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 To set up an automation, you have to give it a title, select at least one condition and one action. 
 
 Important note
@@ -102,7 +102,7 @@ To delete an automation rule click on trash icon.
   :alt: Delete automation rule
 
 Good practice & caveats
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 * When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
 * Whatch the rule results.
 * Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg < 180 mg/dl)
@@ -120,7 +120,7 @@ Good practice & caveats
   * Increased risk of hypoglycemia if profile switch does not expire or reset back to base profile.
 
 Examples
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 These are just setup examples, no advises. Don't reproduce them without being aware what you are actually doing or why you need them.
 
 * Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
@@ -152,6 +152,6 @@ Please be aware to use automation incorrectly. This might lead to difficulties a
 * Creating long term rules
 
 Alternatives
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 
 For advanced users, there are other posibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found `here <./automationwithapp.html>`_.

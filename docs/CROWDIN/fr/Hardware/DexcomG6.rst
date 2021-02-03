@@ -30,7 +30,7 @@ Si vous utilisez le G6 avec xdrip+
 * If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
 Si vous utilisez le G6 avec l'application Dexcom patchée
-==================================================
+========================================================
 * Téléchargez l'apk ici `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, et choisissez la version correspondant à vos besoins (version G6 en mg/dl ou mmol/l).
 
   * Le dossier 2.4 concerne les utilisateurs de la version actuelle, le dossier 2.3 n'est que pour la version obsolète 2.3 d'AndroidAPS.
@@ -50,7 +50,7 @@ Si vous utilisez le G6 avec l'application Dexcom patchée
 * Il n'y a pas de diffusion locale de l'application Dexcom patchée directement vers xDrip+. La diffusion doit passer par AAPS, comme décrit ci-dessus.
 
 Si vous utilisez G6 avec votre propre application Dexcom
-==================================================
+========================================================
 * Depuis Décembre 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA) prend également en charge la diffusion locale vers AAPS et/ou xDrip+ (sauf pour les capteurs G5 !)
 * Cette application vous permet d'utiliser votre Dexcom G6 avec n'importe quel smartphone Android.
 * Désinstallez l'application Dexcom d'origine ou l'application Dexcom patchée si vous en avez utilisé une auparavant.

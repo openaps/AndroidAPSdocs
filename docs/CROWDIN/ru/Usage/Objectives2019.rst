@@ -6,7 +6,7 @@ AndroidAPS ставит ряд Целей, которые необходимо �
 If you are **upgrading phones** then you can `export your settings <../Usage/ExportImportSettings.html>`_ to keep your progress through the objectives. Ваш прогресс будет сохранен не только в прохождении целей, но и в настройках безопасности, таких как максимальный болюс и т. д.  Если настройки не переносить, то движение к целям придется начинать заново.  It is a good idea to `backup your settings <../Usage/ExportImportSettings.html>`_ frequently just in case.
  
 Цель 1: Настройка визуализации и мониторинга, анализ базальной скорости и коэффициентов
-=================================================================================
+=======================================================================================
 * Select the right blood glucose source for your setup.  See `BG Source <../Configuration/BG-Source.html>`_ for more information.
 * Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.  
 * If using DanaR pump then ensure you have followed `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ instructions to ensure the link between pump and AndroidAPS.
@@ -16,7 +16,7 @@ If you are **upgrading phones** then you can `export your settings <../Usage/Exp
 *You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
 
 Objective 2: Learn how to control AndroidAPS
-============================
+============================================
 * Perform several actions in AndroidAPS as described in this objective.
 * Click on the orange text "Not completed yet" to access the to-dos.
 * Links will be provided to guide you in case you are not familiar with a specific action yet.
@@ -60,7 +60,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
   :alt: Stop sign
 
 Остановитесь здесь, если пользуетесь незамкнутым циклом с виртуальной помпой - не нажимайте на кнопку «Верифицировать» в конце цели.
---------------------------
+------------------------------------------------------------------------------------------------------------------------------------
 
 .. image:: ../images/blank.png
   :alt: blank
@@ -71,7 +71,7 @@ Objective 6: Starting to close the loop with Low Glucose Suspend
   :alt: Warning sign
   
 Closed loop will not correct high bg values in objective 6 as it is limited to low glucose suspend. Вы сами вручную должны корректировать высокие значения ГК!
----------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 * Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`_ or by pressing and holding the Open Loop button in the top left of the home screen.
 * Set your target range slightly higher than you usually aim for, just to be safe.
@@ -81,7 +81,7 @@ Closed loop will not correct high bg values in objective 6 as it is limited to l
 *The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.  You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.*
 
 Objective 7: Tuning the closed loop, raising max IOB above 0 and gradually lowering BG targets
-=========================================================
+==============================================================================================
 * Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
 
   Эта рекомендация должна рассматриваться как отправная точка. Если вы установили троекратную величину и видите признаки того, что для вас это слишком жестко, понизьте ее. Если у вас высокая резистентность повышайте эту величину постепенно.
@@ -93,7 +93,7 @@ Objective 7: Tuning the closed loop, raising max IOB above 0 and gradually lower
 
 
 Objective 8: Adjust basals and ratios if needed, and then enable autosens
-=============================================
+=========================================================================
 * You can use `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ as a one off to check your basals remain accurate, or do a traditional basal test.
 * Enable `autosens <../Usage/Open-APS-features.html>`_ over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc, and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
 
@@ -101,13 +101,13 @@ Objective 8: Adjust basals and ratios if needed, and then enable autosens
 
 
 Objective 9: Enabling additional oref0 features for daytime use, such as advanced meal assist (AMA)
-==============================================
+===================================================================================================
 * Now you should feel confident with how AndroidAPS works and what settings reflect your diabetes best
 * Then over a period of 28 days you can try additional features that automate even more of the work for you such as the `advanced meal assist <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_
 
 
 Objective 10: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
-===============================================
+=================================================================================================
 * You must read the `SMB chapter in this wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ and `chapter oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ to understand how SMB works, especially what's the idea behind zero-temping.
 * Then you ought to `rise maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ to get SMBs working fine. maxIOB теперь включает весь активный инсулин IOB, а не только добавленный базал. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see `objective 7 <../Usage/Objectives2019.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_ for an illustration)
 * min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. Если вы переходите с AMA на SMB, то вам нужно изменить его вручную

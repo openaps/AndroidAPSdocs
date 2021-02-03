@@ -2,7 +2,7 @@ Export & import settings
 **************************************************
 
 When should I export settings?
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 Be prepared for the unforeseen. You might change important settings by accident and have problems to undo the changes. Your phone might break or get stolen. To easily return to status you've been at, settings should be exported on a regular basis.
 
 Best practice is to export after change of settings or completing an objective. 
@@ -15,7 +15,7 @@ On a Windows 10 computer it looks like this:
   :alt: AndroidAPS Preferences phone connected to computer
 
 Exported information
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 Among others the following information is part of the settings export:
 
 * `Automation <../Usage/Automation.html>`_ events
@@ -25,12 +25,12 @@ Among others the following information is part of the settings export:
 * `Preferences <../Configuration/Preferences.html>`_ incl. `NS Client settings <../Configuration/Preferences.html#nsclient>`_
 
 Encrypted backup format
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`_ .
 
 
 Eksport ustawień
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 * Menu "hamburger" (trzy poziome kreski w lewym górnym narożniku ekranu)
 * Konserwacja
 * Eksport ustawień
@@ -47,7 +47,7 @@ Eksport ustawień
   :alt: AndroidAPS export settings 2
   
 Zaimportuj ustawienia
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 **Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings-from-previous-aaps>`_.
 
 * Menu "hamburger" (trzy poziome kreski w lewym górnym narożniku ekranu)
@@ -83,7 +83,7 @@ Import settings from previous versions (before AAPS 2.7)
 * You will find the "old" file on the bottom of the list in the import dialogue.
 
 Transfer settings file
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 * Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
 * Manuals can be found on the web, i.e. `Android help pages <https://support.google.com/android/answer/9064445?hl=en>`_.
 * If you experience problems with the transferred file try another way to transfer file.

@@ -30,7 +30,7 @@ If using G6 with xDrip+
 * If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
 Εάν χρησιμοποιείτε το G6 με την εφαρμογή patched Dexcom
-==================================================
+=======================================================
 * Κάντε λήψη του apk από <https://github.com/dexcomapp/dexcomapp> https://github.com/dexcomapp/dexcomapp και επιλέξτε την έκδοση που ταιριάζει στις ανάγκες σας (mg / dl ή mmol / l, G6).
 
   * Folder 2.4 for users of the current version, folder 2.3 is only for the outdated AndroidAPS 2.3.
@@ -92,5 +92,5 @@ General troubleshoothing
 General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
 
 Νέος πομπός με αισθητήρα λειτουργίας που λειτουργούσε
---------------------------------------------------
+-----------------------------------------------------
 Εάν συμβεί να αλλάξετε τον πομπό κατά τη διάρκεια μιας περιόδου λειτουργίας του αισθητήρα, μπορεί να προσπαθήσετε να αφαιρέσετε τον πομπό χωρίς να καταστρέψετε τη βάση του αισθητήρα. Ένα βίντεο μπορεί να βρεθεί στο `https://youtu.be/AAhBVsc6NZo <https://youtu.be/AAhBVsc6NZo>`_.

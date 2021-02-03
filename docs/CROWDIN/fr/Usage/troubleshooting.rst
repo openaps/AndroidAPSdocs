@@ -8,7 +8,7 @@ Application AndroidAPS
 ==================================================
 
 Génération et mise à jour
--------------------
+-------------------------
 * `Certificats perdus <../Installing-AndroidAPS/troubleshooting_androidstudio.html#fichier-de-cles-perdu>`_
 * `Dépannage AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 

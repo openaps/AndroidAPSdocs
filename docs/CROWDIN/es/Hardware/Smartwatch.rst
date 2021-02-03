@@ -1,5 +1,5 @@
 Smartwatches (Relojes inteligentes)
-*************
+***********************************
 
 Los Smartwatches son opcionales, pero son muy útiles para algunos usuarios.
 Más detalles aquí:

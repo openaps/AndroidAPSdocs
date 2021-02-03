@@ -12,7 +12,7 @@ Windows
   :alt: Chemin d'installation de Git
 
 2. Définir le chemin d’accès git dans Android Studio
---------------------------------------------------
+----------------------------------------------------
 * Sélectionnez File > Settings 
 
   .. image:: ../images/Update_GitSettings1.png
@@ -45,7 +45,7 @@ Windows
 * Redémarrez votre PC pour mettre à jour l'environnement système.
 
 4. Vérifier les paramètres de git dans Android Studio
---------------------------------------------------
+-----------------------------------------------------
 * Ouvrez la fenêtre Terminal dans Android Studio
 * Entrez "`git - -version`" (sans les guillemets et sans espace entre les deux - [signe moins]!) et appuyez sur Entrer
 

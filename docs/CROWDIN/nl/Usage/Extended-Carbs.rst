@@ -42,7 +42,7 @@ Vertraagde bolus
 Zoals hierboven vermeld, werken vertraagde of multiwave bolussen niet echt in een closed loop. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ for details
 
 Vertraagde bolus en overschakelen naar open loop - alleen voor Dana en Insight pomp
------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 Sommige mensen wilden dolgraag een optie hebben om een vertraagde bolus te kunnen gebruiken in AAPS omdat ze voor bepaalde voedingsmiddelen willen bolussen zoals ze eerder gewend waren. 
 
 Daarom is er vanaf versie 2.6 een optie voor een vertraagde bolus toegevoegd, deze werkt alleen met Dana en Insight pompen. 

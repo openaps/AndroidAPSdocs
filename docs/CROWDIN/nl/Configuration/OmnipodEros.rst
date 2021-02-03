@@ -609,7 +609,7 @@ Provides AAPS notifications and audible phone alerts when it is uncertain if TBR
 * **\*Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
    
 Andere
------
+------
 
 Provides advanced settings to assist debugging.
 	
@@ -705,7 +705,7 @@ Battery level reporting is a setting that can be enabled to return the current b
 
 
 Problemen oplossen
-===============
+==================
 
 Pod Failures
 ------------
@@ -723,7 +723,7 @@ Pump Unreachable Alerts
 It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]** and setting this to **120**.
 
 Importeer instellingen van vorige AAPS
-----------------------------------
+--------------------------------------
 
 Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
 

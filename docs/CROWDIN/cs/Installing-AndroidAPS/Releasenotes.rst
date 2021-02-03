@@ -240,7 +240,7 @@ Důležité poznámky
 * Glimp is supported from version 4.15.57 and newer.
 
 Je tato aktualizace pro mě? Aktuálně NENÍ podporováno
---------------------------------------------------
+-----------------------------------------------------
 * Android 5 and lower
 * Poctech
 * 600SeriesUploader

@@ -1,5 +1,5 @@
 Configuration de la pompe
-***********************
+*************************
 
 .. toctree::
    :maxdepth: 1

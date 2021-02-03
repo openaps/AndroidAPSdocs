@@ -8,7 +8,7 @@ AndroidAPS app
 ==================================================
 
 Bouwen & bijwerken
--------------------
+------------------
 * `Keystore kwijt <../Installing-AndroidAPS/troubleshooting_androidstudio.html#keystore-digitale-handtekening-kwijt>`_
 * `Problemen met Android Studio oplossen <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 

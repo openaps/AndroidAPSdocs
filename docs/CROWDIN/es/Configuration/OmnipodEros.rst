@@ -575,7 +575,7 @@ Allows for scanning of a RileyLink device. The Omnipod driver cannot select more
 * **Enable battery change logging in Actions:** In the Actions menu the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Some pod communication devices now have the ability to use regular batteries which can be changed.  This option allows you to note that and reset battery age timers.
 
 Pitidos de confirmación
-------------------
+-----------------------
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
@@ -585,7 +585,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 * **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
 
 Alertas
-------
+-------
 
 Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
@@ -598,7 +598,7 @@ Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, 
 * **Automatically acknowledge Pod alerts:** When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
 
 Notificaciones
--------------
+--------------
 
 Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful. 
 
@@ -705,7 +705,7 @@ Battery level reporting is a setting that can be enabled to return the current b
 
 
 Solución de problemas
-===============
+=====================
 
 Pod Failures
 ------------
@@ -739,17 +739,17 @@ Omnipod driver alerts
 please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
 
 Ningún pod activo
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically silenced.
 
 Pod suspendido
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 Informational alert that Pod has been suspended.
 
 Error al establecer el perfil basal. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
 

@@ -1,5 +1,5 @@
 Chytré hodinky
-*************
+**************
 
 Chytré hodinky jsou volitelné, ale pro některé uživatele velmi užitečné.
 Více informací naleznete zde:

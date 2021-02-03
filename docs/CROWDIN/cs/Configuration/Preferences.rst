@@ -252,8 +252,8 @@ Minimální změna pro výzvu [%]
 * Toto definuje relativní změnu, která je požadována pro spuštění oznámení.
 
 Vylepšený asistent pro jídlo (AMA) nebo Super Micro bolus (SMB)
-===========================================================
-Depending on your settings in `config builder <../Configuration/Config-Builder.html>`__ you can choose between two algorithms:
+===============================================================
+V závislosti na nastavení v `konfiguraci <../Configuration/Config-Builder.html>`_ si můžete vybrat mezi dvěma algoritmy:
 
 * `Advanced meal assist (OpenAPS AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ - stav algoritmu v roce 2017
 * `Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - nejnovější algoritmul pro pokročilé uživatele

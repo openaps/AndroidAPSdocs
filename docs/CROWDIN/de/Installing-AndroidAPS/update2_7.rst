@@ -1,5 +1,5 @@
 Notwendige Überprüfungen nach einem Update von AndroidAPS 2.6
-***********************************************************
+*************************************************************
 
 * Der Programmcode wurde bei der Umstellung auf AAPS 2.7 deutlich verändert. 
 * Daher ist es wichtig, dass Du einige Änderungen vornimmst oder Einstellungen nach der Aktualisierung überprüfst.
@@ -51,7 +51,7 @@ Autosens (Hinweis - keine Maßnahmen erforderlich)
 * Wenn Du bisher oref1 genutzt hast, wirst Du wahrscheinlich bemerken, dass das System weniger dynamisch auf Veränderungen reagiert, da zwischen 8 und 24 Stunden gewechselt wird.
 
 Pumpen-Passwort für Dana RS setzen (wenn Dana RS verwendet wird)
------------------------------------------------------------
+----------------------------------------------------------------
 * Das Pumpen-Passwort der `Dana RS <../Configuration/DanaRS-Insulin-Pump.html>`_ wurde in früheren Versionen nicht geprüft.
 * Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 * Scrolle nach unten und klicke das Dreieck neben "Dana RS".

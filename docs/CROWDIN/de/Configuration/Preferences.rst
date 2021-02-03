@@ -162,7 +162,7 @@ Kurze Tab-Überschriften
     :alt: Einstellungen > Tabs
 
 Möglichkeit zur Erfassung von Notizen in Behandlungsdialogen
------------------------------------------------------------
+------------------------------------------------------------
 * Gibt dir die Möglichkeit, kurze Textnotizen zu Deinen Behandlungen hinzuzufügen (z.B. im Bolus-Rechner, den Buttons für Insulin und Kohlenhydrate etc.) 
 
   .. image:: ../images/Pref2020_OV_Notes.png
@@ -194,7 +194,7 @@ Erweiterte Einstellungen (Übersicht)
   :alt: Einstellungen > Status Lights
 
 Abgabe nur eines Teils der vom Bolus-Rechner ermittelten Insulinmenge
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Systemweite Einstellung, dass nur ein Teil des im Bolus Kalkulator berechneten Insulins abgegeben wird. 
 * Nur der eingestellte prozentuale Anteil (muss zwischen 10 und 100 liegen) wird abgegeben. 
 * Der Prozentsatz wird auch im Bolus Kalkulator angezeigt.

@@ -46,7 +46,7 @@ En la captura de pantalla de arriba, 41% de 1 vez que la absorción de carbohidr
 - ¡En cualquier caso, tenga cuidado de no generar sobredosis!
 
 ¿Por qué el algoritmo no detecta correctamente el COB? 
---------------------------------------------------
+------------------------------------------------------
 
 - Tal vez sobreestimaste los carbohidratos cuando los entraste.  
 - Actividad / ejercicio después de la comida anterior

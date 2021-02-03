@@ -1,5 +1,5 @@
 Glikemijos šaltinis
-************
+*******************
 
 
 .. toctree::

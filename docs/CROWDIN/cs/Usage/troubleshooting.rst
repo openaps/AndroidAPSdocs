@@ -8,7 +8,7 @@ Aplikace AndroidAPS
 ==================================================
 
 Vytváření a aktualizace
--------------------
+-----------------------
 * `Lost keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
 * `Troubleshooting AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 

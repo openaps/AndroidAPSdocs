@@ -189,7 +189,7 @@ Wenn Du die gleiche SMS immer und immer wieder empfängst (z.B. Profilwechsel), 
 Wenn die andere App auf mehreren Smartphones installiert ist, musst Du den Upload auf allen deaktivieren.
 
 SMS-Kommandos funktionieren nicht auf Samsung-Smartphones
---------------------------------------------------
+---------------------------------------------------------
 Es gab einen Hinweis, dass nach einem Update die SMS Kommandos auf einem Galaxy S10 nicht mehr funktioniert haben. Dies konnte durch Abschalten der Option 'als Chat Message senden' behoben werden.
 
 .. image:: ../images/SMSdisableChat.png

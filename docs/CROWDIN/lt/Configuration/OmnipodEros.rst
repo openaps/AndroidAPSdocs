@@ -705,7 +705,7 @@ Battery level reporting is a setting that can be enabled to return the current b
 
 
 Trikčių šalinimas
-===============
+=================
 
 Pod Failures
 ------------

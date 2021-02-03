@@ -1,5 +1,5 @@
 Konfiguration Insulinpumpe
-***********************
+**************************
 
 .. toctree::
    :maxdepth: 1

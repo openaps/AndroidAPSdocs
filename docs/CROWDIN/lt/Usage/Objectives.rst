@@ -103,7 +103,7 @@ Uždaras ciklas nekoreguos aukštos glikemijos 6 tiksle, nes jį apriboja sustab
 * Dėl to Jūs galite patirti laikinus staigius glikemijos šuolius, ypač po hipoglikemijos korekcijos, nes neturėsite galimybės padidinti valandinės bazės.
 
 Tikslas 7: koreguokite savo uždarąjį ciklą po truputį didindami maks AIO ir mažindami tikslinę glikemijos reikšmę
-====================================================================================================
+=================================================================================================================
 * Vienai dienai nustatykite „maksimalų bendrą AIO, kurio negalima viršyti“ (OpenAPS vadinamą „max-iob“) reikšmę, didesnę nei 0. Rekomenduojama numatytoji reikšmė yra „vidutinis valgio boliusas + 3 x didžiausia dienos valandinė bazė" (SMB algoritmui) arba 3x didžiausia dienos valandinė bazė (senesniam AMA algoritmui), tačiau turėtumėte palaipsniui artėkite prie šios reikšmės, kol sužinosite, kad nustatymas jums tinka (didžiausia dienos valandinė bazė = didžiausia valandinė bazė per visą paros laikotarpį).
 
   Ši rekomendacija turėtų būti laikoma atskaitos tašku. Jei naudosite koeficientą 3x ir pastebėsite, kad AAPS veikia per daug agresyviai, sumažinkite šį koeficientą (pvz., 2x, ...). Jei esate rezistentiškas, galite po truputį jį pakelti.
@@ -115,7 +115,7 @@ Tikslas 7: koreguokite savo uždarąjį ciklą po truputį didindami maks AIO ir
 
 
 Tikslas 8: jei reikia, koreguokite valandinės bazės reikšmes bei pagrindinius parametrus ir įgalinkite Autosens funkciją
-====================================================================================================
+========================================================================================================================
 * Galite naudoti `autotune įrankį <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_, kad patikrintumėte, ar jūsų baziniai nustatymai yra tikslūs, arba atlikti tradicinį bazės patikrinimo testą.
 * 7 dienoms įjunkite `Autosens <../Usage/Open-APS-features.html>`_ ir stebėkite baltą liniją, esančią pagrindinio ekrano grafike, nurodančią, kaip jūsų jautrumas insulinui didėja ar mažėja atsižvelgiant į aktyvumą, hormonų veiklą ir pan. taip pat galima analizuoti informaciją OpenAPS skirtuke, kad sužinotumėte, kaip AndroidAPS koreguoja nustatytą valandinę bazę ir/ar tikslinę glikemiją.
 
@@ -123,13 +123,13 @@ Tikslas 8: jei reikia, koreguokite valandinės bazės reikšmes bei pagrindinius
 
 
 9 tikslas: Išbandykite papildomas kasdienio naudojimo funkcijas ir įgykite pasitikėjimą uždara ciklo sistema
-====================================================================================================
+============================================================================================================
 * Iki AAPS 2.7 versijos maisto asistentas (MA) buvo pagrindinis AAPS algoritmas, o norint užbaigti 8 tikslą, reikėjo aktyvuoti `išmanųjį maisto asistentą AMA <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_.
 * Kadangi `išmanusis maisto asistentas AMA Advanced Advanced Assist Assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ yra jau standartinis algoritmas nuo AAPS 2.7 versijos, ateinančias 28-ias dienas išbandykite funkcijas, kurių dar nenaudojote, ir įgykite daugiau pasitikėjimo uždara ciklo sistema.
 
 
 Tikslas 10: dienos metu aktyvuokite papildomas oref1 funkcijas, tokias kaip super mikro bolusas (SMB)
-====================================================================================================
+=====================================================================================================
 * Turite perskaityti šios dokumentacijos `SMB skyrių <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ ir `oref1 skiltį openAPS dokumentacijoje <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_, kad suprastumėte kaip veikia SMB, ypač kokia yra nulinės bazės nustatymo idėja.
 * Tada turėtumėte `padidinti maxAIO <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_, kad SMB veiktų gerai. max AIO dabar apima visą AIO, ne tik pridėtą (pakeltą) valandinę bazę. Tai yra, jei valgymui suleidžiamas 8 vv boliusas, o maksAIO yra 7 vv, SMB nebus leidžiamas tol, kol AIO nenukris žemiau 7 vv. Galima pradėti nuo maxAIO = vidutinis maisto bolusas + 3x maksimali dienos valandinė bazė bet kuriuo paros metu (apie tai rašoma `7 tiksle <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_)
 * pereinant nuo AMA iki SMB, "min_5m_carbimpact" numatytasis absorbcijos parametras pakeičiamas nuo 3 iki 8. Jeigu Jūs pereinate nuo AMA į SMB, turite jį parametrą pakeisti rankiniu būdu.

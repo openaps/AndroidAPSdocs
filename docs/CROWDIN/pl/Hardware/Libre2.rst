@@ -10,7 +10,7 @@ BG readings can also be done using a BT transmitter like with the Libre1.
 Important note : This does not work with the US version of the Freestyle 2 sensor ! The US version will only connect to a reader, not a phone.
 
 Step 1: Build your own patched LibreLink-App
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 
 For legal reasons, the so-called patching has to be done by yourself. Use search engines to find the corresponding links. There are mainly two variants: The recommended original patched app blocks any internet traffic to avoid tracking. The other variant supports LibreView which may be needed by your doctor.
 
@@ -90,7 +90,7 @@ However there is a variant of the patched app supporting LibreView with enabled 
 
 
 Step 2: Install and configure xDrip+ app
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 
 The blood sugar values are received on the smartphone by the xDrip+ App. 
 
@@ -106,7 +106,7 @@ The blood sugar values are received on the smartphone by the xDrip+ App.
   :alt: xDrip+ LibreLink logging
 
 Step 3: Start sensor
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 
 In xDrip+ start the sensor with "Start Sensor" and "not today". 
 
@@ -115,14 +115,14 @@ In fact this will not physically start any Libre2 sensor or interact with them i
 After a sensor change xDrip+ will automatically detect the new sensor and will delete all calibration data. You may check you bloody BG after activation and make a new initial calibration.
 
 Step 4: Configure AndroidAPS (for looping only)
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 * In AndroidAPS go to Config Builder > BG Source and check 'xDrip+' 
 * If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
 
 Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within SMB algorithm. The BG values of Libre 2 are not smooth enough to use it safely. See `Smoothing blood glucose data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ for more details.
 
 Experiences and Troubleshooting
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 
 Connectivity
 --------------------------------------------------
@@ -183,7 +183,7 @@ There seem to be bad sensors from time to time, which are far away from the bloo
 If the sensor moved a little bit on the skin or is lifted somehow this can cause bad results. The filament which sits in the tissue is a little bit pulled out of the tissue and will measure different results then. Mostly probably you will see jumping values in xDrip+. Or the difference to the bloody values change. Please replace the sensor immediately! The results are inaccurate now.
 
 Using bluetooth transmitter and OOP
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+==============================================================================
 
 Bluetooth transmitter can be used with the Libre2 with the latest xDrip+ nightlys and the Libre2 OOP app. You can receive blood sugar readings every 5 minutes as well as with the Libre1. Please refer to the miaomiao website to find a description. This will also work with the Bubble device and in the future with other transmitter devices. The blucon should work but has not been tested yet.
 

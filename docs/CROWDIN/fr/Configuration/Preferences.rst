@@ -252,8 +252,8 @@ Changement minimum [%]
 * Ce paramètre défini le changement relatif minimum qui déclenchera une notification.
 
 Assistance Améliorée Repas (AAR ou AMA) ou Super Micro Bolus (SMB)
-===========================================================
-Depending on your settings in `config builder <../Configuration/Config-Builder.html>`__ you can choose between two algorithms:
+===================================================================
+Selon vos paramètres dans le `Générateur de configuration <../Configuration/Config-Builder.html>`_ vous pouvez choisir entre deux algorithmes :
 
 * `Assistance Améliorée Repas (OpenAPS AMA) <../Usage/Open-APS-features.html#assistance-amelioree-repas-aar>`_ - état de l'algorithme en 2017
 * `Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - algorithme le plus récent pour les utilisateurs avancés

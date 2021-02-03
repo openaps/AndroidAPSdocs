@@ -88,8 +88,8 @@ Doel 6: Starten in Closed Loop met bescherming tegen lage BG
   :alt: Waarschuwings-teken
   
 De closed loop zal hoge glucosewaarden in doel 6 niet naar beneden kunnen brengen, omdat in dit doel alleen nog de 'pompstop voor laag' functie geactiveerd is. Om hoge glucosewaarden naar beneden te krijgen, moet je zelf nog handmatig ingrijpen!
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`__ or by pressing and holding the Open Loop button in the top left of the home screen.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+* Selecteer Closed-Loop vanuit het `Instellingen-menu <../Configuration/Preferences.html>`_ of door de Loop-knop linksbovenin het Overzicht-scherm ingedrukt te houden.
 * Stel je lage en hoge streefdoel iets hoger in dan je normaal zou doen, voor de zekerheid.
 * Kijk hoe tijdelijke basaastanden worden ingesteld door te kijken naar de blauwe tekst in het Overzicht-scherm, of door het blauwe deel van de grafiek op het Overzicht-scherm te bekijken.
 * Zorg dat jouw instellingen zo zijn, dat AndroidAPS in 5 dagen tijd niet heeft hoeven ingrijpen om een lage glucosewaarde te voorkomen.  Mocht je op dit moment nog veelvuldige of heftige lage glucosewaardes hebben, dan moet je waarschijnlijk nog iets verbeteren aan jouw instellingen van DIA, basaal, ISF of KH ratio (in die volgorde).
@@ -103,7 +103,7 @@ De closed loop zal hoge glucosewaarden in doel 6 niet naar beneden kunnen brenge
 * Het kan gebeuren dat je (bijv. na een hypo) een piek krijgt in je glucosewaarde, omdat jouw IOB op dat moment groter is dan nul, en het systeem dus geen tijdelijk basaal > 100% kan instellen. Gedurende dit doel zul je af en toe handmatig moeten ingrijpen om hoge bloedsuikers naar beneden te krijgen.
 
 Doel 7: Inregelen van de closed loop, verhoog de max IOB boven 0 en laat geleidelijk de streef BG dalen
-====================================================================================================
+=======================================================================================================
 Verhoog jouw 'Max totaal IOB dat OpenAPS niet kan overschrijden' (in OpenAPS heet dit 'max-iob') naar een getal groter dan 0. Het wordt standaard aanbevolen om de volgende formule te gebruiken: "gemiddelde maalbolus + 3x max dagelijkse basaal"(voor SMB algoritme) of "3x max dagelijkse basaal" (voor het oudere AMA algoritme). NB: in deze formule wordt met "max dagelijkse basaal" bedoeld de hoogste waarde van jouw basaal (in eenheden per uur). Wanneer je deze instelling hoger wilt hebben dan de standaardformule, doe dit dan altijd in kleine stapjes en test gedurende meerdere dagen het effect van die verhoging. 
 
   Deze aanbeveling moet als uitgangspunt worden beschouwd. Als je op de 3x zit en je ziet dat het systeem de neiging heeft om jouw bloedglucose te laag uit te laten komen, pas dan deze instelling aan naar een lager getal. Als je zeer insulineresistent bent, pas dan deze instelling met kleine stapjes aan naar een hoger getal.

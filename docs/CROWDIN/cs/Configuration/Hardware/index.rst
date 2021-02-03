@@ -5,7 +5,7 @@ Konfigurace
 --------------
    
 Zdroj glykémií
------------
+---------------
 * `BG Source <../BG-Source.html>`_
 * `xDrip+ Settings <../xDrip.html>`_
 * `Dexcom G6 hints <../Dexcom.html>`_
@@ -20,10 +20,10 @@ Pumps
 * `Medtronic pump <../MedtronicPump.html>`_
 
 Telefony
--------
+--------
 * `Jelly Pro Settings <../../Usage/jelly.html>`_
 * `Huawei Settings <../../Usage/huawei.html>`_
 
 Chytré hodinky
-------------
+--------------
 * `Watchfaces <../Watchfaces.html>`_
