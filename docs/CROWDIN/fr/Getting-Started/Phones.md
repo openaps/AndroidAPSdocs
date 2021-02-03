@@ -10,4 +10,4 @@ En cas de problème avec la feuille de calcul, envoyez un email à hardware@andr
 
 # Fond d'écran
 
-![fond d'écran](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> Si vous voulez décorer votre téléphone avec plus d'AndroidAPS, vous pouvez télécharger votre image d'arrière-plan ici : ![Fond d'écran en haute résolution.](../images/bg_phone.jpg)
+![fond d'écran](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Fond d'écran en haute résolution.](../images/bg_phone.jpg)
