@@ -6,7 +6,7 @@ If you use the same keystore when updating AndroidAPS you do not have to uninsta
 
 In case you cannot find your old keystore anymore, proceed as follows:
 
-1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`_ on your phone.
+1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`__ on your phone.
 2. Copy settings from your phone to an external location (i.e. your computer, cloud storage service...).
 3. Make sure settings file "AndroidAPS Preferences" is stored safely.
 4. Generate signed apk of new version as described on the `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_.
@@ -103,8 +103,8 @@ Option 3 - Check for updates
 * Switch to Terminal in Android Studio (lower left side of Android Studio window)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
-   
+    :alt: Android Studio Terminal
+
 * Paste copied text and press return
 
   .. image:: ../images/GIT_TerminalCheckOut2.jpg
@@ -118,11 +118,11 @@ Option 3 - Check for updates
 * Make sure you have transferred the “app-full-release.apk” file to your phone.
 * If "App not installed" is displayed on your phone follow these steps:
   
-1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
+1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
 2. Καταργήστε την εγκατάσταση του AAPS στο τηλέφωνό σας.
 3. Enable airplane mode & turn off bluetooth.
 4. Εγκατάσταση νέας έκδοσης ("app-full-release.apk")
-5. `Import settings <../Usage/ExportImportSettings.html>`_
+5. `Import settings <../Usage/ExportImportSettings.html>`__
 6. Ενεργοποιήστε ξανά το bluetooth και απενεργοποιήστε τη λειτουργία του αεροπλάνου
 
 Η εφαρμογή έχει εγκατασταθεί αλλά είναι παλαιά έκδοση
@@ -133,12 +133,11 @@ If you build the app successfully, transferred it to your phone and installed it
 ==================================================
 Εάν δεν βοηθηθήκατε από τις παραπάνω συμβουλές, μπορείτε να εξετάσετε το ενδεχόμενο να δημιουργήσετε την εφαρμογή από την αρχή:
 
-1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
-2. Have your key password and key store password ready
-    In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
-4.	Όταν έχετε δημιουργήσει το APK, διαγράψτε με επιτυχία την εξερχόμενη εφαρμογή στο τηλέφωνό σας, μεταφέρετε το νέο APK στο τηλέφωνό σας και εγκαταστήστε το.
-5. `Import settings <../Usage/ExportImportSettings.html>`_
+1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
+2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`__. Or you just use a new keystore. 
+3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`__.
+4. Όταν έχετε δημιουργήσει το APK, διαγράψτε με επιτυχία την εξερχόμενη εφαρμογή στο τηλέφωνό σας, μεταφέρετε το νέο APK στο τηλέφωνό σας και εγκαταστήστε το.
+5. `Import settings <../Usage/ExportImportSettings.html>`__
 
 Στη χειρότερη περίπτωση
 ==================================================
