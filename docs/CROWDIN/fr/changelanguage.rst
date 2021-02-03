@@ -1,4 +1,4 @@
-Change language
+Changer la langue
 **************************************************
 
 .. remarque ::
