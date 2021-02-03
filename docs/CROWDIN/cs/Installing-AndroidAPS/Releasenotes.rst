@@ -13,6 +13,21 @@ Pokud neaktualizujete do dalších 30 dní (90 dní od nového vydání) přejde
 
 Prosím pochopte, že tato změna není určena, aby vás otravovala, ale je to kvůli bezpečnostním důvodům. Nové verze AndroidAPS neposkytují pouze nové funkce, ale také důležité bezpečnostní opravy. Proto je důležité, aby každý uživatel aktualizoval co nejdříve.. Bohužel stále existují hlášení o chybách z velmi starých verzí, takže se jedná o pokus zlepšit bezpečnost pro každého uživatele a celou komunitu DIY. Děkujeme za pochopení.
 
+Version 2.8.2
+================
+Release date: 23-01-2021
+
+* Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
+
+Changes
+----------------------
+* stability improvements
+* more tweaking for Android 8+
+* improved icons
+* watch improvements
+* NSClient fixes
+* Bolus advisor now works with Pumpcontrol and NSClient
+
 Version 2.8.1.1
 ================
 Release date: 12-01-2021
@@ -46,12 +61,12 @@ Důležitá poznámky
 ----------------------
 * **Minimální verze Androidu je teď 8.0.** Pro starší verze Androidu lze stále použít verzi 2.6.1.4 ze starého úložiště kódů. 
 * `Cíle byly změněny. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
-  Umístění kódů bylo změněno na https://github.com/nightscout/AndroidAPS . Pokud se nevyznáte v práci s nástrojem git, nejjednodušší způsob aktualizace je odstranění staré verze a vytvoření `nového klonu kódu <../Installing-AndroidAPS/Building-APK.html>`_.
+Umístění kódů bylo změněno na https://github.com/nightscout/AndroidAPS . Pokud se nevyznáte v práci s nástrojem git, nejjednodušší způsob aktualizace je odstranění staré verze a vytvoření `nového klonu kódu<../Installing-AndroidAPS/Building-APK.html>`_.
 * K sestavení APK použijte `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
 ----------------------
-* `podpora Omnipod Eros <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and zvláštní díky @ps2 @itsmojo, dalším, kteří se ůčastnili vývoje ovladače pro Loop a @jlucasvt z GetRileyLink.org 
+* `podpora Omnipod Eros <../Configuration/OmnipodEros.html>` _ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and zvláštní díky @ps2 @itsmojo, dalším, kteří se ůčastnili vývoje ovladače pro Loop a @jlucasvt z GetRileyLink.org 
 * `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
 * `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-2-8>`_ @rICTx-T1D
 * Vylepšení připojení Dana RS @MilosKozak 
@@ -71,7 +86,7 @@ Verze 2.7.0
 ================
 Datum vydání: 24. 09. 2020
 
-**Ujistěte se, že jste zkontrolovali a upravili nastavení po přechodu na verzi 2.7, jak je popsáno** `zde <../Installing-AndroidAPS/update2_7.html>`_.
+**Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`__.
 
 Abyste mohli pokračovat v používání `Automatizace <../Usage/Automation.html>`_, potřebujete alespoň spustit plnění `cíle 11 <../Usage/Objectives.html#objective-11-automation>`_ (všechny předchozí cíle musí být splněny, aby šlo spustit cíl 11). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. Neovlivní to cíle, které jste již dokončili. Splněné cíle zůstanou zachovány!
 
@@ -123,7 +138,7 @@ Datum vydání: 03. 05. 2020
 K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
------
+------------------
 * Insight: Deaktivace vibrací na bolus pro firmware verze 3
 * Jinak je stejná jako verze 2.6.1.2. Aktualizace není povinná. 
 
@@ -134,7 +149,7 @@ Datum vydání: 19. 04. 2020
 K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
------
+------------------
 * Oprava pádů pro Insight
 * Jinak je stejná jako verze 2.6.1.1. Pokud nejste ovlivněni touto chybou, nemusíte provádět upgrade.
 
@@ -145,7 +160,7 @@ Datum vydání: 06. 04. 2020
 K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
------
+------------------
 * Řeší problém s příkazem SMS CARBS při použití Combo pumpy
 * Jinak je stejná jako verze 2.6.1. Pokud nejste ovlivněni touto chybou, nemusíte provádět upgrade.
 
@@ -156,7 +171,7 @@ Datum vydání: 21. 03. 2020
 K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
------
+------------------
 * Povolit zadání pouze adresy https:// v nastavení NSClient
 * Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
 * Fixed small UI bugs
@@ -175,9 +190,9 @@ Datum vydání: 29. 02. 2020
 K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
------
+------------------
 * Drobné úpravy vzhledu (úvodní obrazovka...)
-* Odstraněna karta/nabídka Péče - další podrobnosti `zde <../Usage/CPbefore26.html>`_
+* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
 * Nový `plugin Místního profilu <../Configuration/Config-Builder.html#local-profile-recommended>`_
 
   * Do místního profilu lze nyní uložit více než 1 profil
@@ -328,10 +343,10 @@ Nastavení k přizpůsobení při přechodu od AMA k SMB
 * výchozí hodnota min_5m_carbimpact se změnila z 3 na 8 při přechodu od AMA k SMB. Pokud přecházíte z AMA na SMB, musíte toto nastavení změnit ručně
 * Při vytváření AndroidAPS 2.0 apk mějte na paměti: Konfigurace na vyžádání není aktuální verzí pluginu Android Gradle podporována! Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
 
-   * Otevřete okno Preferences klepnutím na File > Settings (na platformě Mac, Android Studio > Preferences).
-   * V levé části pak na Build, Execution, Deployment > Compiler.
-   * Odtrhněte Configure on demand.
-   * Klikněte na Apply nebo OK.
+  * Otevřete okno Preferences klepnutím na File > Settings (na platformě Mac, Android Studio > Preferences).
+  * V levé části pak na Build, Execution, Deployment > Compiler.
+  * Odtrhněte Configure on demand.
+  * Klikněte na Apply nebo OK.
 
 Hlavní stránka
 --------------------------------------------------
