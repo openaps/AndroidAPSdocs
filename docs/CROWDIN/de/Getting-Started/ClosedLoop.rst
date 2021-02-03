@@ -23,7 +23,7 @@ So wie der Autopilot neben den Sensorwerten auf die Vorgaben der Piloten angewie
 
 
 Open Source Closed Loop System für eine künstliche Bauchspeicheldrüse
-==================================================
+===================================================
 Aktuell sind drei große Open Source Closed Loop Systeme verfügbar:
 
 AndroidAPS (AAPS)
