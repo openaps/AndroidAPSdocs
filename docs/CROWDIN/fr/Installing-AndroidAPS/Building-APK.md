@@ -270,6 +270,6 @@ Sur votre téléphone, vous devez autoriser l'installation à partir de sources 
 
 [Voir la page xDrip+](../Configuration/xdrip#identifier-le-recepteur)
 
-## Troubleshooting
+## Résolution de problèmes
 
 Voir la page spécifique [dépannage Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
