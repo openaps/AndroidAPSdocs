@@ -2,14 +2,16 @@ Résolution de problèmes
 **************************************************
 Vous pouvez trouver des informations de dépannage sur de nombreuses pages dans le wiki. Cette page est une collection de liens pour vous aider à trouver les informations nécessaires pour résoudre votre problème.
 
-D'autres informations utiles peuvent également être disponibles dans la rubrique `FAQ <../Getting-Started/FAQ.html>`_.
+Additional useful information might also be available in the `FAQ <../Getting-Started/FAQ.html>`_.
 
 Application AndroidAPS
 ==================================================
+
 Génération et mise à jour
------
+-------------------
 * `Certificats perdus <../Installing-AndroidAPS/troubleshooting_androidstudio.html#fichier-de-cles-perdu>`_
 * `Dépannage AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+
 Paramètres
 --------------------------------------------------
 * `Profils <../Usage/Profiles.html#depannage-des-erreurs-de-profil>`_
@@ -18,6 +20,7 @@ Paramètres
     :alt: Error: Débits de Basal non alignés sur les heures
 
 * `Client Nightscout <../Usage/Troubleshooting-NSClient.html>`_
+
 Utilisation
 --------------------------------------------------
 * `Valeur de glucides incorrectes <../Usage/COB-calculation.html#detection-de-ga-errones>`_
