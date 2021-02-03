@@ -19,7 +19,7 @@ That’s why apks aren’t available.
 ## How to begin?
 First of all, you have to **get loopable hardware components**:
 
-* A [supported insulin pump](Pump-Choices.md), 
+* A [supported insulin pump](./Pump-Choices.md), 
 * an [Android smartphone](Phones.md) (Apple iOS is not supported by AndroidAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and 
 * a [continuous glucose monitoring system](../Configuration/BG-Source.rst). 
 

@@ -163,7 +163,7 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J try [ni
 
 * So far life cannot be extended for transmitters who's serial no. starts with 8G, 8H or 8J. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip#transmitter-battery-status)).
 * To prevent difficulties starting sensors it is highly recommended to extend transmitter life before day 100 of first usage.
-* Use of transmitters serial no. starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if 'engineering mode' is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
+* Use of transmitters serial no. starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if [engineering mode](Enabling-Engineering-Mode-in-xDrip.md) is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
 * Running sensor session will be stopped when extending transmitter life. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
 * Stop sensor manually via hamburger menu.
 * Switch to the `engineering mode`:
