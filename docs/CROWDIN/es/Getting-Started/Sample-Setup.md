@@ -104,7 +104,7 @@ Para ello, realice los pasos siguientes en el smartphone:
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
-* Cliente de NS activado (consulte [NS Client](../Configuration/Config-Builder#ns-profile) y [Configuración de Nightscout](../Installing-AndroidAPS/Nightscout.md))
+* NS Client activated (see [NS Client](../Configuration/Config-Builder#ns-profile) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
 
 ## Instalar xDrip+
 
@@ -144,7 +144,7 @@ With an Android Wear smartwatch life with diabetes can be made even more inconsp
 
 Detalles sobre la información mostrada en el watchface se pueden encontrar [aquí](../Configuration/Watchfaces.md).
 
-* Instale la aplicación "Android Wear" en su smartphone a través de Google Play Store y conecte el smartwatch de acuerdo con las instrucciones allí.
+* Install the app "Android Wear" on your smartphone via the Google Play Store and connect the smartwatch according to the instructions there.
 * En AAPS elija el menú de hamburguesa (esquina superior izquierda) > Configurar Builder > General (al final de la lista) > Usar > activar en el lado izquierdo, haga clic en el engranaje > Usar ajustes y activar `Controles desde el reloj`
 * En tu reloj inteligente: Pulsación larga para cambiar el watchface y selecciona `AAPSv2`
 * Si es necesario reiniciar ambos dispositivos una vez.
