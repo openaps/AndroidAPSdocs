@@ -5,7 +5,7 @@ AndroidAPS nėra tik (pačių sukurta) programa, tai yra vienas iš skirtingų j
 .. image:: ../images/modules.png
   :alt: Komponentų apžvalga
 
-.. note:: 
+.. pastaba:: 
    **SVARBUS SAUGOS ĮSPĖJIMAS**
 
    Šioje dokumentacijoje aprašytos pagrindinės AndroidAPS saugos funkcijos, grindžiamos aparatinės įrangos, su kuria nustatėte savo sistemą, saugos savybėmis. Labai svarbu, kad insulino pompa ir CGM sistema, naudojama uždaro ciklo sistemai su automatiniu insulino tiekimu, būtų tinkamai išbandytos ir visiškai veikiančios, pažymėtos CE ženklu (Europoje) kaip medicinos prietaisai. Šių komponentų aparatinės ar programinės įrangos pakeitimai gali sukelti netikėtą insulino tiekimą ir taip sukelti didelę riziką vartotojui. Nenaudokite sugedusių, modifikuotų ar pačių pagamintų insulino pompų ar CGM duomenų skaitytuvų, kad sukurtumėte ar valdytumėte AndroidAPS sistemą.
@@ -17,7 +17,7 @@ AndroidAPS nėra tik (pačių sukurta) programa, tai yra vienas iš skirtingų j
 Būtinieji Moduliai
 ==================================================
 Geri individualūs insulino dozavimo algoritmai
---------------------------------------------------
+----------------------------------------------------------
 Nors jūs negalite nei nusipirkti, nei lengvai sukurti, greičiausiai tai yra modulis, kuris labiausiai nuvertinamas, nors jis yra būtinas uždaram ciklui. Jei algoritmas padės palaikyti diabeto valdymą, jam reikia teisingų nustatymų, kad nepriimtumėte rimtų klaidingų sprendimų.
 Net jei dar trūksta kitų modulių, kartu su diabeto komanda galite patikrinti ir pakoreguoti esamą „profilį“. 
 Dauguma uždaro ciklo naudotojų naudoja vadinamąją cirkadinę valandinę bazę, insulino jautrimo faktorių bei insulino ir angliavandenių santykio faktorius, kurie yra pagrįsti hormoniniu jautrumu insulinui dienos metu.
@@ -38,9 +38,9 @@ Telefonas
 The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
 Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>`_
 
-Vartotojai sukūrė `patikrintų išmaniųjų telefonų ir išmaniųjų laikrodžių, sąrašą: <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
+Vartotojai sukūrė `patikrintų išmaniųjų telefonų ir išmaniųjų laikrodžių, sąrašą:<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
-Norėdami įvesti mobilųjį telefoną ar išmanųjį laikrodį, kurio dar nėra sąraše, `užpildykite formą <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewfor>`_.
+Norėdami įvesti mobilųjį telefoną ar išmanųjį laikrodį, kurio dar nėra sąraše, užpildykite formą <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewfor>'_.
 
 Praneškite apie bet kokias lentelės problemas el. paštu `hardware@androidaps.org <mailto:hardware@androidaps.org>`_. Jei norite pateikti mobiliuosius telefonus ar išmaniuosius laikrodžius testavimui, atsiųskite el. laišką adresu `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
@@ -55,9 +55,9 @@ AndroidAPS **šiuo metu** veikia su
 - `kai kurios senos Medtronic pompos <../Configuration/MedtronicPump.html>`_ iš artėjančių, turinčių programinę įrangą 2.4 (papildomai reikia: RileyLink/Gnarl aparatūros, Android telefono su Bluetooth low energy/BLE mikroschema)
 - `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
 
-** Kitos pompos**, kurios ateityje gali veikti su AndroidAPS, yra išvardytos puslapyje `Ateityje galimos naudoti pompos <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
+** Kitos pompos**, kurios ateityje gali veikti su AndroidAPS, yra išvardytos puslapyje „Ateityje galimos naudoti pompos" <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
-Jei norite įsigyti pompą **savo lėšomis**, tiekėjų adresus skirtingose šalyse galite rasti `šioje lentelėje <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_. Prašome užpildyti savo pardavėjo informaciją, jei ji dar nėra joje nurodyta.
+Jei norite įsigyti pompą ** savo lėšomis **, tiekėjų adresus skirtingose šalyse galite rasti `šioje lentelėje <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>“. Prašome užpildyti savo pardavėjo informaciją, jei ji dar nėra joje nurodyta.
 
 **Kuri pompa labiausiai tinka uždaro ciklo sistemai su AndroidAPS?**
 
@@ -74,7 +74,7 @@ Visos pompos, palaikančio AndroidAPS, yra atsparios vandeniui (bent jau naujos)
 
 Glikemijos šaltinis
 --------------------------------------------------
-Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. Norėdami gauti daugiau informacijos, žr. `čia <../Configuration/BG-Source.html>`_. Tiesiog trumpa pastaba: jei galite pateikti gliukozės duomenis xDrip+ programoje ar Nightscout svetainėje, galite pasirinkti xDrip+ (arba Nightscout su interneto ryšiu) kaip AAPS KG šaltinį.
+Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. For further details, look `here <../Configuration/BG-Source.html>`__. Tiesiog trumpa pastaba: jei galite pateikti gliukozės duomenis xDrip+ programoje ar Nightscout svetainėje, galite pasirinkti xDrip+ (arba Nightscout su interneto ryšiu) kaip AAPS KG šaltinį.
 
 * `Dexcom G6 <../Hardware/DexcomG6.html>`_: Veikia su xDrip+ arba modifikuota Dexcom programa
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Veikia su xDrip+ arba modifikuota Dexcom programa
@@ -87,31 +87,31 @@ Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. Nor
 
 Nightscout
 --------------------------------------------------
-Nightscout yra atvirojo kodo žiniatinklio programa, galinti registruoti ir rodyti jūsų NGJ ir AndroidAPS duomenis bei generuoti ataskaitas. You can find more information on the `website of the Nightscout project <http://nightscout.github.io/>`_. Galite sukurti savo `Nightscout svetainę <https://nightscout.github.io/nightscout/new_user/>`_, naudodami pusiau automatinę Nightscout sąranką `zehn.be <https://ns.10be.de/en/index.html>`_ arba patalpinti savo serveryje (tai skirta IT ekspertams).
+Nightscout yra atvirojo kodo žiniatinklio programa, galinti registruoti ir rodyti jūsų NGJ ir AndroidAPS duomenis bei generuoti ataskaitas. You can find more information on the `website of the Nightscout project <http://nightscout.github.io/>`_. Galite sukurti savo `Nightscout svetainę <https://nightscout.github.io/nightscout/new_user/>`_, naudodami pusiau automatinę Nightscout sąranką 'zehn.be <https://ns.10be.de/en/index.html> `_ arba patalpinti savo serveryje (tai skirta IT ekspertams).
 
 Nightscout yra nepriklausomas nuo kitų modulių. Jums jo reikės, kad galėtumėte įvykdyti 1-ą Tikslą.
 
-Norėdami gauti daugiau informacijos apie Nightscout konfigūravimą, kad galėtumėte naudoti su AndroidAPS, skaitykite `čia <../Installing-AndroidAPS/Nightscout.html>`_.
+Additional information on how to configure Nightscout for use with AndroidAPS can be found `here <../Installing-AndroidAPS/Nightscout.html>`__.
 
 AAPS-.apk failas
 --------------------------------------------------
-Pagrindiniai sistemos komponentai. Prieš diegdami programą, pirmiausia turite sukurti apk failą (kuris yra Android programos failo pavadinimo plėtinys). Instrukcijas rasite `čia <../Installing-AndroidAPS/Building-APK.html>`_.
+Pagrindiniai sistemos komponentai. Prieš diegdami programą, pirmiausia turite sukurti apk failą (kuris yra Android programos failo pavadinimo plėtinys). Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`__.  
 
 Pasirenkamieji Moduliai
 ==================================================
 Išmanieji laikrodžiai
 --------------------------------------------------
-Bet koks išmanusis laikrodis su Android Wear 1.x ar naujesne versija veikia. Daugelis uždaro ciklo vartotojai naudoja Sony Smartwatch 3 (SWR50), nes taip pat galima priimti reikšmes iš Dexcom G5/G6, kai išmaniojo telefono nėra diapazone. Kai kuriuos kitus išmaniuosius laikrodžius galima pritaikyti, kad juos būtų galima naudoti kaip autonominį imtuvą (žr. `dokumentaciją <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_, jei norite gauti daugiau informacijos).
+Bet koks išmanusis laikrodis su Android Wear 1.x ar naujesne versija veikia. Daugelis uždaro ciklo vartotojai naudoja Sony Smartwatch 3 (SWR50), nes taip pat galima priimti reikšmes iš Dexcom G5/G6, kai išmaniojo telefono nėra diapazone. Kai kuriuos kitus išmaniuosius laikrodžius galima pritaikyti, kad juos būtų galima naudoti kaip autonominį imtuvą (žr. `dokumentaciją <<https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_, jei norite gauti daugiau informacijos).
 
-Vartotojai sukūrė `patikrintų išmaniųjų telefonų ir išmaniųjų laikrodžių, sąrašą: <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. Yra įvairių laikrodžių ekranų, skirtų naudoti su AndroidAPS, daugiau informacijos galite rasti `čia <../Configuration/Watchfaces.html>`_.
+Vartotojai sukūrė `patikrintų išmaniųjų telefonų ir išmaniųjų laikrodžių, sąrašą:<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`__.
 
-Norėdami įvesti mobilųjį telefoną ar išmanųjį laikrodį, kurio dar nėra sąraše, `užpildykite formą <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewfor>`_.
+Norėdami įvesti mobilųjį telefoną ar išmanųjį laikrodį, kurio dar nėra sąraše, užpildykite formą <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewfor>'_.
 
 Praneškite apie bet kokias lentelės problemas el. paštu `hardware@androidaps.org <mailto:hardware@androidaps.org>`_. Jei norite pateikti mobiliuosius telefonus ar išmaniuosius laikrodžius testavimui, atsiųskite el. laišką adresu `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
 xDrip+
 --------------------------------------------------
-Net jei jums nereikia xDrip+ programos kaip KG duomenų šaltinio, vis tiek galite ja naudotis aliarmams arba patogų glikemijos duomenų rodymą. xDrip+ galite nustatyti norimus įspėjimo signalų, apibrėžti laiką, kada jie turėtų būti aktyvūs, ar jie gali nepaisyti išmaniojo telefono nutildymo ir pan. Kai kurią xDrip+ informaciją galima rasti `čia <../Configuration/xdrip.html>`_. Atminkite, kad xDrip+ tobulinimas yra labai aktyvus ir dokumentacija kartais negali jo sekti, todėl ne visada gali būti atnaujinta.
+Net jei jums nereikia xDrip+ programos kaip KG duomenų šaltinio, vis tiek galite ja naudotis aliarmams arba patogų glikemijos duomenų rodymą. xDrip+ galite nustatyti norimus įspėjimo signalų, apibrėžti laiką, kada jie turėtų būti aktyvūs, ar jie gali nepaisyti išmaniojo telefono nutildymo ir pan. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`__. Atminkite, kad xDrip+ tobulinimas yra labai aktyvus ir dokumentacija kartais negali jo sekti, todėl ne visada gali būti atnaujinta.
 
 Pavyzdinis nustatymas
 ==================================================
