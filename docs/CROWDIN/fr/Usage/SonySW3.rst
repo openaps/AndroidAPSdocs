@@ -9,12 +9,12 @@ La solution de contournement suivante devrait prolonger la durée d'utilisation 
 --------------------------------------------------------
 * En utilisant le `site web apkmirror <https://www.apkmirror.com/apk/google-inc/google-play-services-android-wear/>`_ vous pouvez trouver la dernière apk pour "Google Play Services (Wear OS)".
 
-   Architecture : armeabi-v7a, version minimale : Android 6.0+, Écran DPI : nodpi
+  Architecture : armeabi-v7a, version minimale : Android 6.0+, Écran DPI : nodpi
 
 * Vous devez vérifer 2 choses :
 
-   * Est-ce la dernière version ?
-   * Est-elle compatible avec Android 6.0+ (comme c'est la version Wear OS d'Android, 7.0+ et plus ne fonctionnera pas) ?
+  * Est-ce la dernière version ?
+  * Est-elle compatible avec Android 6.0+ (comme c'est la version Wear OS d'Android, 7.0+ et plus ne fonctionnera pas) ?
 
 * Tôt ou tard, Google va définitivement abandonner Android 6.0. Quand cela arrivera, la dernière version ne sera plus disponible pour Android 6.0+, donc ce sera la fin.
 
@@ -32,10 +32,10 @@ La solution de contournement suivante devrait prolonger la durée d'utilisation 
 4. Connectez votre montre à votre ordinateur
 --------------------------------------------------------
 * Ensuite, branchez votre smartwatch au PC.
-* Renommez le dernier APK téléchargé des Services Google en utilisant un nom court et simple (par ex. SW3fix.apk).
+* Rename latest downloaded google services APK using some short and simple name (let's say SW3fix.apk).
 * Placez cet APK dans le répertoire de votre outil adb (dans notre cas : le répertoire où ont été décompressés les outils de plate-forme SDK).
-* Ouvrez le terminal Windows en utilisant la commande "cmd" dans le menu Démarrer de Windows.
-* Dans la fenêtre "terminal", allez dans le répertoire qui contient l'outil adb et le fichier apk des Services Google (tapez la commande "cd [votre chemin]", par ex. "cd C:\Users\SWR50looper\sdktools").
+*	Open Windows terminal using command „cmd“ in Windows start menu.
+*	In terminal, go to the directory that includes your adb tool and google services APK (type command „cd [your path]“, e.g. "cd C:\Users\SWR50looper\sdktools").
 * Tapez ensuite "adb devices".
 * Au bout d'un moment, vous devriez obtenir une demande d'autorisation de débogage sur votre montre : accepter.
 * Dans le terminal, vous devriez maintenant voir quelque chose qui ressemble à "14452D11F536B52 device" lorsque vous tapez à nouveau "adb devices".
@@ -47,12 +47,12 @@ La solution de contournement suivante devrait prolonger la durée d'utilisation 
 --------------------------------------------------------
 * Dans le terminal, entrez cette commande "adb install -r -g aplicationname.apk" (donc dans notre cas "adb install -r -g SW3fix.apk").
 
-   .. image:: ../images/SonySW3_Terminal1.png
-     :alt: Commande Terminal
+  .. image:: ../images/SonySW3_Terminal1.png
+    :alt: Commande Terminal
 
 * Attendez environ 4–5 minutes pour que l'installation se termine. 
 
-.. image:: ../images/SonySW3_Terminal2.png
-     :alt: Installation réussie du terminal
+  .. image:: ../images/SonySW3_Terminal2.png
+    :alt: Installation réussie du terminal
 
 * Une fois terminé, redémarrez votre montre et vous devriez voir que les applications commencent à se synchroniser rapidement.
