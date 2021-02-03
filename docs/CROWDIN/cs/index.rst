@@ -17,7 +17,13 @@ Další informace naleznete zde.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Začínáme
+   :caption: Change language
+   Change language <changelanguage.rst>
+   
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Getting started
 
    Bezpečnost především <./Getting-Started/Safety-first.rst>
    Co je systém uzavřené smyčky <./Getting-Started/ClosedLoop.rst>
@@ -27,7 +33,7 @@ Další informace naleznete zde.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Co potřebuji? 
+   :caption: What do I need? 
 
    Modul <./Module/module.rst>
    Sample Setup <./Getting-Started/Sample-Setup.md>
@@ -35,9 +41,9 @@ Další informace naleznete zde.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Jak nainstalovat AndroidAPS
+   :caption: How to Install AndroidAPS
 
-   Vytvoření APK <./Installing-AndroidAPS/Building-APK.md>
+   Vytvoření APK<./Installing-AndroidAPS/Building-APK.md>
    Jak aktualizovat na novou verzi <./Installing-AndroidAPS/Update-to-new-version.md>
    Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Install git <./Installing-AndroidAPS/git-install.rst>
@@ -48,7 +54,7 @@ Další informace naleznete zde.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Nastavení komponent
+   :caption: Component Setup
 
    CGM/FGM <./Configuration/BG-Source.rst>
    Nastavení xDrip <./Configuration/xdrip.md>
@@ -60,7 +66,7 @@ Další informace naleznete zde.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Konfigurace 
+   :caption: Configuration
 
    Konfigurace <./Configuration/Config-Builder.md>
    Preferences <./Configuration/Preferences.rst>
@@ -68,7 +74,7 @@ Další informace naleznete zde.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Použití AndroidAPS
+   :caption: AndroidAPS Usage
 
    Obrazovky AndroidAPS <./Getting-Started/Screenshots.md>
    Objectives <./Usage/Objectives.rst>
@@ -87,8 +93,8 @@ Další informace naleznete zde.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Obecné tipy 
-   
+   :caption: General Hints 
+
    Cestování s pumpou mezi časovými pásmy <./Usage/Timezone-traveling.md>
    Přístup k log souborům <./Usage/Accessing-logfiles.md>
    Tipy pro základní používání pumpy Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
@@ -97,35 +103,37 @@ Další informace naleznete zde.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS pro děti
+   :caption: AndroidAPS for children
 
    Vzdálené monitorování <./Children/Children.rst>
    SMS commands <./Children/SMS-Commands.rst>
-
+   Profile helper <./Configuration/profilehelper.rst>
+   
+.. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Poradce při potížích
+   :caption: Troubleshooting
 
    Troubleshooting <./Usage/troubleshooting.rst>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Nejčastější dotazy 
+   :caption: FAQ
 
    Nejčastější dotazy <./Getting-Started/FAQ.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Slovníček
+   :caption: Glossary
 
    Glosář <./Getting-Started/Glossary.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Kam pro pomoc 
+   :caption: Where to go for help 
 
    Užitečné zdroje informací než začnete <./Where-To-Go-For-Help/Background-reading.md>
    Kam jít pro pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
@@ -134,21 +142,22 @@ Další informace naleznete zde.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Pro lékaře
+   :caption: For Clinicians
 
    Pro lékaře <./Resources/clinician-guide-to-AndroidAPS>
+
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Jak pomoci
+   :caption: How to help
 
    Jak mohu pomoci <./Getting-Started/How-can-I-help.md>
    How to translate the app and docs <./translations.md>
    How to edit the docs <./make-a-PR>
 
 
-.. note::
+.. poznámka:: 
 	** Upozornění a varování **
 
 	* Všechny informace, myšlenky a kód zde popsané slouží pouze pro informační a vzdělávací účely. Nightscout se nesnaží v současné době dodržovat zákon HIPAA. Používejte Nightscout a AndroidAPS na vaše vlastní riziko a nepoužívejte informace nebo kód k provádění lékařských rozhodnutí.
