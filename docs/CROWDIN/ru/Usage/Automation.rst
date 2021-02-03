@@ -7,11 +7,11 @@
 
 Например, при низкой ГК, вы можете решить, что должна автоматически установиться высокая временная цель. Или если вы находитесь в фитнес-центре, вы автоматически получаете временную цель. 
 
-Перед использованием автоматизации следует уверенно овладеть ручным управлением ` временными целями <./temptarget.html>`_ или переключением профиля. 
+Перед использованием автоматизации следует уверенно овладеть ручным управлением ` временными целями <./temptarget.html> ` _ или переключением профиля. 
 
 Убедитесь, что вы понимаете, как работает автоматизация перед настройкой первого простого правила. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
 
-.. image:: ../images/Automation_ConditionAction_RC3.png
+.. изображение:: ../images/Automation_ConditionAction_RC3.png
   :alt: условие автоматизации + действие
 
 Как пользоваться
@@ -24,7 +24,7 @@
 
 So make sure to deactivate automation rules during these occasions if neccessary. You can do so by unticking the box left of the name of your automation rule.
 
-.. image:: ../images/Automation_ActivateDeactivate.png
+.. изображение:: ../images/Automation_ActivateDeactivate.png
   :alt: Активировать и деактивировать правило автоматизации
 
 Where to find Automation
@@ -41,7 +41,7 @@ Depending on your `settings in config builder <../Configuration/Config-Builder.h
 
 **Пожалуйста, будьте внимательны:**
 
-* **менее -2 означает: -3 и ниже (-4, -10 и т.д.)**
+* ** менее -2 означает: -3 и ниже (-4, -10 и т.д.) * *
 * **более -2 означает: -1 и выше (-1, 0, +10 и т.д)**
 
 
@@ -84,21 +84,21 @@ Depending on your `settings in config builder <../Configuration/Config-Builder.h
 
 После добавления ваших действий, **не забудьте изменить значения по умолчанию** на те, которые требуются, нажав на значения по умолчанию.
  
-.. image:: ../images/Automation_Default_V2_5.png
+.. образ:: ../images/Automation_Default_V2_5.png
   :alt: автоматизация по умолчанию vs. задать значения
 
 Выбор правил автоматизации
------
+---------------------
 Для отбора правил автоматизации нажмите и удерживайте кнопку с четырьмя строками в правой части экрана и двигайтесь вверх или вниз.
 
-.. image:: ../images/Automation_Sort.png
+.. изображение:: ../images/Automation_Sort.png
   :alt: Выбор правил автоматизации
   
 Удаление правил автоматизации
------
+-----------------------
 To delete an automation rule click on trash icon.
 
-.. image:: ../images/Automation_Delete.png
+.. изображение:: ../images/Automation_Deletet.png
   :alt: Выбор правила автоматизации
 
 Рекомендации и предостережения
@@ -109,7 +109,7 @@ To delete an automation rule click on trash icon.
 
   **Вдвойне важно, если правило активирует переключатель профиля!**
  
-* Try to use Temp Targets instead of Profile Switches. Temp Targets не сбрасывают ` Autosens <../Usage/Open-APS-features.html#autosens>`_ на 0.
+* Try to use Temp Targets instead of Profile Switches. Temp Targets не сбрасывают ` Autosens <../Usage/Open-APS-features.html#autosens> ` _ на 0.
 * Убедитесь, что переключатели профиля создаются с осторожностью и желательно как крайняя мера.
 
   * Переключение профилей делает `Autosens <../Usage/Open-APS-features.html#autosens>`_ бесполезным минимум на 6 часов.
@@ -129,14 +129,14 @@ These are just setup examples, no advises. Don't reproduce them without being aw
 
 Временная Цель Низкая ГК
 --------------------------------------------------
-.. image:: ../images/Automation2.png
+.. изображение:: ../images/Automation2.png
   :alt: Автоматизация2
 
 This is made by someone who wants to get a hypo temp target automatically when having low glucose.
 
 Временная Цель Время Обеда
 --------------------------------------------------
-.. image:: ../images/Automation3.png
+.. изображение:: ../images/Automation3.png
   :alt: Автоматизация3
   
 This example is made by someone who has lunch at work at the same time every day during the week. If he or she stays at a certain time in his or her lunch location, automation will set a low temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the chosen time and if he or she is at the chosen location. So it does not work on any other time at this location or on this time when the person stays at home. 
@@ -154,4 +154,4 @@ Please be aware to use automation incorrectly. Это может привест�
 Альтернативы
 ==================================================
 
-For advanced users, there are other posibilities to automate tasks using IFTTT or a third party Android app called Automate. Некоторые примеры можно найти ` здесь <./automationwithapp.html>`_.
+For advanced users, there are other posibilities to automate tasks using IFTTT or a third party Android app called Automate. Некоторые примеры можно найти ` здесь <./automationwithapp.html> ` _.
