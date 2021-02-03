@@ -282,7 +282,7 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 
 ### Sectie J
 
-* Bij een SUPER BOLUS wordt de basale insuline voor de komende twee uur toegevoegd aan de maaltijdbolus, gevolgd door een tijdelijke basaalstand van nul voor de komende twee uur om te compenseren voor de extra insuline. The option only shows when "Enable [superbolus](../Configuration/Preferences#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences#overview).
+* Bij een SUPER BOLUS wordt de basale insuline voor de komende twee uur toegevoegd aan de maaltijdbolus, gevolgd door een tijdelijke basaalstand van nul voor de komende twee uur om te compenseren voor de extra insuline. De optie is alleen zichtbaar wanneer "Inschakelen [superbolus](../Configuration/Preferences#superbolus) is ingeschakeld in de [instellingen](../Configuration/Preferences#geavanceerde-instellingen-overzicht), onder Overzicht > Geavanceerd.
 * Hiermee wordt de insuline 'naar voren gehaald', zodat je een minder hoge glucosepiek zult hebben na de maaltijd.
 * Voor details [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -328,7 +328,7 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
    * De closed loop zal automatisch worden onderbroken en er wordt overgeschakeld naar open loop modus nadat de vertraagde bolus functie is geactiveerd.
    * Zorg ervoor dat je de [details](../Usage/Extended-Carbs#id1) leest voordat je deze optie gebruikt.
 
-### Careportal - section N
+### Careportal - sectie N
 
 * Hier vind je informatie over
    
@@ -348,7 +348,7 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
    
    ![Sensor batterijniveau gelijk aan telefoonbatterij](../images/Home2021_ActionSensorBat.png)
 
-### Careportal - section O
+### Careportal - sectie O
 
 * Met de knoppen BG controle, Ontlucht/vul, CGM sensor ingebracht en pompbatterij wissel voer je zelf de gegevens in die worden gebruikt voor de leeftijden in [sectie N](#careportal-sectie-n).
 * De Ontlucht/vul knop kun je gebruiken om de canule of slang te ontluchten, en om in te voeren wanneer je een canule of reservoir hebt verwisseld.
