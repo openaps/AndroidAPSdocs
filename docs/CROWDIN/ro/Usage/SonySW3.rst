@@ -9,12 +9,12 @@ The following workaround should extend the time the Sony Smartwatch 3 can be use
 --------------------------------------------------------
 * Using `apkmirror website <https://www.apkmirror.com/apk/google-inc/google-play-services-android-wear/>`_ you can find the latest apk for "Google Play Services (Wear OS)".
 
-   Architecture: armeabi-v7a, Minimum Version: Android 6.0+, Screen DPI: nodpi
+  Architecture: armeabi-v7a, Minimum Version: Android 6.0+, Screen DPI: nodpi
 
 * You must ensure 2 things:
 
-   * Is it the latest version?
-   * Is it compatible with Android 6.0+ (as it's the wear android version, 7.0+ and above will not work)?
+  * Is it the latest version?
+  * Is it compatible with Android 6.0+ (as it's the wear android version, 7.0+ and above will not work)?
 
 * Sooner or later, Google will definitely drop Android 6.0. When this will happen, the latest version will not be available anymore for Android 6.0+, therefore it will be the end.
 
@@ -47,12 +47,12 @@ The following workaround should extend the time the Sony Smartwatch 3 can be use
 --------------------------------------------------------
 * In terminal enter this command „adb install -r -g aplicationname.apk“ (so in our case „adb install -r -g SW3fix.apk“).
 
-   .. image:: ../images/SonySW3_Terminal1.png
-     :alt: Terminal command
+  .. image:: ../images/SonySW3_Terminal1.png
+    :alt: Terminal command
 
 * Wait for about 4–5 minutes for installation to complete. 
 
-.. image:: ../images/SonySW3_Terminal2.png
-     :alt: Terminal successful installation
+  .. image:: ../images/SonySW3_Terminal2.png
+    :alt: Terminal successful installation
 
 * Once it's done, restart your watch and you should see the apps beginning to synchronize themself promptly.
