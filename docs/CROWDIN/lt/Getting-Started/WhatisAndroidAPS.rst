@@ -11,7 +11,7 @@ Atsargiai: nei vienos šalies medicininis reguliatorius nereglamentuoja AndroidA
 * Kiek įmanoma geriau suderina individualias diabeto nuostatas su savo diabeto komanda
 * Prižiūri, nuolat atnaujina ir stebi sistemą, kad įsitikintų, jog ji veikia tinkamai
 
-.. note:: 
+.. pastaba:: 
 	**Atsakomybės Ir Įspėjimas**
 
 	* Visa informacija, mintys ir šaltinio kodas yra skirti tik informaciniams ir moksliniams tikslams. Nightscout neatitinka jokių privatumo reikalavimų sveikatos priežiūros srityje. Savo rizika naudokite Nightscout ir AndroidAPS ir nenaudokite jų priimdami medicininius sprendimus.
@@ -40,5 +40,5 @@ Pagrindiniai AndroidAPS tikslai
 Kaip pradėti
 ==================================================
 Žinoma, visa čia pateikiama informacija yra labai svarbi jūsų uždarojo ciklo sistemai, tačiau taip pat normalu, kad daugelis naujų dalykų iš pradžių atrodo painūs.
-Geras orientyras yra pateiktas `Modulio Apžvalgoje <./Module/module.html>`_ ir `Tiksluose <./Usage/Objectives.html>`_. Visų pirma, galite patikrinti pavyzdinę sąranką with `pompa Dana, Dexcom and Sony Smartwatch <../Getting-Started/Sample-Setup.md>`_.
+Geras orientyras yra pateiktas Modulio Apžvalgoje <./Module/module.html>` ir Tiksluose <./Usage/Objectives.html>`. Visų pirma, galite patikrinti pavyzdinę sąranką with pompa Dana, Dexcom and Sony Smartwatch <../ Getting-Started / Sample-Setup.md>`.
  
