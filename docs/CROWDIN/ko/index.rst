@@ -17,6 +17,12 @@ For more details, please read on here.
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Change language
+   Change language <changelanguage.rst>
+   
+.. toctree::
+   :maxdepth: 1
+   :glob:
    :caption: Getting started
 
    Safety first <./Getting-Started/Safety-first.rst>
@@ -35,7 +41,7 @@ For more details, please read on here.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS 설치하기
+   :caption: How to Install AndroidAPS
 
    APK 파일 빌드하기 <./Installing-AndroidAPS/Building-APK.md>
    새 버전 혹은 다른 branch로 업데이트 하기 <./Installing-AndroidAPS/Update-to-new-version.md>
@@ -60,7 +66,7 @@ For more details, please read on here.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: 환경설정 
+   :caption: Configuration
 
    Config builder <./Configuration/Config-Builder.md>
    Preferences <./Configuration/Preferences.rst>
@@ -101,11 +107,12 @@ For more details, please read on here.
 
    Remote monitoring <./Children/Children.rst>
    SMS commands <./Children/SMS-Commands.rst>
-
+   Profile helper <./Configuration/profilehelper.rst>
+   
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: 문제해결
+   :caption: Troubleshooting
 
    Troubleshooting <./Usage/troubleshooting.rst>
 
@@ -119,14 +126,14 @@ For more details, please read on here.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: 용어
+   :caption: Glossary
 
    용어 <./Getting-Started/Glossary.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: 도움을 구할 곳들 
+   :caption: Where to go for help 
 
    시작하기 전에 보면 좋은 유용한 자료들 <./Where-To-Go-For-Help/Background-reading.md>
    도움을 구할 곳들 <./Where-To-Go-For-Help/Connect-with-other-users.md>
@@ -139,17 +146,18 @@ For more details, please read on here.
 
    For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
 
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: 도움주기
+   :caption: How to help
 
-   도움주기 <./Getting-Started/How-can-I-help.md>
+   도움주기
    How to translate the app and docs <./translations.md>
    How to edit the docs <./make-a-PR>
 
 
-.. note:: 
+.. 참고:: 
 	**고지사항 및 경고문**
 
 	이곳에 설명된 모든 정보, 생각, 코드는 오직 정보제공 및 교육적 목적으로만 제공된 것입니다. Nightscout은 현재 HIPAA 개인 정보 보호 준수 규약을 따르지 않습니다. Nightscout와 AndroidAPS를 본인의 책임하에 사용하세요. 의학적 결정을 위해 이 정보와 코드를 사용하지 마세요.
