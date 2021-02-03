@@ -17,5 +17,4 @@ BG bron
    Eversense <../Hardware/Eversense.rst>
    MM640g/MM630g  <../Hardware/MM640g.rst>
    PocTech <../Hardware/PocTech.rst>   
-   Andere CGMs die uploaden naar Nightscout <../Hardware/CgmNightscoutUpload.rst>
-   
+   Nightscout als BG bron <../Hardware/CgmNightscoutUpload.rst>
