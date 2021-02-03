@@ -30,12 +30,12 @@ Profil-Helfer bietet Datensätze von zwei verschiedenen Kinderkrankenhäusern an
 6. Drücke die Schaltfläche 'PROFILE VERGLEICHEN' oben auf dem Bildschirm.
 7. Es wird der Vergleich der beiden angepassten Profile angezeigt.
 
-Once you are fine with the profile adjustments you can `clone the profile <../Configuration/profilehelper.html#clone-profile>`_ as described below.
+Wenn Du mit den Profilanpassungen zufrieden bist, kannst Du das `Profil klonen <.../Configuration/profilehelper.html#profil-klonen>`_ wie unten beschrieben.
 
 Vergleiche zwei Profile
 ==================================
 
-Du kannst den Profil-Helfer auch verwenden, um Profile oder Profilwechsel (um einen Prozentsatz geänderten `Profil <./Usage/Profiles.html>`_) miteinander zu vergleichen.
+Du kannst den Profil-Helfer auch verwenden, um Profile oder Profilwechsel (um einen Prozentsatz geänderten Profil <.,/Usage/Profiles.html>`) miteinander zu vergleichen.
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Profile Helper 1
