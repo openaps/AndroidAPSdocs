@@ -11,7 +11,7 @@ Upozornění: Systém AndroidAPS není v žádné zemi regulován žádným zdra
 * Nastavil svůj individuální algoritmus dávkování ve spolupráci s lékařem nebo pomocným personálem tak, aby fungoval téměř dokonale
 * Správně obsluhoval systém a dohlížel na to, zda správně funguje
 
-.. note:: 
+.. poznámka:: 
 	**Disclaimer and Warning**
 
 	* Všechny informace, myšlenky a kód zde popsané slouží pouze pro informační a vzdělávací účely. Nightscout se nesnaží v současné době dodržovat zákon HIPAA. Používejte Nightscout a AndroidAPS na vaše vlastní riziko a nepoužívejte informace nebo kód k provádění lékařských rozhodnutí.
@@ -40,5 +40,5 @@ Primární cíle AndroidAPS
 Jak začít
 ==================================================
 Veškerý tento obsah je samozřejmě velmi důležitý, ale může být na začátku docela matoucí.
-Dobrou představu vám poskytne část `Přehled modulů <./Module/module.html>`_ a `Cíle <./Usage/Objectives.html>`_. Můžete se také podívat na ukázkovou instalaci s `pumpou Dana, senzorem Dexcom a hodinkami Sony Smartwatch <../Getting-Started/Sample-Setup.md>`_.
+Dobrou představu vám poskytne část `Přehled modulů <./Module/module.html>`_ a `Cíle <./Usage/Objectives.html>`_. Můžete se také podívat na ukázkovou instalaci s pumpou Dana, senzorem Dexcom a hodinkami Sony Smartwatch <../Getting-Started/Sample-Setup.md>`_.
  
