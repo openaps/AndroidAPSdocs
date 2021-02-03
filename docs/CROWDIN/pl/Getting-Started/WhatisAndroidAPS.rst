@@ -11,7 +11,7 @@ A note of caution: AndroidAPS is not regulated by any medical authority in any c
 * Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
 * Maintains and monitors the system to ensure it is working properly
 
-.. note::
+.. notatka:: 
 	**Disclaimer and Warning**
 
 	* Wszystkie informacje, przemyślenia i kod opisane tutaj są przeznaczone wyłącznie do celów informacyjnych i edukacyjnych. Nightscout obecnie nie podejmuje prób zachowania zgodności z zasadami ochrony prywatności HIPAA. Korzystasz z Nightscout i AndroidAPS na własne ryzyko i nie używaj informacji ani kodu do podejmowania decyzji medycznych.
