@@ -16,7 +16,7 @@ Activiteit & feedback
 * Ouderdom van sensor/canule etc is verplaatst naar Acties.
 * BG controle is verplaatst naar Acties.
 * Tijd. streefdoel is verplaatst naar Acties.
-* Sport is niet langer beschikbaar, maar je kunt het notitie-veld gebruiken dat naar voren komt wanneer je een actie invoert, bijv. bij het geven van bolus. (zie screenshot in sectie `Koolhydraten & bolus <#id1>`_ op deze pagina).
+* Sport is niet langer beschikbaar, maar je kunt het notitie-veld gebruiken dat naar voren komt wanneer je een actie invoert, bijv. bij het geven van bolus. (see screenshot in section `carbs & bolus <#carbs-&-bolus>`__ on this page).
 
 Koolhydraten & bolus
 ==============================
@@ -38,7 +38,7 @@ CGM & OpenAPS
   :alt: Careportal CGM & OpenAPS
   
 * CGM sensor ingebracht is verplaatst naar Acties.
-* Alle andere functies uit deze sectie zijn verwijderd. Je kunt het notitie-veld gebruiken dat naar voren komt wanneer je een actie invoert, bijv. bij het geven van bolus. (zie screenshot in sectie `Koolhydraten & bolus <#carbs-- bolus>`_ op deze pagina).
+* Alle andere functies uit deze sectie zijn verwijderd. Je kunt het notitie-veld gebruiken dat naar voren komt wanneer je een actie invoert, bijv. bij het geven van bolus. (see screenshot in section `carbs & bolus <#carbs-bolus>`__ on this page).
 
 Pomp
 ==============================

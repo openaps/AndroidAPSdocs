@@ -16,7 +16,7 @@ V určitém okamžiku bude doporučeno, abyste udělali PR. PR je zkratka pro pu
 * Vytvořte PR, která žádá správce, aby se tyto změny použily.
 * Ten provede přezkum a buď (1) sloučí vaše změny, (2) přidá komentář k vašim změnám, nebo (3) založí nový dokument s vašimi změnami.
 
-(Poznámka: Pokud se učíte spíše vizuálně, existuje YouTube video [zde](https://youtu.be/4b6tsL0_kzg) ukazující, jak PR funguje.)
+(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
 
 Například: chystáme se upravit AndroidAPSdocs. To není nutné dělat v linuxovém prostředí. To lze udělat na jakémkoli Windows PC, Mac atd. (libovolném počítači s připojením k internetu).
 
@@ -87,9 +87,9 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 #### Links
 
 * external link: `[alt text](www.url.tld)`
-* internal link to .md page: `[alt text](.../folder/file.md)`
-* internal link to .rst page: `[alt text](.../folder/file.rst)`
-* internal link to headline: `[alt text](.../folder/file#headline)`
+* internal link to .md page: `[alt text](../folder/file.md)`
+* internal link to .rst page: `[alt text](../folder/file.rst)`
+* internal link to headline: `[alt text](../folder/file#headline)`
 
 ### .rst files
 

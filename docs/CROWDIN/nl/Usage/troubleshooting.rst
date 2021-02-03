@@ -6,10 +6,12 @@ Mocht je jouw probleem niet terugvinden in de linkjes in dit overzicht, dan vind
 
 AndroidAPS app
 ==================================================
+
 Bouwen & bijwerken
------
+-------------------
 * `Keystore kwijt <../Installing-AndroidAPS/troubleshooting_androidstudio.html#keystore-digitale-handtekening-kwijt>`_
 * `Problemen met Android Studio oplossen <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+
 Instellingen
 --------------------------------------------------
 * `Profiel <../Usage/Profiles.html#profiel-foutmeldingen-oplossen>`_
@@ -18,6 +20,7 @@ Instellingen
     :alt: fout: Basaal profiel niet ingesteld in hele uren
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
+
 Gebruik
 --------------------------------------------------
 * `COB - Detectie van verkeerde COB waarden <../Usage/COB-calculation.html#detectie-van-verkeerde-cob-waarden>`_
@@ -39,7 +42,7 @@ Pomp
 ==================================================
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#foutmeldingen-specifiek-voor-de-danars>`_
 * `Accu-Chek Combo algemeen <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_
-* `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#why-does-pairing-with-the-pump-not-work-with-the-app-ruffy>`_
+* `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#waarom-werkt-de-koppeling-met-de-pomp-niet-met-de-app-ruffy>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html#insight-specifieke-foutmeldingen>`_
 * `Medtronic + RileyLink <../Configuration/MedtronicPump.html#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump>`_
 

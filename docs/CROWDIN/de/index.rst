@@ -16,8 +16,14 @@ Für weitere Details lies bitte hier weiter.
 
 .. toctree::
    :maxdepth: 1
+       
+   :caption: Change language
+   Change language <changelanguage.rst>
+   
+.. toctree::
+   :maxdepth: 1
    :glob:
-   :caption: Erste Schritte
+   :caption: Getting started
 
    Sicherheitshinweise <./Getting-Started/Safety-first.rst>
    Was ist ein Closed Loop System <./Getting-Started/ClosedLoop.rst>
@@ -27,7 +33,7 @@ Für weitere Details lies bitte hier weiter.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Was brauche ich? 
+   :caption: What do I need? 
 
    Module <./Module/module.rst>
    Konfigurationsbeispiel <./Getting-Started/Sample-Setup.md>
@@ -35,7 +41,7 @@ Für weitere Details lies bitte hier weiter.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS installieren
+   :caption: How to Install AndroidAPS
 
    App aus Quellcode erstellen <./Installing-AndroidAPS/Building-APK.md>
    Update auf neue Version oder Branch <./Installing-AndroidAPS/Update-to-new-version.md>
@@ -47,8 +53,8 @@ Für weitere Details lies bitte hier weiter.
 
 .. toctree::
    :maxdepth: 1
-   :glob:
-   :caption: Komponenten-Setup
+    
+   :caption: Component Setup
 
    CGM/FGM <./Configuration/BG-Source.rst>
    xDrip Einstellungen <./Configuration/xdrip.md>
@@ -59,14 +65,16 @@ Für weitere Details lies bitte hier weiter.
 
 .. toctree::
    :maxdepth: 1
-   :caption: AndroidAPS einrichten 
+       
+   :caption: Configuration
 
    Konfigurations-Generator <./Configuration/Config-Builder.md>
    Einstellungen im Drei-Punkte-Menü <./Configuration/Preferences.rst>
 
 .. toctree::
    :maxdepth: 1
-   :caption: AndroidAPS Nutzung
+       
+   :caption: AndroidAPS Usage
 
    AndroidAPS-Bildschirme <./Getting-Started/Screenshots.md>
    Objectives (Ziele) <./Usage/Objectives.rst>
@@ -84,7 +92,8 @@ Für weitere Details lies bitte hier weiter.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Allgemeine Hinweise 
+       
+   :caption: General Hints 
 
    Zeitzonenwechsel auf Reisen <./Usage/Timezone-traveling.md>
    Logfiles erhalten <./Usage/Accessing-logfiles.md>
@@ -93,32 +102,38 @@ Für weitere Details lies bitte hier weiter.
 
 .. toctree::
    :maxdepth: 1
-   :caption: AndroidAPS für Kinder
+       
+   :caption: AndroidAPS for children
 
    Kontrolle aus der Ferne <./Children/Children.rst>
    SMS-Befehle <./Children/SMS-Commands.rst>
-
+   Profile helper <./Configuration/profilehelper.rst>
+   
 .. toctree::
    :maxdepth: 1
-   :caption: Problembehandlung
+       
+   :caption: Troubleshooting
 
    Problembehandlung <./Usage/troubleshooting.rst>
 
 .. toctree::
    :maxdepth: 1
+       
    :caption: FAQ
 
    FAQ <./Getting-Started/FAQ.md>
 
 .. toctree::
    :maxdepth: 1
-   :caption: Glossar
+       
+   :caption: Glossary
 
    Glossar <./Getting-Started/Glossary.md>
 
 .. toctree::
    :maxdepth: 1
-   :caption: Hilfe durch die Community 
+       
+   :caption: Where to go for help 
 
    Nützliche Informationsquellen vor dem Start <./Where-To-Go-For-Help/Background-reading.md>
    Hilfe <./Where-To-Go-For-Help/Connect-with-other-users.md>
@@ -126,13 +141,16 @@ Für weitere Details lies bitte hier weiter.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Für Mediziner & Fachpersonal
+       
+   :caption: For Clinicians
 
    Für Mediziner & Fachpersonal <./Resources/clinician-guide-to-AndroidAPS>
 
+
 .. toctree::
    :maxdepth: 1
-   :caption: Mithelfen in der Community
+       
+   :caption: How to help
 
    Wie ich helfen kann <./Getting-Started/How-can-I-help.md>
    App oder Docs übersetzen <./translations.md>

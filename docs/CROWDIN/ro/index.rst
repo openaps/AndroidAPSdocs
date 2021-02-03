@@ -17,6 +17,12 @@ For more details, please read on here.
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Change language
+   Change language <changelanguage.rst>
+   
+.. toctree::
+   :maxdepth: 1
+   :glob:
    :caption: Getting started
 
    Safety first <./Getting-Started/Safety-first.rst>
@@ -27,7 +33,7 @@ For more details, please read on here.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: What do I need?
+   :caption: What do I need? 
 
    Module <./Module/module.rst>
    Sample Setup <./Getting-Started/Sample-Setup.md>
@@ -87,7 +93,7 @@ For more details, please read on here.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: General Hints
+   :caption: General Hints 
 
    Crossing timezones with pumps <./Usage/Timezone-traveling.md>
    Accessing logfiles <./Usage/Accessing-logfiles.md>
@@ -101,7 +107,8 @@ For more details, please read on here.
 
    Remote monitoring <./Children/Children.rst>
    SMS commands <./Children/SMS-Commands.rst>
-
+   Profile helper <./Configuration/profilehelper.rst>
+   
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -113,7 +120,7 @@ For more details, please read on here.
    :maxdepth: 1
    :glob:
    :caption: FAQ
-  
+
    FAQ <./Getting-Started/FAQ.md>
 
 .. toctree::
@@ -138,6 +145,7 @@ For more details, please read on here.
    :caption: For Clinicians
 
    For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
+
 
 .. toctree::
    :maxdepth: 1

@@ -26,7 +26,7 @@ Hardware- und Software-Anforderungen
 
   Komponente, die AndroidAPS betreibt und Steuerungsbefehle an das Pod-Kommunikationsgerät sendet.
 
-      + Unterstützte `Android-Smartphones <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ mit AAPS 2.8 oder höher und zugehörigem `Komponenten-Setup <https://androidaps.readthedocs.io/en/latest/CROWDIN/de/index.html#komponenten-setup>`__
+      +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <../index.html#component-setup>`__
 
 * |Omnipod_Pod| **Insulin-Pumpe** 
 
@@ -123,7 +123,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
     |RileyLink_Setup_5|
 
-5. Vergewissern dich, dass im Tab **Omnipod (POD)** der **RileyLink Status (1)** als **verbunden erscheint.** Das **Pod Status (2)** Feld sollte **Kein aktiver Pod** anzeigen; Falls nicht, wiederhole bitte den vorherigen Schritt oder verlasse AAPS, um zu sehen, ob dies die Verbindung aktualisiert.
+5. Vergewissern dich, dass im Tab **Omnipod (POD)** der **RileyLink Status (1)** als **verbunden erscheint. * Das **Pod Status (2)** Feld sollte **Kein aktiver Pod** anzeigen; Falls nicht, wiederhole bitte den vorherigen Schritt oder verlasse AAPS, um zu sehen, ob dies die Verbindung aktualisiert.
 
     |RileyLink_Setup_6|
 
@@ -132,19 +132,19 @@ Einen Pod aktivieren
 
 Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Verbindung in den Omnipod-Einstellungen richtig konfiguriert und verbunden hast.
 
-*HINWEIS: Für die Verbindung mit dem Pod steht aus Sicherheitsgründen nur ein kleinerer Kommunikationsbereich zur Verfügung. Vor dem Pairing des Pods ist das Funksignal schwächer, aber nachdem es verbunden wurde, wird es mit voller Signalleistung funktionieren. Stelle sicher, dass dein Pod während dieser Prozedur `in der Nähe <#optimale-positionierung-von-omnipod-und-rileylink>`__ (~30 cm entfernt oder weniger)* ist, aber nicht oben oder direkt neben dem RileyLink.  
+*HINWEIS: Für die Verbindung mit dem Pod steht aus Sicherheitsgründen nur ein kleinerer Kommunikationsbereich zur Verfügung. Vor dem Pairing des Pods ist das Funksignal schwächer, aber nachdem es verbunden wurde, wird es mit voller Signalleistung funktionieren. During these procedures, make sure that your pod is* `within close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) but not on top of or right next to the RileyLink.*
 
 1. Navigiere zur Registerkarte **Omnipod (POD)** und klicke auf den **POD MGMT (1)** Button und dann auf **Pod aktivieren (2)**.
 
     |Activate_Pod_1| |Activate_Pod_2|
 
-2. Die Anzeige **Pod füllen** wird angezeigt. Fülle deinen neuen Pod mit mindestens 85 Einheiten Insulin und achte auf zwei Signaltöne, die anzeigen, dass der Pod bereit ist, gestartet zu werden.
+2. Die Anzeige ** Pod füllen* * wird angezeigt. Fülle deinen neuen Pod mit mindestens 85 Einheiten Insulin und achte auf zwei Signaltöne, die anzeigen, dass der Pod bereit ist, gestartet zu werden.
 
     |Activate_Pod_3|
 
     Stelle sicher, dass der neue Pod und RileyLink in der Nähe von einander liegen (~ 30cm oder weniger), und klicke auf den Button **Weiter**.
 
-3. Der Bildschirm **Initializiere Pod** wird angezeigt und der Pod beginnt zu entlüften. (Du wirst einen Klick hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst). Wenn der RileyLink außerhalb der Reichweite des zu aktivierenden Pods ist, erhältst du die Fehlermeldung **Keine Antwort vom Pod**. Wenn dies geschieht, `schiebe den RileyLink näher <#optimale-positionierung-von-omnipod-und-rileylink>`_ (~ 30 cm weg oder weniger) ran, aber nicht auf den Pod oder direkt neben den Pod und klicke auf den Button **Erneut versuchen (1)**.
+3. Der Bildschirm **Initializiere Pod** wird angezeigt und der Pod beginnt zu entlüften. (Du wirst einen Klick hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst). Wenn der RileyLink außerhalb der Reichweite des zu aktivierenden Pods ist, erhältst du die Fehlermeldung **Keine Antwort vom Pod**. Wenn dies geschieht, `schiebe den RileyLink näher <#optimale-positionierung-von-omnipod-und-rileylink>`_ (~ 30 cm weg oder weniger) ran, aber nicht auf den Pod oder direkt neben den Pod und klicke auf den Button **Erneut versuchen (1)* *.
 
     |Activate_Pod_4| |Activate_Pod_5|
 
@@ -199,7 +199,7 @@ Gehe wie folgt vor, um einen Pod zu deaktivieren (entweder vor dem Ablaufen der 
 
     |Deactivate_Pod_1| |Deactivate_Pod_2|
 
-2. Stelle sicher, dass sich der RileyLink in unmittelbarer Nähe zum Pod befindet, aber nicht direkt darauf oder direkt neben dem Pod liegt. Dann klicke auf dem **Deaktiviere Pod** Bildschirm den **Weiter** -Button, um den Prozess der Deaktivierung des Pods zu starten.
+2. Stelle sicher, dass sich der RileyLink in unmittelbarer Nähe zum Pod befindet, aber nicht direkt darauf oder direkt neben dem Pod liegt. Dann klicke auf dem **Deaktiviere Pod ** Bildschirm den **Weiter** -Button, um den Prozess der Deaktivierung des Pods zu starten.
 
     |Deactivate_Pod_3|
 
@@ -749,7 +749,7 @@ Pod angehalten
 Informational alert that Pod has been suspended.
 
 Setzen des Basal-Profils fehlgeschlagen. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
 

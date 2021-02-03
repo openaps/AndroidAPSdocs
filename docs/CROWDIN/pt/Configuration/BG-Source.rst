@@ -8,7 +8,7 @@ Fonte de Glic.
    
    Geral <../Hardware/GeneralCGMRecommendation.rst>
    Suavização de Dados <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
-   xDrip+ Configurações <./xdrip.md>
+   xDrip+ Configurações<./xdrip.md>
    Dexcom G6 <../Hardware/DexcomG6.rst>
    Dexcom G5 <../Hardware/DexcomG5.rst>
    Dexcom G4 <../Hardware/DexcomG4.rst>
@@ -17,5 +17,4 @@ Fonte de Glic.
    Eversense <../Hardware/Eversense.rst>
    MM640g/MM630g <../Hardware/MM640g.rst>
    PocTech <../Hardware/PocTech.rst>   
-   Nightscout como Fonte de Glic. <../Hardware/CgmNightscoutUpload.rst>
-   
+   Nightscout as BG Source <../Hardware/CgmNightscoutUpload.rst>

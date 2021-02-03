@@ -100,6 +100,6 @@ Verzi AAPS můžete na telefonu zkontrolovat klepnutím na tři tečky vpravo na
 
 ![Nainstalovaná verze AAPS](../images/Update_VersionCheck.png)
 
-## Poradce při potížích
+## Řešení problémů
 
 Viz samostatná stránka [odstraňování potíží s Android Studiem](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).

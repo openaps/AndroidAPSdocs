@@ -29,7 +29,7 @@ Dus zorg ervoor dat je de Automation-regels deactiveert indien nodig. Je kunt di
 
 Waar vind je Automatisering
 --------------------------------------------------
-Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+Afhankelijk van jouw `instellingen in de configurator <../Configuration/Config-Builder.html#tabblad-of-hamburger-menu>`_ vind je `Automatiisering <../Configuration/Config-Builder.html#automatisering>`_ in het hamburger menu of als een tabblad.
 
 Algemeen
 --------------------------------------------------
@@ -88,14 +88,14 @@ Na het toevoegen van jouw actie, **vergeet niet om de standaardwaarden** te vera
   :alt: Automatisering standaard vs. ingestelde waardes
 
 Automatiseringsregels sorteren
------
+---------------------
 Om jouw automatiseringsregels te sorteren, houd je de vier-streepjes-knop aan de rechterkant van het scherm ingedrukt en sleep je de regel omhoog of omlaag.
 
 .. image:: ../images/Automation_Sort.png
   :alt: Automatiseringsregels sorteren
   
 Automatiseringsregels verwijderen
------
+-----------------------
 Om een automatiseringsregel te verwijderen, klik op het prullenbak-icoon.
 
 .. image:: ../images/Automation_Delete.png

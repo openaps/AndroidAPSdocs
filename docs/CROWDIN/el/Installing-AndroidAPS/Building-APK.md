@@ -4,7 +4,7 @@
 
 **AndroidAPS δεν είναι διαθέσιμο για κατέβασμα λόγω κανονισμού για τις ιατρικές συσκευές. Είναι νόμιμο να χτίσει η εφαρμογή για δική σας χρήση, αλλά δεν πρέπει να δώσετε αντίγραφο σε άλλους! Δείτε το [σελίδα FAQ](../Getting-Started/FAQ.md) για λεπτομέρειες.**
 
-## ## Σημαντικές σημειώσεις
+## Σημαντικές σημειώσεις
 
 * Please use **[Android Studio Version 4.1.1](https://developer.android.com/studio/)** or newer to build the apk.
 * [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.1.1.

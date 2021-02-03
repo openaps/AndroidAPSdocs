@@ -16,7 +16,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor �
 
 ### Ypsomed Pomp ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Status:** Versie 1 - 1.5 (Q2/2018) zijn geen Loop kandidaten. Hoewel ze wel Bluetooth-communicatie hebben, lijkt het erop dat de communicatie zeer beperkt is (éénrichtingsverkeer: Pomp->App). Company is planning to extend the pump to support remote bolusing (update planned for end of 2021) and later on they plan to add other functions required to create a Loop. Their official app will support that in the future (planned for 2022 no exact date known). As they plan to have their own Loop system see this [page](https://www.mylife-diabetescare.com/en/loop-program.html), they won't be offering any support to any developers on any DIY loop, at least for now.
+**Status:** Versie 1 - 1.5 (Q2/2018) zijn geen Loop kandidaten. Hoewel ze wel Bluetooth-communicatie hebben, lijkt het erop dat de communicatie zeer beperkt is (éénrichtingsverkeer: Pomp->App). Bedrijf is van plan de pomp uit te breiden zodat er bolussen kunnen worden verstuurd naar de pomp (update gepland voor eind 2021) en later zullen ze andere functies toevoegen die nodig zijn om een Loop te maken. Hun officiële app zal dat in de toekomst ondersteunen (gepland voor 2022, geen exacte datum bekend). Omdat ze van plan zijn hun eigen Loop systeem te maken, zie deze [pagina](https://www.mylife-diabetescare.com/en/loop-program.html), zullen ze geen ondersteuning bieden aan ontwikkelaars van een doe-het-zelf loop, op dit moment tenminste.
 
 **Hardware eisen voor AAPS:** Waarschijnlijk geen. Want gebruikt Bluetooth.
 

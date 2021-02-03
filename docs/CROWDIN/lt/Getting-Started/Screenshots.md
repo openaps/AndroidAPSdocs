@@ -226,7 +226,7 @@ Paprastai faktinė glikemijos kreivė baigsis šių eilučių viduryje arba neto
 
 ![Insulino mygtukas](../images/Home2020_ButtonInsulin.png)
 
-* Tam tikrą insulino kiekį suleisti galima nenaudojant [boluso skaičiuotuvo](../Getting-Started/Screenhots#bolus-wizard).
+* To give a certain amount of insulin without using [bolus calculator](../Getting-Started/Screenshots#bolus-wizard).
 * Pažymėję langelį galite automatiškai inicijuoti savo [netrukus valgysiu laikiną tikslą](../Configuration/Preferences#default-temp-targets).
 * Jei nenorite suleisti bolusą per pompą, bet tiesiog įrašyti insulino suleidimą (pvz., švirkštu ar penu), pažymėkite atitinkamą langelį.
 

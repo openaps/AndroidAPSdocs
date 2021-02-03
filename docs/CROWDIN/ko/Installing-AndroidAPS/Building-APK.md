@@ -4,7 +4,7 @@
 
 **AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
 
-## ## Important notes
+## Important notes
 
 * Please use **[Android Studio Version 4.1.1](https://developer.android.com/studio/)** or newer to build the apk.
 * [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.1.1.
@@ -270,6 +270,6 @@ On your phone you have to allow installation from unknown sources. Manuals how t
 
 [See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
-## 문제해결
+## 문제 해결
 
 별도의 [Android Studio 문제해결](../Installing-AndroidAPS/troubleshooting_androidstudio.rst) 페이지를 보세요.

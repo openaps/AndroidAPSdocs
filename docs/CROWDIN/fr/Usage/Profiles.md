@@ -75,7 +75,7 @@ Vous pouvez également supprimer le changement de profil directement dans mLab :
 
 * Allez dans votre collection mLab
 * Recherches le changement de profil dans les traitements
-* Supprimez le changement de profil ayantla date et l'heure mentionnées dans le message d'erreur. ![mlab](../images/mLabDeletePS.png)
+* Delete the profile switch with date and time that was mentioned in the error message. ![mlab](../images/mLabDeletePS.png)
 
 ### 'DAI 3h trop court'
 

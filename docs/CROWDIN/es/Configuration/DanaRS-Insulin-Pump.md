@@ -23,7 +23,7 @@
 * Para DanaRS con el firmware v1 y v2 la contraseña predeterminada es 1234.
 * Para DanaRS con firmware v3 la contraseña predeterminada es una combinación de mes de producción y fecha de producción (por ejemplo, mes 01 y día 24). Open main menu on pump > review > information. Number 3 is production date.
 
-* **¡Debe confirmar el emparejamiento en la bomba! ** Esa es la forma en que está acostumbrado a otros emparejamientos de bluetooth (es decir, móvil y audio del coche).
+* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
     
     ![Emparejamiento de confirmación Dana RS](../images/DanaRS_Pairing.png)
 

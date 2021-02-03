@@ -11,7 +11,7 @@ Opmerking: AndroidAPS wordt in geen enkel land door regelgevers voor medische hu
 * Het doserings algoritme instelt. Vooral jouw individuele insulinebehoefte moet nagenoeg perfect zijn, om het systeem goed te laten werken. Werk samen met jouw behandelaars om jouw insulinebehoefte te bepalen.
 * Controleert wat het systeem doet en het zo nodig updatet om ervoor te zorgen dat het goed blijft werken.
 
-.. note:: 
+.. opmerking:: 
 	**Disclaimer en waarschuwing**
 
 	* Alle informatie, gedachten, en de code die hier beschreven staan zijn alleen voor informatieve en educatieve doeleinden. Nightscout probeert zich op geen enkele wijze te houden aan gegevensbewaking van medische gegevens. Gebruik van Nightscout en AndroidAPS is op eigen risico, en gebruik de informatie of code niet om behandelbeslissingen te nemen.

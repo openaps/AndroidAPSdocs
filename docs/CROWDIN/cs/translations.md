@@ -4,7 +4,7 @@
 
 * Send a join request to the docs team. Klikněte na vlajku požadovaného jazyka a poté na tlačítko "Join" vpravo nahoře na následující stránce. Specifikujte prosím svůj jazyk, uveďte nějaké informace o sobě a svých zkušenostech s AAPS a zda chcete být překladatel nebo korektor (pouze osoby se zkušeností s překlady + pokročilí uživatelé AndroidAPS).
 
-* Jakmile vás schválíme, klikněte na vlajku ![Jakmile vás schválíme, klikněte na vlajku](./images/translation_flags2019.png)
+* When we approve you, click the flag ![Jakmile vás schválíme, klikněte na vlajku](./images/translation_flags2019.png)
 
 ## Překlad stringů pro aplikaci AndroidAPS
 

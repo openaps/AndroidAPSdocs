@@ -88,14 +88,14 @@ Nachdem du deine Aktionen hinzugefügt hast, **vergesse nicht die Standard-Werte
   :alt: Automation Standard-Werte vs.  eigene Werte
 
 Automation-Regeln sortieren
------
+---------------------
 Zum Sortieren von Automation-Regeln klicke und halte die Schaltfläche mit den vier Linien auf der rechten Seite des Bildschirms und bewege sie nach oben oder unten.
 
 .. image:: ../images/Automation_Sort.png
   :alt: Automation-Regeln sortieren
   
 Automation-Regeln löschen
------
+-----------------------
 Klicke auf das Papierkorbsymbol, um eine Automatisierungsregel zu löschen.
 
 .. image:: ../images/Automation_Delete.png

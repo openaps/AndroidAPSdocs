@@ -191,10 +191,8 @@ Pokud používáte Oref1 s SMB, musíte změnit **min_5m_carbimpact** na 8. Tato
 
 Vyberte požadovaný algoritmus APS pro úpravy léčby. Detaily vybraného algoritmu lze prohlížet na kartě OpenAPS (OAPS).
 
-* OpenAPS AMA (advanced meal assist, stav algoritmu v roce 2017)  
-    Další podrobnosti o OpenAPS AMA najdete v [dokumentaci k OpenAPS](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Zjednodušeně řečeno, výhodou je, že poté, co si dáte bolus k jídlu, systém zajistí rychlý nárůst dočasného bazálu, zadáte-li dobře sacharidy. 
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, nejnovější algoritmus pro pokročilé uživatele)  
-    Poznámka: Abyste mohli používat OpenAPS SMB, musíte plnit [10. cíl](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) a mít nastavenou hodnotu min_5m_carbimpact na 8. V nabídce Konfigurace > Detekce senzitivity > Nastavení senzitivity Oref1.
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Zjednodušeně řečeno, výhodou je, že poté, co si dáte bolus k jídlu, systém zajistí rychlý nárůst dočasného bazálu, zadáte-li dobře sacharidy.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Smyčka
 
@@ -316,7 +314,7 @@ Uživatelem vytvořené úlohy automatizace ('if-then-else '). Prosím, [přečt
 
 ### SMS komunikátor
 
-**SMS komunikátor** umožňuje vzdálené ovládání některých funkcí AndroidAPS prostřednictvím SMS, viz [SMS příkazy](../Children/SMS-Commands.rst), kde najdete další informace o nastavení.
+Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
 
 ### Jídlo
 

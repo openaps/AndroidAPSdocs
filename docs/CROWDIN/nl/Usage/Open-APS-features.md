@@ -52,7 +52,7 @@ AndroidAPS beperkt de waarde als volgt:
 * Insuline-resistente volwassene: 12
 * Zwangere: 25
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*Zie ook [overzicht van harde limieten](../Usage/Open-APS-features#overzicht-van-harde-limieten).*
 
 ### Max totaal IOB dat OpenAPS niet kan overschrijden (OpenAPS "max-iob")
 
@@ -63,7 +63,7 @@ Wanneer je SMB gebruikt, wordt max-IOB anders berekend dan wannneer je AMA gebru
     max-IOB = gemiddelde maaltijdbolus + 3x jouw hoogste basaalstand
     
 
-Wees voorzichtig en geduldig en verander de instellingen stap voor stap. Dat is voor iedereen anders en hangt ook af van jouw gemiddelde totale dagdosis (TDD). Om veiligheidsredenen is er ook hier een grens, die afhangt van de leeftijd van de patiënt. The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
+Wees voorzichtig en geduldig en verander de instellingen stap voor stap. Dat is voor iedereen anders en hangt ook af van jouw gemiddelde totale dagdosis (TDD). Om veiligheidsredenen is er ook hier een grens, die afhangt van de leeftijd van de patiënt. De 'harde limiet' voor maxIOB is hoger dan in [AMA](../Usage/Open-APS-features#maximale-e-uur-dat-een-tijdelijke-basaalstand-kan-toedienen-openaps-max-basal).
 
 * Kind: 3
 * Tiener: 7
@@ -71,7 +71,7 @@ Wees voorzichtig en geduldig en verander de instellingen stap voor stap. Dat is 
 * Insuline-resistente volwassene: 25
 * Zwangere: 40
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*Zie ook [overzicht van harde limieten](../Usage/Open-APS-features.html#overzicht-van-harde-limieten).*
 
 See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1#understanding-super-micro-bolus-smb).
 
@@ -165,7 +165,7 @@ AndroidAPS gebruikt de volgende 'harde limieten':
 * Insuline-resistente volwassene: 12
 * Zwangere: 25
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*Zie ook [overzicht van harde limieten](../Usage/Open-APS-features#overzicht-van-harde-limieten).*
 
 ### Max basaal IOB dat OpenAPS kan toedienen \[E\] (OpenAPS "max-iob")
 

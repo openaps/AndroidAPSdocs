@@ -4,14 +4,29 @@ Siga las instrucciones en el manual ` manual de actualización <../Installing-An
 
 Recibirá la siguiente información tan pronto como se disponga de una nueva actualización:
 
-.. image:: ../images/AAPS_LoopDisable90days.png
+.. imagen:: ../images/AAPS_LoopDisable90days.png
   :alt: Información de actualización
 
 Entonces tienes 60 días para actualizarte. Si no actualiza dentro de estos 60 días, la AAPS retrocederá a LGS (suspensión de glucosa baja -ver `glosario <../Getting-Started/Glossary.html>`_) como en el `objetivo 6 <../Usage/Objectives.html>`_.
 
 Si no se actualiza durante otros 30 días (90 días a partir de la fecha de la nueva versión), AAPS cambiará a Lazo Abierto.
 
-Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Por lo tanto, son necesarias que todas las actualizaciones de usuario a.s.a.p. (Lo antes posible).. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
+Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Therefore it is neccessary that every user updates a.s.a.p.. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
+
+Version 2.8.2
+================
+Release date: 23-01-2021
+
+* Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
+
+Changes
+----------------------
+* stability improvements
+* more tweaking for Android 8+
+* improved icons
+* watch improvements
+* NSClient fixes
+* Bolus advisor now works with Pumpcontrol and NSClient
 
 Version 2.8.1.1
 ================
@@ -71,7 +86,7 @@ Versión 2.7.0
 ================
 Fecha de lanzamiento: 24-09-2020
 
-**Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`_.
+**Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`__.
 
 You need at least start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. This will not effect other objectives you have already finished. You will keep all finished objectives!
 
@@ -123,7 +138,7 @@ Fecha de lanzamiento: 03-05-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
------
+------------------
 * Insight: Disable vibration on bolus for firmware version 3
 * Otherwise is equal to 2.6.1.2. La actualización es opcional. 
 
@@ -134,7 +149,7 @@ Fecha de lanzamiento: 19-04-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
------
+------------------
 * Fix crashing in Insight service
 * Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
 
@@ -145,7 +160,7 @@ Fecha de lanzamiento: 06-04-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
------
+------------------
 * Resolves SMS CARBS command issue while using Combo pump
 * Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
 
@@ -156,7 +171,7 @@ Fecha de lanzamiento: 21-03-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
------
+------------------
 * Allow to enter only https:// in NSClient settings
 * Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
 * Fixed small UI bugs
@@ -175,9 +190,9 @@ Fecha de lanzamiento: 29-02-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
------
+------------------
 * Small design changes (startpage...)
-* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`_
+* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
 * New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
 
   * Local profile can hold more than 1 profile
@@ -209,7 +224,7 @@ Versión 2.5.1
 ==================================================
 Fecha de lanzamiento: 31-10-2019
 
-Tenga en cuenta las `notas importantes <../Installing-AndroidAPS/Releasenotes.html#important-notes>`_ y `limitaciones <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-actualmente-is-not-soportado>`_ listados para `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
+Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
 * Se corrigió un error en el receptor de estado de red que conduce a muchos fallos (no críticos, sino que desperdiciarían mucha energía en el recálculo de cosas).
 * Nuevo mantenimiento de versiones que permitirá realizar actualizaciones menores sin activar la notificación de actualización.
 
@@ -219,9 +234,9 @@ Fecha de lanzamiento: 26-10-2019
 
 Notas importantes
 --------------------------------------------------
-* Utilice `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ o más reciente para `crear el apk <../Installing-AndroidAPS/Building-APK.html>`_ o `actualización <../Installing-AndroidAPS/Update-to-new-version.html>`_.
+* Please use `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ or newer to `build the apk <../Installing-AndroidAPS/Building-APK.html>`_ or `update <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Si está utilizando xDrip `identificar el receptor <../Configuration/xdrip.html#identify-receiver>`_ debe establecerse.
-* Si utiliza Dexcom G6 con el `la app Dexcom parchada <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ necesitará la versión de la `carpeta 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* If you are using Dexcom G6 with the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Glimp is supported from version 4.15.57 and newer.
 
 ¿Es esta actualización para mí? Actualmente NO es soportado
@@ -328,10 +343,10 @@ Valores para ajustar cuando se cambia de AMA a SMB
 * El valor predeterminado de min_5m_carbimpact ha cambiado de 3 a 8 llendo de AMA a SMB. Si está actualizando desde AMA a SMB, tiene que cambiarlo manualmente
 * Nota cuando se construya AndroidAPS 2.0 apk: La configuración personalizada no está soportada por la versión actual del plugin de Android Gradle! Si la compilación falla con un error en la configuración personalizada, puede realizar lo siguiente:
 
-   * Abra la ventana de Preferencias, haga clic en Archivo > Configuración (en Mac, Android Studio > Preferencias).
-   * En el panel de la izquierda, pulse Compilar, Ejecución, Deployment > Compilador.
-   * Desmarque la casilla de verificación Configurar bajo demanda.
-   * Haga clic en Aplicar o en Aceptar.
+  * Abra la ventana de Preferencias, haga clic en Archivo > Configuración (en Mac, Android Studio > Preferencias).
+  * En el panel de la izquierda, pulse Compilar, Ejecución, Deployment > Compilador.
+  * Desmarque la casilla de verificación Configurar bajo demanda.
+  * Haga clic en Aplicar o en Aceptar.
 
 Pestaña general
 --------------------------------------------------
@@ -360,7 +375,7 @@ Misceláneo
 * Revisión para las pestañas del constructor de configuración y objetivos, añadiendo descripciones
 * Nuevo icono de la aplicación
 * Muchas mejoras y correcciones de errores
-* Alertas independientes de Nightscout si la bomba es inalcanzable durante más tiempo (p.ej. batería de bomba agotada) y lecturas de BG perdidas (ver *Local alerts* en configuración)
+* Alertas independientes de Nightscout si la bomba es inalcanzable durante más tiempo (p.ej. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Opción para mantener la pantalla encendida
 * Opción de mostrar notificaciónes como notificación Android
 * Filtrado avanzado (que permite siempre habilitar SMB y 6h después de las comidas) soportado con el app de Dexcom o xDrip patched con el modo nativo G5 como fuente BG.

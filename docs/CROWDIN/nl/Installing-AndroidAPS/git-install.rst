@@ -4,7 +4,7 @@ Windows
 ==================================================
 1. Git downloaden
 --------------------------------------------------
-* **Je moet de hele tijd online zijn omdat Android Studio verschillende updates downloadt**
+* ** Je moet de hele tijd online zijn omdat Android Studio verschillende updates downloadt **
 * Elke versie van Git zou moeten werken. Bijvoorbeeld `https://git-scm.com/download/win <https://git-scm.com/download/win>`_. Volg de instructies op die site om Git te installeren.
 * Onthoud of noteer in welke map Git op jouw computer geïnstalleerd wordt. Dat heb je nodig in de volgende stap.
 
@@ -34,7 +34,7 @@ Windows
 
 * Als hij het bestand git.exe niet heeft kunnen vinden klik "OK" in het dialoogvenster (1.) en dan de knop met de drie stipjes (2.).
 * Gebruik `zoekfunctie in windows verkenner <https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html>`_ om "git.exe" te vinden als je niet zeker weet waar op jouw computer het git bestand staat. Je moet zoeken naar git.exe in een map die \bin\ heet.
-* Selecteer het pad naar git.exe en zorg ervoor dat je de map hebt geselecteerd in de **\\bin\\** map (3.) en klik op "OK" (4.).
+* Select path to git.exe and make sure you selected the one in **\\bin\\** folder (3.) and click "OK" (4.).
 * Sluit het instellingen venster door te klikken op de "OK" knop (5.).
 
   .. image:: ../images/AndroidStudio361_11.png
@@ -61,5 +61,5 @@ Mac
 ==================================================
 * Elke versie van Git zou moeten werken. Bijvoorbeeld `https://git-scm.com/download/mac <https://git-scm.com/download/mac>`_. Volg de instructies op die site om Git te installeren.
 * Gebruik homebrew om git: ```$brew install git``` te installeren.
-* Voor meer informatie over het installeren van git zie de `officiële git documentatie <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.
+* Voor meer informatie over het installeren van git zie de `officiële git documentatie <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>` _.
 * Als je git installeert via homebrew, hoef je niets aan de instellingen te wijzigen. Voor het geval je ze toch zoekt: je vind ze hier: Android Studio - Preferences.

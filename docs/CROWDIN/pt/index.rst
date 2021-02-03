@@ -17,7 +17,13 @@ Para mais detalhes, leia aqui.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Guia de Introdução
+   :caption: Change language
+   Change language <changelanguage.rst>
+   
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Getting started
 
    Segurança primeiro <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
@@ -35,7 +41,7 @@ Para mais detalhes, leia aqui.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Como Instalar AndroidAPS
+   :caption: How to Install AndroidAPS
 
    Construindo o APK <./Installing-AndroidAPS/Building-APK.md>
    Actualizar para uma nova versão ou branch <./Installing-AndroidAPS/Update-to-new-version.md>
@@ -48,11 +54,11 @@ Para mais detalhes, leia aqui.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Configuração do Componente
+   :caption: Component Setup
 
    CGM/FGM <./Configuration/BG-Source.rst>
    xDrip Settings <./Configuration/xdrip.md>
-   Bombas de Insulina <./Hardware/pumps.rst>
+   Bombas de Insulina<./Hardware/pumps.rst>
    Telefones <./Hardware/Phoneconfig.rst>
    Configuração do Nightscout <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
@@ -60,7 +66,7 @@ Para mais detalhes, leia aqui.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Configuração
+   :caption: Configuration
 
    Config builder <./Configuration/Config-Builder.md>
    Preferences <./Configuration/Preferences.rst>
@@ -68,7 +74,7 @@ Para mais detalhes, leia aqui.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Uso AndroidAPS
+   :caption: AndroidAPS Usage
 
    Ecrãs do AndroidAPS <./Getting-Started/Screenshots.md>
    Objectives <./Usage/Objectives.rst>
@@ -87,7 +93,7 @@ Para mais detalhes, leia aqui.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Dicas Gerais
+   :caption: General Hints 
 
    Crossing timezones with pumps <./Usage/Timezone-traveling.md>
    Aceder a registos <./Usage/Accessing-logfiles.md>
@@ -97,36 +103,37 @@ Para mais detalhes, leia aqui.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS para crianças
+   :caption: AndroidAPS for children
 
    Remote monitoring <./Children/Children.rst>
    SMS commands <./Children/SMS-Commands.rst>
-
+   Profile helper <./Configuration/profilehelper.rst>
+   
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Resolução de Problemas
-  
+   :caption: Troubleshooting
+
    Troubleshooting <./Usage/troubleshooting.rst>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Perguntas Frequentes (FAQ) 
+   :caption: FAQ
 
    Perguntas Frequentes <./Getting-Started/FAQ.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Glossário
+   :caption: Glossary
 
    Glossário <./Getting-Started/Glossary.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Onde ir para obter ajuda 
+   :caption: Where to go for help 
 
    Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
@@ -139,17 +146,18 @@ Para mais detalhes, leia aqui.
 
    Para Clínicos <./Resources/clinician-guide-to-AndroidAPS>
 
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Como ajudar
+   :caption: How to help
 
-   Como ajudar <./Getting-Started/How-can-I-help.md>
+   Como ajudar <./Getting-Started/How-can-help.md>
    How to translate the app and docs <./translations.md>
    How to edit the docs <./make-a-PR>
 
 
-.. note:: 
+.. nota:: 
 	**Disclaimer And Warning**
 
 	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.

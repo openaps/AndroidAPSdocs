@@ -75,7 +75,7 @@ De forma alternativa, puede suprimir el cambio de perfil directamente en el mLab
 
 * Vaya a la colección de mlab
 * Buscar en los tratamientos para el cambio de perfil
-* Suprima el conmutador de perfil con fecha y hora que se mencionaron en el mensaje de error. ![mlab](../images/mLabDeletePS.png)
+* Delete the profile switch with date and time that was mentioned in the error message. ![mlab](../images/mLabDeletePS.png)
 
 ### "DIA 3hr demasiado corto"
 

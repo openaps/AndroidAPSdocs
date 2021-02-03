@@ -8,7 +8,7 @@ eCarbs sind Kohlenhydrate, die sich über mehrere Stunden verteilen. Bei einer S
 
 eCarbs beschränken sich nicht auf fett-/eiweißlastige Mahlzeiten: sie können auch eingesetzt werden, um in anderen Situationen zu helfen, in denen es blutzuckererhöhende Einflüsse gibt, z.B. andere Medikamente wie Kortison.
 
-Um eCarbs einzugeben, musst du auf dem Homescreen im Dialogfeld "Kohlenhydrate" die Dauer, die Kohlenhydratmenge und optional eine Zeitverschiebung festlegen:
+Um eCarbs einzugeben, musst du auf dem Homescreen im Dialogfeld *Kohlenhydrate* die Dauer, die Kohlenhydratmenge und optional eine Zeitverschiebung festlegen:
 
 .. image:: ../images/eCarbs_Dialog.png
   :alt: Eingabe Kohlenhydrate
@@ -32,14 +32,14 @@ Ein konkretes Beispiel zum Umgang mit Fett und Eiweiß im Rahmen dieser Funktion
 
 Es wird empfohlen, das APS-Plugin "OpenAPS SMB" zu nutzen, SMB zu aktivieren und die Einstellung *Aktiviere SMB während aktiver Kohlenhydrate* zu aktivieren.
 
-Eine Szenario z. B. für eine Pizza wäre, einen anfänglichen (Teil-)Bolus über den _Rechner_ zu geben und dann die Schaltfläche _“Kohlenhydrate”_ zu verwenden, um die restlichen Kohlenhydrate für eine Dauer von ca. 4-6 Stunden, beginnend nach 1 oder 2 Stunden, einzugeben.  Du musst natürlich selbst ausprobieren, welche konkreten Werte bei dir am besten funktionieren. Du könntest auch die Einstellung *SMB-Basal-Limit in Minuten* vorsichtig anpassen, um den Algorithmus mehr oder weniger aggressiv zu einzustellen.
+Eine Szenario z. B. für eine Pizza wäre, einen anfänglichen (Teil-)Bolus über den *Rechner* zu geben und dann die Schaltfläche *“Kohlenhydrate”* zu verwenden, um die restlichen Kohlenhydrate für eine Dauer von ca. 4-6 Stunden, beginnend nach 1 oder 2 Stunden, einzugeben.  Du musst natürlich selbst ausprobieren, welche konkreten Werte bei dir am besten funktionieren. Du könntest auch die Einstellung *SMB-Basal-Limit in Minuten* vorsichtig anpassen, um den Algorithmus mehr oder weniger aggressiv zu einzustellen.
 Bei Low-Carb-Ernährung und fett-/eiweißreichen Mahlzeiten reicht es möglicherweise aus, nur eCarbs ohne manuellem Mahlzeitenbolus einzugeben (mehr dazu im Blogbeitrag oben).
 
 Wenn eCarbs eingegeben werden, wird im Careportal automatisch eine Notiz angelegt, damit es einfacher ist, die Eingaben zu überprüfen und zu verbessern.
 
 Verzögerter Bolus
 ==================================================
-Wie oben bereits erwähnt sind verzögerte oder sog. Multi-Wave-Boli beim Loopen nicht sinnvoll. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ for details
+Wie oben bereits erwähnt sind verzögerte oder sog. Multi-Wave-Boli beim Loopen nicht sinnvoll. `Weiter unten <../Usage/Extended-Carbs.html#warum-ein-verzogerter-bolus-beim-loopen-nicht-funktioniert>`_ wird beschrieben, warum.
 
 Verzögerter Bolus und Wechsel zum Open Loop - nur für Dana- und Insight-Pumpe
 -----------------------------------------------------------------------------

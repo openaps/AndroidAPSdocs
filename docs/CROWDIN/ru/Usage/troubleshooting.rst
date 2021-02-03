@@ -6,10 +6,12 @@ Additional useful information might also be available in the `FAQ <../Getting-St
 
 AndroidAPS app
 ==================================================
+
 Building & updating
------
+-------------------
 * `Lost keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
 * `Troubleshooting AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+
 Настройки
 --------------------------------------------------
 * `Profile <../Usage/Profiles.html#troubleshooting-profile-errors>`_
@@ -18,11 +20,12 @@ Building & updating
     :alt: Error: Basal not aligned to hours
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
+
 Применение
 --------------------------------------------------
 * `Wrong carb values <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 
-  .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
+  .. изображение:: ../images/Calculator_SlowCarbAbsorbtion.png
     :alt: Error: Slow carb absorbtion
 
 * `SMS commands <../Children/SMS-Commands.html#troubleshooting>`_

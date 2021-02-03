@@ -3,7 +3,7 @@ Dexcom G6
 Algemeen
 ==================================================
 
-* Volg de algemene CGM tips en sensor plaatsings aanbevelingen `hier <../Hardware/GeneralCGMRecommendation.html>`_.
+* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`__.
 * Voor G6 zenders die na het najaar van 2018 zijn geproduceerd, zorg ervoor dat je een van de `nieuwste xDrip+ 'Nightly Build' versies <https://github.com/NightscoutFoundation/xDrip/releases>`_ gebruikt. Deze zenders hebben een nieuwe firmware en de nieuwste stabiele versie van xDrip+ (2019/01/10) werkt daar niet mee.
 
 Algemene tips voor loopen met G6
@@ -27,17 +27,17 @@ Als je jouw Dexcom wilt koppelen aan de xDrip+ app dan zul je dus eerst de Dexco
 * Als dat nog niet is ingesteld, download dan `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ en volg de instructies voor Nightscout `G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_.
 * Selecteer xdrip in Configurator (instellingen in AndroidAPS).
 * Instellingen in xDrip + aanpassen volgens `xDrip+ instellingen pagina <../Configuration/xdrip.html>`_
-* Als AAPS geen BG-waarden ontvangt wanneer de telefoon in vliegtuigmodus staat, gebruik dan 'Identify receiver' (Identificeer ontvanger) zoals beschreven op de `xDrip+ instellingen pagina <../Configuration/xdrip.html>`_.
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
 G6 met aangepaste Dexcom app
 ==================================================
 * Download de apk van `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, en kies de versie die je nodig hebt (mg/dl of mmol/l versie, voor G6).
 
-   * Voor de huidige versie van AndroidAPS heb je de aangepaste Dexcom app uit de map 2.4 nodig. De app uit de map 2.3 moet je niet hebben, die was nog van (inmiddels verouderde) AndroidAPS 2.3.
-   * Open https://play.google.com/store/search?q=dexcom%20g6 op jouw computer. 
-   * Klik op de link naar de app Dexcom G6 op de pagina met zoekresultaten die wordt afgebeeld.
-   * Regio wordt weergegeven in URL.
-   
+  * Voor de huidige versie van AndroidAPS heb je de aangepaste Dexcom app uit de map 2.4 nodig. De app uit de map 2.3 moet je niet hebben, die was nog van (inmiddels verouderde) AndroidAPS 2.3.
+  * Open https://play.google.com/store/search?q=dexcom%20g6 op jouw computer. 
+  * Klik op de link naar de app Dexcom G6 op de pagina met zoekresultaten die wordt afgebeeld.
+  * Regio wordt weergegeven in URL.
+
    .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Regio in Dexcom G6 URL
 
@@ -89,7 +89,7 @@ Dexcom G6 specifieke probleemoplossing
 
 Algemene probleemoplossing
 --------------------------------------------------
-Voor het oplossen van problemen met jouw CGM klik `hier <./GeneralCGMRecommendation.html#problemen-oplossen>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
 
 Nieuwe zender met lopende sensor
 --------------------------------------------------

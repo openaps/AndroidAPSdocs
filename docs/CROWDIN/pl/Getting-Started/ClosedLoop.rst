@@ -23,7 +23,7 @@ Just as the autopilot depends on the sensor values as well as the pilot's specif
 
 
 Open Source Artificial Pancreas Closed Loop Systems
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+===================================================
 At present there are three major open source closed loop systems available:
 
 AndroidAPS (AAPS)

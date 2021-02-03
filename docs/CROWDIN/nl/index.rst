@@ -17,7 +17,13 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Aan de slag
+   :caption: Change language
+   Change language <changelanguage.rst>
+   
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Getting started
 
    Allereerst de veiligheid <./Getting-Started/Safety-first.rst>
    Wat is een closed loop systeem <./Getting-Started/ClosedLoop.rst>
@@ -27,7 +33,7 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Wat heb ik nodig? 
+   :caption: What do I need? 
 
    Onderdelen <./Module/module.rst>
    Gebruiksvoorbeeld <./Getting-Started/Sample-Setup.md>
@@ -35,7 +41,7 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS installeren
+   :caption: How to Install AndroidAPS
 
    Bouwen van de app <./Installing-AndroidAPS/Building-APK.md>
    Bijwerken naar een nieuwe versie <./Installing-AndroidAPS/Update-to-new-version.md>
@@ -43,12 +49,12 @@ Hieronder volgt de inhoudsopgave.
    Git installeren <./Installing-AndroidAPS/git-install.rst>
    Problemen in Android Studio oplossen <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
-   Dev branch (voor ontwikkelaars) <./Installing-AndroidAPS/Dev_branch.md>
-   
+   Dev branch (voor ontwikkelaars) <./Installing-AndroidAPS/Dev-branch.md>
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Onderdelen instellen
+   :caption: Component Setup
 
    BG bron <./Configuration/BG-Source.rst>
    xDrip+ instellingen <./Configuration/xdrip.md>
@@ -60,7 +66,7 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS instellingen 
+   :caption: Configuration
 
    Configurator <./Configuration/Config-Builder.md>
    Instellingen <./Configuration/Preferences.rst>
@@ -68,7 +74,7 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS gebruik
+   :caption: AndroidAPS Usage
 
    AndroidAPS Screenshots <./Getting-Started/Screenshots.md>
    Doelen <./Usage/Objectives.rst>
@@ -87,7 +93,7 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Algemene Tips 
+   :caption: General Hints 
 
    Wisselen van tijdzone <./Usage/Timezone-traveling.md>
    Toegang tot logbestanden <./Usage/Accessing-logfiles.md>
@@ -97,36 +103,37 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS voor kinderen
+   :caption: AndroidAPS for children
 
    Volgen op afstand <./Children/Children.rst>
    SMS Comando's <./Children/SMS-Commands.rst>
-
+   Profielhelper <./Configuration/profilehelper.rst>
+   
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Problemen oplossen
+   :caption: Troubleshooting
 
    Problemen oplossen <./Usage/troubleshooting.rst>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Veelgestelde vragen 
+   :caption: FAQ
 
    Veelgestelde vragen <./Getting-Started/FAQ.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Veelgebruikte woordenlijst
-  
+   :caption: Glossary
+
    Veelgebruikte woordenlijst <./Getting-Started/Glossary.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Waar je hulp kunt vinden
+   :caption: Where to go for help 
 
    Leestips voordat je begint <./Where-To-Go-For-Help/Background-reading.md>
    Contact met anderen <./Where-To-Go-For-Help/Connect-with-other-users.md>
@@ -135,21 +142,22 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Zorgprofessionals
+   :caption: For Clinicians
 
    Voor zorgprofessionals <./Resources/clinician-guide-to-AndroidAPS>
+
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Hoe je zelf kunt helpen
+   :caption: How to help
 
    Hoe kan je helpen <./Getting-Started/How-can-I-help.md>
    De app of wiki vertalen <./translations.md>
    De wiki verbeteren <./make-a-PR>
 
 
-.. note::
+.. opmerking:: 
 	**Disclaimer en waarschuwing**
 
 	* Alle informatie, gedachten, en de code die hier beschreven staan zijn alleen voor informatieve en educatieve doeleinden. Nightscout probeert zich op geen enkele wijze te houden aan gegevensbewaking van medische gegevens. Gebruik van Nightscout en AndroidAPS is op eigen risico, en gebruik de informatie of code niet om behandelbeslissingen te nemen.
