@@ -9,7 +9,7 @@ La aplicación no se proporciona en Google Play - tienes que construirla a parti
 
 The main components are:
 
-.. image:: ./images/modules-female.png
+.. imagen:: ./images/modules-female.png
   :alt: Componentes
 
 Para más detalles, por favor lee aquí.
@@ -17,7 +17,13 @@ Para más detalles, por favor lee aquí.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Primeros Pasos
+   :caption: Change language
+   Change language <changelanguage.rst>
+   
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Getting started
 
    La seguridad primero <./Getting-Started/Safety-first>
    Qué es un sistema de lazo cerrado <./Getting-Started/ClosedLoop.rst>
@@ -27,7 +33,7 @@ Para más detalles, por favor lee aquí.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: ¿Qué necesito? 
+   :caption: What do I need? 
 
    Módulo <./Module/module.rst>
    Sample Setup <./Getting-Started/Sample-Setup.md>
@@ -35,10 +41,10 @@ Para más detalles, por favor lee aquí.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Instalando AndroidAPS
+   :caption: How to Install AndroidAPS
 
    Compilando la APK <./Installing-AndroidAPS/Building-APK.md>
-   Actualice a una nueva versión o rama <./Installing-AndroidAPS/Update-to-new-version.md>
+   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
    Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Instale git <./Installing-AndroidAPS/git-install.rst>
    Resolución de problemas de Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
@@ -48,7 +54,7 @@ Para más detalles, por favor lee aquí.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Configuración de componentes
+   :caption: Component Setup
 
    MCG/FGM <./Configuration/BG-Source.rst>
    Configuración xDrip <./Configuration/xdrip.md>
@@ -60,7 +66,7 @@ Para más detalles, por favor lee aquí.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Configuración 
+   :caption: Configuration
 
    Creador de configuración <./Configuration/Config-Builder.md>
    Preferences <./Configuration/Preferences.rst>
@@ -68,7 +74,7 @@ Para más detalles, por favor lee aquí.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Utilización de AndroidAPS
+   :caption: AndroidAPS Usage
 
    Pantallas AndroidAPS <./Getting-Started/Screenshots.md>
    Objetivos <./Usage/Objectives.rst>
@@ -87,7 +93,7 @@ Para más detalles, por favor lee aquí.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Consejos Generales 
+   :caption: General Hints 
 
    Cruzar zonas horarias con bombas <./Usage/Timezone-traveling.md>
    Acceder a los logs <./Usage/Accessing-logfiles.md>
@@ -97,36 +103,37 @@ Para más detalles, por favor lee aquí.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS para niños
+   :caption: AndroidAPS for children
 
    Supervisión remota <./Children/Children.rst>
    Comandos SMS <./Children/SMS-Commands.rst>
-
+   Profile helper <./Configuration/profilehelper.rst>
+   
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Solución de problemas
+   :caption: Troubleshooting
 
    Resolución de problemas <./Usage/troubleshooting.rst>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Preguntas frecuentes
+   :caption: FAQ
 
    Preguntas frecuentes <./Getting-Started/FAQ.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Glosario
+   :caption: Glossary
 
    Glosario <./Getting-Started/Glossary.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Donde buscar ayuda
+   :caption: Where to go for help 
 
    Recursos útiles para leer antes de empezar <./Where-To-Go-For-Help/Background-reading.md>
    Cómo puedo ayudar <./Where-To-Go-For-Help/Connect-with-other-users.md>
@@ -135,14 +142,15 @@ Para más detalles, por favor lee aquí.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Para Los Médicos
+   :caption: For Clinicians
 
    Para los clínicos <./Resources/clmédica-guide-to-AndroidAPS>
+
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Cómo ayudar
+   :caption: How to help
 
    Cómo se puede ayudar <./Getting-Started/How-can-I-help.md>
    Cómo traducir la aplicación y documentos <./translations.md>
