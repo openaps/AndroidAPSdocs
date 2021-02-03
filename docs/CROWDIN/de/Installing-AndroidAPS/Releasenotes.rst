@@ -13,6 +13,21 @@ Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualis
 
 Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln, sondern aus Sicherheitsgründen erfolgt. Neue Versionen von AndroidAPS bieten nicht nur neue Funktionen, sondern auch wichtige Sicherheitsfixes. Deshalb ist es notwendig, dass jeder Anwender so schnell wie möglich aktualisiert. Leider gibt es noch Fehlerberichte aus sehr alten Versionen, so dass dies ein Versuch ist, die Sicherheit für jeden einzelnen Benutzer und die gesamte DIY-Community zu verbessern. Danke für dein Verständnis.
 
+Version 2.8.2
+================
+Erscheinungsdatum: 23.01.2021
+
+* Beachte bitte auch die `wichtigen Hinweise zur Version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#id1>`_ weiter unten.
+
+Änderungen
+----------------------
+* Stabilitätsverbesserungen
+* Weitere Anpassungen für Android 8+
+* verbesserte Symbole
+* Verbesserung für Smartwatches
+* NSClient-Korrekturen
+* Bolus-Berater funktioniert jetzt auch mit Pumpcontrol und NSClient
+
 Version 2.8.1.1
 ================
 Erscheinungsdatum: 12.01.2021
@@ -53,7 +68,7 @@ Wichtige neue Funktionen
 ----------------------
 * `Omnipod Eros Unterstützung <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda und besonderer Dank an @ps2 @itsmojo, alle anderen am Loop-Treiber für Omnipod Beteiligten, sowie @jlucasvt von GetRileyLink.org 
 * `Bolus-Berater <../Configuration/Preferences.html#bolus-berater>`_ & `Essens-Erinnerung <../Getting-Started/Screenshots.html#essens-erinnerung>`_ @MilosKozak 
-* `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-2-8>`_ @rICTx-T1D
+* `Neues Watchface <../Configuration/Watchfaces.html#neues-watchface-ab-version-2-8>`_ @rICTx-T1D
 * Verbesserung der Verbindung zur Dana RS @MilosKozak 
 * Bei Verwendung der nativen Dexcom App werden über mehr als 45 Minuten unveränderte CGM-Werte in SMB weiter berücksichtigt.
 * Neues `Erscheinungsbild für niedrige Bildschirmauflösungen <../Configuration/Preferences.html#erscheinungsbild>`_
@@ -71,9 +86,9 @@ Version 2.7.0
 ================
 Erscheinungsdatum: 24.09.2020
 
-**Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie** `hier <../Installing-AndroidAPS/update2_7.html>`_ **beschrieben.**
+**Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie** `hier <../Installing-AndroidAPS/update2_7.html>`__ **beschrieben.**
 
-Du musst `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`_ zumindest gestartet haben, um die `Automation <../Usage/Automation.html>`_ weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden. If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
+Du musst `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`_ zumindest gestartet haben, um die `Automation <../Usage/Automation.html>`_ weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden. Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung> starten kannst`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 Wichtige neue Funktionen
 ----------------------
@@ -81,7 +96,7 @@ Wichtige neue Funktionen
 * Module für Dana Pumpen @MilosKozak
 * `Neues Layout und Layoutauswahl <../Getting-Started/Screenshots.html>`_ @MilosKozak
 * Neues `Status Lights Layout <../Configuration/Preferences.html#statusanzeige>`_ @MilosKozak
-* `multiple graphs support <../Getting-Started/Screenshots.html#section-f-main-graph>`_ @MilosKozak
+* `Unterstützung mehrerer Diagramme <../Getting-Started/Screenshots.html#abschnitt-f-hauptgrafik>`_ @MilosKozak
 * `Profil Helfer <../Configuration/profilehelper.html>`_ @MilosKozak
 * Visualisierung der `dynamischen Ziel-Anpassung <../Getting-Started/Screenshots.html#anzeige-der -dynamischen-ziel-anpassung>`_ @Tornado-Tim
 * Neues `Layout für die Einstellungen <../Configuration/Preferences.html>`_ @MilosKozak
@@ -96,7 +111,7 @@ Wichtige neue Funktionen
 * Small Fehlerbehebungen für Insight Pumpen @TebbeUbben @MilosKozak
 * `Option "Standardsprache" <../Configuration/Preferences.html#allgemein>`_ @MilosKozak
 * Vector Icons @Philoul
-* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phone-androidaps>`_ @Tornado-Tim
+* `Neutrale Temps für Medtronic Pumpen <../Configuration/MedtronicPump.html#konfiguration-von-smartphone-androidaps>`_ @Tornado-Tim
 * Verbesserung Historie @MilosKozak
 * OpenAPS MA Algorithmus entfernt @Tornado-Tim
 * Oref0 Sensitivität entfernt @Tornado-Tim
@@ -123,7 +138,7 @@ Erscheinungsdatum: 03.05.2020
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
------
+------------------
 * Insight: Vibration bei Bolus deaktivieren (Nur Firmware Version 3.x)
 * Sonst identisch mit 2.6.1.2. Update ist optional. 
 
@@ -134,7 +149,7 @@ Erscheinungsdatum: 19.04.2020
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
------
+------------------
 * Fehlerbehebung Insight Service
 * Sonst identisch mit 2.6.1.1. Wenn Dich der Fehler nicht betrifft, musst Du nicht updaten.
 
@@ -145,7 +160,7 @@ Erscheinungsdatum: 06.04.2020
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
------
+------------------
 * Fehlerbehebung SMS CARBS Kommando in Zusammenhang mit der Combo Pumpe
 * Sonst identisch mit 2.6.1. Wenn Dich der Fehler nicht betrifft, musst Du nicht updaten.
 
@@ -156,7 +171,7 @@ Erscheinungsdatum: 21.03.2020
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
------
+------------------
 * Nur https:// in Nightscout-Client Einstellungen erlaubt
 * Fehlerbehebung `BGI <../Getting-Started/Glossary.html>`_ Anzeige auf der Smartwatch
 * Kleiner Anzeigefehler behoben
@@ -175,9 +190,9 @@ Erscheinungsdatum: 29.02.2020
 Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
------
+------------------
 * Kleinere Designänderungen (Startseite...)
-* Careportal Tab / Menü entfernt - weitere Details dazu `hier <../Usage/CPbefore26.html>`_
+* Careportal Tab / Menü entfernt - weitere Details dazu `hier <../Usage/CPbefore26.html>`__
 * Neues `Plugin Lokales Profil <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_
 
   * Im lokalen Profil können mehrere Profile gespeichert werden.
@@ -237,7 +252,7 @@ Wichtige neue Funktionen
 * RxJava2, Okhttp3, Retrofit support
 * Alte `Medtronic Pumpen <../Configuration/MedtronicPump.html>`_ werden unterstützt (RileyLink erforderlich)
 * Neues Plugin `Automation <../Usage/Automation.html>`_
-* Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings-overview>`_ from bolus wizard calculation
+* Möglichkeit, `nur einen Teil des vom Bolus-Rechner ermittelten Bolus <../Configuration/Preferences.html#erweiterte-einstellungen-ubersicht>`_ abzugeben.
 * Darstellung der Insulinaktivität
 * Anpassung der IOB-Vorhersagen auf Basis der Autosens Ergebnisse
 * Neue gepatchte Dexcom App (`2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
@@ -328,16 +343,16 @@ Einstellungen, die bei Umstellung von AMA zu SMB erforderlich sind
 * Der Standardwert von min_5m_carbimpact erhöht sich von 3 bei AMA auf 8 beim SMB. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
 * Bitte beachte beim Erstellen einer AndroidAPS 2.0 apk: Configuration on demand wird in der aktuellen Version des Android Gradle Plugins nicht unterstützt! Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschlägt, dann kannst du folgendes tun:
 
-   * Das Einstellungen-Fenster öffnen, indem du auf Datei > Einstellungen (auf dem Mac: Android Studio > Preferences) klickst.
-   * Klicke im linken Fensterbereich auf Build, Execution, Deployment > Compiler.
-   * Deaktiviere die "Configure on demand" Checkbox.
-   * Klicke Apply oder OK.
+  * Das Einstellungen-Fenster öffnen, indem du auf Datei > Einstellungen (auf dem Mac: Android Studio > Preferences) klickst.
+  * Klicke im linken Fensterbereich auf Build, Execution, Deployment > Compiler.
+  * Deaktiviere die "Configure on demand" Checkbox.
+  * Klicke Apply oder OK.
 
 Startseite
 --------------------------------------------------
 * Im oberen Menüband (Abschnitt A) kannst du durch langen Fingerdruck den Loop pausieren oder deaktivieren, die Pumpe trennen, das aktuelle Profil anzeigen und einen Profilwechsel machen, sowie temporäre Ziele (temp targets - TT) einstellen. Die temporären Ziele verwenden Standardwerte, die du in den Einstellungen festlegen kannst. Das neue Standard-Ziel “HypoTT” löst ein temporäres Ziel im höheren BZ-Bereich aus, damit der Loop nicht überreagiert nachdem du Korrektur-Kohlenhydrate gegessen hast.
 * Neue Behandlungs-Schaltfläche: die alte Behandlungs-Schaltfläche ist weiterhin verfügbar, aber standardmäßig deaktiviert. Du kannst jetzt selbst einstellen, welche Schaltflächen du auf dem Home-Screen haben willst. Neue Buttons für Insulin und Kohlenhydrate (inkl. `eCarbs/extended carbs <../Usage/Extended-Carbs.html>`_)
-* `Colored prediction lines <../Getting-Started/Screenshots.html#prediction-lines>`_
+* `Farbige Vorhersagelinien <../Getting-Started/Screenshots.html#vorhersage-kurven>`_
 * Option in den Dialogen für Insulin, Kohlenhydrate, Rechner und Füllen/Vorfüllen ein Feld für Bemerkungen, die zu Nightscout hochgeladen werden, anzuzeigen.
 * Überarbeiteter Füllen/Vorfüllen-Dialog. Möglichkeit, gleichzeitig Careportal-Einträge für Katheter- und Reservoirwechsel zu erstellen.
 
@@ -360,7 +375,7 @@ Verschiedenes
 * Überarbeitung des Konfigurations-Generators und des Objectives-Reiters. Beschreibungen hinzugefügt.
 * Neues App-Icon
 * Viele weitere Verbesserungen und Fehlerbehebungen.
-* Von Nightscout unabhängige Alarme wenn die Pumpe über längere Zeit nicht erreichbar ist (z.B.  schwache Pumpenbatterie) und bei verpassten CGM-Werte (siehe lokale Alarme in den Einstellungen).
+* Von Nightscout unabhängige Alarme wenn die Pumpe über längere Zeit nicht erreichbar ist (z.B.  schwache Pumpenbatterie) und bei verpassten CGM-Werte (siehe *lokale Alarme* in den Einstellungen).
 * Option, das Display immer an zu lassen.
 * Option, die Hinweise als Systemmeldungen anzuzeigen.
 * Advanced filtering (das erlaubt die Nutzung von “SMB immer an” und “6 Stunden nach dem Essen”) wird unterstützt mit der gepatchten Dexcom App (nicht mit der originalen Dexcom App!) oder xDrip mit dem G5 native mode als BZ-Quelle.
