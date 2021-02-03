@@ -3,7 +3,7 @@ Dexcom G6
 Сначала основное
 ==================================================
 
-* Следуйте общим рекомендациям по гигиене и настройкам мониторинга `здесь <../Hardware/GeneralCGMRecommendation.html>`_.
+* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`__.
 * Для Трансмиттеров G6, изготовленных после осени/конца 2018 года выберите одну из `последних ночных сборок xDrip+ <https://github.com/NightscoutFoundation/xDrip/releases>`_. У этих трансмиттеров новая прошивка и стабильная версия xDrip+ (2019/01/10) с ней не работает.
 
 Общие рекомендации по использованию G6 с системами ИПЖ
@@ -17,7 +17,7 @@ Dexcom G6
 "Предварительное замачивание" (установка сенсора намного раньше его старта в приложении) G6 с заводской калибровкой приведет к отклонениям в данных. Если вы все же делаете "предварительное погружение", то для получения лучших результатов вам, вероятно, придется калибровать сенсор.
 * Если вы не планируете отслеживать все возможные отклонения, то лучше вернуться к традиционному режиму калибровки и использовать систему как G5.
 
-Подробнее о деталях и причинах этих рекомендаций читайте `полную статью <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_опубликованную в Tim Street на`www.diabettech.com <http://www.diabettech.com>`_.
+Подробнее о деталях и причинах этих рекомендаций читайте полную статью <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>_опубликованную в Tim Street на`www.diabettech.com <http://www.diabettech.com>_.
 
 При использовании G6 с xdrip+
 ==================================================
@@ -27,18 +27,18 @@ Dexcom G6
 * If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 В конфигуратоге (настройки AndroidAPS) выберите xdrip+.
 * Настройте параметры в xDrip+ в соответствии со страницей настроек `xDrip+ <../Configuration/xdrip.html>`_
-Если AAPS не получает значения ГК, когда телефон находится в режиме авиаперелета пользуйтесь функцией Идентифицировать приемник в соответствии с описанием на странице настроек `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
 При пользовании G6 с помощью модифицированного приложения Dexcom
 ==================================================
 * Скачайте приложение из `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, и выберите версию в соответствии с предпочтениями (mg/dl или mmol/l, G6).
 
-   * Папка 2.4 для пользователей текущей версии, папка 2.3-только для устаревших AndroidAPS 2.3.
-   * Откройте https://play.google.com/store/search?q=dexcom%20g6 на вашем компьютере. 
-   * Click the link to the Dexcom G6 app on the search results page that is displayed.
-   * Region will be visible in URL.
-   
-   .. image:: ../images/DexcomG6regionURL.PNG
+  * Папка 2.4 для пользователей текущей версии, папка 2.3-только для устаревших AndroidAPS 2.3.
+  * Откройте https://play.google.com/store/search?q=dexcom%20g6 на вашем компьютере. 
+  * Click the link to the Dexcom G6 app on the search results page that is displayed.
+  * Region will be visible in URL.
+
+   .. изображение:../images/DexcomG6regionURL.PNG
      :alt: Регион в URL Dexcom G6
 
 * Uninstall the original Dexcom app.
@@ -84,12 +84,12 @@ Settings for xDrip+
   * Серийный номер передатчика начинается с 80 или 81: "Got data hh:mm" (напр. "Got data 19:04")
   * Серийный номер трансмиттера, который начинается с 8G: "Got glucose hh:mm" (напр. "Got glucose 19:04") или "Got no raw hh:mm" (напр. "Got now raw 19:04")
 
-.. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
+.. image:../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
 
 General troubleshoothing
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
 
 Установка нового трансмиттера на работающий сенсор
 --------------------------------------------------
