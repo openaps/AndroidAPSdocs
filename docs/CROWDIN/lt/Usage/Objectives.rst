@@ -13,7 +13,7 @@ Tikslas 1: vizualizacijos ir monitoringo nustatymai, bazės ir koeficientų anal
 * Pasirinkite tinkamą pompą Konfigūracijoje (pasirinkite Virtualią pompą, jei naudojate pompos modelį, kurio AndroidAPS sistema nepalaiko), kad būtų užtikrinta jos komunikacija su AndroidAPS.  
 * Jei naudojate DanaR pompą, įsitikinkite, kad laikėtės `DanaR insulino pompos <../Configuration/DanaR-Insulin-Pump.html>`_ instrukcijų, kad užtikrintumėte gerą ryšį tarp pompos ir AndroidAPS.
 * Vykdykite instrukcijas `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ puslapyje, kad įsitikintumėte, kad Nightscout gali priimti ir rodyti šiuos duomenis.
-* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#nsclient>`_.
+* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#nsclient>`__.
 
 *Jums gali tekti palaukti, kol bus perskaityta kita glikemijos reikšmė, kol AndroidAPS ją atpažins.*
 
@@ -42,7 +42,7 @@ Objective 3: Prove your knowledge
 Tikslas 4: pradėkite naudoti Atvirą ciklą
 ==================================================
 * Pasirinkite „Atviras ciklas“ arba Nustatymuose arba ilgai paspausdami mygtuką „Ciklas“ pagrindinio ekrano viršutiniame kairiajame kampe.
-* Norėdami pritaikyti AndroidAPS jūsų poreikiams, eikite į `Nustatymus <../Configuration/Preferences.html>`_.
+* Work through the `Preferences <../Configuration/Preferences.html>`__ to set up for you.
 * Patvirtinkite bent 20 laikinų valandinių bazių pasiūlymus per 7 dienas; įveskite juos pompoje ir AndroidAPS patvirtinkite, kad sutikote su pasiūlymais.  Patikrinkite, ar šie duomenys rodomi AndroidAPS ir Nightscout.
 * Jei reikia, suaktyvinkite `Laikinus tikslus <../Usage/temptarget.html>`_. Naudokite Hipo laikiną tikslą apsisaugoti, kad sistema pernelyg aktyviai nekoreguotų kylančios glikemijos po buvusios hipoglikemijos. 
 
@@ -71,7 +71,7 @@ Tikslas yra reikšmė, kuria grindžiami skaičiavimai, o ne reikšmė, kuria no
 
 Galbūt norėsite išbandyti koreguodami siauresnio tikslinio diapazono reikšmes (pvz., 1 mmol/l arba 20 mg/dl ar mažiau) ir pažiūrėkite, kaip keičiasi sistemos elgsena.  
 
-Pagrindinio ekrano grafike (žalios linijos), kuriame norite palaikyti gliukozės kiekį kraujyje, galite pakeisti tikslinę reikšmių diapazoną, pakeisdami reikšmes, esančias skyriuje `Nustatymai <../Configuration/Preferences.html>`_ > Rodymo diapazonas“.
+You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in `Preferences <../Configuration/Preferences.html>`__ > Range for Visualisation.
  
 .. image:: ../images/sign_stop.png
   :alt: Stop ženklas
@@ -89,7 +89,7 @@ Tikslas 6: pradėkite Uždaro ciklo (Closed Loop) režimą su pompos stabdymu es
   
 Uždaras ciklas nekoreguos aukštos glikemijos 6 tiksle, nes jį apriboja sustabdymas dėl žemos gliukozės. Todėl jūs turite patys koreguoti aukštą glikemiją!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* Pasirinkite Uždaras ciklas `Nustatymai <../Configuration/Preferences.html>`_ arba ilgai spausdami Atviro ciklo mygtuką viršutiniame kairiajame pagrindinio ekrano kampe.
+* Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`__ or by pressing and holding the Open Loop button in the top left of the home screen.
 * Nustatykite tikslinę glikemiją šiek tiek didesnę, nei įprastai, kad užtikrintumėte saugumą.
 * Galite analizuoti laikinų valandinių bazių aktyvumą stebėdami mėlyną tekstą pagrindiniame ekrane arba mėlyną sritį grafike.
 * Įsitikinkite, kad jūsų AndroidAPS nustatymai yra teisingi. Stebėkite jo veikimą per 5 dienas. Jei jums nereikia įsikišti rankiniu būdu ir koreguoti žemą glikemiją, nustatymai yra teisingi.  Jei vis tiek pasikartoja dažna ar sunki hipoglikemija, turėtumėte koreguoti IVT, valandinę bazę, JIF ar insulino ir angliavandenių santykio rodiklius.
