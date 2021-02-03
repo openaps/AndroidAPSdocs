@@ -7,7 +7,7 @@ Může se stát, že pro tytéž často se opakující události budete měnit t
 
 Např. když je glykémie příliš nízká, můžete si nechat automaticky nastavit vyšší dočasný cíl. Nebo když se budete nacházet ve fitness centru, automaticky se nastaví dočasný cíl. 
 
-Dříve než použijete Automatizaci, měli byste ovládat ruční nastavování `dočasných cílů <./temptarget.html>`_ nebo přepínání profilu. 
+Dříve než použijete Automatizaci, měli byste ovládat ruční nastavování dočasných cílů <./temptarget.html>`_ nebo přepínání profilu. 
 
 Make sure you really understand how automation works before setting up your first simple rule. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
 
@@ -88,14 +88,14 @@ Po přidání akce kliknutím na výchozí hodnoty **nezapomeňte změnit výcho
   :alt: Výchozí hodnoty automatizace vs. nastavené hodnoty
 
 Sort automation rules
------
+---------------------
 To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
 
 .. image:: ../images/Automation_Sort.png
   :alt: Sort automation rules
   
 Delete automation rules
------
+-----------------------
 To delete an automation rule click on trash icon.
 
 .. image:: ../images/Automation_Delete.png
