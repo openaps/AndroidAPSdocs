@@ -25,7 +25,7 @@ Important note : This does not work with the US version of the Freestyle 2 senso
 
 Другими индикаторами может быть логотип Linux penguin с тремя точками меню-> Info или шрифт модифицированного приложения. Эти критерии являются необязательными в зависимости от того, какой источник приложения вы выбрали.
 
-.. image:: ../images/LibreLinkPatchedCheck.png
+.. изображение:: ../images/LibreLinkPatchedCheck.
   :alt: Проверка шрифтов LibreLink
 
 Убедитесь, что активирована NFC, включите разрешение на память и геолокацию для модифицированного приложения, включите автоматическое время и часовой пояс и задайте хотя бы одно оповещение в этом приложении. 
@@ -42,7 +42,7 @@ Important note : This does not work with the US version of the Freestyle 2 senso
 
 Обратите внимание, что служба определения расположения является центральным параметром. Это не разрешение на доступ к геолокации в приложении, которое также должно быть активировано!
 
-.. image:: ../images/Libre2_AppPermissionsAndLocation.png
+.. изображение:: ../images/Libre2_AppPermissionsAndLocation.png
   :alt: LibrreLink-разрешение на доступ к памяти и расположению
   
   
@@ -97,10 +97,10 @@ However there is a variant of the patched app supporting LibreView with enabled 
 * If not already set up then download xDrip+ app and install one of the latest nightly builds from `here <https://github.com/NightscoutFoundation/xDrip/releases>`_.
 * В xDrip+ выберите "Libre2 (пропатченное приложение)" в качестве источника данных
 * При необходимости введите "BgReading:d, xdrip libr_receiver:v" в разделе Менее распространенные настройки -> Extra Logging Settings-> Extra tags for logging. Это позволит записывать сообщения об ошибках для устранения неисправностей.
-  В xdrip перейдите в настройки > совместимость программ >локальная трансляция данных и выберите Включить (ON).
-  В xdrip+ перейдите в настройки > совместимость программ > принимать назначения (Accept treatments) и выберите ВЫКЛ (OFF).
-* to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <https://androidaps.readthedocs.io/en/latest/EN/Configuration/xdrip.html#identify-receiver>`_
-  Если хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принимать калибровки (Accept calibrations) и выберите ВКЛ (ON).  Возможно вы также захотите рассмотреть варианты калибровки в настройках > менее распространенные параметры > дополнительные параметры калибровки.
+В xdrip перейдите в настройки > совместимость программ >локальная трансляция данных и выберите Включить (ON).
+В xdrip+ перейдите в настройки > совместимость программ > принимать назначения (Accept treatments) и выберите ВЫКЛ (OFF).
+* to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <../Configuration/xdrip.html#identify-receiver>`_
+Если хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принимать калибровки (Accept calibrations) и выберите ВКЛ (ON).  Возможно вы также захотите рассмотреть варианты калибровки в настройках > менее распространенные параметры > дополнительные параметры калибровки.
 
 .. image:: ../images/Libre2_Tags.png
   :alt: xDrip+ LibreLink журналы
@@ -119,7 +119,7 @@ Step 4: Configure AndroidAPS (for looping only)
 * В AndroidAPS перейдите в Config Builder > BG Source и проверьте 'xDrip+' 
 * If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
 
-До настоящего времени, используя Libre 2 в качестве источника данных ГК, невозможно активировать «Включить SMB всегда» и «Включить SMB после углеводов» в алгоритме SMB. Значения BG Libre 2 недостаточно ровные, чтобы использовать их безопасно. Подробнее см. в `Выравнивание данных мониторинга <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>`_.
+До настоящего времени, используя Libre 2 в качестве источника данных ГК, невозможно активировать «Включить SMB всегда» и «Включить SMB после углеводов» в алгоритме SMB. Значения BG Libre 2 недостаточно ровные, чтобы использовать их безопасно. Подробнее см. в `Выравнивание данных мониторинга <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>`.
 
 Опыт и устранение неполадок
 ==================================================
