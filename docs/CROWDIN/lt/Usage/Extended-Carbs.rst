@@ -8,7 +8,7 @@ iAV yra angliavandeniai, kurie pasiskirsto per kelias valandas. Įprastam maistu
 
 iAV neapsiriboja maistu, kuriame yra daug riebalų / baltymų: ši funkcija taip pat gali būti naudojama padėti kitose situacijose, kuriose yra padidėjęs cukraus kiekis kraujyje, pvz. vartojant kitus vaistus, pavyzdžiui, kortikosteroidus.
 
-Norėdami įvesti iAV, pagrindiniame ekrane esančiame dialogo lange mygtuku AV turite nustatyti trukmę, angliavandenių kiekį ir pasirinktinai laiko postūmį:
+To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift:
 
 .. image:: ../images/eCarbs_Dialog.png
   :alt: Įveskite angliavandenius
@@ -30,9 +30,9 @@ Ateities angliavandeniai Terapijos skirtuke žymimi tamsiai oranžine spalva:
 
 -----
 
-Rekomenduojama naudoti APS įskiepį OpenAPS SMB, įjungti SMB ir suaktyvinti nustatymą _Aktyvuoti SMB aktyviųjų angliavandenių metu.
+The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
 
-Pavyzdžiui, scenarijus picai: reikėtų duoti pradinį (dalinį) bolusą per boluso skaičiuoklę ir tada naudoti mygtuką AV, kad likusius angliavandenius būtų galima įsisavinti maždaug 4–6 valandas, pradedant po 1 ar 2 valandos. Žinoma, jūs turite patys išbandyti, kurios konkrečios reikšmės jums labiausiai tinka. Taip pat galite atsargiai pakoreguoti "SMB bazinės ribos minutėmis" reikšmę, kad nustatytumėte daugiau ar mažiau agresyvų algoritmą.
+Pavyzdžiui, scenarijus for a Pizza might be to give a (partial) bolus up front via the *calculator* and then use the *carbs* button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours. Žinoma, jūs turite patys išbandyti, kurios konkrečios reikšmės jums labiausiai tinka. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive.
 Laikantis mitybos, kuriojee mažai angliavandenių, ir daugiau riebalų bei baltymų, gali pakakti įvesti tik iAV be įprasto boluso maistui (plačiau apie tai aukščiau tinklaraščio įraše).
 
 Įvedus iAV, Priežiūros portale automatiškai sukuriamas užrašas, kad būtų lengviau patikrinti ir pakoreguoti įrašus.
@@ -49,7 +49,7 @@ Kai kurie žmonės vis dar prašė parinkties AAPS naudoti ištęstinius bolusus
 
 * Uždaras ciklas bus automatiškai sustabdytas ir ištęsto boluso metu pereis į atviro ciklo režimą. 
 * Pradiniame ekrane bus rodomas boluso insulino kiekis, likęs laikas ir visas laikas.
-* Ištęstas bolusas *negalimas* su Insight pompa, jei naudojama laikinos `valandinės bazės emuliacija <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_. 
+* Ištęstas bolusas *negalimas* su Insight pompa, jei naudojama laikinos valandinės bazės emuliacija <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_. 
 
 .. image:: ../images/ExtendedBolus2_6.png
   :alt: Ištęstas bolusas AAPS 2.6
