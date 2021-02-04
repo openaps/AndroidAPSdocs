@@ -10,11 +10,11 @@ Currently we have 3 sensitivity detection models:
 
 ### Sensitivity AAPS
 
-Sensitivity is calculated the same way like Oref1 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
+Sensitivity is calculated the same way like Oref1 but you can specify time to the past. Minimul absorbției de carbohidrați este calculată pe baza timpului maxim al absorbției de carbohidrați din preferințe
 
 ### Sensitivity WeightedAverage
 
-Sensitivity is calculated as a weighted average from deviations. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
+Sensibilitatea este calculată ca o medie ponderată pe baza variațiilor. You can specify time to the past. Variațiile mai recente valorează mai mult în calcule. Absorbția minimă de carbohidrați este calculată pe baza timpului maxim al absorbției de carbohidrați din preferințe. Acest algoritm este cel mai rapid în detectarea schimbărilor de sensibilitate.
 
 ### Sensitivity Oref1
 
