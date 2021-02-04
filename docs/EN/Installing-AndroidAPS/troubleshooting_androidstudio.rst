@@ -51,9 +51,9 @@ Error: buildOutput.apkData must not be null
 ==================================================
 Sometimes you might get an error message when building the apk saying
 
-  `Errors while building APK.`
-   
-  `Cause: buildOutput.apkData must not be null`
+  ``Errors while building APK.``
+
+  ``Cause: buildOutput.apkData must not be null``
 
 This is a known bug in Android Studio 3.5 and will probably not be fixed before Android Studio 3.6. Three options:
 
