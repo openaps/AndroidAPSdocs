@@ -300,7 +300,7 @@ Autosens
 Paramètres avancés (OpenAPS AMA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normalement, vous n'avez pas à modifier les paramètres dans cette boîte de dialogue !
-* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ and to understand what you are doing.
+* Si vous voulez quand même les changer, lisez en détail la `documentation OpenAPS <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ et assurez-vous de bien comprendre ce que vous faites.
 
 Paramètres OpenAPS SMB
 -----------------------------------------------------------
@@ -330,7 +330,7 @@ Notification glucides requis
 Paramètres avancés (OpenAPS SMB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normalement, vous n'avez pas à modifier les paramètres dans cette boîte de dialogue !
-* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ and to understand what you are doing.
+* Si vous voulez quand même les changer, lisez en détail la `documentation OpenAPS <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ et assurez-vous de bien comprendre ce que vous faites.
 
 Paramètres d’absorption
 ===========================================================
