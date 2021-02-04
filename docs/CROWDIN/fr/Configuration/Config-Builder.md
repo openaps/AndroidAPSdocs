@@ -248,7 +248,7 @@ Affiche l'état en cours de votre boucle et les boutons de la plupart des action
 
 L'option 'Garder l'écran allumé' forcera Android à garder l'écran allumé en permanence. C'est utile par ex. pour des présentations, etc. Mais cela consomme beaucoup d'énergie. Par conséquent, il est recommandé dans ce cas de connecter le smartphone à un chargeur.
 
-#### Buttons
+#### Boutons
 
 Définissez quels boutons sont affichés sur l'écran d'accueil.
 
