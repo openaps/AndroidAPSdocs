@@ -264,7 +264,7 @@ Depending on your settings in `config builder <../Configuration/Config-Builder.h
 OpenAPS AMA settings
 -----------------------------------------------------------
 * Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. 
-* More details about the settings and Autosens can be found in the `OpenAPS docs <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
+* More details about the settings and Autosens can be found in the `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
 
 Max U/h a Temp Basal can be set to
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
