@@ -118,7 +118,7 @@ Application non installée.
 * Assurez-vous d'avoir transféré le fichier “app-full-release.apk” sur votre téléphone.
 * Si vous avez le message "Application non installée" affiché sur votre téléphone, suivez les étapes suivantes :
   
-1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
+1. `Exporter les paramètres <../Usage/ExportImportSettings.html>`__ (dans la version AAPS déjà installée sur votre téléphone)
 2. Désinstaller AAPS sur votre téléphone.
 3. Activez le mode Avion & éteignez le bluetooth.
 4. Installer la nouvelle version (« app-full-release.apk »)
@@ -133,7 +133,7 @@ Rien ci-dessus n'a marché
 ==================================================
 Si aucun des conseils ci-dessus ne vous a aidé, vous pourriez envisager de repartir de zéro pour reconstruire l'application :
 
-1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
+1. `Exporter les paramètres <../Usage/ExportImportSettings.html>`__ (dans la version AAPS déjà installée sur votre téléphone)
 2. Ayez vos mots de passe pour la clé et le fichier de clés sous la main. Si vous avez oublié ces mots de passe vous pouvez essayer de les retrouver dans les fichiers du projet comme c'est décrit `ici <https://youtu.be/nS3wxnLgZOo>`__. Ou vous pouvez recréer un nouveau fichier de clés. 
 3. Construisez l'application à partir de zéro comme c'est décrit `ici <../Installing-AndroidAPS/Building-APK.html#telecharger-le-code-androidaps>`__.
 4. Quand vous avez construit l'APK avec succès, supprimez l'application existante sur votre téléphone, transférez le nouvel apk sur votre téléphone et installez le.
