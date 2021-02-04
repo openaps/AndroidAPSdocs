@@ -111,7 +111,7 @@ En cas de problème avec la feuille de calcul, merci d'envoyer un mail à `hardw
 
 xDrip+
 --------------------------------------------------
-Même si vous n'avez pas besoin d'avoir l'application xDrip+ en tant que Source GLY, vous pouvez toujours l'utiliser par ex. pour alarms or a good blood glucose display. Vous pouvez avoir autant d'alarmes que vous le souhaitez, spécifier l'heure à laquelle l'alarme doit être active, si elle peut remplacer le mode silencieux, etc. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`__. Veuillez noter que les documentations de cette application ne sont pas toujours à jour car leur progression est assez rapide.
+Même si vous n'avez pas besoin d'avoir l'application xDrip+ en tant que Source GLY, vous pouvez toujours l'utiliser par ex. pour les alertes ou pour un bon affichage des glycémies. Vous pouvez avoir autant d'alarmes que vous le souhaitez, spécifier l'heure à laquelle l'alarme doit être active, si elle peut remplacer le mode silencieux, etc. Certaines informations xDrip+ peuvent être trouvées `ici <../Configuration/xdrip.html>`__. Veuillez noter que les documentations de cette application ne sont pas toujours à jour car leur progression est assez rapide.
 
 Exemple de configuration
 ==================================================
