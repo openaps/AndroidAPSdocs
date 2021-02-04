@@ -8,7 +8,7 @@ Ce guide contient des informations de haut niveau sur la boucle fermée DIY et p
 
 Pour commencer à utiliser AndroidAPS, les étapes suivantes doivent être faites :
 
-* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../index.rst#getting-started).
+* Trouver une [pompe compatible](../Hardware/pumps.rst), un [équipement Android compatible](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), et une [source MGC compatible](../index.rst).
 * [Télécharger le code source AndroidAPS et compiler le logiciel](../Installing-AndroidAPS/Building-APK.md).
 * [Configurer le logiciel pour qu'il dialogue avec ses périphériques et définir les préférences et les paramètres de sécurité](../index.rst#configuration).
 
@@ -43,7 +43,7 @@ AndroidAPS est conçu pour suivre de façon transparente toutes les données d'e
 
 ### Exemples de prise de décision de l'algorithme AndroidAPS :
 
-AndroidAPS utilise les mêmes algorithmes et les mêmes jeux de fonctions que OpenAPS. L'algorithme fait des prédictions multiples (basées sur les paramètres et la situation) représentant différents scénarios de ce qui pourrait arriver à l'avenir. Dans Nightscout, ces lignes sont affichées sous la forme de "lignes violettes". AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes#overview-tab). Dans les logs, il décrira laquelle de ces prédictions et quelle période est à l'origine des actions nécessaires.
+AndroidAPS utilise les mêmes algorithmes et les mêmes jeux de fonctions que OpenAPS. L'algorithme fait des prédictions multiples (basées sur les paramètres et la situation) représentant différents scénarios de ce qui pourrait arriver à l'avenir. Dans Nightscout, ces lignes sont affichées sous la forme de "lignes violettes". AndroidAPS utilise différentes couleurs pour séparer ces [lignes de prédiction](../Installing-AndroidAPS/Releasenotes#onglet-aperçu-accueil). Dans les logs, il décrira laquelle de ces prédictions et quelle période est à l'origine des actions nécessaires.
 
 #### Voici des exemples de lignes de prédiction pourpres et de la façon dont elles peuvent varier :
 
