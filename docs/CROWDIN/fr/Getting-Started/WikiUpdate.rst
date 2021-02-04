@@ -1,7 +1,7 @@
 Mises à jour et modifications de la documentation
 **************************************************
 
-January 2021
+Janvier 2021
 ==================================================
 * `Onglet Actions <../Getting-Started/Screenshots.html#onglet-actions>`_ - plus de détails dans la page des 'Écrans AndroidAPS'
 * Dexcom G6 avec `Votre propre application Dexcom <../Hardware/DexcomG6.html#si-vous-utilisez-g6-avec-votre-propre-application-dexcom>`_
@@ -9,26 +9,26 @@ January 2021
 * `Objectifs <../Usage/Objectives.html#objectif-3-prouver-ses-connaissances>`_ - nouvelles questions
 * Autres `nouvelles fonctions d'AndroidAPS 2.8.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-8-0>`_
 
-December 2020
+Décembre 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - l'application patchée ne fonctionne pas avec les capteurs US
 * `Limites OpenAPS codées en dur <../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur>`_
 * Sony Smartwatch 3 `Installation manuelle du service Google Play <../Usage/SonySW3.html>`_
 
-October 2020
+Octobre 2020
 ==================================================
 * Accu-Chek Combo - Mise à jour `réglage duchangement d'heure <../Usage/Timezone-traveling.html#changements-d-heure>`_
 * Accu-Chek Insight - option `Utiliser toujours les valeurs ansolues du basal <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_
 * Journaux - plus de détails sur `l'emplacement du dossier <../Usage/Accessing-logfiles.html>`_
-* Omnipod Eros - status update
+* Omnipod Eros - mise à jour des États
 * `Commandes SMS - Synchronisation de l'heure <../Children/SMS-Commands.html>`_
 
-September 2020
+Septembre 2020
 ==================================================
 * Mise à jour majeure pour la nouvelle version AAPS 2.7
-* For details see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
+* Pour plus de détails, voir les `notes de version <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
 
-June 2020
+Juin 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - plus de détails sur l'application LibreLink patchée & l'utilisation des transmetteurs bluetooth
 * `Changement de fuseau horaire <../Usage/Timezone-traveling.html>`_ avec Libre 2
@@ -46,11 +46,11 @@ Avril 2020
 * `Antidater l'insulin <../Usage/CPbefore26.html#id1>`_ (par ex. injectée avec une seringue)
 * `La prise en charge Android 6 sera interrompue dans la prochaine version majeure <../Module/module.html#telephone>`_
 
-March 2020
+Mars 2020
 ==================================================
 * `Générer l'apk avec Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
 * `La DanaRS avec le firmware v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **ne peut actuellement pas être utilisée avec AndroidAPS !**
-* `Extended bolus and switch to open loop <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
+* `Bolus étendus uniquement pour les pompes Dana + Insight <../Usage/Extended-Carbs.html#bolus-etendus-et-passage-en-boucle-ouverte-uniquement-pour-les-pompesdana-et-insight>`_
 * `Mettre à jour l'apk avec Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
 
 Février 2020
