@@ -34,7 +34,7 @@ Advanced, [objective 10](../Usage/Objectives#objective-10-enabling-additional-or
 
 Si vous savez que vous voulez manger bientôt, vous pouvez activer cette Cible temp., donc il y aura déjà plus d'IA avant de manger. En particulier pour ceux qui ne font pas de pré-bolus, cela peut être une bonne alternative pour avoir une glycémie basse. Vous pouvez en savoir plus sur le mode "Repas imminent" dans l'article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) ou [ici](https://diyps.org/tag/eating-soon-mode/).
 
-Avancés, [Objectif 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) : Si vous utilisé OpenAPS SMB et que vous avez “Cible temp. basse abaisse la sensibilité”, AndroidAPS sera un peu plus aggressif. Requirement is a Temp-Target less than 100mg/dl or 5.5mmol/l for this option.
+Avancés, [Objectif 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) : Si vous utilisé OpenAPS SMB et que vous avez “Cible temp. basse abaisse la sensibilité”, AndroidAPS sera un peu plus aggressif. Le pré-requis est d'avoir une Cible temp. inférieure à 100 mg/dl ou 5.5 mmol/l pour cette option.
 
 ## Cible temporaire Personnalisé
 
