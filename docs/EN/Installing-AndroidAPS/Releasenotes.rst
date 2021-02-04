@@ -172,7 +172,7 @@ Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or ne
 
 Major new features
 ------------------
-* Allow to enter only https:// in NSClient settings
+* Allow to enter only ``https://`` in NSClient settings
 * Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
 * Fixed small UI bugs
 * Fixed Insight crashes

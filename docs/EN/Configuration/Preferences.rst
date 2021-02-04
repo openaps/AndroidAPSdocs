@@ -20,6 +20,9 @@ Preferences
   .. image:: ../images/Pref2021_Filter.png
     :alt: Preferences filter
 
+.. contents:: 
+   :backlinks: entry
+   :depth: 2
 
 General
 ===========================================================

@@ -218,7 +218,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* To give a certain amount of insulin without using [bolus calculator](../Getting-Started/Screenshots#bolus-wizard).
+* To give a certain amount of insulin without using [bolus calculator](#bolus-wizard).
 * By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences#default-temp-targets).
 * If you do not want to bolus through pump but record insulin amount (i.e. insulin given by syringe) check the corresponding box.
 
@@ -234,7 +234,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#ns-client).
 
 #### Calculator
-* See Bolus Wizard [section below](../Configuration/Screenhots#bolus-wizard)
+* See Bolus Wizard [section below](#bolus-wizard)
 
 #### Calibrations
 * Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.

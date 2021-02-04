@@ -131,7 +131,7 @@
  <td><strong>FGM</strong></td>
  <td>flash glucose monitor (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - BG source</a></td>
+ <td><a href="../Configuration/BG-Source.html">Wiki - BG source</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
