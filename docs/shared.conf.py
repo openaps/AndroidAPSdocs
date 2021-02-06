@@ -132,13 +132,6 @@ todo_include_todos = True
 # alabaster
 theme_github_user = 'openAPS'
 theme_github_repo = 'AndroidAPSdocs'
-html_theme_options = {
-  'show_related': True,
-  'github_user': theme_github_user,
-  'github_repo': theme_github_repo,
-  'prev_next_buttons_location': None,
-  'navigation_depth': 6,
-}
 
 """
 html_theme = 'default'
@@ -384,4 +377,3 @@ def setup(app):
             'enable_eval_rst': True,
             }, True)
     app.add_transform(AutoStructify)
-

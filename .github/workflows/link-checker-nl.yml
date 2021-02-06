@@ -1,0 +1,58 @@
+name: Link Checker - nl
+
+on:
+  push:
+    branches:
+      - master
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.7"
+
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
+
+      - name: Install RTD required packages
+        run: python -m pip install --exists-action=w --no-cache-dir -r requirements.rtd.txt
+
+      - name: Install required packages
+        run: python -m pip install --exists-action=w --no-cache-dir -r requirements.txt
+
+      - name: Show conf
+        run: |
+          cat docs/CROWDIN/nl/conf.py
+
+      - name: Build
+        run: |
+          cd docs/CROWDIN/nl/
+          sphinx-build -T -E -v -q -b html -d _build/doctrees . _build/html
+
+        # See https://www.sphinx-doc.org/en/master/man/sphinx-build.html
+        # sphinx-build [options] <sourcedir> <outputdir>
+        # -T Display the full traceback when an unhandled exception occurs. Otherwise, only a summary is displayed and the traceback information is saved to a file for further analysis.
+        # -E Don’t use a saved environment (the structure caching all cross-references), but rebuild it completely. The default is to only read and parse source files that are new or have changed since the last run.
+        # -n Run in nit-picky mode. Currently, this generates warnings for all missing references. See the config value nitpick_ignore for a way to exclude some references as “known missing”.
+        # -q Do not output anything on standard output, only write warnings and errors to standard error.
+        # -W Turn warnings into errors. This means that the build stops at the first warning and sphinx-build exits with exit status 1.
+        # -v Increase verbosity (loglevel). This option can be given up to three times to get more debug logging output.
+        # -b <buildername>
+        # -D <setting=value> Override a configuration value set in the conf.py file.
+        # --keep-going With -W option, keep going processing when getting warnings to the end of build, and sphinx-build exits with exit status 1. New in version 1.8.
+      
+      - name: Link check
+        uses: ruzickap/action-my-broken-link-checker@v2
+        with:
+          url: http://localhost:8000
+          pages_path: docs/CROWDIN/nl/_build/html
+          cmd_params: --skip-tls-verification -t=30 --color=always -e=.*poctechcorp.* -e=.*wearos.* -e=.*github.* -e=.*herokuapp.* -e=.*tomato.* -e=.*sooil.* -e=.*twitter.* -e.*discord.*
+          run_timeout: 600  # maximum amount of time to run muffet (default is set to 300 seconds)
