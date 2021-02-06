@@ -231,7 +231,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Time offset: When will you / have you been eaten carbs (in minutes).
 * Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.rst)
 * You can use the buttons to quickly increase carb amount.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#ns-client).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
 
 #### Calculator
 * See Bolus Wizard [section below](#bolus-wizard)
@@ -274,7 +274,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 ### Section K
 * Shows the calculated bolus. 
 * If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#ns-client).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
 
 ### Section L
 * Details of wizard's bolus calculation.
