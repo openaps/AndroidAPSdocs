@@ -51,9 +51,9 @@ Erreur : buildOutput.apkData must not be null
 ==================================================
 Parfois, vous pouvez obtenir un message d'erreur lors de la compilation de l'apk disant
 
-  `Errors while building APK.`
-   
-  `Cause: buildOutput.apkData must not be null`
+  ``Errors while building APK.``
+
+  ``Cause: buildOutput.apkData must not be null``
 
 Il s'agit d'un bug connu dans Android Studio 3.5 et qui ne sera probablement pas corrigé avant Android Studio 3.6. Trois options :
 
@@ -127,7 +127,7 @@ Application non installée.
 
 Application installée mais ancienne version
 ==================================================
-Si vous avez compilé l'application, que vous l'avez transferrée dans votre téléphone et installée avec succès mais que le numéro de version est resté le même, vous avez peut-être omis de `mettre à jour votre copie locale <../Update-to-new-version.html#mettez-a-jour-votre-copie-locale>`_.
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Installing-AndroidAPS/Update-to-new-version.html#update-your-local-copy>`_.
 
 Rien ci-dessus n'a marché
 ==================================================
