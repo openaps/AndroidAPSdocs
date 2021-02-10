@@ -17,7 +17,7 @@ Ce qui est clair, c’est que l’utilisation du G6 est peut-être un peu plus c
 * La pré-installation du G6 avec l'étalonnage usine peut entraîner des variations dans les résultats. Si vous faites une pré-installation, alors pour obtenir les meilleurs résultats, vous devrez probablement calibrer le capteur.
 * Si vous n'êtes pas attentif aux changements qui peuvent avoir lieu, il peut être préférable de revenir à mode "non calibré en usine" et utiliser le système comme un G5.
 
-Pour en savoir plus sur les détails et les raisons de ces recommandations, consultez `l'article complet <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ publié par Tim Street sur `www.diabettech.com <http://www.diabettech.com>`_.
+To learn more about the details and reasons for these recommendations read the `complete article <https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ published by Tim Street at `www.diabettech.com <https://www.diabettech.com>`_.
 
 Si vous utilisez le G6 avec xdrip+
 ==================================================
@@ -26,8 +26,8 @@ Si vous utilisez le G6 avec xdrip+
 * Si vous avez besoin de clarté et que vous voulez profiter des alertes xDrip+, utilisez `l'application Dexcom patchée <../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee>`_ avec la diffusion locale vers xDrip+.
 * Si vous ne l'avez pas déjà configuré, téléchargez `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ et suivez les instructions sur nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Sélectionnez xDrip dans le Générateur de configuration (dans AndroidAPS).
-* Réglez les paramètres dans xDrip+ comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_
-* Si AAPS ne reçoit pas de GLY quand le téléphone est en mode avion, utilisez "Identify receiver" comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_.
+* Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`__.
 
 Si vous utilisez le G6 avec l'application Dexcom patchée
 ==================================================
@@ -38,8 +38,8 @@ Si vous utilisez le G6 avec l'application Dexcom patchée
   * Cliquez sur le lien vers l'application Dexcom G6 sur la page de résultats de recherche qui s'affiche.
   * La région sera visible dans l'URL.
 
-   .. image:: ../images/DexcomG6regionURL.PNG
-     :alt: Region in Dexcom G6 URL
+  .. image:: ../images/DexcomG6regionURL.PNG
+    :alt: Region in Dexcom G6 URL
 
 * Désinstallez l'application Dexcom d'origine.
 * Installez l'apk téléchargé
