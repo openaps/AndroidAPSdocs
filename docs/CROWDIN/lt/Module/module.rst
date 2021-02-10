@@ -1,6 +1,6 @@
 Komponentų Apžvalga 
 **************************************************
-AndroidAPS nėra tik (pačių sukurta) programa, tai yra vienas iš skirtingų jūsų uždarosios sistemos modulių. Prieš priimdami sprendimus dėl atskirų komponentų, turėtumėte peržiūrėti skiltį `Komponentų sąranka <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_.
+AndroidAPS nėra tik (pačių sukurta) programa, tai yra vienas iš skirtingų jūsų uždarosios sistemos modulių. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
    
 .. image:: ../images/modules.png
   :alt: Komponentų apžvalga
@@ -128,7 +128,7 @@ Ką daryti laukiant modulių
 ==================================================
 Kartais užtrunka šiek tiek laiko, kol bus gauti visi uždaro ciklo moduliai. Nesijaudinkite, laukdami galite padaryti daug. BŪTINA patikrinti ir (jei reikia) pritaikyti bazę, insulino ir angliavandenių santykį (IA), jautrumo insulinui faktorių (JIF) ir kt. Ir galbūt atviras ciklas gali būti geras būdas išbandyti sistemą ir susipažinti su AndroidAPS. Šiame režime AndroidAPS teikia rekomendacijas, kurių galite laikytis rankiniu būdu.
 
-Galite tęsti darbą skaitydami <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html> dokumentaciją, susisiekti su kitais uždaro ciklo naudotojais, skaityti kitų vartotojų praktikas. Tačiau būkite atsargūs, ne visos vartotojo praktikos yra teisingos ar tinkamos jūsų atveju.
+You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <../Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
 **Atlikta?**
 Jei turite visus AAPS komponentus kartu arba bent jau pakankamai, kad pradėtumėte nuo atviro ciklo, pirmiausia turėtumėte perskaityti `Tikslų skiltį <../Usage/Objectives.html>`_ prieš pradedant naują Tikslą bei nustatyti savo 
