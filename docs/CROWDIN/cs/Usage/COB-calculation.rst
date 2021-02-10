@@ -15,7 +15,7 @@ Nestrávené sacharidy jsou odříznuty po určené době
 AAPS, Vážený průměr
 --------------------------------------------------
 
-absorpce je vypočtena tak, aby bylo "COB == 0" po stanoveném čase
+absorption is calculated to have ``COB == 0`` after specified time
 
 .. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, Vážený průměr
