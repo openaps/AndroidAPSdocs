@@ -17,7 +17,7 @@ Použití G6 může být o něco složitější, než se na první pohled zdá. 
 * Nastřelení senzoru G6 předem v kombinaci s tovární kalibrací pravděpodobně povede k odchylkám ve výsledcích měření. Jestliže nastřelujete senzor s předstihem, pak jej pravděpodobně v zájmu co nejlepších výsledků bude nutné zkalibrovat.
 * Jestliže nechcete sledovat změny, ke kterým může docházet, možná bude lepší přepnout na režim bez továrních kalibrací a používat systém jako G5.
 
-Chcete-li se dozvědět další informace o podrobnostech a důvodech pro tato doporučení, přečtěte si `kompletní článek <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ který sepsal Tim Street na adrese `www.diabettech.com <http://www.diabettech.com>`_.
+To learn more about the details and reasons for these recommendations read the `complete article <https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ published by Tim Street at `www.diabettech.com <https://www.diabettech.com>`_.
 
 Používáte-li G6 s aplikací xDrip+
 ==================================================
@@ -26,8 +26,8 @@ Používáte-li G6 s aplikací xDrip+
 * If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
 * If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
-* Nastavte xDrip+ podle popisu konfigurace na stránce <../Configuration/xdrip.html>`_
-* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`__.
 
 Používáte-li G6 s upravenou Dexcom aplikací
 ==================================================
@@ -39,8 +39,8 @@ kde si podle používaných jednotek glykémie vyberte odpovídající G6 verzi 
   * Click the link to the Dexcom G6 app on the search results page that is displayed.
   * Region will be visible in URL.
 
-   .. image:: ../images/DexcomG6regionURL.PNG
-     :alt: Region v URL adrese Dexcom G6
+  .. image:: ../images/DexcomG6regionURL.PNG
+    :alt: Region v URL adrese Dexcom G6
 
 * Uninstall the original Dexcom app.
 * Nainstalujte stažený apk
