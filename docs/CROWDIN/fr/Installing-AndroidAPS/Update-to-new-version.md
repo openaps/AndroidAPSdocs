@@ -20,7 +20,7 @@ Veuillez sauter ce paragraphe si vous mettez à jour AAPS pour la première fois
 
 Si vous avez déjà mis à jour AAPS dans les versions précédentes et que vous utilisez un PC, vous pouvez faire une mise à jour en quatre étapes simples :
 
-1. [Exportez vos paramètres](../Usage/ExportImportSettings.html#comment-exporter-les-parametres) à partir de la version AAPS existante sur votre téléphone pour être à jour côté sauvegardes
+1. [Export your settings](../Usage/ExportImportSettings#export-settings) from the existing AAPS version on your phone to be on the save side
 2. [Mettez à jour la copie locale](../Installing-AndroidAPS/Update-to-new-version.html#mettez-a-jour-votre-copie-locale) (VCS -> Git -> Pull)
 3. [Générez un APK signé](../Installing-AndroidAPS/Update-to-new-version.html#generer-un-apk-signe) (Sélectionnez 'app' au lieu de 'wear' au passage !)
 4. En fonction de votre [source de glycémie](../Configuration/BG-Source.rst) vérifiez bien [identify receiver](../Configuration/xdrip.html#identifier-le-recepteur) dans xDrip+ ou utilisez l'application Dexcom patchée à partir du [dossier 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
