@@ -226,7 +226,7 @@ Bovenstaande voorspellingslijnen rekenen met verschillende (extreme) scenario's.
 
 ![Insuline knop](../images/Home2020_ButtonInsulin.png)
 
-* Om een bepaalde hoeveelheid insuline te geven zonder gebruik te maken van de [bolus calculator](../Getting-Started/Screenhots#bolus-calculator).
+* To give a certain amount of insulin without using [bolus calculator](#bolus-wizard).
 * Ook kun je dmv een vinkje in één moeite jouw [eet binnenkort tijdelijk streefdoel](../Configuration/Preferences#standaard-tijdelijke-streefdoelen) aanzetten.
 * Als je niet wilt dat de pomp insuline gaat afgeven (omdat je met de pen bijspuit) kun je dit dmv een vinkje aangeven in dit scherm. Zo kun je AAPS laten weten dat je insuline hebt genomen.
 
@@ -239,11 +239,11 @@ Bovenstaande voorspellingslijnen rekenen met verschillende (extreme) scenario's.
 * Tijdverschuiving: Wanneer ga je/heb je de koolhydraten gegeten (in minuten).
 * Tijdsuur: Te gebruiken voor ["vertraagde koolhydraten"](../Usage/Extended-Carbs.rst) (eCarbs)
 * Gebruik de knoppen om het aantal koolhydraten snel in te voeren. Typen in het veld kan ook.
-* Notities zullen worden geüpload naar Nightscout - afhankelijk van je instellingen voor [NS client](../Configuration/Preferences#ns-client).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
 
 #### Boluscalculator
 
-* Zie [details hieronder](../Configuration/Screenhots#bolus-calculator)
+* See Bolus Wizard [section below](#bolus-wizard)
 
 #### Kalibraties
 
@@ -290,7 +290,7 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 
 * Toont de berekende bolus. 
 * Wanneer je al meer insuline aan boord (IOB) hebt dan de berekende bolus, dan zal hier alleen de ontbrekende hoeveelheid koolhydraten te zien zijn.
-* Notities zullen worden geüpload naar Nightscout - afhankelijk van je instellingen voor [NS client](../Configuration/Preferences#ns-client).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
 
 ### Sectie L
 
@@ -322,11 +322,11 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 * Knop [profiel wissel](../Usage/Profiles#profiel-wissel) is een alternatief voor het indrukken van je [huidige profiel](../Getting-Started/Screenshots#huidig-profiel) op het Overzicht scherm.
 * Knop [tijdelijk streefdoel](../Usage/temptarget) is een alternatief voor het indrukken van je [huidige streefdoel](../Getting-Started/Screenshots#streefdoel) op het Overzicht scherm.
 * Knop voor het starten of annuleren van een tijdelijke basaalstand. NB: De knop verandert van "TIJD. BASAAL" naar "ANNULEER x%" wanneer een tijdelijke basaalstand is ingesteld.
-* Hoewel [vertraagde bolussen](../Usage/Extended-Carbs#id1) eigenlijk niet geschikt zijn om te gebruiken in een closed loop, hebben sommige mensen toch aangegeven dat ze de vertraagde bolus functie zouden willen gebruiken.
+* Even though [extended boluses](../Usage/Extended-Carbs#extended boluses) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
    
    * Deze optie is alleen beschikbaar voor Dana RS en Insight pompen. 
    * De closed loop zal automatisch worden onderbroken en er wordt overgeschakeld naar open loop modus nadat de vertraagde bolus functie is geactiveerd.
-   * Zorg ervoor dat je de [details](../Usage/Extended-Carbs#id1) leest voordat je deze optie gebruikt.
+   * Make sure to read the [details](../Usage/Extended-Carbs#extended boluses) before using this option.
 
 ### Careportal - sectie N
 
@@ -382,9 +382,9 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 
 Meer uitleg over de verschillende soorten insuline, hun werkingsprofielen en waarom dit allemaal belangrijk is, staat in dit artikel: [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
 
-En meer hierover staat in dit uitstekende blog: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-En nog meer in: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Pompstatus
 
@@ -447,7 +447,7 @@ De Behandelingen tab kan worden gebruikt om foutieve koolhydraat-invoer te corri
 Geschiedenis van de volgende behandelingen:
 
 * Bolus & koolhydraten-> met optie voor het [verwijderen van items](../Getting-Started/Screenshots#koolhydraten-correctie) om foutieve informatie weg te halen
-* [Vertraagde bolus](../Usage/Extended-Carbs#id1)
+* [Vertraagde bolus](../Usage/Extended-Carbs#extended-bolus)
 * Tijdelijke basaalstand (Temporary Basal Rate)
 * [Tijdelijk streefdoel](../Usage/temptarget.md)
 * [Profiel wissel](../Usage/Profiles.md)
