@@ -15,7 +15,7 @@ Nicht absorbierte Kohlenhydrate werden nach der eingestellten Zeit verworfen, we
 AAPS, WeightedAverage
 --------------------------------------------------
 
-Die Kohlenhydratresorption wird auf Basis der angegebenen Zeit berechnet, so dass nach deren Ablauf  `COB = 0` gilt.
+Die Kohlenhydratresorption wird auf Basis der angegebenen Zeit berechnet, so dass nach deren Ablauf  ``COB == 0`` gilt.
 
 .. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, WeightedAverage
