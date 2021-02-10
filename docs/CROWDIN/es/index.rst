@@ -18,8 +18,11 @@ Para más detalles, por favor lee aquí.
    :maxdepth: 1
    :glob:
    :caption: Change language
-   Change language <changelanguage.rst>
-   
+
+   Change language <./changelanguage.rst>
+
+.. _getting-started:
+
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -28,7 +31,10 @@ Para más detalles, por favor lee aquí.
    La seguridad primero <./Getting-Started/Safety-first>
    Qué es un sistema de lazo cerrado <./Getting-Started/ClosedLoop.rst>
    ¿Qué es un sistema de lazo cerrado con AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Pump choices <./Getting-Started/Pump-Choices.md>
    Actualizaciones y cambios en documentos <./Getting-Started/WikiUpdate.rst>
+
+.. _what-do-i-need:
 
 .. toctree::
    :maxdepth: 1
@@ -51,6 +57,8 @@ Para más detalles, por favor lee aquí.
    Notas de la versión <./Instalación-AndroidAPS/Releasenotes.rst>
    La rama de desarrollo <./Installing-AndroidAPS/Dev_branch.md>
 
+.. _component-setup:
+
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -62,6 +70,8 @@ Para más detalles, por favor lee aquí.
    Teléfonos <./Hardware/Phoneconfig.rst>
    Configuración de Nightscout <./Installing-AndroidAPS/Nightscout.md>
    Relojes <./Hardware/Smartwatch.rst>
+
+.. _configuration:
 
 .. toctree::
    :maxdepth: 1
@@ -99,6 +109,7 @@ Para más detalles, por favor lee aquí.
    Acceder a los logs <./Usage/Accessing-logfiles.md>
    Sugerencias Combo Accu-Chek para el uso básico <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Exportar/Importar valores <./Usage/ExportImportSettings.rst>
+   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
@@ -115,6 +126,7 @@ Para más detalles, por favor lee aquí.
    :caption: Troubleshooting
 
    Resolución de problemas <./Usage/troubleshooting.rst>
+   Nightscout client <./Usage/Troubleshooting-NSClient.md>
 
 .. toctree::
    :maxdepth: 1
@@ -166,4 +178,4 @@ Para más detalles, por favor lee aquí.
 
 	* Todos los productos y nombres de compañias, marcas, servicios, marcas registradas y servicios registrados son propiedad de sus respectivos tenedores. Su uso aquí es informativo y no implica afiliación o pago por ello.
 
-	Tenga en cuenta que este proyecto no tiene ninguna relación con y no está respaldado por: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ or `Medtronic <http://www.medtronic.com/>`_
+	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_
