@@ -18,8 +18,11 @@ Norėdami gauti daugiau informacijos, prašome perskaityti čia.
    :maxdepth: 1
    :glob:
    :caption: Change language
-   Change language <changelanguage.rst>
-   
+
+   Change language <./changelanguage.rst>
+
+.. _getting-started:
+
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -28,7 +31,10 @@ Norėdami gauti daugiau informacijos, prašome perskaityti čia.
    Saugumas pirmiausia <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Pump choices <./Getting-Started/Pump-Choices.md>
    Dokumentacijos atnaujinimai ir pakeitimai <./Getting-Started/WikiUpdate.rst>
+
+.. _what-do-i-need:
 
 .. toctree::
    :maxdepth: 1
@@ -51,6 +57,8 @@ Norėdami gauti daugiau informacijos, prašome perskaityti čia.
    Atnaujinimų pastabos <./Installing-AndroidAPS/Releasenotes.rst>
    Kūrėjo versija <./Installing-AndroidAPS/Dev_branch.md>
 
+.. _component-setup:
+
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -62,6 +70,8 @@ Norėdami gauti daugiau informacijos, prašome perskaityti čia.
    Telefonai <./Hardware/Phoneconfig.rst>
    Nightscout nustatymas <./Installing-AndroidAPS/Nightscout.md>
    Išmanieji laikrodžiai <./Hardware/Smartwatch.rst>
+
+.. _configuration:
 
 .. toctree::
    :maxdepth: 1
@@ -99,6 +109,7 @@ Norėdami gauti daugiau informacijos, prašome perskaityti čia.
    Žurnalų pasiekimas <./Usage/Accessing-logfiles.md>
    Accu-Chek Combo patarimai bendram naudojimui <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Eksportuoti / Importuoti Parametrus <./Usage/ExportImportSettings.rst>
+   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
@@ -115,6 +126,7 @@ Norėdami gauti daugiau informacijos, prašome perskaityti čia.
    :caption: Troubleshooting
 
    Trikčių šalinimas <./Usage/troubleshooting.rst>
+   Nightscout client <./Usage/Troubleshooting-NSClient.md>
 
 .. toctree::
    :maxdepth: 1
@@ -166,4 +178,4 @@ Norėdami gauti daugiau informacijos, prašome perskaityti čia.
 
 	* Visi gaminių ir gamintojų pavadinimai, prekės ženklai, paslaugų ženklai, prekių ženklai ir registruoti paslaugų ženklai yra atitinkamų savininkų nuosavybė ir naudojami tik informaciniais tikslais, o ne reklamai ar rinkodarai. Jie naudojami tik informaciniais tikslais ir nereiškia, kad AAPS priklauso jiems ir kad jie yra palaikomi.
 
-	Atkreipkite dėmesį: Šis projektas nėra susijęs su ir jam nėra pritarę: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ ar `Medtronic <http://www.medtronic.com/>`_
+	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_
