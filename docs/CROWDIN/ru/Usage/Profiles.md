@@ -80,4 +80,4 @@ To do a profile switch long-press on the name of your profile ("Tuned 03/11" in 
 ### Слишком короткое время действия инсулина "DIA 3hr"
 
 * Сообщение об ошибке появится, если длительность действия инсулина в вашем профиле указана со значением, которое AndroidAPS не признает точным. 
-* Прочитайте о [ выборе правильного времени действия инсулина DIA ](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) и отредактируйте его в своем профиле, затем выполните [ Profile Switch ](../Usage/Profiles), чтобы продолжить.
+* Read about [selecting the right DIA](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles) to continue.
