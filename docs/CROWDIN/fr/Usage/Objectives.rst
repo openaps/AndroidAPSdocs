@@ -23,16 +23,16 @@ Objectif 2 : Apprendre comment contrôler AndroidAPS
 * Cliquez sur le texte orange "Pas encore terminé" pour accéder à la liste des tâches.
 * Des liens seront fournis pour vous guider si vous n'êtes pas encore familiarisé avec une action spécifique.
 
-   .. image:: ../images/Objective2_V2_5.png
-     :alt: Screenshot objective 2
+  .. image:: ../images/Objective2_V2_5.png
+    :alt: Screenshot objective 2
 
 Objectif 3 : Prouver ses connaissances
 ==================================================
 * Passez un examen à choix multiples pour tester vos connaissances d'AndroidAPS.
 * Cliquez sur le texte orange "Pas encore terminé" pour accéder à la page avec la question et répondre aux options.
 
-   .. image:: ../images/Objective3_V2_5.png
-     :alt: Screenshot objective 3
+  .. image:: ../images/Objective3_V2_5.png
+    :alt: Screenshot objective 3
 
 * Des liens sont fournis pour vous guider si vous n'êtes pas certain d'avoir les bonnes réponses.
 * Les questions pour l'objectif 3 ont été entièrement réécrites par des locuteurs natifs depuis AAPS 2.8. Les nouvelles questions couvrent les mêmes sujets de base et quelques nouveaux sujets.
@@ -52,8 +52,8 @@ Réduire le nombre de notifications
 * Vous pouvez même augmenter encore la limite supérieure (ou désactiver la Boucle ouverte) pendant la nuit. 
 * Dans les Préférences, vous pouvez définir un pourcentage minimum pour suggérer un changement de débit de basal.
 
-   .. image:: ../images/OpenLoop_MinimalRequestChange2.png
-     :alt: Boucle ouverte Changement minimum
+  .. image:: ../images/OpenLoop_MinimalRequestChange2.png
+    :alt: Boucle ouverte Changement minimum
      
 * De plus, vous n'avez pas besoin d'agir toutes les 5 minutes sur toutes les suggestions...
 
@@ -96,8 +96,8 @@ La boucle fermée ne corrigera pas les valeurs de glycémies élevées dans l'ob
 * Vous n'avez pas à changer vos paramètres. Au cours de l'objectif 6, le paramètre maxIA est automatiquement défini sur zéro. Le remplacement par zéro de ce paramètre sera annulé lorsque vous serez à l'objectif 7.
 * Le système remplacera vos paramètres maxIA par zéro, ce qui signifie que si la glycémie diminue, il peut réduire le débit de base pour vous, mais si la glycémie augmente, il n'augmentera le débit de base que si l'IA est négative (liée à un Arrêt Glycémie Basse précédent), sinon les débits de base resteront les mêmes que ceux de votre profil sélectionné.  
 
-   .. image:: ../images/Objective6_negIOB.png
-     :alt: Exemple IA négative
+  .. image:: ../images/Objective6_negIOB.png
+    :alt: Exemple IA négative
 
 * Si votre IA basale est négative (voir copie d'écran ci-dessus) un DBT > 100% peut également être diffusé à l'objectif 6.
 * Vous pouvez subir temporairement des pics de glycémie à la suite d'hypos sans pouvoir augmenter le débit de base sur le rebond.
@@ -108,8 +108,8 @@ Objectif 7 : Réglage de la Boucle Fermée, augmentation de l'IA (Insuline Activ
 
   Cette recommandation doit être considérée comme un point de départ. Si vous paramétrez 3 x et que vous constatez des variations dures et rapides, alors diminuez cette valeur. Si vous êtes très résistant, augmentez la un peu à la fois.
 
-   .. image:: ../images/MaxDailyBasal2.png
-     :alt: max daily basal
+  .. image:: ../images/MaxDailyBasal2.png
+    :alt: max daily basal
 
 * Une fois confiant sur la quantité d'IA qui convient à votre profil de boucle, réduisez ensuite vos cibles jusqu'au niveau souhaité.
 
@@ -119,13 +119,13 @@ Objectif 8 : Ajustement des débits Basal et des ratios si nécessaire, puis act
 * Vous pouvez utiliser `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ pour vérifier que votre basale reste précise ou faire un test de basal traditionnel.
 * Activez `autosens <../Usage/Open-APS-features.html>`_ sur une période de 7 jours et regardez la ligne blanche dans le graphique de l'écran d'accueil qui montre comment la sensibilité à l'insuline augmente ou diminue selon l'exercice physique, le cycle hormonal etc, et gardez un oeil sur l'onglet OpenAPS qui indique comment AndroidAPS ajuste les basales et/ou les cibles en conséquence.
 
-*N'oubliez pas d'enregistrer votre Bouclage dans `ce formulaire <http://bit.ly/nowlooping>`_ en indiquant AndroidAPS comme votre type de logiciel de boucle DIY, si vous ne l'avez pas déjà fait.*
+*Don’t forget to record your looping in `this form <https://bit.ly/nowlooping>`_ logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
 
 
 Objective 9 : Activation de fonctionnalités supplémentaires pour l'utilisation en journée, telles que la fonction SMB
 ====================================================================================================
-* Avant la version 2.7 de AAPS, l'aide aux repas (MA) était l'algorithme de base pour AAPS et l'accomplissement de l'objectif 8 était nécessaire pour activer `l'Assistance Améliorée Repas AAR (AMA) <../Usage/Open-APS-features.html#assistance-amelioree-repas-aar>`_.
-* Comme l'`Assistance Améliorée Repas (AMA) <../Usage/Open-APS-features.html#assistance-amelioree-repas-aar>`_ est l'algorithme standard de la version 2.7 d'AAPS, utilisez les 28 jours suivants pour essayer des fonctionnalités que vous n'avez pas encore utilisées et acquérir plus de confiance avec votre système de boucle fermée .
+* Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`__.
+* As `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`__ is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
 
 
 Objectif 10 : Activation de fonctionnalités supplémentaires pour l'utilisation en journée, telles que la fonction SMB
