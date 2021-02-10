@@ -29,7 +29,7 @@ So make sure to deactivate automation rules during these occasions if neccessary
 
 Where to find Automation
 --------------------------------------------------
-Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`__ in hamburger menu or as a tab.
 
 Общие настройки
 --------------------------------------------------
@@ -104,15 +104,15 @@ To delete an automation rule click on trash icon.
 Рекомендации и предостережения
 ==================================================
 * When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
-* Наблюдайте за результатами работы правила.
+* Watch the rule results.
 * Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg < 180 mg/dl)
 
   **Вдвойне важно, если правило активирует переключатель профиля!**
  
-* Try to use Temp Targets instead of Profile Switches. Temp Targets не сбрасывают ` Autosens <../Usage/Open-APS-features.html#autosens> ` _ на 0.
+* Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`__ back to 0.
 * Убедитесь, что переключатели профиля создаются с осторожностью и желательно как крайняя мера.
 
-  * Переключение профилей делает `Autosens <../Usage/Open-APS-features.html#autosens>`_ бесполезным минимум на 6 часов.
+  * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`__ useless for a min of 6 hours.
 
 * Переключение профилей не сбросит профиль назад на базовый профиль
 
