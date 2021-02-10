@@ -16,7 +16,7 @@ Für weitere Details lies bitte hier weiter.
 
 .. toctree::
    :maxdepth: 1
-       
+   :glob:    
    :caption: Sprache wechseln
 
    Sprache wechseln <./changelanguage.rst>
@@ -61,7 +61,7 @@ Für weitere Details lies bitte hier weiter.
 
 .. toctree::
    :maxdepth: 1
-    
+   :glob: 
    :caption: Komponenten-Setup
 
    CGM/FGM <./Configuration/BG-Source.rst>
@@ -75,7 +75,7 @@ Für weitere Details lies bitte hier weiter.
 
 .. toctree::
    :maxdepth: 1
-       
+   :glob:    
    :caption: AndroidAPS einrichten
 
    Konfigurations-Generator <./Configuration/Config-Builder.md>
@@ -83,7 +83,7 @@ Für weitere Details lies bitte hier weiter.
 
 .. toctree::
    :maxdepth: 1
-       
+   :glob:    
    :caption: AndroidAPS Nutzung
 
    AndroidAPS-Bildschirme <./Getting-Started/Screenshots.md>
@@ -102,7 +102,7 @@ Für weitere Details lies bitte hier weiter.
 
 .. toctree::
    :maxdepth: 1
-       
+   :glob:    
    :caption: Allgemeine Hinweise 
 
    Zeitzonenwechsel auf Reisen <./Usage/Timezone-traveling.md>
@@ -113,7 +113,7 @@ Für weitere Details lies bitte hier weiter.
 
 .. toctree::
    :maxdepth: 1
-       
+   :glob:    
    :caption: AndroidAPS für Kinder
 
    Kontrolle aus der Ferne <./Children/Children.rst>
@@ -122,7 +122,7 @@ Für weitere Details lies bitte hier weiter.
    
 .. toctree::
    :maxdepth: 1
-       
+   :glob:    
    :caption: Problembehandlung
 
    Problembehandlung <./Usage/troubleshooting.rst>
@@ -130,21 +130,21 @@ Für weitere Details lies bitte hier weiter.
 
 .. toctree::
    :maxdepth: 1
-       
+   :glob:    
    :caption: FAQ
 
    FAQ <./Getting-Started/FAQ.md>
 
 .. toctree::
    :maxdepth: 1
-       
+   :glob:    
    :caption: Glossar
 
    Glossar <./Getting-Started/Glossary.md>
 
 .. toctree::
    :maxdepth: 1
-       
+   :glob:    
    :caption: Hilfe durch die Community 
 
    Nützliche Informationsquellen vor dem Start <./Where-To-Go-For-Help/Background-reading.md>
@@ -153,7 +153,7 @@ Für weitere Details lies bitte hier weiter.
 
 .. toctree::
    :maxdepth: 1
-       
+   :glob:    
    :caption: Für Mediziner & Fachpersonal
 
    Für Mediziner & Fachpersonal <./Resources/clinician-guide-to-AndroidAPS>
@@ -161,7 +161,7 @@ Für weitere Details lies bitte hier weiter.
 
 .. toctree::
    :maxdepth: 1
-       
+   :glob:    
    :caption: Mithelfen in der Community
 
    Wie ich helfen kann <./Getting-Started/How-can-I-help.md>
