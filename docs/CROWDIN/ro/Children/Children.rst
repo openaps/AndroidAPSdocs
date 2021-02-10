@@ -12,7 +12,7 @@ Functii
 * Părinţii pot vedea de la distanţă toate datele importante, cum ar fi valorile glicemiei, carbohidratii din organism, insulina din corp etc. folosind ** NSClient app * * pe telefonul lor. Settings must be the same in AndroidAPS and NSClient app.
 * Părinții pot avea alarme pe telefonul lor folosind aplicația **xDrip+ în modul follower**.
 * Control de la distanță al AndroidAPS folosind `SMS Commands <../Children/SMS-Commands.html>`_ securizat prin autentificarea cu doi factori.
-* Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see `release notes for Version 2.8.1.1 <https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for further details.
+* Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see `release notes for Version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for further details.
 
 Instrumente și aplicații pentru monitorizare la distanță
 ==================================================
