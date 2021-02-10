@@ -119,7 +119,7 @@ Eine Schritt-für-Schritt-Anleitung findest Du im Sample Setup. Dieses ist schon
 
 .. toctree::
    :maxdepth: 1
-       
+   :glob:
    
    Sample Setup <../Getting-Started/Sample-Setup.rst>
  
