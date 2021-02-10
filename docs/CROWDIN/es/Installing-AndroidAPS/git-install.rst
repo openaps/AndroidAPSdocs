@@ -47,7 +47,7 @@ Windows
 4. Comprobar configuración de git en Android Studio
 --------------------------------------------------
 * Abrir ventana de terminal en Android Studio
-* Enter "`git - -version`" (without quotation marks and no spaces between the two - [minus sign]!) and press Return
+* Enter ``git --version`` (without quotation marks and no spaces between the two - [minus sign]!) and press Return
 
   .. image:: ../images/AndroidStudio_gitversion1.png
     :alt: git - -version
