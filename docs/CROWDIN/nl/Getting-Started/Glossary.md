@@ -44,7 +44,7 @@
  <td><strong>Gevoeligheidsdetectie (Autosens)</strong></td>
  <td>berekent veranderingen aan jouw insuline gevoeligheid veroorzaakt door sporten, hormonen, etc.</td>
  <td>&nbsp;</td>
- <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens (Engelstalig)</a></td>
+ <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens (Engelstalig)</a></td>
 </tr>
 <tr>
  <td><strong>Azure</strong></td>
@@ -122,7 +122,7 @@
  <td><strong>DIA</strong></td>
  <td>duur van insuline activiteit (Duration of Insulin Action)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insuline soorten</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA (Engelstalig)</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td><strong>DST</strong></td>
@@ -134,13 +134,13 @@
  <td><strong>eCarbs</strong></td>
  <td>Vertraagde koolhydraten (extended Carbs) - koolhydraten die maar langzaam worden opgenomen (maaltijden met veel vet/eiwit).<br>Omdat de vertraagde bolus functie die je zou gebruiken bij reguliere pomptherapie weinig nut heeft bij het loopen, worden hier eCarbs gebruikt.</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki -vertraagde koolhydraten (eCarbs)</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs gebruiksvoorbeeld (Engelstalig)</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
 <tr>
  <td><strong>FSL</strong></td>
  <td>Freestyle Libre</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - BG bron</a></td>
+ <td><a href="../Configuration/BG-Source.html">Wiki - BG bron</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
@@ -320,7 +320,7 @@
  <td><strong>Gevoeligheids detectie</strong></td>
  <td>berekent veranderingen aan jouw insuline gevoeligheid veroorzaakt door sporten, hormonen, etc.</td>
  <td>&nbsp;</td>
- <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens (Engelstalig)</a></td>
+ <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens (Engelstalig)</a></td>
 </tr>
 <tr>
  <td><strong>Sensor ruis</strong></td>
@@ -386,7 +386,7 @@
  <td><strong>xDrip / xDrip+</strong></td>
  <td>open source software. app om CGM waardes te ontvangen</td>
  <td>&nbsp;</td>
- <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
+ <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="https://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
  <td><strong>Zero-temp</strong></td>
