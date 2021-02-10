@@ -58,4 +58,4 @@ Ce service est offert gratuitement par Martin Schiftan, un utilisateur de la bou
 * Le service comprend une vérification automatique des taux basaux à l'aide d'Autotune. 
 * Le serveur est situé en Allemagne.
 
-<http://ns.10be.de/en/index.html>
+<https://ns.10be.de/en/index.html>
