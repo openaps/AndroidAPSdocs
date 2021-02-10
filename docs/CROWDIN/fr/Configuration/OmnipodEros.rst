@@ -26,7 +26,7 @@ Configuration matérielle et logicielle requise
 
   Composant qui utilisera AndroidAPS et enverra des commandes de contrôle au périphérique de communication Pod.
 
-      +  Smartphone compatible du `driver Omnipod Android <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ avec une version AAPS 2.8 et les `composants <../index.html#composants>`__ associés
+      +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit>`__ with a version of AAPS 2.8 and related `components setup <../index.html#component-setup>`__
 
 * |Omnipod_Pod| **Dispositif d'injection d'Insuline** 
 
@@ -440,36 +440,38 @@ Champs
 Icônes
 -----
 
-.. table:: 
+.. list-table:: 
+      
+    * - |refresh_pod_status|
+      - **REFRESH:** 
+			
+	Envoie une commande d'actualisation au pod actif pour mettre à jour la communication
+			 
+	* A utiliser pour actualiser l'état du pod et rejeter les champs qui contiennent le texte (incertain).
+	* Voir la section `Dépannage <#depannage>`__ ci-dessous pour plus d'informations.
+    * - |pod_management|  	 
+      - **POD MGMT:**
 
-   ====================  ===========================================
-   |refresh_pod_status|  **ACTUALISER :** 
+	Permet d'accéder au menu de gestion du pod   
+    * - |ack_alerts|		 
+      - **ACK ALERTS:**
    			 
-			 Envoie une commande d'actualisation au pod actif pour mettre à jour la communication
+	Lorsque vous cliquez dessus, cela désactivera les bips d'expiration du pod et les notifications. 
 			 
-			 * A utiliser pour actualiser l'état du pod et rejeter les champs qui contiennent le texte (incertain).
-			 * Voir la section `Dépannage <#depannage>`__ ci-dessous pour plus d'informations.
-
-   |pod_management|   	 **GEST. POD :**
-
-			 Permet d'accéder au menu de gestion du pod
-   |ack_alerts|		 **ACCEPTER ALERTES:**
-   			 
-			 Lorsque vous cliquez dessus, cela désactivera les bips d'expiration du pod et les notifications. 
-			 
-			 * Le bouton ne s'affiche que lorsque la durée d'utilisation du pod dépasse le seuil d'alerte d'expiration
-			 * En cas de désactivation réussi, cette icône n'apparaîtra plus.
-			 
-   |set_time|		 **DÉFINIR L'HEURE :**
+	* Le bouton ne s'affiche que lorsque la durée d'utilisation du pod dépasse le seuil d'alerte d'expiration
+	* En cas de désactivation réussi, cette icône n'apparaîtra plus.			 
+    * - |set_time|	 
+      - **SET TIME:**
    
-			 Lorsque vous cliquez dessus, cela mettra à jour l'heure du pod avec l'heure actuelle de votre téléphone.
-   |suspend|  		 **SUSPENDRE:**
+	Lorsque vous cliquez dessus, cela mettra à jour l'heure du pod avec l'heure actuelle de votre téléphone.
+    * - |suspend|  		 
+      - **SUSPEND:**
    
-			 Suspend le pod actif
-   |resume| 		 **REPRENDRE L'INJECTION :**
+	Suspend le pod actif
+    * - |resume|	 
+      - **RESUME DELIVERY:**
    
-			 Réactive l'injection d'insuline du pod actif actuellement suspendu
-   ====================  ===========================================
+	Réactive l'injection d'insuline du pod actif actuellement suspendu
 
 
 Menu de Gestion du pod
@@ -479,62 +481,61 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
 
 |Omnipod_Tab_Pod_Management|
 
-.. table:: 
+.. list-table:: 
 
-   =========================  ===========================================
-   |activate_pod|	      **Activer Pod**
+    * - |activate_pod|
+      - **Activate Pod**
    
-   			      Amorce et active un nouveau pod
-
-   |deactivate_pod|	      **Désactiver Pod**
+        Amorce et active un nouveau pod
+    * - |deactivate_pod|
+      - **Deactivate Pod**
  
- 			      Désactive le pod actuellement actif.
-			 
-		   	      * Un pod partiellement appairé ignore cette commande.
-			      * Utilisez cette commande pour désactiver un pod urlant (erreur 49).
-			      * Si le bouton est désactivé (grisé), utilisez le bouton Supprimer Pod.
-
-   |play_test_beep| 	      **Tester bips**
+        Désactive le pod actuellement actif.
+		 
+	* Un pod partiellement appairé ignore cette commande.
+	* Utilisez cette commande pour désactiver un pod urlant (erreur 49).
+	* Si le bouton est désactivé (grisé), utilisez le bouton Supprimer Pod.
+    * - |play_test_beep|
+      - **Play test beep**
  
- 			      Joue un bip de test unique sur le pod quand vous cliquez dessus.
+ 	Joue un bip de test unique sur le pod quand vous cliquez dessus.
+    * - |discard_pod|
+      - **Discard pod**
 
-   |discard_pod|	      **Supprimer Pod**
-
-			      Désactive et supprime l'état d'un pod qui ne répond pas lorsque vous cliquez dessus.
+	Désactive et supprime l'état d'un pod qui ne répond pas lorsque vous cliquez dessus.
 			      
-			      Le bouton ne s'affiche que dans des cas très particuliers où la désactivation correcte n'est plus possible :
+	Le bouton ne s'affiche que dans des cas très particuliers où la désactivation correcte n'est plus possible :
 
-			      * Un **pod n'est pas complètement appairé** et ignore donc les commandes de désactivation.
-			      * Un **pod est bloqué** pendant le processus d'appairage entre deux étapes
-	 		      * Un **pod ne s'appaire tout simplement pas.**
-
-   |pod_history| 	      **Historique Pod** 
+	* Un **pod n'est pas complètement appairé** et ignore donc les commandes de désactivation.
+	* Un **pod est bloqué** pendant le processus d'appairage entre deux étapes
+	* Un **pod ne s'appaire tout simplement pas.**
+    * - |pod_history|
+      - **Pod history** 
    
-   			      Affiche l'historique de l'activité du pod actif
-
-   |rileylink_stats| 	      **Stats RileyLink :**
+   	Affiche l'historique de l'activité du pod actif
+    * - |rileylink_stats|
+      - **RileyLink stats:**
    
-   			      Naviguer vers l'écran des statistiques du RileyLink qui affiche les paramètres actuels et l'historique de la connexion du RileyLink
+        Naviguer vers l'écran des statistiques du RileyLink qui affiche les paramètres actuels et l'historique de la connexion du RileyLink
 
-			      * **Paramètres** - affiche les paramètres du RileyLink et du pod actif
-			      * **Historique** - affiche l'historique de communication du RileyLink et du Pod
-
-   |reset_rileylink_config|   **Réinit config. RileyLink** 
+	* **Paramètres** - affiche les paramètres du RileyLink et du pod actif
+	* **Historique** - affiche l'historique de communication du RileyLink et du Pod
+    * - |reset_rileylink_config|
+      - **Reset RileyLink Config** 
    
-   			      Lorsque vous cliquez dessus, ce bouton réinitialise la configuration du périphérique de communication pod actuellement connecté. 
+   	Lorsque vous cliquez dessus, ce bouton réinitialise la configuration du périphérique de communication pod actuellement connecté. 
 			      
-			      * Lorsque la communication est démarrée, des données spécifiques sont envoyées et placées dans le RileyLink 
+	* Lorsque la communication est démarrée, des données spécifiques sont envoyées et placées dans le RileyLink 
 			      
-			        - Les registres de mémoire sont définis
-				- Les protocoles de communication sont définis
-				- La fréquence radio réglée est définie
+	    - Les registres de mémoire sont définis
+	    - Les protocoles de communication sont définis
+	    - La fréquence radio réglée est définie
 				
-			      * Voir les `remarques additionnelles <#remarque-concernant-reinit-config-rileyLink>`__ à la fin de ce tableau
-
-   |pulse_log|		      **Lire journal d'impulsion :** 
+	* Voir les `remarques additionnelles <#remarque-concernant-reinit-config-rileyLink>`__ à la fin de ce tableau
+    * - |pulse_log|
+      - **Read pulse log:** 
     
-    			      Copie le journal d'impulsion du pod actif dans le presse-papiers
-   =========================  ===========================================			    
+    	Copie le journal d'impulsion du pod actif dans le presse-papiers		    
 
 *Remarque concernant Réinit config. RileyLink*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -796,7 +797,7 @@ Tout le travail de développement du pilote Omnipod est fait par la communauté 
 
 - **Niveau 0 :** Lisez la section correspondante de cette documentation pour vous assurer que vous comprenez comment la fonctionnalité avec laquelle vous avez des difficultés est censée fonctionner.
 - **Niveau 1 :** Si vous rencontrez toujours des problèmes que vous n'arrivez pas à résoudre en utilisant ce document, alors veuillez aller sur la chaine `AndroidAPS <https://gitter.im/MilosKozak/AndroidAPS>`__ sur **Gitter** ou sur la chaine *#androidaps* sur **Discord** en utilisant `ce lien d'invitation <https://discord.com/invite/NhEUtzr>`__.
-- **Niveau 2 :** Rechercher dans les problèmes existants pour voir si votre problème a déjà été signalé; si ce n'est pas le cas, veuillez créer une nouvelle `fiche <https://github.com/nightscout/AndroidAPS/issues>`__ et joignez vos `fichiers log <../Usage/Accessing-logfiles.html>`__.
+-  **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new `issue <https://github.com/nightscout/AndroidAPS/issues>`__ and attach your `log files <../Usage/Accessing-logfiles.html>`__.
 - **Soyez patient - la plupart des membres de notre communauté sont des bénévoles de bonne nature, et résoudre les problèmes nécessite souvent du temps et de la patience de la part des utilisateurs et des développeurs.**
 
 
