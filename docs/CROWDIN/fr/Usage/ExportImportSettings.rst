@@ -22,11 +22,11 @@ Entre autres, les informations suivantes font partie des paramètres exportés :
 * Paramètres du `Générateur de configuration <../Configuration/Config-Builder.html>`_
 * Paramètres des `Profils locaux <../Configuration/Config-Builder.html#profil-local-recommande>`_
 * Résultats des `Objectifs <../Usage/Objectives.html>`_ y compris les résultats de l'objectif 3 `Prouver ses connaissances <../Usage/Objectives.html#objectif-3-prouver-ses-connaissances>`_
-* `Préférences <../Configuration/Preferences.html>`_ y compris les paramètres `NSClient <../Configuration/Preferences.html#nsclient>`_
+* `Preferences <../Configuration/Preferences.html>`__ incl. les paramètres `NSClient <../Configuration/Preferences.html#nsclient>`_
 
 Format de sauvegarde chiffré
 ==================================================
-La sauvegarde des paramètres est chiffrée par un mot de passe principal qui peut être défini dans `Préférences <../Configuration/Preferences.html#mot-de-passe-principal>`_ .
+Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`__ .
 
 
 Exporter les paramètres
@@ -40,7 +40,7 @@ Exporter les paramètres
 
 * La date et l'heure d'exportation seront automatiquement ajoutées au nom du fichier et affichées avec le chemin.
 * Cliquez sur 'OK'.
-* Entrez le `mot de passe principal <../Configuration/Preferences.html#mot-de-passe-principal>`_ et cliquez 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
 * L'exportation réussie sera affichée en bas de l'écran.
 
 .. image:: ../images/AAPS_ExportSettings2.png
@@ -60,7 +60,7 @@ Importer les paramètres
 * Tous les fichiers présents dans le dossier AAPS/préférences/ de votre téléphone seront affichés dans la liste.
 * Sélectionnez un fichier.
 * Confirmez l'importation en cliquant sur 'OK'.
-* Entrez le `mot de passe principal <../Configuration/Preferences.html#mot-de-passe-principal>`_ et cliquez 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
 
 .. image:: ../images/AAPS_ImportSettings2.png
   :alt: AndroidAPS importer les paramètres 2
