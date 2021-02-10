@@ -15,7 +15,7 @@ Neįsisavinti angliavandeniai yra nebeskaičiuojami po nustatyto laiko
 AAPS, SvertinisVidurkis
 --------------------------------------------------
 
-įsisavinimas yra apskaičiuojamas, kad būtų `AAO == 0` po nustatyto laiko
+absorption is calculated to have ``COB == 0`` after specified time
 
 .. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, SvertinisVidurkis
