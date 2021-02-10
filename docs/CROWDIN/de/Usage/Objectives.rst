@@ -23,16 +23,16 @@ Ziel 2: Lerne, wie AndroidAPS bedient wird
 * Klicke auf den orangenen Text "Noch nicht abgeschlossen", um zu den einzelnen Aufgaben zu kommen.
 * Links zum Wiki helfen Dir weiter, falls Du an der einen oder anderen Stelle noch nicht so sicher sein solltest.
 
-   .. image:: ../images/Objective2_V2_5.png
-     :alt: Screenshot Ziel 2
+  .. image:: ../images/Objective2_V2_5.png
+    :alt: Screenshot Ziel 2
 
 Ziel 3: Belege Dein Wissen
 ==================================================
 * Beantworte Multiple-Choice-Fragen zu verschiedenen AndroidAPS- und Closed-Loop-Themen.
 * Klicke auf den orangenen Text "Noch nicht abgeschlossen", um zur Seite mit den Fragen und Antwortmöglichkeiten zu kommen.
 
-   .. image:: ../images/Objective3_V2_5.png
-     :alt: Screenshot Ziel 3
+  .. image:: ../images/Objective3_V2_5.png
+    :alt: Screenshot Ziel 3
 
 * Links zum Wiki helfen Dir weiter, falls Du an der einen oder anderen Stelle noch nicht so sicher sein solltest.
 * Für Version 2.8 wurde Objective 3 komplett von Muttersprachlern überarbeitet. Die neuen Fragen decken die bisherigen ab und fügen ein paar neue hinzu.
@@ -52,8 +52,8 @@ Anzahl der Benachrichtigungen reduzieren
 * Ggf. kannst Du nachts auch das obere Limit höher setzen oder den Open Loop ganz pausieren. 
 * In den Einstellungen kannst Du einen minimalen Prozentwert setzen, der erreicht werden muss, bevor eine Änderung der Basalrate vorgeschlagen wird.
 
-   .. image:: ../images/OpenLoop_MinimalRequestChange2.png
-     :alt: Open Loop Mindeständerung
+  .. image:: ../images/OpenLoop_MinimalRequestChange2.png
+    :alt: Open Loop Mindeständerung
      
 * Auch musst Du nicht alle fünf Minuten auf jeden einzelnen Vorschlag reagieren...
 
@@ -96,8 +96,8 @@ Der Closed Loop korrigiert im Objective 6 keine hohen BZ-Werte, da nur low gluco
 * Du musst Deine Einstellungen nicht verändern. Während Du Dich im Ziel 6 befindest, wird maxIOB intern automatisch auf Null gesetzt. Wenn Du zum Ziel 7 weitergehst, wird dies automatisch wieder deaktiviert.
 * Das System wird Deine maxIOB Einstellungen auf 0 setzen. Dies bedeutet, dass AAPS bei fallenden BZ-Werte die Basalrate herabsetzen kann. Wenn aber die BZ-Werte steigen, werden diese nur korrigiert, wenn Dein Basal-IOB negativ ist (z.B. von einer vorangegangenen Abschaltung wegen niedriger BZ-Werte). Ohne negatives IOB wird keine temporäre Basalrate oberhalb Deiner Profileinstellungen abgegeben.  
 
-   .. image:: ../images/Objective6_negIOB.png
-     :alt: Beispiel negatives IOB
+  .. image:: ../images/Objective6_negIOB.png
+    :alt: Beispiel negatives IOB
 
 * Wenn Dein Basal-IOB negativ ist (siehe Bildschirmausschnitt oben), kann auch in Objective 6 eine TBR > 100% abgegeben werden.
 * Wenn du eine Hypo korrigierst, kann es vorkommen, dass danach Spitzen auftreten, die du nicht durch Erhöhung der Basalrate korrigieren kannst.
@@ -108,8 +108,8 @@ Ziel 7: Stelle den Closed Loop fein ein, erhöhe maxIOB über 0 und setze den Zi
 
   Betrachte diese Empfehlung als Ausgangspunkt. Wenn Du den Faktor 3x verwendest und feststellst, dass AAPS Deinen BZ zu stark senkt, reduziere diesen Faktor (z.B. 2,..). Wenn Du Resistenzen feststellst, kannst Du diesen Faktor vorsichtig Schritt für Schritt erhöhen.
 
-   .. image:: ../images/MaxDailyBasal2.png
-     :alt: max daily basal
+  .. image:: ../images/MaxDailyBasal2.png
+    :alt: max daily basal
 
 * Wenn du zuverlässig weißt, welcher IOB deinem Looping Muster entspricht, dann senke deinen Zielbereich auf den gewünschten Wert.
 
@@ -119,13 +119,13 @@ Ziel 8: Passe, falls notwendig, Basalraten und Faktoren an und aktiviere dann di
 * Du kannst  `Autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ verwenden, um dafür zu sorgen, dass Deine Basalraten korrekt bleiben oder einen traditionellen Basalratentest durchführen.
 * Schalte `Autosens <../Usage/Open-APS-features.html>`_ für einen Zeitraum von 7 Tagen ein und beobachte die weiße Linie auf der Grafik auf dem Hauptbildschirm, die anzeigt, dass deine Sensibilität gegenüber Insulin auf Grund von Aktivitäten oder Hormonen steigt oder fällt. Schaue auf dem OpenAPS-Tab nach, wie AndroidAPS die Basalraten und/oder Zielwerte entsprechend anpasst.
 
-*Vergiss nicht, dich als Looper in `diesem Formular <http://bit.ly/nowlooping>`_ zu registrieren, wenn du das bisher noch nicht getan hast. Gib AndroidAPS als Art deiner DIY Loop-Software an.*
+*Vergiss nicht, dich als Looper in `diesem Formular <https://bit.ly/nowlooping>`_ zu registrieren, wenn du das bisher noch nicht getan hast. Gib AndroidAPS als Art deiner DIY Loop-Software an.*
 
 
 Ziel 9: Teste zusätzliche Funktionen für den Alltagsgebrauch und gewinne Vertrauen in Dein Closed Loop System
 ====================================================================================================
-* In Versionen von 2.7 war der Meal Assist (MA) der Standard-Algorithmus für AAPS und das Ziel 8 war notwendig, um den  `advanced meal assist (AMA) <../Usage/Open-APS-features.html#erweiterter-mahlzeit-assistent-ama>`_ zu verwenden.
-* Da der `advanced meal assist (AMA) <../Usage/Open-APS-features.html#erweiterter-mahlzeit-assistent-ama>`_ ab Version 2.7 der neue Standard-Algorithmus in AAPS ist, kannst Du diese 28 Tage nutzen, um Funktionen zu testen, die Du bisher nicht verwendet hast, und mehr Vertrauen in Dein Closed Loop System zu gewinnen.
+* In Versionen von 2.7 war der Meal Assist (MA) der Standard-Algorithmus für AAPS und das Ziel 8 war notwendig, um den  `advanced meal assist (AMA) <../Usage/Open-APS-features.html#erweiterter-mahlzeit-assistent-ama>`__ zu verwenden.
+* Da der `advanced meal assist (AMA) <../Usage/Open-APS-features.html#erweiterter-mahlzeit-assistent-ama>`__ ab Version 2.7 der neue Standard-Algorithmus in AAPS ist, kannst Du diese 28 Tage nutzen, um Funktionen zu testen, die Du bisher nicht verwendet hast, und mehr Vertrauen in Dein Closed Loop System zu gewinnen.
 
 
 Ziel 10: Aktiviere zusätzliche oref1 Funktionen zum täglichen Gebrauch, wie z. B. den super micro bolus (SMB)
