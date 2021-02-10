@@ -19,7 +19,7 @@
 
 * Kada AndroidAPS parodo **pompa nepasiekiama** aliarmą, pirmiausia atrakinkite pompos klaviatūrą ir **paspauskite bet kokį mygtuką ant pompos** (pavyzdžiui, mygtuką "į apačią"). Kai tik pompos ekranas užgęsta, paspauskite **ATNAUJINTI** AndroidAPS **Combo ekrane**. Dažniausiai tada ryšys vėl veikia.
 * Jei tai nepadeda, perkraukite telefoną. Po perkrovimo AndroidAPS ir ruffy bus iš naujo aktyvuoti ir bus užmegztas naujas ryšys su pompa.
-* Testai su skirtingais telefonais parodė, kad kai kurie telefonai dažniau nei kiti iššaukia "pompa nepasiekiama" klaidą. [AAPS Telefonai](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) sąrašas sėkmingai išbandytų telefonų. 
+* Testai su skirtingais telefonais parodė, kad kai kurie telefonai dažniau nei kiti iššaukia "pompa nepasiekiama" klaidą. [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) lists successfully tested smartphones. 
 
 ### Pagrindinės dažnų komunikacijos klaidų priežastys ir pasekmės
 
