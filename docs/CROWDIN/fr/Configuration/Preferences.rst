@@ -20,6 +20,9 @@ Préférences
   .. image:: ../images/Pref2021_Filter.png
     :alt: Filtre des préferences
 
+.. contenus:: 
+   :backlinks: entrée
+   :depth: 2
 
 Général
 ===========================================================
@@ -201,10 +204,10 @@ Injecter cette partie de Bolus calculée par l’assistant
 
 Assistant bolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Si vous exécutez `l'assistant de Bolus <../Getting-Started/Screenshots.html#assistant-bolus>`_ et que la glycémie est supérieure à 10 mmol (180 mg/dl) un bolus de correction sera proposé.
+* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
 * Si le bolus de correction est accepté, **aucun glucide** ne sera enregistré.
 * Une alarme sera déclenchée lorsque la glycémie est au bon niveau pour commencer à manger.
-* Vous devez à nouveau sélectionner l'`Assistant Bolus <../Getting-Started/Screenshots.html#assistant-bolus>`_ et entrer la quantité de glucides que vous voulez manger.
+* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ again and enter the amount of carbs you want to eat.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
     :alt: Message assistant bolus
@@ -261,7 +264,7 @@ Selon vos paramètres dans le `Générateur de configuration <../Configuration/C
 Paramètres OpenAPS AMA
 -----------------------------------------------------------
 * Permet au système de reagir plus rapidement après un bolus de repas SI vous entrez les Glucides de manière fiable. 
-* Plus de détail sur les paramètres et l'Autosens peuvent être trouvés dans la `documentation OpenAPS <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
+* More details about the settings and Autosens can be found in the `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
 
 Débit max en U/h pour une Temp Basal
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
