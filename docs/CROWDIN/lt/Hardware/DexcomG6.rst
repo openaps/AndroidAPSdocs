@@ -17,7 +17,7 @@ Naudoti G6 yra šiek tiek sudėtingiau, nei atrodė anksčiau. Norint jį naudot
 „Išankstinis įmirkymas“ (sensoriaus įvedimas daug anksčiau nei jo pradžia programoje) G6 su gamykliniu kalibravimu gali sukelti duomenų nukrypimus. Jei sensorių įvedate anksčiau, nei jį startuojate, gali reikėti jį kalibruoti, kad gautumėte geriausius rezultatus.
 * Jei neplanuojate sekti visų galimų nukrypimų, geriau grįžti į tradicinį kalibravimo režimą ir naudoti sistemą kaip G5.
 
-Norėdami gauti daugiau informacijos ir šių rekomendacijų priežastis, skaitykite Tim Street <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>visą straipsnį svetainėje www.diabettech.com<http://www.diabettech.com>`_.
+To learn more about the details and reasons for these recommendations read the `complete article <https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ published by Tim Street at `www.diabettech.com <https://www.diabettech.com>`_.
 
 Jei naudojate G6 su xDrip+
 ==================================================
@@ -26,8 +26,8 @@ Jei naudojate G6 su xDrip+
 * Jei jums reikia Clarity programos ir vis tiek norite naudotis xDrip+ aliarmais, jums reikia `modifikuotos Dexcom programos <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ su įjungta lokalaus duomenų perdavimo funkcija į xDrip+.
 * Jei dar to nepadarėte, atsisiųskite xDrip <https://github.com/NightscoutFoundation/xDrip> _ir vykdykite Nightscout instrukcijas (G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>_).
 * Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite xDrip.
-* Pritaikykite xDrip+ nustatymus pagal 'xDrip+ nustatymų puslapį <../Configuration/xdrip.html>`_
-* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`__.
 
 Kai naudojate G6 su modifikuota Dexcom programa
 ==================================================
@@ -38,8 +38,8 @@ Kai naudojate G6 su modifikuota Dexcom programa
   * Click the link to the Dexcom G6 app on the search results page that is displayed.
   * Region will be visible in URL.
 
-   .. image:: ../images/DexcomG6regionURL.PNG
-     :alt: Regiono Dexcom G6 URL
+  .. image:: ../images/DexcomG6regionURL.PNG
+    :alt: Regiono Dexcom G6 URL
 
 * Uninstall the original Dexcom app.
 * Įdiekite atsisiųstą apk
