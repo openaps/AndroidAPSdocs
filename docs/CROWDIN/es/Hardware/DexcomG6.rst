@@ -17,7 +17,7 @@ Lo que está claro es que el uso del G6 es tal vez un poco más complejo que lo 
 * La preabsorción del G6 con calibración de fábrica es probable que dé variaciones en los resultados. Si haces preconfiguración, entonces para obtener los mejores resultados, probablemente necesitarás calibrar el sensor.
 * Si no estás observando los cambios que pueden estar teniendo lugar, puede ser mejor volver al modo no calibrado en fábrica y usar el sistema como un G5.
 
-To learn more about the details and reasons for these recommendations read the `complete article <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ published by Tim Street at `www.diabettech.com <http://www.diabettech.com>`_.
+To learn more about the details and reasons for these recommendations read the `complete article <https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ published by Tim Street at `www.diabettech.com <https://www.diabettech.com>`_.
 
 Si se utiliza G6 con xdrip+
 ==================================================
@@ -26,8 +26,8 @@ Si se utiliza G6 con xdrip+
 * If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
 * If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
-* Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`_
-* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`__.
 
 Si utiliza G6 con la aplicación Dexcom parcheada
 ==================================================
@@ -38,8 +38,8 @@ Si utiliza G6 con la aplicación Dexcom parcheada
   * Click the link to the Dexcom G6 app on the search results page that is displayed.
   * La región estará visible en el URL.
 
-   .. image:: ../images/DexcomG6regionURL.PNG
-     :alt: Region en el URL de Dexcom G6
+  .. image:: ../images/DexcomG6regionURL.PNG
+    :alt: Region en el URL de Dexcom G6
 
 * Uninstall the original Dexcom app.
 * Instalar el apk descargado
