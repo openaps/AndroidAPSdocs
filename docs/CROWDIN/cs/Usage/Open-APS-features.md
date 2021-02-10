@@ -32,7 +32,7 @@ SMB zahrnuje určité bezpečnostní mechanismy:
 
 **Musíte zahájit plnění cíle 10, abyste mohli začít používat SMB.**
 
-Viz také: [Dokumentace k OpenAPS pro oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) a [Timovy informace o SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
+See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) and [Tim's info on SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
 ### Pro množství dočasné bazální dávky inzulínu U/h lze nastavit maximální hodnotu (OpenAPS "max-basal")
 
@@ -73,7 +73,7 @@ Při hledání ideálního nastavení buďte opatrní a trpěliví a hodnoty mě
 
 *See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
-See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1#understanding-super-micro-bolus-smb).
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Povolit AMA Autosense
 
@@ -149,7 +149,7 @@ Výchozí hodnota: 4 (neměňte, pokud si opravdu nejste jisti tím, co děláte
 
 AMA je zkratka pro "advanced meal assist", což je funkce OpenAPS od roku 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) umožňuje systému rychleji reagovat po bolusu na jídlo, pokud zadáte sacharidy správně.
 
-You can find more information in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features#advanced-meal-assist-or-ama).
+You can find more information in the [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features#advanced-meal-assist-or-ama).
 
 ### Max. povolený bazál U/h (OpenAPS "max-basal")
 
@@ -179,7 +179,7 @@ Výchozí hodnota je 2, tento parametr byste však měli měnit postupně, abyst
 * Dospělí s vyšší rezistencí na inzulín: 12
 * Těhotná: 25
 
-*Viz také [přehled pevně zakódovaných limitů](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
 ### Povolit AMA Autosense
 
