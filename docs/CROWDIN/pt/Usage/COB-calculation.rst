@@ -15,7 +15,7 @@ Unabsorbed carbs are cut off after specified time
 AAPS, WeightedAverage
 --------------------------------------------------
 
-absorption is calculated to have `COB == 0` after specified time
+absorption is calculated to have ``COB == 0`` after specified time
 
 .. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, WheitedAverage
