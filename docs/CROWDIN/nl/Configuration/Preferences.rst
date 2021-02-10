@@ -20,6 +20,9 @@ Instellingen
   .. image:: ../images/Pref2021_Filter.png
     :alt: Instellingen filter
 
+.. contents:: 
+   :backlinks: entry
+   :depth: 2
 
 Algemeen
 ===========================================================
@@ -201,10 +204,10 @@ Voer dit deel van het boluscalculator resultaat uit
 
 Bolusadviseur
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Als je de `Bolus calculator<../Getting-Started/Screenshots.html#bolus-calculator>`_ gebruikt en je glucose waarde is hoger dan 10 mmol/l (180 mg/dl) wordt een correctie bolus voorgesteld.
+* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
 * Als de correctie bolus wordt geaccepteerd zullen er **geen koolhydraten** worden geregistreerd.
 * Er zal een alarm afgaan wanneer de glucosewaarde genoeg is gedaald om te beginnen met eten.
-* Je moet op dat moment de `Bolus calculator <../Getting-Started/Screenshots.html#bolus-calculator>`_ opnieuw gebruiken en daar de hoeveelheid koolhydraten invoeren die je wilt eten.
+* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ again and enter the amount of carbs you want to eat.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
     :alt: Bolusadviseur bericht
@@ -261,7 +264,7 @@ Depending on your settings in `config builder <../Configuration/Config-Builder.h
 OpenAPS AMA instellingen
 -----------------------------------------------------------
 * Dankzij de geavanceerde maaltijdhulp (Advanced Meal Assist, AMA) kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd. 
-* More details about the settings and Autosens can be found in the `OpenAPS docs <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
+* More details about the settings and Autosens can be found in the `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
 
 Maximaal instelbaar basaal E/u
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
