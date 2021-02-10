@@ -20,6 +20,9 @@ Einstellungen
   .. image:: ../images/Pref2021_Filter.png
     :alt: Filter in Einstellungen
 
+.. contents:: 
+   :backlinks: entry
+   :depth: 2
 
 Allgemein
 ===========================================================
@@ -201,10 +204,10 @@ Abgabe nur eines Teils der vom Bolus-Rechner ermittelten Insulinmenge
 
 Bolus-Berater
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Wenn du den `Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`_ verwendest und dein Glukosewert über 180 mg/dl (10 mmol ) liegt, wird ein Korrekturbolus vorgeschlagen.
+* Wenn du den `Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`__ verwendest und dein Glukosewert über 180 mg/dl (10 mmol ) liegt, wird ein Korrekturbolus vorgeschlagen.
 * Wenn Du den Vorschlag akzeptierst, werden **keine Kohlenhydrate** aufgezeichnet.
 * Wenn den Glukosewert auf einem guten Level für das Essen liegt, wirst Du benachrichtigt.
-* Du musst erneut den Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`_ aufrufen und die Menge der Kohlenhydrate, die du essen möchtest, eingeben.
+* Du musst erneut den Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`__ aufrufen und die Menge der Kohlenhydrate, die du essen möchtest, eingeben.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
     :alt: Nachricht des Bolus-Beraters
@@ -261,7 +264,7 @@ Abhängig von Deinen Einstellungen im `Konfigurations-Generator <../Configuratio
 OpenAPS AMA-Einstellungen
 -----------------------------------------------------------
 * Erlaubt AAPS nach einem Essen schneller mit einer Erhöhung der Basalrate zu reagieren - WENN Du die Kohlenhydrate zuverlässig eingibst. 
-* Mehr Details zu den Einstellungen und Autosens findest Du in den `OpenAPS Docs <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
+* Mehr Details zu den Einstellungen und Autosens findest Du in den `OpenAPS Docs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
 
 Maximale IE/h, die als TBR gesetzt werden können
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
