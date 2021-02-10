@@ -29,7 +29,7 @@ Schalte daher ggf. die Automation-Regeln aus während Du den Loop deaktiviert ha
 
 Automatisierung aufrufen
 --------------------------------------------------
-Abhängig von deinen `Einstellungen im Konfigurationsgenerator <../Configuration/Config-Builder.html#registerkarte-tab-oder-hamburger-menu>`_ findest du `Automatisierungen <../Configuration/Config-Builder.html#automatisierung>`_ entweder im Hamburger.Menü oder als Registerkarte (Tab).
+Abhängig von deinen `Einstellungen im Konfigurationsgenerator <../Configuration/Config-Builder.html#registerkarte-tab-oder-hamburger-menu>`_ findest du `Automatisierungen <../Configuration/Config-Builder.html#automatisierung>`__ entweder im Hamburger.Menü oder als Registerkarte (Tab).
 
 Allgemein
 --------------------------------------------------
@@ -109,10 +109,10 @@ Empfehlungen und Vorbehalte
 
   **Doppelt wichtig, wenn die Aktion ein Profilwechsel ist!**
  
-* Verwende temporäre Ziele statt Profilwechseln. Temporäre Ziele setzen `Autosens <../Usage/Open-APS-features.html#autosens>`_ nicht auf 0 zurück.
+* Verwende temporäre Ziele statt Profilwechseln. Temporäre Ziele setzen `Autosens <../Usage/Open-APS-features.html#autosens>`__ nicht auf 0 zurück.
 * Setze Profilwechsel sparsam und nur als letzte Möglichkeit ein.
 
-  * Durch einen Profilwechsel wird `Autosens <../Usage/Open-APS-features.html#autosens>`_ für mind. 6 Stunden unbrauchbar.
+  * Durch einen Profilwechsel wird `Autosens <../Usage/Open-APS-features.html#autosens>`__ für mind. 6 Stunden unbrauchbar.
 
 * Profilwechsel setzen Dein Profil nicht automatisch auf das Standardprofil zurück.
 
