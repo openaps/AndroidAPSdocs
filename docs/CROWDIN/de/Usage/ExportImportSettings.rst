@@ -22,11 +22,11 @@ Neben anderen werden folgende Einstellungen exportiert:
 * Einstellungen des `Konfigurations-Generators <../Configuration/Config-Builder.html>`_
 * Einstellungen der `lokalen Profile <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_
 * Status der `Ziele (Objectives) <../Usage/Objectives.html>`_ inkl. `Ergebnisse der Multiple-Choice-Fragen <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_
-* `Einstellungen im 3-Punkte-Menü <../Configuration/Preferences.html>`_ inkl. `NS Client Einstellungen <../Configuration/Preferences.html#nightscout-client>`_
+* `Einstellungen im 3-Punkte-Menü <../Configuration/Preferences.html>`__ inkl. `NS Client Einstellungen <../Configuration/Preferences.html#nightscout-client>`_
 
 Verschlüsseltes Backup-Format
 ==================================================
-Die Sicherung der Einstellungen wird mit einem Master-Passwort verschlüsselt, das in den `Einstellungen <../Configuration/Preferences.html#master-passwort>`_ festgelegt wird.
+Die Sicherung der Einstellungen wird mit einem Master-Passwort verschlüsselt, das in den `Einstellungen <../Configuration/Preferences.html#master-passwort>`__ festgelegt wird.
 
 
 Exportiere die Einstellungen
@@ -40,7 +40,7 @@ Exportiere die Einstellungen
 
 * Datum und Zeit des Exports werden automatisch an den Dateinamen angehängt und zusammen mit dem Pfad angezeigt.
 * Klicke auf "OK'.
-* Gib das `Master-Passwort <../Configuration/Preferences.html#master-passwort>`_ ein und klicke 'OK'.
+* Gib das `Master-Passwort <../Configuration/Preferences.html#master-passwort>`__ ein und klicke 'OK'.
 * Der erfolgreiche Export wird am unteren Rand des Bildschirms angezeigt.
 
 .. image:: ../images/AAPS_ExportSettings2.png
@@ -60,7 +60,7 @@ Importiere die Einstellungen
 * Alle Dateien im Verzeichnis AAPS/preferences/ auf Deinem Smartphone werden in der Liste angezeigt.
 * Datei auswählen.
 * Bestätige den Import durch Klick auf 'OK'.
-* Gib das `Master-Passwort <../Configuration/Preferences.html#master-passwort>`_ ein und klicke 'OK'.
+* Gib das `Master-Passwort <../Configuration/Preferences.html#master-passwort>`__ ein und klicke 'OK'.
 
 .. image:: ../images/AAPS_ImportSettings2.png
   :alt: AndroidAPS Import der Einstellungen 2
