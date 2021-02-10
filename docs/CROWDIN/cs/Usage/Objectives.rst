@@ -23,16 +23,16 @@ Cíl 2: Naučte se ovládat AndroidAPS
 * Pro přístup k úkolům klikněte na oranžový text „Nedokončeno“.
 * Odkazy budou poskytnuty jako vodítko pro případ, že dosud nejste obeznámeni se specifickou akcí.
 
-   .. image:: ../images/Objective2_V2_5.png
-     :alt: Screenshot cíl 2
+  .. image:: ../images/Objective2_V2_5.png
+    :alt: Screenshot cíl 2
 
 Cíl 3: Prokázat své znalosti
 ==================================================
 * Správně zodpovězte otázky s výběrem možných odpovědí a prokažte znalost AndroidAPS.
 * Klikněte na oranžový text „Nedokončeno“ pro přístup na stránku s otázkou a možnými odpověďmi.
 
-   .. image:: ../images/Objective3_V2_5.png
-     :alt: Screenshot cíl 3
+  .. image:: ../images/Objective3_V2_5.png
+    :alt: Screenshot cíl 3
 
 * Odkazy budou poskytnuty jako vodítko pro případ, že si nejste jisti odpovědí.
 * The questions for objective 3 have been completely rewritten by native speakers as of AAPS 2.8. The new ones cover the same basic topics plus a few new ones.
@@ -52,8 +52,8 @@ Pro snížení počtu rozhodnutí, která mají být provedena v režimu otevře
 * Možná budete chtít v noci zvýšit horní limit (nebo zakázat otevřenou smyčku). 
 * V Předvolbách můžete nastavit minimální procento navrhované změny bazální dávky.
 
-   .. image:: ../images/OpenLoop_MinimalRequestChange2.png
-     :alt: Minimální změna pro požadavek Open Loop
+  .. image:: ../images/OpenLoop_MinimalRequestChange2.png
+    :alt: Minimální změna pro požadavek Open Loop
      
 * Navíc, nemusíte reagovat každých 5 minut na všechna doporučení…
 
@@ -96,8 +96,8 @@ U 6. cíle nebude uzavřená smyčka korigovat vysokou glykémii, bude pouze zas
 * Nemusíte měnit své nastavení. Při plnění cíle 6 je maxIOB nastaveno automaticky na nulu. Toto nastavení bude při přechodu na cíl 7 odstraněno.
 * The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.  
 
-   .. image:: ../images/Objective6_negIOB.png
-     :alt: Example negative IOB
+  .. image:: ../images/Objective6_negIOB.png
+    :alt: Example negative IOB
 
 * If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
 * Bez možnosti zvýšit bazál při srovnání křivky glykémie se vám dočasně může stávat, že po vyřešení hypoglykémie bude následovat přílišný vzestup glykémie.
@@ -108,8 +108,8 @@ Cíl 7: Vyladit uzavřenou smyčku, zvyšovat max IOB nad 0 a postupně snižova
 
   Toto doporučení by mělo být považováno za výchozí bod. Pokud ho nastavíte na 3x a uvidíte kroky, které vás rychle stahují dolů, pak snižte toto číslo. Pokud jste velmi rezistentní na inzulín, pomalu ho zvyšujte.
 
-   .. image:: ../images/MaxDailyBasal2.png
-     :alt: max denní bazál
+  .. image:: ../images/MaxDailyBasal2.png
+    :alt: max denní bazál
 
 * Až si budete jistí množstvím IOB, které sedí vašemu vzoru smyčky, pak snižte své cílové glykémie na požadovanou úroveň.
 
@@ -119,13 +119,13 @@ Cíl 8: Upravit bazály a poměry, když bude potřeba, a povolit automatickou d
 * Pro kontrolu správnosti nastavení bazálu můžete použít `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_, nebo si udělejte klasický test bazálu.
 * Povolte <a href="../Usage/Open-APS-features.md">automatickou detekci citlivosti</a> po dobu 7 dní a sledujte bílou křivku na grafu na hlavní stránce, jak se vaše citlivost na inzulín může snižovat a zvyšovat v důsledku cvičení nebo hormonů apod. Při tom sledujte na kartě OpenAPS výslednou zprávu, jak podle toho systém AndroidAPS upravil vaše bazály a/nebo cíle. a sledujte na záložce zpráv OpenAPS, jak AndroidAPS odpovídajícím způsobem upravuje bazály a/nebo cíle.
 
-*Pokud jste tak dosud neučinili, nezapomeňte zaznamenat své zkušenosti se smyčkou do `tohoto formuláře <http://bit.ly/nowlooping>`_ a označte AndroidAPS jako typ své DIY smyčky.*
+*Don’t forget to record your looping in `this form <https://bit.ly/nowlooping>`_ logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
 
 
 Objective 9: Try additional features for daytime use and gain confidence in your closed loop system
 ====================================================================================================
-* Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_.
-* As `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
+* Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`__.
+* As `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`__ is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
 
 
 Cíl 10: Povolit další funkce oref1 pro běžné používání, jako je SMB (super micro bolus)
