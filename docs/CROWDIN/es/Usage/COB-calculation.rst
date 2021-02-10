@@ -15,7 +15,7 @@ Los carbohidratos no absorbidos se cortan después del tiempo especificado
 AAPS, promedio ponderado
 --------------------------------------------------
 
-la absorción se calcula para tener `COB == 0` después del tiempo especificado
+absorption is calculated to have ``COB == 0`` after specified time
 
 .. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, Promedio ponderado
