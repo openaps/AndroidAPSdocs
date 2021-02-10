@@ -12,7 +12,7 @@ La bomba de insulina de un niño es controlado por el teléfono móvil del niño
 * Los padres pueden seguir de forma remota todos los datos relevantes, tales como los niveles de glucosa, carbohidratos a bordo, insulina a bordo, etc. using **NSClient app** on their phone. Settings must be the same in AndroidAPS and NSClient app.
 * Los padres pueden visualizar las alarmas usando la aplicación **xDrip en modo seguidor** en su teléfono.
 * Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_ secured by two-factor authentication.
-* Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see `release notes for Version 2.8.1.1 <https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for further details.
+* Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see `release notes for Version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for further details.
 
 Herramientas y aplicaciones para monitorización remota
 ==================================================
