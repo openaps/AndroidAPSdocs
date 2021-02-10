@@ -77,11 +77,11 @@ Tikimasi, kad šiame pavyzdyje glikemija greitai nukris žemiau saugios ribos, t
 
 ### Nustatymų ir pakeitimų optimizavimas
 
-Jums, kaip gydytojui, neturinčiam patirties su AndroidAPS ar „pasidaryk pats“ uždarojo ciklo sistemomis, gali būti sudėtinga padėti pacientui optimizuoti nustatymus arba atlikti pakeitimus, kad pagerintumėte jo rezultatus. Turime keletą įrankių ir [vadovų](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html), kurie padeda pacientams atlikti mažus, patikrintus pakeitimus, kad pagerėtų jų nustatymai.
+Jums, kaip gydytojui, neturinčiam patirties su AndroidAPS ar „pasidaryk pats“ uždarojo ciklo sistemomis, gali būti sudėtinga padėti pacientui optimizuoti nustatymus arba atlikti pakeitimus, kad pagerintumėte jo rezultatus. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
 
 Svarbiausia užduotis pacientui yra padaryti tik vieną pakeitimą vienu metu ir stebėti jo poveikį 2–3 dienas prieš nusprendžiant pakeisti kitą parametrą. Žinoma, tai netaikoma, jei akivaizdžiai „blogas pritaikymas“ pablogina situaciją. Tokiu atveju jis turėtų nedelsdamas grįžti prie ankstesnio nustatymo. Mes, žmonės, linkę viską pakeisti iškart. Bet jei tai padarysite, tai gali sukelti neoptimalų pakeitimą, kurį sunku sugrąžinti į gerą būklę.
 
-Vienas galingiausių nustatymų yra automatinis valandinės bazės, insulino jautrumo faktoriaus bei insulino ir angliavandenių santykio skaičiavimo įrankis. Tai vadinama "[Autotune - automatinis pritaikymas](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)". Jis skirtas paleisti nepriklausomai / rankiniu būdu, o duomenys padės jums ar jūsų pacientui laipsniškai keisti parametrus. Geriausia praktika, prieš pradedant rankiniu būdu koreguoti nustatymus, pirmiausia peržiūrėti Autotune ataskaitas. Naudojant AndroidAPS, Autotune veikia kaip atskira sistema, nors šiuo metu stengiamasi ją integruoti tiesiai į AndroidAPS. Kadangi šie parametrai yra tiek standartinės pompos terapijos, tiek uždaro ciklo pagrindas, Autotune rezultatų aptarimas ir šių parametrų koregavimas būtų natūralus paciento ryšys su gydytoju.
+Vienas galingiausių nustatymų yra automatinis valandinės bazės, insulino jautrumo faktoriaus bei insulino ir angliavandenių santykio skaičiavimo įrankis. This is called “[Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)”. Jis skirtas paleisti nepriklausomai / rankiniu būdu, o duomenys padės jums ar jūsų pacientui laipsniškai keisti parametrus. Geriausia praktika, prieš pradedant rankiniu būdu koreguoti nustatymus, pirmiausia peržiūrėti Autotune ataskaitas. Naudojant AndroidAPS, Autotune veikia kaip atskira sistema, nors šiuo metu stengiamasi ją integruoti tiesiai į AndroidAPS. Kadangi šie parametrai yra tiek standartinės pompos terapijos, tiek uždaro ciklo pagrindas, Autotune rezultatų aptarimas ir šių parametrų koregavimas būtų natūralus paciento ryšys su gydytoju.
 
 Be to, žmogaus elgesys, išmoktas valdant diabetą rankiniu būdų, dažnai daro įtaką rezultatams - net ir naudojant „pasidaryk pats“ uždarą ciklą. Pvz., jei prognozuojamas žema glikemija, o AndroidAPS sumažina insulino kiekį, gali pakakti nedaug angliavandenių (pvz., 3–4 g angliavandenių), kad glikemija padidėtų nuo 70 mg/dl (3,9 mmol). Tačiau daugeliu atvejų pacientas, remdamasis savo ankstesne patirtimi, nusprendžia suvartoti žymiai daugiau angliavandenių. Tai lemia spartesnį padidėjimą tiek dėl papildomos gliukozės, tiek dėl iš anksto sumažintos AndroidAPS insulino dozės.
 
@@ -95,7 +95,7 @@ Tai buvo bendra AndroidAPS veikimo apžvalga. Norėdami gauti daugiau informacij
 
 Papildomai rekomenduojama literatūra:
 
-* Visa [AndroidAPS dokumentacija](http://androidaps.readthedocs.io/en/latest/EN/index.html)
+* The [full AndroidAPS documentation](../index)
 * [OpenAPS informacija](https://OpenAPS.org/reference-design/) paaiškina, kaip OpenAPS sukurtas saugumui: https://openaps.org/reference-design/
-* Visa [OpenAPS dokumentacija](http://openaps.readthedocs.io/en/latest/index.html) 
-  * Kita [informacija apie OpenAPS skaičiavimus](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+* The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html) 
+  * More [details on OpenAPS calculations](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
