@@ -90,11 +90,11 @@ Ce qui est clair, c’est que l’utilisation du G6 est peut-être un peu plus c
 * La pré-installation du G6 avec un étalonnage d'usine peut entraîner des variations dans les résultats. Si vous faites une pré-installation, alors pour obtenir les meilleurs résultats, vous devrez probablement calibrer le capteur.
 * Si vous n'êtes pas attentif aux changements qui peuvent avoir lieu, il peut être préférable de revenir dans un mode "non calibré en usine" et d'utiliser le système comme un G5.
 
-Pour en savoir plus sur les détails et les raisons de ces recommandations, consultez [l'article complet](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) publié par Tim Street sur [www.diabettech.com](http://www.diabettech.com).
+To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
 
 ### Connecter l'émetteur G6 pour la première fois
 
-**Pour le deuxième transmetteur et les suivants, voir [Étendre la durée de vie de l'émetteur](../Configuration/xdrip.html#etendre-la-duree-de-vie-de-l-emetteur) ci-dessous.**
+**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
 
 Pour les émetteurs G6 fabriqués après l’automne/fin 2018 (c.a.d. N° de série commençant par 80 ou 81) vous pouvez utiliser la version [master](https://jamorham.github.io/#xdrip-plus).
 
@@ -153,7 +153,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 6G, 8H ou 8J, 
 
 * Pour l'instant la durée de vie des émetteurs dont le numéro de série commence par 8G, 8H ou 8J ne peut pas être étendue. Même chose pour les émetteurs dont le numéro de série commence par 81 avec le firmware 1.6.5.**27** (voir Etat du système - Statut G5/G6 dans la [copie d'écran](../Configuration/xdrip.html#etat-de-la-batterie-de-l-emetteur) ci-dessus).
 * Pour éviter les difficultés de démarrage de capteurs il est fortement recommandé d'étendre la durée de vie de l'émetteur avant le jour 100 de la première utilisation.
-* L'utilisation d'émetteurs dont le numéro de série commence par 81 et avec un firmware 1.6.5.**27** est possible au delà de 100 jour uniquement si le mode 'engineering mode' est activé et le 'mode natif' est désactivé (menu hamburger -> paramètres -> G5/G6 debug settings -> native algorithm) car un reset hard de l'émetteur n'est PAS possible.
+* L'utilisation d'émetteurs dont le numéro de série starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if [engineering mode](../Usage/Enabling-Engineering-Mode-in-xDrip) is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
 * La session en cours du capteur sera stoppée lors de l'extension de la durée de vie de l'émetteur. Donc étendre la durée de vie avant un changement de capteur, ou soyez conscient qu'il y aura une nouvelle phase de démarrage du capteur d'une durée de 2h.
 * Arrêtez le capteur manuellement via le menu hamburger.
 * Basculez dans le mode `engineering` : 
