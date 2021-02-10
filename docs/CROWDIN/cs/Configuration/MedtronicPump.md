@@ -8,7 +8,7 @@ Pracuje pouze se staršími pumpami Medtronic (podrobnosti viz níže). Nefunguj
 
 * * *
 
-Jestliže jste začali používat ovladač Medtronic, zapište se prosím na tento [seznam](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit#gid=0). Slouží jen k tomu, abychom viděli, které telefony s tímto ovladačem pracují správně a které hůře (chybně). Je v něm jeden sloupec s názvem „BT restart“. Slouží ke kontrole, zda váš telefon podporuje možnost zapnutí/vypnutí BT, kterou lze použít, jestliže se pumpa nedokáže připojit, což se občas stane. Pokud si všimnete jakýchkoli jiných problémů, napište to prosím ve sloupci Komentáře.
+If you started using Medtronic driver please add yourself to this [list](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit). Slouží jen k tomu, abychom viděli, které telefony s tímto ovladačem pracují správně a které hůře (chybně). Je v něm jeden sloupec s názvem „BT restart“. Slouží ke kontrole, zda váš telefon podporuje možnost zapnutí/vypnutí BT, kterou lze použít, jestliže se pumpa nedokáže připojit, což se občas stane. Pokud si všimnete jakýchkoli jiných problémů, napište to prosím ve sloupci Komentáře.
 
 * * *
 
