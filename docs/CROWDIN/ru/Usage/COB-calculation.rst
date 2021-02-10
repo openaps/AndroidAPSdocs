@@ -15,7 +15,7 @@ Oref1
 AAPS, Средневзвешенное значение
 --------------------------------------------------
 
-усвоение рассчитывается как "COB == 0" после определенного времени
+absorption is calculated to have ``COB == 0`` after specified time
 
 .. изображение:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, средневзвешенное значение
