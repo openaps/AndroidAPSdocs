@@ -19,7 +19,7 @@ That’s why apks aren’t available.
 ## How to begin?
 First of all, you have to **get loopable hardware components**:
 
-* A [supported insulin pump](Pump-Choices.md), 
+* A [supported insulin pump](./Pump-Choices.md), 
 * an [Android smartphone](Phones.md) (Apple iOS is not supported by AndroidAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and 
 * a [continuous glucose monitoring system](../Configuration/BG-Source.rst). 
 
@@ -27,7 +27,7 @@ Secondly, you have to **setup your hardware**. See [example setup with step-by-s
 
 Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
 
-Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate.  All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.).  The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting.  You can use [autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed.  Or you can test and set your basal the [old fashioned way](http://integrateddiabetes.com/basal-testing/).
+Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate.  All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.).  The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting.  You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed.  Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
 ## What practicalities of looping do I have?
 
@@ -59,10 +59,10 @@ For safety, recommendations made are based on not one CGM reading but the averag
 
 ### Further readings
 There are several blogs with good tips to help you understand the practicalities of looping:
-  * [Fine-tuning Settings](http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-  * [Why DIA matters](http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
+  * [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
+  * [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
   * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-  * [Hormones and autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+  * [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
 ## What emergency equipment is recommended to take with me?
 First of all, you have to take the same emergency equipment with you like every other T1D with insulin pump therapy. As looping with AndroidAPS, it is strongly recommended to have the following additional equipment with or near to you:
@@ -177,7 +177,7 @@ In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a para
 ## Profile
    
 ### Why using min. 5h DIA (insulin end time) instead of 2-3h?
-Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
+Well explained in [this article](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
 
 ### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
 First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behavior is typically caused by a too low ISF. A too low ISF looks typically like this:
