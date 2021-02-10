@@ -43,7 +43,7 @@ Mai 2020
 
 Avril 2020
 ==================================================
-* `Antidater l'insulin <../Usage/CPbefore26.html#id1>`_ (par ex. injectée avec une seringue)
+* `Backdate insulin <../Usage/CPbefore26.html#carbs-bolus>`_ (i.e. injectée avec une seringue)
 * `La prise en charge Android 6 sera interrompue dans la prochaine version majeure <../Module/module.html#telephone>`_
 
 Mars 2020
@@ -58,7 +58,7 @@ Février 2020
 * `Avertissement pour l'automatisation <../Usage/Automation.html#bonnes-pratiques-et-avertissements>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - courte explication
 * `Alternatives à Careportal <../Usage/CPbefore26.html>`_
-* La fonction `Bolus étendus <../Usage/Extended-Carbs.html#bolus-etendu>`_ désactive la boucle fermée
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
 * Nouveau `plugin Profil Local <../Configuration/Config-Builder.html#profil-local-recommande>`_
 * `Exemple de configuration <../Getting-Started/Sample-Setup.html>`_ - mise à jour Dexcom G6
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - Nouvelles fonctions majeures
@@ -81,7 +81,7 @@ Novembre 2019
 ==================================================
 * `Automatisation - Désactiver quand vous désactivez la boucle <../Usage/Automation.html#remarque-importante>`_
 * `Remplacement du transmetteur Dexcom G6 <../Configuration/xdrip.html#remplacement-du-transmetteur>`_
-* `Bolus étendus - pourquoi ils ne fonctionnent pas dans le cadre d'une boucle <../Usage/Extended-Carbs.html#extended-bolus>`_
+* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
 * `Écran d'accueil - lignes sur le graphique <../Getting-Started/Screenshots.html#section-f-graphique-principal>`_
 * `Insight - Désactiver les valeurs absolues dans NS Client <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_
@@ -96,7 +96,7 @@ Novembre 2019
 
 Octobre 2019
 ==================================================
-* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#id15>`_ mises à jour (en particulier sur la `page de mise à jour <../Installing-AndroidAPS/Update-to-new-version.html>`_)
+* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `AccuChek Insight - options d'enregistrement <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * `Le calcul des GA sur une page distincte <../Usage/COB-calculation.html>`_
 * `GA - mauvaise detection de la valeur des GA <../Usage/COB-calculation.html#detection-de-ga-errones>`_
