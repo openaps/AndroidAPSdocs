@@ -18,7 +18,7 @@ AndroidAPS yra skirtas pompos valdymui ir insulino suleidimui. Remiantis galioja
 
 Pirmiausia turite **paruošti komponentus, kurie veikia su AAPS**:
 
-* [palaikomą insulino pompą](Pump-Choices.md) 
+* A [supported insulin pump](./Pump-Choices.md), 
 * [Android išmanusis telefonas](Phones.md) (Apple iOS nepalaiko„AndroidAPS“ - vietoj to pabandykite [iOS Loop](https://loopkit.github.io/loopdocs/)), ir 
 * [Nuolatinė gliukozės kiekio kraujyje (KG) stebėjimo sistema](../Configuration/BG-Source.rst). 
 
@@ -26,7 +26,7 @@ Antra, jūs turite **sukonfigūruoti savo įrangą**. Žr. [Diegimo pažingsniui
 
 Trečia, turite **konfigūruoti programinės įrangos komponentus**: AndroidAPS ir kraujo gliukozės monitoringo šaltinius.
 
-Ketvirta, jūs turite **išmokti ir suprasti rekomenduojamą OpenAPS struktūrą, kad galėtumėte patikrinti savo terapijos veiksnius**. Pagrindinis uždaro ciklo principas: tiksliai nustatytos valandinės bazės ir insulino - angliavandenių rodikliai. Visose rekomendacijose daroma prielaida, kad pagrindinį poreikį patenkina bazinis insulinas ir kad atsirandantys gliukozės kiekio kraujyje svyravimai atsiranda dėl kitų priežasčių (mankšta, stresas ir kt.), kurias tuo metu reikia koreguoti. Saugumo sumetimais koregavimai, kuriuos AAPS gali atlikti automatiškai, yra riboti (žr. „Maksimalus leistinas laikinas bazinis dažnis“ [OpenAPS struktūra](https://openaps.org/reference-design/)). Tai reiškia, kad neturėtumėte naudoti ciklo neteisingam bazinio greičio profiliui ištaisyti. Pvz., jei prieš valgį dažnai turite žemą glikemiją, tada tikriausiai turite pakoreguoti valandinę bazę. Naudodamiesi [Automatinis derinimas Autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig), galite naudoti daugybę esamų terapijos duomenų norėdami sužinoti, ar reikia koreguoti bazes, IA ir JIF. Arba galite patikrinti ir nustatyti bazę [senuoju būdu](http://integrateddiabetes.com/basal-testing/).
+Ketvirta, jūs turite **išmokti ir suprasti rekomenduojamą OpenAPS struktūrą, kad galėtumėte patikrinti savo terapijos veiksnius**. Pagrindinis uždaro ciklo principas: tiksliai nustatytos valandinės bazės ir insulino - angliavandenių rodikliai. Visose rekomendacijose daroma prielaida, kad pagrindinį poreikį patenkina bazinis insulinas ir kad atsirandantys gliukozės kiekio kraujyje svyravimai atsiranda dėl kitų priežasčių (mankšta, stresas ir kt.), kurias tuo metu reikia koreguoti. Saugumo sumetimais koregavimai, kuriuos AAPS gali atlikti automatiškai, yra riboti (žr. „Maksimalus leistinas laikinas bazinis dažnis“ [OpenAPS struktūra](https://openaps.org/reference-design/)). Tai reiškia, kad neturėtumėte naudoti ciklo neteisingam bazinio greičio profiliui ištaisyti. Pvz., jei prieš valgį dažnai turite žemą glikemiją, tada tikriausiai turite pakoreguoti valandinę bazę. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
 ## Svarbūs praktiniai aspektai?
 
@@ -66,10 +66,10 @@ Saugumui užtikrinti sistemos rekomendacijos pateikiamos ne pagal vieną KG rodm
 
 Čia yra keli tinklaraščiai su naudingais patarimais, kurie padės suprasti, kaip veikia uždaro ciklo sisemos:
 
-* [Fine-tuning Settings](http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-* [Why DIA matters](http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
+* [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
+* [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
 * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-* [Hormones and autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+* [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
 ## Kokią atsarginę įrangą rekomenduojama turėti su savimi?
 
@@ -202,7 +202,7 @@ AMA kontekste „dia“ nereiškia „insulino veikimo trukmė“. Tai parametra
 
 ### Kodėl verta naudoti minimalią IVT (insulino veikimo trukmė) 5 valandas, o ne 2 ar 3 valandas?
 
-Išsamiai paaiškinta [šiame straipsnyje](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Nepamirškite `AKTYVUOTI PROFILĮ` pakeitus savo insulino veikimo trukmę DIA.
+Well explained in [this article](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Nepamirškite `AKTYVUOTI PROFILĮ` pakeitus savo insulino veikimo trukmę DIA.
 
 ### Kas lemia, kad ciklas mažina mano glikemiją iki hipoglikemijos, nors aktyvių angliavandenių AAO nėra?
 
