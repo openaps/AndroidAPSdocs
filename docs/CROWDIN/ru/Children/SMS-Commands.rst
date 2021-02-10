@@ -70,7 +70,7 @@ AndroidAPS позволяет контролировать телефон реб
 
 Отправка SMS-Команд
 ==================================================
-* Отправьте SMS на телефон с AndroidAPS с подтвержденных номеров телефона(ов) используя любую из `команд <../Children/SMS-Commands.html#commands>`_ ниже. 
+* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands <../Children/SMS-Commands.html#commands>`__ below. 
 * Телефон с AAPS ответит чтобы подтвердить успешное выполнение команды или запрашиваемого статуса. 
 * Подтвердите команду, при необходимости отправив код. Пример:
 
