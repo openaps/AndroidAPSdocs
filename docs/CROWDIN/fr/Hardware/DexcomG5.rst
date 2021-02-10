@@ -7,7 +7,7 @@ Si vous utilisez le G5 avec xdrip +
 * Dans xDrip allez dans Paramètres > Paramètres Inter applications > Accepter les traitements et sélectionnez OFF.
 * Si vous voulez pouvoir utiliser AndroidAPS pour calibrer, alors dans xDrip, allez dans Paramètres > Compatibilité Interapp > Accepter les Calibrations et sélectionnez ON.  Vous pouvez également consulter les options dans Paramètres > Paramètres moins courants > Paramètres Avancés de Calibration.
 * Sélectionnez xDrip dans ConfigBuilder (Menu Paramètres dans AndroidAPS).
-* Si AAPS ne reçoit pas de GLY quand le téléphone est en mode avion, utilisez "Identify receiver" comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.md>`_ .
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_ .
 
 Si vous utilisez le G5 avec l'application Dexcom patché
 ==================================================
@@ -16,8 +16,8 @@ Si vous utilisez le G5 avec l'application Dexcom patché
   * Le dossier 2.3 est destiné aux utilisateurs d'AndroidAPS 2.3, le dossier 2.4 pour les utilisateurs de AAPS 2.5.
   * Ouvrez https://play.google.com/store/search?q=dexcom%20g5 sur votre ordinateur. La région sera visible dans l'URL.
 
-   .. image:: ../images/DexcomG5regionURL.PNG
-     :alt: Region in Dexcom G5 URL
+  .. image:: ../images/DexcomG5regionURL.PNG
+    :alt: Region in Dexcom G5 URL
 
 * Arrêter le capteur et désinstaller l'application Dexcom d'origine, si ce n'est pas déjà fait.
 * Installer l'APK téléchargé
