@@ -7,7 +7,7 @@ This guide has some high-level information about DIY closed looping and specific
 ### The steps for building a DIY Closed Loop:
 
 To start using AndroidAPS, the following steps should be taken:
-* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../index.rst#getting-started).
+* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../index#getting-started).
 * [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
 * [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.rst#configuration).
 
