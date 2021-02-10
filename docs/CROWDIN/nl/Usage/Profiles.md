@@ -80,4 +80,4 @@ Een alternatieve manier is om de Profiel wissel direct in mLab te verwijderen:
 ### "DIA 3u te kort"
 
 * Een 'DIA 3u te kort' foutmelding zal verschijnen als je de DIA (duur insuline activiteit) in jouw profiel op een te lage waarde hebt gezet. AndroidAPS hanteert een minimumwaarde. 
-* Lees meer (in het Engels) over het [Selecteren van de juiste DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), pas je profiel aan naar een correcte waarde en doe een [Profiel wissel](../Usage/Profiles) om deze wijziging te activeren.
+* Read about [selecting the right DIA](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles) to continue.
