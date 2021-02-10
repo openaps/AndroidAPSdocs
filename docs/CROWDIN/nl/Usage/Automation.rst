@@ -29,7 +29,7 @@ Dus zorg ervoor dat je de Automation-regels deactiveert indien nodig. Je kunt di
 
 Waar vind je Automatisering
 --------------------------------------------------
-Afhankelijk van jouw `instellingen in de configurator <../Configuration/Config-Builder.html#tabblad-of-hamburger-menu>`_ vind je `Automatiisering <../Configuration/Config-Builder.html#automatisering>`_ in het hamburger menu of als een tabblad.
+Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`__ in hamburger menu or as a tab.
 
 Algemeen
 --------------------------------------------------
@@ -104,15 +104,15 @@ Om een automatiseringsregel te verwijderen, klik op het prullenbak-icoon.
 Tips & valkuilen
 ==================================================
 * Wanneer je begint met het gebruik van Automatisering of wanneer je een nieuwe regel toevoegt, laat de regel dan een notificatie weergeven totdat je zeker weet dat de regel op het juiste moment geactiveerd wordt. Vervang daarna pas de notificatie voor een echte actie.
-* Houd in de gaten wat er gebeurt als de regel actief is.
+* Watch the rule results.
 * Probeer de omstandigheden niet te gemakkelijk te maken (d.w.z.: ALS bg > 80 mg/dl en bg < 180 mg/dl)
 
   **Extra belangrijk wanneer de actie een profiel wissel is!**
  
-* Probeer tijdelijke streefdoelen te gebruiken in plaats van profiel wissels. Tijdelijke streefdoelen resetten `Autosens <../Usage/Open-APS-features.html#autosens>`_ niet. Profiel wissels doen dat wel, en veelvuldige profielwissels maken het Autosens daardoor onmogelijk om goed te functioneren.
+* Probeer tijdelijke streefdoelen te gebruiken in plaats van profiel wissels. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`__ back to 0.
 * Gebruik profielwissels daarom spaarzaam en zet ze bij voorkeur pas in als laatste redmiddel.
 
-  * Elke profielwissel maakt `Autosens <../Usage/Open-APS-features.html#autosens>`_ nutteloos voor minimaal 6 uur.
+  * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`__ useless for a min of 6 hours.
 
 * Een profielwissel zal het profiel NIET automatisch terugzetten naar jouw basisprofiel wanneer de condities van jouw regel niet meer van toepassing zijn.
 
