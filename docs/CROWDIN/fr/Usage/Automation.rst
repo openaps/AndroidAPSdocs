@@ -29,7 +29,7 @@ Veillez donc à désactiver les règles d'automatisation pendant ces moments si 
 
 Où trouver l'automatisation
 --------------------------------------------------
-Selon vos `paramètres dans le Générateur de configuration <../Configuration/Config-Builder.html#onglet-ou-menu-hamburger>`_ vous trouverez soit `Automatisation <../Configuration/Config-Builder.html#automatisation>`_ dans le menu hamburger soit comme un onglet.
+Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`__ in hamburger menu or as a tab.
 
 Généralités
 --------------------------------------------------
@@ -104,15 +104,15 @@ Pour supprimer une règle d'automatisation, cliquez sur l'icône Corbeille.
 Bonnes pratiques et avertissements
 ==================================================
 * Lorsque vous commencez à utiliser l'automatisation ou que vous créez une nouvelle règle, commencez par ajouter une notification jusqu'à ce que vous soyez certain que la règle fonctionne correctement.
-* Observez les résultats de la règle.
+* Watch the rule results.
 * N'essayez pas de mettre des conditions trop faciles (par ex.: SI Glycémie > 80 mg/dl ET Glycémie < 180 mg/dl)
 
   **C'est doublement important si l'action est un changement de profil!**
  
-* Essayez de privilégier l'utilisation de Cibles Temp. plutôt que des Changements de Profil. Les Cibles temporaires ne réinitialisent pas `Autosens <../Usage/Open-APS-features.html#autosens>`_ à 0.
+* Essayez de privilégier l'utilisation de Cibles Temp. plutôt que des Changements de Profil. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`__ back to 0.
 * Assurez-vous que les cchangements de profil sont faits avec parcimonie et de préférence en dernier recours.
 
-  * Les changements de profil rendent `Autosens <../Usage/Open-APS-features.html#autosens>`_ inutilisable pendant au minimum 6 heures.
+  * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`__ useless for a min of 6 hours.
 
 * Un changement de profil ne remettra pas le profil standard initial
 
