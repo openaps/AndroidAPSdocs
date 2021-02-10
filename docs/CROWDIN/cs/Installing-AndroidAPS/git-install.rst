@@ -47,7 +47,7 @@ Zavřete okno nastavení kliknutím na tlačítko "OK" (5.).
 4. Kontrola nastavení git v Android Studiu
 --------------------------------------------------
 * Otevřete terminálové okno v Android Studiu
-* Napište "`git - -version`" (bez uvozovek a bez mezery mezi znamínky mínus) a stiskněte Enter
+* Enter ``git --version`` (without quotation marks and no spaces between the two - [minus sign]!) and press Return
 
   .. image:: ../images/AndroidStudio_gitversion1.png
     :alt: git - -version
