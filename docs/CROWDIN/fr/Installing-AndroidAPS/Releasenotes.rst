@@ -172,7 +172,7 @@ Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une 
 
 Nouvelles fonctionnalités majeures
 ------------------
-* Permet de ne rentrer que https:// dans les paramètres NSClient
+* Allow to enter only ``https://`` in NSClient settings
 * Correction bug d'affichage `Impact Glycémique <../Getting-Started/Glossary.html>`_ sur les montres
 * Correction de petits bugs de l'interface utilisateur
 * Correction plantages Insight
@@ -201,7 +201,7 @@ Nouvelles fonctionnalités majeures
   * Les anciens changements de profil peuvent être dupliqués veres un nouveau profil local (décalage horaire et pourcentage appliqués)
   * Sélecteur pour les cibles temps
 * Le Profil Simple est supprimé
-* La fonction `Bolus étendus <../Usage/Extended-Carbs.html#bolus-etendu>`_ désactive la boucle fermée
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
 * Plugin MDT : Correction du bug entrées dupliquées
 * Les unités ne sont pas définies dans le profil mais c'est un paramètre global
 * Ajout de nouveaux paramètres à l'assistant de démarrage
@@ -224,13 +224,15 @@ Version 2.5.1
 ==================================================
 Date de sortie : 31-10-2019
 
-Veuillez lire les `Remarques importantes <../Installing-AndroidAPS/Releasenotes.html#id16>`_ et`limitations <../Installing-AndroidAPS/Releasenotes.html#cette-mise-a-jour-est-elle-pour-moi-n-est-actuellement-pas-pris-en-charge>`_ listées pour la `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#id15>`_. 
+Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
 * Correction d'un bug dans le statut du réseau qui entraînait des plantages fréquent (pas critique mais gaspillerait beaucoup d'énergie).
 * Nouvelle gestion des versions qui permettra de faire des mises à jour mineures sans déclencher la notification de mise à jour.
 
 Version 2.5.0
 ==================================================
 Date de sortie : 26-10-2019
+
+.. _important-notes-2-5-0:
 
 Remarques importantes
 --------------------------------------------------
@@ -259,8 +261,7 @@ Nouvelles fonctionnalités majeures
 * Vérificateur de signature
 * Autorisation de contourner les objectifs pour les utilisateurs d'OpenAPS
 * Nouveau `objectifs <../Usage/Objectives.html>`_ - examen de connaissance de l'application
-   
-   (Si vous avez au minimum démarré l'objectif "Démarrer une boucle ouverte" dans les versions précédentes, l'examen est optionnel.)
+  (Si vous avez au minimum démarré l'objectif "Démarrer une boucle ouverte" dans les versions précédentes, l'examen est optionnel.)
 * Correction d'un bug dans les pilotes Dana*, où une différence de temps erronée a été signalée
 * Correction d'un bug dans le `communicateur SMS <../Children/SMS-Commands.html>`_
 
@@ -323,7 +324,7 @@ Nouvelles fonctionnalités majeures
 
 Divers
 --------------------------------------------------
-* Si vous n'utilisez pas la valeur par défaut de `smbmaxminutes` vous devez configurer à nouveau cette valeur
+* If you are using non default ``smbmaxminutes`` value you have to setup this value again
 
 
 Version 2.0
