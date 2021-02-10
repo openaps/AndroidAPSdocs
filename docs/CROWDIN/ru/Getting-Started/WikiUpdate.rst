@@ -43,7 +43,7 @@ September 2020
 
 Апрель 2020
 ==================================================
-* `Запись о введении инсулина задним числом < ..//Usage/CPbefore26.html#carbs-- bolus> ` _ (напр. с помощью шприца)
+* `Backdate insulin <../Usage/CPbefore26.html#carbs-bolus>`_ (i.e. с помощью шприца)
 * Поддержка Android 6 будет прекращена в следующей основной версии < ../Module/module.html#phone> ` _
 
 Март 2020
@@ -58,7 +58,7 @@ September 2020
 * `Automation caveats <../Usage/Automation.html#good-practice-caveats>`_
 * ` Autosens <../Usage/Open-APS-features.html#autosens> ` _-краткое объяснение
 * '' Альтернативы порталу терапии <../Usage/CPbefore26.html> ` _
-* `Пролонгированный болюс <../Usage/Extended-Carbs.html > ` _ функция - замкнутый цикл будет отключена
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
 * Новый плагин `Local Profile <../Configuration/Config-Builder.html#local-profile-recommended>`_
 * `Пример установки <../Getting-Started/Sample-Setup.html>`_ - обновление для Dexcom G6
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - major new features
@@ -81,7 +81,7 @@ September 2020
 ==================================================
 * ` Автоматизация-деактивировать при выключении цикла <../Usage/Automation.html#important-note> ` _
 Замена трансмиттера Dexcom G6 - обновление <../Configuration/xdrip.html#replace-transmitter>`_
-* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#id1>`_
+* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
 * ` FAQ-занятия спортом <../Начало/FAQ.html#спорт> ` _
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-f-main-graph>`_
 * ` Insight-Выключить абсолютные значения в NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
@@ -96,7 +96,7 @@ September 2020
 
 Октябрь 2019
 ==================================================
-* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#id16>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
+* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * ` AccuChek Insight-опции журнала <../Configuration/Accu-Chek-Inight-Pump.html#settings-in-aaps> ` _
 * Расчет активных углеводов COB на отдельной странице <../Usage/COB-calculation.html>`_
 * ` активные углеводы COB-неправильное определение значения COB <../Usage/COB-calculation.html#detection-оф-неправо-cob-values> ` _
