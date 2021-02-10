@@ -1,6 +1,6 @@
 # Обзор компонентов 
 **************************************************
-AndroidAPS - это не просто (самостоятельно собранное) приложение, это один из модулей закрытой системы ИПЖ. Прежде чем выбрать компоненты, было неплохо рассмотреть их также в `комплексе компонентов <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_.
+AndroidAPS - это не просто (самостоятельно собранное) приложение, это один из модулей закрытой системы ИПЖ. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
    
 .. изображение:../images/modules.png
   :alt: Обзор компонентов
@@ -128,7 +128,7 @@ xDrip +
 ==================================================
 Иногда требуется некоторое время, чтобы получить все модули для закрытого цикла ИПЖ. Но не беспокойтесь, можно многое сделать во время ожидания. НЕОБХОДИМО проверить и (где требуется) адаптировать базальную скорость (BR), соотношение инсулин-углеводы (IC), фактор чувствительности к инсулину (ISF) и т. д. И, возможно, незамкнутый цикл может быть хорошим способом проверить систему и познакомиться с AndroidAPS. В этом режиме AndroidAPS дает рекомендации, которые можно выполнить вручную.
 
-Вы можете продолжать читать документацию здесь <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>, общаться с другими пользователями в сети или offline, узнавать мнение людей (при этом учитывая, что не все рекомендации вам подходят).
+You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <../Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
 **Готово?**
 Если у вас собраны все компоненты AAPS (поздравляем!) или, по крайней мере, их достаточно, чтобы начать работу в режиме незамкнутого цикла, сначала следует прочитать `Описание Целей<../Usage/Objectives.html>`_ (Обзор) перед каждой новой целью и настроить `компоненты <./index.html#component-setup>`_.
