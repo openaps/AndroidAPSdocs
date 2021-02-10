@@ -15,7 +15,7 @@ Les glucides non absorbés sont coupés après un certain temps
 AAPS, Moyenne pondérée
 --------------------------------------------------
 
-l'absorption est calculée pour avoir `GA == 0` après la durée spécifiée
+absorption is calculated to have ``COB == 0`` after specified time
 
 .. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, Moyenne pondérée
