@@ -18,7 +18,7 @@ Tačiau, kai yra interneto ryšys, duomenys automatiškai įkeliami į Nightscou
 
 1. Samsung Galaxy S7
     
-    * Alternatyvos: žr. [patikrintų telefonų ir išmaniųjų laikrodžių sąrašą](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)
+    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS
 
 2. [DanaRS](http://www.sooil.com/eng/product/)
     
@@ -35,7 +35,7 @@ Tačiau, kai yra interneto ryšys, duomenys automatiškai įkeliami į Nightscou
 
 4. Pasirinktinai: Sony Smartwatch 3 (SWR50)
     
-    * Alternatyvos: Visi [laikrodžiai su Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) turėtų veikti gerai, išsamiau žr. [AndroidAPS patikrintų telefonų laikrodžių sąrašą](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) (OS turi būti Android Wear)
+    * Alternatives: All [watches with Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) should work fine, for details see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS (OS must be Android Wear)
 
 ## Nightscout nustatymas
 
