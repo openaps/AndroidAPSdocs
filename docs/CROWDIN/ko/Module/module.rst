@@ -1,6 +1,6 @@
 구성 요소 개요 
 **************************************************
-AndroidAPS 은 단순한 (self-built) 응용 프로그램이 아니며, 여러개의 모듈 중 하나인 closed loop 시스템입니다. 컴포넌트를 결정하기 전에 <https://androidaps. readthedocs. io/en/dev/En/index. html#component-setup>" _을 먼저 살펴보는 것이 좋다.
+AndroidAPS 은 단순한 (self-built) 응용 프로그램이 아니며, 여러개의 모듈 중 하나인 closed loop 시스템입니다. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
    
 .. 이미지::. /images/modules.png
   :alt: 구성 요소 개요
@@ -128,7 +128,7 @@ Xdrip앱을 혈당소스로 해야할 필요는 없지만 예시로 사용해볼
 ==================================================
 Loop를 close하기 위해 모든 모듈을 가져오는데 가끔은 시간이 걸릴 수 있습니다. 하지만 기다리는 동안 이행해야 하는 작업들이 많기 때문에 걱정하지 마시기 바랍니다. 적응된 basal rate (BR), 인슐린-탄수화물비율 (IC), 인슐린 민감도 (ISF) 등 사용전에 꼭 확인해보시기 바랍니다. AdroidAPS에 익숙해지기 위해 시스템을 테스트 해보기 위해서는 open loop를 사용해보시는 것이 좋습니다. 이 모드를 사용하면 안드로이드APS가 제공하는 조언들을 수동으로 실행할 수 있습니다.
 
-여기서 문서를 계속 읽을 수 있고, 온라인 또는 오프라인의 다른 사용자들과 연락을 수 있으며, `<https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_에 있는 자료 및 다른 사용자들이 기록하는 사항들을 읽을 수 있습니다. (잘못된 정보도 있을 수 있으며 도움이 되지 않는 정보들도 있을 수 있으니 주의해주시기 바랍니다)
+You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <../Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
 **모두 완료되셨나요?**
 AAPS 구성이 모두 완료되었거나(축하드립니다!) 혹은 open loop모드를 사용할 수 있을 정도로 완성 되셨다면 각각 새로운 목표를 이행 및 `하드웨어 <../index.html#component-setup>`_를 설정하시기 전에 `목표 설명 <../Usage/Objectives.html>`_을 먼저 읽어 보시길 추천드립니다.
