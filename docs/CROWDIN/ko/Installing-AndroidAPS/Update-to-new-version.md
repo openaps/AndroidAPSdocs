@@ -20,7 +20,7 @@
 
 당신이 윈도우 PC를 사용하고 이전 버전에서 AAPS를 업데이트했다면, 다음 네가지 단계를 업데이트할 수 있습니다.
 
-1. 현재 사용중인 AAPS 버전에서[설정 저장하기](../Usage/ExportImportSettings#how-to-export-settings) 하여 설정파일을 저장하세요
+1. [Export your settings](../Usage/ExportImportSettings#export-settings) from the existing AAPS version on your phone to be on the save side
 2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
 3. [싸인된 APK파일을 생성하세요](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (WEAR가 아닌, APP을 선택하셔야 합니다)
 4. 4.BG 소스로, xDrip 내에서 리시버를 선택하시거나, 2.4폴더 이후버전의 Dexcom app을 선택하세요.
