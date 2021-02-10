@@ -172,7 +172,7 @@ Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder
 
 Wichtige neue Funktionen
 ------------------
-* Nur https:// in Nightscout-Client Einstellungen erlaubt
+* Nur ``https://`` in Nightscout-Client Einstellungen erlaubt
 * Fehlerbehebung `BGI <../Getting-Started/Glossary.html>`_ Anzeige auf der Smartwatch
 * Kleiner Anzeigefehler behoben
 * Fehlerbehebung Abstürze der Insight Pumpe
@@ -224,13 +224,15 @@ Version 2.5.1
 ==================================================
 Erscheinungsdatum: 31.10.2019
 
-Bitte beachte die `wichtigen Hinweise <../Installing-AndroidAPS/Releasenotes.html#wichtige-hinweise>`_ und `Beschränkungen <../Installing-AndroidAPS/Releasenotes.html#kann-ich-dieses-update-nutzen-aktuell-werden-noch-nicht-unterstutzt>`_, die bei `Version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ aufgeführt sind. 
+Bitte beachte die `wichtigen Hinweise <../Installing-AndroidAPS/Releasenotes.html#wichtige-hinweise-2-5-0>`_ und `Beschränkungen <../Installing-AndroidAPS/Releasenotes.html#kann-ich-dieses-update-nutzen-aktuell-werden-noch-nicht-unterstutzt>`_, die bei `Version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ aufgeführt sind. 
 * Es wurde ein Fehler im Netzwerk-Status-Empfänger behoben, der zu einigen Abstürzen geführt hat (nicht kritisch, würde aber viel Energie verbrauchen auf Grund der ständigen Neuberechnungen).
 * Eine neue Versionssteuerung, die es ermöglicht, kleinere Aktualisierungen durchzuführen, ohne die Aktualisierungsbenachrichtigung auszulösen.
 
 Version 2.5.0
 ==================================================
 Erscheinungsdatum: 26.10.2019
+
+.. _wichtige-hinweise-2-5-0:
 
 Wichtige Hinweise
 --------------------------------------------------
@@ -259,8 +261,7 @@ Wichtige neue Funktionen
 * Signaturprüfung
 * Möglichkeit für OpenAPS Anwender, die Ziele (Objectives) zu überspringen
 * Neue `Ziele (objectives) <../Usage/Objectives.html>`_ -  Wissens-Check & App-Bedienung
-   
-   (Wenn Du mindestens mit dem Ziel "Starte den Open Loop" in einer vorhergehenden Version begonnen hast, ist der Wissens-Check optional.)
+  (Wenn Du mindestens mit dem Ziel "Starte den Open Loop" in einer vorhergehenden Version begonnen hast, ist der Wissens-Check optional.)
 * Fehlerbehebung Dana Treiber, bei dem eine falsche Zeitdifferenz angegeben wurde
 * Fehlerbehebung `SMS-Befehle <../Children/SMS-Commands.html>`_
 
@@ -323,7 +324,7 @@ Wichtige neue Funktionen
 
 Verschiedenes
 --------------------------------------------------
-* Falls Du ein vom Standard abweichenden smbmaxminutes Wert nutzt, musst Du diesen erneut eingeben.
+* Falls Du ein vom Standard abweichenden ``smbmaxminutes`` Wert nutzt, musst Du diesen erneut eingeben.
 
 
 Version 2.0
