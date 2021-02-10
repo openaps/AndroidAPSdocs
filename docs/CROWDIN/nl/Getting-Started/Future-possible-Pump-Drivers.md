@@ -30,7 +30,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 * * *
 
-### Medtrum A6/P6/C6 ([Homepage](http://www.medtrum.com/P6.html))
+### Medtrum A6/P6/C6 ([Homepage](https://www.medtrum.com/P6.html))
 
 **Status:** Is een Loop kandidaat. Bedrijf heeft zijn eigen beperkte half-Loop systeem (A6). Besturing dmv een iPhone App. Geen Android app beschikbaar op dit moment.
 
