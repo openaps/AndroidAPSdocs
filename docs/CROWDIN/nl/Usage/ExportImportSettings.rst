@@ -22,11 +22,11 @@ Onder andere de volgende gegevens uit jouw instellingen worden ge-exporteerd:
 * `Configurator <../Configuration/Config-Builder.html>`_ instellingen
 * `Lokaal profiel <../Configuration/Config-Builder.html#lokaal-profiele-aanbevolen>`_ instellingen
 * Jouw voortgang door de `Doelen <../Usage/Objectives.html>`_ incl. `examen resultaten <../Usage/Objectives.html#doel-3-bewijs-jouw-kennis>`_
-* `Instellingen <../Configuration/Preferences.html>`_ incl. `NS Client-instellingen <../Configuration/Preferences.html#nsclient>`_
+* `Preferences <../Configuration/Preferences.html>`__ incl. `NS Client-instellingen <../Configuration/Preferences.html#nsclient>`_
 
 Versleuteld instellingen-bestand
 ==================================================
-Het bestand met jouw instellingen wordt versleuteld opgeslagen. Het masterwachtwoord kun je instellen via `Instellingen <../Configuration/Voorkeuren.html#masterwachtwoord>`_ .
+Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`__ .
 
 
 Exporteer instellingen
@@ -40,7 +40,7 @@ Exporteer instellingen
 
 * Datum en tijd van de export zal automatisch worden toegevoegd aan de bestandsnaam en wordt weergegeven samen met de bestandslocatie.
 * Klik op "OK'.
-* Voer `masterwachtwoord <../Configuration/Preferences.html#masterwachtwoord>`_ in en klik op 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
 * Succesvolle export zal worden getoond onderaan het scherm.
 
 .. image:: ../images/AAPS_ExportSettings2.png
@@ -60,7 +60,7 @@ Importeer instellingen
 * Alle bestanden in de map AAPS/preferences/ op jouw telefoon worden getoond in de lijst.
 * Selecteer bestand.
 * Bevestig door op 'OK' te klikken.
-* Voer `masterwachtwoord <../Configuration/Preferences.html#masterwachtwoord>`_ in en klik op 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
 
 .. image:: ../images/AAPS_ImportSettings2.png
   :alt: AndroidAPS instellingen importeren 2
