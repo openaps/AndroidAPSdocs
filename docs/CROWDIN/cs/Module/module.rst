@@ -1,6 +1,6 @@
 Přehled komponent 
 **************************************************
-AndroidAPS není jen (uživatelem sestavená) aplikace, je to jeden z několika modulů vašeho systému uzavřené smyčky. Dříve než se rozhodnete pro konkrétní komponenty, bylo by dobré podívat se také na `nastavení komponent <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_,.
+AndroidAPS není jen (uživatelem sestavená) aplikace, je to jeden z několika modulů vašeho systému uzavřené smyčky. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
    
 .. obrázek:: ../images/modules.png
   :alt: Přehled komponent
@@ -128,7 +128,7 @@ Co dělat při čekání na moduly
 ==================================================
 Někdy to zabere nějaký čas, než budete mít všechny moduly potřebné pro uzavření smyčky. Ale žádné obavy, je mnoho věcí, které můžete při čekání udělat. Je NEZBYTNÉ ověřit a případně upravit bazální dávky (BR), sacharidový poměr (IC), citlivost na inzulin (ISF) atd. Otevřená smyčka možná bude dobrým způsobem, jak systém otestovat a seznámit se s AndroidAPS. AndroidAPS v tomto režimu poskytuje rady ohledně léčby, které musíte provádět manuálně.
 
-Můžete si pročítat tuto dokumentaci, komunikovat s ostatními uživateli uzavřené smyčky online nebo offline, `přečíst si dokumentaci <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ nebo zkušenosti ostatních uživatelů (buďte však opatrní, ne vše musí být správně nebo pro vás daný postup nemusí být vhodný).
+You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <../Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
 **Hotovo?**
 Jestliže máte všechny komponenty systému AAPS pohromadě (gratulujeme!) nebo aspoň máte vše potřebné pro spuštění otevřené smyčky, měli byste si nejprve před každým novým Cílem přečíst `Popis cílů <../Usage/Objectives.html>`_ a nastavit svůj `hardware <../index.html#component-setup>`_.
