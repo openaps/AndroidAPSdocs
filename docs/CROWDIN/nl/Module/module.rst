@@ -1,6 +1,6 @@
 De verschillende onderdelen 
 **************************************************
-AndroidAPS is meer dan de (zelfgebouwde) app alleen, er zijn ook andere onderdelen nodig om jouw closed loop systeem aan de praat te krijgen. Voordat je kiest welke onderdelen je wilt gebruiken, is het goed om eens te kijken naar de `Wat heb ik nodig <https://androidaps.readthedocs.io/en/latest/CROWDIN/nl/index.html#wat-heb-ik-nodig>`_ sectie.
+AndroidAPS is meer dan de (zelfgebouwde) app alleen, er zijn ook andere onderdelen nodig om jouw closed loop systeem aan de praat te krijgen. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
    
 .. image:: ../images/modules.png
   :alt: Wat heb ik nodig
@@ -128,7 +128,7 @@ Wat te doen tijdens het wachten op onderdelen
 ==================================================
 Het duurt soms een tijdje voordat je alle onderdelen voor het maken van een closed loop bij elkaar hebt. Maar geen zorgen, er zijn een heleboel dingen die je kunt doen tijdens het wachten. Het is NOODZAKELIJK om jouw basaalstanden, koolhydraatratio (KH), insuline gevoeligheidsfactor (ISF) etc. te testen en (indien van toepassing) aan te passen. AndroidAPS gebruiken in open loop modus kan een goede manier zijn om jouw profielinstellingen te testen en vertrouwd te raken met het syteem. In de open loop modus geeft AndroidAPS behandelingsadviezen die je handmatig moet doorvoeren.
 
-Verder kun je deze documentatie doorlezen, je kunt online of offline contact opnemen met andere loopers. Lees wat `achtergrondinformatie <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ of bekijk welke vragen andere loopers stellen in de verschillende Facebook groepen (let hierbij wel op de kwaliteit van andermans suggesties, niet alles wat je leest is verstandig om blindelings na te doen).
+You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <../Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
 ** Klaar? **
 Als je jouw AAPS onderdelen bij elkaar hebt (gefeliciteerd!) of ten minste genoeg om te beginnen in de open loop modus, lees dan eerst de `Doelen <../Usage/Objectives.html>`_ door en stel je `hardware <../index.html#component-setup>`_ in.
