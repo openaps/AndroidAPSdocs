@@ -18,7 +18,7 @@ Wat wel is ingesteld in dit voorbeeld, is dat alle gegevens automatisch worden g
 
 1. Samsung Galaxy S7
     
-    * Andere telefoons: zie [lijst van geteste telefoons en horloges](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)
+    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS
 
 2. [DanaRS](http://www.sooil.com/eng/product/)
     
@@ -35,7 +35,7 @@ Wat wel is ingesteld in dit voorbeeld, is dat alle gegevens automatisch worden g
 
 4. Optioneel: Sony Smartwatch 3 (SWR50)
     
-    * Alternatieven: Alle [horloges met Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) zouden prima moeten werken, voor details zie [lijst van geteste telefoons en horloges](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) voor AndroidAPS (OS moet Android Wear zijn)
+    * Alternatives: All [watches with Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) should work fine, for details see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS (OS must be Android Wear)
 
 ## Nightscout instellen
 
