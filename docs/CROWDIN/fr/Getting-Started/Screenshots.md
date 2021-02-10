@@ -226,7 +226,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 ![Bouton Insuline](../images/Home2020_ButtonInsulin.png)
 
-* Permet d'entrer une certaine quantité d'insuline sans utiliser l'[Assistant bolus](../Getting-Started/Screenshots#assistant-bolus).
+* To give a certain amount of insulin without using [bolus calculator](#bolus-wizard).
 * En cochant la case, vous pouvez démarrer automatiquement votre [cible temporaire Repas imminent](../Configuration/Preferences#default-temp-targets).
 * Si vous ne voulez pas injecter de bolus avec la pompe mais juste enregistrer la quantité d'insuline (par ex. pour de l'insuline injectée avec un stylo ou une seringue), cochez la case correspondante.
 
@@ -239,11 +239,11 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 * Décalage horaire : Quand vous avez / allez manger les glucides (en minutes).
 * Durée : A utiliser pour les ["glucides étendus"](../Usage/Extended-Carbs.rst)
 * Vous pouvez utiliser les boutons pour augmenter rapidement la quantité de glucides.
-* Les notes seront envoyées sur Nightscout - selon vos paramètres [NSClient](../Configuration/Preferences#ns-client).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
 
 #### Assistant
 
-* Voir Assistant bolus [ci-dessous](../Configuration/Screenhots#assistant-rapide)
+* See Bolus Wizard [section below](#bolus-wizard)
 
 #### Étalonnages
 
@@ -290,7 +290,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 * Affiche le bolus calculé et permet de renseigner une note. 
 * Si la quantité d'insuline active dépasse déjà le bolus calculé, elle affichera simplement la quantité de glucides encore nécessaire.
-* Les notes seront envoyées sur Nightscout - selon vos paramètres [NSClient](../Configuration/Preferences#ns-client).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
 
 ### Section L
 
@@ -322,11 +322,11 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 * Le bouton [Changement de profil](../Usage/Profiles#changement-de-profil) en tant qu'alternative à un appui long sur le [profil actuel](../Getting-Started/Screenshots#section-b-profil-cible) de l'écran d'accueil.
 * Le bouton [cible temporaire](../Usage/temptarget#cibles-temporaires) en tant qu'alternative à un appui court sur la [cible actuelle](../Getting-Started/Screenshots#section-b-profil-cible) de l'écran d'accueil.
 * Le bouton pour démarrer ou annuler un débit basal temporaire. Veuillez noter que le bouton passe de "BASAL TEMPORAIRE" à "ANNULER x%" lorsqu'un débit de base temporaire est défini.
-* Même si les [bolus étendus](../Usage/Extended-Carbs#bolus-etendu) ne fonctionnent pas vraiment dans un environnement de boucle fermée, certaines personnes demandaient une option pour utiliser un bolus étendu de toute façon.
+* Even though [extended boluses](../Usage/Extended-Carbs#extended boluses) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
    
    * Cette option n'est disponible que pour les pompes Dana RS et Insight. 
    * La boucle fermée sera automatiquement arrêtée et basculera en mode boucle ouverte pour la durée du bolus étendu.
-   * Assurez-vous de lire les [détails](../Usage/Extended-Carbs#bolus-etendu) avant d'utiliser cette option.
+   * Make sure to read the [details](../Usage/Extended-Carbs#extended boluses) before using this option.
 
 ### Careportal - section N
 
@@ -382,9 +382,9 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 Pour plus d'informations sur les différents types d'insuline, leurs profils d'activité et l'importance de tout cela, vous pouvez lire un article ici sur [ Comprendre les nouvelles courbes IA basées sur des courbes d'activité exponentielles ](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-Et vous pouvez lire un excellent article de blog à ce sujet ici: [ Pourquoi nous avons régulièrement tort dans la durée d'action de l'insuline (DAI) que nous utilisons, et pourquoi c'est important… ](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-Et plus encore: [ Courbes d’insuline exponentielle + Fiasp ](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Statut de la pompe
 
@@ -447,7 +447,7 @@ L'onglet Traitement peut être utilisé pour corriger les entrées de glucides e
 Historique des traitements suivants :
 
 * Bolus (& glucides) -> option permettant de [supprimer des entrées](../Getting-Started/Screenshots#correction-de-glucides) pour corriger l'historique
-* [Bolus étendu](../Usage/Extended-Carbs#id1)
+* [Bolus étendu](../Usage/Extended-Carbs#extended-bolus)
 * Basal temporaire
 * [Cible temp.](../Usage/temptarget.md)
 * [Changement de profil](../Usage/Profiles.md)
