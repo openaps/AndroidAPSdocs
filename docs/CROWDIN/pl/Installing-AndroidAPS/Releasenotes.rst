@@ -172,7 +172,7 @@ Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or ne
 
 Major new features
 ------------------
-* Allow to enter only https:// in NSClient settings
+* Allow to enter only ``https://`` in NSClient settings
 * Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
 * Fixed small UI bugs
 * Fixed Insight crashes
@@ -201,7 +201,7 @@ Major new features
   * Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
   * Veritical NumberPicker for targets
 * SimpleProfile is removed
-* `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
 * MDT plugin: Fixed bug with duplicated entries
 * Units are not specified in profile but it's global setting
 * Added new settings to startup wizard
@@ -224,13 +224,15 @@ Version 2.5.1
 == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Release date: 31-10-2019
 
-Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
+Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
 * Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
 * New versioning that will allow to do minor updates without triggering the update-notification.
 
 Version 2.5.0
 == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Release date: 26-10-2019
+
+.. _important-notes-2-5-0:
 
 Important notes
 --------------------------------------------------
@@ -259,8 +261,7 @@ Major new features
 * Signature verifier
 * Allow to bypass objectives for OpenAPS users
 * New `objectives <../Usage/Objectives.html>`_ - exam, application handling
-   
-   (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
+  (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
 * Fixed bug in Dana* drivers where false time difference was reported
 * Fixed bug in `SMS communicator <../Children/SMS-Commands.html>`_
 
@@ -323,7 +324,7 @@ Major new features
 
 Misc
 --------------------------------------------------
-* If you are using non default `smbmaxminutes` value you have to setup this value again
+* If you are using non default ``smbmaxminutes`` value you have to setup this value again
 
 
 Version 2.0
