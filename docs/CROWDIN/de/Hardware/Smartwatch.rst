@@ -7,7 +7,7 @@ Mehr Infos hier
 
 .. toctree::
    :maxdepth: 1
-       
+   :glob:
    
    Liste der getesteten Telefone und Smartphones <../Getting-Started/Phones.md>
    Watchfaces Wear OS <../Configuration/Watchfaces.md>
