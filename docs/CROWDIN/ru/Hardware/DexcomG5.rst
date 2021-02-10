@@ -7,7 +7,7 @@ Dexcom G5
 * In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
 Если хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принимать калибровки (Accept calibrations) и выберите ВКЛ (ON).  Возможно вы также захотите рассмотреть варианты калибровки в настройках > менее распространенные параметры > дополнительные параметры калибровки.
 В конфигуратоге (настройки AndroidAPS) выберите xdrip.
-* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.md>`_ .
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_ .
 
 При пользовании G5 с помощью модифицированного приложения Dexcom
 ==================================================
@@ -16,8 +16,8 @@ Dexcom G5
   * Папка 2.3 предназначена для пользователей AndroidAPS 2.3, папка 2.4 для пользователей AAPS 2.5.
   * Откройте https://play.google.com/store/search?q=dexcom%20g5 на вашем компьютере. Регион будет виден в URL.
 
-   .. изображение:../images/DexcomG5regionURL.PNG
-     :alt: Регион в URL Dexcom G5
+  .. изображение:../images/DexcomG5regionURL.PNG
+    :alt: Регион в URL Dexcom G5
 
 * Oстановите сенсор и удалите оригинальное приложение Dexcom.
 * Установите загруженное приложение
