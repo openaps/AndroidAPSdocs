@@ -18,7 +18,7 @@
 
 1. Samsung Galaxy S7
     
-    * Альтернативы: см. [список проверенных телефонов и часов](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) для AndroidAPS
+    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS
 
 2. [DanaRS](http://www.sooil.com/eng/product/)
     
@@ -35,7 +35,7 @@
 
 4. Дополнительно: Sony Smartwatch 3 (SWR50)
     
-    * Альтернативы: Все [ часы с Google Wear OS ](https://wearos.google.com/intl/de_de/#find-your-watch) должны работать, см. [ список проверенных телефонов и часов ](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) для AndroidAPS (OS должна быть Android Wear)
+    * Alternatives: All [watches with Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) should work fine, for details see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS (OS must be Android Wear)
 
 ## Настройки Nightscout
 
