@@ -30,7 +30,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 * * *
 
-### Medtrum A6/P6/C6 ([Homepage](http://www.medtrum.com/P6.html))
+### Medtrum A6/P6/C6 ([Homepage](https://www.medtrum.com/P6.html))
 
 **Loop status:** Es candidata a ser utilizada en sistemas de bucle cerrado. La empresa tiene su propio sistema de medio-bucle limitado (A6). Controlable a través de la apps iPhone. No hay ninguna app de Android disponible en este momento.
 
