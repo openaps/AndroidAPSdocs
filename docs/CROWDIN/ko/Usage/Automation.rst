@@ -29,7 +29,7 @@ So make sure to deactivate automation rules during these occasions if neccessary
 
 Where to find Automation
 --------------------------------------------------
-Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`__ in hamburger menu or as a tab.
 
 포괄적인 정보
 --------------------------------------------------
@@ -104,15 +104,15 @@ To delete an automation rule click on trash icon.
 Good practice & caveats
 ==================================================
 * When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
-* Whatch the rule results.
+* Watch the rule results.
 * Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg < 180 mg/dl)
 
   **Doubly important if action is a profile switch!**
  
-* Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`_ back to 0.
+* Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`__ back to 0.
 * Make sure Profile switches are made sparingly and preferably at a last resort.
 
-  * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`_ useless for a min of 6 hours.
+  * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`__ useless for a min of 6 hours.
 
 * Profile switching will not reset the profile back to your base profile
 
