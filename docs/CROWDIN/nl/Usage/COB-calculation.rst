@@ -15,7 +15,7 @@ Niet-opgenomen koolhydraten worden afgekapt (naar nul) na bepaalde tijd.
 AAPS, Gewogen gemiddelde
 --------------------------------------------------
 
-de absorptie wordt berekend met 'COB == 0' na de opgegeven tijd
+absorption is calculated to have ``COB == 0`` after specified time
 
 .. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, Gewogen gemiddelde
