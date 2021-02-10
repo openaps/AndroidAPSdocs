@@ -18,7 +18,7 @@ Nicméně, data se automaticky nahrají do Nightscoutu, jakmile je navázáno da
 
 1. Samsung Galaxy S7
     
-    * Alternativy: viz [seznam testovaných telefonů a hodinek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) pro AndroidAPS
+    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS
 
 2. [DanaRS](http://www.sooil.com/eng/product/)
     
@@ -35,7 +35,7 @@ Nicméně, data se automaticky nahrají do Nightscoutu, jakmile je navázáno da
 
 4. Volitelné: Sony Smartwatch 3 (SWR50)
     
-    * Alternativy: Pro AndroidAPS (OS musí být Android Wear) by měly všechny [ hodinky s Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) fungovat bez problémů. Další info najdete v [seznam testovaných telefonů a hodinek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)
+    * Alternatives: All [watches with Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) should work fine, for details see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS (OS must be Android Wear)
 
 ## Příprava Nightscoutu
 
