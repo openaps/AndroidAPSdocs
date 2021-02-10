@@ -8,7 +8,7 @@
 * Un dispositivo Smartpix o Realtyme junto con el software de configuración 360 para configurar la bomba. (Roche envía los dispositivos Smartpix y el software de configuración de forma gratuita a sus clientes cuando lo solicite.)
 * Un teléfono compatible: un teléfono Android con un teléfono con LineageOS 14.1 (anteriormente CyanogenMod) o Android 8.1 (Oreo). 
 * El LineageOS 14.1 tiene que ser una versión reciente de al menos junio de 2017, ya que el cambio necesario para vincular la bomba Combo solo se introdujo en ese momento. 
-* Se puede encontrar una lista de teléfonos en el documento Teléfonos AAPS.
+* A list of phones can be found in the [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) document.
 * Tenga en cuenta que esta no es una lista completa y refleja la experiencia personal del usuario. Le recomendamos que también añada su experiencia y, por lo tanto, ayude a los demás (#cadenadeayuda).
 * Tenga en cuenta que mientras que Android 8.1 permite comunicarse con la Combo, todavía hay problemas con AAPS en 8.1.
 * Para los usuarios avanzados, es posible realizar el emparejamiento en un teléfono rooteado y transferirlo a otro teléfono rooteado para utilizarlo con ruffy/AAPS, que también debe estar rooteado. Esto permite usar teléfonos con Android < 8.1 pero no ha sido ampliamente probado: https://github.com/gregorybel/combo-pairing/blob/master/README.md
@@ -102,7 +102,7 @@ Hay varias razones posibles. Realice los siguientes pasos:
 
 * Si la bomba está configurada en 5 segundos de tiempo de espera de pantalla, puede probarla con 40 segundos (configuración original). From experience the time between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out without successfully Pair. 
 * Más tarde deberías volver a los 5 seg., para volver a los ajustes de AAPS Combo.
-* If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not compatible with the pump. Asegúrese de ejecutar un nuevo ** LineageOS ≥ 14.1 ** o ** Android ≥ 8.1 (Oreo) **. If possible, try another smartphone. Usted puede encontrar una lista de los teléfonos ya utilizados con éxito en \[AAPS Teléfonos\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
+* If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not compatible with the pump. Asegúrese de ejecutar un nuevo ** LineageOS ≥ 14.1 ** o ** Android ≥ 8.1 (Oreo) **. If possible, try another smartphone. You can find a list of already successfully used smartphones under \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). 
 
 9. Luego la bomba, debe mostrar un código de seguridad de 10 dígitos. Ruffy muestra una pantalla para ingresar el código. Ingrese el código en la pantalla de Ruffy y listo para continuar.
 10. Reinicie el teléfono.
@@ -113,7 +113,7 @@ Hay varias razones posibles. Realice los siguientes pasos:
 * Tenga en cuenta que esto no es un producto. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. 
 * It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
 * Read the OpenAPS documentation https://openaps.org to understand the loop algorithm AndroidAPS is based upon.
-* Read the [AAPS docs](https://androidaps.readthedocs.io/en/latest/) to learn about and understand AndroidAPS.
+* Read the [AAPS docs](../index.rst) to learn about and understand AndroidAPS.
 * Esta integración usa la misma funcionalidad que proporciona el medidor que viene con el Combo.
 * El medidor permite reflejar la pantalla de la bomba y presiona el botón hacia la bomba. 
 * The connection to the pump and this forwarding is what the ruffy app does. 
