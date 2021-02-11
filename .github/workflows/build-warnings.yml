@@ -24,20 +24,21 @@ jobs:
         with:
           python-version: "3.7"
 
-      - name: Install required packages
+      - name: Install packages
         run: |
           python -m pip install --exists-action=w --no-cache-dir -r requirements.rtd.txt
           python -m pip install --exists-action=w --no-cache-dir -r requirements.txt
 
-      - name: Path English
-        if: matrix.language == 'en'
-        run: echo "DOC_PATH=docs/EN/" >> $GITHUB_ENV
+      - name: Set doc Path
+        run: |
+          if [ '${{ matrix.language }}' == 'en' ]
+          then
+            echo "DOC_PATH=docs/EN/" >> $GITHUB_ENV
+          else
+            echo "DOC_PATH=docs/CROWDIN/${{ matrix.language }}/" >> $GITHUB_ENV
+          fi
 
-      - name: Path translation
-        if: matrix.language != 'en'
-        run: echo "DOC_PATH=docs/CROWDIN/${{ matrix.language }}/" >> $GITHUB_ENV
-
-      - name: Show conf
+      - name: Show Sphinx conf
         run: |
           cat ${{ env.DOC_PATH }}conf.py
           cat docs/shared.conf.py
@@ -47,35 +48,21 @@ jobs:
           cd ${{ env.DOC_PATH }}
           sphinx-build -T -E -n -v -w output.txt -q -b html -d _build/doctrees . _build/html
 
-        # See https://www.sphinx-doc.org/en/master/man/sphinx-build.html
-        # sphinx-build [options] <sourcedir> <outputdir>
-        # -T Display the full traceback when an unhandled exception occurs. Otherwise, only a summary is displayed and the traceback information is saved to a file for further analysis.
-        # -E Don’t use a saved environment (the structure caching all cross-references), but rebuild it completely. The default is to only read and parse source files that are new or have changed since the last run.
-        # -n Run in nit-picky mode. Currently, this generates warnings for all missing references. See the config value nitpick_ignore for a way to exclude some references as “known missing”.
-        # -q Do not output anything on standard output, only write warnings and errors to standard error.
-        # -W Turn warnings into errors. This means that the build stops at the first warning and sphinx-build exits with exit status 1.
-        # -v Increase verbosity (loglevel). This option can be given up to three times to get more debug logging output.
-        # -b <buildername>
-        # -D <setting=value> Override a configuration value set in the conf.py file.
-        # --keep-going With -W option, keep going processing when getting warnings to the end of build, and sphinx-build exits with exit status 1. New in version 1.8.
-
       - name: Process - Build results
         run: |
-          cd ${{ env.DOC_PATH }}
-          echo "BUILD_WARNINGS=$(wc -l < output.txt)" >> $GITHUB_ENV
-          echo "MESSAGE=OK" >> $GITHUB_ENV
-          echo "COLOR=green" >> $GITHUB_ENV
-
-      - name: On - build warnings
-        if: env.BUILD_WARNINGS != '0'
-        run: |
-          echo number of warning ${{ env.BUILD_WARNINGS }}
-          echo "MESSAGE=${{ env.BUILD_WARNINGS }}" >> $GITHUB_ENV
-          echo "COLOR=red" >> $GITHUB_ENV
-          # exit 1
+          COUNT=$(wc -l < ${{ env.DOC_PATH }}output.txt)
+          if [$COUNT == '0']
+          then
+            echo "MESSAGE=OK" >> $GITHUB_ENV
+            echo "COLOR=green" >> $GITHUB_ENV
+          else
+            echo Number of warning $COUNT
+            echo "MESSAGE=$COUNT" >> $GITHUB_ENV
+            echo "COLOR=red" >> $GITHUB_ENV
+          fi
 
       - if: ${{ always() }}
-        name: Create the Badge - Build warning
+        name: Create Badge - Build warnings
         uses: schneegans/dynamic-badges-action@v1.0.0
         with:
           auth: ${{ secrets.GIST_SECRET }}
