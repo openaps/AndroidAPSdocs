@@ -13,7 +13,6 @@ jobs:
 
     strategy:
       fail-fast: false
-      max-parallel: 0
       matrix:
         language: [en, fr, de, nl, cs, el, es, ko, lt, ru]
 
@@ -47,12 +46,34 @@ jobs:
       - name: Build docs
         run: |
           cd ${{ env.DOC_PATH }}
-          sphinx-build -T -E -n -v -w output.txt -q -b html -d _build/doctrees . _build/html
+          sphinx-build -T -E -n -v -w build_log.txt -q -b html -d _build/doctrees . _build/html
+      
+      - name: Store build log
+        uses: actions/upload-artifact@v2
+        with:
+          name: build_log_${{ matrix.language }}
+          path: ${{ env.DOC_PATH }}build_log.txt
+
+  badge:
+    needs: build
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        language: [en, fr, de, nl, cs, el, es, ko, lt, ru]
+
+    steps:
+      - name: Get build log
+        uses: actions/download-artifact@v2
+        with:
+          name: build_log_${{ matrix.language }}
 
       - name: Process - Build results
         run: |
-          COUNT=$(wc -l < ${{ env.DOC_PATH }}output.txt)
-          if [$COUNT == '0']
+          COUNT=$(wc -l < build_log.txt)
+          if [ $COUNT == 0 ]
           then
             echo "MESSAGE=OK" >> $GITHUB_ENV
             echo "COLOR=green" >> $GITHUB_ENV
