@@ -13,8 +13,9 @@ jobs:
 
     strategy:
       fail-fast: false
+      max-parallel: 0
       matrix:
-        language: [en, fr, de, nl]
+        language: [en, fr, de, nl, cs, el, es, ko, lt, ru]
 
     steps:
       - uses: actions/checkout@v1

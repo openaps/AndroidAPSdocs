@@ -13,8 +13,9 @@ jobs:
 
     strategy:
       fail-fast: false
+      max-parallel: 0
       matrix:
-        language: [en, fr, de, nl]
+        language: [en, fr, de, nl, cs, el, es, ko, lt, ru]
 
     steps:
       - uses: actions/checkout@v1
@@ -73,7 +74,7 @@ jobs:
         uses: schneegans/dynamic-badges-action@v1.0.0
         with:
           auth: ${{ secrets.GIST_SECRET }}
-          gistID: 4d086495590ccb904468b66aecc48bdb
+          gistID: fc7bdcb3bc52e1ae006b2435ac6001b4
           filename: AndroidAPSdocs_broken_links_${{ matrix.language }}_master.json
           label: Broken links - ${{ matrix.language }}
           message: ${{ env.MESSAGE_LINKS }}
