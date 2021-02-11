@@ -24,9 +24,6 @@ jobs:
         with:
           python-version: "3.7"
 
-      - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
-
       - name: Install required packages
         run: |
           python -m pip install --exists-action=w --no-cache-dir -r requirements.rtd.txt
@@ -45,7 +42,7 @@ jobs:
           cat ${{ env.DOC_PATH }}conf.py
           cat docs/shared.conf.py
 
-      - name: Build
+      - name: Build docs
         run: |
           cd ${{ env.DOC_PATH }}
           sphinx-build -T -E -n -v -w output.txt -q -b html -d _build/doctrees . _build/html
@@ -62,23 +59,23 @@ jobs:
         # -D <setting=value> Override a configuration value set in the conf.py file.
         # --keep-going With -W option, keep going processing when getting warnings to the end of build, and sphinx-build exits with exit status 1. New in version 1.8.
 
-      - name: Process build results
+      - name: Process - Build results
         run: |
           cd ${{ env.DOC_PATH }}
           echo "BUILD_WARNINGS=$(wc -l < output.txt)" >> $GITHUB_ENV
           echo "MESSAGE=OK" >> $GITHUB_ENV
           echo "COLOR=green" >> $GITHUB_ENV
 
-      - name: Error on warning
+      - name: On - build warnings
         if: env.BUILD_WARNINGS != '0'
         run: |
           echo number of warning ${{ env.BUILD_WARNINGS }}
           echo "MESSAGE=${{ env.BUILD_WARNINGS }}" >> $GITHUB_ENV
           echo "COLOR=red" >> $GITHUB_ENV
-          exit 1
+          # exit 1
 
       - if: ${{ always() }}
-        name: Create the Badge
+        name: Create the Badge - Build warning
         uses: schneegans/dynamic-badges-action@v1.0.0
         with:
           auth: ${{ secrets.GIST_SECRET }}
