@@ -6,21 +6,21 @@ Avant de construire votre plateforme, vous devez faire beaucoup de lecture pour 
 
 [OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documention - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[Documentation OpenAPS - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
 [Documentation Loop - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
-[Fine-Tuning your settings - https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://seemycgm.com/2017/10/29/fine-tuning-settings/)
+[Ajustement de vos paramètres - https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
 [Tim Omer – Blogue Hypodiabetic - https://www.hypodiabetic.co.uk/](https://www.hypodiabetic.co.uk/)
 
 [DIYPS - https://diyps.org/](https://diyps.org/)
 
-[Diabetes and Technology - Where Diabetes meets Tech - https://www.diabettech.com/](https://www.diabettech.com/)
+[Diabète et technologie - Là où le diabète rencontre la Techno - https://www.diabettech.com/](https://www.diabettech.com/)
 
 [OpenAPS Reference Design - https://openaps.org/reference-design/](https://openaps.org/reference-design/)
 
-[Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters - https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+[Pourquoi nous avons régulièrement tort dans la durée d'action de l'insuline (DAI) que nous utilisons, et pourquoi est-ce important -https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
 [Quelles conclusions pouvons-nous tirer de l'étude de la sensibilité de l'insuline en utilisant la fonction Autosense de #OpenAPS ? https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/](https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
 
