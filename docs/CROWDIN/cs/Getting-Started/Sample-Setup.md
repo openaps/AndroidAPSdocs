@@ -18,7 +18,7 @@ Nicméně, data se automaticky nahrají do Nightscoutu, jakmile je navázáno da
 
 1. Samsung Galaxy S7
     
-    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS
+    * Alternativy: viz [seznam testovaných telefonů a hodinek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) pro AndroidAPS
 
 2. [DanaRS](http://www.sooil.com/eng/product/)
     
@@ -35,7 +35,7 @@ Nicméně, data se automaticky nahrají do Nightscoutu, jakmile je navázáno da
 
 4. Volitelné: Sony Smartwatch 3 (SWR50)
     
-    * Alternatives: All [watches with Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) should work fine, for details see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS (OS must be Android Wear)
+    * Alternativy: Pro AndroidAPS (OS musí být Android Wear) by měly všechny [ hodinky s Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) fungovat bez problémů. Další info najdete v [seznam testovaných telefonů a hodinek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit)
 
 ## Příprava Nightscoutu
 
@@ -104,7 +104,7 @@ Chcete-li to provést, proveďte na svém smartphonu následující kroky:
 
 ![Nastavení G5](../images/SampleSetupG5Settings.png)
 
-* NS Client activated (see [NS Client](../Configuration/Config-Builder#ns-profile) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
+* NS klient aktivvován (viz [NS Klient](../Configuration/Config-Builder#ns-profile) and [Nightscout nastavení](../Installing-AndroidAPS/Nightscout.md))
 
 ## Nainstalujte xDrip+
 
@@ -142,9 +142,9 @@ S hodinkami s Wear OS může být život s diabetem ještě nenápadnější. Ho
 
 ![Chytré hodinky](../images/SampleSetupSmartwatch.png)
 
-Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
+Podrobnosti o informacích zobrazených na ciferníku hodinek najdete [zde](../Configuration/Watchfaces.md).
 
-* Install the app "Android Wear" on your smartphone via the Google Play Store and connect the smartwatch according to the instructions there.
+* Nainstalujte si aplikaci „Wear OS" do svého smartphonu přes Google Play a připojte hodinky podle uvedených pokynů.
 * V AAPS zvolte hamburger menu (levý horní roh) > Konfigurace > Obecné (v dolní části seznamu) > Wear > Aktivovat na levé straně, klepněte na ozubené kolečko > Nastavení hodinek a aktivujte možnost `Řízení z hodinek Wear`
 * Na hodinkách: chcete-li změnit ciferník, dlouze podržte displej hodinek a vyberte `AAPSv2`
 * V případě potřeby restartujte obě zařízení.
