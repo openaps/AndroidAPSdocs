@@ -19,7 +19,7 @@ Pour plus de détails, lisez la suite ici.
    :glob:
    :caption: Changer de langue
 
-   Change language <./changelanguage.rst>
+   Changer de langue <./changelanguage.rst>
 
 .. _getting-started:
 
@@ -31,7 +31,7 @@ Pour plus de détails, lisez la suite ici.
    Sécurité avant tout <./Getting-Started/Safety-first.rst>
    Qu'est-ce qu'un système en boucle fermée <./Getting-Started/ClosedLoop.rst>
    Qu'est-ce qu'une boucle fermée avec AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Pump choices <./Getting-Started/Pump-Choices.md>
+   Choix de pompes <./Getting-Started/Pump-Choices.md>
    Wiki mises à jour et modifications <./Getting-Started/WikiUpdate.rst>
 
 .. _what-do-i-need:
@@ -178,4 +178,4 @@ Pour plus de détails, lisez la suite ici.
 
 	* Tous les noms de produits et de sociétés, marques commerciales, marques de service, marques déposées,  sont la propriété de leurs détenteurs respectifs. Leur utilisation est à titre informatif et n'implique aucune affiliation avec eux ni aucune approbation de leur part.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_
+	A noter - ce projet n'a aucun lien avec, et n'est pas approuvé par : `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ ou `Medtronic <https://www.medtronic.com/>`_
