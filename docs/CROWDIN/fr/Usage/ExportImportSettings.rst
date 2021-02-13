@@ -26,7 +26,7 @@ Entre autres, les informations suivantes font partie des paramètres exportés :
 
 Format de sauvegarde chiffré
 ==================================================
-Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`__ .
+La sauvegarde des paramètres est chiffrée par un mot de passe principal qui peut être défini dans `Préférences <../Configuration/Preferences.html#mot-de-passe-principal>`__ .
 
 
 Exporter les paramètres
