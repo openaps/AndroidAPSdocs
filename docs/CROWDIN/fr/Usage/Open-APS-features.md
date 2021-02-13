@@ -32,7 +32,7 @@ La fonctionnalité SMB contient des mécanismes de sécurité:
 
 **Vous devez avoir démarré [l'objectif 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) pour utiliser les SMB.**
 
-See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) and [Tim's info on SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
+Voir aussi : [Documentation OpenAPS pour oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) et [les infos de Tim sur les SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
 ### Max. U/h pour le débit temp Basal (OpenAPS "max-basal")
 
@@ -73,7 +73,7 @@ Soyez prudent et patient et modifiez les paramètres petit à petit. C'est diff�
 
 *Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur).*
 
-See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
+Voir aussi la [documentation OpenAPS pour SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Activer AMA Autosens
 
@@ -149,7 +149,7 @@ Valeur par défaut : 4 (ne doit pas être modifié sauf si vous en avez vraiment
 
 AAR, la version abrégée de "Assistance Améliorée Repas" est une fonctionnalité OpenAPS de 2017 (oref0). L'Assistance Améliorée Repas (AAR) de OpenAPS permet au système de réagir plus rapidement après un bolus repas si vous entrez les Glucides de façon fiable.
 
-You can find more information in the [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features#advanced-meal-assist-or-ama).
+Vous pouvez trouver plus d'informations dans la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features#advanced-meal-assist-or-ama).
 
 ### Max. U/h pour le débit temp Basal (OpenAPS "max-basal")
 
