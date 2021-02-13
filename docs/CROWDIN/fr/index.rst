@@ -109,7 +109,7 @@ Pour plus de détails, lisez la suite ici.
    Acces aux fichiers journaux <./Usage/Accessing-logfiles.md>
    Conseils d'utilisation de l'Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Export/Import des paramètres <./Usage/ExportImportSettings.rst>
-   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
+   Mode ingénierie xDrip <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
@@ -126,7 +126,7 @@ Pour plus de détails, lisez la suite ici.
    :caption: Dépannage
 
    Dépannage <./Usage/troubleshooting.rst>
-   Nightscout client <./Usage/Troubleshooting-NSClient.md>
+   Client Nightscout <../Usage/Troubleshooting-NSClient.html>
 
 .. toctree::
    :maxdepth: 1
