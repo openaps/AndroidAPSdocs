@@ -26,7 +26,7 @@ Les glucides qui se seront pris en compte plus tard sont en orange foncé dans l
 
 -----
 
-A way to handle fat and protein with that feature is described here: `https://adriansloop.blogspot.com/2018/04/page-margin-0.html <https://adriansloop.blogspot.com/2018/04/page-margin-0.html>`_
+Une façon de gérer les graisses et les protéines avec cette fonctionnalité est décrite ici: `https://adriansloop.blogspot.com/2018/04/page-margin-0.html <https://adriansloop.blogspot.com/2018/04/page-margin-0.html>`_
 
 -----
 
