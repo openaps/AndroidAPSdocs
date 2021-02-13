@@ -80,4 +80,4 @@ Vous pouvez également supprimer le changement de profil directement dans mLab :
 ### 'DAI 3h trop court'
 
 * Le message d'erreur apparaîtra si votre durée d'action de l'insuline dans votre profil est à une valeur que AndroidAPS ne pense pas être exacte. 
-* Read about [selecting the right DIA](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles) to continue.
+* Lisez la section [sélection de la valeur de DAI](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) et modifiez-la dans votre profil, puis faites un [Changement de profil](../Usage/Profiles) pour continuer.
