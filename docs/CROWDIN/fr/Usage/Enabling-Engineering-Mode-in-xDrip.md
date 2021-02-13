@@ -1,4 +1,4 @@
-# xDrip Engineering Mode
+# Mode Ingénierie xDrip
 
 L'activation du mode Ingénierie dans xDrip+ active les fonctions étendues et expérimentales dans l'application.
 
