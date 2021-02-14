@@ -127,7 +127,7 @@ Application non installée.
 
 Application installée mais ancienne version
 ==================================================
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Installing-AndroidAPS/Update-to-new-version.html#update-your-local-copy>`_.
+Si vous avez compilé l'application, que vous l'avez transferrée dans votre téléphone et installée avec succès mais que le numéro de version est resté le même, vous avez peut-être omis de `mettre à jour votre copie locale <../Installing-AndroidAPS/Update-to-new-version.html#mettez-a-jour-votre-copie-locale>`_.
 
 Rien ci-dessus n'a marché
 ==================================================
