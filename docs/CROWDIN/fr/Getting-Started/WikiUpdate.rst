@@ -43,7 +43,7 @@ Mai 2020
 
 Avril 2020
 ==================================================
-* `Backdate insulin <../Usage/CPbefore26.html#carbs-bolus>`_ (i.e. injectée avec une seringue)
+* `Antidater l'insulin <../Usage/CPbefore26.html#glucides-et-bolus>`_ (par ex. injectée avec une seringue)
 * `La prise en charge Android 6 sera interrompue dans la prochaine version majeure <../Module/module.html#telephone>`_
 
 Mars 2020
@@ -58,7 +58,7 @@ Février 2020
 * `Avertissement pour l'automatisation <../Usage/Automation.html#bonnes-pratiques-et-avertissements>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - courte explication
 * `Alternatives à Careportal <../Usage/CPbefore26.html>`_
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
+* La fonction `Bolus étendus <../Usage/Extended-Carbs.html#bolus-etendu>`_ désactive la boucle fermée
 * Nouveau `plugin Profil Local <../Configuration/Config-Builder.html#profil-local-recommande>`_
 * `Exemple de configuration <../Getting-Started/Sample-Setup.html>`_ - mise à jour Dexcom G6
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - Nouvelles fonctions majeures
