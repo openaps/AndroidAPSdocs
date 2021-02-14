@@ -81,7 +81,7 @@ Novembre 2019
 ==================================================
 * `Automatisation - Désactiver quand vous désactivez la boucle <../Usage/Automation.html#remarque-importante>`_
 * `Remplacement du transmetteur Dexcom G6 <../Configuration/xdrip.html#remplacement-du-transmetteur>`_
-* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
+* `Bolus étendus - pourquoi ils ne fonctionnent pas dans le cadre d'une boucle <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
 * `Écran d'accueil - lignes sur le graphique <../Getting-Started/Screenshots.html#section-f-graphique-principal>`_
 * `Insight - Désactiver les valeurs absolues dans NS Client <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_
@@ -96,7 +96,7 @@ Novembre 2019
 
 Octobre 2019
 ==================================================
-* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
+* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ mises à jour (en particulier sur la `page de mise à jour <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `AccuChek Insight - options d'enregistrement <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * `Le calcul des GA sur une page distincte <../Usage/COB-calculation.html>`_
 * `GA - mauvaise detection de la valeur des GA <../Usage/COB-calculation.html#detection-de-ga-errones>`_
