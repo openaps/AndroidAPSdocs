@@ -8,7 +8,7 @@
 * Un dispositif Accu-Chek Smartpix V1 ou Accu-Chek Realtyme, ainsi que le logiciel de configuration Accu-Chek 360. (Sur demande Roche envoie gratuitement ces dispositifs Smartpix et la configuration logiciel à leurs clients, sauf en France ou il faut contacter son prestataire).
 * Un téléphone compatible : un smarphone Android avec comme système LineageOS 14.1 (anciennement CyanogenMod) ou Android 8.1 (Oreo). 
 * LineageOS 14.1 (ou plus) doit être une version récente d’au moins juin 2017 car les changements nécessaires pour se connecter à la pompe Combo ont été mis en œuvre seulement à ce moment-là. 
-* A list of phones can be found in the [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) document.
+* Une liste de téléphones compatibles se trouvent dans le document [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
 * Cette liste n’est pas une liste complète. Elle reflète l’expérience personnelle de quelques utilisateurs. Nous vous encourageons à partager également votre expérience et ainsi aider les autres.
 * Ayez bien en tête que bien qu'Android 8.1 autorise la communication avec le Combo, il y a toujours des problèmes avec AAPS sur 8.1.
 * Pour les utilisateurs avancés, il est possible d'effectuer l'appairage sur un téléphone rooté et de le transférer vers un autre téléphone qui doit également être rooté pour l'utiliser avec Ruffy/AAPS. Ceci permet d'utiliser des téléphones avec [Android 8.1](https://github.com/gregorybel/combo-pairing/blob/master/README.md) mais n'a pas été largement testé.
@@ -102,7 +102,7 @@ Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
 
 * Si le délai d'affichage de l'écran de la pompe Combo est défini sur 5s, vous pouvez essayer avec 40s (paramètre d'origine). Par expérience la durée entre le moment ou la pompe est affichée dans le téléphone et celui où le téléphone est sélectionné est d'environ 5-10s. Dans de nombreux autres cas, le couplage expire sans succès. 
 * Plus tard, vous devrez le redéfinir sur 5 s pour répondre aux paramètrage du combo dans AAPS.
-* Si la pompe n'affiche pas du tout le téléphone comme appareil de couplage, la puce Bluetooth de votre téléphone n'est probablement pas compatible avec la pompe. Vérifiez que vous exécutez une version de **LineageOS ≥ 14.1** ou **Android ≥ 8.1 (Oreo)**. Si possible, essayez un autre smartphone. You can find a list of already successfully used smartphones under \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). 
+* Si la pompe n'affiche pas du tout le téléphone comme appareil de couplage, la puce Bluetooth de votre téléphone n'est probablement pas compatible avec la pompe. Vérifiez que vous exécutez une version de **LineageOS ≥ 14.1** ou **Android ≥ 8.1 (Oreo)**. Si possible, essayez un autre smartphone. Vous pouvez trouver la liste des téléphones déjà utilisés avec succès sous \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). 
 
 9. Ensuite la pompe doit afficher un code de sécurité à 10 chiffres, et Ruffy affiche un écran pour le renseigner. Donc entrez le dans Ruffy et vous devriez être prêt à partir.
 10. Redémarrer le téléphone.
