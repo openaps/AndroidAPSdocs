@@ -25,7 +25,7 @@ Terminer les objectifs
 
 Définir le mot de passe principal
 -----------------------------------------------------------
-* Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`__ as they are encrypted as of version 2.7.
+* Nécessaire pour pouvoir `exporter les paramètres <../Usage/ExportImportSettings.html>`__ car ils sont chiffrés depuis la version 2.7.
 * Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
 * Cliquez sur le triangle sous " Général "
 * Cliquez sur " Mot de passe principal "
