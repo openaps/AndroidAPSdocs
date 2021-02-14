@@ -440,36 +440,36 @@ Champs
 Icônes
 -----
 
-.. list-table:: 
+.. liste-table:: 
       
     * - |refresh_pod_status|
-      - **REFRESH:** 
+      - **ACTUALISER:** 
 			
 	Envoie une commande d'actualisation au pod actif pour mettre à jour la communication
 			 
 	* A utiliser pour actualiser l'état du pod et rejeter les champs qui contiennent le texte (incertain).
 	* Voir la section `Dépannage <#depannage>`__ ci-dessous pour plus d'informations.
     * - |pod_management|  	 
-      - **POD MGMT:**
+      - **GEST. POD:**
 
 	Permet d'accéder au menu de gestion du pod   
     * - |ack_alerts|		 
-      - **ACK ALERTS:**
+      - **ACCEPTER ALERTES:**
    			 
 	Lorsque vous cliquez dessus, cela désactivera les bips d'expiration du pod et les notifications. 
 			 
 	* Le bouton ne s'affiche que lorsque la durée d'utilisation du pod dépasse le seuil d'alerte d'expiration
 	* En cas de désactivation réussi, cette icône n'apparaîtra plus.			 
     * - |set_time|	 
-      - **SET TIME:**
+      - **DÉFINIR L'HEURE:**
    
 	Lorsque vous cliquez dessus, cela mettra à jour l'heure du pod avec l'heure actuelle de votre téléphone.
     * - |suspend|  		 
-      - **SUSPEND:**
+      - **SUSPENDRE:**
    
 	Suspend le pod actif
     * - |resume|	 
-      - **RESUME DELIVERY:**
+      - **REPRENDRE L'INJECTION:**
    
 	Réactive l'injection d'insuline du pod actif actuellement suspendu
 
@@ -481,14 +481,14 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
 
 |Omnipod_Tab_Pod_Management|
 
-.. list-table:: 
+.. liste-table:: 
 
     * - |activate_pod|
-      - **Activate Pod**
+      - **Activer Pod**
    
         Amorce et active un nouveau pod
     * - |deactivate_pod|
-      - **Deactivate Pod**
+      - **Désactiver Pod**
  
         Désactive le pod actuellement actif.
 		 
@@ -496,11 +496,11 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
 	* Utilisez cette commande pour désactiver un pod urlant (erreur 49).
 	* Si le bouton est désactivé (grisé), utilisez le bouton Supprimer Pod.
     * - |play_test_beep|
-      - **Play test beep**
+      - **Tester les bips**
  
  	Joue un bip de test unique sur le pod quand vous cliquez dessus.
     * - |discard_pod|
-      - **Discard pod**
+      - **Supprimer Pod**
 
 	Désactive et supprime l'état d'un pod qui ne répond pas lorsque vous cliquez dessus.
 			      
@@ -510,18 +510,18 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
 	* Un **pod est bloqué** pendant le processus d'appairage entre deux étapes
 	* Un **pod ne s'appaire tout simplement pas.**
     * - |pod_history|
-      - **Pod history** 
+      - **Historique du Pod** 
    
    	Affiche l'historique de l'activité du pod actif
     * - |rileylink_stats|
-      - **RileyLink stats:**
+      - **Stats RileyLink:**
    
         Naviguer vers l'écran des statistiques du RileyLink qui affiche les paramètres actuels et l'historique de la connexion du RileyLink
 
 	* **Paramètres** - affiche les paramètres du RileyLink et du pod actif
 	* **Historique** - affiche l'historique de communication du RileyLink et du Pod
     * - |reset_rileylink_config|
-      - **Reset RileyLink Config** 
+      - **Réinitialiser la config. RileyLink** 
    
    	Lorsque vous cliquez dessus, ce bouton réinitialise la configuration du périphérique de communication pod actuellement connecté. 
 			      
@@ -533,7 +533,7 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
 				
 	* Voir les `remarques additionnelles <#remarque-concernant-reinit-config-rileyLink>`__ à la fin de ce tableau
     * - |pulse_log|
-      - **Read pulse log:** 
+      - **Lire Journal d'impulsions:** 
     
     	Copie le journal d'impulsion du pod actif dans le presse-papiers		    
 
@@ -592,11 +592,11 @@ Fournit des alertes AAPS et des notifications Nightscout pour l'arrêt, l'expira
 
 * Notez qu'une notification AAPS sera TOUJOURS émise pour toute alerte après une première communication avec le pod qui a déclenchée l'alerte. Rejeter la notification ne rejettera PAS l'alerte SAUF SI Accepter automatiquement les alertes Pod est activé. Pour rejeter MANUELLEMENT l'alerte, vous devez aller dans l'onglet Omnipod (POD) et appuyez sur le bouton ACCEPTER ALERTES*
 	
-* **\*Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
-* **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
-* **\*Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
-* **Number of units:** The number of units at which to trigger the pod low reservoir alert.
-* **Automatically acknowledge Pod alerts:** When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
+* **\*Rappel d'expiration activé :** Activer ou désactiver le rappel d'expiration du pod défini pour se déclencher lorsque le nombre défini d'heures avant l'arrêt est atteint.
+* **Heures avant arrêt :** Définit le nombre d'heures avant l'arrêt du pod actif, ce qui déclenchera ensuite l'alerte de rappel d'expiration.
+* **\*Alerte Réservoir bas activée :** Activer ou désactiver une alerte lorsque le nombre d'unités restantes dans le réservoir atteint la limite définie dans le champ "Nombre d'unités".
+* **Nombre d'unités :** Défini le nombre d'unités à partir de laquelle l'alerte Réservoir bas est activée.
+* **Accepter automatiquement les alertes Pod :** Lorsqu'elles sont activées, une notification sera toujours publiée, cependant immédiatement après la pemière communication avec le pod après que l'alerte ait été émise, elle sera désormais automatiquement acceptée et l'alerte sera rejetée.
 
 Notifications
 -------------
@@ -651,7 +651,7 @@ This process will show how to remove the currently selected pod communication de
 
     |RileyLink_Setup_Remove_4|
 
-Add Currently Selected Pod Communication Device (RileyLink)
+Ajouter le Périphérique de communication pod actuellement sélectionné (RileyLink)
 -----------------------------------------------------------
 
 This process will show how to add a new pod communication device to the Omnipod Driver settings.
