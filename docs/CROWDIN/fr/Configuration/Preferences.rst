@@ -264,7 +264,7 @@ Selon vos paramètres dans le `Générateur de configuration <../Configuration/C
 Paramètres OpenAPS AMA
 -----------------------------------------------------------
 * Permet au système de reagir plus rapidement après un bolus de repas SI vous entrez les Glucides de manière fiable. 
-* More details about the settings and Autosens can be found in the `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
+* Plus de détail sur les paramètres et l'Autosens peuvent être trouvés dans la `documentation OpenAPS <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
 
 Débit max en U/h pour une Temp Basal
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
