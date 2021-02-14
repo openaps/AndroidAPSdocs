@@ -40,7 +40,7 @@ Exporter les paramètres
 
 * La date et l'heure d'exportation seront automatiquement ajoutées au nom du fichier et affichées avec le chemin.
 * Cliquez sur 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
+* Entrez le `mot de passe principal <../Configuration/Preferences.html#mot-de-passe-principal>`__ et cliquez 'OK'.
 * L'exportation réussie sera affichée en bas de l'écran.
 
 .. image:: ../images/AAPS_ExportSettings2.png
@@ -60,7 +60,7 @@ Importer les paramètres
 * Tous les fichiers présents dans le dossier AAPS/préférences/ de votre téléphone seront affichés dans la liste.
 * Sélectionnez un fichier.
 * Confirmez l'importation en cliquant sur 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
+* Entrez le `mot de passe principal <../Configuration/Preferences.html#mot-de-passe-principal>`__ et cliquez 'OK'.
 
 .. image:: ../images/AAPS_ImportSettings2.png
   :alt: AndroidAPS importer les paramètres 2
