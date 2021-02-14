@@ -601,39 +601,39 @@ Fournit des alertes AAPS et des notifications Nightscout pour l'arrêt, l'expira
 Notifications
 -------------
 
-Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful. 
+Fournit des notifications AAPS et des alertes audibles sur le téléphone lorsqu'il n'est pas certain que les événements DBT, SMB ou bolus aient réussi. 
 
-*NOTE: These are notifications only, no audible beep alerts are made.*
+*REMARQUE : Ce ne sont que des notifications, aucune alerte sonores n'est faite.*
 
-* **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
-* **\*Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
-* **\*Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
+* **\*Son pour les notifications DBT incertains activé :** Activer ou désactiver ce paramètre pour déclencher une alerte audible et une notification visuelle lorsque AAPS n’est pas certain si un DBT a été défini avec succès.
+* **\*Son pour les notifications SMB incertains activé :** Activer ou désactiver ce paramètre pour déclencher une alerte audible et une notification visuelle lorsque AAPS n’est pas certain si un SMB a été correctement délivré.
+* **\*Son pour les notifications bolus incertains activé :** Activer ou désactiver ce paramètre pour déclencher une alerte audible et une notification visuelle lorsque AAPS n’est pas certain si un bolus a été correctement délivré.
    
 Autres
 -----
 
-Provides advanced settings to assist debugging.
+Fournit des paramètres avancés pour aider au débogage.
 	
-* **Show Suspend Delivery button in Omnipod tab:** Hide or display the suspend delivery button in the **Omnipod (POD)** tab.
-* **Show Pulse log button in Pod Management menu:** Hide or display the pulse log button in the **Pod Management** menu.
-* **Show RileyLink Stats button in Pod Management menu:** Hide or display the RileyLink Stats button in the **Pod Management** menu.
-* **\*DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
+* **Montrer le bouton Suspendre l'injection dans l'onglet Omnipod :** Masquer ou afficher le bouton de suspension de l'injection dans l'onglet **Omnipod (POD)**.
+* **Afficher le bouton Journal d'impulsions dans le menu de gestion des pods :** Masquer ou afficher le bouton de journal d'impulsion dans le menu **Gestion du Pod**.
+* **Afficher le bouton Stats RileyLink dans le menu de gestion du pod :** Masquer ou afficher le bouton des stats du RileyLink dans le menu **Gestion du Pod**.
+* **\*Changement de Zone/Heure Activé :** permet de détecter automatiquement les changements de fuseau horaire ou de changement d'heure si le téléphone est utilisé dans une zone où c'est actif.
 
 Changement ou suppression d'un périphérique de communication pod actif (RileyLink)
 --------------------------------------------------------------------
 
-With many alternative models to the original RileyLink available or the need have multiple/backup versions of the same pod communication device (RileyLink), it becomes necessary to switch or remove the selected pod communication device (RileyLink) from Omnipod Setting configuration. 
+Avec de nombreux modèles alternatifs au RileyLink d'origine disponibles ou la nécessité d'avoir plusieurs versions de sauvegarde du même périphérique de communication pod (RileyLink), il est nécessaire de pouvoir changer ou de supprimer le périphérique de communication pod sélectionné (RileyLink) des paramètres du Driver Omnipod. 
 
-The following steps will show how to **Remove** and existing pod communication device (RileyLink) as well as **Add** a new pod communication device.  Executing both **Remove** and **Add** steps will switch your device.
+Les étapes suivantes montreront comment **Supprimer** un périphérique de communication pod existant (RileyLink) et en **Ajouter** un nouveau.  Exécuter à la fois les étapes **Supprimer** et **Ajouter** changera votre périphérique.
 
 1. Access the **RileyLink Selection** menu by selecting the **3 dot menu (1)** in the upper right hand corner of the **Omnipod (POD)** tab and selecting **Omnipod preferences (2)** from the dropdown menu. On the **Omnipod Settings** menu under **RileyLink Configuration (3)** press the **Not Set** (if no device is selected) or **MAC Address** (if a device is present) text to open the **RileyLink Selection** menu. 
 
     |Omnipod_Settings_2| |RileyLink_Setup_2|  
 
-Remove Currently Selected Pod Communication Device (RileyLink)
+Supprimer le Périphérique de communication pod actuellement sélectionné (RileyLink)
 --------------------------------------------------------------
 
-This process will show how to remove the currently selected pod communication device (RileyLink) from the Omnipod Driver settings.
+Le processus ci-dessous vous montrera comment supprimer le périphérique de communication pod actuellement sélectionné (RileyLink) des paramètres du Driver Omnipod.
 
 1. Under **RileyLink Configuration** press the **MAC Address (1)** text to open the **RileyLink Selection** menu. 
 
@@ -643,7 +643,7 @@ This process will show how to remove the currently selected pod communication de
 
     |RileyLink_Setup_Remove_2|
 
-3. At the confirmation prompt press **Yes (4)** to confirm the removal of your device.
+3. À la demande de confirmation, appuyez sur **Oui (4)** pour confirmer la suppression de votre appareil.
 
     |RileyLink_Setup_Remove_3|
     
@@ -654,7 +654,7 @@ This process will show how to remove the currently selected pod communication de
 Ajouter le Périphérique de communication pod actuellement sélectionné (RileyLink)
 -----------------------------------------------------------
 
-This process will show how to add a new pod communication device to the Omnipod Driver settings.
+Ce processus montrera comment ajouter un nouveau périphérique de communication pod aux paramètres du pilote Omnipod.
 
 1. Under **RileyLink Configuration** press the **Not Set (1)** text to open the **RileyLink Selection** menu. 
 
