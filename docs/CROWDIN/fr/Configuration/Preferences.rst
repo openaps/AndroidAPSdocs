@@ -204,10 +204,10 @@ Injecter cette partie de Bolus calculée par l’assistant
 
 Assistant bolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+* Si vous exécutez `l'assistant de Bolus <../Getting-Started/Screenshots.html#assistant-bolus>`__ et que la glycémie est supérieure à 10 mmol (180 mg/dl) un bolus de correction sera proposé.
 * Si le bolus de correction est accepté, **aucun glucide** ne sera enregistré.
 * Une alarme sera déclenchée lorsque la glycémie est au bon niveau pour commencer à manger.
-* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ again and enter the amount of carbs you want to eat.
+* Vous devez à nouveau sélectionner l'`Assistant Bolus <../Getting-Started/Screenshots.html#assistant-bolus>`__ et entrer la quantité de glucides que vous voulez manger.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
     :alt: Message assistant bolus
