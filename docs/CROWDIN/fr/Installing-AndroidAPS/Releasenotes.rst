@@ -172,7 +172,7 @@ Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une 
 
 Nouvelles fonctionnalités majeures
 ------------------
-* Allow to enter only ``https://`` in NSClient settings
+* Permet de ne rentrer que ``https://`` dans les paramètres NSClient
 * Correction bug d'affichage `Impact Glycémique <../Getting-Started/Glossary.html>`_ sur les montres
 * Correction de petits bugs de l'interface utilisateur
 * Correction plantages Insight
@@ -201,7 +201,7 @@ Nouvelles fonctionnalités majeures
   * Les anciens changements de profil peuvent être dupliqués veres un nouveau profil local (décalage horaire et pourcentage appliqués)
   * Sélecteur pour les cibles temps
 * Le Profil Simple est supprimé
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
+* La fonction `Bolus étendus <../Usage/Extended-Carbs.html#bolus-etendu>`_ désactive la boucle fermée
 * Plugin MDT : Correction du bug entrées dupliquées
 * Les unités ne sont pas définies dans le profil mais c'est un paramètre global
 * Ajout de nouveaux paramètres à l'assistant de démarrage
@@ -224,7 +224,7 @@ Version 2.5.1
 ==================================================
 Date de sortie : 31-10-2019
 
-Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
+Veuillez lire les `Remarques importantes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ et`limitations <../Installing-AndroidAPS/Releasenotes.html#cette-mise-a-jour-est-elle-pour-moi-n-est-actuellement-pas-pris-en-charge>`_ listées pour la `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
 * Correction d'un bug dans le statut du réseau qui entraînait des plantages fréquent (pas critique mais gaspillerait beaucoup d'énergie).
 * Nouvelle gestion des versions qui permettra de faire des mises à jour mineures sans déclencher la notification de mise à jour.
 
@@ -324,7 +324,7 @@ Nouvelles fonctionnalités majeures
 
 Divers
 --------------------------------------------------
-* If you are using non default ``smbmaxminutes`` value you have to setup this value again
+* Si vous n'utilisez pas la valeur par défaut de ``smbmaxminutes`` vous devez configurer à nouveau cette valeur
 
 
 Version 2.0
