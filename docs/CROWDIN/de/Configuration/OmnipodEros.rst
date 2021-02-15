@@ -26,7 +26,7 @@ Hardware- und Software-Anforderungen
 
   Komponente, die AndroidAPS betreibt und Steuerungsbefehle an das Pod-Kommunikationsgerät sendet.
 
-      +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit>`__ with a version of AAPS 2.8 and related `components setup <../index.html#component-setup>`__
+      +  unterstütze `Android Smartphones <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit>`__ mit AAPS ab Version 2.8 und zugehörigem `Komponenten-Setup <../index.html#component-setup>`__
 
 * |Omnipod_Pod| **Insulin-Pumpe** 
 
@@ -69,7 +69,7 @@ On the **RileyLink Selection** screen press the **Scan** button and select your 
 
 Press the **Next** button to proceed with the rest of the **Setup Wizard.**  It can take up to one minute for the selected RileyLink to initialize and the **Next** button to become active.
 
-Detailed steps on how to setup your pod communication device are listed below in the `RileyLink Setup Section <#rileylink-setup>`__.
+Details zur Einrichtung des Pod-Kommunikationsgeräts finden sich weiter unten im Bereich `RileyLink Setup <#rileylink-setup>`__.
 
 **ODER**
 
