@@ -28,11 +28,11 @@ Utilisation
   .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
     :alt: Error: Absorption lente des glucides
 
-* `Commandes SMS <../Children/SMS-Commands.html#depannage>`_
+* `Commandes SMS <../Children/SMS-Commands.html#resolution-de-problemes>`_
 
 MGC
 ==================================================
-* `Généralités <../Hardware/GeneralCGMRecommendation.html#depannage>`_
+* `Généralités <../Hardware/GeneralCGMRecommendation.html#resolution-de-problemes>`_
 * `Dexcom G6 <../Hardware/DexcomG6.html#depannage-g6>`_
 * `Libre 2 <../Hardware/Libre2.html#astuces-et-depannages>`_
 * `xDrip - pas de données MGC <../Configuration/xdrip.html#identifier-le-recepteur>`_
