@@ -148,7 +148,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
    
    Cette ligne de prédiction montre comment la trajectoire de l'IA changerai si la pompe arrêtait toute injection d'insuline (DBT 0%).
 
-* Ligne **jaune foncé**: [RNS](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (Repas Non Signalés)
+* Ligne **jaune foncé**: [RNS](../Configuration/Sensitivity-detection-and-COB#sensibilite-oref1) (Repas Non Signalés)
    
    Les Repas Non Signalés signifient qu'une augmentation significative de la glycémie liée aux repas, à l'adrénaline ou à d'autres facteurs est détectée. Cette ligne de prédiction est similaire à la ligne ORANGE GA, mais elle suppose que les déviations diminueront de façon constante (en étendant le taux de réduction actuel).
 
@@ -226,8 +226,8 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 ![Bouton Insuline](../images/Home2020_ButtonInsulin.png)
 
-* Permet d'entrer une certaine quantité d'insuline sans utiliser l'[Assistant bolus](#bolus-wizard).
-* En cochant la case, vous pouvez démarrer automatiquement votre [cible temporaire Repas imminent](../Configuration/Preferences#default-temp-targets).
+* Permet d'entrer une certaine quantité d'insuline sans utiliser l'[Assistant bolus](#assistant-bolus).
+* En cochant la case, vous pouvez démarrer automatiquement votre [cible temporaire Repas imminent](../Configuration/Preferences#cibles-temporaires-par-defaut).
 * Si vous ne voulez pas injecter de bolus avec la pompe mais juste enregistrer la quantité d'insuline (par ex. pour de l'insuline injectée avec un stylo ou une seringue), cochez la case correspondante.
 
 #### Glucides
@@ -311,7 +311,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 * Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. 
 * Donc si vous voulez faire un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! 
-* Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation.html#detection-de-ga-errones).
+* Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation#detection-de-ga-errones).
 
 ## Onglet Actions
 
@@ -451,7 +451,7 @@ Historique des traitements suivants :
 * Basal temporaire
 * [Cible temp.](../Usage/temptarget.md)
 * [Changement de profil](../Usage/Profiles.md)
-* [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entrées dans l'onglet Action et notes dans les dialogues
+* [Careportal](../Usage/CPbefore26#careportal-arrete) - notes entrées dans l'onglet Action et notes dans les dialogues
 
 ## Source Gly - xDrip, Application Dexcom (patchée)...
 
