@@ -145,7 +145,7 @@ Android Studio pasisveikinimo ekrane spustelėkite mažą trikampį (1. kitame p
 
 * Nespauskite "Background" (vykdyti fone), o kol duomenų saugykla yra klonuojama!
     
-    ![Nėra foninio veiksmo](../images/AndroidStudio_NoBackground.png)
+    ![Nėra foninio veiksmo](../images/AndroidStudio361_15.png)
 
 * Po duomenų saugyklos sėkmingo klonavimo, atidarykite savo vietinę kopiją, paspausdami "Yes".
     
