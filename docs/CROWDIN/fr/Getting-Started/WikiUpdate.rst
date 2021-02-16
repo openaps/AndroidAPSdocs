@@ -5,7 +5,7 @@ Janvier 2021
 ==================================================
 * `Onglet Actions <../Getting-Started/Screenshots.html#onglet-actions>`_ - plus de détails dans la page des 'Écrans AndroidAPS'
 * Dexcom G6 avec `Votre propre application Dexcom <../Hardware/DexcomG6.html#si-vous-utilisez-g6-avec-votre-propre-application-dexcom>`_
-* Information sur le `niveau batterie capteur <../Getting-Started/Screenshots.html#sensor-level-battery>`_
+* Information sur le `niveau batterie capteur <../Getting-Started/Screenshots.html#niveau-du-capteur-batterie>`_
 * `Objectifs <../Usage/Objectives.html#objectif-3-prouver-ses-connaissances>`_ - nouvelles questions
 * Autres `nouvelles fonctions d'AndroidAPS 2.8.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-8-0>`_
 
@@ -104,7 +104,7 @@ Octobre 2019
 * `Mise à jour des objectifs version 2.5 <../Usage/Objectives.html>`_
 * `Mise à jour des préférences <../Configuration/Preferences.html>`_
 * `Inhibiteurs SGLT-2 - ne pas utiliser lors de la boucle <../Module/module.html#ne-pas-utiliser-d-inhibiteurs-sglt-2>`_
-* `Dépannage des commandes SMS <../Children/SMS-Commands.html#depannage>`_
+* `Dépannage des commandes SMS <../Children/SMS-Commands.html#resolution-de-problemes>`_
 * `xDrip - Mise à jour du remplacement de l'émetteur G6 <../Configuration/xdrip.html#remplacement-du-transmetteur>`_
 
 Septembre 2019
