@@ -50,7 +50,7 @@ Vous devez définir les éléments suivants : (voir photo ci-dessus)
 
 - **Numéro de série de la pompe** : Vous pouvez trouver cela sur le côté arrière, entrée SN. Vous ne devez prendre que les chiffres, votre numéro de série est composé de 6 chiffres.
 - **Type de pompe** : quel type de pompe vous avez (i.e. 522). 
-- **Fréquence de la pompe** : Il y a deux versions de la pompe Medtronic utilisant des fréquences différentes (si vous n'êtes pas certain de quelle fréquence la pompe utilise, regardez [FAQ](../Configuration/MedtronicPump#faq)) : 
+- **Fréquence de la pompe** : Il y a deux versions de la pompe Medtronic utilisant des fréquences différentes (si vous n'êtes pas certain de quelle fréquence la pompe utilise, regardez [FAQ](../Configuration/MedtronicPump#questions-frequentes)) : 
     - pour les US & le Canada, la fréquence utilisée est 916 Mhz
     - pour le reste du monde, la fréquence utilisée est de 868 Mhz
 - **Bolus Max sur la Pompe (U)** (en une heure) : doit avoir la même valeur que sur la pompe. Cela limite la quantité d'insuline que vous pouvez avoir en Bolus. Si vous allez au delà, le Bolus ne sera pas défini et une erreur sera retournée. Le Max qui peut être utilisé est 25, mais surtout veuillez définir une valeur correcte pour vous-même afin de ne pas avoir de surdose d'insuline.
@@ -80,8 +80,8 @@ Sur l'onglet de la pompe, vous pouvez voir plusieurs lignes qui affichent l'éta
 Sur la partie inférieure, nous avons 3 boutons :
 
 - **Actualiser** est pour rafraîchir l'état. Cette action ne doit être utilisée que lorsque la connexion n'a pas été établie pendant longtemps, car cette action va réinitialiser les données relatives à la pompe (extraction de l'historique, heure de la pompe, récupération du profil, état de la pile, etc).
-- **Historique de la Pompe** : Affiche l'historique de la pompe (voir [ci-dessous](../Configuration/MedtronicPump#pump-history))
-- **État du RileyLink**: Affiche l'état du RileyLink (voir [ci-dessous](../Configuration/MedtronicPump#rl-status-rileylink-status))
+- **Historique de la Pompe** : Affiche l'historique de la pompe (voir [ci-dessous](../Configuration/MedtronicPump#historique-pompe))
+- **État du RileyLink**: Affiche l'état du RileyLink (voir [ci-dessous](../Configuration/MedtronicPump#etat-rl-rileylink-etat))
 
 ## Historique pompe
 
