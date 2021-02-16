@@ -145,7 +145,7 @@ Na úvodní obrazovce aplikace Android Studio klepněte na malý trojúhelník (
 
 * Neklikejte na tlačítko "Background" v průběhu klonování úložiště!
     
-    ![Žádná akce na pozadí](../images/AndroidStudio_NoBackground.png)
+    ![Žádná akce na pozadí](../images/AndroidStudio361_15.png)
 
 * Po úspěšném naklonování úložiště otevřete svou lokální kopii kliknutím na tlačítko "Yes".
     
