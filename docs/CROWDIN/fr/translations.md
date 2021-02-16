@@ -62,7 +62,7 @@ Lorsqu'un correcteur approuve une traduction, elle sera ajoutée à la prochaine
 
 #### Traduction des liens dans les fichiers Markdown (.md)
 
-À l'heure actuelle deux [formats de documents](./make-a-PR#code-syntax) sont utilisés dans les docs. Alors que les fichiers écrits avec la syntaxe reStructuredText (.rst) affichent toujours l'adresse de lien dans Crowdin, pour les fichiers écrit avec la syntaxe Markdown (.md), vous devrez peut-être activer l'affichage des balises HTML pour traduire l'adresse du lien.
+À l'heure actuelle deux [formats de documents](./make-a-PR#syntaxe-du-code) sont utilisés dans les docs. Alors que les fichiers écrits avec la syntaxe reStructuredText (.rst) affichent toujours l'adresse de lien dans Crowdin, pour les fichiers écrit avec la syntaxe Markdown (.md), vous devrez peut-être activer l'affichage des balises HTML pour traduire l'adresse du lien.
 
 * * *
 
