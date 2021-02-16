@@ -76,7 +76,7 @@
 
 * Si la pompe est complètement nouvelle, vous devez **faire un bolus sur la pompe** pour que celle-ci crée une première entrée dans l'historique.
 * Avant d'activer le plugin Combo dans AAPS, assurez-vous que votre profil est bien configuré et activé(!) et que votre profil de basal est à jour car AAPS synchronisera le profil basal à la pompe.
-* Ensuite, activez le [Plugin Combo](../Configuration/Config-Builder.html#pompe). 
+* Ensuite, activez le [Plugin Combo](../Configuration/Config-Builder#pompe). 
 * Appuyez sur le bouton *Actualiser* dans l'onglet Combo pour initialiser la pompe.
 * Pour vérifier votre configuration, avec la pompe **déconnectée**, utilisez AAPS pour définir un DBT de 500% pendant 15 min et faite un bolus.
 * La pompe doit normalement avoir un DBT en cours et un bolus dans l'historique. AAPS doit aussi de son côté montrer le DBT actif et le bolus délivré.
