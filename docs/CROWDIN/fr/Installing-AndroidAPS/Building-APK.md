@@ -145,7 +145,7 @@ Sur l'écran d'accueil d'Android Studio, cliquez sur le petit triangle (1. de la
 
 * Ne cliquez pas sur "Background" pendant que le répertoire est cloné !
     
-    ![Aucune action en arrière-plan](../images/AndroidStudio_NoBackground.png)
+    ![Aucune action en arrière-plan](../images/AndroidStudio361_15.png)
 
 * Une fois le clonage du répertoire réussi, ouvrez votre copie locale en cliquant sur "Yes".
     
