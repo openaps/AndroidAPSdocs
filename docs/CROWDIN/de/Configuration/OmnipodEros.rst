@@ -69,7 +69,7 @@ On the **RileyLink Selection** screen press the **Scan** button and select your 
 
 Press the **Next** button to proceed with the rest of the **Setup Wizard.**  It can take up to one minute for the selected RileyLink to initialize and the **Next** button to become active.
 
-Details zur Einrichtung des Pod-Kommunikationsgeräts finden sich weiter unten im Bereich `RileyLink Setup <#rileylink-setup>`__.
+Die Details zur Einrichtung des Pod-Kommunikationsgeräts finden sich weiter unten im Bereich `RileyLink Setup <#rileylink-setup>`__.
 
 **ODER**
 
