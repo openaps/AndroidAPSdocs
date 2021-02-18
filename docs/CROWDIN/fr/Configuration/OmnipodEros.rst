@@ -626,7 +626,7 @@ Avec de nombreux modèles alternatifs au RileyLink d'origine disponibles ou la n
 
 Les étapes suivantes montreront comment **Supprimer** un périphérique de communication pod existant (RileyLink) et en **Ajouter** un nouveau.  Exécuter à la fois les étapes **Supprimer** et **Ajouter** changera votre périphérique.
 
-1. Accédez au menu de **Sélection RileyLink** en sélectionnant le **menu 3 points (1)** dans le coin supérieur droit de l'onglet **Omnipod (POD)** et en sélectionnant les **Préférences Omnipod (2)** dans le menu déroulant. On the **Omnipod Settings** menu under **RileyLink Configuration (3)** press the **Not Set** (if no device is selected) or **MAC Address** (if a device is present) text to open the **RileyLink Selection** menu. 
+1. Accédez au menu de **Sélection RileyLink** en sélectionnant le **menu 3 points (1)** dans le coin supérieur droit de l'onglet **Omnipod (POD)** et en sélectionnant les **Préférences Omnipod (2)** dans le menu déroulant. Dans le menu des **Paramètres Omnipod** sous **Configuration RileyLink (3)** appuyez sur le bouton **Non configuré** (si aucun appareil n'est sélectionné) ou **Adresse MAC** (si un périphérique est présent) pour ouvrir le menu de **Sélection RileyLink**. 
 
     |Omnipod_Settings_2| |RileyLink_Setup_2|  
 
