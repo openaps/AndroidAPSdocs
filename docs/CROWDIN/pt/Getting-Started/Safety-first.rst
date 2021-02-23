@@ -1,12 +1,12 @@
 Segurança primeiro
 **************************************************
 
-**When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
+** Quando decide construir o seu próprio pâncreas artificial, é sempre importante pensar em segurança e proteção, além de entender o impacto de todas as suas ações * *
 
 Geral
 ==================================================
 
-* AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
+* A AndroidAPS é uma mera ferramenta para ajudá-lo a gerir a diabetes, não é um sistema totalmente automatizado que pode instalar e esquecer!
 * Do not assume that AndroidAPS will never make mistakes. This device is taking control of your insulin delivery: Watch it all the time, understand how it works, and learn how to interpret its actions.
 * Remember that, once paired, the phone can instruct the pump to do anything. Only use this phone for AndroidAPS and, if being used by a child, essential communications. Do not install unnecessary apps or games (!!!) which could introduce malware such as trojans, viruses, or bots that could interfere with your system.
 * Install all security updates provided by your phone manufacturer and Google.
