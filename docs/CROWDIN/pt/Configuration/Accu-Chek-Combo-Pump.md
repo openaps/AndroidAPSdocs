@@ -1,6 +1,6 @@
 # Bomba de Insulina Accu Chek Combo
 
-**This software is part of a DIY solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you, but allows you to improve your diabetes and your quality of life if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
+**Este software é parte de uma solução DIY (faça você mesmo) e não é um produto, no entanto é necessário que VOCÊ leia, aprenda e compreenda o sistema, incluindo a forma de o usar. Não é algo que faça a gestão total da sua diabetes, mas permite melhorá-la, bem como a sua qualidade de vida, se estiver disposto a utilizar o seu tempo para isso. Não tenha demasiada pressa, permita-se ter tempo para aprender. Você é o ÚNICO responsável pela utilização e configuração deste sistema.**
 
 ## Requisitos de hardware
 
