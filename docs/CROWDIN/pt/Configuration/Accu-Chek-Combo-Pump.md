@@ -4,7 +4,7 @@
 
 ## Requisitos de hardware
 
-* Uma Accu-Chek Combo da Roche (qualquer firmware serve, todos funcionam)
+* Uma bomba de insulina Accu-Chek Combo da Roche (qualquer firmware serve, todos funcionam)
 * Um dispositivo Smartpix 1 ou um cabo 360 (Realtyme), juntamente com o software de configuração 360 poderão ser necessários para configurar a bomba. (A Roche, em alguns países, envia gratuitamente os dispositivos Smartpix e o software de configuração aos seus clientes, mediante pedido. Tal não se verifica em Portugal, mas a maioria das unidades de diabetes possuem-no.)
 * Um telefone compatível: telemóvel Andoid com o sistema LineageOS 14.1 ( anteriormente chamado CyanogenMod) ou Android 8.1 (Oreo). 
 * O LineageOS 14.1 tem de ser uma versão recente, pelo menos de Junho de 2017, dado que a alteração necessária para emparelhar com a bomba Combo só foi introduzida nessa altura. 
