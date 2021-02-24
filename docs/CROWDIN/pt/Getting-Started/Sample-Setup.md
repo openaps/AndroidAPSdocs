@@ -2,7 +2,7 @@
 
 ![Configuração de Exemplo](../images/SampleSetup.png)
 
-## Description
+## Descrição
 
 In this setup, the Samsung Galaxy S7 smartphone is used as control center of the loop. The slightly modified Dexcom App reads glucose values from the Dexcom G6 CGM. AndroidAPS is used to control the Dana RS insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
 
