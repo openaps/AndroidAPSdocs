@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS - sistema pâncreas artificial</td>
+ <td>AndroidAPS - sistema de pâncreas artificial</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -17,7 +17,7 @@
   </td>
   
   <td>
-    advanced meal assist - advanced algorithm to handle carbs
+    assistente de refeição avançado-algoritmo avançado para tratar de hidratos de carbono
   </td>
   
   <td>
@@ -347,8 +347,8 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TBR</strong></td>
- <td>temporary basal rate</td>
+ <td><strong>BT</strong></td>
+ <td>taxa de basal temporária</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
