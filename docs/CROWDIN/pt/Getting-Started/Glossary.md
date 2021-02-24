@@ -1,9 +1,9 @@
 # Glossário<table style="width:100%" border=1 cellpadding=5>
 <tr>
- <th>Term</th>
- <th>Description</th>
- <th>see also</th>
- <th>more details @</th>
+ <th>Termo</th>
+ <th>Descrição</th>
+ <th>Ver também</th>
+ <th>Mais detalhes</th>
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
@@ -28,7 +28,7 @@
     <a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">Wiki - AMA</a>
   </td>
 <tr>
- <td><strong>Android auto</strong></td>
+ <td><strong>Android Auto</strong></td>
  <td>display AAPS notifications on your car's compatible in-dash information and entertainment head unit</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Android-auto.html">Wiki - android auto</a></td>
@@ -110,7 +110,7 @@
  <td><strong>Closed Loop</strong></td>
  <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
  <td>Open loop</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
+ <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki loop fechado</a></td>
 </tr>
 <tr>
  <td><strong>COB</strong></td>
