@@ -21,13 +21,13 @@
 * Actualmente não é possível programar tempo e hora na bomba, então [as alterações horárias](../Usage/Timezone-traveling#accu-chek-combo) têm de ser efectuadas manualmente (poderá desactivar as actualizações de horário automáticas no telefone de noite e voltar a activar de manhã e ao mesmo tempo alterar o relógio da bomba e assim evitar alarmes nessas duas noites do ano).
 * Actualmente apenas basais desde 0.05 até 10u/h são suportadas. Isto também se aplica quando modifica um perfil, i.e. ao aumentar para 200% a basal temporária, o valor da basal máxima não deve exceder 5U/h ou duplicada ultrapassará o limite de 10U/h. Do mesmo modo, ao reduzir para 50%, a taxa menor da basal deverá ser no mínimo 0.10 U/h.
 * Se o loop solicitar o cancelamento de uma DBT em execução a Combo definirá em vez disso uma DBT de 90% ou 110% durante 15 minutos. Isto porque ao cancelar uma DBT a bomba emite um alerta que causa imensas vibrações.
-* Occasionally (every couple of days or so) AAPS might fail to automatically cancel a TBR CANCELLED alert, which the user then needs to deal with (by pressing the refresh button in AAPS to transfer the warning to AAPS or confirming the alert on the pump).
-* Bluetooth connection stability varies with different phones, causing "pump unreachable" alerts, where no connection to the pump is established anymore. 
-* If that error occurs, make sure Bluetooth is enabled, press the Refresh button in the Combo tab to see if this was caused by an intermitted issue and if still no connection is established, reboot the phone which should usually fix this. 
-* There is another issue were a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth), before the pump accepts connections from the phone again. 
-* There is very little that can be done to remedy either of those issues at this point. So if you see those errors frequently your only option at this time is to get another phone that's known to work well with AndroidAPS and the Combo (see above).
+* Ocasionalmente (a cada dois ou três dias) a AAPS pode falhar no cancelamento automático do alerta de DBT CANCELADA. Nesta situação o utilizador terá de anulá-lo: premindo o botão actualizar na AAPS para transferir o aviso para a AAPS ou confirmar o alerta na bomba.
+* A estabilidade da conexão Bluetooth varia de acordo com os diferentes telefones, causando alertas de 'bomba não localizada', quando a ligação à bomba for perdida. 
+* Se esse erro ocorrer, certifique-se de que o Bluetooth está activo, prima o botão actualizar no separador Combo para verificar se a causa foi temporária ou se continua sem conexão. Reiniciar o telemóvel normalmente resolve o problema. 
+* Há uma outra questão onde o reiniciar do telefone não ajuda mas um botão na bomba pode ser pressionado ( o que faz um reset ao Bluetooth da bomba), antes da bomba aceitar de novo ligações ao telemóvel. 
+* Neste momento muito pouco poderá ser feito para corrigir qualquer um destes problemas. Assim, se verificar estes erros com frequência a única opção nesta altura será arranjar outro telefone que trabalhe correctamente com a AndroidAPS e a Combo (ver acima).
 * A emissão de um bólus a partir da bomba nem sempre será detectado a tempo (apenas quando a AAPS se conecta à bomba) e na pior situação poderá demorar até 20 minutos. 
-* Os bólus na bomba são sempre verificados antes de uma BT (basal temporária) alta ou um bólus efectuado pela AAPS, mas devido aos limites de segurança a AAPS irá recusar a BT/Bólus, dado que o mesmo foi calculado devido a falsas informações. (-> Não dê bólus a partir da bomba! See chapter [Usage](#usage) below)
+* Os bólus na bomba são sempre verificados antes de uma BT (basal temporária) alta ou um bólus efectuado pela AAPS, mas devido aos limites de segurança a AAPS irá recusar a BT/Bólus, dado que o mesmo foi calculado devido a falsas informações. (-> Não dê bólus a partir da bomba! Veja capítulo [Utilização](#usage) abaixo)
 * É de evitar programar uma BT na bomba dado que o Loop assume o controlo das BTs. Detectar uma nova DBT na bomba pode levar até 20 minutos e o efeito da DBT só será tido em conta a partir do momento em que é detectado, no pior dos casos poderão haver 20 minutos de DBT que não será reflectida na IOB (insulina activa). 
 
 ## Instalação
@@ -43,13 +43,13 @@
     * Programar DBT *aumento de duração * para 15 min
     * Activar bluetooth
 
-* **Recommended settings** (marked blue in screenshots)
+* **Configurações obrigatórias** (marcadas com azul nas capturas de ecrã)
     
     * Programar aviso de cartuxo vazio à sua escolha
     * Configurar o bólus máximo adequado à sua terapia para se proteger contra bugs do software
-    * Da mesma forma, configure a duração máxima da DBT para sua segurança. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
-    * Active a opção de bloqueio de teclas na bomba para prevenir eventuais bólus não desejados a partir da bomba. when the pump was used before and quick bolusing was a habit.
-    * Programe o tempo limite do ecrã e do menu para no mínimo 5.5 e 5, respectivamente. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
+    * Da mesma forma, configure a duração máxima da DBT para sua segurança. Deixe pelo menos 3 horas, uma vez que a opção de desconectar a bomba por 3 horas fixa um 0% por 3 horas.
+    * Active a opção de bloqueio de teclas na bomba para prevenir eventuais bólus não desejados a partir da bomba. Por exemplo, quando a bomba era usada para dar bólus rápidos.
+    * Programe o tempo limite do ecrã e do menu para no mínimo 5.5 e 5, respectivamente. Isto permite que AAPS possa recuperar mais rapidamente de situações de erro e reduzir a quantidade de vibrações que poderão ocorrer durante esses erros
 
 ![Captura de ecrã das configurações de utilizador](../images/combo/combo-menu-settings.png)
 
