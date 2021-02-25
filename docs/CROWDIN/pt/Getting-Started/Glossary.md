@@ -29,20 +29,20 @@
   </td>
 <tr>
  <td><strong>Android Auto</strong></td>
- <td>display AAPS notifications on your car's compatible in-dash information and entertainment head unit</td>
+ <td>exibir notificações da AAPS na unidade de informação e entretenimento compatível com o seu carro</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Android-auto.html">Wiki - android auto</a></td>
 </tr>
 </tr>
 <tr>
  <td><strong>APK</strong></td>
- <td>software installation file (Android application package)</td>
+ <td>arquivo de instalação de software (pacote de aplicação Android)</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - Criando APK</a></td>
 </tr>
 <tr>
  <td><strong>Autosens</strong></td>
- <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
+ <td>cálculo da sensibilidade à insulina como resultado do exercício, das hormonas, etc.</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
@@ -318,7 +318,7 @@
 </tr>
 <tr>
  <td><strong>Sensivity detection</strong></td>
- <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
+ <td>cálculo da sensibilidade à insulina como resultado do exercício, das hormonas, etc.</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
