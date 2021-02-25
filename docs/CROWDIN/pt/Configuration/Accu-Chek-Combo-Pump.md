@@ -51,13 +51,13 @@
     * Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
     * Set display timeout and menu timeout to the minimum of 5.5 and 5 respectively. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
 
-![Captura de écran das configurações de utilizador](../images/combo/combo-menu-settings.png)
+![Captura de ecrã das configurações de utilizador](../images/combo/combo-menu-settings.png)
 
-![Captura de écran das configurações da DBT](../images/combo/combo-tbr-settings.png)
+![Captura de ecrã das configurações da DBT](../images/combo/combo-tbr-settings.png)
 
-![Captura de écran das configurações de bolus](../images/combo/combo-bolus-settings.png)
+![Captura de ecrã das configurações de bólus](../images/combo/combo-bolus-settings.png)
 
-![Captura de ecran das configurações do cartucho de insulina](../images/combo/combo-insulin-settings.png)
+![Captura de ecrã das configurações do cartucho de insulina](../images/combo/combo-insulin-settings.png)
 
 * Install AndroidAPS as described in the [AndroidAPS docs](../Installing-AndroidAPS/Building-APK.md).
 * Make sure to read the docs to understand how to setup AndroidAPS.
@@ -87,7 +87,7 @@ Há várias razões possiveis. Tente os seguintes passos:
 
 1. Insira **pilha nova** na bomba. Para detalhes consulte a secção bateria. Certifique-se de que a bomba está muito perto do smartphone.
 
-![Combo deverá estar proximo do telefone](../images/Combo_next_to_Phone.png)
+![Combo deverá estar próxima do telefone](../images/Combo_next_to_Phone.png)
 
 2. Turn off or remove any other bluetooth devices so they will not be able to establish a connection to the phone while pairing is in progress. Any parallel bluetooth communication or prompt to establish connections might disturb the pairing process.
 3. Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until **NO DEVICE** is shown.
