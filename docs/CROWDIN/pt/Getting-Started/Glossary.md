@@ -179,13 +179,13 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>ISF</strong></td>
+ <td><strong>FSI</strong></td>
  <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>LGS</strong></td>
+ <td><strong>SGB</strong></td>
  <td>Low Glucose Suspend<br>AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
  <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objective 6</a></td>
  <td>&nbsp;</td>
@@ -251,7 +251,7 @@
  <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
 </tr>
 <tr>
- <td><strong>Open Loop</strong></td>
+ <td><strong>Loop Aberto</strong></td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
  <td>Closed Loop</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
@@ -371,9 +371,9 @@
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td><strong>Virtual pump</strong></td>
+ <td><strong>Bomba virtual</strong></td>
  <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
- <td>Open Loop</td>
+ <td>Loop Aberto</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
