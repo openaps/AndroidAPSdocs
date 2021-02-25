@@ -48,8 +48,8 @@
     * Programar aviso de cartuxo vazio à sua escolha
     * Configurar o bólus máximo adequado à sua terapia para se proteger contra bugs do software
     * Da mesma forma, configure a duração máxima da DBT para sua segurança. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
-    * Active a opção de bloqueio de teclas na bomba para prevenir eventuais bólus não desejados a partir da bomba, esp. when the pump was used before and quick bolusing was a habit.
-    * Programe o tempo limite do ecrã e do menu para no mínimo 5.5 e 5 respectivamente. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
+    * Active a opção de bloqueio de teclas na bomba para prevenir eventuais bólus não desejados a partir da bomba. when the pump was used before and quick bolusing was a habit.
+    * Programe o tempo limite do ecrã e do menu para no mínimo 5.5 e 5, respectivamente. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
 
 ![Captura de ecrã das configurações de utilizador](../images/combo/combo-menu-settings.png)
 
