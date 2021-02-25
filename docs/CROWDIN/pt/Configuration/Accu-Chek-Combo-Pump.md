@@ -40,15 +40,15 @@
     * Verifique se o *Texto de informação rápida * está programado para ''Informação Rápida'' ( sem as aspas, encontrado em *Opções da bomba de insulina *).
     * Programar a DBT *Ajuste máximo* a 500%
     * Desactivar *aviso de fim de DBT*
-    * Set TBR *Duration increment* to 15 min
+    * Programar DBT *aumento de duração * para 15 min
     * Activar bluetooth
 
 * **Recommended settings** (marked blue in screenshots)
     
-    * Set low cartridge alarm to your liking
-    * Configure a max bolus suited for your therapy to protect against bugs in the software
-    * Similarly, configure maximum TBR duration as a safeguard. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
-    * Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
+    * Programar aviso de cartuxo vazio à sua escolha
+    * Configurar o bólus máximo adequado à sua terapia para se proteger contra bugs do software
+    * Da mesma forma, configure a duração máxima da DBT para sua segurança. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
+    * Active a opção de bloqueio de teclas na bomba para prevenir eventuais bólus não desejados a partir da bomba, esp. when the pump was used before and quick bolusing was a habit.
     * Set display timeout and menu timeout to the minimum of 5.5 and 5 respectively. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
 
 ![Captura de ecrã das configurações de utilizador](../images/combo/combo-menu-settings.png)
