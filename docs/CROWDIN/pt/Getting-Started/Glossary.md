@@ -126,13 +126,13 @@
 </tr>
 <tr>
  <td><strong>DST</strong></td>
- <td>daylight savings time</td>
+ <td>Mudança de Hora</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki DST</a></td>
+ <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki MH</a></td>
 </tr>
 <tr>
  <td><strong>eCarbs</strong></td>
- <td>"extended carbs" - carbs split up over serveral hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
+ <td>"hidratos de carbono prolongados" - hidratos de carbono divididos ao longo de várias horas (ou seja, muita gordura / proteína) <br> bólus prolongados que utilizava antes, podem não fazer muito sentido durante o loop</td>
  <td>SMB</td>
  <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
