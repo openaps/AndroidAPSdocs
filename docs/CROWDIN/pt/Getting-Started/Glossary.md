@@ -126,7 +126,7 @@
 </tr>
 <tr>
  <td><strong>DST</strong></td>
- <td>Mudança de hora</td>
+ <td>daylight savings time</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki DST</a></td>
 </tr>
