@@ -17,10 +17,10 @@
 
 * Bolus prolongado e bolus multi onda não são suportados ( ver [Extended Carbs](../Usage/Extended-Carbs.rst)).
 * Apenas é suportado um perfil de basal.
-* Setting a basal profile other than 1 on the pump or delivering extended boluses or multiwave boluses from the pump interferes with TBRs and forces the loop into low-suspend only mode for 6 hours as the the loop can't run safely under these conditions.
-* It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling#accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
-* Actualmente apenas basais desde 0.05 até 10u/h são suportadas. This also applies when modifying a profile, e.g. when increasing to 200%, the highest basal rate must not exceed 5 U/h since it will be doubled. Do mesmo modo, ao reduzir para 50%, a taxa menor da basal deverá ser no mínimo 0.10 U/h.
-* If the loop requests a running TBR to be cancelled the Combo will set a TBR of 90% or 110% for 15 minutes instead. This is because cancelling a TBR causes an alert on the pump which causes a lot of vibrations.
+* Programar mais do que um perfil de basal na bomba, ou dar bólus prolongado ou multi onda a partir da bomba interfere com as DBT e irá forçar o LOOP a entrar em modo de suspensão durante horas dado que o LOOP não consegue funcionar em segurança nestas condições.
+* Actualmente não é possível programar tempo e hora na bomba, então [as alterações horárias](../Usage/Timezone-traveling#accu-chek-combo) têm de ser efectuadas manualmente (poderá desactivar as actualizações de horário automáticas no telefone de noite e voltar a activar de manhã e ao mesmo tempo alterar o relógio da bomba e assim evitar alarmes nessas duas noites do ano).
+* Actualmente apenas basais desde 0.05 até 10u/h são suportadas. Isto também se aplica quando modifica um perfil, i.e. ao aumentar para 200% a basal temporária, o valor da basal máxima não deve exceder 5U/h ou duplicada ultrapassará o limite de 10U/h. Do mesmo modo, ao reduzir para 50%, a taxa menor da basal deverá ser no mínimo 0.10 U/h.
+* Se o loop solicitar o cancelamento de uma DBT em execução a Combo definirá em vez disso uma DBT de 90% ou 110% durante 15 minutos. Isto porque ao cancelar uma DBT a bomba emite um alerta que causa imensas vibrações.
 * Occasionally (every couple of days or so) AAPS might fail to automatically cancel a TBR CANCELLED alert, which the user then needs to deal with (by pressing the refresh button in AAPS to transfer the warning to AAPS or confirming the alert on the pump).
 * Bluetooth connection stability varies with different phones, causing "pump unreachable" alerts, where no connection to the pump is established anymore. 
 * If that error occurs, make sure Bluetooth is enabled, press the Refresh button in the Combo tab to see if this was caused by an intermitted issue and if still no connection is established, reboot the phone which should usually fix this. 
@@ -28,18 +28,18 @@
 * There is very little that can be done to remedy either of those issues at this point. So if you see those errors frequently your only option at this time is to get another phone that's known to work well with AndroidAPS and the Combo (see above).
 * A emissão de um bólus a partir da bomba nem sempre será detectado a tempo (apenas quando a AAPS se conecta à bomba) e na pior situação poderá demorar até 20 minutos. 
 * Os bólus na bomba são sempre verificados antes de uma BT (basal temporária) alta ou um bólus efectuado pela AAPS, mas devido aos limites de segurança a AAPS irá recusar a BT/Bólus, dado que o mesmo foi calculado devido a falsas informações. (-> Não dê bólus a partir da bomba! See chapter [Usage](#usage) below)
-* Setting a TBR on the pump is to be avoided since the loop assumes control of TBRs. Detecting a new TBR on the pump might take up to 20 minutes and the TBR's effect will only be accounted from the moment it is detected, so in the worst case there might be 20 minutes of a TBR that is not reflected in IOB. 
+* É de evitar programar uma BT na bomba dado que o Loop assume o controlo das BTs. Detectar uma nova DBT na bomba pode levar até 20 minutos e o efeito da DBT só será tido em conta a partir do momento em que é detectado, no pior dos casos poderão haver 20 minutos de DBT que não será reflectida na IOB (insulina activa). 
 
 ## Instalação
 
-* Configure the pump using 360 config software. 
-* If you do not have the software, please contact your Accu-Chek hotline. They usually send registered users a CD with the "360° Pump Configuration Software" and a SmartPix USB-infrared connection device (the Realtyme device also works if you have that).
+* Configurar a bomba usando o software de configuração 360. 
+* Se não tiver o software, entre em contacto com a sua linha de apoio ao cliente Accu-Check. Eles normalmente enviam aos utilizadores registados um CD com o ''360º configuração de software'' e um aparelho de conexão por infravermelhos USB SmartPix (o Realtyme também funciona).
 * **Required settings** (marked green in screenshots):
     
     * Set/leave the menu configuration as "Standard", this will show only the supported menus/actions on the pump and hide those which are unsupported (extended/multiwave bolus, multiple basal rates), which cause the loop functionality to be restricted when used because it's not possible to run the loop in a safe manner when used.
-    * Verify the *Quick Info Text* is set to "QUICK INFO" (without the quotes, found under *Insulin Pump Options*).
-    * Set TBR *Maximum Adjustment* to 500%
-    * Disable *Signal End of Temporary Basal Rate*
+    * Verifique se o *Texto de informação rápida * está programado para ''Informação Rápida'' ( sem as aspas, encontrado em *Opções da bomba de insulina *).
+    * Programar a DBT *Ajuste máximo* a 500%
+    * Desactivar *aviso de fim de DBT*
     * Set TBR *Duration increment* to 15 min
     * Activar bluetooth
 
