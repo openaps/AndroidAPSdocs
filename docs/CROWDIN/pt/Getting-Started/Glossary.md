@@ -72,7 +72,7 @@
 </tr>
 <tr>
 <td><strong>Origem da Glicemia</strong></td>
- <td>Where do your glucose values come from?</td>
+ <td>De onde vêm seus valores de glicose?</td>
  <td>CGM / MGF</td>
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - Fonte Glic</a></td>
 </tr>
@@ -83,7 +83,7 @@
  <td><a href="https://www.ambrosiasys.com/our-products/blucon/">Ambrosia Blucon Nightreader</a></td>
 </tr>
 <tr>
- <td><strong>BR</strong></td>
+ <td><strong>DB</strong></td>
  <td>taxa basal</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
