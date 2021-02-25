@@ -197,10 +197,10 @@
  <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pump</a></td>
 </tr>
 <tr>
- <td><strong>Log files</strong></td>
+ <td><strong>Ficheiros de registo</strong></td>
  <td>record of all AAPS actions (useful for trubbleshooting and debugging)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - log files</a></td>
+ <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - ficheiros de registo</a></td>
 </tr>
 <tr>
  <td><strong>maxIOB</strong></td>
@@ -210,7 +210,7 @@
 </tr>
 <tr>
  <td><strong>MiaoMiao</strong></td>
- <td>transmissor bluetooth para usar o Freestyle Libre como CGM</td>
+ <td>transmissor bluetooth para usar o Freestyle Libre como MCG</td>
  <td>BlueReader / Blucon Nightreader</td>
  <td><a href="https://www.miaomiao.cool/">MiaoMiao</a></td>
 </tr>
@@ -230,7 +230,7 @@
  <td><strong>NS Client</strong></td>
  <td>part of AAPS to connect to your Nightscout site</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - Cliente NS</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout Reporter</strong></td>
