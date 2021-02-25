@@ -168,19 +168,19 @@
 </tr>
 <tr>
  <td><strong>IC (or I:C)</strong></td>
- <td>insulin to carb ratio (How many carbs are covered by one unit of insulin?)</td>
+ <td>razão entre insulina e hidratos de carbono (Quantos hidratos de carbono são cobertos por uma unidade de insulina?)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>IOB</strong></td>
- <td>insulin on board -  insulin active in your body</td>
+ <td>insulina a bordo - insulina ativa no seu corpo</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>FSI</strong></td>
- <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
+ <td>fator de sensibilidade à insulina - a diminuição esperada na glicemia como resultado de uma unidade de insulina</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -218,7 +218,7 @@
  <td><strong>min_5m_carbimpact</strong></td>
  <td>saftey feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your bloods reactions</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - Configurador</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
@@ -239,7 +239,7 @@
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
 <tr>
- <td><strong>Objectivos</strong></td>
+ <td><strong>Objetivos</strong></td>
  <td>learning program within AAPS guiding you step by step from open to closed loop</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
@@ -248,13 +248,13 @@
  <td><strong>OpenAPS</strong></td>
  <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pie)<br>AAPS uses some of the OpenAPS features</td>
  <td>&nbsp;</td>
- <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
+ <td><a href="https://openaps.readthedocs.io">Documentos OpenAPS</a></td>
 </tr>
 <tr>
  <td><strong>Loop Aberto</strong></td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
- <td>Closed Loop</td>
- <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
+ <td>Loop Fechado</td>
+ <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - Configurador</a></td>
 </tr>
 <tr>
  <td><strong>Oref0 / Oref1</strong></td>
@@ -263,10 +263,10 @@
  <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - sensitivity detection</a></td>
 </tr>
 <tr>
- <td><strong>Peak time</strong></td>
+ <td><strong>Hora do pico</strong></td>
  <td>time of maximum effect of insulin given</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - Configurador</a></td>
 </tr>
 <tr>
  <td><strong>PH</strong></td>
