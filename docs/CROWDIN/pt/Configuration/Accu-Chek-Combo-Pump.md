@@ -34,9 +34,9 @@
 
 * Configurar a bomba usando o software de configuração 360. 
 * Se não tiver o software, entre em contacto com a sua linha de apoio ao cliente Accu-Check. Eles normalmente enviam aos utilizadores registados um CD com o ''360º configuração de software'' e um aparelho de conexão por infravermelhos USB SmartPix (o Realtyme também funciona).
-* **Required settings** (marked green in screenshots):
+* **Configurações obrigatórias** (marcado como verde nas capturas de ecrã):
     
-    * Set/leave the menu configuration as "Standard", this will show only the supported menus/actions on the pump and hide those which are unsupported (extended/multiwave bolus, multiple basal rates), which cause the loop functionality to be restricted when used because it's not possible to run the loop in a safe manner when used.
+    * Configure / deixe a configuração do menu como "Standard", isto mostrará apenas os menus / ações suportados na bomba e esconderá aqueles que não são suportados (bólus estendido/multionda, múltiplas taxas basais), que fazem com que a funcionalidade de loop seja restrita quando usada porque não é possível executar o loop de maneira segura quando usado.
     * Verifique se o *Texto de informação rápida * está programado para ''Informação Rápida'' ( sem as aspas, encontrado em *Opções da bomba de insulina *).
     * Programar a DBT *Ajuste máximo* a 500%
     * Desactivar *aviso de fim de DBT*
