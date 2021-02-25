@@ -54,7 +54,7 @@
 </tr>
 <tr>
  <td><strong>BAT</strong></td>
- <td>status light low battery on homescreen</td>
+ <td>luz de aviso de bateria fraca no ecrã inicial</td>
  <td>CAN / RES / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Preferências</a><br><a href="../Getting-Started/Screenshots.html">Capturas de tela</a></td>
 </tr>
@@ -98,7 +98,7 @@
  <td><strong>CAN</strong></td>
  <td>status light overdue canula change on homescreen</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferências</a><br><a href="../Getting-Started/Screenshots.html">Capturas de tela</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferências</a><br><a href="../Getting-Started/Screenshots.html">Capturas de ecrã</a></td>
 </tr>
 <tr>
  <td><strong>MCG</strong></td>
@@ -114,18 +114,18 @@
 </tr>
 <tr>
  <td><strong>COB</strong></td>
- <td>carbs on board</td>
+ <td>hidratos de carbono ativos</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>DIA</strong></td>
- <td>duration of insulin action</td>
+ <td>duração da Acção da Insulina</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - Tipos de insulina</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
- <td><strong>DST</strong></td>
+ <td><strong>MH</strong></td>
  <td>Mudança de Hora</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki MH</a></td>
