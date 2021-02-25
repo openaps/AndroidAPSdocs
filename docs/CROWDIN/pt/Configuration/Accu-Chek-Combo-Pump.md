@@ -49,7 +49,7 @@
     * Configurar o bólus máximo adequado à sua terapia para se proteger contra bugs do software
     * Da mesma forma, configure a duração máxima da DBT para sua segurança. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
     * Active a opção de bloqueio de teclas na bomba para prevenir eventuais bólus não desejados a partir da bomba, esp. when the pump was used before and quick bolusing was a habit.
-    * Set display timeout and menu timeout to the minimum of 5.5 and 5 respectively. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
+    * Programe o tempo limite do ecrã e do menu para no mínimo 5.5 e 5 respectivamente. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
 
 ![Captura de ecrã das configurações de utilizador](../images/combo/combo-menu-settings.png)
 
@@ -63,9 +63,9 @@
 * Make sure to read the docs to understand how to setup AndroidAPS.
 * Select the **MDI plugin** in AndroidAPS, not the Combo plugin at this point to avoid the Combo plugin from interfering with ruffy during the pairing process.
 * Clone [ruffy](https://github.com/MilosKozak/ruffy) from github via git.
-* Install ruffy and use it to pair the pump.
+* Instale a aplicação ruffy e use-a para emparelhar com a bomba.
     
-    * If it doesn't work after multiple attempts, switch to the `pairing` branch, pair the pump and then switch back the original branch.
+    * Se não trabalhar após múltiplas tentativas, troque para o branch `emparelhamento`, emparelhe a bomba e regresse depois ao branch original.
     * Note that the pairing processing is somewhat fragile (but only has to be done once) and may need a few attempts; quickly acknowledge prompts and when starting over, remove the pump device from the Bluetooth settings beforehand. 
     * Another option to try is to go to the Bluetooth menu after initiating the pairing process (this keeps the phone's Bluetooth discoverable as long as the menu is displayed) and switch back to ruffy after confirming the pairing on the pump, when the pump displays the authorization code.
     * If you're unsuccessful in pairing the pump (say after 10 attempts), try waiting up to 10s before confirming the pairing on the pump (when the name of the phone is displayed on the pump). 
