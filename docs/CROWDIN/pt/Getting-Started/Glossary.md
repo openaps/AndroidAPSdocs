@@ -73,12 +73,12 @@
 <tr>
 <td><strong>Origem da Glicemia</strong></td>
  <td>De onde vêm seus valores de glicose?</td>
- <td>CGM / MGF</td>
+ <td>MCG / MFG</td>
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - Fonte Glic</a></td>
 </tr>
 <tr>
  <td><strong>Blucon Nightreader</strong></td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>transmissor bluetooth para usar o Freestyle Libre como CGM</td>
  <td>BlueReader / MiaoMiao</td>
  <td><a href="https://www.ambrosiasys.com/our-products/blucon/">Ambrosia Blucon Nightreader</a></td>
 </tr>
@@ -101,8 +101,8 @@
  <td><a href="../Configuration/Preferences.html#overview">Preferências</a><br><a href="../Getting-Started/Screenshots.html">Capturas de tela</a></td>
 </tr>
 <tr>
- <td><strong>CGM</strong></td>
- <td>continuous glucose monitor</td>
+ <td><strong>MCG</strong></td>
+ <td>monitor contínuo de glicose </td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -138,7 +138,7 @@
 </tr>
 <tr>
  <td><strong>FGM</strong></td>
- <td>flash glucose monitor (Freestyle Libre)</td>
+ <td>Monitor de Flash de Glicose (Freestyle Libre)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/BG-Source.html">Wiki - Fonte Glic</a></td>
 </tr>
@@ -210,7 +210,7 @@
 </tr>
 <tr>
  <td><strong>MiaoMiao</strong></td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>transmissor bluetooth para usar o Freestyle Libre como CGM</td>
  <td>BlueReader / Blucon Nightreader</td>
  <td><a href="https://www.miaomiao.cool/">MiaoMiao</a></td>
 </tr>
