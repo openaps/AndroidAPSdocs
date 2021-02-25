@@ -48,7 +48,7 @@
 </tr>
 <tr>
  <td><strong>Azure</strong></td>
- <td>cloud computing platform to host Nightscout data</td>
+ <td>plataforma destinada à execução de aplicações e serviços, baseada nos conceitos da computação em nuvem, onde hospedar o Nightscout</td>
  <td>Heroku / Nightscout</td>
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
@@ -56,7 +56,7 @@
  <td><strong>BAT</strong></td>
  <td>status light low battery on homescreen</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferências</a><br><a href="../Getting-Started/Screenshots.html">Capturas de tela</a></td>
 </tr>
 <tr>
  <td><strong>GLIC</strong></td>
@@ -90,7 +90,7 @@
 </tr>
 <tr>
  <td><strong>CAGE</strong></td>
- <td>canula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
+ <td>idade da cânula/cateter- exibida no Nightscout se foi esta informação foi inserida no menu na aba ações ou através da aba ações no botão 'Purgar/Preencher'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -98,7 +98,7 @@
  <td><strong>CAN</strong></td>
  <td>status light overdue canula change on homescreen</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferências</a><br><a href="../Getting-Started/Screenshots.html">Capturas de tela</a></td>
 </tr>
 <tr>
  <td><strong>CGM</strong></td>
@@ -162,7 +162,7 @@
 </tr>
 <tr>
  <td><strong>Heroku</strong></td>
- <td>cloud computing platform to host Nightscout data</td>
+ <td>plataforma destinada à execução de aplicações e serviços, baseada nos conceitos da computação em nuvem, onde hospedar o Nightscout</td>
  <td>Azure / Nightscout</td>
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
@@ -296,7 +296,7 @@
  <td><strong>RES</strong></td>
  <td>status light overdue reservoir change on homescreen</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferências</a><br><a href="../Getting-Started/Screenshots.html">Capturas de tela</a></td>
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
@@ -314,7 +314,7 @@
  <td><strong>SEN</strong></td>
  <td>status light sensor change on homescreen</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferências</a><br><a href="../Getting-Started/Screenshots.html">Capturas de tela</a></td>
 </tr>
 <tr>
  <td><strong>Sensivity detection</strong></td>
