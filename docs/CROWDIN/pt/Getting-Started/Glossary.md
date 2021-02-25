@@ -107,8 +107,8 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>Closed Loop</strong></td>
- <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
+ <td><strong>Loop Fechado</strong></td>
+ <td>sistemas de loop fechado fazem ajustes automáticos na administração da basal, sem necessidade de aprovação do utilizador, com base num algoritmo</td>
  <td>Open loop</td>
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki loop fechado</a></td>
 </tr>
@@ -126,7 +126,7 @@
 </tr>
 <tr>
  <td><strong>DST</strong></td>
- <td>daylight savings time</td>
+ <td>Mudança de hora</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki DST</a></td>
 </tr>
