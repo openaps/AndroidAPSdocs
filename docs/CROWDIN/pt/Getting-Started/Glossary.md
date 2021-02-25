@@ -272,7 +272,7 @@
  <td><strong>PH</strong></td>
  <td>pump history (entry in treatments tab)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment">Capturas de ecrã</a></td>
 </tr>
 <tr>
  <td><strong>Previsão</strong></td>
@@ -284,17 +284,17 @@
  <td><strong>Perfil</strong></td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profile">Wiki - perfil</a></td>
 </tr>
 <tr>
  <td><strong>Troca de Perfil</strong></td>
  <td>(temporary) change of profile used or percentual increase/decrease</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
+ <td><a href="../Usage/Profiles.html">Wiki - mudança de perfil</a></td>
 </tr>
 <tr>
  <td><strong>RES</strong></td>
- <td>status light overdue reservoir change on homescreen</td>
+ <td>luz de aviso de mudança de reservatório no ecrã inicial</td>
  <td>BAT / CAN / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Preferências</a><br><a href="../Getting-Started/Screenshots.html">Capturas de tela</a></td>
 </tr>
@@ -305,7 +305,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>SAGE</strong></td>
+ <td><strong>ISENSOR</strong></td>
  <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
