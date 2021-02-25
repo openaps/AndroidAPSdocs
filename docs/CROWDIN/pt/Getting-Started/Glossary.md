@@ -335,10 +335,10 @@
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td><strong>Super bolus</strong></td>
+ <td><strong>Super bólus</strong></td>
  <td>shift of basal to bolus insulin for faster BG adjustment</td>
  <td>&nbsp;</td>
- <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
+ <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - O Super Bólus</a></td>
 </tr>
 <tr>
  <td><strong>TBB</strong></td>
@@ -348,7 +348,7 @@
 </tr>
 <tr>
  <td><strong>BT</strong></td>
- <td>taxa de basal temporária</td>
+ <td>basal temporária</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
