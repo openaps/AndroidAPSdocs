@@ -167,13 +167,13 @@ AndroidAPS позволяет контролировать телефон реб
   * Ответ: Последнее соед: 1 мин. назад -- Врем базал: 0.00ед/ч @11:38 5/30мин IOB: 0.5ед Резервуар: 34ед Бат: 100
 * СВЯЗЬ С ПОМПОЙ
   * Ответ: Помпа вновь подключена
-* PUMP DISCONNECT *30*
-  * Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
+* PUMP DISCONNECT *30* (отсоединить помпу на 30 минут)
+  * Ответ: Для отключения помпы на *30* минут ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
 * ОТКЛЮЧИТЬ/ОСТАНОВИТЬ СМС
   * Ответ: Чтобы отключить удаленную службу SMS ответьте кодом Any. Имей в виду, что вы сможете его повторно активировать только непосредственно с главного смартфона AAPS.
-* ЦЕЛЬ ПРИЕМ ПИЩИ/НАГРУЗКА/ГИПО MEAL/ACTIVITY/HYPO   
-  * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
-* ЦЕЛЬ ОСТАНОВИТЬ/ОТМЕНИТЬ   
+* TARGET MEAL/ACTIVITY/HYPO (* ЦЕЛЬ ПРИЕМ ПИЩИ/НАГРУЗКА/ГИПО)   
+  * Ответ: Для постановки временной цели ПРИЕМ ПИЩИ/НАГРУЗКА/ГИПО ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
+* TARGET STOP/CANCEL (* ЦЕЛЬ ОСТАНОВИТЬ/ОТМЕНИТЬ)   
   * Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
 * СПРАВКА
   * Ответ: ГК, ПЕТЛЯ, НАЗНАЧЕНИЯ, .....
