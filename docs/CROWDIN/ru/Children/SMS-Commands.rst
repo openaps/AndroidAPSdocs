@@ -174,7 +174,7 @@ AndroidAPS позволяет контролировать телефон реб
 * TARGET MEAL/ACTIVITY/HYPO (* ЦЕЛЬ ПРИЕМ ПИЩИ/НАГРУЗКА/ГИПО)   
   * Ответ: Для постановки временной цели ПРИЕМ ПИЩИ/НАГРУЗКА/ГИПО ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
 * TARGET STOP/CANCEL (* ЦЕЛЬ ОСТАНОВИТЬ/ОТМЕНИТЬ)   
-  * Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
+  * Ответ: Для отмены временной цели TT ответьте кодом из приложения Authenticator и подтвердите своим PIN-кодом
 * СПРАВКА
   * Ответ: ГК, ПЕТЛЯ, НАЗНАЧЕНИЯ, .....
 * СПРАВКА БОЛЮС
