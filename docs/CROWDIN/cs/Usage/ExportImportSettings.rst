@@ -7,7 +7,7 @@ Buďte připraveni na nepředvídané situace. Náhodou se vám může povést z
 
 Osvědčeným postupem je exportovat po změně nastavení nebo dokončení cíle. 
 
-Exportovaná nastavení by měla být zkopírována do úložiště v cloudu nebo na váš počítač. Takže tímto jste připraveni na ztrátu nebo poškození telefonu s AAPS a nemusíte začínat od nuly.
+Exported settings should be copied to a cloud storage or your computer, better two different locations. Takže tímto jste připraveni na ztrátu nebo poškození telefonu s AAPS a nemusíte začínat od nuly.
 
 Na počítači se systémem Windows 10 to vypadá takto:
   
