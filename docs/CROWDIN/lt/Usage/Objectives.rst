@@ -119,7 +119,7 @@ Tikslas 8: jei reikia, koreguokite valandinės bazės reikšmes bei pagrindinius
 * Galite naudoti `autotune įrankį <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_, kad patikrintumėte, ar jūsų baziniai nustatymai yra tikslūs, arba atlikti tradicinį bazės patikrinimo testą.
 * 7 dienoms įjunkite `Autosens <../Usage/Open-APS-features.html>`_ ir stebėkite baltą liniją, esančią pagrindinio ekrano grafike, nurodančią, kaip jūsų jautrumas insulinui didėja ar mažėja atsižvelgiant į aktyvumą, hormonų veiklą ir pan. taip pat galima analizuoti informaciją OpenAPS skirtuke, kad sužinotumėte, kaip AndroidAPS koreguoja nustatytą valandinę bazę ir/ar tikslinę glikemiją.
 
-*Don’t forget to record your looping in `this form <https://bit.ly/nowlooping>`_ logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
+*Don’t forget to record your looping in* `this form <https://bit.ly/nowlooping>`_ *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
 
 
 9 tikslas: Išbandykite papildomas kasdienio naudojimo funkcijas ir įgykite pasitikėjimą uždara ciklo sistema
