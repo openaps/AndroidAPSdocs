@@ -1,96 +1,96 @@
 Dexcom G6
 **************************************************
-Basics first
+Elemente de bază
 ==================================================
 
 * Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`__.
-* For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the `latest nightly built xDrip+ versions <https://github.com/NightscoutFoundation/xDrip/releases>`_. Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+* Pentru transmiţătorii G6 fabricați după toamna/sfârşitul anului 2018 vă rugăm să vă asiguraţi că utilizaţi `latest nightly built xDrip+ versions <https://github.com/NightscoutFoundation/xDrip/releases>`_. Aceşti transmiţători au o nouă versiune de soft şi ultima versiune stabilă a xDrip+ (2019/01/10) nu poate funcționa cu ei.
 
-General hints for looping with G6
+Sugestii generale pentru buclă cu G6
 ==================================================
 
 Ceea ce e clar este că utilizarea G6 este poate un pic mai complexă decât pare la prima vedere. Pentru a fi utilizat în condiţii de siguranţă, există câteva aspecte de care trebuie să fiți conștienți: 
 
-* If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
-* If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
-* If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
-* Pre-soaking of the G6 with factory calibration is likely to give variation in results. Dacă faceți preinserare, atunci pentru a obține cele mai bune rezultate, probabil că va trebui să calibrați senzorul.
-* If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
+* Dacă utilizaţi datele native cu codul de calibrare în xDrip+ sau Spike, cel mai sigur lucru de făcut este să nu permiți repornirea preventivă a senzorului.
+* Dacă trebuie să utilizaţi reporniri preventive, asiguraţi-vă că aţi inserat la o oră din zi în care puteţi observa modificarea şi să calibrați dacă este necesar. 
+* Dacă repornesti senzorii, fie faci asta fără calibrarea din fabrica pentru cele mai sigure rezultate în zilele 11 şi 12, fie urmaresti variatiile glicemiei si calibrezi cand este necesar.
+* Este posibil ca preinserarea G6 cu calibrarea din fabrică să determine variaţii ale rezultatelor. Dacă faceți preinserare, atunci pentru a obține cele mai bune rezultate, probabil că va trebui să calibrați senzorul.
+* Dacă nu poti fi atent la eventuale schimbări ce ar putea aparea, mai bine să revii la modul ne-calibrat și utilizezi sistemul ca un G5.
 
 To learn more about the details and reasons for these recommendations read the `complete article <https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ published by Tim Street at `www.diabettech.com <https://www.diabettech.com>`_.
 
-If using G6 with xDrip+
+Dacă utilizaţi G6 cu xDrip+
 ==================================================
-* The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-* When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
-* If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
-* If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
+* Transmiţătorul Dexcom G6 poate fi conectat simultan la receptorul Dexcom (sau la pompa t:slim) şi la o aplicaţie de pe telefon.
+* Când se utilizează xDrip+ ca receptor, mai întâi dezinstalează aplicaţia Dexcom. ** Nu se poate conecta și xDrip+ si aplicația Dexcom cu transmitatorul in acelasi timp! **
+* Dacă ai nevoie de Clarity şi doresti si alarmele xDrip+ poti folosi aplicația modificată Dexcom <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ cu distribuire locală către xDrip+.
+* Dacă nu ați făcut-o deja, downloadați xdrip <https://github.com/NightscoutFoundation/xDrip>`_ și urmăriți instrucțiunile pe nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Alege xDrip în ConfigBuilder (setare din AndroidAPS).
 * Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
 * If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`__.
 
-If using G6 with patched Dexcom app
+Dacă folosiți G6 cu aplicația Dexcom modificată
 ==================================================
-* Download the apk from `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, and choose the version that fits your needs (mg/dl or mmol/l version, G6).
+* Descărcați apk-ul de la adresa `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, și apoi alegeți versiunea corectă pentru dumneavoastră (versiunea mg/dl sau mmol/l, G6).
 
-  * Folder 2.4 for users of the current version, folder 2.3 is only for the outdated AndroidAPS 2.3.
-  * Open https://play.google.com/store/search?q=dexcom%20g6 on your computer. 
-  * Click the link to the Dexcom G6 app on the search results page that is displayed.
-  * Region will be visible in URL.
+  * Dosarul 2.4 pentru utilizatorii versiunii curente, dosarul 2.3 este doar pentru vechea versiune AndroidAPS 2.3.
+  * Deschide https://play.google.com/store/search?q=dexcom%20g6 pe calculatorul tău. 
+  * Faceți clic pe link-ul către aplicația Dexcom G6 de pe pagina de rezultate de căutare care este afișată.
+  * Regiunea va fi vizibilă în URL.
 
   .. image:: ../images/DexcomG6regionURL.PNG
-    :alt: Region in Dexcom G6 URL
+    :alt: Regiune in Dexcom G6 URL
 
-* Uninstall the original Dexcom app.
+* Dezinstalaţi aplicaţia originală Dexcom.
 * Install downloaded apk
-* Enter sensor code and transmitter serial no. in patched app.
-* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
-* Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
-* If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
-* There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.
+* Introduceţi codul senzorului şi seria transmiţătorului în aplicația modificată.
+* După o scurtă perioadă de timp, aplicația ar trebui să primească semnal de la transmițător. (Dacă nu primește semnal, va trebui să opriți senzorul și să porniți unul nou.)
+* Selectați aplicația Dexcom (modificată) în ConfigBuilder (setare în AndroidAPS).
+* Dacă doriţi să utilizaţi alarmele xDrip+ prin transmitere locală: în meniul hamburger al xDrip+ > setări > sursă de date hardware > 640G /EverSense.
+* Nu există nici o transmitere locală de la aplicația modificată Dexcom direct către xDrip+. Transmisia trebuie să treacă prin AAPS conform descrierii de mai sus.
 
-If using G6 with Build Your Own Dexcom App
+Dacă utilizaţi G6 cu construită cu Build Your Own Dexcom App
 ==================================================
-* As of December 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA)also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
-* This app lets you use your Dexcom G6 with any Android smartphone.
-* Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously.
+* Începând cu luna decembrie 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA) suportă transmiterea locală către AAPS și/sau xDrip+ (nu pentru senzorii G5!)
+* Această aplicație vă permite să folosiți senzorul Dexcom G6 cu orice telefon Android.
+* Dezinstalaţi aplicaţia originală Dexcom sau aplicaţia Dexcom modificată dacă aţi utilizat anterior vreuna dintre ele.
 * Install downloaded apk
-* Enter sensor code and transmitter serial no. in patched app.
-* In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
-* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
+* Introduceţi codul senzorului şi seria transmiţătorului în aplicația modificată.
+* În setările telefonului mergeți la aplicații > Dexcom G6 > permisiuni > permisiuni suplimentare și apăsați pe 'Acces Dexcom'.
+* După o scurtă perioadă de timp, aplicația ar trebui să primească semnal de la transmițător. (Dacă nu primește semnal, va trebui să opriți senzorul și să porniți unul nou.)
 
-Settings for AndroidAPS
+Setări pentru AndroidAPS
 --------------------------------------------------
-* Select 'Dexcom App (patched)' in config builder.
-* If you don't recieve any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+* Selectați 'Dexcom App (patched)' în config builder.
+* Dacă nu primiți nici o valoare selectați orice altă sursă de date, apoi reselectați „Dexcom App (patched)” pentru a declanșa cererea de permisiuni de stabilire a conexiunii dintre AAPS și BYODA.
 
-Settings for xDrip+
+Setări pentru xDrip+
 --------------------------------------------------
-* Select '640G/Eversense' as data source.
-* Command 'start sensor' must be performed in xDrip+ in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
+* Selectaţi '640G/Eversense' ca sursă de date.
+* Comanda 'start senzor' trebuie să fie realizată în xDrip + pentru a se primi valori. Acest lucru nu vă va afecta senzorul actual controlat de Build Your Own Dexcom App.
    
-Troubleshooting G6
+Depanare G6
 ==================================================
-Dexcom G6 specific troubleshooting
+Depanarea specifică Dexcom G6
 --------------------------------------------------
-* Transmitters with serial no. starting with 80 or 81 need at least last stable xDrip+ version from May 2019 or a newer nightly build.
-* Transmitters with serial no. starting with 8G need at least nightly build from July 25th, 2019 or newer.
-* xDrip+ and Dexcom app cannot be connected with the transmitter at the same time.
-* Wait at least 15 min. between stopping and starting a sensor.
-* Do not rewind back time of insertion. Answer question "Did you insert it today?" always with "Yes, today".
-* Do not enable "restart sensors" while setting a new sensor
-* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+* Transmițătorii cu seria incepand cu 80 sau 81 au nevoie de cel putin ultima versiune stabilă de xDrip+ din Mai 2019 sau un nightly build mai nou.
+* Transmițătorii cu seria incepand cu 8G au nevoie de un nightly build cel putin din data de 25 iulie 2019 sau mai nou.
+* Aplicația xDrip+ și aplicația Dexcom nu pot fi conectate cu transmițătorul, ambele în același timp.
+* Aşteptaţi cel puţin 15 min. între oprirea și pornirea unui senzor.
+* Nu da înapoi timpul de inserare. Răspundeți la întrebarea „Ați inserat astăzi?” întotdeauna cu „Da, astăzi”.
+* Nu activați "repornire senzori" în timp ce setați un senzor nou
+* Nu porniți un senzor nou înainte ca următoarele informaţii să fie afişate în Pagina Clasică de Stare -> Stare G5/G6 -> StareServiciuTelefon:
 
-  * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-  * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+  * Transmitatoare a caror serie începe cu 80 sau 81: "Date primite hh:mm" (de ex. "Am primit date 19:04")
+  * Transmitatoare a caror serie începe cu 8G sau 8H: "Glicemie primită hh:mm" (de ex. "Glicemie primită 19:04") sau "Primit acum hh:mm" (i.e. "Primit acum 19:04")
 
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
-  :alt: xDrip+ PhoneServiceState
+  :alt: xDrip+ StareServiciuTelefon
 
-General troubleshoothing
+Depanarea generală
 --------------------------------------------------
 General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
 
-New transmitter with running sensor
+Transmiţător nou cu senzor în funcțiune
 --------------------------------------------------
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at `https://youtu.be/AAhBVsc6NZo <https://youtu.be/AAhBVsc6NZo>`_.
+Dacă se întâmplă să schimbaţi transmiţătorul în timpul unei sesiuni de senzor care funcționează, aţi putea încerca să înlăturaţi transmiţătorul fără a deteriora senzorul. Un videoclip poate fi găsit la `https://youtu.be/AAhBVsc6NZo <https://youtu.be/AAhBVsc6NZo>`_.
