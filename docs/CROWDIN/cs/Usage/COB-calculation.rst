@@ -35,7 +35,7 @@ Obvykle AAPS detekuje absorpci sacharidů prostřednictvím odchylek glykémií.
 .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
   :alt: Pokyn pro chybnou hodnotu COB
 
-Na obrázku výše, 41 % času absorpce sacharidů byla počítána pomocí min_5m_carbimpact místo hodnoty zjištěné odchylkami.  To znamená, že možná máte méně zbývajících sacharidů, než vypočteno. 
+In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  To znamená, že možná máte méně zbývajících sacharidů, než vypočteno. 
 
 Jak se vypořádat s tímto varováním? 
 --------------------------------------------------
