@@ -1,147 +1,145 @@
-# Accu-Chek Insight Pump
+# Pompa Accu-Chek Insight
 
-**This software is part of a DIY artificial pancreas solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you but allows you to improve your diabetes and your quality of life, if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
+**Aceasta aplicatie face parte dintr-o soluţie de pancreas artificial DIY (Do-it-Yourself), realizata personal) care nu este un produs finit, ceea ce inseamna ca va trebui ca TU sa citesti, să studiezi si să înţelegi sistemul, inclusiv cum să îl folosesti. Nu este ceva creat pentru a gestiona in totalitate tratamentul diabetul, dar permite îmbunătățirea calitatii vieții cu diabet, dacă acordati timpul necesar. Nu te grăbi să o faci, dar acorda-ți timp să înveți. Doar tu esti responsabil de utilizarea acestui sistem.**
 
 * * *
 
-## ***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to the newest AAPS version** and **uninstall SightRemote**.*
+## ***AVERTISMENT:** Dacă ai folosit in trecut Insight cu **SightRemote** te rog **actualizeaza la cea mai nouă versiune AAPS** și **dezinstaleaza SightRemote**.*
 
-## Hardware and software requirements
+## Cerinţe hardware şi software
 
-* A Roche Accu-Chek Insight pump (any firmware, they all work)
+* O pompă de insulină Accu-Chek Combo (orice versiune de firmware, funcționează toate)
 
-Note: AAPS will write data always in **first basal rate profile in the pump**.
+Atentie: AAPS va scrie întotdeauna date în **primul profil al ratei bazale din pompă**.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module#phone) page which Android version is required to run AndroidAPS.)
-* The AndroidAPS app installed on your phone
+* Un telefon Android (in principiu orice versiune de Android ar funcționa cu Insight, dar verifica pe pagina [Module](../Module/module#phone) care este versiunea Android necesară pentru a rula AndroidAPS.)
+* Aplicația AndroidAPS instalată pe telefon
 
-## Setup
+## Instalare
 
-* The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
+* Pompa Insight nu ar trebui conectată la mai multe dispozitive in acelasi timp. Dacă ai utilizat anterior telecomanda Insight (glucometrul), trebuie să elimini telecomanda din lista cu dispozitive împerecheate a pompei: Meniu > Setări > Comunicare > Elimină dispozitiv
     
-    ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
+    ![Captura de ecran Insight Eliminare glucometru](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
+* În [Config builder](../Configuration/Config-Builder) din aplicaţia AndroidAPS selecteaza cu Accu-Chek Insight în secţiunea pompei
     
-    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
+    ![Captura de ecran Insight ConfigBuilder](../images/Insight_ConfigBuilder.png)
 
-* Tap the cog-wheel to open Insight settings.
+* Atinge roata pentru a deschide setările Insight.
 
-* In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
-* On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
+* În setări, apasă butonul 'Insight conectare' din partea de sus a ecranului. Ar trebui să vezi o listă cu toate dispozitivele bluetooth din apropiere (jos stânga).
+* Pe pompa Insight mergi la Menu > Settings > Communication > Add Device. Pompa va afişa pe următorul ecran (mai jos dreapta) numărul de serie al pompei.
     
-    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
+    ![Captura de ecran Insight Împerechere 1](../images/Insight_Pairing1.png)
 
-* Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm.
+* Înapoi la telefon, apasă pe numărul de serie al pompei din lista dispozitivelor bluetooth. Apoi apasă pe conectare pentru a confirma.
     
-    ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
+    ![Captura de ecran Insight Împerechere 2](../images/Insight_Pairing2.png)
 
-* Both the pump and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
+* Atât pompa cât şi telefonul vor afişa un cod. Verifică iar daca codurile sunt identice pe ambele dispozitive confirma atât pe pompa cât şi pe telefon.
     
-    ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
+    ![Captura de ecran Insight Împerechere 3](../images/Insight_Pairing3.png)
 
-* Success! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
+* Succes! Bucura-te, ai conectat cu succes pompa la AndroidAPS.
     
-    ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
+    ![Captura de ecran Insight Împerechere 4](../images/Insight_Pairing4.png)
 
-* To check all is well, go back to Config builder in AndroidAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
+* Ca sa verifici dacă totul este bine, revino la Config Builder în AndroidAPS și apasa rotita de la Insight Pump ca sa intri în setările Insight, apoi apasa Conectare Insight și vei vedea câteva informații despre pompă:
     
-    ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
+    ![Captura de ecran Informații de Împerechere Insight](../images/Insight_PairingInformation.png)
 
-Note: There will be no permanent connection between pump and phone. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
+Atentie: Nu va exista o conexiune permanentă între pompă şi telefon. O conexiune va fi stabilită numai dacă este necesar (de ex la stabilirea ratei bazale temporare, livrarea de bolus, citirea istoricului pompei...). În caz contrar, bateriile de la telefon şi de la pompa s-ar consuma mult prea repede.
 
-## Settings in AAPS
+## Setări în AAPS
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences#advanced-settings-nsclient)).
+**Atentie: Este posibil (doar cu AAPS v2.7. sau mai recent) sa folosesti „Utilizeaza întotdeauna valorile bazale absolute” dacă vrei să folosesti Autotune cu pompa Insight, chiar dacă 'sincronizarea este activată' cu Nightscout.** (în AAPS mergeți la [Preferences > NSClient > Advanced Settings](../Configuration/Preferences#advanced-settings-nsclient)).
 
-![Screenshot of Insight Settings](../images/Insight_settings.png)
+![Captura de ecran Setări Insight](../images/Insight_settings.png)
 
-In the Insight settings in AndroidAPS you can enable the following options:
+În setările Insight din AndroidAPS, poti activa următoarele opţiuni:
 
-* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
+* "Înregistrează schimbarea rezervorului": Se va înregistra automat schimbarea rezervorului de insulină daca rulezi pe pompa "umple canula".
 
-* "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
+* „Inregistreaza schimbarea tubului”: Se va adauga o notită in baza de date AndroidAPS daca rulezi pe pompa „umplere tub”.
 
-* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+* "Înregistrează schimbările locului de inserție": Se va adauga o notită in baza de date AndroidAPS daca rulezi pe pompa "canula filling (umplere canula)". **Atentie: O modificare a locului de insertie resetează deasemenea si Autosens.**
 
-* "Log battery changes": This records a battery change when you put a new battery in the pump.
+* "Înregistrează schimbarea bateriei": Se înregistrează schimbarea bateriei atunci când pui baterii noi în pompă.
 
-* "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
+* „Inregistreaza Mod de operare”: Se va adauga o notită în baza de date AndroidAPS ori de câte ori pornesti, opresti sau întrerupi pomparea.
 
-* "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
+* "Jurnal alerte": Se va inregistra o notita in baza de date AndroidAPS ori de cate ori pompa emite o alerta (cu exceptia alertelor pentru reamintire, anularea bolusului și a RBT - acestea nu sunt înregistrate).
 
-* "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.
+* "Activare emulare RBT": Pompa Insight poate emite rate bazale temporare (RBT) doar până la 250%. Pentru a rezolva această restricție, daca soliciti RBT mai mare de 250%, emularea va comanda pompei să livreze pentru insulina suplimentara un bolus extins.
     
-    **Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.**
+    **Atentie: Utilizeaza un singur bolus extins odata, folosirea simultana a mai multor bolusuri extinse poate cauza erori.**
 
-* "Disable vibrations on manual bolus delivery": This disables the Insight pump's vibrations when delivering a manual bolus (or extended bolus). This setting is available only with the latest version of Insight firmware (3.x).
+* "Dezactivare vibraţii la livrare manuala de bolus": Se dezactivează vibraţiile pompei Insight atunci când livrează un bolus manual (sau bolus extins). Această setare este disponibilă doar cu cea mai recentă versiune de firmware Insight (3.x).
 
-* "Disable vibrations on automated bolus delivery": This disables the Insight pump's vibrations when delivering an automatic bolus (SMB or Temp basal with TBR emulation). This setting is available only with the latest version of Insight firmware (3.x).
+* "Dezactivare vibraţii la livrarea automată de bolus": Se dezactivează vibraţiile pompei Insight atunci când livrează un bolus automat (SMB (super micro bolus) sau bazala temporara cu emulare RBT). Această setare este disponibilă doar cu cea mai recentă versiune de firmware Insight (3.x).
 
-* "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
+* „Durata de restabilire a conexiunii”: Aceasta definește cât va aștepta AndroidAPS înainte de a încerca din nou reconectarea după o încercare de conectare eșuată. Poți alege de la 0 la 20 de secunde. Dacă întâmpini probleme cu conexiunea, alege o durata de așteptare mai lung.   
       
-    Example for min. recovery duration = 5 and max. recovery duration = 20   
-      
-    no connection -> wait **5** sec.   
-    retry -> no connection -> wait **6** sec.   
-    retry -> no connection -> wait **7** sec.   
-    retry -> no connection -> wait **8** sec.   
+    Exemplu de durata de restabilire a conexiunii minim = 5 sec. şi maxim = 20 sec.   
+    reîncearcă -> fără conexiune -> așteaptă **6** sec.   
+    reîncearcă -> fără conexiune -> așteaptă **7** sec.   
+    reîncearcă -> fără conexiune -> așteaptă **8** sec.   
     ...   
-    retry -> no connection -> wait **20** sec.   
-    retry -> no connection -> wait **20** sec.   
+    Reîncearcă -> fără conexiune -> așteaptă **20** sec.   
+    Reîncearcă -> fără conexiune -> așteaptă **20** sec.   
     ...
 
-* "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
+* "Întârziere deconectare": Aceasta definește in cât timp (în secunde) AndroidAPS se deconecteaza de la pompă după terminarea unei operațiuni. Valoarea implicită este de 5 secunde.
 
-For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
+Pentru perioadele în care pompa a fost oprită, AAPS va înregistra o rata bazală de 0%.
 
-In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
+În AndroidAPS, fila Accu-Chek Insight afișează starea curentă a pompei și are două butoane:
 
-* "Refresh": Refreshes pump status
-* "Enable/Disable TBR over notification": A standard Insight pump emits an alarm when a TBR is finished. This button lets you enable or disable this alarm without the need for configuration software.
+* "Refresh": Actualizeaza starea pompei
+* "Activează/Dezactivează notificarea de RBT": O pompă standard Insight emite o alarmă atunci când un RBT este terminat. Acest buton permite să activezi sau să dezactivezi această alarmă fără a fi nevoie de configurarea software-ului.
     
-    ![Screenshot of Insight Status](../images/Insight_Status2.png)
+    ![Captura de ecran Stare Insight](../images/Insight_Status2.png)
 
-## Settings in the pump
+## Setările pompei
 
-Configure alarms in the pump as follows:
+Configurează alarmele în pompă după cum urmează:
 
 * Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
 * Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
 * Menu > Modes > Signal mode > Quiet
 
-This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
+Acesta va reduce la tăcere toate alarmele din pompă, permițând AndroidAPS să decidă dacă o alarmă este relevantă pentru tine. Dacă AndroidAPS nu confirmă o alarmă, volumul său va creşte (primul bip, apoi vibraţia).
 
-### Vibration
+### Vibrare
 
-Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus).
+În funcţie de versiunea de firmware a pompei dumneavoastră, Insight va vibra scurt de fiecare dată când un bolus este livrat (de exemplu, când AndroidAPS decide o emulare SMB sau TBR se livrează un bolus extins).
 
-* Firmware 1.x: No vibration by design.
-* Firmware 2.x: Vibration cannot be disabled.
-* Firmware 3.x: AndroidAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+* Firmware 1.x: Fără vibraţii din proiectare.
+* Firmware 2.x: Vibraţiile nu pot fi dezactivate.
+* Firmware 3.x: AndroidAPS livrează bolus în mod silenţios. (minim [versiunea 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
 
-Firmware version can be found in the menu.
+Versiunea de firmware poate fi găsită în meniu.
 
-## Battery replacement
+## Înlocuire baterie
 
-Battery life for Insight when looping range from 10 to 14 days, max. 20 days. The user reporting this is using Energizer lithium batteries.
+Durata de viaţă a bateriei pentru Insight atunci când e în buclă variază între 10 şi 14 zile, max. 20 de zile. Utilizatorul care a raportat acest lucru utilizează baterii cu litiu de tip Energizer.
 
-The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+Pompa Insight are o baterie internă mică pentru a păstra funcţiile esenţiale precum ceasul care rulează în timp ce se schimbă bateria detaşabilă. Dacă schimbarea bateriei durează prea mult, această baterie internă se poate termina, ceasul se va reseta, şi după introducerea unei baterii noi vi se va cere să completați din nou ora şi data. Dacă se întâmplă acest lucru, toate intrările in AndroidAPS înainte de schimbarea bateriei nu vor mai fi incluse în calcule, deoarece timpul corect nu poate fi identificat corespunzător.
 
-## Insight specific errors
+## Insight - erori specifice
 
-### Extended bolus
+### Bolus extins
 
-Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
+Utilizaţi doar un bolus extins la un moment dat deoarece mai multe boluri extinse în acelaşi timp ar putea cauza erori.
 
-### Time out
+### Pauză
 
-Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
+Uneori se poate întâmpla ca pompa Insight să nu răspundă în timpul configurării conexiunii. În acest caz, AAPS va afişa următorul mesaj: "Pauză în timpul dialogului de confirmare-resetare bluetooth".
 
 ![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
-In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
+În acest caz, dezactivaţi bluetooth-ul pe pompă DAR ȘI PE telefon timp de aproximativ 10 secunde şi apoi reporniți-l din nou.
 
-## Crossing time zones with Insight pump
+## Traversarea fusurilor orare cu pompa Insight
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
+Pentru informaţii desprte călătoriile prin diverse fusuri orare, vedeţi secţiunea [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
