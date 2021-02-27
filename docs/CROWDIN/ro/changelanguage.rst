@@ -1,4 +1,4 @@
-Change language
+Schimbați limba
 **************************************************
 
 .. note::
