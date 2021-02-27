@@ -127,16 +127,16 @@
 * Скорость подачи базала не должна меняться вручную на помпе, но будет обнаружена и скорректирована как мера безопасности (не полагайтесь на меры безопасности, задаваемые по умолчанию, они предназначены для обнаружения непреднамеренных изменений на помпе).
 * Рекомендуется включить блокировку клавиш на помпе для предотвращения случайной подачи болюса с помпы, особенно если вы уже пользовались помпой раньше и подача "быстрого болюса" вошла в привычку.
 * Помимо этого, при активной блокировке, случайное нажатие на кнопку помпы НЕ прерывает коммуникацию между AAPS и помпой.
-* When a BOLUS/TBR CANCELLED alert starts on the pump during bolusing or setting a TBR, this is caused by a disconnect between pump and phone, which happens from time to time. AAPS will try to reconnect and confirm the alert and then retry the last action (**boluses are NOT retried** for safety reasons). 
-* Therefore, such an alarm can be ignored as AAPS will confirm it automatically, usually within 30s (cancelling it is not problem, but will lead to the currently active action to have to wait till the pump's display turns off before it can reconnect to the pump). 
-* If the pump's alarm continues, automatic confirmation failed, in which case the user needs to confirm the alarm manually.
-* When a low cartridge or low battery alarm is raised during a bolus, they are confirmed and shown as a notification in AAPS. 
-* If they occur while no connection is open to the pump, going to the Combo tab and hitting the Refresh button will take over those alerts by confirming them and show a notification in AAPS.
-* When AAPS fails to confirm a TBR CANCELLED alert, or one is raised for a different reason, hitting Refresh in the Combo tab establishes a connection, confirms the alert and shows a notification for it in AAPS. This can safely be done, since those alerts are benign - an appropriate TBR will be set again during the next loop iteration.
-* For all other alerts raised by the pump: connecting to the pump will show the alert message in the Combo tab, e.g. "State: E4: Occlusion" as well as showing a notification on the main screen.
-* An error will raise an urgent notification. 
-* AAPS never confirms serious errors on the pump, but let's the pump vibrate and ring to make sure the user is informed of a critical situation that needs action.
-* After pairing, ruffy should not be used directly (AAPS will start in the background as needed), since using ruffy at AAPS at the same time is not supported.
-* If AAPS crashes (or is stopped from the debugger) while AAPS and the pump were communicating (using ruffy), it might be necessary to force close ruffy. Restarting AAPS will start ruffy again.
+* Когда на помпе срабатывает оповещение ОТМЕНА БОЛЮСА / врем. базала TBR во время подачи болюса или установки врем. базала TBR, это бывает из-за потери связи между помпой и телефоном. AAPS будет пытаться восстановить соединение, подтвердить сигнал и повторно выполнить последнее действие (**болюсы не повторяются ** из соображений безопасности). 
+* Таким образом, это оповещение можно проигнорировать т. к. AAPS подтверждает его автоматически, обычно в течение 30 секунд (отменить его не составляет труда, но приведет к тому, что исполняемое в данный момент действие будет приостановлено до того, как экран помпы погаснет и ваше устройство вновь не подключится к помпе). 
+* Если оповещение помпы продолжает работать и автоматическое подтверждение не состоялось, пользователь должен подтвердить получение сигнала вручную.
+* Когда оповещение о заканчивающемся инсулине или низком заряде батареи срабатывает во время болюса, они подтверждаются автоматически и появляются в AAPS в виде уведомления. 
+* Если они срабатывают в момент отсутствия связи с помпой, нажатие кнопки "обновить" (refresh) на вкладке Combo подтвердит получение сигнала и подаст уведомление в AAPS.
+* Когда подтверждение получения сигнала об отмене скорости временного базала (TBR CANCELLED) не срабатывает в AAPS или когда срабатывает другое оповещение, нажатие кнопки "обновить" (refresh) на вкладке Combo восстановит соединение, подтвердит получение сигнала и подаст уведомление в AAPS. Такие манипуляции безопасны ввиду безопасности самих оповещений - соответствующая скорость временного базала будет снова задана во время следующего цикла работы алгоритма.
+* Для всех других оповещений, инициируемых помпой: подключение к помпе покажет оповещение во вкладке Combo, например «состояние: Е4: закупорка», которое дублируется на главном экране.
+* Любая ошибка системы генерирует срочное уведомление. 
+* AAPS никогда самостоятельно не подтверждает получения оповещений о серьезных ошибках помпы и дает возможность помпе сигналить и вибрировать, чтобы пользователь имел возможность самостоятельно удостовериться в наличии критической ситуации, требующей его действий.
+* После установки соединения с помпой, не следует запускать утилиту ruffy непосредственно (AAPS, как ему и следует, запустится в фоновом режиме); независимая работа утилиты ruffy не предусмотрена.
+* Если AAPS прекращает работу (в результате серьезной ошибки или останавливается из отладчика) когда телефон с AAPS и помпа обмениваются данными (при помощи ruffy), возможно потребуется принудительная остановка ruffy. Перезапуск приложения AAPS перезапустит и ruffy.
 * Restarting the phone is also an easy way to resolve this if you don't know how to force kill an app.
 * Don't press any buttons on the pump while AAPS communicates with the pump (Bluetooth logo is shown on the pump).
