@@ -43,12 +43,12 @@
     * Установите *приращение длительности* временного базала на 15 мин
     * Включите Bluetooth
 
-* **Recommended settings** (marked blue in screenshots)
+* **Рекомендуемые настройки** (отмечены синим цветом на снимках с экрана)
     
-    * Set low cartridge alarm to your liking
-    * Configure a max bolus suited for your therapy to protect against bugs in the software
-    * Similarly, configure maximum TBR duration as a safeguard. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
-    * Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
+    * Установите сигнал оповещения о малом количестве инсулина в картридже на величину по своему усмотрению
+    * Настройте максимальную величину болюса в соответствии с требованиями вашей терапии, но имея в виду защиту от ошибок в программном обеспечении
+    * Аналогичным образом настройте максимальную продолжительность временного базала TBR на безопасный уровень. Установите эту величину по крайней мере на 3 часа, так как опция отключения помпы задает нулевой базал на 3 часа.
+    * Включите блокировку клавиш помпы для предотвращения быстрой подачи болюса, особенно если быстрая подача болюса с помпы была в привычке до перехода на AAPS.
     * Set display timeout and menu timeout to the minimum of 5.5 and 5 respectively. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
 
 ![Снимок экрана меню параметров пользователя](../images/combo/combo-menu-settings.png)
