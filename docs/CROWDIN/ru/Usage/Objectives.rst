@@ -119,7 +119,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 * Вы можете единовременно воспользоваться автонастройкой <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>_ чтобы проверить, остаются ли точными настройки базала или провести традиционный базальный тест.
 * Активируйте автоподстройку чувствительности <../Usage/Open-APS-features.html>`_на 7 дней и понаблюдайте за тем, как опускается или поднимается белая линия чувствительности к инсулину на графике домашнего экрана в результате нагрузок, гормонов и т. п. не забывая о вкладке отчетов OpenAPS, где AndroidAPS соответствующим образом корректирует базу и/или цели.
 
-*Don’t forget to record your looping in `this form <https://bit.ly/nowlooping>`_ logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
+*Don’t forget to record your looping in* `this form <https://bit.ly/nowlooping>`_ *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
 
 
 Objective 9: Try additional features for daytime use and gain confidence in your closed loop system
