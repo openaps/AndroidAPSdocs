@@ -29,11 +29,11 @@ Encrypted backup format
 Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`__ .
 
 
-Export settings
+Exportă setările
 ==================================================
 * Hamburger menu (top left corner of screen)
-* Maintenance
-* Export settings
+* Mentenanță
+* Exportă setările
 
 .. image:: ../images/AAPS_ExportSettings1.png
   :alt: AndroidAPS export settings 1
@@ -46,13 +46,13 @@ Export settings
 .. image:: ../images/AAPS_ExportSettings2.png
   :alt: AndroidAPS export settings 2
   
-Import settings
+Importă setările
 ==================================================
 **Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings-from-previous-aaps>`_.
 
 * Hamburger menu (top left corner of screen)
-* Maintenance
-* Import settings
+* Mentenanță
+* Importă setările
 
 .. image:: ../images/AAPS_ImportSettings1.png
   :alt: AndroidAPS import settings 1
