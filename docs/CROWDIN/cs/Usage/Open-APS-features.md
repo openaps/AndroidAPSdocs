@@ -105,7 +105,7 @@ V případě ostatních CGM/FGM, jako je Freestyle Libre, je možnost ‘Vždy p
 
 SMB pracuje 6 h po jídle, i když už nezbývají žádné aktivní sacharidy. Z bezpečnostních důvodů je tato možnost dostupná pouze u zdrojů glykémie s dobrým filtrováním zarušených dat. V současné době funguje se senzorem Dexcom G5, používáte-li upravenou aplikaci Dexcom nebo “nativní režim” v xDripu+. Jestliže má hodnota glykémie příliš velkou odchylku, G5 ji nepošle a počká 5 minut na další odečtenou hodnotu.
 
-V případě ostatních CGM/FGM, jako je Freestyle Libre, je možnost ‘Vždy povolit SMB’ zakázána, dokud nebude mít xDrip+ lepší plugin pro vyhlazování zarušených glykémií. Více informací najdete [zde](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+For other CGM/FGM like Freestyle Libre, 'Enable SMB after carbs' is deactivated until xDrip+ has a better noise smoothing plugin. Více informací najdete [zde](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Maximální počet minut bazálu, ke kterým se limituje SMB
 
