@@ -35,7 +35,7 @@ Normalerweise erkennt AAPS die Kohlenhydrat-Resorption auf Basis der Entwicklung
 .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
   :alt: Hinweis fehlerhafte COB Werte
 
-In der Abbildung oben wurde 41% der 1Kohlenhydrat-Resorption durch min_5m_carbimpact statt des Wertes, der bei Abweichungen festgestellt wurde, mathematisch berechnet.  Das bedeutet, dass evtl. weniger Kohlenhydrate noch im Körper aktiv sind als der Algorithmus berechnet hat. 
+In der Abbildung oben wurde 41% der Kohlenhydrat-Resorption durch min_5m_carbimpact statt des Wertes, der bei Abweichungen festgestellt wurde, mathematisch berechnet.  Das bedeutet, dass evtl. weniger Kohlenhydrate noch im Körper aktiv sind als der Algorithmus berechnet hat. 
 
 Wie kann man mit dieser Warnung umgehen? 
 --------------------------------------------------
