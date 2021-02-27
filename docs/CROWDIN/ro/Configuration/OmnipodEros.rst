@@ -4,7 +4,7 @@
 
 These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). The Omnipod driver is available as part of AndroidAPS (AAPS) as of version 2.8.
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.**
+**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Responsabilitatea folosirii cade exclusiv in sarcina a utilizatorului.**
 
 .. contents:: 
    :backlinks: entry
@@ -285,7 +285,7 @@ The process below will show you how to acknowledge and dismiss pod beeps that oc
 
     |Acknowledge_Alerts_4|
 
-    If the RileyLink is out of range of the pod while the acknowledge alerts command is being processed a warning message will display 2 options. **Mute (1)** will silence this current warning. **OK (2)** will confirm this warning and allow the user to try to acknowledge alerts again.
+    If the RileyLink is out of range of the pod while the acknowledge alerts command is being processed a warning message will display 2 options. **Mute (1)** va opri alerrta activa. **OK (2)** will confirm this warning and allow the user to try to acknowledge alerts again.
 
     |Acknowledge_Alerts_5|
 
@@ -331,7 +331,7 @@ Manually Re-establish Pod Communication Device Bluetooth Communication
     
     If the pod communication device is unresponsive or out of range of the phone while the Bluetooth refresh command is being processed a warning message will display 2 options.
 
-   * **Mute (1)** will silence this current warning.
+   * ***Mute (1)** va opri alerrta activa.
    * **OK (2)** will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
 	
     |RileyLink_Bluetooth_Reset_4|	
@@ -575,7 +575,7 @@ Allows for scanning of a RileyLink device. The Omnipod driver cannot select more
 	+  Disabled - Reports a value of n/a.
 * **Enable battery change logging in Actions:** In the Actions menu the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Some pod communication devices now have the ability to use regular batteries which can be changed.  This option allows you to note that and reset battery age timers.
 
-Confirmation beeps
+Bip-uri de confirmare
 ------------------
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
@@ -585,7 +585,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 * **\*SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
 * **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
 
-Alerts
+Alerte
 ------
 
 Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
@@ -598,7 +598,7 @@ Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, 
 * **Number of units:** The number of units at which to trigger the pod low reservoir alert.
 * **Automatically acknowledge Pod alerts:** When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
 
-Notifications
+Notificări
 -------------
 
 Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful. 
@@ -609,7 +609,7 @@ Provides AAPS notifications and audible phone alerts when it is uncertain if TBR
 * **\*Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
 * **\*Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
    
-Other
+Altul
 -----
 
 Provides advanced settings to assist debugging.
@@ -705,7 +705,7 @@ Battery level reporting is a setting that can be enabled to return the current b
   * **Nightscout** - Battery level is reported when an actual level exists, value of n/a will not be reported
 
 
-Troubleshooting
+Depanare
 ===============
 
 Pod Failures
@@ -739,17 +739,17 @@ Omnipod driver alerts
 
 please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
 
-No active Pod
+Niciun Pod activ
 ~~~~~~~~~~~~~
 
 No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically silenced.
 
-Pod suspended
+Pod suspendat
 ~~~~~~~~~~~~~
 
 Informational alert that Pod has been suspended.
 
-Setting basal profile failed. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
+Setarea profilului bazalei a eșuat. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
@@ -845,7 +845,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |Omnipod_Pod|			image:: ../images/omnipod/Omnipod_Pod.png
 	
 ..
-		Acknowledge Alerts
+		Confirmare Alerte
 .. |Acknowledge_Alerts_1|               image:: ../images/omnipod/Acknowledge_Alerts_1.png
 .. |Acknowledge_Alerts_2|               image:: ../images/omnipod/Acknowledge_Alerts_2.png
 .. |Acknowledge_Alerts_3|               image:: ../images/omnipod/Acknowledge_Alerts_3.png
@@ -857,7 +857,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |Actions_Tab|                  		image:: ../images/omnipod/Actions_Tab.png
 
 ..
-	Activate Pod
+	Activează Pod
 .. |Activate_Pod_1|                     image:: ../images/omnipod/Activate_Pod_1.png
 .. |Activate_Pod_2|                     image:: ../images/omnipod/Activate_Pod_2.png
 .. |Activate_Pod_3|                     image:: ../images/omnipod/Activate_Pod_3.png
@@ -875,7 +875,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |Activate_Pod_15|                    image:: ../images/omnipod/Activate_Pod_15.png
 
 ..
-	Deactivate Pod
+	Dezactivare Pod
 .. |Deactivate_Pod_1|                   image:: ../images/omnipod/Deactivate_Pod_1.png
 .. |Deactivate_Pod_2|                   image:: ../images/omnipod/Deactivate_Pod_2.png
 .. |Deactivate_Pod_3|                   image:: ../images/omnipod/Deactivate_Pod_3.png
@@ -912,7 +912,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |Omnipod_Tab_Pod_Management|         image:: ../images/omnipod/Omnipod_Tab_Pod_Management.png
 
 ..
-	Pod History
+	Istoric Pod
 .. |Pod_History_1|                  	image:: ../images/omnipod/Pod_History_1.png
 .. |Pod_History_2|                  	image:: ../images/omnipod/Pod_History_2.png
 .. |Pod_History_3|                  	image:: ../images/omnipod/Pod_History_3.png
