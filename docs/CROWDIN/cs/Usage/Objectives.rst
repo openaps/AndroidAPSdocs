@@ -119,7 +119,7 @@ Cíl 8: Upravit bazály a poměry, když bude potřeba, a povolit automatickou d
 * Pro kontrolu správnosti nastavení bazálu můžete použít `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_, nebo si udělejte klasický test bazálu.
 * Povolte <a href="../Usage/Open-APS-features.md">automatickou detekci citlivosti</a> po dobu 7 dní a sledujte bílou křivku na grafu na hlavní stránce, jak se vaše citlivost na inzulín může snižovat a zvyšovat v důsledku cvičení nebo hormonů apod. Při tom sledujte na kartě OpenAPS výslednou zprávu, jak podle toho systém AndroidAPS upravil vaše bazály a/nebo cíle. a sledujte na záložce zpráv OpenAPS, jak AndroidAPS odpovídajícím způsobem upravuje bazály a/nebo cíle.
 
-*Don’t forget to record your looping in `this form <https://bit.ly/nowlooping>`_ logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
+*Don’t forget to record your looping in* `this form <https://bit.ly/nowlooping>`_ *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
 
 
 Objective 9: Try additional features for daytime use and gain confidence in your closed loop system
