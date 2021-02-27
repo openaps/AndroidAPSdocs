@@ -27,18 +27,18 @@ Dacă ești pregătit pentru provocare, citește mai departe.
 AndroidAPS Obiective principale
 ==================================================
 
-* O aplicaţie cu siguranţă încorporată. To read about the safety features of the algorithms, known as oref0 and oref1, click here (https://openaps.org/reference-design/)
-* An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
-* An app to which users can easily add or remove modules as needed
-* An app with different versions for specific locations and languages.
-* An app which can be used in open- and closed-loop mode
-* An app that is totally transparent: users can input parameters, see results, and make the final decision
-* An app which is independent of particular pump drivers and contains a "virtual pump" so users can safely experiment before using it on themselves 
-* An app closely integrated with Nightscout
-* An app in which the user is in control of safety constraints 
+* O aplicaţie cu siguranţă încorporată. Pentru a citi despre caracteristicile de siguranță ale algoritmilor, cunoscute ca oref0 și oref1, click aici (https: //openaps.org/reference-design/)
+* O aplicație completa pentru gestionarea diabetului de tip 1 cu pancreas artificial și Nightscout
+* O aplicație la care utilizatorii pot adăuga sau elimina cu ușurință module dacă este necesar
+* O aplicație cu diferite versiuni pentru locații și limbi specifice.
+* O aplicație care poate fi utilizată în modul buclă deschisă și închisă
+* O aplicație complet transparentă: utilizatorii pot introduce parametri, vedea rezultatele și pot lua decizia finală
+* O aplicație care nu depinde de o pompa anume, conține o "pompă virtuală" pentru ca utilizatorii să poată experimenta în siguranță înainte de a o utiliza pe ei înșiși 
+* O aplicație strâns integrată cu Nightscout
+* O aplicație în care utilizatorul controlează siguranța 
 
-How to start
+Cum să începi
 ==================================================
-Of course, all of this content here is very important, but can be in the beginning quite confusing.
-A good orientation is given by the `Module Overview <../Module/module.html>`_ and the `Objectives <../Usage/Objectives.html>`_. You can also take a look on the `sample setup with Dana, Dexcom and Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_.
+Desigur, tot acest conținut este foarte important, dar poate fi la început destul de confuz.
+O bună orientare este dată de `Vizualizarea modulului <../module/module.html>`_ și `Obiective <../Usage/Objectives.html>`_. De asemenea, poți arunca o privire asupra "Exemplului de configurare Dana, Dexcom şi Sony Smartwatch <../Getting-Started/Sample-Setup.html>"_.
  
