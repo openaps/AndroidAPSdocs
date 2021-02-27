@@ -119,7 +119,7 @@ Ziel 8: Passe, falls notwendig, Basalraten und Faktoren an und aktiviere dann di
 * Du kannst  `Autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ verwenden, um dafür zu sorgen, dass Deine Basalraten korrekt bleiben oder einen traditionellen Basalratentest durchführen.
 * Schalte `Autosens <../Usage/Open-APS-features.html>`_ für einen Zeitraum von 7 Tagen ein und beobachte die weiße Linie auf der Grafik auf dem Hauptbildschirm, die anzeigt, dass deine Sensibilität gegenüber Insulin auf Grund von Aktivitäten oder Hormonen steigt oder fällt. Schaue auf dem OpenAPS-Tab nach, wie AndroidAPS die Basalraten und/oder Zielwerte entsprechend anpasst.
 
-*Vergiss nicht, dich als Looper in `diesem Formular <https://bit.ly/nowlooping>`_ zu registrieren, wenn du das bisher noch nicht getan hast. Gib AndroidAPS als Art deiner DIY Loop-Software an.*
+*Vergiss nicht, dich als Looper in* `diesem Formular <https://bit.ly/nowlooping>`_ *zu registrieren, wenn du das bisher noch nicht getan hast. Gib AndroidAPS als Art deiner DIY Loop-Software an.**
 
 
 Ziel 9: Teste zusätzliche Funktionen für den Alltagsgebrauch und gewinne Vertrauen in Dein Closed Loop System
