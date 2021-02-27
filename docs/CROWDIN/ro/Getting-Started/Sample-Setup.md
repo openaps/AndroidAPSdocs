@@ -2,7 +2,7 @@
 
 ![Sample Setup](../images/SampleSetup.png)
 
-## Description
+## Descriere
 
 In this setup, the Samsung Galaxy S7 smartphone is used as control center of the loop. The slightly modified Dexcom App reads glucose values from the Dexcom G6 CGM. AndroidAPS is used to control the Dana RS insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
 
@@ -22,7 +22,7 @@ Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" wh
 
 2. [DanaRS](http://www.sooil.com/eng/product/)
     
-    * Alternatives: 
+    * Alternative: 
     * [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
     * [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
     * [DanaR](../Configuration/DanaR-Insulin-Pump.md)
@@ -62,7 +62,7 @@ Menu > Settings > Device security > Unknown sources > slider to right side (= ac
 
 For security reasons this setting should be set back to inactive once the installation of all apps described here has been completed.
 
-### Enable Bluetooth
+### Activați Bluetooth-ul
 
 1. Menu > Settings > Connections > Bluetooth > slider to right side (= active)
 2. Menu > Settings > Connections > Location > slider to right side (= active)
@@ -149,6 +149,6 @@ Details about the information displayed on the watchface can be found [here](../
 * On your smartwatch: Long press display to change watchface and select `AAPSv2`
 * If necessary restart both devices once.
 
-## Pump setup
+## Setări pompă
 
 see [Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md)
