@@ -77,11 +77,11 @@
 * Если помпа совершенно новая, требуется **подать болюс на помпе**, чтобы помпа произвела первую запись в логе.
 * Прежде чем активировать расширение Combo в AAPS, убедитесь в правильной настройке профиля и в его активации (!) и что профиль базала актуален т. к. AAPS будет синхронизировать профиль с помпой.
 * Затем активируйте расширение [Combo](../Configuration/Config-Builder#pump). 
-* Press the *Refresh* button on the Combo tab to initialize the pump.
-* To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus.
-* The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
+* Нажмите кнопку *Обновить* на вкладке Combo для запуска помпы.
+* Для проверки настроек, при отключенной помпе в режиме **отключено**, задайте в AAPS значение временного базала TBR 500% на 15 мин и подайте болюс.
+* После этого в логах помпы появится работающий TBR и болюс. AAPS должен также показать активный TBR и поданный болюс.
 
-## Why does pairing with the pump not work with the app "ruffy"?
+## Почему утилите "ruffy" не удается установить сопряжение с помпой?
 
 Существует несколько возможных причин. Попробуйте следующие действия:
 
@@ -89,22 +89,22 @@
 
 ![Помпа Combo должна находиться рядом с телефоном](../images/Combo_next_to_Phone.png)
 
-2. Turn off or remove any other bluetooth devices so they will not be able to establish a connection to the phone while pairing is in progress. Any parallel bluetooth communication or prompt to establish connections might disturb the pairing process.
-3. Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until **NO DEVICE** is shown.
-4. Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device "**SpiritCombo**"
+2. Отключите или удалите любые другие устройства bluetooth, чтобы они не смогли установить подключение к телефону во время сопряжения. Любая параллельная связь по bluetooth или запрос на соединение могут нарушить процесс сопряжения.
+3. Удалите уже подключенные устройства в меню Bluetooth помпы: **настройки BLUETOOTH / подключение / удалить** до появления сообщения **NO DEVICE ** (нет устройств).
+4. Удалите помпу, уже подключенную к телефону через Bluetooth: Параметры / Bluetooth, Удалить сопряженное устройство «**SpiritCombo**»
 5. Убедитесь, что AAPS не работает в фоновом режиме цикла. Деактивируйте цикл в AAPS.
 6. Запустите утилиту ruffy на телефоне. Можно нажать Reset! (Перезапустить) и удалить старое сопряжение. Затем нажать Connect! (Подключиться).
-7. In the Bluetooth menu of the pump, go to **ADD DEVICE / ADD CONNECTION**. Press *CONNECT!**
+7. В меню Bluetooth помпы, перейдите к **Добавить устройство / добавить подключение**. Нажмите *CONNECT!** (соединить)
     
-    * Step 6 and 7 have to be done in a short timing.
+    * Шаг 6 и 7 должны быть выполнены быстро.
 
-8. Now the Pump should show up the BT Name of phone to select for pairing. Here it is important to wait at least 5s before you hit the select button on Pump. Otherwise the Pump will not send the Pairing request to the Phone properly.
+8. Теперь на помпе должно появиться название Bluetooth телефона, которое следует выбрать для сопряжения. Здесь важно подождать по крайней мере 5 секунд прежде чем нажать кнопку выбора на помпе. В ином случае помпа не отправит правильный запрос на сопряжение с телефоном.
 
-* If Combo Pump is set to 5s Screen timeout, you may test it with 40s (original setting). From experience the time between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out without successfully Pair. 
-* Later you should set it back to 5s, to meet AAPS Combo settings.
-* If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If possible, try another smartphone. You can find a list of already successfully used smartphones under \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). 
+* Если помпа Combo настроена на 5 сек ожидания с включенным экраном, можно попробовать вернуться к 40сек (исходный параметр). Опытным путем установлено, что оптимальный промежуток времени между появлением помпы в телефоне и выбором телефона на помпе составляет 5-10 секунд. Во многих других случаях сопряжение не происходит из-за тайм-аута. 
+* В дальнейшем следует вернуть эту настройку на исходные 5 сек чтобы соответствовать настройкам AAPS для Combo.
+* Если помпа не показывает телефон как устройство сопряжения, возможно модуль Bluetooth телефона не совместим с помпой. Убедитесь, что вы используете новую **LineageOS ≥ 14.1** или **Android ≥ 8.1 (Oreo)**. Если есть возможность, попробуйте другой смартфон. Вы можете найти список успешно используемых смартфонов для AAPS по этой ссылке (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). 
 
-9. На следующем этапе в помпе должен появиться 10-значный код безопасности. И экран Ruffy для его ввода. So enter it in Ruffy and you should be ready to go.
+9. На следующем этапе в помпе должен появиться 10-значный код безопасности. И экран Ruffy для его ввода. Так что введите его в Ruffy и вы готовы к работе.
 10. Перезагрузите телефон.
 11. Теперь вы можете перезапустить цикл AAPS.
 
