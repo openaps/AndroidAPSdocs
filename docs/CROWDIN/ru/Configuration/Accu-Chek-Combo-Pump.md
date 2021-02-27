@@ -118,15 +118,15 @@
 * Глюкометр позволяет дублировать экран помпы и перенаправляет на помпу все команды (эквивалентные нажатию кнопок на помпе). 
 * Связь с помпой, равно как и это перенаправление команд является главным функционалом алгоритма утилиты ruffy. 
 * Компоненты скриптера считывают информацию с экрана и автоматизируют подачу болюсов, временного базала TBR; проверяют корректность обработки введенных данных.
-* AAPS then interacts with the scripter to apply loop commands and to administer boluses.
-* This mode has some restrictions: it's comparatively slow (but well fast enough for what it is used for) and setting a TBR or giving a bolus causes the pump to vibrate.
-* The integration of the Combo with AndroidAPS is designed with the assumption that all inputs are made via AndroidAPS. Boluses entered on the pump directly will be detected by AAPS, but it can take up to 20 min before AndroidAPS becomes aware of such a bolus. 
-* Reading boluses delivered directly on the pump is a safety feature and not meant to be regularly used (the loop requires knowledge of carbs consumed, which can't be entered on the pump, which is another reason why **all inputs should be done in AndroidAPS**). 
-* Don't set or cancel a TBR on the pump. The loop assumes control of TBR and cannot work reliably otherwise, since it's not possible to determine the start time of a TBR that was set by the user on the pump.
-* The pump's first basal rate profile is read on application start and is updated by AAPS.
-* The basal rate should not be manually changed on the pump, but will be detected and corrected as a safety measure (don't rely on safety measures by default, this is meant to detect an unintended change on the pump).
-* It's recommended to enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and using the "quick bolus" feature was a habit.
-* Also, with keylock enabled, accidentally pressing a key will NOT interrupt active communication between AAPS and pump.
+* Алгоритм ИПЖ затем обменивается данными со скриптером, применяет команды цикла и подает болюсы.
+* Этот режим имеет некоторые ограничения: он действует относительно медленно (но адекватно для своим задачам), а изменение временного базала TBR или подача болюса приводит к вибрации помпы.
+* Интеграция Combo с AndroidAPS исходит из того, что все входные данные проводятся через AndroidAPS. Болюсы, подаваемые непосредственно с помпы, будут обнаружены алгоритмом AAPS, но на это может уйти до 20 минут. 
+* Считывание болюсов, поданных непосредственно с помпы - мера предосторожности, которая не предназначена для регулярной работы (алгоритм ИПЖ требует информации о потребленных углеводах, которая не может поступать с помпы, и это еще одна причина, по которой ввод данных должен происходить через интерфейс приложения). 
+* Не устанавливайте и не отменяйте временный базал TBR на помпе. Алгоритм AAPS предполагает контроль над временным базалом, он не будет работать надежно при иных решениях, поскольку начало подачи временного базала, заданного пользователем на помпе, невозможно определить.
+* Первый базальный профиль помпы считывается при запуске приложения и обновляется алгоритмом AAPS.
+* Скорость подачи базала не должна меняться вручную на помпе, но будет обнаружена и скорректирована как мера безопасности (не полагайтесь на меры безопасности, задаваемые по умолчанию, они предназначены для обнаружения непреднамеренных изменений на помпе).
+* Рекомендуется включить блокировку клавиш на помпе для предотвращения случайной подачи болюса с помпы, особенно если вы уже пользовались помпой раньше и подача "быстрого болюса" вошла в привычку.
+* Помимо этого, при активной блокировке, случайное нажатие на кнопку помпы НЕ прерывает коммуникацию между AAPS и помпой.
 * When a BOLUS/TBR CANCELLED alert starts on the pump during bolusing or setting a TBR, this is caused by a disconnect between pump and phone, which happens from time to time. AAPS will try to reconnect and confirm the alert and then retry the last action (**boluses are NOT retried** for safety reasons). 
 * Therefore, such an alarm can be ignored as AAPS will confirm it automatically, usually within 30s (cancelling it is not problem, but will lead to the currently active action to have to wait till the pump's display turns off before it can reconnect to the pump). 
 * If the pump's alarm continues, automatic confirmation failed, in which case the user needs to confirm the alarm manually.
