@@ -35,7 +35,7 @@ AAPS warns you if you are about to bolus with COB from a previous meal and the a
 .. изображение:: ../images/Calculator_SlowCarbAbsorbtion.png
   :alt: Подсказка о неверном значении COB
 
-На этом снимке экрана 41% времени поглощения углеводов был вычислен математически методом min_5m_carbimpact вместо значения, основанного на отклонениях ГК.  Это означает, что в организме может быть меньше активных углеводов, чем вычисляется алгоритмом. 
+In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  Это означает, что в организме может быть меньше активных углеводов, чем вычисляется алгоритмом. 
 
 Как относиться к этому предупреждению? 
 --------------------------------------------------
