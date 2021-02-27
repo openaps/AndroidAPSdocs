@@ -119,7 +119,7 @@ Objetivo 8: ajustar las basales y proporciones si es necesario, y luego habilita
 * You can use `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ as a one off to check your basals remain accurate or do a traditional basal test.
 * Enable `autosens <../Usage/Open-APS-features.html>`_ over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
 
-*Don’t forget to record your looping in `this form <https://bit.ly/nowlooping>`_ logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
+*Don’t forget to record your looping in* `this form <https://bit.ly/nowlooping>`_ *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
 
 
 Objective 9: Try additional features for daytime use and gain confidence in your closed loop system
