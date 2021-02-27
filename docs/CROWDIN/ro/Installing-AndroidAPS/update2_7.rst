@@ -34,7 +34,7 @@ Set master password
 .. image:: ../images/MasterPW.png
   :alt: Set master password
   
-Export settings
+Exportă setările
 -----------------------------------------------------------
 * AAPS 2.7 uses a new encrypted backup format. 
 * You must `export your settings <../Usage/ExportImportSettings.html>`_ after updating to version 2.7.
