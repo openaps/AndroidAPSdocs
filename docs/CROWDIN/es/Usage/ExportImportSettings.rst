@@ -7,7 +7,7 @@ Esté preparado para lo imprevisto. Es posible que cambie los valores importante
 
 La mejor práctica es la exportación después del cambio de valores o la finalización de un objetivo. 
 
-Los valores exportados deben copiarse en un almacenamiento en la nube o en su computadora. Así usted está preparado ante la pérdida o daño de su AAPS teléfono y no tiene que empezar desde cero.
+Exported settings should be copied to a cloud storage or your computer, better two different locations. Así usted está preparado ante la pérdida o daño de su AAPS teléfono y no tiene que empezar desde cero.
 
 En un sistema Windows 10, se ve así:
   
