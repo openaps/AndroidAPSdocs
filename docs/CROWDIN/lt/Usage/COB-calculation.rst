@@ -35,7 +35,7 @@ Kaip AndroidAPS nustato klaidingas AAO reikšmes?
 .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
   :alt: Užuomina apie neteisingą AAO reikšmę
 
-Ekrano vaizde viršuje 41% laiko angliavandenių įsisavinimas buvo matematiškai skaičiuojamas min_5m_carbimpact vietoj reikšmių, nustatytų iš svyravimų.  Tai reiškia, kad gal jūsų turite mažiau aktyvių angliavandenių organizme nei apskaičiuota algoritmo. 
+In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  Tai reiškia, kad gal jūsų turite mažiau aktyvių angliavandenių organizme nei apskaičiuota algoritmo. 
 
 Kaip elgtis su tokiu įspėjimu? 
 --------------------------------------------------
