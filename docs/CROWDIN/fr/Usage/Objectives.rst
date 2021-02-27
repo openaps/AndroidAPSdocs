@@ -119,7 +119,7 @@ Objectif 8 : Ajustement des débits Basal et des ratios si nécessaire, puis act
 * Vous pouvez utiliser `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ pour vérifier que votre basale reste précise ou faire un test de basal traditionnel.
 * Activez `autosens <../Usage/Open-APS-features.html>`_ sur une période de 7 jours et regardez la ligne blanche dans le graphique de l'écran d'accueil qui montre comment la sensibilité à l'insuline augmente ou diminue selon l'exercice physique, le cycle hormonal etc, et gardez un oeil sur l'onglet OpenAPS qui indique comment AndroidAPS ajuste les basales et/ou les cibles en conséquence.
 
-*N'oubliez pas d'enregistrer votre Bouclage dans `ce formulaire <https://bit.ly/nowlooping>`_ en indiquant AndroidAPS comme votre type de logiciel de boucle DIY, si vous ne l'avez pas déjà fait.*
+*Don’t forget to record your looping in* `this form <https://bit.ly/nowlooping>`_ *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
 
 
 Objective 9 : Activation de fonctionnalités supplémentaires pour l'utilisation en journée, telles que la fonction SMB
