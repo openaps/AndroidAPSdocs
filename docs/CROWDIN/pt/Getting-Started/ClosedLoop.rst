@@ -5,11 +5,11 @@ O que é um Sistema de Loop Fechado?
   :alt: AAPS é como um piloto automático
 
 Um sistema artificial de pâncreas em loop fechado combina diferentes componentes para facilitar o controlo da diabetes por si. 
-In her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an `"autopilot for your diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. But what does that mean?
+No seu livro `Automated Insulin Delivery<https://www.artificialpancreasbook.com/>`_, Dana M. Lewis, uma das fundadoras do movimento de código aberto de loop fechado, chama-o de `“piloto automático para a sua diabetes” <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. Mas o que é que isso significa?
 
-**Autopilot in an aircraft**
+**Piloto automático numa aeronave**
 
-The autopilot does not do the complete job and does not give the possibility to the pilot to sleep throughout the entire flight. Facilita o trabalho dos pilotos. It relieves them of the burden of permanently monitoring the aircraft and the flight attitude. This allows the pilot to concentrate on monitoring the airspace and controlling the autopilot's functions.
+O piloto automático não faz o trabalho completo e com isso não dá a possibilidade ao piloto de dormir durante todo o voo. Facilita o trabalho dos pilotos. Isso os livra do fardo de monitorizar permanentemente a aeronave e a altitude do voo. This allows the pilot to concentrate on monitoring the airspace and controlling the autopilot's functions.
 
 The autopilot receives signals from various sensors, a computer evaluates them together with the pilot's specifications and then makes the necessary adjustments. The pilot no longer has to worry about the constant adjustments.
 
