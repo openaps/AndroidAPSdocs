@@ -75,8 +75,8 @@
 * Когда AAPS пользуется алгоритмом ruffy, утилита ruffy недоступна. Самым простым выходом в этом случае является перезагрузить телефон после сопряжения и дать возможность алгоритму ruffy запуститься в фоновом режиме.
 
 * Если помпа совершенно новая, требуется **подать болюс на помпе**, чтобы помпа произвела первую запись в логе.
-* Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump.
-* Then activate the [Combo plugin](../Configuration/Config-Builder#pump). 
+* Прежде чем активировать расширение Combo в AAPS, убедитесь в правильной настройке профиля и в его активации (!) и что профиль базала актуален т. к. AAPS будет синхронизировать профиль с помпой.
+* Затем активируйте расширение [Combo](../Configuration/Config-Builder#pump). 
 * Press the *Refresh* button on the Combo tab to initialize the pump.
 * To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus.
 * The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
