@@ -105,7 +105,7 @@ For other CGM/FGM like Freestyle Libre, ‘SMB always’ is deactivated until xD
 
 SMB is working for 6h after carbohydrates , even if COB is at 0. Για λόγους ασφαλείας, αυτή η επιλογή είναι πιθανώς για πηγές BG με ένα ωραίο σύστημα φιλτραρίσματος για θορυβώδη δεδομένα. Προς το παρόν, λειτουργεί μόνο με Dexcom G5, αν χρησιμοποιείτε την εφαρμογή Dexcom (patched) ή το "native mode" στο xDrip +. Εάν μια τιμή BG έχει πολύ μεγάλη απόκλιση, το G5 δεν το στέλνει και περιμένει την επόμενη τιμή σε 5 λεπτά.
 
-For other CGM/FGM like Freestyle Libre, 'SMB always' is deactivated until xDrip+ has a better noise smoothing plugin. You can find [more information here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+For other CGM/FGM like Freestyle Libre, 'Enable SMB after carbs' is deactivated until xDrip+ has a better noise smoothing plugin. You can find [more information here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Τα μέγιστα λεπτά του βασικού ρυθμού που περιορίζουν το SMB
 
