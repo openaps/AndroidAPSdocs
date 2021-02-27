@@ -9,7 +9,7 @@ In her great book `Automated Insulin Delivery <https://www.artificialpancreasboo
 
 **Autopilot in an aircraft**
 
-The autopilot does not do the complete job and does not give the possibility to the pilot to sleep throughout the entire flight. It facilitates the work of the pilots. It relieves them of the burden of permanently monitoring the aircraft and the flight attitude. This allows the pilot to concentrate on monitoring the airspace and controlling the autopilot's functions.
+The autopilot does not do the complete job and does not give the possibility to the pilot to sleep throughout the entire flight. Facilita o trabalho dos pilotos. It relieves them of the burden of permanently monitoring the aircraft and the flight attitude. This allows the pilot to concentrate on monitoring the airspace and controlling the autopilot's functions.
 
 The autopilot receives signals from various sensors, a computer evaluates them together with the pilot's specifications and then makes the necessary adjustments. The pilot no longer has to worry about the constant adjustments.
 
