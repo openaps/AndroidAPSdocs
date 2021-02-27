@@ -7,7 +7,7 @@ Būkite pasirengę nenumatytiems atvejams. Galite netyčia pakeisti svarbius par
 
 Rekomenduojama eksportuoti nustatymus atlikus pakeitimus ar įvykdžius tikslą. 
 
-Eksportuoti nustatymai turėtų būti nukopijuoti į saugyklą debesyje arba į jūsų kompiuterį. Tuomet esate pasirengęs tam atvejui, jei prarasite ar sugadinsite savo AAPS išmanųjį telefoną ir nereikės pradėti nuo nulio.
+Exported settings should be copied to a cloud storage or your computer, better two different locations. Tuomet esate pasirengęs tam atvejui, jei prarasite ar sugadinsite savo AAPS išmanųjį telefoną ir nereikės pradėti nuo nulio.
 
 Windows 10 kompiuteryje tai atrodo maždaug taip:
   
