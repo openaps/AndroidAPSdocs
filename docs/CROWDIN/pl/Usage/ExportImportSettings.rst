@@ -7,7 +7,7 @@ Be prepared for the unforeseen. You might change important settings by accident 
 
 Best practice is to export after change of settings or completing an objective. 
 
-Exported settings should be copied to a cloud storage or your computer. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
+Exported settings should be copied to a cloud storage or your computer, better two different locations. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
 
 On a Windows 10 computer it looks like this:
   
