@@ -61,20 +61,20 @@
 
 * Установите AndroidAPS по инструкции [AndroidAPS](../Installing-AndroidAPS/Building-APK.md).
 * Для правильной работы с программой внимательно прочитайте документацию.
-* Select the **MDI plugin** in AndroidAPS, not the Combo plugin at this point to avoid the Combo plugin from interfering with ruffy during the pairing process.
-* Clone [ruffy](https://github.com/MilosKozak/ruffy) from github via git.
-* Install ruffy and use it to pair the pump.
+* На этом этапе в настройках AAPS в разделе выбор помпы выберите MDI (компенсация на шприц-ручках) а не Комбо чтобы избежать вмешательства в работу утилиты ruffy во время установки сопряжения.
+* Клонируйте утилиту [ruffy](https://github.com/MilosKozak/ruffy) с github при помощи git.
+* Установите утилиту ruffy и используйте ее для сопряжения с помпой.
     
-    * If it doesn't work after multiple attempts, switch to the `pairing` branch, pair the pump and then switch back the original branch.
-    * Note that the pairing processing is somewhat fragile (but only has to be done once) and may need a few attempts; quickly acknowledge prompts and when starting over, remove the pump device from the Bluetooth settings beforehand. 
-    * Another option to try is to go to the Bluetooth menu after initiating the pairing process (this keeps the phone's Bluetooth discoverable as long as the menu is displayed) and switch back to ruffy after confirming the pairing on the pump, when the pump displays the authorization code.
-    * If you're unsuccessful in pairing the pump (say after 10 attempts), try waiting up to 10s before confirming the pairing on the pump (when the name of the phone is displayed on the pump). 
-    * If you have configured the menu timeout to be 5s above, you need to increase it again. Some users reported they needed to do this. 
-    * Lastly, consider moving from one room to another in case of local radio interference. At least one user immediately overcame pairing problems by simply changing rooms.
+    * Если она не сработает после нескольких попыток, установите утилиту с ветки `сопряжение`, установите связь с помпой, а затем перейдите обратно на исходную ветку.
+    * Обратите внимание, что сопряжение - процесс плохо контролируемый (но выполняемый всего один раз) и, возможно, потребуется несколько попыток; своевременно реагируйте на запросы и, при необходимости повторить попытку, заранее удаляйте помпу из настроек Bluetooth. 
+    * Можно попробовать другой вариант, который заключается в том, чтобы после начала процесса сопряжения войти в меню Bluetooth (это делает Bluetooth телефона видимым на время отображения в меню) и после подтверждения сопряжения, когда помпа показывает код авторизации, переключиться обратно на ruffy.
+    * Если вам не удалось настроить соединение с помпой (скажем, после 10 попыток) попробуйте ждать до 10 секунд, прежде чем подтвердить соединение на помпе (после появления наименования телефона на дисплее помпы). 
+    * Если вы настроили тайм-аут меню меньше 5 сек., потребуется снова увеличить его. Некоторые пользователи сообщают, что им приходилось так делать. 
+    * Наконец, попробуйте переместиться из одной комнаты в другую, чтобы избежать помех связи. Один из пользователей сообщил нам об устранении проблем соединения после простой перемены комнат.
 
-* When AAPS is using ruffy, the ruffy app can't be used. The easiest way is to just reboot the phone after the pairing process and let AAPS start ruffy in the background.
+* Когда AAPS пользуется алгоритмом ruffy, утилита ruffy недоступна. Самым простым выходом в этом случае является перезагрузить телефон после сопряжения и дать возможность алгоритму ruffy запуститься в фоновом режиме.
 
-* If the pump is completely new, you need to **do one bolus on the pump**, so the pump creates a first history entry.
+* Если помпа совершенно новая, требуется **подать болюс на помпе**, чтобы помпа произвела первую запись в логе.
 * Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump.
 * Then activate the [Combo plugin](../Configuration/Config-Builder#pump). 
 * Press the *Refresh* button on the Combo tab to initialize the pump.
