@@ -1,18 +1,18 @@
-# DanaRS Pump
+# Pompa DanaRS
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
+*Aceste instrucțiuni sunt destinate configurării aplicației și pompei dumneavoastră pentru cazul în care aveți o pompă model DanaRS model 2017 sau mai nouă. Vizitați pagina [Pompa de insulină DanaR](./DanaR-Insulin-Pump) dacă aveți o pompă DanaR, modelul original.*
 
 **New Dana RS firmware v3 can be used from AndroidAPS version 2.7 onwards.**
 
-* In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
+* În pompa DanaRS doar "BASAL A" este folosită de aplicație. Datele preexistente vor fi suprascrise.
 
 ## Pairing pump
 
-* In AndroidAPS go to Config Builder and select 'DanaRS'
+* În AndroidAPS mergeți la Config Builder și selectați 'DanaRS'
 
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
+* Selectați Menu prin apăsarea celor 3 puncte aflate în partea dreaptă sus. Alegeți Menu prin apăsarea celor 3 puncte aflate în dreapta sus. Alegeți Preferences.
 
-* Select DanaRS Pair New Pump, and click your DanaRS serial number.
+* Selectați Împerecheați o pompă nouă DanaRS și apăsați pe numărul serial corespunzător pompei dumneavoastră DanaRS.
     
     ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
 
@@ -27,11 +27,11 @@
     
     ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Selectați Viteza Bolus pentru a schimba valoarea implicită de livrare a unui bolus (12 secunde per unitate, 30 secunde per unitate sau 60 de secunde pentru livrarea unei unități de insulină).
 
-* Restart your phone.
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
-* Enable extended boluses on pump
+* Reporniți telefonul.
+* Stabiliți pasul bazalei în pompă la 0.01 U/o prin intermediul meniului Doctors menu (vedeți manualul de utilizare al pompei)
+* Activați bolusurile extinse în pompă
 
 ## Change password on pump
 
@@ -97,4 +97,4 @@ When switching to a new phone the following steps are neccessary:
 
 ## Timezone traveling with Dana RS pump
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+Pentru informaţii desprte călătoriile prin diverse fusuri orare, vedeţi secţiunea [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
