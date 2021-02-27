@@ -113,11 +113,11 @@
 * Имейте в виду, что это не коммерческий отлаженный продукт, поэтому особенно на начальном этапе пользователь должен научиться контролировать и понимать систему, ее ограничения и возможные сбои в работе. 
 * Настоятельно рекомендуем не пользоваться системой, если нет полного понимания принципов ее работы.
 * Изучите документацию по OpenAPS, чтобы понять алгоритм работы AndroidAPS, на ней основанный.
-* Read the [AAPS docs](../index.rst) to learn about and understand AndroidAPS.
-* This integration uses the same functionality which the meter provides that comes with the Combo.
-* The meter allows to mirror the pump screen and forwards button presses to the pump. 
-* The connection to the pump and this forwarding is what the ruffy app does. 
-* A 'scripter' components reads the screen and automates entering boluses, TBRs etc and making sure inputs are processed correctly.
+* Прочитайте [AAPS docs](../index.rst), чтобы узнать и понять AndroidAPS.
+* Данная интеграция обладает той же функциональностью что и пульт - глюкометр, поставляемый в комплекте с помпой.
+* Глюкометр позволяет дублировать экран помпы и перенаправляет на помпу все команды (эквивалентные нажатию кнопок на помпе). 
+* Связь с помпой, равно как и это перенаправление команд является главным функционалом алгоритма утилиты ruffy. 
+* Компоненты скриптера считывают информацию с экрана и автоматизируют подачу болюсов, временного базала TBR; проверяют корректность обработки введенных данных.
 * AAPS then interacts with the scripter to apply loop commands and to administer boluses.
 * This mode has some restrictions: it's comparatively slow (but well fast enough for what it is used for) and setting a TBR or giving a bolus causes the pump to vibrate.
 * The integration of the Combo with AndroidAPS is designed with the assumption that all inputs are made via AndroidAPS. Boluses entered on the pump directly will be detected by AAPS, but it can take up to 20 min before AndroidAPS becomes aware of such a bolus. 
