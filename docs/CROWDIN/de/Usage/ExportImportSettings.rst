@@ -7,7 +7,7 @@ Sei bereit für das Unvorhergesehene. Vielleicht änderst Du versehentlich wicht
 
 Die Empfehlung ist, den Export nach einer Änderung der Einstellungen oder dem Abschluss eines Ziels (Objective) durchzuführen. 
 
-Die exportierten Einstellungen sollten in einen Cloud-Speicher oder auf Deinen Computer kopiert werden. Dann ist Du für den Verlust oder die Beschädigung Deines AAPS-Smartphones vorbereitet und musst nicht wieder bei Null anfangen.
+Kopiere die exportierten Einstellungen auf Deinen Computer oder in einen Cloud-Speicher - sicherer ist es natürlich, wenn Du gleich zwei separate Speicherorte außerhalb Deines Smartphones nutzt. Dann ist Du für den Verlust oder die Beschädigung Deines AAPS-Smartphones vorbereitet und musst nicht wieder bei Null anfangen.
 
 Auf einem Windows 10 PC sieht es in etwa so aus:
   
