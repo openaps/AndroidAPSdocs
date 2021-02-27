@@ -7,7 +7,7 @@ Wees voorbereid op onvoorziene omstandigheden. Je kunt belangrijke instellingen 
 
 Het is goed om jouw instellingen steeds te exporteren na het wijzigen van instellingen of na het voltooien van een Doel. 
 
-Geëxporteerde instellingen moet je vervolgens kopiëren naar een cloudopslag, naar je computer of emailen naar jezelf. Zodat je jouw instellingen-bestand nog hebt wanneer je AAPS telefoon stuk gaat of gestolen wordt.
+Exported settings should be copied to a cloud storage or your computer, better two different locations. Zodat je jouw instellingen-bestand nog hebt wanneer je AAPS telefoon stuk gaat of gestolen wordt.
 
 Op een Windows-10 computer ziet het er zo uit:
   
