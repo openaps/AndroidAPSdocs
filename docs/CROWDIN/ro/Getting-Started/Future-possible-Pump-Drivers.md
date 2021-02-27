@@ -111,11 +111,11 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 
 **For oref1(SMB) or Bolusing:**
 
-- Set Bolus
+- Setează bolusul
 
 **Good to have**
 
-- Cancel Bolus
+- Anulează Bolus
 - Get Basal Profile (almost requirement)
 - Set Basal Profile (nice to have)
 - Read History 
@@ -123,7 +123,7 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 **Other (not required but good to have)**
 
 - Set Extended Bolus
-- Cancel Extended Bolus
+- Renunță la bolusul extins
 - Read History
 - Read TDD
 
