@@ -17,7 +17,7 @@
 
 * Пролонгированный болюс и многоволновый болюс не поддерживаются (вместо них см. [Расширенные углеводы](../Usage/Extended-Carbs.rst)).
 * Поддерживается только один базальной профиль.
-* Setting a basal profile other than 1 on the pump or delivering extended boluses or multiwave boluses from the pump interferes with TBRs and forces the loop into low-suspend only mode for 6 hours as the the loop can't run safely under these conditions.
+* Установка профиля, отличного от заданного на помпе или подача пролонгированного/многоволнового болюса с помпы конфликтует с временной скоростью базала TBR и приводит алгоритм ИПЖ к работе только в режиме приостановки на низких ГК в течение 6 часов поскольку безопасность работы цикла при этом нарушается.
 * It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling#accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 * В настоящее время поддерживаются только величины базала от 0.05 до 10 ед./час. This also applies when modifying a profile, e.g. when increasing to 200%, the highest basal rate must not exceed 5 U/h since it will be doubled. Аналогично, при снижении на 50%, самая низкая базальная скорость не должна быть меньше 0,10 U/ч.
 * If the loop requests a running TBR to be cancelled the Combo will set a TBR of 90% or 110% for 15 minutes instead. This is because cancelling a TBR causes an alert on the pump which causes a lot of vibrations.
