@@ -1,7 +1,7 @@
 Docs updates & changes
 **************************************************
 
-January 2021
+Ianuarie 2021
 ==================================================
 * `Action tab <../Getting-Started/Screenshots.html#action-tab>`_ - more details on page 'AndroidAPS screens'
 * Dexcom G6 with `Build Your Own Dexcom App <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_
@@ -9,13 +9,13 @@ January 2021
 * `Objectives <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ - new questions
 * Other `new AndroidAPS 2.8.0 functions <../Installing-AndroidAPS/Releasenotes.html#version-2-8-0>`_
 
-December 2020
+Decembrie 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - patched app does not work with US sensors
 * `OpenAPS hard-coded limits <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_
 * Sony Smartwatch 3 `Manual Installation of Google Play Service <../Usage/SonySW3.html>`_
 
-October 2020
+Octombrie 2020
 ==================================================
 * Accu-Chek Combo - update `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
 * Accu-Chek Insight - Option to `upload absolute values <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
@@ -23,7 +23,7 @@ October 2020
 * Omnipod Eros - status update
 * `SMS commands - time sync <../Children/SMS-Commands.html>`_
 
-September 2020
+Septembrie 2020
 ==================================================
 * Major update for new AAPS version 2.7
 * For details see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
@@ -64,12 +64,12 @@ February 2020
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - major new features
 * `Wear complications <../Configuration/Watchfaces.html>`_
 
-January 2020
+Ianuarie 2020
 ==================================================
 * `Manual carb correction <../Getting-Started/Screenshots.html#carb-correction>`_ for faulty carb entries
 * `Image size <../make-a-PR.html#image-size>`_ when editing docs
 
-December 2019
+Decembrie 2019
 ==================================================
 * `Android auto <../Usage/Android-auto.html>`_ - setup with screenshots
 * `Accu-Chek Insight & Autotune <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_ - workaround for usage
@@ -94,7 +94,7 @@ November 2019
 * `Update - quick walk-through for experienced users <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
 * Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-docs-pages>`_.
 
-October 2019
+Octombrie 2019
 ==================================================
 * `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `AccuChek Insight - log options <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
@@ -107,7 +107,7 @@ October 2019
 * `SMS Commands Troubleshooting <../Children/SMS-Commands.html#troubleshooting>`_
 * `xDrip - update G6 transmitter replacement <../Configuration/xdrip.html#replace-transmitter>`_
 
-September 2019
+Septembrie 2019
 ==================================================
 * `Automate <../Usage/Automation.html>`_
 * `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorbtion
