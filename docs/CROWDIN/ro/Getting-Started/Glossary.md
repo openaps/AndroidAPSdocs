@@ -1,7 +1,7 @@
-# Glossary<table style="width:100%" border=1 cellpadding=5>
+# Glosar<table style="width:100%" border=1 cellpadding=5>
 <tr>
  <th>Term</th>
- <th>Description</th>
+ <th>Descriere</th>
  <th>see also</th>
  <th>more details @</th>
 </tr>
@@ -59,7 +59,7 @@
  <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
- <td><strong>BG</strong></td>
+ <td><strong>Gl</strong></td>
  <td>blood glucose</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
@@ -71,7 +71,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
-<td><strong>BG source</strong></td>
+<td><strong>Sursă valoare glicemie</strong></td>
  <td>Where do your glucose values come from?</td>
  <td>CGM / FGM</td>
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG source</a></td>
@@ -84,12 +84,12 @@
 </tr>
 <tr>
  <td><strong>BR</strong></td>
- <td>basal rate</td>
+ <td>rată bazală temporară</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>CAGE</strong></td>
+ <td><strong>VC</strong></td>
  <td>canula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
@@ -107,7 +107,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>Closed Loop</strong></td>
+ <td><strong>Buclă închisă</strong></td>
  <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
  <td>Open loop</td>
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
@@ -227,7 +227,7 @@
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
 <tr>
- <td><strong>NS Client</strong></td>
+ <td><strong>Client NS</strong></td>
  <td>part of AAPS to connect to your Nightscout site</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
@@ -239,7 +239,7 @@
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
 <tr>
- <td><strong>Objectives</strong></td>
+ <td><strong>Obiective</strong></td>
  <td>learning program within AAPS guiding you step by step from open to closed loop</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
@@ -251,9 +251,9 @@
  <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
 </tr>
 <tr>
- <td><strong>Open Loop</strong></td>
+ <td><strong>Buclă Deschisă</strong></td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
- <td>Closed Loop</td>
+ <td>Buclă închisă</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
 </tr>
 <tr>
@@ -275,19 +275,19 @@
  <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
 </tr>
 <tr>
- <td><strong>Predictions</strong></td>
+ <td><strong>Predicții</strong></td>
  <td>preditions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
 </tr>
 <tr>
- <td><strong>Profile</strong></td>
+ <td><strong>Profil</strong></td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
  <td>Nightscout</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
 </tr>
 <tr>
- <td><strong>Profile switch</strong></td>
+ <td><strong>Schimbare de profil</strong></td>
  <td>(temporary) change of profile used or percentual increase/decrease</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
@@ -305,7 +305,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>SAGE</strong></td>
+ <td><strong>VS</strong></td>
  <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
@@ -373,11 +373,11 @@
 <tr>
  <td><strong>Virtual pump</strong></td>
  <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
- <td>Open Loop</td>
+ <td>Buclă Deschisă</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>Wallpaper</strong></td>
+ <td><strong>Fundal</strong></td>
  <td>AndroidAPS background image</td>
  <td></td>
  <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>
