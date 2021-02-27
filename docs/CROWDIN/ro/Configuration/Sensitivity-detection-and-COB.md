@@ -1,24 +1,24 @@
-# Sensitivity detection
+# Detectare sensibilitate
 
-## Sensitvity algorithm
+## Algoritmul pentru sensibilitate
 
-Currently we have 3 sensitivity detection models:
+În acest moment există 3 modele de detectare a sensibilității:
 
-* Sensitivity AAPS
-* Sensitivity WeightedAverage
-* Sensitivity Oref1
+* Sensibilitate AAPS
+* Sensibilitate estimată prin mediere
+* Sensibilitate Oref1
 
-### Sensitivity AAPS
+### Sensibilitate AAPS
 
 Sensitivity is calculated the same way like Oref1 but you can specify time to the past. Minimul absorbției de carbohidrați este calculată pe baza timpului maxim al absorbției de carbohidrați din preferințe
 
-### Sensitivity WeightedAverage
+### Sensibilitate estimată prin mediere
 
 Sensibilitatea este calculată ca o medie ponderată pe baza variațiilor. You can specify time to the past. Variațiile mai recente valorează mai mult în calcule. Absorbția minimă de carbohidrați este calculată pe baza timpului maxim al absorbției de carbohidrați din preferințe. Acest algoritm este cel mai rapid în detectarea schimbărilor de sensibilitate.
 
-### Sensitivity Oref1
+### Sensibilitate Oref1
 
-Sensitivity is calculated from 8h data in the past or from last site change, if it is less than 8h ago. Carbs (if not absorbed) are cut after time specified in preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from sensitivity calculation. So if you are using SMB with UAM, you have to choose Oref1 algorithm to work properly. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
+Sensibilitate este calculată pe baza datelor din ultimile 8 ore sau de la ultima schimbare de loc de montare a pompei, dacă aceasta a avut loc acum mai puțin de 8 ore. Carbohidrații (dacă nu au fost absorbiți) sunt ignorați după perioada de timp specificată în setări. Only the Oref1 algorithm supports un-announced meals (UAM). Aceasta înseamnă că perioadele de timp în care se consideră că acționează o masă neanunțată (UAM) este exclusă din calculul sensibilității. Deci, dacă folosiți SMB cu UAM, va trebui să alegeți algoritmul Oref1 pentru o funcționare corectă. Pentru mai multe informații puteți citi [documentația OpenAPS Oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
 
 ## Simultaneous carbs
 
