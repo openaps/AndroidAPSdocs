@@ -49,7 +49,7 @@
     * Настройте максимальную величину болюса в соответствии с требованиями вашей терапии, но имея в виду защиту от ошибок в программном обеспечении
     * Аналогичным образом настройте максимальную продолжительность временного базала TBR на безопасный уровень. Установите эту величину по крайней мере на 3 часа, так как опция отключения помпы задает нулевой базал на 3 часа.
     * Включите блокировку клавиш помпы для предотвращения быстрой подачи болюса, особенно если быстрая подача болюса с помпы была в привычке до перехода на AAPS.
-    * Set display timeout and menu timeout to the minimum of 5.5 and 5 respectively. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
+    * Задайте таймаут отключения экрана и меню минимум на 5,5 и 5 соответственно. Это позволяет AAPS быстрее восстановиться после ошибок и уменьшает количество вибраций во время таких ошибок
 
 ![Снимок экрана меню параметров пользователя](../images/combo/combo-menu-settings.png)
 
@@ -59,8 +59,8 @@
 
 ![Снимок экрана настроек для картриджей инсулина](../images/combo/combo-insulin-settings.png)
 
-* Install AndroidAPS as described in the [AndroidAPS docs](../Installing-AndroidAPS/Building-APK.md).
-* Make sure to read the docs to understand how to setup AndroidAPS.
+* Установите AndroidAPS по инструкции [AndroidAPS](../Installing-AndroidAPS/Building-APK.md).
+* Для правильной работы с программой внимательно прочитайте документацию.
 * Select the **MDI plugin** in AndroidAPS, not the Combo plugin at this point to avoid the Combo plugin from interfering with ruffy during the pairing process.
 * Clone [ruffy](https://github.com/MilosKozak/ruffy) from github via git.
 * Install ruffy and use it to pair the pump.
