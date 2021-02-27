@@ -1,68 +1,68 @@
-SMS Commands
+Comenzi prin SMS
 **************************************************
-Safety First
+Siguranța pe primul loc
 ==================================================
-* AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code. A strong password or biometrics are recommended.
-* Additionally it is recommended to allow a `second phone number <#authorized-phone-numbers>`_ for SMS commands. So you can use second number to `temporary disable <#other>`_ SMS communicator in case your main remote phone gets lost or stolen.
+* AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code. Se recomandă o parolă puternică sau bazata pe date biometrice.
+* În plus, este recomandat să se permită un număr de telefon "al doilea număr <#telefoane-autorizate>" _ pentru comenzile SMS. Astfel, puteți utiliza al doilea număr pentru "a dezactiva temporar <#other>" _ comunicarea SMS în cazul în care telefonul principal de control la distanță este pierdut sau furat.
 * AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
-* **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
-* As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
+* **Dacă bolusați prin comenzi SMS, trebuie să introduceți carbohidrați prin Nightscout (NSClient, Website...)!** Dacă nu reuşiţi să faceţi acest lucru, IOB va fi corectat cu un nivel prea scăzut de COB, ceea ce ar putea duce la neefectuarea corecţiei bolus, deoarece AAPS presupune că aveţi prea multă insulină activă.
+* Începând cu AndroidAPS versiunea 2.7 o aplicație autentificator cu o parolă unică bazata pe timp trebuie obligatoriu folosită pentru a crește siguranța la folosirea comenzilor SMS.
 
-Setup SMS commands
+Setare comenzi SMS
 ==================================================
 
 .. image:: ../images/SMSCommandsSetup.png
-  :alt: SMS Commands Setup
+  :alt: Setare comenzi SMS
       
-* Most of the adjustments of temp targets, following AAPS etc. can be done on `NSClient app <../Children/Children.html>`_ on an Android phone with an internet connection.
-* Boluses can't be given through Nightscout, but you can use SMS commands.
-* If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
+* Cea mai mare parte a ajustărilor obiectivelor temporare, în conformitate cu AAPS etc. poate fi făcută in `NSClient app <../Children/Children.html>`_ pe un telefon Android cu conexiune la internet.
+* Bolusurile nu pot fi comandate prin Nightscout, dar puteți folosi comenzi prin SMS.
+* Dacă folosiți un iPhone ca urmăritor și, prin urmare, nu puteți utiliza aplicația NSClient, există comenzi SMS suplimentare.
 
-* In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+* În setarea de telefon android mergeți la Aplicații > AndroidAPS > Permisiuni și activați SMS
 
-Authorized phone numbers
--------------------------------------------------
-* In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679) 
+Numere de telefon autorizate
+--------------------------------------------------
+* In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. + 6412345678; + 6412345679) 
 * Enable 'Allow remote commands via SMS'.
-* If you want to use more than one number:
+* Dacă doriţi să utilizaţi mai mult de un număr:
 
-  * Enter just one number.
+  * Introduceţi doar un număr.
   * Make that single number work by sending and confirming a SMS command.
   * Enter additional number(s) separated by semicolon, no space.
   
     .. image:: ../images/SMSCommandsSetupSpace2.png
       :alt: SMS Commands Setup multiple numbers
 
-Minutes between bolus commands
--------------------------------------------------
+Minute între comenzile de bolus
+--------------------------------------------------
 * You can define the minimum delay between two boluses issued via SMS.
 * For safety reasons you have to add at least two authorized phone numbers to edit this value.
 
 Additionally mandatory PIN at token end
--------------------------------------------------
+--------------------------------------------------
 * For safety reasons the reply code must be followed by a PIN.
-* PIN rules:
+* Reguli PIN:
 
-  * 3 to 6 digits
-  * not same digits (i.e. 1111)
-  * not in a row (i.e. 1234)
+  * 3-6 cifre
+  * nu aceleași cifre (ex: 1111)
+  * nu consecutive (adică 1234)
 
-Authenticator setup
--------------------------------------------------
-* Two-factor authentication is used to improve safety.
-* You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
+Setare Authenticator
+--------------------------------------------------
+* Autentificarea cu doi factori este folosită pentru a îmbunătăți siguranța.
+* Puteți folosi orice aplicație Authenticator care suportă tokens RFC 6238 TOTP. Aplicaţiile gratuite populare sunt:
 
-  * `Authy <https://authy.com/download/>`_
-  * Google Authenticator - `Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>`_ / `iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>`_
-  * `LastPass Authenticator <https://lastpass.com/auth/>`_
-  * `FreeOTP Authenticator <https://freeotp.github.io/>`_
+  * ` Authy <https://authy.com/download/>` _
+  * Google Authenticator-` Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>` _/` iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>` _
+  * `LastPass Autentificator <https://lastpass.com/auth/>`_
+  * " FreeOTP Authenticator <https://freeotp.github.io/>` _
 
-* Install the authenticator app of your choice on your follower phone and scan the QR code shown in AAPS.
-* Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. Example:
+* Instalați aplicația de autentificare la alegere pe telefonul urmăritor şi scanați codul QR afișat în AAPS.
+* Testați parola unică prin introducerea token-ului (numărului) afișat în aplicația de autentificare și a PIN-ul pe care îl setați în AAPS. Example:
 
-  * Your mandatory PIN is 2020
-  * TOTP token from the authenticator app is 457051
-  * Enter 4570512020
+  * PIN-ul obligatoriu este 2020
+  * token TOTP de la aplicaţia autentificator este 457051
+  * Introduceți 4570512020
    
 * The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
 * The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
@@ -74,9 +74,9 @@ Use SMS commands
 * The AAPS phone will respond to confirm success of command or status requested. 
 * Confirm command by sending the code where necessary. Example:
 
-  * Your mandatory PIN is 2020
-  * TOTP token from the authenticator app is 457051
-  * Enter 4570512020
+  * PIN-ul obligatoriu este 2020
+  * token TOTP de la aplicaţia autentificator este 457051
+  * Introduceți 4570512020
 
 **Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
@@ -87,7 +87,7 @@ Commands must be sent in English, the response will be in your local language if
 .. image:: ../images/SMSCommands.png
   :alt: SMS Commands Example
 
-Loop
+Buclă
 --------------------------------------------------
 * LOOP STOP/DISABLE
   * Response: Loop has been disabled
@@ -97,8 +97,8 @@ Loop
 
   * Response depends on actual status
 
-    * Loop is disabled
-    * Loop is enabled
+    * Bucla este dezactivată
+    * Bucla este activată
     * Suspended (10 min)
 * LOOP SUSPEND 20
   * Response: Loop suspended for 20 minutes
@@ -107,13 +107,13 @@ Loop
 
 CGM data
 --------------------------------------------------
-* BG
+* Glicemie
   * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
   * Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN
   * Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
 
-Basal
+Bazală
 --------------------------------------------------
 * BASAL STOP/CANCEL
   * Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
@@ -146,7 +146,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 * EXTENDED 2 120
   * Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
 
-Profile
+Profil
 --------------------------------------------------
 * PROFILE STATUS
   * Response: Profile1
@@ -157,13 +157,13 @@ Profile
 * PROFILE 2 30
   * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
 
-Other
+Altul
 --------------------------------------------------
 * TREATMENTS REFRESH
   * Response: Refresh treatments from NS
 * NSCLIENT RESTART
   * Response: NSCLIENT RESTART 1 receivers
-* PUMP
+* POMPĂ
   * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 * PUMP CONNECT
   * Response: Pump reconnected
@@ -180,7 +180,7 @@ Other
 * HELP BOLUS
   * Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
-Troubleshooting
+Depanare
 ==================================================
 Multiple SMS
 --------------------------------------------------
