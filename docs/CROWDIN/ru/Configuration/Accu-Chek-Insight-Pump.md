@@ -52,19 +52,19 @@
 
 ## Настройки на AAPS
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences#advanced-settings-nsclient)).
+**Примечание : В настоящее время есть возможность (начиная с версии AAPS v2.7.) «Всегда использовать абсолютные значения базала», если вы намерены использовать Autotune с помпой Insight даже если 'Синхронизация включена' с Nightscout.** (В AAPS перейдите в [Настройки > NSClient > Расширенные настройки](../Configuration/Preferences#advanced-settings-nsclient)).
 
 ![Screenshot of Insight Settings](../images/Insight_settings.png)
 
-In the Insight settings in AndroidAPS you can enable the following options:
+В настройках Insight в AndroidAPS следует активировать следующие параметры:
 
-* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
+* "Отслеживать замены картриджа": При выполнении команды "заполнение инфузионного набора" на помпе, это действие автоматически внесется в журнал как замена картриджа.
 
-* "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
+* "Отслеживать смену инфузионного набора": При запуске программы помпы "первичное заполнение инфузионного набора" в базе данных AndroidAP добавляется соответствующая заметка.
 
-* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+* "Отслеживать смену места установки катетера": При запуске программы помпы "первичное заполнение инфузионного набора" в базе данных AndroidAP добавляется соответствующая заметка. ** Примечание: Изменение места установки катетера также сбрасывает Autosens. **
 
-* "Log battery changes": This records a battery change when you put a new battery in the pump.
+* "Отслеживать замену батареи": При установке нового аккумулятора в помпе в базе данных Aaps добавляется соответствующая заметка.
 
 * "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
 
