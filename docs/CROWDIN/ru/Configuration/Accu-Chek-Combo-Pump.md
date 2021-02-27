@@ -28,19 +28,19 @@
 * В настоящее время мало что можно сделать для устранения этих проблем. Поэтому если подобные ошибки повторяются часто, подберите себе другой телефон, о котором известно, что он хорошо работает с AndroidAPS и Комбо (см. выше).
 * Подача болюса с помпы не всегда распознается вовремя (проверяется только во время соединения с AAPS) и в худшем случае может занять до 20 минут. 
 * Болюсы помпы проверяются перед высоким временным базалом TBR или болюсом, подаваемым с AAPS, но из-за встроенных ограничений AAPS откажется подавать TBR/болюс, основанный на неверных расчетах. (-> Не подавайте болюс с помпы! См. главу [Использование](#usage) ниже)
-* Setting a TBR on the pump is to be avoided since the loop assumes control of TBRs. Detecting a new TBR on the pump might take up to 20 minutes and the TBR's effect will only be accounted from the moment it is detected, so in the worst case there might be 20 minutes of a TBR that is not reflected in IOB. 
+* Следует избегать программирования временного базала TBR на помпе, так как контроль над TBR задается алгоритмом AAPS. Обнаружение нового временного базала TBR на помпе может занять до 20 минут, а его действие принимается в расчет алгоритмом AAPS с момента обнаружения, так что в худшем случае TBR не будет учтен как активный инсулин IOB в течении 20 минут. 
 
 ## Настройки
 
-* Configure the pump using 360 config software. 
-* If you do not have the software, please contact your Accu-Chek hotline. They usually send registered users a CD with the "360° Pump Configuration Software" and a SmartPix USB-infrared connection device (the Realtyme device also works if you have that).
-* **Required settings** (marked green in screenshots):
+* Настройте помпу с помощью конфигурирующей программы 360. 
+* Если у вас нет этой программы, обратитесь в службу поддержки Акку-Чек. Обычно они высылают диск с программой "360° Pump Configuration Software" и устройство инфракрасной связи SmartPix зарегистрированным пользователям (устройство Realtyme также годится для этих целей).
+* **Необходимые настройки** (отмечены зеленым в скриншотах):
     
-    * Set/leave the menu configuration as "Standard", this will show only the supported menus/actions on the pump and hide those which are unsupported (extended/multiwave bolus, multiple basal rates), which cause the loop functionality to be restricted when used because it's not possible to run the loop in a safe manner when used.
-    * Verify the *Quick Info Text* is set to "QUICK INFO" (without the quotes, found under *Insulin Pump Options*).
-    * Set TBR *Maximum Adjustment* to 500%
-    * Disable *Signal End of Temporary Basal Rate*
-    * Set TBR *Duration increment* to 15 min
+    * Установите/оставьте конфигурацию меню как "Стандартная", в результате будут показаны только поддерживаемые меню/действия на помпе и уберутся неподдерживаемые (пролонгированный/многоволновый болюс, множественные скорости базала), которые ограничивают функционал помпы в безопасном режиме AAPS.
+    * Убедитесь, что *Краткие сведения - текст* установлен на "КРАТКИЕ СВЕДЕНИЯ" (без кавычек, в разделе *Параметры инсулиновой помпы*).
+    * Установите *Максимум корректировки* суммарной скорости базала TBR на 500%
+    * Отключите *Сигнал окончания временного базала*
+    * Установите *приращение длительности* временного базала на 15 мин
     * Включите Bluetooth
 
 * **Recommended settings** (marked blue in screenshots)
