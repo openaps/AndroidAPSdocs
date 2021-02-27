@@ -86,82 +86,82 @@ Acesta este primul ecran pe care îl veți descoperi când deschideți AndroidAP
 * Spic de grâu: [carbohidrați la bord (COB)](../Usage/COB-calculation.rst) - carbohidrați încă neabsorbiți pe care i-ați consumat anterior -> iconița pulsează dacă sunt necesari carbohidrați
 
 * Linie violetă: rata bazală – modificările iconiței reflectă modificările temporare ale ratei bazale (plat la 100%) 
-   * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
-* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features#autosens) status (enabled or disabled) and value is shown below icon
+   * Apăsați iconița pentru a vedea rata bazalei și detaliile oricărei bazale temporare (inclusiv durata rămasă)
+* Săgeți sus & jos: indică starea actuală [autosens](../Usage/Open-APS-features#autosens) (activată sau dezactivată) și valoarea este afișată sub iconiță
 
-#### Carbs required
+#### Carbohidrați necesari
 
-![Carbs required](../images/Home2020_CarbsRequired.png)
+![Carbohidrați necesari](../images/Home2020_CarbsRequired.png)
 
-* Carbs suggestions are given when the reference design detects that it requires carbs.
-* This is when the oref algorithm thinks I can't rescue you by 0 (zero) temping and you will need carbs to fix.
-* The carb notifications are much more sophisticated than the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
+* Sunt oferite sugestii pentru carbohidrați atunci când design-ul de referință detectează că este nevoie de carbohidrați.
+* Acest lucru se întâmplă când algoritmul oref crede ca nu poate opri hipoglicemia doar setând livrarea de insulina la zero si vei avea nevoie de carbohidrați.
+* Notificările pentru carbohidrați sunt mult mai sofisticate decât calculatoarele pentru bolus. S-ar putea să vedeți sugestii pentru carbohidrați în timp ce calculatorul de bolus nu arată carbohidrați lipsă.
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
-### Section E - Status lights
+### Secţiunea E - Lumini de stare
 
 ![Section E](../images/Home2020_StatusLights.png)
 
 * Status lights give a visual warning for 
-   * Cannula age
+   * Vechime canulă
    * Insulin age (days reservoir is used)
    * Reservoir level (units)
    * Sensor age
-   * Battery age and level (%)
+   * Vârsta şi nivelul bateriei (%)
 * If threshold warning is exceeded, values will be shown in yellow.
 * If threshold critical is exceeded, values will be shown in red.
-* Settings can be made in [preferences](../Configuration/Preferences#status-lights).
+* Setările pot fi făcute în [preferinţe](../Configuration/Preferences#status-lights).
 
-### Section F - Main graph
+### Secţiunea F - Grafic principal
 
 ![Section F](../images/Home2020_MainGraph.png)
 
-* Graph shows your blood glucose (BG) as read from your glucose monitor (CGM). 
-* Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
-* Long press on the graph to change the time scale. You can choose 6, 12, 18 or 24 hours.
-* The green area reflects your target range. It can be configured in [preferences](../Configuration/Preferences#range-for-visualization).
-* Blue triangles show [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - if enabled in [preferences](../Configuration/Preferences#openaps-smb-settings).
-* Optional information:
+* Graficul prezintă glicemia dumneavoastră (BG), așa cum se citeşte de către sistemul de monitorizare a glicemiei (CGM). 
+* Aici se afișează notițele introduse în pagina de acțiune, cum ar fi calibrările și intrările de carbohidrați precum și schimbările de profil. 
+* Apăsați lung pe grafic pentru a schimba intervalul de timp. Puteţi alege 6, 12, 18 sau 24 ore.
+* Zona verde reflectă intervalul tău țintă. Poate fi configurat în [preferinţe](../Configuration/Preferences#range-for-visualization).
+* Triunghiurile albastre afișează [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - dacă este activat în [preferințe](../Configuration/Preferences#openaps-smb-settings).
+* Informaţii opţionale:
    
    * Predicții
    * Basals
-   * Activity - insulin activity curve
+   * Activitate - curba activităţii insulinei
 
-#### Activate optional information
+#### Activare informaţii opţionale
 
-* Click the triangle on the right side of the main graph to select which information will be displayed in the main graph.
-* For the main graph just the three options above the line "\---\---- Graph 1 \---\----" are available.
+* Faceţi click pe triunghiul din partea dreaptă a graficului principal pentru a selecta care informaţii vor fi afişate în graficul principal.
+* Pentru graficul principal doar cele trei opţiuni de deasupra liniei "\---\---- Graph 1 \---\----" sunt disponibile.
    
    ![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
-#### Prediction lines
+#### Linii de predicție
 
-* **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
+* Linia **Portocalie**: [COB](../Usage/COB-calculation.rst) (culoarea este folosită în general pentru a reprezenta COB și carbohidrați)
    
-   Prediction line shows where your BG (not where COB itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
+   Linia de predicție arată încotro va evolua glicemia dvs. (nu cum vor fi absorbite glucidele deja mâncare: CoB!) pe baza setărilor actuale ale pompei și presupunând că deviațiile datorate absorbției de carbohidrați rămân constante. Această linie apare numai dacă există COB cunoscuţi.
 
-* **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
+* Linia **Albastru închis**: IOB (culoarea este folosita in general pentru a reprezenta IOB si insulina)
    
-   Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
+   Linia de predicţie arată ce s-ar întâmpla sub influenţa doar a insulinei. De exemplu, dacă ați administrat o anumită cantitate de insulină şi apoi nu aţi mâncat nici un fel de carbohidrati.
 
-* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* Linia **Albastră**: zero-temp (glicemia prezisă dacă se va stabili rata bazală temporară la 0%)
    
-   Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+   Linia de predicţie arată cum s-ar modifica curba IOB dacă pompa ar opri toate livrările de insulină (0% TBR).
 
-* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals)
+* Linia **galben închis**: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (mese neanunțate)
    
-   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+   Mesele inopinate (neanunțate) înseamnă că se detectează o creştere semnificativă a nivelului glicemiei din cauza meselor, a adrenalinei sau a altor influenţe. Linia de predicție este similară cu linia PORTOCALIE COB, dar presupune că devierile vor scădea în ritm constant (prin extinderea ratei actuale de reducere).
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+De obicei, curba reală a glicemiei ajunge în mijlocul acestor linii, sau aproape de cea care face presupuneri care se apropie cel mai mult de situația ta.
 
 #### Basals
 
-* A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
-* The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
-* In times standard basal rate is given the area under the curve is shown in dark blue.
-* When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
+* Linia **albastră groasă** afișează livrarea bazală a pompei și reflectă livrarea efectivă de-a lungul timpului.
+* Linia **albastră punctată** afișează cum ar fi rata bazală dacă nu ar exista ajustări temporare ale bazalei (TBRs).
+* Când se administrează rata bazală standard, zona de sub curbă este indicată in culoarea albastru închis.
+* Când rata bazală este ajustată temporar (crescând-o sau scăzând-o), zona de sub curba este indicată în albastru deschis.
 
-#### Activity
+#### Activitate
 
 * Linia **galbenă subțire** arată activitatea Insulinei. 
 * Aceasta se bazează pe scăderea preconizată a concentraţiei plasmatice a insulinei în sistemul dumneavoastră dacă nu au fost prezenţi alţi factori (cum sunt carbohidraţii).
@@ -205,7 +205,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Prezintă sensibilitatea pe care a detectat-o [Autosens](../Usage/Open-APS-features#autosens). 
 * Sensibilitatea este un calcul al sensibilităţii la insulină ca rezultat al exerciţiilor fizice, hormonilor etc.
 
-#### Activity
+#### Activitate
 
 * Arată activitatea insulinei, calculată în funcţie de profilul insulinei (nu este derivat din IOB). 
 * Valoarea este mai mare pentru insulina în apropierea momentului de vârf.
@@ -252,72 +252,72 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### CGM
 
-* Opens xDrip+.
-* Back button returns to AAPS.
+* Deschide xDrip+.
+* Butonul Înapoi revine la AAPS.
 * Trebuie să fie activat în [preferinţe](../Configuration/Preferences#buttons).
 
 #### Asistent Rapid
 
-* Easily enter amount of carbs and set calculation basics.
-* Details are setup in [preferences](../Configuration/Preferences#quick-wizard).
+* Introduceți cu ușurință cantitatea de carbohidrați și stabiliți calculele de bază.
+* Detaliile sunt stabilite în [preferinţe](../Configuration/Preferences#quick-wizard).
 
-## Bolus Wizard
+## Asistent Bolus
 
 ![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus this is where you will normally make it from.
+Când doriţi să faceţi un bolus pentru o masă, în mod normal de aici veţi face asta.
 
-### Section I
+### Secţiunea I
 
-* BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. 
-* In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. 
-* The CORR field is if you want to modify the end dosage for some reason.
-* The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+* Câmpul Glicemie este deja completat cu ultima citire din CGM. Dacă nu aveţi un CGM funcţional, atunci acesta va fi gol. 
+* În câmpul CARBOHIDRAȚI adăugați cantitatea de carbohidrați - sau echivalent - pentru care doriți să faceți bolus. 
+* Câmpul CORECȚIE este dacă doriţi să modificaţi dozajul final dintr-un anumit motiv.
+* Câmpul DECALAJ CARB este pentru pre-bolusare, astfel încât să puteţi spune sistemului că va fi o întârziere până când vor apărea carbohidrații. Puteţi să puneţi un număr negativ în acest câmp dacă bolusați pentru carbohidrați anteriori.
 
-#### Eating reminder
+#### Memento pentru masă
 
-* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
+* Pentru carbohidrații din viitor căsuța de alarmă poate fi selectatată (e implicit atunci cand este introdus un timp în viitor) astfel încât să vă puteți aminti la un moment dat in viitor când să mâncați carbohidrații pe care i-ați introdus în AndroidAPS
    
    ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
 
-### Section J
+### Secţiunea J
 
-* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable [superbolus](../Configuration/Preferences#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences#overview).
-* The idea is to deliver the insulin sooner and hopefully reduce spikes.
-* For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
+* SUPER BOLUS este cazul în care insulina bazală pentru următoarele două ore este adăugată în bolus imediat şi se emite RBT=0 pentru următoarele două ore pentru a prelua insulina suplimentară. The option only shows when "Enable [superbolus](../Configuration/Preferences#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences#overview).
+* Ideea este de a livra insulina mai devreme în speranța de a reduce vârfurile.
+* Pentru detalii vizitați [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
-### Section K
+### Secţiunea K
 
-* Shows the calculated bolus. 
-* If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+* Arată bolus-ul calculat. 
+* În cazul în care cantitatea de insulină la bord depăşeşte bolusul calculat, atunci aceasta va afişa doar cantitatea de carbohidrați care mai sunt necesari.
 * Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
 
-### Section L
+### Secţiunea L
 
-* Details of wizard's bolus calculation.
-* You can deselect any that you do not want to include but you normally wouldn't want to.
-* For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
+* Detalii despre asistentul de calculul al bolusului.
+* Puteți deselecta orice pe care nu doriți să îl includeți dar, în mod normal, nu ați dori să îl faceți.
+* Din motive de siguranţă, **căsuța TT trebuie să fie bifată manual** dacă doriţi ca asistentul de bolus să calculeze pe baza unei ţinte temporare existente.
 
-#### Combinations of COB and IOB and what they mean
+#### Combinaţii de COB şi IOB şi ce înseamnă acestea
 
-* For safety reasons IOB boxed cannot be unticked when COB box is ticked as you might run the risk of too much insulin as AAPS is not accounting for what’s already given.
-* If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
-* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
+* Pentru motive de siguranţă, IOB nu poate fi debifat atunci când căsuța COB este bifată deoarece s-ar putea să existe riscul unei cantitați prea mari de insulină deoarece AAPS nu calculează pentru ceea ce a fost deja administrat.
+* Dacă bifaţi COB şi IOB, vor fi luați în considerare carbohidraţi neabsorbiţi care nu sunt incă acoperiţi de insulină + toată insulina care a fost eliberată sub formă de RBT sau SMB.
+* Dacă bifaţi IOB fără COB, AAPS ia în considerare insulina deja eliberată, dar nu o va acoperi în raport cu niciun carbohidrat care nu a fost încă absorbit. Acest lucru conduce la o notiță "carbohidrați lipsă”.
+* Dacă bolusați pentru **mâncare suplimentară** la scurt timp după o masă (de ex. desert suplimentar) poate fi util să **debifați toate căsuţele**. În acest fel, doar noii carbohidrați sunt adăugați deoarece masa principală nu va fi absorbită așa că IOB nu se potrivește cu precizie cu COB la scurt timp după un bolus de masă.
 
-#### Wrong COB detection
+#### Detectare cantitate COB greșită 
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
 
-* If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. 
-* So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
-* For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
+* Dacă vedeţi avertismentul de mai sus după utilizarea asistentului de bolus, AndroidAPS a detectat că valoarea COB calculată poate fi greşită. 
+* Așadar, dacă doriți să faceți din nou bolus după o masă anterioară cu COB, trebuie să fiți conștienți de suprapunere! 
+* Pentru detalii vezi indiciile la [COB pagina de calcul](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
-## Action tab
+## Pagina Acțiuni
 
-![Actions tab](../images/Home2021_Action.png)
+![Pagina Acțiuni](../images/Home2021_Action.png)
 
-### Actions - section M
+### Acțiuni - secțiunea M
 
 * Button [profile switch](../Usage/Profiles#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
 * Button [temporary target](../Usage/temptarget#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
@@ -354,15 +354,15 @@ When you want to make a meal bolus this is where you will normally make it from.
 * Prime/Fill allows you to record pump site and insulin cartridge change.
 * Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
 
-### Tools - section P
+### Instrumente - secţiunea P
 
-#### History Browser
+#### Vizualizare istoric
 
-* Allows you to ride back in AAPS hsitory.
+* Vă permite să mergeți înapoi prin istoricul AAPS.
 
 #### TDD
 
-* Total daily dose = bolus + basal per day
+* Doza zilnică totală = bolus + bazală pe zi
 * Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
 * Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 
 * Others prefer range of 32% to 37% of TDD for TBB. 
@@ -438,32 +438,32 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
    * IC sau I:C: Raportul insulină la carbohidrați
    * ISF: Factorul de sensibilitate la insulină
    * Basal rate
-   * Target: Blood glucose level that you want AAPS to be aiming for
+   * Ținta: Nivelul glicemiei pe care doriţi ca AAPS să îl atingă
 
-* You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).
+* Puteţi fie să utilizaţi un [profil local](../Configuration/Config-Builder#local-profile-recommended) care poate fi editat pe telefon sau un [profil Nightscout](../Configuration/Config-Builder#ns-profile) care trebuie să fie editat pe pagina NS şi să fie transferat după aceea în telefonul dumneavoastră. Pentru detalii vedeţi secţiunile corespunzătoare de pe [pagina config builder](../Configuration/Config-Builder.md).
 
-## Treatment
+## Tratament
 
-History of the following treatments:
+Istoricul următoarelor tratamente:
 
-* Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
+* Bolus & carbohidrați -> opțiune de [ștergere intrări](../Getting-Started/Screenshots#carb-correction) pentru a corecta istoricul
 * [Bolus extins](../Usage/Extended-Carbs#extended-bolus)
-* Temporary basal rate
-* [Temporary target](../Usage/temptarget.md)
+* Rată bazală temporară
+* [Ţintă temporară](../Usage/temptarget.md)
 * [Schimbare de profil](../Usage/Profiles.md)
-* [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
+* [Careportal](../Usage/CPbefore26#careportal-discontinued) - notițe introduse prin intermediul paginii de acțiuni și notițe în dialoguri
 
-## BG Source - xDrip, Dexcom App (pateched)...
+## Sursă Glicemie - xDrip, aplicația Dexcom (modificată)...
 
 ![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
 
-* Depending on your BG source settings this tab is named differntly.
-* Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
+* În funcţie de setările sursei de Glicemie, această pagină este denumită diferit.
+* Afișează istoricul citirilor CGM și oferă opțiunea de eliminare a citirilor în caz de eroare (adică hipo cauzat de compresie).
 
 ## Client NS
 
 ![Client NS](../images/Screenshots_NSClient.png)
 
-* Displays status of the connection with your Nightscout site.
-* Settings are made in [preferences](../Configuration/Preferences#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
-* For troubleshooting see this [page](../Usage/Troubleshooting-NSClient.md).
+* Afişează starea conexiunii cu site-ul dumneavoastră Nightscout.
+* Setările se fac în [preferinţe](../Configuration/Preferences#nsclient). Puteți deschide secțiunea corespunzătoare făcând clic pe roata dințată din partea dreaptă sus a ecranului.
+* Pentru depanare, vedeți această [pagină](../Usage/Troubleshooting-NSClient.md).
