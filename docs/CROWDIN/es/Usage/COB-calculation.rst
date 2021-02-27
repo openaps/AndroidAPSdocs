@@ -35,7 +35,7 @@ Normalmente, AAPS detecta la absorción de carbohidros a través de desviaciones
 .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
   :alt: Pista de un valor COB incorrecto
 
-En la captura de pantalla de arriba, 41% de 1 vez que la absorción de carbohidratos fue calculada matemáticamente por el min_5m_carbimpacto en lugar del valor detectado de las desviaciones.  Esto significa que tal vez tenga menos carbohidratos a bordo que los calculados por el algoritmo. 
+In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  Esto significa que tal vez tenga menos carbohidratos a bordo que los calculados por el algoritmo. 
 
 ¿Cómo hacer frente a esta advertencia? 
 --------------------------------------------------
