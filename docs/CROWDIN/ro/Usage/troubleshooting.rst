@@ -1,4 +1,4 @@
-Troubleshooting
+Depanare
 **************************************************
 You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem.
 
@@ -21,7 +21,7 @@ Settings
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
 
-Usage
+Folosire
 --------------------------------------------------
 * `Wrong carb values <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 
@@ -46,7 +46,7 @@ Pumps
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html#insight-specific-errors>`_
 * `Medtronic + RileyLink <../Configuration/MedtronicPump.html#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump>`_
 
-Phones
+Telefoane
 ==================================================
 * `Jelly <../Usage/jelly.html>`_
 * `Huawei bluetooth & battery optimization <../Usage/huawei.html>`_
