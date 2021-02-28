@@ -100,16 +100,16 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 
 **Prerequisite**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
+- Pump has to support some kind of remote control. (BT, radio frecvență etc.)
 - Protocol is hacked/documented/etc.
 
 **Minimal requirement**
 
-- Set Temporary Basal Rate
+- Setează Rata Bazală Temporară
 - Get Status
-- Cancel Temporary Basal Rate
+- Anulează Rata Bazală Temporară
 
-**For oref1(SMB) or Bolusing:**
+**Pentru oref1(SMB) sau Bolus:**
 
 - Setează bolusul
 
@@ -117,7 +117,7 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 
 - Anulează Bolus
 - Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
+- Setare Profil Basală (frumos de avut)
 - Read History 
 
 **Other (not required but good to have)**
