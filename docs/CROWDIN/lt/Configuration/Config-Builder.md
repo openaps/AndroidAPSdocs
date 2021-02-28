@@ -318,21 +318,21 @@ Leidžia nuotoliniu būdu valdyti kai kurias AndroidAPS funkcijas SMS žinutėmi
 
 ### Maistas
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Parodo iš anksto nustatytus maisto aprašus iš Nightscout duomenų bazės, daugiau informacijos apie parinktis žr. [Nightscout](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods).
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Pastaba: įrašų negalima naudoti AndroidAPS skaičiuotuve. (Tik peržiūra)
 
-### Wear
+### Išmanieji laikrodžiai
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Android Wear laikrodyje galima peržiūrėti AAPS duomenis ir valdyti kai kurias funkcijas (žr. [Laikrodžiai](../Configuration/Watchfaces.md)). Nustatymuose (krumpliaračio piktograma) galite nustatyti kintamuosius, į kuriuos reikia atsižvelgti apskaičiuojant bolusą naudojant laikrodį (pavyzdžiui, 15 min. tendencija, aktyvūs angliavandeniai AAO...).
 
 Pavyzdžiui, jei norite suleisti boliusą, tuomet laikrodžio nustatymuose turėtumėte įjungti „Valdymas iš laikrodžio“.
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Išmaniojo laikrodžio nustatymai](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+Naudodamiesi skirtuku „Wear“ arba hamburgerio meniu (ekrano viršutiniame kairiajame kampe, jei skirtukas nerodomas), galite
 
-* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
+* Pakartotinai siųsti visus duomenis. Gali būti naudinga, jei laikrodis nebuvo prijungtas kurį laiką ir norite perduoti informaciją į laikrodį.
 * Open settings on your watch directly from your phone.
 
 ### xDrip Statusline (watch)
