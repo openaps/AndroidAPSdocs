@@ -97,7 +97,7 @@ Trūkumai:
 
 ![Insulin type](../images/ConfBuild_Insulin.png)
 
-* Select the type of insulin curve you are using.
+* Pasirinkite insulino veikimo kreivės tipą.
 * The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
 * The curves will vary based on the DIA and the time to peak.
     
@@ -106,39 +106,39 @@ Trūkumai:
 
 ### IVT
 
-* The DIA is not the same for each person. That's why you have to test it for yourself. 
-* But it must always be at least 5 hours.
-* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
-* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page. 
+* IVT nėra vienoda visiems. Todėl turite nustatyti ją patys. 
+* Bet ji turi būti bent 5 valandos.
+* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. Insulino likutis gali būti jaučiamas, pavyzdžiui, sporto metu. Todėl AndroidAPS naudoja mažiausiai 5 valandų insulino veikimo trukmę.
+* Daugiau skaitykite Insulino profiliai skyriaus [šiame](../Getting-Started/Screenshots#insulin-profile) puslapyje. 
 
 ### Insulin type differences
 
 * For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
-* Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
-* The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. 
-* You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
+* „Be piko“ leidžia konfigūruoti ir insulino veikimo trukmę, ir piko laiką. Ši parinktis skirta patyrusiems vartotojams, žinantiems šių nustatymų poveikį. 
+* [Insulino kreivės grafikas](../Getting-Started/Screenshots#insulin-profile) padeda suprasti skirtingas kreives. 
+* Jį galite pamatyti skirtuke, jei jį pažymėjote varnele konfigūratoriuje arba pasirinkdami iš išskleidžiamojo meniu kairėje.
 
-#### Rapid-Acting Oref
+#### Greito veikimo Oref
 
-* recommended for Humalog, Novolog and Novorapid
-* DIA = at least 5.0h
-* Max. peak = 75 minutes after injection (fixed, not adjustable)
+* rekomenduojama Humalog, Novolog ir Novorapid insulinams
+* IVT = bent 5.0 val.
+* Maks. pikas = 75 minutės po injekcijos (fiksuotas, nekeičiamas)
 
-#### Ultra-Rapid Oref
+#### Staigaus veikimo Oref
 
-* recommended for FIASP
-* DIA = at least 5.0h
-* Max. peak = 55 minutes after injection (fixed, not adjustable)
+* rekomenduojama FIASP insulinui
+* IVT = bent 5.0 val.
+* Maks. pikas = 55 minutės po injekcijos (fiksuotas, nekeičiamas)
 
 #### Lyumjev
 
 * special insulin profile for Lyumjev
-* DIA = at least 5.0h
-* Max. peak = 45 minutes after injection (fixed, not adjustable)
+* IVT = bent 5.0 val.
+* Maks. pikas = 45 minutės po injekcijos (fiksuotas, nekeičiamas)
 
-#### Free Peak Oref
+#### Oref be piko
 
-* With the "Free Peak 0ref" profile you can individually enter the peak time.
+* „0ref be piko“ profilyje galite patys įvesti piko laiką.
 * The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
