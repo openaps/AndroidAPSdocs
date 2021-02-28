@@ -16,12 +16,12 @@
     
     ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
 
-* Select Pump password and input your password.
+* Selectați parola pompei și introduceți parola dumneavoastră.
 
-### Default password
+### Parola implicită
 
-* For DanaRS with firmware v1 and v2 the default password is 1234.
-* For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). Open main menu on pump > review > information. Number 3 is production date.
+* Pentru DanaRS cu firmware v1 şi v2 parola implicită este 1234.
+* For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). Open main menu on pump > review > information. Numărul 3 este data de producţie.
 
 * **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
     
@@ -33,38 +33,38 @@
 * Stabiliți pasul bazalei în pompă la 0.01 U/o prin intermediul meniului Doctors menu (vedeți manualul de utilizare al pompei)
 * Activați bolusurile extinse în pompă
 
-## Change password on pump
+## Schimbă parola pe pompă
 
-* Press OK button on pump
+* Apăsaţi butonul OK pe pompă
 * In main menu select "OPTION" (move right by pressing arrow button several times)
     
-    ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
+    ![Meniu principal DanaRS](../images/DanaRSPW_01_MainMenu.png)
 
 * In options menu select "USER OPTION"
     
     ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
 
-* Use arrow button to scroll down to "11. password"
+* Use arrow button to scroll down to "11. parolă"
     
     ![DanaRS 11. Parolă](../images/DanaRSPW_03_11PW.png)
 
-* Press OK to enter old password.
+* Apăsaţi OK pentru a introduce parola veche.
 
-* Enter **old password** (Default password see [above](#default-password)) and press OK
+* Introduceţi **parola veche** (Parolă implicită vedeţi [mai sus](#default-password)) şi apăsaţi OK
     
-    ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
+    ![DanaRS Introduceţi parola veche](../images/DanaRSPW_04_11PWenter.png)
 
-* If wrong password is entered here there will be no message indicating failure!
+* Dacă este introdusă o parolă greşită aici nu va exista nici un mesaj care să indice greșeala!
 
-* Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
+* Setează **noua parolă** (Schimbă numerele cu + & - butoane / Mută la dreapta cu butonul săgeată).
     
-    ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
+    ![Parola nouă DanaRS](../images/DanaRSPW_05_PWnew.png)
 
-* Confirm with OK button.
+* Confirmaţi cu butonul OK.
 
-* Save by pressing OK button again.
+* Salvează apăsând din nou butonul OK.
     
-    ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
+    ![Salvați noua parolă DanaRS](../images/DanaRSPW_06_PWnewSave.png)
 
 * Move down to "14. EXIT" and press OK button.
     
@@ -72,7 +72,7 @@
 
 ## Dana RS specific errors
 
-### Error during insulin delivery
+### Eroare în timpul administrării insulinei
 
 In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
