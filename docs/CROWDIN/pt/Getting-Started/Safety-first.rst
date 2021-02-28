@@ -7,16 +7,16 @@ Geral
 ==================================================
 
 * A AndroidAPS é uma mera ferramenta para ajudá-lo a gerir a diabetes, não é um sistema totalmente automatizado que pode instalar e esquecer!
-* Do not assume that AndroidAPS will never make mistakes. This device is taking control of your insulin delivery: Watch it all the time, understand how it works, and learn how to interpret its actions.
-* Remember that, once paired, the phone can instruct the pump to do anything. Only use this phone for AndroidAPS and, if being used by a child, essential communications. Do not install unnecessary apps or games (!!!) which could introduce malware such as trojans, viruses, or bots that could interfere with your system.
-* Install all security updates provided by your phone manufacturer and Google.
-* You might also need to change your diabetes habits as you change your therapy by using a closed loop system. I.e. some people report, they need less hypo treatments as AndroidAPS has already reduced insulin.  
+* Não assuma que a AndroidAPS nunca cometerá erros. Este dispositivo está a assumir o controlo da administração da sua insulina: observe-o constantemente, entenda como ele funciona e aprenda a interpretar as suas ações.
+* Lembre-se que uma vez emparelhado o telefone pode mandar a bomba fazer qualquer coisa. Só use um telefone para a AndroidAPS e, se sendo usado por uma criança, para comunicações essenciais. Evite usar a app no seu telemóvel do dia a dia, reduzindo os erros possíveis. Não instale aplicações ou jogos desnecessários (!!!) o que pode introduzir malwares como trojans, vírus ou bots que podem interferir no seu sistema.
+* Instale todas as atualizações de segurança fornecidas pelo fabricante do telefone e pelo Google.
+* Talvez você também precise alterar seus hábitos da diabetes conforme muda a sua terapia usando um sistema de loop fechado. I.e. some people report, they need less hypo treatments as AndroidAPS has already reduced insulin.  
    
 Comunicador SMS
 ==================================================
 
-* O AndroidAPS permite que você controle um telefone remotamente através de SMS. Se os comandos por SMS estiverem ativos, lembre-se sempre de que o telemóvel configurado para estes comandos remotos pode ser roubado. Então, proteja-o sempre pelo menos através de um código PIN.
-* O AndroidAPS responderá com uma mensagem de texto se os comandos remotos - como um bolus ou uma mudança de perfil - foram corretamente realizados.0//0. É aconselhável ao configurar que textos sejam enviados para, pelo menos, dois números de telefone distintos, para o caso de um dos telefones ser roubado.
+* A AndroidAPS permite que você controle um telefone remotamente através de SMS. Se os comandos por SMS estiverem ativos, lembre-se sempre de que o telemóvel configurado para estes comandos remotos pode ser roubado. Então, proteja-o sempre, pelo menos, através de um código PIN.
+* A AndroidAPS responderá com uma mensagem de texto se os comandos remotos - como um bólus ou uma mudança de perfil - foram corretamente realizados.0//0. É aconselhável ao configurar que textos sejam enviados para, pelo menos, dois números de telefone distintos, para o caso de um dos telefones ser roubado.
 
 .. nota:: 
    **IMPORTANT SAFETY NOTICE**
