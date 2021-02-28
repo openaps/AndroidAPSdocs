@@ -335,7 +335,7 @@ Advanced settings (OpenAPS SMB)
 * Normally you do not have to change the settings in this dialogue!
 * If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ and to understand what you are doing.
 
-Absorption settings
+Настройки усваиваемости
 ===========================================================
 
 .. image:: ../images/Pref2020_Absorption.png
@@ -345,7 +345,7 @@ min_5m_carbimpact
 -----------------------------------------------------------
 * The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed. 
 * The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB. 
-* At times when carb absorption can’t be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+* At times when carb absorption can’t be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Этот параметр не приводит к отказам.
 * To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. 
 * Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc. 
 * The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`__.
