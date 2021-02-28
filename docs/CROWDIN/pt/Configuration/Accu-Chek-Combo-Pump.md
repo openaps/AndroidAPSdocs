@@ -136,7 +136,7 @@ Há várias razões possiveis. Tente os seguintes passos:
 * For all other alerts raised by the pump: connecting to the pump will show the alert message in the Combo tab, e.g. "State: E4: Occlusion" as well as showing a notification on the main screen.
 * An error will raise an urgent notification. 
 * AAPS never confirms serious errors on the pump, but let's the pump vibrate and ring to make sure the user is informed of a critical situation that needs action.
-* After pairing, ruffy should not be used directly (AAPS will start in the background as needed), since using ruffy at AAPS at the same time is not supported.
-* If AAPS crashes (or is stopped from the debugger) while AAPS and the pump were communicating (using ruffy), it might be necessary to force close ruffy. Restarting AAPS will start ruffy again.
-* Restarting the phone is also an easy way to resolve this if you don't know how to force kill an app.
-* Don't press any buttons on the pump while AAPS communicates with the pump (Bluetooth logo is shown on the pump).
+* Após emparelhar, a ruffy não deve ser usada directamente (a AAPS irá iniciá-la em background), dado que usando a ruffy ao mesmo tempo que a AAPS não é suportado.
+* Se AAPS crackar (ou for parada pelo depurador) enquanto AAPS e a bomba estavam em comunicação (usando ruffy), poderá ser necessário forçar o fecho da ruffy. Reiniciando a AAPS irá recomeçar a ruffy.
+* Reiniciar o telefone é também uma maneira simples de resolver esta situação se não souber como fazer para forçar o fecho de uma app.
+* Não prima quaisquer botões na bomba enquanto a AAPS comunica com a mesma ( o logotipo bluetooth aparece na bomba).
