@@ -15,12 +15,12 @@
 
 ## Limitações
 
-* Bólus prolongado e bólus multi onda não são suportados ( ver [Hidratos de carbono lentos](../Usage/Extended-Carbs.rst)).
+* Bólus prolongado e bólus multi onda não são suportados ( ver [Hidratos de carbono prolongados](../Usage/Extended-Carbs.rst)).
 * Apenas é suportado um perfil de basal.
 * Programar mais do que um perfil de basal na bomba, ou dar bólus prolongado ou multi onda a partir da bomba interfere com as DBT e irá forçar o LOOP a entrar em modo de suspensão durante horas dado que o LOOP não consegue funcionar em segurança nestas condições.
 * Actualmente não é possível programar tempo e hora na bomba, então [as alterações horárias](../Usage/Timezone-traveling#accu-chek-combo) têm de ser efectuadas manualmente (poderá desactivar as actualizações de horário automáticas no telefone de noite e voltar a activar de manhã e ao mesmo tempo alterar o relógio da bomba e assim evitar alarmes nessas duas noites do ano).
 * Actualmente apenas basais desde 0.05 até 10u/h são suportadas. Isto também se aplica quando modifica um perfil, i.e. ao aumentar para 200% a basal temporária, o valor da basal máxima não deve exceder 5U/h ou duplicada ultrapassará o limite de 10U/h. Do mesmo modo, ao reduzir para 50%, a taxa menor da basal deverá ser no mínimo 0.10 U/h.
-* Se o loop solicitar o cancelamento de uma BT em execução a Combo definirá em vez disso uma BT de 90% ou 110% durante 15 minutos. Isto porque ao cancelar uma DBT a bomba emite um alerta que causa imensas vibrações.
+* Se o loop solicitar o cancelamento de uma DBT em execução a Combo definirá em vez disso uma DBT de 90% ou 110% durante 15 minutos. Isto porque ao cancelar uma DBT a bomba emite um alerta que causa imensas vibrações.
 * Ocasionalmente (a cada dois ou três dias) a AAPS pode falhar no cancelamento automático do alerta de DBT CANCELADA. Nesta situação o utilizador terá de anulá-lo: premindo o botão actualizar na AAPS para transferir o aviso para a AAPS ou confirmar o alerta na bomba.
 * A estabilidade da conexão Bluetooth varia de acordo com os diferentes telefones, causando alertas de 'bomba não localizada', quando a ligação à bomba for perdida. 
 * Se esse erro ocorrer, certifique-se de que o Bluetooth está activo, prima o botão actualizar no separador Combo para verificar se a causa foi temporária ou se continua sem conexão. Reiniciar o telemóvel normalmente resolve o problema. 
