@@ -119,7 +119,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>DIA</strong></td>
+ <td><strong>DIA (время действия инсулина)</strong></td>
  <td>duration of insulin action</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
