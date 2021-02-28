@@ -117,7 +117,7 @@ Landscape orientation
 * Useful while giving a presentation. 
 * It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
 
-Кнопки
+Buttons
 -----------------------------------------------------------
 * Define which buttons are visible on the bottom of your home screen.
 * With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
@@ -144,7 +144,7 @@ Default temp targets
   .. image:: ../images/Pref2020_OV_DefaultTT.png
     :alt: Preferences > Default temp targets
   
-Fill/Prime standard insulin amounts
+Заполнить стандартное количество инсулина
 -----------------------------------------------------------
 * If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
 * Pre-set values can be defined in this dialogue.
@@ -156,7 +156,7 @@ Range for visualization
   .. image:: ../images/Pref2020_OV_Range2.png
     :alt: Preferences > Range for visualization
 
-Shorten tab titles
+сокращенные имена табул
 -----------------------------------------------------------
 * See more tab titles on screen. 
 * For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
