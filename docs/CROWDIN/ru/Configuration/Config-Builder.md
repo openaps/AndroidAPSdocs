@@ -168,14 +168,14 @@
 * Dana Rv2 (помпа DanaR с неофициальным обновлением прошивки)
 * [Dana RS](DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
-* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (требуется установка утилиты ruffy для сопряжения с помпой)
 * [Medtronic](MedtronicPump.md)
-* MDI (receive AAPS suggestions for your multiple daily injections therapy)
-* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
+* MDI инъекции инсулина шприцем/шприц-ручкой (на основе предложений от AAPS по ведению терапии)
+* Виртуальная помпа (открытый цикл для помпы, не имеющей драйверов - только предложения)
 
-For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+Для помпы Dana перейдите в **Дополнительные параметры**, и если необходимо, активируйте BT watchdog. Он отключает bluetooth на одну секунду, если подключение к помпе невозможно. Это помогает на некоторых телефонах, где зависает bluetooth.
 
-[Password for Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
+[Пароль для помпы Dana RS](../Configuration/DanaRS-Insulin-Pump.md) должен быть введен правильно. Пароль не проверялся в предыдущих версиях.
 
 ## Определение чувствительности
 
