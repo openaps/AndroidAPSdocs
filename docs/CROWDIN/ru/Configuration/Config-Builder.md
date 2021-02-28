@@ -236,17 +236,17 @@ AndroidAPS содержит обучающую программу с рядом 
 
 ## Терапия
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots#carb-correction).
+На вкладке лечения (терапия, назначения) отражены назначения, загруженные из nightscout. Если вы хотите редактировать или удалить запись (например, съели меньше углеводов, чем ожидали) выберите «Удалить» и введите новое значение (измените время, в случае необходимости) через [ кнопку углеводы на главном экране](../Getting-Started/Screenshots#carb-correction).
 
 ## Общие настройки
 
 ### Общие замечания
 
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
+Отображает текущее состояние цикла и кнопки для наиболее распространенных действий (см. [раздел Домашний экран](../Getting-Started/Screenshots.md) для подробной информации). Доступ к параметрам - через значок шестеренки.
 
 #### Не отключать экран
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+Параметр «не отключать экран» заставит Android держать экран включенным постоянно. Это полезно для презентаций и т. д. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
 #### Кнопки
 
