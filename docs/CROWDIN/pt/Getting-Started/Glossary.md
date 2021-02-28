@@ -341,14 +341,14 @@
  <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - O Super Bólus</a></td>
 </tr>
 <tr>
- <td><strong>TBD</strong></td>
- <td>Total da taxa basal diária (soma da taxa basal de 24 horas)</td>
+ <td><strong>TDB</strong></td>
+ <td>Total da dose basal diária (soma da dose basal de 24 horas)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>BT</strong></td>
- <td>basal temporária</td>
+ <td><strong>DBT</strong></td>
+ <td>dose basal temporária</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
