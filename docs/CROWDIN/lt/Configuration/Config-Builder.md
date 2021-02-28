@@ -98,7 +98,7 @@ Trūkumai:
 ![Insulino tipas](../images/ConfBuild_Insulin.png)
 
 * Pasirinkite insulino veikimo kreivės tipą.
-* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
+* „Greitai veikiantis Oref“, „Ypač greitas Oref“, „Lyumjev" ir „Be piko Oref“ parinktys turi eksponentinę formą. More information is listed in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
 * The curves will vary based on the DIA and the time to peak.
     
     * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
