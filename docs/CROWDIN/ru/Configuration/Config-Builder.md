@@ -246,11 +246,11 @@ AndroidAPS содержит обучающую программу с рядом 
 
 #### Не отключать экран
 
-Параметр «не отключать экран» заставит Android держать экран включенным постоянно. Это полезно для презентаций и т. д. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+Параметр «не отключать экран» заставит Android держать экран включенным постоянно. Это полезно для презентаций и т. д. Но опция потребляет больше энергии аккумулятора. Поэтому рекомендуется подключить смартфон к кабелю зарядного устройства.
 
-#### Кнопки
+#### Buttons
 
-Define which Buttons are shown on the home screen.
+Определите, какие кнопки отображаются на домашнем экране.
 
 * Терапия
 * Калькулятор
@@ -259,39 +259,39 @@ Define which Buttons are shown on the home screen.
 * CGM (opens xDrip+)
 * Калибровка
 
-Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
+Кроме того можно задать сочетания клавиш для приращения инсулина и углеводов и определить, должны ли диалоговые окна содержать примечания.
 
-#### QuickWizard settings
+#### Быстрый болюс - настройки
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Создайте кнопки для некоторых стандартных блюд (углеводы и метод вычисления болюса) которые будут отображаться на главном экране. Применяйте для стандартных часто употребляемых блюд. Если для различных блюд указано разное время, у вас всегда будет оответствующая кнопка приема пищи на домашнем экране, в зависимости от времени суток.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Примечание: Кнопка не будет видна вне диапазона времени, для нее созданного или если у вас есть достаточно активного инсулина IOB на углеводы, заданные кнопкой.
 
 ![QuickWizard button](../images/ConfBuild_QuickWizard.png)
 
-#### Default Temp-Targets
+#### Временные цели по умолчанию
 
-Choose default temp-targets (duration and target). Preset values are:
+Выберите временные цели по умолчанию (длительность и целевые значения ГК). По умолчанию установлены следующие значения:
 
-* eating soon: target 72 mg/dl / 4.0 mmol/l, duration 45 min
-* activity: target 140 mg/dl / 7.8 mmol/l, duration 90 min
-* hypo: target 125 mg/dl / 6.9 mmol/l, duration 45 min
+* ожидаемый прием пищи: цель 72 мг/дл или 4,0 ммоль/л, продолжительность 45 минут
+* нагрузка: цель 140 мг/дл или 7,8 ммоль/л, продолжительность 90 минут
+* гипо: цель 125 мг/дл или 6,9 ммоль/л, продолжительность 45 минут
 
-#### Fill/Prime standard insulin amounts
+#### Заполнить стандартное количество инсулина
 
-Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+Укажите значения по уполчанию для прайм заполнения катетера помпы, в зависимости от его типа и длины. 
 
-#### Range of visualization
+#### Диапазон для визуализации
 
-Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+Укажите значения для высоких и низких значений ГК для отображения в AndroidAPS и на умных часах. Это используется только для отображения, и не является целевыми значениями ГК. Например: 70 - 180 мг/дл или 3,9 - 10 ммоль/л
 
-#### Shorten tab titles
+#### сокращенные имена табул
 
-Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+Выберите каким образом будут отображаться заголовки вкладок в AndroidAPS: полностью (НАЧАЛО, ДЕЙСТВИЯ, MEDTRONIC, ЗАМКНУТЫЙ ЦИКЛ и т.п.) или сокращенно (НАЧАЛО, ДЕЙСТВ, MDT, ЗЦ и т.п.)
 
-#### Show notes field in treatment dialogs
+#### Показать поле примечаний в диалогах терапии
 
-Choose if you want to have a notes field when entering treatments or not.
+Укажите, хотите ли, чтобы при вводе команд отображалось поле для заметок.
 
 #### Индикаторы состояния
 
