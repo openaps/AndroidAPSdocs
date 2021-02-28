@@ -8,7 +8,7 @@
 * Smartpix arba Realtime kabelis bei 360 Configuration Software programėlė pompos modifikavimui. (Klientui pageidaujant Roche nemokamai išsiunčia Smartpix ir konfigūravimo programėlę.)
 * Android telefonas su suderinama programinės įrangos versija: ne mažiau kaip Android 8.1 (Oreo) arba LineageOS 14.1 (anksčiau vadinta CyanogenMod). 
 * LineageOS 14.1 turi būti ne ankstesnės nei 2017 m. birželio versijos, nes tik tuo metu buvo padaryti reikalingi pakeitimai Combo pompos susiejimui. 
-* A list of phones can be found in the [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) document.
+* Telefonų sąrašas peteikiamas dokumente [AAPS telefonai](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
 * Atkreipkite dėmesį, kad šis sąrašas remiasi tik asmenine vartotojų patirtimi ir gali būti nepilnas. Jūs taip pat galite prisidėti pranešdami apie savo patirtį (pagrindinis šio projekto principas - neatlygintinas asmeninis įnašas).
 * Atminkite, kad nors Android 8.1 leidžia jungtis prie Combo pompos, vis tiek kyla sunkumų naudojant AAPS su Android 8.1.
 * Informacija pažengusiems vartotojams: galima susieti "nulaužtos OS" telefoną ir perkelti jį į kitą telefoną, kurio OS taip pat turi būti "nulaužtas", kad būtų galima naudoti su Ruffy / AAPS. Čia aprašoma, kaip susieti pompą su Android, senesniu nei 8.1 versija, bet tai nėra visiškai ištestuota: https://github.com/gregorybel/combo-pairing/blob/master/README.md
@@ -102,7 +102,7 @@ Gali būti keletas priežasčių. Pabandykite šiuos žingsnius:
 
 * Jei Combo pompoje yra nustatytas ekrano rodymo laikas 5 sek, galite bandyti pakeisti jį į 40 sek (originalus nustatymas). Pastebėta, kad laikas tarp pompoje parodyto telefono pavadinimo iki telefono pasirinkimo yra apie 5-10 sek. Dažniausiai, viršijus šį laiką, suporavimas nepavyksta. 
 * Vėliau galite vėl grąžinti 5 sek ekrano laiką, kad atitiktų AAPS Combo nustatymus.
-* Jei pompa visai nerodo telefono, gali būti, kad telefono Bluetooth nėra suderinamas su pompa. Įsitikinkite, kad naudojate naują **LineageOS ≥ 14.1** arba **Android ≥ 8.1 (Oreo)**. Jei turite, bandykite kitą išmanųjį telefoną. You can find a list of already successfully used smartphones under \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). 
+* Jei pompa visai nerodo telefono, gali būti, kad telefono Bluetooth nėra suderinamas su pompa. Įsitikinkite, kad naudojate naują **LineageOS ≥ 14.1** arba **Android ≥ 8.1 (Oreo)**. Jei turite, bandykite kitą išmanųjį telefoną. Čia galite rasti jau sėkmingai naudotų išmaniųjų telefonų sąrašą [AAPS Phones (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). 
 
 9. Toliau pompa parodys iki 10 ženklų saugos kodą. Ir Ruffy programos ekraną, kad jį įvestumėte. Įveskite kodą į Ruffy, ir viskas bus tvarkoje.
 10. Perkraukite telefoną.
@@ -113,7 +113,7 @@ Gali būti keletas priežasčių. Pabandykite šiuos žingsnius:
 * Turėkite minty, kad tai nėra gatavas produktas, ypač pradžioje vartotojas turi stebėti ir suprasti sistemą, jos ribas ir galimas klaidas. 
 * Griežtai rekomenduojama NENAUDOTI šios sistemos, jei naudojantis asmuo negali pilnai suprasti sistemos.
 * Skaitykite OpenAPS dokumentaciją https://openaps.org, kad suprastumėte ciklo algoritmą, kuris yra AndroidAPS pagrindas.
-* Read the [AAPS docs](../index.rst) to learn about and understand AndroidAPS.
+* Skaitykite [AAPS dokumentaciją](../index.rst), kad sužinotumėte apie AndroidAPS ir ją suprastumėte.
 * Ši integracija naudoja tą patį funkcionalumą, kaip ir pultelis - gliukometras, pridėtas komplekte prie pompos.
 * Gliukometras leidžia dubliuoti pompos ekraną ir perduoda mygtukų paspaudimų komandas į pompą. 
 * Ruffy programėlė taip pat atlieka komandų perdavimą ir užtikrina ryšį su pompa. 
