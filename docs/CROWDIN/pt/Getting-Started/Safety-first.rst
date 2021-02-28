@@ -10,7 +10,7 @@ Geral
 * Não assuma que a AndroidAPS nunca cometerá erros. Este dispositivo está a assumir o controlo da administração da sua insulina: observe-o constantemente, entenda como ele funciona e aprenda a interpretar as suas ações.
 * Lembre-se que uma vez emparelhado o telefone pode mandar a bomba fazer qualquer coisa. Só use um telefone para a AndroidAPS e, se sendo usado por uma criança, para comunicações essenciais. Evite usar a app no seu telemóvel do dia a dia, reduzindo os erros possíveis. Não instale aplicações ou jogos desnecessários (!!!) o que pode introduzir malwares como trojans, vírus ou bots que podem interferir no seu sistema.
 * Instale todas as atualizações de segurança fornecidas pelo fabricante do telefone e pelo Google.
-* Talvez você também precise alterar seus hábitos da diabetes conforme muda a sua terapia usando um sistema de loop fechado. I.e. some people report, they need less hypo treatments as AndroidAPS has already reduced insulin.  
+* Talvez você também precise alterar seus hábitos da diabetes conforme muda a sua terapia usando um sistema de loop fechado. Por exemplo some people report, they need less hypo treatments as AndroidAPS has already reduced insulin.  
    
 Comunicador SMS
 ==================================================
