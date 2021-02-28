@@ -15,9 +15,9 @@ O piloto automático recebe sinais de vários sensores, um computador e avalia-o
 
 **Sistema de Loop Fechado**
 
-O mesmo se aplica a um sistema de pâncreas artificial de loop fechado. Não faz o trabalho todo, você ainda terá de cuidar da sua diabetes. A closed loop system combines the sensor data from a CGM/FGM with your diabetes management specifications such as basal rate, insulin sensitivity factor and carb ratio. From this it calculates treatment suggestions and implements these permanent small adjustments in order to keep your diabetes within the target range and to relieve you. This leaves more time for your life "next to" diabetes.
+O mesmo se aplica a um sistema de pâncreas artificial de loop fechado. Não faz o trabalho todo, você ainda terá de cuidar da sua diabetes. Um sistema de loop fechado combina os dados do sensor de um MCG/MFG com as especificações do seu tratamento da diabetes, tais como taxa basal, fator de sensibilidade à insulina e rácio de hidratos de carbono. A partir desses dados ele calcula sugestões de tratamento e implementa esses pequenos ajustes permanentes com a finalidade de manter a sua diabetes dentro do intervalo alvo e aliviá-lo deste trabalho. Isto deixa mais tempo para a sua vida "além" da diabetes.
 
-Just as you don't want to get on a plane where only the autopilot flies without human supervision, a closed loop system helps you with your diabetes management, but always needs your support! **Even with a closed loop you can't just forget your diabetes!**
+Assim como não quer entrar num avião em que apenas o piloto automático voa sem supervisão humana, um sistema de loop fechado ajuda-o com a sua gestão da diabetes, mas irá sempre precisar do seu apoio! ** Mesmo com um loop fechado não pode simplesmente esquecer a sua diabetes! **
 
 Just as the autopilot depends on the sensor values as well as the pilot's specifications, a closed loop system needs appropriate input such as basal rates, ISF and carb ratio to support you successfully.
 
@@ -28,9 +28,9 @@ At present there are three major open source closed loop systems available:
 
 AndroidAPS (AAPS)
 --------------------------------------------------
-AndroidAPS is described in detail in `this documentation <./WhatisAndroidAPS.html>`_. It uses an Android Smartphone for calculation and control of your insulin pump. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+O AndroidAPS é descrito em detalhes `nesta documentação <./WhatisAndroidAPS.html>` _. It uses an Android Smartphone for calculation and control of your insulin pump. Está em forte colaboração com o OpenAPS (ou seja,  they share algorithms).
 
-Compatible `pumps <../Hardware/pumps.html>`_ are:
+As `bombas <../Hardware/pumps.html>`_ compatíveis são:
 
 * `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 * `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
@@ -40,9 +40,9 @@ Compatible `pumps <../Hardware/pumps.html>`_ are:
 
 OpenAPS
 --------------------------------------------------
-`OpenAPS <https://openaps.readthedocs.io>`_ was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison.
+`OpenAPS <https://openaps.readthedocs.io>`_ was the first Open Source Closed Loop System. Ele usa um pequeno computador como Raspberry Pi ou Intel Edison.
 
-Compatible pumps are:
+As bombas compatíveis são:
 
 * some old Medtronic pumps
 
@@ -50,7 +50,7 @@ Loop for iOS
 --------------------------------------------------
 `Loop for iOS <https://loopkit.github.io/loopdocs/>`_ is the Open Source Closed Loop System to be used with Apple iPhones.
 
-Compatible pumps are:
+As bombas compatíveis são:
 
 * Omnipod Eros
 * some old Medtronic pumps
