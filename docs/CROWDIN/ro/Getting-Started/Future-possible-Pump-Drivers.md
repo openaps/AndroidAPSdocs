@@ -60,21 +60,21 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Cerinţă hardware pentru AAPS:** Nici una. It seems to be BT enabled.
 
 **Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
 
 * * *
 
-## Pumps no longer sold (companies no longer operating)
+## Pompele nu se mai vând (companiile nu mai funcționează)
 
-### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
+### Pompa Cellnovo ([vezi businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
-**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+**Notă despre produs:** Se pare că firma a decis să iasă din zona de pompe. Puteți vedea mai multe în acest [articol](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
 ## Pumps that aren't Loopable
 
