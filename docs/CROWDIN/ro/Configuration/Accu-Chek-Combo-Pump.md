@@ -83,7 +83,7 @@
 
 ## Why does pairing with the pump not work with the app "ruffy"?
 
-There are several possible reasons. Încercați următorii pași:
+Există câteva cauze posiblie. Încercați următorii pași:
 
 1. Introduceți o **baterie nouă și nefolosită** în pompă. Citiți secțiunea referitoare la baterii pentru mai multe detalii. Asigurați-vă că pompa se află foarte aproape de telefon.
 
