@@ -68,20 +68,20 @@
 
 * отсутствуют
 
-### Profile helper
+### Помощник профиля
 
-Profile helper offers two functions:
+Помощник профиля предлагает две функции:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. Найти профиль для детей
+2. Сравнить два профиля или переключателя профиля, чтобы клонировать новый профиль
 
-Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
+Подробности разъясняются на отдельной [странице помощника профиля](../Configuration/profilehelper.rst).
 
-### NS Profile
+### профиль NS
 
-NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+Профиль NS использует профили, которые вы сохранили на сайте Nightscout (https://[адрес вашего сайта]/profile). Можно использовать [Переключатель профиля](../Usage/Profiles.md) для изменения активного профиля, это действие запишет профиль в помпу на случай неполадок с AndroidAPS. Это позволяет вам легко создавать несколько профилей в Nightscout (например работа, дом, спорт, отдых и т. п.). Вскоре после нажатия кнопки «Сохранить» они будут переданы в AAPS если ваш смартфон подключен к интернету. Даже без подключения к Интернету или без подключения к Nightscout профили Nightscout доступны в AAPS после синхронизации.
 
-Do a [profile switch](../Getting-Started/Screenshots.md#current-profile) to activate a profile from Nightscout. AAPS will write the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+Выберите действие [Смена профиля ](../Getting-Started/Screenshots.md#current-profile), чтобы активировать профиль из Nightscout. При этом AAPS запишет выбранный профиль в помпу, так что выбранный профиль будет действовать даже в случае недоступности AAPS.
 
 Преимущества:
 
@@ -97,7 +97,7 @@ Do a [profile switch](../Getting-Started/Screenshots.md#current-profile) to acti
 
 ![Insulin type](../images/ConfBuild_Insulin.png)
 
-* Select the type of insulin curve you are using.
+* Выберите кривую, соответствующую типу вашего инсулина.
 * The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
 * The curves will vary based on the DIA and the time to peak.
     
