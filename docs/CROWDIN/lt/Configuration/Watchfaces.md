@@ -218,16 +218,16 @@ AndroidAPS provides following complications:
     
     * Aktyvus ekranas su apšvietimu (LED) arba visu intensyvumo režimu (OLED)
     * Atvaizdavimas ekrane
-    * Radio communication over Bluetooth
+    * Radijo ryšys per Bluetooth
     
-    Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in *display time* area:
+    Kadangi reikalingas sklandus ir nepertraukiamas ryšys, ir norime turėti naujausius atvaizduotus duomenis, dauguma patobulinimų gali būti padaryta *laiko rodymo* srityje:
     
-    * Stock watchfaces are usually better optimized than custom one, downloaded from the store.
-    * It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
-    * Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
-    * Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-    * Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
-    * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
+    * Gamykliniai ciferblatai paprastai yra geriau optimizuoti, nei tie, kuriuos atsisiunčiate iš parduotuvės.
+    * Geriau naudoti ciferblatus, kurie atvaizduoja duomenis neaktyviu / blyškiu režimu.
+    * Būkite atidūs, kai pridedate kitus ekrano elementus, tokius kaip oro prognozės - jie naudoja duomenis iš išorinių šaltinių.
+    * Pradėkite nuo paprastesnių ciferblatų. Pridėkite vieną plėtinį vienu metu ir stebėkite, kiek tai turi įtakos baterijos gyvavimui.
+    * Pabandykite naudoti **Tamsią** temą AAPS ciferblate ir [**Atitikimo daliklį**](#watchface-settings). OLED įrenginiuose tai sumažins pikselių šviesį ir jų išdegimą.
+    * Patikrinkite, kas veikia geriau jūsų laikrodyje: AAPS numatytasis ciferblatas ar kitas ciferblatas su AAPS plėtiniais.
     * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
     * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
     * Check [list of tested phones and watches](../Getting-Started/Phones#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
