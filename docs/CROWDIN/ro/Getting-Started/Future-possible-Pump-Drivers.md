@@ -117,7 +117,7 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 
 - Anulează Bolus
 - Get Basal Profile (almost requirement)
-- Setare Profil Basală (frumos de avut)
+- Set Basal Profile (nice to have)
 - Read History 
 
 **Other (not required but good to have)**
