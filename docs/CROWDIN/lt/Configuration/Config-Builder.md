@@ -273,35 +273,35 @@ Pastaba: mygtukas nebus rodomas už nustatytų laikotarpių ribų. Jis nebus rod
 
 Pasirinkite numatytuosius laikinus tikslus (trukmė ir reikšmė). Iš anksto nustatytos reikšmės:
 
-* eating soon: target 72 mg/dl / 4.0 mmol/l, duration 45 min
-* activity: target 140 mg/dl / 7.8 mmol/l, duration 90 min
-* hypo: target 125 mg/dl / 6.9 mmol/l, duration 45 min
+* Netrukus valgysiu: tikslas 4.0 mmol/l (72 mg/dl), trukmė 45 min
+* Aktyvumas: tikslas 7.8 mmol/l (140 mg/dl), trukmė 90 min
+* Hipo: tikslas 6.9 mmol/l (125 mg/dl), trukmė 45 min
 
 #### Standartiniai insulino kiekiai kateterio/kaniulės užpildymui
 
-Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+Pasirinkite numatytuosius kiekius iš trijų mygtukų, užpildymo/pirminio užpildymo lange, priklausomai nuo jūsų kateterio ilgio.
 
-#### Range of visualization
+#### Vizualizacijos diapazonas
 
-Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+Pasirinkite aukštos ir žemos glikemijos ribas grafike. Jos bus matomos AndroidAPS apžvalgoje ir išmaniajame laikrodyje. Tai tik vizualizacija, o ne tikslinės jūsų glikemijos ribos. Pavyzdžiui: 3,9-10 mmol/l arba 70-180 mg/dl
 
 #### Naudoti sutrumpintus skirtukų pavadinimus
 
-Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+Pasirinkite ar skirtukų pavadinimai AndroidAPS yra ilgi (pvz. VEIKSMAI, VIETINIS PROFILIS, AUTOMATIZAVIMAS) arba trumpi (pvz., VEIKS, VP, AUTO)
 
-#### Show notes field in treatment dialogs
+#### Rodyti pastabų laukelį terapijos dialoguose
 
-Choose if you want to have a notes field when entering treatments or not.
+Pasirinkite, ar norite matyti pastabas, kai įvedate terapijas arba ne.
 
 #### Būklės indikatoriai
 
-Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for canula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+Pasirinkite, ar norite matyti [būsenos indikatorius](../Configuration/Preferences#status-lights) kaniulės, insulino, sensoriaus, baterijos amžiui, rezervuaro ar baterijos lygiui. Pasiekus numatytą lygį, būsenos indikatorius taps geltonas. Kritinis lygis bus rodomas raudona spalva.
 
-#### Advanced settings
+#### Papildomi nustatymai
 
-**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
+**Suleisti šią dalį boluso, apskaičiuoto boluso patarėjo**: Kai naudojamasi SMB, dauguma žmonių nesusileidžia 100% reikiamo insulino, o tik dalį jo (pvz.: 75 %) ir leidžia SMB su NDM (nedeklaruotas maitas) atlikti likusį darbą. Šiuo atveju, galite pasirinkti numatytąją procentinę reikšmę, į kurią boluso patarėjas turėtų atsižvelgti. Jei šis nustatymas yra 75%, o jūs turite susileisti 10vv, boluso patarėjas jums pasiūlys iš karto susileisti tik 7,5 vienetus.
 
-**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Įjungti Superboluso funkciją skaičiuoklėje** (Tai skiriasi nuo *super mikro boluso SMB*!): Naudokite atsargiai ir neįjunkite, kol nesuprantate, kas tai yra. Esmė tokia, kad bazinis insulinas pridedamas prie boluso kitoms dviem valandoms, o bazė tampa nulinė dviem valandoms. **AAPS ciklo funkcijos bus išjungtos - naudokite atsargiai! Jei naudojate SMB, uždaro ciklo funkcijos bus išjungtos tokiam laikui, kuris nustatomas pagal jūsų nustatymus, pateiktus [„SMB atitinka valandinės bazės insulino kiekį, kuris gaunamas ne daugiau, kaip per"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to). Jei nenaudojate SMB, ciklas bus išjungtas dviem valandoms. **Norėdami gauti daugiau informacijos apie Superbolus, skaitykite [čia](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Veiksmai
 
