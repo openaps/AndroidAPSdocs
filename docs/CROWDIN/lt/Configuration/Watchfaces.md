@@ -20,13 +20,13 @@ You can then update or install the watchface via the PlayStore on your watch.
 
 ### Nustatymas telefone
 
-Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder#wear).
+AndroidAPS konfigūratoriuje turite [aktyvuoti Wear įskiepį](../Configuration/Config-Builder#wear).
 
 ## AAPS kontrolė laikrodyje
 
-AndroidAPS is designed to be *controlled* by Android Wear watches. Pavyzdžiui, jei norite suleisti boliusą, tuomet laikrodžio nustatymuose turėtumėte įjungti „Valdymas iš laikrodžio“.
+AndroidAPS galima *valdyti* naudojant Android Wear išmanųjį laikrodį. Pavyzdžiui, jei norite suleisti boliusą, tuomet laikrodžio nustatymuose turėtumėte įjungti „Valdymas iš laikrodžio“.
 
-The following functions can be triggered from the watch:
+Iš laikrodžio galite paleisti šias funkcijas:
 
 * nustatyti laikiną tikslą
 * naudoti boluso skaičiuoklę (skaičiavimo kintamieji gali būti apibrėžti telefono [nustatymuose](../Configuration/Config-Builder#wear))
@@ -41,15 +41,15 @@ The following functions can be triggered from the watch:
 
 ## AAPS ciferblatai
 
-There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+Yra keletas skaitmeninių ciferblatų, kurie rodo vidutinį delta pokytį, aktyvų insuliną, esamą laikiną bazinę ir bazinį profilį bei NGJ duomenų grafiką.
 
-Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+Įsitikinkite, kad AndroidAPS pranešimai nėra užblokuoti laikrodyje. Veiksmo patvirtinimas (pavyzdžiui, bolusas, laikini tikslai) įvyksta per pranešimus, kuriuos reikia patempti į šoną ir paspausti varnelę.
 
-To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
+Norėdami greičiau patekti į AAPS meniu, du kartus spustelėkite ant KG. Dukart spustelėję glikemijos kreivę, galite pakeisti laiko skalę.
 
 ## Galimi ciferblatai
 
-![Available watchfaces](../images/Watchface_Types.png)
+![Galimi ciferblatai](../images/Watchface_Types.png)
 
 ### New watchface as of AndroidAPS 2.8
 
@@ -59,59 +59,59 @@ To get faster to the AAPS menu, do a double tap on your BG. With a double tap on
 
 ## AAPSv2 laikrodžio ekranas - paaiškinimai
 
-![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
+![AndroidAPSv2 laikrodžio ekrano informacija](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A - laikas nuo paskutinės ciklo veiklos
 
-B - CGM reading
+B - NGJ duomenys
 
-C - minutes since last CGM reading
+C - minutės nuo paskutinių NGJ duomenų
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - pokytis, palyginti su praėjusiais NGJ duomenimis (mmol arba mg/dl),
 
-E - average change CGM reading last 15 minutes
+E - vidutinis NGJ duomenų pokytis per pastarąsias 15 minučių
 
-F - phone battery
+F - telefono baterija
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - valandinė bazė (vv/val, jei užprogramuota, arba % jei laikina)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - įtaka kraujo glikemijai -> tikėtinas glikemijos pokytis, pagrįstas vien aktyviu insulinu.
 
-I - carbs (carbs on board | e-carbs in the future)
+I - angliavandeniai (aktyvūs angliavandeniai | e-angliavandeniai ateityje)
 
-J - insulin on board (from bolus | from basal)
+J - aktyvus insulinas (iš boluso | iš bazės)
 
 ## Pasiekti pagrindinį AAPS meniu
 
-To access main menu of AAPS you can use on of following options:
+Norėdami atidaryti pagrindinį AAPS meniu, galite naudoti šias parinktis:
 
-* double tap on your BG value
-* select AAPS icon in watch applications menu
-* tap on AAPS complication (if configured for menu)
+* dukart bakstelėkite į savo KG reikšmę
+* pasirinkite AAPS piktogramą laikrodžio programų meniu
+* bakstelėkite į AAPS funkciją (jei sukonfigūruota meniu)
 
 ## Nustatymai (išmaniajame laikrodyje)
 
-To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+Norint pasiekti laikrodžio ekrano nustatymus, įeikite į AAPS pagrindinį meniu, paslinkite aukštyn ir pasirinkite "Nustatymai".
 
-Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
+Užpildyta žvaigždutė reiškia, kad būsena yra aktyvi (**Įjungta**), o tuščiavidurės žvaigžutės piktograma rodo, kad nustatymas yra išjungtas (**Išjungta**):
 
-![Settings on/off](../images/Watchface_Settings_On_Off.png)
+![Nustatymai įjung/išjung](../images/Watchface_Settings_On_Off.png)
 
-### AAPS companion parameters
+### AAPS lydinčios programėlės parametrai
 
-* **Vibrate on Bolus** (default `On`):
-* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
+* **Vibruoti leidžiant bolusą** (numatytasis `Įjungta`):
+* **Vienetai** (numatytasis `mg/dl`): jei **Įjungta** vienetai yra `mg/dl`, jei **Išjungta** vienetai yra `mmol/l`. Naudojama nustatant LT (laikiną tikslą) iš laikrodžio.
 
-### Watchface settings
+### Laikrodžio ekrano nustatymai
 
-* **Show Date** (default `Off`): note, date is not available on all watchfaces
-* **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
-* **Show COB** (default `On`): Display or not COB value
-* **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
-* **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
-* **Show Phone Battery** (default `On`): Phone battery in %. Red if below 30% .
-* **Show Rig Battery** (default `Off`): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
-* **Show Basal Rate** (default `On`): Display or not current basal rate (in U/h or in % if TBR)
+* **Rodyti datą** (numatyta - `Išjungta`): pastaba, data matoma ne visų laikrodžių ekranuose
+* **Rodyti AIO** (numatyta - `Įjungta`): rodyti, arba ne AIO reikšmes (nustatyti detalias reikšmes galite AAPS parametruose)
+* **Rodyti AAO** (numatyta `Įjungta`): Rodyti arba ne AAO
+* **Rodyti delta** (numatyta -` Įjungta`): rodyti arba ne KG reikšmių pokytį per paskutines 5 minutes
+* **Rodyti AVGdelta** (numatyta - `Įjungta`): rodyti arba ne vidutinius KG reikšmių kitimus per paskutines 15 minučių
+* **Rodyti telefono bateriją** (numatyta `Įjungta`): Telefono baterija %. Raudona, jei mažiau nei 30% .
+* **Rodyti įrenginio bateriją** (numatyta - `Išjungta`): įrenginio baterija yra telefono, pompos bei sensoriaus baterijų sintezė (paparastai žemiausia iš 3 reikšmių)
+* **Rodyti valandinę bazę** (numatyta - `Įjungta`): rodyti arba ne dabartinę valandinę bazę (V/val arba %, jei LVB)
 * **Show Loop Status** (default `On`): show how many minutes since last loop run (arrows around value turn red if above 15').
 * **Show BG** (default `On`): Display or not last BG value
 * **Show Direction Arrow** (default `On`): Display or not BG trend arrow
@@ -249,7 +249,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ## Peržiūrėti Nightscout duomenis
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Yra keletas skaitmeninių ciferblatų, kurie rodo vidutinį delta pokytį, aktyvų insuliną, esamą laikiną bazinę ir bazinį profilį bei NGJ duomenų grafiką.
 
 # Pebble
 
