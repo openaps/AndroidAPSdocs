@@ -46,7 +46,7 @@
 
 * Use arrow button to scroll down to "11. password"
     
-    ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
+    ![DanaRS 11. Parolă](../images/DanaRSPW_03_11PW.png)
 
 * Press OK to enter old password.
 
