@@ -40,23 +40,23 @@ This is list of some Pumps floating around there, and status of support for them
 
 ### EOFLOW ([Homepage](http://www.eoflow.com/eng/main/main.html))
 
-**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
+**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pompa este disponibilă în prezent numai în Coreea).
 
 **Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
 
 * * *
 
-### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
+### Accu-Chek Solo ([Pagina de start](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app on special controler device for control.
+**Loop status:** Is a Loop candidate. Pompa va începe să se vândă la sfârșitul anului 2018 în anumite țări din UE. Its rummored to have Android app on special controler device for control.
 
 **Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
 
-### Medtronic Bluetooth
+### Bluetooth Medtronic
 
 **Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
 
-### Willcare Insulin pump ([Homepage](http://en.shinmyungmedi.com))
+### Pompă de insulină Willcare ([Pagina de start](http://en.shinmyungmedi.com))
 
 **Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
 
