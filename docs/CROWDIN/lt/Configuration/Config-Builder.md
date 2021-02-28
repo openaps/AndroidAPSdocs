@@ -305,18 +305,18 @@ Pasirinkite, ar norite matyti [būsenos indikatorius](../Configuration/Preferenc
 
 ### Veiksmai
 
-* Some buttons to quickly access common features.
+* Mygtukai greitesniam pagrindinių funkcijų paleidimui.
 * See [AAPS screenshots](../Getting-Started/Screenshots#action-tab) for details.
 
 ### Automatizavimas
 
-User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst).
+Vartotojo apibrėžtos automatizavimo užduotys ("jei-tada-kitaip"). Prašome [skaityti čia](../Usage/Automation.rst).
 
 ### SMS komunikatorius
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
+Leidžia nuotoliniu būdu valdyti kai kurias AndroidAPS funkcijas SMS žinutėmis, daugiau informacijos apie konfigūraciją žr. [SMS komandos](../Children/SMS-Commands.rst).
 
-### Food
+### Maistas
 
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
