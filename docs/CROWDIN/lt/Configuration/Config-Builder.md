@@ -211,67 +211,67 @@ Pasirinkite norimą APS algoritmą terapijos koregavimui. Išsamią informaciją
 * AAPS nuolat vertina visus turimus duomenis (AIO, AAO, glikemijos reikšmes) ir automatiškai koreguoja terapiją pagal poreikį (t.y. be jūsų tolesnio įsikišimo), kad būtų pasiektas nustatytas tikslo diapazonas arba tikslinė vertė (boluso įvedimas, laikinos bazės nustatymas, insulino sustabdymas siekiant išvengti hipoglikemijos ir t.t.). 
 * Uždaras ciklas veikia atsižvelgiant į daugybę saugumo ribų, kurias galite nustatyti atskirai.
 * Uždaras ciklas yra galimas, jei esate ne mažiau kaip [6-ame tiksle](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) ir naudojate palaikomą pompą.
-* Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol or 100 mg/dl instead of 5,0 - 7,0 mmol or 90 - 125 mg/dl) is recommended.
+* Pastaba: Uždaro ciklo režime rekomenduojama vietoj tikslinio intervalo naudoti vieną tikslą (t. y. 5,5 mmol arba 100 mg/dl vietoje 5,0-7,0 mmol arba 90-125 mg/dl).
 
-### Low Glucose Suspend (LGS)
+### Sustabdymas esant žemai gliukozei (ŽGS)
 
-* maxIOB is set to zero
-* This means if blood glucose is dropping it can reduce basal for you.
-* But if blood glucose is rising no automatic correction will be made. Your basal rates will remain the same as your selected profile.
-* Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower BG.
+* maxAIO yra lygus nuliui
+* Tai reiškia, kad, jei gliukozės kiekis kraujyje mažėja, AAPS gali sumažinti valandinę bazę.
+* Bet jei gliukozės kiekis kraujyje didėja, jokių automatinių korekcijų nebus padaryta. Jūsų valandinė bazė išliks tokia pati kaip ir Jūsų pasirinktame profilyje.
+* Tik jei valandinė bazė yra neigiama (dėl ankstesnio sustabdymo esant žemai gliukozei), papildomas insulinas bus suleistas, siekiant sumažinti glikemiją.
 
-### Minimal request change
+### Minimalaus pokyčio užklausa
 
-* When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. 
-* To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate.
-* This defines the relative change required to trigger a notification.
+* Naudodami atvirą ciklą, gausite pranešimus kiekvieną kartą, kai AAPS rekomenduoja koreguoti valandinę bazę. 
+* Norėdami sumažinti pranešimų skaičių, galite naudoti platesnį KG tikslinį intervalą arba padidinti minimalios užklausos procentus.
+* Jie apibrėžia santykinį pokytį, kurio reikia, kad būtų galima pateikti pranešimą.
 
 ## Tikslai (mokymosi programa)
 
-AndroidAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+AndroidAPS turi mokymosi programą (vadinamą Tikslais), kurią turite įgyvendinti palaipsniui. Tai turėtų jums padėti saugiai sukurti uždaro ciklo sistemą. Tai garantuoja, kad jūs viską nustatėte teisingai ir suprantate, kaip sistema tiksliai veikia. Tai yra vienintelis būdas suprasti, kad galite pasitikėti sistema.
 
-You should [export your settings](../Usage/ExportImportSettings.rst) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+Turėtumėte reguliariai[eksportuoti savo nustatymus](../Usage/ExportImportSettings.rst) (įskaitant pažangą tiksluose). Ateityje, jei jums reikės pakeisti išmanųjį telefoną (nusipirksite naują, sugadinsite ir pan.), galėsite tiesiog importuoti šiuos parametrus.
 
-See [Objectives](../Usage/Objectives.rst) page for more information.
+Norėdami rasti daugiau informacijos, žiūrėkite puslapį [ Tikslai ](../Usage/Objectives.rst).
 
 ## Terapija
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots#carb-correction).
+Skirtuke Terapija (Terapija) rodomos terapijos, kurios buvo įkeltos į Nightscout. Jei norite taisyti ar ištrinti įrašą (pavyzdžiui, suvalgėte mažiau angliavandenių nei tikėjotės), pasirinkite Trinti, o [pagrindinio ekrano AV mygtuku](../Getting-Started/Screenshots#carb-correction) įveskite naują reikšmę (jei reikia, pakeiskite laiką).
 
 ## Bendrieji
 
 ### Apžvalga
 
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
+Parodo dabartinę ciklo būseną ir dažniausiai naudojamų veiksmų mygtukus (išsamiau žr. [Pradinis ekranas](../Getting-Started/Screenshots.md)). Prieiga prie parametrų - per krumpliaračio piktogramą.
 
 #### Laikyti ekraną įjungtą
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+Parinktis „Neišjungti ekrano“ privers Android nuolat laikyti įjungtą ekraną. Tai naudinga pristatymams ir kt. Bet sunaudoja daug baterijos energijos. Todėl rekomenduojama išmanųjį telefoną prijungti prie įkroviklio laido.
 
 #### Mygtukai
 
-Define which Buttons are shown on the home screen.
+Nustatyti, kurie mygtukai rodomi pradiniame ekrane.
 
 * Terapija
 * Skaičiuotuvas
 * Insulinas
 * Angliavandeniai
-* CGM (opens xDrip+)
+* NGJ (atsidaro xDrip+)
 * Kalibravimas
 
-Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
+Taip pat galite nustatyti fiksuotas insulino ir angliavandenių kiekių padidinimo vertes ir nuspręsti, ar terapijos dialogo lange rodyti lauką pastaboms.
 
-#### QuickWizard settings
+#### Greitojo patarėjo nustatymai
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Čia galite sukurti mygtuką konkrečiam standartiniam maistui (angliavandenių kiekis ir boluso skaičiavimo metodas), kuris bus rodomas pagrindiniame ekrane. Tai labai praverčia, jei jūs dažnai valgo tą patį. Jei sukursite keletą standartinių patiekalų ir jiems nustatysite skirtingą laiką, priklausomai nuo dienos laiko pagrindiniame ekrane visada turėsite atitinkamą standartinio patiekalo mygtuką.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Pastaba: mygtukas nebus rodomas už nustatytų laikotarpių ribų. Jis nebus rodomas ir tuo atveju, jei yra pakankamai insulino (AIO) nurodytam angliavandenių kiekiui padengti.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Greitojo patarėjo mygtukas](../images/ConfBuild_QuickWizard.png)
 
-#### Default Temp-Targets
+#### Numatyti Laikini Tikslai
 
-Choose default temp-targets (duration and target). Preset values are:
+Pasirinkite numatytuosius laikinus tikslus (trukmė ir reikšmė). Iš anksto nustatytos reikšmės:
 
 * eating soon: target 72 mg/dl / 4.0 mmol/l, duration 45 min
 * activity: target 140 mg/dl / 7.8 mmol/l, duration 90 min
