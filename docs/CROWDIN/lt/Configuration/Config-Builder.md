@@ -81,7 +81,7 @@ Detalės yra paaiškintos atskirame [profilio pagalbininko puslapyje](../Configu
 
 NS Profilis naudoja profilius, kuriuos išsaugojote savo Nightscout svetainėje (https://[yournightscoutsiteaddress]/profilis). Jei norite pakeisti aktyvų profilį, galite naudoti [ Profilio perjungimas ](../Usage/Profiles.md). Ši funkcija sukurtą profilį užrašo pompoje, jei kiltų ryšio problemų su AndroidAPS. Tai leidžia jums lengvai sukurti kelis profilius Nightscout (pvz., darbe, namuose, sporto, švenčių dienomis ir pan.). Netrukus, paspaudus mygtuką „Išsaugoti“, jie bus perkelti į AAPS, jei jūsų išmanusis telefonas prijungtas prie interneto. Net be interneto ryšio ar be Nightscout ryšio, NS profiliai yra pasiekiami AAPS po sinchronizacijos.
 
-Norėdami suaktyvinti Nightscout profilį, pasirinkite [ Profilio keitimas](../Getting-Started/Screenshots.md#current-profile). AAPS will write the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+Norėdami suaktyvinti Nightscout profilį, pasirinkite [ Profilio keitimas](../Getting-Started/Screenshots.md#current-profile). Pakeitus profilį, AAPS taip pat įrašo pasirinktą profilį į pompą, kad jis būtų prieinamas ir veiktų iškilus AAPS problemoms.
 
 Privalumai:
 
@@ -333,21 +333,21 @@ Pavyzdžiui, jei norite suleisti boliusą, tuomet laikrodžio nustatymuose turė
 Naudodamiesi skirtuku „Wear“ arba hamburgerio meniu (ekrano viršutiniame kairiajame kampe, jei skirtukas nerodomas), galite
 
 * Pakartotinai siųsti visus duomenis. Gali būti naudinga, jei laikrodis nebuvo prijungtas kurį laiką ir norite perduoti informaciją į laikrodį.
-* Open settings on your watch directly from your phone.
+* Atidaryti laikrodžio nustatymus tiesiai iš savo telefono.
 
-### xDrip Statusline (watch)
+### xdrip būsenos juosta (laikrodyje)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Rodyti informaciją apie algoritmo būseną xDrip+ laikrodžio ekrane (jei nenaudojate AAPS /[AAPSv2 laikrodžio ekrane](../Configuration/Watchfaces.md))
 
 ### NSClient
 
-* Setup sync of your AndroidAPS data with Nightscout.
-* Settings in [preferences](../Configuration/Preferences#nsclient) can be opened by clicking the cog wheel.
+* AndroidAPS duomenų sinchronizavimo su Nightscout nustatymai.
+* Pasirinkimai [nustatymuose](../Configuration/Preferences#nsclient) gali būti pasiekiami paspaudus krumpliaračio simbolį.
 
-### Maintenance
+### Servisas
 
-Email and number of logs to be send. Normally no change necessary.
+El. pašto adresas ir siunčiamų protokolų skaičius. Paprastai nereikia jokių pakeitimų.
 
 ### Konfigūracija
 
-Use tab for config builder instead of hamburger menu.
+Vietoj hamburgerio meniu kairėje galite naudoti konfigūratoriaus skirtuką.
