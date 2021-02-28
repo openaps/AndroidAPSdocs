@@ -295,9 +295,9 @@ AndroidAPS содержит обучающую программу с рядом 
 
 #### Индикаторы состояния
 
-Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for canula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+Выберите, хотите ли вы, чтобы на обзорном экране присутствовали [индикаторы состояния](../Configuration/Preferences#status-lights) такие как возраста катетера, возраст инсулина, возраст сенсора, возраст батареи, уровень резервуара или уровень заряда батареи. При достижении уровня предупреждения цвет светового сигнала состояния переключится на желтый. Критический возраст будет показан красным цветом.
 
-#### Advanced settings
+#### Расширенные настройки
 
 **Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
 
