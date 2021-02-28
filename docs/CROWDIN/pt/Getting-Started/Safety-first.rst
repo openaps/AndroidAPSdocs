@@ -10,13 +10,13 @@ Geral
 * Não assuma que a AndroidAPS nunca cometerá erros. Este dispositivo está a assumir o controlo da administração da sua insulina: observe-o constantemente, entenda como ele funciona e aprenda a interpretar as suas ações.
 * Lembre-se que uma vez emparelhado o telefone pode mandar a bomba fazer qualquer coisa. Só use um telefone para a AndroidAPS e, se sendo usado por uma criança, para comunicações essenciais. Evite usar a app no seu telemóvel do dia a dia, reduzindo os erros possíveis. Não instale aplicações ou jogos desnecessários (!!!) o que pode introduzir malwares como trojans, vírus ou bots que podem interferir no seu sistema.
 * Instale todas as atualizações de segurança fornecidas pelo fabricante do telefone e pelo Google.
-* Talvez você também precise alterar seus hábitos da diabetes conforme muda a sua terapia usando um sistema de loop fechado. Por exemplo some people report, they need less hypo treatments as AndroidAPS has already reduced insulin.  
+* Talvez você também precise alterar seus hábitos da diabetes conforme muda a sua terapia usando um sistema de loop fechado. Por exemplo algumas pessoas relatam que têm menor necessidade de corrigir hipoglicemias, ou prevenir as mesmas, já que a AndroidAPS já reduziu a insulina.  
    
 Comunicador SMS
 ==================================================
 
-* A AndroidAPS permite que você controle um telefone remotamente através de SMS. Se os comandos por SMS estiverem ativos, lembre-se sempre de que o telemóvel configurado para estes comandos remotos pode ser roubado. Então, proteja-o sempre, pelo menos, através de um código PIN.
-* A AndroidAPS responderá com uma mensagem de texto se os comandos remotos - como um bólus ou uma mudança de perfil - foram corretamente realizados.0//0. É aconselhável ao configurar que textos sejam enviados para, pelo menos, dois números de telefone distintos, para o caso de um dos telefones ser roubado.
+* A AndroidAPS permite que você controle um telefone remotamente através de SMS. Se os comandos por SMS estiverem ativos, lembre-se sempre de que o telemóvel configurado para estes comandos remotos pode ser roubado. So always protect it at least by a PIN code.
+* A AndroidAPS responderá com uma mensagem de texto se os comandos remotos - como um bólus ou uma mudança de perfil - foram corretamente realizados.0//0. Ao configurar é aconselhável que as mensagens de confirmação sejam enviados para, pelo menos, dois números de telefone distintos, para o caso de um dos telefones ser roubado.
 
 .. nota:: 
    **IMPORTANT SAFETY NOTICE**
