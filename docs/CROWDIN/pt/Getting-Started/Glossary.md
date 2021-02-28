@@ -84,7 +84,7 @@
 </tr>
 <tr>
  <td><strong>DB</strong></td>
- <td>taxa basal</td>
+ <td>dose basal</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
