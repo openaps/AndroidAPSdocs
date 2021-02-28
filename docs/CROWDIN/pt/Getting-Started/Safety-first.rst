@@ -15,14 +15,14 @@ Geral
 Comunicador SMS
 ==================================================
 
-* A AndroidAPS permite que você controle um telefone remotamente através de SMS. Se os comandos por SMS estiverem ativos, lembre-se sempre de que o telemóvel configurado para estes comandos remotos pode ser roubado. So always protect it at least by a PIN code.
+* A AndroidAPS permite que você controle um telefone remotamente através de SMS. Se os comandos por SMS estiverem ativos, lembre-se sempre de que o telemóvel configurado para estes comandos remotos pode ser roubado. Então, proteja-o sempre, pelo menos, através de um código PIN.
 * A AndroidAPS responderá com uma mensagem de texto se os comandos remotos - como um bólus ou uma mudança de perfil - foram corretamente realizados.0//0. Ao configurar é aconselhável que as mensagens de confirmação sejam enviados para, pelo menos, dois números de telefone distintos, para o caso de um dos telefones ser roubado.
 
 .. nota:: 
-   **IMPORTANT SAFETY NOTICE**
+   **NOTAS DE SEGURANÇA IMPORTANTES**
 
-   The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
+   A base dos recursos de segurança da AndroidAPS discutidos nesta documentação é construída baseada nos recursos de segurança do hardware utilizado para construir o seu sistema. É extremamente importante que use apenas uma bomba de insulina em boas condições, testada e aprovada pelas entidades médicas (Infarmed, FDA ou CE) assim como o MCG para fechar o loop. Modificações de hardware ou software para estes componentes podem causar uma dosagem inesperada de insulina, causando risco significativo para o utilizador. Se encontrar ou receber bombas de insulina estragadas, modificadas ou "artesanais" ou dispositivos MCG, * não use * estes para a criação de um sistema AndroidAPS.
 
-   Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+   Além disso, é igualmente importante usar apenas acessórios originais como dispositivos de colocação, cânulas/cateteres e reservatórios de insulina aprovados pelo fabricante para uso com a sua bomba ou MCG. O uso de acessórios não testados ou modificados pode causar erros na dosagem de insulina e discrepâncias nos valores do MCG. A insulina é altamente perigosa quando mal doseada - por favor não brinque com a sua vida ao hackear com seus próprios acessórios.
 
-   Last not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels.  The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
+   Por último, mas não menos importante, você não deve tomar inibidores SGLT-2 (gliflozins), pois eles reduzem incalculavelmente os níveis de açúcar no sangue.  A combinação com um sistema que reduz as taxas basais a fim de aumentar a GLIC é especialmente perigosa já que devido ao gliflozin esse aumento na GLIC pode não acontecer e um estado perigoso de falta de insulina pode acontecer.
