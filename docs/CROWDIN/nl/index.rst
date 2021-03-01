@@ -1,4 +1,4 @@
-Welcome to the AndroidAPS documentation
+Welkom bij de Android APS documentatie
 ==================================================
 
 AndroidAPS is een open source app voor mensen met insuline-afhankelijke diabetes. De app fungeert als een kunstmatig alvleesklier systeem (APS, Artificial Pancreas System) op Android smartphones. Belangrijkste componenten zijn verschillende OpenAPS software algoritmen die doen wat een levende alvleesklier doet: de bloedsuiker binnen gezonde grenzen houden. Het algoritme doet dit door het gebruik van geautomatiseerde insulinedosering (AID, Automated Insulin Dosing). Daarnaast is een door de app ondersteunde en FDA/CE goedgekeurde insulinepomp en een continue glucosesensor nodig. 
@@ -26,20 +26,20 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Getting started
+   :caption: Aan de slag
 
    Allereerst de veiligheid <./Getting-Started/Safety-first.rst>
    Wat is een closed loop systeem <./Getting-Started/ClosedLoop.rst>
    Wat is een closed loop systeem met AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Pump choices <./Getting-Started/Pump-Choices.md>
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Insulinepompen <./Getting-Started/Pump-Choices.md>
+   Documentatie wijzigingen <./Getting-Started/WikiUpdate.rst>
 
 .. _what-do-i-need:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: What do I need? 
+   :caption: Wat heb ik nodig? 
 
    Onderdelen <./Module/module.rst>
    Gebruiksvoorbeeld <./Getting-Started/Sample-Setup.md>
@@ -149,7 +149,7 @@ Hieronder volgt de inhoudsopgave.
 
    Leestips voordat je begint <./Where-To-Go-For-Help/Background-reading.md>
    Contact met anderen <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Documentatie wijzigingen <./Getting-Started/WikiUpdate.rst>
 
 .. toctree::
    :maxdepth: 1
@@ -178,4 +178,4 @@ Hieronder volgt de inhoudsopgave.
 
 	* Alle product-en bedrijfsnamen, handelsmerken, servicemerken, geregistreerde handelsmerken en geregistreerde dienstmerken zijn eigendom van hun respectievelijke houders. Hun gebruik is voor informatieve doeleinden en impliceert op geen enkele wijze een samenwerking met of goedkeuring van hen.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_
+	Houd er rekening mee dat: - dit project is niet gekoppeld aan en wordt niet ondersteund door: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ of `Medtronic <https://www.medtronic.com/>`_
