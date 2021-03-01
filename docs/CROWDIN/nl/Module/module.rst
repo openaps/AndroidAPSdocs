@@ -5,7 +5,7 @@ AndroidAPS is meer dan de (zelfgebouwde) app alleen, er zijn ook andere onderdel
 .. image:: ../images/modules.png
   :alt: Wat heb ik nodig
 
-.. opmerking:: 
+.. note:: 
    **VOOR JE EIGEN VEILIGHEID**
 
    De veiligheidsfuncties die in AndroidAPS zitten, maken gebruik van ingebouwde veiligheidsmaatregelen van de hardware componenten waaruit jouw systeem bestaat. Het is daarom van cruciaal belang dat je alleen een volledig functionerende FDA of CE goedgekeurde insulinepomp en CGM gebruikt voor het bouwen van jouw eigen closed loop. Gebruik alleen insulinepompen en CGMs die in deze handleiding beschreven staan, waarvoor de AndroidAPS software is geschreven en getest. Hardware of software wijzigingen aan deze componenten kunnen voor onverwachte uitkomsten zorgen (denk aan het ongewenst afgeven van insuline), waardoor de gebruiker een aanzienlijk risico loopt. Als je een insulinepomp of CGM-ontvanger vindt/koopt/krijgt die een defect heeft, zelfgemaakt is, of op welke manier dan ook veranderd is, GEBRUIK DEZE NIET voor het maken van een AndroidAPS-systeem.
