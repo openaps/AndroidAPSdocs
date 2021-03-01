@@ -18,7 +18,7 @@ Dat is waarom een kant-en-klare app niet verspreid mag worden.
 
 Ten eerste, moet je alle **fysieke onderdelen van een closed loop** verzamelen:
 
-* A [supported insulin pump](./Pump-Choices.md), 
+* Een [geschikte insulinepomp](./Pump-Choices.md), 
 * een [Android smartphone](Phones.md) (Apple iOS wordt niet ondersteund door AndroidAPS - je kunt wel [iOS Loop](https://loopkit.github.io/loopdocs/) gebruiken) en 
 * een [glucose sensor](../Configuration/BG-Source.rst). 
 
@@ -26,7 +26,7 @@ Ten tweede, moet je de **fysieke onderdelen instellen**. Zie het [gebruiksvoorbe
 
 Ten derde, moet je alle **software bouwen en instellen**: AndroidAPS en CGM/FGM bron.
 
-Ten vierde moet je leren en **begrijpen hoe het algoritme is ontworpen om jouw behandel instellingen** correct in te kunnen stellen. Het grondbeginsel van closed loopen is dat jouw basaalstanden en koolhydraatratio's correct zijn. Alle aanpassingen die de closed loop doet, gaan er vanuit dat jouw basaalstand klopt. Alle pieken en dalen die je ziet zijn dus een gevolg van andere, tijdelijke factoren (beweging, stress etc) die dan worden opgelost met een tijdelijke insulineaanpassing. De aanpassingen die de closed loop kan maken zijn uit veiligheid beperkt (zie maximaal toegestane basaalstand in [OpenAPS Reference Design](https://openaps.org/reference-design/)). Dit betekent dat je de closed loop niet moet inzetten om een fout afgestelde basaalstand te verhelpen. Wanneer je bijvoorbeeld vaak een lage waarde hebt vlak voor een maaltijd, dan moet waarschijnlijk je basaal omlaag. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
+Ten vierde moet je leren en **begrijpen hoe het algoritme is ontworpen om jouw behandel instellingen** correct in te kunnen stellen. Het grondbeginsel van closed loopen is dat jouw basaalstanden en koolhydraatratio's correct zijn. Alle aanpassingen die de closed loop doet, gaan er vanuit dat jouw basaalstand klopt. Alle pieken en dalen die je ziet zijn dus een gevolg van andere, tijdelijke factoren (beweging, stress etc) die dan worden opgelost met een tijdelijke insulineaanpassing. De aanpassingen die de closed loop kan maken zijn uit veiligheid beperkt (zie maximaal toegestane basaalstand in [OpenAPS Reference Design](https://openaps.org/reference-design/)). Dit betekent dat je de closed loop niet moet inzetten om een fout afgestelde basaalstand te verhelpen. Wanneer je bijvoorbeeld vaak een lage waarde hebt vlak voor een maaltijd, dan moet waarschijnlijk je basaal omlaag. Je kunt [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) aan de hand van een grote hoeveelheid gegevens, suggesties laten doen voor verbeteringen aan je basaalstanden, ISF en/of koolhydraatratio. Of je kunt je basaalstanden op de [ouderwetse manier](https://integrateddiabetes.com/basal-testing/) testen en instellen.
 
 ## Zijn er nog praktische tips?
 
@@ -67,9 +67,9 @@ Uit veiligheidsoogpunt zal AAPS aanpassingen doen op basis van een gemiddelde gl
 Er zijn verschillende blogs met goede tips om jou te helpen om de loop goed in te stellen (in het Engels):
 
 * [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-* [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
+* [Waarom DIA het verschil maakt](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
 * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-* [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+* [Hormonen en autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
 ## Welke spullen moet ik bij me hebben voor noodgevallen?
 
@@ -202,7 +202,7 @@ In AMA betekent "dia" niet de "Duur van Insuline Actie". Het is een parameter di
 
 ### Waarom minimaal een 5 uur DIA (Duur van Insuline Actie) gebruiken in plaats van 2-3 uur?
 
-Well explained in [this article](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Vergeet niet om op `ACTIVEER PROFIEL` te klikken na het wijzigen van je DIA.
+Goed uitgelegd in [dit artikel](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Vergeet niet om op `ACTIVEER PROFIEL` te klikken na het wijzigen van je DIA.
 
 ### Waarom zorgt de loop ervoor dat mijn bloedsuiker vaak zo ver zakt dat ik een hypo krijg, terwijl mijn COB (koolhydraten aan boord) nul is?
 
