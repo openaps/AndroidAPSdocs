@@ -264,7 +264,7 @@ Depending on your settings in `config builder <../Configuration/Config-Builder.h
 OpenAPS AMA instellingen
 -----------------------------------------------------------
 * Dankzij de geavanceerde maaltijdhulp (Advanced Meal Assist, AMA) kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd. 
-* More details about the settings and Autosens can be found in the `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
+* Meer details over de instellingen en Autosens zijn te vinden in de ` OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>` __.
 
 Maximaal instelbaar basaal E/u
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -348,7 +348,7 @@ min_5m_carbimpact
 * In dit soort gevallen, wanneer jouw koolhydraat absorptie niet kan worden bepaald op basis van hoe jouw bloedglucose reageert, dan zal AAPS terugvallen op deze waarde voor de afname van COB. Het is in feite een vangnet.
 * Om het simpel te stellen: Het algoritme "weet" hoe jouw BGs zich *zouden* moeten gedragen, adhv jouw huidige hoeveelheid insuline icm ISF. 
 * Wanneer jouw BG sneller daalt dan het algoritme had verwacht, dan betekent dit dat er koolhydraten worden geabsorbeerd (COB neemt af). Hierbij geldt: grote verandering = veel koolhydraten. 
-* De min_5m_carbimpact is wat het algoritme gebruikt als minimale hoeveel koolhydraten die per 5 minuten worden geabsorbeerd. For more details see `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`__.
+* De min_5m_carbimpact is wat het algoritme gebruikt als minimale hoeveel koolhydraten die per 5 minuten worden geabsorbeerd. Zie voor meer informatie `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`__.
 * Standaard waarde voor AMA is 5, voor SMB is het 8.
 * De COB-grafiek op het Overzicht scherm geeft dmv een oranje stip op de COB lijn weer wanneer min_5m_impact wordt gebruikt.
 
@@ -366,7 +366,7 @@ Geavanceerde instellingen - autosens ratio
 
 Pomp instellingen
 ===========================================================
-The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`__.  Koppel en stel je pomp in volgens de instructies van jouw pomp:
+De opties hier zijn afhankelijk van welke pomp je hebt geselecteerd in de `Configurator <../Configuration/Config-Builder.html#pomp>`__.  Koppel en stel je pomp in volgens de instructies van jouw pomp:
 
 * `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
@@ -423,7 +423,7 @@ Geavanceerde instellingen (NSClient)
 
 SMS Communicator
 ===========================================================
-* Options will only be displayed if SMS communicator is selected in `Config Builder <../Configuration/Config-Builder.html#sms-communicator>`__.
+* Opties worden alleen weergegeven als de SMS-communicator is geselecteerd in `Configurator <../Configuration/Config-Builder.html#sms-communicator>`__.
 * Deze instelling maakt het mogelijk om de AAPS app op afstand (vanaf een andere telefoon) te bedienen, door SMS instructies te sturen naar de telefoon die de patiënt bij zich heeft. Bijvoorbeeld het uitschakelen van de loop of het geven van een bolus.  
 * Meer informatie in `SMS Commando's <../Children/SMS-Commands.html>`_.
 * Bediening via SMS is beveiligd dmv een authenticator app en een extra PIN code die achter het token moet worden gezet.
