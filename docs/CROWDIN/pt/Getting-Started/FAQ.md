@@ -77,7 +77,7 @@ First of all, you have to take the same emergency equipment with you like every 
 
 * Battery pack for the energy of your smartphone, wear and (maybe) BT reader
 * Backup in the cloud (Dropbox, Google Drive...) of the apps you use like: your latest AndroidAPS-APK and your key store password, AndroidAPS settings file, xDrip settings file, patched Dexcom app, ...
-* Bateria da Bomba
+* Baterias da Bomba
 
 ## How to safely attach the CGM/FGM?
 
