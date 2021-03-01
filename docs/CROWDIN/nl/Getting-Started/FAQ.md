@@ -67,9 +67,9 @@ Uit veiligheidsoogpunt zal AAPS aanpassingen doen op basis van een gemiddelde gl
 Er zijn verschillende blogs met goede tips om jou te helpen om de loop goed in te stellen (in het Engels):
 
 * [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-* [Waarom DIA het verschil maakt](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
+* [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
 * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-* [Hormonen en autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+* [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
 ## Welke spullen moet ik bij me hebben voor noodgevallen?
 
