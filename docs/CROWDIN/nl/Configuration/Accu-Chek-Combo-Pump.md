@@ -102,7 +102,7 @@ Er zijn diverse mogelijke redenen. Probeer de volgende stappen:
 
 * Als Combo Pomp is ingesteld op 5s Screen timeout, dan kan je testen met 40 s (oorspronkelijke instelling). Uit ervaring blijkt dat de tijd totdat de pomp op de telefoon wordt weergegeven na "select phone" ongeveer 5 tot 10 seconden bedraagt. In veel andere gevallen is de koppelingstijd verlopen zonder succesvolle koppeling. 
 * Later moet je de 5s herstellen, om aan de AAPS Combo instellingen te voldoen.
-* Als de pomp de telefoon niet laat zien als een koppelbaar apparaat zal de bluetooth stack van je telefoon waarschijnlijk niet compatibel zijn met de pomp. Verzeker jezelf van gebruik van de versie **LineageOS ≥ 14.1** of **Android ≥ 8.1 (Oreo)**. Probeer indien mogelijk, een andere smartphone. You can find a list of already successfully used smartphones under \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). 
+* Als de pomp de telefoon niet laat zien als een koppelbaar apparaat zal de bluetooth stack van je telefoon waarschijnlijk niet compatibel zijn met de pomp. Verzeker jezelf van gebruik van de versie **LineageOS ≥ 14.1** of **Android ≥ 8.1 (Oreo)**. Probeer indien mogelijk, een andere smartphone. Hier vindt je een lijst van reeds succesvol gebruikte smartphones: [AAPS Phones] - (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). 
 
 9. Bij de volgende Pomp sessie moet een beveiligingscode van 10 cijfers verschijnen. En Ruffy een scherm om in te voeren. Dus voer dit in in Ruffy en je zou klaar voor gebruik moeten zijn.
 10. Start de telefoon opnieuw op.
@@ -113,7 +113,7 @@ Er zijn diverse mogelijke redenen. Probeer de volgende stappen:
 * Houd er rekening mee dat dit geen product is, vooral in het begin moet de gebruiker het systeem monitoren en leren begrijpen, wat de beperkingen zijn en wat er mis kan gaan. 
 * Het wordt sterk aangeraden om dit systeem NIET te gebruiken wanneer de persoon het systeem niet volledig kan begrijpen.
 * Lees de OpenAPS documentatie https://openaps.org om te begrijpen waar het loop-algoritme van AndroidAPS op gebaseerd is.
-* Read the [AAPS docs](../index.rst) to learn about and understand AndroidAPS.
+* Lees de [AAPS documentatie](../index.rst) om te leren over AndroidAPS en AndroidAPS te begrijpen.
 * Deze integratie maakt gebruik van dezelfde functionaliteit als de meter die wordt geleverd bij de Combo.
 * De meter maakt het mogelijk om het pompscherm te spiegelen en de vooruit knop te bedienen op de pomp. 
 * De Ruffy app maakt verbinding met de pomp en geeft signalen door. 
