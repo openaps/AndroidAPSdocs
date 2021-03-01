@@ -13,9 +13,9 @@ Als je daarna nog eens 30 dagen wacht met bijwerken (dus 90 dagen vanaf de datum
 
 Deze harde beperkingen zijn uiteraard niet bedoeld om je te pesten, maar zijn er om veiligheidsredenen. Nieuwe versies van AndroidAPS bevatten niet alleen nieuwe handige functies, maar ook belangrijke veiligheidsupdates. Daarom is het noodzakelijk dat elke gebruiker zijn app bijwerkt zodra een nieuwe versie beschikbaar komt. Helaas zijn er nog steeds signalen dat sommige gebruikers een hele oude versie van hun app gebruiken, dus dit is een poging om de veiligheid voor individuele gebruikers en de hele doe-het-zelf loop-gemeenschap te verbeteren.  
 
-Version 2.8.2
+Versie 2.8.2
 ================
-Release date: 23-01-2021
+Release datum: 23-01-2021
 
 * Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
 
@@ -28,9 +28,9 @@ Changes
 * NSClient fixes
 * Bolus advisor now works with Pumpcontrol and NSClient
 
-Version 2.8.1.1
+Versie 2.8.1.1
 ================
-Release date: 12-01-2021
+Release datum: 12-01-2021
 
 Important hints
 ----------------------
@@ -51,11 +51,11 @@ Major changes
 * RS driver improvement
 * various crashes fixed
 * UI fixes and improvements
-* new translations
+* nieuwe vertalingen
 
-Version 2.8.0
+Versie 2.8.0
 ================
-Release date: 01-01-2021
+Release datum: 01-01-2021
 
 Important hints
 ----------------------
@@ -82,9 +82,9 @@ Belangrijkste nieuwe functies
 * Security improvements @dlvoy 
 * Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
 
-Version 2.7.0
+Versie 2.7.0
 ================
-Release date: 24-09-2020
+Release datum: 24-09-2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`__.
 
@@ -120,9 +120,9 @@ Belangrijkste nieuwe functies
 * `Open Humans uploader <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
 * New documentation @Achim
 
-Version 2.6.1.4
+Versie 2.6.1.4
 ================
-Release date: 04-05-2020
+Release datum: 04-05-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -131,9 +131,9 @@ Belangrijkste nieuwe functies
 * Insight: Disable vibration on bolus for firmware version 3 - second attempt
 * Otherwise is equal to 2.6.1.3. Update is optional. 
 
-Version 2.6.1.3
+Versie 2.6.1.3
 ================
-Release date: 03-05-2020
+Release datum: 03-05-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -142,9 +142,9 @@ Belangrijkste nieuwe functies
 * Insight: Disable vibration on bolus for firmware version 3
 * Otherwise is equal to 2.6.1.2. Update is optional. 
 
-Version 2.6.1.2
+Versie 2.6.1.2
 ================
-Release date: 19-04-2020
+Release datum: 19-04-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -153,9 +153,9 @@ Belangrijkste nieuwe functies
 * Fix crashing in Insight service
 * Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
 
-Version 2.6.1.1
+Versie 2.6.1.1
 ================
-Release date: 06-04-2020
+Release datum: 06-04-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -164,9 +164,9 @@ Belangrijkste nieuwe functies
 * Resolves SMS CARBS command issue while using Combo pump
 * Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
 
-Version 2.6.1
+Versie 2.6.1
 ==============
-Release date: 21-03-2020
+Release datum: 21-03-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -183,9 +183,9 @@ Belangrijkste nieuwe functies
 * Fixed NSClient connection settings (wifi, charging)
 * Fixed sending of calibrations to xDrip
 
-Version 2.6.0
+Versie 2.6.0
 ==============
-Release date: 29-02-2020
+Release datum: 29-02-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -228,13 +228,13 @@ Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#imp
 * Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
 * New versioning that will allow to do minor updates without triggering the update-notification.
 
-Version 2.5.0
+Versie 2.5.0
 ==================================================
 Release datum: 26-10-2019
 
 .. _important-notes-2-5-0:
 
-Important notes
+Belangrijke opmerkingen
 --------------------------------------------------
 * Please use `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ or newer to `build the apk <../Installing-AndroidAPS/Building-APK.html>`_ or `update <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * If you are using xDrip `identify receiver <../Configuration/xdrip.html#identify-receiver>`_ must be set.
@@ -341,7 +341,7 @@ Instellingen die je moet aanpassen bij het overschakelen van AMA naar SMB
 --------------------------------------------------
 * Doel 10 moet zijn gestart om SMBs aan te kunnen zetten (SMB tab toont in het algemeen welke beperkingen gelden)
 * maxIOB now includes _all_ IOB, not just added basal. Dat betekent dus, wanneer je jezelf een maaltijdbolus van 8E hebt gegeven en maxIOB is 7E, dat er geen SMBs worden afgegeven totdat IOB onder de 7E is gezakt.
-* min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. Je moet dit handmatig doen wanneer je van AMA naar SMB wisselt.
+* de min_5m_carbimpact standaard waarde is veranderd van 3 naar 8, wanneer je gaat van AMA naar SMB. Je moet dit handmatig doen wanneer je van AMA naar SMB wisselt.
 * Let op bij het bouwen van de AndroidAPS 2.0 apk: Configuration on demand wordt niet ondersteund door de huidige versie van de Android Gradle plugin! Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het volgende doen:
 
   * Open het Preferences (Voorkeuren) venster door op File > Settings (Bestand > Instellingen) te klikken (op Mac, Android Studio > Voorkeuren).
