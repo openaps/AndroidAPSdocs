@@ -26,35 +26,35 @@ Secondly, you have to **setup your hardware**. See [example setup with step-by-s
 
 Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
 
-Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. O princípio principal do loop fechado é que a sua dose basal e a proporção de hidratos de carbono estão corretas (bem afinadas). Todas as recomendações presumem que suas necessidades basais são atendidas e quaisquer picos ou descidas que veja são resultado de outros fatores que, portanto, requerem alguns ajustes únicos (exercício, stress, etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. Se, por exemplo, você está frequentemente com baixa glicemia ao se aproximar de uma refeição, então é provável que suas necessidades básicas se ajustem. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
+Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. O princípio principal do loop fechado é que a sua dose basal e a proporção de hidratos de carbono estão corretas (bem afinadas). Todas as recomendações presumem que suas necessidades basais são atendidas e quaisquer picos ou descidas que veja são resultado de outros fatores que, portanto, requerem alguns ajustes únicos (exercício, stress, etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. Se, por exemplo, você está frequentemente com baixa glicemia ao se aproximar de uma refeição, então é provável que as suas necessidades básicas precisem de ajustes. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
-## What practicalities of looping do I have?
+## Que aspectos práticos de looping eu tenho?
 
-### Password protection
+### Proteção por senha
 
 If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
 
 ### Android Wear Smartwatches
 
-If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
+If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. A confirmação da ação vem por meio de notificação.
 
-### Disconnect pump
+### Desconetar a bomba
 
 If you take your pump off for showering/bathing/swimming/sport etc. you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
 
 * Long-press the button 'Closed loop' (will be called 'Open Loop' when you are not closed looping yet) on top of the homescreen. 
-* Select **'Disconnect pump for XY min'**
+* Selecione **'Desconectar bomba por XY min'**
 * This will set your basal to zero for that time period.
 * The minimum length of time for a disconnection is due to the minimum length of TBRs that can be set on the pump. So, if you wish to disconnect for a shorter period of time you have to use the shortest disconnection time available for your pump and reconnect manually as described below.
-* Button 'Closed Loop' (or 'Open Loop') will turn red and be named 'Disconnected (xx m)' displaying the remaining disconnection time.
+* O botão 'Loop fechado' (ou 'Loop aberto') ficará vermelho e será nomeado como 'Desconectado (xx m)' exibindo o tempo de desconexão restante.
 * AAPS will reconnect pump after the chosen time automatically and your closed loop will start working again.
     
-    ![Disconnect pump](../images/PumpDisconnect.png)
+    ![Desconetar a bomba](../images/PumpDisconnect.png)
 
 * If the selected time was too long you can reconnect manually.
 
-* Long-press on the red button 'Disconnected (xx m)'.
-* Select 'Reconnect pump'
+* Mantenha pressionado o botão vermelho 'Desconectado (xx m)'.
+* Selecione 'Reconectar bomba'.
     
     ![Reconnect pump](../images/PumpReconnect.png)
 
