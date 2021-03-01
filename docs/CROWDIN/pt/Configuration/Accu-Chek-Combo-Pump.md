@@ -67,12 +67,12 @@
     
     * Se não trabalhar após múltiplas tentativas, troque para o branch `emparelhamento`, emparelhe a bomba e regresse depois ao branch original.
     * Note que o processo de emparelhamento é delicado ( mas só tem de ser feito uma única vez) e poderão ser necessárias algumas tentativas; confirme rapidamente as instruções e ao iniciar de novo remova a bomba das configurações de bluetooth antes de recomeçar. 
-    * Another option to try is to go to the Bluetooth menu after initiating the pairing process (this keeps the phone's Bluetooth discoverable as long as the menu is displayed) and switch back to ruffy after confirming the pairing on the pump, when the pump displays the authorization code.
+    * Outra opção para tentar é ir até ao menu Bluetooth após iniciar o processo de emparelhamento (isso mantém o Bluetooth do telemóvel visível enquanto o menu é exibido) e alternar de volta para ruffy após confirmar o emparelhamento na bomba, quando a bomba exibe o código de autorização.
     * Se você não conseguir emparelhar a bomba (digamos após 10 tentativas), tente aguardar até 10s antes de confirmar o emparelhamento na bomba (quando o nome do telefone estiver exibido na bomba). 
     * Se configurou o tempo limite do menu para 5s acima, você precisa aumentá-lo novamente. Alguns utilizadores relataram que precisavam fazer isso. 
     * Por último, considere mudar para outra sala, para o caso de haver interferências de algum tipo de ondas. Há mais do que um utilizador que ultrapassou os problemas de emparelhamento simplesmente mudando de sala.
 
-* Quando a AAPS está a usar ruffy, a app Ruffy não pode ser usada. The easiest way is to just reboot the phone after the pairing process and let AAPS start ruffy in the background.
+* Quando a AAPS está a usar ruffy, a app Ruffy não pode ser usada. A maneira mais simples é simplesmente reiniciar o telefone após o processo e deixar a AAPS iniciar a ruffy em segundo plano.
 
 * If the pump is completely new, you need to **do one bolus on the pump**, so the pump creates a first history entry.
 * Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump.
