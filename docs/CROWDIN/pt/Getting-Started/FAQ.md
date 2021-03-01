@@ -1,28 +1,28 @@
 # FAQ para loopers
 
-Como adicionar perguntas para o FAQ: Siga essas [instruções](../make-a-PR.md)
+Como adicionar perguntas para a FAQ: Siga estas [instruções](../make-a-PR.md)
 
 # Geral
 
 ## Can I just download the AndroidAPS installation file?
 
-Não. There is no downloadable apk file for AndroidAPS. You have to [build](../Installing-AndroidAPS/Building-APK.md) it yourself. Here's the reason why:
+Não. Não há nenhum arquivo apk para download para AndroidAPS. Você mesmo tem que [compilar](../Installing-AndroidAPS/Building-APK.md). Aqui está a razão pela qual:
 
-AndroidAPS is used to control your pump and give insulin. Under current regulations, in Europe, all the systems class as IIa or IIb are medical devices that require regulatory approval (a CE mark) and that needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
+AndroidAPS is used to control your pump and give insulin. Sob os regulamentos atuais, na Europa, toda a classe de sistemas como IIa ou IIb são dispositivos médicos que requerem aprovação regulatória (uma marca CE) e que precisa de vários estudos e assinaturas. Distribuir um dispositivo não regulamentado é ilegal. Similar regulations exist in other parts of the world.
 
-This regulation is not restricted to sales (in the meaning of getting money for something) but applies to any way of distribution (even giving away for free). Building a medical device for yourself is the only way not being affected by these regulations.
+This regulation is not restricted to sales (in the meaning of getting money for something) but applies to any way of distribution (even giving away for free). Construir um dispositivo médico para si mesmo é a única forma de não ser afetado por esses regulamentos.
 
-That’s why apks aren’t available.
+É por isso que os apks não estão disponíveis.
 
 ## Como começar?
 
-First of all, you have to **get loopable hardware components**:
+Em primeiro lugar, você tem que **obter componentes de hardware capazes de construir o loop**:
 
-* A [supported insulin pump](./Pump-Choices.md), 
+* Uma [bomba de insulina suportada](./Pump-Choices.md), 
 * um [smartphone Android](Phones.md) (O Apple iOS não é suportado pelo AndroidAPS - pode verificar [iOS Loop](https://loopkit.github.io/loopdocs/)) e 
-* um [sistema contínuo de monitorização de glucose ](../Configuration/BG-Source.rst). 
+* um [sistema de monitorização contínua de glicose ](../Configuration/BG-Source.rst). 
 
-Em segundo lugar, você tem que **configurar o seu hardware**. Veja [o exemplo de configuração com tutorial passo a passo](Sample-Setup.md).
+Em segundo lugar, tem que **configurar o seu hardware**. Veja [o exemplo de configuração com tutorial passo a passo](Sample-Setup.md).
 
 Em terceiro lugar, tem que **configurar os seus componentes de software**: AndroidAPS e fonte CGM/FGM.
 
