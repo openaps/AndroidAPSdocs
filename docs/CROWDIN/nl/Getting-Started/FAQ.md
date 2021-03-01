@@ -2,7 +2,7 @@
 
 Om vragen toe te voegen aan de Veelgestelde Vragen: volg deze [instructies](../make-a-PR.md)
 
-# Algemeen
+# General
 
 ## Kan ik de AndroidAPS app gewoon downloaden?
 
