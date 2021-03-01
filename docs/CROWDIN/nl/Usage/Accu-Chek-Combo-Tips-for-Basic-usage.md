@@ -8,9 +8,9 @@
 * Als je de app ruffy tijdens het loopen onbedoeld opent, dan is het het beste om de smartphone direct opnieuw te starten.
 * Waar mogelijk moet de pomp alleen via de AndroidAPS-app worden gebruikt worden Om dit te vergemakkelijken, activeer het sleutelvergrendeling op de pomp: **PUMP SETTINGS / KEY LOCK / ON**. Alleen bij het vervangen van de batterij of reservoir, is nodig om de pomp toetsen te gebruiken. ![Keylock](../images/combo/combo-tips-keylock.png)
 
-## Pomp niet bereikbaar. What to do?
+## Pomp niet bereikbaar. Wat te doen?
 
-### Activate pump unreachable alarm
+### Activeer pomp niet bereikbaar alarm
 
 * In AndroidAPS, go to **Settings / Local Alarms** and activate **alarm when pump is unreachable** and set **pump not reachable limit [Min]** to **31** minutes. 
 * This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
@@ -25,7 +25,7 @@
 
 * On phones with **low memory** (or **aggressive power-saving** settings), AndroidAPS is often shut down. You can tell by the fact that the Bolus and Calculator buttons on the Home screen are not shown when opening AAPS because the system is initializing. This can trigger "pump unreachable alarms" at startup. In the **Last Connection** field of the Combo tab, you can check when AndroidAPS last communicated with the pump. 
 
-![Pump unreachable](../images/combo/combo-tips-pump-unreachable.png) ![No connection to pump](../images/combo/combo-tips-no-connection-to-pump.png)
+![Pomp niet beschikbaar](../images/combo/combo-tips-pump-unreachable.png) ![No connection to pump](../images/combo/combo-tips-no-connection-to-pump.png)
 
 * This error can drain the pump's battery faster because the basal profile is read from the pump when the app is restarted.
 * It also increases the likelihood of causing the error that causes the pump to reject all incoming connections until a button on the pump is pressed. 
