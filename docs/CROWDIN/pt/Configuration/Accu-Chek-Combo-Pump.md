@@ -75,13 +75,13 @@
 * Quando a AAPS está a usar ruffy, a app Ruffy não pode ser usada. A maneira mais simples é simplesmente reiniciar o telefone após o processo e deixar a AAPS iniciar a ruffy em segundo plano.
 
 * Se a bomba for completamente nova, precisará ** fazer um bólus na bomba** para que a mesma crie uma primeira entrada no histórico.
-* Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump.
-* Then activate the [Combo plugin](../Configuration/Config-Builder#pump). 
-* Press the *Refresh* button on the Combo tab to initialize the pump.
+* Antes de ativar o plugin Combo na AAPS certifique-se de que o seu perfil está correctamente configurado e activado (!) e o seu perfil de basal está actualizado já que a AAPS irá sincronizar-se com o perfil de basal da bomba.
+* Então ative o [plugin Combo](../Configuration/Config-Builder#pump). 
+* Prima o botão *actualizar* no separador Combo para inicializar a bomba.
 * Para verificar a sua configuração, com a bomba **desligada**, use a AAPS para programar uma DBT de 500% por 15min e administre um bólus.
 * A bomba deve ter agora uma DBT activa e o bólus no histórico. AAPS deverá também mostrar a DBT activa e os bólus administrados.
 
-## Why does pairing with the pump not work with the app "ruffy"?
+## Porque é que emparelhar com a bomba não funciona com a app "ruffy"?
 
 Há várias razões possiveis. Tente os seguintes passos:
 
@@ -90,19 +90,19 @@ Há várias razões possiveis. Tente os seguintes passos:
 ![Combo deverá estar próxima do telefone](../images/Combo_next_to_Phone.png)
 
 2. Desligue ou retire quaisquer equipamento bluetooth para que não possa causar conflitos enquanto o emparelhamento do telefone está em progresso. Qualquer comunicação paralela bluetooth ou conexões de emparelhamento rápido poderão interferir no processo de emparelhamento.
-3. Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until **NO DEVICE** is shown.
-4. Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device "**SpiritCombo**"
+3. Apague dispositivos já conectados no menu bluetooth da bomba: **DEFINIÇÕES BLUETOOTH / LIGAÇÕES / REMOVER** até que apareça **SEM DISPOSITIVOS** .
+4. Apague uma bomba previamente ligada ao telemóvel via bluetooth: definições/bluetooth, remover dispositivo emparelhado "**SpiritCombo**"
 5. Certifique se de que AAPS não está em background a correr o loop. Desactive Loop no AAPS.
 6. Inicie agora ruffy no telefone. Pode premir Reset! e remover a ligação antiga. Prima Connect!.
-7. No menu bluetooth da bomba, ir a **Adicionar dispositivo / Adicionar ligação**. Press *CONNECT!**
+7. No menu bluetooth da bomba, ir a **Adicionar dispositivo / Adicionar ligação**. Pressione *CONNECT! **
     
-    * Step 6 and 7 have to be done in a short timing.
+    * A etapa 6 e 7 têm de ser feitas num curto espaço de tempo.
 
-8. Agora a bomba deve mostrar o nome de Bluetooth do telefone para selecionar para emparelhar. Here it is important to wait at least 5s before you hit the select button on Pump. Caso contrário a bomba não irá enviar o pedido de emparelhamento ao telefone.
+8. Agora a bomba deve mostrar o nome de Bluetooth do telefone para selecionar para emparelhar. Neste momento é importante esperar pelo menos 5 s antes de clicar no botão de seleção na Bomba. Caso contrário a bomba não irá enviar o pedido de emparelhamento ao telefone.
 
-* Se o ecrã da bomba estiver configurado para estar ligado 5s, deverá testar com 40s ( configuração original). From experience the time between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out without successfully Pair. 
+* Se o ecrã da bomba estiver configurado para estar ligado 5s, deverá testar com 40s ( configuração original). Habitualmente o tempo entre a bomba aparecer no telefone até selecionar a mesma será cerca de 5-10s. Noutros casos o emparelhamento expira sem estar correctamente efectuado. 
 * Mais tarde deverá voltar a definir para 5s, para ir ao encontro das configurações AAPS para a Combo.
-* If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not compatible with the pump. Certifique-se de estar a executar uma versão ** LineageOS ≥ 14,1 ** ou ** Android ≥ 8,1 (Oreo) **. If possible, try another smartphone. Poderá encontrar uma lista de smartphones testados com sucesso em \[AAPS telefones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). 
+* Se a bomba não mostrar o telefone como dispositivo emparelhado, provavelmente o bluetooth do seu telefone não é compatível com a bomba. Certifique-se de estar a executar uma versão ** LineageOS ≥ 14,1 ** ou ** Android ≥ 8,1 (Oreo) **. Se possível, tente com outro smartphone. Poderá encontrar uma lista de smartphones testados com sucesso em \[AAPS telefones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). 
 
 9. De seguida a bomba deverá indicar um código de segurança de 10 dígitos. E Ruffy um écran para introduzir esse código. Introduza-o em Ruffy e deverá estar tudo pronto.
 10. Reinicie o telemóvel.
@@ -110,32 +110,32 @@ Há várias razões possiveis. Tente os seguintes passos:
 
 ## Utilização
 
-* Tenha em conta de que isto não é um produto, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. 
-* It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
-* Read the OpenAPS documentation https://openaps.org to understand the loop algorithm AndroidAPS is based upon.
-* Read the [AAPS docs](../index.rst) to learn about and understand AndroidAPS.
+* Tenha em conta de que isto não é um produto, esp. no inicio o utilizador necessita de monitorizar e perceber o sistema, as suas limitações e como pode falhar. 
+* É altamente recomendável não utilizar este sistema quando a pessoa que o vai utilizar não o entende na totalidade.
+* Leia a documentação OpenAPS https://openaps.org para perceber o algoritmo do loop em que a AndroiAPS se baseia.
+* Leia os [docs da AAPS](../index.rst) para aprender sobre, e entender, a AndroidAPS.
 * A integração usa a mesma funcionalidade que o medidor que é fornecido com a Combo.
 * O medidor permite visualizar o ecrã da bomba e passar informação para a bomba. 
-* The connection to the pump and this forwarding is what the ruffy app does. 
-* A 'scripter' components reads the screen and automates entering boluses, TBRs etc and making sure inputs are processed correctly.
+* A conexão à bomba e esta passagem é o que a app ruffy faz. 
+* Os componentes de um 'scripter' leem o ecrã e automatiza a entrada de bólus, DBTs, etc e certificando-se de que os inputs são processados corretamente.
 * A AAPS interage com o scripter para aplicar comandos loop e administrar bólus.
-* This mode has some restrictions: it's comparatively slow (but well fast enough for what it is used for) and setting a TBR or giving a bolus causes the pump to vibrate.
-* The integration of the Combo with AndroidAPS is designed with the assumption that all inputs are made via AndroidAPS. Boluses entered on the pump directly will be detected by AAPS, but it can take up to 20 min before AndroidAPS becomes aware of such a bolus. 
-* Reading boluses delivered directly on the pump is a safety feature and not meant to be regularly used (the loop requires knowledge of carbs consumed, which can't be entered on the pump, which is another reason why **all inputs should be done in AndroidAPS**). 
+* Este modo tem algumas restrições: é comparativamente lento ( mas bem rápido para a sua finalidade), e programar uma DBT ou dar um bólus causa a vibração da bomba.
+* A integração da Combo com a AndroiAPS é concebida tendo em conta de que todas as entradas são feitas através da AndroidAPS. Bólus introduzidos directamente na bomba serão detectados pela AAPS, mas poderá levar até 20mn a detecção desse bólus pela AndroidAPS. 
+* A leitura dos bólus dados directamente na bomba é uma norma de segurança e não deve ser usado com regularidade ( o loop requer conhecimento dos hidratos de carbono consumidos, que não poderão ser introduzidos na bomba, o que é outra razão pela qual **todas as entradas devem ser feitas na AndroidAPS**. 
 * Não programe ou cancele uma DBT na bomba. O loop assume o controlo da DBT e não pode trabalhar em segurança de outra forma, dado que não é possível determinar a hora de inicio da DBT que foi programada pelo utilizador na bomba.
 * O perfil inicial da taxa basal da bomba é lido no inicio da aplicação e vai sendo actualizado pela AAPS.
-* The basal rate should not be manually changed on the pump, but will be detected and corrected as a safety measure (don't rely on safety measures by default, this is meant to detect an unintended change on the pump).
+* As basais não deverão ser manualmente alteradas na bomba, mas será detetada e corrigida como medida de segurança ( não confie em medidas de segurança por defeito, isto foi concebido para detectar alterações involuntárias na bomba).
 * É recomendado activar o bloqueio de teclas na bomba para evitar eventuais bólus não desejados, especialmente quando a bomba foi usada anteriormente e o 'bólus rápido' era habitual.
 * Além disso, com o bloqueio ativado, acidentalmente pressionar uma tecla não irá interromper a comunicação ativa entre a AAPS e a bomba.
 * Quando um alerta de BÓLUS/DBT CANCELADA surge na bomba durante o bólus ou a programação de uma DBT, isto é causado por uma desconexão entre a bomba e o telefone, o que acontece de tempos a tempos. A AAPS irá tentar reconectar e confirmar o alerta e em seguida repetir a última acção ( **bólus NÃO são repetidos**por razões de segurança). 
 * Portanto, esse alarme poderá ser ignorado já que a AAPS irá confirmar automaticamente, normalmente em 30 segundos ( cancelamento não é um problema, mas irá levar a que a acção actual da bomba tenha de esperar até que o ecrã se desligue antes de poder reconectar a bomba). 
 * Se o alarme da bomba continuar, a confirmação automática falhou e neste caso o utilizador necessita de confirmar o alarme manualmente.
 * Quando um alarme de reservatório vazio ou bateria fraca soa durante um bólus, ele é confirmado e mostrado como notificação na AAPS. 
-* If they occur while no connection is open to the pump, going to the Combo tab and hitting the Refresh button will take over those alerts by confirming them and show a notification in AAPS.
-* When AAPS fails to confirm a TBR CANCELLED alert, or one is raised for a different reason, hitting Refresh in the Combo tab establishes a connection, confirms the alert and shows a notification for it in AAPS. This can safely be done, since those alerts are benign - an appropriate TBR will be set again during the next loop iteration.
-* For all other alerts raised by the pump: connecting to the pump will show the alert message in the Combo tab, e.g. "State: E4: Occlusion" as well as showing a notification on the main screen.
+* Se ocorrerem enquanto não houver ligação aberta à bomba, ir ao separador Combo e carregar no botão ATUALIZAR irá fazer com que uma notificação seja apresentada na AAPS.
+* Quando a AAPS falhar na confirmação de um alerta de DBT cancelada, ou um alerta surgir por diferentes razões, premir ATUALIZAR no separador Combo irá estabelecer uma ligação, confirma o alerta e mostra uma notificação na AAPS. Isto pode ser feito com segurança, uma vez que esses alertas são benignos-uma DBT apropriada será configurada novamente durante a iteração do próximo loop.
+* Para todos os outros alertas gerados pela bomba: conectar à bomba mostrará a mensagem de alerta na aba Combo, por exemplo, "Estado: E4: Oclusão" bem como mostrando uma notificação na tela principal.
 * Um erro irá criar uma notificação urgente. 
-* AAPS never confirms serious errors on the pump, but let's the pump vibrate and ring to make sure the user is informed of a critical situation that needs action.
+* A AAPS nunca confirma erros graves na bomba, mas deixa a bomba vibrar e tocar para garantir que o utilizador seja informado de uma situação crítica que precisa de ação.
 * Após emparelhar, a ruffy não deve ser usada directamente (a AAPS irá iniciá-la em background), dado que usando a ruffy ao mesmo tempo que a AAPS não é suportado.
 * Se AAPS crackar (ou for parada pelo depurador) enquanto AAPS e a bomba estavam em comunicação (usando ruffy), poderá ser necessário forçar o fecho da ruffy. Reiniciando a AAPS irá recomeçar a ruffy.
 * Reiniciar o telefone é também uma maneira simples de resolver esta situação se não souber como fazer para forçar o fecho de uma app.
