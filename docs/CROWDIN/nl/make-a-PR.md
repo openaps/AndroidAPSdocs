@@ -4,7 +4,7 @@
 
 Voor hints hoe tekst te formatteren (kop, vet ...) en links instellen, zie de ["code syntax"](./make-a-PR#code-syntax) sectie van deze pagina.
 
-## General
+## Algemeen
 
 For any questions, feedback or new ideas you can contact the documentation team via [gitter](https://gitter.im/AndroidAPSwiki/Lobby). Doing a PR isn't difficult, but we can help you editing the documentation.
 
