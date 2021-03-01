@@ -238,7 +238,7 @@ Zie [Doelen](../Usage/Objectives.rst) pagina voor meer informatie.
 
 Op het tabblad Behandelingen kunt je de behandelingen zien die zijn geüpload naar Nightscout. Wilt u invoer bewerken of verwijderen (bijvoorbeeld bij minder gegeten koolhydraten dan verwacht) selecteer dan 'Verwijderen' en voer de nieuwe waarde in (wijzig indien nodig het tijdstip) via de [koolhydraten knop op het beginscherm](../Getting-Started/Screenshots#carb-correction).
 
-## Algemeen
+## General
 
 ### Overzicht
 
