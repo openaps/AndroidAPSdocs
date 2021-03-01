@@ -8,7 +8,7 @@
 * Een Smartpix of Realtyme apparaatje met bijbehorende 360 Configuratie software om de pomp te configureren. (Op verzoek stuurt Roche de Smartpix met software gratis op aan haar klanten.)
 * Een geschikte telefoon: een Android telefoon met als Operating System LineageOS 14.1 (of hoger) - ook wel bekend als CyanogenMod - of met Android 8.1 (Oreo). 
 * De LineageOS 14.1 dient een recente versie te zijn, van minimaal Juni 2017, aangezien toen de functionaliteit beschikbaar is gekomen, die nodig is om de Combo pomp te kunnen verbinden met de telefoon. 
-* A list of phones can be found in the [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) document.
+* Een lijst met telefoons vind je in dit document: [AAPS Telefoons](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
 * NB: deze lijst is niet compleet en bevat persoonlijke ervaringen. Je wordt gevraagd om jouw eigen ervaring hier ook aan toe te voegen en zodoende anderen te helpen (deze projecten draaien allemaal om #payitforward mentaliteit).
 * Hoewel Android 8.1 het mogelijk maakt om met de Combo te communiceren, kunnen er nog steeds problemen optreden met AAPS op Android 8.1.
 * Voor gevorderde gebruikers is het mogelijk om de koppeling op een 'geroote' telefoon uit te voeren en deze over te brengen naar een andere geroote telefoon om te gebruiken met ruffy/AAPS, die ook geroot moet zijn. Hiermee wordt het mogelijk om het geheel over te zetten naar telefoons met Android <8.1, maar dit is niet uitgebreid getest: https://github.com/gregorybel/combo-pairing/blob/master/README.md
