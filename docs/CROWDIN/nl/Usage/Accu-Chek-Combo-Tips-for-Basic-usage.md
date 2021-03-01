@@ -1,14 +1,14 @@
-# Accu-Chek Combo Tips for basic usage
+# AccuChek Combo Tips voor eenvoudig gebruik
 
-## How to ensure smooth operations
+## Hoe zorgen voor een soepele werking
 
-* Always **carry the smartphone with you**, leave it next to your bed at night.
-* Always make sure that the pump battery is as full as possible. See the battery section for tipps regarding the battery.
-* It is best to **not touch the app ruffy** while the system is running. If the app is started again, the connection to the pump can break off. Once the pump is connected to ruffy, there is no need to re-connect. Even after a restart of the phone, the connection is automatically re-established. If possible, move the app to an unused screen or in a folder on your smartphone so you do not accidentally open it.
-* If you unintentionally open the app ruffy during looping, it's best to restart the smartphone right away.
-* Whenever possible, only operate the pump via the AndroidAPS app. To facilitate this, activate the key lock on the pump under **PUMP SETTINGS / KEY LOCK / ON**. Only when changing the battery or the cartridge, it is necessary to use the pump's keys. ![Keylock](../images/combo/combo-tips-keylock.png)
+* Altijd **je smartphone bij je dragen**, laat hem s'nachts naast je bed liggen.
+* Zorg er voor dat de pompbatterij altijd zo vol als mogelijk is. Zie de batterij sectie voor tips met betrekking tot de batterij.
+* Het is het beste om **de app-ruffy** niet te gebruiken terwijl het systeem in gebruik is. Als de app opnieuw wordt gestart, kan de verbinding met de pomp worden verbroken. Zodra de pomp is aangesloten op ruffy, is er geen noodzaak om opnieuw te verbinden. Zelfs na een herstart van de telefoon wordt de verbinding automatisch opnieuw tot stand gebracht. Verplaats de app indien mogelijk naar een ongebruikt scherm of in een map van de smartphone zodat je deze niet per ongeluk opent.
+* Als je de app ruffy tijdens het loopen onbedoeld opent, dan is het het beste om de smartphone direct opnieuw te starten.
+* Waar mogelijk moet de pomp alleen via de AndroidAPS-app worden gebruikt worden Om dit te vergemakkelijken, activeer het sleutelvergrendeling op de pomp: **PUMP SETTINGS / KEY LOCK / ON**. Alleen bij het vervangen van de batterij of reservoir, is nodig om de pomp toetsen te gebruiken. ![Keylock](../images/combo/combo-tips-keylock.png)
 
-## Pump not reachable. What to do?
+## Pomp niet bereikbaar. What to do?
 
 ### Activate pump unreachable alarm
 
