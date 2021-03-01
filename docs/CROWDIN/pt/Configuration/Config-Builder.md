@@ -12,11 +12,11 @@ Onde existem configurações adicionais disponíveis dentro do módulo, pode cli
 
 ![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
 
-## Separador ou menu Hambúrguer
+## Aba ou menu Hambúrguer
 
-Com a caixa de seleção sob o símbolo de olho, você pode decidir como abrir a seção de programa correspondente.
+Com a caixa de seleção sob o símbolo de olho, pode decidir como abrir a seção de programa correspondente.
 
-![Separador ou menu Hambúrguer](../images/ConfBuild_TabOrHH.png)
+![Aba ou menu Hambúrguer](../images/ConfBuild_TabOrHH.png)
 
 ## Perfil
 
@@ -79,7 +79,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 
 ### NS Profile
 
-NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. trabalho, casa, desportos, férias, etc.). Logo após clicar em "Salvar" serão transferidos para a AAPS se o seu smartphone estiver online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. trabalho, casa, desportos, férias, etc.). Logo após clicar em "Salvar" serão transferidos para a AAPS se o seu smartphone estiver online. Mesmo sem uma ligação à Internet ou sem uma ligação Nightscout, os perfis de Nightscout estão disponíveis na AAPS uma vez sincronizados.
 
 Do a [profile switch](../Getting-Started/Screenshots.md#current-profile) to activate a profile from Nightscout. AAPS will write the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
