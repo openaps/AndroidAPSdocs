@@ -1,11 +1,11 @@
 Open Humans Uploader
 ****************************************
-Donate your data for science
+Doneer je gegevens aan de wetenschap
 ========================================
-You can help the community by donating your data to research projects! This helps scientists to pay it forward, develop new scientific ideas and broaden the open mind of open source closed loop systems.
+Je kunt de community helpen door je gegevens te doneren aan onderzoeksprojecten! Dit helpt onderzoekers om dit project vooruit te helpen, nieuwe wetenschappelijke ideeën te ontwikkelen en de open mind van open source closed loop systemen te verbreden.
 AndroidAPS is ready to synchronize your data with `Open Humans <https://www.openhumans.org>`_, a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data. 
 
-You retain full control about what happens to your data and what projects you want to support by giving them access to your data. Depending on the project you have joined, data is evaluated and used by them in different ways and extent.
+Je behoudt de volledige controle over wat er met je gegevens gebeurt en welke projecten je wilt ondersteunen door ze toegang tot je gegevens te geven. Welke gegevens worden gebruikt en op welke manier, is afhankelijk van de projecten waar je je op OpenHumans bij aansluit.
 
 The following data will be uploaded to your Open Humans account: 
 
