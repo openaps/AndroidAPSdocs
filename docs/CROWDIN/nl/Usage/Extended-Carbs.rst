@@ -26,7 +26,7 @@ Op de Behandelingen tab zie je koolhydraten staan, ze zijn donker oranje omdat z
 
 -----
 
-A way to handle fat and protein with that feature is described here: `https://adriansloop.blogspot.com/2018/04/page-margin-0.html <https://adriansloop.blogspot.com/2018/04/page-margin-0.html>`_
+Hoe je vertraagde koolhydraten gebruikt voor een maaltijd met vet en eiwit wordt hier beschreven: `https://adriansloop.blogspot.com/2018/04/page-margin-0.html <https://adriansloop.blogspot.com/2018/04/page-margin-0.html>`_
 
 -----
 
