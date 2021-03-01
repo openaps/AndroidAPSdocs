@@ -122,7 +122,7 @@
  <td><strong>DIA</strong></td>
  <td>duur van insuline activiteit (Duration of Insulin Action)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insuline soorten</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA (Engelstalig)</a></td>
 </tr>
 <tr>
  <td><strong>DST</strong></td>
@@ -134,7 +134,7 @@
  <td><strong>eCarbs</strong></td>
  <td>Vertraagde koolhydraten (extended Carbs) - koolhydraten die maar langzaam worden opgenomen (maaltijden met veel vet/eiwit).<br>Omdat de vertraagde bolus functie die je zou gebruiken bij reguliere pomptherapie weinig nut heeft bij het loopen, worden hier eCarbs gebruikt.</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki -vertraagde koolhydraten (eCarbs)</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs gebruiksvoorbeeld (Engelstalig)</a></td>
 </tr>
 <tr>
  <td><strong>FSL</strong></td>
