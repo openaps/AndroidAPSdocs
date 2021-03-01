@@ -68,9 +68,9 @@
     * Se não trabalhar após múltiplas tentativas, troque para o branch `emparelhamento`, emparelhe a bomba e regresse depois ao branch original.
     * Note que o processo de emparelhamento é delicado ( mas só tem de ser feito uma única vez) e poderão ser necessárias algumas tentativas; confirme rapidamente as instruções e ao iniciar de novo remova a bomba das configurações de bluetooth antes de recomeçar. 
     * Another option to try is to go to the Bluetooth menu after initiating the pairing process (this keeps the phone's Bluetooth discoverable as long as the menu is displayed) and switch back to ruffy after confirming the pairing on the pump, when the pump displays the authorization code.
-    * If you're unsuccessful in pairing the pump (say after 10 attempts), try waiting up to 10s before confirming the pairing on the pump (when the name of the phone is displayed on the pump). 
-    * If you have configured the menu timeout to be 5s above, you need to increase it again. Alguns utilizadores relataram que precisavam fazer isso. 
-    * Lastly, consider moving from one room to another in case of local radio interference. At least one user immediately overcame pairing problems by simply changing rooms.
+    * Se você não conseguir emparelhar a bomba (digamos após 10 tentativas), tente aguardar até 10s antes de confirmar o emparelhamento na bomba (quando o nome do telefone estiver exibido na bomba). 
+    * Se configurou o tempo limite do menu para 5s acima, você precisa aumentá-lo novamente. Alguns utilizadores relataram que precisavam fazer isso. 
+    * Por último, considere mudar para outra sala, para o caso de haver interferências de algum tipo de ondas. Há mais do que um utilizador que ultrapassou os problemas de emparelhamento simplesmente mudando de sala.
 
 * Quando a AAPS está a usar ruffy, a app Ruffy não pode ser usada. The easiest way is to just reboot the phone after the pairing process and let AAPS start ruffy in the background.
 
@@ -78,8 +78,8 @@
 * Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump.
 * Then activate the [Combo plugin](../Configuration/Config-Builder#pump). 
 * Press the *Refresh* button on the Combo tab to initialize the pump.
-* To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus.
-* The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
+* Para verificar a sua configuração, com a bomba **desligada**, use a AAPS para programar uma DBT de 500% por 15min e administre um bólus.
+* A bomba deve ter agora uma DBT activa e o bólus no histórico. AAPS deverá também mostrar a DBT activa e os bólus administrados.
 
 ## Why does pairing with the pump not work with the app "ruffy"?
 
@@ -89,20 +89,20 @@ Há várias razões possiveis. Tente os seguintes passos:
 
 ![Combo deverá estar próxima do telefone](../images/Combo_next_to_Phone.png)
 
-2. Turn off or remove any other bluetooth devices so they will not be able to establish a connection to the phone while pairing is in progress. Any parallel bluetooth communication or prompt to establish connections might disturb the pairing process.
+2. Desligue ou retire quaisquer equipamento bluetooth para que não possa causar conflitos enquanto o emparelhamento do telefone está em progresso. Qualquer comunicação paralela bluetooth ou conexões de emparelhamento rápido poderão interferir no processo de emparelhamento.
 3. Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until **NO DEVICE** is shown.
 4. Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device "**SpiritCombo**"
 5. Certifique se de que AAPS não está em background a correr o loop. Desactive Loop no AAPS.
 6. Inicie agora ruffy no telefone. Pode premir Reset! e remover a ligação antiga. Prima Connect!.
-7. In the Bluetooth menu of the pump, go to **ADD DEVICE / ADD CONNECTION**. Press *CONNECT!**
+7. No menu bluetooth da bomba, ir a **Adicionar dispositivo / Adicionar ligação**. Press *CONNECT!**
     
     * Step 6 and 7 have to be done in a short timing.
 
-8. Now the Pump should show up the BT Name of phone to select for pairing. Here it is important to wait at least 5s before you hit the select button on Pump. Caso contrário a bomba não irá enviar o pedido de emparelhamento ao telefone.
+8. Agora a bomba deve mostrar o nome de Bluetooth do telefone para selecionar para emparelhar. Here it is important to wait at least 5s before you hit the select button on Pump. Caso contrário a bomba não irá enviar o pedido de emparelhamento ao telefone.
 
-* If Combo Pump is set to 5s Screen timeout, you may test it with 40s (original setting). From experience the time between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out without successfully Pair. 
-* Later you should set it back to 5s, to meet AAPS Combo settings.
-* If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If possible, try another smartphone. Poderá encontrar uma lista de smartphones testados com sucesso em \[AAPS telefones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). 
+* Se o ecrã da bomba estiver configurado para estar ligado 5s, deverá testar com 40s ( configuração original). From experience the time between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out without successfully Pair. 
+* Mais tarde deverá voltar a definir para 5s, para ir ao encontro das configurações AAPS para a Combo.
+* If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not compatible with the pump. Certifique-se de estar a executar uma versão ** LineageOS ≥ 14,1 ** ou ** Android ≥ 8,1 (Oreo) **. If possible, try another smartphone. Poderá encontrar uma lista de smartphones testados com sucesso em \[AAPS telefones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). 
 
 9. De seguida a bomba deverá indicar um código de segurança de 10 dígitos. E Ruffy um écran para introduzir esse código. Introduza-o em Ruffy e deverá estar tudo pronto.
 10. Reinicie o telemóvel.
