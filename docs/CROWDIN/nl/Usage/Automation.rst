@@ -31,7 +31,7 @@ Waar vind je Automatisering
 --------------------------------------------------
 Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`__ in hamburger menu or as a tab.
 
-General
+Algemeen
 --------------------------------------------------
 Er zijn een aantal beperkingen:
 
