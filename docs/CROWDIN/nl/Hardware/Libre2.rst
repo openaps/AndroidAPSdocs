@@ -119,7 +119,7 @@ Step 4: Configure AndroidAPS (for looping only)
 * In AndroidAPS go to Config Builder > BG Source and check 'xDrip+' 
 * If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
 
-Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within SMB algorithm. The BG values of Libre 2 are not smooth enough to use it safely. See `Smoothing blood glucose data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ for more details.
+Tot nu toe kun je met Libre 2 als BG bron 'Activeer SMB altijd' en 'Activeer SMB na koolhydraten' in SMB algoritme niet aanzetten. De BG waarden van Libre 2 zijn niet betrouwbaar genoeg om die functies veilig te gebruiken (alle overige SMB functies zijn overigens wél gewoon te gebruiken). Zie `Filteren van glucosewaardes <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ voor meer details.
 
 Experiences and Troubleshooting
 ==================================================
