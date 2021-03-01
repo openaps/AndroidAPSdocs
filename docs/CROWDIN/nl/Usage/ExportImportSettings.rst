@@ -26,7 +26,7 @@ Onder andere de volgende gegevens uit jouw instellingen worden ge-exporteerd:
 
 Versleuteld instellingen-bestand
 ==================================================
-Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`__ .
+Het bestand met jouw instellingen wordt versleuteld opgeslagen. Het masterwachtwoord kun je instellen via `Instellingen <../Configuration/Voorkeuren.html#masterwachtwoord>`__ .
 
 
 Exporteer instellingen
