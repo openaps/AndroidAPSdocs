@@ -239,7 +239,7 @@ Bovenstaande voorspellingslijnen rekenen met verschillende (extreme) scenario's.
 * Tijdverschuiving: Wanneer ga je/heb je de koolhydraten gegeten (in minuten).
 * Tijdsuur: Te gebruiken voor ["vertraagde koolhydraten"](../Usage/Extended-Carbs.rst) (eCarbs)
 * Gebruik de knoppen om het aantal koolhydraten snel in te voeren. Typen in het veld kan ook.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
+* Notities zullen worden geüpload naar Nightscout - afhankelijk van je instellingen voor [NS client](../Configuration/Preferences#nsclient).
 
 #### Boluscalculator
 
@@ -290,7 +290,7 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 
 * Toont de berekende bolus. 
 * Wanneer je al meer insuline aan boord (IOB) hebt dan de berekende bolus, dan zal hier alleen de ontbrekende hoeveelheid koolhydraten te zien zijn.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
+* Notities zullen worden geüpload naar Nightscout - afhankelijk van je instellingen voor [NS client](../Configuration/Preferences#nsclient).
 
 ### Sectie L
 
@@ -322,11 +322,11 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 * Knop [profiel wissel](../Usage/Profiles#profiel-wissel) is een alternatief voor het indrukken van je [huidige profiel](../Getting-Started/Screenshots#huidig-profiel) op het Overzicht scherm.
 * Knop [tijdelijk streefdoel](../Usage/temptarget) is een alternatief voor het indrukken van je [huidige streefdoel](../Getting-Started/Screenshots#streefdoel) op het Overzicht scherm.
 * Knop voor het starten of annuleren van een tijdelijke basaalstand. NB: De knop verandert van "TIJD. BASAAL" naar "ANNULEER x%" wanneer een tijdelijke basaalstand is ingesteld.
-* Even though [extended boluses](../Usage/Extended-Carbs#extended boluses) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+* Hoewel [vertraagde bolussen](../Usage/Extended-Carbs#extended boluses) eigenlijk niet geschikt zijn om te gebruiken in een closed loop, hebben sommige mensen toch aangegeven dat ze de vertraagde bolus functie zouden willen gebruiken.
    
    * Deze optie is alleen beschikbaar voor Dana RS en Insight pompen. 
    * De closed loop zal automatisch worden onderbroken en er wordt overgeschakeld naar open loop modus nadat de vertraagde bolus functie is geactiveerd.
-   * Make sure to read the [details](../Usage/Extended-Carbs#extended boluses) before using this option.
+   * Zorg ervoor dat je de [details](../Usage/Extended-Carbs#extended boluses) leest voordat je deze optie gebruikt.
 
 ### Careportal - sectie N
 
@@ -382,9 +382,9 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 
 Meer uitleg over de verschillende soorten insuline, hun werkingsprofielen en waarom dit allemaal belangrijk is, staat in dit artikel: [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
 
-And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+En meer hierover staat in dit uitstekende blog: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+En nog meer in: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Pompstatus
 
