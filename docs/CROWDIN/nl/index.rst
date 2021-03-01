@@ -1,4 +1,4 @@
-Welkom bij de Android APS documentatie
+Welcome to the AndroidAPS documentation
 ==================================================
 
 AndroidAPS is een open source app voor mensen met insuline-afhankelijke diabetes. De app fungeert als een kunstmatig alvleesklier systeem (APS, Artificial Pancreas System) op Android smartphones. Belangrijkste componenten zijn verschillende OpenAPS software algoritmen die doen wat een levende alvleesklier doet: de bloedsuiker binnen gezonde grenzen houden. Het algoritme doet dit door het gebruik van geautomatiseerde insulinedosering (AID, Automated Insulin Dosing). Daarnaast is een door de app ondersteunde en FDA/CE goedgekeurde insulinepomp en een continue glucosesensor nodig. 
@@ -32,7 +32,7 @@ Hieronder volgt de inhoudsopgave.
    Wat is een closed loop systeem <./Getting-Started/ClosedLoop.rst>
    Wat is een closed loop systeem met AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    Pump choices <./Getting-Started/Pump-Choices.md>
-   Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 
 .. _what-do-i-need:
 
@@ -149,7 +149,7 @@ Hieronder volgt de inhoudsopgave.
 
    Leestips voordat je begint <./Where-To-Go-For-Help/Background-reading.md>
    Contact met anderen <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 
 .. toctree::
    :maxdepth: 1
@@ -169,7 +169,7 @@ Hieronder volgt de inhoudsopgave.
    De wiki verbeteren <./make-a-PR>
 
 
-.. opmerking:: 
+.. note:: 
 	**Disclaimer en waarschuwing**
 
 	* Alle informatie, gedachten, en de code die hier beschreven staan zijn alleen voor informatieve en educatieve doeleinden. Nightscout probeert zich op geen enkele wijze te houden aan gegevensbewaking van medische gegevens. Gebruik van Nightscout en AndroidAPS is op eigen risico, en gebruik de informatie of code niet om behandelbeslissingen te nemen.
