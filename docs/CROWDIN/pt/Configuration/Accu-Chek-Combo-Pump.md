@@ -59,14 +59,14 @@
 
 ![Captura de ecrã das configurações do cartucho de insulina](../images/combo/combo-insulin-settings.png)
 
-* Install AndroidAPS as described in the [AndroidAPS docs](../Installing-AndroidAPS/Building-APK.md).
-* Make sure to read the docs to understand how to setup AndroidAPS.
-* Select the **MDI plugin** in AndroidAPS, not the Combo plugin at this point to avoid the Combo plugin from interfering with ruffy during the pairing process.
-* Clone [ruffy](https://github.com/MilosKozak/ruffy) from github via git.
+* Instalar a AndroidAPS conforme descrito no [AndroidAPS docs](../Installing-AndroidAPS/Building-APK.md).
+* Certifique-se de ler toda a documentação para entender como configurar a AndroidAPS.
+* Selecione o plugin **MDI** na AndroidAPS, não o plugin Combo neste ponto para evitar que o plugin Combo interfira com a ruffy durante o processo de emparelhamento.
+* Clone a [ruffy](https://github.com/MilosKozak/ruffy) do github via git.
 * Instale a aplicação ruffy e use-a para emparelhar com a bomba.
     
     * Se não trabalhar após múltiplas tentativas, troque para o branch `emparelhamento`, emparelhe a bomba e regresse depois ao branch original.
-    * Note that the pairing processing is somewhat fragile (but only has to be done once) and may need a few attempts; quickly acknowledge prompts and when starting over, remove the pump device from the Bluetooth settings beforehand. 
+    * Note que o processo de emparelhamento é delicado ( mas só tem de ser feito uma única vez) e poderão ser necessárias algumas tentativas; confirme rapidamente as instruções e ao iniciar de novo remova a bomba das configurações de bluetooth antes de recomeçar. 
     * Another option to try is to go to the Bluetooth menu after initiating the pairing process (this keeps the phone's Bluetooth discoverable as long as the menu is displayed) and switch back to ruffy after confirming the pairing on the pump, when the pump displays the authorization code.
     * If you're unsuccessful in pairing the pump (say after 10 attempts), try waiting up to 10s before confirming the pairing on the pump (when the name of the phone is displayed on the pump). 
     * If you have configured the menu timeout to be 5s above, you need to increase it again. Alguns utilizadores relataram que precisavam fazer isso. 
