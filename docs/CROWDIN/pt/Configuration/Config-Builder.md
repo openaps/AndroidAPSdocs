@@ -36,7 +36,7 @@ Botões:
 * vermelho (X): excluir
 * seta azul (↷): duplicar
 
-Se você fizer qualquer alteração no seu perfil, certifique-se que está a editar o perfil correto. In profile tab there is not always shown the actual profile beeing used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+Se você fizer alguma alteração no seu perfil, certifique-se que está a editar o perfil correto. In profile tab there is not always shown the actual profile beeing used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
 #### Clone profile switch
 
@@ -44,23 +44,23 @@ You can easily create a new local profile from a profile switch. In this case ti
 
 1. Vá para aba "tratamentos".
 2. Select ProfileSwitch.
-3. Press "Clone".
+3. Pressione "Clone".
 4. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
 
 ![Clone profile switch](../images/LocalProfile_ClonePS.png)
 
 If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
 
-#### Upload local profiles to Nightscout
+#### Enviar perfis locais para o Nightscout
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
+Os perfis locais também podem ser carregados para o Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
 
-Advantage:
+Vantagens:
 
-* no internet connection necessary to change profile settings
-* profile changes can be made directly on the phone
+* nenhuma conexão de internet necessária para alterar configurações de perfil
+* mudanças de perfil podem ser feitas diretamente no telefone
 * new profile can be created from profile switch
 * local profiles can be uploaded to Nightscout
 
@@ -83,7 +83,7 @@ NS Profile uses the profiles you have saved on your Nightscout site (https://[yo
 
 Do a [profile switch](../Getting-Started/Screenshots.md#current-profile) to activate a profile from Nightscout. AAPS will write the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
-Advantage:
+Vantagens:
 
 * múltiplos perfis
 * fácil editar via PC ou tablet
