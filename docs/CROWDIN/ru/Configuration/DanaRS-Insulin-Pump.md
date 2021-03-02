@@ -14,7 +14,7 @@
 
 * Выберите Соединиться с новой помпой и нажмите на серийный номер вашей DanaRS.
     
-    ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
+    ![Сопряжение AAPS с Dana RS](../images/AAPS_DanaRSPairing.png)
 
 * Выберите пароль помпы и введите ваш пароль.
 
@@ -25,7 +25,7 @@
 
 * **Вы должны подтвердить сопряжение на помпе!** Так же как и при других подключениях Bluetooth (например, смартфона и автомобильной аудиосистемы).
     
-    ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+    ![Подтверждение сопряжения с Dana RS](../images/DanaRS_Pairing.png)
 
 * Выберите Скорость подачи болюса для изменения скорости по умолчанию (1 ед./12 сек., 1 ед./30 сек. или 1 ед./60 сек.).
 
@@ -38,37 +38,37 @@
 * Нажмите кнопку OK на помпе
 * В главном меню выберите "OPTION" (двигайтесь вправо, нажав кнопку со стрелкой несколько раз)
     
-    ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
+    ![Главное меню DanaRS](../images/DanaRSPW_01_MainMenu.png)
 
 * В меню опций выберите "USER OPTION"
     
-    ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
+    ![Меню настроек DanaRS](../images/DanaRSPW_02_OptionMenu.png)
 
 * При помощи кнопки со стрелкой переместитесь вниз до " 11. пароль "
     
-    ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
+    ![DanaRS 11. Пароль](../images/DanaRSPW_03_11PW.png)
 
 * Нажмите OK, чтобы ввести старый пароль.
 
 * Введите **старый пароль** (пароль по умолчанию см [выше](#default-password)) и нажмите OK
     
-    ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
+    ![Ввод старого пароля](../images/DanaRSPW_04_11PWenter.png)
 
 * Если указан неправильный пароль, то сообщение о сбое не выдается!
 
 * Установите **новый пароль** (меняйте цифры с помощью кнопки + & - кнопки/Перемещайтесь вправо кнопкой со стрелкой).
     
-    ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
+    ![Новый пароль DanaRS](../images/DanaRSPW_05_PWnew.png)
 
 * Подтвердите кнопкой ОК.
 
 * Сохраните, снова нажав кнопку ОК.
     
-    ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
+    ![DanaRS сохранить новый пароль](../images/DanaRSPW_06_PWnewSave.png)
 
 * Переместитесь вниз до "14. EXIT " и нажмите кнопку OK.
     
-    ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
+    ![Выход DanaRS](../images/DanaRSPW_07_Exit.png)
 
 ## Специфические ошибки Dana RS
 
