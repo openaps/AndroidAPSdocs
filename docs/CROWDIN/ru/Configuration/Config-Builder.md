@@ -301,22 +301,22 @@ AndroidAPS содержит обучающую программу с рядом 
 
 **Подать часть инсулина, предложенного мастером болюса**: При пользовании алгоритмом микроболюсов SMB многие не колют все 100% сразу, а дают, например, 75% и позволяют алгоритму SMB самостоятельно справляться с остальным. При такой настройке можно выбрать процентное значение по умолчанию, с которым должен работать мастер болюса. Если этот параметр составляет 75%, а требуемое конечное количество инсулина 10 ед., то мастер болюса предложит только 7,5 единиц.
 
-**Включить функции суперболюса в калькуляторе болюса** (Суперболюс отличается от *супер микро болюсов SMB *!): Применяйте с осторожностью и не включайте, пока не узнаете, в чем принцип его работы. В общем виде база следующих двух часов добавляется к болюсу и при этом активируется нулевой временный базал. **Другие функции алгоритма AAPS будут отключены - поэтому применяйте с осторожностью! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Включить функции суперболюса в калькуляторе болюса** (Суперболюс отличается от *супер микро болюсов SMB *!): Применяйте с осторожностью и не включайте, пока не узнаете, в чем принцип его работы. В общем виде база следующих двух часов добавляется к болюсу и при этом активируется нулевой временный базал. **Другие функции алгоритма AAPS будут отключены - поэтому применяйте с осторожностью! Если вы используете алгоритм супер микро болюса SMB, то время его работы будет определяться настройками ["Макс. ограничение SMB (минут)"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to); если вы не пользуетесь SMB, то алгоритм AAPS просто будет отключен на два часа.** Подробности о супер-болюсе можно найти [здесь](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Действия
 
-* Some buttons to quickly access common features.
-* See [AAPS screenshots](../Getting-Started/Screenshots#action-tab) for details.
+* Кнопки быстрого доступа к распространенным настройкам.
+* Подробнее см на [снимках экрана AAPS](../Getting-Started/Screenshots#action-tab).
 
 ### Автоматизация
 
-User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst).
+Пользовательские задачи автоматизации ('если-тогда-иначе'). [читайте здесь](../Usage/Automation.rst).
 
 ### СМС-коммуникатор
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
+Позволяет удалено управлять некоторыми функциями AndroidAPS при помощи SMS, см. [SMS команды](../Children/SMS-Commands.rst) для дополнительной информации по настройке.
 
-### Food
+### Еда
 
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
