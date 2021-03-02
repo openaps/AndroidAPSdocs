@@ -44,57 +44,57 @@
     
     ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
 
-* Use arrow button to scroll down to "11. password"
+* При помощи кнопки со стрелкой переместитесь вниз до " 11. пароль "
     
     ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
 
-* Press OK to enter old password.
+* Нажмите OK, чтобы ввести старый пароль.
 
-* Enter **old password** (Default password see [above](#default-password)) and press OK
+* Введите **старый пароль** (пароль по умолчанию см [выше](#default-password)) и нажмите OK
     
     ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
 
-* If wrong password is entered here there will be no message indicating failure!
+* Если указан неправильный пароль, то сообщение о сбое не выдается!
 
-* Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
+* Установите **новый пароль** (меняйте цифры с помощью кнопки + & - кнопки/Перемещайтесь вправо кнопкой со стрелкой).
     
     ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
 
-* Confirm with OK button.
+* Подтвердите кнопкой ОК.
 
-* Save by pressing OK button again.
+* Сохраните, снова нажав кнопку ОК.
     
     ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
 
-* Move down to "14. EXIT" and press OK button.
+* Переместитесь вниз до "14. EXIT " и нажмите кнопку OK.
     
     ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
 
-## Dana RS specific errors
+## Специфические ошибки Dana RS
 
-### Error during insulin delivery
+### Ошибка во время подачи инсулина
 
 В случае, если связь между AAPS и Dana RS теряется во время подачи болюса (например вы отошли от телефона когда дана RS подает инсулин) вы увидите сообщение и услышите сигнал.
 
 ![Оповещение - подача инсулина](../images/DanaRS_Error_bolus.png)
 
-* In most cases this is just a communication issue and the correct amount of insulin is delivered.
-* Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
-* Delete error entry in [treatments tab](../Getting-Started/Screenshots#carb-correction) if you wish.
-* Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
+* В большинстве случаев это просто проблема связи и нужное количество инсулина все равно подается.
+* Проверьте в истории помпы (либо на помпе, либо через вкладку Dana > история помпы> болюс), был ли подан правильный болюс.
+* Если хотите, удалите запись об ошибке на вкладке [терапия](../Getting-Started/Screenshots#carb-correction).
+* Реальный объем читается и записывается при следующем подключении. Чтобы принудительно выполнить действие, нажмите на иконку BT на вкладке Dana или просто подождите следующего подключения.
 
-## Special note when switching phone
+## Отдельное замечание при смене телефона
 
 При переходе на новый телефон необходимы следующие шаги:
 
-* [Export settings](../Usage/ExportImportSettings#export-settings) on your old phone
-* Transfer settings from old to new phone
-* **Manually pair** Dana RS with the new phone
+* Выполнить [Экспорт настроек](../Usage/ExportImportSettings#export-settings) на вашем старом телефоне
+* Перенести настройки со старого на новый телефон
+* **Вручную выполните сопряжение** Dana RS с новым телефоном
     
-    * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
-* Install AndroidAPS on the new phone.
-* [Import settings](../Usage/ExportImportSettings#import-settings) on your new phone
+    * Поскольку настройки подключения помпы также переносятся новый телефон, AAPS на новом телефоне уже будет "знать" помпу и не запустит сканирование bluetooth. Поэтому новый телефон и помпа должны сопрягатся вручную.
+* Установите AndroidAPS на новом телефоне.
+* [Импортируйте настройки](../Usage/ExportImportSettings#import-settings) на ваш новый телефон
 
-## Timezone traveling with Dana RS pump
+## Пересечение часовых поясов с помпой Dana RS
 
 Информацию о пересечении часовых поясов см. в разделе [Пересечение часовых поясов с помпами](../Usage/Timezone-traveling#danarv2-danars).
