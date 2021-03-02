@@ -53,7 +53,7 @@
 
 #### Загрузить локальные профили в Nightscout
 
-Локальные профили также могут быть загружены на Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
+Локальные профили также могут быть загружены на Nightscout. Настройки можно найти в [ персональных настройках NS клиента ](../Configuration/Preferences#nsclient).
 
 ![Загрузить локальный профиль в НС](../images/LocalProfile_UploadNS2.png)
 
@@ -95,7 +95,7 @@
 
 ## Инсулин
 
-![Insulin type](../images/ConfBuild_Insulin.png)
+![Тип инсулина](../images/ConfBuild_Insulin.png)
 
 * Выберите кривую, соответствующую типу вашего инсулина.
 * Варианты 'Быстро действующий Oref', Сверхбыстрый Oref' и 'Безпиковый Oref' имеют вид экспоненты. Подробная информация приведена в [документации по OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
@@ -152,7 +152,7 @@
 * [ Glimp ](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)-поддерживается только версия 4.15.57 и более поздние
 * Модифицированное приложение [Dexcom](https://github.com/dexcomapp/dexcomapp/) - выберите «Отправлять данные ГК на xDrip +», если хотите пользоваться оповещениями от xDrip +.
     
-    ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+    ![Источник ГК в конфигураторе](../images/ConfBuild_BGSource.png)
 
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
 
@@ -198,7 +198,7 @@
 
 * Переключение между Открытым циклом, Закрытым циклом и Приостановкой помпы на низкой ГК.
 
-![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
+![Конфигуратор - режим цикла](../images/ConfigBuilder_LoopLGS.png)
 
 ### Открытый цикл
 
@@ -256,7 +256,7 @@ AndroidAPS содержит обучающую программу с рядом 
 * Калькулятор
 * Инсулин
 * Углеводы
-* CGM (opens xDrip+)
+* CGM (открывает xDrip +)
 * Калибровка
 
 Кроме того можно задать сочетания клавиш для приращения инсулина и углеводов и определить, должны ли диалоговые окна содержать примечания.
@@ -267,7 +267,7 @@ AndroidAPS содержит обучающую программу с рядом 
 
 Примечание: Кнопка не будет видна вне диапазона времени, для нее созданного или если у вас есть достаточно активного инсулина IOB на углеводы, заданные кнопкой.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Кнопка мастера быстрой настройки](../images/ConfBuild_QuickWizard.png)
 
 #### Временные цели по умолчанию
 
@@ -328,7 +328,7 @@ AndroidAPS содержит обучающую программу с рядом 
 
 Если вы хотите подавать болюс и т. д. с часов, тогда в настройках часов Wear следует включить «Управление с часов».
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Настройки смарт-часов Wear](../images/ConfBuild_Wear.png)
 
 При помощи вкладки Wear или многослойного сэндвич-меню (в левой верхней части экрана, если вкладка не отображается) вы можете
 
