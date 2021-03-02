@@ -2,26 +2,26 @@
 
 *Эти инструкции подойдут для настройки приложения AAPS и помпы DanaRS, выпускаемой с 2017 года. Если у вас оригинальная помпа DanaR, перейдите на страницу [DanaR](./DanaR-Insulin-Pump).*
 
-**New Dana RS firmware v3 can be used from AndroidAPS version 2.7 onwards.**
+**Новая прошивка Dana RS v3 может быть использована начиная с AndroidAPS версии 2.7.**
 
-* In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
+* В помпе DanaRS приложением используется переменная "BASAL A". Существующие данные перезаписываются.
 
-## Pairing pump
+## Сопряжение с помпой
 
-* In AndroidAPS go to Config Builder and select 'DanaRS'
+* В AndroidAPS перейдите в Конфигуратор и выберите 'DanaRS'
 
 * Выберите меню, нажав на 3 точки в правом верхнем углу. Выберите Настройки.
 
-* Select DanaRS Pair New Pump, and click your DanaRS serial number.
+* Выберите Соединиться с новой помпой и нажмите на серийный номер вашей DanaRS.
     
     ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
 
-* Select Pump password and input your password.
+* Выберите пароль помпы и введите ваш пароль.
 
-### Default password
+### Пароль по умолчанию
 
-* For DanaRS with firmware v1 and v2 the default password is 1234.
-* For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). Open main menu on pump > review > information. Number 3 is production date.
+* Для DanaRS с прошивкой v1 и v2 пароль по умолчанию 1234.
+* Для DanaRS с прошивкой v3 пароль по умолчанию представляет собой комбинацию из месяца производства и даты производства (например, месяц 01 и день 24). Откройте главное меню на помпе > обзор > информация. Number 3 is production date.
 
 * **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
     
