@@ -299,7 +299,7 @@ AndroidAPS содержит обучающую программу с рядом 
 
 #### Расширенные настройки
 
-**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
+**Подать часть инсулина, предложенного мастером болюса**: При пользовании алгоритмом микроболюсов SMB многие не колют все 100% сразу, а дают, например, 75% и позволяют алгоритму SMB самостоятельно справляться с остальным. При такой настройке можно выбрать процентное значение по умолчанию, с которым должен работать мастер болюса. Если этот параметр составляет 75%, а требуемое конечное количество инсулина 10 ед., то мастер болюса предложит только 7,5 единиц.
 
 **Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
