@@ -21,26 +21,26 @@
 ### Пароль по умолчанию
 
 * Для DanaRS с прошивкой v1 и v2 пароль по умолчанию 1234.
-* Для DanaRS с прошивкой v3 пароль по умолчанию представляет собой комбинацию из месяца производства и даты производства (например, месяц 01 и день 24). Откройте главное меню на помпе > обзор > информация. Number 3 is production date.
+* Для DanaRS с прошивкой v3 пароль по умолчанию представляет собой комбинацию из месяца производства и даты производства (например, месяц 01 и день 24). Откройте главное меню на помпе > обзор > информация. Номер 3-дата производства.
 
-* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+* **Вы должны подтвердить сопряжение на помпе!** Так же как и при других подключениях Bluetooth (например, смартфона и автомобильной аудиосистемы).
     
     ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Выберите Скорость подачи болюса для изменения скорости по умолчанию (1 ед./12 сек., 1 ед./30 сек. или 1 ед./60 сек.).
 
-* Restart your phone.
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
+* Перезагрузите телефон.
+* Установите шаг базала на помпе в 0.01 ед./ч с помощью меню Doctors (см. руководство пользователя помпы)
 * Активируйте удлиненные болюсы на помпе
 
-## Change password on pump
+## Смена пароля на помпе
 
-* Press OK button on pump
-* In main menu select "OPTION" (move right by pressing arrow button several times)
+* Нажмите кнопку OK на помпе
+* В главном меню выберите "OPTION" (двигайтесь вправо, нажав кнопку со стрелкой несколько раз)
     
     ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
 
-* In options menu select "USER OPTION"
+* В меню опций выберите "USER OPTION"
     
     ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
 
