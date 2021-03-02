@@ -1,4 +1,4 @@
-Profile helper
+Assistente de Perfil
 ****************************************
 
 Profile helper offers two functions:
