@@ -5,7 +5,7 @@
 ## Cerințe hardware
 
 * O pompă de insulină Accu-Chek Combo (orice versiune de firmware, funcționează toate)
-* A Smartpix or Realtyme device together with the 360 Configuration Software to configure the pump. (Roche sends out Smartpix devices and the configuration software free of charge to their customers upon request.)
+* Un dispozitiv Smartpix sau Realtyme împreună cu Softul de Configurare 360 pentru a configura pompa. (Roche sends out Smartpix devices and the configuration software free of charge to their customers upon request.)
 * Un telefon compatibil: un telefon Android pe care să poată fi instalat sistemul de operare LineageOS 14.1 (fostul CyanogenMod) sau Android 8.1 (Oreo). 
 * Versiunea de LineageOS 14.1 trebuie să fie una relativ recentă, cel puțin mai nouă de Iunie 2017, deoarece schimbarea necesară pentru conectarea cu pompa Combo a fost introdusă începând de atunci. 
 * O listă de telefoane compatibile poate fi găsită în documentul [telefoane AAPS](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
@@ -128,7 +128,7 @@ Există câteva cauze posiblie. Încercați următorii pași:
 * Se recomandă să activați blocarea tastelor pompei, pentru a preveni bolusarea directă, mai ales when the pump was used before and using the "quick bolus" feature was a habit.
 * Also, with keylock enabled, accidentally pressing a key will NOT interrupt active communication between AAPS and pump.
 * When a BOLUS/TBR CANCELLED alert starts on the pump during bolusing or setting a TBR, this is caused by a disconnect between pump and phone, which happens from time to time. AAPS will try to reconnect and confirm the alert and then retry the last action (**boluses are NOT retried** for safety reasons). 
-* Therefore, such an alarm can be ignored as AAPS will confirm it automatically, usually within 30s (cancelling it is not problem, but will lead to the currently active action to have to wait till the pump's display turns off before it can reconnect to the pump). 
+* Prin urmare, o astfel de alarmă poate fi ignorată deoarece AAPS o va confirma automat, de obicei în termen de 30s (anularea acesteia nu este o problemă, dar va conduce către acţiunea activă curentă și va trebui să aşteptați până când ecranul pompei se va opri înainte de a se putea reconecta la pompă). 
 * If the pump's alarm continues, automatic confirmation failed, in which case the user needs to confirm the alarm manually.
 * When a low cartridge or low battery alarm is raised during a bolus, they are confirmed and shown as a notification in AAPS. 
 * If they occur while no connection is open to the pump, going to the Combo tab and hitting the Refresh button will take over those alerts by confirming them and show a notification in AAPS.
