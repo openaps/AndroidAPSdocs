@@ -62,13 +62,13 @@ Vantagens:
 * nenhuma conexão de internet necessária para alterar configurações de perfil
 * mudanças de perfil podem ser feitas diretamente no telefone
 * new profile can be created from profile switch
-* local profiles can be uploaded to Nightscout
+* perfis locais podem ser enviados para o Nightscout
 
-Disadvantage:
+Desvantagens:
 
 * none
 
-### Profile helper
+### Assistente de Perfil
 
 Profile helper offers two functions:
 
@@ -77,9 +77,9 @@ Profile helper offers two functions:
 
 Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
 
-### NS Profile
+### Perfil NS
 
-NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. trabalho, casa, desportos, férias, etc.). Logo após clicar em "Salvar" serão transferidos para a AAPS se o seu smartphone estiver online. Mesmo sem uma ligação à Internet ou sem uma ligação Nightscout, os perfis de Nightscout estão disponíveis na AAPS uma vez sincronizados.
+Perfil NS usa os perfis que guardou na sua página NightScout (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. trabalho, casa, desporto, férias, etc.). Logo após clicar em "Salvar" serão transferidos para a AAPS se o seu smartphone estiver online. Mesmo sem uma ligação à Internet ou sem uma ligação Nightscout, os perfis de Nightscout estão disponíveis na AAPS uma vez sincronizados.
 
 Do a [profile switch](../Getting-Started/Screenshots.md#current-profile) to activate a profile from Nightscout. AAPS will write the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
@@ -88,7 +88,7 @@ Vantagens:
 * múltiplos perfis
 * fácil editar via PC ou tablet
 
-Disadvantage:
+Desvantagens:
 
 * nenhuma alteração local para configurações de perfil
 * o perfil não pode ser alterado diretamente no telefone
