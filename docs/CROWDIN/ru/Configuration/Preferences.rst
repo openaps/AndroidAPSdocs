@@ -5,10 +5,10 @@
   .. образ:: ../images/Pref2020_Open2.png
     :alt:Открыть настройки
 
-* Можно сразу перейти к настройкам на определенной вкладке (напр. pump tab) by opening this tab and click Plugin preferences.
+* Можно сразу перейти к настройкам на определенной вкладке (напр. на вкладку помпы), открыв вкладку и выбрав настройки расширений.
 
-  .. image:: ../images/Pref2020_OpenPlugin2.png
-    :alt: Open plugin preferences
+  .. image:: ../images/Pref20_OpenPlugin2.png
+    :alt: Открыть параметры расширений
 
 * **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
 
