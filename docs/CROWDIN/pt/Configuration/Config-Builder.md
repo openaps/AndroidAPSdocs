@@ -36,24 +36,24 @@ Botões:
 * vermelho (X): excluir
 * seta azul (↷): duplicar
 
-Se você fizer alguma alteração no seu perfil, certifique-se que está a editar o perfil correto. In profile tab there is not always shown the actual profile beeing used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+Se você fizer alguma alteração no seu perfil, certifique-se que está a editar o perfil correto. Na aba perfil nem sempre há a visualização do perfil a ser utilizado atualmente-por exemplo, se fez uma troca de perfil usando a guia do perfil no ecrã inicial, este pode ser diferente do perfil realmente mostrado na guia de perfil, já que não há conexão entre estes.
 
-#### Clone profile switch
+#### Fazer Mudança De Perfil
 
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+Pode facilmente criar um novo perfil local a partir da mudança de perfil. Neste caso o deslocamento temporal e percentagem serão aplicados ao novo perfil local.
 
 1. Vá para aba "tratamentos".
-2. Select ProfileSwitch.
+2. Selecione Troca de Perfil.
 3. Pressione "Clone".
 4. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
 
-![Clone profile switch](../images/LocalProfile_ClonePS.png)
+![Fazer Mudança De Perfil](../images/LocalProfile_ClonePS.png)
 
-If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
+Se deseja mudar de perfil do Nightscout para o perfil local basta fazer uma troca de perfil no seu perfil NS e clone a troca de perfil conforme descrito acima.
 
 #### Enviar perfis locais para o Nightscout
 
-Os perfis locais também podem ser carregados para o Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
+Os perfis locais também podem ser carregados para o Nightscout. As configurações podem ser encontradas em [preferências do NSClient](../Configuration/Preferences#nsclient).
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
 
@@ -61,21 +61,21 @@ Vantagens:
 
 * nenhuma conexão de internet necessária para alterar configurações de perfil
 * mudanças de perfil podem ser feitas diretamente no telefone
-* new profile can be created from profile switch
+* novo perfil pode ser criado a partir da Troca de Perfil
 * perfis locais podem ser enviados para o Nightscout
 
 Desvantagens:
 
-* none
+* nenhuma
 
 ### Assistente de Perfil
 
-Profile helper offers two functions:
+Assistentes de perfis oferecem duas funções:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. Encontre um perfil para crianças
+2. Compare dois perfis ou trocas de perfis de modo a clonar um novo perfil
 
-Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
+Mais detalhes são explicados na [página Assistente de Perfil ](../Configuration/profilehelper.rst).
 
 ### Perfil NS
 
