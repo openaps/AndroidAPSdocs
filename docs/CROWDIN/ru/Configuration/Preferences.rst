@@ -1,11 +1,11 @@
 Настройки
 ***********************************************************
-* **Open preferences** by clicking three-dot-menu on top right side of home screen.
+* **Откройте настройки**, нажав три точки меню в верхней правой части главного экрана.
 
-  .. image:: ../images/Pref2020_Open2.png
-    :alt: Open preferences
+  .. образ:: ../images/Pref2020_Open2.png
+    :alt:Открыть настройки
 
-* You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and click Plugin preferences.
+* Можно сразу перейти к настройкам на определенной вкладке (напр. pump tab) by opening this tab and click Plugin preferences.
 
   .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Open plugin preferences
