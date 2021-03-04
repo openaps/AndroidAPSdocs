@@ -45,7 +45,7 @@ Pode facilmente criar um novo perfil local a partir da mudança de perfil. Neste
 1. Vá para aba "tratamentos".
 2. Selecione Troca de Perfil.
 3. Pressione "Clone".
-4. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
+4. Pode editar o novo perfil local na guia Perfil Local (PF) ou no menu do lado esquerdo
 
 ![Fazer Mudança De Perfil](../images/LocalProfile_ClonePS.png)
 
@@ -79,9 +79,9 @@ Mais detalhes são explicados na [página Assistente de Perfil ](../Configuratio
 
 ### Perfil NS
 
-Perfil NS usa os perfis que guardou na sua página NightScout (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. trabalho, casa, desporto, férias, etc.). Logo após clicar em "Salvar" serão transferidos para a AAPS se o seu smartphone estiver online. Mesmo sem uma ligação à Internet ou sem uma ligação Nightscout, os perfis de Nightscout estão disponíveis na AAPS uma vez sincronizados.
+Perfil NS usa os perfis que guardou na sua página NightScout (https://[yournightscoutsiteaddress]/profile). Pode usar a [Troca de Perfil](../Usage/Profiles.md) para mudar o perfil que está ativo, esta grava o perfil para a bomba em caso de falha da AndroidAPS. Isto permite facilmente criar vários perfis no Nightscout (por exemplo, trabalho, casa, desporto, férias, etc.). Logo após clicar em "Salvar" serão transferidos para a AAPS se o seu smartphone estiver online. Mesmo sem uma ligação à Internet ou sem uma ligação Nightscout, os perfis de Nightscout estão disponíveis na AAPS uma vez sincronizados.
 
-Do a [profile switch](../Getting-Started/Screenshots.md#current-profile) to activate a profile from Nightscout. AAPS will write the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+Faça uma [Troca de perfil](../Getting-Started/Screenshots.md#current-profile) para ativar um perfil do Nightscout. A AAPS também escreve o perfil selecionado para a bomba após a mudança de perfil, para que ele esteja disponível sem a AAPS numa emergência e continue a ser executado.
 
 Vantagens:
 
