@@ -35,12 +35,12 @@
 
 * Новый вариант использования языка телефона по умолчанию (рекомендуется). 
 * Если вы предпочитаете AAPS на другом языке, чем стандартный язык телефона, то можете выбрать из предлагаемых вариантов.
-* Если вы используете разные языки, то иногда можете видеть языковую смесь. This is due to an android issue that overriding default android language sometimes doesn't work.
+* Если вы используете разные языки, то иногда можете видеть языковую смесь. Это вызвано проблемой Андроид т. к. переопределение языка Андроид по умолчанию иногда не работает.
 
-  .. image:: ../images/Pref2020_General.png
-    :alt: Preferences > General
+  .. изображение:: ../images/Pref2020_General.png
+    :alt:Настройки > общие
 
-**Patient name**
+**Имя пациента**
 
 * Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
 
