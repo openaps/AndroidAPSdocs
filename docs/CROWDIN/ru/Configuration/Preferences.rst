@@ -10,10 +10,10 @@
   .. image:: ../images/Pref20_OpenPlugin2.png
     :alt: Открыть параметры расширений
 
-* **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+* ** Подменю** можно открыть, щелкнув на треугольнике под заголовком подменю.
 
-  .. image:: ../images/Pref2020_Submenu2.png
-    :alt: Open submenu
+  .. image:: ../images/Pref20_OpenPlugin2.png
+    :alt: Открыть подменю
 
 * With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
 
