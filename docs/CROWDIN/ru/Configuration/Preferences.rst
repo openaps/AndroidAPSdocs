@@ -15,27 +15,27 @@
   .. image:: ../images/Pref20_OpenPlugin2.png
     :alt: Открыть подменю
 
-* With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+* С ** фильтра** в верхней части экрана параметров вы можете быстро получить доступ к некоторым настройкам. Просто начните вводить часть текста, который вы ищете.
 
-  .. image:: ../images/Pref2021_Filter.png
-    :alt: Preferences filter
+  .. изображение:: ../images/Pref2021_Filter.png
+    :alt:Фильтр настроек
 
-.. contents:: 
-   :backlinks: entry
+.. содержание:: 
+   :backlinks: запись
    :depth: 2
 
 Общие настройки
 ===========================================================
 
-**Units**
+**Единицы**
 
-* Set units to mmol/l or mg/dl depending on your preferences.
+* В зависимости от предпочтений установите единицы mmol/l или mg/dl.
 
-**Language**
+**Язык**
 
-* New option to use phone's default language (recommended). 
-* In case you want AAPS in different language than standard phone language you can choose from a broad variety.
-* If you use different languages you might sometimes see a language mix. This is due to an android issue that overriding default android language sometimes doesn't work.
+* Новый вариант использования языка телефона по умолчанию (рекомендуется). 
+* Если вы предпочитаете AAPS на другом языке, чем стандартный язык телефона, то можете выбрать из предлагаемых вариантов.
+* Если вы используете разные языки, то иногда можете видеть языковую смесь. This is due to an android issue that overriding default android language sometimes doesn't work.
 
   .. image:: ../images/Pref2020_General.png
     :alt: Preferences > General
