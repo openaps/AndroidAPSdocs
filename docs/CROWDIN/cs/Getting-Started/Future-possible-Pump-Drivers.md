@@ -131,4 +131,4 @@ Před časem měli firmware zvaný T:AP (zmiňovaný v tomto [článku](https://
 
 ### Podpora ostatních pump
 
-Jestliže máte jinou pumpu a chtěli byste k ní znát stav podpory, kontaktujte mě, prosím (@andyrozman na gitteru). Řada pump (a jejich konfigurací) bude v budoucím vydání přidána jako s Open smyčkou (budete moci vybrat typ virtuální pumpy v konfiguraci a vaše nastavení bude načteno - [Požadavek #157](https://github.com/nightscout/AndroidAPS/issues/157)).
+If you have any other pumps you would like to see status on, please contact us on discord.
