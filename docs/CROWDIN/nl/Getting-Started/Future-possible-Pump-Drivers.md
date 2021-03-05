@@ -131,4 +131,4 @@ Voorheen gebruikten ze firmware die T:AP heette (genoemd in dit [artikel](https:
 
 ### Ondersteuning overige pompen
 
-Als je andere pompen hebt waarvan je wilt weten wat de status is, neem dan contact met mij op (@andyrozman op gitter). In toekomstige releases zullen een heleboel pomp configuraties worden toegevoegd aan de opties voor open loop (Je kunt die pompen dan kiezen in AAPS als Virtuele pomp en jouw instellingen worden geladen, zie [Feature request #157](https://github.com/nightscout/AndroidAPS/issues/157)).
+If you have any other pumps you would like to see status on, please contact us on discord.
