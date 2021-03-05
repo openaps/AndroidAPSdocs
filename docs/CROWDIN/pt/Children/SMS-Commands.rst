@@ -47,7 +47,7 @@ Additionally mandatory PIN at token end
   * not same digits (i.e. 1111)
   * not in a row (i.e. 1234)
 
-Authenticator setup
+Configuração do Autenticador
 -------------------------------------------------
 * Two-factor authentication is used to improve safety.
 * You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
