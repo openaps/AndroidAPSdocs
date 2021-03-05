@@ -90,11 +90,11 @@
 * "Предварительное погружение" (установка сенсора намного раньше его старта в приложении) G6 с заводской калибровкой приведет к отклонениям в данных. Если вы все же делаете "предварительное погружение", то для получения лучших результатов вам, вероятно, придется калибровать сенсор.
 * Если вы не планируете отслеживать все возможные изменения, то лучше вернуться к традиционному режиму калибровки и использовать систему, как G5.
 
-To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+Подробнее о деталях и причинах этих рекомендаций читайте [полную статью](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) опубликованную в Tim Street на [www.diabettech.com](https://www.diabettech.com).
 
 ### Первое подключение трансмиттера G6
 
-**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
+**Для второго и следующего трансмиттера смотрите [Продление срока работы трансмиттера](#extend-transmitter-life) ниже.**
 
 Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81) пользуйтесь версией [ master ](https://jamorham.github.io/#xdrip-plus).
 
@@ -106,24 +106,24 @@ To learn more about the details and reasons for these recommendations read the [
    * Мастер позволит провести начальную настройку.
    * Вам понадобится серийный номер трансмиттера, если вы пользуетесь им впервые.
 
-* Введите серийный номер нового трансмиттера (на упаковке трансмиттера или на его обратной стороне). Be careful not to confuse `0` (zero) and `O` (capital letter o).
+* Введите серийный номер нового трансмиттера (на упаковке трансмиттера или на его обратной стороне). Будьте осторожны, не путайте `0` (ноль) и `O` (прописную букву o).
    
    ![серийный № трансмиттера Dexcom](../images/xDrip_Dexcom_TransmitterSN.png)
 
 * Вставьте новый сенсор (только при замене)
 
 * Поместите трансмиттер в платформу сенсора
-* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter's serial no., accept it (tap "pair")
-* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+* Если появляется сообщение с просьбой о сопряжении с "DexcomXX", где "XX" - это последние два символа серийного номера передатчика. примите его (нажмите "pair")
+* Не запускайте новый сенсор прежде чем на классической странице состояния не появится следующая информация Страница-> Состояние G5/G6-> PhoneServiceState:
    
    * С трансмиттерами, серийный номер которых начинается с 80 или 81: "Got data hh:mm" (напр. "Got data 19:04 ")
-   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got no raw 19:04")
+   * С трансмиттерами, серийный номер которых начинается с 8G или 8H: "Got glucose hh:mm" (напр. "Got glucose 19:04 ") или "Got no raw hh:mm" (i.e. "Got no raw 19:04")
    
    ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Start sensor (only if replacing)
+* Нажмите старт сенсора (только при смене сенсора)
    
-   -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
+   -> В нижней части экрана через несколько минут появится предупреждение о прогреве сенсора `Осталось x,x часов`.
 
 -> Если серийный номер трансмиттера не начинается с 8G, 8H или 8J и в течение нескольких минут не появляется никаких указаний о времени прогрева сенсора, остановите и перезапустите сенсор.
 
@@ -153,7 +153,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 * Пока что не найдено способа продлить жизнь трансмиттеров, чей серийный номер начинается с 8G, 8H или 8J. То же относится и к трансмиттерам с серийным номером начинающимся с 81 и прошивкой 1.6.5. ** 27 ** (см. xDrip + - Состояние системы-G5/G6, как показано на [ снимке экрана выше ](../Configuration/xdrip#transmitter-battery-status)).
 * Для предотвращения трудностей при запуске сенсоров настоятельно рекомендуется продлить срок действия трансмиттера до 100-го дня первого использования.
-* -> Если серийный номер трансмиттера starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if [engineering mode](../Usage/Enabling-Engineering-Mode-in-xDrip) is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
+* -> Если серийный номер трансмиттера начинается с 81 с прошивкой 1.6.5. ** 27 ** переход за день 100 возможен только в том случае, если включен [инженерный режим'](../Usage/Enabling-Engineering-Mode-in-xDrip)и деактивирован 'нативный режим' (сэндвич-меню -> параметры-> Параметры отладки G5/G6-> нативный алгоритм), так как жесткий сброс трансмиттера невозможен.
 * При продлении срока действия трансмиттера работа сенсора будет остановлена. Поэтому проводить эту манипуляцию следует перед заменой сенсора или быть готовыми к тому, что состоится двухчасовая фаза его прогрева.
 * Остановите сенсор вручную через сэндвич-меню.
 * Переключитесь в `инженерный режим`: 
@@ -338,12 +338,12 @@ To learn more about the details and reasons for these recommendations read the [
    
    ![xDrip+ настройки Libre Bluetooth 2](../images/xDrip_Libre_BTSettings2.png)
 
-### Libre smart reader battery level
+### Уровень батареи Libre smart reader
 
-* Battery level of smart readers such as MiaoMiao 2 can be displayed in AAPS.
-* Details can be found on [screenshots page](../Getting-Started/Screenshots#sensor-level-battery).
+* Уровень батареи таких устройств как MiaoMiao 2 может быть показан в AAPS.
+* Подробности можно найти на странице [снимков экрана](../Getting-Started/Screenshots#sensor-level-battery).
 
-### Connect Libre Transmitter & start sensor
+### Подключите трансмиттер Libre и запустите сенсор
 
 ![xDrip+ запуск трансмиттера Libre & Сенсор 1](../images/xDrip_Libre_Transmitter01.png)
 
