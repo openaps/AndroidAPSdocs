@@ -8,13 +8,13 @@ _To fully test a new rig developers need to have a spare phone and a spare pump 
 
 ## I can write code! How do I participate?  
 
-Yay! Look at the issues, ask in the gitter channel, there is always a lot to do! 
+Yay! Look at the issues, ask in the discord channel, there is always a lot to do! 
 Pick a small task at first and do your first pull request! :)
 
 ## I know the system and can write documentation!
 
 Great, this is a highly appreciated thing and a good way to pay it foreward!
-* The old gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). 
+* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
 * A guide how to do commits on English wiki can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from english and can't be edited for consistency reasons.
 
 ## I do speak multiple languages and whant to translate the app or the documentation
@@ -26,4 +26,4 @@ Just sign up to CROWDIN, click your language, wait for admin authorization and g
 
 ## Are there other ways to help?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
