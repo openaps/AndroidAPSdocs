@@ -4,7 +4,7 @@
 
 Внутри себя AAPS создает моментальную копию профиля с начальной датой и длительностью и использует ее в выбранный период. Нулевая длительность означает постоянную работу. Такой профиль действителен до нового "переключения профиля".
 
-To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below).
+Чтобы выполнить переключение профиля, нажмите и удерживайте имя вашего профиля ("Tuned 03/11" на рисунке ниже).
 
 ![Переключить профиль](../images/ProfileSwitch_HowTo.png)
 
@@ -80,4 +80,4 @@ To do a profile switch long-press on the name of your profile ("Tuned 03/11" in 
 ### Слишком короткое время действия инсулина "DIA 3hr"
 
 * Сообщение об ошибке появится, если длительность действия инсулина в вашем профиле указана со значением, которое AndroidAPS не признает точным. 
-* Read about [selecting the right DIA](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles) to continue.
+* Прочитайте о [ выборе правильного времени действия инсулина DIA ](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) и отредактируйте его в своем профиле, затем выполните [ Profile Switch ](../Usage/Profiles), чтобы продолжить.
