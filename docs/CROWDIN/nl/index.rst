@@ -18,22 +18,28 @@ Hieronder volgt de inhoudsopgave.
    :maxdepth: 1
    :glob:
    :caption: Change language
-   Change language <changelanguage.rst>
-   
+
+   Change language <./changelanguage.rst>
+
+.. _getting-started:
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Getting started
+   :caption: Aan de slag
 
    Allereerst de veiligheid <./Getting-Started/Safety-first.rst>
    Wat is een closed loop systeem <./Getting-Started/ClosedLoop.rst>
    Wat is een closed loop systeem met AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
+   Insulinepompen <./Getting-Started/Pump-Choices.md>
+   Documentatie wijzigingen <./Getting-Started/WikiUpdate.rst>
+
+.. _what-do-i-need:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: What do I need? 
+   :caption: Wat heb ik nodig? 
 
    Onderdelen <./Module/module.rst>
    Gebruiksvoorbeeld <./Getting-Started/Sample-Setup.md>
@@ -51,6 +57,8 @@ Hieronder volgt de inhoudsopgave.
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch (voor ontwikkelaars) <./Installing-AndroidAPS/Dev-branch.md>
 
+.. _component-setup:
+
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -62,6 +70,8 @@ Hieronder volgt de inhoudsopgave.
    Telefoons <./Hardware/Phoneconfig.rst>
    Nightscout instellen <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch <./Hardware/Smartwatch.rst>
+
+.. _configuration:
 
 .. toctree::
    :maxdepth: 1
@@ -99,6 +109,7 @@ Hieronder volgt de inhoudsopgave.
    Toegang tot logbestanden <./Usage/Accessing-logfiles.md>
    AccuChek Combo - tips <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Instellingen exporteren/importeren <./Usage/ExportImportSettings.rst>
+   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
@@ -115,6 +126,7 @@ Hieronder volgt de inhoudsopgave.
    :caption: Troubleshooting
 
    Problemen oplossen <./Usage/troubleshooting.rst>
+   Nightscout client <./Usage/Troubleshooting-NSClient.md>
 
 .. toctree::
    :maxdepth: 1
@@ -137,7 +149,7 @@ Hieronder volgt de inhoudsopgave.
 
    Leestips voordat je begint <./Where-To-Go-For-Help/Background-reading.md>
    Contact met anderen <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
+   Documentatie wijzigingen <./Getting-Started/WikiUpdate.rst>
 
 .. toctree::
    :maxdepth: 1
@@ -157,7 +169,7 @@ Hieronder volgt de inhoudsopgave.
    De wiki verbeteren <./make-a-PR>
 
 
-.. opmerking:: 
+.. note:: 
 	**Disclaimer en waarschuwing**
 
 	* Alle informatie, gedachten, en de code die hier beschreven staan zijn alleen voor informatieve en educatieve doeleinden. Nightscout probeert zich op geen enkele wijze te houden aan gegevensbewaking van medische gegevens. Gebruik van Nightscout en AndroidAPS is op eigen risico, en gebruik de informatie of code niet om behandelbeslissingen te nemen.
@@ -166,4 +178,4 @@ Hieronder volgt de inhoudsopgave.
 
 	* Alle product-en bedrijfsnamen, handelsmerken, servicemerken, geregistreerde handelsmerken en geregistreerde dienstmerken zijn eigendom van hun respectievelijke houders. Hun gebruik is voor informatieve doeleinden en impliceert op geen enkele wijze een samenwerking met of goedkeuring van hen.
 
-	NB: - dit project is niet gekoppeld aan en wordt niet ondersteund door: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ of `Medtronic <http://www.medtronic.com/>`_.
+	Houd er rekening mee dat: - dit project is niet gekoppeld aan en wordt niet ondersteund door: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ of `Medtronic <https://www.medtronic.com/>`_
