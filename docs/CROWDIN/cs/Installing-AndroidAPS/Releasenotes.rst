@@ -172,7 +172,7 @@ K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/
 
 Hlavní nové funkce
 ------------------
-* Povolit zadání pouze adresy https:// v nastavení NSClient
+* Allow to enter only ``https://`` in NSClient settings
 * Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
 * Fixed small UI bugs
 * Fixed Insight crashes
@@ -201,7 +201,7 @@ Hlavní nové funkce
   * Stará přepnutí profilu lze kopírovat do nového profilu v Místním profilu (včetně posunu času a procentuální změny)
   * Vertikální výběr hodnot pro cíle
 * Odstraněn Jednoduchý profil
-* Funkce `Rozloženého bolusu <../Usage/Extended-Carbs.html#id1>`_ - uzavřená smyčka bude deaktivována
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
 * Plugin MDT: Opravena chyba s duplicitními záznamy
 * Jednotky se nezadávají v profilu, ale v obecném nastavení aplikace
 * Přidáno nové nastavení do průvodce spuštěním
@@ -224,13 +224,15 @@ Verze 2.5.1
 ==================================================
 Datum vydání: 31. 10. 2019
 
-Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
+Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
 * Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
 * New versioning that will allow to do minor updates without triggering the update-notification.
 
 Verze 2.5.0
 ==================================================
 Datum vydání: 26. 10. 2019
+
+.. _important-notes-2-5-0:
 
 Důležité poznámky
 --------------------------------------------------
@@ -240,7 +242,7 @@ Důležité poznámky
 * Glimp is supported from version 4.15.57 and newer.
 
 Je tato aktualizace pro mě? Aktuálně NENÍ podporováno
------------------------------------------------------
+--------------------------------------------------
 * Android 5 and lower
 * Poctech
 * 600SeriesUploader
@@ -259,8 +261,7 @@ Hlavní nové funkce
 * Ověření podpisu
 * Povolit vynechání cílů pro uživatele OpenAPS
 * New `objectives <../Usage/Objectives.html>`_ - exam, application handling
-   
-   (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
+  (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
 * Opravena chyba v ovladačích Dana, kde byl hlášen nesprávný čas
 * Fixed bug in `SMS communicator <../Children/SMS-Commands.html>`_
 
@@ -323,7 +324,7 @@ Hlavní nové funkce
 
 Různé
 --------------------------------------------------
-* If you are using non default `smbmaxminutes` value you have to setup this value again
+* If you are using non default ``smbmaxminutes`` value you have to setup this value again
 
 
 Verze 2.0
