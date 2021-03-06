@@ -30,7 +30,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 * * *
 
-### Medtrum A6/P6/C6 ([Homepage](http://www.medtrum.com/P6.html))
+### Medtrum A6/P6/C6 ([Homepage](https://www.medtrum.com/P6.html))
 
 **Loop-status** Ist ein Loop-Kandidat. Das Unternehmen bietet sein eigenes, limitiertes "Halb-Loop-System" (A6) an. Steuerbar per iPhone App. Aktuell keine Android App verfügbar.
 
@@ -131,4 +131,4 @@ Bis vor einiger Zeit wurde eine Firmware namens T:AP genutzt (Hinweise dazu in [
 
 ### Unterstützung weiterer Pumpen
 
-Falls du noch andere Pumpen hast und du über deren Status Bescheid wissen willst, kontaktiere mich (@andyrozman auf Gitter). In zukünftigen Releases werden einige Pumpen-Konfigurationen hinzugefügt, die dann im Open Loop laufen können (du wirst dann die Möglichkeit haben, einen bestimmten Typ als virtuelle Pumpe auszuwählen, so dass deine Einstellungen geladen werden - [Feature request #157](https://github.com/nightscout/AndroidAPS/issues/157)).
+If you have any other pumps you would like to see status on, please contact us on discord.
