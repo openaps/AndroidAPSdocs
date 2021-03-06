@@ -1,5 +1,5 @@
 Notwendige Überprüfungen nach einem Update von AndroidAPS 2.6
-*************************************************************
+***********************************************************
 
 * Der Programmcode wurde bei der Umstellung auf AAPS 2.7 deutlich verändert. 
 * Daher ist es wichtig, dass Du einige Änderungen vornimmst oder Einstellungen nach der Aktualisierung überprüfst.
@@ -19,13 +19,13 @@ Prüfe die BZ-Quelle
 Prüfung abschließen
 -----------------------------------------------------------
 * AAPS 2.7 hat ein neues Objective 11 für `Automatisierung <../Usage/Automation.html>`_ bekommen.
-* Du musst die Prüfung erfolgreich beenden (`Objectives 3 und 4 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_), um `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`_ starten zu können.
-Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung> starten kannst`_. 
+* Du musst die Prüfung erfolgreich beenden (`Objectives 3 und 4 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_), um `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`__ starten zu können.
+Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung> starten kannst`__. 
 * Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 Master-Passwort festlegen
 -----------------------------------------------------------
-* Die `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ sind ab Version 2.7 verschlüsselt.
+* Die `exportierten Einstellungen <../Usage/ExportImportSettings.html>`__ sind ab Version 2.7 verschlüsselt.
 * Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 * Klicke das Dreieck neben "Allgemein".
 * Klicke auf "Master-Passwort".
@@ -51,7 +51,7 @@ Autosens (Hinweis - keine Maßnahmen erforderlich)
 * Wenn Du bisher oref1 genutzt hast, wirst Du wahrscheinlich bemerken, dass das System weniger dynamisch auf Veränderungen reagiert, da zwischen 8 und 24 Stunden gewechselt wird.
 
 Pumpen-Passwort für Dana RS setzen (wenn Dana RS verwendet wird)
-----------------------------------------------------------------
+-----------------------------------------------------------
 * Das Pumpen-Passwort der `Dana RS <../Configuration/DanaRS-Insulin-Pump.html>`_ wurde in früheren Versionen nicht geprüft.
 * Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 * Scrolle nach unten und klicke das Dreieck neben "Dana RS".
