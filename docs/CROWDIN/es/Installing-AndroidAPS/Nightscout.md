@@ -58,4 +58,4 @@ Este servicio es ofrecido por el compañero Martin Schiftan de forma gratuita en
 * El servicio incluye una verificación automática de la tasa basal usando Autotune. 
 * El servidor se encuentra en Alemania.
 
-<http://ns.10be.de/en/index.html>
+<https://ns.10be.de/en/index.html>
