@@ -65,7 +65,7 @@ Important hints
 * Please use `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Σημαντικά νέα χαρακτηριστικά
-----------------------------
+----------------------
 * `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org 
 * `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
 * `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-2-8>`_ @rICTx-T1D
@@ -91,7 +91,7 @@ Release date: 24-09-2020
 You need at least start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. This will not effect other objectives you have already finished. You will keep all finished objectives!
 
 Σημαντικά νέα χαρακτηριστικά
-----------------------------
+----------------------
 * internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
 * using modules for Dana pumps @MilosKozak
 * `new layout, layout selection <../Getting-Started/Screenshots.html>`_ @MilosKozak
@@ -127,7 +127,7 @@ Release date: 04-05-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Σημαντικά νέα χαρακτηριστικά
-----------------------------
+----------------------
 * Insight: Disable vibration on bolus for firmware version 3 - second attempt
 * Otherwise is equal to 2.6.1.3. Update is optional. 
 
@@ -138,7 +138,7 @@ Release date: 03-05-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Σημαντικά νέα χαρακτηριστικά
-----------------------------
+------------------
 * Insight: Disable vibration on bolus for firmware version 3
 * Otherwise is equal to 2.6.1.2. Update is optional. 
 
@@ -149,7 +149,7 @@ Release date: 19-04-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Σημαντικά νέα χαρακτηριστικά
-----------------------------
+------------------
 * Fix crashing in Insight service
 * Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
 
@@ -160,7 +160,7 @@ Release date: 06-04-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Σημαντικά νέα χαρακτηριστικά
-----------------------------
+------------------
 * Resolves SMS CARBS command issue while using Combo pump
 * Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
 
@@ -171,8 +171,8 @@ Release date: 21-03-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Σημαντικά νέα χαρακτηριστικά
-----------------------------
-* Allow to enter only https:// in NSClient settings
+------------------
+* Allow to enter only ``https://`` in NSClient settings
 * Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
 * Fixed small UI bugs
 * Fixed Insight crashes
@@ -190,7 +190,7 @@ Release date: 29-02-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Σημαντικά νέα χαρακτηριστικά
-----------------------------
+------------------
 * Small design changes (startpage...)
 * Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
 * New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
@@ -201,7 +201,7 @@ Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or ne
   * Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
   * Veritical NumberPicker for targets
 * SimpleProfile is removed
-* `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
 * MDT plugin: Fixed bug with duplicated entries
 * Units are not specified in profile but it's global setting
 * Added new settings to startup wizard
@@ -224,13 +224,15 @@ Version 2.5.1
 ==================================================
 Release date: 31-10-2019
 
-Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
+Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
 * Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
 * New versioning that will allow to do minor updates without triggering the update-notification.
 
 Version 2.5.0
 ==================================================
 Release date: 26-10-2019
+
+.. _important-notes-2-5-0:
 
 Σημαντικές σημειώσεις
 --------------------------------------------------
@@ -259,8 +261,7 @@ Is this update for me? Currently is NOT supported
 * Signature verifier
 * Allow to bypass objectives for OpenAPS users
 * New `objectives <../Usage/Objectives.html>`_ - exam, application handling
-   
-   (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
+  (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
 * Fixed bug in Dana* drivers where false time difference was reported
 * Fixed bug in `SMS communicator <../Children/SMS-Commands.html>`_
 
@@ -323,7 +324,7 @@ Release date: 03-03-2019
 
 Misc
 --------------------------------------------------
-* If you are using non default `smbmaxminutes` value you have to setup this value again
+* If you are using non default ``smbmaxminutes`` value you have to setup this value again
 
 
 Version 2.0
