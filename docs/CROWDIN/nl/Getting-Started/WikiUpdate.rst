@@ -15,7 +15,7 @@ December 2020
 * `OpenAPS hard-coded limits <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_
 * Sony Smartwatch 3 `Manual Installation of Google Play Service <../Usage/SonySW3.html>`_
 
-October 2020
+Oktober 2020
 ==================================================
 * Accu-Chek Combo - update `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
 * Accu-Chek Insight - Option to `upload absolute values <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
@@ -43,7 +43,7 @@ May 2020
 
 April 2020
 ==================================================
-* `Backdate insulin <../Usage/CPbefore26.html#carbs--bolus>`_ (i.e. given by syringe)
+* `Backdate insulin <../Usage/CPbefore26.html#carbs-bolus>`_ (i.e. given by syringe)
 * `Android 6 support will be discontinued in next master version <../Module/module.html#phone>`_
 
 March 2020
@@ -58,7 +58,7 @@ February 2020
 * `Automation caveats <../Usage/Automation.html#good-practice-caveats>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - short explanation
 * `Careportal alternatives <../Usage/CPbefore26.html>`_
-* `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
 * New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
 * `Sample Setup <../Getting-Started/Sample-Setup.html>`_ - update Dexcom G6
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - major new features
@@ -81,7 +81,7 @@ November 2019
 ==================================================
 * `Automation - deactivate when disabling loop <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
-* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#id1>`_
+* `Extended bolus-waarom ze niet werken met een loop  < ../Usage/Extended-Carbs.html#extended-bolus>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-f-main-graph>`_
 * `Insight - Disable absolut values in NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
@@ -96,7 +96,7 @@ November 2019
 
 October 2019
 ==================================================
-* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#id16>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
+* `AAPS versie 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ Aanpassingen (Met name in de `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `AccuChek Insight - log options <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * `COB calculation on separate page <../Usage/COB-calculation.html>`_
 * `COB - wrong COB value detection <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
