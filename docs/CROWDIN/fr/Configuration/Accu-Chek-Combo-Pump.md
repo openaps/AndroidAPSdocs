@@ -8,7 +8,7 @@
 * Un dispositif Accu-Chek Smartpix V1 ou Accu-Chek Realtyme, ainsi que le logiciel de configuration Accu-Chek 360. (Sur demande Roche envoie gratuitement ces dispositifs Smartpix et la configuration logiciel à leurs clients, sauf en France ou il faut contacter son prestataire).
 * Un téléphone compatible : un smarphone Android avec comme système LineageOS 14.1 (anciennement CyanogenMod) ou Android 8.1 (Oreo). 
 * LineageOS 14.1 (ou plus) doit être une version récente d’au moins juin 2017 car les changements nécessaires pour se connecter à la pompe Combo ont été mis en œuvre seulement à ce moment-là. 
-* Une liste de téléphones compatibles se trouvent dans le document [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435).
+* Une liste de téléphones compatibles se trouvent dans le document [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
 * Cette liste n’est pas une liste complète. Elle reflète l’expérience personnelle de quelques utilisateurs. Nous vous encourageons à partager également votre expérience et ainsi aider les autres.
 * Ayez bien en tête que bien qu'Android 8.1 autorise la communication avec le Combo, il y a toujours des problèmes avec AAPS sur 8.1.
 * Pour les utilisateurs avancés, il est possible d'effectuer l'appairage sur un téléphone rooté et de le transférer vers un autre téléphone qui doit également être rooté pour l'utiliser avec Ruffy/AAPS. Ceci permet d'utiliser des téléphones avec [Android 8.1](https://github.com/gregorybel/combo-pairing/blob/master/README.md) mais n'a pas été largement testé.
@@ -19,7 +19,7 @@
 * Seulement un profil de basal est pris en charge.
 * Sélectionner un profil de basal autre que 'Basal1' sur la pompe, ou délivrer via la pompe des bolus 'carré' et 'mixte', interfère avec les DBT et force la boucle en mode 'AGB' pendant 6 heures car la boucle ne peut pas fonctionner en toute sécurité dans ces conditions.
 * Actuellement, il n'est pas possible de régler l'heure et la date de la pompe, donc [les changements d'heure](../Usage/Timezone-traveling#accu-chek-combo) doivent être effectués manuellement (vous pouvez désactiver la mise à jour automatique de l'heure du téléphone la veille au soir, puis changer l'heure le matin du téléphone et de la pompe pour éviter une alarme pendant la nuit).
-* Actuellement, seuls les débits de basals de 0,05 à 10 U/h sont supportés. This also applies when modifying a profile, e.g. when increasing to 200%, the highest basal rate must not exceed 5 U/h since it will be doubled. Similarly, when reducing to 50%, the lowest basal rate must be at least 0.10 U/h.
+* Actuellement, seuls les débits de basals de 0,05 à 10 U/h sont supportés. Ceci s'applique également lors de la modification du profil, par exemple, lorsqu'il augmente à 200%, le taux basal le plus élevé ne doit pas dépasser 5 U/h car il sera doublé. De même, en réduisant à 50%, le taux basal le plus bas doit être au moins 0,10 U/h.
 * Si la boucle demande l'annulation d'un DBT en cours, le Combo fixera un DBT de 90% ou 110% pendant 15 minutes à la place. C'est parce que l'annulation d'un DBT provoque une alerte sur la pompe qui cause beaucoup de vibrations.
 * Occasionnellement (tous les deux jours ou plus), AndroidAPS risque de ne pas annuler automatiquement une alerte 'TBR CANCELLED', donc l’utilisateur doit s’en occuper (en appuyant sur le bouton actualiser dans AndroidAPS afin de transférer l’alarme à AAPS, ou en confirmant l’alerte sur la pompe).
 * La stabilité de la connexion Bluetooth varie en fonction des téléphones utilisés. La perte de connection provoque des alertes "pompe injoignable", pendant laquelle aucune connexion avec la pompe n'est établie. 
@@ -33,7 +33,7 @@
 ## Paramètres
 
 * Configurez la pompe en utilisant le logiciel de configuration Accu-Chek 360. 
-* Si vous n’avez pas le logiciel, veuillez contacter votre prestataire en france ou la hotline Accu-Chek dans les autres pays. They usually send registered users a CD with the "360° Pump Configuration Software" and a SmartPix USB-infrared connection device (the Realtyme device also works if you have that).
+* Si vous n’avez pas le logiciel, veuillez contacter votre prestataire en france ou la hotline Accu-Chek dans les autres pays. Ils envoient généralement aux utilisateurs enregistrés un CD ou une clé USB avec le logiciel de configuration de la pompe et un périphérique de connexion infrarouge USB SmartPix (le périphérique Realtyme fonctionne aussi si vous en avez). Ou cherchez sur un forum de votre pays.
 * **Paramètres requis** (marqués en vert dans les captures d'écran) :
     
     * Choisissez ou laissez la configuration du menu sur "Standard", cela affichera uniquement les menus et actions pris en charge sur la pompe, et masquera ceux qui ne sont pas supportés par AAPS (bolus duo/carré, débits de base multiples) et qui entraînent une limitation du fonctionnement de la boucle lors de leurs utilisation, et donc ne permet pas une exécution sécurisée de la boucle.
@@ -76,7 +76,7 @@
 
 * Si la pompe est complètement nouvelle, vous devez **faire un bolus sur la pompe** pour que celle-ci crée une première entrée dans l'historique.
 * Avant d'activer le plugin Combo dans AAPS, assurez-vous que votre profil est bien configuré et activé(!) et que votre profil de basal est à jour car AAPS synchronisera le profil basal à la pompe.
-* Ensuite, activez le [Plugin Combo](../Configuration/Config-Builder.html#pompe). 
+* Ensuite, activez le [Plugin Combo](../Configuration/Config-Builder#pompe). 
 * Appuyez sur le bouton *Actualiser* dans l'onglet Combo pour initialiser la pompe.
 * Pour vérifier votre configuration, avec la pompe **déconnectée**, utilisez AAPS pour définir un DBT de 500% pendant 15 min et faite un bolus.
 * La pompe doit normalement avoir un DBT en cours et un bolus dans l'historique. AAPS doit aussi de son côté montrer le DBT actif et le bolus délivré.
@@ -102,18 +102,18 @@ Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
 
 * Si le délai d'affichage de l'écran de la pompe Combo est défini sur 5s, vous pouvez essayer avec 40s (paramètre d'origine). Par expérience la durée entre le moment ou la pompe est affichée dans le téléphone et celui où le téléphone est sélectionné est d'environ 5-10s. Dans de nombreux autres cas, le couplage expire sans succès. 
 * Plus tard, vous devrez le redéfinir sur 5 s pour répondre aux paramètrage du combo dans AAPS.
-* Si la pompe n'affiche pas du tout le téléphone comme appareil de couplage, la puce Bluetooth de votre téléphone n'est probablement pas compatible avec la pompe. Vérifiez que vous exécutez une version de **LineageOS ≥ 14.1** ou **Android ≥ 8.1 (Oreo)**. Si possible, essayez un autre smartphone. You can find a list of already successfully used smartphones under \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
+* Si la pompe n'affiche pas du tout le téléphone comme appareil de couplage, la puce Bluetooth de votre téléphone n'est probablement pas compatible avec la pompe. Vérifiez que vous exécutez une version de **LineageOS ≥ 14.1** ou **Android ≥ 8.1 (Oreo)**. Si possible, essayez un autre smartphone. Vous pouvez trouver la liste des téléphones déjà utilisés avec succès sous \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). 
 
-9. At next Pump should show up a 10 digit security code. et Ruffy affiche un écran pour le renseigner. Donc entrez le dans Ruffy et vous devriez être prêt à partir.
+9. Ensuite la pompe doit afficher un code de sécurité à 10 chiffres, et Ruffy affiche un écran pour le renseigner. Donc entrez le dans Ruffy et vous devriez être prêt à partir.
 10. Redémarrer le téléphone.
 11. Maintenant, vous pouvez redémarrer la boucle AAPS.
 
 ## Utilisation
 
-* Gardez à l'esprit qu'il ne s'agit pas d'un produit, en particulier in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. 
+* Gardez à l'esprit qu'il ne s'agit pas d'un produit, en particulier au début, l'utilisateur doit surveiller et comprendre le système, ses limites et comment il peut échouer. 
 * Il est fortement conseillé de NE PAS utiliser ce système lorsque la personne n'est pas en mesure de bien le comprendre entièrement.
 * Lisez la documentation d'OpenAPS https://openaps.org pour comprendre l'algorithme de boucle sur lequel est basé AndroidAPS.
-* Lisez les [docs AAPS](https://androidaps.readthedocs.io/en/latest/CROWDIN/fr/) pour en savoir plus et comprendre AndroidAPS.
+* Lisez les [docs AAPS](../index.html) pour en savoir plus sur et comprendre AndroidAPS.
 * Cette intégration utilise la même fonctionnalité que le lecteur fournit avec le Combo.
 * Le lecteur permet de reproduire l'écran de la pompe et de transférer à la pompe les appuis sur les touches. 
 * La connexion à la pompe et la redirection des boutons est ce que fait l'application Ruffy. 
@@ -136,7 +136,7 @@ Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
 * Pour toutes les autres alertes déclenchées par la pompe, la connexion à la pompe montrera le message d'alerte dans l'onglet Combo : p.ex. "Etat: E4: Occlusion" et affichage d'une notification sur l'écran principal.
 * Une erreur déclenchera une notification urgente. 
 * AAPS ne confirme jamais les erreurs graves sur la pompe, mais laisse la pompe vibrer et sonner pour s'assurer que l'utilisateur est informé d'une situation critique qui nécessite une action.
-* After pairing, ruffy should not be used directly (AAPS will start in the background as needed), since using ruffy at AAPS at the same time is not supported.
+* Après l'appairage, Ruffy ne doit pas être utilisé directement (AAPS le lancera en arrière-plan si nécessaire), car l'utilisation simultanée de ruffy sur AAPS n'est pas prise en charge.
 * Si AAPS se bloque (ou est arrêté à partir du débogueur), alors que AAPS et la pompe étaient en communication (via Ruffy), il peut être nécessaire de forcer la fermeture de Ruffy. Redémarrer AAPS redémarrera à nouveau Ruffy.
 * Redémarrer le téléphone est aussi un moyen facile de résoudre cela si vous ne savez pas comment forcer l'arrêt d'une application.
 * N'appuyez jamais sur les boutons de la pompe quand AAPS communique avec celle-ci (le logo Bluetooth est affiché sur la pompe).
