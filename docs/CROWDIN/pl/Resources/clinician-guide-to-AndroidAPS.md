@@ -8,7 +8,7 @@ Ten przewodnik zawiera trochę specjalistycznych informacji na temat zamkniętej
 
 Aby rozpocząć korzystanie z AndroidAPS, należy podjąć następujące kroki:
 
-* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../index.rst#getting-started).
+* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../index#getting-started).
 * [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
 * [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.rst#configuration).
 
@@ -77,11 +77,11 @@ Na tym przykładzie AndroidAPS widzi, że poziom glukozy jest znacznie powyżej 
 
 ### Optymalizacja ustawień i wprowadzanie zmian
 
-Trudna może okazać się pomoc pacjentowi (dla lekarza specjalisty, który nie ma doświadczenia z AndroidAPS oraz z zamkniętymi pętlami), w szczególności przy optymalizacji ustawień oraz dokonywaniu zmian w celu poprawy wyników. Nasza społeczność oferuje wiele narzędzi i [przewodników](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html), które pomagają pacjentom w dokonywaniu drobnych, sprawdzonych korekt w celu poprawy ustawień.
+Trudna może okazać się pomoc pacjentowi (dla lekarza specjalisty, który nie ma doświadczenia z AndroidAPS oraz z zamkniętymi pętlami), w szczególności przy optymalizacji ustawień oraz dokonywaniu zmian w celu poprawy wyników. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
 
 Przy dostrajaniu systemu pacjenci powinni przyjąć jedną podstawową zasadę - należy dokonywać wyłącznie jednej zmiany na raz, a następnie obserwować wpływ tej zmiany przez około 2-3 dni. Ewentualne, kolejne pojedyncze zmiany systemu należy wykonywać stopniowo, dopiero po weryfikacji wpływu poprzedzającej zmiany (z tym zastrzeżeniem, iż jeśli okaże się, że zmiana źle wpływa na funkcjonowanie systemu, pacjenci powinni natychmiast powrócić do poprzedniego ustawienia). Natura ludzka skłania do obracania wszystkich pokręteł i zmieniania wszystkiego na raz, ale jeśli ktoś tak postępuje, z dużym prawdopodobieństwem spowoduje powstanie kolejnych wadliwych ustawień, a w konsekwencji nawet utrudni sobie powrót do ostatniego, znanego zadowalającego stanu.
 
-Jednym z najbardziej przydatnych narzędzi do dostrajania systemu jest zautomatyzowane narzędzie służące do obliczania bazy, ISF (współczynnika wrażliwości na insulinę) i współczynnika węglowodanowego. To narzędzie nazywa się "[Autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)". Zostało ono zaprojektowane tak, aby mogło być uruchamiane niezależnie/ręcznie, dostarczając dane, które pomagają pacjentowi w stopniowym dokonywaniu zmian ustawień. Najlepszą praktyką jest najpierw uruchamianie (lub przeglądanie raportów) Autotune, a dopiero następnie ewentualna modyfikacja ustawień. Na chwilę obecną, korzystając z AndroidAPS, Autotune należy uruchamiać niezależnie, nie mniej jednak trwają prace, aby zaimplementować Autotune bezpośrednio w AndroidAPS. Jako że parametry te są również elementami niezbędnymi zarówno dla standardowego podawania insuliny przez pompę, jak i dla podawania insuliny w pętli zamkniętej, naturalnym wydaje się omówienie z lekarzem raportów Autotune oraz dokonywanych na podstawie tych raportów zmian.
+Jednym z najbardziej przydatnych narzędzi do dostrajania systemu jest zautomatyzowane narzędzie służące do obliczania bazy, ISF (współczynnika wrażliwości na insulinę) i współczynnika węglowodanowego. This is called “[Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)”. Zostało ono zaprojektowane tak, aby mogło być uruchamiane niezależnie/ręcznie, dostarczając dane, które pomagają pacjentowi w stopniowym dokonywaniu zmian ustawień. Najlepszą praktyką jest najpierw uruchamianie (lub przeglądanie raportów) Autotune, a dopiero następnie ewentualna modyfikacja ustawień. Na chwilę obecną, korzystając z AndroidAPS, Autotune należy uruchamiać niezależnie, nie mniej jednak trwają prace, aby zaimplementować Autotune bezpośrednio w AndroidAPS. Jako że parametry te są również elementami niezbędnymi zarówno dla standardowego podawania insuliny przez pompę, jak i dla podawania insuliny w pętli zamkniętej, naturalnym wydaje się omówienie z lekarzem raportów Autotune oraz dokonywanych na podstawie tych raportów zmian.
 
 Dodatkowo należy wskazać, iż zachowanie człowieka (uczonego i przyzwyczajonego do normalnego prowadzenia cukrzycy) często wpływa na wyniki, nawet przy zamkniętej pętli. Na przykład, jeśli przewiduje się, że stężenie glukozy obniży się, a AndroidAPS zmniejszy poziom insuliny w trakcie spadku, do podniesienia stężenia glukozy z 70 mg/dl (3,9 mmol) może być potrzebna tylko niewielka ilość węglowodanów (np. 3-4 g węglowodanów). Jednak w wielu przypadkach ktoś może zdecydować się na przyjęcie dużo większej ilości węglowodanów (np. trzymając się zasady 15), co spowoduje szybszy skok zarówno od dodatkowej glukozy, jak i dlatego, że insulina została zmniejszona przez AndroidAPS w okresie spadku glukozy.
 
@@ -95,7 +95,7 @@ Reasumując, przewodnik niniejszy jest specjalistycznym streszczeniem jak dział
 
 Dodatkowo warto przeczytać:
 
-* [Pełna dokumentacja AndroidAPS](http://androidaps.readthedocs.io/en/latest/EN/index.html)
+* The [full AndroidAPS documentation](../index)
 * [Projekt Referencyjny OpenAPS](https://OpenAPS.org/reference-design/), wyjaśniający mechanizmy bezpieczeństwa zaprojektowane w OpenAPS: https://openaps.org/reference-design/
-* [Pełna dokumentacja OpenAPS](http://openaps.readthedocs.io/en/latest/index.html) 
-  * Więcej [szczegółów na temat obliczeń OpenAPS](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+* The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html) 
+  * More [details on OpenAPS calculations](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
