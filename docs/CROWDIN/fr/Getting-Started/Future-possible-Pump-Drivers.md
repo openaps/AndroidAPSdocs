@@ -131,4 +131,4 @@ Il y quelque temps, il y avait un firmware appelé T:AP (mentionné dans cet [ar
 
 ### Prise en charge d'autres pompes
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Si vous avez d'autres pompes dont vous aimeriez voir l'état de bouclage, veuillez nous contacter sur discord.
