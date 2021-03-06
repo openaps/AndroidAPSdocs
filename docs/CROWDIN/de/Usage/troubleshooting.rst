@@ -8,7 +8,7 @@ AndroidAPS app
 ==================================================
 
 Erstellen & Update
-------------------
+-------------------
 * `Verlorener Keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.html#verlorener-keystore>`_
 * `Fehlerbehebung Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 
