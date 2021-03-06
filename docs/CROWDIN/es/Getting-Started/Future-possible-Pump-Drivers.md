@@ -30,7 +30,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 * * *
 
-### Medtrum A6/P6/C6 ([Homepage](http://www.medtrum.com/P6.html))
+### Medtrum A6/P6/C6 ([Homepage](https://www.medtrum.com/P6.html))
 
 **Loop status:** Es candidata a ser utilizada en sistemas de bucle cerrado. La empresa tiene su propio sistema de medio-bucle limitado (A6). Controlable a través de la apps iPhone. No hay ninguna app de Android disponible en este momento.
 
@@ -131,4 +131,4 @@ Hace tiempo que tenían el firmware llamado T:AP (mencionado en este [artículo 
 
 ### Soporte para otras bombas
 
-Si tienes alguna otra bomba de la que te gustaría ver el estado, por favor, ponte en contacto conmigo (@andyrozman en gitter). En próximas versiones, un buen número de configuraciones de bombas se incluirán como compatibles (podrás seleccionar Bomba Virtual en la configuración y se cargarán tus ajustes - [Petición de mejora #157](https://github.com/nightscout/AndroidAPS/issues/157)).
+If you have any other pumps you would like to see status on, please contact us on discord.
