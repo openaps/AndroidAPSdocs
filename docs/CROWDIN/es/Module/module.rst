@@ -1,6 +1,6 @@
 Descripción General De Los Componentes 
 **************************************************
-AndroidAPS no es sólo una aplicación (auto-construida), es sólo uno de los módulos de su sistema de lazo cerrado. Before deciding for components, it would be a good idea to have a look at the `component setup <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_, too.
+AndroidAPS no es sólo una aplicación (auto-construida), es sólo uno de los módulos de su sistema de lazo cerrado. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
    
 .. imagen:: ../images/modules.png
   :alt: Visión general de Compontes
@@ -17,7 +17,7 @@ AndroidAPS no es sólo una aplicación (auto-construida), es sólo uno de los m�
 Módulos necesarios
 ==================================================
 Algoritmo de dosificación individual bueno para su tratamiento con diabetes
----------------------------------------------------------------------------
+----------------------------------------------------------
 A pesar de que esto no es algo para crear o comprar, este es el "módulo" que probablemente se subestime mas pero es esencial. Cuando dejas que un algoritmo ayude a manejar tu diabetes, necesita saber los ajustes correctos para no cometer errores severos.
 Incluso si aún le faltan otros módulos, ya puede verificar y adaptar su 'perfil' en colaboración con su equipo de diabetes. 
 La mayoría de los loopers utilizan el BR circadiano, ISF y CR, que adaptan la sensibilidad de la insulina hormonal durante el día.
@@ -128,7 +128,7 @@ Qué hacer mientras se espera a los módulos
 ==================================================
 A veces se tarda un tiempo en obtener todos los módulos para cerrar el lazo. Pero no te preocupes, hay un montón de cosas que puedes hacer mientras esperas. Es NECESARIO comprobar y (donde correspondiente) adaptar las tasas basales (BR), la insulina/carbohidratos (IC), la sensibilidad de los factores (ISF), etc. Y tal vez un lazo abierto puede ser una buena forma de probar el sistema y familiarizarse con AndroidAPS. Usando este modo, AndroidAPS le da consejos de tratamiento que puede ejecutar manualmente.
 
-Usted puede seguir leyendo a través de los documentos aquí, ponerse en contacto con otros loopers en línea o fuera de línea, `leer <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ documentaciones o lo que escriben otros loopers (incluso si tiene que ser cuidadoso, no todo es correcto o bueno para que se reproduzca).
+You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <../Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
 **Hecho?**
 Si tiene todos los componentes de AAPS juntos (congratulaciones) o al menos lo suficiente para iniciarse en el modo de bucle abierto, primero debe leer la descripción de `objetivo <../Usage/Objectives.html>`_ antes de cada nuevo objetivo y configurar el `hardware <../index.html#component-setup>`_.
