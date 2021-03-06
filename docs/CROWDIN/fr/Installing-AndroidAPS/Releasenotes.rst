@@ -7,7 +7,7 @@ Vous recevrez les informations suivantes dès qu'une nouvelle mise à jour sera 
 .. image:: ../images/AAPS_LoopDisable90days.png
   :alt: Update info
 
-Ensuite, vous avez 60 jours pour mettre à jour. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 6 <../Usage/Objectives.html>`_.
+Ensuite, vous avez 60 jours pour mettre à jour. Si vous ne faites pas de mise à jour au cours de ces 60 jours, AAPS retournera en mode AGB (Arrêt Glycémie Basse - cf. `glossaire <../Getting-Started/Glossary.html>`_) comme dans `l'objective 6 <../Usage/Objectives.html>`_.
 
 Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à partir de la nouvelle date de sortie), AAPS passe à Boucle Ouverte.
 
@@ -17,9 +17,9 @@ Version 2.8.2
 ================
 Date de sortie : 23-01-2021
 
-* Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
+* Veuillez voir aussi les `conseils importants pour la version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#conseils-importants>`_ ci-dessous.
 
-Changes
+Modifications
 ----------------------
 * améliorations de la stabilité
 * plus de réglages pour Android 8+
@@ -43,7 +43,7 @@ Changements majeurs
 ----------------------
 * RileyLink, Omnipod et la pompe MDT améliorations et corrections
 * NS_UPLOAD_ONLY forcé
-* fix for SMB & Dexcom app
+* correction pour SMB & appli. Dexcom
 * corrections cadrans montres connectées
 * rapport de plantage amélioré
 * gradle restauré pour permettre l'installation directe des cdrans de montres
@@ -51,7 +51,7 @@ Changements majeurs
 * amélioration du driver RS
 * divers plantages corrigés
 * corrections de bugs et améliorations de l'Interface Utilisateur
-* new translations
+* nouvelles traductions
 
 Version 2.8.0
 ================
@@ -65,7 +65,7 @@ Conseils importants
 * Utilisez `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
-----------------------------------
+----------------------
 * `Support de l'Omnipod Eros <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda et merci spécial à @ps2 @itsmojo, et à toutes les autres personnes impliquées dans le développement du driver pour Omnipod ainsi que @jlucasvt de GetRileyLink.org 
 * `Assistant bolus <../Configuration/Preferences.html#assistant-bolus>`_ & `Rappel repas <../Getting-Started/Screenshots.html#rappel-repas>`_ @MilosKozak 
 * `Nouveau cadran <../Configuration/Watchfaces.html#nouveau-cadran-depuis-androidaps-2-8>`_ @rICTx-T1D
@@ -86,12 +86,12 @@ Version 2.7.0
 ================
 Date de sortie : 24-09-2020
 
-**Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 2.7 comme c'est décrit ici** `ici <../Installing-AndroidAPS/update2_7.html>`__.
+**Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 2.7 comme c'est décrit** `ici <../Installing-AndroidAPS/update2_7.html>`__.
 
-Vous devez au moins démarrer l'`objectif 11 <../Usage/Objectives.html#objectif-11-automation>`_ afin de continuer à utiliser la `fonction d'automatisation <../Usage/Automation.html>`_ (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 11 n'est pas possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
+Vous devez au moins démarrer l'`objectif 11 <../Usage/Objectives.html#objectif-11-automation>`_ afin de continuer à utiliser la `fonction d'automatisation <../Usage/Automation.html>`_ (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 11 n'est pas possible). Si par exemple vous n'avez pas encore terminé l'examen dans l'`objective 3 <../Usage/Objectives. tml#objectif-3-prouver-ses-connaissances>`_ , vous devrez terminer l'examen avant de pouvoir commencer l'`objective 11 <../Usage/Objectives.html#objectif-11-automatisation>`_. Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
 Nouvelles fonctionnalités majeures
-----------------------------------
+----------------------
 * utilisation interne de l'injection de dépendance, bibliothèques mises à jour, code réécrit en kotlin @MilosKozak @AdrianLxM
 * utilisation de modules pour les pompes Dana @MilosKozak
 * `nouvelle mise en page, selection de thème <../Getting-Started/Screenshots.html>`_ @MilosKozak
@@ -127,7 +127,7 @@ Date de sortie : 04-05-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
-----------------------------------
+----------------------
 * Insight: Désactivation de la vibration sur bolus pour le firmware version 3 - Deuxième tentative
 * Sinon, identique à 2.6.1.3. La mise à jour est facultative. 
 
@@ -138,7 +138,7 @@ Date de sortie : 03-05-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
-----------------------------------
+------------------
 * Insight: Désactivation de la vibration sur bolus pour le firmware version 3
 * Sinon, identique à 2.6.1.2. La mise à jour est facultative. 
 
@@ -149,7 +149,7 @@ Date de sortie : 19-04-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
-----------------------------------
+------------------
 * Correction du plantage dans le service Insight
 * Sinon, identique à 2.6.1.1. Si vous n'êtes pas affecté par ce bug, vous n'avez pas besoin de mettre à niveau.
 
@@ -160,7 +160,7 @@ Date de sortie : 06-04-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
-----------------------------------
+------------------
 * Résout le problème de commande SMS CARBS avec la pompe Combo
 * Sinon, identique à 2.6.1. Si vous n'êtes pas affecté par ce bug, vous n'avez pas besoin de mettre à niveau.
 
@@ -171,8 +171,8 @@ Date de sortie : 21-03-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
-----------------------------------
-* Permet de ne rentrer que https:// dans les paramètres NSClient
+------------------
+* Permet de ne rentrer que ``https://`` dans les paramètres NSClient
 * Correction bug d'affichage `Impact Glycémique <../Getting-Started/Glossary.html>`_ sur les montres
 * Correction de petits bugs de l'interface utilisateur
 * Correction plantages Insight
@@ -190,9 +190,9 @@ Date de sortie : 29-02-2020
 Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
-----------------------------------
+------------------
 * Petites modifications de l'affichage (page d'accueil...)
-* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
+* Onglet/Menu Careportal supprimé - plus de détails `ici <../Usage/CPbefore26.html>`__
 * Nouveau `plugin Profil Local <../Configuration/Config-Builder.html#profil-local-recommande>`_
 
   * Le profil local peut contenir plusieurs profils
@@ -224,7 +224,7 @@ Version 2.5.1
 ==================================================
 Date de sortie : 31-10-2019
 
-Veuillez lire les `Remarques importantes <../Installing-AndroidAPS/Releasenotes.html#id16>`_ et`limitations <../Installing-AndroidAPS/Releasenotes.html#cette-mise-a-jour-est-elle-pour-moi-n-est-actuellement-pas-pris-en-charge>`_ listées pour la `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#id15>`_. 
+Veuillez lire les `Remarques importantes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ et`limitations <../Installing-AndroidAPS/Releasenotes.html#cette-mise-a-jour-est-elle-pour-moi-n-est-actuellement-pas-pris-en-charge>`_ listées pour la `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
 * Correction d'un bug dans le statut du réseau qui entraînait des plantages fréquent (pas critique mais gaspillerait beaucoup d'énergie).
 * Nouvelle gestion des versions qui permettra de faire des mises à jour mineures sans déclencher la notification de mise à jour.
 
@@ -232,15 +232,17 @@ Version 2.5.0
 ==================================================
 Date de sortie : 26-10-2019
 
+.. _important-notes-2-5-0:
+
 Remarques importantes
 --------------------------------------------------
 * Veuillez utiliser `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ ou plus récent pour `construire l'apk <../Installing-AndroidAPS/Building-APK.html>`_ ou le `mettre à jour <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Si vous utilisez xDrip `identify receiver <../Configuration/xdrip.html#identifier-le-recepteur>`_ doit être défini.
-* If you are using Dexcom G6 with the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Si vous utilisez Dexcom G6 avec l'application `Dexcom patchée <../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee>`_ vous aurez besoin de la version du `Dossier 2.4<https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Glimp est pris en charge à partir de la version 4.15.57 et plus récente.
 
 Cette mise à jour est-elle pour moi? N'est actuellement PAS pris en charge
---------------------------------------------------------------------------
+--------------------------------------------------
 * Android 5 and inférieurs
 * Poctech
 * 600SeriesUploader
@@ -259,8 +261,7 @@ Nouvelles fonctionnalités majeures
 * Vérificateur de signature
 * Autorisation de contourner les objectifs pour les utilisateurs d'OpenAPS
 * Nouveau `objectifs <../Usage/Objectives.html>`_ - examen de connaissance de l'application
-   
-   (Si vous avez au minimum démarré l'objectif "Démarrer une boucle ouverte" dans les versions précédentes, l'examen est optionnel.)
+  (Si vous avez au minimum démarré l'objectif "Démarrer une boucle ouverte" dans les versions précédentes, l'examen est optionnel.)
 * Correction d'un bug dans les pilotes Dana*, où une différence de temps erronée a été signalée
 * Correction d'un bug dans le `communicateur SMS <../Children/SMS-Commands.html>`_
 
@@ -288,7 +289,7 @@ Date de sortie : 07-04-2019
 Nouvelles fonctionnalités majeures
 --------------------------------------------------
 * Correctif Autosens : désactiver CT réhausse/diminue la cible
-* New translations
+* Nouvelles traductions
 * Correctifs du pilote Insight
 * Correctif plugin SMS
 
@@ -323,7 +324,7 @@ Nouvelles fonctionnalités majeures
 
 Divers
 --------------------------------------------------
-* Si vous n'utilisez pas la valeur par défaut de `smbmaxminutes` vous devez configurer à nouveau cette valeur
+* Si vous n'utilisez pas la valeur par défaut de ``smbmaxminutes`` vous devez configurer à nouveau cette valeur
 
 
 Version 2.0
@@ -348,9 +349,9 @@ Paramètres à ajuster lors du passage d'AMA à SMB
   * Décochez la case Configure on demand.
   * Cliquez sur Appliquer ou OK.
 
-Onglet Vue d'ensemble
+Onglet Aperçu (Accueil)
 --------------------------------------------------
-* Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). Les CT utilisent des paramètres par défauts configurés dans les préférences. La nouvelle option CT Hypo est une cible temp. haute pour empêcher la boucle de corriger trop agressivement les glucides de secours.
+* Le ruban du haut donne accès à Suspendre/Désactiver la boucle, consulter/changer le profil et démarrer/arrêter les cibles temp. (CT). Les CT utilisent des paramètres par défauts configurés dans les préférences. La nouvelle option CT Hypo est une cible temp. haute pour empêcher la boucle de corriger trop agressivement les glucides de secours.
 * Boutons de traitement : l'ancien bouton de traitement est encore disponible, mais masqué par défaut. La visibilité des boutons peut maintenant être configurée. Ajout de deux nouveaux boutons insuline et glucides (qui inclut `eGluc/glucides étendus <../Usage/Extended-Carbs.html>`_)
 * `Lignes de prédiction <../Getting-Started/Screenshots.html#lignes-de-prediction>`_ - plus de détails
 * Option pour afficher un champ de notes dans les boites de dialogue insuline/glucides/calculatrice et amorcer+remplir, qui sont téléchargées dans NS
@@ -375,7 +376,7 @@ Divers
 * Remplacement des onglets du générateur de configuration et des objectifs, ajout de descriptions
 * Nouvelle icône d'application
 * Beaucoup d'améliorations et de correctifs
-* Alerte indépendante de Nightscout si la pompe est injoignable pendant une durée longue (par ex. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
+* Alerte indépendante de Nightscout si la pompe est injoignable pendant une durée longue (par ex. si la pile de la pompe est à plat) et pour des lectures de GLY manquées (voir *Alertes locales* dans les paramètres)
 * Option pour garder l'écran allumé
 * Option pour afficher les notifications AAPS comme des notifications Android
 * Filtrage avancé (permettant de toujours activer SMB et pendant 6h après les repas) pris en charge avec l'application Dexcom patchée ou xDrip+ avec le mode natif G5 en tant que source GLY.
