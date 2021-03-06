@@ -58,4 +58,4 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
 * Услуга включает автоматическую проверку базальной скорости с помощью автонастройки. 
 * Сервер расположен в Германии.
 
-<http://ns.10be.de/en/index.html>
+<https://ns.10be.de/en/index.html>
