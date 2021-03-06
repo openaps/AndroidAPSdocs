@@ -145,7 +145,7 @@ Klicke auf dem Android Studio Willkommensbildschirm auf das kleine Dreieck (1. i
 
 * Klicke nicht auf "Background", während das Repository geklont wird!
     
-    ![Keine Hintergrundaktion](../images/AndroidStudio_NoBackground.png)
+    ![Keine Hintergrundaktion](../images/AndroidStudio361_15.png)
 
 * Nachdem das Repository geklont wurde, öffne Deine lokale Kopie indem Du auf "Yes" klickst.
     
