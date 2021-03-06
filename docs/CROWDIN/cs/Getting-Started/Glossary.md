@@ -44,7 +44,7 @@
  <td><strong>Autosens</strong></td>
  <td>Výpočet změn citlivosti na inzulin v důsledku cvičení, hormonů atd.</td>
  <td>&nbsp;</td>
- <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
+ <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
  <td><strong>Azure</strong></td>
@@ -122,7 +122,7 @@
  <td><strong>Doba působnosti inzulínu</strong></td>
  <td>Doba působnosti inzulinu (duration of insulin action)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - Typy inzulinů</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td><strong>DST</strong></td>
@@ -134,13 +134,13 @@
  <td><strong>eCarbs</strong></td>
  <td>„rozložené sacharidy“ (extended carbs) - sacharidy rozložené na několik hodin (např. jídla s vysokým obsahem tuků/proteinů)<br>rozložený bolus, který můžete znát z léčby pomocí běžné inzulinové pumpy, nedává při používání smyčky nedává příliš velký smysl</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">Příklad použití funkce eCarbs</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
 <tr>
  <td><strong>FGM</strong></td>
  <td>flash glucose monitor (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - Zdroj glykémie</a></td>
+ <td><a href="../Configuration/BG-Source.html">Wiki - Zdroj glykémie</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
@@ -320,7 +320,7 @@
  <td><strong>Detekce citlivosti</strong></td>
  <td>Výpočet změn citlivosti na inzulin v důsledku cvičení, hormonů atd.</td>
  <td>&nbsp;</td>
- <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
+ <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
  <td><strong>Šum senzoru</strong></td>
@@ -386,7 +386,7 @@
  <td><strong>xDrip / xDrip+</strong></td>
  <td>Open source software pro čtení dat z CGM</td>
  <td>&nbsp;</td>
- <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
+ <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="https://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
  <td><strong>Nulový bazál</strong></td>
