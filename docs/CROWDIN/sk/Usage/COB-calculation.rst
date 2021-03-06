@@ -15,7 +15,7 @@ Unabsorbed carbs are cut off after specified time
 AAPS, WeightedAverage
 --------------------------------------------------
 
-absorption is calculated to have `COB == 0` after specified time
+absorption is calculated to have ``COB == 0`` after specified time
 
 .. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, WheitedAverage
@@ -35,7 +35,7 @@ Normally AAPS detects carb absorption through BG deviations. In case you entered
 .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
   :alt: Hint on wrong COB value
 
-In the screenshot above, 41% of1 time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  This means that maybe you are having less carbs on board than calculated by the algorithm. 
+In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  This means that maybe you are having less carbs on board than calculated by the algorithm. 
 
 How to deal with this warning? 
 --------------------------------------------------
