@@ -44,7 +44,7 @@
  <td><strong>Autosens</strong></td>
  <td>jautrumo insulinui pokyčių dėl fizinio krūvio, hormonų ir kt. nustatymas.</td>
  <td>&nbsp;</td>
- <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
+ <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
  <td><strong>Azure</strong></td>
@@ -122,7 +122,7 @@
  <td><strong>IVT</strong></td>
  <td>insulino veikimo trukmė</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulino tipai</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td><strong>DST</strong></td>
@@ -134,13 +134,13 @@
  <td><strong>iAV</strong></td>
  <td>„Ištęsti angliavandeniai“ organizme išdalinami per kelias valandas, kai maiste yra daug riebalų / baltymų. <br> Ši funkcija pakeičia ištęstą bolusą, žinomą iš klasikinio pompos naudojimo, kuris netenka prasmės, kai naudojamas uždaras ciklas</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - iAV</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">iAV naudojimo atvejai</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
 <tr>
  <td><strong>SGJ</strong></td>
  <td>skanuojamas gliukozės jutiklis (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - glikemijos šaltinis</a></td>
+ <td><a href="../Configuration/BG-Source.html">Wiki - glikemijos šaltinis</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
@@ -320,7 +320,7 @@
  <td><strong>Jautrumo nustatymas</strong></td>
  <td>jautrumo insulinui pokyčių dėl fizinio krūvio, hormonų ir kt. nustatymas.</td>
  <td>&nbsp;</td>
- <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
+ <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
  <td><strong>Sensoriaus triukšmas</strong></td>
@@ -386,7 +386,7 @@
  <td><strong>xDrip / xDrip+</strong></td>
  <td>atviro kodo programinė įranga skaityti NGJ sistemas</td>
  <td>&nbsp;</td>
- <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
+ <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="https://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
  <td><strong>Zero-temp / Laikina nulinė bazė</strong></td>
