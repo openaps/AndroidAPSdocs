@@ -1,6 +1,6 @@
 확장 탄수화물 / "eCarbs"
 **************************************************
-보통 펌프의 확장 bolus 기능은 기름진 음식이나 소화가 느린 음식 등으로 인슐린 작용시간 이후에도 혈당을 높이는 경우에 사용하면 좋은 방법이다. 그러나 Loop에서는 확장 bolus 기능을 이용하여 basal 양을 동적으로 조절하는 동작을 하기 때문에 기본적으로 높은 임시 basal 양으로 고정시킨다.(기술적인 문제를 야기할 수도 있다) 그러므로 고유의 확장 bolus 기능을 사용하는 것은 좋은 방법이 아니다. 자세한 내용은 아래 `확장 bolus <../Usage/Extended-Carbs.html#extended-bolus>`를 참고하세요.
+보통 펌프의 확장 bolus 기능은 기름진 음식이나 소화가 느린 음식 등으로 인슐린 작용시간 이후에도 혈당을 높이는 경우에 사용하면 좋은 방법이다. 그러나 Loop에서는 확장 bolus 기능을 이용하여 basal 양을 동적으로 조절하는 동작을 하기 때문에 기본적으로 높은 임시 basal 양으로 고정시킨다.(기술적인 문제를 야기할 수도 있다) 그러므로 고유의 확장 bolus 기능을 사용하는 것은 좋은 방법이 아니다. For details see `extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`__ below.
 
 하지만 이러한 음식들에 대한 처리는 여전히 필요하다. 따라서 AndroidAPS 2.0이상에서 확장 bolus/eCarbs 기능을 지원한다.
 
@@ -26,8 +26,7 @@ To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the t
 
 -----
 
-이 기능으로 지방/단백질을 처리하는 방법은 여기에 설명되어 있다.
-`https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html <https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html>`_
+A way to handle fat and protein with that feature is described here: `https://adriansloop.blogspot.com/2018/04/page-margin-0.html <https://adriansloop.blogspot.com/2018/04/page-margin-0.html>`_
 
 -----
 
