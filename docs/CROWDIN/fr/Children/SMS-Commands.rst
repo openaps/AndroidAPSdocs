@@ -44,8 +44,8 @@ Code PIN obligatoire à la fin de l'OTP
 * Règles du code PIN :
 
   * 3 à 6 chiffres
-  * not same digits (i.e. 1111)
-  * not in a row (i.e. 1234)
+  * ne pas utiliser les mêmes chiffres (par ex. 1111)
+  * ne pas utiliser des chiffres qui se suivent (par ex. 1234)
 
 Configuration de l'Authentificateur
 -------------------------------------------------
@@ -70,7 +70,7 @@ Configuration de l'Authentificateur
 
 Utiliser les commandes SMS
 ==================================================
-* Envoyez depuis votre/vos numéro(s) de téléphone approuvé(s) un SMS au téléphone ayant AndroidAPS lancé en utilisant l'une des `commandes <../Children/SMS-Commands.html#id1>`_ ci-dessous. 
+* Envoyez depuis votre/vos numéro(s) de téléphone approuvé(s) un SMS au téléphone ayant AndroidAPS lancé en utilisant l'une des `commandes <../Children/SMS-Commands.html#id1>`__ ci-dessous. 
 * Le téléphone AAPS répondra pour confirmer le succès de la commande ou du statut demandé. 
 * Confirmez la commande en envoyant le code si nécessaire. Par exemple :
 
@@ -111,7 +111,7 @@ Données MGC
   * Réponse: Dernière G: 5,6 il y a 4 min, Delta: 2 mmol, IA: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
   * Réponse : Pour envoyer la calibration 5.6, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
-  * Response after correct code was received: Calibration sent (**If xDrip is installed. L'acceptation des calibrations doit être activée dans xDrip+**)
+  * Réponse après réception du code correct : Étalonnage envoyé. La réception doit être activée dans xDrip. (**Si xDrip est installé. L'acceptation des calibrations doit être activée dans xDrip+**)
 
 Basal
 --------------------------------------------------
@@ -180,7 +180,7 @@ Autres
 * HELP BOLUS
   * Réponse : BOLUS 1.2 BOLUS 1.2 MEAL
 
-Troubleshooting
+Résolution de problèmes
 ==================================================
 SMS multiples
 --------------------------------------------------
@@ -189,7 +189,7 @@ Si vous recevez toujours le même message (par ex. changement de profil) vous av
 Si l'autre application est installée sur plusieurs téléphones assurez-vous de désactiver le téléchargement NS sur chacun d'eux.
 
 Les commandes SMS ne fonctionnent pas sur des téléphones Samsung
-----------------------------------------------------------------
+--------------------------------------------------
 Il y a eu un signalement sur les commandes SMS s'arrêtant après une mise à jour sur le téléphone Galaxy S10. Peut être résolu en désactivant 'envoyer en tant que message chat'.
 
 .. image:: ../images/SMSdisableChat.png
