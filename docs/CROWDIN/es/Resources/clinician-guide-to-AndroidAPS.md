@@ -8,7 +8,7 @@ Esta guía tiene alguna información de alto nivel sobre el lazo cerrado de DIY 
 
 Para empezar a utilizar AndroidAPS, se deben realizar los pasos siguientes:
 
-* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../index.rst#getting-started).
+* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../index#getting-started).
 * [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
 * [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.rst#configuration).
 
@@ -77,11 +77,11 @@ En este ejemplo, AndroidAPS ve que BG está subiendo muy por encima del objetivo
 
 ### Optimización de valores y realización de cambios
 
-Como un profesional clínico que no tiene experiencia con AndroidAPS o lazos cerrados DIY, es posible que le sea difícil ayudar a su paciente a optimizar su configuración o a realizar cambios para mejorar sus resultados. Tenemos varias herramientas y [guías](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) en la comunidad que ayudan a los pacientes a realizar ajustes pequeños y probados para mejorar sus ajustes.
+Como un profesional clínico que no tiene experiencia con AndroidAPS o lazos cerrados DIY, es posible que le sea difícil ayudar a su paciente a optimizar su configuración o a realizar cambios para mejorar sus resultados. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
 
 Lo más importante para los pacientes es hacer un cambio a la vez, y observar el impacto durante 2-3 días antes de elegir cambiar o modificar otro valor (a menos que sea obviamente un mal cambio que empeore las cosas, en cuyo caso deberían revertir inmediatamente a la configuración anterior). La tendencia humana es cambiar todo a la vez; pero si alguien lo hace, entonces se puede acabar con la configuración subóptima para el futuro, y les resulta difícil volver a un estado bueno conocido.
 
-Una de las herramientas más potentes para realizar los cambios de configuración es una herramienta de cálculo automatizada para las tasas basales, ISF y coeficiente de carbohidratos. Esto se llama "[Autoajuste](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)". Está diseñado para que se ejecute de forma independiente/manualmente, y permita que los datos le guíen a usted o a su paciente en la realización de cambios incrementales en los valores. Es la mejor práctica en la comunidad ejecutar (o revisar) los informes de Autoajuste primero, antes de intentar realizar ajustes manuales en los valores. Con AndroidAPS, Autoajustar se ejecutará como un "sistema separado", aunque hay esfuerzos en curso para incorporarlo directamente a AndroidAPS también. Dado que estos parámetros son un pre-requesito tanto para la entrega de insulina de la bomba estándar como para la entrega de insulina de lazo cerrado, la discusión de los resultados del autoajuste y el ajuste de estos parámetros sería el enlace natural con el médico.
+Una de las herramientas más potentes para realizar los cambios de configuración es una herramienta de cálculo automatizada para las tasas basales, ISF y coeficiente de carbohidratos. This is called “[Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)”. Está diseñado para que se ejecute de forma independiente/manualmente, y permita que los datos le guíen a usted o a su paciente en la realización de cambios incrementales en los valores. Es la mejor práctica en la comunidad ejecutar (o revisar) los informes de Autoajuste primero, antes de intentar realizar ajustes manuales en los valores. Con AndroidAPS, Autoajustar se ejecutará como un "sistema separado", aunque hay esfuerzos en curso para incorporarlo directamente a AndroidAPS también. Dado que estos parámetros son un pre-requesito tanto para la entrega de insulina de la bomba estándar como para la entrega de insulina de lazo cerrado, la discusión de los resultados del autoajuste y el ajuste de estos parámetros sería el enlace natural con el médico.
 
 Adicionalmente, el comportamiento humano (aprendido de la forma manual de la diabetes) a menudo influye en los resultados, incluso con un lazo cerrado de DIY. Por ejemplo, si se pronostica que BG va bajo y AndroidAPS reduce la insulina en el camino hacia abajo, sólo puede ser necesaria una pequeña cantidad de carbohidratos (por ejemplo, carbohidratos de 3-4g) para llevar a BG arriba de 70 mg/dl (3,9 mmol). Sin embargo, en muchos casos, alguien puede optar por tratar con muchos más carbohidratos (por ejemplo, apegarse a la regla de los 15), lo que causará un aumento más rápido resultante de la glucosa extra y porque la insulina se ha reducido en el período de tiempo que conduce a la baja.
 
@@ -95,7 +95,7 @@ Esto tiene como objetivo ser una visión general de alto nivel sobre cómo funci
 
 Lectura recomendada adicional:
 
-* La documentación [completa de AndroidAPS](http://androidaps.readthedocs.io/en/latest/EN/index.html)
+* The [full AndroidAPS documentation](../index)
 * La publicación [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), que explica cómo se ha diseñado OpenAPS para la seguridad: https://openaps.org/reference-design/
-* La documentación [completa de AndroidAPS](http://openaps.readthedocs.io/en/latest/index.html) 
-  * Más [detalles sobre los cálculos de OpenAPS](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+* The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html) 
+  * More [details on OpenAPS calculations](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
