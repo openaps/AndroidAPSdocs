@@ -18,7 +18,7 @@
 
 Πρώτον, χρειάζονται τα εξής (hardware) **εξαρτήματα**:
 
-* Μία αντλία ινσουλίνης (Για περισσότερα δείτε τις [υποστηριζόμενες αντλίες ινσουλίνης](Pump-Choices.md)) 
+* A [supported insulin pump](./Pump-Choices.md), 
 * Ένα Android κινητό (Για iPhone κινητά, δείτε το [iOS Loop](Phones.md) ) 
 * [Ένα σύστημα συνεχούς καταγραφής γλυκόζης](../Configuration/BG-Source.rst). 
 
@@ -26,7 +26,7 @@
 
 Τρίτον, χρειάζεται να **ρυθμίσετε το λογισμικό** που θα χρησιμοποιήσετε: Το AndroidAPS και το σύστημα συνεχούς καταγραφής γλυκόζης (CGM) ή το σύστημα παρακολούθησης γλυκόζης με τεχνολογία Flash (FGM).
 
-Τέταρτον, χρειάζεται να μάθετε και **να καταλάβετε το πως λειτουργεί το OpenAPS** ώστε να μπορείτε να ελέγχετε την αγωγή που ακολουθείτε. Η κύρια αρχή λειτουργίας του looping βασίζεται στην ακρίβεια του βασικού ρυθμού και των στοιχείων των υδατανθράκων που καταναλώνετε. Όλες οι προτάσεις προϋποθέτουν ότι ο βασικός ρυθμός ινσουλίνης καλύπτει τις αντίστοιχες ανάγκες σας. Συνεπώς, οι αυξομειώσεις που μπορεί να προκύπτουν οφείλονται σε άλλους λόγους, όπως είναι το άγχος, η άσκηση κ. λπ., και για αυτό απαιτούνται επιπλέον ρυθμίσεις. Οι ρυθμίσεις που μπορεί να κάνει το κλειστό κύκλωμα έχουν περιοριστεί λόγο ασφάλειας (δείτε το μέγιστο επιτρεπόμενο προσωρινό βασικό ρυθμό στο [ OpenAPS Reference Design ](https://openaps.org/reference-design/)), πράγμα που σημαίνει ότι δεν θέλετε να χάσετε την επιτρεπόμενη δοσολογία στη διόρθωση ενός λάθους βασικού. Αν, για παράδειγμα, έχετε συχνά χαμηλές μετρήσεις στην προσέγγιση ενός γεύματος, τότε είναι πιθανό να πρέπει να προσαρμόσετε τις βασικές σας ανάγκες. Μπορείτε να χρησιμοποιήσετε το [autotune ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) για να εξετάσετε ένα μεγάλο σύνολο δεδομένων για να υποδείξετε εάν και πώς πρέπει να προσαρμοστεί ο βασικός και / ή τα ISF και επίσης αν πρέπει να αλλάξετε το λόγο υδατανθράκων. Ή μπορείτε να κάνετε δοκιμές και να ρυθμίσετε το βασικό ρυθμό με τον [παραδοσιακό τρόπο](http://integrateddiabetes.com/basal-testing/).
+Τέταρτον, χρειάζεται να μάθετε και **να καταλάβετε το πως λειτουργεί το OpenAPS** ώστε να μπορείτε να ελέγχετε την αγωγή που ακολουθείτε. Η κύρια αρχή λειτουργίας του looping βασίζεται στην ακρίβεια του βασικού ρυθμού και των στοιχείων των υδατανθράκων που καταναλώνετε. Όλες οι προτάσεις προϋποθέτουν ότι ο βασικός ρυθμός ινσουλίνης καλύπτει τις αντίστοιχες ανάγκες σας. Συνεπώς, οι αυξομειώσεις που μπορεί να προκύπτουν οφείλονται σε άλλους λόγους, όπως είναι το άγχος, η άσκηση κ. λπ., και για αυτό απαιτούνται επιπλέον ρυθμίσεις. Οι ρυθμίσεις που μπορεί να κάνει το κλειστό κύκλωμα έχουν περιοριστεί λόγο ασφάλειας (δείτε το μέγιστο επιτρεπόμενο προσωρινό βασικό ρυθμό στο [ OpenAPS Reference Design ](https://openaps.org/reference-design/)), πράγμα που σημαίνει ότι δεν θέλετε να χάσετε την επιτρεπόμενη δοσολογία στη διόρθωση ενός λάθους βασικού. Αν, για παράδειγμα, έχετε συχνά χαμηλές μετρήσεις στην προσέγγιση ενός γεύματος, τότε είναι πιθανό να πρέπει να προσαρμόσετε τις βασικές σας ανάγκες. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
 ## Ποιες είναι οι πρακτικές του κυκλώματος που έχω;
 
@@ -66,10 +66,10 @@
 
 Υπάρχουν διάφορα αγγλικά blogs που έχουν συμβουλές για να καταλάβεις καλύτερα το "κύκλωμα":
 
-* [Fine-tuning Settings](http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-* [Why DIA matters](http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
+* [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
+* [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
 * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-* [Hormones and autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+* [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
 ## Τι εξοπλισμό προτείνεται να έχω μαζί μου για περιπτώσεις έκτακτης ανάγκης;
 
@@ -202,7 +202,7 @@ In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a para
 
 ### Γιατί να χρησιμοποιείτε κατ ελάχιστο. 5 ώρες DIA (χρόνος λήξης ινσουλίνης) αντί για 2-3 ώρες;
 
-Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
+Well explained in [this article](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
 
 ### Τι προκαλεί το κύκλωμα να χαμηλώνει συχνά το BG μου σε υπογλυκαιμικές τιμές χωρίς COB;
 
