@@ -35,7 +35,7 @@ Normalement, AAPS détecte l'absorption des glucides par des écarts de glycémi
 .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
   :alt: soupçon de GA erronés
 
-In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  Cela signifie que vous avez peut-être moins de glucides actifs que calculé par l'algorithme. 
+Dans la capture d'écran ci-dessus, 41% du temps l'absorption de glucides a été mathématiquement calculée par le min_5m_carbimpact au lieu de la valeur détectée par les variations de GLY.  Cela signifie que vous avez peut-être moins de glucides actifs que calculé par l'algorithme. 
 
 Comment gérer cet avertissement ? 
 --------------------------------------------------
