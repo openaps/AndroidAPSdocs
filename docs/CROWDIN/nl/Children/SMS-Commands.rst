@@ -70,7 +70,7 @@ Authentificatie instellingen
 
 SMS-commando's gebruiken
 ==================================================
-* Stuur een SMS naar de telefoon met AndroidAPS die draait vanaf je goedgekeurde telefoonnummer(s) met behulp van een van de `commando's<../Children/SMS-Commands.html#commandos>`_ hieronder. 
+* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands <../Children/SMS-Commands.html#commands>`__ below. 
 * De AAPS telefoon zal bevestigen dat de opgevraagde opdracht is uitgevoerd of dat de status succesvol is aangevraagd. 
 * Bevestig de opdracht door de code indien nodig te verzenden. Voorbeeld:
 
@@ -189,7 +189,7 @@ Als je hetzelfde bericht steeds opnieuw ontvangt (d.w.z. profiel wissel) dan heb
 Als de andere app is geïnstalleerd op meerdere telefoons, zorg ervoor dat upload is uitgeschakeld bij al die telefoons.
 
 SMS-commando's doen het niet op mijn Samsung, wat nu?
------------------------------------------------------
+--------------------------------------------------
 Er is een melding gemaakt van SMS-commando's die niet meer werkten na een update op een Galaxy S10 telefoon. Dit kon worden opgelost door 'verzenden als chatbericht' uit te schakelen.
 
 .. image:: ../images/SMSdisableChat.png
