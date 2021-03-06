@@ -5,7 +5,8 @@ You can find troubleshooting info on many pages in the wiki. This page is a coll
 Additional useful information might also be available in the `FAQ <../Getting-Started/FAQ.html>`_.
 
 AndroidAPS app
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+
 Building & updating
 -------------------
 * `Lost keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
@@ -30,7 +31,7 @@ Użytkowanie
 * `SMS commands <../Children/SMS-Commands.html#troubleshooting>`_
 
 CGM
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 * `General <../Hardware/GeneralCGMRecommendation.html#troubleshooting>`_
 * `Dexcom G6 <../Hardware/DexcomG6.html#troubleshooting-g6>`_
 * `Libre 2 <../Hardware/Libre2.html#experiences-and-troubleshooting>`_
@@ -38,7 +39,7 @@ CGM
 * `xDrip - Dexcom troubleshooting <../Configuration/xdrip.html#troubleshooting-dexcom-g5-g6-and-xdrip>`_
 
 Pumps
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#dana-rs-specific-errors>`_
 * `Accu-Chek Combo general <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_
 * `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#why-does-pairing-with-the-pump-not-work-with-the-app-ruffy>`_
@@ -46,10 +47,10 @@ Pumps
 * `Medtronic + RileyLink <../Configuration/MedtronicPump.html#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump>`_
 
 Telefony
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 * `Jelly <../Usage/jelly.html>`_
 * `Huawei bluetooth & battery optimization <../Usage/huawei.html>`_
 
 Smartwaches
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 * `Sony Smartwatch 3 <../Usage/SonySW3.html>`_
