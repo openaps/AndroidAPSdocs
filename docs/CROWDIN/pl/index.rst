@@ -18,8 +18,11 @@ Aby uzyskać więcej informacji, czytaj dalej.
    :maxdepth: 1
    :glob:
    :caption: Change language
-   Change language <changelanguage.rst>
-   
+
+   Change language <./changelanguage.rst>
+
+.. _getting-started:
+
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -28,7 +31,10 @@ Aby uzyskać więcej informacji, czytaj dalej.
    Bezpieczeństwo przede wszystkim <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Pump choices <./Getting-Started/Pump-Choices.md>
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+
+.. _what-do-i-need:
 
 .. toctree::
    :maxdepth: 1
@@ -51,6 +57,8 @@ Aby uzyskać więcej informacji, czytaj dalej.
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Wersja developerska <./Installing-AndroidAPS/Dev_branch.md>
 
+.. _component-setup:
+
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -62,6 +70,8 @@ Aby uzyskać więcej informacji, czytaj dalej.
    Telefony <./Hardware/Phoneconfig.rst>
    Konfiguracja Nightscout <./Installing-AndroidAPS/Nightscout.md>
    Zegarki/Smartwatche  <./Hardware/Smartwatch.rst>
+
+.. _configuration:
 
 .. toctree::
    :maxdepth: 1
@@ -99,6 +109,7 @@ Aby uzyskać więcej informacji, czytaj dalej.
    Dostęp do pliku logu <./Usage/Accessing-logfiles.md>
    Wskazówki dotyczące podstawowego użytkowania Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Eksport/Import wstawień <./Usage/ExportImportSettings.rst>
+   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
@@ -115,6 +126,7 @@ Aby uzyskać więcej informacji, czytaj dalej.
    :caption: Troubleshooting
 
    Troubleshooting <./Usage/troubleshooting.rst>
+   Nightscout client <./Usage/Troubleshooting-NSClient.md>
 
 .. toctree::
    :maxdepth: 1
@@ -166,4 +178,4 @@ Aby uzyskać więcej informacji, czytaj dalej.
 
 	* Wszystkie nazwy produktów i firm, znaki handlowe, znaki serwisowe, zastrzeżone znaki handlowe i zastrzeżone znaki serwisowe są własnością ich odpowiednich właścicieli. Ich wykorzystanie służy celom informacyjnym i nie oznacza żadnego powiązania z nimi ani poparcia.
 
-	Uwaga - ten projekt nie jest powiązany i nie jest popierany przez: `SOOIL <http://www.sooil.com/eng/>` _, `Dexcom <http://www.dexcom.com/>` _, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>` _ lub `Medtronic <http://www.medtronic.com/>` _
+	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_
