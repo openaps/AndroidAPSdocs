@@ -17,7 +17,7 @@ Dexcom G6
 * Η προ-εμβάπτιση του G6 με εργοστασιακή βαθμονόμηση είναι πιθανό να προκαλέσει διακύμανση στα αποτελέσματα. Αν κάνετε προ-εμβάπτιση, τότε για να έχετε τα καλύτερα αποτελέσματα, πιθανόν να χρειαστεί να βαθμονομήσετε τον αισθητήρα.
 * Αν δεν είστε προσεκτικοί σχετικά με τις αλλαγές που ενδεχομένως να πραγματοποιηθούν, ίσως είναι καλύτερο να επιστρέψετε στη μη βαθμονομημένη από το εργοστάσιο λειτουργία και να χρησιμοποιήσετε το σύστημα όπως το G5.
 
-Για να μάθετε περισσότερα σχετικά με τις λεπτομέρειες και τους λόγους που γίνονται αυτές οι συστάσεις διαβάστε το πλήρες άρθρο <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/> που δημοσιεύτηκε από την Tim Street στο www.diabettech.com <http://www.diabettech.com>`_.
+To learn more about the details and reasons for these recommendations read the `complete article <https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ published by Tim Street at `www.diabettech.com <https://www.diabettech.com>`_.
 
 If using G6 with xDrip+
 ==================================================
@@ -26,11 +26,11 @@ If using G6 with xDrip+
 * If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
 * If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
-* Προσαρμογή των ρυθμίσεων στο xDrip + σύμφωνα με τη σελίδα ρυθμίσεων xDrip + <../ Configuration / xdrip.html> `_
-* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`__.
 
 Εάν χρησιμοποιείτε το G6 με την εφαρμογή patched Dexcom
-=======================================================
+==================================================
 * Κάντε λήψη του apk από <https://github.com/dexcomapp/dexcomapp> https://github.com/dexcomapp/dexcomapp και επιλέξτε την έκδοση που ταιριάζει στις ανάγκες σας (mg / dl ή mmol / l, G6).
 
   * Folder 2.4 for users of the current version, folder 2.3 is only for the outdated AndroidAPS 2.3.
@@ -38,8 +38,8 @@ If using G6 with xDrip+
   * Click the link to the Dexcom G6 app on the search results page that is displayed.
   * Region will be visible in URL.
 
-   .. εικόνα:: ../images/DexcomG6regionURL.PNG
-     :alt: Περιοχή Dexcom G6 URL
+  .. εικόνα:: ../images/DexcomG6regionURL.PNG
+    :alt: Περιοχή Dexcom G6 URL
 
 * Uninstall the original Dexcom app.
 * Εγκαταστήστε το κατεβασμένο apk
@@ -92,5 +92,5 @@ General troubleshoothing
 General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
 
 Νέος πομπός με αισθητήρα λειτουργίας που λειτουργούσε
------------------------------------------------------
+--------------------------------------------------
 Εάν συμβεί να αλλάξετε τον πομπό κατά τη διάρκεια μιας περιόδου λειτουργίας του αισθητήρα, μπορεί να προσπαθήσετε να αφαιρέσετε τον πομπό χωρίς να καταστρέψετε τη βάση του αισθητήρα. Ένα βίντεο μπορεί να βρεθεί στο `https://youtu.be/AAhBVsc6NZo <https://youtu.be/AAhBVsc6NZo>`_.
