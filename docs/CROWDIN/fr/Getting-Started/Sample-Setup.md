@@ -18,12 +18,12 @@ Néanmoins, les données sont automatiquement envoyées à Nightscout "in the cl
 
 1. Samsung Galaxy S7
     
-    * Alternatives : voir [liste des téléphones et montres testés](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) pour AndroidAPS
+    * Alternatives : voir [liste des téléphones et montres testés](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) pour AndroidAPS
 
 2. [DanaRS](http://www.sooil.com/eng/product/)
     
     * Alternatives: 
-    * [Accu-Check Combo](../Configuration/Accu-Chek-Combo-Pump.md)
+    * [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
     * [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
     * [DanaR](../Configuration/DanaR-Insulin-Pump.md)
     * [Quelques anciennes pompes Medtronic (également nécessaire : RileyLink/Gnarl hardware, téléphone Android avec bluetooth low energy / BLE-chipset)](../Configuration/MedtronicPump.md)
@@ -35,7 +35,7 @@ Néanmoins, les données sont automatiquement envoyées à Nightscout "in the cl
 
 4. Optionnel : Sony Smartwatch 3 (SWR50)
     
-    * Alternatives : Toutes les [montres avec Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) devraient fonctionner correctement, pour plus de détails, voir la [liste des téléphones et montres testés](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) pour AndroidAPS (l'OS doit être Android Wear ou Wear OS)
+    * Alternatives : Toutes les [montres avec Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) devraient fonctionner correctement, pour plus de détails, voir la [liste des téléphones et montres testés](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) pour AndroidAPS (l'OS doit être Android Wear ou Wear OS)
 
 ## Configuration de Nightscout
 
@@ -75,7 +75,7 @@ Les services de géolocalisation ("GPS") doivent être activés pour que Bluetoo
 
 L'application Dexcom originale du Google Play Store ne fonctionnera pas parce qu'elle ne diffuse pas de valeurs vers d'autres applications. Par conséquent, une version légèrement modifiée par la communauté est nécessaire. Seule cette application Dexcom modifiée peut communiquer avec AAPS. De plus, l'application Dexcom modifiée peut être utilisée avec tous les smartphones Android et non pas seulement ceux de [la liste de compatibilité Dexcom](https://www.dexcom.com/dexcom-international-compatibility).
 
-Une version en mmol/l et une version en mg/dl de l'application Dexcom G6 patchée sont disponibles ici <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. Vous devez choisir [l'application G6 correspondant à votre région](../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee).
+Une version en mmol/l et une version en mg/dl de l'application Dexcom G6 patchée sont disponibles ici <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. Vous devez choisir [l'application G6 correspondant à votre région](../Hardware/DexcomG6#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee).
 
 Pour ce faire, effectuez les étapes suivantes sur votre smartphone :
 
@@ -95,8 +95,8 @@ Pour ce faire, effectuez les étapes suivantes sur votre smartphone :
 
 ## Installer AndroidAPS
 
-1. Suivez les instructions de [construire l'APK](../Installing-AndroidAPS/Building-APK.html#generer-un-apk-signe)
-2. [Transférez](../Installing-AndroidAPS/Building-APK.html#transferer-le-fichier-apk-sur-le-smartphone) l'APK généré sur votre téléphone
+1. Suivez les instructions de [construire l'APK](../Installing-AndroidAPS/Building-APK#generer-un-apk-signe)
+2. [Transférez](../Installing-AndroidAPS/Building-APK#transferer-le-fichier-apk-sur-le-smartphone) l'APK généré sur votre téléphone
 3. [Configurez AndroidAPS](../Configuration/Config-Builder.md) selon vos besoins en utilisant l'assistant de configuration ou manuellement
 4. Dans cet exemple de configuration, nous avons utilisé (entre autres)
 
@@ -104,7 +104,7 @@ Pour ce faire, effectuez les étapes suivantes sur votre smartphone :
 
 ![Paramètres G5](../images/SampleSetupG5Settings.png)
 
-* NS Client activated (see [NS Client](../Configuration/Config-Builder#ns-profile) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
+* NS Client activé (voir [NS Client](../Configuration/Config-Builder#profil-ns) et [Configuration de Nightscout](../Installing-AndroidAPS/Nightscout.md))
 
 ## Installer xDrip+
 
@@ -138,13 +138,13 @@ Sur votre Samsung Galaxy S7 allez dans Menu > Paramètres > Maintenance de l'app
 
 ## Optionnel : Configurer la Sony Smartwatch 3 (SWR50)
 
-Avec une montre Android Wear, vivre avec son diabète peut être encore plus discrèt. The watch can be used to display the current glucose level, the status of the loop etc. sur le poignet. La montre peut même être utilisée pour contrôler AndroidAPS (par ex. pour lancer discrètement un bolus de repas). Pour ce faire, appuyez deux fois sur la valeur MGC du cadran d'AAPSv2. Le SWR50 fonctionne généralement pour une journée complète jusqu'à ce que la batterie ait besoin d'être rechargée (même chargeur que le Samsung Galaxy S7 : microUSB).
+Avec une montre Android Wear, vivre avec son diabète peut être encore plus discrèt. La montre peut être utilisée pour afficher le niveau de glycémie actuel, l'état de la boucle, etc sur le poignet. La montre peut même être utilisée pour contrôler AndroidAPS (par ex. pour lancer discrètement un bolus de repas). Pour ce faire, appuyez deux fois sur la valeur MGC du cadran d'AAPSv2. Le SWR50 fonctionne généralement pour une journée complète jusqu'à ce que la batterie ait besoin d'être rechargée (même chargeur que le Samsung Galaxy S7 : microUSB).
 
 ![Montres connectées](../images/SampleSetupSmartwatch.png)
 
-Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
+Pour plus d'informations sur les informations affichées sur le cadran, voir [ici](../Configuration/Watchfaces.md).
 
-* Install the app "Android Wear" on your smartphone via the Google Play Store and connect the smartwatch according to the instructions there.
+* Installez l'application "Android Wear" sur votre smartphone via le Google Play Store et connectez la smartwatch selon les instructions qui y sont données.
 * Dans AAPS, choisissez le menu hamburger (coin supérieur gauche) > Générateur de configuration > Général (en bas de la liste) > Wear > Activez sur le côté gauche, cliquez sur la roue crantée > Paramètres de Wear et activez `Commandes depuis la montre`
 * Sur votre montre: faites un appui long sur l'afficheur pour changer de cadran et sélectionnez `AAPSv2`
 * Si nécessaire redémarrer les deux appareils une fois.
