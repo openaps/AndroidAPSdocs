@@ -8,7 +8,7 @@ Funktioniert nur mit älteren Medtronic Pumpen (Details siehe weiter unten). Fun
 
 * * *
 
-So bald Du AAPS mit einer Medtronic Pumpe nutzt, bitten wir um Eintrag in diese [Liste](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit#gid=0). Damit wollen wir einen Eindruck gewinnen, welche Smartphones gut und welche nicht so gut (oder gar nicht) mit dem Treiber funktionieren. Es gibt dort ein Spalte "BT restart". Damit wollen wir abfragen, ob Du an Deinem Smartphone Bluetooth ein- und ausschalten kannst. Das kann man nutzen, wenn die Pumpe sich nicht mehr verbindet - was hin und wieder vorkommen kann. Falls Dir andere Schwierigkeiten auffallen, trage diese bitte in die Kommentarspalte ein.
+So bald Du AAPS mit einer Medtronic Pumpe nutzt, bitten wir um Eintrag in diese [Liste](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit). Damit wollen wir einen Eindruck gewinnen, welche Smartphones gut und welche nicht so gut (oder gar nicht) mit dem Treiber funktionieren. Es gibt dort ein Spalte "BT restart". Damit wollen wir abfragen, ob Du an Deinem Smartphone Bluetooth ein- und ausschalten kannst. Das kann man nutzen, wenn die Pumpe sich nicht mehr verbindet - was hin und wieder vorkommen kann. Falls Dir andere Schwierigkeiten auffallen, trage diese bitte in die Kommentarspalte ein.
 
 * * *
 
