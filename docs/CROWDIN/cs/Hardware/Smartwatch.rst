@@ -1,5 +1,5 @@
 Chytré hodinky
-**************
+*************
 
 Chytré hodinky jsou volitelné, ale pro některé uživatele velmi užitečné.
 Více informací naleznete zde:
@@ -10,7 +10,5 @@ Více informací naleznete zde:
    :glob:
    
    Seznam otestovaných telefonů a hodinek <../Getting-Started/Phones.md>
-   Phone background <../Getting-Started/Phones.html#phone-background>
    Watchfaces Wear OS <../Configuration/Watchfaces.md>
    Troubleshooting Sony Smartwatch SW 3 <../Usage/SonySW3.rst>
-   Pebble <../Configuration/Watchfaces.html#pebble>
