@@ -70,7 +70,7 @@ Konfiguration des Authentifikators
 
 SMS-Kommandos verwenden
 ==================================================
-* Sende eine SMS von Deiner/Deinen erlaubte/n Telefonnummer(n) an das Smartphone, das AndroidAPS ausgeführt und nutze dabei eines der `Kommandos <../Children/SMS-Commands.html#id1>`_ unten. 
+* Sende eine SMS von Deiner/Deinen erlaubte/n Telefonnummer(n) an das Smartphone, das AndroidAPS ausgeführt und nutze dabei eines der `Kommandos <../Children/SMS-Commands.html#id1>`__ unten. 
 * Das AAPS-Smartphone wird antworten, um sich die Durchführung des übermittelten Kommandos bestätigen zu lassen oder um den angeforderten Status zu übermitteln. 
 * Bestätige falls erforderlich die Durchführung des übermittelten Kommandos, indem Du den angegebenen Code zurücksendest. Beispiel:
 
@@ -189,7 +189,7 @@ Wenn Du die gleiche SMS immer und immer wieder empfängst (z.B. Profilwechsel), 
 Wenn die andere App auf mehreren Smartphones installiert ist, musst Du den Upload auf allen deaktivieren.
 
 SMS-Kommandos funktionieren nicht auf Samsung-Smartphones
----------------------------------------------------------
+--------------------------------------------------
 Es gab einen Hinweis, dass nach einem Update die SMS Kommandos auf einem Galaxy S10 nicht mehr funktioniert haben. Dies konnte durch Abschalten der Option 'als Chat Message senden' behoben werden.
 
 .. image:: ../images/SMSdisableChat.png
