@@ -1,13 +1,13 @@
-# List of tested Phones
+# Lista de Telefones testados
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
+Os usuários estão a criar uma [lista de telefones e relógios testados](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
-You can use filters to display particular pumps or phones but please set back to view all when you've finished looking, ready for the next person to view all.
+Você pode usar filtros para exibir algumas bombas ou telefones específicos, mas por favor volte a deixar tudo igual quando terminar de procurar, assim estará pronto para a próxima pessoa ver tudo.
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
+Para registar um telemóvel ou relógio que não esteja listado na folha de cálculo, por favor, preencha o [formulário](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
 
-Any problems with the spreadsheet please email hardware@androidaps.org, any donations of phone/watch models that still need testing please email donations@androidaps.org.
+Qualquer problema com a folha de cálculo por favor envie um e-mail para hardware@androidaps.org, qualquer doação de telefones/relógios que ainda precisem de teste, por favor envie um e-mail para donations@androidaps.org.
 
 # Fundo do Telefone
 
-![fundo do telefone](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
+![fundo do telefone](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> Se quiser decorar o seu telefone com mais AndroidAPS, pode baixar a sua imagem de fundo aqui: ![Fundo (wallpaper) em alta resolução.](../images/bg_phone_thump.jpg)
