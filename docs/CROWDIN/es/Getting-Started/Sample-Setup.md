@@ -18,7 +18,7 @@ Sin embargo, los datos se subirán automáticamente a Nightscout "en la nube" cu
 
 1. Samsung Galaxy S7
     
-    * Alternativas: véase [lista de teléfonos y relojes probados ](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) para AndroidAPS
+    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS
 
 2. [DanaRS](http://www.sooil.com/eng/product/)
     
@@ -35,7 +35,7 @@ Sin embargo, los datos se subirán automáticamente a Nightscout "en la nube" cu
 
 4. Opcional: Sony Smartwatch 3 (SWR50)
     
-    * Alternativas: Todos los relojes [con Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) deben funcionar bien, para detalles ver la lista [de teléfonos probados y relojes](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) para AndroidAPS (OS debe ser Android Wear)
+    * Alternatives: All [watches with Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) should work fine, for details see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS (OS must be Android Wear)
 
 ## Nightscout
 
