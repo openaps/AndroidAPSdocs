@@ -4,8 +4,8 @@ Segurança Em Primeiro Lugar
 ==================================================
 * O AndroidAPS permite que você controle um telefone remotamente através de SMS. Se os comandos por SMS estiverem ativos, lembre-se sempre de que o telemóvel configurado para estes comandos remotos pode ser roubado. Então, proteja-o sempre pelo menos através de um código PIN. A strong password or biometrics are recommended.
 * Additionally it is recommended to allow a `second phone number <#authorized-phone-numbers>`_ for SMS commands. So you can use second number to `temporary disable <#other>`_ SMS communicator in case your main remote phone gets lost or stolen.
-* O AndroidAPS responderá com uma mensagem de texto se os comandos remotos - como um bolus ou uma mudança de perfil - foram corretamente realizados.0//0. É aconselhável ao configurar que textos sejam enviados para, pelo menos, dois números de telefone distintos, para o caso de um dos telefones ser roubado.
-* ** Se o bolus for realizado através de Comandos SMS os hidratos de carbono (carbs) devem ser introduzidos através do Nightscout (NSClient, Website ...)! ** Se não o fizer a insulina ativa (IOB) seria correlacionada com hidratos restantes (COB) muito baixos, podendo levar o AAPS a não realizar um bolus de correção por assumir que insulina ativa (IOB) está demasiado elevada.
+* O AndroidAPS responderá com uma mensagem de texto se os comandos remotos - como um bólus ou uma mudança de perfil - foram corretamente realizados.0//0. É aconselhável ao configurar que textos sejam enviados para, pelo menos, dois números de telefone distintos, para o caso de um dos telefones ser roubado.
+* ** Se o bólus for realizado através de Comandos SMS os hidratos de carbono (carbs) devem ser introduzidos através do Nightscout (NSClient, Website ...)! ** Se não o fizer a insulina ativa (IOB) seria correlacionada com hidratos restantes (COB) muito baixos, podendo levar o AAPS a não realizar um bólus de correção por assumir que insulina ativa (IOB) está demasiado elevada.
 * As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
 
 Setup SMS commands
@@ -47,7 +47,7 @@ Additionally mandatory PIN at token end
   * not same digits (i.e. 1111)
   * not in a row (i.e. 1234)
 
-Authenticator setup
+Configuração do Autenticador
 -------------------------------------------------
 * Two-factor authentication is used to improve safety.
 * You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
@@ -70,7 +70,7 @@ Authenticator setup
 
 Use SMS commands
 ==================================================
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands <../Children/SMS-Commands.html#commands>`_ below. 
+* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands <../Children/SMS-Commands.html#commands>`__ below. 
 * The AAPS phone will respond to confirm success of command or status requested. 
 * Confirm command by sending the code where necessary. Example:
 
