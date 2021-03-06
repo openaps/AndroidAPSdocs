@@ -44,7 +44,7 @@
  <td><strong>Autosens</strong></td>
  <td>calcul de la sensibilité à l'insuline (pouvant varier selon l'exercice physique, les hormones etc).</td>
  <td>&nbsp;</td>
- <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
+ <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
  <td><strong>Azure</strong></td>
@@ -122,7 +122,7 @@
  <td><strong>DAI</strong></td>
  <td>Durée d'Action de l'Insuline</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insuline">Docs - types d'insulines</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Docs - types d'insulines</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td><strong>heure d'été</strong></td>
@@ -134,13 +134,13 @@
  <td><strong>eGLUC</strong></td>
  <td>"Glucides Etendus" - glucides mettant plusieurs heures à être assimilés (notamment avec beaucoup de graisses ou de protéines)<br>les bolus étendus que vous pourriez connaître da,s le cas d'une thérapie sous pompe à insuline n'ont pas beaucoup d'intérêt dans le cas d'une boucle fermée</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#glucides-etendus-eglucides">Docs - eGLUC</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">Cas d'utilisation des glucides étendus</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Docs - eGLUC</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">Cas d'utilisation des glucides étendus</a></td>
 </tr>
 <tr>
  <td><strong>MGF</strong></td>
  <td>Mesure de Glycémie Flash (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=Libre%201#source-gly">Docs - source Glycémie</a></td>
+ <td><a href="../Configuration/BG-Source.html">Docs - source Glycémie</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
@@ -320,7 +320,7 @@
  <td><strong>Détection de sensibilité</strong></td>
  <td>calcul de la sensibilité à l'insuline (pouvant varier selon l'exercice physique, les hormones etc).</td>
  <td>&nbsp;</td>
- <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
+ <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
  <td><strong>Bruit Capteur</strong></td>
@@ -386,7 +386,7 @@
  <td><strong>xDrip / xDrip+</strong></td>
  <td>logiciel open source pour lire les systèmes MGC (CGM)</td>
  <td>&nbsp;</td>
- <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip +</a> <br> <a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
+ <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip +</a> <br> <a href="https://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
  <td><strong>Zéro-temp</strong></td>
