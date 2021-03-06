@@ -29,7 +29,7 @@ Todėl, jei reikia, išjunkite automatizavimo taisykles, kai išjungiate ciklą.
 
 Where to find Automation
 --------------------------------------------------
-Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`__ in hamburger menu or as a tab.
 
 Bendrieji
 --------------------------------------------------
@@ -88,14 +88,14 @@ Pridėję savo veiksmus, **nepamirškite pakeisti numatytųjų reikšmių** spus
   :alt: Automatizavimo numatytosios prieš nustatytos reikšmės
 
 Rūšiuoti automatizavimo taisykles
----------------------------------
+---------------------
 Norint rūšiuoti automatizavimo taisykles, paspauskite ir palaikykite keturių linijų mygtuką ekrano dešinėje pusėje ir tempkite žemyn ar aukštyn.
 
 .. image:: ../images/Automation_Sort.png
   :alt: Rūšiuoti automatizavimo taisykles
   
 Ištrinti automatizavimo taisykles
----------------------------------
+-----------------------
 To delete an automation rule click on trash icon.
 
 .. image:: ../images/Automation_Delete.png
@@ -104,15 +104,15 @@ To delete an automation rule click on trash icon.
 Rekomendacijos ir išlygos
 ==================================================
 * Jei pirmą kartą naudojate automatizavimą arba kuriate naują taisyklę, taip pat turėtumėte įjungti pranešimą siuntimo taisyklę, kad būtumėte tikri, kad taisyklė veikia taip, kaip numatyta.
-* Stebėkite savo taisyklės rezultatus.
+* Watch the rule results.
 * Nenaudokite pernelyg paprastų sąlygų (pvz., jei KG> 80 mg/dl IR KG<180 mg/dl)
 
   ** Ypač svarbu, jei veiksmas keičia profilį! **
  
-* Stenkitės naudoti laikinus tikslus, o ne profilių keitimą. Laikini tikslai negrąžina `Autosens <../Usage/Open-APS-features.html#autosens>` _ reikšmės į 0.
+* Stenkitės naudoti laikinus tikslus, o ne profilių keitimą. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`__ back to 0.
 * Profilio pakeitimus naudokite saikingai ir tik kaip paskutinę galimybę.
 
-  * Pakeitus profilį, `Autosens <../Usage/Open-APS-features.html#autosens>`_ bus nenaudojamas mažiausiai 6 valandas.
+  * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`__ useless for a min of 6 hours.
 
 * Profilio pakeitimai automatiškai neatkuria jūsų profilio į standartinį
 
