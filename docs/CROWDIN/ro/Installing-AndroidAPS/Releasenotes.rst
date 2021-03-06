@@ -13,9 +13,9 @@ If you do not update for another 30 days (90 days from new release date) AAPS wi
 
 Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
 
-Version 2.8.2
+Versiunea 2.8.2
 ================
-Release date: 23-01-2021
+Data lansării: 23-01-2021
 
 * Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
 
@@ -28,9 +28,9 @@ Changes
 * NSClient fixes
 * Bolus advisor now works with Pumpcontrol and NSClient
 
-Version 2.8.1.1
+Versiunea 2.8.1.1
 ================
-Release date: 12-01-2021
+Data lansării: 12-01-2021
 
 Important hints
 ----------------------
@@ -53,9 +53,9 @@ Major changes
 * UI fixes and improvements
 * new translations
 
-Version 2.8.0
+Versiunea 2.8.0
 ================
-Release date: 01-01-2021
+Data lansării: 01-01-2021
 
 Important hints
 ----------------------
@@ -82,9 +82,9 @@ Major new features
 * Security improvements @dlvoy 
 * Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
 
-Version 2.7.0
+Versiunea 2.7.0
 ================
-Release date: 24-09-2020
+Data lansării: 24-09-2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`__.
 
@@ -120,9 +120,9 @@ Major new features
 * `Open Humans uploader <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
 * New documentation @Achim
 
-Version 2.6.1.4
+Versiunea 2.6.1.4
 ================
-Release date: 04-05-2020
+Data lansării: 04-05-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -131,9 +131,9 @@ Major new features
 * Insight: Disable vibration on bolus for firmware version 3 - second attempt
 * Otherwise is equal to 2.6.1.3. Update is optional. 
 
-Version 2.6.1.3
+Versiunea 2.6.1.3
 ================
-Release date: 03-05-2020
+Data lansării: 03-05-02020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -142,9 +142,9 @@ Major new features
 * Insight: Disable vibration on bolus for firmware version 3
 * Otherwise is equal to 2.6.1.2. Update is optional. 
 
-Version 2.6.1.2
+Versiunea 2.6.1.2
 ================
-Release date: 19-04-2020
+Data lansării: 19-04-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -153,9 +153,9 @@ Major new features
 * Fix crashing in Insight service
 * Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
 
-Version 2.6.1.1
+Versiunea 2.6.1.1
 ================
-Release date: 06-04-2020
+Data lansării: 06-04-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -164,15 +164,15 @@ Major new features
 * Resolves SMS CARBS command issue while using Combo pump
 * Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
 
-Version 2.6.1
+Versiunea 2.6.1
 ==============
-Release date: 21-03-2020
+Data lansării: 21-03-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Major new features
 ------------------
-* Allow to enter only https:// in NSClient settings
+* Allow to enter only ``https://`` in NSClient settings
 * Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
 * Fixed small UI bugs
 * Fixed Insight crashes
@@ -183,9 +183,9 @@ Major new features
 * Fixed NSClient connection settings (wifi, charging)
 * Fixed sending of calibrations to xDrip
 
-Version 2.6.0
+Versiunea 2.6.0
 ==============
-Release date: 29-02-2020
+Data lansării: 29-02-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -201,7 +201,7 @@ Major new features
   * Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
   * Veritical NumberPicker for targets
 * SimpleProfile is removed
-* `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
 * MDT plugin: Fixed bug with duplicated entries
 * Units are not specified in profile but it's global setting
 * Added new settings to startup wizard
@@ -220,17 +220,19 @@ Major new features
 * Android 10 alarm support
 * Tons on new translations
 
-Version 2.5.1
+Versiunea 2.5.1
 ==================================================
-Release date: 31-10-2019
+Data lansării: 31-10-2019
 
-Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
+Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
 * Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
 * New versioning that will allow to do minor updates without triggering the update-notification.
 
-Version 2.5.0
+Versiunea 2.5.0
 ==================================================
-Release date: 26-10-2019
+Data lansării: 26-10-2019
+
+.. _important-notes-2-5-0:
 
 Important notes
 --------------------------------------------------
@@ -256,17 +258,16 @@ Major new features
 * Rendering insulin activity
 * Adjusting IOB predictions by autosense result
 * New support for patched Dexcom apks (`2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
-* Signature verifier
+* Verificare semnătură
 * Allow to bypass objectives for OpenAPS users
 * New `objectives <../Usage/Objectives.html>`_ - exam, application handling
-   
-   (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
+  (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
 * Fixed bug in Dana* drivers where false time difference was reported
 * Fixed bug in `SMS communicator <../Children/SMS-Commands.html>`_
 
-Version 2.3
+Versiunea 2.3
 ==================================================
-Release date: 25-04-2019
+Data lansării: 25-04-2019
 
 Major new features
 --------------------------------------------------
@@ -281,9 +282,9 @@ Major new features
 * New Version-Checker
 
 
-Version 2.2.2
+Versiunea 2.2.2
 ==================================================
-Release date: 07-04-2019
+Data lansării: 07-04-2019
 
 Major new features
 --------------------------------------------------
@@ -293,9 +294,9 @@ Major new features
 * SMS plugin fix
 
 
-Version 2.2
+Versiunea 2.2
 ==================================================
-Release date: 29-03-2019
+Data lansării: 29-03-2019
 
 Major new features
 --------------------------------------------------
@@ -306,9 +307,9 @@ Major new features
 * Stop loop if phone disk is full
 
 
-Version 2.1
+Versiunea 2.1
 ==================================================
-Release date: 03-03-2019
+Data lansării: 03-03-2019
 
 Major new features
 --------------------------------------------------
@@ -323,12 +324,12 @@ Major new features
 
 Misc
 --------------------------------------------------
-* If you are using non default `smbmaxminutes` value you have to setup this value again
+* If you are using non default ``smbmaxminutes`` value you have to setup this value again
 
 
-Version 2.0
+Versiunea 2.0
 ==================================================
-Release date: 03-11-2018
+Data lansării: 03-11-2018
 
 Major new features
 --------------------------------------------------
