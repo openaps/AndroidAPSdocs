@@ -23,16 +23,16 @@ Tikslas 2: išmokite valdyti AndroidAPS
 * Norėdami pamatyti individualias užduotis, spustelėkite oranžinį tekstą „Dar nebaigta“.
 * Nuorodos į dokumentaciją padės jums tuo atveju, jei nebūsite užtikrinti vienu ar kitu vykdomu veiksmu.
 
-   .. image:: ../images/Objective2_V2_5.png
-     :alt: 2 tikslo ekrano vaizdas
+  .. image:: ../images/Objective2_V2_5.png
+    :alt: 2 tikslo ekrano vaizdas
 
 Objective 3: Prove your knowledge
 ==================================================
 * Atsakykite į testo klausimus su atsakymų variantais įvairiomis AndroidAPS temomis.
 * Spustelėkite oranžinį tekstą „Dar nebaigta“, kad eitumėte į klausimų ir atsakymų puslapį.
 
-   .. image:: ../images/Objective3_V2_5.png
-     :alt: 3 tikslo ekrano vaizdas
+  .. image:: ../images/Objective3_V2_5.png
+    :alt: 3 tikslo ekrano vaizdas
 
 * Nuorodos į dokumentaciją padės jums tuo atveju, jei nebūsite tokie tikri vienu ar kitu atsakymu.
 * The questions for objective 3 have been completely rewritten by native speakers as of AAPS 2.8. The new ones cover the same basic topics plus a few new ones.
@@ -52,8 +52,8 @@ Sumažinti pranešimų skaičių
 * Jei reikia naktį taip pat galite nustatyti aukštesnę viršutinę ribą arba visiškai pristabdyti atvirą ciklą. 
 * Nustatymuose galite nustatyti mažiausią procentą, kurį reikia pasiekti prieš pasiūlant pakeisti laikiną valandinę bazę.
 
-   .. image:: ../images/OpenLoop_MinimalRequestChange2.png
-     :alt: Atvirojo ciklo minimalaus pokyčio užklausa
+  .. image:: ../images/OpenLoop_MinimalRequestChange2.png
+    :alt: Atvirojo ciklo minimalaus pokyčio užklausa
      
 * Taip pat nereikia reaguoti į kiekvieną pasiūlymą kas penkias minutes...
 
@@ -96,40 +96,40 @@ Uždaras ciklas nekoreguos aukštos glikemijos 6 tiksle, nes jį apriboja sustab
 * Jums nereikia keisti nustatymų. Kol esate 6 tiksle, maksimalus aktyvaus insulino kiekis organizame automatiškai nustatomas ties nuliu. Šio parametro pakeitimas nuliu bus atšauktas, kai pasieksite 7 tikslą.
 * Sistema pakeis jūsų maxAIO nustatymus iki nulio, o tai reiškia, kad jei cukraus kiekis kraujyje krinta, tai gali sumažinti jūsų valandinę bazę, tačiau jei cukraus kiekis kraujyje didėja, valandinė bazė bus padidinta tik tuo atveju, jei bazės AIO yra neigiama (iš ankstesnio sustabdymo esant žemai glikemijai), kitu atveju, valandinė bazė išliks tokia pati kaip ir jūsų pasirinktas profilis.  
 
-   .. image:: ../images/Objective6_negIOB.png
-     :alt: Neigiamo AIO pavyzdys
+  .. image:: ../images/Objective6_negIOB.png
+    :alt: Neigiamo AIO pavyzdys
 
 * Jei jūsų bazės AIO yra neigiama (žr. viršuje pateiktą ekrano nuotrauką), 6 tiksle taip pat galima nustatyti laikiną bazė didesnę nei 100%.
 * Dėl to Jūs galite patirti laikinus staigius glikemijos šuolius, ypač po hipoglikemijos korekcijos, nes neturėsite galimybės padidinti valandinės bazės.
 
 Tikslas 7: koreguokite savo uždarąjį ciklą po truputį didindami maks AIO ir mažindami tikslinę glikemijos reikšmę
-=================================================================================================================
+====================================================================================================
 * Vienai dienai nustatykite „maksimalų bendrą AIO, kurio negalima viršyti“ (OpenAPS vadinamą „max-iob“) reikšmę, didesnę nei 0. Rekomenduojama numatytoji reikšmė yra „vidutinis valgio boliusas + 3 x didžiausia dienos valandinė bazė" (SMB algoritmui) arba 3x didžiausia dienos valandinė bazė (senesniam AMA algoritmui), tačiau turėtumėte palaipsniui artėkite prie šios reikšmės, kol sužinosite, kad nustatymas jums tinka (didžiausia dienos valandinė bazė = didžiausia valandinė bazė per visą paros laikotarpį).
 
   Ši rekomendacija turėtų būti laikoma atskaitos tašku. Jei naudosite koeficientą 3x ir pastebėsite, kad AAPS veikia per daug agresyviai, sumažinkite šį koeficientą (pvz., 2x, ...). Jei esate rezistentiškas, galite po truputį jį pakelti.
 
-   .. image:: ../images/MaxDailyBasal2.png
-     :alt: max daily basal
+  .. image:: ../images/MaxDailyBasal2.png
+    :alt: max daily basal
 
 * Nustačius jums tinkamo aktyvaus insulino kiekį, sumažinkite savo tikslinę glikemiją iki norimo lygio.
 
 
 Tikslas 8: jei reikia, koreguokite valandinės bazės reikšmes bei pagrindinius parametrus ir įgalinkite Autosens funkciją
-========================================================================================================================
+====================================================================================================
 * Galite naudoti `autotune įrankį <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_, kad patikrintumėte, ar jūsų baziniai nustatymai yra tikslūs, arba atlikti tradicinį bazės patikrinimo testą.
 * 7 dienoms įjunkite `Autosens <../Usage/Open-APS-features.html>`_ ir stebėkite baltą liniją, esančią pagrindinio ekrano grafike, nurodančią, kaip jūsų jautrumas insulinui didėja ar mažėja atsižvelgiant į aktyvumą, hormonų veiklą ir pan. taip pat galima analizuoti informaciją OpenAPS skirtuke, kad sužinotumėte, kaip AndroidAPS koreguoja nustatytą valandinę bazę ir/ar tikslinę glikemiją.
 
-* Kaip uždaro ciklo naudojotas, nepamirškite užsiregistruoti naudodamiesi `šia forma <http://bit.ly/nowlooping>`_, ir pažymėti, kad naudojatės AndroidAPS - „pasidaryk pats“ uždaro ciklo programine įranga.*
+*Don’t forget to record your looping in* `this form <https://bit.ly/nowlooping>`_ *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
 
 
 9 tikslas: Išbandykite papildomas kasdienio naudojimo funkcijas ir įgykite pasitikėjimą uždara ciklo sistema
-============================================================================================================
-* Iki AAPS 2.7 versijos maisto asistentas (MA) buvo pagrindinis AAPS algoritmas, o norint užbaigti 8 tikslą, reikėjo aktyvuoti `išmanųjį maisto asistentą AMA <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_.
-* Kadangi `išmanusis maisto asistentas AMA Advanced Advanced Assist Assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ yra jau standartinis algoritmas nuo AAPS 2.7 versijos, ateinančias 28-ias dienas išbandykite funkcijas, kurių dar nenaudojote, ir įgykite daugiau pasitikėjimo uždara ciklo sistema.
+====================================================================================================
+* Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`__.
+* As `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`__ is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
 
 
 Tikslas 10: dienos metu aktyvuokite papildomas oref1 funkcijas, tokias kaip super mikro bolusas (SMB)
-=====================================================================================================
+====================================================================================================
 * Turite perskaityti šios dokumentacijos `SMB skyrių <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ ir `oref1 skiltį openAPS dokumentacijoje <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_, kad suprastumėte kaip veikia SMB, ypač kokia yra nulinės bazės nustatymo idėja.
 * Tada turėtumėte `padidinti maxAIO <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_, kad SMB veiktų gerai. max AIO dabar apima visą AIO, ne tik pridėtą (pakeltą) valandinę bazę. Tai yra, jei valgymui suleidžiamas 8 vv boliusas, o maksAIO yra 7 vv, SMB nebus leidžiamas tol, kol AIO nenukris žemiau 7 vv. Galima pradėti nuo maxAIO = vidutinis maisto bolusas + 3x maksimali dienos valandinė bazė bet kuriuo paros metu (apie tai rašoma `7 tiksle <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_)
 * pereinant nuo AMA iki SMB, "min_5m_carbimpact" numatytasis absorbcijos parametras pakeičiamas nuo 3 iki 8. Jeigu Jūs pereinate nuo AMA į SMB, turite jį parametrą pakeisti rankiniu būdu.
