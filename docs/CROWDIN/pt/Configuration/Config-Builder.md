@@ -12,11 +12,11 @@ Onde existem configurações adicionais disponíveis dentro do módulo, pode cli
 
 ![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
 
-## Separador ou menu Hambúrguer
+## Aba ou menu Hambúrguer
 
-Com a caixa de seleção sob o símbolo de olho, você pode decidir como abrir a seção de programa correspondente.
+Com a caixa de seleção sob o símbolo de olho, pode decidir como abrir a seção de programa correspondente.
 
-![Separador ou menu Hambúrguer](../images/ConfBuild_TabOrHH.png)
+![Aba ou menu Hambúrguer](../images/ConfBuild_TabOrHH.png)
 
 ## Perfil
 
@@ -26,79 +26,79 @@ Selecione o perfil basal que prefere usar. Ver a página [Perfis](../Usage/Profi
 
 O perfil local usa o perfil basal inserido manualmente no telefone. Assim que é selecionado, aparece um novo separador em AAPS, onde é possivel alterar os dados do perfil lidos da bomba se necessário. Com o próximo interruptor de perfil eles são então escritos na bomba em perfil 1. Este perfil é recomendado pois não depende de ligação à internet.
 
-Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). So make sure to have a backup in a safe place.
+Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). Portanto, certifique-se de ter um backup num lugar seguro.
 
 ![Local Profile settings](../images/LocalProfile_Settings.png)
 
-Buttons:
+Botões:
 
-* green plus: add
-* red X: delete
-* blue arrow: duplicate
+* verde (+): adicionar
+* vermelho (X): excluir
+* seta azul (↷): duplicar
 
-If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile beeing used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+Se você fizer alguma alteração no seu perfil, certifique-se que está a editar o perfil correto. Na aba perfil nem sempre há a visualização do perfil a ser utilizado atualmente-por exemplo, se fez uma troca de perfil usando a guia do perfil no ecrã inicial, este pode ser diferente do perfil realmente mostrado na guia de perfil, já que não há conexão entre estes.
 
-#### Clone profile switch
+#### Fazer Mudança De Perfil
 
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+Pode facilmente criar um novo perfil local a partir da mudança de perfil. Neste caso o deslocamento temporal e percentagem serão aplicados ao novo perfil local.
 
-1. Go to treatments tab.
-2. Select ProfileSwitch.
-3. Press "Clone".
-4. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
+1. Vá para aba "tratamentos".
+2. Selecione Troca de Perfil.
+3. Pressione "Clone".
+4. Pode editar o novo perfil local na guia Perfil Local (PF) ou no menu do lado esquerdo
 
-![Clone profile switch](../images/LocalProfile_ClonePS.png)
+![Fazer Mudança De Perfil](../images/LocalProfile_ClonePS.png)
 
-If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
+Se deseja mudar de perfil do Nightscout para o perfil local basta fazer uma troca de perfil no seu perfil NS e clone a troca de perfil conforme descrito acima.
 
-#### Upload local profiles to Nightscout
+#### Enviar perfis locais para o Nightscout
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
+Os perfis locais também podem ser carregados para o Nightscout. As configurações podem ser encontradas em [preferências do NSClient](../Configuration/Preferences#nsclient).
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
 
-Advantage:
+Vantagens:
 
-* no internet connection necessary to change profile settings
-* profile changes can be made directly on the phone
-* new profile can be created from profile switch
-* local profiles can be uploaded to Nightscout
+* nenhuma conexão de internet necessária para alterar configurações de perfil
+* mudanças de perfil podem ser feitas diretamente no telefone
+* novo perfil pode ser criado a partir da Troca de Perfil
+* perfis locais podem ser enviados para o Nightscout
 
-Disadvantage:
+Desvantagens:
 
-* none
+* nenhuma
 
-### Profile helper
+### Assistente de Perfil
 
-Profile helper offers two functions:
+Assistentes de perfis oferecem duas funções:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. Encontre um perfil para crianças
+2. Compare dois perfis ou trocas de perfis de modo a clonar um novo perfil
 
-Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
+Mais detalhes são explicados na [página Assistente de Perfil ](../Configuration/profilehelper.rst).
 
-### NS Profile
+### Perfil NS
 
-NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+Perfil NS usa os perfis que guardou na sua página NightScout (https://[yournightscoutsiteaddress]/profile). Pode usar a [Troca de Perfil](../Usage/Profiles.md) para mudar o perfil que está ativo, esta grava o perfil para a bomba em caso de falha da AndroidAPS. Isto permite facilmente criar vários perfis no Nightscout (por exemplo, trabalho, casa, desporto, férias, etc.). Logo após clicar em "Salvar" serão transferidos para a AAPS se o seu smartphone estiver online. Mesmo sem uma ligação à Internet ou sem uma ligação Nightscout, os perfis de Nightscout estão disponíveis na AAPS uma vez sincronizados.
 
-Do a [profile switch](../Getting-Started/Screenshots.md#current-profile) to activate a profile from Nightscout. AAPS will write the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+Faça uma [Troca de perfil](../Getting-Started/Screenshots.md#current-profile) para ativar um perfil do Nightscout. A AAPS também escreve o perfil selecionado para a bomba após a mudança de perfil, para que ele esteja disponível sem a AAPS numa emergência e continue a ser executado.
 
-Advantage:
+Vantagens:
 
-* multiple profiles
-* easy to edit via PC or tablet
+* múltiplos perfis
+* fácil editar via PC ou tablet
 
-Disadvantage:
+Desvantagens:
 
-* no local changes to profile settings
-* profile cannot be changed directly on the phone
+* nenhuma alteração local para configurações de perfil
+* o perfil não pode ser alterado diretamente no telefone
 
 ## Insulina
 
 ![Insulin type](../images/ConfBuild_Insulin.png)
 
-* Select the type of insulin curve you are using.
-* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
+* Selecione o tipo de curva de insulina que está a utilizar.
+* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
 * The curves will vary based on the DIA and the time to peak.
     
     * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
@@ -106,35 +106,35 @@ Disadvantage:
 
 ### DIA
 
-* The DIA is not the same for each person. That's why you have to test it for yourself. 
-* But it must always be at least 5 hours.
-* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
-* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page. 
+* A Duração de Ação da Insulina (DIA) varia de pessoa para pessoa. É por isso que tem que experimentar e descobrir o seu. 
+* Mas deve ser sempre pelo menos 5 horas.
+* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. Este valor residual ainda pode ser visível durante o desporto, por exemplo. Por isso o AndroidAPS usa um DIA mínimo de 5h.
+* Pode ler mais sobre isto na seção Perfil de Insulina de [nesta página ](../Getting-Started/Screenshots#insulin-profile). 
 
 ### Insulin type differences
 
 * For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
 * Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
-* The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. 
-* You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
+* O gráfico da [curva de insulina](../Getting-Started/Screenshots#insulin-profile) ajuda a entender as diferentes curvas. 
+* Pode vê-lo ativando a caixa de seleção para mostrá-la como um separador, caso contrário estará no menu hamburger.
 
-#### Rapid-Acting Oref
+#### Oref Acção Rápida
 
-* recommended for Humalog, Novolog and Novorapid
-* DIA = at least 5.0h
-* Max. peak = 75 minutes after injection (fixed, not adjustable)
+* recomendado para Humalog, Novolog e Novorapid
+* DIA = pelo menos 5.0h
+* Máx. pico = 75 minutos após a administração (fixo, não ajustável)
 
 #### Ultra-Rapid Oref
 
-* recommended for FIASP
-* DIA = at least 5.0h
-* Max. peak = 55 minutes after injection (fixed, not adjustable)
+* recomendado para FIASP
+* DIA = pelo menos 5.0h
+* Máx. pico = 55 minutos após a administração (fixo, não ajustável)
 
 #### Lyumjev
 
 * special insulin profile for Lyumjev
-* DIA = at least 5.0h
-* Max. peak = 45 minutes after injection (fixed, not adjustable)
+* DIA = pelo menos 5.0h
+* Máx. peak = 45 minutes after injection (fixed, not adjustable)
 
 #### Free Peak Oref
 
@@ -154,7 +154,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
     
     ![Config Builder BG source](../images/ConfBuild_BGSource.png)
 
-* [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
+* [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
 
 * [Tomato App](http://tomato.cool/) for MiaoMiao device
 * Random BG: Generates random BG data (Demo mode only)
@@ -179,7 +179,7 @@ For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. 
 
 ## Detecção de Sensibilidade
 
-Select the type of sensitivity detection. For more details of different designs please [read on here](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Select the type of sensitivity detection. For more details of different designs please [read on here](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
@@ -191,7 +191,7 @@ If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value 
 
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) More detail about OpenAPS AMA can be found in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Loop
@@ -200,13 +200,13 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 ![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
 
-### Open Loop
+### Loop Aberto
 
 * AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. 
 * The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
 * This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
 
-### Closed Loop
+### Loop Fechado
 
 * AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). 
 * The Closed Loop works within numerous safety limits, which you can be set individually.
