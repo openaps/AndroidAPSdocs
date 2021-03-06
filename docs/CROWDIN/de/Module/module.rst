@@ -1,6 +1,6 @@
 Übersicht der Komponenten 
 **************************************************
-AndroidAPS ist nicht einfach eine (selbst erstellte) App, es ist eines von verschiedenen Modulen Deines Closed Loop Systems. Bevor Du Dich für die einzelnen Komponenten entscheidest, solltest Du einen Blick auf das `Komponenten-Setup <https://androidaps.readthedocs.io/en/dev/EN/index.html#komponenten-setup>`_, werfen..
+AndroidAPS ist nicht einfach eine (selbst erstellte) App, es ist eines von verschiedenen Modulen Deines Closed Loop Systems. Bevor du dich für Komponenten entscheidest, wäre es eine gute Idee, dir das 'Setup der verschiedenen Komponenten < ../index.html#component-setup> `_ anzuschauen.
    
 .. image:: ../images/modules.png
   :alt: Übersicht der Komponenten
@@ -17,7 +17,7 @@ AndroidAPS ist nicht einfach eine (selbst erstellte) App, es ist eines von versc
 Erforderliche Komponenten
 ==================================================
 Gute individuelle Profileinstellungen für Deine Diabetes-Therapie
------------------------------------------------------------------
+----------------------------------------------------------
 Obwohl Du es weder kaufen noch einfach erstellen kannst, ist dies wahrscheinlich das Modul, das am meisten unterschätzt wird, obwohl es für einen funktionieren Loop absolut wesentlich ist. Wenn Dich der Algorithmus bei Deinem Diabetes-Management unterstützen soll, benötigt dieser die korrekten Einstellungen um keine schwerwiegenden Fehlentscheidungen zu treffen.
 Auch wenn Dir andere Module noch fehlen, kannst Du Dein bestehendes 'Profil' zusammen mit Deinem Diabetes-Team überprüfen und anpassen. 
 Die meisten Looper verwenden eine sogenannte zirkadiane Basalrate, Korrektur- und KH-Faktoren die sich an der hormonellen Insulinempfindlichkeit im Tagesverlauf orientieren.
@@ -119,7 +119,7 @@ Eine Schritt-für-Schritt-Anleitung findest Du im Sample Setup. Dieses ist schon
 
 .. toctree::
    :maxdepth: 1
-       
+   :glob:
    
    Sample Setup <../Getting-Started/Sample-Setup.rst>
  
@@ -128,7 +128,7 @@ Wartezeit überbrücken
 ==================================================
 Manchmal dauert es eine Weile, um alle Module für den Closed Loop zusammen zu bekommen. Aber keine Sorge, es gibt viele Dinge, die Du in der Zwischenzeit machen kannst. Es ist ABSOLUT WICHTIG, Deine Basalrate (BR), die KH-Faktoren (IC), Korrekturfaktoren (ISF) etc. intensiv zu prüfen und ggf. anzupassen. Der Open Loop ist zudem eine sehr gute Möglichkeit, das System kennenzulernen und mit AndroidAPS vertraut zu werden. Im Open Loop gibt AndroidAPS Behandlungsempfehlungen, die Du manuell umsetzen musst.
 
-Du kannst Dich weiter durch das Wiki arbeiten, online und offline mit anderen Loopern in Kontakt treten, weitere `Hintergrundinfos <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ oder Berichte von anderen Loopern lesen. Sei aber vorsichtig, nicht alle Anwenderberichte müssen richtig oder für Deinen Fall zutreffend sein.
+Du kannst Dich weiter durch das Wiki arbeiten, online und offline mit anderen Loopern in Kontakt treten, weitere `Hintergrundinfos <../Where-To-Go-For-Help/Background-reading.html>`_ oder Berichte von anderen Loopern lesen. Sei aber vorsichtig, nicht alle Anwenderberichte müssen richtig oder für Deinen Fall zutreffend sein.
 
 **Fertig?**
 Wenn Du alle Komponenten für AAPS zusammen hast - oder zumindest genug, um mit dem Open Loop zu beginnen - solltest Du zuerst die Beschreibung der `Objectives (Ziele) <../Usage/Objectives.html>`_ lesen und Deine `Hardware <../index.html#component-setup>`_ einrichten. Lies Dir nach dem Erreichen eines Objectives (Ziel) auf jeden Fall nochmals durch, was im nächsten Schritt passiert.
