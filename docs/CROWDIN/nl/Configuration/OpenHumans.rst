@@ -1,27 +1,27 @@
 Open Humans Uploader
 ****************************************
-Donate your data for science
+Doneer je gegevens aan de wetenschap
 ========================================
-You can help the community by donating your data to research projects! This helps scientists to pay it forward, develop new scientific ideas and broaden the open mind of open source closed loop systems.
-AndroidAPS is ready to synchronize your data with `Open Humans <https://www.openhumans.org>`_, a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data. 
+Je kunt de community helpen door je gegevens te doneren aan onderzoeksprojecten! Dit helpt onderzoekers om dit project vooruit te helpen, nieuwe wetenschappelijke ideeën te ontwikkelen en de open mind van open source closed loop systemen te verbreden.
+AndroidAPS is voorbereid om jouw data te synchroniseren met `Open Humans <https://www.openhumans.org>`_, een platform waar je je gezondheidsgegevens kunt uploaden, verbinden en opslaan - en kunt delen. 
 
-You retain full control about what happens to your data and what projects you want to support by giving them access to your data. Depending on the project you have joined, data is evaluated and used by them in different ways and extent.
+Je behoudt de volledige controle over wat er met je gegevens gebeurt en welke projecten je wilt ondersteunen door ze toegang tot je gegevens te geven. Welke gegevens worden gebruikt en op welke manier, is afhankelijk van de projecten waar je je op OpenHumans bij aansluit.
 
-The following data will be uploaded to your Open Humans account: 
+De volgende gegevens worden geüpload naar je Open Humans account: 
 
-* Glucose values
-* Careportal events (except notes)
-* Extended boluses
-* Profile switches
-* Total daily doses
-* Temporary basals
-* Temp targets
-* Preferences
-* Application version
-* Device model 
-* Screen dimensions
+* Glucose waarden
+* Careportal gebeurtenissen (behalve notities)
+* Vertraagde bolus
+* Profiel wissel
+* Totale dagelijkse doses
+* Tijdelijke basaalstanden
+* Tijdelijke streefdoelen
+* Instellingen
+Versienummer
+* Apparaat model 
+* Scherm afmetingen
 
-Secret or private information such as your Nightscout URL or API secret will not be uploaded.
+Geheime of persoonlijke informatie zoals je Nightscout URL of API-secret zal niet worden geüpload.
 
 Pomp koppelen
 ========================================
@@ -77,7 +77,7 @@ You can get your data into Open Humans via one of three ways:
 
 Once you've created an account and gotten your data flowing into Open Humans, make sure to also join the OpenAPS Data Commons in order to donate your data for research if you choose.
 
-Terms of Use
+Gebruiksvoorwaarden
 ========================================
 This is an open source tool that will copy your data to `Open Humans <https://www.openhumans.org>`_. We retain no rights to share your data with third parties without your explicit authorization. The data the project and app receive are identified via a random user ID and will only be securely transmitted to an Open Humans account with your authorization of that process.
 You can stop uploading and delete your upload data at any time via `www.openhumans.org <https://www.openhumans.org>`_. Beware that some projects that receive data may not support this.
