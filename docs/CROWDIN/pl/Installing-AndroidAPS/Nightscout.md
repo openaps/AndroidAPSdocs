@@ -58,4 +58,4 @@ Ten serwis jest obecnie oferowany bezpłatnie przez członka społeczności loop
 * Usługa obejmuje zautomatyzowaną kontrolę dawki bazowej za pomocą funkcji automatycznego dostrajania (Autotune). 
 * Serwer znajduje się w Niemczech.
 
-[ http://ns.10be.de/en/index.html](http://ns.10be.de/en/index.html)
+<https://ns.10be.de/en/index.html>
