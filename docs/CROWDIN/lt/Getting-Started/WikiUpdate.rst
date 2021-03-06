@@ -43,7 +43,7 @@ Rugsėjis 2020
 
 2020 m. balandis
 ==================================================
-* `Insulino įvedimas atbuliniu laiku <../Usage/CPbefore26.html#carbs--bolus>`_ (t. y. suleista švirkštu)
+* `Backdate insulin <../Usage/CPbefore26.html#carbs-bolus>`_ (i.e. suleista švirkštu)
 * `Android 6 palaikymas bus nutrauktas kitoje programinėje versijoje <../Module/module.html#phone>`_
 
 2020 m. kovas
@@ -58,7 +58,7 @@ Vasaris 2020
 * `Automation caveats <../Usage/Automation.html#good-practice-caveats>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - trumpas paaiškinimas
 * 'Priežiūros alternatyvos <../Usage/CPbefore26.html>`_
-* `Ištęsto boluso <../Usage/Extended-Carbs.html#id1>`_ funkcija - uždaras ciklas bus išjungtas
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
 * Naujas `Vietinio profilio įskiepis <../Configuration/Config-Builder.html#local-profile-recommended>`_
 * "Pavyzdinis nustatymas <../Getting-Started/Sample-Setup.html>`_ - Dexcom G6 atnaujinimas
 * `Versija 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - pagrindinės naujos funkcijos
@@ -81,7 +81,7 @@ Lapkritis 2019
 ==================================================
 * `Automatizavimas - išjungimas, kai sustabdomas ciklas <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 siųstuvo keitimo atnaujinimas <../Configuration/xdrip.html#replace-transmitter>`_
-* Kodėl ištęstas bolusas neveikia uždaame cikle <../Usage/Extended-Carbs.html#id1>`_
+* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
 * 'DUK - sportas <../Getting-Started/FAQ.html#sports>`_
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-f-main-graph>`_
 * ` Insight - Išjunkite absoliučias vertes NS Client programoje <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
@@ -96,7 +96,7 @@ Lapkritis 2019
 
 Spalis 2019
 ==================================================
-* `AAPS 2.5 versija <../Installing-AndroidAPS/Releasenotes.html#id16>`_ atnaujinimai (ypač 'atnaujinimo puslapyje <../Installing-AndroidAPS/Update-to-new-version.html>`_)
+* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `AccuChek Insight - žurnalo parinktys <../Configuration/Accu-Chek-Inight-Pump.html#settings-in-aaps>`_
 * AAO skaičiavimas atskirame puslapyje <../Usage/COB-calculation.html>`_
 * ` AAO - neteisingas AAO verčių aptikimas <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
