@@ -1,43 +1,46 @@
 Настройки
 ***********************************************************
-* **Open preferences** by clicking three-dot-menu on top right side of home screen.
+* **Откройте настройки**, нажав три точки меню в верхней правой части главного экрана.
 
-  .. image:: ../images/Pref2020_Open2.png
-    :alt: Open preferences
+  .. образ:: ../images/Pref2020_Open2.png
+    :alt:Открыть настройки
 
-* You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and click Plugin preferences.
+* Можно сразу перейти к настройкам на определенной вкладке (напр. на вкладку помпы), открыв вкладку и выбрав настройки расширений.
 
-  .. image:: ../images/Pref2020_OpenPlugin2.png
-    :alt: Open plugin preferences
+  .. image:: ../images/Pref20_OpenPlugin2.png
+    :alt: Открыть параметры расширений
 
-* **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+* ** Подменю** можно открыть, щелкнув на треугольнике под заголовком подменю.
 
-  .. image:: ../images/Pref2020_Submenu2.png
-    :alt: Open submenu
+  .. image:: ../images/Pref20_OpenPlugin2.png
+    :alt: Открыть подменю
 
-* With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+* С ** фильтра** в верхней части экрана параметров вы можете быстро получить доступ к некоторым настройкам. Просто начните вводить часть текста, который вы ищете.
 
-  .. image:: ../images/Pref2021_Filter.png
-    :alt: Preferences filter
+  .. изображение:: ../images/Pref2021_Filter.png
+    :alt:Фильтр настроек
 
+.. содержание:: 
+   :backlinks: запись
+   :depth: 2
 
 Общие настройки
 ===========================================================
 
-**Units**
+**Единицы**
 
-* Set units to mmol/l or mg/dl depending on your preferences.
+* В зависимости от предпочтений установите единицы mmol/l или mg/dl.
 
-**Language**
+**Язык**
 
-* New option to use phone's default language (recommended). 
-* In case you want AAPS in different language than standard phone language you can choose from a broad variety.
-* If you use different languages you might sometimes see a language mix. This is due to an android issue that overriding default android language sometimes doesn't work.
+* Новый вариант использования языка телефона по умолчанию (рекомендуется). 
+* Если вы предпочитаете AAPS на другом языке, чем стандартный язык телефона, то можете выбрать из предлагаемых вариантов.
+* Если вы используете разные языки, то иногда можете видеть языковую смесь. Это вызвано проблемой Андроид т. к. переопределение языка Андроид по умолчанию иногда не работает.
 
-  .. image:: ../images/Pref2020_General.png
-    :alt: Preferences > General
+  .. изображение:: ../images/Pref2020_General.png
+    :alt:Настройки > общие
 
-**Patient name**
+**Имя пациента**
 
 * Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
 
@@ -114,7 +117,7 @@ Landscape orientation
 * Useful while giving a presentation. 
 * It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
 
-Кнопки
+Buttons
 -----------------------------------------------------------
 * Define which buttons are visible on the bottom of your home screen.
 * With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
@@ -141,7 +144,7 @@ Default temp targets
   .. image:: ../images/Pref2020_OV_DefaultTT.png
     :alt: Preferences > Default temp targets
   
-Fill/Prime standard insulin amounts
+Заполнить стандартное количество инсулина
 -----------------------------------------------------------
 * If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
 * Pre-set values can be defined in this dialogue.
@@ -153,7 +156,7 @@ Range for visualization
   .. image:: ../images/Pref2020_OV_Range2.png
     :alt: Preferences > Range for visualization
 
-Shorten tab titles
+сокращенные имена табул
 -----------------------------------------------------------
 * See more tab titles on screen. 
 * For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
@@ -201,10 +204,10 @@ Deliver this part of bolus wizard result
 
 Bolus advisor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
 * If correction bolus is accepted **no carbs** will recorded.
 * An alarm will be started when glucose value is in good level to start eating.
-* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ again and enter the amount of carbs you want to eat.
+* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ again and enter the amount of carbs you want to eat.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
     :alt: Bolus advisor message
@@ -261,7 +264,7 @@ Depending on your settings in `config builder <../Configuration/Config-Builder.h
 OpenAPS AMA settings
 -----------------------------------------------------------
 * Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. 
-* More details about the settings and Autosens can be found in the `OpenAPS docs <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
+* More details about the settings and Autosens can be found in the `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
 
 Max U/h a Temp Basal can be set to
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -332,7 +335,7 @@ Advanced settings (OpenAPS SMB)
 * Normally you do not have to change the settings in this dialogue!
 * If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ and to understand what you are doing.
 
-Absorption settings
+Настройки усваиваемости
 ===========================================================
 
 .. image:: ../images/Pref2020_Absorption.png
@@ -342,7 +345,7 @@ min_5m_carbimpact
 -----------------------------------------------------------
 * The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed. 
 * The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB. 
-* At times when carb absorption can’t be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+* At times when carb absorption can’t be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Этот параметр не приводит к отказам.
 * To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. 
 * Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc. 
 * The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`__.
@@ -373,7 +376,7 @@ The options here will vary depending on which pump driver you have selected in `
 
 If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
-NSClient
+клиент NS
 ===========================================================
 
 .. image:: ../images/Pref2020_NSClient.png
