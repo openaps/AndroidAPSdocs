@@ -18,7 +18,7 @@
 
 1. Samsung Galaxy S7
     
-    * Альтернативы: см. [список проверенных телефонов и часов](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) для AndroidAPS
+    * Альтернативы: см. [список проверенных телефонов и часов](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) для AndroidAPS
 
 2. [DanaRS](http://www.sooil.com/eng/product/)
     
@@ -35,7 +35,7 @@
 
 4. Дополнительно: Sony Smartwatch 3 (SWR50)
     
-    * Альтернативы: Все [ часы с Google Wear OS ](https://wearos.google.com/intl/de_de/#find-your-watch) должны работать, см. [ список проверенных телефонов и часов ](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) для AndroidAPS (OS должна быть Android Wear)
+    * Альтернативы: Все [ часы с Google Wear OS ](https://wearos.google.com/intl/de_de/#find-your-watch) должны работать, см. [ список проверенных телефонов и часов ](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) для AndroidAPS (OS должна быть Android Wear)
 
 ## Настройки Nightscout
 
@@ -53,7 +53,7 @@
 
 ### Проверьте прошивку смартфона
 
-* Menu > Settings > Phone info > Software info: At least "Android-Version 8.0" (successfully tested up to Android version 8.0.0 Oreo - Samsung Experience Version 9.0) 
+* Меню > Настройки > Настройки > Информация о телефоне > Информация о Программном обеспечении: не ниже "Android-Version 8.0" (успешно протестирована до версии 8.0.0 Oreo - Samsung Experience Version 9.0) 
 * Для обновления прошивки: меню > Настройки > Обновление программы
 
 ### Разрешите установку приложений из неизвестных источников
