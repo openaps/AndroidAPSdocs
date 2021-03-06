@@ -90,7 +90,7 @@ However there is a variant of the patched app supporting LibreView with enabled 
 
 
 Βήμα 2: Εγκατάσταση και ρύθμιση παραμέτρων xDrip+ app
-=====================================================
+==================================================
 
 The blood sugar values are received on the smartphone by the xDrip+ App. 
 
