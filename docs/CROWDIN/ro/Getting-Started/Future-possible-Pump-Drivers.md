@@ -30,7 +30,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 * * *
 
-### Medtrum A6/P6/C6 ([Homepage](http://www.medtrum.com/P6.html))
+### Medtrum A6/P6/C6 ([Homepage](https://www.medtrum.com/P6.html))
 
 **Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
 
@@ -40,41 +40,41 @@ This is list of some Pumps floating around there, and status of support for them
 
 ### EOFLOW ([Homepage](http://www.eoflow.com/eng/main/main.html))
 
-**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
+**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pompa este disponibilă în prezent numai în Coreea).
 
 **Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
 
 * * *
 
-### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
+### Accu-Chek Solo ([Pagina de start](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app on special controler device for control.
+**Loop status:** Is a Loop candidate. Pompa va începe să se vândă la sfârșitul anului 2018 în anumite țări din UE. Its rummored to have Android app on special controler device for control.
 
 **Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
 
-### Medtronic Bluetooth
+### Bluetooth Medtronic
 
 **Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
 
-### Willcare Insulin pump ([Homepage](http://en.shinmyungmedi.com))
+### Pompă de insulină Willcare ([Pagina de start](http://en.shinmyungmedi.com))
 
 **Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Cerinţă hardware pentru AAPS:** Nici una. It seems to be BT enabled.
 
 **Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
 
 * * *
 
-## Pumps no longer sold (companies no longer operating)
+## Pompele nu se mai vând (companiile nu mai funcționează)
 
-### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
+### Pompa Cellnovo ([vezi businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
-**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+**Notă despre produs:** Se pare că firma a decis să iasă din zona de pompe. Puteți vedea mai multe în acest [articol](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
 ## Pumps that aren't Loopable
 
@@ -100,22 +100,22 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 
 **Prerequisite**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
+- Pump has to support some kind of remote control. (BT, radio frecvență etc.)
 - Protocol is hacked/documented/etc.
 
 **Minimal requirement**
 
-- Set Temporary Basal Rate
+- Setează Rata Bazală Temporară
 - Get Status
-- Cancel Temporary Basal Rate
+- Anulează Rata Bazală Temporară
 
-**For oref1(SMB) or Bolusing:**
+**Pentru oref1(SMB) sau Bolus:**
 
-- Set Bolus
+- Setează bolusul
 
 **Good to have**
 
-- Cancel Bolus
+- Anulează Bolus
 - Get Basal Profile (almost requirement)
 - Set Basal Profile (nice to have)
 - Read History 
@@ -123,7 +123,7 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 **Other (not required but good to have)**
 
 - Set Extended Bolus
-- Cancel Extended Bolus
+- Renunță la bolusul extins
 - Read History
 - Read TDD
 
@@ -131,4 +131,4 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 
 ### Other pumps support
 
-If you have any other pumps you would like to see status on, please contact me (@andyrozman on gitter). In future release a lot of Pump configurations will be added to be Open loopable (you will be able to select Virtual Pump Type in configuration and your settings will be loaded - [Feature request #157](https://github.com/nightscout/AndroidAPS/issues/157)).
+If you have any other pumps you would like to see status on, please contact us on discord.
