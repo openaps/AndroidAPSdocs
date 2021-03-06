@@ -8,7 +8,7 @@
 * A Smartpix or Realtyme device together with the 360 Configuration Software to configure the pump. (Roche sends out Smartpix devices and the configuration software free of charge to their customers upon request.)
 * Kompatibilní telefon: Android telefon s ROM LineageOS 14.1 (dříve CyanogenMod) nebo Android 8.1 (Oreo). 
 * LineageOS 14.1 musí být nejnovější verze od června 2017, protože potřebné změny pro párování s Combo pumpou jsou až od této doby. 
-* Seznam telefonů lze nalézt v dokumentu [AAPS telefony](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435).
+* A list of phones can be found in the [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) document.
 * Prosím uvědomte si, že to není úplný seznam a odráží osobní uživatelské zkušenosti. Máte možnost doplnit své vlastní zkušenosti a tím pomoci dalším uživatelům.
 * Be aware that while Android 8.1 allows communicating with the Combo, there are still issues with AAPS on 8.1.
 * For advanced users, it is possible to perform the pairing on a rooted phone and transfer it to another rooted phone to use with ruffy/AAPS, which must also be rooted. This allows using phones with Android < 8.1 but has not been widely tested: https://github.com/gregorybel/combo-pairing/blob/master/README.md
@@ -102,7 +102,7 @@ Existuje několik možných důvodů. Vyzkoušejte tyto kroky:
 
 * Jestliže je nastaveno zhasnutí displeje na 5 s, můžete zkusit nastavit na 40 s (původní nastavení). From experience the time between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out without successfully Pair. 
 * Později můžete vrátit zhasnuti LCD na 5 s, jak je doporučeno pro AAPS.
-* If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not compatible with the pump. Ujistěte se, že používáte novou verzi systému **LineageOS ≥ 14.1** nebo **Android ≥ 8.1 (Oreo)**. If possible, try another smartphone. Pod níže uvedeným odkazem najdete seznam telefonů, které již byly s AAPS vyzkoušeny (pod AAPS Phones) (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
+* If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not compatible with the pump. Ujistěte se, že používáte novou verzi systému **LineageOS ≥ 14.1** nebo **Android ≥ 8.1 (Oreo)**. If possible, try another smartphone. You can find a list of already successfully used smartphones under \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). 
 
 9. Na pumpě se zobrazí desetimístný bezpečnostní kód. Ruffy zobrazí obrazovku pro zadání. Po zadání kódu do aplikace Ruffy byste měli být připraveni.
 10. Restartujte telefon.
@@ -113,7 +113,7 @@ Existuje několik možných důvodů. Vyzkoušejte tyto kroky:
 * Mějte na pamětí, že toto není produkt, zvláště in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. 
 * It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
 * Read the OpenAPS documentation https://openaps.org to understand the loop algorithm AndroidAPS is based upon.
-* Read the [AAPS docs](https://androidaps.readthedocs.io/en/latest/) to learn about and understand AndroidAPS.
+* Read the [AAPS docs](../index.rst) to learn about and understand AndroidAPS.
 * Propojení combo s ruffy/aaps používá stejné rozhraní jako originální glukometr.
 * Glukometr zrcadlí obrazovku pumpy a simuluje stisk tlačítek na pumpě. 
 * The connection to the pump and this forwarding is what the ruffy app does. 
