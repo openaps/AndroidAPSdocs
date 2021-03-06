@@ -18,7 +18,7 @@ Esta es la razón por lo que las apks no están disponibles.
 
 En primer lugar, necesitas **obtener componentes de hardware utilizables**:
 
-* Una [bomba de insulina compatible ](Pump-Choices.md), 
+* A [supported insulin pump](./Pump-Choices.md), 
 * un [smartphone Android ](Phones.md) (Apple iOS no es compatible con AndroidAPS, puedes probar con [iOS Loop ](https://loopkit.github.io/loopdocs/)) y 
 * un [sistema de monitorización continua de glucosa](../Configuration/BG-Source.rst) (Mcg). 
 
@@ -26,7 +26,7 @@ Secondly, you have to **setup your hardware**. Ver el ejemplo del [tutorial de c
 
 Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
 
-Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. El principio fundamental del lazo cerrado es que tu basal y tus ratios de hidratos sean precisos. Todas las recomendaciones presuponen que tus necesidades basales están ajustadas y que cualquier pico o bajada observados vienen provocados por otros factores y que por lo tanto requieren de ajustes esporádicos (ejercicio, estrés, etc.). Los ajustes que el lazo cerrado puede realizar han sido limitados por seguridad (ver basal temporal máxima permitida en [OpenAPS Reference Design](https://openaps.org/reference-design/)), es preferible no utilizar las dosis disponibles para corregir basales mal ajustadas. Si por ejemplo usted frecuentemente esta bajo al aproximarse a una comida, entonces es probable que su basal tenga que ajustarse. Puedes usar [autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) para analizar tus registros de datos y comprobar si es necesario (y con que valores) modificar tus basales, tu factor de sensibilidad (ISF) o los ratios de hidratos. O puedes probar y establecer tu basal [con el método tradicional](http://integrateddiabetes.com/basal-testing/).
+Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. El principio fundamental del lazo cerrado es que tu basal y tus ratios de hidratos sean precisos. Todas las recomendaciones presuponen que tus necesidades basales están ajustadas y que cualquier pico o bajada observados vienen provocados por otros factores y que por lo tanto requieren de ajustes esporádicos (ejercicio, estrés, etc.). Los ajustes que el lazo cerrado puede realizar han sido limitados por seguridad (ver basal temporal máxima permitida en [OpenAPS Reference Design](https://openaps.org/reference-design/)), es preferible no utilizar las dosis disponibles para corregir basales mal ajustadas. Si por ejemplo usted frecuentemente esta bajo al aproximarse a una comida, entonces es probable que su basal tenga que ajustarse. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
 ## ¿Qué aspectos prácticos de lazo tengo?
 
@@ -66,10 +66,10 @@ Por razones de seguridad, las recomendaciones no se basan en una sola lectura de
 
 Hay varios blogs con buenos consejos y sugerencias para ayudarte a entender cómo funciona el lazo:
 
-* ['Fine-tuning Settings'](http://seemycgm.com/2017/10/29/fine-tuning-settings/) en 'See my CGM'
-* ['Why DIA matters'](http://seemycgm.com/2017/08/09/why-dia-matters/) en 'See my CGM'
+* [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
+* [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
 * ['Limiting meal spikes'](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) en #DIYPS
-* ['Hormones and autosens'](http://seemycgm.com/2017/06/06/hormones-2/) en 'See my CGM'
+* [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
 ## ¿Qué equipo de emergencia se recomienda llevar?
 
@@ -202,7 +202,7 @@ En AMA, DIA en realidad no significa la "duración de la actividad de la insulin
 
 ### ¿Por qué usar una DIA de 5h como mínimo (duración de la actividad de la insulina) en lugar de 2-3h?
 
-Bien explicado en [este artículo ](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). No te olvides de `ACTIVAR EL PERFIL` después de modificar tu DIA.
+Well explained in [this article](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). No te olvides de `ACTIVAR EL PERFIL` después de modificar tu DIA.
 
 ### ¿Por qué motivo mi lazo baja mis BG hasta valores de hipo-glucemia sin COB?
 
