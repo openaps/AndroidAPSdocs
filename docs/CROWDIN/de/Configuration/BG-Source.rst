@@ -4,7 +4,7 @@ BZ-Quelle
 
 .. toctree::
    :maxdepth: 1
-       
+   :glob:
    
    Allgemeine Empfehlungen für alle CGM/FGM <../Hardware/GeneralCGMRecommendation.rst>
    Glättung der Blut-Glukose-Daten <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
