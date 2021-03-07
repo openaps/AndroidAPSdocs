@@ -49,17 +49,17 @@ AndroidAPS предусматривает возможность *управле
 
 ## Доступные циферблаты
 
-![Available watchfaces](../images/Watchface_Types.png)
+![Доступные циферблаты](../images/Watchface_Types.png)
 
 ### Новый циферблат начиная с Android 2.8
 
-![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
+![Цифровой стиль](../images/Watchface_DigitalStyle.png)
 
 * Цвет, линии и круг настраиваются через меню - шестеренку в меню выбора циферблата.
 
 ## Циферблат AAPSv2 - Legend
 
-![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
+![Циферблат Легенда AndroidAPSv2](../images/Watchface_Legend.png)
 
 О - время с запуска последнего цикла
 
@@ -95,7 +95,7 @@ J - активный инсулин (от болюсов | от базала)
 
 Заполненная звездочка соответствует включенному состоянию (**Вкл.**), а незаполненная указывает, что настройка отключена (**Выкл**):
 
-![Settings on/off](../images/Watchface_Settings_On_Off.png)
+![Параметры вкл./выкл](../images/Watchface_Settings_On_Off.png)
 
 ### Параметры спутника AAPS
 
@@ -125,7 +125,7 @@ J - активный инсулин (от болюсов | от базала)
 
 * **Дизайн ввода**: этим параметром вы можете выбрать положение кнопок "+" и "-" при вводе команд для AAPS (TT, Insulin, Carbs...)
 
-![Input design options](../images/Watchface_InputDesign.png)
+![Варианты дизайна ввода](../images/Watchface_InputDesign.png)
 
 ### Специфические параметры циферблатов
 
@@ -133,7 +133,7 @@ J - активный инсулин (от болюсов | от базала)
 
 * **Зернистость** (по умолчанию `Средняя`)
 
-![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
+![Манометры_Стимпанк](../images/Watchface_Steampunk_Gauge.png)
 
 #### Круглый циферблат
 
@@ -161,7 +161,7 @@ J - активный инсулин (от болюсов | от базала)
 
 Кроме того, усложнения служат ** ярлыками ** для функций AAPS. Нажав на них вы можете открывать меню и диалогоовые окна, связанные с AAPS (в зависимости от типа усложнения и конфигурации).
 
-![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
+![Усложнения_на_Циферблатах](../images/Watchface_Complications_On_Watchfaces.png)
 
 ### Типы усложнений (дополнительных функций)
 
@@ -182,7 +182,7 @@ J - активный инсулин (от болюсов | от базала)
 
 AndroidAPS обеспечивает следующие усложнения:
 
-![AAPS_Complications_List](../images/Watchface_Complications_List.png)
+![AAPS_Список_усложнений](../images/Watchface_Complications_List.png)
 
 * ** BR, CoB & IoB ** (` КРАТКИЙ ТЕКСТ `, открывается через * Меню *): Отображает * Скорость базального инсулина* на первой строке, * Активные углеводы* и * Активный инсулин * на второй.
 * ** Глюкоза крови ** (` КРАТКИЙ ТЕКСТ`, открывает * Меню *): Отображает * Кровь глюкозы * и * trend * стрелка на первой строке и * возраст измерений * и * дельта * на второй строке.
@@ -236,21 +236,21 @@ AndroidAPS обеспечивает следующие усложнения:
 
 ## Устранение неполадок в приложении Wear:
 
-* На Android Wear 2.0 экран часов больше не устанавливается сам собой. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
-* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
-* If Complications does not update data - check first if AAPS watchfaces work at all.
+* На Android Wear 2.0 экран часов больше не устанавливается сам собой. Вам нужно зайти в playstore - циферблаты для часов (не путать с Play Market для телефона), и найти его в категории приложений установленных на вашем телефоне, откуда вы можете его активировать. Также включите автообновление. 
+* Иногда помогает повторная синхронизация приложений с часами, поскольку этот процесс иногда затягивается: Android Wear > значок шестеренки > наименование часов > повторная синхронизация часов.
+* Включите отладку ADB в настройках разработчика (инженерное меню на часах), подключите часы через USB к компьютеру и запустите приложение Wear в Android Studio.
+* Если в усложнении не происходит обновление данных, то сначала проверьте, работает ли циферблат AAPS вообще.
 
 ### Sony Smartwatch 3
 
-* The Sony Smartwach 3 is one of the most popular watches to be used with AAPS. 
-* Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above.
-* A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.rst).
+* Sony Smartwach 3-одни из самых популярных часов, которые можно использовать с AAPS. 
+* К сожалению, осенью 2020 года Google прекратил поддержку устройств операционной системы OS 1.5. Это приводит к проблемам при использовании Sony SW3 с AndroidAPS 2.7 и выше.
+* На [странице устранения неполадок](../Usage/SonySW3.rst) можно найти способ обхода этого обстоятельства.
 
 ## Просмотр данных Nightscout
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Есть несколько часовых циферблатов на выбор, в которых показывается средняя дельта СК, активный инсулин IOB, действующий временный базал и профили базы и график мониторинга.
+Если вы используете другую систему цикла (не AAPS) и хотите *просмотреть* детали работы контура на часах Android Wear, или хотите посмотреть работу контура вашего ребенка, то можете построить/загрузить только NSClient APK. Для этого перейдите по ссылке [инструкции по созданию APK ](../Installing-AndroidAPS/Building-APK.md) выбрав вариант сборки "NSClientRelease". Есть несколько часовых циферблатов на выбор, в которых показывается средняя дельта СК, активный инсулин IOB, действующий временный базал и профили базы и график мониторинга.
 
 # Смарт-часы Pebble
 
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
+Пользователи Pebble могут применять [циферблат Urchin](https://github.com/mddub/urchin-cgm) для *просмотра* данных цикла (если они загружаются на сайт Nightscout), но не могут взаимодействовать с AndroidAPS через часы. Вы можете выбрать поля для отображения, такие как активный инсулин IOB, активный врем. базал и прогнозы. Если вы работаете с открытым циклом, вы можете пользоваться алгоритмом [IFTTT](https://ifttt.com/) для создания апплета, который, получив уведомление от AndroidAPS, отправляет SMS или создает push-уведомление.
