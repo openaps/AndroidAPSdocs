@@ -132,25 +132,25 @@
 </tr>
 <tr>
  <td><strong>eCarbs/производные углеводы</strong></td>
- <td>"extended carbs" - carbs split up over serveral hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
- <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
+ <td>производные углеводы, появляются в организме через несколько часов из избытков жиров/протеинов пищи. Необходимо учитывать при обычной помповой терапии, несущественны при использовании закрытой петли.</td>
+ <td>Супер микро болюс SMB</td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Вики - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs</a></td>
 </tr>
 <tr>
  <td><strong>FGM</strong></td>
- <td>flash glucose monitor (Freestyle Libre)</td>
+ <td>флеш-мониторинг глюкозы (Libre Freestyle)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/BG-Source.html">Wiki - источник BG</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> neccessary for APK updates</td>
+ <td>система управления версиями файлов (документация, программное обеспечение и пр). Необходима для обновления APK системы AndroidAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - update APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - обновление APK</a></td>
 </tr>
 <tr>
  <td><strong>Github</strong></td>
- <td>web-based hosting service for version control using Git<br>-> storage of source code</td>
+ <td>веб-сервис для размещения IT-проектов и их совместной разработки. Веб-сервис основан на системе контроля версий Git<br>. Для проекта AndroidAPS - хранилище программного обеспечения и его обновлений</td>
  <td>&nbsp;</td>
  <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
@@ -329,7 +329,7 @@
  <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
 </tr>
 <tr>
- <td><strong>SMB</strong></td>
+ <td><strong>Супер микро болюс SMB</strong></td>
  <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
  <td>UAM</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
@@ -367,7 +367,7 @@
 <tr>
  <td><strong>UAM</strong></td>
  <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
- <td>SMB</td>
+ <td>Супер микро болюс SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
