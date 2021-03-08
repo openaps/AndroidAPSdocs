@@ -58,77 +58,77 @@
 
 ### Инсулиновая помпа Willcare ([ Домашняя страница ](http://en.shinmyungmedi.com))
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+** Статус пригодности: ** В настоящий момент не является кандидатом, но их сотрудники связывались с нами, и они заинтересованы в том, чтобы сделать помпу пригодной для ИПЖ (на данный момент в помпе отсутствуют команды get/set profile).
 
-**Hardware requirement for AAPS:** None. Похоже, что блутус-связь имеется.
+**Требования к оборудованию для AAPS:** Никаких. Похоже, что блутус-связь имеется.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+** Комментарии: ** Поскольку компания заинтересована в интеграции с AAPS, они могут сами предпринять необходимые действия.
 
 * * *
 
-## Pumps no longer sold (companies no longer operating)
+## Помпы, снятые с производства (компании больше не работают)
 
-### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
+### Помпа Cellnovo ([см. businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
 **Статус реализации:** В настоящее время не поддерживается какой-либо системой ИПЖ. Помпа является кандидатом на работу с ИПЖ, но поскольку протокол ее работы неизвестен, поддержка появится не очень скоро.
 
 **Требования к оборудованию для AAPS:** По-видимому, никаких. В помпе есть блутус-связь.
 
-**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+**Примечание о товаре:** Похоже, что компания решила выйти из помпового бизнеса. Подробнее в этой [статье](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
-## Pumps that aren't Loopable
+## Помпы, неспособные к работе в качестве компонента ИПЖ
 
-### Tandem:(any) ([Homepage](https://www.tandemdiabetes.com/))
+### Тандем:(любой) ([Домашняя страница](https://www.tandemdiabetes.com/))
 
-**Loop status:** Not loopable.
+**Статус пригодности:** Не пригодна.
 
-While ago they had firmware called T:AP (mentioned in this [article](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), which could be used in loop (its no longer available, since pump was upgraded to x2), but that was not intended for commercial use, just for experimental use only (research projects). I talked with one of directors of company and he assured my that Tandem pump will never be open, but they have created their own closed loop system, which they are calling Control-IQ (I think it is already available in USA, and should be available in 2020 in Eu).
+Некоторое время назад у них имелась микропрограмма /прошивка под названием T:AP (упоминается в этой  статье <0>, которая могла бы использоваться в цикле ИПЖ (прошивка больше не доступна, поскольку помпа была обновлена до x2), эта версия не была предназначена для коммерческого использования, только для экспериментов (исследовательские проекты). Я разговаривал с одним из директоров компании и он заверил меня, что ПО помпы Tandem никогда не будет открыто, но что они создали свою собственную замкнутую систему, которую они называют Control-IQ (я думаю, что она уже доступна в США, и должна быть доступна в 2020 году в Европе).</p> 
 
 * * *
 
 ### Animas Vibe
 
-**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
+**Статус пригодности:** Не пригодна. Нет возможности дистанционного управления. **Примечание:** помпа снята с продажи. Компания вышла из бизнеса (J&J).
 
 * * *
 
 ### Animas Ping
 
-**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
+**Статус пригодности:** Не пригодна. Она имеет возможность подачи болюса, но не временного базала ТБР. **Примечание** Была снята с продажи после выхода Animas Vibe.
 
-## Requirements for pumps being loopable
+## Требования к пригодности помп для ИПЖ
 
-**Prerequisite**
+**Предварительные условия**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+- Помпа должна поддерживать дистанционное управление. (блутус, радио и т. п.)
+- Протокол взломан/документирован/и т. д.
 
-**Minimal requirement**
+**Минимальные требования**
 
-- Set Temporary Basal Rate
-- Get Status
-- Cancel Temporary Basal Rate
+- Устанавливать временную скорость базала
+- Получать сведения о состоянии
+- Отменять временную базальную скорость
 
-**For oref1(SMB) or Bolusing:**
+**Для oref1(SMB) или болюсов:**
 
-- Set Bolus
+- Настраивать подачу болюса
 
-**Good to have**
+**Хорошо иметь**
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Отмену болюса
+- Получать профиль базала (почти требование)
+- Устанавливать профиль базала (хорошо иметь)
+- Чтение истории 
 
-**Other (not required but good to have)**
+**Другое (не обязательно, но желательно)**
 
-- Set Extended Bolus
-- Cancel Extended Bolus
-- Read History
-- Read TDD
+- Настраивать пролонгированный болюс
+- Отменять пролонгированный болюс
+- Чтение истории
+- Чтение суммарной суточной дозы инсулина TDD
 
 * * *
 
-### Other pumps support
+### Поддержка других помп
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Если у вас есть какие-либо другие помпы, для которых вы хотите увидеть статус, пожалуйста, свяжитесь со мной (@andyrozman на gitter).
