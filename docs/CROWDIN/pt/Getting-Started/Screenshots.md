@@ -366,7 +366,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 * Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
 * Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 
 * Others prefer range of 32% to 37% of TDD for TBB. 
-* Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+* Like most of these rules-of-thumb it is of limited real validity. Nota: A sua diabetes pode variar!
 
 ![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
 
