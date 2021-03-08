@@ -22,8 +22,8 @@
 * Если вы хотите перевести **приложение** на другие языки (спасибо), воспользуйтесь [crowdin](https://crowdin.com/project/androidaps).
 * Если вы хотите перевести **документацию** на другие языки (спасибо), воспользуйтесь [crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Просто зарегистрируйтесь в CROWDIN, выберите ваш язык, подождите авторизации администратора и двигайтесь дальше!
 
 ## Есть ли другие способы помочь?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+Навыки, необходимые нам: графический дизайн, дизайн UX, переводы, вики-редакторование или просто люди, готовые отвечать на простые вопросы в gitter & Facebook, чтобы дать разработчикам сосредоточиться на более сложных вещах.
