@@ -179,7 +179,7 @@ For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. 
 
 ## Detecção de Sensibilidade
 
-Select the type of sensitivity detection. For more details of different designs please [read on here](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Selecione o tipo de deteção de sensibilidade. Para mais detalhes sobre diferentes designs por favor [clique aqui](../Configuration/Sensitivity-detection-and-COB.md). Os dados históricos serão analisados frequentemente e serão feitos ajustes se reconhecer que está mais sensível (ou inversamente, mais resistente) à insulina do que o habitual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
@@ -259,7 +259,7 @@ Define which Buttons are shown on the home screen.
 * CGM (opens xDrip+)
 * Calibration
 
-Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
+Se você usar Super Micro Bolus (SMB) as funções de loop serão desativadas de acordo com as suas definições em <0>"Máx de minutos de basal para limitar os SMB"</0>, se não utilizar os SMB as funções de loop serão desativadas durante 2 horas.</1> Detalhes sobre os SMB podem ser encontrados <2>aqui</2>.
 
 #### QuickWizard settings
 
