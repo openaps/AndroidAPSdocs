@@ -99,7 +99,7 @@ Desvantagens:
 
 * Selecione o tipo de curva de insulina que está a utilizar.
 * As opções 'Oref Ação-Rápida','Oref Ultra-Rápida' e 'Oref Pico-Livre' têm todas um gráfico exponencial. Mais informação disponível em [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
-* The curves will vary based on the DIA and the time to peak.
+* A curva varia baseada com a Duração da Ação da Insulina (DIA) e o tempo de pico.
     
     * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
     * BLUE line shows **how active** insulin is.
@@ -113,8 +113,8 @@ Desvantagens:
 
 ### Insulin type differences
 
-* For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
-* Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
+* Para "ação rápida", "ultra-rápida" e "Lyumjev", o DIA é a única variável que se pode ajustar, o tempo de pico é fixo. 
+* O Pico Livre permite ajustar tanto o DIA como o tempo para o pico, e deve ser usado apenas por utilizadores avançados que conhecem os efeitos destas configurações. 
 * O gráfico da [curva de insulina](../Getting-Started/Screenshots#insulin-profile) ajuda a entender as diferentes curvas. 
 * Pode vê-lo ativando a caixa de seleção para mostrá-la como um separador, caso contrário estará no menu hamburger.
 
@@ -139,7 +139,7 @@ Desvantagens:
 #### Free Peak Oref
 
 * With the "Free Peak 0ref" profile you can individually enter the peak time.
-* The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+* O DIA é definido automaticamente para 5 horas se estiver especificado mais alto no perfil.
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
 ## Fonte de Glic.
@@ -279,7 +279,7 @@ Choose default temp-targets (duration and target). Preset values are:
 
 #### Fill/Prime standard insulin amounts
 
-Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+Escolha as quantidades padrão usando os três botões para purgar/preencher, dependendo do comprimento do seu cateter/cânula.
 
 #### Range of visualization
 
@@ -289,7 +289,7 @@ Choose the high and low marks for the BG-graph on AndroidAPS overview and smart 
 
 Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
-#### Show notes field in treatment dialogs
+#### Mostrar campo de notas na janela de tratamentos
 
 Choose if you want to have a notes field when entering treatments or not.
 
