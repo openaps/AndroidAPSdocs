@@ -2,7 +2,7 @@
 
 Dependendo de suas configurações pode-se abrir o Configurador através de um separador na parte superior do ecrã ou através do menu hambúrguer.
 
-![Open config builder](../images/ConfBuild_Open.png)
+![Abrir configurador](../images/ConfBuild_Open.png)
 
 O Configurador (Conf) é o separador onde ativa e desativa os módulos de configurações. As caixas do lado esquerdo (A) permitem selecionar qual usar, as caixas do lado direito (C) permitem que as veja como um separador (E) no AndroidAPS. Caso a caixa direita não esteja ativada, pode chegar à função utilizando o menu hamburger (D) no topo esquerdo do ecrã.
 
@@ -26,9 +26,9 @@ Selecione o perfil basal que prefere usar. Ver a página [Perfis](../Usage/Profi
 
 O perfil local usa o perfil basal inserido manualmente no telefone. Assim que é selecionado, aparece um novo separador em AAPS, onde é possivel alterar os dados do perfil lidos da bomba se necessário. Com o próximo interruptor de perfil eles são então escritos na bomba em perfil 1. Este perfil é recomendado pois não depende de ligação à internet.
 
-Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). Portanto, certifique-se de ter um backup num lugar seguro.
+Os seus perfis locais são parte das [configurações exportadas](../Usage/ExportImportSettings.rst). Portanto, certifique-se de ter um backup num lugar seguro.
 
-![Local Profile settings](../images/LocalProfile_Settings.png)
+![Definições de Perfil Local](../images/LocalProfile_Settings.png)
 
 Botões:
 
@@ -55,7 +55,7 @@ Se deseja mudar de perfil do Nightscout para o perfil local basta fazer uma troc
 
 Os perfis locais também podem ser carregados para o Nightscout. As configurações podem ser encontradas em [preferências do NSClient](../Configuration/Preferences#nsclient).
 
-![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
+![Upload do Perfil Local para o NS](../images/LocalProfile_UploadNS2.png)
 
 Vantagens:
 
@@ -95,10 +95,10 @@ Desvantagens:
 
 ## Insulina
 
-![Insulin type](../images/ConfBuild_Insulin.png)
+![Tipo de Insulina](../images/ConfBuild_Insulin.png)
 
 * Selecione o tipo de curva de insulina que está a utilizar.
-* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
+* As opções 'Oref Ação-Rápida','Oref Ultra-Rápida' e 'Oref Pico-Livre' têm todas um gráfico exponencial. Mais informação disponível em [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
 * The curves will vary based on the DIA and the time to peak.
     
     * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
