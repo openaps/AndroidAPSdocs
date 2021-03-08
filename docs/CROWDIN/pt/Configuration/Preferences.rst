@@ -42,7 +42,7 @@ Geral
 
 **Patient name**
 
-* Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+* Can be used if you have to differentiate between multiple setups (i.e. duas crianças com diabetes Tipo I na sua família).
 
 Protection
 -----------------------------------------------------------
@@ -71,7 +71,7 @@ Settings protection
 Application protection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * If app is protected you must enter password or use phone's biometric authentication to open AAPS.
-* App will shut down immediately if wrong password is entered - but still run in the background if it was previously opened successfully.
+* A App será encerrada imediatamente se for digitada a senha errada, contudo continua a correr em segundo plano se ela foi previamente aberta com sucesso.
 
 Bolus protection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
