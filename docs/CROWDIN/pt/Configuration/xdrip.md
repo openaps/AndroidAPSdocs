@@ -90,7 +90,7 @@ O que é claro, é que usar o G6 é talvez seja um pouco mais complexo do que o 
 * Pre-soaking of the G6 with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
 * If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
 
-To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+Para saber mais sobre os detalhes e razões destas recomendações leia o [todo o artigo](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) publicado pelo Tim Street em [www.diabettech.com](https://www.diabettech.com).
 
 ### Connect G6 transmitter for the first time
 
