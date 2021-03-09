@@ -8,13 +8,13 @@ Le pilote ne fonctionne qu'avec les anciennes pompes Medtronic (voir les détail
 
 * * *
 
-Si vous avez commencé à utiliser le pilote Medtronic, merci de vous ajouter à cette [liste](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit#gid=0). C'est juste pour que nous puissions voir quels téléphones sont marchent bien et ceux qui sont moins bons (ou mauvais) pour ce pilote. Il y a une colonne appelée "BT restart". Il s'agit de vérifier si votre téléphone prend en charge l'activation/désactivation du BT, qui peut être utilisé lorsque la pompe n'est plus en mesure de se connecter, cela se produit de temps à autre. Si vous remarquez tout autre problème, veuillez le saisir dans la colonne "Comments".
+Si vous avez commencé à utiliser le pilote Medtronic, merci de vous ajouter à cette [liste](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit). C'est juste pour que nous puissions voir quels téléphones sont marchent bien et ceux qui sont moins bons (ou mauvais) pour ce pilote. Il y a une colonne appelée "BT restart". Il s'agit de vérifier si votre téléphone prend en charge l'activation/désactivation du BT, qui peut être utilisé lorsque la pompe n'est plus en mesure de se connecter, cela se produit de temps à autre. Si vous remarquez tout autre problème, veuillez le saisir dans la colonne "Comments".
 
 * * *
 
 ## Configuration matérielle et logicielle requise
 
-- **Téléphone :** le pilote Medtronic fonctionne avec n'importe quel téléphone qui supporte le BLE. **IMPORTANT : bien que le pilote fonctionne correctement sur tous les téléphones, ce n'est pas le cas pour l'activation/désactivation du Bluetooth (c'est obligatoire si vous perdez la connexion au RileyLink et le système ne peut pas se récupérer automatiquement ce qui arrive de temps en temps). So you need to get device with Android 7.0 - 8.1, in worst case scenario you can install LinegaeOS 15.1 (required 15.1 or lower) on your phone. We are looking into problem with Android 9, but so far we haven't found resolution (it seems to work on some models and not on others, and on also works sometimes on some models).**
+- **Téléphone :** le pilote Medtronic fonctionne avec n'importe quel téléphone qui supporte le BLE. **IMPORTANT : bien que le pilote fonctionne correctement sur tous les téléphones, ce n'est pas le cas pour l'activation/désactivation du Bluetooth (c'est obligatoire si vous perdez la connexion au RileyLink et le système ne peut pas se récupérer automatiquement ce qui arrive de temps en temps). Vous devez donc obtenir un appareil avec Android 7.0 - 8.1, dans le pire des cas, vous pouvez installer LineageOS 15.1 (requis 15.1 ou inférieur) sur votre téléphone. Nous sommes sur le problème avec Android 9, mais jusqu'à présent, nous n'avons pas trouvé de résolution (cela semble fonctionner sur certains modèles et pas sur d'autres, et parfois seulement de temps en temps).**
 - **RileyLink/Gnarl :** Pour la communication avec la Pompe dont vous avez besoin dispositif qui convertit les commandes BT du Téléphone en commandes RF que la Pompe comprend. L'appareil qui fait cela s'appelle un RileyLink (vous pouvez l'obtenir ici [getrileylink.org](https://getrileylink.org/)). Vous avez besoin de la version stable de l'appareil, pour les plus anciens modèles c'est avec le firmware 0.9 (les versions plus anciennes peuvent ne pas fonctionner correctement) ou pour les modèles plus récents avec le firmware 2.2 (il y a des options de mise à jour disponible sur site RL). Si vous avez l'âme d'un aventurier, vous pouvez également essayer GNARL ([ici](https://github.com/ecc1/gnarl)), qui est une sorte de clone du RileyLink. 
 - **Pompe :** Le pilote fonctionne uniquement avec les modèles et versions de firmware suivants : 
     - 512/712
@@ -27,7 +27,7 @@ Si vous avez commencé à utiliser le pilote Medtronic, merci de vous ajouter à
 
 ## Configuration de la pompe
 
-- **Enable remote mode on Pump** (Utilities -> Remote Options, Select Yes, and on next screen do Add ID and add dummy id (111111 or something). Vous devez avoir au moins un ID dans cette liste d'identifiants distants. Ces options peuvent varier selon les différents modèles de pompe. Cette étape est importante, car une fois définie, la pompe écoutera plus souvent la communication à distance.
+- **Activer le mode distant sur la Pompe** (Utilitaires-> Remote Options, Sélectionnez Oui, et à l'écran suivant faites Ajouter ID et mettez un id factice (111111 par example). Vous devez avoir au moins un ID dans cette liste d'identifiants distants. Ces options peuvent varier selon les différents modèles de pompe. Cette étape est importante, car une fois définie, la pompe écoutera plus souvent la communication à distance.
 - **Définir Basale Max** sur votre Pompe à votre "niveau de basale max entré dans votre profil STD" * 4 (si vous voulez avoir 400% DBT comme max). Ce nombre doit être inférieur à 35 (comme vous pouvez le voir dans la pompe).
 - **Définir Bolus Max** sur votre pompe (25 max)
 - **Définir profil sur STD**. Ce sera le seul profil que nous allons utiliser. Vous pouvez également désactiver.
@@ -50,7 +50,7 @@ Vous devez définir les éléments suivants : (voir photo ci-dessus)
 
 - **Numéro de série de la pompe** : Vous pouvez trouver cela sur le côté arrière, entrée SN. Vous ne devez prendre que les chiffres, votre numéro de série est composé de 6 chiffres.
 - **Type de pompe** : quel type de pompe vous avez (i.e. 522). 
-- **Fréquence de la pompe** : Il y a deux versions de la pompe Medtronic utilisant des fréquences différentes (si vous n'êtes pas certain de quelle fréquence la pompe utilise, regardez [FAQ](../Configuration/MedtronicPump#faq)) : 
+- **Fréquence de la pompe** : Il y a deux versions de la pompe Medtronic utilisant des fréquences différentes (si vous n'êtes pas certain de quelle fréquence la pompe utilise, regardez [FAQ](../Configuration/MedtronicPump#questions-frequentes)) : 
     - pour les US & le Canada, la fréquence utilisée est 916 Mhz
     - pour le reste du monde, la fréquence utilisée est de 868 Mhz
 - **Bolus Max sur la Pompe (U)** (en une heure) : doit avoir la même valeur que sur la pompe. Cela limite la quantité d'insuline que vous pouvez avoir en Bolus. Si vous allez au delà, le Bolus ne sera pas défini et une erreur sera retournée. Le Max qui peut être utilisé est 25, mais surtout veuillez définir une valeur correcte pour vous-même afin de ne pas avoir de surdose d'insuline.
@@ -80,8 +80,8 @@ Sur l'onglet de la pompe, vous pouvez voir plusieurs lignes qui affichent l'éta
 Sur la partie inférieure, nous avons 3 boutons :
 
 - **Actualiser** est pour rafraîchir l'état. Cette action ne doit être utilisée que lorsque la connexion n'a pas été établie pendant longtemps, car cette action va réinitialiser les données relatives à la pompe (extraction de l'historique, heure de la pompe, récupération du profil, état de la pile, etc).
-- **Historique de la Pompe** : Affiche l'historique de la pompe (voir [ci-dessous](../Configuration/MedtronicPump#pump-history))
-- **État du RileyLink**: Affiche l'état du RileyLink (voir [ci-dessous](../Configuration/MedtronicPump#rl-status-rileylink-status))
+- **Historique de la Pompe** : Affiche l'historique de la pompe (voir [ci-dessous](../Configuration/MedtronicPump#historique-pompe))
+- **État du RileyLink**: Affiche l'état du RileyLink (voir [ci-dessous](../Configuration/MedtronicPump#etat-rl-rileylink-etat))
 
 ## Historique pompe
 

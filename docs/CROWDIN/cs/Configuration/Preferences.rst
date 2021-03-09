@@ -20,6 +20,9 @@ Nastavení
   .. image:: ../images/Pref2021_Filter.png
     :alt: Předvolby > Filtry
 
+.. contents:: 
+   :backlinks: entry
+   :depth: 2
 
 Obecné
 ===========================================================
@@ -201,10 +204,10 @@ Podat tuto část z výsledku kalkulace [%]
 
 Poradce pro bolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Pokud spustíte `Poradce pro bolus <../Getting-Started/Screenshots.html#bolus-wizard>`_ a vaše glykémie je nad 10 mmol (180 mg/dl), bude nabídnut korekční bolus.
+* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
 * Pokud odsouhlasíte korekční bolus, zaznamená se **žádné sacharidy**.
 * Alarm se spustí v okamžiku, kdy hodnota glykémie bude na úrovni, kdy bude vhodné začít s jídlem.
-* Musíte znovu otevřít `Poradce pro bolus <../Getting-Started/Screenshots.html#bolus-wizard>`_ a zadat množství sacharidů, které chcete sníst.
+* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ again and enter the amount of carbs you want to eat.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
     :alt: Zpráva poradce pro bolus
@@ -252,8 +255,8 @@ Minimální změna pro výzvu [%]
 * Toto definuje relativní změnu, která je požadována pro spuštění oznámení.
 
 Vylepšený asistent pro jídlo (AMA) nebo Super Micro bolus (SMB)
-===============================================================
-V závislosti na nastavení v `konfiguraci <../Configuration/Config-Builder.html>`_ si můžete vybrat mezi dvěma algoritmy:
+===========================================================
+Depending on your settings in `config builder <../Configuration/Config-Builder.html>`__ you can choose between two algorithms:
 
 * `Advanced meal assist (OpenAPS AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ - stav algoritmu v roce 2017
 * `Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - nejnovější algoritmul pro pokročilé uživatele
@@ -261,7 +264,7 @@ V závislosti na nastavení v `konfiguraci <../Configuration/Config-Builder.html
 Nastavení OpenAPS AMA
 -----------------------------------------------------------
 * Jsou-li sacharidy zadány správně, reaguje systém po bolusu na jídlo rychleji, a to díky aplikování vysoké dočasné bazální dávky. 
-* More details about the settings and Autosens can be found in the `OpenAPS docs <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
+* More details about the settings and Autosens can be found in the `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
 
 Max. U/h, které lze nastavit pro dočas. bazál
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

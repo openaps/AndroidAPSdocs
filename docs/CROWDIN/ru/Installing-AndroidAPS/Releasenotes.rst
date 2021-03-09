@@ -139,7 +139,7 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
 
 Новые возможности
------------------
+------------------
 * Insight: Выключение вибрации при болюсах на версии прошивки 3
 * В остальном эквивалентна 2.6.1.2. Обновление не является обязательным. 
 
@@ -150,7 +150,7 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
 
 Новые возможности
------------------
+------------------
 * Исправлен сбой в службе Insight
 * В остальном эквивалентна 2.6.1.1. Если эта ошибка не влияет на вас, обновление не требуется.
 
@@ -161,7 +161,7 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
 
 Новые возможности
------------------
+------------------
 * Исправлена ошибка команды SMS CARBS при использовании помпы Combo
 * В остальном эквивалентна 2.6.1. Если эта ошибка не влияет на вас, обновление не требуется.
 
@@ -172,8 +172,8 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
 
 Новые возможности
------------------
-* Позволяет вводить только HTTPS:// в настройках NSClient
+------------------
+* Allow to enter only ``https://`` in NSClient settings
 * Исправлено ` BGI <../Getting-Started/Glossary.html> ` _ отображение ошибок в часах
 * Исправлены мелкие ошибки интерфейса
 * Исправлены сбои Insight
@@ -191,7 +191,7 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 Используйте ` Android Studio 3.6.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
 
 Новые возможности
------------------
+------------------
 * Небольшие изменения дизайна (стартовая страница...)
 * Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
 * Новый плагин `Local Profile <../Configuration/Config-Builder.html#local-profile-recommended>`_
@@ -202,7 +202,7 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
   * Старые переключатели профиля можно клонировать на новый в LocalProfile (применяется сдвиг по времени и процент)
   * Vertical NumberPicker для целей
 * SimpleProfile удален
-* `Пролонгированный болюс <../Usage/Extended-Carbs.html > ` _ функция - замкнутый цикл будет отключена
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
 * Плагин MDT: Исправлена ошибка с дублирующимися записями
 * Единицы не указаны в профиле, но это глобальные параметры
 * Добавлены новые параметры для мастера установки
@@ -225,13 +225,15 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 ==================================================
 Дата выпуска: 31-10-2019
 
-Обратите внимание на " важные примечания <../Instaling-AndroidAPS/Releasenotes.html#important-notes> ` _ и ` ограничения <../Instaling-AndroidAPS/Releasenotes.html#is-this-update-for-me-is-not-supported> ` _ для ` версии 2.5.0 <../Instaling-AndroidAPS/Releasenotes.html#version-2-5-0 > ` _. 
+Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
 * Исправлена ошибка в сетевом состоянии, которые приводят к ошибкам (не критично, но будет тратить много энергии на пересчет).
 * Новая иерархия версий, позволяющая выполнять незначительные обновления без уведомлений об обновлении.
 
 Версия 2.5.0
 ==================================================
 Дата выпуска: 26-10-2019
+
+.. _important-notes-2-5-0:
 
 Важные замечания
 --------------------------------------------------
@@ -241,7 +243,7 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 * Поддержка Glimp версии 4.15.57 и новее.
 
 Это обновление для меня? В настоящее время НЕ поддерживается
-------------------------------------------------------------
+--------------------------------------------------
 * Android 5 и ниже
 * Poctech
 * 600SeriesUploader
@@ -260,8 +262,7 @@ You need at least start `objective 11 <../Usage/Objectives.html#objective-11-aut
 * Верификатор подписи
 * Возможность обойти цели пользователям OpenAPS
 * Новые цели <../Usage/Objectives.html> ` _-экзамен, обработка приложений
-   
-   (Если вы начали хотя бы цель "открытый цикл" в предыдущих версиях экзамен не является обязательным.)
+  (Если вы начали хотя бы цель "открытый цикл" в предыдущих версиях экзамен не является обязательным.)
 * Исправлена ошибка в драйверах Dana*, где сообщалось о ложной разнице во времени
 * Исправлена ошибка в `SMS коммуникаторе <../Children/SMS-Commands.html>`_
 
@@ -325,7 +326,7 @@ ContextEdit
 
 Разное
 --------------------------------------------------
-* Если вы задавали собственное значение smbmaxminutes нужно заново его настроить
+* If you are using non default ``smbmaxminutes`` value you have to setup this value again
 
 
 Версия 2.0

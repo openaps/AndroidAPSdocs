@@ -7,7 +7,7 @@ Būkite pasirengę nenumatytiems atvejams. Galite netyčia pakeisti svarbius par
 
 Rekomenduojama eksportuoti nustatymus atlikus pakeitimus ar įvykdžius tikslą. 
 
-Eksportuoti nustatymai turėtų būti nukopijuoti į saugyklą debesyje arba į jūsų kompiuterį. Tuomet esate pasirengęs tam atvejui, jei prarasite ar sugadinsite savo AAPS išmanųjį telefoną ir nereikės pradėti nuo nulio.
+Exported settings should be copied to a cloud storage or your computer, better two different locations. Tuomet esate pasirengęs tam atvejui, jei prarasite ar sugadinsite savo AAPS išmanųjį telefoną ir nereikės pradėti nuo nulio.
 
 Windows 10 kompiuteryje tai atrodo maždaug taip:
   
@@ -22,11 +22,11 @@ Be kita ko, eksportuojami šie parametrai:
 * `Konfigūratoriaus <../Configuration/Config-Builder.html>`_ parametrai
 * 'Vietinio profilio <../Configuration/Config-Builder.html#local-profile-recommended>`_ parametrai
 * `Tikslų <../Usage/Objectives.html>`_ statusas, įskaitant `exam results <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
-* `Nustatymai <../Configuration/Preferences.html>`_, įskaitant `NS Client settings <../Configuration/Preferences.html#nsclient>`_
+* `Preferences <../Configuration/Preferences.html>`__ incl. `NS Client settings <../Configuration/Preferences.html#nsclient>`_
 
 Šifruotas kopijos formatas
 ==================================================
-Nustatymų atsarginės kopijos užšifruotos pagrindiniu slaptažodžiu, kuris gali būti nustatytas `Nustatymai <../Configuration/Preferences.html#master-password>`_ .
+Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`__ .
 
 
 Eksportuoti nustatymus
@@ -40,7 +40,7 @@ Eksportuoti nustatymus
 
 * Eksporto data ir laikas bus pridėta prie failo pavadinimo automatiškai ir rodomas kartu su keliu.
 * Spustelėkite "OK'.
-* Įveskite `pagrindinį slaptažodį <../Configuration/Preferences.html#master-password>`_ ir spauskite "OK".
+* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
 * Ekrano apačioje bus pranešta apie sėkmingą eksportavimą.
 
 .. image:: ../images/AAPS_ExportSettings2.png
@@ -60,7 +60,7 @@ Importuokite nustatymus
 * Visi failai iš aplanko AAPS/preferencece/ jūsų telefone bus rodomi sąraše.
 * Pasirinkite failą.
 * Patvirtinkite importavimą paspausdami 'OK'.
-* Įveskite `pagrindinį slaptažodį <../Configuration/Preferences.html#master-password>`_ ir spauskite "OK".
+* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
 
 .. image:: ../images/AAPS_ImportSettings2.png
   :alt: AndroidAPS importavimo nustatymai 2

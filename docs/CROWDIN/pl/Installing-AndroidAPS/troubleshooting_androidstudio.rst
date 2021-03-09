@@ -1,7 +1,7 @@
 Troubleshooting Android Studio
 **************************************************
 Lost keystore
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
 
 In case you cannot find your old keystore anymore, proceed as follows:
@@ -16,7 +16,7 @@ In case you cannot find your old keystore anymore, proceed as follows:
 8. Keep on looping.
 
 Kotlin compiler warning
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings. 
 
 App was build successfully and can be transferred to phone.
@@ -25,7 +25,7 @@ App was build successfully and can be transferred to phone.
   :alt: ignore Kotline compiler warning
 
 Key was created with errors
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 When creating a new keystore for building the signed APK, on Windows the following error message might appear
 
 .. image:: ../images/AndroidStudio35SigningKeys.png
@@ -34,7 +34,7 @@ When creating a new keystore for building the signed APK, on Windows the followi
 This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
 
 Could not download… / Offline Work
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 If you get a failure message like this
 
 .. image:: ../images/GIT_Offline1.jpg
@@ -48,12 +48,12 @@ File -> Settings
   :alt: Settings offline work
 
 Error: buildOutput.apkData must not be null
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Sometimes you might get an error message when building the apk saying
 
-  `Errors while building APK.`
-   
-  `Cause: buildOutput.apkData must not be null`
+  ``Errors while building APK.``
+
+  ``Cause: buildOutput.apkData must not be null``
 
 This is a known bug in Android Studio 3.5 and will probably not be fixed before Android Studio 3.6. Three options:
 
@@ -62,7 +62,7 @@ This is a known bug in Android Studio 3.5 and will probably not be fixed before 
 3. Change apk destination folder (different location).
 
 Unable to start daemon process
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above. I you are using Windows 10 you must use a 64-bit operating system.
 
 There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. `this one <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
@@ -72,12 +72,12 @@ There are a lot of manuals on the internet how to determine wether you have a 32
   
 
 No CGM data
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 * In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
 * In case you are using `patched Dexcom G6 app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Make sure you are using the correct version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 
 Uncommitted changes
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 If you receive failure message like
 
 .. image:: ../images/GIT_TerminalCheckOut0.PNG
@@ -111,7 +111,7 @@ Option 3 - Check for updates
     :alt: GIT checkout success
 
 App not installed
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 .. image:: ../images/Update_AppNotInstalled.png
   :alt: phone app note installed
 
@@ -126,11 +126,11 @@ App not installed
 6. Turn bluetooth back on and disable airplane mode
 
 App installed but old version
-=============================
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`_.
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Installing-AndroidAPS/Update-to-new-version.html#update-your-local-copy>`_.
 
 None of the above worked
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 If non of the above tips helped you might consider building the app from scratch:
 
 1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
@@ -140,7 +140,7 @@ If non of the above tips helped you might consider building the app from scratch
 5. `Import settings <../Usage/ExportImportSettings.html>`__
 
 Worst case scenario
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
 **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.

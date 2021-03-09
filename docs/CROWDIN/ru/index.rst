@@ -18,8 +18,11 @@ AndroidAPS-приложение с открытым исходным кодом 
    :maxdepth: 1
    :glob:
    :caption: Change language
-   Change language <changelanguage.rst>
-   
+
+   Change language <./changelanguage.rst>
+
+.. _getting-started:
+
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -28,7 +31,10 @@ AndroidAPS-приложение с открытым исходным кодом 
    Главное- безопасность <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Pump choices <./Getting-Started/Pump-Choices.md>
    Обновления и изменения документации <./Getting-Started/WikiUpdate.rst>
+
+.. _what-do-i-need:
 
 .. toctree::
    :maxdepth: 1
@@ -51,6 +57,8 @@ AndroidAPS-приложение с открытым исходным кодом 
    Примечания к выпуску <./Installing-AndroidAPS/Releasenotes.rst>
    Ветка разработчика <./Instaling-AndroidAPS/Dev_branch.md>
 
+.. _component-setup:
+
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -62,6 +70,8 @@ AndroidAPS-приложение с открытым исходным кодом 
    Телефоны <./Hardware/Phoneconfig.rst>
    Настройка Nightscout <./Instaling-AndroidAPS/Nightscout.md>
    Смарт-часы <./Hardware/Smartwatch.rst>
+
+.. _configuration:
 
 .. toctree::
    :maxdepth: 1
@@ -99,6 +109,7 @@ AndroidAPS-приложение с открытым исходным кодом 
    Доступ к файлам журнала <./Usage/Accessing-logfiles.md>
    Accu-Chek Combo советы для простого использования <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Параметры экспорта/импорта <./Usage/ExportImportSettings.rst>
+   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
@@ -115,6 +126,7 @@ AndroidAPS-приложение с открытым исходным кодом 
    :caption: Troubleshooting
 
    Устранение неполадок <./Usage/troubleshooting.rst>
+   Nightscout client <./Usage/Troubleshooting-NSClient.md>
 
 .. toctree::
    :maxdepth: 1
@@ -166,4 +178,4 @@ AndroidAPS-приложение с открытым исходным кодом 
 
 	* Все наименования продуктов и компаний, товарные знаки, услуги по обслуживанию, зарегистрированные товарные знаки и зарегистрированные службы являются собственностью соответствующих владельцев. Их использование - в информационных целях и не подразумевает какой-либо принадлежности к ним или их одобрения.
 
-	Обратите внимание, что этот проект не имеет связи с и одобрения от: ` SOOIL <http://www.sooil.com/eng/>` _, ` Dexcom <http://www.dexcom.com/>` _, ` Accu-Chek, Roche Diabet Care <http://www.accu-chek.com/>` _ или ` Medtronic <http://www.medtronic.com/>` _
+	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_

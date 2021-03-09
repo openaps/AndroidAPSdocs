@@ -19,7 +19,7 @@
 
 * Wenn AndroidAPS einen **Pumpe nicht erreichbar**-Alarm auslöst, hebe zuerst die Tastensperre auf und **betätige irgendeine Taste an der Pumpe** (z.B. den "Runter" Button). Sobald das Display der Pumpe sich ausgeschaltet hat, drücke **AKTUALISIEREN** auf der **Registerkarte "Combo"** in AndroidAPS. Meistens funktioniert die Verbindung dann wieder.
 * Wenn das nicht hilft, starte dein Smartphone neu. Nach dem Neustart werden AndroidAPS und ruffy reaktiviert und es wird eine neue Verbindung zur Pumpe aufgebaut.
-* Die Tests haben gezeigt, dass bestimmte Smartphones den Fehler "Pumpe nicht erreichbar" öfter auslösen als andere. [AAPS Smartphones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) zeigt die erfolgreich getesteten Smartphones. 
+* Die Tests haben gezeigt, dass bestimmte Smartphones den Fehler "Pumpe nicht erreichbar" öfter auslösen als andere. [AAPS Smartphones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) zeigt die erfolgreich getesteten Smartphones. 
 
 ### Ursachen und Folgen von häufigen Kommunikationsfehlern
 

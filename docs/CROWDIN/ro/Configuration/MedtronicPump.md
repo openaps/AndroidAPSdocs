@@ -8,11 +8,11 @@ Works only with older Medtronic pumps (details see below). Does not work with Me
 
 * * *
 
-If you started using Medtronic driver please add yourself to this [list](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit#gid=0). This is just so that we can see which Phones are good and which are not so good (or bad) for this driver. There is one column called "BT restart". This is to check if yourPhone supports BT enable/disable, which can be used when pump is no longer able to connect, that happens from time to time. If you notice any other problem, please write that in Comments column.
+If you started using Medtronic driver please add yourself to this [list](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit). This is just so that we can see which Phones are good and which are not so good (or bad) for this driver. There is one column called "BT restart". This is to check if yourPhone supports BT enable/disable, which can be used when pump is no longer able to connect, that happens from time to time. If you notice any other problem, please write that in Comments column.
 
 * * *
 
-## Hardware and software requirements
+## Cerinţe hardware şi software
 
 - **Phone:** Medtronic driver should work with any phone supporting BLE. **IMPORTANT: While driver works correctly on all phones, enabling/disabling Bluetooth doesn't (this is required when you loose connection to RileyLink and system can't recover automatically - happens from time to time). So you need to get device with Android 7.0 - 8.1, in worst case scenario you can install LinegaeOS 15.1 (required 15.1 or lower) on your phone. We are looking into problem with Android 9, but so far we haven't found resolution (it seems to work on some models and not on others, and on also works sometimes on some models).**
 - **RileyLink/Gnarl:** For communication with Pump you need device that converts BT commands from Phone into RF commands that Pump understands. Device that does is called RileyLink (you can get it here [getrileylink.org](https://getrileylink.org/)). You need stable version of device, which is for older models firmware 0.9 (older versions might not work correctly) or for newer models 2.2 (there are options to upgrade available on RL site). If you are feeling adventurous you can also try Gnarl ([here](https://github.com/ecc1/gnarl)), which is sort-of RileyLink-clone. 
@@ -98,7 +98,7 @@ Dialog has two tabs:
 - **Settings**: Shows settings about RileyLink: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
 - **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
 
-## Actions
+## Acțiuni
 
 When Medtronic driver is selected, 3 possible actions can be added to Actions Tab:
 
@@ -140,11 +140,11 @@ We are aware of this problem, and we are already looking into possible solution 
 
 ### Can I see the power of RileyLink/GNARL?
 
-No. At the moment none of this devices support this and it probably won't even in the future.
+Nu. At the moment none of this devices support this and it probably won't even in the future.
 
 ### Is GNARL full replacement for RileyLink?
 
-Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
+Da. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
 
 **Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
 

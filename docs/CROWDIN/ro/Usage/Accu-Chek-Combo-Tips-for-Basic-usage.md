@@ -19,13 +19,13 @@
 
 * When AndroidAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, press **UPDATE** on the **Combo Tab** in AndroidAPS. Mostly then the communication works again.
 * If that does not help, reboot your smartphone. After the restart, AndroidAPS and ruffy will be reactivated and a new connection will be established with the pump.
-* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) lists successfully tested smartphones. 
+* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) lists successfully tested smartphones. 
 
 ### Root causes and consequences of frequent communication errors
 
 * On phones with **low memory** (or **aggressive power-saving** settings), AndroidAPS is often shut down. You can tell by the fact that the Bolus and Calculator buttons on the Home screen are not shown when opening AAPS because the system is initializing. This can trigger "pump unreachable alarms" at startup. In the **Last Connection** field of the Combo tab, you can check when AndroidAPS last communicated with the pump. 
 
-![Pump unreachable](../images/combo/combo-tips-pump-unreachable.png) ![No connection to pump](../images/combo/combo-tips-no-connection-to-pump.png)
+![Pompă indisponibilă](../images/combo/combo-tips-pump-unreachable.png) ![No connection to pump](../images/combo/combo-tips-no-connection-to-pump.png)
 
 * This error can drain the pump's battery faster because the basal profile is read from the pump when the app is restarted.
 * It also increases the likelihood of causing the error that causes the pump to reject all incoming connections until a button on the pump is pressed. 

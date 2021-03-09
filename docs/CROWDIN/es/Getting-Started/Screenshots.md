@@ -226,7 +226,7 @@ Por lo general, su verdadera curva de glucosa termina en el medio de estas líne
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* To give a certain amount of insulin without using [bolus calculator](../Getting-Started/Screenshots#bolus-wizard).
+* To give a certain amount of insulin without using [bolus calculator](#bolus-wizard).
 * By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences#default-temp-targets).
 * If you do not want to bolus through pump but record insulin amount (i.e. insulin given by syringe) check the corresponding box.
 
@@ -239,11 +239,11 @@ Por lo general, su verdadera curva de glucosa termina en el medio de estas líne
 * Time offset: When will you / have you been eaten carbs (in minutes).
 * Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.rst)
 * You can use the buttons to quickly increase carb amount.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#ns-client).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
 
 #### Calculadora
 
-* See Bolus Wizard [section below](../Configuration/Screenhots#bolus-wizard)
+* See Bolus Wizard [section below](#bolus-wizard)
 
 #### Calibrations
 
@@ -290,7 +290,7 @@ Cuando usted quiere hacer un bolo para comida, aquí es de donde normalmente lo 
 
 * Muestra el bolo calculado. 
 * Si la cantidad de insulina a bordo sobrepasa ya el bolo calculado, entonces sólo se mostrará la cantidad de carbohidratos faltantes.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#ns-client).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
 
 ### Section L
 
@@ -322,11 +322,11 @@ Cuando usted quiere hacer un bolo para comida, aquí es de donde normalmente lo 
 * Button [profile switch](../Usage/Profiles#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
 * Button [temporary target](../Usage/temptarget#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
 * Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
-* Even though [extended boluses](../Usage/Extended-Carbs#id1) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+* Even though [extended boluses](../Usage/Extended-Carbs#extended boluses) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
    
    * This option is only available for Dana RS and Insight pumps. 
    * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
-   * Make sure to read the [details](../Usage/Extended-Carbs#id1) before using this option.
+   * Make sure to read the [details](../Usage/Extended-Carbs#extended boluses) before using this option.
 
 ### Careportal - section N
 
@@ -382,9 +382,9 @@ Cuando usted quiere hacer un bolo para comida, aquí es de donde normalmente lo 
 
 Para una discusión más detallada sobre los diferentes tipos de insulina, sus perfiles de actividad y por qué todos estos asuntos importan puede leer un artículo aquí en [Comprender las nuevas curvas de IOB basadas en las Curvas de Actividad Exponencial](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-Y puede leer un artículo excelente acerca de esto aquí: [Por qué nos equivocamos regularmente en la duración de la acción de insulina (DIA) que usamos, y por qué importa…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-And even more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Estado de infusora
 
@@ -447,7 +447,7 @@ La pestaña de tratamiento se puede utilizar para corregir las entradas de Hc de
 History of the following treatments:
 
 * Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
-* [Bolo extendido](../Usage/Extended-Carbs#id1)
+* [Bolo extendido](../Usage/Extended-Carbs#extended-bolus)
 * Temporary basal rate
 * [Objetivo temporal](../Usage/temptarget.md)
 * [Cambio de perfil](../Usage/Profiles.md)

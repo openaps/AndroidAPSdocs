@@ -24,7 +24,7 @@ For our example we are going to make an edit to AndroidAPSdocs. This does NOT ne
 
 ![Fork repo](./images/PR0.png)
 
-2. Go to http://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html or similar and navigate to the page you want to edit. Click on the black box at bottom left of page with the green word "v: latest" or similar. In the pop up window that appears, click the word "edit" for editing in GitHub. 
+2. Go to any page and navigate to the page you want to edit. Click on the black box at bottom left of page with the green word "v: latest" or similar. In the pop up window that appears, click the word "edit" for editing in GitHub. 
 
 ![edit doc](./images/PR1.png)
 

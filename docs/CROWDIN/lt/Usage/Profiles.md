@@ -80,4 +80,4 @@ Kaip alternatyvą, galite ištrinti profilio keitimą tiesiogiai mLab:
 ### "IVT 3 val. yra per trumpa"
 
 * Klaidos pranešimas pasirodo, kai jūsų profilyje nurodyta insulino veikimo trukmė, kurios vertę AndroidAPS laiko neteisinga. 
-* Perskaitykite skyrių [Tinkamos IVT pasirinkimas](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), peržiūrėkite savo profilį ir atlikite [profilio keitimą](../Usage/Profiles), kad jį suaktyvintumėte.
+* Read about [selecting the right DIA](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles) to continue.

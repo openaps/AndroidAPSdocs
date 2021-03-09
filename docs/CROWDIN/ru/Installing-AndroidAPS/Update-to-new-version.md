@@ -20,7 +20,7 @@
 
 Если вы уже обновили AAPS в предыдущих версиях и используете Windows PC, вы можете обновить его в четырех простых шагах:
 
-1. [ Экспортируйте параметры ](../Usage/ExportImportSettings#how-to-export-settings) из существующей версии AAPS на вашем телефоне, чтобы обезопасить себя
+1. [Export your settings](../Usage/ExportImportSettings#export-settings) from the existing AAPS version on your phone to be on the save side
 2. [ Обновите локальную копию ](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS-> Git-> Pull)
 3. [ Создайте подписанное APK ](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Выберите 'app', а не 'wear' на своем пути!)
 4. В зависимости от источника ГК [BG source](../Configuration/BG-Source.rst) убедитесь, что [identify receiver](../Configuration/xdrip#identify-receiver) отмечен в xDrip или используйте модифицированное приложение Dexcom из [папки 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).

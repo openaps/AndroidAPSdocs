@@ -51,9 +51,9 @@ Error: buildOutput.apkData no debe ser nulo
 ==================================================
 A veces, es posible que obtenga un mensaje de error al generar el apk diciendo
 
-  "Errores al crear el APK."
-   
-  `Causa: buildOutput.apkData no debe ser nulo`
+  ``Errors while building APK.``
+
+  ``Cause: buildOutput.apkData must not be null``
 
 Este es un error conocido en Android Studio 3.5 y probablemente no se arreglará antes de Android Studio 3.6. Tres opciones:
 
@@ -127,7 +127,7 @@ Aplicación no instalada
 
 Aplicación instalada pero antigua
 ==================================================
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`_.
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Installing-AndroidAPS/Update-to-new-version.html#update-your-local-copy>`_.
 
 Ninguna de las anteriores funcionó
 ==================================================

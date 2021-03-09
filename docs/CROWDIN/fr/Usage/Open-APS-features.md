@@ -14,7 +14,7 @@
 
 ## Super Micro Bolus (SMB)
 
-SMB, la version courte de 'Super Micro Bolus', est la dernière fonctionnalité de OpenAPS (depuis 2018) inclue dans l'algorithme Oref1. Contrairement à OpenAPS AMA, le SMB n'utilise pas les débits de base temporaires pour contrôler la glycémie, mais surtout les **microbolus de toute petite taille**. In situations where AMA would add 1.0 IU insulin using a temporary basal rate, SMB delivers several super microboluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. Dans le même temps (pour des raisons de sécurité) le véritable taux basal est mis à 0 UI/h pour une certaine durée afin d'éviter un surdosage (**'zéro-temp'**). Cela permet au système d'ajuster la glycémie plus rapidement qu'avec l'augmentation du débit de base temporaire de l'AMA.
+SMB, la version courte de 'Super Micro Bolus', est la dernière fonctionnalité de OpenAPS (depuis 2018) inclue dans l'algorithme Oref1. Contrairement à OpenAPS AMA, le SMB n'utilise pas les débits de base temporaires pour contrôler la glycémie, mais surtout les **microbolus de toute petite taille**. dans les cas où AMA ajouterait 1.0 UI d'insuline à l'aide d'un débit de base temporaire, SMB délivre plusieurs Super Micro Bolus en petites étapes à **5 minutes d'intervalle**, par ex. 0.4 UI, 0.3 UI, 0.2 UI and 0.1 UI. Dans le même temps (pour des raisons de sécurité) le véritable taux basal est mis à 0 UI/h pour une certaine durée afin d'éviter un surdosage (**'zéro-temp'**). Cela permet au système d'ajuster la glycémie plus rapidement qu'avec l'augmentation du débit de base temporaire de l'AMA.
 
 Grâce aux SMB, il peut être suffisant pour un repas faible en glucides d'informer le système de la quantité de glucides prévue et de laisser faire le reste par AAPS. Cependant, cela peut conduire à des pics postprandiaux plus élevés car le pré-bolus n’est pas possible. Ou vous pouvez donner, si vous avez besoin d'un pré-bolus, un **bolus de départ bolus**, qui couvre **seulement une partie** des glucides (par ex. 2/3 de la quantité estimée) et vous laissez les SMB couvrir le reste.
 
@@ -28,11 +28,11 @@ La fonctionnalité SMB contient des mécanismes de sécurité:
 
 2. Vous remarquerez probablement souvent de faibles débits de base temporaires (appelées 'faibles temp') ou des DBT à 0 U/h (appélés 'zéro-temp'). C'est par conception pour des raisons de sécurité et cela n'a aucun effets négatif si le profil est défini correctement. La courbe d'IA est plus significative que les débits de base temporaires.
 
-3. Additional calculations to predict the course of glucose, e.g. by UAM (un-announced meals). Même si aucun glucide n'est renseigné par l'utilisateur, RNS peut détecter automatiquement une augmentation significative des niveaux de glycémie liés à des repas, l'adrénaline ou d'autres facteurs et essaiera de les ajuster avec des SMB. Pour être en sécurité, cela marche aussi dans l'autre sens et peut arrêter les SMB plus tôt si une chute rapide inattendue de la glycémie survient. C'est pourquoi RNS doit toujours être activé avec les SMB.
+3. Des calculs supplémentaires sont effectués pour prédire l'évolution de la glycémie, par ex. RNS (ou Repas Non Signalés). Même si aucun glucide n'est renseigné par l'utilisateur, RNS peut détecter automatiquement une augmentation significative des niveaux de glycémie liés à des repas, l'adrénaline ou d'autres facteurs et essaiera de les ajuster avec des SMB. Pour être en sécurité, cela marche aussi dans l'autre sens et peut arrêter les SMB plus tôt si une chute rapide inattendue de la glycémie survient. C'est pourquoi RNS doit toujours être activé avec les SMB.
 
-**Vous devez avoir démarré [l'objectif 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) pour utiliser les SMB.**
+**Vous devez avoir démarré [l'objectif 10](../Usage/Objectives#objectif-10-activation-de-fonctionnalites-supplementaires-pour-l-utilisation-en-journee-telles-que-la-fonction-smb) pour utiliser les SMB.**
 
-Voir aussi : [Documentation OpenAPS pour oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) et [les infos de Tim sur les SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
+Voir aussi : [Documentation OpenAPS pour oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) et [les infos de Tim sur les SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
 ### Max. U/h pour le débit temp Basal (OpenAPS "max-basal")
 
@@ -52,9 +52,9 @@ AndroidAPS limite la valeur ainsi :
 * Adulte résistant à l'insuline : 12
 * Grossesse : 25
 
-*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur).*
+*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features#apercu-des-limites-codees-en-dur).*
 
-### Maximum total IOB OpenAPS can’t go over (OpenAPS "max-iob")
+### IA totale maximale pour OpenAPS \[U\] (OpenAPS "max-IA")
 
 Cette valeur détermine quelle valeur de maxIA doit être prise en compte par AAPS en mode boucle fermée. Si l'IA en cours (par exemple après un bolus de repas) est supérieure à la valeur définie, la boucle arrêtera d'administrer de l'insuline jusqu'à ce que la l'IA soit inférieure à la valeur limite renseignée.
 
@@ -63,7 +63,7 @@ En utilisant OpenAPS SMB, maxIA est calculé différemment de OpenAPS AMA. Dans 
     maxIA = moyenne bolus repas + 3 x max basal quotidien
     
 
-Soyez prudent et patient et modifiez les paramètres petit à petit. C'est différent pour tout le monde et dépend aussi de la Dose Totale d'Insuline (DTI) moyenne quotidienne. Pour des raisons de sécurité, il y a une limite, qui dépend de l'âge du patient. La 'limite en dur' pour maxIA est supérieure à la limite [AMA](../Usage/Open-APS-features.html#max-u-h-pour-le-debit-temp-basal-openaps-max-basal).
+Soyez prudent et patient et modifiez les paramètres petit à petit. C'est différent pour tout le monde et dépend aussi de la Dose Totale d'Insuline (DTI) moyenne quotidienne. Pour des raisons de sécurité, il y a une limite, qui dépend de l'âge du patient. La 'limite en dur' pour maxIA est supérieure à la limite [AMA](../Usage/Open-APS-features#max-u-h-pour-le-debit-temp-basal-openaps-max-basal).
 
 * Enfant : 3
 * Adolescent : 7
@@ -71,9 +71,9 @@ Soyez prudent et patient et modifiez les paramètres petit à petit. C'est diff�
 * Adulte résistant à l'insuline : 25
 * Grossesse : 40
 
-*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur).*
+*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features#apercu-des-limites-codees-en-dur).*
 
-Voir aussi la [documentation OpenAPS pour SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1#understanding-super-micro-bolus-smb).
+Voir aussi la [documentation OpenAPS pour SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Activer AMA Autosens
 
@@ -105,7 +105,7 @@ Pour les autres MGC/MGF comme le Freestyle Libre, ‘SMB en permanence’ sera d
 
 Le SMB marche pendant 6 h après avoir manger des glucides, même si les GA sont à 0. Pour des raisons de sécurité, cette option n'est possible que pour les sources GLY ayant un bon filtrage des données bruyantes. Pour l'instant, cela ne fonctionne qu'avec un Dexcom G5, si vous utilisez l'application Dexcom (patchée) ou le "mode natif" dans xDrip+. Si une valeur de GLY a une variation trop importante, le G5 ne l'envoie pas et attend la valeur suivante 5 minutes après.
 
-Pour les autres MGC/MGF comme le Freestyle Libre, ‘SMB en permanence’ sera désactivé jusqu'à ce que xDrip+ ait un meilleur plugin de filtrage. Vous pouvez trouver [plus d'informations ici](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Pour les autres MGC/MGF comme le Freestyle Libre, les ‘SMB sans glucides actifs’ seront désactivés jusqu'à ce que xDrip+ ait un meilleur plugin de filtrage. Vous pouvez trouver [plus d'informations ici](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Max. minutes de basal pour limiter le SMB
 
@@ -149,7 +149,7 @@ Valeur par défaut : 4 (ne doit pas être modifié sauf si vous en avez vraiment
 
 AAR, la version abrégée de "Assistance Améliorée Repas" est une fonctionnalité OpenAPS de 2017 (oref0). L'Assistance Améliorée Repas (AAR) de OpenAPS permet au système de réagir plus rapidement après un bolus repas si vous entrez les Glucides de façon fiable.
 
-Vous pouvez trouver plus d'informations dans la [documentation OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features#advanced-meal-assist-or-ama).
+Vous pouvez trouver plus d'informations dans la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features#advanced-meal-assist-or-ama).
 
 ### Max. U/h pour le débit temp Basal (OpenAPS "max-basal")
 
@@ -165,9 +165,9 @@ Les paramètres codés en dur dans AndroidAPS sont les suivants :
 * Adulte résistant à l'insuline : 12
 * Grossesse : 25
 
-*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur).*
+*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features#apercu-des-limites-codees-en-dur).*
 
-### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
+### IA basale max que OpenAPS pourra délivrer \[U\] (OpenAPS "max-iob")
 
 Ce paramètre limite la quantité maximale d'IA basale pour AndroidAPS. Si l'IA est plus élevée, AAPS arrête de délivrer de l'insuline basale additionnelle jusqu'à ce que l'IA de basale repasse sous la limite.
 
@@ -179,7 +179,7 @@ La valeur par défaut est 2, mais vous pouvez augmenter ce paramètre lentement 
 * Adulte résistant à l'insuline : 12
 * Grossesse : 25
 
-*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur).*
+*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features#apercu-des-limites-codees-en-dur).*
 
 ### Activer AMA Autosens
 
@@ -212,7 +212,7 @@ Valeur par défaut : 2
 <thead>
   <tr>
     <th width="200"></th>
-    <th width="75">Child</th>
+    <th width="75"> Enfant</th>
     <th width="75">Adolescent</th>
     <th width="75">Adulte</th>
     <th width="75">Adulte résistant à l'insuline</th>

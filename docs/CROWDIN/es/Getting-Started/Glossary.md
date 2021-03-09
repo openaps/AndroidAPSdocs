@@ -44,7 +44,7 @@
  <td><strong>Autosens</strong></td>
  <td>cálculo de la sensibilidad a la insulina como resultado del ejercicio, las hormonas, etc.</td>
  <td>&nbsp;</td>
- <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH-Autosens</a></td>
+ <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH-Autosens</a></td>
 </tr>
 <tr>
  <td><strong>Azure</strong></td>
@@ -122,7 +122,7 @@
  <td><strong>DIA (Duración Insulina Activa)</strong></td>
  <td>duración de la insulina activa</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Tipos de insulina en Wiki </a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH-DIA </a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td><strong>DST</strong></td>
@@ -134,13 +134,13 @@
  <td><strong>eCarbs</strong></td>
  <td>"carbohidratos extendidos"-los carbohidratos se reparten durante varias horas (por ejemplo, mucha grasa/proteína) <br>los bolos extendidos que podría conocer de la terapia regular de la bomba no tienen mucho sentido cuando se utiliza un lazo cerrado</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - Carbohidratos extendidos</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs caso de uso</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
 <tr>
  <td><strong>FGM</strong></td>
  <td>monitor de glucosa flash (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - Fuentes de BG</a></td>
+ <td><a href="../Configuration/BG-Source.html">Wiki - Fuentes de BG</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
@@ -320,7 +320,7 @@
  <td><strong>Detección sensibilidad</strong></td>
  <td>cálculo de la sensibilidad a la insulina como resultado del ejercicio, las hormonas, etc.</td>
  <td>&nbsp;</td>
- <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH-Autosens</a></td>
+ <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH-Autosens</a></td>
 </tr>
 <tr>
  <td><strong>Ruido de Sensor</strong></td>
@@ -386,7 +386,7 @@
  <td><strong>xDrip / xDrip+</strong></td>
  <td>software de código abierto para leer sistemas CGM</td>
  <td>&nbsp;</td>
- <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip + </a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip </a></td>
+ <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="https://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
  <td><strong>Zero-temp</strong></td>

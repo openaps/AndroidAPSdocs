@@ -58,4 +58,4 @@ This service is offered by fellow looper Martin Schiftan free of charge at the m
 * The service includes an automated basal rate check using Autotune. 
 * The server is located in Germany.
 
-<http://ns.10be.de/en/index.html>
+<https://ns.10be.de/en/index.html>

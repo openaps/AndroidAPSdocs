@@ -20,7 +20,7 @@ Pokud aplikaci aktualizujete poprvé, přeskočte tento odstavec. Je určen pouz
 
 Pokud jste v minulosti již AAPS aktualizovali a používáte-li Windows PC, můžete provést aktualizaci ve čtyřech jednoduchých krocích:
 
-1. [Exportujte své nastavení](../Usage/ExportImportSettings#how-to-export-settings) ze stávající verze AAPS do svého telefonu
+1. [Export your settings](../Usage/ExportImportSettings#export-settings) from the existing AAPS version on your phone to be on the save side
 2. [Aktualizujte lokální kopii](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
 3. [Vytvořte podepsané APK (Generate signed APK)](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Místo 'wear' zvolte 'app'!)
 4. V závislosti na [zdroji glykémie](../Configuration/BG-Source.rst) se ujistěte, že jste povolili možnost [Identify receiver](../Configuration/xdrip#identify-receiver) v aplikaci xDrip nebo používáte upravenou aplikaci Dexcom ze [složky 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).

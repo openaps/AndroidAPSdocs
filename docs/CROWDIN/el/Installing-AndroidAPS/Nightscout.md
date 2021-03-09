@@ -58,4 +58,4 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
 * Η υπηρεσία περιλαμβάνει έναν αυτοματοποιημένο έλεγχο βασικού ρυθμού χρησιμοποιώντας το Autotune. 
 * Ο διακομιστής βρίσκεται στη Γερμανία.
 
-<http://ns.10be.de/en/index.html>
+<https://ns.10be.de/en/index.html>

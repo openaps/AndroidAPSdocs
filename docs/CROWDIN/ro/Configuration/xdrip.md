@@ -1,135 +1,135 @@
-# xDrip+ settings
+# Cofigurare xDrip+
 
-If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
+Dacă nu este deja configurat de cand ai descărct [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
-**This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
+**Această documentaţie este pentru xDrip+ for Android.** Documentatia nu se aplica in cazul utilizarii aplicaţiei "xDrip for iOS".
 
-For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
+Pentru transmițătoarele G6 fabricate după sfârșitul anului 2018 (a caror serie incepe cu 80 sau 81) se va folosi versiunea [master](https://jamorham.github.io/#xdrip-plus).
 
-If your Dexcom G6 transmitter's serial no. is starting with 8G..., 8H... or 8J... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Pentru transmițătoarele a caror serie începe cu 8G, 8H sau 8J se va folosi una din [versiunile mai recente](https://github.com/NightscoutFoundation/xDrip/releases).
 
-If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+În cazul în care telefonul rulează cu Android 10 și ai dificultăți cu Xdrip+ master, încearca [Nightscout 31/12/2019 sau mai recent](https://github.com/NightscoutFoundation/xDrip/releases).
 
-## Basic settings for all CGM & FGM systems
+## Setari de baza pentru toate sistemele CGM & FGM
 
-* Make sure to set Base URL correctly including **S** at the end of http**s**:// (not http://)
+* Asigura-te că selectezi / scri corect baza URL-ul, inclusiv **S** de la finalul http**s**:// (nu http://)
    
    i.e. https://API_SECRET@your-app-name.herokuapp.com/api/v1/
    
-   -> Hamburger Menu (top left of homescreen) -> Settings-> Cloud Upload-> Nightscout Sync (REST-API) -> Base URL
+   -> Meniu principal (sus in stânga ecranului principal)-> Setări-> Cloud Upload-> Nightscout Sync (REST-API)-> URL de bază
 
-* Deactivate `Automatic Calibration` If the checkbox for `Automatic Calibration` is checked, activate `Download data` once, then remove the checkbox for `Automatic Calibration` and deactivate `Download data` again, otherwise the treatments (insulin & carbs) will be added twice to Nightscout.
+* Dezactiveaza `Preluare automata` Dacă caseta de selectare pentru `Preluare automata` este bifată, activează `Date de Descărcare` o dată, apoi eliminați caseta de selectare pentru `Preluare automată` și dezactivați din nou `Datele de descărcare`. În caz contrar, tratamentele (insulină & carbohidrați) vor fi adăugate de două ori in Nightscout.
 
-* Tap `Extra Options`
+* Apasă `Opțiuni suplimentare`
 
-* Deactivate `Upload treatments` and `Back-fill data`.
+* Dezactiveaza ` Încărcare tratamente ` și ` Completare ulterioara de date `.
    
-   **Safety warning : You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.**
+   **Avertisment: Trebuie dezactivata "Încarcare tratamente" din xDrip+, altfel tratamentele pot fi dublate în AAPS, ducând la fals COB şi IOB.**
 
-* Option `Alert on failures` should also be deactivated. Otherwise you will get an alarm every 5 minutes in case wifi/mobile network is too bad or the server is not available.
+* Opțiunea `Alerta eroare conexiune` ar trebui, de asemenea, dezactivată. În caz contrar vei primi o alarmă la fiecare 5 minute în cazul în care rețeaua wifi/mobile este prea incarcata/ nu functioneaza bine sau serverul nu este disponibil.
    
    ![xDrip+ Basic Settings 1](../images/xDrip_Basic1.png)
    
    ![xDrip+ Basic Settings 2](../images/xDrip_Basic2.png)
 
-* **InterApp-Settings** (Broadcast) If you are going to use AndroidAPS and the data should be forwarded to i.e. AndroidAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
+* **Setări InterApp-** (Distribuire) Cand folosesti AndroidAPS, deci datele ar trebui sa fie redirecționate către AndroidAPS, este necesar sa activezi Distribuire în xDrip + la setările inter-aplicații.
 
-* In order for the values to be equal, you should activate `Send the displayed glucose value`.
+* Activeaza `Trimite valoarea afişată a glicemiei` ca valorile sa fie egale.
 
-* If you have also activated `Accept treatments` and broadcasting in AndroidAPS, then xDrip+ will receive insulin, carbs and basal rate information from AndroidAPS and can estimate the hypo prediction etc. more accurately.
+* Dacă ai activat `Acceptare tratamente` şi Distribuire în AndroidAPS, atunci xDrip+ va primi de la AndroidAP informatii privind insulina, carbohidratii si Rb si va estima predicţie la hipoglicemie etc. cu mai multă precizie.
    
    ![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
 
-### Identify receiver
+### Identificare receptor
 
-* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
-* Pay attention: Auto-correction sometimes tend to change i to capital letter. You **must use only lowercase letters** when typing `info.nightscout.androidaps`. Capital I would prevent AAPS from receiving BG values from xDrip+.
+* Dacă apar probleme cu transmiterea locală (AAPS nu primește valorile glicemiei din xDrip+) mergi la Setări > Setări Inter-app > Identifica destinatarul și inscrie `info.nightscout.androidaps`.
+* Atenție: Auto-corectarea tinde uneori să schimbe litera i în majuscula I. **Trebuie să utilizezi doar litere minuscule** la tastarea `info.nightscut.androids`, i scris I, ca majuscula, ar împiedica AAPS să primească valori ale glicemiei de la xDrip +.
    
-   ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+   ![xDrip+ identificare receptor prin setări de bază inter-aplicații](../images/xDrip_InterApp_NS.png)
 
 ## xDrip+ & Dexcom G6
 
 * The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-* When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
-* If you need Clarity and want to profit from xDrip+ alarms use the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) with local broadcast to xDrip+.
+* When using xDrip+ as receiver uninstall Dexcom app first. **Transmiţătorul NU POATE FI conectat simultan cu xDrip+ si aplicatia Dexcom**
+* Dacă ai nevoie de Clarity şi doresti si alarmele xDrip+ poti folosi [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) cu distribuire locală la xDrip +.
 
-### xDrip+ version depending on G6 transmitter serial no.
+### Versiunea xDrip+ în funcție de seria transmitatorului G6.
 
-* For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus). 
-* If your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+* Pentru transmițătoarele G6 fabricate după sfârșitul anului 2018 (a caror serie incepe cu 80 sau 81) foloseste versiunea [master](https://jamorham.github.io/#xdrip-plus). 
+* Pentru transmițătoarele a caror serie începe cu 8G, 8H sau 8J foloseste [nightscout din 28 iulie 2019 sau mai recent](https://github.com/NightscoutFoundation/xDrip/releases).
 
-### Dexcom specific settings
+### Setări specifice Dexcom
 
-* Open G5/G6 Debug Settings -> Hamburger Menu (top left of homescreen) -> Settings -> G5/G6 Debug Settings ![Open xDrip+ Settings](../images/xDrip_Dexcom_SettingsCall.png)
+* Deschide Setările de Depanare G5/G6 -> Meniu principal (stânga sus pe ecranului principal) -> Setări -> G5/G6 Setări de Depanare ![Deschide Setările xDrip+](../images/xDrip_Dexcom_SettingsCall.png)
 
-* Enable the following settings
+* Activează următoarele setări
    
-   * `Use the OB1 Collector`
-   * `Native Algorithm` (important if you want to use SMB)
-   * `G6 support`
-   * `Allow OB1 unbonding`
-   * `Allow OB1 initiate bonding`
-* All other options should be disabled
-* Adjust battery warning level to 280 (bottom of G5/G6 Debug Settings)
+   * `Utilizeaza Collector OB1`
+   * `Algoritm Original` (important dacă vrei să utilizezi SMB (super micro bolus))
+   * `Suport G6`
+   * `Permite demontarea legăturilor OB1`
+   * `Permite conectarea inițială OB1`
+* Toate celelalte opțiuni ar trebui dezactivate
+* Regleaza nivelul de avertizare al bateriei la 280 (partea de jos a setărilor de Solutionare erori G5/G6)
    
-   ![xDrip+ G5/G6 Debug Settings](../images/xDrip_Dexcom_DebugSettings.png)
+   ![xDrip+ Setări depanare G5/G6](../images/xDrip_Dexcom_DebugSettings.png)
 
-### Preemptive restarts not recommended
+### Nu se recomandă repornirea preventivă
 
-**With Dexcom transmitters who's serial no. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
+**La transmiţătorii Dexcom a caror serie. începe cu 8G, 8H sau 8J repornirea preventiva nu funcționează și ar putea chiar sa distruga senzorul!**
 
-The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
+Extensia automata a senzorilor Dexcom (` repornire`) nu este recomandata deoarece ar putea duce la "salturi bruste" ale valorii glicemiei in ziua 9 după repornire.
 
-![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ salt după repornirea preventivă](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
+Ceea ce e clar este că utilizarea G6 este poate un pic mai complexă decât pare la prima vedere. Pentru a fi utilizat în condiţii de siguranţă, există câteva aspecte de care trebuie să fiți conștienți:
 
 * If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
 * If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
 * If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
-* Pre-soaking of the G6 with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
+* Pre-soaking of the G6 with factory calibration is likely to give variation in results. Dacă faceți preinserare, atunci pentru a obține cele mai bune rezultate, probabil că va trebui să calibrați senzorul.
 * If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
 
-To learn more about the details and reasons for these recommendations read the [complete article](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](http://www.diabettech.com).
+To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
 
-### Connect G6 transmitter for the first time
+### Conectează transmițătorul G6 pentru prima dată
 
-**For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
+**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
 
-For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
+Pentru transmițătoarele G6 fabricate după sfârșitul anului 2018 (a caror serie incepe cu 80 sau 81) foloseste versiunea [master](https://jamorham.github.io/#xdrip-plus).
 
-If your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+Pentru transmițătoarele a caror serie începe cu 8G, 8H sau 8J foloseste [nightscout din 28 iulie 2019 sau mai recent](https://github.com/NightscoutFoundation/xDrip/releases).
 
-* Turn original Dexcom receiver off (if used).
-* Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
-* Use the Source Wizard Button which ensures default settings including OB1 & Native Mode 
-   * This guides you through the initial set up.
+* Dezactivează receptorul Dexcom original (dacă este utilizat).
+* Pe ecranul principal apasă lung pictograma rosie - picătura de sânge pentru a activa `Asistentul Sursă`.
+* Utilizeaza butonul Asistent Sursă care asigură setările implicite, inclusiv OB1 & modul original 
+   * Acesta ghidează configurarea inițială.
    * you will need your transmitter serial number if this is the first time you've used it.
 
-* Put in serial number of new transmitter (on the transmitter packaging or on the back of the transmitter). Be careful not to confuse `0` (zero) and `O` (capital letter o).
+* Introdu numărul de serie al noului transmițător (de pe ambalaj sau de pe spatele transmițătorului). Fiți atent să nu confundați `0` (zero) și `O` (litera majusculă O).
    
-   ![xDrip+ Dexcom Transmitter Serial No](../images/xDrip_Dexcom_TransmitterSN.png)
+   ![xDrip+ serie transmiter Dexcom](../images/xDrip_Dexcom_TransmitterSN.png)
 
 * Insert new sensor (only if replacing)
 
-* Put transmitter into sensor
-* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter's serial no., accept it (tap "pair")
-* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+* Pune transmițătorul în senzor
+* Dacă apare un mesaj solicitând asociere cu "DexcomXX", unde "XX" sunt ultimele două caractere din numărul de serie al transmiţătorului, acceptă (apasă "împerechere")
+* Nu porni un senzor nou înainte ca următoarele informaţii să fie afişate în pagina de stare -> G5/G6 status -> PhoneServiceState:
    
-   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got no raw 19:04")
+   * Transmitatoare a caror serie începe cu 80 sau 81: "date primite la hh:mm" (de ex. "Date primite la 19:04")
+   * Transmitătoare a caror serie începe cu 8G, 8H sau 8J: "Glicemie primita la hh:mm" (de ex. "Glicemie primita la 19:04") sau "Primit acum hh:mm" (de ex. "Am primit acum 19:04")
    
-   ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
+   ![xDrip+ StareServiciiTelefon](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Start sensor (only if replacing)
+* Porniți senzorul (numai în caz de înlocuire)
    
-   -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
+   -> In partea de jos a ecranului, după câteva minute, trebuie sa apara textul `Incalzire x, x ore rămase`.
 
--> If your transmitter serial no. does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
+-> Dacă seria transmițătorului nu incepe cu 8G, 8H sau 8J iar dupa cateva minute de la oprire-repornirea senzorului nu se afiseaza textul cu durata ramasa:
 
 * Restart collector (system status - if not replacing sensor}
-* Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
-* Long press the red xDrip+ blood drop icon on the main screen to disable the `Source Wizard Button`.
+* Nu reporni receptorul Dexcom original (dacă este utilizat) înainte ca xDrip+ să afișeze primele citiri.
+* Pe ecranul principal apasă lung pictograma rosie - picătura de sânge pentru a activa `Asistentul Sursă`.
    
    ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
    
@@ -139,100 +139,100 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J try [ni
    
    ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-### Transmitter battery status
+### Stare baterie transmiţător
 
-* Battery status can be controlled in system status (Hamburger menu top left on homescreen)
-* Swipe left once to see second screen. ![xDrip+ First Transmitter 4](../images/xDrip_Dexcom_Battery.png)
+* Starea bateriei poate fi verificata în starea sistemului (meniul principal din ecranul principal, stânga sus)
+* Gliseaza stânga o dată pentru a vedea al doilea ecran. ![xDrip+ Primul Transmitător 4](../images/xDrip_Dexcom_Battery.png)
 
-* The exact values when the transmitter “dies” due to empty battery are not known. The following information was posted online after the transmitter “died”:
+* Nu se cunosc valorile exacte când transmiţătorul „moare” din cauza bateriei goale. Următoarele informații vor fi postate online după ce transmitatorul „moare”:
    
-   * Posting 1: Transmitter days: 151 / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
-   * Posting 2: Transmitter days: 249 / Voltage A: 275 (at time of failure)
+   * Postarea 1: Transmitator Zile vechime: 151/Tensiune A: 297/Tensiune B: 260/Rezistenţa: 2391
+   * Postarea 2: Transmitator Zile vechime: 249/Tensiune A: 275 (la momentul intreruperii functionarii)
 
-### Extend transmitter life
+### Extindere durata de functionare a transmiţătorului
 
-* So far life cannot be extended for transmitters who's serial no. starts with 8G, 8H or 8J. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip#transmitter-battery-status)).
-* To prevent difficulties starting sensors it is highly recommended to extend transmitter life before day 100 of first usage.
-* Use of transmitters serial no. starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if 'engineering mode' is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
-* Running sensor session will be stopped when extending transmitter life. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
-* Stop sensor manually via hamburger menu.
-* Switch to the `engineering mode`: 
-   * tap on the character on the right of the xDrip+ start screen that represents a syringe
-   * then tap on the microphone icon in the lower right corner
-   * In the text box that opens type "enable engineering mode" 
-   * click "Done"
-   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
-* Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
-* Use the voice command: “hard reset transmitter”
-* The voice command will be executed with the next data receipt of the transmitter
-* Look at the system status (Hamburger menu -> system status) and see what happens
-* After approx. 10 min. you can switch to 'Classic Status Page' (swipe right) and click 'Restart collector'. This will set sensor days to 0 without the need to start a new sensor.
-* Alternative: If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
+* Până acum durata de functionare nu a putut fi extinsă la transmiţătorii a caror serie începe cu 8G, 8H sau 8J. Acelaşi lucru este valabil şi pentru transmiţătorii cu serial nr. incepe cu 81 si firmware 1.6.5.**27** (vezi xDrip+ System Status-G5/G6 aşa cum se arată [pe acest ecran](../Configuration/xdrip#transmitter-battery-status)).
+* Pentru a preveni dificultăţi la pornirea senzorilor, este indicat să extinzi viaţa transmiţătorului înainte de ziua 100 a primei utilizări.
+* -> Dacă seria transmițătorului starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if [engineering mode](../Usage/Enabling-Engineering-Mode-in-xDrip) is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
+* Rularea senzorului va fi oprită in timpul in care se extindere viaţa transmiţătorului. Deci, extinde înainte de schimbarea senzorului sau fi constient că va exista o nouă fază de încălzire de 2 ore.
+* Oprire manuala a senzorului prin intermediul meniului principal.
+* Comutați la modul inginer ``: 
+   * atinge uşor pictograma seringii din dreapta ecranului de pornire xDrip+
+   * apoi apasă pe pictograma microfonului în colțul din dreapta jos
+   * În caseta de text care deschide scrie "activează modul inginerie" 
+   * clic pe "Gata"
+   * Dacă motorul Google Speak este activat, poți să folosesti comanda vocală: "activează modul inginerie". 
+* Mergi la setările de depanare G5 și asigura-te că `Utilizează colectorul OB1` este activat.
+* Folosesti comanda vocala: "reseteaza hardul transmiţătorului"
+* Comanda vocală va fi executată la următoarea primire de date a transmițătorului
+* Uită-te la starea sistemului (meniu principal -> starea sistemului) și vezi ce se întâmplă
+* După aprox. 10 min. poți comuta la 'Classic Status Page' (glisare la dreapta) și apasă 'Repornire colector'. Acest lucru va seta la 0 zile varsta senzorului fără a fi nevoie să pornesti un senzor nou.
+* Alternativ: Dacă vedeți un mesajul 'Phone Service State: Hard Reset maybe failed" pe al doilea ecran de stare porniți senzorul și acest mesaj ar trebui să dispară.
    
-   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
+   ![xDrip + Resetarea hard probabil a eşuat](../images/xDrip_HardResetMaybeFailed.png)
 
-* Transmitter days will be set to 0 after successful extension and start of sensor.
+* Vechimea transmiţătorilor, dupa extindere si pornirea senzorului, va fi setata la 0 zile.
 
-### Replace transmitter
+### Înlocuire transmiţător
 
-For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
+Pentru transmițătoarele G6 fabricate după sfârșitul anului 2018 (a caror serie incepe cu 80 sau 81) foloseste versiunea [master](https://jamorham.github.io/#xdrip-plus).
 
-If your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Pentru transmițătoarele a caror serie începe cu 8G, 8H sau 8J foloseste [nightscout din iulie sau mai recent](https://github.com/NightscoutFoundation/xDrip/releases).
 
-* Turn original Dexcom receiver off (if used).
-* Stop sensor (only if replacing sensor)
+* Dezactivează receptorul Dexcom original (dacă este utilizat).
+* Oprește senzorul (doar dacă înlocuiește senzorul)
    
-   Ensure it really is stopped:
+   Asigură-te că este oprit:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
+   Pe al doilea ecran "G5/G6 Status" uită-te la `Elemente de coadă` de la jumatate in jos - posibil sa vezi ceva de genul `(1) Stop Senzor`
    
-   Wait until this goes - usually within a few minutes. Sensor Status must be "Stopped" (see screenshot).
+   Așteptați până când se dispare mesajul - de obicei în câteva minute. Starea senzorului trebuie să fie "Oprit" (vezi ecranul).
    
-   -> To remove transmitter without stopping sensor see this video <https://youtu.be/AAhBVsc6NZo>.
+   -> Pentru a elimina transmițătorul fără a opri senzorul, vezi acest video <https://youtu.be/AAhBVsc6NZo>.
    
    ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
    
    ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Forget device in xDrip+ system status AND in smartphone’s BT settings (Will be shown as Dexcom?? whereas ?? are the last two digits of the transmitter serial no.)
+* Scoate dispozitivul de la starea sistemului xDrip+ ȘI DIN setările de bluetooth ale smartphone-ului (va fi afișat ca Dexcom?? unde ?? sunt ultimele două cifre ale numărului de serie al transmiţătorului.)
    
-   ![xDrip+ Forget Device](../images/xDrip_Dexcom_ForgetDevice.png)
+   ![xDrip+ Elimină Dispozitivul](../images/xDrip_Dexcom_ForgetDevice.png)
 
-* Remove transmitter (and sensor if replacing sensor)
+* Îndepărteaza transmițătorul (și, dacă îl înlocuiesti, si senzorul)
 
-* Put the old transmitter far away to prevent reconnection. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% no one is turning the microwave on.
-* Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
-* Use the Source Wizard Button which ensures default settings including OB1 & Native Mode 
-   * This guides you through the initial set up.
-   * You will need your transmitter serial number if this is the first time you've used it.
-* Put in serial number of new transmitter. Be careful not to confuse 0 (zero) and O (capital letter o).
+* Pune transmiţătorul vechi departe de a preveni reconectarea. Un cuptor cu microunde este o cusca Faraday perfecta pentru asta - dar deconectează cablul de alimentare electrica pentru a fi sigur ca nimeni nu pornește cuptorul.
+* Pe ecranul principal apasă lung pictograma rosie - picătura de sânge pentru a activa `Asistentul Sursă`.
+* Utilizeaza butonul Asistent Sursă care asigură setările implicite, inclusiv OB1 & modul original 
+   * Acesta ghidează configurarea inițială.
+   * Este necesar numărul de serie al transmitatorului la prima folosire a acestuia.
+* Pune numărul de serie la noului transmiţător. A nu se confunda 0 (zero) cu O (majuscula o).
 * Insert new sensor (only if replacing).
-* Put transmitter into sensor - **Do not start sensor immediately!**
-* New "Firefly Transmitters" (serial no. starting with 8G, 8H or 8J) can only be used in native mode.
-* The following options must not be activated for new "Firefly Transmitters" (serial no. starting with 8G, 8H or 8J):
+* Pune transmițătorul în senzor - **Nu porni senzorul imediat!**
+* Noii "transmițători Firefly" (cu număr de serie care incepe cu 8G, 8H sau 8J) poate fi folosit doar in modul original.
+* Următoarele opţiuni nu trebuie activate la noii "transmiţători Firefly" (cu numar de serie care începe cu 8G, 8H sau 8J):
    
-   * Preemptive Restart (disable!)
-   * Restart sensor (disable!)
-   * Fallback to xDrip+ (disable!)
+   * Repornire (dezactivare!)
+   * Repornire senzor (dezactivare!)
+   * Revenire la xDrip+ (dezactivare!)
    
-   ![Settings for Firefly transmitters](../images/xDrip_Dexcom_FireflySettings.png)
+   ![Setări pentru transmiţătorii de tip Firefly](../images/xDrip_Dexcom_FireflySettings.png)
 
-* Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following information is displayed:
+* Verifica în Classic Status Page -> G5/G6 status -> PhoneServiceState dacă una din următoarele informaţii este afişată:
    
-   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+   * Transmitatoare a caror serie începe cu 80 sau 81: "date primite la hh:mm" (de ex. "Date primite la 19:04")
+   * Transmitătoare a caror serie începe cu 8G, 8H sau 8J: "Glicemie primita la hh:mm" (de ex. "glicemie primita la 19:04") sau "Primit acum hh:mm" (de ex. "Am primit acum 19:04")
    
-   ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
+   ![xDrip+ StareServiciiTelefon](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Wait 15 minutes as the transmitter should communicate several times with xDrip before new sensor is started. Battery data will be shown below Firmware information.
+* Aşteapta 15 minute ca transmiţătorul să comunice de mai multe ori cu xDrip înainte de a fi pornit noul senzor. Datele bateriei vor fi prezentate mai jos de informaţiile despre firmware.
    
-   ![Firefly transmitter battery data](../images/xDrip_Dexcom_FireflyBattery.png)
+   ![Date baterie transmițător Firefly](../images/xDrip_Dexcom_FireflyBattery.png)
 
-* Start sensor and DO NOT BACKDATE! Always select "Yes, today"!
+* Porneste senzorul, şi NU ANULA DATELE (DO NOT BACKDATE)! Selectează întotdeauna "Da, astăzi"!
 
 * Restart collector (system status - if not replacing sensor)
-* Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
-* Long press the red xDrip+ blood drop icon on the main screen to disable the `Source Wizard Button`.
+* Nu reporni receptorul Dexcom original (dacă este utilizat) înainte ca xDrip+ să afișeze primele citiri.
+* Pe ecranul principal apasă lung pictograma rosie - picătura de sânge pentru a activa `Asistentul Sursă`.
    
    ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
    
@@ -242,111 +242,111 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8Juse one 
    
    ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-### New Sensor
+### Senzor nou
 
-* Turn original Dexcom receiver off (if used).
-* Stop sensor if necessary
+* Dezactivează receptorul Dexcom original (dacă este utilizat).
+* Oprește senzorul dacă este necesar
    
-   Ensure it really is stopped:
+   Asigură-te că este oprit:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
+   Pe al doilea ecran "G5/G6 Status" uită-te la `Elemente de coadă` de la jumatate in jos - posibil sa vezi ceva de genul `(1) Stop Senzor`
    
-   Wait until this goes - usually within a few minutes.
+   Așteptați până când se dispare mesajul - de obicei în câteva minute.
    
    ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
    
    ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Clean contacts (transmitter backside) with alcohol and let air-dry.
+* Curăţa contactele de pe spatele transmiţătorul cu alcool şi lasa să se usuce la aer.
 
-* In case you use this function disable `Restart Sensor` and `Preemptive restarts` (Hamburger menu -> Settings -> G5/G6 Debug Settings). If you miss this step and have these functions enabled the new sensor will not start properly.
+* În cazul în care folosesti această funcție, dezactiveaza `Reporniți Sensorul` și `Repornirile Preemptive` (Meniu principal -> Setări -> G5/G6 Setari Solutionare erori). Dacă omiţi acest pas şi aceste funcţii sunt activate, noul senzor nu va porni corespunzător.
    
-   ![xDrip+ Preemptive Restart](../images/xDrip_Dexcom_Restart.png)
+   ![xDrip+ Repornire Preventivă](../images/xDrip_Dexcom_Restart.png)
 
-* Start Sensor
+* Pornește senzorul
    
-   **For new Firefly transmitters** (serial no. starting with 8G, 8H or 8J) **it is mandatory, for all other transmitters it is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen). DO NOT BACKDATE!**
-
-* Set time inserted
+   **Pentru noii transmiţători de la Firefly,** (cu seria incepand cu 8G, 8H sau 8J) **este obligatoriu, iar pentru toti ceilalti transmitatori este recomandat, sa astepti aprox. 15 minute intre oprirea si pornirea noului senzor (pana cand `Sensor Status: Stopped` apare pe al doilea ecran de stare a sistemului). NU ANULA DATELE (DO NOT BACKDATE)</p></li> 
    
-   * To use G6 Native mode you must wait for the 2 hour warm up (i.e insertion time is now).
-   * If you are using the xDrip+ algorithm then you can set a time more than 2 hours ago to avoid warm up. Readings may be very erratic. Therefore, this is not recommended.
-* Enter Sensor code (on the peel-off foil of the sensor) 
-   * Keep code for further reference (i.e. new start after transmitter had to be removed)
-   * Code can also be found in [xDrip+ logs](../Configuration/xdrip#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
-* No calibration is needed if you use G6 in "native mode". xDrip+ will show readings automatically after 2 hour warm-up.
-* Do not turn original Dexcom Receiver (if used) back on before xDrip+ shows first readings.
+   * Potriveste ora
+      
+      * La utilizarea G6 Modul Original trebuie să aştepţi cele 2 ore de incalzire (adică timpul de inserare este acum).
+      * Dacă folosesti algoritmul xDrip+, poti seta ora cu mai mult de 2 ore în urmă ca sa eviti încălzirea. Citirile pot fi foarte neregulate. Prin urmare, nu se recomandă acest lucru.
+   * Introdu codul senzorului (de pe folia detaşabilă a senzorului) 
+      * Păstreaza codul - il poti folosi ulterior (de ex la o noua pornire după ce transmiţătorul a trebuit înlăturat)
+      * Codul poate fi gasit si in [inregistrari xDrip+ ](../Configuration/xdrip#retrieve-sensor-code): Click 3-puncte-meniu din ecranul principal xDrip+ si alege `Vezi Inregistrari Evenimente`.
+   * Nu este necesară calibrarea în cazul în care utilizezi G6 în modul original. xDrip+ va afișa citiri automat după 2 ore de încălzire.
+   * Nu reporni receptorul Dexcom original (dacă este utilizat) înainte ca xDrip+ să afișeze primele citiri.
+      
+      ![xDrip+ Start Dexcom Sensor 1](../images/xDrip_Dexcom_SensorStart01.png)
+      
+      ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)</ul> 
    
-   ![xDrip+ Start Dexcom Sensor 1](../images/xDrip_Dexcom_SensorStart01.png)
+   ### Recuperează codul senzorului
    
-   ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
-
-### Retrieve sensor code
-
-* In master dated 2019/05/18 and the latest nightly builds the sensor code is shown in system status (Hamburger menu top left on homescreen).
-* Swipe left once to see second screen.
+   * În fisierul din data 2019/05/18 și în cel mai recent nightly, codul senzorului este afișat în starea sistemului (meniul Hamburger din stânga sus pe ecranul principal).
+   * Gliseaza stânga o dată pentru a vedea al doilea ecran.
+      
+      ![xDrip+ Recuperare cod2 Senzor Dexcom](../images/xDrip_Dexcom_SensorCode2.png)
    
-   ![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
-
-* Dexcom sensor code can also be found in xDrip+ logs.
-
-* Tap 3 dot menu (top right side on homescreen)
-* Select `View Event Logs` and search for "code"
+   * Codul senzorului Dexcom poate fi de asemenea găsit în jurnalele xDrip+.
    
-   ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
-
-## Troubleshooting Dexcom G5/G6 and xDrip+
-
-### Problem connecting transmitter
-
-* Transmitter must be shown in your smartphone's bluetooth settings.
-* Transmitter will be shown as Dexcom?? whereas ?? represent the last two digits of your transmitter serial no. (i.e. DexcomHY).
-* Open system status in xDrip+ (hamburger menu on top left side of home screen).
-* Check if your transmitter is shown on first status page ('classic status page').
-* If not: Delete device from your smartphone's bluetooth settings and restart collector.
-* Wait about 5 min. until Dexcom transmitter reconnects automatically.
-
-### Problem when starting new sensor
-
-Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J.
-
-* Native sensor is marked as "FAILED: Sensor Failed Start"
-* Stop sensor
-* Restart your phone
-* Start sensor with code 0000 (four times zero)
-* Wait 15 minutes
-* Stop sensor
-* Start sensor with "real" code (printed on the adhesive protector)
-
-Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
-
-## xDrip+ & Freestyle Libre
-
-### Libre specific settings
-
-* Open Bluetooth Settings -> Hamburger Menu (top left of homescreen) -> Settings -> scroll down -> Less common settings -> Bluetooth Settings
+   * Apăsați pe meniul format din 3 puncte (partea dreaptă sus pe ecranul principal)
+   * Selectaţi `Vizualizare Jurnale de Evenimente` şi căutaţi "cod"
+      
+      ![xDrip+ Recuperare Cod Senzor Dexcom](../images/xDrip_Dexcom_SensorCode.png)
    
-   ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
-
-* Enable the following settings
+   ## Depanare Dexcom G5/G6 şi xDrip+
    
-   * `Turn Bluetooth on` 
-   * `Use scanning`
-   * `Always discover services`
-
-* All other options should be disabled
+   ### Problemă la conectarea transmiţătorului
    
-   ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
-
-### Libre smart reader battery level
-
-* Battery level of smart readers such as MiaoMiao 2 can be displayed in AAPS.
-* Details can be found on [screenshots page](../Getting-Started/Screenshots#sensor-level-battery).
-
-### Connect Libre Transmitter & start sensor
-
-![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
-
-![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
-
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+   * Transmitatorul trebuie să fie afișat în setările bluetooth ale telefonului dvs.
+   * Transmiţătorul va fi afişat ca Dexcom?? unde ?? reprezintă ultimele două caractere din seria transmiţătorului. (adică DexcomHY).
+   * Deschideți starea sistemului în xDrip+ (meniul hamburger din partea stângă sus a ecranului principal).
+   * Verificaţi dacă transmiţătorul dumneavoastră este afişat pe prima pagină de stare ('pagina clasică de stare').
+   * Dacă nu: Ștergeți dispozitivul din setările bluetooth ale telefonului dvs. și reporniți colectorul.
+   * Aşteptaţi aproximativ 5 minute. până când transmițătorul Dexcom se reconectează automat.
+   
+   ### Problemă la pornirea unui senzor nou
+   
+   Vă rugăm să reţineţi că este posibil ca următoarea metodă să nu funcţioneze dacă seria transmiţătorului Dexcom G6 începe cu 8G, 8H sau 8J.
+   
+   * Senzorul nativ este marcat ca "EȘUAT: Pornirea senzorului eșuată"
+   * Stop sensor
+   * Reporniți telefonul
+   * Pornește senzorul cu codul 0000 (patru de zero)
+   * Aşteptaţi 15 minute
+   * Stop sensor
+   * Porniţi senzorul cu codul "real" (tipărit pe hârtia adezivă de protecţie)
+   
+   Verificați în jurnalele xDrip+ dacă xDrip+ începe să numere "Durată: 1 minut" (și așa mai departe). Doar în jurnalele xDrip+ puteți detecta într-un stadiu incipient dacă xDrip+ a oprit un senzor. Ultima stare nu este întotdeauna afișată corect în partea de jos a ecranului.
+   
+   ## xDrip+ & Freestyle Libre
+   
+   ### Setari specifice Libre
+   
+   * Deschide Setările Bluetooth -> Meniu principal (stânga sus a ecranului principal) -> Setări -> derulare în jos -> Setări mai puțin frecvente -> Setări Bluetooth
+      
+      ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
+   
+   * Activează următoarele setări
+      
+      * `Activează Bluetooth` 
+      * `Folosește scanarea`
+      * `Intotdeauna cauta servicii Bluetooth`
+   
+   * Toate celelalte opțiuni ar trebui dezactivate
+      
+      ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
+   
+   ### Nivel baterie de la transmițătorul Libre
+   
+   * Nivelul de baterie al unor transmițători precum MiaoMiao 2 poate fi afişat în AAPS.
+   * Detaliile pot fi găsite pe pagina [de capturi de ecran](../Getting-Started/Screenshots#sensor-level-battery).
+   
+   ### Conectează Transmiterul Libre& pornește senzorul
+   
+   ![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+   
+   ![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+   
+   ![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)

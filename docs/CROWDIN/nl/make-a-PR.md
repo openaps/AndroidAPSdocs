@@ -1,6 +1,6 @@
 # Maak je eerste PR (pull request)
 
-** Deze beschrijving is alleen bedoeld om de Engelstalige versie van de wiki te verbeteren. Wijzigingen moeten altijd eerst in de Engelse versie worden gedaan omdat dit de 'brontekst' is van waaruit de andere talen worden vertaald. De instructie voor het maken van wijzigingen is in het Engels omdat we ervan uitgaan dat je die taal machtig bent als je een wijziging eraan wilt doorvoeren;) Mocht dat een probleem zijn, vraag dan in de Looped-NL-BE Facebook groep om hulp. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
+** Deze beschrijving is alleen bedoeld om de Engelstalige versie van de wiki te verbeteren. Wijzigingen moeten altijd eerst in de Engelse versie worden gedaan omdat dit de 'brontekst' is van waaruit de andere talen worden vertaald. De instructie voor het maken van wijzigingen is in het Engels omdat we ervan uitgaan dat je die taal machtig bent als je een wijziging eraan wilt doorvoeren;) Mocht dat een probleem zijn, vraag dan in de Looped-NL-BE Facebook groep om hulp. Als je de wiki naar andere talen wilt vertalen (waarvoor dank!), dan gebruik je [crowdin](https://crowdin.com/project/androidapsdocs).**
 
 Voor hints hoe tekst te formatteren (kop, vet ...) en links instellen, zie de ["code syntax"](./make-a-PR#code-syntax) sectie van deze pagina.
 
@@ -24,7 +24,7 @@ For our example we are going to make an edit to AndroidAPSdocs. This does NOT ne
 
 ![Fork repo](./images/PR0.png)
 
-2. Go to http://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html or similar and navigate to the page you want to edit. Click on the black box at bottom left of page with the green word "v: latest" or similar. In the pop up window that appears, click the word "edit" for editing in GitHub. 
+2. Go to any page and navigate to the page you want to edit. Click on the black box at bottom left of page with the green word "v: latest" or similar. In the pop up window that appears, click the word "edit" for editing in GitHub. 
 
 ![edit doc](./images/PR1.png)
 

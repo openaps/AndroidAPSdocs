@@ -1,69 +1,69 @@
-Profile helper
+Ajutor Profil
 ****************************************
 
-Profile helper offers two functions:
+Profilul de ajutor are două funcţii:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. Găseşte un profil pentru copii
+2. Compară două profiluri sau Schimbări de Profil pentru a clona un nou profil
 
-Profile for kids (up to 18 years)
+Profil pentru copii (până la 18 ani)
 =======================================
 
-**Important note:**
+** Notă importantă: **
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**Asistentul de profil este destinat să te ajute să găsești profilul inițial pentru copilul tău. Chiar dacă se bazează pe seturi de date a doua spitale diferite, discuta mereu cu echipa ta medicala înainte de a folosi un profil nou! **
 
-Profile helper offers data sets from two different hospitals for children to find initial profile for your kid up to 18 years.
+Asistentul de profil oferă seturi de date de la două spitale diferite pentru copii pentru a găsi profilul iniţial pentru copilul dumneavoastră de până la 18 ani.
 
-.. image:: ../images/ProfileHelperKids1.png
-  :alt: Profile Helper Kids 1
+.. imagine:: ../images/ProfileHelperKids1.png
+  :alt: Profilul Helper Kids 1
 
-1. Select 'Profile helper' from three-dot-menu on the top right side of the screen.
-2. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
-3. Change screen by clicking on the grey bar labeled 2 on the right.
-4. Long-press 'Current profile' and select DPV Default profile.
+1. Selectați 'Asistent de profil ' din meniul 3 puncte din partea dreaptă sus a ecranului.
+2. Ajustați profilul implicit (bazat pe setul de date al spitalului) introducând vârsta copilului şi doza totala zilnica de insulina **sau** greutatea.
+3. Modificați ecranul dând click pe bara gri etichetată 2 în dreapta.
+4. Apăsați lung pe 'Profilul curent' și selectați profilul implicit DPV.
 
-.. image:: ../images/ProfileHelperKids2.png
-  :alt: Profile Helper Kids 2
+.. imagine:: ../images/ProfileHelperKids2.png
+  :alt: Profilul Helper Kids 2
 
-5. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
-6. Press button 'COMPARE PROFILES' on top of screen.
-7. Comparison of the two adjusted profiles will be displayed.
+5. Ajustaţi profilul implicit DPV (bazat pe un alt set de date din spital) introducând vârsta copilului, procent de insulina bazala din cea totala şi doza totala zilnica de insulina **sau** greutatea.
+6. Apăsați butonul 'COMPARĂ PROFILE' de deasupra ecranului.
+7. Se va afișa o comparație între cele două profiluri ajustate.
 
 Once you are fine with the profile adjustments you can `clone the profile <../Configuration/profilehelper.html#clone-profile>`_ as described below.
 
-Compare two profiles
+Compară două profiluri
 =======================================
 
-You can use profile helper also to compare to different profiles or profile switches (percentage of on of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
+Puteți utiliza asistentul de profil de asemenea pentru a face comparații cu diferite profiluri sau schimbări de profil (procent din profilurile dumneavoastră utilizate într-o schimbare de profil <../Usage/Profiles.html>` _ înainte).
 
-.. image:: ../images/ProfileHelper1.png
+.. imagine:: ../images/ProfileHelper1.png
   :alt: Profile Helper 1
 
-1. Select 'Profile helper' from three-dot-menu on the top right side of the screen.
-2. Long-press 'Default profile' and select 'Available profile' for a list of your existing profiles or 'Profile switch' for a list of latest profile switches used.
-3. Long-Press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
-4. Change screen by clicking on the grey bar labeled 2 on the right.
+1. Selectați 'Asistent de profil ' din meniul 3 puncte din partea dreaptă sus a ecranului.
+2. Apăsați lung pe 'Profil implicit' și selectați 'Profil disponibil' pentru o listă cu profilurile existente sau 'Schimbare profil' pentru o listă cu cele mai recente profile utilizate.
+3. Apăsați lung numele profilului / schimbare profil ('Aktuell_LP' din captura de ecran de mai sus) și selectați un profil / schimbare profil din listă.
+4. Modificați ecranul dând click pe bara gri etichetată 2 în dreapta.
 
-.. image:: ../images/ProfileHelper2.png
+.. imagine:: ../images/ProfileHelper2.png
   :alt: Profile Helper 2
 
-5. As a standard 'Current profile' is offered as comparison candidate. 
-6. If you want a different profile / profile switch long-press 'Current profile' and select either 'Available profile' or 'Profile switch'.
-7. Long-press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
-8. Press button 'COMPARE PROFILES' on top of screen.
-9. Comparison of the two adjusted profiles will be displayed.
+5. În mod standard 'Profilul curent' este oferit pentru a compara candidatul. 
+6. Dacă doriţi un alt profil / schimbare profil, apăsaţi lung 'Profil curent' şi selectaţi fie 'Profil disponibil' sau 'Schimbare profil'.
+7. Apăsaţi lung numele profilului / schimbare profil ('Aktull_LP ' din captura de mai sus) şi selectaţi un profil / schimbare profil din listă.
+8. Apăsați butonul 'COMPARĂ PROFILE' de deasupra ecranului.
+9. Se va afișa o comparație între cele două profiluri ajustate.
 
-Clone profile
+Copiere profil
 =======================================
 
-If you use `local profiles <../Configuration/Config-Builder.html#local-profile-recommended>`_ you can clone a profile / profile switch directly from profile helper.
+Dacă folosiți `profile locale <../Configuration/Config-Builder.html#local-profile-recommended>`_ puteți copia un profil / schimba profilul direct din asistentul de profil.
 
-.. image:: ../images/ProfileHelperClone.png
-  :alt: Profile Helper Clone profile / profile switch
+.. imagine:: ../images/ProfileHelperClone.png
+  :alt: Profile Helper copiere profil / schimbare profil
   
-1. Select the desired profile / profile switch as described above.
-2. If you are using 'Default profile' or 'DPV Default profile' (based on data sets from hospitals for children) make sure you enter correct settings for age, percentage of basal and TDD / weight.
-3. Press button 'CLONE' on bottom of screen.
-4. Confirm with 'OK'.
-5. Activate new profile in local profile tab.
+1. Selectaţi profilul dorit / schimbare profil aşa cum este descris mai sus.
+2. Dacă folosiți 'Profil implicit' sau 'Profil implicit DPV' (bazat pe seturile de date ale spitalelor pentru copii) asigurați-vă că introduceți setările corecte pentru vârstă, procentajul bazalei și TDD / greutate.
+3. Apăsaţi butonul 'COPIERE' în partea de jos a ecranului.
+4. Confirmaţi cu 'OK'.
+5. Activaţi profilul nou în pagina profil local.

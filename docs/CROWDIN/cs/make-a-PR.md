@@ -24,7 +24,7 @@ Například: chystáme se upravit AndroidAPSdocs. To není nutné dělat v linux
 
 ![Klonování repozitoře](./images/PR0.png)
 
-2. Jděte na http://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html nebo podobné a přejděte na stránku, kterou chcete editovat. Klikněte na černou oblast dole na stránce se zeleným slovem "v: latest" nebo podobné. In the pop up window that appears, click the word "edit" for editing in GitHub. 
+2. Go to any page and navigate to the page you want to edit. Klikněte na černou oblast dole na stránce se zeleným slovem "v: latest" nebo podobné. In the pop up window that appears, click the word "edit" for editing in GitHub. 
 
 ![edit doc](./images/PR1.png)
 

@@ -44,7 +44,7 @@
  <td><strong>Autosens</strong></td>
  <td>расчет чувствительности к инсулину с учетом физической нагрузки, гормонального фона и пр.</td>
  <td>&nbsp;</td>
- <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
+ <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
  <td><strong>Azure</strong></td>
@@ -77,10 +77,10 @@
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - источник BG</a></td>
 </tr>
 <tr>
- <td><strong>Blucon Nightreader</strong></td>
+ <td><strong>Blukon Nightreader</strong></td>
  <td>bluetooth-передатчик, использующий сенсор Freestyle Libre в качестве CGM</td>
  <td>BlueReader / MiaoMiao</td>
- <td><a href="https://www.ambrosiasys.com/our-products/blucon/">Ambrosia Blucon Nightreader</a></td>
+ <td><a href="https://www.ambrosiasys.com/our-products/blucon/">Ambrosia Blukon Nightreader</a></td>
 </tr>
 <tr>
  <td><strong>BR</strong></td>
@@ -89,68 +89,68 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>CAGE</strong></td>
- <td>canula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
+ <td><strong>CAGE/ВозрКан</strong></td>
+ <td>Отображаемый в системе Nightscout срок эксплуатации инсулиновой канюли. Появляется в случае ввода информации об установке канюли на вкладке портала терапии AAPS или через вкладку действий 'первичное заполнение инфузионного набора' AAPS</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>CAN</strong></td>
- <td>status light overdue canula change on homescreen</td>
+ <td>меняющая цвет надпись состояния просроченной/непросроченной канюли на главном экране</td>
  <td>BAT / RES / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
 </tr>
 <tr>
  <td><strong>CGM/НМГ</strong></td>
- <td>continuous glucose monitor</td>
+ <td>непрерывный мониторинг глюкозы</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>Closed Loop/Замкнутый цикл (петля, контур)</strong></td>
- <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
- <td>Open loop</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
+ <td>Система замкнутого управления уровнем сахара крови. Система автоматически, без вмешательства пользователя подстраивает количество базального инсулина, основываясь на специальном алгоритме</td>
+ <td>Открытый цикл</td>
+ <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki - замкнутый цикл</a></td>
 </tr>
 <tr>
  <td><strong>COB</strong></td>
- <td>carbs on board</td>
+ <td>активные углеводы COB - углеводы в процессе компенсации</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>DIA</strong></td>
- <td>duration of insulin action</td>
+ <td><strong>DIA (время действия инсулина)</strong></td>
+ <td>длительность действия инсулина DIA. Например, для ультракороткого инсулина Новорапид длительность действия составляет 5 часов</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Тип инсулина </a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
- <td><strong>DST</strong></td>
- <td>daylight savings time</td>
+ <td><strong>DST время сезонного перехода</strong></td>
+ <td>летнее время (при переводе часов)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki DST</a></td>
 </tr>
 <tr>
- <td><strong>eCarbs</strong></td>
- <td>"extended carbs" - carbs split up over serveral hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
- <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs use case</a></td>
+ <td><strong>eCarbs/производные углеводы</strong></td>
+ <td>производные углеводы, появляются в организме через несколько часов из избытков жиров/протеинов пищи. Необходимо учитывать при обычной помповой терапии, несущественны при использовании закрытой петли.</td>
+ <td>Супер микро болюс SMB</td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Вики - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs</a></td>
 </tr>
 <tr>
  <td><strong>FGM</strong></td>
- <td>flash glucose monitor (Freestyle Libre)</td>
+ <td>флеш-мониторинг глюкозы (Libre Freestyle)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - источник BG</a></td>
+ <td><a href="../Configuration/BG-Source.html">Wiki - источник BG</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> neccessary for APK updates</td>
+ <td>система управления версиями файлов (документация, программное обеспечение и пр). Необходима для обновления APK системы AndroidAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - update APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - обновление APK</a></td>
 </tr>
 <tr>
  <td><strong>Github</strong></td>
- <td>web-based hosting service for version control using Git<br>-> storage of source code</td>
+ <td>веб-сервис для размещения IT-проектов и их совместной разработки. Веб-сервис основан на системе контроля версий Git<br>. Для проекта AndroidAPS - хранилище программного обеспечения и его обновлений</td>
  <td>&nbsp;</td>
  <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
@@ -320,7 +320,7 @@
  <td><strong>Sensivity detection</strong></td>
  <td>расчет чувствительности к инсулину с учетом физической нагрузки, гормонального фона и пр.</td>
  <td>&nbsp;</td>
- <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
+ <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
  <td><strong>Sensor noise</strong></td>
@@ -329,7 +329,7 @@
  <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
 </tr>
 <tr>
- <td><strong>SMB</strong></td>
+ <td><strong>Супер микро болюс SMB</strong></td>
  <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
  <td>UAM</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
@@ -367,7 +367,7 @@
 <tr>
  <td><strong>UAM</strong></td>
  <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
- <td>SMB</td>
+ <td>Супер микро болюс SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
@@ -386,7 +386,7 @@
  <td><strong>xDrip / xDrip+</strong></td>
  <td>open source software to read CGM systems</td>
  <td>&nbsp;</td>
- <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
+ <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="https://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
  <td><strong>Zero-temp</strong></td>

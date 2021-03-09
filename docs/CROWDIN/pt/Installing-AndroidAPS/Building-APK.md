@@ -2,7 +2,7 @@
 
 ## Build yourself instead of download
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+**A AndroidAPS não está disponível para download devido à regulamentação para dispositivos médicos. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
 
 ## Important notes
 
@@ -101,11 +101,11 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 * If automatic setting is successful git version will be displayed.
 
-* Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
+* Clique em "OK" na caixa de diálogo (1.) e "OK" na janela de configurações (2.).
     
     ![Automatic git installation succeeded](../images/AndroidStudio361_10.png)
 
-* In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
+* No caso do arquivo git.exe não puder ser encontrado, clique em "OK" na caixa de diálogo (1.) e, em seguida, no botão com os três pontos (2.).
 
 * Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where it can be found. You are looking for git.exe located in \bin\ folder.
 * Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
@@ -145,7 +145,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 * Do not click "Background" while repository is cloned!
     
-    ![No background action](../images/AndroidStudio_NoBackground.png)
+    ![No background action](../images/AndroidStudio361_15.png)
 
 * After repository is cloned successfully open your local copy by clicking "Yes".
     
@@ -194,7 +194,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 * Android Studio might recommend to update the gradle system. **Never update gradle!** This might lead to difficulties!
 
-* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1.) and in the dialog box on "Don't remind me again for this project" (2.).
+* Se vir uma informação do canto inferior-direito na janela do Android Studio, que o Android Gradle Plugin está pronto para atualizar, clique no texto "update" (1.) e na caixa de diálogo clique em "Don't remind me again for this project" (2.).
     
     ![No cradle update](../images/AndroidStudio361_26.png)
 

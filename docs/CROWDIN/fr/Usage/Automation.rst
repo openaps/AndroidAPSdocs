@@ -7,7 +7,7 @@ Pour des évènements identiques et fréquents, vous devrez peut-être toujours 
 
 Par ex. lorsque votre Gly est trop faible, vous pouvez décider d'avoir automatiquement une cible temporaire haute. Ou si vous êtes à votre centre de fitness, vous activez automatiquement une cible temp. 
 
-Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
+Avant d'utiliser l'Automatisation, vous devez être à l'aise avec l'utilisation des cibles temp. <./temptarget.html>`_ ou les changements de profil. 
 
 Assurez-vous de bien comprendre comment l'automatisation fonctionne avant de configurer votre première règle simple. **Au lieu de l'action, laisser AAPS n'afficher qu'une notification.** Quand vous êtes sûr que l'automatisation est déclenchée au bon moment, remplacez la notification par une action réelle.
 
@@ -29,7 +29,7 @@ Veillez donc à désactiver les règles d'automatisation pendant ces moments si 
 
 Où trouver l'automatisation
 --------------------------------------------------
-Selon vos `paramètres dans le Générateur de configuration <../Configuration/Config-Builder.html#onglet-ou-menu-hamburger>`_ vous trouverez soit `Automatisation <../Configuration/Config-Builder.html#automatisation>`_ dans le menu hamburger soit comme un onglet.
+Selon vos `paramètres dans le Générateur de configuration <../Configuration/Config-Builder.html#onglet-ou-menu-hamburger>`_ vous trouverez soit `Automatisation <../Configuration/Config-Builder.html#automatisation>`__ dans le menu hamburger soit comme un onglet.
 
 Généralités
 --------------------------------------------------
@@ -88,14 +88,14 @@ Après avoir ajouté votre action, **n'oubliez pas de modifier les valeurs par d
   :alt: Automatisation defaut vs. choisir valeur
 
 Tri des règles d'automatisation
--------------------------------
+---------------------
 Pour trier les règles d'automatisation, cliquez et maintenez l'icone sur la droite d'une règle (4 lignes) et déplacez-la vers le haut ou vers le bas.
 
 .. image:: ../images/Automation_Sort.png
   :alt: Tri des règles d'automatisation
   
 Suppression des règles d'automatisation
----------------------------------------
+-----------------------
 Pour supprimer une règle d'automatisation, cliquez sur l'icône Corbeille.
 
 .. image:: ../images/Automation_Delete.png
@@ -109,10 +109,10 @@ Bonnes pratiques et avertissements
 
   **C'est doublement important si l'action est un changement de profil!**
  
-* Try to use Temp Targets instead of Profile Switches. Les Cibles temporaires ne réinitialisent pas `Autosens <../Usage/Open-APS-features.html#autosens>`_ à 0.
+* Essayez de privilégier l'utilisation de Cibles Temp. plutôt que des Changements de Profil. Les Cibles temporaires ne réinitialisent pas `Autosens <../Usage/Open-APS-features.html#autosens>`__ à 0.
 * Assurez-vous que les cchangements de profil sont faits avec parcimonie et de préférence en dernier recours.
 
-  * Les changements de profil rendent `Autosens <../Usage/Open-APS-features.html#autosens>`_ inutilisable pendant au minimum 6 heures.
+  * Les changements de profil rendent `Autosens <../Usage/Open-APS-features.html#autosens>`__ inutilisable pendant au minimum 6 heures.
 
 * Un changement de profil ne remettra pas le profil standard initial
 
@@ -127,14 +127,14 @@ Ce ne sont que des exemplesde configuration, pas des conseils. Ne les reproduise
 * Définition d'une cible temporaire pour les activités en fonction du temps, de l'emplacement, de la connexion à un périphérique Bluetooth ...
 * Définition d'une cible temporaire repas imminent basée sur l'heure et la localisation...
 
-Low Glucose Temp Target
+Cible temp. Glycémie basse
 --------------------------------------------------
 .. image:: ../images/Automation2.png
   :alt: Automatisation2
 
 Ceci est pour quelqu'un qui veut avoir automatiquement une cible temporaire d'hypo lorsque sa glycémie est basse.
 
-Lunch Time Temp Target
+Cible Temp. heure du repas
 --------------------------------------------------
 .. image:: ../images/Automation3.png
   :alt: Automatisation3
@@ -143,7 +143,7 @@ Cet exemple est pour quelqu'un qui déjeune au travail tous les jours à la mêm
 
 Utilisation incorrecte de l'automatisation
 --------------------------------------------------
-Please be aware to use automation incorrectly. cela pourrait entraîner des difficultés et même être dangereux pour votre santé. Des exemples d'utilisation incorrecte sont :
+Veuillez noter que si vous n'utilisez pas correctement l'automatisation, cela pourrait entraîner des difficultés et même être dangereux pour votre santé. Des exemples d'utilisation incorrecte sont :
 
 * Essayer de surcharger l'algorithme au lieu de l'utiliser simplement comme une aide (par ex. en changeant de profil au lieu d'ajuster le débit de basal, le G/I etc.)
 * Régler le profil pour compenser la nourriture

@@ -145,7 +145,7 @@ Cледующие снимки экрана были сделаны c Android St
 
 * Do not click "Background" while repository is cloned!
     
-    ![No background action](../images/AndroidStudio_NoBackground.png)
+    ![No background action](../images/AndroidStudio361_15.png)
 
 * After repository is cloned successfully open your local copy by clicking "Yes".
     

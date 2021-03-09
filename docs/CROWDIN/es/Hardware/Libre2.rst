@@ -10,7 +10,7 @@ Las lecturas de BG también se pueden hacer usando un transmisor BT como con el 
 Important note : This does not work with the US version of the Freestyle 2 sensor ! The US version will only connect to a reader, not a phone.
 
 Paso 1: Construye tu propia Librelink-App parcheada
-===================================================
+==================================================
 
 Por razones legales, el llamado parche tiene que ser hecho por usted mismo. Utilizar motores de búsqueda para encontrar los enlaces correspondientes. Hay principalmente dos variantes: La aplicación parcheada bloquea cualquier tráfico de Internet para evitar el rastreo. La otra variante es compatible con LibreView que puede ser necesario para su médico.
 

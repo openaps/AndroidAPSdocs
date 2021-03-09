@@ -32,7 +32,7 @@ The SMB feature contains some safety mechanisms:
 
 **You must have started [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
 
-See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) and [Tim's info on SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
+See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) and [Tim's info on SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
 ### Max U/h a temp basal can be set to (OpenAPS “max-basal”)
 
@@ -73,39 +73,39 @@ Be careful and patient and only change the settings step by step. It is differen
 
 *See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
-See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1#understanding-super-micro-bolus-smb).
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Enable AMA Autosense
 
 Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' or not.
 
-### Enable SMB
+### Activează SMB
 
 Here you can enable or completely disable SMB feature.
 
-### Enable SMB with COB
+### Activează SMB cu COB
 
 SMB is working when there is COB active.
 
-### Enable SMB with temp targets
+### Activează SMB cu ținte temporare
 
 SMB is working when there is a low or high temporary target active (eating soon, activity, hypo, custom)
 
-### Enable SMB with high temp targets
+### Activează SMB cu ținte temporare mari
 
 SMB is working when there is a high temporary target active (activity, hypo). This option can limit other SMB Settings, i.e. if ‘SMB with temp targets’ is enabled and ‘SMB with high temp targets’ is deactivated, SMB just works with low and not with high temp targets. It is the same for enabled SMB with COB: if 'SMB with high temp target' is deactivated, there is no SMB with high temp target even if COB is active.
 
-### Enable SMB always
+### Activează SMB întotdeauna
 
 SMB is working always (independent of COB, temp targets or boluses). For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5, if using the Dexcom App (patched) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5 doesn’t send it and waits for the next value in 5 minutes.
 
 For other CGM/FGM like Freestyle Libre, ‘SMB always’ is deactivated until xDrip+ has a better noise smoothing plugin. You can find more [here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
-### Enable SMB after carbs
+### Activează SMB după carbohidrați
 
 SMB is working for 6h after carbohydrates , even if COB is at 0. For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5, if using the Dexcom App (patched) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5 doesn’t send it and waits for the next value in 5 minutes.
 
-For other CGM/FGM like Freestyle Libre, 'SMB always' is deactivated until xDrip+ has a better noise smoothing plugin. You can find [more information here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+For other CGM/FGM like Freestyle Libre, 'Enable SMB after carbs' is deactivated until xDrip+ has a better noise smoothing plugin. You can find [more information here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Max minutes of basal to limit SMB to
 
@@ -117,7 +117,7 @@ It is recommended not to set the value higher than 90 minutes, as this would lea
 
 Default value: 30 min.
 
-### Enable UAM
+### Activează UAM
 
 With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful, if you forget to tell AndroidAPS about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increasments caused by carbs, adrenaline, etc, and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decreasement, it can stop SMBs earlier.
 
@@ -131,7 +131,7 @@ If you have this option enabled, the insulin sensitivity will be increased while
 
 If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise.
 
-### Advanced Settings
+### Setări avansate
 
 **Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
 
@@ -149,7 +149,7 @@ Default value: 4 (shouldn’t be changed unless you really need to and know, wha
 
 AMA, the shortform of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
 
-You can find more information in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features#advanced-meal-assist-or-ama).
+You can find more information in the [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features#advanced-meal-assist-or-ama).
 
 ### Max U/hr a Temp Basal can be set to (OpenAPS "max-basal")
 
@@ -179,7 +179,7 @@ The default value is 2, but you should be rise this parameter slowly to see how 
 * Insulin resistant adult: 12
 * Pregnant: 25
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features.html#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
 ### Enable AMA Autosense
 
@@ -189,7 +189,7 @@ Here, you can chose, if you want to use the [sensitivity detection](../Configura
 
 If you have this option enabled, autosense can adjust targets (next to basal, ISF and IC), too. This lets AndroidAPS work more 'aggressive' or not. The actual target might be reached faster with this.
 
-### Advanced Settings
+### Setări avansate
 
 **Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
 
@@ -215,7 +215,7 @@ Default value: 2
     <th width="75">Child</th>
     <th width="75">Teenager</th>
     <th width="75">Adult</th>
-    <th width="75">Insulin resistant adult</th>
+    <th width="75">Adult rezistent la insulină</th>
     <th width="75">Pregnant</th>
   </tr>
 </thead>

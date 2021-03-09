@@ -1,28 +1,28 @@
 Segurança primeiro
 **************************************************
 
-**When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
+** Quando decide construir o seu próprio pâncreas artificial, é sempre importante pensar em segurança e proteção, além de entender o impacto de todas as suas ações * *
 
 Geral
 ==================================================
 
-* AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
-* Do not assume that AndroidAPS will never make mistakes. This device is taking control of your insulin delivery: Watch it all the time, understand how it works, and learn how to interpret its actions.
-* Remember that, once paired, the phone can instruct the pump to do anything. Only use this phone for AndroidAPS and, if being used by a child, essential communications. Do not install unnecessary apps or games (!!!) which could introduce malware such as trojans, viruses, or bots that could interfere with your system.
-* Install all security updates provided by your phone manufacturer and Google.
-* You might also need to change your diabetes habits as you change your therapy by using a closed loop system. I.e. some people report, they need less hypo treatments as AndroidAPS has already reduced insulin.  
+* A AndroidAPS é uma mera ferramenta para ajudá-lo a gerir a diabetes, não é um sistema totalmente automatizado que pode instalar e esquecer!
+* Não assuma que a AndroidAPS nunca cometerá erros. Este dispositivo está a assumir o controlo da administração da sua insulina: observe-o constantemente, entenda como ele funciona e aprenda a interpretar as suas ações.
+* Lembre-se que uma vez emparelhado o telefone pode mandar a bomba fazer qualquer coisa. Só use um telefone para a AndroidAPS e, se sendo usado por uma criança, para comunicações essenciais. Evite usar a app no seu telemóvel do dia a dia, reduzindo os erros possíveis. Não instale aplicações ou jogos desnecessários (!!!) o que pode introduzir malwares como trojans, vírus ou bots que podem interferir no seu sistema.
+* Instale todas as atualizações de segurança fornecidas pelo fabricante do telefone e pelo Google.
+* Talvez você também precise alterar seus hábitos da diabetes conforme muda a sua terapia usando um sistema de loop fechado. Por exemplo algumas pessoas relatam que têm menor necessidade de corrigir hipoglicemias, ou prevenir as mesmas, já que a AndroidAPS já reduziu a insulina.  
    
 Comunicador SMS
 ==================================================
 
-* AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code.
-* AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
+* A AndroidAPS permite que você controle um telefone remotamente através de SMS. Se os comandos por SMS estiverem ativos, lembre-se sempre de que o telemóvel configurado para estes comandos remotos pode ser roubado. Então, proteja-o sempre, pelo menos, através de um código PIN.
+* A AndroidAPS responderá com uma mensagem de texto se os comandos remotos - como um bólus ou uma mudança de perfil - foram corretamente realizados.0//0. Ao configurar é aconselhável que as mensagens de confirmação sejam enviados para, pelo menos, dois números de telefone distintos, para o caso de um dos telefones ser roubado.
 
 .. nota:: 
-   **IMPORTANT SAFETY NOTICE**
+   **NOTAS DE SEGURANÇA IMPORTANTES**
 
-   The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
+   A base dos recursos de segurança da AndroidAPS discutidos nesta documentação é construída baseada nos recursos de segurança do hardware utilizado para construir o seu sistema. É extremamente importante que use apenas uma bomba de insulina em boas condições, testada e aprovada pelas entidades médicas (Infarmed, FDA ou CE) assim como o MCG para fechar o loop. Modificações de hardware ou software para estes componentes podem causar uma dosagem inesperada de insulina, causando risco significativo para o utilizador. Se encontrar ou receber bombas de insulina estragadas, modificadas ou "artesanais" ou dispositivos MCG, * não use * estes para a criação de um sistema AndroidAPS.
 
-   Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+   Além disso, é igualmente importante usar apenas acessórios originais como dispositivos de colocação, cânulas/cateteres e reservatórios de insulina aprovados pelo fabricante para uso com a sua bomba ou MCG. O uso de acessórios não testados ou modificados pode causar erros na dosagem de insulina e discrepâncias nos valores do MCG. A insulina é altamente perigosa quando mal doseada - por favor não brinque com a sua vida ao hackear com seus próprios acessórios.
 
-   Last not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels.  The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
+   Por último, mas não menos importante, você não deve tomar inibidores SGLT-2 (gliflozins), pois eles reduzem incalculavelmente os níveis de açúcar no sangue.  A combinação com um sistema que reduz as taxas basais a fim de aumentar a GLIC é especialmente perigosa já que devido ao gliflozin esse aumento na GLIC pode não acontecer e um estado perigoso de falta de insulina pode acontecer.

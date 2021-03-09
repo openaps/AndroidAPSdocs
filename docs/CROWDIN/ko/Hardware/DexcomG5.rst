@@ -7,7 +7,7 @@ Dexcom G5를 Xdrip+와 사용하는 경우
 * In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
 * xDrip 대신 AndroidAPS에서 보정 기능을 사용하려면 xDrip의 세팅 > Inter-app settings > Accept Calibrations를 활성화합니다.  세팅 > 추가 세팅 > Advanced Calibration 설정에서 선택사항들을 검토할 수 있습니다.
 * 구성 관리자 (AndroidAPS의 세팅)에서 xDrip을 선택합니다.
-* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.md>`_ .
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_ .
 
 Dexcom G5를 Dexcom 앱(패치버전)과 사용하는 경우
 ==================================================
@@ -16,8 +16,8 @@ Dexcom G5를 Dexcom 앱(패치버전)과 사용하는 경우
   * AndroidAPS 2.3 사용자는 폴더 2.3을, AAPS 2.5 이용자는 폴더 2.4를 사용하십시오.
   * 컴퓨터에서 https://play.google.com/store/search?q=dexcom%20g5 사이트를 엽니다. Region will be visible in URL.
 
-   .. image:: ../images/DexcomG5regionURL.PNG
-     :alt: Region in Dexcom G5 URL
+  .. image:: ../images/DexcomG5regionURL.PNG
+    :alt: Region in Dexcom G5 URL
 
 * 오리지날 Dexcom 앱이 남아 있는 경우 센서를 스탑하고 삭제합니다.
 * 다운로드 된 apk를 설치합니다.

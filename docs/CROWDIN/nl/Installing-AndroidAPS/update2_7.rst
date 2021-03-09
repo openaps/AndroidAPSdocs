@@ -19,20 +19,20 @@ Check BG source
 Finish exam
 -----------------------------------------------------------
 * AAPS 2.7 contains new objective 11 for `automation <../Usage/Automation.html>`_.
-* You have to finish exam (`objective 3 and 4 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_) in order to complete `objective 11 <../Usage/Objectives.html#objective-11-automation>`_.
-* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. 
-* This will not effect other objectives you have already finished. You will keep all finished objectives!
+* You have to finish exam (`objective 3 and 4 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_) in order to complete `objective 11 <../Usage/Objectives.html#objective-11-automation>`__.
+* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`__. 
+* This will not effect other objectives you have already finished. Je behoudt alle reeds afgeronde doelen!
 
 Set master password
 -----------------------------------------------------------
-* Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
-* Open Preferences (three-dot-menu on top right of home screen)
-* Click triangle below "General"
-* Click "Master-Password"
-* Enter password, confirm password and click ok.
+* Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`__ as they are encrypted as of version 2.7.
+* Open de Instellingen (door te klikken op de 3 stipjes in de rechterbovenhoek van het Overzicht scherm)
+* Klik op de driehoek onder "Algemeen"
+* Klik op "Masterwachtwoord"
+* Voer het wachtwoord in, bevestig het wachtwoord en klik op ok.
 
 .. image:: ../images/MasterPW.png
-  :alt: Set master password
+  :alt: Masterwachtwoord instellen
   
 Exporteer instellingen
 -----------------------------------------------------------
@@ -47,8 +47,8 @@ Exporteer instellingen
 Autosens (Hint - no action necessary)
 -----------------------------------------------------------
 * Autosens is changed to a dynamic switching model which replicates the reference design.
-* Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
-* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
+* Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. Hij kiest voor welke het gevoeligst is. 
+* Als je voorheen oref1 gebruikte, zul je waarschijnlijk merken dat het systeem minder dynamisch omgaat met veranderingen, als gevolg van het gebruiken van 24 ofwel 8 uur.
 
 Set Pump Password for Dana RS (if using Dana RS)
 -----------------------------------------------------------

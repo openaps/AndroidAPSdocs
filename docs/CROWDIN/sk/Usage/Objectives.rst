@@ -23,16 +23,16 @@ Objective 2: Learn how to control AndroidAPS
 * Click on the orange text "Not completed yet" to access the to-dos.
 * Links will be provided to guide you in case you are not familiar with a specific action yet.
 
-   .. image:: ../images/Objective2_V2_5.png
-     :alt: Screenshot objective 2
+  .. image:: ../images/Objective2_V2_5.png
+    :alt: Screenshot objective 2
 
 Objective 3: Prove your knowledge
 ==================================================
 * Pass a multiple-choice exam testing your AndroidAPS knowledge.
 * Click on the orange text "Not completed yet" to access the page with the question and answering options.
 
-   .. image:: ../images/Objective3_V2_5.png
-     :alt: Screenshot objective 3
+  .. image:: ../images/Objective3_V2_5.png
+    :alt: Screenshot objective 3
 
 * Links will be provided to guide you in case you are unsure about the correct answers yet.
 * The questions for objective 3 have been completely rewritten by native speakers as of AAPS 2.8. The new ones cover the same basic topics plus a few new ones.
@@ -52,8 +52,8 @@ Reduce number of notifications
 * You might even want to wider upper limit (or disable Open Loop) at night. 
 * In Preferences you can set a minimum percentage for suggestion of basal rate change.
 
-   .. image:: ../images/OpenLoop_MinimalRequestChange2.png
-     :alt: Open Loop minimal request change
+  .. image:: ../images/OpenLoop_MinimalRequestChange2.png
+    :alt: Open Loop minimal request change
      
 * Also, you do not need to act every 5 minutes on all suggestions...
 
@@ -96,8 +96,8 @@ Closed loop will not correct high bg values in objective 6 as it is limited to l
 * You don't have to change your settings. During objective 6 maxIOB setting is internally set to zero automatically. This override will be reversed when moving to objective 7.
 * The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.  
 
-   .. image:: ../images/Objective6_negIOB.png
-     :alt: Example negative IOB
+  .. image:: ../images/Objective6_negIOB.png
+    :alt: Example negative IOB
 
 * If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
 * You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.
@@ -108,8 +108,8 @@ Objective 7: Tuning the closed loop, raising max IOB above 0 and gradually lower
 
   This recommendation should be seen as a starting point. If you set to the 3x and you are seeing moves that push you to hard and fast then lower that number. If you are very resistant raise it a very little at a time.
 
-   .. image:: ../images/MaxDailyBasal2.png
-     :alt: max daily basal
+  .. image:: ../images/MaxDailyBasal2.png
+    :alt: max daily basal
 
 * Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
 
@@ -119,13 +119,13 @@ Objective 8: Adjust basals and ratios if needed, and then enable autosens
 * You can use `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ as a one off to check your basals remain accurate or do a traditional basal test.
 * Enable `autosens <../Usage/Open-APS-features.html>`_ over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
 
-*Don’t forget to record your looping in `this form <http://bit.ly/nowlooping>`_ logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
+*Don’t forget to record your looping in* `this form <https://bit.ly/nowlooping>`_ *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
 
 
 Objective 9: Try additional features for daytime use and gain confidence in your closed loop system
 ====================================================================================================
-* Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_.
-* As `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
+* Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`__.
+* As `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`__ is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
 
 
 Objective 10: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)

@@ -45,9 +45,9 @@ Windows
 * Perkraukite kompiuterį, kad atsinaujintų sistemos aplinka.
 
 4. Patikrinkite git parametrus Android Studio programoje
---------------------------------------------------------
+--------------------------------------------------
 * Atidarykite Terminal langą Android Studio programoje
-* Įveskite "git - -version" (be kabučių ir be tarpų tarp dviejų [minuso ženklų]!) ir paspauskite Return (Grįžti)
+* Enter ``git --version`` (without quotation marks and no spaces between the two - [minus sign]!) and press Return
 
   .. image:: ../images/AndroidStudio_gitversion1.png
     :alt: git - -version

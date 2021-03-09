@@ -7,7 +7,7 @@ Buďte připraveni na nepředvídané situace. Náhodou se vám může povést z
 
 Osvědčeným postupem je exportovat po změně nastavení nebo dokončení cíle. 
 
-Exportovaná nastavení by měla být zkopírována do úložiště v cloudu nebo na váš počítač. Takže tímto jste připraveni na ztrátu nebo poškození telefonu s AAPS a nemusíte začínat od nuly.
+Exported settings should be copied to a cloud storage or your computer, better two different locations. Takže tímto jste připraveni na ztrátu nebo poškození telefonu s AAPS a nemusíte začínat od nuly.
 
 Na počítači se systémem Windows 10 to vypadá takto:
   
@@ -22,11 +22,11 @@ Mezi jinými jsou součástí exportu tato nastavení:
 * `Konfigurace <../Configuration/Config-Builder.html>`_
 * `Lokální profil <../Configuration/Config-Builder.html#local-profile-recommended>`_
 * `Cíle <../Usage/Objectives.html>`_ vč. `exam results <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
-* `Nastavení <../Configuration/Preferences.html>`_ vč. `NS Client settings <../Configuration/Preferences.html#nsclient>`_
+* `Preferences <../Configuration/Preferences.html>`__ incl. `NS Client settings <../Configuration/Preferences.html#nsclient>`_
 
 Encrypted backup format
 ==================================================
-Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`_ .
+Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`__ .
 
 
 Exportovat nastavení
@@ -40,7 +40,7 @@ Exportovat nastavení
 
 * Date and time of export will be added to the file name automatically and displayed together with the path.
 * Click 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
 * Successful export will be prompted at bottom of the screen.
 
 .. image:: ../images/AAPS_ExportSettings2.png
@@ -60,7 +60,7 @@ Importujte nastavení
 * All files from folder AAPS/preferences/ on your phone will be shown in the list.
 * Select file.
 * Confirm import by clicking 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
 
 .. image:: ../images/AAPS_ImportSettings2.png
   :alt: AndroidAPS import settings 2

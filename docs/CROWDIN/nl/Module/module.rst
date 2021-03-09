@@ -1,11 +1,11 @@
 De verschillende onderdelen 
 **************************************************
-AndroidAPS is meer dan de (zelfgebouwde) app alleen, er zijn ook andere onderdelen nodig om jouw closed loop systeem aan de praat te krijgen. Voordat je kiest welke onderdelen je wilt gebruiken, is het goed om eens te kijken naar de `Wat heb ik nodig <https://androidaps.readthedocs.io/en/latest/CROWDIN/nl/index.html#wat-heb-ik-nodig>`_ sectie.
+AndroidAPS is meer dan de (zelfgebouwde) app alleen, er zijn ook andere onderdelen nodig om jouw closed loop systeem aan de praat te krijgen. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
    
 .. image:: ../images/modules.png
   :alt: Wat heb ik nodig
 
-.. opmerking:: 
+.. note:: 
    **VOOR JE EIGEN VEILIGHEID**
 
    De veiligheidsfuncties die in AndroidAPS zitten, maken gebruik van ingebouwde veiligheidsmaatregelen van de hardware componenten waaruit jouw systeem bestaat. Het is daarom van cruciaal belang dat je alleen een volledig functionerende FDA of CE goedgekeurde insulinepomp en CGM gebruikt voor het bouwen van jouw eigen closed loop. Gebruik alleen insulinepompen en CGMs die in deze handleiding beschreven staan, waarvoor de AndroidAPS software is geschreven en getest. Hardware of software wijzigingen aan deze componenten kunnen voor onverwachte uitkomsten zorgen (denk aan het ongewenst afgeven van insuline), waardoor de gebruiker een aanzienlijk risico loopt. Als je een insulinepomp of CGM-ontvanger vindt/koopt/krijgt die een defect heeft, zelfgemaakt is, of op welke manier dan ook veranderd is, GEBRUIK DEZE NIET voor het maken van een AndroidAPS-systeem.
@@ -17,7 +17,7 @@ AndroidAPS is meer dan de (zelfgebouwde) app alleen, er zijn ook andere onderdel
 Benodigde onderdelen
 ==================================================
 Correcte insulineprofiel instellingen voor jouw diabetesbehandeling
--------------------------------------------------------------------
+----------------------------------------------------------
 Dit is misschien niet het eerste waar je aan denkt bij een 'onderdeel'. Toch is het waarschijnlijk het meest belangrijke onderdeel van jouw closed loop. Wanneer je de behandeling van jouw diabetes overlaat aan een algoritme, dan is het cruciaal dat je dit algoritme de juiste instellingen geeft. Anders kunnen er grote fouten optreden in de beslissingen die het algoritme neemt.
 Wanneer je de andere onderdelen van jouw closed loop nog niet bij elkaar hebt, dan kun je de tussenliggende tijd benutten om, samen met jouw behandelaars, jouw instellingen te perfectioneren. 
 De meeste loopers maken gebruik van basaalstanden, ISF en KH ratios die zijn aangepast aan een variërende insulinegevoeligheid gedurende de dag (zgn. circadiaans ritme).
@@ -74,7 +74,7 @@ De voordelen van de DanaR/RS vs. de Combo zijn echter:
 
 BG bron
 --------------------------------------------------
-Dit is slechts een kort overzicht van alle compatibele CGMs/FGM met AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`__. Even kort samengevat: als je jouw glucosewaardes kunt laten weergeven in de xDrip+ app of op jouw Nightscout site, dan kun je in AAPS als "BG bron" kiezen voor xDrip+ (of voor Nightscout, maar dan heb je wel continu een internetverbinding nodig).
+Dit is slechts een kort overzicht van alle compatibele CGMs/FGM met AndroidAPS. Zie meer informatie `hier <../Configuration/BG-Source.html>`__. Even kort samengevat: als je jouw glucosewaardes kunt laten weergeven in de xDrip+ app of op jouw Nightscout site, dan kun je in AAPS als "BG bron" kiezen voor xDrip+ (of voor Nightscout, maar dan heb je wel continu een internetverbinding nodig).
 
 * `Dexcom G6 <../Hardware/DexcomG6.html>`_: Werkt met xDrip+ app of aangepaste Dexcom app
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Werkt met xDrip+ app of aangepaste Dexcom app
@@ -87,15 +87,15 @@ Dit is slechts een kort overzicht van alle compatibele CGMs/FGM met AndroidAPS. 
 
 Nightscout
 --------------------------------------------------
-Nightscout is een open source web-applicatie die jouw CGM-gegevens en AndroidAPS gegevens kan opslaan, weergeven en rapporten kan maken. You can find more information on the `website of the Nightscout project <http://nightscout.github.io/>`_. Je kunt je eigen Nightscout website `maken <https://nightscout.github.io/nightscout/new_user/>`_, gebruik de semi-geautomatiseerde Nightscout setup op `zehn.be <https://ns.10be.de/en/index.html>`_ of host het op jouw eigen server (dit laatste is voor IT experts).
+Nightscout is een open source web-applicatie die jouw CGM-gegevens en AndroidAPS gegevens kan opslaan, weergeven en rapporten kan maken. Meer informatie vind je op de `website van het Nightscout project <http://nightscout.github.io/>`_. Je kunt je eigen Nightscout website `maken <https://nightscout.github.io/nightscout/new_user/>`_, gebruik de semi-geautomatiseerde Nightscout setup op `zehn.be <https://ns.10be.de/en/index.html>`_ of host het op jouw eigen server (dit laatste is voor IT experts).
 
 Nightscout werkt onafhankelijk van de andere onderdelen. Je hebt het nodig om voorbij Doel 1 te komen.
 
-Additional information on how to configure Nightscout for use with AndroidAPS can be found `here <../Installing-AndroidAPS/Nightscout.html>`__.
+Meer informatie over het instellen van Nightscout voor gebruik met AndroidAPS vind je `hier <../Installing-AndroidAPS/Nightscout.html>`__.
 
 AAPS-.apk-bestand
 --------------------------------------------------
-De basiscomponent van het systeem. Voordat je de app installeert, moet je eerst het apk-bestand (dat is de bestandsnaam extensie voor een Android app) maken. Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`__.  
+De basiscomponent van het systeem. Voordat je de app installeert, moet je eerst het apk-bestand (dat is de bestandsnaam extensie voor een Android app) maken. Instructies staan `hier <../Installing-AndroidAPS/Building-APK.html>`__.  
 
 Optionele onderdelen
 ==================================================
@@ -103,7 +103,7 @@ Smartwatch
 --------------------------------------------------
 Elke smartwatch met Android Wear 1.x en hoger is geschikt. Sommige loopers dragen een Sony Smartwatch 3 (SWR50) omdat het het enige horloge is dat elke 5 minuten een Dexcom G5/G6 ontvangt zonder de telefoon in de buurt te hebben. Dit wordt "stand alone" ontvanger genoemd. Sommige andere horloges kunnen worden gepatcht om te werken als een stand alone ontvanger (zie `deze documentatie <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ voor meer details).
 
-Gebruikers houden een `lijst van geteste telefoons en smartwatches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ bij. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`__.
+Gebruikers houden een `lijst van geteste telefoons en smartwatches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ bij. Er zijn verschillende wijzerplaten voor gebruik met AndroidAPS, deze vind je `hier <../Configuration/Watchfaces.html>`__.
 
 Om een telefoon of horloge toe te voegen aan de lijst kun je dit `formulier <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_ invullen.
 
@@ -111,7 +111,7 @@ Bij eventuele problemen met de spreadsheet stuur een e-mail naar `hardware@andro
 
 xDrip+
 --------------------------------------------------
-Zelfs als je de xDrip+ App niet als BG bron nodig hebt, kun je hem nog steeds gebruiken voor bijvoorbeeld alarmen of om jouw bloedglucose te laten weergeven op een smartwatch. Je kunt in xDrip+ zoveel alarmen aanmaken als je wilt, en zelf tijdvakken specificeren wanneer een alarm actief moet zijn, of het alarm toch moet afgaan wanneer de telefoon in 'stille modus' staat, etc. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`__. Houd er rekening mee dat de documentatie van deze app niet altijd up-to-date is, aangezien hij zeer regelmatig wordt geupdatet.
+Zelfs als je de xDrip+ App niet als BG bron nodig hebt, kun je hem nog steeds gebruiken voor bijvoorbeeld alarmen of om jouw bloedglucose te laten weergeven op een smartwatch. Je kunt in xDrip+ zoveel alarmen aanmaken als je wilt, en zelf tijdvakken specificeren wanneer een alarm actief moet zijn, of het alarm toch moet afgaan wanneer de telefoon in 'stille modus' staat, etc. Meer informatie over xDrip+ vind je `hier <../Configuration/xdrip.html>`__. Houd er rekening mee dat de documentatie van deze app niet altijd up-to-date is, aangezien hij zeer regelmatig wordt geupdatet.
 
 Gebruiksvoorbeeld
 ==================================================
@@ -128,7 +128,7 @@ Wat te doen tijdens het wachten op onderdelen
 ==================================================
 Het duurt soms een tijdje voordat je alle onderdelen voor het maken van een closed loop bij elkaar hebt. Maar geen zorgen, er zijn een heleboel dingen die je kunt doen tijdens het wachten. Het is NOODZAKELIJK om jouw basaalstanden, koolhydraatratio (KH), insuline gevoeligheidsfactor (ISF) etc. te testen en (indien van toepassing) aan te passen. AndroidAPS gebruiken in open loop modus kan een goede manier zijn om jouw profielinstellingen te testen en vertrouwd te raken met het syteem. In de open loop modus geeft AndroidAPS behandelingsadviezen die je handmatig moet doorvoeren.
 
-Verder kun je deze documentatie doorlezen, je kunt online of offline contact opnemen met andere loopers. Lees wat `achtergrondinformatie <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ of bekijk welke vragen andere loopers stellen in de verschillende Facebook groepen (let hierbij wel op de kwaliteit van andermans suggesties, niet alles wat je leest is verstandig om blindelings na te doen).
+You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <../Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
 ** Klaar? **
 Als je jouw AAPS onderdelen bij elkaar hebt (gefeliciteerd!) of ten minste genoeg om te beginnen in de open loop modus, lees dan eerst de `Doelen <../Usage/Objectives.html>`_ door en stel je `hardware <../index.html#component-setup>`_ in.

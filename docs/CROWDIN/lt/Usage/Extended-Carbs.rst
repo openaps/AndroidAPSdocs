@@ -1,6 +1,6 @@
 Ištęsti angliavandeniai / "iAV"
 **************************************************
-Vykdant įprastą pompos terapiją, ištęstos dozės yra tinkamas būdas susitvarkyti su riebiu ar kitokiu lėtai įsisavinamu maistu, kuris padidina gliukozės kiekį kraujyje ilgiau nei daro insulinas. Tačiau ištęsti bolusai neturi prasmės (ir sukelia techninių sunkumų), nes jie iš esmės reiškia fiksuotą aukštą laikiną valandinę bazę, o tai prieštarauja normaliam uždaro ciklo veikimui - jis dinamiškai sureguliuoja bazinius dažnius. Išsamesnę informaciją galite rasti šio puslapio apačioje, skyriuje `Ištęstas bolusas <../Usage/Extended-Carbs.html#extended-bolus>`_.
+Vykdant įprastą pompos terapiją, ištęstos dozės yra tinkamas būdas susitvarkyti su riebiu ar kitokiu lėtai įsisavinamu maistu, kuris padidina gliukozės kiekį kraujyje ilgiau nei daro insulinas. Tačiau ištęsti bolusai neturi prasmės (ir sukelia techninių sunkumų), nes jie iš esmės reiškia fiksuotą aukštą laikiną valandinę bazę, o tai prieštarauja normaliam uždaro ciklo veikimui - jis dinamiškai sureguliuoja bazinius dažnius. For details see `extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`__ below.
 
 Tačiau vis tiek reikia susitvarkyti su tokiais patiekalais. Štai kodėl AndroidAPS“ nuo 2.0 versijos palaiko vadinamuosius ištęstinius angliavandenius arba "iAV".
 
@@ -26,7 +26,7 @@ Ateities angliavandeniai Terapijos skirtuke žymimi tamsiai oranžine spalva:
 
 -----
 
-Čia aprašytas konkretus riebalų ir baltymų tvarkymo šios funkcijos kontekste pavyzdys: `https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html <https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html>`_
+A way to handle fat and protein with that feature is described here: `https://adriansloop.blogspot.com/2018/04/page-margin-0.html <https://adriansloop.blogspot.com/2018/04/page-margin-0.html>`_
 
 -----
 
@@ -42,7 +42,7 @@ Ištęstas bolusas
 Kaip jau minėta aukščiau, ištęstas arba vadinamasis daugiabangis bolusas neveikia su uždaru ciklu. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ for details
 
 Ištęstinis bolusas ir perjungimas į atvirą ciklą - tik Dana ir Insight pompoms
-------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 Kai kurie žmonės vis dar prašė parinkties AAPS naudoti ištęstinius bolusus, nes jie norėjo su specialiu maistu elgtis taip, kaip įpratę. 
 
 Štai kodėl 2.6 versijoje yra galimybė nustatyti ištęstą bolusą Danos ir Insight pompose. 

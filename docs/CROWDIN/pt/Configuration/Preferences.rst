@@ -20,6 +20,9 @@ Preferências
   .. image:: ../images/Pref2021_Filter.png
     :alt: Preferences filter
 
+.. contents:: 
+   :backlinks: entry
+   :depth: 2
 
 Geral
 ===========================================================
@@ -39,7 +42,7 @@ Geral
 
 **Patient name**
 
-* Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+* Can be used if you have to differentiate between multiple setups (i.e. duas crianças com diabetes Tipo I na sua família).
 
 Protection
 -----------------------------------------------------------
@@ -68,7 +71,7 @@ Settings protection
 Application protection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * If app is protected you must enter password or use phone's biometric authentication to open AAPS.
-* App will shut down immediately if wrong password is entered - but still run in the background if it was previously opened successfully.
+* A App será encerrada imediatamente se for digitada a senha errada, contudo continua a correr em segundo plano se ela foi previamente aberta com sucesso.
 
 Bolus protection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -201,10 +204,10 @@ Deliver this part of bolus wizard result
 
 Bolus advisor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
 * If correction bolus is accepted **no carbs** will recorded.
 * An alarm will be started when glucose value is in good level to start eating.
-* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ again and enter the amount of carbs you want to eat.
+* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ again and enter the amount of carbs you want to eat.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
     :alt: Bolus advisor message
@@ -261,7 +264,7 @@ Depending on your settings in `config builder <../Configuration/Config-Builder.h
 OpenAPS AMA settings
 -----------------------------------------------------------
 * Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. 
-* More details about the settings and Autosens can be found in the `OpenAPS docs <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
+* More details about the settings and Autosens can be found in the `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
 
 Max U/h a Temp Basal can be set to
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

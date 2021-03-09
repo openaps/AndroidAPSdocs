@@ -12,10 +12,10 @@ Funkcijos
 * Tėvai gali nuotoliniu būdu sekti, matyti visus svarbius duomenis, tokius, kaip gliukozės kiekis, aktyvūs angliavandeniai, aktyvus insulinas, ir pan. naudojant **NSClient app** jų telefone. Settings must be the same in AndroidAPS and NSClient app.
 * Tėvai gali gauti savo telefone perspėjimus, naudodami **xDrip+ programa sekėjo režime**.
 * AndroidAPS nuotolinis valdymas naudojant `SMS Komandas <../Children/SMS-Commands.html>`_ apsaugotas dviem autentifikavimo žingsniais.
-* Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see `release notes for Version 2.8.1.1 <https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for further details.
+* Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see `release notes for Version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for further details.
 
 Įrankiai ir programos, skirtos nuotoliniam stebėjimui
------------------------------------------------------
+==================================================
 * `Nightscout <http://www.nightscout.info/>`_ interneto naršyklėje (pateikiami duomenys)
 *	NSClient app is a stripped down version of AAPS capable of following somebody, making profile switches, setting TTs and entering carbs. There are 2 apps:  `NSClient & NSClient2 to download <https://github.com/nightscout/AndroidAPS/releases/>`_. The only difference is the app name. This way you can install the app twice on the same phone, to be able to follow 2 different persons/nightscouts with it.
 * Dexcom Follow, jei naudojate originalią Dexcom programėlę (tik glikemijos duomenys)

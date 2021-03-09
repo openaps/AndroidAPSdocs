@@ -90,11 +90,11 @@ Naudoti G6 yra šiek tiek sudėtingiau, nei atrodė anksčiau. Norint jį naudot
 * „Išankstinis įmirkymas“ (sensoriaus įvedimas daug anksčiau nei jo pradžia programoje) G6 su gamykliniu kalibravimu gali sukelti duomenų nukrypimus. Jei sensorių įvedate anksčiau, nei jį startuojate, gali reikėti jį kalibruoti, kad gautumėte geriausius rezultatus.
 * Jei neplanuojate sekti visų galimų nukrypimų, geriau grįžti į tradicinį kalibravimo režimą ir naudoti sistemą kaip G5.
 
-Norėdami gauti daugiau informacijos ir šių rekomendacijų priežastis, skaitykite Tim Street [visą straipsnį](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) svetainėje [www.diabettech.com](http://www.diabettech.com).
+To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
 
 ### Prijungti G6 siųstuvą pirmą kartą
 
-**Apie antrą ir kitus siųstuvus skaitykite žemiau [Siųstuvo veikimo trukmės pratęsimas ](../Configuration/xdrip#extend-transmitter-life).**
+**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
 
 Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. prasideda 80 arba 81), jums reikia bent [xDrip+ pagrindinės](https://jamorham.github.io/#xdrip-plus) programos versijos.
 
@@ -153,7 +153,7 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. pradedant nuo 8G, 8H ar 8J, naudokite
 
 * Kol kas nerastas būdas prailginti tarnavimo laiką siųstuvų, kurių serijos nr. prasideda 8G, 8H ar 8J. Tas pats pasakytina ir apie siųstuvus su serijos Nr. prasideda nuo 81 ir programine įranga nuo 1.6.5.**27** (žr. xDrip+ sistemos būklę - G5/G6 statusas, kaip parodyta [ekrano nuotraukoje aukščiau](../Configuration/xdrip#transmitter-battery-status)).
 * Norint išvengti sunkumų paleidžiant sensorius, ypač rekomenduojama, kad siųstuvas veiktų iki 100-osios pirmojo naudojimo dienos.
-* Naudoti siųstuvą, kurio serijos nr. prasideda nuo 81 ir programinė įranga 1.6.5.**27**, po 100 dienų galima tik tuo atveju, jei "engineering mode" yra įjungtas ir "natyvinis režimas" yra išjungtas (trijų linijų meniu-> nustatymai-> G5/G6 derinimo nustatymai-> natyvinis algoritmas), nes siųstuvo kietasis restartas (hard reset) yra NEĮMANOMAS.
+* Naudoti siųstuvą, kurio serijos nr. starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if [engineering mode](../Usage/Enabling-Engineering-Mode-in-xDrip) is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
 * Veikiančio sensoriaus seansas bus sustabdytas, jei tuo metu prailginsite siųstuvo veikimo laiką. Todėl šį manipuliavimą reikėtų atlikti prieš keičiant sensorių arba būti pasirengusiam dėl to, kad įsijungs dviejų valandų jo įšilimo (warm-up) fazė.
 * Rankiniu būdu sustabdykite sensorių per trijų linijų meniu.
 * Įjunkite `Inžinieriaus režimą`: 

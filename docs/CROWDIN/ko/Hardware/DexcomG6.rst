@@ -17,7 +17,7 @@ Dexcom G6를 사용하는 것은 맨 처음 제시된 것 보다 좀 더 복잡�
 * 자동 보정이 되어있는 G6의 센서를 미리 삽입하는 것은 결과적으로 혈당값의 편차를 발생시킬 수 있습니다. 만약 센서를 미리 삽입하는 경우, 가장 정확한 결과값을 얻기 위해 센서를 보정할 필요가 있습니다.
 * 혈당값 변화를 관찰하는 것이 불가하다면, 자동 보정 모드를 사용하지 않는 방식으로 바꾸고, G5와 같은 시스템을 사용하는 것이 바람직합니다.
 
-이러한 권장사항의 세부적인 내용들과 이유들에 대해 더 알고자 하신다면, 'www.diabettech.com <http://www.diabettech.com>'에서 Tim Street이 게시한 '전체 문서 <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>'를 읽어보시기 바랍니다.
+To learn more about the details and reasons for these recommendations read the `complete article <https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ published by Tim Street at `www.diabettech.com <https://www.diabettech.com>`_.
 
 Dexcom G6를 xdrip+와 사용하는 경우
 ==================================================
@@ -26,8 +26,8 @@ Dexcom G6를 xdrip+와 사용하는 경우
 * Clarity가 필요하고 xDrip+ 알람 사용을 원하는 경우, '덱스콤 앱(패치버전)<../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>'을 xDrip+에 로컬 브로드캐스트로 연결하여 사용하십시오.
 * 만약 아직 'xDrip'을 설치하지 않았다면 <https://github.com/NightscoutFoundation/xDrip>에서 다운로드하고, nightscout ('G5' <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>)의 지시사항을 따르십시오.
 * 구성 관리자 (AndroidAPS의 세팅)에서 xDrip+를 선택합니다.
-* 'xDrip+ 설정 페이지 <../Configuration/xdrip.html>'를 따라 xDrip+의 설정을 조정하십시오.
-* 비행기 모드에서 AAPS가 혈당값을 수신하지 못하는 경우 'xDrip+ 설정 페이지' <../Configuration/xdrip.html>에 설명된 'Identify receiver'를 이용합니다.
+* Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`__.
 
 Dexcom G6를 Dexcom 앱(패치버전)과 사용하는 경우
 ==================================================
@@ -38,8 +38,8 @@ Dexcom G6를 Dexcom 앱(패치버전)과 사용하는 경우
   * 검색 결과 페이지에서 보여지는 덱스콤 G6 앱 링크를 클릭하십시오.
   * URL에서 region이 표시됩니다.
 
-   .. image:: ../images/DexcomG6regionURL.PNG
-     :alt: Dexcom G6 URL의 region
+  .. image:: ../images/DexcomG6regionURL.PNG
+    :alt: Dexcom G6 URL의 region
 
 * 덱스콤 공식 앱을 제거하십시오.
 * 다운로드 한 apk를 설치합니다.

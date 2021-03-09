@@ -75,9 +75,9 @@ Vous pouvez également supprimer le changement de profil directement dans mLab :
 
 * Allez dans votre collection mLab
 * Recherches le changement de profil dans les traitements
-* Delete the profile switch with date and time that was mentioned in the error message. ![mlab](../images/mLabDeletePS.png)
+* Supprimez le changement de profil ayantla date et l'heure mentionnées dans le message d'erreur. ![mlab](../images/mLabDeletePS.png)
 
 ### 'DAI 3h trop court'
 
 * Le message d'erreur apparaîtra si votre durée d'action de l'insuline dans votre profil est à une valeur que AndroidAPS ne pense pas être exacte. 
-* Lisez la section [sélection de la valeur de DAI](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) et modifiez-la dans votre profil, puis faites un [Changement de profil](../Usage/Profiles) pour continuer.
+* Lisez la section [sélection de la valeur de DAI](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) et modifiez-la dans votre profil, puis faites un [Changement de profil](../Usage/Profiles) pour continuer.

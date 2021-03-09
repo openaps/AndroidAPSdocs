@@ -11,7 +11,7 @@ Werte können wie beim Libre1 auch mit einem Bluetooth-Transmitter übermittelt 
 Wichtiger Hinweis: Das funktioniert nicht mit der US-Version des Freestyle 2 Sensors! Die US-Version verbindet sich nur mit einem Lesegerät, nicht mit einem Smartphone.
 
 Schritt 1: Erstelle Deine eigene gepatchte LibreLink-App
-========================================================
+==================================================
 
 Aus rechtlichen Gründen muss das sogenannte Patchen von Dir selbst erledigt werden. Verwende Suchmaschinen, um die entsprechenden Links zu finden. Es gibt im wesentlichen zwei Varianten: Die empfohlene originale gepatchte App blockiert sämtlichen Internet-Traffic, um Tracking zu vermeiden. Die andere Variante unterstützt LibreView, das möglicherweise von Deinem Arzt benötigt wird.
 
@@ -91,7 +91,7 @@ Es gibt jedoch eine Variante der gepatchten App, die LibreView mit aktivierter I
 
 
 Schritt 2: Installieren und konfigurieren der xDrip+ App
-========================================================
+==================================================
 
 Die Blutzuckerwerte werden von der xDrip + App auf dem Smartphone empfangen. 
 

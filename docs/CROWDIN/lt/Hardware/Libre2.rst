@@ -90,7 +90,7 @@ However there is a variant of the patched app supporting LibreView with enabled 
 
 
 2 veiksmas: Įdiekite ir konfigūruokite xDrip+ programėlę
-========================================================
+==================================================
 
 Kraujo gliukozės reikšmės išmaniąjame telefone gaunamos per xDrip+ programėlę. 
 

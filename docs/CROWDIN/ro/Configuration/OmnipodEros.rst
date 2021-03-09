@@ -4,7 +4,7 @@
 
 These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). The Omnipod driver is available as part of AndroidAPS (AAPS) as of version 2.8.
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.**
+**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Responsabilitatea folosirii cade exclusiv in sarcina a utilizatorului.**
 
 .. contents:: 
    :backlinks: entry
@@ -26,7 +26,7 @@ Hardware and Software Requirements
 
   Component that will operate AndroidAPS and send control commands to the Pod communication device.
 
-      +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <../index.html#component-setup>`__
+      +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit>`__ with a version of AAPS 2.8 and related `components setup <../index.html#component-setup>`__
 
 *  |Omnipod_Pod|  **Insulin Delivery Device** 
 
@@ -285,7 +285,7 @@ The process below will show you how to acknowledge and dismiss pod beeps that oc
 
     |Acknowledge_Alerts_4|
 
-    If the RileyLink is out of range of the pod while the acknowledge alerts command is being processed a warning message will display 2 options. **Mute (1)** will silence this current warning. **OK (2)** will confirm this warning and allow the user to try to acknowledge alerts again.
+    If the RileyLink is out of range of the pod while the acknowledge alerts command is being processed a warning message will display 2 options. **Mute (1)** va opri alerrta activa. **OK (2)** will confirm this warning and allow the user to try to acknowledge alerts again.
 
     |Acknowledge_Alerts_5|
 
@@ -331,7 +331,7 @@ Manually Re-establish Pod Communication Device Bluetooth Communication
     
     If the pod communication device is unresponsive or out of range of the phone while the Bluetooth refresh command is being processed a warning message will display 2 options.
 
-   * **Mute (1)** will silence this current warning.
+   * ***Mute (1)** va opri alerrta activa.
    * **OK (2)** will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
 	
     |RileyLink_Bluetooth_Reset_4|	
@@ -440,36 +440,38 @@ Fields
 Icons
 -----
 
-.. table:: 
+.. list-table:: 
+      
+    * - |refresh_pod_status|
+      - **REFRESH:** 
+			
+	Sends a refresh command to the active pod to update communication
+			 
+	* Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
+	* See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+    * - |pod_management|  	 
+      - **POD MGMT:**
 
-   ====================  ===========================================
-   |refresh_pod_status|  **REFRESH:** 
+	Navigates to the Pod management menu   
+    * - |ack_alerts|		 
+      - **ACK ALERTS:**
    			 
-			 Sends a refresh command to the active pod to update communication
+	When pressed this will disable the pod expiration beeps and notifications. 
 			 
-			 * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
-			 * See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
-
-   |pod_management|   	 **POD MGMT:**
-
-			 Navigates to the Pod management menu
-   |ack_alerts|		 **ACK ALERTS:**
-   			 
-			 When pressed this will disable the pod expiration beeps and notifications. 
-			 
-			 * Button is displayed only when pod time is past expiration warning time
-			 * Upon successful dismissal, this icon will no longer appear.
-			 
-   |set_time|		 **SET TIME:**
+	* Button is displayed only when pod time is past expiration warning time
+	* Upon successful dismissal, this icon will no longer appear.			 
+    * - |set_time|	 
+      - **SET TIME:**
    
-			 When pressed this will update the time on the pod with the current time on your phone.
-   |suspend|  		 **SUSPEND:**
+	When pressed this will update the time on the pod with the current time on your phone.
+    * - |suspend|  		 
+      - **SUSPEND:**
    
-			 Suspends the active pod
-   |resume| 		 **RESUME DELIVERY:**
+	Suspends the active pod
+    * - |resume|	 
+      - **RESUME DELIVERY:**
    
-			 Resumes the currently suspended, active pod
-   ====================  ===========================================
+	Resumes the currently suspended, active pod
 
 
 Pod Management Menu
@@ -479,62 +481,61 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 
 |Omnipod_Tab_Pod_Management|
 
-.. table:: 
+.. list-table:: 
 
-   =========================  ===========================================
-   |activate_pod|	      **Activate Pod**
+    * - |activate_pod|
+      - **Activate Pod**
    
-   			      Primes and activates a new pod
-
-   |deactivate_pod|	      **Deactivate Pod**
+        Primes and activates a new pod
+    * - |deactivate_pod|
+      - **Deactivate Pod**
  
- 			      Deactivates the currently active pod.
-			 
-		   	      *  A partially paired pod ignores this command.
-			      *  Use this command to deactivate a screaming pod (error 49).
-			      *  If the button is disabled (greyed out) use the Discard Pod button.
-
-   |play_test_beep| 	      **Play test beep**
+        Deactivates the currently active pod.
+		 
+	*  A partially paired pod ignores this command.
+	*  Use this command to deactivate a screaming pod (error 49).
+	*  If the button is disabled (greyed out) use the Discard Pod button.
+    * - |play_test_beep|
+      - **Play test beep**
  
- 			      Plays a single test beep on the pod when pressed.
+ 	Plays a single test beep on the pod when pressed.
+    * - |discard_pod|
+      - **Discard pod**
 
-   |discard_pod|	      **Discard pod**
-
-			      Deactivates and discards the pod state of an unresponsive pod when pressed.
+	Deactivates and discards the pod state of an unresponsive pod when pressed.
 			      
-			      Button is only displayed when very specific cases are met as proper deactivation is no longer possible:
+	Button is only displayed when very specific cases are met as proper deactivation is no longer possible:
 
-			      * A **pod is not fully paired** and thus ignores deactivate commands.
-			      * A **pod is stuck** during the pairing process between steps
-	 		      * A **pod simply does not pair at all.**
-
-   |pod_history| 	      **Pod history** 
+	* A **pod is not fully paired** and thus ignores deactivate commands.
+	* A **pod is stuck** during the pairing process between steps
+	* A **pod simply does not pair at all.**
+    * - |pod_history|
+      - **Pod history** 
    
-   			      Displays the active pod activity history
-
-   |rileylink_stats| 	      **RileyLink stats:**
+   	Displays the active pod activity history
+    * - |rileylink_stats|
+      - **RileyLink stats:**
    
-   			      Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
+        Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
 
-			      * **Settings** - displays RileyLink and active pod settings information
-			      * **History** - displays RileyLink and Pod communication history
-
-   |reset_rileylink_config|   **Reset RileyLink Config** 
+	* **Settings** - displays RileyLink and active pod settings information
+	* **History** - displays RileyLink and Pod communication history
+    * - |reset_rileylink_config|
+      - **Reset RileyLink Config** 
    
-   			      When presssed this button resets the currently connected pod communication device configuration. 
+   	When presssed this button resets the currently connected pod communication device configuration. 
 			      
-			      * When communication is started, specific data is sent to and set in the RileyLink 
+	* When communication is started, specific data is sent to and set in the RileyLink 
 			      
-			        - Memory Registers are set
-				- Communication Protocols are set
-				- Tuned Radio Frequency is set
+	    - Memory Registers are set
+	    - Communication Protocols are set
+	    - Tuned Radio Frequency is set
 				
-			      * See `addtional notes <#reset-rileylink-config-notes>`__ at the end of this table
-
-   |pulse_log|		      **Read pulse log:** 
+	* See `addtional notes <#reset-rileylink-config-notes>`__ at the end of this table
+    * - |pulse_log|
+      - **Read pulse log:** 
     
-    			      Sends the active pod pulse log to the clipboard
-   =========================  ===========================================			    
+    	Sends the active pod pulse log to the clipboard		    
 
 *Reset RileyLink Config Notes*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -574,7 +575,7 @@ Allows for scanning of a RileyLink device. The Omnipod driver cannot select more
 	+  Disabled - Reports a value of n/a.
 * **Enable battery change logging in Actions:** In the Actions menu the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Some pod communication devices now have the ability to use regular batteries which can be changed.  This option allows you to note that and reset battery age timers.
 
-Confirmation beeps
+Bip-uri de confirmare
 ------------------
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
@@ -584,7 +585,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 * **\*SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
 * **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
 
-Alerts
+Alerte
 ------
 
 Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
@@ -597,7 +598,7 @@ Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, 
 * **Number of units:** The number of units at which to trigger the pod low reservoir alert.
 * **Automatically acknowledge Pod alerts:** When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
 
-Notifications
+Notificări
 -------------
 
 Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful. 
@@ -608,7 +609,7 @@ Provides AAPS notifications and audible phone alerts when it is uncertain if TBR
 * **\*Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
 * **\*Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
    
-Other
+Altul
 -----
 
 Provides advanced settings to assist debugging.
@@ -704,7 +705,7 @@ Battery level reporting is a setting that can be enabled to return the current b
   * **Nightscout** - Battery level is reported when an actual level exists, value of n/a will not be reported
 
 
-Troubleshooting
+Depanare
 ===============
 
 Pod Failures
@@ -738,17 +739,17 @@ Omnipod driver alerts
 
 please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
 
-No active Pod
+Niciun Pod activ
 ~~~~~~~~~~~~~
 
 No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically silenced.
 
-Pod suspended
+Pod suspendat
 ~~~~~~~~~~~~~
 
 Informational alert that Pod has been suspended.
 
-Setting basal profile failed. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
+Setarea profilului bazalei a eșuat. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
@@ -796,7 +797,7 @@ All of the development work for the Omnipod driver is done by the community on a
 
 -  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
 -  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the `AndroidAPS <https://gitter.im/MilosKozak/AndroidAPS>`__ channel on **Gitter** or the *#androidaps* channel on **Discord** by using `this invite link <https://discord.com/invite/NhEUtzr>`__.
--  **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new `issue <https://github.com/nightscout/AndroidAPS/issues>`__ and attach your `log files <https://androidaps.readthedocs.io/en/latest/CROWDIN/sk/Usage/Accessing-logfiles.html>`__.
+-  **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new `issue <https://github.com/nightscout/AndroidAPS/issues>`__ and attach your `log files <../Usage/Accessing-logfiles.html>`__.
 -  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
 
 
@@ -844,7 +845,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |Omnipod_Pod|			image:: ../images/omnipod/Omnipod_Pod.png
 	
 ..
-		Acknowledge Alerts
+		Confirmare Alerte
 .. |Acknowledge_Alerts_1|               image:: ../images/omnipod/Acknowledge_Alerts_1.png
 .. |Acknowledge_Alerts_2|               image:: ../images/omnipod/Acknowledge_Alerts_2.png
 .. |Acknowledge_Alerts_3|               image:: ../images/omnipod/Acknowledge_Alerts_3.png
@@ -856,7 +857,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |Actions_Tab|                  		image:: ../images/omnipod/Actions_Tab.png
 
 ..
-	Activate Pod
+	Activează Pod
 .. |Activate_Pod_1|                     image:: ../images/omnipod/Activate_Pod_1.png
 .. |Activate_Pod_2|                     image:: ../images/omnipod/Activate_Pod_2.png
 .. |Activate_Pod_3|                     image:: ../images/omnipod/Activate_Pod_3.png
@@ -874,7 +875,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |Activate_Pod_15|                    image:: ../images/omnipod/Activate_Pod_15.png
 
 ..
-	Deactivate Pod
+	Dezactivare Pod
 .. |Deactivate_Pod_1|                   image:: ../images/omnipod/Deactivate_Pod_1.png
 .. |Deactivate_Pod_2|                   image:: ../images/omnipod/Deactivate_Pod_2.png
 .. |Deactivate_Pod_3|                   image:: ../images/omnipod/Deactivate_Pod_3.png
@@ -911,7 +912,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |Omnipod_Tab_Pod_Management|         image:: ../images/omnipod/Omnipod_Tab_Pod_Management.png
 
 ..
-	Pod History
+	Istoric Pod
 .. |Pod_History_1|                  	image:: ../images/omnipod/Pod_History_1.png
 .. |Pod_History_2|                  	image:: ../images/omnipod/Pod_History_2.png
 .. |Pod_History_3|                  	image:: ../images/omnipod/Pod_History_3.png

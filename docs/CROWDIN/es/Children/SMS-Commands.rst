@@ -70,7 +70,7 @@ Configuración de autentificación
 
 Use SMS commands
 ==================================================
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands <../Children/SMS-Commands.html#commands>`_ below. 
+* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands <../Children/SMS-Commands.html#commands>`__ below. 
 * The AAPS phone will respond to confirm success of command or status requested. 
 * Confirm command by sending the code where necessary. Ejemplo:
 
@@ -189,7 +189,7 @@ If you receive the same message over and over again (i.e. cambio de perfil) prob
 If the other app is installed on multiple phones make sure to deactivate upload on all of them.
 
 Los comandos SMS no funcionan en los teléfonos de Samsung
----------------------------------------------------------
+--------------------------------------------------
 Hubo un reporte sobre los comandos de SMS que se detenían después de una actualización en el teléfono Galaxy S10. Could be solved by disabling 'send as chat message'.
 
 .. image:: ../images/SMSdisableChat.png

@@ -18,8 +18,11 @@ For more details, please read on here.
    :maxdepth: 1
    :glob:
    :caption: Change language
-   Change language <changelanguage.rst>
-   
+
+   Change language <./changelanguage.rst>
+
+.. _getting-started:
+
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -28,7 +31,10 @@ For more details, please read on here.
    Safety first <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Pump choices <./Getting-Started/Pump-Choices.md>
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+
+.. _what-do-i-need:
 
 .. toctree::
    :maxdepth: 1
@@ -51,6 +57,8 @@ For more details, please read on here.
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 
+.. _component-setup:
+
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -62,6 +70,8 @@ For more details, please read on here.
    Phones <./Hardware/Phoneconfig.rst>
    Nightscout 설정 <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
+
+.. _configuration:
 
 .. toctree::
    :maxdepth: 1
@@ -99,6 +109,7 @@ For more details, please read on here.
    로그 파일에 접근하기 <./Usage/Accessing-logfiles.md>
    Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Export/Import Settings <./Usage/ExportImportSettings.rst>
+   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
@@ -115,6 +126,7 @@ For more details, please read on here.
    :caption: Troubleshooting
 
    Troubleshooting <./Usage/troubleshooting.rst>
+   Nightscout client <./Usage/Troubleshooting-NSClient.md>
 
 .. toctree::
    :maxdepth: 1
@@ -166,4 +178,4 @@ For more details, please read on here.
 
 	* 모든 제품명, 회사명, 상표, 서비스표, 등록상표, 등록 서비스표는 해당 소유자의 고유 재산입니다. 그것들을 사용한 것은 정보를 제공하기 위한 목적이며, 그들과의 제휴 또는 보증을 의미하지는 않습니다.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ or `Medtronic <http://www.medtronic.com/>`_
+	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_

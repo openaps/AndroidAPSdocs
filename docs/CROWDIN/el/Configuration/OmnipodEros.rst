@@ -26,7 +26,7 @@ Hardware and Software Requirements
 
   Component that will operate AndroidAPS and send control commands to the Pod communication device.
 
-      +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <../index.html#component-setup>`__
+      +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit>`__ with a version of AAPS 2.8 and related `components setup <../index.html#component-setup>`__
 
 *  |Omnipod_Pod|  **Insulin Delivery Device** 
 
@@ -440,36 +440,38 @@ Fields
 Icons
 -----
 
-.. table:: 
+.. list-table:: 
+      
+    * - |refresh_pod_status|
+      - **REFRESH:** 
+			
+	Sends a refresh command to the active pod to update communication
+			 
+	* Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
+	* See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+    * - |pod_management|  	 
+      - **POD MGMT:**
 
-   ====================  ===========================================
-   |refresh_pod_status|  **REFRESH:** 
+	Navigates to the Pod management menu   
+    * - |ack_alerts|		 
+      - **ACK ALERTS:**
    			 
-			 Sends a refresh command to the active pod to update communication
+	When pressed this will disable the pod expiration beeps and notifications. 
 			 
-			 * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
-			 * See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
-
-   |pod_management|   	 **POD MGMT:**
-
-			 Navigates to the Pod management menu
-   |ack_alerts|		 **ACK ALERTS:**
-   			 
-			 When pressed this will disable the pod expiration beeps and notifications. 
-			 
-			 * Button is displayed only when pod time is past expiration warning time
-			 * Upon successful dismissal, this icon will no longer appear.
-			 
-   |set_time|		 **SET TIME:**
+	* Button is displayed only when pod time is past expiration warning time
+	* Upon successful dismissal, this icon will no longer appear.			 
+    * - |set_time|	 
+      - **SET TIME:**
    
-			 When pressed this will update the time on the pod with the current time on your phone.
-   |suspend|  		 **SUSPEND:**
+	When pressed this will update the time on the pod with the current time on your phone.
+    * - |suspend|  		 
+      - **SUSPEND:**
    
-			 Suspends the active pod
-   |resume| 		 **RESUME DELIVERY:**
+	Suspends the active pod
+    * - |resume|	 
+      - **RESUME DELIVERY:**
    
-			 Resumes the currently suspended, active pod
-   ====================  ===========================================
+	Resumes the currently suspended, active pod
 
 
 Pod Management Menu
@@ -479,62 +481,61 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 
 |Omnipod_Tab_Pod_Management|
 
-.. table:: 
+.. list-table:: 
 
-   =========================  ===========================================
-   |activate_pod|	      **Activate Pod**
+    * - |activate_pod|
+      - **Activate Pod**
    
-   			      Primes and activates a new pod
-
-   |deactivate_pod|	      **Deactivate Pod**
+        Primes and activates a new pod
+    * - |deactivate_pod|
+      - **Deactivate Pod**
  
- 			      Deactivates the currently active pod.
-			 
-		   	      *  A partially paired pod ignores this command.
-			      *  Use this command to deactivate a screaming pod (error 49).
-			      *  If the button is disabled (greyed out) use the Discard Pod button.
-
-   |play_test_beep| 	      **Play test beep**
+        Deactivates the currently active pod.
+		 
+	*  A partially paired pod ignores this command.
+	*  Use this command to deactivate a screaming pod (error 49).
+	*  If the button is disabled (greyed out) use the Discard Pod button.
+    * - |play_test_beep|
+      - **Play test beep**
  
- 			      Plays a single test beep on the pod when pressed.
+ 	Plays a single test beep on the pod when pressed.
+    * - |discard_pod|
+      - **Discard pod**
 
-   |discard_pod|	      **Discard pod**
-
-			      Deactivates and discards the pod state of an unresponsive pod when pressed.
+	Deactivates and discards the pod state of an unresponsive pod when pressed.
 			      
-			      Button is only displayed when very specific cases are met as proper deactivation is no longer possible:
+	Button is only displayed when very specific cases are met as proper deactivation is no longer possible:
 
-			      * A **pod is not fully paired** and thus ignores deactivate commands.
-			      * A **pod is stuck** during the pairing process between steps
-	 		      * A **pod simply does not pair at all.**
-
-   |pod_history| 	      **Pod history** 
+	* A **pod is not fully paired** and thus ignores deactivate commands.
+	* A **pod is stuck** during the pairing process between steps
+	* A **pod simply does not pair at all.**
+    * - |pod_history|
+      - **Pod history** 
    
-   			      Displays the active pod activity history
-
-   |rileylink_stats| 	      **RileyLink stats:**
+   	Displays the active pod activity history
+    * - |rileylink_stats|
+      - **RileyLink stats:**
    
-   			      Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
+        Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
 
-			      * **Settings** - displays RileyLink and active pod settings information
-			      * **History** - displays RileyLink and Pod communication history
-
-   |reset_rileylink_config|   **Reset RileyLink Config** 
+	* **Settings** - displays RileyLink and active pod settings information
+	* **History** - displays RileyLink and Pod communication history
+    * - |reset_rileylink_config|
+      - **Reset RileyLink Config** 
    
-   			      When presssed this button resets the currently connected pod communication device configuration. 
+   	When presssed this button resets the currently connected pod communication device configuration. 
 			      
-			      * When communication is started, specific data is sent to and set in the RileyLink 
+	* When communication is started, specific data is sent to and set in the RileyLink 
 			      
-			        - Memory Registers are set
-				- Communication Protocols are set
-				- Tuned Radio Frequency is set
+	    - Memory Registers are set
+	    - Communication Protocols are set
+	    - Tuned Radio Frequency is set
 				
-			      * See `addtional notes <#reset-rileylink-config-notes>`__ at the end of this table
-
-   |pulse_log|		      **Read pulse log:** 
+	* See `addtional notes <#reset-rileylink-config-notes>`__ at the end of this table
+    * - |pulse_log|
+      - **Read pulse log:** 
     
-    			      Sends the active pod pulse log to the clipboard
-   =========================  ===========================================			    
+    	Sends the active pod pulse log to the clipboard		    
 
 *Reset RileyLink Config Notes*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -705,7 +706,7 @@ Battery level reporting is a setting that can be enabled to return the current b
 
 
 Αντιμετώπιση προβλημάτων
-========================
+===============
 
 Pod Failures
 ------------
@@ -796,7 +797,7 @@ All of the development work for the Omnipod driver is done by the community on a
 
 -  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
 -  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the `AndroidAPS <https://gitter.im/MilosKozak/AndroidAPS>`__ channel on **Gitter** or the *#androidaps* channel on **Discord** by using `this invite link <https://discord.com/invite/NhEUtzr>`__.
--  **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new `issue <https://github.com/nightscout/AndroidAPS/issues>`__ and attach your `log files <https://androidaps.readthedocs.io/en/latest/CROWDIN/sk/Usage/Accessing-logfiles.html>`__.
+-  **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new `issue <https://github.com/nightscout/AndroidAPS/issues>`__ and attach your `log files <../Usage/Accessing-logfiles.html>`__.
 -  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
 
 

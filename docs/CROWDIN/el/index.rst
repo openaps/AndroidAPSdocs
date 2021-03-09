@@ -18,8 +18,11 @@ The main components are:
    :maxdepth: 1
    :glob:
    :caption: Change language
-   Change language <changelanguage.rst>
-   
+
+   Change language <./changelanguage.rst>
+
+.. _getting-started:
+
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -28,7 +31,10 @@ The main components are:
    Πρώτα η ασφάλεια <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Pump choices <./Getting-Started/Pump-Choices.md>
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+
+.. _what-do-i-need:
 
 .. toctree::
    :maxdepth: 1
@@ -51,6 +57,8 @@ The main components are:
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev υποκατάστημα <./Installing-AndroidAPS/Dev_branch.md>
 
+.. _component-setup:
+
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -62,6 +70,8 @@ The main components are:
    Τηλέφωνα <./Hardware/Phoneconfig.rst>
    Ρύθμιση Nightscout <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
+
+.. _configuration:
 
 .. toctree::
    :maxdepth: 1
@@ -99,6 +109,7 @@ The main components are:
    Πρόσβαση σε αρχεία καταγραφής <./Usage/Accessing-logfiles.md>
    Accu-Chek Combo συμβουλές για την βασική χρήση <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Εισαγωγή/Εξαγωγή Ρυθμίσεων <./Usage/ExportImportSettings.rst>
+   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
@@ -115,6 +126,7 @@ The main components are:
    :caption: Troubleshooting
 
    Troubleshooting <./Usage/troubleshooting.rst>
+   Nightscout client <./Usage/Troubleshooting-NSClient.md>
 
 .. toctree::
    :maxdepth: 1
@@ -166,4 +178,4 @@ The main components are:
 
 	* Όλα τα ονόματα των προϊόντων και των εταιρειών, τα εμπορικά σήματα, τα κατατεθέντα εμπορικά σήματα και τα καταχωρημένα λογότυπα υπηρεσίας αποτελούν ιδιοκτησία των αντίστοιχων κατόχων τους. Η χρήση τους είναι για ενημερωτικούς σκοπούς και δεν συνεπάγεται καμία προσχώρηση ή έγκριση από αυτούς.
 
-	Παρακαλώ σημειώστε - αυτό το έργο δεν έχει καμία σχέση και δεν υποστηρίζεται από: `SOOIL <http://www.sooil.com/eng/>` _, `Dexcom <http://www.dexcom.com/>` _, «Accu-Chek<http://www.accu-chek.com/>, Roche Diabetes Care <2/>» _. ή Medtronic <http://www.medtronic.com/>'_
+	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_

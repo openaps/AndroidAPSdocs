@@ -58,4 +58,4 @@ Deze service wordt aangeboden door een Duitse collega looper Martin Schiftan en 
 * Ook kun je hiermee je basaalstanden automatisch laten checken dmv Autotune. 
 * De server staat in Duitsland.
 
-<http://ns.10be.de/en/index.html>
+<https://ns.10be.de/en/index.html>

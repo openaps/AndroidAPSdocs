@@ -98,7 +98,7 @@ Nevýhody:
 ![Insulin type](../images/ConfBuild_Insulin.png)
 
 * Vyberte typ inzulínové křivky, kterou používáte.
-* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
+* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
 * The curves will vary based on the DIA and the time to peak.
     
     * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
@@ -154,7 +154,7 @@ Vyberte, který zdroj glykémií používáte – další informace k nastavení
     
     ![Konfigurace zdroje BG](../images/ConfBuild_BGSource.png)
 
-* [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
+* [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
 
 * [Tomato App](http://tomato.cool/) pro zařízení MiaoMiao
 * Generovat náhodné hodnoty glykémie (pouze režim Demo)
@@ -179,7 +179,7 @@ Pro pumpy Dana – pokud je nutný BT watchdog, aktivujte ho v **Rozšířená n
 
 ## Detekce citlivosti
 
-Vyberte variantu detekce citlivosti. Další detaily o různých modelech si můžete [přečíst zde](../Configuration/Sensitivity-detection-and-COB.md). Bude prováděna analýza historických dat. Jestliže se zjistí, že na inzulín reagujete citlivěji než obvykle (nebo naopak máte vyšší rezistenci), provedou se úpravy. Další podrobnosti o algoritmu citlivosti si můžete přečíst v [dokumentaci OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Vyberte variantu detekce citlivosti. Další detaily o různých modelech si můžete [přečíst zde](../Configuration/Sensitivity-detection-and-COB.md). Bude prováděna analýza historických dat. Jestliže se zjistí, že na inzulín reagujete citlivěji než obvykle (nebo naopak máte vyšší rezistenci), provedou se úpravy. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 Průběh citlivosti můžete na hlavní stránce zobrazit vybráním políčka Citlivost. Zobrazí se jako bílá čára. Pozn: aby mohla Detekce citlivosti/[ Autosens](../Usage/Open-APS-features#autosens) automaticky upravovat množství dodávaného inzulínu, musíte mít splněný [cíl 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens). Před dosažením tohoto cíle slouží procentuální údaj Autosens a bílá čára v grafu pouze pro informaci.
 
@@ -191,7 +191,7 @@ Pokud používáte Oref1 s SMB, musíte změnit **min_5m_carbimpact** na 8. Tato
 
 Vyberte požadovaný algoritmus APS pro úpravy léčby. Detaily vybraného algoritmu lze prohlížet na kartě OpenAPS (OAPS).
 
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Zjednodušeně řečeno, výhodou je, že poté, co si dáte bolus k jídlu, systém zajistí rychlý nárůst dočasného bazálu, zadáte-li dobře sacharidy.
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) More detail about OpenAPS AMA can be found in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Zjednodušeně řečeno, výhodou je, že poté, co si dáte bolus k jídlu, systém zajistí rychlý nárůst dočasného bazálu, zadáte-li dobře sacharidy.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Smyčka

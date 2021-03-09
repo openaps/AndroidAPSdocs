@@ -51,9 +51,9 @@
 ==================================================
 Иногда появляется сообщение об ошибке при компоновке apk
 
-  `Ошибки при сборке APK.`
-   
-  `Ошибка: buildOutput.apkData не может быть пустым`
+  ``Errors while building APK.``
+
+  ``Cause: buildOutput.apkData must not be null``
 
 Эта известная ошибка в Android Studio 3.5 и, вероятно, она не будет исправлена до Android Studio 3.6. Есть три варианта:
 
@@ -128,7 +128,7 @@ ContextEdit.
 
 Приложение установлено, но старая версия
 ==================================================
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`_.
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Installing-AndroidAPS/Update-to-new-version.html#update-your-local-copy>`_.
 
 Ничего из вышеперечисленного не сработало
 ==================================================

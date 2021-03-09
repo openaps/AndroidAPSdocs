@@ -15,7 +15,7 @@ Les glucides non absorbés sont coupés après un certain temps
 AAPS, Moyenne pondérée
 --------------------------------------------------
 
-l'absorption est calculée pour avoir `GA == 0` après la durée spécifiée
+l'absorption est calculée pour avoir ``GA == 0`` après la durée spécifiée
 
 .. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, Moyenne pondérée
@@ -28,7 +28,7 @@ Détection de GA erronés
 AAPS vous avertit si vous êtes sur le point de faire un bolus avec des GA d'un précédent repas et que l'algorithme pense que le calcul actuel des GA pourrait être erroné. Dans ce cas, il vous donnera une indication supplémentaire sur l'écran de confirmation après l'utilisation de l'assistant bolus. 
 
 Comment AndroidAPS détecte-t-il les mauvaises valeurs de GA ? 
--------------------------------------------------------------
+--------------------------------------------------
 
 Normalement, AAPS détecte l'absorption des glucides par des écarts de glycémie. Si vous avez entré des glucides, mais que AAPS ne peut pas voir leur absorption estimée via les variations de GLY, il utilisera la méthode `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#parametres-dabsorption>`_ pour calculer l'absorption à la place (appelée 'fallback'). Comme cette méthode ne calcule que l'absorption minimale de glucides sans tenir compte des écarts de GLY, elle peut conduire à des valeurs de GA incorrectes.
 
@@ -46,7 +46,7 @@ Comment gérer cet avertissement ?
 - Dans tous les cas, faites attention à ne pas surdoser !
 
 Pourquoi l'algorithme ne détecte-on pas correctement les GA ? 
--------------------------------------------------------------
+--------------------------------------------------
 
 - Peut-être que vous avez surestimé glucides lorsque vous les avez saisis.  
 - Vous avez fait de l'exercice après votre repas précédent

@@ -6,7 +6,7 @@ La montre Sony Smartwatch 3 est l'une des plus populaires utilisée avec AAPS. M
 La solution de contournement suivante devrait prolonger la durée d'utilisation de la Smartwatch 3, mais gardez à l'esprit que le besoin de passer à une nouvelle montre connectée viendra tôt ou tard.
 
 1. Téléchargez la dernière version de Google Services pour Wear OS
--------------------------------------------------------------------
+--------------------------------------------------------
 * En utilisant le `site web apkmirror <https://www.apkmirror.com/apk/google-inc/google-play-services-android-wear/>`_ vous pouvez trouver la dernière apk pour "Google Play Services (Wear OS)".
 
   Architecture : armeabi-v7a, version minimale : Android 6.0+, Écran DPI : nodpi
@@ -19,7 +19,7 @@ La solution de contournement suivante devrait prolonger la durée d'utilisation 
 * Tôt ou tard, Google va définitivement abandonner Android 6.0. Quand cela arrivera, la dernière version ne sera plus disponible pour Android 6.0+, donc ce sera la fin.
 
 2. Téléchargez / Installez les outils de débogage adb sur votre ordinateur
---------------------------------------------------------------------------
+--------------------------------------------------------
 * Il y a plusieurs façons d'installer l'outil de débogage adb.
 * Il est recommandé d'utiliser `SDK Platform Tools <https://developer.android.com/studio/releases/platform-tools>`_ : téléchargez juste le fichier zip et décompressez le vers le répertoire de votre choix.
 
@@ -32,10 +32,10 @@ La solution de contournement suivante devrait prolonger la durée d'utilisation 
 4. Connectez votre montre à votre ordinateur
 --------------------------------------------------------
 * Ensuite, branchez votre smartwatch au PC.
-* Rename latest downloaded google services APK using some short and simple name (let's say SW3fix.apk).
+* Renommez le dernier APK téléchargé des Services Google en utilisant un nom court et simple (par ex. SW3fix.apk).
 * Placez cet APK dans le répertoire de votre outil adb (dans notre cas : le répertoire où ont été décompressés les outils de plate-forme SDK).
-*	Open Windows terminal using command „cmd“ in Windows start menu.
-*	In terminal, go to the directory that includes your adb tool and google services APK (type command „cd [your path]“, e.g. "cd C:\Users\SWR50looper\sdktools").
+*Ouvrez le terminal Windows en utilisant la commande "cmd" dans le menu Démarrer de Windows.
+*Dans la fenêtre "terminal", allez dans le répertoire qui contient l'outil adb et le fichier apk des Services Google (tapez la commande "cd [votre chemin]", par ex. "cd C:\Users\SWR50looper\sdktools").
 * Tapez ensuite "adb devices".
 * Au bout d'un moment, vous devriez obtenir une demande d'autorisation de débogage sur votre montre : accepter.
 * Dans le terminal, vous devriez maintenant voir quelque chose qui ressemble à "14452D11F536B52 device" lorsque vous tapez à nouveau "adb devices".

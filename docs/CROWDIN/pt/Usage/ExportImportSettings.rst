@@ -7,7 +7,7 @@ Be prepared for the unforeseen. You might change important settings by accident 
 
 Best practice is to export after change of settings or completing an objective. 
 
-Exported settings should be copied to a cloud storage or your computer. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
+Exported settings should be copied to a cloud storage or your computer, better two different locations. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
 
 On a Windows 10 computer it looks like this:
   
@@ -22,11 +22,11 @@ Among others the following information is part of the settings export:
 * `Config builder <../Configuration/Config-Builder.html>`_ settings
 * `Local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ settings
 * `Objectives <../Usage/Objectives.html>`_ status incl. `exam results <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
-* `Preferences <../Configuration/Preferences.html>`_ incl. `NS Client settings <../Configuration/Preferences.html#nsclient>`_
+* `Preferences <../Configuration/Preferences.html>`__ incl. `NS Client settings <../Configuration/Preferences.html#nsclient>`_
 
 Encrypted backup format
 ==================================================
-Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`_ .
+Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`__ .
 
 
 Exportar definições
@@ -40,7 +40,7 @@ Exportar definições
 
 * Date and time of export will be added to the file name automatically and displayed together with the path.
 * Click 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
 * Successful export will be prompted at bottom of the screen.
 
 .. image:: ../images/AAPS_ExportSettings2.png
@@ -60,7 +60,7 @@ Importar configurações
 * All files from folder AAPS/preferences/ on your phone will be shown in the list.
 * Select file.
 * Confirm import by clicking 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
 
 .. image:: ../images/AAPS_ImportSettings2.png
   :alt: AndroidAPS import settings 2

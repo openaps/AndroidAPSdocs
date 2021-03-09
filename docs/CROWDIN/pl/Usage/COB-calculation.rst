@@ -2,7 +2,7 @@ COB calculation
 **************************************************
 
 How does AndroidAPS calculate the COB value?
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 
 Oref1
 --------------------------------------------------
@@ -15,7 +15,7 @@ Unabsorbed carbs are cut off after specified time
 AAPS, WeightedAverage
 --------------------------------------------------
 
-absorption is calculated to have `COB==0` after specified time
+absorption is calculated to have ``COB == 0`` after specified time
 
 .. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, WheitedAverage
@@ -23,7 +23,7 @@ absorption is calculated to have `COB==0` after specified time
 If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from BG deviations, an orange dot appears on COB graph.
 
 Detection of wrong COB values
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 
 AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. In this case it will give you an additional hint on the confirmation screen after usage of bolus wizard. 
 
@@ -35,7 +35,7 @@ Normally AAPS detects carb absorption through BG deviations. In case you entered
 .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
   :alt: Hint on wrong COB value
 
-In the screenshot above, 41% of1 time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  This means that maybe you are having less carbs on board than calculated by the algorithm. 
+In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  This means that maybe you are having less carbs on board than calculated by the algorithm. 
 
 How to deal with this warning? 
 --------------------------------------------------
@@ -54,5 +54,5 @@ Why does the algorithm not detect COB correctly?
 - Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA)
 
 Manual correction of carbs entered
-==============================================================================
+== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.

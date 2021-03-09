@@ -18,7 +18,7 @@ AndroidAPS 는 인슐린펌프를 제어하고 인슐린을 주입하는 기기�
 
 우선, **Loop가능한 하드웨어 장치들**이 필요로 합니다:
 
-* [지원되는 인슐린펌프](Pump-Choices.md), 
+* A [supported insulin pump](./Pump-Choices.md), 
 * [안드로이드 스마트폰](Phones.md) (아이폰은 AndroidAPS에서 지원하지 않습니다 - 아이폰을 사용하려면 Loop를 알아보세요 [iOS Loop](https://loopkit.github.io/loopdocs/)) 
 * [연속혈당측정기](../Configuration/BG-Source.rst). 
 
@@ -26,7 +26,7 @@ AndroidAPS 는 인슐린펌프를 제어하고 인슐린을 주입하는 기기�
 
 세번째로, **소프트웨어 요소들을 설정하여야 합니다**: AndroidAPS 와 CGM/FGM 소스.
 
-네번째로, **관리 요인에 대해 확인하기 위하여 OpenAPS 참조 설계에 관한 공부를하고이해하여야 합니다**. Closed Loop를 하기 위해 가장 기본적으로 요구되는 사항은, 당신의 Basal양과 탄수화물 비율(carb ratio)가 정확해야한다는 점입니다. Closed Loop의 모든 제안들은 당신 필요한 Basal 적정하다고 가정하고 계산됩니다. 따라서 모든 혈당 피크와 저점은 (운동, 스트레스 등) 다른 일시적인 요인들의 결과이며, 인슐린의 일시적인 조절로 관리가 가능하다고 가정합니다. 안전을 위해, Closed Loop가 조절을 하는데 제한이 있습니다. ([OpenAPS Reference Design](https://openaps.org/reference-design/)에서 최대 허용 임시Basal 양을 확인해보세요.) 이것은 당신이 잘못 설정된 Basal양을 바로잡는 용도로 Loop를 사용해서는 안된다는 것을 의미합니다. 예를 들면, 만약 당신이 식사전에 저혈당에 자주 노출된다면 Basal양을 조정할 필요한 것일 수도 있습니다. Autotune</ 0>을 사용하면, 많은 양의 데이터를 기반으로 Basal 및 ISF 조정이 필요한지 혹은 탄수화물 비율(carb ratio)이 변경될 필요가 있는지를 알 수 있습니다. 혹은 [전통적인 방법](http://integrateddiabetes.com/basal-testing/)을 통해서 당신의 Basal량을 테스트하고 설정할 수도 있습니다.</p> 
+네번째로, **관리 요인에 대해 확인하기 위하여 OpenAPS 참조 설계에 관한 공부를하고이해하여야 합니다**. Closed Loop를 하기 위해 가장 기본적으로 요구되는 사항은, 당신의 Basal양과 탄수화물 비율(carb ratio)가 정확해야한다는 점입니다. Closed Loop의 모든 제안들은 당신 필요한 Basal 적정하다고 가정하고 계산됩니다. 따라서 모든 혈당 피크와 저점은 (운동, 스트레스 등) 다른 일시적인 요인들의 결과이며, 인슐린의 일시적인 조절로 관리가 가능하다고 가정합니다. 안전을 위해, Closed Loop가 조절을 하는데 제한이 있습니다. ([OpenAPS Reference Design](https://openaps.org/reference-design/)에서 최대 허용 임시Basal 양을 확인해보세요.) 이것은 당신이 잘못 설정된 Basal양을 바로잡는 용도로 Loop를 사용해서는 안된다는 것을 의미합니다. 예를 들면, 만약 당신이 식사전에 저혈당에 자주 노출된다면 Basal양을 조정할 필요한 것일 수도 있습니다. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
 ## Loop를 위한 실질적인 조언들
 
@@ -66,10 +66,10 @@ Bolus를 주입하거나 설정을 변경하기 위해 안드로이드 워치앱
 
 Loop를 사용하는데 있어서 실질적으로 필요한 사항에 대해 이해하는데 도움이 될만한 좋은 팁들이 있는 여러 블로그들이 있습니다.
 
-* [설정 미세 조정하기](http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-* [왜 DIA가 중요한가요?](http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
+* [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
+* [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
 * [식사후 혈당의 Spike(급등락) 제어하기](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-* [호르몬과 Autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+* [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
 ## 어떤 응급 장비가 준비되어 있어야 하나요?
 
@@ -202,7 +202,7 @@ AMA에서, DIA가 실제 '인슐린 활동 기간'을 의미하지 않습니다.
 
 ### DIA (인슐린 활동 시간)을 2-3시간 대신 최소 5시간 이상을 사용하는 이유가 무엇입니까?
 
-[여기](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)에 잘 설명이 되어 있습니다. DIA 변경 후 `프로파일 활성화하기`하는 것을 잊지마세요.
+Well explained in [this article](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). DIA 변경 후 `프로파일 활성화하기`하는 것을 잊지마세요.
 
 ### 무엇 때문에 나의 혈당이 COB 없이 자주 저혈당이 발생하게 합니까?
 

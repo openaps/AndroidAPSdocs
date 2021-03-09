@@ -32,7 +32,7 @@ De SMB-functie heeft een aantal veiligheidsmaatregelen:
 
 **Je moet [leerdoel 10](../Usage/Objectives#doel-10-activeren-van-extra-functies-overdag-zoals-smb-super-micro-bolus) hebben voltooid om SMB te kunnen gebruiken.**
 
-Zie ook: [OpenAPS documentatie voor oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) en [Tim's info over SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
+Zie ook: [OpenAPS documentatie voor oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) en [Tim's info over SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
 ### Maximale E/uur dat OpenAPS kan toedienen (OpenAPS "max-basal")
 
@@ -73,7 +73,7 @@ Wees voorzichtig en geduldig en verander de instellingen stap voor stap. Dat is 
 
 *Zie ook [overzicht van harde limieten](../Usage/Open-APS-features.html#overzicht-van-harde-limieten).*
 
-See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1#understanding-super-micro-bolus-smb).
+Zie ook [OpenAPS documentatie over SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Activeer AMA autosens
 
@@ -105,7 +105,7 @@ Voor andere CGM/FGM zoals Freestyle Libre, is 'Activeer SMB altijd' niet mogelij
 
 SMB is ingeschakeld gedurende 6 uur na koolhydraten, zelfs als COB nul is. Om veiligheidsredenen is deze optie alleen mogelijk voor BG bronnen met een mooi filtersysteem voor 'ruis' in de BG waardes. Voor nu werkt het enkel met een Dexcom G5 in combinatie met de aangepaste Dexcom App, of met de G5 of G6 in combinatie met 'native algorithm' in xDrip+. Dankzij deze filtering zal de Dexcom zender een BG-waarde met een te grote afwijking, niet sturen en wachten op de volgende waarde in 5 minuten.
 
-Voor andere CGM/FGM zoals Freestyle Libre, is 'Activeer SMB altijd' niet mogelijk. Dit wordt pas mogelijk wanneer xDrip+ een betere ruis-filtering heeft voor die systemen. Je kunt er [hier](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) meer over vinden.
+For other CGM/FGM like Freestyle Libre, 'Enable SMB after carbs' is deactivated until xDrip+ has a better noise smoothing plugin. Je kunt er [hier](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) meer over vinden.
 
 ### Maximum aantal minuten basaal om SMB te limiteren tot
 
@@ -149,7 +149,7 @@ Standaardwaarde: 4 (mag niet worden gewijzigd, tenzij je het echt wilt en weet w
 
 AMA (Advanced Meal Assist), oftewel "geavanceerde maaltijdhulp" is een OpenAPS functie uit 2017 (oref0). Dankzij AMA kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd.
 
-You can find more information in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features#advanced-meal-assist-or-ama).
+Meer informatie vind je in de [documentatie van OpenAPS](https://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features#advanced-meal-assist-or-ama).
 
 ### Maximale E/uur dat een tijdelijke basaalstand kan toedienen (OpenAPS "max-basal")
 
@@ -179,7 +179,7 @@ De standaardinstelling is 2, je moet deze waarde in kleine stapjes ophogen om te
 * Insuline-resistente volwassene: 12
 * Zwangere: 25
 
-*Zie ook [overzicht van harde limieten](../Usage/Open-APS-features.html#overzicht-van-harde-limieten).*
+*Zie ook [overzicht van harde limieten](../Usage/Open-APS-features#overzicht-van-harde-limieten).*
 
 ### Activeer AMA autosens
 

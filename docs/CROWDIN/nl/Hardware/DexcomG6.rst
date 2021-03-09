@@ -3,7 +3,7 @@ Dexcom G6
 Algemeen
 ==================================================
 
-* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`__.
+* Volg de algemene CGM tips en sensor plaatsings aanbevelingen `hier <../Hardware/GeneralCGMRecommendation.html>`__.
 * Voor G6 zenders die na het najaar van 2018 zijn geproduceerd, zorg ervoor dat je een van de `nieuwste xDrip+ 'Nightly Build' versies <https://github.com/NightscoutFoundation/xDrip/releases>`_ gebruikt. Deze zenders hebben een nieuwe firmware en de nieuwste stabiele versie van xDrip+ (2019/01/10) werkt daar niet mee.
 
 Algemene tips voor loopen met G6
@@ -17,7 +17,7 @@ Als je er wel voor kiest om Pre-emptive restarts te gebruiken, zorg dan dat je d
 * Het zogenaamde "Pre-soaking" (de sensor alvast inbrengen, waarna je nog wacht met starten) van de G6 met kalibratiecode zal hoogstwaarschijnlijk leiden tot onnauwkeurigheden in je glucosewaardes na starten. Omdat het algoritme van de G6 rekent op weefselbeschadiging na inbrengen, terwijl je met Pre-soaken niet dezelfde mate van weefselbeschadiging zult hebben op het moment dat je de sensor start. Wanneer je Pre-soakt is het waarschijnlijk het beste om de sensor te kalibreren.
 * Als je om welke reden ook niet in staat bent om op te letten wat er gebeurt tijdens een herstart / na een Pre-soak, dan kun je beter de kalibratiecode niet gebruiken, en jouw sensor gebruiken met kalibraties, net als bij de G5.
 
-Lees het `volledige artikel (Engelstalig) <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ van Tim Street voor meer achtergrondinformatie en de redenen achter deze aanbevelingen.
+To learn more about the details and reasons for these recommendations read the `complete article <https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ published by Tim Street at `www.diabettech.com <https://www.diabettech.com>`_.
 
 Dexcom G6 met xDrip+
 ==================================================
@@ -26,8 +26,8 @@ Als je jouw Dexcom wilt koppelen aan de xDrip+ app dan zul je dus eerst de Dexco
 * Als je Clarity wilt gebruiken maar je wilt ook de uitgebreidere alarm-opties van xDrip+ gebruiken, dan kun je de `Aangepaste Dexcom app </Hardware/DexcomG6.html#g6-met-aangepaste-dexcom-app>`_ op je telefoon zetten (en die verbinden met de zender) en ook de xDrip+ app op je telefoon zetten (kies als hardware data source voor 640G/Eversense). Op deze manier stuurt de aangepaste Dexcom app jouw waardes lokaal door "local broadcast" naar xDrip+.
 * Als dat nog niet is ingesteld, download dan `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ en volg de instructies voor Nightscout `G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_.
 * Selecteer xdrip in Configurator (instellingen in AndroidAPS).
-* Instellingen in xDrip + aanpassen volgens `xDrip+ instellingen pagina <../Configuration/xdrip.html>`_
-* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* Instellingen in xDrip + aanpassen volgens `xDrip+ instellingen pagina <../Configuration/xdrip.html>`__
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`__.
 
 G6 met aangepaste Dexcom app
 ==================================================
@@ -38,8 +38,8 @@ G6 met aangepaste Dexcom app
   * Klik op de link naar de app Dexcom G6 op de pagina met zoekresultaten die wordt afgebeeld.
   * Regio wordt weergegeven in URL.
 
-   .. image:: ../images/DexcomG6regionURL.PNG
-     :alt: Regio in Dexcom G6 URL
+  .. image:: ../images/DexcomG6regionURL.PNG
+    :alt: Regio in Dexcom G6 URL
 
 * Verwijder de originele Dexcom app van je telefoon.
 * Installeer de gedownloade apk
@@ -50,7 +50,7 @@ G6 met aangepaste Dexcom app
 De Dexcom app stuurt de waardes door dmv 'local broadcast' (lokaal uitzenden) naar AndroidAPS. AndroidAPS stuurt het dmv 'local broadcast' dan door naar xDrip+. De local broadcast vindt plaats tussen de apps op jouw telefoon, je hebt hierbij geen internet nodig.
 
 Wanneer je de G6 gebruikt met de Bouw Je Eigen Dexcom App
-=========================================================
+==================================================
 * Sinds december 2020 ondersteunt de `Bouw Je Eigen Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (Build Your Own Dexcom App, BYODA) ook het lokaal delen (local broadcast) van BG gegevens met AAPS en/of xDrip+ (Let op: niet voor G5 sensors!).
 * Met deze app kun je jouw Dexcom G6 gebruiken met elke Android smartphone.
 * Als je eerder de originele Dexcom app of de aangepaste Dexcom app hebt gebruikt, moet je die eerst van je telefoon verwijderen voordat je de Bouw Je Eigen Dexcom App erop zet.
@@ -89,7 +89,7 @@ Dexcom G6 specifieke probleemoplossing
 
 Algemene probleemoplossing
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
+Voor het oplossen van problemen met jouw CGM klik `hier <./GeneralCGMRecommendation.html#problemen-oplossen>`__.
 
 Nieuwe zender met lopende sensor
 --------------------------------------------------

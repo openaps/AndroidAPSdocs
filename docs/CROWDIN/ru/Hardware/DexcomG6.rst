@@ -7,7 +7,7 @@ Dexcom G6
 * Для Трансмиттеров G6, изготовленных после осени/конца 2018 года выберите одну из `последних ночных сборок xDrip+ <https://github.com/NightscoutFoundation/xDrip/releases>`_. У этих трансмиттеров новая прошивка и стабильная версия xDrip+ (2019/01/10) с ней не работает.
 
 Общие рекомендации по использованию G6 с системами ИПЖ
-======================================================
+==================================================
 
 Применение G6 немного сложнее, чем казалось раньше. Для правильного применения необходимо иметь в виду следующие моменты: 
 
@@ -17,7 +17,7 @@ Dexcom G6
 "Предварительное замачивание" (установка сенсора намного раньше его старта в приложении) G6 с заводской калибровкой приведет к отклонениям в данных. Если вы все же делаете "предварительное погружение", то для получения лучших результатов вам, вероятно, придется калибровать сенсор.
 * Если вы не планируете отслеживать все возможные отклонения, то лучше вернуться к традиционному режиму калибровки и использовать систему как G5.
 
-Подробнее о деталях и причинах этих рекомендаций читайте полную статью <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>_опубликованную в Tim Street на`www.diabettech.com <http://www.diabettech.com>_.
+To learn more about the details and reasons for these recommendations read the `complete article <https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ published by Tim Street at `www.diabettech.com <https://www.diabettech.com>`_.
 
 При использовании G6 с xdrip+
 ==================================================
@@ -26,11 +26,11 @@ Dexcom G6
 * If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
 * If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 В конфигуратоге (настройки AndroidAPS) выберите xdrip+.
-* Настройте параметры в xDrip+ в соответствии со страницей настроек `xDrip+ <../Configuration/xdrip.html>`_
-* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`__.
 
 При пользовании G6 с помощью модифицированного приложения Dexcom
-================================================================
+==================================================
 * Скачайте приложение из `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, и выберите версию в соответствии с предпочтениями (mg/dl или mmol/l, G6).
 
   * Папка 2.4 для пользователей текущей версии, папка 2.3-только для устаревших AndroidAPS 2.3.
@@ -38,8 +38,8 @@ Dexcom G6
   * Click the link to the Dexcom G6 app on the search results page that is displayed.
   * Region will be visible in URL.
 
-   .. изображение:../images/DexcomG6regionURL.PNG
-     :alt: Регион в URL Dexcom G6
+  .. изображение:../images/DexcomG6regionURL.PNG
+    :alt: Регион в URL Dexcom G6
 
 * Uninstall the original Dexcom app.
 * Установите загруженное приложение

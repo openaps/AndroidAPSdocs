@@ -1,32 +1,32 @@
-# How to translate AndroidAPS and the documentation
+# Como traduzir o AndroidAPS e a documentação
 
-* Go to <https://crowdin.com/project/androidaps> or <https://crowdin.com/project/androidapsdocs> and login using your Github account
+* Vá a [ https://crowdin.com/project/androidaps ](https://crowdin.com/project/androidaps) ou [ https://crowdin.com/project/androidapsdocs ](https://crowdin.com/project/androidapsdocs) e faça login utilizando a sua conta Github
 
-* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users).
+* Envie um pedido de adesão para a equipa de documentação. Para o fazer, clique na bandeira da língua desejada e, em seguida, no botão "Juntar-se" no canto superior direito da próxima página. Por favor, especifique idioma. forneça algumas informações sobre si e a sua experiência com o AAPS e se deseja ser um tradutor ou revisor (apenas pessoas qualificadas em traduzir + usuários avançados da AndroidAPS).
 
-* When we approve you, click the flag ![When we approve you, click the flag](./images/translation_flags2019.png)
+* Quando nós aprovarmos, clique na bandeira![When we approve you, click the flag](./images/translation_flags2019.png)
 
-## Translate strings for AndroidAPS app
+## Traduzir textos para a app AndroidAPS
 
-* Click strings.xml
+* Clique em strings.xml
     
-    ![Click strings.xml](./images/translations-click-strings.png)
+    ![Clique em strings.xml](./images/translations-click-strings.png)
 
-* Translate sentences on left side by adding new translated text or use & edit suggestion
+* Traduza frases do lado esquerdo adicionando novo texto traduzido ou use & edição de sugestão
     
     ![Translation app](./images/translations-translate.png)
 
-* Proofreaders have to switch to Proofreading mode
+* Os revisores precisam mudar para o modo de revisão
     
     ![Proofreading mode app](./images/translations-proofreading-mode.png)
     
-    and approve translated texts
+    e aprovar textos traduzidos
     
     ![approve text](./images/translations-proofreading.png)
 
-When a proofreader approves a translation it will be added to the next version of AndroidAPS. In the beginning it would be good to also go over the existing translations that are not yet approved and check for mistakes or approve them if they are correct.
+Quando um revisor aprova uma tradução, ela será adicionada na próxima versão da AndroidAPS. No início, seria bom também passar em revista as traduções existentes, que ainda não foram aprovadas, e verificar se há erros ou aprová-los se elas estiverem corretas.
 
-## Translate docs pages
+## Traduzir Páginas
 
 * Click the name of the docs page you want to translate
     
@@ -86,12 +86,12 @@ Links will then be shown in standard HTML format and can be translated consideri
 
 ## Proofreading
 
-* Proofreaders have to switch to Proofreading mode
+* Os revisores precisam mudar para o modo de revisão
     
     ![Proofreading mode docs](./images/translation_WikiProofreading.png)
     
-    and approve translated texts
+    e aprovar textos traduzidos
     
-    ![approve text](./images/translations-proofreading.png)
+    ![aprovar texto](./images/translations-proofreading.png)
 
 * When a proofreader approves a translation it will be added to the next docs build. To speed process you can inform docs team about new translations.

@@ -58,4 +58,4 @@ Tuto službu nabízí kolega looper Martin Schiftan a v současnosti je zdarma. 
 * Tato služba obsahuje rovněž automatické kontroly bazálů prostřednictvím nástroje Autotune. 
 * Server se nachází v Německu.
 
-<http://ns.10be.de/en/index.html>
+<https://ns.10be.de/en/index.html>

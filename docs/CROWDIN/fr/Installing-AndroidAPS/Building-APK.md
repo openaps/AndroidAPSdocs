@@ -70,7 +70,7 @@ Sélectionnez l'installation "Standard" et cliquez sur "Next".
 
 ![Installation standard](../images/AndroidStudio361_04.png)
 
-Select the theme for the user interface you like. (dans ce manuel, nous avons utilisé "Light"). Cliquez ensuite sur "Next". C'est juste le jeu de couleurs. Vous pouvez choisir n'importe quel type (par ex. "Darcula" pour le mode sombre). Cette sélection n'a aucune influence sur la construction de l'APK.
+Sélectionnez le thème de l'interface utilisateur que vous souhaitez (dans ce manuel, nous avons utilisé "Light"). Cliquez ensuite sur "Next". C'est juste le jeu de couleurs. Vous pouvez choisir n'importe quel type (par ex. "Darcula" pour le mode sombre). Cette sélection n'a aucune influence sur la construction de l'APK.
 
 ![Couleur de l'interface](../images/AndroidStudio361_05.png)
 
@@ -145,7 +145,7 @@ Sur l'écran d'accueil d'Android Studio, cliquez sur le petit triangle (1. de la
 
 * Ne cliquez pas sur "Background" pendant que le répertoire est cloné !
     
-    ![Aucune action en arrière-plan](../images/AndroidStudio_NoBackground.png)
+    ![Aucune action en arrière-plan](../images/AndroidStudio361_15.png)
 
 * Une fois le clonage du répertoire réussi, ouvrez votre copie locale en cliquant sur "Yes".
     
@@ -270,6 +270,6 @@ Sur votre téléphone, vous devez autoriser l'installation à partir de sources 
 
 [Voir la page xDrip+](../Configuration/xdrip#identifier-le-recepteur)
 
-## Troubleshooting
+## Résolution de problèmes
 
 Voir la page spécifique [dépannage Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).

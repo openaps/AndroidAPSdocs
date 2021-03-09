@@ -8,7 +8,7 @@ Funciona sólo con las bombas Medtronic más antiguas (detalles a continuación)
 
 * * *
 
-Si comenzó a usar el controlador Medtronic por favor añádase a sí mismo a esta [lista](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit#gid=0). Esto es sólo para que podamos ver qué Teléfonos son buenos y cuales no son tan buenas (o malos) para este controlador. Hay una columna llamada "Reinicio BT". Esto es para comprobar si su teléfono soporta BT habilitar/deshabilitar, que puede ser utilizado cuando la bomba no es capaz de conectar, lo que pasa de vez en cuando. Si nota cualquier otro problema, por favor escriba en la columna Comentarios.
+If you started using Medtronic driver please add yourself to this [list](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit). Esto es sólo para que podamos ver qué Teléfonos son buenos y cuales no son tan buenas (o malos) para este controlador. Hay una columna llamada "Reinicio BT". Esto es para comprobar si su teléfono soporta BT habilitar/deshabilitar, que puede ser utilizado cuando la bomba no es capaz de conectar, lo que pasa de vez en cuando. Si nota cualquier otro problema, por favor escriba en la columna Comentarios.
 
 * * *
 

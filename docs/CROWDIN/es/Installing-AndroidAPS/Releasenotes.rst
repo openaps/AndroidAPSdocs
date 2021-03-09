@@ -65,7 +65,7 @@ Important hints
 * Please use `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
-----------------------------------
+----------------------
 * `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org 
 * `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
 * `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-2-8>`_ @rICTx-T1D
@@ -91,7 +91,7 @@ Fecha de lanzamiento: 24-09-2020
 You need at least start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. This will not effect other objectives you have already finished. You will keep all finished objectives!
 
 Nuevas características importantes
-----------------------------------
+----------------------
 * internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
 * using modules for Dana pumps @MilosKozak
 * `new layout, layout selection <../Getting-Started/Screenshots.html>`_ @MilosKozak
@@ -127,7 +127,7 @@ Fecha de lanzamiento: 04-05-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
-----------------------------------
+----------------------
 * Insight: Disable vibration on bolus for firmware version 3 - second attempt
 * Otherwise is equal to 2.6.1.3. La actualización es opcional. 
 
@@ -138,7 +138,7 @@ Fecha de lanzamiento: 03-05-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
-----------------------------------
+------------------
 * Insight: Disable vibration on bolus for firmware version 3
 * Otherwise is equal to 2.6.1.2. La actualización es opcional. 
 
@@ -149,7 +149,7 @@ Fecha de lanzamiento: 19-04-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
-----------------------------------
+------------------
 * Fix crashing in Insight service
 * Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
 
@@ -160,7 +160,7 @@ Fecha de lanzamiento: 06-04-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
-----------------------------------
+------------------
 * Resolves SMS CARBS command issue while using Combo pump
 * Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
 
@@ -171,8 +171,8 @@ Fecha de lanzamiento: 21-03-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
-----------------------------------
-* Allow to enter only https:// in NSClient settings
+------------------
+* Allow to enter only ``https://`` in NSClient settings
 * Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
 * Fixed small UI bugs
 * Fixed Insight crashes
@@ -190,7 +190,7 @@ Fecha de lanzamiento: 29-02-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
-----------------------------------
+------------------
 * Small design changes (startpage...)
 * Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
 * New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
@@ -201,7 +201,7 @@ Nuevas características importantes
   * Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
   * Veritical NumberPicker for targets
 * SimpleProfile is removed
-* `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
 * MDT plugin: Fixed bug with duplicated entries
 * Units are not specified in profile but it's global setting
 * Added new settings to startup wizard
@@ -224,13 +224,15 @@ Versión 2.5.1
 ==================================================
 Fecha de lanzamiento: 31-10-2019
 
-Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
+Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
 * Se corrigió un error en el receptor de estado de red que conduce a muchos fallos (no críticos, sino que desperdiciarían mucha energía en el recálculo de cosas).
 * Nuevo mantenimiento de versiones que permitirá realizar actualizaciones menores sin activar la notificación de actualización.
 
 Versión 2.5.0
 ==================================================
 Fecha de lanzamiento: 26-10-2019
+
+.. _important-notes-2-5-0:
 
 Notas importantes
 --------------------------------------------------
@@ -240,7 +242,7 @@ Notas importantes
 * Glimp is supported from version 4.15.57 and newer.
 
 ¿Es esta actualización para mí? Actualmente NO es soportado
------------------------------------------------------------
+--------------------------------------------------
 * Android 5 e inferiores
 * Poctech
 * 600SeriesUploader
@@ -259,8 +261,7 @@ Nuevas características importantes
 * Verificador de firma
 * Permite saltar objetivos para usuarios de OpenAPS
 * Nuevos `objetivos <../Usage/Objectives.html>`_ - examinar, manejo de aplicaciones
-   
-   (Si ha iniciado al menos el objetivo "Iniciar en un lazo abierto" en las versiones anteriores, el examen es opcional.)
+  (Si ha iniciado al menos el objetivo "Iniciar en un lazo abierto" en las versiones anteriores, el examen es opcional.)
 * Corregido el bug en controladores Dana* donde se informó una falsa diferencia de tiempo
 * Se ha corregido el error en `SMS communicator <../Children/SMS-Commands.html>`_
 
@@ -323,7 +324,7 @@ Nuevas características importantes
 
 Misceláneo
 --------------------------------------------------
-* Si utiliza un valor no predeterminado `smbmaxminutes`, tienes que volver a configurar este valor
+* If you are using non default ``smbmaxminutes`` value you have to setup this value again
 
 
 Versión 2.0

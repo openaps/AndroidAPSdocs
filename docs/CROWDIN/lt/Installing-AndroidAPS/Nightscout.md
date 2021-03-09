@@ -58,4 +58,4 @@ Manoma, kad jūs jau turite Nightscout svetainę, jei ne, apsilankykite [Nightsc
 * Paslauga apima automatinį valandinės bazės patikrinimą, naudojant Autotune. 
 * Serveris yra Vokietijoje.
 
-<http://ns.10be.de/en/index.html>
+<https://ns.10be.de/en/index.html>

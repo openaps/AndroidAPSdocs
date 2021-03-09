@@ -145,7 +145,7 @@ Op het welkomstscherm van Android Studio klik op de kleine driehoek (1. in het v
 
 * Klik niet op "Background" terwijl de code wordt gekloond!
     
-    ![Geen achtergrondactie](../images/AndroidStudio_NoBackground.png)
+    ![Geen achtergrondactie](../images/AndroidStudio361_15.png)
 
 * Nadat de code is gedownload, open je jouw lokale kopie door te klikken op "Ja".
     
