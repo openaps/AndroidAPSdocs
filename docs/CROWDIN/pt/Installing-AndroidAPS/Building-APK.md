@@ -4,14 +4,14 @@
 
 **A AndroidAPS não está disponível para download devido à regulamentação para dispositivos médicos. É legal criar o aplicativo para o seu próprio uso, mas não deve dar uma cópia aos outros! Consulte a [página de perguntas frequentes-FAQ](../Getting-Started/FAQ.md) para mais detalhes.**
 
-## Important notes
+## Notas importantes
 
 * Por favor, use o **[Android Studio Version 4.1.1](https://developer.android.com/studio/)** ou um mais recente para construir o apk.
 * [Sistemas Windows 10 32-bit](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) não são suportados pelo Android Studio 4.1.1.
 
 **A configuração sob demanda** não é suportada pela versão atual do plugin Android Gradle!
 
-If your build fails with an error regarding "on demand configuration" you can do the following:
+Se a construção falhar com um erro em relação à "on demand configuration" pode fazer o seguinte:
 
 * Abra a janela Preferências clicando em Arquivo> Configurações (no Mac, Android Studio> Preferências).
 * No painel esquerdo, clique em Build, Execution, Deployment > Compiler.
@@ -78,13 +78,13 @@ Clique em "Finish" na seção de "Verify Settings".
 
 ![Verify settings](../images/AndroidStudio361_06.png)
 
-Aguarde enquanto o Android Studio faz o download de componentes adicionais e seja paciente. Uma vez que termine o download, pode premir o botão "Finish" que fica azul. Click the button now.
+Aguarde enquanto o Android Studio faz o download de componentes adicionais e seja paciente. Uma vez que termine o download, pode premir o botão "Finish" que fica azul. Clique no botão agora.
 
 ![Downloading components](../images/AndroidStudio361_07.png)
 
-## Set git path in preferences
+## Definir caminho Git nas preferências
 
-Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer.
+Certifique-se de que o [Git esteja instalado](../Installing-AndroidAPS/git-install.rst) no seu computador.
 
 On the Android Studio welcome screen click the small triangle (1. in next screenshot) and select "Settings" (2.).
 
@@ -214,27 +214,27 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 * Click "Create new..." (2.) to start creating your key store.
     
-    A key store in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords.
+    A key store in this case is nothing more than a file in which the information for signing is stored. Esta é encriptada e a informação é protegida por palavra-passe.
     
     ![Create key store](../images/AndroidStudio361_29.png)
 
 * Click the folder symbol (1.) to select your key store path.
 
-* Select the path where your key store shall be saved (2.). **Do not save in same folder as project. You must use a different directory!** One option might be your home folder.
-* Type a file name for your key store (3.).
-* Click "OK" (4.).
-* Passwords for key store and key do not have to be very sophisticated. Make sure to remember those or make a note in a safe place. In case you will not remember your passwords in the future you see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
-* Enter (5.) and confirm (6.) the password for your key store.
-* Do the same for your key (7. + 8.).
-* Validity (9.) is 25 years by default. You do not have to change the default value.
-* First and last name must be entered (10.). All other information is optional.
-* Click "OK" (11.) when you are done.
+* Selecione o caminho para onde a sua chave digital deve ser guardada(2.). **Não guarde na mesma pasta que o projecto. Deve seleccionar uma pasta diferente!** Sugestão: ambiente de trabalho.
+* Escreva um nome para a sua chave digital (3.).
+* Clique "OK" (4.).
+* As palavras-passe das chaves digitais não têm de ser muito sofisticadas. Certifique-se que se lembra das mesmas ou tome uma nota num lugar seguro. Caso não se lembre da sua palavra-passe no futuro, por favor ver [resolução de problemas com chaves digitais perdidas](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Introduza (5.) e confirme (6.) a password da sua chave digital.
+* Faça o mesmo para a chave digital (7. + 8.).
+* Validade (9.) é de 25 anos por defeito. Não precisa de mudar este valor pré-definido.
+* Primeiro e último nome deve ser introduzido (10.). Todas as outras informações são opcionais.
+* Clique em "OK" (11.) e está feito.
     
     ![Key store path](../images/AndroidStudio361_30.png)
 
-* Make sure the box to remember passwords is checked (1.). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AndroidAPS version).
+* Certifique-se de que a caixa para lembrar senhas está seleccionada (1.). Assim não tem que digitar as mesmas da próxima vez que construir o APK (ex: atualizar para uma nova versão da AndroidAPS).
 
-* Click "Next" (2.).
+* Clique em "Next" (2.).
     
     ![Remember passwords](../images/AndroidStudio361_31.png)
 
@@ -268,7 +268,7 @@ On your phone you have to allow installation from unknown sources. Manuals how t
 
 ## Identificar o receptor de estiver a utilizar o xDrip+
 
-[See xDrip+ page](../Configuration/xdrip#identify-receiver)
+[Ver a página do xDrip+](../Configuration/xdrip#identify-receiver)
 
 ## Resolução de Problemas
 
