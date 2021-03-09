@@ -376,7 +376,7 @@ The options here will vary depending on which pump driver you have selected in `
 
 If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
-NSClient
+ClienteNS
 ===========================================================
 
 .. image:: ../images/Pref2020_NSClient.png
