@@ -1,14 +1,14 @@
-# Medtronic Pumps
+# Bombas Medtronic
 
-**>>>> Medtronic pump driver is from 2.5 version part of AndroidAPS (master). While this is the case, Medtronic driver should still be considered beta software. Please install only if you are expirenced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)), this should be fixed with upcomming release. <<<<**
-
-* * *
-
-Works only with older Medtronic pumps (details see below). Does not work with Medtronic 640G or 670G.
+**>>>> O controlador para a bomba Medtronic está incluído na AndroidAPS (mestre) desde a versão 2.5. Apesar disso, o controlador da Medtronic ainda deve ser considerado como software versão beta. Por favor, instale apenas se for um utilizador experiente. De momento ainda estamos a tentar resolver o erro de Bólus duplo (2 bólus são registados em tratamentos e por conseguinte no cálculo do IOB (se experienciar este erro, por favor active o registo de Bólus Duplo na configuração Medtronic e forneça os seus registos)), que esperamos ser corrigido numa próxima versão. <<<<**
 
 * * *
 
-If you started using Medtronic driver please add yourself to this [list](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit). This is just so that we can see which Phones are good and which are not so good (or bad) for this driver. There is one column called "BT restart". This is to check if yourPhone supports BT enable/disable, which can be used when pump is no longer able to connect, that happens from time to time. If you notice any other problem, please write that in Comments column.
+Funciona apenas com bombas Medtronic mais antigas (ver detalhes abaixo). Não funciona com Medtronic 640G ou 670G.
+
+* * *
+
+Se começou a utilizar o controlador Medtronic por favor adicione-se a esta [lista](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit). This is just so that we can see which Phones are good and which are not so good (or bad) for this driver. There is one column called "BT restart". This is to check if yourPhone supports BT enable/disable, which can be used when pump is no longer able to connect, that happens from time to time. If you notice any other problem, please write that in Comments column.
 
 * * *
 
