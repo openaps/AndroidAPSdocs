@@ -111,7 +111,7 @@ Desvantagens:
 * For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. Este valor residual ainda pode ser visível durante o desporto, por exemplo. Por isso o AndroidAPS usa um DIA mínimo de 5h.
 * Pode ler mais sobre isto na seção Perfil de Insulina de [nesta página ](../Getting-Started/Screenshots#insulin-profile). 
 
-### Insulin type differences
+### Diferenças dos Tipos de Insulina
 
 * Para "ação rápida", "ultra-rápida" e "Lyumjev", o DIA é a única variável que se pode ajustar, o tempo de pico é fixo. 
 * O Pico Livre permite ajustar tanto o DIA como o tempo para o pico, e deve ser usado apenas por utilizadores avançados que conhecem os efeitos destas configurações. 
@@ -152,7 +152,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 * [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
     
-    ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+    ![Configurador Fonte da Glicemia (GLIC)](../images/ConfBuild_BGSource.png)
 
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
 
@@ -198,7 +198,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 * Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
 
-![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
+![Configurador - Modo de Loop](../images/ConfigBuilder_LoopLGS.png)
 
 ### Loop Aberto
 
@@ -267,7 +267,7 @@ Create a button for a certain standard meal (carbs and calculation method for th
 
 Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Botão do Assistente Rápido](../images/ConfBuild_QuickWizard.png)
 
 #### Default Temp-Targets
 
@@ -328,7 +328,7 @@ Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](..
 
 If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Definições Wear](../images/ConfBuild_Wear.png)
 
 Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
@@ -339,15 +339,15 @@ Through Wear tab or hamburger menu (top left of screen, if tab is not displayed)
 
 Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
-### NSClient
+### ClienteNS
 
-* Setup sync of your AndroidAPS data with Nightscout.
-* Settings in [preferences](../Configuration/Preferences#nsclient) can be opened by clicking the cog wheel.
+* Configurar sincronização de dados da AndroidAPS com o Nightscout.
+* As configurações em [Preferências](../Configuration/Preferences#nsclient) podem ser abertas clicando na roda dentada.
 
-### Maintenance
+### Manutenção
 
-Email and number of logs to be send. Normally no change necessary.
+E-mail e número de registos a serem enviados. Normalmente, nenhuma mudança é necessária.
 
 ### Configurador
 
-Use tab for config builder instead of hamburger menu.
+Use a aba para o configurador em vez do menu hambúrguer.
