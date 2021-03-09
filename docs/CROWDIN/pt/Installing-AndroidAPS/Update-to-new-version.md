@@ -1,8 +1,8 @@
 # Update to a new version or branch
 
-## Build yourself instead of download
+## Construa você em vez de fazer download
 
-**A AndroidAPS não está disponível para download devido à regulamentação para dispositivos médicos. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+**A AndroidAPS não está disponível para download devido à regulamentação para dispositivos médicos. É legal criar o aplicativo para o seu próprio uso, mas não deve dar uma cópia aos outros! Consulte a [página de perguntas frequentes-FAQ](../Getting-Started/FAQ.md) para mais detalhes.**
 
 ## Important notes
 
@@ -10,7 +10,7 @@
 * As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
 * As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
 * Please use [Android Studio Version 4.1.1](https://developer.android.com/studio/) or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.1.1.
+* [Sistemas Windows 10 32-bit](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) não são suportados pelo Android Studio 4.1.1.
 * If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
 * If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
