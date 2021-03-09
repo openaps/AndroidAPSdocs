@@ -11,7 +11,7 @@ Segurança Em Primeiro Lugar
 Configuração dos comandos SMS
 ==================================================
 
-.. image:: ../images/SMSCommandsSetup.png
+.. imagem:: ../images/SMSCommandsSetup.png
   :alt: Configuração de Comandos SMS
       
 * A maioria dos ajustes de alvos temporários, de acordo com a AAPS etc. pode ser feita na app "NSClient  <.../Children/Children.html>` num telemóvel Android com conexão à Internet.
@@ -95,46 +95,46 @@ Loop
   * Resposta: Loop foi ativado
 * LOOP STATUS
 
-  * Resposta depende do status atual
+  * Resposta depende do estado atual
 
     * Loop desactivado
-    * Loop activado
+    * Loop ativado
     * Suspenso (10 min)
 * LOOP SUSPEND 20
-  * Resposta: Loop suspenso por 20 minutes
+  * Resposta: Loop suspenso por 20 minutos
 * LOOP RESUME
   * Resposta: Loop foi retomado
 
-Dados do CGM (Monitor Contínuo de Glicemia)
+Dados do MCG (Medidor Contínuo de Glicemia)
 --------------------------------------------------
 * GLIC
-  * Resposta: Última BG: 5,6 há 4 min, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+  * Resposta: Última GLIC: 5,6 há 4 min, Delta: -0,2 mmol, IOB: 0.20U (Bólus: 0.10U Basal: 0.10U)
 * CAL 5.6
-  * Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN
-  * Resposta após o código correto ter sido recebido: Calibração enviada (**Se xDrip estiver instalado. Aceitar calibração deve estar habilitado no xDrip+**)
+  * Resposta: Para enviar calibração de 56, responda com código da aplicação Authenticator para o utilizador seguido pelo PIN
+  * Resposta após o código correto ter sido recebido: Calibração enviada (**Se xDrip estiver instalado. Aceitar calibração deve estar ativado no xDrip+**)
 
 Basal
 --------------------------------------------------
 * BASAL STOP/CANCEL
-  * Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para parar a basal temporária, responder com o código da aplicação Authenticator para o utilizador seguido pelo PIN
 * BASAL 0.3
-  * Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para iniciar a basal de 0.3U/hr por 30 min, deve responder com o código da aplicação do Authenticator para o utilizador, seguida do PIN
 * BASAL 0.3 20
-  * Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para iniciar a basal de 0.3U/h por 20 minutos, responder com o código da aplicação Authenticator para o utilizador seguida do PIN
 * BASAL 30%
-  * Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para iniciar a basal com 30% por 30 minutos, responder com o código da aplicação Authenticator para o utilizador seguida do PIN
 * BASAL 30% 50
-  * Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para iniciar a basal com 30% por 50 minutos, responder com o código da aplicação Authenticator para o utilizador seguida do PIN
 
 Bólus
 --------------------------------------------------
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
+Bólus remoto não permitido durante 15 min (este valor é editável apenas se estiverem inseridos 2 números de telefone) após último comando de bólus ou comandos remotos! Portanto a resposta depende da última vez em que foi administrado o último bólus.
 
 * BOLUS 1.2
-  * Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN
+  * Resposta A: Para administrar o bólus de 1.2U, responder com o código da aplicação Authenticator para o utilizador, seguida do PIN
   * Resposta B: Bolus remoto não disponível. Volte a tentar mais tarde.
 * BOLUS 0.60 MEAL
-  * Se você especificar o parâmetro opcional MEAL (Refeição), este configura um objetivo temporário para Refeições (os valores padrão são: 90 mg/dL, 5,0 mmol / l para 45 mins).
+  * Se especificar o parâmetro opcional MEAL (Refeição), este configura um objetivo temporário para Refeições (os valores padrão são: 90 mg/dL, 5,0 mmol / l para 45 mins).
   * Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN
   * Resposta B: Bolus remoto não disponível. 
 * CARBS 5
