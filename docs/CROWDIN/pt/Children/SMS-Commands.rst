@@ -135,16 +135,16 @@ Bólus remoto não permitido durante 15 min (este valor é editável apenas se e
   * Resposta B: Bolus remoto não disponível. Volte a tentar mais tarde.
 * BOLUS 0.60 MEAL
   * Se especificar o parâmetro opcional MEAL (Refeição), este configura um objetivo temporário para Refeições (os valores padrão são: 90 mg/dL, 5,0 mmol / l para 45 mins).
-  * Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN
+  * Resposta A: Para administrar o bólus de refeição de 0.60U responder com o código fornecido pela aplicação Authenticator para o utilizador, seguido do PIN
   * Resposta B: Bolus remoto não disponível. 
 * CARBS 5
-  * Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para introduzir 5g às 12:45, responder com o código da aplicação Authenticator para o utilizador, seguido do PIN
 * CARBS 5 17:35/5:35PM
-  * Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para introduzir 5g às 17:35, responder com o código da aplicação Authenticator para o utilizador, seguido do PIN
 * EXTENDED STOP/CANCEL
-  * Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para parar o bólus prolongado, responder com o código da aplicação Authenticator para o utilizador, seguida do PIN
 * EXTENDED 2 120
-  * Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para iniciar o bólus prolongado de 2U por 120 minutos, responder com o código da aplicação Authenticator para o utilizador seguido do PIN
 
 Perfil
 --------------------------------------------------
@@ -153,9 +153,9 @@ Perfil
 * PROFILE LIST
   * Resposta: 1.`Perfil1` 2.`Perfil2`
 * PROFILE 1
-  * Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para trocar o Perfil para Perfil 1 100%, responder com o código da aplicação Authenticator para o utilizador, seguido do PIN
 * PROFILE 2 30
-  * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para trocar o Perfil para Perfil2 30%, responder com o código da aplicação Authenticator para o utilizador, seguido do PIN
 
 Outro
 --------------------------------------------------
@@ -164,21 +164,21 @@ Outro
 * NSCLIENT RESTART
   * Resposta: NSCLIENT REINICIAR 1 receptores
 * BOMBA
-  * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+  * Resposta: Última Conexão: 1 minuto atrás Temp: 0.00/h @11:38 5/30min IOB: 0.5U Reserv: 34U Bat:100
 * PUMP CONNECT
-  * Response: Pump reconnected
+  * Resposta: Bomba Reconectada
 * PUMP DISCONNECT *30*
-  * Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para desconectar a bomba por *30* minutos, responder com o código da aplicação Authenticator para o utilizador, seguido do PIN
 * SMS DISABLE/STOP
   * Resposta: Para desativar o Serviço de Comandos SMS responda com código Any. Atenção que apenas o poderá reativar somente a partir do telemóvel que corre o AAPS.
 * TARGET MEAL/ACTIVITY/HYPO   
-  * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para definir perfis de Alvo Temp. / Refeição / Actividade / Hipoglicemia responder com o código da aplicação Authenticator para o utilizador seguido do PIN
 * TARGET STOP/CANCEL   
-  * Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
+  * Reposta: Para cancelar o Alvo Temporário, responder com o código da aplicação Authenticator para o utilizador seguido do PIN
 * HELP
   * Resposta: GLICEMIA, LOOP, TRATAMENTOS,.....
 * HELP BOLUS
-  * Resposta: BOLUS 1.2 BOLUS 1.2 REFEIÇÃO
+  * Resposta: BÓLUS 1.2 BÓLUS 1.2 REFEIÇÃO
 
 Resolução de Problemas
 ==================================================
