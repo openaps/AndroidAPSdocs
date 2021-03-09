@@ -1,46 +1,46 @@
-# Building the APK
+# Construir o ficheiro APK
 
-## Build yourself instead of download
+## Construa você em vez de fazer download
 
-**A AndroidAPS não está disponível para download devido à regulamentação para dispositivos médicos. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+**A AndroidAPS não está disponível para download devido à regulamentação para dispositivos médicos. É legal criar o aplicativo para o seu próprio uso, mas não deve dar uma cópia aos outros! Consulte a [página de perguntas frequentes-FAQ](../Getting-Started/FAQ.md) para mais detalhes.**
 
 ## Important notes
 
-* Please use **[Android Studio Version 4.1.1](https://developer.android.com/studio/)** or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.1.1.
+* Por favor, use o **[Android Studio Version 4.1.1](https://developer.android.com/studio/)** ou um mais recente para construir o apk.
+* [Sistemas Windows 10 32-bit](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) não são suportados pelo Android Studio 4.1.1.
 
-**Configuration on demand** is not supported by the current version of the Android Gradle plugin!
+**A configuração sob demanda** não é suportada pela versão atual do plugin Android Gradle!
 
 If your build fails with an error regarding "on demand configuration" you can do the following:
 
-* Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-* In the left pane, click Build, Execution, Deployment > Compiler.
-* Uncheck the Configure on demand checkbox.
-* Click Apply or OK.
+* Abra a janela Preferências clicando em Arquivo> Configurações (no Mac, Android Studio> Preferências).
+* No painel esquerdo, clique em Build, Execution, Deployment > Compiler.
+* Desmarque a caixa de opção Configure on demand.
+* Clique em Apply ou OK.
 
 * * *
 
-### This article is divided into two parts.
+### Este artigo é dividido em duas partes.
 
-* In the overview part there is an explanation on what steps are necessary to build the APK file.
-* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
+* Na parte de visão geral há uma explicação sobre quais os passos necessários para construir o arquivo APK.
+* No passo a passo pode encontrar as capturas de ecrã de uma instalação real. Como as versões do Android Studio - o ambiente de desenvolvimento de software que utilizaremos para construir o APK-mudarão muito rapidamente isso não será idêntico à sua instalação mas dará um bom ponto de partida. O Android Studio também "corre" em Windows, Mac OS X e Linux e pode haver pequenas diferenças em alguns aspectos entre cada plataforma. Se achar que algo importante está errado ou ausente, informe o grupo do facebook "AndroidAPS users ou o AndroidAPS Portugal" ou no chat do Gitter [Android APS](https://gitter.im/MilosKozak/AndroidAPS) ou [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) para que isso seja revisto.
 
 ## Visão Geral
 
-In general, the steps necessary to build the APK file:
+De um modo geral, os passos necessários para construir o arquivo APK são:
 
 1. [Instalar Git](../Installing-AndroidAPS/git-install.rst)
 2. [Instalar o Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
-3. [Set git path in Android Studio preferences](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
-4. [Download AndroidAPS code](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
-5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
-6. [Build the app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generate signed apk)
-7. [Transfer apk file to your phone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identify receiver if using xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
+3. [Definir o caminho git nas preferências do Android Studio](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
+4. [Baixar o código da AndroidAPS](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
+5. [Download do Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
+6. [Construir a app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (gerar o apk assinado)
+7. [Transferir o arquivo apk para o seu telefone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+8. [Identificar o receptor de estiver a utilizar o xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
 
-## Step by step walkthrough
+## Instalação Passo a Passo
 
-Detailed description of the steps necessary to build the APK file.
+Descrição detalhada dos passos necessários para construir o ficheiro APK.
 
 ## Install git (if you don't have it)
 
@@ -48,37 +48,37 @@ Follow the manual on the [git installation page](../Installing-AndroidAPS/git-in
 
 ## Instalar o Android Studio
 
-The following screenshots have been taken from Android Studio Version 3.6.1. Your screen might look a bit different if you use a newer version of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
+Os seguintes screenshots foram retirados do Android Studio Version 3.6.1. A sua imagem pode parecer um pouco diferente se estiver a usar uma versão mais recente do Android Studio. Mas será capaz de encontrar o caminho facilmente. [Ajuda da comunidade](../Where-To-Go-For-Help/Connect-with-other-users.md) pode ser encontrada aqui.
 
-One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
+Uma das coisas mais importantes ao instalar o Android Studio: **Seja paciente!** Durante a instalação e setup o Android Studio está a fazer o download de muitos arquivos e vai levar o seu tempo.
 
-Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
+Instale o [Android Studio](https://developer.android.com/studio/install.html) e configure durante o primeiro início.
 
-Select "Do not import settings" as you have not used it before.
+Selecione "Do not import settings", se nunca o utilizou antes.
 
-![Do not import settings](../images/AndroidStudio361_01.png)
+![Não importe as Definições](../images/AndroidStudio361_01.png)
 
-Decide whether you want to share data with Google or not.
+Decida se quer partilhar dados com o Google ou não.
 
-![Share data with Google](../images/AndroidStudio361_02.png)
+![Partilhar dados com o Google](../images/AndroidStudio361_02.png)
 
-On the following screen click "Next".
+No passo seguinte clique em "Next".
 
-![Welcome screen](../images/AndroidStudio361_03.png)
+![Ecrã de Boas-vindas](../images/AndroidStudio361_03.png)
 
-Select "Standard" installation and click "Next".
+Selecione a instalação "Standard" e clique em "Next".
 
-![Standard installation](../images/AndroidStudio361_04.png)
+![Instalação Standard](../images/AndroidStudio361_04.png)
 
-Select the theme for the user interface you like. (In this manual we used "Light".) Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
+Selecione o tema para a interface do usuário que mais lhe agrada. (Neste manual utilizamos o tema "Light".) Em seguida, clique em "Next". Este é apenas um esquema de cores. Pode selecionar o que mais gosta (ex: "Darcula" para o modo escuro). Esta seleção não tem influência na construção da APK.
 
 ![UI color scheme](../images/AndroidStudio361_05.png)
 
-Click "Finish" on the "Verify Settings" dialog.
+Clique em "Finish" na seção de "Verify Settings".
 
 ![Verify settings](../images/AndroidStudio361_06.png)
 
-Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
+Aguarde enquanto o Android Studio faz o download de componentes adicionais e seja paciente. Uma vez que termine o download, pode premir o botão "Finish" que fica azul. Click the button now.
 
 ![Downloading components](../images/AndroidStudio361_07.png)
 
@@ -122,7 +122,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 * For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
 
-## Download AndroidAPS code
+## Baixar o código da AndroidAPS
 
 * **If you haven't already rebooted your computer after setting git path in preferences do it now. System environment must be updated.**
 
@@ -163,7 +163,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
     
     ![SDK licence](../images/AndroidStudio361_19.png)
 
-## Download Android SDK
+## Download do Android SDK
 
 * Click File > Settings.
     
@@ -266,7 +266,7 @@ Easiest way to transfer app-full-release.apk to your phone is via [USB cable or 
 
 On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
-## Identify receiver if using xDrip+
+## Identificar o receptor de estiver a utilizar o xDrip+
 
 [See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
