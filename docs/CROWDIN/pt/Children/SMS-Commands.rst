@@ -184,13 +184,13 @@ Resolução de Problemas
 ==================================================
 Múltiplos SMS
 --------------------------------------------------
-Caso receba repetidamente a mesma mensagem, provavelmente foi configurada um circulo entre aplicações. Como por exemplo o xDrip+, If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS. 
+Caso receba repetidamente a mesma mensagem (por exemplo, mudança de perfil) provavelmente terá configurado um problema entre aplicações. Como por exemplo o xDrip+, Sendo assim, por favor assegure-se que o xDrip+ (ou outra aplicação) não está a fazer o upload de tratamentos para o NS. 
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+Se a outra aplicação está instalada em múltiplos telefones, assegure-se de desativar o upload em todos eles.
 
 Problemas com comandos SMS em telemóveis Samsung
 --------------------------------------------------
-Uma atualização ao Samsung S10 em alguns casos provocou erros com os Comandos SMS. Could be solved by disabling 'send as chat message'.
+Uma atualização ao Samsung S10 em alguns casos provocou erros com os Comandos SMS. Pode ser resolvido desativando a opção "enviar como mensagem de texto".
 
-.. image:: ../images/SMSdisableChat.png
+.. imagem:: ../images/SMSdisableChat.png
   :alt: Desativar o SMS como mensagens de chat
