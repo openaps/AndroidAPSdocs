@@ -65,26 +65,26 @@ Configuração do Autenticador
   * Digite 4570512020
    
 * O texto vermelho "WRONG PIN" mudará ** automaticamente** para um "OK" verde, se a entrada estiver correta. **Não há nenhum botão para pressionar! **
-* The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
-* Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
+* O tempo em ambos os telefones deve ser sincronizado. As melhores práticas são configuradas automaticamente pela rede. As diferenças de tempo podem levar a problemas de autenticação.
+* Use o botão "REPOR AUTENTICADORES" se quiser remover autenticadores já definidos.  (Ao reconfigurar o autenticador irá tornar TODOS os autenticadores já definidos inválidos. Deverá configurá-los novamente)
 
-Use SMS commands
+Enviar comandos por SMS
 ==================================================
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands <../Children/SMS-Commands.html#commands>`__ below. 
-* The AAPS phone will respond to confirm success of command or status requested. 
-* Confirm command by sending the code where necessary. Example:
+* Enviar um SMS para o telefone com a aplicação AndroidAPS a partir do seu(s) telefone(s) aprovado(s) usando qualquer um dos ` comandos <../Children/SMS-Commands.html#commands> ` __ abaixo. 
+* O telefone com a aplicação AAPS responderá para confirmar a operação ou o estado pedido. 
+* Confirmar o comando enviando o código necessário. Exemplo:
 
   * O seu PIN obrigatório é 2020
   * TOTP token da app de autenticação é 457051
   * Digite 4570512020
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**Dica**: Pode ser útil ter um plano da operadora com SMS ilimitados em ambos os telefones se prever o envio elevado de SMS.
 
 Comandos
 ==================================================
-Commands must be sent in English, the response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Os comandos têm de ser enviados em inglês e a resposta será no idioma do telemóvel se a tradução já tiver sido realizada <../translations.html#translate-strings-for-androidaps-app>`_.
 
-.. image:: ../images/SMSCommands.png
+.. imagem:: ../images/SMSCommands.png
   :alt: Exemplo de comandos SMS
 
 Loop
