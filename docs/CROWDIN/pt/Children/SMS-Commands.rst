@@ -2,69 +2,69 @@ Comandos SMS
 **************************************************
 Segurança Em Primeiro Lugar
 ==================================================
-* O AndroidAPS permite que você controle um telefone remotamente através de SMS. Se os comandos por SMS estiverem ativos, lembre-se sempre de que o telemóvel configurado para estes comandos remotos pode ser roubado. Então, proteja-o sempre pelo menos através de um código PIN. A strong password or biometrics are recommended.
-* Additionally it is recommended to allow a `second phone number <#authorized-phone-numbers>`_ for SMS commands. So you can use second number to `temporary disable <#other>`_ SMS communicator in case your main remote phone gets lost or stolen.
+* O AndroidAPS permite que você controle um telefone remotamente através de SMS. Se os comandos por SMS estiverem ativos, lembre-se sempre de que o telemóvel configurado para estes comandos remotos pode ser roubado. Então, proteja-o sempre pelo menos através de um código PIN. Uma palavra-passe forte ou dados biométricos são recomendados.
+* Adicionalmente é recomendado permitir um `segundo número de telefone<#authorized-phone-numbers>`_ para comandos SMS. Assim pode usar o segundo número para ` desativar temporariamente <#other> ` _ comunicador de SMS caso perca, ou seja roubado, o seu telefone remoto principal.
 * O AndroidAPS responderá com uma mensagem de texto se os comandos remotos - como um bólus ou uma mudança de perfil - foram corretamente realizados.0//0. É aconselhável ao configurar que textos sejam enviados para, pelo menos, dois números de telefone distintos, para o caso de um dos telefones ser roubado.
 * ** Se o bólus for realizado através de Comandos SMS os hidratos de carbono (carbs) devem ser introduzidos através do Nightscout (NSClient, Website ...)! ** Se não o fizer a insulina ativa (IOB) seria correlacionada com hidratos restantes (COB) muito baixos, podendo levar o AAPS a não realizar um bólus de correção por assumir que insulina ativa (IOB) está demasiado elevada.
-* As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
+* A partir da AndroidAPS versão 2.7 é necessária uma aplicação autenticadora com uma senha de utilização única usada para aumentar a segurança ao usar os comandos SMS.
 
-Setup SMS commands
+Configuração dos comandos SMS
 ==================================================
 
 .. image:: ../images/SMSCommandsSetup.png
   :alt: Configuração de Comandos SMS
       
-* A maioria dos ajustes de alvos temporários, de acordo com AAPS etc. can be done on `NSClient app <../Children/Children.html>`_ on an Android phone with an internet connection.
-* Os Bólus não podem ser enviados através do Nightscout, mas pode usar comandos SMS.
-* If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
+* A maioria dos ajustes de alvos temporários, de acordo com a AAPS etc. pode ser feita na app "NSClient  <.../Children/Children.html>` num telemóvel Android com conexão à Internet.
+* Os Bólus não podem ser enviados através do Nightscout, mas podem usar comandos SMS.
+* Se usa um iPhone como seguidor não conseguirá utilizar o NSClient. Existem comandos de SMS adicionais disponíveis.
 
 * Na configuração do seu smartphone Android vá a: Aplicações > AndroidAPS > Permissões e habilite SMS
 
-Authorized phone numbers
+Números de telefones autorizados
 -------------------------------------------------
-* In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679) 
-* Enable 'Allow remote commands via SMS'.
+* No AndroidAPS vá a Preferências> Comunicador SMS e introduza os números de telefone que quer permitir que enviem os comandos SMS (separados por vírgulas, por ex. +351123456789; +351123456789) 
+* Ative Permitir comandos remotos via SMS'.
 * Se quiser usar mais de um número:
 
   * Insira inicialmente apenas um número.
   * Teste o número enviando e confirmando um comando SMS.
-  * Insira o(s) número(s) adicional(es) separados por ponto e vírgula, sem espaço.
+  * Insira o(s) número(s) adicional(is) separados por ponto e vírgula, sem espaço.
   
-    .. image:: ../images/SMSCommandsSetupSpace2.png
-      :alt: SMS Commands Setup multiple numbers
+    .. imagem: ../images/SMSCommandsSetupSpace2.png
+      :alt: Configuração de Comandos de SMS com múltiplos números
 
-Minutes between bolus commands
+Minutos entre comandos de bólus
 -------------------------------------------------
-* You can define the minimum delay between two boluses issued via SMS.
-* For safety reasons you have to add at least two authorized phone numbers to edit this value.
+* Pode definir tempo mínimo entre dois bólus emitidos via SMS.
+* Por razões de segurança tem de adicionar pelo menos dois números de telefone autorizados para editar este valor.
 
-Additionally mandatory PIN at token end
+Adicionalmente um PIN obrigatório no final do token
 -------------------------------------------------
-* For safety reasons the reply code must be followed by a PIN.
-* PIN rules:
+* Por razões de segurança o código de resposta deve ser seguido por um PIN.
+* Regras do PIN:
 
-  * 3 to 6 digits
-  * not same digits (i.e. 1111)
-  * not in a row (i.e. 1234)
+  * 3 a 6 dígitos
+  * sem ser dígitos iguais (ou seja, 1111)
+  * não em sequência (ou seja, 1234)
 
 Configuração do Autenticador
 -------------------------------------------------
-* Two-factor authentication is used to improve safety.
-* You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
+* A autenticação de dois fatores é usada para melhorar a segurança.
+* Pode usar qualquer aplicativo de autenticação que suporte tokens TOTP RFC 6238. Aplicações populares e gratuitas são, por exemplo:
 
   * `Authy <https://authy.com/download/>`_
   * Google Authenticator - `Android <https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2>`_ / `iOS <https://apps.apple.com/de/app/google-authenticator/id388497605>`_
   * `LastPass Authenticator <https://lastpass.com/auth/>`_
   * `FreeOTP Authenticator <https://freeotp.github.io/>`_
 
-* Install the authenticator app of your choice on your follower phone and scan the QR code shown in AAPS.
-* Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. Example:
+* Instale a app de autenticação que escolher no seu telemóvel de seguidor e digitalize o código QR mostrado na AAPS.
+* Teste a senha única inserindo o token mostrado na sua app de autenticação e o PIN que definiu na AAPS. Exemplo:
 
-  * Your mandatory PIN is 2020
-  * TOTP token from the authenticator app is 457051
-  * Enter 4570512020
+  * O seu PIN obrigatório é 2020
+  * TOTP token da app de autenticação é 457051
+  * Digite 4570512020
    
-* The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
+* O texto vermelho "WRONG PIN" mudará ** automaticamente** para um "OK" verde, se a entrada estiver correta. **Não há nenhum botão para pressionar! **
 * The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
 * Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
 
@@ -74,9 +74,9 @@ Use SMS commands
 * The AAPS phone will respond to confirm success of command or status requested. 
 * Confirm command by sending the code where necessary. Example:
 
-  * Your mandatory PIN is 2020
-  * TOTP token from the authenticator app is 457051
-  * Enter 4570512020
+  * O seu PIN obrigatório é 2020
+  * TOTP token da app de autenticação é 457051
+  * Digite 4570512020
 
 **Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
