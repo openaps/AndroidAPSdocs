@@ -460,9 +460,9 @@ History of the following treatments:
 * Depending on your BG source settings this tab is named differntly.
 * Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
 
-## NSClient
+## ClienteNS
 
-![NSClient](../images/Screenshots_NSClient.png)
+![ClienteNS](../images/Screenshots_NSClient.png)
 
 * Displays status of the connection with your Nightscout site.
 * Settings are made in [preferences](../Configuration/Preferences#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
