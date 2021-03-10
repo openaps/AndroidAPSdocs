@@ -10,7 +10,7 @@ Onde existem configurações adicionais disponíveis dentro do módulo, pode cli
 
 **Primeira configuração:** Desde AAPS 2.0 um assistente de instalação guia através do processo de configuração do AndroidAPS. Carregue no menu de 3 pontos no lado superior direito do ecrã (F) e selecione 'Assistente de instalação' para usá-lo.
 
-![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
+![Caixas de seleção do configurador e roda dentada](../images/ConfBuild_ConfigBuilder.png)
 
 ## Aba ou menu Hambúrguer
 
