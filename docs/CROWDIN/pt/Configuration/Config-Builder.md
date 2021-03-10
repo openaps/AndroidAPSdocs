@@ -138,42 +138,42 @@ Desvantagens:
 
 #### Free Peak Oref
 
-* With the "Free Peak 0ref" profile you can individually enter the peak time.
+* Com o perfil "Pico Livre 0ref" pode inserir-se individualmente o tempo do pico.
 * O DIA é definido automaticamente para 5 horas se estiver especificado mais alto no perfil.
-* This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+* Este perfil de efeito é recomendado se é utilizada uma insulina não instalada ou uma mistura de diferentes insulinas.
 
 ## Fonte de Glic.
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
+Selecione a fonte de glicemia que utiliza - ver [Fonte de GLIC](BG-Source.rst) para mais informações de configuração.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
-* NSClient BG
+* Glicose ClienteNS
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
-* [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - apenas a versão 4.15.57 ou mais recente são suportados
+* [App Dexcom (corrigida)](https://github.com/dexcomapp/dexcomapp/) - Selecione 'Enviar dados BG para xDrip+' se quiser usar alarmes xDrip+.
     
     ![Configurador Fonte da Glicemia (GLIC)](../images/ConfBuild_BGSource.png)
 
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
 
-* [Tomato App](http://tomato.cool/) for MiaoMiao device
-* Random BG: Generates random BG data (Demo mode only)
+* [ Aplicação Tomato](http://tomato.cool/) para aparelhos MiaoMiao
+* Glicemia Aleatória: Cria valores de Glicemia (BG) aleatórios (Apenas para demonstração)
 
 ## Bomba
 
-Select the pump you are using.
+Selecione a bomba que está a utilizar.
 
 * [Dana R](DanaR-Insulin-Pump.md)
-* Dana R Korean (for domestic DanaR pump)
-* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
+* DanaR Coreana (para bombas domésticas DanaR)
+* Dana Rv2 (Bomba DanaR com upgrade de software não oficial)
 * [Dana RS](DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
-* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (Requer a instalação da Ruffy)
 * [Medtronic](MedtronicPump.md)
-* MDI (receive AAPS suggestions for your multiple daily injections therapy)
-* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
+* MDI (recebe sugestões AAPS para a terapia de múltiplas injecções diárias)
+* Bomba Virtual (loop aberto para uma bomba que nao tenha ainda nenhum driver - apenas sugestões AAPS)
 
-For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+Usar **Configurações avançadas** para ativar o BT watchdog se necessário. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
 
 [Password for Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
 
