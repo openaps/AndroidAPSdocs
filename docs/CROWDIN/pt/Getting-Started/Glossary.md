@@ -120,7 +120,7 @@
 </tr>
 <tr>
  <td><strong>DIA</strong></td>
- <td>duração da ação da insulina</td>
+ <td>duração da insulina ativa</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - Tipos de insulina</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
