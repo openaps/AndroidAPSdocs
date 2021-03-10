@@ -86,15 +86,15 @@ Aguarde enquanto o Android Studio faz o download de componentes adicionais e sej
 
 Certifique-se de que o [Git esteja instalado](../Installing-AndroidAPS/git-install.rst) no seu computador.
 
-On the Android Studio welcome screen click the small triangle (1. in next screenshot) and select "Settings" (2.).
+No ecrã de boas-vindas do Android Studio clique no pequeno triângulo (1. no próximo screenshot) e selecione "Settings" (2.).
 
 ![Android Studio settings from welcome screen](../images/AndroidStudio361_08.png)
 
 ### Windows
 
-* Click the small triangle next to Version Control (1.) to open the sub-menu.
-* Click Git (2.).
-* Make sure update method "Merge" (3.) is selected.
+* Clique no pequeno triângulo próximo ao Version Control (1.) para abrir o sub-menu.
+* Clicar em Git (2.).
+* Assegure-se que o método de update "Merge" (3.) está seleccionado.
 * Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
     
     ![Android Studio settings](../images/AndroidStudio361_09.png)
