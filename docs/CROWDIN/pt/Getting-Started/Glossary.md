@@ -173,8 +173,8 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>IOB</strong></td>
- <td>insulina a bordo - insulina ativa no seu corpo</td>
+ <td><strong>IA</strong></td>
+ <td>insulina ativa</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
