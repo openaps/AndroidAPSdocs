@@ -203,22 +203,22 @@ Selecione o algoritmo APS desejado para ajustes da terapia. Pode ver os detalhes
 
 ### Loop Aberto
 
-* AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. 
-* The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
-* This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+* A AAPS avalia continuamente todos os dados disponíveis (IA, HC, GLI ...) e se necessário faz sugestões de tratamento sobre como ajustar a sua terapia. 
+* As sugestões não serão executadas automaticamente (como em loop fechado), têm que ser introduzidas manualmente na bomba ou usando um botão, caso esteja a usar uma bomba compatível (Dana R/RS ou Accu Chek Combo). 
+* Esta opção é para conhecer como funciona a AndroidAPS ou se está a usar uma bomba não suportada.
 
 ### Loop Fechado
 
-* AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). 
-* The Closed Loop works within numerous safety limits, which you can be set individually.
-* Closed Loop is only possible if you are in [Objective 6](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
-* Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol or 100 mg/dl instead of 5,0 - 7,0 mmol or 90 - 125 mg/dl) is recommended.
+* A AAPS avalia continuamente todos os dados disponíveis (IA, HC, GLI,...) e, se necessário, ajusta automaticamente o tratamento (ou seja, sem intervenção sua) para alcançar o intervalo ou valor alvo definido (bólus, basal temporária, interrupção da insulina para evitar hipo, etc.). 
+* O Loop Fechado funciona dentro de inúmeros limites de segurança, que podem ser configurados individualmente.
+* O Loop Fechado só é possível se estiver no [ Objective 6 ](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) ou superior e use uma bomba suportada.
+* Nota: No modo Loop Fechado, é preferível um alvo específico ao invés de um intervalo de valores (ex: 5.5 mmol ou 100mg/dl ao invés de 5,0 - 7,0 mmol ou 90 - 125 mg/dl).
 
-### Low Glucose Suspend (LGS)
+### Suspensão por Glicemia Baixa (SGB)
 
-* maxIOB is set to zero
-* This means if blood glucose is dropping it can reduce basal for you.
-* But if blood glucose is rising no automatic correction will be made. Your basal rates will remain the same as your selected profile.
+* máxIA definida como zero
+* Isto significa que se a glicemia está a baixar, o sistema pode reduzir-lhe a basal.
+* Mas se o nível de glicemia está a subir, nenhuma correção automática será efetuada. Os valores basais permanecerão os mesmos do perfil selecionado.
 * Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower BG.
 
 ### Minimal request change
