@@ -189,14 +189,15 @@ If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value 
 
 ## APS
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+Selecione o algoritmo APS desejado para ajustes da terapia. Pode ver os detalhes do algoritmo escolhido na aba OpenAPS(OAPS).
 
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) More detail about OpenAPS AMA can be found in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* OpenAPS AMA (Algoritmo de Assistente Avançado de Refeições de 2017) Mais detalhes sobre o OpenAPS AMA podem ser encontrados em [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Os benefícios, de forma simples, são verificados depois de se dar um bólus à refeição, o sistema coloca um perfil mais alto (high-temp) mais rapidamente isto SE forem inseridos hidratos de carbono de forma confiável.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (Super Micro Bólus, o algoritmo mais recente para usuários experientes)  
+    Atenção que é necessário estar no [Objetivo 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) para usar OpenAPS SMB e min_5m_carbimpact deve ser definido para 8 no Configurador > Sensibilidade de deteção > Configurações Sensibilidade Oref1.
 
 ## Loop
 
-* Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
+* Mudar entre Loop Aberto, Loop Fechado e Suspensão por Glicemia Baixa (LGS).
 
 ![Configurador - Modo de Loop](../images/ConfigBuilder_LoopLGS.png)
 
