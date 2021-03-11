@@ -219,11 +219,11 @@ Selecione o algoritmo APS desejado para ajustes da terapia. Pode ver os detalhes
 * máxIA definida como zero
 * Isto significa que se a glicemia está a baixar, o sistema pode reduzir-lhe a basal.
 * Mas se o nível de glicemia está a subir, nenhuma correção automática será efetuada. Os valores basais permanecerão os mesmos do perfil selecionado.
-* Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower BG.
+* Apenas se a basal IA é negativa (originada por uma Suspensão por Glicose Baixa), será administrada insulina adicional para baixar a glicemia.
 
-### Minimal request change
+### Pedido de mudança mínima
 
-* When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. 
+* Ao usar o loop aberto irá receber notificações sempre que a AAPS recomendar para ajustar a taxa basal. 
 * To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate.
 * This defines the relative change required to trigger a notification.
 
