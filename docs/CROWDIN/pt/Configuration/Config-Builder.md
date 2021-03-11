@@ -285,7 +285,7 @@ Escolha as quantidades padrão usando os três botões para purgar/preencher, de
 
 Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
 
-#### Shorten tab titles
+#### Abreviar títulos das abas
 
 Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
@@ -326,7 +326,7 @@ Note: Entries cannot be used in the AndroidAPS calculator. (View only)
 
 Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
-If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+If you want to bolus etc. pelo relógio, dentro da opção "Definições do Wear", necessita de ativar a opção "Controlos pelo Relógio".
 
 ![Definições Wear](../images/ConfBuild_Wear.png)
 
