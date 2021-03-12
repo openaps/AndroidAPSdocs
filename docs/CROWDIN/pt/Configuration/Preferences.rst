@@ -10,7 +10,7 @@ Preferências
   .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Open plugin preferences
 
-* **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+* **Sub-Menus** podem ser abertos clicando no triângulo abaixo do título do sub-menu.
 
   .. image:: ../images/Pref2020_Submenu2.png
     :alt: Open submenu
@@ -76,7 +76,7 @@ Application protection
 Bolus protection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Bolus protection might be useful if AAPS is used by a small child and you `bolus via SMS <../Children/SMS-Commands.html>`_.
-* In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter master password.
+* No exemplo abaixo poderá ver o prompt para a proteção biométrica. If biometric authentication does not work, click in the space above the white prompt and enter master password.
 
   .. image:: ../images/Pref2020_PW.png
     :alt: Prompt biometric protection
