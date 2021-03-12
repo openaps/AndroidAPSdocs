@@ -12,11 +12,11 @@ Onde existem configurações adicionais disponíveis dentro do módulo, pode cli
 
 ![Caixas de seleção do configurador e roda dentada](../images/ConfBuild_ConfigBuilder.png)
 
-## Aba ou menu Hambúrguer
+## Separador ou menu Hambúrguer
 
 Com a caixa de seleção sob o símbolo de olho, pode decidir como abrir a seção de programa correspondente.
 
-![Aba ou menu Hambúrguer](../images/ConfBuild_TabOrHH.png)
+![Separador ou menu Hambúrguer](../images/ConfBuild_TabOrHH.png)
 
 ## Perfil
 
@@ -36,13 +36,13 @@ Botões:
 * vermelho (X): excluir
 * seta azul (↷): duplicar
 
-Se você fizer alguma alteração no seu perfil, certifique-se que está a editar o perfil correto. Na aba perfil nem sempre há a visualização do perfil a ser utilizado atualmente-por exemplo, se fez uma troca de perfil usando a guia do perfil no ecrã inicial, este pode ser diferente do perfil realmente mostrado na guia de perfil, já que não há conexão entre estes.
+Se você fizer alguma alteração no seu perfil, certifique-se que está a editar o perfil correto. No separador perfil nem sempre há a visualização do perfil a ser utilizado atualmente-por exemplo, se fez uma troca de perfil usando o separador do perfil no ecrã inicial, este pode ser diferente do perfil realmente mostrado no separador de perfil, já que não há conexão entre estes.
 
 #### Fazer Mudança De Perfil
 
 Pode facilmente criar um novo perfil local a partir da mudança de perfil. Neste caso o deslocamento temporal e percentagem serão aplicados ao novo perfil local.
 
-1. Vá para aba "tratamentos".
+1. Vá para o separador "tratamentos".
 2. Selecione Troca de Perfil.
 3. Pressione "Clone".
 4. Pode editar o novo perfil local na guia Perfil Local (PF) ou no menu do lado esquerdo
@@ -189,7 +189,7 @@ If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value 
 
 ## APS
 
-Selecione o algoritmo APS desejado para ajustes da terapia. Pode ver os detalhes do algoritmo escolhido na aba OpenAPS(OAPS).
+Selecione o algoritmo APS desejado para ajustes da terapia. Pode ver os detalhes do algoritmo escolhido no separador OpenAPS(OAPS).
 
 * OpenAPS AMA (Algoritmo de Assistente Avançado de Refeições de 2017) Mais detalhes sobre o OpenAPS AMA podem ser encontrados em [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Os benefícios, de forma simples, são verificados depois de se dar um bólus à refeição, o sistema coloca um perfil mais alto (high-temp) mais rapidamente isto SE forem inseridos hidratos de carbono de forma confiável.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (Super Micro Bólus, o algoritmo mais recente para usuários experientes)  
@@ -286,7 +286,7 @@ Escolha as quantidades padrão usando os três botões para purgar/preencher, de
 
 Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
 
-#### Abreviar títulos das abas
+#### Abreviar títulos dos separadores
 
 Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
@@ -351,4 +351,4 @@ E-mail e número de registos a serem enviados. Normalmente, nenhuma mudança é 
 
 ### Configurador
 
-Use a aba para o configurador em vez do menu hambúrguer.
+Use o separador para o configurador em vez do menu hambúrguer.
