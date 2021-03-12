@@ -220,7 +220,7 @@ Assinar significa que você indica que a sua aplicação é da sua autoria, mas 
 
 * Clique no símbolo da pasta (1.) para selecionar o caminho de armazenamento da chave digital.
 
-* Selecione o caminho para onde a sua chave digital deve ser guardada(2.). **Não guarde na mesma pasta que o projecto. Deve seleccionar uma pasta diferente!** Sugestão: ambiente de trabalho.
+* Selecione o caminho para onde a sua chave digital deve ser guardada(2.). **Não guarde na mesma pasta que o projecto. Deve selecionar uma pasta diferente!** Sugestão: ambiente de trabalho.
 * Escreva um nome para a sua chave digital (3.).
 * Clique "OK" (4.).
 * As palavras-passe das chaves digitais não têm de ser muito sofisticadas. Certifique-se que se lembra das mesmas ou tome uma nota num lugar seguro. Caso não se lembre da sua palavra-passe no futuro, por favor ver [resolução de problemas com chaves digitais perdidas](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
@@ -238,33 +238,33 @@ Assinar significa que você indica que a sua aplicação é da sua autoria, mas 
     
     ![Lembrar palavras-passe](../images/AndroidStudio361_31.png)
 
-* Select build variant "fullRelease" (1.).
+* Selecione Build Variants "fullRelease" (1.).
 
-* Check boxes V1 and V2 for signature versions (2.).
-* Click "Finish". (3.)
+* Verifique as caixas V1 e V2 para versões de assinatura (2.).
+* Clica em "Finish". (3.)
     
     ![Finalizar construção](../images/AndroidStudio361_32.png)
 
-* Android Studio will display the information "APK(s) generated successfully..." after build is finished.
+* O Android Studio exibirá as informações "APK(s) generated successfully..." após a conclusão da compilação.
 
-* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
-* Easiest way to find the apk is to click on "Event log".
+* Caso a compilação não tenha sido bem-sucedida, consulte a [seção de solução de problemas](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* A maneira mais fácil de encontrar o ficheiro apk é clicar em "Event log".
     
     ![Build successfully - event log](../images/AndroidStudio361_33.png)
 
-* In the event log section click "locate".
+* Na seção de registo de eventos clique em "locate".
     
     ![Event log - locate apk](../images/AndroidStudio361_34.png)
 
-* app-full-release.apk is the file you are looking for.
+* app-full-release.apk é o arquivo que procura.
     
     ![File location apk](../images/AndroidStudio361_35.png)
 
-## Transfer APK to smartphone
+## Transferir o APK para o smartphone
 
-Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
+A maneira mais fácil de transferir app-full-release.apk para o seu telefone é via [cabo USB ou Google Drive](https://support.google.com/android/answer/9064445?hl=en). Por favor, note que a transferência por correio pode causar dificuldades e não é a forma preferida.
 
-On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+No seu telefone é necessário permitir a instalação de fontes desconhecidas. Manuais como fazer isso podem ser encontrados na internet (ex: [aqui](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) ou [aqui](https://www.androidcentral.com/unknown-sources)).
 
 ## Identificar o receptor de estiver a utilizar o xDrip+
 
