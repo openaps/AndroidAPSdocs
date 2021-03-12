@@ -315,7 +315,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ## Action tab
 
-![Actions tab](../images/Home2021_Action.png)
+![Separador Accões](../images/Home2021_Action.png)
 
 ### Actions - section M
 
