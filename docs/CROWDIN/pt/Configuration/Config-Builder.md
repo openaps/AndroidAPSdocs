@@ -101,14 +101,14 @@ Desvantagens:
 * As opções 'Oref Ação-Rápida','Oref Ultra-Rápida' e 'Oref Pico-Livre' têm todas um gráfico exponencial. Mais informação disponível em [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
 * A curva varia baseada com a Duração da Ação da Insulina (DIA) e o tempo de pico.
     
-    * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
-    * BLUE line shows **how active** insulin is.
+    * A linha ROXA mostra a quantidade de **insulina ativa** depois da mesma ter sido injetada e como vai diminuindo com o tempo.
+    * A linha AZUL mostra **como está ativa** a insulina.
 
 ### DIA
 
 * A Duração de Ação da Insulina (DIA) varia de pessoa para pessoa. É por isso que tem que experimentar e descobrir o seu. 
 * Mas deve ser sempre pelo menos 5 horas.
-* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. Este valor residual ainda pode ser visível durante o desporto, por exemplo. Por isso o AndroidAPS usa um DIA mínimo de 5h.
+* Para muitas pessoas que usam insulinas ultra-rápidas como a Fiasp, não existe nenhum efeito notório 3-4 horas, após a sua administração, mesmo que estejam disponíveis 0.0xx unidades. Este valor residual ainda pode ser visível durante o desporto, por exemplo. Por isso o AndroidAPS usa um DIA mínimo de 5h.
 * Pode ler mais sobre isto na seção Perfil de Insulina de [nesta página ](../Getting-Started/Screenshots#insulin-profile). 
 
 ### Diferenças dos Tipos de Insulina
@@ -132,11 +132,11 @@ Desvantagens:
 
 #### Lyumjev
 
-* special insulin profile for Lyumjev
+* perfil especial para a insulina Lyumjev
 * DIA = pelo menos 5.0h
-* Máx. peak = 45 minutes after injection (fixed, not adjustable)
+* Máx. pico = 45 minutos após a injeção (fixo, não ajustável)
 
-#### Free Peak Oref
+#### Oref Pico-Livre
 
 * Com o perfil "Pico Livre 0ref" pode inserir-se individualmente o tempo do pico.
 * O DIA é definido automaticamente para 5 horas se estiver especificado mais alto no perfil.
