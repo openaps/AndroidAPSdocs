@@ -90,7 +90,7 @@
 </tr>
 <tr>
  <td><strong>CAGE</strong></td>
- <td>idade da cânula/cateter- exibida no Nightscout se foi esta informação foi inserida no menu na aba ações ou através da aba ações no botão 'Purgar/Preencher'</td>
+ <td>idade da cânula/cateter- exibida no Nightscout se foi esta informação foi inserida no menu/separador ações ou através do separador ações no botão 'Purgar/Preencher'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -270,7 +270,7 @@
 </tr>
 <tr>
  <td><strong>HB</strong></td>
- <td>histórico da bomba (entrada na aba de tratamentos)</td>
+ <td>histórico da bomba (entrada no separador de tratamentos)</td>
  <td>&nbsp;</td>
  <td><a href="../Getting-Started/Screenshots.html#treatment">Capturas de ecrã</a></td>
 </tr>
@@ -306,7 +306,7 @@
 </tr>
 <tr>
  <td><strong>ISENSOR</strong></td>
- <td>idade do sensor - exibido no Nightscout se a informação foi inserida na aba / menu de ações</td>
+ <td>idade do sensor - exibido no Nightscout se a informação foi inserida no separador / menu de ações</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
