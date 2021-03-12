@@ -156,9 +156,9 @@
 </tr>
 <tr>
  <td><strong>Glimp</strong></td>
- <td>app to collect values from Freestyle Libre</td>
+ <td>Программа сбора данных об уровне сахара сенсора Freestyle Libre</td>
  <td>&nbsp;</td>
- <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout with Glimp</a> </td>
+ <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout c Glimp</a> </td>
 </tr>
 <tr>
  <td><strong>Heroku</strong></td>
@@ -167,94 +167,95 @@
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
 <tr>
- <td><strong>IC (or I:C)</strong></td>
- <td>insulin to carb ratio (How many carbs are covered by one unit of insulin?)</td>
+ <td><strong>IC (или I:C)</strong></td>
+ <td>Insulin:Carb - коэффициент пересчета инсулин-углеводы (сколько углеводов покрывается одной единицей инсулина).</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>IOB</strong></td>
- <td>insulin on board -  insulin active in your body</td>
+ <td> активный инсулин в крови</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>ISF</strong></td>
- <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
+ <td><strong>ISF (чувствительность к инсулину)</strong></td>
+ <td>фактор чувствительности к инсулину, ожидаемое снижение уровня глюкозы крови при введении одной единицы инсулина.</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>LGS</strong></td>
- <td>Low Glucose Suspend<br>AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
- <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objective 6</a></td>
+ <td>Приостановка подачи базального инсулина при падении ГК ниже заданного уровня. Но если глюкоза крови растет, алгоритм AAPS увеличит базу только если активный инсулин IOB имеет отрицательную величину (от предыдущего LGS), в противном случае скорость базала останется такой, как в выбранном вами профиле. Возможны временные пики вслед за мерами против гипогликемии без возможности увеличить базу на откате._.</td>
+ <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">цель 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>LineageOS</strong></td>
- <td>free and open-source operating system for smartphones etc.<br>alternative OS for smartphones not running Android 8.1 (Oreo)<br>(when using Accu-Chek Combo)</td>
+ <td>Бесплатная операционная система (ОС) с открытым кодом для смартфонов и других устройств. Альтернативная ОС для смартфонов, не поддерживающих Android 8.1 (Oreo). Используется для ПО закрытой петли для работы с помпой Accu-Chek Combo.</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pump</a></td>
 </tr>
 <tr>
- <td><strong>Log files</strong></td>
- <td>record of all AAPS actions (useful for trubbleshooting and debugging)</td>
+ <td><strong>Log files/Файлы журнала</strong></td>
+ <td>записи всех действий AAPS. Используется для выяснения, устранения проблем, отладки программного обеспечения.</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - log files</a></td>
+ <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - файлы журнала</a></td>
 </tr>
 <tr>
  <td><strong>maxIOB</strong></td>
- <td>safety feature - maximum total IOB AAPS can't go over</td>
+ <td>важная системная характеристика безопасности: максимально допустимый уровень инсулина в крови (IOB), выше которого AAPS прекращает ввод инсулина.</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td><strong>MiaoMiao</strong></td>
  <td>bluetooth-передатчик, использующий сенсор Freestyle Libre в качестве CGM</td>
- <td>BlueReader / Blucon Nightreader</td>
+ <td>BlueReader / Bluсon Nightreader</td>
  <td><a href="https://www.miaomiao.cool/">MiaoMiao</a></td>
 </tr>
 <tr>
  <td><strong>min_5m_carbimpact</strong></td>
- <td>saftey feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your bloods reactions</td>
+ <td>важная системная характеристика безопасности: минимальное время усваивания углеводов в тех случаях, когда усваивание не может быть динамически рассчитано на основе реакций крови</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - конфигуратор</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
- <td>open source project to access and report CGM data</td>
+ <td>ПО мониторинга уровня глюкозы систем с CGM. Проект с открытым программным кодом.</td>
  <td>Nightscout Reporter</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
 <tr>
- <td><strong>NS Client</strong></td>
- <td>part of AAPS to connect to your Nightscout site</td>
+ <td><strong>Клиент Nightscout</strong></td>
+ <td>клиентская часть ИПЖ для соединения с сервером (сайтом) Nightscout.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout Reporter</strong></td>
- <td>Tool from fellow looper to generate PDFs reports from Nightscout data</td>
+ <td>Средство генерации PDF отчетов из данных NightScout.</td>
  <td>Nightscout</td>
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
 <tr>
  <td><strong>Цели</strong></td>
- <td>learning program within AAPS guiding you step by step from open to closed loop</td>
+ <td>Программа обучения работы с ИПЖ, с пошаговой поддержкой перехода от открытой петли управления к закрытой.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
 </tr>
 <tr>
  <td><strong>OpenAPS</strong></td>
- <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pie)<br>AAPS uses some of the OpenAPS features</td>
+ <td>Открытая искусственная поджелудочная железа. ПО, работающая на мини-компьютерах (например, одноплатный компьютер RaspBerry PI). проект AAPS использует наработки проекта 
+OpenAPS.</td>
  <td>&nbsp;</td>
- <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
+ <td><a href="https://openaps.readthedocs.io">Документация OpenAPS</a></td>
 </tr>
 <tr>
  <td><strong>Открытый цикл</strong></td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
  <td>Closed Loop/Замкнутый цикл (петля, контур)</td>
- <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - конфигуратор</a></td>
 </tr>
 <tr>
  <td><strong>Oref0 / Oref1</strong></td>
@@ -266,7 +267,7 @@
  <td><strong>Peak time</strong></td>
  <td>time of maximum effect of insulin given</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - конфигуратор</a></td>
 </tr>
 <tr>
  <td><strong>PH</strong></td>
