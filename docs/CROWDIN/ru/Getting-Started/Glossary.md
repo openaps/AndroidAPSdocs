@@ -253,31 +253,31 @@ OpenAPS.</td>
 </tr>
 <tr>
  <td><strong>Открытый цикл</strong></td>
- <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
+ <td>система предложит корректировки, которые необходимо выполнить вручную на помпе</td>
  <td>Closed Loop/Замкнутый цикл (петля, контур)</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - конфигуратор</a></td>
 </tr>
 <tr>
  <td><strong>Oref0 / Oref1</strong></td>
- <td>sensitivity detection<br>"reference design implementation version 0/1" - the key algorithm behind OpenAPS</td>
+ <td>Определение чувствительности (к инсулину?). Ключевой алгоритм версии 0/1, используемый OpenAPS.</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - sensitivity detection</a></td>
+ <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Определение чувствительности</a></td>
 </tr>
 <tr>
- <td><strong>Peak time</strong></td>
- <td>time of maximum effect of insulin given</td>
+ <td><strong>Пиковое время</strong></td>
+ <td>Время максимальной активности - время, через которое эффект от введения инсулина становится максимальным.</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - конфигуратор</a></td>
 </tr>
 <tr>
- <td><strong>PH</strong></td>
- <td>pump history (entry in treatments tab)</td>
+ <td><strong>PH/История записей помпы</strong></td>
+ <td>история помпы (запись во вкладке назначений/лечения)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment">Снимки экрана</a></td>
 </tr>
 <tr>
  <td><strong>Прогнозирование</strong></td>
- <td>preditions for BG in the future based on different calculations</td>
+ <td>Прогнозы уровня ГК в будущем, основанные на разных алгоритмах расчета.</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
 </tr>
