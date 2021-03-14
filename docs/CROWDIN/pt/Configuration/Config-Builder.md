@@ -284,7 +284,7 @@ Escolha as quantidades padrão usando os três botões para purgar/preencher, de
 
 #### Range of visualization
 
-Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+Escolha os valores de glicose alta e baixa para o gráfico na visão geral do AndroidAPS e relógio inteligente. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
 
 #### Abreviar títulos dos separadores
 
