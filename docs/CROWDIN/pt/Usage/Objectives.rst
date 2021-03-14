@@ -1,9 +1,9 @@
 Objetivos
 **************************************************
 
-AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
+A AndroidAPS possui uma série de objetivos que precisam ser completados para o encaminhar pelos recursos e configurações de um loop seguro.  Eles garantem que configurou corretamente tudo o que foi detalhado nas seções acima e que entende o que o seu sistema está a fazer e por que assim pode confiar nele.
 
-If you are **upgrading phones** then you can `export your settings <../Usage/ExportImportSettings.html>`_ to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to `backup your settings <../Usage/ExportImportSettings.html>`_ frequently just in case.
+Se está **atualizando telefones**, então você pode `exportar as suas configurações <../Usage/ExportImportSettings.html>`_ para manter o seu progresso através dos objetivos. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to `backup your settings <../Usage/ExportImportSettings.html>`_ frequently just in case.
 
 If you want to go back in objectives see `explanation below <../Usage/Objectives.html#go-back-in-objectives>`_.
  
