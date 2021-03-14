@@ -1,13 +1,13 @@
-# Accessing logfiles
+# Aceder aos arquivos de registo
 
-* Connect phone to a computer in file transfer mode
-* Locate the log files in the AndroidAPS data directory
+* Ligue o telemóvel a um computador no modo de transferência de arquivos
+* Localize os arquivos de registo na pasta de dados da AndroidAPS
     
-    * The folder will be at a location similar to ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
-    * The naming of the root storage folder (1) may vary a little depending on the phone.
+    * A pasta estará num local similar a ***Armazenamento interno(1) / Android / data / info.nightscout.androidaps / arquivos***
+    * O nome da pasta de armazenamento raiz (1) pode variar um pouco dependendo do telemóvel.
 
 ![registos](../images/aapslog.png)
 
-* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any Log Viewer android app, or simply as plain text. 
-* Previous log files are zipped and stored in folders in date/time order. 
-* If you are sharing your log file in [gitter](https://gitter.im/MilosKozak/AndroidAPS) to talk about a potential bug, please unzip and upload the file dated before the error occurred.
+* O registo atual é um arquivo .log que pode ser visualizado de várias maneiras como [LogCat](https://developer.android.com/studio/debug/am-logcat.html) dentro do Android Studio, qualquer app android visualizadora de registos ou simplesmente como texto simples. 
+* Os arquivos de registo anteriores são zipados e armazenados em pastas por ordem de data/hora. 
+* Se estiver a compartilhar o seu arquivo de registos no [gitter](https://gitter.im/MilosKozak/AndroidAPS) para falar sobre um possível erro, por favor descompacte e envie o arquivo com data anterior à ocorrência do erro.
