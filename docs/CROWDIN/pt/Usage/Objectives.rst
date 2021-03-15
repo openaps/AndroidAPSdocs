@@ -42,8 +42,8 @@ Objetivo 3: Prove o seu conhecimento
 Objetivo 4: Iniciar um loop aberto
 ==================================================
 * Selecione Loop Aberto a partir de Preferências, ou pressionando e segurando o botão Loop em cima esquerda da tela inicial.
-* Work through the `Preferences <../Configuration/Preferences.html>`__ to set up for you.
-* Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Ensure this data shows in AndroidAPS and Nightscout.
+* "Navegue" pelas `Preferências <../Configuration/Preferences.html>`__ para configurar a APS para si.
+* Manualmente defina pelo menos 20 das basais temporárias sugeridas ao longo de um período de 7 dias; insira-os na sua bomba e confirme na AndroidAPS que as aceitou.  Garanta que esses dados estão registados na AndroidAPS e no Nightscout.
 * Enable `temp targets <../Usage/temptarget.html>`_ if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. 
 
 Reduce number of notifications
