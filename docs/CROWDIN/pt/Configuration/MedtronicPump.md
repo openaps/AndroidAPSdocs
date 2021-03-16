@@ -35,7 +35,7 @@ Se começou a utilizar o controlador Medtronic por favor adicione-se a esta [lis
 
 ## Configuração do Telefone / AndroidAPS
 
-- **Não emparelhe o Módulo BT/RF com o seu telefone.** Se você emparelhar o seu Módulo BT/RF com o telefone, o AndroidAPS não será capaz de encontrá-lo durante a configuração.
+- **Do not pair RileyLink with your Phone.** If you paired your RileyLink, then AndroidAPS won't be able to find it in configuration.
 - Desative a rotação automática no seu telefone (em alguns dispositivos a rotação automática reinicia as sessões de BT, o que não é desejável).
 - Poderá configurar a bomba no AndroidAPS de duas formas: 
 
@@ -56,7 +56,7 @@ Necessita configurar os seguintes itens: (ver foto acima)
 - **Máximo Bólus na Bomba (U)** (numa hora): Configure com o mesmo valor que foi inserido na bomba. Limita a quantidade de insulina do Bólus por hora. Caso tente injetar uma quantidade superior que o máximo definido, o Bólus não será injetado e um erro será retornado. Max that can be used is 25, please set correct value for yourself here so that you don't overdose.
 - **Máxima Basal na Bomba (U/h)**: Configure com o mesmo valor que foi inserido na bomba. Limita a quantidade de Basal por hora. Por exemplo, se pretender ter o máximo DBT configurado para 500% e o valor mais alto de Basal é de 1.5 U/h, então necessita de configurar a Máxima Basal de pelo menos 7.5 U/h. Se esta configuração não estiver correcta, i. e., se um dos valores de Basal for superior ao valor máximo definido a bomba retorna um erro.
 - **Tempo de espera para iniciar Bólus (s)**: Tempo de espera antes do valor do Bólus ser comunicado à bomba, para que possa ser cancelado se necessário. O cancelamento do Bólus quando está em execução na bomba não é suportado (em caso de necessidade suspender o Bólus directamente na bomba).
-- **Codificação Medtronic**: Esta é configuração que determina, se a codificação 4b6b utilizada para enviar comandos para a bomba será feita na AndroidAPS ou no Módulo BT/RF. Se tiver um Módulo BT/RF com uma versão firmware 2.x, por defeito será usada a codificação por Hardware (dispositivo conversor). No caso de versões de firmware 0.x esta configuração será ignorada.
+- **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. Se tiver um Módulo BT/RF com uma versão firmware 2.x, por defeito será usada a codificação por Hardware (dispositivo conversor). No caso de versões de firmware 0.x esta configuração será ignorada.
 - **Tipo de Bateria (Power View)**: Para visualizar tensão e a percentagem de energia da bateria da sua bomba, seleccione o tipo de bateria em utilização (atualmente são suportadas baterias de lítio, Alcalinas, NiZn e NiMH).
 - **Configuração do dispositivo conversor**: Permite procurar e emparelhar a AndroidAPS com o Módulo BT/RF
 - **Configure Basal temporária neutra** activar para prevenir um sinal sonoro e/ou vibração. Quando ativada, cancela a basal temporária antes de perfazer uma hora para evitar que as bombas Medtronic emitam um sinal sonoro e/ou vibrem.
