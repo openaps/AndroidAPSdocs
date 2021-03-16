@@ -15,7 +15,7 @@ Se começou a utilizar o controlador Medtronic por favor adicione-se a esta [lis
 ## Requisitos de hardware e software
 
 - **Telefone:** O controlador para a Medtronic deverá funcionar com qualquer telefone que suporte BLE. **IMPORTANTE: apesar do controlador funcionar corretamente em todos os telefones, a activação/desactivação do Bluetooth nem sempre funciona (necessária quando se perde a conexão com o RileyLink e o sistema não consegue recuperar automaticamente - poderá acontecer de quando em vez). É necessário um dispositivo com o Android 7.0 ou superior. Na pior das hipóteses poderá ser instalado no telefone o LineageOS 15.1 (requerido 15.1 ou inferior). Em telefones com Android 9 poderão existir alguns problemas de recuperar a ligação para o qual ainda não foi encontrada uma solução (a ativação/desativação do Bluetooth não parece funcionar em todos os modelos de telefone).**
-- **RileyLink/Gnarl/Emalink/OrangeLink:** Para comunicar com a bomba é necessário um Módulo BT/RF que converte os comandos BT do telefone em comandos RF (Radiofrequência) da bomba. O RileyLink/OrangeLink e o Emalink são exemplos de Módulos BT/RF e podem ser obtidos aqui [getrileylink.org](https://getrileylink.org/) e [ aqui](https://forms.gle/P87HucuygA2UZs5C7), respetivamente. Para um funcionamento correto, o Módulo BT/RF terá de ter a versão de firmware 0.9 ou superior (versões anteriores poderão não funcionar corretamente). Para o RileyLink/OrangeLink existem atualizações da versão de firmware disponíveis no site. Se pretender construir o seu Módulo BT/RF poderá tentar o Gnarl ([aqui](https://github.com/ecc1/gnarl)), que é um clone do RileyLink. 
+- **RileyLink/Gnarl:** For communication with Pump you need device that converts BT commands from Phone into RF commands that Pump understands. O RileyLink/OrangeLink e o Emalink são exemplos de Módulos BT/RF e podem ser obtidos aqui [getrileylink.org](https://getrileylink.org/) e [ aqui](https://forms.gle/P87HucuygA2UZs5C7), respetivamente. You need stable version of device, which is for older models firmware 0.9 (older versions might not work correctly) or for newer models 2.2 (there are options to upgrade available on RL site). Se pretender construir o seu Módulo BT/RF poderá tentar o Gnarl ([aqui](https://github.com/ecc1/gnarl)), que é um clone do RileyLink. 
 - **Bomba:** O controlador funciona apenas com os seguintes modelos e versões de firmware: 
     - 512/712
     - 515/715
@@ -42,7 +42,7 @@ Se começou a utilizar o controlador Medtronic por favor adicione-se a esta [lis
 1. Utilizando o Assistente (numa nova instalação)
 2. Diretamente nas Configurações (seleccionando configuração do controlador Medtronic)
 
-Se fizer uma nova instalação o Assistente iniciar-se-à automaticamente. Por vezes, se a conexão BT não estiver a funcionar correctamente (incapaz de se conectar à bomba), poderá não ser possível concluir a configuração. Neste caso selecione bomba virtual e, após o Assistente terminar, utilize a opção 2 para conectar o AndroidAPS à bomba.
+Se fizer uma nova instalação o Assistente iniciar-se-à automaticamente. Por vezes, se a conexão BT não estiver a funcionar correctamente (incapaz de se conectar à bomba), poderá não ser possível concluir a configuração. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
 
 ![MDT Settings](../images/Medtronic01a.png)
 
@@ -56,9 +56,9 @@ Necessita configurar os seguintes itens: (ver foto acima)
 - **Máximo Bólus na Bomba (U)** (numa hora): Configure com o mesmo valor que foi inserido na bomba. Limita a quantidade de insulina do Bólus por hora. Caso tente injetar uma quantidade superior que o máximo definido, o Bólus não será injetado e um erro será retornado. Max that can be used is 25, please set correct value for yourself here so that you don't overdose.
 - **Máxima Basal na Bomba (U/h)**: Configure com o mesmo valor que foi inserido na bomba. Limita a quantidade de Basal por hora. Por exemplo, se pretender ter o máximo DBT configurado para 500% e o valor mais alto de Basal é de 1.5 U/h, então necessita de configurar a Máxima Basal de pelo menos 7.5 U/h. Se esta configuração não estiver correcta, i. e., se um dos valores de Basal for superior ao valor máximo definido a bomba retorna um erro.
 - **Tempo de espera para iniciar Bólus (s)**: Tempo de espera antes do valor do Bólus ser comunicado à bomba, para que possa ser cancelado se necessário. O cancelamento do Bólus quando está em execução na bomba não é suportado (em caso de necessidade suspender o Bólus directamente na bomba).
-- **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. Se tiver um Módulo BT/RF com uma versão firmware 2.x, por defeito será usada a codificação por Hardware (dispositivo conversor). No caso de versões de firmware 0.x esta configuração será ignorada.
-- **Tipo de Bateria (Power View)**: Para visualizar tensão e a percentagem de energia da bateria da sua bomba, seleccione o tipo de bateria em utilização (atualmente são suportadas baterias de lítio, Alcalinas, NiZn e NiMH).
-- **Configuração do dispositivo conversor**: Permite procurar e emparelhar a AndroidAPS com o Módulo BT/RF
+- **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. If you have a RileyLink with 2.x firmware, default value will be to use Hardware encoding (= done by RileyLink), if you have 0.x firmware this setting will be ignored.
+- **Battery Type (Power View)**: If you want to see battery power in your pump, you need to select type of battery you use (currently supported Lithium or Alkaline), this will in turn change display to display calculated percent and volts.
+- **RileyLink Configuration**: This will find your RileyLink/GNARL device.
 - **Configure Basal temporária neutra** activar para prevenir um sinal sonoro e/ou vibração. Quando ativada, cancela a basal temporária antes de perfazer uma hora para evitar que as bombas Medtronic emitam um sinal sonoro e/ou vibrem.
 
 ## Separador MEDTRONIC (MDT)
@@ -67,7 +67,7 @@ Necessita configurar os seguintes itens: (ver foto acima)
 
 No separador MEDTRONIC encontram-se várias linhas que mostram o estado actual da bomba e respectiva conexão.
 
-- **Estado Módulo BT/RF**: Mostra o estado da conexão entre a AndroidAPS, Módulo BT/RF e bomba. O telefone deve estar conectado o tempo todo ao Módulo BT/RF.
+- **RileyLink Status**: It shows status of RileyLink connection. O telefone deve estar conectado o tempo todo ao Módulo BT/RF.
 - **Estado da Bomba**: Indica o estado da conexão da bomba, podendo apresentar vários valores: o símbolo "dormir" indica uma conexão existente não ativa; "A acordar" indica que a AndroidAPS está a tentar conectar com a bomba antes da execução de um comando; ou outra indicação (ex.: Obter Tempo, Ativar DBT, etc.).
 - **Battery**: Shows battery status depening on your configuration. This can be simple icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage.
 - **Last connection**: Time when last connection to pump was successful.
