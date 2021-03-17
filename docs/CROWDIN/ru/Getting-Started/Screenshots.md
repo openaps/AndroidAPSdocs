@@ -360,7 +360,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * Allows you to ride back in AAPS hsitory.
 
-#### TDD
+#### TDD/общая суточная доза
 
 * Total daily dose = bolus + basal per day
 * Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
