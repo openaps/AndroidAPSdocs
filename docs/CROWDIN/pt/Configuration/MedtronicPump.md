@@ -52,7 +52,7 @@ Necessita configurar os seguintes itens: (ver foto acima)
 - **Modelo de Bomba**: O modelo de bomba que vai ser utilizada (por exemplo 522). 
 - **Frequência da Bomba**: Existem duas versões de cada modelo de bomba Medtronic que transmitem em duas frequências distintas (se não tem certeza qual a frequência utilizada pela sua bomba, veja [FAQ](../Configuration/MedtronicPump#faq)): 
     - para os EUA & Canadá, a frequência utilizada é 916 Mhz
-    - para o resto do mundo, a frequência utilizada é 868 Mhz
+    - for Worldwide, frequency used is 868 Mhz
 - **Máximo Bólus na Bomba (U)** (numa hora): Configure com o mesmo valor que foi inserido na bomba. Limita a quantidade de insulina do Bólus por hora. Caso tente injetar uma quantidade superior que o máximo definido, o Bólus não será injetado e um erro será retornado. Max that can be used is 25, please set correct value for yourself here so that you don't overdose.
 - **Máxima Basal na Bomba (U/h)**: Configure com o mesmo valor que foi inserido na bomba. Limita a quantidade de Basal por hora. Por exemplo, se pretender ter o máximo DBT configurado para 500% e o valor mais alto de Basal é de 1.5 U/h, então necessita de configurar a Máxima Basal de pelo menos 7.5 U/h. Se esta configuração não estiver correcta, i. e., se um dos valores de Basal for superior ao valor máximo definido a bomba retorna um erro.
 - **Tempo de espera para iniciar Bólus (s)**: Tempo de espera antes do valor do Bólus ser comunicado à bomba, para que possa ser cancelado se necessário. O cancelamento do Bólus quando está em execução na bomba não é suportado (em caso de necessidade suspender o Bólus directamente na bomba).
