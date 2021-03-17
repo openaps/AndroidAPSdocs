@@ -67,7 +67,7 @@ Necessita configurar os seguintes itens: (ver foto acima)
 
 No separador MEDTRONIC encontram-se várias linhas que mostram o estado actual da bomba e respectiva conexão.
 
-- **RileyLink Status**: It shows status of RileyLink connection. O telefone deve estar conectado o tempo todo ao Módulo BT/RF.
+- **Estado RileyLink**: Mostra o estado da conexão entre a AndroidAPS, o RileyLink e a bomba. O telefone deve estar conectado o tempo todo ao Módulo BT/RF.
 - **Estado da Bomba**: Indica o estado da conexão da bomba, podendo apresentar vários valores: o símbolo "dormir" indica uma conexão existente não ativa; "A acordar" indica que a AndroidAPS está a tentar conectar com a bomba antes da execução de um comando; ou outra indicação (ex.: Obter Tempo, Ativar DBT, etc.).
 - **Battery**: Shows battery status depening on your configuration. This can be simple icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage.
 - **Last connection**: Time when last connection to pump was successful.
