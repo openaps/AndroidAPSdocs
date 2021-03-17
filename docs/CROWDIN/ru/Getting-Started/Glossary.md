@@ -283,49 +283,49 @@ OpenAPS.</td>
 </tr>
 <tr>
  <td><strong>Профиль</strong></td>
- <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
+ <td>Базовые настройки компенсации (базальный уровень, ДДИ, ИГ, целевой уровень ГК). Может быть установлен непосредственно на ИПЖ или через Nightscout.</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profile">Wiki - профиль</a></td>
 </tr>
 <tr>
  <td><strong>Profile switch/смена профиля</strong></td>
- <td>(temporary) change of profile used or percentual increase/decrease</td>
+ <td>(временное) изменение профиля или процентное увеличение/уменьшение</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
 </tr>
 <tr>
  <td><strong>RES</strong></td>
- <td>status light overdue reservoir change on homescreen</td>
+ <td>меняющая цвет надпись состояния наполненности резервуара на главном экране</td>
  <td>BAT / CAN / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
- <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz wireless communication (used for old Medtronic pumps)</td>
+ <td>Аппаратное устройство с открытым кодом для соединения устройств с Bluetooth Low Energy (BLE) с устройствами на частоте 916 мегагерц (используется для старых помп Medtronics).</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>SAGE</strong></td>
- <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
+ <td><strong>SAGE/Возраст сенсора</strong></td>
+ <td>возраст сенсора - отображается на сайте Nightscout, если информация введена на вкладке портала терапии AAPS</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>SEN</strong></td>
- <td>status light sensor change on homescreen</td>
+ <td>меняющая цвет надпись состояния просроченного/непросроченного сенсора на главном экране</td>
  <td>BAT / CAN / RES</td>
  <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
 </tr>
 <tr>
- <td><strong>Sensivity detection</strong></td>
+ <td><strong>Определение чувствительности</strong></td>
  <td>расчет чувствительности к инсулину с учетом физической нагрузки, гормонального фона и пр.</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
- <td><strong>Sensor noise</strong></td>
- <td>unstable CGM readings leading to "jumping" values</td>
+ <td><strong>Sensor noise/шум сенсора</strong></td>
+ <td>нестабильные данные НМГ, проявляющиеся в больших колебаниях значений ГК.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
 </tr>
