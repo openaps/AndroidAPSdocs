@@ -331,61 +331,61 @@ OpenAPS.</td>
 </tr>
 <tr>
  <td><strong>Супер микро болюс SMB</strong></td>
- <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
- <td>UAM</td>
+ <td>сверхмалый болюс <br>, новая технология быстрой подстройки уровня ГК</td>
+ <td>незапланированный прием пищи UAM</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td><strong>Super bolus</strong></td>
- <td>shift of basal to bolus insulin for faster BG adjustment</td>
+ <td><strong>Super bolus/Суперболюс</strong></td>
+ <td>переход от базальной к болюсной компенсации для быстрой коррекции ГК.</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
 </tr>
 <tr>
- <td><strong>TBB</strong></td>
- <td>total base basal (sum of basal rate within 24 hours)</td>
+ <td><strong>Сумма базала/TBB</strong></td>
+ <td>Общая базальная база (суммарный обьем базального инсулина в течении 24 часов)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TBR</strong></td>
- <td>temporary basal rate</td>
+ <td><strong>Временный базал/TBR</strong></td>
+ <td>временные базальная скорость</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TDD</strong></td>
- <td>total daily dose (bolus + basal per day)</td>
+ <td><strong>TDD/общая суточная доза</strong></td>
+ <td>общая дневная доза (инсулина)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TT</strong></td>
- <td>temporary target<br>temporary increase/decrease of BG target (range)</td>
+ <td><strong>Временная цель (ВЦ, ТТ)</strong></td>
+ <td>временная допустимое отклонение ГК от заданного целевого значения.</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
+ <td><a href="../Usage/temptarget.html#temp-targets">Wiki - временные цели</a></td>
 </tr>
 <tr>
- <td><strong>UAM</strong></td>
- <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
+ <td><strong>незапланированный прием пищи UAM</strong></td>
+ <td>Незафиксированный прием пищи - обнаружение значительного повышения уровня глюкозы, как следствие приема пищи, выброса адреналина или других воздействий и компенсация через механизм СМБ.</td>
  <td>Супер микро болюс SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td><strong>Virtual pump</strong></td>
- <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
+ <td><strong>Virtual pump/виртуальная помпа</strong></td>
+ <td>возможность применить ИПЖ без PWD ( помпа без драйвера ИПЖ) в AAPS</td>
  <td>Открытый цикл</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>Фоновый рисунок</strong></td>
- <td>AndroidAPS background image</td>
+ <td>Фоновое изображение androidAPS</td>
  <td></td>
- <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>
+ <td><a href="../Getting-Started/Phones.html#phone-background">см. страницу телефонов</a></td>
 </tr>
 <tr>
  <td><strong>xDrip / xDrip+</strong></td>
- <td>open source software to read CGM systems</td>
+ <td>программное обеспечение для чтения сенсора НМГ.</td>
  <td>&nbsp;</td>
  <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="https://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
