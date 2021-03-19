@@ -3,7 +3,7 @@ Freestyle Libre 1
 
 Чтобы использовать Libre в качестве постоянного мониторинга, который получает новые значения гликемии каждые 5 минут, нужно сначала приобрести один из адаптеров NFC - Bluetooth:
 
-* MiaoMiao Reader (version 1 or 2) `https://www.miaomiao.cool/ <https://www.miaomiao.cool/>`_
+* MiaoMiao Reader (версия 1 или 2) `https://www.miaomiao.cool/ <https://www.miaomiao.cool/>`_
 * Blucon Nightrider `https://www.ambrosiasys.com/our-products/blucon/ <https://www.ambrosiasys.com/our-products/blucon/>`_
 * Bubble `https://bubbleshop.eu/ <https://bubbleshop.eu/>`_
 
