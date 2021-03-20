@@ -234,7 +234,7 @@ Data de lançamento: 26-10-2019
 
 .. _important-notes-2-5-0:
 
-Important notes
+Notas importantes
 --------------------------------------------------
 * Please use `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ or newer to `build the apk <../Installing-AndroidAPS/Building-APK.html>`_ or `update <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * If you are using xDrip `identify receiver <../Configuration/xdrip.html#identify-receiver>`_ must be set.
