@@ -97,5 +97,5 @@ AndroidAPS основывается на том же основном алгор
 
 * [Полная документация по AndroidAPS](../index)
 * Справочник [ Эталонный дизайн Open](https://OpenAPS.org/reference-design/), в котором объясняются принципы работы и безопасности OpenAPS: https://openaps.org/reference-design/
-* The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html) 
-  * More [details on OpenAPS calculations](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+* [Полная документация OpenAPS](https://openaps.readthedocs.io/en/latest/index.html) 
+  * Подробнее [о расчетах в OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
