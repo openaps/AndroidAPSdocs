@@ -6,97 +6,97 @@
 
 Это первый экран, который вы увидите, когда откроете AndroidAPS, и он содержит большую часть повседной информации.
 
-### Section A - Tabs
+### Раздел А - Вкладки
 
-* Navigate between the various AndroidAPS modules.
-* Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder#tab-or-hamburger-menu).
+* Переход между различными модулями AndroidAPS.
+* Также можно переходить между экранами свайпом влево или вправо.
+* Отображаемые вкладки можно выбрать в [Конфигураторе](../Configuration/Config-Builder#tab-or-hamburger-menu).
 
-### Section B - Profile & target
+### Раздел B - Профиль & Цель
 
-#### Current Profile
+#### Текущий профиль
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
-* Current profile is displayed in the left bar.
-* Short press profile bar to view profile details
-* Long press profile bar to [switch between different profiles](../Usage/Profiles#profile-switch).
-* If profile switch was made with duration remaining time in minutes is shown in brackets.
+* Текущий профиль отображается на левой панели.
+* Короткое нажатие открывает подробности о текущем профиле
+* Долгое нажатие позволяет [переключаться между разными профилями](../Usage/Profiles#profile-switch).
+* Если профиль был изменен на время - в скобках отображается оставшееся время его активности в минутах.
 
-#### Target
+#### Целевое значение ГК
 
 ![Temp target remaining duration](../images/Home2020_TT.png)
 
-* Current target blood glucose level is displayed in the right bar.
-* Short press target bar to set a [temporary target](../Usage/temptarget.md).
-* If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
+* Текущее целевое значение глюкозы крови (ГК) отображается на правой панели.
+* Короткое нажатие позволяет установить [временную цель](../Usage/temptarget.md).
+* Если установлена временная цель - панель будет желтой, а в скобках отображается оставшееся время ее активности в минутах.
 
-#### Visualization of Dynamic target adjustment
+#### Визуализация динамического изменения цели
 
 ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
-* AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
-* Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
-   * "sensitivity raises target" and/or 
-   * "resistance lowers target" 
-* If AAPS detects resistance or sensitivity the target will change from what is set from profile. 
-* When it alters the target glucose background will change to green.
+* AAPS может динамически изменять установленную цель основываясь на чувствительности если используется алгоритм СМБ (SMB).
+* Активируйте один или оба [варианта](../Configuration/Preferences#openaps-smb-settings): 
+   * "чувствительность повышает цель" и/или 
+   * "сопротивляемость понижает цель" 
+* Если AAPS обнаружит повышенную сопротивляемость или чувствительность - цель будет изменена. 
+* При таком изменении панель будет зеленой.
 
-### Section C - BG & loop status
+### Раздел C - ГК & статус петли
 
-#### Current blood glucose
+#### Текущий уровень глюкозы крови
 
-* Latest blood glucose reading from your CGM is shown on the left side.
-* Color of the BG value reflects the status to the defined [range](../Configuration/Preferences#range-for-visualization). 
-   * green = in range
-   * red = below range
-   * yellow = above range
-* The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
+* Последнее значение ГК, переданное вашим НМГ, отображается в левой части экрана.
+* Цвет показаний ГК соответствует настроенному [даипазону](../Configuration/Preferences#range-for-visualization): 
+   * зеленый = в заданном диапазоне
+   * красный = ниже заданного диапазона
+   * желтый = выше заданного диапазона
+* Сероватый блок в центре экрана отображает изменение текущего уровня ГК относительно предыдущего чтения, и изменение за последние 15 и 40 минут.
 
-#### Loop status
+#### Статус цикла
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Статус цикла](../images/Home2020_LoopStatus.png)
 
-* A new icon shows loop status:
+* Новые иконки отображают статус цикла:
    
-   * green circle = loop running
-   * green circle with dotted line = [low glucose suspend (LGS)](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
-   * red circled = loop disabled (not working permanently)
-   * yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-   * grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-   * Orange circle = super bolus running - remaining time is shown below icon
-   * blue circle with dotted line = open loop
+   * зеленый круг = активна замкнутая петля
+   * зеленый круг с пунктирной линией =[приостановка помпы на низкой ГК (LGS)](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * красный круг = цикл деактивирован (постоянно отключен)
+   * желтый круг = цикл приостановлен (временно приостановлен, но базальный инсулин будет подаваться) - оставшееся время паузы отображается под иконкой
+   * серый круг = помпа отключена (временно отключена любая подача инсулина) - оставшееся время остановки отображается под иконкой
+   * оранжевый круг = запущен суперболюс - оставшееся время отображаешься под иконкой
+   * синий круг с пунктирной линией = активна открытая петля
 
-* Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
+* Короткое или длинное нажатие на иконку откроет диалоговое окно для переключения между режимами петли (Закрытая, Предотвращение низкой ГК, Открытая или Отключена), для отключения / возобновления цикла или отключения / подключения помпы обратно.
    
-   * If short press on Loop icon, a validation is required after selection in Loop Dialog
+   * Если диалоговое окно было вызвано которким нажатием - после смены режима появится запрос на подтверждение. Если долгим нажатием - смена режима применится сразу.
    
    ![Loop status menu](../images/Home2020_Loop_Dialog.png)
 
-### Section D - IOB, COB, BR and AS
+### Раздел D - IOB, COD, BR и AS
 
 ![Section D](../images/Home2020_TBR.png)
 
-* Syringe: insulin on board (IOB) - amount of active insulin inside your body
+* Иконка шприца: инсулин "на борту" (IOB) - количество активного инсулина в теле
    
-   * The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
-   * IOB may be negative if there have recently been periods of reduced basal.
-   * Press the icon to see the split of bolus and basal insulin
+   * Значение активного инсулина IOB будет равно нулю, если активна только база текущего профиля и нет остаточного инсулина от предыдущих болюсов. 
+   * IOB может быть отрицательным если был период с пониженным относительно текущего профиля базалом.
+   * Нажмите на иконку (только короткое нажатие), чтобы увидеть как IOB распределяется между базой и болюсом.
 
-* Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
+* Иконка колоска: [углеводы "на борту"](../Usage/COB-calculation.rst) - количество еще не усвоенных углеводов из тех, чтоб были введены ранее. Иконка мерцает, если необходимо съесть дополнительные углеводы.
 
-* Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%) 
-   * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
-* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features#autosens) status (enabled or disabled) and value is shown below icon
+* Иконка с фиолетовой линией: базальная скорость - иконка изменяется в соответствии с текущими настройками ВБС (прямая линия при базе 100%) 
+   * Нажмите на иконку (только короткое нажате), чтобы увидеть подробности текущего ВБС (текущий базал, значение ВБС, время начала, остаток/общая продолжительность в минутах)
+* Иконка со стрелочками вверх и вниз: отображает текущий статус Автосенса (AS, Autosens) (включен или отключен) и его значение
 
-#### Carbs required
+#### Требуются углеводы
 
-![Carbs required](../images/Home2020_CarbsRequired.png)
+![Требуются углеводы](../images/Home2020_CarbsRequired.png)
 
-* Carbs suggestions are given when the reference design detects that it requires carbs.
-* This is when the oref algorithm thinks I can't rescue you by 0 (zero) temping and you will need carbs to fix.
-* The carb notifications are much more sophisticated than the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
-* Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+* Требование углеводов появляется, когда расчеты определяют их недостаток.
+* Это происходит, когда алгоритм Oref думает: "Я не спасу тебя отключением всего инсулина и тебе необходимы углеводы, чтобы не загиповать". 
+* Уведомления об углеводах значительно сложнее, чем калькулятор болюса. Вы можете увидеть требование углеводов даже когда калькулятор болюса не показывает нехватку углеводов.
+* При желании уведомления об углеводах могут быть переданы в Nightscout. В этом случае сработают стандартные настройки оповещения NS. 
 
 ### Section E - Status lights
 
