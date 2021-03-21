@@ -6,7 +6,7 @@
 
 ## Важные Примечания
 
-* Please use **[Android Studio Version 4.1.1](https://developer.android.com/studio/)** or newer to build the apk.
+* Используйте **[ Android Studio версии 4.1.1 ](https://developer.android.com/studio/)** или новее для построения apk.
 * [Windows 10 для 32-разрядных систем](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) не поддерживается в Android Studio 4.1.1.
 
 ** Конфигурация по требованию ** не поддерживается текущей версией модуля Android Gradle!
@@ -95,112 +95,112 @@ Cледующие снимки экрана были сделаны c Android St
 * Нажмите на маленький треугольник рядом с Контролем Версий (1.) чтобы открыть подменю.
 * Нажмите Git (2.).
 * Убедитесь, что выбран метод обновления "Слияние" (merge) (3.).
-* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
+* Проверьте, может ли Android Studio найти путь к файлу git.exe автоматически, нажав кнопку "Тест" (4.)
     
-    ![Android Studio settings](../images/AndroidStudio361_09.png)
+    ![Параметры Android Studio](../images/AndroidStudio361_09.png)
 
-* If automatic setting is successful git version will be displayed.
+* Если автоматическая настройка будет успешной, то будет показана версия git.
 
-* Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
+* Нажмите кнопку "OK" в диалоговом окне (1.) и "OK" в окне параметров (2.).
     
-    ![Automatic git installation succeeded](../images/AndroidStudio361_10.png)
+    ![Автоматическая установка git успешно выполнена](../images/AndroidStudio361_10.png)
 
-* In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
+* В случае, если файл git.exe не найден, нажмите кнопку "OK" в диалоговом окне (1), а затем кнопку с тремя точками (2.).
 
-* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where it can be found. Вы ищете файл git.exe, находящийся в папке \bin\.
-* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
-* Close settings window by clicking "OK" button (5.).
+* Используйте функцию [ поиск ](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) в проводнике Windows для поиска "git.exe", если вы не уверены в том, где его можно найти. Вы ищете файл git.exe, находящийся в папке \bin\.
+* Выберите путь к файлу git.exe и убедитесь, что вы выбрали папку ** \bin\ ** (3.) и нажмите кнопку "OK" (4).
+* Закройте окно параметров, нажав кнопку "OK" (5.).
     
-    ![Automatic git installation failed](../images/AndroidStudio361_11.png)
+    ![Автоматическая установка git не выполнена](../images/AndroidStudio361_11.png)
 
-* **Reboot your computer to update system environment.**
+* **Перезагрузите компьютер, чтобы обновить системную среду.**
 
 ### Mac
 
-* Any git version should work. For example <https://git-scm.com/download/mac>.
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* If you install git via homebrew there is no need to change any preferences. На всякий случай: Их можно найти здесь: Android Studio - Настройки.
+* Любая версия git должна работать. Например <https://git-scm.com/download/mac>.
+* Используйте homebrew для установки git: ```$ brew install git```.
+* Подробности об установке git см. в [официальной git документации](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Если вы устанавливаете git через homebrew, то нет необходимости изменять какие-либо настройки. На всякий случай: Их можно найти здесь: Android Studio - Настройки.
 
 ## Скачайте код AndroidAPS
 
-* **If you haven't already rebooted your computer after setting git path in preferences do it now. System environment must be updated.**
+* **Если вы еще не перезагрузили компьютер после настройки пути к git в параметрах, сделайте это сейчас. Необходимо обновить системную среду.**
 
-* There are two options to start a new project:
+* Существует два варианта запуска нового проекта:
     
-    * On the Android Studio welcome screen click "Get from version control"
+    * На экране приветствия Android Studio нажмите "Получить из системы управления версиями"
         
-        ![Check out project from version control from welcome screen](../images/AndroidStudio_GetFromVersionControl.PNG)
+        ![Извлечение проекта из системы управления версиями окна приветствия](../images/AndroidStudio_GetFromVersionControl.PNG)
     
-    * If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.)
+    * Если вы уже открыли Android Studio и не видите экран приветствия, то выберите File (1.) > New (2.) > Project from Version Control... (3.)
         
-        ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
+        ![Извлечение проекта из системы управления версиями в Android Studio](../images/AndroidStudio_FileNew.PNG)
 
-* Fill in the URL to the main AndroidAPS repository (https://github.com/nightscout/AndroidAPS) (1.).
+* Заполните URL-адрес главного репозитория AndroidAPS ("https://github.com/nightscout/AndroidAPS") и нажмите "clone" (клонировать).
 
-* Choose the directory where you want to save the cloned code. (2.)
-* Click button "Clone" (3.).
+* Выберите каталог для сохранения клонированного кода. (2.)
+* Нажмите кнопку "Клонировать" (3.).
     
-    ![Clone repository](../images/AndroidStudio_NewURL.PNG)
+    ![Клонирование репозитория](../images/AndroidStudio_NewURL.PNG)
 
-* Do not click "Background" while repository is cloned!
+* Не нажимайте "Background", пока клонируется репозиторий!
     
-    ![No background action](../images/AndroidStudio361_15.png)
+    ![Нет фонового действия](../images/AndroidStudio361_15.png)
 
-* After repository is cloned successfully open your local copy by clicking "Yes".
+* После того, как репозиторий клонирован успешно, откройте локальную копию, нажав кнопку "Да".
     
-    ![Open repository](../images/AndroidStudio361_16.png)
+    ![Открытие репозитория](../images/AndroidStudio361_16.png)
 
-* In the lower right corner you will see the information that Android Studio is running background tasks.
+* В правом нижнем углу появится информация о том, что в Android Studio выполняются фоновые задачи.
     
-    ![Background tasks](../images/AndroidStudio361_17.png)
+    ![Фоновые задания](../images/AndroidStudio361_17.png)
 
-* Grant access if your firewall is asking for permission.
+* Предоставьте доступ, если ваш брандмауэр просит разрешения.
     
-    ![Firewall permission java](../images/AndroidStudio361_18.png)
+    ![Разрешение брандмауэра (Java)](../images/AndroidStudio361_18.png)
 
-* Once the background tasks are finished you will probably see the following error message:
+* После завершения фоновых задач вы, вероятно, увидите следующее сообщение об ошибке:
     
     ![SDK licence](../images/AndroidStudio361_19.png)
 
 ## Загрузите Android SDK
 
-* Click File > Settings.
+* Нажмите Файл > Настройки.
     
     ![Open settings](../images/AndroidStudio361_20.png)
 
-* Click the small triangle next to Appearance & Behaviour (1.).
+* Нажмите на маленький треугольник рядом с Appearance & Behaviour (1.).
 
-* Click the small triangle next to System Settings (2.) and select Android SDK (3.)
-* Check the box left of "Android 9.0 (Pie)" (4.) (API Level 28).
+* Щелкните на небольшом треугольнике рядом с System Settings (2.) и выберите Android SDK (3.)
+* Установите флажок слева от "Android 9.0 (Pie)" (4.) (API Level 28).
     
     ![SDK settings](../images/AndroidStudio361_21.png)
 
-* Confirm changes by clicking OK.
+* Подтвердите изменения, нажав кнопку OK.
     
     ![Confirm SDK changes](../images/AndroidStudio361_22.png)
 
-* Accept licence agreement (1.) and click "Next" (2.).
+* Примите лицензионное соглашение (1.) и нажмите "Далее" (2.).
     
     ![Accept SDK licence](../images/AndroidStudio361_23.png)
 
-* Wait until installation is finished.
+* Дождитесь завершения установки.
     
     ![Wait during SDK installation](../images/AndroidStudio361_24.png)
 
-* When SDK installation is completed the "Finish" button will turn blue. Click this button.
+* После завершения установки SDK кнопка "Finish" станет синей. Нажмите на кнопку.
     
     ![Finish SDK installation](../images/AndroidStudio361_25.png)
 
-* Android Studio might recommend to update the gradle system. **Never update gradle!** This might lead to difficulties!
+* Android Studio может рекомендовать обновить систему gradle. **Не обновляйте gradle!** Это может привести к трудностям!
 
-* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1.) and in the dialog box on "Don't remind me again for this project" (2.).
+* Если вы видите информацию в нижней правой части окна Android Studio, что модуль Android Gradile готов к обновлениям, щелкните по тексту "update" (1.) и в диалоговом окне выберите "Don't remind me again for this project" (2.).
     
     ![No cradle update](../images/AndroidStudio361_26.png)
 
 ## Создание подписанного APK
 
-Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Подписание означает, что вы подписываете созданное вами приложение, но цифровым способом, как цифровым отпечатком пальца в самом приложении. Это необходимо потому, что Android имеет правило, согласно которому принимается только подписанный код для запуска по соображениям безопасности. Для получения дополнительной информации перейдите по [ этой ссылке](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Нажмите "Build" в строке меню и выберите "Generate Signed Bundle / APK...".
     
@@ -210,31 +210,31 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![Apk вместо пакета](изображение::../images/AndroidStudio361_28.png)
 
-* Make sure that module is set to "app" (1.).
+* Убедитесь, что модуль имеет значение "app" (1.).
 
-* Click "Create new..." (2.) to start creating your key store.
+* Нажмите "Create new" (cоздать новый...) для создания магазина ключей.
     
-    A key store in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords.
+    В этом случае магазин ключей является всего лишь файлом, в котором хранится информация о цифровой подписи. Он зашифрован и информация защищена паролями.
     
     ![Create key store](../images/AndroidStudio361_29.png)
 
-* Click the folder symbol (1.) to select your key store path.
+* Нажмите на символ папки (1.), чтобы выбрать путь к хранилищу ключей.
 
-* Select the path where your key store shall be saved (2.). **Do not save in same folder as project. You must use a different directory!** One option might be your home folder.
-* Type a file name for your key store (3.).
-* Click "OK" (4.).
-* Passwords for key store and key do not have to be very sophisticated. Make sure to remember those or make a note in a safe place. In case you will not remember your passwords in the future you see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
-* Enter (5.) and confirm (6.) the password for your key store.
-* Do the same for your key (7. + 8.).
-* Validity (9.) is 25 years by default. You do not have to change the default value.
-* First and last name must be entered (10.). All other information is optional.
-* Click "OK" (11.) when you are done.
+* Выберите путь к хранилищу ключей (2.). **Не сохраняйте в той же папке, что и проект. Необходимо использовать другой каталог! ** Одна из опций может быть ваша домашняя папка.
+* Введите имя файла для хранилища ключей (3).
+* Нажмите "OK" (4.).
+* Пароли для хранилища ключей и ключа не должны быть очень сложными. Обязательно запомните их или запишите в безопасное место. В случае, если вы не запомните пароли смотрите [ устранение неполадок для потерянных ключей ](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Введите (5.) и подтвердите (6.) пароль для хранилища ключей.
+* Сделайте то же самое для ключа (7. + 8.).
+* Срок действия (9.) по умолчанию составляет 25 лет. Изменять значение по умолчанию не требуется.
+* Необходимо ввести имя и фамилию (10). Вся остальная информация необязательна.
+* Когда закончите, нажмите кнопку "OK" (11.).
     
     ![Key store path](../images/AndroidStudio361_30.png)
 
-* Make sure the box to remember passwords is checked (1.). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AndroidAPS version).
+* Убедитесь, что поле для запоминания паролей отмечено (1.). Так что вам не нужно вводить их снова при следующей сборке apk (то есть при обновлении до новой версии AndroidAPS).
 
-* Click "Next" (2.).
+* Нажмите "Далее" (2.).
     
     ![Remember passwords](../images/AndroidStudio361_31.png)
 
@@ -268,7 +268,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 ## Идентифицируйте ресивер при использовании xDrip+
 
-[See xDrip+ page](../Configuration/xdrip#identify-receiver)
+[Смотрите страницу xDrip+](../Configuration/xdrip#identify-receiver)
 
 ## Устранение неполадок
 
