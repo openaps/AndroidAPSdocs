@@ -98,16 +98,16 @@
 * Уведомления об углеводах значительно сложнее, чем калькулятор болюса. Вы можете увидеть требование углеводов даже когда калькулятор болюса не показывает нехватку углеводов.
 * При желании уведомления об углеводах могут быть переданы в Nightscout. В этом случае сработают стандартные настройки оповещения NS. 
 
-### Section E - Status lights
+### Раздел E- Индикаторы состояния
 
 ![Section E](../images/Home2020_StatusLights.png)
 
-* Status lights give a visual warning for 
-   * Cannula age
-   * Insulin age (days reservoir is used)
-   * Reservoir level (units)
-   * Sensor age
-   * Battery age and level (%)
+* Индикаторы состояния сообщают о 
+   * Времени работы катетера помпы
+   * Времени работы инсулина в резервуаре помпы
+   * Уровень заполнения резервуара (единицы)
+   * Времени работы сенсора мониторинга ГК
+   * Время работы и уровень батареи (%)
 * If threshold warning is exceeded, values will be shown in yellow.
 * If threshold critical is exceeded, values will be shown in red.
 * Settings can be made in [preferences](../Configuration/Preferences#status-lights).
