@@ -161,42 +161,42 @@ Cледующие снимки экрана были сделаны c Android St
 
 * После завершения фоновых задач вы, вероятно, увидите следующее сообщение об ошибке:
     
-    ![SDK licence](../images/AndroidStudio361_19.png)
+    ![Лицензия SDK](../images/AndroidStudio361_19.png)
 
 ## Загрузите Android SDK
 
 * Нажмите Файл > Настройки.
     
-    ![Open settings](../images/AndroidStudio361_20.png)
+    ![Открыть настройки](../images/AndroidStudio361_20.png)
 
 * Нажмите на маленький треугольник рядом с Appearance & Behaviour (1.).
 
 * Щелкните на небольшом треугольнике рядом с System Settings (2.) и выберите Android SDK (3.)
 * Установите флажок слева от "Android 9.0 (Pie)" (4.) (API Level 28).
     
-    ![SDK settings](../images/AndroidStudio361_21.png)
+    ![Параметры SDK](../images/AndroidStudio361_21.png)
 
 * Подтвердите изменения, нажав кнопку OK.
     
-    ![Confirm SDK changes](../images/AndroidStudio361_22.png)
+    ![Подтвердить изменения SDK](../images/AndroidStudio361_22.png)
 
 * Примите лицензионное соглашение (1.) и нажмите "Далее" (2.).
     
-    ![Accept SDK licence](../images/AndroidStudio361_23.png)
+    ![Принять лицензию SDK](../images/AndroidStudio361_23.png)
 
 * Дождитесь завершения установки.
     
-    ![Wait during SDK installation](../images/AndroidStudio361_24.png)
+    ![Ожидание во время установки SDK](../images/AndroidStudio361_24.png)
 
 * После завершения установки SDK кнопка "Finish" станет синей. Нажмите на кнопку.
     
-    ![Finish SDK installation](../images/AndroidStudio361_25.png)
+    ![Завершения установки пакета SDK](../images/AndroidStudio361_25.png)
 
 * Android Studio может рекомендовать обновить систему gradle. **Не обновляйте gradle!** Это может привести к трудностям!
 
 * Если вы видите информацию в нижней правой части окна Android Studio, что модуль Android Gradile готов к обновлениям, щелкните по тексту "update" (1.) и в диалоговом окне выберите "Don't remind me again for this project" (2.).
     
-    ![No cradle update](../images/AndroidStudio361_26.png)
+    ![Не обновляем gradle](../images/AndroidStudio361_26.png)
 
 ## Создание подписанного APK
 
@@ -216,7 +216,7 @@ Cледующие снимки экрана были сделаны c Android St
     
     В этом случае магазин ключей является всего лишь файлом, в котором хранится информация о цифровой подписи. Он зашифрован и информация защищена паролями.
     
-    ![Create key store](../images/AndroidStudio361_29.png)
+    ![Создание хранилища ключей](../images/AndroidStudio361_29.png)
 
 * Нажмите на символ папки (1.), чтобы выбрать путь к хранилищу ключей.
 
@@ -230,13 +230,13 @@ Cледующие снимки экрана были сделаны c Android St
 * Необходимо ввести имя и фамилию (10). Вся остальная информация необязательна.
 * Когда закончите, нажмите кнопку "OK" (11.).
     
-    ![Key store path](../images/AndroidStudio361_30.png)
+    ![Путь к магазину ключей](../images/AndroidStudio361_30.png)
 
 * Убедитесь, что поле для запоминания паролей отмечено (1.). Так что вам не нужно вводить их снова при следующей сборке apk (то есть при обновлении до новой версии AndroidAPS).
 
 * Нажмите "Далее" (2.).
     
-    ![Remember passwords](../images/AndroidStudio361_31.png)
+    ![Запомнить пароль](../images/AndroidStudio361_31.png)
 
 * Выберите вариант компоновки "fullRelease" (1.).
 
