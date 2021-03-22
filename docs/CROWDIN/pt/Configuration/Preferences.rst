@@ -83,7 +83,7 @@ Proteção de Bólus
 
 Tema gráfico
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* You can choose from four types of skins:
+* Pode escolher um de entre os quatro tipos de temas:
 
   .. image:: ../images/Pref2021_SkinWExample.png
     :alt: Select skin + examples
