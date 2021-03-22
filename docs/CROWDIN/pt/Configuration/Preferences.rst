@@ -71,17 +71,17 @@ Settings protection
 Application protection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * If app is protected you must enter password or use phone's biometric authentication to open AAPS.
-* A App será encerrada imediatamente se for digitada a senha errada, contudo continua a correr em segundo plano se ela foi previamente aberta com sucesso.
+* A App será encerrada imediatamente se for introduzida a palavra-passe errada, contudo continuará a ser executada em segundo plano no caso de ter sido previamente iniciada com sucesso.
 
-Bolus protection
+Proteção de Bólus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Bolus protection might be useful if AAPS is used by a small child and you `bolus via SMS <../Children/SMS-Commands.html>`_.
-* No exemplo abaixo poderá ver o prompt para a proteção biométrica. If biometric authentication does not work, click in the space above the white prompt and enter master password.
+* A proteção de bólus pode ser útil se a AAPS for usada por uma criança jovem e se forem utilizados os bólus via SMS <../Children/SMS-Commands.html> ` _.
+* No exemplo abaixo poderá ver o prompt para a proteção biométrica. Se a autenticação biométrica não funcionar, clique no espaço acima do prompt branco e digite a palavra-passe mestre.
 
   .. image:: ../images/Pref2020_PW.png
     :alt: Prompt biometric protection
 
-Skin
+Tema gráfico
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * You can choose from four types of skins:
 
