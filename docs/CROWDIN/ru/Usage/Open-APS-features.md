@@ -5,12 +5,12 @@
 * Autosens-это алгоритм, который смотрит на отклонения глюкозы в крови (позитивное/отрицательное/нейтральное).
 * Он попытается определить, насколько вы чувствительны/резистентны на основании этих отклонений.
 * Реализация oref в ** OpenAPS ** выполняется на основе комбинации данных за 24 и 8 часов. Он использует тот, который является более чувствительным.
-* In versions prior to AAPS 2.7 user had to choose between 8 or 24 hours manually.
-* From AAPS 2.7 on Autosens in AAPS will switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
-* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
-* Changing a cannula or changing a profile will reset Autosens ratio back to 100%.
-* Autosens adjusts your basal, I:C and ISF for you (i.e.: mimicking what a Profile shift does).
-* If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
+* В версиях до AAPS 2.7 пользователю приходилось выбирать между 8 или 24 часами вручную.
+* Начиная с AAPS 2.7 Autosens сам будет переключаться между 24 и 8 часами для вычисления чувствительности. Он выберет более чувствительный вариант. 
+* Если пользователи перешли с oref1, они, вероятно, заметят, что система может быть менее динамичной из-за различий в 24 или 8 часах чувствительности.
+* Смена канюли или изменение профиля сбросит коэффициент Autosens обратно до 100%.
+* Autosens настраивает базал, I:C и ISF ( подражая смене профиля например).
+* Если постоянно есть углеводы в течение длительного периода, не внося данные в систему, autosens будет менее эффективен в этот период, так как углеводы исключены из расчетов дельты ГК.
 
 ## Супер микроболюс (SMB)
 
@@ -32,7 +32,7 @@ SMB, сокращение от 'супер микро болюс', являет�
 
 **Для использования SMB необходимо запустить [ цель 10 ](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb).**
 
-See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) and [Tim's info on SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
+См. также: [документацию OpenAPS по SMB в oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) и [информацию Tim'а по SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
 ### Максимальное значение ед/ч, на которое можно установить временный базал ("max-basal" OpenAPS)
 
@@ -47,41 +47,41 @@ See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/e
 AndroidAPS ограничивает эту величину следующим образом:
 
 * Ребенок: 2
-* Teenager: 5
+* Подросток: 5
 * Взрослый: 10
 * Инсулинорезистентный взрослый: 12
-* Pregnant: 25
+* Беременная: 25
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*См. также [обзор жестких ограничений](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
 ### Максимальное общее количество активного инсулина IOB, которое не может превысить OpenAPS (OpenAPS "max-iob")
 
-This value determines which maxIOB has to be considered by AAPS running in closed loop mode. If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
+Это значение определяет, какое максимальное количество активного инсулина maxIOB должно учитываться алгоритмом AAPS в закрытом циклическом режиме. Если текущий активный инсулин IOB (например, после болюса на еду) превышает определенную величину, то алгоритм останавливает подачу инсулина до тех пор, пока предел IOB не будет ниже заданного значения.
 
-Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In AMA, maxIOB was just a safety-parameter for basal IOB, while in SMB-mode, it also includes bolus IOB. A good start is
+В алгоритме SMB OpenAPS, max-IOB рассчитывается иначе, чем в мастере болюса AMA. В алгоритме мастера болюса AMA maxIOB был всего лишь параметром безопасности активного базального инсулина IOB, а в SMB-режиме в него также входит активный болюсный инсулин. Рекомендуется для начала установить
 
     maxIOB = средний болюс на еду + троекратный макс. базал
     
 
-Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
+Будьте осторожны и терпеливы и меняйте настройки шаг за шагом. Эта величина для каждого своя, а также зависит от средней общей суточной дозы (TDD). По соображениям безопасности, существует предел, который зависит от возраста пациента . 'жесткий лимит' для maxIOB выше, чем в [AMA](../Usage/Open-APS-features#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 * Ребенок: 3
-* Teenager: 7
+* Подросток: 7
 * Взрослый: 12
 * Инсулинорезистентный взрослый: 25
-* Pregnant: 40
+* Беременная: 40
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*См. также [обзор жестких ограничений](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
-See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
+См. также [документацию OpenAPS по SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Включить autosense AMA
 
-Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' or not.
+Здесь можно выбрать, использовать [детектор чувствительности](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' или нет.
 
 ### Включить супер микро болюс SMB
 
-Here you can enable or completely disable SMB feature.
+Здесь можно включить или полностью отключить функцию SMB.
 
 ### Включить супер микро болюс при активных углеводах COB
 
@@ -160,26 +160,26 @@ You cannot chose any value: For safety reason, there is a 'hard limit', which de
 The hardcoded parameters in AndroidAPS are:
 
 * Ребенок: 2
-* Teenager: 5
+* Подросток: 5
 * Взрослый: 10
 * Инсулинорезистентный взрослый: 12
-* Pregnant: 25
+* Беременная: 25
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*См. также [обзор жестких ограничений](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
 ### Максимальное общее количество активного инсулина IOB (ед.), которое не может превысить OpenAPS ("max-iob" в OpenAPS)
 
 This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
+The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Эта величина для каждого своя, а также зависит от средней общей суточной дозы (TDD). По соображениям безопасности, существует предел, который зависит от возраста пациента . The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 * Ребенок: 3
-* Teenager: 5
+* Подросток: 5
 * Взрослый: 7
 * Инсулинорезистентный взрослый: 12
-* Pregnant: 25
+* Беременная: 25
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*См. также [обзор жестких ограничений](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
 ### Включить autosense AMA
 
