@@ -105,27 +105,27 @@ SMB работает всегда (независимо от активных у
 
 SMB работает в течение 6 часов после приема углеводов, даже если активные углеводы COB находятся на 0. По соображениям безопасности, эта опция возможна только для источников ГК с хорошей системой фильтрации зашумленых данных. Сейчас она работает только с Dexcom G5 и модифицированным приложением Dexcom (патч) или с «нативным режимом» в xDrip+. Если значение ГК имеет слишком большое отклонение, G5 не отправляет его и ожидает следующего значения через 5 минут.
 
-For other CGM/FGM like Freestyle Libre, 'Enable SMB after carbs' is deactivated until xDrip+ has a better noise smoothing plugin. You can find [more information here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Для других систем мониторинга, таких как Freestyle Libre, функция ‘всегда включать SMB’ (так в оригинале, очевидно должно быть "SMB после углеводов"- перев.) будет оставаться неактивной пока в xDrip+ не появится более адекватное расширение для сглаживания данных. Подробнее [здесь](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Верхний лимит минут базала при SMB
 
-This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
+Это важный элемент в настройках безопасности. Это значение на основе скорости базала определяет, сколько микроболюсов SMB может быть подано за то время, которое не покрыто активными углеводами COB.
 
-This makes the SMB more aggressive. For the beginning, you should start with the default value of 30 minutes. After some experience, you can increase the value with 15 minutes steps and watch how these changes are affecting.
+Алгоритм SMB в результате становится более агрессивным. Начать следует со значения по умолчанию в 30 минут. Получив определенный опыт, можно увеличивать значение с шагом 15 минут и следить за изменениями.
 
-It is recommended not to set the value higher than 90 minutes, as this would lead to a point where the algorithm might not be able to adjust a decreasing BG with 0 IE/h basal ('zero-temp'). You should also set alarms, especially if you are still testing new settings, which warns you before running into hypos.
+Рекомендуется не устанавливать это значение выше 90 минут, так как существует вероятность достижения точки, после которой алгоритм не сможет контролировать снижающуюся гликемию при базале 0 ед/ч ('zero-temp'). Следует также установить оповещения, особенно если еще отлажены настройки, предупреждающие о низкой ГК.
 
-Default value: 30 min.
+Значение по умолчанию: 30 мин.
 
 ### Включить непредвиденный прием пищи UAM
 
-With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful, if you forget to tell AndroidAPS about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increasments caused by carbs, adrenaline, etc, and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decreasement, it can stop SMBs earlier.
+При включении этой опции алгоритм SMB может распознать непредвиденный прием пищи. Это полезно, если вы забыли сообщить алгоритму AndroidAPS о съеденных углеводах или неверно оценили их количество или съеденное богато жирами и белками и действует дольше чем ожидалось. Без ввода углеводов алгоритм UAM может распознать быстрое увеличение глюкозы, вызванное углеводами, адреналином и т. д., и пытается компенсировать его при помощи микроболюсов SMB. И наоборот: если гликемия падает быстро, то настройка поможет остановить SMB раньше времени.
 
-**Therefore, UAM should always be activated when using SMB.**
+**Поэтому при использовании микроболюсов SMB всегда следует активировать непредвиденный прием пищи UAM.**
 
 ### Высокая врем. цель temptarget повышает чувствительность
 
-If you have this option enabled, the insulin sensitivity will be increased while having a temporary target over 100 mg/dl or 5.6 mmol/l. This means, the ISF will rise while IC and basal will decrease.
+Если эта опция включена, то чувствительность инсулина будет увеличена при временной цели более 100 мг/дл или 5.6 ммол/л. This means, the ISF will rise while IC and basal will decrease.
 
 ### Низкая временная цель temptarget снижает чувствительность
 
