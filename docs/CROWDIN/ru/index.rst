@@ -103,30 +103,30 @@ AndroidAPS-приложение с открытым исходным кодом 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: General Hints 
+   :caption: Общие советы 
 
    Пересечение часовых поясов с помпами <./Usage/Timezon-traveling.md>
    Доступ к файлам журнала <./Usage/Accessing-logfiles.md>
    Accu-Chek Combo советы для простого использования <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Параметры экспорта/импорта <./Usage/ExportImportSettings.rst>
-   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
+   инженерный режим xDrip <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS for children
+   :caption: AndroidAPS для детей
 
    Удаленный мониторинг <../Children/Children.html>
    Команды SMS <./Children/SMS-Commands.rst>
-   Profile helper <./Configuration/profilehelper.rst>
+   Помощник профиля <./Configuration/profilehelper.rst>
    
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Troubleshooting
+   :caption: Устранение неполадок
 
    Устранение неполадок <./Usage/troubleshooting.rst>
-   Nightscout client <./Usage/Troubleshooting-NSClient.md>
+   Клиент Nightscout <./Usage/Troubleshooting-NSClient.md>
 
 .. toctree::
    :maxdepth: 1
@@ -138,14 +138,14 @@ AndroidAPS-приложение с открытым исходным кодом 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Glossary
+   :caption: Словарик
 
    Глоссарий <./Getting-Started/Glossary.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Where to go for help 
+   :caption: Куда обратиться за помощью 
 
    Полезные ресурсы для чтения перед запуском <./Where-To-Go-For-Help/Background-reading.md>
    Куда обратиться за справкой <./Where-To-Go-For-Help/Connect-wit-other-users.md>
@@ -154,7 +154,7 @@ AndroidAPS-приложение с открытым исходным кодом 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: For Clinicians
+   :caption: Для клиницистов
 
    Для клиницистов <./Resources/clinician-guide-to-AndroidAPS>
 
@@ -162,7 +162,7 @@ AndroidAPS-приложение с открытым исходным кодом 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: How to help
+   :caption: Как помочь
 
    Как помочь <./Getting-Started/How-can-I-help.md>
    Как перевести приложение и документы <./translations.md>
@@ -178,4 +178,4 @@ AndroidAPS-приложение с открытым исходным кодом 
 
 	* Все наименования продуктов и компаний, товарные знаки, услуги по обслуживанию, зарегистрированные товарные знаки и зарегистрированные службы являются собственностью соответствующих владельцев. Их использование - в информационных целях и не подразумевает какой-либо принадлежности к ним или их одобрения.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_
+	Обратите внимание, что этот проект не имеет связи с и одобрения от: ` SOOIL <https://www.sooil.com/eng/>` _, ` Dexcom <https://www.dexcom.com/>` _, ` Accu-Chek, Roche Diabet Care <https://www.accu-chek.com/>` _ или ` Medtronic <https://www.medtronic.com/>` _
