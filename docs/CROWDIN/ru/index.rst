@@ -62,7 +62,7 @@ AndroidAPS-приложение с открытым исходным кодом 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Component Setup
+   :caption: Настройка компонентов
 
    CGM/FGM <./Configuration/BG-Source.rst>
    параметры xDrip <./Configuration/xdrip.md>
@@ -71,20 +71,20 @@ AndroidAPS-приложение с открытым исходным кодом 
    Настройка Nightscout <./Instaling-AndroidAPS/Nightscout.md>
    Смарт-часы <./Hardware/Smartwatch.rst>
 
-.. _configuration:
+.. _конфигурация:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Configuration
+   :caption: Конфигурация
 
    Конфигуратор <../Configuration/Config-Builder.html>`_ настройки>
-   Preferences <./Configuration/Preferences.rst>
+   Параметры <./Конфигурация/Настройки.rst>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS Usage
+   :caption: Использование AndroidAPS
 
    Экраны androidAPS <./Getting-Started/Screenshots.md>
    Цели <./Usage/Objectives.rst>
@@ -96,7 +96,7 @@ AndroidAPS-приложение с открытым исходным кодом 
    Пролонгированные углеводы <./Usage/Extended-Carbs.rst>
    Автоматизация <./Usage/Automation.rst>
    Careportal (более не поддерживается) <./Usage/CPbefore26.rst>
-   Open Humans Uploader <./Configuration/OpenHumans.rst>
+   Загрузчик Open Humans <./Конфигурация/OpenHumans.rst>
    Автоматизация с приложениями сторонних организаций <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
 
