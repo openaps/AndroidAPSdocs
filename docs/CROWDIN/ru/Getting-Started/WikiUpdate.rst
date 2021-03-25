@@ -1,24 +1,24 @@
 Обновления и изменения в документации
 **************************************************
 
-January 2021
+Январь 2021
 ==================================================
-* `Action tab <../Getting-Started/Screenshots.html#action-tab>`_ - more details on page 'AndroidAPS screens'
-* Dexcom G6 with `Build Your Own Dexcom App <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_
-* Libre smart reader `battery level <../Getting-Started/Screenshots.html#sensor-level-battery>`_
-* `Objectives <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ - new questions
-* Other `new AndroidAPS 2.8.0 functions <../Installing-AndroidAPS/Releasenotes.html#version-2-8-0>`_
+* ` Вкладка Действия <../Getting-Started/Screenshots.html#action-tab> ` _-подробнее на странице 'экраны AndroidAPS'
+* Dexcom G6 с ` Постройте собственное приложение Dexcom App <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app> ` _
+* Libre smart reader ` уровень батареи <../Getting-Started/Screenshots.html#sensor-level-battery> ` _
+* ` Цели <../Usage/Objectives.html#objective-3-доказать-ваши-знания > ` _-новые вопросы
+* Другие новые функции `new AndroidAPS 2.8.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-8-0>`_
 
-December 2020
+Декабрь 2020
 ==================================================
-* `Libre 2 <../Hardware/Libre2.html>`_ - patched app does not work with US sensors
-* `OpenAPS hard-coded limits <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_
-* Sony Smartwatch 3 `Manual Installation of Google Play Service <../Usage/SonySW3.html>`_
+* `Libre 2 <../Hardware/Libre2.html>`_ - пропатченное приложение не работает с датчиками США
+* `OpenAPS жестко закодированные ограничения <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_
+* Sony Smartwatch 3 `Ручная установка службы Google Play <../Usage/SonySW3.html>`_
 
-October 2020
+Октябрь 2020
 ==================================================
-* Accu-Chek Combo - update `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
-* Accu-Chek Insight - Option to `upload absolute values <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
+* Accu-Chek Combo - обновление `update `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
+* Accu-Chek Insight - Опция `загрузить абсолютные значения <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * Журналы-дополнительные сведения о ` папке <../Usage/Accessing-logfiles.html> ` _
 * Omnipod Eros-обновление состояния
 * `SMS команды - синхронизация времени <../Children/SMS-Commands.html>`_
