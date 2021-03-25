@@ -17,29 +17,29 @@ AndroidAPS-приложение с открытым исходным кодом 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Change language
+   :caption: Изменить язык
 
-   Change language <./changelanguage.rst>
+   Изменить язык <./changelanguage.rst>
 
-.. _getting-started:
+.. _Начало работы:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Getting started
+   :caption: Начало работы
 
    Главное- безопасность <./Getting-Started/Safety-first.rst>
-   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Pump choices <./Getting-Started/Pump-Choices.md>
+   Что такое система замкнутого цикла <./Getting-Started/ClosedLoop.rst>
+   Что такое система замкнутого цикла с AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Выбор помп <./Getting-Started/Pump-Choices.md>
    Обновления и изменения документации <./Getting-Started/WikiUpdate.rst>
 
-.. _what-do-i-need:
+.. _что-мне-нужно:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: What do I need? 
+   :caption: Что мне нужно? 
 
    Модуль <./Module/module.rst>
    Пример системы <../Getting-Started/Sample-Setup.html>
@@ -47,17 +47,17 @@ AndroidAPS-приложение с открытым исходным кодом 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: How to Install AndroidAPS
+   :caption: Как установить AndroidAPS
 
    Построение APK <./Instaling-AndroidAPS/Building-APK.md>
    Обновление до новой версии или ветви <./Instaling-AndroidAPS/Update-to-new-version.md>
-   Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
+   Проверка после обновления до AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Установка git <./Instaling-AndroidAPS/git-install.rst>
    Устранение неполадок Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Примечания к выпуску <./Installing-AndroidAPS/Releasenotes.rst>
    Ветка разработчика <./Instaling-AndroidAPS/Dev_branch.md>
 
-.. _component-setup:
+.. _Настройка компонентов:
 
 .. toctree::
    :maxdepth: 1
