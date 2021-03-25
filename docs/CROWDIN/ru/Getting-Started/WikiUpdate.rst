@@ -19,14 +19,14 @@ October 2020
 ==================================================
 * Accu-Chek Combo - update `time adjustment daylight savings time <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
 * Accu-Chek Insight - Option to `upload absolute values <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
-* Logs - more details about `folder location <../Usage/Accessing-logfiles.html>`_
-* Omnipod Eros - status update
-* `SMS commands - time sync <../Children/SMS-Commands.html>`_
+* Журналы-дополнительные сведения о ` папке <../Usage/Accessing-logfiles.html> ` _
+* Omnipod Eros-обновление состояния
+* `SMS команды - синхронизация времени <../Children/SMS-Commands.html>`_
 
-September 2020
+Сентябрь 2020 года
 ==================================================
-* Major update for new AAPS version 2.7
-* For details see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`
+* Большое обновление для новой версии AAPS 2.7
+* Дополнительные сведения см. в разделе "release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0 >"
 
 Июнь 2020
 ==================================================
@@ -35,33 +35,33 @@ September 2020
 
 Май 2020
 ==================================================
-* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
+* `Пролонгированный болюс только для помп Dana + Insight <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `Отключение вибрации на помпе Insight < ../Configuration/Accu-Ch-Insight-Pump.html#vibration> ` _ (только на прошивке 3.x)
-* `Minimal request rate <../Configuration/Preferences.html#minimal-request-change>`_ to reduce number of notifications in open loop mode
+* `Минимальный уровень запроса на отключение уведомлений <../Configuration/Preferences.html#minimal-request-rate> ` _ для сокращения числа уведомлений в режиме открытого цикла
 * `Модифицированное приложение Libre Link < ../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app> ` _- проверьте правильность патча
-* `Prediction lines <../Getting-Started/Screenshots.html#prediction-lines>`_ - more details
+* `Линии прогнозирования <../Getting-Started/Screenshots.html#section-e>`_-дополнительные подробности
 
 Апрель 2020
 ==================================================
-* `Backdate insulin <../Usage/CPbefore26.html#carbs-bolus>`_ (i.e. с помощью шприца)
+* `Запись о введении инсулина задним числом <..//Usage/CPbefore26.html#carbs-- bolus> ` _ (напр. с помощью шприца)
 * Поддержка Android 6 будет прекращена в следующей основной версии < ../Module/module.html#phone> ` _
 
 Март 2020
 ==================================================
 * Построение APK в Android Studio 3.6.1 <../Installing-AndroidAPS/Building-APK.html>`_
 * `DanaRS с прошивкой v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **в настоящее время не может использоваться для AndroidAPS!**
-* `Extended bolus and switch to open loop <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
+* `Пролонгированный болюс и переключение на открытый цикл <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `Обновление APK в Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
 
 Февраль 2020
 ==================================================
-* `Automation caveats <../Usage/Automation.html#good-practice-caveats>`_
+* ` Автоматизация <../usage/Automation.html#good-practice-caveats> ` _
 * ` Autosens <../Usage/Open-APS-features.html#autosens> ` _-краткое объяснение
 * '' Альтернативы порталу терапии <../Usage/CPbefore26.html> ` _
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
+* `Пролонгированный болюс <../Usage/Extended-Carbs.html > ` _ функция - замкнутый цикл будет отключена
 * Новый плагин `Local Profile <../Configuration/Config-Builder.html#local-profile-recommended>`_
 * `Пример установки <../Getting-Started/Sample-Setup.html>`_ - обновление для Dexcom G6
-* `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - major new features
+* Версия 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - новые функции
 * `Усложнения Wear <../Configuration/watchfaces.html>`_
 
 Январь 2020
@@ -81,9 +81,9 @@ September 2020
 ==================================================
 * ` Автоматизация-деактивировать при выключении цикла <../Usage/Automation.html#important-note> ` _
 Замена трансмиттера Dexcom G6 - обновление <../Configuration/xdrip.html#replace-transmitter>`_
-* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
+Пролонгированный болюс - почему не работает в контексте ИПЖ <../Usage/Extended-Carbs.html#extended-bolus>`_
 * ` FAQ-занятия спортом <../Начало/FAQ.html#спорт> ` _
-* `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-f-main-graph>`_
+* `Главный экран - линии на графике <../Getting-Started/Screenshots.html#section-e>`_
 * ` Insight-Выключить абсолютные значения в NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * ` Помпа Medtronic - возможные двойные записи <../Configuration/MedtronicPump.html> ` _
 * ` Новые инструкции по Freestyle Libre 2 <../Hardware/Libre2.html> ` _
@@ -92,11 +92,11 @@ September 2020
 * ` Устранение неполадок Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
 * ` Устранение неполадок- ссылки <../Usage/troubleshooting.html> ` _
 * `Обновление - краткое руководство для опытных пользователей <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users> ` _
-* Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-docs-pages>`_.
+* Документация - обновление `редактирования <../make-a-PR.md#code-syntax>`_ и`перевода<../translations.html#translate-docs-pages>`_.
 
 Октябрь 2019
 ==================================================
-* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
+* ` AAPS версии 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0> ` _ updates (особенно на странице обновления <../Instaling-AndroidAPS/Update-to-new-version.html> ` _)
 * ` AccuChek Insight-опции журнала <../Configuration/Accu-Chek-Inight-Pump.html#settings-in-aaps> ` _
 * Расчет активных углеводов COB на отдельной странице <../Usage/COB-calculation.html>`_
 * ` активные углеводы COB-неправильное определение значения COB <../Usage/COB-calculation.html#detection-оф-неправо-cob-values> ` _
@@ -110,9 +110,9 @@ September 2020
 Сентябрь 2019 года
 ==================================================
 * ` Автоматизация <../Usage/Automation.html> ` _
-* `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorbtion
+* `Калькулятор болюса <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - медленное усвоение углеводов
 * " Безопасность Nightscout <../Installing-AndroidAPS/Nightscout.html#security-considerations> `
-* `Profile timeshift <../Usage/Profiles.html#time-shift>`_ (more details)
+* `Сдвиг времени профиля <../Usage/Profiles.html#timeshift>`_ (подробнее)
 * `Удаленный мониторинг <../Children/Children.html>`_
 * `Что такое система замкнутого цикла? <../StartStarted/ClosedLoop.html> ` _
 
