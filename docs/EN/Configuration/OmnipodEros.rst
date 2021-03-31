@@ -138,7 +138,7 @@ Before you can activate a pod please ensure you have properly configured and con
 
     |Activate_Pod_1| |Activate_Pod_2|
 
-2. The **Fill Pod** screen is displayed. Fill a new pod with at least 85 units of insulin and listen for two beeps indicating that the pod is ready to be primed.
+2. The **Fill Pod** screen is displayed. Fill a new pod with at least 80 units of insulin and listen for two beeps indicating that the pod is ready to be primed. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units. 
 
     |Activate_Pod_3|
 
