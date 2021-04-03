@@ -59,15 +59,15 @@ Dexcom G6
 * В настройках телефона перейдите к приложениям > Dexcom G6 > разрешения > дополнительные разрешения и нажмите 'Access Dexcom app'.
 * После короткого времени патч приложение должно получить сигнал трансмиттера. (Если нет, вам придется остановить сенсор и начать новый.)
 
-Settings for AndroidAPS
+Настройки для AndroidAPS
 --------------------------------------------------
-* Select 'Dexcom App (patched)' in config builder.
-* If you don't recieve any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+* Выберите 'приложение Dexcom (модифицированное)' в конфигураторе.
+* Если вы не получаете никаких значений, выберите любой другой источник данных, а затем снова выберите 'приложение Dexcom (модифицированное)', чтобы запустить требование разрешений на установление соединения между AAPS и самостоятельно собранным приложением Dexcom.
 
-Settings for xDrip+
+Настройки для xDrip+
 --------------------------------------------------
-* Select '640G/Eversense' as data source.
-* Command 'start sensor' must be performed in xDrip+ in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
+* Выберите '640G/Eversense' в качестве источника данных.
+* Для получения значений необходимо выполнить команду 'start Sensor' в xDrip +. Это не повлияет на сенсор контролируемый самостоятельно собранным приложением Dexcom.
    
 Устранение неполадок с G6
 ==================================================
@@ -87,9 +87,9 @@ Settings for xDrip+
 .. image:../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
 
-General troubleshoothing
+Общее средство устранения неполадок
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
+Общее устранение неполадок мониторинга можно найти `здесь <./GeneralCGMRecommendation.html#Troubleshooting>`__.
 
 Установка нового трансмиттера на работающий сенсор
 --------------------------------------------------
