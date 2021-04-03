@@ -108,15 +108,15 @@
    * Уровень заполнения резервуара (единицы)
    * Времени работы сенсора мониторинга ГК
    * Время работы и уровень батареи (%)
-* If threshold warning is exceeded, values will be shown in yellow.
-* If threshold critical is exceeded, values will be shown in red.
-* Settings can be made in [preferences](../Configuration/Preferences#status-lights).
+* Если превышено пороговое предупреждение, значения будут показаны желтым.
+* Если превышено критическое пороговое значение, значения будут показаны красным цветом.
+* Настройки могут быть сделаны в [параметрах](../Configuration/Preferences#status-lights).
 
-### Section F - Main graph
+### Раздел F - Основной график
 
 ![Section F](../images/Home2020_MainGraph.png)
 
-* Graph shows your blood glucose (BG) as read from your glucose monitor (CGM). 
+* График показывает уровень глюкозы в крови (ГК) считываемый с вашего мониторинга глюкозы (CGM). 
 * Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
 * Long press on the graph to change the time scale. You can choose 6, 12, 18 or 24 hours.
 * The green area reflects your target range. It can be configured in [preferences](../Configuration/Preferences#range-for-visualization).
