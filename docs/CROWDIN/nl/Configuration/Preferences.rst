@@ -63,7 +63,7 @@ Instellingenbeveiliging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Bescherm jouw instellingen met een wachtwoord of met de biometrische verificatie van jouw telefoon (bijv. `een kind gebruikt AAPS <../Children/Children.html>`_).
 * Er moet een aangepast wachtwoord worden gebruikt als je het masterwachtwoord alleen wilt gebruiken voor het beveiligen van `geëxporteerde instellingen <../Usage/ExportImportSettings.html>`_.
-* If you are using a custom password click on line "Settings password" to set password as described `above <../Configuration/Preferences.html#master-password>`__.
+* Als je een aangepast wachtwoord gebruikt, klik op de regel "Instellingen wachtwoord" om het wachtwoord in te stellen zoals `boven <../Configuration/Preferences.html#masterwachtwoord>`_ beschreven.
 
   .. image:: ../images/Pref2020_Protection.png
     :alt: Beveiliging
@@ -204,7 +204,7 @@ Voer dit deel van het boluscalculator resultaat uit
 
 Bolusadviseur
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Als je de `Bolus calculator<../Getting-Started/Screenshots.html#bolus-calculator>`_ gebruikt en je glucose waarde is hoger dan 10 mmol/l (180 mg/dl) wordt een correctie bolus voorgesteld.
+* Als je de `Bolus calculator <../Getting-Started/Screenshots.html#bolus-calculator>`_ gebruikt en je glucose waarde is hoger dan 10 mmol/l (180 mg/dl) wordt een correctie bolus voorgesteld.
 * Als de correctie bolus wordt geaccepteerd zullen er **geen koolhydraten** worden geregistreerd.
 * Er zal een alarm afgaan wanneer de glucosewaarde genoeg is gedaald om te beginnen met eten.
 * Je moet op dat moment de `Bolus calculator <../Getting-Started/Screenshots.html#bolus-calculator>`_ opnieuw gebruiken en daar de hoeveelheid koolhydraten invoeren die je wilt eten.
