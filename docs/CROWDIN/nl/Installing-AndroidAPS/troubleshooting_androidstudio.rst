@@ -6,13 +6,13 @@ Het is het makkelijkste om steeds hetzelfde keystore-bestand te gebruiken bij he
 
 Mocht je jouw oude keystore bestand toch niet meer kunnen vinden, dan heb je een paar extra stappen nodig bij het updaten van de app, om de instellingen in jouw AAPS app te behouden:
 
-1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`__ on your phone.
+1. `Exporteer instellingen <../Usage/ExportImportSettings.html#instellingen-exporteren>`_ op jouw telefoon.
 2. Kopieer jouw instellingen bestand van jouw telefoon naar een externe locatie (zoals je computer, cloudopslag service...).
 3. Zorg ervoor dat je het bestand met instellingen "AndroidAPS Preferences" opslaat op een veilige plek die je later kunt terugvinden.
 4. Bouwen van de ondertekende apk zoals beschreven op de pagina `Bijwerken naar een nieuwe versie <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 5. Verwijder de vorige AAPS-versie van jouw telefoon.
 6. Installeer de nieuwe AAPS-versie op jouw telefoon.
-7. `Import settings <../Usage/ExportImportSettings.html#export-settings>`_ - if you can't find them on your phone copy them from the external storage.
+7. `Instellingen importeren <../Usage/ExportImportSettings.html#instellingen-exporteren>`_ - mocht je ze op je telefoon niet kunnen vinden, kopieer ze dan vanaf de externe plek (computer, cloudopslag) waar je ze eerder had opgeslagen.
 8. En je kunt weer doorloopen!
 
 Kotlin compiler warning
