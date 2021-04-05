@@ -1,26 +1,26 @@
 =====================================================
- AndroidAPS Omnipod Insulin Pump Driver Documentation
+ Omnipod Eros (1e generatie Omnipod)
 =====================================================
 
-These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). The Omnipod driver is available as part of AndroidAPS (AAPS) as of version 2.8.
+Deze beschrijving is voor het instellen en gebruiken van AAPS met Omnipod Eros, de eerste generatie van Omnipod (dus NIET voor de nieuwe generatie Omnipod (Dash): die is nog niet loopbaar). De driver voor Omnipod is beschikbaar vanaf versie 2.8 van AndroidAPS (AAPS).
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.**
+**Deze software is onderdeel van een doe-het-zelf oplossing en is geen kant-en-klaar product, maar vraagt JOU te lezen, leren en te begrijpen hoe het systeem werkt en hoe je het kunt gebruiken. Jij alleen bent verantwoordelijk voor wat je ermee doet.**
 
-.. contents:: 
+.. Inhoud:: 
    :backlinks: entry
    :depth: 2
 
-Hardware and Software Requirements
+Benodigde hardware en software
 ==================================
 
-*  **Pod Communication Device** 
+* **Apparaat voor communicatie tussen telefoon en Omnipod** 
 
-  Component that bridges communication from your AndroidAPS enabled phone to Eros generation pods.
+  Er is een apparaatje nodig wat zorgt voor de communicatie tussen een telefoon met AndroidAPS enerzijds en de Eros Omnipod anderzijds. Dat was aanvankelijk alleen RileyLink, maar er zijn inmiddels ook alternatieven die hetzelfde werken. Mogelijkheden zijn:
 
    -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
    -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__     
-   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
+   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Informatie <mailto:getemalink@gmail.com>`__     
+   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Informatie <https://jameswedding.substack.com/>`__ - Niet getest
 
 * | Android_Phone | **Mobiele telefoon* * 
 
@@ -836,7 +836,7 @@ All of the development work for the Omnipod driver is done by the community on a
 	Instructional Section Images
 	
 ..
-	Hardware and Software Requirements
+	Benodigde hardware en software
 .. |EmaLink|				image:: ../images/omnipod/EmaLink.png
 .. |LoopLink|				image:: ../images/omnipod/LoopLink.png
 .. |OrangeLink|				image:: ../images/omnipod/OrangeLink.png		
