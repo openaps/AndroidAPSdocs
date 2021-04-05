@@ -173,15 +173,15 @@
 
 ![Дополнительные параметры графика](../images/Home2020_AdditionalGraphSetting.png)
 
-* To add an additional graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
+* Для добавления дополнительного графика установите флажок с левой стороны его названия (например, \---\---- Граф 1 \---\----).
 
-#### Absolute insulin
+#### Абсолютный инсулин
 
-* Active insulin including boluses **and basal**.
+* Активный инсулин, включая болюсный **и базальный**.
 
-#### Insulin on board
+#### Активный инсулин (IOB)
 
-* Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
+* Показывает инсулин, который вы имеете на борту (= активный инсулин в вашем теле). Он включает инсулин болюсов и временного базала (**, но исключает базальную скорость, установленную в вашем профиле**).
 * If there were no [SMBs](../Usage/Open-APS-features#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
 * IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
 * Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile-recommended). 
