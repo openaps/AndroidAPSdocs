@@ -182,8 +182,8 @@
 #### Активный инсулин (IOB)
 
 * Показывает инсулин, который вы имеете на борту (= активный инсулин в вашем теле). Он включает инсулин болюсов и временного базала (**, но исключает базальную скорость, установленную в вашем профиле**).
-* If there were no [SMBs](../Usage/Open-APS-features#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
-* IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
+* Если бы не было [микроболюсов SMB](../Usage/Open-APS-features#super-micro-bolus-smb), болюсов, и временных базалов, TBR во время действия инсулина DIA, он равнялся бы нулю.
+* Активный инсулин IOB может быть отрицательным, если у не осталось ни болюсов, ни нулевого/низкого временного базала в течение более длительного времени чем DIA.
 * Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile-recommended). 
 
 #### Carbs On Board
