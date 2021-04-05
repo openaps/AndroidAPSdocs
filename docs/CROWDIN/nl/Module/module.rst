@@ -1,6 +1,6 @@
 De verschillende onderdelen 
 **************************************************
-AndroidAPS is meer dan de (zelfgebouwde) app alleen, er zijn ook andere onderdelen nodig om jouw closed loop systeem aan de praat te krijgen. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
+AndroidAPS is meer dan de (zelfgebouwde) app alleen, er zijn ook andere onderdelen nodig om jouw closed loop systeem aan de praat te krijgen. Voordat je kiest welke onderdelen je wilt gebruiken, is het goed om eens te kijken naar de `Onderdelen instellen <../index.html#onderdelen-instellen>`_ sectie.
    
 .. image:: ../images/modules.png
   :alt: Wat heb ik nodig
