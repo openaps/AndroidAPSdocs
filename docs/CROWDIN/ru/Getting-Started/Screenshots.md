@@ -2,7 +2,7 @@
 
 ## Главный экран
 
-![Homescreen V2.7](../images/Home2020_Homescreen.png)
+![Главный экран V2.7](../images/Home2020_Homescreen.png)
 
 Это первый экран, который вы увидите, когда откроете AndroidAPS, и он содержит большую часть повседной информации.
 
@@ -16,7 +16,7 @@
 
 #### Текущий профиль
 
-![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+![Оставшееся время замененного профиля](../images/Home2020_ProfileSwitch.png)
 
 * Текущий профиль отображается на левой панели.
 * Короткое нажатие открывает подробности о текущем профиле
@@ -25,7 +25,7 @@
 
 #### Целевое значение ГК
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Оставшаяся продолжительность временной цели](../images/Home2020_TT.png)
 
 * Текущее целевое значение глюкозы крови (ГК) отображается на правой панели.
 * Короткое нажатие позволяет установить [временную цель](../Usage/temptarget.md).
@@ -33,7 +33,7 @@
 
 #### Визуализация динамического изменения цели
 
-![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+![Визуализация динамического изменения цели](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS может динамически изменять установленную цель основываясь на чувствительности если используется алгоритм СМБ (SMB).
 * Активируйте один или оба [варианта](../Configuration/Preferences#openaps-smb-settings): 
@@ -71,11 +71,11 @@
    
    * Если диалоговое окно было вызвано которким нажатием - после смены режима появится запрос на подтверждение. Если долгим нажатием - смена режима применится сразу.
    
-   ![Loop status menu](../images/Home2020_Loop_Dialog.png)
+   ![Меню состояния цикла](../images/Home2020_Loop_Dialog.png)
 
 ### Раздел D - IOB, COD, BR и AS
 
-![Section D](../images/Home2020_TBR.png)
+![Секция D](../images/Home2020_TBR.png)
 
 * Иконка шприца: инсулин "на борту" (IOB) - количество активного инсулина в теле
    
@@ -100,7 +100,7 @@
 
 ### Раздел E- Индикаторы состояния
 
-![Section E](../images/Home2020_StatusLights.png)
+![Секция E](../images/Home2020_StatusLights.png)
 
 * Индикаторы состояния сообщают о 
    * Времени работы катетера помпы
@@ -114,7 +114,7 @@
 
 ### Раздел F - Основной график
 
-![Section F](../images/Home2020_MainGraph.png)
+![Секция F](../images/Home2020_MainGraph.png)
 
 * График показывает уровень глюкозы в крови (ГК) считываемый с вашего мониторинга глюкозы (CGM). 
 * Здесь показаны заметки, введенные на вкладке действия, такие как калибровка с глюкометра и записи углеводов, а также переключения профиля. 
@@ -132,7 +132,7 @@
 * Щелкните по треугольнику в правой части основного графика, чтобы выбрать, какая информация будет показана на главной диаграмме.
 * Для главного графика доступны три варианта выше строки "\---\---- График 1 \---\----".
    
-   ![Main graph setting](../images/Home2020_MainGraphSetting.png)
+   ![Настройка главного графика](../images/Home2020_MainGraphSetting.png)
 
 #### Линии прогнозирования
 
@@ -152,11 +152,11 @@
    
    Незапланированный прием пищи - обнаружение значительного повышения уровня глюкозы, как следствие приема пищи, выброса адреналина или других факторов. Линия предсказания аналогична оранжевой линии активных углеводов COB, но предполагает, что отклонения будут понижаться с постоянной скоростью (за счет продления текущей скорости сокращения).
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+Обычно реальная кривая глюкозы заканчивается в середине этих линий, или близка к той, которая ближе всего описывает вашу ситуацию.
 
 #### Базал
 
-* A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
+* **Сплошная синяя** линия показывает базальную скорость помпы и отражает фактическую подачу инсулина с течением времени.
 * The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
 * In times standard basal rate is given the area under the curve is shown in dark blue.
 * When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
@@ -171,7 +171,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * You can activate up to four additional graphs below the main graph.
 * To open settings for additional graphs click the triangle on the right side of the [main graph](../Getting-Started/Screenshots#section-f-main-graph) and scroll down.
 
-![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+![Дополнительные параметры графика](../images/Home2020_AdditionalGraphSetting.png)
 
 * To add an additional graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
 
@@ -217,14 +217,14 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ### Section H - Buttons
 
-![Homescreen buttons](../images/Home2020_Buttons.png)
+![Кнопки главного экрана](../images/Home2020_Buttons.png)
 
 * Buttons for insulin, carbs and Calculator are 'always on'. 
 * Other Buttons have to be setup in [preferences](../Configuration/Preferences#buttons).
 
 #### Инсулин
 
-![Insulin button](../images/Home2020_ButtonInsulin.png)
+![Кнопка инсулина](../images/Home2020_ButtonInsulin.png)
 
 * To give a certain amount of insulin without using [bolus calculator](#bolus-wizard).
 * By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences#default-temp-targets).
@@ -232,7 +232,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Углеводы
 
-![Carbs button](../images/Home2020_ButtonCarbs.png)
+![Кнопка углеводов](../images/Home2020_ButtonCarbs.png)
 
 * To record carbs without bolusing.
 * Certain [pre-set temporary targets](../Configuration/Preferences#default-temp-targets) can be set directly by checking the box.
@@ -263,7 +263,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ## Bolus Wizard
 
-![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
+![Мастер Болюса](../images/Home2020_BolusWizard_v2.png)
 
 When you want to make a meal bolus this is where you will normally make it from.
 
@@ -278,7 +278,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
    
-   ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
+   ![Мастер болюса с напоминанием о питании](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Section J
 
@@ -307,7 +307,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 #### Wrong COB detection
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
+![Медленное усваивание углеводов](../images/Calculator_SlowCarbAbsorbtion.png)
 
 * If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. 
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
@@ -315,7 +315,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ## Action tab
 
-![Actions tab](../images/Home2021_Action.png)
+![Вкладка "Действия"](../images/Home2021_Action.png)
 
 ### Actions - section M
 
@@ -346,7 +346,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 * Thresholds can be set in [preferences](../Configuration/Preferences#status-lights).
 * If sensor level is the same as phone battery level you xDrip+ version is probably too old and needs an update.
    
-   ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
+   ![Уровни датчиков равны уровню батареи телефона](../images/Home2021_ActionSensorBat.png)
 
 ### Careportal - section O
 
@@ -368,11 +368,11 @@ When you want to make a meal bolus this is where you will normally make it from.
 * Others prefer range of 32% to 37% of TDD for TBB. 
 * Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
-![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
+![Браузер журнала + TDD](../images/Home2021_Action_HB_TDD.png)
 
-## Insulin Profile
+## Профиль Инсулина
 
-![Insulin Profile](../images/Screenshot_insulin_profile.png)
+![Профиль Инсулина](../images/Screenshot_insulin_profile.png)
 
 * This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
 * The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
@@ -386,9 +386,9 @@ And you can read an excellent blog article about it here: [Why we are regularly 
 
 And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
-## Pump Status
+## Статус помпы
 
-![Pump Status](../images/Screenshot_PumpStatus.png)
+![Статус помпы](../images/Screenshot_PumpStatus.png)
 
 * Different information on pump status. Displayed information depends on your pump model.
 * See [pumps page](../Hardware/pumps.rst) for details.
@@ -399,14 +399,14 @@ Careportal replicated the functions you will find on your Nightscout screen unde
 
 ### Review carb calculation
 
-![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
+![Обзор расчёта углеводов на вкладке терапии](../images/Screenshots_TreatCalc.png)
 
 * If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
 * Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
 
 ### Carb correction
 
-![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+![Терапия в 1 или 2 линии](../images/Treatment_1or2_lines.png)
 
 Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
 
@@ -455,7 +455,7 @@ History of the following treatments:
 
 ## BG Source - xDrip, Dexcom App (pateched)...
 
-![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
+![Вкладка Источник BG-здесь xDrip](../images/Screenshots_BGSource.png)
 
 * Depending on your BG source settings this tab is named differntly.
 * Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
