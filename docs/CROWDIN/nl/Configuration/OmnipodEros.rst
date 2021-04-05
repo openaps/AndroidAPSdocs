@@ -69,7 +69,7 @@ Klik in het **RileyLink Selectie** scherm op de **Scan** knop. Hierna verschijne
 
 Druk op de knop  **Volgende** om verder te gaan met de rest van de **Setup-wizard.** Het kan tot een minuut duren voordat de geselecteerde Link initialiseert en de **Volgende** knop actief wordt.
 
-Gedetailleerde stappen over hoe jouw Link moet worden ingesteld, staan hieronder in de `RileyLink Setup Sectie <#rileylink-setup>`__.
+Gedetailleerde stappen over hoe jouw Link moet worden ingesteld, staan hieronder bij `RileyLink Installatie <#rileylink-installatie>`__.
 
 **Of**
 
@@ -78,7 +78,7 @@ Optie 2: De Configurator
 
 Je kunt de Omnipod als pomp ook instellen in de Configurator (1). Deze vind je afhankelijk van je eigen instellingen óf in het hamburgermenu in de linkerbovenhoek óf in de tab met de naam "Configurator". In de Configurator kies je voor Omnipod door onder **pomp** de **radio button (2)** bij **Omnipod** aan te klikken. Door het **selectievakje (4)** naast het **tandwieltje (instellingen) (3)** te selecteren, wordt het Omnipod menu als **tabblad** weergegeven in de AAPS interface, met de titel **OMNIPOD**. Dit wordt in deze documentatie aangeduid als de **Omnipod (POD)** tab.
 
-    **Opmerking:** Een snellere manier om toegang te krijgen tot de **Omnipod instellingen** kan hieronder worden gevonden in de `Omnipod Instellingen sectie <#omnipod-settings>`__.
+    **Opmerking:** Een snellere manier om toegang te krijgen tot de **Omnipod instellingen** kan hieronder worden gevonden in de `Omnipod Instellingen sectie <#omnipod-pomp-instellingen>`__.
 
     |Enable_Omnipod_Driver_3| |Enable_Omnipod_Driver_4|
 
@@ -94,22 +94,22 @@ Om te controleren of je de Omnipod driver hebt ingeschakeld in AAPS: **veeg naar
 Omnipod pomp instellingen
 ======================
 
-Please **swipe left** to the **Omnipod (POD)** tab where you will be able to manage all pod and RileyLink functions (some of these functions are not enabled or visible without an active pod session):
+Veeg **naar links** naar het tabblad **Omnipod (POD)** waar je alle functies van pod en Link kunt beheren (sommige van deze functies zijn niet ingeschakeld of zichtbaar zonder een actieve sessie).
 
-    |refresh_pod_status| Refresh Pod connectivity and status
+    |refresh_pod_status| Pod verbinding en status vernieuwen
 
-    |pod_management| Pod Management (Activate, Deactivate, Play test beep, RileyLink Stats and Pod history)
+    |pod_management| Pod Beheer (Activeren, Deactiveren, Testpieptoon afspelen, Pod Historie, Link statistieken)
 
-RileyLink Setup
+RileyLink Installatie
 ---------------
 
-If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the `Activating a Pod Section <#activating-a-pod>`__ below.
+Als je je Link al met succes hebt gekoppeld in de Setup-wizard of via de Configurator, ga dan naar de sectie 'Een Pod Activeren <#een-pod-activeren>`__ hieronder.
 
-*Note: A good visual indicator that the RileyLink is not connected is that the Insulin and Calculator buttons on the HOME tab will be missing. This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.*
+*Opmerking: Een goede indicator dat de Link niet verbonden is, is dat de knoppen Insuline en Calculator op het Overzicht-tabblad ontbreken. Dit zal ook gebeuren gedurende de eerste 30 seconden nadat AAPS start, omdat er dan verbinding moet worden gemaakt met de Link.*
 
-1. Ensure that your RileyLink is fully charged and powered on.
+1. Verzeker jezelf ervan dat je Link volledig opgeladen is en aanstaat.
 
-2. After selecting the Omnipod driver, identify and select your RileyLink from **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Gear Icon (Settings) (2)** ➜\ **RileyLink Configuration (3)** by pressing the **Not Set** or **MAC Address (if present)** text.   
+2. Nadat je de Omnipod als pomp hebt geselecteerd, moet je je Link nog identificeren. Ga daarvoor weer naar de **Configurator (1)** ➜\ **Pomp**\ ➜\ **Omnipod**\ ➜\ **tandwieltje (instellingen) (2)** ➜\ **RileyLink Configuration (3)** en klik op de tekst **Niet ingesteld** of - als die er staat - **MAC Address**.   
 
     Ensure your RileyLink battery is charged and it is `positioned in close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Once selected, you can proceed to activate your first pod session. Use the back button on your phone to return to the main AAPS interface.
 
@@ -934,7 +934,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |RileyLink_Bluetooth_Reset_5|        image:: ../images/omnipod/RileyLink_Bluetooth_Reset_5.png
 
 ..
-	RileyLink Setup
+	RileyLink Installatie
 .. |RileyLink_Setup_1|                  image:: ../images/omnipod/RileyLink_Setup_1.png
 .. |RileyLink_Setup_2|                  image:: ../images/omnipod/RileyLink_Setup_2.png
 .. |RileyLink_Setup_3|                  image:: ../images/omnipod/RileyLink_Setup_3.png
