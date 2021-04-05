@@ -196,31 +196,31 @@
 
 * ** СЕРЫЕ ** столбцы показывают отклонение, вызванное углеводами. 
 * ** ЗЕЛЕНЫЕ ** столбцы показывают, что ГК превышает уровень, ожидаемый алгоритмом. Зеленые столбцы используются для увеличения сопротивления в [Autosens](../Usage/Open-APS-features#autosens).
-* **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
-* **YELLOW** bars show a deviation due to UAM.
-* **BLACK** bars show small deviations not taken into account for sensitivity
+* ** КРАСНЫЕ ** столбцы показывают, что ГК ниже величины, ожидаемой алгоритмом. Красные столбцы используются для увеличения сопротивления в [Autosens](../Usage/Open-APS-features#autosens).
+* ** ЖЕЛТЫЕ ** столбцы показывают отклонение, вызванное непредвиденным приемом пищи UAM.
+* **ЧЕРНЫЕ** столбцы показывают небольшие отклонения, не принятые во внимание при расчете чувствительности
 
-#### Sensitivity
+#### Чувствительность
 
-* Shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. 
-* Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+* Показывает чувствительность, обнаруженную алгоритмом [Autosens](../Usage/Open-APS-features#autosens). 
+* Чувствительность - это расчет чувствительности к инсулину в результате нагрузки, гормонов и т.д.
 
 #### Нагрузка
 
-* Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
-* The value is higher for insulin closer to peak time.
-* It would mean to be negative when IOB is decreasing. 
+* Показывает активность инсулина, рассчитанную на основе профиля инсулина (не производная от активного инсулина). 
+* Значение выше ближе к пику времени действия инсулина.
+* Это значит, что при снижении IOB величина будет отрицательной. 
 
-#### Deviation slope
+#### Линия отклонения
 
-* Internal value used in algorithm.
+* Внутреннее значение, используемое в алгоритме.
 
-### Section H - Buttons
+### Раздел H-Кнопки
 
 ![Кнопки главного экрана](../images/Home2020_Buttons.png)
 
-* Buttons for insulin, carbs and Calculator are 'always on'. 
-* Other Buttons have to be setup in [preferences](../Configuration/Preferences#buttons).
+* Кнопки инсулина, углеводов и калькулятора-'всегда активны'. 
+* Другие кнопки должны быть настроены в [настройках ](../Configuration/Preferences#buttons).
 
 #### Инсулин
 
