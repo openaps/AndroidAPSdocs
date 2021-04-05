@@ -90,11 +90,11 @@ Het gebruik van de is G6 misschien wat complexer dan het op het eerste gezicht l
 * Het zogenaamde "Pre-soaking" (de sensor alvast inbrengen, waarna je nog wacht met starten) van de G6 met kalibratiecode zal hoogstwaarschijnlijk leiden tot onnauwkeurigheden in je glucosewaardes na starten. Omdat het algoritme van de G6 rekent op weefselbeschadiging na inbrengen, terwijl je met Pre-soaken niet dezelfde mate van weefselbeschadiging zult hebben op het moment dat je de sensor start. Wanneer je Pre-soakt is het waarschijnlijk het beste om de sensor te kalibreren.
 * Als je om welke reden ook niet in staat bent om op te letten wat er gebeurt tijdens een herstart / na een Pre-soak, dan kun je beter de kalibratiecode niet gebruiken, en jouw sensor gebruiken met kalibraties, net als bij de G5.
 
-To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+Lees het [volledige artikel](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) (Engelstalig) van Tim Street voor meer achtergrondinformatie en de redenen achter deze aanbevelingen.
 
 ### G6-zender voor de eerste keer verbinden
 
-**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
+**Voor het resetten van een zender zie [Zender resetten](#zender-resetten) verderop. Verderop staat ook beschreven hoe je een zender moet vervangen.**
 
 Voor G6-zenders met een productie datum na het najaar van 2018 (d.w.z. serie nr. beginnend met 80 of 81) kun je de [master](https://jamorham.github.io/#xdrip-plus) versie gebruiken.
 
