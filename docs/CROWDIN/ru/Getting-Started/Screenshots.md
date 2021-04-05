@@ -184,18 +184,18 @@
 * Показывает инсулин, который вы имеете на борту (= активный инсулин в вашем теле). Он включает инсулин болюсов и временного базала (**, но исключает базальную скорость, установленную в вашем профиле**).
 * Если бы не было [микроболюсов SMB](../Usage/Open-APS-features#super-micro-bolus-smb), болюсов, и временных базалов, TBR во время действия инсулина DIA, он равнялся бы нулю.
 * Активный инсулин IOB может быть отрицательным, если у не осталось ни болюсов, ни нулевого/низкого временного базала в течение более длительного времени чем DIA.
-* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile-recommended). 
+* Спад действия инсулина зависит от [DIA и настроек профиля инсулина](../Configuration/Config-Builder#local-profile-recommended). 
 
-#### Carbs On Board
+#### Активные углеводы COB
 
-* Shows the carbs you have on board (= active, not yet decayed carbs in your body). 
-* Decaying depends on the deviations the algorithm detects. 
-* If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
+* Показывает активные углеводы в организме (= еще не усвоенные углеводы в вашем теле). 
+* Спад зависит от отклонений, замеченных алгоритмом. 
+* Если он обнаружит более высокое поглощение углеводов, чем ожидалось, будет подан инсулин, и это увеличит количество активного инсулина IOB (более или менее, в зависимости от ваших настроек безопасности). 
 
-#### Deviations
+#### Отклонение
 
-* **GREY** bars show a deviation due to carbs. 
-* **GREEN** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
+* ** СЕРЫЕ ** столбцы показывают отклонение, вызванное углеводами. 
+* ** ЗЕЛЕНЫЕ ** столбцы показывают, что ГК превышает уровень, ожидаемый алгоритмом. Зеленые столбцы используются для увеличения сопротивления в [Autosens](../Usage/Open-APS-features#autosens).
 * **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
 * **YELLOW** bars show a deviation due to UAM.
 * **BLACK** bars show small deviations not taken into account for sensitivity
