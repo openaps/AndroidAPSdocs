@@ -111,15 +111,15 @@ Als je je Link al met succes hebt gekoppeld in de Setup-wizard of via de Configu
 
 2. Nadat je de Omnipod als pomp hebt geselecteerd, moet je je Link nog identificeren. Ga daarvoor weer naar de **Configurator (1)** ➜\ **Pomp**\ ➜\ **Omnipod**\ ➜\ **tandwieltje (instellingen) (2)** ➜\ **RileyLink Configuration (3)** en klik op de tekst **Niet ingesteld** of - als die er staat - **MAC Address**.   
 
-    Ensure your RileyLink battery is charged and it is `positioned in close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Once selected, you can proceed to activate your first pod session. Use the back button on your phone to return to the main AAPS interface.
+    Verzeker jezelf ervan dat je Link `dichtbij je telefoon is<#optimale-omnipod-en-link-positie>`__ (~30 cm ofminder) zodat deze gevonden kan worden door AAPS. Klik op "scan" en klik op je Link als deze verschenen is in de lijst. Als je dit gedaan hebt, kun je je eerste pod sessie starten. Klik op de terug-knop van je telefoon om terug te gaan naar het AAPS overzicht.
 
     |RileyLink_Setup_1| |RileyLink_Setup_2|
 
-3. On the **RileyLink Selection** screen press the **Scan (4)** button to initiate a bluetooth scan. **Select your RileyLink (5)**  from the list of available Bluetooth devices.
+3. In het **RileyLink Selectie** scherm druk je op de **Scan (4)** knop om een Bluetooth scan te starten. **Selecteer je Link (5)** in de lijst met beschikbare Bluetooth apparaten.
 
     |RileyLink_Setup_3| |RileyLink_Setup_4|
 
-4. After successful selection you are returned to the Omnipod Settings page listing your **currently selected RileyLink\'s MAC Address (6).** 
+4. Na een succesvolle selectie ga je vanzelf terug naar het scherm met Omnipod instellingen, waar het **MAC adres van je gelesecteerde Link (6)** nu onder RileyLink staat. 
 
     |RileyLink_Setup_5|
 
@@ -773,7 +773,7 @@ Below are a few examples of when an uncertain notification can occur.
 Best Practices
 ==============
 
-Optimal Omnipod and RileyLink Positioning
+Optimale Omnipod en Link positie
 -----------------------------------------
 
 The antenna used on the RileyLink to communicate with an Omnipod pod is a 433 MHz helical spiral antenna. Due to its construction properties it radiates an omni directional signal like a three dimensional doughnut with the z-axis representing the vertical standing antenna. This means that there are optimal positions for the RileyLink to be placed, especially during pod activation and deactivation routines.
