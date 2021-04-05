@@ -17,11 +17,11 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Change language
+   :caption: Taal wijzigen
 
-   Change language <./changelanguage.rst>
+   Taal wijzigen <./changelanguage.rst>
 
-.. _getting-started:
+.. _Aan de slag:
 
 .. toctree::
    :maxdepth: 1
@@ -34,7 +34,7 @@ Hieronder volgt de inhoudsopgave.
    Insulinepompen <./Getting-Started/Pump-Choices.md>
    Documentatie wijzigingen <./Getting-Started/WikiUpdate.rst>
 
-.. _what-do-i-need:
+.. _wat-heb-ik-nodig:
 
 .. toctree::
    :maxdepth: 1
@@ -47,7 +47,7 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: How to Install AndroidAPS
+   :caption: AndroidAPS installeren
 
    Bouwen van de app <./Installing-AndroidAPS/Building-APK.md>
    Bijwerken naar een nieuwe versie <./Installing-AndroidAPS/Update-to-new-version.md>
@@ -57,12 +57,12 @@ Hieronder volgt de inhoudsopgave.
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch (voor ontwikkelaars) <./Installing-AndroidAPS/Dev-branch.md>
 
-.. _component-setup:
+.. _onderdelen-instellen:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Component Setup
+   :caption: Onderdelen instellen
 
    BG bron <./Configuration/BG-Source.rst>
    xDrip+ instellingen <./Configuration/xdrip.md>
@@ -71,12 +71,12 @@ Hieronder volgt de inhoudsopgave.
    Nightscout instellen <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch <./Hardware/Smartwatch.rst>
 
-.. _configuration:
+.. _configuratie:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Configuration
+   :caption: Configuratie
 
    Configurator <./Configuration/Config-Builder.md>
    Instellingen <./Configuration/Preferences.rst>
@@ -84,7 +84,7 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS Usage
+   :caption: AndroidAPS gebruiken
 
    AndroidAPS Screenshots <./Getting-Started/Screenshots.md>
    Doelen <./Usage/Objectives.rst>
@@ -103,18 +103,18 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: General Hints 
+   :caption: Algemene Tips 
 
    Wisselen van tijdzone <./Usage/Timezone-traveling.md>
    Toegang tot logbestanden <./Usage/Accessing-logfiles.md>
    AccuChek Combo - tips <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Instellingen exporteren/importeren <./Usage/ExportImportSettings.rst>
-   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
+   xDrip engineering modus <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS for children
+   :caption: AndroidAPS voor kinderen
 
    Volgen op afstand <./Children/Children.rst>
    SMS Comando's <./Children/SMS-Commands.rst>
@@ -123,29 +123,29 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Troubleshooting
+   :caption: Problemen oplossen
 
    Problemen oplossen <./Usage/troubleshooting.rst>
-   Nightscout client <./Usage/Troubleshooting-NSClient.md>
+   Nightscout Client <../Usage/Troubleshooting-NSClient.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: FAQ
+   :caption: Veelgestelde vragen
 
    Veelgestelde vragen <./Getting-Started/FAQ.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Glossary
+   :caption: Veelgebruikte woordenlijst
 
    Veelgebruikte woordenlijst <./Getting-Started/Glossary.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Where to go for help 
+   :caption: Waar je hulp kunt vinden 
 
    Leestips voordat je begint <./Where-To-Go-For-Help/Background-reading.md>
    Contact met anderen <./Where-To-Go-For-Help/Connect-with-other-users.md>
@@ -154,7 +154,7 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: For Clinicians
+   :caption: Voor zorgprofessionals
 
    Voor zorgprofessionals <./Resources/clinician-guide-to-AndroidAPS>
 
@@ -162,7 +162,7 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: How to help
+   :caption: Hoe je zelf kunt helpen
 
    Hoe kan je helpen <./Getting-Started/How-can-I-help.md>
    De app of wiki vertalen <./translations.md>
