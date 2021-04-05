@@ -117,9 +117,9 @@
 ![Section F](../images/Home2020_MainGraph.png)
 
 * График показывает уровень глюкозы в крови (ГК) считываемый с вашего мониторинга глюкозы (CGM). 
-* Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
-* Long press on the graph to change the time scale. You can choose 6, 12, 18 or 24 hours.
-* The green area reflects your target range. It can be configured in [preferences](../Configuration/Preferences#range-for-visualization).
+* Здесь показаны заметки, введенные на вкладке действия, такие как калибровка с глюкометра и записи углеводов, а также переключения профиля. 
+* Длительное нажатие на графике изменит масштаб времени. Можно выбрать 6, 8, 12, 18 или 24 часа.
+* Зеленая область отражает ваш целевой диапазон. It can be configured in [preferences](../Configuration/Preferences#range-for-visualization).
 * Blue triangles show [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - if enabled in [preferences](../Configuration/Preferences#openaps-smb-settings).
 * Optional information:
    
