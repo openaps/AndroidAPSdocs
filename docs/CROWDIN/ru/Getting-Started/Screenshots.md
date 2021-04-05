@@ -157,19 +157,19 @@
 #### Базал
 
 * **Сплошная синяя** линия показывает базальную скорость помпы и отражает фактическую подачу инсулина с течением времени.
-* The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
-* In times standard basal rate is given the area under the curve is shown in dark blue.
-* When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
+* **пунктирная синяя** линия - это средняя скорость базы, если не было временных настроек базальной скорости (TBR).
+* При стандартной базальной скорости область под кривой показывается в темно-синем цвете.
+* Когда базовая скорость временно корректируется (увеличивается или уменьшается), область под кривой отображается в светло-синем цвете.
 
-#### Activity
+#### Нагрузка
 
-* The **thin yellow** line shows the activity of Insulin. 
-* It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+* **тонкая желтая** линия отображает активность инсулина. 
+* Она основана на ожидаемом падении ГК из-за действия инсулина в системе, если не присутствуют другие факторы (например, углеводы).
 
-### Section G - additional graphs
+### Раздел G - дополнительные графики
 
-* You can activate up to four additional graphs below the main graph.
-* To open settings for additional graphs click the triangle on the right side of the [main graph](../Getting-Started/Screenshots#section-f-main-graph) and scroll down.
+* Можно активировать до четырех дополнительных графиков ниже главного графика.
+* Чтобы открыть настройки для дополнительных графиков, щелкните по треугольнику справа от [главного](../Getting-Started/Screenshots#section-f-main-graph) и прокрутите вниз.
 
 ![Дополнительные параметры графика](../images/Home2020_AdditionalGraphSetting.png)
 
@@ -205,7 +205,7 @@
 * Shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. 
 * Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
 
-#### Activity
+#### Нагрузка
 
 * Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
 * The value is higher for insulin closer to peak time.
@@ -408,11 +408,11 @@ Careportal replicated the functions you will find on your Nightscout screen unde
 
 ![Терапия в 1 или 2 линии](../images/Treatment_1or2_lines.png)
 
-Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+На вкладке Лечение можно исправить ошибочные записи углеводов (если вы переоцениваете или недооценили углеводы).
 
 1. Проверьте и запомните фактические активные углеводы COB и активный инсулин IOB на главном экране.
-2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount.
+2. В зависимости от помпы углеводы на вкладке терапии могут быть показаны одной линией с инсулином или в виде отдельной записи (например, для Dana RS).
+3. Удалите запись с неверным количеством углеводов.
 4. Убедитесь, что углеводы удалены успешно, повторно проверив активные углеводы COB на главном экране.
 5. Сделайте то же для активного инсулина IOB, если на вкладке терапии только одна линия для углеводов и инсулина.
    
