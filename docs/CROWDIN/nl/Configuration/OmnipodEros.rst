@@ -22,30 +22,30 @@ Benodigde hardware en software
    -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Informatie <mailto:getemalink@gmail.com>`__     
    -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Informatie <https://jameswedding.substack.com/>`__ - Niet getest
 
-* | Android_Phone | **Mobiele telefoon* * 
+* | Android_Phone | **Mobiele telefoon** 
 
-  Component that will operate AndroidAPS and send control commands to the Pod communication device.
+  Onderdeel waarop AndroidAPS draait en wat opdrachten naar de pod verstuurt via het communicatie-apparaatje.
 
       +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit>`__ with a version of AAPS 2.8 and related `components setup <../index.html#component-setup>`__
 
-*  |Omnipod_Pod|  **Insulin Delivery Device** 
+*  |Omnipod_Pod|  **Patch pomp voor insuline afgifte** 
 
-  Component that will interpret commands received from the Pod communication device originating from your AndroidAPS enable phone.
+  Onderdeel wat de opdrachten met betrekking tot afgifte van insuline die via het communicatie-apparaat worden ontvangen van de AndroidAPS telefoon, uitvoert.
 
-      +  A new Omnipod pod (Eros generation - **NOT DASH**)
+      +  Een nieuwe Omnipod pod (eerste generatie, Eros - **NIET DE NIEUWE GENERATIE, DASH**)
 
-These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and attempt to begin this process on your next pod change.
+Deze instructies gaan ervan uit dat je een nieuwe pod start; als dat niet het geval is, wees dan alsjeblieft geduldig en probeer dit proces te starten bij je volgende pod-wissel.
 
-Before You Begin
+Voordat je begint
 ================
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, charged RileyLink, and phone devices are must-haves).
+**VEILIGHEID VOOROP** - start dit proces niet in omstandigheden waarin je eventuele fouten niet kunt herstellen (dus alleen als je extra pods beschikbaar en voldoende insuline hebt en je telefoon en communicatie-apparaatje opgeladen zijn).
 
-**Your Omnipod PDM will no longer work after the AAPS Omnipod driver activates your pod**. Previously you used your Omnipod PDM to send commands to your Omnipod Eros pod. An Omnipod Eros pod only allows a single device to send communication to it. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate an Omnipod Eros pod with your RileyLink through the AAPS Omnipod driver, **you will no longer be able to use your PDM with your pod**. The AAPS Omnipod driver with the RileyLink is now your acting PDM. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies with AAPS is not working correctly.*
+** Je Omnipod PDM kan geen opdrachten aan de pod geven, als je de pod met AAPS-Omnipod hebt geactiveerd ** Eerder gebruikte je je Omnipod PDM om opdrachten te verzenden naar je Eros-pod. Een Eros-pod kan slechts met één apparaat communiceren. Het apparaat dat de pod activeert is het enige apparaat dat vanaf dat moment met de pod kan communiceren. Dat betekent dat als je eenmaal een Eros-pod via je Link activeert met je AndroidAPS telefoon, je deze pod niet met je PDM kunt bedienen. De telefoon met AndroidAPS is nu in feite je actieve PDM. *Dit betekent niet dat je je PDM weg kunt gooien: het is aan te raden deze te bewaren als back-up en voor noodgevallen als AAPS onverhoopt niet goed werkt.*
 
-**You can configure multiple RileyLinks, but only one selected RileyLink at a time can communicate with a pod.** The AAPS Omnipod driver supports the ability to add multiple RileyLinks in the RileyLink configuration, however, only one RileyLink at a time can be selected to be used for sending and receiving communication.
+**Je kunt meerdere Links configureren, maar slechts één geselecteerd apparaat kan per keer communiceren met een pod.** Het AAPS Omnipod stuurprogramma ondersteunt de mogelijkheid om meerdere Links (RileyLink of andere) toe te voegen in de RileyLink configuratie. Voor het verzenden en ontvangen van communicatie kan echter slechts één apparaatje tegelijk worden geselecteerd.
 
-**Your pod will not shut off when the RileyLink is out of range.** When your RileyLink is out of range or the signal is blocked from communicating with the active pod, your pod will continue to deliver basal insulin. Upon activating a pod, the basal profile defined in AAPS will be programmed into the new pod. Should you lose contact with the pod, it will revert to this basal profile. You will not be able to issue new commands until the RileyLink comes back in range and re-establishes the connection.
+**Je pod stopt niet als je Link of telefoon buiten bereik zijn.** Als je Link en/of je telefoon buiten bereik zijn of er is anderszins geen communicatie met de actieve pod, blijft de pod gewoon werken en je basaal afgeven. Bij het activeren van een pod, wordt het basaal profiel wat je in AAPS hebt ingesteld (lokaal of van Nightscout) in de nieuwe pod geprogrammeerd. Als je contact verliest met de pod, gaat deze terug naar het ingestelde basaal profiel. Je kunt geen nieuwe commando's geven tot het moment dat je telefoon en Link weer verbinding met de pod hebben.
 
 **30 min Basal Rate Profiles are NOT supported in AndroidAPS.** If you are new to AndroidAPS and are setting up your basal rate profile for the first time please be aware that basal rates starting on a half hour are not supported and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of say 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work.  You will need to update this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00.  Even though the 30 min basal rate profile increments are supported by the Omnipod hardware itself, AndroidAPS is not able to take them into account with its algorithms currently.
 
