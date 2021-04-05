@@ -227,15 +227,15 @@
 ![Кнопка инсулина](../images/Home2020_ButtonInsulin.png)
 
 * Дать определенное количество инсулина без использования [калькулятора болюса ](#bolus-wizard).
-* By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences#default-temp-targets).
-* If you do not want to bolus through pump but record insulin amount (i.e. insulin given by syringe) check the corresponding box.
+* Отметив флажок, можно автоматически активировать временную цель[ожидаемый прием пищи](../Configuration/Preferences#default-temp-targets).
+* Если вы не хотите подавать болюс с помпы, а только отметить количество инсулина (например, поданного шприц-ручкой) активируйте соответствующий флажок.
 
 #### Углеводы
 
 ![Кнопка углеводов](../images/Home2020_ButtonCarbs.png)
 
-* To record carbs without bolusing.
-* Certain [pre-set temporary targets](../Configuration/Preferences#default-temp-targets) can be set directly by checking the box.
+* Записать углеводы без подачи болюса.
+* [Заранее настроенные временные цели ](../Configuration/Preferences#default-temp-targets) можно активировать отметив соответствующий флажок.
 * Time offset: When will you / have you been eaten carbs (in minutes).
 * Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.rst)
 * You can use the buttons to quickly increase carb amount.
