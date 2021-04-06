@@ -1,6 +1,6 @@
 Vertraagde koolhydraten / "eCarbs"
 **************************************************
-Bij reguliere pomptherapie zijn vertraagde bolussen / multiwave bolussen handig voor vette maaltijden (pizza, pasta, pannenkoeken etc) die je bloedglucose lange tijd laten stijgen, langer dan de insuline bij een normale bolus werkzaam zou zijn. In een closed loop is dat echter niet zo zinvol (en geeft het technische problemen) omdat vertraagde/multiwave bolussen door de pomp worden uitgevoerd als een langdurige en vooraf gedefinieerde hoge basaal. Dat conflicteert met de loop, die de basaalstanden juist dynamisch aanpast. For details see `extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`__ below.
+Bij reguliere pomptherapie zijn vertraagde bolussen / multiwave bolussen handig voor vette maaltijden (pizza, pasta, pannenkoeken etc) die je bloedglucose lange tijd laten stijgen, langer dan de insuline bij een normale bolus werkzaam zou zijn. In een closed loop is dat echter niet zo zinvol (en geeft het technische problemen) omdat vertraagde/multiwave bolussen door de pomp worden uitgevoerd als een langdurige en vooraf gedefinieerde hoge basaal. Dat conflicteert met de loop, die de basaalstanden juist dynamisch aanpast. Voor meer informatie, zie `vertraagde bolus <../Usage/Extended-Carbs.html#vertraagde-bolus>`__ hieronder.
 
 En dus moet de loop op een andere manier omgaan met dit soort maaltijden. Daarom is in AndroidAPS vanaf versie 2.0 een optie ingebouwd die "eCarbs" heet. Dat staat voor extended Carbs (vertraagde koolhydraten).
 
