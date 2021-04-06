@@ -5,9 +5,9 @@ Wanneer zou ik mijn instellingen moeten exporteren?
 ==================================================
 Wees voorbereid op onvoorziene omstandigheden. Je kunt belangrijke instellingen per ongeluk veranderen en problemen hebben om weer terug te gaan naar de juiste instellingen. Je telefoon kan stuk gaan of gestolen worden. Om makkelijk terug te keren naar instellingen die voor jou goed werkten (en ook: als je de Doelen die je eerder hebt afgerond, niet opnieuw wilt moeten doen) dan moet je jouw instellingen regelmatig exporteren.
 
-Het is goed om jouw instellingen steeds te exporteren na het wijzigen van instellingen of na het voltooien van een Doel. 
+Het is goed om jouw instellingen steeds te exporteren na het wijzigen van instellingen of *na het voltooien van een Doel*. 
 
-Kopieer het bestand met jouw geëxporteerde instellingen naar een cloudopslag of naar een computer, het liefst naar beide (of naar twee computers, twee cloudopslagen). Zodat je altijd nog ergens een kopie van jouw instellingen-bestand hebt wanneer je AAPS telefoon stuk gaat of gestolen wordt, of als er iets met één computer / cloudopslag gebeurt. Het is heel frustrerend als je jouw instellingen om wat voor reden dan ook kwijt bent, en je moet weer van voren af aan beginnen in de Doelen. Zorg dat je een (liefst meerdere) backup(s) hebt!
+Kopieer het bestand met jouw geëxporteerde instellingen ook naar een cloudopslag of naar een computer, het liefst naar beide (of naar twee computers, twee cloudopslagen). Zodat je altijd nog ergens een kopie van jouw instellingen-bestand hebt wanneer je AAPS telefoon stuk gaat of gestolen wordt, of als er iets met één computer / cloudopslag gebeurt. Het is heel frustrerend als je jouw instellingen om wat voor reden dan ook kwijt bent, en je moet weer van voren af aan beginnen in de Doelen. Zorg dat je een (liefst meerdere) backup(s) hebt!
 
 Op een Windows-10 computer ziet het er zo uit:
   
