@@ -17,7 +17,7 @@ Functies
 Hulpmiddelen en apps voor controle op afstand
 ==================================================
 * `Nightscout <http://www.nightscout.info/>`_ in webbrowser (voornamelijk data weergave)
-* NSClient app is een uitgeklede versie van AAPS waarmee je iemand kunt volgen, en waarmee je: profiel wissels kunt doen, tijdelijke streefdoelen kunt instellen en koolhydraten kunt invoeren. There are 2 apps:  `NSClient & NSClient2 to download <https://github.com/nightscout/AndroidAPS/releases/>`_. The only difference is the app name. This way you can install the app twice on the same phone, to be able to follow 2 different persons/nightscouts with it.
+* NSClient app is een uitgeklede versie van AAPS waarmee je iemand kunt volgen, en waarmee je: profiel wissels kunt doen, tijdelijke streefdoelen kunt instellen en koolhydraten kunt invoeren. Er zijn 2 apps: NSClient & NSClient2 die je kunt `downloaden <https://github.com/nightscout/AndroidAPS/releases/>`_. Het enige verschil is de naam van de app. Op deze manier kun je de app twee keer installeren op dezelfde telefoon, om 2 verschillende personen/nachtscouts te kunnen volgen (bijv. als 2 gezinsleden diabetes hebben).
 * Dexcom follow als je de originele Dexcom app gebruikt (alleen BG waarden)
 * `xDrip+ <../Configuration/xdrip.html>`_ in 'follow'modus (voornamelijk BG waarden en **alarmen**)
 *    `Sugarmate <https://sugarmate.io/>`_ of `Spike <https://spike-app.com/>`_ op iOS (voornamelijk voor BG waarden en **alarmen**)
@@ -25,7 +25,7 @@ Hulpmiddelen en apps voor controle op afstand
 Belangrijke keuzes vooraf
 ==================================================
 * Het instellen van de juiste `behandelingsfactoren <../Getting-Started/FAQ.html#hoe-begin-ik>`_ (basaal, DIA, ISF...) is moeilijk bij kinderen, vooral wanneer er groeihormonen in het spel zijn. 
-* Settings must be the same in AndroidAPS and NSClient app.
+* De instellingen in zowel AndroidAPS en in NSClient moeten exact hetzelfde zijn.
 * Houd rekening met tijdsvertraging tussen master en volger. Dit vanwege de tijd die nodig is voor zowel up- als download, en het feit dat de hoofd AAPS telefoon even niet zal uploaden tijdens het uitvoeren van een loop-berekening.
 * Neem dus de tijd om de loop correct in te stellen en in "real life" met jouw kind binnen handbereik te testen, voordat je begint met het op afstand monitoren en behandelen. Schoolvakanties kunnen daar een goed moment voor zijn.
 * Wat is jullie noodplan wanneer bediening op afstand niet werkt (bijv. bij netwerk problemen)?
