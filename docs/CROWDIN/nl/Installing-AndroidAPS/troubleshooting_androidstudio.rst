@@ -51,9 +51,9 @@ Error: buildOutput.apkData must not be null
 ==================================================
 Misschien krijg je de volgende foutmelding bij het bouwen van de apk:
 
-  ``Errors while building APK.``
+  `Errors while building APK` (Fouten bij het bouwen van APK)
 
-  ``Cause: buildOutput.apkData must not be null``
+  `Cause: buildOutput.apkData must not be null` (Oorzaak: buildOutput.apkData mag niet leeg zijn)
 
 Dit is een bekende bug in Android Studio 3.5 en zal waarschijnlijk niet worden opgelost voordat Android Studio 3.6 uitkomt. Je hebt drie opties:
 
@@ -118,26 +118,26 @@ App niet geïnstalleerd
 * Zorg ervoor dat je het bestand "app-full-release.apk" naar jouw telefoon hebt overgebracht.
 * Als "App niet geïnstalleerd" wordt weergegeven op jouw telefoon volg dan deze stappen:
   
-1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
+1. `Instellingen exporteren <../Usage/ExportImportSettings.html>`_ (in AAPS-app die al op jouw telefoon is geïnstalleerd)
 2. Verwijder de AndroidAPS app van jouw telefoon.
 3. Schakel vliegtuigmodus in & schakel bluetooth uit.
 4. Installeer nieuwe versie ("app-full-release.apk”)
-5. `Import settings <../Usage/ExportImportSettings.html>`__
+5. `Instellingen importeren <./Usage/ExportImportSettings.html>`__
 6. Zet bluetooth weer aan en schakel de vliegtuigmodus uit
 
 App geïnstalleerd maar oude versie
 ==================================================
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Installing-AndroidAPS/Update-to-new-version.html#update-your-local-copy>`_.
+Wanneer je de app succesvol hebt gebouwd, hem naar jouw telefoon hebt overgebracht en geïnstalleerd, maar het versienummer blijft hetzelfde, dan heb je waarschijnlijk de `bijwerken van jouw lokale kopie <../Update-to-new-version.html#bijwerken-van-jouw-lokale-kopie>`_ stap gemist. Bouw de app opnieuw en vergeet deze stap niet;)
 
 Geen van de bovengenoemde
 ==================================================
 Als geen van de bovenstaande tips je geholpen heeft, dan zou je de de app helemaal vanaf nul kunnen bouwen:
 
-1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
-2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`__. Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan. 
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`__.
+1. `Instellingen exporteren <../Usage/ExportImportSettings.html>`_ (in AAPS-app die al op jouw telefoon is geïnstalleerd)
+2. Houd jouw keystore file (digitale handtekening) en keystore wachtwoord bij de hand. In het geval dat je het bestand kwijt bent en/of het wachtwoord bent vergeten dan kun je proberen om ze te vinden in de projectbestanden zoals `hier <https://youtu.be/nS3wxnLgZOo>`__ beschreven. Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan. 
+3. Bouw app vanaf het begin zoals `hier <../Installing-AndroidAPS/Update-to-new-version.html#bijwerken-van-jouw-lokale-kopie>`__ beschreven.
 4. Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
-5. `Import settings <../Usage/ExportImportSettings.html>`__
+5. `Instellingen importeren <./Usage/ExportImportSettings.html>`__
 
 In het ergste geval
 ==================================================
