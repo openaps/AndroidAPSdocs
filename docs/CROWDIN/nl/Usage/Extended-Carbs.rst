@@ -8,12 +8,12 @@ eCarbs zijn koolhydraten die over meerdere uren worden uitgespreid. Voor standaa
 
 Het nut van eCarbs is niet beperkt tot vette / eiwitrijke maaltijden. Ze zijn ook handig als door andere invloeden de bloedglucose gedurende meerdere uren flink stijgt, bijvoorbeeld bij medicijnen zoals corticosteroïden.
 
-To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift:
+Voor het invoeren van eCarbs gebruik je de knop *Koolhydraten* op het Overzicht-scherm. Vul de duur in, het aantal koolhydraten en desgewenst een timeshift. In dit voorbeeld zie je dat iemand 20 gram koolhydraten wil 'uitsmeren' over de komende 3 uur.
 
 .. image:: ../images/eCarbs_Dialog.png
   :alt: Koolhydraten invoeren
 
-Je ziet de eCarbs in de grafiek terug als kleine beetjes van 3 gram in de toekomst. En je ziet de 25 gram koolhydraten bij COB staan, tussen haakjes omdat het toekomstige koolhydraten zijn:
+Je ziet de eCarbs in de grafiek terug als kleine beetjes van 1 a 2 gram in de toekomst. En je ziet dat er nog 9 gram koolhydraten achter COB staan, tussen haakjes omdat het toekomstige koolhydraten zijn.
 
 .. image:: ../images/eCarbs_Graph.png
   :alt: eCarbs in grafiek
@@ -30,9 +30,9 @@ Hoe je vertraagde koolhydraten gebruikt voor een maaltijd met vet en eiwit wordt
 
 -----
 
-The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
+Voor onderstaand voorbeeld wordt aangeraden om OpenAPS SMB APS te gebruiken, met SMB ingeschakeld en de instelling *SMB met koolhydraten* ingeschakeld te hebben.
 
-Neem nou bijvoorbeeld for a Pizza might be to give a (partial) bolus up front via the *calculator* and then use the *carbs* button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours. Je zult natuurlijk moeten uitproberen welke precieze waarden voor jou werken. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive.
+Neem nou bijvoorbeeld een pizza, daarbij kun je een gedeeltelijke bolus voor de maaltijd via de bolus calculator geven en via de knop *Koolhydraten* de resterende koolhydraten gedurende 4 a 6 uur, te laten beginnen na 1 of 2 uur. Je zult natuurlijk moeten uitproberen welke precieze waarden voor jou werken. Hierbij kun je ook (in kleine, verstandige stapjes) variëren met de instelling *max aantal minuten basaal om de SMB te limiteren tot* om het algoritme agressiever/minder agressief te laten zijn.
 Voor maaltijden met nauwelijks koolhydraten en een hoog vet/eiwitgehalte kan het genoeg zijn om alleen eCarbs te gebruiken en geen bolus (zie de blogpost hierboven).
 
 Iedere keer dat je eCarbs invoert, wordt er in jouw Careportal automatisch een opmerking toegevoegd. Hierdoor kun je de eerdere keren gemakkelijk terugvinden, zodat je jouw aanpak kunt evalueren en verbeteren voor de volgende keer. Of gewoon herhalen wat je eerder deed, als dat voor jou goed werkte.
