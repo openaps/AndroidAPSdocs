@@ -18,7 +18,7 @@ The patched app has to be installed instead of the original app. The next sensor
 
 Important: To avoid possible problems it may help to first install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. This costs no extra power. Then install the patched app. 
 
-The patched app can be identified by the foreground authorization notification. The foreground authorization service improves the connection stability compared to the original app which do not use this service.
+The patched app can be identified by the foreground authorization notification. Doordat de gepatchte app toestemming heeft om op de voorgrond te draaien, zal de verbinding stabieler zijn dan bij de originele app, die dit niet heeft.
 
 .. image:: ../images/Libre2_ForegroundServiceNotification.png
   :alt: LibreLink Foreground Service
