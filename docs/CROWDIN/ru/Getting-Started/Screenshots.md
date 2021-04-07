@@ -239,42 +239,42 @@
 * Смещение времени: Когда вы будете употреблять/употребили в пищу углеводы (в минутах).
 * Продолжительность: Для ["пролонгированных углеводов"](../Usage/Extended-Carbs.rst)
 * Можно использовать кнопки для быстрого увеличения количества углеводов.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
+* Примечания будут загружены в Nightscout-в зависимости от настроек [клиента NS](../Configuration/Preferences#nsclient).
 
 #### Калькулятор
 
-* See Bolus Wizard [section below](#bolus-wizard)
+* Смотрите раздел мастер болюса Bolus Wizard [ниже](#bolus-wizard)
 
-#### Calibrations
+#### Калибровки
 
-* Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
-* Must be activated in [preferences](../Configuration/Preferences#buttons).
+* Отправляет калибровку в xDrip + или открывает диалог калибровки Dexcom.
+* Необходимо активировать в настройках [](../Configuration/Preferences#buttons).
 
 #### CGM/НМГ
 
-* Opens xDrip+.
-* Back button returns to AAPS.
-* Must be activated in [preferences](../Configuration/Preferences#buttons).
+* Открывает xDrip +.
+* Кнопка Назад возвращает в AAPS.
+* Необходимо активировать в настройках [](../Configuration/Preferences#buttons).
 
-#### Quick Wizard
+#### Мастер быстрых настроек
 
-* Easily enter amount of carbs and set calculation basics.
-* Details are setup in [preferences](../Configuration/Preferences#quick-wizard).
+* Легко вводите количество углеводов и задайте основы расчетов.
+* Настройки могут быть сделаны в [параметрах](../Configuration/Preferences#quick-wizard).
 
-## Bolus Wizard
+## Мастер Болюса
 
 ![Мастер Болюса](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus this is where you will normally make it from.
+Когда необходимо дать болюс на еду, он обычно подается отсюда.
 
-### Section I
+### Секция I
 
-* BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. 
-* In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. 
-* The CORR field is if you want to modify the end dosage for some reason.
-* The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+* Поле ГК обычно уже заполнено данными с мониторинга. Если мониторинг не работает, то поле будет пустым. 
+* В поле УГЛЕВОДЫ вы добавляете рассчитанное вами количества углеводов - или эквивалента - на которые хотите дать болюс. 
+* Поле CORR-для корректировки - если вы по какой-либо причине хотите изменить конечную дозу.
+* Поле CARB TIME предназначено для предварительной подачи болюса, так что вы можете сообщить системе о задержке в приеме углеводов. Вы можете добавить отрицательное число в это поле, если даете болюс на прошлые углеводы.
 
-#### Eating reminder
+#### Напоминание о приеме пищи
 
 * For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
    
@@ -290,7 +290,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * Shows the calculated bolus. 
 * If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
+* Примечания будут загружены в Nightscout-в зависимости от настроек [клиента NS](../Configuration/Preferences#nsclient).
 
 ### Section L
 
