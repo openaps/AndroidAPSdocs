@@ -236,9 +236,9 @@
 
 * Записать углеводы без подачи болюса.
 * [Заранее настроенные временные цели ](../Configuration/Preferences#default-temp-targets) можно активировать отметив соответствующий флажок.
-* Time offset: When will you / have you been eaten carbs (in minutes).
-* Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.rst)
-* You can use the buttons to quickly increase carb amount.
+* Смещение времени: Когда вы будете употреблять/употребили в пищу углеводы (в минутах).
+* Продолжительность: Для ["пролонгированных углеводов"](../Usage/Extended-Carbs.rst)
+* Можно использовать кнопки для быстрого увеличения количества углеводов.
 * Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
 
 #### Калькулятор
