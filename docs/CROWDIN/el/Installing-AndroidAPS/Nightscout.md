@@ -6,7 +6,7 @@
 
 ### Ρυθμίσεις Nightscout
 
-Μπορείτε να αρνηθείτε την πρόσβαση του κοινού στην τοποθεσία Nightscout χρησιμοποιώντας [ ρόλους ελέγχου ταυτότητας ](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
+You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
 
 ### Ρυθμίσεις AndroidAPS
 
@@ -25,7 +25,7 @@
 
 ## Εγχειρίδιο εγκατάστασης Nightscout
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Ο ιστότοπός σας Nightscout πρέπει να έχει τουλάχιστον την έκδοση 10 (εμφανίζεται ως 0,10...), οπότε ελέγξτε ότι εκτελείτε την[ τελευταία έκδοση ](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) διαφορετικά θα λάβετε ένα μήνυμα σφάλματος στην εφαρμογή AAPS σας. Μερικοί άνθρωποι θεωρούν ότι το κύκλωμα χρησιμοποιεί περισσότερο από την ελεύθερη ποσόστωση που επιτρέπεται, έτσι το heroku είναι η προτιμώμενη επιλογή.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
 
 * Μεταβείτε στη διεύθυνση https://herokuapp.com/
 
