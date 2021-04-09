@@ -16,7 +16,7 @@ Funktionen
 
 Tools und Apps für die Fernüberwachung
 ==================================================
-* `Nightscout <http://www.nightscout.info/>`_ im Webbrowser (vor allem Datenanzeige)
+* `Nightscout <https://nightscout.github.io/>`_ in web browser (mainly data display)
 * Die NSClient-App ist eine reduzierte AAPS-Version mit der du jemandem folgen, Profilwechsel vornehmen, TT setzen und Kohlenhydrate eingeben kannst. Die beiden Apps NSClient & NSClient2 können `direkt heruntergeladen <https://github.com/nightscout/AndroidAPS/releases/>`_ werden. Einziger Unterschied ist der App-Name. Dadurch kannst du die App zwei Mal auf dem gleichen Smartphone installieren, wenn du zwei verschiedenen Personen bzw. Nightscout-Instanzen folgen willst.
 * Dexcom Follow App zusammen mit der originalen Dexcom App (nur BZ-Werte)
 *	`xDrip+ <../Configuration/xdrip.html>`_ im Follower Modus (vor allem Datenanzeige und **Alarme**)
