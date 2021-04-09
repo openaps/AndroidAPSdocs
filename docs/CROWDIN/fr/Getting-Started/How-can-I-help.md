@@ -8,13 +8,13 @@ Les développeurs sont des parents, des soignants, des proches et des personnes 
 
 ## Je peux écrire du code ! Comment puis-je participer ?
 
-Yeh ! Look at the issues, ask in the discord channel, there is always a lot to do! Choisissez une petite tâche au début et faites votre première Pull Request ! :)
+Yeh ! Regardez les problèmes ("Issues"), demandez dans "discord", il y a toujours beaucoup à faire ! Choisissez une petite tâche au début et faites votre première Pull Request ! :)
 
 ## Je connais le système et je peux écrire de la documentation !
 
 Excellent, c'est une chose très appréciée et une bonne façon de contribuer en avance !
 
-* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
+* Le canal de discord concernant la doc se trouve ici : [AndroidAPSwiki/Lobby](https://discord.gg/4fQUWHZ4Mw). 
 * Un guide sur la façon de faire des "commits" concernant le wiki anglais peut être trouvé ici : [Comment faire un PR](../make-a-PR.md). Les autres langues ne sont que traduites de l'anglais et ne peuvent pas être éditées indépendamment pour des raisons de cohérence.
 
 ## Je parle plusieurs langues et je veux traduire l'application ou la documentation
@@ -26,4 +26,4 @@ Il suffit de vous inscrire à CROWDIN, de cliquer sur votre langue, d'attendre l
 
 ## Y a-t-il d'autres façons d'aider ?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
+Les compétences requises incluent la conception graphique, le retour d'expérience, les traductions, les pages wiki ou simplement aider en répondant à des questions simples dans discord & Facebook pour donner aux développeurs le temps et l’espace nécessaires pour se concentrer sur les choses les plus difficiles.
