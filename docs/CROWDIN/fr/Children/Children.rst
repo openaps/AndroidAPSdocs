@@ -16,7 +16,7 @@ Fonctions
 
 Outils et applications pour la surveillance à distance
 ==================================================
-*	`Nightscout <http://www.nightscout.info/>`_ dans le navigateur web (principalement affichage des données)
+* `Nightscout <https://nightscout.github.io/>`_ in web browser (mainly data display)
 * L'application NSClient est une version réduite d'AAPS capable de suivre quelqu'un, de faire des changements de profil, de régler des CTs et d'entrer des glucides. Il y a 2 applications: `NSClient & NSClient2 que vous pouvez télécharger <https://github.com/nightscout/AndroidAPS/releases/>`_. La seule différence est le nom de l'application. De cette façon, vous pouvez installer l'application deux fois sur le même téléphone, pour pouvoir suivre 2 personnes/nightscout différentes.
 *	Dexcom Follow si vous utilisez l'application officielle Dexcom (glycémies uniquement)
 *	`xDrip+ <../Configuration/xdrip.html>`_ en mode suiveur (principalement les valeurs de GLY et les **alarmes**)
