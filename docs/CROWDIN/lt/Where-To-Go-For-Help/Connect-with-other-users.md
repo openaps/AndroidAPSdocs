@@ -4,11 +4,11 @@
 
 * 1 žingsnis: perskaitykite „Wiki“ - dabar mes turime paieškos funkciją, kuri jums padės!
 * 2 etapas: ieškokite Facebook grupėje; jei ten dar nebuvo atsakyta į jūsų klausimą, paklauskite [AndroidAPS Users Facebook group](https://www.facebook.com/groups/1900195340201874/)
-* 3 lygis: jei Facebook nepateikia sprendimo, paklauskite [gitter](https://gitter.im/MilosKozak/AndroidAPS). Abiejų kanalų pranešimų kopijos ignoruojamos/ištrinamos, kad būtų išvengta pasikartojančių atsakymų. Atminkite, kad dauguma kūrėjų yra Europoje, todėl jiems neįmanoma visą parą; skirkite jiems kelias valandas atsakymui, ypač savaitgaliais ir atostogų metu.
+* level 3: If facebook did not get results then ask in [discord](https://discord.gg/4fQUWHZ4Mw). Abiejų kanalų pranešimų kopijos ignoruojamos/ištrinamos, kad būtų išvengta pasikartojančių atsakymų. Atminkite, kad dauguma kūrėjų yra Europoje, todėl jiems neįmanoma visą parą; skirkite jiems kelias valandas atsakymui, ypač savaitgaliais ir atostogų metu.
 * 4 žingsnis: sukurkite [problemos aprašą](https://github.com/nightscout/AndroidAPS/issues) ir pridėkite savo [žurnalo failus](../Usage/Accessing-logfiles.md)
 * 5 lygis: Parašykite el. laišką adresu *developers@androidaps.org* (tik jei reikia asmeninių duomenų, kurių nereikėtų skleisti viešajame kanale, ir jei jūsų problema nebuvo išspręsta kitu lygiu)
 
-Norėdami gauti NGJ šaltinių palaikymą, naudokite Facebook grupes ar gitter kanalus konkrečiai sistemai (pvz., [xdrip](https://www.facebook.com/groups/xDripG5/), [600 serijos uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)). Nightscout pagalbai naudokitės [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/), nes ten esantys vartotojai žino daugiau apie konkrečias sistemas nei čia esantys žmonės, kurie visi naudoja skirtingas sistemas.
+For support on CGM sources please use the Facebook groups or discord channels for that specific system (e.g. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
 
 ## Prisijunkite prie AndroidAPS users grupės Facebook!
 
@@ -19,7 +19,7 @@ Prisijunkite prie pagrindinės [AndroidAPS Facebook grupės](https://www.faceboo
 * [Looped Facebook grupė](https://www.facebook.com/groups/TheLoopedGroup): apima visus Pasidaryk Pats uždarojo ciklo sistemas (OpenAPS, Loop ir AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): bendri NGJ
-* [AndroidAPS Gitter kanale](https://gitter.im/MilosKozak/AndroidAPS)
+* [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
 
 ## Šaliai ar kalbai būdingi informacijos šaltiniai
 
