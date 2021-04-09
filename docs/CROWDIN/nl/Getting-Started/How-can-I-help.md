@@ -8,13 +8,13 @@ Ontwikkelaars zijn ouders, verzorgers, partners en mensen met diabetes ze ontwik
 
 ## Ik kan programmeren! Hoe doe ik mee?
 
-Ja! Bekijk de problemen, vraag in het Gitter kanaal, er is altijd genoeg te doen! Pak een kleine taak als eerste en maak je eerste Pull Request! :)
+Ja! Look at the issues, ask in the discord channel, there is always a lot to do! Pak een kleine taak als eerste en maak je eerste Pull Request! :)
 
 ## Ik ken de AAPS-oplossing en kan documentatie schrijven!
 
 Mooi, dit wordt zeer gewaardeerd en is een prima manier om je steentje bij te dragen #payitforward.
 
-* Het oude gitter kanaal voor de wiki kan je hier vinden: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). 
+* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
 * Een instructie hoe je Commits op de Engelse wiki kunt doen: [How to make a PR](../make-a-PR.md). Andere talen worden alleen vertaald uit het Engels en worden verder niet bewerkt, om de wiki consistent te houden.
 
 ## Ik spreek meedere talen en wil de AAPS applicatie of documentatie vertalen.
@@ -26,4 +26,4 @@ Meld je aan bij Crowdin, kies je taal en wacht op autorisatie door een admin en 
 
 ## Zijn er andere manieren om te helpen?
 
-De benodigde skills zijn Grafische Vormgeving, UX design, vertalen, Wiki bewerken of simpelweg bijdragen in gitter en Facebook door vragen te beantwoorden, zodat de ontwikkelaars zich kunnen richten op het complexere werk.
+Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
