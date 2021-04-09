@@ -36,7 +36,7 @@ Jei naudojate Android 10 ir kyla problemų dėl xDrip+ pagrindinės versijos, ga
 
 * Norint išvengti programų neatitikimų, reikia suaktyvinti `Siųsti rodomą glikemijos reikšmę (Send the displayed glucose value)`.
 
-* Jei taip pat suaktyvinote `Priimti terapiją (Accept treatments)` ir perdavimą AndroidAPS, tada xDrip+ iš AndroidAPS gaus informaciją apie insuliną, angliavandenius ir valandinę bazę bei galės numatyti hipoglikemiją ir kt. tiksliau.
+* If you have also activated `Accept treatments` and "Enable local Broadcasts" in AndroidAPS, then xDrip+ will receive insulin, carbs and basal rate information from AndroidAPS and can estimate the hypo prediction etc. tiksliau.
    
    ![xDrip+ Pagrindiniai Parametrai 3](../images/xDrip_Basic3.png)
 
