@@ -16,7 +16,7 @@ Funkcie
 
 Nástroje a aplikácie pre vzdialené monitorovanie
 ==================================================
-* `Nightscout <http://www.nightscout.info/>`_ vo internetovom prehliadači (hlavne zobrazenie údajov)
+* `Nightscout <https://nightscout.github.io/>`_ in web browser (mainly data display)
 *	NSClient app is a stripped down version of AAPS capable of following somebody, making profile switches, setting TTs and entering carbs. There are 2 apps:  `NSClient & NSClient2 to download <https://github.com/nightscout/AndroidAPS/releases/>`_. The only difference is the app name. This way you can install the app twice on the same phone, to be able to follow 2 different persons/nightscouts with it.
 * Dexcom Follow, pokiaľ používate originálnu aplikáciu Dexcom (iba hodnoty glykémií)
 *	`xDrip+ <../Configuration/xdrip.html>`_ in follower mode (mainly BG values and **alarms**)
