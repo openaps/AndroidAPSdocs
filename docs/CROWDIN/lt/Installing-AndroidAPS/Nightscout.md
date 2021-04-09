@@ -6,7 +6,7 @@ Be ataskaitų, Nightscout taip pat gali būti naudojamas kontroliuoti AAPS. T.y.
 
 ### Nightscout parametrai
 
-Galite uždrausti viešą prieigą prie jūsų Nightscout svetainės, naudodami [atpažinimo vaidmenis](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
+You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
 
 ### AndroidAPS parametrai
 
@@ -25,7 +25,7 @@ Nuolat atnaujinkite savo telefoną, kaip aprašyta [Pirmiausia saugumas](../Gett
 
 ## Rankinis Nightscout diegimas
 
-Manoma, kad jūs jau turite Nightscout svetainę, jei ne, apsilankykite [Nightscout](http://nightscout.github.io/nightscout/new_user/) puslapyje gauti visas diegimo instrukcijas, instrukcijos žemiau reikalingos pridėti nustatymus į jūsų Nightscout puslapį. Jūsų Nightscout svetainė turi būti bent versijos 10 (ekrane rodoma 0.10...), todėl prašome patikrinti, ar turite [naujausią versiją](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie), priešingu atveju gausite klaidos pranešimą, jūsų AAPS programoje. Kai kurie žmonės mano, kad uždaras ciklas išnaudoja daugiau vietos, nei azure suteikiama nemokama kvota, todėl heroku laiko geresniu pasirinkimu.
+Manoma, kad jūs jau turite Nightscout svetainę, jei ne, apsilankykite [Nightscout](http://nightscout.github.io/nightscout/new_user/) puslapyje gauti visas diegimo instrukcijas, instrukcijos žemiau reikalingos pridėti nustatymus į jūsų Nightscout puslapį. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
 
 * Eikite į https://herokuapp.com/
 
@@ -37,8 +37,9 @@ Manoma, kad jūs jau turite Nightscout svetainę, jei ne, apsilankykite [Nightsc
   
   * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
   * `DEVICESTATUS_ADVANCED` = `true`
+  * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Įvairius aliarmus galima nustatyti [pompos stebėsena](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), baterijos % ypač rekomenduojami: 
+  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
