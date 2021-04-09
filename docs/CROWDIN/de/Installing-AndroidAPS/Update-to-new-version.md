@@ -16,9 +16,9 @@
 
 ## Kurzanleitung für erfahrene Anwender
 
-Please skip this paragraph if you are updating for the first time. Die Kurzanleitung ist für erfahrene Anwender. Dein nächster Schritt ist, [git zu installieren](../Installing-AndroidAPS/git-install.rst) wenn das Programm bisher nicht auf Deinem Computer installiert ist.
+Bitte überspringe diesen Absatz, wenn Du zum ersten Mal aktualisierst. Die Kurzanleitung ist für erfahrene Anwender. Dein nächster Schritt ist, [git zu installieren](../Installing-AndroidAPS/git-install.rst) wenn das Programm bisher nicht auf Deinem Computer installiert ist.
 
-If you have already updated AAPS from previous versions and use a Windows PC you can update in four simple steps:
+Wenn Du AAPS bereits in früheren Versionen aktualisiert hast und einen Windows-PC verwendest, kannst Du in vier einfachen Schritten aktualisieren:
 
 1. [Exportiere Deine Einstellungen](../Usage/ExportImportSettings#exportiere-die-einstellungen) von der "alten" AAPS Version auf Deinem Smartphone, um auf der sicheren Seite zu sein.
 2. [Aktualisiere Deine lokale Kopie](../Installing-AndroidAPS/Update-to-new-version#fuhre-ein-update-deiner-lokalen-version-durch) (VCS->Git->Pull)
