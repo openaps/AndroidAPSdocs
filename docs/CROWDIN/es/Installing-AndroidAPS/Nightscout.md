@@ -37,8 +37,9 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
   
   * ENABLE = careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps
   * DEVICESTATUS_ADVANCED = true
-  * PUMP_FIELDS = reservoir battery clock
-  * Multitud de alarmas pueden ser configuradas para monitorizar la bomba El % de batería es recomendable: 
+  * `SHOW_FORECAST` = `openaps`
+  * `PUMP_FIELDS` = `reservoir battery clock`
+  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
