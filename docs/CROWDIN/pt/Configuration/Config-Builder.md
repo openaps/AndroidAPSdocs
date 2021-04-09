@@ -10,13 +10,13 @@ Onde existem configurações adicionais disponíveis dentro do módulo, pode cli
 
 **Primeira configuração:** Desde AAPS 2.0 um assistente de instalação guia através do processo de configuração do AndroidAPS. Carregue no menu de 3 pontos no lado superior direito do ecrã (F) e selecione 'Assistente de instalação' para usá-lo.
 
-![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
+![Caixas de seleção do configurador e roda dentada](../images/ConfBuild_ConfigBuilder.png)
 
-## Aba ou menu Hambúrguer
+## Separador ou menu Hambúrguer
 
 Com a caixa de seleção sob o símbolo de olho, pode decidir como abrir a seção de programa correspondente.
 
-![Aba ou menu Hambúrguer](../images/ConfBuild_TabOrHH.png)
+![Separador ou menu Hambúrguer](../images/ConfBuild_TabOrHH.png)
 
 ## Perfil
 
@@ -36,13 +36,13 @@ Botões:
 * vermelho (X): excluir
 * seta azul (↷): duplicar
 
-Se você fizer alguma alteração no seu perfil, certifique-se que está a editar o perfil correto. Na aba perfil nem sempre há a visualização do perfil a ser utilizado atualmente-por exemplo, se fez uma troca de perfil usando a guia do perfil no ecrã inicial, este pode ser diferente do perfil realmente mostrado na guia de perfil, já que não há conexão entre estes.
+Se você fizer alguma alteração no seu perfil, certifique-se que está a editar o perfil correto. No separador perfil nem sempre há a visualização do perfil a ser utilizado atualmente-por exemplo, se fez uma troca de perfil usando o separador do perfil no ecrã inicial, este pode ser diferente do perfil realmente mostrado no separador de perfil, já que não há conexão entre estes.
 
 #### Fazer Mudança De Perfil
 
 Pode facilmente criar um novo perfil local a partir da mudança de perfil. Neste caso o deslocamento temporal e percentagem serão aplicados ao novo perfil local.
 
-1. Vá para aba "tratamentos".
+1. Vá para o separador "tratamentos".
 2. Selecione Troca de Perfil.
 3. Pressione "Clone".
 4. Pode editar o novo perfil local na guia Perfil Local (PF) ou no menu do lado esquerdo
@@ -101,17 +101,17 @@ Desvantagens:
 * As opções 'Oref Ação-Rápida','Oref Ultra-Rápida' e 'Oref Pico-Livre' têm todas um gráfico exponencial. Mais informação disponível em [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
 * A curva varia baseada com a Duração da Ação da Insulina (DIA) e o tempo de pico.
     
-    * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
-    * BLUE line shows **how active** insulin is.
+    * A linha ROXA mostra a quantidade de **insulina ativa** depois da mesma ter sido injetada e como vai diminuindo com o tempo.
+    * A linha AZUL mostra **como está ativa** a insulina.
 
 ### DIA
 
 * A Duração de Ação da Insulina (DIA) varia de pessoa para pessoa. É por isso que tem que experimentar e descobrir o seu. 
 * Mas deve ser sempre pelo menos 5 horas.
-* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. Este valor residual ainda pode ser visível durante o desporto, por exemplo. Por isso o AndroidAPS usa um DIA mínimo de 5h.
+* Para muitas pessoas que usam insulinas ultra-rápidas como a Fiasp, não existe nenhum efeito notório 3-4 horas, após a sua administração, mesmo que estejam disponíveis 0.0xx unidades. Este valor residual ainda pode ser visível durante o desporto, por exemplo. Por isso o AndroidAPS usa um DIA mínimo de 5h.
 * Pode ler mais sobre isto na seção Perfil de Insulina de [nesta página ](../Getting-Started/Screenshots#insulin-profile). 
 
-### Insulin type differences
+### Diferenças dos Tipos de Insulina
 
 * Para "ação rápida", "ultra-rápida" e "Lyumjev", o DIA é a única variável que se pode ajustar, o tempo de pico é fixo. 
 * O Pico Livre permite ajustar tanto o DIA como o tempo para o pico, e deve ser usado apenas por utilizadores avançados que conhecem os efeitos destas configurações. 
@@ -132,48 +132,48 @@ Desvantagens:
 
 #### Lyumjev
 
-* special insulin profile for Lyumjev
+* perfil especial para a insulina Lyumjev
 * DIA = pelo menos 5.0h
-* Máx. peak = 45 minutes after injection (fixed, not adjustable)
+* Máx. pico = 45 minutos após a injeção (fixo, não ajustável)
 
-#### Free Peak Oref
+#### Oref Pico-Livre
 
-* With the "Free Peak 0ref" profile you can individually enter the peak time.
+* Com o perfil "Pico Livre 0ref" pode inserir-se individualmente o tempo do pico.
 * O DIA é definido automaticamente para 5 horas se estiver especificado mais alto no perfil.
-* This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+* Este perfil de efeito é recomendado se é utilizada uma insulina não instalada ou uma mistura de diferentes insulinas.
 
 ## Fonte de Glic.
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
+Selecione a fonte de glicemia que utiliza - ver [Fonte de GLIC](BG-Source.rst) para mais informações de configuração.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
-* NSClient BG
+* Glicose ClienteNS
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
-* [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - apenas a versão 4.15.57 ou mais recente são suportados
+* [App Dexcom (corrigida)](https://github.com/dexcomapp/dexcomapp/) - Selecione 'Enviar dados BG para xDrip+' se quiser usar alarmes xDrip+.
     
-    ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+    ![Configurador Fonte da Glicemia (GLIC)](../images/ConfBuild_BGSource.png)
 
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
 
-* [Tomato App](http://tomato.cool/) for MiaoMiao device
-* Random BG: Generates random BG data (Demo mode only)
+* [ Aplicação Tomato](http://tomato.cool/) para aparelhos MiaoMiao
+* Glicemia Aleatória: Cria valores de Glicemia (BG) aleatórios (Apenas para demonstração)
 
 ## Bomba
 
-Select the pump you are using.
+Selecione a bomba que está a utilizar.
 
 * [Dana R](DanaR-Insulin-Pump.md)
-* Dana R Korean (for domestic DanaR pump)
-* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
+* DanaR Coreana (para bombas domésticas DanaR)
+* Dana Rv2 (Bomba DanaR com upgrade de software não oficial)
 * [Dana RS](DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
-* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (Requer a instalação da Ruffy)
 * [Medtronic](MedtronicPump.md)
-* MDI (receive AAPS suggestions for your multiple daily injections therapy)
-* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
+* MDI (recebe sugestões AAPS para a terapia de múltiplas injecções diárias)
+* Bomba Virtual (loop aberto para uma bomba que nao tenha ainda nenhum driver - apenas sugestões AAPS)
 
-For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+Usar **Configurações avançadas** para ativar o BT watchdog se necessário. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
 
 [Password for Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
 
@@ -189,40 +189,41 @@ If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value 
 
 ## APS
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+Selecione o algoritmo APS desejado para ajustes da terapia. Pode ver os detalhes do algoritmo escolhido no separador OpenAPS(OAPS).
 
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) More detail about OpenAPS AMA can be found in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* OpenAPS AMA (Algoritmo de Assistente Avançado de Refeições de 2017) Mais detalhes sobre o OpenAPS AMA podem ser encontrados em [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Os benefícios, de forma simples, são verificados depois de se dar um bólus à refeição, o sistema coloca um perfil mais alto (high-temp) mais rapidamente isto SE forem inseridos hidratos de carbono de forma confiável.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (Super Micro Bólus, o algoritmo mais recente para usuários experientes)  
+    Atenção que é necessário estar no [Objetivo 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) para usar OpenAPS SMB e min_5m_carbimpact deve ser definido para 8 no Configurador > Sensibilidade de deteção > Configurações Sensibilidade Oref1.
 
 ## Loop
 
-* Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
+* Mudar entre Loop Aberto, Loop Fechado e Suspensão por Glicemia Baixa (LGS).
 
-![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
+![Configurador - Modo de Loop](../images/ConfigBuilder_LoopLGS.png)
 
 ### Loop Aberto
 
-* AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. 
-* The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
-* This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+* A AAPS avalia continuamente todos os dados disponíveis (IA, HC, GLI ...) e se necessário faz sugestões de tratamento sobre como ajustar a sua terapia. 
+* As sugestões não serão executadas automaticamente (como em loop fechado), têm que ser introduzidas manualmente na bomba ou usando um botão, caso esteja a usar uma bomba compatível (Dana R/RS ou Accu Chek Combo). 
+* Esta opção é para conhecer como funciona a AndroidAPS ou se está a usar uma bomba não suportada.
 
 ### Loop Fechado
 
-* AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). 
-* The Closed Loop works within numerous safety limits, which you can be set individually.
-* Closed Loop is only possible if you are in [Objective 6](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
-* Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol or 100 mg/dl instead of 5,0 - 7,0 mmol or 90 - 125 mg/dl) is recommended.
+* A AAPS avalia continuamente todos os dados disponíveis (IA, HC, GLI,...) e, se necessário, ajusta automaticamente o tratamento (ou seja, sem intervenção sua) para alcançar o intervalo ou valor alvo definido (bólus, basal temporária, interrupção da insulina para evitar hipo, etc.). 
+* O Loop Fechado funciona dentro de inúmeros limites de segurança, que podem ser configurados individualmente.
+* O Loop Fechado só é possível se estiver no [ Objective 6 ](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) ou superior e use uma bomba suportada.
+* Nota: No modo Loop Fechado, é preferível um alvo específico ao invés de um intervalo de valores (ex: 5.5 mmol ou 100mg/dl ao invés de 5,0 - 7,0 mmol ou 90 - 125 mg/dl).
 
-### Low Glucose Suspend (LGS)
+### Suspensão por Glicemia Baixa (SGB)
 
-* maxIOB is set to zero
-* This means if blood glucose is dropping it can reduce basal for you.
-* But if blood glucose is rising no automatic correction will be made. Your basal rates will remain the same as your selected profile.
-* Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower BG.
+* máxIA definida como zero
+* Isto significa que se a glicemia está a baixar, o sistema pode reduzir-lhe a basal.
+* Mas se o nível de glicemia está a subir, nenhuma correção automática será efetuada. Os valores basais permanecerão os mesmos do perfil selecionado.
+* Apenas se a basal IA é negativa (originada por uma Suspensão por Glicose Baixa), será administrada insulina adicional para baixar a glicemia.
 
-### Minimal request change
+### Pedido de mudança mínima
 
-* When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. 
+* Ao usar o loop aberto irá receber notificações sempre que a AAPS recomendar para ajustar a taxa basal. 
 * To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate.
 * This defines the relative change required to trigger a notification.
 
@@ -267,7 +268,7 @@ Create a button for a certain standard meal (carbs and calculation method for th
 
 Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Botão do Assistente Rápido](../images/ConfBuild_QuickWizard.png)
 
 #### Default Temp-Targets
 
@@ -283,9 +284,9 @@ Escolha as quantidades padrão usando os três botões para purgar/preencher, de
 
 #### Range of visualization
 
-Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+Escolha os valores de glicose alta e baixa para o gráfico na visão geral do AndroidAPS e relógio inteligente. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
 
-#### Shorten tab titles
+#### Abreviar títulos dos separadores
 
 Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
@@ -326,9 +327,9 @@ Note: Entries cannot be used in the AndroidAPS calculator. (View only)
 
 Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
-If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+If you want to bolus etc. pelo relógio, dentro da opção "Definições do Wear", necessita de ativar a opção "Controlos pelo Relógio".
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Definições Wear](../images/ConfBuild_Wear.png)
 
 Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
@@ -339,15 +340,15 @@ Through Wear tab or hamburger menu (top left of screen, if tab is not displayed)
 
 Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
-### NSClient
+### ClienteNS
 
-* Setup sync of your AndroidAPS data with Nightscout.
-* Settings in [preferences](../Configuration/Preferences#nsclient) can be opened by clicking the cog wheel.
+* Configurar sincronização de dados da AndroidAPS com o Nightscout.
+* As configurações em [Preferências](../Configuration/Preferences#nsclient) podem ser abertas clicando na roda dentada.
 
-### Maintenance
+### Manutenção
 
-Email and number of logs to be send. Normally no change necessary.
+E-mail e número de registos a serem enviados. Normalmente, nenhuma mudança é necessária.
 
 ### Configurador
 
-Use tab for config builder instead of hamburger menu.
+Use o separador para o configurador em vez do menu hambúrguer.

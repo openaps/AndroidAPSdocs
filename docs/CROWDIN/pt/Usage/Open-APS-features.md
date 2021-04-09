@@ -46,9 +46,9 @@ But you cannot choose any value. AAPS limits the value as a 'hard limit' accordi
 
 AndroidAPS limits the value as follows:
 
-* Child: 2
+* Criança: 2
 * Teenager: 5
-* Adult: 10
+* Adulto: 10
 * Insulin-resistant adult: 12
 * Pregnant: 25
 
@@ -159,9 +159,9 @@ You cannot chose any value: For safety reason, there is a 'hard limit', which de
 
 The hardcoded parameters in AndroidAPS are:
 
-* Child: 2
+* Criança: 2
 * Teenager: 5
-* Adult: 10
+* Adulto: 10
 * Adulto insulino-resistente: 12
 * Pregnant: 25
 

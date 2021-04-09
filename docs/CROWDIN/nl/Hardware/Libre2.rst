@@ -1,150 +1,150 @@
 Freestyle Libre 2
 **************************************************
 
-The Freestyle Libre 2 system can automatically report dangerous blood glucose levels. The Libre2 Sensor sends the current blood sugar level to a receiver (reader or smartphone) every minute. The receiver triggers an alarm if necessary. With a self-modified LibreLink app and the xDrip+ app, you can continuously receive and display your blood sugar level on your smartphone. 
+Het Freestyle Libre 2-systeem kan alarmen geven bij te hoge of te lage bloedglucosewaardes. De Libre2 sensor stuurt elke minuut de huidige glucosewaarde naar een ontvanger (dit kan de Libre ontvanger zijn of een smartphone). De ontvanger geeft een alarm indien nodig. Met een zelf gewijzigde LibreLink app en de xDrip+ app kun je jouw glucosewaardes continu ontvangen en weergeven op een smartphone. 
 
-The sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2,2 mmol/l to +1,1 mmol/l) to adjust differences between finger prick measurements and sensor readings.
+De sensor kan worden gekalibreerd in een bereik van -40 mg/dl tot +20 mg/dl (-2,2 mmol/l tot +1,1 mmol/l) om te corrigeren voor verschillen tussen vingerpietmetingen en sensorwaardes.
 
-BG readings can also be done using a BT transmitter like with the Libre1.
+BG waardes kunnen ook worden uitgelezen dmv een Bluetooth apparaatje (Miaomiao, Bubble etc) zoals met de Libre1.
 
-Important note : This does not work with the US version of the Freestyle 2 sensor ! The US version will only connect to a reader, not a phone.
+Belangrijke opmerking: Onderstaande werkt niet met de Amerikaanse versie van de Freestyle 2 sensor! De Amerikaanse versie zal alleen verbinding maken met een ontvanger, niet met een telefoon.
 
-Step 1: Build your own patched LibreLink-App
+Stap 1: Bouw je eigen gepatchte LibreLink-App
 ==================================================
 
-For legal reasons, the so-called patching has to be done by yourself. Use search engines to find the corresponding links. There are mainly two variants: The recommended original patched app blocks any internet traffic to avoid tracking. The other variant supports LibreView which may be needed by your doctor.
+Om juridische redenen moet je het zogenaamde patchen (aanpassen) van de app zelf doen. Gebruik een zoekmachine om links naar de instructies te vinden. Er zijn twee veelvoorkomende varianten van deze instructies: De ene variant levert een gepatchte app op die elk internet verkeer blokkeert om tracking te voorkomen (deze wordt aangeraden om te gebruiken). De andere variant ondersteunt LibreView, om gegevens te delen met jouw arts (deze stuurt jouw gegevens door over het internet, wordt niet aangeraden om te gebruiken).
 
-The patched app has to be installed instead of the original app. The next sensor started with it will transmit the current BG values to the xDrip+ app running on your smartphone via Bluetooth.
+De gepatchte app moet je installeren in plaats van de originele Libre app. De eerstvolgende sensor die met de gepatchte app wordt gestart, zal jouw BG-waarden via Bluetooth doorgeven aan de xDrip+ app die ook op jouw telefoon draait.
 
-Important: To avoid possible problems it may help to first install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. This costs no extra power. Then install the patched app. 
+Belangrijk: Om problemen te voorkomen kan het helpen om eerst de originele app te installeren en weer te verwijderen. Gebruik uiteraard een smartphone die geschikt is voor NFC. NFC moet aan staan.   Installeer daarna pas de gepatchte app. 
 
-The patched app can be identified by the foreground authorization notification. The foreground authorization service improves the connection stability compared to the original app which do not use this service.
+De gepatchte app kun je herkennen aan een melding over toestemming om als voorgrond service actief te zijn. Doordat de gepatchte app toestemming heeft om op de voorgrond te draaien, zal de verbinding stabieler zijn dan bij de originele app, die dit niet heeft.
 
 .. image:: ../images/Libre2_ForegroundServiceNotification.png
-  :alt: LibreLink Foreground Service
+  :alt: LibreLink Voorgrond Service
 
-Other indications could be the Linux penguin logo three dot menu -> Info or the font of the patched app. These criteria are optional depending on the app source you choose.
+Je zou een gepatchte app ook kunnen herkennen aan het Linux penguin logo in het menu in de rechterbovenhoek: klik op de drie stippen-> Info. Of aan het lettertype van de gepatchte app. Deze criteria zijn optioneel, afhankelijk van de door jou gevolgde instructies voor het patchen van de app.
 
 .. image:: ../images/LibreLinkPatchedCheck.png
-  :alt: LibreLink Font Check
+  :alt: LibreLink Lettertype Check
 
-Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and time zone and set at least one alarm in the patched app. 
+Zorg ervoor dat NFC geactiveerd is, de geheugen- en locatiemachtiging zijn ingeschakeld voor de gepatchte app, automatische tijd en tijdzone zijn ingeschakeld en ten minste één alarm in de gepatchte app is ingesteld. 
 
-Now start the Libre2 sensor with the patched app by simply scanning the sensor. Ensure to have set all settings done.
+Start nu de Libre2 sensor met de gepatchte app door simpelweg de sensor te scannen. Zorg ervoor dat je alle instellingen als volgt hebt ingesteld.
 
-Mandatory settings for successful sensor start: 
+Verplichte instellingen voor een succesvolle sensor start: 
 
-* NFC enabled / BT enabled
-* memory and location permission enabled 
-* location service enabled
-* automatic time and time zone setting
-* set at least one alarm in the patched app
+* NFC ingeschakeld en Bluetooth ingeschakeld
+* geheugen- en locatiemachtiging ingeschakeld 
+* locatieservice ingeschakeld
+* automatische tijd en tijdzone ingesteld
+* stel ten minste één alarm in de gepatchte app in
 
-Please note that the location service is a central setting. This is not the app location permission which has to be set also!
+Houd er rekening mee dat de locatieservice een telefooninstelling is. Dit is niet de app locatie toestemming; de app moet je daarnaast ook nog locatie toestemming verlenen!
 
 .. image:: ../images/Libre2_AppPermissionsAndLocation.png
-  :alt: LibreLink permissions memory & location
+  :alt: LibreLink toestemmingen geheugen & locatie
   
   
 .. image:: ../images/Libre2_DateTimeAlarms.png
-  :alt: automatic time and time zone + alarm settings  
+  :alt: automatische tijd en tijdzone + alarminstellingen  
 
-The sensor remembers the device it was started from. Only this device can receive alarms in the future.
+De sensor onthoudt het apparaat waarmee hij gestart is. Alleen dit apparaat kan in de toekomst alarmen ontvangen.
 
-The first connection setup to the sensor is critical. The LibreLink app tries to establish a wireless connection to the sensor every 30 seconds. If one or more mandatory settings are missing they have to be adjusted. You have no time limit to do that. The sensor is constantly trying to setup the connection. Even if is last some hours. Be patient and try different settings before even think of changing the sensor.
+De eerste verbinding die je maakt met de sensor is van cruciaal belang. De LibreLink app probeert elke 30 seconden een draadloze verbinding met de sensor tot stand te brengen. Als een of meer verplichte instellingen ontbreken, moeten ze worden aangepast. Je hebt geen tijdslimiet om dat te doen. De sensor probeert constant de verbinding tot stand te brengen. Zelfs al duurt het een paar uur. Probeer dus geduldig verschillende instellingen uit, of vraag om hulp, voordat je ook maar denkt aan opgeven en een nieuwe sensor schieten.
 
-As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLink's start screen there is no connection or some other setting blocks LibreLink to signal alarms. Please check if the sound is enabled and all sorts of blocking app notifications are disabled. When the exclamation mark is gone, the connection should be established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
+Zolang je een rood uitroepteken ziet ("!") in de linkerbovenhoek van het LibreLink start scherm is er geen verbinding, of er is een instelling die de LibreLink app blokkeert om alarmen te kunnen geven. Controleer of het geluid is ingeschakeld en alle soorten meldingen voor het blokkeren van de app zijn uitgeschakeld. Als het uitroepteken weg is, zou de verbinding tot stand moeten komen en dan zullen er glucosewaarden naar de smartphone worden gestuurd. Dat zou na maximaal 5 minuten moeten gebeuren.
 
 .. image:: ../images/Libre2_ExclamationMark.png
-  :alt: LibreLink no connection
+  :alt: LibreLink geen verbinding
   
-If the exclamation mark remains or you get an error message, this can have several reasons:
+Als het uitroepteken blijft bestaan of als je een foutmelding krijgt, kan dit verschillende redenen hebben:
 
-- Android location service is not granted - please enable it in the system settings
-- automatic time and time zone not set - please change the settings accordingly
-- activate alarms - at least one of the three alarms must be activated in LibreLink
-- Bluetooth is switched off - please switch on
-- sound is blocked
-- app notifications are blocked
-- idle screen notifications are blocked 
-- you have a faulty Libre 2 sensor from a production LOT number with a 'K' followed by 8 digits. You find this printed on the yellow package. These sensors have to be replaced as they don't function on bluetooth.
+- Android locatieservice staat uit - schakel deze in bij de telefooninstellingen
+- Automatische tijd en tijdzone niet ingesteld - verander de tijd instellingen én tijdzone instellingen naar "Automatisch"
+- Activeer alarmen - tenminste één van de drie alarmen moet geactiveerd zijn in LibreLink
+- Bluetooth is uitgeschakeld - schakel het in
+- Geluid wordt geblokkeerd
+- App-meldingen worden geblokkeerd
+- Inactieve scherm notificaties worden geblokkeerd 
+- Je hebt een defecte Libre 2 sensor, van een productie LOT-nummer met 'K' gevolgd door 8 cijfers. Je vindt dit lotnummer op de gele verpakking. Deze sensoren moeten worden vervangen omdat de Bluetooth niet functioneert.
 
-Restarting the phone can help, you may have to do it several times. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. It may happen that depending on system settings the exclamation mark remains but you still get readings. In both cases you are fine. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
+Het opnieuw starten van de telefoon kan helpen, het kan nodig zijn om dit meerdere keren te doen. Zodra de verbinding tot stand is gebracht, verdwijnt het rode uitroepteken en heb je de belangrijkste horde overwonnen. Het kan gebeuren dat, afhankelijk van de systeeminstellingen, het uitroepteken blijft staan maar je krijgt nog wel waardes door. In beide gevallen is dat prima. Sensor en telefoon zijn nu verbonden, elke minuut wordt een bloedsuikerwaarde doorgegeven.
 
 .. image:: ../images/Libre2_Connected.png
-  :alt: LibreLink connection established
+  :alt: LibreLink verbinding gemaakt
   
-In rare case it could help to empty the bluetooth cache and/or reset all network connections via the system menu. This removes all connected bluetooth devices which may help to setup a proper bluetooth connection. That procedure is save as the started sensor is remembered by the patched LibreLink app. Nothing additional has to be done here. Simply wait for the patched app to connect to the sensor.
+In zeldzame gevallen kan het helpen om de bluetooth cache leeg te maken en/of alle netwerkverbindingen te resetten via het telefoonmenu. Dit verwijdert alle gekoppelde bluetooth-apparaten, dit kan helpen bij het opzetten van een goede bluetooth-verbinding. Je kunt dit met een gerust hart doen, want als de sensor eenmaal gestart is, wordt hij onthouden door de gepatchte LibreLink app. Je hoeft hier niet extra's voor te doen. Wacht simpelweg tot de gepatchte app verbinding heeft gemaakt met de sensor.
 
-After a successful connection the smartphone settings can be changed if necessary. This is not recommended but you may want to save power. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The blood sugar levels are transferred anyway.
+Na een succesvolle verbinding kun je de telefooninstellingen indien nodig veranderen. Dit wordt afgeraden, maar je bespaart er wel energie mee. Locatieservice kan worden uitgeschakeld, volume kan worden ingesteld op nul of alarmen kunnen weer worden uitgeschakeld. De bloedsuikerwaardes worden sowieso doorgegeven.
 
-When starting the next sensor, however, all settings must be set again!
+Bij het starten van de volgende sensor moet je echter alle instellingen opnieuw goed zetten!
 
-Remark: The patched app needs the mandatory settings set in that hour after warmup to enable a connection. For the 14 days operation time they are not needed. In most cases when you have problems with starting a sensor the location service was switched off. For Android it is needed for proper bluetooth operation(!) to connect. Please refer to Google's Android documentation.
+Opmerking: De gepatchte app heeft de verplichte instellingen nodig gedurende het uur na het opwarmen om een verbinding mogelijk te maken. Voor de rest van de 14 dagen looptijd zijn ze niet nodig. In de meeste gevallen als je problemen hebt met het starten van een sensor is de locatieservice uitgeschakeld. Voor Android moet locatie aan staan, om een goede bluetooth(!) verbinding te maken. Raadpleeg de Android-documentatie van Google voor details.
 
-During the 14 days you can use in parallel one or more NFC capable smartphones (not the reader device!) running the original LibreLink app for scanning via NFC. There is no time limitation to start that. You could use a parallel phone for example on day 5 or so. The parallel phones(s) could upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for your diabetes team. There are many parents who absolutely need this. 
+Tijdens de 14 dagen kun je gebruik maken van één of meer NFC geschikte smartphones (niet de Libre ontvanger!) met de originele LibreLink app voor het scannen via NFC. Er is geen tijdsbeperking om daarmee te beginnen. Je kunt bijvoorbeeld op dag 5 een parallelle telefoon gebruiken. De parallelle telefoon(s) kunnen de glucosewaardes uploaden naar de Abbott Cloud (LibreView). LibreView kan rapporten genereren voor jouw diabetesteam. Er zijn mensen die dit absoluut nodig hebben (voor de verzekering of welke gekke regels dan ook). Maar als je zonder kunt, gebruik dan gewoon Nightscout voor rapporten. 
 
-Please note that the original patched app **does not have any connection to the internet** to avoid tracking.
+Houd er rekening mee dat de originele gepatchte app **geen verbinding heeft met het internet** om tracking te voorkomen.
 
-However there is a variant of the patched app supporting LibreView with enabled internet access. Please be aware that your data is transferred to the cloud then. But your diadoc tool- and reporting chain is fully supported then. With that variant it is also possible to move the alarms of a running sensor to a different device which not has started the sensor. Please google in diabetes related German forums how this could be done.
+Er is echter een variant van de gepatchte app die LibreView ondersteunt, deze app heeft wel internettoegang. Houd er rekening mee dat je gegevens dan naar de cloud worden gestuurd. Maar je diadoc rapportages worden dan volledig ondersteund. Met die variant is het ook mogelijk om de alarmen van een loopende sensor te verplaatsen naar een ander apparaat dat de sensor niet heeft gestart. Google in diabetes gerelateerde Duitse forums hoe dit kan worden gedaan.
 
 
-Step 2: Install and configure xDrip+ app
+Stap 2: Installeer en configureer xDrip+ app
 ==================================================
 
-The blood sugar values are received on the smartphone by the xDrip+ App. 
+De glucosewaarden komen op de smartphone binnen op de xDrip+ app. 
 
-* If not already set up then download xDrip+ app and install one of the latest nightly builds from `here <https://github.com/NightscoutFoundation/xDrip/releases>`_.
-* In xDrip+ select "Libre2 (patched App)" as data source
-* If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for trouble shooting.
+* Als je dit nog niet al had gedaan, download dan de app en installeer een van de nieuwste 'nightly builds' vanaf `deze locatie <https://github.com/NightscoutFoundation/xDrip/releases>`_.
+* In xDrip+ selecteer "Libre2 (patched App)" als gegevensbron
+* Indien nodig typ dan "BgReading:d,xdrip libre_receiver:v" onder Less Common Settings->Extra Logging Settings->Extra tags for logging (in het Nederlands: Minder Algemene Instellingen-> Extra logboekinstellingen-> Extra tags voor loggen). Dit logt extra foutmeldingen voor het oplossen van problemen, de meesten van ons zullen dit niet nodig hebben.
 * In xdrip ga naar Settings > Interapp Compatibility > Broadcast Data Locally en selecteer ON. Deze instelling zorgt ervoor dat de xDrip app op jouw telefoon jouw waardes direct naar de AndroidAPS app (ook op jouw telefoon) doorstuurt en je dus geen internetverbinding nodig hebt.
 * In xdrip ga naar Instellingen > Interapp Settings > Accept Treatments selecteer OFF.
-* to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <../Configuration/xdrip.html#identify-receiver>`_
+* Om te zorgen dat AAPS de glucosewaardes ontvangt van xDrip+ moet je onder `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" < ../Configuration/xdrip.html#identificeer-ontvanger-identify-receiver>`_ invullen.
 * Als je AndroidAPS wilt gebruiken om te kalibreren ga dan in xdrip naar Instellingen > Interapp settings > Accept Calibrations en selecteer ON.  Je kunt ook de opties aanpassen aan jouw behoefte in Instellingen > Minder vaak voorkomende instellingen > Advanced Calibration Settings.
 
 .. image:: ../images/Libre2_Tags.png
   :alt: xDrip+ LibreLink logging
 
-Step 3: Start sensor
+Stap 3: Start sensor
 ==================================================
 
-In xDrip+ start the sensor with "Start Sensor" and "not today". 
+In xDrip + start je de sensor met "Start Sensor" en "not today". 
 
-In fact this will not physically start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
+Dit zorgt ervoor dat de Libre2 sensor niet opnieuw een "start" commando oid zal ontvangen. Dit is gewoon om aan te geven aan xDrip+ dat een nieuwe sensor de glucosewaardes aanlevert. Indien beschikbaar, voer twee glucosewaardes in (gemeten met vingerprik, met stabiele bloedsuiker, handjes gewassen etc) voor de initiële kalibratie. De bloedglucose waarden moeten nu elke 5 minuten in xDrip+ binnenkomen. Gemiste waarden, bijv. omdat je te ver weg van je telefoon was, zullen niet achteraf worden aangevuld. Eens gemist, blijft gemist.
 
-After a sensor change xDrip+ will automatically detect the new sensor and will delete all calibration data. You may check you bloody BG after activation and make a new initial calibration.
+Na een sensorwissel zal xDrip+ automatisch de nieuwe sensor detecteren en alle kalibratiegegevens verwijderen. Je kunt je bloedglucose meten dmv vingerprik na activering en een nieuwe kalibratie invoeren (zie hiervoor).
 
-Step 4: Configure AndroidAPS (for looping only)
+Stap 4: AndroidAPS configureren (alleen voor loopen)
 ==================================================
-* In AndroidAPS go to Config Builder > BG Source and check 'xDrip+' 
-* If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
+* In AndroidAPS ga naar Configurator > BG Bron en vink 'xDrip+' aan. 
+* Als AAPS geen BG-waarden ontvangt wanneer de telefoon in vliegtuigmodus staat, gebruik dan 'Identify receiver' (Identificeer ontvanger) zoals beschreven op de `xDrip+ instellingen pagina <../Configuration/xdrip.html#identificeer-ontvanger-identify-receiver>`_.
 
 Tot nu toe kun je met Libre 2 als BG bron 'Activeer SMB altijd' en 'Activeer SMB na koolhydraten' in SMB algoritme niet aanzetten. De BG waarden van Libre 2 zijn niet betrouwbaar genoeg om die functies veilig te gebruiken (alle overige SMB functies zijn overigens wél gewoon te gebruiken). Zie `Filteren van glucosewaardes <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ voor meer details.
 
-Experiences and Troubleshooting
+Problemen oplossen en andere tips
 ==================================================
 
-Connectivity
+Verbinding
 --------------------------------------------------
-The connectivity is extraordinarily good. With the exception of Huawei mobile phones, all current smartphones seem to work well. The reconnect rate in case of connection loss is phenomenal. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. When I am gardening, I use to wear my phone on the sensor side of my body. In rooms, where Bluetooth spreads over reflections, no problems should occur. If you have connectivity problems please test another phone. It may also help to set the sensor with the internal BT antenna pointing down. The slit on the applicator must be pointing down when setting the sensor.
+De verbindig is buitengewoon goed. Met uitzondering van Huawei mobiele telefoons, lijken alle huidige smartphones goed te werken. De snelheid waarmee de telefoon weer verbinding maakt in geval van verbindingsverlies is fenomenaal. De verbinding kan worden verbroken als de mobiele telefoon in een tegenoverliggende (broek)zak tov de sensor zit, of als je buiten bent. Als ik aan het tuinieren ben, draag ik mijn telefoon aan de zelfde kant van mijn lichaam als waar de sensor zit. Binnenshuis, waar Bluetooth kan weerkaatsen, zou je hiermee geen problemen moeten krijgen. Als je problemen hebt met de verbinding, test dan een andere telefoon. Het kan ook helpen om bij het plaatsen van de sensor te zorgen dat de interne Bluetooth-antenne naar beneden wijst. De spleet op de applicator moet dan naar beneden wijzen bij het plaatsen van de sensor.
 
-Value smoothing & raw values
+Waardes vloeiend maken & ruwe gegevens
 --------------------------------------------------
-Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes. This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip+ graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings > Advanced Settings for Libre2 > "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor info is available in the system menu.
+Technisch gezien wordt de huidige glucosewaarde elke minuut doorgegeven aan xDrip+. Een gewogen gemiddelde filter berekent een vloeiende waarde over de laatste 25 minuten. Dit is verplicht om te loopen. De grafieken zien er vloeiend uit en de loop-resultaten zijn goed. De ruwe gegevens waarop de alarmen gebaseerd zijn schommelen iets meer, maar komen overeen met de waardes die de Libre ontvanger ook weergeeft. Als aanvulling kunnen de ruwe gegevens worden weergegeven in de xDrip+ grafiek om op snelle veranderingen in de tijd te kunnen reageren. Ga naar de Less Common Settings > Advanced Settings for Libre2, en schakel daar "Show Raw values" en "show Sensors Infos" in. De ruwe waarden worden weergegeven als kleine witte stippen in de grafiek, en extra sensorinformatie is beschikbaar in het systeemmenu.
 
-The raw values are very helpful when the blood sugar is moving fast. Even if the dots are jumpier you would detect the tendency much better as using the smoothed line to make proper therapy decisions.
+De ruwe waarden zijn zeer nuttig wanneer de glucosewaarde snel verandert. Zelfs als de witte stippen wat heen-en-weer lijken te springen, dan zou je een stijgende/dalende trend veel beter kunnen ontdekken dan wanneer je alleen naar de vloeiende lijn kijkt om beslissingen te maken.
 
 .. image:: ../images/Libre2_RawValues.png
-  :alt: xDrip+ advanced settings Libre 2 & raw values
+  :alt: xDrip+ geavanceerde instellingen Libre 2 & ruwe gegevens
 
-Sensor runtime
+Sensor looptijd
 --------------------------------------------------
-The sensor runtime is fixed to 14 days. The 12 extra hours of Libre1 no longer exist. xDrip+ shows additional sensor information after enabling Advanced Settings for Libre2 > "show Sensors Infos" in the system menu like the starting time. The remaining sensor time can also be seen in the patched LibreLink app. Either in the main screen as remaining days display or as the sensor start time in the three-point menu->Help->Event log under "New sensor found".
+De sensor looptijd is gesteld op 14 dagen. De 12 uur extra van Libre1 bestaat niet meer. xDrip+ toont extra sensorinformatie nadat je Advanced Settings for Libre2 > "show Sensors Infos" hebt ingeschakeld in het systeemmenu, zoals de starttijd. De resterende sensortijd kun je ook zien in de gepatchte LibreLink app. In het hoofdscherm worden ze weergegeven als resterende dagen, of in het menu onder de drie puntjes in de rechterbovenhoek worden ze weergegeven als de sensor start tijd via -> Help-> Event log bij "New sensor found".
 
 .. image:: ../images/Libre2_Starttime.png
-  :alt: Libre 2 start time
+  :alt: Libre 2 begintijd
 
-New sensor
+Sensor vervangen
 --------------------------------------------------
 A sensor exchange takes place on-the-fly: Set new sensor shortly before activation. As soon as xDrip+ receives no more data from the old sensor, start the new sensor with the patched app. After one hour new values should appear automatically in xDrip+. 
 

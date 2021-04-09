@@ -1,6 +1,6 @@
 De verschillende onderdelen 
 **************************************************
-AndroidAPS is meer dan de (zelfgebouwde) app alleen, er zijn ook andere onderdelen nodig om jouw closed loop systeem aan de praat te krijgen. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
+AndroidAPS is meer dan de (zelfgebouwde) app alleen, er zijn ook andere onderdelen nodig om jouw closed loop systeem aan de praat te krijgen. Voordat je kiest welke onderdelen je wilt gebruiken, is het goed om eens te kijken naar de `Onderdelen instellen <../index.html#onderdelen-instellen>`_ sectie.
    
 .. image:: ../images/modules.png
   :alt: Wat heb ik nodig
@@ -36,7 +36,7 @@ SGLT-2 remmers, ook wel glifozines genoemd, remmen de herabsorptie van glucose i
 Telefoon
 --------------------------------------------------
 Voor de huidige versie van AndroidAPS is een Android smartphone nodig met Google Android 8.0 of hoger. Dus als je denkt over een nieuwe telefoon, dan raden we aan om op zijn minst voor Android 8.1 te gaan maar liever Android 9 of 10.
-Gebruikers worden met klem geadviseerd om hun AndroidAPS om veiligheidsredenen up-to-date te houden. Maar voor gebruikers die geen telefoon hebben met minimaal Android 8, is versie 2.6.1.4 van AndroidAPS nog beschikbaar vanuit de 'oude' repository, deze is geschikt voor telefoons met Android 7 of lager <https://github.com/miloskozak/androidaps>`_
+Gebruikers worden met klem geadviseerd om hun AndroidAPS om veiligheidsredenen up-to-date te houden. Maar voor gebruikers die geen telefoon hebben met minimaal Android 8, is versie 2.6.1.4 van AndroidAPS nog beschikbaar vanuit de 'oude' repository, deze is geschikt voor telefoons met Android 7 of lager je vindt hem `hier <https://github.com/miloskozak/androidaps>`_
 
 Gebruikers houden een `lijst van geteste telefoons en smartwatches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ bij.
 
@@ -128,7 +128,7 @@ Wat te doen tijdens het wachten op onderdelen
 ==================================================
 Het duurt soms een tijdje voordat je alle onderdelen voor het maken van een closed loop bij elkaar hebt. Maar geen zorgen, er zijn een heleboel dingen die je kunt doen tijdens het wachten. Het is NOODZAKELIJK om jouw basaalstanden, koolhydraatratio (KH), insuline gevoeligheidsfactor (ISF) etc. te testen en (indien van toepassing) aan te passen. AndroidAPS gebruiken in open loop modus kan een goede manier zijn om jouw profielinstellingen te testen en vertrouwd te raken met het syteem. In de open loop modus geeft AndroidAPS behandelingsadviezen die je handmatig moet doorvoeren.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <../Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+Verder kun je deze documentatie doorlezen, je kunt online of offline contact opnemen met andere loopers. Lees wat `achtergrondinformatie <../Where-To-Go-For-Help/Background-reading.html>`_ of bekijk welke vragen andere loopers stellen in de verschillende Facebook groepen (let hierbij wel op de kwaliteit van andermans suggesties, niet alles wat je leest is verstandig om blindelings na te doen).
 
 ** Klaar? **
 Als je jouw AAPS onderdelen bij elkaar hebt (gefeliciteerd!) of ten minste genoeg om te beginnen in de open loop modus, lees dan eerst de `Doelen <../Usage/Objectives.html>`_ door en stel je `hardware <../index.html#component-setup>`_ in.

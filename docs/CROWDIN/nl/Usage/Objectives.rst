@@ -42,7 +42,7 @@ Doel 3: Bewijs jouw kennis
 Doel 4: Beginnen met een open loop
 ==================================================
 * Selecteer Open-Loop vanuit het Instellingen-menu of door de Open Loop / Closed Loop -knop linksbovenin het Overzicht-scherm ingedrukt te houden.
-* Work through the `Preferences <../Configuration/Preferences.html>`__ to set up for you.
+* Werk door de `Instellingen <../Configuration/Preferences.html>`__ heen om de loop in te stellen.
 * Voer minstens 20 tijdelijke basaalstanden in over een periode van 7 dagen; voer ze in op jouw pomp en bevestig in AndroidAPS dat je ze hebt geaccepteerd.  Controleer dat deze gegevens zichtbaar zijn in AndroidAPS en Nightscout.
 * Stel `tijdelijke streefdoelen <../Usage/temptarget.html>`_ in indien nodig. Gebruik bijvoorbeeld een tijdelijk hypo streefdoel om te voorkomen dat het systeem te sterk corrigeert voor een stijgende bloedsuiker na een hypo. 
 
@@ -71,7 +71,7 @@ Het streefdoel is de waarde waar de berekeningen op zijn gebaseerd, en is niet h
 
 Je kunt experimenteren met je lage en hoge streefdoel en een nauwer bereik instellen, bijvoorbeeld 1 of minder mmol/l (20 mg/dl of minder) verschil, en observeren hoe het systeem daardoor zijn gedrag aanpast. De meesten vullen uiteindelijk hetzelfde getal in bij hoge en lage streefdoel, daarmee bereik je de strakste glucosegrafieken.  
 
-You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in `Preferences <../Configuration/Preferences.html>`__ > Range for Visualisation.
+Deze tijdelijke streefdoelen zijn iets anders dan het 'groene gebied' dat je in je grafiek ziet. Je kunt waarden voor het groene gebied invoeren via 3 stipjes in rechterbovenhoek > 'Instellingen <../Configuration/Preferences.html>`__ > Bereik voor Visualisatie.
  
 .. image:: ../images/sign_stop.png
   :alt: Stop-teken
@@ -89,7 +89,7 @@ Doel 6: Starten in Closed Loop met bescherming tegen lage BG
   
 De closed loop zal hoge glucosewaarden in doel 6 niet naar beneden kunnen brengen, omdat in dit doel alleen nog de 'pompstop voor laag' functie geactiveerd is. Om hoge glucosewaarden naar beneden te krijgen, moet je zelf nog handmatig ingrijpen!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`__ or by pressing and holding the Open Loop button in the top left of the home screen.
+* Selecteer Closed-Loop vanuit het `Instellingen-menu <../Configuration/Preferences.html>`__ of door de Loop-knop linksbovenin het Overzicht-scherm ingedrukt te houden.
 * Stel je lage en hoge streefdoel iets hoger in dan je normaal zou doen, voor de zekerheid.
 * Kijk hoe tijdelijke basaastanden worden ingesteld door te kijken naar de blauwe tekst in het Overzicht-scherm, of door het blauwe deel van de grafiek op het Overzicht-scherm te bekijken.
 * Zorg dat jouw instellingen zo zijn, dat AndroidAPS in 5 dagen tijd niet heeft hoeven ingrijpen om een lage glucosewaarde te voorkomen.  Mocht je op dit moment nog veelvuldige of heftige lage glucosewaardes hebben, dan moet je waarschijnlijk nog iets verbeteren aan jouw instellingen van DIA, basaal, ISF of KH ratio (in die volgorde).
@@ -119,13 +119,13 @@ Doel 8: Pas basaalstanden en de ratio's aan indien nodig, activeer hierna de Aut
 * Je kunt `Autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ gebruiken om eenmalig te laten berekenen of jouw basaalstanden goed zijn ingesteld, of een traditionele basaaltest doen. Zie ook de "Veelgestelde vragen" sectie van deze wiki.
 * Schakel `Autosens <../Usage/Open-APS-features.html>`_ in gedurende een periode van 7 dagen en bekijk de witte lijn in de grafiek op het Overzichts-scherm. Die lijn geeft weer hoe jouw gevoeligheid voor insuline kan verhogen of verminderen als gevolg van beweging, hormonen etc. Bekijk ook af en toe de OpenAPS tab om te zien hoe AndroidAPS je basaalstanden en/of BG streefdoelen aanpast adhv jouw gevoeligheid op dat moment. en houd op de OpenAPS tab in de gaten hoe AndroidAPS de basaalstanden en/of streefdoelen dienovereenkomstig aanpast.
 
-*Don’t forget to record your looping in* `this form <https://bit.ly/nowlooping>`_ *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
+*Vergeet niet om jezelf als nieuwe looper aan te melden via 'dit formulier <https://bit.ly/nowlooping>'_ en AndroidAPS als jouw type loop-software te kiezen, als je dat nog niet gedaan hebt.*
 
 
 Doel 9: Probeer extra functies voor gebruik overdag en krijg vertrouwen in jouw closed loop systeem
 ====================================================================================================
-* Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`__.
-* As `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`__ is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
+* Vóór de AAPS versie 2.7 was maaltijd assist (MA) het basisalgoritme voor AAPS en je moest doel 8 hebben afgerond om `advanced meal assist (AMA) <../Usage/Open-APS-features.html#geavanceeerde-maaltijdhulp-ama>`__ te activeren.
+* Omdat `advanced meal assist (AMA) <../Usage/Open-APS-features.html#geavanceerde-maaltijdhulp-ama>`__ inmiddels het standaard algoritme is bij AAPS versie 2.7, kun je de komende 28 dagen gebruiken om functies uit te proberen die je nog niet hebt gebruikt en om meer vertrouwen te krijgen in je gesloten loop systeem.
 
 
 Doel 10: Activeren van extra functies overdag zoals SMB (Super Micro Bolus)

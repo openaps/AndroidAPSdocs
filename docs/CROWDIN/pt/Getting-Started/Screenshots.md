@@ -124,7 +124,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
 * Optional information:
    
    * Previsão
-   * Basals
+   * Basais
    * Activity - insulin activity curve
 
 #### Activate optional information
@@ -154,14 +154,14 @@ This is the first screen you will come across when you open AndroidAPS and it co
 
 Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
 
-#### Basals
+#### Basais
 
 * A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
 * The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
 * In times standard basal rate is given the area under the curve is shown in dark blue.
 * When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
 
-#### Activity
+#### Actividade
 
 * The **thin yellow** line shows the activity of Insulin. 
 * It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
@@ -205,7 +205,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. 
 * Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
 
-#### Activity
+#### Actividade
 
 * Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
 * The value is higher for insulin closer to peak time.
@@ -315,7 +315,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ## Action tab
 
-![Actions tab](../images/Home2021_Action.png)
+![Separador Accões](../images/Home2021_Action.png)
 
 ### Actions - section M
 
@@ -372,7 +372,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ## Insulin Profile
 
-![Insulin Profile](../images/Screenshot_insulin_profile.png)
+![Perfil da Insulina](../images/Screenshot_insulin_profile.png)
 
 * This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
 * The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
@@ -386,9 +386,9 @@ And you can read an excellent blog article about it here: [Why we are regularly 
 
 And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
-## Pump Status
+## Estado da Bomba
 
-![Pump Status](../images/Screenshot_PumpStatus.png)
+![Estado da Bomba](../images/Screenshot_PumpStatus.png)
 
 * Different information on pump status. Displayed information depends on your pump model.
 * See [pumps page](../Hardware/pumps.rst) for details.
@@ -460,9 +460,9 @@ History of the following treatments:
 * Depending on your BG source settings this tab is named differntly.
 * Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
 
-## NSClient
+## ClienteNS
 
-![NSClient](../images/Screenshots_NSClient.png)
+![ClienteNS](../images/Screenshots_NSClient.png)
 
 * Displays status of the connection with your Nightscout site.
 * Settings are made in [preferences](../Configuration/Preferences#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.

@@ -11,7 +11,7 @@ Segurança Em Primeiro Lugar
 Configuração dos comandos SMS
 ==================================================
 
-.. image:: ../images/SMSCommandsSetup.png
+.. imagem:: ../images/SMSCommandsSetup.png
   :alt: Configuração de Comandos SMS
       
 * A maioria dos ajustes de alvos temporários, de acordo com a AAPS etc. pode ser feita na app "NSClient  <.../Children/Children.html>` num telemóvel Android com conexão à Internet.
@@ -95,56 +95,56 @@ Loop
   * Resposta: Loop foi ativado
 * LOOP STATUS
 
-  * Resposta depende do status atual
+  * Resposta depende do estado atual
 
     * Loop desactivado
-    * Loop activado
+    * Loop ativado
     * Suspenso (10 min)
 * LOOP SUSPEND 20
-  * Resposta: Loop suspenso por 20 minutes
+  * Resposta: Loop suspenso por 20 minutos
 * LOOP RESUME
   * Resposta: Loop foi retomado
 
-Dados do CGM (Monitor Contínuo de Glicemia)
+Dados do MCG (Medidor Contínuo de Glicemia)
 --------------------------------------------------
 * GLIC
-  * Resposta: Última BG: 5,6 há 4 min, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+  * Resposta: Última GLIC: 5,6 há 4 min, Delta: -0,2 mmol, IOB: 0.20U (Bólus: 0.10U Basal: 0.10U)
 * CAL 5.6
-  * Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN
-  * Resposta após o código correto ter sido recebido: Calibração enviada (**Se xDrip estiver instalado. Aceitar calibração deve estar habilitado no xDrip+**)
+  * Resposta: Para enviar calibração de 56, responda com código da aplicação Authenticator para o utilizador seguido pelo PIN
+  * Resposta após o código correto ter sido recebido: Calibração enviada (**Se xDrip estiver instalado. Aceitar calibração deve estar ativado no xDrip+**)
 
 Basal
 --------------------------------------------------
 * BASAL STOP/CANCEL
-  * Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para parar a basal temporária, responder com o código da aplicação Authenticator para o utilizador seguido pelo PIN
 * BASAL 0.3
-  * Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para iniciar a basal de 0.3U/hr por 30 min, deve responder com o código da aplicação do Authenticator para o utilizador, seguida do PIN
 * BASAL 0.3 20
-  * Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para iniciar a basal de 0.3U/h por 20 minutos, responder com o código da aplicação Authenticator para o utilizador seguida do PIN
 * BASAL 30%
-  * Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para iniciar a basal com 30% por 30 minutos, responder com o código da aplicação Authenticator para o utilizador seguida do PIN
 * BASAL 30% 50
-  * Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para iniciar a basal com 30% por 50 minutos, responder com o código da aplicação Authenticator para o utilizador seguida do PIN
 
 Bólus
 --------------------------------------------------
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
+Bólus remoto não permitido durante 15 min (este valor é editável apenas se estiverem inseridos 2 números de telefone) após último comando de bólus ou comandos remotos! Portanto a resposta depende da última vez em que foi administrado o último bólus.
 
 * BOLUS 1.2
-  * Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN
+  * Resposta A: Para administrar o bólus de 1.2U, responder com o código da aplicação Authenticator para o utilizador, seguida do PIN
   * Resposta B: Bolus remoto não disponível. Volte a tentar mais tarde.
 * BOLUS 0.60 MEAL
-  * Se você especificar o parâmetro opcional MEAL (Refeição), este configura um objetivo temporário para Refeições (os valores padrão são: 90 mg/dL, 5,0 mmol / l para 45 mins).
-  * Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN
+  * Se especificar o parâmetro opcional MEAL (Refeição), este configura um objetivo temporário para Refeições (os valores padrão são: 90 mg/dL, 5,0 mmol / l para 45 mins).
+  * Resposta A: Para administrar o bólus de refeição de 0.60U responder com o código fornecido pela aplicação Authenticator para o utilizador, seguido do PIN
   * Resposta B: Bolus remoto não disponível. 
 * CARBS 5
-  * Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para introduzir 5g às 12:45, responder com o código da aplicação Authenticator para o utilizador, seguido do PIN
 * CARBS 5 17:35/5:35PM
-  * Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para introduzir 5g às 17:35, responder com o código da aplicação Authenticator para o utilizador, seguido do PIN
 * EXTENDED STOP/CANCEL
-  * Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para parar o bólus prolongado, responder com o código da aplicação Authenticator para o utilizador, seguida do PIN
 * EXTENDED 2 120
-  * Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para iniciar o bólus prolongado de 2U por 120 minutos, responder com o código da aplicação Authenticator para o utilizador seguido do PIN
 
 Perfil
 --------------------------------------------------
@@ -153,9 +153,9 @@ Perfil
 * PROFILE LIST
   * Resposta: 1.`Perfil1` 2.`Perfil2`
 * PROFILE 1
-  * Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para trocar o Perfil para Perfil 1 100%, responder com o código da aplicação Authenticator para o utilizador, seguido do PIN
 * PROFILE 2 30
-  * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para trocar o Perfil para Perfil2 30%, responder com o código da aplicação Authenticator para o utilizador, seguido do PIN
 
 Outro
 --------------------------------------------------
@@ -164,33 +164,33 @@ Outro
 * NSCLIENT RESTART
   * Resposta: NSCLIENT REINICIAR 1 receptores
 * BOMBA
-  * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+  * Resposta: Última Conexão: 1 minuto atrás Temp: 0.00/h @11:38 5/30min IOB: 0.5U Reserv: 34U Bat:100
 * PUMP CONNECT
-  * Response: Pump reconnected
+  * Resposta: Bomba Reconectada
 * PUMP DISCONNECT *30*
-  * Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para desconectar a bomba por *30* minutos, responder com o código da aplicação Authenticator para o utilizador, seguido do PIN
 * SMS DISABLE/STOP
   * Resposta: Para desativar o Serviço de Comandos SMS responda com código Any. Atenção que apenas o poderá reativar somente a partir do telemóvel que corre o AAPS.
 * TARGET MEAL/ACTIVITY/HYPO   
-  * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
+  * Resposta: Para definir perfis de Alvo Temp. / Refeição / Actividade / Hipoglicemia responder com o código da aplicação Authenticator para o utilizador seguido do PIN
 * TARGET STOP/CANCEL   
-  * Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
+  * Reposta: Para cancelar o Alvo Temporário, responder com o código da aplicação Authenticator para o utilizador seguido do PIN
 * HELP
   * Resposta: GLICEMIA, LOOP, TRATAMENTOS,.....
 * HELP BOLUS
-  * Resposta: BOLUS 1.2 BOLUS 1.2 REFEIÇÃO
+  * Resposta: BÓLUS 1.2 BÓLUS 1.2 REFEIÇÃO
 
 Resolução de Problemas
 ==================================================
 Múltiplos SMS
 --------------------------------------------------
-Caso receba repetidamente a mesma mensagem, provavelmente foi configurada um circulo entre aplicações. Como por exemplo o xDrip+, If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS. 
+Caso receba repetidamente a mesma mensagem (por exemplo, mudança de perfil) provavelmente terá configurado um problema entre aplicações. Como por exemplo o xDrip+, Sendo assim, por favor assegure-se que o xDrip+ (ou outra aplicação) não está a fazer o upload de tratamentos para o NS. 
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+Se a outra aplicação está instalada em múltiplos telefones, assegure-se de desativar o upload em todos eles.
 
 Problemas com comandos SMS em telemóveis Samsung
 --------------------------------------------------
-Uma atualização ao Samsung S10 em alguns casos provocou erros com os Comandos SMS. Could be solved by disabling 'send as chat message'.
+Uma atualização ao Samsung S10 em alguns casos provocou erros com os Comandos SMS. Pode ser resolvido desativando a opção "enviar como mensagem de texto".
 
-.. image:: ../images/SMSdisableChat.png
+.. imagem:: ../images/SMSdisableChat.png
   :alt: Desativar o SMS como mensagens de chat

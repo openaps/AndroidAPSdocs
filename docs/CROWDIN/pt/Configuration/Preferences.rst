@@ -10,7 +10,7 @@ Preferências
   .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Open plugin preferences
 
-* **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+* **Sub-Menus** podem ser abertos clicando no triângulo abaixo do título do sub-menu.
 
   .. image:: ../images/Pref2020_Submenu2.png
     :alt: Open submenu
@@ -71,19 +71,19 @@ Settings protection
 Application protection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * If app is protected you must enter password or use phone's biometric authentication to open AAPS.
-* A App será encerrada imediatamente se for digitada a senha errada, contudo continua a correr em segundo plano se ela foi previamente aberta com sucesso.
+* A App será encerrada imediatamente se for introduzida a palavra-passe errada, contudo continuará a ser executada em segundo plano no caso de ter sido previamente iniciada com sucesso.
 
-Bolus protection
+Proteção de Bólus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Bolus protection might be useful if AAPS is used by a small child and you `bolus via SMS <../Children/SMS-Commands.html>`_.
-* In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter master password.
+* A proteção de bólus pode ser útil se a AAPS for usada por uma criança jovem e se forem utilizados os bólus via SMS <../Children/SMS-Commands.html> ` _.
+* No exemplo abaixo poderá ver o prompt para a proteção biométrica. Se a autenticação biométrica não funcionar, clique no espaço acima do prompt branco e digite a palavra-passe mestre.
 
   .. image:: ../images/Pref2020_PW.png
     :alt: Prompt biometric protection
 
-Skin
+Tema gráfico
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* You can choose from four types of skins:
+* Pode escolher um de entre os quatro tipos de temas:
 
   .. image:: ../images/Pref2021_SkinWExample.png
     :alt: Select skin + examples
@@ -376,7 +376,7 @@ The options here will vary depending on which pump driver you have selected in `
 
 If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
-NSClient
+ClienteNS
 ===========================================================
 
 .. image:: ../images/Pref2020_NSClient.png

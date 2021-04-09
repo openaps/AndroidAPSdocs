@@ -131,4 +131,4 @@ Voorheen gebruikten ze firmware die T:AP heette (genoemd in dit [artikel](https:
 
 ### Ondersteuning overige pompen
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Als er andere pompen zijn waarvan je wilt weten wat de status is, neem dan contact op via discord.

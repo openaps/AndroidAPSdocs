@@ -25,10 +25,10 @@
 * A estabilidade da conexão Bluetooth varia de acordo com os diferentes telefones, causando alertas de 'bomba não localizada', quando a ligação à bomba for perdida. 
 * Se esse erro ocorrer, certifique-se de que o Bluetooth está activo, prima o botão actualizar no separador Combo para verificar se a causa foi temporária ou se continua sem conexão. Reiniciar o telemóvel normalmente resolve o problema. 
 * Há uma outra questão onde o reiniciar do telefone não ajuda mas um botão na bomba pode ser pressionado ( o que faz um reset ao Bluetooth da bomba), antes da bomba aceitar de novo ligações ao telemóvel. 
-* Neste momento muito pouco poderá ser feito para corrigir qualquer um destes problemas. Assim, se verificar estes erros com frequência a única opção nesta altura será arranjar outro telefone que trabalhe correctamente com a AndroidAPS e a Combo (ver acima).
+* Neste momento muito pouco poderá ser feito para corrigir qualquer um destes problemas. Assim, se verificar estes erros com frequência a única opção nesta altura será arranjar outro telefone que trabalhe corretamente com a AndroidAPS e a Combo (ver acima).
 * A emissão de um bólus a partir da bomba nem sempre será detectado a tempo (apenas quando a AAPS se conecta à bomba) e na pior situação poderá demorar até 20 minutos. 
 * Os bólus na bomba são sempre verificados antes de uma BT (basal temporária) alta ou um bólus efectuado pela AAPS, mas devido aos limites de segurança a AAPS irá recusar a BT/Bólus, dado que o mesmo foi calculado devido a falsas informações. (-> Não dê bólus a partir da bomba! Veja capítulo [Utilização](#usage) abaixo)
-* É de evitar programar uma BT na bomba dado que o Loop assume o controlo das BTs. Detectar uma nova DBT na bomba pode levar até 20 minutos e o efeito da DBT só será tido em conta a partir do momento em que é detectado, no pior dos casos poderão haver 20 minutos de DBT que não será reflectida na IOB (insulina activa). 
+* É de evitar programar uma BT na bomba dado que o Loop assume o controlo das BTs. Detectar uma nova DBT na bomba pode levar até 20 minutos e o efeito da DBT só será tido em conta a partir do momento em que é detectado, no pior dos casos poderão haver 20 minutos de DBT que não será reflectida na IA (insulina ativa). 
 
 ## Instalação
 
@@ -133,7 +133,7 @@ Há várias razões possiveis. Tente os seguintes passos:
 * Quando um alarme de reservatório vazio ou bateria fraca soa durante um bólus, ele é confirmado e mostrado como notificação na AAPS. 
 * Se ocorrerem enquanto não houver ligação aberta à bomba, ir ao separador Combo e carregar no botão ATUALIZAR irá fazer com que uma notificação seja apresentada na AAPS.
 * Quando a AAPS falhar na confirmação de um alerta de DBT cancelada, ou um alerta surgir por diferentes razões, premir ATUALIZAR no separador Combo irá estabelecer uma ligação, confirma o alerta e mostra uma notificação na AAPS. Isto pode ser feito com segurança, uma vez que esses alertas são benignos-uma DBT apropriada será configurada novamente durante a iteração do próximo loop.
-* Para todos os outros alertas gerados pela bomba: conectar à bomba mostrará a mensagem de alerta na aba Combo, por exemplo, "Estado: E4: Oclusão" bem como mostrando uma notificação na tela principal.
+* Para todos os outros alertas gerados pela bomba: conectar à bomba mostrará a mensagem de alerta no separador Combo, por exemplo, "Estado: E4: Oclusão" bem como mostrando uma notificação na tela principal.
 * Um erro irá criar uma notificação urgente. 
 * A AAPS nunca confirma erros graves na bomba, mas deixa a bomba vibrar e tocar para garantir que o utilizador seja informado de uma situação crítica que precisa de ação.
 * Após emparelhar, a ruffy não deve ser usada directamente (a AAPS irá iniciá-la em background), dado que usando a ruffy ao mesmo tempo que a AAPS não é suportado.

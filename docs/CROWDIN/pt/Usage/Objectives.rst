@@ -1,49 +1,49 @@
 Objetivos
 **************************************************
 
-AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
+A AndroidAPS possui uma série de objetivos que precisam ser completados para o encaminhar pelos recursos e configurações de um loop seguro.  Eles garantem que configurou corretamente tudo o que foi detalhado nas seções acima e que entende o que o seu sistema está a fazer e por que assim pode confiar nele.
 
-If you are **upgrading phones** then you can `export your settings <../Usage/ExportImportSettings.html>`_ to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to `backup your settings <../Usage/ExportImportSettings.html>`_ frequently just in case.
+Se está **a mudar de telemóvel**, então pode `exportar as suas configurações <../Usage/ExportImportSettings.html>`_ para manter o seu progresso através dos objetivos. Não será só o seu progresso através dos objetivos que será salvo, mas também as suas configurações de segurança como o bólus máximo, etc.  Se não exportar e importar as suas configurações então irá precisar de iniciar os objetivos desde o primeiro.  É uma boa ideia fazer o `backup das suas configurações <../Usage/ExportImportSettings.html> ` _ frequentemente precavendo-se.
 
-If you want to go back in objectives see `explanation below <../Usage/Objectives.html#go-back-in-objectives>`_.
+Se quiser voltar atrás nos objetivos, veja `abaixo como fazê-lo <../Usage/Objectives.html#go-back-in-objectives>`_.
  
-Objective 1: Setting up visualization and monitoring, analysing basals and ratios
+Objetivo 1: Configurar a visualização e monitorização, analisando basais e rácios
 ====================================================================================================
-* Select the right blood glucose source for your setup.  See `BG Source <../Configuration/BG-Source.html>`_ for more information.
-* Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.  
-* If using DanaR pump then ensure you have followed `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ instructions to ensure the link between pump and AndroidAPS.
-* Follow instructions in `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ page to ensure Nightscout can receive and display this data.
-* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#nsclient>`__.
+* Selecione na configuração a fonte de glicose no sangue correta.  Veja `Fonte de GS <../Configuration/BG-Source.html>`_ para mais informações.
+* Selecione a bomba correta no Configurador (selecione a bomba virtual se estiver a usar um modelo bomba ainda sem driver da AndroidAPS para loop) para garantir que a bomba pode comunicar com a AndroidAPS.  
+* Se utilizar a bomba DanaR então certifique-se de ter seguido as instruções para a ` Bomba de insulina DanaR <../Configuration/DanaR-Insulin-Pump.html> ` _ para garantir o link entre bomba e a AndroidAPS.
+* Siga as instruções na página ` Nightscout <../Installing-AndroidAPS/Nightscout.html> ` _ para garantir que o Nightscout pode receber e exibir esses dados.
+* Observe que o URL no NSClient deve ser ** SEM /api/v1 /** no final - veja ` NSClient em Preferências <../Configuration/Preferences.html#nsclient> ` __.
 
-*You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
+*Pode ser necessário esperar que a próxima leitura de glicose no sangue chegue antes da AndroidAPS a reconhecer.*
 
-Objective 2: Learn how to control AndroidAPS
+Objetivo 2: Aprenda a controlar a AndroidAPS
 ==================================================
-* Perform several actions in AndroidAPS as described in this objective.
-* Click on the orange text "Not completed yet" to access the to-dos.
-* Links will be provided to guide you in case you are not familiar with a specific action yet.
+* Execute várias ações na AndroidAPS conforme descrito neste objetivo.
+* Clique no texto laranja "Não concluído ainda" para aceder ao que é para fazer.
+* Serão fornecidos links para guiá-lo caso não esteja ainda familiarizado com uma ação específica.
 
-  .. image:: ../images/Objective2_V2_5.png
-    :alt: Screenshot objective 2
+  .. imagem:: ../images/Objective2_V2_5.png
+    :alt: Captura de ecrã do Objetivo 2  
 
-Objective 3: Prove your knowledge
+Objetivo 3: Prove o seu conhecimento
 ==================================================
-* Pass a multiple-choice exam testing your AndroidAPS knowledge.
-* Click on the orange text "Not completed yet" to access the page with the question and answering options.
+* Passe um teste de escolha múltipla testando o seu conhecimento da AndroidAPS.
+* Clique no texto laranja "Não concluído ainda" para aceder à página com a pergunta e as opções de resposta.
 
-  .. image:: ../images/Objective3_V2_5.png
-    :alt: Screenshot objective 3
+  .. imagem:: ../images/Objective2_V2_5.png
+    :alt: Captura de ecrã do Objetivo 3
 
-* Links will be provided to guide you in case you are unsure about the correct answers yet.
-* The questions for objective 3 have been completely rewritten by native speakers as of AAPS 2.8. The new ones cover the same basic topics plus a few new ones.
-* These new questions will lead to some not answered questions even though you have successfully completed objective 3 in previous versions.
-* Unanswered questions will affect you only if you start a new objective. In other words: If you have already completed all objectives you can wait and answer the new questions later without loosing AAPS functions.
+* Serão fornecidos links para guiá-lo caso ainda não tenha a certeza sobre as respostas corretas.
+* As perguntas para o objetivo 3 foram completamente reescritas por falantes nativos a partir da AAPS 2.8. Os novos cobrem os mesmos tópicos básicos e mais alguns novos.
+* Estas novas perguntas levarão a algumas perguntas não respondidas mesmo tendo concluído com sucesso o objetivo 3 em versões anteriores.
+* perguntas não respondidas só o afetarão se iniciar um novo objetivo. Por outras palavras: Se já completou todos os objetivos, pode esperar e responder às novas perguntas mais tarde, sem perder as funções da AAPS.
 
-Objective 4: Starting on an open loop
+Objetivo 4: Iniciar um loop aberto
 ==================================================
-* Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-* Work through the `Preferences <../Configuration/Preferences.html>`__ to set up for you.
-* Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Ensure this data shows in AndroidAPS and Nightscout.
+* Selecione Loop Aberto a partir de Preferências, ou pressionando e segurando o botão Loop em cima esquerda da tela inicial.
+* "Navegue" pelas `Preferências <../Configuration/Preferences.html>`__ para configurar a APS para si.
+* Manualmente defina pelo menos 20 das basais temporárias sugeridas ao longo de um período de 7 dias; insira-os na sua bomba e confirme na AndroidAPS que as aceitou.  Garanta que esses dados estão registados na AndroidAPS e no Nightscout.
 * Enable `temp targets <../Usage/temptarget.html>`_ if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. 
 
 Reduce number of notifications

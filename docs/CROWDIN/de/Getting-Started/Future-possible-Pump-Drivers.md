@@ -131,4 +131,4 @@ Bis vor einiger Zeit wurde eine Firmware namens T:AP genutzt (Hinweise dazu in [
 
 ### Unterstützung weiterer Pumpen
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Falls du noch andere Pumpen hast und du über deren Status Bescheid wissen willst, kontaktiere uns auf discord.

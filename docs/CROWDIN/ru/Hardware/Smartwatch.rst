@@ -11,4 +11,4 @@
    
    Список проверенных телефонов <../Getting-Started/Phones.md>
    Циферблаты <../Configuration/Watchfaces.md>
-   Troubleshooting Sony Smartwatch SW 3 <../Usage/SonySW3.rst>
+   Устранение неполадок Sony Smartwatch SW 3 <../Usage/SonySW3.rst>

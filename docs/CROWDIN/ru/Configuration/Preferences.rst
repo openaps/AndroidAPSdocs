@@ -42,16 +42,16 @@
 
 **Имя пациента**
 
-* Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+* Может использоваться, если нужно иметь несколько настроек (например, когда в семье 2 ребенка с СД1).
 
-Protection
+Защита
 -----------------------------------------------------------
-Master password
+Главный пароль
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
-  **Biometric protection does not work on OnePlus phones. This is a know issue of OnePlus.**
+* Необходимо, чтобы можно было `экспортировать настройки <../Usage/ExportImportSettings.html>`_ в том виде, в каком они зашифрованы начиная с версии 2.7.
+  **Защита биометрией не работает на телефонах OnePlus. Это известная проблема OnePlus. **
 
-* Open Preferences (three-dot-menu on top right of home screen)
+* Откройте настройки, нажав три точки меню в верхней правой части главного экрана
 * Click triangle below "General"
 * Click "Master-Password"
 * Enter password, confirm password and click ok.
@@ -125,7 +125,7 @@ Buttons
   .. image:: ../images/Pref2020_OV_Buttons.png
     :alt: Preferences > Buttons
 
-Quick Wizard
+Мастер быстрых настроек
 -----------------------------------------------------------
 * If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
 * In setup you define during which time period the button will be visible on your home screen - just one button per period.

@@ -15,7 +15,7 @@ Niet-opgenomen koolhydraten worden afgekapt (naar nul) na bepaalde tijd.
 AAPS, Gewogen gemiddelde
 --------------------------------------------------
 
-absorption is calculated to have ``COB == 0`` after specified time
+de absorptie wordt berekend met ``COB == 0`` na de opgegeven tijd
 
 .. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, Gewogen gemiddelde
@@ -35,7 +35,7 @@ Normaalgesproken detecteert AAPS carb absorptie dmv BG afwijkingen. In het geval
 .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
   :alt: Detectie van verkeerde COB waarden
 
-In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  Dit betekent dat je misschien minder koolhydraten aan boord hebt dan berekend door het algoritme. 
+In de bovenstaand screenshot werd bij het berekenen van de koolhydraat absorptie 41% van de tijd de min_5m_carbimpact gebruikt, in plaats van de waarde die is gedetecteerd dmv afwijkingen.  Dit betekent dat je misschien minder koolhydraten aan boord hebt dan berekend door het algoritme. 
 
 Hoe om te gaan met deze waarschuwing? 
 --------------------------------------------------

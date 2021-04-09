@@ -1,6 +1,6 @@
 # Обзор компонентов 
 **************************************************
-AndroidAPS - это не просто (самостоятельно собранное) приложение, это один из модулей закрытой системы ИПЖ. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
+AndroidAPS - это не просто (самостоятельно собранное) приложение, это один из модулей закрытой системы ИПЖ. Прежде чем выбрать компоненты, неплохо рассмотреть их в `комплексе компонентов <../index.html#component-setup> `_.
    
 .. изображение:../images/modules.png
   :alt: Обзор компонентов
@@ -35,8 +35,10 @@ SGLT-2 ингибиторы, которые также называются гл
 
 Телефон
 --------------------------------------------------
-The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
-Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>`_
+Текущая версия AndroidAPS требует Android-смартфона с Google Android 8.0 или выше. Так что если вы думаете о новом телефоне, рекомендуем хотя бы Android 8., но оптимально Android 9 или 10.
+Пользователям настоятельно рекомендуется постоянно поддерживать AndroidAPS в актуальном состоянии по соображениям безопасности, однако для пользователей, у которых нет Android 8.0, подходит AndroidAPS версии 2.6.1.4, находящаяся в "старом репозитории". <https://github.com/miloskozak/androidaps>`_
+ 
+Context | Edit Context`_
 
 Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
@@ -53,7 +55,7 @@ AndroidAPS **на данный момент** работает с
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - `некоторые старые помпы Medtronic <./Configuration/MedtronicPump.html>`_ начиная с [предстоящей[ версии 2.4 (дополнительно необходимо: RileyLink/Gnarl аппаратное обеспечение, телефон на Android с чипом Bluetooth LE / BLE-chipset)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
+- `Omnipod Eros <../Конфигуратор/OmnipodEros.html>`_ 
 
 **Другие помпы** которые потенциально могут работать с AndroidAPS перечислены на `Будущие (возможные) помпы <../Getting-Started/Future-possible-Pump-Drivers.html>`_ странице.
 
@@ -87,15 +89,15 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 
 Nightscout
 --------------------------------------------------
-Nightscout - веб-приложение с открытым исходным кодом, которое может регистрировать/отображать данные мониторинга и AndroidAPS и создавать отчеты. You can find more information on the `website of the Nightscout project <http://nightscout.github.io/>`_. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
+Nightscout - веб-приложение с открытым исходным кодом, которое может регистрировать/отображать данные мониторинга и AndroidAPS и создавать отчеты. Вы можете найти больше информации на сайте проекта Nightscout <http://nightscout.github.io/>`_. Вы можете создать собственный сайт Nightscout `используя Heroku <https://nightscout.github.io/nightscout/new_user/>`_, с автоматизированной установкой Nightscout на `zehn.be <https://ns.10be.de/en/index.html>`_ или разместите его на вашем собственном сервере (для IT экспертов).
 
 Nightscout не зависит от других модулей. Он понадобится для выполнения цели 1.
 
-Additional information on how to configure Nightscout for use with AndroidAPS can be found `here <../Installing-AndroidAPS/Nightscout.html>`__.
+Дополнительную информацию о том, как настроить Nightscout для использования с AndroidAPS можно найти `здесь <../Installing-AndroidAPS/Nightscout.html>`__.
 
 Файл AAPS-.apk
 --------------------------------------------------
-Основной компонент системы. Перед установкой приложения необходимо создать apk-файл ( расширение имен файлов для приложений Android). Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`__.  
+Основной компонент системы. Перед установкой приложения необходимо создать apk-файл ( расширение имен файлов для приложений Android). Инструкции `здесь <./../Installing-AndroidAPS/Building-APK.html>`__.  
 
 Дополнительные модули
 ==================================================
@@ -103,7 +105,7 @@ Additional information on how to configure Nightscout for use with AndroidAPS ca
 --------------------------------------------------
 Вы можете выбрать смарт-часы с Android Wear 1.x и выше. Большинство пользователей носят Sony Smartwatch 3 (SWR50), поскольку это единственные смарт-часы, которые могут получать данные от Dexcom G5/G5, когда телефон вне доступа. Некоторые другие часы могут быть пропатчены как самостоятельный коллектор (см. `эту документацию <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ подробно).
 
-Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`__.
+Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. Есть разные часы для использования с AndroidAPS, которые вы можете найти `здесь <../Configuration/Watchfaces.html>`__.
 
 Для того, чтобы включить в список телефон, который не занесен в таблицу, заполните форму <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>.
 
@@ -111,7 +113,7 @@ Additional information on how to configure Nightscout for use with AndroidAPS ca
 
 xDrip +
 --------------------------------------------------
-Даже если приложение xDrip+ вам не нужно как источник данных ГК, вы все равно можете использовать его например для оповещений или хороший дисплей ГК. Вы можете иметь столько оповещений сколько хотите, указать время, когда оповещениям разрешено работать, должны ли они иметь приоритет в режиме тишины и т. п. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`__. Пожалуйста, имейте в виду, что документация к этому приложению не всегда актуальна, так как проект развивается довольно быстро.
+Даже если приложение xDrip+ вам не нужно как источник данных ГК, вы все равно можете использовать его например для оповещений или хороший дисплей ГК. Вы можете иметь столько оповещений сколько хотите, указать время, когда оповещениям разрешено работать, должны ли они иметь приоритет в режиме тишины и т. п. Некоторую информацию об xDrip+ можно найти `здесь <../Configuration/xdrip.html>`__. Пожалуйста, имейте в виду, что документация к этому приложению не всегда актуальна, так как проект развивается довольно быстро.
 
 Пример настройки
 ==================================================
@@ -128,7 +130,7 @@ xDrip +
 ==================================================
 Иногда требуется некоторое время, чтобы получить все модули для закрытого цикла ИПЖ. Но не беспокойтесь, можно многое сделать во время ожидания. НЕОБХОДИМО проверить и (где требуется) адаптировать базальную скорость (BR), соотношение инсулин-углеводы (IC), фактор чувствительности к инсулину (ISF) и т. д. И, возможно, незамкнутый цикл может быть хорошим способом проверить систему и познакомиться с AndroidAPS. В этом режиме AndroidAPS дает рекомендации, которые можно выполнить вручную.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <../Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+Вы можете продолжать читать документацию здесь `<../Where-To-Go-For-Help/Background-reading.html>`_общаться с другими пользователями в сети или offline, узнавать мнение людей (при этом учитывая, что не все рекомендации вам подходят).
 
 **Готово?**
 Если у вас собраны все компоненты AAPS (поздравляем!) или, по крайней мере, их достаточно, чтобы начать работу в режиме незамкнутого цикла, сначала следует прочитать `Описание Целей<../Usage/Objectives.html>`_ (Обзор) перед каждой новой целью и настроить `компоненты <./index.html#component-setup>`_.

@@ -3,7 +3,7 @@ Dexcom G6
 Сначала основное
 ==================================================
 
-* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`__.
+* Следуйте общим рекомендациям по гигиене и настройкам мониторинга `здесь <../Hardware/GeneralCGMRecommendation.html>`__.
 * Для Трансмиттеров G6, изготовленных после осени/конца 2018 года выберите одну из `последних ночных сборок xDrip+ <https://github.com/NightscoutFoundation/xDrip/releases>`_. У этих трансмиттеров новая прошивка и стабильная версия xDrip+ (2019/01/10) с ней не работает.
 
 Общие рекомендации по использованию G6 с системами ИПЖ
@@ -17,17 +17,17 @@ Dexcom G6
 "Предварительное замачивание" (установка сенсора намного раньше его старта в приложении) G6 с заводской калибровкой приведет к отклонениям в данных. Если вы все же делаете "предварительное погружение", то для получения лучших результатов вам, вероятно, придется калибровать сенсор.
 * Если вы не планируете отслеживать все возможные отклонения, то лучше вернуться к традиционному режиму калибровки и использовать систему как G5.
 
-To learn more about the details and reasons for these recommendations read the `complete article <https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ published by Tim Street at `www.diabettech.com <https://www.diabettech.com>`_.
+Подробнее о деталях и причинах этих рекомендаций читайте полную статью <https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>_опубликованную в Tim Street на`www.diabettech.com <https://www.diabettech.com>_.
 
 При использовании G6 с xdrip+
 ==================================================
 * Трансмиттер Dexcom G6 может одновременно подключаться к ресиверу Dexcom (или к помпе T:slim) и одному приложению на вашем телефоне.
 * При использовании xDrip+ в качестве ресивера сначала удалите приложение Dexcom. **Невозможно одновременно подключить к трансмиттеру приложения xDrip+ и Dexcom!**
-* If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
-* If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
+* Если вам нужен функционал оригинального приложения Clarity и оповещения от xDrip +, пользуйтесь ` модифицированным приложением Dexcom <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ с локальной передачей данных в xDrip +.
+* Если это еще не сделано, скачайте `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ и следуйте инструкциям на Nightscout (G5<http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 В конфигуратоге (настройки AndroidAPS) выберите xdrip+.
-* Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
-* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`__.
+* Настройте параметры в xDrip+ в соответствии со страницей настроек `xDrip+ <../Configuration/xdrip.html>`__
+Если AAPS не получает значения ГК, когда телефон находится в режиме авиаперелета пользуйтесь функцией 'identify receiver (идентифицировать приемник)' в соответствии с описанием на странице настроек `xDrip+ <../Configuration/xdrip.html>`_.
 
 При пользовании G6 с помощью модифицированного приложения Dexcom
 ==================================================
@@ -35,39 +35,39 @@ To learn more about the details and reasons for these recommendations read the `
 
   * Папка 2.4 для пользователей текущей версии, папка 2.3-только для устаревших AndroidAPS 2.3.
   * Откройте https://play.google.com/store/search?q=dexcom%20g6 на вашем компьютере. 
-  * Click the link to the Dexcom G6 app on the search results page that is displayed.
-  * Region will be visible in URL.
+  * Нажмите ссылку на приложение Dexcom G6 на отображаемой странице результатов поиска.
+  * Регион будет виден в URL.
 
   .. изображение:../images/DexcomG6regionURL.PNG
     :alt: Регион в URL Dexcom G6
 
-* Uninstall the original Dexcom app.
+* Удалите оригинальное приложение Dexcom.
 * Установите загруженное приложение
-* Enter sensor code and transmitter serial no. in patched app.
-* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
+* Введите код сенсора и серийный номер трансмиттера в пропатченном приложении.
+* После короткого времени патч приложение должно получить сигнал трансмиттера. (Если нет, вам придется остановить сенсор и начать новый.)
 * В конфигуратоге (настройки AndroidAPS) выберите Dexcom G App (модифицированное).
 * Если хотите использовать xDrip-оповещения через локальную трансляцию: в сэндвич-меню xDrip > настройки > источник данных глюкозы > 640G /EverSense.
 * Из модифицированного приложения Dexcom нет локальной трансляции непосредственно в xDrip +. Трансляция должна пройти через ААПС, как описано выше.
 
-If using G6 with Build Your Own Dexcom App
+При использовании G6 с созданием собственного Dexcom приложения
 ==================================================
-* As of December 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA)also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
-* This app lets you use your Dexcom G6 with any Android smartphone.
-* Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously.
+* По состоянию на декабрь 2020 года ` Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>` _ (BYODA) также поддерживает локальное вещание на AAPS и/или xDrip + (не для сенсоров G5!)
+* Это приложение позволяет использовать Dexcom G6 с любым смартфоном Android.
+* Деинсталлируйте оригинальное приложение Dexcom или приложение Dexcom, если вы использовали их ранее.
 * Установите загруженное приложение
-* Enter sensor code and transmitter serial no. in patched app.
-* In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
-* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
+* Введите код сенсора и серийный номер трансмиттера в пропатченном приложении.
+* В настройках телефона перейдите к приложениям > Dexcom G6 > разрешения > дополнительные разрешения и нажмите 'Access Dexcom app'.
+* После короткого времени патч приложение должно получить сигнал трансмиттера. (Если нет, вам придется остановить сенсор и начать новый.)
 
-Settings for AndroidAPS
+Настройки для AndroidAPS
 --------------------------------------------------
-* Select 'Dexcom App (patched)' in config builder.
-* If you don't recieve any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+* Выберите 'приложение Dexcom (модифицированное)' в конфигураторе.
+* Если вы не получаете никаких значений, выберите любой другой источник данных, а затем снова выберите 'приложение Dexcom (модифицированное)', чтобы запустить требование разрешений на установление соединения между AAPS и самостоятельно собранным приложением Dexcom.
 
-Settings for xDrip+
+Настройки для xDrip+
 --------------------------------------------------
-* Select '640G/Eversense' as data source.
-* Command 'start sensor' must be performed in xDrip+ in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
+* Выберите '640G/Eversense' в качестве источника данных.
+* Для получения значений необходимо выполнить команду 'start Sensor' в xDrip +. Это не повлияет на сенсор контролируемый самостоятельно собранным приложением Dexcom.
    
 Устранение неполадок с G6
 ==================================================
@@ -87,9 +87,9 @@ Settings for xDrip+
 .. image:../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
 
-General troubleshoothing
+Общее средство устранения неполадок
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
+Общее устранение неполадок мониторинга можно найти `здесь <./GeneralCGMRecommendation.html#Troubleshooting>`__.
 
 Установка нового трансмиттера на работающий сенсор
 --------------------------------------------------

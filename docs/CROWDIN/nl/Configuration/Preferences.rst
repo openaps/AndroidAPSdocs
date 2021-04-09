@@ -10,12 +10,12 @@ Instellingen
   .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Open plugin instellingen
 
-* **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+* **Submenu's** kun je openen door te klikken op de driehoek onder de sub-menu titel.
 
   .. image:: ../images/Pref2020_Submenu2.png
     :alt: Open submenu
 
-* Met de ** filter** functie bovenaan het instellingenscherm kun je snel naar bepaalde voorkeuren gaan. Begin simpelweg een deel van de tekst die je zoekt, te typen.
+* Met de **filter** functie bovenaan het instellingenscherm kun je snel naar bepaalde voorkeuren gaan. Begin simpelweg een deel van de tekst die je zoekt, te typen.
 
   .. image:: ../images/Pref2021_Filter.png
     :alt: Instellingen filter
@@ -63,7 +63,7 @@ Instellingenbeveiliging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Bescherm jouw instellingen met een wachtwoord of met de biometrische verificatie van jouw telefoon (bijv. `een kind gebruikt AAPS <../Children/Children.html>`_).
 * Er moet een aangepast wachtwoord worden gebruikt als je het masterwachtwoord alleen wilt gebruiken voor het beveiligen van `geëxporteerde instellingen <../Usage/ExportImportSettings.html>`_.
-* If you are using a custom password click on line "Settings password" to set password as described `above <../Configuration/Preferences.html#master-password>`__.
+* Als je een aangepast wachtwoord gebruikt, klik op de regel "Instellingen wachtwoord" om het wachtwoord in te stellen zoals `boven <../Configuration/Preferences.html#masterwachtwoord>`_ beschreven.
 
   .. image:: ../images/Pref2020_Protection.png
     :alt: Beveiliging
@@ -204,10 +204,10 @@ Voer dit deel van het boluscalculator resultaat uit
 
 Bolusadviseur
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+* Als je de `Bolus calculator <../Getting-Started/Screenshots.html#bolus-calculator>`_ gebruikt en je glucose waarde is hoger dan 10 mmol/l (180 mg/dl) wordt een correctie bolus voorgesteld.
 * Als de correctie bolus wordt geaccepteerd zullen er **geen koolhydraten** worden geregistreerd.
 * Er zal een alarm afgaan wanneer de glucosewaarde genoeg is gedaald om te beginnen met eten.
-* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ again and enter the amount of carbs you want to eat.
+* Je moet op dat moment de `Bolus calculator <../Getting-Started/Screenshots.html#bolus-calculator>`_ opnieuw gebruiken en daar de hoeveelheid koolhydraten invoeren die je wilt eten.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
     :alt: Bolusadviseur bericht
@@ -256,7 +256,7 @@ Minimale verzoek voor aanpassing [%]
 
 Advanced Meal Assist (AMA) of Super Micro Bolus (SMB)
 ===========================================================
-Depending on your settings in `config builder <../Configuration/Config-Builder.html>`__ you can choose between two algorithms:
+Afhankelijk van jouw instellingen in de `Configurator <../Configuration/Config-Builder.html>`_ kun je kiezen tussen twee algoritmes:
 
 * `Advanced Meal Assist (OpenAPS AMA) <../Usage/Open-APS-features.html#geavanceerde-maaltijdhulp-ama>`_ (Geavanceerde maaltijdhulp) - status van het algoritme in 2017
 * `Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - meest recente algoritme voor ervaren gebruikers
@@ -303,13 +303,13 @@ Gevoeligheidsdetectie (Autosens)
 Geavanceerde instellingen (OpenAPS AMA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normaal gesproken hoef je deze instellingen niet te wijzigen!
-* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ and to understand what you are doing.
+* Als je ze toch wilt veranderen, zorg er dan voor dat je de details in de `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ leest en begrijpt wat je doet.
 
 OpenAPS SMB instellingen
 -----------------------------------------------------------
 * In tegenstelling tot AMA gebruikt `SMB <../Usage/Open-APS-functies.html#super-micro-bolus-smb>`_ meestal geen tijdelijke basaalstanden om glucosewaarden bij te sturen, maar voornamelijk kleine bolusen: de zgn super micro bolussen.
 * Je moet `Doel 10 <../Usage/Objectives.html#doel-10-activeren-van-extra-functies-overdag-zoals-smb-super-micro-bolus>`_ hebben voltooid om SMB te kunnen gebruiken.
-* The first three settings are explained `above <../Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to>`__.
+* De eerste drie instellingen worden `hierboven <../Configuration/Preferences.html#maximaal-instelbaar-basaal-e-u>`_ uitgelegd.
 * De verschillende opties voor inschakelen van SMB worden beschreven op de pagina met `OpenAPS functies <../Usage/Open-APS-features.html#activeer-smb>`_.
 * *Tijdsinterval in minuten tussen afgeven van SMBs* is een beperking voor hoe snel na elkaar twee SMBs mogen worden gegeven, dit staat standaard op 4 min. Deze waarde voorkomt dat het systeem te vaak SMB afgeeft (bijvoorbeeld in geval van een tijdelijk streefdoel). Wijzig deze instelling alleen als je precies weet wat de gevolgen zijn. 
 * Als 'Gevoeligheid verhoogt het doel' of 'Resistentie verlaagt het doel' is ingeschakeld dan zal `Autosens <../Usage/Open-APS-features.html#gevoeligheidsdetectie-autosens>`_ jouw BG streefdoel overeenkomstig aanpassen.
@@ -333,7 +333,7 @@ Waarschuwing 'koolhydraten nodig'
 Geavanceerde instellingen (OpenAPS SMB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normaal gesproken hoef je deze instellingen niet te wijzigen!
-* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ and to understand what you are doing.
+* Als je ze toch wilt veranderen, zorg er dan voor dat je de details in de `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ leest en begrijpt wat je doet.
 
 Opname instellingen
 ===========================================================
@@ -416,8 +416,8 @@ Geavanceerde instellingen (NSClient)
 * De meeste opties in geavanceerde instellingen spreken voor zich.
 * *Activeer lokaal delen* zal jouw gegevens doorsturen naar andere apps op je telefoon, zoals xDrip+. 
 
-  * Niet alle versies van de aangepaste Dexcom app stuurt zijn gegevens rechtstreeks naar xDrip+. Terwijl sommigen liever hun alarmen instellen in xDrip+ vanwege de uitgebreidere opties. 
-  * Daarom kun je `via AAPS <../Configuration/Config-Builder.html#bg-bron>`_ de Activeer lokaal delen optie aanzetten, en op die manier jouw gegevens naar xDrip+ sturen.
+  * De aangepaste Dexcom app stuurt zijn gegevens niet rechtstreeks naar xDrip+. 
+  * Daarom kun je `via AAPS <../Configuration/Config-Builder.html#bg-bron>`_ de Activeer lokaal delen optie aanzetten, en op die manier jouw gegevens naar xDrip+ sturen. Handig als je liever de uitgebreide alarm instellingen in xDrip+ gebruikt dan de alarm instellingen van de Dexcom app.
   
 * *Gebruik altijd absolute basale waarden* moet geactiveerd worden als je Autotune correct wilt gebruiken. Zie `OpenAPS documentatie <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ voor meer informatie over Autotune.
 

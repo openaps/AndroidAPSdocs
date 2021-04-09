@@ -1,13 +1,13 @@
 # Logbestanden uitlezen
 
 * Verbind je telefoon met een computer in bestandsoverdrachtsmodus
-* Locate the log files in the AndroidAPS data directory
+* Zoek de logbestanden in de map AndroidAPS
     
-    * The folder will be at a location similar to ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
-    * The naming of the root storage folder (1) may vary a little depending on the phone.
+    * Deze map moet ergens op jouw telefoon te vinden zijn, bijvoorbeeld via ***Interne opslag (1) / Android / data / info.nightscout.androidaps / files*** of iets vergelijkbaars
+    * De precieze naam van de hoofdmap (1) op jouw telefoon kan iets anders zijn, afhankelijk van jouw merk/model.
 
-![logs](../images/aapslog.png)
+![log bestanden](../images/aapslog.png)
 
-* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any Log Viewer android app, or simply as plain text. 
+* Het logbestand dat op dit moment in gebruik is (dwz de nieuwste, die van vandaag) is een .log bestand. Je kunt deze openen op jouw computer, bijvoorbeeld in Android Studio dmv [LogCat](https://developer.android.com/studio/debug/am-logcat.html), of op jouw telefoon dmv de android app Log Viewer. Een hele simpele manier is openen als platte tekst: klik op jouw computer met de rechtermuisknop op het .log bestand en kies Openen (of Openen Met...) en kies Kladblok. 
 * Oudere logbestanden worden gezipt en in mappen opgeslagen op volgorde van datum/tijd. 
-* If you are sharing your log file in [gitter](https://gitter.im/MilosKozak/AndroidAPS) to talk about a potential bug, please unzip and upload the file dated before the error occurred.
+* Als je je log bestand deelt in [gitter](https://gitter.im/MilosKozak/AndroidAPS) omdat je een mogelijke bug hebt gevonden, zoek dan het log bestand op dat werd gemaakt op de datum dat je last had van die bug. Unzip zo nodig die map en uploadt het log bestand. Vermeld ook het tijdstip erbij.
