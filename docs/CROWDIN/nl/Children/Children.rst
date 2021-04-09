@@ -16,7 +16,7 @@ Functies
 
 Hulpmiddelen en apps voor controle op afstand
 ==================================================
-* `Nightscout <http://www.nightscout.info/>`_ in webbrowser (voornamelijk data weergave)
+* `Nightscout <https://nightscout.github.io/>`_ in web browser (mainly data display)
 * NSClient app is een uitgeklede versie van AAPS waarmee je iemand kunt volgen, en waarmee je: profiel wissels kunt doen, tijdelijke streefdoelen kunt instellen en koolhydraten kunt invoeren. Er zijn 2 apps: NSClient & NSClient2 die je kunt `downloaden <https://github.com/nightscout/AndroidAPS/releases/>`_. Het enige verschil is de naam van de app. Op deze manier kun je de app twee keer installeren op dezelfde telefoon, om 2 verschillende personen/nachtscouts te kunnen volgen (bijv. als 2 gezinsleden diabetes hebben).
 * Dexcom follow als je de originele Dexcom app gebruikt (alleen BG waarden)
 * `xDrip+ <../Configuration/xdrip.html>`_ in 'follow'modus (voornamelijk BG waarden en **alarmen**)
