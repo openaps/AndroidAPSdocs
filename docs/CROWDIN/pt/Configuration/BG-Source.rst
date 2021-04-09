@@ -1,4 +1,4 @@
-Fonte de Glicose
+Fonte de Glicose no Sangue - GS
 **************
 
 
