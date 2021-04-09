@@ -10,4 +10,4 @@
 
 * O registo atual é um arquivo .log que pode ser visualizado de várias maneiras como [LogCat](https://developer.android.com/studio/debug/am-logcat.html) dentro do Android Studio, qualquer app android visualizadora de registos ou simplesmente como texto simples. 
 * Os arquivos de registo anteriores são zipados e armazenados em pastas por ordem de data/hora. 
-* Se estiver a compartilhar o seu arquivo de registos no [gitter](https://gitter.im/MilosKozak/AndroidAPS) para falar sobre um possível erro, por favor descompacte e envie o arquivo com data anterior à ocorrência do erro.
+* If you are sharing your log file in [discord](https://discord.gg/4fQUWHZ4Mw) to talk about a potential bug, please unzip and upload the file dated before the error occurred.
