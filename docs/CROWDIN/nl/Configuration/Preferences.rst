@@ -403,7 +403,7 @@ Verbindings instellingen
 Alarm opties
 -----------------------------------------------------------
 * Met de alarmopties kun je kiezen welke standaard Nightscout alarmen via de AAPS app moeten binnenkomen.  
-* Om een alarm te laten klinken moet je de Urgent High, High, Low en Urgent Low (Urgent Hoog, Hoog, Laag en Urgent Laag) alarmwaarden in jouw `Heroku variabelen <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_ instellen. 
+* For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_. 
 * Ze zullen alleen werken terwijl je een verbinding hebt met Nightscout en zijn bedoeld voor ouders/verzorgers die hun kind met diabetes willen volgen. 
 * Als jij zelf de CGM-bron op je telefoon hebt (bijv. de xDrip+ or Dexcom app), gebruik dan die alarmen in plaats van Nightscout alarmen. Dan ben je niet afhankelijk van een internetverbinding voor jouw glucosealarmen (wel zo veilig!).
 
