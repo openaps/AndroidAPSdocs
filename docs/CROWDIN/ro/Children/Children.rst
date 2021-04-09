@@ -16,7 +16,7 @@ Functii
 
 Instrumente și aplicații pentru monitorizare la distanță
 ==================================================
-* `Nightscout <http://www.nightscout.info/>`_ în browser-ul web (în principal afișare a datelor)
+* `Nightscout <https://nightscout.github.io/>`_ in web browser (mainly data display)
 * Aplicaţia NSClient este o versiune ciuntita de AAPS capabilă să urmareasca glicemiiile, fsa schimbe profilele bazale, sa seteze tinte temporare si sa introduca carbohidratii. Există 2 aplicaţii: " NSClient si NSClient2 disponibile pentru descărcare <https://github.com/nightscout/AndroidAPS/releases/>`_. Singura diferenţă este numele aplicaţiei. În acest fel puteți instala aplicația de două ori pe același telefon, pentru a putea urmari 2 persoane/nifghtscout-uri cu ele.
 *Aplicația Dexcom Flollow dacă folosiți aplicația Dexcom originală (doar valorile glicemiei)
 *<unk> `xDrip+ <../Configuration/xdrip.html>`_ în modul follower (în principal valori ale glicemiei și **alarme**)
