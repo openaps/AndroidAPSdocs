@@ -16,7 +16,7 @@ Funkcijos
 
 Įrankiai ir programos, skirtos nuotoliniam stebėjimui
 ==================================================
-* `Nightscout <http://www.nightscout.info/>`_ interneto naršyklėje (pateikiami duomenys)
+* `Nightscout <https://nightscout.github.io/>`_ in web browser (mainly data display)
 *	NSClient app is a stripped down version of AAPS capable of following somebody, making profile switches, setting TTs and entering carbs. There are 2 apps:  `NSClient & NSClient2 to download <https://github.com/nightscout/AndroidAPS/releases/>`_. The only difference is the app name. This way you can install the app twice on the same phone, to be able to follow 2 different persons/nightscouts with it.
 * Dexcom Follow, jei naudojate originalią Dexcom programėlę (tik glikemijos duomenys)
 * `xDrip+ <../Configuration/xdrip.html>`_ sekėjo režime (glikemijos reikšmės ir **aliarmai**)
