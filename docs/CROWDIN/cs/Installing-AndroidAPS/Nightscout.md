@@ -6,7 +6,7 @@ Kromě sledování může být Nightscout použit také k ovládání AAPS. Tj. 
 
 ### Nastavení Nightscoutu
 
-Můžete odepřít veřejný přístup k serveru Nightscout pomocí [ověřovacích rolí](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
+You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
 
 ### Nastavení AndroidAPS
 
@@ -25,7 +25,7 @@ Udržujte svůj telefon aktualizovaný, jak je popsáno v části [bezpečnost n
 
 ## Ruční nastavení Nightscoutu
 
-Předpokládá se, že Nightscout stránky už máte, pokud ne, tak navštivte stránku [Nightscout](http://nightscout.github.io/nightscout/new_user/) pro návod k založení. Následující pokyny jsou nastavení, která potřebujete provést v Nightscoutu pro správnou funkčnost AndroidAPS. Je nutné, aby byl váš Nightscout verze alespoň 10 (zobrazeno jako 0.10...), zkontrolujte tedy, jestli provozujete [poslední verzi](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie), jinak se vám V AAPS zobrazí chybová zpráva. Některým uživatelům se při smyčce překračuje Azure kvóta zdarma, proto je hostování na Heroku doporučená volba.
+Předpokládá se, že Nightscout stránky už máte, pokud ne, tak navštivte stránku [Nightscout](http://nightscout.github.io/nightscout/new_user/) pro návod k založení. Následující pokyny jsou nastavení, která potřebujete provést v Nightscoutu pro správnou funkčnost AndroidAPS. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
 
 * Běžte na https://herokuapp.com/
 
