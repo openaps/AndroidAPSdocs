@@ -16,9 +16,9 @@
 
 ## Quick walk-through for experienced users
 
-Please skip this paragraph if you update for the first time. The quick walk-through is for experienced users. Your next step would be to [install git](../Installing-AndroidAPS/git-install.rst) if you do not have it already.
+Please skip this paragraph if you are updating for the first time. The quick walk-through is for experienced users. Your next step would be to [install git](../Installing-AndroidAPS/git-install.rst) if you do not have it already.
 
-If you already updated AAPS in previous versions and use a Windows PC you can update in four simple steps:
+If you have already updated AAPS from previous versions and use a Windows PC you can update in four simple steps:
 
 1. [Export your settings](../Usage/ExportImportSettings#export-settings) from the existing AAPS version on your phone to be on the save side
 2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
