@@ -403,7 +403,7 @@ Setări conexiune
 Opțiuni alarmare
 -----------------------------------------------------------
 * Opțiunile de alarmă vă permit să selectați alarmele implicite Nightscout pe care să le utilizați prin intermediul aplicației.  
-* Pentru ca alarmele să sune trebuie să seteze valorile de alarmă Urgente Înalte, Înalte, Scăzute și Urgent Scazute, în variabilele dumneavoastră din `Heroku <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
+* For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_. 
 * Vor funcționa numai dacă aveţi o conexiune la Nightscout şi sunt destinate pentru parinți/îngrijitori. 
 * Dacă aveți sursa CGM pe telefon (de ex. xDrip+ sau aplicația Dexcom modificată) apoi folosiți acele alarme în loc.
 
