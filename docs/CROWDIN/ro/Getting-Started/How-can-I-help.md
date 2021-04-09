@@ -8,13 +8,13 @@ Dezvoltatorii sunt părinți, îngrijitorii, cei dragi și persoanele cu diabet 
 
 ## Pot scrie programe! Cum pot participa?
 
-Ura! Uitați-vă la problemele existente, întrebați pe canalul de gitter, întotdeauna se va găsi ceva de făcut! Alegeți-vă o sarcină ușoară, pentru început, și faceți prima dumneavoastră sincronizare! :)
+Ura! Look at the issues, ask in the discord channel, there is always a lot to do! Alegeți-vă o sarcină ușoară, pentru început, și faceți prima dumneavoastră sincronizare! :)
 
 ## Cunosc sistemul şi pot scrie documentaţia!
 
 Excelent, acesta este un lucru foarte apreciat şi un mod bun de a ajuta!
 
-* Canalul vechi de gitter cu privire la wiki poate fi gasit aici: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). 
+* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
 * Un ghid cum sa faci înregistrări pe wiki in engleză poate fi găsit aici: [Cum să faci un PR](../make-a-PR.md). Alte limbi sunt doar traduse din engleză şi din motive de consistenţă nu pot fi editate.
 
 ## Eu vorbesc mai multe limbi și doresc să traduc aplicația sau documentația
@@ -26,4 +26,4 @@ Doar înscrie-te pe CROWDIN, apasă pe limbă, așteaptă autorizarea de la admi
 
 ## Există alte modalităţi de a ajuta?
 
-Abilitățile necesare includ design grafic, UX design, traducători, editori wiki sau pur și simplu ajutând prin a răspunde la întrebările simple din gitter & Facebook pentru a oferi dezvoltatorilor timpul și spațiul să se concentreze pe lucrurile mai grele.
+Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
