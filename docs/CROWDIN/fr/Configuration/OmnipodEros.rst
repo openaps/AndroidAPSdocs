@@ -138,7 +138,7 @@ Avant de pouvoir activer un pod, veuillez vous assurer que vous avez correctemen
 
     |Activate_Pod_1| |Activate_Pod_2|
 
-2. L'écran **Remplir Pod ** s'affiche. Fill a new pod with at least 80 units of insulin and listen for two beeps indicating that the pod is ready to be primed. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units. 
+2. L'écran **Remplir Pod ** s'affiche. Remplissez le nouveau pod avec au moins 80 unités d'insuline et écoutez le deux bips indiquant que le pod est prêt à être amorcé. Lors du calcul de la quantité totale d'insuline dont vous avez besoin pendant 3 jours, veuillez prendre en compte que l'amorçage du pod utilisera de 12 à 15 unités. 
 
     |Activate_Pod_3|
 
@@ -796,7 +796,7 @@ Où trouver de l'aide pour le pilote Omnipod
 Tout le travail de développement du pilote Omnipod est fait par la communauté par des bénévoles; nous vous demandons donc d'être attentif et d'utiliser les directives suivantes lorsque vous demandez de l'aide :
 
 - **Niveau 0 :** Lisez la section correspondante de cette documentation pour vous assurer que vous comprenez comment la fonctionnalité avec laquelle vous avez des difficultés est censée fonctionner.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using `this invite link <https://discord.gg/4fQUWHZ4Mw>`__.
+- **Niveau 1 :** Si vous rencontrez toujours des problèmes que vous n'arrivez pas à résoudre en utilisant ce document, alors veuillez aller sur la chaine *#androidaps* sur **Discord** en utilisant `ce lien d'invitation <https://discord.com/invite/NhEUtzr>`__.
 - **Niveau 2 :** Rechercher dans les problèmes existants pour voir si votre problème a déjà été signalé; si ce n'est pas le cas, veuillez créer une nouvelle `fiche <https://github.com/nightscout/AndroidAPS/issues>`__ et joignez vos `fichiers log <../Usage/Accessing-logfiles.html>`__.
 - **Soyez patient - la plupart des membres de notre communauté sont des bénévoles de bonne nature, et résoudre les problèmes nécessite souvent du temps et de la patience de la part des utilisateurs et des développeurs.**
 
