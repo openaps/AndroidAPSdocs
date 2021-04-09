@@ -8,14 +8,14 @@ Changer la langue
    :width: 350
    :alt: Ouvrir le menu de langue
 
-Or just click on one of the following languages:
+Ou cliquez simplement sur l'une des langues suivantes :
 
-* `English <https://androidaps.readthedocs.io/en/latest/>`_
-* `Czech <https://androidaps.readthedocs.io/cs/latest/>`_
-* `Dutch <https://androidaps.readthedocs.io/nl/latest/>`_
-* `German <https://androidaps.readthedocs.io/de/latest/>`_
-* `Greek <https://androidaps.readthedocs.io/el/latest/>`_
-* `Korean <https://androidaps.readthedocs.io/ko/latest/>`_
-* `Lithuanian <https://androidaps.readthedocs.io/lt/latest/>`_
-* `Russian <https://androidaps.readthedocs.io/ru/latest/>`_
-* `Spanish <https://androidaps.readthedocs.io/es/latest/>`_
+* `Anglais <https://androidaps.readthedocs.io/en/latest/>`_
+* `Tchèque <https://androidaps.readthedocs.io/cs/latest/>`_
+* `Néerlandais <https://androidaps.readthedocs.io/nl/latest/>`_
+* `Allemand <https://androidaps.readthedocs.io/de/latest/>`_
+* `Grec <https://androidaps.readthedocs.io/el/latest/>`_
+* `Coréen <https://androidaps.readthedocs.io/ko/latest/>`_
+* `Lithuanien <https://androidaps.readthedocs.io/lt/latest/>`_
+* `Russe <https://androidaps.readthedocs.io/ru/latest/>`_
+* `Espagnol <https://androidaps.readthedocs.io/es/latest/>`_
