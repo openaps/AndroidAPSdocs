@@ -16,9 +16,9 @@
 
 ## 기존 사용자들을 위한 간단한 세부설명
 
-처음 업데이트하는 경우 이 단락을 건너뛰십시오. 이 간단한 세부설명은 기존 사용자를 위한 것입니다. 만일 Git이 설치되지 않았다면 [Git 설치](../Installing-AndroidAPS/git-install.rst)를 하세요.
+Please skip this paragraph if you are updating for the first time. 이 간단한 세부설명은 기존 사용자를 위한 것입니다. 만일 Git이 설치되지 않았다면 [Git 설치](../Installing-AndroidAPS/git-install.rst)를 하세요.
 
-당신이 윈도우 PC를 사용하고 이전 버전에서 AAPS를 업데이트했다면, 다음 네가지 단계를 업데이트할 수 있습니다.
+If you have already updated AAPS from previous versions and use a Windows PC you can update in four simple steps:
 
 1. [Export your settings](../Usage/ExportImportSettings#export-settings) from the existing AAPS version on your phone to be on the save side
 2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)

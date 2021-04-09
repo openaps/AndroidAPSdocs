@@ -36,7 +36,7 @@ Pokud váš telefon používá systém Android 10 a máte potíže s aplikací x
 
 * Aby byly hodnoty stejné, měli byste aktivovat `Odesílat zobrazovanou glykémii`.
 
-* Pokud jste aktivovali `Přijímat ošetření` a v AndroidAPS i Povolení odesílání, bude xDrip+ přijímat sacharidy, insulín i bazální hodnoty z AndroidAPS, a může tak předpovídat blížící se hypo atd. mnohem přesněji.
+* If you have also activated `Accept treatments` and "Enable local Broadcasts" in AndroidAPS, then xDrip+ will receive insulin, carbs and basal rate information from AndroidAPS and can estimate the hypo prediction etc. mnohem přesněji.
    
    ![xDrip+ Základní nastavení 3](../images/xDrip_Basic3.png)
 

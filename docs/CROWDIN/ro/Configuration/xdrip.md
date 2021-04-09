@@ -36,7 +36,7 @@ Pentru transmițătoarele a caror serie începe cu 8G, 8H sau 8J se va folosi un
 
 * Activeaza `Trimite valoarea afişată a glicemiei` ca valorile sa fie egale.
 
-* Dacă ai activat `Acceptare tratamente` şi Distribuire în AndroidAPS, atunci xDrip+ va primi de la AndroidAP informatii privind insulina, carbohidratii si Rb si va estima predicţie la hipoglicemie etc. cu mai multă precizie.
+* If you have also activated `Accept treatments` and "Enable local Broadcasts" in AndroidAPS, then xDrip+ will receive insulin, carbs and basal rate information from AndroidAPS and can estimate the hypo prediction etc. cu mai multă precizie.
    
    ![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
 

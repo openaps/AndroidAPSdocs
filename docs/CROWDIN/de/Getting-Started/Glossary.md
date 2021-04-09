@@ -158,7 +158,7 @@
  <td><strong>Glimp</strong></td>
  <td>App mit der Werte vom Freestyle Libre empfangen werden können</td>
  <td>&nbsp;</td>
- <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout mit Glimp (englisch)</a> </td>
+ <td><a href="https://nightscout.github.io/uploader/uploaders/#abbott-freestyle-libre">Nightscout mit Glimp (englisch)</a> </td>
 </tr>
 <tr>
  <td><strong>Heroku</strong></td>

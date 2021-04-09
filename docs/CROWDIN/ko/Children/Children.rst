@@ -16,7 +16,7 @@ AndroidAPS를 사용하면 아이들의 펌프는 아이들의 폰으로 제어�
 
 원격 모니터링을 위한 도구와 앱
 ==================================================
-* `Nightscout 앱 <http://www.nightscout.info/>`_웹 브라우저 (주로 출력되는 데이터)
+* `Nightscout <https://nightscout.github.io/>`_ in web browser (mainly data display)
 *	NSClient app is a stripped down version of AAPS capable of following somebody, making profile switches, setting TTs and entering carbs. There are 2 apps:  `NSClient & NSClient2 to download <https://github.com/nightscout/AndroidAPS/releases/>`_. The only difference is the app name. This way you can install the app twice on the same phone, to be able to follow 2 different persons/nightscouts with it.
 *	만약 Dexcom follow 앱을 이용한다면 (혈당 값만)
 * `xDrip+ <../Configuration/xdrip.html>`_ 팔로워 모드 (주로 혈당과 **알람**)

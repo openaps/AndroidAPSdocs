@@ -82,7 +82,7 @@ Voici un bref aperçu de tous les MGC/MGF compatibles avec AndroidAPS. Pour plus
 * `Libre 2 <../Hardware/Libre2.html>`_ : Il fonctioinne avec xDrip+ (pas besoin de transmetteur), mais vous devez compiler votre propre application patchée
 * `Libre 1 <../Hardware/Libre1.html>`_ : Vous avez besoin d'un transmetteur comme le Bluecon ou le MiaoMiao pour lui (acheté ou fabriqué) et l'application xDrip+
 * `Eversense <../Hardware/Eversense.html>`_ : Il ne marche pour l'instant qu'avec l'application ESEL et une application Eversense patchée (il ne marche pas avec DanaRS et un LineageOS, mais DanaRS et Android ou Combo et Lineage OS marchent bien)
-* `Enlite <../Hardware/MM640g.html>`_ : assez compliqué avec pas mal de choses supplémentaires à faire
+* `Enlite (MM640G/MM630G) <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
 
 
 Nightscout

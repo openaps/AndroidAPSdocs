@@ -36,7 +36,7 @@ Si votre téléphone tourne Android 10 et que vous avez des difficultés avec la
 
 * Pour que les valeurs soient les mêmes, vous devez activer `Send Display Glucose`.
 
-* Si vous avez aussi activé `Accept Treatments` et la diffusion dans AndroidAPS, alors xDrip+ recevra l'insuline, les glucides et les informations sur les débits de basal d'AndroidAPS et peut estimer la prédiction des hypo, etc. avec plus de précision.
+* If you have also activated `Accept treatments` and "Enable local Broadcasts" in AndroidAPS, then xDrip+ will receive insulin, carbs and basal rate information from AndroidAPS and can estimate the hypo prediction etc. avec plus de précision.
    
    ![xDrip+ Paramètres de base 3](../images/xDrip_Basic3.png)
 

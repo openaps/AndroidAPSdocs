@@ -10,4 +10,4 @@
 
 * Het logbestand dat op dit moment in gebruik is (dwz de nieuwste, die van vandaag) is een .log bestand. Je kunt deze openen op jouw computer, bijvoorbeeld in Android Studio dmv [LogCat](https://developer.android.com/studio/debug/am-logcat.html), of op jouw telefoon dmv de android app Log Viewer. Een hele simpele manier is openen als platte tekst: klik op jouw computer met de rechtermuisknop op het .log bestand en kies Openen (of Openen Met...) en kies Kladblok. 
 * Oudere logbestanden worden gezipt en in mappen opgeslagen op volgorde van datum/tijd. 
-* Als je je log bestand deelt in [gitter](https://gitter.im/MilosKozak/AndroidAPS) omdat je een mogelijke bug hebt gevonden, zoek dan het log bestand op dat werd gemaakt op de datum dat je last had van die bug. Unzip zo nodig die map en uploadt het log bestand. Vermeld ook het tijdstip erbij.
+* If you are sharing your log file in [discord](https://discord.gg/4fQUWHZ4Mw) to talk about a potential bug, please unzip and upload the file dated before the error occurred.

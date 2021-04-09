@@ -36,7 +36,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 * In order for the values to be equal, you should activate `Send the displayed glucose value`.
 
-* Εάν έχετε επίσης ενεργοποιήσει ` Αποδοχή θεραπειών ` και εκπομπή στο AndroidAPS, τότε το xDrip + θα λαμβάνει πληροφορίες από το AndroidAPS για ινσουλίνη, υδατάνθρακες και βασικό ρυθμό και μπορεί να εκτιμήσει την πρόβλεψη υπογλυκαιμίας κ. λπ. με καλύτερη ακρίβεια.
+* If you have also activated `Accept treatments` and "Enable local Broadcasts" in AndroidAPS, then xDrip+ will receive insulin, carbs and basal rate information from AndroidAPS and can estimate the hypo prediction etc. με καλύτερη ακρίβεια.
    
    ![+xDrip Βασικές ρυθμίσεις 3](../images/xDrip_Basic3.png)
 

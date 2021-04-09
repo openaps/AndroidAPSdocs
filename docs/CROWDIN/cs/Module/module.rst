@@ -82,7 +82,7 @@ Toto je jen krátký přehled všech CGM/FGM kompatibilních s AndroidAPS. For f
 * `Libre 2 <../Hardware/Libre2.html>`_: Funguje s aplikací xDrip+ (nevyžaduje žádný adaptér), ale musíte se sestavit vlastní upravenou aplikaci.
 * `Libre 1 <../Hardware/Libre1.html>`_: Potřebujete adaptér, jako např. Bluecon nebo MiaoMiao (sestavit nebo koupit) a aplikaci xDrip+
 * `Eversense <../Hardware/Eversense.html>`_: Funguje zatím pouze v kombinaci s aplikací ESEL a upravenou aplikací Eversense (nefunguje s pumpou Dana RS a LineageOS, ale funguje dobře s pumpou DanaRS a Android nebo pumpou Combo a Lineage OS)
-* `Enlite <../Hardware/MM640g.html>`_: poměrně komplikované a vyžaduje spoustu věcí dalších věcí navíc
+* `Enlite (MM640G/MM630G) <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
 
 
 Nightscout

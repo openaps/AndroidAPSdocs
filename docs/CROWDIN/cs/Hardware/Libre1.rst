@@ -26,5 +26,5 @@ If using xDrip+
 Pokud používáte Glimp
 ==================================================
 * You will need Glimp version 4.15.57 or newer. Older versions are not supported.
-* Pokud jste tak dosud neučinili, stáhněte si aplikaci Glimp a postupujte podle instrukcí v části `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_.
+* If not already set up then download Glimp and follow instructions on `Nightscout <https://nightscout.github.io/uploader/setup/#glimp>`_.
 * Na kartě Konfigurace (nastavení v AndroidAPS) vyberte Glimp.

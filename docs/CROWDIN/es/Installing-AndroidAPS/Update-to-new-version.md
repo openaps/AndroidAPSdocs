@@ -16,9 +16,9 @@
 
 ## Rápido acceso a los usuarios experimentados
 
-Por favor, salte este párrafo si actualiza por primera vez. El acceso rápido es para usuarios experimentados. El siguiente paso sería [instalar git](../Installing-AndroidAPS/git-install.rst) si no lo tiene ya.
+Please skip this paragraph if you are updating for the first time. El acceso rápido es para usuarios experimentados. El siguiente paso sería [instalar git](../Installing-AndroidAPS/git-install.rst) si no lo tiene ya.
 
-Si ya ha actualizado AAPS en las versiones anteriores y utiliza un PC Windows, puede actualizar en cuatro simples pasos:
+If you have already updated AAPS from previous versions and use a Windows PC you can update in four simple steps:
 
 1. [Export your settings](../Usage/ExportImportSettings#export-settings) from the existing AAPS version on your phone to be on the save side
 2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)

@@ -36,7 +36,7 @@ Wenn Du Android 10 verwendest und Probleme mit der xDrip+ master Version auftret
 
 * Damit die Werte übereinstimmen, solltest Du `Sende den angezeigten Glukosewert` aktivieren.
 
-* Wenn Du zusätzlich `Behandlungen annehmen` und in AndroidAPS den Broadcast aktivierst, dann wird xDrip+ Insulinmengen, Kohlenhydrate und Basalrateninformationen aus AndroidAPS erhalten und kann so z.B. niedrige Werte vorhersagen. 
+* If you have also activated `Accept treatments` and "Enable local Broadcasts" in AndroidAPS, then xDrip+ will receive insulin, carbs and basal rate information from AndroidAPS and can estimate the hypo prediction etc. 
    
    ![xDrip+ Grundeinstellungen 3](../images/xDrip_Basic3.png)
 

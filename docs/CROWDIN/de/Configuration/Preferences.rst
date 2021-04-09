@@ -403,7 +403,7 @@ Verbindungseinstellungen
 Alarm-Optionen
 -----------------------------------------------------------
 * In den Alarm-Optionen legst Du fest, welche Standard-Nightscout-Alarme in AAPS angezeigt werden sollen.  
-* Damit die Alarme ausgelöst werden können, musst Du in den `Heroku Variablen <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_ Werte für Urgent High, High, Low und Urgent Low Alarme setzen. 
+* Damit die Alarme ausgelöst werden können, musst Du in den `Heroku Variablen <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_ Werte für Urgent High, High, Low und Urgent Low Alarme setzen. 
 * Diese funktionieren nur, wenn Du eine Online-Verbindung mit Nightscout hast und sind vor allem für Eltern und Betreuer gedacht. 
 * Wenn Du Deine CGM-Quelle direkt auf dem Smartphone hast (z.B. xDrip+ oder gepatchte Dexcom App) nutze stattdessen deren Alarme.
 

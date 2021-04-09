@@ -82,7 +82,7 @@ Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. For
 * `Libre 2 <../Hardware/Libre2.html>`_: Veikia su xDrip+ (nereikia siųstuvo), tačiau taip pat turite sukurti savo modifikuotą programą Libre 2.
 * `Libre 1 <../Hardware/Libre1.html>`_: Jums reikalingas siųstuvas, pavyzdžiui, Blucon ar MiaoMiao, kurį galite susikurti patys arba tiesiog nusipirkti, ir xDrip+ programa
 * `Eversense <../Hardware/Eversense.html>`_: Kol kas veikia tik kartu su ESEL programa ir modifikuota Eversense programa (neveikia su Dana RS ir LineageOS deriniu, tačiau gerai veikia su DanaRS ir Android arba Combo ir Lineage OS)
-* `Enlite <../Hardware/MM640g.html>`_: gana sudėtingas, reikalinga daug papildomų pastangų
+* `Enlite (MM640G/MM630G) <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
 
 
 Nightscout

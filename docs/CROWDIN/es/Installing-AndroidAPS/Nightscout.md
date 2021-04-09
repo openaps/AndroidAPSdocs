@@ -6,7 +6,7 @@ Además de informar Nightscout también se puede utilizar para controlar AAPS. P
 
 ### Ajustes de Nightscout
 
-Puede denegar el acceso público a su sitio de Nightscout utilizando los roles de autenticación [authentication roles](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
+You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
 
 ### Ajustes en AndroidAPS
 
@@ -25,7 +25,7 @@ Mantenga su teléfono actualizado, tal como se describe en la seguridad [safety 
 
 ## Configuración manual de Nightscout
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Tu sitio debe ser versión 10 o superior, por lo que comprueba que tengas la última versión de lo contrario recibirás mensajes de error en tu AAPS app.Algunas personas comentan que el lazo cerrado usa más cuota que la gratuita en Azure, por lo que Heroku es la opción preferida.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
 
 * Ve a https://herokuapp.com/
 
@@ -37,8 +37,9 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
   
   * ENABLE = careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps
   * DEVICESTATUS_ADVANCED = true
-  * PUMP_FIELDS = reservoir battery clock
-  * Multitud de alarmas pueden ser configuradas para monitorizar la bomba El % de batería es recomendable: 
+  * `SHOW_FORECAST` = `openaps`
+  * `PUMP_FIELDS` = `reservoir battery clock`
+  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 

@@ -6,7 +6,7 @@ En complément des rapports, Nightscout peut également être utilisé pour cont
 
 ### Paramètres Nightscout
 
-Vous pouvez interdire l'accès public à votre site Nightscout en utilisant des [rôles d'authentification](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
+You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
 
 ### Paramètres AndroidAPS
 
@@ -25,7 +25,7 @@ Gardez votre téléphone à jour comme c'est décrit dans [La sécurité avant t
 
 ## Manuel d'installation Nightscout
 
-Il est supposé que vous avez déjà un site Nightscout. Si ce n'est pas le cas, rendez-vous sur la page [Nightscout](http://nightscout.github.io/nightscout/new_user/) pour des instructions complètes sur la configuration. Les instructions ci-dessous sont alors les paramètres que vous devrez également ajouter à votre site Nightscout. Votre site Nightscout doit être au moins à la version 10 (affichée comme 0.10...), donc vérifiez que vous utilisez bien la [dernière version](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) sinon vous recevrez un message d'erreur sur votre application AAPS. Certaines personnes trouvent que la boucle utilise plus que le quota gratuit d'azure, donc heroku est le choix à privilégier.
+Il est supposé que vous avez déjà un site Nightscout. Si ce n'est pas le cas, rendez-vous sur la page [Nightscout](http://nightscout.github.io/nightscout/new_user/) pour des instructions complètes sur la configuration. Les instructions ci-dessous sont alors les paramètres que vous devrez également ajouter à votre site Nightscout. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
 
 * Aller à https://herokuapp.com/
 
@@ -37,8 +37,9 @@ Il est supposé que vous avez déjà un site Nightscout. Si ce n'est pas le cas,
   
   * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
   * `DEVICESTATUS_ADVANCED` = `true`
+  * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Diverses alarmes peuvent être définies pour [surveiller la pompe](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), les alarmes concernant le niveau de batterie en particulier sont encouragées : 
+  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
