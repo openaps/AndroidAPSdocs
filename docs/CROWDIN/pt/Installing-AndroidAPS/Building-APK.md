@@ -23,7 +23,7 @@ Se a construção falhar com um erro em relação à "on demand configuration" p
 ### Este artigo é dividido em duas partes.
 
 * Na parte de visão geral há uma explicação sobre quais os passos necessários para construir o arquivo APK.
-* No passo a passo pode encontrar as capturas de ecrã de uma instalação real. Como as versões do Android Studio - o ambiente de desenvolvimento de software que utilizaremos para construir o APK-mudarão muito rapidamente isso não será idêntico à sua instalação mas dará um bom ponto de partida. O Android Studio também "corre" em Windows, Mac OS X e Linux e pode haver pequenas diferenças em alguns aspectos entre cada plataforma. Se achar que algo importante está errado ou ausente, informe o grupo do facebook "AndroidAPS users ou o AndroidAPS Portugal" ou no chat do Gitter [Android APS](https://gitter.im/MilosKozak/AndroidAPS) ou [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) para que isso seja revisto.
+* No passo a passo pode encontrar as capturas de ecrã de uma instalação real. Como as versões do Android Studio - o ambiente de desenvolvimento de software que utilizaremos para construir o APK-mudarão muito rapidamente isso não será idêntico à sua instalação mas dará um bom ponto de partida. O Android Studio também "corre" em Windows, Mac OS X e Linux e pode haver pequenas diferenças em alguns aspectos entre cada plataforma. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Discord chat [Android APS](https://discord.gg/4fQUWHZ4Mw) so that we can have a look at this.
 
 ## Visão Geral
 
