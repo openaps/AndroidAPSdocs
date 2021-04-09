@@ -82,7 +82,7 @@ AndroidAPS와 호환될 수 있는 가능성이 있는 **그외 펌프**는 <../
 * 리브레 2 <../Hardware/Libre2.html>`_: xdrip+(트란스미터가 필요하지 않음)에서 작동하지만 스스로 패치앱을 빌드해야 합니다.
 * `리브레 1 <../Hardware/Libre1.html>`_: Bluecon 혹은 MiaoMaio같은 트란스미터(빌드하거나 만들거나)와 xdrip이 필요합니다.
 * `에버센스 <../Hardware/Eversense.html>`_: ESEL앱과 패치된 에버센스 앱에서만 작동합니다. (다나RS와 LineageOS에서는 작동을 하지 않지만 다나RS와 안드로이드 혹은 콤보와 LineageOS에서는 잘 작동합니다.)
-* 엔라이트 <../Hardware/MM640g.html>`_: 추가적인 부분들과 함께 상당히 복잡합니다.
+* `Enlite (MM640G/MM630G) <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
 
 
 Nightscout
