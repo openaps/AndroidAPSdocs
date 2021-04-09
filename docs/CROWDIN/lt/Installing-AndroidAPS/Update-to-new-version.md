@@ -16,9 +16,9 @@
 
 ## Trumpas vadovas patyrusiems vartotojams
 
-Prašau praleiskite šį punktą, jeigu atnaujinate pirmą kartą. Trumpas vadovas patyrusiems vartotojams. Kitas jūsų žingsnis būtų [įdiegti git](../Installing-AndroidAPS/git-install.rst), jei dar to nepadarėte.
+Please skip this paragraph if you are updating for the first time. Trumpas vadovas patyrusiems vartotojams. Kitas jūsų žingsnis būtų [įdiegti git](../Installing-AndroidAPS/git-install.rst), jei dar to nepadarėte.
 
-Jei jau atnaujinote AAPS ankstesnėje versijoje ir naudojate Windows kompiuterį, galite atlikti atnaujinimą keturiais paprastais žingsniais:
+If you have already updated AAPS from previous versions and use a Windows PC you can update in four simple steps:
 
 1. [Export your settings](../Usage/ExportImportSettings#export-settings) from the existing AAPS version on your phone to be on the save side
 2. [Atnaujinkite vietinę kopiją](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
