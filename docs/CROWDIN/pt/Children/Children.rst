@@ -16,7 +16,7 @@ Funções
 
 Ferramentas e aplicações para monitorização remota
 ==================================================
-* `Nightscout <http://www.nightscout.info/>`_ no navegador da web (principalmente de visualização de dados)
+* `Nightscout <https://nightscout.github.io/>`_ in web browser (mainly data display)
 * A app NSClient é uma versão leve da AAPS capaz de seguir alguém, fazer mudanças de perfil, configurar ATs e registo de hidratos de carbono. Há 2 apps: ` NSClient & NSClient2 para download <https://github.com/nightscout/AndroidAPS/releases/>` _. A única diferença é o nome da app. Desta forma pode instalar a app duas vezes no mesmo telefone, para poder seguir 2 pessoas / nightscouts diferentes com elas.
 * O Dexcom Follow se estiver a usar a app original da Dexcom (apenas valores BG)
 * ` xDrip <../Configuration/xdrip.html> ` _ em modo seguidor (principalmente valores glicemia (GLIC) e ** alarmes**)
