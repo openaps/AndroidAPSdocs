@@ -9,13 +9,13 @@ Außerdem ist es einfach auch eine gute Idee, etwas zu den Reisekosten der Entwi
 
 ## Ich kann programmieren! Wie kann ich mich beteiligen?
 
-Juhuu! Look at the issues, ask in the discord channel, there is always a lot to do! Suche dir zunächst eine kleine Aufgabe aus und mache deinen ersten pull request! :)
+Juhuu! Schau dir die Issues an, frag im discord Channel. Es gibt immer viel zu tun! Suche dir zunächst eine kleine Aufgabe aus und mache deinen ersten pull request! :)
 
 ## Ich kenne mich aus mit dem System und möchte bei den Docs mitschreiben!
 
 Großartig, das ist sehr willkommen und eine gute Möglichkeit, etwas beizutragen!
 
-* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
+* Den discord Channel über das Wiki findest du hier: [AndroidAPSwiki/Lobby](https://discord.gg/4fQUWHZ4Mw). 
 * Eine Anleitung, wie man Beiträge auf Englisch hinzufügt und bearbeitet, ist hier zu finden: [Am Wiki mitschreiben](../make-a-PR.md). Andere Sprachen können nur übersetzt, aber nicht bearbeitet werden. Dadurch wird die Einheitlichkeit des Wikis in allen Sprachen gewährleistet.
 
 ## Ich spreche mehrere Sprachen und würde gerne bei der Übersetzung der App bzw. des Wikis helfen
@@ -27,4 +27,4 @@ Registriere dich einfach bei CROWDIN, wähle deine Sprache aus, warte bis der Ad
 
 ## Gibt es weitere Möglichkeiten, zu helfen?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
+Wir brauchen auch Grafikdesigner, Experten für User Experience, Übersetzer und Autoren für das Wiki. Oder bringe das Projekt dadurch voran, dass du die einfachen Fragen auf discord und Facebook beantwortest, damit sich die Entwickler darauf konzentrieren, die harten Nüsse zu knacken.
