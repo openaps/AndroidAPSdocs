@@ -4,11 +4,11 @@ Dieses Projekt basiert auf ehrenamtlicher Arbeit, weshalb einige Regeln existier
 
 * Stufe 1: Lies das Wiki - wir haben jetzt eine Suchfunktion, die dir hilft!
 * Stufe 2: Durchsuche die Facebook-Gruppe; wenn deine Frage dort nicht schon beantwortet wurde, dann stelle sie in der [AndroidAPS users Facebook-Gruppe](https://www.facebook.com/groups/1900195340201874/).
-* level 3: If facebook did not get results then ask in [discord](https://discord.gg/4fQUWHZ4Mw). Duplizierte Beiträge werden auf beiden Kanälen ignoriert/gelöscht, um doppelte Antworten zu vermeiden. Denke bitte daran, dass die Mehrheit der Entwickler sich in Eurpoa befinden, so dass sie zur Beantwortung nicht rund um die Uhr verfügbar sind; bitte gib ihnen besonders an Wochenenden und in der Urlaubszeit ein paar Stunden Zeit.
+* Stufe 3: Wenn Facebook keine Lösung bringt, frage in [discord](https://discord.gg/4fQUWHZ4Mw). Duplizierte Beiträge werden auf beiden Kanälen ignoriert/gelöscht, um doppelte Antworten zu vermeiden. Denke bitte daran, dass die Mehrheit der Entwickler sich in Eurpoa befinden, so dass sie zur Beantwortung nicht rund um die Uhr verfügbar sind; bitte gib ihnen besonders an Wochenenden und in der Urlaubszeit ein paar Stunden Zeit.
 * Stufe 4: Erstelle eine [Problembeschreibung](https://github.com/nightscout/AndroidAPS/issues) (Issue) und füge deine [Log-Dateien](../Usage/Accessing-logfiles.md) hinzu.
 * Stufe 5: Schreibe eine E-Mail an *developers@androidaps.org* (nur dann, wenn persönliche Daten benötigt werden, die nicht auf einem öffentlichen Kanal verbreitet werden sollten und wenn dein Problem nicht auf einer anderen Stufe gelöst wurde)
 
-For support on CGM sources please use the Facebook groups or discord channels for that specific system (e.g. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
+Um Unterstützung für CGM-Quellen zu erhalten, verwende bitte die Facebook-Gruppen oder discord Kanäle für das spezielle System (z.B. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)), für Unterstützung bei Nightscout benutze [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/), da die Benutzer dort mehr über die speziellen Systeme wissen, als die Leute hier, die alle unterschiedliche Systeme verwenden.
 
 ## Schließe dich der AndroidAPS users Gruppe auf Facebook an!
 
@@ -19,7 +19,7 @@ Tritt der [AndroidAPS Facebook Gruppe (englisch)](https://www.facebook.com/group
 * [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): deckt alle DIY Closed Loop Systeme ab (OpenAPS, Loop und AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM im Allgemeinen
-* [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
+* [AndroidAPS bei Discord](https://discord.gg/4fQUWHZ4Mw)
 
 ## Länder- bzw. sprachspezifische Informationsquellen
 
