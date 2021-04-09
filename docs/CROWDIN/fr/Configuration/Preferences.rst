@@ -403,7 +403,7 @@ Paramètres de connexion
 Options d'alarme
 -----------------------------------------------------------
 * Les options d'alarme vous permettent de sélectionner les alarmes Nightscout par défaut à utiliser via l'application.  
-* For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_. 
+* Pour que les alarmes sonnent, vous devez définir les valeurs de seuil des alarmes Urgent High, High, Low et Urgent Low dans vos `variables Heroku <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_. 
 * Elles ne fonctionneront que si vous avez une connexion avec Nightscout et sont destinées aux parents/aidants. 
 * Si vous avez la source MGC sur votre téléphone (par ex. xDrip+ ou l'application Dexcom patchée), utilisez ces alarmes à la place.
 
