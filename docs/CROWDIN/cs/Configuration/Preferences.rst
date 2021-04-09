@@ -403,7 +403,7 @@ Nastavení připojení
 Nastavení alarmů
 -----------------------------------------------------------
 * Volby alarmu umožňují vybrat, jaké výchozí alarmy Nightscoutu se mají v aplikaci používat.  
-* Aby alarmy fungovaly, je třeba nastavit v proměnných Nightscoutu (Heroku...) hodnoty glykémie pro Urgentní, Vysokou, Nízkou a Urgentní nízkou glykémii <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
+* For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_. 
 * Budou fungovat pouze v případě že budete mít připojení k Nightscoutu, a jsou určeny pro rodiče/pečovatele. 
 * Pokud máte v telefonu zdroj CGM (např. xDrip + nebo upravenou Dexcomalikaci), pak místo nich použijte tyto alarmy.
 
