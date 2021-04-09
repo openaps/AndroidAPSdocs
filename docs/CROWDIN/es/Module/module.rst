@@ -82,7 +82,7 @@ Esta es sólo una breve descripción general de todos los MCGs/FGM compatibles c
 * `Libre 2 <../Hardware/Libre2.html>`_: Funciona con xDrip+ (no se necesita ningún transmisor), pero tienes que construir tu propia aplicación parchada.
 * `Libre 1 <../Hardware/Libre1.html>`_: Usted necesita un transmisor como Bluecon o MiaoMiao para (construir o comprar) y app xDrip+
 * `Eversense <../Hardware/Eversense.html>`_: funciona sólo en combinación con la app ESEL y la Eversense-App parchada (no funciona con Dana RS y LineageOS, pero DanaRS y Android o Combinado y el Linaje OS funcionan bien)
-* `Enlite <../Hardware/MM640g.html>`_: bastante complicado con un montón de cosas extra
+* `Enlite (MM640G/MM630G) <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
 
 
 Nightscout
