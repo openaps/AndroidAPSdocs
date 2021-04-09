@@ -36,7 +36,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 * Para que los valores sean consistentes, debes activar `Enviar el valor de glucosa visualizado`.
 
-* If you have also activated `Accept treatments` and broadcasting in AndroidAPS, then xDrip+ will receive insulin, carbs and basal rate information from AndroidAPS and can estimate the hypo prediction etc. con mayor precisión.
+* If you have also activated `Accept treatments` and "Enable local Broadcasts" in AndroidAPS, then xDrip+ will receive insulin, carbs and basal rate information from AndroidAPS and can estimate the hypo prediction etc. con mayor precisión.
    
    ![xDrip+ Ajustes Básicos 3](../images/xDrip_Basic3.png)
 
