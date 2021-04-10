@@ -26,5 +26,5 @@ Freestyle Libre 1
 При использовании Glimp
 ==================================================
 * Вам понадобится Glimp версии 4.15.57 или выше. Более старые версии не поддерживаются.
-* If not already set up then download Glimp and follow instructions on `Nightscout <https://nightscout.github.io/uploader/setup/#glimp>`_.
+* Если это еще не сделано, скачайте Glimp и следуйте инструкциям <https://nightscout.github.io/uploader/setup/#glimp>Nightscout`_.
 В конфигураторе (настройки AndroidAPS) выберите Glimp.
