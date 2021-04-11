@@ -282,14 +282,14 @@
 
 ### Раздел J
 
-* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable [superbolus](../Configuration/Preferences#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences#overview).
-* The idea is to deliver the insulin sooner and hopefully reduce spikes.
+* SUPER BOLUS - это когда базальный инсулин следующих двух часов добавляется к подаваемому болюсу, а на следующие два часа подается нулевой временный базал TBR, чтобы поглотить лишний инсулин. The option only shows when "Enable [superbolus](../Configuration/Preferences#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences#overview).
+* Идея заключается в том, чтобы доставить инсулин по возможности раньше и, желательно, сократить пики.
 * For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
 ### Раздел K
 
-* Shows the calculated bolus. 
-* If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+* Показывает рассчитываемый болюс. 
+* Если количество активного инсулина превышает рассчитанный болюс, то оно просто покажет количество углеводов, которые еще требуются.
 * Примечания будут загружены в Nightscout-в зависимости от настроек [клиента NS](../Configuration/Preferences#nsclient).
 
 ### Раздел L
@@ -451,14 +451,14 @@ History of the following treatments:
 * Temporary basal rate
 * [Temporary target](../Usage/temptarget.md)
 * [Profile switch/смена профиля](../Usage/Profiles.md)
-* [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
+* [Портал терапии](../Usage/CPbefore26#careportal-discontinued) -примечания, введенные через вкладку действий и примечания в диалогах
 
 ## Источник ГК -xDrip, приложение Dexcom (модифицированное)...
 
 ![Вкладка Источник BG-здесь xDrip](../images/Screenshots_BGSource.png)
 
-* Depending on your BG source settings this tab is named differntly.
-* Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
+* В зависимости от параметров источника ГК эта вкладка называется по-разному.
+* Показывает хронологию показаний CGM и предлагает возможность удаления показаний при сбое (например, при компрессии сенсора).
 
 ## клиент NS
 
