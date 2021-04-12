@@ -52,12 +52,22 @@ AndroidAPS **šiuo metu** veikia su
 - `Accu-Chek Insight pompa <../Configuration/Accu-Chek-Insight-Pump.md>`_ 
 - `Dana R pompa <../Configuration/DanaR-Insulin-Pump.md>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `kai kurios senos Medtronic pompos <../Configuration/MedtronicPump.html>`_ iš artėjančių, turinčių programinę įrangą 2.4 (papildomai reikia: RileyLink/Gnarl aparatūros, Android telefono su Bluetooth low energy/BLE mikroschema)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
+- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
 
 ** Kitos pompos**, kurios ateityje gali veikti su AndroidAPS, yra išvardytos puslapyje „Ateityje galimos naudoti pompos" <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
 Jei norite įsigyti pompą ** savo lėšomis **, tiekėjų adresus skirtingose šalyse galite rasti `šioje lentelėje <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>“. Prašome užpildyti savo pardavėjo informaciją, jei ji dar nėra joje nurodyta.
+
+Additional communication device
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+For old medtronic pumps an additional communication devide (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+
+   -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
+   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
+   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
 
 **Kuri pompa labiausiai tinka uždaro ciklo sistemai su AndroidAPS?**
 
@@ -133,3 +143,15 @@ You can keep on reading through the docs here, get in touch with other loopers o
 **Atlikta?**
 Jei turite visus AAPS komponentus kartu arba bent jau pakankamai, kad pradėtumėte nuo atviro ciklo, pirmiausia turėtumėte perskaityti `Tikslų skiltį <../Usage/Objectives.html>`_ prieš pradedant naują Tikslą bei nustatyti savo 
 `įrangą <../index.html#component-setup>`_.
+
+..
+	Image aliases resource for referencing images by name with more positioning flexibility
+
+
+..
+	Hardware and Software Requirements
+.. |EmaLink|				image:: ../images/omnipod/EmaLink.png
+.. |LoopLink|				image:: ../images/omnipod/LoopLink.png
+.. |OrangeLink|			image:: ../images/omnipod/OrangeLink.png		
+.. |RileyLink|				image:: ../images/omnipod/RileyLink.png
+.. |DiaLink|		      image:: ../images/omnipod/DiaLink.png
