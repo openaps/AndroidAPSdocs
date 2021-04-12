@@ -52,12 +52,22 @@ AndroidAPS werkt momenteel met
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `bepaalde oudere Medtronic modellen <../Configuration/MedtronicPump.html>`_ (extra nodig: RileyLink/Gnarl hardware, Android telefoon met Bluetooth Low Energy / BLE-chipset)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
+- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
 
 **Andere pompen** die mogelijk in de toekomst geschikt zullen zijn vind je op de `Mogelijk toekomstige insulinepompen <../Getting-Started/Future-possible-Pump-Drivers.html>`_ pagina.
 
 Als je een pomp **particulier wilt kopen** dan is hier een overzicht van verschillende distributeurs in `deze spreadsheet <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_, eventuele aanvullingen op deze lijst zijn welkom.
+
+Additional communication device
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+For old medtronic pumps an additional communication devide (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+
+   -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Informatie <mailto:getemalink@gmail.com>`__  
+   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
+   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Informatie <https://jameswedding.substack.com/>`__ - Niet getest
 
 **Dus wat is de beste pomp om te loopen met AndroidAPS?**
 
@@ -132,3 +142,15 @@ Verder kun je deze documentatie doorlezen, je kunt online of offline contact opn
 
 ** Klaar? **
 Als je jouw AAPS onderdelen bij elkaar hebt (gefeliciteerd!) of ten minste genoeg om te beginnen in de open loop modus, lees dan eerst de `Doelen <../Usage/Objectives.html>`_ door en stel je `hardware <../index.html#component-setup>`_ in.
+
+..
+	Image aliases resource for referencing images by name with more positioning flexibility
+
+
+..
+	Benodigde hardware en software
+.. |EmaLink|				image:: ../images/omnipod/EmaLink.png
+.. |LoopLink|				image:: ../images/omnipod/LoopLink.png
+.. |OrangeLink|			image:: ../images/omnipod/OrangeLink.png		
+.. |RileyLink|				image:: ../images/omnipod/RileyLink.png
+.. |DiaLink|		      image:: ../images/omnipod/DiaLink.png
