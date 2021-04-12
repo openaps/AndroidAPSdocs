@@ -52,12 +52,22 @@ AndroidAPS funktioniert **derzeit** mit
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `einigen alten Medtronic Pumpen <../Configuration/MedtronicPump.html>`_ ab der neuen Version 2.4 (zusätzlich werden RileyLink/Gnarl Hardware und ein Android Smartphone mit Bluetooth Low Energy (BLE-Chipset) benötigt.)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
+- `einige alte Medtronic Pumpen <../Configuration/MedtronicPump.html>`_ ab AAPS version 2.4 (`zusätzliches Kommunikationsgerät <../Module/module.html#zusatzliches-kommunikationsgerat>`_  erforderlich)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`zusätzliches Kommunikationsgerät <../Module/module.html#zusatzliches-kommunikationsgerat>`_  erforderlich)
 
 **Andere Pumpen,** die zukünftig möglicherweise von AndroidAPS unterstützt werden können, sind auf der Seite `Zukünftig ggf. loopbare Pumpen <../Getting-Started/Future-possible-Pump-Drivers.html>`_ aufgeführt.
 
 Falls Du eine Pumpe **auf eigene Kosten** erwerben willst, findest Du in `dieser Tabelle <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_ die Adressen der Anbieter in verschiedenen Ländern. Ergänze bitte die Angaben zu Deinem Händler, falls dieser dort noch nicht aufgeführt ist.
+
+Zusätzliches Kommunikationsgerät
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Für alte Medtronic-Pumpen ist ein zusätzliches Kommunikationsgerät (neben Deinem Smartphone) erforderlich, um das Funksignal von der Pumpe zu Bluetooth "zu übersetzen". Wähle die richtige Variante des Kommunikationsgeräts aus, je nach dem welche Pumpe Du nutzt.
+
+   -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Kontakt: <mailto:getemalink@gmail.com>`__  
+   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
+   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Kontakt: <https://jameswedding.substack.com/>`__ - nicht getestet
 
 **Welche Pumpe ist am Besten für den Closed Loop mit AndroidAPS geeignet?**
 
@@ -132,3 +142,15 @@ Du kannst Dich weiter durch das Wiki arbeiten, online und offline mit anderen Lo
 
 **Fertig?**
 Wenn Du alle Komponenten für AAPS zusammen hast - oder zumindest genug, um mit dem Open Loop zu beginnen - solltest Du zuerst die Beschreibung der `Objectives (Ziele) <../Usage/Objectives.html>`_ lesen und Deine `Hardware <../index.html#component-setup>`_ einrichten. Lies Dir nach dem Erreichen eines Objectives (Ziel) auf jeden Fall nochmals durch, was im nächsten Schritt passiert.
+
+..
+	Image aliases resource for referencing images by name with more positioning flexibility
+
+
+..
+	Hardware- und Software-Anforderungen
+.. |EmaLink|				image:: ../images/omnipod/EmaLink.png
+.. |LoopLink|				image:: ../images/omnipod/LoopLink.png
+.. |OrangeLink|			image:: ../images/omnipod/OrangeLink.png		
+.. |RileyLink|				image:: ../images/omnipod/RileyLink.png
+.. |DiaLink|		      image:: ../images/omnipod/DiaLink.png
