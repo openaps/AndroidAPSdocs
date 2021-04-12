@@ -158,7 +158,7 @@
  <td><strong>Glimp</strong></td>
  <td>Программа сбора данных об уровне сахара сенсора Freestyle Libre</td>
  <td>&nbsp;</td>
- <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout c Glimp</a> </td>
+ <td><a href="https://nightscout.github.io/uploader/uploaders/#abbott-freestyle-libre">Nightscout c Glimp</a> </td>
 </tr>
 <tr>
  <td><strong>Heroku</strong></td>

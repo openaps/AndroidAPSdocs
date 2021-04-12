@@ -16,9 +16,9 @@
 
 ## Пошаговая инструкция для опытных пользователей
 
-Пропустите этот пункт, если вы обновляете в первый раз. Пошаговая инструкция для опытных пользователей. Следующим шагом будет [ установить git ](../Installing-AndroidAPS/git-install.rst), если у вас его еще нет.
+Please skip this paragraph if you are updating for the first time. Пошаговая инструкция для опытных пользователей. Следующим шагом будет [ установить git ](../Installing-AndroidAPS/git-install.rst), если у вас его еще нет.
 
-Если вы уже обновили AAPS в предыдущих версиях и используете Windows PC, вы можете обновить его в четырех простых шагах:
+If you have already updated AAPS from previous versions and use a Windows PC you can update in four simple steps:
 
 1. [ Экспортируйте параметры ](../Usage/ExportImportSettings#export-settings) из существующей версии AAPS на вашем телефоне, чтобы обезопасить себя
 2. [ Обновите локальную копию ](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS-> Git-> Pull)

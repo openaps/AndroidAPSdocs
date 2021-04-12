@@ -52,12 +52,22 @@ AndroidAPS **actualmente** funciona con
 - `Bomba Accu-ChekInsight <../Configuration/Accu-Chek-Insight-Pump.md>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (additionally needed: RileyLink/Gnarl hardware, Android Phone with bluetooth low energy / BLE-chipset)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
+- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
 
 **Otras bombas** que pueden tener el potencial de trabajar con AndroidAPS se listan en la página `Futuras (posibles) Bombas <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
 Si necesitas **comprar privadamente** una bomba entonces puedes encontrar varios distribuidores en `esta hoja de cálculo <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_, por favor comparta los detalles suyos si no aparecen en la lista.
+
+Additional communication device
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+For old medtronic pumps an additional communication devide (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+
+   -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
+   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
+   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
 
 **Entonces, ¿cuál es la mejor bomba para lazos cerrados con AndroidAPS?**
 
@@ -132,3 +142,15 @@ You can keep on reading through the docs here, get in touch with other loopers o
 
 **Hecho?**
 Si tiene todos los componentes de AAPS juntos (congratulaciones) o al menos lo suficiente para iniciarse en el modo de bucle abierto, primero debe leer la descripción de `objetivo <../Usage/Objectives.html>`_ antes de cada nuevo objetivo y configurar el `hardware <../index.html#component-setup>`_.
+
+..
+	Image aliases resource for referencing images by name with more positioning flexibility
+
+
+..
+	Hardware and Software Requirements
+.. |EmaLink|				image:: ../images/omnipod/EmaLink.png
+.. |LoopLink|				image:: ../images/omnipod/LoopLink.png
+.. |OrangeLink|			image:: ../images/omnipod/OrangeLink.png		
+.. |RileyLink|				image:: ../images/omnipod/RileyLink.png
+.. |DiaLink|		      image:: ../images/omnipod/DiaLink.png

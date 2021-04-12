@@ -10,4 +10,4 @@
 
 * Le journal en cours est un fichier .log qui peut être visualisé de plusieurs manières, par exemple [LogCat](https://developer.android.com/studio/debug/am-logcat.html) dans Android Studio, l'application android Log Viewer ou simplement en texte clair. 
 * Les fichiers journaux précédents sont compressés et stockés dans des dossiers dans l'ordre de date / heure. 
-* If you are sharing your log file in [discord](https://discord.gg/4fQUWHZ4Mw) to talk about a potential bug, please unzip and upload the file dated before the error occurred.
+* Si vous partagez votre fichier log dans [discord](https://discord.gg/4fQUWHZ4Mw) pour parler d'un bug potentiel, décompressez et téléchargez le fichier dont la date précède l'apparition de l'erreur.

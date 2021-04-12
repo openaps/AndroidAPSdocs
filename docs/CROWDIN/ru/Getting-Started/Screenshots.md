@@ -267,7 +267,7 @@
 
 Когда необходимо дать болюс на еду, он обычно подается отсюда.
 
-### Секция I
+### Раздел I
 
 * Поле ГК обычно уже заполнено данными с мониторинга. Если мониторинг не работает, то поле будет пустым. 
 * В поле УГЛЕВОДЫ вы добавляете рассчитанное вами количества углеводов - или эквивалента - на которые хотите дать болюс. 
@@ -280,32 +280,32 @@
    
    ![Мастер болюса с напоминанием о питании](../images/Home2021_BolusWizard_EatingReminder.png)
 
-### Section J
+### Раздел J
 
-* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable [superbolus](../Configuration/Preferences#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences#overview).
-* The idea is to deliver the insulin sooner and hopefully reduce spikes.
+* SUPER BOLUS - это когда базальный инсулин следующих двух часов добавляется к подаваемому болюсу, а на следующие два часа подается нулевой временный базал TBR, чтобы поглотить лишний инсулин. The option only shows when "Enable [superbolus](../Configuration/Preferences#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences#overview).
+* Идея заключается в том, чтобы доставить инсулин по возможности раньше и, желательно, сократить пики.
 * For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
-### Section K
+### Раздел K
 
-* Shows the calculated bolus. 
-* If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+* Показывает рассчитываемый болюс. 
+* Если количество активного инсулина превышает рассчитанный болюс, то оно просто покажет количество углеводов, которые еще требуются.
 * Примечания будут загружены в Nightscout-в зависимости от настроек [клиента NS](../Configuration/Preferences#nsclient).
 
-### Section L
+### Раздел L
 
 * Details of wizard's bolus calculation.
 * You can deselect any that you do not want to include but you normally wouldn't want to.
 * For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
 
-#### Combinations of COB and IOB and what they mean
+#### Комбинации активных углеводов COB и активного инсулина IOB и что они означают
 
 * For safety reasons IOB boxed cannot be unticked when COB box is ticked as you might run the risk of too much insulin as AAPS is not accounting for what’s already given.
 * If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
 * If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
 * If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
 
-#### Wrong COB detection
+#### Неверное обнаружение активных углеводов COB
 
 ![Медленное усваивание углеводов](../images/Calculator_SlowCarbAbsorbtion.png)
 
@@ -313,11 +313,11 @@
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
 * For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
-## Action tab
+## Вкладка "Действия"
 
 ![Вкладка "Действия"](../images/Home2021_Action.png)
 
-### Actions - section M
+### Действия-раздел M
 
 * Button [profile switch](../Usage/Profiles#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
 * Button [temporary target](../Usage/temptarget#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
@@ -328,7 +328,7 @@
    * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
    * Make sure to read the [details](../Usage/Extended-Carbs#extended boluses) before using this option.
 
-### Careportal - section N
+### Портал терапии-раздел N
 
 * Displays information on
    
@@ -393,7 +393,7 @@ And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017
 * Different information on pump status. Displayed information depends on your pump model.
 * See [pumps page](../Hardware/pumps.rst) for details.
 
-## Care Portal
+## Портал терапии
 
 Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
 
@@ -442,7 +442,7 @@ Careportal replicated the functions you will find on your Nightscout screen unde
 
 * You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).
 
-## Treatment
+## Терапия
 
 History of the following treatments:
 
@@ -451,19 +451,19 @@ History of the following treatments:
 * Temporary basal rate
 * [Temporary target](../Usage/temptarget.md)
 * [Profile switch/смена профиля](../Usage/Profiles.md)
-* [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
+* [Портал терапии](../Usage/CPbefore26#careportal-discontinued) -примечания, введенные через вкладку действий и примечания в диалогах
 
-## BG Source - xDrip, Dexcom App (pateched)...
+## Источник ГК -xDrip, приложение Dexcom (модифицированное)...
 
 ![Вкладка Источник BG-здесь xDrip](../images/Screenshots_BGSource.png)
 
-* Depending on your BG source settings this tab is named differntly.
-* Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
+* В зависимости от параметров источника ГК эта вкладка называется по-разному.
+* Показывает хронологию показаний CGM и предлагает возможность удаления показаний при сбое (например, при компрессии сенсора).
 
 ## клиент NS
 
 ![клиент NS](../images/Screenshots_NSClient.png)
 
-* Displays status of the connection with your Nightscout site.
-* Settings are made in [preferences](../Configuration/Preferences#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
-* For troubleshooting see this [page](../Usage/Troubleshooting-NSClient.md).
+* Показывает состояние соединения с сайтом Nightscout.
+* Настройки могут быть сделаны в [параметрах](../Configuration/Preferences#nsclient). Вы можете открыть соответствующий раздел, щелкнув по значку шестеренки в верхней правой части экрана.
+* Для устранения неполадок смотрите эту [страницу](../Usage/Troubleshooting-NSClient.md).
