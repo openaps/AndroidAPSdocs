@@ -19,7 +19,8 @@ Configuration matérielle et logicielle requise
 
    -  |OrangeLink|  `Site internet OrangeLink <https://getrileylink.org/product/orangelink>`_    
    -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-   -  |EmaLink|  `Site internet Emalink <https://github.com/sks01/EmaLink>`__ - `Contact <mailto:getemalink@gmail.com>`__     
+   -  |EmaLink|  `Site internet Emalink <https://github.com/sks01/EmaLink>`__ - `Contact <mailto:getemalink@gmail.com>`__
+   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
    -  |LoopLink|  `Site internet LoopLink <https://www.getlooplink.org/>`__ - `Contact <https://jameswedding.substack.com/>`__ - Non testé
 
 * |Android_Phone| **Téléphone Mobile** 
@@ -841,6 +842,7 @@ Tout le travail de développement du pilote Omnipod est fait par la communauté 
 .. |LoopLink|				image:: ../images/omnipod/LoopLink.png
 .. |OrangeLink|				image:: ../images/omnipod/OrangeLink.png		
 .. |RileyLink|				image:: ../images/omnipod/RileyLink.png
+.. |DiaLink|				image:: ../images/omnipod/DiaLink.png
 .. |Android_phone|			image:: ../images/omnipod/Android_phone.png	
 .. |Omnipod_Pod|			image:: ../images/omnipod/Omnipod_Pod.png
 	
