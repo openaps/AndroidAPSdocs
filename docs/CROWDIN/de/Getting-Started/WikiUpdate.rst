@@ -1,6 +1,19 @@
 Docs Updates & Änderungen
 **************************************************
 
+April 2021
+==================================================
+* Liste der `zusätzlichen Kommunikationsgeräte <../Module/module.html#zusatzliches-kommunikationsgerat>`_ für Omnipod und Medtronic Pumpen
+* AAPS Vorhersagekurven in `Nightscout <../Installing-AndroidAPS/Nightscout.html#manuelles-nightscout-setup>`_
+
+März 2021
+==================================================
+* Kommunikation der Entwickler von gitter zu `discord <https://discord.gg/4fQUWHZ4Mw>`_ umgezogen
+
+Februar 2021
+==================================================
+* Neue Navigationsleiste und `neuer Sprachwechsel <../changelanguage.html>`_
+
 Januar 2021
 ==================================================
 * `Aktionen-Tab <../Getting-Started/Screenshots.html#aktionen-tab>`_ - zusätzliche Informationen auf der Seite 'AndroidAPS Bildschirme'
