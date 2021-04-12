@@ -276,15 +276,15 @@
 
 #### Напоминание о приеме пищи
 
-* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
+* Для углеводов в будущем можно поставить галочку (и это по умолчанию, когда вводится время в будущем), так что вы можете быть напоминаем в будущем, когда вы будете есть данные, которые вы вводите в AndroidAPS
    
    ![Мастер болюса с напоминанием о питании](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Раздел J
 
-* SUPER BOLUS - это когда базальный инсулин следующих двух часов добавляется к подаваемому болюсу, а на следующие два часа подается нулевой временный базал TBR, чтобы поглотить лишний инсулин. The option only shows when "Enable [superbolus](../Configuration/Preferences#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences#overview).
+* SUPER BOLUS - это когда базальный инсулин следующих двух часов добавляется к подаваемому болюсу, а на следующие два часа подается нулевой временный базал TBR, чтобы поглотить лишний инсулин. Эта опция появляетмся только если отмечена опция "Включить [суперболюс](../Configuration/Preferences#superbolus) в мастере" в [окне параметров](../Configuration/Preferences#overview).
 * Идея заключается в том, чтобы доставить инсулин по возможности раньше и, желательно, сократить пики.
-* For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
+* Подробная информация находится на сайте [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
 ### Раздел K
 
