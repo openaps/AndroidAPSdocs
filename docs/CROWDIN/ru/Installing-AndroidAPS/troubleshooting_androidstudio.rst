@@ -6,13 +6,13 @@
 
 На случай, если вы не можете найти свое старое хранилище ключей, выполните следующие действия:
 
-1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`__ on your phone.
+1. `Экспорт настроек <../Usage/ExportImportSettings.html#export-settings>`_ на вашем телефоне.
 2. Скопируйте настройки вашего телефона во внешнее местоположение (напр. ваш компьютер, служба облачного хранения...).
 3. Убедитесь, что файл параметров "Параметры AndroidAPS" сохранен.
 4. Сгенерируйте подписанный apk новой версии, как описано на странице обновления <../Instaling-AndroidAPS/Update-to-new-version.html> ` _.
 5. Деинсталлируйте предыдущую версию AAPS на вашем телефоне.
 6. Установите новую версию AAPS на свой телефон.
-7. `Import settings <../Usage/ExportImportSettings.html#export-settings>`_ - if you can't find them on your phone copy them from the external storage.
+7. `Импортируйте настройки <../Usage/ExportImportSettings.html#export-settings>`_ - если не можете найти их на вашем телефоне, скопируйте их из внешнего хранилища.
 8. Продолжайте пользоваться циклом.
 
 Предупреждение компилятора Kotlin
@@ -51,7 +51,7 @@
 ==================================================
 Иногда появляется сообщение об ошибке при компоновке apk
 
-  ``Errors while building APK.``
+  ``Ошибки при сборке APK.``
 
   ``Cause: buildOutput.apkData must not be null``
 
