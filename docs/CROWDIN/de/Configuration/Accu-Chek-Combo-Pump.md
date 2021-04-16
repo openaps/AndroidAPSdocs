@@ -87,6 +87,8 @@ Es sind verschiedene Gründe möglich. Versuche die folgenden Schritte:
 
 1. Lege eine **neue oder volle Batterie** in die Pumpe ein. Sieh Dir den Batterie-Abschnitt für Details an. Stelle sicher, dass die Pumpe sich sehr nahe am Smartphone befindet.
 
+-Falls AndroidAPS bereits läuft: Stoppe den Loop und beende AAPS auf deinem Smartphone über Einstellungen->Apps&Benachrichtigungen->AndroidAPS->Beenden erzwingen
+
 ![Combo sollte sich direkt bei dem Smartphone befinden](../images/Combo_next_to_Phone.png)
 
 2. Schalte andere Bluetoothgeräte aus oder entferne sie, damit sie keine Verbindung zu dem Smartphone aufzubauen, während die Kopplung durchgeführt wird. Jede gleichzeitige Bluetooth-Kommunikation oder Eingabeaufforderung, eine Verbindung herzustellen, kann den Kopplungs-Prozess stören.
