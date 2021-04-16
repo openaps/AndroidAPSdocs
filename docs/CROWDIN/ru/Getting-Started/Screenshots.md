@@ -294,9 +294,9 @@
 
 ### Раздел L
 
-* Details of wizard's bolus calculation.
-* You can deselect any that you do not want to include but you normally wouldn't want to.
-* For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
+* Подробности расчёта мастера болюса.
+* Можно отменить выбор тех, которые вы не хотите включить, но обычно это не требуется.
+* По соображениям безопасности блок **TT должен быть отмечен вручную**, если вы хотите, чтобы калькулятор болюса отталкивался от действующей временной цели.
 
 #### Комбинации активных углеводов COB и активного инсулина IOB и что они означают
 
