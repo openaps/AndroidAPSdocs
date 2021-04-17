@@ -59,7 +59,7 @@ AndroidAPS fonctionne **actuellement** avec
 
 Si vous avez besoin d'acheter **à titre privé** une pompe alors vous pouvez trouver différents distributeurs dans `cette feuille de calcul <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_, veuillez s'il vous plaît partager les détails de la vôtre si elle n'est pas déjà listée.
 
-Additional communication device
+Périphérique de communication additionnel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 For old medtronic pumps an additional communication devide (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
 
