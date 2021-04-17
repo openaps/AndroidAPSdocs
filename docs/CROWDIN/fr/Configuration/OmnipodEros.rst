@@ -20,7 +20,7 @@ Configuration matérielle et logicielle requise
    -  |OrangeLink|  `Site internet OrangeLink <https://getrileylink.org/product/orangelink>`_    
    -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
    -  |EmaLink|  `Site internet Emalink <https://github.com/sks01/EmaLink>`__ - `Contact <mailto:getemalink@gmail.com>`__
-   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
+   - |DiaLink| DiaLink - `Informations de contact <mailto:Boshetyn@ukr.net>`__     
    -  |LoopLink|  `Site internet LoopLink <https://www.getlooplink.org/>`__ - `Contact <https://jameswedding.substack.com/>`__ - Non testé
 
 * |Android_Phone| **Téléphone Mobile** 
