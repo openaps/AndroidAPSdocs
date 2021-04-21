@@ -71,11 +71,11 @@
 Защита приложения
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Если приложение защищено, вследует ввести пароль или использовать биометрическую идентификацию телефона для открытия AAPS.
-* App will shut down immediately if wrong password is entered - but still run in the background if it was previously opened successfully.
+* Приложение будет немедленно выключано, если введен неправильный пароль, но будет выполняется в фоновом режиме, если было штатно открыто до этого.
 
-Bolus protection
+Защита болюсов
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Bolus protection might be useful if AAPS is used by a small child and you `bolus via SMS <../Children/SMS-Commands.html>`_.
+* Защита от болюсов может быть полезной, если AAPS используется маленьким ребенком, а вы подаете болюсы через SMS <../Children/SMS-Commands.html> ` _.
 * In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter master password.
 
   .. image:: ../images/Pref2020_PW.png
