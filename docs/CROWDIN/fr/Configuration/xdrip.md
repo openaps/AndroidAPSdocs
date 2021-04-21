@@ -1,6 +1,6 @@
 # Paramètres xDrip+
 
-S'il n'est pas déjà configuré, téléchargez [xDrip+](https://jamorham.github.io/#xdrip-plus).
+S'il n'est pas déjà installé, téléchargez [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
 **Cette documentation est pour xDrip+ pour Android.** Il y a une application "xDrip pour iOS" qui n'a rien à voir avec l'original xDrip+ pour Android.
 
