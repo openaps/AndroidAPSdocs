@@ -86,7 +86,7 @@ Tijdens de 14 dagen kun je gebruik maken van één of meer NFC geschikte smartph
 
 Houd er rekening mee dat de originele gepatchte app **geen verbinding heeft met het internet** om tracking te voorkomen.
 
-Er is echter een variant van de gepatchte app die LibreView ondersteunt, deze app heeft wel internettoegang. Houd er rekening mee dat je gegevens dan naar de cloud worden gestuurd. Maar je diadoc rapportages worden dan volledig ondersteund. Met die variant is het ook mogelijk om de alarmen van een loopende sensor te verplaatsen naar een ander apparaat dat de sensor niet heeft gestart. Google in diabetes gerelateerde Duitse forums hoe dit kan worden gedaan.
+Er is echter een variant van de gepatchte app die LibreView ondersteunt, deze app heeft wel internettoegang. Houd er rekening mee dat je gegevens dan naar de cloud worden gestuurd. Je kunt dan gebruik maken van alle rapportages die de originele app heeft. Met die variant is het ook mogelijk om de alarmen van een lopende sensor te verplaatsen naar een ander apparaat dat de sensor niet heeft gestart. Google in diabetes gerelateerde Duitse forums hoe dit kan worden gedaan.
 
 
 Stap 2: Installeer en configureer xDrip+ app
@@ -99,7 +99,7 @@ De glucosewaarden komen op de smartphone binnen op de xDrip+ app.
 * Indien nodig typ dan "BgReading:d,xdrip libre_receiver:v" onder Less Common Settings->Extra Logging Settings->Extra tags for logging (in het Nederlands: Minder Algemene Instellingen-> Extra logboekinstellingen-> Extra tags voor loggen). Dit logt extra foutmeldingen voor het oplossen van problemen, de meesten van ons zullen dit niet nodig hebben.
 * In xdrip ga naar Settings > Interapp Compatibility > Broadcast Data Locally en selecteer ON. Deze instelling zorgt ervoor dat de xDrip app op jouw telefoon jouw waardes direct naar de AndroidAPS app (ook op jouw telefoon) doorstuurt en je dus geen internetverbinding nodig hebt.
 * In xdrip ga naar Instellingen > Interapp Settings > Accept Treatments selecteer OFF.
-* Om te zorgen dat AAPS de glucosewaardes ontvangt van xDrip+ moet je onder `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" < ../Configuration/xdrip.html#identificeer-ontvanger-identify-receiver>`_ invullen.
+* to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <../Configuration/xdrip.html#identify-receiver>`_
 * Als je AndroidAPS wilt gebruiken om te kalibreren ga dan in xdrip naar Instellingen > Interapp settings > Accept Calibrations en selecteer ON.  Je kunt ook de opties aanpassen aan jouw behoefte in Instellingen > Minder vaak voorkomende instellingen > Advanced Calibration Settings.
 
 .. image:: ../images/Libre2_Tags.png
@@ -119,7 +119,7 @@ Stap 4: AndroidAPS configureren (alleen voor loopen)
 * In AndroidAPS ga naar Configurator > BG Bron en vink 'xDrip+' aan. 
 * Als AAPS geen BG-waarden ontvangt wanneer de telefoon in vliegtuigmodus staat, gebruik dan 'Identify receiver' (Identificeer ontvanger) zoals beschreven op de `xDrip+ instellingen pagina <../Configuration/xdrip.html#identificeer-ontvanger-identify-receiver>`_.
 
-Tot nu toe kun je met Libre 2 als BG bron 'Activeer SMB altijd' en 'Activeer SMB na koolhydraten' in SMB algoritme niet aanzetten. De BG waarden van Libre 2 zijn niet betrouwbaar genoeg om die functies veilig te gebruiken (alle overige SMB functies zijn overigens wél gewoon te gebruiken). Zie `Filteren van glucosewaardes <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ voor meer details.
+Tot nu toe kun je met Libre 2 als BG bron 'Activeer SMB altijd' en 'Activeer SMB na koolhydraten' in het SMB algoritme niet aanzetten. De BG waarden van Libre 2 zijn niet betrouwbaar genoeg om die functies veilig te gebruiken (alle overige SMB functies zijn overigens wél gewoon te gebruiken). Zie `Filteren van glucosewaardes <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ voor meer details.
 
 Problemen oplossen en andere tips
 ==================================================
