@@ -3,7 +3,7 @@ Freestyle Libre 2
 
 De Freestyle Libre 2 kan alarmen geven bij hoge of lage glucosewaardes. De Libre2 sensor stuurt elke minuut de huidige glucosewaarde naar een ontvanger (dit kan de Libre ontvanger zijn of een smartphone). De ontvanger geeft een alarm indien nodig. Met een zelf aangepaste LibreLink app en de xDrip+ app kun je jouw glucosewaardes continu ontvangen en weergeven op een smartphone. 
 
-De sensor kan worden gekalibreerd in een bereik van -40 mg/dl tot +20 mg/dl (-2,2 mmol/l tot +1,1 mmol/l) om te corrigeren voor verschillen tussen vingerpietmetingen en sensorwaardes.
+De sensor kan worden gekalibreerd dmv een verschuiving van -40 mg/dl tot +20 mg/dl (-2,2 mmol/l tot +1,1 mmol/l) om te corrigeren voor verschillen tussen vingerpietmetingen en sensorwaardes.
 
 BG waardes kunnen ook worden uitgelezen dmv een Bluetooth apparaatje (Miaomiao, Bubble etc) zoals met de Libre1.
 
