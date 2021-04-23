@@ -38,7 +38,7 @@ Word lid van de belangrijkste [AndroidAPS Facebook groep](https://www.facebook.c
 * [Freestyle Libre Freaks](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre als CGM/FGM
 * [NightscoutDE Facebook-groep](https://www.facebook.com/groups/nightscoutDE/)
 
-### Netherlands
+### Nederland en België
 
 * [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Nederlandstalige gebruikers van OpenAPS, Loop en AndroidAPS
 * [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
