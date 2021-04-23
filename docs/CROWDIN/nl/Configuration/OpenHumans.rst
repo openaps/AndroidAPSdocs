@@ -25,44 +25,44 @@ Geheime of persoonlijke informatie zoals je Nightscout URL of API-secret zal nie
 
 Pomp koppelen
 ========================================
-1. Create your account on `Open Humans <https://www.openhumans.org>`_ if not already done. You can reuse your existing Google or Facebook accounts if you wish to.
-2. Enable the “Open Humans” plugin in `Config Builder <../Configuration/Config-Builder.html>`_.
-3. Open its setting using the cog wheel button. You can restrict upload to times when phone uses Wi-Fi and/or is charged. 
-4. Open the Open Humans Plugin (either trough OH tab or hamburger menu) and click 'LOGIN'.
+1. Maak jouw eigen account aan op `Open Humans <https://www.openhumans.org>`_ als je dat nog niet hebt. Je kunt je bestaande Google of Facebook account gebruiken als je wilt.
+2. Activeer de "Open Humans"-plugin in de `Configurator <../Configuration/Config-Builder.html>`_.
+3. Open de instellingen door op het tandwiel icoontje te tikken. Je kunt uploaden beperken tot momenten wanneer jouw telefoon gebruik maakt van Wi-Fi en/of wordt opgeladen. 
+4. Open de Open Humans Plugin (via het menu OH-tabblad of hamburger menu) en klik op 'LOGIN'.
 
 .. image:: ../images/OHUploader1.png
-  :alt: Open Humans Config Builder
+  :alt: Open Humans Configurator
     
-5. Read the given information about the Open Humans Uploader and terms of use carefully. 
-6. Confirm by checking the box and click 'LOGIN'.
-7. Open Humans website will be opened. Login with your credentials.
-8. Decide whether you want to hide your AndroidAPS Uploader membership in your public Open Humans profile.
-9. Click button 'Authorize project'.
+5. Lees de informatie over de Open Humans Uploader en de gebruiksvoorwaarden zorgvuldig. 
+6. Bevestig door het vakje te selecteren en op 'LOGIN' te klikken.
+7. De Open Humans website zal worden geopend. Log in met je inloggegevens.
+8. Bepaal of je het lidmaatschap van jouw AndroidAPS-upload wilt verbergen in jouw openbare Open Humans-profiel.
+9. Klik op de knop 'Authorize project'.
 
 .. image:: ../images/OHUploader2.png
-  :alt: Open Humans Terms of Use + Login
+  :alt: Open Humans Gebruikersvoorwaarden + Login
 
-10. Returning to AAPS you will see a prompt that login succeeded.
-11. Keep Open Humans Uploader plugin and phone turned on for setup to complete.
-12. After clicking close you will see your member ID. Queue sizes > 0 shows that there is still data to be uploaded.
-13. Click 'LOGOUT' if you want to stop uploading data to Open Humans.
-14. Android notification will inform you about running upload.
+10. Als je teruggaat naar AAPS ziet je een melding dat het aanmelden is gelukt.
+11. Laat de Open Humans Uploader plugin en telefoon ingeschakeld om de setup te voltooien.
+12. Nadat je op sluiten hebt geklikt, zie je jouw lidmaatschaps-ID. Wachtrijgrootte > 0 geeft aan dat er nog steeds gegevens moeten worden geüpload.
+13. Klik op 'LOGOUT' als je wilt stoppen met het uploaden van gegevens naar Open Humans.
+14. Je zult een Android melding zien met informatie over de voortgang van jouw upload.
 
 .. image:: ../images/OHUploader3.png
-  :alt: Open Humans finish setup
+  :alt: Open Humans setup afronden
 
-15. You can manage your data by logging in to the `Open Humans website <https://www.openhumans.org>`_.
+15. Je kunt jouw gegevens beheren door je aan te melden bij de `Open Humans website <https://www.openhumans.org>`_.
 
 .. image:: ../images/OHWeb.png
-  :alt: Open Humans manage data
+  :alt: Open Humans gegevens beheren
      
-Sharing Opportunities
+Gegevens delen
 ========================================
-`The 'OPEN' project <https://www.open-diabetes.eu/>`_
+`Het 'OPEN' project <https://www.open-diabetes.eu/>`_
 ---------------------------------------------------------------------------------------  
-The 'OPEN' project brings together an international and intersectoral consortium of patient innovators, clinicians, social scientists, computer scientists and patient advocacy organizations in order to investigate various aspects of Do-it-Yourself Artificial Pancreas Systems (DIY APS) that are used by an increasing number of people with diabetes. For more details see their `website <https://www.open-diabetes.eu/>`_.
+Het 'OPEN'-project brengt een internationale en intersectorale groep patiënten, artsen, sociale wetenschappers, computerwetenschappers en patiëntenbelangenorganisaties samen. Ze onderzoeken verschillende aspecten van Doe-het-zelf-Kunstmatige Pancreas-systemen (DIY APS). Zie hun `website <https://www.open-diabetes.eu/>`_ voor meer informatie.
 
-September 2020 the 'OPEN' project launched a `survey <https://survey.open-diabetes.eu/>`_ including the option to donate data you uploaded to Open Humans. A `tutorial <https://open-diabetes.eu/en/open-survey/survey-tutorials/>`_ how to donate your data to the 'OPEN' project is available on their site and within the survey itself.
+In september 2020 lanceerde het 'OPEN'-project een `enquête <https://survey.open-diabetes.eu/>`_ met de optie om gegevens te doneren die je hebt geüpload naar Open Humans. `Instructies <https://open-diabetes.eu/en/open-survey/survey-tutorials/>`_ hoe je jouw gegevens aan het 'OPEN'-project kunt doneren, vind je op hun website en binnen de enquête zelf.
 
 
 `OpenAPS Data Commons <https://www.openhumans.org/activity/openaps-data-commons/>`_
