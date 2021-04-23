@@ -15,7 +15,7 @@ Top! Look at the issues, ask in the discord channel, there is always a lot to do
 Mooi, dit wordt zeer gewaardeerd en is een prima manier om je steentje bij te dragen #payitforward.
 
 * The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* Een instructie hoe je Commits op de Engelse wiki kunt doen: [How to make a PR](../make-a-PR.md). Andere talen worden alleen vertaald uit het Engels en worden verder niet bewerkt, om de wiki consistent te houden.
+* Een instructie hoe je aanpassingen ('Commits') aan de Engelse documentatie kunt doen: [How to make a PR](../make-a-PR.md). Veranderingen aan de documentatie worden altijd in het Engels gedaan, vervolgens worden ze vertaald naar andere talen. Er worden in andere talen geen veranderingen gemaakt aan documentatie zelf, alleen vertaald uit het Engels, om de documentatie consistent te houden.
 
 ## Ik spreek meedere talen en wil de AAPS applicatie of documentatie vertalen.
 
