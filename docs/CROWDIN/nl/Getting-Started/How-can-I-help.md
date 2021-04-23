@@ -8,9 +8,9 @@ Ontwikkelaars zijn ouders, verzorgers, partners en mensen met diabetes ze ontwik
 
 ## Ik kan programmeren! Hoe doe ik mee?
 
-Ja! Look at the issues, ask in the discord channel, there is always a lot to do! Pak een kleine taak als eerste en maak je eerste Pull Request! :)
+Top! Look at the issues, ask in the discord channel, there is always a lot to do! Pak een kleine taak als eerste en maak je eerste Pull Request! :)
 
-## Ik ken de AAPS-oplossing en kan documentatie schrijven!
+## Ik ken het AAPS-systeem en kan documentatie schrijven!
 
 Mooi, dit wordt zeer gewaardeerd en is een prima manier om je steentje bij te dragen #payitforward.
 
