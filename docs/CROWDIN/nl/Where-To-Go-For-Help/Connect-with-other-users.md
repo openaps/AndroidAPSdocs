@@ -4,7 +4,7 @@ Dit project is vrijwilligerswerk. Om extra werk te voorkomen voor de mensen die 
 
 * niveau 1: Lees de Wiki - we hebben nu een zoekfunctie!
 * niveau 2: Zoek in de Facebook-groep, als er al niet een antwoord te vinden is, stel dan jouw vraag in de algemene [AndroidAPS gebruikers Facebook groep](https://www.facebook.com/groups/1900195340201874/). Of in de Nederlandstalige Looped-NL groep (zie onderaan deze pagina).
-* level 3: If facebook did not get results then ask in [discord](https://discord.gg/4fQUWHZ4Mw). Het gelijktijdig stellen van dezelfde vraag op beide platforms zal worden genegeerd of verwijderd om te voorkomen dat mensen dubbel werk hebben met beantwoorden. Vergeet niet dat de meeste ontwikkelaars in Europa wonen, dus het kan goed zijn dat vragen niet 24/7 beantwoord worden; reken erop om enkele uren te moeten wachten, vooral in het weekend en op feestdagen.
+* niveau 3: Als facebook geen resultaten oplevert, vraag dan in [discord](https://discord.gg/4fQUWHZ4Mw). Het gelijktijdig stellen van dezelfde vraag op beide platforms zal worden genegeerd of verwijderd om te voorkomen dat mensen dubbel werk hebben met beantwoorden. Vergeet niet dat de meeste ontwikkelaars in Europa wonen, dus het kan goed zijn dat vragen niet 24/7 beantwoord worden; reken erop om enkele uren te moeten wachten, vooral in het weekend en op feestdagen.
 * niveau 4: Maak een [issue](https://github.com/nightscout/AndroidAPS/issues) op gitter en voeg [log-bestanden](../Usage/Accessing-logfiles.md) toe
 * niveau 5: e-mail naar *developers@androidaps.org* (alleen als het om persoonlijke gegevens gaat die je niet wilt delen op een openbare plek en jouw problemen niet via andere wegen opgelost konden worden)
 
