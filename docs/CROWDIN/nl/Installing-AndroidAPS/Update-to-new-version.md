@@ -16,9 +16,9 @@
 
 ## Snelle methode voor ervaren gebruikers
 
-Please skip this paragraph if you are updating for the first time. De snelle methode is voor ervaren gebruikers. De eerste stap is [Git installeren](../Installing-AndroidAPS/git-install.rst) als je dit nog niet gedaan had.
+Sla deze alinea over als je AndroidAPS voor het eerst bijwerkt. De snelle methode is voor ervaren gebruikers. De eerste stap is [Git installeren](../Installing-AndroidAPS/git-install.rst) als je dit nog niet gedaan had.
 
-If you have already updated AAPS from previous versions and use a Windows PC you can update in four simple steps:
+Als je AAPS al eerder hebt bijgewerkt en je hebt een Windows-PC gebruikt, kun je bijwerken in vier eenvoudige stappen:
 
 1. [Exporteer jouw instellingen](../Usage/ExportImportSettings#instellingen-exporteren) voor de zekerheid. Mocht er iets misgaan met bijwerken, dan ben je in ieder geval niet jouw AAPS instellingen kwijt.
 2. [Lokale kopie bijwerken](../Installing-AndroidAPS/Update-to-new-version#bijwerken-van-jouw-lokale-kopie) (VCS-> Git-> Pull)
