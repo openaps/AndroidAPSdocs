@@ -8,7 +8,7 @@ Dit project is vrijwilligerswerk. Om extra werk te voorkomen voor de mensen die 
 * niveau 4: Maak een [issue](https://github.com/nightscout/AndroidAPS/issues) op gitter en voeg [log-bestanden](../Usage/Accessing-logfiles.md) toe
 * niveau 5: e-mail naar *developers@androidaps.org* (alleen als het om persoonlijke gegevens gaat die je niet wilt delen op een openbare plek en jouw problemen niet via andere wegen opgelost konden worden)
 
-For support on CGM sources please use the Facebook groups or discord channels for that specific system (e.g. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
+Voor vragen of problemen met jouw glucosesensor kun je het beste de Facebook groepen of discord kanalen voor jouw specifieke systeem (bijv. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) of voor Nightscout [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) gebruiken, omdat je in die groepen meer gebruikers zult vinden die jouw specifieke systeem goed kennen.
 
 ## Meld je aan voor de AndroidAPS gebruikersgroep op Facebook!
 
@@ -19,7 +19,7 @@ Word lid van de belangrijkste [AndroidAPS Facebook groep](https://www.facebook.c
 * [Looped Facebookgroep](https://www.facebook.com/groups/TheLoopedGroup): voor alle DIY closed loop systemen (OpenAPS, Loop en AndroidAPS)
 * [xDrip + - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [CGM in de cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in het algemeen
-* [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
+* [AndroidAPS op Discord](https://discord.gg/4fQUWHZ4Mw)
 
 ## Land / taal specifieke groepen
 
@@ -27,7 +27,7 @@ Word lid van de belangrijkste [AndroidAPS Facebook groep](https://www.facebook.c
 
 * [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): Australische gebruikers van OpenAPS, Loop en AndroidAPS
 
-### Tsjechisch en Slowaaks
+### Tsjechië en Slowakije
 
 * [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Tsjechisch sprekende gebruikers van AndroidAPS
 
@@ -38,7 +38,7 @@ Word lid van de belangrijkste [AndroidAPS Facebook groep](https://www.facebook.c
 * [Freestyle Libre Freaks](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre als CGM/FGM
 * [NightscoutDE Facebook-groep](https://www.facebook.com/groups/nightscoutDE/)
 
-### Nederland
+### Netherlands
 
 * [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Nederlandstalige gebruikers van OpenAPS, Loop en AndroidAPS
 * [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
