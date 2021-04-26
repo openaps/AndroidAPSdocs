@@ -2,8 +2,8 @@ Open Humans Uploader
 ****************************************
 Doneer je gegevens aan de wetenschap
 ========================================
-Je kunt de community helpen door je gegevens te doneren aan onderzoeksprojecten! Dit helpt onderzoekers om dit project vooruit te helpen, nieuwe wetenschappelijke ideeën te ontwikkelen en de open mind van open source closed loop systemen te verbreden.
-AndroidAPS is voorbereid om jouw data te synchroniseren met `Open Humans <https://www.openhumans.org>`_, een platform waar je je gezondheidsgegevens kunt uploaden, verbinden en opslaan - en kunt delen. 
+Je kunt de community verder helpen door jouw gegevens te doneren aan wetenschappelijk onderzoek. Dit helpt onderzoekers om dit project vooruit te helpen, nieuwe wetenschappelijke ideeën te ontwikkelen en de open mind van open source closed loop systemen te verbreden.
+In AAPS zit de mogelijkheid ingebouwd om jouw data te synchroniseren met `Open Humans <https://www.openhumans.org>`_, een platform waar je je gezondheidsgegevens kunt uploaden, verbinden en opslaan - en kunt delen. 
 
 Je behoudt de volledige controle over wat er met je gegevens gebeurt en welke projecten je wilt ondersteunen door ze toegang tot je gegevens te geven. Welke gegevens worden gebruikt en op welke manier, is afhankelijk van de projecten waar je je op OpenHumans bij aansluit.
 
@@ -17,13 +17,13 @@ De volgende gegevens worden geüpload naar je Open Humans account:
 * Tijdelijke basaalstanden
 * Tijdelijke streefdoelen
 * Instellingen
-Versienummer
+* AAPS versie
 * Apparaat model 
 * Scherm afmetingen
 
 Geheime of persoonlijke informatie zoals je Nightscout URL of API-secret zal niet worden geüpload.
 
-Pomp koppelen
+Koppeling maken
 ========================================
 1. Maak jouw eigen account aan op `Open Humans <https://www.openhumans.org>`_ als je dat nog niet hebt. Je kunt je bestaande Google of Facebook account gebruiken als je wilt.
 2. Activeer de "Open Humans"-plugin in de `Configurator <../Configuration/Config-Builder.html>`_.
@@ -56,7 +56,7 @@ Pomp koppelen
 .. image:: ../images/OHWeb.png
   :alt: Open Humans gegevens beheren
      
-Gegevens delen
+Gegevens delen met onderzoeksprojecten
 ========================================
 `Het 'OPEN' project <https://www.open-diabetes.eu/>`_
 ---------------------------------------------------------------------------------------  
