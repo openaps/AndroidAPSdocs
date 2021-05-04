@@ -4,9 +4,9 @@
 
 **AndroidAPS is niet beschikbaar als download vanwege regelgeving voor medische hulpmiddelen. Het is wettelijk wel toegestaan om de app voor eigen gebruik te bouwen, maar het is verboden om de kant-en-klare app te verspreiden. Zie de [Veelgestelde vragen](../Getting-Started/FAQ.md) pagina voor meer informatie.**
 
-## Important notes
+## Belangrijk:
 
-* Please use **[Android Studio Version 4.1.1](https://developer.android.com/studio/)** or newer to build the apk.
+* Gebruik **[Android Studio Versie 4.1.1](https://developer.android.com/studio/)** of nieuwer om de apk te bouwen.
 * [Windows 10 32-bits systemen](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) worden niet ondersteund door Android Studio 4.1.1.
 
 **Configuration on demand** wordt niet ondersteund door de huidige versie van de Android Gradle-plugin.
@@ -23,7 +23,7 @@ Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het
 ### Dit artikel is verdeeld in twee delen.
 
 * In het overzicht gedeelte wordt uitgelegd welke stappen je moet nemen om de APK (APK is het bestandsformaat van een app) te bouwen.
-* In de stap voor stap instructie vind je heel gedetailleerd wat je moet doen, met behulp van screenshots. Omdat van Android Studio (het programma waarin je de APK bouwt) vaak een nieuwe versie uitkomt, kan het zijn dat de screenshots niet helemaal hetzelfde zijn als jouw versie maar het is een goede houvast. Android Studio kun je gebruiken onder Windows, Mac OS X en Linux, er kunnen kleine verschillen zitten tussen deze besturingssystemen. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Discord chat [Android APS](https://discord.gg/4fQUWHZ4Mw) so that we can have a look at this.
+* In de stap voor stap instructie vind je heel gedetailleerd wat je moet doen, met behulp van screenshots. Omdat van Android Studio (het programma waarin je de APK bouwt) vaak een nieuwe versie uitkomt, kan het zijn dat de screenshots niet helemaal hetzelfde zijn als jouw versie maar het is een goede houvast. Android Studio kun je gebruiken onder Windows, Mac OS X en Linux, er kunnen kleine verschillen zitten tussen deze besturingssystemen. Als je vindt dat er iets belangrijks mis is of ontbreekt, beschrijf je vraag of probleem dan (in het Engels) in de facebook groep "AndroidAPS Users" of in de Discord chat [Android APS](https://discord.gg/4fQUWHZ4Mw) zodat we ernaar kunnen kijken. Je kunt je vraag ook altijd stellen in de (Nederlandstalige) Looped-NL-BE facebook groep.
 
 ## Overzicht
 
@@ -32,11 +32,11 @@ De belangrijkste stappen voor het bouwen van het APK bestand zijn:
 1. [Git installeren](../Installing-AndroidAPS/git-install.rst)
 2. [Installeer Git + Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
 3. [Stel git path in Android Studio in](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
-4. [AndroidAPS-code downloaden](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
-5. [Android SDK downloaden](../Installing-AndroidAPS/Building-APK#download-android-sdk)
+4. [AndroidAPS-code downloaden](../Installing-AndroidAPS/Building-APK#androidaps-code-downloaden)
+5. [Android SDK downloaden](../Installing-AndroidAPS/Building-APK#android-sdk-downloaden)
 6. [Bouw de app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (ondertekende apk genereren)
 7. [Apk-bestand overzetten naar je telefoon](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identify receiver (identificeer ontvanger) bij gebruik van xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
+8. [Identify receiver (identificeer ontvanger) bij gebruik van xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-identificeer-ontvanger-bij-gebruik-van-xdrip)
 
 ## Stap voor stap instructie
 
@@ -268,7 +268,7 @@ Op jouw telefoon moet je installatie uit onbekende bronnen toestaan. Je vindt di
 
 ## Identify receiver (identificeer ontvanger) bij gebruik van xDrip+
 
-[Zie xDrip pagina](../Configuration/xdrip#identify-receiver)
+[Zie xDrip pagina](../Configuration/xdrip#identify-receiver-identificeer-ontvanger-bij-gebruik-van-xdrip)
 
 ## Problemen oplossen
 

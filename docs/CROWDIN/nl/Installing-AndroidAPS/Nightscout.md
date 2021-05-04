@@ -6,7 +6,7 @@ Nightscout kan naast informatie en rapporten weergeven, ook worden gebruikt om A
 
 ### Nightscout instellingen
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
+Je kunt openbare toegang tot jouw Nightscout-site blokkeren met behulp van de [authentication roles](https://nightscout.github.io/nightscout/security) (verificatierollen).
 
 ### AndroidAPS instellingen
 
@@ -25,7 +25,7 @@ Houd jouw telefoon up-to-date zoals beschreven bij [Allereerst de veiligheid](..
 
 ## Nightscout aanmaken
 
-We gaan er vanuit dat je al een Nightscout site hebt, zo niet dan moet je dat eerst nog doen (een makkelijke manier om dat te doen is via ns.10be.de en staat onderaan deze pagina beschreven). Een andere manier om Nightscout aan te maken staat beschreven op de [Nightscout](http://nightscout.github.io/nightscout/new_user/) website. Vraag zo nodig hulp in de facebook groep "CGM in the cloud Nederlands". Voor sommige mensen verbruikt Azure meer data dan hun gratis versie toelaat, dus raden we aan om Heroku te gebruiken. Wanneer je jouw Nightscout site eenmaal hebt aangemaakt, kun je verdergaan met onderstaande instructies. Dit zijn specifieke instellingen voor jouw Nightscout site zodat je hem kunt koppelen aan AndroidAPS. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
+We gaan er vanuit dat je al een Nightscout site hebt, zo niet dan moet je dat eerst nog doen (een makkelijke manier om dat te doen is via ns.10be.de en staat onderaan deze pagina beschreven). Een andere manier om Nightscout aan te maken staat beschreven op de [Nightscout](http://nightscout.github.io/nightscout/new_user/) website. Vraag zo nodig hulp in de facebook groep "CGM in the cloud Nederlands". Voor sommige mensen verbruikt Azure meer data dan hun gratis versie toelaat, dus raden we aan om Heroku te gebruiken. Wanneer je jouw Nightscout site eenmaal hebt aangemaakt, kun je verdergaan met onderstaande instructies. Dit zijn specifieke instellingen voor jouw Nightscout site zodat je hem kunt koppelen aan AndroidAPS. Jouw Nightscout site moet ten minste versie 10 zijn (wordt weergegeven als 0.10...), dus controleer of je werkt met de [nieuwste versie](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) anders krijg je een foutmelding op je AAPS app.
 
 * Ga naar https://herokuapp.com/
 
@@ -39,7 +39,7 @@ We gaan er vanuit dat je al een Nightscout site hebt, zo niet dan moet je dat ee
   * `DEVICESTATUS_ADVANCED` = `true`
   * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
+  * Je kunt verschillende alarmen instellen voor [monitoring the pump ](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery% raden we sowieso aan om te activeren: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 

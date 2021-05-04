@@ -52,21 +52,21 @@ AndroidAPS werkt momenteel met
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
+- `Bepaalde oudere Medtronic pompen <../Configuration/MedtronicPump.html>`_ , je hebt hierbij een `extra communicatie apparaatje<../Module/module.html#ectra-communicatie-apparaatje-link>`_ nodig.
+-` Omnipod Eros <../Configuration/OmnipodEros.html>`_ , je hebt hiervoor een `extra communicatie apparaatje < ../Module/module.html#extra-communicatie-apparaatje-link>`_ nodig.
 
 **Andere pompen** die mogelijk in de toekomst geschikt zullen zijn vind je op de `Mogelijk toekomstige insulinepompen <../Getting-Started/Future-possible-Pump-Drivers.html>`_ pagina.
 
 Als je een pomp **particulier wilt kopen** dan is hier een overzicht van verschillende distributeurs in `deze spreadsheet <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_, eventuele aanvullingen op deze lijst zijn welkom.
 
-Additional communication device
+Extra communicatie apparaatje (Link)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-For old medtronic pumps an additional communication devide (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+Voor de Onmipod Eros en voor de oudere Medtronic pompen is een extra communicatie apparaatje (zgn Link) nodig om het radiosignaal van de pod/pomp naar het bluetooth signaal van de telefoon te "vertalen". Zorg ervoor dat je de juiste versie kiest, afhankelijk van jouw pomp.
 
    -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
    -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
    -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Informatie <mailto:getemalink@gmail.com>`__  
-   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
+   - |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
    -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Informatie <https://jameswedding.substack.com/>`__ - Niet getest
 
 **Dus wat is de beste pomp om te loopen met AndroidAPS?**
@@ -92,7 +92,7 @@ Dit is slechts een kort overzicht van alle compatibele CGMs/FGM met AndroidAPS. 
 * `Libre 2 <../Hardware/Libre2.html>`_: Werkt met xDrip+ (geen zender nodig), maar je moet je eigen gepatchte app bouwen.
 * `Libre 1 <../Hardware/Libre1.html>`_: Je hebt een zender nodig, zoals Bubble, Bluecon of MiaoMiao en de xDrip+ app.
 * `Eversense <../Hardware/Eversense.html>`_: Werkt tot nu toe alleen in combinatie met ESEL app en een gepatchte Eversense-App (werkt niet met Dana RS en LineageOS, maar DanaRS en Android of Combo en Lineage werken prima)
-* `Enlite (MM640G/MM630G) <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
+* ` Enlite (MM640G/MM630G) <../Hardware/MM640g.html>`_: vrij ingewikkeld met veel extra dingen!
 
 
 Nightscout

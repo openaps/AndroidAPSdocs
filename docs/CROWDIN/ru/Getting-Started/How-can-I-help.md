@@ -8,13 +8,13 @@
 
 ## Я могу написать код! Как принять участие?
 
-Ура! Look at the issues, ask in the discord channel, there is always a lot to do! Сначала выберите небольшую задачу и внесите первый вклад в общий проект! :)
+Ура! Изучите проблемы, поспрашивайте в канале gitter, там всегда много дел! Сначала выберите небольшую задачу и внесите первый вклад в общий проект! :)
 
 ## Я знаю систему и могу написать документацию!
 
 Отлично, это очень ценится и это хороший способ поучаствовать!
 
-* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
+* Канал для обсуждения AAPS находится здесь: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
 * Руководство, как предлагать описания на английском языке, можно найти здесь: [Как сделать PR](../make-a-PR.md). Другие языки переводятся только с английского языка и не могут редактироваться по соображениям целостности и последовательности.
 
 ## Я говорю на нескольких языках и хочу перевести приложение или документацию
@@ -26,4 +26,4 @@
 
 ## Есть ли другие способы помочь?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
+Навыки, необходимые нам: графический дизайн, дизайн UX, переводы, вики-редакторование или просто люди, готовые отвечать на простые вопросы в gitter & Facebook, чтобы дать разработчикам сосредоточиться на более сложных вещах.

@@ -36,7 +36,7 @@
 
 * Для того чтобы не было расхождений между приложениями, необходимо активировать `Отправлять отображаемое значение ГК`.
 
-* If you have also activated `Accept treatments` and "Enable local Broadcasts" in AndroidAPS, then xDrip+ will receive insulin, carbs and basal rate information from AndroidAPS and can estimate the hypo prediction etc. более точно.
+* Если вы также активировали `Принимать назначения (Accept treatments)` и трансляцию в AndroidAPS, то xDrip+ получит информацию об инсулине, углеводах и базальной скорости от AndroidAPS и сможет прогнозировать гипогликемию и т. д. более точно.
    
    ![основные настройки xDrip+ 3](../images/xDrip_Basic3.png)
 

@@ -149,7 +149,7 @@ Standardwert: 4 (sollte nur in Ausnahmefällen geändert werden und wenn du wei�
 
 AMA steht für “advanced meal assist” und ist eine OpenAPS-Funktion aus 2017 (Oref0). Nachdem du dir einen Bolus gegeben hast, darf AMA schneller eine höhere temporäre Basalrate wählen, vorausgesetzt du gibst die Kohlenhydrate verlässlich ein.
 
-Siehe auch: [OpenAPS-Dokumentation (englisch)](https://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features#advanced-meal-assist-or-ama).
+You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 ### Max IE/h, die als temporäre Basalrate gesetzt werden können (OpenAPS “max-basal”)
 

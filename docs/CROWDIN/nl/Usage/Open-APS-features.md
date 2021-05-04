@@ -6,7 +6,7 @@
 * Op basis van deze afwijkingen, bepaalt het algoritme hoe insulinegevoelig/resistent je bent.
 * De oref-implementatie in **OpenAPS** gebruikt een combinatie van 24 en 8 uur aan gegevens. Welk van die twee hegt meest gevoelig is, wordt gebruikt.
 * In versies voorafgaand aan AAPS 2.7 moest de gebruiker kiezen tussen 8 of 24 uur.
-* Van AAPS 2.7 zal Autosens in AAPS schakelen tussen een 24 en 8 uur venster voor het berekenen van de gevoeligheid. Hij kiest voor welke het gevoeligst is. 
+* Van AAPS 2.7 zal Autosens in AAPS schakelen tussen een 24 en 8 uur venster voor het berekenen van de gevoeligheid. Hij kiest voor de meest gevoelige. 
 * Als je voorheen oref1 gebruikte, zul je waarschijnlijk merken dat het systeem minder dynamisch omgaat met veranderingen, als gevolg van het gebruiken van 24 ofwel 8 uur.
 * Het plaatsen van een nieuw infuus of het doen van een profielwissel (zonder tijdsduur) zal de Gevoeligheidsdetectie ratio terugzetten naar 100%.
 * Gevoeligheidsdetectie past jouw basaal, KH ratio en ISF aan (daarmee bootst het na wat een profielwissel doet).
@@ -149,7 +149,7 @@ Standaardwaarde: 4 (mag niet worden gewijzigd, tenzij je het echt wilt en weet w
 
 AMA (Advanced Meal Assist), oftewel "geavanceerde maaltijdhulp" is een OpenAPS functie uit 2017 (oref0). Dankzij AMA kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd.
 
-Meer informatie vind je in de [documentatie van OpenAPS](https://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features#advanced-meal-assist-or-ama).
+Meer informatie vind je in de [documentatie van OpenAPS](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 ### Maximale E/uur dat een tijdelijke basaalstand kan toedienen (OpenAPS "max-basal")
 

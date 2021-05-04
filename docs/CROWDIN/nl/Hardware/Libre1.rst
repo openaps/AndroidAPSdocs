@@ -26,5 +26,5 @@ Libre met xDrip+
 Libre met Glimp
 ==================================================
 * Je hebt Glimp versie 4.15.57 of nieuwer nodig. Oudere versies worden op dit moment niet ondersteund.
-* If not already set up then download Glimp and follow instructions on `Nightscout <https://nightscout.github.io/uploader/setup/#glimp>`_.
+* Als het niet al is ingesteld, download Glimp en volg de instructies van `Nightscout <https://nightscout.github.io/uploader/setup/#glimp>`_.
 * Selecteer Glimp in Configurator (instellingen in AndroidAPS).

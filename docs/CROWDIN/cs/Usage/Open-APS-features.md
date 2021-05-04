@@ -149,7 +149,7 @@ Výchozí hodnota: 4 (neměňte, pokud si opravdu nejste jisti tím, co děláte
 
 AMA je zkratka pro "advanced meal assist", což je funkce OpenAPS od roku 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) umožňuje systému rychleji reagovat po bolusu na jídlo, pokud zadáte sacharidy správně.
 
-You can find more information in the [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features#advanced-meal-assist-or-ama).
+You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 ### Max. povolený bazál U/h (OpenAPS "max-basal")
 

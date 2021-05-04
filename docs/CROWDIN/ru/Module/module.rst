@@ -54,12 +54,22 @@ AndroidAPS **на данный момент** работает с
 - `Помпа Accu-Chek Insight <./Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `некоторые старые помпы Medtronic <./Configuration/MedtronicPump.html>`_ начиная с [предстоящей[ версии 2.4 (дополнительно необходимо: RileyLink/Gnarl аппаратное обеспечение, телефон на Android с чипом Bluetooth LE / BLE-chipset)
-- `Omnipod Eros <../Конфигуратор/OmnipodEros.html>`_ 
+- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
 
 **Другие помпы** которые потенциально могут работать с AndroidAPS перечислены на `Будущие (возможные) помпы <../Getting-Started/Future-possible-Pump-Drivers.html>`_ странице.
 
 Если вам нужно **купить частным образом** помпу, то вы можете найти дистрибьюторов в `этой таблице <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>_, делитесь информацией о вашем, если не указан.
+
+Additional communication device
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+For old medtronic pumps an additional communication devide (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+
+   -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
+   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
+   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
 
 **Какая же самая лучшая помпа для работы с AndroidAPS?**
 
@@ -134,3 +144,15 @@ xDrip +
 
 **Готово?**
 Если у вас собраны все компоненты AAPS (поздравляем!) или, по крайней мере, их достаточно, чтобы начать работу в режиме незамкнутого цикла, сначала следует прочитать `Описание Целей<../Usage/Objectives.html>`_ (Обзор) перед каждой новой целью и настроить `компоненты <./index.html#component-setup>`_.
+
+..
+	Image aliases resource for referencing images by name with more positioning flexibility
+
+
+..
+	Hardware and Software Requirements
+.. |EmaLink|				image:: ../images/omnipod/EmaLink.png
+.. |LoopLink|				image:: ../images/omnipod/LoopLink.png
+.. |OrangeLink|			image:: ../images/omnipod/OrangeLink.png		
+.. |RileyLink|				image:: ../images/omnipod/RileyLink.png
+.. |DiaLink|		      image:: ../images/omnipod/DiaLink.png

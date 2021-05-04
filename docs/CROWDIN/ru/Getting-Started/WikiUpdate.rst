@@ -1,6 +1,19 @@
 Обновления и изменения в документации
 **************************************************
 
+Апрель 2021
+==================================================
+* Список устройств связи <../Module/module.html#additional-communication-device>`_ для помп Omnipod и Medtronic
+* прогнозирование AAPS в ` Nightscout <../Instaling-AndroidAPS/Nightscout.html#manual-nightscout-setup> ` _
+
+Март 2021
+==================================================
+* Dev communication переместились с gitter на `discord <https://discord.gg/4fQUWHZ4Mw>` _
+
+Февраль 2021
+==================================================
+* Новая навигационная панель и " переключатель языка <../changelanguage.html> ` _
+
 Январь 2021
 ==================================================
 * ` Вкладка Действия <../Getting-Started/Screenshots.html#action-tab> ` _-подробнее на странице 'экраны AndroidAPS'
