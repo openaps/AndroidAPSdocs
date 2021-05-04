@@ -153,7 +153,7 @@ Zo niet, loop dan de telefooninstellingen / instellingen in de gepatchte app een
 Nadat je de sensor succesvol aan de gepatchte app hebt verbonden, ga je naar xDrip+ en selecteer "Sensor Stop" en "Alleen kalibratie verwijderen". Hiermee laat je aan xDrip+ weten dat er een nieuwe sensor glucosewaardes gaat doorgeven. xDrip+ weet nu dat de oude kalibraties niet meer geldig zijn en zal ze verwijderen. Tijdens deze stap worden alleen de kalibraties 'schoongeveegd' in xDrip+, er vindt geen enkele communicatie plaats tussen de Libre2 sensor en xDrip+. Het is niet nodig om de sensor te starten in xDrip+.
 
 .. image:: ../images/Libre2_GapNewSensor.png
-  :alt: xDrip+ missing data when changing Libre 2 sensor
+  :alt: xDrip+ ontbrekende gegevens bij wisselen van Libre 2 sensor
 
 Kalibratie
 --------------------------------------------------
