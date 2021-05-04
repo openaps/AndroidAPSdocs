@@ -67,28 +67,28 @@ In september 2020 lanceerde het 'OPEN'-project een `enquête <https://survey.ope
 
 `OpenAPS Data Commons <https://www.openhumans.org/activity/openaps-data-commons/>`_
 ---------------------------------------------------------------------------------------  
-The OpenAPS Data Commons was created to enable a simple way to share data sets from the DIYAPS community for research. The data is shared both with traditional researchers who will create traditional research studies, and with groups or individuals from the community who want to review data as part of their own research projects. The OpenAPS Data Commons uses the 'Open Humans' platform to enable people to easily upload and share their data from DIYAPS including AndroidAPS, Loop, and OpenAPS. 
+Om gegevenssets van de DIYAPS gemeenschap gemakkelijk beschikbaar te maken voor onderzoek is de OpenAPS Data Commons in het leven geroepen. De gegevens kunnen zowel worden gebruikt door traditionele onderzoekers die wetenschappelijke studies uitvoeren, als door groepen of individuen uit de gemeenschap die gegevens willen bekijken als onderdeel van hun eigen onderzoek. De OpenAPS Data Commons maakt gebruikt van het 'Open Humans'-platform. Via dit platform kunnen alle mensen die gebruik maken van DIYAPS (AndroidAPS, Loop of OpenAPS) hun gegevens uploaden en beschikbaar stellen. 
 
-You can get your data into Open Humans via one of three ways: 
+Je kunt jouw gegevens naar Open Humans uploaden op één van deze drie manieren: 
 
-1. use the AndroidAPS uploader option to get your data into Open Humans
-2. use the Nightscout Data Transfer to get your data into Open Humans
-3. manually upload data files into Open Humans. 
+1. Gebruik de Open Humans uploader functie die is ingebouwd in de AndroidAPS app
+2. Gebruik Nightscout Gegevensoverdracht (Data Transfer)
+3. Upload jouw gegevensbestanden handmatig naar Open Humans. 
 
-Once you've created an account and gotten your data flowing into Open Humans, make sure to also join the OpenAPS Data Commons in order to donate your data for research if you choose.
+Nadat je een account hebt aangemaakt en je gegevens in Open Humans hebt staan, moet je je gegevens ook nog delen met de OpenAPS Data Commons om jouw gegevens beschikbaar te maken voor onderzoek.
 
 Gebruiksvoorwaarden
 ========================================
-This is an open source tool that will copy your data to `Open Humans <https://www.openhumans.org>`_. We retain no rights to share your data with third parties without your explicit authorization. The data the project and app receive are identified via a random user ID and will only be securely transmitted to an Open Humans account with your authorization of that process.
-You can stop uploading and delete your upload data at any time via `www.openhumans.org <https://www.openhumans.org>`_. Beware that some projects that receive data may not support this.
+Dit is een open source tool die jouw gegevens zal kopiëren naar `Open Humans <https://www.openhumans.org>`_. We behouden geen rechten om je gegevens met derden te delen zonder je uitdrukkelijke toestemming. De gegevens die het project en de app ontvangen worden opgeslagen onder een willekeurig gegenereerde gebruikers-ID en zullen alleen veilig worden verzonden naar een Open Humans-account met jouw toestemming voor dat proces.
+Je kunt op elk gewenst moment stoppen met uploaden en jouw upload gegevens verwijderen via `www.openhumans.org <https://www.openhumans.org>`_. Houd er rekening mee dat sommige projecten die gegevens ontvangen dit niet ondersteunen.
 
-Also see `Open Humans Terms of Use <https://www.openhumans.org/terms/>`_.
+Zie ook de gebruikersvoorwaarden (Terms of Use) van `Open Humans <https://www.openhumans.org/terms/>`_.
 
-Data Privacy
+Gegevensbescherming
 ========================================
-Open Humans takes care of protecting your privacy by assigning a numerical ID to you for each project. This allows projects to recognize but no identify you. The Application ID uploaded by AndroidAPS is similar and only helps administrate the data. More information can be found here:
+Open Humans beschermt jouw privacy door voor elk project een numerieke ID aan jou toe te wijzen. Hierdoor kunnen projecten jou herkennen, maar ze kunnen je niet identificeren. Het Application ID geüpload door AndroidAPS is vergelijkbaar en helpt alleen de gegevens te beheren. Meer informatie vind je hier:
 
-* `Open Humans Data Use Policy <https://www.openhumans.org/data-use/>`_
+* `Open Human Data Gebruik Beleid <https://www.openhumans.org/data-use/>`_
 * `Open Humans GDPR <https://www.openhumans.org/gdpr/>`_
 
 
