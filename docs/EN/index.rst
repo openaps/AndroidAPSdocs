@@ -179,3 +179,86 @@ For more details, please read on here.
 	* All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
 
 	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_
+	Image size
+If using images please use reasonable sizes. Screenshot images should be 250 pixels wide.
+
+.md files
+Text format
+bold: **text**
+italic: *text*
+Headline 1: # headline
+Headline 2: ## headline
+Headline 3: ### headline
+Images
+images: ![alt text](../images/file.png)
+Links
+external link: [alt text](www.url.tld)
+internal link to .md page: [alt text](../folder/file.md)
+internal link to .rst page: [alt text](../folder/file.rst)
+internal link to headline: [alt text](../folder/file#headline)
+.rst files
+Text format
+bold: **text**
+
+italic: *text*
+
+Headline 1:
+
+headline
+*****
+
+Headline 2:
+
+headline
+=====
+
+Headline 3:
+
+headline
+-----
+
+Images
+images:
+
+.. image:: ../images/modules.png
+:alt: alt text
+
+Links
+external link: `alt text <www.url.tld>_`
+internal link to .md page: `alt text <../folder/file.html>_`
+internal link to .rst page: `alt text <../folder/file.html>_`
+internal link to headline: `alt text <../folder/file.html#headline>_`
+Internal links
+If you want to set an internal link within the AndroidAPS documentation, please only use relative links. Only this will make the link work in the other languages (Czech, German...) as well.
+
+In files with .md ending:
+[text](../Usage/Test.md) will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
+[text](./Usage/Test.md) will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
+To set the link to an anchor (i.e. a headline) you have to omit the file extension
+[text](../Usage/Test#anchor) instead of [text](../Usage/Test.md#anchor)
+In files with .rst ending:
+`Text <../Usage/Test.hmtl>`_ will set a hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .html.
+
+Except you are in a toctree. Then you have to write it like this: Text <../Usage/Test.md> with .md or .rst (not .html).
+
+Text <./Usage/Test.md> will set a hyperlink from where you are into /Usage.
+
+To set the link to an anchor (i.e. a headline) you have to add the anchor to the link
+
+[text](../Usage/Test.html#anchor) instead of [text](../Usage/Test#anchor)
+Adding multiple images to documentation
+If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
+
+As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than “Example batch images upload.png”.
+Please use reasonable sizes. Screenshot images should be 250 pixels wide.
+You can upload images in batches easily by:
+Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace “openaps” in the URL with your github username)).
+Click in the upper right corner where it says “Upload files”
+Drag and drop your images into the screen
+Commit these to your branch
+Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
+To see examples of how to add the images, you can look at the “raw” code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the correct code for the page type you are on (.md or .rst). The main thing is to have a plain text description, followed by a link with a relative path to the image, like this:
+For .md pages: ![Example of uploading images in batches](../images/Example_batch_images_upload.png) (That code is exactly how the image below is embedded to be displayed.)
+For .rst pages: .. image:: ../images/Example_batch_images_upload.png
+:alt: Example of uploading images in batches
+
