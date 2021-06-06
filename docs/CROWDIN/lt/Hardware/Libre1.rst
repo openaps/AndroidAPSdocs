@@ -5,7 +5,7 @@ Norint naudoti jūsų Libre kaip NGJ, kuris gauna GK rodiklius kas 5 minutes, pi
 
 * MiaoMiao-skaitytuvas (versija 1 ar 2) `https://www.miaomiao.cool/ <https://www.miaomiao.cool/>`_
 * Blucon Nightrider `https://www.ambrosiasys.com/our-products/blucon <https://www.ambrosiasys.com/our-products/blucon/>`_
-* Bubble `https://bubbleshop.eu/ <https://bubbleshop.eu/>`_
+* Bubble `https://bubbleshop.eu/ <https://bubbleshop.eu/>`_  or for Russian users  `https://vk.com/saharmonitor/ <https://vk.com/saharmonitor/>`_  
 
 Be to, galima naudoti specialų laikrodį Sony Smartwatch 3, kuris turi NFC lustą, kurį galima suaktyvinti ir kuris gali būti naudojamas kaip NFC skaitytuvas. Tačiau pirmiau minėti NFC Bluetooth siųstuvams siūlo ne tokį sudėtingą sprendimą ir juo naudosis dauguma norinčių naudoti Libre 1 kaip nuolatinį gliukozės jutiklį.
 
