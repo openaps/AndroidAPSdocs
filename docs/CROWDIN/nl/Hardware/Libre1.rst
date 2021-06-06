@@ -5,7 +5,7 @@ Om je Libre te gebruiken als een CGM die elke 5 minuten nieuwe BG waarden krijgt
 
 * MiaoMiao (versie 1 of 2) `https://www.miaomiao.cool/ <https://www.miaomiao.cool/>`_
 * Blucon Nightrider `https://www.ambrosiasys.com/our-products/blucon/ <https://www.ambrosiasys.com/our-products/blucon/>`_
-* Bubble `https://bubbleshop.eu/ <https://bubbleshop.eu/>`_
+* Bubble `https://bubbleshop.eu/ <https://bubbleshop.eu/>`_  or for Russian users  `https://vk.com/saharmonitor/ <https://vk.com/saharmonitor/>`_  
 
 Bovendien is het mogelijk om een specifieke smartwactch te gebruiken, de Sony Smartwatch 3. Deze heeft een NFC chip die de gegevens rechtstreeks uit jouw Libre kan ontvangen. Deze smartwatch moet dan wel permanent tegen de Libre aan zitten, bijvoorbeeld dmv een armband of tape. Al zijn de hierboven genoemde NFC naar Bluetooth-adapters wel een stuk kleiner en daardoor handiger in gebruik, de meeste mensen kiezen dan ook voor één van die adapters.
 
