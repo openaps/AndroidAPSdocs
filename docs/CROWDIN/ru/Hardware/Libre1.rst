@@ -5,7 +5,7 @@ Freestyle Libre 1
 
 * MiaoMiao Reader (версия 1 или 2) `https://www.miaomiao.cool/ <https://www.miaomiao.cool/>`_
 * Blucon Nightrider `https://www.ambrosiasys.com/our-products/blucon/ <https://www.ambrosiasys.com/our-products/blucon/>`_
-* Bubble `https://bubbleshop.eu/ <https://bubbleshop.eu/>`_
+* Bubble `https://bubbleshop.eu/ <https://bubbleshop.eu/>`_  or for Russian users  `https://vk.com/saharmonitor/ <https://vk.com/saharmonitor/>`_  
 
 Кроме того, можно использовать специальные часы, Sony Smartwatch 3, имеющие чип NFC, который можно включить и использовать как коллектор NFC. Однако перечисленные выше пользовательские NFC адаптеры Bluetooth предлагают менее сложное решение и будут использоваться большинством желающих использовать свой Libre 1 в качестве CGM.
 
