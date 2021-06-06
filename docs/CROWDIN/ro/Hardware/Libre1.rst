@@ -5,7 +5,7 @@ Pentru a folosi senzorul Libre ca un CGM care primeste valori la fiecare 5 minut
 
 * MiaoMiao Reader (versiunea 1 sau 2) ` https: //www.miaomiao.cool/ <https://www.miaomiao.cool/>` _
 * Blucon Nightrider `https://www.ambrosiasys.com/our-products/blucon/ <https://www.ambrosiasys.com/our-products/blucon/>`_
-* Bubble ` https: //bubleshops.eu/ <https://bubbleshop.eu/>` _
+* Bubble `https://bubbleshop.eu/ <https://bubbleshop.eu/>`_  or for Russian users  `https://vk.com/saharmonitor/ <https://vk.com/saharmonitor/>`_  
 
 In plus, este posibil sa poți utiliza un anumit ceas inteligent, Sony Smartwatch 3 care are un cip NFC ce poate fi activat și utilizat ca un colector NFC. Cu toate acestea, adaptoarele personalizate NFC - Bluetooth listate anterior reprezinta o soluție mai putin complexa și sunt utilizare de majoritatea celor care vor sa folosească Libre 1 ca CGM.
 
