@@ -13,9 +13,9 @@ You can deny public access to your Nightscout site by using [authentication role
 #### NS upload only
 
 Option NS_UPLOAD_ONLY has been forced ON for all users with 2.8.1 or later. You can only see and configure it by enabling engineering mode. If you want to control AAPS with NSClient over your Nightscout page you need to enable it. Put a file "engineering__mode" (with double _) to
- /storage/emulated/0/Android/data/info.nightscout.androidaps/files and restart AAPS then follow the steps beyond
+ /storage/emulated/0/Android/data/info.nightscout.androidaps/files and restart AAPS. Then follow the steps beyond
 
-In AAPS Versions before 2.8.1 there is an NS upload only (no sync) function in AAPS settings and off by default. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs. If you are using [NS profile](../Configuration/Config-Builder#ns-profile) the profiles will be synced between AAPS and Nightscout despite the setting "upload only".
+In AAPS Versions prior to 2.8.1 there is an NS upload only (no sync) function in AAPS settings and off by default. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs. If you are using [NS profile](../Configuration/Config-Builder#ns-profile) the profiles will be synced between AAPS and Nightscout despite the setting "upload only".
 
 * Tap 3-dot menu on top right corner on your AAPS homescreen.
 * Select "Preferences".
