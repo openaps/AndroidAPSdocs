@@ -106,7 +106,7 @@ Diaconn G8 Insulin pump option setting
 
 Extended Bolus function
 ------------------------
-- As long as you operate in **open mode** the extended bolus function is activated.
+- If you use extended bolus it will disable closed loop.
 
 .. image:: ../images/DiaconnG8/DiaconnG8_15.jpg
  :alt: Extended bolus
