@@ -16,7 +16,7 @@ Puteţi instala aplicaţia AndroidAPS pe ceasuri **cu Wear OS**. Versiunea de ce
 
 Pentru a construi versiunea Wear OS pentru AAPS trebuia să selectaţi varianta build "fullRelease" când se [crează APK](../Installing-AndroidAPS/Building-APK.md) (sau "pumpRelease" care vă va permite să controlaţi de la distanţă pompa dar fără looping).
 
-You can then update or install the watchface via the PlayStore on your watch.
+From March 2021 you need to sideload AAPS onto the watch, it is no longer accessible via the watch's Google Play Store. You can sideload using [Wear Installer](https://youtu.be/8HsfWPTFGQI) which you will need to install on both your watch and phone. Once you have selected AndroidAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
 
 ### Configurare pe telefon
 
@@ -236,10 +236,9 @@ Deoarece nu putem face compromisuri în comunicare (avem nevoie de date actualiz
 
 ## Depanarea aplicației de pe ceas:
 
-* Pentru Android Wear 2.0, fața de ceas nu se mai instalează în mod automat. Trebuie să mergeți în magazinul de aplicații de pe ceas (nu cel din telefon), să căutați această față în categoriile de aplicații instalate pe telefon și apoi să o activați. De asemenea, activați și opțiunea de auto updatare. 
-* Câteodată este de folos să resincronizați aplicațiile cu ceasul, deoarece se poate să apară îngreunări în funcționare: Android Wear > Iconiță roată dințată > Numele ceasului > Resync apps.
-* Activați ADB debugging în Developer Options (de pe ceas), conectați ceasul prin intermediul unui USB și porniți aplicația de ceas cel puțin o dată în Android Studio.
-* Dacă Auxiliarele nu actualizează datele - verificaţi mai întâi dacă fețele de ceas AAPS funcţionează.
+* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
+* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
+* If Complications does not update data - check first if AAPS watchfaces work at all.
 
 ### Sony Smartwatch 3
 
