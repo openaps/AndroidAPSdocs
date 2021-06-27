@@ -10,21 +10,23 @@
 
 **Требования к оборудованию для AAPS:** По-видимому, никаких. В помпе есть блутус-связь.
 
-**Комментарии:** Мы рассматриваем разработку Omnipod DASH, но на данный момент Dash еще не доступна в Европе (где находится большинство разработчиков AAPS) и что протокол коммуникации неизвестен. Мы попробуем разкомпилировать официальное приложение Dash APK, чтобы определить, как работает коммуникация и на этой основе выполним реализацию проекта. За тем, что происходит, следите здесь: [DashAAPS](https://github.com/andyrozman/DashAAPS/projects/1), но не ожидайте, что решение будет найдено быстро. Это только Подтверждение Концепции (до тех пор, пока не завершится Этап 2).
+**Comments:** Group of developers is looking into protocol (by reverse engineering original app) and into solution for AAPS, now that pump has become available all over world. There are no estimations yet, when this will be available, or even when first testing will begin. If you are interested in progress, or are willing to help, group can be reachable on WeAreNotWaiting discord. Mention your interest in androidaps group and someone will give you more info.
 
 * * *
 
 ### Помпа Ypsomed ([Домашняя страница](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Статус пригодности к реализации:** Версии 1 - 1.5 (2Q/2018) не являются кандидатами для ИПЖ. Хотя они имеют BT-коммуникации, похоже что связь ограничена (только в одном направлении: помпа-приложение). Компания планирует усовершенствовать помпу для поддержки удаленного болюса (обновление запланировано на конец 2021 года), а позже они планируют добавить другие функции, необходимые для создания Loop. Их официальное приложение поддержит это в будущем (запланировано на 2022 год точная дата не известна). Так как они планируют иметь собственную систему ИПЖ, см эту [страницу](https://www.mylife-diabetescare.com/en/loop-program.html), они не будут предлагать никакой поддержки самодеятельным разработчикам, по крайней мере пока.
+**Статус пригодности к реализации:** Версии 1 - 1.5 (2Q/2018) не являются кандидатами для ИПЖ. While they do have BT communication, communication is very limited and uni directional: Pump->App. By end of 2021, it is planned that company will release, new version nicknamed DOSE (1.6), which will allow setting bolus and TBR from their App. They plan to implement their own Loop in 2022, with their own application. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
 
-**Требования к оборудованию для AAPS:** По-видимому, никаких. В помпе есть блутус-связь.
+**Hardware requirement for AAPS:** None. В помпе есть блутус-связь.
+
+**Comments:** There are currently 2 groups working on driver, so after new version is released, we can expect to have AAPS support soon thereafter. One group is being supported by YpsoMed and helping with Medical trials that are happening in Australia, 2nd is working independently by reverse engineering original app.
 
 * * *
 
 ### Kaleido ([Домашняя страница](https://www.hellokaleido.com/))
 
-**Статус реализации:** В настоящее время не поддерживается какой-либо системой ИПЖ. Помпа является кандидатом на работу с ИПЖ, но поскольку протокол ее работы неизвестен, поддержка появится не очень скоро.
+**Статус реализации:** В настоящее время не поддерживается какой-либо системой ИПЖ. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **Требования к оборудованию для AAPS:** По-видимому, никаких. В помпе есть блутус-связь.
 
@@ -32,37 +34,37 @@
 
 ### Medtrum A6/P6/C6 ([Домашняя страница](https://www.medtrum.com/P6.html))
 
-**Статус пригодности:** Является кандидатом для ИПЖ. Компания имеет собственную ограниченную систему полуцикла (A6). Контролируется через приложение iPhone. Приложения для Android пока нет.
+**Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
 
-**Требования к оборудованию для AAPS:** По-видимому, никаких. Похоже, что блутус-связь имеется.
+**Требования к оборудованию для AAPS:** По-видимому, никаких. It seems to be BT enabled.
 
 * * *
 
 ### EOFLOW ([Домашняя страница](http://www.eoflow.com/eng/main/main.html))
 
-**Статус пригодности:** Является кандидатом для ИПЖ. Пульт управления фактически является модифицированным Android-устройством. (В настоящее время помпа доступна только в Корее).
+**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
 
-**Требования к оборудованию для AAPS:** По-видимому, никаких. Похоже, что блутус-связь имеется.
+**Требования к оборудованию для AAPS:** По-видимому, никаких. It seems to be BT enabled.
 
 * * *
 
 ### ACCU-Chek Solo ([Домашняя страница](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Статус пригодности:** Является кандидатом для ИПЖ. Помпа начинает продаваться в конце 2018 года в отдельных странах ЕС. По слухам, у него есть приложение для Android на специальном управляющем устройстве.
+**Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app on special controler device for control.
 
-**Требования к оборудованию для AAPS:** По-видимому, никаких. Похоже, что блутус-связь имеется.
+**Требования к оборудованию для AAPS:** По-видимому, никаких. It seems to be BT enabled.
 
 ### Medtronic Bluetooth
 
-**Комментарий:** Это помпа, которая выйдет в ближайшие несколько лет и, как планируется, будет иметь поддержку в ПО Tidepool Loop ([см. эту статью](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration)).
+**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
 
 ### Инсулиновая помпа Willcare ([ Домашняя страница ](http://en.shinmyungmedi.com))
 
-** Статус пригодности: ** В настоящий момент не является кандидатом, но их сотрудники связывались с нами, и они заинтересованы в том, чтобы сделать помпу пригодной для ИПЖ (на данный момент в помпе отсутствуют команды get/set profile).
+**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
 
-**Требования к оборудованию для AAPS:** Никаких. Похоже, что блутус-связь имеется.
+**Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
-** Комментарии: ** Поскольку компания заинтересована в интеграции с AAPS, они могут сами предпринять необходимые действия.
+**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
 
 * * *
 
@@ -70,11 +72,11 @@
 
 ### Помпа Cellnovo ([см. businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
-**Статус реализации:** В настоящее время не поддерживается какой-либо системой ИПЖ. Помпа является кандидатом на работу с ИПЖ, но поскольку протокол ее работы неизвестен, поддержка появится не очень скоро.
+**Статус реализации:** В настоящее время не поддерживается какой-либо системой ИПЖ. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **Требования к оборудованию для AAPS:** По-видимому, никаких. В помпе есть блутус-связь.
 
-**Примечание о товаре:** Похоже, что компания решила выйти из помпового бизнеса. Подробнее в этой [статье](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
 ## Помпы, неспособные к работе в качестве компонента ИПЖ
 
@@ -82,45 +84,45 @@
 
 **Статус пригодности:** Не пригодна.
 
-Некоторое время назад у них имелась микропрограмма /прошивка под названием T:AP (упоминается в этой  статье <0>, которая могла бы использоваться в цикле ИПЖ (прошивка больше не доступна, поскольку помпа была обновлена до x2), эта версия не была предназначена для коммерческого использования, только для экспериментов (исследовательские проекты). Я разговаривал с одним из директоров компании и он заверил меня, что ПО помпы Tandem никогда не будет открыто, но что они создали свою собственную замкнутую систему, которую они называют Control-IQ (я думаю, что она уже доступна в США, и должна быть доступна в 2020 году в Европе).</p> 
+While ago they had firmware called T:AP (mentioned in this [article](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), which could be used in loop (its no longer available, since pump was upgraded to x2), but that was not intended for commercial use, just for experimental use only (research projects). I talked with one of directors of company and he assured my that Tandem pump will never be open, but they have created their own closed loop system, which they are calling Control-IQ (I think it is already available in USA, and should be available in 2020 in Eu).
 
 * * *
 
 ### Animas Vibe
 
-**Статус пригодности:** Не пригодна. Нет возможности дистанционного управления. **Примечание:** помпа снята с продажи. Компания вышла из бизнеса (J&J).
+**Статус пригодности:** Не пригодна. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
 
 * * *
 
 ### Animas Ping
 
-**Статус пригодности:** Не пригодна. Она имеет возможность подачи болюса, но не временного базала ТБР. **Примечание** Была снята с продажи после выхода Animas Vibe.
+**Статус пригодности:** Не пригодна. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
 
 ## Требования к пригодности помп для ИПЖ
 
-**Предварительные условия**
+**Prerequisite**
 
 - Помпа должна поддерживать дистанционное управление. (блутус, радио и т. п.)
 - Протокол взломан/документирован/и т. д.
 
-**Минимальные требования**
+**Minimal requirement**
 
 - Устанавливать временную скорость базала
 - Получать сведения о состоянии
 - Отменять временную базальную скорость
 
-**Для oref1(SMB) или болюсов:**
+**For oref1(SMB) or Bolusing:**
 
 - Настраивать подачу болюса
 
-**Хорошо иметь**
+**Good to have**
 
 - Отмену болюса
 - Получать профиль базала (почти требование)
 - Устанавливать профиль базала (хорошо иметь)
 - Чтение истории 
 
-**Другое (не обязательно, но желательно)**
+**Other (not required but good to have)**
 
 - Настраивать пролонгированный болюс
 - Отменять пролонгированный болюс
@@ -131,4 +133,4 @@
 
 ### Поддержка других помп
 
-Если у вас есть какие-либо другие помпы, для которых вы хотите увидеть статус, пожалуйста, свяжитесь со мной (@andyrozman на gitter).
+If you have any other pumps you would like to see status on, please contact us on discord.

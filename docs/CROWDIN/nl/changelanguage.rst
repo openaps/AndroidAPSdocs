@@ -8,14 +8,14 @@ Taal aanpassen
    :width: 350
    :alt: Open taal menu
 
-Or just click on one of the following languages:
+Of klik op een van de volgende talen:
 
-* `English <https://androidaps.readthedocs.io/en/latest/>`_
-* `Czech <https://androidaps.readthedocs.io/cs/latest/>`_
-* `Dutch <https://androidaps.readthedocs.io/nl/latest/>`_
-* `German <https://androidaps.readthedocs.io/de/latest/>`_
-* `Greek <https://androidaps.readthedocs.io/el/latest/>`_
-* `Korean <https://androidaps.readthedocs.io/ko/latest/>`_
-* `Lithuanian <https://androidaps.readthedocs.io/lt/latest/>`_
-* `Russian <https://androidaps.readthedocs.io/ru/latest/>`_
-* `Spanish <https://androidaps.readthedocs.io/es/latest/>`_
+* `Engels <https://androidaps.readthedocs.io/en/latest/>`_
+* `Tsjechisch <https://androidaps.readthedocs.io/cs/latest/>`_
+* `Nederlands <https://androidaps.readthedocs.io/nl/latest/>`_
+* `Duits <https://androidaps.readthedocs.io/de/latest/>`_
+* `Grieks <https://androidaps.readthedocs.io/el/latest/>`_
+* `Koreaans <https://androidaps.readthedocs.io/ko/latest/>`_
+* `Litouws <https://androidaps.readthedocs.io/lt/latest/>`_
+* `Russisch <https://androidaps.readthedocs.io/ru/latest/>`_
+* `Spaans <https://androidaps.readthedocs.io/es/latest/>`_

@@ -52,21 +52,21 @@ AndroidAPS fonctionne **actuellement** avec
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
+- `certaines anciennes pompes Medtronic <../Configuration/MedtronicPump.html>`_ de la version 2.4 à venir (`dispositif de communication supplémentaire <../Module/module#peripherique-de-communication-additionnel>`_ nécessaires)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`dispositif de communication supplémentaire <../Module/module#peripherique-de-communication-additionnel>`_ nécessaire)
 
 **D'autres pompes**, qui peuvent potentiellement fonctionner avec AndroidAPS, sont listées sur la page `Futures pompes (possible) <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
 Si vous avez besoin d'acheter **à titre privé** une pompe alors vous pouvez trouver différents distributeurs dans `cette feuille de calcul <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_, veuillez s'il vous plaît partager les détails de la vôtre si elle n'est pas déjà listée.
 
-Additional communication device
+Périphérique de communication additionnel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-For old medtronic pumps an additional communication devide (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+Pour les anciennes pompes medtronic, un périphérique de communication supplémentaire (en plus de votre téléphone) est nécessaire pour "traduire" le signal radio de la pompe vers le Bluetooth. Assurez-vous de choisir la bonne version en fonction de votre pompe.
 
    -  |OrangeLink|  `Site internet OrangeLink <https://getrileylink.org/product/orangelink>`_    
    -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
    -  |EmaLink|  `Site internet Emalink <https://github.com/sks01/EmaLink>`__ - `Contact <mailto:getemalink@gmail.com>`__  
-   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
+   - |DiaLink| DiaLink - `Informations de contact <mailto:Boshetyn@ukr.net>`__     
    -  |LoopLink|  `Site internet LoopLink <https://www.getlooplink.org/>`__ - `Contact <https://jameswedding.substack.com/>`__ - Non testé
 
 **Alors quelle est la meilleure pompe pour boucler avec AndroidAPS ?**
@@ -144,7 +144,7 @@ Vous pouvez continuer à lire la documentation ici présente, entrer en contact 
 Si vous avez tous vos composants AAPS ensemble (bravo !) ou au moins suffisamment pour pouvoir démarrer en mode Boucle Ouverte, vous devez d'abord lire la page `Objectifs <../Usage/Objectives.html>`_ avant chaque nouvel objectif et configurer vos `composants <../index.html#configuration-des-composants>`_.
 
 ..
-	Image aliases resource for referencing images by name with more positioning flexibility
+	Alias des ressources d'images pour référencer les images par leur nom avec plus de flexibilité de positionnement
 
 
 ..

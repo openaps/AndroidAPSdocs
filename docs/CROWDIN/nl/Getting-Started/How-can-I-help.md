@@ -8,14 +8,14 @@ Ontwikkelaars zijn ouders, verzorgers, partners en mensen met diabetes ze ontwik
 
 ## Ik kan programmeren! Hoe doe ik mee?
 
-Ja! Look at the issues, ask in the discord channel, there is always a lot to do! Pak een kleine taak als eerste en maak je eerste Pull Request! :)
+Top! Stort je op de problemen ('issues') in GitHub, vraag rond in het discord kanaal, er is altijd veel te doen. Pak een kleine taak als eerste en maak je eerste Pull Request! :)
 
-## Ik ken de AAPS-oplossing en kan documentatie schrijven!
+## Ik ken het AAPS-systeem en kan documentatie schrijven!
 
 Mooi, dit wordt zeer gewaardeerd en is een prima manier om je steentje bij te dragen #payitforward.
 
-* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* Een instructie hoe je Commits op de Engelse wiki kunt doen: [How to make a PR](../make-a-PR.md). Andere talen worden alleen vertaald uit het Engels en worden verder niet bewerkt, om de wiki consistent te houden.
+* Het discord kanaal voor de documentatie kun je hier vinden: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
+* Een instructie hoe je aanpassingen ('Commits') aan de Engelse documentatie kunt doen: [How to make a PR](../make-a-PR.md). Veranderingen aan de documentatie worden altijd in het Engels gedaan, vervolgens worden ze vertaald naar andere talen. Er worden in andere talen geen veranderingen gemaakt aan documentatie zelf, alleen vertaald uit het Engels, om de documentatie consistent te houden.
 
 ## Ik spreek meedere talen en wil de AAPS applicatie of documentatie vertalen.
 
@@ -26,4 +26,4 @@ Meld je aan bij Crowdin, kies je taal en wacht op autorisatie door een admin en 
 
 ## Zijn er andere manieren om te helpen?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
+Als je iets kunt betekenen in grafisch ontwerp, UI ontwerp, vertalen, documenten updaten of simpelweg andermans vragen beantwoorden in discord & Facebook dan help je de ontwikkelaars enorm, daarmee zorg je ervoor dat zij zich kunnen concentreren op ingewikkeldere dingen. Alle inzet wordt gewaardeerd #payitforward.

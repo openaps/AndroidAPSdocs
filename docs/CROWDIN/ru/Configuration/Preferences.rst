@@ -52,30 +52,30 @@
   **Защита биометрией не работает на телефонах OnePlus. Это известная проблема OnePlus. **
 
 * Откройте настройки, нажав три точки меню в верхней правой части главного экрана
-* Click triangle below "General"
-* Click "Master-Password"
-* Enter password, confirm password and click ok.
+* Нажмите на треугольник под «Общим»
+* Нажмите "Главный пароль"
+* Введите пароль, подтвердите пароль и нажмите кнопку Ok.
 
-  .. image:: ../images/MasterPW.png
-    :alt: Set master password
+  .. изображение:: ../images/MasterPW.png
+    :alt: Установа мастер-пароля
   
-Settings protection
+Защита настроек
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Protect your settings with a password or phone's biometric authentication (i.e. `child is using AAPS <../Children/Children.html>`_).
-* Custom password should be used if you want to use master password just for securing `exported settings <../Usage/ExportImportSettings.html>`_.
-* If you are using a custom password click on line "Settings password" to set password as described `above <../Configuration/Preferences.html#master-password>`__.
+* Защитите ваши настройки с помощью пароля или биометрической аутентификации телефона (напр. ` AAPS используется ребенком <../Children/Children.html> ` _).
+* Если вы хотите использовать главный пароль только для защиты ` экспортируемых параметров <../Usage/ExportImportSettings.html> ` _, следует использовать пользовательский пароль.
+* Если вы хотите применить пользовательский пароль, щелкните по строке "Настройки пароля", чтобы задать пароль, как описано `выше <../Configuration/Preferences.html#master-password> ` __.
 
-  .. image:: ../images/Pref2020_Protection.png
-    :alt: Protection
+  .. изображение:: ../images/Pref20_Protection.png
+    :alt: Защита
 
-Application protection
+Защита приложения
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If app is protected you must enter password or use phone's biometric authentication to open AAPS.
-* App will shut down immediately if wrong password is entered - but still run in the background if it was previously opened successfully.
+* Если приложение защищено, вследует ввести пароль или использовать биометрическую идентификацию телефона для открытия AAPS.
+* Приложение будет немедленно выключано, если введен неправильный пароль, но будет выполняется в фоновом режиме, если было штатно открыто до этого.
 
-Bolus protection
+Защита болюсов
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Bolus protection might be useful if AAPS is used by a small child and you `bolus via SMS <../Children/SMS-Commands.html>`_.
+* Защита от болюсов может быть полезной, если AAPS используется маленьким ребенком, а вы подаете болюсы через SMS <../Children/SMS-Commands.html> ` _.
 * In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter master password.
 
   .. image:: ../images/Pref2020_PW.png

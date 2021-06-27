@@ -149,7 +149,7 @@ Default value: 4 (shouldn’t be changed unless you really need to and know, wha
 
 AMA, la forma abreviada de "asistencia avanzada para comidas" es una función OpenAPS a partir de 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) permite que el sistema sea más rápido al ejecutar una alta tasa basal temporal después de un bolo de comida si ingresa a los carbohidratos de forma fiable.
 
-You can find more information in the [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features#advanced-meal-assist-or-ama).
+You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 ### Max U/h una basal temporal puede establecerse en (OpenAPS “max-basal")
 

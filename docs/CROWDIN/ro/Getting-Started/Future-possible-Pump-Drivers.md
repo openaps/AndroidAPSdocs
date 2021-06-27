@@ -10,15 +10,17 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
-**Comments:** We are looking into development of Omnipod DASH, but problem at the moment is, that Dash is not yet available in Europe (where most of AAPS developers are) and that communciation protocol is unknown. We will try to reverse engineer official Dash APK, to determine how communication works and then implementation based on that findings. You can follow what is happening here: [DashAAPS](https://github.com/andyrozman/DashAAPS/projects/1), but don't expect this to be available anytime soon. This is at the moment only Proof Of Concept (until Milestone 2 is completed).
+**Comments:** Group of developers is looking into protocol (by reverse engineering original app) and into solution for AAPS, now that pump has become available all over world. There are no estimations yet, when this will be available, or even when first testing will begin. If you are interested in progress, or are willing to help, group can be reachable on WeAreNotWaiting discord. Mention your interest in androidaps group and someone will give you more info.
 
 * * *
 
 ### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Company is planning to extend the pump to support remote bolusing (update planned for end of 2021) and later on they plan to add other functions required to create a Loop. Their official app will support that in the future (planned for 2022 no exact date known). As they plan to have their own Loop system see this [page](https://www.mylife-diabetescare.com/en/loop-program.html), they won't be offering any support to any developers on any DIY loop, at least for now.
+**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. By end of 2021, it is planned that company will release, new version nicknamed DOSE (1.6), which will allow setting bolus and TBR from their App. They plan to implement their own Loop in 2022, with their own application. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**Hardware requirement for AAPS:** None. It's BT enabled.
+
+**Comments:** There are currently 2 groups working on driver, so after new version is released, we can expect to have AAPS support soon thereafter. One group is being supported by YpsoMed and helping with Medical trials that are happening in Australia, 2nd is working independently by reverse engineering original app.
 
 * * *
 
@@ -40,7 +42,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 ### EOFLOW ([Homepage](http://www.eoflow.com/eng/main/main.html))
 
-**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pompa este disponibilă în prezent numai în Coreea).
+**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
 
 **Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
 
@@ -48,7 +50,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 ### Accu-Chek Solo ([Pagina de start](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Loop status:** Is a Loop candidate. Pompa va începe să se vândă la sfârșitul anului 2018 în anumite țări din UE. Its rummored to have Android app on special controler device for control.
+**Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app on special controler device for control.
 
 **Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
 
@@ -60,7 +62,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
 
-**Cerinţă hardware pentru AAPS:** Nici una. It seems to be BT enabled.
+**Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
 **Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
 
@@ -74,7 +76,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
-**Notă despre produs:** Se pare că firma a decis să iasă din zona de pompe. Puteți vedea mai multe în acest [articol](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
 ## Pumps that aren't Loopable
 
@@ -109,7 +111,7 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 - Get Status
 - Anulează Rata Bazală Temporară
 
-**Pentru oref1(SMB) sau Bolus:**
+**For oref1(SMB) or Bolusing:**
 
 - Setează bolusul
 

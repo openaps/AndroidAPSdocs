@@ -8,7 +8,7 @@ We geven u achtergrondinformatie over doe-het-zelf closed loop systemen, en gaan
 
 Om AndroidAPS te kunnen gebruiken, moet iemand de volgende dingen doen:
 
-* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.rst).
+* Vind een [geschikte insulinepomp](../Hardware/pumps.rst), een [Android telefoon](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) en een [geschikte glucosesensor (CGM of FSL)](../Configuration/BG-Source.rst).
 * [Download de AndroidAPS broncode en bouw de app](../Installing-AndroidAPS/Building-APK.md).
 * [Koppel de app aan CGM en pomp en geef alle instellingen en veiligheidsgrenzen in](../index.rst#configuration).
 
@@ -95,7 +95,7 @@ We hebben geprobeerd om een overzicht te geven van de werking van AndroidAPS. Er
 
 Aanvullende aanbevolen informatie:
 
-* The [full AndroidAPS documentation](../index)
+* De [volledige AndroidAPS documentatie](../index)
 * Het [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), hierin wordt uitgelegd hoe OpenAPS is ontworpen rondom veiligheid
 * De [volledige OpenAPS documentatie](https://openaps.readthedocs.io/en/latest/index.html) 
   * Meer [details over OpenAPS berekeningen](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
