@@ -16,7 +16,7 @@ Galite instaliuoti AndroidAPS programėlę savo **Wear OS pagrindu** veikiančia
 
 Norint sukurti AAPS Wear OS versiją, jums reikia pasirinkti variantą "fullRelease", kai [kuriate APK](../Installing-AndroidAPS/Building-APK.md) (arba versiją "pumpRelease", kuri leis jums tiesiog nuotoliniu būdu valdyti pompą be ciklo).
 
-You can then update or install the watchface via the PlayStore on your watch.
+From March 2021 you need to sideload AAPS onto the watch, it is no longer accessible via the watch's Google Play Store. You can sideload using [Wear Installer](https://youtu.be/8HsfWPTFGQI) which you will need to install on both your watch and phone. Once you have selected AndroidAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
 
 ### Nustatymas telefone
 
@@ -234,7 +234,6 @@ AndroidAPS provides following complications:
     * **Mes negalime garantuoti, kad duomenys rodomi ciferblate ar ekrano elemente yra naujausi**. Galų gale, tik nuo Wear OS priklauso, kada atnaujinti ciferblatą ar plėtinį. Net kai APPS programėlė užklausia atnaujinimo, sistema gali nuspręsti atidėti arba ignoruoti užklausą, siekdama tausoti bateriją. Jei abejojate, arba baterija laikrodyje nusekusi - visada pasitikrinkite AAPS programėlę telefone.
     ## Wear programos trikčių šalinimas:
     
-    * Android Wear 2.0 laikrodžiuose ekranas nebeįsidiegia pats. Jūs turite eiti į laikrodžio Playstore (skiriasi nuo išmaniojo telefono Playstor“!) Ir suaktyvinti AAPS kategorijoje "įdiegtos programos telefone“. Also enable auto update. 
     * Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
     * Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
     * If Complications does not update data - check first if AAPS watchfaces work at all.
