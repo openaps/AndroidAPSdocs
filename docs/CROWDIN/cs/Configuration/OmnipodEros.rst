@@ -6,8 +6,8 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 **This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.**
 
-.. contents:: 
-   :backlinks: entry
+.. obsah:: 
+   :backlinks: položka
    :depth: 2
 
 Hardware and Software Requirements
