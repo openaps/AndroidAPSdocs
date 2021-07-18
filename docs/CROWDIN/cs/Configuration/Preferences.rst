@@ -20,8 +20,8 @@ Nastavení
   .. image:: ../images/Pref2021_Filter.png
     :alt: Předvolby > Filtry
 
-.. contents:: 
-   :backlinks: entry
+.. obsah:: 
+   :backlinks: položka
    :depth: 2
 
 Obecné
@@ -63,7 +63,7 @@ Ochrana nastavení
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Chraňte své nastavení pomocí hesla nebo biometrického ověření telefonu (t.j. `AndroidAPS pro děti <../Children/Children.html>`_).
 * Pokud chcete použít hlavní heslo pouze pro zabezpečení `exportovaného nastavení <../Usage/ExportImportSettings.html> ` _, můžete si vytvořit Vlastní heslo.
-* Pokud používáte vlastní heslo, klepněte na řádek "Nastavení hesla", a nastavte heslo tak, jak je popsáno výše, `nad <../Configuration/Preferences.html#master-password>`__.
+* Pokud používáte vlastní heslo, klepněte na řádek "Nastavení hesla" a nastavte heslo tak, jak je popsáno výše `<../Configuration/Preferences.html#master-password>`__.
 
   .. image:: ../images/Pref2020_Protection.png
     :alt: Ochrana
@@ -125,7 +125,7 @@ Tlačítka
   .. image:: ../images/Pref2020_OV_Buttons.png
     :alt: Nastavení > Tlačítka
 
-Quick Wizard
+Průvodce rychlým bolusem
 -----------------------------------------------------------
 * Pokud máte často svačinu nebo jídlo, můžete použít Rychlý bolus pro snadnější vkládání hodnot sacharidů a nastavení základních výpočtů.
 * V nastavení si určíte, v jakém časovém období se má tlačítko zobrazit na domácí obrazovce - právě jedno tlačítko na jedno období.
@@ -366,7 +366,7 @@ Pokročilé nastavení - autosens ratio
 
 Nastavení pumpy
 ===========================================================
-The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`__.  Spárujte a nastavte svou pumpu podle pokynů pro jednotlivé pumpy:
+Tyto volby se budou lišit v závislosti na tom, který ovladač inzulínové pumpy jste vybrali v ' Konfigurace <../Configuration/Config-Buil-Builder.html#pump> `__.  Spárujte a nastavte svou pumpu podle pokynů pro jednotlivé pumpy:
 
 * `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
@@ -403,7 +403,7 @@ Nastavení připojení
 Nastavení alarmů
 -----------------------------------------------------------
 * Volby alarmu umožňují vybrat, jaké výchozí alarmy Nightscoutu se mají v aplikaci používat.  
-* For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_. 
+* Aby alarmy fungovaly, je třeba nastavit v proměnných Nightscoutu (Heroku...) hodnoty glykémie pro Urgentní, Vysokou, Nízkou a Urgentní nízkou glykémii <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_. 
 * Budou fungovat pouze v případě že budete mít připojení k Nightscoutu, a jsou určeny pro rodiče/pečovatele. 
 * Pokud máte v telefonu zdroj CGM (např. xDrip + nebo upravenou Dexcomalikaci), pak místo nich použijte tyto alarmy.
 
@@ -423,7 +423,7 @@ Rozšířená nastavení (NSClient)
 
 SMS komunikátor
 ===========================================================
-* Options will only be displayed if SMS communicator is selected in `Config Builder <../Configuration/Config-Builder.html#sms-communicator>`__.
+* Volba se zobrazí pouze v případě, že je povolen SMS komunikátor v 'Konfiguraci <../Configuration/Config-Buil-Builder.html#sms-communicator> `__.
 * Toto nastavení umožňuje vzdálené ovládání telefonu s AAPS posláním SMS s textem jako je zastavení smyčky, nebo poslání bolusu.  
 * Další informace jsou popsány v `SMS příkazech <../Children/SMS-Commands.html>`_.
 * Dodatečná bezpečnost je zajištěna použitím autentizační aplikace a dodatečného PIN na konci tokenu.
@@ -434,7 +434,7 @@ Vyberte, jaká služba určování polohy se použije:
 
 * Používat pasivní polohu: AAPS zjistí polohu pouze v případě, že ji budou požadovat ostatní aplikace
 * Používat zjištění polohy podle sítě: Poloha podle vaší Wi-Fi sítě
-* Use GPS location (Attention! May cause excessive battery drain!)
+* Používat GPS polohu (Pozor! Může způsobovat nadměrné vybíjení baterie!)
 
 Místní výstrahy
 ===========================================================
