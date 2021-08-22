@@ -50,15 +50,37 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app on special controler device for control.
+**Loop status:** Is a Loop candidate.
 
-**Hardware eisen voor AAPS:** Waarschijnlijk geen. It seems to be BT enabled.
+**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+
+**Comments:** There are some developers looking into decoding the protocol, but so far this is only in preliminary phases.
+
+* * *
+
+### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+
+**Loop status:** Not yet loopable.
+
+While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definetly, everything else unknown).
+
+**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+
+* * *
+
+### Tandem: t:sport ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+
+**Loop status:** Is a Loop candidate. Pump hasn't been released yet, but FDA process is already running, so it should be out sooner, rather than later (in US).
+
+**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+
+* * *
 
 ### Medtronic Bluetooth
 
 **Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
 
-### Willcare insulinepomp ([Homepage](http://en.shinmyungmedi.com))
+### Willcare Insulin pump ([Homepage](http://en.shinmyungmedi.com))
 
 **Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
 
@@ -70,7 +92,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 ## Pompen die niet meer worden verkocht (fabrikanten zijn gestopt)
 
-### Cellnovo Pomp ([zie businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
+### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
 **Status:** Wordt momenteel niet ondersteund door doe-het-zelf closed loop systemen. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
@@ -80,23 +102,15 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 ## Pompen die niet loopbaar zijn
 
-### Tandem:(elk type) ([Homepage](https://www.tandemdiabetes.com/))
-
-**Status:** Niet loopbaar.
-
-While ago they had firmware called T:AP (mentioned in this [article](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), which could be used in loop (its no longer available, since pump was upgraded to x2), but that was not intended for commercial use, just for experimental use only (research projects). I talked with one of directors of company and he assured my that Tandem pump will never be open, but they have created their own closed loop system, which they are calling Control-IQ (I think it is already available in USA, and should be available in 2020 in Eu).
-
-* * *
-
 ### Animas Vibe
 
-**Status:** Niet loopbaar. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
+**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
 
 * * *
 
 ### Animas Ping
 
-**Status:** Niet loopbaar. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
+**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
 
 ## Eisen aan pompen die loopbaar zijn
 
@@ -131,6 +145,6 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 
 * * *
 
-### Ondersteuning overige pompen
+### Other pumps support
 
 If you have any other pumps you would like to see status on, please contact us on discord.
