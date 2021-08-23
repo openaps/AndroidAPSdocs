@@ -2,7 +2,7 @@
 
 NSClient relies on stable communication with Nightscout. An unstable connection leads to synchronization errors and high data usage.
 
-If nobody is following you on Nightscout you can choose to pause NSClient to save battery life or you can choose to setup the connection so that it only happens when on Wi-Fi and/or during charging.
+If nobody is following you on Nightscout you can choose to pause NSClient to save battery life or you can choose to setup NSClient so that it only connects when on Wi-Fi and/or during charging.
 
 * How to detect an unstable connection?
 
