@@ -319,8 +319,8 @@
 
 ### Действия-раздел M
 
-* Button [profile switch](../Usage/Profiles#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
-* Button [temporary target](../Usage/temptarget#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
+* Кнопка [переключение профиля ](../Usage/Profiles#profile-switch) является альтернативой нажатию [текущий профиль](../Getting-Started/Screenshots#section-b-profile-target) на главном экране.
+* Кнопка [временная цель](../Usage/temptarget#temp-targets) - альтернатива [текущей цели](../Getting-Started/Screenshots#section-b-profile-target) на главном экране.
 * Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
 * Even though [extended boluses](../Usage/Extended-Carbs#extended boluses) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
    
