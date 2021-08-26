@@ -146,13 +146,13 @@ xDrip +
 Если у вас собраны все компоненты AAPS (поздравляем!) или, по крайней мере, их достаточно, чтобы начать работу в режиме незамкнутого цикла, сначала следует прочитать `Описание Целей<../Usage/Objectives.html>`_ (Обзор) перед каждой новой целью и настроить `компоненты <./index.html#component-setup>`_.
 
 ..
-	Image aliases resource for referencing images by name with more positioning flexibility
+	Cсылки на изображения по названиям с большей гибкостью позиционирования
 
 
 ..
-	Hardware and Software Requirements
-.. |EmaLink|				image:: ../images/omnipod/EmaLink.png
-.. |LoopLink|				image:: ../images/omnipod/LoopLink.png
-.. |OrangeLink|			image:: ../images/omnipod/OrangeLink.png		
-.. |RileyLink|				image:: ../images/omnipod/RileyLink.png
-.. |DiaLink|		      image:: ../images/omnipod/DiaLink.png
+	Требования к аппаратному и программному обеспечению
+.. |EmaLink| изображение:: ../images/omnipod/EmaLink.png
+.. |LoopLink| изображение:: ../images/omnipod/LoopLink.png
+.. |EmaLink| изображение:: ../images/omnipod/EmaLink.png		
+.. |RileyLink| изображение:: ../images/omnipod/RileyLink.png
+.. |DiaLink| изображение:: ../images/omnipod/DiaLink.png
