@@ -66,10 +66,10 @@ AndroidAPS **на данный момент** работает с
 Для старых помп Medtronic требуется дополнительное устройство коммуникации (кроме вашего телефона) для "перевода" радиосигнала от помпы на Bluetooth. Убедитесь, что выбрана правильная версия для вашей помпы.
 
    - |OrangeLink| `сайт OrangeLink <https://getrileylink.org/product/orangelink>`_    
-   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
-   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
-   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
+   - |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+   - |EmaLink| `Сайт Emalink <https://github.com/sks01/EmaLink>`__ - `Контактная информация <mailto:getemalink@gmail.com>`__  
+   - |DiaLink| DiaLink - `Контактная информация <mailto:Boshetyn@ukr.net>`__     
+   - |LoopLink| `Сайт LoopLink  <https://www.getlooplink.org/>`__ - `Контактная информация <https://jameswedding.substack.com/>`__ - Не проверено
 
 **Какая же самая лучшая помпа для работы с AndroidAPS?**
 
@@ -94,7 +94,7 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 * ` Libre 2 <../Hardware/Libre2.html> ` _: Он работает с xDrip + (не требуется передатчик), но вы должны собрать собственное модифицированное приложение.
 * `Libre 1: -Нужен передатчик, такой как Bluecon или MiaoMiao (сборка или покупка) и приложение xDrip+
 * `Eversense: Он работает до сих пор только в сочетании с модифицированными приложениями ESEL и Eversense-App (не работает с Dana RS и LineageOS, но Dana RS и Android или Combo и Lineage OS работают прекрасно)
-* `Enlite (MM640G/MM630G) <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
+* `Enlite <../Hardware/MM640g.html>`_: довольно сложная система с большим количеством дополнительных устройств
 
 
 Nightscout
