@@ -55,17 +55,17 @@ AndroidAPS **на данный момент** работает с
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - `некоторые старые помпы Medtronic <../Configuration/MedtronicPump.html>`_ из версии 2.4 (` требуется дополнительное устройство коммуникации <../Module/module.html#additional-communication-device>`)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`требуется дополнительное устройство коммуникации <../Module/module.html#additional-communication-device>`)
 
-**Другие помпы** которые потенциально могут работать с AndroidAPS перечислены на `Будущие (возможные) помпы <../Getting-Started/Future-possible-Pump-Drivers.html>`_ странице.
+**Другие помпы** которые потенциально могут работать с AndroidAPS перечислены на странице `Будущие (возможные) помпы <../Getting-Started/Future-possible-Pump-Drivers.html>`.
 
-Если вам нужно **купить частным образом** помпу, то вы можете найти дистрибьюторов в `этой таблице <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>_, делитесь информацией о вашем, если не указан.
+Если вам нужно **купить частным образом** помпу, то вы можете найти дистрибьюторов в `этой таблице <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>_, делитесь информацией о вашем, если он еще не указан.
 
-Additional communication device
+Дополнительное устройство коммуникации
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-For old medtronic pumps an additional communication devide (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+Для старых помп Medtronic требуется дополнительное устройство коммуникации (кроме вашего телефона) для "перевода" радиосигнала от помпы на Bluetooth. Убедитесь, что выбрана правильная версия для вашей помпы.
 
-   -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+   - |OrangeLink| `сайт OrangeLink <https://getrileylink.org/product/orangelink>`_    
    -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
    -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
    -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
