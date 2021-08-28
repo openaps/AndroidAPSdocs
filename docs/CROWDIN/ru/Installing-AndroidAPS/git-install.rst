@@ -47,7 +47,7 @@ Windows
 4. Проверьте параметры git в Android Studio
 --------------------------------------------------
 * Откройте окно терминала в Android Studio
-* Enter ``git --version`` (without quotation marks and no spaces between the two - [minus sign]!) and press Return
+* Введите "`версию -- git`" (без кавычек и без пробелов между двумя - [знаками минус]!) и нажмите Ввод
 
   .. изображение:: ../images/AndroidStudio_gitversion1.png
     :alt: git-версия
