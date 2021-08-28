@@ -6,12 +6,12 @@
 
 ![Задать временные цели по умолчанию](../images/TempTarget_Default.png)
 
-To use one of the set “Default-Temp-Targets”, you can short click on your target in the right corner on the top in the overview-tab to show Temp Target dialog and click on Eating Soon, Activity or Hypo button, or use the shortcuts in the orange “Carbs” button. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration), short click on your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
+Чтобы активировать одну из "Предустановленных временных целей TT", следует долго нажать на кнопку целевых значений в правом углу главного окна и выбрать Ожидаемый прием пищи, Нагрузка или Гипо или использовать соответствующие ярлыки в оранжевой кнопке "Углеводы". Чтобы вручную задать [ "Произвольную временную цель TT "](../Usage/temptarget#custom-temp-target) (значение ГК и/или продолжительность), выберите" Пользовательская "после долгого нажатия на цель в верхнем правом углу или воспользуйтесь кнопкой "Временная цель "на вкладке ["Действия "](../Configuration/Config-Builder#actions).
 
 ![Начать врем цель](../images/TempTarget_Set2.png)
 
-- If you want to slightly adjust the values of a default temp target, you can long press the Eating Soon, Activity or Hypo button and then edit the values in the Target or Duration fields.
-- If a Temp target is running, an additional "Cancel" button is shown in dialog to cancel it
+- Если вы хотите немного отрегулировать значения временной цели по умолчанию, вы можете долго нажать на кнопку Ожидаемый прием пищи, Действия или Hypo и затем отредактировать значения в полях Цель или Продолжительность.
+- Если запущена временная цель, в диалоговом окне появится дополнительная кнопка "Отмена", чтобы отменить ее
 
 ## Временная цель Гипо 
 
@@ -38,6 +38,6 @@ To use one of the set “Default-Temp-Targets”, you can short click on your ta
 
 ## Настраиваемая временная цель
 
-Иногда требуется временная цель, отличная от дефолтных. You can set one by short pressing on the target (range) on the right corner in overview or in the “Action”-Tab.
+Иногда требуется временная цель, отличная от дефолтных. Ее можно задать, нажав на целевой диапазон в правом углу главного экрана или на вкладке "Действия".
 
 ![Установить временные цели через вкладку Действия](../images/TempTarget_ActionTab.png)
