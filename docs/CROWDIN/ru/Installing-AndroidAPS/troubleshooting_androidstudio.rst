@@ -53,7 +53,7 @@
 
   ``Ошибки при сборке APK.``
 
-  ``Cause: buildOutput.apkData must not be null``
+  ``Ошибка: buildOutput.apkData не может быть пустым``
 
 Эта известная ошибка в Android Studio 3.5 и, вероятно, она не будет исправлена до Android Studio 3.6. Есть три варианта:
 
