@@ -54,7 +54,7 @@ If your build fails with an error regarding "on demand configuration" you can do
 </tbody>
 </table>
 
-Please be in mind that both 64 bit CPU and 64 bit OS are mandatory condition. If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. It is strongly recommended to use SSD(Solid State Disk) instead of HDD(Hard Disk Drive) because it will take less time when you are building the APS installation apk file. Recommended is just recommended and it is not a mandatory. You may still use a HDD when you are building apk file if you can spend a long time ALONE to complete the build.
+Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **It is strongly recommended to use SSD(Solid State Disk) instead of HDD(Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file if you can spend a long time ALONE to complete the build.
    
 ---
 ### This article is divided into two parts.
