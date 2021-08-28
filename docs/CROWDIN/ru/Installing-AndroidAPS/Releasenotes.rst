@@ -18,20 +18,20 @@ Version 2.8.2
 ================
 Release date: 23-01-2021
 
-* Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
+* См. также `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ ниже.
 
-Changes
+Изменения
 ----------------------
-* stability improvements
-* more tweaking for Android 8+
-* improved icons
-* watch improvements
-* NSClient fixes
-* Bolus advisor now works with Pumpcontrol and NSClient
+* Улучшения стабильности
+*больше подстроек для Android 8+
+* улучшенные иконки
+* улучшения для смарт-часов
+* Исправления для NSClient
+*Помощник болюса теперь работает с Pumpcontrol и NSClient
 
-Version 2.8.1.1
+Версия 2.8.1.1
 ================
-Release date: 12-01-2021
+Дата выпуска: 12-01-2021
 
 Important hints
 ----------------------
@@ -355,7 +355,7 @@ ContextEdit
 --------------------------------------------------
 * Верхняя полоса дает доступ к приостановке/отключению цикла, просмотру/настройке профиля и запуску/остановке временных целей (TT). Временные цели TT используют настройки по умолчанию. Новая опция Гипо TT является высокой временной целью TT для предотвращения слишком агрессивной реакции на корректирующие углеводы.
 * Кнопки терапии: старая кнопка все еще доступна, но скрыта по умолчанию. Видимость кнопок теперь может быть сконфигурирована. Новая кнопка инсулина, новая кнопка (включая ` eCarbs/extended carbs <../Usage/Extended-Carbs.html> ` _)
-* `Colored prediction lines <../Getting-Started/Screenshots.html#prediction-lines>`_
+* `Цветные линии прогнозирования <../Getting-Started/Screenshots.html#section-e>`_
 * Опция отображения поля заметок об инсулине/углеводах/калькуляторе/первичном заполнении которые передаются в NS
 * Обновленное диалоговое окно «первичное/заполнение» позволяет заполнять инфузионный набор и вносить данные об изменении места установки и замене картриджа
 
