@@ -232,6 +232,10 @@ The change of cartridge cannot be done via AndroidAPS but must be carried out as
 
 The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate.  On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26#pump) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling.  You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts.  See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
 
+## Lyumjev summary
+
+In several Facebook groups, loopers share suggestions on using [Lyumjev](../Configuration/Config-Builder.md#lyumjev). A looper published website [Lyumjev summary](https://petervanrijt.github.io/lyumjevsummary/) to summarize using Lyumjev and all suggestions for it. Because the site is published as open source, it is possible to contribute together.
+
 ## Wallpaper
 
 You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones#phone-background).
