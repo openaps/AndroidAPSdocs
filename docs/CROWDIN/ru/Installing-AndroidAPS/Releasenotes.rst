@@ -45,12 +45,12 @@ Important hints
 * улучшения и исправления RileyLink, помпы Omnipod и подачи инсулина шприц-ручками
 * принудительный режим загрузки в NS NS_UPLOAD_ONLY
 * исправления SMB и приложения Dexcom
-* watchface fixes
-* crash reporting improved
-* gradle reverted to allow direct watchface instalation
-* automation fixes
-* RS driver improvement
-* various crashes fixed
+* Исправления циферблатов смарт-часов
+* улучшена отчетность о сбоях
+* понижена версия системы автоматической сборки gradle для разрешения прямой установки приложения на смарт-часы
+* Исправления автоматизации
+* Улучшение работы драйвера помпы Dana RS
+* исправлен ряд сбоев
 * UI fixes and improvements
 * new translations
 
