@@ -51,24 +51,24 @@ Important hints
 * Исправления автоматизации
 * Улучшение работы драйвера помпы Dana RS
 * исправлен ряд сбоев
-* UI fixes and improvements
-* new translations
+* Исправления и улучшения интерфейса
+* новые переводы
 
-Version 2.8.0
+Версия 2.8.0
 ================
-Release date: 01-01-2021
+Дата выпуска: 01-01-2021
 
-Important hints
+Важные подсказки
 ----------------------
-* **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo. 
-* `Objectives have changed. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
-* Repository location still on https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
-* Please use `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
+* **Минимальная версия теперь Android 8.0.** Для более старых версий Android, все еще можно использовать 2.6.1.4 в старом репозитории. 
+* «Цели претерпели изменения. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Завершите выполнение целей до обновления.**
+* Расположение репозитория https://github.com/nightscout/AndroidAPS . Если вы не знакомы с Git самый простой способ обновления- удалить каталог с AndroidAPS и `заново клонировать <../Installing-AndroidAPS/Building-APK.html>`_.
+* Используйте ` Android Studio 4.1.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
 
 Новые возможности
 ----------------------
-* `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org 
-* `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
+* `Поддержка Omnipod Eros <../Configuration/OmnipodEros. tml>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, все остальные, участвующие в разработке драйвера для Omnipod а также @jlucasvt с GetRileyLink.org 
+* `помощник болюса <../Configuration/Preferences.html#bolus-advisor>`_ & `подсказка о приеме пищи <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
 * `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-2-8>`_ @rICTx-T1D
 * Dana RS connection improvements @MilosKozak 
 * Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
