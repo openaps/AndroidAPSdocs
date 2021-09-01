@@ -40,11 +40,11 @@ Important hints
 * ВНИМАНИЕ: НЕ делайте это, если есть какие-либо другие методы обработки (например, трансляция и загрузка/синхронизация xDrip...).
 * NS_UPLOAD_ONLY может быть выключен только в инженерном режиме.
 
-Major changes
+Основные изменения
 ----------------------
-* RileyLink, Omnipod and MDT pump improvements and fixes
-* forced NS_UPLOAD_ONLY
-* fix for SMB & Dexcom app
+* улучшения и исправления RileyLink, помпы Omnipod и подачи инсулина шприц-ручками
+* принудительный режим загрузки в NS NS_UPLOAD_ONLY
+* исправления SMB и приложения Dexcom
 * watchface fixes
 * crash reporting improved
 * gradle reverted to allow direct watchface instalation
