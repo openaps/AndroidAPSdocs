@@ -69,8 +69,8 @@ Important hints
 ----------------------
 * `Поддержка Omnipod Eros <../Configuration/OmnipodEros. tml>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, все остальные, участвующие в разработке драйвера для Omnipod а также @jlucasvt с GetRileyLink.org 
 * `помощник болюса <../Configuration/Preferences.html#bolus-advisor>`_ & `подсказка о приеме пищи <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
-* `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-2-8>`_ @rICTx-T1D
-* Dana RS connection improvements @MilosKozak 
+* `Новый циферблат смарт-часов <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-2-8>`_ @rICTx-T1D
+* Улучшение связи с Dana RS @MilosKozak 
 * Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
 * New `Low Ressolution Skin <../Configuration/Preferences.html#skin>`_
 * New `"Pregnant" patient type <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_ @Brian Quinion
