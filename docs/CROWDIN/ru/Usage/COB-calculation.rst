@@ -55,4 +55,4 @@ AAPS предупреждает о том, что вы собираетесь п
 
 Ручная коррекция введенных углеводов
 ==================================================
-If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.
+Если вы переоценили или недооценили количество углеводов, это можно исправить на вкладке назначений и вкладке Действия как описано: `здесь <../Getting-Started/Screenshots.html#carb-correction> ` _.
