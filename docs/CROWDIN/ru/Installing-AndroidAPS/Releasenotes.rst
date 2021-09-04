@@ -71,10 +71,10 @@ Important hints
 * `помощник болюса <../Configuration/Preferences.html#bolus-advisor>`_ & `подсказка о приеме пищи <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
 * `Новый циферблат смарт-часов <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-2-8>`_ @rICTx-T1D
 * Улучшение связи с Dana RS @MilosKozak 
-* Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
-* New `Low Ressolution Skin <../Configuration/Preferences.html#skin>`_
-* New `"Pregnant" patient type <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_ @Brian Quinion
-* New NSClient tablet layout @MilosKozak 
+* Удален алгоритм "Неизмененные значения CGM " в SMB для оригинального приложения Dexcom
+* Новый скин `Низкое разрешение <../Configuration/Preferences.html#skin>`_
+* Новый `тип пациента "Беременные" <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_ @Brian Quinion
+* Новый макет вкладки NSClient @MilosKozak 
 * NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak 
 * `Preferences filter <../Configuration/Preferences.html>`_ @Brian Quinion
 * New pump icons @Rig22 @@teleriddler @osodebailar
