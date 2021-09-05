@@ -89,7 +89,7 @@ Important hints
 
 **Не забудьте проверить и исправить настройки после обновления до 2.7, описание см. ** `здесь <../Installing-AndroidAPS/update2_7.html>`__.
 
-Чтобы заработала автоматизация необходимо начать `цель 11 <../Usage/Objectives.html#objective-11-automation>`_ <. /Usage/Automation.html>`_ (все предыдущие цели должны быть пройдены, иначе начать цель11 невозможно). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. This will not effect other objectives you have already finished. You will keep all finished objectives!
+Чтобы заработала автоматизация необходимо начать `цель 11 <../Usage/Objectives.html#objective-11-automation>`_ <. /Usage/Automation.html>`_ (все предыдущие цели должны быть пройдены, иначе начать цель11 невозможно). Если например, вы не прошли экзамен в `цели 3 <../Usage/Objectives. tml#objective-3-prove-your-knowledge>`_ у вас не получится начать `цель 11 <../Usage/Objectives.html#objective-11-automation>`_. Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
 
 Новые возможности
 ----------------------
@@ -193,7 +193,7 @@ Important hints
 Новые возможности
 ------------------
 * Небольшие изменения дизайна (стартовая страница...)
-* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
+* Удалена закладка / меню Careportal - подробнее `здесь <../Usage/CPbefore26.html>`__
 * Новый плагин `Local Profile <../Configuration/Config-Builder.html#local-profile-recommended>`_
 
   * Локальный профиль может иметь более 1 профиля
@@ -202,7 +202,7 @@ Important hints
   * Старые переключатели профиля можно клонировать на новый в LocalProfile (применяется сдвиг по времени и процент)
   * Vertical NumberPicker для целей
 * SimpleProfile удален
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
+* `Пролонгированный болюс <../Usage/Extended-Carbs.html > ` _ функция - замкнутый цикл будет отключена
 * Плагин MDT: Исправлена ошибка с дублирующимися записями
 * Единицы не указаны в профиле, но это глобальные параметры
 * Добавлены новые параметры для мастера установки
@@ -225,7 +225,7 @@ Important hints
 ==================================================
 Дата выпуска: 31-10-2019
 
-Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
+Обратите внимание на " важные примечания <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
 * Исправлена ошибка в сетевом состоянии, которые приводят к ошибкам (не критично, но будет тратить много энергии на пересчет).
 * Новая иерархия версий, позволяющая выполнять незначительные обновления без уведомлений об обновлении.
 
@@ -233,7 +233,7 @@ Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#imp
 ==================================================
 Дата выпуска: 26-10-2019
 
-.. _important-notes-2-5-0:
+.. Важные замечания -2-5-0:
 
 Важные замечания
 --------------------------------------------------
@@ -255,7 +255,7 @@ Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#imp
 * Поддержка RxJava2, Okhttp3, Retrofit
 *Поддержка старых помп `Medtronic <../Configuration/MedtronicPump.html>`_ поддержка (нужен RileyLink)
 * Новый модуль `Автоматизация <../Usage/Automation.html>`_
-* Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings-overview>`_ from bolus wizard calculation
+* Позволяет подать `только часть болюса <../Configuration/Preferences.html#advanced-settings-overview>`_ с калькулятора болюса
 * Рендеринг активности инсулина
 * Корректировка прогнозов IOB с помощью результата autosense
 Новая поддержка модифицированных приложений Dexcom (<https://github.com/dexcomapp/dexcomapp/tree/master/2.4> папка 2.4)
@@ -326,7 +326,7 @@ ContextEdit
 
 Разное
 --------------------------------------------------
-* If you are using non default ``smbmaxminutes`` value you have to setup this value again
+* Если вы задавали собственное значение smbmaxminutes, нужно заново его настроить
 
 
 Версия 2.0
@@ -378,7 +378,7 @@ ContextEdit
 * Переработан конфигуратор и вкладки целей, добавлены описания
 * Новый значок приложения
 * Много улучшений и исправлений
-* независимые от Nightscout оповещения, если помпа недоступна длительное время (например, depleted pump battery) and missed BG readings (see *Local alerts* in settings)
+* независимые от Nightscout оповещения, если помпа недоступна длительное время (например, севшая батарея помпы) и пропущенные показания ГК (см. _Локальные оповещения _ в настройках)
 * Возможность держать экран включенным
 * Опция отображения уведомлений как уведомление Android
 * Расширенная фильтрация (позволяющая всегда включать SMB и на 6час. после еды) поддерживаемая модифицированным приложением Dexcom или xDrip в нативном режиме G5 в качестве источника ГК.
