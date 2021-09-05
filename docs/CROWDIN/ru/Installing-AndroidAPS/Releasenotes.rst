@@ -75,11 +75,11 @@ Important hints
 * Новый скин `Низкое разрешение <../Configuration/Preferences.html#skin>`_
 * Новый `тип пациента "Беременные" <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_ @Brian Quinion
 * Новый макет вкладки NSClient @MilosKozak 
-* NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak 
-* `Preferences filter <../Configuration/Preferences.html>`_ @Brian Quinion
-* New pump icons @Rig22 @@teleriddler @osodebailar
-* New `insulin type Lyumjev <../Configuration/Config-Builder.html#lyumjev>`_
-* SetupWizard improvements @MilosKozak 
+* Передача данных об инсулине, чувствительности и настройках отображения непосредственно с приложения AAPS @MilosKozak 
+* `Фильтр параметров конфигурации <../Configuration/Preferences.html> ` _ @Brian Quinion
+* Новые иконки помп @Rig22 @@teleriddler @osodebailar
+* Новый тип инсулина `Lyumjev <../Configuration/Config-Builder.html#lyumjev>`_
+* Улучшения Помощника настройки @MilosKozak 
 * Security improvements @dlvoy 
 * Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
 
