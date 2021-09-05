@@ -173,7 +173,7 @@ Important hints
 
 Новые возможности
 ------------------
-* Allow to enter only ``https://`` in NSClient settings
+* Возможность вводить только "https:// в настройках NSClient
 * Исправлено ` BGI <../Getting-Started/Glossary.html> ` _ отображение ошибок в часах
 * Исправлены мелкие ошибки интерфейса
 * Исправлены сбои Insight
