@@ -93,9 +93,9 @@ Important hints
 
 Новые возможности
 ----------------------
-* internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
-* using modules for Dana pumps @MilosKozak
-* `new layout, layout selection <../Getting-Started/Screenshots.html>`_ @MilosKozak
+* внутреннее использование зависимостей инъекций, библиотеки обновлений, код переписан на kotlin @MilosKozak @AdrianLxM
+* применение модулей для помп Dana @MilosKozak
+* `новый макет, выбор макета <../Getting-Started/Screenshots.html>`_ @MilosKozak
 * new `status lights layout <../Configuration/Preferences.html#status-lights>`_ @MilosKozak
 * `multiple graphs support <../Getting-Started/Screenshots.html#section-f-main-graph>`_ @MilosKozak
 * `Profile helper <../Configuration/profilehelper.html>`_ @MilosKozak
