@@ -96,16 +96,16 @@ Important hints
 * внутреннее использование зависимостей инъекций, библиотеки обновлений, код переписан на kotlin @MilosKozak @AdrianLxM
 * применение модулей для помп Dana @MilosKozak
 * `новый макет, выбор макета <../Getting-Started/Screenshots.html>`_ @MilosKozak
-* new `status lights layout <../Configuration/Preferences.html#status-lights>`_ @MilosKozak
-* `multiple graphs support <../Getting-Started/Screenshots.html#section-f-main-graph>`_ @MilosKozak
-* `Profile helper <../Configuration/profilehelper.html>`_ @MilosKozak
-* visualization of `dynamic target adjustment <../Getting-Started/Screenshots.html#visualization-of-dynamic-target-adjustment>`_ @Tornado-Tim
-* new `preferences layout <../Configuration/Preferences.html>`_ @MilosKozak
-* SMB algorithm update @Tornado-Tim
-* `Low glucose suspend mode <../Configuration/Preferences.html#aps-mode>`_ @Tornado-Tim
-* `carbs required notifications <../Configuration/Preferences.html#carb-required-notification>`_ @twain47 @Tornado-Tim
-* removed Careportal (moved to Actions) @MilosKozak
-* `new encrypted backup format <../Usage/ExportImportSettings.html>`_ @dlvoy
+* новый вид индикаторов состояния <../Configuration/Preferences.html#status-lights>`_ @MilosKozak
+* `Поддержка нескольких графиков <../Getting-Started/Screenshots.html#section-f-main-graph>`_ @MilosKozak
+* `Помощник профиля а <../Configuration/profilehelper.html>`_ @MilosKozak
+* визуализация динамического изменения целевого показателя <../Getting-Started/Screenshots.html#visualization-of-dynamic-target-adjustment>`_ @Tornado-Tim
+* новый макет параметров конфигурации <../Configuration/Preferences.html>`_ @MilosKozak
+* Обновление алгоритма микроболюсов SMB @Tornado-Tim
+* `Режим приостановки при низкой гликемии <../Configuration/Preferences.html#aps-mode>`_ @Tornado-Tim
+Уведомления о потребности в углеводах <../Configuration/Preferences.html#carb-required-notification>`_ @twain47 @Tornado-Tim
+* удален портал терапии Careportal (перемещен в Actions) @MilosKozak
+* `новый формат зашифрованной резервной копии <../Usage/ExportImportSettings.html>`_ @dlvoy
 * `new SMS TOTP authentication <../Children/SMS-Commands.html>`_ @dlvoy
 * `new SMS PUMP CONNECT, DISCONNECT <../Children/SMS-Commands.html#commands>`_ commands @Lexsus
 * better support for tiny basals on Dana pumps @Mackwe
