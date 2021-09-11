@@ -96,35 +96,35 @@
   
 Удаление правил автоматизации
 -----------------------
-To delete an automation rule click on trash icon.
+Для удаления правила автоматизации нажмите на значок корзины.
 
 .. изображение:: ../images/Automation_Deletet.png
   :alt: Выбор правила автоматизации
 
 Рекомендации и предостережения
 ==================================================
-* When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
-* Watch the rule results.
-* Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg < 180 mg/dl)
+* Когда вы начинаете пользоваться средствами автоматизации или создаете новое правило, добавьте уведомление об этом, пока не убедитесь, что правило хорошо работает.
+* Наблюдайте за результатами работы правила.
+* Постарайтесь не делать условия слишком легкими (например, ЕСЛИ ГК > 80 мг/дл И ГК < 180 мг/дл)
 
   **Вдвойне важно, если правило активирует переключатель профиля!**
  
-* Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`__ back to 0.
+* Попробуйте использовать временные цели Temp Targets вместо переключателей профиля Profile Switches. Temp Targets не сбрасывают ` Autosens <../Usage/Open-APS-features.html#autosens> ` _ на 0.
 * Убедитесь, что переключатели профиля создаются с осторожностью и желательно как крайняя мера.
 
-  * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`__ useless for a min of 6 hours.
+  * Переключение профилей делает `Autosens <../Usage/Open-APS-features.html#autosens>`_ бесполезным минимум на 6 часов.
 
 * Переключение профилей не сбросит профиль назад на базовый профиль
 
   * Вы должны создать еще одно правило, чтобы вернуть профиль или сделать это вручную!
-  * Increased risk of hypoglycemia if profile switch does not expire or reset back to base profile.
+  * Повышенный риск гипогликемии в случае, если время работы нового профиля не истечет или не сбросится назад на базовый профиль.
 
 Примеры
 ==================================================
-These are just setup examples, no advises. Don't reproduce them without being aware what you are actually doing or why you need them.
+Это просто примеры вариантов настройки, не советы. Не воспроизводите их, не зная, что вы делаете или зачем вам это нужно.
 
 * Переключение профилей для вашей повседневной деятельности (например, школа, тренажерный зал, выходные, рабочий день...) с использованием геолокации, wifi, времени и т. д.
-* Setting temp target for activities based on time, location, connection to a bluetooth device...
+* Настройка временной цели исходя из времени, местоположения, подключения к bluetooth устройствам...
 * Настройка временной цели ожидаемый прием пищи на основе времени, геолокации...
 
 Временная Цель Низкая ГК
