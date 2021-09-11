@@ -22,11 +22,11 @@
 * `Конфигуратор <../Configuration/Config-Builder.html>`_ настройки
 * `Локальный профиль <../Configuration/Config-Builder.html#local-profile-recommended>`_ настройки
 * `Цели <../Usage/Objectives.html>`_ статус включая `результаты экзамена <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
-* `Preferences <../Configuration/Preferences.html>`__ incl. `NS Client settings <../Configuration/Preferences.html#nsclient>`_
+* `Настройки <../Configuration/Preferences.html>`__ включая `Настройки клиента NS <../Configuration/Preferences.html#nsclient>`_
 
-Encrypted backup format
+Зашифрованный файл резервной копии
 ==================================================
-Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`__ .
+Резервная копия настроек зашифрована мастер-паролем, который может быть задан в `Preferences <../Configuration/Preferences.html#master-password>`__ .
 
 
 Экспорт настроек
@@ -35,20 +35,20 @@ Settings backup is encrypted by a master password that can be set in `Preference
 * Обслуживание
 * Экспортировать настройки
 
-.. image:: ../images/AAPS_ExportSettings1.png
-  :alt: AndroidAPS export settings 1
+.. изображение:: ../images/AAPS_ExportSettings1.png
+  :alt: настройки экспорта AndroidAPS 1
 
-* Date and time of export will be added to the file name automatically and displayed together with the path.
-* Click 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
-* Successful export will be prompted at bottom of the screen.
+* Дата и время экспорта будут добавлены в имя файла автоматически и добавлены в путь к файлу.
+* Нажмите "OK'.
+* Введите `главный пароль <../Configuration/Preferences.html#master-password>`__ и нажмите 'OK'.
+* Успешный экспорт будет отражен в нижней части экрана.
 
-.. image:: ../images/AAPS_ExportSettings2.png
-  :alt: AndroidAPS export settings 2
+.. изображение:: ../images/AAPS_ExportSettings2.png
+  :alt: настройки экспорта AndroidAPS 2
   
 Выполните импорт настроек
 ==================================================
-**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings-from-previous-aaps>`_.
+**Не импортируйте настройки во время активной сессии Pod** - подробнее см. стр. `Omnipod <../Configuration/OmnipodEros.html#import-settings-from-previous-aaps>`_.
 
 * Сэндвич-меню (в верхнем левом углу экрана)
 * Обслуживание
@@ -60,7 +60,7 @@ Settings backup is encrypted by a master password that can be set in `Preference
 * All files from folder AAPS/preferences/ on your phone will be shown in the list.
 * Select file.
 * Confirm import by clicking 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
+* Введите `главный пароль <../Configuration/Preferences.html#master-password>`__ и нажмите 'OK'.
 
 .. image:: ../images/AAPS_ImportSettings2.png
   :alt: AndroidAPS import settings 2
