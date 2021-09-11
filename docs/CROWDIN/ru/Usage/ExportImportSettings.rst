@@ -7,11 +7,11 @@
 
 Лучше всего экспортировать после изменения настроек или прохождения цели. 
 
-Exported settings should be copied to a cloud storage or your computer, better two different locations. Так вы будете готовы к утрате или повреждению телефона с AAPS и вам не придется начинать с нуля.
+Экспортированные настройки должны быть скопированы в облачное хранилище или на компьютер, лучше в два разных места. Так вы будете готовы к утрате или повреждению телефона с AAPS и вам не придется начинать с нуля.
 
 На компьютере с Windows 10 это выглядит так:
   
-.. image:: ../images/AAPS_ExImportSettingsWin.png
+.. изображение:: ../images/AAPS_ExportSettings.png
   :alt: AndroidAPS настройки телефона, подключенного к компьютеру
 
 Экспортированные данные
@@ -21,7 +21,7 @@ Exported settings should be copied to a cloud storage or your computer, better t
 * ` Автоматизация <../Usage/Automation.html> ` _события
 * `Конфигуратор <../Configuration/Config-Builder.html>`_ настройки
 * `Локальный профиль <../Configuration/Config-Builder.html#local-profile-recommended>`_ настройки
-* `Цели <../Usage/Objectives.html>`_ статус включая `exam results <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
+* `Цели <../Usage/Objectives.html>`_ статус включая `результаты экзамена <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
 * `Preferences <../Configuration/Preferences.html>`__ incl. `NS Client settings <../Configuration/Preferences.html#nsclient>`_
 
 Encrypted backup format
