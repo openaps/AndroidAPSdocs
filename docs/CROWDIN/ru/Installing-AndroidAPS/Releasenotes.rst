@@ -14,9 +14,9 @@ ContextEdit.
 
 Имейте в виду, что это изменение не предназначено для того, чтобы действовать вам на нервы, а существует по соображениям безопасности. Новые версии AndroidAPS не только обеспечивают новые возможности, но и содержат исправления безопасности. Поэтому необходимо, чтобы каждый пользователь обновлял приложение как можно чаще. К сожалению, все еще поступают сообщения об ошибках из очень старых версий, поэтому это попытка повысить безопасность каждого пользователя и всего сообщества. Благодарим за понимание!
 
-Version 2.8.2
+Версия 2.8.2
 ================
-Release date: 23-01-2021
+Дата выпуска: 23-01-2021
 
 * См. также `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ ниже.
 
@@ -33,7 +33,7 @@ Release date: 23-01-2021
 ================
 Дата выпуска: 12-01-2021
 
-Important hints
+Важные Примечания
 ----------------------
 * Параметр **NS_UPLOAD_ONLY** (только загрузка в NS) был принудительно включен для всех пользователей 2.8.1. 
 * Если вы используете NSClient для ввода временных целей TT, углеводов или профилей вы должны отключить его в AAPS, но **только в том случае, если ваша синхронизация хорошо работает** (т. е. вы не видите нежелательных вариаций в данных, таких как произвольное самоизменение TT, TBR и т. д.). 
@@ -108,18 +108,18 @@ Important hints
 * `новый формат зашифрованной резервной копии <../Usage/ExportImportSettings.html>`_ @dlvoy
 * `новая верификация SMS TOTP <../Children/SMS-Commands.html>`_ @dlvoy
 * `новые команды SMS PUMP CONNECT, DISCONNECT <../Children/SMS-Commands.html#commands>`_@Lexsus
-* better support for tiny basals on Dana pumps @Mackwe
-* small Insight fixes @TebbeUbben @MilosKozak
-* `"Default language" option <../Configuration/Preferences.html#general>`_ @MilosKozak
-* vector icons @Philoul
-* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phone-androidaps>`_ @Tornado-Tim
-* History browser improvements @MilosKozak
-* removed OpenAPS MA algorithm @Tornado-Tim
-* removed Oref0 sensitivity @Tornado-Tim
-* `Biometric or password protection <../Configuration/Preferences.html#protection>`_ for settings, bolus @MilosKozak
-* `new automation trigger <../Usage/Automation.html>`_ @PoweRGbg
-* `Open Humans uploader <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
-* New documentation @Achim
+* улучшена поддержка микро базалов на помпах Dana @Mackwe
+* небольшие исправления для помпы Insight @TebbeUbben @MilosKozak
+* `"Язык по умолчанию" <../Configuration/Preferences.html#general>`_ @MilosKozak
+* векторные иконки @Philoul
+* `установить нейтральные временные для MDT <../Configuration/MedtronicPump.html#configuration-of-phone-androidaps>`_ @Tornado-Tim
+* Улучшения в браузере истории @MilosKozak
+* удалён алгоритм OpenAPS MA @Tornado-Tim
+* Удалена чувствительность Oref0 @Tornado-Tim
+* `Биометрическая защита или защита паролем <../Configuration/Preferences.html#protection>`_ для настроек, болюсов @MilosKozak
+* `новый триггер автоматизации <../Usage/Automation.html>`_ @PoweRGbg
+* `выгрузка в Open Humans <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
+* Новая документация @Achim
 
 Версия 2.6.1.4
 ================
