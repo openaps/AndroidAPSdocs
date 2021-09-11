@@ -54,36 +54,36 @@
 * Обслуживание
 * Выполните импорт настроек
 
-.. image:: ../images/AAPS_ImportSettings1.png
-  :alt: AndroidAPS import settings 1
+.. изображение:: ../images/AAPS_ExportSettings1.png
+  :alt: настройки импорта AndroidAPS 1
 
-* All files from folder AAPS/preferences/ on your phone will be shown in the list.
-* Select file.
-* Confirm import by clicking 'OK'.
+* Все файлы из папки AAPS/preferences/ на телефоне будут показаны в списке.
+Выберите файл.
+* Подтвердите изменения, нажав кнопку OK'.
 * Введите `главный пароль <../Configuration/Preferences.html#master-password>`__ и нажмите 'OK'.
 
-.. image:: ../images/AAPS_ImportSettings2.png
-  :alt: AndroidAPS import settings 2
+.. изображение:: ../images/AAPS_ImportSettings2.png
+  :alt: настройки импорта AndroidAPS 2
 
-* Details on the preference file will be shown.
-* Last option to cancel import.
-* Click 'Import'.
-* Confirm message by clicking 'OK'.
-* AAPS will be restarted in order to activate imported preferences.
+* Будет показана подробная информация о файле настроек.
+* Последняя опция для отмены импорта.
+* Нажмите 'Import'.
+* Подтвердите изменения, нажав кнопку OK'.
+* AAPS будет перезапущен для активации импортированных настроек.
 
-Note for Dana RS users
+Примечание для пользователей Dana RS
 ------------------------------------------------------------
 * Поскольку настройки подключения помпы также переносятся на новый телефон, AAPS на новом телефоне уже будет "знать" помпу и не запустит сканирование bluetooth. 
-* Please pair new phone and pump manually.
+* Пожалуйста, выполните сопряжение нового телефона и помпы вручную.
 
-Import settings from previous versions (before AAPS 2.7)
+Импорт настроек из предыдущих версий (перед AAPS 2.7)
 ------------------------------------------------------------
-* The "old" settings file (called 'AndroidAPSPreferences' - without file extension) must be in root folder of your smartphone (/storage/emulated/0).
-* Do not put the "old" file in the same folder as the new exported settings (AAPS/preferences).
-* You will find the "old" file on the bottom of the list in the import dialogue.
+* Старый файл настроек (названный 'AndroidAPSPreferences' - без расширения файла) должен быть в корневой папке вашего смартфона (/storage/emulated/0).
+* Не помещайте старый файл в ту же папку, что и новые экспортированные настройки (AAPS/preferences).
+* Старый файл находится в нижней части списка в диалоге импорта.
 
-Transfer settings file
+Перенос файла настроек
 ==================================================
-* Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
-* Manuals can be found on the web, i.e. `Android help pages <https://support.google.com/android/answer/9064445?hl=en>`_.
+* Лучший способ переноса файла настроек на новый телефон - через кабель USB или облачный сервис (напр. Google Drive).
+* С руководствами можно ознакомиться в Интернете, напр. `Страница справки Android <https://support.google.com/android/answer/9064445?hl=en>`_.
 * If you experience problems with the transferred file try another way to transfer file.
