@@ -106,8 +106,8 @@ Important hints
 Уведомления о потребности в углеводах <../Configuration/Preferences.html#carb-required-notification>`_ @twain47 @Tornado-Tim
 * удален портал терапии Careportal (перемещен в Actions) @MilosKozak
 * `новый формат зашифрованной резервной копии <../Usage/ExportImportSettings.html>`_ @dlvoy
-* `new SMS TOTP authentication <../Children/SMS-Commands.html>`_ @dlvoy
-* `new SMS PUMP CONNECT, DISCONNECT <../Children/SMS-Commands.html#commands>`_ commands @Lexsus
+* `новая верификация SMS TOTP <../Children/SMS-Commands.html>`_ @dlvoy
+* `новые команды SMS PUMP CONNECT, DISCONNECT <../Children/SMS-Commands.html#commands>`_@Lexsus
 * better support for tiny basals on Dana pumps @Mackwe
 * small Insight fixes @TebbeUbben @MilosKozak
 * `"Default language" option <../Configuration/Preferences.html#general>`_ @MilosKozak
