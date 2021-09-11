@@ -9,7 +9,7 @@
 
 Перед использованием автоматизации следует уверенно овладеть ручным управлением ` временными целями <./temptarget.html> ` _ или переключением профиля. 
 
-Убедитесь, что вы понимаете, как работает автоматизация перед настройкой первого простого правила. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
+Убедитесь, что вы понимаете, как работает автоматизация перед настройкой первого простого правила. ** Вместо действий разрешите AAPS только показывать уведомления. * * Если вы уверены, что автоматизация инициируется в нужное время, замените уведомление реальным действием.
 
 .. изображение:: ../images/Automation_ConditionAction_RC3.png
   :alt: условие автоматизации + действие
@@ -22,14 +22,14 @@
 --------------------------------------------------
 ** Автоматизация по-прежнему активна при отключении цикла! **
 
-So make sure to deactivate automation rules during these occasions if neccessary. You can do so by unticking the box left of the name of your automation rule.
+Поэтому при необходимости деактивируйте правила автоматизации на это время. Это можно сделать, сняв галочку в поле слева от названия правила автоматизации.
 
 .. изображение:: ../images/Automation_ActivateDeactivate.png
   :alt: Активировать и деактивировать правило автоматизации
 
-Where to find Automation
+Где найти Автоматизацию
 --------------------------------------------------
-Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`__ in hamburger menu or as a tab.
+В зависимости от ваших `настроек в конфигураторе <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ вы найдете `Automation <../Configuration/Config-Builder.html#automation>`__ в меню hamburger или в виде вкладки.
 
 Общие настройки
 --------------------------------------------------
@@ -49,11 +49,11 @@ Depending on your `settings in config builder <../Configuration/Config-Builder.h
 --------------------------------------------------
 Вы можете выбрать между несколькими условиями. Некоторые моменты здесь объясняются, но основное легко понять и оно не все здесь описано:
 
-* connect conditions: you can have several conditions and can link them with 
+* условия соединения: можно иметь несколько условий и связать их с помощью 
 
   * "И"
   * "Или"
-  * "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+  * "Исключительно или" (что означает, что если применяется одно - и только одно из этих условий, то действие (действия) произойдет
    
 * Время vs. время повторения
 
@@ -62,7 +62,7 @@ Depending on your `settings in config builder <../Configuration/Config-Builder.h
    
 * расположение: в конфигураторе (автоматизация), можете выбрать местоположение сервиса, который хотите использовать:
 
-  * Use passive location: AAPS only takes locations when other apps are requesting it
+  * Использовать пассивное расположение: AAPS принимает локацию только в том случае, если другие приложения ее запрашивали
   * Использовать расположение сети: расположение вашего Wifi
   * Используйте локатор GPS (Внимание! Может привести к чрезмерной разрядке аккумулятора!)
   
