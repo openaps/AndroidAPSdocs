@@ -132,14 +132,14 @@
 .. изображение:: ../images/Automation2.png
   :alt: Автоматизация2
 
-This is made by someone who wants to get a hypo temp target automatically when having low glucose.
+Эта автоматизация для тех, кто хочет автоматически активировать временную цель ГИПО при низкой ГК.
 
 Временная Цель Время Обеда
 --------------------------------------------------
 .. изображение:: ../images/Automation3.png
   :alt: Автоматизация3
   
-This example is made by someone who has lunch at work at the same time every day during the week. If he or she stays at a certain time in his or her lunch location, automation will set a low temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the chosen time and if he or she is at the chosen location. So it does not work on any other time at this location or on this time when the person stays at home. 
+Эта автоматизация для тех, кто обедает на работе в одно и то же время каждую неделю. Если он/она в определенное время (перед обедом) находится в определенном месте, автоматизация задает более низкую временную цель (ожидаемый прием пищи). Из-за союза "И" это происходит только в определенное время в определенном месте. So it does not work on any other time at this location or on this time when the person stays at home. 
 
 Incorrect use of automation
 --------------------------------------------------
