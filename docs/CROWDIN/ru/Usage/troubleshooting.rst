@@ -1,6 +1,6 @@
 Устранение неполадок
 **************************************************
-You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem.
+Вы можете найти много информации об устранении неполадок на страницах этого документа. На этой странице собраны ссылки, которые помогут найти решения вашей проблемы.
 
 Additional useful information might also be available in the `FAQ <../Getting-Started/FAQ.html>`_.
 
