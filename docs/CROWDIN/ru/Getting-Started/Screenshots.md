@@ -321,16 +321,16 @@
 
 * Кнопка [переключение профиля ](../Usage/Profiles#profile-switch) является альтернативой нажатию [текущий профиль](../Getting-Started/Screenshots#section-b-profile-target) на главном экране.
 * Кнопка [временная цель](../Usage/temptarget#temp-targets) - альтернатива [текущей цели](../Getting-Started/Screenshots#section-b-profile-target) на главном экране.
-* Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
-* Even though [extended boluses](../Usage/Extended-Carbs#extended boluses) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+* Кнопка начала или отмены временного базала. Обратите внимание, что кнопка меняется с “TEMPBASAL” (ВРЕМБАЗАЛ) на “CANCEL x%” (ОТМЕНА х%), после начала действия.
+* Несмотря на то, что [пролонгированные болюсы](../Usage/Extended-Carbs#extended boluses) действительно не работают в замкнутом цикле, некоторые всё равно просили оставить эту опцию.
    
-   * This option is only available for Dana RS and Insight pumps. 
-   * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
-   * Make sure to read the [details](../Usage/Extended-Carbs#extended boluses) before using this option.
+   * Эта опция доступна только для помпDana RS и Insight. 
+   * Замкнутый цикл автоматически будет остановлен и переключится на режим открытого цикла на время пролонгированных болюсов.
+   * Не забудьте прочитать [детали](../Usage/Extended-Carbs#extended boluses) перед использованием этой опции.
 
 ### Портал терапии-раздел N
 
-* Displays information on
+* Отображает информацию о
    
    * sensor age & level (battery percentage)
    * insulin age & level (units)
