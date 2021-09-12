@@ -18,4 +18,4 @@
 * `Корейский <https://androidaps.readthedocs.io/ko/latest/>`_
 * `Литовский <https://androidaps.readthedocs.io/lt/latest/>`_
 * `Русский <https://androidaps.readthedocs.io/ru/latest/>`_
-* `Spanish <https://androidaps.readthedocs.io/es/latest/>`_
+* `Испанский <https://androidaps.readthedocs.io/es/latest/>`_
