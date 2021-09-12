@@ -2,37 +2,37 @@
 **************************************************
 Вы можете найти много информации об устранении неполадок на страницах этого документа. На этой странице собраны ссылки, которые помогут найти решения вашей проблемы.
 
-Additional useful information might also be available in the `FAQ <../Getting-Started/FAQ.html>`_.
+Дополнительную полезную информацию можно также найти в часто задаваемых вопросах `FAQ <../Getting-Started/FAQ.html>`_.
 
-AndroidAPS app
+Приложение AndroidAPS
 ==================================================
 
-Building & updating
+Сборка и обновление
 -------------------
-* `Lost keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
-* `Troubleshooting AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* `Потеря хранилища ключей <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
+* ` Устранение неполадок Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
 
 Настройки
 --------------------------------------------------
-* `Profile <../Usage/Profiles.html#troubleshooting-profile-errors>`_
+* `Профиль <../Usage/Profiles.html#troubleshooting-profile-errors>`_
 
-  .. image:: ../images/BasalNotAlignedToHours2.png
-    :alt: Error: Basal not aligned to hours
+  .. изображение:: ../images/BasalNotAlignedToHours2.png
+    :alt: Ошибка: Базал не выстроен по часам
 
-* `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
+* `Клиент Nightscout <./Usage/Troubleshooting-NSClient.md>`_
 
 Применение
 --------------------------------------------------
-* `Wrong carb values <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
+* ` Неправильно определены активные углеводы COB <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 
   .. изображение:: ../images/Calculator_SlowCarbAbsorbtion.png
-    :alt: Error: Slow carb absorbtion
+    :alt: Ошибка: Медленное поглощение углеводов
 
-* `SMS commands <../Children/SMS-Commands.html#troubleshooting>`_
+* `SMS команды <../Children/SMS-Commands.html#troubleshooting>`_
 
 CGM/НМГ
 ==================================================
-* `General <../Hardware/GeneralCGMRecommendation.html#troubleshooting>`_
+* `Общие <../Hardware/GeneralCGMRecommendation.html#troubleshooting>`_
 * `Dexcom G6 <../Hardware/DexcomG6.html#troubleshooting-g6>`_
 * `Libre 2 <../Hardware/Libre2.html#experiences-and-troubleshooting>`_
 * `xDrip - no CGM data <../Configuration/xdrip.html#identify-receiver>`_
