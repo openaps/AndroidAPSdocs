@@ -332,12 +332,12 @@
 
 * Отображает информацию о
    
-   * sensor age & level (battery percentage)
-   * insulin age & level (units)
-   * canula age
-   * pump battery age & level (percentage
+   * время, отработанное сенсором & уровень заряда (процент заряда батареи)
+   * время нахождения инсулина в картридже & уровень (единицы)
+   * время, отработанное катетером помпы
+   * время, отработанное батареей (аккумулятором) помпы & уровень заряда (процент
 
-* Less information will be shown if [low resolution skin](../Configuration/Preferences#skin) is used.
+* Будет показано меньше информации, если используется [ низкое разрешение экрана](../Configuration/Preferences#skin).
 
 #### Sensor level (battery)
 
