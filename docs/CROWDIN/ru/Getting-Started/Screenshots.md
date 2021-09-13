@@ -339,20 +339,20 @@
 
 * Будет показано меньше информации, если используется [ низкое разрешение экрана](../Configuration/Preferences#skin).
 
-#### Sensor level (battery)
+#### Уровень заряда сенсора (батарея)
 
-* Needs xDrip+ nightly build Dec. 10, 2020 or newer.
-* Works for CGM with additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level information to xDrip+.)
-* Thresholds can be set in [preferences](../Configuration/Preferences#status-lights).
-* If sensor level is the same as phone battery level you xDrip+ version is probably too old and needs an update.
+* Требуется xDrip+ ночная сборка от декабря 10, 2020 или новее.
+* Работает в мониторинге с дополнительным передатчиком, например MiaoMiao 2. (Датчик должен послать информацию об уровне батареи на xDrip+.)
+* Пороговые значения могут быть заданы в [настройках](../Configuration/Preferences#status-lights).
+* Если уровень батареи сенсора совпадает с уровнем заряда аккумулятора телефона, то версия xDrip+, вероятно, слишком старая и нуждается в обновлении.
    
    ![Уровни датчиков равны уровню батареи телефона](../images/Home2021_ActionSensorBat.png)
 
-### Careportal - section O
+### Портал терапии-раздел О
 
-* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
-* Prime/Fill allows you to record pump site and insulin cartridge change.
-* Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+* Контроль ГК, заполнение инфузионного набора, установка сенсора и замена батареи помпы - основа данных в [разделе N](#careportal-section-n).
+* Кнопка Заполнение инфузионного набора позволяет регистрировать смену места катетера помпы, а также замену картриджа инсулина.
+* Раздел O отражает состояние портала терапии сайта Nightscout. So exercise, announcement and question are special forms of notes.
 
 ### Tools - section P
 
