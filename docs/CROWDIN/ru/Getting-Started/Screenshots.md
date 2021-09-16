@@ -390,19 +390,19 @@
 
 ![Статус помпы](../images/Screenshot_PumpStatus.png)
 
-* Different information on pump status. Displayed information depends on your pump model.
-* See [pumps page](../Hardware/pumps.rst) for details.
+* Разная информация о состоянии помпы. Отображаемая информация зависит от модели помпы.
+* Смотрите [страницу помпы](../Hardware/pumps.rst).
 
 ## Портал терапии
 
-Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
+Здесь повторяются функции которые можно найти на экране Nightscout под символом "+", который позволяет добавлять заметки к терапии.
 
-### Review carb calculation
+### Просмотреть расчет углеводов
 
 ![Обзор расчёта углеводов на вкладке терапии](../images/Screenshots_TreatCalc.png)
 
-* If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
-* Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
+* Если вы использовали помощник болюса [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) для вычисления дозы инсулина, этот расчет можно проверить позже на вкладке терапии.
+* Просто нажмите на зеленую ссылку Calc. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
 
 ### Carb correction
 
