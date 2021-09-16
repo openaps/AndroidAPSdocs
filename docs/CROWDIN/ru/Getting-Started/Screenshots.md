@@ -446,10 +446,10 @@
 
 История следующих терапевтических действий:
 
-* Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
+* Bolus & Carbs -> возможность [удалить записи](../Getting-Started/Screenshots#carb-correction) для исправления истории
 * [Пролонгированный болюс](../Usage/Extended-Carbs#extended-bolus)
-* Temporary basal rate
-* [Temporary target](../Usage/temptarget.md)
+* Временная базальная скорость
+* [Временная цель](../Usage/temptarget.md)
 * [Profile switch/смена профиля](../Usage/Profiles.md)
 * [Портал терапии](../Usage/CPbefore26#careportal-discontinued) -примечания, введенные через вкладку действий и примечания в диалогах
 
