@@ -402,9 +402,9 @@
 ![Обзор расчёта углеводов на вкладке терапии](../images/Screenshots_TreatCalc.png)
 
 * Если вы использовали помощник болюса [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) для вычисления дозы инсулина, этот расчет можно проверить позже на вкладке терапии.
-* Просто нажмите на зеленую ссылку Calc. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
+* Просто нажмите на зеленую ссылку Calc. (В зависимости от помпы инсулин и углеводы также могут быть показаны на одной линии в терапии.)
 
-### Carb correction
+### Коррекция углеводов
 
 ![Терапия в 1 или 2 линии](../images/Treatment_1or2_lines.png)
 
@@ -422,29 +422,29 @@
 
 7. Если на вкладке терапии только одна линия для углеводов и инсулина, следует также добавить и запись о количестве инсулина. Убедитесь в том, чтобы установить правильное время событие и проверить активный инсулин IOB на главном экране после подтверждения новой записи.
 
-## Loop, AMA / SMB
+## Замкнутый цикл, помощник болюса AMA / микроболюсы SMB
 
-* These tabs show details about the algorithm's calculations and why AAPS acts the way it does.
-* Calculations are each time the system gets a fresh reading from the CGM.
-* For more details see [APS section on config builder page](../Configuration/Config-Builder#aps).
+* Эти вкладки показывают подробную информацию о расчетах алгоритма и почему AAPS действует так, а не иначе.
+* Расчет производится каждый раз, когда система получает свежее данные мониторинга CGM.
+* Дополнительную информацию см. в [разделе APS на вкладке конфигуратора](../Configuration/Config-Builder#aps).
 
 ## Профиль
 
 ![Профиль](../images/Screenshots_Profile.png)
 
-* Profile contains information on your individual diabetes settings:
+* Профиль содержит информацию об индивидуальных настройках диабета:
    
-   * DIA (Duration of Insulin Action)
-   * IC or I:C: Insulin to Carb ratio
-   * ISF: Insulin Sensitivity Factor
-   * Basal rate
-   * Target: Blood glucose level that you want AAPS to be aiming for
+   * DIA (продолжительность действия инсулина)
+   * IC: соотношение Инсулин - Углеводы
+   * ISF: Коэффициент чувствительности к инсулину
+   * Скорость базала
+   * Цель: Уровень глюкозы крови для AAPS
 
-* You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).
+* Можно применять [локальный профиль](../Configuration/Config-Builder#local-profile-recommended), который может быть отредактирован на смартфоне или [профиль Nightscout ](../Configuration/Config-Builder#ns-profile), который редактируется на вашей странице NS и затем пересылается на телефон. Подробная информация в соответствующих разделах на вкладке [Конфигуратор](../Configuration/Config-Builder.md).
 
 ## Терапия
 
-History of the following treatments:
+История следующих терапевтических действий:
 
 * Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
 * [Пролонгированный болюс](../Usage/Extended-Carbs#extended-bolus)
