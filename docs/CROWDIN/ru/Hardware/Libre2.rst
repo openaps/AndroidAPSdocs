@@ -7,7 +7,7 @@ Freestyle Libre 2
 
 Показания ГК можно также получать с помощью трансмиттера BT, как, например для Libre1.
 
-Important note : This does not work with the US version of the Freestyle 2 sensor ! The US version will only connect to a reader, not a phone.
+Важное примечание: Не работает с американской версией сенсоров Freestyle 2! Версия США подключается только к ридеру, а не к телефону.
 
 Шаг 1: Создайте собственное модифицированное приложение Librelink
 ==================================================
