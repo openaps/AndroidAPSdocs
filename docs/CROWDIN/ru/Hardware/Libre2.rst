@@ -46,8 +46,8 @@ Freestyle Libre 2
   :alt: LibrreLink-разрешение на доступ к памяти и расположению
   
   
-.. image:: ../images/Libre2_DateTimeAlarms.png
-  :alt: automatic time and time zone + alarm settings  
+.. изображение:: ../images/Libre2_DateTimeAlarms.png
+  :alt: автоматическое определение времени и часового пояса + настройки оповещений  
 
 The sensor remembers the device it was started from. Только это устройство может получать оповещения в будущем.
 
