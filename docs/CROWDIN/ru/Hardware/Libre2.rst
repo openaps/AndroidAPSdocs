@@ -49,25 +49,25 @@ Freestyle Libre 2
 .. изображение:: ../images/Libre2_DateTimeAlarms.png
   :alt: автоматическое определение времени и часового пояса + настройки оповещений  
 
-The sensor remembers the device it was started from. Только это устройство может получать оповещения в будущем.
+Сенсор запоминает устройство, с которого он был запущен. Только это устройство может получать оповещения в будущем.
 
-Первая установка соединения с сенсором имеет решающее значение. Приложение LibreLink пытается установить беспроводное соединение с сенсором каждые 30 секунд. Если один или несколько обязательных параметров отсутствуют, их надо скорректировать. У вас нет ограничений по времени для этого. Сенсор постоянно пытается установить соединение. Даже если это длится несколько часов. Be patient and try different settings before even think of changing the sensor.
+Первая установка соединения с сенсором имеет решающее значение. Приложение LibreLink пытается установить беспроводное соединение с сенсором каждые 30 секунд. Если один или несколько обязательных параметров отсутствуют, их надо скорректировать. У вас нет ограничений по времени для этого. Сенсор постоянно пытается установить соединение. Даже если это длится несколько часов. Будьте терпеливы и попробуйте разные настройки, прежде чем даже подумать о замене сенсора.
 
-As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLink's start screen there is no connection or some other setting blocks LibreLink to signal alarms. Please check if the sound is enabled and all sorts of blocking app notifications are disabled. When the exclamation mark is gone, the connection should be established and blood sugar values are sent to the smartphone. Это должно произойти не более чем через 5 минут.
+Красный восклицательный знак ("!) в левом верхнем углу стартового экрана LibreLink означает, что нет соединения или какая-то другая настройка не позволяет LibreLink издавать оповещения. Проверьте, включен ли звук и отключены ли все виды блокировок уведомлений от приложений. Когда восклицательный знак исчезнет, соединение будет установлено и значения гликемии отправятся на смартфон. Это должно произойти не более чем через 5 минут.
 
-.. image:: ../images/Libre2_ExclamationMark.png
+.. изображение:: ../images/Libre2_ExclamationMark.png
   :alt: LibreLink нет соединения
   
 Если восклицательный знак остается или вы получите сообщение об ошибке, это может иметь несколько причин:
 
 - Служба определения местоположения Android не предоставлена - включите ее в системных настройках
-- automatic time and time zone not set - please change the settings accordingly
+- автоматическое время и часовой пояс не заданы - измените настройки
 -активировать сигналы -по крайней мере однин из трех сигналов в LibreLink
 - Bluetooth выключен - включите
-- sound is blocked
-- app notifications are blocked
-- idle screen notifications are blocked 
-- you have a faulty Libre 2 sensor from a production LOT number with a 'K' followed by 8 digits. You find this printed on the yellow package. These sensors have to be replaced as they don't function on bluetooth.
+- звук заблокирован
+- уведомления приложений заблокированы
+- неактивные уведомления на экране заблокированы 
+- у вас неисправный сенсор Libre 2 из партии K + 8 цифр. You find this printed on the yellow package. These sensors have to be replaced as they don't function on bluetooth.
 
 Перезапуск телефона помогает, возможно, придется перезапустить несколько раз. Как только соединение будет установлено, красный восклицательный знак исчезнет и самый важный этап - сопряжение - пройден. It may happen that depending on system settings the exclamation mark remains but you still get readings. In both cases you are fine. Сенсор и телефон теперь сопряжены, каждую минуту передаются данные ГК.
 
