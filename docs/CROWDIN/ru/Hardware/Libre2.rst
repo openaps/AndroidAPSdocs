@@ -67,11 +67,11 @@ Freestyle Libre 2
 - звук заблокирован
 - уведомления приложений заблокированы
 - неактивные уведомления на экране заблокированы 
-- у вас неисправный сенсор Libre 2 из партии K + 8 цифр. You find this printed on the yellow package. These sensors have to be replaced as they don't function on bluetooth.
+- у вас неисправный сенсор Libre 2 из партии K + 8 цифр. Вы найдете этот номер на желтой упаковке Эти сенсоры должны быть заменены, поскольку они не работают с bluetooth.
 
-Перезапуск телефона помогает, возможно, придется перезапустить несколько раз. Как только соединение будет установлено, красный восклицательный знак исчезнет и самый важный этап - сопряжение - пройден. It may happen that depending on system settings the exclamation mark remains but you still get readings. In both cases you are fine. Сенсор и телефон теперь сопряжены, каждую минуту передаются данные ГК.
+Перезапуск телефона помогает, возможно, придется перезапустить несколько раз. Как только соединение будет установлено, красный восклицательный знак исчезнет и самый важный этап - сопряжение - пройден. Может случиться так, что в зависимости от системных настроек восклицательный знак остается, но данные идут. В обоих случаях нет причин беспокоиться. Сенсор и телефон теперь сопряжены, каждую минуту передаются данные ГК.
 
-.. image:: ../images/Libre2_Connected.png
+.. изображение:: ../images/Libre2_Connected.png
   :alt: Соединение LibreLink установлено
   
 In rare case it could help to empty the bluetooth cache and/or reset all network connections via the system menu. This removes all connected bluetooth devices which may help to setup a proper bluetooth connection. That procedure is save as the started sensor is remembered by the patched LibreLink app. Nothing additional has to be done here. Simply wait for the patched app to connect to the sensor.
