@@ -82,11 +82,11 @@ Freestyle Libre 2
 
 Замечание: чтобы включить соединение, приложению требуются обязательные настройки, установленные в течение часа после разогрева,. В течение 14-дневного периода работы они не нужны. В большинстве случаев при проблемах с запуском сенсора было выключена служба определения местоположения. На Android это необходимо для правильной работы Bluetooth. См. документацию Google Android.
 
-В течение 14 дней для сканирования при работе с приложением LibreLink можно использовать параллельно один или несколько смартфонов с NFC (не ридер!). Для этого действия нет ограничений по времени. Можно начать работу еще с одним телефоном, например, на пятый или любой другой день. The parallel phones(s) could upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for your diabetes team. Есть много родителей, которым это необходимо. 
+В течение 14 дней для сканирования при работе с приложением LibreLink можно использовать параллельно один или несколько смартфонов с NFC (не ридер!). Для этого действия нет ограничений по времени. Можно начать работу еще с одним телефоном, например, на пятый или любой другой день. Второй телефон (телефоны) может передавать значения сахара крови в Abbott Cloud (LibreView). LibreView может генерировать отчеты для специалистов. Есть много родителей, которым это необходимо. 
 
-Please note that the original patched app **does not have any connection to the internet** to avoid tracking.
+Обратите внимание, что оригинальное модифицированное приложение **не имеет никакого подключения к Интернету**, чтобы избежать отслеживания.
 
-However there is a variant of the patched app supporting LibreView with enabled internet access. Please be aware that your data is transferred to the cloud then. But your diadoc tool- and reporting chain is fully supported then. With that variant it is also possible to move the alarms of a running sensor to a different device which not has started the sensor. Please google in diabetes related German forums how this could be done.
+Однако существует вариант этого приложения с включенным доступом в Интернет для поддержки LibreView. Имейте в виду, что в этом случае ваши данные передаются в облако. But your diadoc tool- and reporting chain is fully supported then. With that variant it is also possible to move the alarms of a running sensor to a different device which not has started the sensor. Please google in diabetes related German forums how this could be done.
 
 
 Шаг 2: Установите и настройте приложение xDrip+
