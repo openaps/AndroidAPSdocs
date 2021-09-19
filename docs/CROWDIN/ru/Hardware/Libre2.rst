@@ -80,9 +80,9 @@ Freestyle Libre 2
 
 Однако, при запуске следующего сенсора, все параметры должны быть установлены снова!
 
-Замечание: чтобы включить соединение, приложению требуются обязательные настройки, установленные в течение часа после разогрева,. For the 14 days operation time they are not needed. In most cases when you have problems with starting a sensor the location service was switched off. For Android it is needed for proper bluetooth operation(!) to connect. Please refer to Google's Android documentation.
+Замечание: чтобы включить соединение, приложению требуются обязательные настройки, установленные в течение часа после разогрева,. В течение 14-дневного периода работы они не нужны. В большинстве случаев при проблемах с запуском сенсора было выключена служба определения местоположения. На Android это необходимо для правильной работы Bluetooth. См. документацию Google Android.
 
-During the 14 days you can use in parallel one or more NFC capable smartphones (not the reader device!) running the original LibreLink app for scanning via NFC. There is no time limitation to start that. You could use a parallel phone for example on day 5 or so. The parallel phones(s) could upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for your diabetes team. Есть много родителей, которым это необходимо. 
+В течение 14 дней для сканирования при работе с приложением LibreLink можно использовать параллельно один или несколько смартфонов с NFC (не ридер!). Для этого действия нет ограничений по времени. Можно начать работу еще с одним телефоном, например, на пятый или любой другой день. The parallel phones(s) could upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for your diabetes team. Есть много родителей, которым это необходимо. 
 
 Please note that the original patched app **does not have any connection to the internet** to avoid tracking.
 
