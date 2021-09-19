@@ -74,13 +74,13 @@ Freestyle Libre 2
 .. изображение:: ../images/Libre2_Connected.png
   :alt: Соединение LibreLink установлено
   
-In rare case it could help to empty the bluetooth cache and/or reset all network connections via the system menu. This removes all connected bluetooth devices which may help to setup a proper bluetooth connection. That procedure is save as the started sensor is remembered by the patched LibreLink app. Nothing additional has to be done here. Simply wait for the patched app to connect to the sensor.
+Иногда может помочь очистка кэша bluetooth и/или сброс всех сетевых соединений через меню системы. Это удалит все подключенные устройства и возможно восстановит правильное соединение. Эта процедура безопасна, так как запущенный сенсор запоминается модифицированным приложением LibreLink. Ничего дополнительного не нужно делать. Просто подождите подключения к сенсору.
 
-After a successful connection the smartphone settings can be changed if necessary. This is not recommended but you may want to save power. Служба определения местоположения может быть отключена, громкость установлена на ноль, сигналы снова отключены. The blood sugar levels are transferred anyway.
+После успешного подключения при необходимости можно изменить настройки смартфона. Это не рекомендуется, но вы можете захотеть экономить энергию. Служба определения местоположения может быть отключена, громкость установлена на ноль, сигналы снова отключены. Данные сахара крови в любом случае передаются.
 
 Однако, при запуске следующего сенсора, все параметры должны быть установлены снова!
 
-Remark: The patched app needs the mandatory settings set in that hour after warmup to enable a connection. For the 14 days operation time they are not needed. In most cases when you have problems with starting a sensor the location service was switched off. For Android it is needed for proper bluetooth operation(!) to connect. Please refer to Google's Android documentation.
+Замечание: чтобы включить соединение, приложению требуются обязательные настройки, установленные в течение часа после разогрева,. For the 14 days operation time they are not needed. In most cases when you have problems with starting a sensor the location service was switched off. For Android it is needed for proper bluetooth operation(!) to connect. Please refer to Google's Android documentation.
 
 During the 14 days you can use in parallel one or more NFC capable smartphones (not the reader device!) running the original LibreLink app for scanning via NFC. There is no time limitation to start that. You could use a parallel phone for example on day 5 or so. The parallel phones(s) could upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for your diabetes team. Есть много родителей, которым это необходимо. 
 
