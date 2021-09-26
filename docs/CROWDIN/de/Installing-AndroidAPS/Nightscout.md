@@ -49,7 +49,7 @@ Wir gehen davon aus, dass du bereits eine Nightscout Seite hast. Falls nicht, ge
 
 ## Halb-automatische Nightscout Einrichtung
 
-Dieser Service wird von Looper Martin Schiftan derzeit kostenlos angeboten. Wenn Dir das Angebot gefällt, kannst Du ihm eine kleine Spende zukommen lassen. Den Link findest Du links in der Navigation auf seiner Seite.
+Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
 **Vorteile**
 
@@ -57,6 +57,8 @@ Dieser Service wird von Looper Martin Schiftan derzeit kostenlos angeboten. Wenn
 * Deutlich weniger manueller Aufwand, da Martin versucht, die Administration so weit als möglich zu automatisieren.
 * Alle Einstellungen können über eine benutzerfreundliche Web-Oberfläche vorgenommen werden. 
 * Eine automatisierte Basalratenüberprüfung mit Autotune ist ebenfalls enthalten. 
-* Der Server steht in Deutschland.
+* The servers are located in Germany and Finland.
 
 <https://ns.10be.de/en/index.html>
+
+An alternative would be <https://t1pal.com/> - starting at $11,99 per month.
