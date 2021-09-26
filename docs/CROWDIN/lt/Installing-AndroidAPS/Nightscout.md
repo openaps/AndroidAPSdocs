@@ -49,7 +49,7 @@ Manoma, kad jūs jau turite Nightscout svetainę, jei ne, apsilankykite [Nightsc
 
 ## Pusiau automatinis Nightscout diegimas
 
-Ši paslauga teikiama kolegos, uždaro ciklo naudotojo, Martin Schiftan šiuo metu nemokamai. Jei jums patinka ši paslauga, galite nusiųsti jam nedidelį atlygį (nuoroda navigacijos kairėje pusėje).
+Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
 **Privalumai**
 
@@ -57,6 +57,8 @@ Manoma, kad jūs jau turite Nightscout svetainę, jei ne, apsilankykite [Nightsc
 * Sumažinti rankų darbą, nes Martin bando automatizuoti administravimą.
 * Visi nustatymai gali būti atliekami per patogią internetinę sąsają. 
 * Paslauga apima automatinį valandinės bazės patikrinimą, naudojant Autotune. 
-* Serveris yra Vokietijoje.
+* The servers are located in Germany and Finland.
 
 <https://ns.10be.de/en/index.html>
+
+An alternative would be <https://t1pal.com/> - starting at $11,99 per month.
