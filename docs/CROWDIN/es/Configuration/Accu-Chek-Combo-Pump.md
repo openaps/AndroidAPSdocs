@@ -48,7 +48,7 @@
     * Establecer alarma de cartucho baja a su gusto
     * Configurar un bolus máximo adecuado para su terapia para proteger contra errores en el software
     * Del mismo modo, configure la duración máxima de TBR como salvaguarda. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
-    * Habilitar el bloqueo de teclas en la bomba para evitar los bolos desde la bomba, especialmente. when the pump was used before and quick bolusing was a habit.
+    * Habilitar el bloqueo de teclas en la bomba para evitar los bolos desde la bomba, especialmente when the pump was used before and quick bolusing was a habit.
     * Establezca el tiempo de espera de la pantalla y el tiempo de espera del menú en un mínimo de 5.5 y 5 respectivamente. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
 
 ![Pantalla del menú de usuarios](../images/combo/combo-menu-settings.png)

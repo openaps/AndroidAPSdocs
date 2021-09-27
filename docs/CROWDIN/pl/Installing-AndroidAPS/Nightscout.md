@@ -49,7 +49,7 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
 
 ## Półautomatyczna konfiguracja Nightcout
 
-Ten serwis jest obecnie oferowany bezpłatnie przez członka społeczności loop Martina Schiftana. Jeśli podoba Ci się usługa, możesz rozważyć wysłanie mu małej darowizny (link w nawigacji po lewej stronie).
+Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
 **Półautomatyczna konfiguracja Nightcout**
 
@@ -57,6 +57,8 @@ Ten serwis jest obecnie oferowany bezpłatnie przez członka społeczności loop
 * Redukcja ilości ręcznych ustawień, Martin próbuje zautomatyzować zarządzanie konfiguracją.
 * Wszystkie ustawienia można wprowadzić za pomocą przyjaznego dla użytkownika interfejsu web. 
 * Usługa obejmuje zautomatyzowaną kontrolę dawki bazowej za pomocą funkcji automatycznego dostrajania (Autotune). 
-* Serwer znajduje się w Niemczech.
+* The servers are located in Germany and Finland.
 
 <https://ns.10be.de/en/index.html>
+
+An alternative would be <https://t1pal.com/> - starting at $11,99 per month.

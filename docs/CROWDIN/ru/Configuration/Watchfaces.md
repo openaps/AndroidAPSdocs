@@ -16,7 +16,7 @@
 
 Для Wear -версии AAPS при [ построении APK ](../Installing-AndroidAPS/Building-APK.md) необходимо выбрать вариант компоновки "fullRelease", (или "pumpRelease" для удаленного управления помпой без цикла).
 
-From March 2021 you need to sideload AAPS onto the watch, it is no longer accessible via the watch's Google Play Store. You can sideload using [Wear Installer](https://youtu.be/8HsfWPTFGQI) which you will need to install on both your watch and phone. Once you have selected AndroidAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
+С марта 2021 года требуется самостоятельно устанавливать AAPS на часы, программа больше не доступна через циферблаты на Google Play. Его можно установить через [Wear Installer](https://youtu.be/8HsfWPTFGQI), который устанавливается как на часы, так и на телефон. После того, как вы выберете AndroidAPS для загрузки Wear на часы, вы сможете использовать циферблаты, усложнения и средства управления AAPS.
 
 ### Настройка на телефоне
 
@@ -236,9 +236,9 @@ AndroidAPS обеспечивает следующие усложнения:
 
 ## Устранение неполадок в приложении Wear:
 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
-* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
-* If Complications does not update data - check first if AAPS watchfaces work at all.
+* Иногда помогает повторная синхронизация приложений с часами, поскольку этот процесс иногда затягивается: Android Wear > значок шестеренки > наименование часов > повторная синхронизация часов.
+* Включите отладку ADB в настройках разработчика (на часах), подключите часы через USB к компьютеру и запустите приложение Wear в Android Studio.
+* Если в усложнении не происходит обновление данных, то сначала проверьте, работает ли циферблат AAPS вообще.
 
 ### Sony Smartwatch 3
 

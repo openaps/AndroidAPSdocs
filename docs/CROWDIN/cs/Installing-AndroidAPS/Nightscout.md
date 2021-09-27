@@ -49,7 +49,7 @@ Předpokládá se, že Nightscout stránky už máte, pokud ne, tak navštivte s
 
 ## Poloautomatickíé zřízení Nightscoutu
 
-Tuto službu nabízí kolega looper Martin Schiftan a v současnosti je zdarma. Pokud se vám služba líbí, můžete zvážit odeslání drobného příspěvku (odkaz v navigačním panelu vlevo).
+Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
 **Výhody**
 
@@ -57,6 +57,8 @@ Tuto službu nabízí kolega looper Martin Schiftan a v současnosti je zdarma. 
 * Téměř žádná manuální práce, protože Martin se snaží celou administraci zautomatizovat.
 * Všechna nastavení lze provádět prostřednictvím uživatelsky přívětivého webového rozhraní. 
 * Tato služba obsahuje rovněž automatické kontroly bazálů prostřednictvím nástroje Autotune. 
-* Server se nachází v Německu.
+* The servers are located in Germany and Finland.
 
 <https://ns.10be.de/en/index.html>
+
+An alternative would be <https://t1pal.com/> - starting at $11,99 per month.

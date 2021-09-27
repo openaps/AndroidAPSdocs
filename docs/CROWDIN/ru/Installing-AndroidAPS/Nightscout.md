@@ -49,7 +49,7 @@
 
 ## Полуавтоматизированная установка Nightscout
 
-На данный момент эту услугу бесплатно предлагает Martin Schiftan. Если вам понравилась услуга, вы можете отправить ему небольшое пожертвование (ссылка в навигации слева).
+Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
 **Преимущества**
 
@@ -57,6 +57,8 @@
 * Сокращение ручной работы поскольку Martin пытается автоматизировать администрирование.
 * Все настройки можно задать с помощью удобного для пользователя веб-интерфейса. 
 * Услуга включает автоматическую проверку базальной скорости с помощью автонастройки. 
-* Сервер расположен в Германии.
+* The servers are located in Germany and Finland.
 
 <https://ns.10be.de/en/index.html>
+
+An alternative would be <https://t1pal.com/> - starting at $11,99 per month.

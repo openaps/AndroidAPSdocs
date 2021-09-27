@@ -49,7 +49,7 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
 
 ## Configuración de Nightscout semi automatizada
 
-Este servicio es ofrecido por el compañero Martin Schiftan de forma gratuita en este momento. Si le gusta el servicio, puede considerar enviarle una pequeña donación (enlace en la navegación en el lado izquierdo).
+Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
 **Beneficios**
 
@@ -57,6 +57,8 @@ Este servicio es ofrecido por el compañero Martin Schiftan de forma gratuita en
 * Reducción del trabajo manual mientras Martin trata de automatizar la administración.
 * Todos los ajustes se pueden realizar a través de una interfaz web fácil de usar. 
 * El servicio incluye una verificación automática de la tasa basal usando Autotune. 
-* El servidor se encuentra en Alemania.
+* The servers are located in Germany and Finland.
 
 <https://ns.10be.de/en/index.html>
+
+An alternative would be <https://t1pal.com/> - starting at $11,99 per month.

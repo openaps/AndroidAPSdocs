@@ -50,9 +50,31 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Loop-status** Ist ein Loop-Kandidat. Die Pumpe kommt Ende 2018 in ausgewählten europäischen Ländern auf den Markt. Es gibt Gerüchte, nachdem diese über eine Android App auf einem speziellen Gerät gesteuert wird.
+**Loop-status** Ist ein Loop-Kandidat.
 
-**Hardware-Anforderungen für AAPS:** Vermutlich keine, Die Pumpe scheint über Bluetooth zu kommunizieren.
+**Hardware Voraussetzungen für AAPS:** Keine, Die Pumpe scheint über Bluetooth zu kommunizieren.
+
+**Anmerkung:** Es gibt einige Entwickler, die die Dekodierung des Protokolls prüfen, aber bis jetzt befindet sich dieses Projekt noch in einer vorläufigen Phase.
+
+* * *
+
+### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+
+**Loop Status:** Noch nicht zum Loopen geeignet.
+
+Während das Unternehmen in der Vergangenheit entschieden hat, seine Pumpen nicht durch externe Geräte steuern zu lassen, gab es hier in den letzten Jahren Veränderungen. Die t:slim X2 Pumpe wurde aktualisiert, um über die t:connect App ferngesteuert zu werden. Das bedeutet, dass die Türen geöffnet wurden, damit künftig eine Nutzung der Pumpe mit AAPS möglich sein könnte. Eine neue Pumpenfirmware soll in Kürze veröffentlicht werden - dieses oder nächstes Jahr, bevor die schlauchlose Pumpe t:sport auf den Markt kommt. Details, welche Funktionen über t:connect steuerbar sind, gibt es noch nicht - Boli auf jeden Fall, alles andere ist unbekannt.
+
+**Hardware Voraussetzungen für AAPS:** Keine, Die Pumpe scheint über Bluetooth zu kommunizieren.
+
+* * *
+
+### Tandem: t:sport ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+
+**Loop-status** Ist ein Loop-Kandidat. Pumpe wurde noch nicht veröffentlicht, aber der FDA-Prozess läuft bereits, also sollte sie eher früher als später in den USA veröffentlicht werden.
+
+**Hardware Voraussetzungen für AAPS:** Keine, Die Pumpe scheint über Bluetooth zu kommunizieren.
+
+* * *
 
 ### Medtronic Bluetooth
 
@@ -76,21 +98,13 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert.
 
-**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+**Hinweis zur Pumpe:** Es ist der Eindruck entstanden, dass sich das Unternehmen aus dem Pumpenmarkt zurückzieht. Weitere Informationen dazu findest Du in diesem [Artikel](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU).
 
 ## Pumpen, die nicht für den Loop geeignet sind
 
-### Tandem (alle) ([Homepage](https://www.tandemdiabetes.com/))
-
-**Loop Status:** Nicht zum Loopen geeignet.
-
-Vor einiger Zeit war eine Firmware namens T:AP (siehe dieser [Artikel](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&)) im Einsatz, die zum Loopen verwenden werden könnte. Diese ist nicht mehr verfügbar, da die Firmware der Pumpe auf x2 umgestellt wurde. Die Firmware T:AP war auch nicht für den kommerziellen Einsatz, sondern nur für den Einsatz in Studien gedacht. Laut einem der Geschäftsführer des Unternehmens wird es nie eine offene Schnittstelle zur Tandem-Pumpe geben. Sie haben aber ein eigenes Closed Loop System namens Control-IQ entwickelt. Dies ist in den USA bereits verfügbar und soll 2020 auch nach Europa kommen.
-
-* * *
-
 ### Animas Vibe
 
-**Loop Status:** Nicht zum Loopen geeignet. Keine Fernsteuerung möglich. **Hinweis:** Pumpe wird nicht mehr verkauft. Das Unternehmen hat sich aus dem Pumpengeschäft zurückgezogen.
+**Loop Status:** Nicht zum Loopen geeignet. Keine Fernsteuerung möglich. **Hinweis:** Pumpe wird nicht mehr verkauft. Das Unternehmen (Johnson&Johnson) hat sich aus dem Pumpengeschäft zurückgezogen.
 
 * * *
 
@@ -100,7 +114,7 @@ Vor einiger Zeit war eine Firmware namens T:AP (siehe dieser [Artikel](https://w
 
 ## Anforderungen an Pumpen, um loopbar zu sein
 
-**Voraussetzungen**
+**Grundvoraussetzungen**
 
 - Pumpe muss irgendeine Art von Fernbedienung unterstützen. (BT, Radiofrequenz, etc.)
 - Protokoll ist gehackt/dokumentiert/etc.
@@ -111,11 +125,11 @@ Vor einiger Zeit war eine Firmware namens T:AP (siehe dieser [Artikel](https://w
 - Status abrufen
 - Temporäre Basalraten abbrechen
 
-**Für oref1(SMB) oder Bolusing:**
+**Für oref1(SMB) oder zur Bolusabgabe:**
 
 - Mahlzeiten Bolus abgeben
 
-**Sinnvoll außerdem**
+**Von Vorteil**
 
 - Bolus abbrechen
 - Basalprofil abrufen (fast eine Anforderung)

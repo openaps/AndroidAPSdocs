@@ -7,11 +7,11 @@
 
 Лучше всего экспортировать после изменения настроек или прохождения цели. 
 
-Exported settings should be copied to a cloud storage or your computer, better two different locations. Так вы будете готовы к утрате или повреждению телефона с AAPS и вам не придется начинать с нуля.
+Экспортированные настройки должны быть скопированы в облачное хранилище или на компьютер, лучше в два разных места. Так вы будете готовы к утрате или повреждению телефона с AAPS и вам не придется начинать с нуля.
 
 На компьютере с Windows 10 это выглядит так:
   
-.. image:: ../images/AAPS_ExImportSettingsWin.png
+.. изображение:: ../images/AAPS_ExportSettings.png
   :alt: AndroidAPS настройки телефона, подключенного к компьютеру
 
 Экспортированные данные
@@ -21,12 +21,12 @@ Exported settings should be copied to a cloud storage or your computer, better t
 * ` Автоматизация <../Usage/Automation.html> ` _события
 * `Конфигуратор <../Configuration/Config-Builder.html>`_ настройки
 * `Локальный профиль <../Configuration/Config-Builder.html#local-profile-recommended>`_ настройки
-* `Цели <../Usage/Objectives.html>`_ статус включая `exam results <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
-* `Preferences <../Configuration/Preferences.html>`__ incl. `NS Client settings <../Configuration/Preferences.html#nsclient>`_
+* `Цели <../Usage/Objectives.html>`_ статус включая `результаты экзамена <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
+* `Настройки <../Configuration/Preferences.html>`__ включая `Настройки клиента NS <../Configuration/Preferences.html#nsclient>`_
 
-Encrypted backup format
+Зашифрованный файл резервной копии
 ==================================================
-Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`__ .
+Резервная копия настроек зашифрована мастер-паролем, который может быть задан в `Preferences <../Configuration/Preferences.html#master-password>`__ .
 
 
 Экспорт настроек
@@ -35,55 +35,55 @@ Settings backup is encrypted by a master password that can be set in `Preference
 * Обслуживание
 * Экспортировать настройки
 
-.. image:: ../images/AAPS_ExportSettings1.png
-  :alt: AndroidAPS export settings 1
+.. изображение:: ../images/AAPS_ExportSettings1.png
+  :alt: настройки экспорта AndroidAPS 1
 
-* Date and time of export will be added to the file name automatically and displayed together with the path.
-* Click 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
-* Successful export will be prompted at bottom of the screen.
+* Дата и время экспорта будут добавлены в имя файла автоматически и добавлены в путь к файлу.
+* Нажмите "OK'.
+* Введите `главный пароль <../Configuration/Preferences.html#master-password>`__ и нажмите 'OK'.
+* Успешный экспорт будет отражен в нижней части экрана.
 
-.. image:: ../images/AAPS_ExportSettings2.png
-  :alt: AndroidAPS export settings 2
+.. изображение:: ../images/AAPS_ExportSettings2.png
+  :alt: настройки экспорта AndroidAPS 2
   
 Выполните импорт настроек
 ==================================================
-**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings-from-previous-aaps>`_.
+**Не импортируйте настройки во время активной сессии Pod** - подробнее см. стр. `Omnipod <../Configuration/OmnipodEros.html#import-settings-from-previous-aaps>`_.
 
 * Сэндвич-меню (в верхнем левом углу экрана)
 * Обслуживание
 * Выполните импорт настроек
 
-.. image:: ../images/AAPS_ImportSettings1.png
-  :alt: AndroidAPS import settings 1
+.. изображение:: ../images/AAPS_ExportSettings1.png
+  :alt: настройки импорта AndroidAPS 1
 
-* All files from folder AAPS/preferences/ on your phone will be shown in the list.
-* Select file.
-* Confirm import by clicking 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
+* Все файлы из папки AAPS/preferences/ на телефоне будут показаны в списке.
+Выберите файл.
+* Подтвердите изменения, нажав кнопку OK'.
+* Введите `главный пароль <../Configuration/Preferences.html#master-password>`__ и нажмите 'OK'.
 
-.. image:: ../images/AAPS_ImportSettings2.png
-  :alt: AndroidAPS import settings 2
+.. изображение:: ../images/AAPS_ImportSettings2.png
+  :alt: настройки импорта AndroidAPS 2
 
-* Details on the preference file will be shown.
-* Last option to cancel import.
-* Click 'Import'.
-* Confirm message by clicking 'OK'.
-* AAPS will be restarted in order to activate imported preferences.
+* Будет показана подробная информация о файле настроек.
+* Последняя опция для отмены импорта.
+* Нажмите 'Import'.
+* Подтвердите изменения, нажав кнопку OK'.
+* AAPS будет перезапущен для активации импортированных настроек.
 
-Note for Dana RS users
+Примечание для пользователей Dana RS
 ------------------------------------------------------------
 * Поскольку настройки подключения помпы также переносятся на новый телефон, AAPS на новом телефоне уже будет "знать" помпу и не запустит сканирование bluetooth. 
-* Please pair new phone and pump manually.
+* Пожалуйста, выполните сопряжение нового телефона и помпы вручную.
 
-Import settings from previous versions (before AAPS 2.7)
+Импорт настроек из предыдущих версий (перед AAPS 2.7)
 ------------------------------------------------------------
-* The "old" settings file (called 'AndroidAPSPreferences' - without file extension) must be in root folder of your smartphone (/storage/emulated/0).
-* Do not put the "old" file in the same folder as the new exported settings (AAPS/preferences).
-* You will find the "old" file on the bottom of the list in the import dialogue.
+* Старый файл настроек (названный 'AndroidAPSPreferences' - без расширения файла) должен быть в корневой папке вашего смартфона (/storage/emulated/0).
+* Не помещайте старый файл в ту же папку, что и новые экспортированные настройки (AAPS/preferences).
+* Старый файл находится в нижней части списка в диалоге импорта.
 
-Transfer settings file
+Перенос файла настроек
 ==================================================
-* Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
-* Manuals can be found on the web, i.e. `Android help pages <https://support.google.com/android/answer/9064445?hl=en>`_.
-* If you experience problems with the transferred file try another way to transfer file.
+* Лучший способ переноса файла настроек на новый телефон - через кабель USB или облачный сервис (напр. Google Drive).
+* С руководствами можно ознакомиться в Интернете, напр. `Страница справки Android <https://support.google.com/android/answer/9064445?hl=en>`_.
+* Если у вас возникли проблемы с передачей файла, попробуйте другой способ передачи файла.

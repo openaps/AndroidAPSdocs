@@ -34,7 +34,7 @@ Windows
 
 * В случае, если файл git.exe не найден, нажмите кнопку "OK" в диалоговом окне (1), а затем кнопку с тремя точками (2.).
 * Используйте функцию поиск <https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html> в проводнике Windows для поиска "git.exe", если не уверены в том, где его можно найти. Вы ищете файл git.exe, находящийся в папке \bin\.
-* Select path to git.exe and make sure you selected the one in **\\bin\\** folder (3.) and click "OK" (4.).
+* Выберите путь к файлу git.exe, убедиdibcm, что выбрана папка ** \bin\ ** (3.) и нажмите кнопку "OK" (4).
 * Закройте окно настроек, нажав кнопку "ОК" (5.).
 
   .. изображение:: ../images/AndroidStudio361_11.png
@@ -47,7 +47,7 @@ Windows
 4. Проверьте параметры git в Android Studio
 --------------------------------------------------
 * Откройте окно терминала в Android Studio
-* Enter ``git --version`` (without quotation marks and no spaces between the two - [minus sign]!) and press Return
+* Введите "`версию -- git`" (без кавычек и без пробелов между двумя - [знаками минус]!) и нажмите Ввод
 
   .. изображение:: ../images/AndroidStudio_gitversion1.png
     :alt: git-версия

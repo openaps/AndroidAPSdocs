@@ -319,54 +319,54 @@
 
 ### Действия-раздел M
 
-* Button [profile switch](../Usage/Profiles#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
-* Button [temporary target](../Usage/temptarget#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
-* Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
-* Even though [extended boluses](../Usage/Extended-Carbs#extended boluses) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+* Кнопка [переключение профиля ](../Usage/Profiles#profile-switch) является альтернативой нажатию [текущий профиль](../Getting-Started/Screenshots#section-b-profile-target) на главном экране.
+* Кнопка [временная цель](../Usage/temptarget#temp-targets) - альтернатива [текущей цели](../Getting-Started/Screenshots#section-b-profile-target) на главном экране.
+* Кнопка начала или отмены временного базала. Обратите внимание, что кнопка меняется с “TEMPBASAL” (ВРЕМБАЗАЛ) на “CANCEL x%” (ОТМЕНА х%), после начала действия.
+* Несмотря на то, что [пролонгированные болюсы](../Usage/Extended-Carbs#extended boluses) действительно не работают в замкнутом цикле, некоторые всё равно просили оставить эту опцию.
    
-   * This option is only available for Dana RS and Insight pumps. 
-   * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
-   * Make sure to read the [details](../Usage/Extended-Carbs#extended boluses) before using this option.
+   * Эта опция доступна только для помпDana RS и Insight. 
+   * Замкнутый цикл автоматически будет остановлен и переключится на режим открытого цикла на время пролонгированных болюсов.
+   * Не забудьте прочитать [детали](../Usage/Extended-Carbs#extended boluses) перед использованием этой опции.
 
 ### Портал терапии-раздел N
 
-* Displays information on
+* Отображает информацию о
    
-   * sensor age & level (battery percentage)
-   * insulin age & level (units)
-   * canula age
-   * pump battery age & level (percentage
+   * время, отработанное сенсором & уровень заряда (процент заряда батареи)
+   * время нахождения инсулина в картридже & уровень (единицы)
+   * время, отработанное катетером помпы
+   * время, отработанное батареей (аккумулятором) помпы & уровень заряда (процент
 
-* Less information will be shown if [low resolution skin](../Configuration/Preferences#skin) is used.
+* Будет показано меньше информации, если используется [ низкое разрешение экрана](../Configuration/Preferences#skin).
 
-#### Sensor level (battery)
+#### Уровень заряда сенсора (батарея)
 
-* Needs xDrip+ nightly build Dec. 10, 2020 or newer.
-* Works for CGM with additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level information to xDrip+.)
-* Thresholds can be set in [preferences](../Configuration/Preferences#status-lights).
-* If sensor level is the same as phone battery level you xDrip+ version is probably too old and needs an update.
+* Требуется xDrip+ ночная сборка от декабря 10, 2020 или новее.
+* Работает в мониторинге с дополнительным передатчиком, например MiaoMiao 2. (Датчик должен послать информацию об уровне батареи на xDrip+.)
+* Пороговые значения могут быть заданы в [настройках](../Configuration/Preferences#status-lights).
+* Если уровень батареи сенсора совпадает с уровнем заряда аккумулятора телефона, то версия xDrip+, вероятно, слишком старая и нуждается в обновлении.
    
    ![Уровни датчиков равны уровню батареи телефона](../images/Home2021_ActionSensorBat.png)
 
-### Careportal - section O
+### Портал терапии-раздел О
 
-* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
-* Prime/Fill allows you to record pump site and insulin cartridge change.
-* Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+* Контроль ГК, заполнение инфузионного набора, установка сенсора и замена батареи помпы - основа данных в [разделе N](#careportal-section-n).
+* Кнопка Заполнение инфузионного набора позволяет регистрировать смену места катетера помпы, а также замену картриджа инсулина.
+* Раздел O отражает состояние портала терапии сайта Nightscout. Так что упражнения, объявление и вопрос являются специальными формами заметок.
 
-### Tools - section P
+### Инструменты - раздел P
 
-#### History Browser
+#### Браузер истории
 
-* Allows you to ride back in AAPS hsitory.
+* Позволяет перемещаться по журналу AAPS hsitory.
 
 #### TDD/общая суточная доза
 
-* Total daily dose = bolus + basal per day
-* Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
-* Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 
-* Others prefer range of 32% to 37% of TDD for TBB. 
-* Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+* Общая суточная доза = болюс + базал за сутки
+* Некоторые врачи рекомендуют - особенно для новых пользователей - соотношение базал-болюс 50:50. 
+* Поэтому эта величина рассчитывается как TDD / 2 * TBB (общая суточная база = сумма базала в течение 24 часов). 
+* Другие предпочитают диапазон от 32% до 37% от величины базала TBB. 
+* Как и большинство подобных подсказок они имеют ограниченное практическое значение. Примечание: Ваш диабет может быть иным!
 
 ![Браузер журнала + TDD](../images/Home2021_Action_HB_TDD.png)
 
@@ -374,37 +374,37 @@
 
 ![Профиль Инсулина](../images/Screenshot_insulin_profile.png)
 
-* This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
-* The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
-* The important thing to note is that the decay has a long tail. 
-* If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
-* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
+* Это профиль активности инсулина, который вы выбрали в [конфигураторе](../Configuration/Config-Builder#insulin). 
+* ФИОЛЕТОВАЯ линия показывает, сколько инсулина остается после ввода по мере рассасывания, а СИНЯЯ линия показывает его активность.
+* Важно отметить, что распад имеет большую остаточную протяженность. 
+* Если вы раньше управляли помпой вручную, то, вероятно, привыкли полагать, что инсулин рассасывается примерно за 3,5 часов. 
+* Однако, при включении цикла длинный след имеет большее значение поскольку расчеты здесь более точные и даже небольшие величины суммируются в рекурсивных вычислениях в алгоритме AndroidAPS.
 
-For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+Более подробное обсуждение различных типов инсулина, их профилей активности и почему это важно, см. здесь [Понимание новых кривых IOB на основе экспоненциальных кривых активности](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+Отличная статья об этом: [Почему мы регулярно ошибались в определении длительности действия инсулина (DIA) и почему это важно…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+Еще на эту тему: [Экспоненциальные кривые инсулина + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Статус помпы
 
 ![Статус помпы](../images/Screenshot_PumpStatus.png)
 
-* Different information on pump status. Displayed information depends on your pump model.
-* See [pumps page](../Hardware/pumps.rst) for details.
+* Разная информация о состоянии помпы. Отображаемая информация зависит от модели помпы.
+* Смотрите [страницу помпы](../Hardware/pumps.rst).
 
 ## Портал терапии
 
-Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
+Здесь повторяются функции которые можно найти на экране Nightscout под символом "+", который позволяет добавлять заметки к терапии.
 
-### Review carb calculation
+### Просмотреть расчет углеводов
 
 ![Обзор расчёта углеводов на вкладке терапии](../images/Screenshots_TreatCalc.png)
 
-* If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
-* Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
+* Если вы использовали помощник болюса [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) для вычисления дозы инсулина, этот расчет можно проверить позже на вкладке терапии.
+* Просто нажмите на зеленую ссылку Calc. (В зависимости от помпы инсулин и углеводы также могут быть показаны на одной линии в терапии.)
 
-### Carb correction
+### Коррекция углеводов
 
 ![Терапия в 1 или 2 линии](../images/Treatment_1or2_lines.png)
 
@@ -422,34 +422,34 @@ Careportal replicated the functions you will find on your Nightscout screen unde
 
 7. Если на вкладке терапии только одна линия для углеводов и инсулина, следует также добавить и запись о количестве инсулина. Убедитесь в том, чтобы установить правильное время событие и проверить активный инсулин IOB на главном экране после подтверждения новой записи.
 
-## Loop, AMA / SMB
+## Замкнутый цикл, помощник болюса AMA / микроболюсы SMB
 
-* These tabs show details about the algorithm's calculations and why AAPS acts the way it does.
-* Calculations are each time the system gets a fresh reading from the CGM.
-* For more details see [APS section on config builder page](../Configuration/Config-Builder#aps).
+* Эти вкладки показывают подробную информацию о расчетах алгоритма и почему AAPS действует так, а не иначе.
+* Расчет производится каждый раз, когда система получает свежее данные мониторинга CGM.
+* Дополнительную информацию см. в [разделе APS на вкладке конфигуратора](../Configuration/Config-Builder#aps).
 
 ## Профиль
 
 ![Профиль](../images/Screenshots_Profile.png)
 
-* Profile contains information on your individual diabetes settings:
+* Профиль содержит информацию об индивидуальных настройках диабета:
    
-   * DIA (Duration of Insulin Action)
-   * IC or I:C: Insulin to Carb ratio
-   * ISF: Insulin Sensitivity Factor
-   * Basal rate
-   * Target: Blood glucose level that you want AAPS to be aiming for
+   * DIA (продолжительность действия инсулина)
+   * IC: соотношение Инсулин - Углеводы
+   * ISF: Коэффициент чувствительности к инсулину
+   * Скорость базала
+   * Цель: Уровень глюкозы крови для AAPS
 
-* You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).
+* Можно применять [локальный профиль](../Configuration/Config-Builder#local-profile-recommended), который может быть отредактирован на смартфоне или [профиль Nightscout ](../Configuration/Config-Builder#ns-profile), который редактируется на вашей странице NS и затем пересылается на телефон. Подробная информация в соответствующих разделах на вкладке [Конфигуратор](../Configuration/Config-Builder.md).
 
 ## Терапия
 
-History of the following treatments:
+История следующих терапевтических действий:
 
-* Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
+* Bolus & Carbs -> возможность [удалить записи](../Getting-Started/Screenshots#carb-correction) для исправления истории
 * [Пролонгированный болюс](../Usage/Extended-Carbs#extended-bolus)
-* Temporary basal rate
-* [Temporary target](../Usage/temptarget.md)
+* Временная базальная скорость
+* [Временная цель](../Usage/temptarget.md)
 * [Profile switch/смена профиля](../Usage/Profiles.md)
 * [Портал терапии](../Usage/CPbefore26#careportal-discontinued) -примечания, введенные через вкладку действий и примечания в диалогах
 

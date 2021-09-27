@@ -49,7 +49,7 @@ We gaan er vanuit dat je al een Nightscout site hebt, zo niet dan moet je dat ee
 
 ## Nightscout aanmaken via ns.10be.de
 
-Deze service wordt aangeboden door een Duitse collega looper Martin Schiftan en is op dit moment gratis. Als je wilt dan zou je kunnen overwegen om hem een kleine donatie te sturen (via de link op zijn site, in de navigatiebalk aan de linkerkant).
+Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
 **Voordelen van deze methode**
 
@@ -57,6 +57,8 @@ Deze service wordt aangeboden door een Duitse collega looper Martin Schiftan en 
 * Je hoeft minder dingen zelf in te stellen omdat Martin dat al voor jou gedaan heeft.
 * Alle instellingen kunnen via een gebruiksvriendelijke website worden gemaakt. 
 * Ook kun je hiermee je basaalstanden automatisch laten checken dmv Autotune. 
-* De server staat in Duitsland.
+* The servers are located in Germany and Finland.
 
 <https://ns.10be.de/en/index.html>
+
+An alternative would be <https://t1pal.com/> - starting at $11,99 per month.

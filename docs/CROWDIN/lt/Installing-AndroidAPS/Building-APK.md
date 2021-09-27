@@ -18,6 +18,46 @@ Jei sukurti APK nepavyko dėl pasirinktinės konfigūracijos klaidos, galite atl
 * Panaikinkite langelio „Configure on demand“ žymėjimą.
 * Spustelėkite Apply arba OK.
 
+## Recommended specification of computer for building apk file
+
+<table class="tg">
+  
+<thead>
+  <tr>
+    <th class="tg-baqh">OS(Only 64 bit)</th>
+    <th class="tg-baqh">Windows 8 or higher</th>
+    <th class="tg-baqh">Mac OS 10.14 or higher</th>
+    <th class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-baqh"><p align="center">CPU(Only 64 bit)</td>
+    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">RAM</td>
+    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">Disk</td>
+    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">Resolution</td>
+    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">Internet</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+  </tr>
+</tbody>
+</table>
+
+Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **It is strongly recommended to use SSD(Solid State Disk) instead of HDD(Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file if you can spend a long time ALONE to complete the build.
+
 * * *
 
 ### Šis straipsnis yra padalintas į dvi dalis.
@@ -27,7 +67,7 @@ Jei sukurti APK nepavyko dėl pasirinktinės konfigūracijos klaidos, galite atl
 
 ## Apžvalga
 
-APK failui sukurti reikalingi šie veiksmai:
+In general, the steps necessary to build the APK file:
 
 1. [Git diegimas](../Installing-AndroidAPS/git-install.rst)
 2. [Android Studio įdiegimas](../Installing-AndroidAPS/Building-APK#install-android-studio)
@@ -38,9 +78,9 @@ APK failui sukurti reikalingi šie veiksmai:
 7. [Perkelti apk failą į telefoną](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
 8. [Identifikuoti gavėją, jei naudojate xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
 
-## Žingsnis po žingsnio instrukcija
+## Step by step walkthrough
 
-Detalus veiksmų, reikalingų sukurti APK failą, aprašymas.
+Detailed description of the steps necessary to build the APK file.
 
 ## Įdiegti git (jei neturite)
 
@@ -48,47 +88,47 @@ Vykdykite instrukcijas pagal [git instaliavimo puslapį](../Installing-AndroidAP
 
 ## Android Studio įdiegimas
 
-Šios ekrano kopijos yra iš Android Studio 3.6.1 versijos. Priklausomai nuo Android Studio versijos, jūsų ekranas gali atrodyti šiek tiek kitaip. Bet jūs vis tiek turėtumėte sugebėti susitvarkyti. Čia galite rasti [bendruomenės pagalbą](../Where-To-Go-For-Help/Connect-with-other-users.md).
+The following screenshots have been taken from Android Studio Version 3.6.1. Your screen might look a bit different if you use a newer version of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
 
-Vienas iš svarbiausių aspektų diegiant Android Studio yra: **Būkite kantrūs!** Diegiant ir nustatant Android Studio yra įkeliama daug duomenų ir tai užima daug laiko.
+One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
 
-Įdiekite [Android Studio](https://developer.android.com/studio/install.html) ir nustatykite jį pirmojo paleidimo metu.
+Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
 
-Pasirinkite „Do not import settings“, nes iki šiol nebuvo atlikta jokių nustatymų.
+Select "Do not import settings" as you have not used it before.
 
-![Neimportuoti nustatymų](../images/AndroidStudio361_01.png)
+![Do not import settings](../images/AndroidStudio361_01.png)
 
-Nuspręsti, ar norite bendrinti duomenis su Google, ar ne.
+Decide whether you want to share data with Google or not.
 
-![Dalintis duomenimis su Google](../images/AndroidStudio361_02.png)
+![Share data with Google](../images/AndroidStudio361_02.png)
 
-Kitame ekrane spustelėkite "Next" (kitas).
+On the following screen click "Next".
 
-![Pasisveikinimo ekranas](../images/AndroidStudio361_03.png)
+![Welcome screen](../images/AndroidStudio361_03.png)
 
-Pasirinkite "Standart" instaliavimą ir spauskite "Next".
+Select "Standard" installation and click "Next".
 
-![Standartinis instaliavimas](../images/AndroidStudio361_04.png)
+![Standard installation](../images/AndroidStudio361_04.png)
 
-Pasirinkite sąsajos dizainą, kuris jums labiausiai patinka. (Šiame vadove mes naudojamas "Light".) Tada spustelėkite "Next" (kitas). Tai tik spalvų schema. Galite pasirinkti bet kurią norite (pvz., "Darcula" tamsiam režimui). Šis pasirinkimas neturi įtakos APK kūrimui.
+Select the theme for the user interface you like. (In this manual we used "Light".) Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
 
-![UI Spalvų schema](../images/AndroidStudio361_05.png)
+![UI color scheme](../images/AndroidStudio361_05.png)
 
-"Verify Settings" (patvirtinti nustatymus) lange spustelėkite "Next".
+Click "Finish" on the "Verify Settings" dialog.
 
-![Patvirtinti nustatymus](../images/AndroidStudio361_06.png)
+![Verify settings](../images/AndroidStudio361_06.png)
 
-Palaukite, kol Android Studio siunčiasi papildomus komponentus ir būkite kantrūs. Kai viskas atsisiųs, mygtukas "Finish" (baigti) pamėlynuos. Spustelėkite mygtuką dabar.
+Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
 
-![Komponentai atsisiunčiami](../images/AndroidStudio361_07.png)
+![Downloading components](../images/AndroidStudio361_07.png)
 
-## Android Studio nustatymuose įveskite git kelią
+## Set git path in preferences
 
-Įsitikinkite, kad [git yra įdiegta](../Installing-AndroidAPS/git-install.rst) kompiuteryje.
+Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer.
 
-Android Studio pasisveikinimo ekrane spustelėkite mažą trikampį (1. kitame paveikslėlį) ir pasirinkite "Settings" (Nustatymai) (2.).
+On the Android Studio welcome screen click the small triangle (1. in next screenshot) and select "Settings" (2.).
 
-![Android Studio nustatymai pasisveikinimo ekrane](../images/AndroidStudio361_08.png)
+![Android Studio settings from welcome screen](../images/AndroidStudio361_08.png)
 
 ### Windows
 
@@ -200,7 +240,7 @@ Android Studio pasisveikinimo ekrane spustelėkite mažą trikampį (1. kitame p
 
 ## Generuoti pasirašytą APK (Generate signed APK)
 
-Pasirašymas reiškia, kad jūs pasirašote savo sukurtą programą, skaitmenine prasme reiškia tam tikrą skaitmeninį pirštų atspaudą pačioje programoje. Programą būtina pasirašyti skaitmeniniu būdu, nes Android saugumo sumetimais priima tik pasirašytą kodą. Daugiau informacijos apie šią temą, spauskite [šią nuorodą](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Spustelėkite "Build" (Sukurti) meniu juostoje ir pasirinkite "Generate Signed Bundle / APK..." (Generuoti pasirašomą rinkinį / APK...).
     
@@ -268,7 +308,7 @@ Jūsų telefone jūs turite leisti diegti programas iš nežinomų šaltinių. I
 
 ## Identifikuoti gavėją, jei naudojate xDrip+
 
-[Žr. xDrip+ puslapyje](../Configuration/xdrip#identify-receiver)
+[See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
 ## Trikčių šalinimas
 

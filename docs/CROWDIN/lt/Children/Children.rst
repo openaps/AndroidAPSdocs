@@ -9,7 +9,7 @@ AndroidAPS siūlo kelis variantus vaikų nuotoliniam stebėjimui, taip pat leid�
 Funkcijos
 ==================================================
 * Vaiko pompa yra kontroliuojama per vaiko telefoną naudojant AndroidAPS.
-* Tėvai gali nuotoliniu būdu sekti, matyti visus svarbius duomenis, tokius, kaip gliukozės kiekis, aktyvūs angliavandeniai, aktyvus insulinas, ir pan. naudojant **NSClient app** jų telefone. Settings must be the same in AndroidAPS and NSClient app.
+* Tėvai gali nuotoliniu būdu sekti, matyti visus svarbius duomenis, tokius, kaip gliukozės kiekis, aktyvūs angliavandeniai, aktyvus insulinas, ir pan. naudojant **NSClient app** jų telefone. AndroidAPS ir NSClient programėlės parametrai turi būti vienodi.
 * Tėvai gali gauti savo telefone perspėjimus, naudodami **xDrip+ programa sekėjo režime**.
 * AndroidAPS nuotolinis valdymas naudojant `SMS Komandas <../Children/SMS-Commands.html>`_ apsaugotas dviem autentifikavimo žingsniais.
 * Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see `release notes for Version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for further details.
@@ -25,7 +25,7 @@ Funkcijos
 Būtina atsižvelgti
 ==================================================
 * Nustatyti vaikams teisingus `terapijos faktorius <../Getting-Started/FAQ.html#how-to-begin>`_ (bazės, IVT, JIF...) yra sudėtinga, ypač veikiant augimo hormonams. 
-* Settings must be the same in AndroidAPS and NSClient app.
+* AndroidAPS ir NSClient programėlės parametrai turi būti vienodi.
 * Atsižvelkite į laiko tarpą tarp pagrindinio telefono ir jūsų naudojamo išmaniojo telefono komunikacijos. Tai lemia įkėlimui ir atsisiuntimui reikalingo laiko trukmė. Taip pat, pagrindinis AAPS telefonas įkelia duomenis tik tuo atveju, jei išmaniajame telefone buvo įvykdyta uždaro ciklo veikla.
 * Todėl skirkite laiko, kad nustatytumėte juos teisingai ir išbandykite juos, kai vaikas yra šalia jūsų, ypač prieš pradėdami nuotolinį stebėjimą ir nuotolines terapijas. Mokyklinės atostogos gali būti labai geras laikas tam.
 * Koks yra jūsų veiksmų planas, kai nuotolinis valdymas neveikia (t. y. kyla ryšio problemos)?

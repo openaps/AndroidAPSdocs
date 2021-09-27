@@ -18,6 +18,46 @@ Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het
 * Vink de Configure on demand checkbox uit.
 * Klik op Apply (Toepassen) of OK.
 
+## Recommended specification of computer for building apk file
+
+<table class="tg">
+  
+<thead>
+  <tr>
+    <th class="tg-baqh">OS(Only 64 bit)</th>
+    <th class="tg-baqh">Windows 8 or higher</th>
+    <th class="tg-baqh">Mac OS 10.14 or higher</th>
+    <th class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-baqh"><p align="center">CPU(Only 64 bit)</td>
+    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">RAM</td>
+    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">Disk</td>
+    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">Resolution</td>
+    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">Internet</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+  </tr>
+</tbody>
+</table>
+
+Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **It is strongly recommended to use SSD(Solid State Disk) instead of HDD(Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file if you can spend a long time ALONE to complete the build.
+
 * * *
 
 ### Dit artikel is verdeeld in twee delen.
@@ -27,7 +67,7 @@ Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het
 
 ## Overzicht
 
-De belangrijkste stappen voor het bouwen van het APK bestand zijn:
+In general, the steps necessary to build the APK file:
 
 1. [Git installeren](../Installing-AndroidAPS/git-install.rst)
 2. [Installeer Git + Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
@@ -38,9 +78,9 @@ De belangrijkste stappen voor het bouwen van het APK bestand zijn:
 7. [Apk-bestand overzetten naar je telefoon](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
 8. [Identify receiver (identificeer ontvanger) bij gebruik van xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-identificeer-ontvanger-bij-gebruik-van-xdrip)
 
-## Stap voor stap instructie
+## Step by step walkthrough
 
-Gedetailleerde beschrijving van de verschillende stappen.
+Detailed description of the steps necessary to build the APK file.
 
 ## Installeer Git (als je dat nog niet hebt)
 
@@ -48,47 +88,47 @@ Volg de handleiding op de [git-installatiepagina](../Installing-AndroidAPS/git-i
 
 ## Installeer Git + Android Studio
 
-De volgende screenshots zijn gemaakt met Android Studio Versie 3.6.1. Jouw scherm ziet er misschien een beetje anders uit, afhankelijk van de versie van de Android Studio die je gebruikt. Maar laat je niet tegenhouden door kleine (uiterlijke) verschillen. Wanneer je er niet uitkomt, schroom dan niet om [hulp van andere gebruikers](../Where-To-Go-For-Help/Connect-with-other-users.md) te vragen.
+The following screenshots have been taken from Android Studio Version 3.6.1. Your screen might look a bit different if you use a newer version of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
 
-Een van de belangrijkste dingen bij het installeren van Android Studio: **Wees geduldig!** Tijdens de installatie en setup zal Android Studio een heleboel dingen gaan downloaden die best wat tijd kosten.
+One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
 
-Installeer [Android Studio](https://developer.android.com/studio/install.html).
+Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
 
-Selecteer "Do not import settings" (instellingen niet importeren) omdat je het nog niet eerder hebt gebruikt.
+Select "Do not import settings" as you have not used it before.
 
-![Instellingen niet importeren](../images/AndroidStudio361_01.png)
+![Do not import settings](../images/AndroidStudio361_01.png)
 
-Bepaal of je gegevens wilt delen met Google of niet.
+Decide whether you want to share data with Google or not.
 
-![Gegevens delen met Google](../images/AndroidStudio361_02.png)
+![Share data with Google](../images/AndroidStudio361_02.png)
 
-Op het volgende scherm klik je op "Next" (Volgende).
+On the following screen click "Next".
 
-![Welkomstscherm](../images/AndroidStudio361_03.png)
+![Welcome screen](../images/AndroidStudio361_03.png)
 
-Selecteer “Standard” Installation en klik op “Next”.
+Select "Standard" installation and click "Next".
 
-![Standaard installatie](../images/AndroidStudio361_04.png)
+![Standard installation](../images/AndroidStudio361_04.png)
 
-Selecteer het thema voor de gebruikersinterface. (In deze handleiding gebruikten we "Light".) Klik dan op "Next" (Volgende). Dit is alleen het uiterlijk van Android Studio, het kleurenschema. Je kunt hier ook iets anders kiezen als je dat mooier vind, wat je hier kiest maakt geen enkel verschil voor het bouwen van de app.
+Select the theme for the user interface you like. (In this manual we used "Light".) Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
 
-![Kleurenschema](../images/AndroidStudio361_05.png)
+![UI color scheme](../images/AndroidStudio361_05.png)
 
-Klik op "Finish" in het dialoogvenster "Verify Settings" (instellingen controleren).
+Click "Finish" on the "Verify Settings" dialog.
 
-![Instellingen controleren](../images/AndroidStudio361_06.png)
+![Verify settings](../images/AndroidStudio361_06.png)
 
-Wacht geduldig af terwijl Android Studio extra onderdelen downloadt. Zodra alles is gedownload, zal de knop "Finish" blauw worden. Klik nu op de knop.
+Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
 
-![Onderdelen downloaden](../images/AndroidStudio361_07.png)
+![Downloading components](../images/AndroidStudio361_07.png)
 
-## Git pad in voorkeuren instellen
+## Set git path in preferences
 
-Zorg ervoor dat [git is geïnstalleerd](../Installing-AndroidAPS/git-install.rst) op jouw computer.
+Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer.
 
-Op het welkomstscherm van Android Studio klik op de kleine driehoek (1. in het volgende screenshot) en selecteer "Settings" (2.).
+On the Android Studio welcome screen click the small triangle (1. in next screenshot) and select "Settings" (2.).
 
-![Android Studio-instellingen van welkomstscherm](../images/AndroidStudio361_08.png)
+![Android Studio settings from welcome screen](../images/AndroidStudio361_08.png)
 
 ### Windows
 
@@ -200,7 +240,7 @@ Op het welkomstscherm van Android Studio klik op de kleine driehoek (1. in het v
 
 ## Bouwen van de ondertekende APK
 
-Ondertekenen betekent dat je een handtekening op jouw app zet, een soort digitale vingerafdruk. Dat is nodig omdat Android om veiligheidsredenen voorschrijft dat een app altijd zo'n handtekening moet hebben. Voor meer informatie over dit onderwerp, ga naar [deze link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Klik op "Build" in de menubalk en kies "Generate Signed Bundle / APK..." (Ondertekende Bundel/APK genereren...).
     
@@ -268,7 +308,7 @@ Op jouw telefoon moet je installatie uit onbekende bronnen toestaan. Je vindt di
 
 ## Identify receiver (identificeer ontvanger) bij gebruik van xDrip+
 
-[Zie xDrip pagina](../Configuration/xdrip#identify-receiver-identificeer-ontvanger-bij-gebruik-van-xdrip)
+[See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
 ## Problemen oplossen
 

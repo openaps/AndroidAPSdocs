@@ -30,7 +30,7 @@ Other indications could be the Linux penguin logo three dot menu -> Info or the 
 
 Asegúrese de que NFC esté activado, habilite el permiso de memoria y ubicación para la aplicación parcheada, habilite el tiempo y el huso horario automáticos y establezca al menos una alarma en la aplicación parcheada. 
 
-Ahora inicie el sensor de Libre2 con la aplicación patchada, simplemente escaneando el sensor. Asegúrese de haber configurado todos los ajustes.
+Ahora inicie el sensor de Libre2 con la aplicación parcheada, simplemente escaneando el sensor. Asegúrese de haber configurado todos los ajustes.
 
 Ajustes obligatorios para el inicio del sensor con éxito: 
 
@@ -95,7 +95,7 @@ Paso 2: Instalar y configurar la aplicación xDrip+
 Los valores de azúcar en sangre son recibidos en el smartphone por la aplicación xDrip+. 
 
 * If not already set up then download xDrip+ app and install one of the latest nightly builds from `here <https://github.com/NightscoutFoundation/xDrip/releases>`_.
-* En xDrip+ seleccione "Libre2 (aplicación parchada)" como origen de datos
+* En xDrip+ seleccione "Libre2 (aplicación parcheada)" como origen de datos
 * Si es necesario, ingrese "BgReading:d,xdrip libre_receiver:v" en Ajustes menos comunes->Ajustes adicionales de conexión->Etiquetas extras para conexión. Esto registrará mensajes de error adicionales ante problemas.
 * In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
 * In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.

@@ -54,22 +54,22 @@ AndroidAPS **на данный момент** работает с
 - `Помпа Accu-Chek Insight <./Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
+- `некоторые старые помпы Medtronic <../Configuration/MedtronicPump.html>`_ из версии 2.4 (` требуется дополнительное устройство коммуникации <../Module/module.html#additional-communication-device>`)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`требуется дополнительное устройство коммуникации <../Module/module.html#additional-communication-device>`)
 
-**Другие помпы** которые потенциально могут работать с AndroidAPS перечислены на `Будущие (возможные) помпы <../Getting-Started/Future-possible-Pump-Drivers.html>`_ странице.
+**Другие помпы** которые потенциально могут работать с AndroidAPS перечислены на странице `Будущие (возможные) помпы <../Getting-Started/Future-possible-Pump-Drivers.html>`.
 
-Если вам нужно **купить частным образом** помпу, то вы можете найти дистрибьюторов в `этой таблице <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>_, делитесь информацией о вашем, если не указан.
+Если вам нужно **купить частным образом** помпу, то вы можете найти дистрибьюторов в `этой таблице <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>_, делитесь информацией о вашем, если он еще не указан.
 
-Additional communication device
+Дополнительное устройство коммуникации
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-For old medtronic pumps an additional communication devide (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+Для старых помп Medtronic требуется дополнительное устройство коммуникации (кроме вашего телефона) для "перевода" радиосигнала от помпы на Bluetooth. Убедитесь, что выбрана правильная версия для вашей помпы.
 
-   -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
-   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
-   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
-   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
+   - |OrangeLink| `сайт OrangeLink <https://getrileylink.org/product/orangelink>`_    
+   - |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+   - |EmaLink| `Сайт Emalink <https://github.com/sks01/EmaLink>`__ - `Контактная информация <mailto:getemalink@gmail.com>`__  
+   - |DiaLink| DiaLink - `Контактная информация <mailto:Boshetyn@ukr.net>`__     
+   - |LoopLink| `Сайт LoopLink  <https://www.getlooplink.org/>`__ - `Контактная информация <https://jameswedding.substack.com/>`__ - Не проверено
 
 **Какая же самая лучшая помпа для работы с AndroidAPS?**
 
@@ -86,7 +86,7 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 
 Источник данных гликемии
 --------------------------------------------------
-Это всего лишь краткий обзор совместимых с AndroidAPS систем мониторинга ГК. For further details, look `here <../Configuration/BG-Source.html>`__. Или если проще: если данные ГК могут приниматься приложением xDrip+ или на веб-сайте Nightscout, вы можете выбрать xDrip+ (или Nightscout с интернет-соединением) как источник ГК в AAPS.
+Это всего лишь краткий обзор совместимых с AndroidAPS систем мониторинга ГК. Для получения дополнительной информации смотрите `здесь <../Configuration/BG-Source.html>`__. Или если проще: если данные ГК могут приниматься приложением xDrip+ или на веб-сайте Nightscout, вы можете выбрать xDrip+ (или Nightscout с интернет-соединением) как источник ГК в AAPS.
 
 * ` Dexcom G6 <../Hardware/DexcomG6.html> ` _: Он работает с приложением xDrip + или модифицированным приложением Dexcom
 * ` Dexcom G5 <../Hardware/DexcomG5.html> ` _: Он работает с приложением xDrip + или модифицированным приложением Dexcom
@@ -94,7 +94,7 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 * ` Libre 2 <../Hardware/Libre2.html> ` _: Он работает с xDrip + (не требуется передатчик), но вы должны собрать собственное модифицированное приложение.
 * `Libre 1: -Нужен передатчик, такой как Bluecon или MiaoMiao (сборка или покупка) и приложение xDrip+
 * `Eversense: Он работает до сих пор только в сочетании с модифицированными приложениями ESEL и Eversense-App (не работает с Dana RS и LineageOS, но Dana RS и Android или Combo и Lineage OS работают прекрасно)
-* `Enlite (MM640G/MM630G) <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
+* `Enlite <../Hardware/MM640g.html>`_: довольно сложная система с большим количеством дополнительных устройств
 
 
 Nightscout
@@ -146,13 +146,13 @@ xDrip +
 Если у вас собраны все компоненты AAPS (поздравляем!) или, по крайней мере, их достаточно, чтобы начать работу в режиме незамкнутого цикла, сначала следует прочитать `Описание Целей<../Usage/Objectives.html>`_ (Обзор) перед каждой новой целью и настроить `компоненты <./index.html#component-setup>`_.
 
 ..
-	Image aliases resource for referencing images by name with more positioning flexibility
+	Cсылки на изображения по названиям с большей гибкостью позиционирования
 
 
 ..
-	Hardware and Software Requirements
-.. |EmaLink|				image:: ../images/omnipod/EmaLink.png
-.. |LoopLink|				image:: ../images/omnipod/LoopLink.png
-.. |OrangeLink|			image:: ../images/omnipod/OrangeLink.png		
-.. |RileyLink|				image:: ../images/omnipod/RileyLink.png
-.. |DiaLink|		      image:: ../images/omnipod/DiaLink.png
+	Требования к аппаратному и программному обеспечению
+.. |EmaLink| изображение:: ../images/omnipod/EmaLink.png
+.. |LoopLink| изображение:: ../images/omnipod/LoopLink.png
+.. |EmaLink| изображение:: ../images/omnipod/EmaLink.png		
+.. |RileyLink| изображение:: ../images/omnipod/RileyLink.png
+.. |DiaLink| изображение:: ../images/omnipod/DiaLink.png

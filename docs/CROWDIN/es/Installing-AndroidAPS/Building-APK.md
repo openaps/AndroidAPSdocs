@@ -18,6 +18,46 @@ Si la compilación falla con un error en la configuración personalizada, puede 
 * Desmarque la casilla de verificación Configurar bajo demanda.
 * Haga clic en Aplicar o en Aceptar.
 
+## Recommended specification of computer for building apk file
+
+<table class="tg">
+  
+<thead>
+  <tr>
+    <th class="tg-baqh">OS(Only 64 bit)</th>
+    <th class="tg-baqh">Windows 8 or higher</th>
+    <th class="tg-baqh">Mac OS 10.14 or higher</th>
+    <th class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-baqh"><p align="center">CPU(Only 64 bit)</td>
+    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">RAM</td>
+    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">Disk</td>
+    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">Resolution</td>
+    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">Internet</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+  </tr>
+</tbody>
+</table>
+
+Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **It is strongly recommended to use SSD(Solid State Disk) instead of HDD(Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file if you can spend a long time ALONE to complete the build.
+
 * * *
 
 ### Este artículo se divide en dos partes.
@@ -27,7 +67,7 @@ Si la compilación falla con un error en la configuración personalizada, puede 
 
 ## Inicio
 
-En general, los pasos necesarios para crear el archivo APK son:
+In general, the steps necessary to build the APK file:
 
 1. [Instala Git](../Installing-AndroidAPS/git-install.rst)
 2. [Instalar Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
@@ -38,9 +78,9 @@ En general, los pasos necesarios para crear el archivo APK son:
 7. [Transferir el archivo apk a su teléfono](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
 8. [Identificar receptor si se utiliza xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
 
-## Tutorial paso a paso
+## Step by step walkthrough
 
-Descripción detallada de los pasos necesarios para crear el archivo APK.
+Detailed description of the steps necessary to build the APK file.
 
 ## Instalar git (si no lo tienes ya)
 
@@ -48,47 +88,47 @@ Siga el manual en [git página de instalación](../Installing-AndroidAPS/git-ins
 
 ## Instalar Android Studio
 
-Las siguientes capturas de pantalla se han tomado de Android Studio Versión 3.6.1. Es posible que la pantalla parezca un poco diferente si utiliza una versión más reciente de Android Studio. Pero deberías ser capaz de encontrar el camino a través del proceso. [ Se proporciona ayuda de la comunidad ](../Where-To-Go-For-Help/Connect-with-other-users.md).
+The following screenshots have been taken from Android Studio Version 3.6.1. Your screen might look a bit different if you use a newer version of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
 
 One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
 
-Instale [Android Studio](https://developer.android.com/studio/install.html) y configurelo durante el primer inicio.
+Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
 
-Seleccione "No importar valores", ya que no lo ha utilizado anteriormente.
+Select "Do not import settings" as you have not used it before.
 
-![No importar valores](../images/AndroidStudio361_01.png)
+![Do not import settings](../images/AndroidStudio361_01.png)
 
-Decida si desea compartir datos con Google o no.
+Decide whether you want to share data with Google or not.
 
-![Compartir datos con Google](../images/AndroidStudio361_02.png)
+![Share data with Google](../images/AndroidStudio361_02.png)
 
-En la siguiente pantalla, haga clic en "Next".
+On the following screen click "Next".
 
-![Pantalla de bienvenida](../images/AndroidStudio361_03.png)
+![Welcome screen](../images/AndroidStudio361_03.png)
 
-Seleccione la instalación "Estándar" y haga clic en "Siguiente".
+Select "Standard" installation and click "Next".
 
-![Instalación estándar](../images/AndroidStudio361_04.png)
+![Standard installation](../images/AndroidStudio361_04.png)
 
-Seleccione el tema para la interfaz de usuario que desee. (En este manual usamos "Light".) Luego haga clic en "Next". Este es sólo el esquema de colores. Usted puede seleccionar cualquier que le gusta (por ejemplo, "Darcula" para el modo oscuro). Esta selección no tiene ninguna influencia sobre la construcción del APK.
+Select the theme for the user interface you like. (In this manual we used "Light".) Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
 
-![Esquema de color de IU](../images/AndroidStudio361_05.png)
+![UI color scheme](../images/AndroidStudio361_05.png)
 
-Pulse "Siguiente" en el diálogo "Verificar valores".
+Click "Finish" on the "Verify Settings" dialog.
 
-![Verificar la configuración](../images/AndroidStudio361_06.png)
+![Verify settings](../images/AndroidStudio361_06.png)
 
-Espere mientras Android Studio descarga componentes adicionales y tenga paciencia. Una vez que todo se descarga el botón "Finalizar" se vuelve azul. Haga clic en el botón ahora.
+Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
 
-![Descarga de componentes](../images/AndroidStudio361_07.png)
+![Downloading components](../images/AndroidStudio361_07.png)
 
-## Establecer la ruta git en las preferencias
+## Set git path in preferences
 
-Asegúrese de que [ git esté instalado ](../Installing-AndroidAPS/git-install.rst) en el sistema.
+Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer.
 
-En la pantalla de bienvenida de Android Studio, haga clic en el triángulo pequeño (1. en la siguiente captura de pantalla) y seleccione "Configuración" (2.).
+On the Android Studio welcome screen click the small triangle (1. in next screenshot) and select "Settings" (2.).
 
-![Valores de Android Studio desde la pantalla de bienvenida](../images/AndroidStudio361_08.png)
+![Android Studio settings from welcome screen](../images/AndroidStudio361_08.png)
 
 ### Windows
 
@@ -200,7 +240,7 @@ En la pantalla de bienvenida de Android Studio, haga clic en el triángulo peque
 
 ## Generar APK firmado
 
-Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. Esto es necesario porque Android tiene una regla que sólo acepta el código firmado para ejecutarse por razones de seguridad. Para obtener más información sobre este tema, siga [este enlace](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
     

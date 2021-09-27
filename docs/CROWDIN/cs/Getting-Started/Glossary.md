@@ -90,7 +90,7 @@
 </tr>
 <tr>
  <td><strong>KAN</strong></td>
- <td>canula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
+ <td>Stáří kanyly (canula age) - hodnota zobrazená v Nightscoutu, pokud byla tato informace zadána v AAPS v části Akce nebo v AAPS prostřednictvím 'Plnění/Doplňování'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -122,7 +122,7 @@
  <td><strong>Doba působnosti inzulínu</strong></td>
  <td>Doba působnosti inzulinu (duration of insulin action)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - Typy inzulinů</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td><strong>DST</strong></td>
@@ -134,7 +134,7 @@
  <td><strong>eCarbs</strong></td>
  <td>„rozložené sacharidy“ (extended carbs) - sacharidy rozložené na několik hodin (např. jídla s vysokým obsahem tuků/proteinů)<br>rozložený bolus, který můžete znát z léčby pomocí běžné inzulinové pumpy, nedává při používání smyčky nedává příliš velký smysl</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">Příklad použití funkce eCarbs</a></td>
 </tr>
 <tr>
  <td><strong>FGM</strong></td>
@@ -306,7 +306,7 @@
 </tr>
 <tr>
  <td><strong>SEN</strong></td>
- <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
+ <td>Stáří senzoru (sensor age) - zobrazené v Nightscoutu, pokud byla tato informace zadána do AAPS v části Akce</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>

@@ -76,17 +76,17 @@
 Защита болюсов
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Защита от болюсов может быть полезной, если AAPS используется маленьким ребенком, а вы подаете болюсы через SMS <../Children/SMS-Commands.html> ` _.
-* In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter master password.
+* В примере ниже вы видите запрос на биометрическую защиту. Если биометрическое распознавание не работает, нажмите на пробел над запросом и введите главный пароль.
 
-  .. image:: ../images/Pref2020_PW.png
-    :alt: Prompt biometric protection
+  .. изображение:: ../images/Pref2020_PW.png
+    :alt: Биометрическая защита
 
-Skin
+Тема оформления
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* You can choose from four types of skins:
+* Можно выбрать из четырех типов оформления:
 
-  .. image:: ../images/Pref2021_SkinWExample.png
-    :alt: Select skin + examples
+  .. изображение:: ../images/Pref2021_SkinWExample.png
+    :alt: Выбор оформления + примеры
 
 * 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
 * Difference of other skins depend of phone's display orientation.

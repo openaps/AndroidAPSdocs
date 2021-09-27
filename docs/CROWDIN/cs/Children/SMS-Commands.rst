@@ -70,7 +70,7 @@ Nastavení Autentikátoru
 
 Použití SMS příkazů
 ==================================================
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the `commands <../Children/SMS-Commands.html#commands>`__ below. 
+* Pošlete SMS na telefon s běžícím AndroidAPS ze schváleného telefonního čísla pomocí některého z `příkazů <../Children/SMS-Commands.html#commands>`_ níže. 
 * Mobil s AAPS odpoví pro potvrzení požadovaného stavu nebo příkazu. 
 * Pokud je to požadováno, potvrďte příkaz odesláním kódu. Příklad:
 

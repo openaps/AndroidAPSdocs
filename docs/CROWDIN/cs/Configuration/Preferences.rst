@@ -20,8 +20,8 @@ Nastavení
   .. image:: ../images/Pref2021_Filter.png
     :alt: Předvolby > Filtry
 
-.. contents:: 
-   :backlinks: entry
+.. obsah:: 
+   :backlinks: položka
    :depth: 2
 
 Obecné
@@ -63,7 +63,7 @@ Ochrana nastavení
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Chraňte své nastavení pomocí hesla nebo biometrického ověření telefonu (t.j. `AndroidAPS pro děti <../Children/Children.html>`_).
 * Pokud chcete použít hlavní heslo pouze pro zabezpečení `exportovaného nastavení <../Usage/ExportImportSettings.html> ` _, můžete si vytvořit Vlastní heslo.
-* If you are using a custom password click on line "Settings password" to set password as described `above <../Configuration/Preferences.html#master-password>`__.
+* Pokud používáte vlastní heslo, klepněte na řádek "Nastavení hesla" a nastavte heslo tak, jak je popsáno výše `<../Configuration/Preferences.html#master-password>`__.
 
   .. image:: ../images/Pref2020_Protection.png
     :alt: Ochrana
@@ -125,7 +125,7 @@ Tlačítka
   .. image:: ../images/Pref2020_OV_Buttons.png
     :alt: Nastavení > Tlačítka
 
-Quick Wizard
+Průvodce rychlým bolusem
 -----------------------------------------------------------
 * Pokud máte často svačinu nebo jídlo, můžete použít Rychlý bolus pro snadnější vkládání hodnot sacharidů a nastavení základních výpočtů.
 * V nastavení si určíte, v jakém časovém období se má tlačítko zobrazit na domácí obrazovce - právě jedno tlačítko na jedno období.
@@ -204,10 +204,10 @@ Podat tuto část z výsledku kalkulace [%]
 
 Poradce pro bolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+* Když spustíte `Bolusovou kalkulačku <../Getting-Started/Screenshots.html#bolus-wizard>`__ a glykémie je vyšší než 10 mmol (180 mg/dl), kalkulačka vám nabídne korekční bolus.
 * Pokud odsouhlasíte korekční bolus, zaznamená se **žádné sacharidy**.
 * Alarm se spustí v okamžiku, kdy hodnota glykémie bude na úrovni, kdy bude vhodné začít s jídlem.
-* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ again and enter the amount of carbs you want to eat.
+* Musíte znovu klepnout na `Bolusovou kalkulačku <../Getting-Started/Screenshots.html#bolus-wizard>`__ a zadat množství sacharidů, které chcete sníst.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
     :alt: Zpráva poradce pro bolus
@@ -256,7 +256,7 @@ Minimální změna pro výzvu [%]
 
 Vylepšený asistent pro jídlo (AMA) nebo Super Micro bolus (SMB)
 ===========================================================
-Depending on your settings in `config builder <../Configuration/Config-Builder.html>`__ you can choose between two algorithms:
+V závislosti na nastavení v ' konfiguraci <../Configuration/Config-Builder.html> `__ si můžete vybrat mezi dvěma algoritmy:
 
 * `Advanced meal assist (OpenAPS AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ - stav algoritmu v roce 2017
 * `Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - nejnovější algoritmul pro pokročilé uživatele
@@ -264,7 +264,7 @@ Depending on your settings in `config builder <../Configuration/Config-Builder.h
 Nastavení OpenAPS AMA
 -----------------------------------------------------------
 * Jsou-li sacharidy zadány správně, reaguje systém po bolusu na jídlo rychleji, a to díky aplikování vysoké dočasné bazální dávky. 
-* More details about the settings and Autosens can be found in the `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
+* Více podrobností o nastavení a Autosens můžete najít v `dokumentaci k OpenAPS<https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
 
 Max. U/h, které lze nastavit pro dočas. bazál
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -303,13 +303,13 @@ Autosens
 Pokročilé nastavení (OpenAPS AMA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Obvykle v tomto dialogu není potřeba měnit žádná nastavení!
-* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ and to understand what you are doing.
+* Pokud je chcete i přesto změnit, prostudujte si podrobnosti v `dokumentaci k OpenAPS<https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__, abyste pochopili, co děláte.
 
 Nastavení OpenAPS SMB
 -----------------------------------------------------------
 * Na rozdíl od AMA `SMB <../Usage/Open-APS-features.html#super-microbolus-smb>`_ nepoužívá SMB pro kontrolu hladiny glukózy dočasné bazály, ale převážně malých super mikrobolusů.
 * Abyste mohli začít používat SMB, musíte mít dokončen `cíl 10 <../Usage/Objectives.html#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`.
-* The first three settings are explained `above <../Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to>`__.
+* První tři nastavení jsou vysvětleny `výše <../Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to>`__.
 * Podrobnosti o různých volbách jsou popsány v sekci `Funkce OpenAPS <../Usage/Open-APS-features.html#enable-smb>`_.
 * *Jak často budou SMB podávány v minutách** je omezení které určuje, že SMB budou vydávané pouze každé 4 minuty (defaultní hodnota). Tato hodnota brání systému vydávat SMB příliš často (např. v případě nastavení dočasného cíle). Toto nastavení byste neměli změnit, pokud přesně nevíte, jaké mohou být následky. 
 * Je-li nastaveno 'Citlivost zvyšuje cíl' nebo 'Rezistence snižuje cíl', bude `Autosens <../Usage/Open-APS-features.html#autosens>`_ v závislosti na odchylkách glykémie měnit cílovou hodnotu glylémie.
@@ -333,7 +333,7 @@ Oznámení vyžadovaných sacharidů
 Pokročilé nastavení (OpenAPS AMA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Obvykle v tomto dialogu není potřeba měnit žádná nastavení!
-* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ and to understand what you are doing.
+* Pokud je chcete i přesto změnit, prostudujte si podrobnosti v `dokumentaci k OpenAPS<https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__, abyste pochopili, co děláte.
 
 Nastavení absorpce sacharidů
 ===========================================================
@@ -348,7 +348,7 @@ min_5m_carbimpact
 * V situacích, kdy absorpci sacharidů nelze počítat dynamicky na základě reakcí vaší glykémie, je použita tato výchozí hodnota absorpce. V podstatě jde o bezpečnostní pojistku.
 * Zjednodušeně řečeno: algoritnuls ví jak by se měla chovat vaše glykémie, je-li ovlivněna podaným inzulínem apod. 
 * Kdykoli dojde k pozitivní odchylce od očekávaného chování, je rozloženo/absorbováno určité množství sacharidů. Velká změna = více sacharidů atp. 
-* Hodnota min_5m_carbimpact definuje výchozí vliv absorpce sacharidů za 5 minut. For more details see `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`__.
+* Hodnota min_5m_carbimpact definuje výchozí vliv absorpce sacharidů za 5 minut. Více informací najdete v `dokumentaci OpenAPS <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`__.
 * Standardní hodnota pro AMA je 5, pro SMB 8.
 * Graf COB na domovské obrazovce označuje kdy se používá min_5m_impact tím, že se na vrcholu zobrazí oranžový kroužek.
 
@@ -366,7 +366,7 @@ Pokročilé nastavení - autosens ratio
 
 Nastavení pumpy
 ===========================================================
-The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`__.  Spárujte a nastavte svou pumpu podle pokynů pro jednotlivé pumpy:
+Tyto volby se budou lišit v závislosti na tom, který ovladač inzulínové pumpy jste vybrali v ' Konfigurace <../Configuration/Config-Buil-Builder.html#pump> `__.  Spárujte a nastavte svou pumpu podle pokynů pro jednotlivé pumpy:
 
 * `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
@@ -403,7 +403,7 @@ Nastavení připojení
 Nastavení alarmů
 -----------------------------------------------------------
 * Volby alarmu umožňují vybrat, jaké výchozí alarmy Nightscoutu se mají v aplikaci používat.  
-* For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_. 
+* Aby alarmy fungovaly, je třeba nastavit v proměnných Nightscoutu (Heroku...) hodnoty glykémie pro Urgentní, Vysokou, Nízkou a Urgentní nízkou glykémii <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_. 
 * Budou fungovat pouze v případě že budete mít připojení k Nightscoutu, a jsou určeny pro rodiče/pečovatele. 
 * Pokud máte v telefonu zdroj CGM (např. xDrip + nebo upravenou Dexcomalikaci), pak místo nich použijte tyto alarmy.
 
@@ -423,7 +423,7 @@ Rozšířená nastavení (NSClient)
 
 SMS komunikátor
 ===========================================================
-* Options will only be displayed if SMS communicator is selected in `Config Builder <../Configuration/Config-Builder.html#sms-communicator>`__.
+* Volba se zobrazí pouze v případě, že je povolen SMS komunikátor v 'Konfiguraci <../Configuration/Config-Buil-Builder.html#sms-communicator> `__.
 * Toto nastavení umožňuje vzdálené ovládání telefonu s AAPS posláním SMS s textem jako je zastavení smyčky, nebo poslání bolusu.  
 * Další informace jsou popsány v `SMS příkazech <../Children/SMS-Commands.html>`_.
 * Dodatečná bezpečnost je zajištěna použitím autentizační aplikace a dodatečného PIN na konci tokenu.
@@ -434,7 +434,7 @@ Vyberte, jaká služba určování polohy se použije:
 
 * Používat pasivní polohu: AAPS zjistí polohu pouze v případě, že ji budou požadovat ostatní aplikace
 * Používat zjištění polohy podle sítě: Poloha podle vaší Wi-Fi sítě
-* Use GPS location (Attention! May cause excessive battery drain!)
+* Používat GPS polohu (Pozor! Může způsobovat nadměrné vybíjení baterie!)
 
 Místní výstrahy
 ===========================================================

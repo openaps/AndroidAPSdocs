@@ -1,7 +1,7 @@
 Co je systém uzavřené smyčky AndroidAPS?
 **************************************************
 
-AndroidAPS is an app that acts as an artificial pancreas system (APS) on an Android smartphone. Co je systém umělé slinivky? Jedná se o softwarový program, jehož účelem je simulovat chování zdravé slinivky: automaticky udržovat hladinu krevního cukru v optimálním rozmezí. 
+AndroidAPS je aplikace, která funguje jako systém umělé slinivky (APS; artificial pancreas system) určena pro smartphony s operačním systémem Android. Co je systém umělé slinivky? Jedná se o softwarový program, jehož účelem je simulovat chování zdravé slinivky: automaticky udržovat hladinu krevního cukru v optimálním rozmezí. 
 
 APS to sice nedokáže dělat tak dobře, jako skutečná slinivka, avšak dokáže lidem s diabetem 1 typu usnadnit zvládání nemoci, a to za použití zařízení, která jsou běžně dostupná a softwaru, který je jednoduchý a bezpečný. Mezi tato zařízení patří systém pro kontinuální monitoring glykémie (CGM), který systému AndroidAPS předává informace o aktuální glykémii, a inzulinová pumpa, která je řízena pomocí AndroidAPS tak, aby vydávala správné množství inzulínu. Aplikace komunikuje s těmito zařízeními prostřednictvím technologie bluetooth. K výpočtu správného množství inzulínu využívá speciální algoritmus, neboli sadu pravidel, vyvinutý pro jiný systém umělé slinivky zvaný OpenAPS, který na celém světě používají tisíce lidí a eviduje miliony hodin používání. 
 
@@ -12,7 +12,7 @@ Upozornění: Systém AndroidAPS není v žádné zemi regulován žádným zdra
 * Správně obsluhoval systém a dohlížel na to, zda správně funguje
 
 .. poznámka:: 
-	**Disclaimer and Warning**
+	**Zřeknutí se odpovědnosti a varování**
 
 	* Všechny informace, myšlenky a kód zde popsané slouží pouze pro informační a vzdělávací účely. Nightscout se nesnaží v současné době dodržovat zákon HIPAA. Používejte Nightscout a AndroidAPS na vaše vlastní riziko a nepoužívejte informace nebo kód k provádění lékařských rozhodnutí.
 
@@ -20,7 +20,7 @@ Upozornění: Systém AndroidAPS není v žádné zemi regulován žádným zdra
 
 	* Všechny názvy společností a produktů, ochranné známky, servisní známky, registrované ochranné známky a registrované servisní známky jsou vlastnictvím jejich příslušných držitelů. Jejich použití je pro informační účely a neznamená žádné spojení.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_, `Insulet <https://www.insulet.com/>`_ or `Medtronic <https://www.medtronic.com/>`_.
+	Vezměte prosím na vědomí – tento projekt nemá žádnou spojitost s a není žádným způsobem schválený společnostmi: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_, `Insulet <https://www.insulet.com/>`_ nebo `Medtronic <https://www.medtronic.com/>`_.
 	
 Jste-li připraveni přijmout tuto výzvu, čtěte dál. 
 

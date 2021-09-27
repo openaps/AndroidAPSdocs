@@ -15,7 +15,7 @@ Oref1
 AAPS, Средневзвешенное значение
 --------------------------------------------------
 
-absorption is calculated to have ``COB == 0`` after specified time
+усвоение рассчитывается как "COB == 0" после определенного времени
 
 .. изображение:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, средневзвешенное значение
@@ -25,7 +25,7 @@ absorption is calculated to have ``COB == 0`` after specified time
 Обнаружение неправильного значения COB
 ==================================================
 
-AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. В этом случае он даст дополнительный подсказку на экране подтверждения калькулятора болюса. 
+AAPS предупреждает о том, что вы собираетесь подавать болюс при активных углеводах COB, оставшихся от предыдущего приема пищи, и алгоритм считает, что текущий расчет COB может быть неправильным. В этом случае он даст дополнительный подсказку на экране подтверждения калькулятора болюса. 
 
 Как AndroidAPS обнаруживает неправильные значения COB? 
 --------------------------------------------------
@@ -35,7 +35,7 @@ AAPS warns you if you are about to bolus with COB from a previous meal and the a
 .. изображение:: ../images/Calculator_SlowCarbAbsorbtion.png
   :alt: Подсказка о неверном значении COB
 
-In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  Это означает, что в организме может быть меньше активных углеводов, чем вычисляется алгоритмом. 
+На этом снимке экрана 41% времени поглощения углеводов был вычислен математически методом min_5m_carbimpact вместо значения, основанного на отклонениях ГК.  Это означает, что в организме может быть меньше активных углеводов, чем вычисляется алгоритмом. 
 
 Как относиться к этому предупреждению? 
 --------------------------------------------------
@@ -55,4 +55,4 @@ In the screenshot above, 41% of time the carb absorption was mathematically calc
 
 Ручная коррекция введенных углеводов
 ==================================================
-If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.
+Если вы переоценили или недооценили количество углеводов, это можно исправить на вкладке назначений и вкладке Действия как описано: `здесь <../Getting-Started/Screenshots.html#carb-correction> ` _.

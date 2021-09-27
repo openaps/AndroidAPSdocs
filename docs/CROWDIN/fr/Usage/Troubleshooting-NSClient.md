@@ -1,25 +1,39 @@
 # Dépannage NSClient
 
-NSClient repose sur une communication stable avec Nightscout. Une connexion instable entraîne des erreurs de synchronisation et une forte utilisation des données.
+NSClient relies on stable communication with Nightscout. An unstable connection leads to synchronization errors and high data usage.
 
-Si personne ne vous suit sur Nightscout vous pouvez faire une pause NSClient pour préserver (beaucoup) l'autonomie de la pile ou dans les paramètres de connexion, activez wifi uniquement pendant la charge.
+If nobody is following you on Nightscout you can choose to pause NSClient to save battery life or you can choose to setup NSClient so that it only connects when on Wi-Fi and/or during charging.
 
-* Comment détecter une connexion instable ?
+* How to detect an unstable connection?
 
-Allez dans l'onglet NSClient dans AAPS et regardez le journal. Le comportement habituel est de recevoir une commande PING toutes les ~ 30 secondes et presque aucun message de reconnexion. Si vous voyez beaucoup de reconnexions il y a un problème. Depuis andoridAPS 2.0 quand un tel comportement est détecté NSClient est mis en pause pendant 15 minutes et le message "Dysfonctionnement NSClient." s'affiche dans l'aperçu.
+Allez dans l'onglet NSClient dans AAPS et regardez le journal. The expected behavior is to receive a PING every ~30s and almost no reconnection messages. If you see many reconnections, then there is a problem.
+
+Since AndroidAPS version 2.0, when such behavior is detected, NSClient is paused for 15 minutes and the message "NSClient malfunction" is displayed on the main Overview screen.
 
 * Redémarrer
 
-La première chose que vous devez essayer est de redémarrer à la fois : Nightscout et ensuite le téléphone pour voir si le problème est permanent
+What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
+
+If your Nightscout is hosted on Heroku, you can restart Nightscout by: Logging into Heroku, click on your nightscout app name, click on the 'More' menu, then 'Restart all dynos'.
+
+For other hosts, please follow your hosts guidance documentation.
 
 * Problèmes de téléphone
 
-Android peut mettre votre téléphone en veille. Vérifiez que vous avez une exception pour AndroidAPS dans les options d'alimentation pour lui permettre de s'exécuter en arrière-plan tout le temps. Vérifiez à nouveau avec un signal réseau fort. Essayez un autre téléphone.
+Android may put your phone into a sleep mode. Check if you have an exception for AndroidAPS in your phones power options to allow it to run in the background all the time.
+
+Check the NSClient again when in strong network signal location.
+
+Try another phone.
 
 * Nightscout
 
-Si vous êtes sur Azure, de nombreuses personnes ont aidé à transférer sur Heroku. Une solution de contournement Azure à été définie récemment dans les paramètres de l'application, protocole HTTP sur 2.0 et Websockets sur ON
+If your site is hosted on Azure, many people have found that connection issues have improved since moving to Heroku.
+
+A workaround to connection issues in Azure is to set in Application settings HTTP protocol to 2.0 and Websockets to ON
 
 * Si vous avez toujours une erreur...
 
-Vérifiez la taille de votre base de données dans mLab. 496Mo signifie qu'elle est pleine et doit être compactée. [Suivez ces instructions OpenAPS pour vérifier la taille de votre base de données](https://openaps.readthedocs.io/en/latest/docs/Troubleshooting/Rig-NS-communications-troubleshooting.html#mlab-maintenance). Si le compactage ne fonctionne pas, vous devriez envisager de faire don de vos données AndroidAPS dans des Données Communes (pour la recherche) avant de supprimer toutes les données des collections. Il y a des [instructions dans la documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Give%20Back-Pay%20It%20Forward/data-commons-data-donation.html) pour faire ceci.
+Check the size of your database in MongoDB (or via the database size plugin in nightscout). If you are using the free tier in MongoDB, 496MB means it is full and needs to be cleaned up. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+
+Before clearing data from your database and if you haven't already set it up, you should consider donating your AndroidAPS data to the Open Humans project (for research). The instructions are on the [OpenHumans configuration page](../Configuration/OpenHumans.html).
