@@ -7,7 +7,7 @@ If you are **upgrading phones** then you can `export your settings <../Usage/Exp
 
 If you want to go back in objectives see `explanation below <../Usage/Objectives.html#go-back-in-objectives>`_.
  
-Objective 1: Setting up visualization and monitoring, analysing basals and ratios
+משימה 1: הגדרת ויזואליזציה, ניטור, ניתוח המינון הבזאלי והיחסים
 ====================================================================================================
 * Select the right blood glucose source for your setup.  See `BG Source <../Configuration/BG-Source.html>`_ for more information.
 * Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.  
