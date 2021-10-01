@@ -1,4 +1,4 @@
-# שאלות נפוצות ללופרים
+# שאלות נפוצות של לופרים
 
 How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
 
