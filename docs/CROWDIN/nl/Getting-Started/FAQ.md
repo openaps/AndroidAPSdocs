@@ -166,7 +166,7 @@ Zorg dat je eerst jouw basaal + ISF goed hebt ingesteld, daarna kun je CR testen
 
 > **Opmerking:**
 > 
-> In sommige Europese landen werden/worden broodeenheden (ookwel: broodwaarden of koolhydraten porties) gebruikt om te berekenen hoeveel insuline nodig is voor een bepaalde hoeveelheid voedsel. Hierbij staat 1 broodeenheid gelijk aan een vaste hoeveelheid koolhydraten. In Duitsland werd/wordt 12 of 10 gram koolhydraten gebruikt voor 1 broodeenheid, in België wordt vaak gerekend met 1 broodeenheid = 12,5 gram koolhydraten. Mocht jij hier nog nooit van gehoord hebben en ben je gewend om alles in grammen koolhydraten te berekenen, dan heb je mazzel. AndroidAPS rekent namelijk alleen met grammen koolhydraten, en doet niets met broodeenheden/koolhydraat porties. Onderstaande uitleg is vooral bedoeld voor mensen die wél gewend zijn met broodeenheden/koolhydraat porties te rekenen.
+> In sommige Europese landen werden/worden broodeenheden (ookwel: broodwaarden of koolhydraten porties) gebruikt om te berekenen hoeveel insuline nodig is voor een bepaalde hoeveelheid voedsel. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
 > 
 > Bij gebruik van broodenheden is de hoeveelheid koolhydraten een vast getal, waarbij de hoeveelheid insuline varieert per persoon. ("Hoeveel insuline is nodig voor één broodeenheid?")
 > 
@@ -174,7 +174,7 @@ Zorg dat je eerst jouw basaal + ISF goed hebt ingesteld, daarna kun je CR testen
 > 
 > Voorbeeld:
 > 
-> Broodeenheid factor (BE = 12,5g koolhydraten): 2,4 E/BE -> Je hebt 2,4 eenheden insuline nodig wanneer je één brood-eenheid eet.
+> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
 > Bijbehorende KH ratio: 12,5/2,4 = 5,2 g/E -> je kunt 5,2g koolhydraten eten bij één eenheid insuline.
 > 
@@ -196,7 +196,7 @@ Als jouw BG hoger uitkomt nadat een maaltijd is verteerd en IOB weer is teruggek
 
 ![AMA 3u](../images/Screenshot_AMA3h.png)
 
-In AMA betekent "dia" niet de "Duur van Insuline Actie". Het is een parameter die vroeger wel gelinkt was aan de DIA. Nu betekent het 'binnen welke tijd zou de correctie moeten zijn afgerond'. En heeft het niets meer te maken met de berekening van de IOB. In OpenAPS SMB wordt deze parameter niet meer gebruikt.
+In AMA betekent "dia" niet de "Duur van Insuline Actie". Het is een parameter die vroeger wel gelinkt was aan de DIA. Nu betekent het 'binnen welke tijd zou de correctie moeten zijn afgerond'. En heeft het niets meer te maken met de berekening van de IOB. In OpenAPS SMB, there is no need for this parameter any longer.
 
 ## Profiel
 
@@ -263,10 +263,10 @@ Wisselen van het reservoir kan niet worden gedaan via AndroidAPS, maar moet geda
 
 * Houd "Open Loop" / "Closed Loop" op het Overzicht-scherm van AndroidAPS lang ingedrukt en selecteer 'Verbreek verbinding 1u met pomp'
 * Koppel nu de pomp af en verwissel het reservoir volgens de instructies van de pompfabrikant.
-* Het vullen van de slang en canule kan rechtstreeks op de pomp worden gedaan. Gebruik in dit geval de [ONTLUCHT / VUL knop](../Usage/CPbefore26#pump) op het tabblad Acties om aan AAPS te laten weten dat je het reservoir of de canule hebt verwisseld.
+* Also priming and filling tube and cannula can be done directly on the pump. Gebruik in dit geval de [ONTLUCHT / VUL knop](../Usage/CPbefore26#pump) op het tabblad Acties om aan AAPS te laten weten dat je het reservoir of de canule hebt verwisseld.
 * Wanneer je daarmee klaar bent, koppel je de pomp weer aan en houd 'Verbinding verbroken (.. m)' lang ingedrukt. Selecteer 'Hervatten'.
 
-Het 'Ontlucht/vul' scherm van AAPS gebruikt niet de functie van "prime infusie set" van de pomp, maar vult de infuusset en/of canule met behulp van een bolus die niet in de geschiedenis van AAPS verschijnt. Dit betekent dat een lopende tijdelijke basaalstand niet zal worden onderbroken. Selecteer op het Acties (Act) tabblad de knop [ONTLUCHT / VUL](../Usage/CPbefore26#pump) en kies de hoeveelheid insuline die nodig is om de infuusset/canule te vullen en druk op OK. Wanneer er nog lucht in de infuusset zit, herhaal de vorige stap. Je kunt standaardhoeveelheden instellen in Instellingen > Andere > Vul standaard hoeveelheid. Hoeveel eenheden nodig zijn staat in het instructieboekje in de doos met infuussets, dit verschilt per type infuusset en is afhankelijk van de lengte van de canule en de lengte van de slang.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. Dit betekent dat een lopende tijdelijke basaalstand niet zal worden onderbroken. Selecteer op het Acties (Act) tabblad de knop [ONTLUCHT / VUL](../Usage/CPbefore26#pump) en kies de hoeveelheid insuline die nodig is om de infuusset/canule te vullen en druk op OK. Wanneer er nog lucht in de infuusset zit, herhaal de vorige stap. Je kunt standaardhoeveelheden instellen in Instellingen > Andere > Vul standaard hoeveelheid. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 
 ## Achtergrond
 
@@ -300,7 +300,7 @@ Probeer daarvoor deze stappen:
 * Stel een [Tijdelijk streefdoel voor Activiteit](../Usage/temptarget#activity-temp-target) in dat hoger ligt dan jouw normale streefdoel.
 * Als je SMB gebruikt, zorg er dan voor dat ["Gebruik SMB met een hoog tijdelijk streefdoel"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) en ["Activeer SMB altijd"](../Usage/Open-APS-features#enable-smb-always) zijn uitgeschakeld.
 
-De timing voor het veranderen van deze instellingen is ook belangrijk. Houd rekening met de (trage) werkingsduur van insuline, zorg dus dat je enige tijd voorafgaand aan de sport al minder insuline krijgt. Ook na het sporten kun je nog minder (of juist meer!) insuline nodig hebben.
+Pre- and post-processing of these settings is important. Houd rekening met de (trage) werkingsduur van insuline, zorg dus dat je enige tijd voorafgaand aan de sport al minder insuline krijgt. Ook na het sporten kun je nog minder (of juist meer!) insuline nodig hebben.
 
 Als je op vaste tijden vaste activiteiten doet, (bijvoorbeeld een klasje in de sportschool) kun je overwegen om [Automatisering](../Usage/Automation.rst) voor een Profiel wissel en Tijdelijk streefdoel te gebruiken. Je kunt de Automatisering ook op basis van GPS locatie instellen, maar dat maakt het timen voorafgaand aan sporten wel lastiger.
 
