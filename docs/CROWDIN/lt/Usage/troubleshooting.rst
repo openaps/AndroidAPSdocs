@@ -25,8 +25,8 @@ Naudojimas
 --------------------------------------------------
 * `Neteisingos angliavandenių vertės <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 
-  .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
-    :alt: Klaida: Lėtas angliavandenių įsisavinimas
+  .. image:: ../images/Calculator_SlowCarbAbsorption.png
+    :alt: Error: Slow carb absorption
 
 * `SMS komandos <../Children/SMS-Commands.html#troubleshooting>`_
 
@@ -51,6 +51,6 @@ Telefonai
 * `Jelly <../Usage/jelly.html>`_
 * `Huawei bluetooth ir baterijos optimizavimas <../Usage/huawei.html>`_
 
-Smartwaches
+Išmanieji laikrodžiai
 ==================================================
 * `Sony Smartwatch 3 <../Usage/SonySW3.html>`_
