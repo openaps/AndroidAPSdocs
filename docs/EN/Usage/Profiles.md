@@ -64,7 +64,7 @@ Alternatively you can delete the profile switch directly in mLab as described be
 
 ### 'Received profile switch from NS but profile does not exist locally' 
 * The requested profile was not synced correctly from Nightscout.
-* Follow instructions from above to delte the profile switch
+* Follow instructions from above to delete the profile switch
 
 Alternatively you can delete the profile switch directly in mLab:
 * Go to your mlab collection
