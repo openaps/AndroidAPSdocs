@@ -13,12 +13,12 @@ Juhuu! Schau dir die Issues an, frag im discord Channel. Es gibt immer viel zu t
 
 ## Ich kenne mich aus mit dem System und möchte bei den Docs mitschreiben!
 
-Großartig, das ist sehr willkommen und eine gute Möglichkeit, etwas beizutragen!
+Great, this is a highly appreciated thing and a good way to pay it forward!
 
 * Den discord Channel über das Wiki findest du hier: [AndroidAPSwiki/Lobby](https://discord.gg/4fQUWHZ4Mw). 
 * Eine Anleitung, wie man Beiträge auf Englisch hinzufügt und bearbeitet, ist hier zu finden: [Am Wiki mitschreiben](../make-a-PR.md). Andere Sprachen können nur übersetzt, aber nicht bearbeitet werden. Dadurch wird die Einheitlichkeit des Wikis in allen Sprachen gewährleistet.
 
-## Ich spreche mehrere Sprachen und würde gerne bei der Übersetzung der App bzw. des Wikis helfen
+## I do speak multiple languages and want to translate the app or the documentation
 
 * Falls du die **die App** in andere Sprachen übersetzen willst (danke), nutze bitte [crowdin](https://crowdin.com/project/androidaps).
 * Falls du die **die Docs** in andere Sprachen übersetzen willst (danke), nutze bitte [crowdin](https://crowdin.com/project/androidapsdocs). 
