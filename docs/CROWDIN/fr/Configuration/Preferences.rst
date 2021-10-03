@@ -146,7 +146,7 @@ Cibles Temporaires par défaut
   
 Insuline par défaut pour Amorcer/Remplir
 -----------------------------------------------------------
-* Si vous voulez remplir la tubulure ou amorcer la canule avec AAPS, vous pouvez le faire via `l'onglet actions <../Getting-Started/Screenshots.html#onglet-actions>`_.
+* If you want to fill tube or prime cannula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
 * Les valeurs prédéfinies peuvent être configurées dans cette boite de dialogue.
 
 Fourchette de visualisation
