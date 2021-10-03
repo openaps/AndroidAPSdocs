@@ -85,7 +85,7 @@ Falls die Verbindung zwischen AAPS und der Dana RS während der Insulinabgabe ab
 
 ## Wichtiger Hinweis beim Wechsel des Smartphones
 
-Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
+When switching to a new phone the following steps are necessary:
 
 * [Exportiere die Einstellungen](../Usage/ExportImportSettings#export-settings) auf Deinem alten Smartphone
 * Übertrage die Einstellungen vom alten auf das neue Smartphone.
@@ -97,4 +97,4 @@ Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 
 ## Mit der Dana RS Pumpe über Zeitzonen hinweg reisen
 
-Für allgemeine Informationen siehe die Seite [Mit der Pumpe über Zeitzonen hinweg reisen](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
