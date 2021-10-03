@@ -23,7 +23,7 @@ Los siguientes valores y consejos de manejo (uso de reloj para las operaciones d
 
 <b><font color="#FF0000">Muy importante:</b></font> Si no necesitas Android 8.1 (es decir, con un Accu-Check Combo), quédate con el android 7.0!
 
-Siga estas reglas para permanecer con Andorid 7.0:
+Follow these rules to stay with Android 7.0:
 
 * No se conecte a la red wifi o a la red móvil en primer lugar para evitar la actualización automática.
 * Omitir la configuración de la red wifi.
