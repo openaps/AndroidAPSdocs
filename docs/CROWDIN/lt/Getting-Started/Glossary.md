@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS - dirbtinės kasos sistema</td>
+ <td>AndroidAPS - artificial pancreas system</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -90,13 +90,13 @@
 </tr>
 <tr>
  <td><strong>KAMŽ</strong></td>
- <td>kaniulės amžius - rodomas Nightscout, jei informacija buvo įvesta AAPS skirtuke Priežiūra arba AAPS veiksmų skirtuke "pradinis užpildymas“</td>
+ <td>cannula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>KAT</strong></td>
- <td>pagrindiniame ekrane pateikiamas būsenos indikatorius, kad laiku nepakeistas kateteris</td>
+ <td>status light overdue cannula change on homescreen</td>
  <td>BAT / REZ / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Nuostatos</a><br><a href="../Getting-Started/Screenshots.html">Ekrano vaizdai</a></td>
 </tr>
@@ -144,7 +144,7 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>versijos valdymo sistema, skirta kompiuterių failų pokyčių stebėjimui ir darbui su šiais failais koordinuoti <br> -> būtina, kai reikia atnaujinti APK</td>
+ <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> necessary for APK updates</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - atnaujinti APK</a></td>
 </tr>
@@ -152,7 +152,7 @@
  <td><strong>GitHub</strong></td>
  <td>žiniatinklio versijos valdymo paslauga Git naudotojams<br> - šaltinio kodo saugykla</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">GitHub AndroidAPS</a></td>
 </tr>
 <tr>
  <td><strong>Glimp</strong></td>
@@ -276,9 +276,9 @@
 </tr>
 <tr>
  <td><strong>Prognozės</strong></td>
- <td>glikemijos prognozės ateityje, remiantis skirtingais skaičiavimo algoritmais</td>
+ <td>predictions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - glikemijos prognozavimo linijos</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - prediction lines</a></td>
 </tr>
 <tr>
  <td><strong>Profilis</strong></td>
