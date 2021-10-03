@@ -59,7 +59,7 @@ Los rangos para el tiempo de vida típico de los diferentes tipos de batería so
 
 * **Energizer Ultimate Lithium**: de 4 a 7 semanas
 * **Power One Alkaline** (Varta) del envase de servcie: 2 a 4 semanas
-* **Eneloop rechargable** baterías (BK-3MCCE): de 1 a 3 semanas
+* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
 
 If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
 
