@@ -75,9 +75,9 @@ Sei jedoch vorsichtig und passe deine Einstellungen in kleinen Schritten an. Das
 
 Siehe auch [OpenAPS-Dokumentation zu SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
-### Verwende AMA Autosense
+### Enable AMA Autosens
 
-Hier kannst du auswählen, ob die [Empfindlichkeitserkennung](../Configuration/Sensitivity-detection-and-COB.md) "Autosens" verwendet werden soll oder nicht.
+Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosens' or not.
 
 ### Aktiviere SMB
 
@@ -119,7 +119,7 @@ Standardwert: 30 Min.
 
 ### Aktiviere UAM
 
-Wenn du diese Option aktivierst, dann kann der SMB unangekündigte Mahlzeiten erkennen. Das ist besonders dann hilfreich, wenn du vergisst sie in AndroidAPS einzugeben, dich verschätzt und eine zu geringe KH-Menge eingegeben hast oder wenn eine fett-eiweisslastige Mahlzeit länger wirkt als gedacht. UAM kann also auch ohne manuelle Kohlenhydrat-Eingaben des Nutzers automatisch erkennen, dass die Glukosewerte auf Grund von Mahlzeiten, Adrenalin oder anderen Einflüssen signifikant steigen und versuchen, dies mit SMB abzufangen. Dies funktioniert aber auch andersherum: wenn der Glukosewert schnell sinkt, wird der SMB früher gestoppt.
+Wenn du diese Option aktivierst, dann kann der SMB unangekündigte Mahlzeiten erkennen. Das ist besonders dann hilfreich, wenn du vergisst sie in AndroidAPS einzugeben, dich verschätzt und eine zu geringe KH-Menge eingegeben hast oder wenn eine fett-eiweisslastige Mahlzeit länger wirkt als gedacht. Without any carb entry, UAM can recognize fast glucose increasements caused by carbs, adrenaline, etc, and tries to adjust it with SMBs. Dies funktioniert aber auch andersherum: wenn der Glukosewert schnell sinkt, wird der SMB früher gestoppt.
 
 **Deshalb sollte UAM bei SMB auch immer aktiv sein.**
 
@@ -147,7 +147,7 @@ Standardwert: 4 (sollte nur in Ausnahmefällen geändert werden und wenn du wei�
 
 ## Erweiterter Mahlzeit-Assistent (AMA)
 
-AMA steht für “advanced meal assist” und ist eine OpenAPS-Funktion aus 2017 (Oref0). Nachdem du dir einen Bolus gegeben hast, darf AMA schneller eine höhere temporäre Basalrate wählen, vorausgesetzt du gibst die Kohlenhydrate verlässlich ein.
+AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). Nachdem du dir einen Bolus gegeben hast, darf AMA schneller eine höhere temporäre Basalrate wählen, vorausgesetzt du gibst die Kohlenhydrate verlässlich ein.
 
 Siehe auch: [OpenAPS-Dokumentation (englisch)](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
@@ -181,13 +181,13 @@ Der Standardwert ist 2, aber du solltest diesen Parameter in kleinen Schritten e
 
 *Siehe dazu auch die [Übersicht der fest programmierten Limits](../Usage/Open-APS-features#ubersicht-der-fest-programmierten-limits).*
 
-### Verwende AMA Autosense
+### Enable AMA Autosens
 
-Hier kannst du auswählen, ob die [Empfindlichkeitserkennung](../Configuration/Sensitivity-detection-and-COB.md) Autosens verwendet werden soll oder nicht.
+Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosens or not.
 
-### Autosense passt auch temporäre Ziele an
+### Autosens adjust temp targets too
 
-Wenn du diese Option aktivierst, dann kann Autosense auch Ziele anpassen (neben Basalrate, ISF und IC). Dadurch kann AndroidAPS "aggressiver" arbeiten oder nicht. Der aktuell eingestellte Zielwert wird dadurch möglicherweise schneller erreicht.
+If you have this option enabled, autosens can adjust targets (next to basal, ISF and IC), too. Dadurch kann AndroidAPS "aggressiver" arbeiten oder nicht. Der aktuell eingestellte Zielwert wird dadurch möglicherweise schneller erreicht.
 
 ### Erweiterte Einstellungen
 
