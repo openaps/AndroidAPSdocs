@@ -22,7 +22,7 @@ Nota importante
 --------------------------------------------------
 **La automatización todavía está activa cuando se inhabilita el lazo.**
 
-So make sure to deactivate automation rules during these occasions if neccessary. You can do so by unticking the box left of the name of your automation rule.
+So make sure to deactivate automation rules during these occasions if necessary. You can do so by unticking the box left of the name of your automation rule.
 
 .. imagen:: ../images/Automation_ActivateDeactivate.png
   :alt: Activate and deactivaten automation rule
@@ -58,7 +58,7 @@ Usted puede elegir entre varias condiciones. Aquí están algunos componentes ex
 * Tiempo vs. hora de Repetición
 
   * hora = suceso de una sola vez
-  * hora recurrente = algo que ocurre regulamente (por ejemplo. una vez a la semana, todos los días laborables, etc.)
+  * recurring time = something that happens regularly (i.e. una vez a la semana, todos los días laborables, etc.)
    
 * ubicación: en el constructor de configuración (Automatización), puede seleccionar el servicio de ubicación que desea utilizar:
 
@@ -154,4 +154,4 @@ Please be aware to use automation incorrectly. Esto podría conducir a dificulta
 Alternativas
 ==================================================
 
-For advanced users, there are other posibilities to automate tasks using IFTTT or a third party Android app called Automate. Algunos ejemplos se pueden encontrar `aquí <./automationwithapp.html>`_.
+For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Algunos ejemplos se pueden encontrar `aquí <./automationwithapp.html>`_.
