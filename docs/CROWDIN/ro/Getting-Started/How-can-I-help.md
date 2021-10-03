@@ -12,12 +12,12 @@ Ura! Look at the issues, ask in the discord channel, there is always a lot to do
 
 ## Cunosc sistemul şi pot scrie documentaţia!
 
-Excelent, acesta este un lucru foarte apreciat şi un mod bun de a ajuta!
+Great, this is a highly appreciated thing and a good way to pay it forward!
 
 * The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
 * Un ghid cum sa faci înregistrări pe wiki in engleză poate fi găsit aici: [Cum să faci un PR](../make-a-PR.md). Alte limbi sunt doar traduse din engleză şi din motive de consistenţă nu pot fi editate.
 
-## Eu vorbesc mai multe limbi și doresc să traduc aplicația sau documentația
+## I do speak multiple languages and want to translate the app or the documentation
 
 * Dacă doriți să traduceți **aplicația** în alte limbi (mulțumesc), vă rugăm să folosiți [crowdin](https://crowdin.com/project/androidaps).
 * Dacă doriți să traduceți **documentația** în alte limbi (mulțumesc), vă rugăm să folosiți [crowdin](https://crowdin.com/project/androidapsdocs). 
