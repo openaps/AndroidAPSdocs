@@ -75,9 +75,9 @@ Sea cuidadoso y paciente, y sólo cambie los valores paso a paso. Es diferente p
 
 See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
-### Habilitar el autosensado de AMA
+### Enable AMA Autosens
 
-Aquí, puede elegir si desea utilizar la detección de sensibilidad [](../Configuration/Sensitivity-detection-and-COB.md) 'autosensibilidad' o no.
+Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosens' or not.
 
 ### Activar SMB
 
@@ -119,7 +119,7 @@ Valor predeterminado: 30 min.
 
 ### Activar UAM
 
-Con esta opción habilitada, el algoritmo SMB puede reconocer las comidas no anunciadas. Esto es útil, si se olvida de informar a AndroidAPS sobre sus carbohidratos o estima erroneamente sus carbohidratos, o la cantidad ingresada de carbohidratos fue errónea o si una comida con mucha grasa y proteína tiene una duración más larga de lo esperado. Sin ninguna entrada de carbohidratos, UAM puede reconocer los incrementos de glucosa rápidos causados por carbohidratos, adrenalina, etc, e intenta ajustarlo con los SMB. Esto también funciona de la manera opuesta: si hay una reducción rápida de la glucosa, puede detener a las SMB antes.
+Con esta opción habilitada, el algoritmo SMB puede reconocer las comidas no anunciadas. Esto es útil, si se olvida de informar a AndroidAPS sobre sus carbohidratos o estima erroneamente sus carbohidratos, o la cantidad ingresada de carbohidratos fue errónea o si una comida con mucha grasa y proteína tiene una duración más larga de lo esperado. Without any carb entry, UAM can recognize fast glucose increasements caused by carbs, adrenaline, etc, and tries to adjust it with SMBs. Esto también funciona de la manera opuesta: si hay una reducción rápida de la glucosa, puede detener a las SMB antes.
 
 **Por lo tanto, la UAM siempre debe activarse cuando se utiliza SMB.**
 
@@ -147,7 +147,7 @@ Default value: 4 (shouldn’t be changed unless you really need to and know, wha
 
 ## Asistente de comida avanzada (AMA)
 
-AMA, la forma abreviada de "asistencia avanzada para comidas" es una función OpenAPS a partir de 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) permite que el sistema sea más rápido al ejecutar una alta tasa basal temporal después de un bolo de comida si ingresa a los carbohidratos de forma fiable.
+AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) permite que el sistema sea más rápido al ejecutar una alta tasa basal temporal después de un bolo de comida si ingresa a los carbohidratos de forma fiable.
 
 You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
@@ -181,13 +181,13 @@ El valor predeterminado es 2, pero debe aumentar este parámetro lentamente para
 
 *See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
-### Habilitar el autosensado de AMA
+### Enable AMA Autosens
 
-Aquí, puede elegir, si desea utilizar la [detección de sensibilidad](../Configuration/Sensitivity-detection-and-COB.md) autosensibilidad o no.
+Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosens or not.
 
-### El autosensado ajusta los objetivos temporales también
+### Autosens adjust temp targets too
 
-Si tiene esta opción habilitada, la autosensibilidad puede ajustar los objetivos (junto a basal, ISF e IC), también. This lets AndroidAPS work more 'aggressive' or not. Es posible que el objectivo actual se alcance más rápido con esto.
+If you have this option enabled, autosens can adjust targets (next to basal, ISF and IC), too. This lets AndroidAPS work more 'aggressive' or not. Es posible que el objectivo actual se alcance más rápido con esto.
 
 ### Ajustes avanzados
 
