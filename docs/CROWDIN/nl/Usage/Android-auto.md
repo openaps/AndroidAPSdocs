@@ -30,7 +30,7 @@ Omdat AAPS geen officiële Android Auto app is, moet je meldingen activeren in A
 
 ![Onbekende bronnen toestaan](../images/AndroidAuto_03.png)
 
-* Je kunt de ontwikkelaars-modus nu sluiten als je wilt. Klik hiervoor op de 3 menupuntjes rechtsboven.
+* Now you can quit developer mode if you want. Klik hiervoor op de 3 menupuntjes rechtsboven.
 
 ## Toon meldingen in jouw auto
 
