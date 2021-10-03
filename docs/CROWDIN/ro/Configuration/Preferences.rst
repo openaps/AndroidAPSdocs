@@ -146,7 +146,7 @@ Asistent Rapid
   
 Umplere/Amorsare - cantități standard de insulină
 -----------------------------------------------------------
-* Dacă doriţi să umpleţi tub sau să amorsați canula prin AAPS puteţi face acest lucru prin `pagina acțiuni <../Getting-Started/Screenshots.html#action-tab>`_.
+* If you want to fill tube or prime cannula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
 * În acest dialog pot fi definite valori prestabilite.
 
 Intervalul de vizualizare
