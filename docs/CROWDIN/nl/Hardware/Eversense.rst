@@ -1,6 +1,6 @@
 Eversense
 **************************************************
-De makkelijkste manier om de Eversense te gebruiken met AndroidAPS is om de aangepaste `Eversense app voor buiten de Verenigde Staten <https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk>`_ te installeren (en de originele app eerst te verwijderen).
+The easiest way to use Eversense with AndroidAPS is to install the non-US modified `Eversense app <https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk>`_ (and uninstall the original one first).
 
 **Waarschuwing: door de oude app te verwijderen zullen jouw lokaal opgeslagen (glucose)gegevens ouder dan een week, ook worden verwijderd!**
 
