@@ -36,4 +36,4 @@ Ein Workaround für Verbindungsprobleme in Azure ist, in den 'Application settin
 
 Überprüfe die Datenbankgröße in MongoDB oder über das Plugin für die Datenbankgröße in Nightscout. Wenn Du die kostenfreie Version von MongoDB nutzt, ist die Datenbank bei 496 MB voll und muss bereinigt werden. [Hier sind die Überprüfung der Datenbankgröße und deren Bereinigung beschrieben.](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
 
-Bevor Du Deine Datenbank bereinigst und Daten löschst, solltest Du Dir überlegen, diese vorher dem Open Humans Projekt für wissenschaftlich Studien zur Verfügung zu stellen - wenn Du dies noch nicht getan hast. Die Anleitung dazu findest Du auf der Seite zum [Open Humans Uploader](../Configuration/OpenHumans.html).
+Bevor Du Deine Datenbank bereinigst und Daten löschst, solltest Du Dir überlegen, diese vorher dem Open Humans Projekt für wissenschaftlich Studien zur Verfügung zu stellen - wenn Du dies noch nicht getan hast. The instructions are on the [OpenHumans configuration page](../Configuration/OpenHumans).
