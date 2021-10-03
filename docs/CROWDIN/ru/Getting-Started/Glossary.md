@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS/ИПЖ</strong></td>
- <td>AndroidAPS - искусственная поджелудочная железа.</td>
+ <td>AndroidAPS - artificial pancreas system</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -90,13 +90,13 @@
 </tr>
 <tr>
  <td><strong>CAGE/ВозрКан</strong></td>
- <td>Отображаемый в системе Nightscout срок эксплуатации инсулиновой канюли. Появляется в случае ввода информации об установке канюли на вкладке портала терапии AAPS или через вкладку действий 'первичное заполнение инфузионного набора' AAPS</td>
+ <td>cannula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>CAN</strong></td>
- <td>меняющая цвет надпись состояния просроченной/непросроченной канюли на главном экране</td>
+ <td>status light overdue cannula change on homescreen</td>
  <td>BAT / RES / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
 </tr>
@@ -144,15 +144,15 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>система управления версиями файлов (документация, программное обеспечение и пр). Необходима для обновления APK системы AndroidAPS</td>
+ <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> necessary for APK updates</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - обновление APK</a></td>
 </tr>
 <tr>
- <td><strong>Github</strong></td>
+ <td><strong>GitHub</strong></td>
  <td>веб-сервис для размещения IT-проектов и их совместной разработки. Веб-сервис основан на системе контроля версий Git<br>. Для проекта AndroidAPS - хранилище программного обеспечения и его обновлений</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">GitHub AndroidAPS</a></td>
 </tr>
 <tr>
  <td><strong>Glimp</strong></td>
@@ -277,9 +277,9 @@ OpenAPS.</td>
 </tr>
 <tr>
  <td><strong>Прогнозирование</strong></td>
- <td>Прогнозы уровня ГК в будущем, основанные на разных алгоритмах расчета.</td>
+ <td>predictions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - prediction lines</a></td>
 </tr>
 <tr>
  <td><strong>Профиль</strong></td>
