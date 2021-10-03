@@ -69,7 +69,7 @@ To do a profile switch long-press on the name of your profile ("Tuned 03/11" in 
 ### 'NS에서 프로파일 변경을 수신했지만 폰에는 존재하지 않는다'
 
 * 요청된 프로파일은 Nightscout에서 올바르게 동기화 되지 않았다.
-* 프로파일 변경을 삭제하기 위해서 위의 안내에 따라야 한다.
+* Follow instructions from above to delete the profile switch
 
 mLab의 프로파일 변경에서 직접 삭제할 수도 있다.
 
