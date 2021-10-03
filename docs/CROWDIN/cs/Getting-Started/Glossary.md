@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS - systém umělé slinivky</td>
+ <td>AndroidAPS - artificial pancreas system</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -90,13 +90,13 @@
 </tr>
 <tr>
  <td><strong>KAN</strong></td>
- <td>Stáří kanyly (canula age) - hodnota zobrazená v Nightscoutu, pokud byla tato informace zadána v AAPS v části Akce nebo v AAPS prostřednictvím 'Plnění/Doplňování'</td>
+ <td>cannula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>CAN</strong></td>
- <td>Stavový indikátor stáří kanyly na domovské obrazovce</td>
+ <td>status light overdue cannula change on homescreen</td>
  <td>BAT / RES / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots.html">Snímky obrazovky</a></td>
 </tr>
@@ -144,15 +144,15 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>Systém pro správu verzí a sledování změn v počítačových souborech a pro koordinaci prací na těchto souborech<br>-> nezbytný pro aktualizace APK</td>
+ <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> necessary for APK updates</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - aktualizace APK</a></td>
 </tr>
 <tr>
- <td><strong>Github</strong></td>
+ <td><strong>GitHub</strong></td>
  <td>Webová hostovací služba pro správu verzí pomocí Gitu<br>-> úložiště zdrojových kódů</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">GitHub AndroidAPS</a></td>
 </tr>
 <tr>
  <td><strong>Glimp</strong></td>
@@ -276,9 +276,9 @@
 </tr>
 <tr>
  <td><strong>Predikce</strong></td>
- <td>Predikce budoucího vývoje glykémie založená na různých výpočtech</td>
+ <td>predictions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - Křivky predikce</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - prediction lines</a></td>
 </tr>
 <tr>
  <td><strong>Profil</strong></td>
