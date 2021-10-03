@@ -32,7 +32,7 @@ Comment AndroidAPS détecte-t-il les mauvaises valeurs de GA ?
 
 Normalement, AAPS détecte l'absorption des glucides par des écarts de glycémie. Si vous avez entré des glucides, mais que AAPS ne peut pas voir leur absorption estimée via les variations de GLY, il utilisera la méthode `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#parametres-dabsorption>`_ pour calculer l'absorption à la place (appelée 'fallback'). Comme cette méthode ne calcule que l'absorption minimale de glucides sans tenir compte des écarts de GLY, elle peut conduire à des valeurs de GA incorrectes.
 
-.. image:: ../images/Calculator_SlowCarbAbsorbtion.png
+.. image:: ../images/Calculator_SlowCarbAbsorption.png
   :alt: soupçon de GA erronés
 
 Dans la capture d'écran ci-dessus, 41% du temps l'absorption de glucides a été mathématiquement calculée par le min_5m_carbimpact au lieu de la valeur détectée par les variations de GLY.  Cela signifie que vous avez peut-être moins de glucides actifs que calculé par l'algorithme. 
