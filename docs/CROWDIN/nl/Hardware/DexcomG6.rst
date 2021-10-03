@@ -62,7 +62,7 @@ Wanneer je de G6 gebruikt met de Bouw Je Eigen Dexcom App
 Instellingen voor AndroidAPS
 --------------------------------------------------
 * Selecteer 'Dexcom App (aangepast)' in de configurator.
-* Als je geen waarden ontvangt, selecteer dan een andere gegevensbron, en selecteer daarna 'Dexcom App (aangepast) opnieuw om te zorgen dat de app opnieuw om een machtiging vraagt en daarmee de AAPS app de BG waardes zal ontvangen van de de Bouw Je Eigen Dexcom app.
+* If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
 
 Instellingen voor xDrip+
 --------------------------------------------------
@@ -87,7 +87,7 @@ Dexcom G6 specifieke probleemoplossing
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip+ PhoneServiceState
 
-Algemene probleemoplossing
+General troubleshooting
 --------------------------------------------------
 Voor het oplossen van problemen met jouw CGM klik `hier <./GeneralCGMRecommendation.html#problemen-oplossen>`__.
 
