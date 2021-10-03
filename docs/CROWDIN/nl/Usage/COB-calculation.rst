@@ -32,7 +32,7 @@ Hoe detecteert AndroidAPS verkeerde COB waarden?
 
 Normaalgesproken detecteert AAPS carb absorptie dmv BG afwijkingen. In het geval je koolhydraten hebt ingevoerd maar AAPS ziet niet de verwachte BG stijging, dan zal hij gebruik maken van de `min_5m_carbimpact <.. Configuratie/Config-Builder.html?highlight=min_5m_carbimpact#opname-instellingen>`_ methode om de absorptie te berekenen (als een soort ' vangnet' of ' fallback' in het Engels). Aangezien deze methode slechts de minimale koolhydraten absorptie berekent zonder rekening te houden met BG afwijkingen, kan dit leiden tot onjuiste COB waarden.
 
-.. image:: ../images/Calculator_SlowCarbAbsorbtion.png
+.. image:: ../images/Calculator_SlowCarbAbsorption.png
   :alt: Detectie van verkeerde COB waarden
 
 In de bovenstaand screenshot werd bij het berekenen van de koolhydraat absorptie 41% van de tijd de min_5m_carbimpact gebruikt, in plaats van de waarde die is gedetecteerd dmv afwijkingen.  Dit betekent dat je misschien minder koolhydraten aan boord hebt dan berekend door het algoritme. 
