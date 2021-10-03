@@ -166,7 +166,7 @@ Darant prielaidą, kad bazė yra teisinga, galite išbandyti pagal dabartinius n
 
 > **PASTABA:**
 > 
-> Kai kuriose Europos šalyse duonos vienetai buvo naudojami nustatant, kiek insulino reikia maistui. Pradžioje 1 duonos vienetas prilygo 12g angliavandenių, vėliau buvo pakeista į 10g angliavandenių.
+> Kai kuriose Europos šalyse duonos vienetai buvo naudojami nustatant, kiek insulino reikia maistui. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
 > 
 > Pagal šį modelį angliavandenių kiekis buvo nustatomas fiksuotas, insulino kiekis buvo kintamas. ("Kiek insulino reikia padengti vienam duonos vienetui?")
 > 
@@ -174,7 +174,7 @@ Darant prielaidą, kad bazė yra teisinga, galite išbandyti pagal dabartinius n
 > 
 > Pavyzdys:
 > 
-> Duonos vieneto faktorius (DV = 12g angliavandenių): 2,4vv/DV -> Jums reikia 2,4 vienetų insulino, vienam duonos vienetui.
+> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
 > Atitinkamai IA: 12 g /2,4 vv = 5,0 g/vv -> 1 vienetas insulino dengia 5,0 g angliavandenių.
 > 
@@ -196,7 +196,7 @@ Jei po valgio angliavandeniai visiškai suskaidomi, AIO vėl tampa lygus nuliui,
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-AMA kontekste „dia“ nereiškia „insulino veikimo trukmė“. Tai parametras, kuris naudojamas susijungimui su IVT. Tai reiškia, kada korekcinė dozė turėtų nustoti veikti. Tai neturi nieko bendro su aktyvaus insulino AIO skaičiavimais. OpenAPS SMB šis parametras nebenaudojamas.
+AMA kontekste „dia“ nereiškia „insulino veikimo trukmė“. Tai parametras, kuris naudojamas susijungimui su IVT. Tai reiškia, kada korekcinė dozė turėtų nustoti veikti. Tai neturi nieko bendro su aktyvaus insulino AIO skaičiavimais. In OpenAPS SMB, there is no need for this parameter any longer.
 
 ## Profilis
 
@@ -263,10 +263,10 @@ Rezervuaro keitimo negali atlikti per AndroidAPS - tik tiesiogiai per pompą.
 
 * AndroidAPS pagrindinio ekrano skirtuke paspauskite ir palaikykite mygtuką Atviras ciklas / Uždaras ciklas ir pasirinkite "Sustabdyti ciklą 1 val."
 * Dabar atjunkite pompą, ir pakeiskite rezervuarą pagal pompos instrukciją.
-* Taip pat, pirminis užpildymas bei žarnelės ir kaniulės užpildymas gali būti atliekamas tiesiogiai iš pompos. Tokiu atveju naudokite [KATETERIO KEITIMO mygtuką](../Usage/CPbefore26#pump) veiksmų skirtuke, tiesiog užregistruoti šį veiksmą.
+* Also priming and filling tube and cannula can be done directly on the pump. Tokiu atveju naudokite [KATETERIO KEITIMO mygtuką](../Usage/CPbefore26#pump) veiksmų skirtuke, tiesiog užregistruoti šį veiksmą.
 * Iš naujo prijungę pompą, atnaujinkite ciklą ilgai paspausdami mygtuką „Sustabdyta (X min.)“.
 
-AndroidAPS nenaudoja pompos funkcijos „Pirminis kateterio užpildymas“, o užpildo kateterį įprastu bolusu, kuris į istoriją neįrašomas. Tai reiškia, kad jis nenutraukia tuo metu nustatytos laikinos valandinės bazės. AndroidAPS skirtuke Veiksmai naudokite mygtuką „Kateterio keitimas“, kad nustatytumėte reikiamą insulino kiekį ir pradėtumėte užpildyti kateterio kaniulę. Jei kiekis nėra pakankamas, pakartokite užpildymą. Numatytuosius kiekius galite nustatyti trijų taškų meniu, esančiame skiltyje Nustatymai > Kita > Užpildymas / pirminio užpildymo standartiniai kiekiai. Norėdami sužinoti, kiek vienetų turėtumėte naudoti, priklausomai nuo adatos ir vamzdelio ilgio, skaitykite kateterio (kaniulės) instrukcijas.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. Tai reiškia, kad jis nenutraukia tuo metu nustatytos laikinos valandinės bazės. AndroidAPS skirtuke Veiksmai naudokite mygtuką „Kateterio keitimas“, kad nustatytumėte reikiamą insulino kiekį ir pradėtumėte užpildyti kateterio kaniulę. Jei kiekis nėra pakankamas, pakartokite užpildymą. Numatytuosius kiekius galite nustatyti trijų taškų meniu, esančiame skiltyje Nustatymai > Kita > Užpildymas / pirminio užpildymo standartiniai kiekiai. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 
 ## Fonas
 
@@ -300,7 +300,7 @@ Kai naudojate uždarą ciklą, turėtumėte pabandyti šiuos veiksmus:
 * Nustatyti [Aktyvumo laikiną tikslą](../Usage/temptarget#activity-temp-target) virš jūsų įprastinio tikslo.
 * Jei naudojate SMB, įsitikinkite, kad funkcijos ["Įjungti SMB su aukštais tikslais"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) ir ["Įjungti SMB visada"](../Usage/Open-APS-features#enable-smb-always) yra išjungtos.
 
-Svarbus išankstinis ir vėlesnis šių parametrų apdorojimas. Prieš sportuodami atlikite pakeitimus ir įvertinkite raumenų darbo poveikį.
+Pre- and post-processing of these settings is important. Prieš sportuodami atlikite pakeitimus ir įvertinkite raumenų darbo poveikį.
 
 Jei sportuojate reguliariai tuo pačiu metu (pvz., sportuojate sporto salėje), galite naudoti [Automatizavimą](../Usage/Automation.rst), kad pakeistumėte profilį ir laikinus tikslus. Geografine padėtimi pagrįsta automatizavimas taip pat yra gera idėja, tačiau apsunkina išankstinį apdorojimą.
 
