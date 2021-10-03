@@ -12,16 +12,16 @@ For support on CGM sources please use the Facebook groups or discord channels fo
 
 ## Prisijunkite prie AndroidAPS users grupės Facebook!
 
-Prisijunkite prie pagrindinės [AndroidAPS Facebook grupės](https://www.facebook.com/groups/1900195340201874/). Čia galite užduoti visus klausimus apie algoritmą, paskelbti visas su Android Studio ir APK kūrimu susijusias sąrankos problemas, užduoti visus klausimus apie programos naudojimą ir gauti patarimų, kaip kuo geriau išnaudoti programą. Taip pat yra grupė, skirta Combo pompos naudotojams [AAPSCombo (anglų k.)](https://www.facebook.com/groups/127507891261169/), tiems, kurie turi šiek tiek konkretesnę sąranką.
+Prisijunkite prie pagrindinės [AndroidAPS Facebook grupės](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. Taip pat yra grupė, skirta Combo pompos naudotojams [AAPSCombo (anglų k.)](https://www.facebook.com/groups/127507891261169/), tiems, kurie turi šiek tiek konkretesnę sąranką.
 
-## Kiti šaltiniai anglų kalba
+## Other resources in English
 
 * [Looped Facebook grupė](https://www.facebook.com/groups/TheLoopedGroup): apima visus Pasidaryk Pats uždarojo ciklo sistemas (OpenAPS, Loop ir AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): bendri NGJ
 * [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
 
-## Šaliai ar kalbai būdingi informacijos šaltiniai
+## Country / language specific resources
 
 ### Australija
 
