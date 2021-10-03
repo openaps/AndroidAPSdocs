@@ -12,16 +12,16 @@ Um Unterstützung für CGM-Quellen zu erhalten, verwende bitte die Facebook-Grup
 
 ## Schließe dich der AndroidAPS users Gruppe auf Facebook an!
 
-Tritt der [AndroidAPS Facebook Gruppe (englisch)](https://www.facebook.com/groups/1900195340201874/) bei. Du kannst dort alle Fragen zum Algorithmus stellen, alle Setup-Probleme posten, die du mit Android Studio und der Erstellung der APK hast, alle Fragen zur Verwendung der App anbringen und auch Tipps bekommen, wie du die App optimal nutzen kannst. Es gibt auch eine Gruppe für Benutzer der Combo Pumpe [AAPSCombo (englisch)](https://www.facebook.com/groups/127507891261169/), die ein etwas spezifischeres Setup haben.
+Tritt der [AndroidAPS Facebook Gruppe (englisch)](https://www.facebook.com/groups/1900195340201874/) bei. You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. Es gibt auch eine Gruppe für Benutzer der Combo Pumpe [AAPSCombo (englisch)](https://www.facebook.com/groups/127507891261169/), die ein etwas spezifischeres Setup haben.
 
-## Weitere Informationsquellen in englischer Sprache
+## Other resources in English
 
 * [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): deckt alle DIY Closed Loop Systeme ab (OpenAPS, Loop und AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM im Allgemeinen
 * [AndroidAPS bei Discord](https://discord.gg/4fQUWHZ4Mw)
 
-## Länder- bzw. sprachspezifische Informationsquellen
+## Country / language specific resources
 
 ### Australien
 
