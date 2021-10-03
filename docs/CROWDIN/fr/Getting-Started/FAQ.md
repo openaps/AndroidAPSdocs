@@ -166,7 +166,7 @@ En supposant que le débit de basal est correct, vous pouvez tester en vérifian
 
 > **REMARQUE :**
 > 
-> Dans certains pays européens, des unités de pain ont été utilisées pour déterminer la quantité d'insuline nécessaire à l'alimentation. A l'origine 1 unité de pain est équivalent à 12g de glucides, mais plus tard certains ont changés la référence à 10g de glucides.
+> Dans certains pays européens, des unités de pain ont été utilisées pour déterminer la quantité d'insuline nécessaire à l'alimentation. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
 > 
 > Dans ce modèle, la quantité de glucides est la référence et la quantité d'insuline variable. ("Quelle quantité d'insuline est nécessaire pour couvrir une unité de pain?")
 > 
@@ -174,7 +174,7 @@ En supposant que le débit de basal est correct, vous pouvez tester en vérifian
 > 
 > Exemple :
 > 
-> Facteur pour une unité de pain (1 UP = 12g glucides) : 2,4 U/UP -> Vous avez besoin de 2,4 unités d'insuline quand vous mangez 1 UP.
+> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
 > G/I correspondant : 12g / 2,4 U = 5,0 g/U -> 5,0g de glucides peuvent être couverts avec une unité d'insuline.
 > 
@@ -196,7 +196,7 @@ Si, après que le repas ait été digéré et que l'IA est revenu à zéro, votr
 
 ![AAR 3h](../images/Screenshot_AMA3h.png)
 
-Dans l'AMA, DIA ne signifie pas "Durée d'Action de l'Insuline". C'est un paramètre qui était connecté au DAI. Maintenant, cela signifie "à quel moment la correction devrait être terminée". Cela n'a rien à voir avec le calcul de l'IA. Dans OpenAPS SMB, ce paramètre n'est plus nécessaire.
+Dans l'AMA, DIA ne signifie pas "Durée d'Action de l'Insuline". C'est un paramètre qui était connecté au DAI. Maintenant, cela signifie "à quel moment la correction devrait être terminée". Cela n'a rien à voir avec le calcul de l'IA. In OpenAPS SMB, there is no need for this parameter any longer.
 
 ## Profil
 
@@ -263,10 +263,10 @@ Le changement de cartouche ne peut pas être fait via AndroidAPS, mais doit êtr
 
 * Faites un appui long sur "Boucle Ouverte" / "Boucle Fermée" de l'onglet Accueil de AndroidAPS et sélectionnez 'Suspendre la Boucle pour 1h'
 * Débranchez maintenant la pompe et changez le réservoir selon les instructions de la pompe.
-* Ainsi la purge de la tubulure et de la canule peuvent être faites directement sur la pompe. Dans ce cas utilisez le [bouton AMORCER/REMPLIR](../Usage/CPbefore26#pump) dans l'onglet Actions pour uniquement enregistrer le changement.
+* Also priming and filling tube and cannula can be done directly on the pump. Dans ce cas utilisez le [bouton AMORCER/REMPLIR](../Usage/CPbefore26#pump) dans l'onglet Actions pour uniquement enregistrer le changement.
 * Une fois reconnecté à la pompe, continuez la boucle en appuyant sur "Suspendu (X m)".
 
-Le changement d'une canule n'utilise cependant pas la fonction "Remplir tubulure" / "Remplir canule" de la pompe, mais remplit l'ensemble de perfusion et / ou la canule à l'aide d'un bolus qui n'apparaît pas dans l'historique des bolus. Cela signifie qu'il n'interrompt pas un débit de basal temporaire en cours d'exécution. Dans l'onglet Actions (ACT), utilisez le [bouton AMORCER/REMPLIR](../Usage/CPbefore26#pompe) pour définit la quantité d'insuline nécessaire pour remplir le dispositif de perfusion (tubulure) et purger la canule. Si la quantité n'est pas suffisante, répétez le remplissage. Vous pouvez définir les quantités par défaut dans les Préférences > Autres > Valeurs prédéfinies pour remplir&amorcer. Consultez les notices de vos canules et tubulures pour savoir combien d'unités doivent être injectées en fonction de la longueur de l'aiguille et de la longueur de la tubulure.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. Cela signifie qu'il n'interrompt pas un débit de basal temporaire en cours d'exécution. Dans l'onglet Actions (ACT), utilisez le [bouton AMORCER/REMPLIR](../Usage/CPbefore26#pompe) pour définit la quantité d'insuline nécessaire pour remplir le dispositif de perfusion (tubulure) et purger la canule. Si la quantité n'est pas suffisante, répétez le remplissage. Vous pouvez définir les quantités par défaut dans les Préférences > Autres > Valeurs prédéfinies pour remplir&amorcer. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 
 ## Fonds d'écran
 
@@ -300,7 +300,7 @@ Lors de la boucle, vous devriez essayer ces étapes :
 * Définissez une [cible temporaire d'activité](../Usage/temptarget#cible-temporaire-activite) au-dessus de votre cible standard.
 * Si vous utilisez SMB, assurez-vous que ["Activer SMB avec cibles temp. hautes"](../Usage/Open-APS-features#activer-smb-avec-cibles-temp-hautes) et [ "Activer en permanence les SMB" ](../Usage/Open-APS-features#activer-en-permanence-les-smb) sont désactivées.
 
-Le pré-traitement et le post-traitement de ces paramètres sont importants. Faite les changements suffisament tôt avant le sport et tenez compte de l'effet sur les muscles après.
+Pre- and post-processing of these settings is important. Faite les changements suffisament tôt avant le sport et tenez compte de l'effet sur les muscles après.
 
 Si vous faites du sport régulièrement au même moment (par exemple entrainement régulier dans votre salle de sport), vous pouvez envisager d'utiliser des règles [d'automatisation](../Usage/Automation.rst) pour faire des changements de profil et mettre des CT. L'automatisation basée sur l'emplacement peut également être une idée, mais rend l'anticipation du traitement plus difficile.
 
