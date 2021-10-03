@@ -1,6 +1,6 @@
 # Bombas Medtronic
 
-**>>>> El controlador de bomba de Medtronic es de la versión 2.5 de AndroidAPS (maestro). Si bien este es el caso, el controlador Medtronic debe ser considerado como software beta. Por favor, instale sólo si es usuario experimentado. En este momento todavía estamos luchando con el problema de doble Bolo (obtenemos 2 bolos en los tratamientos, que lanza el cálculo de IOB (si experimenta este error, por favor active el registro de Double Bolo en la configuración de Medtronic y proporcione sus registros)), esto debe arreglarse en una futura versión. <<<<**
+**>>>> El controlador de bomba de Medtronic es de la versión 2.5 de AndroidAPS (maestro). Si bien este es el caso, el controlador Medtronic debe ser considerado como software beta. Please install only if you are experienced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)), this should be fixed with upcoming release. <<<<**
 
 * * *
 
@@ -55,7 +55,7 @@ Usted necesita establecer los siguientes elementos: (ver imagen siguiente)
     - para el resto del mundo, la frecuencia utilizada es de 868 Mhz
 - **Max Bolus on Pump (U)** (in an hour): This needs to be set to same as on the pump. Limita la cantidad de insulina que puede suministrar con Bolus. Si lo supera, el Bolus no se realizará y se devolverá un error. Máximo que se puede utilizar es 25, por favor, establezca el valor correcto para usted aquí, para que existan sobredosis.
 - **Max Basal on Pump (U/h)**: This needs to be set to same as on the pump. Limita la cantidad de basal que se puede obtener en una hora. Así, por ejemplo, si quieres tener un máximo de TBR establecido en el 500% y el más alto de tus patrones basales es 1,5 U, entonces necesitaría poner a Max Basal en al menos 7.5. Si este valor es incorrecto (por ejemplo, si uno de los patrones basales sobrepasa este valor, la bomba devolvería un error).
-- **Delay before Bolus is started (s)**: This is delay before bolus is sent to pump, so that if you change your mind you can cancel it. El cancelar el bolo cuando el bolo se esta suministrando, no está disponible en la bomba (si desea detener el bolo cuando se ejecuta, tiene que suspender la bomba y luego reanudar).
+- **Delay before Bolus is started (s)**: This is delay before bolus is sent to pump, so that if you change your mind you can cancel it. Cancelling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
 - **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. Si tiene un RileyLink con el firmware 2.x, el valor predeterminado será: utilizar la codificación de hardware (= realizada por RileyLink), si tiene el firmware de 0.x este valor se ignorará.
 - **Battery Type (Power View)**: If you want to see battery power in your pump, you need to select type of battery you use (currently supported Lithium or Alkaline), this will in turn change display to display calculated percent and volts.
 - **RileyLink Configuration**: This will find your RileyLink/GNARL device.
@@ -68,8 +68,8 @@ Usted necesita establecer los siguientes elementos: (ver imagen siguiente)
 En la pestaña de la bomba, puede ver varias líneas que están mostrando las bombas (y las conexiones) estado actual.
 
 - **RileyLink Status**: It shows status of RileyLink connection. El teléfono debería estar conectado a RileyLink todo el tiempo.
-- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is beeing executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
-- **Battery**: Shows battery status depening on your configuration. Este puede ser un icono simple que muestra si la batería está vacía o llena (rojo si la batería se está volviendo crítica, menos del 20%), o el porcentaje y el voltaje.
+- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is being executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
+- **Battery**: Shows battery status depending on your configuration. Este puede ser un icono simple que muestra si la batería está vacía o llena (rojo si la batería se está volviendo crítica, menos del 20%), o el porcentaje y el voltaje.
 - **Last connection**: Time when last connection to pump was successful.
 - **Last Bolus**: When last bolus was given.
 - **Base Basal Rate**: This is the base basal rate that runs on pump at this hour.
@@ -87,7 +87,7 @@ En el extremo inferior tenemos 3 botones:
 
 ![Historial de la bomba](../images/Medtronic03.png)
 
-El historial de la bomba se recupera cada 5 minutos y se almacena localmente. Mantenemos la historia sólo durante las últimas 24 horas, por lo que las entradas más antiguas se eliminan cuando se añaden nuevas. Esta es una forma sencilla de ver el historial de la bomba (es posible que algunas entradas de la bomba no se muestren, porque no son relevantes-por ejemplo, la configuración de las funciones que no son utilizadas por AndroidAPS).
+Pump history is retrieved every 5 minutes and stored locally. Mantenemos la historia sólo durante las últimas 24 horas, por lo que las entradas más antiguas se eliminan cuando se añaden nuevas. Esta es una forma sencilla de ver el historial de la bomba (es posible que algunas entradas de la bomba no se muestren, porque no son relevantes-por ejemplo, la configuración de las funciones que no son utilizadas por AndroidAPS).
 
 ## Estado de RL (Estado de RileyLink)
 
@@ -110,11 +110,11 @@ Cuando se selecciona el controlador Medtronic, se pueden añadir 3 acciones posi
 
 ### Usuarios de OpenAPS
 
-Cuando empiece a usar AndroidAPS, el controlador principal es AndroidAPS y todos los comandos deben ir a través de él. El envío de bolos debe ir a través de la AAPS y no se puede hacer en la bomba. Tenemos código que detectará cualquier comando realizado en la bomba, pero mejor si usted puede evitarlo (creo que hemos solucionado todos los problemas con la historia de la bomba y la sincronización de la historia de AAPS, pero pequeños problemas pueden darse, especialmente si se utiliza la "configuración" ya que no estaba destinado para este uso). Desde que empecé a usar AndroidAPS con mi bomba, no he tocado la bomba, excepto cuando tengo que cambiar el reservorio, y esta es la forma en que AndroidAPS debe ser utilizado.
+Cuando empiece a usar AndroidAPS, el controlador principal es AndroidAPS y todos los comandos deben ir a través de él. El envío de bolos debe ir a través de la AAPS y no se puede hacer en la bomba. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arise, especially if you use the "setup" as it was not intended to be used). Desde que empecé a usar AndroidAPS con mi bomba, no he tocado la bomba, excepto cuando tengo que cambiar el reservorio, y esta es la forma en que AndroidAPS debe ser utilizado.
 
 ### Registro
 
-Dado que el controlador Medtronic es muy nuevo, es necesario habilitar el registro, de modo que podamos depurar y arreglar problemas, si se producen. Haga clic en el icono de la esquina superior izquierda, seleccione Mantenimiento y Configuración de registro. Las opciones Pump, PumpComm, PumpBTComm tienen que ser seleccionadas.
+Dado que el controlador Medtronic es muy nuevo, es necesario habilitar el registro, de modo que podamos depurar y arreglar problemas, si se producen. Click on icon on upper left corner, select Maintenance and Log Settings. Las opciones Pump, PumpComm, PumpBTComm tienen que ser seleccionadas.
 
 ### RileyLink/GNARL
 
