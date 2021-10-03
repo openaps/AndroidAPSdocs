@@ -25,7 +25,7 @@ Trikčių šalinimas
 Ryšio problemos
 --------------------------------------------------
 
-Bluetooth ryšį gali nutraukti kiti šalia esantys Bluetooth įrenginiai, tokie kaip gliukozės kiekio kraujyje matuokliai, ausinės, planšetiniai kompiuteriai, virtuvės prietaisai, mikrobangų krosnelės ar keraminės kaitlentės. Šiuo atveju xdrip nerodo jokių glikemijos duomenų. Atkūrus Bluetooth ryšį, trūkstami duomenys užpildomi.
+Bluetooth ryšį gali nutraukti kiti šalia esantys Bluetooth įrenginiai, tokie kaip gliukozės kiekio kraujyje matuokliai, ausinės, planšetiniai kompiuteriai, virtuvės prietaisai, mikrobangų krosnelės ar keraminės kaitlentės. Šiuo atveju xdrip nerodo jokių glikemijos duomenų. When bluetooth connection is restabilised the data is backfilled.
 
 Sensoriaus klaidos
 --------------------------------------------------
