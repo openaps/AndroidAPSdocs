@@ -307,7 +307,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
 #### Fehlerhafte Erkennung der aktiven Kohlenhydrate (COB)
 
-![Langsamer Kohlenhydrat-Abbau](../images/Calculator_SlowCarbAbsorbtion.png)
+![Langsamer Kohlenhydrat-Abbau](../images/Calculator_SlowCarbAbsorption.png)
 
 * Wenn Du nach Verwendung des Bolus-Assistenten die obige Warnung siehst, hat AAPS erkannt, dass aktiven Kohlenhydrate (COB) eventuell nicht korrekt berechnet werden konnten. 
 * Wenn Du kurz nach einer vorangegangenen Mahlzeit erneut einen Bolus abgeben willst, solltest Du Dir der Gefahr einer Überdosierung bewusst sein! 
@@ -334,7 +334,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
    
    * Sensoralter & -level (Batterieladestand in %)
    * Insulinalter & Reservoirstand (Einheiten)
-   * Kanülenalter
+   * cannula age
    * Alter & Ladestand (in %) der Pumpenbatterie
 
 * Falls Du die [Darstellung für niedrige Auflösungen](../Configuration/Preferences#erscheinungsbild) gewählt hast, werden weniger Informationen angezeigt.
@@ -358,7 +358,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
 #### Historie
 
-* Ermöglicht dir, durch deine AAPS Historie zu blättern.
+* Allows you to ride back in AAPS history.
 
 #### TDD
 
@@ -453,11 +453,11 @@ Historie der folgenden Behandlungen:
 * [Profilwechsel](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-eingestellt) - Notizen eingegeben durch Aktions-Tab und Notizen in Dialogen
 
-## BG Source - xDrip+, Dexcom App (patched) ...
+## BG Source - xDrip, Dexcom App (patched)...
 
 ![Tab BG-Quelle - hier xDrip+](../images/Screenshots_BGSource.png)
 
-* Abhängig von Deiner BZ-Quelle wird diese Registerkarte unterschiedlich benannt.
+* Depending on your BG source settings this tab is named differently.
 * Zeigt die Historie der CGM Messungen an und bietet die Möglichkeit, Einträge im Fehlerfall zu entfernen (z.B. Niedrigwerte wegen Kompression).
 
 ## Nightscout-Client
