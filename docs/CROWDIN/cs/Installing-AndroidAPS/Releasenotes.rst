@@ -11,7 +11,7 @@ Pak máte 60 dnů na aktualizaci. Pokud do těchto 60 dnů neaktualizujete AAPS,
 
 Pokud neaktualizujete do dalších 30 dní (90 dní od nového vydání) přejde AAPS na otevřenou smyčku.
 
-Prosím pochopte, že tato změna není určena, aby vás otravovala, ale je to kvůli bezpečnostním důvodům. Nové verze AndroidAPS neposkytují pouze nové funkce, ale také důležité bezpečnostní opravy. Proto je důležité, aby každý uživatel aktualizoval co nejdříve.. Bohužel stále existují hlášení o chybách z velmi starých verzí, takže se jedná o pokus zlepšit bezpečnost pro každého uživatele a celou komunitu DIY. Děkujeme za pochopení.
+Prosím pochopte, že tato změna není určena, aby vás otravovala, ale je to kvůli bezpečnostním důvodům. Nové verze AndroidAPS neposkytují pouze nové funkce, ale také důležité bezpečnostní opravy. Therefore it is necessary that every user updates a.s.a.p.. Bohužel stále existují hlášení o chybách z velmi starých verzí, takže se jedná o pokus zlepšit bezpečnost pro každého uživatele a celou komunitu DIY. Děkujeme za pochopení.
 
 Version 2.8.2
 ================
@@ -256,7 +256,7 @@ Hlavní nové funkce
 * New `Automation plugin <../Usage/Automation.html>`_
 * Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings-overview>`_ from bolus wizard calculation
 * Vykreslování aktivity inzulínu
-* Úprava předpovědí IOB podle výsledku detekce senzitivity
+* Adjusting IOB predictions by autosens result
 * New support for patched Dexcom apks (`2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
 * Ověření podpisu
 * Povolit vynechání cílů pro uživatele OpenAPS
@@ -333,7 +333,7 @@ Datum vydání: 03. 11. 2018
 
 Hlavní nové funkce
 --------------------------------------------------
-* oref1/SMB support (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
+* oref1/SMB support (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achieve and how to use it so it can operate smoothly.
 * `_Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ pump support
 * Průvodce nastavením: provede vás procesem úvodního nastavení AndroidAPS
 
@@ -341,7 +341,7 @@ Nastavení k přizpůsobení při přechodu od AMA k SMB
 --------------------------------------------------
 * Cíl 10 musí být zahájen, aby byly SMB povolené (SMB záložka obecně ukazuje, která omezení jsou aktivní)
 * maxIOB now includes _all_ IOB, not just added basal. To znamená, že pokud je k jídlu poslaný bolus 8 U a maxIOB je 7 U, tak SMB nic nepošle, dokud IOB neklesne pod 7 U.
-* výchozí hodnota min_5m_carbimpact se změnila z 3 na 8 při přechodu od AMA k SMB. Pokud přecházíte z AMA na SMB, musíte toto nastavení změnit ručně
+* výchozí hodnota min_5m_carbimpact se změnila z 3 na 8 při přechodu od AMA k SMB. If you are upgrading from AMA to SMB, you have to change it manually
 * Při vytváření AndroidAPS 2.0 apk mějte na paměti: Konfigurace na vyžádání není aktuální verzí pluginu Android Gradle podporována! Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
 
   * Otevřete okno Preferences klepnutím na File > Settings (na platformě Mac, Android Studio > Preferences).
@@ -376,7 +376,7 @@ Různé
 * Přepracovaná Konfigurace a Cíle, přídány popisky
 * Nová ikona aplikace
 * Spousty vylepšení a oprav chyb
-* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
+* Nightscout-independent alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Možnost ponechat obrazovku trvale zapnutou
 * Možnost zobrazovat upozornění jako Android notifikace
 * Rozšířené filtrování (dovolující mít povolené SMB i více než 6 h po jídle) je podporováno Dexcom upravenou aplikací a xDripem v nativním módu.
