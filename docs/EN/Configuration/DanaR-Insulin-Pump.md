@@ -21,4 +21,4 @@ _These instructions are for configuring the app and your pump if you have a Dana
 
 ## Timezone traveling with Dana R pump
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).

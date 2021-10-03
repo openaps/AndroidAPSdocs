@@ -55,7 +55,7 @@
 Ranges for typical life time of the different battery types are as follows:
 * **Energizer Ultimate Lithium**: 4 to 7 weeks
 * **Power One Alkaline** (Varta) from the servcie pack: 2 to 4 weeks
-* **Eneloop rechargable** batteries (BK-3MCCE): 1 to 3 weeks
+* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
 
 If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
 * The latest version (March 2018) of the [ruffy App](https://github.com/MilosKozak/ruffy) significantly improved pump battery lifetime. Make sure you are on that version if you have issues with a short battery lifetime.
