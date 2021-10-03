@@ -12,16 +12,16 @@ For support on CGM sources please use the Facebook groups or discord channels fo
 
 ## Βεβαιωθείτε ότι έχετε γίνει μέλος στην ομάδα χρηστών του AndroidAPS στο Facebook!
 
-Συμμετοχή εδώ [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/). Μπορείτε να δημοσιεύσετε εδώ τυχόν ερωτήσεις σχετικά με τον αλγόριθμο, τυχόν προβλήματα εγκατάστασης που έχετε με το Android Studio και δημιουργία του APK, τυχόν ερωτήματα σχετικά με τη χρήση της εφαρμογής και συμβουλές για τον καλύτερο τρόπο χρήσης του. Υπάρχει επίσης μια ομάδα για τους χρήστες αντλιών Combo [AAPSCombo](https://www.facebook.com/groups/127507891261169/) οι οποίοι έχουν μια ελαφρώς πιο συγκεκριμένη ρύθμιση.
+Συμμετοχή εδώ [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. Υπάρχει επίσης μια ομάδα για τους χρήστες αντλιών Combo [AAPSCombo](https://www.facebook.com/groups/127507891261169/) οι οποίοι έχουν μια ελαφρώς πιο συγκεκριμένη ρύθμιση.
 
-## Άλλες πηγές (Αγγλικά)
+## Other resources in English
 
 * [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): καλύπτει όλα τα συστήματα κλειστού κυ΄κλωματος DIY (OpenAPS, Loop και AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM γενικά θέματα
 * [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
 
-## Χώρα / γλώσσες ειδικές πηγές
+## Country / language specific resources
 
 ### Αυστραλία
 
