@@ -85,7 +85,7 @@ En caso de que la conexión entre la AAPS y Dana RS se pierde durante la infusi�
 
 ## Nota especial al cambiar de teléfono
 
-Al cambiar a un teléfono nuevo, los siguientes pasos son necesarios:
+When switching to a new phone the following steps are necessary:
 
 * [Exportar valores](../Usage/ExportImportSettings#export-settings) en el teléfono antiguo
 * Transfer settings from old to new phone
@@ -97,4 +97,4 @@ Al cambiar a un teléfono nuevo, los siguientes pasos son necesarios:
 
 ## Cambio de zona horaria al viajar con la bomba Dana RS
 
-Para obtener información sobre cómo actuar a través de zonas horarias consulte la sección [cambio de zona Horaria con bombas](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
