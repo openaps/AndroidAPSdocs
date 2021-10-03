@@ -25,8 +25,8 @@
 --------------------------------------------------
 * ` Неправильно определены активные углеводы COB <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 
-  .. изображение:: ../images/Calculator_SlowCarbAbsorbtion.png
-    :alt: Ошибка: Медленное поглощение углеводов
+  .. image:: ../images/Calculator_SlowCarbAbsorption.png
+    :alt: Error: Slow carb absorption
 
 * `SMS команды <../Children/SMS-Commands.html#troubleshooting>`_
 
@@ -51,6 +51,6 @@ CGM/НМГ
 * `Jelly <../Usage/jelly.html>`_
 * `Huawei bluetooth и оптимизация батареи <../Usage/huawei.html>`_
 
-Smartwaches
+Смарт-часы
 ==================================================
 * `Sony Smartwatch 3 <../Usage/SonySW3.html>`_
