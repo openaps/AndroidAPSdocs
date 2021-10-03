@@ -75,9 +75,9 @@ Při hledání ideálního nastavení buďte opatrní a trpěliví a hodnoty mě
 
 See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
-### Povolit AMA Autosense
+### Enable AMA Autosens
 
-Zde si můžete vybrat, zda chcete používat [detekci citlivosti](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' nebo ne.
+Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosens' or not.
 
 ### Povolit SMB
 
@@ -119,7 +119,7 @@ Výchozí hodnota: 30 min.
 
 ### Povolit UAM
 
-Je-li tato možnost povolena, algoritmus SMB dokáže rozpoznat neoznámená jídla. To je užitečné, pokud zapomenete systému AndroidAPS říci o zkonzumovaných sacharidech, v případě, kdy špatně odhadnete jejich množství nebo v případě, když se jídlo s velkým obsahem tuků a bílkovin vstřebává delší dobu, než se očekávalo. Aniž by bylo nutné zadávat jakékoli sacharidy, UAM dokáže rozpoznat rychlý vzestup glykémie způsobený sacharidy, adrenalinem atd. a pokusí se o korekci pomocí SMB. Funguje to také opačně: pokud dojde k rychlému poklesu glykémie, dokáže dříve zastavit SMB.
+Je-li tato možnost povolena, algoritmus SMB dokáže rozpoznat neoznámená jídla. To je užitečné, pokud zapomenete systému AndroidAPS říci o zkonzumovaných sacharidech, v případě, kdy špatně odhadnete jejich množství nebo v případě, když se jídlo s velkým obsahem tuků a bílkovin vstřebává delší dobu, než se očekávalo. Without any carb entry, UAM can recognize fast glucose increasements caused by carbs, adrenaline, etc, and tries to adjust it with SMBs. Funguje to také opačně: pokud dojde k rychlému poklesu glykémie, dokáže dříve zastavit SMB.
 
 **Proto by měla být při používání SMB funkce UAM vždy povolena.**
 
@@ -147,7 +147,7 @@ Výchozí hodnota: 4 (neměňte, pokud si opravdu nejste jisti tím, co děláte
 
 ## Advanced Meal Assist (AMA)
 
-AMA je zkratka pro "advanced meal assist", což je funkce OpenAPS od roku 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) umožňuje systému rychleji reagovat po bolusu na jídlo, pokud zadáte sacharidy správně.
+AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) umožňuje systému rychleji reagovat po bolusu na jídlo, pokud zadáte sacharidy správně.
 
 You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
@@ -181,13 +181,13 @@ Výchozí hodnota je 2, tento parametr byste však měli měnit postupně, abyst
 
 *See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
 
-### Povolit AMA Autosense
+### Enable AMA Autosens
 
-Zde si můžete vybrat, zda chcete používat [detekci citlivosti](../Configuration/Sensitivity-detection-and-COB.md) autosense nebo ne.
+Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosens or not.
 
-### Autosense upravuje také cílovou glykémii
+### Autosens adjust temp targets too
 
-Pokud máte tuto možnost povolenou, může autosense upravovat i dočasné cíle (kromě bazálu, ISF a IC). AndroidAPS tak může být více či méně 'agresivní'. Aktuálně nastaveného cíle lze s touto funkcí dosáhnout rychleji.
+If you have this option enabled, autosens can adjust targets (next to basal, ISF and IC), too. AndroidAPS tak může být více či méně 'agresivní'. Aktuálně nastaveného cíle lze s touto funkcí dosáhnout rychleji.
 
 ### Rozšířená nastavení
 
