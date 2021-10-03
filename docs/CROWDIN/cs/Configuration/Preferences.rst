@@ -146,7 +146,7 @@ Výchozí nastavení dočasných cílů
   
 Standardní množství inzulinu pro Plnění/Doplňování
 -----------------------------------------------------------
-* Pokud chcete plnit hadičku nebo kanylu prostřednictvím AAPS, můžete to udělat prostřednictvím `obrazovky Akce <../Getting-Started/Screenshots.html#action-tab>`_.
+* If you want to fill tube or prime cannula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
 * Přednastavené hodnoty se dají měnit v tomto dialogu.
 
 Rozsah zobrazování
