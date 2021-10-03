@@ -1,6 +1,6 @@
 # Pumpy Medtronic
 
-**>>>> Ovladač pump Medtronic je od verze 2.5 součástí AndroidAPS (master). Přesto byste však měli ovladač Medtronic stále považovat za beta software. K instalaci přistupujte pouze v případě, že jste zkušený uživatel. V současné době se stále potýkáme s problémem dvojitých bolusů (V ošetřeních se objeví 2 bolusy, které vedou k chybnému výpočtu IOB (jestliže se s tímto problémem setkáte, povolte prosím možnost Logování dvojitých bolusů v konfiguraci Medtronic a pošlete nám své logy)), v následující verzi aplikace by již tento problém měl být odstraněn. <<<<**
+**>>>> Ovladač pump Medtronic je od verze 2.5 součástí AndroidAPS (master). Přesto byste však měli ovladač Medtronic stále považovat za beta software. Please install only if you are experienced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)), this should be fixed with upcoming release. <<<<**
 
 * * *
 
@@ -55,7 +55,7 @@ Je třeba nastavit následující položky: (viz obrázek výše)
     - pro zbytek světa je frekvence 868 MHz
 - **Maximální bolus na pumpě(U)** (za hodinu): Toto musí být nastaveno stejně jako na pumpě. Jde o nastavení omezující možnou velikost bolusu. Pokud zadáte větší hodnotu, bolus nebude proveden a bude vrácena chyba. Maximální hodnota, kterou lze použít, je 25. Prosím, nastavte správnou hodnotu pro sebe tak, aby nemohlo dojít k předávkování.
 - **Maximální bazál na pumpě(U/h)**: Toto musí být nastaveno stejně jako na pumpě. Jde o nastavení omezující maximální hodinový bazál. Například, pokud chcete mít nastaveno maximální množství TBR na 500 % a nejvyšší bazál je 1,5 U, pak byste měli nastavit maximální bazál na alespoň 7,5. Pokud je toto nastavení chybné (například pokud by nějaký z vašich bazálů byl vyšší, pumpa by vrátila chybu).
-- **Prodleva před spuštěním bolusu (s)**: Toto je prodleva před odesláním bolusu do pumpy, takže pokud změníte názor, můžete bolus zrušit. Zrušení bolusu po spuštění není pumpou podporováno (pokud chcete zastavit bolus během vydávání, musíte pozastavit pumpu a pak pokračovat).
+- **Prodleva před spuštěním bolusu (s)**: Toto je prodleva před odesláním bolusu do pumpy, takže pokud změníte názor, můžete bolus zrušit. Cancelling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
 - **Kódování Medtronic**: Toto nastavení určuje, zda se kódování 4b6b provádí v AndroidAPS nebo na RileyLink. Máte-li produkt RileyLink s firmwarem verze 2.x, výchozí hodnota bude používat kódování hardwarové (v RileyLinku), pokud máte firmware verze 0.x, toto nastavení bude ignorováno.
 - **Typ baterie (Power View)**: Pokud chcete vidět stav baterie v pumpě, musíte vybrat typ baterie, kterou používáte (momentálně jsou podporované lithiové nebo alkalické), což změní zobrazení vypočítané z procent a voltů.
 - **Konfigurace RieyLink**: Toto vyhledá vaše zařízení RileyLink/GNARL.
@@ -68,8 +68,8 @@ Je třeba nastavit následující položky: (viz obrázek výše)
 Na záložce pumpy můžete vidět několik řádků, které zobrazují aktuální stav pumpy (a připojení).
 
 - **RileyLink Status**: Zobrazuje stav připojení RileyLink. Telefon by měl být připojen k RileyLink celou dobu.
-- **Stav pumpy**: Stav připojení pumpy může mít několik hodnot, ale většinou se zobrazí ikona spánku (když není aktivní připojení k pumpě). Když je příkaz spuštěn, možná uvidíte „Waking Up“, což znamená, že se AAPS snaží navázat spojení s pumpou, nebo popis jiného příkazu, který může být na pumpě spuštěn (např.: Get Time, Set TBR atd.).
-- **Baterie**: Ukazuje stav baterie v závislosti na konfiguraci. To může být jednoduchá ikona zobrazující, zda je baterie prázdná nebo plná (červená, pokud je baterie kritická, pod 20 %), nebo procenta a napětí.
+- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is being executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
+- **Battery**: Shows battery status depending on your configuration. To může být jednoduchá ikona zobrazující, zda je baterie prázdná nebo plná (červená, pokud je baterie kritická, pod 20 %), nebo procenta a napětí.
 - **Poslední připojení**: Čas posledního úspěšného připojení k pumpě.
 - **Poslední bolus**: Kdy byl vydán poslední bolus.
 - **Základní bazál**: Toto je základní bazální dávka, která právě beží.
@@ -87,7 +87,7 @@ Ve spodní části máme 3 tlačítka:
 
 ![Dialog Historie pumpy](../images/Medtronic03.png)
 
-Historie pumpy se načítá každých 5 minut a ukládá se místně. Uchovává se pouze historie za posledních 24 hodin, takže při přidání nových položek jsou ty starší odstraněny. To je jednoduchý způsob, jak vidět historii pumpy (některé položky z pumpy se nemusí zobrazit, protože nejsou relevantní – například konfigurace funkcí, které nejsou používány programem AndroidAPS).
+Pump history is retrieved every 5 minutes and stored locally. Uchovává se pouze historie za posledních 24 hodin, takže při přidání nových položek jsou ty starší odstraněny. To je jednoduchý způsob, jak vidět historii pumpy (některé položky z pumpy se nemusí zobrazit, protože nejsou relevantní – například konfigurace funkcí, které nejsou používány programem AndroidAPS).
 
 ## Stav RL (Stav RileyLink)
 
@@ -110,11 +110,11 @@ Je-li vybrán ovladač Medtronic, lze na kartu Akce přidat 3 možné akce:
 
 ### Uživatelé OpenAPS
 
-Když začnete používat AndroidAPS, primárním ovladačem je AndroidAPS a všechny příkazy by měly projít přes něj. Bolusy by měly být odeslány prostřednictvím AAPS a nikoli z pumpy. Aplikace sice využívá kód, který detekuje jakékoli příkazy zadané na pumpě, ale pokud můžete, snažte se to nedělat (mám za to, že jsme odstranili veškeré problémy se synchronizací historie pumpy a historie AAPS, ale stále může docházet k drobným problémům, zejména v případě, pokud „svou konfiguraci“ používáte tak, jak původně nebylo zamýšleno). Od té doby, co používám AndroidAPS, jsem s výjimkou výměny zásobníku na pumpu nesáhl. A tak by se měl systém AndroidAPS používat.
+Když začnete používat AndroidAPS, primárním ovladačem je AndroidAPS a všechny příkazy by měly projít přes něj. Bolusy by měly být odeslány prostřednictvím AAPS a nikoli z pumpy. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arise, especially if you use the "setup" as it was not intended to be used). Od té doby, co používám AndroidAPS, jsem s výjimkou výměny zásobníku na pumpu nesáhl. A tak by se měl systém AndroidAPS používat.
 
 ### Logování
 
-Vzhledem k tomu, že ovladač Medtronic je velmi nový, musíte povolit protokolování, abychom mohli ladit a opravit problémy, pokud nastanou. Klepněte na ikonu v levém horním rohu, vyberte volbu Údržba a Nastavení logování. Volby Pump, PumpComm, PumpBTComm musí být zašktnuté.
+Vzhledem k tomu, že ovladač Medtronic je velmi nový, musíte povolit protokolování, abychom mohli ladit a opravit problémy, pokud nastanou. Click on icon on upper left corner, select Maintenance and Log Settings. Volby Pump, PumpComm, PumpBTComm musí být zašktnuté.
 
 ### RileyLink/GNARL
 
