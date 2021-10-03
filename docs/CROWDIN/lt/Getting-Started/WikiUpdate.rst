@@ -4,7 +4,7 @@ Dokumentų atnaujinimai ir pakeitimai
 April 2021
 ==================================================
 * List of `communication devices <../Module/module.html#additional-communication-device>`_ for Omnipod and Medtronic pumps
-* AAPS preditctions in `Nightscout <../Installing-AndroidAPS/Nightscout.html#manual-nightscout-setup>`_
+* AAPS predictions in `Nightscout <../Installing-AndroidAPS/Nightscout.html#manual-nightscout-setup>`_
 
 March 2021
 ==================================================
@@ -97,7 +97,7 @@ Lapkritis 2019
 * `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
 * 'DUK - sportas <../Getting-Started/FAQ.html#sports>`_
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-f-main-graph>`_
-* ` Insight - Išjunkite absoliučias vertes NS Client programoje <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
+* `Insight - Disable absolute values in NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * ` Medtronic pompa - galimi dvigubi įrašai <../Configuration/MedtronicPump.html> `_
 * ` Naujos Freestyle Libre 2 instrukcijos <../Hardware/Libre2.html>`_
 * Pasirinkite profilį su procentais, pavyzdys <../Usage/Profiles.html>`_
@@ -123,7 +123,7 @@ Spalis 2019
 Rugsėjis 2019
 ==================================================
 * `Automatizavimas <../Usage/Automation.html>`_
-* `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorbtion
+* `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorption
 * `Nightscout saugumas <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
 * `Profile timeshift <../Usage/Profiles.html#time-shift>`_ (more details)
 * `Nuotolinis stebėjimas<../Children/Children.html>`_
