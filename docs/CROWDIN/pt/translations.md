@@ -1,6 +1,6 @@
 # Como traduzir o AndroidAPS e a documentação
 
-* Vá a [ https://crowdin.com/project/androidaps ](https://crowdin.com/project/androidaps) ou [ https://crowdin.com/project/androidapsdocs ](https://crowdin.com/project/androidapsdocs) e faça login utilizando a sua conta Github
+* Go to <https://crowdin.com/project/androidaps> or <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
 
 * Envie um pedido de adesão para a equipa de documentação. Para o fazer, clique na bandeira da língua desejada e, em seguida, no botão "Juntar-se" no canto superior direito da próxima página. Por favor, especifique idioma. forneça algumas informações sobre si e a sua experiência com o AAPS e se deseja ser um tradutor ou revisor (apenas pessoas qualificadas em traduzir + usuários avançados da AndroidAPS).
 
