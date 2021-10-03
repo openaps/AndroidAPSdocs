@@ -11,7 +11,7 @@ Entonces tienes 60 días para actualizarte. Si no actualiza dentro de estos 60 d
 
 Si no se actualiza durante otros 30 días (90 días a partir de la fecha de la nueva versión), AAPS cambiará a Lazo Abierto.
 
-Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Therefore it is neccessary that every user updates a.s.a.p.. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
+Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Therefore it is necessary that every user updates a.s.a.p.. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
 
 Version 2.8.2
 ================
@@ -256,7 +256,7 @@ Nuevas características importantes
 * Nuevo " plugin de Automatización <../Usage/Automation.html>`_
 * Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings-overview>`_ from bolus wizard calculation
 * Representación de la actividad de la insulina
-* Ajustar las predicciones de IOB por el resultado de autodetección
+* Adjusting IOB predictions by autosens result
 * Nuevo soporte para los apks de Dexcom parcheados (` 2.4 carpeta <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
 * Verificador de firma
 * Permite saltar objetivos para usuarios de OpenAPS
@@ -333,7 +333,7 @@ Fecha de lanzamiento: 03-11-2018
 
 Nuevas características importantes
 --------------------------------------------------
-* soporte oref1/SMB (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Esté seguro de leer la documentación para conocer que esperar de SMB, como se va a comportar, que puede alcanzar, como usarlo y operarlo suavemente.
+* oref1/SMB support (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achieve and how to use it so it can operate smoothly.
 * `_Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ soporte de la bomba
 * Asistente de configuración: le guiará a través del proceso de configuración de AndroidAPS
 
@@ -341,7 +341,7 @@ Valores para ajustar cuando se cambia de AMA a SMB
 --------------------------------------------------
 * El objetivo 10 debe iniciarse para que las SMB estén habilitadas (la pestaña SMB muestra generalmente las restricciones que se aplican)
 * maxIOB ahora incluye _all_ IOB, no sólo el basal añadido. Es decir, si se le da un bolo de 8 U para una comida y maxIOB es 7 U, no se entregarán SMB hasta que el IOB caiga por debajo de 7 U.
-* El valor predeterminado de min_5m_carbimpact ha cambiado de 3 a 8 llendo de AMA a SMB. Si está actualizando desde AMA a SMB, tiene que cambiarlo manualmente
+* El valor predeterminado de min_5m_carbimpact ha cambiado de 3 a 8 llendo de AMA a SMB. If you are upgrading from AMA to SMB, you have to change it manually
 * Nota cuando se construya AndroidAPS 2.0 apk: La configuración personalizada no está soportada por la versión actual del plugin de Android Gradle! Si la compilación falla con un error en la configuración personalizada, puede realizar lo siguiente:
 
   * Abra la ventana de Preferencias, haga clic en Archivo > Configuración (en Mac, Android Studio > Preferencias).
@@ -376,7 +376,7 @@ Misceláneo
 * Revisión para las pestañas del constructor de configuración y objetivos, añadiendo descripciones
 * Nuevo icono de la aplicación
 * Muchas mejoras y correcciones de errores
-* Alertas independientes de Nightscout si la bomba es inalcanzable durante más tiempo (p.ej. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
+* Nightscout-independent alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Opción para mantener la pantalla encendida
 * Opción de mostrar notificaciónes como notificación Android
 * Filtrado avanzado (que permite siempre habilitar SMB y 6h después de las comidas) soportado con el app de Dexcom o xDrip patched con el modo nativo G5 como fuente BG.
