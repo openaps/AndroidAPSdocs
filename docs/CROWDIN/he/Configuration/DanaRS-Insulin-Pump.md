@@ -85,7 +85,7 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 ## Special note when switching phone
 
-When switching to a new phone the following steps are neccessary:
+When switching to a new phone the following steps are necessary:
 
 * [Export settings](../Usage/ExportImportSettings#export-settings) on your old phone
 * Transfer settings from old to new phone
@@ -97,4 +97,4 @@ When switching to a new phone the following steps are neccessary:
 
 ## Timezone traveling with Dana RS pump
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
