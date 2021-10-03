@@ -12,12 +12,12 @@ Super! Look at the issues, ask in the discord channel, there is always a lot to 
 
 ## Aš žinau sistemą ir galiu parašyti dokumentaciją!
 
-Puiku, tai yra labai vertinama ir yra geras būdas dalyvauti!
+Great, this is a highly appreciated thing and a good way to pay it forward!
 
 * The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
 * Nurodymus, kaip pateikti aprašymus anglų kalba, galite rasti čia: [Kaip daryti PR](../make-a-PR.md). Kitos kalbos yra išverstos tik iš anglų kalbos ir dėl vientisumo ir nuoseklumo jų taisyti negalima.
 
-## Aš kalbu keliomis kalbomis ir noriu išversti programą ar dokumentus
+## I do speak multiple languages and want to translate the app or the documentation
 
 * Jei norite versti **programą** į kitas kalbas (ačiū), naudokite [crowdin](https://crowdin.com/project/androidaps).
 * Jei norite išversti **AAPS dokumentaciją** į kitas kalbas (ačiū), naudokite [crowdin](https://crowdin.com/project/androidapsdocs). 
