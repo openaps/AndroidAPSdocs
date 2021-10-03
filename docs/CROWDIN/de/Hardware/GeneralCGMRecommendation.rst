@@ -25,7 +25,7 @@ Problembehandlung
 Verbindungsprobleme
 --------------------------------------------------
 
-Die Bluetooth-Verbindung kann durch andere Bluetooth-Geräte, die sich in der Nähe befinden, gestört werden, Solche Geräte können Blutzuckermessgeräte, Headsets, Tablets (iPad...) aber auch Küchengeräte wie Mikrowellen oder Cerankochfelder sein. In diesem Fall zeigt xdrip keine BZ-Werte an. Die Daten werden nachgetragen, so bald die Bluetooth-Verbindung wieder hergestellt wurde.
+Die Bluetooth-Verbindung kann durch andere Bluetooth-Geräte, die sich in der Nähe befinden, gestört werden, Solche Geräte können Blutzuckermessgeräte, Headsets, Tablets (iPad...) aber auch Küchengeräte wie Mikrowellen oder Cerankochfelder sein. In diesem Fall zeigt xdrip keine BZ-Werte an. When bluetooth connection is restabilised the data is backfilled.
 
 Sensorfehler
 --------------------------------------------------
