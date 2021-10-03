@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS - kunstmatig alvleesklier systeem (Artificial Pancreas System) dat werkt op Android telefoons</td>
+ <td>AndroidAPS - artificial pancreas system</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -90,13 +90,13 @@
 </tr>
 <tr>
  <td><strong>CAGE</strong></td>
- <td>infuus ouderdom (Canula age) - deze info wordt in Nightscout weergegeven als 'CAGE' wanneer je jouw infuuswissel hebt ingevoerd via de knop op de Actions tab of wanneer je in AAPS hebt ingesteld dat dit uit de pompgeschiedenis moet worden uitgelezen</td>
+ <td>cannula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>CAN</strong></td>
- <td>statusindicator infuuswissel op Overzichtsscherm</td>
+ <td>status light overdue cannula change on homescreen</td>
  <td>BAT / RES / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Instellingen</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
@@ -144,15 +144,15 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>Versiebeheer systeem voor het bijhouden van veranderingen in computerbestanden. Zodat meerdere mensen tegelijk aan de broncode kunnen werken. <br>-> nodig voor APK updates</td>
+ <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> necessary for APK updates</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - APK bijwerken</a></td>
 </tr>
 <tr>
- <td><strong>Github</strong></td>
+ <td><strong>GitHub</strong></td>
  <td>web-based hosting service voor versiebeheer met Git<br>-> opslag van broncode</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">GitHub AndroidAPS</a></td>
 </tr>
 <tr>
  <td><strong>Glimp</strong></td>
@@ -276,9 +276,9 @@
 </tr>
 <tr>
  <td><strong>Voorspellingslijnen</strong></td>
- <td>voorspelling van BG in de toekomst gebaseerd op verschillende berekeningen</td>
+ <td>predictions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - Voorspellings lijnen</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - prediction lines</a></td>
 </tr>
 <tr>
  <td><strong>Profiel</strong></td>
