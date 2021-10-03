@@ -146,7 +146,7 @@ Default temp targets
   
 Llenar/Rellenar cantidad de insulina estándar
 -----------------------------------------------------------
-* If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
+* If you want to fill tube or prime cannula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
 * Pre-set values can be defined in this dialogue.
 
 Range for visualization
