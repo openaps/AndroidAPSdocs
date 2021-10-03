@@ -25,7 +25,7 @@ Solución de problemas
 Problemas de conexión
 --------------------------------------------------
 
-La conexión Bluetooth puede ser alterada por otros dispositivos Bluetooth cercanos como, por ejemplo, medidores de glucosa en sangre, auriculares, tabletas o dispositivos de cocina tales como hornos de microondas o placas de cerámica. En este caso, xdrip no muestra ningún valor de BG. Cuando se restablece la conexión bluetooth, los datos se completan.
+La conexión Bluetooth puede ser alterada por otros dispositivos Bluetooth cercanos como, por ejemplo, medidores de glucosa en sangre, auriculares, tabletas o dispositivos de cocina tales como hornos de microondas o placas de cerámica. En este caso, xdrip no muestra ningún valor de BG. When bluetooth connection is restabilised the data is backfilled.
 
 Errores de sensor
 --------------------------------------------------
