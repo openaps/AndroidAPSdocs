@@ -62,7 +62,7 @@ Dacă utilizaţi G6 cu construită cu Build Your Own Dexcom App
 Setări pentru AndroidAPS
 --------------------------------------------------
 * Selectați 'Dexcom App (patched)' în config builder.
-* Dacă nu primiți nici o valoare selectați orice altă sursă de date, apoi reselectați „Dexcom App (patched)” pentru a declanșa cererea de permisiuni de stabilire a conexiunii dintre AAPS și BYODA.
+* If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
 
 Setări pentru xDrip+
 --------------------------------------------------
@@ -87,7 +87,7 @@ Depanarea specifică Dexcom G6
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip+ StareServiciuTelefon
 
-Depanarea generală
+General troubleshooting
 --------------------------------------------------
 General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
 
