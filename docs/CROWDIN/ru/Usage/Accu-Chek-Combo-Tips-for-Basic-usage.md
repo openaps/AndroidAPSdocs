@@ -59,7 +59,7 @@
 
 * **Energizer Ultimate Lithium**: от 4 до 7 недель
 * ** Power One Alkaline ** (Varta) из сервисного набора: 2-4 недели
-* Перезаряжаемые батареи ** Eenlook ** (BK-3MCCE): от 1 до 3 недель
+* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
 
 Если срок службы батареи значительно короче указанных выше диапазонов, проверьте следующие возможные причины:
 
