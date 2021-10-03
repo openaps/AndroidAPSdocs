@@ -22,4 +22,4 @@
 
 ## Keliavimas per skirtingas laiko juostas su DanaR pompa
 
-Žiūrėkite skyrių [Keliavimas per skirtingas laiko juostas su pompa](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
