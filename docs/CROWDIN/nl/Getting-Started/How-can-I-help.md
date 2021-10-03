@@ -12,12 +12,12 @@ Top! Stort je op de problemen ('issues') in GitHub, vraag rond in het discord ka
 
 ## Ik ken het AAPS-systeem en kan documentatie schrijven!
 
-Mooi, dit wordt zeer gewaardeerd en is een prima manier om je steentje bij te dragen #payitforward.
+Great, this is a highly appreciated thing and a good way to pay it forward!
 
 * Het discord kanaal voor de documentatie kun je hier vinden: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
 * Een instructie hoe je aanpassingen ('Commits') aan de Engelse documentatie kunt doen: [How to make a PR](../make-a-PR.md). Veranderingen aan de documentatie worden altijd in het Engels gedaan, vervolgens worden ze vertaald naar andere talen. Er worden in andere talen geen veranderingen gemaakt aan documentatie zelf, alleen vertaald uit het Engels, om de documentatie consistent te houden.
 
-## Ik spreek meedere talen en wil de AAPS applicatie of documentatie vertalen.
+## I do speak multiple languages and want to translate the app or the documentation
 
 * Als je de **app** naar andere talen wilt vertalen (dank!), dan gebruik je [crowdin](https://crowdin.com/project/androidaps).
 * Als je de **wiki** naar andere talen wilt vertalen (ook dank!), dan gebruik je [crowdin](https://crowdin.com/project/androidapsdocs). 
