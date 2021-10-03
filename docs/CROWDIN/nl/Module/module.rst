@@ -1,9 +1,9 @@
 De verschillende onderdelen 
 **************************************************
-AndroidAPS is meer dan de (zelfgebouwde) app alleen, er zijn ook andere onderdelen nodig om jouw closed loop systeem aan de praat te krijgen. Voordat je kiest welke onderdelen je wilt gebruiken, is het goed om eens te kijken naar de `Onderdelen instellen <../index.html#onderdelen-instellen>`_ sectie.
+AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Voordat je kiest welke onderdelen je wilt gebruiken, is het goed om eens te kijken naar de `Onderdelen instellen <../index.html#onderdelen-instellen>`_ sectie.
    
 .. image:: ../images/modules.png
-  :alt: Wat heb ik nodig
+  :alt: Components overview
 
 .. note:: 
    **VOOR JE EIGEN VEILIGHEID**
@@ -26,7 +26,7 @@ Het profiel bevat
 
 * Basaalstanden
 * ISF (Insuline Sensitivity Factor). De insuline gevoeligheidsfactor is hoeveel jouw bloedglucosespiegel daalt per eenheid insuline
-* KH ratio (koolhydraatratio). Hoeveel gram koolhydraten kun je eten per eenheid insuline
+* CR (carb ratio) is grams carbohydrate per one unit insulin
 * DIA (Duur van Insuline Activiteit)
 
 Geen gebruik van SGLT-2-remmers
@@ -52,8 +52,8 @@ AndroidAPS werkt momenteel met
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `Bepaalde oudere Medtronic pompen <../Configuration/MedtronicPump.html>`_ , je hebt hierbij een `extra communicatie apparaatje<../Module/module.html#ectra-communicatie-apparaatje-link>`_ nodig.
--` Omnipod Eros <../Configuration/OmnipodEros.html>`_ , je hebt hiervoor een `extra communicatie apparaatje < ../Module/module.html#extra-communicatie-apparaatje-link>`_ nodig.
+- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
 
 **Andere pompen** die mogelijk in de toekomst geschikt zullen zijn vind je op de `Mogelijk toekomstige insulinepompen <../Getting-Started/Future-possible-Pump-Drivers.html>`_ pagina.
 
@@ -61,7 +61,7 @@ Als je een pomp **particulier wilt kopen** dan is hier een overzicht van verschi
 
 Extra communicatie apparaatje (Link)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Voor de Onmipod Eros en voor de oudere Medtronic pompen is een extra communicatie apparaatje (zgn Link) nodig om het radiosignaal van de pod/pomp naar het bluetooth signaal van de telefoon te "vertalen". Zorg ervoor dat je de juiste versie kiest, afhankelijk van jouw pomp.
+For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Zorg ervoor dat je de juiste versie kiest, afhankelijk van jouw pomp.
 
    -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
    -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
@@ -136,7 +136,7 @@ Als je wilt weten hoe je stap voor stap een werkend systeem kunt maken, dan is h
   
 Wat te doen tijdens het wachten op onderdelen
 ==================================================
-Het duurt soms een tijdje voordat je alle onderdelen voor het maken van een closed loop bij elkaar hebt. Maar geen zorgen, er zijn een heleboel dingen die je kunt doen tijdens het wachten. Het is NOODZAKELIJK om jouw basaalstanden, koolhydraatratio (KH), insuline gevoeligheidsfactor (ISF) etc. te testen en (indien van toepassing) aan te passen. AndroidAPS gebruiken in open loop modus kan een goede manier zijn om jouw profielinstellingen te testen en vertrouwd te raken met het syteem. In de open loop modus geeft AndroidAPS behandelingsadviezen die je handmatig moet doorvoeren.
+Het duurt soms een tijdje voordat je alle onderdelen voor het maken van een closed loop bij elkaar hebt. Maar geen zorgen, er zijn een heleboel dingen die je kunt doen tijdens het wachten. It is NECESSARY to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. AndroidAPS gebruiken in open loop modus kan een goede manier zijn om jouw profielinstellingen te testen en vertrouwd te raken met het syteem. In de open loop modus geeft AndroidAPS behandelingsadviezen die je handmatig moet doorvoeren.
 
 Verder kun je deze documentatie doorlezen, je kunt online of offline contact opnemen met andere loopers. Lees wat `achtergrondinformatie <../Where-To-Go-For-Help/Background-reading.html>`_ of bekijk welke vragen andere loopers stellen in de verschillende Facebook groepen (let hierbij wel op de kwaliteit van andermans suggesties, niet alles wat je leest is verstandig om blindelings na te doen).
 
