@@ -1,6 +1,6 @@
 # Bombas Medtronic
 
-**>>>> O controlador para a bomba Medtronic está incluído na AndroidAPS (mestre) desde a versão 2.5. Apesar disso, o controlador da Medtronic ainda deve ser considerado como software versão beta. Por favor, instale apenas se for um utilizador experiente. De momento ainda estamos a tentar resolver o erro de Bólus duplo (2 bólus são registados em tratamentos e por conseguinte no cálculo do IOB (se experienciar este erro, por favor active o registo de Bólus Duplo na configuração Medtronic e forneça os seus registos)), que esperamos ser corrigido numa próxima versão. <<<<**
+**>>>> O controlador para a bomba Medtronic está incluído na AndroidAPS (mestre) desde a versão 2.5. Apesar disso, o controlador da Medtronic ainda deve ser considerado como software versão beta. Please install only if you are experienced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)), this should be fixed with upcoming release. <<<<**
 
 * * *
 
@@ -55,7 +55,7 @@ Necessita configurar os seguintes itens: (ver foto acima)
     - para o resto do mundo, Internacional, a frequência utilizada é 868 Mhz
 - **Máximo Bólus na Bomba (U)** (numa hora): Configure com o mesmo valor que foi inserido na bomba. Limita a quantidade de insulina do Bólus por hora. Caso tente administrar uma quantidade superior ao máximo definido, o Bólus não será administrado e um erro será retornado. O valor máximo admissível é 25. Por favor, defina o valor correcto para evitar o risco de sobredosagem.
 - **Máxima Basal na Bomba (U/h)**: Configure com o mesmo valor que foi inserido na bomba. Limita a quantidade de Basal por hora. Por exemplo, se pretender ter o máximo DBT configurado para 500% e o valor mais alto de Basal é de 1.5 U/h, então necessita de configurar a Máxima Basal de pelo menos 7.5 U/h. Se esta configuração não estiver correcta, i. e., se um dos valores de Basal for superior ao valor máximo definido a bomba retorna um erro.
-- **Tempo de espera para iniciar Bólus (s)**: Tempo de espera antes do valor do Bólus ser comunicado à bomba, para que possa ser cancelado se necessário. O cancelamento do Bólus quando está em execução na bomba não é suportado (em caso de necessidade suspender o Bólus directamente na bomba).
+- **Tempo de espera para iniciar Bólus (s)**: Tempo de espera antes do valor do Bólus ser comunicado à bomba, para que possa ser cancelado se necessário. Cancelling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
 - **Codificação Medtronic**: Esta é configuração que determina, se a codificação 4b6b utilizada para enviar comandos para a bomba será feita na AndroidAPS ou no RileyLink. Se tiver um RileyLink com uma versão firmware 2.x, por defeito será usada a codificação por Hardware (dispositivo conversor). No caso de versões de firmware 0.x esta configuração será ignorada.
 - **Tipo de Bateria (Visualização detalhada)**: Para visualizar tensão e a percentagem de energia na bateria da sua bomba, seleccione o tipo de bateria em utilização (atualmente são suportadas baterias de lítio, Alcalinas, NiZn e NiMH).
 - **Configuração do RileyLink**: Permite procurar e emparelhar a AndroidAPS com o RileyLink.
@@ -68,8 +68,8 @@ Necessita configurar os seguintes itens: (ver foto acima)
 No separador MEDTRONIC encontram-se várias linhas que mostram o estado actual da bomba e respectiva conexão.
 
 - **Estado RileyLink**: Mostra o estado da conexão entre a AndroidAPS, o RileyLink e a bomba. O telefone deve estar conectado o tempo todo ao Módulo BT/RF.
-- **Estado da Bomba**: Indica o estado da conexão da bomba, podendo apresentar vários valores: o símbolo "dormir" indica uma conexão existente não ativa; "A acordar" indica que a AndroidAPS está a tentar conectar com a bomba antes da execução de um comando; ou outra indicação (ex.: Obter Tempo, Ativar DBT, etc.).
-- **Bateria**: Mostra o estado da bateria baseado na configuração. Um símbolo "bateria" mostra a quantidade de energia na bateria (o símbolo é apresentado a vermelho para valores de energia inferiores a 20%).
+- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is being executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
+- **Battery**: Shows battery status depending on your configuration. Um símbolo "bateria" mostra a quantidade de energia na bateria (o símbolo é apresentado a vermelho para valores de energia inferiores a 20%).
 - **Última conexão**: Mostra o tempo decorrido desde a última conexão bem-sucedida com a bomba.
 - **Último Bólus**: Mostra o tempo decorrido desde o último bólus.
 - **Dose de Basal de Base**: É a dose de basal de base actual utilizada pela bomba.
@@ -87,7 +87,7 @@ Na parte inferior do ecrã existem 3 botões:
 
 ![Histórico da Bomba](../images/Medtronic03.png)
 
-O histórico da bomba é recuperado a cada 5 minutos e armazenado localmente. O histórico é mantido por 24 horas. As entradas mais recentes são adicionadas em detrimento das entradas mais antigas. Algumas entradas do histórico da bomba podem não ser exibidas, por não serem relevantes (como por exemplo configuração de funções que não são utilizadas pela AndroidAPS).
+Pump history is retrieved every 5 minutes and stored locally. O histórico é mantido por 24 horas. As entradas mais recentes são adicionadas em detrimento das entradas mais antigas. Algumas entradas do histórico da bomba podem não ser exibidas, por não serem relevantes (como por exemplo configuração de funções que não são utilizadas pela AndroidAPS).
 
 ## Estatísticas RL (Estado do RileyLink)
 
@@ -110,11 +110,11 @@ Quando o controlador Medtronic é selecionado, 3 ações possíveis podem ser ad
 
 ### Utilizadores de OpenAPS
 
-Ao utilizar a AndroidAPS, o controlador primário é a AndroidAPS e todos os comandos devem ser acionados através da AndroidAPS. Os Bólus devem ser acionados na AAPS e não na bomba. Apesar da AAPS detectar qualquer comando efectuado na bomba, estes devem ser evitados (inconsistências de sincronização entre o histórico da bomba e da AAPS podem ocorrer, especialmente se a AAPS não for utilizada como previsto). Com exceção da mudança de reservatório, não é necessário aceder à bomba para a utilizar.
+Ao utilizar a AndroidAPS, o controlador primário é a AndroidAPS e todos os comandos devem ser acionados através da AndroidAPS. Os Bólus devem ser acionados na AAPS e não na bomba. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arise, especially if you use the "setup" as it was not intended to be used). Com exceção da mudança de reservatório, não é necessário aceder à bomba para a utilizar.
 
 ### Registo
 
-Uma vez que o controlador Medtronic é recente, é aconselhado activar o registo para que seja possível depurar e corrigir eventuais problemas e erros. Clique em ícone no canto superior esquerdo, selecione Manutenção e Definições de Registo. As opções Pump, PumpComm, PumpBTComm precisam de ser selecionadas.
+Uma vez que o controlador Medtronic é recente, é aconselhado activar o registo para que seja possível depurar e corrigir eventuais problemas e erros. Click on icon on upper left corner, select Maintenance and Log Settings. As opções Pump, PumpComm, PumpBTComm precisam de ser selecionadas.
 
 ### RileyLink/OrangeLink/Emalink/GNARL
 
