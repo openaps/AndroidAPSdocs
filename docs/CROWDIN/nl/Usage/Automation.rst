@@ -22,7 +22,7 @@ Belangrijke opmerking
 --------------------------------------------------
 **Automatisering is nog steeds actief wanneer je de loop uitschakelt!**
 
-Dus zorg ervoor dat je de Automation-regels deactiveert indien nodig. Je kunt dit doen door het vinkje in het vakje bij de naam van jouw automatiseringsregel weg te halen.
+So make sure to deactivate automation rules during these occasions if necessary. Je kunt dit doen door het vinkje in het vakje bij de naam van jouw automatiseringsregel weg te halen.
 
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Automatiseringsregel activeren en deactiveren
@@ -58,7 +58,7 @@ Je kunt kiezen tussen verschillende voorwaarden. Hieronder worden enkele voorbee
 * Tijd vs. herhaal tijd
 
   * tijd = eenmalige gebeurtenis
-  * herhaal tijd = iets dat met regelmaat gebeurt (dat wil zeggen één keer per week, elke werkdag etc.)
+  * recurring time = something that happens regularly (i.e. één keer per week, elke werkdag etc.)
    
 * locatie: in de configurator (Automation) kun je opgeven welke locatieservice je wilt gebruiken:
 
@@ -154,4 +154,4 @@ Behoed jezelf voor onjuist gebruik van automatisering. Dit kan leiden tot proble
 Alternatieven
 ==================================================
 
-Voor gevorderde gebruikers zijn er andere mogelijkheden om taken te automatiseren met behulp van IFTTT of een Android app genaamd Automate. Enkele voorbeelden zijn `hier <./automationwithapp.html>`_ te vinden.
+For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Enkele voorbeelden zijn `hier <./automationwithapp.html>`_ te vinden.
