@@ -59,7 +59,7 @@ Typická doba výdrže baterie dle typu:
 
 * **Energizer Ultimate Lithium**: 4 až 7 týdnů
 * **Power One Alkaline** (Varta) ze servisního balíčku: 2 až 4 týdny
-* **Eneloop NiMH** (BK-3MCCE): 1 až 3 týdny
+* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
 
 If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
 
