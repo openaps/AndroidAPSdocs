@@ -12,16 +12,16 @@ Pour obtenir un support sur les sources MGC, utilisez les groupes Facebook ou le
 
 ## Assurez-vous de rejoindre le groupe d'utilisateurs AndroidAPS sur Facebook !
 
-Rejoindre le groupe Facebook principal [AndroidAPS](https://www.facebook.com/groups/1900195340201874/). Vous pouvez poster ici toutes les questions sur l'algorithme, les problèmes de configuration que vous rencontrez avec Android Studio et la création de l'APK, toute question sur l'utilisation de l'application et des conseils pour savoir comment tirer le meilleur usage de l'application. Il existe également un groupe pour les utilisateurs de la pompe Combo [AAPSCombo](https://www.facebook.com/groups/127507891261169/) qui ont une configuration un peu plus spécifique.
+Rejoindre le groupe Facebook principal [AndroidAPS](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. Il existe également un groupe pour les utilisateurs de la pompe Combo [AAPSCombo](https://www.facebook.com/groups/127507891261169/) qui ont une configuration un peu plus spécifique.
 
-## Autres ressources en Anglais
+## Other resources in English
 
 * [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup) : couvre tous les systèmes de boucle fermée DIY (OpenAPS, Loop et AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/) : MGC en général
 * [AndroidAPS sur Discord](https://discord.gg/4fQUWHZ4Mw)
 
-## Ressources spécifiques à chaque pays / langue
+## Country / language specific resources
 
 ### Australie
 
