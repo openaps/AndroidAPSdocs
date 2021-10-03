@@ -27,7 +27,7 @@ Einige der nachfolgenden Optionen sind Android-spezifisch, einige Huawei-spezifi
     
     ![Huawei - App sperren](../images/Huawei_LockApp.png)
 
-Für xdrip+ kannst Du außerdem noch laufende Benachrichtigungen (persistent notifications) in den xdrip-Einstellungen auswählen. 
+For xdrip+, you can also enable persistent notifications (within xdrip+ app):
 
 * Einstellungen / Erweiterte Einstellungen / Andere verschiedene Einstellungen / Collector im Vordergrund ausführen
   
