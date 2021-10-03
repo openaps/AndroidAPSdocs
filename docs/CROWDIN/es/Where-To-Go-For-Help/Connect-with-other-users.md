@@ -12,16 +12,16 @@ For support on CGM sources please use the Facebook groups or discord channels fo
 
 ## ¡Asegúrese de unirse al grupo de usuarios de AndroidAPS en Facebook!
 
-Únete al grupo principal [AndroidAPS grupo de Facebook](https://www.facebook.com/groups/1900195340201874/). Puedes publicar aquí cualquier pregunta sobre el algoritmo, cualquier problema de configuración que estás teniendo con Android Studio y crear el APK, cualquier consulta sobre el uso de la aplicación y consejos sobre cómo sacar el mejor uso de él. También hay un grupo para los usuarios de la bomba Combo [AAPSCombo](https://www.facebook.com/groups/127507891261169/) que tienen una configuración un poco más específica.
+Únete al grupo principal [AndroidAPS grupo de Facebook](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. También hay un grupo para los usuarios de la bomba Combo [AAPSCombo](https://www.facebook.com/groups/127507891261169/) que tienen una configuración un poco más específica.
 
-## Otros recursos en inglés
+## Other resources in English
 
 * [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): cubre todos los sistemas de lazo cerrado de DIY (OpenAPS, Loop y AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [CGM en la nube](https://www.facebook.com/groups/cgminthecloud/): CGM en general
 * [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
 
-## Recursos específicos del país / idioma
+## Country / language specific resources
 
 ### Australia
 
