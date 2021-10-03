@@ -23,7 +23,7 @@ Mit den nachfolgend beschriebenen Einstellungen und Handhabung (u.a. Nutzung der
 
 <b><font color="#FF0000">Sehr wichtig:</b></font> Wenn Du Android 8.1 nicht benötigst (z.B. um mit einer Accu-Check Combo zu loopen) bleibe bei Android 7.0!
 
-Gehe wie folgt vor, um bei Android 7.0 zu bleiben:
+Follow these rules to stay with Android 7.0:
 
 * Beim ersten Einschalten unbedingt eine Verbindung mit dem WLAN oder dem mobilen Netz unterbinden, um ein ungewolltes Auto-Update zu vermeiden.
 * Überspringe die Einrichtung des WLAN.
