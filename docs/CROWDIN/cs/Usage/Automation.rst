@@ -22,7 +22,7 @@ Important note
 --------------------------------------------------
 **Automation is still active when you disable loop!**
 
-So make sure to deactivate automation rules during these occasions if neccessary. You can do so by unticking the box left of the name of your automation rule.
+So make sure to deactivate automation rules during these occasions if necessary. You can do so by unticking the box left of the name of your automation rule.
 
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Activate and deactivaten automation rule
@@ -58,7 +58,7 @@ Můžete si vybrat mezi několika podmínkami. Některé věci jsou zde vysvětl
 * Čas vs. opakující se čas
 
   * čas =  jednorázová událost
-  * opakující se čas = něco, co se děje pravidelně (tj. jednou týdně, každý pracovní den apod.)
+  * recurring time = something that happens regularly (i.e. jednou týdně, každý pracovní den apod.)
    
 * poloha: na kartě Konfigurace (Automatizace) můžete vybrat, kterou službu určování polohy chcete používat:
 
@@ -154,4 +154,4 @@ Please be aware to use automation incorrectly. This might lead to difficulties a
 Alternativy
 ==================================================
 
-For advanced users, there are other posibilities to automate tasks using IFTTT or a third party Android app called Automate. Některé příklady jsou uvedeny v části <./automationwithapp.html>`_.
+For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Některé příklady jsou uvedeny v části <./automationwithapp.html>`_.
