@@ -25,8 +25,8 @@ Nutzung
 --------------------------------------------------
 * `Erkennung Fehlerhafter COB-Werte <../Usage/COB-calculation.html#erkennung-fehlerhafter-cob-werte>`_
 
-  .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
-    :alt: Fehler: Langsame KH-Aufnahme
+  .. image:: ../images/Calculator_SlowCarbAbsorption.png
+    :alt: Error: Slow carb absorption
 
 * `SMS-Befehle <../Children/SMS-Commands.html#problembehandlung>`_
 
@@ -51,6 +51,6 @@ Smartphones
 * `Jelly <../Usage/jelly.html>`_
 * `Huawei Bluetooth & Optimierung der Akkulaufzeit <../Usage/huawei.html>`_
 
-Smartwach
+Smartwatch
 ==================================================
 * `Sony Smartwatch 3 <../Usage/SonySW3.html>`_
