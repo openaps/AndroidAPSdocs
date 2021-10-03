@@ -39,7 +39,7 @@ More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.ht
 ***
 
 
-### Medtrum A6/P6/C6 ([Homepage](https://www.medtrum.com/P6.html))
+### Medtrum A6/P6/C6 ([Homepage](https://www.medtrum.com/product/nanopump.html))
 
 **Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
 
