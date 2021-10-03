@@ -11,7 +11,7 @@ Dan heb je 60 dagen om bij te werken. Als je niet binnen deze 60 dagen bijwerkt,
 
 Als je daarna nog eens 30 dagen wacht met bijwerken (dus 90 dagen vanaf de datum dat de nieuwe versie beschikbaar kwam) zal AAPS overschakelen naar Open Loop.
 
-Deze harde beperkingen zijn uiteraard niet bedoeld om je te pesten, maar zijn er om veiligheidsredenen. Nieuwe versies van AndroidAPS bevatten niet alleen nieuwe handige functies, maar ook belangrijke veiligheidsupdates. Daarom is het noodzakelijk dat elke gebruiker zijn app bijwerkt zodra een nieuwe versie beschikbaar komt. Helaas zijn er nog steeds signalen dat sommige gebruikers een hele oude versie van hun app gebruiken, dus dit is een poging om de veiligheid voor individuele gebruikers en de hele doe-het-zelf loop-gemeenschap te verbeteren.  
+Deze harde beperkingen zijn uiteraard niet bedoeld om je te pesten, maar zijn er om veiligheidsredenen. Nieuwe versies van AndroidAPS bevatten niet alleen nieuwe handige functies, maar ook belangrijke veiligheidsupdates. Therefore it is necessary that every user updates a.s.a.p.. Helaas zijn er nog steeds signalen dat sommige gebruikers een hele oude versie van hun app gebruiken, dus dit is een poging om de veiligheid voor individuele gebruikers en de hele doe-het-zelf loop-gemeenschap te verbeteren.  
 
 Versie 2.8.2
 ================
@@ -256,7 +256,7 @@ Belangrijkste nieuwe functies
 * New `Automation plugin <../Usage/Automation.html>`_
 * Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings-overview>`_ from bolus wizard calculation
 * Rendering insulin activity
-* Adjusting IOB predictions by autosense result
+* Adjusting IOB predictions by autosens result
 * New support for patched Dexcom apks (`2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
 * Handtekening controle
 * Allow to bypass objectives for OpenAPS users
@@ -333,7 +333,7 @@ Release datum: 03-11-2018
 
 Belangrijkste nieuwe functies
 --------------------------------------------------
-* oref1/SMB support (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
+* oref1/SMB support (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achieve and how to use it so it can operate smoothly.
 * `_Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ pump support
 * Setup wizard: gidst je door het proces heen om AndroidAPS in te stellen
 
@@ -341,7 +341,7 @@ Instellingen die je moet aanpassen bij het overschakelen van AMA naar SMB
 --------------------------------------------------
 * Doel 10 moet zijn gestart om SMBs aan te kunnen zetten (SMB tab toont in het algemeen welke beperkingen gelden)
 * maxIOB now includes _all_ IOB, not just added basal. Dat betekent dus, wanneer je jezelf een maaltijdbolus van 8E hebt gegeven en maxIOB is 7E, dat er geen SMBs worden afgegeven totdat IOB onder de 7E is gezakt.
-* de min_5m_carbimpact standaard waarde is veranderd van 3 naar 8, wanneer je gaat van AMA naar SMB. Je moet dit handmatig doen wanneer je van AMA naar SMB wisselt.
+* de min_5m_carbimpact standaard waarde is veranderd van 3 naar 8, wanneer je gaat van AMA naar SMB. If you are upgrading from AMA to SMB, you have to change it manually
 * Let op bij het bouwen van de AndroidAPS 2.0 apk: Configuration on demand wordt niet ondersteund door de huidige versie van de Android Gradle plugin! Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het volgende doen:
 
   * Open het Preferences (Voorkeuren) venster door op File > Settings (Bestand > Instellingen) te klikken (op Mac, Android Studio > Voorkeuren).
@@ -376,7 +376,7 @@ Overig
 * Configurator en doelen tabbladen gewijzigd waarbij beschrijvingen zijn toegevoegd
 * Nieuw app icoon
 * Veel verbeteringen en bugfixes
-* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
+* Nightscout-independent alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Optie om het scherm aan te houden
 * Optie om meldingen als Android melding te tonen
 * Geavanceerde filtering (wat het mogelijk maakt om SMB altijd in te schakelen en 6 uur na maaltijden) ondersteund voor gepatchte Dexcom app of xDrip met G5 native mode als BG-bron.
