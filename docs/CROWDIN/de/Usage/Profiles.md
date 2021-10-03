@@ -69,7 +69,7 @@ Alternativ kannst Du den Profilwechsel auch direkt in mLab wie unten beschrieben
 ### “Profilwechsel von NS empfangen aber Profil existiert lokal nicht”
 
 * Das Profil wurde nicht korrekt von Nightscout synchronisiert.
-* Lösche den Profilwechsel wie oben beschrieben.
+* Follow instructions from above to delete the profile switch
 
 Alternativ kannst Du den Profilwechsel auch direkt in mLab löschen:
 
