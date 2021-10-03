@@ -146,7 +146,7 @@ Standaard tijdelijke streefdoelen
   
 Ontlucht/Vul standaard insuline hoeveelheden
 -----------------------------------------------------------
-* Als je jouw infuusslang of canule via AAPS wilt vullen dan kan dat via de knop op de `Acties tab <../Getting-Started/Screenshots.html#acties-tabblad>`_.
+* If you want to fill tube or prime cannula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
 * Je kunt zelf kiezen welke standaardhoeveelheden AAPS laat zien in het dialoogvenster dat ontlucht/vul knop zit.
 
 Bereik voor visualisatie
