@@ -1,6 +1,6 @@
 # Medtronic Pumpen
 
-**>>>> Der Medtronic Pumpentreiber ist seit Version 2.5 Bestandteil der AndroidAPS Master Version. Dennoch sollte er weiter als Software im Beta-Status angesehen werden. Please install only if you are experienced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)), this should be fixed with upcoming release. <<<<**
+**>>>> Der Medtronic Pumpentreiber ist seit Version 2.5 Bestandteil der AndroidAPS Master Version. Dennoch sollte er weiter als Software im Beta-Status angesehen werden. Bitte nutze ihn nur, wenn Du ein erfahrener AAPS-Anwender bist. Momentan gibt es immer noch Probleme mit doppelten Boluseinträgen. In den Behandlungen werden Boli teilweise doppelt aufgeführt und dies bringt natürlich IOB durcheinander. (Aktiviere Double Bolus Logging in den Einstellungen der Medtronic Pumpe, falls dieser Fehler bei Dir auftritt und stelle den Entwicklern bitte Deine Logs zur Verfügung.) Dieses Problem sollte mit der kommenden Version behoben werden. <<<<**
 
 * * *
 
@@ -55,7 +55,7 @@ Folgende Einstellungen sind erforderlich (vgl. Bild oben):
     - Pumpen aus anderen Ländern ("worldwide") nutzen 868 MHz.
 - **Max Bolus der Pumpe (IE)** (pro Stunde): Gleiche Einstellung wie in der Pumpe verwenden. Diese Einstellung beschränkt die Bolusabgabe. Falls Du diesen Wert überschreiten solltest, wird kein Bolus abgegeben und eine Fehlermeldung angezeigt. Maximal können 25 IE pro Stunde eingestellt werden. Wähle die für Dich passende Obergrenze, um Überdosierungen zu verhindern.
 - **Max Basal der Pump (IE pro Stunde)**: Auch hier die identische Einstellung wie auf der Pumpe eintragen. Diese Einstellung beschränkt die maximale Basalmenge pro Stunde. Beispiel: Du möchtest, dass AAPS die TBR maximal auf 500% stellen kann und Deine größte stündliche Basalrate (= maximaler Basalwert pro Stunde innerhalb des 24-Stunden-Rasters eines Tages) liegt bei 1,5 IE pro Stunde. Dann musst Du Max Basal auf 7,5 setzen. Falls diese Einstellung falsch sein und z.B. Deine Basalrate einmal über diesem Wert liegen sollte, würde die Pumpe eine Fehlermeldung anzeigen.
-- **Verzögerung vor dem Start des Bolus (in Sek.)**: Anzahl Sekunden bevor der Bolus an die Pumpe geschickt wird, so dass Du ihn ggf. vorher noch abbrechen kannst. Cancelling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
+- **Verzögerung vor dem Start des Bolus (in Sek.)**: Anzahl Sekunden bevor der Bolus an die Pumpe geschickt wird, so dass Du ihn ggf. vorher noch abbrechen kannst. Der Abbruch des Bolus während dieser abgegeben wird, wird von der Pumpe nicht unterstützt. Wenn Du den Bolus dennoch während der Abgabe stoppen willst, musst Du die Verbindung zur Pumpe unterbrechen und danach wiederherstellen.
 - **Medtronic Encoding**: Diese Einstellung legt fest, ob die "4b6b Kodierung" des Medtronic Geräts durch AndroidAPS oder RileyLink erfolgen soll. Wenn Du einen RileyLink mit 2.x Firmware verwendest, ist die Standardeinstellung die Hardware-Kodierung durch den RileyLink. Bei älteren RileyLink mit 0.x firmware wird diese Einstellung ignoriert.
 - **Batterietyp (Ladestandsanzeige)**: Wenn Du den Batteriestand Deiner Pumpe sehen möchtest, musst Du den Batterietyp, den Du verwendest, auswählen. Aktuell werden Lithium oder Alkaline unterstützt. Dies ändert die Anzeige auf berechnete Prozent und Volt.
 - **RileyLink Configuration**: Zur Verbindungsherstellung mit Deinem RileyLink/GNARL.
@@ -68,8 +68,8 @@ Folgende Einstellungen sind erforderlich (vgl. Bild oben):
 Anzeige verschiedener Informationen zum aktuellen Pumpenstatus:
 
 - **RileyLink Status**: Status der RileyLink-Verbindung. Das Telefon sollte immer mit dem RileyLink verbunden sein.
-- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is being executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
-- **Battery**: Shows battery status depending on your configuration. Dies wird entweder als einfaches Symbol (rot, wenn der Ladestand unter 20% sinkt und damit kritisch wird) oder in Zahlen als Prozentwert und Spannungswert angezeigt.
+- **Pumpenstatus**: Der Status der Pumpenverbindung kann verschiedene Werte haben, die meiste Zeit wird aber - bei inaktiver Pumpenverbindung - "Sleep" angezeigt werden. Bei der Ausführung eines Befehls wird zunächst "Waking up" angezeigt während sich AAPS mit der Pumpe verbindet oder ein Befehl auf der Pumpe läuft (z.B. Get Time, Set TBR, etc.).
+- **Batterie**: Anzeige des Ladestands der Pumpenbatterie (abhängig von Deinen Einstellungen). Dies wird entweder als einfaches Symbol (rot, wenn der Ladestand unter 20% sinkt und damit kritisch wird) oder in Zahlen als Prozentwert und Spannungswert angezeigt.
 - **Letzte Verbindung**: Zeitpunkt der letzten erfolgreichen Verbindung mit der Pumpe.
 - **Letzte Bolus**: Letzter Abgabezeitpunkt eines Bolus.
 - **Base Basal Rate**: Basalrate, die aktuell in der Pumpe läuft.
@@ -87,7 +87,7 @@ Am unteren Ende gibt es 3 Buttons:
 
 ![Dialog Pumpenhistorie](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored locally. Es werden nur die Einträge der letzten 24 Stunden gespeichert, so dass ältere Einträge entfernt werden, wenn neue hinzugefügt werden. Dies ist ein einfacher Weg, um die Pumpenhistorie einzusehen. Einige Einträge aus der Pumpe werden möglicherweise nicht angezeigt, weil sie nicht relevant sind - zum Beispiel die Konfiguration von Funktionen, die nicht von AndroidAPS verwendet werden.
+Die Pumpen Historie wird alle 5 Minuten abgerufen und lokal gespeichert. Es werden nur die Einträge der letzten 24 Stunden gespeichert, so dass ältere Einträge entfernt werden, wenn neue hinzugefügt werden. Dies ist ein einfacher Weg, um die Pumpenhistorie einzusehen. Einige Einträge aus der Pumpe werden möglicherweise nicht angezeigt, weil sie nicht relevant sind - zum Beispiel die Konfiguration von Funktionen, die nicht von AndroidAPS verwendet werden.
 
 ## RL Status (RileyLink Status)
 
@@ -110,11 +110,11 @@ Wenn der Medtronic-Treiber ausgewählt ist, können drei Aktionen dem Tab Aktion
 
 ### OpenAPS Nutzer
 
-In AndroidAPS erfolgt die Bedienung über die App und alle Befehle sollten dort ausgelöst werden. Boli sollten über die App und nicht über die Pumpe gegeben werden. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arise, especially if you use the "setup" as it was not intended to be used). Am besten ist es, nur den Reservoirwechsel über die Pumpe und alles andere über AndroidAPS zu machen.
+In AndroidAPS erfolgt die Bedienung über die App und alle Befehle sollten dort ausgelöst werden. Boli sollten über die App und nicht über die Pumpe gegeben werden. Der Treiber erkennt zwar die über die Pumpe vorgenommenen Befehle, aber Du solltest die Bedienung über die Pumpe vermeiden. (Die Probleme mit der Pumpenhistorie und deren Synchronisierung mit AAPS sind wohl alle behoben. Es können aber immer noch kleine Schwierigkeiten auftauchen, gerade dann, wenn das System nicht wie vorgesehen eingesetzt wird.) Am besten ist es, nur den Reservoirwechsel über die Pumpe und alles andere über AndroidAPS zu machen.
 
 ### Protokollierung
 
-Der Medtronic-Treiber ist noch sehr neu. Aktiviere daher bitte die Protokollierung ("Logging"), damit wir evtl. auftretende Probleme debuggen und beheben können. Click on icon on upper left corner, select Maintenance and Log Settings. Die Optionen Pumpe, PumpComm, PumpBTComm muss mit einem Häkchen versehen werden.
+Der Medtronic-Treiber ist noch sehr neu. Aktiviere daher bitte die Protokollierung ("Logging"), damit wir evtl. auftretende Probleme debuggen und beheben können. Klicke auf das Symbol in der oberen linken Ecke, wähle Wartung (Maintenance) und dann Log Settings. Die Optionen Pumpe, PumpComm, PumpBTComm muss mit einem Häkchen versehen werden.
 
 ### RileyLink/GNARL
 
