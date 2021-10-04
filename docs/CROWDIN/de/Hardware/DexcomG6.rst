@@ -62,7 +62,7 @@ G6 mit Build Your Own Dexcom App
 Einstellungen für AndroidAPS
 --------------------------------------------------
 * Wähle 'gepatchte Dexcom App' im Konfigurationsgenerator.
-* If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+* Falls AAPS keine Werte erhält, wechsle auf eine andere BZ-Quelle und dann wieder zurück zur 'gepatchte Dexcom App', um die Abfrage für die Genehmigung des Datenaustauschs zwischen AAPS und BYODA aufzurufen.
 
 Einstellungen für xDrip+
 --------------------------------------------------
@@ -87,7 +87,7 @@ Dexcom G6-spezifische Problembehandlung
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip+ PhoneServiceState
 
-General troubleshooting
+Allgemeine Problembehandlung
 --------------------------------------------------
 Allgemeine Vorschläge für die Problemlösung bei CGMs findest Du `hier <./GeneralCGMRecommendation.html#problembehandlung>`__.
 
