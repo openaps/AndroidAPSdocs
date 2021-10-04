@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS - artificial pancreas system</td>
+ <td>AndroidAPS - System einer künstlichen Bauchspeicheldrüse (artifical pancreas system)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -90,13 +90,13 @@
 </tr>
 <tr>
  <td><strong>CAGE</strong></td>
- <td>cannula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
+ <td>Kanülenalter (canula age) - Wird in Nightscout angezeigt, wenn die Information in AAPS im Aktionen Tab/Menü oder durch AAPS Tab Aktionen -> Vorfüllen/Füllen eingetragen wurde.</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>CAN</strong></td>
- <td>status light overdue cannula change on homescreen</td>
+ <td>Statusanzeige Kanülenwechsel auf dem Startbildschirm</td>
  <td>BAT / RES / SEN</td>
  <td><a href="../Configuration/Preferences.html#ubersicht">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
 </tr>
@@ -144,7 +144,7 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> necessary for APK updates</td>
+ <td>Versionskontrollsystem für die Nachverfolgung von Änderungen in Computerdateien und Koordinierung der Arbeit an diese Dateien <br>-> für APK-Updates notwendig</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - Update auf neue Version...</a></td>
 </tr>
@@ -152,7 +152,7 @@
  <td><strong>GitHub</strong></td>
  <td>webbasierter Hosting-Dienst für die Versionskontrolle mit Git <br>-> Speicherort des Quellcodes</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/nightscout/AndroidAPS">GitHub AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td><strong>Glimp</strong></td>
@@ -276,9 +276,9 @@
 </tr>
 <tr>
  <td><strong>Predictions (Vorhersagen)</strong></td>
- <td>predictions for BG in the future based on different calculations</td>
+ <td>Vorhersage der BZ-Werte basierend auf verschiedenen Berechnungsannahmen</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#vorhersage-kurven">Wiki - prediction lines</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#vorhersage-kurven">Wiki - Vorhersagelinien</a></td>
 </tr>
 <tr>
  <td><strong>Profile</strong></td>
