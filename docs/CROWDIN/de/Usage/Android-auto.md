@@ -30,7 +30,7 @@ Da AAPS keine offizielle Android Auto App ist, müssen die Benachrichtigungen ei
 
 ![Unbekannte Quellen aktivieren](../images/AndroidAuto_03.png)
 
-* Now you can quit developer mode if you want. Rufe dazu über die drei Punkte oben rechts das Menü auf.
+* Jetzt kannst Du den Entwicklermodus wieder verlassen. Rufe dazu über die drei Punkte oben rechts das Menü auf.
 
 ## Benachrichtigung im Auto anzeigen
 
