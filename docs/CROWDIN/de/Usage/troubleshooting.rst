@@ -25,8 +25,8 @@ Nutzung
 --------------------------------------------------
 * `Erkennung Fehlerhafter COB-Werte <../Usage/COB-calculation.html#erkennung-fehlerhafter-cob-werte>`_
 
-  .. image:: ../images/Calculator_SlowCarbAbsorption.png
-    :alt: Error: Slow carb absorption
+  .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
+    :alt: Fehler: Langsame KH-Aufnahme
 
 * `SMS-Befehle <../Children/SMS-Commands.html#problembehandlung>`_
 
