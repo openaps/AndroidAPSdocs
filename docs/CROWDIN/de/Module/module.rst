@@ -1,9 +1,9 @@
 Übersicht der Komponenten 
 **************************************************
-AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Bevor du dich für Komponenten entscheidest, wäre es eine gute Idee, dir das 'Setup der verschiedenen Komponenten < ../index.html#component-setup> `_ anzuschauen.
+AndroidAPS ist nicht einfach eine (selbst erstellte) App, es ist eines von verschiedenen Modulen Deines Closed Loop Systems. Bevor du dich für Komponenten entscheidest, wäre es eine gute Idee, dir das 'Setup der verschiedenen Komponenten < ../index.html#component-setup> `_ anzuschauen.
    
 .. image:: ../images/modules.png
-  :alt: Components overview
+  :alt: Übersicht der Komponenten
 
 .. note:: 
    **WICHTIGER SICHERHEITSHINWEIS**
@@ -26,7 +26,7 @@ Das Profil beinhaltet:
 
 * BR (Basalraten)
 * ISF (insulin sensitivity factor - Korrekturfaktor): Menge an mg bzw. mmol die eine Einheit Insulin Deinen Blutzucker senkt
-* CR (carb ratio) is grams carbohydrate per one unit insulin
+* CR (carb ratio - KH-Faktor): Gramm Kohlenhydrate, die mit einer Einheit Insulin abgedeckt werden können
 * DIA (duration of insulin acting): Insulin-Wirkdauer
 
 Keine Verwendung von SGLT-2-Hemmern
@@ -52,8 +52,8 @@ AndroidAPS funktioniert **derzeit** mit
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+- `einige alte Medtronic Pumpen <../Configuration/MedtronicPump.html>`_ ab AAPS version 2.4 (`zusätzliches Kommunikationsgerät <../Module/module.html#zusatzliches-kommunikationsgerat>`_  erforderlich)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`zusätzliches Kommunikationsgerät <../Module/module.html#zusatzliches-kommunikationsgerat>`_  erforderlich)
 
 **Andere Pumpen,** die zukünftig möglicherweise von AndroidAPS unterstützt werden können, sind auf der Seite `Zukünftig ggf. loopbare Pumpen <../Getting-Started/Future-possible-Pump-Drivers.html>`_ aufgeführt.
 
@@ -61,7 +61,7 @@ Falls Du eine Pumpe **auf eigene Kosten** erwerben willst, findest Du in `dieser
 
 Zusätzliches Kommunikationsgerät
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Wähle die richtige Variante des Kommunikationsgeräts aus, je nach dem welche Pumpe Du nutzt.
+Für alte Medtronic-Pumpen ist ein zusätzliches Kommunikationsgerät (neben Deinem Smartphone) erforderlich, um das Funksignal von der Pumpe zu Bluetooth "zu übersetzen". Wähle die richtige Variante des Kommunikationsgeräts aus, je nach dem welche Pumpe Du nutzt.
 
    -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
    -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
@@ -136,7 +136,7 @@ Eine Schritt-für-Schritt-Anleitung findest Du im Sample Setup. Dieses ist schon
   
 Wartezeit überbrücken
 ==================================================
-Manchmal dauert es eine Weile, um alle Module für den Closed Loop zusammen zu bekommen. Aber keine Sorge, es gibt viele Dinge, die Du in der Zwischenzeit machen kannst. It is NECESSARY to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. Der Open Loop ist zudem eine sehr gute Möglichkeit, das System kennenzulernen und mit AndroidAPS vertraut zu werden. Im Open Loop gibt AndroidAPS Behandlungsempfehlungen, die Du manuell umsetzen musst.
+Manchmal dauert es eine Weile, um alle Module für den Closed Loop zusammen zu bekommen. Aber keine Sorge, es gibt viele Dinge, die Du in der Zwischenzeit machen kannst. Es ist ABSOLUT WICHTIG, Deine Basalrate (BR), die KH-Faktoren (IC), Korrekturfaktoren (ISF) etc. intensiv zu prüfen und ggf. anzupassen. Der Open Loop ist zudem eine sehr gute Möglichkeit, das System kennenzulernen und mit AndroidAPS vertraut zu werden. Im Open Loop gibt AndroidAPS Behandlungsempfehlungen, die Du manuell umsetzen musst.
 
 Du kannst Dich weiter durch das Wiki arbeiten, online und offline mit anderen Loopern in Kontakt treten, weitere `Hintergrundinfos <../Where-To-Go-For-Help/Background-reading.html>`_ oder Berichte von anderen Loopern lesen. Sei aber vorsichtig, nicht alle Anwenderberichte müssen richtig oder für Deinen Fall zutreffend sein.
 
