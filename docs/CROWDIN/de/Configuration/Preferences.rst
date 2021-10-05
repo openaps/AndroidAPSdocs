@@ -146,7 +146,7 @@ Vordefinierte temporäre Ziele
   
 Füll-/Vorfüll-Standardmengen
 -----------------------------------------------------------
-* If you want to fill tube or prime cannula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
+* Katheter (Schlauch) oder Kanüle (Nadel) kannst Du in AAPS über den Button 'Katheterwechsel' im `Aktionen-Tab <../Getting-Started/Screenshots.html#aktionen-tab>`_ füllen.
 * Voreinstellungen für Füllmengen können in diesem Dialog definiert werden.
 
 Zielbereich für die Grafikanzeige
