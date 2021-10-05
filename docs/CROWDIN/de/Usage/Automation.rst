@@ -22,7 +22,7 @@ Wichtiger Hinweis
 --------------------------------------------------
 **Automation bleibt aktiv, wenn Du den Loop deaktivierst!**
 
-So make sure to deactivate automation rules during these occasions if necessary. Entferne dazu das Häkchen in der Box links vom Namen der Automation-Regel.
+Schalte daher ggf. die Automation-Regeln aus während Du den Loop deaktiviert hast. Entferne dazu das Häkchen in der Box links vom Namen der Automation-Regel.
 
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Automation Regeln ein- und ausschalten
@@ -58,7 +58,7 @@ Verbundene Bedingungen: Du kannst mehrere Bedingungen verwenden und diese wie fo
 * Zeit vs. Wiederkehrende Zeit
 
   * Zeit = einmaliges Ereignis
-  * recurring time = something that happens regularly (i.e. einmal pro Woche, jeden Werktag etc.)
+  * Wiederkehrende Zeit = etwas, das regelmäßig passiert (z.B.  einmal pro Woche, jeden Werktag etc.)
    
 * Standort: in "Konfiguration" (Automation) kann man auswählen, welchen Standort Service man möchte:
 
@@ -154,4 +154,4 @@ Achte darauf, Automatisierungen nicht falsch einzusetzen. Dies könnte zu Schwie
 Alternativen
 ==================================================
 
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Einige Beispiele findest Du `hier <./automationwithapp.html>`_.
+Für fortgeschrittene Benutzer gibt es andere Möglichkeiten, Aufgaben mit IFTTT oder einer Drittanbieter-Android-App namens Automate zu automatisieren. Einige Beispiele findest Du `hier <./automationwithapp.html>`_.
