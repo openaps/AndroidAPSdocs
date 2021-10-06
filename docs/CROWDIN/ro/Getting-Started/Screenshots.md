@@ -307,7 +307,7 @@ Când doriţi să faceţi un bolus pentru o masă, în mod normal de aici veţi 
 
 #### Detectare cantitate COB greșită 
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
+![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 
 * Dacă vedeţi avertismentul de mai sus după utilizarea asistentului de bolus, AndroidAPS a detectat că valoarea COB calculată poate fi greşită. 
 * Așadar, dacă doriți să faceți din nou bolus după o masă anterioară cu COB, trebuie să fiți conștienți de suprapunere! 
@@ -334,7 +334,7 @@ Când doriţi să faceţi un bolus pentru o masă, în mod normal de aici veţi 
    
    * sensor age & level (battery percentage)
    * insulin age & level (units)
-   * canula age
+   * cannula age
    * pump battery age & level (percentage
 
 * Less information will be shown if [low resolution skin](../Configuration/Preferences#skin) is used.
@@ -358,7 +358,7 @@ Când doriţi să faceţi un bolus pentru o masă, în mod normal de aici veţi 
 
 #### Vizualizare istoric
 
-* Vă permite să mergeți înapoi prin istoricul AAPS.
+* Allows you to ride back in AAPS history.
 
 #### TDD
 
@@ -453,11 +453,11 @@ Istoricul următoarelor tratamente:
 * [Schimbare de profil](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-discontinued) - notițe introduse prin intermediul paginii de acțiuni și notițe în dialoguri
 
-## Sursă Glicemie - xDrip, aplicația Dexcom (modificată)...
+## BG Source - xDrip, Dexcom App (patched)...
 
 ![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
 
-* În funcţie de setările sursei de Glicemie, această pagină este denumită diferit.
+* Depending on your BG source settings this tab is named differently.
 * Afișează istoricul citirilor CGM și oferă opțiunea de eliminare a citirilor în caz de eroare (adică hipo cauzat de compresie).
 
 ## Client NS

@@ -22,7 +22,7 @@ Voordat je begint met bouwen, heb je nog wat leeswerk te doen om te begrijpen ho
 
 [Waarom we de duur van insuline activiteit (DIA) meestal verkeerd hebben ingesteld, en waarom dat van belang is - https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-[Welke conclusies kunnen we trekken bij het onderzoeken van de insulinegevoeligheid met behulp van de functie Autosense binnen #OpenAPS? https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/](https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
+[What conclusions can we draw when investigating Insulin Sensitivity using the Autosens function within #OpenAPS? https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/](https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
 
 <https://seemycgm.com/2017/10/29/fine-tuning-settings/>
 

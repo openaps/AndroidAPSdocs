@@ -1,6 +1,6 @@
 # Medtronic Pompen
 
-**> > > De Medtronic pomp driver is vanaf AAPS versie 2.5 onderdeel van AndroidAPS (master). Toch moet de Medtronic driver nog steeds als bètasoftware worden beschouwd. Gebruik het dus alleen als je een ervaren AndroidAPS gebruiker bent. Op dit moment zijn er nog steeds problemen met dubbele registraties van bolussen (Er worden 2 bolussen in de behandelingen geregistreerd, die de IOB-berekening in de war gooit (als je deze bug ondervindt, schakel Double Bolus Logging in in Medtronic configuratie en stuur ons jouw logfiles)). Dit probleem moet worden verholpen in de volgende release van AndroidAPS. <<<<**
+**> > > De Medtronic pomp driver is vanaf AAPS versie 2.5 onderdeel van AndroidAPS (master). Toch moet de Medtronic driver nog steeds als bètasoftware worden beschouwd. Please install only if you are experienced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)), this should be fixed with upcoming release. <<<<**
 
 * * *
 
@@ -55,7 +55,7 @@ You need to set following items: (see picture above)
     - for Worldwide, frequency used is 868 Mhz
 - **Max Bolus on Pump (U)** (in an hour): This needs to be set to same as on the pump. It limits how much insulin you can Bolus. If you go over this, Bolus won't be set and error will be returned. Max that can be used is 25, please set correct value for yourself here so that you don't overdose.
 - **Max Basal on Pump (U/h)**: This needs to be set to same as on the pump. It limits how much basal you can get in an hour. So for example, if you want to have max TBR set to 500% and highest of your Basal patterns is 1.5 U, then you would need to set Max Basal to at least 7.5. If this setting is wrong (for example, if one of your basal pattern would go over this value, pump would return error).
-- **Delay before Bolus is started (s)**: This is delay before bolus is sent to pump, so that if you change your mind you can cancel it. Canceling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
+- **Delay before Bolus is started (s)**: This is delay before bolus is sent to pump, so that if you change your mind you can cancel it. Cancelling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
 - **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. If you have a RileyLink with 2.x firmware, default value will be to use Hardware encoding (= done by RileyLink), if you have 0.x firmware this setting will be ignored.
 - **Battery Type (Power View)**: If you want to see battery power in your pump, you need to select type of battery you use (currently supported Lithium or Alkaline), this will in turn change display to display calculated percent and volts.
 - **RileyLink Configuration**: This will find your RileyLink/GNARL device.
@@ -68,8 +68,8 @@ You need to set following items: (see picture above)
 On pump tab you can see several lines that are showing pumps (and connections) current status.
 
 - **RileyLink Status**: It shows status of RileyLink connection. Phone should be connected to RileyLink all the time.
-- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is beeing executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
-- **Battery**: Shows battery status depening on your configuration. This can be simple icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage.
+- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is being executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
+- **Battery**: Shows battery status depending on your configuration. This can be simple icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage.
 - **Last connection**: Time when last connection to pump was successful.
 - **Last Bolus**: When last bolus was given.
 - **Base Basal Rate**: This is the base basal rate that runs on pump at this hour.
@@ -87,7 +87,7 @@ On lower end we have 3 buttons:
 
 ![Pump History Dialog](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored localy. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
+Pump history is retrieved every 5 minutes and stored locally. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
 
 ## RL Status (RileyLink Status)
 
@@ -110,11 +110,11 @@ When Medtronic driver is selected, 3 possible actions can be added to Actions Ta
 
 ### OpenAPS users
 
-When you start using AndroidAPS, primary controller is AndroidAPS and all commands should go through it. Sending boluses should go through AAPS and not be done on pump. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arrise, especially if you use the "setup" as it was not intended to be used). Since I started using AndroidAPS with my pump, I haven't touched the pump, except when I have to change the reservoir, and this is the way that AndroidAPS should be used.
+When you start using AndroidAPS, primary controller is AndroidAPS and all commands should go through it. Sending boluses should go through AAPS and not be done on pump. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arise, especially if you use the "setup" as it was not intended to be used). Since I started using AndroidAPS with my pump, I haven't touched the pump, except when I have to change the reservoir, and this is the way that AndroidAPS should be used.
 
 ### Logging
 
-Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
+Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintenance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
 
 ### RileyLink/GNARL
 

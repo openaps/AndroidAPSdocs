@@ -30,7 +30,7 @@ Kadangi AAPS nėra oficiali Android Auto programėlė, pranešimus vieną kartą
 
 ![Įgalinti nežinomus šaltinius](../images/AndroidAuto_03.png)
 
-* Dabar vėl galite išeiti iš kūrėjo režimo. Norėdami tai padaryti, paspauskite trijų taškų meniu.
+* Now you can quit developer mode if you want. Norėdami tai padaryti, paspauskite trijų taškų meniu.
 
 ## Rodyti pranešimus automobilyje
 

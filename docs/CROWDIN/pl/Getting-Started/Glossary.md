@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS - system hybrydowej sztucznej trzustki</td>
+ <td>AndroidAPS - artificial pancreas system</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -90,13 +90,13 @@
 </tr>
 <tr>
  <td><strong>CAGE</strong></td>
- <td>canula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
+ <td>cannula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>CAN</strong></td>
- <td>status light overdue canula change on homescreen</td>
+ <td>status light overdue cannula change on homescreen</td>
  <td>BAT / RES / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots.html"> Zrzuty ekranu </a></td>
 </tr>
@@ -144,15 +144,15 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> neccessary for APK updates</td>
+ <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> necessary for APK updates</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - update APK</a></td>
 </tr>
 <tr>
- <td><strong>Github</strong></td>
+ <td><strong>GitHub</strong></td>
  <td>web-based hosting service for version control using Git<br>-> storage of source code</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">GitHub AndroidAPS</a></td>
 </tr>
 <tr>
  <td><strong>Glimp</strong></td>
@@ -276,9 +276,9 @@
 </tr>
 <tr>
  <td><strong>Prognozy/Predictions</strong></td>
- <td>preditions for BG in the future based on different calculations</td>
+ <td>predictions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - prediction lines</a></td>
 </tr>
 <tr>
  <td><strong>Profil</strong></td>

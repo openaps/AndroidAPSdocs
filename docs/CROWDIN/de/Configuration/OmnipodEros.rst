@@ -524,7 +524,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
     * - |reset_rileylink_config|
       - **Reset RileyLink Config** 
    
-   	When presssed this button resets the currently connected pod communication device configuration. 
+   	When pressed this button resets the currently connected pod communication device configuration. 
 			      
 	* When communication is started, specific data is sent to and set in the RileyLink 
 			      
@@ -532,7 +532,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 	    - Communication Protocols are set
 	    - Tuned Radio Frequency is set
 				
-	* See `addtional notes <#reset-rileylink-config-notes>`__ at the end of this table
+	* See `additional notes <#reset-rileylink-config-notes>`__ at the end of this table
     * - |pulse_log|
       - **Read pulse log:** 
     
@@ -549,7 +549,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 Omnipod-Einstellungen
 ================
 
-The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayedas a tab in the AAPS interface titled **OMNIPOD** or **POD**. Dies wird in dieser Dokumentation als Registerkarte **Omnipod (POD)** bezeichnet.
+The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. Dies wird in dieser Dokumentation als Registerkarte **Omnipod (POD)** bezeichnet.
 
 |Omnipod_Settings_1|
 
@@ -684,11 +684,11 @@ This tab is well documented in the main AAPS documentation but there are a few i
 Levels
 ------
 
-**Insuln Level**
+**Insulin Level**
 
-Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This is because it is not known exactly how much insulin was put in the pod, only that when the 2 beeps are triggered while filling the pod that over 85 units have been injected. A Pod can hold a maximum of 200 units. Priming can also introduce variance as it is not and exact process.  With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remainin in the reservoir.  
+Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This is because it is not known exactly how much insulin was put in the pod, only that when the 2 beeps are triggered while filling the pod that over 85 units have been injected. A Pod can hold a maximum of 200 units. Priming can also introduce variance as it is not and exact process.  With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remaining in the reservoir.  
 
-  * **Abover 50 Units** - Reports a value of 50+U when more than 50 units are currently in the reservoir.
+  * **Above 50 Units** - Reports a value of 50+U when more than 50 units are currently in the reservoir.
   * **Below 50 Units** - Reports an approximate calculated value of insulin remaining in the reservoir. 
   * **SMS** - Returns value or 50+U for SMS responses
   * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
@@ -696,7 +696,7 @@ Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This i
 
 **Battery Level**
 
-Battery level reporting is a setting that can be enabled to return the current battery level of pod communicaton devices like the OrangeLink and EmaLink.  The RileyLink hardware is not capable of reporting its battery level.  The battery level is reported after each communication with the pod, so when charging a linear increase may not be observed.  A manual refresh will update the current battery level.  When a supported Pod communicaton device is disconnected a value of 0% will be reported.
+Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices like the OrangeLink and EmaLink.  The RileyLink hardware is not capable of reporting its battery level.  The battery level is reported after each communication with the pod, so when charging a linear increase may not be observed.  A manual refresh will update the current battery level.  When a supported Pod communication device is disconnected a value of 0% will be reported.
 
   * **RileyLink hardware is NOT capable of report battery level** 
   * **Use battery level reported by OrangeLink/EmaLink Setting MUST be enabled in the Omnipod settings to reporting battery level values**
@@ -794,7 +794,7 @@ Die Abbildung unten zeigt die optimale Positionierung des RileyLink während der
 Where to get help for Omnipod driver
 ====================================
 
-All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerateand use the following guidelines when requesting assistance:
+All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerate and use the following guidelines when requesting assistance:
 
 -  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
 -  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using `this invite link <https://discord.gg/4fQUWHZ4Mw>`__.

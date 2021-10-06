@@ -4,7 +4,7 @@ Wiki updates & wijzigingen
 April 2021
 ==================================================
 * List of `communication devices <../Module/module.html#additional-communication-device>`_ for Omnipod and Medtronic pumps
-* AAPS preditctions in `Nightscout <../Installing-AndroidAPS/Nightscout.html#manual-nightscout-setup>`_
+* AAPS predictions in `Nightscout <../Installing-AndroidAPS/Nightscout.html#manual-nightscout-setup>`_
 
 March 2021
 ==================================================
@@ -97,7 +97,7 @@ November 2019
 * `Extended bolus-waarom ze niet werken met een loop  < ../Usage/Extended-Carbs.html#extended-bolus>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-f-main-graph>`_
-* `Insight - Disable absolut values in NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
+* `Insight - Disable absolute values in NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * `Medtronic pump - possible double entries <../Configuration/MedtronicPump.html>`_
 * `New Freestyle Libre 2 tutorial <../Hardware/Libre2.html>`_
 * `Profile switch with percentage - example <../Usage/Profiles.html>`_
@@ -123,7 +123,7 @@ October 2019
 September 2019
 ==================================================
 * `Automate <../Usage/Automation.html>`_
-* `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorbtion
+* `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorption
 * `Nightscout security <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
 * `Profile timeshift <../Usage/Profiles.html#time-shift>`_ (more details)
 * `Remote monitoring <../Children/Children.html>`_

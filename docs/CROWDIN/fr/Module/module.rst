@@ -1,9 +1,9 @@
 Vue d'ensemble des composants 
 **************************************************
-AndroidAPS n'est pas seulement une application (faite vous même), c'est juste un des modules fonctionnels de votre système de boucle fermée. Avant de décider des composants, ce serait une bonne idée de jeter un oeil à la `configuration des composants <../index.html#configuration-des-composants>`_.
+AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Avant de décider des composants, ce serait une bonne idée de jeter un oeil à la `configuration des composants <../index.html#configuration-des-composants>`_.
    
 .. image:: ../images/modules.png
-  :alt: Compontents overview
+  :alt: Components overview
 
 .. note:: 
    **AVIS DE SÉCURITÉ IMPORTANT**
@@ -26,7 +26,7 @@ Le profil inclut :
 
 * DB (débits de basal)
 * SI (sensibilité à l'insuline) est la baisse de glycémie que provoque une unité d'insuline
-* G/I (ratio Glucides / Insuline) est la quantité de glucides en grammes par unité d'insuline
+* CR (carb ratio) is grams carbohydrate per one unit insulin
 * DAI (durée d'action de l'insuline).
 
 Ne pas utiliser d'inhibiteurs SGLT-2
@@ -52,8 +52,8 @@ AndroidAPS fonctionne **actuellement** avec
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `certaines anciennes pompes Medtronic <../Configuration/MedtronicPump.html>`_ de la version 2.4 à venir (`dispositif de communication supplémentaire <../Module/module#peripherique-de-communication-additionnel>`_ nécessaires)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`dispositif de communication supplémentaire <../Module/module#peripherique-de-communication-additionnel>`_ nécessaire)
+- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
 
 **D'autres pompes**, qui peuvent potentiellement fonctionner avec AndroidAPS, sont listées sur la page `Futures pompes (possible) <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
@@ -61,7 +61,7 @@ Si vous avez besoin d'acheter **à titre privé** une pompe alors vous pouvez tr
 
 Périphérique de communication additionnel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Pour les anciennes pompes medtronic, un périphérique de communication supplémentaire (en plus de votre téléphone) est nécessaire pour "traduire" le signal radio de la pompe vers le Bluetooth. Assurez-vous de choisir la bonne version en fonction de votre pompe.
+For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Assurez-vous de choisir la bonne version en fonction de votre pompe.
 
    -  |OrangeLink|  `Site internet OrangeLink <https://getrileylink.org/product/orangelink>`_    
    -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
@@ -136,7 +136,7 @@ Si vous souhaitez obtenir un exemple d'étape par étape, vous pouvez consulter 
   
 Que faire en attendant les composants
 ==================================================
-Il faut parfois un certain temps pour pouvoir activer tous les composants pour fermer la boucle. Mais pas de soucis, il y a beaucoup de choses que vous pouvez faire en attendant. Il est NECESSAIRE de vérifier et (le cas échéant) adapter les débits de basal (DB), ratio Glucide/Insulin (G/I), la sensibilité à l'insulin (SI) etc. Et la boucle ouverte peut être un bon moyen pour tester le système, et se familiariser avec AndroidAPS. En utilisant ce mode, AndroidAPS donne des conseils de traitement que vous pouvez exécuter manuellement.
+Il faut parfois un certain temps pour pouvoir activer tous les composants pour fermer la boucle. Mais pas de soucis, il y a beaucoup de choses que vous pouvez faire en attendant. It is NECESSARY to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. Et la boucle ouverte peut être un bon moyen pour tester le système, et se familiariser avec AndroidAPS. En utilisant ce mode, AndroidAPS donne des conseils de traitement que vous pouvez exécuter manuellement.
 
 Vous pouvez continuer à lire la documentation ici présente, entrer en contact avec d'autres boucleurs en ligne ou hors ligne, `lire les documentations <../Where-To-Go-For-Help/Background-reading.html>`_ ou ce que d'autres boucleurs ont écrits (vous devez toutefois rester prudent, tout n'est pas correct ou adapté à votre situation).
 

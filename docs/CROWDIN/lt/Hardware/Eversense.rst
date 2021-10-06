@@ -1,6 +1,6 @@
 Eversense naudotojai
 **************************************************
-Lengviausias būdas naudoti Eversense NGJ su AndroidAPS, yra įsirašyti ne-JAV vartotojams skirtą modifikuotą `Eversense" programą <https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk>`_, o prieš tai originalią programą ištrinti.
+The easiest way to use Eversense with AndroidAPS is to install the non-US modified `Eversense app <https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk>`_ (and uninstall the original one first).
 
 **Įspėjimas: išinstaliavus senąją programą visi senesni nei vienos savaitės duomenys bus prarasti!**
 

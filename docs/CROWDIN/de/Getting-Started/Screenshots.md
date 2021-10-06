@@ -307,7 +307,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
 #### Fehlerhafte Erkennung der aktiven Kohlenhydrate (COB)
 
-![Langsamer Kohlenhydrat-Abbau](../images/Calculator_SlowCarbAbsorbtion.png)
+![Langsamer Kohlenhydrat-Abbau](../images/Calculator_SlowCarbAbsorption.png)
 
 * Wenn Du nach Verwendung des Bolus-Assistenten die obige Warnung siehst, hat AAPS erkannt, dass aktiven Kohlenhydrate (COB) eventuell nicht korrekt berechnet werden konnten. 
 * Wenn Du kurz nach einer vorangegangenen Mahlzeit erneut einen Bolus abgeben willst, solltest Du Dir der Gefahr einer Überdosierung bewusst sein! 
@@ -334,7 +334,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
    
    * Sensoralter & -level (Batterieladestand in %)
    * Insulinalter & Reservoirstand (Einheiten)
-   * Kanülenalter
+   * kanülenalter
    * Alter & Ladestand (in %) der Pumpenbatterie
 
 * Falls Du die [Darstellung für niedrige Auflösungen](../Configuration/Preferences#erscheinungsbild) gewählt hast, werden weniger Informationen angezeigt.

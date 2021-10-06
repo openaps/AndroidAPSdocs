@@ -36,7 +36,7 @@ Knoppen:
 * rode X: verwijderen
 * blauwe pijl: kopiëren
 
-Als je wijzigingen aanbrengt in je profiel, zorg er dan voor dat je het juiste profiel aan het bewerken bent. Op het profiel tabblad wordt niet altijd het gebruikte profiel weergegeven - bijvoorbeeld als je van profiel hebt gewisseld met de profiel tab op het overzicht-scherm, kan dit afwijken van het profiel dat wordt weergegeven in het tabblad profiel omdat er geen koppeling tussen deze tabs bestaat.
+Als je wijzigingen aanbrengt in je profiel, zorg er dan voor dat je het juiste profiel aan het bewerken bent. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
 #### Profiel wissel dupliceren
 
@@ -295,7 +295,7 @@ Kies of je een notes-veld wilt hebben bij het invoeren van een behandeling of ni
 
 #### Statusindicatoren
 
-Kies of je [statusindicatoren](../Configuration/Preferences#statusindicatoren) wilt laten weergeven op jouw overzichtsscherm voor de canule leeftijd, insuline leeftijd, sensor leeftijd, batterij leeftijd, reservoir niveau en batterij niveau. Als het waarschuwingsniveau wordt bereikt, zal die info in geel worden weergegeven. Wanneer het alarmniveau wordt bereikt, zal het rood worden weergegeven.
+Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. Als het waarschuwingsniveau wordt bereikt, zal die info in geel worden weergegeven. Wanneer het alarmniveau wordt bereikt, zal het rood worden weergegeven.
 
 #### Geavanceerde instellingen
 

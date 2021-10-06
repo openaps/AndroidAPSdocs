@@ -22,7 +22,7 @@ Svarbios pastabos
 --------------------------------------------------
 **Automatizavimas vis dar yra aktyvus, kai ciklas yra išjungtas!**
 
-Todėl, jei reikia, išjunkite automatizavimo taisykles, kai išjungiate ciklą. Norėdami tai padaryti, pašalinkite varnelę laukelyje, esančiame automatizavimo taisyklės pavadinimo kairėje.
+So make sure to deactivate automation rules during these occasions if necessary. Norėdami tai padaryti, pašalinkite varnelę laukelyje, esančiame automatizavimo taisyklės pavadinimo kairėje.
 
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Įjungti ir išjungti automatizavimo taisyklę
@@ -58,7 +58,7 @@ Susietos sąlygos: Galite naudoti kelias sąlygas ir jas susieti taip
 * Laikas prieš pasikartojantis laikas
 
   * Laikas = vienkartinis įvykis
-  * Pasikartojantis laikas = kažkas, kas vyksta reguliariai (pvz. kartą per savaitę, kiekvieną darbo dieną ir pan.)
+  * recurring time = something that happens regularly (i.e. kartą per savaitę, kiekvieną darbo dieną ir pan.)
    
 * Vieta: Konfigūratoriuje (automatizavimas) galite pasirinkti, kurią vietos nustatymo paslaugą norite naudoti:
 
@@ -154,4 +154,4 @@ Atkreipkite dėmesį, jei netinkamai naudojate automatizavimo funkciją. Tai gal
 Alternatyvos
 ==================================================
 
-Pažangesniems vartotojams yra ir kitų būdų automatizuoti užduotis naudojant IFTTT arba trečiosios šalies Android programą, vadinamą Automate. Keletas pavyzdžių galima rasti 'čia <./automationwithapp.html>`_.
+For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Keletas pavyzdžių galima rasti 'čia <./automationwithapp.html>`_.

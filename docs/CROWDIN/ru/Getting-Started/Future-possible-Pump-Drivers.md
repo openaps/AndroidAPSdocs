@@ -32,9 +32,9 @@
 
 * * *
 
-### Medtrum A6/P6/C6 ([Домашняя страница](https://www.medtrum.com/P6.html))
+### Medtrum A6/P6/C6 ([Homepage](https://www.medtrum.com/product/nanopump.html))
 
-**Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
+**Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controllable via iPhone App. No Android app available at the moment.
 
 **Требования к оборудованию для AAPS:** По-видимому, никаких. It seems to be BT enabled.
 
@@ -62,7 +62,7 @@
 
 **Loop status:** Not yet loopable.
 
-While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definetly, everything else unknown).
+While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
@@ -104,7 +104,7 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 ### Animas Vibe
 
-**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
+**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump business (J&J).
 
 * * *
 

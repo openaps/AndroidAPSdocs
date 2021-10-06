@@ -22,4 +22,4 @@ Citlivost je vypočítaná z údajů 8 hodin do minulosti nebo od poslední vým
 
 ## Souběžné sacharidy
 
-Při použití citlivosti AAPS, váženého průměru a Oref1 jsou výrazné rozdíly. Pluginy Oref předpokládají, že se vždy vstřebává pouze jedno jídlo. To znamená, že druhé jídlo se začne vstřebávat až poté, co je první jídlo již zcela vstřebáno. Citlivosti AAPS + Vážený průměr začnou počítat vstřebávání ihned, jakmile zadáte sacharidy. Jestliže jste snědli více než jedno jídlo, minimální rychlost vstřebávání sacharidů se nastaví podle velikosti jídla a max. doby absorpce. Minimální absorpce bude v porovnání s pluginy Oref vyšší.
+Při použití citlivosti AAPS, váženého průměru a Oref1 jsou výrazné rozdíly. Pluginy Oref předpokládají, že se vždy vstřebává pouze jedno jídlo. To znamená, že druhé jídlo se začne vstřebávat až poté, co je první jídlo již zcela vstřebáno. Citlivosti AAPS + Vážený průměr začnou počítat vstřebávání ihned, jakmile zadáte sacharidy. Jestliže jste snědli více než jedno jídlo, minimální rychlost vstřebávání sacharidů se nastaví podle velikosti jídla a max. doby absorpce. The minimum absorption accordingly will be higher in comparison to Oref plugins.

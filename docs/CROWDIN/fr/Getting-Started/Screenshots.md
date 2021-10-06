@@ -307,7 +307,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 #### Détection incorrecte des GA
 
-![Absorption lente des glucides](../images/Calculator_SlowCarbAbsorbtion.png)
+![Absorption lente des glucides](../images/Calculator_SlowCarbAbsorption.png)
 
 * Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. 
 * Donc si vous voulez faire un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! 
@@ -334,7 +334,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
    
    * âge du capteur & niveau (pourcentage de la batterie)
    * âge & niveau d'insuline (unités)
-   * âge canule
+   * cannula age
    * âge de la batterie de la pompe & niveau (pourcentage)
 
 * Les libellés "âge" et "niveaux" ne seront pas affichés si le thème [Basse résolution](../Configuration/Preferences#theme) est utilisé.
@@ -358,7 +358,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 #### Historique
 
-* Vous permet de revoir l'historique des données AAPS.
+* Allows you to ride back in AAPS history.
 
 #### DTI
 
@@ -453,11 +453,11 @@ Historique des traitements suivants :
 * [Changement de profil](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-arrete) - notes entrées dans l'onglet Action et notes dans les dialogues
 
-## Source Gly - xDrip, Application Dexcom (patchée)...
+## BG Source - xDrip, Dexcom App (patched)...
 
 ![Onglet Source Gly - ici xDrip](../images/Screenshots_BGSource.png)
 
-* Selon les votre source de glycémie, cet onglet est nommé différemment.
+* Depending on your BG source settings this tab is named differently.
 * Affiche l'historique des lectures MGC et propose l'option de supprimer la lecture en cas d'échec (par ex. sous la limite basse).
 
 ## NSClient

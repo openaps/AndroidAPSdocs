@@ -13,6 +13,44 @@ Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualis
 
 Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln, sondern aus Sicherheitsgründen erfolgt. Neue Versionen von AndroidAPS bieten nicht nur neue Funktionen, sondern auch wichtige Sicherheitsfixes. Deshalb ist es notwendig, dass jeder Anwender so schnell wie möglich aktualisiert. Leider gibt es noch Fehlerberichte aus sehr alten Versionen, so dass dies ein Versuch ist, die Sicherheit für jeden einzelnen Benutzer und die gesamte DIY-Community zu verbessern. Danke für dein Verständnis.
 
+Version 3.0.0
+================
+Erscheinungsdatum: XX.XX.2021
+
+Wichtige Hinweise
+----------------------
+* **Es wird nun mindestens Android 9.0 benötigt.**
+* **Es findet keine Migration der Daten in die neue Datenbank statt.** Beklagt Euch bitte nicht, es sind einfach zu tiefgreifende Änderungen und damit ist eine Übernahme nicht möglich. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein. Du musst einen neuen Profilwechsel erstellen und mit einem IOB und COB von 0 starten. Plane das Update sorgfältig!!! Die beste Situation wäre eine ohne aktives Insulin und ohne Kohlenhydrate an Bord.
+* Verwende immer die gleiche Version von AAPS und NSClient.
+
+Änderungen
+----------------------
+* XXXXk Zeilen geändert, XXXXk neue Codezeilen
+* Interne Datenbank aktualisiert auf Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+* Viel Code umgeschrieben zu Kotlin @MilosKozak
+* Neue interne Schnittstelle für Pumpentreiber
+* NSClient komplett neu programmiert, um eine bessere Synchronisierung und detailliertere Anpassungen zu ermöglichen @MilosKozak
+  * Einträge können nicht via NS gelöscht werden. (Sie können aber durch den NSClient als ungültig gekennzeichnet werden.)
+  * Einträgen können via Nightscout nicht geändert werden.
+  * Nightscout-Synchronisation ist (für Eltern) ohne engineering mode möglich.
+* Änderung am Verhalten von Profilwechseln. Jetzt wird zwischen Profilwechsel [Profile switch] *(was der Benutzer will)* und Profiländerung [Profile change] *(wenn Änderungen von Pump)* unterschieden. @MilosKozak
+* Beim Erstellen eines Profilwechsels kann ein temporäres Ziel für Aktivität gestartet werden. @MilosKozak
+* Das Nightscout-Profil gibt es nicht  mehr. Es wird nur noch das lokale Profil verwendet. Dieses kann aber mit Nightscout synchronisiert werden.  @MilosKozak
+* Verfahren zum Zurücksetzen eines vergessenen Master-Passworts. Um das Master-Passwort zurückzusetzen muss eine Datei mit Namen PasswordReset im Verzeichnis /AAPS/extra abgelegt und AAPS neu gestartet werden. Das neue Master-Passwort ist dann die Seriennummer Deiner Pumpe.
+* Rückverfolgung der Benutzereingaben @Philoul
+* Neue Automation TempTargetValue Trigger @Philoul
+* Verbesserung der Anzeige (user interface) @MilosKozak
+* History Browser aktualisiert und Fehler behoben @MilosKozak
+* Objective 9 wurde entfernt @MilosKozak
+* Fehler bei instabilen CGM-Werten behoben @MilosKozak
+* Verbesserung der Kommunikation mit DanaR und DanaRS @MilosKozak
+* CircleCI-Integration @MilosKozak
+* Unterstützung für Dana-i @MilosKozak
+* * Unterstützung für DiaconnG8
+* Änderung der Dateispeicherorte: /AAPS/extra (engineering mode) /AAPS/logs /AAPS/exports /AAPS/preferences
+
+
+
 Version 2.8.2
 ================
 Erscheinungsdatum: 23.01.2021
@@ -341,7 +379,7 @@ Einstellungen, die bei Umstellung von AMA zu SMB erforderlich sind
 --------------------------------------------------
 * Objective 10 muss gestartet sein, damit die SMB-Funktion zur Verfügung steht (der SMB-Reiter zeigt dir, welche Beschränkungen bestehen).
 * maxIOB enthält nun das gesamte IOB, nicht nur das hinzugefügte Basalinsulin. Das bedeutet: Wenn du einen Bolus von 8 IE gegeben hast und maxIOB ist 7, dann wird kein SMB ausgelöst, solange das Gesamt-IOB nicht wieder auf unter 7 IE abgefallen ist.
-* Der Standardwert von min_5m_carbimpact erhöht sich von 3 bei AMA auf 8 beim SMB. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
+* Der Standardwert von min_5m_carbimpact erhöht sich von 3 bei AMA auf 8 beim SMB. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen
 * Bitte beachte beim Erstellen einer AndroidAPS 2.0 apk: Configuration on demand wird in der aktuellen Version des Android Gradle Plugins nicht unterstützt! Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschlägt, dann kannst du folgendes tun:
 
   * Das Einstellungen-Fenster öffnen, indem du auf Datei > Einstellungen (auf dem Mac: Android Studio > Preferences) klickst.

@@ -59,7 +59,7 @@ Intervalos de tempo de vida habituais dos diferentes tipos de bateria:
 
 * **Energizer Ultimate Lithium**: 4 a 7 semanas
 * **Power One Alkaline** (Varta) Accu-chek: 2 to 4 semanas
-* **Eneloop recarregáveis** baterias(BK-3MCCE): 1 a 3 semanas
+* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
 
 Se a vida útil das suas baterias for significativamente mais curta do que os intervalos acima, confira as seguintes possíveis causas:
 

@@ -1,9 +1,9 @@
 Komponentų Apžvalga 
 **************************************************
-AndroidAPS nėra tik (pačių sukurta) programa, tai yra vienas iš skirtingų jūsų uždarosios sistemos modulių. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
+AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
    
 .. image:: ../images/modules.png
-  :alt: Komponentų apžvalga
+  :alt: Components overview
 
 .. pastaba:: 
    **SVARBUS SAUGOS ĮSPĖJIMAS**
@@ -26,7 +26,7 @@ Profilį sudaro
 
 * Bazė
 * JIF (jautrumo insulinui faktorius) yra jūsų kraujo gliukozės kiekis, kurį sumažina vienas vienetas insulino
-* IA (insulino ir angliavandenių santykis) - kiek vienas vienetas insulino padengia gramų angliavandenių
+* CR (carb ratio) is grams carbohydrate per one unit insulin
 * IVT (insulino veikimo trukmė).
 
 Negalima naudoti SGLT-2 inhibitorių
@@ -52,8 +52,8 @@ AndroidAPS **šiuo metu** veikia su
 - `Accu-Chek Insight pompa <../Configuration/Accu-Chek-Insight-Pump.md>`_ 
 - `Dana R pompa <../Configuration/DanaR-Insulin-Pump.md>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
+- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
 
 ** Kitos pompos**, kurios ateityje gali veikti su AndroidAPS, yra išvardytos puslapyje „Ateityje galimos naudoti pompos" <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
@@ -61,7 +61,7 @@ Jei norite įsigyti pompą ** savo lėšomis **, tiekėjų adresus skirtingose �
 
 Additional communication device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-For old medtronic pumps an additional communication devide (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
 
    -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
    -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
@@ -136,7 +136,7 @@ Pavyzdinis nustatymas
   
 Ką daryti laukiant modulių
 ==================================================
-Kartais užtrunka šiek tiek laiko, kol bus gauti visi uždaro ciklo moduliai. Nesijaudinkite, laukdami galite padaryti daug. BŪTINA patikrinti ir (jei reikia) pritaikyti bazę, insulino ir angliavandenių santykį (IA), jautrumo insulinui faktorių (JIF) ir kt. Ir galbūt atviras ciklas gali būti geras būdas išbandyti sistemą ir susipažinti su AndroidAPS. Šiame režime AndroidAPS teikia rekomendacijas, kurių galite laikytis rankiniu būdu.
+Kartais užtrunka šiek tiek laiko, kol bus gauti visi uždaro ciklo moduliai. Nesijaudinkite, laukdami galite padaryti daug. It is NECESSARY to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. Ir galbūt atviras ciklas gali būti geras būdas išbandyti sistemą ir susipažinti su AndroidAPS. Šiame režime AndroidAPS teikia rekomendacijas, kurių galite laikytis rankiniu būdu.
 
 You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <../Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 

@@ -119,7 +119,7 @@ Standardwert: 30 Min.
 
 ### Aktiviere UAM
 
-Wenn du diese Option aktivierst, dann kann der SMB unangekündigte Mahlzeiten erkennen. Das ist besonders dann hilfreich, wenn du vergisst sie in AndroidAPS einzugeben, dich verschätzt und eine zu geringe KH-Menge eingegeben hast oder wenn eine fett-eiweisslastige Mahlzeit länger wirkt als gedacht. UAM kann also auch ohne manuelle Kohlenhydrat-Eingaben des Nutzers automatisch erkennen, dass die Glukosewerte auf Grund von Mahlzeiten, Adrenalin oder anderen Einflüssen signifikant steigen und versuchen, dies mit SMB abzufangen. Dies funktioniert aber auch andersherum: wenn der Glukosewert schnell sinkt, wird der SMB früher gestoppt.
+Wenn du diese Option aktivierst, dann kann der SMB unangekündigte Mahlzeiten erkennen. Das ist besonders dann hilfreich, wenn du vergisst sie in AndroidAPS einzugeben, dich verschätzt und eine zu geringe KH-Menge eingegeben hast oder wenn eine fett-eiweisslastige Mahlzeit länger wirkt als gedacht. UAM kann also auch ohne manuelle Kohlenhydrat-Eingaben des Nutzers automatisch erkennen, dass die Glukosewerte auf Grund von Mahlzeiten, Adrenalin oder anderen Einflüssen siginifikant steigen und versuchen, dies mit SMB abzufangen. Dies funktioniert aber auch andersherum: wenn der Glukosewert schnell sinkt, wird der SMB früher gestoppt.
 
 **Deshalb sollte UAM bei SMB auch immer aktiv sein.**
 

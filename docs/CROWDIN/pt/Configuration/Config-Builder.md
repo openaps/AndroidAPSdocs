@@ -36,7 +36,7 @@ Botões:
 * vermelho (X): excluir
 * seta azul (↷): duplicar
 
-Se você fizer alguma alteração no seu perfil, certifique-se que está a editar o perfil correto. No separador perfil nem sempre há a visualização do perfil a ser utilizado atualmente-por exemplo, se fez uma troca de perfil usando o separador do perfil no ecrã inicial, este pode ser diferente do perfil realmente mostrado no separador de perfil, já que não há conexão entre estes.
+Se você fizer alguma alteração no seu perfil, certifique-se que está a editar o perfil correto. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
 #### Fazer Mudança De Perfil
 
@@ -296,7 +296,7 @@ Choose if you want to have a notes field when entering treatments or not.
 
 #### Luzes de Estado
 
-Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for canula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
 
 #### Advanced settings
 

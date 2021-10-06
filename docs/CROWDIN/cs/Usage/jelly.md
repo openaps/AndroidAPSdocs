@@ -23,7 +23,7 @@ Následující nastavení a pokyny pro manipulaci (použití hodinek pro ovlád�
 
 <b><font color="#FF0000">Velmi důležité:</b></font> Pokud nepotřebujete Android 8.1 (tj. smyčky s Acu-Check Combo), zůstaňte u Android 7.0!
 
-Postupujte podle těchto pravidel, abyste zůstali na Andorid 7.0:
+Follow these rules to stay with Android 7.0:
 
 * Nepřipojujte se k wifi nebo mobilní síti při prvním použití, abyste zabránili automatické aktualizaci.
 * Přeskočte nastavení sítě wifi.

@@ -12,16 +12,16 @@ For support on CGM sources please use the Facebook groups or discord channels fo
 
 ## Určitě se připojte do facebookové skupiny AndroidAPS users!
 
-Připojte se k hlavní skupině [AndroidAPS na Facebooku](https://www.facebook.com/groups/1900195340201874/). Můžete zde pokládat jakékoliv otázky týkající se algoritmu, Android Studia a sestavení APK, a také jakékoliv dotazy týkající se používání aplikace. Najdete zde rovněž tipy, jak aplikaci využít na maximum. Existuje také zvláštní skupina [AAPSCombo](https://www.facebook.com/groups/127507891261169/) pro uživatele pumpy Combo, kteří mají trochu odlišné nastavení.
+Připojte se k hlavní skupině [AndroidAPS na Facebooku](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. Existuje také zvláštní skupina [AAPSCombo](https://www.facebook.com/groups/127507891261169/) pro uživatele pumpy Combo, kteří mají trochu odlišné nastavení.
 
-## Ostatní zdroje v angličtině
+## Other resources in English
 
 * [Facebooková skupina Looped](https://www.facebook.com/groups/TheLoopedGroup): najdete zde vše, co se týká DIY systémů uzavřené smyčky (OpenAPS, Loop a AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): obecné informace o CGM
 * [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
 
-## Zdroje pro konkrétní země nebo jazyky
+## Country / language specific resources
 
 ### Austrálie
 

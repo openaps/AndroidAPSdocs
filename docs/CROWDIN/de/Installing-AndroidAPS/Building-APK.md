@@ -18,45 +18,45 @@ Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschläg
 * Deaktiviere die "Configure on demand" Checkbox.
 * Klicke Apply oder OK.
 
-## Recommended specification of computer for building apk file
+## Empfohlene Spezifikation des Computers zum Erstellen der Apk-Datei
 
 <table class="tg">
   
 <thead>
   <tr>
-    <th class="tg-baqh">OS(Only 64 bit)</th>
-    <th class="tg-baqh">Windows 8 or higher</th>
-    <th class="tg-baqh">Mac OS 10.14 or higher</th>
-    <th class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</th>
+    <th class="tg-baqh">Betriebssystem (nur 64 Bit)</th>
+    <th class="tg-baqh">Windows 8 oder höher</th>
+    <th class="tg-baqh">Mac OS 10.14 oder höher</th>
+    <th class="tg-baqh">Jedes Linux unterstützt Gnome, KDE oder Unity DE;&nbsp;&nbsp;GNU C Library 2.31 oder höher</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-baqh"><p align="center">CPU(Only 64 bit)</td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+    <td class="tg-baqh"><p align="center">CPU (nur 64 Bit)</td>
+    <td class="tg-baqh">x86_64 CPU-Architektur; Intel Core oder neuere Generation oder AMD CPU mit Unterstützung für einen <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">ARM-based Chips oder Intel Core der zweiten Generation oder neuer mit Unterstützung für <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">x86_64 CPU Architektur; Intel Core der zweiten Generation oder neuer, alternativ AMD Prozessor mit Unterstützung für AMD Virtualization (AMD-V) und SSSE3</td>
   </tr>
   <tr>
     <td class="tg-baqh"><p align="center">RAM</td>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+    <td class="tg-baqh" colspan="3"><p align="center">8GB oder mehr</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">Disk</td>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <td class="tg-baqh"><p align="center">Festplatte</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Mind. 30 GB freier Speicherplatz. SSD wird empfohlen.</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">Resolution</td>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <td class="tg-baqh"><p align="center">Bildschirmauflösung</td>
+    <td class="tg-baqh" colspan="3"><p align="center">min. 1280 x 800<br></td>
   </tr>
   <tr>
     <td class="tg-baqh"><p align="center">Internet</td>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Breitband</td>
   </tr>
 </tbody>
 </table>
 
-Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **It is strongly recommended to use SSD(Solid State Disk) instead of HDD(Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file if you can spend a long time ALONE to complete the build.
+Bitte beachte, dass sowohl eine **64-Bit-CPU als auch ein 64-Bit-Betriebssystem zwingend erforderlich sind**. Wenn Dein System diese Bedingung nicht erfüllt, musst Du die betroffene Hardware, Software oder das ganze System ersetzen. **Es wird dringend empfohlen, SSD (Solid State Disk) anstelle von HDD (Hard Disk Drive) zu verwenden, da dies dies die Zeit zur Erstellung der APS-Installationsdatei reduziert.** Dies wird nur empfohlen und ist nicht zwingend. Du kannst eine eine HDD-Festplatte verwenden, um die apk-Datei zu erstellen. Die Reine Erstellung wird dann nur deutlich länger dauern.
 
 * * *
 
@@ -67,7 +67,7 @@ Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.*
 
 ## Übersicht
 
-In general, the steps necessary to build the APK file:
+Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 
 1. [Git installieren](../Installing-AndroidAPS/git-install.rst)
 2. [Android Studio installieren](../Installing-AndroidAPS/Building-APK#android-studio-installieren)
@@ -78,9 +78,9 @@ In general, the steps necessary to build the APK file:
 7. [APK-Datei auf das Smartphone übertragen](../Installing-AndroidAPS/Building-APK#ubertrage-die-apk-datei-auf-das-smartphone)
 8. [Identifiziere den Empfänger falls Du xDrip verwendest+](../Installing-AndroidAPS/Building-APK#identifiziere-den-empfanger-falls-du-xdrip-verwendest)
 
-## Step by step walkthrough
+## Schritt für Schritt Anleitung
 
-Detailed description of the steps necessary to build the APK file.
+Detaillierte Beschreibung der notwendigen Schritte.
 
 ## Installiere git (falls du es noch nicht hast)
 
@@ -88,47 +88,47 @@ Die Schritt-für-Schritt-Anleitung findest Du auf der Seite zur [git Installatio
 
 ## Android Studio installieren
 
-The following screenshots have been taken from Android Studio Version 3.6.1. Your screen might look a bit different if you use a newer version of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
+Die folgenden Screenshots stammen aus Android Studio Version 3.6.1. Je nach verwendeter Android Studio-Version kann Dein Bildschirm etwas anders aussehen. Aber Du solltest Dich dennoch zurechtfinden. Bei Fragen gibt es [Hilfe in der Community](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
-One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
+Einer der wichtigsten Punkte bei der Installation von Android Studio ist: **Sei geduldig!** Während der Installation und Einrichtung lädt Android Studio sehr viele Daten nach und das braucht seine Zeit.
 
-Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
+Installiere [Android Studio](https://developer.android.com/studio/install.html) und richte es während des ersten Starts ein.
 
-Select "Do not import settings" as you have not used it before.
+Wähle “Do not import settings”, da bisher keine Einstellungen vorgenommen wurden.
 
-![Do not import settings](../images/AndroidStudio361_01.png)
+![Einstellungen nicht importieren](../images/AndroidStudio361_01.png)
 
-Decide whether you want to share data with Google or not.
+Entscheide, ob Du Daten mit Google teilen möchten oder nicht.
 
-![Share data with Google](../images/AndroidStudio361_02.png)
+![Daten mit Google teilen](../images/AndroidStudio361_02.png)
 
-On the following screen click "Next".
+Klicke auf dem nächsten Bildschirm den Button "Next".
 
-![Welcome screen](../images/AndroidStudio361_03.png)
+![Willkommensbildschirm](../images/AndroidStudio361_03.png)
 
-Select "Standard" installation and click "Next".
+Wähle “Standard” Installation und klicke auf “Next”.
 
-![Standard installation](../images/AndroidStudio361_04.png)
+![Standardinstallation](../images/AndroidStudio361_04.png)
 
-Select the theme for the user interface you like. (In this manual we used "Light".) Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
+Wähle das Design für die Benutzeroberfläche, das Dir am besten gefällt. (In dieser Anleitung verwenden wir "Light".) Dann klicke auf "Next". Das ist nur das Farbschema. Du kannst auswählen, was Du möchtest (z.B. "Darcula" für den dunklen Modus). Diese Auswahl hat keinen Einfluss auf die Erstellung der APK.
 
-![UI color scheme](../images/AndroidStudio361_05.png)
+![Farbschema](../images/AndroidStudio361_05.png)
 
-Click "Finish" on the "Verify Settings" dialog.
+Klicke auf “Finish” im Fenster “Verify Settings”.
 
-![Verify settings](../images/AndroidStudio361_06.png)
+![Einstellungen überprüfen](../images/AndroidStudio361_06.png)
 
-Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
+Warte während Android Studio zusätzliche Komponenten herunterlädt und bleibe geduldig. Sobald alles heruntergeladen ist, wird der Button "Finish" blau dargestellt. Klicke diesen dann an.
 
-![Downloading components](../images/AndroidStudio361_07.png)
+![Komponenten herunterladen](../images/AndroidStudio361_07.png)
 
-## Set git path in preferences
+## Git-Pfad in Android Studio eintragen
 
-Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer.
+Stelle sicher, dass [git auf Deinem Computer installiert ist](../Installing-AndroidAPS/git-install.rst).
 
-On the Android Studio welcome screen click the small triangle (1. in next screenshot) and select "Settings" (2.).
+Klicke auf dem Android Studio Willkommensbildschirm auf das kleine Dreieck (1. im folgenden Screenshot) und wähle "Settings" (2.).
 
-![Android Studio settings from welcome screen](../images/AndroidStudio361_08.png)
+![Einstellungen für Android Studio vom Willkommensbildschirm aus](../images/AndroidStudio361_08.png)
 
 ### Windows
 
@@ -240,7 +240,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 ## Signierte APK erstellen (Generate signed APK)
 
-Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Signieren bedeutet, dass Du die App mit einem digitalen Fingerabdruck versiehst und als von Dir erstellt kennzeichnest. Es ist notwendig, die App digital zu signieren, da Android aus Sicherheitsgründen nur signierten Code akzeptiert. Weitere Informationen dazu findest Du unter [diesem Link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Klicke in der Menüzeile auf "Build" und wähle "Generate Signed Bundle / APK...".
     
@@ -308,7 +308,7 @@ Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. A
 
 ## Identifiziere den Empfänger falls Du xDrip verwendest+
 
-[See xDrip+ page](../Configuration/xdrip#identify-receiver)
+[Siehe xDrip+ Seite](../Configuration/xdrip#identify-receiver)
 
 ## Problembehandlung
 

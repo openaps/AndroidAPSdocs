@@ -62,7 +62,7 @@ Dexcom G6를 직접 빌드한 덱스컴 앱과 사용하는 경우
 AndroidAPS에 대한 설정
 --------------------------------------------------
 * 구성 관리자에서 'Dexcom App (패치버전)'을 선택합니다.
-* 만약 혈당값을 수신하지 못하면, 임의로 다른 데이터 소스를 선택한 뒤 'Dexcom App (패치버전)'을 다시 선택합니다. 이는 AAPS와 BYODA-브로드캐스트의 연결 설정을 위한 권한 요청을 작동시킵니다.
+* If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
 
 xDrip+에 대한 설정
 --------------------------------------------------
@@ -87,7 +87,7 @@ G6의 문제 해결
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip+ PhoneServiceState
 
-일반적인 문제 해결 방법
+General troubleshooting
 --------------------------------------------------
 CGM에 대한 일반적인 문제해결은 '이 문서<./GeneralCGMRecommendation.html#troubleshooting>'에서 확인할 수 있습니다.
 

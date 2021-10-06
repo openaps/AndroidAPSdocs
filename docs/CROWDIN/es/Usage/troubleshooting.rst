@@ -25,8 +25,8 @@ Uso
 --------------------------------------------------
 * `Valores de carbohidratos erróneos <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 
-  .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
-    :alt: Error: absorbción lenta de carbohidratos
+  .. image:: ../images/Calculator_SlowCarbAbsorption.png
+    :alt: Error: Slow carb absorption
 
 * `Comandos SMS <../Children/SMS-Commands.html#troubleshooting>`_
 
@@ -51,6 +51,6 @@ Teléfonos
 * `Jelly <../Usage/jelly.html>`_
 * `Optimización de batería y bluetooth de Huawei <../Usage/huawei.html>`_
 
-Smartwaches
+Smartwatches (Relojes inteligentes)
 ==================================================
 * `Sony Smartwatch 3 <../Usage/SonySW3.html>`_

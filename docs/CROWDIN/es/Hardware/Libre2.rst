@@ -176,7 +176,7 @@ Método 1. es genial siempre y cuando usted no tiene que establecer un nuevo Lib
 
 Experiencias
 --------------------------------------------------
-En conjunto, es uno de los sistemas de MCG más pequeños del mercado. Pequeño, sin transmisor adicional y en su mayoría los valores son muy precisos sin fluctuaciones. Después de aproximadamente 12 horas de funcionamiento-en fase con desviaciones de hasta 30 mg/dl (1,7 mmol/l), las desviaciones son típicas inferiores a 10 mg/dl (0,6 mmol/l). Los mejores resultados se obtiene en el ante brazo posición trasera, otros puntos de inserción vaya con precaución! No hay necesidad de establecer un nuevo sensor un día antes para que se ajuste. Eso alteraría el mecanismo de nivelación interna.
+En conjunto, es uno de los sistemas de MCG más pequeños del mercado. Pequeño, sin transmisor adicional y en su mayoría los valores son muy precisos sin fluctuaciones. Después de aproximadamente 12 horas de funcionamiento-en fase con desviaciones de hasta 30 mg/dl (1,7 mmol/l), las desviaciones son típicas inferiores a 10 mg/dl (0,6 mmol/l). Los mejores resultados se obtiene en el ante brazo posición trasera, otros puntos de inserción vaya con precaución! No hay necesidad de establecer un nuevo sensor un día antes para que se ajuste. That would disturb the internal levelling mechanism.
 
 Parece que hay malos sensores de vez en cuando, que están muy lejos de los valores de la sangre. Se queda así. Estos deben ser sustituidos inmediatamente.
 

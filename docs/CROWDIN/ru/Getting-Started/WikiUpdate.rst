@@ -4,7 +4,7 @@
 Апрель 2021
 ==================================================
 * Список устройств связи <../Module/module.html#additional-communication-device>`_ для помп Omnipod и Medtronic
-* прогнозирование AAPS в ` Nightscout <../Instaling-AndroidAPS/Nightscout.html#manual-nightscout-setup> ` _
+* AAPS predictions in `Nightscout <../Installing-AndroidAPS/Nightscout.html#manual-nightscout-setup>`_
 
 Март 2021
 ==================================================
@@ -97,7 +97,7 @@
 Пролонгированный болюс - почему не работает в контексте ИПЖ <../Usage/Extended-Carbs.html#extended-bolus>`_
 * ` FAQ-занятия спортом <../Начало/FAQ.html#спорт> ` _
 * `Главный экран - линии на графике <../Getting-Started/Screenshots.html#section-e>`_
-* ` Insight-Выключить абсолютные значения в NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
+* `Insight - Disable absolute values in NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * ` Помпа Medtronic - возможные двойные записи <../Configuration/MedtronicPump.html> ` _
 * ` Новые инструкции по Freestyle Libre 2 <../Hardware/Libre2.html> ` _
 * Выбрать профиль с процент - пример <../Usage/Profiles.html>`_
@@ -123,7 +123,7 @@
 Сентябрь 2019 года
 ==================================================
 * ` Автоматизация <../Usage/Automation.html> ` _
-* `Калькулятор болюса <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - медленное усвоение углеводов
+* `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorption
 * " Безопасность Nightscout <../Installing-AndroidAPS/Nightscout.html#security-considerations> `
 * `Сдвиг времени профиля <../Usage/Profiles.html#timeshift>`_ (подробнее)
 * `Удаленный мониторинг <../Children/Children.html>`_

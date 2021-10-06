@@ -166,7 +166,7 @@ Assuming correct basal, you can test by checking IOB is zero and that you are in
 
 > **NOTA:**
 > 
-> En algunos países Europeos raciones o unidades pan fueron utilizadas para la determinación de la cantidad de insulina que se necesita para la comida. En el principio 1 unidad de pan equivalen a 12 g de carbohidratos, más tarde algunos cambiaron a 10g de carbohidratos.
+> En algunos países Europeos raciones o unidades pan fueron utilizadas para la determinación de la cantidad de insulina que se necesita para la comida. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
 > 
 > En este modelo, la cantidad de carbohidratos se fijó y la cantidad de insulina era variable. ("¿Cuánta insulina se necesita para cubrir una sola unidad de pan?")
 > 
@@ -174,7 +174,7 @@ Assuming correct basal, you can test by checking IOB is zero and that you are in
 > 
 > Ejemplo:
 > 
-> Bread unit fatcor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
+> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
 > Corresponding IC: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
 > 
@@ -196,7 +196,7 @@ Si, una vez digerida la comida y con la IOB a cero, tu BG continua más alta que
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-En AMA, DIA en realidad no significa la "duración de la actividad de la insulina ". Es un parámetro que tiene cierta relacion con DIA. Now, it means, 'in which time should the correction be finished'. No participan en el cáclulo de la IOB. En OpenAPS SMB, este parámetro ya no es necesario.
+En AMA, DIA en realidad no significa la "duración de la actividad de la insulina ". Es un parámetro que tiene cierta relacion con DIA. Now, it means, 'in which time should the correction be finished'. No participan en el cáclulo de la IOB. In OpenAPS SMB, there is no need for this parameter any longer.
 
 ## Perfil
 
@@ -263,10 +263,10 @@ El cambio de cartucho no puede realizarse desde AndroidAPS, debe llevarse a cabo
 
 * Mantén pulsado "Lazo Abierto"/"Lazo Cerrado" en la pestaña de inicio de AndroidAPS y selecciona "Detener Lazo 1h"
 * Ahora desconecta la bomba y cambia el cartucho según las instrucciones de la bomba.
-* También el llenado de tubo y la cánula se pueden hacer directamente en la bomba. En este caso, utilice el botón [ PRIME/FILL ](../Usage/CPbefore26#pump) en la pestaña de acciones sólo para registrar el cambio.
+* Also priming and filling tube and cannula can be done directly on the pump. En este caso, utilice el botón [ PRIME/FILL ](../Usage/CPbefore26#pump) en la pestaña de acciones sólo para registrar el cambio.
 * Una vez que hayas vuelto a conectar a la bomba, continúa el lazo manteniendo pulsado "Suspendido (X m)".
 
-El cambio de cánula no utiliza la función "cebado del equipo", pero se debe rellenar el equipo de infusión y/o la cánula con un bolo que no debe aparecer en el historial de bolos. Esto significa que no es necesario interrumpir la basal temporal que este funcionando. En la pestaña Acciones (Act), utilice el [PRIME/FILL botón](../Usage/CPbefore26#pump) para ajustar la cantidad de insulina necesaria para llenar el conjunto de infusión y comenzar el llenado. Si la cantidad no es suficiente, repite el llenado. Puedes establecer las cantidades predeterminadas de los botones en "Preferencias > Otros > Rellenar/Cebado cantidades de insulina standard". Consulta el folleto de instrucciones en tu caja de cánulas para saber cuántas unidades se deben utilizar para llenar las cánulas según la longitud de la aguja y la longitud del tubo.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. Esto significa que no es necesario interrumpir la basal temporal que este funcionando. En la pestaña Acciones (Act), utilice el [PRIME/FILL botón](../Usage/CPbefore26#pump) para ajustar la cantidad de insulina necesaria para llenar el conjunto de infusión y comenzar el llenado. Si la cantidad no es suficiente, repite el llenado. Puedes establecer las cantidades predeterminadas de los botones en "Preferencias > Otros > Rellenar/Cebado cantidades de insulina standard". See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 
 ## Fondo de pantalla
 
@@ -300,7 +300,7 @@ Cuando utilices lazo, debe intentar estos pasos:
 * Establecer una [objetivo de actividad temporal](../Usage/temptarget#activity-temp-target) por encima de su nivel objetivo.
 * Si utiliza SMB, asegúrese de que ["Habilitar SMB con objetivos temporales altas"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) y ["Habilitar SMB siempre"](../Usage/Open-APS-features#enable-smb-always) están inhabilitados.
 
-El pre y postprocesamiento de estos ajustes es importante. Realice los cambios en el tiempo antes del deporte y tenga en cuenta el efecto del relleno muscular.
+Pre- and post-processing of these settings is important. Realice los cambios en el tiempo antes del deporte y tenga en cuenta el efecto del relleno muscular.
 
 Si usted hace deportes regularmente al mismo tiempo (es decir, la clase deportiva en su gimnasio), puede considerar utilizar [automatización ](../Usage/Automation.rst) para el cambio de perfil y TT. La automatización basada en la ubicación también puede ser una idea, pero hace que el preproceso sea más difícil.
 

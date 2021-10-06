@@ -36,7 +36,7 @@ Mygtukai:
 * raudonas X: ištrinti
 * mėlyna rodyklė: dubliuoti
 
-Jei atliekate pakeitimus savo profilį, įsitikinkite, kad redaguojate teisingą profilį. Perjungiant į profilio skirtuką, ne visada rodomas šiuo metu naudojamas profilis. Pavyzdžiui, jei jūs Jei pakeitėte profilį per pradinį ekraną, profilio skirtuke gali būti rodomas kitas profilis.
+Jei atliekate pakeitimus savo profilį, įsitikinkite, kad redaguojate teisingą profilį. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
 #### Profilių perjungimo klonavimas
 
@@ -295,7 +295,7 @@ Pasirinkite, ar norite matyti pastabas, kai įvedate terapijas arba ne.
 
 #### Būklės indikatoriai
 
-Pasirinkite, ar norite matyti [būsenos indikatorius](../Configuration/Preferences#status-lights) kaniulės, insulino, sensoriaus, baterijos amžiui, rezervuaro ar baterijos lygiui. Pasiekus numatytą lygį, būsenos indikatorius taps geltonas. Kritinis lygis bus rodomas raudona spalva.
+Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. Pasiekus numatytą lygį, būsenos indikatorius taps geltonas. Kritinis lygis bus rodomas raudona spalva.
 
 #### Papildomi nustatymai
 

@@ -176,7 +176,7 @@ Either
 
 Experiences
 --------------------------------------------------
-Apskritai, tai yra viena iš mažiausių NGJ sistemų rinkoje. Maža, nereikia siųstuvo ir dažniausiai labai tikslūs duomenys be svyravimų. After approx. 12 hours running-in phase with deviations of up to 30 mg/dl (1,7 mmol/l)the deviations are typical smaller than 10 mg/dl (0,6 mmol/l). Geriausi rezultatai būna užpakalinėje žąsto pusėje, kitur - atsargiai! Nėra būtinybės įdurti naują jutiklį dieną prieš "įmirkymui". That would disturb the internal leveling mechanism.
+Apskritai, tai yra viena iš mažiausių NGJ sistemų rinkoje. Maža, nereikia siųstuvo ir dažniausiai labai tikslūs duomenys be svyravimų. After approx. 12 hours running-in phase with deviations of up to 30 mg/dl (1,7 mmol/l)the deviations are typical smaller than 10 mg/dl (0,6 mmol/l). Geriausi rezultatai būna užpakalinėje žąsto pusėje, kitur - atsargiai! Nėra būtinybės įdurti naują jutiklį dieną prieš "įmirkymui". That would disturb the internal levelling mechanism.
 
 Karts nuo karto pasitaiko blogų jutiklių, rodančių dideliu skirtumu palyginus su kraujo rodikliais. Taip būna. Tokie turėtų būti nedelsiant pakeisti.
 

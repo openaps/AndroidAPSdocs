@@ -166,7 +166,7 @@ Presupunând că bazala este corectă, puteți testa prin verificarea că IOB es
 
 > **NOTĂ:**
 > 
-> În unele ţări europene, se utilizează unităţi de pâine pentru determinarea cantității de insulină necesară pentru alimente. La început, o felie de pâine era echivalată cu 12g de carbohidrați, mai târziu unii au schimbat la 10g de carbohidrați.
+> În unele ţări europene, se utilizează unităţi de pâine pentru determinarea cantității de insulină necesară pentru alimente. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
 > 
 > În acest model s-a stabilit cantitatea de carbohidrați și cantitatea de insulină a fost variabilă. ("Cât insulină este necesară pentru a acoperi o felie de pâine?")
 > 
@@ -174,7 +174,7 @@ Presupunând că bazala este corectă, puteți testa prin verificarea că IOB es
 > 
 > Example:
 > 
-> Factor unitate de pâine (BU = 12g carbohidrați): 2,4 U/BU -> Aveți nevoie de 2,4 unități de insulină atunci când mâncați o felie de pâine.
+> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
 > IC corespunzător: 12g / 2,4 U = 5,0 g/U -> 5,0gr carbohidrați pot fi acoperiți cu o singură unitate de insulină.
 > 
@@ -196,7 +196,7 @@ Dacă după ce a fost digerată masa şi IOB s-a întors la zero, glicemia răm�
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-În AMA, DIA nu înseamnă de fapt "durata de acțiune a insulinei". Este un parametru care era anterior conectat la DIA. Acum, înseamnă "în care timp ar trebui să se termine corecţia". Nu are nicio legătură cu calcularea IOB-ului. În OpenAPS SMB, acest parametru nu mai este folosit deloc.
+În AMA, DIA nu înseamnă de fapt "durata de acțiune a insulinei". Este un parametru care era anterior conectat la DIA. Acum, înseamnă "în care timp ar trebui să se termine corecţia". Nu are nicio legătură cu calcularea IOB-ului. In OpenAPS SMB, there is no need for this parameter any longer.
 
 ## Profil
 
@@ -263,10 +263,10 @@ Schimbarea cartuşului nu poate fi făcută prin intermediul AndroidAPS, ci treb
 
 * Apăsați lung pe "Buclă deschisă"/"Buclă închisă" pe pagina principală a AndroidAPS și selectați 'Suspendă bucla pentru 1h'
 * Acum deconectaţi pompa şi schimbaţi rezervorul conform instrucţiunilor pentru fiecare pompă.
-* De asemenea, amorsarea și umplerea tubului și a canulei se pot face direct pe pompa. În acest caz utilizaţi butonul [AMORSARE/UMPLERE](../Usage/CPbefore26#pump) din pagina de acţiuni doar pentru a înregistra modificarea.
+* Also priming and filling tube and cannula can be done directly on the pump. În acest caz utilizaţi butonul [AMORSARE/UMPLERE](../Usage/CPbefore26#pump) din pagina de acţiuni doar pentru a înregistra modificarea.
 * Odată reconectat la pompă continuați bucla apăsând lung pe 'Suspendat (X m)'.
 
-Schimbarea unei canule nu foloseste insa functia "set de infuzie și amorsare" a pompei, ci umple setul de infuzie si/sau canula folosind un bolus care nu apare in istoria bolus. Aceasta înseamnă că nu întrerupe o rată bazală temporară care rulează în prezent. În pagina Acţiuni (Act), utilizaţi butonul de [AMORSARE/UMPLERE](../Usage/CPbefore26#pump) pentru a seta cantitatea de insulină necesară pentru a umple setul de infuzie şi a începe amorsarea. Dacă cantitatea nu este suficientă, repetați umplerea. Puteți seta butoanele pentru cantitatea standard în Preferințe > Altele > Cantitați standard de insulină umplere/amorsare. Urmăriți instrucțiunile din prezentarea aflată în cutia canulei pentru a vedea de câte unități este nevoie pentru a face amorsarea pompei, în funcție de lungimea acului și a tubului.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. Aceasta înseamnă că nu întrerupe o rată bazală temporară care rulează în prezent. În pagina Acţiuni (Act), utilizaţi butonul de [AMORSARE/UMPLERE](../Usage/CPbefore26#pump) pentru a seta cantitatea de insulină necesară pentru a umple setul de infuzie şi a începe amorsarea. Dacă cantitatea nu este suficientă, repetați umplerea. Puteți seta butoanele pentru cantitatea standard în Preferințe > Altele > Cantitați standard de insulină umplere/amorsare. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 
 ## Fundal
 
@@ -300,7 +300,7 @@ Când folosiți bucla ar trebui să încercați acești pași:
 * Setaţi o [ţintă temporară](../Usage/temptarget#activity-temp-target) deasupra ţintei standard.
 * Dacă utilizaţi SMB asiguraţi-vă că ["Activare SMB cu ţinte temporare mari"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) şi ["Activare SMB întotdeauna"](../Usage/Open-APS-features#enable-smb-always) sunt dezactivate.
 
-Pre și postprocesarea acestor setări este importantă. Faceţi schimbările la timp, înainte de sport şi luaţi în considerare efectul de umplere cu glucoză a muşchilor.
+Pre- and post-processing of these settings is important. Faceţi schimbările la timp, înainte de sport şi luaţi în considerare efectul de umplere cu glucoză a muşchilor.
 
 Dacă faceţi sport în mod regulat în aceeași perioadă a zilei (adică clasă de sport în sala) puteţi lua în considerare utilizarea de [automatizare](../Usage/Automation.rst) pentru schimbare profil şi TT. Automatizarea bazată pe locaţie ar putea fi de asemenea o idee, dar face preprocesarea mai dificilă.
 

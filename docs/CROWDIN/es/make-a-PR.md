@@ -28,7 +28,7 @@ Por nuestro ejemplo, vamos a hacer una edición a AndroidAPSdocs. Esto NO es nec
 
 ![editar doc](./images/PR1.png)
 
-     O puede hacer clic en el enlace "Edit in Github" en la esquina superior derecha y, a continuación, haga clic en el icono de lápiz que aparece en la barra superior del contenido de la página que desea editar.
+     Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited.
     
 
 ![RTD io](./images/PR2.png)
@@ -51,7 +51,7 @@ Por nuestro ejemplo, vamos a hacer una edición a AndroidAPSdocs. Esto NO es nec
 
 ![crear petición de modificación](./images/PR6.png)
 
-7. Eso completa la apertura de una solicitud de PR. GitHub asigna al PR un número, ubicado después del título y una marca de hash. Vuelva a esta página para comprobar los comentarios (o, si tiene notificaciones de Github enviadas por correo electrónico, obtendrá correos electrónicos que le notificarán de cualquier actividad en la SC). La edición ahora estará en una lista de relaciones públicas que el equipo revisará y potencialmente dará retroalimentación antes de comprometerse con la documentación principal de AndroidAPS! Si quieres ver el progreso de la PR, puedes hacer clic en el logo de la campana en la esquina superior derecha de tu cuenta de GitHub y ver todos tus PRs.
+7. Eso completa la apertura de una solicitud de PR. GitHub asigna al PR un número, ubicado después del título y una marca de hash. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). La edición ahora estará en una lista de relaciones públicas que el equipo revisará y potencialmente dará retroalimentación antes de comprometerse con la documentación principal de AndroidAPS! Si quieres ver el progreso de la PR, puedes hacer clic en el logo de la campana en la esquina superior derecha de tu cuenta de GitHub y ver todos tus PRs.
 
 ![Seguimiento de PR](./images/PR7.png)
 
@@ -152,11 +152,11 @@ Si desea establecer un enlace interno dentro de la documentación de AndroidAPS,
 
 Si usted está planeando hacer un montón de modificaciones, incluyendo la adición de imágenes para ayudar a ilustrar las partes de la documentación (¡gracias!), es posible que desee tomar el siguiente enfoque:
 
-* A medida que vas y guardas capturas de pantalla, renombra las capturas de pantalla a un nombre descriptivo - pero intenta no usar espacios ya que confunden a Github. En su lugar, utilice guiones bajos. Es decir, Example_batch_images_upload.png en vez de "Ejemplo de imágenes por lotes upload.png". 
+* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses GitHub. En su lugar, utilice guiones bajos. Es decir, Example_batch_images_upload.png en vez de "Ejemplo de imágenes por lotes upload.png". 
 * Por favor use tamaños razonables. Las imágenes de captura de pantalla deben ser **de 250 píxeles de ancho**.
 * Puede subir imágenes en lotes fácilmente mediante:
   
-  1. Navegue hasta la carpeta de imágenes (https: //github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - pero asegúrese de que está en su fork/copia de la carpeta docs Images para poder hacer esto (sustituya "openaps" en el URL con su nombre de usuario github)).
+  1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your GitHub username)).
   
   2. Haga clic en la esquina superior derecha donde dice "Cargar archivos"
   

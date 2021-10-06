@@ -307,7 +307,7 @@ Cuando usted quiere hacer un bolo para comida, aquí es de donde normalmente lo 
 
 #### Detección de COB incorrecta
 
-![Absorción lenta de carbohidratos](../images/Calculator_SlowCarbAbsorbtion.png)
+![Absorción lenta de carbohidratos](../images/Calculator_SlowCarbAbsorption.png)
 
 * Si ve el aviso anterior después de utilizar el asistente de bolos, AndroidAPS ha detectado que el valor COB calculado puede ser incorrecto. 
 * Así que si quieres dar un bolo de nuevo después de una comida previa con COB, debes ser consciente de una posible sobredosis! 
@@ -334,7 +334,7 @@ Cuando usted quiere hacer un bolo para comida, aquí es de donde normalmente lo 
    
    * sensor age & level (battery percentage)
    * insulin age & level (units)
-   * edad cánula
+   * cannula age
    * pump battery age & level (percentage
 
 * Less information will be shown if [low resolution skin](../Configuration/Preferences#skin) is used.
@@ -358,7 +358,7 @@ Cuando usted quiere hacer un bolo para comida, aquí es de donde normalmente lo 
 
 #### History Browser
 
-* Allows you to ride back in AAPS hsitory.
+* Allows you to ride back in AAPS history.
 
 #### DDT
 
@@ -453,11 +453,11 @@ History of the following treatments:
 * [Cambio de perfil](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
-## BG Source - xDrip, Dexcom App (pateched)...
+## BG Source - xDrip, Dexcom App (patched)...
 
 ![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
 
-* Depending on your BG source settings this tab is named differntly.
+* Depending on your BG source settings this tab is named differently.
 * Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
 
 ## NSClient

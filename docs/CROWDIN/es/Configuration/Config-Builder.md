@@ -36,7 +36,7 @@ Botones:
 * rojo X: borrar
 * flecha azul: duplicado
 
-Si realiza algún cambio en su perfil, asegúrese de que está editando el perfil correcto. En la pestaña de perfil no siempre se muestra el perfil real que se utiliza-por ejemplo, si usted hizo un cambio de perfil utilizando la pestaña de perfil en la pantalla de inicio puede diferir del perfil realmente mostrado en la pestaña de perfil, ya que no hay ninguna conexión entre estos.
+Si realiza algún cambio en su perfil, asegúrese de que está editando el perfil correcto. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
 #### Clonar cambio de perfil
 
@@ -295,7 +295,7 @@ Choose if you want to have a notes field when entering treatments or not.
 
 #### Luces de estado
 
-Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for canula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
 
 #### Advanced settings
 

@@ -12,7 +12,45 @@ ContextEdit.
 
 Если вы не обновитесь еще 30 дней (90 дней с новой даты выпуска) AAPS переключится в режим открытого цикла.
 
-Имейте в виду, что это изменение не предназначено для того, чтобы действовать вам на нервы, а существует по соображениям безопасности. Новые версии AndroidAPS не только обеспечивают новые возможности, но и содержат исправления безопасности. Поэтому необходимо, чтобы каждый пользователь обновлял приложение как можно чаще. К сожалению, все еще поступают сообщения об ошибках из очень старых версий, поэтому это попытка повысить безопасность каждого пользователя и всего сообщества. Благодарим за понимание!
+Имейте в виду, что это изменение не предназначено для того, чтобы действовать вам на нервы, а существует по соображениям безопасности. Новые версии AndroidAPS не только обеспечивают новые возможности, но и содержат исправления безопасности. Therefore it is necessary that every user updates a.s.a.p.. К сожалению, все еще поступают сообщения об ошибках из очень старых версий, поэтому это попытка повысить безопасность каждого пользователя и всего сообщества. Благодарим за понимание!
+
+Version 3.0.0
+================
+Release date: XX-XX-2021
+
+Важные Примечания
+----------------------
+* **Minimum Android version is 9.0 now.**
+* **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new profile switch and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
+* Use the same version of AAPS and NSClient
+
+Изменения
+----------------------
+* XXXXk lines changed, XXXXk new lines of code
+* Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+* Lot of code rewritten to Kotlin @MilosKozak
+* New internal interface for pump drivers
+* NSClient rewritten for better synchronization and more detailed customization @MilosKozak
+  * Record deletion from NS is not allowed (only invalidation through NSClient)
+  * Record modification from NS is not allowed
+  * Sync setting available without engineering mode (for parents)
+* Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak
+* You can start activity temporary target during creation of profile switch @MilosKozak
+* NSProfile is gone. RIP. Only local profile is used and you can enable synchronization with NS @MilosKozak
+* Forgotten master password reset procedure. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
+* User actions tracing @Philoul
+* New automation TempTargetValue trigger @Philoul
+* UI improvements @MilosKozak
+* History browser updated and fixed @MilosKozak
+* Objective9 removed @MilosKozak
+* Fixed bug associated to unstable CGM data @MilosKozak
+* DanaR and DanaRS communication improvement @MilosKozak
+* CircleCI integration @MilosKozak
+* Dana-i support @MilosKozak
+* DiaconnG8 support
+* Files location change: /AAPS/extra (engineering mode) /AAPS/logs /AAPS/exports /AAPS/preferences
+
+
 
 Версия 2.8.2
 ================
@@ -33,7 +71,7 @@ ContextEdit.
 ================
 Дата выпуска: 12-01-2021
 
-Важные Примечания
+Важные подсказки
 ----------------------
 * Параметр **NS_UPLOAD_ONLY** (только загрузка в NS) был принудительно включен для всех пользователей 2.8.1. 
 * Если вы используете NSClient для ввода временных целей TT, углеводов или профилей вы должны отключить его в AAPS, но **только в том случае, если ваша синхронизация хорошо работает** (т. е. вы не видите нежелательных вариаций в данных, таких как произвольное самоизменение TT, TBR и т. д.). 
@@ -58,7 +96,7 @@ ContextEdit.
 ================
 Дата выпуска: 01-01-2021
 
-Важные подсказки
+Важные Примечания
 ----------------------
 * **Минимальная версия теперь Android 8.0.** Для более старых версий Android, все еще можно использовать 2.6.1.4 в старом репозитории. 
 * «Цели претерпели изменения. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Завершите выполнение целей до обновления.**
@@ -257,7 +295,7 @@ ContextEdit.
 * Новый модуль `Автоматизация <../Usage/Automation.html>`_
 * Позволяет подать `только часть болюса <../Configuration/Preferences.html#advanced-settings-overview>`_ с калькулятора болюса
 * Рендеринг активности инсулина
-* Корректировка прогнозов IOB с помощью результата autosense
+* Adjusting IOB predictions by autosens result
 Новая поддержка модифицированных приложений Dexcom (<https://github.com/dexcomapp/dexcomapp/tree/master/2.4> папка 2.4)
 * Верификатор подписи
 * Возможность обойти цели пользователям OpenAPS
@@ -335,7 +373,7 @@ ContextEdit
 
 Новые возможности
 --------------------------------------------------
-* Поддержка oref1/SMB (<https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>документация oref1). Обязательно прочтите документацию, чтобы знать, чего ожидать от SMB, как он себя поведет, чего может достичь и как добиться его ровной работы.
+* oref1/SMB support (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achieve and how to use it so it can operate smoothly.
 * ` _Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html> ` _ Поддержка помпы
 * Мастер установки: направляет вас через процесс настройки AndroidAPS
 
@@ -343,7 +381,7 @@ ContextEdit
 --------------------------------------------------
 * Для включения SMB необходимо начать выполнение цели 10 (вкладка SMB обычно показывает какие применяются ограничения)
 * maxIOB теперь включает весь IOB, а не только добавленный базал. То есть, если дан болюс 8 ед. на еду a максимальный IOB ограничен 7 ед., то SMB не будет подан до тех пор, пока активный инсулин IOB не опустится ниже 7 ед.
-* минимальное воздействие углеводов min_5m_carbimpact по умолчанию изменилось с 3 до 8, при переходе с AMA на SMB. Если вы переходите с AMA на SMB, то вам нужно изменить его вручную
+* минимальное воздействие углеводов min_5m_carbimpact по умолчанию изменилось с 3 до 8, при переходе с AMA на SMB. If you are upgrading from AMA to SMB, you have to change it manually
 * Обратите внимание при создании приложения AndroidAPS 2.0: Выборочная Конфигурация не поддерживается текущей версией плагина Android Gradle! Если сборка выполнена с ошибкой, относящейся к "выборочной конфигурации", можно сделать следующее:
 
   * Откройте окно настроек, нажав Файл > Настройки (на Mac, Android Studio > Настройки).
@@ -378,7 +416,7 @@ ContextEdit
 * Переработан конфигуратор и вкладки целей, добавлены описания
 * Новый значок приложения
 * Много улучшений и исправлений
-* независимые от Nightscout оповещения, если помпа недоступна длительное время (например, севшая батарея помпы) и пропущенные показания ГК (см. _Локальные оповещения _ в настройках)
+* Nightscout-independent alerts if pump is unreachable for a longer time (e.g. севшая батарея помпы) и пропущенные показания ГК (см. _Локальные оповещения _ в настройках)
 * Возможность держать экран включенным
 * Опция отображения уведомлений как уведомление Android
 * Расширенная фильтрация (позволяющая всегда включать SMB и на 6час. после еды) поддерживаемая модифицированным приложением Dexcom или xDrip в нативном режиме G5 в качестве источника ГК.

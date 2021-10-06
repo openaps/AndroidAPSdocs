@@ -69,7 +69,7 @@ Een alternatieve manier is om de Profiel wissel direct in mLab te verwijderen zo
 ### 'Profiel Wissel ontvangen van NS maar profiel bestaat niet lokaal'
 
 * Het gevraagde profiel is niet correct gesynchroniseerd met Nightscout.
-* Volg de instructies hierboven om de Profiel wissel te verwijderen
+* Follow instructions from above to delete the profile switch
 
 Een alternatieve manier is om de Profiel wissel direct in mLab te verwijderen:
 

@@ -1,9 +1,9 @@
 구성 요소 개요 
 **************************************************
-AndroidAPS 은 단순한 (self-built) 응용 프로그램이 아니며, 여러개의 모듈 중 하나인 closed loop 시스템입니다. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
+AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
    
 .. 이미지::. /images/modules.png
-  :alt: 구성 요소 개요
+  :alt: Components overview
 
 .. 참고:: 
    ** 중요 안전 수칙 **
@@ -26,7 +26,7 @@ AndroidAPS 은 단순한 (self-built) 응용 프로그램이 아니며, 여러�
 
 * BR (Basal rates)
 * ISF (인슐린 민감도) 는 1단위 인슐린당 떨어지는 혈당의 수치를 의미한다
-* CR (탄수화물 비율) 은 1단위 인슐린당의 섭취할 수 있는 탄수화물 양을 뜻한다.
+* CR (carb ratio) is grams carbohydrate per one unit insulin
 * DIA (인슐린 작용의 지속 시간)
 
 SGLT-2 억제제의 미사용
@@ -52,8 +52,8 @@ Users are strongly encouraged to keep their build of AndroidAPS up to date for s
 - 아큐첵 인사이트 <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - 다나R <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
+- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
 
 AndroidAPS와 호환될 수 있는 가능성이 있는 **그외 펌프**는 <../Getting-Started/Future-possible-Pump-Drivers.html>`_ 페이지 '미래(가능한) 펌프'에 목록이 나와있습니다.
 
@@ -61,7 +61,7 @@ AndroidAPS와 호환될 수 있는 가능성이 있는 **그외 펌프**는 <../
 
 Additional communication device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-For old medtronic pumps an additional communication devide (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
 
    -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
    -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
@@ -136,7 +136,7 @@ Xdrip앱을 혈당소스로 해야할 필요는 없지만 예시로 사용해볼
   
 모듈을 대기하는 동안 수행할 작업들
 ==================================================
-Loop를 close하기 위해 모든 모듈을 가져오는데 가끔은 시간이 걸릴 수 있습니다. 하지만 기다리는 동안 이행해야 하는 작업들이 많기 때문에 걱정하지 마시기 바랍니다. 적응된 basal rate (BR), 인슐린-탄수화물비율 (IC), 인슐린 민감도 (ISF) 등 사용전에 꼭 확인해보시기 바랍니다. AdroidAPS에 익숙해지기 위해 시스템을 테스트 해보기 위해서는 open loop를 사용해보시는 것이 좋습니다. 이 모드를 사용하면 안드로이드APS가 제공하는 조언들을 수동으로 실행할 수 있습니다.
+Loop를 close하기 위해 모든 모듈을 가져오는데 가끔은 시간이 걸릴 수 있습니다. 하지만 기다리는 동안 이행해야 하는 작업들이 많기 때문에 걱정하지 마시기 바랍니다. It is NECESSARY to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. AdroidAPS에 익숙해지기 위해 시스템을 테스트 해보기 위해서는 open loop를 사용해보시는 것이 좋습니다. 이 모드를 사용하면 안드로이드APS가 제공하는 조언들을 수동으로 실행할 수 있습니다.
 
 You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <../Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 

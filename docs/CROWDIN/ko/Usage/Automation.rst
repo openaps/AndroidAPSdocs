@@ -22,7 +22,7 @@ Important note
 --------------------------------------------------
 **Automation is still active when you disable loop!**
 
-So make sure to deactivate automation rules during these occasions if neccessary. You can do so by unticking the box left of the name of your automation rule.
+So make sure to deactivate automation rules during these occasions if necessary. You can do so by unticking the box left of the name of your automation rule.
 
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Activate and deactivaten automation rule
@@ -58,7 +58,7 @@ You can choose between several conditions. Here are some things explained, but m
 * Time vs. recurring time
 
   * time =  single time event
-  * recurring time = something that happens regulalrly (i.e. once a week, every working day etc.)
+  * recurring time = something that happens regularly (i.e. once a week, every working day etc.)
    
 * location: in the config builder (Automation), you can select which location service you want to use:
 
@@ -154,4 +154,4 @@ Please be aware to use automation incorrectly. This might lead to difficulties a
 Alternatives
 ==================================================
 
-For advanced users, there are other posibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found `here <./automationwithapp.html>`_.
+For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found `here <./automationwithapp.html>`_.

@@ -25,7 +25,7 @@ Depanare
 Probleme de conectare
 --------------------------------------------------
 
-Conexiunea Bluetooth poate fi deranjată de alte dispozitive Bluetooth din apropiere, cum ar fi glucometre, căști, tablete sau dispozitive de bucătărie cum ar fi cuptoarele cu microunde sau plitele electrice. În acest caz, xDrip nu afișează valorile glicemiei. Când conexiunea bluetooth este restabilită, datele sunt recuperate și completate.
+Conexiunea Bluetooth poate fi deranjată de alte dispozitive Bluetooth din apropiere, cum ar fi glucometre, căști, tablete sau dispozitive de bucătărie cum ar fi cuptoarele cu microunde sau plitele electrice. În acest caz, xDrip nu afișează valorile glicemiei. When bluetooth connection is restabilised the data is backfilled.
 
 Erori senzor
 --------------------------------------------------

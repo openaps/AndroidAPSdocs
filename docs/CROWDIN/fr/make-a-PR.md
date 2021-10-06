@@ -28,7 +28,7 @@ Pour notre exemple, nous allons faire une modification à AndroidAPSdocs. Cela n
 
 ![éditer un document](./images/PR1.png)
 
-     Ou vous pouvez cliquer sur le lien "Edit in Github" dans le coin supérieur droit, puis cliquer sur l'icône en forme de crayon qui apparaît dans la barre supérieure de la page à éditer.
+     Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited.
     
 
 ![RTD io](./images/PR2.png)
@@ -51,7 +51,7 @@ Pour notre exemple, nous allons faire une modification à AndroidAPSdocs. Cela n
 
 ![créer un pull request](./images/PR6.png)
 
-7. Cela termine l'ouverture d'un Pull Request, PR. GitHub affecte au PR un numéro, situé après le titre et un caratère dièse. Retournez sur cette page pour vérifier si vous avez un retour (ou si vous avez des notifications Github envoyées par email, vous recevrez des emails vous indiquant toutes activités sur le PR). La modification sera maintenant dans une liste de PR que l'équipe de documentation va examiner et elle vous fera éventuellement des commentaires avant de l'intégrer dans la documentation principale d'AndroidAPS ! Si vous voulez vérifier l'avancement du PR, vous pouvez cliquer sur le logo de la cloche dans le coin supérieur droit de votre compte GitHub pour voir toutes vos notifications.
+7. Cela termine l'ouverture d'un Pull Request, PR. GitHub affecte au PR un numéro, situé après le titre et un caratère dièse. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). La modification sera maintenant dans une liste de PR que l'équipe de documentation va examiner et elle vous fera éventuellement des commentaires avant de l'intégrer dans la documentation principale d'AndroidAPS ! Si vous voulez vérifier l'avancement du PR, vous pouvez cliquer sur le logo de la cloche dans le coin supérieur droit de votre compte GitHub pour voir toutes vos notifications.
 
 ![Suivi des PR](./images/PR7.png)
 
@@ -152,11 +152,11 @@ Si vous voulez définir un lien interne dans la documentation AndroidAPS, n'util
 
 Si vous prévoyez de faire beaucoup de modifications, y compris d'ajouter des images pour illustrer certaines parties de la documentation (merci !), vous pouvez adopter l'approche suivante :
 
-* Au fur et à mesure que vous enregistrez des captures d'écran, renommez les avec un nom descriptif, mais n'utilisez pas d'espaces car Github n'aime pas cela. Utilisez à la place des underscores. Par ex. Exemple_lots_images_upload.png au lieu de "Exemple lots images upload.png". 
+* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses GitHub. Utilisez à la place des underscores. Par ex. Exemple_lots_images_upload.png au lieu de "Exemple lots images upload.png". 
 * Veuillez utiliser des tailles raisonnables. Les images de capture d'écran doivent être de **250 pixels de largeur**.
 * Vous pouvez télécharger des images par lots facilement en :
   
-  1. Naviguez jusqu'au dossier images (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - mais vérifiez que vous êtes bien dans votre fork/copie du dossier Images de la documentation pour pouvoir faire ceci (remplacez "openaps" dans l'URL par votre nom d'utilisateur github)).
+  1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your GitHub username)).
   
   2. Cliquez dans le coin supérieur droit là ou c'est écrit "Upload files"
   

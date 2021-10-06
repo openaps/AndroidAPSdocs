@@ -85,7 +85,7 @@ Jei ryšys tarp AAPS ir DanaRS pompos nutrūksta boluso suleidimo metu (pvz.: J�
 
 ## Specialūs veiksmai keičiant telefoną
 
-Kai keičiate seną telefoną į naują, turite atlikti šiuos veiksmus:
+When switching to a new phone the following steps are necessary:
 
 * [Eksportuokite nustatymus](../Usage/ExportImportSettings#export-settings) senajame telefone
 * Perkelkite nustatymus į naują telefoną
@@ -97,4 +97,4 @@ Kai keičiate seną telefoną į naują, turite atlikti šiuos veiksmus:
 
 ## Keliavimas per skirtingas laiko juostas su DanaRS pompa
 
-Žiūrėkite skyrių [Keliavimas per skirtingas laiko juostas su pompa](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).

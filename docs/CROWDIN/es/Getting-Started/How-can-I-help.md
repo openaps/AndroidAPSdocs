@@ -12,12 +12,12 @@ Los desarrolladores son los padres, guardianes, seres queridos y personas con di
 
 ## Conozco el sistema y puedo escribir documentación!
 
-¡Genial, esto es una cosa muy apreciada y una buena manera de pagarlo de antemano!
+Great, this is a highly appreciated thing and a good way to pay it forward!
 
 * The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
 * Puede encontrar una guía sobre cómo realizar confirmaciones en el wiki inglés: [Cómo hacer un PR](../make-a-PR.md). Los demás idiomas sólo se traducen del inglés y no se pueden editar por razones de coherencia.
 
-## Yo hablo varios idiomas y quiero traducir la aplicación o la documentación
+## I do speak multiple languages and want to translate the app or the documentation
 
 * Si desea traducir **la aplicación** a otros idiomas (gracias), utilice [crowdin](https://crowdin.com/project/androidaps).
 * Si desea traducir **los documentos** a otros idiomas (gracias), por favor use [crowdin](https://crowdin.com/project/androidapsdocs). 

@@ -51,6 +51,6 @@ Smartphones
 * `Jelly <../Usage/jelly.html>`_
 * `Huawei Bluetooth & Optimierung der Akkulaufzeit <../Usage/huawei.html>`_
 
-Smartwach
+Smartwatch
 ==================================================
 * `Sony Smartwatch 3 <../Usage/SonySW3.html>`_

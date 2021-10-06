@@ -307,7 +307,7 @@ Paprastai faktinė glikemijos kreivė baigsis šių eilučių viduryje arba neto
 
 #### Wrong COB detection
 
-![Lėtas angliavandenių įsisavinimas](../images/Calculator_SlowCarbAbsorbtion.png)
+![Lėtas angliavandenių įsisavinimas](../images/Calculator_SlowCarbAbsorption.png)
 
 * If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. 
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
@@ -334,7 +334,7 @@ Paprastai faktinė glikemijos kreivė baigsis šių eilučių viduryje arba neto
    
    * sensor age & level (battery percentage)
    * insulin age & level (units)
-   * canula age
+   * cannula age
    * pump battery age & level (percentage
 
 * Less information will be shown if [low resolution skin](../Configuration/Preferences#skin) is used.
@@ -358,7 +358,7 @@ Paprastai faktinė glikemijos kreivė baigsis šių eilučių viduryje arba neto
 
 #### History Browser
 
-* Allows you to ride back in AAPS hsitory.
+* Allows you to ride back in AAPS history.
 
 #### BPD
 
@@ -453,11 +453,11 @@ History of the following treatments:
 * [Profilio keitimas](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
-## BG Source - xDrip, Dexcom App (pateched)...
+## BG Source - xDrip, Dexcom App (patched)...
 
 ![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
 
-* Depending on your BG source settings this tab is named differntly.
+* Depending on your BG source settings this tab is named differently.
 * Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
 
 ## NSClient

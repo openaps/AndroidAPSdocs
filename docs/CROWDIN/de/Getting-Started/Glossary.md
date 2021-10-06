@@ -149,7 +149,7 @@
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - Update auf neue Version...</a></td>
 </tr>
 <tr>
- <td><strong>Github</strong></td>
+ <td><strong>GitHub</strong></td>
  <td>webbasierter Hosting-Dienst für die Versionskontrolle mit Git <br>-> Speicherort des Quellcodes</td>
  <td>&nbsp;</td>
  <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>

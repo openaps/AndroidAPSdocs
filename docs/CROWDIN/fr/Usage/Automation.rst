@@ -22,7 +22,7 @@ Remarque importante
 --------------------------------------------------
 **L'automatisation est toujours active lorsque vous désactivez la boucle !**
 
-Veillez donc à désactiver les règles d'automatisation pendant ces moments si nécessaire. Vous pouvez le faire en décochant la case à gauche du nom de votre règle d'automatisation.
+So make sure to deactivate automation rules during these occasions if necessary. Vous pouvez le faire en décochant la case à gauche du nom de votre règle d'automatisation.
 
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Activer et désactiver une règle d'automatisation
@@ -58,7 +58,7 @@ Vous pouvez choisir entre plusieurs conditions. Voici quelques explications, mai
 * Temps vs. Période répétitive
 
   * Temps = événement unique
-  * Période répétitive = quelque chose qui arrive régulièrement (par ex. une fois par semaine, chaque jour ouvrable, etc)
+  * recurring time = something that happens regularly (i.e. une fois par semaine, chaque jour ouvrable, etc)
    
 * Localisation : dans le générateur de configuration (Automatisation), vous pouvez choisir le service de localisation que vous souhaitez utiliser :
 
@@ -154,4 +154,4 @@ Veuillez noter que si vous n'utilisez pas correctement l'automatisation, cela po
 Alternatives
 ==================================================
 
-Pour les utilisateurs avancés, il existe d'autres posibilités pour automatiser les tâches à l'aide de IFTTT ou d'une application Android tierce appelée Automate. Quelques exemples sont disponibles `ici <./automationwithapp.html>`_.
+For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Quelques exemples sont disponibles `ici <./automationwithapp.html>`_.

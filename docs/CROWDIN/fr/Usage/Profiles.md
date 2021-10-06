@@ -69,7 +69,7 @@ Vous pouvez également supprimer le sélecteur de profil directement dans mLab c
 ### 'Changement de profil reçu de NS mais le profil n'existe pas localement'
 
 * Le profil demandé n'a pas été correctement synchronisé depuis Nightscout.
-* Suivez les instructions ci-dessus pour effacer le changement de profil
+* Follow instructions from above to delete the profile switch
 
 Vous pouvez également supprimer le changement de profil directement dans mLab :
 

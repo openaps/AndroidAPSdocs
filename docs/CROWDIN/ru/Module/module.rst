@@ -1,9 +1,9 @@
 # Обзор компонентов 
 **************************************************
-AndroidAPS - это не просто (самостоятельно собранное) приложение, это один из модулей закрытой системы ИПЖ. Прежде чем выбрать компоненты, неплохо рассмотреть их в `комплексе компонентов <../index.html#component-setup> `_.
+AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Прежде чем выбрать компоненты, неплохо рассмотреть их в `комплексе компонентов <../index.html#component-setup> `_.
    
 .. изображение:../images/modules.png
-  :alt: Обзор компонентов
+  :alt: Components overview
 
 .. примечание:: 
    **ВАЖНОЕ ПРЕДОСТЕРЕЖЕНИЕ**
@@ -26,7 +26,7 @@ AndroidAPS - это не просто (самостоятельно собран
 
 * BR (скорость подачи базового инсулина)
 * ISF (коэффициент чувствительности к инсулину) определяет вашу величину понижения ГК в результате введения 1 единицы инсулина
-* CR (соотношение инсулин-углеводы) это количество граммов углеводов на единицу инсулина
+* CR (carb ratio) is grams carbohydrate per one unit insulin
 * DIA (продолжительность действия инсулина).
 
 Не использовать SGLT-2 ингибиторы
@@ -54,8 +54,8 @@ AndroidAPS **на данный момент** работает с
 - `Помпа Accu-Chek Insight <./Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `некоторые старые помпы Medtronic <../Configuration/MedtronicPump.html>`_ из версии 2.4 (` требуется дополнительное устройство коммуникации <../Module/module.html#additional-communication-device>`)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`требуется дополнительное устройство коммуникации <../Module/module.html#additional-communication-device>`)
+- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
 
 **Другие помпы** которые потенциально могут работать с AndroidAPS перечислены на странице `Будущие (возможные) помпы <../Getting-Started/Future-possible-Pump-Drivers.html>`.
 
@@ -63,7 +63,7 @@ AndroidAPS **на данный момент** работает с
 
 Дополнительное устройство коммуникации
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Для старых помп Medtronic требуется дополнительное устройство коммуникации (кроме вашего телефона) для "перевода" радиосигнала от помпы на Bluetooth. Убедитесь, что выбрана правильная версия для вашей помпы.
+For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Убедитесь, что выбрана правильная версия для вашей помпы.
 
    - |OrangeLink| `сайт OrangeLink <https://getrileylink.org/product/orangelink>`_    
    - |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
@@ -138,7 +138,7 @@ xDrip +
   
 Что делать во время ожидания модулей
 ==================================================
-Иногда требуется некоторое время, чтобы получить все модули для закрытого цикла ИПЖ. Но не беспокойтесь, можно многое сделать во время ожидания. НЕОБХОДИМО проверить и (где требуется) адаптировать базальную скорость (BR), соотношение инсулин-углеводы (IC), фактор чувствительности к инсулину (ISF) и т. д. И, возможно, незамкнутый цикл может быть хорошим способом проверить систему и познакомиться с AndroidAPS. В этом режиме AndroidAPS дает рекомендации, которые можно выполнить вручную.
+Иногда требуется некоторое время, чтобы получить все модули для закрытого цикла ИПЖ. Но не беспокойтесь, можно многое сделать во время ожидания. It is NECESSARY to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. И, возможно, незамкнутый цикл может быть хорошим способом проверить систему и познакомиться с AndroidAPS. В этом режиме AndroidAPS дает рекомендации, которые можно выполнить вручную.
 
 Вы можете продолжать читать документацию здесь `<../Where-To-Go-For-Help/Background-reading.html>`_общаться с другими пользователями в сети или offline, узнавать мнение людей (при этом учитывая, что не все рекомендации вам подходят).
 

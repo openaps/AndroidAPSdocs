@@ -307,7 +307,7 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 
 #### Verkeerde COB-detectie
 
-![Langzame koolhydraat absorptie](../images/Calculator_SlowCarbAbsorbtion.png)
+![Langzame koolhydraat absorptie](../images/Calculator_SlowCarbAbsorption.png)
 
 * Als je de waarschuwing hierboven ziet na het gebruik van de boluswizard, dan heeft AndroidAPS vastgesteld dat de berekende COB-waarde misschien onjuist is. 
 * Dit betekent dat, als je weer wilt bolussen en je hebt nog COB van een vorige maaltijd, je moet uitkijken voor overdosering! 
@@ -334,7 +334,7 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
    
    * sensor leeftijd & niveau (batterij percentage)
    * insuline leeftijd & niveau (eenheden)
-   * infuus leeftijd
+   * cannula age
    * pomp batterij leeftijd & niveau (percentage)
 
 * Er wordt minder informatie getoond als je de ['Lage resolutie' skin](../Configuration/Preferences#skin) gebruikt.
@@ -358,7 +358,7 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 
 #### Historiek venster
 
-* Hiermee kunt je jouw gegevens terugkijken in het AAPS historiek venster.
+* Allows you to ride back in AAPS history.
 
 #### TDD
 
@@ -453,11 +453,11 @@ Geschiedenis van de volgende behandelingen:
 * [Profiel wissel](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-discontinued) - hier vind je notities terug die zijn ingevoerd via het Acties tabblad of via het notities veld in dialoogvensters
 
-## BG bron - xDrip, Dexcom App (aangepast)...
+## BG Source - xDrip, Dexcom App (patched)...
 
 ![BG Bron tabblad - hier xDrip](../images/Screenshots_BGSource.png)
 
-* Afhankelijk van de BG bron die je gebruikt, heeft dit tabblad de bijbehorende naam.
+* Depending on your BG source settings this tab is named differently.
 * Toont geschiedenis van CGM metingen en heeft de optie om foutieve metingen te verwijderen (bijv. compressie laag).
 
 ## NSClient

@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS - Système Pancréas Artificiel</td>
+ <td>AndroidAPS - artificial pancreas system</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -90,13 +90,13 @@
 </tr>
 <tr>
  <td><strong>AgeC</strong></td>
- <td>Age Canule - affiché dans Nightscout si l'information a été renseignée dans l'onglet / menu Actions de AAPS ou par l'intermédiaire de l'action 'AMORCER' de l'onglet ACT</td>
+ <td>cannula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>CAN</strong></td>
- <td>alerte de changement de la canule sur l'écran d'accueil</td>
+ <td>status light overdue cannula change on homescreen</td>
  <td>INS / RES / SEN / BAT</td>
  <td><a href="../Configuration/Preferences.html#apercu"> Préférences </a> <br> <a href="../Getting-Started/Screenshots.html"> Copie d'écran </a></td>
 </tr>
@@ -144,7 +144,7 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>système de contrôle des versions pour le suivi des modifications dans les fichiers informatiques et la coordination des travaux sur les fichiers <br>-> nécessaire pour les mises à jour APK</td>
+ <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> necessary for APK updates</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#mise-a-jour-vers-une-nouvelle-version-ou-une-branche">Wiki - mettre à jour le fichier APK</a></td>
 </tr>
@@ -152,7 +152,7 @@
  <td><strong>GitHub</strong></td>
  <td>service d'hébergement web pour le contrôle de version utilisant Git<br>-> stockage du code source de AAPS</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">GitHub AndroidAPS</a></td>
 </tr>
 <tr>
  <td><strong>Glimp</strong></td>
@@ -276,9 +276,9 @@
 </tr>
 <tr>
  <td><strong>Prédictions</strong></td>
- <td>préditions pour les futures glycémies se basant sur différents calculs</td>
+ <td>predictions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#onglet-vue-d-ensemble">Docs - courbes de préditions</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#onglet-vue-d-ensemble">Wiki - prediction lines</a></td>
 </tr>
 <tr>
  <td><strong>Profil</strong></td>

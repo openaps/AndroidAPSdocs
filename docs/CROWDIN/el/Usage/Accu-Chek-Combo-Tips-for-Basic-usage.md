@@ -59,7 +59,7 @@
 
 * **Energizer Ultimate Lithium**: 4 έως 7 εβδομάδες
 * **Power One Alkaline** (Varta) από το πακέτο υπηρεσιών: 2 έως 4 εβδομάδες
-* **Eneloop rechargable** μπαταρίες (BK-3MCCE): 1 έως 3 εβδομάδες
+* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
 
 If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
 

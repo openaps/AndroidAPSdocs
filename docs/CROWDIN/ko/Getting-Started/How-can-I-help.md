@@ -12,12 +12,12 @@ Yay! Look at the issues, ask in the discord channel, there is always a lot to do
 
 ## I know the system and can write documentation!
 
-Great, this is a highly appreciated thing and a good way to pay it foreward!
+Great, this is a highly appreciated thing and a good way to pay it forward!
 
 * The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
 * A guide how to do commits on English wiki can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from english and can't be edited for consistency reasons.
 
-## I do speak multiple languages and whant to translate the app or the documentation
+## I do speak multiple languages and want to translate the app or the documentation
 
 * If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
 * If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 

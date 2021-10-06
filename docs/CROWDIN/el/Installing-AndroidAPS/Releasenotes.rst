@@ -11,7 +11,45 @@ You will receive the following information as soon as a new update is available:
 
 Αν δεν ενημερώσετε για άλλες 30 ημέρες (90 ημέρες από την ημερομηνία νέας κυκλοφορίας), το AAPS θα μεταβεί σε ανοιχτό κύκλωμα.
 
-Σας παρακαλούμε να καταλάβετε ότι αυτή η αλλαγή δεν έχει σκοπό να σας δυσκολέψει, αλλά γίνετε για λόγους ασφαλείας. Οι νέες εκδόσεις του AndroidAPS δεν παρέχουν μόνο νέες λειτουργίες αλλά και σημαντικές διορθώσεις ασφαλείας. Ως εκ τούτου, είναι απαραίτητο κάθε χρήστης να ενημερώνει όσων το δυνατό πιο γρήγορα.. Δυστυχώς υπάρχουν ακόμα αναφορές σφαλμάτων από πολύ παλιές εκδόσεις, γι 'αυτό προσπαθείστε να βελτιώσετε την ασφάλεια για κάθε χρήστη και ολόκληρη την κοινότητα του DIY. Ευχαριστώ για την κατανόηση.
+Σας παρακαλούμε να καταλάβετε ότι αυτή η αλλαγή δεν έχει σκοπό να σας δυσκολέψει, αλλά γίνετε για λόγους ασφαλείας. Οι νέες εκδόσεις του AndroidAPS δεν παρέχουν μόνο νέες λειτουργίες αλλά και σημαντικές διορθώσεις ασφαλείας. Therefore it is necessary that every user updates a.s.a.p.. Δυστυχώς υπάρχουν ακόμα αναφορές σφαλμάτων από πολύ παλιές εκδόσεις, γι 'αυτό προσπαθείστε να βελτιώσετε την ασφάλεια για κάθε χρήστη και ολόκληρη την κοινότητα του DIY. Ευχαριστώ για την κατανόηση.
+
+Version 3.0.0
+================
+Release date: XX-XX-2021
+
+Important hints
+----------------------
+* **Minimum Android version is 9.0 now.**
+* **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new profile switch and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
+* Use the same version of AAPS and NSClient
+
+Changes
+----------------------
+* XXXXk lines changed, XXXXk new lines of code
+* Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+* Lot of code rewritten to Kotlin @MilosKozak
+* New internal interface for pump drivers
+* NSClient rewritten for better synchronization and more detailed customization @MilosKozak
+  * Record deletion from NS is not allowed (only invalidation through NSClient)
+  * Record modification from NS is not allowed
+  * Sync setting available without engineering mode (for parents)
+* Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak
+* You can start activity temporary target during creation of profile switch @MilosKozak
+* NSProfile is gone. RIP. Only local profile is used and you can enable synchronization with NS @MilosKozak
+* Forgotten master password reset procedure. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
+* User actions tracing @Philoul
+* New automation TempTargetValue trigger @Philoul
+* UI improvements @MilosKozak
+* History browser updated and fixed @MilosKozak
+* Objective9 removed @MilosKozak
+* Fixed bug associated to unstable CGM data @MilosKozak
+* DanaR and DanaRS communication improvement @MilosKozak
+* CircleCI integration @MilosKozak
+* Dana-i support @MilosKozak
+* DiaconnG8 support
+* Files location change: /AAPS/extra (engineering mode) /AAPS/logs /AAPS/exports /AAPS/preferences
+
+
 
 Version 2.8.2
 ================
@@ -256,7 +294,7 @@ Is this update for me? Currently is NOT supported
 * New `Automation plugin <../Usage/Automation.html>`_
 * Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings-overview>`_ from bolus wizard calculation
 * Rendering insulin activity
-* Adjusting IOB predictions by autosense result
+* Adjusting IOB predictions by autosens result
 * New support for patched Dexcom apks (`2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
 * Signature verifier
 * Allow to bypass objectives for OpenAPS users
@@ -333,7 +371,7 @@ Release date: 03-11-2018
 
 Σημαντικά νέα χαρακτηριστικά
 --------------------------------------------------
-* oref1/SMB support (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
+* oref1/SMB support (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achieve and how to use it so it can operate smoothly.
 * `_Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ pump support
 * Setup wizard: guides you through the process of setting up AndroidAPS
 
@@ -341,7 +379,7 @@ Settings to adjust when switching from AMA to SMB
 --------------------------------------------------
 * Objective 10 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
 * maxIOB now includes _all_ IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
-* min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. Εάν κάνετε αναβάθμιση από AMA σε SMB, πρέπει να το αλλάξετε χειροκίνητα
+* min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually
 * Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Εάν η κατασκευή σας αποτύχει με σφάλμα σχετικά με τη διαμόρφωση "κατά παραγγελία", μπορείτε να κάνετε τα εξής:
 
   * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
@@ -376,7 +414,7 @@ Misc
 * Overhaul for config builder and objectives tabs, adding descriptions
 * New app icon
 * Lots of improvements and bugfixes
-* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
+* Nightscout-independent alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Option to keep screen on
 * Option to show notification as Android notification
 * Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.

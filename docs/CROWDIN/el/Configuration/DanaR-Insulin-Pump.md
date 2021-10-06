@@ -22,4 +22,4 @@
 
 ## Ταξιδεύοντας σε διαφορετικές ζώνες ώρας με αντλία Dana R
 
-Για πληροφορίες σχετικά με τη μετακίνηση σε ζώνες ώρας, ανατρέξτε στην ενότητα [Ζώνη ώρας που ταξιδεύει με αντλίες](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).

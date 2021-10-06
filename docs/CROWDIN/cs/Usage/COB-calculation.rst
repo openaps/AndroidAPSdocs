@@ -32,7 +32,7 @@ Jak AndroidAPS zjistí nesprávné hodnoty COB?
 
 Obvykle AAPS detekuje absorpci sacharidů prostřednictvím odchylek glykémií. V případě, že jste zadali sacharidy, ale AAPS nevidí jejich odhadovanou absorpci prostřednictvím odchylek glykémií, bude používat metodu `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carcarimpact#sapution-settings>`_ jako náhradu pro výpočet absorpce místo (tzv. "fallback"). Protože tato metoda počítá pouze minimální absorbci sacharidů, aniž by zvážila odchylky glykémií, může to vést k chybným hodnotám COB.
 
-.. image:: ../images/Calculator_SlowCarbAbsorbtion.png
+.. image:: ../images/Calculator_SlowCarbAbsorption.png
   :alt: Pokyn pro chybnou hodnotu COB
 
 In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  To znamená, že možná máte méně zbývajících sacharidů, než vypočteno. 

@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS - sistema de páncreas artificial</td>
+ <td>AndroidAPS - artificial pancreas system</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -90,13 +90,13 @@
 </tr>
 <tr>
  <td><strong>CAGE</strong></td>
- <td>edad de la cánula: se muestra en Nightscout si la información se ingresó en la pestaña de acciones / pestaña de menú o a través de la pestaña de acciones de AAPS 'principal'</td>
+ <td>cannula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>CAN</strong></td>
- <td>luz de indicación de cambio de cánula en la pantalla de inicio</td>
+ <td>status light overdue cannula change on homescreen</td>
  <td>CAN/RES/SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Preferencias </a><br><a href="../Getting-Started/Screenshots.html">Capturas de pantalla </a></td>
 </tr>
@@ -144,15 +144,15 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>sistema de control de versiones para realizar un seguimiento de los cambios en los archivos de sistema y coordinar el trabajo en esos archivos <br>-> necesario para actualizaciones de APK</td>
+ <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> necessary for APK updates</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - actualización APK</a></td>
 </tr>
 <tr>
- <td><strong>Github</strong></td>
+ <td><strong>GitHub</strong></td>
  <td>servicio de alojamiento basado en la web para el control de versiones utilizando Git <br>-> almacenamiento de código fuente</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">GitHub AndroidAPS</a></td>
 </tr>
 <tr>
  <td><strong>Glimp</strong></td>
@@ -276,9 +276,9 @@
 </tr>
 <tr>
  <td><strong>Predicciones</strong></td>
- <td>predicciones de BG futuras, basadas en diferentes cálculos</td>
+ <td>predictions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - líneas de predicción</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - prediction lines</a></td>
 </tr>
 <tr>
  <td><strong>Perfil</strong></td>

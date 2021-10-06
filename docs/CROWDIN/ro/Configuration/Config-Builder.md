@@ -36,7 +36,7 @@ Butoane:
 * roşu X: ştergere
 * săgeată albastră: dublare
 
-Dacă faci modificări la profilul tau, asigura-te că editezi profilul corect. În fila Profil nu este întotdeauna afișat profilul actualmente utilizat - de ex. dacă ai făcut o schimbare de profil utilizând fila Profil pe ecranul principal, acesta poate diferi de profilul afișat efectiv în fila Profil deoarece nu există nicio legătură între acestea.
+Dacă faci modificări la profilul tau, asigura-te că editezi profilul corect. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
 #### Clonează schimbarea de profil
 
@@ -295,7 +295,7 @@ Alege dacă vrei sau nu să ai zona pentru notite când introduci tratamente.
 
 #### Lumini de stare
 
-Alege dacă doresti să ai în prezentarea generală info privind [starea ](../Configuration/Preferences#status-lights) pentru vechimea canulei, insulinei, senzorului, bateriei, nivelul rezervorului sau nivelul bateriei. Când nivelul de avertizare este atins, culoarea luminii de stare va comuta la galben. La atingerea nivelului critic culoarea luminii de stare va fi rosie.
+Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. Când nivelul de avertizare este atins, culoarea luminii de stare va comuta la galben. La atingerea nivelului critic culoarea luminii de stare va fi rosie.
 
 #### Setări avansate
 

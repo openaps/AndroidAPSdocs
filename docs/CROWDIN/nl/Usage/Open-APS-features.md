@@ -75,9 +75,9 @@ Wees voorzichtig en geduldig en verander de instellingen stap voor stap. Dat is 
 
 Zie ook [OpenAPS documentatie over SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
-### Activeer AMA autosens
+### Enable AMA Autosens
 
-Hier kun je kiezen of je [gevoeligheidsdetectie](../Configuration/Sensitivity-detection-and-COB.md) 'autosens' wilt inschakelen of niet.
+Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosens' or not.
 
 ### Activeer SMB
 
@@ -119,7 +119,7 @@ Standaard instelling: 30 min.
 
 ### Activeer UAM
 
-Als deze optie is ingeschakeld, herkent het SMB-algoritme onaangekondigde maaltijden (UnAnnounced Meals). Dit is handig, als je het systeem vergeet te vertellen dat je koolhydraten hebt gegeten, of als je de koolhydraten verkeerd hebt ingeschat. Of wanneer je na een maaltijd met veel vet en eiwit een langdurige stijging van je glucosewaardes krijgt. Wanneer je geen koolhydraten hebt ingegeven, kan UAM snelle glucosestijgingen veroorzaakt door koolhydraten, adrenaline, etc. herkennen, en zal het proberen dit te compenseren met SMBs. Dit werkt ook andersom: als je een snelle glucosedaling hebt, dan zal het systeem SMBs eerder stoppen.
+Als deze optie is ingeschakeld, herkent het SMB-algoritme onaangekondigde maaltijden (UnAnnounced Meals). Dit is handig, als je het systeem vergeet te vertellen dat je koolhydraten hebt gegeten, of als je de koolhydraten verkeerd hebt ingeschat. Of wanneer je na een maaltijd met veel vet en eiwit een langdurige stijging van je glucosewaardes krijgt. Without any carb entry, UAM can recognize fast glucose increasements caused by carbs, adrenaline, etc, and tries to adjust it with SMBs. Dit werkt ook andersom: als je een snelle glucosedaling hebt, dan zal het systeem SMBs eerder stoppen.
 
 **Daarom moet je UAM altijd geactiveerd hebben bij het gebruik van SMB!**
 
@@ -147,7 +147,7 @@ Standaardwaarde: 4 (mag niet worden gewijzigd, tenzij je het echt wilt en weet w
 
 ## Geavanceerde maaltijdhulp (AMA)
 
-AMA (Advanced Meal Assist), oftewel "geavanceerde maaltijdhulp" is een OpenAPS functie uit 2017 (oref0). Dankzij AMA kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd.
+AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). Dankzij AMA kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd.
 
 Meer informatie vind je in de [documentatie van OpenAPS](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
@@ -181,13 +181,13 @@ De standaardinstelling is 2, je moet deze waarde in kleine stapjes ophogen om te
 
 *Zie ook [overzicht van harde limieten](../Usage/Open-APS-features#overzicht-van-harde-limieten).*
 
-### Activeer AMA autosens
+### Enable AMA Autosens
 
-Hier kun je kiezen of je [gevoeligheidsdetectie](../Configuration/Sensitivity-detection-and-COB.md) 'autosens' wilt inschakelen of niet.
+Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosens or not.
 
-### Autosens past de streefwaardes ook aan
+### Autosens adjust temp targets too
 
-Als je deze optie ingeschakeld hebt dan kan autosense ook jouw tijdelijke streefdoelen (naast basaalstanden, ISF en KH ratio), ook aanpassen. Hierdoor grijpt AndroidAPS 'agressiever' in. Jouw streefdoel kan hierdoor wellicht sneller bereikt worden.
+If you have this option enabled, autosens can adjust targets (next to basal, ISF and IC), too. Hierdoor grijpt AndroidAPS 'agressiever' in. Jouw streefdoel kan hierdoor wellicht sneller bereikt worden.
 
 ### Geavanceerde instellingen
 

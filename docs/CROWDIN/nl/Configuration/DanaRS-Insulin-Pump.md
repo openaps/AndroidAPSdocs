@@ -85,7 +85,7 @@ In het geval dat de verbinding tussen AAPS en DanaRS wordt verbroken tijdens het
 
 ## Een andere telefoon gebruiken
 
-Wanneer je een nieuwe telefoon gaat gebruiken, moet je dat doen via de volgende stappen:
+When switching to a new phone the following steps are necessary:
 
 * [Exporteer instellingen](../Usage/ExportImportSettings#export-settings) op je oude telefoon
 * Instellingen overzetten van oude naar nieuwe telefoon
@@ -97,4 +97,4 @@ Wanneer je een nieuwe telefoon gaat gebruiken, moet je dat doen via de volgende 
 
 ## Wisselen van tijdzone met de DanaRS
 
-Lees alles over reizen in verschillende tijdzones op de pagina [Wisselen van tijdzone](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).

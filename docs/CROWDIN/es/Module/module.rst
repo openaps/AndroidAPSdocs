@@ -1,9 +1,9 @@
 Descripción General De Los Componentes 
 **************************************************
-AndroidAPS no es sólo una aplicación (auto-construida), es sólo uno de los módulos de su sistema de lazo cerrado. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
+AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
    
 .. imagen:: ../images/modules.png
-  :alt: Visión general de Compontes
+  :alt: Components overview
 
 .. note:: 
    **AVISO DE SEGURIDAD IMPORTANTE**
@@ -26,7 +26,7 @@ El perfil incluye
 
 * BR (Tasas basales)
 * ISF (factor de sensibilidad a la insulina) es su unidad de glucosa en sangre por unidad de insulina
-* CR (cociente de carbohidratos) en gramos de carbohidrato por cada unidad de insulina
+* CR (carb ratio) is grams carbohydrate per one unit insulin
 * DIA (duración de la actuación de la insulina).
 
 Sin uso de inhibidores de SGLT-2
@@ -52,8 +52,8 @@ AndroidAPS **actualmente** funciona con
 - `Bomba Accu-ChekInsight <../Configuration/Accu-Chek-Insight-Pump.md>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`_  needed)
+- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
 
 **Otras bombas** que pueden tener el potencial de trabajar con AndroidAPS se listan en la página `Futuras (posibles) Bombas <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
@@ -61,7 +61,7 @@ Si necesitas **comprar privadamente** una bomba entonces puedes encontrar varios
 
 Additional communication device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-For old medtronic pumps an additional communication devide (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
 
    -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
    -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
@@ -136,7 +136,7 @@ Si desea obtener un ejemplo paso a paso, es posible que desee ver una configurac
   
 Qué hacer mientras se espera a los módulos
 ==================================================
-A veces se tarda un tiempo en obtener todos los módulos para cerrar el lazo. Pero no te preocupes, hay un montón de cosas que puedes hacer mientras esperas. Es NECESARIO comprobar y (donde correspondiente) adaptar las tasas basales (BR), la insulina/carbohidratos (IC), la sensibilidad de los factores (ISF), etc. Y tal vez un lazo abierto puede ser una buena forma de probar el sistema y familiarizarse con AndroidAPS. Usando este modo, AndroidAPS le da consejos de tratamiento que puede ejecutar manualmente.
+A veces se tarda un tiempo en obtener todos los módulos para cerrar el lazo. Pero no te preocupes, hay un montón de cosas que puedes hacer mientras esperas. It is NECESSARY to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. Y tal vez un lazo abierto puede ser una buena forma de probar el sistema y familiarizarse con AndroidAPS. Usando este modo, AndroidAPS le da consejos de tratamiento que puede ejecutar manualmente.
 
 You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <../Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 

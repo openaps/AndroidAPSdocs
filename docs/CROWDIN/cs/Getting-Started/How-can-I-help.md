@@ -12,12 +12,12 @@ Yay! Look at the issues, ask in the discord channel, there is always a lot to do
 
 ## Znám systém a můžu psát dokumentaci!
 
-Skvělé, to se cení - dobrý způsob, jak podpořit!
+Great, this is a highly appreciated thing and a good way to pay it forward!
 
 * The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
 * Návod, jak se to dělá na anglické wiki, lze nalézt zde: [How to make a PR](../make-a-PR.md). Jiné jazyky jsou pouze překladem z angličtiny a nelze je upravovat z důvodů konzistence.
 
-## Mluvím několika jazyky a chci překládat aplikaci nebo dokumentaci
+## I do speak multiple languages and want to translate the app or the documentation
 
 * Pokud chcete přeložit **aplikaci** do jiných jazyků (děkuji), použijte prosím [crowdin](https://crowdin.com/project/androidaps).
 * Pokud chcete přeložit **wiki** do jiných jazyků (děkuji), použijte prosím [crowdin](https://crowdin.com/project/androidapsdocs). 

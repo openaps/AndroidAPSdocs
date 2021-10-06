@@ -166,7 +166,7 @@ Za předpokladu, že máte správný bazál, můžete tento parametr otestovat t
 
 > **POZNÁMKA:**
 > 
-> V některých evropských zemích se používaly chlebové/výměnné jednotky pro stanovení toho, kolik inzulínu je na dané jídlo potřeba. Zpočátku byla 1 výměnná jednotka 12 g sacharidů, později se to změnilo na 10 g sacharidů.
+> V některých evropských zemích se používaly chlebové/výměnné jednotky pro stanovení toho, kolik inzulínu je na dané jídlo potřeba. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
 > 
 > V tomto modelu bylo množství sacharidů fixní a měnilo se množství inzulinu. („Kolik inzulínu je zapotřebí k pokrytí jedné výměnné jednotky?“)
 > 
@@ -174,7 +174,7 @@ Za předpokladu, že máte správný bazál, můžete tento parametr otestovat t
 > 
 > Příklad:
 > 
-> Množství inzulinu na 1 výměnnou jednotku (VJ = 12 g sacharidů): 2,4 U/VJ -> Na 1 VJ potřebujete 2,4 jednotky inzulinu.
+> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
 > Corresponding IC: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
 > 
@@ -196,7 +196,7 @@ Jestliže po strávení jídla a poté, co se váš IOB vrátil na nulu, zůstá
 
 ![AMA 3 h](../images/Screenshot_AMA3h.png)
 
-V AMA režimu ve skutečnosti DIA neznamená „doba působnosti inzulínu“. Je to parametr, který dříve souvisel s DIA. Parametr nyní znamená, „do kdy by měla být korekce dokončená“. Nemá to žádnou souvislost s výpočtem IOB. V režimu OpenAPS SMB už tento parametr není potřebný vůbec.
+V AMA režimu ve skutečnosti DIA neznamená „doba působnosti inzulínu“. Je to parametr, který dříve souvisel s DIA. Parametr nyní znamená, „do kdy by měla být korekce dokončená“. Nemá to žádnou souvislost s výpočtem IOB. In OpenAPS SMB, there is no need for this parameter any longer.
 
 ## Profil
 
@@ -263,10 +263,10 @@ Výměnu zásobníku nelze provést přes AndroidAPS, výměna musí být proved
 
 * Dlouze stiskněte "Otevřená smyčka"/"Uzavřená smyčka" na hlavní obrazovce AndroidAPS a vyberte 'Pozastavit smyčku na 1 h'
 * Nyní odpojte pumpu a vyměňte zásobník podle instrukcí pumpy.
-* I výměna a plnění hadičky a kanyly může být provedena přímo na pumpě. V tomto případě použijte [tlačítko PLNĚNÍ/DOPLŇOVÁNÍ](../Usage/CPbefore26#pump) na kartě akcí jen k tomu, abyste zaznamenali výměnu.
+* Also priming and filling tube and cannula can be done directly on the pump. V tomto případě použijte [tlačítko PLNĚNÍ/DOPLŇOVÁNÍ](../Usage/CPbefore26#pump) na kartě akcí jen k tomu, abyste zaznamenali výměnu.
 * Až budete mít pumpu znovu připojenou, obnovte smyčku dlouhým stiskem na 'Pozastaveno (X min)'.
 
-Naproti tomu pro výměnu kanyly se nepoužívá funkce „naplnit infúzní set“ na pumpě, ale set a/nebo kanyla se plní bolusem, který se nezobrazuje v historii bolusů. To znamená, že se nepřeruší běžící dočasná bazální dávka. Chcete-li zadat množství inzulínu k naplnění infúzního setu a spustili plnění, použijte na záložce Akce tlačítko [PLNĚNÍ/DOPLŇOVÁNÍ](../Usage/CPbefore26#pump). Pokud množství není dostatečné, opakujte plnění. Můžete si nastavit výchozí množství pro plnění v Nastavení > Jiné > Hodnoty plnění/doplňování. Podívejte se do příbalového letáku kanyl, kolik jednotek je nutné do kanyly naplnit podle délky jehly a hadičky.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. To znamená, že se nepřeruší běžící dočasná bazální dávka. Chcete-li zadat množství inzulínu k naplnění infúzního setu a spustili plnění, použijte na záložce Akce tlačítko [PLNĚNÍ/DOPLŇOVÁNÍ](../Usage/CPbefore26#pump). Pokud množství není dostatečné, opakujte plnění. Můžete si nastavit výchozí množství pro plnění v Nastavení > Jiné > Hodnoty plnění/doplňování. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 
 ## Pozadí
 
@@ -300,7 +300,7 @@ Při používání smyčky byste měli vyzkoušet tyto kroky:
 * Nastavte [dočasný cíl Aktivita](../Usage/temptarget#activity-temp-target), který bude vyšší než vaše běžná cílová hodnota.
 * Jestliže používáte SMB, zkontrolujte, že máte vypnuté možnosti [„Povolit SMB s vysokými dočasnými cíli“](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) a [„Vždy povolit SMB“](../Usage/Open-APS-features#enable-smb-always).
 
-Je důležité změnit tato nastavení s dostatečným předstihem i následně po sportu. Proveďte změny v čase před sportem a zvažte vliv svalového plnění.
+Pre- and post-processing of these settings is important. Proveďte změny v čase před sportem a zvažte vliv svalového plnění.
 
 Pokud se věnujete sportu pravidelně ve stejný čas (např. lekce ve fitku), zvažte možnost použití [automatizace](../Usage/Automation.rst) pro přepnutí profilu a nastavení dočasného cíle. Bylo by možné použít automatizaci na základě polohy, ale obtížně se pak kontroluje včasné provedení změny nastavení.
 

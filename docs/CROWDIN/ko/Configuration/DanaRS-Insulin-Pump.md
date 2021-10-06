@@ -85,7 +85,7 @@ Bolus 인슐린 주입 중 AAPS와 Dana RS의 연결이 끊기는 경우 (즉, D
 
 ## Special note when switching phone
 
-새 폰으로 바꾸는 경우 다음의 과정들이 필요합니다:
+When switching to a new phone the following steps are necessary:
 
 * [Export settings](../Usage/ExportImportSettings#export-settings) on your old phone
 * Transfer settings from old to new phone
@@ -97,4 +97,4 @@ Bolus 인슐린 주입 중 AAPS와 Dana RS의 연결이 끊기는 경우 (즉, D
 
 ## Timezone traveling with Dana RS pump
 
-다른 시간대로 이동하는 경우에 대한 정보는 [펌프와 다른 시간대로의 이동 ](../Usage/Timezone-traveling#danarv2-danars) 섹션을 참조하십시오.
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).

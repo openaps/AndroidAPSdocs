@@ -69,7 +69,7 @@ De forma alternativa, puede suprimir el conmutador de perfil directamente en el 
 ### 'Recibió el perfil de cambiar de SN, pero el perfil no existe localmente'
 
 * El perfil solicitado no se ha sincronizado correctamente desde Nightscout.
-* Siga las instrucciones de arriba para eliminar el conmutador de perfil
+* Follow instructions from above to delete the profile switch
 
 De forma alternativa, puede suprimir el cambio de perfil directamente en el mLab:
 

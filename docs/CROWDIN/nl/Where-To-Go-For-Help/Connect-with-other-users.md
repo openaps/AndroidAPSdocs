@@ -12,16 +12,16 @@ Voor vragen of problemen met jouw glucosesensor kun je het beste de Facebook gro
 
 ## Meld je aan voor de AndroidAPS gebruikersgroep op Facebook!
 
-Word lid van de belangrijkste [AndroidAPS Facebook groep](https://www.facebook.com/groups/1900195340201874/). Je kunt hier vragen stellen over het algoritme, over probelemen met installeren en bouwen van de APK in Android Studio, over het gebruik van de app en je kunt er tips krijgen over hoe je optimaal gebruik van AndroidAPS kunt maken. Er is ook een groep voor Combo pomp gebruikers [AAPSCombo](https://www.facebook.com/groups/127507891261169/), voor specifieke tips bij het instellen en gebruiken van deze pomp.
+Word lid van de belangrijkste [AndroidAPS Facebook groep](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. Er is ook een groep voor Combo pomp gebruikers [AAPSCombo](https://www.facebook.com/groups/127507891261169/), voor specifieke tips bij het instellen en gebruiken van deze pomp.
 
-## Andere Engelstalige groepen
+## Other resources in English
 
 * [Looped Facebookgroep](https://www.facebook.com/groups/TheLoopedGroup): voor alle DIY closed loop systemen (OpenAPS, Loop en AndroidAPS)
 * [xDrip + - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [CGM in de cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in het algemeen
 * [AndroidAPS op Discord](https://discord.gg/4fQUWHZ4Mw)
 
-## Land / taal specifieke groepen
+## Country / language specific resources
 
 ### Australië
 

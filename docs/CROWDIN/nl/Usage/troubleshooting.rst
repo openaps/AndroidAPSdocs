@@ -25,8 +25,8 @@ Gebruik
 --------------------------------------------------
 * `COB - Detectie van verkeerde COB waarden <../Usage/COB-calculation.html#detectie-van-verkeerde-cob-waarden>`_
 
-  .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
-    :alt: Foutmelding: Trage koolhydraten absorptie
+  .. image:: ../images/Calculator_SlowCarbAbsorption.png
+    :alt: Error: Slow carb absorption
 
 * `Problemen met SMS Commando's <../Children/SMS-Commands.html#problemen-oplossen>`_
 
@@ -51,6 +51,6 @@ Telefoons
 * `Jelly <../Usage/jelly.html>`_
 * `Huawei bluetooth & batterij optimalisatie <../Usage/huawei.html>`_
 
-Smartwaches
+Smartwatch
 ==================================================
 * `Sony Smartwatch 3 <../Usage/SonySW3.html>`_

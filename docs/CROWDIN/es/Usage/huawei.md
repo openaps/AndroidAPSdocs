@@ -27,7 +27,7 @@ Hay diferentes opciones, algunas específicas de Android, algunas específicas d
     
     ![Huawei - bloqueo de la aplicación](../images/Huawei_LockApp.png)
 
-Para xdrip+, también puede habilitar las notificaciones de persistencia (en la aplicación xdrip+):
+For xdrip+, you can also enable persistent notifications (within xdrip+ app):
 
 * Setttings / valores menos comunes / otras opciones de error / Ejecutar recopilador en primer plano
   

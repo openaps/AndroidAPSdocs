@@ -59,7 +59,7 @@ Les durées de vie standards des différents types de batterie sont les suivante
 
 * **Energizer Ultimate Lithium** : 4 à 7 semaines
 * **Power One Alcaline** (Varta) à partir du servcie pack : 2 à 4 semaines
-* Batteries **Eneloop rechargeables** (BK-3MCCE) : 1 à 3 semaines
+* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
 
 Si la durée de vie de votre pile est significativement inférieure à celle indiquée ci-dessus, vérifiez les causes possibles suivantes :
 

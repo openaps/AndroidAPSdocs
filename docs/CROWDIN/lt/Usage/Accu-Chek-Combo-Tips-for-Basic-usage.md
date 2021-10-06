@@ -59,7 +59,7 @@ Tipinis baterijų tarnavimo laikas skirtingoms baterijoms yra toks:
 
 * **Energizer Ultimate Lithium**: nuo 4 iki 7 savaičių
 * **Power One Alkaline** (Varta) iš paslaugų paketo: nuo 2 iki 4 savaičių
-* **Eneloop rechargable** baterijos (BK-3MCCE): nuo 1 iki 3 savaičių
+* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
 
 Jei jūsų baterijos tarnauja daug trumpiau nei nurodyta aukščiau, patikrinkite šias galimas priežastis:
 

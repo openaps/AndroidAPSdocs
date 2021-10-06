@@ -307,7 +307,7 @@ Když se chystáte odesílat bolus k jídlu, dobře se k tomu hodí funkce kalku
 
 #### Chybná detekce COB
 
-![Pomalá absorpce sacharidů](../images/Calculator_SlowCarbAbsorbtion.png)
+![Pomalá absorpce sacharidů](../images/Calculator_SlowCarbAbsorption.png)
 
 * Pokud uvidíte výše uvedené varování po použití průvodce bolusem, funkce AndroidAPS zjistila, že vypočtená hodnota COB může být chybná. 
 * Takže chcete-li si dát bolus znovu po předchozím jídle s COB, měli byste si dát pozor na možné předávkování inzulinem! 
@@ -334,7 +334,7 @@ Když se chystáte odesílat bolus k jídlu, dobře se k tomu hodí funkce kalku
    
    * sensor age & level (battery percentage)
    * insulin age & level (units)
-   * stáří kanyly
+   * cannula age
    * pump battery age & level (percentage
 
 * Less information will be shown if [low resolution skin](../Configuration/Preferences#skin) is used.
@@ -358,7 +358,7 @@ Když se chystáte odesílat bolus k jídlu, dobře se k tomu hodí funkce kalku
 
 #### History Browser
 
-* Allows you to ride back in AAPS hsitory.
+* Allows you to ride back in AAPS history.
 
 #### CDD
 
@@ -453,11 +453,11 @@ History of the following treatments:
 * [Přepínání profilu](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
-## BG Source - xDrip, Dexcom App (pateched)...
+## BG Source - xDrip, Dexcom App (patched)...
 
 ![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
 
-* Depending on your BG source settings this tab is named differntly.
+* Depending on your BG source settings this tab is named differently.
 * Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
 
 ## NSClient

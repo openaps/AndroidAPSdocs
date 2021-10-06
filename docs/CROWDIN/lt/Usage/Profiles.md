@@ -69,7 +69,7 @@ Kaip alternatyvą, galite ištrinti profilio pakeitimą tiesiogiai mLab, kaip ap
 ### „Profilio pakeitimas gautas iš NS, tačiau profilis neegzistuoja lokaliai“
 
 * Nightscout netinkamai sinchronizavo profilį.
-* Ištrinkite profilio keitimo įrašą, kaip aprašyta aukščiau
+* Follow instructions from above to delete the profile switch
 
 Kaip alternatyvą, galite ištrinti profilio keitimą tiesiogiai mLab:
 
