@@ -9,6 +9,7 @@
    Помпа Dana-RS <../Configuration/DanaRS-Insulin-Pump.md>
    Помпа Аксу-Чек Комбо <../Configuration/Accu-Chek-Combo-Pump.md>
    Помпа Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.md>
+   Diaconn G8 insulin pump <../Configuration/DiaconnG8.rst>
    Omnippod Eros <../Configuration/OmnipodEros.rst>
    Помпа Medtronic <../Configuration/MedtronicPump.md>
    Будущие возможные драйверы помп <../Getting-Started/Futurepossible-Pump-Drivers.md>
