@@ -15,39 +15,39 @@ Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln,
 
 Version 3.0.0
 ================
-Release date: XX-XX-2021
+Erscheinungsdatum: XX.XX.2021
 
 Wichtige Hinweise
 ----------------------
-* **Minimum Android version is 9.0 now.**
-* **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new profile switch and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
-* Use the same version of AAPS and NSClient
+* **Es wird nun mindestens Android 9.0 benötigt.**
+* **Es findet keine Migration der Daten in die neue Datenbank statt.** Beklagt Euch bitte nicht, es sind einfach zu tiefgreifende Änderungen und damit ist eine Übernahme nicht möglich. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein. Du musst einen neuen Profilwechsel erstellen und mit einem IOB und COB von 0 starten. Plane das Update sorgfältig!!! Die beste Situation wäre eine ohne aktives Insulin und ohne Kohlenhydrate an Bord.
+* Verwende immer die gleiche Version von AAPS und NSClient.
 
 Änderungen
 ----------------------
-* XXXXk lines changed, XXXXk new lines of code
-* Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
-* Lot of code rewritten to Kotlin @MilosKozak
-* New internal interface for pump drivers
-* NSClient rewritten for better synchronization and more detailed customization @MilosKozak
-  * Record deletion from NS is not allowed (only invalidation through NSClient)
-  * Record modification from NS is not allowed
-  * Sync setting available without engineering mode (for parents)
-* Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak
-* You can start activity temporary target during creation of profile switch @MilosKozak
-* NSProfile is gone. RIP. Only local profile is used and you can enable synchronization with NS @MilosKozak
-* Forgotten master password reset procedure. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
-* User actions tracing @Philoul
-* New automation TempTargetValue trigger @Philoul
-* UI improvements @MilosKozak
-* History browser updated and fixed @MilosKozak
-* Objective9 removed @MilosKozak
-* Fixed bug associated to unstable CGM data @MilosKozak
-* DanaR and DanaRS communication improvement @MilosKozak
-* CircleCI integration @MilosKozak
-* Dana-i support @MilosKozak
-* DiaconnG8 support
-* Files location change: /AAPS/extra (engineering mode) /AAPS/logs /AAPS/exports /AAPS/preferences
+* XXXXk Zeilen geändert, XXXXk neue Codezeilen
+* Interne Datenbank aktualisiert auf Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+* Viel Code umgeschrieben zu Kotlin @MilosKozak
+* Neue interne Schnittstelle für Pumpentreiber
+* NSClient komplett neu programmiert, um eine bessere Synchronisierung und detailliertere Anpassungen zu ermöglichen @MilosKozak
+  * Einträge können nicht via NS gelöscht werden. (Sie können aber durch den NSClient als ungültig gekennzeichnet werden.)
+  * Einträgen können via Nightscout nicht geändert werden.
+  * Nightscout-Synchronisation ist (für Eltern) ohne engineering mode möglich.
+* Änderung am Verhalten von Profilwechseln. Jetzt wird zwischen Profilwechsel [Profile switch] *(was der Benutzer will)* und Profiländerung [Profile change] *(wenn Änderungen von Pump)* unterschieden. @MilosKozak
+* Beim Erstellen eines Profilwechsels kann ein temporäres Ziel für Aktivität gestartet werden. @MilosKozak
+* Das Nightscout-Profil gibt es nicht  mehr. Es wird nur noch das lokale Profil verwendet. Dieses kann aber mit Nightscout synchronisiert werden.  @MilosKozak
+* Verfahren zum Zurücksetzen eines vergessenen Master-Passworts. Um das Master-Passwort zurückzusetzen muss eine Datei mit Namen PasswordReset im Verzeichnis /AAPS/extra abgelegt und AAPS neu gestartet werden. Das neue Master-Passwort ist dann die Seriennummer Deiner Pumpe.
+* Rückverfolgung der Benutzereingaben @Philoul
+* Neue Automation TempTargetValue Trigger @Philoul
+* Verbesserung der Anzeige (user interface) @MilosKozak
+* History Browser aktualisiert und Fehler behoben @MilosKozak
+* Objective 9 wurde entfernt @MilosKozak
+* Fehler bei instabilen CGM-Werten behoben @MilosKozak
+* Verbesserung der Kommunikation mit DanaR und DanaRS @MilosKozak
+* CircleCI-Integration @MilosKozak
+* Unterstützung für Dana-i @MilosKozak
+* * Unterstützung für DiaconnG8
+* Änderung der Dateispeicherorte: /AAPS/extra (engineering mode) /AAPS/logs /AAPS/exports /AAPS/preferences
 
 
 
