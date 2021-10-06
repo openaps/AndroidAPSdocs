@@ -13,6 +13,44 @@ Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à par
 
 Veuillez comprendre que cette modification n'a pas pour but de vous corriger mais est due à des raisons de sécurité. Les nouvelles versions d'AndroidAPS fournissent non seulement de nouvelles fonctionnalités, mais aussi d'importants correctifs de sécurité. Therefore it is necessary that every user updates a.s.a.p.. Malheureusement, il y a toujours des remontés de bug provenant de très anciennes versions, donc il s'agit d'une tentative d'améliorer la sécurité pour chaque utilisateur et toute la communauté DIY. Merci pour votre compréhension.
 
+Version 3.0.0
+================
+Release date: XX-XX-2021
+
+Conseils importants
+----------------------
+* **Minimum Android version is 9.0 now.**
+* **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new profile switch and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
+* Use the same version of AAPS and NSClient
+
+Modifications
+----------------------
+* XXXXk lines changed, XXXXk new lines of code
+* Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+* Lot of code rewritten to Kotlin @MilosKozak
+* New internal interface for pump drivers
+* NSClient rewritten for better synchronization and more detailed customization @MilosKozak
+  * Record deletion from NS is not allowed (only invalidation through NSClient)
+  * Record modification from NS is not allowed
+  * Sync setting available without engineering mode (for parents)
+* Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak
+* You can start activity temporary target during creation of profile switch @MilosKozak
+* NSProfile is gone. RIP. Only local profile is used and you can enable synchronization with NS @MilosKozak
+* Forgotten master password reset procedure. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
+* User actions tracing @Philoul
+* New automation TempTargetValue trigger @Philoul
+* UI improvements @MilosKozak
+* History browser updated and fixed @MilosKozak
+* Objective9 removed @MilosKozak
+* Fixed bug associated to unstable CGM data @MilosKozak
+* DanaR and DanaRS communication improvement @MilosKozak
+* CircleCI integration @MilosKozak
+* Dana-i support @MilosKozak
+* DiaconnG8 support
+* Files location change: /AAPS/extra (engineering mode) /AAPS/logs /AAPS/exports /AAPS/preferences
+
+
+
 Version 2.8.2
 ================
 Date de sortie : 23-01-2021
