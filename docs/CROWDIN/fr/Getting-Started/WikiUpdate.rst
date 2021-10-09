@@ -4,7 +4,7 @@ Mises à jour et modifications de la documentation
 Avril 2021
 ==================================================
 * Liste des `dispositifs de communication <../Module/module#peripherique-de-communication-additionnel>`_ pour les pompes Omnipod et Medtronic
-* AAPS predictions in `Nightscout <../Installing-AndroidAPS/Nightscout.html#manual-nightscout-setup>`_
+* Prévisions AAPS dans `Nightscout <../Installing-AndroidAPS/Nightscout.html#manuel-d-installation-nightscout>`_
 
 Mars 2021
 ==================================================
@@ -97,7 +97,7 @@ Novembre 2019
 * `Bolus étendus - pourquoi ils ne fonctionnent pas dans le cadre d'une boucle <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
 * `Écran d'accueil - lignes sur le graphique <../Getting-Started/Screenshots.html#section-f-graphique-principal>`_
-* `Insight - Disable absolute values in NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
+* `Insight - Désactiver les valeurs absolues dans NS Client <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_
 * `Pompe Medtronic - doubles entrées possibles <../Configuration/MedtronicPump.html>`_
 * `Nouveau tutoriel Freestyle Libre 2 <../Hardware/Libre2.html>`_
 * `Changement de profil avec pourcentage - example <../Usage/Profiles.html>`_
@@ -123,7 +123,7 @@ Octobre 2019
 Septembre 2019
 ==================================================
 * `Automatisation <../Usage/Automation.html>`_
-* `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorption
+* `Calculatrice Bolus <../Getting-Started/Screenshots.html#detection-incorrecte-des-ga>`_ - absorption lente des glucides
 * `Sécurité Nightscout <../Installing-AndroidAPS/Nightscout.html#remarques-sur-la-securite>`_
 * `Décalage horaire du profil <../Usage/Profiles.html#decalage-horaire>`_ (plus de détails)
 * `Surveillance à distance <../Children/Children.html>`_
