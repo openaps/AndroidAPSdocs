@@ -18,7 +18,7 @@ Si votre construction échoue avec une erreur concernant la "configuration sur d
 * Décochez la case Configure on demand.
 * Cliquez sur Appliquer ou OK.
 
-## Recommended specification of computer for building apk file
+## Configuration recommandée de l'ordinateur pour construire un fichier apk
 
 <table class="tg">
   
@@ -240,7 +240,7 @@ Sur l'écran d'accueil d'Android Studio, cliquez sur le petit triangle (1. de la
 
 ## Générer un APK signé
 
-Signer signifie que vous signez votre application générée mais d'une façon numérique comme une sorte d'empreinte digitale intégrée dans l'application elle-même. C'est nécessaire car Android a une règle qui impose de n'accepter que du code signé pour des raisons de sécurité. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Signer signifie que vous signez votre application générée mais d'une façon numérique comme une sorte d'empreinte digitale intégrée dans l'application elle-même. C'est nécessaire car Android a une règle qui impose de n'accepter que du code signé pour des raisons de sécurité. Pour plus d'informations sur ce sujet, suivez [ce lien](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Cliquez sur "Build" dans la barre de menus et sélectionnez "Generate Signed Bundle / APK ...".
     
@@ -308,7 +308,7 @@ Sur votre téléphone, vous devez autoriser l'installation à partir de sources 
 
 ## Identifier le récepteur si vous utilisez xDrip+
 
-[See xDrip+ page](../Configuration/xdrip#identify-receiver)
+[Voir la page xDrip+](../Configuration/xdrip#identify-receiver)
 
 ## Résolution de problèmes
 
