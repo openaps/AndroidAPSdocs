@@ -97,4 +97,4 @@ When switching to a new phone the following steps are necessary:
 
 ## Voyager avec différents fuseaux horaires avec la pompe DanaR
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+Pour plus d'informations sur les voyages avec différents fuseaux horaires, voir la section [Voyager avec différents fuseaux horaires avec une pompe](../Usage/Timezone-traveling#danarv2-danars).
