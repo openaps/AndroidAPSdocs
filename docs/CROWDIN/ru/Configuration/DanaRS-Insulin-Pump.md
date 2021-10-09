@@ -85,7 +85,7 @@
 
 ## Отдельное замечание при смене телефона
 
-When switching to a new phone the following steps are necessary:
+При переходе на новый телефон требуются следующие действия:
 
 * Выполнить [Экспорт настроек](../Usage/ExportImportSettings#export-settings) на вашем старом телефоне
 * Перенести настройки со старого на новый телефон
@@ -97,4 +97,4 @@ When switching to a new phone the following steps are necessary:
 
 ## Пересечение часовых поясов с помпой Dana RS
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+Информацию о пересечении часовых поясов см. в разделе [Пересечение часовых поясов с помпами](../Usage/Timezone-traveling#danarv2-danars).
