@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS/ИПЖ</strong></td>
- <td>AndroidAPS - artificial pancreas system</td>
+ <td>Система искусственной поджелудочной железы</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -90,13 +90,13 @@
 </tr>
 <tr>
  <td><strong>CAGE/ВозрКан</strong></td>
- <td>cannula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
+ <td>Отображаемый в системе Nightscout срок эксплуатации инсулиновой канюли. Появляется в случае ввода информации об установке канюли на вкладке портала терапии AAPS или через вкладку действий 'первичное заполнение инфузионного набора' AAPS</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>CAN</strong></td>
- <td>status light overdue cannula change on homescreen</td>
+ <td>меняющая цвет надпись состояния просроченной/непросроченной канюли на главном экране</td>
  <td>BAT / RES / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
 </tr>
