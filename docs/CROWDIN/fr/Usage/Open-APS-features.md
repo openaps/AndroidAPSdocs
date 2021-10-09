@@ -75,9 +75,9 @@ Soyez prudent et patient et modifiez les paramètres petit à petit. C'est diff�
 
 Voir aussi la [documentation OpenAPS pour SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
-### Enable AMA Autosens
+### Activer AMA Autosens
 
-Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosens' or not.
+Ici, vous pouvez choisir si vous voulez utiliser la [détection de sensibilité](../Configuration/Sensitivity-detection-and-COB.md) 'autosens' ou non.
 
 ### Activer SMB
 
@@ -119,7 +119,7 @@ Valeur par défaut : 30 min.
 
 ### Activer RNS
 
-Avec cette option activée, l'algorithme SMB peut détecter des repas non signalés. C'est utile si vous oubliez de dire à AndroidAPS que vous avez mangé, si vous avez mal estimé ou mal renseignés la quantité de glucides, ou encore si vous avez fait un repas avec beaucoup de graisses ou de protéines ayant une durée d'absoption plus longue que prévue. Without any carb entry, UAM can recognize fast glucose increasements caused by carbs, adrenaline, etc, and tries to adjust it with SMBs. Cela fonctionne aussi dans l'autre sens : s'il y a une forte baisse de la glycémie, il peut arrêter les SMB plus tôt.
+Avec cette option activée, l'algorithme SMB peut détecter des repas non signalés. C'est utile si vous oubliez de dire à AndroidAPS que vous avez mangé, si vous avez mal estimé ou mal renseignés la quantité de glucides, ou encore si vous avez fait un repas avec beaucoup de graisses ou de protéines ayant une durée d'absoption plus longue que prévue. Sans aucun glucides renseignés, RNS peut reconnaitre une forte augmentation de la glycémie causée par des glucides, de l'adrénaline ou tout autre raison, et tente de l'ajuster avec les SMB. Cela fonctionne aussi dans l'autre sens : s'il y a une forte baisse de la glycémie, il peut arrêter les SMB plus tôt.
 
 **Par conséquent, les RNS doivent toujours être activés lors de l'utilisation de SMB.**
 
@@ -147,7 +147,7 @@ Valeur par défaut : 4 (ne doit pas être modifié sauf si vous en avez vraiment
 
 ## Assistance Améliorée Repas (AAR)
 
-AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). L'Assistance Améliorée Repas (AAR) de OpenAPS permet au système de réagir plus rapidement après un bolus repas si vous entrez les Glucides de façon fiable.
+AAR, la version abrégée de "Assistance Améliorée Repas" est une fonctionnalité OpenAPS de 2017 (oref0). L'Assistance Améliorée Repas (AAR) de OpenAPS permet au système de réagir plus rapidement après un bolus repas si vous entrez les Glucides de façon fiable.
 
 Vous pouvez trouver plus d'informations dans la [documentation OpenAPS](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
@@ -181,13 +181,13 @@ La valeur par défaut est 2, mais vous pouvez augmenter ce paramètre lentement 
 
 *Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features#apercu-des-limites-codees-en-dur).*
 
-### Enable AMA Autosens
+### Activer AMA Autosens
 
-Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosens or not.
+Ici, vous pouvez choisir si vous voulez utiliser la [détection de sensibilité](../Configuration/Sensitivity-detection-and-COB.md) autosens ou non.
 
-### Autosens adjust temp targets too
+### Autosens ajuste aussi les cibles temp
 
-If you have this option enabled, autosens can adjust targets (next to basal, ISF and IC), too. Cela permet à AndroidAPS d'être plus ou moins "agressif". La cible réelle peut être atteinte plus rapidement avec ceci.
+Si cette option est activée, autosens peut également ajuster les cibles (à côté du débit de base, SI et G/I). Cela permet à AndroidAPS d'être plus ou moins "agressif". La cible réelle peut être atteinte plus rapidement avec ceci.
 
 ### Paramètres Avancés
 
