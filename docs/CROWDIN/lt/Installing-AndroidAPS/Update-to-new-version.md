@@ -10,7 +10,7 @@
 * Nuo versijos 2.3 jūs turite naudoti git atnaujinimui. Atnaujinimas per zip failą daugiau nebeveikia.
 * Versijos 2.7 duomenų saugyklos adresas pakeistas į <https://github.com/nightscout/AndroidAPS>. Jei nesate susipažinę su git, paprasčiausias būdas yra pašalinti esamą AndroidAPS katalogą ir pradėti [programos kūrimą nuo pradžių](../Installing-AndroidAPS/Building-APK.md).
 * Please use [Android Studio Version 4.1.1](https://developer.android.com/studio/) or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.1.1.
+* [Windows 10 32-bitų sistemos](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) nėra palaikomos Android Studio 4.1.1.
 * Jei naudojate xDrip įsitikinkite, kad [nustatote gavėją](../Configuration/xdrip#identify-receiver).
 * Jei naudojate Dexcom G6 su [modifikuota Dexcom programa](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app), jums reikės versijos iš [2.4 aplanko](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
