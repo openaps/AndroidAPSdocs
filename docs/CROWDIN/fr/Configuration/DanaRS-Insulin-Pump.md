@@ -85,7 +85,7 @@ Dans le cas où la connexion entre AAPS et DanaRS est perdue pendant un bolus d'
 
 ## Remarque spéciale lors du changement de téléphone
 
-When switching to a new phone the following steps are necessary:
+Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessaires :
 
 * [Exportez les paramètres](../Usage/ExportImportSettings#export-settings) sur votre ancien téléphone
 * Transférez les paramètres de l'ancien au nouveau téléphone
