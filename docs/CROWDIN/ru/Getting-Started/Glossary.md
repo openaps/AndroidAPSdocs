@@ -144,7 +144,7 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> necessary for APK updates</td>
+ <td>система управления версиями файлов (документация, программное обеспечение и пр). Необходима для координации работы над файлами APK и обновления системы AndroidAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - обновление APK</a></td>
 </tr>
@@ -152,7 +152,7 @@
  <td><strong>GitHub</strong></td>
  <td>веб-сервис для размещения IT-проектов и их совместной разработки. Веб-сервис основан на системе контроля версий Git<br>. Для проекта AndroidAPS - хранилище программного обеспечения и его обновлений</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/nightscout/AndroidAPS">GitHub AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td><strong>Glimp</strong></td>
@@ -277,9 +277,9 @@ OpenAPS.</td>
 </tr>
 <tr>
  <td><strong>Прогнозирование</strong></td>
- <td>predictions for BG in the future based on different calculations</td>
+ <td>Прогнозы уровня ГК в будущем, основанные на разных алгоритмах расчета.</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - prediction lines</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - линии прогноза ГК</a></td>
 </tr>
 <tr>
  <td><strong>Профиль</strong></td>
