@@ -334,7 +334,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
    
    * âge du capteur & niveau (pourcentage de la batterie)
    * âge & niveau d'insuline (unités)
-   * cannula age
+   * âge de la canule
    * âge de la batterie de la pompe & niveau (pourcentage)
 
 * Les libellés "âge" et "niveaux" ne seront pas affichés si le thème [Basse résolution](../Configuration/Preferences#theme) est utilisé.
@@ -358,7 +358,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 #### Historique
 
-* Allows you to ride back in AAPS history.
+* Vous permet de revoir l'historique des données AAPS.
 
 #### DTI
 
@@ -453,11 +453,11 @@ Historique des traitements suivants :
 * [Changement de profil](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-arrete) - notes entrées dans l'onglet Action et notes dans les dialogues
 
-## BG Source - xDrip, Dexcom App (patched)...
+## Source Gly - xDrip, Application Dexcom (patchée)...
 
 ![Onglet Source Gly - ici xDrip](../images/Screenshots_BGSource.png)
 
-* Depending on your BG source settings this tab is named differently.
+* Selon les votre source de glycémie, cet onglet est nommé différemment.
 * Affiche l'historique des lectures MGC et propose l'option de supprimer la lecture en cas d'échec (par ex. sous la limite basse).
 
 ## NSClient
