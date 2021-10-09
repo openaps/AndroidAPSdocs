@@ -20,8 +20,8 @@ Date de sortie : XX-XX-2021
 Conseils importants
 ----------------------
 * **La version minimale d'Android est maintenant 9.0.**
-* **Les données ne sont pas migrées vers la nouvelle base de données.** Ne vous plaignez pas, c'est un changement si énorme que ce n'est tout simplement pas possible. Ainsi après la mise à jour de l'IA, GA, traitements, etc seront supprimés. You have to create new profile switch and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
-* Use the same version of AAPS and NSClient
+* **Les données ne sont pas migrées vers la nouvelle base de données.** Ne vous plaignez pas, c'est un changement si énorme que ce n'est tout simplement pas possible. Ainsi après la mise à jour de l'IA, GA, traitements, etc seront supprimés. Vous devez créer un nouveau changement de profil et commencer avec zéro IA et GA. Planifiez la mise à jour avec soin !!! C'est mieux si vous le faites sans insuline et glucides actifs
+* Utiliser la même version d'AAPS et de NSClient
 
 Modifications
 ----------------------
