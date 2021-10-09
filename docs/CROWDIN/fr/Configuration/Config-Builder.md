@@ -36,7 +36,7 @@ Boutons :
 * X rouge : supprimer
 * Flèche bleue : dupliquer
 
-Si vous apportez des modifications à votre profil, assurez-vous que vous éditez le profil correct. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+Si vous apportez des modifications à votre profil, assurez-vous que vous éditez le profil correct. Dans l'onglet Profil, ce n'est pas toujours le profil actuellement utilisé qui est affiché. Par ex. si vous avez fait un changement de profil à partir du bouton de l'écran d'accueil, il peut être différent du profil affiché dans l'onglet Profil car il n'y a pas de connexion entre les deux.
 
 #### Dupliquer un changement de profil
 
@@ -295,7 +295,7 @@ Choisissez si vous voulez avoir un champ Notes lors de la saisie des traitements
 
 #### Voyants d'état
 
-Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. Lorsque le seuil d'avertissement est atteint, la couleur du voyant d'état passe à jaune. Le seuil critique s'affichera en rouge.
+Choisissez si vous voulez avoir des [voyants d'état](../Configuration/Preferences#voyants-d-etat) sur l'écran d'accueil avec l'âge de la canule, l'âge du capteur, l'âge de la batterie, le niveau du réservoir ou de la batterie. Lorsque le seuil d'avertissement est atteint, la couleur du voyant d'état passe à jaune. Le seuil critique s'affichera en rouge.
 
 #### Paramètres Avancés
 
