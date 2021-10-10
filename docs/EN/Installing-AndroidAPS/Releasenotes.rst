@@ -27,8 +27,8 @@ Android 9 and up
 Android 8
 ------------------------------------
 * Use AAPS version **2.8.2.1**
+* Until AAPS version 3 is published just select **master** as this is 2.8.2.1. ;-)
 * Download AAPS Code from https://github.com/nightscout/AndroidAPS
-* **Make sure to select branch 2.8.2.1**
 
 Android 7
 ------------------------------------
