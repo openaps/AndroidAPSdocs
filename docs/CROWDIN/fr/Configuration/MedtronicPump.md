@@ -1,6 +1,6 @@
 # Pompes Medtronic
 
-**>>>> Le pilote de la pompe Medtronic est supporté à partir de la version 2.5 (master) d'AndroidAPS. Bien que ce soit le cas, le pilote Medtronic doit toujours être considéré comme une version bêta. Please install only if you are experienced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)), this should be fixed with upcoming release. <<<<**
+**>>>> Le pilote de la pompe Medtronic est supporté à partir de la version 2.5 (master) d'AndroidAPS. Bien que ce soit le cas, le pilote Medtronic doit toujours être considéré comme une version bêta. Veuillez ne l'installer que si vous êtes un utilisateur expérimenté. Pour le moment, nous nous battons encore avec le problème du double bolus (nous recevons 2 bolus dans les traitements, ce qui lance le calcul de l'IA (si vous rencontrez ce bug, veuillez activer Double Bolus Logging dans le paramétrage du Medtronic et fournir vos logs)), ceci devrait être corrigé avec la prochaine version. <<<<**
 
 * * *
 
@@ -55,7 +55,7 @@ Vous devez définir les éléments suivants : (voir photo ci-dessus)
     - pour le reste du monde, la fréquence utilisée est de 868 Mhz
 - **Bolus Max sur la Pompe (U)** (en une heure) : doit avoir la même valeur que sur la pompe. Cela limite la quantité d'insuline que vous pouvez avoir en Bolus. Si vous allez au delà, le Bolus ne sera pas défini et une erreur sera retournée. Le Max qui peut être utilisé est 25, mais surtout veuillez définir une valeur correcte pour vous-même afin de ne pas avoir de surdose d'insuline.
 - **Basal Max sur la Pompe (U/h)** : Doit avoir la même valeur que sur la pompe. Cela limite la quantité de basal que vous pouvez avoir en une heure. Par exemple, si vous voulez avoir le DBT max fixé à 500% et que le débit de basal le plus élevé de votre profil est de 1.5 U, alors vous devez définir le Basal Max à au moins 7,5. Si ce paramètre est incorrect (par exemple, si l'un des débit de basal était au-dessus de cette valeur), la pompe renverrai une erreur.
-- **Délai avant de démarrer le Bolus (s)** : C'est le délai avant que le bolus ne soit envoyé à la pompe, ainsi si vous changez d'avis, vous pouvez l'annnuler. Cancelling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
+- **Délai avant de démarrer le Bolus (s)** : C'est le délai avant que le bolus ne soit envoyé à la pompe, ainsi si vous changez d'avis, vous pouvez l'annnuler. L'annulation d'un bolus lors le bolus est en cours d'administration n'est pas pris en charge par la pompe (si vous voulez arrêter de bolus lors de l'exécution, vous devez suspendre la pompe et la reprendre ensuite).
 - **Encodage Medtronic** : Ce paramètre défini si l'encodage 4b6b fait par les appareils Medtronic doit être fait dans AndroidAPS ou dans le RileyLink. Si vous avez un RileyLink avec un firmware 2.x, la valeur par défaut sera d'utiliser l'encodage matériel (= fait par le RileyLink), si vous avez un firmware 0.x, ce paramètre sera ignoré.
 - **Type de batterie (Power View)** : Si vous voulez voir la charge de la pile de votre pompe, vous devez sélectionner le type de pile que vous utilisez (actuellement Lithium ou Alkaline sont supportées), cela changera l'affichage pour afficher le pourcentage et la tension.
 - **Configuration RileyLink** : Vous trouverez votre appareil RileyLink/GNARL.
@@ -68,8 +68,8 @@ Vous devez définir les éléments suivants : (voir photo ci-dessus)
 Sur l'onglet de la pompe, vous pouvez voir plusieurs lignes qui affichent l'état actuel des pompes (et des connexions).
 
 - **État RileyLink**: Il affiche l'état de la connexion RileyLink. Le téléphone doit être connecté en permanence au RileyLink.
-- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is being executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
-- **Battery**: Shows battery status depending on your configuration. Il peut s'agir d'une simple icône indiquant si la pile est vide ou pleine (rouge si la pile devient critique, moins de 20%), ou un pourcentage et une tension.
+- **État de la pompe** : État de la connexion avec la pompe, il peut avoir plusieurs valeurs, mais surtout nous allons voir une icône de veille (lorsque la connexion à la pompe n'est pas active), lorsque la commande est en train de s'exécuter, nous pouvons voir "Réveil en cours", quand AAPS essaye se connecter à votre pompe ou une description de toute commande qui pourrait fonctionner sur la pompe (ex.: Obtenir l'heure de la pompe, Paramétrer TBR, etc).
+- **Niveau batterie** : Affiche l'état de la pile en fonction de votre configuration. Il peut s'agir d'une simple icône indiquant si la pile est vide ou pleine (rouge si la pile devient critique, moins de 20%), ou un pourcentage et une tension.
 - **Dernière connexion** : Heure de la dernière connexion réussie à la pompe.
 - **Dernier Bolus** : Heure du dernier bolus délivré.
 - **Taux du débit Basal** : Il s'agit du débit basal en cours sur la pompe à cette heure.
@@ -87,7 +87,7 @@ Sur la partie inférieure, nous avons 3 boutons :
 
 ![Boîte de dialogue Historique pompe](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored locally. L'historique est conservé sur les dernières 24 heures, donc les données les plus ancienne sont supprimées quand de nouvelles données sont ajoutées. Il s'agit d'un moyen simple de voir l'historique de la pompe (certaines entrées de la pompe peuvent ne pas être affichées, car elles ne sont pas pertinentes - par ex. la configuration des fonctions qui ne sont pas utilisées par AndroidAPS).
+L'historique de la pompe est récupéré toutes les 5 minutes et stocké localement. L'historique est conservé sur les dernières 24 heures, donc les données les plus ancienne sont supprimées quand de nouvelles données sont ajoutées. Il s'agit d'un moyen simple de voir l'historique de la pompe (certaines entrées de la pompe peuvent ne pas être affichées, car elles ne sont pas pertinentes - par ex. la configuration des fonctions qui ne sont pas utilisées par AndroidAPS).
 
 ## État RL (RileyLink État)
 
@@ -110,11 +110,11 @@ Lorsque le pilote Medtronic est sélectionné, 3 actions possibles peuvent être
 
 ### Utilisateurs OpenAPS
 
-Lorsque vous commencez à utiliser AndroidAPS, le contrôleur principal est AndroidAPS et toutes les commandes doivent passer par lui. L'envoi de bolus doit passer par AAPS et ne pas être fait sur la pompe. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arise, especially if you use the "setup" as it was not intended to be used). Depuis que j'ai commencé à utiliser AndroidAPS avec ma pompe, je n'ai pas touché la pompe, sauf quand je dois changer le réservoir, et c'est de cette façon qu'il faut utiliser AndroidAPS.
+Lorsque vous commencez à utiliser AndroidAPS, le contrôleur principal est AndroidAPS et toutes les commandes doivent passer par lui. L'envoi de bolus doit passer par AAPS et ne pas être fait sur la pompe. Nous avons un code en place qui détecte n'importe quelle commande exécutée sur la pompe, mais si vous pouvez vous devez éviter cela (je pense que nous avons corrigé tous les problèmes avec l'historique de la pompe et la synchronisation avec l'historique AAPS, mais de petits problèmes peuvent encore arriver, surtout si vous utilisez la "configuration" comme elle n'était pas destinée à être utilisée). Depuis que j'ai commencé à utiliser AndroidAPS avec ma pompe, je n'ai pas touché la pompe, sauf quand je dois changer le réservoir, et c'est de cette façon qu'il faut utiliser AndroidAPS.
 
 ### Journaux
 
-Étant donné que le pilote Medtronic est très récent, vous devez activer les journaux, afin que nous puissions déboguer et corriger les problèmes, si de nouveaux devaient se produire. Click on icon on upper left corner, select Maintenance and Log Settings. Les options Pump, PumpComm, PumpBTComm doivent être cochées.
+Étant donné que le pilote Medtronic est très récent, vous devez activer les journaux, afin que nous puissions déboguer et corriger les problèmes, si de nouveaux devaient se produire. Cliquez sur l'icône en haut à gauche, sélectionnez Paramètres de maintenance et de log. Les options Pump, PumpComm, PumpBTComm doivent être cochées.
 
 ### RileyLink/GNARL
 
