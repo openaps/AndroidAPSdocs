@@ -524,7 +524,7 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
     * - |reset_rileylink_config|
       - **Réinitialiser la config. RileyLink** 
    
-   	When pressed this button resets the currently connected pod communication device configuration. 
+   	Lorsque vous cliquez dessus, ce bouton réinitialise la configuration du périphérique de communication pod actuellement connecté. 
 			      
 	* Lorsque la communication est démarrée, des données spécifiques sont envoyées et placées dans le RileyLink 
 			      
@@ -532,7 +532,7 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
 	    - Les protocoles de communication sont définis
 	    - La fréquence radio réglée est définie
 				
-	* See `additional notes <#reset-rileylink-config-notes>`__ at the end of this table
+	* Voir les `remarques additionnelles <#remarque-concernant-reinit-config-rileyLink>`__ à la fin de ce tableau
     * - |pulse_log|
       - **Lire Journal d'impulsions:** 
     
@@ -549,7 +549,7 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
 Paramètres Omnipod
 ================
 
-Les paramètres du pilote Omnipod sont configurables à partir du **menu hamburger** en haut à gauche sous **Générateur de configuration**\ ➜\ **Pompe**\ ➜\ **Omnipod**\ ➜\ **Roue crantée (2)** en sélectionnant le **bouton radio (1)** intitulé **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. C'est ce que l'on appelle dans cette documentation l'onglet **Omnipod (POD)**.
+Les paramètres du pilote Omnipod sont configurables à partir du **menu hamburger** en haut à gauche sous **Générateur de configuration**\ ➜\ **Pompe**\ ➜\ **Omnipod**\ ➜\ **Roue crantée (2)** en sélectionnant le **bouton radio (1)** intitulé **Omnipod**. En sélectionnant la **case à cocher (3)** à côté de la **roue crantée (2)** cela affichera le menu Omnipod sous la forme d'un onglet intitulé **OMNIPOD** ou **POD** dans l'interface AAPS. C'est ce que l'on appelle dans cette documentation l'onglet **Omnipod (POD)**.
 
 |Omnipod_Settings_1|
 
@@ -623,7 +623,7 @@ Fournit des paramètres avancés pour aider au débogage.
 Changement ou suppression d'un périphérique de communication pod actif (RileyLink)
 --------------------------------------------------------------------
 
-With many alternative models to the original RileyLink available (such as OrangeLink or EmaLink) or the need to have multiple/backup versions of the same pod communication device (RileyLink), it becomes necessary to switch or remove the selected pod communication device (RileyLink) from Omnipod Setting configuration. 
+Avec de nombreux modèles alternatifs au RileyLink d'origine disponibles (comme l'OrangeLink ou l'EmaLink) ou la nécessité d'avoir plusieurs versions de sauvegarde du même périphérique de communication pod (RileyLink), il est devenu nécessaire de pouvoir changer ou de supprimer le périphérique de communication pod sélectionné (RileyLink) des paramètres du Driver Omnipod. 
 
 Les étapes suivantes montreront comment **Supprimer** un périphérique de communication pod existant (RileyLink) et en **Ajouter** un nouveau.  Exécuter à la fois les étapes **Supprimer** et **Ajouter** changera votre périphérique.
 
@@ -684,11 +684,11 @@ Cet onglet est bien documenté dans la documentation principale AAPS, mais il y 
 Niveaux
 ------
 
-**Insulin Level**
+**Niveau d'insuline**
 
-L'affichage de la quantité d'insuline dans le Pod Omnipod Eros n'est pas exact.  Ceci est dû au fait que l'on ne sait pas exactement combien d'insuline a été mise dans le pod, ce n'est que lorsque les 2 bips sont émis en remplissant le pod que le réservoir contient plus de 85 unités. Un Pod peut contenir au maximum 200 unités. L'amorçage peut également introduire des écarts car ce n'est pas et le processus exact.  With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remaining in the reservoir.  
+L'affichage de la quantité d'insuline dans le Pod Omnipod Eros n'est pas exact.  Ceci est dû au fait que l'on ne sait pas exactement combien d'insuline a été mise dans le pod, ce n'est que lorsque les 2 bips sont émis en remplissant le pod que le réservoir contient plus de 85 unités. Un Pod peut contenir au maximum 200 unités. L'amorçage peut également introduire des écarts car ce n'est pas et le processus exact.  Avec ces deux facteurs, le pilote Omnipod a été écrit pour donner la meilleure estimation de l'insuline restant dans le réservoir.  
 
-  * **Above 50 Units** - Reports a value of 50+U when more than 50 units are currently in the reservoir.
+  * **Au-delà de 50 unités** - Affiche la valeur de 50+U lorsque plus de 50 unités sont actuellement dans le réservoir.
   * **En dessous de 50 unités** - Affiche la quantité approximative d'insuline restante dans le réservoir. 
   * **SMS** - Affiche la valeur ou 50+U pour les réponses SMS
   * **Nightscout** - Envoie la valeur 50 vers Nightscout s'il y a plus de 50 unités (version 14,07 et plus).  Les nouvelles versions afficheront la valeur de plus de 50+ si au-dessus de 50 unités.
@@ -696,7 +696,7 @@ L'affichage de la quantité d'insuline dans le Pod Omnipod Eros n'est pas exact.
 
 **Niveau batterie**
 
-Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices like the OrangeLink and EmaLink.  Le hardware RileyLink n'est PAS compatible de l'affichage du niveau batterie.  Le niveau batterie est actualisé après chaque communication avec le pod, donc lors de la charge on peut ne pas avoir une augmentation linéaire.  Une mise à jour manuelle actualisera le niveau de batterie.  When a supported Pod communication device is disconnected a value of 0% will be reported.
+L'affichage du niveau de la batterie est un paramètre qui peut être activé pour afficherer le niveau de batterie actuel des périphériques de communication pod comme l'OrangeLink et EmaLink.  Le hardware RileyLink n'est PAS compatible de l'affichage du niveau batterie.  Le niveau batterie est actualisé après chaque communication avec le pod, donc lors de la charge on peut ne pas avoir une augmentation linéaire.  Une mise à jour manuelle actualisera le niveau de batterie.  Lorsqu'un périphérique de communication Pod est déconnecté, la valeur 0% sera indiquée.
 
   * **Le hardware RileyLink n'est PAS compatible de l'affichage du niveau batterie** 
   * **Pour afficher le niveau batterie remonté par OrangeLink/EmaLink, le paramètre DOIT être activé dans les paramètres Omnipod**
