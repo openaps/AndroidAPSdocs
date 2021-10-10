@@ -14,6 +14,28 @@ ContextEdit.
 
 Имейте в виду, что это изменение не предназначено для того, чтобы действовать вам на нервы, а существует по соображениям безопасности. Новые версии AndroidAPS не только обеспечивают новые возможности, но и содержат исправления безопасности. Therefore it is necessary that every user updates a.s.a.p.. К сожалению, все еще поступают сообщения об ошибках из очень старых версий, поэтому это попытка повысить безопасность каждого пользователя и всего сообщества. Благодарим за понимание!
 
+Android version and AAPS version
+====================================
+If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS 3.0.0 and up as it requires at least Android 9. 
+
+In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
+
+Android 9 and up
+------------------------------------
+* Use latest AAPS version
+* Download AAPS Code from https://github.com/nightscout/AndroidAPS
+
+Android 8
+------------------------------------
+* Use AAPS version **2.8.2.1**
+* Until AAPS version 3 is published just select **master** as this is 2.8.2.1. ;-)
+* Download AAPS Code from https://github.com/nightscout/AndroidAPS
+
+Android 7
+------------------------------------
+* Use AAPS version **2.6.2**
+* Download AAPS Code from https://github.com/MilosKozak/AndroidAPS
+
 Version 3.0.0
 ================
 Release date: XX-XX-2021
