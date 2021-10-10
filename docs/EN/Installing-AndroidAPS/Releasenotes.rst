@@ -26,6 +26,7 @@ Important hints
 Changes
 ----------------------
 * XXXXk lines changed, XXXXk new lines of code
+* Omnipod DASH support @evereha @vanelsberg
 * Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Lot of code rewritten to Kotlin @MilosKozak
 * New internal interface for pump drivers
