@@ -794,7 +794,7 @@ L'image ci-dessous montre le positionnement optimal du RileyLink lors des procé
 Où trouver de l'aide pour le pilote Omnipod
 ====================================
 
-All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerate and use the following guidelines when requesting assistance:
+Tout le travail de développement du pilote Omnipod est fait par la communauté par des bénévoles; nous vous demandons donc d'être attentif et d'utiliser les directives suivantes lorsque vous demandez de l'aide :
 
 - **Niveau 0 :** Lisez la section correspondante de cette documentation pour vous assurer que vous comprenez comment la fonctionnalité avec laquelle vous avez des difficultés est censée fonctionner.
 - **Niveau 1 :** Si vous rencontrez toujours des problèmes que vous n'arrivez pas à résoudre en utilisant ce document, alors veuillez aller sur la chaine *#androidaps* sur **Discord** en utilisant `ce lien d'invitation <https://discord.com/invite/NhEUtzr>`__.
