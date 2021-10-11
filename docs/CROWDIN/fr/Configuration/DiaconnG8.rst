@@ -1,94 +1,94 @@
-Diaconn G8 Insulin Pump
+Pompe à insuline Diaconn G8
 ************************
 
-Insulin Pump Bluetooth Pairing
+Appairage Bluetooth de la pompe à insuline
 ===============================
 
-- Click on the hamburger menu in the top left corner.
+- Cliquez sur le menu hamburger dans le coin supérieur gauche.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_01.jpg
-    :alt: Hamburger menu
+    :alt: Menu hamburger
 
-- Click on Config Builder.
+- Cliquez sur le Générateur de configuration.
  
    .. image:: ../images/DiaconnG8/DiaconnG8_02.jpg
-    :alt: Config builder
+    :alt: Générateur de configuration
     
-- After selecting the Diaconn G8 Pump click on the Settings icon (cog wheel).
+- Après avoir sélectionné la pompe Diaconn G8, cliquez sur l'icône Paramètres (roue crantée).
 
    .. image:: ../images/DiaconnG8/DiaconnG8_03.jpg
-    :alt: Settings
+    :alt: Paramètres
     
-- Choose Selected pump.
+- Choisissez la pompe sélectionnée.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_04.jpg
-    :alt: Select pump
+    :alt: Sélection de la pompe
  
-- Select your insulin pump’s model number once it appears in the list.
+- Sélectionnez le numéro de modèle de votre pompe à insuline une fois qu'elle apparaît dans la liste.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_05.jpg
-    :alt: Pump pairing
+    :alt: Appariage de la pompe
     
-- There are two options to check your model number:
+- Il y a deux options pour vérifier votre numéro de modèle :
    
-   i. The last 5 digits of the SN number on the back of the pump.
-   ii. Click on O button > Information > BLE > Last 5 digits.
+   i. Les 5 derniers chiffres du numéro SN au dos de la pompe.
+   ii. Cliquez sur le bouton O > Information > BLE > Derniers 5 chiffres.
       
       .. image:: ../images/DiaconnG8/DiaconnG8_06.jpg
-       :alt: check model no.
+       :alt: Vérification du numéro de série
        
-- Once you select your pump, a window appears asking for a pin code. Enter the pin number displayed on your pump to complete the connection.
+- Une fois que vous avez sélectionné votre pompe, une fenêtre apparaît pour demander un code PIN. Entrez le code PIN affiché sur votre pompe pour terminer la connexion.
  
    .. image:: ../images/DiaconnG8/DiaconnG8_07.jpg
-    :alt: PIN code
+    :alt: Code PIN
     
-Pump status check and log synchronization
+Contrôle de l'état de la pompe et synchronisation des journaux
 ==========================================
 
-- Once your pump is connected, click on the Bluetooth symbol to check the status and to synchronize logs.
+- Une fois que votre pompe est connectée, cliquez sur le symbole Bluetooth pour vérifier l'état et synchroniser les journaux.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_08.jpg
-    :alt: Bluetooth status
+    :alt: État du Bluetooth
     
-Bluetooth Troubleshooting
+Dépannage Bluetooth
 ==========================
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+**Que faire dans le cas d'une connexion Bluetooth instable avec la pompe.**
 
-Method 1 ) Check the pump again after AAPS application is completed.
+Méthode 1) Vérifiez à nouveau la pompe une fois la connexion à AAPS terminée.
 --------------------------------------------------------------------- 
-- Click on the 3 dots button on the top right.
+- Cliquez sur le bouton de 3 points en haut à droite.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_09.jpg
-    :alt: Preferences menu
+    :alt: Menu préferences
     
-- Click on Exit. 
+- Cliquez sur Quitter. 
 
    .. image:: ../images/DiaconnG8/DiaconnG8_10.jpg
-    :alt: Exit
+    :alt: Quitter
 
-Method 2) If the first method doesn’t work, disconnect Bluetooth and then reconnect.
+Méthode 2) Si la première méthode ne fonctionne pas, déconnectez Bluetooth puis reconnectez-vous.
 -------------------------------------------------------------------------------------
-- Press and hold the Bluetooth button at the top for about 3 seconds. 
+- Appuyez et maintenez le bouton Bluetooth en haut pendant environ 3 secondes. 
 
    .. image:: ../images/DiaconnG8/DiaconnG8_11.jpg
-    :alt: Bluetooth button
+    :alt: Bouton Bluetooth
  
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+- Cliquez sur le bouton Réglage de la pompe Diaconn G8 appariée.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_12.jpg
-    :alt: Settings button
+    :alt: Bouton paramètres
  
-- Unpair.
+- Désappairage.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_13.jpg
-    :alt: Unpair
+    :alt: Désappairage
     
-- Repeat the Bluetooth pairing process for the pump (see above).
+- Répétez le processus d'appairage Bluetooth pour la pompe (voir ci-dessus).
 
-Further Information
+Informations complémentaires
 ====================
-Diaconn G8 Insulin pump option setting
+Réglage des options de pompe Diaconn G8
 --------------------------------------
 -	Config manager > pump > Diaconn G8 > Settings
 -	DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
@@ -104,7 +104,7 @@ Diaconn G8 Insulin pump option setting
 .. image:: ../images/DiaconnG8/DiaconnG8_15.jpg
  :alt: Diaconn G8 actions menu
 
-Extended Bolus function
+Fonction Bolus Étendu
 ------------------------
 - If you use extended bolus it will disable closed loop.
 
