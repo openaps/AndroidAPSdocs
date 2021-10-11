@@ -90,23 +90,23 @@ Informations complémentaires
 ====================
 Réglage des options de pompe Diaconn G8
 --------------------------------------
--	Config manager > pump > Diaconn G8 > Settings
--	DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
+- Gestionnaire de configuration > Pompe > Diaconn G8 > Paramètres
+- DIACONN G8 en haut à droite> Menu 3 points en haut à droite > Préférences Diaconn G8
 
 .. image:: ../images/DiaconnG8/DiaconnG8_14.jpg
- :alt: Diaconn G8 pump options
+ :alt: Options de la pompe Diaconn G8
     
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs. 
-- If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
+- Si l'option **Enreg. changement de réservoir** est activée, les informations sont automatiquement téléchargées sur Careportal quand un événement « Changement d'insuline » se produit.
+- Si l'option **Enreg. changement de site** est activée, les informations sont automatiquement téléchargées sur Careportal lorsqu'un événement "Changement de site" se produit. 
+- Si l'option **Enreg. changement de tubulure** est activée, les informations sont automatiquement téléchargées sur Careportal lorsqu'un événement « Changement de tubulure » se produit.
+- Si l'option **Enreg. changement de pile** est activée, les informations sont automatiquement téléchargées sur Careportal lorsqu'un événement "Changement de pile" se produit, et le bouton CHANGEMENT PILE POMPE dans l'onglet ACTION est désactivé. (Note: Pour changer la pile, veuillez arrêter toutes les fonctions d'injection en cours avant de continuer.)
  
 .. image:: ../images/DiaconnG8/DiaconnG8_15.jpg
- :alt: Diaconn G8 actions menu
+ :alt: Menu d'actions du Diaconn G8
 
 Fonction Bolus Étendu
 ------------------------
-- If you use extended bolus it will disable closed loop.
+- Si vous utilisez un bolus étendu, cela désactivera la boucle fermée.
 
-- See `this page <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ for details why extended bolus does not work in a closed loop environment.
+- Voir `cette page <../Usage/Extended-Carbs.html#pourquoi-les-bolus-etendus-ne-marchent-pas-avec-une-boucle-fermee>`_ pour plus de détails pourquoi le bolus étendu ne fonctionne pas dans un environnement de boucle fermée.
 
